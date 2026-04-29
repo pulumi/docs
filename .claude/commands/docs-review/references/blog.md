@@ -117,24 +117,18 @@ CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 ## Do not flag
 
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
-- **Drafting social copy, CTAs, or button text.** Flag when the `social:` block is missing or malformed; do not draft replacement copy. Marketing owns voice here, not the reviewer.
-- **Meta image design critique.** Flag when `meta_image` is the placeholder or uses outdated logos. Do not critique colors, composition, or layout.
+- **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy. (Lint catches missing or malformed `social:` blocks.)
+- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo and animated-GIF cases; lint catches the placeholder.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
 
-## Publishing-readiness checklist
+## Publishing blockers
 
-End every blog review with this checklist as a 💡 Pre-existing block. Each item is a single-line finding when violated; the full checklist exists as a roll-up so the author can scan readiness at a glance:
+Each item below renders as a single 🚨 Outstanding finding when violated. Quote-and-rewrite mandate: name the field or file, propose the specific fix.
 
-- [ ] `social:` block present with copy for `twitter`, `linkedin`, `bluesky` (without it, the post won't be promoted on social)
-- [ ] `meta_image` set, not empty (0 bytes), and not the default placeholder (used by LinkedIn + social cards)
-- [ ] `meta_image` uses current Pulumi logos, not retired brand variants
-- [ ] `<!--more-->` break present, positioned after the first 1–3 paragraphs (not buried mid-post)
-- [ ] Author profile exists in `data/team/team/` with an avatar
-- [ ] All links resolve (inherited from `docs-review:references:shared-criteria`)
-- [ ] Code examples correct with language specifiers (per `docs-review:references:code-examples`)
-- [ ] No animated GIFs used as `meta_image` (first-frame fallback breaks the social preview)
-- [ ] Images have alt text; screenshots have 1px gray borders (per `docs-review:references:image-review`)
-- [ ] Title ≤60 characters or `allow_long_title: true` set in frontmatter
+- **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement. Lint catches the placeholder file but not the retired-logo case.
+- **`meta_image` is an animated GIF.** Social previews use the first frame as fallback, which usually breaks the composition. Quote the path; propose a static PNG / JPG / SVG.
+- **`<!--more-->` break position.** Lint catches *presence*; position is review-time judgment. The break must land after the first 1–3 paragraphs, not buried mid-post. Quote the surrounding paragraphs; propose the correct placement.
+- **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 
-Several of these are caught at pre-commit by `lint-markdown.js` (title length, meta description length, `meta_image` placeholder). Items the linter catches don't need to be flagged again here — render the checklist with linter-caught items already checked.
+Other publishing-readiness items (`social:` block present, `meta_image` not placeholder/empty, title ≤60 chars, code language specifiers, image alt text and borders, link resolution) are handled by `lint-markdown.js` or by other references (`docs-review:references:shared-criteria`, `docs-review:references:code-examples`, `docs-review:references:image-review`). Don't re-flag them here.
