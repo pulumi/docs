@@ -922,3 +922,131 @@ Carryover from Session 9; no new items added.
 
 Single commit covering all 7 files. Suggested message:
 > `Drop unread labels, rename domain prefix, fix ci.md §3 fiction`
+
+## Session 11 — 2026-04-29 (caller-leak sweep, Haiku triage, label-apply lift)
+
+### Trigger
+
+Started by committing Session 10's uncommitted work (8 modified files). Two commits per the branch's substance + notes pattern: `51b6a6b167` for the 7-file substance, `ca894cb586` for SESSION-NOTES alone. Cam then asked me to explain the gap-analysis residuals item from the backlog, gave dispositions on all four, and the session cascaded through a series of caller-leak / DRY / consistency cleanups across the skill packages.
+
+### Gap-analysis dispositions
+
+- **R31 (positive cross-link recommendations)**: ADD. New bullet in `docs.md` (under §Cross-references between docs pages, later renamed §Priority 3) and `blog.md` (under §Priority 7 — Links). Bounds: once per concept per file; only when no occurrence is hyperlinked; quote-and-rewrite mandate; doesn't fire on the page whose subject *is* the concept. Commit `3a81802fca`.
+- **R72 (author profile existence check)**: DROP the proposed extension. The partial coverage (missing-avatar) survives — later promoted into §Publishing blockers when the publishing-readiness checklist got refactored.
+- **Caps**: BUMP prose-patterns 5 → 10 (`prose-patterns.md:10`); pre-existing stays at 15. Commit `a8c99cacb8`.
+- **Do-not-flag rewrite**: TABLE. Quote-and-rewrite mandate is the right principle; behavior under the wording untested. Validation folds into backlog #1 real-PR test.
+
+### Haiku for triage-prose
+
+Cam asked whether Haiku could handle triage-prose — the highest-volume model call in the pipeline (every trivial / FM-only PR). My answer: probably yes, with one specific concern (Pulumi product-name false positives — Haiku takes instructions more literally than Sonnet). Narrow input/output, mostly-mechanical pattern-match task is in Haiku's wheelhouse.
+
+Tailored `triage-prose.md` for Haiku's failure modes:
+- Replaced illustrative protected-term examples with a structural rule (internal caps, all-caps acronyms, digit/underscore/kebab-joins, slashes, dots, backticks) plus an enumerated list for residual Pulumi-product surface that doesn't follow structural cues.
+- Added a concrete DO-flag / DO-NOT-flag examples block — Haiku benefits more from positive examples than from prose rules.
+- Tightened the high-judgment "punctuation that changes meaning" item.
+- Added doubled-words to the flag list.
+- Expanded frontmatter skip-fields with a catch-all for path/URL/identifier/date list values.
+
+`claude-triage.yml`: model swapped `claude-sonnet-4-6` → `claude-haiku-4-5-20251001`. Trimmed the inlined YAML preamble's duplicated scope rules so triage-prose.md is the single source of truth. Commit `03a7e953da`.
+
+Cam then directed: enforce US English (per AGENTS.md) and require Oxford commas (no project-level rule yet — this is the policy decision). Moved both from §Do-not-flag → §Flag with concrete pattern-based directives (`-our`/`-or`, `-ise`/`-ize`, `-yse`/`-yze`, `-tre`/`-ter`, doubled-l past tense, +specific cases like `defence`/`licence`/`practise`; Oxford commas in lists of 3+). Updated examples block to match. Commit `306149861a`.
+
+### Post-run label apply moved to workflow
+
+Cam selected `ci.md:69-71` (§5 Post-run) and asked whether the label apply happens automatically. It didn't — `claude-code-review.yml:276-279` had the *agent's prompt* tell it to run `gh pr edit --add-label review:claude-ran --remove-label review:claude-stale`, with the same instruction duplicated in `ci.md` §5. The "the workflow applies" wording in §5 was factually wrong.
+
+Two options surfaced: (A) move the label step to a workflow `if: success()` post-step, dropping the agent's responsibility; (B) keep the agent doing it, fix the wording. Cam picked A — workflow steps don't forget; agents sometimes do; the duplication just bit us during the Session 10 label rename.
+
+Implementation:
+- Removed the label-apply instruction from the agent prompt; replaced with a one-line note that post-run labels are handled by a separate workflow step.
+- Added `Apply post-run review labels` step gated on `steps.claude-review.outcome == 'success'`. The success gate covers normal-success AND the empty-diff short-circuit (which exits 0 cleanly), excludes skipped (trivial / draft / bot) and failed runs.
+- Dropped `ci.md` §5 entirely. `ci.md:47`'s pre-existing reference to "the workflow's post-run label step" is now factually accurate (was already aspirational).
+- Updated the Finalize-progress-signal comment block to drop the stale "Claude's prompt adds review:claude-ran on success" line.
+
+Commit `aa9720d8fa`. Adjacent cleanup: with the agent's `gh pr edit` use case gone, the allowlist's `Bash(gh pr edit:*)` was a footgun. Dropped it. Workflow steps still use `gh pr edit` (lines 43, 218, 313, 328) — those run via `GITHUB_TOKEN` on the runner, not the agent. Commit `7222742ac3`.
+
+### Caller-leak / DRY sweep across the docs-review references
+
+Same pattern repeated across multiple skill files. Cam selected lines and asked questions; investigation surfaced caller-leak, output-format duplication, and DRY violations each time.
+
+**`blog.md` Priority 1** (commit `511b792327`): 5-bullet claim list ("Every number," "Every tech claim about Pulumi products," etc.) duplicated `fact-check.md:74-89`'s claim-extraction table. Trimmed to the directive (invoke fact-check with scrutiny=heightened) plus the genuinely blog-domain-specific high-blast-radius categories (performance multipliers, competitor claims, adoption/market-position statistics). fact-check.md is the single source of truth for what counts as a claim.
+
+**`blog.md` publishing-readiness checklist** (commit `2d9846726c`): The checklist concept didn't survive contact with how the review actually runs:
+
+1. The "render with linter-caught items already checked" mechanism required the model to read lint output, which it doesn't have access to.
+2. A 10-item `[ ]`/`[x]` block in the 💡 bucket reads as a TODO list, not a finding — maintainers had nothing actionable to do with it.
+3. Most items were already lint-caught (`social:` block, `meta_image` placeholder, `<!--more-->` presence, title length); flagging them again was redundant noise.
+
+Audited each item; four survived as genuinely review-time: retired-logo `meta_image`, animated-GIF `meta_image`, `<!--more-->` break *position* (lint catches presence; position is judgment), missing author avatar. Replaced §Publishing-readiness checklist with §Publishing blockers — each item rendered as single 🚨 Outstanding finding when violated, quote-and-rewrite mandate. Trimmed §Do not flag bullets 2-3 to drop "flag when..." framing now that §Publishing blockers is the explicit flag-when list. Adjacent lint fix surfaced during the trim: `<link>` placeholder triggered MD033, backtick-wrapped to match file convention. Commit `0a35be3230`.
+
+**`docs.md` priority restructure** (commit `7d8dfa952a`): Same caller-leak pattern in a different shape. fact-check was buried at line 87 (after Pre-existing issues) while the early §API and resource accuracy and §CLI commands sections did *implicit fact-check work* — telling the model to "verify via gh api," "cross-reference the registry schema source," "memorized flag lists are not authoritative" — without invoking fact-check.md's machinery.
+
+Restructured to mirror blog.md's priority-tier pattern:
+
+- Priority 1 — Fact-check first (invokes fact-check.md, lists docs-frequent claim categories: CLI flag existence, resource API surface, version-availability, output-format, feature-existence)
+- Priority 2 — Code correctness (pointer to code-examples.md)
+- Priority 3 — Cross-references and link integrity (was §Cross-references between docs pages)
+- Priority 4 — Terminology and product accuracy (was §Terminology and style)
+- Priority 5 — SEO and discoverability (moved ahead of Callouts)
+- Priority 6 — Callouts and shortcodes (deprioritized — render-correctness, not user-impact)
+
+§API and resource accuracy and §CLI commands sections collapsed into Priority 1's claim-categories list. Trailing §Fact-check invocation contract section unchanged (matches blog.md pattern of keeping invocation parameters separate from the priority statement).
+
+**`fact-check.md` audit** (commit `d006b15c76`): Deepest pass of the session. 481 → 340 lines (-141, 29% reduction).
+
+Cam selected lines 459-469 (§Heightened-scrutiny overrides) and asked whether AI-suspect was still load-bearing and whether the file was giving too much context for a narrowly-scoped skill. Both yes. AI-suspect IS load-bearing in pr-review (Step 1 detects, Step 6 renders, trivial-fix suppression) but fact-check.md is the wrong place to describe it — fact-check is invoked by CI (no AI-suspect concept), interactive `/docs-review` (no AI-suspect concept), AND pr-review.
+
+Cam picked Option 2 from my proposal: do the full audit before cutting. The audit found 9 distinct sites:
+
+Caller-leak (4 sites — fact-check was prescribing pr-review's logic):
+
+- §Gating: enumerated `should-fact-check.sh` logic (AI_SUSPECT, RISK_TIER, bot/dependabot rules) — pr-review's logic. Reduced to "caller decides; CI domain files and pr-review encode their own gating rules."
+- §Verification source order: "CI fact-check never uses Notion or Slack -- See ci.md §Hard rules" — line 300 already says the right thing. Dropped.
+- §Assessment rules: both tables ("Effect on assessment," "Effect on confidence gauge") prescribed how the caller renders aggregate state. Dropped both; kept the one PR-introduced-vs-pre-existing sentence.
+- §Heightened-scrutiny overrides: dropped the "(e.g., AI-suspect is set in /pr-review, or blog/programs sets it by default)" parenthetical and two caller-side bullets (gauge prepends 🤖, auto-trivial fixers disabled).
+
+Output-format duplication (1 site):
+
+- §Tiered triage: literal `## 🔬 Fact-Check Results` rendered block contradicted the §Outputs contract ("fact-check does not render directly into a comment") and reused output-format.md's bucket emoji for different concepts (🚨 Needs your eyes vs 🚨 Outstanding). Replaced with one sentence pointing the caller at output-format.md.
+
+Implementation-detail bloat (3 sites):
+
+- §Minimum-viable caller (pseudocode): bash pseudocode block whose comments restated the section ordering of the file. Dropped; kept the closing function-shape sentence.
+- §Subagent prompt template: 30-line literal verifier prompt duplicating §Verification source order and §Claim record format. Replaced with one sentence directing the parent to copy canonical sections.
+- §Why the axis exists: meta-narration paragraph on the intuition-check axis. Dropped.
+
+Plus 3 redundant claim-extraction examples (Ex 1 single-claim, Ex 5 temporal, Ex 7 CLI-with-output) that restated the claim-type table or §Temporal-claim handling. Trimmed 7 → 4.
+
+### Cam-flagged behaviors during the session
+
+- **"Way too much context for a narrowly-scoped skill."** Cam's frame on fact-check.md drove the audit. The recurring question across the session: *does this skill describe its own behavior, or its callers'?* Caller-leak drops cleanly into the proposed-and-applied trim cycle.
+- **Audit-before-cut discipline.** "Make me proud" was the green light for the section-by-section audit on fact-check.md. Same shape as Session 10's planned-then-executed restructure. Proposal first, "do it" after, no row-by-row negotiation when the proposal is complete enough.
+- **Workflow-step vs. agent-prompt as a placement decision.** When the post-run label apply got moved out of the agent prompt into a workflow step, the framing was: *workflow steps don't forget; agents sometimes do.* Mechanical bookkeeping with no review judgment belongs on the workflow tier.
+- **Cross-skill emoji vocabulary collisions.** fact-check.md was using 🚨/⚠️/✅ for *internal sub-tiers* with the same emoji as output-format.md's actual bucket vocabulary, just meaning different things. Caught during the audit as a confusion vector for callers and future readers.
+
+### Files changed (Session 11 substance, master-relative)
+
+1. `3a81802fca` — Add R31 missing-canonical-cross-link rule to docs and blog
+2. `a8c99cacb8` — Bump prose-patterns cap from 5 to 10 per file
+3. `03a7e953da` — Switch triage-prose model to Haiku and harden prompt
+4. `306149861a` — Flag UK spellings and missing Oxford commas in triage-prose
+5. `aa9720d8fa` — Move post-run label apply from agent prompt to workflow step
+6. `7222742ac3` — Drop gh pr edit from claude-code-review agent allowlist
+7. `511b792327` — Trim blog.md Priority 1 claim list — fact-check.md owns extraction
+8. `0a35be3230` — Backtick-wrap <link> placeholder in blog.md weak-conclusions example
+9. `2d9846726c` — Replace blog publishing-readiness checklist with publishing blockers
+10. `7d8dfa952a` — Restructure docs.md by priority and surface fact-check at Priority 1
+11. `d006b15c76` — Audit fact-check.md: drop caller-leak, output-format dup, and bloat
+
+(Session 10 closeout commits at session start: `51b6a6b167` substance + `ca894cb586` notes — these properly belong to Session 10 but landed during Session 11's window.)
+
+### Backlog after Session 11
+
+1. **Real-PR test of the new pr-review flow + Haiku triage validation** — bundle the two outstanding test concerns into one fixture-set pass against `CamSoper/pulumi.docs#44–49`. Covers pr-review's CURRENT / STALE / ABSENT branches AND Haiku's triage-prose output on prose-flagged PRs (specifically watch for product-name false positives: ESC, IaC, OIDC, kebab-case identifiers).
+2. **Deploy script** — `gh` script to create the new label set on `pulumi/docs` upstream. Don't ship until #1 surfaces no surprises.
+3. **Skill-file consistency audit** (NEW) — fact-check.md's audit pattern (caller-leak / output-format duplication / implementation-detail bloat / DRY violations / contradictions / stale references) likely has cousins across the rest of the docs-review and pr-review skill packages, including the prompt blocks embedded in `claude-triage.yml` / `claude-code-review.yml` / `claude.yml`. Audit prompt produced at session-end for a fresh-context run; audit not yet executed.
+4. **`programs.md` / `infra.md` priority restructure** (open) — the priority-tier shape worked for blog.md and docs.md. programs.md and infra.md may benefit from the same restructure but weren't touched this session.
+
+### Memory updates
+
+None this session. No new contributor names, project facts, or feedback patterns surfaced that aren't already captured in existing memory entries.
