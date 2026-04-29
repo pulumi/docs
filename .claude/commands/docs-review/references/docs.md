@@ -23,23 +23,32 @@ The following reference files apply alongside the docs-specific checks below. Co
 - `docs-review:references:prose-patterns` — prose-bearing content
 - `docs-review:references:image-review` — wherever images appear
 
-### API and resource accuracy
+The priorities below are ordered for **output rendering** — fact-check findings render before style findings — but investigate as content triggers each.
 
-Snippet-level checks live in `docs-review:references:code-examples`. Docs-specific anchor: when the diff references a resource property, cross-reference the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`), not memory.
+### Priority 1 — Fact-check first
 
-### Cross-references between docs pages
+Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default; see `## Fact-check` below for the heightened-bump conditions). The reference owns claim extraction; in docs, pay particular attention to:
+
+- **CLI flag existence.** `pulumi <subcommand> --<flag>` claims must match the current CLI source. Memorized flag lists are not authoritative.
+- **Resource API surface.** Resource property claims (e.g., `aws.s3.Bucket` accepts `versioning`) must match the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`).
+- **Version-availability claims.** "Available in v3.230+", "supported on Windows."
+- **Output-format claims.** `pulumi up` / `preview` / `stack output` example output must reflect what the current CLI prints. Old-style output formats ("Performing changes:" when the CLI now prints "Updating (dev)") are deprecated-terminology findings.
+- **Feature-existence claims.** "Pulumi ESC supports rotation for AWS." If the diff asserts a capability, verify it.
+
+Findings render in 🚨 / ⚠️ **before** style findings.
+
+### Priority 2 — Code correctness
+
+Snippet-level checks (syntax, imports, language idioms, language casing) live in `docs-review:references:code-examples`. The reference applies wherever code appears in docs content.
+
+### Priority 3 — Cross-references and link integrity
 
 - **Link target exists.** Every internal link added or modified in the diff must resolve to an existing page in the PR's snapshot (`gh api repos/<owner>/<repo>/contents/<path>`). Missing targets are 🚨.
 - **Anchor resolves.** `/docs/foo/#bar` requires `#bar` to exist on `/docs/foo/`. Verify by fetching the target file and grep for `## Bar` / `### Bar` (or whatever heading level the slug matches).
 - **Orphan cross-refs after moves.** If the PR moves a page, every inbound link elsewhere in `content/docs/` or `content/product/` must be updated (aliases handle outsider/historic links, but the repo's own internal links should use the new canonical path).
 - **Missing cross-link to a canonical concept page.** When the diff text mentions a Pulumi concept that has a canonical doc page (stacks, providers, components, ESC environments, projects, programs, policy packs), and no occurrence of the term in the file is hyperlinked, flag it once per concept. Quote the most prominent unlinked occurrence; propose the link target (e.g., `[stacks](/docs/iac/concepts/stacks/)`). Do not flag the page whose subject *is* the concept (a stacks page doesn't need to link "stacks" in its own intro). Do not flag terms outside Pulumi's vocabulary.
 
-### CLI commands
-
-- **Flags exist.** `pulumi <subcommand> --<flag>` claims must match the current CLI -- verify via `gh api repos/pulumi/pulumi/contents/<cli-source-path>` or by reading release notes for the referenced version. Memorized flag lists are not authoritative.
-- **Output matches reality.** `pulumi up` / `pulumi preview` / `pulumi stack output` example output should reflect what the current CLI actually prints. Old-style output formats ("Performing changes:" when the CLI now prints "Updating (dev)") are deprecated-terminology findings.
-
-### Terminology and style
+### Priority 4 — Terminology and product accuracy
 
 Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists; do not duplicate them here. Watchlist:
 
@@ -48,13 +57,7 @@ Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists;
 - **"public preview" not "public beta."**
 - **Preferred pairs.** "Pulumi package" vs "native language package" -- see `STYLE-GUIDE.md` §Preferred terminology.
 
-### Callouts and shortcodes
-
-- **`{{% notes %}}`** uses one of `info` / `tip` / `warning`. A misspelled `type=` silently renders the default and looks wrong.
-- **`{{< chooser >}}`** / **`{{< choosable >}}`** pairs must match: every language listed in the `chooser` needs a corresponding `choosable` block, and vice versa.
-- **Percent vs angle-bracket syntax.** `{{% ... %}}` for shortcodes that process Markdown (notes, choosable, details). `{{< ... >}}` for shortcodes that emit pre-rendered content (cleanup, example). See `STYLE-GUIDE.md` §Shortcode syntax.
-
-### SEO and discoverability
+### Priority 5 — SEO and discoverability
 
 These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. The full AEO scoring pass still belongs to `/seo-analyze` for deeper analysis; these are the items that catch on a normal review. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
 
@@ -64,6 +67,12 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 - **Semantic chunking.** Each H2 section should cover one focused concept. Flag when a single section mixes definition, history, benefits, and a tutorial; quote the section's first heading and propose a split with new H2s.
 - **Down-funnel specificity.** Concept docs that introduce a feature without showing a concrete integration or use case are too generic to be cited. Flag the most generic section; propose adding a specific scenario, integration, or edge case.
 - **Numbered, executable steps for "get started" / "how to" sections.** Quickstart prose that doesn't break into numbered steps with copy-pasteable commands. Quote the section; propose a numbered list with explicit `pulumi …` commands.
+
+### Priority 6 — Callouts and shortcodes
+
+- **`{{% notes %}}`** uses one of `info` / `tip` / `warning`. A misspelled `type=` silently renders the default and looks wrong.
+- **`{{< chooser >}}`** / **`{{< choosable >}}`** pairs must match: every language listed in the `chooser` needs a corresponding `choosable` block, and vice versa.
+- **Percent vs angle-bracket syntax.** `{{% ... %}}` for shortcodes that process Markdown (notes, choosable, details). `{{< ... >}}` for shortcodes that emit pre-rendered content (cleanup, example). See `STYLE-GUIDE.md` §Shortcode syntax.
 
 ## Pre-existing issues (opt-in)
 
