@@ -751,15 +751,14 @@ Both checks scope to `content/blog/**` (via `isBlogPost(filePath, obj)` — also
 | Fresh post with `draft: true` | pass | ✅ pass |
 | Docs file (no social block) | pass | ✅ pass |
 
-`checkMoreBreak` (R71) was on the backlog but Cam didn't ask for it this session. Skipped.
+**`checkMoreBreak`** (R71) — flags blog posts that are missing the `<!--more-->` break or that bury it past paragraph 3. Counts paragraph blocks (non-blank-line content separated by blank lines) before the marker. Same scoping as the other two checks (skip drafts, skip past-dated, exclude taxonomy pages). Threshold: > 3 blocks before the marker is the failure condition; 1–3 is the target range. `make lint` against master surfaces zero findings — the archival-exemption rule shields existing posts.
 
 ### Backlog after Session 9
 
-1. **`checkMoreBreak`** — flag missing `<!--more-->` or buried positioning (after paragraph 3+). Still on R71 in the audit; deferred.
-2. **Cache-friendliness audit** — Session 7 carryover.
-3. **PR 45 prose-regression investigation** — Session 6 carryover.
-4. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
+1. **Cache-friendliness audit** — Session 7 carryover.
+2. **PR 45 prose-regression investigation** — Session 6 carryover.
+3. **Deploy step:** create `review:frontmatter-only` label upstream when branch lands.
 
 ### Artifacts
 
-- `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~70 lines net add.
+- `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `checkMoreBreak`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~100 lines net add.
