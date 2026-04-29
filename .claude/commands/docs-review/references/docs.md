@@ -16,7 +16,12 @@ Applied to documentation pages: technical reference, conceptual docs, tutorials,
 
 ## Criteria
 
-Apply `docs-review:references:shared-criteria` first, plus the cross-cutting reference files: `docs-review:references:code-examples`, `docs-review:references:prose-patterns`, `docs-review:references:image-review`. Then these docs-specific checks.
+The following reference files apply alongside the docs-specific checks below. Consult each as content in the diff triggers a relevant rule:
+
+- `docs-review:references:shared-criteria` — every file (links, frontmatter, shortcodes)
+- `docs-review:references:code-examples` — wherever code appears
+- `docs-review:references:prose-patterns` — prose-bearing content
+- `docs-review:references:image-review` — wherever images appear
 
 ### API and resource accuracy
 

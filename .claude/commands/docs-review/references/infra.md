@@ -30,7 +30,7 @@ Everything else -- Lambda@Edge bundling concerns, CloudFront cache changes, runt
 
 ## Criteria
 
-Apply [`shared-criteria.md`](shared-criteria.md) first (mostly for link checking in comments and docs). Then flag the following risk axes. Findings render in ⚠️ Low-confidence with a pointer to the relevant `BUILD-AND-DEPLOY.md` section -- the human reviewer decides whether to proceed. Only secrets-in-diff and clearly-broken-state promote to 🚨 (see the §Scope split above).
+[`shared-criteria.md`](shared-criteria.md) applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Findings render in ⚠️ Low-confidence with a pointer to the relevant `BUILD-AND-DEPLOY.md` section -- the human reviewer decides whether to proceed. Only secrets-in-diff and clearly-broken-state promote to 🚨 (see the §Scope split above).
 
 ### Lambda@Edge bundling
 

@@ -16,7 +16,10 @@ Applied to changes touching `static/programs/`. These are real, testable Pulumi 
 
 ## Criteria
 
-Apply `docs-review:references:shared-criteria` first, plus `docs-review:references:code-examples` for snippet-level concerns (imports, language idioms, API currency, casing). Then the following program-specific checks.
+The following reference files apply alongside the program-specific checks below. Consult each as content in the diff triggers a relevant rule:
+
+- `docs-review:references:shared-criteria` — every file (links, frontmatter, shortcodes)
+- `docs-review:references:code-examples` — snippet-level concerns (imports, language idioms, API currency, casing)
 
 ### Project structure
 

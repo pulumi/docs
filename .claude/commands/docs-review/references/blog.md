@@ -18,7 +18,14 @@ Applied to blog posts (`content/blog/`) and customer stories (`content/case-stud
 
 ## Criteria
 
-Apply `docs-review:references:shared-criteria` first, plus the cross-cutting reference files: `docs-review:references:code-examples`, `docs-review:references:prose-patterns`, `docs-review:references:image-review`. Then work through the priorities below *in order* — fact-check findings render before style findings in the output.
+The following reference files apply alongside the blog-specific priorities below. Consult each as content in the diff triggers a relevant rule:
+
+- `docs-review:references:shared-criteria` — every file (links, frontmatter, shortcodes)
+- `docs-review:references:code-examples` — wherever code appears
+- `docs-review:references:prose-patterns` — prose-bearing content
+- `docs-review:references:image-review` — wherever images appear
+
+The priorities below are ordered for **output rendering** — fact-check findings render before style findings — but investigate as content triggers each.
 
 ### Priority 1 — Fact-check first
 
