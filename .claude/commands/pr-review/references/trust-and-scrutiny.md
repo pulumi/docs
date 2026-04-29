@@ -5,11 +5,11 @@ description: Two-axis trust model, risk tiering, and AI-suspect detection for pr
 
 # Trust, Scrutiny, and AI-Suspect Detection
 
-This reference defines how `/pr-review` reasons about contributors and PR risk. The model is intentionally split into orthogonal axes so that "this contributor is trusted" never relaxes the scrutiny of content that may have been AI-generated.
+This reference defines how `/pr-review` reasons about contributors and PR risk. Etiquette trust controls tone; content scrutiny controls review depth. They are independent — etiquette trust never relaxes content scrutiny.
 
 ## Two-axis trust model
 
-`contributor-detection.sh` emits two independent fields. **Conflating them was the original bug** — high etiquette trust used to relax content scrutiny, which is exactly wrong for AI-authored PRs from senior contributors.
+`contributor-detection.sh` emits two independent fields.
 
 ### Etiquette trust
 
@@ -60,7 +60,7 @@ A PR is flagged AI-suspect when **any** of the following signals fire. The flag 
 
 If the PR author appears in the file, the flag is set.
 
-**This file is local-only and is never created, written, or committed by the skill.** It contains specific colleagues' names with the implicit message "this person ships AI-drafted PRs," which is a private judgment call. Tracking it in git would be a political landmine. Each user maintains their own file (or doesn't). The other detection signals work without an allowlist, so the skill behaves correctly on machines that don't have one.
+**This file is local-only and is never created, written, or committed by the skill.** Each user maintains their own (or doesn't). The other detection signals work without an allowlist.
 
 **File format:** one GitHub username per line, optional `#` comments, blank lines ignored. Example:
 
@@ -97,8 +97,6 @@ For every added prose line in the diff (lines starting with `+` in `.md` files, 
 
 If any density exceeds threshold AND the PR has more than 10 added prose lines (to avoid false positives on tiny diffs), set the flag with the corresponding reason.
 
-These thresholds are starting points and should be tuned over time based on false-positive feedback from `/pr-review` runs.
-
 ### Signal 4: Manual override (reason: `manual`)
 
 The user can pass:
@@ -122,13 +120,3 @@ When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`), the skill behaves 
 | Step 6 trivial-fix preview | Suppressed entirely, replaced with: `Trivial-fix auto-apply disabled (AI-suspect — manual review required)` |
 | Step 8 merge toggle | Defaults **OFF** regardless of contributor type. |
 | Make-changes-and-approve trivial fixes | Agent skips all trivial-fix application during the make-changes workflow. The AI may have introduced subtly wrong "fixes" that look like typos but aren't (e.g., renaming a real method to a hallucinated one). |
-
-## Why heightened scrutiny doesn't depend on contributor type
-
-The original conflation: "internal contributor → trusted → relax review." This is exactly wrong for AI-drafted PRs, because:
-
-1. The most prolific AI-PR authors on the team are often the most senior people — they have the leverage to ship a lot, and they use AI to amplify it.
-2. AI hallucinations in docs don't get caught by "trust the author" reasoning — they get caught by *actually verifying the claims*.
-3. A trusted author who ships AI slop without checking it is, for review purposes, indistinguishable from an untrusted author. The signal that matters is "did a human verify this?" not "is the GitHub username on the org roster?"
-
-So the rule is: **etiquette trust never relaxes content scrutiny.** Etiquette trust controls how warm the comment is. Content scrutiny controls how carefully the words are checked. They are independent.

@@ -53,13 +53,11 @@ Only when **all** of:
 
 ### Toggle defaults OFF
 
-For all human-authored PRs, regardless of seniority, contributor type, or CI status. **Pulumi convention: authors merge their own PRs.** Auto-merging on a human's behalf is the exception, not the norm.
-
-The toggle exists for the rare case where the user actually wants to merge on the author's behalf — typically external first-timers without merge rights, or stale PRs the author has abandoned.
+For all human-authored PRs, regardless of seniority, contributor type, or CI status. Pulumi convention: authors merge their own PRs.
 
 ### AI-suspect override
 
-When `AI_SUSPECT=true`, the toggle defaults OFF unconditionally — even for bot PRs. This forces a conscious keystroke before merging anything that may contain AI-generated content.
+When `AI_SUSPECT=true`, the toggle defaults OFF unconditionally — even for bot PRs.
 
 ## Standard Action Previews
 
@@ -114,7 +112,7 @@ I will:
 
 ### Trivial fix candidates
 
-Trivial fixes are **agent-applied**, not script-applied. There is no `auto-trivials.sh` because the categories that matter (notably heading case) require language understanding to avoid corrupting proper nouns like Pulumi, TypeScript, Azure, and Kubernetes — a regex can't distinguish "Working With Pulumi" (preserve "Pulumi") from "Deploy To AWS" (lowercase "to"). The agent applies fixes one-by-one with judgment, and when a fix is genuinely ambiguous it should be skipped and surfaced rather than applied.
+Apply trivial fixes one-by-one with language judgment (heading case especially — preserve proper nouns like Pulumi, TypeScript, Azure, Kubernetes). When a fix is genuinely ambiguous, skip and surface it rather than apply.
 
 Categories the agent considers:
 
@@ -251,11 +249,3 @@ Locked findings — high-confidence contradicted claims with no suggested fix �
 - Display: "No action taken on PR #{{arg}}."
 - Do not modify PR in any way
 
-## Implementation Notes
-
-- Always show the exact comment text and command list that will execute
-- Always show the merge-toggle state explicitly so the user can verify before confirming
-- For "Make changes and approve": show file-by-file changes and trivial-fix summary before commit
-- Preview uses templates from `pr-review:references:message-templates` based on contributor type
-- Confirmation loop allows toggle flips and comment edits without re-running entire workflow
-- Never add a separate "Approve and merge" action — merge is always a toggle, never a menu choice

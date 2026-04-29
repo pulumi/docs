@@ -38,7 +38,7 @@ Reviews any pull request and presents action choices for approval, changes, or c
 
 **References**: Always follow the detailed instructions in the referenced documents for each step. The references contain the complete implementation details required.
 
-**Output discipline**: Steps 1, 2, 4, and 5 are **silent** — they produce no user-facing output. Step 3 is the only early interactive prompt and only fires for infra changes. Step 6 is the first comprehensive output, designed so the user reads one coherent package in one sitting rather than fragmenting attention across multiple status updates.
+**Output discipline**: Steps 1, 2, 4, and 5 are **silent** — they produce no user-facing output. Step 3 is the only early interactive prompt and only fires for infra changes. Step 6 is the first comprehensive output.
 
 ---
 
@@ -234,7 +234,7 @@ Render in this order, top to bottom:
 
 9. **Recommendations** — short, specific, action-oriented.
 
-**ADHD principle**: This whole package lands in **one** message so the user reads it in one sitting. The confidence gauge alone is often sufficient — if it's HIGH, scroll directly to the action menu.
+Render the whole package in one message so the user reads it in one sitting.
 
 Continue to Step 7.
 
@@ -357,23 +357,6 @@ Display the appropriate success message with:
 **For Dependabot HIGH/MEDIUM with merge queued**: Warn that next merge to master triggers pulumi-test.io deployment.
 
 Workflow complete.
-
----
-
-## Critical Workflow Rules
-
-1. **Complete all 10 steps in sequence** — Never skip steps or end workflow prematurely
-2. **Silent run-up to Step 6** — Steps 1, 2, 4, and 5 produce no user-facing output. Step 3 is the only early interactive prompt, and only fires for infra changes. Step 6 is the first comprehensive output.
-3. **Step 5 docs gating** — Never run fact-check on bot/dependabot PRs unless AI-suspect is set; the gate script is authoritative.
-4. **AI-suspect overrides trust** — `CONTENT_SCRUTINY=heightened` overrides any etiquette-trust-based relaxation. Internal-contributor status never relaxes content scrutiny when AI-suspect is set.
-5. **Subagent budget** — Max 4 parallel fact-check subagents at once; if >20 claims extracted, batch by file rather than per-claim.
-6. **MCP availability** — Notion/Slack steps are best-effort; absence of those tools must not fail the workflow, only annotate the evidence as "internal sources unavailable".
-7. **Local allowlist is private** — `~/.claude/pr-review/ai-suspect-authors.txt` is read-only as far as the skill is concerned. Never created, written, or printed in full to any output. Only the *fact* that AI-suspect was triggered and the reason (`allowlist`) appears in the gauge.
-8. **Always preview before execution** — Show exactly what will happen (Step 8) before executing (Step 9), including the merge toggle state.
-9. **Use confirmed content** — Execute only with user-approved text from Step 8.
-10. **Track progress** — Display **[Step X/10]** before each step heading.
-11. **Preserve branch safety** — For "Make changes and approve": save current branch, return to it even on errors.
-12. **Never add an "Approve and merge" menu option** — Merge is always a toggle in Step 8, never a Step 7 choice.
 
 ---
 
