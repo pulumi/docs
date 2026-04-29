@@ -788,6 +788,20 @@ Replicated the feasible SEO/AEO items into `blog.md` and `docs.md`, sourced from
 
 Extended `feedback_dont_unilaterally_drop_during_refactor.md` to call out that the same pattern shows up in *new* recommendations, not just past ones. Specifically, framing an addition as "editorial-overlap territory you've pushed back on" when no such pushback exists — the rationalization is mine, not Cam's. Watchword: if I find myself attributing an editorial-scope objection to Cam when proposing a new addition, I'm probably doing it again.
 
+### Pre-hand-review gap analysis (Cam-explicit drops)
+
+Surfaced the residual gaps vs. the legacy `_common/review-criteria.md` after the SEO/AEO replication:
+
+- **R52** "Strong opening hooks reader" — calculated drop. Operationalizable parts already covered by `blog.md` Priority 2 §Empty transitions and Priority 6 §Quotable opening paragraph. Residual is editorial taste; restoring would duplicate or violate the quote-and-rewrite mandate.
+- **R54** "Sections open with motivation sentences" — calculated drop. Concrete enough to write down (H2 followed by list/code/restated-heading without a context sentence) but low-frequency miss that a hand reviewer would catch. Cam's call: drop.
+
+Residual items still flagged but not yet decided (Cam may pick these up after hand review):
+
+- **R31** Positive cross-link recommendations — old way had "consider linking to X"; new way only checks existing cross-refs.
+- **R72** Author profile file existence — partial; only the missing-avatar flag remains.
+- **Caps:** prose-patterns at 5/file, pre-existing at 15/file. Old way had no caps. Conscious tradeoff for review readability.
+- **Do-not-flag rewrite untested.** Reworded blanket "structural is editorial" to "concrete-with-quote-and-rewrite is in." Right principle on paper; behavior under the new wording untested against the fixture set.
+
 ### Artifacts
 
 - `scripts/lint/lint-markdown.js` — added `checkSocialBlock`, `checkPlaceholderMetaImage`, `checkMoreBreak`, `isArchivalPost`, `isBlogPost`, `META_IMAGE_PLACEHOLDER_HASH` constant. ~100 lines net add.
