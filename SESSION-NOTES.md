@@ -637,3 +637,74 @@ Plus standing **deploy step**: create `review:frontmatter-only` label on `pulumi
 
 - Test PRs 50–53 on `CamSoper/pulumi.docs` covered all four scenarios (trivial / frontmatter-only clean / frontmatter-only with typos / normal). All closed and branches deleted at session end.
 - `cam/master` carries the new triage commits cherry-picked, on top of the FORK-ONLY token swap. Fork is in clean state.
+
+---
+
+## Session 8 — 2026-04-29 (audit + restoration + extraction)
+
+Picked up after the docs-review/ refactor (commits `e9bd53c024` + `f6cbbfbe94`) shipped clean. Cam asked for an audit verifying that `_common/review-criteria.md` (deleted in the refactor as "dead — superseded by per-domain files") was actually fully covered by the new package.
+
+### What happened
+
+**Audit.** Recovered the deleted file via `git show e9bd53c024^`. Atomized 90 rules across 174 lines. Classified each against `docs-review/references/*.md`, `glow-up.md`, `lint-markdown.js`, and the markdownlint config. Wrote a structured report to `/workspaces/src/scratch/2026-04-29-review-criteria-audit.md` (~300 lines, decision queue at the bottom).
+
+Headline findings:
+- 57% PRESERVED, 9% PARTIAL, 22% MISSING, 12% INTENTIONALLY DROPPED
+- Three substantive gaps: blog images (R83–R86), cross-domain coverage check (R88–R90), publishing-readiness checklist (R87)
+- One real bug: `shared-criteria.md` §Linter boundary claimed image alt text + fenced-code-language were lint-owned, but `.markdownlint-base.json` has both rules (MD045, MD040) **disabled**. Neither was being enforced anywhere.
+- Several smaller misses: R6 indented-prose-as-code, R29 meta description length, R51 title clickbait, R59 self-criticism, R60 weak conclusions, R70 logo currency, R71 `<!--more-->` positioning
+
+**Pushback from Cam.** I had unilaterally classified ~10 rules as INTENTIONALLY DROPPED with the justification "I wrote a 'Do not flag' clause for those during the refactor." Cam pointed out that *I* wrote those clauses, not him — and several genuinely should be restored. Took the L. Restored as concrete prose patterns rather than vague style guidance.
+
+**Architectural decisions during the conversation:**
+
+1. **Don't quantify "passive voice >30%."** Cam's call: thresholds are hard to operationalize for LLMs (unreliable parse-counters) AND the natural target is 0% anyway. Rules should name *concrete patterns* with examples and a cite-and-rewrite mandate, not abstract editorial qualities.
+2. **Don't move banned words to the linter.** Too many edge cases ("very specific" should stay; "very fast" should go). Lives in review skill.
+3. **Specialize, don't inherit.** `blog.md` was reaching into `docs.md` (same anti-pattern as cross-skill imports). Pull cross-cutting concerns into shared reference files; domain files own *only* domain-specific rules.
+
+**Extraction commit (`05411771e5`).** Three new shared reference files:
+- `code-examples.md` — snippet syntax, imports, language idioms, API currency, casing, hand-written constructor style. Pulled from `docs.md` §Code examples + `programs.md` snippet-level subsections.
+- `prose-patterns.md` — passive voice, filler/prepositional bloat, empty intensifiers, difficulty qualifiers, undefined acronyms, nested clause stacks. Each with example→rewrite. Cap 5 findings per file.
+- `image-review.md` — alt text, file format, size limits (3MB / 1200px GIFs), comparison screenshots, 1px gray borders.
+
+`docs.md`, `blog.md`, `programs.md` trimmed to point at these. `blog.md` Priority 3's awkward `docs.md` cross-reference is gone — both files reference `code-examples.md` instead.
+
+**Restoration commit (`a096563c8b`).** Backfilled the audit gaps:
+- `blog.md` Priority 2 extended with self-criticism / weak-conclusions / dense-paragraphs / listicle-bloat patterns
+- `blog.md` Priority 4 added title-quality flag (R51)
+- `blog.md` NEW Priority 5 — Documentation coverage check for feature-announcement posts (R88–R90)
+- `blog.md` Pre-existing extended with meta_image logo-currency check (R70)
+- `blog.md` NEW §Publishing-readiness checklist (R87) — end-of-review summary block, with explicit note that several items are caught at pre-commit by `lint-markdown.js`
+- `shared-criteria.md` §Frontmatter added meta_desc length guidance (R29)
+- `shared-criteria.md` §Linter boundary corrected to reflect actual config: MD040/MD045 disabled, alt text + code-block language are NOT linter-owned
+- `shared-criteria.md` NEW §Indented prose (R6)
+
+### Lint changes deferred to a future PR
+
+Discussed but not implemented in this session, on the backlog:
+
+1. **Tier A markdownlint rules.** Approved by Cam: enable `MD034` (bare URLs), `MD037` (spaces inside emphasis), `MD039` (spaces inside link text), `MD059` (descriptive link text). Each is mechanical-correctness; offender count likely small. **One-time cleanup pass needed before flipping the flags** — when this lands, run `npx markdownlint --rules MD034,MD037,MD039,MD059` and fix what it surfaces, then commit the config flip.
+2. **Frontmatter validator extensions to `lint-markdown.js`.** Approved: add `checkSocialBlock` (R30 — flag if blog post is missing twitter/linkedin/bluesky keys), `checkMoreBreak` (R71 — flag missing `<!--more-->` or buried positioning), extend `checkMetaImage` (R70 logo currency).
+3. **Reviewdog + MD040/MD045 (Tier B).** Discussed at length — `reviewdog/action-markdownlint@v0` with `filter_mode: added` would let us enable the disabled rules without forcing a repo-wide cleanup. Requires its own workflow file, parallel to existing pipeline. Not in scope here.
+
+### Methodology lessons
+
+1. **Trust but verify, even when *I* did the work.** I shipped the docs-review refactor confident it was clean. The audit found 22% of rules MISSING and a real linter-boundary bug. Don't skip the audit step on "obvious" deletions.
+2. **"Intentionally dropped" needs a citation that isn't *me*.** When the model classifies a rule as INTENTIONALLY DROPPED, the rationale has to point at a human decision (commit message, session notes, conversation), not at a "Do not flag" clause the model itself authored during the refactor. Otherwise the rationalization is circular.
+3. **Vague rules don't survive operationalization.** "Be clear," "logical flow," "avoid jargon" can't be checked by an LLM reliably. The blog.md Priority 2 shape (named pattern + threshold + example) is the model that works. Apply it elsewhere or drop the rule.
+4. **Cross-skill references = bad architecture.** `blog.md` referencing `docs.md` for shared rules creates the same fragility as cross-skill Skill-tool imports. The fix is the same: extract to a shared reference, both files point at it.
+
+### Backlog after Session 8
+
+1. **Tier A markdownlint enablement** (cleanup pass + config flip + commit). Probably a few hours of work for the cleanup; the config flip is one line.
+2. **Frontmatter validator extensions to `lint-markdown.js`.** Three new functions; ~50 lines.
+3. **Reviewdog + Tier B** (MD040/MD045 with `filter_mode: added`). Separate decision once Tier A lands clean.
+4. **Cache-friendliness audit.** Still on the list from Session 7.
+5. **PR 45 prose-regression investigation.** Still on the list from Session 6.
+6. **Deploy step:** create `review:frontmatter-only` label upstream when the branch lands.
+
+### Artifacts
+
+- `/workspaces/src/scratch/2026-04-29-review-criteria-audit.md` — full audit report with rule-by-rule classification and decision queue. Survives this session for reference; not committed to docs repo.
+- Two new commits on `CamSoper/pr-review-overhaul`: `05411771e5` (extraction), `a096563c8b` (restoration). Both pushed.
+- 3 new shared references: `code-examples.md`, `prose-patterns.md`, `image-review.md`. Reference count is now 12 in `docs-review/references/`.
