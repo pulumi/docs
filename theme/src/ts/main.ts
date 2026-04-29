@@ -15,6 +15,7 @@ import "./copybutton";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";
+import "./newsroom";
 import "./packages";
 import "./pricing-trial";
 import "./pulumi-cloud";

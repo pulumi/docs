@@ -183,65 +183,33 @@
         <div class="dot-background no-animate"></div>
     </div>
 
-    <section id="awards" class="relative">
-        <div class="shape-background about-awards-section overflow-hidden">
-            <div class="shape-container">
-                <div class="circle-top-left"></div>
-                <div class="circle-bottom-left"></div>
-                <div class="circle-top-right"></div>
-                <div class="circle-bottom-right"></div>
+    <section id="newsroom" class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+                <div>
+                    <h3 class="font-medium text-6xl mb-2">In the Newsroom</h3>
+                    <p class="text-gray-700 text-lg mb-0">Recent press, news coverage, and awards.</p>
+                </div>
+                <a class="text-blue-600 font-bold whitespace-nowrap" href="{{ relref . "newsroom" }}">View the Newsroom &rarr;</a>
             </div>
-        </div>
-        <div class="container mx-auto mb-10 text-center">
-            <h2 class="font-medium text-6xl mt-10 mb-8">Our awards &amp; recognition</h2>
-            <ul class="list-none block p-0 inline-flex flex-wrap justify-center">
-                {{ range first 4 (where site.Data.awards.awards "featured" true) }}
-                    <li class="mx-4 award flex items-center justify-center">
-                        <a data-track="award-{{ .url | urlize }}" href="{{ .url }}" class="flex items-center justify-center">
-                            <img class="inline-block" src="{{ .img }}" title="{{ .title }}" />
-                        </a>
+
+            <ul class="list-none grid grid-cols-1 md:grid-cols-3 gap-6 p-0 m-0">
+                {{ with index site.Data.newsroom.releases 0 }}
+                    <li class="m-0">
+                        {{ partial "newsroom/card.html" (dict "type" "news" "title" .title "summary" .summary "url" .url "date" .date) }}
+                    </li>
+                {{ end }}
+                {{ with index site.Data.newsroom.coverage 0 }}
+                    <li class="m-0">
+                        {{ partial "newsroom/card.html" (dict "type" "press" "title" .title "img" .img "url" .url "date" .date) }}
+                    </li>
+                {{ end }}
+                {{ with index (where site.Data.awards.awards "featured" true) 0 }}
+                    <li class="m-0">
+                        {{ partial "newsroom/card.html" (dict "type" "awards" "title" .title "img" .img "url" .url "date" .date) }}
                     </li>
                 {{ end }}
             </ul>
-            <div>
-                <a class="inline-block mt-6 text-bold text-blue-600 mt-12 font-bold" href="{{ relref . "/awards" }}">View all achievements</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="w-full h-16 mt-4">
-        <div class="dot-background no-animate"></div>
-    </div>
-
-    <section id="newsroom" class="py-16 px-4">
-        <div class="container mx-auto md:flex items-top max-w-5xl">
-            <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
-                <ul class="list-none mt-8 p-0">
-                    {{ range first 2 site.Data.newsroom.releases }}
-                        <li class="pb-4">
-                            <div class="text-sm text-gray-700">{{ .date }}</div>
-                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            <a data-track="press-release" class="block my-4" href="{{ .url }}">Read more &rarr;</a>
-                        </li>
-                    {{ end }}
-                </ul>
-                <a class="text-blue-600 font-bold" href="{{ relref . "newsroom" }}">View all press releases</a>
-            </div>
-            <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
-                <ul class="list-none mt-8 p-0">
-                    {{ range first 2 site.Data.newsroom.coverage }}
-                        <li class="pb-4">
-                            <div class="text-sm text-gray-700">{{ .date }}</div>
-                            <img class="mt-4 h-5" src="{{ .img }}" />
-                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            <a data-track="news-{{ .url | urlize }}" class="block my-4" href="{{ .url }}" target="_blank" rel="noopener noreferrer"> Read more &rarr; </a>
-                        </li>
-                    {{ end }}
-                </ul>
-                <a class="text-blue-600 font-bold" href="{{ relref . "newsroom" }}">View all recent news</a>
-            </div>
         </div>
     </section>
 

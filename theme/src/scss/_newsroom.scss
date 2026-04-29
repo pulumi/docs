@@ -1,0 +1,121 @@
+.pulumi-newsroom-list-container {
+
+    #newsroom-filter-nav {
+        @apply flex font-body text-base py-0;
+
+        list-style: none !important;
+
+        li {
+            @apply border-solid border-b-2 border-transparent;
+            margin-bottom: -1px;
+
+            > a {
+                @apply block py-3 px-4 font-normal text-base text-center text-gray-700 no-underline whitespace-nowrap;
+
+                @include screen-lg {
+                    @apply py-4 text-lg;
+                }
+
+                // Reserve width for the bold (active) state so toggling weight
+                // doesn't shift surrounding tabs. The ghost copy is sized at
+                // font-weight 600 but has zero height, so it only contributes
+                // to width measurement.
+                > span {
+                    display: inline-block;
+
+                    &::after {
+                        content: attr(data-text);
+                        display: block;
+                        height: 0;
+                        overflow: hidden;
+                        visibility: hidden;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &:hover {
+                @apply border-gray-600;
+
+                > a {
+                    @apply text-black;
+                }
+            }
+        }
+
+        // On initial load without a hash, the "All" tab should be active.
+        li[data-filter-name="all"] {
+            @include gradient-border;
+
+            > a {
+                @apply font-semibold text-black;
+            }
+        }
+    }
+}
+
+// Active tab styling driven by the URL hash, mirroring the events list pattern.
+@each $filter-name in "all" "news" "press" "awards" {
+    ##{$filter-name}:target {
+        // Reset the default "all" tab styling when any other hash is set.
+        ~ .newsroom-filter li[data-filter-name="all"] {
+            @apply border-solid border-b-2 border-transparent;
+            border-image-source: none;
+
+            > a {
+                @apply font-normal text-gray-600;
+            }
+
+            &:hover {
+                @apply border-gray-600;
+
+                > a {
+                    @apply text-black;
+                }
+            }
+        }
+
+        // Highlight the active tab.
+        ~ .newsroom-filter li[data-filter-name="#{$filter-name}"] {
+            @include gradient-border;
+
+            > a {
+                @apply font-semibold text-black;
+            }
+        }
+    }
+}
+
+.newsroom-card {
+    .newsroom-card-image img {
+        max-width: 70%;
+    }
+}
+
+.newsroom-archive-list {
+    .newsroom-archive-row {
+        color: inherit;
+
+        &:hover {
+            @apply bg-gray-50;
+
+            .archive-title {
+                @apply text-violet-700;
+            }
+        }
+    }
+}
+
+// On a single-type pane (News, Press, Awards), the type chip on cards and
+// archive rows is redundant — every item already matches the active filter.
+//
+// The !important is intentional: this file is loaded inside @layer components,
+// while Tailwind's display utilities (e.g. .inline-block) live in @layer
+// utilities, which always wins on cascade order — !important is the cleanest
+// way to override them without restructuring the layer setup.
+[data-filter-section]:not([data-filter-section="all"]) {
+    .archive-type-pill,
+    .newsroom-card-type-pill {
+        display: none !important;
+    }
+}

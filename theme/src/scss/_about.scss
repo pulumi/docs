@@ -51,26 +51,6 @@
     border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
 }
 
-#awards {
-    .award {
-        height: 230px;
-        width: 230px;
-        border-radius: 14px;
-        background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
-    
-        a {
-            height: 226px;
-            width: 226px;
-            border-radius: 12px;
-            background-color: white;
-
-            img {
-                width: 180px;
-            }
-        }
-    }
-}
-
 #we-are-pulumi {
     @apply relative w-full;
 
@@ -109,7 +89,7 @@
     }
 }
 
-#we-are-pulumi, #who-we-are, #what-we-believe, #community, #history, #awards, #newsroom, #join-us {
+#we-are-pulumi, #who-we-are, #what-we-believe, #community, #history, #newsroom, #join-us {
     scroll-margin-top: 75px;
 }
 
