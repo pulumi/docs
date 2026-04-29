@@ -136,11 +136,11 @@ jobs:
               --arg rules "$PROSE_RULES" \
               --arg diff "$PROSE_DIFF" \
               '{
-                model: "claude-sonnet-4-6",
+                model: "claude-haiku-4-5-20251001",
                 max_tokens: 512,
                 messages: [{
                   role: "user",
-                  content: ("You are doing a focused prose check on a small pull request that the triage shell already classified as trivial or frontmatter-only. The full review will be skipped, so this is a sanity-check pass for spelling and grammar issues that an author or reviewer might miss.\n\nOutput exactly one JSON object on a single line, no prose, no code fences:\n{\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\",...]}\n\nIf you find no issues, output {\"prose_concerns\":[]}.\n\nFor frontmatter-only PRs, only inspect prose-bearing fields: title, meta_desc, description, social_image_text, excerpt. Skip aliases, tags, categories, draft flags, dates, and other data fields.\n\nReview rules (read the Prose check subsection):\n\n" + $rules + "\n\n---\n\nDiff (truncated to 50000 bytes):\n\n" + $diff)
+                  content: ("Apply the rules below to the diff that follows. Output exactly one JSON object on a single line, no prose, no code fences. Schema:\n{\"prose_concerns\":[\"path/to/file.md:LINE -- issue (suggested fix)\", ...]}\n\nIf you find no issues, output {\"prose_concerns\":[]}.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
                 }]
               }')
             RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
