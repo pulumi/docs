@@ -1,4 +1,105 @@
-<span>
-    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
-    {{ partial $path }}
-</span>
+{{/*
+Unified icon partial.
+
+Parameters:
+  name   (required) Icon name. Prefix syntax:
+           "brand/slack"      → assets/icons/brand/slack.svg
+           "custom/pdi-neo"   → assets/icons/custom/pdi-neo.svg
+           bare name          → phosphor (at $weight), then custom, then brand
+  weight (optional) Phosphor weight: "regular", "bold", or "duotone" (default: "duotone")
+  class  (optional) Extra CSS classes added to the <svg> element
+  size   (optional) Numeric px value applied as width/height attributes
+  title  (optional) Accessible label; adds role="img" aria-label. Omit for decorative icons.
+
+Usage:
+  {{ partial "icon.html" (dict "name" "rocket-launch") }}
+  {{ partial "icon.html" (dict "name" "brand/slack" "class" "w-5 h-5") }}
+  {{ partial "icon.html" (dict "name" "rocket-launch" "weight" "bold" "title" "Launch") }}
+*/}}
+{{- /* Legacy API: callers passing (dict "icon" "foo") delegate to layouts/partials/icons/foo.html */ -}}
+{{- if and .icon (not .name) -}}
+    {{- $legacyPath := printf "icons/%s" .icon -}}
+    {{- partial $legacyPath . -}}
+{{- else -}}
+{{ $name   := .name }}
+{{ $weight := default "duotone" .weight }}
+{{ $class  := default "" .class }}
+{{ $size   := .size }}
+{{ $title  := default "" .title }}
+
+{{ $svg := "" }}
+
+{{ if hasPrefix $name "brand/" }}
+    {{- $key := strings.TrimPrefix "brand/" $name -}}
+    {{- with resources.Get (printf "icons/brand/%s.svg" $key) -}}
+        {{- $svg = .Content -}}
+    {{- else -}}
+        {{- errorf "icon: brand icon %q not found in assets/icons/brand/" $key -}}
+    {{- end -}}
+{{ else if hasPrefix $name "custom/" }}
+    {{- $key := strings.TrimPrefix "custom/" $name -}}
+    {{- $customSuffix := "" -}}
+    {{- if eq $weight "bold" }}{{ $customSuffix = "-bold" }}{{ end -}}
+    {{- if eq $weight "duotone" }}{{ $customSuffix = "-duotone" }}{{ end -}}
+    {{- with resources.Get (printf "icons/custom/%s%s.svg" $key $customSuffix) -}}
+        {{- $svg = .Content -}}
+    {{- else -}}
+        {{- with resources.Get (printf "icons/custom/%s.svg" $key) -}}
+            {{- $svg = .Content -}}
+        {{- else -}}
+            {{- errorf "icon: custom icon %q (weight=%s) not found in assets/icons/custom/" $key $weight -}}
+        {{- end -}}
+    {{- end -}}
+{{ else if hasPrefix $name "phosphor/" }}
+    {{- $key := strings.TrimPrefix "phosphor/" $name -}}
+    {{- with resources.Get (printf "icons/phosphor/%s/%s.svg" $weight $key) -}}
+        {{- $svg = .Content -}}
+    {{- else -}}
+        {{- errorf "icon: phosphor icon %q (weight=%s) not found" $key $weight -}}
+    {{- end -}}
+{{ else }}
+    {{- /* Bare name: phosphor → custom → brand */}}
+    {{- with resources.Get (printf "icons/phosphor/%s/%s.svg" $weight $name) -}}
+        {{- $svg = .Content -}}
+    {{- else -}}
+        {{- $bareCustomSuffix := "" -}}
+        {{- if eq $weight "bold" }}{{ $bareCustomSuffix = "-bold" }}{{ end -}}
+        {{- if eq $weight "duotone" }}{{ $bareCustomSuffix = "-duotone" }}{{ end -}}
+        {{- with resources.Get (printf "icons/custom/%s%s.svg" $name $bareCustomSuffix) -}}
+            {{- $svg = .Content -}}
+        {{- else -}}
+        {{- with resources.Get (printf "icons/custom/%s.svg" $name) -}}
+            {{- $svg = .Content -}}
+        {{- else -}}
+            {{- with resources.Get (printf "icons/brand/%s.svg" $name) -}}
+                {{- $svg = .Content -}}
+            {{- else -}}
+                {{- errorf "icon: %q (weight=%s) not found in phosphor, custom, or brand" $name $weight -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- end -}}
+{{ end }}
+
+{{- /* Determine CSS class string: brand/ and custom/ never get a weight class */}}
+{{- $baseClass := printf "ph-icon ph-icon--%s" $weight -}}
+{{- if hasPrefix $name "brand/" -}}
+    {{- $baseClass = "ph-icon" -}}
+{{- end -}}
+{{- $allClass := strings.TrimSpace (printf "%s %s" $baseClass $class) -}}
+
+{{- /* Build attribute fragments */}}
+{{- $sizeAttrs := "" -}}
+{{- if $size -}}
+    {{- $sizeAttrs = printf ` width="%v" height="%v"` $size $size -}}
+{{- end -}}
+{{- $a11yAttrs := ` aria-hidden="true" focusable="false"` -}}
+{{- if $title -}}
+    {{- $a11yAttrs = printf ` role="img" aria-label="%s"` $title -}}
+{{- end -}}
+
+{{- /* Inject class, size, and a11y by replacing the opening <svg> tag */}}
+{{- $replacement := printf `<svg class="%s" fill="currentColor"%s%s>` $allClass $sizeAttrs $a11yAttrs -}}
+{{- replaceRE `<svg[^>]*>` $replacement $svg 1 | safeHTML -}}
+{{- end -}}
+

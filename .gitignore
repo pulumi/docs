@@ -68,6 +68,13 @@ data/openapi-spec.json
 /assets/css/
 /assets/js/
 
+# Ignore sync-generated icon assets (rebuilt by `make ensure`).
+/assets/icons/phosphor/
+/assets/icons/brand/
+
+# Ignore the inbox for custom icon staging.
+/assets/icons/custom/_inbox/
+
 # Ignore Cypress-generated content.
 cypress/videos
 cypress/screenshots
