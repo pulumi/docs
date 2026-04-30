@@ -7,7 +7,7 @@ description: Review criteria for testable example programs under static/programs
 
 Applied to changes touching `static/programs/`. These are real, testable Pulumi programs -- the bar is compilability and correctness, not just style. See `CODE-EXAMPLES.md` for the testing harness and directory conventions.
 
-Compilability cascades: a missing import in one file breaks the whole project. So **whole-program read is mandatory** whenever a program file is changed, and pre-existing extraction is **always on** for touched programs.
+**Whole-program read is mandatory** whenever a program file is changed; pre-existing extraction is **always on** for touched programs.
 
 ---
 
@@ -65,7 +65,6 @@ CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 
-- **Prettier-style formatting on hand-written constructor code.** The TypeScript constructor style is an intentional deviation from Prettier defaults (see AGENTS.md). Don't "fix" it; don't propose Prettier refactors.
 - **Dependency pins that match sibling programs' pins.** If `aws-s3-bucket-typescript` pins `@pulumi/aws` to `^6.0.0` and this PR's new variant does the same, don't flag -- it's a deliberate choice for consistency.
 - **Idiomatic patterns for the language.** If the program uses `async`/`await` in TypeScript and you'd personally prefer `.then()` chains, that's a preference, not a finding.
 - **"Consider adding error handling."** Example programs deliberately skip production-grade error handling to keep the example readable. Flag when the example *claims* to handle an error (but doesn't), not when it simply doesn't demonstrate error handling.

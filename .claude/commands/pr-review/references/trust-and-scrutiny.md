@@ -108,12 +108,9 @@ Manual override always wins over the other three signals.
 
 ## Heightened-scrutiny behaviors
 
-When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`), the skill behaves differently in several places:
+When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`):
 
-| Where | Behavior |
-|---|---|
-| fact-check behavior | See `docs-review:references:fact-check` §Heightened-scrutiny overrides (always-RUN gating, full-file extraction, verification-by-default, medium-confidence claims visible). |
-| Step 6 confidence gauge | Prepends `🤖 AI-suspect (<reasons>)` and caps the gauge at MEDIUM. HIGH is impossible when AI-suspect is set. |
-| Step 6 trivial-fix preview | Suppressed entirely; see `pr-review:references:action-preview-templates` §AI-suspect override. |
-| Step 8 merge toggle | Defaults **OFF** regardless of contributor type. |
-| Make-changes-and-approve trivial fixes | Suppressed entirely; see `pr-review:references:action-preview-templates` §AI-suspect override for rationale. |
+- **Fact-check** — see `docs-review:references:fact-check` §Heightened-scrutiny overrides.
+- **Trivial-fix auto-apply** (preview and execution) — suppressed; see `pr-review:references:action-preview-templates` §AI-suspect override.
+- **Merge toggle** — defaults OFF; see `pr-review:references:action-preview-templates` §Auto-merge toggle defaults.
+- **Confidence gauge** — caps at MEDIUM and surfaces the AI-suspect reasons; see `pr-review` Step 6.

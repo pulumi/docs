@@ -118,7 +118,7 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 Each item below renders as a single 🚨 Outstanding finding when violated. Quote-and-rewrite mandate: name the field or file, propose the specific fix.
 
 - **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement. Lint catches the placeholder file but not the retired-logo case.
-- **`meta_image` is an animated GIF.** Social previews use the first frame as fallback, which usually breaks the composition. Quote the path; propose a static PNG / JPG / SVG.
+- **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
 - **`<!--more-->` break position.** Lint catches *presence*; position is review-time judgment. The break must land after the first 1–3 paragraphs, not buried mid-post. Quote the surrounding paragraphs; propose the correct placement.
 - **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 

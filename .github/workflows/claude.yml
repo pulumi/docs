@@ -203,7 +203,7 @@ jobs:
 
             **Read the triggering mention text from `.claude-mention-body.txt` first.** It contains the body of the comment, review, or issue that invoked you. Decide what to do based on what it asks for:
 
-            1. **Review-related ask on a PR** — refresh, "I addressed your feedback on X", dispute a finding ("I disagree with X because Y"), or any explicit "@claude refresh / re-review" intent:
+            1. **Review-related ask on a PR** (any of the cases described in `docs-review:references:update`: fix-response, dispute, or generic refresh):
                - If a pinned review **EXISTS**, follow `docs-review:references:update` and post the updated review via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
                - If a pinned review **does not exist**, follow `.claude/commands/docs-review/ci.md` to produce an initial review and post via the same `pinned-comment.sh upsert` command.
 

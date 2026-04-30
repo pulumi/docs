@@ -5,7 +5,7 @@ description: Docs-review entry point for CI. Diff-only, posts to a pinned PR com
 
 # Docs Review (CI)
 
-This is the **CI entry point** for the docs review pipeline. It is invoked by `.github/workflows/claude-code-review.yml` when a PR transitions to `ready_for_review`.
+This is the **CI entry point** for the docs review pipeline.
 
 ---
 
@@ -16,7 +16,7 @@ This is the **CI entry point** for the docs review pipeline. It is invoked by `.
 3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
-6. **No internal-source MCP servers.** Fact-check uses public sources only: `gh`, `WebFetch`, `WebSearch`, and local repo read. Notion and Slack are excluded by design — review output is public.
+6. **No internal-source MCP servers.** Notion and Slack MCP tools are not whitelisted in CI by design — review output is public. Live code execution beyond `gh` and file reads is unavailable; see hard rule 4 above.
 
 ---
 

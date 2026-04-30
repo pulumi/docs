@@ -278,13 +278,13 @@ Build a structured triage object that the caller will render. fact-check returns
 
 ### Tier rules
 
-The 🚨 / ⚠️ / ✅ tier emojis are intentionally aligned with the canonical bucket emojis owned by `docs-review:references:output-format` so callers can pass tier contents through verbatim. 🤔 is fact-check's own bucket for inconclusive verifications and has no canonical counterpart.
+🚨 and ⚠️ tier emojis match canonical buckets in `docs-review:references:output-format` (Outstanding and Low-confidence) — callers can thread those contents through. 🤔 has no canonical counterpart. ✅ Verified is fact-check's own collapsed-details bucket; it is **not** the canonical ✅ Resolved-since-last-review (which is the re-entrant-run bucket the caller owns elsewhere). The caller decides where to thread fact-check's ✅ Verified contents.
 
 | Tier | Contents |
 |---|---|
 | 🚨 Needs your eyes | All `contradicted` claims (any confidence) + all `unverifiable` claims |
 | 🤔 Intuition-check | Claims whose `intuition_check` flag was set AND whose verification came back inconclusive (timed out, could not reach a verdict). Cross-reference the shape concern in the evidence line. |
-| ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened) |
+| ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened). When the caller folds these into output-format's ⚠️ Low-confidence, prefix the evidence line so a reader can tell "verified weakly" apart from a generic low-confidence finding. |
 | ✅ Verified | Everything else, collapsed under `<details>` |
 
 When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.

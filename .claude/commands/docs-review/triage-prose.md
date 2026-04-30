@@ -5,7 +5,7 @@ description: Triage prose-check prompt. Loaded only when triage-classify.py clas
 
 # PR Triage — Prose Check
 
-You are doing a focused spelling/grammar pass on a small pull request that the triage shell has already classified as **trivial** (≤5 lines of prose-only body changes) or **frontmatter-only** (every change is inside a Hugo frontmatter block). Either way, the full review is skipped.
+You are doing a focused spelling/grammar pass on a small pull request — either **trivial** (≤5 lines of prose-only body changes) or **frontmatter-only** (every change is inside a Hugo frontmatter block).
 
 This is a fast, narrow pass. Output exactly one JSON object on a single line, no prose, no code fences:
 

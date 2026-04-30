@@ -5,7 +5,7 @@ description: Adjudicate a pull request as a maintainer. Reads the CI-posted pinn
 
 # Pull Request Review Command
 
-This is the maintainer adjudication layer on top of the CI review pipeline (`claude-code-review.yml` posts a pinned `<!-- CLAUDE_REVIEW N/M -->` comment with all findings; this skill reads that as the source of truth). The goal is **fast adjudication**, not parallel review — duplicate review work was the original anti-pattern.
+This is the maintainer adjudication layer on top of the CI review pipeline (`claude-code-review.yml` posts a pinned `<!-- CLAUDE_REVIEW N/M -->` comment with all findings; this skill reads it as the source of truth).
 
 ## Usage
 
@@ -167,11 +167,7 @@ This is the **first big user-facing output**. Render in this order, top to botto
 
    Each item gets a numeric index for veto in Step 8.
 
-6. **Trivial-fix candidates** (only if any) — applied via Make-changes-and-approve per the categories in `pr-review:references:action-preview-templates`. Suppressed entirely when AI-suspect, replaced with:
-
-   ```text
-   Trivial-fix auto-apply disabled (AI-suspect — manual review required)
-   ```
+6. **Trivial-fix candidates** (only if any) — applied via Make-changes-and-approve per `pr-review:references:action-preview-templates`. Suppressed when AI-suspect; see action-preview-templates §AI-suspect override.
 
 7. **Overall assessment** — single line: Clean / Minor issues / Issues found / Critical issues. Computed from the pinned 🚨 Outstanding count and any code-correctness findings. Pre-existing alone does not gate approval.
 
@@ -181,17 +177,7 @@ Render the whole package in one message.
 
 ### Step 7: Present action menu
 
-Use AskUserQuestion (max 4 options). Selection is adaptive based on findings:
-
-- **Bot PR** → bot menu
-- **🚨 Outstanding findings with high-confidence suggested fixes** → Scenario A: "Make changes and approve" recommended
-- **🚨 Outstanding findings without reliable fixes** → Scenario B: "Request changes" recommended (the pinned author-question buffer pre-fills the comment)
-- **No 🚨 Outstanding** → Scenario C: "Approve" recommended
-- **Should close** → Scenario D: "Close PR" recommended
-
-The Step 7 menu chooses *what* to do. Auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
-
-See `pr-review:references:action-menus`.
+Use AskUserQuestion (max 4 options). Adaptive-scenario selection (which menu fires for which finding shape) and per-scenario options live in `pr-review:references:action-menus`. The Step 7 menu chooses *what* to do; auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
 
 ### Step 8: Preview action and confirm (with merge toggle)
 
@@ -205,18 +191,9 @@ The preview shows:
 - The exact comment text that will be posted (using `pr-review:references:message-templates`)
 - The full list of `gh` commands that will run
 
-The posted comment must obey the voice/length rules in `pr-review:references:message-templates`: never disclose scrutiny level, AI-suspect status, the pinned-comment refresh, or fact-check narration. Step 6's local package is for the maintainer's eyes; the public maintainer comment is its own thing.
+The posted comment must obey the voice/length rules in `pr-review:references:message-templates`. Step 6's local package is for the maintainer's eyes; the public maintainer comment is its own thing.
 
-The confirmation menu adapts to the pending action:
-
-| Pending | Slot 2 |
-|---|---|
-| Make-changes-and-approve | **Veto trivial fix(es) / PR description correction(s)** |
-| Approve with suppressable findings | **Suppress finding(s)** |
-| Approve with disputable findings | **Dispute finding(s)** *(only when 🚨 Outstanding findings exist; opt-in)* |
-| Otherwise | **Edit comment** |
-
-Slots 1, 3, 4 are always: **Yes, proceed** / **Toggle merge** / **Cancel**.
+Confirmation-menu adaptation (slot 2 changes per pending action; dispute-path opt-in is described below) lives in `pr-review:references:action-preview-templates` §Confirmation Question.
 
 #### Dispute path (opt-in)
 
