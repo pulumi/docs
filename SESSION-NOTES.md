@@ -1598,3 +1598,113 @@ Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test-v2/` — `REPORT
 ### Memory updates
 
 One feedback entry added: `feedback_check_session_notes_for_prior_experiments` — captures the Sonnet pre-pass exchange where I proposed an experiment Session 6 had already characterized. Future sessions on multi-session branches should grep SESSION-NOTES.md for prior experiments before proposing new ones.
+
+---
+
+## Session 18 — 2026-04-30 (e2e re-test, trivial-cap rethink, four cleanup fixes)
+
+### Trigger
+
+Cam closed Session 17's fork PRs and asked to re-run the full e2e against the fixture set, this time with 4 new boundary fixtures to validate Session 17's `≤5/==1` → `≤10/≤2` trivial-threshold bump. Session pivoted mid-run when Cam canceled re-entrant after a series of issues surfaced; remainder spent characterizing trivial PRs in the wild and shipping the diagnosed-but-unshipped fixes.
+
+### What ran
+
+- New sync `26d0e0fdb3` on `cam/master` overlaying worktree HEAD `93dbfb6a5a` (Session 17 trivial bump + AGENTS.md trim + notes), preserving the cam-fork-only ESC-bypass commit.
+- 4 new boundary fixture branches added: `test-trivial-2files` (4 lines / 2 files — should be trivial under bump), `test-trivial-7lines` (7 diff-lines / 1 file — should be trivial), `test-trivial-over-lines` (12 diff-lines / 1 file — should NOT be trivial), `test-trivial-over-files` (6 lines / 3 files — should NOT be trivial because of file cap).
+- All 14 fixture branches rebased onto the new sync.
+- 14 fresh draft PRs `CamSoper/pulumi.docs#84–97`, marked ready 20:43:02Z.
+- Re-entrant phase **canceled** by Cam after the issues below surfaced.
+
+### Findings
+
+**1. Diverged Revert SHAs caused merge conflicts on PRs 84–87.** First rebase script cherry-picked the Revert commit separately onto each `compare/base-pr-XXXX` and `compare/pr-XXXX` branch. The cherry-picks created distinct SHAs, GitHub's merge-base fell back to the sync, and the file's create-on-head + delete-on-base history read as a modify/delete conflict. PRs opened with `MERGEABLE=false`. Fix: rebase head branches OFF THE REBASED BASE branches so they share the actual Revert SHA. Codified in `scratch/2026-04-30-e2e-test-v3/rebase-fixtures.sh`.
+
+**2. Empty-diff race on PR creation.** Right after the force-push, `gh pr view --json files` returned 0 files / 0 additions / 0 deletions for ~30-60s while GitHub re-evaluated PR diffs. The review workflow read this empty state and ran the model with no diff context, which errored with `Internal error: directory mismatch for directory "/home/runner/work/_actions/anthropics/claude-code-action/v1/tsconfig.json"`. The "Flip to draft and back to ready, or mention `@claude`, to retry" message handled recovery, but only after manual draft-toggle round-trips. Affected PRs 84-87. **Mitigation shipped** — see below.
+
+**3. PR 93 Haiku FP on a non-existent parallel-structure problem.** Triage Haiku flagged: "'destroying' should be 'destroy' to match parallel structure with 'provisioning' and 'updating'." All three are gerunds (`-ing`); the line is already parallel. Haiku then offered two contradictory "fixes" (change to "managing" — same `-ing` form; OR restructure as base verbs — also parallel). First confirmed Haiku FP across Sessions 16/17/18. Decision: don't change anything (advisory footer absorbs single-shot FPs; tightening the prompt costs budget on every triage; soft-watch the rate going forward).
+
+**4. test-normal fixture obsoleted by Session 17's bump.** test-normal sat at 9 adds + 1 del → still trivial under `additions ≤ 10`. Was named for "normal PR, full review" but lost that meaning silently when the cap moved. **Mitigation shipped** — regrew to 13 additions.
+
+**5. Label mutex bug.** `review:claude-ran` and `review:claude-stale` could coexist after a synchronize event (mark-stale added stale but didn't remove ran). The two labels represent mutually exclusive states. Cam spotted it. **Mitigation shipped** — see below.
+
+**6. Frontmatter false-positive in `detect_starting_state`.** When a diff hunk doesn't include the file's opening `---` and a context line happens to look like a YAML key (e.g., `description: A minimal program.` inside a markdown ` ```yaml ` code block), the heuristic returns "frontmatter" and subsequent body changes get tagged `has_frontmatter_change=True`. Hit PR 96 this run; didn't change the trivial/fmonly outcome (other guards still triggered) but the diagnostic summary was misleading. **Mitigation shipped** — see below.
+
+**7. Trivial-cap rethink — recommendation: switch to `additions` only.** Cam framed the trivial cap as cost optimization ("if it's short and easy for me to glance at and go 'yep, that's good!' it should save the token spend"). Pulled 200 most recent merged pulumi/docs PRs, filtered to non-bot + 100% content/*.md → 42 PRs (12 from jkodroff, the most active maintainer). Scored 7 candidate rules. `additions ≤ 10, files ≤ 2` catches 18/42 (43%) vs the old rule's 13/42 (31%) — a +5-PR shift, with all gains matching the cleanup pattern jkodroff and others use:
+- #18703 jkodroff (9/41/1) — Replace card-style links with Related topics section
+- #18681 jkodroff (6/0/2) — Document deletedWith inheritance
+- #18521 cnunciato (0/62/1) — Remove AWS Summit Tel Aviv 2026
+- #18641 smithrobs (4/32/1) — Remove redundant TOC
+- #18707 smithrobs (9/0/1) — Add warning about workspaces.prefix
+The metric tracks "how much new content does the maintainer have to read" rather than "how many diff line markers" — pure-deletion and deletion-dominant cleanup PRs are eligible because reading deleted content costs nothing. **Mitigation shipped** — see below.
+
+### Mitigations shipped
+
+**Trivial cap: `total_lines` → `additions`** (`triage-classify.py:245`, `CONTRIBUTING.md:51`). Commit `7ecf44f5a6`. The cap now measures new content, not raw diff line markers. CONTRIBUTING.md description updated to "≤10 added lines" and explicit mention of removal-dominant cleanup. Estimated effect on a 42-PR sample: 13 → 18 trivial (+38%), no false positives that look like real-review territory.
+
+**Four cleanup fixes** (commit `0b8e9a0a4f`):
+1. **Label mutex** (`claude-code-review.yml:43`): mark-stale step now adds `--remove-label "review:claude-ran"` alongside the `--add-label "review:claude-stale"`. The two labels are mutually exclusive states.
+2. **Re-entrant re-marks** (`claude.yml:249-264`): on successful re-entrant runs, the Finalize step now re-adds `review:claude-ran` along with the existing removes. Without this, mark-stale's new remove would leave the PR carrying neither label after a successful refresh.
+3. **Empty-diff race detection** (`claude-code-review.yml:92-104`, `:124-128`): pr-context step retries `gh pr view` once after a 30s pause if the first read returned 0 files. If still 0 after retry, skip with `skip_reason=empty-diff` instead of erroring with "directory mismatch."
+4. **Frontmatter heuristic** (`triage-classify.py:102-110`): `detect_starting_state` returns "body" early for any hunk with `old_start > 30`. Hugo content frontmatter is always within the first ~30 lines, and the YAML-key regex is unreliable past that point because markdown YAML code blocks match the same shape.
+
+**Two fixtures regrown** (cam fork only):
+- `test-normal` 9 → 13 adds (HEAD `bb097c51e4`)
+- `test-trivial-over-lines` 6 → 11 adds (HEAD `9e7b25a55e`)
+
+**Rebase-fixtures script codified** (`scratch/2026-04-30-e2e-test-v3/rebase-fixtures.sh`): handles the base-then-head order so the Revert SHA is shared across `compare/base-pr-XXXX` and `compare/pr-XXXX`. Saves the Session-18 lesson for future fixture rebases.
+
+### Items NOT shipped (in backlog)
+
+- **Re-entrant phase** of this session was canceled. The 14 PRs opened (#84-97) sit in their initial-review state. Either a Session-19 walkthrough exercises them, or Cam closes and rebuilds. The re-entrant fix-response/re-verify behavior wasn't re-tested this run.
+- **Tightening Haiku triage-prose** to reduce parallel-structure-style hallucinations. Decision: leave it. Single observed FP across 3 sessions; the rendered footer ("Best-effort spelling/grammar flags... Reject false positives at your discretion") is doing its job; tightening costs budget on every triage. Revisit if a second FP appears.
+- **Boundary-fixture naming/recrafting** beyond the two regrown. The names `test-trivial-7lines` and `test-trivial-2files` over-promise (they describe diff-line counts, not source-line counts). Names didn't change because the underlying classification still validates the boundary.
+
+### Methodology / repeatable patterns
+
+- **Cherry-pick the Revert separately = merge conflict.** Whenever a fixture branch's base ALSO carries a Revert commit, the head branch must be cherry-picked off the rebased base, not the sync. Cherry-picking the Revert separately onto each gives them distinct SHAs and GitHub falls back to the sync as merge-base, which exposes the create-on-head/delete-on-base history as a conflict. Codified in `rebase-fixtures.sh`.
+- **`gh pr view` is lazy after force-push.** The diff metadata can be empty for ~30-60s. Workflows that read it must guard or retry. Now done in `claude-code-review.yml`.
+- **Boundary fixtures decay silently.** A test-* fixture sized exactly at the threshold becomes a no-op the moment the threshold moves. Whenever the rule changes, audit existing fixtures against the new rule, not just create new ones for the new rule.
+- **Cam-pushback patterns worth internalizing this session:**
+  - "Are you just trying to leak context into these skills?" — distinguish doc accuracy (humans read it) from agent-relevant signal (agents act on it). Don't dress one up as the other.
+  - "Why do we give a shit about tokens? I thought it was deterministic." — be precise about which step is deterministic vs which step bills.
+  - "I think you have the wrong expectations for your tests" — when fixture names use script-internal units that don't match author intuition, the names mislead even before a threshold change.
+
+### Backlog after Session 18
+
+Active:
+1. **Maintainer `pr-review` walkthrough** — open PRs #84-97 are still in initial-review state. Cam closed re-entrant; either reopen Session-19 to exercise re-entrant on this set, or close + rebuild.
+2. **Cost-variance monitoring** — defer; cost stable across 4 measurement passes.
+3. **Cam-fork CI cosmetic fixes** — unchanged.
+4. **Investigate 5 lost ⚠️ catches** (Session 13 #5) — still open.
+5. **Upstream label deploy** (Session 14 #4) — still open. The trivial-cap shift makes this slightly more urgent (the rule change is now visible in skill files but not in production triage).
+6. **Prose-pattern re-benchmark** — soft-watch.
+7. **`update.md` raise-missed-duplicate code path** — defer.
+8. **Non-determinism baseline + skeptic sub-agent** — paired; revisit together.
+9. **Boundary-fixture name audit** — the names `test-trivial-7lines` etc. describe diff-line counts; consider renaming or recrafting to use source-line semantics.
+10. **Sync cam/master to post-Session-18 HEAD** — cam fork is at sync `26d0e0fdb3` (Session-17 baseline). The two new commits (`7ecf44f5a6`, `0b8e9a0a4f`) are local-only and would need a fresh sync to test end-to-end on the fork.
+
+Closed this session:
+- Session-17 backlog item: trivial-bump validation → ✅ done with caveats (test-normal and test-trivial-over-lines were obsoleted, regrown).
+- Trivial cap rethink → ✅ shipped (`additions ≤ 10`).
+- Label mutex bug → ✅ shipped + re-entrant re-mark.
+- Empty-diff race → ✅ shipped (retry + skip).
+- Frontmatter FP heuristic → ✅ shipped.
+- Re-entrant phase → ❌ canceled mid-session.
+
+### Files changed (Session 18 substance)
+
+- `7ecf44f5a6` — `Switch trivial cap from adds+dels to additions only` (`triage-classify.py`, `CONTRIBUTING.md`)
+- `0b8e9a0a4f` — `Fix four issues surfaced by the Session-18 e2e run` (`triage-classify.py`, `claude-code-review.yml`, `claude.yml`)
+- (this commit) — Session 18 notes
+
+Cam-fork operations:
+- `cam/master` advanced from `71f9188488` → `26d0e0fdb3` (Session-17 worktree state synced).
+- 14 fixture branches force-pushed atop the new sync, plus 4 new boundary fixtures created.
+- `test-normal` and `test-trivial-over-lines` regrown to clear the new cap.
+- 14 PRs opened (`#84-97`); all initial reviews complete after PR-84-87 retry; re-entrant canceled. PRs left open at session end.
+
+Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test-v3/` — `pulumi-docs-prs.json` (200-PR sample for the trivial-rule analysis), `pulumi-docs-prs-flat.json`, `score-rules.py`, `open-prs.sh`, `capture.sh`, `cost-data.sh`, `cost-data.txt`, `rebase-fixtures.sh` (codifies the Session-18 base-then-head pattern), `reviews/`, `labels/`, `triage/`.
+
+### Memory updates
+
+None. All Session-18 facts are project-state specific to this branch and the e2e fixture set; they belong in this file.
