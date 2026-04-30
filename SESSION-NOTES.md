@@ -1259,3 +1259,69 @@ Cam fork operations (not for upstream):
 ### Memory updates
 
 None. All Session-14 facts are project-state specific to this branch.
+
+---
+
+## Session 14 — continued (2026-04-30, after initial notes)
+
+### Trigger
+
+Cam asked whether `fact-check.md` line 327 ("Gating always returns RUN") really referred to anything. It didn't — it was a vestige of an internal gating mechanism that had been removed entirely (gating moved out to callers in an earlier session). That observation kicked off two follow-on threads: a full caller-leak audit of every file in `docs-review/`, and a re-evaluation of the lint-markdown.js extensions added in Session 9.
+
+### Caller-leak audit pass on `docs-review/`
+
+Four parallel agents audited 13 files. ~41 trims total, +1 file (`SKILL.md`) untouched (already clean). The pattern catalog applied: caller-leak prose ("the caller composes...", "owned by the caller's output format"), cross-skill maintenance notes ("if you change rules here, mirror them in X"), justification clauses (rule + reasoning when the rule alone is sufficient), implementation/runtime trivia (linter rule codes, script paths), and stale references to mechanisms that no longer exist.
+
+| Agent scope | Trims | Net |
+|---|---:|---:|
+| `programs.md`, `output-format.md`, `image-review.md` | 9 | -2 |
+| `blog.md`, `shared-criteria.md`, `domain-routing.md` | 11 | -4 |
+| `SKILL.md` (no edits), `ci.md`, `docs.md` | 11 | -7 |
+| `infra.md`, `code-examples.md`, `prose-patterns.md`, `update.md` | 10 | -9 |
+
+`fact-check.md` was audited first by hand as the template (commit `1ce2529d41`, -12 lines / 11 trims) — the single biggest cleanup since it had the deepest caller-leak. Pattern catalog from that audit became the agent prompts.
+
+**Items the agents flagged but didn't fix** (all resolved or punted by Cam during review):
+
+- `output-format.md` removed a sentence referencing `scripts/pinned-comment.sh`. Verified the script's wiring isn't documented elsewhere — re-add planned but not executed; flag remains for follow-up.
+- `blog.md` line 102 "(Lint catches missing or malformed `social:` blocks.)" — flagged as needing verification against `lint-markdown.js`. Rolled into the lint-revert thread below; line is gone.
+- `shared-criteria.md` "currently disabled" linter rules (MD045/MD040) — flagged for verification. Not pursued.
+- `docs.md` L14 "Whole-file read is opt-in per the pre-existing extraction rule below" — framing slightly loose; left for now.
+- `ci.md` hard rule 1 — possible outdated CI shallow-checkout claim; left for now.
+- `update.md` L160 — verify `output-format` is downstream of update.md; left for now.
+- `update.md` L182 — bare-path `docs-review/ci.md` while rest of file uses colon notation; minor consistency, left for now.
+
+Agent batch landed as commit `479e5e4587` (Cam committed in one shot).
+
+### The lint-markdown.js round trip (don't repeat)
+
+Cam flagged that the metadata checks in lint (`checkPageTitle` / `checkPageMetaDescription` / `checkMetaImage` from master, plus `checkSocialBlock` / `checkMoreBreak` / `checkPlaceholderMetaImage` added in Session 9) were a friction source: drive-by edits on a page whose title is 65 chars block at pre-commit on a rule the contributor didn't introduce.
+
+First attempt (commit `b88460ab94`): migrate `checkPageTitle` / `checkPageMetaDescription` / `checkMetaImage` to review-side rules in `shared-criteria.md` §Frontmatter; remove the corresponding linter functions. Worked fine in isolation — `make lint` clean — but on second look Cam realized the right move was to revert the *entire* lint surface (both the recent migration AND the Session-9 extensions) rather than stack partial migrations on top of partial extensions.
+
+Final state (commit `698e24acf2`):
+- `scripts/lint/lint-markdown.js` reset to `origin/master`. Title / meta_desc length / meta_image `.png` extension stay in lint (existing master behavior, accept the drive-by friction). Session-9 additions removed entirely from lint.
+- `shared-criteria.md` §Linter boundary restored to claim ownership of those three.
+- `blog.md` §Publishing blockers absorbed the three Session-9 checks as review-side rules: `social:` block presence (with marketing-owns-voice caveat — flag presence, don't draft copy), `meta_image` placeholder match (SHA256 against `.claude/commands/_common/images/blog-post-meta-placeholder.png`), `<!--more-->` presence + position folded into one rule.
+- Stale "lint catches X" parentheticals in `blog.md` §Do not flag and §Publishing blockers cleaned up to match the new reality.
+
+The b88460ab94 → 698e24acf2 round trip is worth remembering: when the question is "should this rule live in lint or review?", reverting to master and adding only what's missing on the review side is cleaner than migrating in halves.
+
+### Files changed (Session 14 continuation substance)
+
+- `1ce2529d41` — Trim caller-leak and stale references from fact-check.md
+- `479e5e4587` — Refine documentation review criteria and output formatting across multiple reference files (agent batch — 12 files)
+- `b88460ab94` — Move deterministic frontmatter checks out of pre-commit lint into PR review *(reverted by 698e24acf2)*
+- `698e24acf2` — Revert this branch's lint-markdown changes; cover gaps in blog review
+
+### Backlog updates
+
+Add to backlog:
+- **`output-format.md` `pinned-comment.sh` reference.** Agent removed a sentence pointing to the script during the audit; verify the wiring is documented somewhere or restore.
+- **Bare-ref / colon notation consistency** (Session 12 backlog #3, recurring). `update.md` L182 still uses bare `docs-review/ci.md` while the rest of the file uses `docs-review:references:X`. Documented as the canonical convention now via the spelling-grammar refactor — but the sweep across remaining bare-ref call sites is open.
+
+No item retired this session.
+
+### Memory updates
+
+None.
