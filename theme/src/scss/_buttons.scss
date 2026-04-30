@@ -20,7 +20,10 @@
 
 .btn-secondary {
     @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
-    @apply hover:bg-white hover:text-black hover:border-gray-600;
+
+    &:hover {
+        @apply bg-white text-black border-gray-600;
+    }
 }
 
 .btn-sm {

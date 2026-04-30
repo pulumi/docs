@@ -4,7 +4,7 @@
 @source "../../../content/**/*.{html,md}";
 @source "../../../assets/js/**/*.js";
 @source "../../stencil/src/**/*.tsx";
-@source "../**/*.{js,ts}";
+@source "../**/*.{js,ts,scss}";
 
 @import "theme";
 
@@ -128,13 +128,19 @@
         .btn-primary,
         .btn-primary-template-variant {
             @apply relative text-white text-lg bg-violet-primary rounded-lg cursor-pointer z-auto;
-            @apply hover:bg-violet-800
+
+            &:hover {
+                @apply bg-violet-800;
+            }
         }
 
         .btn-secondary,
         .btn-secondary-template-variant {
             @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
-            @apply hover:bg-white hover:text-black hover:border-gray-600;
+
+            &:hover {
+                @apply bg-white text-black border-gray-600;
+            }
         }
 
        
