@@ -1,37 +1,93 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title ) }}
+    {{ partial "hero" (dict "title" .Title) }}
 {{ end }}
 
 {{ define "main" }}
-    <section id="press-and-news" class="bg-gray-100 py-16 px-4">
-        <div class="container mx-auto md:flex flex-col lg:flex-row items-top max-w-5xl">
-            <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Press Releases</h3>
-                <ul class="list-none mt-8 p-0">
-                    {{ range site.Data.newsroom.releases }}
-                        <li class="pb-4">
-                            <div class="text-sm text-gray-700">{{ .date }}</div>
-                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            <a data-track="press-release" class="block my-4" href="{{ .url }}">Read more &rarr;</a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="md:w/1-2 md:px-8">
-                <h3 class="text-center md:text-left font-medium text-6xl">Recent News</h3>
-                <ul class="list-none mt-8 p-0">
-                    {{ range site.Data.newsroom.coverage }}
-                        <li class="pb-4">
-                            <div class="text-sm text-gray-700">{{ .date }}</div>
-                            <img class="mt-4 h-5" src="{{ .img }}" />
-                            <h5 class="mt-2 mb-0">{{ .title }}</h5>
-                            {{ if .url }}
-                                <a data-track="news-{{ .url | urlize }}" class="block my-4" href="{{ .url }}" target="_blank" rel="noopener noreferrer"> Read more &rarr; </a>
-                            {{ end }}
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
+    {{/* Build a unified, date-sorted feed of press releases, news coverage, and awards. */}}
+    {{ $items := slice }}
+
+    {{/* Press releases (company-authored) → "News" tab. */}}
+    {{ range site.Data.newsroom.releases }}
+        {{ $sortKey := partial "newsroom/sort-key.html" .date }}
+        {{ $items = $items | append (dict "type" "news" "title" .title "summary" .summary "url" .url "date" .date "sortKey" $sortKey) }}
+    {{ end }}
+
+    {{/* Media coverage (external) → "Press" tab. */}}
+    {{ range site.Data.newsroom.coverage }}
+        {{ $sortKey := partial "newsroom/sort-key.html" .date }}
+        {{ $items = $items | append (dict "type" "press" "title" .title "img" .img "url" .url "date" .date "sortKey" $sortKey) }}
+    {{ end }}
+
+    {{ range site.Data.awards.awards }}
+        {{ $sortKey := partial "newsroom/sort-key.html" .date }}
+        {{ $items = $items | append (dict "type" "awards" "title" .title "img" .img "url" .url "date" .date "sortKey" $sortKey) }}
+    {{ end }}
+
+    {{ $items = sort $items "sortKey" "desc" }}
+
+    {{/* Filters drive both the tab bar and the per-filter pane render. */}}
+    {{ $filters := slice
+        (dict "key" "all" "label" "All" "items" $items)
+        (dict "key" "news" "label" "News" "items" (where $items "type" "news"))
+        (dict "key" "press" "label" "Press" "items" (where $items "type" "press"))
+        (dict "key" "awards" "label" "Awards" "items" (where $items "type" "awards"))
+    }}
+
+    {{ $featuredCount := 9 }}
+
+    <section class="pulumi-newsroom-list-container container mx-auto py-12 px-4 max-w-7xl" id="newsroom">
+        {{ range $filters }}
+            <span id="{{ .key }}" class="hidden"></span>
+        {{ end }}
+
+        <div class="newsroom-filter event-list-filter border-b border-gray-200 mb-10 overflow-x-auto">
+            <ul id="newsroom-filter-nav" class="flex p-0 m-0">
+                {{ range $filters }}
+                    <li data-filter-name="{{ .key }}" class="mb-0">
+                        <a href="#{{ .key }}"><span data-text="{{ .label }}">{{ .label }}</span></a>
+                    </li>
+                {{ end }}
+            </ul>
         </div>
+
+        {{ range $filters }}
+            {{ $key := .key }}
+            {{ $feed := .items }}
+            {{ $featured := first $featuredCount $feed }}
+            {{ $archive := after $featuredCount $feed }}
+
+            <div class="newsroom-filter-pane {{ if ne $key "all" }}hidden{{ end }}" data-filter-section="{{ $key }}">
+                {{ if $featured }}
+                    <div class="newsroom-featured-section">
+                        <ul class="newsroom-grid list-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-0 m-0">
+                            {{ range $featured }}
+                                <li data-filters="{{ .type }}" class="m-0">
+                                    {{ partial "newsroom/card.html" . }}
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                {{ end }}
+
+                {{ if $archive }}
+                    <div class="newsroom-archive-section {{ if $featured }}mt-12{{ end }}">
+                        <h2 class="newsroom-archive-heading text-2xl font-medium mb-5">Archive</h2>
+                        <ul class="newsroom-archive-list list-none p-0 m-0 border-t border-gray-200">
+                            {{ range $archive }}
+                                <li data-filters="{{ .type }}" data-archive-item class="m-0 border-b border-gray-200">
+                                    {{ partial "newsroom/archive-row.html" . }}
+                                </li>
+                            {{ end }}
+                        </ul>
+                        <div class="newsroom-pagination mt-8 text-center" aria-live="polite">
+                            <p class="newsroom-count text-sm text-gray-700 mb-4 mt-0"></p>
+                            <button type="button" class="newsroom-load-more btn-secondary hidden">Load more</button>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+
+        <div class="no-results text-center text-gray-700 mt-12 hidden">No items match the selected filter.</div>
     </section>
 {{ end }}

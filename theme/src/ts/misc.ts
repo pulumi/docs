@@ -242,7 +242,7 @@ export function generateOnThisPage() {
             this.classList.add(activeClassName);
 
             const activeLink = (this as HTMLElement).dataset.filterName;
-            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "awards", "newsroom", "join-us"];
+            const allLinks = ["who-we-are", "what-we-believe", "community", "history", "newsroom", "join-us"];
             const inactiveLinks = allLinks.filter(link => link !== activeLink);
 
             inactiveLinks.forEach(link => {

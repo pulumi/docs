@@ -1,0 +1,60 @@
+{{/*
+    Newsroom card partial.
+
+    Renders a uniform card for press releases, news coverage, and awards.
+    Uses the "stretched link" pattern so the whole card is clickable when a URL is present.
+
+    Expected context (dict):
+        type:    "press" | "news" | "awards"
+        title:   item title (required)
+        summary: optional summary text (press)
+        img:     optional image URL (news, awards)
+        url:     optional destination URL
+        date:    optional date string (press, news)
+*/}}
+
+{{ $type := .type }}
+{{ $title := .title }}
+{{ $summary := .summary }}
+{{ $img := .img }}
+{{ $url := .url }}
+{{ $date := .date }}
+
+{{ $meta := partial "newsroom/type-meta.html" . }}
+{{ $typeLabel := $meta.label }}
+{{ $typeBadgeClass := $meta.badgeClass }}
+{{ $trackName := $meta.trackName }}
+{{ $external := $meta.external }}
+
+<article class="newsroom-card relative flex flex-col h-full bg-white rounded-lg border border-gray-200 overflow-hidden transition-shadow hover:shadow-lg">
+    <div class="newsroom-card-image flex items-center justify-center bg-gray-50 p-4 h-44 border-b border-gray-200">
+        {{ if eq $type "news" }}
+            <img src="/images/mascot/rocketpus.svg" alt="" class="max-h-28 max-w-full" loading="lazy" />
+        {{ else }}
+            <img src="{{ $img }}" alt="" class="max-h-24 max-w-full object-contain" loading="lazy" />
+        {{ end }}
+    </div>
+
+    <div class="newsroom-card-content flex flex-col flex-grow p-5">
+        <div class="newsroom-card-meta flex items-center gap-2 text-xs text-gray-700 mb-3">
+            {{ if $date }}
+                <span class="newsroom-card-date py-0.5">{{ $date }}</span>
+            {{ end }}
+            <span class="newsroom-card-type-pill inline-block px-2 py-0.5 rounded-full {{ $typeBadgeClass }} font-medium">{{ $typeLabel }}</span>
+        </div>
+        <h5 class="text-xl font-semibold leading-snug mb-3 text-gray-900">{{ $title }}</h5>
+        {{ if $summary }}
+            <p class="text-sm text-gray-700 mb-0 leading-normal">{{ $summary }}</p>
+        {{ end }}
+    </div>
+
+    {{ if $url }}
+        <a
+            data-track="{{ $trackName }}"
+            href="{{ $url }}"
+            class="absolute inset-0 z-10"
+            aria-label="{{ $title }}"
+            {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}
+        ></a>
+    {{ end }}
+</article>

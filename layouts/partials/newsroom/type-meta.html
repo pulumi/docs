@@ -1,0 +1,47 @@
+{{/*
+    Newsroom type-meta partial.
+
+    Maps a newsroom item's type to its display label, badge color classes,
+    analytics track name, and external-link flag. Used by both the card and
+    archive-row partials so the mapping has one source of truth.
+
+    Type semantics:
+        "news"   — company-authored press releases (the "News" tab).
+        "press"  — external media coverage (the "Press" tab).
+        "awards" — industry awards.
+
+    Expected context (dict):
+        type:  "news" | "press" | "awards"
+        url:   optional — used for the news/award track name
+        title: optional — used for the award track name slug
+
+    Returns:
+        dict { label, badgeClass, trackName, external }
+*/}}
+
+{{ $type := .type }}
+{{ $url := .url }}
+{{ $title := .title }}
+
+{{ $label := "" }}
+{{ $badgeClass := "" }}
+{{ $trackName := "" }}
+{{ $external := false }}
+
+{{ if eq $type "news" }}
+    {{ $label = "News" }}
+    {{ $badgeClass = "bg-violet-100 text-violet-700" }}
+    {{ $trackName = "press-release" }}
+{{ else if eq $type "press" }}
+    {{ $label = "Press" }}
+    {{ $badgeClass = "bg-blue-100 text-blue-700" }}
+    {{ $trackName = printf "press-%s" ($url | urlize) }}
+    {{ $external = true }}
+{{ else if eq $type "awards" }}
+    {{ $label = "Award" }}
+    {{ $badgeClass = "bg-yellow-100 text-yellow-800" }}
+    {{ $trackName = printf "award-%s" ($title | urlize) }}
+    {{ $external = true }}
+{{ end }}
+
+{{ return dict "label" $label "badgeClass" $badgeClass "trackName" $trackName "external" $external }}

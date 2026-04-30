@@ -1,0 +1,39 @@
+{{/*
+    Newsroom sort-key partial.
+
+    Parses a human-readable date string from data/newsroom.toml or
+    data/awards.toml (e.g. "5th November 2025", "20 November 2024",
+    "12th Nov 2019") and returns a "YYYY-MM-DD" string suitable for
+    lexicographic sorting. Returns an empty string when the input is empty.
+
+    Expected context: a date string.
+
+    Usage:
+        {{ $sortKey := partial "newsroom/sort-key.html" .date }}
+*/}}
+
+{{ $months := dict
+    "January" 1 "Jan" 1
+    "February" 2 "Feb" 2
+    "March" 3 "Mar" 3
+    "April" 4 "Apr" 4
+    "May" 5
+    "June" 6 "Jun" 6
+    "July" 7 "Jul" 7
+    "August" 8 "Aug" 8
+    "September" 9 "Sep" 9 "Sept" 9
+    "October" 10 "Oct" 10
+    "November" 11 "Nov" 11
+    "December" 12 "Dec" 12
+}}
+
+{{ $sortKey := "" }}
+{{ if . }}
+    {{ $clean := replaceRE `(\d+)(st|nd|rd|th)` `$1` . }}
+    {{ $parts := split $clean " " }}
+    {{ $day := int (index $parts 0) }}
+    {{ $month := index $months (index $parts 1) }}
+    {{ $year := int (index $parts 2) }}
+    {{ $sortKey = printf "%04d-%02d-%02d" $year $month $day }}
+{{ end }}
+{{ return $sortKey }}

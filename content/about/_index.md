@@ -18,9 +18,7 @@ sections:
       anchor: community
     - label: History
       anchor: history
-    - label: Awards
-      anchor: awards
-    - label: Press & News
+    - label: Newsroom
       anchor: newsroom
     - label: Join us
       anchor: join-us

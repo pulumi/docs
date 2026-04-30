@@ -1,0 +1,47 @@
+{{/*
+    Newsroom archive row partial.
+
+    Renders a single compact row in the archive list, with a leading title and
+    trailing type pill + date. Whole row is a link when a URL is present;
+    otherwise renders as a non-interactive div.
+
+    Expected context (dict):
+        type:  "news" | "press" | "awards"
+        title: item title (required)
+        url:   optional destination URL
+        date:  optional date string
+*/}}
+
+{{ $type := .type }}
+{{ $title := .title }}
+{{ $url := .url }}
+{{ $date := .date }}
+
+{{ $meta := partial "newsroom/type-meta.html" . }}
+{{ $typeLabel := $meta.label }}
+{{ $typeBadgeClass := $meta.badgeClass }}
+{{ $trackName := $meta.trackName }}
+{{ $external := $meta.external }}
+
+{{ $rowClass := "newsroom-archive-row flex items-center justify-between gap-4 py-3 px-2 no-underline transition-colors" }}
+
+{{ if $url }}
+    <a
+        class="{{ $rowClass }}"
+        href="{{ $url }}"
+        data-track="{{ $trackName }}"
+        {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}
+    >
+{{ else }}
+    <div class="{{ $rowClass }}">
+{{ end }}
+        <span class="archive-title font-medium text-gray-900 leading-snug">{{ $title }}</span>
+        <span class="archive-meta flex items-center gap-3 text-xs text-gray-700 whitespace-nowrap">
+            <span class="archive-type-pill inline-block px-2 py-0.5 rounded-full font-medium {{ $typeBadgeClass }}">{{ $typeLabel }}</span>
+            {{ if $date }}<span class="archive-date">{{ $date }}</span>{{ end }}
+        </span>
+{{ if $url }}
+    </a>
+{{ else }}
+    </div>
+{{ end }}
