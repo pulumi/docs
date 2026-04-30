@@ -29,7 +29,9 @@ Applied to every changed file in every review, in addition to the file's domain 
 ### Frontmatter
 
 - Required fields per layout (`title`, `description`/`meta_desc`, `date` for time-sensitive content). Validate as YAML; unmatched quotes and inconsistent indentation break the whole site build, not just the page.
-- **`description` / `meta_desc` length.** Aim for 120–160 characters. Search engines truncate around 160; under 120 leaves the snippet sparse.
+- **`title` length.** Aim for ≤60 characters; flag titles >60 as ⚠️ and titles >70 as 🚨. Skip when frontmatter has `allow_long_title: true`.
+- **`description` / `meta_desc` length.** 120–160 characters. Search engines truncate around 160; under 120 leaves the snippet sparse. Flag <120 or >160 as ⚠️.
+- **`meta_image` format.** Must be a `.png` file when present. Other formats (jpg, gif, webp) reject on social platforms.
 - **`aliases` on move/rename.** When `gh pr view --json files` shows a file under its new path and the diff shows no content change to the old path, the moved file MUST have every prior URL listed in `aliases:`. Missing aliases are a ranking-destroying SEO failure -- flag as 🚨 every time, with the exact frontmatter addition as a suggestion block.
 - **S3 redirects for non-Hugo files.** Deleted files outside Hugo's content management need entries in `scripts/redirects/*.txt` (format `source-path|destination-url`). See `AGENTS.md` §Moving and Deleting Files.
 
@@ -57,7 +59,6 @@ The following are owned by the lint job. Do not restate findings the linter alre
 
 - trailing newlines / trailing whitespace
 - heading case (linter catches inconsistency; this file catches accuracy of content, not stylistic consistency)
-- title length / meta description length / `meta_image` placeholder
 
 Image alt text and fenced-code-block language specifiers are currently disabled in the linter. Alt text is covered by `docs-review:references:image-review`; code-block language by `docs-review:references:code-examples`.
 
