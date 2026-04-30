@@ -100,7 +100,7 @@ Propose:
 
 ### Em-dash density
 
-Three or more em-dashes (`---` or `—`) in a single section. Em-dashes are allowed style; heavy clustering is a tell. Quote the section's lead em-dash; propose breaking one or two into separate sentences.
+Three or more em-dashes (`---` or `—`) in a single section. Quote the section's lead em-dash; propose breaking one or two into separate sentences.
 
 ### Uniform sentence rhythm
 

@@ -15,6 +15,6 @@ Each changed file routes to **exactly one** domain by path. Apply the rules in o
 | 4 | `docs-review:references:infra` | `.github/workflows/**`, `scripts/**` except `scripts/programs/**`, `infrastructure/**`, `Makefile` (repo root), `package.json` (repo root only), `webpack.config.js`, `webpack.*.js` |
 | 5 | `docs-review:references:shared-criteria` only | Anything else (`layouts/`, `assets/`, `data/`, etc.) |
 
-`docs-review:references:shared-criteria` applies to every file regardless of domain. Mixed PRs run each file under its appropriate domain and merge findings into one output object.
+`docs-review:references:shared-criteria` applies to every file regardless of domain.
 
 **Ordering matters.** A per-program `package.json` under `static/programs/<name>/package.json` is programs, not infra. `scripts/programs/**` (e.g., `scripts/programs/ignore.txt`) is programs tooling, not site infra. Only the repo-root `package.json` and `Makefile` count as infra.

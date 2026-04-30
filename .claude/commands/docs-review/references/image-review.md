@@ -34,7 +34,7 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 
 ## Diagrams
 
-- **Mermaid preferred over ASCII art.** Per AGENTS.md. Hugo renders Mermaid natively. Flag ASCII diagrams in `<pre>` blocks as "consider Mermaid" findings.
+- **Mermaid preferred over ASCII art.** Hugo renders Mermaid natively. Flag ASCII diagrams in `<pre>` blocks as "consider Mermaid" findings.
 - **Diagram source over rasterized export.** When a diagram has source (Mermaid, draw.io, Excalidraw), prefer the source-rendered form over a PNG export. Source can be edited; PNGs require re-export to update.
 
 ## Do not flag

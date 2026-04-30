@@ -13,7 +13,7 @@ Applied to changes touching:
 - `Makefile`
 - `package.json`, `webpack.config.js`, `webpack.*.js`
 
-Infra files aren't prose; the job is flagging risks for human review, not catching style nits. Findings render in ⚠️ Low-confidence by default; see `docs-review:references:output-format` §Bucket rules for the two 🚨 exceptions (secrets, clearly-broken state).
+Infra files aren't prose; the job is flagging risks for human review, not catching style nits. Findings are ⚠️ Low-confidence by default. The two 🚨 exceptions: leaked secrets and clearly-broken state.
 
 ---
 
@@ -25,7 +25,7 @@ Infra files aren't prose; the job is flagging risks for human review, not catchi
 
 ## Criteria
 
-`docs-review:references:shared-criteria` applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Pair findings with a pointer to the relevant `BUILD-AND-DEPLOY.md` section.
+`docs-review:references:shared-criteria` applies alongside the risk axes below (mostly relevant here for link checking in comments and docs). Cite the relevant `BUILD-AND-DEPLOY.md` section in the finding when one applies.
 
 ### Lambda@Edge bundling
 
@@ -75,7 +75,7 @@ If the PR changes any of the above without updating `BUILD-AND-DEPLOY.md`, flag 
 - Changed deployment workflow but §Production Deployment not updated
 - New environment variable required by a script but §Environment Setup silent on it
 
-Reference (don't duplicate): `BUILD-AND-DEPLOY.md` §Infrastructure Change Review for the canonical risk catalog; §Dependency risk tiers for the runtime/build/dev split.
+For the canonical risk catalog, consult `BUILD-AND-DEPLOY.md` §Infrastructure Change Review; for the runtime/build/dev split, §Dependency risk tiers.
 
 ## Do not flag
 

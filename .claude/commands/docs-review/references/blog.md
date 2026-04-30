@@ -25,13 +25,11 @@ The following reference files apply alongside the blog-specific priorities below
 - `docs-review:references:prose-patterns` — prose-bearing content
 - `docs-review:references:image-review` — wherever images appear
 
-The priorities below are ordered for **output rendering** — fact-check findings render before style findings — but investigate as content triggers each.
+Investigate as content triggers each priority below.
 
 ### Priority 1 — Fact-check first
 
 Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** any style pass. The reference owns claim extraction; in blog copy, pay particular attention to **performance multipliers**, **competitor claims**, and **adoption / market-position statistics** — common in this domain and high-blast-radius when wrong.
-
-Findings render in 🚨 / ⚠️ **before** style findings.
 
 ### Priority 2 — Prose patterns and spelling/grammar
 
@@ -68,11 +66,11 @@ When a blog post announces a new feature, provider, or significant capability:
 - **Note specific gaps.** Don't just say "docs are missing" — name the page that should exist (e.g., "no `content/docs/esc/integrations/<feature>/` page found").
 - **Suggest a doc type.** Reference / tutorial / concept guide / how-to — pick the one that matches the feature's nature.
 
-Render under 💡 Pre-existing (this is a project-completeness flag, not a blog quality issue) so the blog can ship without blocking on docs work.
+This is a project-completeness flag, not a blog quality issue.
 
 ### Priority 6 — SEO and discoverability
 
-These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate: every finding names a specific construction and proposes a fix. The full AEO scoring pass still belongs to `/seo-analyze` for deeper analysis; these are the items that catch on a normal review.
+Concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate: every finding names a specific construction and proposes a fix.
 
 - **Quotable opening paragraph.** The first 1–2 sentences should answer "what is this post about" as a standalone definition, with no fluff intro. Quote the opening; flag empty transitions ("In this post, we'll explore...", "Let's dive in", "In recent years...") and propose a direct first-sentence rewrite that names the subject.
 - **Answer-first H2 headings.** For concept-heavy posts, prefer question-style or how-style headings ("How does Pulumi ESC handle secrets?") over label-style ("ESC overview"). Label headings rank lower for AI answer extraction. Quote the heading; propose an answer-first rewrite. Don't flag label headings on action posts ("Get started," "Install Pulumi") — those are correct.
@@ -87,11 +85,11 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 - **Link text is descriptive.** Inherited.
 - **First mention is hyperlinked.** Every tool, technology, or product's *first* mention in the post should be a link (to docs, to the project homepage, to a GitHub repo). Flag only first-mention misses; subsequent mentions don't need the link.
 - **Missing cross-link to canonical Pulumi docs.** When the post mentions a Pulumi concept with a canonical doc page (stacks, providers, components, ESC environments, projects, programs, policy packs) and no occurrence of the term is hyperlinked, flag it once per concept. Quote the most prominent unlinked occurrence; propose the link target (e.g., `[stacks](/docs/iac/concepts/stacks/)`). Complements the rule above — that one covers external tools and projects; this one covers internal Pulumi concept docs.
-- **`{{< github-card >}}` references.** Format `owner/repo`; verify the repo exists (`gh api repos/<owner>/<repo>`). A broken card card renders as an ugly empty block.
+- **`{{< github-card >}}` references.** Format `owner/repo`; verify the repo exists (`gh api repos/<owner>/<repo>`). A broken card renders as an ugly empty block.
 
 ## Pre-existing issues (always on)
 
-Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. Render every finding under 🚨 Outstanding when the post is new. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`. Per-file cap follows `docs-review:references:output-format`.
+Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`.
 
 Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
 

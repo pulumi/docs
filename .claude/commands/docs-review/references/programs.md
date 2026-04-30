@@ -44,11 +44,11 @@ When a PR adds a new language variant of an existing program:
 
 ## Pre-existing issues
 
-Render in 💡 per `docs-review:references:output-format` (cap per output-format). Scope: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
+Render in 💡 per `docs-review:references:output-format`. Scope: broken/unused imports, out-of-date provider API surface, missing project-structure files, mismatched resource properties across language variants.
 
 ## Compilability check
 
-CI does not run program tests directly -- they run in the main `make test` job; cite that job's result if available. The interactive entry point may run a single program when the program is not in `scripts/programs/ignore.txt`:
+Program tests run in the main `make test` job; cite that job's result if available. To run a single program (when not in `scripts/programs/ignore.txt`):
 
 ```bash
 ONLY_TEST="program-name" ./scripts/programs/test.sh
@@ -60,8 +60,6 @@ Invoke `docs-review:references:fact-check` with:
 
 - **Files:** the changed `static/programs/**` files (and any README/docs that reference them, if changed in the same PR)
 - **Scrutiny:** `heightened` (code correctness matters)
-
-CI fact-check is public-sources-only -- see `docs-review/ci.md`.
 
 ## Do not flag
 

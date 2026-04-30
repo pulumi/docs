@@ -27,7 +27,7 @@ The priorities below are ordered for **output rendering** — fact-check finding
 
 ### Priority 1 — Fact-check first
 
-Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bump scrutiny to `heightened` when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed). CI fact-check is public-sources-only — see `docs-review/ci.md`. The reference owns claim extraction; in docs, pay particular attention to:
+Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bump scrutiny to `heightened` when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed). In docs, pay particular attention to:
 
 - **CLI flag existence.** `pulumi <subcommand> --<flag>` claims must match the current CLI source. Memorized flag lists are not authoritative.
 - **Resource API surface.** Resource property claims (e.g., `aws.s3.Bucket` accepts `versioning`) must match the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`).
@@ -35,11 +35,9 @@ Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bum
 - **Output-format claims.** `pulumi up` / `preview` / `stack output` example output must reflect what the current CLI prints. Old-style output formats ("Performing changes:" when the CLI now prints "Updating (dev)") are deprecated-terminology findings.
 - **Feature-existence claims.** "Pulumi ESC supports rotation for AWS." If the diff asserts a capability, verify it.
 
-Findings render in 🚨 / ⚠️ **before** style findings.
-
 ### Priority 2 — Code correctness
 
-Snippet-level checks (syntax, imports, language idioms, language casing) live in `docs-review:references:code-examples`. The reference applies wherever code appears in docs content.
+Snippet-level checks (syntax, imports, language idioms, language casing) live in `docs-review:references:code-examples`.
 
 ### Priority 3 — Cross-references and link integrity
 
@@ -50,7 +48,7 @@ Snippet-level checks (syntax, imports, language idioms, language casing) live in
 
 ### Priority 4 — Terminology and product accuracy
 
-Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists; do not duplicate them here. Watchlist:
+Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists. Watchlist:
 
 - **Product names.** "Pulumi IaC" / "Pulumi ESC" / "Pulumi IDP" / "Pulumi Cloud" / "Pulumi Insights" / "Pulumi Policies". Expand acronyms on first mention; use the short form after.
 - **Singular "Pulumi Policies."** `STYLE-GUIDE.md` says it's a singular proper noun. Verb agreement follows (e.g., "Pulumi Policies enforces," not "enforce").
@@ -63,7 +61,7 @@ Apply `docs-review:references:prose-patterns` and `docs-review:references:spelli
 
 ### Priority 6 — SEO and discoverability
 
-These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
+Quote-and-rewrite mandate. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
 
 - **Title matches page subject.** Quote the `title:` frontmatter and the page's first paragraph; flag when the page's actual subject is materially different from what the title claims.
 - **Quotable definition for what-is and concept pages.** The opening 1–2 sentences should answer "what is X" as a standalone definition that could be quoted by an AI tool without surrounding context. Quote the opening; flag fluff intros ("In this guide, we'll explore...") and propose a direct definition.

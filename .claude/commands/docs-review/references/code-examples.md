@@ -65,8 +65,7 @@ Don't flag cosmetic style (line length, trailing commas when the language allows
 When a doc page or blog uses `{{< example-program >}}` or similar shortcodes pointing at `static/programs/`:
 
 - **The referenced program must exist.** Check `static/programs/<name>-<language>/` for every language variant the page advertises.
-- **Each variant must compile under its language.** Cross-reference to `CODE-EXAMPLES.md` for the testing contract.
-- **Hugo shortcode reference picks up all language variants** via the `path=` parameter; no separate per-language shortcode calls.
+- **Each variant must compile under its language.** See `CODE-EXAMPLES.md` for the testing contract.
 
 ## Proposed fixes
 

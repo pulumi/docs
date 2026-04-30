@@ -29,7 +29,7 @@ Applied to every changed file in every review, in addition to the file's domain 
 ### Frontmatter
 
 - Required fields per layout (`title`, `description`/`meta_desc`, `date` for time-sensitive content). Validate as YAML; unmatched quotes and inconsistent indentation break the whole site build, not just the page.
-- **`description` / `meta_desc` length.** Aim for 120–160 characters. Search engines truncate around 160; under 120 leaves the snippet sparse. (Caught at pre-commit by `lint-markdown.js` `checkPageMetaDescription` for staged files; this rule covers cases that bypass the hook.)
+- **`description` / `meta_desc` length.** Aim for 120–160 characters. Search engines truncate around 160; under 120 leaves the snippet sparse.
 - **`aliases` on move/rename.** When `gh pr view --json files` shows a file under its new path and the diff shows no content change to the old path, the moved file MUST have every prior URL listed in `aliases:`. Missing aliases are a ranking-destroying SEO failure -- flag as 🚨 every time, with the exact frontmatter addition as a suggestion block.
 - **S3 redirects for non-Hugo files.** Deleted files outside Hugo's content management need entries in `scripts/redirects/*.txt` (format `source-path|destination-url`). See `AGENTS.md` §Moving and Deleting Files.
 
@@ -53,15 +53,13 @@ Use suggestion blocks for replacements of five lines or fewer. For larger rewrit
 
 ### Linter boundary
 
-The following are owned by the lint job (`scripts/lint/lint-markdown.js` and peers). Do not restate findings the linter already catches:
+The following are owned by the lint job. Do not restate findings the linter already catches:
 
 - trailing newlines / trailing whitespace
 - heading case (linter catches inconsistency; this file catches accuracy of content, not stylistic consistency)
-- title length / meta description length / `meta_image` placeholder (`lint-markdown.js`'s `checkPageTitle`, `checkPageMetaDescription`, `checkMetaImage`)
+- title length / meta description length / `meta_image` placeholder
 
-A diff can't reliably show a missing trailing newline. The linter will either pass or fail on this file; that's the answer.
-
-Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are currently disabled in the linter. Alt text is covered by `docs-review:references:image-review`; code-block language by `docs-review:references:code-examples`.
+Image alt text and fenced-code-block language specifiers are currently disabled in the linter. Alt text is covered by `docs-review:references:image-review`; code-block language by `docs-review:references:code-examples`.
 
 ### Indented prose
 
@@ -69,7 +67,7 @@ Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are
 
 ### Ordered-list numbering
 
-- **Ordered-list items use literal `1.`, not ascending `1. 2. 3.`** Minimizes diff noise when items are added, removed, or reordered. Flag ascending-numbered lists with a suggestion block.
+- **Ordered-list items use literal `1.`, not ascending `1. 2. 3.`** Flag ascending-numbered lists with a suggestion block.
 
 ## Do not flag
 

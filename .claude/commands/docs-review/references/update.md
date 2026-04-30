@@ -5,7 +5,7 @@ description: Re-entrant docs review. Updates the existing pinned review in place
 
 # Update Review (re-entrant)
 
-Shared primitive for "previous review + new commits/mention = updated review." The output replaces the contents of the existing pinned-comment sequence; a fresh post happens only via the Fallback path.
+Shared primitive for "previous review + new commits/mention = updated review." Edit the existing pinned-comment sequence in place; a fresh post happens only via the Fallback path.
 
 ---
 
@@ -118,7 +118,7 @@ The author or another reviewer pushed back on a previous finding *without* a fix
 > - **Concede cleanly:** move to ✅ Resolved with `concede: author is right about Y`.
 > - **Hold the finding** (only with citable contrary evidence): keep in 🚨 Outstanding, append `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.** <one-line reason>` under the finding, and put the full reasoning in 📜 Review history.
 >
-> Reword is the forbidden path. A finding is either in the bucket or out; a "softer rephrasing" is neither and is the worst output under a cheaper model.
+> Reword is the forbidden path. A finding is either in the bucket or out; a "softer rephrasing" is neither.
 
 ### Case 3 — re-verify
 
@@ -179,7 +179,7 @@ bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
 
 ## Fallback — pinned comment is missing
 
-If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using `docs-review/ci.md` and post fresh. The new comment lands at the bottom of the timeline; not ideal, but recoverable.
+If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, history was rewritten, or this is a freshly transitioned PR that somehow skipped the initial review -- fall back to a full initial review using `docs-review/ci.md` and post fresh.
 
 ---
 
@@ -187,4 +187,4 @@ If `pinned-comment.sh fetch` returns nothing -- author deleted the comment, hist
 
 ### Author deletes the 1/M pinned comment
 
-If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run's `pinned-comment.sh fetch` returns empty and the skill falls through to the Fallback path above — a fresh post at the bottom of the timeline.
+If the author deletes the 1/M comment via the GitHub UI, the next re-entrant run's `pinned-comment.sh fetch` returns empty and the skill falls through to the Fallback path above.
