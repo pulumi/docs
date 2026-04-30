@@ -1708,3 +1708,7 @@ Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test-v3/` — `pulumi
 ### Memory updates
 
 None. All Session-18 facts are project-state specific to this branch and the e2e fixture set; they belong in this file.
+
+## EXTRA HAND WRITTEN NOTE FROM CAM
+
+I accidentally opened a bunch of PRs against my fork, and it was very instructive in how well this new pipeline will work. One thing I've noticed is that we should decide on standard behavior for "claude-working" labels and what other labels get deactivated when Claude is working.
