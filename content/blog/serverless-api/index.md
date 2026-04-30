@@ -1,9 +1,9 @@
 ---
-title: "Host your Python app for $1.28 a month"
+title: "Host your Python app for $1.12 a month"
 date: 2025-01-29T00:00:00
 updated: 2026-04-30
 draft: false
-meta_desc: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay about $1.28/month (or $0 when idle).
+meta_desc: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay about $1.12/month worst-case (or $0 when idle).
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -45,9 +45,9 @@ social:
             Zero traffic = Zero cost
 ---
 
-**TL;DR (2026 pricing):** You can host a Python API for about **$1.28/month** by packaging Flask as a container, deploying it to AWS Lambda behind an HTTP API Gateway, and managing the whole thing with Pulumi. When nobody's calling your service, you pay **$0**. The breakdown: ~$0.04 for API Gateway requests, ~$0.07 for Lambda compute (fully absorbed by the always-free tier), and ~$1.08 for 12 GB of egress at $0.09/GB (also covered by AWS's 100 GB/month free egress unless other services in the same account have already used it). Verified against AWS pricing as of April 2026.
+**TL;DR (2026 pricing):** You can host a Python API for as little as **$0.04/month** — or **$0 when idle** — by packaging Flask as a container, deploying it to AWS Lambda behind an HTTP API Gateway, and managing the whole thing with Pulumi. The breakdown: ~$0.04 for API Gateway requests, ~$0.07 for Lambda compute (fully absorbed by the always-free tier), and ~$1.08 for 12 GB of egress at $0.09/GB (also covered by AWS's 100 GB/month free egress unless other services in the same account have already used it). Worst-case: **~$1.12/month**. Verified against AWS pricing as of April 2026.
 
-How cheap can you host a Python app in 2026? For a low-traffic Flask API — say, 40,000 requests per month at 512 MB of memory — the answer is roughly **$1.28/month on AWS**, dropping to **$0 when idle**. The trick is to stop thinking of [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) as "one function per endpoint" and instead package your entire web framework as a container, deploy it to Lambda, and put it behind an HTTP API Gateway. Your code stays standard Flask. Your bill stays in the loose-change zone.
+How cheap can you host a Python app in 2026? For a low-traffic Flask API — say, 40,000 requests per month at 512 MB of memory — the answer is roughly **$1.12/month on AWS** worst-case, dropping to **$0 when idle**. The trick is to stop thinking of [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) as "one function per endpoint" and instead package your entire web framework as a container, deploy it to Lambda, and put it behind an HTTP API Gateway. Your code stays standard Flask. Your bill stays in the loose-change zone.
 
 This post walks through the whole setup with Pulumi, then compares the resulting cost against [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun/service/), Fly.io, Railway, and Vercel using current 2026 prices.
 <!--more-->
@@ -55,7 +55,7 @@ This post walks through the whole setup with Pulumi, then compares the resulting
 
 Most developers maintain at least one low-traffic service that still needs to be reliably available — an internal reporting API, a webhook receiver, a side project with occasional use. Traditional hosting means paying for 24/7 server time, even when the service sits idle. AWS Lambda's container support flips that: pay only when your API is being called, and any web framework that handles HTTP requests (Flask, FastAPI, Express) works without modification.
 
-### How does $1.28/month break down? (2026 pricing)
+### How does the pricing break down? (2026)
 
 Plugging 40,000 requests per month at 512 MB memory and ~200 ms average execution into 2026 AWS pricing:
 
@@ -65,13 +65,13 @@ Plugging 40,000 requests per month at 512 MB memory and ~200 ms average executio
 1. **Data transfer out**: 12 GB × $0.09/GB = **$1.08** if billed, but AWS's always-free tier (expanded to 100 GB/month outbound in late 2021) covers this row outright unless other services in the same account have already exhausted that allowance.
 1. **Total**: **~$0.04/month** (egress in the free tier, only API Gateway bills) to **~$1.12/month** (12 GB egress billed in full: $1.08 + $0.04 API Gateway), with Lambda compute and requests always fully covered by the free tier.
 
-The headline hasn't moved since this post was first published in early 2025 — Lambda and API Gateway pricing has been remarkably stable, and AWS has only expanded free-tier allowances since.
+The underlying math hasn't changed since this post was first published in early 2025 — Lambda and API Gateway pricing has been remarkably stable, and AWS has only expanded free-tier allowances since.
 
 ### Cheap Python hosting compared (2026)
 
 | **Provider**               | **Approx. cost / month** | **2026 notes**                                                                                                                                                       |
 |:---------------------------|:-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS Lambda + HTTP API      | **~$1.28**               | ~$1.08 for 12 GB egress at $0.09/GB + $0.04 for 40k API Gateway requests at $1/M + ~$0.07 Lambda compute (fully covered by the always-free tier of 1M req/400k GB-s). |
+| AWS Lambda + HTTP API      | **~$1.12**               | ~$1.08 for 12 GB egress at $0.09/GB + $0.04 for 40k API Gateway requests at $1/M; Lambda compute ($0.067) is fully covered by the always-free tier (1M req/400k GB-s). |
 | Google Cloud Run           | **~$1.44**               | 2M requests, 360,000 GiB-seconds of memory, and 180,000 vCPU-seconds are free every month — compute is $0. Egress dominates: Premium tier is ~$0.12/GB, so 12 GB ≈ $1.44. Standard tier (~$0.085/GB) lands near $1.02.                    |
 | Fly.io                     | **~$2.18**               | Cheapest persistent `shared-cpu-1x@256MB` machine is ~$1.94/mo; 12 GB outbound at $0.02/GB (NA/EU) adds ~$0.24 (free tier was retired in late 2024).                   |
 | Railway                    | **~$6.00**               | Hobby plan starts at $5/mo and includes $5 of usage; a 512 MB always-on container plus 12 GB egress lands around $5.50–6.50 total.                                     |
@@ -412,13 +412,13 @@ I'd love to hear about your experiences with monolithic serverless applications.
 {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "Host a Python Flask app on AWS Lambda for about $1.28/month",
-  "description": "Package a Flask application as a container, deploy it to AWS Lambda behind an HTTP API Gateway, and manage the infrastructure with Pulumi to host a low-traffic Python API for roughly $1.28/month in 2026.",
+  "name": "Host a Python Flask app on AWS Lambda for about $1.12/month",
+  "description": "Package a Flask application as a container, deploy it to AWS Lambda behind an HTTP API Gateway, and manage the infrastructure with Pulumi to host a low-traffic Python API for roughly $1.12/month worst-case in 2026.",
   "totalTime": "PT30M",
   "estimatedCost": {
     "@type": "MonetaryAmount",
     "currency": "USD",
-    "value": "1.28"
+    "value": "1.12"
   },
   "tool": [
     {"@type": "HowToTool", "name": "Pulumi CLI"},
