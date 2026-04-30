@@ -30,13 +30,7 @@ The caller must provide:
 - **Author-question buffer** -- one line per unverifiable claim, file:line-anchored
 - **Per-claim evidence trail** -- the raw `{status, confidence, evidence, source, suggested_fix}` tuples, retained for re-entrant re-verification
 
-The skill is callable as a pure function of `(files, scrutiny)` → `(triage_object, author_questions, evidence_trail)`. Callers wire the output into their own review composition; fact-check does not render directly into a comment.
-
----
-
-## Gating
-
-The caller decides whether to invoke fact-check. CI domain files and the `pr-review` skill encode their own gating rules; fact-check itself runs whenever it's called.
+The skill is callable as a pure function of `(files, scrutiny)` → `(triage_object, author_questions, evidence_trail)`. Do not render the output directly into a comment.
 
 ---
 
@@ -132,7 +126,7 @@ When a temporal claim is verified, record the result with a date anchor:
 
 > As of $TODAY (2026-04-23), Pulumi ESC supports AWS IAM rotation.
 
-The date anchor captures "verified true at this point in time." The caller may flag the claim for re-verification after N months (default: 6), since a "new in 2026" claim will read awkwardly in 2028.
+The date anchor captures "verified true at this point in time."
 
 When a temporal trigger word is **not warranted** -- e.g., "recently" describing a change from years ago -- flag as `contradicted: temporal misuse` with the suggested fix ("replace 'recently' with the actual timeframe, or drop the temporal qualifier").
 
@@ -274,17 +268,17 @@ Subagent prompts must be self-contained — copy the rules into the prompt rathe
 
 ## Tiered triage
 
-Build a structured triage object that the caller will render. fact-check returns the object; the caller composes it into the pinned review per `docs-review:references:output-format`.
+Build a structured triage object.
 
 ### Tier rules
 
-🚨 and ⚠️ tier emojis match canonical buckets in `docs-review:references:output-format` (Outstanding and Low-confidence) — callers can thread those contents through. 🤔 has no canonical counterpart. ✅ Verified is fact-check's own collapsed-details bucket; it is **not** the canonical ✅ Resolved-since-last-review (which is the re-entrant-run bucket the caller owns elsewhere). The caller decides where to thread fact-check's ✅ Verified contents.
+Tier emoji conventions: 🚨 (Outstanding) and ⚠️ (Low-confidence verified) align with the canonical buckets in `docs-review:references:output-format`. ✅ Verified here is fact-check's own collapsed-details bucket — distinct from the canonical ✅ Resolved-since-last-review used elsewhere; do not conflate them. 🤔 Intuition-check has no canonical counterpart.
 
 | Tier | Contents |
 |---|---|
 | 🚨 Needs your eyes | All `contradicted` claims (any confidence) + all `unverifiable` claims |
 | 🤔 Intuition-check | Claims whose `intuition_check` flag was set AND whose verification came back inconclusive (timed out, could not reach a verdict). Cross-reference the shape concern in the evidence line. |
-| ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened). When the caller folds these into output-format's ⚠️ Low-confidence, prefix the evidence line so a reader can tell "verified weakly" apart from a generic low-confidence finding. |
+| ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened). Prefix the evidence line with "verified weakly" to distinguish from generic low-confidence findings. |
 | ✅ Verified | Everything else, collapsed under `<details>` |
 
 When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.
@@ -310,13 +304,11 @@ For every `unverifiable` claim and every 🤔 intuition-check finding, add a lin
 - content/blog/perf.md:14 — Cite a source for "chardet is 41x faster at encoding detection"?
 ```
 
-The buffer is consumed by the calling workflow.
-
 ---
 
 ## Assessment rules
 
-When called from a PR review, preserve the PR-introduced vs. pre-existing distinction throughout: a contradiction in unchanged prose is pre-existing (surfaced but doesn't gate approval); a contradiction in the diff is PR-introduced and blocking.
+Preserve the PR-introduced vs pre-existing distinction throughout: contradictions in the diff are PR-introduced; contradictions in unchanged prose are pre-existing.
 
 ---
 
@@ -324,17 +316,13 @@ When called from a PR review, preserve the PR-introduced vs. pre-existing distin
 
 When the caller passes `scrutiny=heightened`:
 
-- Gating always returns RUN.
 - The `heightened` branch of §Scope (full-file claim extraction), §Verification source order (web/`gh` verification by default on every claim), and §Tier rules (medium-confidence verified surfaces to ⚠️ Low-confidence verified instead of collapsed ✅ Verified) applies.
 - Pre-existing issue extraction runs per the rules below.
 
 ### Pre-existing issue extraction
 
-When `scrutiny=heightened`, the verifier reads the **full file** for claim extraction. Any substantive issue the verifier notices in unchanged prose renders in the 💡 Pre-existing bucket (owned by the caller's output format; see `docs-review:references:output-format`):
+When `scrutiny=heightened`, the verifier reads the **full file** for claim extraction. Any substantive issue noticed in unchanged prose renders in the 💡 Pre-existing bucket:
 
 - **Do extract:** broken links, wrong facts, code typos (missing imports, wrong method names), deprecated terminology, temporally-rotted claims.
-- **Do NOT extract style nits** unless the domain file says to: heading case, list numbering, em-dash frequency, paragraph rhythm, trailing whitespace. Those are either linter territory or out of scope for fact-check.
+- **Do NOT extract style nits:** heading case, list numbering, em-dash frequency, paragraph rhythm, trailing whitespace. Those are linter territory or out of scope for fact-check.
 - **Cap:** per `docs-review:references:output-format`. If the file has more substantive issues than the cap, the top N render; surplus is noted as "+N additional pre-existing findings" in the bucket.
-- **Bucket:** substantive pre-existing findings render in 💡 alongside domain-file style nits (when the domain says to extract them). The domain file controls what counts as which; fact-check just surfaces what it finds.
-
-For non-fact-check pre-existing extraction (style, structure), see the per-domain file's "Pre-existing issues" section.
