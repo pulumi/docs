@@ -67,8 +67,9 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
    - Resolved → move to ✅ Resolved since last review (with commit SHA reference)
    - Still present → keep in 🚨 Outstanding
    - Worse → keep in 🚨 Outstanding with a note ("recurs after the latest commit")
-2. Extract any *new* findings introduced by the new commits. Apply the domain rules.
-3. Append a 📜 Review history line: `<timestamp> — re-reviewed after fix push (<commit count> new commits, <SHA>)`.
+2. **Sweep for unflagged duplicates of any phrase the previous finding quoted.** When a previous finding cited a specific quoted phrase or claim, search the current file for every occurrence of that phrase (or a near-paraphrase) — not just the locations the original finding called out. On Hugo posts, that means body + `meta_desc` + every `social:` sub-key. If an occurrence the original finding missed still matches the verified-false claim, raise it as a new 🚨 finding citing the missed location. Initial reviews can miss frontmatter duplicates; re-entrant is the safety net before merge.
+3. Extract any *new* findings introduced by the new commits. Apply the domain rules.
+4. Append a 📜 Review history line: `<timestamp> — re-reviewed after fix push (<commit count> new commits, <SHA>)`.
 
 **Failure-mode example:**
 

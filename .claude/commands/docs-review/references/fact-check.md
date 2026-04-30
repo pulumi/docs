@@ -61,6 +61,14 @@ For every changed content file, produce a structured claim list. A "claim" is an
 - Default (`scrutiny=standard`): extract claims from the diff only -- lines added or modified
 - `scrutiny=heightened`: extract claims from the **full file**, not just the diff. AI hallucinates surrounding prose, not just changed lines.
 
+### Frontmatter sweep
+
+Hugo posts duplicate the same load-bearing phrasing across body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body, `meta_desc`, and every `social:` sub-key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
+
+Example: a blog post says "96% of enterprises run AI agents in production today" in the body, and the same phrase (or a paraphrase: "96% of enterprises run agents in production") appears in `social.linkedin` and `social.bluesky`. Extract one claim, verify once, render the finding with three cited locations. Don't enumerate per-occurrence claims -- that triples verification work and risks the buckets disagreeing on confidence.
+
+This rule also applies when the body is unchanged but a frontmatter sub-key was edited; the body's pre-existing phrasing still surfaces in the same finding if the frontmatter edit triggered a contradicted verdict.
+
 ### Claim extraction examples
 
 Worked examples of correct extraction from real prose patterns. Each shows the paragraph, the extracted claims, and the reasoning.

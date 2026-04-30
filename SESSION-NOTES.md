@@ -1397,3 +1397,104 @@ Plus this SESSION-NOTES entry.
 ### Memory updates
 
 None. The bare-ref / colon-form convention is project-state for this branch; the rule belongs in this file and will land in `AGENTS.md` if it ever needs to outlive the branch.
+
+---
+
+## Session 16 — 2026-04-30 (end-to-end pipeline test, self-loop fix, fact-check + update.md tightening)
+
+### Trigger
+
+Cam closed all open fork PRs and asked to run the full end-to-end pipeline against the fixture set: open fresh PRs, watch initial reviews compose, exercise re-entrant patterns on a chosen subset, leave a no-activity subset for the maintainer `pr-review` walkthrough.
+
+### What ran
+
+- New sync commit `4cc3372000` on `cam/master` overlaying the post-Session-15 skill state from worktree HEAD `214dd5caf4`.
+- All 14 fixture branches rebased onto the sync (6 review-benchmark + 4 triage-fixture + 4 base-pr branches). Same Session-14 lesson applied (use `git checkout -B branch <explicit-sha>`, never `checkout master` on a detached worktree).
+- 10 fresh draft PRs `CamSoper/pulumi.docs#64–73`, marked ready in batch at 18:30:59Z.
+- Re-entrant phase: chose 4 PRs for `@claude` triggers (fix-response on 64+67, dispute on 66, re-verify on 69); left 6 PRs untouched (65, 68, 70, 71, 72, 73) for the maintainer `pr-review` walkthrough later.
+
+### Findings
+
+**1. Initial-review pipeline: passing on every dimension.**
+
+| Axis | Result |
+|---|---|
+| Triage classification | 10/10 correct on domain + short-circuit |
+| Atomic label-apply | 10/10 succeeded — Session-13 regression cleared by the post-Session-14 label deploy |
+| Short-circuits firing | `review:trivial` on 70, `review:frontmatter-only` on 71/72 — full review skipped on each, prose advisories landed correctly on 70 ("moderne") and 72 ("togther", "manageing") |
+| Cost vs Session-13 | $11.79 for 7 full reviews vs $12.30 for 6 — flat per-PR ($1.68 avg vs $1.71 prior) |
+| Wall time | 32m51s cumulative, last review posted ~18:39Z |
+
+**2. Self-loop bug discovered and fixed mid-session.** Posted reviews carry an `@claude` invitation in the footer ("Mention `@claude` to refresh or argue your case"), and `claude.yml`'s `if: contains(comment.body, '@claude')` matched the bot's own posts — 8 self-triggered re-entrant runs fired on the initial-review batch. All ESC-failed harmlessly (see point 3 below) but cluttered the run view. Two-layer fix shipped:
+
+- `.github/workflows/claude.yml` — added `github.event.{comment,review,issue}.user.login != 'claude[bot]'` to each event branch's `if`.
+- `.claude/commands/docs-review/references/output-format.md` — replaced the literal `@claude` in the footer with `&#64;claude` (HTML entity). Renders as `@claude` visually; `contains()` no longer matches.
+
+Defense-in-depth: either fix alone would block the loop. Verified on the re-entrant batch — exactly 4 runs fired (matching 4 manual `@claude` posts), zero spurious self-triggers. Commits `d7c76ddb46` (worktree branch) + `90f8d9e09f` (cam/master ops mirror).
+
+**3. Cam-fork ESC trust gap blocks re-entrant on the fork.** The first re-entrant batch all 401'd at the `Fetch secrets from ESC` step — the cam fork's GitHub Actions OIDC token isn't trusted by Pulumi's ESC environment. The initial-review workflow doesn't hit this because it uses plain `secrets.ANTHROPIC_API_KEY` and the default `GITHUB_TOKEN`; only re-entrant goes through ESC for `PULUMI_BOT_TOKEN`. Fork-only ops patch shipped (`01de922a71`) — drops the ESC step, falls back to `secrets.GITHUB_TOKEN`. Not for upstream merge. Documented here so future fork-test runs know.
+
+**4. Re-entrant patterns 4/4 successful on Sonnet** (`01de922a71` enabled the runs to actually execute):
+
+| PR | Pattern | Bucket transition | Behavior |
+|---:|---|---|---|
+| 64 | fix-response | 🚨 2→1, ✅ 0→1 | Resolved the addressed half (`_index.md`), kept the un-addressed half (`executable-plugin.md`) outstanding |
+| 67 | fix-response | 🚨 1→1, ✅ 0→1 | Resolved body+LinkedIn fix; **caught the missed Bluesky social block** as a new 🚨 — partial-fix detection working better than the initial review |
+| 66 | dispute | 🚨 1→1, ⚠️ 1→0, ✅ 0→1 | Conceded the SCIM-acronym ⚠️ on its own footnote evidence — clean concession |
+| 69 | re-verify | 🚨 1→1, ⚠️ 2→2 | Re-verified outstanding against new diff after unrelated edit, line numbers updated 85→83 |
+
+Cost: $1.22 / 66 turns / 12m42s for all 4 re-entrant runs. Sonnet runs ~5× cheaper per PR than the initial Opus pass on the same PR shape — the cost architecture is solid.
+
+**5. Initial fact-check missed PR 67's Bluesky social block.** The OutSystems "in production" overstatement appeared in 3 places: body, `social.linkedin`, `social.bluesky`. Initial Opus review caught body + LinkedIn. The Bluesky block was missed. Re-entrant Sonnet caught it after I addressed the cited locations (the partial-fix detection compensated), but if the author had merged after fixing only what was flagged, the broken Bluesky text would have shipped to the social-media bot. **Mitigation shipped** — see "Files changed" below.
+
+### Mitigations shipped (Priority 1 + Priority 3 from the e2e learnings plan)
+
+**`fact-check.md` §Frontmatter sweep (new subsection under §Claim extraction).** When extracting a claim from any of body / `meta_desc` / `social:` sub-keys, sweep the file for the same factual phrasing or near-paraphrase, and treat all occurrences as one claim with multiple cited locations. Single finding renders one suggestion-block per location. PR 67 case: body + LinkedIn + Bluesky overstatement → one finding, three locations, fixed in one pass.
+
+**`update.md` §Case 1 — fix-response, new step 2.** When re-verifying a previously-outstanding finding that quoted a specific phrase, sweep the current file for every occurrence of that phrase (or near-paraphrase) — body + frontmatter + every `social:` sub-key — and raise unflagged occurrences as new 🚨 findings. Initial reviews can miss frontmatter duplicates; re-entrant is the safety net before merge. This codifies the behavior PR 67's re-entrant pass exhibited spontaneously on Sonnet — making it a guarantee, not a happy accident.
+
+### Items NOT shipped (in backlog)
+
+- **Cost-variance monitoring** (per-PR cost ceiling alert, e.g., $5). Cost held flat across 3 measurement passes; not yet a real problem.
+- **Recover Run Example Code Tests / Social Media Review failures on the fork.** Cosmetic only; fork-side test infra issue.
+
+### Methodology / repeatable patterns
+
+- **Use a side worktree for fork ops.** `git worktree add /tmp/cam-work cam/master`, edit, commit, `git push cam HEAD:master`. Cleaner than stash/checkout dance; lets the main worktree keep its branch state. Worth replicating any time we need to stage fork-only ops commits.
+- **Mid-run regressions are findable from the e2e test, not just from cap-review reading.** The PR 67 missed-Bluesky-block came out of pushing a partial fix and watching the re-entrant pass. Cap-review on the rendered review wouldn't have caught it because the initial review *looked* fine — it took the round trip to expose the gap.
+
+### Backlog after Session 16
+
+Active:
+1. **Maintainer `pr-review` walkthrough** on the no-activity subset (PRs 65, 68, 70, 71, 72, 73). Cam plans to do this on a clean session.
+2. **Cost-variance monitoring** (Priority 4 from the plan) — defer until a real overrun appears.
+3. **Cam-fork CI cosmetic fixes** (Priority 5) — non-Claude workflow failures on the fork.
+4. **Investigate 5 lost ⚠️ catches** (Session 13 backlog #5) — still open.
+5. **Upstream label deploy** (Session 14 backlog #4) — still open. Verify `scripts/labels/sync-labels.sh --repo pulumi/docs --dry-run` then for-real before this branch merges.
+6. **Prose-pattern re-benchmark** (Session 14 backlog #5) — soft-watch a future em-dash-heavy blog PR.
+
+Closed this session:
+- Session 13/14/15 backlog item: "Re-test the full pipeline on fresh PRs, triage included" → ✅ done.
+- Session 13/14/15 backlog item: "Simulate re-entrant reviews" → ✅ done; all three patterns (fix-response, dispute, re-verify) verified end-to-end.
+- Cosmetic noise: self-loop on initial reviews → ✅ fixed (two-layer guard).
+- Fact-check coverage gap: frontmatter sweep on duplicate phrasing → ✅ shipped.
+- Re-entrant safety net: partial-fix duplicate-occurrence sweep → ✅ shipped.
+
+### Files changed (Session 16 substance)
+
+- `4cc3372000` — `ops: sync skill state to post-Session-15 baseline (214dd5caf4)` *(cam/master only)*
+- `d7c76ddb46` — Stop self-loop on Claude Code re-entrant workflow *(worktree branch)*
+- `90f8d9e09f` — `ops: stop @claude self-loop in re-entrant workflow` *(cam/master mirror)*
+- `01de922a71` — `ops: bypass ESC for re-entrant claude on cam fork` *(cam/master only, fork-side)*
+- (this commit) — fact-check.md frontmatter-sweep rule + update.md fix-response duplicate-occurrence sweep + Session 16 notes
+
+Cam-fork operations:
+- `cam/master` advanced from `b426b22c2b` → `01de922a71`.
+- 14 fixture branches force-pushed atop the new sync.
+- 10 PRs opened (`CamSoper/pulumi.docs#64–73`); all initial reviews + 4 re-entrant runs complete; 6 PRs left in no-activity state for the maintainer walkthrough.
+
+Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test/` — `REPORT.md`, `reviews/`, `triage/`, `cost-data.txt`, `reentrant-cost.txt`, `PLAN.md`.
+
+### Memory updates
+
+None. All Session-16 facts are project-state specific to this branch and the e2e fixture set; they belong in this file.
