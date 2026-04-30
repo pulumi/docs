@@ -37,10 +37,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
         run: |
-          # Only mark stale if a prior review actually ran.
+          # Only mark stale if a prior review actually ran. The two labels
+          # are mutually exclusive — claude-stale means "current review is
+          # out of date" and claude-ran means "current review is fresh," so
+          # adding stale always also removes ran. The post-run label step
+          # below maintains the inverse.
           LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
           if [[ ",$LABELS," == *",review:claude-ran,"* ]]; then
-            gh pr edit "$PR" --repo "${{ github.repository }}" --add-label "review:claude-stale"
+            gh pr edit "$PR" --repo "${{ github.repository }}" --add-label "review:claude-stale" --remove-label "review:claude-ran"
           fi
 
   claude-review:
@@ -89,7 +93,20 @@ jobs:
           PR="${{ github.event.workflow_run.pull_requests[0].number }}"
           REPO="${{ github.repository }}"
 
-          DATA=$(gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title)
+          # GitHub re-evaluates a PR's diff lazily after force-pushes to
+          # head or base. Right after a rebase the API can briefly return
+          # 0 files / 0 additions / 0 deletions even though the PR has
+          # real changes. Retry once after a pause to catch the race
+          # before falling through to the empty-diff skip.
+          fetch_pr() {
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title
+          }
+          DATA=$(fetch_pr)
+          if [[ "$(echo "$DATA" | jq -r '.files | length')" == "0" ]]; then
+            echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
+            sleep 30
+            DATA=$(fetch_pr)
+          fi
           IS_DRAFT=$(echo "$DATA" | jq -r '.isDraft')
           AUTHOR=$(echo "$DATA" | jq -r '.author.login')
           LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
@@ -118,6 +135,12 @@ jobs:
             SKIP="frontmatter-only"
           elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
             SKIP="bot-author"
+          elif [[ "$FILE_COUNT" == "0" ]]; then
+            # Empty diff after retry — GitHub still hasn't re-evaluated.
+            # Skip cleanly instead of letting the model run with no diff
+            # context (which previously errored with "directory mismatch").
+            # The author can flip draft → ready or push to retry.
+            SKIP="empty-diff"
           fi
 
           {

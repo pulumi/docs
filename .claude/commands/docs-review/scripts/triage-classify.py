@@ -99,6 +99,14 @@ def detect_starting_state(body_lines: list[str], old_start: int) -> str:
     # closing (the more common case for aliases / meta_desc edits).
     if len(dashdash_positions) == 1:
         return "pre-frontmatter" if old_start == 1 else "frontmatter"
+    # No `---` context. Hugo content frontmatter sits in the first ~30
+    # lines of every file; a hunk past that is body, full stop. The
+    # YAML-key heuristic below is unreliable past frontmatter because
+    # markdown YAML code blocks (e.g., `description: A minimal program.`
+    # inside a Pulumi.yaml example) match the same shape and cause body
+    # changes to be misclassified as frontmatter changes.
+    if old_start > 30:
+        return "body"
     # No `---` context. Look at the surrounding content to guess.
     for line in body_lines:
         if not line:

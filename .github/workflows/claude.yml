@@ -246,13 +246,22 @@ jobs:
             gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
               -f body="$BODY" >/dev/null || true
           fi
-          # Clear both lifecycle labels: working (set above) and stale
-          # (set by claude-code-review.yml's mark-stale job on push). On
-          # successful re-entrant work, the pinned review is no longer
-          # stale, so the label should go.
-          gh pr edit "$PR" --repo "$REPO" \
-            --remove-label review:claude-working \
-            --remove-label review:claude-stale || true
+          # Clear lifecycle labels: working (set above) and stale (set by
+          # claude-code-review.yml's mark-stale job on push). On successful
+          # re-entrant work, also re-add review:claude-ran — the pinned
+          # review is fresh again, and ran/stale are mutually exclusive.
+          # mark-stale removed claude-ran when it set claude-stale, so
+          # without re-adding here the PR would carry neither label.
+          if [ "$OUTCOME" = "success" ]; then
+            gh pr edit "$PR" --repo "$REPO" \
+              --add-label review:claude-ran \
+              --remove-label review:claude-working \
+              --remove-label review:claude-stale || true
+          else
+            gh pr edit "$PR" --repo "$REPO" \
+              --remove-label review:claude-working \
+              --remove-label review:claude-stale || true
+          fi
 
 env:
   ESC_ACTION_OIDC_AUTH: true
