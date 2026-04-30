@@ -106,9 +106,30 @@ In addition to the Pulumi Console, deployment settings including OIDC can be con
 3. Choose the "Deploy" panel.
 4. Under the "OpenID Connect" header, toggle "Enable AWS Integration".
 5. Enter the ARN of the IAM role created above in the "Role ARN" field.
-6. Enter a name for the assumed role session in the "Session Name" field.
+6. Enter a name for the assumed role session in the "Session Name" field. See [Session name](#session-name) for the supported template variables.
 7. If you would like to use additional policies to further constrain the session's capabilities, enter the policies' ARNs separated by commas in the "Policy ARNs" field.
 8. If you would like to constrain the duration of the assumed role session, enter a duration in the form "XhYmZs" in the "Session Duration" field.
 9. Select the "Save deployment configuration" button.
 
 With this configuration, each deployment of this stack will attempt to exchange the deployment's OIDC token for AWS credentials using the specified IAM role prior to running any pre-commands or Pulumi operations. The fetched credentials are published in the `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` environment variables. The raw OIDC token is also available for advanced scenarios in the `PULUMI_OIDC_TOKEN` environment variable and the `/mnt/pulumi/pulumi.oidc` file.
+
+## Session name
+
+The session name becomes the [`RoleSessionName`](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRoleWithWebIdentity.html) on the AWS STS `AssumeRoleWithWebIdentity` call and surfaces in every subsequent CloudTrail event as the last segment of the assumed-role principal ARN, so a templated session name makes each API call traceable to a specific Pulumi deployment.
+
+### Template variables
+
+The session name supports `${var}` placeholders that Pulumi substitutes at deployment build time:
+
+1. `${organization.name}`: Pulumi organization name.
+1. `${project.name}`: Pulumi project name.
+1. `${stack.name}`: Pulumi stack name.
+1. `${operation}`: the operation type (for example, `update`, `preview`, or `destroy`).
+1. `${deployment.version}`: the deployment version number.
+1. `${deployment.id}`: the deployment UUID.
+
+A literal value with no `${...}` placeholders is passed through unchanged.
+
+### Length and truncation
+
+AWS caps `RoleSessionName` at 64 characters. If a rendered template would exceed that limit, Pulumi trims the truncatable name variables (`${organization.name}`, `${project.name}`, `${stack.name}`) from the end until the result fits. The protected variables (`${operation}`, `${deployment.version}`, `${deployment.id}`) are never trimmed, so each deployment remains identifiable.
