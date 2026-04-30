@@ -1325,3 +1325,75 @@ No item retired this session.
 ### Memory updates
 
 None.
+
+---
+
+## Session 15 — 2026-04-30 (residual-backlog cleanup)
+
+### Trigger
+
+Cam dropped Session-14 backlog items 1, 2, 3, 5, 6 (the work that needs fixture PRs, external deploys, or a re-benchmark) and asked for a plan covering the rest. Remaining substance: item #4 (cap-review on `output-format.md`), item #7 (restore the `pinned-comment.sh` reference an earlier audit removed), item #8 (bare-ref → colon-form sweep), and four "agents flagged but didn't fix" items from the Session 14 continuation audit.
+
+### What shipped
+
+1. **`output-format.md` — restored `pinned-comment.sh` pointer + added §Comment lifecycle.** The Session-14 commit `479e5e4587` had trimmed the only sentence connecting `output-format.md` to `scripts/pinned-comment.sh`. Verified via repo grep that no other reference file documents the marker convention, the 1/M sacrosanct guarantee, or the script's ownership of splitting/upsert/prune. Replaced with a tighter paragraph: marker format on first line of every comment, script owns the lifecycle, 1/M is sacrosanct (script refuses to delete index 0), no `gh pr comment` ever called directly. New subsection sits between §Overflow and §DO-NOT list. Conservative scope per Cam's call — no new per-bucket caps, no prompt-shape change.
+
+2. **Per-finding rendering cross-reference in `output-format.md` §Bucket rules.** One-line pointer to `docs-review:references:shared-criteria` for suggestion-block sizing and quote-and-rewrite mandate. Stops the "where do per-finding rules live?" recurrence in audits.
+
+3. **`docs.md` L14 framing tighten.** "Whole-file read is opt-in per the pre-existing extraction rule below" was a loose forward-reference — readers had to scroll the whole file to find what triggered the opt-in. Tightened to point at §Pre-existing issues (opt-in) directly.
+
+### What did NOT ship — and why
+
+**The bare-ref / colon-form sweep was abandoned mid-implementation.** The plan opened by listing 4 sites to convert (1 in `update.md`, 3 in workflows). On a sanity-check of existing convention before edit, the picture flipped:
+
+- **Reference files** (anything in `references/`) are referenced via colon form (`docs-review:references:update`, `docs-review:references:spelling-grammar`, etc.). Cam ratified this mid-Session-14.
+- **Top-level skill files** (`docs-review/ci.md`, `docs-review/SKILL.md`, `docs-review/triage-prose.md`) are referenced via bare path everywhere they appear: `update.md` L182, `claude.yml` L192/L208, `claude-code-review.yml` L230/L237, `AGENTS.md` L119, `claude-triage.yml` L134. There are zero existing colon-form refs to top-level files in the repo.
+
+So the recurring "bare-ref vs colon notation" flag (Session 12 backlog #3, re-flagged by the Session 14 audit) is a false-positive: the codebase already uses a **split convention** that's internally consistent. Top-level files take bare paths; reference files take colon form. The audits keep noticing the bare-path top-level refs and assuming they're inconsistent with the colon-form references next to them, but the rule is operating exactly as the codebase already executes it.
+
+Cam's call: document the convention here, don't sweep. No edits to `update.md`, `claude.yml`, `claude-code-review.yml`, or `AGENTS.md`.
+
+### Convention (recorded for future audits)
+
+**Cross-reference notation in `.claude/commands/` and `.github/workflows/`:**
+
+- **Reference files** (under any skill's `references/` subdirectory) → colon form: `docs-review:references:update`, `pr-review:references:trust-and-scrutiny`, `move-doc:references:link-updates`.
+- **Top-level skill files** (anything directly under a skill directory: `SKILL.md`, `ci.md`, `triage-prose.md`) → bare path: `docs-review/ci.md` or full repo path `.claude/commands/docs-review/ci.md` when the consumer is a workflow or a non-skill-aware reader.
+- **File-system operations** (`bash`, `cat`, `grep` against a path) → always full path, regardless of whether the file is a reference or top-level. Convention applies only to prose cross-references.
+
+If a future audit re-flags `docs-review/ci.md`-style bare-paths as inconsistent, point it back here.
+
+### Three audit items verified accurate (no fix)
+
+The Session 14 continuation flagged four items as "left for now." Investigation confirmed three of them were already correct:
+
+- **`shared-criteria.md` L61 "MD045/MD040 currently disabled in the linter."** Verified: `.markdownlint-base.json` sets both rules to `false`. Claim is accurate.
+- **`ci.md` Hard rule 1 "shallow checkout."** Verified: `.github/workflows/claude-code-review.yml` uses `actions/checkout@v6` with `fetch-depth: 1`. `fetch-depth: 1` is shallow; claim is accurate.
+- **`update.md` L160 "Hand the updated review object to `docs-review:references:output-format`."** Verified: `output-format.md` does not call back into `update.md`. Relationship is one-directional (update → output-format); the downstream framing is accurate.
+
+The fourth item (`docs.md` L14 framing) was the only one that needed a real edit — covered above.
+
+### Backlog after Session 15
+
+Session 14's dropped items remain dropped (Cam dropped them during Session 15 trigger):
+
+1. Re-entrant `@claude` patterns testing (fix-response, dispute, re-verify).
+2. Maintainer `pr-review` walkthrough.
+3. Investigate the 5 lost ⚠️ catches from the Session 13 rebenchmark.
+4. Upstream label deploy via `scripts/labels/sync-labels.sh --repo pulumi/docs`.
+5. Prose-pattern elevation re-benchmark (soft-watch a future em-dash-heavy blog PR).
+
+These reactivate when fixture PRs / external deploys come back into scope.
+
+**Closed:** Session-14 backlog items 4, 7, 8, plus all four "left for now" items from the Session 14 continuation audit.
+
+### Files changed (Session 15 substance)
+
+- `.claude/commands/docs-review/references/output-format.md` — restored `pinned-comment.sh` reference + added §Comment lifecycle + per-finding cross-ref to shared-criteria
+- `.claude/commands/docs-review/references/docs.md` — L14 forward-reference tighten
+
+Plus this SESSION-NOTES entry.
+
+### Memory updates
+
+None. The bare-ref / colon-form convention is project-state for this branch; the rule belongs in this file and will land in `AGENTS.md` if it ever needs to outlive the branch.
