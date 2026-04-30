@@ -1498,3 +1498,103 @@ Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test/` — `REPORT.md
 ### Memory updates
 
 None. All Session-16 facts are project-state specific to this branch and the e2e fixture set; they belong in this file.
+
+---
+
+## Session 17 — 2026-04-30 (e2e re-test, trivial-threshold bump, AGENTS.md trim)
+
+### Trigger
+
+Cam closed Session 16's fork PRs and asked to re-run the full e2e against the fixture set, specifically validating the two Session-16 mitigations (fact-check frontmatter sweep, update.md duplicate-occurrence sweep) end-to-end. After the test, surveyed cost wins and AGENTS.md context bloat.
+
+### What ran
+
+- New sync `71f9188488` on `cam/master` overlaying worktree HEAD `113955e6b2` (fact-check + update.md tightening from Session 16).
+- All 14 fixture branches cherry-picked onto the new sync (Session 14 lesson: explicit-SHA `git checkout -B`, never `master` on detached worktree). Session 16's extra fix-response/edit commits dropped from PRs 64/67/69 in the rebase.
+- 10 fresh draft PRs `CamSoper/pulumi.docs#74–83`, marked ready 19:23:57Z; last review posted ~19:30Z.
+- Re-entrant phase: 4 active (74 fix-response, 75 dispute *(pivot — see below)*, 77 fix-response partial body-only, 79 re-verify). 6 untouched (76, 78, 80, 81, 82, 83).
+- Mid-session: trivial-threshold bump and AGENTS.md trim shipped after the e2e validation completed.
+
+### Findings
+
+**1. Fact-check frontmatter sweep validated end-to-end.** PR 77's initial review Finding 1 cited body line 38 + `social.linkedin` line 21 + `social.bluesky` line 28 as a single finding with three locations. Session-16 regression closed; Bluesky no longer missed. **Bonus: PR 77 turn count dropped 96 → 53 (−45%) and cost $3.32 → $2.93 (−12%)** because the sweep makes one verification cover three locations.
+
+**2. Update.md partial-fix detection validated, different code path than expected.** Body-only fix at `594249d` was recognized in-place: Finding 1 stayed open with body line struck-through and tagged `✅ resolved in 594249d`, `social.linkedin` + `social.bluesky` still cited as un-fixed. Outstanding count stayed at 2. The strict "raise unflagged duplicate as new 🚨" path was *not* exercised because the new fact-check sweep caught all 3 at initial — the rules layered correctly: fact-check catches all 3 at initial, update.md keeps the finding open until all 3 are resolved. Author cannot merge while social blocks still carry the false claim. Strict missed-duplicate path remains unverified in production; deferred.
+
+**3. PR 76 (JumpCloud SAML) returned 0/0/0/0** — Session 16 found `🚨 1 / ⚠️ 3` on the same diff including a SCIM-acronym ⚠️ that was the planned dispute target. Real session-to-session variance. Reading was substantive ("links resolve, shortcode exists, menu weight slots cleanly between Google Workspace and Okta"), not lazy. Either Session 16's findings were borderline FPs the new run dropped, or real signal is being lost — can't tell from one run. Worth tracking; non-determinism baseline (3× same-fixture replays) was floated and deferred.
+
+**4. Dispute pivot — PR 75 stronger than the planned PR 76 SCIM-acronym would have been.** Pivoted the dispute target to PR 75's orphan-tag verification ⚠️ with empirical evidence (`data/openapi-spec.json` has both `AI` and `RegistryPreview` tags; `_content.gotmpl:72-78` urlization regex doesn't fire on `AI`, splits `RegistryPreview` correctly). Re-entrant Sonnet conceded cleanly *with independent regex verification* — stronger concession than Session 16's PR 66, which was a single-source footnote concession.
+
+**5. Initial-review pipeline passing on every dimension.** Triage 10/10 correct on domain + short-circuit. Atomic label-apply 10/10. Short-circuits fired on 80 (trivial), 81 (fmonly clean), 82 (fmonly typo with prose advisories on "togther", "manageing"). Cost $11.47 / 201 turns / 33m44s cumulative wall (~6 min batched). Δ vs Session 16: cost −3%, turns −18%, wall flat.
+
+**6. Self-loop guard verified twice.** Initial-review batch: 10 reviews posted, zero spurious self-triggers (Session 16 had 8 ❌ runs before the fix shipped). Re-entrant batch: exactly 4 `Claude Code` runs for 4 `@claude` posts, zero spurious self-triggers from re-entrant reviews themselves. End-to-end clean.
+
+**7. Re-entrant patterns 4/4 successful.** Cost $1.22 / 74 turns / 6m50s wall (parallel) — flat against Session 16 ($1.22 / 66 turns / 12m42s). Sonnet remains ~5× cheaper than initial Opus on the same PR shape.
+
+| PR | Pattern | Initial → re-entrant | Behavior |
+|---:|---|---|---|
+| 74 | fix-response (split-files) | 🚨 1→1, ✅ 0→1 | Mirrors Session 16's PR 64; partial-fix split clean. |
+| 75 | dispute (pivot) | ⚠️ 1→0, ✅ 0→1 | Concession + independent verification. |
+| 77 | fix-response (partial body-only) | 🚨 2→2, ✅ 0→0 | Body line struck-through within Finding 1; social blocks still cited. |
+| 79 | re-verify | 🚨 1→1, ⚠️ 2→2 | All preserved against new diff; quoted text on Finding 3 updated for the wording change. |
+
+### Mitigations shipped
+
+**Trivial-threshold bump** (`triage-classify.py:245-246`, plus `triage-prose.md:8` and `AGENTS.md` description). Lines 5→10, files 1→2. Captures typo-sweeps across 2 sibling files and wording polish that previously failed the cap. Estimated cost win: shifted PRs go from $1–1.5 (full Opus review) to ~$0.05 (triage prose pass) — direct savings if the real-world PR shape has typo-fix and small-polish PRs that currently fail the cap.
+
+**AGENTS.md trim** (170 → 104 lines, −39%). §PR Lifecycle detail (46 lines) moved to a new `CONTRIBUTING.md` §AI-assisted contributions section absorbing the full refresh-pattern + short-circuit-criteria detail. §Moving and Deleting Files (21 lines → 3) collapsed to a pointer to `.claude/commands/move-doc/SKILL.md` while preserving the load-bearing S3-redirect-for-non-Hugo rule. §Updating Internal Links (19 → 7 lines) keeps the DO/DON'T sweep rule + canonical-path requirement (load-bearing for every edit) and defers the find/sed implementation example.
+
+Net repo-context-per-session reduction: 66 lines, since `CONTRIBUTING.md` isn't auto-loaded.
+
+### Items NOT shipped (in backlog)
+
+- **Sonnet pre-pass with escalation** — investigated, declined. Cam pointed out Session 6 already studied Sonnet-everywhere thoroughly (`scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md`): 3/6 reliability failures (silent no-posts, duplicate post), substance regressions on real bugs (PR 46 SCIM tab, PR 49 datadog.svg). Real saving after reliability discount was ~20%, not paper ~46%. The pre-pass-with-escalation idea has the same blocker — silent-failure-on-large-PR — and the gate only saves money if Sonnet's null-result is reliable, which Session 6 showed it isn't. Re-open conditions unchanged: fix silent-failure root cause, then rerun.
+- **Adversarial "skeptic" sub-agent for quality not cost.** ~$0.30/PR Sonnet read-only pass that re-reads draft findings before posting and flags overconfident or under-evidenced ones. Could tighten variance like PR 76's. Defer until non-determinism baseline characterizes how much drift is normal.
+- **Non-determinism baseline** — 3× same-fixture replays without code changes between, to characterize session-to-session noise. Cam declined for now ("not yet").
+
+### Methodology / repeatable patterns
+
+- **Check SESSION-NOTES.md before proposing experiments on a multi-session branch.** I floated Sonnet pre-pass as a cost win without first checking; Cam reminded me Session 6 had already studied it. Saved a memory entry — `feedback_check_session_notes_for_prior_experiments`.
+- **Pre-state a dispute pivot.** Session 17's planned dispute target (PR 76 SCIM-acronym) didn't exist this run. Pivoting mid-test was clean enough but added a `/page-cam` round-trip. Future test plans should name a primary + a backup dispute target up front.
+- **Empirical-evidence dispute > footnote dispute.** PR 75's orphan-tag verification (spec has both tags) tested the dispute pattern more rigorously than a footnote re-reading would have. The model not only conceded but independently verified the urlization regex. Pick disputes where the author's case is concrete evidence, not interpretation.
+- **Frontmatter-sweep is a cost optimization, not just a coverage rule.** PR 77 turn drop (96 → 53) is the data point. Future fact-check rule design should consider whether consolidation (one verification covering N locations) pays back in turns.
+
+### Backlog after Session 17
+
+Active:
+1. **Maintainer `pr-review` walkthrough** — was scoped to PRs 76, 78, 80, 81, 82, 83 from Session 17; Cam closed all PRs at session end so a fresh set is needed. Either reopen the closed ones (safe — reopen doesn't fire Claude reviews per workflow yaml; only the lint workflow fires) or roll into Session 18.
+2. **Session 18 e2e validation** — re-run with 4 new boundary fixtures (`test-trivial-2files`, `test-trivial-7lines`, `test-trivial-over-lines`, `test-trivial-over-files`) plus the standard 10-PR set, validating the trivial bump + AGENTS.md trim. Prompt drafted at session end.
+3. **Cost-variance monitoring** — defer; cost flat across 4 measurement passes (S13 $12.30 / S16 $11.79 / S17 $11.47 / S18 TBD).
+4. **Cam-fork CI cosmetic fixes** — unchanged.
+5. **Investigate 5 lost ⚠️ catches** (Session 13 #5) — still open.
+6. **Upstream label deploy** (Session 14 #4) — verify `scripts/labels/sync-labels.sh --repo pulumi/docs --dry-run` then for-real before merge.
+7. **Prose-pattern re-benchmark** — soft-watch.
+8. **`update.md` raise-missed-duplicate code path** — needs a contrived test where fact-check's sweep slips. Defer until a real production miss appears.
+9. **Non-determinism baseline (3× same-fixture replay)** — deferred per Cam.
+10. **Adversarial skeptic sub-agent** — paired with #9; revisit together.
+
+Closed this session:
+- Session 16's "fact-check frontmatter sweep validation" → ✅ validated end-to-end on PR 77.
+- Session 16's "update.md partial-fix detection validation" → ✅ validated (different code path; rules layer correctly).
+- Trivial threshold bump → ✅ shipped.
+- AGENTS.md trim → ✅ shipped (39% reduction).
+- Session 16 backlog item: "Sonnet pre-pass investigation" → ✅ closed; superseded by Session 6's prior analysis.
+
+### Files changed (Session 17 substance)
+
+- `.claude/commands/docs-review/scripts/triage-classify.py` — lines 5→10, files 1→2.
+- `.claude/commands/docs-review/triage-prose.md` — header description text.
+- `AGENTS.md` — §PR Lifecycle 46 → 5 lines; §Moving 21 → 3 lines; §Updating Internal Links 19 → 7 lines.
+- `CONTRIBUTING.md` — new §AI-assisted contributions section absorbing the trimmed PR-lifecycle detail.
+- `SESSION-NOTES.md` — this entry.
+
+Cam-fork operations:
+- `cam/master` advanced from `01de922a71` → `71f9188488`.
+- 14 fixture branches force-pushed atop the new sync.
+- 10 PRs opened (`#74-83`); all initial reviews + 4 re-entrant runs complete; Cam manually closed all 10 at session end.
+
+Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test-v2/` — `REPORT.md`, `reviews/`, `triage/`, `labels-final.txt`, `cost-data.txt`, `reentrant-cost.txt`, `opened-prs.txt`, `start-time.txt`, `reentrant-start.txt`, `open-prs.sh`, `capture.sh`, `cost-data.sh`.
+
+### Memory updates
+
+One feedback entry added: `feedback_check_session_notes_for_prior_experiments` — captures the Sonnet pre-pass exchange where I proposed an experiment Session 6 had already characterized. Future sessions on multi-session branches should grep SESSION-NOTES.md for prior experiments before proposing new ones.
