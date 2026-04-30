@@ -107,7 +107,7 @@ Re-run /pr-review {{arg}} when the run completes (typically 1–5 minutes).
 
 No pinned comment exists. This typically means: the PR is a draft (CI doesn't review drafts), CI failed, or the `review:trivial` short-circuit fired. Ask the user how to proceed via AskUserQuestion:
 
-1. **Run a local review now** — perform a full local style + code review (apply `docs-review:references:shared-criteria` plus the appropriate domain criteria per file) and a fact-check pass via `docs-review:references:fact-check`. Slow but thorough.
+1. **Run a local review now** — perform a full local style + code review (apply `/docs-review`). Use the findings as the pinned-review findings for Step 6.
 2. **Adjudicate without findings** — proceed to Step 6 with no findings; rely on your own diff read and the contributor's PR description.
 3. **Cancel** — exit; consider transitioning the PR to ready-for-review to trigger CI, or mention `@claude` to invoke a fresh review.
 
@@ -177,7 +177,7 @@ Render the whole package in one message.
 
 ### Step 7: Present action menu
 
-Use AskUserQuestion (max 4 options). Adaptive-scenario selection (which menu fires for which finding shape) and per-scenario options live in `pr-review:references:action-menus`. The Step 7 menu chooses *what* to do; auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
+Use AskUserQuestion. Adaptive-scenario selection (which menu fires for which finding shape) and per-scenario options live in `pr-review:references:action-menus`. The Step 7 menu chooses *what* to do; auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
 
 ### Step 8: Preview action and confirm (with merge toggle)
 
