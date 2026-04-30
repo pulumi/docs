@@ -4,6 +4,8 @@ meta_desc: |
     Understand what is infrastructure as code, along with the main benefits and importance for modern application development.
 type: what-is
 page_title: "What is Infrastructure as Code?"
+aliases:
+  - /blog/five-years-of-infrastructure-as-code-part-one/
 ---
 
 Infrastructure as code (IaC) is an approach to automating the provisioning and management of infrastructure. At its heart, **infrastructure as code is about bringing software engineering principles, approaches, and tools into the cloud infrastructure space.**
@@ -46,6 +48,34 @@ The second trend is cloud modernization. At first glance this may seem redundant
 Finally, the rate of change for a company's infrastructure is increasing. Part of this increase in the rate of change is due to cloud adoption and cloud modernization. There is a third reason, though: organizations are finding that they can move faster if they take advantage of the fundamental elasticity of the cloud.
 
 For teams managing tens or hundreds of cloud resources that change once every few months, managing infrastructure using scripts or via interactive means (such as using a UI or a CLI) might still be possible. More commonly, teams are finding themselves managing thousands or tens of thousands of resources that change daily or even hourly. Embracing automation via infrastructure as code is the only way to take control of that kind of complexity.
+
+## How infrastructure as code evolved
+
+Infrastructure as code didn't emerge all at once. It's the latest step in a long arc of automation maturity, and the patterns that dominate today reflect lessons learned from earlier approaches.
+
+### From manual clicks to declarative code
+
+Most teams have moved through some or all of the following stages of automation as their infrastructure footprint has grown:
+
+1. **Manual point-and-click in a UI console.** Quick to start with and useful for exploration, but completely manual: every recovery, scale-up, or environment clone repeats the same painful sequence of clicks.
+1. **CLI commands or direct API calls.** Each UI step can be translated into a CLI invocation or HTTP request. Procedures become easier to document, but they remain step-based and brittle.
+1. **Shell scripts.** Capturing those commands in a script is a real jump in repeatability — scripts can be checked into version control. The downside is fragility: a failure halfway through a script often leaves infrastructure in an unknown state, and every upgrade path has to be reasoned about by hand.
+1. **SDK-driven code.** Using a cloud provider's SDK in a general-purpose language adds first-class error handling, logging, and debugging. It still suffers from the same partial-failure and combinatorial-upgrade problems as scripting.
+1. **Infrastructure as code.** Instead of describing the steps required to reach a desired state, you declare the state itself, and an engine figures out how to get there. The engine understands resource lifetime, computes a plan, and reconciles the real world with the declared state — recovering from partial failures along the way.
+
+This last step is what makes IaC qualitatively different from the approaches that came before it. Earlier tools described _how_ to change infrastructure; IaC tools describe _what_ the infrastructure should look like and let a deterministic engine handle the rest.
+
+### From pets to cattle
+
+Two parallel shifts changed the kind of infrastructure that IaC needed to manage. The first was the move from mutable to immutable infrastructure — popularly described as the move ["from pets to cattle"](https://www.engineyard.com/blog/pets-vs-cattle/). In the early cloud era, each server was special: it was patched in place, mourned when it failed, and treated like a pet. Today, most infrastructure is managed as fleets of interchangeable resources that are replaced rather than upgraded, with cluster managers and serverless control planes handling scaling, fault tolerance, and traffic routing automatically.
+
+### From configuration to provisioning
+
+The second shift was a change in what IaC tools were _for_. Early tools such as CFEngine, Puppet, Chef, Ansible, and SaltStack were built for the "two VMs and a database" world, where the central problem was configuring and patching long-lived servers after they had been created (often manually). Modern provisioning-oriented tools like [Pulumi](/) target the broader landscape of cloud resources — containers, serverless functions, managed databases, queues, networks, and identity — and treat the creation, update, and replacement of those resources as the primary workflow. Configuration-style work still happens, but mostly inside immutable images and container builds rather than against running servers.
+
+### From a couple of VMs to thousands of resources
+
+Older "infrastructure" was static and slow-moving: an N-tier app on a couple of VMs and a database, with new capacity requested through a ticket and delivered weeks later. Modern systems routinely span dozens or hundreds of cloud resources — microservices, clusters, registries, networks, security policies, secrets, load balancers, serverless functions, queues, data stores, hosted AI/ML services — across many environments. That growth in moving pieces is what makes infrastructure as code essential rather than optional: at this scale, no team can manage the cloud safely by clicking through a console.
 
 ## What are the key elements of infrastructure as code?
 
