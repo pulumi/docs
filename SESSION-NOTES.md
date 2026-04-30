@@ -1712,3 +1712,7 @@ None. All Session-18 facts are project-state specific to this branch and the e2e
 ## EXTRA HAND WRITTEN NOTE FROM CAM
 
 I accidentally opened a bunch of PRs against my fork, and it was very instructive in how well this new pipeline will work. One thing I've noticed is that we should decide on standard behavior for "claude-working" labels and what other labels get deactivated when Claude is working.
+
+## SECOND HAND WRITTEN NOTE FROM CAM
+
+We should build a "quick" version of `/docs-review` that is similar to the existing `/docs-review` we use today. It's quicker and lighter.
