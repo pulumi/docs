@@ -93,7 +93,7 @@ Kubernetes best practices are the operational patterns that keep workloads avail
 **The rule:** every container in production sets a request for both CPU and memory, and a memory limit. CPU limits are optional and frequently counter-productive — they cause throttling spikes that look like outages.
 
 - Start at **100–200m CPU and 128–512Mi memory** for a typical web service.
-- Tune from real data using **Vertical Pod Autoscaler** in `recommendation` mode or Prometheus histograms.
+- Tune from real data using **Vertical Pod Autoscaler** with `updateMode: Off` (recommendation-only) or Prometheus histograms.
 - Use a per-namespace `LimitRange` so teams cannot ship a container with no requests at all.
 
 ## 2. How should you structure Kubernetes namespaces?
@@ -122,7 +122,7 @@ This is the smallest unit that gives you predictable cost, blast-radius containm
 
 - **[Helm](https://helm.sh/)** — Go-templated charts; the de-facto distribution format for off-the-shelf software (Prometheus, cert-manager, Argo CD).
 - **[Kustomize](https://kustomize.io/)** — overlay-based, no templating; ships in `kubectl`. Best for "same app, different environment" diffs.
-- **[Pulumi](/docs/iac/get-started/kubernetes/)** — real programming languages (TypeScript, Python, Go, Java, .NET) for Kubernetes plus the cloud resources around it (EKS, GKE, AKS, DNS, IAM). Type checking, tests, and the Pulumi [Kubernetes operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps-style reconciliation.
+- **[Pulumi](/docs/iac/get-started/kubernetes/)** — real programming languages (TypeScript, Python, Go, Java, .NET) for Kubernetes plus the cloud resources around it (EKS, GKE, AKS, DNS, IAM). Type checking, tests, and the Pulumi [Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps-style reconciliation.
 
 If you are already managing cloud infrastructure with code, extending the same Pulumi program to Kubernetes is the smallest cognitive jump — the cluster, its IAM, its DNS, and its workloads live in one stack and one review.
 
@@ -210,7 +210,7 @@ Observability rests on the three pillars: metrics, logs, and traces. The 2026 de
 
 - Use **app-of-apps** (Argo) or **Kustomization trees** (Flux) to bootstrap whole clusters from a single root.
 - Keep manifests, Helm values, and Pulumi stack references in Git, with environment promotion via PR.
-- Combine GitOps with [Pulumi Deployments](/docs/pulumi-cloud/deployments/) so cloud infrastructure (VPCs, EKS clusters, IAM, DNS) and the workloads on top promote through the same review pipeline. See [improving GitOps with the Pulumi Operator](/blog/improving-gitops-with-pulumi-operator/) for a worked example.
+- Combine GitOps with [Pulumi Deployments](/docs/deployments/deployments/) so cloud infrastructure (VPCs, EKS clusters, IAM, DNS) and the workloads on top promote through the same review pipeline. See [improving GitOps with the Pulumi Operator](/blog/improving-gitops-with-pulumi-operator/) for a worked example.
 - Configure **automated rollback** on health-check failure, and **drift detection** alerts when someone edits live state.
 
 ## 10. How often should you upgrade Kubernetes?
@@ -261,7 +261,7 @@ Labels and annotations are the metadata layer that everything — Services, Netw
 
 **What is the Horizontal Pod Autoscaler?** The **HPA** scales the replica count of a Deployment or StatefulSet up and down based on CPU, memory, or custom/external metrics.
 
-**What is the Vertical Pod Autoscaler?** The **VPA** adjusts a Pod's CPU and memory *requests* over time based on observed usage. Run it in `recommendation` mode in production and apply the recommendations through your IaC tool.
+**What is the Vertical Pod Autoscaler?** The **VPA** adjusts a Pod's CPU and memory *requests* over time based on observed usage. Run it with `updateMode: Off` (recommendation-only) in production and apply the recommendations through your IaC tool.
 
 **What are Cluster Autoscaler and Karpenter?** **Cluster Autoscaler** adds and removes nodes to match Pod demand. **[Karpenter](https://karpenter.sh/)** is a faster, group-less node provisioner now widely used on EKS and gaining traction on other clouds.
 
@@ -273,7 +273,7 @@ Labels and annotations are the metadata layer that everything — Services, Netw
 
 **The rule:** every change goes through at least one policy engine.
 
-- **Pre-deploy** — validate Pulumi or Helm output with [Pulumi CrossGuard](/docs/using-pulumi/crossguard/) or [Conftest](https://www.conftest.dev/) in CI.
+- **Pre-deploy** — validate Pulumi or Helm output with [Pulumi CrossGuard](/docs/insights/policy/) or [Conftest](https://www.conftest.dev/) in CI.
 - **Admission-time** — install [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) and require, for example, signed images, a `team` label, and a non-root `securityContext` on every Pod.
 - **Continuous** — scan running clusters with [Pulumi Insights](/docs/insights/policy/) or `kubescape` for drift from policy.
 
@@ -295,9 +295,9 @@ This is what regulators and customers ask for in 2026 — Executive Order 14028,
 
 ## 18. How do you manage Kubernetes cost (FinOps)?
 
-**The rule:** Kubernetes cost is a labelling and right-sizing problem before it is a discount problem.
+**The rule:** Kubernetes cost is a labeling and right-sizing problem before it is a discount problem.
 
-- **Right-size** with VPA recommendations, [Goldilocks](https://github.com/FairwindsOps/goldilocks), or your APM's recommendation engine. Most workloads request 2–5x more CPU than they use.
+- **Right-size** with VPA recommendations, [Goldilocks](https://github.com/FairwindsOps/goldilocks), or your APM's recommendation engine. Most workloads request more CPU than they actually use; right-sizing is usually the largest single saving.
 - **Schedule** non-prod clusters off overnight and on weekends.
 - **Spot/preemptible nodes** for fault-tolerant workloads; use Karpenter's consolidation to compact bin-packing.
 - **Show back / charge back** by namespace and label using [OpenCost](https://www.opencost.io/) or [Kubecost](https://www.kubecost.io/). Without per-team attribution, no team owns cost.
@@ -319,7 +319,7 @@ Native YAML scales until your team doesn't. Once you have more than a handful of
 - **One stack, full topology** — manage the cloud (EKS/GKE/AKS, VPC, IAM, DNS) and the workloads in it together. See [easily create and manage AWS EKS clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/).
 - **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/using-pulumi/pulumi-packages/) other teams `import` instead of copy-pasting.
 - **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack on every Git push.
-- **Policy-as-code** built in — [CrossGuard](/docs/using-pulumi/crossguard/) blocks non-compliant changes before `pulumi up`.
+- **Policy-as-code** built in — [CrossGuard](/docs/insights/policy/) blocks non-compliant changes before `pulumi up`.
 - **Secrets done right** — [Pulumi ESC](/docs/esc/) federates secrets and configuration across stacks, environments, and Kubernetes clusters.
 
 For a deeper comparison of hand-written YAML, Terraform, and Pulumi for Kubernetes, see [YAML, Terraform, Pulumi: what's the smart choice for deployment automation with Kubernetes](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/), and the [beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/) write-up on where Kubernetes automation is heading in 2026.
