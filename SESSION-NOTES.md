@@ -1050,3 +1050,153 @@ Plus 3 redundant claim-extraction examples (Ex 1 single-claim, Ex 5 temporal, Ex
 ### Memory updates
 
 None this session. No new contributor names, project facts, or feedback patterns surfaced that aren't already captured in existing memory entries.
+
+---
+
+## Session 12 — 2026-04-29 → 2026-04-30 (skill-file audit, three converging passes)
+
+### Trigger
+
+Session 11's backlog #3: "Skill-file consistency audit — fact-check.md's audit pattern likely has cousins across the rest of the docs-review and pr-review skill packages, including the prompt blocks embedded in claude-triage.yml / claude-code-review.yml / claude.yml. Audit prompt produced at session-end for a fresh-context run; audit not yet executed."
+
+The prompt was executed three separate times across the session. Each run produced a fresh audit report and a fresh apply-fixes pass. This is worth recording explicitly — it was not a deliberate "iterate three times" choice; the same prompt got rerun against the (newly-tightened) state and continued to find things to cut.
+
+### Three audit-and-apply cycles
+
+| Pass | Apply commit | Files | Net lines | Notes |
+|---|---|---|---:|---|
+| 1 | `808358d563` | 13 | -61 | First pass, deepest cut. Caller-leak / output-format dup / DRY across the largest set of files. |
+| 2 | `156f924fdb` | 10 | -38 | Output-format caps, prose specificity, residual DRY. |
+| 3 | `578d6772b9` | 9 | -27 | Caught fact-check.md's ✅ alignment claim as a fresh contradiction (not surfaced in passes 1-2); collapsed trust-and-scrutiny.md's heightened-scrutiny table to delegation pointers. |
+
+Returns are diminishing in line count, but Pass 3 still surfaced one genuine high-severity contradiction (fact-check ✅ Verified vs canonical ✅ Resolved-since-last-review) that the earlier passes missed. The pattern is **not pure churn** — the audit converges, but each pass is finding marginally-smaller real issues. The audit is largely converged for the docs-review and pr-review packages now; another pass would likely produce <10 lines of cuts.
+
+### Pass-3 specific notes
+
+- **Audit erratum caught at pre-flight planning:** the audit report listed `fact-check.md:30` as part of the bare-`docs-review/ci.md`-ref cluster. False positive — fact-check.md has no ci.md reference. Same pre-flight grep also found `update.md:182` which the audit *missed*. Errata documented in the plan, applied work scoped accordingly.
+- **Bare-ref decision punted (again):** repo-wide grep for `docs-review:ci` returned zero matches. No working precedent for the colon-form on top-level skill entries. Existing bare-path form `docs-review/ci.md` is internally consistent across all four call sites (programs.md, docs.md, update.md, claude.yml prompt). Pass 3 plan deferred the rewrite. Same question recurred in passes 1 and 2 — needs a documented authoring convention to stop the recurrence in future audits.
+- **fact-check.md ✅/⚠️ semantic collision (NEW):** fact-check's "✅ Verified" tier emoji collided with output-format's canonical "✅ Resolved since last review" bucket. They share an emoji but mean entirely different things — verified-fact ≠ resolved-finding. The "intentionally aligned" statement at fact-check.md:281 was misleading callers. Replaced the alignment claim with explicit disambiguation (🚨/⚠️ align; ✅ Verified is fact-check's own collapsed-details bucket, *not* the canonical ✅ Resolved). Tier rules table's ⚠️ row gained a caller-side note prefixing evidence with "verified weakly" so a reader can tell sub-tiers apart.
+- **trust-and-scrutiny.md table → delegation:** the heightened-scrutiny behaviors table was pinning specific Step 6 / Step 8 behaviors (caller-leak — describes pr-review's render layer from inside trust-and-scrutiny). Collapsed to four delegation bullets pointing at fact-check.md, action-preview-templates.md (×2), and pr-review SKILL.md Step 6.
+
+### Cam-flagged behaviors during the session
+
+- **"This is the THIRD time we've run that same prompt."** Cam noticed that the audit-and-tighten exercise had been re-run repeatedly in this session without a checkpoint. Future-Cam directive embedded: stop re-running the audit and re-benchmark the skill against the actual test PRs to see whether the cleanup moved the quality needle. Three rounds of skill-file polish ≠ measurable improvement until we test.
+- **Audit prompt is broad enough to over-fire.** The prompt explicitly invites the auditor to scan for nine failure modes across 22 files. Even after a clean apply pass, a re-run finds new cuts at the margin because the auditor's prior context isn't wired in. Future audits should either (a) be one-shot, with explicit "stop and benchmark" gating, or (b) carry forward a "previously-cut" baseline so the auditor doesn't re-flag the same patterns.
+- **Errata-during-pre-flight discipline.** The bare-ref cluster pre-flight check caught a false-positive (fact-check.md:30) and a missed match (update.md:182) before any edits landed. Worth carrying the pattern forward: every audit should get a 60-second grep-validation pass before plan approval.
+
+### Files changed (Session 12 substance)
+
+Three apply commits:
+
+1. `808358d563` — Refactor documentation: streamline language, clarify procedures, and enhance consistency across various files (Pass 1)
+2. `156f924fdb` — Refine documentation: clarify output format caps, enhance specificity in prose concerns, and streamline language across various files (Pass 2)
+3. `578d6772b9` — Refine documentation: enhance clarity and specificity across various files, streamline language, and improve consistency in prose (Pass 3)
+
+(Plus this SESSION-NOTES append as a separate commit.)
+
+The audit reports themselves were written to `/workspaces/src/scratch/`; only the most recent (`2026-04-29-docs-pr-review-audit.md`) survives — earlier passes' reports were superseded.
+
+### Backlog after Session 12
+
+1. **Re-benchmark the skill against `CamSoper/pulumi.docs#44-49`** (the existing pipeline-comparison fixture set). After three rounds of skill-file tightening, run the same benchmark methodology used in `/workspaces/src/scratch/2026-04-28-pipeline-comparison/` and produce a comparable REPORT.md. Question to answer: did the cleanup move the quality needle, or did we just shorten the prompts? **This blocks all further skill-file work.**
+2. **Triage validation against `CamSoper/pulumi.docs#50-53`** (trivial / frontmatter-only fixtures): re-run Haiku triage-prose to confirm no regression on product-name false positives or Oxford-comma flagging post-cleanup.
+3. **Bare-ref / canonical notation decision** (NEW, recurring) — pick one of (a) document `docs-review/ci.md` as the canonical bare-path form for top-level skill entries in an authoring-conventions doc, OR (b) extend the skill loader's resolution to accept `docs-review:ci` and sweep the four call sites. Either kills the recurrence in future audits.
+4. **Deploy script** — `gh` script to create the new label set on `pulumi/docs` upstream. Still gated on benchmark validation per Session 11 backlog #2.
+5. **`programs.md` / `infra.md` priority restructure** — Session 11 backlog #4, untouched.
+6. **Stop the audit-rerun loop.** Mark the skill-file consistency audit (Session 11 backlog #3) as **closed; converged** unless benchmark results suggest specific issues that warrant another targeted pass.
+
+### Memory updates
+
+None this session. The "stop re-running the same audit, benchmark first" directive belongs in this file (specific to the pr-review-overhaul branch), not in cross-session memory — it's project-state context, not a durable user preference.
+
+---
+
+## Session 13 — 2026-04-30 (rebenchmark, cost recovery, Session 14 plan)
+
+### Trigger
+
+Session 12 backlog #1: re-benchmark the post-Session-12 skill state against `CamSoper/pulumi.docs#44–53` to confirm the three audit-and-apply passes preserved or improved review quality. **Blocked all further skill-file work.**
+
+### What we ran
+
+Reused the 2026-04-28 fixture set (6 review-benchmark + 4 triage-fixture branches on the cam fork). Built one `ops:` sync commit (`81c89f190d`) that overlays the post-Session-12 `.claude/commands/`, `.github/workflows/claude-*.yml`, and `AGENTS.md` from worktree HEAD `578d6772b9` onto cam/master. Rebased every fixture branch onto the sync, force-pushed, then opened 10 new draft PRs (`CamSoper/pulumi.docs#54–63`) and marked ready in sequence. Both head and base of every PR carry the same skill state, so the PR diffs show only substantive content — no skill churn pollution.
+
+Captured per-PR: pinned `<!-- CLAUDE_REVIEW N/M -->` body, triage classifier output (from workflow logs), `<!-- TRIAGE_PROSE -->` advisories on the trivial / frontmatter-only set, plus `duration_ms` / `num_turns` / `total_cost_usd` from each `claude-execution-output.json` summary.
+
+Report: `/workspaces/src/scratch/2026-04-30-rebenchmark/REPORT.md`.
+
+### Outcome — three findings
+
+**1. Quality: HOLD with quality-bias improvements.**
+
+| | Pass-3 (baseline) | Post-Session-12 | Δ |
+|---|---:|---:|---:|
+| 🚨 Outstanding | 8 | 8 | 0 |
+| ⚠️ Low-confidence | 12 | 11 | −1 |
+| Total findings | 20 | 19 | −1 |
+
+Counts are statistically indistinguishable, but substance shifted in a desirable direction:
+- Two new substantive catches the baseline missed: **broken `/docs/ai/integrations/` link on PR 18685** (🚨), and **`STYLE-GUIDE.md` `meta_desc` 120-char floor enforcement on PR 18620** (4 sidecars under floor — baseline produced a clean review on this PR, missing the rule entirely).
+- Sharper severity calibration on PR 18599 (correctly splits broken leaf-page `./` links from convention-only `_index.md` `./` links — leaf pages 404, `_index` pages render at the directory URL with trailing slash).
+- Fact-check core preserved: PR 18647's OutSystems "96% in production" catch is identical between baseline and new. The Pass-3 ✅/⚠️ semantic disambiguation didn't degrade fact-check behavior.
+- Lost: 5 minor ⚠️ catches (JumpCloud filename hedge, webpack `argv.mode` narrowing, Gartner source quality, Supabase scope, alias-removal observation). All small individually; aggregate cost is real but slight against +2 substantive 🚨 catches gained.
+
+**2. Cost: −56% per posted review.** This is the headline number we didn't expect.
+
+| PR | Baseline turns / cost | New turns / cost | Δ cost |
+|---|---:|---:|---:|
+| 54 (18599) | 77 / $5.83 | 44 / $2.29 | −61% |
+| 55 (18620) | 42 / $3.65 | 23 / $1.93 | −47% |
+| 56 (18605) | 78 / $5.18 | 43 / $1.90 | −63% |
+| 57 (18647) | 58 / $6.33 | 49 / $3.42 | −46% |
+| 58 (18642) | 50 / $3.60 | 14 / $1.20 | −67% |
+| 59 (18685) | 53 / $3.47 | 26 / $1.56 | −55% |
+| **Total** | **358 / $28.07** | **199 / $12.30** | **−56%** |
+
+Same model in both columns (`claude-opus-4-7`). Driver: caller-leak sweep (Session 11) + pre-computed PR metadata block in the workflow file (cited in its own inline comment as "−85% denial reduction and −51% cost reduction stacked with the broadened allowed-tools") + output-format cap tightening + three rounds of skill-file deduplication. Wall time dropped from ~11.4 min/PR baseline to ~6.2 min/PR. Cost-per-finding: $1.40 → $0.65.
+
+**3. Label-deploy gap is empirically blocking.** The triage classifier emits `domain:*` labels (Session 10 rename), but the cam fork's label set still uses the old `review:docs/blog/infra/programs/mixed` names. `gh pr edit --add-label` is atomic — one missing label rejects the whole transaction, so even legitimate `review:trivial` and `review:prose-flagged` labels never landed on the triage-fixture PRs. The classifier itself computed everything correctly (logs confirm); only the apply step failed. Consequence: short-circuits don't fire, so the full Claude review ran on top of every triage-fixture PR (including the 1-line typo on PR 60). Same blocker exists for the upstream rollout. **This is Session 12 backlog #4 ("Deploy script — `gh` script to create the new label set on `pulumi/docs` upstream"), surfaced concretely.**
+
+### Triage / prose-check validation (passed)
+
+Triage classifier: 10/10 correct on domain, trivial, frontmatter-only, mixed, prose-needed.
+
+Haiku 4.5 prose-check on the 4 triage fixtures:
+
+| PR | Diff | Output | FPs |
+|---|---|---|---|
+| 60 | "modern" → "moderne" in body | Caught: "moderne" should be "modern" | None |
+| 61 | adds an alias to frontmatter | No advisory (clean) | None |
+| 62 | meta_desc with "togther" + "manageing" | Both flagged with corrections | None |
+| 63 | multi-line body change | No advisory (correctly no-op; not trivial / fmonly) | None |
+
+Specifically watched-for regressions: no product-name FPs (ESC, IaC, OIDC, kebab-case identifiers), no Oxford-comma over-flagging, no hedge-words flagged as errors.
+
+### Backlog after Session 13 (Cam's Session 14 plan)
+
+1. **Re-test the full pipeline on fresh PRs, triage included.** Today's run scored review *outputs* against baseline but didn't observe the triage flow end-to-end (the deploy gap interfered, and the focus was on review-quality scoring). Tomorrow: open fresh PRs and watch the whole pipeline live — triage classification timing, label application (after fix), short-circuit gating actually firing on trivial / fmonly, full review composition.
+2. **Simulate re-entrant reviews.** Test the three patterns documented in `AGENTS.md` §PR Lifecycle: (a) fix-response — push a commit addressing the review and `@claude` it; verify the `✅ Resolved` bucket gets updated; (b) dispute — `@claude` with reasoning to push back on a finding; verify the model concedes on evidence or holds with explanation; (c) re-verify — bare `@claude refresh` after a push; verify outstanding findings get re-checked against the new diff.
+3. **Test the maintainer `pr-review` experience.** The local skill that reads the pinned comment as source of truth and refreshes it during adjudication. Walk through a full review-and-merge cycle from the maintainer's seat.
+4. **Land the label-deploy script.** Hard prerequisite for #1 and Session 12 backlog #4. Same script needed for both cam fork and upstream rollout.
+5. **Investigate the 5 lost ⚠️ catches.** The pattern is consistent — vendor-side fact-checks, out-of-tree compatibility flags, frontmatter housekeeping. Targeted look at `fact-check.md`'s vendor-doc-verification trigger and `infra.md`'s out-of-tree-compatibility paragraph to see if a small re-emphasis recovers them without re-bloating.
+6. **Cap-review pass on `output-format.md`.** Reviews are 60% longer per finding than baseline (avg 70 lines vs 43). Suggestion-block proliferation is a quality improvement but per-section caps may want re-tightening so PR 18620-shaped reviews don't blow past the 65k limit on bigger PRs.
+
+**Closed:**
+- Session 11 backlog #3 (skill-file consistency audit) → **closed; converged** per the rebenchmark evidence.
+- Cost-optimization track ("Sonnet everywhere", "Sonnet for infra only") → no longer urgent. The audit work delivered most of what those experiments were chasing without the reliability gap that the Sonnet-everywhere experiment hit (3/6 silent failures + 1 duplicate post). Re-evaluate before spending more time on model-swap experiments.
+
+### Memory updates
+
+None. The Session-13 findings are project-state specific to this branch and the rebenchmark; they belong in this file, not cross-session memory.
+
+### Files changed (Session 13 substance)
+
+No commits to `CamSoper/pr-review-overhaul`. Skill files in this worktree stayed untouched per scope. The sync commit `81c89f190d` lives on the cam fork only ("ops: sync skill state to post-Session-12 baseline (578d6772b9)") and is not for upstream merge.
+
+Scratch artifacts:
+- `/workspaces/src/scratch/2026-04-30-rebenchmark/REPORT.md` — full per-PR comparison and cost analysis.
+- `/workspaces/src/scratch/2026-04-30-rebenchmark/new-reviews/pr-186XX-new.md` (×6) — captured pinned-comment bodies.
+- `/workspaces/src/scratch/2026-04-30-rebenchmark/triage-fixtures/{classifier-output,prose-advisories}.txt` — triage classifier and Haiku prose-check captures.
+- `/workspaces/src/scratch/2026-04-30-rebenchmark/cost-data.txt` — raw cost / turns / wall-time per run.
+- `/workspaces/src/scratch/2026-04-30-rebenchmark/prior-pr-meta/pr-{44..53}.json` — previous fixture PRs' titles/bodies, copied for the new PRs' shape.
+
