@@ -45,7 +45,7 @@ social:
             Zero traffic = Zero cost
 ---
 
-**TL;DR (2026 pricing):** You can host a Python API for about **$1.28/month** by packaging Flask as a container, deploying it to AWS Lambda behind an HTTP API Gateway, and managing the whole thing with Pulumi. When nobody's calling your service, you pay **$0**. The breakdown: ~$0.04 for API Gateway requests, ~$0.16 for Lambda compute (largely absorbed by the always-free tier), and ~$1.08 for 12 GB of egress at $0.09/GB. Verified against AWS pricing as of April 2026.
+**TL;DR (2026 pricing):** You can host a Python API for about **$1.28/month** by packaging Flask as a container, deploying it to AWS Lambda behind an HTTP API Gateway, and managing the whole thing with Pulumi. When nobody's calling your service, you pay **$0**. The breakdown: ~$0.04 for API Gateway requests, ~$0.07 for Lambda compute (fully absorbed by the always-free tier), and ~$1.08 for 12 GB of egress at $0.09/GB (also covered by AWS's 100 GB/month free egress unless other services in the same account have already used it). Verified against AWS pricing as of April 2026.
 
 How cheap can you host a Python app in 2026? For a low-traffic Flask API — say, 40,000 requests per month at 512 MB of memory — the answer is roughly **$1.28/month on AWS**, dropping to **$0 when idle**. The trick is to stop thinking of [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) as "one function per endpoint" and instead package your entire web framework as a container, deploy it to Lambda, and put it behind an HTTP API Gateway. Your code stays standard Flask. Your bill stays in the loose-change zone.
 
@@ -62,8 +62,8 @@ Plugging 40,000 requests per month at 512 MB memory and ~200 ms average executio
 1. **Lambda compute**: 40,000 × 0.5 GB × 0.2 s = 4,000 GB-seconds × $0.0000166667 = **$0.067**, fully covered by the always-free tier (400,000 GB-seconds free per month).
 1. **Lambda requests**: 40,000 × $0.20 / 1,000,000 = **$0.008**, also covered by the free tier (1M requests free per month).
 1. **HTTP API Gateway**: 40,000 × $1.00 / 1,000,000 = **$0.04**.
-1. **Data transfer out**: 12 GB × $0.09/GB = **$1.08** (and AWS expanded the always-free egress allowance to 100 GB/month back in 2024, so this is often $0 in practice).
-1. **Total**: **~$1.13–$1.28/month**, with the headline number hitting $1.28 only if you blow past the egress free tier.
+1. **Data transfer out**: 12 GB × $0.09/GB = **$1.08** if billed, but AWS's always-free tier (expanded to 100 GB/month outbound in late 2021) covers this row outright unless other services in the same account have already exhausted that allowance.
+1. **Total**: **~$0.04/month** (egress in the free tier, only API Gateway bills) to **~$1.12/month** (12 GB egress billed in full: $1.08 + $0.04 API Gateway), with Lambda compute and requests always fully covered by the free tier.
 
 The headline hasn't moved since this post was first published in early 2025 — Lambda and API Gateway pricing has been remarkably stable, and AWS has only expanded free-tier allowances since.
 
@@ -71,9 +71,9 @@ The headline hasn't moved since this post was first published in early 2025 — 
 
 | **Provider**               | **Approx. cost / month** | **2026 notes**                                                                                                                                                       |
 |:---------------------------|:-------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AWS Lambda + HTTP API      | **~$1.28**               | ~$1.08 for 12 GB egress at $0.09/GB + $0.04 for 40k API Gateway requests at $1/M + ~$0.07 Lambda compute (largely covered by the always-free tier of 1M req/400k GB-s). |
-| Google Cloud Run           | **~$1.10**               | 2M requests, 360k GB-seconds, and 240k vCPU-seconds are free every month — compute is $0. Egress dominates at ~$1.08 for 12 GB.                                       |
-| Fly.io                     | **~$3.50**               | Cheapest persistent `shared-cpu-1x@256MB` machine is ~$1.94/mo; ~$1.20–1.50 for 12 GB outbound (free tier was retired in late 2024).                                  |
+| AWS Lambda + HTTP API      | **~$1.28**               | ~$1.08 for 12 GB egress at $0.09/GB + $0.04 for 40k API Gateway requests at $1/M + ~$0.07 Lambda compute (fully covered by the always-free tier of 1M req/400k GB-s). |
+| Google Cloud Run           | **~$1.44**               | 2M requests, 360,000 GiB-seconds of memory, and 180,000 vCPU-seconds are free every month — compute is $0. Egress dominates: Premium tier is ~$0.12/GB, so 12 GB ≈ $1.44. Standard tier (~$0.085/GB) lands near $1.02.                    |
+| Fly.io                     | **~$2.18**               | Cheapest persistent `shared-cpu-1x@256MB` machine is ~$1.94/mo; 12 GB outbound at $0.02/GB (NA/EU) adds ~$0.24 (free tier was retired in late 2024).                   |
 | Railway                    | **~$6.00**               | Hobby plan starts at $5/mo and includes $5 of usage; a 512 MB always-on container plus 12 GB egress lands around $5.50–6.50 total.                                     |
 | Vercel (Pro)               | **$20+**                 | Pro plan has a $20/mo floor; 40k function invocations are well under the included quotas, so you mostly pay for the seat.                                              |
 
@@ -124,7 +124,7 @@ Here's our starting point in `scripts/simple_server.py`
 
 ```python
 from typing import Dict
-from flask import flask, jsonify, request
+from flask import Flask, jsonify, request
 from mangum import Mangum
 
 # Create Flask app
@@ -365,7 +365,7 @@ You can find the full code in the [service status monitor repo](https://github.c
 
 {{< notes type="info" >}}
 
-### **Alternative approaches**
+### Alternative approaches
 
 There are other ways to run containers that scale to zero. [Google Cloud Run](https://www.pulumi.com/registry/packages/gcp/api-docs/cloudrun/service/) offers similar functionality on GCP, and [AWS App Runner](https://www.pulumi.com/blog/deploy-applications-with-aws-app-runner/) is another AWS service that can do this. Both have similar pricing models—very cheap for low-volume services. And [SST](https://www.pulumi.com/blog/from-cdk-pulumi-evolution-of-sst/) is a similar solution for getting TypeScript / JavaScript solutions into an AWS Lambda.
 
