@@ -1200,3 +1200,62 @@ Scratch artifacts:
 - `/workspaces/src/scratch/2026-04-30-rebenchmark/cost-data.txt` — raw cost / turns / wall-time per run.
 - `/workspaces/src/scratch/2026-04-30-rebenchmark/prior-pr-meta/pr-{44..53}.json` — previous fixture PRs' titles/bodies, copied for the new PRs' shape.
 
+---
+
+## Session 14 — 2026-04-30 (label deploy, spelling/grammar extraction, prose-patterns elevation)
+
+### Trigger
+
+Session 13 backlog #4 (label-deploy script — concrete blocker for end-to-end pipeline observation) and a thread Cam opened mid-session: "we tell reviewers to apply prose patterns in the intro but never make it a numbered priority; spelling/grammar coverage is missing on non-short-circuit PRs." Both threads turned out to be the same arc.
+
+### What shipped
+
+1. **`scripts/labels/labels.json` + `scripts/labels/sync-labels.sh`** — declarative canonical state for the 12 PR-triage labels (5 `domain:*`, `review:trivial`, `review:frontmatter-only`, `review:prose-flagged`, `review:claude-{ran,stale,working}`, `needs-author-response`) plus 5 legacy renames from the pre-Session-10 `review:{docs,blog,infra,programs,mixed}` names. Three-phase sync: rename-where-safe (preserves PR associations), create-or-edit, orphan-report. `--dry-run` and `--prune` flags.
+
+2. **End-to-end pipeline confirmation on cam fork.** First re-trigger of PRs 60-63 after deploying labels: classifier 4/4 correct, atomic label apply succeeded on all 4 (Session 13's blocker), short-circuits fired on 60/61/62 (37s/33s/45s wall vs PR 63's 238s full review), TRIAGE_PROSE advisories matched Session 13 baseline. Cost ~$1.50 total.
+
+3. **Shared `docs-review:references:spelling-grammar`.** Cam flagged that putting spelling rules into both `triage-prose.md` and `prose-patterns.md` would duplicate. Extracted protected-token list, flag list, do-not-flag list, and protected-example list into one reference. `triage-prose.md` trimmed to triage-specific framing (output JSON, cap, frontmatter-only field scope) and the workflow concatenates both into `PROSE_RULES`. Confirmed end-to-end on PRs 60-62 — Haiku reads the concatenated prompt correctly, same findings as Session 13.
+
+4. **Cap policy split.** Structural prose findings stay capped at 10 per file (passive voice, filler, intensifiers, etc.); spelling/grammar render uncapped so a careless-speller PR gets the full punch list as suggestion blocks the maintainer can batch-accept. Triage Haiku cap raised 5 → 15 to keep parity on frontmatter-only PRs (which short-circuit the full review).
+
+5. **Ordered-list `1.` rule moved into reviewer scope.** Old `shared-criteria.md` claimed the linter owned this; MD029's default `one_or_ordered` accepts both `1. 1. 1.` and `1. 2. 3.`. Removed the wrong linter-boundary claim and added a new `### Ordered-list numbering` rule under §Criteria.
+
+6. **Prose-patterns elevated to a numbered priority** in `docs.md` (new Priority 5, between Terminology and SEO; SEO and Callouts pushed to 6/7) and `blog.md` (replaces the old Priority 2 "AI-slop detection"). General AI-writing patterns (em-dash density, contrastive frames, hedging, buzzword tax, empty transitions, uniform sentence rhythm, repetitive paragraph openers, dense paragraphs) merged into `prose-patterns.md` so docs reviews benefit too. Blog-specific patterns retained in `blog.md` under the new Priority 2 (TL;DR recaps, self-criticism of prior Pulumi decisions, weak conclusions, listicle bloat). Generalized the "section unit" definition (between H2s; in blog posts, also `<!--more-->` to first H2).
+
+### Cam-flagged behaviors during the session
+
+- **Bare-ref vs colon notation (recurring).** First draft used bare `docs-review/triage-prose.md`; Cam said "use `skill:directory:file` notation." Switched to `docs-review:triage-prose`. This is Session 12 backlog #3 finally getting decided in practice — colon-form is now the convention for cross-skill references. Earlier audits punted on whether to formalize; Cam's correction makes the call.
+- **Caller-leak audit pass — done by request.** Cam asked to "review your other changes from this session for similar patterns" after catching a 4-sentence ordered-list rule with diff-noise reasoning, MD029 internals, and AGENTS.md cross-ref. Audit found and trimmed: redundant in-parens listing of structural patterns in the cap rule, justification clause ("atomic, post-protected-tokens true-positive...") in the spelling-grammar delegation. New `spelling-grammar.md` came back clean — pure rules, no triage/full-review/caller mentions. Worth carrying forward: every reference-file edit should run a "is this rule, or is this author-context?" pass before commit.
+- **"Some people are lousy spellers."** Cam pushed back on capping spelling at 10. Real concern: typos are atomic post-protected-tokens true-positives that the maintainer can batch-accept as suggestion blocks; capping mixes them with subjective structural patterns and crowds them out. Resolution: option-1 (uncap spelling in CI) over option-3 (separate uncapped sweep in pr-review skill) because the *author* benefits from the complete typo list, not just the maintainer; pr-review's existing "make changes" path already handles batch-accepting the pinned-comment suggestions.
+- **"Did we ever bake spelling/grammar/prose priorities into the docs and blogs reviews?"** Caught mid-commit, before SESSION-NOTES update. The whole session had elevated `spelling-grammar` to a shared reference but never re-touched `docs.md` and `blog.md` to make prose-patterns a numbered priority. Recovered with the AI-slop merge — bigger refactor than originally proposed but cleaner end-state.
+
+### Methodology lessons
+
+- **Cherry-pick stacking bug.** First fork-test rebase used `git checkout master` (no local `master` branch in the worktree). The command silently failed; HEAD stayed where it was; each fixture got cherry-picked onto the previous one's tip. Result: PRs 61 and 62 inherited PR 60's `moderne` body change → classifier correctly saw mixed body+frontmatter changes → `frontmatter-only=false` → no short-circuit. Burned one trigger cycle. Fix: always use `git checkout -B branch <explicit-sha>` in detached worktrees; never rely on `checkout master` without verifying the local branch exists. Re-rebase off `b426b22c2b` succeeded cleanly.
+- **Side-worktree dispatch saved context.** `git worktree add /tmp/cam-sync cam/master` lets you build the `ops: sync` commit and push to the fork without touching the main worktree's branch state. Cleaner than stash/checkout dance; cleanup with `git worktree remove`.
+- **Idempotent label sync as a deployment primitive.** The 3-phase sync (rename → create-or-update → orphan-report) is friendlier than create-and-replace — preserves PR associations across renames, no destructive moves without `--prune`, re-run is a clean no-op. Worth replicating for any future label-taxonomy changes.
+
+### Files changed (Session 14 substance)
+
+Three commits on `CamSoper/pr-review-overhaul`:
+
+1. `e0bc27bdda` — Add label-deploy script for the canonical PR-triage taxonomy
+2. `d838e587b4` — Elevate prose patterns to a numbered priority; unify spelling/grammar rules
+3. (this commit) — Add Session 14 notes
+
+Cam fork operations (not for upstream):
+- `b426b22c2b` — `ops: bump triage prose cap to 15; uncap CI spelling/grammar findings` (sits on top of `6123db3754` `ops: sync skill state — extract spelling-grammar shared reference`).
+- `cam/master` advanced; fixture branches `test-trivial-typo`, `test-fmonly-clean`, `test-fmonly-typo` rebased onto the post-Session-14 sync.
+
+### Backlog after Session 14
+
+1. **Re-entrant `@claude` patterns** (Session 13 backlog #1.b). Test fix-response, dispute, and re-verify on the existing fixture set — they have pinned reviews and are the right substrate.
+2. **Maintainer `pr-review` experience walkthrough** (Session 13 backlog #1.c). Full review-and-merge cycle from the maintainer's seat using one of the fixture PRs.
+3. **Investigate the 5 lost ⚠️ catches** (Session 13 backlog #5). Targeted look at fact-check.md's vendor-doc-verification trigger and infra.md's out-of-tree-compatibility paragraph.
+4. **Cap-review pass on `output-format.md`** (Session 13 backlog #6). Reviews are ~70 lines per finding vs 43 baseline; per-section caps may want re-tightening.
+5. **Upstream label deploy.** Run `scripts/labels/sync-labels.sh --repo pulumi/docs --dry-run` before merge, then for-real after the spelling-grammar refactor lands.
+6. **Prose-pattern elevation: re-benchmark or trust the test?** The extraction + priority elevation didn't land on the cam fork's `ops:` sync until the second iteration; Session 13 baseline didn't include the new patterns. Soft-watch: a future blog PR with em-dashes and hedging should now produce findings under Priority 2. If results look noisy, tighten thresholds; if they look thin, validate the model is reaching prose-patterns through the priority walk.
+
+### Memory updates
+
+None. All Session-14 facts are project-state specific to this branch.
