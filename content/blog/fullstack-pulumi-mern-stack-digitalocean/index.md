@@ -22,7 +22,7 @@ To deploy a MERN stack app on DigitalOcean with Pulumi, you map each tier of the
 - **What you'll write:** A single Pulumi program (TypeScript or Python) that declares a `staticSite`, a `service`, a `databases` reference, and a `DatabaseCluster`---about 60 lines of code.
 - **What you'll need:** A DigitalOcean account and personal access token, the [Pulumi CLI](/docs/get-started/download-install/), [Node.js](https://nodejs.org/), and a GitHub account with the [DigitalOcean GitHub app](https://cloud.digitalocean.com/apps) installed.
 - **Why DigitalOcean:** App Platform's component model maps cleanly to MERN's three tiers, builds and deploys on every Git push, and stays inexpensive at the smallest tier. See the [comparison table](#how-does-digitalocean-compare-to-render-railway-and-flyio-for-mern) below.
-- **Time to deploy:** ~10 minutes for the first `pulumi up` (the Managed MongoDB cluster takes the longest), then a few seconds per redeploy.
+- **Time to deploy:** ~15 minutes for the first `pulumi up` (the Managed MongoDB cluster takes the longest), then a few seconds per redeploy.
 
 <script type="application/ld+json">
 {
@@ -96,7 +96,7 @@ All four are developer-friendly PaaS options that can host a MERN app. They diff
 |---|---|---|---|---|
 | Static front end | Yes (CDN-served) | Yes (CDN-served) | Yes | Yes (via static services) |
 | Containerized API | Yes | Yes | Yes | Yes (Firecracker VMs) |
-| Managed MongoDB | Yes ([Managed Databases](https://www.digitalocean.com/products/managed-databases-mongodb)) | No (Postgres/Redis only; bring your own MongoDB) | Yes (via templates; Postgres native) | No (bring your own; or run a Mongo machine) |
+| Managed MongoDB | Yes ([Managed Databases](https://www.digitalocean.com/products/managed-databases-mongodb)) | No (Postgres/Redis only; bring your own MongoDB) | No (unmanaged template; Postgres native) | No (bring your own; or run a Mongo machine) |
 | Auto-deploy on Git push | Yes | Yes | Yes | Yes (via GitHub Actions) |
 | Pulumi provider | [`pulumi/digitalocean`](/registry/packages/digitalocean/) (this guide) | Community | Community | Community |
 | Pricing model | Per-component flat tiers | Per-service flat tiers | Usage-based | Usage-based |
@@ -178,7 +178,7 @@ App Platform apps can be configured manually in the web console or programmatica
 
 And once deployed, it'll all be available at a single DigitalOcean-provided URL.
 
-Let's begin by creating new Pulumi project.
+Let's begin by creating a new Pulumi project.
 
 ## How do you create the Pulumi project?
 
@@ -226,7 +226,7 @@ $ pulumi config set branch "your-main-branch"               # e.g., main
 With these values in place, you're ready to start writing the program.
 
 {{% notes %}}
-App Platform also supports GitLab and other Git-based repositories as well. See the [App Specification docs](https://docs.digitalocean.com/products/app-platform/reference/app-spec/) for details.
+App Platform also supports GitLab and other Git-based repositories. See the [App Specification docs](https://docs.digitalocean.com/products/app-platform/reference/app-spec/) for details.
 {{% /notes %}}
 
 ## How do you write the Pulumi program?
@@ -497,7 +497,7 @@ app = digitalocean.App("app", digitalocean.AppArgs(
 
 Technically that's all we need to configure the application---but it wouldn't be a bad idea to add one last thing.
 
-By default, managed MongoDB clusters are configured to be publicly accessible---which is great if you need to be able to connect one yourself, but not so great as a strategy for preventing internet miscreants from doing the same. You can fix this easily by adding a `DatabaseFirewall` resource to declare the app as a [_trusted source_](https://docs.digitalocean.com/products/app-platform/how-to/manage-databases/), thereby rejecting all inbound traffic originating from elsewhere:
+By default, managed MongoDB clusters are configured to be publicly accessible---which is great if you need to be able to connect one yourself, but not so great as a strategy for preventing internet miscreants from doing the same. You can fix this by adding a `DatabaseFirewall` resource to declare the app as a [_trusted source_](https://docs.digitalocean.com/products/app-platform/how-to/manage-databases/), thereby rejecting all inbound traffic originating from elsewhere:
 
 {{% chooser language "typescript,python" /%}}
 
@@ -735,7 +735,7 @@ Duration: 19s
 
 ## What can you do next?
 
-Hopefully this gives you a sense of the kinds of things you can do with Pulumi and DigitalOcean---and I definitely encourage you to spend a little time with the [App Platform docs](https://docs.digitalocean.com/products/app-platform/) to dig a bit deeper into some of these concepts and explore a few others we weren't able to cover. You'll find the [full source for this walkthrough on GitHub](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean), of course, with [`finished` branch](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean/tree/finished) containing the completed Pulumi program for reference.
+Hopefully this gives you a sense of the kinds of things you can do with Pulumi and DigitalOcean---and I encourage you to spend time with the [App Platform docs](https://docs.digitalocean.com/products/app-platform/) to dig a bit deeper into some of these concepts and explore a few others we weren't able to cover. You'll find the [full source for this walkthrough on GitHub](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean), of course, with [`finished` branch](https://github.com/pulumi/fullstack-pulumi-mern-digitalocean/tree/finished) containing the completed Pulumi program for reference.
 
 From here, you might think about:
 
