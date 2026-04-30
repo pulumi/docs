@@ -12,11 +12,15 @@ on:
 
 jobs:
   claude:
+    # Skip when the triggering comment / review / issue is authored by the
+    # claude[bot] account itself. The pinned-review footer contains the
+    # literal string "@claude" as user-facing instructions, which would
+    # otherwise re-trigger this workflow on every review post.
     if: |
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login != 'claude[bot]') ||
+      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login != 'claude[bot]') ||
+      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && github.event.review.user.login != 'claude[bot]') ||
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && github.event.issue.user.login != 'claude[bot]')
     runs-on: ubuntu-latest
     environment: production
     permissions:
