@@ -33,26 +33,16 @@ Invoke `docs-review:references:fact-check` (`scrutiny=heightened`) **before** an
 
 Findings render in 🚨 / ⚠️ **before** style findings.
 
-### Priority 2 — AI-slop detection
+### Priority 2 — Prose patterns and spelling/grammar
 
-Flag the following patterns, with examples from the post. Each bullet names the *pattern* and the threshold at which it becomes a finding.
+Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
 
-**Unit of measurement -- "section":** in this file, *section* means the block of prose from one H2 (`## ...`) heading to the next, or from the `<!--more-->` break to the first H2 if one leads the post. Flags and thresholds below all evaluate over that unit unless noted otherwise.
+**Blog-specific patterns** (apply alongside the shared references):
 
-- **Em-dash density.** Three or more em-dashes in a single section. AI models overuse em-dashes as a rhythm device. Style guide allows them; heavy clustering is a tell.
-- **Contrastive frames.** "It's not X, it's Y" / "Not only X but also Y" / "This isn't about X; it's about Y." One in a post is fine. Three or more across the post (not per-section) is a pattern finding.
-- **Uniform sentence rhythm.** Three or more consecutive sentences of similar length (within ±3 words) in a single paragraph. Humans vary rhythm; AI drifts toward a mean.
-- **Repetitive paragraph openers.** Three or more consecutive paragraphs (in the same section or across a section boundary) opening with the same structure: "When you X...", "If you want to X...", "Consider X...".
-- **Hedging.** "Typically," "generally," "tends to," "can often," "largely," "in many cases." Two or more in a single section is a finding. See also `STYLE-GUIDE.md`'s write-with-confidence rule.
-- **TL;DR / summary paragraphs that restate the post.** The reader just finished reading; they don't need a recap.
-- **Empty transitions.** "Let's dive in," "In this post we'll explore," "In conclusion," "Without further ado." Cut them -- flag on first occurrence.
-- **Buzzword tax.** "Landscape," "ecosystem," "leverage" (as a verb), "robust," "seamless," "world-class," "battle-tested." Flag on first occurrence, with a suggested rewrite when the sentence survives the deletion; otherwise flag as a rewrite candidate. If the same buzzword appears three or more times across the post, coalesce the flags into a single finding rather than repeating.
+- **TL;DR / summary paragraphs that restate the post.** The reader just finished reading; they don't need a recap. Quote the recap; propose removal.
 - **Self-criticism of prior Pulumi decisions.** "We used to handle this badly," "the old way was wrong," "before we got this right." Acceptable in case-studies discussing a *customer's* prior tooling; not acceptable when describing prior Pulumi product behavior. Quote the construction; reframe as forward-looking: "v3.0 introduced X" not "before v3.0, we got it wrong."
 - **Weak conclusions.** A closing paragraph that doesn't name a specific next step. "Check out Pulumi to learn more" without a specific link or command. Quote the conclusion; propose a concrete CTA: "Try it: `pulumi up` against the example at `<link>`" or "See the X reference at /docs/foo/."
-- **Dense paragraphs.** Paragraphs longer than 6 sentences or filling more than 8 visual lines. Often a sign the content should be a list, a sub-section, or split. Quote the opening; propose either a split or a list conversion.
 - **Listicle bloat.** Posts structured as `## item N:` patterns or numbered top-N lists. Cap at 12 items; cap total post length at ≈3,000 words for listicles. If a list goes longer, suggest which items to cut or merge.
-
-Every AI-slop / editorial finding names the *phrase* and the *pattern*. Don't just say "this is AI-written" -- say "em-dash density: 6 em-dashes across 3 paragraphs; consider breaking some into separate sentences."
 
 ### Priority 3 — Code correctness
 

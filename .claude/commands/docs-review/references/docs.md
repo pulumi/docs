@@ -57,7 +57,11 @@ Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists;
 - **"public preview" not "public beta."**
 - **Preferred pairs.** "Pulumi package" vs "native language package" -- see `STYLE-GUIDE.md` §Preferred terminology.
 
-### Priority 5 — SEO and discoverability
+### Priority 5 — Prose patterns and spelling/grammar
+
+Apply `docs-review:references:prose-patterns` and `docs-review:references:spelling-grammar`.
+
+### Priority 6 — SEO and discoverability
 
 These are the feasible, concrete rules from `seo-analyze:references:aeo-checklist` applied at review time. Quote-and-rewrite mandate. Apply most strictly to **what-is pages** (`content/what-is/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
 
@@ -68,7 +72,7 @@ These are the feasible, concrete rules from `seo-analyze:references:aeo-checklis
 - **Down-funnel specificity.** Concept docs that introduce a feature without showing a concrete integration or use case are too generic to be cited. Flag the most generic section; propose adding a specific scenario, integration, or edge case.
 - **Numbered, executable steps for "get started" / "how to" sections.** Quickstart prose that doesn't break into numbered steps with copy-pasteable commands. Quote the section; propose a numbered list with explicit `pulumi …` commands.
 
-### Priority 6 — Callouts and shortcodes
+### Priority 7 — Callouts and shortcodes
 
 - **`{{% notes %}}`** uses one of `info` / `tip` / `warning`. A misspelled `type=` silently renders the default and looks wrong.
 - **`{{< chooser >}}`** / **`{{< choosable >}}`** pairs must match: every language listed in the `chooser` needs a corresponding `choosable` block, and vice versa.

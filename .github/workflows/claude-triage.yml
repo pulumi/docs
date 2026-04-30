@@ -131,7 +131,8 @@ jobs:
           if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
             # 50KB diff cap — trivial/frontmatter-only PRs are tiny.
             PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
-            PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md)
+            PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md \
+                              .claude/commands/docs-review/references/spelling-grammar.md)
             REQUEST=$(jq -n \
               --arg rules "$PROSE_RULES" \
               --arg diff "$PROSE_DIFF" \

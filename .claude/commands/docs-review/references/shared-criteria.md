@@ -56,7 +56,6 @@ Use suggestion blocks for replacements of five lines or fewer. For larger rewrit
 The following are owned by the lint job (`scripts/lint/lint-markdown.js` and peers). Do not restate findings the linter already catches:
 
 - trailing newlines / trailing whitespace
-- ordered-list `1.` numbering convention
 - heading case (linter catches inconsistency; this file catches accuracy of content, not stylistic consistency)
 - title length / meta description length / `meta_image` placeholder (`lint-markdown.js`'s `checkPageTitle`, `checkPageMetaDescription`, `checkMetaImage`)
 
@@ -67,6 +66,10 @@ Image alt text (`MD045`) and fenced-code-block language specifiers (`MD040`) are
 ### Indented prose
 
 - **Indented prose isn't accidentally rendered as a code block.** Markdown treats 4-space-indented lines as code. Flag indented paragraph text that's not meant to be code (common in nested lists where a continuation line was over-indented and turned silently into a code block in rendered output).
+
+### Ordered-list numbering
+
+- **Ordered-list items use literal `1.`, not ascending `1. 2. 3.`** Minimizes diff noise when items are added, removed, or reordered. Flag ascending-numbered lists with a suggestion block.
 
 ## Do not flag
 
