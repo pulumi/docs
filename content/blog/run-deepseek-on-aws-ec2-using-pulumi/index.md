@@ -61,42 +61,36 @@ social:
     {
       "@type": "HowToStep",
       "position": 1,
-      "name": "Create a Pulumi project",
-      "text": "Run pulumi new aws-<language> in an empty directory to scaffold a new project with the AWS provider preconfigured."
+      "name": "Create an IAM role and instance profile",
+      "text": "Run pulumi new aws-<language> to scaffold a new project, then define an IAM role with S3 read access so the EC2 instance can pull NVIDIA GRID drivers from the ec2-linux-nvidia-drivers bucket."
     },
     {
       "@type": "HowToStep",
       "position": 2,
-      "name": "Define the IAM role and instance profile",
-      "text": "Create an IAM role with S3 read access so the EC2 instance can pull NVIDIA GRID drivers from the ec2-linux-nvidia-drivers bucket."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
       "name": "Provision the network",
       "text": "Create a VPC, public subnet, internet gateway, route table, and security group that exposes ports 22 (SSH), 3000 (Open WebUI), and 11434 (Ollama API)."
     },
     {
       "@type": "HowToStep",
-      "position": 4,
+      "position": 3,
       "name": "Launch the GPU EC2 instance",
       "text": "Create an SSH key pair and launch a g4dn.xlarge (or larger) Amazon Linux instance with the IAM profile and security group attached."
     },
     {
       "@type": "HowToStep",
-      "position": 5,
+      "position": 4,
       "name": "Install Ollama via cloud-init",
-      "text": "Use a cloud-init user-data script to install NVIDIA drivers, Docker, the NVIDIA Container Toolkit, and start the Ollama and Open WebUI containers."
+      "text": "Use a cloud-init user-data script to install NVIDIA drivers, Docker, the NVIDIA Container Toolkit, and start the Ollama and Open WebUI containers. The script also pulls and runs your chosen model—for example deepseek-r1:7b, llama3.1:8b, qwen2.5:7b, or mistral:7b."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Deploy the infrastructure",
+      "text": "Run pulumi up to provision all resources. After the stack is created, Pulumi outputs the public IP address of the instance."
     },
     {
       "@type": "HowToStep",
       "position": 6,
-      "name": "Pull and run the model",
-      "text": "Run docker exec ollama ollama run <model>:<tag>—for example deepseek-r1:7b, llama3.1:8b, qwen2.5:7b, or mistral:7b."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 7,
       "name": "Access the Web UI or OpenAI-compatible API",
       "text": "Open http://<instance-public-ip>:3000 for Open WebUI, or point any OpenAI-compatible client at http://<instance-public-ip>:11434/v1."
     }
@@ -104,7 +98,7 @@ social:
 }
 </script>
 
-**TL;DR — Want to self-host an open-source LLM on AWS?** Use a `g4dn.xlarge` ($0.526/hr on-demand, 16 GB GPU memory) for 7B/8B models, a `g5.xlarge` ($1.006/hr, 24 GB) for 13B–14B models, or a `g6e.xlarge` ($1.861/hr, 48 GB) for 32B+ models. Deploy with the Pulumi program below and Ollama will run any model from its library—DeepSeek-R1, Llama 3, Qwen, Mistral—with a one-line change.
+**TL;DR — Want to self-host an open-source LLM on AWS?** Use a `g4dn.xlarge` ($0.526/hr on-demand, 16 GB GPU memory) for 7B/8B models, a `g5.xlarge` ($1.006/hr, 24 GB) for 13B–14B models, a `g5.2xlarge` ($1.212/hr, 24 GB) for 32B models, or a `g6e.2xlarge` ($2.242/hr, 48 GB) for 70B models. Deploy with the Pulumi program below and Ollama will run any model from its library—DeepSeek-R1, Llama 3, Qwen, Mistral—with a one-line change.
 
 <!--more-->
 
@@ -119,7 +113,7 @@ This guide walks through that deployment end-to-end: a single Pulumi program tha
 
 ## Why run open-source LLMs on AWS EC2?
 
-Self-hosting an open-source LLM on AWS gives you three things hosted APIs can't: data stays inside your VPC, per-token costs collapse to a flat hourly rate at high volume, and you can fine-tune or quantize models freely under permissive licenses. Ollama is the simplest way to do it—one binary that downloads, manages, and serves models behind an OpenAI-compatible API.
+Self-hosting an open-source LLM on AWS gives you three things hosted APIs can't: data stays inside your VPC, per-token costs collapse to a flat hourly rate at high volume, and you can fine-tune or quantize models freely under permissive licenses. Ollama handles all three concerns from a single binary: it downloads, manages, and serves models behind an OpenAI-compatible API on port 11434.
 
 The original version of this post focused on DeepSeek-R1 because it landed in late January 2025 and reset expectations for what an open-weight reasoning model could do. DeepSeek-R1 is still an excellent default—MIT-licensed, strong on math and coding, with distilled 1.5B–70B variants—but the same infrastructure runs Meta's Llama 3, Alibaba's Qwen, and Mistral equally well. Picking a model is now a config change, not an infrastructure decision.
 
@@ -363,7 +357,7 @@ ssh-keygen -f mykey.pub -i -mPKCS8 > deepseek.pem
 
 ### Step 4: Install Ollama via cloud-init
 
-The EC2 instance is a blank box until cloud-init runs. The user-data script below installs the NVIDIA GRID drivers, Docker, and the NVIDIA Container Toolkit, then starts the Ollama and Open WebUI containers. To switch models, edit the two `ollama run` lines—the rest is identical regardless of which model you want.
+The EC2 instance is a blank box until cloud-init runs. The user-data script below installs the NVIDIA GRID drivers, Docker, and the NVIDIA Container Toolkit, then starts the Ollama and Open WebUI containers. To switch models, edit the `ollama run` line—the rest is identical regardless of which model you want.
 
 ```yaml
 #cloud-config
@@ -397,7 +391,6 @@ runcmd:
 - docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama --restart always ollama/ollama
 - sleep 120
 - docker exec ollama ollama run deepseek-r1:7b
-- docker exec ollama ollama run deepseek-r1:14b
 - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
