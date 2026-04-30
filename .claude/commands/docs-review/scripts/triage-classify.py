@@ -242,8 +242,8 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
     )
 
     trivial = (
-        total_lines <= 5
-        and file_count == 1
+        total_lines <= 10
+        and file_count <= 2
         and all_files_content_md
         and not has_any_frontmatter
         and not has_any_link

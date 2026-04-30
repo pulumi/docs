@@ -66,46 +66,21 @@ For all content files (docs, blogs, tutorials, etc.):
 
 ## Moving and Deleting Files
 
-**⚠️ SEO CRITICAL**: Missing aliases on moved files will break search engine rankings and external links. Always verify aliases after file moves.
+**⚠️ SEO CRITICAL**: Missing aliases on moved files break search rankings and external links.
 
-**Use the `/move-doc` skill** when moving Hugo content files — it handles `git mv`, alias injection, link updates, and verification automatically. If moving manually:
-
-- Use `git mv` to preserve file history.
-- Add an `aliases` field to the frontmatter listing the old paths:
-
-  ```yaml
-  aliases:
-  - /old/path/to/file/
-  - /another/old/path/
-  ```
-
-- Verify aliases using the scripts in `/scripts/alias-verification/`.
-- **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
-  - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
-  - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
-- **Anchor links**: Note that anchor links (`#section`) may not work with aliases and may require additional considerations when splitting documents.
+Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias injection, link updates, and verification. For non-Hugo files (generated content, static assets), add S3 redirects in `/scripts/redirects/` (format: `source-path|destination-url`, place entries in topic-appropriate files). Manual move procedure and anchor-link caveats: see `.claude/commands/move-doc/SKILL.md`.
 
 ---
 
 ## Updating Internal Links
 
-When moving documentation files, aliases automatically handle redirects. Update internal links strategically:
+When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
-- **DO update links in**:
-  - `/content/docs/` - Active documentation
-  - `/content/product/` - Product pages
-- **DO NOT update links in**:
-  - `/content/blog/` - Blog posts are historical documents
-  - `/content/tutorials/` - Tutorials are historical content
-- **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
+- **DO update** links in `/content/docs/` and `/content/product/`.
+- **DO NOT update** links in `/content/blog/` or `/content/tutorials/` — they're historical.
+- **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
-  ```bash
-  find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
-  ```
-
-- **Link Style**: To ensure links don't break when files are moved:
-  - Links within `/docs/` must use the full canonical path, e.g. `/docs/iac/concepts/stacks/`.
-  - Never use parent-directory references (`../stacks/`) in links — they break when files move.
+For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
 
 ---
 
@@ -125,47 +100,6 @@ Before starting any documentation task, check `.claude/commands/` for a relevant
 
 ## PR Lifecycle for AI-Assisted Contributions
 
-The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. To refresh a stale review, mention `@claude` (fix-response / dispute / re-verify), or transition through draft and back to ready.
 
-### Open as draft
-
-When opening a PR you intend to iterate on, **open it as a draft**. Drafts skip both triage and the full Claude review — labels are applied when you mark the PR ready, not before. Iterate freely; pushes to the branch will not produce review noise.
-
-### Mark ready for review when finished
-
-Transitioning to **Ready for review** triggers:
-
-1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
-2. The full Claude review (currently `claude-opus-4-7`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
-
-Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
-
-### Author a clean commit history
-
-If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`Co-Authored-By: Claude ...`, `Generated with Claude Code`, etc.). Stripping them to disguise authorship is bad form and does not change which review runs.
-
-### After review — three paths to refresh
-
-A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
-
-1. **`@claude` mention**: Leave a comment on the PR mentioning `@claude` (with or without a specific request). The re-entrant pipeline picks up new commits, runs `claude-sonnet-4-6`, and updates the existing pinned comment(s) in place. Three patterns the re-entrant pipeline understands:
-    - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
-    - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
-    - **Re-verify** ("@claude refresh" / no specific request): re-checks outstanding findings only.
-2. **Transition through draft and back to ready**: this re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
-3. **Wait for the human reviewer**: Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
-
-### Don't fight the pinned comment
-
-The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
-
-### Trivial and frontmatter-only PRs short-circuit
-
-Two label-driven short-circuits skip the full Claude review (linters still run):
-
-- **`review:trivial`** — ≤5 lines, prose-only body changes, single Hugo content `.md` file, no frontmatter changes, no link changes, no code blocks. Typo fixes and one-liners.
-- **`review:frontmatter-only`** — any number of Hugo content `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
-
-For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
-
-Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
+For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.
