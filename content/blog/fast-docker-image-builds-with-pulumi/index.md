@@ -16,7 +16,7 @@ tags:
     - features
 ---
 
-**How do I speed up Docker image builds with Pulumi?** Use BuildKit (the default in modern Docker), enable a registry or layer cache so repeated builds reuse work, write a multi-stage Dockerfile so production images skip build-time dependencies, and reach for the dedicated [Docker Build provider](/registry/packages/docker-build/) when you need buildx features like multi-platform images, build secrets, or Docker Build Cloud. With these techniques together, repeat builds in a Pulumi program commonly drop from minutes to seconds.
+**How do I speed up Docker image builds with Pulumi?** Use [BuildKit](https://docs.docker.com/build/buildkit/) (the default since Docker 23), enable a registry or layer cache so repeated builds reuse work, write a multi-stage Dockerfile so production images skip build-time dependencies, and reach for the dedicated [Docker Build provider](/registry/packages/docker-build/) when you need buildx features like multi-platform images, build secrets, or Docker Build Cloud. With these techniques together, repeat builds in a Pulumi program commonly drop from minutes to seconds.
 
 <!--more-->
 
@@ -34,11 +34,11 @@ The numbers below are representative of what teams report from a typical Node.js
 
 | Configuration | Cold build | Repeat build (no source change) | Repeat build (small source change) |
 | --- | --- | --- | --- |
-| Legacy builder, no caching | ~3–5 min | ~3–5 min | ~3–5 min |
-| BuildKit, local layer cache only | ~3–5 min | seconds (no-op) | ~30–90 s |
-| BuildKit + multi-stage Dockerfile | ~2–4 min | seconds (no-op) | ~15–60 s |
-| BuildKit + multi-stage + registry cache (`cacheFrom`/`cacheTo`) | ~3–5 min (first run) | seconds (no-op) | ~10–30 s, **even on a fresh CI runner** |
-| `docker-build` provider with buildx + Docker Build Cloud | ~30–90 s | seconds (no-op) | ~5–20 s |
+| Legacy builder, no caching | minutes | minutes | minutes |
+| BuildKit, local layer cache only | minutes | seconds (cache hit) | tens of seconds |
+| BuildKit + multi-stage Dockerfile | minutes | seconds (cache hit) | tens of seconds |
+| BuildKit + multi-stage + registry cache (`cacheFrom`/`cacheTo`) | minutes (first run) | seconds (cache hit) | **seconds–tens of seconds, even on a fresh CI runner** |
+| `docker-build` provider with buildx + Docker Build Cloud | under 2 min | seconds (cache hit) | seconds |
 
 The headline pattern: each row past the first is dominated by *what the build can skip*, not by raw CPU. Pulumi's job is to wire those caches up declaratively so they keep working across every `pulumi up`.
 
@@ -82,7 +82,7 @@ const image = new docker_build.Image("my-image", {
 });
 ```
 
-`cacheFrom` and `cacheTo` together are the important pair: the first run populates the cache, every later run on any machine pulls it. `mode: Max` exports cache for every layer, not just the final ones.
+`cacheFrom` and `cacheTo` together are the important pair: the first run populates the cache, every later run on any machine pulls it. `mode: "max"` exports cache for every layer, not just the final ones.
 
 ### With the Docker provider (`docker.Image`)
 
