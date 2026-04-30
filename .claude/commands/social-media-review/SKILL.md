@@ -8,37 +8,54 @@ argument: optional file path to a blog post (e.g., content/blog/my-post/index.md
 
 ## Goal
 
-Make people click through to the blog post. Every social post should leave the reader with an unresolved question they care about — something they can only answer by reading the article. If a reader can skip the article after reading the post, the post failed.
+Tee up the article. Don't deliver it. The post's job is to set up what the article reveals — the reader has to read the article to get the reveal. If a reader can skip the article after reading the post, the post failed.
 
 ## Principles
 
 - **Curiosity over completeness.** Withhold the key insight, approach, or verdict. Reveal enough to create tension, not enough to satisfy it.
 - **Concrete over abstract.** Specific numbers, scenarios, and outcomes beat generic claims. "We migrated 200 stacks in three months" beats "we improved our migration process."
-- **Reader's perspective.** Judge copy as a reader would — does this make me want to click? Not as an editor checking boxes.
+- **Reader's perspective.** Judge copy as a reader would — would I want to keep reading after this? Not as an editor checking boxes.
 - **Natural voice.** Posts should sound like a person wrote them, not like they were generated. No staccato fragments, no em dash chains, no constructed parallelism.
 
 These posts are published from Pulumi's corporate accounts, not from individual authors.
 
 ## Flow
 
-1. **Get the posts** — find the social copy to review (see Local/CI context below)
-2. **Review** — evaluate each platform's copy against the critique rubric in `references/critique-rubric.md`. Return PASS or FAIL per platform with brief reasons (max 3 issues per platform)
-3. **Draft** — for any FAIL or missing platforms, write replacement copy following the writing guide in `references/writing-guide.md`. Read the blog post to understand the content, but the copy should create curiosity, not summarize. Check the author — if one person wrote about their own experience, name them instead of using "we" (see the Voice section of the writing guide). Before moving on, check every draft has the required paragraph structure (X: 2 paragraphs, LinkedIn: multiple short paragraphs, Bluesky: 2 paragraphs)
-4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for ALL drafts before submitting to critique. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit. Do not skip this step — sending over-limit copy to the critique loop wastes a round
-5. **Critique loop** — launch a sub-agent (Agent tool) to validate drafts. The sub-agent should read `references/critique-rubric.md` and evaluate the draft copy only (not the blog post). If FAIL, revise and re-critique. You may revise up to 2 times (3 total critiques). If the copy still fails after the third critique, present the best version with a note about which issues remain
-6. **Output** — present the review and any suggested copy
+1. **Get the posts** — find the social copy to review (see Local/CI context below). Read the blog body too — you'll need it for any platforms that are missing or unsalvageable.
+2. **Review** — evaluate each platform's existing copy against the critique rubric in `references/critique-rubric.md`. Default verdict is PASS; only FAIL on hard-rule breaks (banned phrases, "I" voice, URL in body, hashtags, markdown, paragraph structure, char limits). Stylistic concerns are NOT failure conditions here. **An empty string (`""`) or omitted platform key counts as missing — skip the critic for that platform and route it to step 3's draft branch.**
+3. **Repair or draft** — for each platform that didn't PASS:
+   - **Existing copy that hard-fails** — produce minimum-change copy. Preserve the original voice, specifics, and structure; change only what's needed to satisfy the rule that broke. A hashtag at the end? Drop the hashtag. "I" voice? Swap to "we". URL in body? Remove it. Char overflow? Trim the tail. Substantial rewrites only when the original is unsalvageable (multiple compounding rule breaks, wrong specifics, or content unrelated to the article).
+   - **Missing platform OR empty string OR existing copy is empty / LLM-fill junk** — draft fresh from the blog post. **Read the blog body before drafting.** Every specific in the draft (number, named tool, named person, attribution, percentage, comparison) must trace to a line in the blog body — do NOT pull numbers from the URL slug, title, or `meta_desc`. If the article is by a single named author writing personal experience, name them in third person; otherwise corporate "we". Use `references/writing-guide.md` for shape (see "Drafting from a blank `social:` block" and "Spotting and replacing LLM-fill copy"). Honor platform structure: X = 2 paragraphs, LinkedIn = multiple short paragraphs, Bluesky = 2 paragraphs.
+
+   What minimum-change repair looks like:
+   - **Hashtag drop:** `Define your rules once and catch errors before they hit stacks. #DevOps` → delete ` #DevOps`. ~8 chars changed; everything else identical.
+   - **Voice swap:** `Looking ahead, I'm rapidly expanding platform capabilities` → swap `I'm` to `we're`. ~2 chars changed; specifics, structure, and surrounding sentences untouched.
+   - **Trim to fit:** if the post is 322/255 chars, drop the appended sentence (or the most recent addition) rather than recasting. The cut should be a clean tail trim, not a rewrite.
+
+   If the repair changes more than the rule break demands — recasting paragraphs, swapping verbs, "improving" the voice — back up. The critic only complained about one thing.
+
+   **Verify drafted specifics against the blog body before step 4.** Every number, name, and attribution must appear in the body — not the title, slug, or `meta_desc`. If a claim doesn't trace, drop it or replace it.
+4. **Verify character counts** — run `python3 -c "print(len('''<copy>'''))"` for ALL repaired or drafted copy before submitting to critique. Limits: X = 255, LinkedIn = 2950, Bluesky = 300. Revise any that exceed the limit. Do not skip this step — sending over-limit copy to the critique loop wastes a round.
+5. **Critique loop** — launch a sub-agent (Agent tool) to validate the repaired/drafted copy. The sub-agent should read `references/critique-rubric.md` and evaluate the copy only (not the blog post). If FAIL, revise and re-critique. You may iterate up to 2 times (3 total critiques). If the copy still fails after the third critique, present the best version with a note about which issues remain.
+6. **Suggestions pass** — for any platform whose **original** copy passed the critic without needing a repair, launch a separate sub-agent (Agent tool) against `references/suggestions-rubric.md` to surface advisory style notes (missing pointer, curiosity gap closed, weak opener, summarizes article, etc.). This NEVER affects the verdict — PASS stays PASS. Skip this pass for any platform that was repaired or drafted from scratch — the new copy is the actionable feedback already; layering advisory notes on top is noise.
+7. **Output** — present the review, any repaired/drafted copy, and the suggestions section.
 
 ## Output format
 
 Keep the review short and scannable. A blogger should be able to read it in 30 seconds and know exactly what to fix.
 
-For each platform with copy, show the verdict in the heading (`#### Platform — PASS` or `#### Platform — FAIL`). For FAILs, include reasons as bullet points and 1-3 short guidance notes. Do not add analysis paragraphs, rubric citations, or lengthy explanations. The reasons and guidance should be enough.
+For each platform, show the verdict in the heading:
+- `#### Platform — PASS` if the original copy passed the critic
+- `#### Platform — FAIL` if the original copy failed the critic and was repaired
+- `#### Platform — missing` if the platform had no copy and was drafted
 
-Missing platforms are NOT a failure. Do not mark them as FAIL. Note them separately and draft suggested copy so the author can choose to add them.
+For FAILs, include reasons as bullet points (the hard rule broken). No long analysis — the reasons plus the suggested copy are enough.
 
-After the per-platform reviews, if any drafts were written, present them under `### Suggested copy` with character counts.
+After the per-platform reviews, if any platforms were repaired OR drafted, present the new copy under `### Suggested copy` with character counts.
 
-## Example output: all PASS
+If any platform's original copy passed without needing a repair, present advisory notes from the suggestions pass under `### Suggestions (advisory)`, grouped by platform. Only include platforms that ran the suggestions pass (i.e., not the repaired ones, not the missing ones). If all run platforms returned "no suggestions", omit this section entirely — do not write `### Suggestions (advisory)` followed by silence. Suggestions never change the PASS/FAIL verdict.
+
+## Example output: all PASS, no advisory
 
 ```
 ## Social Media Review
@@ -50,21 +67,48 @@ After the per-platform reviews, if any drafts were written, present them under `
 #### Bluesky — PASS
 ```
 
-## Example output: FAIL with suggested copy
+## Example output: PASS with advisory notes
+
+```
+## Social Media Review
+
+### content/blog/ai-coding-frameworks/index.md
+
+#### X — PASS
+#### LinkedIn — PASS
+#### Bluesky — PASS
+
+---
+
+### Suggestions (advisory)
+
+These are stylistic notes — they don't block the post.
+
+**X**
+- Opening "There's a common challenge teams face" earns nothing — lead with the named tool or specific number from the article
+- Final line summarizes the verdict; withhold which framework won
+
+**LinkedIn**
+- Missing pointer — the post just ends; add a line that signals there's more in the article
+```
+
+## Example output: FAIL repair + missing draft + PASS with advisory
 
 The original copy being reviewed:
 
-X:
-> AI coding agents fail in recognizable ways. Context fills up and early instructions fade, tests get skipped, and scope expands past what you asked for. Three separate community teams built frameworks to address these problems, each taking a completely different approach.
+X (309 chars, over the 255 limit):
+> AI coding agents fail in recognizable ways: context fades, tests get skipped, scope expands past what you asked for. Three community teams built frameworks for this, each taking a different approach.
 >
-> We tested all three on real infrastructure workflows. Which one helps depends on which problem keeps hitting you.
+> We tested all three on real infrastructure work. Which one helps depends on which problem keeps hitting you.
 
-LinkedIn:
+LinkedIn (passes hard rules, but summarizes):
 > There is a pattern that teams building with AI coding agents tend to hit on longer projects. The first session is impressive. By the third, the agent has lost track of earlier requirements and started adding infrastructure nobody asked for.
 >
 > The context window is the core issue. It fills up, and earlier instructions carry less weight as it does. Writing better prompts helps at the start but does not solve the underlying problem.
 >
 > Three community frameworks tackled this in different ways. We spent a few weeks running all three on real Pulumi infrastructure work. Which one helps most comes down to which problem keeps showing up for you.
+
+Bluesky: not provided.
 
 ```
 ## Social Media Review
@@ -74,47 +118,37 @@ LinkedIn:
 #### X — FAIL
 
 Reasons:
-- Summarizes the article: names all three failure modes and gives the selection criterion
-- Over character limit: 386 chars vs. 255 limit
+- Over character limit: 309 chars vs. 255 limit
 
-Guidance:
-- Lead with a concrete scenario, not an abstract list of failure categories
-
-#### LinkedIn — FAIL
-
-Reasons:
-- Weak opening: "There is a pattern that teams tend to hit" is generic
-- Summarizes the article's conclusion: reader learns it's three frameworks and "which helps depends on your problem"
-
-Guidance:
-- First line needs to stop the scroll with something specific
+#### LinkedIn — PASS
 
 #### Bluesky — missing
 
-No social copy for Bluesky. Suggested copy included below.
+No copy provided. Suggested copy drafted below.
 
 ---
 
 ### Suggested copy
 
-**X** (226/255 chars):
-> We gave three AI coding frameworks the same Pulumi project. One produced a 41x speedup. One caught scope drift the others missed entirely. One we probably won't use again.
+**X** (249/255 chars) — clean tail trim; final sentence dropped, everything else identical:
+> AI coding agents fail in recognizable ways: context fades, tests get skipped, scope expands past what you asked for. Three community teams built frameworks for this, each taking a different approach.
 >
-> Here's how they compared on real infrastructure work.
+> We tested all three on real infrastructure work.
 
-**LinkedIn** (504/2950 chars):
-> We gave three open-source AI coding frameworks the same real infrastructure project and ran them for a few weeks.
->
-> One produced a 41x speedup on a library release along the way. One caught a category of bug the other two missed entirely. One we probably won't reach for again.
->
-> They have 270K combined GitHub stars and completely different theories about what goes wrong when agents work on longer projects. Turns out they're not all solving the same problem.
->
-> Here's what we found and when to use which.
-
-**Bluesky** (197/300 chars):
+**Bluesky** (197/300 chars) — drafted from the article:
 > We ran three AI coding frameworks on the same Pulumi infrastructure project for a few weeks. One caught scope drift the other two missed. One we probably won't use again.
 >
 > Here's how they compared.
+
+---
+
+### Suggestions (advisory)
+
+These are stylistic notes — they don't block the post.
+
+**LinkedIn**
+- "There is a pattern that teams building with AI coding agents tend to hit" is a generic opener — lead with the speedup or the bug the framework caught
+- Final paragraph reveals the article's conclusion ("which helps comes down to which problem keeps showing up") — withhold the mapping so the reader still has something to find out
 
 ---
 
