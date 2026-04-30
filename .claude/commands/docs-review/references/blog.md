@@ -96,8 +96,8 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 ## Do not flag
 
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
-- **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy. (Lint catches missing or malformed `social:` blocks.)
-- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo and animated-GIF cases; lint catches the placeholder.)
+- **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy.
+- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo, placeholder, and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
 
@@ -105,9 +105,11 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 
 Each item below renders as a single 🚨 Outstanding finding when violated. Quote-and-rewrite mandate: name the field or file, propose the specific fix.
 
-- **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement. Lint catches the placeholder file but not the retired-logo case.
+- **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement.
+- **`meta_image` is the unmodified `/new-blog-post` placeholder.** Compute SHA256 of the resolved meta_image file and compare against `.claude/commands/_common/images/blog-post-meta-placeholder.png`. Match → flag with a pointer to `/blog-meta-image` for regeneration. Skip on `draft: true` or archival posts (`date` in the past).
 - **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
-- **`<!--more-->` break position.** Lint catches *presence*; position is review-time judgment. The break must land after the first 1–3 paragraphs, not buried mid-post. Quote the surrounding paragraphs; propose the correct placement.
+- **`<!--more-->` break missing or buried.** The break must be present and land after the first 1–3 paragraphs, not buried mid-post. Without it, the entire post body renders on the blog index. Quote the surrounding paragraphs; propose the correct placement. Skip on `draft: true` or archival posts.
+- **`social:` block missing or empty.** Active blog posts (not draft, not archival) must have a `social:` frontmatter block with at least one of `twitter`, `linkedin`, or `bluesky` populated; without it the post won't be promoted. Flag the missing/empty block; do not draft the copy (marketing owns voice).
 - **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 
-Other publishing-readiness items (`social:` block present, `meta_image` not placeholder/empty, title ≤60 chars, code language specifiers, image alt text and borders, link resolution) are handled by `lint-markdown.js` or by other references (`docs-review:references:shared-criteria`, `docs-review:references:code-examples`, `docs-review:references:image-review`). Don't re-flag them here.
+Other publishing-readiness items (title ≤60 chars, meta_desc length, `meta_image` `.png` extension, code language specifiers, image alt text and borders, link resolution) are handled by `lint-markdown.js` or by other references (`docs-review:references:shared-criteria`, `docs-review:references:code-examples`, `docs-review:references:image-review`). Don't re-flag them here.
