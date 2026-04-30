@@ -49,6 +49,8 @@ The table header row stays fixed; only the number row changes per review. Bold t
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
 
+Per-finding rendering (suggestion blocks, quote-and-rewrite mandate, fix prose) is governed by `docs-review:references:shared-criteria`.
+
 **🚨 vs ⚠️ for infra findings.** Infra and build-config findings default to ⚠️ -- they are risks for human review, not assertions that the PR is wrong. The two exceptions that promote to 🚨:
 
 - Secrets, credentials, or tokens present in the diff (always 🚨; see `docs-review:references:infra` §Secret handling).
@@ -72,6 +74,10 @@ Files with more than 5 findings render under a `<details>` block:
 ### Overflow
 
 If the rendered output exceeds 65,000 characters, the **💡 Pre-existing** and **✅ Resolved** sections are the first to spill into a 2/M comment, in that order. The 1/M summary always retains 🚨 Outstanding, ⚠️ Low-confidence, the status counts, and the review history.
+
+### Comment lifecycle
+
+The pinned comment sequence is managed by `bash .claude/commands/docs-review/scripts/pinned-comment.sh` -- it owns marker tagging, splitting, upsert, and prune. Each comment carries a `<!-- CLAUDE_REVIEW N/M -->` marker on its first line. The 1/M comment is sacrosanct: the script refuses to delete index 0, so the table, status counts, and review history survive every re-run. Reviews never call `gh pr comment` directly.
 
 ---
 

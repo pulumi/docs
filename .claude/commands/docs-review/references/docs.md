@@ -12,7 +12,7 @@ Applied to documentation pages: technical reference, conceptual docs, tutorials,
 ## Scope
 
 - Diff-only by default. Surrounding prose is assumed sound.
-- Whole-file read is opt-in per the pre-existing extraction rule below.
+- Whole-file read is opt-in (see §Pre-existing issues (opt-in) below).
 
 ## Criteria
 
