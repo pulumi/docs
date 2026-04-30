@@ -45,56 +45,56 @@ While the Puluminaries themselves have been active in the community for quite so
 ### Engin Diri
 
 <img src="engin-diri.png" width="200" height="200" alt="Engin Diri"/>
-<a data-track="twitter" href="https://twitter.com/_ediri"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/dirien"><i class="fab fa-github"></i></a>
+<a data-track="twitter" href="https://twitter.com/_ediri">{{ partial "icon.html" (dict "name" "brand/x") }}</a>&nbsp;<a data-track="github" href="https://github.com/dirien">{{ partial "icon.html" (dict "name" "brand/github") }}</a>
 
 Engin's excitement for Pulumi is not possible to be measured using current science. He will always share his thoughts on new developments in the Pulumi project, as well as join in for fun and discussion in various PulumiVision livestreams!
 
 ### Joshua Studt
 
 <img src="joshua-studt.png" width="200" height="200" alt="Joshua Studt"/>
-<a data-track="github" href="https://github.com/orionstudt"><i class="fab fa-github"></i></a>
+<a data-track="github" href="https://github.com/orionstudt">{{ partial "icon.html" (dict "name" "brand/github") }}</a>
 
 Joshua is a longtime member of the Pulumi community, and he contributed to the implementation of Automation API for C#.
 
 ### Kat Morgan
 
 <img src="kat-morgan.png" width="200" height="200" alt="Kat Morgan"/>
-<a data-track="twitter" href="https://twitter.com/usrbinkat"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/usrbinkat"><i class="fab fa-github"></i></a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/usrbinkat"><i class="fab fa-linkedin"></i></a>
+<a data-track="twitter" href="https://twitter.com/usrbinkat">{{ partial "icon.html" (dict "name" "brand/x") }}</a>&nbsp;<a data-track="github" href="https://github.com/usrbinkat">{{ partial "icon.html" (dict "name" "brand/github") }}</a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/usrbinkat">{{ partial "icon.html" (dict "name" "brand/linkedin") }}</a>
 
 Kat has been a helpful member of the Pulumi community - not only providing feedback on real-world use of Pulumi, but also sharing her knowledge with [workshops and webinars](https://konghq.com/webinars/devmyops-deploy-kong-with-pulumi?utm_souce=pulumi&utm_medium=pulumi)
 
 ### Komal Ali
 
 <img src="komal-ali.png" width="200" height="200" alt="Komal Ali"/>
-<a data-track="twitter" href="https://twitter.com/zwitkali"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/komalali"><i class="fab fa-github"></i></a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/komal-ali"><i class="fab fa-linkedin"></i></a>
+<a data-track="twitter" href="https://twitter.com/zwitkali">{{ partial "icon.html" (dict "name" "brand/x") }}</a>&nbsp;<a data-track="github" href="https://github.com/komalali">{{ partial "icon.html" (dict "name" "brand/github") }}</a>&nbsp;<a data-track="linkedin" href="https://linkedin.com/in/komal-ali">{{ partial "icon.html" (dict "name" "brand/linkedin") }}</a>
 
 In addition to being a Puluminary, Komal is also a Pulumni, having spent time working to make Pulumi a better tool for developers -  they were ever-present in making our Python SDK better and creating the [Automation API](https://www.pulumi.com/docs/using-pulumi/automation-api/)!
 
 ### Paul Hicks
 
 <img src="paul-hicks.png" width="200" height="200" alt="Paul Hicks"/>
-<a data-track="github" href="https://github.com/tenwit"><i class="fab fa-github"></i></a>
+<a data-track="github" href="https://github.com/tenwit">{{ partial "icon.html" (dict "name" "brand/github") }}</a>
 
 Paul seems to have an answer to everything. He is ever-present in the Pulumi Community, sharing his knowledge to folks who are just getting started, but also bringing to bear his real-world expertise in complex Pulumi implementations. Chances are, if you see a great answer to a question in [Pulumi Community Slack](https://slack.pulumi.com/), it came from Paul.
 
 ### Ringo De Smet
 
 <img src="ringo-smet.png" width="200" height="200" alt="Ringo De Smet"/>
-<a data-track="twitter" href="https://twitter.com/ringods"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/ringods"><i class="fab fa-github"></i></a>
+<a data-track="twitter" href="https://twitter.com/ringods">{{ partial "icon.html" (dict "name" "brand/x") }}</a>&nbsp;<a data-track="github" href="https://github.com/ringods">{{ partial "icon.html" (dict "name" "brand/github") }}</a>
 
 Ringo is one of the founding board members of [the Pulumiverse](https://www.pulumi.com/blog/2022-03-30-introducing-pulumiverse/) - a place to interact and collaborate on Pulumi-based libraries, projects, and educational materials. Ringo (along with fellow Puluminary Simen A. W. Olsen) have brought their vision for expanding the Pulumi community to life with the creating of this community-operated space! Ringo also created the [Pulumi Resource Type for Concourse](https://github.com/ringods/pulumi-resource), and is ever-present in every community he is a part of, not just Pulumi's!
 
 ### Rizel Scarlett
 
 <img src="rizel-scarlett.png" width="200" height="200" alt="Rizel Scarlett"/>
-<a data-track="twitter" href="https://twitter.com/blackgirlbytes"><i class="fab fa-twitter"></i></a>&nbsp;<a data-track="github" href="https://github.com/blackgirlbytes"><i class="fab fa-github"></i></a>&nbsp;<a data-track="linkedin" href="https://www.linkedin.com/in/rizel-bobb-semple/"><i class="fab fa-linkedin"></i></a>
+<a data-track="twitter" href="https://twitter.com/blackgirlbytes">{{ partial "icon.html" (dict "name" "brand/x") }}</a>&nbsp;<a data-track="github" href="https://github.com/blackgirlbytes">{{ partial "icon.html" (dict "name" "brand/github") }}</a>&nbsp;<a data-track="linkedin" href="https://www.linkedin.com/in/rizel-bobb-semple/">{{ partial "icon.html" (dict "name" "brand/linkedin") }}</a>
 
 Rizel brings her remarkable talent for guidance and teaching to the Pulumi community. She has participated in many Pulumi events, including Cloud Engineering Summit, and [appearing on the PulumiVision livestream](https://youtu.be/2uQEIYuJBZ4).
 
 ### Simen A. W. Olsen
 
 <img src="simen-olsen.png" width="200" height="200" alt="Simen W Olsen"/>
-<a data-track="github" href="https://github.com/cobraz"><i class="fab fa-github"></i></a>
+<a data-track="github" href="https://github.com/cobraz">{{ partial "icon.html" (dict "name" "brand/github") }}</a>
 
 Another one of the founding board members of [the Pulumiverse](https://www.pulumi.com/blog/2022-03-30-introducing-pulumiverse/), Simen has a great passion for technology communities, but especially for the Pulumi community. Simen was instrumental on the [Pulumi GitHub Action](https://github.com/pulumi/actions) rewrite - designing and rearchitecting it in his free time.
 

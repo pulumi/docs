@@ -42,7 +42,7 @@
                         <pulumi-swipeable>
                             <div class="w-full px-4 text-center ">
                                 <div class="value-card flex flex-col card p-8 bg-white text-center">
-                                    <i class="fas fa-{{ $value.icon }} text-violet-primary text-5xl"></i>
+                                    {{ partial "icon.html" (dict "name" $value.icon "class" "text-violet-primary text-5xl" "weight" "duotone") }}
                                     <h4 class="font-display font-semibold text-3xl">{{ $value.title }}</h4>
                                     <p class="text-base text-gray-700">{{ $value.content }}</p>
                                 </div>
@@ -54,7 +54,7 @@
             <div class="large-container values-flex mx-auto w-full flex lg:hidden flex flex-wrap gap-x-8 gap-y-6 justify-center">
                 {{ range $value := .Params.values }}
                     <div class="value-card flex flex-col card p-8 bg-white text-center">
-                        <i class="fas fa-{{ $value.icon }} text-{{ $value.color }}-600 text-5xl"></i>
+                        {{ partial "icon.html" (dict "name" $value.icon "class" (printf "text-%s-600 text-5xl" $value.color) "weight" "duotone") }}
                         <h4 class="font-display font-semibold">{{ $value.title }}</h4>
                         <p class="text-base text-gray-700">{{ $value.content }}</p>
                     </div>

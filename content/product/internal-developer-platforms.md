@@ -27,15 +27,15 @@ sections:
 
       Create golden paths with reusable components and templates. Enable self-service infrastructure through code, YAML, or developer portals. Enforce standards automatically with policies. Ship infrastructure faster while maintaining control.
     cards:
-      - icon: fa-rocket
+      - icon: rocket
         title: Ship faster
         description: |
           Golden paths and reusable components get engineers from idea to production in minutes.
-      - icon: fa-shield-alt
+      - icon: shield-check
         title: Engineer-friendly governance
         description: |
           Engineers work how they prefer — in code, YAML, UI, or APIs – all with consistent governance.
-      - icon: fa-eye
+      - icon: eye
         title: Day 2-ready
         description: |
           Handle provisioning, updates, drift detection, and compliance beyond initial provisioning.

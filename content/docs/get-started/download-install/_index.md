@@ -38,13 +38,13 @@ The latest version of Pulumi is **{{< latest-version >}}**. For previous version
 
 {{% choosable os macos %}}
 
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Homebrew Package Manager</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "package" "class" "pr-2") }}Homebrew Package Manager</h3>
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-macos">$ brew install pulumi/tap/pulumi</code></pre>
 </div>
 
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>macOS Binary Download</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "download-simple" "class" "pr-2") }}macOS Binary Download</h3>
 
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-x64.tar.gz">amd64</a>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-darwin-arm64.tar.gz">arm64</a></p>
@@ -59,7 +59,7 @@ macOS Ventura (13) or later is required.
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Install Script</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "package" "class" "pr-2") }}Install Script</h3>
 
 <div class="highlight">
    <pre class="chroma"><code class="language-bash" data-lang="bash" data-track="install-pulumi-linux">$ curl -fsSL https://get.pulumi.com | sh</code></pre>
@@ -67,7 +67,7 @@ macOS Ventura (13) or later is required.
 
 </div>
 <div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Linux Binary Download</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "download-simple" "class" "pr-2") }}Linux Binary Download</h3>
 <p><a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-linux-x64.tar.gz">amd64</a></p>
 </div>
 </div>
@@ -80,13 +80,13 @@ macOS Ventura (13) or later is required.
 
 <div class="mb-6 border-solid border-b-2 border-gray-200">
 <div class="w-full md:w-3/4">
-<h3 class="no-anchor pt-4"><i class="fas fa-box pr-2"></i>Installer (MSI)</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "package" "class" "pr-2") }}Installer (MSI)</h3>
 <p>
 <a class="btn btn-secondary mx-2" href="https://github.com/pulumi/pulumi-winget/releases/download/v{{< latest-version >}}/pulumi-{{< latest-version >}}-windows-x64.msi">amd64</a>
 </p>
 </div>
 <div class="w-full">
-<h3 class="no-anchor pt-4"><i class="fas fa-download pr-2"></i>Windows Binary Download</h3>
+<h3 class="no-anchor pt-4">{{ partial "icon.html" (dict "name" "download-simple" "class" "pr-2") }}Windows Binary Download</h3>
 <p>
 <a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
 </p>

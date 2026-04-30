@@ -6,7 +6,7 @@ Parameters:
            "brand/slack"      → assets/icons/brand/slack.svg
            "custom/pdi-neo"   → assets/icons/custom/pdi-neo.svg
            bare name          → phosphor (at $weight), then custom, then brand
-  weight (optional) Phosphor weight: "regular", "bold", or "duotone" (default: "duotone")
+  weight (optional) Phosphor weight: "regular", "bold", "fill", or "duotone" (default: "regular")
   class  (optional) Extra CSS classes added to the <svg> element
   size   (optional) Numeric px value applied as width/height attributes
   title  (optional) Accessible label; adds role="img" aria-label. Omit for decorative icons.
@@ -22,7 +22,7 @@ Usage:
     {{- partial $legacyPath . -}}
 {{- else -}}
 {{ $name   := .name }}
-{{ $weight := default "duotone" .weight }}
+{{ $weight := default "regular" .weight }}
 {{ $class  := default "" .class }}
 {{ $size   := .size }}
 {{ $title  := default "" .title }}
@@ -40,6 +40,7 @@ Usage:
     {{- $key := strings.TrimPrefix "custom/" $name -}}
     {{- $customSuffix := "" -}}
     {{- if eq $weight "bold" }}{{ $customSuffix = "-bold" }}{{ end -}}
+    {{- if eq $weight "fill" }}{{ $customSuffix = "-fill" }}{{ end -}}
     {{- if eq $weight "duotone" }}{{ $customSuffix = "-duotone" }}{{ end -}}
     {{- with resources.Get (printf "icons/custom/%s%s.svg" $key $customSuffix) -}}
         {{- $svg = .Content -}}
@@ -64,6 +65,7 @@ Usage:
     {{- else -}}
         {{- $bareCustomSuffix := "" -}}
         {{- if eq $weight "bold" }}{{ $bareCustomSuffix = "-bold" }}{{ end -}}
+        {{- if eq $weight "fill" }}{{ $bareCustomSuffix = "-fill" }}{{ end -}}
         {{- if eq $weight "duotone" }}{{ $bareCustomSuffix = "-duotone" }}{{ end -}}
         {{- with resources.Get (printf "icons/custom/%s%s.svg" $name $bareCustomSuffix) -}}
             {{- $svg = .Content -}}
@@ -74,7 +76,12 @@ Usage:
             {{- with resources.Get (printf "icons/brand/%s.svg" $name) -}}
                 {{- $svg = .Content -}}
             {{- else -}}
-                {{- errorf "icon: %q (weight=%s) not found in phosphor, custom, or brand" $name $weight -}}
+                {{- /* Final fallback: legacy SVG partials at layouts/partials/icons/<name>.html */ -}}
+                {{- if templates.Exists (printf "partials/icons/%s.html" $name) -}}
+                    {{- partial (printf "icons/%s" $name) . -}}
+                {{- else -}}
+                    {{- errorf "icon: %q (weight=%s) not found in phosphor, custom, brand, or legacy icons/" $name $weight -}}
+                {{- end -}}
             {{- end -}}
         {{- end -}}
     {{- end -}}
@@ -91,15 +98,24 @@ Usage:
 {{- /* Build attribute fragments */}}
 {{- $sizeAttrs := "" -}}
 {{- if $size -}}
-    {{- $sizeAttrs = printf ` width="%v" height="%v"` $size $size -}}
+    {{- $sizeAttrs = printf ` width="%v" height="%v" style="width:%vpx;height:%vpx"` $size $size $size $size -}}
 {{- end -}}
 {{- $a11yAttrs := ` aria-hidden="true" focusable="false"` -}}
 {{- if $title -}}
     {{- $a11yAttrs = printf ` role="img" aria-label="%s"` $title -}}
 {{- end -}}
 
+{{- /* Preserve viewBox from the source SVG (required for proper scaling) */}}
+{{- if $svg -}}
+{{- $viewBoxAttr := "" -}}
+{{- $vbMatches := findRE `viewBox="[^"]*"` $svg 1 -}}
+{{- with $vbMatches -}}
+    {{- $viewBoxAttr = printf " %s" (index . 0) -}}
+{{- end -}}
+
 {{- /* Inject class, size, and a11y by replacing the opening <svg> tag */}}
-{{- $replacement := printf `<svg class="%s" fill="currentColor"%s%s>` $allClass $sizeAttrs $a11yAttrs -}}
+{{- $replacement := printf `<svg xmlns="http://www.w3.org/2000/svg" class="%s"%s fill="currentColor"%s%s>` $allClass $viewBoxAttr $sizeAttrs $a11yAttrs -}}
 {{- replaceRE `<svg[^>]*>` $replacement $svg 1 | safeHTML -}}
+{{- end -}}
 {{- end -}}
 

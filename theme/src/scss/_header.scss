@@ -29,6 +29,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
         ul li {
             white-space: nowrap;
+
+            svg {
+                @apply inline-block mr-2;
+            }
         }
 
         .top-nav-banner-container {
@@ -261,6 +265,11 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
                                 .list-title {
                                     @apply px-0 text-base text-left w-full font-semibold;
+                                    svg {
+                                        width: 1.5em;
+                                        height: 1.5em;
+                                        vertical-align: -0.3em;
+                                    }
                                 }
 
                                 .list-sub-title {

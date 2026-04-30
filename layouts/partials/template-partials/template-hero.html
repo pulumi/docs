@@ -120,7 +120,7 @@
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
                 {{ if $dateAndLocation }}
-                <span><i class="far fa-calendar mr-3"></i></span>
+                <span>{{ partial "icon.html" (dict "name" "calendar" "class" "mr-3") }}</span>
                 <span class="hero-date-and-location"><a href="#location">{{ $dateAndLocation }}</a></span>
                 {{ end }}
                 {{ if and $dateAndLocation $booth }}

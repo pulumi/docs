@@ -70,11 +70,11 @@ The following sections are also useful when first learning how to use Pulumi:
 
 <div class="md:flex flex-row mt-6 mb-6">
     <div class="md:w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/"><i class="fas fa-file-alt pr-2"></i>Concepts</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/concepts/">{{ partial "icon.html" (dict "name" "file-text" "class" "pr-2") }}Concepts</a></h3>
         <p>Get details on the Pulumi programming model and core concepts.</p>
     </div>
     <div class="md:w-1/2 md:ml-4 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4"><a href="/docs/iac/guides/migration/"><i class="fas fa-cloud pr-2"></i>Migration</a></h3>
+        <h3 class="no-anchor pt-4"><a href="/docs/iac/guides/migration/">{{ partial "icon.html" (dict "name" "cloud" "class" "pr-2") }}Migration</a></h3>
         <p>Learn how to support, migrate, or convert existing cloud infrastructure with Pulumi.</p>
     </div>
 </div>

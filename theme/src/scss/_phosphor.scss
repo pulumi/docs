@@ -1,0 +1,18 @@
+// Phosphor icon base styles.
+// Applied via the `icon.html` partial which injects class="ph-icon ph-icon--{weight}".
+
+.ph-icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.225em;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.ph-icon--duotone {
+    .duotone-secondary {
+        fill: currentColor;
+        opacity: 0.2;
+    }
+}

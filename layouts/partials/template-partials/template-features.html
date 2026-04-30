@@ -42,7 +42,7 @@
             <div class="py-4 feature-item flex flex-col text-left">
                 <h4 class="feature-title mb-2">
                     {{ if .icon }}
-                    <i class="fa {{ .icon }} mr-3"></i>
+                    {{ partial "icon.html" (dict "name" .icon "weight" "duotone" "class" "mr-3") }}
                     {{ end }}
                     {{ .title }}
                 </h4>

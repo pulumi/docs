@@ -1,13 +1,13 @@
 {{ $type := default "info" .type }}
-{{ $icon := "info-circle" }}
+{{ $icon := "info" }}
 
 {{ if eq $type "warning" }}
-    {{ $icon = "exclamation-triangle" }}
+    {{ $icon = "warning" }}
 {{ end }}
 
 <div class="note note-{{ $type }}">
     <div class="icon-and-line">
-        <i class="fas fa-{{ $icon }}"></i>
+        {{ partial "icon.html" (dict "name" $icon) }}
         <div class="line"></div>
     </div>
     <div class="content">

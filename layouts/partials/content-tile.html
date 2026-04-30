@@ -17,16 +17,16 @@
             <span class="block w-full h-full p-4 flex flex-col">
                 <span class="block pb-2 mb-4">
                     <div class="bg-violet-100 rounded-full inline-block p-4 w-16 h-16 flex items-center justify-center">
-                        <i class="fas fa-{{ .icon }} text-violet-600 text-3xl"></i>
+                        {{ partial "icon.html" (dict "name" .icon "class" "text-violet-600 text-3xl" "weight" "duotone") }}
                     </div>
                 </span>
                 <span class="block">
                     <h6 class="group-hover:underline">
                         {{ .data.Params.title }}
-                        {{ if .external }}<i class="text-sm ml-2 fas fa-external-link-alt"></i>{{ end }}
+                        {{ if .external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "text-sm ml-2") }}{{ end }}
                     </h6>
                     <span class="my-0 py-1 inline-block mr-3 text-gray-600">
-                        <i class="fas fa-calendar mr-2"></i>
+                        {{ partial "icon.html" (dict "name" "calendar" "class" "mr-2") }}
                         {{ .displayDate }}
                     </span>
                 </span>

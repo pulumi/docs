@@ -68,7 +68,7 @@
             <li class="" data-menu-id="docs-home">
                 <ul class="list-none">
                     <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button>{{ partial "icon.html" (dict "name" "caret-right") }}</button>
                         <span>Docs Home</span>
                     </a></li>
                 </ul>
@@ -91,7 +91,7 @@
             <li class="" data-menu-id="tutorials-external">
                 <ul class="list-none">
                     <li><a href="/tutorials/" target="_blank" rel="noopener noreferrer">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button>{{ partial "icon.html" (dict "name" "caret-right") }}</button>
                         <span>Tutorials ↗</span>
                     </a></li>
                 </ul>
@@ -101,7 +101,7 @@
             <li class="" data-menu-id="registry-external">
                 <ul class="list-none">
                     <li><a href="/registry/" target="_blank" rel="noopener noreferrer">
-                        <button><i class="fa fa-caret-right"></i></button>
+                        <button>{{ partial "icon.html" (dict "name" "caret-right") }}</button>
                         <span>Registry ↗</span>
                     </a></li>
                 </ul>
@@ -204,7 +204,7 @@
                     {{/* Parent with children - make it clickable for expand/collapse but not navigation */}}
                     <a href="javascript:void(0)"{{- if $page.HasMenuCurrent .Menu . }} class="ancestor"{{ end }} onclick="this.closest('li').classList.toggle('expanded'); return false;">
                     <button style="pointer-events: none;">
-                        <i class="fa fa-caret-right"></i>
+                        {{ partial "icon.html" (dict "name" "caret-right") }}
                     </button>
                     <span>{{ $name }}</span>
                     </a>
@@ -218,7 +218,7 @@
                         {{- end -}}
                     >
                     <button>
-                        <i class="fa fa-caret-right"></i>
+                        {{ partial "icon.html" (dict "name" "caret-right") }}
                     </button>
                     <span>{{ $name }}</span>
                     </a>
@@ -240,7 +240,7 @@
                                         {{- end }}
                                     >
                                     <button>
-                                        <i class="fa fa-caret-right"></i>
+                                        {{ partial "icon.html" (dict "name" "caret-right") }}
                                     </button>
                                     <span>{{ $overviewLabel }}</span>
                                     </a>

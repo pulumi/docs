@@ -39,10 +39,10 @@ values:
       color: green
     - title: Bias for action
       content: We make fast decisions, learn from them, and own the outcomes. Good today is better than perfect tomorrow. When in doubt, we empower action, experimentation, learning, and iteration. We strive to build internal consensus so that we are all bought in, but in cases where we disagree, we disagree, commit, and get going!
-      icon: running
+      icon: person-simple-run
       color: orange
     - title: Be an owner
       content: As early employees, we are owners and behave accordingly. We are frugal, spend Pulumi’s resources as if they’re our own, and accomplish more with less.
-      icon: user-tie
+      icon: briefcase
       color: violet
 ---
