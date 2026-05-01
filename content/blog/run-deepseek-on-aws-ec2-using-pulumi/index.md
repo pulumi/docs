@@ -1,10 +1,10 @@
 ---
-title: "Run DeepSeek-R1 on AWS EC2 Using Ollama"
+title: "Run Open-Source LLMs on AWS EC2 with Ollama and Pulumi"
 date: 2025-01-27
-updated: 2025-03-10
+updated: 2026-04-30
 draft: false
 meta_desc: |
-    Learn how to set up and run DeepSeek-R1 on an AWS EC2 instance using Ollama and Pulumi. Follow this step-by-step guide for AI deployment in the cloud.
+    Self-host DeepSeek, Llama, Qwen, or Mistral on AWS EC2 with Ollama and Pulumi. Includes instance-type recommendations, cost math, and copy-paste IaC.
 
 meta_image: meta.png
 
@@ -13,127 +13,193 @@ authors:
 
 tags:
 - ai
+- llm
+- ollama
 - deepseek
+- llama
+- qwen
+- mistral
 - pulumi
 - aws
 - ec2
-- ollama
 
 social:
   twitter: |
-    DeepSeek is the new kid on the block in the AI community. Learn how to set up and run DeepSeek R1 on an AWS EC2 instance using Pulumi and Ollama.
+    Want to self-host an open-source LLM on AWS? This guide deploys Ollama on a GPU EC2 instance with Pulumi—run DeepSeek, Llama, Qwen, or Mistral with one config change.
   linkedin: |
-    Excited to share our latest blog post on how to set up and run DeepSeek R1—a cutting-edge open-source AI model—on an AWS EC2 instance using Pulumi and Ollama.
+    Updated guide: how to self-host open-source LLMs on AWS EC2 with Ollama and Pulumi.
 
-    Why DeepSeek R1? DeepSeek R1 has quickly become a standout in the AI community, offering exceptional performance and reasoning capabilities. Competing with industry giants like OpenAI and Meta, it excels in benchmarks such as AIME 2024 for mathematics, Codeforces for coding, and MMUL for general knowledge.
-    
-    What You'll Learn:
-    
-        Infrastructure as Code with Pulumi: Automate the deployment of your AWS EC2 instances seamlessly.
-        Managing LLMs with Ollama: Simplify the process of running and managing large language models.
-        Hands-On Setup: Step-by-step instructions with code snippets in TypeScript, Python, Go, C#, and YAML.
-        Performance Insights: Understand how DeepSeek R1 outperforms rivals in key areas.
-    
-    Why Pulumi and AWS EC2? Leveraging Pulumi's Infrastructure as Code (IaC) capabilities with AWS EC2 provides a robust and scalable environment for running advanced AI models like DeepSeek R1. This combination ensures flexibility, reliability, and ease of management.
-    
-    Get Started: Whether you're looking to experiment with AI models or scale your applications in the cloud, this guide has you covered. From setting up your environment to deploying and accessing the DeepSeek Web UI, you'll find all the resources you need.
-    
-    Read the full blog post here: <link>
+    Whether you want DeepSeek-R1, Llama 3, Qwen, or Mistral, the same Pulumi program deploys the GPU EC2 instance, installs the NVIDIA drivers, and starts Ollama with Open WebUI. Switching models is a one-line change.
+
+    What's inside:
+
+        Instance-type recommendations by model size (which g-class EC2 instance you actually need)
+        Cost-per-token math comparing self-hosted Ollama to OpenAI and Anthropic APIs
+        Copy-paste Pulumi programs in TypeScript, Python, Go, C#, and YAML
+        OpenAI-compatible API access from your existing tooling
+
+    Read the full guide: <link>
 ---
 
-This weekend, my "for you" page on all of my social media accounts was filled with only one thing: [DeepSeek](https://www.deepseek.com/). DeepSeek really managed to shake up the AI community with a series of very strong language models like DeepSeek R1.
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Run an open-source LLM on AWS EC2 with Ollama and Pulumi",
+  "description": "Deploy Ollama on a GPU-enabled AWS EC2 instance with Pulumi and run open-source models like DeepSeek-R1, Llama 3, Qwen, or Mistral.",
+  "totalTime": "PT30M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Pulumi CLI"},
+    {"@type": "HowToTool", "name": "AWS CLI"},
+    {"@type": "HowToTool", "name": "AWS Account"},
+    {"@type": "HowToTool", "name": "Ollama"}
+  ],
+  "supply": [
+    {"@type": "HowToSupply", "name": "AWS GPU EC2 instance (g4dn, g5, or g6 family)"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Create a new Pulumi project",
+      "text": "Run pulumi new aws-<language> to scaffold a new project, replacing <language> with typescript, python, go, csharp, or yaml."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Create an IAM role and instance profile",
+      "text": "Define an IAM role with S3 read access so the EC2 instance can pull NVIDIA GRID drivers from the ec2-linux-nvidia-drivers bucket, then attach it to an instance profile."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Provision the network",
+      "text": "Create a VPC, public subnet, internet gateway, route table, and security group that exposes ports 22 (SSH), 3000 (Open WebUI), and 11434 (Ollama API)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Launch the GPU EC2 instance",
+      "text": "Create an SSH key pair and launch a g4dn.xlarge (or larger) Amazon Linux instance with the IAM profile and security group attached."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Install Ollama via cloud-init",
+      "text": "Use a cloud-init user-data script to install NVIDIA drivers, Docker, the NVIDIA Container Toolkit, and start the Ollama and Open WebUI containers. The script also pulls and runs your chosen model—for example deepseek-r1:7b, llama3.1:8b, qwen2.5:7b, or mistral:7b."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Deploy the infrastructure",
+      "text": "Run pulumi up to provision all resources. After the stack is created, Pulumi outputs the public IP address of the instance."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 7,
+      "name": "Access the Web UI or OpenAI-compatible API",
+      "text": "Open http://<instance-public-ip>:3000 for Open WebUI, or point any OpenAI-compatible client at http://<instance-public-ip>:11434/v1."
+    }
+  ]
+}
+</script>
+
+**TL;DR. Want to self-host an open-source LLM on AWS?** Use a `g4dn.xlarge` ($0.526/hr on-demand, 16 GB GPU memory) for 7B/8B models, a `g5.xlarge` ($1.006/hr, 24 GB) for 13B–14B models, a `g5.2xlarge` ($1.212/hr, 24 GB) for 32B models, or a `g6e.2xlarge` ($2.242/hr, 48 GB) for 70B models. Deploy with the Pulumi program below and Ollama will run any model from its library: DeepSeek-R1, Llama 3, Qwen, or Mistral, with a one-line change.
 
 <!--more-->
 
-**But why?** The answer is simple: DeepSeek entered the market as an open-source (MIT license) project with excellent performance and reasoning capabilities.
+This guide walks through that deployment end-to-end: a single Pulumi program that provisions a GPU-enabled EC2 instance, installs Ollama and Open WebUI via cloud-init, and exposes both a chat UI and an OpenAI-compatible API. The model is configurable, so you can swap DeepSeek-R1 for Llama 3.1, Qwen 2.5, or Mistral without touching the infrastructure code.
 
-1. [The Company Behind DeepSeek](/blog/run-deepseek-on-aws-ec2-using-pulumi/#the-company-behind-deepseek)
-2. [DeepSeek R1 Model](/blog/run-deepseek-on-aws-ec2-using-pulumi/#deepseek-r1-model)
-3. [What Are Distilled Models?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#what-are-distilled-models)
-4. [Setting Up The Environment](/blog/run-deepseek-on-aws-ec2-using-pulumi/#setting-up-the-environment)
-5. [Next Steps](/blog/run-deepseek-on-aws-ec2-using-pulumi/#next-steps)
+1. [Why run open-source LLMs on AWS EC2?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#why-run-open-source-llms-on-aws-ec2)
+1. [Which models can I run, and which EC2 instance do I need?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#which-models-can-i-run-and-which-ec2-instance-do-i-need)
+1. [How much does this cost vs. hosted APIs?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#how-much-does-this-cost-vs-hosted-apis)
+1. [How do I deploy Ollama on AWS EC2 with Pulumi?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#how-do-i-deploy-ollama-on-aws-ec2-with-pulumi)
+1. [How do I switch models?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#how-do-i-switch-models)
+1. [What are the next steps?](/blog/run-deepseek-on-aws-ec2-using-pulumi/#what-are-the-next-steps)
 
-## The Company Behind DeepSeek
+## Why run open-source LLMs on AWS EC2?
 
-DeepSeek is a Chinese AI startup founded in 2023 by Lian Wenfeng. One interesting fact about DeepSeek is that the cost of training and developing DeepSeek's models was only a fraction of what OpenAI or Meta spent on their models.
+Self-hosting an open-source LLM on AWS gives you three things hosted APIs can't: data stays inside your VPC, per-token costs collapse to a flat hourly rate at high volume, and you can fine-tune or quantize models freely under permissive licenses. Ollama handles all three concerns from a single binary: it downloads, manages, and serves models behind an OpenAI-compatible API on port 11434.
 
-This on its own sparked a lot of interest and curiosity in the AI community. DeepSeek R1 is near or even better than its rival models on some of the important benchmarks like AIME 2024 for mathematics, Codeforces for coding, and MMUL for general knowledge.
+The original version of this post focused on [DeepSeek-R1](https://www.deepseek.com/) because it landed in late January 2025 and reset expectations for what an open-weight reasoning model could do. DeepSeek-R1 is still an excellent default (MIT-licensed, strong on math and coding, with distilled 1.5B–70B variants) but the same infrastructure runs [Meta's Llama 3](https://ai.meta.com/llama/), [Alibaba's Qwen](https://qwenlm.ai/), and [Mistral](https://mistral.ai/) equally well. Picking a model is now a config change, not an infrastructure decision.
 
 ![A bar chart compares the performance of DeepSeek and OpenAI models across six benchmarks: AIME 2024, Codeforces, GPQA Diamond, MATH-500, MMLU, and SWE-bench Verified. The models evaluated include DeepSeek-R1, DeepSeek-R1-32B, DeepSeek-V3, OpenAI-o1-1217, and OpenAI-o1-mini, with accuracy or percentile scores represented as bars. DeepSeek-R1 (blue-striped) consistently ranks among the top performers, particularly excelling in MATH-500 (97.3%), MMLU (90.8%), and Codeforces (96.3%). The chart visually distinguishes each model using different colors and shading.](img_1.png)
 
-### Mathematics: AIME 2024 & MATH-500
-
-DeepSeek-R1 shows robust multi-step reasoning, scoring **79.8%** on AIME 2024, edging out OpenAI o1-1217 at **79.2%**.
-On MATH-500—which tests a wide range of high-school-level problems—DeepSeek-R1 again leads with **97.3%**, slightly
-above OpenAI o1-1217’s **96.4%**.
-
-### Coding: Codeforces & SWE-bench Verified
-
-In algorithmic reasoning (Codeforces), OpenAI o1-1217 stands at **96.6%**, marginally ahead of DeepSeek-R1’s **96.3%**.
-Yet on SWE-bench Verified, which focuses on software engineering reasoning, DeepSeek-R1 scores **49.2%**, surpassing
-OpenAI o1-1217’s **48.9%** and showcasing strong software verification capabilities.
-
-### General Knowledge: GPQA Diamond & MMLU
-
-OpenAI o1-1217 excels in factual queries (GPQA Diamond) with **75.7%**, outperforming DeepSeek-R1 at **71.5%**. For
-broader academic coverage (MMLU), the margin is still tight: **91.8%** (OpenAI o1-1217) vs. **90.8%** (DeepSeek-R1),
-indicating near-parity in multitask language understanding.
+For reference, DeepSeek-R1 scores **79.8%** on AIME 2024 (vs. **79.2%** for OpenAI o1-1217), **97.3%** on MATH-500 (vs. **96.4%**), **96.3%** on Codeforces (vs. **96.6%**), and **49.2%** on SWE-bench Verified (vs. **48.9%**)—near-parity with closed frontier models on most reasoning benchmarks, with the same caveat that benchmark scores age fast.
 
 {{< related-posts >}}
 
-## DeepSeek R1 Model
+## Which models can I run, and which EC2 instance do I need?
 
-DeepSeek R1 is a large language model developed with a strong focus on reasoning tasks. It excels at problems requiring multi-step analysis and logical thinking. Unlike typical models that rely heavily on Supervised Fine-Tuning (SFT), DeepSeek R1 uses Reinforcement Learning (RL) as its primary training strategy. This emphasis on RL empowers it to figure out solutions with greater independence.
+The bottleneck for inference is GPU memory (VRAM): the model weights have to fit in it, plus a few GB of headroom for the KV cache. The table below maps the most common Ollama models to the smallest AWS GPU instance that comfortably runs them at 4-bit (Q4) quantization, which is what `ollama pull <model>` gives you by default.
 
-## What Are Distilled Models?
+| Model family | Sizes | Approx. VRAM (Q4) | Smallest EC2 instance | On-demand price (us-east-1) |
+| --- | --- | --- | --- | --- |
+| DeepSeek-R1 (distill) | 1.5B / 7B / 8B | 1–6 GB | `g4dn.xlarge` (T4, 16 GB) | $0.526/hr |
+| Llama 3.1 / Llama 3.2 | 8B | ~5 GB | `g4dn.xlarge` (T4, 16 GB) | $0.526/hr |
+| Qwen 2.5 | 7B | ~5 GB | `g4dn.xlarge` (T4, 16 GB) | $0.526/hr |
+| Mistral 7B / Mistral Nemo | 7B / 12B | 5–8 GB | `g4dn.xlarge` (T4, 16 GB) | $0.526/hr |
+| DeepSeek-R1 (distill) | 14B | ~10 GB | `g5.xlarge` (A10G, 24 GB) | $1.006/hr |
+| Llama 3.3 / DeepSeek-R1 | 32B / 32B distill | ~20 GB | `g5.2xlarge` (A10G, 24 GB) | $1.212/hr |
+| Llama 3.1 / DeepSeek-R1 | 70B | ~42 GB | `g6e.2xlarge` (L40S, 48 GB) | $2.242/hr |
+| DeepSeek-R1 (full) | 671B (MoE) | 400 GB+ | `p5.48xlarge` or multi-node | $98.32/hr |
 
-Besides the main model, DeepSeek AI has introduced distilled versions in various parameter sizes—1.5B, 7B, 8B, 14B, 32B, and 70B. These distilled models draw on Qwen and Llama architectures, preserving much of the original model’s reasoning capabilities while being more accessible for personal computer use.
+For most workloads—internal tools, RAG backends, code assistants—a `g4dn.xlarge` running an 8B model is the right starting point. Move up only if quality is the bottleneck.
 
-Notably, the 8B and smaller models can operate on standard CPUs, GPUs, or Apple Silicon machines, making them convenient for anyone interested in experimenting at home.
+## How much does this cost vs. hosted APIs?
 
-That's why I decided to run DeepSeek on an AWS EC2 instance using Pulumi. I wanted to see how easy it is to set up and run DeepSeek on the cloud using [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code/). So, let's get started!
+A `g4dn.xlarge` running 24/7 costs **~$378/month** on-demand, or **~$237/month** with a 1-year reserved instance. Whether that's cheaper than a hosted API depends entirely on your token volume.
 
-## Setting Up The Environment
+Compare against hosted pricing as of April 2026 (input + output blended, rough numbers):
+
+| Provider | Model | Approx. blended price |
+| --- | --- | --- |
+| OpenAI | GPT-4o-mini | ~$0.30 per 1M tokens |
+| OpenAI | GPT-4o | ~$5.00 per 1M tokens |
+| Anthropic | Claude Sonnet 4 | ~$6.00 per 1M tokens |
+| DeepSeek (hosted) | DeepSeek-V3 | ~$0.50 per 1M tokens |
+
+A `g4dn.xlarge` running Llama 3.1 8B sustains roughly **40–60 tokens/sec** under single-user load, or about **100–155M tokens/month** at 100% utilization. At that ceiling the effective rate is **~$2.40/M tokens**—cheaper than GPT-4o or Claude, more expensive than GPT-4o-mini or DeepSeek's own hosted API.
+
+The takeaway: **self-hosting wins on data residency, latency, and predictable cost at high utilization. Hosted APIs win below ~10M tokens/month or when you need frontier-class quality.** Run the math against your actual token volume before committing.
+
+## How do I deploy Ollama on AWS EC2 with Pulumi?
 
 ### Prerequisites
 
-Before we start, make sure you have the following prerequisites:
+Before we start, make sure you have the following:
 
 - An [AWS account](https://aws.amazon.com/account/)
 - [Pulumi CLI](/docs/iac/download-install/) installed
-- [AWS CLI](https://aws.amazon.com/cli/) installed
-- Understanding of [Ollama](https://ollama.com/)
+- [AWS CLI](https://aws.amazon.com/cli/) installed and configured
+- A working understanding of [Ollama](https://ollama.com/)
 
-### What Is Ollama?
+### What is Ollama?
 
 ![A black-and-white digital illustration of Ollama’s mascot, a stylized llama, wearing a “WORK!!” headband while intensely focused on paperwork. The mascot sits at a desk surrounded by towering stacks of documents, with scattered sheets and a coffee mug, conveying a sense of heavy workload and determination.](img_2.png)
 
-Ollama allows you to run and manage large language models (LLMs) on your own computer. By simplifying the process of downloading, running, and using these models. It supports macOS, Linux, and Windows, making it accessible across different operating systems. Ollama is easy to use. It has simple commands to pull, run, and manage models.
+Ollama is an open-source runtime that downloads, manages, and serves large language models from a single binary. It runs on macOS, Linux, and Windows, supports GPU acceleration through CUDA and Metal, and exposes both a native HTTP API and an OpenAI-compatible API on port 11434. Most clients written for the OpenAI SDK work against an Ollama endpoint with only a base-URL change.
 
-In addition to local usage, Ollama provides an API for integrating LLMs into other applications. An experimental compatibility layer with the OpenAI API means many existing OpenAI-compatible tools can now work with a local Ollama server. It can leverage GPUs for faster processing and includes features like custom model creation and sharing.
+It supports the major open-weight families—DeepSeek-R1, Llama 3, Qwen, Mistral, Gemma, Phi—plus quantized and distilled variants for each. You pull a model by name and tag (`ollama pull llama3.1:8b`) and run it (`ollama run llama3.1:8b`); Ollama handles the rest.
 
-Ollama provides strong support for many large language models such as Llama 2, Code Llama, or in our case DeepSeek R1, granting users secure, private, and local access. It offers GPU acceleration on macOS and Linux and provides libraries for Python and JavaScript.
+### Architecture
 
-### Running DeepSeek On AWS EC2
+![A diagram illustrating an AWS-based deployment with an EC2 GPU-enabled instance running Ollama and Open-WebUI within a public subnet of a VPC. The setup includes a Docker container connected to an open-source LLM served by Ollama (such as DeepSeek-R1:7B or any Ollama-supported model), represented by a blue box with an arrow pointing from the EC2 instance. The Ollama mascot is depicted as part of the architecture.](img_4.png)
 
-![A diagram illustrating an AWS-based deployment with an EC2 GPU-enabled instance running Ollama and Open-WebUI within a public subnet of a VPC. The setup includes a Docker container and is connected to an external LLM (DeepSeek-R1:7B), represented by a blue box with an arrow pointing from the EC2 instance. The Ollama mascot is depicted as part of the architecture.](img_4.png)
+### Create a new Pulumi project
 
-First, we need to create a new Pulumi project. You can do this by running the following command:
+First, scaffold a new Pulumi project. Run the following from an empty directory:
 
 ```bash
-# Select your preferred language (e.g., typescript, python, go, etc.)
+# Replace <language> with typescript, python, go, csharp, or yaml
 pulumi new aws-<language>
 ```
 
-Please choose the [language you are most comfortable with](/docs/iac/languages-sdks/).
+Pick the [language you are most comfortable with](/docs/iac/languages-sdks/). The template installs the [AWS provider](/registry/packages/aws/) and creates a working sample. You can delete the sample code—we'll replace it with the snippets below.
 
-This will create a new Pulumi project with the necessary files and configurations and a sample code. In our example code, it will also install the [AWS provider](/registry/packages/aws/) for you.
+### Step 1: Create an instance role with S3 access
 
-Since you will not be using the sample code, feel free to delete it. After that, you can copy and paste the following code snippets into your Pulumi project.
-
-#### Create An Instance Role With S3 Access
-
-To download the NVIDIA drivers needed to create an instance role with S3 access. Copy the following code to your Pulumi project:
+The EC2 instance needs to download NVIDIA drivers from a public AWS-managed S3 bucket. Create an IAM role with S3 read access and attach it to an instance profile:
 
 {{< chooser language "typescript,python,go,csharp,yaml" />}}
 
@@ -181,9 +247,9 @@ To download the NVIDIA drivers needed to create an instance role with S3 access.
 
 {{% /choosable %}}
 
-#### Create The Network
+### Step 2: Create the network
 
-Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy the following code to your Pulumi project:
+Next, create the VPC, subnet, internet gateway, and route table. The security group opens ports 22 (SSH), 3000 (Open WebUI), and 11434 (Ollama API):
 
 {{< chooser language "typescript,python,go,csharp,yaml" />}}
 
@@ -233,13 +299,13 @@ Next, we need to create a VPC, subnet, Internet Gateway, and route table. Copy t
 
 {{% /choosable %}}
 
-#### Create An EC2 Instance
+### Step 3: Launch the GPU EC2 instance
 
-Finally, we need to create the EC2 instance. For this, we need to create our SSH key pair and retrieve the Amazon Machine Images to use in our instances. We are going to use `Amazon Linux`, as it is the most common and has all the necessary packages installed for us.
+Now create the EC2 instance itself. The example uses Amazon Linux because the NVIDIA driver install path is well-trodden, plus an SSH key pair you generate locally.
 
-I also use a `g4dn.xlarge`, but you can change the instance type to any other instance type that supports GPU. You can find more information about the [instance types](https://aws.amazon.com/ec2/instance-types/g4/).
+The default instance type is `g4dn.xlarge`—the cheapest option that fits any 7B/8B model. Bump it up if you picked a larger model from the [table above](#which-models-can-i-run-and-which-ec2-instance-do-i-need): `g5.xlarge` for 13B–14B, `g5.2xlarge` for 32B, `g6e.2xlarge` for 70B. AWS publishes full specs for the [G4](https://aws.amazon.com/ec2/instance-types/g4/), [G5](https://aws.amazon.com/ec2/instance-types/g5/), and [G6](https://aws.amazon.com/ec2/instance-types/g6/) families.
 
-If you need to create the key pair, run the following command:
+Generate the key pair if you don't already have one:
 
 ```bash
 openssl genrsa -out deepseek.pem 2048
@@ -295,11 +361,9 @@ ssh-keygen -f mykey.pub -i -mPKCS8 > deepseek.pem
 
 {{% /choosable %}}
 
-#### Install Ollama And Run DeepSeek
+### Step 4: Install Ollama via cloud-init
 
-After we set up all the infrastructure needed for our GPU-powered EC2 instance, we can install Ollama and run DeepSeek. This will all be done as part of the user data script we pass to the EC2 instance.
-
-In the `runcmd` section of the user data script, we will install the necessary packages, download the NVIDIA GRID drivers from S3, install Docker, and run the Ollama and Open WebUI containers.
+The EC2 instance is a blank box until cloud-init runs. The user-data script below installs the NVIDIA GRID drivers, Docker, and the NVIDIA Container Toolkit, then starts the Ollama and Open WebUI containers. To switch models, edit the `ollama run` line—the rest is identical regardless of which model you want.
 
 ```yaml
 #cloud-config
@@ -333,62 +397,26 @@ runcmd:
 - docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama --restart always ollama/ollama
 - sleep 120
 - docker exec ollama ollama run deepseek-r1:7b
-- docker exec ollama ollama run deepseek-r1:14b
 - docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
 {{< related-posts >}}
 
-#### Using DeepSeek Models via Ollama
+### Step 5: Deploy the infrastructure
 
-DeepSeek provides a diverse range of models in the Ollama library, each tailored to different resource requirements and use cases. Below is a concise overview:
-
-##### Model Sizes
-
-The library offers models in sizes like 1.5B, 7B, 8B, 14B, 32B, 70B, and even 671B parameters (where “B” indicates billions). While larger models tend to deliver stronger performance, they also demand more computational power.
-
-##### Quantized Models
-
-Certain DeepSeek models come in quantized variants (for example, q4_K_M or q8_0). These are optimized to use less memory and may run faster, though there can be a minor trade-off in quality.
-
-##### Distilled Versions
-
-DeepSeek also releases distilled models (e.g., qwen-distill, llama-distill). These versions are lighter, having been trained to mimic the behavior of larger models and offering a more balanced mix of performance and resource efficiency.
-
-##### Tags
-
-Each model has both a “latest” tag and specialized tags indicating its size, quantization level, or distillation approach. For example: `latest`, `1.5b`, `7b`,`8b`,`14b`, `32b`, `70b`, `671b` and more.
-
-To pull a model, use the following command:
-
-```bash
-# Replace <tag> with the desired model tag
-ollama pull deepseek-r1:<tag>
-```
-
-In our case, we will pull the 7B model:
-
-```bash
-ollama pull deepseek-r1:7b
-```
-
-### Deploy the Infrastructure
-
-Before deploying the infrastructure, make sure you have the necessary AWS credentials set up. You can do this by running the following command:
+Make sure your AWS credentials are configured:
 
 ```bash
 aws configure
 ```
 
-Pulumi supports a wide range of configuration options, including environment variables, configuration files, and more. You can find more information in the [Pulumi documentation](/registry/packages/aws/installation-configuration/).
-
-After setting up the credentials, you can deploy the infrastructure by running the following command:
+Pulumi supports several other [authentication methods](/registry/packages/aws/installation-configuration/) for the AWS provider. Once credentials are in place, deploy the infrastructure:
 
 ```bash
 pulumi up
 ```
 
-This command will give you first a handy preview of the actions Pulumi will take. If you are happy with the changes, you can confirm the deployment by typing `yes`.
+Pulumi previews the changes; type `yes` to confirm.
 
 ```
 pulumi up
@@ -453,15 +481,13 @@ Resources:
 Duration: 42s
 ```
 
-While the infrastructure is relatively quickly deployed, the user data script will take some time to download the necessary packages and run the containers.
-
-You can check that everything is up and running by either connecting via `ssh` to the instance or navigating to the public IP address of the instance in your browser.
+The infrastructure provisions in under a minute, but the cloud-init script needs another 5–10 minutes to install drivers, pull container images, and download the model weights. SSH in to watch the progress, or just wait and load the Web UI when it's ready.
 
 ```
 ssh -i deepseek.pem ec2-user@<instance-public-ip>
 ```
 
-And then run the following command to check the status of the containers:
+Check the container status:
 
 ```bash
 sudo docker ps
@@ -471,43 +497,83 @@ bf4bb3b7ede1   ollama/ollama                        "/bin/ollama serve"   8 minu
 [ec2-user@ip-10-0-58-122 ~]$
 ```
 
-### Accessing the Web UI
+### Step 6: Access the Web UI or API
 
-When the EC2 instance is up and running and the containers are started, you can access the Ollama Web UI by navigating to `http://<ec2-public-ip>:3000`.
+Once the containers are healthy, open `http://<instance-public-ip>:3000` in your browser for Open WebUI:
 
 {{% notes type="warning" %}}
 
-Keep in mind that the Ollama Web UI is not secure by default. Make sure to secure it before exposing it to the public.
+Open WebUI is not secured by default. Restrict the security group to your IP, put it behind an authenticated proxy, or terminate TLS at an ALB before exposing it to the internet.
 
 {{% /notes %}}
 
-We can give it a spin by running a few queries. For example, we can ask DeepSeek to solve a math problem:
-
 ![A screenshot of a chat interface with DeepSeek-R1:7B, showing a query asking for the square root of 144. The AI responds with a step-by-step explanation, defining the square root, setting up the equation, solving for x, and confirming that \sqrt{144} = 12. The interface has a dark theme, with the query displayed at the top and the AI’s structured response below.](img_6.png)
 
-What is nice about DeepSeek is that we can also see the reasoning behind the answer. This is very helpful to understand how the model came to a conclusion.
+For programmatic access, Ollama exposes an [OpenAI-compatible API](https://github.com/ollama/ollama/blob/main/docs/openai.md) on port 11434. Most clients written for the OpenAI SDK only need a base-URL change:
 
-### Accessing DeepSeek with Ollama OpenAI-Compatible API
+```python
+from openai import OpenAI
 
-Ollama provides an OpenAI-compatible API that allows you to interact with DeepSeek models programmatically. This allows you to use existing OpenAI-compatible tools and applications with your local Ollama server.
+client = OpenAI(
+    base_url="http://<instance-public-ip>:11434/v1",
+    api_key="ollama",  # required by the SDK, ignored by Ollama
+)
 
-I am not going to cover how to use the API in this post, but you can find more information in the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/api.md).
+response = client.chat.completions.create(
+    model="llama3.1:8b",
+    messages=[{"role": "user", "content": "Why is the sky blue?"}],
+)
+print(response.choices[0].message.content)
+```
 
-### Cleaning Up
+## How do I switch models?
 
-After you are done experimenting with DeepSeek, you can clean up the resources by running the following command:
+Ollama hosts every major open-weight family in its [model library](https://ollama.com/library). Pulling a different model is two commands inside the EC2 instance—or a one-line edit to the cloud-init script if you want it provisioned automatically:
+
+```bash
+# DeepSeek-R1 distill (default in this guide)
+docker exec ollama ollama run deepseek-r1:7b
+
+# Llama 3.1 (Meta, 8B)
+docker exec ollama ollama run llama3.1:8b
+
+# Qwen 2.5 (Alibaba, 7B)
+docker exec ollama ollama run qwen2.5:7b
+
+# Mistral (7B)
+docker exec ollama ollama run mistral:7b
+
+# Larger reasoning model (needs g5.2xlarge or larger)
+docker exec ollama ollama run deepseek-r1:32b
+```
+
+Tags follow a `<size>` or `<size>-<quantization>` pattern—`8b`, `8b-instruct-q4_K_M`, `8b-instruct-q8_0`. Q4 is the default and the right starting point; bump to Q8 only if you have spare VRAM and notice quality issues with Q4. Browse the full tag list for any model on its [Ollama library page](https://ollama.com/library).
+
+### Cleaning up
+
+When you're done, tear everything down:
 
 ```bash
 pulumi destroy
 ```
 
-## Next Steps
+## What are the next steps?
 
-This post demonstrated how easy it is to set up and run DeepSeek on an AWS EC2 instance using Pulumi. By leveraging IaC, we were able to create the necessary infrastructure with a few lines of code. From here, we can easily configure the code to run any other AI model on the cloud, change the instance type, or even set additional infrastructure for the application connection to the model.
+You now have a reproducible, IaC-managed deployment of any open-source LLM on AWS. The infrastructure is fixed; the model is a parameter. From here, the natural extensions are wiring this up to a real application, adding RAG over your own data, or moving the deployment behind an authenticated load balancer.
 
-If you have any questions or need help with the code, feel free to reach out to me and if you want to give DeepSeek with Pulumi a try, head over to the [Pulumi documentation](/docs/get-started/).
+If you want to go further with AI on Pulumi, here are some related guides:
+
+- [Deploy LangServe Apps with Pulumi on AWS (RAG & Chatbot)](/blog/easy-ai-apps-with-langserve-and-pulumi/) — Build a retrieval-augmented chatbot that could front-end this Ollama instance.
+- [Deploy AI Models on Amazon SageMaker using Pulumi Python IaC](/blog/mlops-huggingface-llm-aws-sagemaker-python/) — A SageMaker alternative when you'd rather not manage the EC2 host yourself.
+- [Build an AI Slack Bot on AWS Using Embedchain & Pulumi](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/) — Wire an LLM into Slack as an internal assistant.
+- [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/) — Background on the IaC approach used throughout this guide.
 
 {{< blog/cta-button "Try Pulumi for Free" "/docs/get-started/" >}}
 
-If you want to learn more about what we learned from using GenAI in production, check out the [Recipe for a Better AI-based Code Generator
-](/blog/codegen-learnings/) blog post.
+---
+
+### Changelog
+
+- **2026-04-30** — Broadened scope from DeepSeek-only to any Ollama-supported model (Llama, Qwen, Mistral). Added TL;DR, instance-type recommendation table, cost-vs-hosted-API comparison, and HowTo structured data. Restructured headings as user questions. Verified Ollama and cloud-init commands against current versions.
+- **2025-03-10** — Minor edits and corrections.
+- **2025-01-27** — Original post: Run DeepSeek-R1 on AWS EC2 Using Ollama.
