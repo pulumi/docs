@@ -4,7 +4,7 @@ date: 2025-01-27
 updated: 2026-04-30
 draft: false
 meta_desc: |
-    Self-host DeepSeek, Llama, Qwen, or Mistral on AWS EC2 with Ollama and Pulumi. Includes instance-type recommendations, cost-vs-hosted-API math, and copy-paste IaC.
+    Self-host DeepSeek, Llama, Qwen, or Mistral on AWS EC2 with Ollama and Pulumi. Includes instance-type recommendations, cost math, and copy-paste IaC.
 
 meta_image: meta.png
 
@@ -61,36 +61,42 @@ social:
     {
       "@type": "HowToStep",
       "position": 1,
-      "name": "Create an IAM role and instance profile",
-      "text": "Run pulumi new aws-<language> to scaffold a new project, then define an IAM role with S3 read access so the EC2 instance can pull NVIDIA GRID drivers from the ec2-linux-nvidia-drivers bucket."
+      "name": "Create a new Pulumi project",
+      "text": "Run pulumi new aws-<language> to scaffold a new project, replacing <language> with typescript, python, go, csharp, or yaml."
     },
     {
       "@type": "HowToStep",
       "position": 2,
+      "name": "Create an IAM role and instance profile",
+      "text": "Define an IAM role with S3 read access so the EC2 instance can pull NVIDIA GRID drivers from the ec2-linux-nvidia-drivers bucket, then attach it to an instance profile."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
       "name": "Provision the network",
       "text": "Create a VPC, public subnet, internet gateway, route table, and security group that exposes ports 22 (SSH), 3000 (Open WebUI), and 11434 (Ollama API)."
     },
     {
       "@type": "HowToStep",
-      "position": 3,
+      "position": 4,
       "name": "Launch the GPU EC2 instance",
       "text": "Create an SSH key pair and launch a g4dn.xlarge (or larger) Amazon Linux instance with the IAM profile and security group attached."
     },
     {
       "@type": "HowToStep",
-      "position": 4,
+      "position": 5,
       "name": "Install Ollama via cloud-init",
       "text": "Use a cloud-init user-data script to install NVIDIA drivers, Docker, the NVIDIA Container Toolkit, and start the Ollama and Open WebUI containers. The script also pulls and runs your chosen model—for example deepseek-r1:7b, llama3.1:8b, qwen2.5:7b, or mistral:7b."
     },
     {
       "@type": "HowToStep",
-      "position": 5,
+      "position": 6,
       "name": "Deploy the infrastructure",
       "text": "Run pulumi up to provision all resources. After the stack is created, Pulumi outputs the public IP address of the instance."
     },
     {
       "@type": "HowToStep",
-      "position": 6,
+      "position": 7,
       "name": "Access the Web UI or OpenAI-compatible API",
       "text": "Open http://<instance-public-ip>:3000 for Open WebUI, or point any OpenAI-compatible client at http://<instance-public-ip>:11434/v1."
     }
@@ -98,7 +104,7 @@ social:
 }
 </script>
 
-**TL;DR — Want to self-host an open-source LLM on AWS?** Use a `g4dn.xlarge` ($0.526/hr on-demand, 16 GB GPU memory) for 7B/8B models, a `g5.xlarge` ($1.006/hr, 24 GB) for 13B–14B models, a `g5.2xlarge` ($1.212/hr, 24 GB) for 32B models, or a `g6e.2xlarge` ($2.242/hr, 48 GB) for 70B models. Deploy with the Pulumi program below and Ollama will run any model from its library—DeepSeek-R1, Llama 3, Qwen, Mistral—with a one-line change.
+**TL;DR. Want to self-host an open-source LLM on AWS?** Use a `g4dn.xlarge` ($0.526/hr on-demand, 16 GB GPU memory) for 7B/8B models, a `g5.xlarge` ($1.006/hr, 24 GB) for 13B–14B models, a `g5.2xlarge` ($1.212/hr, 24 GB) for 32B models, or a `g6e.2xlarge` ($2.242/hr, 48 GB) for 70B models. Deploy with the Pulumi program below and Ollama will run any model from its library: DeepSeek-R1, Llama 3, Qwen, or Mistral, with a one-line change.
 
 <!--more-->
 
@@ -115,7 +121,7 @@ This guide walks through that deployment end-to-end: a single Pulumi program tha
 
 Self-hosting an open-source LLM on AWS gives you three things hosted APIs can't: data stays inside your VPC, per-token costs collapse to a flat hourly rate at high volume, and you can fine-tune or quantize models freely under permissive licenses. Ollama handles all three concerns from a single binary: it downloads, manages, and serves models behind an OpenAI-compatible API on port 11434.
 
-The original version of this post focused on DeepSeek-R1 because it landed in late January 2025 and reset expectations for what an open-weight reasoning model could do. DeepSeek-R1 is still an excellent default—MIT-licensed, strong on math and coding, with distilled 1.5B–70B variants—but the same infrastructure runs Meta's Llama 3, Alibaba's Qwen, and Mistral equally well. Picking a model is now a config change, not an infrastructure decision.
+The original version of this post focused on [DeepSeek-R1](https://www.deepseek.com/) because it landed in late January 2025 and reset expectations for what an open-weight reasoning model could do. DeepSeek-R1 is still an excellent default (MIT-licensed, strong on math and coding, with distilled 1.5B–70B variants) but the same infrastructure runs [Meta's Llama 3](https://ai.meta.com/llama/), [Alibaba's Qwen](https://qwenlm.ai/), and [Mistral](https://mistral.ai/) equally well. Picking a model is now a config change, not an infrastructure decision.
 
 ![A bar chart compares the performance of DeepSeek and OpenAI models across six benchmarks: AIME 2024, Codeforces, GPQA Diamond, MATH-500, MMLU, and SWE-bench Verified. The models evaluated include DeepSeek-R1, DeepSeek-R1-32B, DeepSeek-V3, OpenAI-o1-1217, and OpenAI-o1-mini, with accuracy or percentile scores represented as bars. DeepSeek-R1 (blue-striped) consistently ranks among the top performers, particularly excelling in MATH-500 (97.3%), MMLU (90.8%), and Codeforces (96.3%). The chart visually distinguishes each model using different colors and shading.](img_1.png)
 
@@ -153,7 +159,7 @@ Compare against hosted pricing as of April 2026 (input + output blended, rough n
 | Anthropic | Claude Sonnet 4 | ~$6.00 per 1M tokens |
 | DeepSeek (hosted) | DeepSeek-V3 | ~$0.50 per 1M tokens |
 
-A `g4dn.xlarge` running Llama 3.1 8B sustains roughly **40–60 tokens/sec** under single-user load, or about **130–200M tokens/month** at 100% utilization. At that ceiling the effective rate is **~$2/M tokens**—cheaper than GPT-4o or Claude, more expensive than GPT-4o-mini or DeepSeek's own hosted API.
+A `g4dn.xlarge` running Llama 3.1 8B sustains roughly **40–60 tokens/sec** under single-user load, or about **100–155M tokens/month** at 100% utilization. At that ceiling the effective rate is **~$2.40/M tokens**—cheaper than GPT-4o or Claude, more expensive than GPT-4o-mini or DeepSeek's own hosted API.
 
 The takeaway: **self-hosting wins on data residency, latency, and predictable cost at high utilization. Hosted APIs win below ~10M tokens/month or when you need frontier-class quality.** Run the math against your actual token volume before committing.
 
@@ -178,7 +184,7 @@ It supports the major open-weight families—DeepSeek-R1, Llama 3, Qwen, Mistral
 
 ### Architecture
 
-![A diagram illustrating an AWS-based deployment with an EC2 GPU-enabled instance running Ollama and Open-WebUI within a public subnet of a VPC. The setup includes a Docker container and is connected to an external LLM (DeepSeek-R1:7B), represented by a blue box with an arrow pointing from the EC2 instance. The Ollama mascot is depicted as part of the architecture.](img_4.png)
+![A diagram illustrating an AWS-based deployment with an EC2 GPU-enabled instance running Ollama and Open-WebUI within a public subnet of a VPC. The setup includes a Docker container connected to an open-source LLM served by Ollama (such as DeepSeek-R1:7B or any Ollama-supported model), represented by a blue box with an arrow pointing from the EC2 instance. The Ollama mascot is depicted as part of the architecture.](img_4.png)
 
 ### Create a new Pulumi project
 
