@@ -69,11 +69,14 @@ Changes that alter *when* CI runs produce large blast radii. Flag any change to:
 
 ### Documentation drift
 
-If the PR changes any of the above without updating `BUILD-AND-DEPLOY.md`, flag the omission. Examples:
+If the PR changes any of the above without updating `BUILD-AND-DEPLOY.md` — or makes its existing prose wrong without touching the doc — flag it. Examples:
 
 - New `make` target but §Makefile Targets not updated
 - Changed deployment workflow but §Production Deployment not updated
 - New environment variable required by a script but §Environment Setup silent on it
+- Default flipped on an existing flag or env var while the corresponding §section still asserts the old behavior — 🚨 (clearly-broken state) when the doc claim is concretely contradicted by the diff
+
+When the diff touches `scripts/`, `Makefile`, or build/serve config, grep `BUILD-AND-DEPLOY.md` for the affected script/flag/env-var names *even when the diff doesn't touch the doc*. That's where the contradiction case hides.
 
 For the canonical risk catalog, consult `BUILD-AND-DEPLOY.md` §Infrastructure Change Review; for the runtime/build/dev split, §Dependency risk tiers.
 
