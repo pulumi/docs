@@ -2,7 +2,7 @@
 title_tag: Deploy a Virtual Machine to AWS
 title: Virtual Machine on AWS
 layout: template
-meta_desc: Easily deploy a virtual machine on Amazon Web Services (AWS) with Pulumi and Amazon EC2 using this template.
+meta_desc: Deploy an Amazon EC2 virtual machine on AWS running Amazon Linux 2023 with Pulumi in TypeScript, Python, Go, C#, or YAML.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on AWS with Pulumi and Amazon EC2.
 template:
@@ -19,13 +19,13 @@ cloud:
   slug: aws
 ---
 
-The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtual machine to AWS. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Amazon EC2 for the virtual machine and Amazon VPC for the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The AWS Virtual Machine template scaffolds a Pulumi project that provisions an [Amazon EC2 instance](/registry/packages/aws/api-docs/ec2/instance/) running Amazon Linux 2023 inside a new [Amazon VPC](/registry/packages/aws/api-docs/ec2/vpc/). The instance boots a small Python HTTP server on port 80 from user data, so the project deploys end to end out of the box. Use it as a starting point for a web application, backend service, or database VM.
 
-![An architecture diagram of the Pulumi $CLOUD $ARCHITECTURE template](./architecture.png)
+![An architecture diagram of the AWS Virtual Machine template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy your own virtual machine, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy your own virtual machine, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,7 +39,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 ip
 : The IP address of the EC2 instance.
@@ -58,7 +58,7 @@ $ open $(pulumi stack output url)
 
 ## Customizing the project
 
-Projects created with the Virtual Machine template expose the following [configuration](/docs/concepts/config) settings:
+Projects created with the Virtual Machine template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 instanceType
 : The EC2 instance type to use for the VM. Defaults to `t3.micro`.
@@ -78,9 +78,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade virtual machine on AWS with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates as they're available in [Templates &rarr;](/templates)
-* Dive into the AWS package by exploring the [API docs in the Registry &rarr;](/registry/packages/aws)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/aws)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [AWS provider API docs](/registry/packages/aws) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [AWS posts on the Pulumi blog](/blog/tag/aws).
