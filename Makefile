@@ -19,6 +19,7 @@ ensure: clean
 	./scripts/ensure.sh
 	node scripts/sync-icons.js
 	node scripts/normalize-custom-icons.js
+	node scripts/build-icon-sprite.js
 	./scripts/fetch-openapi-spec.sh
 	$(MAKE) build-assets
 

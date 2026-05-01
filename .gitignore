@@ -71,6 +71,8 @@ data/openapi-spec.json
 # Ignore sync-generated icon assets (rebuilt by `make ensure`).
 /assets/icons/phosphor/
 /assets/icons/brand/
+/assets/icons/sprite.svg
+/assets/icons/sprite-manifest.json
 
 # Ignore the inbox for custom icon staging.
 /assets/icons/custom/_inbox/

@@ -10,9 +10,6 @@
     fill: currentColor;
 }
 
-.ph-icon--duotone {
-    .duotone-secondary {
-        fill: currentColor;
-        opacity: 0.2;
-    }
-}
+// Note: duotone styling is handled by the inline opacity="0.2" attribute on
+// the secondary <path> inside each <symbol>. Host-page CSS targeting
+// .duotone-primary / .duotone-secondary cannot reach into <use> shadow DOM.

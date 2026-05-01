@@ -16,6 +16,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
         @apply pt-6 pb-3 px-4;
     }
 
+   .logo svg {
+        @apply ml-2;
+    }
+
     .top-nav-container &:not(.docs) &:not(.registry) {
         @apply lg:container lg:px-4;
     }
@@ -34,6 +38,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 @apply inline-block mr-2;
             }
         }
+
 
         .top-nav-banner-container {
             @apply w-full text-right;

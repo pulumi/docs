@@ -10,9 +10,10 @@
  * Normalization applied to each SVG:
  *   - Remove width/height attributes from <svg>
  *   - Set fill="currentColor" on <svg>
- *   - Strip fill="#..." from individual <path> elements
- *   - Tag duotone secondary paths (opacity="0.2") with class="duotone-secondary"
- *   - Tag duotone primary paths with class="duotone-primary"
+ *   - Strip fill="#..." and stroke="#..." from individual <path> elements
+ *   - Preserve opacity="0.2" on duotone secondary paths (the inline attribute
+ *     drives the duotone effect; CSS classes can't reach paths inside <use>
+ *     shadow DOM, so no class tagging is applied)
  */
 
 const fs = require("fs");
@@ -39,7 +40,7 @@ const WEIGHTS = [
     { figma: "Duotone", suffix: "-duotone" },
 ];
 
-function normalizeSvg(content, isDuotone) {
+function normalizeSvg(content) {
     // Remove XML declaration if present
     content = content.replace(/<\?xml[^?]*\?>\s*/g, "");
 
@@ -56,47 +57,29 @@ function normalizeSvg(content, isDuotone) {
         return `<svg${attrs}>`;
     });
 
-    if (isDuotone) {
-        // Tag secondary (opacity="0.2") paths
-        content = content.replace(
-            /<path([^>]*)\bopacity="0\.2"([^>]*)>/g,
-            (match, before, after) => {
-                const attrs = (before + after)
-                    .replace(/\bfill="[^"]*"/g, "")
-                    .replace(/\bstroke="[^"]*"/g, "")
-                    .trim();
-                return `<path class="duotone-secondary" ${attrs}>`;
-            }
-        );
-        // Tag primary paths (those without opacity="0.2")
-        content = content.replace(
-            /<path(?![^>]*\bclass=)([^>]*)>/g,
-            (match, attrs) => {
-                const cleaned = attrs
-                    .replace(/\bfill="[^"]*"/g, "")
-                    .replace(/\bstroke="[^"]*"/g, "")
-                    .trim();
-                return `<path class="duotone-primary" ${cleaned}>`;
-            }
-        );
-    } else {
-        // Regular / bold: just strip hard-coded fill/stroke on paths
-        content = content.replace(
-            /<path([^>]*)>/g,
-            (match, attrs) => {
-                const cleaned = attrs
-                    .replace(/\bfill="[^"]*"/g, "")
-                    .replace(/\bstroke="[^"]*"/g, "")
-                    .trim();
-                return `<path ${cleaned}>`;
-            }
-        );
-    }
+    // Strip hard-coded fill/stroke on paths. For duotone, the inline
+    // opacity="0.2" attribute on secondary paths is preserved as-is and is
+    // what produces the duotone effect when the symbol is referenced via <use>.
+    content = content.replace(
+        /<path([^>]*)>/g,
+        (match, attrs) => {
+            const cleaned = attrs
+                .replace(/\bfill="[^"]*"/g, "")
+                .replace(/\bstroke="[^"]*"/g, "")
+                .trim();
+            return `<path ${cleaned}>`;
+        }
+    );
 
     // Collapse any double spaces introduced by replacements
     content = content.replace(/ {2,}/g, " ");
     // Ensure trailing newline
     return content.trimEnd() + "\n";
+}
+
+if (!fs.existsSync(INBOX)) {
+    console.log("No _inbox/ directory; nothing to normalize.");
+    process.exit(0);
 }
 
 let written = 0;
@@ -105,8 +88,6 @@ let errors = 0;
 for (const [folder, slug] of Object.entries(ICON_MAP)) {
     const srcDir = path.join(INBOX, folder);
     if (!fs.existsSync(srcDir)) {
-        console.error(`MISSING: ${srcDir}`);
-        errors++;
         continue;
     }
 
@@ -119,7 +100,7 @@ for (const [folder, slug] of Object.entries(ICON_MAP)) {
         }
 
         const raw = fs.readFileSync(srcFile, "utf8");
-        const normalized = normalizeSvg(raw, figma === "Duotone");
+        const normalized = normalizeSvg(raw);
         const outFile = path.join(OUT, `${slug}${suffix}.svg`);
         fs.writeFileSync(outFile, normalized);
         console.log(`  wrote  ${path.relative(ROOT, outFile)}`);
