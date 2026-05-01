@@ -15,7 +15,7 @@
 	.st9{fill:#EF00C3;}
 	.st10{fill:#FFFFFF;}
 	.st11{fill:#FEE6FF;}
-	.st12{fill:#805AC3;}
+	.st12{fill:var(--color-violet-primary);}
 	.st13{fill:#E5E7F9;}
 	.st14{opacity:0.81;fill:#FFFFFF;}
 	.st15{fill:#FFFF9F;}

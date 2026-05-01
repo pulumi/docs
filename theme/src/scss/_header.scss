@@ -38,7 +38,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 @apply flex-grow justify-start mt-0 text-left mr-4;
             }
 
-            background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%) !important;
+            background: var(--color-violet-primary) !important;
 
             .top-nav-banner {
                 @apply px-3 py-2 text-left;
@@ -80,7 +80,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
         .logo-nav-menu {
 
-            @apply w-full bg-gray-850 pt-2 -ml-2 text-white font-display z-50;
+            @apply w-full bg-gray-900 pt-2 -ml-2 text-white font-display z-50;
             top: 44px; // Height of the nav bar at screens below large.
 
             @include screen-md {
@@ -114,9 +114,9 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 height: 33px;
                 padding: 8px 16px;
 
-                border: 1px solid #805ac3;
+                border: 1px solid var(--color-violet-primary);
                 border-radius: 20px;
-                background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                background: var(--color-violet-primary);
                 color: #fff;
 
                 &:hover,
@@ -207,7 +207,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 &:hover {
                     a,
                     .dropdown-title {
-                        color: $brand-violet;
+                        color: var(--color-violet-primary);
                     }
                 }
 
@@ -223,12 +223,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                             min-width: fit-content;
                             div {
                                 .header-nav-drop-down-heading {
-                                    border-top: 2px solid;
-                                    border-image-slice: 1;
-                                    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+                                    border-top: 2px solid var(--color-violet-primary);
                                 }
                                 .header-nav-drop-down-heading-text {
-                                    @apply font-medium;
+                                    @apply font-semibold;
                                     @apply mx-auto;
                                     @apply w-min;
                                     @apply px-2;
@@ -262,7 +260,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                                 flex: 50%;
 
                                 .list-title {
-                                    @apply px-0 text-base text-left w-full font-medium;
+                                    @apply px-0 text-base text-left w-full font-semibold;
                                 }
 
                                 .list-sub-title {
@@ -274,7 +272,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                                     @apply font-semibold;
                                     a {
                                         @apply font-semibold;
-                                        color: $brand-violet;
+                                        color: var(--color-violet-primary);
                                         .list-sub-title {
                                             color: theme("colors.gray.800");
                                         }
@@ -416,7 +414,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 @apply mt-2 text-base hidden;
                 flex-basis: 100%;
                 a {
-                    @apply text-xl font-medium text-gray-700 mt-4;
+                    @apply text-xl font-semibold text-gray-700 mt-4;
                     color: theme("colors.gray.800");
                     i {
                         min-width: 2rem;
@@ -442,7 +440,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                     @apply block;
                 }
                 .mobile-menu-heading {
-                    color: $brand-violet;
+                    color: var(--color-violet-primary);
                 }
                 label > span.dropdown-menu-caret {
                     @apply opacity-50;
@@ -455,7 +453,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                     @apply block;
                 }
                 .mobile-menu-heading {
-                    color: $brand-violet;
+                    color: var(--color-violet-primary);
                 }
                 label > span.dropdown-menu-caret {
                     @apply opacity-50;
@@ -469,7 +467,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 }
 
                 .mobile-menu-heading {
-                    color: $brand-violet;
+                    color: var(--color-violet-primary);
                 }
 
                 label > span.dropdown-menu-caret {
@@ -484,7 +482,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
                 }
 
                 .mobile-menu-heading {
-                    color: $brand-violet;
+                    color: var(--color-violet-primary);
                 }
 
                 label > span.dropdown-menu-caret {
@@ -576,8 +574,8 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
             &:hover,
             &:active {
-                background: linear-gradient(90deg, #be5188 0%, #805ac3 100%) border-box;
-                color: $white;
+                background: var(--color-violet-primary);
+                color: #fff;
                 box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
                 border-color: transparent;
                 border-radius: 20px;

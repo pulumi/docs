@@ -18,7 +18,7 @@
                 {{ range $page := .Page.CurrentSection.Pages }}
                     <li class="md:w-1/2 lg:w-1/3">
                         <div class="px-4 py-2 w-full h-full">
-                            <div class="shadow-xl rounded-xl bg-white py-4 px-6 h-full border border-gray-200">
+                            <div class=" rounded-xl bg-white py-4 px-6 h-full border border-gray-200">
                                 {{ with $page }}
                                     {{ if .Params.meta_image }}
                                         <a class="text-gray-900" href="{{ .RelPermalink }}">

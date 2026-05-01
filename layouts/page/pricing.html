@@ -1,5 +1,5 @@
 {{ define "main" }}
-    <h1 class="text-5xl text-center mt-4 text-gray-800">Plans for teams of all sizes</h1>
+    <h1 class="text-5xl text-center mt-4">Plans for teams of all sizes</h1>
     <section class="container mx-auto text-center mb-16 mt-4">
         <p class="max-w-4xl mx-auto mt-6 price">
             Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
@@ -7,15 +7,6 @@
     </section>
 
     <section id="plans" class="relative mb-16">
-        <div class="shape-background pricing-small-dots">
-            <div class="relative w-full h-full">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-                <div class="circle-left"></div>
-            </div>
-        </div>
 
         <div class="container mx-auto lg:flex">
             <div class="w-full p-8 lg:p-0">
@@ -23,7 +14,7 @@
                     <div class="h-full flex">
                         <div class="w-1/4 flex"></div>
                         <div class="w-1/4 flex"></div>
-                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-purple-200">Popular</div>
+                        <div class="w-1/4 flex justify-center items-center rounded-t-full bg-violet-200">Popular</div>
                         <div class="w-1/4 flex"></div>
                     </div>
                 </div>
@@ -35,7 +26,7 @@
                                 <div class="lg:hidden absolute w-28 mx-auto left-0 right-0 text-center bg-white">
                                     <p class="my-0 -mt-3">Popular</p>
                                 </div>
-                                {{ $mobileBookmarkClass = "border-t-2 border-purple-300 rounded-2xl lg:rounded-none lg:border-0"}}
+                                {{ $mobileBookmarkClass = "border-t-2 border-violet-300 rounded-2xl lg:rounded-none lg:border-0"}}
                             {{ end }}
                             {{ $rightBorderClass := "" }}
                             {{ if not (eq $index 3) }}
@@ -57,20 +48,20 @@
                                 </div>
                                 {{ if eq $index 0 }}
                                     <div class="flex flex-wrap flex-col justify-center align-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label_short }}</a>
+                                        <a class="text-white text-s bg-violet-primary border-2 border-violet-primary rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label_short }}</a>
                                     </div>
                                 {{ else if eq $index 1 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup?create-organization=1">Start a free trial</a>
+                                        <a class="text-white text-s bg-violet-primary border-2 border-violet-primary rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap" href="https://app.pulumi.com/signup?create-organization=1">Start a free trial</a>
                                     </div>
                                 {{ else if eq $index 2 }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/signup?create-organization=1">Start a free trial</a>
-                                        <a href="/contact/?form=sales" class="text-violet-600 text-s border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
+                                        <a class="text-white text-s bg-violet-primary border-2 border-violet-primary rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="https://app.pulumi.com/signup?create-organization=1">Start a free trial</a>
+                                        <a href="/contact/?form=sales" class="text-violet-primary text-s border-2 border-violet-primary rounded-lg py-2 px-2 hover:bg-violet-100">Contact sales</a>
                                     </div>
                                 {{ else }}
                                     <div class="flex flex-wrap justify-center items-center text-center my-4 h-14 lg:h-24 xl:h-14">
-                                        <a class="text-white text-s bg-violet-600 border-2 border-violet-600 rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales">Contact sales</a>
+                                        <a class="text-white text-s bg-violet-primary border-2 border-violet-primary rounded-lg py-2 px-2 hover:bg-violet-500 text-nowrap mr-1 mb-0 lg:mb-1 xl:mb-0" href="/contact/?form=sales">Contact sales</a>
                                     </div>
                                 {{ end }}
                                 <div class="border-dotted border-2 border-gray-200 rounded-lg px-4">
@@ -169,7 +160,7 @@
                                             {{ if $row.tooltip }}
                                                 <span>
                                                     <pulumi-tooltip>
-                                                        <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
+                                                        <i class="w-8 ml-2 fas fa-info-circle text-violet-primary"></i>
                                                         <span slot="content">{{ $row.tooltip }}</span>
                                                     </pulumi-tooltip>
                                                 </span>
@@ -187,7 +178,7 @@
                                                 {{ if $item.tooltip }}
                                                     <span>
                                                         <pulumi-tooltip>
-                                                            <i class="w-8 ml-2 fas fa-info-circle text-blue-600"></i>
+                                                            <i class="w-8 ml-2 fas fa-info-circle text-violet-primary"></i>
                                                             <span slot="content">{{ $item.tooltip }}</span>
                                                         </pulumi-tooltip>
                                                     </span>
@@ -239,21 +230,14 @@
     </section>
 
     <section id="calculator" class="relative mt-16 mb-24">
-        <div class="shape-background pricing-compare-updated">
-            <div class="relative w-full h-full">
-                <div class="circle-left"></div>
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="container mx-auto bg-white">
             <div id="calculator" class="mt-16 mb-24">
                 <pulumi-pricing-calculator></pulumi-pricing-calculator>
             </div>
 
             <div class="flex justify-center mt-24">
-                <div class="card ready-cta w-full rounded-xl p-0.5 gradient">
-                    <div class="flex justify-center rounded-xl bg-purple-100">
+                <div class="card ready-cta w-full rounded-xl">
+                    <div class="flex justify-center rounded-xl bg-violet-100">
                         <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
                             <h2 class="mb-12 text-center">Ready to try Pulumi Cloud?</h2>
                             <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">

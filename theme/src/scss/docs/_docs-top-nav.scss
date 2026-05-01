@@ -57,9 +57,9 @@ nav.actually-docs {
                 box-shadow: none;
                 color: #fff;
                 padding: 8px 16px;
-                border: 1px solid #805ac3;
-                border-radius: 20px;
-                background: linear-gradient(90deg,#be5188,#805ac3) border-box;
+                border: 1px solid var(--color-violet-primary);
+                border-radius: 4px;
+                background: var(--color-violet-primary);
 
                 &:hover {
                     color: #131314;

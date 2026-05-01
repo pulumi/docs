@@ -15,7 +15,7 @@
                     padding: 6px 12px;
 
                     &.active {
-                        @apply bg-blue-200 text-blue-900;
+                        @apply bg-violet-200 text-violet-900;
                     }
 
                     button {
@@ -30,10 +30,10 @@
 
                 // Only apply hover to non-expandable (document) links
                 &:not(.expandable) a:hover {
-                    @apply bg-blue-100 text-blue-800;
+                    @apply bg-violet-100 text-violet-800;
 
                     i {
-                        @apply text-blue-900;
+                        @apply text-violet-900;
                     }
                 }
 
@@ -43,7 +43,7 @@
 
                 &.expanded {
                     > a {
-                        @apply text-blue-800;
+                        @apply text-violet-800;
 
                         > button {
                             > i {

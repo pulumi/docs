@@ -123,13 +123,13 @@ capabilities:
 
         - title: Federated Services
           icon: security
-          icon_color: salmon
+          icon_color: violet
           description: |
             Leverage existing SAML 2.0 and Single Sign-On (SSO) solutions and use the System for Cross-domain Identity Management (SCIM) protocol for automatic identity synchronization with systems like Microsoft Active Directory, Google Workspace, and Okta.
 
         - title: Role Based Access Control (RBAC)
           icon: lock
-          icon_color: purple
+          icon_color: violet
           description: |
             Control access to sensitive data and operations through fine-grained roles across the entire organization and for specific projects.
 
@@ -147,7 +147,7 @@ capabilities:
 
         - title: Security
           icon: shield
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi runs in an AWS VPC and our architecture follows industry best practices. All network communication is encrypted using TLS and Pulumi’s endpoints are only accessible via HTTPS. Your data is also encrypted at-rest and Pulumi is compliant with SOC 2 Type II. To learn more about our architecture and security practices, [read our whitepaper](/security/pulumi-cloud-security-whitepaper).
 

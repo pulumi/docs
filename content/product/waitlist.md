@@ -23,7 +23,7 @@ benefits:
     title: Benefits of Insights 2.0
     items:
         - icon: eye
-          icon_color: purple
+          icon_color: violet
           title: Understand Cloud Usage
           description: Pulumi Insights makes it easy to group, filter, and search for resources across your infrastructure, so you can find that needle (single resource) in the haystack (across many clouds and environments).
         - icon: guage
@@ -31,7 +31,7 @@ benefits:
           title: Discover Cost Savings
           description: Pulumi Insights identifies anomalies and trends in resource usage in order to pinpoint potential cost savings.
         - icon: security
-          icon_color: salmon
+          icon_color: violet
           title: Enforce Compliance
           description: Pulumi Insights provides comprehensive visibility into security and compliance policy violations, along with the ability to remediate issues directly through code.
 

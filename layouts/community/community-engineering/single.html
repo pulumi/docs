@@ -35,7 +35,7 @@
                 {{ range $talk := .Params.talks }}
                     <li class="flex text-sm md:text-base p-4">
                         <div class="w-1/3">
-                            <a class="text-blue-500 underline" href="{{ $talk.url }}">
+                            <a class="text-violet-primary underline" href="{{ $talk.url }}">
                                 {{ $talk.event }}
                             </a>
                         </div>
@@ -48,7 +48,7 @@
                                     {{ time.Format "01/02/2006" $talk.date }}
                                 </time>
                                 {{ if $talk.slides }}
-                                    &bull; <a class="text-blue-500 underline" href="{{ $talk.slides }}">Slides</a>
+                                    &bull; <a class="text-violet-primary underline" href="{{ $talk.slides }}">Slides</a>
                                 {{ end }}
                             </div>
                         </div>

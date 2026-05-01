@@ -13,35 +13,19 @@ section.docs-home {
     }
 
     h3 {
-        font-family: 'Gilroy';
-        font-weight: 500;
+        font-family: 'Inter';
+        font-weight: 600;
         font-size: 21px;
-        color: map-get($gray, 950);
+        color: var(--color-gray-950);
     }
 
     div.header {
         @apply flex flex-col gap-4 p-6 rounded bg-no-repeat bg-right-bottom;
         min-height: 200px;
 
-        background-image: url("/images/docs/docs-home-header-background-mobile.svg");
 
         p {
             @apply max-w-2xl;
-        }
-
-        @include screen-md {
-            @apply bg-auto;
-            background-image: url("/images/docs/docs-home-header-background-tablet.svg");
-        }
-
-        @include screen-lg {
-            background-image: url("/images/docs/docs-home-header-background-desktop.svg");
-        }
-
-        @include screen-xl {
-            .docs-content-width-expanded & {
-                background-image: url("/images/docs/docs-home-header-background-desktop-wide.svg");
-            }
         }
 
         @include screen-xxl {
@@ -59,27 +43,27 @@ section.docs-home {
             a {
                 padding: 5px 16px;
                 border-radius: 4px;
-                border: 1px map-get($brand, "blue") solid;
-                background: $white;
+                border: 1px var(--color-violet-primary) solid;
+                background: #fff;
                 font-family: 'Inter';
                 font-weight: 400;
                 font-size: 14px;
-                color: $white;
+                color: #fff;
 
                 &.docs-primary-link-btn {
-                    background: map-get($brand, "blue");
-                    color: $white;
+                    background: var(--color-violet-primary);
+                    color: #fff;
 
                     &:hover {
-                        background: map-get($brand, "blue-darker");
+                        background: var(--color-violet-800);
                     }
                 }
 
                 &.docs-secondary-link-btn {
-                    color: map-get($brand, "blue");
+                    color: var(--color-violet-primary);
 
                     &:hover {
-                        background: map-get($blue, 100);
+                        background: var(--color-violet-100);
                     }
                 }
             }
@@ -87,10 +71,10 @@ section.docs-home {
     }
 
     h2 {
-        font-family: 'Gilroy';
-        font-weight: 500;
+        font-family: 'Inter';
+        font-weight: 600;
         font-size: 24px;
-        color: map-get($gray, 950);
+        color: var(--color-gray-950);
     }
 
     div.docs-home-section {
@@ -104,7 +88,7 @@ section.docs-home {
         display: flex;
         flex-direction: column;
         gap: 0;
-        background: map-get($blue, 100);
+        background: var(--color-blue-100);
         border-radius: 4px;
 
         .heading {
@@ -125,8 +109,8 @@ section.docs-home {
         flex-direction: column;
         gap: 12px;
         padding: 24px;
-        background: $white;
-        border: 1px solid map-get($gray, 150);
+        background: #fff;
+        border: 1px solid var(--color-gray-200);
         box-shadow: 0px 2px 24px rgba(95, 96, 101, 0.14);
         border-radius: 4px;
 
@@ -135,7 +119,7 @@ section.docs-home {
             align-items: center;
             gap: 12px;
             padding-bottom: 10px;
-            border-bottom: 1px solid map-get($gray, 150);
+            border-bottom: 1px solid var(--color-gray-200);
 
             div.icon {
                 top: -1px;
@@ -143,8 +127,8 @@ section.docs-home {
         }
 
         &:hover {
-            background: map-get($gray, 100);
-            border: 1px solid map-get($gray, 350);
+            background: var(--color-gray-50);
+            border: 1px solid var(--color-gray-400);
         }
     }
 
@@ -196,12 +180,11 @@ section.docs-home {
         a {
             flex: 1;
             border: 1px solid #E5E5E9;
-            filter: drop-shadow(0px 2px 24px rgba(95, 96, 101, 0.14));
             border-radius: 4px;
 
             div.card-icon {
-                background: map-get($gray, 100);
-                border-bottom: 1px solid map-get($gray, 150);
+                background: var(--color-gray-50);
+                border-bottom: 1px solid var(--color-gray-200);
                 border-radius: 4px 4px 0px 0px;
                 display: flex;
                 justify-content: center;
@@ -209,16 +192,16 @@ section.docs-home {
             }
 
             div.label {
-                background: $white;
+                background: #fff;
                 border-radius: 0px 0px 4px 4px;
                 font-family: 'Inter';
                 font-weight: 400;
                 font-size: 18px;
-                color: map-get($gray, 950);
+                color: var(--color-gray-950);
             }
 
             &:hover {
-                border: 1px solid map-get($gray, 350);
+                border: 1px solid var(--color-gray-400);
             }
         }
     }

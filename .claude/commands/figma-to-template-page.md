@@ -213,7 +213,7 @@ Use neutral class names for inner elements shared across partials (e.g. `section
 For CTA link styling, the shared selector covers all template partials:
 ```scss
 [class*="template-"] {
-    .cta { @apply text-violet-800 font-semibold font-body no-underline; }
+    .cta { @apply text-violet-primary font-semibold font-body no-underline; }
 }
 ```
 

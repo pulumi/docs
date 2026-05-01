@@ -20,12 +20,6 @@
         {{ range $index, $feature := .Params.key_features_above.items }}
             <div class="mb-16 pt-8 relative">
                 {{ if eq $index 0 }}
-                    <div class="shape-background home-background-yellow-left pt-24">
-                        <div class="shape-container flex">
-                            <div class="circle-left"></div>
-                            <div class="circle-right"></div>
-                        </div>
-                    </div>
 
                     <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
                         <h3>{{ $feature.title }}</h3>
@@ -44,12 +38,6 @@
                         </div>
                     </div>
                 {{ else }}
-                    <div class="shape-background home-background-salmon-right pt-24">
-                        <div class="shape-container">
-                            <div class="circle-left"></div>
-                            <div class="circle-right"></div>
-                        </div>
-                    </div>
 
                     <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
                         <h3>{{ $feature.title }}</h3>
@@ -94,12 +82,6 @@
     </section>
 
     <section id="key-features">
-        <div class="shape-background product-features-section">
-            <div class="shape-container">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
 
         {{ range $item := .Params.key_features.items }}
             <div class="container mx-auto text-center pt-20 w-11/12 sm:w-9/12">
@@ -147,12 +129,6 @@
     </section>
 
     <section id="get-started" class="my-32 relative">
-        <div class="shape-background product-get-started-section">
-            <div class="shape-container">
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
 
         <div class="container mx-auto">
             <h2 class="mb-8 text-center">{{ .Params.learn.title }}</h2>

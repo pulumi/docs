@@ -39,7 +39,7 @@ why_neo:
     - title: Provision a Kubernetes Cluster
       description: "Go from prompt to a running EKS cluster with plan/preview and a full audit trail."
       icon: rocketship
-      color: salmon
+      color: violet
       button_text: Try This in Neo
       button_url: "https://app.pulumi.com/pulumi/neo?prompt=Provision%20an%20EKS%20cluster%20with%20preview%20and%20an%20audit%20trail&prefer_signup=true"
     - title: Enforce Guardrails by Default
@@ -57,7 +57,7 @@ why_neo:
     - title: Cut Cloud Waste
       description: "Find idle or oversized resources across AWS, Azure, and Google Cloud, then right-size or remove safely."
       icon: cycle
-      color: fuchsia
+      color: violet
       button_text: Try This in Neo
       button_url: "https://app.pulumi.com/pulumi/neo?prompt=Find%20idle%20and%20oversized%20resources%20and%20propose%20rightsizing&prefer_signup=true"
     - title: Works Where You Work
