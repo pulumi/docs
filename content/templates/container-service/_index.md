@@ -25,7 +25,7 @@ The major clouds each offer several container services with different operationa
 
 ### How do I deploy a container service with Pulumi?
 
-Use one of the Container Service templates above to scaffold a complete Pulumi project that provisions a container service and the infrastructure it depends on, including a registry for your container image and a load balancer or HTTPS endpoint where applicable. Templates are available in TypeScript, Python, Go, and C#, and each one deploys end to end with `pulumi new` followed by `pulumi up`.
+Use one of the Container Service templates above to scaffold a complete Pulumi project that provisions a container service and the infrastructure it depends on, including a registry for your container image and a load balancer or HTTPS endpoint where applicable. Templates are available in TypeScript, Python, Go, and C# (plus YAML on AWS), and each one deploys end to end with `pulumi new` followed by `pulumi up`.
 
 ### What languages can I use to define container infrastructure with Pulumi?
 

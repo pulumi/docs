@@ -3,6 +3,7 @@ title_tag: Templates for Deploying Kubernetes Applications
 title: "Kubernetes Application Templates"
 layout: overview
 schema_type: faq
+description: Pulumi templates for deploying Helm charts and web applications to existing Kubernetes clusters in your language of choice.
 meta_desc: Deploy applications and Helm charts to your existing Kubernetes clusters with Pulumi Kubernetes Application templates.
 meta_image: meta.png
 weight: 99
