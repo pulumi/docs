@@ -2,6 +2,7 @@
 title_tag: Deploy a Static Website to AWS
 title: AWS Static Website
 layout: template
+schema_type: howto
 meta_desc: Deploy a static website on AWS with a private Amazon S3 bucket and Amazon CloudFront over Origin Access Control using Pulumi.
 meta_image: meta.png
 card_desc: Deploy a static website on AWS with Pulumi, Amazon S3, and Amazon CloudFront.

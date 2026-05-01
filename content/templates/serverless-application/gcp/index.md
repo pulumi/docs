@@ -2,6 +2,7 @@
 title_tag: Deploy a Serverless Application to Google Cloud
 title: Google Cloud Serverless Application
 layout: template
+schema_type: howto
 meta_desc: Deploy a serverless application on Google Cloud with Pulumi, Cloud Functions (Gen 2), and Cloud Storage in TypeScript, Python, Go, C#, or YAML.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Google Cloud with Pulumi, Cloud Functions, and Cloud Storage.
