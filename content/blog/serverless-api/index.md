@@ -3,7 +3,7 @@ title: "Host your Python app for $1.12 a month"
 date: 2025-01-29T00:00:00
 updated: 2026-04-30
 draft: false
-meta_desc: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay about $1.12/month worst-case (or $0 when idle).
+meta_desc: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay ~$1.12/month worst-case ($0 when idle).
 meta_image: meta.png
 authors:
     - adam-gordon-bell
@@ -41,19 +41,19 @@ social:
 
             512MB memory
             40,000 requests/month
-            Total cost: $0.28/month (!!)
+            Typical cost: ~$0.04/month (worst-case ~$1.12/month)
             Zero traffic = Zero cost
 ---
 
-**TL;DR (2026 pricing):** You can host a Python API for as little as **$0.04/month** — or **$0 when idle** — by packaging Flask as a container, deploying it to AWS Lambda behind an HTTP API Gateway, and managing the whole thing with Pulumi. The breakdown: ~$0.04 for API Gateway requests, ~$0.07 for Lambda compute (fully absorbed by the always-free tier), and ~$1.08 for 12 GB of egress at $0.09/GB (also covered by AWS's 100 GB/month free egress unless other services in the same account have already used it). Worst-case: **~$1.12/month**. Verified against AWS pricing as of April 2026.
+**TL;DR (2026 pricing):** Packaging a Flask app as a container and running it on AWS Lambda behind an HTTP API Gateway costs **~$1.12/month** worst-case, or **$0 when idle**. The breakdown: $0.04 for API Gateway requests, $0.07 for Lambda compute (fully absorbed by the always-free tier), and $1.08 for 12 GB of egress at $0.09/GB (covered by AWS's 100 GB/month free egress allowance unless other services in the account have already used it). Pulumi handles the entire infrastructure. Verified against AWS pricing as of April 2026.
 
-How cheap can you host a Python app in 2026? For a low-traffic Flask API — say, 40,000 requests per month at 512 MB of memory — the answer is roughly **$1.12/month on AWS** worst-case, dropping to **$0 when idle**. The trick is to stop thinking of [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) as "one function per endpoint" and instead package your entire web framework as a container, deploy it to Lambda, and put it behind an HTTP API Gateway. Your code stays standard Flask. Your bill stays in the loose-change zone.
+How cheap can you host a Python app in 2026? For a low-traffic Flask API (say, 40,000 requests per month at 512 MB of memory), the answer is roughly **$1.12/month on AWS** worst-case, dropping to **$0 when idle**. The trick is to stop thinking of [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) as "one function per endpoint" and instead package your entire web framework as a container, deploy it to Lambda, and put it behind an HTTP API Gateway. Your code stays standard Flask. Your bill stays in the loose-change zone.
 
 This post walks through the whole setup with Pulumi, then compares the resulting cost against [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun/service/), Fly.io, Railway, and Vercel using current 2026 prices.
 <!--more-->
 {{< youtube "cjLpOJn0B6g?rel=0" >}}
 
-Most developers maintain at least one low-traffic service that still needs to be reliably available — an internal reporting API, a webhook receiver, a side project with occasional use. Traditional hosting means paying for 24/7 server time, even when the service sits idle. AWS Lambda's container support flips that: pay only when your API is being called, and any web framework that handles HTTP requests (Flask, FastAPI, Express) works without modification.
+Most developers maintain at least one low-traffic service that still needs to be reliably available: an internal reporting API, a webhook receiver, a side project with occasional use. Traditional hosting means paying for 24/7 server time, even when the service sits idle. AWS Lambda's container support flips that: pay only when your API is being called, and any web framework that handles HTTP requests (Flask, FastAPI, Express) works without modification.
 
 ### How does the pricing break down? (2026)
 
@@ -65,7 +65,7 @@ Plugging 40,000 requests per month at 512 MB memory and ~200 ms average executio
 1. **Data transfer out**: 12 GB × $0.09/GB = **$1.08** if billed, but AWS's always-free tier (expanded to 100 GB/month outbound in late 2021) covers this row outright unless other services in the same account have already exhausted that allowance.
 1. **Total**: **~$0.04/month** (egress in the free tier, only API Gateway bills) to **~$1.12/month** (12 GB egress billed in full: $1.08 + $0.04 API Gateway), with Lambda compute and requests always fully covered by the free tier.
 
-The underlying math hasn't changed since this post was first published in early 2025 — Lambda and API Gateway pricing has been remarkably stable, and AWS has only expanded free-tier allowances since.
+The underlying math hasn't changed since this post was first published in early 2025; Lambda and API Gateway pricing has been remarkably stable, and AWS has only expanded free-tier allowances since.
 
 ### Cheap Python hosting compared (2026)
 
@@ -395,16 +395,16 @@ I'd love to hear about your experiences with monolithic serverless applications.
 
 ## Related reading
 
-- [Get started with Pulumi on AWS](/docs/iac/get-started/aws/) — the official quickstart for the tooling used in this post.
-- [AWS Lambda function reference](/registry/packages/aws/api-docs/lambda/function/) — every property on the resource we used above.
-- [Code, deploy, and manage a serverless REST API on AWS with Pulumi](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/) — the function-per-route alternative to the monolith pattern.
-- [Controlling AWS costs with Lambda and Pulumi](/blog/controlling-aws-costs-with-lambda-and-pulumi/) — patterns for keeping your bill predictable as traffic grows.
-- [The cursed container iceberg](/blog/cursed-container-iceberg/) — every other place you can run the same container if you outgrow Lambda.
-- [Python for DevOps](/blog/python-for-devops/) — the companion post that ships the full source code for this example.
+- [Get started with Pulumi on AWS](/docs/iac/get-started/aws/): the official quickstart for the tooling used in this post.
+- [AWS Lambda function reference](/registry/packages/aws/api-docs/lambda/function/): every property on the resource we used above.
+- [Code, deploy, and manage a serverless REST API on AWS with Pulumi](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/): the function-per-route alternative to the monolith pattern.
+- [Controlling AWS costs with Lambda and Pulumi](/blog/controlling-aws-costs-with-lambda-and-pulumi/): patterns for keeping your bill predictable as traffic grows.
+- [The cursed container iceberg](/blog/cursed-container-iceberg/): every other place you can run the same container if you outgrow Lambda.
+- [Python for DevOps](/blog/python-for-devops/): the companion post that ships the full source code for this example.
 
 ## Changelog
 
-- **2026-04-30**: Refreshed for 2026 — re-verified Lambda/API Gateway/egress math, replaced the comparison table with current Cloud Run, Fly.io, Railway, and Vercel pricing, restructured H2s as user questions, added an answer-first intro and TL;DR, added a worked cost example and a HowTo schema for the deployment steps.
+- **2026-04-30**: Refreshed for 2026. Re-verified Lambda/API Gateway/egress math, replaced the comparison table with current Cloud Run, Fly.io, Railway, and Vercel pricing, restructured H2s as user questions, added an answer-first intro and TL;DR, added a worked cost example and a HowTo schema for the deployment steps.
 - **2025-03-13**: Minor copy edits.
 - **2025-01-29**: Original publication.
 
