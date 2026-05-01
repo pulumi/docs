@@ -2,9 +2,10 @@
 title_tag: Deploy a Serverless Application to Google Cloud
 title: Google Cloud Serverless Application
 layout: template
-meta_desc: Easily deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage using this template.
+schema_type: howto
+meta_desc: Deploy a serverless application on Google Cloud with Pulumi, Cloud Functions (Gen 2), and Cloud Storage in TypeScript, Python, Go, C#, or YAML.
 meta_image: meta.png
-card_desc: Deploy a serverless application on Google Cloud with Pulumi, Google Cloud Functions, and Google Cloud Storage.
+card_desc: Deploy a serverless application on Google Cloud with Pulumi, Cloud Functions, and Cloud Storage.
 template:
   prefix: serverless-gcp
   dirname: my-serverless-app
@@ -19,13 +20,17 @@ cloud:
   slug: gcp
 ---
 
-The Serverless Application template creates an infrastructure as code project in your favorite language that deploys a serverless application to Google Cloud Platform with Pulumi. It deploys a [Google Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) configured for static website hosting and another bucket to host the source code for a [Cloud Function](/registry/packages/gcp/api-docs/cloudfunctions/function/) written in the same language as the template. The template ships with placeholder content to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Google Cloud Serverless Application template scaffolds a Pulumi project that deploys a [Google Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) configured for static website hosting and a [Cloud Functions Gen 2 function](/registry/packages/gcp/api-docs/cloudfunctionsv2/function/) for the application backend. The template ships with placeholder web and function content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Pulumi Google Cloud Serverless Application template](./architecture.png)
+![An architecture diagram of the Google Cloud Serverless Application template](./architecture.png)
+
+## Before you deploy
+
+Cloud Functions Gen 2 functions are gated at the underlying Cloud Run service, so the public-invoker grant in this template is created with `gcp.cloudrun.IamMember` (`roles/run.invoker`). The identity running `pulumi up` needs to be able to set IAM policy on Cloud Run --- typically `roles/run.admin`, or a custom role that includes `run.services.setIamPolicy` --- in addition to the permissions needed to create the function and storage resources.
 
 ## Using this template
 
-To use this template to deploy your own serverless application, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy your own serverless application, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,7 +44,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 siteURL
 : The HTTP URL of the static website.
@@ -55,7 +60,7 @@ $ open $(pulumi stack output siteURL)
 
 ## Customizing the project
 
-Projects created with the serverless template expose the following [configuration](/docs/concepts/config/) settings:
+Projects created with the serverless template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 sitePath
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -69,14 +74,14 @@ indexDocument
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ```bash
-$ pulumi config set www_path ../my-existing-website/build
+$ pulumi config set sitePath ../my-existing-website/build
 $ pulumi up
 ```
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -86,9 +91,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade serverless application on Google Cloud with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the Google Cloud Classic package by exploring the [API docs in the Registry &rarr;](/registry/packages/gcp)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/google-cloud)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Google Cloud provider API docs](/registry/packages/gcp) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [Google Cloud posts on the Pulumi blog](/blog/tag/google-cloud).

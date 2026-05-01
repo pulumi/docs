@@ -2,7 +2,8 @@
 title_tag: Deploy a Managed Kubernetes Cluster to Azure
 title: Kubernetes Cluster on Azure
 layout: template
-meta_desc: Easily deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) using this template.
+schema_type: howto
+meta_desc: Deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) in TypeScript, Python, Go, C#, or YAML.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
 template:
@@ -19,13 +20,13 @@ cloud:
   slug: azure
 ---
 
-The Kubernetes Cluster template creates an infrastructure as code project in your favorite language and deploys a managed Kubernetes cluster to Azure with Pulumi. The architecture includes an [Azure Virtual Network](/registry/packages/azure-native/api-docs/network/virtualnetwork/) with three subnets (for future scalability) and deploys an [Azure Kubernetes Service (AKS) cluster](/registry/packages/azure-native/api-docs/containerservice/managedcluster) that provides a managed Kubernetes control plane. Kubernetes worker nodes are deployed with private IP addresses for improved security and across multiple availability zones for improved resilience. The template gives you a working project out of the box that you can customize easily and extend to suit your needs.
+The Azure Kubernetes Cluster template scaffolds a Pulumi project that provisions a managed [Azure Kubernetes Service (AKS) cluster](/registry/packages/azure-native/api-docs/containerservice/managedcluster) inside a new [Azure Virtual Network](/registry/packages/azure-native/api-docs/network/virtualnetwork/) with three subnets. Worker nodes are deployed with private IP addresses for improved security and spread across multiple availability zones for resilience.
 
-![An architecture diagram of the Pulumi Azure Kubernetes Cluster template](./architecture.png)
+![An architecture diagram of the Azure Kubernetes Cluster template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy your own Kubernetes cluster, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure-native/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -33,21 +34,21 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-You must supply two values in order to deploy the cluster. You can input the values through the new-project wizard. No additional configuration is required. The required values are below:
+You must supply two values to deploy the cluster. You can input both through the new-project wizard:
 
 mgmtGroupId
-: The object ID of your existing Azure AD group which will serve as cluster administrator.
+: The object ID of an existing Azure AD group that will serve as the cluster administrator.
 
 sshPubKey
-: Contents of your public key which will be used for SSH access to the cluster nodes you will deploy.
+: The contents of the public key used for SSH access to the cluster nodes.
 
-Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
+Once the project is created, you can deploy it with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 rgname
 : The name of the Azure Resource Group containing the Kubernetes cluster resources.
@@ -59,13 +60,13 @@ clusterName
 : The name of the AKS cluster.
 
 kubeconfig
-: The cluster's kubeconfig file which you can use with `kubectl` to access and communicate with your clusters.
+: The cluster's kubeconfig file, which you can use with `kubectl` to access and communicate with your cluster.
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources.
 
 ## Customizing the project
 
-Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/concepts/config/) settings:
+Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 numWorkerNodes
 : The number of nodes in your cluster. Defaults to `3`.
@@ -79,14 +80,14 @@ prefixForDns
 nodeVmSize
 : The VM instance type used to run your nodes. Defaults to `Standard_DS2_v2`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ```bash
-$ pulumi config set someProp ../some/value
+$ pulumi config set numWorkerNodes 5
 $ pulumi up
 ```
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -96,9 +97,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade Kubernetes cluster on Azure with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the API docs to explore the [Azure Native package &rarr;](/registry/packages/azure-native)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/kubernetes)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Azure Native provider API docs](/registry/packages/azure-native) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [Kubernetes posts on the Pulumi blog](/blog/tag/kubernetes).
