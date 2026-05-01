@@ -362,6 +362,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
         @apply hidden;
     }
 
+    .mobile-menu-icon .mobile-menu-open {
+        @apply hidden;
+    }
+
     .mobile-menu-toggle:checked + .mobile-menu-icon {
         .mobile-menu-closed {
             @apply hidden;

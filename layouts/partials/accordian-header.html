@@ -14,10 +14,10 @@
     <div class="flex flex-grow justify-end items-center">
         {{ if eq .arrow_open true }}
             <span class="closed-accordion">{{ partial "icon.html" (dict "name" "caret-down" "weight" "bold") }}</span>
-            <span class="open-accordion hidden">{{ partial "icon.html" (dict "name" "caret-up" "weight" "bold") }}</span>
+            <span class="open-accordion">{{ partial "icon.html" (dict "name" "caret-up" "weight" "bold") }}</span>
         {{ else }}
             <span class="closed-accordion">{{ partial "icons/accordion-closed" }}</span>
-            <span class="open-accordion hidden">{{ partial "icons/accordion-open" }}</span>
+            <span class="open-accordion">{{ partial "icons/accordion-open" }}</span>
         {{ end }}
     </div>
 </label>

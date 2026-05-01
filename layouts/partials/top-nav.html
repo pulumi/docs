@@ -4,8 +4,8 @@
             {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi logo" "class" "h-6") }}
             {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "ml-4 pr-1 hidden lg:block") }}
             <div class="flex-1"></div>
-            <i class="lg:hidden fa fa-bars text-white text-2xl mobile-menu-toggle-icon"></i>
-            <i class="lg:hidden hidden fa fa-times text-white text-2xl mobile-menu-toggle-icon"></i>
+            {{ partial "icon.html" (dict "name" "list" "weight" "bold" "class" "lg:hidden text-white text-2xl mobile-menu-toggle-icon") }}
+            {{ partial "icon.html" (dict "name" "x" "weight" "bold" "class" "lg:hidden hidden text-white text-2xl mobile-menu-toggle-icon") }}
         </div>
         <ul id="logo-nav-menu" role="menu" class="logo-nav-menu hidden">
             <li role="none"><a role="menuitem" href="/">Pulumi Home</a></li>
