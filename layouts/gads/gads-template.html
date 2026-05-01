@@ -6,7 +6,7 @@
                 <a href="{{ .href }}" class="btn-primary block sm:inline mb-2 sm:mb-0 sm:mr-3" data-role="cta-get-started">{{ .label }}</a>
             {{ end }}
             {{ with .secondary }}
-                <a href="{{ .href }}" class="btn-secondary block sm:inline">{{ .label }}</a>
+                <a href="{{ .href }}" class="btn-secondary block sm:inline" data-role="cta-secondary">{{ .label }}</a>
             {{ end }}
             {{ with .microcopy }}
                 <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
@@ -75,11 +75,11 @@
                                 <p class="text-lg text-gray-700 px-4 mb-6">{{ $feature.description | markdownify }}</p>
                                 <div class="flex flex-col lg:flex-row gap-4">
                                     <div class="w-full lg:w-1/2 card bg-white shadow-md p-4">
-                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.before.title | default "Before — Terraform (HCL)" }}</p>
+                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.before.title | default "Before" }}</p>
                                         {{ partial "code" (dict "lang" $feature.before_after.before.language "code" $feature.before_after.before.code "mode" "light") }}
                                     </div>
                                     <div class="w-full lg:w-1/2 card bg-white shadow-md p-4">
-                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.after.title | default "After — Pulumi" }}</p>
+                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.after.title | default "After" }}</p>
                                         {{ partial "code" (dict "lang" $feature.before_after.after.language "code" $feature.before_after.after.code "mode" "light") }}
                                     </div>
                                 </div>
@@ -180,7 +180,7 @@
                         <tr class="border-b border-gray-200">
                             <th class="text-left p-4 text-gray-700">{{ .feature_label | default "Feature" }}</th>
                             <th class="text-center p-4 text-violet-700">{{ .pulumi_label | default "Pulumi" }}</th>
-                            <th class="text-center p-4 text-gray-500">{{ .competitor_label | default "Terraform" }}</th>
+                            <th class="text-center p-4 text-gray-500">{{ .competitor_label | default "Competitor" }}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -367,6 +367,18 @@
         </div>
     </section>
 
+    {{/*
+        Google Ads Dynamic Keyword Insertion (DKI).
+
+        On wake-up, the script below reads `utm_term` from the URL and rewrites
+        any element with id="dki-placeholder" with the formatted keyword. Pages
+        opt in by embedding `<span id="dki-placeholder"></span>` somewhere in
+        their frontmatter (commonly inside an overview bullet or paragraph).
+        Without that span the script silently no-ops on the body — the script
+        also updates the H1 if the page sets `dki_template` in frontmatter.
+        Don't remove either hook unless you've also dropped the corresponding
+        frontmatter field.
+    */}}
     <!-- Google Ads Dynamic Keyword Insertion -->
     <script>
     (function() {
