@@ -1709,6 +1709,115 @@ Scratch artifacts: `/workspaces/src/scratch/2026-04-30-e2e-test-v3/` — `pulumi
 
 None. All Session-18 facts are project-state specific to this branch and the e2e fixture set; they belong in this file.
 
+## Session 19 — 2026-05-01 (live-vs-legacy benchmark, `domain:website`, trivial/fmonly tightening, exec writeups)
+
+### Trigger
+
+Cam asked whether the new pipeline actually beats what's running on `pulumi/docs` today, and whether we could quantify it. The Session-13 rebenchmark compared post-S12 against an inflated new-pipeline-against-itself baseline, never against the live legacy reviews. Today filled that gap, then surfaced a marketing-content review gap the benchmark also exposed, then closed the loop with exec writeups for #docs / leadership consumption.
+
+### Work shipped
+
+**1. Live-comparison v1: post-S12 vs `pulumi/docs` legacy on the original 6-PR battery.** Re-used `2026-04-28-pipeline-comparison/old-reviews/` and pulled cost data from upstream `claude[bot]` workflow runs (the `num_turns` / `total_cost_usd` / `duration_ms` come right out of `gh run view --log`). Result: 8-vs-8 substantive count head-to-head, 4 production-shipping bugs new caught that legacy missed, $1.78 per incremental catch. Surfaced one real new-pipeline weakness: PR 18642 (infra) — legacy made a single decisive `BUILD-AND-DEPLOY.md` doc-staleness catch the author landed verbatim; new scattered into three softer prompts and missed the load-bearing one. Tightened `infra.md` §Documentation drift with a "behavioral change to existing prose" rule that directs the model to grep `BUILD-AND-DEPLOY.md` for affected scripts/flags/env-vars even when the diff doesn't touch the doc. Report at `scratch/2026-05-01-live-comparison/REPORT.md`.
+
+**2. Marketing-content review gap.** Tracing #18564 (a redirects-file PR) through the classifier surfaced that `content/**` paths under `about/`, `pricing/`, `vs/`, `why-pulumi/`, `legal/`, `careers/`, etc. either (a) fell through to bare `shared-criteria` (rule 5) or (b) got short-circuited as trivial when small. PR #18715 (legal PSA `last_updated`) was the canonical example — under old rules it was trivial-skipped despite being legal text with real consequences if the date bumped without the underlying semantic change.
+
+**3. `domain:website` + trivial/fmonly tightening shipped in commit `85f85b8a3b`:**
+
+- `triage-classify.py`: `classify_path` returns `domain:website` for any `content/**.md` path not matched by docs/blog/programs/infra. Trivial and fmonly gates now require `classify_path` to return `domain:docs` or `domain:blog` for every changed file (path-prefix filter `all_files_content_md` replaced with domain-membership filter `all_files_docs_or_blog`).
+- `references/website.md` (new, 58 lines). Per Cam's calibration: surface claims as "worth a double-check before merge" rather than assertive findings, since marketing/legal authors typically have non-public data the reviewer can't see. 🚨 reserved for legal semantic edits and public-source-contradicted competitor claims; everything else defaults to ⚠️.
+- `domain-routing.md`: added rule 4 routing `content/**.md` not matched by rules 2 or 3 to `references:website`.
+
+Plus: trimmed `triage-prose.md` Haiku prompt (dropped trivial/fmonly criteria description — Haiku doesn't gate on it, just reads the diff), updated `CONTRIBUTING.md` short-circuit description, added `domain:website` to `scripts/labels/labels.json`, deployed the label to cam fork via `sync-labels.sh`.
+
+**4. Live-comparison v2 benchmark on the fresh state (the load-bearing artifact for the rollout decision).** Fresh 11-PR battery: 6 carry-overs (18599, 18605, 18620, 18642, 18647, 18685) plus 5 new — 18715 (website-domain test), 18588 + 18573 (trivial path on real PRs), 18331 + 18568 (programs domain, previously zero coverage). Sync'd cam fork to `c935825257`, recreated all 11 fixture branches, opened fork PRs `#105–#115`, ran fresh new-pipeline reviews, scored against legacy via Agent.
+
+Headline numbers:
+
+| Axis | Result |
+|---|---|
+| Legacy substantive findings preserved or correctly silenced | 100% on full-review paths |
+| Incremental substantive catches new made that legacy missed | **10**, every one would have shipped |
+| FP rate | 0% on both pipelines |
+| Maintainer signal quality (severity tier / evidence / grouping / suggestion block) | 95% new vs 30% legacy |
+| Cost ratio | 1.93× legacy on this sample ($13.39 vs $6.94 across 11 PRs); projects ~1.5× on production mix once trivial-skip fires at the ~43% rate Session 18 measured |
+| $/incremental shipped-defect prevented | **$0.65** |
+| Single regression | PR 18573 trivial-cap edge case (4-line nav rewrite in a multi-section doc) — minor, soft-watch |
+
+Notable catches: workflow-breaking SAML/SCIM nav bugs on #18605 (×2), OutSystems source misattribution propagated to LinkedIn+Bluesky social copy on #18647, broken `/docs/ai/integrations/` link on the #18685 Neo launch post, AGENTS.md canonical-path regressions on #18568 + #18599, Java snippet truncation introduced *while addressing legacy feedback* on #18331 (×2). PR #18715 (the website-domain test) routed correctly and produced the same finding as legacy with verification-ask framing instead of assertive — exact behavior `website.md` was designed for.
+
+Report at `scratch/2026-05-01-live-comparison-v2/REPORT.md`.
+
+**5. Exec writeups.**
+
+- **Notion page** at Cam's Knowledge Preservation → Docs → *"Pulumi Docs PR-Review Pipeline — Executive Summary"* (`353fdbdf-1cce-816c-9d92-ea160ccba347`). Sections: Why (lead reason: rising agentic-PR velocity), How (two skill packages + mermaid flow with `@claude` refresh loop), Results (TL;DR callout + 11-PR comparison table with linked old/new reviews), Cost & tradeoffs (incl. an explicit noise-vs-nits bullet), See it in action, Next Steps (vale-based deterministic style linter as the primary follow-up).
+- **PR #18680 description** rewritten end-to-end on `pulumi/docs`. Original 2-session draft replaced with what-ships / benchmark / status-before-merge / how-to-review structure that reflects the actual current state.
+- **Slack draft** for `#docs` (`C85BS3LJZ`) introducing the pipeline and asking for feedback before next-week rollout. Cam edited and finalized; draft `Dr0B165TM9LJ` ready to send.
+
+### Items NOT shipped (now in backlog)
+
+- **Deterministic style-checking workflow (vale).** New backlog item — recovers prescriptive style-nit coverage (Click→Select, banned words, etc.) via free linter rather than Opus tokens. Half-day setup; out-of-scope for #18680 merge, in-scope as the immediate follow-up. Notion Next Steps documents the plan.
+- **Upstream label deploy** — now load-bearing. `scripts/labels/sync-labels.sh --repo pulumi/docs` must run before #18680 merge or atomic label-apply will reject `domain:website`.
+- **Trivial-cap edge case** (PR 18573 shape — multi-section docs file with a 4-line nav rewrite). Soft-watch, not a blocker. Tighten the classifier only if a second instance shows up in production.
+
+### Methodology / repeatable patterns
+
+- **Live comparison vs new-pipeline-vs-self.** Session 13 celebrated a 56% cost drop measured against a Pass-3 self-baseline; against actual `pulumi/docs` legacy, the new pipeline is 1.93× cost on the same shape of PR. *Always anchor cost framing to the live baseline.*
+- **Cost extraction from upstream runs.** `gh run view --repo pulumi/docs <id> --log | grep -E 'num_turns|total_cost_usd|duration_ms'` works for any `claude-code-review.yml` run within retention. Codified in `scratch/2026-05-01-live-comparison-v2/cost-data.sh`.
+- **Fixture rebase: file-overlay fallback for revert conflicts.** Session 18's `rebase-fixtures.sh` revert-and-reapply pattern hit a merge conflict on PR #18568 where cam/master had diverged from the merge's parent state. Fallback: `git checkout <merge>^1 -- <files>` to set base files to pre-merge state, commit; then `git checkout <merge> -- <files>` for the head. Works for any PR shape regardless of subsequent file churn. Documented in `scratch/2026-05-01-live-comparison-v2/rebase-fixtures.sh`.
+- **Slack drafts via MCP.** `slack_send_message_draft` creates an attached draft on a channel; Cam edits in the UI. Drafts are user-local (not readable back via MCP), so any subsequent edits need to be pasted for review.
+- **Notion page edits via update_content.** Search-and-replace on the markdown source. Cam editing the page in parallel will desync `old_str` matches; re-fetch before retrying. The "References" section disappeared between edits (Cam removed it during a parallel edit) — flagged but not restored.
+
+### Backlog after Session 19
+
+Active:
+
+1. **Deterministic style-checking workflow (vale).** New, primary follow-up.
+2. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
+3. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1) — could exercise on fork PRs #105–#115 or after upstream rollout.
+4. **Trivial-cap edge case soft-watch** — PR 18573 shape.
+5. **Investigate 5 lost ⚠️ catches** (Session 13 #5) — still open.
+6. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream and real PRs flow through.
+7. **`update.md` raise-missed-duplicate code path** — defer.
+8. **Non-determinism baseline + skeptic sub-agent** — paired; revisit together.
+9. **Boundary-fixture name audit** — old; unchanged.
+10. **Cam's "claude-working" label mutex semantics** (Session-18 hand-written note) — partially addressed by Session 18's label mutex fix; worth a final sweep.
+11. **Cam's "quick `/docs-review`" variant** (Session-18 hand-written note) — still open.
+
+Closed this session:
+
+- Live-pipeline benchmark vs `pulumi/docs` legacy → ✅ done (v1 + v2 reports).
+- Marketing-content review gap → ✅ shipped (`domain:website` + tightened trivial/fmonly).
+- Infra-domain doc-staleness gap from PR 18642 → ✅ tightened in `infra.md` §Documentation drift.
+- Session 18 backlog: "Sync cam/master to post-Session-18 HEAD" → ✅ done (synced through `c935825257`).
+
+### Files changed (Session 19 substance)
+
+- `85f85b8a3b` — `Add domain:website and tighten trivial/fmonly to docs+blog only` (`triage-classify.py`, `references/website.md` new, `references/domain-routing.md`, `references/infra.md`, `triage-prose.md`, `CONTRIBUTING.md`, `scripts/labels/labels.json`).
+- (this commit) — Session 19 notes.
+- Cam fork sync `c935825257` — overlays post-S18+website state onto cam/master.
+
+Cam-fork operations:
+
+- `cam/master` advanced from `26d0e0fdb3` → `c935825257`.
+- 11 fixture branches force-pushed (6 reused from prior, 5 new — including the 18568 file-overlay rebuild).
+- 11 PRs opened (`#105–#115`); all initial reviews complete; left open for inspection.
+- `domain:website` label deployed to fork.
+
+Scratch artifacts:
+
+- `/workspaces/src/scratch/2026-05-01-live-comparison/` — v1 report (post-S12 vs legacy, 6 PRs).
+- `/workspaces/src/scratch/2026-05-01-live-comparison-v2/` — v2 report (post-S18+website vs legacy, 11 PRs), `old-reviews/`, `new-reviews/`, `cost-data-{legacy-all,new}.tsv`, `comment-permalinks.tsv`, `rebase-fixtures.sh`, `capture.sh`, `cost-data.sh`, `scoring-prompt.md`.
+
+External outputs:
+
+- Notion `353fdbdf-1cce-816c-9d92-ea160ccba347` (Knowledge Preservation → Docs → exec summary).
+- PR #18680 description rewritten on `pulumi/docs`.
+- Slack draft `Dr0B165TM9LJ` in `#docs` (`C85BS3LJZ`).
+
+### Memory updates
+
+None. All Session-19 facts are project-state specific to this branch and the v2 benchmark; they belong in this file.
+
 ## EXTRA HAND WRITTEN NOTE FROM CAM
 
 I accidentally opened a bunch of PRs against my fork, and it was very instructive in how well this new pipeline will work. One thing I've noticed is that we should decide on standard behavior for "claude-working" labels and what other labels get deactivated when Claude is working.
