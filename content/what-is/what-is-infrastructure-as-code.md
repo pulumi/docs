@@ -12,9 +12,10 @@ Infrastructure as code (IaC) is an approach to automating the provisioning and m
 
 Before infrastructure as code, infrastructure was (and in some cases still is!) provisioned in a variety of ways, such as by pointing and clicking in a user interface (UI), by running commands via a command-line interface (CLI), by running batch scripts, or by using configuration management tools that may not have been designed with cloud infrastructure in mind. Each of these methods falls short in some way; interactive methods involving a UI or a CLI often create problems with repeatability and consistency while batch scripts or configuration management tools may be unable to declaratively manage infrastructure. Today, modern approaches use platforms, such as [Pulumi](/), which embrace and support the full software engineering lifecycle.
 
-In this article, we'll touch on four key questions regarding infrastructure as code:
+In this article, we'll touch on five key questions regarding infrastructure as code:
 
 * Why is infrastructure as code important?
+* How did infrastructure as code evolve?
 * What are the key elements of infrastructure as code?
 * What benefits does infrastructure as code provide?
 * How do you get started with infrastructure as code?
@@ -49,7 +50,7 @@ Finally, the rate of change for a company's infrastructure is increasing. Part o
 
 For teams managing tens or hundreds of cloud resources that change once every few months, managing infrastructure using scripts or via interactive means (such as using a UI or a CLI) might still be possible. More commonly, teams are finding themselves managing thousands or tens of thousands of resources that change daily or even hourly. Embracing automation via infrastructure as code is the only way to take control of that kind of complexity.
 
-## How infrastructure as code evolved
+## How did infrastructure as code evolve?
 
 Infrastructure as code didn't emerge all at once. It's the latest step in a long arc of automation maturity, and the patterns that dominate today reflect lessons learned from earlier approaches.
 
