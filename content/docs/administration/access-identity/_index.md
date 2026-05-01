@@ -20,32 +20,32 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🔑
+  - icon: key
     heading: Access Tokens
     link: /docs/administration/access-identity/access-tokens/
     description: Create and manage API access tokens for automation.
 
-  - emoji: 🔒
+  - icon: lock
     heading: Stack Permissions
     link: /docs/administration/access-identity/stack-permissions/
     description: Control who can view, edit, and deploy stacks.
 
-  - emoji: 👔
+  - icon: user-gear
     heading: RBAC
     link: /docs/administration/access-identity/rbac/
     description: Configure role-based access control policies.
 
-  - emoji: 🎫
+  - icon: ticket
     heading: SAML SSO
     link: /docs/administration/access-identity/saml/
     description: Set up SAML single sign-on with your identity provider.
 
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: SCIM
     link: /docs/administration/access-identity/scim/
     description: Automate user provisioning and deprovisioning.
 
-  - emoji: 🆔
+  - icon: identification-card
     heading: OIDC Client
     link: /docs/administration/access-identity/oidc-client/
     description: Configure OpenID Connect authentication.

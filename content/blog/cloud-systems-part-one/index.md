@@ -63,11 +63,11 @@ This one is built using only HTML and CSS, plus one background image file. Repla
 </head>
 <body>
     <header>
-        <div class="logo">{{ partial "icon.html" (dict "name" "cat") }}</div>
+        <div class="logo">{{< icon name="cat" >}}</div>
         <ul class="social">
-                <li><a href="http://github.com/katcosgrove" target="_blank">{{ partial "icon.html" (dict "name" "brand/github") }}</a></li>
-                <li><a href="http://twitter.com/Dixie3Flatline" target="_blank">{{ partial "icon.html" (dict "name" "brand/x") }}</a></li>
-                <li><a href="http://linkedin.com/in/katcosgrove" target="_blank">{{ partial "icon.html" (dict "name" "brand/linkedin") }}</a></li>
+                <li><a href="http://github.com/katcosgrove" target="_blank">{{< icon name="brand/github" >}}</a></li>
+                <li><a href="http://twitter.com/Dixie3Flatline" target="_blank">{{< icon name="brand/x" >}}</a></li>
+                <li><a href="http://linkedin.com/in/katcosgrove" target="_blank">{{< icon name="brand/linkedin" >}}</a></li>
             </ul>
     </header>
 <div class="banner">

@@ -24,19 +24,19 @@ sections:
 - type: button-cards
   heading: Capabilities
   cards:
-  - emoji: 📚
+  - icon: books
     heading: Projects & Stacks
     description: Manage infrastructure projects and stacks through the Pulumi Cloud web interface with role-based access controls, team permissions, and stack tagging.
     link: /docs/deployments/projects-and-stacks/
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Deployments
     description: Managed CI/CD platform with git integration, automated drift detection and remediation, ephemeral review stacks for pull requests, scheduled operations, and TTL-based cleanup for temporary infrastructure.
     link: /docs/deployments/deployments/
-  - emoji: 🔔
+  - icon: bell
     heading: Webhooks
     description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
     link: /docs/deployments/webhooks/
-  - emoji: 🔘
+  - icon: radio-button
     heading: Deploy with Pulumi Button
     description: Enable one-click infrastructure deployments from GitHub repositories, gists, or any web page using embeddable deployment buttons.
     link: /docs/deployments/pulumi-button/

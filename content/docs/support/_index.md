@@ -19,37 +19,37 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 📊
+  - icon: chart-bar
     heading: Logging
     link: /docs/support/debugging/logging/
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
-  - emoji: 🔧
+  - icon: wrench
     heading: Troubleshooting
     link: /docs/support/troubleshooting/
     description: Debug and resolve issues with Pulumi programs, deployments, and CI/CD pipelines.
 
-  - emoji: 🐛
+  - icon: bug
     heading: Debugging
     link: /docs/support/debugging/
     description: Tools and techniques for diagnosing and fixing Pulumi programs.
 
-  - emoji: ❓
+  - icon: question
     heading: Frequently Asked Questions
     link: /docs/support/faq/
     description: Find answers to common questions about Pulumi infrastructure, secrets, policies, and platform features.
 
-  - emoji: 💬
+  - icon: chat-circle
     heading: Community Slack
     link: https://slack.pulumi.com/
     description: Join the Pulumi community to ask questions and get help.
 
-  - emoji: 🐙
+  - icon: github-logo
     heading: GitHub Issues
     link: /docs/support/filing-issues/
     description: Learn how to report bugs and request features in the right repository.
 
-  - emoji: 📧
+  - icon: envelope
     heading: Contact Support
     link: /contact/
     description: Reach out to the Pulumi team for assistance.

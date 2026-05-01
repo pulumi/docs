@@ -100,6 +100,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
                 @apply mt-8;
             }
         }
+
+        code {
+            letter-spacing: normal;
+        }
     }
 
     h1 {

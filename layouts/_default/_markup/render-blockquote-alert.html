@@ -9,7 +9,7 @@
 
 <div class="note note-{{ .AlertType }}">
     <div class="icon-and-line">
-        {{ partial "icon.html" (dict "name" (index $icon .AlertType)) }}
+        {{ partial "icon.html" (dict "name" (index $icon .AlertType) "weight" "fill") }}
         <div class="line"></div>
     </div>
     <div class="content">

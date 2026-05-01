@@ -113,7 +113,7 @@ Flask can make use of a templating engine called Jinja2 to make adding pages to 
 </head>
 <body>
     <header>
-        <div class="logo">{{ partial "icon.html" (dict "name" "cat") }}</div>
+        <div class="logo">{{< icon name="cat" >}}</div>
         <nav>
                 <ul>
                     <li {% if request.path == url_for('home') %} class="active" {% endif %}>
@@ -128,9 +128,9 @@ Flask can make use of a templating engine called Jinja2 to make adding pages to 
                 </ul>
             </nav>
         <ul class="social">
-                <li><a href="http://github.com/katcosgrove" target="_blank">{{ partial "icon.html" (dict "name" "brand/github") }}</a></li>
-                <li><a href="http://twitter.com/Dixie3Flatline" target="_blank">{{ partial "icon.html" (dict "name" "brand/x") }}</a></li>
-                <li><a href="http://linkedin.com/in/katcosgrove" target="_blank">{{ partial "icon.html" (dict "name" "brand/linkedin") }}</a></li>
+                <li><a href="http://github.com/katcosgrove" target="_blank">{{< icon name="brand/github" >}}</a></li>
+                <li><a href="http://twitter.com/Dixie3Flatline" target="_blank">{{< icon name="brand/x" >}}</a></li>
+                <li><a href="http://linkedin.com/in/katcosgrove" target="_blank">{{< icon name="brand/linkedin" >}}</a></li>
             </ul>
     </header>
 {% block content %}{% endblock %}

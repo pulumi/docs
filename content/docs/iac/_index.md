@@ -59,38 +59,38 @@ sections:
 - type: button-cards
   heading: Resources
   cards:
-  - emoji: 💡
+  - icon: lightbulb
     heading: Concepts
     description: Dive deeper into how infrastructure as code works with Pulumi.
     link: /docs/iac/concepts/
-  - emoji: 💻
+  - icon: pulumi-iac
     heading: Pulumi CLI
     description: Browse the complete documentation of available CLI commands.
     link: /docs/iac/cli/
 - type: button-cards
   heading: Guides
   cards:
-  - emoji: 📚
+  - icon: books
     heading: Basics
     description: Essential practices for organizing projects and securing infrastructure.
     link: /docs/iac/guides/basics/
-  - emoji: 🔧
+  - icon: wrench
     heading: Building & Extending
     description: Create custom components, providers, and packages.
     link: /docs/iac/guides/building-extending/
-  - emoji: 🧪
+  - icon: flask
     heading: Testing
     description: Unit, property, and integration testing for infrastructure code.
     link: /docs/iac/guides/testing/
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Continuous Delivery
     description: Integrate Pulumi with your CI/CD platform.
     link: /docs/iac/guides/continuous-delivery/
-  - emoji: 📦
+  - icon: package
     heading: Migration
     description: Move existing infrastructure to Pulumi.
     link: /docs/iac/guides/migration/
-  - emoji: 🤖
+  - icon: pulumi-neo
     heading: AI Integration
     description: Integrate AI assistants with Pulumi infrastructure.
     link: /docs/ai/

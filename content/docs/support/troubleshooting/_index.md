@@ -25,27 +25,27 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 📊
+  - icon: chart-bar
     heading: Logging
     link: /docs/support/debugging/logging/
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
-  - emoji: ⚠️
+  - icon: warning
     heading: Common Issues
     link: /docs/support/troubleshooting/common-issues/
     description: Guide to fixing specific problems that may arise in Pulumi programs.
 
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: CI/CD Troubleshooting
     link: /docs/support/troubleshooting/ci-cd/
     description: Resolve continuous integration and deployment pipeline issues.
 
-  - emoji: 📝
+  - icon: note-pencil
     heading: Editing State Files
     link: /docs/support/troubleshooting/editing-state-files/
     description: Safe techniques for modifying Pulumi state files when necessary.
 
-  - emoji: 🔧
+  - icon: wrench
     heading: Using dev builds
     link: /docs/support/troubleshooting/using-dev-builds/
     description: Install pre-release builds to access bug fixes that haven't shipped in a stable release yet.
