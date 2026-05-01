@@ -30,7 +30,7 @@
         <div class="case-study-hero-quote-panel p-8 md:p-12">
             {{ if $customerLogo }}
             <div class="mb-6">
-                <img src="{{ $customerLogo }}" alt="{{ $customerName }}" class="case-study-hero-logo" />
+                {{ partial "fingerprinted-img.html" (dict "src" $customerLogo "alt" $customerName "class" "case-study-hero-logo") }}
             </div>
             {{ end }}
 

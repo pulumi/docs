@@ -47,7 +47,7 @@
     <div class="text-center max-w-4xl mx-auto">
         {{ if and $image $imageAbove }}
         <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} justify-center">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="section-header-image-above-img rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "section-header-image-above-img rounded-lg") }}
         </div>
         {{ end }}
         {{ if $tagLine }}
@@ -77,7 +77,7 @@
     </div>
     {{ if and $image (not $imageAbove) }}
     <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} justify-center">
-        <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full rounded-lg">
+        {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full rounded-lg") }}
     </div>
     {{ end }}
     {{ if $cards }}
