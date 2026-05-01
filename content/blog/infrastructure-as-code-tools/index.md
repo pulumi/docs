@@ -17,7 +17,7 @@ tags:
     - devops
 ---
 
-Infrastructure as code (IaC) is the practice of defining cloud and on-premises infrastructure in machine-readable files that are versioned, reviewed, and deployed the same way as application code. Instead of clicking through consoles or running ad‑hoc scripts, teams describe the desired state of their infrastructure — networks, virtual machines, databases, Kubernetes clusters, DNS records — and let an IaC tool create, update, and destroy resources to match. The result: reproducible environments, faster recovery, fewer surprises, and a clear audit trail.
+Infrastructure as code (IaC) is the practice of defining cloud and on-premises infrastructure in machine-readable files that are versioned, reviewed, and deployed the same way as application code. Instead of clicking through consoles or running ad-hoc scripts, teams describe the desired state of their infrastructure (networks, virtual machines, databases, Kubernetes clusters, DNS records) and let an IaC tool create, update, and destroy resources to match. The result: reproducible environments, faster recovery, fewer surprises, and a clear audit trail.
 
 <!--more-->
 
@@ -172,7 +172,7 @@ External resources: [opentofu.org](https://opentofu.org/), [OpenTofu on GitHub](
 
 ## Cloud-native provisioning tools
 
-These first-party tools are tied to a single cloud. They typically get day-zero support for new services and deep integration with the rest of the provider's platform, in exchange for vendor lock-in.
+These first-party tools are tied to a single cloud. They get day-zero support for new services and deep integration with the rest of the provider's platform, in exchange for vendor lock-in.
 
 ### AWS CloudFormation
 
@@ -206,10 +206,11 @@ External resources: [aws.amazon.com/cloudformation](https://aws.amazon.com/cloud
 import * as cdk from "aws-cdk-lib";
 import * as ec2 from "aws-cdk-lib/aws-ec2";
 import * as ecs from "aws-cdk-lib/aws-ecs";
+import { Construct } from "constructs";
 
 export class MyStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string) {
-    super(scope, id);
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
 
     const vpc = new ec2.Vpc(this, "MyVpc", { maxAzs: 2 });
     const cluster = new ecs.Cluster(this, "MyCluster", { vpc });
@@ -341,7 +342,7 @@ External resources: [sst.dev](https://sst.dev/), [SST on GitHub](https://github.
 - Languages: TypeScript, Python, Java, C#, Go
 - Best for: historical reference — **CDKTF was deprecated by HashiCorp on December 10, 2025**
 
-CDK for Terraform let teams author Terraform configurations in general-purpose languages by synthesizing them to Terraform JSON. HashiCorp announced CDKTF's deprecation on December 10, 2025; the tool is no longer supported or maintained, although existing configurations continue to work with current Terraform/OpenTofu providers. Teams that wanted programming-language IaC for Terraform-style workflows have generally moved to Pulumi or to Terraform with hand-written HCL.
+CDK for Terraform let teams author Terraform configurations in general-purpose languages by synthesizing them to Terraform JSON. HashiCorp announced CDKTF's deprecation on December 10, 2025; the tool is no longer supported or maintained, although existing configurations continue to work with current Terraform/OpenTofu providers. Teams that wanted programming-language IaC for Terraform-style workflows have moved to Pulumi or to Terraform with hand-written HCL.
 
 External resources: [CDKTF documentation (archived)](https://developer.hashicorp.com/terraform/cdktf).
 
@@ -414,12 +415,12 @@ These platforms run the provisioning tools above in CI/CD with collaboration, RB
 
 There is no universally best tool. The best tool is the one your team can write, review, and operate confidently. Use these criteria to narrow the field:
 
-1. **Where does your infrastructure run?** Single-cloud teams often default to the native tool (CloudFormation/CDK, Bicep, Infrastructure Manager) for the deepest integration. Multi-cloud or hybrid teams almost always end up with Pulumi, Terraform, or OpenTofu.
+1. **Where does your infrastructure run?** Single-cloud teams default to the native tool (CloudFormation/CDK, Bicep, Infrastructure Manager) for the deepest integration. Multi-cloud or hybrid teams end up with Pulumi, Terraform, or OpenTofu.
 1. **What languages does your team know?** Pulumi, AWS CDK, and SST use general-purpose languages. Terraform, OpenTofu, Bicep, and CloudFormation use DSLs or templates. CDKTF used to bridge the two but is deprecated.
 1. **What are your licensing constraints?** If "must be OSI-approved open source" is a hard requirement, Pulumi (Apache 2.0) and OpenTofu (MPL 2.0) qualify; current Terraform releases under BUSL 1.1 do not.
 1. **How important is testing?** Real unit-test frameworks exist for Pulumi and AWS CDK. Terraform and OpenTofu support integration-style tests via the `terraform test` framework but are weaker on unit testing.
 1. **Where does state live?** Pulumi, Terraform, and OpenTofu have explicit state stores you manage (or use a managed service for). CloudFormation, ARM/Bicep, Crossplane, and Infrastructure Manager keep state inside the cloud or Kubernetes API.
-1. **Are you building a platform?** Platform/IDP teams typically pick the tool with the strongest abstraction story — Pulumi components, AWS CDK constructs, or Crossplane XRs — depending on whether the platform's audience is multi-cloud, AWS-only, or Kubernetes-first.
+1. **Are you building a platform?** Platform/IDP teams pick the tool with the strongest abstraction story — Pulumi components, AWS CDK constructs, or Crossplane XRs — depending on whether the platform's audience is multi-cloud, AWS-only, or Kubernetes-first.
 
 A simple decision tree:
 
@@ -463,7 +464,7 @@ For Pulumi-bound migrations, see [Migrating to Pulumi](/docs/iac/guides/migratio
 Three trends are shaping IaC tooling in 2026:
 
 1. **Software engineering practices for infrastructure.** Unit tests, type checking, refactoring, and shared libraries are no longer aspirations — they are the table-stakes developer experience for IaC, and they favor tools built around general-purpose languages.
-1. **Native, day-zero cloud coverage.** Teams expect new cloud services to be usable in IaC the day they are announced. Native providers generated from cloud APIs (Pulumi, Bicep, CloudFormation, ARM) tend to outpace community-maintained ones.
+1. **Native, day-zero cloud coverage.** Teams expect new cloud services to be usable in IaC the day they are announced. Native providers generated from cloud APIs (Pulumi, Bicep, CloudFormation, ARM) outpace community-maintained ones.
 1. **Platform engineering and IDPs.** Most large organizations are now building internal developer platforms that expose curated, policy-checked, self-service infrastructure. Whether the platform is built on Pulumi components, AWS CDK constructs, or Crossplane XRDs, the goal is the same: turn raw IaC into a paved road that application teams can use without becoming infrastructure experts.
 
 Whichever tool you choose, the underlying shift is durable: infrastructure is software, and the tools that treat it that way will keep winning. To try Pulumi, [get started](/docs/get-started/) in the language you already use.
