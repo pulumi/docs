@@ -3746,20 +3746,20 @@ ls -lh public/css/
    - Remove unused components
    - Optimize Tailwind config
 
-2. **Reduce Tailwind Variants**
+2. **Scope Tailwind's content scan**
 
-   ```javascript
-   // theme/tailwind.config.js
-   module.exports = {
-     variants: {
-       extend: {
-         // Only enable variants you use
-         backgroundColor: ['hover'],
-         textColor: ['hover'],
-       }
-     }
-   }
+   Tailwind v4 tree-shakes by default — it only emits CSS for classes it detects
+   in scanned files. If the bundle is larger than expected, narrow the scan with
+   explicit `@source` directives in `theme/src/scss/main.scss`:
+
+   ```scss
+   /* Restrict scanning to only the directories that use Tailwind classes */
+   @source "../../layouts/**/*.html";
+   @source "../../content/**/*.md";
    ```
+
+   Avoid broad globs like `../../**` that pull in `node_modules` or generated
+   files — these inflate the detected class list and slow builds.
 
 3. **Code Splitting**
    - Separate critical CSS

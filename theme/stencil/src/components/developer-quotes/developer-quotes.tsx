@@ -2,7 +2,6 @@ import { Component, Prop, h } from "@stencil/core";
 
 @Component({
     tag: "pulumi-developer-quotes",
-    styleUrl: "developer-quotes.scss",
     shadow: false,
 })
 
@@ -72,17 +71,17 @@ export class DeveloperQuotes {
         }, [[],[]]);
 
         return (
-            <div class="lg:flex flex-row block">
+            <div class="container mx-auto">
                 {
                     quotes.map(col => {
                         return (
-                            <div class="lg:w-6/12 w-12/12 mx-8"> 
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> 
                                 {
                                     col.map(q => {
                                         return ( 
-                                            <div class="quote-card my-8 p-2 rounded-lg max-w-80">
+                                            <div class="border border-gray-300 p-4 rounded-xl w-full">
                                                 <a class="flex flex-col" href={ this.enableLink(q.source) ? q.link : undefined } target="_blank" rel="noopener noreferrer">
-                                                    <div class="w-full flex-grow text-justify p-3 text-gray-700">"{ q.message }"</div>
+                                                    <div class="w-full flex-grow text-justify p-3 text-lg">"{ q.message }"</div>
                                                     <div class="flex flex-row">
                                                         <div class="p-3 text-gray-500">
                                                             { q.author }

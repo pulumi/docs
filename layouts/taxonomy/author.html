@@ -14,13 +14,13 @@
                 <header>
                     <div class="flex items-top">
                         <span class="rounded-full mr-4 lg:mr-6">
-                            <img class="rounded-full w-32 bg-blue-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" />
+                            <img class="rounded-full w-32 bg-violet-200 p-1" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" />
                         </span>
                         <div>
                             <h1 class="no-anchor mb-0">{{ $authorData.name }}</h1>
                             <div>
                                 {{ if eq $authorData.status "guest" }}
-                                    <span class="rounded-full bg-blue-200 px-2 py-1 text-xs font-bold mr-3">Guest</span>
+                                    <span class="rounded-full bg-violet-200 px-2 py-1 text-xs font-bold mr-3">Guest</span>
                                 {{ end }}
                                 <span class="text-sm text-gray-700">
                                     {{ $authorData.title }}

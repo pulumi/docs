@@ -26,12 +26,12 @@ types:
         - title: Technology Partners
           icon:
             name: nodes
-            color: salmon
+            color: violet
           description: Independent vendors integrate their products with Pulumi, enabling comprehensive, end-to-end cloud infrastructure solutions
         - title: System Integrators
           icon:
             name: shield
-            color: purple
+            color: violet
           description: Trusted and experienced advisors that provide customized solutions to clients implementing modern Infrastructure as Code
 
 case_studies:

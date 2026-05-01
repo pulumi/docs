@@ -50,69 +50,20 @@ $fa-font-path: "/fonts/fontawesome";
     "upload-to-cloud"
 {
     .icon-#{ $icon } {
-        @apply rounded-full inline-block p-4 w-20 h-20;
+
+        // All icons are violet regardless of class
+
+        @apply rounded-full inline-block p-4 w-20 h-20 bg-violet-50;
+
+        svg * {
+            stroke: var(--color-violet-primary);
+        }
 
         &-small {
             @apply p-2 w-10 h-10;
             svg {
                 max-width: 24px;
                 max-height: 24px;
-            }
-        }
-
-        &-black {
-            @apply bg-white;
-
-            svg * {
-                stroke: black;
-            }
-        }
-
-        &-yellow {
-            @apply bg-yellow-100;
-
-            svg * {
-                stroke: theme("colors.yellow.600");
-            }
-        }
-
-        &-salmon {
-            @apply bg-salmon-100;
-
-            svg * {
-                stroke: theme("colors.salmon.600");
-            }
-        }
-
-        &-fuchsia {
-            @apply bg-fuchsia-100;
-
-            svg * {
-                stroke: theme("colors.fuchsia.600");
-            }
-        }
-
-        &-purple {
-            @apply bg-purple-100;
-
-            svg * {
-                stroke: theme("colors.purple.600");
-            }
-        }
-
-        &-violet {
-            @apply bg-violet-100;
-
-            svg * {
-                stroke: theme("colors.violet.600");
-            }
-        }
-
-        &-blue {
-            @apply bg-blue-100;
-
-            svg * {
-                stroke: theme("colors.blue.600");
             }
         }
     }
@@ -120,80 +71,22 @@ $fa-font-path: "/fonts/fontawesome";
 
 @each $icon in "clouds" "rocketship" {
     .icon-#{ $icon } {
-        @apply rounded-full inline-block p-4 w-20 h-20;
+        @apply rounded-full inline-block p-4 w-20 h-20 bg-violet-50;
+
+        svg * {
+            stroke: var(--color-violet-primary);
+            fill: var(--color-violet-primary);
+        }
+
+        svg rect {
+            fill: var(--color-violet-primary);
+        }
 
         &-small {
             @apply p-2 w-10 h-10;
             svg {
                 max-width: 24px;
                 max-height: 24px;
-            }
-        }
-
-        &-black {
-            @apply bg-white;
-
-            svg * {
-                stroke: black;
-                fill: black;
-            }
-        }
-
-        &-yellow {
-            @apply bg-yellow-100;
-
-            svg * {
-                stroke: theme("colors.yellow.600");
-                fill: theme("colors.yellow.600") !important;
-            }
-        }
-
-        &-salmon {
-            @apply bg-salmon-100;
-
-            svg * {
-                stroke: theme("colors.salmon.600");
-                fill: theme("colors.salmon.600") !important;
-            }
-        }
-
-        &-fuchsia {
-            @apply bg-fuchsia-100;
-
-            svg * {
-                stroke: theme("colors.fuchsia.600");
-                fill: theme("colors.fuchsia.600") !important;
-            }
-        }
-
-        &-purple {
-            @apply bg-purple-100;
-
-            svg * {
-                stroke: theme("colors.purple.600");
-                fill: theme("colors.purple.600");
-            }
-
-            svg rect {
-                fill: theme("colors.purple.600");
-            }
-        }
-
-        &-violet {
-            @apply bg-violet-100;
-
-            svg * {
-                stroke: theme("colors.violet.600");
-                fill: theme("colors.violet.600") !important;
-            }
-        }
-
-        &-blue {
-            @apply bg-blue-100;
-
-            svg * {
-                stroke: theme("colors.blue.600");
-                fill: theme("colors.blue.600") !important;
             }
         }
     }
@@ -201,97 +94,21 @@ $fa-font-path: "/fonts/fontawesome";
 
 @each $icon in "code-window" {
     .icon-#{ $icon } {
-        @apply rounded-full inline-block p-4 w-20 h-20;
+        @apply rounded-full inline-block p-4 w-20 h-20 bg-violet-50;
+
+        svg * {
+            stroke: var(--color-violet-primary);
+        }
+
+        svg rect {
+            fill: var(--color-violet-primary);
+        }
 
         &-small {
             @apply p-2 w-10 h-10;
             svg {
                 max-width: 24px;
                 max-height: 24px;
-            }
-        }
-
-        &-black {
-            @apply bg-white;
-
-            svg * {
-                stroke: black;
-            }
-
-            svg rect {
-                fill: black;
-            }
-        }
-
-        &-yellow {
-            @apply bg-yellow-100;
-
-            svg * {
-                stroke: theme("colors.yellow.600");
-            }
-
-            svg rect {
-                fill: theme("colors.yellow.600");
-            }
-        }
-
-        &-salmon {
-            @apply bg-salmon-100;
-
-            svg * {
-                stroke: theme("colors.salmon.600");
-            }
-
-            svg rect {
-                fill: theme("colors.salmon.600");
-            }
-        }
-
-        &-fuchsia {
-            @apply bg-fuchsia-100;
-
-            svg * {
-                stroke: theme("colors.fuchsia.600");
-            }
-
-            svg rect {
-                fill: theme("colors.fuchsia.600");
-            }
-        }
-
-        &-purple {
-            @apply bg-purple-100;
-
-            svg * {
-                stroke: theme("colors.purple.600");
-            }
-
-            svg rect {
-                fill: theme("colors.purple.600");
-            }
-        }
-
-        &-violet {
-            @apply bg-violet-100;
-
-            svg * {
-                stroke: theme("colors.violet.600");
-            }
-
-            svg rect {
-                fill: theme("colors.violet.600");
-            }
-        }
-
-        &-blue {
-            @apply bg-blue-100;
-
-            svg * {
-                stroke: theme("colors.blue.600");
-            }
-
-            svg rect {
-                fill: theme("colors.blue.600");
             }
         }
     }

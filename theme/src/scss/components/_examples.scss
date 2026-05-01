@@ -5,7 +5,7 @@ pulumi-examples {
         @apply cursor-pointer text-xl text-gray-700;
 
         span {
-            @apply font-bold inline-flex w-6 h-6 mr-2 bg-gray-200 text-blue-700 items-center justify-center rounded-lg;
+            @apply font-bold inline-flex w-6 h-6 mr-2 bg-gray-200 text-violet-800 items-center justify-center rounded-lg;
             @include fa-glyph("\f105");
         }
 

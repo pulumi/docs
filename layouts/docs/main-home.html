@@ -20,7 +20,7 @@
 
                 <section class="docs-home mx-auto my-1">
 
-            <div class="header bg-blue-100 bg-right">
+            <div class="header bg-violet-50 bg-right">
                 <h1><strong>{{ .Params.h1 }}</strong></h1>
                 {{ .Params.description | safeHTML }}
                 <div class="link-buttons">
@@ -90,7 +90,7 @@
                         {{ range .cards }}
                         <div class="pb-4 md:pr-4 md:w-1/2">
                             <div class="tile h-full">
-                                <div class="block rounded shadow border border-gray-300 p-3 h-full flex flex-col">
+                                <div class="block p-3 h-full flex flex-col">
                                     <a href="{{ .link }}">
                                         <h4 class="no-anchor">
                                             {{ if .emoji }}<span class="emoji">{{ .emoji }}</span> {{ end }}{{ .heading }}

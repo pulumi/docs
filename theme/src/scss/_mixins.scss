@@ -1,5 +1,5 @@
 // Breakpoint mixins replacing Tailwind's removed @screen directive.
-// Breakpoint values match theme/tailwind.config.js screens.
+// Breakpoint values match _theme.scss screens.
 @mixin screen-sm { @media (min-width: 640px) { @content; } }
 @mixin screen-md { @media (min-width: 768px) { @content; } }
 @mixin screen-lg { @media (min-width: 1024px) { @content; } }
@@ -24,48 +24,28 @@
 }
 
 @mixin gradient-border() {
-    border-bottom: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);
+    border-bottom: 2px solid var(--color-violet-primary);
 }
 
 @mixin gradient-background() {
-    background: linear-gradient(90deg, #be5188 0%, theme("colors.violet.600") 100%);
+    background: var(--color-violet-primary);
 }
 
 @mixin gradient-button {
-    @apply relative text-white bg-violet-600 border-violet-600 border-2 rounded-lg cursor-pointer z-auto;
+    @apply relative text-white border-2 rounded-lg cursor-pointer z-auto;
+    background: var(--color-violet-primary);
+    border-color: var(--color-violet-primary);
 
     &:hover {
         @apply no-underline;
+        background: var(--color-violet-800);
+        border-color: var(--color-violet-800);
     }
 
-    // The default behavior of this mixin, as with all buttons, is to transition between background colors --
-    // but since CSS doesn't support transitioning between solids and gradients, we need to resort to a little
-    // trickery. For elements that support it, we position a gradient-colored background behind the element's
-    // solid background, and then on hover, hide the solid to reveal the gradient.
     &:not(input) {
         @include transition;
-
-        &::before {
-            @apply absolute rounded-lg;
-            @include gradient-background;
-            border-image-width: 2px;
-            content: "";
-            top: -2px;
-            left: -2px;
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            z-index: -1;
-        }
-
-        &:hover {
-            @apply border-transparent;
-            @include gradient-background;
-        }
     }
 
-    // For elements that don't support pseudoelements, just fall back to transitionless hovers.
     &:is(input) {
         @apply border-gray-100;
 
@@ -75,6 +55,6 @@
     }
 
     &:focus {
-        @apply bg-blue-600 border-blue-600;
+        @apply bg-violet-primary border-violet-primary;
     }
 }

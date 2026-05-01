@@ -24,7 +24,7 @@
 
                 <div class="flex flex-col lg:flex-row justify-left items-stretch mt-8 lg:mt-16 relative pb-8">
                     {{ range $section := .Params.stats.sections}}
-                        <div class="card bg-white w-full lg:w-1/3 my-4 lg:my-0 p-6 lg:p-8 mx-0 lg:mx-4 z-10 shadow-xl">
+                        <div class="card bg-white w-full lg:w-1/3 my-4 lg:my-0 p-6 lg:p-8 mx-0 lg:mx-4 z-10 ">
                             <h3>{{ $section.number }}</h3>
                             <h6 class="mt-2">{{ $section.description }}</h6>
                             <a class="mt-12 flex justify-center" href={{ $section.link }}><img src={{ $section.logo }} style="height: 60px; width: auto;" /></a>
@@ -39,7 +39,7 @@
         <div class="container mx-auto">
             <h2 class="text-center mb-4 font-display font-bold">{{ .Params.features.title }}</h2>
             <p class="text-center text-2xl w-full lg:w-3/4 mx-auto mb-4">{{ .Params.features.description | markdownify }}</p>
-            <div class="p-0.5 rounded-lg mx-4" style="background: linear-gradient(90deg, #f7bf2a 0%, #f26e7e 18.23%, #be5188 38.02%, #8a3391 53.65%, #805ac3 74.48%, #7682f4 100%);">
+            <div class="p-0.5 rounded-lg mx-4" style="background: #5a30c5;">
                 <div class="rounded-lg bg-white flex flex-wrap mx-auto p-4 justify-center">
                     {{ range $feature := .Params.features.items }}
                         <div class="w-full md:w-1/3 p-4">

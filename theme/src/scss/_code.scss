@@ -1,13 +1,11 @@
 @import "chroma";
-@import "chroma-min-dark";
-@import "colors";
 
 table tr td:not(:first-child) code {
     word-break: break-word;
 }
 
 code {
-    background-color: map-get($gray, 125);
+    background-color: var(--color-gray-100);
     border-radius: 2px;
     font-size: 14px;
     padding: 3px 6px;
@@ -31,11 +29,10 @@ pre,
 }
 
 pre {
-    background: #1F2557;
+    background: var(--color-violet-950);
     @apply text-gray-400 py-4 px-5 pr-8 overflow-x-auto leading-normal;
 
     .code-mode-dark & {
-        background: #1f2557;
         @apply border-none shadow-md;
     }
 
@@ -122,22 +119,21 @@ div.highlight.line-numbers {
 }
 
 .code-tabbed {
-    @apply shadow-lg;
 
     .code-tabbed-tabs {
-        background: #1f2557;
+        background: var(--color-violet-950);
         @apply shadow-md p-0 flex items-center overflow-hidden;
 
         .code-tabbed-tab {
             @apply p-2 my-0 flex items-center text-sm cursor-pointer;
 
             .code-tabbed-tab-label {
-                font-size: 16px;
-                @apply mx-2 text-gray-500;
+                font-size: 14px;
+                @apply font-mono mx-2 font-normal text-gray-500;
             }
 
             .code-tabbed-tab-indicator {
-                @apply ml-1 mr-2 bg-orange-300 rounded-full h-2 w-2 invisible hidden;
+                @apply ml-1 mr-2 bg-violet-primary rounded-full h-2 w-2 invisible hidden;
 
                 @include screen-md {
                     @apply block;
@@ -155,7 +151,7 @@ div.highlight.line-numbers {
             }
 
             &.active {
-                background: #1f2557;
+                background: var(--color-violet-950);
 
                 .code-tabbed-tab-label {
                     @apply text-white;
@@ -174,7 +170,7 @@ div.highlight.line-numbers {
 
     .code-tabbed-content {
         height: 440px;
-        background: #1f2557;
+        background: var(--color-violet-950);
         @apply overflow-auto relative p-4 text-sm;
 
         .code-tabbed-content-item {
@@ -208,8 +204,8 @@ div.highlight.line-numbers {
     }
 
     .code-tabbed-status {
-        background: #1f2557;
-        @apply h-3 rounded-b;
+        background: var(--color-violet-950);
+        @apply h-3 rounded-b-lg;
     }
 }
 

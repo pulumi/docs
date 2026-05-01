@@ -21,16 +21,6 @@
 {{ $colorIndex := mod $parentIndex (len $colorNames) }}
 {{ $iconColor := index $colorNames $colorIndex }}
 {{ $isSolutionIndexEven := (modBool $parentIndex 2) }}
-    <div class="shape-background home-background-yellow-left">
-        <div class="shape-container flex flex-row-reverse">
-            <div class="dot-background-container self-end">
-                <div class="dot-background-overlay"></div>
-                <div class="dot-background no-animate"></div>
-            </div>
-            <div class="circle-left"></div>
-            <div class="circle-right"></div>
-        </div>
-    </div>
 
     <div class="container mx-auto">
         <div class="flex flex-col lg:flex-row">
