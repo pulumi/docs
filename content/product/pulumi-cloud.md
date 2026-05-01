@@ -347,7 +347,7 @@ deployment:
     items:
         - title: SaaS
           icon: rocketship
-          icon_color: purple
+          icon_color: violet
           description: |
             Use Pulumi Cloud without worrying about scaling, availability, fault tolerance, and concurrency.
 

@@ -17,7 +17,7 @@
 {{ $bgImage := .bg_image }}
 {{ $anchor := .anchor | default "promo-banner" }}
 
-<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImage }}bg-violet-600{{ end }} text-white" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
+<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImage }}bg-violet-primary{{ end }} text-white" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
     {{ if $title }}
     <h2 class="promo-banner-title">{{ $title }}</h2>
     {{ end }}

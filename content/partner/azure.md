@@ -188,7 +188,7 @@ detail_sections:
 
         - title: Secrets Management
           icon: security
-          icon_color: salmon
+          icon_color: violet
           description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
 
         - title: Multi Cloud
@@ -198,7 +198,7 @@ detail_sections:
 
         - title: Convenience Functions
           icon: pen
-          icon_color: fuchsia
+          icon_color: violet
           description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
 
         - title: Automate Delivery
@@ -222,12 +222,12 @@ detail_sections:
 
         - title: Familiar Concepts
           icon: collab
-          icon_color: purple
+          icon_color: violet
           description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
 
         - title: API Versions
           icon: nodes
-          icon_color: salmon
+          icon_color: violet
           description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
 
         - title: All Languages

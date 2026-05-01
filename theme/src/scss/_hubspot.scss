@@ -11,15 +11,14 @@
     }
 
     fieldset {
-        @apply block;
+        @apply block !max-w-none;
 
         &:not(.form-columns-1)>.field:first-child {
             @apply pr-2;
         }
 
         label {
-            @apply block mb-2 font-normal;
-            margin: 1rem 0 !important;
+            @apply block mt-3 mb-1 font-normal;
         }
 
         .hs-input {
@@ -50,18 +49,14 @@
             @apply border border-gray-300 rounded p-2 bg-white;
 
             &:focus {
-                @apply outline-none ring;
+                @apply outline-none ring ring-violet-primary;
             }
         }
 
-        select {
-            @apply py-1 px-3;
-        }
     }
 
     input[type="submit"] {
-        @include gradient-button;
-        @apply py-3 px-6;
+        @apply btn py-3 px-6;
     }
 
     .hs-error-msgs {
@@ -111,7 +106,7 @@
             }
 
             &.hs-button {
-                @apply block btn btn-lg btn border-none py-3 px-6 rounded-lg w-auto bg-violet-600 ml-2;
+                @apply block btn btn-lg border-none py-3 px-6 rounded-lg w-auto ml-2;
             }
 
             &:focus {
@@ -140,8 +135,11 @@
         @apply mb-5;
     }
 
-    .legal-consent-container ul {
-        @apply list-none pl-0;
+    .legal-consent-container {
+        @apply my-4;
+        ul {
+            @apply list-none pl-0;
+        }
     }
 
     .hs-fieldtype-booleancheckbox ul {
@@ -204,14 +202,11 @@
     input,
     textarea,
     select {
-        @apply border border-gray-300 rounded p-2 bg-white;
+        @apply border border-gray-300 rounded-lg p-2 bg-white;
 
         &:focus {
-            @apply outline-none ring;
+            @apply outline-none ring ring-violet-primary;
         }
     }
 
-    select {
-        @apply py-1 px-3;
-    }
 }

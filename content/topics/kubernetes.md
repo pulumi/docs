@@ -219,7 +219,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/get-started/kubernetes/"
       icon_type: cloud
-      icon_color: salmon
+      icon_color: violet
       description: |
         Support for all clouds including Amazon Elastic Kubernetes Service (EKS), Azure
         Kubernetes Service (AKS), Google Kubernetes Engine (GKE), DigitalOcean Kubernetes
@@ -230,7 +230,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/insights/"
       icon_type: cloud-with-nodes
-      icon_color: purple
+      icon_color: violet
       description: |
         Gain security, compliance, and cost insights into the entirety of an organization’s Kubernetes applications and cloud assets and automatically remediate issues through AI-powered workflows.
 
@@ -247,7 +247,7 @@ superpowers:
       cta: Learn more
       cta_url: "/docs/iac/concepts/"
       icon_type: architecture
-      icon_color: fuchsia
+      icon_color: violet
       description: |
         YAML and templated DSLs force you to write the same boilerplate code over and over.
         Pulumi’s Kubernetes library allows you to codify those patterns and best practices so
@@ -291,12 +291,12 @@ detail_sections:
 
           - title: Secrets Management
             icon: security
-            icon_color: salmon
+            icon_color: violet
             description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
 
           - title: Pulumi Kubernetes Operator
             icon: pen
-            icon_color: fuchsia
+            icon_color: violet
             description: Deploy both Kubernetes resources and cloud infrastructure from within the Kubernetes resource model using a GitOps workflow. Use Pulumi's Flux and ArgoCD integrations along with many other CI/CD integrations.
 
     - title: AI-powered Kubernetes Management
@@ -312,12 +312,12 @@ detail_sections:
 
           - title: Run Compliance Checks
             icon: testing
-            icon_color: purple
+            icon_color: violet
             description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance. 
 
           - title: Debug Cloud Failures
             icon: cloud-with-nodes
-            icon_color: salmon
+            icon_color: violet
             description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures. 
 
           - title: Stay Secure

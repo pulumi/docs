@@ -39,25 +39,25 @@ benefits:
       items:
         - title: Languages you love
           icon: rocketship
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi allows infrastructure or platform engineering teams to use the programming languages they already use for modeling their infrastructure. They can take advantage of all the existing testing tools, IDE plugins that are standard to their programming languages.
 
         - title: Build on any cloud
           icon: gear
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi can provision any resource available in the K8s API. Pulumi supports all new resources and features in the K8s API on the same day as the release. Pulumi allows K8s users novel forms of cluster management and app workload deployments.
 
         - title: Programmable guardrails
           icon: eye
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi also enables “policy as code”, which allows the platform team to enforce cost, security, and best practices across all infrastructure.
 
         - title: Reusable components
           icon: team
-          icon_color: salmon
+          icon_color: violet
           description: |
             Pulumi makes creating reusable and modular components easy which allows repeatable infrastructure building blocks to be templatized and easily reused.
 

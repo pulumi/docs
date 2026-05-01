@@ -2,7 +2,8 @@
 title_tag: Deploy a Static Website to AWS
 title: AWS Static Website
 layout: template
-meta_desc: Easily deploy a static HTML website on Amazon Web Services (AWS) with Pulumi, Amazon S3, and Amazon CloudFront using this template.
+schema_type: howto
+meta_desc: Deploy a static website on AWS with a private Amazon S3 bucket and Amazon CloudFront over Origin Access Control using Pulumi.
 meta_image: meta.png
 card_desc: Deploy a static website on AWS with Pulumi, Amazon S3, and Amazon CloudFront.
 template:
@@ -19,13 +20,13 @@ cloud:
   slug: aws
 ---
 
-The Static Website template creates an infrastructure as code project in your favorite language that deploys an HTML website to AWS with Pulumi. It uses an [Amazon S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) for file storage, configures the bucket to host a website, and deploys an [Amazon CloudFront Distribution](/registry/packages/aws/api-docs/cloudfront/distribution/) to serve the website with low latency, caching, and HTTPS. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The AWS Static Website template scaffolds a Pulumi project that stores site files in a private [Amazon S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) and serves them through an [Amazon CloudFront distribution](/registry/packages/aws/api-docs/cloudfront/distribution/) using [Origin Access Control](/registry/packages/aws/api-docs/cloudfront/originaccesscontrol/). The bucket isn't publicly readable; CloudFront authenticates to the S3 REST endpoint via a bucket policy scoped to the distribution. The template ships with placeholder web content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Pulumi AWS Static Website template](./architecture.png)
+![An architecture diagram of the AWS Static Website template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy a website of your own, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy a website of your own, make sure you've [installed Pulumi](/docs/install/) and [configured your AWS credentials](/registry/packages/aws/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,13 +40,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
-
-originHostname
-: The provider-assigned hostname of the S3 bucket.
-
-originURL
-: The fully-qualified HTTP URL of the S3 bucket endpoint.
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 cdnHostname
 : The provider-assigned hostname of the CloudFront CDN. Useful for creating `CNAME` records to associate custom domains.
@@ -61,7 +56,7 @@ $ open $(pulumi stack output cdnURL)
 
 ## Customizing the project
 
-Projects created with the Static Website template expose the following [configuration](/docs/concepts/config/) settings:
+Projects created with the Static Website template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -72,7 +67,7 @@ indexDocument
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ### Using your own web content
 
@@ -747,7 +742,7 @@ Pulumi supports many third-party DNS providers, all of which are available in th
 
 Integration details vary by provider, so we suggest exploring the Pulumi API documentation of your provider of choice to learn more. [See the Registry](/registry/) for a complete list of supported providers.
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -757,9 +752,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade static website on AWS with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the AWS package by exploring the [API docs in the Registry &rarr;](/registry/packages/aws)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [AWS provider API docs](/registry/packages/aws) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [AWS posts on the Pulumi blog](/blog/tag/aws).

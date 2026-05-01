@@ -7,7 +7,7 @@
 
     .tile {
         @include transition;
-        @apply block rounded shadow border border-gray-300 cursor-pointer;
+        @apply block rounded border border-gray-300 cursor-pointer;
 
         &:hover {
             @apply shadow-md;

@@ -4,13 +4,6 @@
 
 {{ define "main" }}
     <section id="overview" class="my-16 relative">
-        <div class="shape-background home-build-section">
-            <div class="shape-container">
-                <div class="circle-left"></div>
-                <div class="circle-center"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
 
         <div class="container mx-auto p-6">
             <h2 class="text-center">{{ .Params.overview.title }}</h2>
@@ -23,12 +16,6 @@
     </section>
 
     <section id="providers" class="my-16 lg:my-32 relative">
-        <div class="shape-background home-deploy-section">
-            <div class="shape-container">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
 
         <div class="container mx-auto p-6">
             <h2 class="text-center mb-12">{{ .Params.details.title }}</h2>
@@ -78,12 +65,6 @@
     <section id="benefits" class="container mx-auto my-16 lg:my-24 relative">
         <h2 class="text-center">{{ .Params.benefits.title }}</h2>
         <div class="benefits-section relative">
-            <div class="shape-background home-benefits-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                    <div class="circle-right"></div>
-                </div>
-            </div>
             <div class="flex flex-wrap">
                 {{ range $item := .Params.benefits.items }}
                     <div class="w-full lg:w-1/2 p-6">
@@ -138,7 +119,7 @@
 
             <div class="lg:flex items-stretch">
                 <div class="w-full lg:w-1/2 px-4 py-2 lg:p-8 lg:px-4">
-                    <div class="lg:shadow-2xl bg-violet-600 p-8 lg:px-12 lg:pt-4 g:pb-12 rounded-xl h-full">
+                    <div class="lg:shadow-2xl bg-violet-primary p-8 lg:px-12 lg:pt-4 g:pb-12 rounded-xl h-full">
                         <h4 class="text-white">{{ .Params.get_started.browse.title }}</h4>
                         <p class="mb-12 text-white">{{ .Params.get_started.browse.description }}</p>
                         <a href="/registry/" class="btn-secondary">{{ .Params.get_started.browse.cta_text }}</a>

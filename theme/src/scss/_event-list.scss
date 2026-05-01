@@ -28,7 +28,7 @@
 
         // On initial load without a hash, the "All" tab should be active.
         li[data-filter-name="all"] {
-            border-bottom: 2px solid #805ac3;
+            border-bottom: 2px solid var(--color-violet-primary);
 
             > a {
                 @apply font-semibold text-black;
@@ -115,7 +115,7 @@
 
         // Highlight the active tab.
         ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
-            border-bottom: 2px solid #805ac3;
+            border-bottom: 2px solid var(--color-violet-primary);
 
             > a {
                 @apply font-semibold text-black;

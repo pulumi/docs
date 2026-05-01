@@ -455,7 +455,7 @@ benefits:
     items:
         - title: Use your favorite languages
           icon: code
-          icon_color: salmon
+          icon_color: violet
           description: |
             Start building infrastructure just by installing a Go module or a NuGet, npm, or Python package. Create your own packages in every language by authoring in just one language.
 
@@ -467,7 +467,7 @@ benefits:
 
         - title: Build faster and smarter
           icon: guage
-          icon_color: purple
+          icon_color: violet
           description: |
             Don’t reinvent the wheel. Use or create infrastructure abstractions that encapsulate cloud architectures and best practices with Pulumi components in your favorite languages.
 

@@ -22,7 +22,7 @@ body.section-pulumi-up {
     }
 
     .yellow-header-text {
-        font-family: 'Gilroy';
+        font-family: 'Inter';
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -96,7 +96,7 @@ body.section-pulumi-up {
     }
 
     .btn-primary:hover {
-        background:linear-gradient(90deg, #be5188 0%, #805ac3 100%)
+        background: var(--color-violet-primary);
     }
     
 }
@@ -194,7 +194,7 @@ body.section-pulumi-up {
 //             }
 //         }
 //         .header-nav-drop-down-menu a:hover{
-//             color: $brand-violet !important;
+//             color: var(--color-violet-primary) !important;
 //         }
 
 //         .list-sub-title {

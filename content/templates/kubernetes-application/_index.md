@@ -2,21 +2,26 @@
 title_tag: Templates for Deploying Kubernetes Applications
 title: "Kubernetes Application Templates"
 layout: overview
-meta_desc: Instantly deploy Kubernetes web applications on AWS, Azure, or Google Cloud Platform with Pulumi Kubernetes Application templates.
+schema_type: faq
+description: Pulumi templates for deploying Helm charts and web applications to existing Kubernetes clusters in your language of choice.
+meta_desc: Deploy applications and Helm charts to your existing Kubernetes clusters with Pulumi Kubernetes Application templates.
 meta_image: meta.png
 weight: 99
 ---
 
-### Building and deploying applications on Kubernetes clusters
+## About these templates
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building Kubernetes applications with programming languages and deploying them to your Kubernetes clusters.
+### What does a Kubernetes Application template do?
 
-Pulumi’s open source, infrastructure as code SDK lets you build and deploy Kubernetes applications with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+A Kubernetes Application template scaffolds a Pulumi project that deploys a workload to an existing Kubernetes cluster. The project uses Pulumi's [Kubernetes provider](/registry/packages/kubernetes) to create a namespace and deploy resources — either a Helm chart or a Deployment plus a Service — and runs against the cluster identified by your active kubeconfig.
 
-* **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages.
+### What's the difference between the Helm Chart and Web Application templates?
 
-* **Cloud Native Ecosystem Support:** Use Helm charts and native Kubernetes API objects, including integrated Kustomize support, to deploy workloads to your Kubernetes cluster.
+The two templates target different starting points:
 
-* **Fast, Easy Deployment:** Quickly deploy your Kubernetes applications with the CLI, with a [GitOps workflow](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/), or from a CI/CD workflow.
+- The [Helm Chart template](/templates/kubernetes-application/helm-chart/) installs a Helm chart (the Nginx ingress controller by default) into a new namespace. Use it when you want to deploy a packaged third-party workload.
+- The [Web Application template](/templates/kubernetes-application/web-application/) creates a Kubernetes Deployment and Service from primitives. Use it when you want to deploy your own container image with explicit replica and Service-type control.
 
-* **Rapid Development:** Author, version, test, and release cluster and infrastructure changes just like software.
+### Do I need a Kubernetes cluster before I deploy an application?
+
+Yes. Both templates assume an existing cluster reachable via your local kubeconfig. If you don't have one yet, the [Kubernetes Cluster templates](/templates/kubernetes) provision a managed cluster on AWS, Azure, or Google Cloud and export a `kubeconfig` for you to use.

@@ -59,8 +59,8 @@ $size-large: 24px;
 }
 
 .api-symbol--resource {
-    @apply text-blue-700;
-    @apply border-blue-700;
+    @apply text-violet-800;
+    @apply border-violet-700;
 
     &:before {
         content: "R";

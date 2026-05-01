@@ -1,7 +1,7 @@
 pulumi-banner {
     @apply hidden text-white font-body text-base text-center py-3 px-4 shadow;
 
-    background-image: linear-gradient(77.95deg, #f6bf28 0.06%, #f2707e 48.58%, #bf4e86 95.36%);
+    background: var(--color-violet-primary);
 
     &[visible] {
         @apply block;
@@ -17,7 +17,7 @@ pulumi-banner {
         }
 
         span {
-            @apply text-2xl inline-block text-blue-100 mr-2;
+            @apply text-2xl inline-block text-violet-100 mr-2;
 
             &:hover {
                 @apply text-white;
@@ -44,7 +44,7 @@ pulumi-banner {
     }
 
     .cta {
-        @apply cursor-pointer mx-2 w-full rounded-full font-bold bg-blue-500 px-4 py-2 text-sm uppercase mt-4 mb-2 flex items-center justify-center;
+        @apply cursor-pointer mx-2 w-full rounded-full font-bold bg-violet-primary px-4 py-2 text-sm uppercase mt-4 mb-2 flex items-center justify-center;
         @include transition;
         @include fa-glyph("\f054");
 
@@ -61,7 +61,7 @@ pulumi-banner {
         }
 
         &:hover {
-            @apply bg-blue-400;
+            @apply bg-violet-800;
         }
     }
 }

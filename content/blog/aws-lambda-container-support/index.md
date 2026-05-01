@@ -1,9 +1,12 @@
 ---
 title: Running Container Images in AWS Lambda
 date: 2020-12-01
-updated: 2025-03-11
+updated: 2026-04-30
+changelog:
+    - 2026-04-30: Refreshed for 2026 with current Lambda container limits and pricing, side-by-side TypeScript and Python examples, a Lambda vs. Fargate vs. ECS comparison table, and updated SDK conventions. Restructured for answer-first readability and added HowTo schema.
+    - 2025-03-11: Refreshed AWS guides links and modernized example references.
 draft: false
-meta_desc: Learn how to deploy AWS Lambda functions as container images. Explore setup, benefits, and a hands-on example using Pulumi to streamline serverless workflows.
+meta_desc: Deploy AWS Lambda functions as container images with Pulumi. Compares Lambda ZIP, containers, Fargate, and ECS with 2026 limits, pricing, and runnable code.
 meta_image: meta.png
 authors:
     - mikhail-shilkov
@@ -13,113 +16,222 @@ tags:
     - serverless
 ---
 
-{{% notes type="warning" %}}
-Some of the code in this post is out of date. See the [AWS guides](/docs/iac/clouds/aws/guides/) for an updated overview and examples.
-{{% /notes %}}
-
-When AWS Lambda launched in 2014, it pioneered the concept of Function-as-a-Service. Developers could write a function in one of the supported programming languages, upload it to AWS, and Lambda executes the function on every invocation.
-
-Ever since then, a zip archive of application code or binaries has been the only supported deployment option. Even AWS Lambda Layers&mdash;reusable components automatically merged into the application code&mdash;used the zip packaging format.
-
-Today, AWS announced that AWS Lambda now supports packaging serverless functions as container images. This means that you can deploy a custom Docker or OCI image as an AWS Lambda function.
+**TL;DR** &mdash; To run a container image in AWS Lambda, build an OCI image that implements the [Lambda Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html) (most teams start from an [AWS-provided base image](https://gallery.ecr.aws/lambda/)), push it to Amazon ECR, and create a Lambda function with `packageType: "Image"` pointing at the image URI. Lambda containers support images up to 10&nbsp;GB, up to 10&nbsp;GB of memory, up to 10&nbsp;GB of `/tmp` ephemeral storage, and a 15-minute execution ceiling. Pulumi automates the build, push, and function wiring in a single program. Pick Lambda containers when your workload is event-driven and bursty but your dependencies (binaries, ML models, system libraries) outgrow the 250&nbsp;MB ZIP limit; pick [AWS Fargate or ECS](/docs/iac/guides/clouds/aws/) when you need long-running tasks, persistent connections, or multi-container pods.
 
 <!--more-->
 
+## How do I run a container image in AWS Lambda?
+
+You package your function as a Linux container image, push it to [Amazon ECR](https://aws.amazon.com/ecr/), and create a Lambda function whose `packageType` is `Image`. The image must implement the Lambda Runtime API, which is an HTTP protocol Lambda uses to deliver invocation events and collect responses. The simplest path is to start `FROM` an AWS-provided base image (`public.ecr.aws/lambda/nodejs:22`, `public.ecr.aws/lambda/python:3.13`, `public.ecr.aws/lambda/java:21`, and so on) because they ship with the Runtime Interface Client preinstalled. If you want to use a different OS or runtime, add the open-source [Runtime Interface Client](https://github.com/aws/aws-lambda-runtime-interface-clients) yourself.
+
+With Pulumi, one program covers the entire path: ECR repository, Docker build and push, IAM role, Lambda function, and event source. It works in TypeScript, Python, Go, .NET, Java, or YAML. The rest of this post walks through that program with a real video-thumbnailer example.
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+import * as awsx from "@pulumi/awsx";
+
+const repo = new awsx.ecr.Repository("repo", {
+    forceDelete: true,
+});
+
+const image = new awsx.ecr.Image("image", {
+    repositoryUrl: repo.url,
+    context: "./app",
+    platform: "linux/amd64",
+});
+
+const role = new aws.iam.Role("thumbnailerRole", {
+    assumeRolePolicy: aws.iam.getPolicyDocument({
+        statements: [{
+            actions: ["sts:AssumeRole"],
+            principals: [{ type: "Service", identifiers: ["lambda.amazonaws.com"] }],
+        }],
+    }).then(doc => doc.json),
+});
+
+new aws.iam.RolePolicyAttachment("lambdaExecute", {
+    role: role.name,
+    policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
+});
+
+const thumbnailer = new aws.lambda.Function("thumbnailer", {
+    packageType: "Image",
+    imageUri: image.imageUri,
+    role: role.arn,
+    timeout: 900,
+    memorySize: 2048,
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_aws as aws
+import pulumi_awsx as awsx
+
+repo = awsx.ecr.Repository("repo", force_delete=True)
+
+image = awsx.ecr.Image(
+    "image",
+    repository_url=repo.url,
+    context="./app",
+    platform="linux/amd64",
+)
+
+role = aws.iam.Role(
+    "thumbnailerRole",
+    assume_role_policy=aws.iam.get_policy_document(statements=[{
+        "actions": ["sts:AssumeRole"],
+        "principals": [{"type": "Service", "identifiers": ["lambda.amazonaws.com"]}],
+    }]).json,
+)
+
+aws.iam.RolePolicyAttachment(
+    "lambdaExecute",
+    role=role.name,
+    policy_arn=aws.iam.ManagedPolicy.AWS_LAMBDA_EXECUTE,
+)
+
+thumbnailer = aws.lambda_.Function(
+    "thumbnailer",
+    package_type="Image",
+    image_uri=image.image_uri,
+    role=role.arn,
+    timeout=900,
+    memory_size=2048,
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+`pulumi up` builds the image from `./app`, pushes it to a fresh ECR repository, and deploys the Lambda &mdash; in one step, with one command, with no shell scripts.
+
+## What is a Lambda container image?
+
+A Lambda container image is an [OCI](https://opencontainers.org/) (or Docker v2) image whose entrypoint speaks the [Lambda Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html). The image is stored in Amazon ECR, and Lambda pulls it on cold start. Functionally, a container-image function behaves the same as a ZIP-package function: it is invoked by the same triggers (S3, SQS, API Gateway, EventBridge, and so on), it bills the same way (per request and per GB-second), and it is bound by the same 15-minute execution ceiling. The only meaningful difference is how the code is packaged and what limits apply to that package.
+
+Lambda container images were announced at [re:Invent 2020](https://aws.amazon.com/blogs/aws/new-for-aws-lambda-container-image-support/) and have been generally available ever since. They are not a separate service &mdash; they are a deployment format for the same Lambda runtime.
+
+## What are the AWS Lambda container limits in 2026?
+
+The hard limits below apply to every Lambda function regardless of packaging, except for the image-size column, which is specific to container images.
+
+| Limit                       | Container image                                  | ZIP package                       |
+| --------------------------- | ------------------------------------------------ | --------------------------------- |
+| Maximum package size        | **10 GB** (uncompressed)                         | 250 MB (unzipped, including layers) |
+| Maximum memory              | 10,240 MB                                        | 10,240 MB                         |
+| Maximum ephemeral `/tmp`    | 10,240 MB                                        | 10,240 MB                         |
+| Maximum execution timeout   | 15 minutes                                       | 15 minutes                        |
+| Maximum payload (sync)      | 6 MB request / 6 MB response                     | 6 MB request / 6 MB response      |
+| Architectures               | `x86_64`, `arm64`                                | `x86_64`, `arm64`                 |
+| SnapStart support           | Not supported for container images               | Java, Python, .NET                |
+
+Sources: [Lambda quotas](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html), [Lambda images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html), [SnapStart documentation](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html).
+
+A note on cold starts: the public guidance from AWS is that container-image cold starts are typically comparable to ZIP cold starts when the image is well-optimized &mdash; AWS caches image layers and uses on-demand block-level loading so only the bytes touched at startup are downloaded. The biggest lever you have is image size: keep the image small, put rarely changed dependencies in lower layers, and prefer a minimal base. SnapStart, which is the most effective cold-start mitigation for Java, Python, and .NET ZIP functions, does **not** apply to container-image functions; if you need SnapStart, ship a ZIP.
+
+## How much do Lambda container images cost?
+
+Container-image functions are billed identically to ZIP functions:
+
+- **Requests**: $0.20 per 1M requests (x86_64 and arm64 alike).
+- **Duration**: $0.0000166667 per GB-second on x86_64, $0.0000133334 on arm64 (Graviton2) &mdash; roughly 20% lower per GB-second, with up to 34% better price-performance per AWS.
+- **Free tier**: 1M requests and 400,000 GB-seconds per month, every month.
+- **Storage**: ECR charges $0.10 per GB-month for image storage; data transfer to Lambda within the same Region is free.
+
+Always confirm rates against the live [Lambda pricing](https://aws.amazon.com/lambda/pricing/) and [ECR pricing](https://aws.amazon.com/ecr/pricing/) pages, since AWS adjusts them periodically.
+
+## How do Lambda containers compare to Fargate, ECS, and ZIP Lambdas?
+
+The four options below all run containers, but they sit on a spectrum from "fully event-driven, scale to zero" to "long-running, always on."
+
+| Dimension              | Lambda (ZIP)                          | Lambda (container image)              | AWS Fargate                                    | Amazon ECS (EC2)                          |
+| ---------------------- | ------------------------------------- | ------------------------------------- | ---------------------------------------------- | ----------------------------------------- |
+| Packaging              | ZIP up to 250 MB                      | OCI image up to 10 GB                 | OCI image (no Lambda runtime API needed)       | OCI image                                 |
+| Cold start             | Milliseconds to seconds; SnapStart available | Seconds (image-size dependent); no SnapStart | Tens of seconds for new tasks            | Tens of seconds (capacity dependent)      |
+| Max execution time     | 15 minutes                            | 15 minutes                            | Unbounded                                      | Unbounded                                 |
+| Scale to zero          | Yes                                   | Yes                                   | No (minimum task count)                        | No (minimum container instances)          |
+| Billing               | Per-ms duration + per-request         | Per-ms duration + per-request         | Per-second of vCPU and memory                  | Per-EC2-instance-hour + per-task overhead |
+| Networking            | Optional VPC attachment               | Optional VPC attachment               | First-class VPC, ENIs, persistent connections  | First-class VPC, ENIs, persistent connections |
+| Native event triggers | 100+ AWS services                     | 100+ AWS services                     | EventBridge / Step Functions integrations      | EventBridge / Step Functions integrations |
+| Best for              | Short, bursty, event-driven workloads | Same as ZIP, but with heavy dependencies, native binaries, large ML models | Long-running services, daemons, persistent workloads | Workloads needing custom EC2 sizing or GPU |
+
+The decision tree is short: if your workload runs for less than 15 minutes per invocation and you can fit it in 10 GB, Lambda is almost always cheaper and operationally simpler than Fargate. If you cannot fit in a 250 MB ZIP, use a Lambda container image. If your workload is long-running or needs persistent network connections, choose Fargate or ECS.
+
+## How do I deploy a Lambda container image with Pulumi?
+
+Let's walk through a complete program: a video thumbnailer that runs every time a `.mp4` is uploaded to an S3 bucket. The function uses [FFmpeg](https://ffmpeg.org/), a binary that is impractical to ship in a 250 MB ZIP, to extract a thumbnail and write it back to the bucket. The full source is in [pulumi/examples](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer).
+
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
 
-#### AWS Lambda Containers QuickStart
+#### Quick start
 
-Ready to get up and running quickly right away?
-
-1. Bootstrap a project `pulumi new https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer`.
-2. Add your Lambda's logic to `./app/Dockerfile` and `./app/index.js`.
-3. Deploy with `$ pulumi up`.
-
-For additional information on how Lambda Containers work, and more advanced options, please read on.
+1. Bootstrap a project: `pulumi new https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer`
+1. Edit `./app/Dockerfile` and `./app/index.js` with your function's logic.
+1. Deploy: `pulumi up`.
 
 </div>
 
-## Why Deploy AWS Lambda Functions as Container Images?
+### 1. Define a Dockerfile
 
-The first production-ready version of Docker was released in October 2014, just one month before the announcement of AWS Lambda. Container images are now the de-facto standard of application packaging. Containers run in local development loops, in Kubernetes clusters, including Amazon EKS, as well as in Amazon ECS and AWS Fargate. Docker is embraced across the cloud industry, for instance, Google Cloud Run is a serverless offering centered around container images.
+The container image is based on the AWS-provided Node.js 22 image, which preinstalls the Runtime Interface Client. It also installs the AWS CLI and FFmpeg, copies the handler, and points to `index.handler` as the entrypoint.
 
-With today's launch, AWS Lambda can run functions packaged as container images, enabling customers to build serverless applications using familiar tools, preferred languages, and required dependencies.
+```dockerfile
+FROM public.ecr.aws/lambda/nodejs:22
 
-Here are essential scenarios enabled and improved by container image deployments:
+RUN dnf install -y tar xz unzip \
+    && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
+    && unzip awscliv2.zip && ./aws/install \
+    && curl -O https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz \
+    && tar -xf ffmpeg-release-amd64-static.tar.xz \
+    && mv ffmpeg-*-amd64-static/ffmpeg /usr/local/bin/ \
+    && rm -rf awscliv2.zip aws ffmpeg-*-amd64-static*
 
-- **Package binaries and libraries** that may not be available as a NPM (or another package manager) module. Our video processing example below demonstrates this capability.
-- **Code in an arbitrary programming language**. While already possible with Lambda Layers and Runtime API, container images will streamline the experience of developing functions in languages not native to AWS Lambda.
-- **Use custom OS and custom runtime versions** to match requirements and standard practices in a given company.
-- **Deploy large files and packages**. Container images up to 10 GB are supported, as opposed to the previous hard limit of 250 MB of unzipped files.
-- **Reuse existing base images** to bring reliable and battle-tested implementations from the broad community or domain-specific scenarios.
-- **Apply centralized container image building and packaging governance and security requirements** to AWS Lambda deployments. This provides Enterprise customers with a higher level of control.
+COPY index.js ${LAMBDA_TASK_ROOT}
+CMD ["index.handler"]
+```
 
-AWS Lambda functions packaged as container images will continue to benefit from the event-driven execution model, consumption-based billing, automatic scaling, high availability, fast start-up, and native integrations with numerous AWS services.
+### 2. Create an S3 bucket for inputs and outputs
 
-## How AWS Lambda Container Images Work
+{{< chooser language "typescript,python" >}}
 
-You can get started with deploying containers to AWS Lambda in three steps:
-
-1. **Prepare a container definition** that implements the Lambda Runtime Interface as explained below.
-2. **Build** the container image and **publish** it to Amazon Elastic Container Registry (ECR).
-3. **Deploy an AWS Lambda**, grant it access to the ECR, and point it to the container image.
-
-![Lambda Function packaged as a Container](lambdacontainers.png)
-
-Your container image has to implement AWS Lambda runtime API. Runtime API is a simple HTTP-based protocol with operations to retrieve invocation data, submit responses, and report errors.
-
-Therefore, not every container image may be deployed to AWS Lambda. You have two main options:
-
-- **Choose a base image provided by AWS**, which already includes the Runtime Interface Client (RIC). AWS provides base images for Node.js, Python, Java, Go, .NET Core, and Ruby.
-- **Use an arbitrary base image** and implement the API with an AWS Lambda runtime client SDK. Using a custom base image, you can leverage open-source AWS Lambda Runtime Interface Client to make the image compatible with Lambda’s runtime API.
-
-## AWS Lambda vs. AWS Fargate: Choosing the Right Container Service
-
-Lambda Container image support further blurs the lines between Lambda and Fargate. It’s important to understand the remaining differences to decide which service to use in a given scenario:
-
-- **Cost structure**. Lambda is charged per execution, while Fargate has a fixed cost per vCPU per hour regardless of the actual workload. Depending on requests per second served by a single CPU, one model can be much more frugal than the other.
-- **Scale to zero**. Consequently, an idle Lambda function costs nothing while Fargate still incurs fixed minimal running costs. Therefore, breaking an application down to many small specialized Lambda functions is much more practical and common than micro Fargate instances.
-- **Burst workloads**. Lambda scales on a per-request basis and can go from zero to a thousand instances in seconds. It’s a great fit for applications with bursty workloads that need to switch from idle to full capacity and back.
-- **Performance**. Fargate runs on more dedicated resources, so overall performance will likely be better than on Lambda. For time-sensitive and critical APIs, Fargate may offer a fast and consistent experience superior to Lambda, especially on high percentiles.
-- **Integration with AWS services**. Lambda comes with native integration with 100+ AWS services. It’s straightforward to trigger a function for incoming SQS messages or new files in an S3 bucket, which requires more wiring for Fargate tasks.
-- **Resource limits**. Lambda executions are limited to 15 minutes and may only consume up to 10 GB of RAM. Fargate may be the only option for long-running resource-demanding jobs.
-
-Overall, Lambda shines for unpredictable or inconsistent workloads and applications easily expressed as isolated functions triggered by events in other AWS services.
-
-{{< related-posts >}}
-
-## Example: Serverless Video Thumbnailer with AWS Lambda and Pulumi
-
-Let's walk through the steps to build an example application with container-based AWS Lambda using [infrastructure as code](/what-is/what-is-infrastructure-as-code/). In this scenario, a function runs every time a new video is uploaded to an Amazon S3 bucket. It relies on FFmpeg tools to produce a thumbnail of the uploaded video and uploads the thumbnail back to the same S3 bucket.
-
-We'll use Pulumi to provision the necessary resources. You can check out the [full source code](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in the Pulumi Examples.
-
-### Define a Dockerfile
-
-Here are the key features of the container image for our Thumbnailer:
-
-- Based on the `amazon/aws-lambda-nodejs:12` image
-- Installs AWS CLI to copy objects to and from S3
-- Installs FFmpeg to process video files
-- Copies the `index.js` with function implementation
-- Points the `index.handler` command
-
-You can find the full Dockerfile [here](https://github.com/pulumi/examples/blob/master/aws-ts-lambda-thumbnailer/app/Dockerfile).
-
-### Create a S3 Bucket
-
-Now, let's start composing our Pulumi program in TypeScript. The first step is to define an S3 bucket.
+{{% choosable language typescript %}}
 
 ```typescript
 import * as aws from "@pulumi/aws";
 
-// A bucket to store videos and thumbnails.
 const bucket = new aws.s3.Bucket("bucket");
 ```
 
-### Build and Publish the Container Image
+{{% /choosable %}}
 
-We can use [Pulumi Crosswalk for AWS](https://www.pulumi.com/docs/iac/clouds/aws/guides/) to build the Docker image and publish it to a new ECR repository with just three lines of code.
+{{% choosable language python %}}
+
+```python
+import pulumi_aws as aws
+
+bucket = aws.s3.Bucket("bucket")
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### 3. Build the image and push it to ECR
+
+[Pulumi Crosswalk for AWS](/docs/iac/guides/clouds/aws/) wraps the ECR repository, the Docker build, and the push into two resources:
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -130,30 +242,87 @@ const repo = new awsx.ecr.Repository("repo", {
 
 const image = new awsx.ecr.Image("image", {
     repositoryUrl: repo.url,
-    path: "./app",
+    context: "./app",
+    platform: "linux/amd64",
 });
 ```
 
-The local `app` folder contains the application files (`Dockerfile` and `index.js`).
+{{% /choosable %}}
 
-### Setup a Role
+{{% choosable language python %}}
 
-Next, we define an IAM role and a policy attachment to grant AWS Lambda access to S3 and CloudWatch.
+```python
+import pulumi_awsx as awsx
+
+repo = awsx.ecr.Repository("repo", force_delete=True)
+
+image = awsx.ecr.Image(
+    "image",
+    repository_url=repo.url,
+    context="./app",
+    platform="linux/amd64",
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The `./app` directory holds the `Dockerfile` and the handler. `platform: "linux/amd64"` is explicit so the build is reproducible from Apple Silicon and Graviton developer machines. Switch to `linux/arm64` if you want the cheaper Graviton runtime.
+
+### 4. Set up the IAM role
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const role = new aws.iam.Role("thumbnailerRole", {
-    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
+    assumeRolePolicy: aws.iam.getPolicyDocument({
+        statements: [{
+            actions: ["sts:AssumeRole"],
+            principals: [{ type: "Service", identifiers: ["lambda.amazonaws.com"] }],
+        }],
+    }).then(doc => doc.json),
 });
 
-new aws.iam.RolePolicyAttachment("lambdaFullAccess", {
+new aws.iam.RolePolicyAttachment("lambdaExecute", {
     role: role.name,
     policyArn: aws.iam.ManagedPolicy.AWSLambdaExecute,
 });
 ```
 
-### Configure AWS Lambda for Video Processing
+{{% /choosable %}}
 
-It's time to define the AWS Lambda function itself! It's as simple as giving it a name and pointing to the image URI returned from the ECR. Also, we assign the role and increase the timeout to 15 minutes, as video processing may take a while.
+{{% choosable language python %}}
+
+```python
+role = aws.iam.Role(
+    "thumbnailerRole",
+    assume_role_policy=aws.iam.get_policy_document(statements=[{
+        "actions": ["sts:AssumeRole"],
+        "principals": [{"type": "Service", "identifiers": ["lambda.amazonaws.com"]}],
+    }]).json,
+)
+
+aws.iam.RolePolicyAttachment(
+    "lambdaExecute",
+    role=role.name,
+    policy_arn=aws.iam.ManagedPolicy.AWS_LAMBDA_EXECUTE,
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+`AWSLambdaExecute` is the AWS-managed policy that grants the read/write S3 access and CloudWatch Logs access this function needs. For a real production workload, scope this down to a custom policy that names the bucket explicitly.
+
+### 5. Configure the Lambda function
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 const thumbnailer = new aws.lambda.Function("thumbnailer", {
@@ -161,31 +330,175 @@ const thumbnailer = new aws.lambda.Function("thumbnailer", {
     imageUri: image.imageUri,
     role: role.arn,
     timeout: 900,
+    memorySize: 2048,
+    architectures: ["x86_64"],
 });
 ```
 
-### Automate AWS Lambda Triggers for New Video Uploads
+{{% /choosable %}}
 
-Finally, we can assign a trigger to the function using the `bucket.onObjectCreated` helper method. We want to limit the function to only process `mp4` files.
+{{% choosable language python %}}
 
-```typescript
-// When a new video is uploaded, run the FFMPEG task on the video file.
-bucket.onObjectCreated("onNewVideo", thumbnailer, { filterSuffix: ".mp4" });
+```python
+thumbnailer = aws.lambda_.Function(
+    "thumbnailer",
+    package_type="Image",
+    image_uri=image.image_uri,
+    role=role.arn,
+    timeout=900,
+    memory_size=2048,
+    architectures=["x86_64"],
+)
 ```
 
-And that is it! We run `pulumi up` to get the thumbnailed service up and running.
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+`packageType: "Image"` is the only setting that distinguishes a container function from a ZIP function. The `imageUri` is the digest-pinned URI of the image we just pushed, so any change to the Dockerfile or handler triggers a redeploy on the next `pulumi up`.
+
+### 6. Wire up the S3 trigger
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+new aws.s3.BucketNotification("onNewVideo", {
+    bucket: bucket.id,
+    lambdaFunctions: [{
+        lambdaFunctionArn: thumbnailer.arn,
+        events: ["s3:ObjectCreated:*"],
+        filterSuffix: ".mp4",
+    }],
+});
+
+new aws.lambda.Permission("allowBucket", {
+    action: "lambda:InvokeFunction",
+    function: thumbnailer.name,
+    principal: "s3.amazonaws.com",
+    sourceArn: bucket.arn,
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+aws.s3.BucketNotification(
+    "onNewVideo",
+    bucket=bucket.id,
+    lambda_functions=[{
+        "lambda_function_arn": thumbnailer.arn,
+        "events": ["s3:ObjectCreated:*"],
+        "filter_suffix": ".mp4",
+    }],
+)
+
+aws.lambda_.Permission(
+    "allowBucket",
+    action="lambda:InvokeFunction",
+    function=thumbnailer.name,
+    principal="s3.amazonaws.com",
+    source_arn=bucket.arn,
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+That is the entire program. `pulumi up` provisions everything in the right order, and a subsequent edit to the Dockerfile rebuilds and rolls out a new image automatically.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Deploy a container image to AWS Lambda with Pulumi",
+  "description": "Build a Linux container image that implements the AWS Lambda Runtime API, push it to Amazon ECR, and deploy it as a Lambda function with Pulumi.",
+  "totalTime": "PT15M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Pulumi CLI"},
+    {"@type": "HowToTool", "name": "AWS account"},
+    {"@type": "HowToTool", "name": "Docker"},
+    {"@type": "HowToTool", "name": "Node.js"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Define a Dockerfile",
+      "text": "Create a Dockerfile that starts FROM an AWS-provided Lambda base image (such as public.ecr.aws/lambda/nodejs:22) and copies your handler into LAMBDA_TASK_ROOT.",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#1-define-a-dockerfile"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Create an S3 bucket for inputs and outputs",
+      "text": "Declare the S3 bucket the function will read from and write to using aws.s3.Bucket.",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#2-create-an-s3-bucket-for-inputs-and-outputs"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Build and push the image to Amazon ECR",
+      "text": "Use awsx.ecr.Repository and awsx.ecr.Image to provision the registry, build the Docker image from your local context, and push it.",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#3-build-the-image-and-push-it-to-ecr"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Create the Lambda execution role",
+      "text": "Create an IAM role assumable by lambda.amazonaws.com and attach the AWSLambdaExecute managed policy (or a least-privilege custom policy).",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#4-set-up-the-iam-role"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Create the Lambda function",
+      "text": "Create an aws.lambda.Function with packageType set to Image and imageUri pointing at the digest from awsx.ecr.Image.",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#5-configure-the-lambda-function"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6,
+      "name": "Wire up the S3 trigger",
+      "text": "Use aws.s3.BucketNotification and aws.lambda.Permission to invoke the function on new .mp4 uploads.",
+      "url": "https://www.pulumi.com/blog/aws-lambda-container-support/#6-wire-up-the-s3-trigger"
+    }
+  ],
+  "supply": [
+    {"@type": "HowToSupply", "name": "AWS account with permissions to create ECR, IAM, Lambda, and S3 resources"}
+  ]
+}
+</script>
+
+## When should I choose Lambda containers over ZIP packages?
+
+Reach for a container image when one or more of the following is true:
+
+- **Your dependencies exceed 250 MB unzipped.** Native binaries (FFmpeg, ImageMagick, headless Chromium), large ML model weights, and full Python data-science stacks all blow past the ZIP limit quickly.
+- **You need a custom OS, runtime, or system library.** Lambda's managed runtimes are good but opinionated. A container lets you pin a specific glibc version, install OS packages, or run a language Lambda doesn't natively support.
+- **Your team's CI/CD already builds containers.** Reusing your existing image-build pipeline (and its scanning, signing, and SBOM tooling) is often easier than maintaining a parallel ZIP-packaging pipeline.
+- **You want a single artifact format across Lambda, Fargate, and ECS.** A container image that runs in Lambda for short bursts can also run in Fargate for long jobs &mdash; convenient for hybrid workloads.
+
+Stick with ZIP when your code is small, you want SnapStart, or you want the fastest possible cold starts.
+
+{{< related-posts >}}
 
 ## Conclusion
 
-Support for container images in AWS Lambda brings the power and usability of industry-standard packaging to serverless functions. It becomes easy to reuse application components packaged with the ubiquitous deployment format.
+AWS Lambda's container-image support brings the industry-standard packaging format to event-driven serverless functions, and Pulumi covers the full deploy (ECR repository, image build, IAM role, function, and event source) in one program in the language you already use. If you have outgrown the ZIP package, this is the pattern you want.
 
-In this post, we’ve shown how to use Pulumi to build a container image and configure an AWS Lambda to run it. Pulumi makes it easy to create artifacts and provision and manage cloud infrastructure on any cloud using familiar programming languages, including TypeScript, Python, Go and .NET. Docker images, ECR registries, and Lambda functions can be managed within the same infrastructure definition.
-
-Check out the video below for a demo of packaging AWS Lambda functions as containers.
+Watch a demo of the thumbnailer below.
 
 {{< youtube "gB9T1aW3gSk" >}}
 
-Further steps:
+Next steps:
 
-- Check out the full [Lambda + Docker example](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in the Pulumi Examples.
-- [Get Started](https://www.pulumi.com/docs/iac/get-started/aws/) with Pulumi for AWS today.
+- Browse the full [Lambda + container image example](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer) in pulumi/examples.
+- Read the [Pulumi AWS Lambda guide](/docs/iac/guides/clouds/aws/lambda/) for event sources, IAM patterns, and packaging tips.
+- See [AWS Lambda SnapStart with Pulumi](/blog/aws-lambda-snapstart/) if you need faster cold starts on a ZIP-packaged Java, Python, or .NET function.
+- Cut x86 costs with [Lambda functions powered by Graviton2](/blog/aws-lambda-functions-powered-by-graviton2/).
+- [Get started](/docs/iac/get-started/aws/) with Pulumi for AWS today.

@@ -20,23 +20,9 @@
         </section>
 
         <section id="build" class="py-8 relative">
-            <div class="shape-background cloud-engineering-small-dots-build">
-                <div class="relative w-full h-full">
-                    <div class="dot-background-container">
-                        <div class="dot-background-overlay"></div>
-                        <div class="dot-background no-animate"></div>
-                    </div>
-                </div>
-            </div>
 
             <div class="container mx-auto flex flex-col lg:flex-row relative">
                 <div class="w-full lg:w-1/2 relative">
-                    <div class="shape-background cloud-engineering-build-section">
-                        <div class="relative w-full h-full">
-                            <div class="circle-left"></div>
-                            <div class="circle-right"></div>
-                        </div>
-                    </div>
 
                     <div class="cloud-engineering-build-card card">
                         <h3>{{ .Params.build.title }}</h3>
@@ -54,23 +40,9 @@
         </section>
 
         <section id="deploy" class="py-8 mt-2 relative">
-            <div class="shape-background cloud-engineering-small-dots">
-                <div class="relative w-full h-full">
-                    <div class="dot-background-container">
-                        <div class="dot-background-overlay"></div>
-                        <div class="dot-background no-animate"></div>
-                    </div>
-                </div>
-            </div>
 
             <div class="container mx-auto flex flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 relative">
-                    <div class="shape-background cloud-engineering-deploy-section">
-                        <div class="relative w-full h-full">
-                            <div class="circle-left"></div>
-                            <div class="circle-right"></div>
-                        </div>
-                    </div>
 
                     <div class="p-6 lg:p-16 max-w-md card mx-auto mb-16 lg:mx-0 lg:ml-8 lg:mb-0 bg-white">
                         <h3 class="mb-6 mt-0">{{ .Params.deploy.title }}</h3>
@@ -88,23 +60,9 @@
         </section>
 
         <section id="manage" class="py-8 mt-3 relative">
-            <div class="shape-background cloud-engineering-small-dots">
-                <div class="shape-container">
-                    <div class="dot-background-container">
-                        <div class="dot-background-overlay"></div>
-                        <div class="dot-background no-animate"></div>
-                    </div>
-                </div>
-            </div>
 
             <div class="container mx-auto flex flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 relative">
-                    <div class="shape-background cloud-engineering-manage-section">
-                        <div class="shape-container">
-                            <div class="circle-left"></div>
-                            <div class="circle-right"></div>
-                        </div>
-                    </div>
 
                     <div class="p-6 lg:p-16 max-w-md card mx-auto mb-16 lg:mx-0 lg:ml-8 lg:mb-0 bg-white">
                         <h3>{{ .Params.manage.title }}</h3>
@@ -122,12 +80,6 @@
         </section>
 
         <section id="benefits" class="lg:my-32 relative">
-            <div class="shape-background cloud-engineering-benefits-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                    <div class="circle-right"></div>
-                </div>
-            </div>
 
             <div class="container mx-auto my-16 ">
                 <h2 class="mx-auto text-center mb-16">{{ .Params.benefits.title | markdownify }}</h2>
@@ -150,11 +102,6 @@
         </section>
 
         <section id="use-cases" class="mt-16 mb-32 relative">
-            <div class="shape-background cloud-engineering-use-cases-section">
-                <div class="shape-container">
-                    <div class="circle-right"></div>
-                </div>
-            </div>
 
             <div class="container mx-auto text-center">
                 <h2 class="text-center">{{ .Params.use_cases.title }}</h2>
@@ -171,11 +118,6 @@
         </section>
 
         <section id="case-studies" class="w-full my-16 hidden lg:block relative">
-            <div class="shape-background cloud-engineering-case-studies-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                </div>
-            </div>
 
             <div class="w-full">
                 <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
@@ -204,11 +146,6 @@
             </div>
         </section>
         <section id="case-studies" class="w-full my-16 overflow-hidden lg:hidden relative">
-            <div class="shape-background cloud-engineering-case-studies-section">
-                <div class="shape-container">
-                    <div class="circle-left"></div>
-                </div>
-            </div>
 
             <div class="w-full">
                 <h2 class="text-center mb-16">{{ .Params.case_studies.title }}</h2>
@@ -236,7 +173,7 @@
         </section>
 
         <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
-            <div class="w-full bg-violet-600 card p-6 lg:p-16 lg:pt-24 text-center">
+            <div class="w-full bg-violet-primary card p-6 lg:p-16 lg:pt-24 text-center">
                 <div class="max-w-xl mx-auto">
                     <h2 class="text-white hidden lg:block px-0 lg:px-16">{{ .Params.get_started.title }}</h2>
                     <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>

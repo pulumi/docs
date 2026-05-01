@@ -31,7 +31,7 @@
                             {{ $provider := index (and ((where site.Data.tutorials.collections "type" "provider")) ((where site.Data.tutorials.collections "id" $id))) 0 }}
 
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                <div class="p-6 border border-gray-300 w-full gradient-card shadow-xl rounded-md h-full">
+                                <div class="p-6 border border-gray-300 w-full rounded-md h-full">
                                     <div class="flex items-center justify-between mb-4">
                                         <h3 class="flex-grow whitespace-nowrap font-display font-normal no-anchor mb-0">{{ $provider.name }} tutorials</h3>
                                         <img class="h-6 flex-shrink hidden sm:block" src="{{ $provider.logo }}" />
@@ -69,10 +69,10 @@
                                     {{ $ordinal = add $ordinal 1}}
 
                                     <li class="lg:w-1/{{ $perRow }} {{ if ne (mod $ordinal $perRow) 0 }}lg:pr-4{{ end }}">
-                                        <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
+                                        <div class="bg-white p-6 border rounded-md border-gray-200 w-full h-full">
                                             <div class="mb-2 pb-2 border-b border-gray-200">
                                                 <h3 class="no-anchor font-normal text-xl flex items-center">
-                                                    <a class="text-gray-800" href="/tutorials/{{ $taxonomy }}/">
+                                                    <a class="text-xl font-semibold text-gray-950" href="/tutorials/{{ $taxonomy }}/">
                                                         {{ $collection.name }}
                                                     </a>
                                                 </h3>
@@ -100,10 +100,10 @@
                         {{ $perRow = 3 }}
                         {{ range $index, $item := where .Pages ".Params.listed" "ne" false }}
                             <li class="lg:w-1/{{ $perRow }} {{ if ne (mod (add $index 1) $perRow) 0 }}lg:pr-4{{ end }}">
-                                <div class="bg-white shadow-lg p-6 border rounded-md border-gray-200 w-full h-full">
+                                <div class="bg-white p-6 border rounded-md border-gray-200 w-full h-full">
                                     <div class="mb-2 pb-2 border-b border-gray-200">
                                         <h3 class="no-anchor font-normal text-xl flex items-center">
-                                            <a class="text-gray-800" href="{{ $item.RelPermalink }}">
+                                            <a class="text-xl font-semibold text-gray-950" href="{{ $item.RelPermalink }}">
                                                 {{ $item.Title }}
                                             </a>
                                         </h3>
@@ -114,8 +114,8 @@
                                     <div class="inline-flex flex-wrap gap-2 text-sm">
 
                                         {{ if .Pages }}
-                                        <div class="text-gray-700 px-2 py-1 border border-blue-400 rounded">
-                                            <i class="fa fa-file-alt mr-0.5 text-blue-400"></i>
+                                        <div class="text-gray-700 px-2 py-1 border border-violet-400 rounded">
+                                            <i class="fa fa-file-alt mr-0.5 text-violet-400"></i>
                                             <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
                                         </div>
                                     {{ end }}

@@ -94,7 +94,7 @@ benefits:
     items:
         - title: Unlock the potential of the modern cloud
           icon: lock
-          icon_color: purple
+          icon_color: violet
           description: |
             Modern cloud architectures, such as Kubernetes, have high innovation potential but are complicated to adopt. Cloud engineering empowers teams to tame this complexity
             with software engineering practices and tools.
@@ -108,7 +108,7 @@ benefits:
 
         - title: Decrease infrastructure risks
           icon: alert
-          icon_color: salmon
+          icon_color: violet
           description: |
             Cloud engineering “shifts risk left” through frequent testing. Every change is reviewed and tested before deployment. Policy-as-Code enforces compliance across every
             deployment, and access controls prevent unauthorized changes.

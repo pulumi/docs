@@ -5,13 +5,7 @@
 {{ define "main" }}
     {{ $pageContext := . }}
 
-
     <section id="self-hosted-overview" class="relative">
-        <div class="shape-background self-hosted-overview">
-            <div class="relative w-full h-full">
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="max-w-6xl mx-auto flex flex-col items-center text-center my-28 px-6">
             {{ with .Params.overview }}
                 <h2>{{ .title }}</h2>
@@ -76,12 +70,6 @@
     </section>
 
     <section id="self-hosted-capabilities" class="relative">
-        <div class="shape-background self-hosted-capabilities">
-            <div class="relative w-full h-full">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="max-w-7xl mx-auto flex flex-col items-center my-28 px-6">
             {{ with .Params.capabilities }}
                 <h2 class="text-center">{{ .title }}</h2>
@@ -116,14 +104,6 @@
     </section>
 
     <section id="self-hosted-pricing" class="text-center mt-28 lg:mb-36 px-6 lg:pb-28 relative">
-        <div class="shape-background self-hosted-pricing">
-            <div class="shape-container">
-                <div class="dot-background-container">
-                    <div class="dot-background-overlay"></div>
-                    <div class="dot-background no-animate"></div>
-                </div>
-            </div>
-        </div>
         <div class="flex justify-center">
             <div class="bg-white sm:w-9/12 p-12 sm:p-28">
                 {{ with .Params.pricing }}
@@ -138,12 +118,6 @@
     </section>
 
     <section id="self-hosted-trial" class="relative">
-        <div class="shape-background self-hosted-trial">
-            <div class="relative w-full h-full">
-                <div class="circle-left"></div>
-                <div class="circle-right"></div>
-            </div>
-        </div>
         <div class="max-w-5xl  flex flex-col items-center mx-auto text-center my-28 px-6">
             {{ with .Params.trial }}
                 <h2 class="mt-9">{{ .title }}</h2>
@@ -157,7 +131,7 @@
 
     <section id="self-hosted-questions" class="container px-6 lg:px-0 mx-auto my-28 px-6 flex justify-center">
         {{ with .Params.questions }}
-            <div class="w-full sm:w-10/12 bg-violet-600 card px-12 sm:px-20 py-16 text-center rounded-xl">
+            <div class="w-full sm:w-10/12 bg-violet-primary card px-12 sm:px-20 py-16 text-center rounded-xl">
                 <div class="max-w-lg mx-auto">
                     <h2 class="text-white mt-16">{{ .title }}</h2>
                     <p class="text-white">{{ .description }}</p>

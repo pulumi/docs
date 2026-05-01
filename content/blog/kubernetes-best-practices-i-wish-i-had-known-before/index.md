@@ -1,11 +1,11 @@
 ---
 title: "Kubernetes Best Practices I Wish I Had Known Before"
 date: 2025-01-20
-updated: 2026-01-23
+updated: 2026-04-30
 draft: false
 
 meta_desc: |
-  Discover essential Kubernetes best practices I wish I had known earlier. Avoid pitfalls, optimize your setup, and streamline deployments with expert insights.
+  Kubernetes best practices for 2026: resource limits, RBAC, NetworkPolicy, autoscaling, GitOps, policy-as-code, SBOM, and FinOps — with anti-patterns and fixes.
 
 meta_image: meta.png
 
@@ -30,11 +30,34 @@ social:
     <link>
 ---
 
-Kubernetes has undeniably transformed the way we build, ship, and run applications. But let’s be honest, getting started with Kubernetes can feel like climbing Mount Everest in flip-flops.
-
-As a cloud-native citizen and Kubernetes enthusiast, I’ve learned the hard way that there are a bunch of "wish I had known that earlier" best practices. They could have saved me time, money, and headaches.
+**Kubernetes best practices** are the production-tested rules that keep clusters reliable, secure, and affordable: set resource requests and limits on every container, isolate workloads with namespaces and NetworkPolicies, enforce least-privilege RBAC, automate health checks, ship via GitOps, validate every change with policy-as-code, generate an SBOM for every image, and manage Kubernetes itself with infrastructure as code instead of hand-rolled YAML. The 20 practices below cover what production teams actually do in 2026 — not what tutorials suggest.
 
 <!--more-->
+
+## TL;DR: 20 Kubernetes best practices for 2026
+
+1. Set resource **requests and limits** on every container.
+2. Use **namespaces** plus **ResourceQuota** and **LimitRange** for isolation.
+3. Run **one container per Pod** unless you genuinely need a sidecar.
+4. Manage manifests with **Helm, Kustomize, or Pulumi** — never raw copies.
+5. Use the **Gateway API** (ingress-nginx is retired) for north-south traffic.
+6. Configure **liveness, readiness, and startup probes** for every workload.
+7. Enforce **RBAC** with the principle of least privilege from day one.
+8. Apply **Pod Security Admission** at the `restricted` level by default.
+9. Lock down east-west traffic with **NetworkPolicy** (default-deny).
+10. Store secrets in an **external secret manager** (Pulumi ESC, Vault, AWS Secrets Manager) — not as plain Kubernetes Secrets.
+11. Autoscale with **HPA, VPA, and Cluster Autoscaler / Karpenter**.
+12. Monitor with **Prometheus, Grafana, and OpenTelemetry**; alert before users do.
+13. Deploy with **GitOps** (Argo CD or Flux) — Git is the only source of truth.
+14. Gate every change with **policy-as-code** (Pulumi CrossGuard, OPA/Gatekeeper, Kyverno).
+15. Generate and verify an **SBOM** for every image; sign with **Sigstore/cosign**.
+16. Manage cost with **FinOps** practices: right-size, schedule, and chargeback by namespace.
+17. Keep clusters and add-ons **patched** on a documented cadence.
+18. Use **labels and annotations** consistently for ownership, cost, and SLO tracking.
+19. Separate **dev, staging, and prod** clusters — or virtualize with vCluster.
+20. Treat clusters as **cattle, not pets**: rebuild from code, never edit live.
+
+> **Last updated April 30, 2026** — added GitOps, policy-as-code, SBOM/supply-chain, autoscaling, NetworkPolicy, and FinOps sections; added an anti-pattern table; restructured headings around the questions teams actually ask.
 
 {{% notes type="info" %}}
 Going to [KubeCon Europe 2026](https://www.pulumi.com/kubecon/)? Tame Kubernetes complexity with code.
@@ -44,85 +67,74 @@ Pulumi demos, platform engineering talks, AI-powered Neo in action, and yes, fre
 
 {{< figure alt="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" src="img.png" caption="The 'Kubernetes is easy'-iceberg meme is a classic example of how Kubernetes can be deceivingly complex" width=100% >}}
 
-In this post, I will highlight some crucial Kubernetes best practices. They are from my years of experience with Kubernetes in production. Think of this as the curated “Kubernetes cheat sheet” you wish you had from Day 1. Buckle up; it’s going to be an exciting ride.
+## What are Kubernetes best practices?
 
-1. [Don’t Skimp on Resource Requests and Limits](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#1-dont-skimp-on-resource-requests-and-limits)
-2. [Namespace Like Your Life Depends on It](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#2-namespace-like-your-life-depends-on-it)
-3. [Avoid Running Multiple Containers in One Pod Unless Necessary](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#3-avoid-running-multiple-containers-in-one-pod-unless-necessary)
-4. [Use a Package Manager for Your YAML Files](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#4-use-a-package-manager-for-your-yaml-files)
-5. [Ingress and Networking Best Practices](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#5-ingress-and-networking-best-practices)
-6. [Lean On Liveness, Readiness, and Startup Probes](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#6-lean-on-liveness-readiness-and-startup-probes)
-7. [Mind Your Security: RBAC, Pod Security, and Secrets](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#7-mind-your-security-rbac-pod-security-and-secrets)
-8. [Monitor Everything (And Then Monitor Some More)](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#8-monitor-everything-and-then-monitor-some-more)
-9. [Automate Deployments with CI/CD](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#9-automate-deployments-with-cicd)
-10. [Keep Your Kubernetes Cluster and Components Updated](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#10-keep-your-kubernetes-cluster-and-components-updated)
-11. [Use Labels and Annotations Wisely](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#11-use-labels-and-annotations-wisely)
-12. [Adopt a Multi-Environment Approach](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#12-adopt-a-multi-environment-approach)
-13. [Optimize Your Container Images](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#13-optimize-your-container-images)
-14. [Implement a Reliable Logging Strategy](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#14-implement-a-reliable-logging-strategy)
-15. [Treat Kubernetes Like Cattle, Not a Pet](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#15-treat-kubernetes-like-cattle-not-a-pet)
-16. [Consider a Higher-Level Approach for Complex Deployments](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#16-consider-a-higher-level-approach-for-complex-deployments)
-17. [Final Thoughts](/blog/kubernetes-best-practices-i-wish-i-had-known-before/#final-thoughts)
+Kubernetes best practices are the operational patterns that keep workloads available, secure, observable, and cost-efficient on a Kubernetes cluster. They span four areas: **workload configuration** (resources, probes, images), **security** (RBAC, NetworkPolicy, Pod Security, secrets, supply chain), **delivery** (GitOps, policy-as-code, IaC), and **platform operations** (autoscaling, monitoring, upgrades, FinOps). The rest of this post explains each one with a copy-pasteable rule, a definition of the underlying Kubernetes object, and a common anti-pattern to avoid.
 
-## 1. Don’t Skimp on Resource Requests and Limits
+## Common Kubernetes anti-patterns vs. the correct approach
 
-One of the first “aha!” moments in Kubernetes is realizing you can define how much CPU and memory your containers request (guaranteed resources) versus limit (the maximum they’re allowed). Here’s the tricky part: skipping these settings can get you in trouble.
+| Common mistake | What goes wrong | Correct approach |
+| --- | --- | --- |
+| No resource requests or limits | Noisy-neighbor evictions, OOMKills, unschedulable Pods | Set requests for **every** container; use VPA recommendations to tune |
+| Everything in the `default` namespace | No isolation, no quota, no RBAC boundary | One namespace per team or environment + ResourceQuota + RBAC |
+| `cluster-admin` for service accounts | Full-cluster blast radius on compromise | Per-namespace Role + RoleBinding (least privilege) |
+| Plain Kubernetes `Secret` objects | Base64 ≠ encryption; secrets leak via etcd, kubectl, audit logs | External Secrets Operator + [Pulumi ESC](/docs/esc/), Vault, or AWS Secrets Manager |
+| Open east-west traffic | One compromised Pod can reach every service | Default-deny NetworkPolicy; allow only required flows |
+| `kubectl apply -f` from a laptop | No history, no review, no rollback | GitOps with Argo CD or Flux; Git is the source of truth |
+| Manual `latest` image tags | Non-reproducible deploys, supply-chain risk | Pinned digests (`@sha256:...`) with cosign verification |
+| Ingress-nginx in 2026 | Project retired March 2026 — no security fixes | Migrate to the Gateway API (Envoy Gateway, Istio, Kgateway) |
+| Hand-rolled YAML in dozens of repos | Drift, copy-paste bugs, no testing | [Pulumi](/docs/iac/get-started/kubernetes/), Helm, or Kustomize with reviews |
+| One shared `prod` cluster for everything | Blast radius spans every team | Separate clusters or [vCluster](https://www.vcluster.com/) virtual clusters |
 
-- **Resource Requests:** This is basically your container’s baseline. If your container requests 200m CPU and 512Mi of memory, the Kubernetes scheduler will place your Pod on a node with at least that much capacity available.
-- **Resource Limits:** This is the upper bound. If your container tries to exceed the limit, it might get throttled (CPU) or even evicted (memory).
+## 1. How do you set Kubernetes resource requests and limits?
 
-{{% notes type="info" %}}
-Pro Tip:
+**What are resource requests and limits?** A resource *request* is the minimum CPU and memory the kube-scheduler guarantees a container; a resource *limit* is the maximum the kubelet allows it to consume before throttling CPU or OOMKilling memory. Pods without requests are scheduled blind, so a noisy neighbor can evict your workload at any time.
 
-- Start with some baseline, maybe 100–200m CPU, 128–512Mi memory, then tweak as you gather more data.
-- Utilize monitoring tools such as Prometheus or Datadog to analyze actual usage and make adjustments as needed.
-{{% /notes %}}
+**The rule:** every container in production sets a request for both CPU and memory, and a memory limit. CPU limits are optional and frequently counter-productive — they cause throttling spikes that look like outages.
 
-## 2. Namespace Like Your Life Depends on It
+- Start at **100–200m CPU and 128–512Mi memory** for a typical web service.
+- Tune from real data using **Vertical Pod Autoscaler** with `updateMode: Off` (recommendation-only) or Prometheus histograms.
+- Use a per-namespace `LimitRange` so teams cannot ship a container with no requests at all.
 
-If you’re deploying everything into the default namespace, oh boy, it’s time for an intervention. Namespaces are a simple yet powerful mechanism to organize (and isolate) resources in your cluster.
+## 2. How should you structure Kubernetes namespaces?
 
-- **Team-based namespaces**: Dev, QA, Prod, or per microservice if that makes sense.
-- **Access Control**: Combine namespaces with RBAC (Role-Based Access Control) policies to ensure that only the right people (and services) can mess with your stuff.
-- **Resource Quotas**: You can set quotas (e.g., CPU, memory) per namespace, preventing one rogue microservice from hogging all resources.
+**What is a Kubernetes namespace?** A namespace is a logical partition of cluster resources. It scopes object names, RBAC bindings, NetworkPolicies, and quotas — but does not provide hard isolation by itself.
 
-Take a step back and design your namespace strategy; future you will say thanks.
+**The rule:** never deploy production workloads to `default`. Map namespaces to ownership boundaries — usually one per team, environment, or tenant — and pair every namespace with three things:
 
-## 3. Avoid Running Multiple Containers in One Pod Unless Necessary
+- A **`ResourceQuota`** to cap aggregate CPU, memory, and object counts.
+- A **`LimitRange`** to enforce per-container defaults.
+- A **`RoleBinding`** that grants only the permissions that team needs.
 
-Yes, a Pod can contain multiple containers. But should it? Typically, you only want multiple containers in the same Pod when they’re tightly coupled and must share resources like volumes or network namespaces (e.g., sidecar patterns for logging or security proxies).
+This is the smallest unit that gives you predictable cost, blast-radius containment, and an RBAC perimeter.
 
-Why avoid multi-container Pods?
+## 3. Should you run multiple containers in one Pod?
 
-- **Complexity**: Troubleshooting multiple containers within a single Pod can be a pain.
-- **Coupling**: You lose the advantage of scaling containers independently. If you need to scale one container, you end up scaling everything in that Pod.
+**What is a Pod?** A Pod is the smallest deployable unit in Kubernetes — one or more containers that share a network namespace, IPC, and storage volumes, and that are scheduled and scaled as a single unit.
 
-Follow the “one-container-per-Pod” rule of thumb unless you have a compelling reason (like a sidecar pattern).
+**The rule:** one container per Pod by default. Add a second container only when it must share the Pod's network or volumes — for example, a service-mesh sidecar (Istio/Linkerd), a logging shipper, or an [init container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) that prepares state before the main process starts. Multi-container Pods couple lifecycles and scaling, so reach for them deliberately, not by default.
 
 {{< related-posts >}}
 
-## 4. Use a Package Manager for Your YAML Files
+## 4. Should you use Helm, Kustomize, or Pulumi for Kubernetes manifests?
 
-Manually wrangling a hundred YAML files across multiple microservices is about as fun as debugging spaghetti code at 3 a.m. That’s where tools like Helm, Kustomize, or Timoni come in.
+**The rule:** never copy-paste raw YAML across services. Pick one of these:
 
-- [Helm](https://helm.sh/): The “package manager for Kubernetes.” It uses charts (templates) that you can customize via values.
-- [Kustomize](https://kustomize.io/): A native Kubernetes tool that lets you overlay changes on base YAML manifests.
-- [Timoni](https://timoni.sh/): Timoni is a package manager for Kubernetes, powered by CUE and inspired by Helm.
+- **[Helm](https://helm.sh/)** — Go-templated charts; the de-facto distribution format for off-the-shelf software (Prometheus, cert-manager, Argo CD).
+- **[Kustomize](https://kustomize.io/)** — overlay-based, no templating; ships in `kubectl`. Best for "same app, different environment" diffs.
+- **[Pulumi](/docs/iac/get-started/kubernetes/)** — real programming languages (TypeScript, Python, Go, Java, .NET) for Kubernetes plus the cloud resources around it (EKS, GKE, AKS, DNS, IAM). Type checking, tests, and the Pulumi [Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps-style reconciliation.
 
-{{% notes type="info" %}}
-Pro Tip: If you’re new to Helm, start with an official chart from the Helm Hub or Artifact Hub. Then customize to your heart’s content. You’ll save yourself from YAML duplication mania.
+If you are already managing cloud infrastructure with code, extending the same Pulumi program to Kubernetes is the smallest cognitive jump — the cluster, its IAM, its DNS, and its workloads live in one stack and one review.
 
-Or, test-drive [Pulumi](/docs/get-started/) and use real programming languages to manage your Kubernetes infrastructure.
-{{% /notes %}}
+## 5. How should you handle ingress and networking on Kubernetes in 2026?
 
-## 5. Ingress and Networking Best Practices
+**What is the Gateway API?** The [Gateway API](https://gateway-api.sigs.k8s.io/) is the successor to the legacy `Ingress` resource. It splits responsibility between infrastructure (`GatewayClass`, `Gateway`) and application (`HTTPRoute`, `GRPCRoute`, `TLSRoute`) teams, and it is the SIG-Network direction for north-south traffic.
 
-In Kubernetes, networking can get complicated fast. Between Services, Ingress Controllers, and Load Balancers, it’s easy to get tangled. Keep these in mind:
+**The rule:** new clusters should standardize on the Gateway API. The widely deployed `ingress-nginx` controller [retired in March 2026](https://www.pulumi.com/blog/ingress-nginx-to-gateway-api-kgateway/), and remaining deployments should migrate to Envoy Gateway, Istio, Linkerd Gateway, or Kgateway.
 
-- Use an Ingress Controller / [Gateway API](https://gateway-api.sigs.k8s.io/) (NGINX, Traefik, HAProxy, Istio Gateway, etc.) to manage external access.
-- Leverage path-based and subdomain-based routing to simplify your network topology.
-- TLS Termination: Terminate SSL/TLS at your ingress layer. You can offload certificate management (e.g., via cert-manager) and keep your cluster traffic secure and efficient.
-- Ingress is a powerful concept in Kubernetes, spend time setting it up properly. A messy Ingress config is like a pothole-filled driveway leading to a beautiful mansion.
+- Terminate TLS at the gateway and automate certificates with [cert-manager](https://cert-manager.io/).
+- Use **path-based and host-based routing** instead of one gateway per service.
+- Protect every gateway with a WAF (managed cloud WAF or [Coraza](https://coraza.io/) on Envoy).
 
 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
     <img src="img_1.png" alt="A meme featuring two side-by-side images of Mr. Incredible. The left side shows a normal, happy face labeled “I’M LEARNING KUBERNETES”, while the right side is a dark, distorted version of his face with the same caption, humorously implying the increasing complexity and challenges of learning Kubernetes." style="width: 80%; height: 100%">
@@ -134,123 +146,183 @@ ingress-nginx is retiring in March 2026.
 Here is a guide on [How to Move to the Gateway API: post ingress-nginx Retirement](https://www.pulumi.com/blog/ingress-nginx-to-gateway-api-kgateway/).
 {{% /notes %}}
 
-## 6. Lean On Liveness, Readiness, and Startup Probes
+## 6. What's the difference between liveness, readiness, and startup probes?
 
-Kubernetes is a bit like a personal assistant, but it needs clear instructions. Without properly configured [liveness, readiness, and startup probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/), your cluster will be left guessing about the health of your containers.
+Probes tell the kubelet whether to restart a container, route traffic to it, or wait for it. Configure them per workload:
 
-- **Liveness Probe**: Checks if your container is alive. If it fails, Kubernetes restarts the container.
-- **Readiness Probe**: Checks if your container is ready to serve traffic. Until it’s ready, it doesn’t get traffic.
-- **Startup Probe**: Useful for applications that take a while to start up. It prevents the container from being killed prematurely during initial loading.
+- **Liveness probe** — restarts a hung container. Use sparingly; a bad liveness probe is a self-inflicted DoS.
+- **Readiness probe** — gates traffic from Services and Gateway routes. Use for *every* network-facing workload.
+- **Startup probe** — gives slow-booting apps (JVM, ML models) time to come up before liveness checks begin. Use whenever cold-start exceeds 10 seconds.
 
-Pro Tip: Start with readiness probes before liveness probes. You don’t want your containers to get killed simply because they’re not ready yet. Fine-tune the threshold, period, and timeout parameters.
+See [the upstream guide](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) for HTTP, TCP, and exec probe syntax. Tune `failureThreshold`, `periodSeconds`, and `timeoutSeconds` based on real latency, not defaults.
 
-## 7. Mind Your Security: RBAC, Pod Security, and Secrets
+## 7. How do you secure a Kubernetes cluster?
 
-Security isn’t just a nice-to-have in Kubernetes—it’s critical. If your cluster is compromised, it’s game over.
+Cluster security is layered: identity, workload posture, network, and secrets. Get all four right.
 
-1. **RBAC (Role-Based Access Control)**:
-    - Implement it from Day 1.
-    - Use the Principle of Least Privilege. Give each user, service account, or application only the access they need.
+### What is RBAC in Kubernetes?
 
-1. **Pod Security**:
-    - Use [Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) features to enforce standards (e.g., not allowing privileged containers).
-    - Ensure you’re not running containers as root unless absolutely necessary.
+**RBAC (Role-Based Access Control)** is the Kubernetes authorization model that maps subjects (users, groups, ServiceAccounts) to verbs (`get`, `list`, `create`, `delete`) on resources, scoped to a namespace (`Role`) or the whole cluster (`ClusterRole`).
 
-1. **Manage Secrets Properly**:
-    - Don’t store credentials or API keys in plain text inside your container images or environment variables.
-    - Do not use Kubernetes Secrets, instead use [External Secret Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/) or [Secret Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) to store secrets in external secret stores like [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Pulumi ESC](/docs/esc/), or [HashiCorp Vault](https://www.vaultproject.io/).
+- Grant **least privilege** — never bind humans or workloads to `cluster-admin`.
+- Prefer per-namespace `Role` + `RoleBinding` over `ClusterRoleBinding`.
+- Audit with `kubectl auth can-i --as=...` and tools like [`rbac-lookup`](https://github.com/FairwindsOps/rbac-lookup).
 
-## 8. Monitor Everything (And Then Monitor Some More)
+### What is Pod Security Admission?
 
-Monitoring in Kubernetes isn’t optional—it’s mandatory. With containers popping in and out of existence, you need robust observability to see what’s happening behind the scenes.
+[Pod Security Admission](https://kubernetes.io/docs/concepts/security/pod-security-admission/) is the built-in admission controller that enforces the three Pod Security Standards (`privileged`, `baseline`, `restricted`) at the namespace level.
 
-- [Prometheus + Grafana](https://github.com/prometheus-operator/kube-prometheus): A classic combo for metrics and dashboards.
-- ELK / EFK / [Grafana Loki](https://grafana.com/oss/loki/) Stack: Elastic (or OpenSearch) for logs, plus Kibana and Fluentd/Fluent Bit for log collection or Grafana Loki for logs.
-- Jaeger / Zipkin / Tempo: For distributed tracing if you have microservices that call each other.
+- Label every namespace `pod-security.kubernetes.io/enforce=restricted` by default.
+- Drop `NET_RAW` and all capabilities; run as non-root with a read-only root filesystem.
+- Use `seccompProfile: RuntimeDefault` and a tight `securityContext` for every container.
 
-Set up alerts early. You don’t want your first sign of trouble to be “why is the app so slow?” from an angry user at midnight.
+### What is a NetworkPolicy?
 
-## 9. Automate Deployments with CI/CD
+A **NetworkPolicy** is a Kubernetes object that defines allowed ingress and egress traffic for selected Pods at the IP/port level. Without one, every Pod can reach every other Pod by default.
 
-One of the biggest advantages of Kubernetes is that it becomes easier to automate your entire release process. If you’re still doing manual deploys, now’s the time to move to a CI/CD pipeline.
+- Apply a **default-deny** ingress and egress policy in every namespace.
+- Allow only the flows your service actually needs (DNS, the database, the upstream API).
+- For richer L7 controls (mTLS, JWT auth), layer a service mesh on top.
 
-- Jenkins, [GitLab](https://docs.gitlab.com/ee/ci/), GitHub Actions, the choice is yours.
-- Embrace [GitOps](https://opengitops.dev/): store all manifests in Git, and let a tool like [Flux](https://fluxcd.io/) or [Argo CD](https://argoproj.github.io/cd/) synchronize them to your cluster.
-- Automated rollbacks if a deployment fails.
-- Automation not only speeds up delivery but also drastically reduces the room for human error.
+### How should you manage Kubernetes secrets?
 
-## 10. Keep Your Kubernetes Cluster and Components Updated
+**Built-in `Secret` objects are base64-encoded, not encrypted.** Treat them as a transport, not as storage.
 
-Running an outdated Kubernetes version is like using a phone running iOS 6 in 2026. Not advisable.
+- Store the source of truth in [Pulumi ESC](/docs/esc/), [HashiCorp Vault](https://www.vaultproject.io/), [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), GCP Secret Manager, or Azure Key Vault.
+- Project secrets into Pods with the [External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/) or the [Secret Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/).
+- Enable **etcd encryption-at-rest** with a KMS provider so leaked etcd snapshots stay opaque.
+- Rotate automatically; never commit secrets to Git, even encrypted.
 
-- **Kubernetes Release Cycle**: Minor versions come out roughly [every three months](https://kubernetes.io/releases/release/), with patches more frequently.
-- **Upgrade Strategies**:
-    - Test in a dev environment first.
-    - Backup your etcd (the key-value store).
-    - Upgrade the control plane, then worker nodes, or use managed services that handle part of this for you (e.g., EKS, GKE, AKS).
+## 8. How do you set up Kubernetes observability?
 
-Keep your dependencies updated (e.g., container runtime, CNI plugins, etc.) to benefit from the latest security and performance improvements.
+Observability rests on the three pillars: metrics, logs, and traces. The 2026 default stack is OpenTelemetry-first.
 
-## 11. Use Labels and Annotations Wisely
+- **Metrics** — [Prometheus](https://github.com/prometheus-operator/kube-prometheus) (or a Prometheus-compatible TSDB like Mimir, Thanos, VictoriaMetrics) plus Grafana dashboards.
+- **Logs** — Fluent Bit or the OpenTelemetry Collector shipping structured JSON to Loki, Elastic/OpenSearch, or a managed service. Never depend on `kubectl logs` for incidents — Pods are ephemeral.
+- **Traces** — OpenTelemetry SDKs in your apps emitting to Tempo, Jaeger, or a vendor backend. Correlate trace IDs with logs.
+- **Alerts** — page on **SLO burn rate**, not on every crashed Pod. Burn-rate alerting catches real user impact without firing on every restart.
 
-[Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) might seem trivial at first, but they’re game-changers for a well-organized cluster.
+## 9. How do you automate Kubernetes deployments with GitOps?
 
-- **Labels**: Key-value pairs used for grouping and selecting Kubernetes objects. For instance, app=my-app, env=staging, team=payments.
-- **Annotations**: Key-value pairs for attaching non-identifying metadata (e.g., version info, contact email, or last-deployed timestamp).
+**What is GitOps?** [GitOps](https://opengitops.dev/) is a deployment model where the desired cluster state lives in a Git repository and a controller continuously reconciles the live cluster to match. Changes happen through pull requests, not `kubectl apply`.
 
-A consistent labeling strategy helps you filter resources quickly and maintain a clear mental map of your cluster.
+**The rule:** every cluster has a controller — [Argo CD](https://argoproj.github.io/cd/), [Flux](https://fluxcd.io/), or the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — that owns reconciliation. Humans never `kubectl apply` to production.
 
-## 12. Adopt a Multi-Environment Approach
+- Use **app-of-apps** (Argo) or **Kustomization trees** (Flux) to bootstrap whole clusters from a single root.
+- Keep manifests, Helm values, and Pulumi stack references in Git, with environment promotion via PR.
+- Combine GitOps with [Pulumi Deployments](/docs/deployments/deployments/) so cloud infrastructure (VPCs, EKS clusters, IAM, DNS) and the workloads on top promote through the same review pipeline. See [improving GitOps with the Pulumi Operator](/blog/improving-gitops-with-pulumi-operator/) for a worked example.
+- Configure **automated rollback** on health-check failure, and **drift detection** alerts when someone edits live state.
 
-If your dev, staging, and prod environments share a single cluster, you’re playing with fire. While it can be done, best practice is to isolate production workloads from the playground.
+## 10. How often should you upgrade Kubernetes?
 
-- **Separate Clusters**: Have at least one cluster for dev/staging and one for production. There are great tools like [vCluster](https://www.vcluster.com/) to create virtual clusters within a single cluster.
-- **Namespace Segregation**: If you must run them in the same cluster, use strict namespace-based isolation and RBAC rules.
+Kubernetes ships a minor release roughly [every four months](https://kubernetes.io/releases/release/) and supports each one for about 14 months. Treat upgrades as routine maintenance, not a project.
 
-Keeping environments separate reduces risk and makes it easier to test new features in a sandbox.
+- Stay within **two minor versions** of upstream — older versions miss CVE patches.
+- Test upgrades in a non-prod cluster, run a [conformance test](https://github.com/cncf/k8s-conformance), then promote.
+- Back up etcd before control-plane changes; managed services (EKS, GKE, AKS) handle most of this for you.
+- Upgrade add-ons (CNI, CSI, Gateway controller, cert-manager, metrics-server) on the same cadence — pin versions in code so the upgrade is auditable.
+- Watch the [Kubernetes deprecation guide](https://kubernetes.io/docs/reference/using-api/deprecation-guide/) and run [`pluto`](https://github.com/FairwindsOps/pluto) or `kubent` to find deprecated APIs before they break.
 
-## 13. Optimize Your Container Images
+## 11. How should you label and annotate Kubernetes resources?
 
-Don’t ship monstrous container images with half of Ubuntu plus random leftovers. This leads to slow deployments and wasted resources.
+Labels and annotations are the metadata layer that everything — Services, NetworkPolicies, monitoring, cost tools, GitOps — keys off of. Consistency matters more than cleverness.
 
-- Use lightweight base images like [distroless](https://github.com/GoogleContainerTools/distroless), alpine, or minimal OS-based images.
-- Clean up temporary files and dependencies within Dockerfiles.
-- Scan your images regularly for vulnerabilities using tools like [Trivy](https://trivy.dev/latest/) or [Anchore](https://anchore.com/).
+- Adopt the [recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/): `app.kubernetes.io/name`, `app.kubernetes.io/instance`, `app.kubernetes.io/version`, `app.kubernetes.io/component`, `app.kubernetes.io/part-of`, `app.kubernetes.io/managed-by`.
+- Add organization-specific labels for **owner**, **cost-center**, **environment**, and **SLO tier** — your FinOps and on-call processes will need them.
+- Reserve [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for non-identifying metadata: build SHA, change-ticket, last-deployed timestamp, ingress controller hints.
 
-{{% notes type="info" %}}
+## 12. How should you separate Kubernetes environments?
 
-Smaller images = faster pull times = less time to scale your app = better user experience.
+**The rule:** production is its own cluster. Dev and staging can share — sometimes. Mixing prod with anything else couples blast radius, upgrade cadence, and quotas.
 
-{{% /notes %}}
+- **Separate clusters per environment** is the safe default. With managed control planes (EKS, GKE, AKS) the cost is small.
+- **Virtual clusters** with [vCluster](https://www.vcluster.com/) give each team a Kubernetes API of their own without the operational cost of a real cluster.
+- **Namespace-only segregation** can work for dev/staging if you enforce strict NetworkPolicy, RBAC, and ResourceQuota boundaries.
+- Provision all of them from the same [Pulumi](/docs/iac/get-started/kubernetes/) program with different stacks — `dev`, `staging`, `prod` — so promotion is a config change, not a copy.
 
-## 14. Implement a Reliable Logging Strategy
+## 13. How do you optimize Kubernetes container images?
 
-Logs are your go-to for troubleshooting—and in Kubernetes, you need a solution that can handle ephemeral Pods.
+- Start from a **distroless** ([gcr.io/distroless](https://github.com/GoogleContainerTools/distroless)) or `chainguard/static` base. Alpine is fine if you accept musl.
+- Build with **multi-stage Dockerfiles** so build tools never ship in the final image.
+- Pin the base image **by digest** (`@sha256:...`), not by tag — `latest` and `1.21` move under you.
+- Scan every image with **[Trivy](https://trivy.dev/latest/)**, [Grype](https://github.com/anchore/grype), or your registry's built-in scanner. Block builds on `Critical`/`High` CVEs.
+- Smaller images mean faster pulls, faster autoscaling, and a smaller attack surface.
 
-- **Centralized Logging**: Whether it’s ELK/EFK, Splunk, or a managed service, make sure logs aren’t just sitting in ephemeral container storage.
-- **Structured Logging**: JSON or another structured format helps your logging system parse and filter logs more effectively.
-- **Log Retention and Rotation**: Define clear policies to prevent your log storage from ballooning.
+## 14. What's a reliable Kubernetes logging strategy?
 
-Trust me, you don’t want to scramble for logs in the midst of a production incident.
+- **Centralize** to Loki, Elastic/OpenSearch, or a managed service via Fluent Bit or the OpenTelemetry Collector running as a DaemonSet.
+- **Structure** logs as JSON with consistent field names (`trace_id`, `span_id`, `service`, `level`).
+- **Retain** by tier — 7 days hot, 30–90 days warm, archive to object storage for compliance.
+- **Redact** secrets and PII at the collector, not after the fact.
 
 {{< related-posts >}}
 
-## 15. Treat Kubernetes Like Cattle, Not a Pet
+## 15. How should you autoscale workloads on Kubernetes?
 
-The old adage for servers—“treat them like cattle, not pets”—applies to Kubernetes too. Don’t rely on manual fixes or human intervention. Strive for immutable infrastructure where possible:
+**What is the Horizontal Pod Autoscaler?** The **HPA** scales the replica count of a Deployment or StatefulSet up and down based on CPU, memory, or custom/external metrics.
 
-- If something is wrong with a Pod, fix it in the YAML, [Code](/product/infrastructure-as-code/) or container image, redeploy, and let the old one go away.
-- Avoid sneaky “quick fixes” on a running container—those changes will vanish the moment Kubernetes restarts the Pod.
-- Embrace ephemeral environments and dynamic scaling. That’s what Kubernetes does best!
+**What is the Vertical Pod Autoscaler?** The **VPA** adjusts a Pod's CPU and memory *requests* over time based on observed usage. Run it with `updateMode: Off` (recommendation-only) in production and apply the recommendations through your IaC tool.
 
-## 16. Consider a Higher-Level Approach for Complex Deployments  
+**What are Cluster Autoscaler and Karpenter?** **Cluster Autoscaler** adds and removes nodes to match Pod demand. **[Karpenter](https://karpenter.sh/)** is a faster, group-less node provisioner now widely used on EKS and gaining traction on other clouds.
 
-While native YAML manifests can work for smaller Kubernetes deployments, they often become unwieldy as your projects and teams grow. [Pulumi](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/) provides a powerful alternative for deployment automation, offering:
+**The rule:** every production workload has an HPA. Every cluster has a node-level autoscaler. Set sensible `min`/`max` replicas, define a `PodDisruptionBudget`, and gate scale-down behavior so traffic spikes don't pile up at restart time. Pair with **KEDA** for event-driven scaling (queues, Kafka lag, scheduled scale).
 
-- **Real Programming Languages**: Use TypeScript, JavaScript, Python, Go, Java, or C# [for type-safe, testable infrastructure code](/docs/iac/languages-sdks/).
-- **Cross-Cloud Flexibility**: Manage resources across [multiple cloud providers](/docs/iac/clouds/) and Kubernetes with a single tool.
-- **Reusable Modules**: Abstract common patterns into [reusable components](/docs/iac/using-pulumi/pulumi-packages/), reducing boilerplate and preventing drift.
-- **Strong Tooling & Ecosystem**: Benefit from package managers, [IDE integration](/docs/iac/concepts/testing/), and a rich library of shared Pulumi components.
+## 16. How do you enforce policy-as-code on Kubernetes?
+
+**What is policy-as-code?** Policy-as-code expresses governance rules — security baselines, tagging, region restrictions, cost guardrails — as code that runs in CI and at admission time, blocking non-compliant changes before they reach the cluster.
+
+**The rule:** every change goes through at least one policy engine.
+
+- **Pre-deploy** — validate Pulumi or Helm output with [Pulumi CrossGuard](/docs/insights/policy/) or [Conftest](https://www.conftest.dev/) in CI.
+- **Admission-time** — install [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) and require, for example, signed images, a `team` label, and a non-root `securityContext` on every Pod.
+- **Continuous** — scan running clusters with [Pulumi Insights](/docs/insights/policy/) or `kubescape` for drift from policy.
+
+See [the benefits of policy-as-code](/blog/benefits-of-policy-as-code/) and [enforcing policy-as-code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/) for end-to-end examples.
+
+## 17. How do you secure the Kubernetes software supply chain?
+
+**What is an SBOM?** A **Software Bill of Materials** is a machine-readable inventory of every component in a container image — packages, versions, licenses, hashes — typically in [SPDX](https://spdx.dev/) or [CycloneDX](https://cyclonedx.org/) format.
+
+**The rule:** every image you run in production has a verified SBOM and a verified signature.
+
+- Generate SBOMs at build time with [Syft](https://github.com/anchore/syft) or `docker sbom`.
+- Sign images and SBOMs with [Sigstore/cosign](https://www.sigstore.dev/) keylessly via GitHub OIDC.
+- Verify signatures at admission with [Kyverno](https://kyverno.io/policies/?policytypes=Cosign) or [Connaisseur](https://github.com/sse-secure-systems/connaisseur).
+- Generate **provenance attestations** ([SLSA](https://slsa.dev/)) so you can prove which build pipeline produced a given image.
+- Pin base images by digest and rebuild on a cadence so CVE patches actually land.
+
+This is what regulators and customers ask for in 2026 — Executive Order 14028, the EU Cyber Resilience Act, and most enterprise procurement checklists all require it.
+
+## 18. How do you manage Kubernetes cost (FinOps)?
+
+**The rule:** Kubernetes cost is a labeling and right-sizing problem before it is a discount problem.
+
+- **Right-size** with VPA recommendations, [Goldilocks](https://github.com/FairwindsOps/goldilocks), or your APM's recommendation engine. Most workloads request more CPU than they actually use; right-sizing is usually the largest single saving.
+- **Schedule** non-prod clusters off overnight and on weekends.
+- **Spot/preemptible nodes** for fault-tolerant workloads; use Karpenter's consolidation to compact bin-packing.
+- **Show back / charge back** by namespace and label using [OpenCost](https://www.opencost.io/) or [Kubecost](https://www.kubecost.io/). Without per-team attribution, no team owns cost.
+- **Provision the underlying cluster with IaC** — see [Pulumi for Kubernetes](/docs/iac/get-started/kubernetes/) — so node types, autoscaling limits, and reserved capacity are reviewable artifacts. Pulumi's [hidden-cost analysis](/blog/hidden-costs-of-infrastructure-management/) walks through where the money actually goes.
+
+## 19. Why should you treat Kubernetes clusters as cattle, not pets?
+
+The old "cattle, not pets" adage applies more strictly to Kubernetes than to VMs. Manual edits to a live cluster will be reconciled away, drift between environments, or vanish on the next Pod restart.
+
+- Fix problems in code — YAML, Helm chart, or [Pulumi program](/docs/iac/get-started/kubernetes/) — and let the controller redeploy.
+- If you can't redeploy a cluster from Git in under an hour, you have a pet.
+- Use ephemeral preview environments for PRs; use blue/green or progressive delivery (Argo Rollouts, Flagger) for production cutovers.
+
+## 20. Why use Pulumi to manage Kubernetes?
+
+Native YAML scales until your team doesn't. Once you have more than a handful of services, dependencies between cloud resources and Kubernetes objects, or more than one cluster, **infrastructure as code in a real programming language** wins on every axis.
+
+- **Real languages** — TypeScript, Python, Go, Java, .NET — for [type-safe, testable Kubernetes infrastructure](/docs/iac/languages-sdks/). Loops, conditionals, and unit tests instead of templating.
+- **One stack, full topology** — manage the cloud (EKS/GKE/AKS, VPC, IAM, DNS) and the workloads in it together. See [easily create and manage AWS EKS clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/).
+- **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/using-pulumi/pulumi-packages/) other teams `import` instead of copy-pasting.
+- **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack on every Git push.
+- **Policy-as-code** built in — [CrossGuard](/docs/insights/policy/) blocks non-compliant changes before `pulumi up`.
+- **Secrets done right** — [Pulumi ESC](/docs/esc/) federates secrets and configuration across stacks, environments, and Kubernetes clusters.
+
+For a deeper comparison of hand-written YAML, Terraform, and Pulumi for Kubernetes, see [YAML, Terraform, Pulumi: what's the smart choice for deployment automation with Kubernetes](/blog/yaml-terraform-pulumi-whats-the-smart-choice-for-deployment-automation-with-kubernetes/), and the [beyond YAML](/blog/beyond-yaml-kubernetes-2026-automation-era/) write-up on where Kubernetes automation is heading in 2026.
 
 {{< youtube "2P8JLgAc5QI" >}}
 
@@ -258,15 +330,15 @@ While native YAML manifests can work for smaller Kubernetes deployments, they of
 
 By adopting Pulumi, you can avoid the complexity of juggling endless YAML files and gain a more streamlined, maintainable workflow for your Kubernetes infrastructure.
 
-## Final Thoughts
+## Final thoughts
 
 <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
     <img src="img_2.png" alt="A meme featuring a man slamming a card on a table, labeled “ME”, using “KUBERNETES” to solve “ANY PROBLEM TO SOLVE”, humorously depicting overuse of Kubernetes." style="width: 60%; height: 100%">
 </div>
 
-Kubernetes is like a Swiss Army knife: powerful, versatile, but also easy to misuse if you’re not careful. By adopting these best practices, declarative configuration, sensible resource allocations, strong security, robust observability, and automated deployments, you’ll keep your cluster humming smoothly.
+Kubernetes rewards discipline. The 20 practices above — resource hygiene, namespaced isolation, RBAC, NetworkPolicy, Pod Security, external secrets, probes, the Gateway API, observability, GitOps, policy-as-code, signed images and SBOMs, autoscaling, FinOps, multi-cluster strategy, and IaC — are the dial settings that separate clusters that page their owners every week from clusters that don't.
 
-If you’ve already learned some lessons the hard way, you’re not alone. But the beauty of Kubernetes is that with each setback, you gain more experience to fine-tune your approach.
+Pick the three weakest spots in your environment and fix those first. Then promote the fixes through code, not through `kubectl`.
 
 Want to learn how to put these practices into action? Meet us at [KubeCon Europe 2026 (Booth 784)](https://www.pulumi.com/kubecon/) or register for our upcoming [Zero to Production in Kubernetes](https://www.pulumi.com/events/from-zero-to-production-in-kubernetes/) workshop.
 
