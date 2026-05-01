@@ -17,7 +17,25 @@
 {{ $bgImage := .bg_image }}
 {{ $anchor := .anchor | default "promo-banner" }}
 
-<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImage }}bg-violet-primary{{ end }} text-white" {{ if $bgImage }}style="background-image: url('{{ $bgImage }}'); background-size: cover; background-position: center;"{{ end }}>
+{{/* Fingerprint and optimize the background image. SVGs are fingerprinted as-is; rasters get resized + WebP-encoded. */}}
+{{ $bgImageURL := "" }}
+{{ if $bgImage }}
+    {{ $fpSrc := $bgImage | strings.TrimPrefix "/" }}
+    {{ $bgAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+    {{ if eq $bgAsset.MediaType.SubType "svg" }}
+        {{ $bgImageURL = ($bgAsset | fingerprint).RelPermalink }}
+    {{ else }}
+        {{ $maxWidth := 1600 }}
+        {{ if gt $bgAsset.Width $maxWidth }}
+            {{ $bgAsset = $bgAsset.Process (printf "resize %dx webp q90" $maxWidth) }}
+        {{ else }}
+            {{ $bgAsset = $bgAsset.Process "webp q90" }}
+        {{ end }}
+        {{ $bgImageURL = ($bgAsset | fingerprint).RelPermalink }}
+    {{ end }}
+{{ end }}
+
+<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImageURL }}bg-violet-primary{{ end }} text-white" {{ if $bgImageURL }}style="background-image: url('{{ $bgImageURL }}'); background-size: cover; background-position: center;"{{ end }}>
     {{ if $title }}
     <h2 class="promo-banner-title">{{ $title }}</h2>
     {{ end }}
