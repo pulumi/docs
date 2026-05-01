@@ -2,7 +2,7 @@
 title: "Deploy MERN Stack on DigitalOcean with Pulumi [Guide]"
 date: 2022-03-11
 updated: 2026-04-30
-meta_desc: Deploy a MERN stack app to DigitalOcean App Platform with Pulumi. A step-by-step TypeScript and Python guide that codifies the front end, Express API, and Managed MongoDB cluster as one repeatable stack.
+meta_desc: Deploy a MERN stack app to DigitalOcean App Platform with Pulumi. Codify the React front end, Express API, and Managed MongoDB cluster as one repeatable TypeScript or Python program.
 meta_image: meta.png
 authors:
     - christian-nunciato
