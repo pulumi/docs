@@ -9,8 +9,25 @@ aliases:
 
 heading: "Terraform Alternative"
 subheading: |
-    Use the programming languages your team already knows. Pulumi is free, open source,
-    and works with your existing Terraform. Migrate at your pace.
+    No 500-resource cap. Real programming languages. Free migration tools.
+    Keep your existing Terraform running while you migrate at your pace.
+
+dki_template: "{keyword} Alternative"
+
+hero_cta:
+    primary:
+        label: "Convert your Terraform — free"
+        href: "/tf2pulumi/"
+    secondary:
+        label: "Sign up free"
+        href: "https://app.pulumi.com/signup"
+    microcopy: "Free forever • Open source • No credit card required"
+
+cta_label: "Convert your Terraform — free"
+cta_href: "/tf2pulumi/"
+cta_microcopy: "Free forever • Open source • No credit card required"
+
+social_proof_position: top
 
 customer_quote:
     text: "What used to take a week and a half now, with Pulumi, took under a day."
@@ -19,17 +36,83 @@ customer_quote:
     link: /case-studies/snowflake
 
 overview:
-    title: Real Languages. No Resource Caps.<br/>Migrate at Your Pace.
-    description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free tf2pulumi migration tool included.
+    title: Real languages. No resource caps. Migrate at your pace.
+    bullets:
+        - title: "No 500-resource cap."
+          description: "HCP Terraform's free tier limits you to 500 managed resources. Pulumi Cloud's free tier has no cap."
+        - title: "Real programming languages."
+          description: "Write infrastructure in Python, TypeScript, Go, C#, or Java — with full IDE support, testing, and 170+ cloud providers."
+        - title: "Migrate on your timeline."
+          description: "Use the free <a href=\"/tf2pulumi/\">tf2pulumi</a> converter and `pulumi import` to bring existing state across with zero downtime. <span id=\"dki-placeholder\" style=\"display:none;\"></span>"
+
+comparison_table:
+    title: "Pulumi vs. Terraform at a glance"
+    description: "What you get when you switch — without giving up the Terraform ecosystem you already know."
+    rows:
+        - feature: "Free tier resource cap"
+          pulumi: "**No cap**"
+          competitor: "500 managed resources"
+        - feature: "Languages"
+          pulumi: "Python, TypeScript, Go, C#, Java, YAML"
+          competitor: "HCL only"
+        - feature: "IDE support (autocomplete, refactoring)"
+          pulumi: "Full, native"
+          competitor: "Limited (HCL-only tooling)"
+        - feature: "Unit and integration testing"
+          pulumi: "Standard test frameworks (Jest, pytest, Go test, xUnit)"
+          competitor: "Limited"
+        - feature: "Reusable components"
+          pulumi: "Real classes and functions across languages"
+          competitor: "Modules (HCL)"
+        - feature: "Existing Terraform state"
+          pulumi: "Import directly with `pulumi import`"
+          competitor: "—"
+        - feature: "Cloud providers"
+          pulumi: "170+ providers, same-day updates"
+          competitor: "Comparable coverage"
+        - feature: "License"
+          pulumi: "Apache 2.0 (open source)"
+          competitor: "BSL (source-available)"
 
 key_features_above:
     items:
         - title: "Switch from HCL to real languages"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use the free tf2pulumi converter to migrate your existing Terraform files. Deploy to 170+ providers.
-          image: "/images/product/pulumi-iac-code.png"
+            Stop writing HCL. Author infrastructure in Python, TypeScript, Go, C#, Java, or YAML. Use the free tf2pulumi converter to migrate your existing `.tf` files. Deploy to 170+ providers.
+          before_after:
+            before:
+                title: "Before — Terraform (HCL)"
+                language: "hcl"
+                code: |
+                    resource "aws_s3_bucket" "site" {
+                      bucket = "my-static-site"
+                    }
+
+                    resource "aws_s3_bucket_website_configuration" "site" {
+                      bucket = aws_s3_bucket.site.id
+
+                      index_document {
+                        suffix = "index.html"
+                      }
+                    }
+
+                    output "bucket_name" {
+                      value = aws_s3_bucket.site.id
+                    }
+            after:
+                title: "After — Pulumi (TypeScript)"
+                language: "typescript"
+                code: |
+                    import * as aws from "@pulumi/aws";
+
+                    const site = new aws.s3.Bucket("site", {
+                        bucket: "my-static-site",
+                        website: { indexDocument: "index.html" },
+                    });
+
+                    export const bucketName = site.id;
+            caption: "Same resources. Real types, IDE autocomplete, and standard test frameworks."
           features:
               - title: Code faster
                 description: |
@@ -47,14 +130,14 @@ key_features_above:
                     Generate Pulumi code from natural language or convert existing Terraform with Pulumi AI and Neo.
                 icon: lightning
                 color: yellow
-        
+
 key_features:
     title: Key features
     items:
         - title: "Migrate from Terraform in minutes"
           sub_title: "Free Migration Tools"
           description: |
-            Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with pulumi import. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
+            Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Convert HCL to real code

@@ -1,9 +1,31 @@
 {{ define "hero" }}
-    {{ partial "gads-hero" (dict "title" .Params.heading) }}
+    {{ partial "gads-hero" (dict "title" .Params.heading "subtitle" .Params.subheading "dki_template" .Params.dki_template) }}
+    {{ with .Params.hero_cta }}
+        <div class="container mx-auto text-center pt-6 pb-2">
+            {{ with .primary }}
+                <a href="{{ .href }}" class="btn-primary block sm:inline mb-2 sm:mb-0 sm:mr-3" data-role="cta-get-started">{{ .label }}</a>
+            {{ end }}
+            {{ with .secondary }}
+                <a href="{{ .href }}" class="btn-secondary block sm:inline">{{ .label }}</a>
+            {{ end }}
+            {{ with .microcopy }}
+                <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
+            {{ end }}
+        </div>
+    {{ end }}
 {{ end }}
 
 {{ define "main" }}
-    {{ $cta_href := site.Params.cta.primary.href }}
+    {{ $cta_label := .Params.cta_label | default site.Params.cta.primary.label }}
+    {{ $cta_href := .Params.cta_href | default site.Params.cta.primary.href }}
+    {{ $cta_microcopy := .Params.cta_microcopy }}
+
+    {{/* Social proof can opt to render directly under the hero by setting `social_proof_position: top` */}}
+    {{ $proofTop := eq .Params.social_proof_position "top" }}
+
+    {{ if $proofTop }}
+        {{ partial "gads-social-proof.html" . }}
+    {{ end }}
 
     <section id="overview" class="my-8 relative">
         <div class="container mx-auto text-center">
@@ -11,41 +33,35 @@
                 <h2>{{ .Params.overview.title | markdownify }}</h2>
             </div>
         </div>
-        <div class="container mx-auto">
-            <p id="dynamic-description" class="mx-auto text-center text-gray-600 w-full px-4 lg:w-6/12">
-                {{ .Params.overview.description | markdownify }}
-            </p>
-        </div>
+        {{ with .Params.overview.bullets }}
+            <div class="container mx-auto">
+                <ul class="mx-auto text-left text-gray-700 w-full px-4 lg:w-6/12 space-y-3 list-disc list-inside">
+                    {{ range . }}
+                        <li class="text-lg"><strong>{{ .title }}</strong> {{ .description | markdownify }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ else }}
+            <div class="container mx-auto">
+                <p id="dynamic-description" class="mx-auto text-center text-gray-600 w-full px-4 lg:w-6/12">
+                    {{ .Params.overview.description | markdownify }}
+                </p>
+            </div>
+        {{ end }}
         <div class="container mx-auto text-center pt-8 w-9/12">
             {{ if in .RelPermalink "/gads/neo" }}
             <a href="https://app.pulumi.com/signup" class="btn-primary">Try Neo for FREE</a>
             {{ else }}
-            {{ partial "cta-get-started" (dict "class" "btn-primary") }}
+            <a href="{{ $cta_href }}" class="btn-primary" data-role="cta-get-started">{{ $cta_label }}</a>
+            {{ end }}
+            {{ with $cta_microcopy }}
+                <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
             {{ end }}
         </div>
     </section>
 
-    {{ with .Params.case_studies.items }}
-    <section class="container mx-auto text-center px-3 mt-8 mb-4">
-        <h6 class="text-center text-gray-500 text-sm mb-2">Trusted by innovative companies</h6>
-        <div class="flex flex-wrap justify-center items-center py-4">
-            {{ range . }}
-                <div class="w-28 h-12 mx-6 my-2 flex items-center justify-center">
-                    {{ partial "customer-logo.html" (dict "logo" .logo) }}
-                </div>
-            {{ end }}
-        </div>
-    </section>
-    {{ end }}
-
-    {{ with .Params.customer_quote }}
-    <section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-4 mb-8 px-6">
-        <div class="container text-center mx-auto">
-            <p class="text-lg text-gray-700 italic">&ldquo;{{ .text }}&rdquo;</p>
-            <p class="text-base text-gray-600 font-semibold mt-2">{{ .author }}</p>
-            <div class="h-16 mt-4">{{ partial "customer-logo.html" (dict "logo" .logo) }}</div>
-        </div>
-    </section>
+    {{ if not $proofTop }}
+        {{ partial "gads-social-proof.html" . }}
     {{ end }}
 
     <section id="key-features-above">
@@ -54,6 +70,24 @@
                 {{ if eq $index 0 }}
                     <div class="container mx-auto mt-8 text-center w-11/12 sm:w-9/12">
                         <h3>{{ $feature.title }}</h3>
+                        {{ if $feature.before_after }}
+                            <div class="max-w-5xl mx-auto mt-8 mb-4 text-left">
+                                <p class="text-lg text-gray-700 px-4 mb-6">{{ $feature.description | markdownify }}</p>
+                                <div class="flex flex-col lg:flex-row gap-4">
+                                    <div class="w-full lg:w-1/2 card bg-white shadow-md p-4">
+                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.before.title | default "Before — Terraform (HCL)" }}</p>
+                                        {{ partial "code" (dict "lang" $feature.before_after.before.language "code" $feature.before_after.before.code "mode" "light") }}
+                                    </div>
+                                    <div class="w-full lg:w-1/2 card bg-white shadow-md p-4">
+                                        <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">{{ $feature.before_after.after.title | default "After — Pulumi" }}</p>
+                                        {{ partial "code" (dict "lang" $feature.before_after.after.language "code" $feature.before_after.after.code "mode" "light") }}
+                                    </div>
+                                </div>
+                                {{ with $feature.before_after.caption }}
+                                    <p class="text-sm text-gray-500 text-center mt-4">{{ . | markdownify }}</p>
+                                {{ end }}
+                            </div>
+                        {{ else }}
                         <div class="flex flex-col lg:flex-row">
                             <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 text-left">
                                 <h4>{{ $feature.sub_title}}</h4>
@@ -89,6 +123,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{ end }}
                     </div>
                 {{ else }}
                     <div class="container mx-auto mt-16 text-center w-11/12 sm:w-9/12">
@@ -123,11 +158,51 @@
                     {{ end }}
                 </div>
                 <div class="pt-8 text-center">
-                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ $cta_label }}</a>
+                    {{ with $cta_microcopy }}
+                        <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
+                    {{ end }}
                 </div>
             </div>
         {{ end }}
     </section>
+
+    {{ with .Params.comparison_table }}
+    <section id="comparison" class="mb-16 pt-8 bg-gray-50">
+        <div class="container mx-auto py-12 w-11/12 sm:w-9/12">
+            <h3 class="text-center">{{ .title | default "How Pulumi compares" }}</h3>
+            {{ with .description }}
+                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">{{ . | markdownify }}</p>
+            {{ end }}
+            <div class="overflow-x-auto">
+                <table class="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="border-b border-gray-200">
+                            <th class="text-left p-4 text-gray-700">{{ .feature_label | default "Feature" }}</th>
+                            <th class="text-center p-4 text-violet-700">{{ .pulumi_label | default "Pulumi" }}</th>
+                            <th class="text-center p-4 text-gray-500">{{ .competitor_label | default "Terraform" }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ range .rows }}
+                            <tr class="border-b border-gray-100">
+                                <td class="p-4 font-medium">{{ .feature }}</td>
+                                <td class="p-4 text-center">{{ .pulumi | markdownify }}</td>
+                                <td class="p-4 text-center text-gray-600">{{ .competitor | markdownify }}</td>
+                            </tr>
+                        {{ end }}
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center pt-8">
+                <a href="{{ $cta_href }}" class="btn-primary" data-role="cta-get-started">{{ $cta_label }}</a>
+                {{ with $cta_microcopy }}
+                    <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
 
     <section id="key-features" class="mb-16 pt-8">
         {{ range $item := .Params.key_features.items }}
@@ -176,7 +251,10 @@
                     </div>
                 </div>
                 <div class="pt-8">
-                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ $cta_label }}</a>
+                    {{ with $cta_microcopy }}
+                        <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
+                    {{ end }}
                 </div>
             </div>
         {{ end }}
@@ -259,7 +337,10 @@
                     </div>
                 </div>
                 <div class="pt-8">
-                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                    <a href="{{ $cta_href }}" class="btn-secondary block sm:inline" data-role="cta-get-started">{{ $cta_label }}</a>
+                    {{ with $cta_microcopy }}
+                        <p class="text-sm text-gray-500 mt-3">{{ . | markdownify }}</p>
+                    {{ end }}
                 </div>
             </div>
         {{ end }}
@@ -297,8 +378,7 @@
         } catch(e) { return ''; }
       })();
 
-      var placeholder = document.getElementById('dki-placeholder');
-      if (!placeholder || !keyword) return;
+      if (!keyword) return;
 
       var formattedKeyword = keyword.replace(/[-_]/g, ' ').trim();
 
@@ -317,8 +397,22 @@
         }
         return word;
       });
+      var formatted = words.join(' ');
 
-      placeholder.innerText = words.join(' ');
+      var placeholder = document.getElementById('dki-placeholder');
+      if (placeholder) placeholder.innerText = formatted;
+
+      var heading = document.getElementById('dki-heading');
+      if (heading && heading.dataset.dkiTemplate) {
+        var rendered = heading.dataset.dkiTemplate.replace('{keyword}', formatted);
+        var rainbow = heading.querySelector('.rainbow-text');
+        if (rainbow) {
+          rainbow.setAttribute('data-text', rendered);
+          rainbow.innerText = rendered;
+        } else {
+          heading.innerText = rendered;
+        }
+      }
     })();
     </script>
 {{ end }}
