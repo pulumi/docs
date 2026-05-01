@@ -35,7 +35,7 @@ social:
 {{% /notes %}}
 
 {{% notes type="info" %}}
-**Update (April 2026):** Refreshed for OpenClaw [`2026.4.27`](https://www.npmjs.com/package/openclaw) and added a [Frequently asked questions](#frequently-asked-questions) section. Upstream now recommends Node 24, but the cloud-init script in this post still installs Node 22 — both work. If you'd like Node 24, change the `nvm install 22` lines to `nvm install 24`.
+**Update (April 2026):** Refreshed for OpenClaw [`2026.4.27`](https://www.npmjs.com/package/openclaw). Upstream now recommends Node 24, but the cloud-init script in this post still installs Node 22 — both work. If you'd like Node 24, change the `nvm install 22` lines to `nvm install 24`.
 {{% /notes %}}
 
 **The short version:** Deploy OpenClaw to AWS or Hetzner with a Pulumi TypeScript program that provisions the VM, installs Docker, Node, and OpenClaw, then joins the instance to your Tailscale network so the gateway and browser ports stay private. One `pulumi up` to deploy, one `pulumi destroy` to tear down. Total cost: about $33/month on AWS or $7/month on Hetzner.
@@ -798,28 +798,6 @@ My recommendations:
 Now that OpenClaw is running, you can install skills (voice generation, video creation, browser automation), set up scheduled tasks with cron, invite colleagues to your tailnet for shared access, or connect additional channels like WhatsApp and Discord.
 
 For a deeper case study of running an AI assistant on Pulumi-managed infrastructure, see [how we built Platybot](/blog/how-we-built-platybot-an-ai-powered-analytics-assistant/), or read our [KubeCon EU 2026 recap](/blog/kubecon-eu-2026-recap/) on the year AI moved into production on Kubernetes.
-
-## Frequently asked questions
-
-### Do I need a Mac Mini to run OpenClaw?
-
-No. OpenClaw runs anywhere Node.js and Docker run, including a $7/month Hetzner VM, an AWS EC2 instance, a Raspberry Pi, or a spare laptop. The Mac Mini craze is hardware enthusiasm, not a technical requirement.
-
-### How much does it cost to run OpenClaw on AWS vs. Hetzner?
-
-A `t3.medium` AWS instance runs about $33/month (about $396/year) including 30 GB of gp3 storage. A `cax21` Hetzner Cloud server runs about €6.49/month (about $84/year) with 80 GB of NVMe storage and 20 TB of bandwidth included. Hetzner is roughly a quarter of the AWS cost for double the vCPUs and RAM.
-
-### Is `t3.micro` enough to run OpenClaw on AWS?
-
-No. The 1 GB of memory on a `t3.micro` instance is insufficient for OpenClaw's installation. Use `t3.medium` (4 GB RAM) at minimum, or `t3.large` (8 GB) if you plan to run multiple skills or browser automation workloads.
-
-### Which Node.js version should I use?
-
-OpenClaw's documentation recommends Node.js 24, with 22.14 as the minimum. The cloud-init script in this post installs Node 22, which still works. To use Node 24, change `nvm install 22` to `nvm install 24` in the `userData` script.
-
-### Can I use OpenAI or a local model instead of Anthropic?
-
-Yes. OpenClaw works with OpenAI, Google Gemini, Ollama, and other providers. Update the `model` Pulumi config value (default `anthropic/claude-sonnet-4`) and provide the corresponding API key through Pulumi ESC. The OpenClaw [providers documentation](https://docs.openclaw.ai/providers) lists the full set of supported models.
 
 ## Conclusion
 
