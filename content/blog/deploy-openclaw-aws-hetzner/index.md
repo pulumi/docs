@@ -2,7 +2,7 @@
 title: "Deploy OpenClaw on AWS or Hetzner Securely with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-01-26
-updated: 2026-01-30
+updated: 2026-04-29
 meta_desc: "Deploy OpenClaw (formerly Moltbot/Clawdbot), an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
 meta_image: meta.png
 aliases:
@@ -33,6 +33,12 @@ social:
 {{% notes type="info" %}}
 **Update (January 2026):** The lobster has molted into its final form! From Clawdbot to [Moltbot](https://x.com/openclaw/status/2016058924403753024) to [**OpenClaw**](https://x.com/openclaw/status/2017103710959075434). With 100k+ GitHub stars and 2M visitors in a week, the project finally has a name that'll stick. The CLI command is now `openclaw` and the new handle is [@openclaw](https://x.com/openclaw). Same mission: AI that actually does things. Your assistant. Your machine. Your rules. See the [official getting started guide](https://docs.openclaw.ai/start/getting-started) for updated installation instructions.
 {{% /notes %}}
+
+{{% notes type="info" %}}
+**Update (April 2026):** Refreshed for OpenClaw [`2026.4.27`](https://www.npmjs.com/package/openclaw). Upstream now recommends Node 24, but the cloud-init script in this post still installs Node 22 — both work. If you'd like Node 24, change the `nvm install 22` lines to `nvm install 24`.
+{{% /notes %}}
+
+**The short version:** Deploy OpenClaw to AWS or Hetzner with a Pulumi TypeScript program that provisions the VM, installs Docker, Node, and OpenClaw, then joins the instance to your Tailscale network so the gateway and browser ports stay private. One `pulumi up` to deploy, one `pulumi destroy` to tear down. Total cost: about $33/month on AWS or $7/month on Hetzner.
 
 OpenClaw is everywhere right now. The open-source AI assistant [gained 9,000 GitHub stars in a single day](https://news.aibase.com/news/24901), received public praise from former Tesla AI head Andrej Karpathy, and has sparked a global run on Mac Minis as developers scramble to give this "lobster assistant" a home. Users are calling it "Jarvis living in a hard drive" and "Claude with hands"—the personal AI assistant that Siri promised but never delivered.
 
@@ -65,7 +71,7 @@ Before getting started, ensure you have:
 - AWS account (for AWS deployment)
 - Hetzner Cloud account (for European deployment)
 - Anthropic API key
-- Node.js 18+ installed
+- Node.js 22+ installed (Node 24 recommended; the cloud-init script in this post installs Node 22 inside the VM)
 - Tailscale account with [HTTPS enabled](https://tailscale.com/kb/1153/enabling-https) (one-time setup in admin console)
 
 {{% notes type="info" %}}
@@ -86,7 +92,7 @@ The Gateway connects to messaging platforms (WhatsApp, Slack, Discord, etc.), th
 
 ## Setting up ESC for secrets management
 
-Deploying OpenClaw means handling sensitive credentials: API keys, auth tokens, cloud provider secrets. You don't want these hardcoded or scattered across environment variables. [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) stores them securely and passes them directly to your Pulumi program.
+Deploying OpenClaw means handling sensitive credentials: API keys, auth tokens, cloud provider secrets. You don't want these hardcoded or scattered across environment variables. [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) stores them securely and passes them directly to your Pulumi program — the same pattern Pulumi uses to [eliminate long-lived CI secrets across 70+ repos](/blog/eliminating-ci-secrets-with-pulumi-esc/).
 
 Create a new ESC environment:
 
@@ -113,7 +119,7 @@ values:
 ```
 
 {{% notes type="info" %}}
-To find your Tailnet DNS name, go to the [Tailscale admin console](https://login.tailscale.com/admin/dns), look under the **DNS** section, and find your tailnet name (e.g., `tailxxxxx.ts.net`). This is the domain suffix used for all machines in your Tailscale network.
+To find your tailnet DNS name, go to the [Tailscale admin console](https://login.tailscale.com/admin/dns), look under the **DNS** section, and find your tailnet name (e.g., `tailxxxxx.ts.net`). This is the domain suffix used for all machines in your Tailscale network.
 {{% /notes %}}
 
 Then create a `Pulumi.dev.yaml` file in your project to reference the environment:
@@ -123,7 +129,7 @@ environment:
   - <your-org>/openclaw-secrets
 ```
 
-This approach keeps your secrets out of your codebase and passes them directly to OpenClaw during automated onboarding.
+This approach keeps your secrets out of your codebase and passes them directly to OpenClaw during automated onboarding. To prevent stack-level overrides of these values, see [locking down ESC values with `fn::final`](/blog/esc-fn-final/).
 
 ## Securing with Tailscale
 
@@ -135,7 +141,7 @@ By default, deploying OpenClaw exposes SSH (port 22), the gateway (port 18789), 
 1. **Keeps SSH as fallback** for debugging if Tailscale setup fails
 1. **Installs Tailscale** on the instance during provisioning (after other dependencies)
 1. **Enables Tailscale SSH** so you can SSH via Tailscale without managing keys
-1. **Joins your Tailnet** automatically using the auth key
+1. **Joins your tailnet** automatically using the auth key
 
 {{% notes type="info" %}}
 The Pulumi program installs Docker, Node.js, and OpenClaw first, then configures Tailscale last. This ensures that even if the Tailscale auth key is invalid or expired, you can still SSH in via the public IP to troubleshoot.
@@ -725,11 +731,11 @@ pulumi stack output tailscaleUrlWithToken
 Copy and paste this URL into your browser. The URL includes both the Tailscale MagicDNS hostname and the authentication token, so you can access the web UI directly.
 
 {{% notes type="info" %}}
-**Finding your Tailnet DNS name**: Go to the [Tailscale admin console](https://login.tailscale.com/admin/dns) and look under the **DNS** section for your tailnet name (e.g., `tailxxxxx.ts.net`). You can also find your machines and their MagicDNS hostnames in the [Machines tab](https://login.tailscale.com/admin/machines).
+**Finding your tailnet DNS name**: Go to the [Tailscale admin console](https://login.tailscale.com/admin/dns) and look under the **DNS** section for your tailnet name (e.g., `tailxxxxx.ts.net`). You can also find your machines and their MagicDNS hostnames in the [Machines tab](https://login.tailscale.com/admin/machines).
 {{% /notes %}}
 
 {{% notes type="info" %}}
-Token-based authentication provides an additional layer of security on top of Tailscale's network-level authentication. Only devices on your Tailnet can reach the URL, and the token prevents unauthorized access if someone gains access to your Tailnet.
+Token-based authentication provides an additional layer of security on top of Tailscale's network-level authentication. Only devices on your tailnet can reach the URL, and the token prevents unauthorized access if someone gains access to your tailnet.
 {{% /notes %}}
 
 From the web UI, you can connect messaging channels (WhatsApp, Discord, Slack), configure skills and integrations, and manage settings.
@@ -789,7 +795,9 @@ My recommendations:
 
 ## What's next?
 
-Now that OpenClaw is running, you can install skills (voice generation, video creation, browser automation), set up scheduled tasks with cron, invite colleagues to your Tailnet for shared access, or connect additional channels like WhatsApp and Discord.
+Now that OpenClaw is running, you can install skills (voice generation, video creation, browser automation), set up scheduled tasks with cron, invite colleagues to your tailnet for shared access, or connect additional channels like WhatsApp and Discord.
+
+For a deeper case study of running an AI assistant on Pulumi-managed infrastructure, see [how we built Platybot](/blog/how-we-built-platybot-an-ai-powered-analytics-assistant/), or read our [KubeCon EU 2026 recap](/blog/kubecon-eu-2026-recap/) on the year AI moved into production on Kubernetes.
 
 ## Conclusion
 

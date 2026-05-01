@@ -183,7 +183,7 @@ tags:
     - cursed-container-iceberg
     - unified-programmatic-approach-infrastructure-management-bmw-using-pulumi
     - docker-build
-    - build-images-50x-faster-docker-v4
+    - fast-docker-image-builds-with-pulumi
 
   pipelines:
     - top-5-things-for-azure-devs-devops
