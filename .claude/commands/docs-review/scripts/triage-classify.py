@@ -40,6 +40,13 @@ def classify_path(path: str) -> str | None:
         return "domain:infra"
     if WEBPACK_RE.match(path):
         return "domain:infra"
+    # Marketing / landing pages under content/ that aren't blog or docs
+    # (about/, pricing/, vs/, why-pulumi/, legal/, careers/, etc.). These
+    # carry pricing, legal, and competitive claims with real consequences
+    # if wrong, so they need their own domain rather than the bare
+    # shared-criteria fallback.
+    if path.startswith("content/") and path.endswith(".md"):
+        return "domain:website"
     return None
 
 
@@ -240,19 +247,20 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
     has_any_new_file = any(f["is_new"] for f in file_flags)
     has_any_binary = any(f["is_binary"] for f in file_flags)
 
-    # Trivial and frontmatter-only short-circuits only apply to Hugo content
-    # markdown — never to programs, scripts, layouts, or other code paths.
-    # A 5-line .ts change shouldn't escape review just because it has no
-    # fenced code blocks.
-    all_files_content_md = file_count > 0 and all(
-        f.get("path", "").startswith("content/") and f.get("path", "").endswith(".md")
+    # Trivial and frontmatter-only short-circuits only apply to docs and blog
+    # content. Marketing/legal pages (domain:website) need fact-check rigor
+    # on every change regardless of size; programs, scripts, and layouts get
+    # full domain reviews. The maintainer-glance assumption only holds for
+    # docs/blog prose.
+    all_files_docs_or_blog = file_count > 0 and all(
+        classify_path(f.get("path", "")) in ("domain:docs", "domain:blog")
         for f in files
     )
 
     trivial = (
         additions <= 10
         and file_count <= 2
-        and all_files_content_md
+        and all_files_docs_or_blog
         and not has_any_frontmatter
         and not has_any_link
         and not has_any_code
@@ -261,12 +269,12 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         and not has_any_binary
     )
 
-    # Frontmatter-only: any number of content/*.md files, but every file's
+    # Frontmatter-only: any number of docs/blog files, but every file's
     # changes are entirely within the frontmatter block. Mutually exclusive
     # with trivial.
     frontmatter_only = (
         not trivial
-        and all_files_content_md
+        and all_files_docs_or_blog
         and has_any_frontmatter
         and not has_any_body
         and not has_any_rename_or_delete

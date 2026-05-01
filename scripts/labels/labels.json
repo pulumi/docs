@@ -21,6 +21,11 @@
       "description": "PR touches static/programs/"
     },
     {
+      "name": "domain:website",
+      "color": "c5def5",
+      "description": "PR touches marketing, pricing, legal, or competitive landing pages"
+    },
+    {
       "name": "domain:mixed",
       "color": "bfd4f2",
       "description": "PR touches more than one domain"
