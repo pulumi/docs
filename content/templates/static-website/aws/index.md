@@ -41,12 +41,6 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
 
-originHostname
-: The provider-assigned hostname of the S3 bucket.
-
-originURL
-: The fully-qualified HTTP URL of the S3 bucket endpoint.
-
 cdnHostname
 : The provider-assigned hostname of the CloudFront CDN. Useful for creating `CNAME` records to associate custom domains.
 
