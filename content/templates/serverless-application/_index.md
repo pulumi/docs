@@ -2,32 +2,31 @@
 title_tag: Templates for Deploying Serverless Applications
 title: Serverless Templates
 layout: overview
-description: Pulumi program templates are the fastest way to deploy serverless applications on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Easily deploy serverless applications on AWS, Azure, or Google Cloud Platform with Pulumi Serverless Application templates.
+schema_type: faq
+description: Pulumi templates for serverless applications on AWS, Azure, and Google Cloud, in your language of choice.
+meta_desc: Deploy serverless applications on AWS, Azure, or Google Cloud with Pulumi Serverless Application templates.
 meta_image: meta.png
 weight: 1
 ---
 
-### What are serverless applications?
+## About these templates
 
-[Serverless](/serverless/) applications use cloud services that feature automatic scaling, built-in high availability, and pay-for-use billing models, allowing you to build and run applications and services without having to provision, scale, and manage any servers yourself.
+### What is a serverless application?
 
-**On [AWS](/aws/),** you can build serverless applications using services like AWS Lambda, Amazon API Gateway, and Amazon S3.
+A [serverless](/serverless/) application runs on managed cloud services that scale automatically, are highly available by default, and bill only for what you use. You write the application code (typically as a function) and the cloud provider handles the runtime, capacity, and underlying servers.
 
-**On [Azure](/azure/),** you can build serverless applications using services like Azure Functions.
+### Which serverless services should I use on each cloud?
 
-**On [Google Cloud Platform](/gcp/),** you can build serverless applications using services like Google Cloud Functions.
+The major clouds expose comparable building blocks for serverless web and event-driven applications:
 
-### Building and deploying serverless infrastructure on AWS, Azure, and Google Cloud
+- **AWS**: [AWS Lambda](/registry/packages/aws/api-docs/lambda/function/) for the function runtime, [Amazon API Gateway](/registry/packages/aws/api-docs/apigateway/restapi/) for HTTP routing, and [Amazon S3](/registry/packages/aws/api-docs/s3/bucket/) for static assets.
+- **Azure**: [Azure Functions](/registry/packages/azure-native/api-docs/web/webappfunction/) for the function runtime and [Azure Blob Storage](/registry/packages/azure-native/api-docs/storage/storageaccount/) configured for [static website hosting](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/).
+- **Google Cloud**: [Cloud Functions Gen 2](/registry/packages/gcp/api-docs/cloudfunctionsv2/function/) for the function runtime and [Cloud Storage](/registry/packages/gcp/api-docs/storage/bucket/) for static assets.
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building a serverless application with programming languages and deploying the website to your preferred cloud.
+### How do I deploy a serverless application with Pulumi?
 
-Pulumi’s open source, infrastructure as code SDK lets you build and deploy static websites with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+Use one of the Serverless Application templates above to scaffold a Pulumi project that provisions both the function runtime and the surrounding infrastructure (storage, routing, IAM). Each template ships placeholder web and function content so the project deploys end to end with `pulumi new` followed by `pulumi up`.
 
-* **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages or clicking through cloud consoles.
+### Can I manage my function code in the same project as my infrastructure?
 
-* **Unified Function and Infrastructure Code:** Manage cloud function code and infrastructure code together in a single program.
-
-* **Fast, Easy Deployment:** Quickly deploy your serverless application with a CLI or from a CI/CD workflow.
-
-* **Rapid Development:** Author, version, test, and release infrastructure changes just like software.
+Yes. Each template includes the function source alongside the Pulumi program, so you can deploy infrastructure and application changes together as a single unit, version them in the same repository, and roll them back with one `pulumi destroy`.
