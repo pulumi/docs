@@ -16,15 +16,13 @@ dki_template: "{keyword} Alternative"
 
 hero_cta:
     primary:
-        label: "Convert your Terraform — free"
-        href: "/tf2pulumi/"
-    secondary:
         label: "Sign up free"
         href: "https://app.pulumi.com/signup"
+    secondary:
+        label: "Talk to an expert"
+        href: "/contact/?form=sales"
     microcopy: "Free forever • Open source • No credit card required"
 
-cta_label: "Convert your Terraform — free"
-cta_href: "/tf2pulumi/"
 cta_microcopy: "Free forever • Open source • No credit card required"
 
 social_proof_position: top
@@ -43,7 +41,7 @@ overview:
         - title: "Real programming languages."
           description: "Write infrastructure in Python, TypeScript, Go, C#, or Java — with full IDE support, testing, and 170+ cloud providers."
         - title: "Migrate on your timeline."
-          description: "Use the free <a href=\"/tf2pulumi/\">tf2pulumi</a> converter and `pulumi import` to bring existing state across with zero downtime. <span id=\"dki-placeholder\" style=\"display:none;\"></span>"
+          description: "Import existing state with `pulumi import` and keep current infrastructure running. No forced deadlines, no resource caps. <span id=\"dki-placeholder\" style=\"display:none;\"></span>"
 
 comparison_table:
     title: "Pulumi vs. Terraform at a glance"
