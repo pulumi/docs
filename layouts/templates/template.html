@@ -11,9 +11,11 @@
                 <h1 class="text-5xl mb-0">
                     {{ .Title }}
                 </h1>
+                {{ partial "templates/languages.html" . }}
             </header>
             <section class="mt-8 mb-16">
                 {{ .Content }}
+                {{ partial "templates/related.html" . }}
             </section>
         </div>
         <div class="hidden lg:block lg:w-3/12 mt-24 sticky-sidebar flex-1">

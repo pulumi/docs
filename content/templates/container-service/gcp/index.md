@@ -2,13 +2,10 @@
 title_tag: Deploy a Container Service to Google Cloud
 title: Container Service on Google Cloud
 layout: template
-
-meta_desc: Easily deploy a container service on Google Cloud with Pulumi and Google Cloud Run using this template.
-
+schema_type: howto
+meta_desc: Deploy a container service on Google Cloud with Pulumi, Cloud Run, and Artifact Registry in TypeScript, Python, Go, or C#.
 meta_image: meta.png
-
 card_desc: Deploy a container service on Google Cloud with Pulumi and Google Cloud Run.
-
 template:
   prefix: container-gcp
   dirname: my-container-service
@@ -17,20 +14,18 @@ template:
     - python
     - go
     - csharp
-
 cloud:
   name: Google Cloud
   slug: gcp
-
 ---
 
-The Container Service template creates an infrastructure as code project in your favorite language that deploys a container service to Google Cloud. You can then use the container service to build your own containerized application. The architecture includes [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun) for running containers on serverless compute and Artifact Registry for storing container images. The template generates a complete infrastructure project with example app content, providing you with a working project out of the box that you can customize easily and extend to suit your needs.
+The Google Cloud Container Service template scaffolds a Pulumi project that deploys a containerized service to [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun) for serverless container execution, with the container image stored in Artifact Registry. The template ships with placeholder app content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Pulumi Google Cloud Container Service template](./architecture.png)
+![An architecture diagram of the Google Cloud Container Service template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -38,13 +33,13 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
-You must supply an existing project ID and choose a region before deploying the container service. You can input both through the new-project wizard. The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
+You must supply an existing Google Cloud project ID and choose a region before deploying the container service. You can input both through the new-project wizard. Once the project is created, you can deploy it with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
 ```bash
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 url
 : The HTTP URL of your Cloud Run service.
@@ -57,34 +52,34 @@ $ open $(pulumi stack output url)
 
 ## Customizing the project
 
-Projects created with the Container Service template expose the following [configuration](/docs/concepts/config) settings:
+Projects created with the Container Service template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 containerPort
-: Specifies the port mapping for the container service. Defaults to port `8080`.
+: The port mapping for the container service. Defaults to port `8080`.
 
 cpu
-: Specifies the amount of CPU to use with each container instance. Defaults to `1` CPU.
+: The amount of CPU to allocate to each container instance. Defaults to `1` CPU.
 
 memory
-: Specifies the amount of memory to use with each container instance. Defaults to `1Gi`.
+: The amount of memory to allocate to each container instance. Defaults to `1Gi`.
 
 concurrency
-: The maximum concurrent requests that can be received by a container instance. Defaults to `50`.
+: The maximum number of concurrent requests per container instance. Defaults to `50`.
 
 imageName
 : The name of the container image deployed to your Cloud Run service. Defaults to `my-app`.
 
 appPath
-: Specifies the location of the Dockerfile used to build the container image that is run. Defaults to the `./app` folder, which contains a "Hello World" example app.
+: The location of the Dockerfile used to build the container image. Defaults to the `app` folder, which contains a "Hello World" example app.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ```bash
-$ pulumi config set someProp ../some/value
+$ pulumi config set containerPort 3000
 $ pulumi up
 ```
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -94,9 +89,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade container service on Google Cloud with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the Google Cloud (Classic) package by exploring the [API docs in the Registry &rarr;](/registry/packages/gcp)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/containers)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Google Cloud provider API docs](/registry/packages/gcp) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [container posts on the Pulumi blog](/blog/tag/containers).

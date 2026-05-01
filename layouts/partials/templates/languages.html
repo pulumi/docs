@@ -1,0 +1,32 @@
+{{- /*
+    Renders a small "Available in:" line under the H1 of a template page,
+    listing the human-readable language names from the page's
+    template.languages frontmatter array.
+
+    No-op if the frontmatter doesn't define template.languages.
+*/ -}}
+{{- $languages := .Params.template.languages -}}
+{{- if $languages -}}
+{{- $names := dict
+    "typescript" "TypeScript"
+    "javascript" "JavaScript"
+    "python" "Python"
+    "go" "Go"
+    "csharp" "C#"
+    "fsharp" "F#"
+    "visualbasic" "Visual Basic"
+    "java" "Java"
+    "yaml" "YAML"
+    "bun" "Bun"
+-}}
+<p class="mt-3 mb-0 text-sm text-gray-700 dark:text-gray-400">
+    Available in
+    {{- $items := slice -}}
+    {{- range $languages -}}
+        {{- $key := . | lower -}}
+        {{- $label := index $names $key | default (humanize .) -}}
+        {{- $items = $items | append $label -}}
+    {{- end -}}
+    {{ delimit $items ", " }}
+</p>
+{{- end -}}

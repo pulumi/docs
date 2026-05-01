@@ -2,34 +2,31 @@
 title_tag: Templates for Deploying Container Services
 title: Container Service Templates
 layout: overview
-description: Pulumi program templates are the fastest way to deploy container services on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Easily deploy container services on AWS, Azure, or Google Cloud Platform with Pulumi Container Service templates. 
+schema_type: faq
+description: Pulumi templates for container services on AWS, Azure, and Google Cloud. Each template ships predefined infrastructure as code in your language of choice.
+meta_desc: Deploy container services on AWS, Azure, or Google Cloud with Pulumi Container Service templates.
 meta_image: meta.png
 weight: 1
 ---
 
-### What are containers?
+## About these templates
 
-Containers are lightweight virtualized operating system environments in which developers can package and run an application and its dependencies as isolated runtime environments. The benefits of containers include better scalability, portability, and fault isolation. Docker is most commonly used to create container images. Containers are great for scenarios such as microservices, batch jobs, and migrating a legacy application. In the cloud, containers are typically run using container services that manage the container orchestration, cluster management, and compute for you.
+### What is a container service?
 
-**On AWS,** these are the main ways to run containers:
-|                                         |                                                                                                                                                       |
-|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Amazon Elastic Container Service (ECS)  | Fully managed container orchestration service created by AWS. Deploy containers to EC2 instances you manage or serverless instances from AWS Fargate. |
-| Amazon Elastic Kubernetes Service (EKS) | Fully managed Kubernetes service. Deploy containers to EC2 instances you manage or serverless instances from AWS Fargate.                             |
-| AWS Fargate                             | Serverless compute engine for containers that you use with ECS and EKS. Deploys and manages EC2 instances for you when you’re running containers.     |
-| AWS AppRunner                           | Fully managed container service that runs your container images without you needing to know how to deploy and manage the underlying infrastructure.   |
+A container service is a managed cloud offering that runs containerized applications without requiring you to operate the underlying servers. The service handles container scheduling, scaling, networking, and (for Kubernetes-based options) cluster management. Containers themselves are lightweight, isolated runtime environments that package an application together with its dependencies, typically built from a Docker image.
 
-### Building and deploying container services on AWS, Azure, and Google Cloud
+### Which container service should I use on each cloud?
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building container services with programming languages and deploying them to your preferred cloud, such as [AWS](/aws/), [Azure](/azure/), or [Google Cloud Platform](/gcp/).
+The major clouds each offer several container services with different operational tradeoffs:
 
-Pulumi’s open source, infrastructure as code SDK lets you build and deploy container services with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+- **AWS**: [Amazon ECS](/registry/packages/aws/api-docs/ecs/) for AWS-native orchestration, [Amazon EKS](/registry/packages/eks/) for managed Kubernetes, and [AWS Fargate](/registry/packages/awsx/api-docs/ecs/fargateservice/) for serverless compute behind either.
+- **Azure**: [Azure Container Instances (ACI)](/registry/packages/azure-native/api-docs/containerinstance) for serverless single-container workloads, and [Azure Kubernetes Service (AKS)](/registry/packages/azure-native/api-docs/containerservice/managedcluster) for managed Kubernetes.
+- **Google Cloud**: [Cloud Run](/registry/packages/gcp/api-docs/cloudrun) for serverless containers, and [Google Kubernetes Engine (GKE)](/registry/packages/gcp/api-docs/container/cluster) for managed Kubernetes.
 
-* **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages or clicking through cloud consoles.
+### How do I deploy a container service with Pulumi?
 
-* **Container Ecosystem Support:** Orchestrate every component (container registries, images, clusters, tasks, etc.) with code.
+Use one of the Container Service templates above to scaffold a complete Pulumi project that provisions a container service and the infrastructure it depends on, including a registry for your container image and a load balancer or HTTPS endpoint where applicable. Templates are available in TypeScript, Python, Go, and C#, and each one deploys end to end with `pulumi new` followed by `pulumi up`.
 
-* **Fast, Easy Deployment:** Quickly deploy a container service with a CLI or from a CI/CD workflow.
+### What languages can I use to define container infrastructure with Pulumi?
 
-* **Rapid Development:** Author, version, test, and release infrastructure changes just like software.
+Pulumi lets you define container infrastructure in TypeScript or JavaScript, Python, Go, Java, .NET (C#), or YAML. You use the same language for both your application and its infrastructure, with full editor tooling, package management, and testing support.

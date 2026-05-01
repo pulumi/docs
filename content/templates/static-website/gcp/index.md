@@ -1,10 +1,11 @@
 ---
 title_tag: Deploy a Static Website to Google Cloud
 title: Google Cloud Static Website
-meta_desc: Easily deploy a static HTML website on Google Cloud with Pulumi, Google Cloud Storage, and Google Cloud CDN using this template.
-meta_image: meta.png
-card_desc: Deploy a static website on Google Cloud with Pulumi, Google Cloud Storage, and Google Cloud CDN.
 layout: template
+schema_type: howto
+meta_desc: Deploy a static website on Google Cloud with Pulumi, Cloud Storage, and Cloud CDN in TypeScript, Python, Go, C#, or YAML.
+meta_image: meta.png
+card_desc: Deploy a static website on Google Cloud with Pulumi, Cloud Storage, and Cloud CDN.
 template:
   prefix: static-website-gcp
   dirname: my-site
@@ -15,17 +16,17 @@ template:
     - csharp
     - yaml
 cloud:
-    name: Google Cloud Platform
+    name: Google Cloud
     slug: gcp
 ---
 
-The Google Cloud Static Website template creates an infrastructure as code project in your favorite language that deploys an HTML website to Google Cloud Platform with Pulumi. It uses a [Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) for file storage, configures the storage account to host a website, and provisions a [Global Address](/registry/packages/gcp/api-docs/compute/globaladdress/) to route traffic to the CDN for lower latency and caching. The template generates a complete Pulumi program, including placeholder web content, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Google Cloud Static Website template scaffolds a Pulumi project that stores site files in a [Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) configured for static website hosting and serves them through Cloud CDN, fronted by a [Global Address](/registry/packages/gcp/api-docs/compute/globaladdress/) for low-latency delivery and caching. The template ships with placeholder web content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Pulumi Google Cloud Static Website template](./architecture.png)
+![An architecture diagram of the Google Cloud Static Website template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy a website of your own, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy a website of your own, make sure you've [installed Pulumi](/docs/install/) and [configured your Google Cloud credentials](/registry/packages/gcp/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,7 +40,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 originHostname
 : The provider-assigned hostname of the Google Cloud Storage bucket.
@@ -51,7 +52,7 @@ cdnHostname
 : The provider-assigned hostname of the Google Cloud CDN. Useful for creating `CNAME` records to associate custom domains.
 
 cdnURL
-: The fully-qualified HTTP URL of the Google Cloud CDN.
+: The fully-qualified HTTPS URL of the Google Cloud CDN.
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `cdnURL`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
 
@@ -61,7 +62,7 @@ $ open $(pulumi stack output cdnURL)
 
 ## Customizing the project
 
-Projects created with the Static Website template expose the following [configuration](/docs/concepts/config/) settings:
+Projects created with the Static Website template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -76,14 +77,14 @@ All of these settings are optional and may be adjusted either by editing the sta
 
 ### Using your own web content
 
-If you already have a static website you'd like to deploy on Google Cloud Platform with Pulumi, you can do so either by replacing placeholder content in the `www` folder or by configuring the stack to point to another folder on your computer with the `path` setting:
+If you already have a static website you'd like to deploy on Google Cloud with Pulumi, you can do so either by replacing placeholder content in the `www` folder or by configuring the stack to point to another folder on your computer with the `path` setting:
 
 ```bash
 $ pulumi config set path ../my-existing-website/build
 $ pulumi up
 ```
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -93,9 +94,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade static website on Google Cloud with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the Google Cloud Classic package by exploring the [API docs in the Registry &rarr;](/registry/packages/gcp)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Google Cloud provider API docs](/registry/packages/gcp) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [Google Cloud posts on the Pulumi blog](/blog/tag/google-cloud).

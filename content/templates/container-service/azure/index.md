@@ -2,8 +2,8 @@
 title_tag: Deploy a Container Service to Azure
 title: Container Service on Azure
 layout: template
-
-meta_desc: Easily deploy a container service on Azure with Pulumi and Azure Container Instances (ACI) using this template.
+schema_type: howto
+meta_desc: Deploy a container service on Azure with Pulumi, Azure Container Instances, and Azure Container Registry in TypeScript, Python, Go, or C#.
 meta_image: meta.png
 card_desc: Deploy a container service on Azure with Pulumi and Azure Container Instances.
 template:
@@ -19,13 +19,13 @@ cloud:
   slug: azure
 ---
 
-The Container Service template creates an infrastructure as code project in your favorite language that deploys a container service to Azure. You can then use the container service to build your own containerized application. The architecture includes [Azure Container Instances (ACI)](/registry/packages/azure-native/api-docs/containerinstance) for running containers on serverless compute and an [Azure Container Registry](/registry/packages/azure-native/api-docs/containerregistry) that stores the container image. The template generates a complete infrastructure project with example app content, providing you with a working project out of the box that you can customize easily and extend to suit your needs.
+The Azure Container Service template scaffolds a Pulumi project that deploys a containerized service to Azure. The architecture includes an [Azure Container Registry](/registry/packages/azure-native/api-docs/containerregistry) for the container image and [Azure Container Instances (ACI)](/registry/packages/azure-native/api-docs/containerinstance) for serverless container execution. The template ships with placeholder app content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Pulumi Azure Container Service template](./architecture.png)
+![An architecture diagram of the Azure Container Service template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/get-started/install) and [configured your Azure credentials](/registry/packages/azure/installation-configuration#credentials), then create a new [project](/docs/concepts/projects) using the template in your language of choice:
+To use this template to deploy your own container service, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure-native/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,7 +39,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 hostname
 : The hostname of the container group.
@@ -58,10 +58,10 @@ $ open $(pulumi stack output url)
 
 ## Customizing the project
 
-Projects created with the Container Service template expose the following [configuration](/docs/concepts/config) settings:
+Projects created with the Container Service template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 appPath
-: The path to the folder containing the application and Dockerfile. Defaults to `./app`, which contains a "Hello world" example.
+: The path to the folder containing the application and Dockerfile. Defaults to `app`, which contains a "Hello world" example.
 
 containerPort
 : The port to expose on the container. Defaults to `80`.
@@ -78,14 +78,14 @@ imageName
 imageTag
 : The tag applied to published container images. Defaults to `latest`.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below:
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ```bash
-$ pulumi config set someProp ../some/value
+$ pulumi config set containerPort 8080
 $ pulumi up
 ```
 
-## Tidying up
+## Cleaning up
 
 You can cleanly destroy the stack and all of its infrastructure with [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy):
 
@@ -95,9 +95,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade container service on Azure with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates in [Templates &rarr;](/templates)
-* Dive into the Azure Native package by exploring the [API docs in the Registry &rarr;](/registry/packages/azure-native)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/containers)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Azure Native provider API docs](/registry/packages/azure-native) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [container posts on the Pulumi blog](/blog/tag/containers).
