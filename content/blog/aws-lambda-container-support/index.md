@@ -1,6 +1,5 @@
 ---
 title: Running Container Images in AWS Lambda
-allow_long_title: true
 date: 2020-12-01
 updated: 2026-04-30
 changelog:
@@ -46,7 +45,12 @@ const image = new awsx.ecr.Image("image", {
 });
 
 const role = new aws.iam.Role("thumbnailerRole", {
-    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
+    assumeRolePolicy: aws.iam.getPolicyDocument({
+        statements: [{
+            actions: ["sts:AssumeRole"],
+            principals: [{ type: "Service", identifiers: ["lambda.amazonaws.com"] }],
+        }],
+    }).then(doc => doc.json),
 });
 
 new aws.iam.RolePolicyAttachment("lambdaExecute", {
@@ -139,7 +143,7 @@ A note on cold starts: the public guidance from AWS is that container-image cold
 Container-image functions are billed identically to ZIP functions:
 
 - **Requests**: $0.20 per 1M requests (x86_64 and arm64 alike).
-- **Duration**: $0.0000166667 per GB-second on x86_64, $0.0000133334 on arm64 (Graviton2) — roughly 20% lower per GB-second, with up to 34% better price-performance per AWS.
+- **Duration**: $0.0000166667 per GB-second on x86_64, $0.0000133334 on arm64 (Graviton2) &mdash; roughly 20% lower per GB-second, with up to 34% better price-performance per AWS.
 - **Free tier**: 1M requests and 400,000 GB-seconds per month, every month.
 - **Storage**: ECR charges $0.10 per GB-month for image storage; data transfer to Lambda within the same Region is free.
 
@@ -162,9 +166,9 @@ The four options below all run containers, but they sit on a spectrum from "full
 
 The decision tree is short: if your workload runs for less than 15 minutes per invocation and you can fit it in 10 GB, Lambda is almost always cheaper and operationally simpler than Fargate. If you cannot fit in a 250 MB ZIP, use a Lambda container image. If your workload is long-running or needs persistent network connections, choose Fargate or ECS.
 
-## How do I deploy a Lambda container image with Pulumi? (Step-by-step)
+## How do I deploy a Lambda container image with Pulumi?
 
-Let's walk through a complete program: a video thumbnailer that runs every time a `.mp4` is uploaded to an S3 bucket. The function uses [FFmpeg](https://ffmpeg.org/) &mdash; a binary that is impractical to ship in a 250 MB ZIP &mdash; to extract a thumbnail and write it back to the bucket. The full source is in [pulumi/examples](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer).
+Let's walk through a complete program: a video thumbnailer that runs every time a `.mp4` is uploaded to an S3 bucket. The function uses [FFmpeg](https://ffmpeg.org/), a binary that is impractical to ship in a 250 MB ZIP, to extract a thumbnail and write it back to the bucket. The full source is in [pulumi/examples](https://github.com/pulumi/examples/tree/master/aws-ts-lambda-thumbnailer).
 
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
 
@@ -274,7 +278,12 @@ The `./app` directory holds the `Dockerfile` and the handler. `platform: "linux/
 
 ```typescript
 const role = new aws.iam.Role("thumbnailerRole", {
-    assumeRolePolicy: aws.iam.assumeRolePolicyForPrincipal({ Service: "lambda.amazonaws.com" }),
+    assumeRolePolicy: aws.iam.getPolicyDocument({
+        statements: [{
+            actions: ["sts:AssumeRole"],
+            principals: [{ type: "Service", identifiers: ["lambda.amazonaws.com"] }],
+        }],
+    }).then(doc => doc.json),
 });
 
 new aws.iam.RolePolicyAttachment("lambdaExecute", {
@@ -480,7 +489,7 @@ Stick with ZIP when your code is small, you want SnapStart, or you want the fast
 
 ## Conclusion
 
-AWS Lambda's container-image support brings the industry-standard packaging format to event-driven serverless functions, and Pulumi makes the full deploy &mdash; ECR repository, image build, IAM role, function, and event source &mdash; one program in the language you already use. If you have outgrown the ZIP package, this is the pattern you want.
+AWS Lambda's container-image support brings the industry-standard packaging format to event-driven serverless functions, and Pulumi covers the full deploy (ECR repository, image build, IAM role, function, and event source) in one program in the language you already use. If you have outgrown the ZIP package, this is the pattern you want.
 
 Watch a demo of the thumbnailer below.
 
