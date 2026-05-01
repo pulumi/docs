@@ -2,32 +2,31 @@
 title_tag: Templates for Deploying Kubernetes Clusters
 title: "Kubernetes Cluster Templates"
 layout: overview
-description: Pulumi program templates are the fastest way to deploy Kubernetes clusters and their associated infrastructure on AWS, Azure, or Google Cloud Platform. Templates come with predefined infrastructure as code so you can get started instantly.
-meta_desc: Easily deploy Kubernetes clusters and their associated infrastructure on AWS, Azure, or Google Cloud Platform with Pulumi K8s templates.
+schema_type: faq
+description: Pulumi templates for Kubernetes clusters and supporting infrastructure on AWS, Azure, and Google Cloud, in your language of choice.
+meta_desc: Deploy Kubernetes clusters and supporting infrastructure on AWS, Azure, or Google Cloud with Pulumi Kubernetes templates.
 meta_image: meta.png
 weight: 98
 ---
 
+## About these templates
+
 ### What is Kubernetes?
 
-[Kubernetes (k8s)](/kubernetes) is an open source container management and orchestration project. It enables infrastructure engineers and platform teams to deploy and run container services at scale with a control plane that schedules, deploys, and scales containers throughout their lifecycle using a desired state model. The benefits of using k8s include its portability across multiple environments and clouds, high scalability, and extensibility via an ecosystem of extensions and plugins.
+[Kubernetes](/kubernetes) is an open-source container orchestration platform. It runs a control plane that schedules, deploys, and scales containerized workloads across a cluster of machines using a declarative, desired-state model. Kubernetes is portable across clouds, scales horizontally, and supports a large ecosystem of extensions through Helm charts and Custom Resource Definitions.
 
-**On [AWS](/aws/),** you can use Kubernetes with Amazon Elastic Kubernetes Service (EKS).
+### Which managed Kubernetes service should I use on each cloud?
 
-**On [Azure](/azure/),** you can use Kubernetes with Azure Kubernetes Service (AKS).
+Each major cloud offers a managed control plane so you don't have to operate Kubernetes yourself:
 
-**On [Google Cloud Platform](/gcp/),** you can use Kubernetes with Google Kubernetes Engine (GKE).
+- **AWS**: [Amazon EKS](/registry/packages/eks/api-docs/cluster/) — runs your workloads on either EC2 nodes you manage or [AWS Fargate](/registry/packages/awsx/api-docs/ecs/fargateservice/) serverless capacity.
+- **Azure**: [Azure Kubernetes Service (AKS)](/registry/packages/azure-native/api-docs/containerservice/managedcluster) — integrates with Azure Active Directory and Azure Monitor.
+- **Google Cloud**: [Google Kubernetes Engine (GKE)](/registry/packages/gcp/api-docs/container/cluster) — integrates tightly with the rest of Google Cloud and supports Autopilot for fully managed nodes.
 
-### Building and deploying Kubernetes clusters on AWS, Azure, and Google Cloud
+### How do I deploy a Kubernetes cluster with Pulumi?
 
-[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is an efficient and repeatable way of building Kubernetes clusters and their infrastructure with programming languages and deploying them to your preferred cloud.
+Use one of the Kubernetes Cluster templates above to scaffold a Pulumi project that provisions a managed cluster and the surrounding infrastructure (VPC, subnets, IAM, node pools). Each template deploys end to end with `pulumi new` followed by `pulumi up` and exports a `kubeconfig` you can use immediately with `kubectl`.
 
-Pulumi’s open source, infrastructure as code SDK lets you build and deploy Kubernetes and cloud infrastructure with TypeScript/JavaScript, Python, Go, Java, .NET, and YAML. The main benefits include:
+### How do I deploy applications onto an existing cluster?
 
-* **Programming Languages:** Define infrastructure as code in your favorite language instead of domain-specific languages or clicking through cloud consoles.
-
-* **Cloud Native Ecosystem Support:** Use Helm charts and native Kubernetes API objects, including integrated Kustomize support, to deploy workloads to your Kubernetes cluster.
-
-* **Fast, Easy Deployment:** Quickly deploy your Kubernetes cluster and associated infrastructure with the CLI, with a [GitOps workflow](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/), or from a CI/CD workflow.
-
-* **Rapid Development:** Author, version, test, and release cluster and infrastructure changes just like software.
+Once your cluster is running, the [Kubernetes Application templates](/templates/kubernetes-application/) give you a starting point for deploying workloads — either a [Helm chart](/templates/kubernetes-application/helm-chart/) or a [Kubernetes Deployment + Service](/templates/kubernetes-application/web-application/) — using the same language as your cluster's infrastructure code.
