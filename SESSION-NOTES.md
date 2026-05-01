@@ -1825,3 +1825,123 @@ I accidentally opened a bunch of PRs against my fork, and it was very instructiv
 ## SECOND HAND WRITTEN NOTE FROM CAM
 
 We should build a "quick" version of `/docs-review` that is similar to the existing `/docs-review` we use today. It's quicker and lighter.
+
+## Session 20 — 2026-05-01 (design-only: hashtag-driven re-entrant routing, tracking-comment UX)
+
+### Trigger
+
+Cam asked whether the off-the-shelf animated tracking comment from `pulumi/docs:master`'s live `claude.yml` could be brought back to this branch while keeping the re-entrant workflow. Friday-evening design conversation; no code shipped.
+
+### Investigation
+
+The live `claude.yml` is a thin wrapper around `anthropics/claude-code-action@v1` with no `prompt:` argument. No-prompt = **tag mode**, which auto-posts the action's animated tracking comment with per-tool-call updates. Our `claude.yml` overlays a structured `prompt:` to encode three-path dispatch (review-related → `update.md`/`ci.md`, ad-hoc, ambiguous). Passing `prompt:` flips the action into agent mode and suppresses the tracking comment. We replaced it with a static `<!-- CLAUDE_PROGRESS -->` "🤖 Working on it" message — functional but not animated.
+
+Action input `track_progress: true` was confirmed inapplicable: per the action's own docs it only fires for `pull_request` and `issue` event types, not the `issue_comment` / `pull_request_review_comment` / `pull_request_review` triggers `claude.yml` actually uses. Cam additionally noted there's no way for the model to know which comment ID to update, ruling it out cleanly.
+
+### Options considered (and rejected)
+
+1. **Drop custom prompt; rely on tag mode.** Risk: routing intelligence shifts to implicit project-context discovery; could mis-route on ambiguous mentions. ~80-85% reliability estimate from a one-line AGENTS.md instruction.
+2. **Keep prompt + `track_progress: true`.** No-op for our trigger types per action docs.
+3. **Drop prompt + lift dispatch into AGENTS.md verbatim** (~8-line block). Higher reliability (~98%) than option 1 but still trusting the model on a load-bearing routing decision.
+4. **Spinner-only fallback** — embed an animated Claude logo asset inline in the existing CLAUDE_PROGRESS "Working on it" message. Tabled in favor of #5.
+5. **Hashtag-driven routing** (Cam's idea — adopted).
+
+### Settled design contract — hashtag-driven routing
+
+`@claude` alone → off-the-shelf tag mode (animated tracking comment for free; ad-hoc / question / clarification cases). `@claude #update-review` → fires a separate workflow with the explicit re-entrant prompt. `@claude #new-review` → power-user escape hatch for regenerating a deleted/corrupted pinned review.
+
+The hashtag closes a real gap: today's prompt classifies a compound mention like "Fix the typo and #update-review" or "I disagree with finding 3, re-verify, and also why X?" into one of three buckets and loses the other intents. The new `claude-update.yml` prompt is explicitly designed to handle compound mentions — address embedded asks (file edits / questions / disputes) inline, then refresh the review against the resulting state.
+
+Three workflow files:
+
+- **`claude.yml`** (off-the-shelf): `if:` requires `@claude` AND NOT (`#update-review` OR `#new-review`). No custom `prompt:`, no CLAUDE_PROGRESS plumbing, no `Save mention body`. Action's tag-mode tracking comment is the working signal. Keeps ESC fetch + access check + `claude_args` (Sonnet model + allowed-tools).
+- **`claude-update.yml`** (new): `if:` requires `@claude` AND `#update-review`. Inherits current `claude.yml` machinery (ESC, access check, Save mention body, custom prompt, CLAUDE_PROGRESS with **animated spinner GIF** on the "Working on it" message, post-run label management). Prompt collapses to single-path: invoke `docs-review:references:update` with explicit handling for compound mentions.
+- **`claude-new.yml`** (new): `if:` requires `@claude` AND `#new-review`. Invokes `ci.md` unconditionally — overwrites any existing pinned review. Power-user escape hatch.
+
+Other settled details:
+
+- **Two separate workflow files** rather than one mode-branching file — easier to diff each against the other.
+- **Drop `review:claude-working` label** — the action's tracking comment (tag mode) and the spinner-bearing CLAUDE_PROGRESS (custom workflows) both replace it as a working signal.
+- **Spinner only on the start-of-run "Working on it" message**; done / errored / cancelled states stay static (action's tracking comment naturally drops the animation at terminal state; our CLAUDE_PROGRESS text replaces the body entirely on edit).
+- **Pinned-review footer** advertises `#update-review` only: *"Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`. (For ad-hoc questions or fixes, just `@claude` — no hashtag.)"* `#new-review` stays buried in meta-docs (CONTRIBUTING.md / skill files); not user-facing.
+- **`#new-review` overwrites unconditionally** — the hashtag is the explicit confirmation; no safety prompt.
+
+### Compound-mention contract for `claude-update.yml`
+
+Worth recording verbatim because it's the substantive design output. The new prompt body (sketch):
+
+```
+The user invoked you with #update-review. The hashtag means: refresh the
+pinned review. Their mention is in .claude-mention-body.txt — read it.
+
+The mention may also contain:
+- Code changes to make ("fix the typo and then update")
+- Questions about specific findings ("why did you flag X?")
+- Disputes ("this is intentional because Y")
+- Combinations of the above
+
+Plan of attack:
+1. Read the mention body.
+2. Address any embedded asks first:
+   - File edits → Edit/Write, gh pr checkout, push.
+   - Questions/disputes → fold the response into the relevant finding
+     when you re-render the review (don't post separate gh pr comments;
+     keeps everything in the pinned sequence).
+3. Invoke `docs-review:references:update` against the resulting state.
+   Pass the mention body as MENTION_BODY so the skill knows what
+   prompted the refresh.
+4. Post via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert ...`
+```
+
+This is **more** capable than today's path 1 — today, "fix and update" gets classified as path 2 (ad-hoc) and skips the review update entirely. Hashtag scheme actually closes that gap.
+
+### Items NOT shipped (carried into Session 21 — implementation queue)
+
+1. **Strip `claude.yml`** to off-the-shelf shape. Drop custom `prompt:`, `Save mention body`, `Post progress signal`, `Finalize progress signal`, `review:claude-working` label management. Adjust `if:` to exclude both hashtags.
+2. **Create `claude-update.yml`** with the compound-mention-aware prompt above; spinner GIF on start-of-run message.
+3. **Create `claude-new.yml`** invoking `ci.md` with unconditional overwrite of any existing pinned review.
+4. **Identify the canonical animated Claude logo asset URL** — likely in `anthropics/claude-code-action`'s `assets/` directory or extractable from a recent live tracking comment on `pulumi/docs:master`.
+5. **Update the pinned-review footer** in the appropriate skill output template (probably `output-format.md`).
+6. **Bury `#new-review` documentation** in CONTRIBUTING.md / power-user-facing meta docs.
+7. **End-to-end test on cam fork** — exercise all three paths: `@claude` alone (off-the-shelf), `@claude #update-review` with a compound-mention payload (e.g., "fix the typo on line 4 and #update-review"), `@claude #new-review` after manually deleting a pinned review.
+8. **Final plan-file rewrite** — the current plan file at `/home/vscode/.claude/plans/review-session-notes-md-to-know-vivid-ocean.md` reflects the spinner-only fallback (now superseded). Rewrite to the hashtag scheme before re-entering plan mode.
+
+### Methodology / repeatable patterns
+
+- **Hashtags as explicit-routing primitives.** When the model would otherwise have to infer intent from natural-language mention text — and risk wrong dispatch on compound or ambiguous cases — shift the disambiguation to a user-typed token. Cost: documenting the convention. Win: routing certainty plus a clean `if:` branch in workflow YAML. Generalizable to any mention-driven CI with multiple intents.
+- **Plan iteration without writing code.** Four plan revisions in one session (Option 3 → spinner-only → `track_progress` rejected → hashtag scheme), each invalidated before any YAML edit. Reading the action source/docs and asking "but what about compound mentions?" caught the misfire of each preceding plan in turn. Cheap iteration when the cost of getting it wrong on a real PR is high.
+- **Cam-pushback patterns this session:**
+  - "Is Sonnet smart enough for that?" — when a design relies on the model inferring intent from minimal instruction, name the failure modes explicitly before claiming the design is reliable.
+  - "What if they say 'Fix it and then #update-review'?" — single-intent designs collapse on real-world compound mentions. The toy case is never the actual case.
+
+### Backlog after Session 20
+
+Active:
+
+1. **Implement hashtag-driven routing + spinner UX** (this session's design — top of Session-21 queue).
+2. **Deterministic style-checking workflow (vale).** From Session 19; still primary follow-up.
+3. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
+4. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1) — could exercise on fork PRs `#105-#115` after hashtag rollout.
+5. **Trivial-cap edge case soft-watch** — PR 18573 shape.
+6. **Investigate 5 lost ⚠️ catches** (Session 13 #5).
+7. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream.
+8. **`update.md` raise-missed-duplicate code path** — defer.
+9. **Non-determinism baseline + skeptic sub-agent** — paired; revisit together.
+10. **Boundary-fixture name audit** — old; unchanged.
+11. **Cam's "claude-working" label mutex semantics** (Session-18) — partially addressed; one more sweep.
+12. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
+
+Closed this session:
+
+- "Bring back the off-the-shelf tracking-comment UX" → ✅ design settled (hashtag scheme); implementation deferred to Session 21.
+
+### Files changed (Session 20 substance)
+
+- `/home/vscode/.claude/plans/review-session-notes-md-to-know-vivid-ocean.md` — three drafts during planning (Option 3 → spinner-only). Now stale; will be rewritten in Session 21 before implementation.
+- (this commit) — Session 20 notes.
+
+No code or workflow file changed.
+
+### Memory updates
+
+None. All Session-20 output is design state specific to this branch; belongs here.
