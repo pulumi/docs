@@ -19,7 +19,7 @@ The alternative is to use an [infrastructure as code](/what-is/what-is-infrastru
 
 <!--more-->
 
-<div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
+<div class="bg-violet-100 text-sm rounded-lg py-1 px-4">
 
 ##### Azure Synapse Quick Start
 

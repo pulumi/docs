@@ -4,7 +4,7 @@
 <aside class="lg:pr-8 sticky-sidebar">
     <!-- Sidebar menu toggle for mobile. -->
     <div class="lg:hidden">
-        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">Toggle Blog Navigation</button>
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-violet-primary border-violet-primary">Toggle Blog Navigation</button>
     </div>
 
     {{ if eq .Page.Title "Blog" }}
@@ -71,7 +71,7 @@
                 {{ end }}
             {{ end }}
         </ul>
-        <a class="text-blue-600 text-sm block m-1 mb-4" href="{{ relref . "/blog/tag" }}">All blog tags &rarr;</a>
+        <a class="text-violet-primary text-sm block m-1 mb-4" href="{{ relref . "/blog/tag" }}">All blog tags &rarr;</a>
         {{ end }}
     </div>
 

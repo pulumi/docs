@@ -40,7 +40,7 @@ sections:
           body: You can deploy the entire breadth of AWS services with Pulumi’s AWS Provider and AWS Cloud Control Provider SDKs.
     - title: Secure
       icon: rocketship
-      color: salmon
+      color: violet
       subtitle: Tame secrets sprawl and configuration complexity
       description: |
         [Secrets](/docs/iac/concepts/secrets/) sprawl can lead to security breaches. Pulumi ESC provides centralized environments, secrets, and configuration management and orchestration that helps streamline operations, improve traceability, and ensure consistent security practices.

@@ -18,7 +18,7 @@ We are happy to announce same-day support for Azure Container Apps in the Pulumi
 
 <!--more-->
 
-<div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
+<div class="bg-violet-100 text-sm rounded-lg py-1 px-4">
 
 #### Azure Container Apps QuickStart
 

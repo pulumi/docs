@@ -63,10 +63,10 @@
         }
 
         &[data-filter-value="component"] {
-            @apply border-purple-300;
+            @apply border-violet-300;
 
             [data-selected-types*="component"] & {
-                @apply bg-purple-300;
+                @apply bg-violet-300;
             }
         }
     }
@@ -135,7 +135,7 @@
     .all-packages .package {
         a:hover {
             .title {
-                @apply text-blue-600 underline;
+                @apply text-violet-primary underline;
             }
         }
     }
@@ -149,7 +149,7 @@ div.packages {
     section.featured-packages,
     section.all-packages {
         h2 {
-            font-family: Gilroy;
+            font-family: Inter;
             font-weight: 400;
             font-size: 30px;
             color: #131314;
@@ -199,7 +199,7 @@ div.packages section.featured-packages {
         
             .package-title {
                 flex-grow: 1;
-                font-family: 'Gilroy';
+                font-family: 'Inter';
                 font-weight: 500;
                 font-size: 24px;
                 color: #131314;
@@ -209,7 +209,7 @@ div.packages section.featured-packages {
             }
         
             .package-version {
-                font-family: 'Gilroy';
+                font-family: 'Inter';
                 font-weight: 500;
                 font-size: 14px;
                 text-align: center;

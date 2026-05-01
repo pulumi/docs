@@ -8,7 +8,7 @@ hero:
     title: Pulumi Cloud for Open Source
     description: |
         Open-source maintainers who use Pulumi can get free access to
-        <a class="text-blue-600" href="/pricing/">Pulumi Cloud Team Edition</a>, giving your project
+        <a class="text-violet-primary" href="/pricing/">Pulumi Cloud Team Edition</a>, giving your project
         collaboration features, visibility into deployments, and the tools
         you need to manage infrastructure across contributors.
 

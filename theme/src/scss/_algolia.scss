@@ -146,7 +146,7 @@
                     @apply absolute top-4 right-3 text-xs text-gray-700 ml-3 inline-flex items-center rounded px-1 py-0.5 font-normal border;
 
                     &.docs {
-                        @apply border-salmon-300;
+                        @apply border-orange-300;
                     }
 
                     &.packages {
@@ -163,7 +163,7 @@
 
     // The highlight indicator (i.e., the portion of item, if any, that matches the search query).
     mark {
-        @apply bg-transparent border-b border-blue-600/50;
+        @apply bg-transparent border-b border-violet-primary/50;
     }
 }
 

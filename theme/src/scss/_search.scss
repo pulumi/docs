@@ -1,6 +1,6 @@
 .docs-type-nav-search {
     @apply flex flex-col-reverse justify-between bg-white;
-    border-bottom: map-get($gray, 150) 1px solid;
+    border-bottom: var(--color-gray-200) 1px solid;
     border-top: none;
     border-width: 1px;
 
@@ -30,8 +30,8 @@
 
     @include screen-md {
         @apply flex-row items-center py-0 px-4;
-        border-top: 1px solid map-get($gray, 150);
-        background: map-get($gray, 112);
+        border-top: 1px solid var(--color-gray-200);
+        background: var(--color-gray-50);
 
         .docs-search {
             @apply m-0;

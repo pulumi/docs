@@ -16,10 +16,10 @@ h3.pdoc-module-header ~ h2 {
 // We want visually recognizable links here.
 .highlight {
     a {
-        @apply text-blue-600;
+        @apply text-violet-primary;
 
         &:hover {
-            @apply text-blue-700;
+            @apply text-violet-800;
         }
     }
 }
@@ -68,14 +68,14 @@ ul.api {
             &.package {
                 &:before {
                     content: "P";
-                    @apply bg-purple-700;
+                    @apply bg-violet-700;
                 }
             }
 
             &.resource {
                 &:before {
                     content: "R";
-                    @apply bg-blue-700;
+                    @apply border-violet-800;
                 }
             }
 

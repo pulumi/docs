@@ -16,7 +16,7 @@ benefits:
 
     - title: Tame cloud complexity
       icon: code-window
-      icon_color: salmon
+      icon_color: violet
       description: |
         Deliver infrastructure from 100+ cloud and SaaS providers. Pulumi’s SDKs provide a complete and consistent interface that offers full access to
         clouds and abstracts complexity.

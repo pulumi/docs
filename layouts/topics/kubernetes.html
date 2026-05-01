@@ -1,8 +1,8 @@
 {{ define "hero" }}
-    <header class="page-hero bg-gradient-to-r from-white from-0% via-violet-100 via-50% to-white to-100% border-b border-gray-300">
+    <header class="page-hero">
         <div class="page-hero-title">
             <h1>
-                <span class="rainbow-text text-6xl leading-normal" data-text="Universal Infrastructure as Code for Kubernetes">Infrastructure Management for Kubernetes</span>
+                <span class="text-6xl leading-normal" data-text="Universal Infrastructure as Code for Kubernetes">Infrastructure Management for Kubernetes</span>
             </h1>
 
         </div>
@@ -255,7 +255,7 @@
                         <div class="mt-6">
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
-                            <a href="{{ relref $pageContext $item.cta_url }}" class="underline text-blue-700 text-lg">
+                            <a href="{{ relref $pageContext $item.cta_url }}" class="underline text-violet-primary text-lg">
                                 <span class="transition-all hover:mr-1">{{ $item.cta }}</span>
                                 <span>&rarr;</span>
                             </a>

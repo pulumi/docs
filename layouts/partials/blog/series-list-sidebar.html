@@ -19,7 +19,7 @@
 <aside class="lg:pr-8 sticky-sidebar">
     <!-- Sidebar menu toggle for mobile. -->
     <div class="lg:hidden">
-        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-purple border-purple">Toggle Series Navigation</button>
+        <button class="blog-sidebar-toggle items-center px-3 py-2 border rounded text-violet-primary border-violet-primary">Toggle Series Navigation</button>
     </div>
 
     <h2 class="no-anchor hidden lg:flex mt-2 mb-6">
@@ -42,16 +42,16 @@
                         <li class="leading-snug">
                             {{ if eq .slug $currentTag }}
                                 <!-- Current series - highlighted -->
-                                <div class="bg-blue-100 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
+                                <div class="bg-violet-50 border-l-4 border-blue-500 pl-3 py-2 rounded-r">
                                     <div class="text-sm font-semibold text-blue-900">{{ .title }}</div>
-                                    <div class="text-xs text-blue-700 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
-                                    <div class="text-xs text-blue-600 mt-1">Current series</div>
+                                    <div class="text-xs text-violet-800 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
+                                    <div class="text-xs text-violet-primary mt-1">Current series</div>
                                 </div>
                             {{ else }}
                                 <!-- Other series -->
                                 <div class="pl-3 py-1">
-                                    <a data-track="series-list" class="text-sm hover:text-blue-600" href="/blog/tag/{{ .slug }}/">
-                                        <div class="font-medium">{{ .title }}</div>
+                                    <a data-track="series-list" class="text-sm hover:text-violet-primary" href="/blog/tag/{{ .slug }}/">
+                                        <div class="font-semibold">{{ .title }}</div>
                                         <div class="text-xs text-gray-600 mt-1">{{ substr .description 0 50 }}{{ if gt (len .description) 50 }}...{{ end }}</div>
                                     </a>
                                 </div>
@@ -63,7 +63,7 @@
             
             <!-- Link to view all series -->
             <div class="mt-4 pt-3">
-                <a class="text-blue-600 text-sm" href="/blog/series/">View all series &rarr;</a>
+                <a class="text-violet-primary text-sm" href="/blog/series/">View all series &rarr;</a>
             </div>
         </div>
 

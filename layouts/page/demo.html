@@ -2,12 +2,12 @@
     {{ $pageContext := . }}
 
 
-    <section class="bg-gray-100">
-        <div class="container mx-auto pb-12">
-            <div class="flex flex-col md:flex-row">
+    <section>
+        <div class="container mx-auto py-12">
+            <div class="flex items-center flex-col md:flex-row">
                 <div class="w-full md:w-1/2 p-6">
                     <h1 class="text-5xl font-bold mb-6">{{ .Params.overview.title }}</h1>
-                    <ul>
+                    <ul class="text-xl max-w-xl">
                         {{ range $detail := .Params.overview.details }}
                             <li>{{ $detail }}</li>
                         {{ end }}
@@ -28,8 +28,8 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 p-6">
-                    <div class="mt-10 md:mt-0 bg-gray-200 rounded p-6 shadow">
+                <div class="w-full md:w-1/2 p-6 flex items-center">
+                    <div class="mt-10 md:mt-0 border border-gray-300 rounded-xl p-12 mx-auto">
                         <h4>Request a demo</h4>
                         <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}"></pulumi-hubspot-form>
                     </div>

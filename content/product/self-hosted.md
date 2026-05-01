@@ -20,7 +20,7 @@ capabilities:
     items:
         - title: Cloud Engineering Platform
           icon: rocketship
-          icon_color: salmon
+          icon_color: violet
           description: |
             All the capabilities of Pulumi Cloud: state management, role-based access controls, policy and compliance guardrails.
         - title: Full Control of Data

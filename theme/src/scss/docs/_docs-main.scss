@@ -1,11 +1,11 @@
 .docs-list-main .docs-main-content,
 body.section-registry {
     h1 {
-        font-family: Gilroy;
-        line-height: 1.5;
-        font-weight: 400;
+        font-family: Inter;
+        line-height: 1.1em;
+        font-weight: 600;
         font-size: 30px;
-        color: map-get($gray, 950);
+        color: var(--color-gray-950);
         margin: 16px 0;
     }
 
@@ -13,19 +13,10 @@ body.section-registry {
         display: inline-block;
     }
 
-    div.h1-gradient {
-        width: calc(100% - 32px);
-        height: 12px;
-        background: linear-gradient(90deg, map-get($brand, "yellow") 0%, map-get($brand, "salmon") 18.23%, map-get($brand, "fuchsia-darker") 38.02%, map-get($brand, "purple") 53.65%, map-get($brand, "violet") 74.48%, map-get($brand, "blue-lighter") 100%);
-        opacity: 0.1;
-        position: relative;
-        top: -34px;
-    }
-
     section.docs-content {
         h1, h2, h3, h4, h5, h6 {
-            font-family: Gilroy;
-            line-height: 1.5;
+            font-family: Inter;
+            line-height: 1.1em;
             scroll-margin-top: 60px;
         }
 
@@ -46,40 +37,40 @@ body.section-registry {
         }
 
         h1 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 30px;
-            color: map-get($gray, 950);
+            color: var(--color-gray-950);
             margin: 16px 0;
         }
 
         h2 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 24px;
-            color: map-get($gray, 950);
+            color: var(--color-gray-950);
         }
 
         h3 {
             font-weight: 600;
             font-size: 21px;
-            color: map-get($gray, 950);
+            color: var(--color-gray-950);
         }
 
         h4 {
             font-weight: 600;
             font-size: 18px;
-            color: map-get($gray, 650);
+            color: var(--color-gray-700);
         }
 
         h5 {
-            font-weight: 400;
+            font-weight: 600;
             font-size: 18px;
-            color: map-get($gray, 950);
+            color: var(--color-gray-950);
         }
 
         h6 {
             font-weight: 600;
             font-size: 16px;
-            color: map-get($gray, 600);
+            color: var(--color-gray-700);
 
         }
 
@@ -87,7 +78,7 @@ body.section-registry {
             font-family: 'Inter';
             font-weight: 400;
             font-size: 16px;
-            color: map-get($gray, 950);
+            color: var(--color-gray-950);
             padding: 0 0 12px 0;
             margin: 0;
             line-height: 1.6;
@@ -103,8 +94,8 @@ body.section-registry {
 
         p a:not(.btn-secondary),
         ul li a[href]  {
-            color: map-get($brand, "blue");
-            background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,map-get($gray, 450),map-get($gray, 450));
+            color: var(--color-violet-primary);
+            background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,var(--color-gray-500),var(--color-gray-500));
             background-position: 100% 100%,0 100%;
             background-repeat: no-repeat;
             background-size: 100% 0.1em,0 0.1em;
@@ -113,7 +104,7 @@ body.section-registry {
             transition-timing-function: ease-in;
 
             &:hover {
-                color: map-get($brand, "blue-darker");
+                color: var(--color-violet-800);
                 text-decoration: none;
                 background-size: 0 0.1em,100% 0.1em;
             }
@@ -122,7 +113,7 @@ body.section-registry {
         div.highlight pre,
         code,
         .font-mono {
-            font-family: 'Iosevka';
+            font-family: "Monaspace Neon Var";
             font-weight: 400;
         }
     }
@@ -236,7 +227,7 @@ body.section-registry {
                 span.count-badge {
                     font-size: 11px;
                     padding: 0px 4px;
-                    border: 1px solid #364098;
+                    border: 1px solid var(--color-violet-primary);
                     border-radius: 6px;
                 }
             }
@@ -246,7 +237,7 @@ body.section-registry {
                 flex-basis: 240px;
                 box-shadow: none;
                 margin: 0 6px 0 16px;
-                border-right: 1px solid map-get($gray, 150);
+                border-right: 1px solid var(--color-gray-200);
                 box-shadow: none;
                 position: sticky;
 
@@ -260,10 +251,10 @@ body.section-registry {
             z-index: 100;
             width: 32px;
             height: 40px;
-            background: $white;
+            background: #fff;
             border-width: 1px 1px 1px 0px;
             border-style: solid;
-            border-color: map-get($gray, 150);
+            border-color: var(--color-gray-200);
             box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.08);
             border-radius: 0px 4px 4px 0px;
             cursor: pointer;
@@ -276,7 +267,7 @@ body.section-registry {
 
             &:hover {
                 .docs-nav-toggle-icon {
-                    background-color: map-get($gray, 900);
+                    background-color: var(--color-gray-900);
                 }
             }
         }
@@ -290,7 +281,7 @@ body.section-registry {
             display: flex;
 
             .docs-main-nav-wrapper {
-                border-right: 1px solid map-get($gray, 150);
+                border-right: 1px solid var(--color-gray-200);
             }
 
             .docs-main-nav-wrapper .docs-main-nav {
@@ -298,7 +289,7 @@ body.section-registry {
                 flex-basis: 240px;
                 height: calc(100vh);
                 padding-left: 16px;
-                background-color: $white;
+                background-color: #fff;
                 box-shadow: 6px 0px 36px rgba(0, 0, 0, 0.08);
                 justify-content: space-between;
 
@@ -437,8 +428,8 @@ body.section-registry {
             }
 
             .table-of-contents {
-                border-top: 1px solid map-get($gray, 150);
-                border-bottom: 1px solid map-get($gray, 150);
+                border-top: 1px solid var(--color-gray-200);
+                border-bottom: 1px solid var(--color-gray-200);
                 padding: 8px 0;
             }
 
@@ -513,7 +504,7 @@ body.section-registry {
                     gap: 16px;
                     padding-bottom: 24px;
                     margin-bottom: 4px;
-                    border-bottom: 1px solid map-get($gray, 300);
+                    border-bottom: 1px solid var(--color-gray-200);
                 }
 
                 div.expand-more-18-18 {
@@ -597,7 +588,7 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 500;
                 font-size: 12px;
-                color: #4D5BD9;
+                color: var(--color-violet-primary);
                 align-items: center;
 
                 span {
@@ -711,7 +702,7 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 400;
                 font-size: 14px;
-                color: #364098;
+                color: var(--color-violet-primary);
             }
 
             li.h3 {
@@ -727,7 +718,7 @@ body.section-registry {
                 font-weight: 700;
 
                 &::before {
-                    background-color: #805ac3;
+                    background-color: var(--color-violet-primary);
                     border-radius: 50%;
                     width: 10px;
                     height: 10px;
@@ -758,12 +749,12 @@ body.section-registry {
 
         .heading:hover {
             div.icon {
-                background-color: map-get($gray, 900);
+                background-color: var(--color-gray-900);
             }
 
             .icon-heading-wrapper {
                 h2 {
-                    color: map-get($gray, 900);
+                    color: var(--color-gray-900);
                 }
             }
         }
