@@ -14,15 +14,6 @@
     background-image: radial-gradient($radius at $center-x $center-y, $from-color, $to-color);
 }
 
-// https://fontawesome.com/
-@mixin fa-glyph($unicode, $collection: "Free") {
-    font-family: "Font Awesome 5 #{$collection}";
-
-    &:after {
-        content: "#{$unicode}";
-    }
-}
-
 @mixin gradient-border() {
     border-bottom: 2px solid var(--color-violet-primary);
 }

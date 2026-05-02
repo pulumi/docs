@@ -35,7 +35,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
             white-space: nowrap;
 
             svg {
-                @apply inline-block mr-2;
+                @apply inline-block mr-1;
             }
         }
 

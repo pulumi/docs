@@ -9,7 +9,7 @@ import { getUUID } from "../../util/util";
  * Usage:
 
  * <pulumi-tooltip>
- *     <i class="fas fa-question-circle"></i>
+ *     <span>?</span>
  *     <span slot="content">
  *         You hovered over (or tapped on) the thing!
  *     </span>
