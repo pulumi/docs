@@ -3,7 +3,7 @@ title: "Comienza con Pulumi | Pulumi"
 meta_desc: Instala Pulumi y despliega tu primer stack en AWS, Azure, Google Cloud o Kubernetes. Infraestructura como código (open source) en TypeScript, Python, Go, C#, Java o YAML.
 layout: gads-get-started
 block_external_search_index: true
-cta_label: "Comenzar"
+cta_label: "Comienza"
 install:
     title: "Instala Pulumi"
     intro: "Descarga e instala Pulumi para tu plataforma:"

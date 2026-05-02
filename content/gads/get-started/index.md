@@ -16,7 +16,7 @@ subheading: |
     Install Pulumi and deploy your first stack in minutes. Open source, and works with every major cloud.
 
 overview:
-    title: Infrastructure as Code in any Language, on any Cloud
+    title: Infrastructure as Code in any language, on any cloud
     description: |
         Pulumi lets you build, deploy, and manage cloud infrastructure with the programming languages you already know — TypeScript, Python, Go, C#, Java, and YAML — across 170+ providers.
 
