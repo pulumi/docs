@@ -93,7 +93,7 @@
                                 <div class="block p-3 h-full flex flex-col">
                                     <a href="{{ .link }}">
                                         <h4 class="no-anchor">
-                                            {{ if .icon }}<span class="text-violet-primary mr-2 inline-flex align-middle">{{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}</span>{{ else if .emoji }}<span class="emoji">{{ .emoji }}</span> {{ end }}{{ .heading }}
+                                            {{ if .icon }}<span class="text-violet-primary mr-2 inline-flex align-top">{{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}</span>{{ else if .emoji }}<span class="emoji">{{ .emoji }}</span> {{ end }}{{ .heading }}
                                     </h4>
                                     <p class="pb-4">
                                     {{ if .description }}
