@@ -56,11 +56,6 @@
       "description": "New commits since last Claude review; refresh on next ready-transition or @claude mention"
     },
     {
-      "name": "review:claude-working",
-      "color": "c5def5",
-      "description": "Claude is running a review right now; auto-removed when finishes"
-    },
-    {
       "name": "needs-author-response",
       "color": "f7c6c7",
       "description": "Review surfaced unverifiable claims; author owes a response"
