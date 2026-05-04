@@ -6,9 +6,9 @@ Parameters:
 - title: Section title
 - subtitle: Section subtitle/description
 - columns: Array of column objects
-Example: [{"icon": "fa-shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link":
+Example: [{"icon": "shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link":
 "/link"}]
-Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
+Note: icon should be a Phosphor icon name (e.g., "shield", "rocket")
 - icon_style: Optional "black" for black icons
 - icon_layout: Optional "above" to place icon on its own line above the title (matches product card style)
 - anchor: Optional anchor for section id
@@ -45,14 +45,14 @@ Note: icon should be Font Awesome icon class (e.g., "fa-shield", "fa-rocket")
         <div class="three-column-item text-left flex flex-col justify-start">
             {{ if and .icon (eq $iconLayout "above") }}
             <div class="three-column-item-icon template-feature-card-icon">
-                <i class="fa {{ .icon }}"></i>
+                {{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}
             </div>
             {{ end }}
             {{ if .title }}
             <h4 class="three-column-item-title {{ if eq $iconLayout "above" }}template-feature-card-title{{ end }} mb-3
                 {{ if and .icon (ne $iconLayout "above" ) }}flex items-center{{ end }}">
                 {{ if and .icon (ne $iconLayout "above") }}
-                <i class="fa {{ .icon }} mr-3"></i>
+                {{ partial "icon.html" (dict "name" .icon "weight" "duotone" "class" "mr-3") }}
                 {{ end }}
                 {{ .title }}
             </h4>

@@ -65,10 +65,10 @@ features:
   image: "/images/feature-image.png"  # optional, displays in right column
   image_alt: "Feature image description"  # optional, defaults to title
   features:
-    - icon: "fa-rocket"  # Font Awesome icon class
+    - icon: "rocket"  # Phosphor icon name
       title: "Feature Title"
       description: "Feature description"
-    - icon: "fa-code"  # Font Awesome icon class
+    - icon: "code"  # Phosphor icon name
       title: "Another Feature"
       description: "Another description"
 ```
@@ -126,7 +126,7 @@ promo_banner:
 
 ### 7. Three Column Layout
 
-Displays content in three equal columns with Font Awesome icons.
+Displays content in three equal columns with Phosphor icons.
 
 **Frontmatter:**
 ```yaml
@@ -135,13 +135,13 @@ three_column:
   title: "Infrastructure that reduces complexity"
   subtitle: "Optional description paragraph"  # optional
   columns:
-    - icon: "fa-shield"  # Font Awesome icon class
+    - icon: "shield"  # Phosphor icon name
       title: "Feature Title"
       description: "Feature description"
-    - icon: "fa-rocket"  # Font Awesome icon class
+    - icon: "rocket"  # Phosphor icon name
       title: "Another Feature"
       description: "Another description"
-    - icon: "fa-code"  # Font Awesome icon class
+    - icon: "code"  # Phosphor icon name
       title: "Third Feature"
       description: "Third description"
 ```

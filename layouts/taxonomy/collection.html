@@ -52,14 +52,14 @@
                                                     {{ $estimated_time = (add $estimated_time (int $topic.Params.estimated_time)) }}
                                                 {{ end }}
                                                 <div class="text-gray-700 px-2 py-1 border border-violet-400 rounded">
-                                                    <i class="fa fa-file-alt mr-0.5 text-violet-400"></i>
+                                                    {{ partial "icon.html" (dict "name" "file-text" "class" "mr-0.5 text-violet-400") }}
                                                     <span>{{ len .Pages }} topic{{ if ne (len .Pages) 1 }}s{{ end }}</span>
                                                 </div>    
                                             {{ else }}
                                                 {{ $estimated_time = .Params.estimated_time }}
                                             {{ end }}
                                             <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
-                                                <i class="far fa-clock mr-0.5 text-gray-600"></i>
+                                                {{ partial "icon.html" (dict "name" "clock" "class" "mr-0.5 text-gray-600") }}
                                                 <span>{{ $estimated_time }} minutes</span>
                                             </div>
                                         </div>

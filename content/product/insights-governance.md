@@ -30,15 +30,15 @@ sections:
       Pulumi Insights & Governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
 
     cards:
-      - icon: fa-sync-alt
+      - icon: arrows-clockwise
         title: Compliance without friction
         description: |
           Continuously audit and block non-compliant deployments across CIS, NIST, HITRUST, and PCI DSS without disrupting developer workflows.
-      - icon: fa-bolt
+      - icon: lightning
         title: Auto-remediate violations
         description: |
           AI generates infrastructure-as-code fixes automatically, turning hours of manual remediation into a simple review-and-merge.
-      - icon: fa-eye
+      - icon: eye
         title: Full cloud visibility
         description: |
           Search and govern every resource across all your cloud, including unmanaged resources, with natural language queries and full configuration history.
@@ -167,21 +167,21 @@ sections:
     heading: The complete governance lifecycle
     compact: true
     cards:
-      - icon: fa-search
+      - icon: magnifying-glass
         title: "Step 1: Audit"
         description: |
           Continuous scans reveal compliance posture across existing infrastructure.
 
           - Discover violations across your entire infrastructure
           - Track compliance by framework (CIS, HITRUST, PCI DSS)
-      - icon: fa-tasks
+      - icon: list-checks
         title: "Step 2: Remediate"
         description: |
           AI generates infrastructure-as-code fixes for policy violations.
 
           - AI-powered fixes for policy violations
           - Automated pull requests with verified solutions
-      - icon: fa-shield-alt
+      - icon: shield-check
         title: "Step 3: Prevent"
         description: |
           Policy guardrails block non-compliant deployments automatically.

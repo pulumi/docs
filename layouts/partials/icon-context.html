@@ -1,0 +1,14 @@
+{{- /*
+icon-context.html — internal helper for icon.html.
+Returns sprite URL + manifest membership dicts. Called via partialCached.
+*/ -}}
+{{- $sprite := resources.Get "icons/sprite.svg" | fingerprint -}}
+{{- $manifestRes := resources.Get "icons/sprite-manifest.json" -}}
+{{- $manifest := $manifestRes.Content | transform.Unmarshal -}}
+{{- $phosphor := dict -}}
+{{- range $manifest.phosphor -}}{{- $phosphor = merge $phosphor (dict . true) -}}{{- end -}}
+{{- $custom := dict -}}
+{{- range $manifest.custom -}}{{- $custom = merge $custom (dict . true) -}}{{- end -}}
+{{- $brand := dict -}}
+{{- range $manifest.brand -}}{{- $brand = merge $brand (dict . true) -}}{{- end -}}
+{{- return (dict "spriteUrl" $sprite.RelPermalink "phosphor" $phosphor "custom" $custom "brand" $brand) -}}

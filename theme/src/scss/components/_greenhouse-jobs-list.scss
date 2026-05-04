@@ -34,8 +34,5 @@ pulumi-greenhouse-jobs-list {
 
     .loading-spinner {
         @apply text-gray-600;
-        @extend .fa;
-        @extend .fa-circle-notch;
-        @extend .fa-spin;
     }
 }

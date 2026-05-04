@@ -23,7 +23,7 @@
 <a href="{{ $href }}" class="neo-card">
     <div class="neo-card-content">
         <div class="neo-card-icon">
-            {{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "Pulumi Neo AI icon") }}
+            {{ partial "icon.html" (dict "name" "custom/pulumi-neo" "title" "Pulumi Neo AI icon") }}
         </div>
         <div class="neo-card-text">
             <span class="neo-card-subtitle">{{ $subtitle }}</span>
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="neo-card-arrow">
-        <i class="fas fa-chevron-right"></i>
+        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
     </div>
 </a>
 {{ else }}

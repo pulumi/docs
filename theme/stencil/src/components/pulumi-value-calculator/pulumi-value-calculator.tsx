@@ -96,7 +96,13 @@ export class PulumiValueCalculator {
                 <div class={this.assumptionsExpanded ? "assumptions" : " assumptions collapsed" }>
                     <div class="default justify-between">
                         <div class="subtitle">*Based on industry averages of developer salaries and the time spent managing cloud infrastructure. Adjust these assumptions here.</div>
-                        <button onClick={()=> this.updateAssumptionsExpanded()}><i class={this.assumptionsExpanded ? "fas fa-minus" : "fas fa-plus" }></i></button>
+                        <button onClick={()=> this.updateAssumptionsExpanded()}>
+                            {this.assumptionsExpanded ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>
+                            )}
+                        </button>
                     </div>
                     <div class={ this.assumptionsExpanded ? "field visible" : "field" }>
                         <div class="details">

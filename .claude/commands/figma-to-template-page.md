@@ -89,15 +89,15 @@ Follow the structure in `infrastructure-as-code.md` exactly — the `sections:` 
 
 ## Step 4 — Check icons
 
-The site uses **Font Awesome 5.8.1 Free**. For every `icon:` value in the frontmatter:
+The site uses **Phosphor icons** (rendered via the `icon.html` partial). For every `icon:` value in the frontmatter:
 
-1. Verify the class has a `:before` definition in `assets/css/bundle.css`:
+1. Verify the icon name exists in the Phosphor manifest:
    ```bash
-   grep "\.fa-YOUR-ICON:before" assets/css/bundle.css
+   ls assets/icons/phosphor/regular/YOUR-ICON.svg
    ```
-2. If missing, find the nearest valid substitute. Common pitfalls:
-   - `fa-shield` → use `fa-shield-alt`
-   - `fa-sliders` → use `fa-sliders-h`
+2. Use Phosphor naming conventions (no `fa-` prefix). Examples:
+   - `shield`, `rocket`, `code`, `cloud-arrow-up`
+   - Browse the full set at <https://phosphoricons.com/>
 
 ---
 

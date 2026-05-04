@@ -58,57 +58,57 @@ sections:
   heading: Guides
   description: Step-by-step tutorials for common ESC workflows.
   cards:
-  - emoji: 🔗
+  - icon: pulumi-iac
     heading: Integrate with Pulumi IaC
     description: Use ESC environments in your Pulumi infrastructure code.
     link: /docs/esc/guides/integrate-with-pulumi-iac/
-  - emoji: 🔐
+  - icon: lock-key
     heading: Managing secrets
     description: Store, retrieve, and organize secrets in ESC environments.
     link: /docs/esc/guides/managing-secrets/
-  - emoji: ▶️
+  - icon: play
     heading: Running commands with esc run
     description: Inject secrets into any command or script.
     link: /docs/esc/guides/running-commands-with-esc/
-  - emoji: 📦
+  - icon: package
     heading: Importing environments
     description: Compose environments and share configuration across teams.
     link: /docs/esc/guides/importing-environments/
 - type: button-cards
   heading: Capabilities
   cards:
-  - emoji: 💻
+  - icon: desktop
     heading: ESC CLI
     link: /docs/esc/cli/
     description: Command-line interface for managing environments, secrets, and configuration.
-  - emoji: 🔑
+  - icon: key
     heading: Dynamic Login Credentials
     description: Support for short-lived OIDC login credentials for popular cloud providers.
     link: /docs/esc/integrations/dynamic-login-credentials/
-  - emoji: 🔐
+  - icon: lock-key
     heading: Dynamic Secrets Providers
     description: Integrate with secrets stored in external providers using dynamic configuration providers.
     link: /docs/esc/integrations/dynamic-secrets/
-  - emoji: 🔔
+  - icon: bell
     heading: ESC Webhooks
     description: Automate your processes with environment event webhooks.
     link: /docs/esc/environments/webhooks/
 - type: button-cards
   heading: Resources
   cards:
-  - emoji: 💡
+  - icon: lightbulb
     heading: Concepts
     description: Understand core ESC concepts including environments, sources, targets, and management.
     link: /docs/esc/concepts/
-  - emoji: 📁
+  - icon: folder
     heading: Environments
     description: Create and manage environments for organizing secrets and configuration.
     link: /docs/esc/environments/
-  - emoji: 🔗
+  - icon: link
     heading: Integrations
     description: Connect to external secret stores, cloud providers, and development tools.
     link: /docs/esc/integrations/
-  - emoji: 🛠️
+  - icon: wrench
     heading: Development
     description: Use SDKs, Pulumi Service Provider, and Automation API for programmatic access.
     link: /docs/esc/development/

@@ -35,7 +35,7 @@
                         <ul class="list-none p-0">
                             {{ range .Params.youll_learn }}
                                 <li>
-                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    {{ partial "icon.html" (dict "name" "check" "class" "text-green-500 mr-2") }}
                                     <span>{{ . }}</span>
                                 </li>
                             {{ end }}
@@ -48,7 +48,7 @@
                         <ul class="list-none p-0">
                             {{ range .Params.prereqs }}
                                 <li>
-                                    <i class="far fa-circle text-gray-600 mr-2"></i>
+                                    {{ partial "icon.html" (dict "name" "circle" "class" "text-gray-600 mr-2") }}
                                     <span>{{ . | markdownify }}</span>
                                 </li>
                             {{ end }}
@@ -75,12 +75,12 @@
                                     <a href="{{ .RelPermalink }}">{{ $page.Title }}</a>
                                 </span>
                                 <span class="text-sm text-gray-600 whitespace-nowrap md:mx-12">
-                                    <i class="far fa-clock md:text-center w-4 md:w-6 text-gray-500"></i>
+                                    {{ partial "icon.html" (dict "name" "clock" "class" "md:text-center w-4 md:w-6 text-gray-500") }}
                                     {{ $page.Params.estimated_time }} minutes
                                 </span>
                                 <span class="hidden md:block ">
                                     <a href="{{ .RelPermalink }}">
-                                        <i class="fas fa-chevron-circle-right text-violet-primary p-2"></i>
+                                        {{ partial "icon.html" (dict "name" "arrow-circle-right" "class" "text-violet-primary p-2") }}
                                     </a>
                                 </span>
                             </li>

@@ -18,11 +18,11 @@
     <span class="text-base">Source code</span>
 </h6>
 <div class="inline-flex items-center text-sm">
-    <i class="fab fa-github text-lg mr-1.5"></i>
+    {{ partial "icon.html" (dict "name" "brand/github" "class" "text-lg mr-1.5") }}
     <span class="whitespace-nowrap flex-1">
         {{ partial "templates/source-link" (dict "prefix" .Params.template.prefix "languages" (delimit .Params.template.languages ",")) }}
     </span>
-    <span><i class="text-violet-primary fas fa-external-link-alt text-xs ml-1.5 pb-1"></i></span>
+    <span>{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "text-violet-primary text-xs ml-1.5 pb-1") }}</span>
 </div>
 
 {{ $thisCloud := $.Page.Params.cloud.slug }}

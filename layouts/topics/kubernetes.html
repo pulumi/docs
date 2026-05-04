@@ -278,7 +278,7 @@
                 <div class="my-8 lg:flex flex-wrap">
                     {{ range $i, $row := $item.items }}
                         <div class="lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
-                            <div class="w-full px-8 text-center my-4">
+                            <div class="w-full px-8 text-left my-4">
                                 {{ partial "color-icon.html" (dict "icon" $row.icon "icon_color" $row.icon_color) }}
                                 <h5>{{ $row.title }}</h5>
                                 <p>{{ $row.description | markdownify }}</p>

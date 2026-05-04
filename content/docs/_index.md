@@ -28,61 +28,61 @@ sections:
 - type: button-cards
   heading: Capabilities
   cards:
-  - emoji: 🏗️
+  - icon: pulumi-iac
     heading: Infrastructure as Code
     description: Define and manage cloud infrastructure using TypeScript, Python, Go, .NET, Java, and YAML.
     link: /docs/iac/
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Deployments & Workflows
     description: Cloud-hosted deployments, drift detection, state management, and automation.
     link: /docs/deployments/
-  - emoji: 🔐
+  - icon: pulumi-secrets
     heading: Secrets & Configuration
     description: Centralized secrets and configuration management with environments.
     link: /docs/esc/
-  - emoji: 🛡️
+  - icon: pulumi-insights
     heading: Insights & Governance
     description: Search, compliance, and policy enforcement across your cloud infrastructure.
     link: /docs/insights/
-  - emoji: 🔗
+  - icon: link
     heading: Version Control
     description: Connect Pulumi with GitHub, GitLab, and Azure DevOps using Pulumi-maintained version control integrations.
     link: /docs/integrations/version-control/
-  - emoji: 🎯
+  - icon: pulumi-idp
     heading: Internal Developer Platform
     description: Self-service infrastructure with templates, guardrails, and developer portals.
     link: /docs/idp/
-  - emoji: 🤖
+  - icon: pulumi-neo
     heading: Infrastructure AI
     description: Infrastructure automation with Pulumi Neo and natural language assistance.
     link: /docs/ai/
 - type: button-cards
   heading: Learning Resources
   cards:
-  - emoji: 🎓
+  - icon: graduation-cap
     heading: Tutorials ↗
     description: Step-by-step guides for building real-world infrastructure with Pulumi.
     link: /tutorials/
 - type: button-cards
   heading: More Documentation
   cards:
-  - emoji: 🏢
+  - icon: buildings
     heading: Administration
     description: Manage organizations, access, security, and self-hosting.
     link: /docs/administration/
-  - emoji: 📦
+  - icon: package
     heading: Registry ↗
     description: Browse and search Pulumi packages for 150+ cloud providers and services.
     link: /registry/
-  - emoji: 📚
+  - icon: books
     heading: Reference
     description: CLI, SDK, and API reference documentation.
     link: /docs/reference/
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: Migration
     description: Migrate from Terraform, CloudFormation, and other tools.
     link: /docs/iac/guides/migration/
-  - emoji: 🆘
+  - icon: lifebuoy
     heading: Support
     description: Get help through troubleshooting guides, FAQs, and community resources.
     link: /docs/support/

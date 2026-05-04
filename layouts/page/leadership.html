@@ -5,7 +5,7 @@
 {{ define "main" }}
     <div class="container mx-auto mt-12  max-w-7xl">
         <a class="text-violet-primary text-xl font-body ml-9 hidden sm:block" href="{{ relref . "/about" }}">
-            <i class="fas fa-arrow-left mr-4"></i>
+            {{ partial "icon.html" (dict "name" "arrow-left" "class" "mr-4") }}
             About
         </a>
 

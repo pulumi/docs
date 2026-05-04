@@ -31,37 +31,37 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Concepts
     link: /docs/idp/concepts/
     description: Learn the IDP approach and how platform teams provide self-service infrastructure workflows.
 
-  - emoji: 📦
+  - icon: package
     heading: Private Registry
     link: /docs/idp/concepts/private-registry/
     description: Centralized registry for your organization's templates, components, and infrastructure building blocks.
 
-  - emoji: 🎯
+  - icon: target
     heading: Organization Templates
     link: /docs/idp/concepts/organization-templates/
     description: Scaffold new projects from organization templates that encode standards and best practices.
 
-  - emoji: ⚙️
+  - icon: gear
     heading: No-code Stacks
     link: /docs/idp/concepts/no-code-stacks/
     description: Deploy infrastructure without writing code using the New Project Wizard and templates.
 
-  - emoji: 🏗️
+  - icon: buildings
     heading: Services
     link: /docs/idp/concepts/services/
     description: Logical groupings of stacks, environments, and resources that model your infrastructure.
 
-  - emoji: 🔗
+  - icon: link
     heading: New Project Wizard
     link: /docs/idp/concepts/new-project-wizard/
     description: Create new projects from templates directly in your browser with automatic deployment setup.
 
-  - emoji: 📚
+  - icon: books
     heading: Guides
     link: /docs/idp/guides/
     description: Learn best practices, the Four Factors framework, and how to automate component publishing.

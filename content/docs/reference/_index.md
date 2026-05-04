@@ -18,12 +18,12 @@ sections:
 - type: button-cards
   heading: Command-line tools
   cards:
-  - emoji: 💻
+  - icon: pulumi-iac
     heading: Pulumi CLI
     description: Command reference for the Pulumi infrastructure as code CLI.
     link: /docs/iac/cli/
 
-  - emoji: 🔐
+  - icon: pulumi-secrets
     heading: ESC CLI
     description: Command reference for the Pulumi ESC secrets and configuration CLI.
     link: /docs/esc/cli/
@@ -31,32 +31,32 @@ sections:
 - type: button-cards
   heading: Language SDKs
   cards:
-  - emoji: 📘
+  - image: /logos/tech/typescript.svg
     heading: TypeScript (Node.js) ↗
     description: API reference for the Node.js SDK with TypeScript and JavaScript.
     link: /docs/reference/pkg/nodejs/pulumi/pulumi/
 
-  - emoji: 🐍
+  - image: /logos/tech/python.svg
     heading: Python ↗
     description: API reference for the Python SDK.
     link: /docs/reference/pkg/python/pulumi/
 
-  - emoji: 🔷
+  - image: /logos/tech/go.svg
     heading: Go ↗
     description: API reference for the Go SDK.
     link: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
 
-  - emoji: 💠
+  - image: /logos/tech/dotnet.svg
     heading: .NET (C#, F#, VB) ↗
     description: API reference for the .NET SDK.
     link: /docs/reference/pkg/dotnet/pulumi/pulumi.html
 
-  - emoji: ☕
+  - image: /logos/tech/java.svg
     heading: Java ↗
     description: API reference for the Java SDK.
     link: /docs/reference/pkg/java/
 
-  - emoji: 📄
+  - image: /logos/tech/yaml.svg
     heading: YAML
     description: Reference for writing Pulumi programs in YAML.
     link: /docs/iac/languages-sdks/yaml/
@@ -64,12 +64,12 @@ sections:
 - type: button-cards
   heading: Policy SDKs
   cards:
-  - emoji: 🛡️
+  - icon: shield-check
     heading: TypeScript Policy SDK ↗
     description: API reference for writing policies in TypeScript.
     link: /docs/reference/pkg/nodejs/pulumi/policy/
 
-  - emoji: 🛡️
+  - icon: shield-check
     heading: Python Policy SDK ↗
     description: API reference for writing policies in Python.
     link: /docs/reference/pkg/python/pulumi_policy/
@@ -77,17 +77,17 @@ sections:
 - type: button-cards
   heading: APIs & Configuration
   cards:
-  - emoji: 🔌
+  - icon: plug
     heading: Pulumi Cloud REST API
     description: Programmatic access to Pulumi Cloud for automation and integrations.
     link: /docs/reference/cloud-rest-api/
 
-  - emoji: ⚙️
+  - icon: gear
     heading: ESC Environment Syntax
     description: Reference for ESC environment definitions, interpolations, functions, and providers.
     link: /docs/esc/environments/syntax/
 
-  - emoji: 🔗
+  - icon: link
     heading: Property Paths
     description: Reference for property path syntax used in resource options, ESC, and Insights.
     link: /docs/reference/property-paths/
@@ -95,7 +95,7 @@ sections:
 - type: button-cards
   heading: Packages & Providers
   cards:
-  - emoji: 📦
+  - icon: package
     heading: Package Registry
     description: Browse packages for AWS, Azure, Google Cloud, Kubernetes, and 120+ providers.
     link: /registry/

@@ -46,15 +46,15 @@ features:
   image_alt: Pulumi code example for Kubernetes
   anchor: features
   features:
-    - icon: fa-code
+    - icon: code
       title: Cloud-native infrastructure as code
       description: |
         Define your apps and infrastructure in your language of choice: TypeScript, Python, Go, C#, or Java. Then deploy to any cloud, with built-in policy enforcement and secrets management.
-    - icon: fa-robot
+    - icon: robot
       title: Neo, your AI infrastructure agent
       description: |
         Our AI agent Neo is built to handle the work that platform teams actually do. Stand up new clusters, keep them updated, migrate workloads across clouds, and enforce security policies across your entire fleet.
-    - icon: fa-cloud
+    - icon: cloud
       title: Many clouds, one platform
       description: |
         Provision and manage Kubernetes clusters, resources, deployments, and more across AWS, Azure, Google Cloud, and on-prem — all with a single, unified platform.
@@ -93,20 +93,20 @@ three_column:
   title: Tools built to manage complexity
   anchor: why-pulumi
   columns:
-    - icon: fa-code
+    - icon: code
       title: Eliminate context-switching
       description: |
         Your team already knows Python, TypeScript, or Go. Use those same languages and their ecosystems to provision
         and manage your Kubernetes infrastructure instead of toggling between code and plain-text config.
       cta_text: Learn more about Pulumi IaC
       cta_link: /product/infrastructure-as-code/
-    - icon: fa-check
+    - icon: check
       title: Keep what works
       description: |
         Already using Terraform? No problem. Pulumi Cloud can manage your existing Terraform or OpenTofu state — without having to migrate. Start new projects with Pulumi, and migrate existing ones as it makes sense for your team.
       cta_text: Learn more about migration
       cta_link: /docs/iac/guides/migration/
-    - icon: fa-robot
+    - icon: robot
       title: Ship AI workloads confidently
       description: |
         41% of AI developers are moving to cloud-native infrastructure. Teams need more control over GPU resources, model deployments, and inference workloads. Pulumi provides the foundation AI teams depend on.

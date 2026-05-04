@@ -35,37 +35,37 @@ sections:
 - type: button-cards
   heading: Deployment options
   cards:
-  - emoji: 🐳
+  - icon: cube
     heading: Quickstart Docker Compose
     link: /docs/administration/self-hosting/deployment-options/quickstart-docker-compose/
     description: Testing deployment using Docker Compose for local environments.
 
-  - emoji: ☁️
+  - icon: cloud
     heading: ECS-Hosted
     link: /docs/administration/self-hosting/deployment-options/ecs-hosted/
     description: Production deployment on AWS ECS with TypeScript or Go automation.
 
-  - emoji: ☸️
+  - icon: cube
     heading: EKS-Hosted
     link: /docs/administration/self-hosting/deployment-options/eks-hosted/
     description: Production deployment on Amazon EKS with TypeScript automation.
 
-  - emoji: 🔷
+  - icon: file-code
     heading: AKS-Hosted
     link: /docs/administration/self-hosting/deployment-options/aks-hosted/
     description: Production deployment on Azure Kubernetes Service with TypeScript automation.
 
-  - emoji: 🌐
+  - icon: globe
     heading: GKE-Hosted
     link: /docs/administration/self-hosting/deployment-options/gke-hosted/
     description: Production deployment on Google Kubernetes Engine with TypeScript automation.
 
-  - emoji: 🛠️
+  - icon: wrench
     heading: Bring Your Own Infrastructure
     link: /docs/administration/self-hosting/deployment-options/byo-infra-hosted/
     description: Deploy on your own Kubernetes, MySQL, and S3-compatible storage.
 
-  - emoji: 🐋
+  - icon: cube
     heading: Local-Docker
     link: /docs/administration/self-hosting/deployment-options/local-docker/
     description: Production deployment using custom Docker environment with MySQL and object storage.
@@ -73,12 +73,12 @@ sections:
 - type: button-cards
   heading: Configuration
   cards:
-  - emoji: 📦
+  - icon: package
     heading: Components
     link: /docs/administration/self-hosting/components/
     description: Docker images for the Pulumi Cloud frontend UI and backend API.
 
-  - emoji: 🌐
+  - icon: globe
     heading: Network Requirements
     link: /docs/administration/self-hosting/network/
     description: Ingress, egress, and infrastructure requirements for self-hosted deployments.
@@ -86,22 +86,22 @@ sections:
 - type: button-cards
   heading: Operations
   cards:
-  - emoji: 📊
+  - icon: chart-bar
     heading: Operations Guide
     link: /docs/administration/self-hosting/operations/
     description: HA, DR, monitoring, sizing, and security hardening for production deployments.
 
-  - emoji: 💾
+  - icon: floppy-disk
     heading: Backup and Recovery
     link: /docs/administration/self-hosting/operations/backup-recovery/
     description: Backup strategies, recovery procedures, and RTO targets.
 
-  - emoji: 📈
+  - icon: chart-line-up
     heading: Monitoring and Alerting
     link: /docs/administration/self-hosting/operations/monitoring/
     description: Three-tier alerting strategy and key metrics to watch.
 
-  - emoji: 🔒
+  - icon: lock
     heading: Security Hardening
     link: /docs/administration/self-hosting/operations/security-hardening/
     description: Network security, encryption, SMTP, and bot protection.

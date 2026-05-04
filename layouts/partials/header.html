@@ -15,22 +15,22 @@
                         data-size="small" data-show-count="true" aria-label="Star pulumi/pulumi on GitHub">Star</a>
                 </li>
                 <li class="mr-8">
-                    <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank"><i class="fab fa-slack mr-1"></i>Slack</a>
+                    <a data-track="header-slack" href="https://slack.pulumi.com/" target="_blank">{{ partial "icon.html" (dict "name" "brand/slack" "class" "mr-1") }}Slack</a>
                 </li>
                 <li class="mr-8">
-                    <a data-track="header-docs" href="/docs/"><i class="fas fa-book mr-1"></i>Docs</a>
+                    <a data-track="header-docs" href="/docs/">{{ partial "icon.html" (dict "name" "books" "class" "mr-1") }}Docs</a>
                 </li>
                 <li class="mr-8">
-                    <a data-track="header-registry" href="/registry/"><i class="fas fa-archive mr-1"></i>Registry</a>
+                    <a data-track="header-registry" href="/registry/">{{ partial "icon.html" (dict "name" "package" "class" "mr-1") }}Registry</a>
                 </li>
                 <li class="mr-8">
-                    <a class="flex items-center" data-track="header-ai" href="/product/neo/">{{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline") }}Pulumi Neo</a>
+                    <a class="flex items-center" data-track="header-ai" href="/product/neo/">{{ partial "icon.html" (dict "name" "custom/pulumi-neo" "weight" "fill" "class" "inline") }}Pulumi Neo</a>
                 </li>
                 <li class="mr-8">
-                    <a data-track="header-contact" href="/contact/"><i class="fas fa-comment mr-1"></i>Contact Us</a>
+                    <a data-track="header-contact" href="/contact/">{{ partial "icon.html" (dict "name" "chat-circle" "class" "mr-1") }}Contact Us</a>
                 </li>
                 <li>
-                    <a class="flex items-center" data-track="header-console" href="https://app.pulumi.com/signin"><i class="fas fa-user-circle mr-1"></i>{{ partial "top-nav-user-toggle" }}</a>
+                    <a class="flex items-center" data-track="header-console" href="https://app.pulumi.com/signin">{{ partial "icon.html" (dict "name" "user-circle" "class" "mr-1") }}{{ partial "top-nav-user-toggle" }}</a>
                 </li>
             </ul>
         </div>
@@ -61,7 +61,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/product/">
-                                                <i class="fas fa-cloud fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "cloud-arrow-up") }}
                                                 Platform Overview
                                                 <div class="list-sub-title">Everything platform engineering teams need
                                                     to build, secure, and scale cloud infrastructure</div>
@@ -71,7 +71,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/product/infrastructure-as-code/">
-                                                <i class="fas fa-code fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "pulumi-iac") }}
                                                 Infrastructure as Code
                                                 <div class="list-sub-title">IaC for any cloud, in any language —
                                                     Node.js, Python, Go, .NET, Java, and YAML</div>
@@ -88,7 +88,7 @@
                                         <div class="list-title">
                                             <a href="/product/neo/">
                                                 <span>
-                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline") }}
+                                                    {{ partial "icon.html" (dict "name" "custom/pulumi-neo" "weight" "fill" "class" "inline") }}
                                                 </span>
                                                 Agentic Infrastructure
                                                 <div class="list-sub-title">Meet Neo, our AI-powered infrastructure
@@ -100,7 +100,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/product/secrets-management/">
-                                                <i class="fas fa-key fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "custom/pulumi-secrets" "class" "inline") }}
                                                 Secrets & Configuration
                                                 <div class="list-sub-title">Environments, secrets, and configuration
                                                     management</div>
@@ -111,7 +111,7 @@
                                         <div class="list-title">
                                             <a href="/product/insights-governance/">
                                                 <span class="mr-2">
-                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/magnifying-glass.svg" "alt" "" "class" "inline opacity-90") }}
+                                                    {{ partial "icon.html" (dict "name" "custom/pulumi-insights" "class" "inline") }}
                                                 </span>
                                                 Insights & Governance
                                                 <div class="list-sub-title">Asset management, compliance remediation,
@@ -122,7 +122,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/product/internal-developer-platforms/">
-                                                <i class="fas fa-cubes fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "custom/pulumi-idp" "class" "inline") }}
                                                 Internal Developer Platform
                                                 <div class="list-sub-title">The fastest, most secure way to deliver
                                                     cloud infrastructure</div>
@@ -146,7 +146,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/docs/get-started">
-                                                <i class="fas fa-check fa-fw flex-wrap"></i>
+                                                {{ partial "icon.html" (dict "name" "check") }}
                                                 Get started
                                                 <div class="list-sub-title">Follow a step-by-step guide to quickly learn
                                                     Pulumi</div>
@@ -156,7 +156,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/docs/">
-                                                <i class="fas fa-book fa-fw flex-wrap"></i>
+                                                {{ partial "icon.html" (dict "name" "book") }}
                                                 Documentation
                                                 <div class="list-sub-title">Complete guides and API references</div>
                                             </a>
@@ -165,7 +165,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/registry/">
-                                                <i class="fas fa-archive fa-fw flex-wrap"></i>
+                                                {{ partial "icon.html" (dict "name" "archive") }}
                                                 Registry
                                                 <div class="list-sub-title">Browse 170+ cloud providers and packages
                                                 </div>
@@ -176,7 +176,7 @@
                                         <div class="list-title">
                                             <a href="/templates/">
                                                 <span>
-                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/square-foot.svg" "alt" "" "class" "inline opacity-90") }}
+                                                    {{ partial "icon.html" (dict "name" "ruler" "class" "inline") }}
                                                 </span>
                                                 Templates
                                                 <div class="list-sub-title">Deploy common architectures on any cloud
@@ -188,7 +188,7 @@
                                         <div class="list-title">
                                             <a href="/learn/">
                                                 <span class="mr-0.5">
-                                                    {{ partial "fingerprinted-img.html" (dict "src" "icons/graduation-cap.svg" "alt" "" "class" "inline opacity-90") }}
+                                                    {{ partial "icon.html" (dict "name" "graduation-cap" "class" "inline") }}
                                                 </span>
                                                 Tutorials
                                                 <div class="list-sub-title">Get hands-on with Pulumi concepts</div>
@@ -198,7 +198,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/events#upcoming">
-                                                <i class="fas fa-calendar fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "calendar") }}
                                                 Events and Workshops
                                                 <div class="list-sub-title">Live sessions and workshops</div>
                                             </a>
@@ -207,7 +207,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/community/">
-                                                <i class="fas fa-comments fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "chats") }}
                                                 Community
                                                 <div class="list-sub-title">Join 10k+ developers on Slack</div>
                                             </a>
@@ -216,7 +216,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/testimonials/">
-                                                <i class="fas fa-quote-left fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "quotes") }}
                                                 Engineers love Pulumi
                                                 <div class="list-sub-title">Hear from engineers why they love Pulumi
                                                 </div>
@@ -226,7 +226,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/guides/">
-                                                <i class="fas fa-book-open fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "book-open") }}
                                                 Pulumi Guides
                                                 <div class="list-sub-title">Practical infrastructure patterns for cloud providers</div>
                                             </a>
@@ -245,7 +245,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/enterprise/">
-                                                <i class="fas fa-building fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "buildings") }}
                                                 Enterprise Solutions
                                                 <div class="list-sub-title">Security, compliance, and support for teams
                                                 </div>
@@ -255,7 +255,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/case-studies/">
-                                                <i class="fas fa-file fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "file") }}
                                                 Case Studies
                                                 <div class="list-sub-title">How Snowflake, Mercedes-Benz, and others use
                                                     Pulumi</div>
@@ -265,7 +265,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/request-a-demo/">
-                                                <i class="fas fa-laptop-code fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "laptop") }}
                                                 Request a Demo
                                                 <div class="list-sub-title">See how Pulumi can help your team</div>
                                             </a>
@@ -274,7 +274,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/proserv/">
-                                                <i class="fas fa-briefcase fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "briefcase") }}
                                                 Professional Services
                                                 <div class="list-sub-title pr-2">Get expert help with your
                                                     implementation</div>
@@ -284,7 +284,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/contact/">
-                                                <i class="fas fa-comment fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "chat-circle") }}
                                                 Contact Sales
                                                 <div class="list-sub-title pr-2">Talk to our team about your needs</div>
                                             </a>
@@ -313,7 +313,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/about/">
-                                                <i class="fas fa-quote-left fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "quotes") }}
                                                 About us
                                                 <div class="list-sub-title">Our purpose and values</div>
                                             </a>
@@ -322,7 +322,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/careers/">
-                                                <i class="fas fa-briefcase fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "briefcase") }}
                                                 Careers
                                                 <div class="list-sub-title">Come work for Pulumi</div>
                                             </a>
@@ -331,7 +331,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/about/newsroom/">
-                                                <i class="fas fa-book-open fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "book-open") }}
                                                 Newsroom
                                                 <div class="list-sub-title">Pulumi in the news</div>
                                             </a>
@@ -340,7 +340,7 @@
                                     <li>
                                         <div class="list-title">
                                             <a href="/awards/">
-                                                <i class="fas fa-trophy fa-fw"></i>
+                                                {{ partial "icon.html" (dict "name" "trophy") }}
                                                 Awards
                                                 <div class="list-sub-title">Recognition from press and analysts</div>
                                             </a>
@@ -357,7 +357,7 @@
                     <label class="mobile-menu-closed" for="mobile-menu">
                         {{ partial "icon" (dict "icon" "hamburger-closed") }}
                     </label>
-                    <label class="mobile-menu-open hidden" for="mobile-menu">
+                    <label class="mobile-menu-open" for="mobile-menu">
                         {{ partial "icon" (dict "icon" "hamburger-open") }}
                     </label>
                 </span>
@@ -375,30 +375,30 @@
                                     <div>Core Product</div>
                                 </div>
                                 <li>
-                                    <a href="/product/"> <i class="fas fa-cloud fa-fw"></i> Platform Overview </a>
+                                    <a href="/product/"> {{ partial "icon.html" (dict "name" "cloud") }} Platform Overview </a>
                                 </li>
                                 <li>
-                                    <a href="/product/infrastructure-as-code/"> <i class="fas fa-code fa-fw"></i>
+                                    <a href="/product/infrastructure-as-code/"> {{ partial "icon.html" (dict "name" "code") }}
                                         Infrastructure as Code </a>
                                 </li>
                                 <div class="mobile-menu-sub-heading mx-5 mt-2">
                                     <div>Key Capabilities</div>
                                 </div>
                                 <li>
-                                    <a href="/product/neo/"> <span class="ml-1.5 mr-1">{{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline opacity-90 h-5") }} </span>Infrastructure AI </a>
+                                    <a href="/product/neo/"> <span class="ml-1.5 mr-1">{{ partial "icon.html" (dict "name" "custom/pulumi-neo") }} </span>Infrastructure AI </a>
                                 </li>
                                 <li>
-                                    <a href="/product/secrets-management/"> <i class="fas fa-key fa-fw"></i> Secrets &
+                                    <a href="/product/secrets-management/"> {{ partial "icon.html" (dict "name" "key") }} Secrets &
                                         Configuration </a>
                                 </li>
                                 <li>
                                     <a href="/product/insights-governance/"> <span class="ml-1.5 mr-1">
-                                            {{ partial "fingerprinted-img.html" (dict "src" "icons/magnifying-glass.svg" "alt" "" "class" "inline opacity-90 h-5") }}
+                                            {{ partial "icon.html" (dict "name" "magnifying-glass" "class" "inline") }}
                                         </span>Insights & Governance</a>
                                 </li>
 
                                 <li>
-                                    <a href="/product/internal-developer-platforms/"> <i class="fas fa-cubes fa-fw"></i>
+                                    <a href="/product/internal-developer-platforms/"> {{ partial "icon.html" (dict "name" "cube") }}
                                         Internal Developer Platform </a>
                                 </li>
                             </div>
@@ -411,36 +411,36 @@
                                     class="dropdown-menu-caret"></span></label>
                             <div class="mobile-menu-subitems-why-pulumi">
                                 <li>
-                                    <a href="/docs/get-started"> <i class="fas fa-check fa-fw"></i> Get started </a>
+                                    <a href="/docs/get-started"> {{ partial "icon.html" (dict "name" "check") }} Get started </a>
                                 </li>
                                 <li>
-                                    <a href="/docs/"> <i class="fas fa-book fa-fw"></i> Documentation </a>
+                                    <a href="/docs/"> {{ partial "icon.html" (dict "name" "book") }} Documentation </a>
                                 </li>
                                 <li>
-                                    <a href="/registry/"> <i class="fas fa-archive fa-fw"></i> Registry </a>
+                                    <a href="/registry/"> {{ partial "icon.html" (dict "name" "archive") }} Registry </a>
                                 </li>
                                 <li>
-                                    <a href="/templates/"><span> {{ partial "fingerprinted-img.html" (dict "src" "icons/square-foot.svg" "alt" "" "class" "inline h-8 opacity-90") }} </span>Templates
+                                    <a href="/templates/"><span> {{ partial "icon.html" (dict "name" "ruler" "class" "inline h-8 opacity-90") }} </span>Templates
                                     </a>
                                 </li>
                                 <li>
                                     <a href="/learn/"> <span class="ml-1 mr-1">
-                                            {{ partial "fingerprinted-img.html" (dict "src" "icons/graduation-cap.svg" "alt" "" "class" "inline opacity-90 h-5") }}
+                                            {{ partial "icon.html" (dict "name" "graduation-cap" "class" "inline opacity-90 h-5") }}
                                         </span> Tutorials </a>
                                 </li>
                                 <li>
-                                    <a href="/events#upcoming"> <i class="fas fa-calendar fa-fw"></i> Events and
+                                    <a href="/events#upcoming"> {{ partial "icon.html" (dict "name" "calendar") }} Events and
                                         Workshops </a>
                                 </li>
                                 <li>
-                                    <a href="/community/"> <i class="fas fa-comments fa-fw"></i> Community </a>
+                                    <a href="/community/"> {{ partial "icon.html" (dict "name" "chats") }} Community </a>
                                 </li>
                                 <li>
-                                    <a href="/testimonials/"> <i class="fas fa-quote-left fa-fw"></i> Engineers love
+                                    <a href="/testimonials/"> {{ partial "icon.html" (dict "name" "quotes") }} Engineers love
                                         Pulumi </a>
                                 </li>
                                 <li>
-                                    <a href="/guides/"> <i class="fas fa-book-open fa-fw"></i> Pulumi Guides </a>
+                                    <a href="/guides/"> {{ partial "icon.html" (dict "name" "book-open") }} Pulumi Guides </a>
                                 </li>
                             </div>
                         </div>
@@ -452,22 +452,22 @@
                                 Enterprises<span class="dropdown-menu-caret"></span></label>
                             <div class="mobile-menu-subitems-learn">
                                 <li>
-                                    <a href="/enterprise/"> <i class="fas fa-building fa-fw"></i>Enterprise Solutions
+                                    <a href="/enterprise/"> {{ partial "icon.html" (dict "name" "buildings") }}Enterprise Solutions
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/case-studies/"> <i class="fas fa-file fa-fw"></i> Case Studies </a>
+                                    <a href="/case-studies/"> {{ partial "icon.html" (dict "name" "file") }} Case Studies </a>
                                 </li>
                                 <li>
-                                    <a href="/request-a-demo/"> <i class="fas fa-laptop-code fa-fw"></i> Request a Demo
+                                    <a href="/request-a-demo/"> {{ partial "icon.html" (dict "name" "laptop") }} Request a Demo
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/proserv/"> <i class="fas fa-briefcase fa-fw"></i> Professional Services
+                                    <a href="/proserv/"> {{ partial "icon.html" (dict "name" "briefcase") }} Professional Services
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="/contact/"> <i class="fas fa-comment fa-fw"></i> Contact sales </a>
+                                    <a href="/contact/"> {{ partial "icon.html" (dict "name" "chat-circle") }} Contact sales </a>
                                 </li>
                             </div>
                         </div>
@@ -486,16 +486,16 @@
                             <hr />
                             <div class="mobile-menu-subitems-company">
                                 <li>
-                                    <a href="/about/"> <i class="fas fa-quote-left fa-fw"></i> About us </a>
+                                    <a href="/about/"> {{ partial "icon.html" (dict "name" "quotes") }} About us </a>
                                 </li>
                                 <li>
-                                    <a href="/careers/"> <i class="fas fa-briefcase fa-fw"></i> Careers </a>
+                                    <a href="/careers/"> {{ partial "icon.html" (dict "name" "briefcase") }} Careers </a>
                                 </li>
                                 <li>
-                                    <a href="/about/newsroom/"> <i class="fas fa-book-open fa-fw"></i> Newsroom </a>
+                                    <a href="/about/newsroom/"> {{ partial "icon.html" (dict "name" "book-open") }} Newsroom </a>
                                 </li>
                                 <li>
-                                    <a href="/awards/"> <i class="fas fa-trophy fa-fw"></i> Awards </a>
+                                    <a href="/awards/"> {{ partial "icon.html" (dict "name" "trophy") }} Awards </a>
                                 </li>
                                 <hr />
                             </div>
