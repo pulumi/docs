@@ -2114,3 +2114,107 @@ Modified:
 ### Memory updates
 
 None. The Vocab gotcha and other Vale-specific quirks are project-state for this branch; SESSION-NOTES is the right home.
+
+## Session 22 — 2026-05-04 (hashtag-driven re-entrant routing implementation; bundled Vale follow-ups)
+
+### Trigger
+
+Top of Session-21 backlog: implement Session 20's settled hashtag-driven routing design. Cam asked to bundle Session 21's deferred Vale follow-ups (graceful-skip, `||` hardening) into the same change since they touch the same workflow files.
+
+### Architecture decisions confirmed up-front
+
+Four AskUserQuestion picks before any code touched:
+
+1. **Spinner GIF source** = the action's own tracking spinner at `https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f` (CDN-stable). Ruled out self-hosting (asset bootstrap problem) and emoji-only (loses the visual cue that motivated the redesign).
+2. **`#new-review` architecture** — Cam pushed back on my original "duplicate `ci.md` invocation in claude-new.yml" plan and proposed a dispatcher: clear pinned + dispatch existing `claude-code-review.yml`. Smart simplification: single source of truth for "initial review" stays in one workflow. Implemented as `gh workflow run claude-code-review.yml -f pr_number=$PR -f force=true`. Required adding `workflow_dispatch:` trigger + `force` input to claude-code-review.yml.
+3. **Compound hashtag precedence** — `#new-review` wins. claude-update.yml's `if:` gates on `#update-review AND NOT #new-review`. Documented as a deliberate edge case.
+4. **`review:claude-working`** — full delete: workflows, labels file, pr-review SKILL state machine. The action's tracking comment and CLAUDE_PROGRESS spinner are both observable working signals; the label was duplicate state.
+
+### Work shipped
+
+**Workflow split** (commit `6924b51c49`):
+
+- `claude.yml` (modified) — stripped to off-the-shelf shape, mirrors `pulumi/docs:master`'s live workflow. No custom `prompt:`, no Vale, no CLAUDE_PROGRESS plumbing, no `Save mention body`. `if:` adds `&& !contains(...,'#update-review') && !contains(...,'#new-review')` per event clause. Tag mode auto-posts the animated tracking comment for ad-hoc work.
+- `claude-update.yml` (new) — full re-entrant pipeline gated on `@claude AND #update-review AND NOT #new-review`. Inherits current claude.yml machinery (ESC, mise, access check, PR-context, save mention body, Vale, CLAUDE_PROGRESS, post-run labels). Single-path collapsed prompt with explicit compound-mention contract: address embedded asks (file edits / questions / disputes) inline before invoking `docs-review:references:update`. Spinner GIF inline-rendered via `<img src="..." width="16">` in CLAUDE_PROGRESS body. Vale-ephemerality clause baked into the prompt: "Vale findings are NOT tracked across reviews… do NOT move resolved style nits into ✅ Resolved."
+- `claude-new.yml` (new) — lightweight dispatcher gated on `@claude AND #new-review`. No `claude-code-action@v1` invocation. Steps: ESC fetch, access check, resolve PR number, `pinned-comment.sh clear`, post one-line confirmation comment, `gh workflow run claude-code-review.yml -f pr_number -f force=true`. ~130 lines of bash + gh CLI.
+- `claude-code-review.yml` (modified) — added `workflow_dispatch:` trigger with `pr_number` + `force` inputs. Updated `if:` filter, concurrency group (`workflow_run.pull_requests[0].number || inputs.pr_number`), PR-number resolution, `head_sha` fallback. `force=true` bypasses trivial / fmonly / draft / bot-author skips (empty-diff stays unconditional). Vale step hardened with `|| echo '{}' > .vale-raw.json` and `|| echo '[]' > .vale-findings.json` to match claude-triage.yml's pattern. Dropped review:claude-working set/clear and supporting comment. Updated retry-prompt error text to `@claude #update-review`.
+- `claude-triage.yml` (modified) — dropped `review:claude-working` from the state-label exclusion list at line 212.
+
+**`pinned-comment.sh clear` subcommand** — new ~10-line `cmd_clear` that enumerates all `<!-- CLAUDE_REVIEW N/M -->` comments via the existing `find` helper and `gh api -X DELETE`s each. The only path that bypasses the 1/M-sacrosanct rule. Dispatcher table updated; usage block extended.
+
+**Pinned-review footer** — `output-format.md:39` now reads "Need a re-review? Want to dispute a finding? Mention &#64;claude and include `#update-review`. (For ad-hoc questions or fixes, just &#64;claude — no hashtag.)" `#new-review` stays buried in CONTRIBUTING.md / AGENTS.md.
+
+**Vale graceful-skip** in interactive `/docs-review` — `docs-review/SKILL.md:35` adds: "If `vale --version` fails or `vale` is not on PATH, skip the Vale step with a one-line note… don't hard-fail."
+
+**Cleanup of `review:claude-working`:**
+
+- `.github/labels-pr-review.md` — row + `gh label create` one-liner removed.
+- `.claude/commands/pr-review/SKILL.md` — `WORKING` state dropped from the state machine and the corresponding §STALE / §WORKING / §ABSENT switch. State machine collapses to `CURRENT` / `STALE` / `ABSENT`.
+- Workflows — all set/clear calls removed (claude.yml had nothing left after the strip; claude-code-review.yml dropped the add-label and remove-label calls plus the supporting "review:claude-working is always removed" comment).
+
+**User-facing docs:**
+
+- `CONTRIBUTING.md` — §AI-assisted contributions §"After review — three paths to refresh" rewritten. Path 1 now branches on hashtag: `@claude #update-review` for refresh/dispute/fix-response (with the three patterns under it), bare `@claude` for ad-hoc help. New §"Power-user escape hatch: `@claude #new-review`" subsection frames the regenerate path as recovery-only. Top-of-section paragraph also updated from "mention `@claude`" to "mention `@claude #update-review`".
+- `AGENTS.md` — PR Lifecycle line updated to mention the new hashtags and the bare-`@claude`-is-ad-hoc framing.
+
+### Items NOT shipped (carried into Session 23)
+
+1. **End-to-end fork test battery** — deferred mid-session. Cam closed all existing fork PRs; next session opens new fixtures + new test PRs and exercises every path. Prompt drafted at end of this session.
+2. **`scripts/labels/sync-labels.sh` retirement of `review:claude-working` on cam fork** — Cam will run after the test battery so the label is still available for any in-flight runs.
+
+### Methodology / repeatable patterns
+
+- **Cam-pushback patterns this session:**
+  - "I had envisioned a workflow that clears the pinned comment and then just dispatches existing review workflow." — caught a duplicate-logic anti-pattern in my original plan and pushed me toward the dispatcher architecture. The lesson: when a new path mostly mirrors an existing one, dispatch instead of duplicate. The `force` input on the existing workflow plus a tiny dispatcher beats reimplementing 200 lines of PR-context resolution and prompt construction.
+  - "Explain about the lifecycle of the vale-findings file and how it relates to #update-review. Is it going to re-run?" — caught an underspecified design point. The Vale-ephemerality contract (fresh per run, no diff-tracking against prior pinned, no "✅ resolved style nit") needed to live in the `claude-update.yml` prompt explicitly so the model doesn't accidentally migrate Vale findings into ✅ Resolved on subsequent refreshes.
+- **Plan-mode-first, four-question gate.** Session 21's three-question gate up-front caught the architecture before any code; this session's four-question gate did the same. Worth keeping as a default.
+- **Hashtag mutual-exclusion via filter, not workflow logic.** `claude-update.yml`'s `if:` includes `!contains(..., '#new-review')` so compound mentions where both hashtags appear cleanly elect `claude-new.yml` (its filter doesn't need the inverse exclusion). One-sided exclusion gives `#new-review` precedence with no extra plumbing.
+
+### Backlog after Session 22
+
+Active:
+
+1. **End-to-end fork test battery** (S22 #1) — top of next session per Cam.
+2. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
+3. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1).
+4. **Trivial-cap edge case soft-watch** — PR 18573 shape.
+5. **Investigate 5 lost ⚠️ catches** (Session 13 #5).
+6. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream.
+7. **`update.md` raise-missed-duplicate code path** — defer.
+8. **Non-determinism baseline + skeptic sub-agent** — paired.
+9. **Boundary-fixture name audit** — old.
+10. **Cam's "claude-working" label mutex semantics** (Session-18) — ✅ closed by full delete in this session.
+11. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
+
+Closed this session:
+
+- **Hashtag-driven re-entrant routing** (Session 20 design) → ✅ shipped (modulo fork test).
+- **Vale graceful-skip in `/docs-review` interactive** (Session 21 #2) → ✅ shipped.
+- **CI workflow `||` fallback hardening** (Session 21 #3) → ✅ shipped.
+- **Cam's `claude-working` label mutex semantics** → ✅ closed by drop.
+
+### Files changed (Session 22 substance)
+
+New:
+
+- `.github/workflows/claude-update.yml` — re-entrant pipeline gated on `#update-review`.
+- `.github/workflows/claude-new.yml` — dispatcher gated on `#new-review`.
+
+Modified:
+
+- `.github/workflows/claude.yml` — stripped to off-the-shelf shape with hashtag exclusion.
+- `.github/workflows/claude-code-review.yml` — `workflow_dispatch` trigger + `force` input + Vale `||` hardening + drop `review:claude-working`.
+- `.github/workflows/claude-triage.yml` — drop `review:claude-working` from exclusion list.
+- `.claude/commands/docs-review/scripts/pinned-comment.sh` — add `clear` subcommand.
+- `.claude/commands/docs-review/SKILL.md` — Vale graceful-skip clause.
+- `.claude/commands/docs-review/references/output-format.md` — pinned-review footer (advertises `#update-review`).
+- `.claude/commands/pr-review/SKILL.md` — drop `WORKING` state from state machine.
+- `.github/labels-pr-review.md` — drop `review:claude-working` row + `gh label create`.
+- `CONTRIBUTING.md` — rewrite §"After review — three paths to refresh"; add `#new-review` escape-hatch section.
+- `AGENTS.md` — PR Lifecycle line updated for hashtag routing.
+
+Commit: `6924b51c49` (this session's substance), `<this commit>` (Session 22 notes).
+
+### Memory updates
+
+None. All Session-22 substance is project-state specific to this branch — workflow shape, hashtag conventions, dispatcher architecture — and belongs in this file rather than auto-memory.
