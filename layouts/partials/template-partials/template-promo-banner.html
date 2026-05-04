@@ -25,6 +25,7 @@
     {{ if eq $bgAsset.MediaType.SubType "svg" }}
         {{ $bgImageURL = ($bgAsset | fingerprint).RelPermalink }}
     {{ else }}
+        {{/* Larger than fingerprinted-img.html's 800px default since this is a full-bleed background image. */}}
         {{ $maxWidth := 1600 }}
         {{ if gt $bgAsset.Width $maxWidth }}
             {{ $bgAsset = $bgAsset.Process (printf "resize %dx webp q90" $maxWidth) }}
