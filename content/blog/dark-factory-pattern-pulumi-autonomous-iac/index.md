@@ -36,7 +36,7 @@ social:
 
 The original dark factory was [Fanuc's robotics plant in Oshino, Japan](https://www.imeche.org/news/news-article/inside-the-rise-of-unmanned-dark-factories), where the lights are off because nobody is on the floor. Robots build robots. Parts move through the line for weeks at a time without a person walking past them.
 
-The same pattern is now showing up in software. Three engineers at StrongDM [shipped roughly 32,000 lines of production code](https://simonwillison.net/2026/Feb/7/software-factory/) without writing or reviewing any of it. Stripe's "Minions" agent system [now generates over 1,300 pull requests every week](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG put out [a piece calling it the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory).
+The same pattern is now showing up in software. Three engineers at StrongDM [shipped roughly 32,000 lines of production code](https://simonwillison.net/2026/Feb/7/software-factory/) without writing or reviewing any of it. Stripe's "Minions" agent system [merges over a thousand pull requests every week](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG put out [a piece calling it the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory).
 
 Almost every public writeup so far is about application code. The harder question is what this looks like for infrastructure.
 
@@ -92,7 +92,7 @@ Policy doesn't have to be probabilistic: [CrossGuard](/docs/iac/using-pulumi/cro
 
 That doesn't make Pulumi a dark factory by itself. It means the parts that an application-code factory has to build from scratch are pieces a Pulumi shop already has: a credential broker, a policy engine, a governed runner, a state-aware reasoning layer, an audit trail.
 
-There's one more piece worth calling out, because it's the part nobody talks about. `pulumi preview` is structurally a holdout. It produces a deterministic diff that CrossGuard evaluates without ever seeing the conversation that produced the program. The diff is the holdout artifact, the policy pack is the validator, and they meet without context bleed. For infrastructure, half the wall is already built.
+There's one more piece worth calling out, because it's the part nobody talks about. `pulumi preview` produces a clean, deterministic validation artifact, and CrossGuard evaluates that artifact without ever seeing the conversation that produced the program. That's the same context-free judgment the holdout pattern depends on, applied at the policy layer instead of the acceptance-test layer. For infrastructure, half the wall is already built.
 
 The interesting work is the part that nobody ships in a box.
 
@@ -100,7 +100,7 @@ The interesting work is the part that nobody ships in a box.
 
 What no platform ships for you is the wall: the holdout scenarios for infrastructure, the isolated evaluator that runs them, and the agreement on which stacks are even allowed to run lights-out.
 
-The orchestrator itself is small. It pulls a spec, runs `preview`, hands the preview to an isolated evaluator (with its own credentials and its own access to the cloud, no access to the generator's prompt or output), and branches on the verdict. Auto mode runs `up` immediately. Balanced mode submits a deployment that requires approval. Review mode opens a PR for a human. Every branch records a stack version traceable in the audit log. Twenty lines of glue, give or take.
+The happy-path orchestrator is small. It pulls a spec, runs `preview`, hands the preview to an isolated evaluator (with its own credentials and its own access to the cloud, no access to the generator's prompt or output), and branches on the verdict. Auto mode runs `up` immediately. Balanced mode submits a deployment that requires approval. Review mode opens a PR for a human. Every branch records a stack version traceable in the audit log. Retries, observability, secret rotation, and the rest of the production-grade plumbing add up to real code, but the shape is small.
 
 The wall is the part that takes a week to get right. You write five plain-English scenarios for one stack ("after `pulumi up`, the bucket is private, has SSE-KMS, lives in eu-west-1, and is tagged `owner=team-x`") and a janky evaluator that runs `preview` and `up` against an ephemeral copy, queries the cloud, and asks a separate model whether the resulting state satisfies the scenario. Triple-run, 90% pass gate. Then you watch it for a few weeks before you let anything auto-apply.
 
