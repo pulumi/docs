@@ -2308,19 +2308,10 @@ Session 22 dropped `review:claude-working` from `.github/labels-pr-review.md` (t
 
 Active:
 
-1. **Push upstream commits** (`52356f4298`, `f4951563bd`) — Cam reviews, then merges/pushes.
-2. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
-3. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1).
-4. **Trivial-cap edge case soft-watch** — PR 18573 shape.
-5. **Investigate 5 lost ⚠️ catches** (Session 13 #5).
-6. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream.
-7. **`update.md` raise-missed-duplicate code path** — defer.
-8. **Non-determinism baseline + skeptic sub-agent** — paired.
-9. **Boundary-fixture name audit** — old.
-10. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
-11. **`scripts/labels/sync-labels.sh` enhancement** — flag/delete labels-not-in-config (S23 #4).
-12. **Row 10 manual validation** — Cam can run from a non-write-access account if/when convenient.
-13. **Battery screenshots** for #18680 writeup (S23 #2).
+1. **Drop "vale" as a name in PR-facing text.** Pinned-review surface should just say "Style check" (or similar) instead of `[style] write-good.TooWordy` / `[style] Google.Foo`. The Vale rule path is a CI implementation detail; the user-facing label should be tool-agnostic.
+2. **Per-file nit summary in the collapsible roll-up.** The current "file with multiple nits" collapsible header doesn't preview what's inside. Add a one-line summary of the rule kinds (e.g., "3 wordiness, 2 substitutions"), so a reader can skim without expanding.
+3. **Suppress `Google.EmDash`.** Currently noisy on existing technical prose; not pulling its weight relative to the false-positive rate.
+4. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
 
 Closed this session:
 
