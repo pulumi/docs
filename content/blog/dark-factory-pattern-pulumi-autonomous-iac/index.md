@@ -17,21 +17,21 @@ tags:
     - platform-engineering
 social:
     twitter: |
-        Stripe ships 1,300 AI-authored PRs a week. The pattern behind it has a name: the dark factory.
+        Stripe ships over a thousand AI-authored PRs a week. The pattern behind it has a name: the dark factory.
 
-        What it looks like when the factory floor is your Pulumi state graph turns out to be a different problem than the application-code version.
+        The infrastructure factory is different. Here's what happens when the factory floor is your Pulumi state graph.
     linkedin: |
         Manufacturing dark factories run with the lights off. No humans on the floor, just machines moving parts through the line.
 
-        The same pattern is now showing up in software. Three engineers at StrongDM shipped about 32,000 lines of production code without writing or reviewing any of it. Stripe's Minions ship over 1,300 pull requests a week. Dan Shapiro put out a five-level autonomy ladder in January, and BCG followed with a piece naming it the dark software factory.
+        The same pattern is now showing up in software. Three engineers at StrongDM shipped about 32,000 lines of production code without writing or reviewing any of it. Stripe's Minions merge over a thousand pull requests a week. Dan Shapiro put out a five-level autonomy ladder in January, and BCG followed with a piece naming it the dark software factory.
 
         Almost all of that material is about application code. Infrastructure is the harder problem: blast radius, drift, irreversible actions, multi-region state. The interesting question is what an end-to-end dark factory looks like when the factory floor is your stack state, and where the gates have to be tighter to keep a Saturday morning from becoming an incident.
 
         Here is where to start without burning down a prod account.
     bluesky: |
-        Manufacturing dark factories run lights-out. Code dark factories are starting to.
+        Stripe ships over a thousand AI-authored PRs a week. The pattern behind it has a name: the dark factory.
 
-        Infra is the hard one: blast radius, drift, irreversible actions. The interesting question is where the gates have to be tighter when the factory floor is your stack state.
+        The infrastructure factory is different. Here's what happens when the factory floor is your Pulumi state graph.
 ---
 
 The original dark factory was [Fanuc's robotics plant in Oshino, Japan](https://www.imeche.org/news/news-article/inside-the-rise-of-unmanned-dark-factories), where the lights are off because nobody is on the floor. Robots build robots. Parts move through the line for weeks at a time without a person walking past them.
@@ -55,7 +55,7 @@ Shapiro's ladder is the cleanest framing I've seen. He borrows it from the SAE's
 | 4 | Spec-driven; agent runs unattended for hours; you review later | Sleeping at the wheel, you can still wake up. |
 | 5 | Dark factory; no human review of code before production | No steering wheel at all. |
 
-Most teams are at level 2 or 3. A few of the more aggressive ones are at 4. Level 5 is the experiment. The interesting design question is what has to be true for level 5 to be safe, and that question gets sharper when the thing being shipped is infrastructure.
+Most teams are at level 2 or 3. A few of the more aggressive ones are at 4. Level 5 is the experiment. Most teams won't get there safely, and probably shouldn't try to. The interesting design question is what has to be true for level 5 to be safe at all, and that question gets sharper when the thing being shipped is infrastructure.
 
 A dark factory is not a coding harness. A harness is the framework an agent runs inside; the dark factory is the surrounding system that makes a harness's output mergeable without a human reading the diff. Copilot and Cursor sit at the other end: interactive, the human stays in the loop on every keystroke. The dark factory takes the human out of the per-change loop entirely and puts them at the top, writing the spec and the acceptance criteria.
 
@@ -126,6 +126,8 @@ Expand the auto-apply flag to every stack with strong scenario numbers. Wire you
 
 ## What could go wrong
 
+None of these have clean fixes. The mitigations below reduce risk; they don't eliminate it. Any team running level 5 should expect to eat one or two of these in the first year.
+
 The validator approves a bad change. This is the obvious one. The standard mitigation is layered: triple-run each scenario with a 2-of-3 threshold, a 90% gate over the run set, a human audit of the first fifty auto-applied changes, and your existing policies still run after the validator says yes.
 
 The agent gets a destroy permission it shouldn't have. There's a class of operations that should not sit in the autonomous loop yet: dropping a database, deleting a hosted zone, rotating a root key, anything that crosses a regulated data boundary. Scope what each agent identity can do at the credential layer, require human approval for anything destructive, and start every stack at Review mode. Tag changes, security-group adjustments, and instance resizes can run autonomously today. Release-branch cuts and config promotions can probably run by next quarter. The destructive class earns its way in over months.
@@ -138,4 +140,6 @@ Costs blow up. Cap retries at three per spec, alert on token spend per run, and 
 
 Most of what a dark factory needs already exists in any reasonably mature platform. Whatever you have for state, policy, credentials, audit, and a deployment runner is the substrate. The interesting work is not building the factory. It's the wall: the holdout scenarios that make the gap between "the model says it's fine" and "the system is actually fine" mean something.
 
-Write an `AGENTS.md` and five holdout scenarios for one stack this week. That's enough to get a real signal on whether the pattern fits your team. The rest is the same problem the application-code factories have already worked through, with the gates set tighter.
+For most teams, Phase 1 alone is the win. Full Level 5 may stay out of reach indefinitely, and that's fine. The path itself forces useful work: clearer specs, named bottlenecks, the deterministic gates humans had been running in their heads.
+
+Write an `AGENTS.md` and five holdout scenarios for one stack this week. That's enough to get a real signal on whether the pattern fits your team. The rest of the path is the same problem the application-code factories have already worked through, with the gates set tighter.
