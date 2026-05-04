@@ -41,13 +41,13 @@ After grinding through the work to consolidate our data into a single source of 
 
 ## Using Metabase to unlock our data
 
-As an early stage start-up at the time, we needed a low-cost solution (free) which limited our available options. One advantage we did have at the time was that as a cloud native start-up we were comfortable with the upfront investment and operational overhead of self-hosting the solution. With all of our parameters set, we eventually settled on using <a href="https://www.metabase.com/" target="_blank" rel="noopener noreferrer">Metabase <i class="text-xs fas fa-external-link-alt"></i></a>.
+As an early stage start-up at the time, we needed a low-cost solution (free) which limited our available options. One advantage we did have at the time was that as a cloud native start-up we were comfortable with the upfront investment and operational overhead of self-hosting the solution. With all of our parameters set, we eventually settled on using [Metabase](https://www.metabase.com/).
 
 ### What is Metabase?
 
 Metabase is a Business Intelligence Tool that enables you to visualize and collaborate using data from a variety of databases. You do not need to understand the underlying database’s query language, SQL for example, because Metabase provides a UI to interact with your data. You can however drop into a query editor at any moment to perform more advanced queries.
 
-Metabase provides you with two options to run <a href="https://www.metabase.com/blog/how-to-run-metabase-in-production" target="_blank" rel="noopener noreferrer">Metabase in production <i class="text-xs fas fa-external-link-alt"></i></a>, Open Source (self-managed) and Enterprise (managed). The main difference between the two is that with Open Source you have to manage the infrastructure yourself, whereas with Enterprise, Metabase will manage the infrastructure for you for a fee.
+Metabase provides you with two options to run [Metabase in production](https://www.metabase.com/blog/how-to-run-metabase-in-production), Open Source (self-managed) and Enterprise (managed). The main difference between the two is that with Open Source you have to manage the infrastructure yourself, whereas with Enterprise, Metabase will manage the infrastructure for you for a fee.
 
 ## Deploying Metabase to production
 
@@ -718,6 +718,6 @@ outputs:
 
 ## Delivery in 30 minutes or less
 
-To get started unlocking your data with Metabase, head on over to the [Metabase Package](/registry/packages/metabase/). Follow the quick walkthrough and have your Metabase service running in 30 minutes or less (in most cases). Once your service is up and running, we recommend popping over the Metabase Documentation to learn <a href="https://www.metabase.com/docs/latest/setting-up-metabase.html" target="_blank" rel="noopener noreferrer">How to Set Up Metabase <i class="text-xs fas fa-external-link-alt"></i></a>.
+To get started unlocking your data with Metabase, head on over to the [Metabase Package](/registry/packages/metabase/). Follow the quick walkthrough and have your Metabase service running in 30 minutes or less (in most cases). Once your service is up and running, we recommend popping over the Metabase Documentation to learn [How to Set Up Metabase](https://www.metabase.com/docs/latest/setting-up-metabase.html).
 
-If you encounter an issue or have a feature request, please file an issue in the Package’s <a href="https://github.com/pulumi/pulumi-metabase" target="_blank" rel="noopener noreferrer">Github Repo <i class="text-xs fas fa-external-link-alt"></i></a>.
+If you encounter an issue or have a feature request, please file an issue in the Package’s [Github Repo](https://github.com/pulumi/pulumi-metabase).

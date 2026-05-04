@@ -314,7 +314,7 @@ bubble's visibility.
 
 ```
 <pulumi-tooltip>
-    <i class="fas fa-question-circle"></i>
+    <span>?</span>
     <span slot="content">
         You hovered over the icon!
     </span>
@@ -325,7 +325,7 @@ bubble's visibility.
 
 ```
 <pulumi-tooltip id="my-tooltip">
-    <i class="fas fa-question-circle"></i>
+    <span>?</span>
     <span slot="content">
         You called the show() method!
     </span>

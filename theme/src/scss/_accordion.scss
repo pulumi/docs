@@ -18,6 +18,10 @@
         @apply hidden;
     }
 
+    .accordion-label .open-accordion {
+        @apply hidden;
+    }
+
     input[type="checkbox"]:checked {
         ~ .accordion-label {
             .closed-accordion {

@@ -1,4 +1,46 @@
-<span>
-    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
-    {{ partial $path }}
-</span>
+{{- /* Sprite-based icon partial. See scripts/build-icon-sprite.js. */ -}}
+{{- if and .icon (not .name) -}}
+    {{- partial (printf "icons/%s" .icon) . -}}
+{{- else -}}
+{{- $name   := .name -}}
+{{- $weight := default "regular" .weight -}}
+{{- $class  := default "" .class -}}
+{{- $size   := .size -}}
+{{- $title  := default "" .title -}}
+{{- $ctx := partialCached "icon-context.html" "icon-context" -}}
+{{- $symbolId := "" -}}
+{{- $isBrand := false -}}
+{{- if hasPrefix $name "brand/" -}}
+    {{- $symbolId = printf "b-%s" (strings.TrimPrefix "brand/" $name) -}}
+    {{- $isBrand = true -}}
+{{- else if hasPrefix $name "custom/" -}}
+    {{- $symbolId = printf "c-%s-%s" (strings.TrimPrefix "custom/" $name) $weight -}}
+{{- else if hasPrefix $name "phosphor/" -}}
+    {{- $symbolId = printf "p-%s-%s" (strings.TrimPrefix "phosphor/" $name) $weight -}}
+{{- else -}}
+    {{- if index $ctx.phosphor $name -}}
+        {{- $symbolId = printf "p-%s-%s" $name $weight -}}
+    {{- else if index $ctx.custom $name -}}
+        {{- $symbolId = printf "c-%s-%s" $name $weight -}}
+    {{- else if index $ctx.brand $name -}}
+        {{- $symbolId = printf "b-%s" $name -}}
+        {{- $isBrand = true -}}
+    {{- else -}}
+        {{- if templates.Exists (printf "partials/icons/%s.html" $name) -}}
+            {{- partial (printf "icons/%s" $name) . -}}
+        {{- else -}}
+            {{- errorf "icon: %q (weight=%s) not in sprite manifest. Re-run make sync-icons or add to FORCE_INCLUDE in scripts/build-icon-sprite.js." $name $weight -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- if $symbolId -}}
+{{- $baseClass := printf "ph-icon ph-icon--%s" $weight -}}
+{{- if $isBrand -}}{{- $baseClass = "ph-icon" -}}{{- end -}}
+{{- $allClass := strings.TrimSpace (printf "%s %s" $baseClass $class) -}}
+{{- $sizeAttrs := "" -}}
+{{- if $size -}}{{- $sizeAttrs = printf ` width="%v" height="%v" style="width:%vpx;height:%vpx"` $size $size $size $size -}}{{- end -}}
+{{- $a11yAttrs := ` aria-hidden="true" focusable="false"` -}}
+{{- if $title -}}{{- $a11yAttrs = printf ` role="img" aria-label="%s"` $title -}}{{- end -}}
+{{- printf `<svg xmlns="http://www.w3.org/2000/svg" class="%s" fill="currentColor"%s%s><use href="%s#%s"/></svg>` $allClass $sizeAttrs $a11yAttrs $ctx.spriteUrl $symbolId | safeHTML -}}
+{{- end -}}
+{{- end -}}

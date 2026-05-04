@@ -41,7 +41,7 @@
                         </div>
                         <h3 class="event-card-title">
                             {{ .data.Params.title }}
-                            {{ if .external }}<i class="text-xs ml-1 fas fa-external-link-alt opacity-50"></i>{{ end }}
+                            {{ if .external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "text-xs ml-1 opacity-50") }}{{ end }}
                         </h3>
                     </div>
                     <div class="event-card-date flex-shrink-0">
@@ -82,9 +82,9 @@
                 </div>
                 <span class="event-card-cta">
                     {{ if .data.Params.youtube_url }}
-                        Watch <span class="hidden sm:inline">on-demand</span> <i class="fa fa-arrow-right ml-1"></i>
+                        Watch <span class="hidden sm:inline">on-demand</span> {{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-1") }}
                     {{ else if .upcoming }}
-                        Register <i class="fa fa-arrow-right ml-1"></i>
+                        Register {{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-1") }}
                     {{ end }}
                 </span>
             </div>

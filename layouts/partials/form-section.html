@@ -10,7 +10,7 @@
                             {{ .form.quote.title }}
                         </h5>
                         <div class="relative py-8 px-10">
-                            <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                            {{ partial "icon.html" (dict "name" "quotes" "class" "text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0") }}
                             <p class="leading-loose mt-0 z-10 relative italic">
                                 {{ .form.quote.content }}
                             </p>

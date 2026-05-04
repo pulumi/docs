@@ -18,27 +18,27 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🏗️
+  - icon: pulumi-iac
     heading: Infrastructure as Code FAQ
     link: /docs/support/faq/infrastructure/
     description: Questions about Pulumi IaC, resource management, state, and deployments.
 
-  - emoji: 🔐
+  - icon: pulumi-secrets
     heading: Secrets & Configuration FAQ
     link: /docs/support/faq/secrets-config/
     description: Questions about Pulumi ESC, secrets management, and pricing.
 
-  - emoji: 🛡️
+  - icon: pulumi-insights
     heading: Policies FAQ
     link: /docs/support/faq/policies/
     description: Questions about Policy as Code and compliance.
 
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: SCIM FAQ
     link: /docs/support/faq/scim/
     description: Questions about SCIM integration and identity management.
 
-  - emoji: ☁️
+  - icon: cloud
     heading: Pulumi Cloud FAQ
     link: /docs/support/pulumi-cloud-faq/
     description: Questions about the Pulumi Cloud platform and features.

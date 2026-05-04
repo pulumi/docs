@@ -111,7 +111,7 @@
                     <p class="text-lg">{{ .Params.secrets.description | markdownify }}</p>
                     <div class="mt-8">
                         <span class="text-lg">Learn more: </span>
-                        <a href="/product/esc" class="underline text-lg">Pulumi ESC<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/product/esc" class="underline text-lg">Pulumi ESC{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
                     </div>
                 </div>
 
@@ -140,7 +140,7 @@
                     <div class="text-lg text-black">{{ .Params.embed.description | markdownify }}</div>
                     <div class="mt-8">
                         <span class="text-lg">Learn more: </span>
-                        <a href="/blog/developer-portal-platform-teams/" class="underline text-lg">Pulumi For Platform Teams<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/blog/developer-portal-platform-teams/" class="underline text-lg">Pulumi For Platform Teams{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@
                     <p class="text-lg">{{ .Params.security.description | markdownify }}</p>
                     <div class="mt-8">
                         <span class="text-lg">Learn more: </span>
-                        <a href="/product/pulumi-insights" class="underline text-lg">Pulumi Insights<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/product/pulumi-insights" class="underline text-lg">Pulumi Insights{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
                     </div>
                 </div>
 
@@ -190,7 +190,7 @@
                     <p class="text-lg">{{ .Params.ai.description | markdownify }}</p>
                     <div class="mt-8">
                         <span class="text-lg">Try it out: </span>
-                        <a href="/product/neo/" class="underline text-lg">Pulumi Neo<i class="fa fa-arrow-right ml-2"></i></a>
+                        <a href="/product/neo/" class="underline text-lg">Pulumi Neo{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
                     </div>
                 </div>
 
@@ -317,7 +317,7 @@
                                         {{ end }}
 
                                         {{ if eq $tweet.source "blog" }}
-                                            <i class="fas fa-blog text-gray-500 text-2xl"></i>
+                                            {{ partial "icon.html" (dict "name" "article" "class" "text-gray-500 text-2xl") }}
                                         {{ end }}
                                     </div>
                                 </div>

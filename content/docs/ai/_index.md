@@ -35,23 +35,23 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Get Started
     link: /docs/ai/get-started/
     description: Learn how to use Pulumi Neo for AI-powered infrastructure automation.
-  - emoji: 📋
+  - icon: clipboard
     heading: Tasks
     link: /docs/ai/tasks/
     description: Multi-step operations for maintenance, analysis, and infrastructure changes.
-  - emoji: 🔀
+  - icon: shuffle
     heading: Pull Requests
     link: /docs/ai/pull-requests/
     description: AI-proposed changes submitted as pull requests for review.
-  - emoji: 👁️
+  - icon: eye
     heading: Previews
     link: /docs/ai/running-previews/
     description: Generate infrastructure previews with approval gates.
-  - emoji: 🔌
+  - icon: plug
     heading: Integrations
     link: /docs/ai/integrations/
     description: Connect Neo to third-party services like Datadog, Honeycomb, and Linear.

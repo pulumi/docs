@@ -83,7 +83,10 @@ dl {
             &.property-required {
                 .property-indicator {
                     @apply text-red-500;
-                    @include fa-glyph("\f069");
+
+                    &:after {
+                        content: "*";
+                    }
                 }
             }
 
