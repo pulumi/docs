@@ -98,7 +98,7 @@
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
                             {{ if .logo }}
                             <div class="flex items-center justify-center">
-                                <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
                             </div>
                             {{ end }}
                         </a>
@@ -109,7 +109,7 @@
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
                         {{ if .logo }}
                         <div class="flex items-start mb-6">
-                            <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
                         </div>
                         {{ end }}
                         {{ if .quote }}
@@ -141,7 +141,7 @@
                         <a href="{{ .link }}" class="case-study-card case-study-card--half">
                             {{ if .logo }}
                             <div class="flex items-center justify-center">
-                                <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                                {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
                             </div>
                             {{ end }}
                         </a>
@@ -152,7 +152,7 @@
                     <a href="{{ .link }}" class="case-study-card case-study-card--full h-full">
                         {{ if .logo }}
                         <div class="flex items-start mb-6">
-                            <img src="{{ .logo }}" alt="{{ .name }}" class="max-h-12 w-auto object-contain" />
+                            {{ partial "fingerprinted-img.html" (dict "src" .logo "alt" .name "class" "max-h-12 w-auto object-contain") }}
                         </div>
                         {{ end }}
                         {{ if .quote }}

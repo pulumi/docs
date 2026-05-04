@@ -1,5 +1,7 @@
 {{/* IMPORTANT: The referenced asset must exist in assets/fingerprinted/. Missing assets cause a build panic. */}}
-{{ $img := resources.Get (printf "fingerprinted/%s" .src) }}
+{{/* Strip a leading "/" so frontmatter paths like "/images/foo.svg" resolve correctly. */}}
+{{ $src := .src | strings.TrimPrefix "/" }}
+{{ $img := resources.Get (printf "fingerprinted/%s" $src) }}
 {{ if ne $img.MediaType.SubType "svg" }}
     {{ $maxWidth := .maxWidth | default 800 }}
     {{/* Resize if wider than maxWidth, preserving aspect ratio */}}
@@ -13,7 +15,7 @@
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
     {{ $sizes := slice 400 600 800 }}
-    {{ $origImg := resources.Get (printf "fingerprinted/%s" .src) }}
+    {{ $origImg := resources.Get (printf "fingerprinted/%s" $src) }}
     {{ range $sizes }}
         {{ if ge $origImg.Width . }}
             {{ $resized := $origImg.Process (printf "resize %dx webp q90" .) | fingerprint }}
@@ -22,8 +24,8 @@
     {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
-<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with $.alt }}alt="{{ . }}"{{ end }} {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async" />
+<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with $.alt }}alt="{{ . }}"{{ end }} {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ else }}
     {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} decoding="async" />
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}

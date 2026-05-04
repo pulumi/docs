@@ -30,7 +30,7 @@
     <div class="product-feature-mini-card">
         {{ if .image }}
         <div class="mb-4">
-            <img src="{{ .image }}" alt="{{ .image_alt | default .title }}" class="w-full h-auto max-h-48 object-contain">
+            {{ partial "fingerprinted-img.html" (dict "src" .image "alt" (.image_alt | default .title) "class" "w-full h-auto max-h-48 object-contain") }}
         </div>
         {{ else if .icon }}
         <div class="template-feature-card-icon">

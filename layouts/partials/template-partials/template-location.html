@@ -66,7 +66,7 @@
             </div>
             {{ else if $mapImage }}
             <div class="w-full rounded-lg overflow-hidden mt-4 lg:mt-0">
-                <img src="{{ $mapImage }}" alt="Event location map" class="w-full h-auto" />
+                {{ partial "fingerprinted-img.html" (dict "src" $mapImage "alt" "Event location map" "class" "w-full h-auto") }}
             </div>
             {{ end }}
         </div>
