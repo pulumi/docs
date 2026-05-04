@@ -92,7 +92,7 @@ Policy doesn't have to be probabilistic: [CrossGuard](/docs/iac/using-pulumi/cro
 
 That doesn't make Pulumi a dark factory by itself. It means the parts that an application-code factory has to build from scratch are pieces a Pulumi shop already has: a credential broker, a policy engine, a governed runner, a state-aware reasoning layer, an audit trail.
 
-There's one more piece worth calling out, because it's the part nobody talks about. `pulumi preview` produces a clean, deterministic validation artifact, and CrossGuard evaluates that artifact without ever seeing the conversation that produced the program. That's the same context-free judgment the holdout pattern depends on, applied at the policy layer instead of the acceptance-test layer. For infrastructure, half the wall is already built.
+And one more piece nobody talks about: `pulumi preview` produces a clean, deterministic validation artifact, and CrossGuard evaluates that artifact without ever seeing the conversation that produced the program. That's the same context-free judgment the holdout pattern depends on, applied at the policy layer instead of the acceptance-test layer. For infrastructure, half the wall is already built.
 
 The interesting work is the part that nobody ships in a box.
 
