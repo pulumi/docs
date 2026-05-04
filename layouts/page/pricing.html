@@ -160,7 +160,7 @@
                                             {{ if $row.tooltip }}
                                                 <span>
                                                     <pulumi-tooltip>
-                                                        <i class="w-8 ml-2 fas fa-info-circle text-violet-primary"></i>
+                                                        {{ partial "icon.html" (dict "name" "info" "class" "w-8 ml-2 text-violet-primary") }}
                                                         <span slot="content">{{ $row.tooltip }}</span>
                                                     </pulumi-tooltip>
                                                 </span>
@@ -169,7 +169,7 @@
                                         {{ range $item := $row.items }}
                                             <div class="compare-plans-table-row-item">
                                                 {{ if eq $item.content "_check" }}
-                                                    <span><i class="fa fa-check pricing-checkmark mr-2"></i></span>
+                                                    <span>{{ partial "icon.html" (dict "name" "check" "class" "pricing-checkmark mr-2") }}</span>
                                                 {{ else if eq $item.content "_blank" }}
                                                     <span></span>
                                                 {{ else }}
@@ -178,7 +178,7 @@
                                                 {{ if $item.tooltip }}
                                                     <span>
                                                         <pulumi-tooltip>
-                                                            <i class="w-8 ml-2 fas fa-info-circle text-violet-primary"></i>
+                                                            {{ partial "icon.html" (dict "name" "info" "class" "w-8 ml-2 text-violet-primary") }}
                                                             <span slot="content">{{ $item.tooltip }}</span>
                                                         </pulumi-tooltip>
                                                     </span>

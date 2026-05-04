@@ -16,6 +16,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
         @apply pt-6 pb-3 px-4;
     }
 
+   .logo svg {
+        @apply ml-2;
+    }
+
     .top-nav-container &:not(.docs) &:not(.registry) {
         @apply lg:container lg:px-4;
     }
@@ -29,7 +33,12 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
         ul li {
             white-space: nowrap;
+
+            svg {
+                @apply inline-block mr-1;
+            }
         }
+
 
         .top-nav-banner-container {
             @apply w-full text-right;
@@ -261,6 +270,11 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 
                                 .list-title {
                                     @apply px-0 text-base text-left w-full font-semibold;
+                                    svg {
+                                        width: 1.5em;
+                                        height: 1.5em;
+                                        vertical-align: -0.3em;
+                                    }
                                 }
 
                                 .list-sub-title {
@@ -345,6 +359,10 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
     }
 
     .mobile-menu-toggle {
+        @apply hidden;
+    }
+
+    .mobile-menu-icon .mobile-menu-open {
         @apply hidden;
     }
 

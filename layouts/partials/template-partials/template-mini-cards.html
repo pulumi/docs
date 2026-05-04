@@ -11,7 +11,7 @@
       - lg_top_class: (optional) Tailwind large-breakpoint top-margin class (default: "lg:mt-20")
 
     Each card object:
-    - icon: Font Awesome icon class (e.g. "fa-code")
+    - icon: Phosphor icon name (e.g. "code")
     - image: Optional image path (renders <img> instead of icon when set)
     - image_alt: Optional alt text for the image
     - title: Card title
@@ -34,7 +34,7 @@
         </div>
         {{ else if .icon }}
         <div class="template-feature-card-icon">
-            <i class="fa {{ .icon }}"></i>
+            {{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}
         </div>
         {{ end }}
         {{ if .title }}

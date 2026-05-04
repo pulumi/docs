@@ -19,8 +19,11 @@
                     }
 
                     button {
-                        @apply hidden absolute text-center p-0 m-0 left-0;
-                        width: 1.2rem;
+                        @apply hidden absolute text-center p-0 m-0 mb-0.5 left-0;
+
+                        svg {
+                            @apply w-3.5 h-3.5;
+                        }
                     }
 
                     span {
@@ -46,7 +49,7 @@
                         @apply text-violet-800;
 
                         > button {
-                            > i {
+                            > svg {
                                 rotate: 90deg;
                                 transition: rotate .1s;
                             }

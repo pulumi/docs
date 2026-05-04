@@ -6,13 +6,25 @@ pulumi-examples {
 
         span {
             @apply font-bold inline-flex w-6 h-6 mr-2 bg-gray-200 text-violet-800 items-center justify-center rounded-lg;
-            @include fa-glyph("\f105");
+
+            svg {
+                @apply w-3 h-3;
+            }
+
+            .caret-open {
+                @apply hidden;
+            }
         }
 
         &.expanded {
             span {
-                @apply p-0;
-                @include fa-glyph("\f107");
+                .caret-closed {
+                    @apply hidden;
+                }
+
+                .caret-open {
+                    @apply inline-block;
+                }
             }
         }
 

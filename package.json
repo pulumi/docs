@@ -46,10 +46,12 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@phosphor-icons/core": "^2.1.1",
     "beasties": "^0.4.1",
     "husky": "^9.1.7",
     "lighthouse": "^12.6.0",
     "lint-staged": "^16.4.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "simple-icons": "^16.18.0"
   }
 }

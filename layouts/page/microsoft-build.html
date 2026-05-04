@@ -46,7 +46,7 @@
                         <div class="card bg-white p-6 text-black h-full">
                             <h5>{{ .title }}</h5>
                             <span class="my-0 py-1 inline-block mr-3 text-gray-600">
-                                <i class="fas fa-calendar mr-2"></i>
+                                {{ partial "icon.html" (dict "name" "calendar" "class" "mr-2") }}
                                 {{ .date }}
                             </span>
                             <p>{{ .description }}</p>

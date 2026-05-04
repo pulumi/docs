@@ -26,27 +26,27 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Onboarding Guide
     link: /docs/administration/onboarding-guide/
     description: Set up Pulumi for your organization with guidance on subscriptions, security, team structure, and migration.
 
-  - emoji: 🏢
+  - icon: buildings
     heading: Organizations & Teams
     link: /docs/administration/organizations-teams/
     description: Create organizations, manage teams, configure user accounts, and assign billing managers.
 
-  - emoji: 🔐
+  - icon: lock-key
     heading: Access & Identity
     link: /docs/administration/access-identity/
     description: Configure access tokens, RBAC, SAML SSO, SCIM, and OIDC for authentication.
 
-  - emoji: 🛡️
+  - icon: shield-check
     heading: Security & Compliance
     link: /docs/administration/security-compliance/
     description: Set up audit logs and customer managed encryption keys.
 
-  - emoji: 🏗️
+  - icon: buildings
     heading: Self-Hosting
     link: /docs/administration/self-hosting/
     description: Deploy Pulumi Cloud in your own infrastructure with Business Critical Edition.

@@ -20,22 +20,22 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 🏢
+  - icon: buildings
     heading: Organizations
     link: /docs/administration/organizations-teams/organizations/
     description: Create and manage Pulumi Cloud organizations.
 
-  - emoji: 👥
+  - icon: users
     heading: Teams
     link: /docs/administration/organizations-teams/teams/
     description: Organize users into teams with shared permissions.
 
-  - emoji: 👤
+  - icon: user
     heading: User Accounts
     link: /docs/administration/organizations-teams/accounts/
     description: Manage individual user accounts and profiles.
 
-  - emoji: 💳
+  - icon: credit-card
     heading: Billing Managers
     link: /docs/administration/organizations-teams/billing-managers/
     description: Assign roles for billing and subscription management.

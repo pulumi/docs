@@ -1,0 +1,26 @@
+{{- /*
+    Renders a "Related templates" section listing the other templates
+    that share the same parent section (e.g., the AWS / Azure / GCP
+    variants of the current architecture).
+
+    Skipped on overview pages and when there are no siblings.
+*/ -}}
+{{- if eq .Layout "template" -}}
+{{- $current := .Page -}}
+{{- $siblings := slice -}}
+{{- range $current.Parent.Pages -}}
+    {{- if and (ne .RelPermalink $current.RelPermalink) (eq .Layout "template") -}}
+        {{- $siblings = $siblings | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- if $siblings -}}
+<aside class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+    <h2 class="text-2xl mb-4">Related templates</h2>
+    <ul class="list-disc pl-6">
+        {{- range $siblings }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Params.card_desc }} &mdash; {{ . }}{{ end }}</li>
+        {{- end }}
+    </ul>
+</aside>
+{{- end -}}
+{{- end -}}

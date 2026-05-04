@@ -17,15 +17,10 @@ pulumi-convert {
 
             .icon {
                 @apply ml-2;
-                @extend .fas;
-                @extend .fa-arrow-circle-right;
             }
 
             &.converting {
                 .icon {
-                    @extend .fa;
-                    @extend .fa-cog;
-                    @extend .fa-spin;
                 }
             }
 
@@ -155,13 +150,9 @@ pulumi-convert {
                     }
 
                     .btn-download {
-                        @extend .fas;
-                        @extend .fa-download;
                     }
 
                     .btn-copy {
-                        @extend .fas;
-                        @extend .fa-copy;
                     }
                 }
             }
@@ -180,17 +171,12 @@ pulumi-convert {
                 &.converting {
                     .icon {
                         @apply text-blue-200;
-                        @extend .fa;
-                        @extend .fa-cog;
-                        @extend .fa-spin;
                     }
                 }
 
                 &.success {
                     .icon {
                         @apply text-green-300;
-                        @extend .fas;
-                        @extend .fa-check-circle;
                     }
                 }
 
@@ -211,8 +197,6 @@ pulumi-convert {
 
                         .icon {
                             @apply mr-0 text-gray-700 transition-colors;
-                            @extend .fas;
-                            @extend .fa-times;
 
                             &:hover {
                                 @apply text-gray-800;
@@ -227,8 +211,6 @@ pulumi-convert {
 
                 &.error {
                     .icon {
-                        @extend .fas;
-                        @extend .fa-times;
                     }
 
                     .alert-error {
@@ -239,8 +221,6 @@ pulumi-convert {
                 &.warn {
                     .icon {
                         @apply text-yellow-300;
-                        @extend .fas;
-                        @extend .fa-exclamation-triangle;
                     }
 
                     .alert-warn {
@@ -261,10 +241,6 @@ pulumi-convert {
             &.editor-output {
                 .editor-spinner {
                     @apply text-gray-700 absolute z-10 m-6 hidden;
-                    @extend .fa;
-                    @extend .fa-cog;
-                    @extend .fa-spin;
-                    @extend .fa-2x;
                 }
 
                 &.converting {

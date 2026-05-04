@@ -27,15 +27,20 @@
         }
     }
 
-    i {
+    i,
+    svg.ph-icon {
         font-size: 15px;
+        width: 20px;
+        height: 20px;
         margin-top: 2px;
+        flex-shrink: 0;
     }
 
     div.icon-and-line {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 4px;
     }
 
     div.line {
@@ -44,7 +49,7 @@
         border-radius: 100px;
         margin-top: 4px;
         position: absolute;
-        top: 28px;
+        top: 34px;
         height: calc(100% - 46px);
     }
 
@@ -58,63 +63,61 @@
     }
 
     &.note-info {
-        background: #f6f7fd;
+        background: var(--color-violet-background);
 
-        a, 
-        i {
+        a,
+        i,
+        svg.ph-icon {
             color: var(--color-violet-primary);
         }
 
         div.line {
-            background-color: #a6adec;
+            background-color: var(--color-violet-muted);
         }
 
         code {
-            background-color: #ebedfb;
+            background-color: var(--color-violet-muted);
         }
     }
 
     &.note-tip {
-        background: #f1feea;
+        background: var(--color-green-background);
 
-        a {
-            color: #338d72;
-        }
-
-        i {
-            color: #25a78b;
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-green-primary);
         }
 
         div.line {
-            background-color: #4ce1b4;
+            background-color: var(--color-green-muted);
         }
 
         code {
-            background-color: #b2fbe0;
+            background-color: var(--color-green-muted);
         }
     }
 
     &.note-warning {
-        background: #fcf2e9;
+        background: var(--color-orange-background);
 
-        a {
-            color: #9D5314;
-        }
-
-        i {
-            color: #e0771c;
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-orange-primary);
         }
 
         div.line {
-            background-color: #ecad77;
+            background-color: var(--color-orange-muted);
         }
 
         code {
-            background: #f9e6d4;
+            background: var(--color-orange-muted);
         }
     }
 
-    div.highlight div.copy-button-container button.copy-button i {
+    div.highlight div.copy-button-container button.copy-button i,
+    div.highlight div.copy-button-container button.copy-button svg {
         color: #fff;
     }
 }

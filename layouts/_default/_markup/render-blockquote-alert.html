@@ -1,15 +1,15 @@
 {{ $icon := dict
-"caution" "exclamation-triangle"
+"caution" "warning"
 "important" "star"
-"note" "pencil-alt"
-"info" "info-circle"
+"note" "pencil-simple"
+"info" "info"
 "tip" "lightbulb"
-"warning" "exclamation-triangle"
+"warning" "warning"
 }}
 
 <div class="note note-{{ .AlertType }}">
     <div class="icon-and-line">
-        <i class="fas fa-{{ index $icon .AlertType }}"></i>
+        {{ partial "icon.html" (dict "name" (index $icon .AlertType) "weight" "fill") }}
         <div class="line"></div>
     </div>
     <div class="content">

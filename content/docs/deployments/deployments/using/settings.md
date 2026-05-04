@@ -179,6 +179,7 @@ By default, there are a set of environment variables set by the process automati
 - `PULUMI_CI_ORGANIZATION`: Current account organization
 - `PULUMI_CI_PROJECT`: Current project name
 - `PULUMI_CI_STACK`: Current stack name
+- `PULUMI_CI_OPERATION`: Current Pulumi operation (`update`, `preview`, `destroy`, `refresh`, `detect-drift`, or `remediate-drift`)
 
 These can be overridden or extended by configuring custom environment variables:
 

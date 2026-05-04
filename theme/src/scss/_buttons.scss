@@ -75,7 +75,11 @@
 }
 
 .btn-scroll-top {
-    @apply text-white text-center opacity-75 rounded-sm bg-gray-500 mt-8 w-8 h-4;
+    @apply text-white text-center opacity-75 rounded-sm bg-gray-800 mt-2 w-4 h-4 inline-flex items-center justify-center;
+
+    svg {
+        @apply w-3 h-3;
+    }
 }
 
 .btn-download {

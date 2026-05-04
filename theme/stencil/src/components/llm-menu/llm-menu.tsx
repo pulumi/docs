@@ -152,9 +152,19 @@ export class LlmMenu {
             <Host>
                 <div class="llm-menu-container">
                     <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
-                        <i class="fas fa-copy mr-2" style={{ width: "14px" }}></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular mr-2" fill="currentColor" viewBox="0 0 256 256" style={{ width: "14px", height: "14px" }} aria-hidden="true" focusable="false">
+                            <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/>
+                        </svg>
                         Copy Page
-                        <i class={`fas fa-chevron-${this.isOpen ? "up" : "down"}`}></i>
+                        {this.isOpen ? (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                <path d="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z"/>
+                            </svg>
+                        ) : (
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/>
+                            </svg>
+                        )}
                     </button>
 
                     {this.isOpen && (
@@ -168,7 +178,9 @@ export class LlmMenu {
                                     </div>
                                 </button>
                                 <button class="llm-menu-item" onClick={() => this.copyPage()}>
-                                    <i class="fas fa-copy llm-menu-icon"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-icon" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                        <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/>
+                                    </svg>
                                     <div class="llm-menu-text">
                                         <div class="llm-menu-title">{this.copied === "page" ? "Copied!" : "Copy as Markdown"}</div>
                                         <div class="llm-menu-subtitle">Copy page for LLMs</div>
@@ -180,7 +192,9 @@ export class LlmMenu {
                                         <div class="llm-menu-title">View as Markdown</div>
                                         <div class="llm-menu-subtitle">Open Markdown in new tab</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-external" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                        <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/>
+                                    </svg>
                                 </button>
                                 <hr />
                                 <button class="llm-menu-item" onClick={() => this.openInChatGPT()}>
@@ -189,7 +203,9 @@ export class LlmMenu {
                                         <div class="llm-menu-title">Open in ChatGPT</div>
                                         <div class="llm-menu-subtitle">Ask ChatGPT about this page</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-external" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                        <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/>
+                                    </svg>
                                 </button>
                                 <button class="llm-menu-item" onClick={() => this.openInClaude()}>
                                     {claudeLogo}
@@ -197,7 +213,9 @@ export class LlmMenu {
                                         <div class="llm-menu-title">Open in Claude</div>
                                         <div class="llm-menu-subtitle">Ask Claude about this page</div>
                                     </div>
-                                    <i class="fas fa-external-link-alt llm-menu-external"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-external" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                        <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/>
+                                    </svg>
                                 </button>
                             </div>
                         </div>

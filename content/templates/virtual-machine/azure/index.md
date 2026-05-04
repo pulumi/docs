@@ -2,30 +2,31 @@
 title_tag: Deploy a Virtual Machine to Azure
 title: Virtual Machine on Azure
 layout: template
-meta_desc: Easily deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines using this template.
+schema_type: howto
+meta_desc: Deploy an Azure virtual machine with Pulumi and Azure Virtual Machines in TypeScript, Python, Go, C#, or YAML.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
 template:
-    prefix: vm-azure
-    dirname: my-virtual-machine
-    languages:
-      - typescript
-      - python
-      - go
-      - csharp
-      - yaml
+  prefix: vm-azure
+  dirname: my-virtual-machine
+  languages:
+    - typescript
+    - python
+    - go
+    - csharp
+    - yaml
 cloud:
   name: Microsoft Azure
   slug: azure
 ---
 
-The Virtual Machine template creates an infrastructure as code project in your favorite language that deploys a virtual machine to Azure. You can then use the virtual machine to build your own web application, backend service, or database. The architecture includes Azure Virtual Machines for the virtual machine and Azure Virtual Network for the virtual network. The template generates a complete Pulumi program, including a simple HTTP server, to give you a working project out of the box that you can customize easily and extend to suit your needs.
+The Azure Virtual Machine template scaffolds a Pulumi project that provisions an [Azure virtual machine](/registry/packages/azure-native/api-docs/compute/virtualmachine/) inside a new [Azure Virtual Network](/registry/packages/azure-native/api-docs/network/virtualnetwork/). The instance boots an HTTP server on port 80 from a small init script, so the project deploys end to end out of the box. Use it as a starting point for a web application, backend service, or database VM.
 
-![An architecture diagram of the Pulumi $CLOUD $ARCHITECTURE template](./architecture.png)
+![An architecture diagram of the Azure Virtual Machine template](./architecture.png)
 
 ## Using this template
 
-To use this template to deploy a website of your own, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure-native/installation-configuration#credentials), then create a new [project](/docs/concepts/projects/) using the template in your language of choice:
+To use this template to deploy your own virtual machine, make sure you've [installed Pulumi](/docs/install/) and [configured your Azure credentials](/registry/packages/azure-native/installation-configuration#credentials), then create a new [project](/docs/iac/concepts/projects/) using the template in the language of your choice:
 
 {{< templates/pulumi-new >}}
 
@@ -39,7 +40,7 @@ The template requires no additional configuration. Once the new project is creat
 $ pulumi up
 ```
 
-When the deployment completes, Pulumi exports the following [stack output](/docs/concepts/stack#outputs) values:
+When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
 ip
 : The IP address of the virtual machine.
@@ -58,7 +59,7 @@ $ open $(pulumi stack output url)
 
 ## Customizing the project
 
-Projects created with the Virtual Machine template expose the following [configuration](/docs/concepts/config) settings:
+Projects created with the Virtual Machine template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 adminUsername
 : The user account to create on the VM. Defaults to `pulumiuser`.
@@ -78,7 +79,7 @@ servicePort
 sshPublicKey
 : The public key data to use for SSH authentication.
 
-All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) as shown below.
+All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ## Cleaning up
 
@@ -90,9 +91,7 @@ $ pulumi destroy
 
 ## Learn more
 
-Congratulations! You're now well on your way to managing a production-grade virtual machine on Azure with Pulumi --- and there's lots more you can do from here:
-
-* Discover more architecture templates as they're available in [Templates &rarr;](/templates)
-* Dive into the Azure Native package by exploring the [API docs in the Registry &rarr;](/registry/packages/azure-native)
-* Expand your understanding of how Pulumi works in [Learn Pulumi &rarr;](/learn)
-* Read up on the latest new features [in the Pulumi Blog &rarr;](/blog/tag/azure)
+* Browse other architecture templates in the [Templates gallery](/templates).
+* Explore the [Azure Native provider API docs](/registry/packages/azure-native) in the Pulumi Registry.
+* Walk through Pulumi from the ground up in [Pulumi Tutorials](/tutorials/).
+* Read the latest [Azure posts on the Pulumi blog](/blog/tag/azure).

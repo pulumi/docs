@@ -13,7 +13,7 @@
             <span class="alert-content text-left flex-auto text-white text-sm md:text-base leading-normal">
                 {{ $text | safeHTML }}
             </span>
-            <i class="fill-current fas fa-chevron-right text-xs opacity-75 ml-2 mr-1"></i>
+            {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold" "class" "text-xs opacity-75 ml-2 mr-1") }}
         </a>
     </div>
 </div>

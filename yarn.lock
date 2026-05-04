@@ -1216,6 +1216,11 @@
     legacy-javascript latest
     third-party-web latest
 
+"@phosphor-icons/core@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@phosphor-icons/core/-/core-2.1.1.tgz#62a4cfbec9772f1a613a647da214fbb96f3ad39d"
+  integrity sha512-v4ARvrip4qBCImOE5rmPUylOEK4iiED9ZyKjcvzuezqMaiRASCHKcRIuvvxL/twvLpkfnEODCOJp5dM4eZilxQ==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
@@ -5944,6 +5949,11 @@ signal-exit@^4.0.1, signal-exit@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
+
+simple-icons@^16.18.0:
+  version "16.18.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-16.18.0.tgz#c4ef34683dbd11004f5e7abc35da0ae0728673a1"
+  integrity sha512-5KbjcP456Gm1lrk+rhDuX4zFri+3lRX39IjzXAvoMAO8Ne76WlVlM+Z3kA6jdZ7+QHadgXsf++R7g2jaYVbYig==
 
 sitemapper@^4.1.4:
   version "4.1.4"

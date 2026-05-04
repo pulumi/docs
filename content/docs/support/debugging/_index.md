@@ -24,17 +24,17 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 📊
+  - icon: chart-bar
     heading: Logging
     link: /docs/support/debugging/logging/
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
-  - emoji: 🐛
+  - icon: bug
     heading: Attaching a Debugger
     link: /docs/support/debugging/debugger-attachment/
     description: Set up debugger attachment for step-by-step program debugging.
 
-  - emoji: ⚡
+  - icon: lightning
     heading: Performance and Tracing
     link: /docs/support/debugging/performance-tracing/
     description: Analyze deployment performance and trace operations.
