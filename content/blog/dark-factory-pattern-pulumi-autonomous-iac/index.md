@@ -36,7 +36,7 @@ social:
 
 The original dark factory was Fanuc's robotics plant in Japan, where the lights are off because nobody is on the floor. Robots build robots. Parts move through the line for weeks at a time without a person walking past them.
 
-The same pattern is now showing up in software. Stripe is reportedly shipping over [1,300 AI-authored pull requests per week](https://www.mindstudio.ai/blog/what-is-a-dark-factory-ai-coding). StrongDM has [a three-engineer team](https://simonwillison.net/2026/Feb/7/software-factory/) that has stopped writing code by hand. In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG followed with a piece calling [the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory) the next phase of enterprise software delivery.
+The same pattern is now showing up in software. Stripe is reportedly shipping over [1,300 AI-authored pull requests per week](https://www.mindstudio.ai/blog/what-is-a-dark-factory-ai-coding). StrongDM has [a three-engineer team that stopped writing code by hand](https://www.strongdm.com/blog/the-strongdm-software-factory-building-software-with-ai). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG followed with a piece calling [the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory) the next phase of enterprise software delivery.
 
 Almost every public writeup so far is about application code. The harder question is what this looks like for infrastructure.
 
@@ -82,13 +82,17 @@ Without that wall, you don't have a quality gate. You have theater.
 
 ## Why infrastructure is the harder version
 
-Application code factories can lean on tests, linters, and type checkers. Infrastructure adds blast radius, drift, secrets, irreversible actions, and multi-region state. A failed application deploy rolls back. A failed infra change can leak data, drop a database, or burn a budget overnight.
+Application code factories can lean on tests, linters, and type checkers. Infrastructure adds blast radius, drift, secrets, irreversible actions, and multi-region state. A code dark factory shipping a broken UI causes a bad user experience. An infrastructure dark factory shipping a broken IAM policy ends in a postmortem.
 
 A few things make this manageable on Pulumi specifically.
 
 The orchestrator does not need to be invented. The [Pulumi Automation API](/automation/) is the engine as an SDK in Python, TypeScript, Go, .NET, Java, or YAML, which is the same surface a dark factory orchestrator runs on. Credentials don't have to be long-lived: [ESC and OIDC](/docs/esc/) issue short-lived ones per run, so the agent never sees a static secret. Policy doesn't have to be probabilistic: [CrossGuard](/docs/iac/using-pulumi/crossguard/) enforces deterministic rules at preview time. Execution doesn't have to happen on a laptop: [Pulumi Cloud Deployments](/docs/pulumi-cloud/deployments/) runs `pulumi up` inside a governed runner with audit logs and approval rules already wired. And the reasoning layer doesn't have to start from scratch: [Pulumi Neo](/product/neo/) is grounded in your state graph and ships with three modes (Auto, Balanced, Review) that line up cleanly with Shapiro's levels 5, 4, and 3.
 
-That doesn't make Pulumi a dark factory by itself. It means the parts that an application-code factory has to build from scratch — a credential broker, a policy engine, a governed runner, a state-aware reasoning layer, an audit trail — are pieces a Pulumi shop already has. The interesting work is the part that nobody ships in a box.
+That doesn't make Pulumi a dark factory by itself. It means the parts that an application-code factory has to build from scratch — a credential broker, a policy engine, a governed runner, a state-aware reasoning layer, an audit trail — are pieces a Pulumi shop already has.
+
+There's one more piece worth calling out, because it's the part nobody talks about. `pulumi preview` is structurally a holdout. It produces a deterministic diff that CrossGuard evaluates without ever seeing the conversation that produced the program. The diff is the holdout artifact, the policy pack is the validator, and they meet without context bleed. For infrastructure, half the wall is already built.
+
+The interesting work is the part that nobody ships in a box.
 
 ## The interesting work
 
@@ -122,7 +126,7 @@ Expand the auto-apply flag to every stack with strong scenario numbers. Wire you
 
 The validator approves a bad change. This is the obvious one. The mitigation is the one StrongDM uses: triple-run with a 2-of-3 threshold, a 90% gate over the run set, a human audit of the first fifty auto-applied changes, and your existing policies still run after the validator says yes.
 
-The agent gets a destroy permission it shouldn't have. The fix is mechanical: scope what each agent identity can do at the credential layer, and require human approval for anything destructive. Start every stack at Review mode and only promote when you have data.
+The agent gets a destroy permission it shouldn't have. There's a class of operations that should not sit in the autonomous loop yet: dropping a database, deleting a hosted zone, rotating a root key, anything that crosses a regulated data boundary. Scope what each agent identity can do at the credential layer, require human approval for anything destructive, and start every stack at Review mode. Tag changes, security-group adjustments, and instance resizes can run autonomously today. Release-branch cuts and config promotions can probably run by next quarter. The destructive class earns its way in over months.
 
 Costs blow up. Cap retries at three per spec, alert on token spend per run, and remember that StrongDM reported roughly $1,000 per day per engineer-equivalent. That's still cheaper than a salary, but only if you put the cap in place before you find out.
 
