@@ -45,6 +45,9 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 - **🚨 Outstanding** is the bucket that says "the author must address this before a human approves the PR."
 - **⚠️ Low-confidence** is for findings where the reviewer is <80% sure *or* where the finding is "worth human attention but not blocking" (e.g., infra risk flags per `docs-review:references:infra`). Don't pad with hedging on findings you're confident in.
+  - **Style nits (Vale).** When `.vale-findings.json` is present, render each entry as a bullet prefixed `[style]` citing the line, rule name, and Vale's message. Examples:
+    - `line 42: [style] Pulumi.Substitutions — "click" → "select"`
+    - `line 87: [style] Google.Passive — In general, use active voice instead of passive voice ('is created').`
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
@@ -91,7 +94,7 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 4. **No nanny feedback on colloquialisms.** Words like "overkill," "kill," "blow away," "destroy" are fine in technical context. Do not flag.
 5. **No `@claude` trailer on every comment.** The mention prompt at the bottom of the 1/M comment is enough; do not add it to every section.
 6. **No "informational only" findings.** If a finding is not actionable, it does not belong in the output.
-7. **No findings the linter catches.** Specifically: trailing newlines, heading case, ordered-list `1.` numbering, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`.)
+7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, ordered-list `1.` numbering, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`.) Vale findings from `.vale-findings.json` ARE in scope -- render them under ⚠️ Low-confidence (see Style nits below).
 8. **No pre-existing findings from files the PR doesn't touch.** Pre-existing extraction is scoped to the PR's changed files only.
 9. **No pre-existing findings that would require the author to rewrite rather than fix.** "This whole section is poorly structured" belongs in a separate issue, not in this review.
 10. **No restating outstanding findings on re-review.** If a finding is still in 🚨 Outstanding from the previous run, the author can see it; do not repeat it in the run history.

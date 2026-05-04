@@ -82,6 +82,14 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
+      # step below has the pinned vale binary on PATH. Cache speeds up
+      # subsequent runs.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+
       # Resolve all PR state freshly via gh pr view so we see labels
       # that triage just wrote. Decides eligibility and skip reasons
       # in one place.
@@ -190,6 +198,31 @@ jobs:
             --jq '.id' || echo "")
           echo "check_id=$CHECK_ID" >> "$GITHUB_OUTPUT"
 
+      # Run Vale on PR-changed files in content/docs and content/blog. Findings
+      # are filtered to PR-introduced lines only, capped (10/file, 50 total),
+      # and written to .vale-findings.json for the review skill to consume.
+      # continue-on-error keeps Vale problems from blocking the review --
+      # style nits are nags, not gates.
+      - name: Run Vale on PR-changed prose
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: vale
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{}' > .vale-raw.json
+            echo '[]' > .vale-findings.json
+            echo "vale: no docs/blog files changed; skipping"
+            exit 0
+          fi
+          vale --no-exit --output=JSON $CHANGED > .vale-raw.json
+          python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
@@ -278,6 +311,12 @@ jobs:
             ### Changed files
 
             ${{ steps.pr-context.outputs.files_list }}
+
+            ## Style nits from Vale
+
+            If `.vale-findings.json` exists and is non-empty, surface its
+            findings under ⚠️ Low-confidence per `docs-review:references:output-format`.
+            Vale findings are nags, not blockers — never put them in 🚨 Outstanding.
 
             ## Posting
 

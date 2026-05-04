@@ -16,6 +16,7 @@ Agents must use these exact commands:
   - Normal: `make serve` 
   - With asset rebuilds: `make serve-all`
 - Lint: `make lint` (must pass before commit/merge)
+- Lint prose: `make lint-prose` (Vale; nags, never blocks. Also surfaces in pinned PR reviews.)
 - Format: `make format`
 - Run all tests: `make test`
 - Run specific program test:  

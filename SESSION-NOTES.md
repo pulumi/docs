@@ -1945,3 +1945,172 @@ No code or workflow file changed.
 ### Memory updates
 
 None. All Session-20 output is design state specific to this branch; belongs here.
+
+## Session 21 — 2026-05-04 (Vale prose-style linting: make target, CI integration, triage augmentation, skill-file trim)
+
+### Trigger
+
+Top of Session-19 backlog: "Deterministic style-checking workflow (vale). Half-day setup; recovers prescriptive style-nit coverage via free linter rather than Opus tokens." This session implemented it end-to-end except for the fork-test battery (Cam has more changes coming first).
+
+### Three design decisions taken up front
+
+To avoid mid-implementation rework, asked Cam three questions in plan mode before writing code. All three picked the recommended option:
+
+1. **Vale supersedes the overlapping prose-patterns.md rules** (passive voice, filler, buzzwords, hedging, etc.) rather than coexisting. Saves Opus tokens; one rule per pattern; cleaner mental model for the AI reviewer.
+2. **Scope: `content/docs/` + `content/blog/` only.** Marketing/website (`content/about/`, `pricing/`, `legal/`), programs, and meta files excluded. Marketing copy tolerates "world-class"/"leverage" that Vale would over-flag.
+3. **Minimal custom Pulumi style** layered over Google + write-good packages, not comprehensive-pulumi-style or off-the-shelf-only.
+
+### Architecture
+
+**Tool management:**
+
+- `mise.toml` adds `vale = "3.14.1"` (current stable; not the placeholder 3.9.1 from the plan). Single source of truth.
+- `scripts/ensure.sh` adds `check_version "Vale" ...` matching the existing Node/Hugo/Yarn pattern. Hard dep — same install path as other tools.
+- CI workflows install via `jdx/mise-action@v2` (cache: true). Adds ~30s on cold cache; downstream cached.
+
+**`.vale.ini` config:**
+
+- `MinAlertLevel = warning` (suggestion is too noisy on existing technical prose).
+- `Packages = Google, write-good`; `BasedOnStyles = Pulumi, Google, write-good` for `*.md`.
+- `BlockIgnores` and `TokenIgnores` for both `{{< ... >}}` and `{{% ... %}}` Hugo shortcode forms (full + closing tags). Verified: `{{< notes >}}` blocks are correctly skipped.
+- Disabled rules (per-rule, not per-package):
+  - `Google.Headings` (Pulumi uses Title Case for H1; markdownlint covers H2+)
+  - `Google.WordList` (Google product-name overrides don't match Pulumi terminology)
+  - `Google.We` (docs allow first-person plural)
+  - `Google.Will` (too noisy on declarative prose)
+  - `Google.Parens` ("use parens judiciously" — vague, not actionable)
+  - `write-good.Passive` (`Google.Passive` covers same ground; one finding per construct)
+  - `write-good.E-Prime` (banning all forms of "to be" is impractical for technical docs)
+
+Smoke-tested on `content/docs/iac/concepts/inputs-outputs/_index.md` (210 lines): 7 findings remain after disables — reasonable noise.
+
+**Custom `styles/Pulumi/` pack** (5 rules + meta.json):
+
+- `Substitutions.yml`: click→select, go to→navigate, public beta→public preview, cross-language package→Pulumi package, single-language/language-native package→native language package
+- `BannedWords.yml`: ableist (`crazy`, `dummy`), gendered (`guys`), legacy security terms (`whitelist`, `blacklist`, `master`, `slave`, `sanity check`)
+- `Difficulty.yml`: easy/easily/simple/simply/just/obviously/clearly/of course
+- `ProductNames.yml`: substitution rule covering wrong-case forms (`pulumi esc`, `Pulumi Esc`, `Pulumi Iac`, `Pulumi IAC`, etc.) → correct (`Pulumi ESC`, `Pulumi IaC`)
+- `PoliciesSingular.yml`: existence rule flagging plural verbs after "Pulumi Policies" (`enforce`, `are`, `have`, `allow`, `provide`, `support`, `enable`, `require`)
+
+**Vendored `styles/Google/` and `styles/write-good/`** from `vale sync` — 220K, 49 files, checked in for reproducibility (no network in CI).
+
+**`make lint-prose`** target:
+
+- Defaults to **changed files vs master** via `git diff` + `git ls-files --others`. ~0.2s on a typical scope.
+- `make lint-prose ARGS=content/docs/iac` for explicit path.
+- Full-tree lint on 1500+ files takes 5+ minutes — not the default; explicit opt-in via ARGS only.
+- Wrapper script `scripts/lint-prose.sh` always exits 0 (`vale --no-exit`). `make lint` is **not** modified — keeps the gating contract clean.
+
+**`vale-findings-filter.py`** at `.claude/commands/docs-review/scripts/`:
+
+- Reads Vale `--output=JSON`, intersects findings with PR-added line numbers from `gh pr diff --patch`, caps to **10/file and 50 total**, writes flat sorted JSON list.
+- Empty input or zero intersection → `[]`, never errors.
+- Unit-tested with mocked `gh pr diff`: pre-existing prose correctly excluded; only PR-introduced findings pass through.
+
+**Three workflows wired:**
+
+- `claude-code-review.yml`: `jdx/mise-action@v2` after checkout; new "Run Vale on PR-changed prose" step between `pr-context` and `check-access`. Gated `if: skip_reason == ''` and `continue-on-error: true`. Prompt updated with one paragraph telling Opus to surface findings under ⚠️ Low-confidence.
+- `claude.yml` (re-entrant): same pattern, additionally gated on `is_pr == 'true'`. Prompt path 1 gets the same Vale paragraph.
+- `claude-triage.yml`: Vale runs alongside Haiku (different coverage — see below). New §3b block, same `PROSE_CHECK_NEEDED` gate as Haiku. Findings render as `[style]` bullets in the existing `<!-- TRIAGE_PROSE -->` advisory comment, alongside Haiku's `[spelling]` bullets. `review:prose-flagged` label fires on either source.
+
+### Why Vale doesn't replace Haiku in triage
+
+Cam asked. Coverage is disjoint:
+
+- **Haiku** (`spelling-grammar.md`): misspellings, wrong-word swaps (their/there/they're), subject-verb disagreement, missing articles, doubled words, UK→US spellings, Oxford commas.
+- **Vale** (current config): substitutions (click→select), banned words, difficulty qualifiers, product names, passive voice, contractions, weasel words, too-wordy.
+
+Vale's spelling check needs Hunspell + a wordlist we haven't set up; even then it wouldn't do wrong-word disambiguation or subject-verb checks. The gap Vale closes is different: trivial / frontmatter-only PRs touching docs/blog files skip the full review (and therefore skip Vale in `claude-code-review.yml` due to the `skip_reason == ''` gate). Adding Vale to triage closes that gap. One merged advisory comment with prefixed bullets > two separate comments.
+
+### Skill-file trim (don't double-flag what Vale catches)
+
+Same principle that drove the original `output-format.md` DO-NOT #7 ("no findings markdownlint or Prettier catches") applied to Vale-covered rules across the docs-review references:
+
+- **`prose-patterns.md`**: deleted Passive voice, Filler/prepositional bloat, Empty intensifiers, Difficulty qualifiers, Hedging, Buzzword tax, Empty transitions, Em-dash density, Repetitive paragraph openers. Kept Spelling-and-grammar reference, Undefined acronyms, Nested clause stacks, Contrastive frames, Uniform sentence rhythm, Dense paragraphs. Added "Anything Vale catches" do-not-flag rule.
+- **`docs.md`**: Priority 4 (Terminology and product accuracy) — replaced 4 bullets (product names, Policies-singular, public-preview, preferred pairs) with one paragraph deferring to Vale + a real reviewer task (first-mention acronym expansion, which Vale doesn't do). Pre-existing scope removed "product-name capitalization." Do-not-flag adds "Anything Vale catches."
+- **`blog.md`**: Priority 4 (Product accuracy) — same treatment. Kept Feature names, "generally available" not "generally released," canonical doc links (not Vale-covered). Do-not-flag adds "Anything Vale catches" and clarifies the heading-case split (markdownlint owns case, Vale owns product-name miscapitalization).
+- **`output-format.md`**: DO-NOT #7 narrowed from "the linter" to "markdownlint and Prettier" with explicit Vale carve-out. Bucket rules section adds Style nits (Vale) bullet examples under ⚠️ Low-confidence.
+- **`SKILL.md`** (interactive): one paragraph telling the model to invoke `vale --no-exit --output=JSON <files>` for files under `content/docs/`/`content/blog/` and surface findings the same way as CI.
+- **`ci.md`**: one paragraph instructing CI to read `.vale-findings.json` and render under ⚠️ Low-confidence with `[style]` prefix.
+
+Skills not touched (different purpose): `glow-up.md`, `new-blog-post.md`, `fix-issue.md` — these *author or polish* content; they need STYLE-GUIDE as a creation reference, not just enforcement. Vale flags violations after the fact. `shared-criteria.md:27` (descriptive link text), `docs.md:77` (semantic shortcode choice), `code-examples.md:35` (code style) — not Vale-covered.
+
+### Documentation
+
+- `STYLE-GUIDE.md` adds a brief "Automated checks" section pointing to `.vale.ini`, `make lint-prose`, and the rule packs.
+- `AGENTS.md` adds `make lint-prose` to the Build/Test/Lint Workflow list with a one-line "Nags, never blocks" note.
+
+### Things worth knowing (gotchas)
+
+- **`Vocab = Pulumi` suppresses matches across ALL rules**, not just spelling. Initial config had `Vocab = Pulumi` with `Pulumi` in the accept list; `Pulumi.ProductNames` wouldn't fire on "Pulumi Iac" until the Vocab line was removed. Vocab is for the spelling extender we're not using anyway. Don't re-add it without a clear reason.
+- **Vale on the full content tree (1500 files) takes 5+ minutes.** Single file: 0.16s. Small directory: ~6s. The slowness is at scale only. `make lint-prose` defaults to changed-vs-master to keep the contributor UX fast; full-tree lint requires explicit `ARGS=content/docs`.
+- **`vale --no-exit-code` is wrong; the flag is `--no-exit`**. Easy typo from reading docs of another linter.
+- **`jdx/mise-action@v2` puts mise-managed tools on PATH automatically** — no `mise activate` required in workflow run scripts.
+- **Vendored styles total 220K (49 files)**. Cheap to commit; pays back in zero network dependency in CI.
+
+### Items NOT shipped (carried into Session 22)
+
+1. **End-to-end fork test.** All verification was local: Vale runs, custom rules fire, intentional-violation tests pass, filter intersects correctly with mocked `gh pr diff`, YAML and embedded bash syntax-check. Untested: `jdx/mise-action@v2` actually installs Vale on the runner; the CI prompt actually picks up `.vale-findings.json`; pinned-comment renders Style nits the way described; the merged TRIAGE_PROSE comment renders cleanly with prefixes. Cam will run a full battery after additional changes.
+2. **`/docs-review` graceful-degrade when Vale missing.** SKILL.md tells the model to run vale; doesn't say what to do if it's not installed. Discussed three options (hard-fail, graceful-skip with one-line note, auto-install via mise); recommendation = graceful-skip. Not yet wired.
+3. **CI workflow `||` fallback hardening.** `claude-code-review.yml` and `claude.yml` Vale steps rely on `continue-on-error: true` plus the prompt's "if file exists" check. Triage uses explicit `vale ... || echo '{}' > .vale-raw.json` short-circuits — cleaner. Worth tightening the other two to match.
+4. **Hashtag-driven re-entrant routing** (Session 20 design) — top of next session's queue per Cam.
+5. **Pre-commit hook** (lint-staged + Vale) — deferred. Slowing every commit isn't worth it for v1.
+6. **Vale on marketing/website content** — out of scope per the design decision.
+
+### Methodology / repeatable patterns
+
+- **Plan-mode Q&A up front saves cycles.** Three design questions answered before any code (Vale-supersedes vs coexist; scope; minimal vs comprehensive Pulumi pack). All three picked the recommended option, so no rework. Cheaper than discovering the design after writing rules.
+- **Trim-on-overlap principle.** When adding a deterministic checker that shares scope with an AI rubric, edit the AI rubric to defer rather than duplicate. Mirrors how `output-format.md` DO-NOT #7 already excluded markdownlint findings. Applied here to `prose-patterns.md`, `docs.md` Priority 4, `blog.md` Priority 4. Reduces token cost AND avoids same-line double-flagging at conflicting severities.
+- **Cam-pushback patterns this session:**
+  - "Why don't we install Vale with `make ensure` or mise like other tools? If somebody runs `/docs-review`, it'll expect Vale to be there, right?" — caught the original plan's `scripts/install-vale.sh` shortcut and forced the right architecture (single source of truth in `mise.toml`, hard dep enforced by `ensure.sh`).
+  - "And what happens if someone runs `/docs-review` local and vale isn't installed?" — caught the un-handled missing-binary path; led to the graceful-skip design (not yet wired).
+  - "Did you verify any of the vale changes against an actual PR in the fork?" — explicit pushback on local-only verification. Honest answer was no; Cam absorbed it and chose to defer until more changes land.
+- **The ultraplan / fork-branch gotcha.** Cam tried `/ultraplan` to refine the local plan; the cloud agent cloned `origin/master` (113 commits behind this branch) and 404'd because the entire `.claude/commands/docs-review/` skill it was supposed to modify doesn't exist on master. For mid-branch refinement, ultraplan needs the working branch pushed first. Worth documenting if ultraplan becomes part of regular flow.
+
+### Backlog after Session 21
+
+Active:
+
+1. **Hashtag-driven re-entrant routing** (Session 20 design) — top of next session's queue per Cam.
+2. **End-to-end fork test of Vale integration** (Session 21 #1) — bundle with the broader battery Cam plans.
+3. **Graceful-skip for missing Vale in `/docs-review` interactive** (Session 21 #2).
+4. **CI workflow `||` fallback hardening** (Session 21 #3).
+5. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
+6. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1).
+7. **Trivial-cap edge case soft-watch** — PR 18573 shape.
+8. **Investigate 5 lost ⚠️ catches** (Session 13 #5).
+9. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream.
+10. **`update.md` raise-missed-duplicate code path** — defer.
+11. **Non-determinism baseline + skeptic sub-agent** — paired.
+12. **Boundary-fixture name audit** — old.
+13. **Cam's "claude-working" label mutex semantics** (Session-18) — partially addressed; one more sweep.
+14. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
+
+Closed this session:
+
+- **Deterministic style-checking workflow (vale)** → ✅ shipped (modulo fork test).
+
+### Files changed (Session 21 substance)
+
+New:
+
+- `.vale.ini` — top-level config with shortcode ignores and rule disables.
+- `scripts/lint-prose.sh` — wrapper; defaults to changed-vs-master, accepts ARGS.
+- `.claude/commands/docs-review/scripts/vale-findings-filter.py` — line-intersection filter (10/file, 50 total caps).
+- `styles/Pulumi/` — 5 custom rules + meta.json.
+- `styles/Google/` and `styles/write-good/` — vendored from `vale sync`, 220K, 49 files.
+
+Modified:
+
+- `mise.toml`, `scripts/ensure.sh` — Vale 3.14.1 pinned and version-checked.
+- `Makefile` — `lint-prose` target with `ARGS=` passthrough; `lint` untouched.
+- `.github/workflows/claude-code-review.yml`, `claude.yml`, `claude-triage.yml` — `jdx/mise-action@v2` + Vale step + prompt updates (triage merges Haiku + Vale into one TRIAGE_PROSE comment with `[spelling]`/`[style]` prefixes).
+- `.claude/commands/docs-review/SKILL.md`, `ci.md` — short paragraphs on consuming Vale findings.
+- `.claude/commands/docs-review/references/output-format.md` — DO-NOT #7 carve-out; Style nits subsection under ⚠️.
+- `.claude/commands/docs-review/references/prose-patterns.md` — deleted Vale-covered patterns (Passive, Filler, Intensifiers, Difficulty, Hedging, Buzzword, EmptyTransitions, EmDash, RepetitiveOpeners); kept Spelling-and-grammar ref, Undefined acronyms, Nested clauses, Contrastive frames, Uniform rhythm, Dense paragraphs; added "Anything Vale catches" do-not-flag rule.
+- `.claude/commands/docs-review/references/docs.md`, `blog.md` — Priority 4 trimmed; do-not-flag updated.
+- `STYLE-GUIDE.md`, `AGENTS.md` — pointers to `make lint-prose`.
+
+### Memory updates
+
+None. The Vocab gotcha and other Vale-specific quirks are project-state for this branch; SESSION-NOTES is the right home.

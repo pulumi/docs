@@ -48,6 +48,8 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 
+If `.vale-findings.json` exists in the workspace, append each entry to ⚠️ Low-confidence prefixed `[style]`, citing line + rule + Vale's message. The workflow has already filtered to PR-introduced lines and capped the count.
+
 ### 3. Build the output
 
 Render using `docs-review:references:output-format` and apply its DO-NOT list before emitting.

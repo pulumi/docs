@@ -35,6 +35,13 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
+      # step below has the pinned vale binary on PATH for re-entrant runs.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
@@ -153,6 +160,32 @@ jobs:
           esac
           printf '%s' "$BODY" > .claude-mention-body.txt
 
+      # Run Vale on PR-changed files in content/docs and content/blog so
+      # re-entrant reviews include refreshed style nits tied to the current
+      # commit. Skipped on issue mentions and when no docs/blog files were
+      # touched. continue-on-error keeps style nits from blocking the run.
+      - name: Run Vale on PR-changed prose
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.is_pr == 'true'
+        id: vale
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{}' > .vale-raw.json
+            echo '[]' > .vale-findings.json
+            echo "vale: no docs/blog files changed; skipping"
+            exit 0
+          fi
+          vale --no-exit --output=JSON $CHANGED > .vale-raw.json
+          python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json
+
       # Post a transient <!-- CLAUDE_PROGRESS --> comment on PR mentions so
       # the author sees "something is happening" while Sonnet works. The post
       # step below edits it to a done/errored state (or deletes it on cancel)
@@ -210,6 +243,7 @@ jobs:
             1. **Review-related ask on a PR** (any of the cases described in `docs-review:references:update`: fix-response, dispute, or generic refresh):
                - If a pinned review **EXISTS**, follow `docs-review:references:update` and post the updated review via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
                - If a pinned review **does not exist**, follow `.claude/commands/docs-review/ci.md` to produce an initial review and post via the same `pinned-comment.sh upsert` command.
+               - If `.vale-findings.json` exists and is non-empty, surface its findings under ⚠️ Low-confidence per `docs-review:references:output-format`. Vale findings are nags, not blockers — never put them in 🚨 Outstanding.
 
             2. **Ad-hoc task or question** — fix code, explain something, answer a question, make a small change, etc.: act on the mention directly. Use Edit/Write to make file changes; `gh pr checkout ${{ steps.pr-context.outputs.pr_number }}` if you need to push commits to the PR branch; reply with `gh pr comment ${{ steps.pr-context.outputs.pr_number }} --body "..."` (or `gh issue comment` for issues).
 

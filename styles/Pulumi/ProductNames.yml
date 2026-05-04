@@ -1,0 +1,18 @@
+extends: substitution
+message: "Capitalize Pulumi product names: use '%s' instead of '%s' (STYLE-GUIDE.md §Product Names)."
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  '\bpulumi esc\b': Pulumi ESC
+  '\bPulumi Esc\b': Pulumi ESC
+  '\bpulumi iac\b': Pulumi IaC
+  '\bPulumi Iac\b': Pulumi IaC
+  '\bPulumi IAC\b': Pulumi IaC
+  '\bpulumi idp\b': Pulumi IDP
+  '\bPulumi Idp\b': Pulumi IDP
+  '\bpulumi cloud\b': Pulumi Cloud
+  '\bpulumi insights\b': Pulumi Insights
+  '\bpulumi policies\b': Pulumi Policies
+  '\bpulumi policy\b': Pulumi Policies

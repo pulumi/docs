@@ -32,6 +32,8 @@ Walk these steps in order; stop at the first that yields a scope.
 
 Route each file to a domain via `docs-review:references:domain-routing`, then apply that domain's criteria plus `docs-review:references:shared-criteria`. Render the output per `docs-review:references:output-format`.
 
+For files under `content/docs/` or `content/blog/`, also run `vale --no-exit --output=JSON <files>` and surface its findings under ⚠️ Low-confidence prefixed `[style]`.
+
 For PR-number invocations:
 
 ```bash

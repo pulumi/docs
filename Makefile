@@ -178,6 +178,11 @@ new-blog-post:
 lint:
 	./scripts/lint.sh
 
+.PHONY: lint-prose
+lint-prose:
+	@echo -e "\033[0;32mLINT PROSE (Vale):\033[0m"
+	./scripts/lint-prose.sh $(ARGS)
+
 .PHONY: format
 format:
 	./scripts/format.sh

@@ -13,53 +13,11 @@ Applied to prose-bearing content (docs and blogs). Concrete patterns only — ev
 
 ## Patterns
 
-> **Section unit.** Patterns with thresholds (em-dash density, hedging, repetitive openers, contrastive frames) evaluate over the block of prose between consecutive H2 (`## ...`) headings. In blog posts, the content from `<!--more-->` to the first H2 is also a section.
+> **Section unit.** Patterns with thresholds (hedging, repetitive openers, contrastive frames) evaluate over the block of prose between consecutive H2 (`## ...`) headings. In blog posts, the content from `<!--more-->` to the first H2 is also a section.
 
 ### Spelling and grammar
 
 Apply `docs-review:references:spelling-grammar`. Render every finding — no cap.
-
-### Passive voice
-
-Patterns: `was/were/been/being + past participle`, `is/are + past participle` where the actor is named or recoverable from context. Quote the construction; propose an active rewrite.
-
-- "the bucket is created by Pulumi" → "Pulumi creates the bucket"
-- "the secret was rotated by ESC" → "ESC rotates the secret"
-
-Don't flag when the actor is genuinely unknown or irrelevant: "the request is sent to the API," "the function is called when the resource updates" stay.
-
-### Filler and prepositional bloat
-
-| Flag | Replace with |
-|---|---|
-| `in order to` | `to` |
-| `due to the fact that` | `because` |
-| `at this point in time` | `now` |
-| `for the purpose of` | `for` |
-| `with respect to`, `in regard to` | `about` |
-| `a number of` | `several`, or a specific count |
-| `prior to` | `before` |
-| `subsequent to` | `after` |
-
-Quote the phrase in context; propose the shorter form.
-
-### Empty intensifiers
-
-`very`, `really`, `quite`, `rather`, `actually`, `basically`, `essentially` used as filler before an adjective. Quote with surrounding context; propose removal or a specific number.
-
-- "very fast" → "fast" (or "completes in <50ms")
-- "really simple" → "simple" — and reconsider "simple" itself per Difficulty qualifiers below
-- "basically a wrapper" → "a wrapper"
-
-Don't flag when the word carries semantic weight: "very specific" meaning "narrowly scoped" can stay if the meaning is preserved.
-
-### Difficulty qualifiers
-
-`easy`, `simple`, `just`, `obviously`, `clearly`, `of course` when characterizing task difficulty. These tell the reader how they should feel rather than letting the steps speak. Per `STYLE-GUIDE.md`. Quote the sentence; propose removal.
-
-- "Just run `pulumi up`" → "Run `pulumi up`"
-- "This is an easy way to..." → "This..." or describe the approach without judging difficulty
-- "Obviously, you'll need..." → "You'll need..."
 
 ### Undefined acronyms
 
@@ -79,36 +37,13 @@ Propose:
 
 > "The resource is created during preview. It inherits its provider from the parent stack and uses the parent's region (us-east-1). The bucket policy is set in the same step."
 
-### Hedging
-
-`Typically`, `generally`, `tends to`, `can often`, `largely`, `in many cases` — undermine confidence when the underlying claim is concrete. Two or more in a single section is a finding. See also `STYLE-GUIDE.md`'s write-with-confidence rule.
-
-- "Pulumi typically resolves outputs eagerly" → "Pulumi resolves outputs eagerly"
-- "ESC tends to rotate every 24 hours" → "ESC rotates every 24 hours"
-
-### Buzzword tax
-
-`landscape`, `ecosystem`, `leverage` (as a verb), `robust`, `seamless`, `world-class`, `battle-tested`. Flag on first occurrence with a suggested rewrite when the sentence survives the deletion; otherwise flag as a rewrite candidate. If the same buzzword appears three or more times across the file, coalesce the flags into a single finding.
-
-### Empty transitions
-
-`Let's dive in`, `In this post we'll explore`, `In conclusion`, `Without further ado`, `In recent years`. Cut them — flag on first occurrence.
-
 ### Contrastive frames
 
 `It's not X, it's Y` / `Not only X but also Y` / `This isn't about X; it's about Y`. One in a file is fine. Three or more across the file is a pattern finding.
 
-### Em-dash density
-
-Three or more em-dashes (`---` or `—`) in a single section. Quote the section's lead em-dash; propose breaking one or two into separate sentences.
-
 ### Uniform sentence rhythm
 
 Three or more consecutive sentences of similar length (within ±3 words) in a single paragraph. Quote the paragraph; propose varying length by combining or splitting one sentence.
-
-### Repetitive paragraph openers
-
-Three or more consecutive paragraphs opening with the same structure: `When you X...`, `If you want to X...`, `Consider X...`. Quote one of the openers; propose rewording at least one.
 
 ### Dense paragraphs
 
@@ -116,7 +51,7 @@ Paragraphs longer than 6 sentences or 8 visual lines. Often a sign the content s
 
 ---
 
-Every finding names the *phrase* and the *pattern*: "em-dash density: 6 em-dashes across 3 paragraphs; break some into separate sentences" beats "this prose is AI-written."
+Every finding names the *phrase* and the *pattern*: "nested clauses: 3 subordinates in one sentence; split into 2-3" beats "this prose is hard to follow."
 
 ## Do not flag
 
@@ -124,3 +59,4 @@ Every finding names the *phrase* and the *pattern*: "em-dash density: 6 em-dashe
 - **Stylistic preference between equivalents.** "You could say X instead of Y" where both are correct and idiomatic is not a finding. Only flag when a pattern above matches.
 - **Quoted material.** Don't apply these patterns to text inside `>` blockquotes, error messages, fixture data, or API responses being illustrated.
 - **Code identifiers and CLI output.** Variable names, function names, command output, and log lines aren't prose.
+- **Anything Vale catches.** Passive voice, filler phrases, empty intensifiers, difficulty qualifiers, hedging, buzzwords, empty transitions, em-dash density, repetitive openers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style nits. Don't double-flag.

@@ -38,6 +38,13 @@ jobs:
         with:
           fetch-depth: 1
 
+      # Install mise-managed tools (Vale, etc.) so the prose-check pass
+      # below can run vale alongside the Haiku spelling/grammar call.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+
       - name: Check repository write access
         id: check-access
         run: |
@@ -161,6 +168,25 @@ jobs:
             fi
           fi
 
+          # 3b. Vale style check — runs alongside the Haiku call (different
+          # coverage). Same gate (PROSE_CHECK_NEEDED) because trivial /
+          # frontmatter-only PRs skip the full review and therefore skip
+          # the Vale step in claude-code-review.yml. Findings are filtered
+          # to PR-added lines so we don't surface pre-existing prose.
+          VALE_CONCERNS=""
+          if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
+            VALE_FILES=$(gh pr diff "$PR" --repo "$REPO" --name-only \
+              | grep -E '^content/(docs|blog)/.*\.md$' || true)
+            if [[ -n "$VALE_FILES" ]]; then
+              vale --no-exit --output=JSON $VALE_FILES > .vale-raw.json 2>/dev/null \
+                || echo '{}' > .vale-raw.json
+              python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+                --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+                || echo '[]' > .vale-findings.json
+              VALE_CONCERNS=$(jq -r '.[] | "\(.file):\(.line) — \(.rule): \(.message)"' .vale-findings.json)
+            fi
+          fi
+
           # 4. Build TARGET label set.
           declare -A TARGET
           for d in $DOMAINS_JSON; do
@@ -173,8 +199,9 @@ jobs:
             TARGET["review:frontmatter-only"]=1
           fi
           # Prose concerns flag — applies to either trivial or
-          # frontmatter-only when the prose check turned up issues.
-          if [[ "$PROSE_CHECK_NEEDED" == "true" && -n "$PROSE_CONCERNS" ]]; then
+          # frontmatter-only when EITHER the Haiku spelling/grammar check
+          # OR the Vale style check turned up issues.
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
             TARGET["review:prose-flagged"]=1
           fi
 
@@ -222,20 +249,27 @@ jobs:
                   [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
                 done
 
-          if [[ "$PROSE_CHECK_NEEDED" == "true" && -n "$PROSE_CONCERNS" ]]; then
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
               if [[ "$TRIVIAL" == "true" ]]; then
                 SHORTCIRCUIT_LABEL="review:trivial"
               else
                 SHORTCIRCUIT_LABEL="review:frontmatter-only"
               fi
-              BULLETS=$(echo "$PROSE_CONCERNS" | sed 's/^/- /')
+              BULLETS=""
+              if [[ -n "$PROSE_CONCERNS" ]]; then
+                BULLETS+=$(echo "$PROSE_CONCERNS" | sed 's/^/- [spelling] /')
+              fi
+              if [[ -n "$VALE_CONCERNS" ]]; then
+                [[ -n "$BULLETS" ]] && BULLETS+=$'\n'
+                BULLETS+=$(echo "$VALE_CONCERNS" | sed 's/^/- [style] /')
+              fi
               BODY=$(cat <<EOF
           <!-- TRIAGE_PROSE -->
           🔍 **Triage prose check** — possible issues in the diff. Full review is skipped (\`$SHORTCIRCUIT_LABEL\`); please double-check before merging.
 
           $BULLETS
 
-          _Best-effort spelling/grammar flags from the triage pass. Reject false positives at your discretion._
+          _Spelling/grammar from a best-effort Haiku pass; style from Vale on PR-added lines. Reject false positives at your discretion._
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
@@ -246,4 +280,5 @@ jobs:
           ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
           REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
-          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+          VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"

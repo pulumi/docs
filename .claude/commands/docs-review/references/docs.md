@@ -48,12 +48,9 @@ Snippet-level checks (syntax, imports, language idioms, language casing) live in
 
 ### Priority 4 — Terminology and product accuracy
 
-Reference `STYLE-GUIDE.md` and `data/glossary.toml` for the authoritative lists. Watchlist:
+Vale catches product-name capitalization, the Pulumi Policies singular-verb rule, "public preview" vs "public beta", and preferred-terminology pairs from `STYLE-GUIDE.md` (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style nits). The reviewer's job here is **first-mention acronym expansion** that Vale doesn't cover: when a product acronym (ESC, IDP, IaC) appears in the diff for the first time in the file, propose `Pulumi ESC (Environments, Secrets, and Configuration)` on first mention. Subsequent mentions use the short form.
 
-- **Product names.** "Pulumi IaC" / "Pulumi ESC" / "Pulumi IDP" / "Pulumi Cloud" / "Pulumi Insights" / "Pulumi Policies". Expand acronyms on first mention; use the short form after.
-- **Singular "Pulumi Policies."** `STYLE-GUIDE.md` says it's a singular proper noun. Verb agreement follows (e.g., "Pulumi Policies enforces," not "enforce").
-- **"public preview" not "public beta."**
-- **Preferred pairs.** "Pulumi package" vs "native language package" -- see `STYLE-GUIDE.md` §Preferred terminology.
+`data/glossary.toml` is the authoritative term list for glossary cross-references.
 
 ### Priority 5 — Prose patterns and spelling/grammar
 
@@ -93,9 +90,10 @@ Extract pre-existing issues from a touched file when any of:
 
 Not a top-level structural change: edits inside an existing H2, adding/removing H3s under an unchanged H2, code-block updates, wording tweaks.
 
-Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, product-name capitalization, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format` (cap per output-format). Skip style nits (heading case, list numbering) -- the linter owns those.
+Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs, deprecated terminology, within-file terminology inconsistencies. These render in the 💡 bucket per `docs-review:references:output-format` (cap per output-format). Skip style nits (heading case, list numbering, product-name capitalization, banned-word substitutions) -- the linter (markdownlint, Prettier) and Vale own those.
 
 ## Do not flag
 
 - **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Superseded terminology in historical context.** When a doc describes old behavior intentionally (e.g., "before v3.0, this was called X"), don't flag the old name as deprecated terminology.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style nits. Don't double-flag.

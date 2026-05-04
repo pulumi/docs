@@ -48,9 +48,10 @@ Apply `docs-review:references:code-examples`.
 
 ### Priority 4 — Product accuracy
 
-- **Pulumi product names.** Per `STYLE-GUIDE.md`: "Pulumi IaC," "Pulumi ESC," "Pulumi IDP," "Pulumi Cloud," "Pulumi Insights," "Pulumi Policies" (singular).
+Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style nits). The reviewer's job here is the things Vale can't:
+
 - **Feature names.** Capitalization and punctuation must match how the product refers to itself in docs. If a blog introduces a feature, the feature name should match the canonical doc page's title.
-- **Release terminology.** "Public preview," not "public beta" (per `STYLE-GUIDE.md`). "Generally available," not "generally released."
+- **"Generally available," not "generally released."** Release terminology beyond what Vale's substitution list covers.
 - **Canonical links to docs.** Every feature announcement should link to the relevant `/docs/` page. Missing doc links are a pre-existing-issue finding (the blog post is fine on its own; it's the site SEO that suffers).
 - **"New" vs "now supports."** A feature that landed more than ~30 days ago should use "now supports" or "recently added," not "new." If the frontmatter `date` is old relative to the claim's subject, flag.
 - **Title quality.** Title should describe the post's subject specifically and contain the topical hook a search/AI user would type. Flag:
@@ -99,7 +100,8 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 - **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy.
 - **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo, placeholder, and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
-- **Heading case already consistent within the file.** Style linters catch inconsistency. The only heading case that's a finding is one that names a product incorrectly (e.g., "Pulumi esc" instead of "Pulumi ESC").
+- **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style nits. Don't double-flag.
 
 ## Publishing blockers
 
