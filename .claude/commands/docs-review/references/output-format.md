@@ -49,11 +49,15 @@ The table header row stays fixed; only the number row changes per review. Bold t
     - `line 42: [style] substitution — Use 'select' instead of 'click'.`
     - `line 87: [style] passive voice — Use active voice instead of passive voice ('is created').`
 
-    **Per-file roll-up summary.** When a single file has more than 5 style nits, render them under a `<details>` block whose summary names the count and a kind breakdown:
+    **Always group style nits under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style nits at all.
+
+    **Per-file roll-up summary.** When a single file has more than 5 style nits, render them under a `<details>` block whose summary names the file (bold), the count, and a kind breakdown:
 
     ```markdown
+    #### Style findings
+
     <details>
-    <summary>content/docs/foo.md (8 style nits: 4 wordiness, 2 punctuation, 1 passive voice, 1 substitution)</summary>
+    <summary><strong>content/docs/foo.md</strong> (8 style nits: 4 wordiness, 2 punctuation, 1 passive voice, 1 substitution)</summary>
 
     - line 12: [style] wordiness — …
     - line 14: [style] wordiness — …
@@ -61,7 +65,7 @@ The table header row stays fixed; only the number row changes per review. Bold t
     </details>
     ```
 
-    Order kinds by count descending; ties alphabetical. Files with ≤5 nits render inline (no `<details>`); the breakdown only appears when collapsed.
+    Bold the filename in the `<summary>` — the file is the most-scannable handle when several rollups stack. Order kinds by count descending; ties alphabetical. Files with ≤5 nits render inline (no `<details>`); the breakdown only appears when collapsed.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
