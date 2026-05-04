@@ -72,6 +72,7 @@ jobs:
             "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
             | jq -r '.permission // "none"')
 
+          echo "author=$AUTHOR" >> $GITHUB_OUTPUT
           if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
@@ -119,16 +120,23 @@ jobs:
       # CLAUDE_PROGRESS comment shortly afterwards — that's the user-
       # visible "working" signal. Two competing CLAUDE_PROGRESS comments
       # would be confusing, so this one is plain text only.
+      #
+      # The body @-mentions the author so they receive a GitHub
+      # notification at the start of the run. The dispatched review's
+      # finalize step does NOT post a second terminal comment (the
+      # pinned review is the artifact); the dispatcher's mention here
+      # is the only ping for #new-review.
       - name: Post confirmation
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.pr_number != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTHOR: ${{ steps.check-access.outputs.author }}
         run: |
           gh pr comment "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
-            --body '🤖 Pinned review cleared; regenerating from scratch...' || true
+            --body "🤖 @${AUTHOR} — pinned review cleared; regenerating from scratch." || true
 
       # Dispatch claude-code-review.yml with force=true so it bypasses
       # trivial / frontmatter-only / draft / bot-author skip-reason

@@ -308,8 +308,11 @@ jobs:
         run: |
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
-          BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Reviewing — this can take several minutes.'
+          BODY=$(cat <<'EOF'
+          <!-- CLAUDE_PROGRESS -->
+          <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
+          EOF
+          )
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
@@ -375,12 +378,17 @@ jobs:
       # always reaches a terminal state regardless of outcome.
       #
       # Outcome handling:
-      # - success: edit the comment to "Review updated."
+      # - success: delete the comment. The pinned review is the durable
+      #   artifact; "Review updated." would read strangely as the bot's
+      #   first comment on a fresh PR.
       # - cancelled / skipped: delete the orphan comment. A cancellation
       #   means a newer run preempted this one (concurrency cancel-in-
       #   progress); the new run owns the user-visible state and this
       #   one's progress comment is just noise.
-      # - any other (failure, etc.): edit to "Review errored."
+      # - any other (failure, etc.): edit to "Review errored." This path
+      #   has no @-author to attribute (synchronize-triggered runs and
+      #   workflow_dispatch from #new-review both arrive without a mention
+      #   author), so the message stays unattributed.
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -390,12 +398,7 @@ jobs:
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude-review.outcome }}"
-          if [ "$OUTCOME" = "success" ]; then
-            BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Review updated.'
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
-          elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
+          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
             BODY='<!-- CLAUDE_PROGRESS -->

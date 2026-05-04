@@ -10,7 +10,7 @@ description: Shared review composition, output format, and DO-NOT list for both 
 Every review — initial or re-entrant, interactive or CI — produces output in this structure:
 
 ```markdown
-## Claude Review — Last updated <ISO 8601 timestamp>
+## Quality Review — Last updated <ISO 8601 timestamp>
 
 | 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
 | :---: | :---: | :---: | :---: |

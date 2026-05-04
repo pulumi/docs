@@ -278,10 +278,20 @@ jobs:
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS
-      # comment always reaches a terminal state. The spinner GIF is
-      # replaced with static text on every terminal outcome:
-      # success → "🤖 Done."; cancelled / skipped → delete the orphan
-      # comment (newer run owns the surface); failure → "🤖 Errored."
+      # comment always reaches a terminal state.
+      #
+      # Outcome handling:
+      # - success: DELETE the spinner comment, then post a fresh
+      #   `🤖 Review updated on @<author>'s request.` This is a *create*
+      #   (not an edit) so the embedded @-mention fires a GitHub
+      #   notification — that's the whole point of attribution. Editing
+      #   the existing comment to add a mention would not notify.
+      # - failure: same delete-and-repost, with `🤖 @<author> — review
+      #   errored. …` so the requester is notified that their request
+      #   failed.
+      # - cancelled / skipped: delete the orphan comment (newer run owns
+      #   the surface). No replacement.
+      #
       # On success the post-run label dance restores review:claude-ran
       # and clears review:claude-stale — mark-stale removed claude-ran
       # when the new commit landed, so without re-adding here the PR
@@ -295,16 +305,17 @@ jobs:
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
+          AUTHOR="${{ steps.check-access.outputs.author }}"
           if [ "$OUTCOME" = "success" ]; then
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Done.')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review updated on @${AUTHOR}'s request.")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Errored. Mention @claude #update-review again to retry.')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Mention @claude #update-review again to retry.")
+            gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
           if [ "$OUTCOME" = "success" ]; then
             gh pr edit "$PR" --repo "$REPO" \
