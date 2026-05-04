@@ -45,27 +45,31 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 - **🚨 Outstanding** is the bucket that says "the author must address this before a human approves the PR."
 - **⚠️ Low-confidence** is for findings where the reviewer is <80% sure *or* where the finding is "worth human attention but not blocking" (e.g., infra risk flags per `docs-review:references:infra`). Don't pad with hedging on findings you're confident in.
-  - **Style nits.** When `.vale-findings.json` is present, render each entry as a bullet `[style] <category> — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Examples:
-    - `line 42: [style] substitution — Use 'select' instead of 'click'.`
-    - `line 87: [style] passive voice — Use active voice instead of passive voice ('is created').`
+  - **Style nits.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
+    - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
+    - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
 
-    **Always group style nits under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style nits at all.
+    **Always group style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style findings at all.
 
-    **Per-file roll-up summary.** When a single file has more than 5 style nits, render them under a `<details>` block whose summary names the file (bold), the count, and a kind breakdown:
+    **Expand-hint.** Immediately under the H4 heading, render `<sub>Click each filename to expand.</sub>` so readers know the collapsed roll-ups need a click. Skip the hint only when every file's findings render inline (no `<details>` blocks at all on this run).
+
+    **Per-file roll-up summary.** When a single file has more than 5 style findings, render them under a `<details>` block whose summary names the file (bold), the total (bold), and a kind breakdown with each count bolded:
 
     ```markdown
     #### Style findings
 
-    <details>
-    <summary><strong>content/docs/foo.md</strong> (8 style nits: 4 wordiness, 2 punctuation, 1 passive voice, 1 substitution)</summary>
+    <sub>Click each filename to expand.</sub>
 
-    - line 12: [style] wordiness — …
-    - line 14: [style] wordiness — …
+    <details>
+    <summary><strong>content/docs/foo.md</strong> (<strong>8</strong> issues: <strong>4</strong> wordiness, <strong>2</strong> punctuation, <strong>1</strong> passive voice, <strong>1</strong> substitution)</summary>
+
+    - **line 12:** [style] _wordiness_ — …
+    - **line 14:** [style] _wordiness_ — …
     ...
     </details>
     ```
 
-    Bold the filename in the `<summary>` — the file is the most-scannable handle when several rollups stack. Order kinds by count descending; ties alphabetical. Files with ≤5 nits render inline (no `<details>`); the breakdown only appears when collapsed.
+    Use the word **issues** (not "style nits") in the summary — the H4 heading already says "Style findings", so saying "nits" again is redundant. Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Files with ≤5 findings render inline (no `<details>`); the breakdown only appears when collapsed.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
