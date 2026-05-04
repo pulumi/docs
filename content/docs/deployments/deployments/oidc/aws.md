@@ -133,3 +133,17 @@ A literal value with no `${...}` placeholders is passed through unchanged.
 ### Length and truncation
 
 AWS caps `RoleSessionName` at 64 characters. If a rendered template would exceed that limit, Pulumi trims the truncatable name variables (`${organization.name}`, `${project.name}`, `${stack.name}`) from the end until the result fits. The protected variables (`${deployment.operation}`, `${deployment.version}`, `${deployment.id}`) are never trimmed, so each deployment remains identifiable.
+
+For example, given the template:
+
+```
+${organization.name}-${project.name}-${stack.name}-${deployment.id}
+```
+
+with `organization.name = "pulumi-local"`, `project.name = "test-nocode-rtct-3"`, `stack.name = "dev"`, and `deployment.id = "806bf21f-444f-4825-a80c-afd12cd2526a"`, the full-length result would be 72 characters. Pulumi caps the three name variables to fit the budget while preserving the deployment UUID:
+
+```
+pulumi-loca-test-nocode-dev-806bf21f-444f-4825-a80c-afd12cd2526a
+```
+
+The result is exactly 64 characters: `${organization.name}` and `${project.name}` are each capped to 11 characters, `${stack.name}` is 3 characters and fits as-is, and the deployment UUID is preserved in full.
