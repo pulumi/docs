@@ -2542,3 +2542,85 @@ Commit: `6bc92561b7` (S25 substance), `b204c67` (fork ops on cam-fork master).
 ### Memory updates
 
 None. Session-25 substance is branch state. Bug 3 is a real upstream bug worth fixing in S26, not a permanent project-state fact.
+
+## Session 26 — 2026-05-04 (Vale-checkout fix on three trigger paths; Style findings render polish)
+
+### Trigger
+
+Top of Session-25 backlog: Bug 3 (Vale-checkout race on three of four trigger paths). Cam laid out the fix shape in his prompt: explicit `ref:` on each broken `actions/checkout@v6` step, head SHA sourced from each trigger's payload (`workflow_run.head_sha`), `gh pr view --json headRefOid` (issue_comment), or workflow_dispatch input from the dispatcher.
+
+### Architecture (three workflow edits)
+
+**`.github/workflows/claude-update.yml`** — new "Resolve PR head SHA" step before checkout. Reads PR number from `issue.number` / `pull_request.number` per event type, calls `gh pr view --json headRefOid` for PR-bearing events. `issues` events fall through with empty SHA (Vale step is `is_pr`-gated anyway). Checkout uses `ref: ${{ steps.head.outputs.sha }}`. The existing `pr-context` step stays after checkout — it depends on `pinned-comment.sh` from the working tree, so it can't move earlier.
+
+**`.github/workflows/claude-code-review.yml`** — new `head_sha` input on `workflow_dispatch` (required string). Checkout uses `ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}` — single expression covers both trigger paths. `pr-context` already re-resolves `head_sha` for downstream check-run publishing; that step stays unchanged. A tiny race window exists (new commit could land between checkout and pr-context's re-resolve) — acceptable; the next sync catches it.
+
+**`.github/workflows/claude-new.yml`** — `pr-context` extended to fetch `headRefOid` and emit `head_sha` step output. Dispatch step adds `-f head_sha="${{ steps.pr-context.outputs.head_sha }}"`. The dispatcher's own checkout stays ref-less; that workflow only invokes `pinned-comment.sh clear` from the working tree, which is base-stable.
+
+Commit: `c8f79fd1d9`. ~50 lines of YAML across three files; identical hunks to those Cam predicted in the S25 fix shape.
+
+### End-to-end fork battery
+
+**Fixture #1: existing PR #125** (the one where S25 discovered the bug). Cam fork master force-pushed to S26 fix; fork-ops `b204c67` cherry-picked on top. Fired `@claude #new-review` on #125. Result: pinned review id `4375229128` rendered with **7 [style] bullets correctly surfaced** under ⚠️ Low-confidence (3 difficulty qualifier, 3 wordiness, 1 filler — exactly what local Vale produced in S25 §Bug 3 diagnostics). Workflow_dispatch path of the fix verified end-to-end.
+
+Side effect: PR #125's `gh pr diff` started showing the workflow files as PR changes, because the prep-sync moved fork master forward while PR head stayed at `fa2dfd83`. The model picked that up and surfaced the workflow files under ⚠️ Low-confidence — not a fix bug, just fixture hygiene.
+
+**Fixture #2: PR #126** (clean rebase). Closed #125, cherry-picked `fa2dfd83` (the config.md addition only) onto fresh fork master, opened #126. Diff is exactly one file. Initial review fired through the `pull_request → triage → workflow_run` chain; that path of the fix also verified.
+
+### Style findings render polish
+
+After the verification render landed, Cam asked for clarity on the `<details>` rollup. Three rounds of micro-changes shipped together as `7491cb9d36` and `079b985f91`:
+
+**Round 1 (`7491cb9d36`):**
+
+- `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence — labels the section so a reader skimming a collapsed `<details>` block knows what's inside.
+- Bold the filename in `<summary>`: `<strong>content/docs/foo.md</strong> (…)` — most-scannable handle when several rollups stack.
+
+**Round 2 (`079b985f91`):**
+
+- "issues" instead of "style nits" in the summary — H4 already says "Style findings" so "nits" is redundant; "issues" reads cleaner.
+- Bold every numeral in the summary (`<strong>7</strong> issues: <strong>3</strong> difficulty qualifier, <strong>3</strong> wordiness, <strong>1</strong> filler`) — counts pop on a narrow screen even before expanding.
+- `<sub>Click each filename to expand.</sub>` immediately under the H4 heading whenever any file rolls up under `<details>`. Hint suppressed when every file renders inline.
+- Per-bullet emphasis: `- **line N:** [style] _category_ — <message>` (bold line number, italic category) for skim-reading inside the expanded list.
+
+All five UX changes ship with single-source-of-truth in `output-format.md`; mirrored in the `claude-code-review.yml` and `claude-update.yml` prompt paragraphs. The interactive `/docs-review` SKILL.md path picks them up automatically (it points readers at output-format.md).
+
+Verification render on PR #126 (comment id `4375385929`): all four polish items rendered as specified. Bonus: the model also surfaced a real Outstanding finding about a `pulumi config get` JSON-output claim contradicting earlier content in the same file — confirms the model is reading the PR text deeply, not just rendering Vale.
+
+### Methodology / repeatable patterns
+
+- **The dispatcher needs to thread the contract.** When a workflow_dispatch input is added (`head_sha` here), every dispatcher must be updated in lockstep. Easy to miss because the dispatcher (claude-new.yml) and the dispatched (claude-code-review.yml) are different YAML files, and the failure mode (workflow validation rejecting the missing input) only shows up when actually fired. Lesson: when adding a required `workflow_dispatch` input, grep for `gh workflow run <workflow>` callers and update all of them in the same commit.
+- **Force-pushing fork master polluted the PR diff.** Each prep-sync cycle on the cam fork moves master forward; pre-existing test PRs whose head SHAs predate the new master start showing the upstream-vs-fork-ops delta as "PR changes" in `gh pr diff`. For S26's first verification this surfaced as the model reviewing my own workflow edits. Fix: **rebase the fixture branch onto the new master before firing the review**. PR #126 demonstrated the clean shape. Add to the standard fork-prep flow: after every prep-sync, `git rebase cam-fork/master` any pre-existing fixture branches and force-push them.
+- **Polish-then-test loop is fast on docs-review changes.** Each polish round (sub-heading → bold filename → issues/expand-hint/per-bullet) was a single commit, ~10-30 lines, then `gh pr comment ... #new-review` and ~3 minutes later the rendered output was visible on PR #126. Letting Cam see the actual render before locking in a format kept iteration tight; pure-spec changes without a live render would have left the bold-numeral question (HTML strong vs markdown asterisks) unverified.
+- **Hashtag-in-body false trigger.** Writing "via #new-review" in the body of an `@claude #update-review` comment fired claude-new.yml and skipped claude-update.yml (precedence rule working as designed). Lesson when composing diagnostic mention bodies: the hashtag filter sees raw `contains(body, '#new-review')` — any literal occurrence triggers, even in narrative prose. Sanitize phrasing or use code spans (`#new-review` doesn't help — the filter still matches the literal string inside backticks).
+
+### Items NOT shipped (carried into Session 27)
+
+1. **CLAUDE_PROGRESS cleanup of prior terminal comments** (S25 carry-over) — `claude-update.yml`'s delete-and-repost only deletes the comment whose id this run posted; prior runs' terminal `🤖 Review updated on @<author>'s request.` comments accumulate over many `#update-review` cycles. Mirrors `pinned-comment.sh clear` for review comments.
+2. **Cam's "quick `/docs-review`" variant** (S18 carry-over) — still open.
+3. **Standard fork-prep rebase step** — codify in BUILD-AND-DEPLOY.md or a fork-prep script: after `git push --force cam-fork CamSoper/pr-review-overhaul:master`, walk every test PR branch and `git rebase cam-fork/master`. Avoids the diff-pollution surface that bit S26 fixture #1.
+
+### Files changed (Session 26 substance)
+
+Upstream `pr-review-overhaul`:
+
+- `.github/workflows/claude-update.yml` — Resolve PR head SHA step + checkout `ref:`. (`c8f79fd1d9`)
+- `.github/workflows/claude-code-review.yml` — `head_sha` workflow_dispatch input + checkout `ref:`. (`c8f79fd1d9`); Style findings prompt rewrite (`7491cb9d36`, `079b985f91`).
+- `.github/workflows/claude-new.yml` — head SHA resolution + dispatch pass-through. (`c8f79fd1d9`)
+- `.claude/commands/docs-review/references/output-format.md` — Style findings sub-heading + bold filename + bold numerals + expand hint + per-bullet emphasis. (`7491cb9d36`, `079b985f91`)
+- `SESSION-NOTES.md` — this entry.
+
+Cam fork master only (lifecycle: wiped on every prep sync):
+
+- Same fork-ops bypass as S25 — `b204c67e04` cherry-picked onto each fresh fork master after the prep force-push.
+
+Fork PRs:
+
+- `CamSoper/pulumi.docs#125` — closed (workflow files polluted the diff after fork master moved forward).
+- `CamSoper/pulumi.docs#126` — open, single-file fixture, verified end-to-end across both initial-review (workflow_run) and #new-review (workflow_dispatch) paths.
+
+Commits: `c8f79fd1d9` (Vale-checkout fix), `7491cb9d36` (sub-heading + bold filename), `079b985f91` (issues / bold numerals / expand hint / per-bullet emphasis).
+
+### Memory updates
+
+None. All Session-26 substance is branch state. The fork-prep rebase lesson and the dispatcher-input contract lesson are repo-specific patterns that live in this file rather than auto-memory.
