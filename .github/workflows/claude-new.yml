@@ -84,6 +84,8 @@ jobs:
       - name: Resolve PR number
         id: pr-context
         if: steps.check-access.outputs.has_write_access == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # `issues` events were filtered out at the workflow level;
           # only PR-bearing events reach this step.
@@ -99,6 +101,13 @@ jobs:
               ;;
           esac
           echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+          # Resolve the PR head SHA so we can pass it through to the
+          # dispatched workflow_dispatch -- without it, that workflow's
+          # checkout has no SHA to pin to and falls back to base.
+          if [ -n "$PR_NUMBER" ]; then
+            HEAD_SHA=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json headRefOid --jq .headRefOid)
+            echo "head_sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+          fi
 
       # Delete every existing CLAUDE_REVIEW comment (1/M and tail) so
       # the dispatched review starts from a blank slate. The `clear`
@@ -159,6 +168,7 @@ jobs:
           gh workflow run claude-code-review.yml \
             --repo "${{ github.repository }}" \
             -f pr_number="${{ steps.pr-context.outputs.pr_number }}" \
+            -f head_sha="${{ steps.pr-context.outputs.head_sha }}" \
             -f force=true
 
 env:

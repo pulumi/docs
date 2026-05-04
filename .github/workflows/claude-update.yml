@@ -42,9 +42,39 @@ jobs:
       id-token: write
       actions: read # Required for Claude to read CI results on PRs
     steps:
+      # Resolve the PR head SHA before checkout so the working tree
+      # reflects PR content, not the base branch. Without this, Vale
+      # below runs against base prose and produces empty findings.
+      # `issues` events have no PR head; the SHA stays empty and
+      # checkout falls back to default behavior (the Vale step is
+      # gated on is_pr=true anyway, so it skips on issues).
+      - name: Resolve PR head SHA
+        id: head
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          case "${{ github.event_name }}" in
+            issue_comment)
+              PR="${{ github.event.issue.number }}"
+              IS_PR="${{ github.event.issue.pull_request != null }}"
+              ;;
+            pull_request_review_comment|pull_request_review)
+              PR="${{ github.event.pull_request.number }}"
+              IS_PR="true"
+              ;;
+            *)
+              PR=""; IS_PR="false"
+              ;;
+          esac
+          if [ "$IS_PR" = "true" ] && [ -n "$PR" ]; then
+            SHA=$(gh pr view "$PR" --repo "${{ github.repository }}" --json headRefOid --jq .headRefOid)
+            echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: ${{ steps.head.outputs.sha }}
           fetch-depth: 1
 
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint

@@ -34,6 +34,10 @@ on:
         required: false
         type: boolean
         default: false
+      head_sha:
+        description: 'PR head SHA (passed by claude-new.yml dispatcher so checkout sees PR content, not base)'
+        required: true
+        type: string
 
 jobs:
   # synchronize → just mark the existing pinned review stale.
@@ -94,9 +98,15 @@ jobs:
       checks: write
 
     steps:
+      # Check out the PR head, not the base. workflow_run carries the
+      # originating commit on the event payload; workflow_dispatch
+      # doesn't, so claude-new.yml passes it through as an input.
+      # Without this, Vale below ran against base prose and produced
+      # empty findings.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
 
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
