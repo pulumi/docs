@@ -119,17 +119,17 @@ The session name becomes the [`RoleSessionName`](https://docs.aws.amazon.com/STS
 
 ### Template variables
 
-The session name supports `${var}` placeholders that Pulumi substitutes at deployment build time:
+The session name supports `${var}` placeholders that Pulumi substitutes when the deployment runs:
 
 1. `${organization.name}`: Pulumi organization name.
 1. `${project.name}`: Pulumi project name.
 1. `${stack.name}`: Pulumi stack name.
-1. `${operation}`: the operation type (for example, `update`, `preview`, or `destroy`).
-1. `${deployment.version}`: the deployment version number.
-1. `${deployment.id}`: the deployment UUID.
+1. `${deployment.operation}`: operation type (for example, `update`, `preview`, or `destroy`).
+1. `${deployment.version}`: deployment version number.
+1. `${deployment.id}`: deployment UUID.
 
 A literal value with no `${...}` placeholders is passed through unchanged.
 
 ### Length and truncation
 
-AWS caps `RoleSessionName` at 64 characters. If a rendered template would exceed that limit, Pulumi trims the truncatable name variables (`${organization.name}`, `${project.name}`, `${stack.name}`) from the end until the result fits. The protected variables (`${operation}`, `${deployment.version}`, `${deployment.id}`) are never trimmed, so each deployment remains identifiable.
+AWS caps `RoleSessionName` at 64 characters. If a rendered template would exceed that limit, Pulumi trims the truncatable name variables (`${organization.name}`, `${project.name}`, `${stack.name}`) from the end until the result fits. The protected variables (`${deployment.operation}`, `${deployment.version}`, `${deployment.id}`) are never trimmed, so each deployment remains identifiable.
