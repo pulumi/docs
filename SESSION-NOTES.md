@@ -2341,3 +2341,204 @@ Fork PRs left for posterity:
 ### Memory updates
 
 None. All Session-23 substance is project state for this branch (workflow design, fork-ops lifecycle, hashtag-router behavior). The methodology lessons ("search git history for the pattern before designing a workaround"; "two-fix architecture for fork vs. upstream divergence") are repo-specific and live here, not in auto-memory.
+
+## Session 24 — 2026-05-04 (PR-text Vale UX polish: category rename, per-file roll-up, EmDash suppression)
+
+### Trigger
+
+Top three items in the post-S23 backlog: drop "vale" rule names from PR-facing text, add per-file nit summary in collapsible roll-up, suppress `Google.EmDash` in `.vale.ini`.
+
+### Three architecture decisions taken up front
+
+Mirrors the S21/S22 pattern of plan-mode-first AskUserQuestion gates. Cam answered all three:
+
+1. **Categorized vocabulary** — render `[style] passive voice — message`, not `[style] write-good.Passive — message`. Picked over bare `[style]` (which would make Item 2's roll-up summary degenerate to a bare count).
+2. **Mapping site = `vale-findings-filter.py`** — single canonical `RULE_CATEGORIES` constant. Filter populates a `category` field on each finding; consumers render that, never the `rule` field.
+3. **Triage harmonized** — TRIAGE_PROSE comment uses the same vocabulary. All PR-facing surfaces speak one language.
+
+### Cam's pushback that reshaped the design
+
+After the first plan was approved, Cam asked twice: "Why are we mirroring that table in `output-format.md`? That's wasted context." First fix: drop the table from `output-format.md` (CI-loaded → expensive), put it in `SKILL.md` (interactive-only). Cam pushed back AGAIN — same wasted-context concern, since the model could derive it from running the filter.
+
+Final shape: filter accepts `--pr` as **optional**. Without it, lines pass through with categories applied (no diff intersection). SKILL.md instructs the interactive path to pipe Vale through the filter the same way CI does; the JSON `category` field is the only consumer-visible vocabulary. Zero mirrors, single source of truth, no per-call context cost beyond the bullet examples in `output-format.md`. The two-pushbacks → refactor sequence saved ~700-1000 tokens per CI review.
+
+### Architecture
+
+**`vale-findings-filter.py`** (`.claude/commands/docs-review/scripts/`):
+
+- `RULE_CATEGORIES` constant: ~30 entries mapping Vale rule names to single-word lowercase categories (`substitution`, `passive voice`, `wordiness`, `filler`, `difficulty qualifier`, `punctuation`, `tone`, `inclusive language`, `weasel word`, `cliché`, etc.). Unknown rules fall back to `"style"`.
+- `category_for(rule)` helper.
+- `flatten_vale` accepts `allowed_lines: dict[str, set[int]] | None`. `None` → accept all findings (interactive mode).
+- `--pr` is now optional. Empty input still short-circuits to `[]`.
+- Output schema gains `category` field; `rule` retained for CI debugging logs.
+
+**Render contract (`output-format.md` Style nits subsection):**
+
+- Bullet shape: `[style] <category> — <message>`, citing the line. Use `category` field; never surface `rule`.
+- Per-file roll-up: when a single file has more than 5 style nits, collapse under `<details>` with summary `(N style nits: A wordiness, B passive voice, …)`. Order by count descending; ties alphabetical. Files with ≤5 nits render inline.
+
+**Workflow prompt updates:**
+
+- `claude-code-review.yml`, `claude-update.yml`: prompt paragraph references the new contract and roll-up rule, points at `output-format.md`.
+- `claude-triage.yml` line 186: `jq` template emits `\(.category)` instead of `\(.rule)`. TRIAGE_PROSE bullets render `- [style] file:line — substitution: …` not `- [style] file:line — Pulumi.Substitutions: …`.
+
+**`SKILL.md` (interactive `/docs-review`):**
+
+- Tells the model to invoke the filter without `--pr` and read the resulting JSON's `category` field. No table mirror.
+
+**`.vale.ini`**: one new line in the disable block — `Google.EmDash = NO  # Noisy on existing technical prose; false-positive rate exceeds signal.`
+
+### Verification (local)
+
+- Filter unit-level: smoke-test confirmed `category_for` mapping for known rules + `style` fallback for unknown.
+- Filter end-to-end: real Vale output on `inputs-outputs/_index.md` produced 7 findings with correct categories — `latinism`, `punctuation`, `weasel word`, `wordiness`.
+- EmDash suppression: confirmed zero `Google.EmDash` findings on `content/blog/2018-year-at-a-glance/index.md` (em-dash-heavy fixture).
+- Spec audit grep: `(write-good|Google|Pulumi)\.[A-Z]` in `output-format.md` / `SKILL.md` / `ci.md` / workflow YAMLs returns zero hits in user-facing prose. Rule names confined to `RULE_CATEGORIES` in the filter.
+
+### Items NOT shipped (carried forward)
+
+End-to-end fork test deferred — bundled with S25's post-implementation battery.
+
+### Files changed
+
+- `.vale.ini` — `Google.EmDash = NO`.
+- `.claude/commands/docs-review/scripts/vale-findings-filter.py` — `RULE_CATEGORIES` map, `category_for`, optional `--pr`, schema docstring update.
+- `.claude/commands/docs-review/references/output-format.md` — Style nits subsection rewritten with render contract + roll-up summary.
+- `.claude/commands/docs-review/SKILL.md` — interactive-mode filter invocation.
+- `.claude/commands/docs-review/ci.md` — render contract refresh.
+- `.github/workflows/claude-code-review.yml`, `claude-update.yml` — Style-nits prompt paragraphs.
+- `.github/workflows/claude-triage.yml` — `jq` template `.rule → .category`.
+
+Commit: `f3dcc85d33`.
+
+### Memory updates
+
+None. All Session-24 substance is branch-specific.
+
+## Session 25 — 2026-05-04 (@claude workflow message UX polish; latent Vale-checkout bug surfaced)
+
+### Trigger
+
+After S24 committed, Cam asked for five fit-and-finish items on the @claude workflow surfaces:
+
+1. Lead `@claude` workflow messages with a static Claude logo, not 🤖.
+2. Use the spinner GIF on the "first review being made" comment.
+3. Stop terminating the first-review progress comment as "Review updated" (reads strangely on a fresh PR).
+4. Attribute terminal messages to the requester (`Review updated on @CamSoper's request.`) so a GitHub notification fires.
+5. Rename pinned-comment H2 from `## Claude Review` to `## Quality Review`.
+
+### Three decisions locked in via AskUserQuestion
+
+- **Item 1: dropped.** No CDN-stable static-logo asset exists in the spinner's style/proportions. The off-the-shelf `claude-code-action` only embeds the spinner — terminal/static states are plain text. Mirrored that convention. Tried the `claude[bot]` GitHub App avatar (`avatars.githubusercontent.com/in/1236702`) but Cam rejected it: "sized all wrong, not the same style. If the official action doesn't use a static image, then neither should we."
+- **Item 4 mechanism: delete-and-repost on terminal state.** GitHub does NOT fire notifications when an existing comment is edited to add a mention; only on creates. So the finalize step must `gh api -X DELETE` the spinner CLAUDE_PROGRESS comment and post a fresh terminal one. Confirmed with Cam after he flagged the notification-firing intent.
+- **Item 4 errors-too:** success AND error states both attributed (the requester needs to know "your request failed" too).
+- **Item 3 (initial review):** delete the progress comment on success for both synchronize and #new-review-dispatched paths. Pinned review is the artifact.
+
+### Architecture
+
+**`claude-code-review.yml`:**
+
+- Spinner GIF on the `Post progress signal` body (`<img src="...5ac382c7..." width="16">`) — same pattern claude-update.yml has used since S22.
+- Finalize step's success branch deletes (was: edit). Cancelled/skipped already deleted. Failure branch keeps the static `🤖 Review errored. …` edit.
+
+**`claude-update.yml`:**
+
+- Finalize step refactored to delete-and-repost. Success → delete spinner + post fresh `🤖 Review updated on @<author>'s request.` Error → delete + post `🤖 @<author> — review errored. Mention @claude #update-review again to retry.` Cancelled/skipped → delete only.
+- `<author>` from `${{ steps.check-access.outputs.author }}` (already a step output).
+
+**`claude-new.yml`:**
+
+- Dispatcher confirmation comment now @-mentions the author: `🤖 @<author> — pinned review cleared; regenerating from scratch.`
+- Added `author=$AUTHOR` step output to `check-access` (was a local var only).
+- The dispatched run's terminal state stays silent on success (Item 3); the dispatcher's start-of-run @-mention is the only ping for #new-review.
+
+**`output-format.md`** line 13: H2 renamed `## Claude Review` → `## Quality Review`. `<!-- CLAUDE_REVIEW N/M -->` marker unchanged (internal handle keyed by `pinned-comment.sh`). Other "Claude review" colloquial uses in CONTRIBUTING.md / code comments left as-is — internal prose, not user-facing rendered output.
+
+Commit: `6bc92561b7`.
+
+### End-to-end fork battery
+
+Five fixture PRs opened against `CamSoper/pulumi.docs:master` (post fork-prep sync + ESC bypass + `allowed_bots` ops commit `b204c67`):
+
+- **#122** (PR A) — small docs change, classified `review:trivial` + `review:prose-flagged`.
+- **#123** (PR B) — workhorse non-trivial PR for full reviews + mention-driven rows.
+- **#124** (PR C) — 1-line trivial fixture.
+- **#125** (PR D) — non-trivial roll-up retry (added later when Row 2 didn't trigger on PR B).
+
+| Row | Scenario | Outcome | Evidence |
+|---|---|---|---|
+| 1 | Initial review on PR #123 (synchronize → workflow_run) | ✅ | Spinner GIF rendered during run; CLAUDE_PROGRESS deleted on success (S25 Item 3); pinned heading `## Quality Review` (Item 5). Comment id `4374811950`. |
+| 2 | Per-file roll-up on PRs #123 / #125 | ⚠️ BLOCKED | Model surfaced no Vale findings — see "Bug 3" below. Render contract not exercised live. |
+| 3 | No-op commit on PR #123 → mark-stale | ✅ | Labels `claude-ran → claude-stale`; no AI call, no progress comment. |
+| 4 | `@claude #update-review` on PR #123 (load-bearing for Item 4) | ✅ | Spinner deleted; **fresh** comment created (id `4374850648`) with body `🤖 Review updated on @CamSoper's request.` Pinned timestamp `22:02:51Z → 22:15:00Z`. Notification fires because the @-mention is on a comment create, not edit. |
+| 5 | Compound dispute + roll-up survival | ⏸ SKIP | Conditioned on Row 2; the dispute mechanism itself is unchanged from S22. |
+| 6 | `@claude #new-review` on PR #123 | ✅ | Dispatcher posted `🤖 @CamSoper — pinned review cleared; regenerating from scratch.` (id `4374858113`, fresh — notification fires). Pinned cleared. Dispatched CCR posted new pinned `## Quality Review` (id `4374881003`); no second terminal comment. |
+| 7 | TRIAGE_PROSE category render on PRs #122 / #124 | ✅ | Renders `[style] difficulty qualifier`, `[style] substitution`, `[style] wordiness`, etc. Zero rule-name leakage. |
+| 8 | Failure-path attribution | ⏸ SKIP | Branch path identical to Row 4 success branch; opportunistic. |
+
+Five PASS, two skip, **one blocked by Bug 3**.
+
+### Bug 3 (latent since Session 21): Vale-checkout race on three of four trigger paths
+
+Roll-up retry on PR #125 produced a CCR pinned review with `0` style nits despite my fixture having 7 deliberately-wordy phrases. Four rounds of in-comment diagnostics (`@claude #update-review` with explicit `cat .vale-findings.json` / `wc -c` / `jq -r '.[][] | "L\(.Line) \(.Check)"'` instructions) revealed:
+
+- Runner's `.vale-raw.json` had **19 findings, all on lines 22-785** — pre-existing, master-side content. Zero on lines 794-829 (the PR's added section).
+- Runner's `.vale-findings.json` was 2 bytes (`[]`) — filter correctly intersected zero overlap with PR-added lines.
+- My local Vale on the same file (with the section) found 7 findings on lines 798-826 — proves the Vale config and rules are correct.
+
+**Root cause:** `actions/checkout@v6` with no `ref:` parameter checks out the workflow's `github.ref`. The default ref differs by trigger event:
+
+| Workflow | Trigger event | Default checkout | Vale sees PR content? |
+|---|---|---|---|
+| `claude-triage` | `pull_request: opened, ready_for_review` | PR merge ref | ✅ yes |
+| `claude-code-review` | `pull_request: synchronize` | PR merge ref | ✅ yes |
+| `claude-code-review` | `workflow_run` (chained from triage) | default branch | ❌ no |
+| `claude-code-review` | `workflow_dispatch` (from #new-review) | default branch | ❌ no |
+| `claude-update` | `issue_comment` | default branch | ❌ no |
+
+Initial review on a fresh PR fires through `workflow_run` (triage chains into CCR) — Vale-blind. `#update-review` fires through `issue_comment` — Vale-blind. `#new-review` fires through `workflow_dispatch` → CCR — Vale-blind.
+
+The only path Vale findings can currently reach a pinned review is **synchronize** — which only happens on commit pushes to an already-pinned PR. So Vale findings have effectively never landed in a pinned review on a fresh PR or on any mention-driven refresh since S21.
+
+TRIAGE_PROSE works because triage's `pull_request` event uses the merge ref. That's the only path that's been working.
+
+**Fix shape (Session 26):** explicit `ref:` parameter on each broken workflow's checkout step. claude-update's `issue_comment` payload includes the PR number → resolve head SHA via `gh pr view ${PR} --json headRefOid`. claude-code-review's workflow_run payload includes the originating workflow's `head_sha` (the triage run's checkout SHA, which IS the PR head); workflow_dispatch path can take a `head_sha` input from the dispatcher. ~3-4 lines of YAML per workflow.
+
+### Soft observation
+
+`claude-update.yml`'s delete-and-repost pattern leaves the *previous run's* terminal CLAUDE_PROGRESS comment in place — finalize only deletes the comment whose id this run posted. Over many `#update-review` cycles, prior `🤖 Review updated on @CamSoper's request.` comments accumulate. Worth a follow-up: at the start of each run, prune all prior `<!-- CLAUDE_PROGRESS -->` comments before posting the new spinner. Mirrors `pinned-comment.sh clear` for review comments.
+
+### Items NOT shipped (carried into Session 26)
+
+1. **Vale-checkout fix across the three broken trigger paths** (Bug 3 above) — top of next session.
+2. **Roll-up retest** — blocked on the checkout fix. Once Vale findings reach the model, validate that >5 nits/file collapses under `<details>` with the kind+count summary per spec.
+3. **CLAUDE_PROGRESS cleanup of prior terminal comments** — accumulation surface introduced by S25 Item 4.
+4. **Cam's "quick `/docs-review`" variant** (S18) — still open.
+
+### Methodology / repeatable patterns
+
+- **Pushback-driven scope refactor.** Cam's two-step pushback on the table mirror in S24 ("we don't need this") forced a deeper refactor that ended up with a single source of truth (filter Python) and zero context cost on CI loads. Initial plan was right-shaped but Cam's instinct for "where's the duplication?" found a better factoring. Worth keeping the AskUserQuestion gate in place and treating "I don't think we need this" as an invitation to refactor before approving.
+- **The standing-page-cam pattern.** S25's prompt installed a standing rule: page Cam at task end / blocker / checkpoint. Worked cleanly throughout the battery — page on each phase boundary kept Cam in the loop without him needing to poll.
+- **End-to-end battery surfaces transport-layer bugs.** The Vale category rename and roll-up render look correct in the spec, in the filter Python, and in the prompt — three separate verification surfaces that all passed locally. The actual failure mode (runner's checkout missing PR content) was only visible by running the full pipeline against a real fork PR. Reinforces the S23 lesson: dispatcher / chained-workflow paths need e2e tests; unit verification of YAML and prompt content can't catch identity / context bugs in the actor / checkout layers.
+- **Multi-round in-comment diagnostics work.** Four rounds of `@claude #update-review` with progressively more specific bash directives (run X, run Y, then run Z) walked from "model isn't rendering" → "file is empty" → "raw has 19" → "all lines pre-existing → bug is checkout". The model accepts and executes verbatim bash directives in mention bodies; fits the existing compound-mention contract.
+
+### Files changed (Session 25 substance)
+
+Upstream `pr-review-overhaul`:
+
+- `.github/workflows/claude-code-review.yml` — spinner on Reviewing line; success-branch deletes (Items 2, 3).
+- `.github/workflows/claude-update.yml` — delete-and-repost terminal state with @-attribution (Item 4).
+- `.github/workflows/claude-new.yml` — dispatcher confirmation @-mentions author + `author` step output (Item 4).
+- `.claude/commands/docs-review/references/output-format.md` — H2 rename (Item 5).
+- `SESSION-NOTES.md` — Session 24 + Session 25 entries (this commit).
+
+Cam fork master only (lifecycle: wiped on every prep sync):
+
+- `.github/workflows/claude.yml`, `claude-update.yml`, `claude-new.yml` — drop ESC step; PULUMI_BOT_TOKEN → secrets.GITHUB_TOKEN.
+- `.github/workflows/claude-code-review.yml` — `allowed_bots: ${{ github.event_name == 'workflow_dispatch' && '*' || '' }}` clause.
+
+Commit: `6bc92561b7` (S25 substance), `b204c67` (fork ops on cam-fork master).
+
+### Memory updates
+
+None. Session-25 substance is branch state. Bug 3 is a real upstream bug worth fixing in S26, not a permanent project-state fact.
