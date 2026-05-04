@@ -183,7 +183,7 @@ jobs:
               python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
                 --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
                 || echo '[]' > .vale-findings.json
-              VALE_CONCERNS=$(jq -r '.[] | "\(.file):\(.line) — \(.rule): \(.message)"' .vale-findings.json)
+              VALE_CONCERNS=$(jq -r '.[] | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
             fi
           fi
 

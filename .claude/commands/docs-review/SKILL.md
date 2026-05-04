@@ -32,7 +32,16 @@ Walk these steps in order; stop at the first that yields a scope.
 
 Route each file to a domain via `docs-review:references:domain-routing`, then apply that domain's criteria plus `docs-review:references:shared-criteria`. Render the output per `docs-review:references:output-format`.
 
-For files under `content/docs/` or `content/blog/`, also run `vale --no-exit --output=JSON <files>` and surface its findings under ⚠️ Low-confidence prefixed `[style]`. If `vale --version` fails or `vale` is not on PATH, skip the Vale step with a one-line note (e.g., "Skipping Vale: not installed. Install via `mise install` to enable style nits.") and continue the review without Vale findings — don't hard-fail.
+For files under `content/docs/` or `content/blog/`, also run Vale and surface its findings under ⚠️ Low-confidence as `[style] <category> — <message>` per the render contract in `docs-review:references:output-format`. Pipe through the categorize filter so the JSON has a deterministic `category` field — never surface the raw rule name:
+
+```bash
+vale --no-exit --output=JSON <files> > /tmp/vale-raw.json
+python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+    --in /tmp/vale-raw.json --out /tmp/vale-findings.json
+# Render bullets from /tmp/vale-findings.json: use .category, not .rule.
+```
+
+Omit `--pr` in interactive mode (no diff to intersect; the filter accepts all findings, categorizes, caps). If `vale --version` fails or `vale` is not on PATH, skip the Vale step with a one-line note (e.g., "Skipping Vale: not installed. Install via `mise install` to enable style nits.") and continue the review without Vale findings — don't hard-fail.
 
 For PR-number invocations:
 

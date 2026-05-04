@@ -48,7 +48,7 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 
-If `.vale-findings.json` exists in the workspace, append each entry to ⚠️ Low-confidence prefixed `[style]`, citing line + rule + Vale's message. The workflow has already filtered to PR-introduced lines and capped the count.
+If `.vale-findings.json` exists in the workspace, append each entry to ⚠️ Low-confidence as `[style] <category> — <message>`, citing the line. Use the `category` field; never surface the `rule` field. Per-file roll-up summary (>5 nits) and the full render contract live in `docs-review:references:output-format`. The workflow has already filtered to PR-introduced lines and capped the count.
 
 ### 3. Build the output
 

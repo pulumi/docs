@@ -45,9 +45,23 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 - **🚨 Outstanding** is the bucket that says "the author must address this before a human approves the PR."
 - **⚠️ Low-confidence** is for findings where the reviewer is <80% sure *or* where the finding is "worth human attention but not blocking" (e.g., infra risk flags per `docs-review:references:infra`). Don't pad with hedging on findings you're confident in.
-  - **Style nits (Vale).** When `.vale-findings.json` is present, render each entry as a bullet prefixed `[style]` citing the line, rule name, and Vale's message. Examples:
-    - `line 42: [style] Pulumi.Substitutions — "click" → "select"`
-    - `line 87: [style] Google.Passive — In general, use active voice instead of passive voice ('is created').`
+  - **Style nits.** When `.vale-findings.json` is present, render each entry as a bullet `[style] <category> — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Examples:
+    - `line 42: [style] substitution — Use 'select' instead of 'click'.`
+    - `line 87: [style] passive voice — Use active voice instead of passive voice ('is created').`
+
+    **Per-file roll-up summary.** When a single file has more than 5 style nits, render them under a `<details>` block whose summary names the count and a kind breakdown:
+
+    ```markdown
+    <details>
+    <summary>content/docs/foo.md (8 style nits: 4 wordiness, 2 punctuation, 1 passive voice, 1 substitution)</summary>
+
+    - line 12: [style] wordiness — …
+    - line 14: [style] wordiness — …
+    ...
+    </details>
+    ```
+
+    Order kinds by count descending; ties alphabetical. Files with ≤5 nits render inline (no `<details>`); the breakdown only appears when collapsed.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
