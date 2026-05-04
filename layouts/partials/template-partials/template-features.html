@@ -53,7 +53,7 @@
 
         {{ if $image }}
         <div class="features-image">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg") }}
         </div>
         {{ end }}
     </div>

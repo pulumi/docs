@@ -54,7 +54,7 @@ Parameters:
         </div>
         {{ if $image }}
         <div class="section-header-split-image flex justify-center xl:justify-end">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-full rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full max-w-full rounded-lg") }}
         </div>
         {{ end }}
     </div>

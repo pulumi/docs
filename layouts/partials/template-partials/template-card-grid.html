@@ -26,7 +26,7 @@
 
             {{ if .image }}
                <div class="flex items-center justify-center p-8 my-auto">
-                  <img src="{{ .image }}" alt="{{ .image_alt }}" class="h-auto max-h-64 object-contain">
+                  {{ partial "fingerprinted-img.html" (dict "src" .image "alt" .image_alt "class" "h-auto max-h-64 object-contain") }}
                </div>
             {{ end }}
 
@@ -46,7 +46,7 @@
         <div class="flex flex-col rounded-2xl border border-violet-300 overflow-hidden">
             {{ if .image }}
             <div class="flex items-center justify-center">
-                <img src="{{ .image }}" alt="{{ .image_alt }}" class="w-full h-auto object-cover">
+                {{ partial "fingerprinted-img.html" (dict "src" .image "alt" .image_alt "class" "w-full h-auto object-cover") }}
             </div>
             {{ end }}
             <div class="p-8 flex flex-col flex-1">
