@@ -29,7 +29,7 @@
         {{- if templates.Exists (printf "partials/icons/%s.html" $name) -}}
             {{- partial (printf "icons/%s" $name) . -}}
         {{- else -}}
-            {{- errorf "icon: %q (weight=%s) not in sprite manifest. Re-run make ensure or add to FORCE_INCLUDE in scripts/build-icon-sprite.js." $name $weight -}}
+            {{- errorf "icon: %q (weight=%s) not in sprite manifest. Re-run make sync-icons or add to FORCE_INCLUDE in scripts/build-icon-sprite.js." $name $weight -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

@@ -17,11 +17,15 @@ clean:
 .PHONY: ensure
 ensure: clean
 	./scripts/ensure.sh
+	$(MAKE) sync-icons
+	./scripts/fetch-openapi-spec.sh
+	$(MAKE) build-assets
+
+.PHONY: sync-icons
+sync-icons:
 	node scripts/sync-icons.js
 	node scripts/normalize-custom-icons.js
 	node scripts/build-icon-sprite.js
-	./scripts/fetch-openapi-spec.sh
-	$(MAKE) build-assets
 
 .PHONY: update-repos
 update-repos:
