@@ -23,7 +23,7 @@ social:
     linkedin: |
         Manufacturing dark factories run with the lights off. No humans on the floor, just machines moving parts through the line.
 
-        The same pattern is now showing up in software. Stripe is shipping 1,300 AI-authored pull requests a week. A HackerNoon writeup from February laid out a five-level autonomy ladder. BCG calls it the "dark software factory."
+        The same pattern is now showing up in software. Three engineers at StrongDM shipped about 32,000 lines of production code without writing or reviewing any of it. Stripe's Minions ship over 1,300 pull requests a week. Dan Shapiro put out a five-level autonomy ladder in January, and BCG followed with a piece naming it the dark software factory.
 
         Almost all of that material is about application code. Infrastructure is the harder problem: blast radius, drift, irreversible actions, multi-region state. The interesting question is what an end-to-end dark factory looks like when the factory floor is your stack state, and where the gates have to be tighter to keep a Saturday morning from becoming an incident.
 
@@ -36,7 +36,7 @@ social:
 
 The original dark factory was Fanuc's robotics plant in Japan, where the lights are off because nobody is on the floor. Robots build robots. Parts move through the line for weeks at a time without a person walking past them.
 
-The same pattern is now showing up in software. Three engineers at StrongDM [shipped 32,000 lines of production code](https://www.strongdm.com/blog/the-strongdm-software-factory-building-software-with-ai) without writing or reviewing any of it. Stripe is reportedly generating over [1,300 AI-authored pull requests per week](https://www.mindstudio.ai/blog/what-is-a-dark-factory-ai-coding). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG followed with a piece calling [the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory) the next phase of enterprise software delivery.
+The same pattern is now showing up in software. Three engineers at StrongDM [shipped roughly 32,000 lines of production code](https://simonwillison.net/2026/Feb/7/software-factory/) without writing or reviewing any of it. Stripe's "Minions" agent system [now generates over 1,300 pull requests every week](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG put out [a piece calling it the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory).
 
 Almost every public writeup so far is about application code. The harder question is what this looks like for infrastructure.
 
@@ -74,7 +74,7 @@ flowchart LR
 
 The single most important rule is that Code Generation and Validation must be completely isolated. The generator never sees the acceptance scenarios. A separate evaluator does, and it judges the generator's output against scenarios the generator could not have memorized.
 
-The reason is sycophancy. LLMs are too eager to agree with their own prior turns and too willing to declare victory on something they just produced. Without isolation, the same model that wrote the change is the one telling you it's fine. As StrongDM put it, a test that lives in the codebase can be lazily rewritten to match the code. It isn't malice; it's the agent doing exactly what it was asked, badly. The wall is what stops that.
+The reason is sycophancy. LLMs are too eager to agree with their own prior turns and too willing to declare victory on something they just produced. Without isolation, the same model that wrote the change is the one telling you it's fine. The practical concern is direct: a test stored in the same codebase as the implementation will get lazily rewritten to match the code, not the other way around. It isn't malice; it's the agent doing exactly what it was asked, badly. The wall is what stops that.
 
 StrongDM's pattern for this is **holdout scenarios**: plain-English BDD acceptance tests stored where the generator cannot reach them. Each scenario runs three times against an ephemeral deployment, two of three must pass, and the overall pass rate has to clear 90% before the change moves forward. If the generator fails, it gets a one-line failure message ("SQL Injection Detection failed: endpoint returned 500"), not the scenario text. It cannot game the test.
 
@@ -104,7 +104,7 @@ The wall is the part that takes a week to get right. You write five plain-Englis
 
 ## A four-phase rollout
 
-This is the same path StrongDM walked for application code, with the gates tightened.
+This is the same path the application-code factories walked, with the gates tightened.
 
 ### Phase 1: better context, this afternoon
 
@@ -116,7 +116,7 @@ Pick one stack with a small blast radius. A review-stack lifecycle is ideal. Wri
 
 ### Phase 3: take the human out of the merge
 
-Only after StrongDM's three measurable gates hold over twenty PRs (scenario pass rate above 90%, false positive rate below 5%, human override rate below 10%) flip auto-apply on for that one stack. Add a weekly drift sweep that goes through the same scenario gate as everything else.
+Only after the three measurable gates hold over twenty PRs (scenario pass rate above 90%, false positive rate below 5%, human override rate below 10%) flip auto-apply on for that one stack. Add a weekly drift sweep that goes through the same scenario gate as everything else.
 
 ### Phase 4: lights out
 
@@ -124,7 +124,7 @@ Expand the auto-apply flag to every stack with strong scenario numbers. Wire you
 
 ## What could go wrong
 
-The validator approves a bad change. This is the obvious one. The mitigation is the one StrongDM uses: triple-run with a 2-of-3 threshold, a 90% gate over the run set, a human audit of the first fifty auto-applied changes, and your existing policies still run after the validator says yes.
+The validator approves a bad change. This is the obvious one. The standard mitigation is layered: triple-run each scenario with a 2-of-3 threshold, a 90% gate over the run set, a human audit of the first fifty auto-applied changes, and your existing policies still run after the validator says yes.
 
 The agent gets a destroy permission it shouldn't have. There's a class of operations that should not sit in the autonomous loop yet: dropping a database, deleting a hosted zone, rotating a root key, anything that crosses a regulated data boundary. Scope what each agent identity can do at the credential layer, require human approval for anything destructive, and start every stack at Review mode. Tag changes, security-group adjustments, and instance resizes can run autonomously today. Release-branch cuts and config promotions can probably run by next quarter. The destructive class earns its way in over months.
 
