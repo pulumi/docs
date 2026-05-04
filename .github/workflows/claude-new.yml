@@ -47,9 +47,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Fetch secrets from ESC
-        id: esc-secrets
-        uses: pulumi/esc-action@v1
 
       - name: Check repository write access
         id: check-access
@@ -168,7 +165,7 @@ jobs:
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.pr_number != ''
         env:
-          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh workflow run claude-code-review.yml \
             --repo "${{ github.repository }}" \
@@ -178,9 +175,3 @@ jobs:
             -f dispatcher_comment_id="${{ steps.post-confirmation.outputs.comment_id }}" \
             -f mention_author="${{ steps.check-access.outputs.author }}"
 
-env:
-  ESC_ACTION_OIDC_AUTH: true
-  ESC_ACTION_OIDC_ORGANIZATION: pulumi
-  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
-  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
-  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

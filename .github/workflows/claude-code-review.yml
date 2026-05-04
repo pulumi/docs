@@ -748,6 +748,7 @@ jobs:
           # invocation; this env entry covers nested Bash invocations.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         with:
+          allowed_bots: ${{ github.event_name == 'workflow_dispatch' && '*' || '' }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
