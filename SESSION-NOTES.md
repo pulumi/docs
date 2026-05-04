@@ -2218,3 +2218,135 @@ Commit: `6924b51c49` (this session's substance), `<this commit>` (Session 22 not
 ### Memory updates
 
 None. All Session-22 substance is project-state specific to this branch — workflow shape, hashtag conventions, dispatcher architecture — and belongs in this file rather than auto-memory.
+
+## Session 23 — 2026-05-04 (end-to-end fork test battery; two latent bugs surfaced and fixed)
+
+### Trigger
+
+Top of Session-22 backlog: end-to-end test battery. Cam closed all prior fork PRs; this session opened fresh fixtures and ran a 12-row battery covering every code path the hashtag-driven router introduced.
+
+### Fixtures opened
+
+Six PRs on `CamSoper/pulumi.docs`:
+
+- **#116** (carry-over) — JumpCloud SAML SSO integration guide (docs prose-heavy).
+- **#117** (carry-over) — Executable plugin guide and Packages restructure (docs prose-heavy).
+- **#118** (carry-over) — Neo Integration Catalog launch blog post (blog).
+- **#119** (new) — `Click → Select` 1-line typo fix in `idp/concepts/services.md` (designed to classify `review:trivial`).
+- **#120** (new) — Limitations section appended to `idp/concepts/no-code-stacks.md` with a deliberate `followign` typo on file line 34 (compound-mention test target).
+- **#121** (new) — Recommended deployment pattern section in `idp/concepts/backstage-plugin.md` using "Always invoke …" guidance the reviewer would plausibly flag (dispute test target).
+
+Carry-over rebases used `scratch/2026-05-01-live-comparison-v2/rebase-fixtures.sh` selectively (just the three needed) onto fresh master sync.
+
+### Battery results
+
+| Row | Scenario | Outcome | Evidence |
+|---|---|---|---|
+| 1 | Initial review on docs PR | ✅ | `claude-code-review.yml` ran on all 5 non-trivial PRs. PR #116 surfaces 2 `[style]` Vale bullets, PR #117 surfaces 35. `review:claude-ran` set, no `review:claude-working` anywhere. |
+| 2 | Bare `@claude` (off-the-shelf) | ✅ (after fork bypass) | `Claude Code` run 25340806517 success; action posted its own tag-mode tracking comment "Claude finished … in 20s" on PR #116, edited live during the run (created 20:07:25, updated 20:08:01); pinned review untouched. |
+| 3 | `#update-review` after a new commit | ✅ | Push to PR #116 fired mark-stale (label flip); `Claude Code (update-review)` refreshed pinned at 20:25:56Z; review history gained `re-reviewed after fix push (1 new commit, e24648c)` entry; label flipped back to `claude-ran`. |
+| 4 | Compound mention "fix typo on line 34 and refresh" | ✅ | Model fixed `followign → following` in a new commit pushed to PR #120 (commits 1→2; head 06050b5c → 165082c0); pinned re-rendered at 20:10:00Z; original Outstanding typo moved to ✅ Resolved. |
+| 5 | Dispute a finding | ✅ | PR #121 Outstanding count went 1→0; "Always invoke" finding moved to ✅ Resolved with strikethrough on the original claim and "concede: @CamSoper confirmed … intentional team guidance … Deferring to repo authority"; review history records the dispute reasoning. No separate `gh pr comment` was posted (response folded INTO finding). |
+| 6 | Manually delete 1/M then `#new-review` | ✅ | Deleted CLAUDE_REVIEW 1/1 (id 4374035319) on PR #118; `Claude Code (new-review)` dispatcher posted "🤖 Pinned review cleared; regenerating from scratch…" at 20:21:14; dispatched `Claude Code Review` (workflow_dispatch) succeeded; new pinned review with new comment ID (4374227892) posted at 20:24:38Z. |
+| 7 | Trivial PR + `#new-review` (force=true) | ✅ (after dispatcher fix) | PR #119 ends with **both** `review:trivial` AND `review:claude-ran` — `force=true` did bypass the trivial-skip and the dispatched Opus review actually ran. |
+| 8 | Push commit, no mention (mark-stale) | ✅ | Push to PR #118 fired `Claude Code Review` mark-stale job at 19:56:38; label flipped `claude-ran → claude-stale`. No AI call. No CLAUDE_PROGRESS comment. |
+| 9 | Compound hashtag `#update-review #new-review` | ✅ | On PR #117: `Claude Code` skipped, `Claude Code (update-review)` skipped (`!contains(...,'#new-review')` excluded itself), `Claude Code (new-review)` succeeded. Precedence rule confirmed in Actions tab. |
+| 10 | Non-write-access mention | ⏸ Deferred | I have no second account; the access-check delta is purely in the `gh api collaborators/$AUTHOR/permission` call. Cam can validate manually if desired. |
+| 11 | Vale graceful-skip locally | ✅ | `vale --version` exits 127 with default (non-mise) PATH; SKILL.md:35's clause unambiguously routes to the documented one-line skip note. No hard-fail. |
+| 12 | Tag-mode tracking comment shows per-tool-call updates | ✅ (by inference) | The action's `mcp__github_comment__update_claude_comment` tool is the live-update mechanism — architecturally non-optional. Run 25340806517 logs show 33+ tool-related events; comment was edited at least once during the run. Live intermediate frames aren't preserved retroactively, but the mechanism is in use. |
+
+11 PASS, 1 deferred. No FAIL rows after the two bug fixes below.
+
+### Two latent bugs surfaced and fixed
+
+**Bug 1: ESC bypass evaporates on every fresh `pr-review-overhaul → cam-fork:master` sync.**
+
+Cam fork has no ESC trust policy on `github-secrets/pulumi-docs`. Issue_comment-triggered workflows fail at `pulumi/esc-action@v1` with `Invalid response from token exchange 401: Unauthorized`. Cam shipped commit `01de922a71` ("ops: bypass ESC for re-entrant claude on cam fork") on 2026-04-30 to address it: drop the ESC fetch step, fall back to `secrets.GITHUB_TOKEN`. That commit was on cam fork master only, not in the upstream branch. This session's prep step (`git push --force cam-fork CamSoper/pr-review-overhaul:master`) overwrote the fork master, wiping the bypass — same as it would on every prior session that did the same prep.
+
+**Fix (fork ops only):** A new commit on cam fork master applies the bypass to all three issue_comment-triggered workflows simultaneously: `claude.yml`, `claude-update.yml` (new this session), `claude-new.yml` (new this session). All three lose the `Fetch secrets from ESC` step and replace `${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}` with `${{ secrets.GITHUB_TOKEN }}`. Companion change in the same commit: `claude-code-review.yml` gains `allowed_bots: ${{ github.event_name == 'workflow_dispatch' && '*' || '' }}` (see Bug 2 below — the fork can't reach the upstream-side fix). Whole thing is fork-ops, never ships upstream; gets evaporated by every fresh sync (same lifecycle as 01de922a71).
+
+**Bug 2: `claude-new.yml`'s dispatcher used `secrets.GITHUB_TOKEN` for `gh workflow run`, making the dispatched run's actor `github-actions[bot]` (type=Bot) — which `claude-code-action@v1` rejects by default with `"Workflow initiated by non-human actor: github-actions (type: Bot). Add bot to allowed_bots list or use '*' to allow all bots"`.**
+
+Latent since `#new-review` was introduced in Session 22 — Session 22 never ran the dispatcher end-to-end. Not fork-specific in nature (would manifest the same way on `pulumi/docs:master`), but masked on the fork by Bug 1's ESC failure landing first.
+
+**Fix (upstream — commit `52356f4298`):** Switch the dispatch step's `GH_TOKEN` from `secrets.GITHUB_TOKEN` to `steps.esc-secrets.outputs.PULUMI_BOT_TOKEN`. `pulumi-bot` is a User account (not a Bot in GitHub App sense), so the dispatched workflow_dispatch run's actor passes the action's bot check naturally. Other `gh` calls in the same workflow (clear pinned, post confirmation comment) keep using `GITHUB_TOKEN` — they don't go through the bot-actor check.
+
+**Companion fork-side fix:** The cam fork can't reach `PULUMI_BOT_TOKEN` (no ESC trust). Instead, on the fork, `claude-code-review.yml` gets `allowed_bots: ${{ github.event_name == 'workflow_dispatch' && '*' || '' }}` — permissive only on the workflow_dispatch trigger, where the dispatcher is the only legitimate caller. The `workflow_run` and `pull_request` paths (Dependabot's normal route) keep the default rejection. Three pre-existing guards already filter Dependabot before the action (`claude-triage.yml:23`, `claude-code-review.yml:45`, the `bot-author` SKIP at line 175), so this fork-side relaxation has no effective surface for misuse.
+
+### Why both fixes are needed
+
+| Path | Trigger event | Dispatcher token | Action's actor check | Verdict |
+|---|---|---|---|---|
+| **Upstream** before fix | workflow_dispatch (from claude-new.yml) | GITHUB_TOKEN | github-actions[bot] = Bot → reject | ❌ |
+| **Upstream** after `52356f4298` | workflow_dispatch (from claude-new.yml) | PULUMI_BOT_TOKEN | pulumi-bot = User → accept | ✅ |
+| **Fork** before bypass | claude-update.yml's ESC fetch | (n/a — fails at ESC) | (never reaches action) | ❌ |
+| **Fork** after bypass | (no ESC; dispatcher uses GITHUB_TOKEN) | github-actions[bot] = Bot | rejected unless `allowed_bots` | ❌ |
+| **Fork** after bypass + `allowed_bots` clause | workflow_dispatch (from claude-new.yml) | github-actions[bot] | `allowed_bots: '*'` (workflow_dispatch only) → accept | ✅ |
+
+### Session 22 oversight: `review:claude-working` still in `scripts/labels/labels.json`
+
+Session 22 dropped `review:claude-working` from `.github/labels-pr-review.md` (the documentation/spec) and from all workflows, but missed `scripts/labels/labels.json` (the script's authoritative config). Without this fix, running `sync-labels.sh` against any repo would re-create the dropped label, defeating the cleanup. Fixed in commit `f4951563bd`. The label was deleted directly from the fork via `gh label delete` (the script's `--prune` only deletes rename-collision orphans, not labels-not-in-config).
+
+### Items NOT shipped (carried into Session 24)
+
+1. **Row 10 (non-write-access mention)** — needs a second GitHub account. Skill mechanism is the same access check as csoper's mentions; only the negative branch differs. Cam can validate manually if desired.
+2. **Screenshots of rows 2 / 3 / 6** — for the eventual `pulumi/docs:#18680` Slack/Notion writeup. I can't capture screenshots; Cam to do this manually from the fork PR timelines (links in the table above are runs/comments).
+3. **Push `pr-review-overhaul` upstream commits** — `52356f4298` (PULUMI_BOT_TOKEN dispatcher fix) and `f4951563bd` (labels.json cleanup) are committed locally but not pushed to origin. Cam to review and push.
+4. **`scripts/labels/sync-labels.sh` enhancement** — currently `--prune` only deletes rename-collision orphans. A future improvement: also flag (and optionally delete) labels present in the repo but absent from `labels.json`. Out of scope for this session.
+
+### Methodology / repeatable patterns
+
+- **The "stop, capture, propose" rule paid off.** When the first round of mentions failed at ESC, I had a draft fix (add `secrets.ANTHROPIC_API_KEY` fallback) ready to push. Stopping and asking "how have previous test batteries handled this?" surfaced the existing 04-30 bypass commit — the right pattern was already designed for this exact case. Pushing the draft fix would have created a divergent third pattern.
+- **Cam-pushback patterns this session:**
+  - "How have previous test batteries handled this? Surely there's history in the workflow files." — caught me about to invent a fix when one already existed in git history. Lesson: when a problem looks new, search commit history for the pattern before designing a workaround.
+  - "Would that cause dependabot to trigger reviews?" — turned `allowed_bots: '*'` from a blunt fix into a workflow_dispatch-gated one. Three independent pre-existing Dependabot guards meant the broad form would have been safe in practice, but the gated form is honest about the contract: bots may dispatch only via workflow_dispatch, never via workflow_run.
+  - "At runtime, the bot dispatching will be pulumi bot, I believe. Does that make a difference?" — caught me about to ship a fork-only `allowed_bots` change as if it were the upstream fix. The actual upstream fix is the `PULUMI_BOT_TOKEN` dispatcher swap; `allowed_bots` is the fork-only fallback. Two different fixes for two different operating contexts.
+- **Two-fix architecture for fork vs. upstream divergence.** When a workflow has features that only work on the upstream repo's secret/identity infrastructure (ESC trust, PULUMI_BOT_TOKEN), the fork-only ops commit owns the fallback path; the upstream branch owns the proper fix. Both forks of the design exist simultaneously, with the lifecycle of fork-ops commits being "wiped on every prep sync, re-applied each session."
+- **Latent bugs in dispatcher paths only show up under end-to-end testing.** The `#new-review` dispatcher worked fine in isolation (the YAML was correct), but the *dispatched run's* identity propagation is the actual contract being tested. Unit-level inspection of the dispatcher YAML can't catch this. Reinforces the value of the e2e battery.
+
+### Backlog after Session 23
+
+Active:
+
+1. **Push upstream commits** (`52356f4298`, `f4951563bd`) — Cam reviews, then merges/pushes.
+2. **Upstream `domain:website` + full label deploy** — pre-requisite for #18680 merge.
+3. **Maintainer `pr-review` walkthrough on a real PR** (Session-18 #1).
+4. **Trivial-cap edge case soft-watch** — PR 18573 shape.
+5. **Investigate 5 lost ⚠️ catches** (Session 13 #5).
+6. **Re-benchmark on a fresh production sample** after `domain:website` deploys upstream.
+7. **`update.md` raise-missed-duplicate code path** — defer.
+8. **Non-determinism baseline + skeptic sub-agent** — paired.
+9. **Boundary-fixture name audit** — old.
+10. **Cam's "quick `/docs-review`" variant** (Session-18) — still open.
+11. **`scripts/labels/sync-labels.sh` enhancement** — flag/delete labels-not-in-config (S23 #4).
+12. **Row 10 manual validation** — Cam can run from a non-write-access account if/when convenient.
+13. **Battery screenshots** for #18680 writeup (S23 #2).
+
+Closed this session:
+
+- **End-to-end fork test battery** (S22 #1) → ✅ shipped (11 PASS / 1 deferred / 0 FAIL after fixes).
+- **`claude-new.yml` bot-actor rejection** → ✅ fixed upstream (`52356f4298`).
+- **`scripts/labels/labels.json` Session 22 oversight** → ✅ fixed upstream (`f4951563bd`).
+- **`review:claude-working` retired from cam fork** → ✅ deleted directly via `gh label delete`.
+
+### Files changed (Session 23 substance)
+
+Upstream `pr-review-overhaul`:
+
+- `.github/workflows/claude-new.yml` — dispatcher GH_TOKEN switched to `steps.esc-secrets.outputs.PULUMI_BOT_TOKEN`. (`52356f4298`)
+- `scripts/labels/labels.json` — `review:claude-working` entry removed. (`f4951563bd`)
+- `SESSION-NOTES.md` — this entry.
+
+Cam fork master only (lifecycle: wiped on every fresh sync):
+
+- `.github/workflows/claude.yml`, `claude-update.yml`, `claude-new.yml` — drop the `Fetch secrets from ESC` step; replace `PULUMI_BOT_TOKEN` reference with `secrets.GITHUB_TOKEN`.
+- `.github/workflows/claude-code-review.yml` — `allowed_bots: ${{ github.event_name == 'workflow_dispatch' && '*' || '' }}` clause added to the `claude-code-action@v1` block.
+
+Fork PRs left for posterity:
+
+- `CamSoper/pulumi.docs#116`, `#117`, `#118` (carry-over fixtures).
+- `#119`, `#120`, `#121` (new test PRs — typo fix, compound-mention, dispute).
+
+### Memory updates
+
+None. All Session-23 substance is project state for this branch (workflow design, fork-ops lifecycle, hashtag-router behavior). The methodology lessons ("search git history for the pattern before designing a workaround"; "two-fix architecture for fork vs. upstream divergence") are repo-specific and live here, not in auto-memory.
