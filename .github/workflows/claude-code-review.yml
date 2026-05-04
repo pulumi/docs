@@ -343,14 +343,11 @@ jobs:
           prompt: |
             You are running in a CI environment.
 
-            Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the
-            instructions in `.claude/commands/docs-review/ci.md`.
+            Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the instructions in `.claude/commands/docs-review/ci.md`.
 
             ## Pre-computed PR metadata
 
-            The workflow has already gathered the following so you do NOT need to
-            call `gh pr view`, `git remote get-url`, or similar lookups for these
-            values. Use them directly in any `gh api` or output-formatting calls.
+            The workflow has already gathered the following so you do NOT need to call `gh pr view`, `git remote get-url`, or similar lookups for these values. Use them directly in any `gh api` or output-formatting calls.
 
             - **Repository:** `${{ steps.pr-context.outputs.repo_full }}`
             - **PR number:** `${{ steps.pr-context.outputs.pr_number }}`
@@ -368,31 +365,13 @@ jobs:
 
             ## Style findings
 
-            If `.vale-findings.json` exists and is non-empty, surface each
-            entry under ⚠️ Low-confidence as
-            `- **line N:** [style] _category_ — <message>` (bold the line
-            number, italicize the category). Use the `category` field; never
-            surface the `rule` field. **Group all style findings under a
-            `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence**
-            (single sub-heading; appears once, after any regular
-            low-confidence bullets). Immediately under the heading, render
-            `<sub>Click each filename to expand.</sub>` whenever any file
-            rolls up under `<details>` (skip the hint if every file renders
-            inline). When a single file has more than 5 style findings,
-            collapse them under `<details>` with
-            `<summary><strong>filename</strong> (<strong>N</strong> issues:
-            <strong>X</strong> kind1, <strong>Y</strong> kind2, …)</summary>`
-            — bold every numeral and use the word "issues" (not "nits").
-            Full render contract: `docs-review:references:output-format`.
-            Style findings are nags, not blockers — never put them in
-            🚨 Outstanding.
+            If `.vale-findings.json` exists and is non-empty, surface each entry under ⚠️ Low-confidence as `- **line N:** [style] _category_ — <message>` (bold the line number, italicize the category). Use the `category` field; never surface the `rule` field. **Group all style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence** (single sub-heading; appears once, after any regular low-confidence bullets). Immediately under the heading, render `<sub>Click each filename to expand.</sub>` whenever any file rolls up under `<details>` (skip the hint if every file renders inline). When a single file has more than 5 style findings, collapse them under `<details>` with `<summary><strong>filename</strong> (<strong>N</strong> issues: <strong>X</strong> kind1, <strong>Y</strong> kind2, …)</summary>` — bold every numeral and use the word "issues" (not "nits"). Full render contract: `docs-review:references:output-format`. Style findings are nags, not blockers — never put them in 🚨 Outstanding.
 
             ## Posting
 
             Use the **relative-path** form of `pinned-comment.sh upsert` — the Bash allow-list rejects absolute `/home/runner/...` paths. See ci.md §4 for the posting contract.
 
-            Post-run labels (`review:claude-ran` add, `review:claude-stale` remove)
-            are applied by a separate workflow step. Do not apply them yourself.
+            Post-run labels (`review:claude-ran` add, `review:claude-stale` remove) are applied by a separate workflow step. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
