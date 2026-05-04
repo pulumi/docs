@@ -36,7 +36,7 @@ social:
 
 The original dark factory was Fanuc's robotics plant in Japan, where the lights are off because nobody is on the floor. Robots build robots. Parts move through the line for weeks at a time without a person walking past them.
 
-The same pattern is now showing up in software. Stripe is reportedly shipping over [1,300 AI-authored pull requests per week](https://www.mindstudio.ai/blog/what-is-a-dark-factory-ai-coding). StrongDM has [a three-engineer team that stopped writing code by hand](https://www.strongdm.com/blog/the-strongdm-software-factory-building-software-with-ai). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG followed with a piece calling [the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory) the next phase of enterprise software delivery.
+The same pattern is now showing up in software. Three engineers at StrongDM [shipped 32,000 lines of production code](https://www.strongdm.com/blog/the-strongdm-software-factory-building-software-with-ai) without writing or reviewing any of it. Stripe is reportedly generating over [1,300 AI-authored pull requests per week](https://www.mindstudio.ai/blog/what-is-a-dark-factory-ai-coding). In January, Dan Shapiro of Glowforge published [a five-level autonomy ladder](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) that landed cleanly enough to become the shorthand most people now use, and BCG followed with a piece calling [the dark software factory](https://www.bcgplatinion.com/insights/the-dark-software-factory) the next phase of enterprise software delivery.
 
 Almost every public writeup so far is about application code. The harder question is what this looks like for infrastructure.
 
@@ -74,7 +74,7 @@ flowchart LR
 
 The single most important rule is that Code Generation and Validation must be completely isolated. The generator never sees the acceptance scenarios. A separate evaluator does, and it judges the generator's output against scenarios the generator could not have memorized.
 
-The reason is sycophancy. LLMs are too eager to agree with their own prior turns and too willing to declare victory on something they just produced. Without isolation, the same model that wrote the change is the one telling you it's fine. As StrongDM put it, a test that lives in the codebase can be lazily rewritten to match the code. The wall is what stops that.
+The reason is sycophancy. LLMs are too eager to agree with their own prior turns and too willing to declare victory on something they just produced. Without isolation, the same model that wrote the change is the one telling you it's fine. As StrongDM put it, a test that lives in the codebase can be lazily rewritten to match the code. It isn't malice; it's the agent doing exactly what it was asked, badly. The wall is what stops that.
 
 StrongDM's pattern for this is **holdout scenarios**: plain-English BDD acceptance tests stored where the generator cannot reach them. Each scenario runs three times against an ephemeral deployment, two of three must pass, and the overall pass rate has to clear 90% before the change moves forward. If the generator fails, it gets a one-line failure message ("SQL Injection Detection failed: endpoint returned 500"), not the scenario text. It cannot game the test.
 
@@ -127,6 +127,8 @@ Expand the auto-apply flag to every stack with strong scenario numbers. Wire you
 The validator approves a bad change. This is the obvious one. The mitigation is the one StrongDM uses: triple-run with a 2-of-3 threshold, a 90% gate over the run set, a human audit of the first fifty auto-applied changes, and your existing policies still run after the validator says yes.
 
 The agent gets a destroy permission it shouldn't have. There's a class of operations that should not sit in the autonomous loop yet: dropping a database, deleting a hosted zone, rotating a root key, anything that crosses a regulated data boundary. Scope what each agent identity can do at the credential layer, require human approval for anything destructive, and start every stack at Review mode. Tag changes, security-group adjustments, and instance resizes can run autonomously today. Release-branch cuts and config promotions can probably run by next quarter. The destructive class earns its way in over months.
+
+You need all three of those layers. Approvals without policy means anything a human approves in a hurry ships. Policy without approvals means a sufficiently clever spec eventually finds the gap. Both without a human kill switch means an incident at 3 a.m. has nobody to escalate to.
 
 Costs blow up. Cap retries at three per spec, alert on token spend per run, and remember that StrongDM reported roughly $1,000 per day per engineer-equivalent. That's still cheaper than a salary, but only if you put the cap in place before you find out.
 
