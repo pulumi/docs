@@ -39,5 +39,5 @@ values:
       icon: person-simple-run
     - title: Be an owner
       content: As early employees, we are owners and behave accordingly. We are frugal, spend Pulumi’s resources as if they’re our own, and accomplish more with less.
-      icon: drop-simple
+      icon: users-four
 ---
