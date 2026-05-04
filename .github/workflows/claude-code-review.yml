@@ -18,6 +18,22 @@ on:
   workflow_run:
     workflows: ["Claude Triage"]
     types: [completed]
+  # Manual dispatch entry point used by claude-new.yml when an authorized
+  # user invokes `@claude #new-review` to regenerate the pinned review
+  # from scratch. force=true bypasses the trivial / frontmatter-only /
+  # draft / bot-author skip-reason heuristics — explicit user request
+  # overrides the auto-skip path.
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to review'
+        required: true
+        type: string
+      force:
+        description: 'Bypass skip-reason heuristics (trivial/fmonly/draft/bot-author)'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   # synchronize → just mark the existing pinned review stale.
@@ -58,14 +74,15 @@ jobs:
     # The pull_requests array is populated by GitHub when the originating
     # workflow ran in a PR context on the same repo.
     if: |
-      github.event_name == 'workflow_run' &&
-      github.event.workflow_run.event == 'pull_request' &&
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.pull_requests != null &&
-      github.event.workflow_run.pull_requests[0] != null
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.event == 'pull_request' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.pull_requests != null &&
+       github.event.workflow_run.pull_requests[0] != null) ||
+      github.event_name == 'workflow_dispatch'
 
     concurrency:
-      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number }}
+      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
@@ -98,7 +115,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR="${{ github.event.workflow_run.pull_requests[0].number }}"
+          # PR number comes from the workflow_run pull_requests array on
+          # the triage-chained path, or from the workflow_dispatch input
+          # on the #new-review path.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PR="${{ github.event.inputs.pr_number }}"
+          else
+            PR="${{ github.event.workflow_run.pull_requests[0].number }}"
+          fi
+          FORCE="${{ github.event.inputs.force || 'false' }}"
           REPO="${{ github.repository }}"
 
           # GitHub re-evaluates a PR's diff lazily after force-pushes to
@@ -134,16 +159,24 @@ jobs:
           FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
           FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
 
+          # force=true (set by claude-new.yml on #new-review dispatch)
+          # bypasses the auto-skip heuristics. The user explicitly asked
+          # for a regenerate; trivial / fmonly / draft / bot-author are
+          # all overridable. Empty-diff is NOT overridable — there's
+          # nothing to review.
           SKIP=""
-          if [[ "$IS_DRAFT" == "true" ]]; then
-            SKIP="draft"
-          elif [[ ",$LABELS_CSV," == *",review:trivial,"* ]]; then
-            SKIP="trivial"
-          elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
-            SKIP="frontmatter-only"
-          elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
-            SKIP="bot-author"
-          elif [[ "$FILE_COUNT" == "0" ]]; then
+          if [[ "$FORCE" != "true" ]]; then
+            if [[ "$IS_DRAFT" == "true" ]]; then
+              SKIP="draft"
+            elif [[ ",$LABELS_CSV," == *",review:trivial,"* ]]; then
+              SKIP="trivial"
+            elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
+              SKIP="frontmatter-only"
+            elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
+              SKIP="bot-author"
+            fi
+          fi
+          if [[ -z "$SKIP" && "$FILE_COUNT" == "0" ]]; then
             # Empty diff after retry — GitHub still hasn't re-evaluated.
             # Skip cleanly instead of letting the model run with no diff
             # context (which previously errored with "directory mismatch").
@@ -188,7 +221,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          HEAD_SHA="${{ github.event.workflow_run.head_sha }}"
+          # workflow_run carries the originating commit SHA on the event
+          # payload; workflow_dispatch doesn't, so fall back to the head
+          # SHA pr-context just resolved via gh pr view.
+          HEAD_SHA="${{ github.event.workflow_run.head_sha || steps.pr-context.outputs.head_sha }}"
           DETAILS_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           CHECK_ID=$(gh api -X POST "repos/${{ github.repository }}/check-runs" \
             -f name="Claude Code Review" \
@@ -219,9 +255,15 @@ jobs:
             echo "vale: no docs/blog files changed; skipping"
             exit 0
           fi
-          vale --no-exit --output=JSON $CHANGED > .vale-raw.json
+          # `||` fallbacks guarantee both files exist even when vale is
+          # missing or the filter crashes. The downstream prompt's "if
+          # file exists and is non-empty" check would otherwise fall over
+          # on a missing file. Pattern mirrors claude-triage.yml.
+          vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
+            || echo '{}' > .vale-raw.json
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            || echo '[]' > .vale-findings.json
 
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
@@ -271,7 +313,6 @@ jobs:
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
-          gh pr edit "$PR" --repo "$REPO" --add-label review:claude-working || true
 
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
@@ -327,8 +368,7 @@ jobs:
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state, and review:claude-working is always
-      # removed regardless of outcome.
+      # always reaches a terminal state regardless of outcome.
       #
       # Outcome handling:
       # - success: edit the comment to "Review updated."
@@ -355,11 +395,10 @@ jobs:
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
             BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Review errored. Flip to draft and back to ready, or mention @claude, to retry.'
+          🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
             gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
               -f body="$BODY" >/dev/null || true
           fi
-          gh pr edit "$PR" --repo "$REPO" --remove-label review:claude-working || true
 
       # Apply the review:claude-ran label and clear review:claude-stale on
       # successful completion. Gated on claude-review.outcome == 'success' so

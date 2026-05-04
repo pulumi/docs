@@ -1,0 +1,156 @@
+name: Claude Code (new-review)
+
+# Power-user "regenerate from scratch" path. Dispatched by the explicit
+# hashtag `#new-review` on an `@claude` mention — typically used to
+# recover from a corrupted or manually-deleted pinned review.
+#
+# This workflow is a lightweight dispatcher: it doesn't invoke the
+# claude-code-action itself. Instead it clears any existing pinned
+# review comments and then dispatches `claude-code-review.yml` via
+# `gh workflow run` with `force=true`, so the existing initial-review
+# pipeline (Opus on ci.md) handles the actual work. Single source of
+# truth for "initial review" stays in claude-code-review.yml.
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  claude-new:
+    # Trigger requires:
+    #   1. `@claude` mention.
+    #   2. `#new-review` hashtag (precedence rule: if both #update-review
+    #      and #new-review appear, #new-review wins; claude-update.yml's
+    #      filter excludes itself in that case).
+    #   3. Author is not claude[bot] itself.
+    # The `issues` event is intentionally excluded — #new-review only
+    # makes sense on a PR (there's no pinned review on an issue).
+    if: |
+      ((github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]'))
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+      id-token: write
+      actions: write # Required to dispatch claude-code-review.yml.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+
+      - name: Check repository write access
+        id: check-access
+        run: |
+          REPO_FULL="${{ github.repository }}"
+
+          if [ "${{ github.event_name }}" = "issue_comment" ]; then
+            AUTHOR="${{ github.event.comment.user.login }}"
+          elif [ "${{ github.event_name }}" = "pull_request_review_comment" ]; then
+            AUTHOR="${{ github.event.comment.user.login }}"
+          elif [ "${{ github.event_name }}" = "pull_request_review" ]; then
+            AUTHOR="${{ github.event.review.user.login }}"
+          else
+            AUTHOR="unknown"
+          fi
+
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
+          fi
+
+      - name: Resolve PR number
+        id: pr-context
+        if: steps.check-access.outputs.has_write_access == 'true'
+        run: |
+          # `issues` events were filtered out at the workflow level;
+          # only PR-bearing events reach this step.
+          case "${{ github.event_name }}" in
+            issue_comment)
+              PR_NUMBER="${{ github.event.issue.number }}"
+              ;;
+            pull_request_review_comment|pull_request_review)
+              PR_NUMBER="${{ github.event.pull_request.number }}"
+              ;;
+            *)
+              PR_NUMBER=""
+              ;;
+          esac
+          echo "pr_number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      # Delete every existing CLAUDE_REVIEW comment (1/M and tail) so
+      # the dispatched review starts from a blank slate. The `clear`
+      # subcommand is the only path that bypasses pinned-comment.sh's
+      # 1/M-sacrosanct rule — explicit regenerate-from-scratch use only.
+      - name: Clear existing pinned review comments
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.pr_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash .claude/commands/docs-review/scripts/pinned-comment.sh \
+            clear --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" || true
+
+      # Post a one-line confirmation so the user sees that the dispatch
+      # fired. The dispatched claude-code-review.yml run posts its own
+      # CLAUDE_PROGRESS comment shortly afterwards — that's the user-
+      # visible "working" signal. Two competing CLAUDE_PROGRESS comments
+      # would be confusing, so this one is plain text only.
+      - name: Post confirmation
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.pr_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --body '🤖 Pinned review cleared; regenerating from scratch...' || true
+
+      # Dispatch claude-code-review.yml with force=true so it bypasses
+      # trivial / frontmatter-only / draft / bot-author skip-reason
+      # heuristics — explicit user request overrides the auto-skip.
+      # workflow_dispatch fires the "claude-review" job in
+      # claude-code-review.yml; the existing PR-context resolution,
+      # Vale, prompt, posting, and post-run labels all reuse.
+      - name: Dispatch claude-code-review.yml
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.pr_number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run claude-code-review.yml \
+            --repo "${{ github.repository }}" \
+            -f pr_number="${{ steps.pr-context.outputs.pr_number }}" \
+            -f force=true
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

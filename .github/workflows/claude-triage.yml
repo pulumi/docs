@@ -209,7 +209,7 @@ jobs:
           declare -A EXISTING
           while IFS= read -r lbl; do
             case "$lbl" in
-              review:claude-ran|review:claude-stale|review:claude-working|needs-author-response)
+              review:claude-ran|review:claude-stale|needs-author-response)
                 continue ;;
               domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;

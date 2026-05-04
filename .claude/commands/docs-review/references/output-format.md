@@ -36,7 +36,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 ---
 
-<sub>Pushed a fix? Think a finding is wrong? Mention &#64;claude to refresh or argue your case.</sub>
+<sub>Need a re-review? Want to dispute a finding? Mention &#64;claude and include <code>#update-review</code>. (For ad-hoc questions or fixes, just &#64;claude — no hashtag.)</sub>
 ```
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.

@@ -76,7 +76,6 @@ Determine the pinned-review state from labels and fetch output:
 |---|---|---|
 | `CURRENT` | `review:claude-ran` set, `review:claude-stale` absent, fetch returns body | Nothing — proceed to Step 4 |
 | `STALE` | `review:claude-stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
-| `WORKING` | `review:claude-working` set | CI is producing the review right now; abort with a message asking the user to retry in a few minutes |
 | `ABSENT` | Fetch returns no `<!-- CLAUDE_REVIEW -->` markers | Fall back: run a local review (see Step 3 §Absent path) |
 
 Store the parsed pinned-comment findings (🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, ✅ Resolved, 📜 Review history) for Step 6.
@@ -92,16 +91,6 @@ Continue to Step 4.
 #### STALE
 
 Refresh the pinned comment in place by invoking `docs-review:references:update` locally with `PR_NUMBER` set. The update procedure re-reads the diff since the last reviewed SHA, classifies as Case 1/2/3, and writes the refreshed body via `pinned-comment.sh upsert`. When it completes, re-fetch the pinned comment and re-parse findings for Step 6.
-
-#### WORKING
-
-A CI review is in flight. Abort:
-
-```text
-⏳ CI is currently running a review on PR #{{arg}} (label: review:claude-working).
-
-Re-run /pr-review {{arg}} when the run completes (typically 1–5 minutes).
-```
 
 #### ABSENT
 

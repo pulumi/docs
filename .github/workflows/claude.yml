@@ -1,5 +1,14 @@
 name: Claude Code
 
+# Off-the-shelf @claude responder. Tag mode (no custom `prompt:`) lets
+# the action auto-post its animated tracking comment with per-tool-call
+# updates -- the most common path for ad-hoc questions / fixes.
+#
+# This workflow fires only on bare `@claude` mentions. Hashtag-driven
+# routing sends review-bearing intents to:
+#   - `@claude #update-review` → claude-update.yml (refresh pinned)
+#   - `@claude #new-review`    → claude-new.yml    (regenerate from scratch)
+
 on:
   issue_comment:
     types: [created]
@@ -12,15 +21,18 @@ on:
 
 jobs:
   claude:
-    # Skip when the triggering comment / review / issue is authored by the
-    # claude[bot] account itself. The pinned-review footer contains the
-    # literal string "@claude" as user-facing instructions, which would
-    # otherwise re-trigger this workflow on every review post.
+    # Trigger requires:
+    #   1. `@claude` mention.
+    #   2. NEITHER `#update-review` NOR `#new-review` -- those hashtags
+    #      route to claude-update.yml / claude-new.yml respectively.
+    #   3. Author is not claude[bot] itself -- the pinned-review footer
+    #      contains literal "@claude" instructions which would otherwise
+    #      re-trigger on every review post.
     if: |
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login != 'claude[bot]') ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && github.event.comment.user.login != 'claude[bot]') ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && github.event.review.user.login != 'claude[bot]') ||
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && github.event.issue.user.login != 'claude[bot]')
+      ((github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && !contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && !contains(github.event.issue.body, '#update-review') && !contains(github.event.issue.title, '#update-review') && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -34,13 +46,6 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 1
-
-      # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
-      # step below has the pinned vale binary on PATH for re-entrant runs.
-      - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
-        with:
-          cache: true
 
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -84,132 +89,6 @@ jobs:
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
-      - name: Resolve PR context
-        id: pr-context
-        if: steps.check-access.outputs.has_write_access == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Determine the thread number (PR or issue), whether it's a PR,
-          # and whether a pinned Claude review already exists. The prompt
-          # passes these to the model so it can decide whether to invoke
-          # update-review, run an initial review, or handle an ad-hoc task.
-          # PR_NUMBER is named for legacy reasons; on non-PR events it
-          # holds the issue number so downstream gh commands work.
-          PR_NUMBER=""
-          IS_PR="false"
-          case "${{ github.event_name }}" in
-            issue_comment)
-              PR_NUMBER="${{ github.event.issue.number }}"
-              if [ "${{ github.event.issue.pull_request != null }}" = "true" ]; then
-                IS_PR="true"
-              fi
-              ;;
-            pull_request_review_comment|pull_request_review)
-              PR_NUMBER="${{ github.event.pull_request.number }}"
-              IS_PR="true"
-              ;;
-            issues)
-              PR_NUMBER="${{ github.event.issue.number }}"
-              IS_PR="false"
-              ;;
-          esac
-
-          HAS_PINNED="false"
-          if [ "$IS_PR" = "true" ] && [ -n "$PR_NUMBER" ]; then
-            PINNED_IDS=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh \
-              find --pr "$PR_NUMBER" --repo "${{ github.repository }}" || true)
-            if [ -n "$PINNED_IDS" ]; then
-              HAS_PINNED="true"
-            fi
-          fi
-
-          {
-            echo "pr_number=$PR_NUMBER"
-            echo "is_pr=$IS_PR"
-            echo "has_pinned=$HAS_PINNED"
-          } >> "$GITHUB_OUTPUT"
-
-      # Save the triggering comment / review / issue body to a file in
-      # the workspace so the model can read it without scraping the
-      # event payload at runtime. Env vars carry the body safely (no
-      # direct interpolation into shell — bodies can contain arbitrary
-      # text, including shell metacharacters).
-      - name: Save mention body
-        id: mention
-        if: steps.check-access.outputs.has_write_access == 'true'
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          COMMENT_BODY: ${{ github.event.comment.body }}
-          REVIEW_BODY: ${{ github.event.review.body }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
-        run: |
-          case "$EVENT_NAME" in
-            issue_comment|pull_request_review_comment)
-              BODY="$COMMENT_BODY"
-              ;;
-            pull_request_review)
-              BODY="$REVIEW_BODY"
-              ;;
-            issues)
-              BODY="$ISSUE_BODY"
-              ;;
-            *)
-              BODY=""
-              ;;
-          esac
-          printf '%s' "$BODY" > .claude-mention-body.txt
-
-      # Run Vale on PR-changed files in content/docs and content/blog so
-      # re-entrant reviews include refreshed style nits tied to the current
-      # commit. Skipped on issue mentions and when no docs/blog files were
-      # touched. continue-on-error keeps style nits from blocking the run.
-      - name: Run Vale on PR-changed prose
-        if: |
-          steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
-        id: vale
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ steps.pr-context.outputs.pr_number }}
-        run: |
-          CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog)/.*\.md$' || true)
-          if [ -z "$CHANGED" ]; then
-            echo '{}' > .vale-raw.json
-            echo '[]' > .vale-findings.json
-            echo "vale: no docs/blog files changed; skipping"
-            exit 0
-          fi
-          vale --no-exit --output=JSON $CHANGED > .vale-raw.json
-          python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json
-
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment on PR mentions so
-      # the author sees "something is happening" while Sonnet works. The post
-      # step below edits it to a done/errored state (or deletes it on cancel)
-      # when Claude completes. Generic "Working on it" message because the
-      # model decides what to actually do — it may be a review update, a
-      # code change, or a conversational reply.
-      # Skipped on issue mentions (no progress context makes sense there).
-      - name: Post progress signal
-        if: |
-          steps.check-access.outputs.has_write_access == 'true' &&
-          steps.pr-context.outputs.is_pr == 'true'
-        id: progress
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR="${{ steps.pr-context.outputs.pr_number }}"
-          REPO="${{ github.repository }}"
-          MSG='🤖 Working on it — this can take several minutes.'
-          BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "$MSG")
-          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
-            -f body="$BODY" --jq '.id' || echo "")
-          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
-          gh pr edit "$PR" --repo "$REPO" --add-label review:claude-working || true
-
       - name: Run Claude Code
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude
@@ -219,83 +98,15 @@ jobs:
           # Use bot token so pushes trigger downstream workflows (e.g., social review)
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
-          # This is an optional setting that allows Claude to read CI results on PRs
+          # Optional setting that allows Claude to read CI results on PRs.
           additional_permissions: |
             actions: read
 
-          # Model-driven routing: the prompt provides PR/issue context plus
-          # the triggering mention body (in .claude-mention-body.txt) and
-          # lets Sonnet decide what to do. Three paths:
-          # - review-related ask → invoke docs-review/references/update.md or docs-review/ci.md
-          # - ad-hoc task / question → act directly (Edit, push, gh comment)
-          # - ambiguous → reply conversationally asking for clarification
-          # Initial reviews use Opus via claude-code-review.yml; this
-          # workflow always uses Sonnet for re-entrant work.
-          prompt: |
-            You are responding to an `@claude` mention in `${{ github.repository }}`.
-
-            Context:
-            - ${{ steps.pr-context.outputs.is_pr == 'true' && format('Pull request #{0}', steps.pr-context.outputs.pr_number) || format('Issue #{0}', steps.pr-context.outputs.pr_number) }}
-            - Pinned Claude review: ${{ steps.pr-context.outputs.has_pinned == 'true' && 'EXISTS on this PR' || 'does not exist (or N/A on issues)' }}
-
-            **Read the triggering mention text from `.claude-mention-body.txt` first.** It contains the body of the comment, review, or issue that invoked you. Decide what to do based on what it asks for:
-
-            1. **Review-related ask on a PR** (any of the cases described in `docs-review:references:update`: fix-response, dispute, or generic refresh):
-               - If a pinned review **EXISTS**, follow `docs-review:references:update` and post the updated review via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
-               - If a pinned review **does not exist**, follow `.claude/commands/docs-review/ci.md` to produce an initial review and post via the same `pinned-comment.sh upsert` command.
-               - If `.vale-findings.json` exists and is non-empty, surface its findings under ⚠️ Low-confidence per `docs-review:references:output-format`. Vale findings are nags, not blockers — never put them in 🚨 Outstanding.
-
-            2. **Ad-hoc task or question** — fix code, explain something, answer a question, make a small change, etc.: act on the mention directly. Use Edit/Write to make file changes; `gh pr checkout ${{ steps.pr-context.outputs.pr_number }}` if you need to push commits to the PR branch; reply with `gh pr comment ${{ steps.pr-context.outputs.pr_number }} --body "..."` (or `gh issue comment` for issues).
-
-            3. **Ambiguous mention** — reply conversationally via `gh pr comment` (or `gh issue comment`) asking for clarification. Don't guess at intent.
-
-            Do NOT invoke `docs-review:references:update` for ad-hoc tasks — it is designed only for review-related interactions and will produce wrong output on other intents.
-
+          # No `prompt:` argument → tag mode. The action auto-posts its
+          # animated tracking comment with per-tool-call updates and
+          # decides what to do based on the mention text and project
+          # context (CLAUDE.md / AGENTS.md). Sonnet handles ad-hoc work.
           claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
-
-      # Runs on success or failure so the transient CLAUDE_PROGRESS comment
-      # always reaches a terminal state and the working/stale labels are
-      # cleared. Mirrors the outcome handling in claude-code-review.yml:
-      # success → edit to "Done"; cancelled/skipped → delete the orphan
-      # comment (newer run owns the surface); failure → edit to "Errored".
-      # Generic "Done" wording because the model may have done a review
-      # update, code change, or just replied — it knows which.
-      - name: Finalize progress signal
-        if: always() && steps.progress.outputs.comment_id != ''
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR="${{ steps.pr-context.outputs.pr_number }}"
-          REPO="${{ github.repository }}"
-          COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
-          OUTCOME="${{ steps.claude.outcome }}"
-          if [ "$OUTCOME" = "success" ]; then
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Done.')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
-          elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
-            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-          else
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Errored. Mention @claude again to retry.')
-            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
-              -f body="$BODY" >/dev/null || true
-          fi
-          # Clear lifecycle labels: working (set above) and stale (set by
-          # claude-code-review.yml's mark-stale job on push). On successful
-          # re-entrant work, also re-add review:claude-ran — the pinned
-          # review is fresh again, and ran/stale are mutually exclusive.
-          # mark-stale removed claude-ran when it set claude-stale, so
-          # without re-adding here the PR would carry neither label.
-          if [ "$OUTCOME" = "success" ]; then
-            gh pr edit "$PR" --repo "$REPO" \
-              --add-label review:claude-ran \
-              --remove-label review:claude-working \
-              --remove-label review:claude-stale || true
-          else
-            gh pr edit "$PR" --repo "$REPO" \
-              --remove-label review:claude-working \
-              --remove-label review:claude-stale || true
-          fi
 
 env:
   ESC_ACTION_OIDC_AUTH: true
@@ -303,4 +114,3 @@ env:
   ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
   ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
-

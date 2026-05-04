@@ -7,6 +7,7 @@
 #   fetch         --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
 #   upsert        --pr <N> --body-file <path>        Split body, edit existing comments in place, append new, prune tail.
 #   prune         --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
+#   clear         --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
 #   last-reviewed-sha --pr <N>                       Print the most recent SHA from the 1/M comment's review history.
 #
 # Common flags:
@@ -27,7 +28,7 @@ MARKER_RE='^<!-- CLAUDE_REVIEW ([0-9]+)/([0-9]+) -->'
 DEFAULT_MAX_BYTES=60000
 
 usage() {
-    sed -n '2,18p' "$0" | sed 's/^# \{0,1\}//' >&2
+    sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//' >&2
     exit 2
 }
 
@@ -283,6 +284,18 @@ cmd_prune() {
     done <<< "$existing_tsv"
 }
 
+cmd_clear() {
+    local repo pr
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    local existing_tsv
+    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
+    [[ -z "$existing_tsv" ]] && return 0
+    while IFS=$'\t' read -r id _pos _tot _created; do
+        delete_comment "$repo" "$id"
+    done <<< "$existing_tsv"
+}
+
 cmd_last_reviewed_sha() {
     local repo pr first_id
     repo=$(resolve_repo)
@@ -336,6 +349,7 @@ case "$SUBCOMMAND" in
     fetch)             cmd_fetch ;;
     upsert)            cmd_upsert ;;
     prune)             cmd_prune ;;
+    clear)             cmd_clear ;;
     last-reviewed-sha) cmd_last_reviewed_sha ;;
     *)                 usage ;;
 esac

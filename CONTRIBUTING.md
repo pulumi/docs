@@ -8,7 +8,7 @@ Open new PRs as **drafts** while you iterate. Automated review (style, accuracy,
 - Lets you push iteratively without spamming the PR with new comments each time.
 - Means the eventual review reflects your finished thinking, not a half-finished commit.
 
-When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude` in a comment to refresh, or transition through draft and back to ready.
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
 
@@ -33,12 +33,18 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 
 A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
 
-1. **`@claude` mention**: Leave a comment on the PR mentioning `@claude` (with or without a specific request). The re-entrant pipeline picks up new commits, runs `claude-sonnet-4-6`, and updates the existing pinned comment(s) in place. Three patterns the re-entrant pipeline understands:
-    - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
-    - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
-    - **Re-verify** ("@claude refresh" / no specific request): re-checks outstanding findings only.
-1. **Transition through draft and back to ready**: this re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
-1. **Wait for the human reviewer**: Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
+1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
+    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-4-6`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
+        - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
+        - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
+        - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
+    - **`@claude` alone, no hashtag** — ad-hoc questions, code fixes, or one-off requests. Tag mode: the action handles it directly with its own animated tracking comment. Doesn't touch the pinned review. Use this when you want help, not a re-review.
+1. **Transition through draft and back to ready** — re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
+1. **Wait for the human reviewer** — Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
+
+#### Power-user escape hatch: `@claude #new-review`
+
+Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing `<!-- CLAUDE_REVIEW N/M -->` comment and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
 
 ### Don't fight the pinned comment
 

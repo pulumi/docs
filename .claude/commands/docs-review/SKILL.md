@@ -32,7 +32,7 @@ Walk these steps in order; stop at the first that yields a scope.
 
 Route each file to a domain via `docs-review:references:domain-routing`, then apply that domain's criteria plus `docs-review:references:shared-criteria`. Render the output per `docs-review:references:output-format`.
 
-For files under `content/docs/` or `content/blog/`, also run `vale --no-exit --output=JSON <files>` and surface its findings under ⚠️ Low-confidence prefixed `[style]`.
+For files under `content/docs/` or `content/blog/`, also run `vale --no-exit --output=JSON <files>` and surface its findings under ⚠️ Low-confidence prefixed `[style]`. If `vale --version` fails or `vale` is not on PATH, skip the Vale step with a one-line note (e.g., "Skipping Vale: not installed. Install via `mise install` to enable style nits.") and continue the review without Vale findings — don't hard-fail.
 
 For PR-number invocations:
 
