@@ -4,7 +4,7 @@
             <div data-track="header-pulumi-logo" class="logo-nav-button logo-parent" aria-haspopup="true" aria-controls="logo-nav-menu">
                 <div class="logo">
                     {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo") }}
-                    <i class="fa fa-chevron-down"></i>
+                    {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold") }}
                 </div>
                 <ul id="logo-nav-menu" role="menu" class="logo-nav-menu hidden">
                     <li role="none"><a role="menuitem" href="/">Pulumi home</a></li>
@@ -33,37 +33,37 @@
                 </li>
                 <li class="slack">
                     <a data-track="header-slack" href="https://slack.pulumi.com/">
-                        <i class="fab fa-slack"></i>
+                        {{ partial "icon.html" (dict "name" "brand/slack") }}
                         Slack
                     </a>
                 </li>
                 <li class="docs">
                     <a data-track="header-docs" href="/docs/">
-                        <div class="icon icon-16-16 book-outline"></div>
+                        {{ partial "icon.html" (dict "name" "books") }}
                         Docs
                     </a>
                 </li>
                 <li class="registry">
                     <a data-track="header-registry" href="/registry/">
-                        <div class="icon icon-14-14 packages-outline"></div>
+                        {{ partial "icon.html" (dict "name" "package") }}
                         Registry
                     </a>
                 </li>
                 <li class="ai">
                     <a data-track="header-ai" href="/product/neo/">
-                        {{ partial "fingerprinted-img.html" (dict "src" "icons/pdi-neo.svg" "alt" "" "class" "inline mr-0.5" "style" "width: 16px; height: 16px;") }}
+                        {{ partial "icon.html" (dict "name" "custom/pulumi-neo" "weight" "fill") }}
                         Pulumi Neo
                     </a>
                 </li>
                 <li class="contact">
                     <a data-track="header-contact" href="/contact/">
-                        <i class="fas fa-comment mr-0.5"></i>
+                        {{ partial "icon.html" (dict "name" "chat-circle") }}
                         Contact Us
                     </a>
                 </li>
                 <li>
                     <a data-track="header-console" href="https://app.pulumi.com/signin">
-                        <i class="fa fa-refular fa-user-circle"></i>
+                        {{ partial "icon.html" (dict "name" "user-circle") }}
                         {{ partial "top-nav-user-toggle" }}
                     </a>
                 </li>

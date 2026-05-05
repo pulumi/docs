@@ -18,12 +18,12 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
-  - emoji: 📋
+  - icon: clipboard
     heading: Audit Logs
     link: /docs/administration/security-compliance/audit-logs/
     description: Track and audit all user and system activity.
 
-  - emoji: 🔐
+  - icon: lock-key
     heading: Customer Managed Keys
     link: /docs/administration/security-compliance/customer-managed-keys/
     description: Use your own encryption keys for data at rest.

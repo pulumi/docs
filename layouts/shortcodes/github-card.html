@@ -35,7 +35,7 @@
     />
     <div class="github-card-content">
         <div class="github-card-domain">
-            <i class="fab fa-github github-card-icon"></i>
+            {{ partial "icon.html" (dict "name" "brand/github" "class" "github-card-icon") }}
             {{ $displayUrl }}
         </div>
     </div>

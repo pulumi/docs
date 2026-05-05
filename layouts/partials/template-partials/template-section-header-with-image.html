@@ -15,7 +15,7 @@ Parameters:
 - image_alt: Alt text for image
 - flip: Optional boolean. When true, image appears on the left and text on the right.
 - cards: Optional array of mini feature cards rendered below the two-column section.
-    Each item: { icon: "fa-code", title: "Title", description: "..." }
+    Each item: { icon: "code", title: "Title", description: "..." }
 - anchor: Optional anchor for section id
 */}}
 
@@ -54,7 +54,7 @@ Parameters:
         </div>
         {{ if $image }}
         <div class="section-header-split-image flex justify-center xl:justify-end">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full max-w-full rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full max-w-full rounded-lg") }}
         </div>
         {{ end }}
     </div>

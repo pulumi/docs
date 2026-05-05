@@ -1,13 +1,13 @@
-<div id="docsFeedbackContainer" class="hidden mt-4 border-t border-gray-300 pl-2 text-xs text-gray-600">
+<div id="docsFeedbackContainer" class="hidden mt-4 border-t border-gray-200 text-xs text-gray-600">
     <div id="feedbackButtons">
         <p class="my-4">Was this page helpful?</p>
         <div class="flex items-center">
             <a id="docsFeedbackYes" data-track="feedback-yes" class="flex items-center cursor-pointer hover:text-gray-700">
-                <i class="fas fa-thumbs-up mr-2"></i>
+                {{ partial "icon.html" (dict "name" "thumbs-up" "class" "mr-2") }}
                 <span> Yes </span>
             </a>
             <a id="docsFeedbackNo" data-track="feedback-no" class="flex items-center cursor-pointer ml-4 hover:text-gray-700">
-                <i class="fas fa-thumbs-down mr-2"></i>
+                {{ partial "icon.html" (dict "name" "thumbs-down" "class" "mr-2") }}
                 <span> No </span>
             </a>
         </div>

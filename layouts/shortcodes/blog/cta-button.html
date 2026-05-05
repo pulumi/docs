@@ -11,6 +11,6 @@
 >
     {{ $label }}
     {{ if eq $target "_blank" }}
-        <i class="text-sm ml-2 fas fa-external-link-alt"></i>
+        {{ partial "icon.html" (dict "name" "arrow-square-out" "class" "text-sm ml-2") }}
     {{ end }}
 </a>

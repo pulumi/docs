@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Version Control Integrations"
-meta_desc: Connect Pulumi with your version control system using Pulumi-maintained integrations for GitHub, GitLab, Azure DevOps, and Bitbucket.
+meta_desc: Connect Pulumi with your version control system using integrations for GitHub, GitLab, Azure DevOps, Bitbucket, and custom Git or Mercurial VCS providers.
 title: Version Control
 linktitle: Version Control
 h1: Version Control
@@ -17,13 +17,13 @@ menu:
 aliases:
 - /docs/version-control/
 description: |
-  Pulumi-maintained version control integrations connect Pulumi with your VCS provider, enabling infrastructure previews on pull requests and automated deployment workflows.
+  Pulumi version control integrations connect Pulumi with your VCS provider, enabling infrastructure previews on pull requests and automated deployment workflows. Use a native integration for GitHub, GitLab, Azure DevOps, or Bitbucket, or connect any Git or Mercurial server with a Custom VCS integration.
 
 sections:
 - type: flat
   heading: Multiple providers and accounts
   description_md: |
-    You can connect multiple VCS providers to a single Pulumi organization simultaneously, for example GitHub, GitLab, Azure DevOps, and Bitbucket all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups.
+    You can connect multiple VCS providers to a single Pulumi organization simultaneously, for example GitHub, GitLab, Azure DevOps, Bitbucket, and Custom VCS all at once. You can also connect multiple accounts of the same provider, such as two separate GitHub organizations or two GitLab groups.
 
     GitHub Enterprise Server is currently limited to one connection per Pulumi organization.
 
@@ -46,6 +46,10 @@ sections:
     heading: Azure DevOps Integration
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
     link: /docs/integrations/version-control/azure-devops-integration/
+  - image: /logos/tech/git.svg
+    heading: Custom VCS
+    description: Connect any Git or Mercurial VCS server to Pulumi Deployments using webhooks and ESC-managed credentials.
+    link: /docs/integrations/version-control/custom-vcs/
 
 - type: flat
   heading: Have questions?

@@ -15,6 +15,10 @@ export class Examples {
         headings.forEach(heading => {
             // Prepend a span to each heading. We use these to hold the caret symbols.
             const span = document.createElement("span");
+            span.innerHTML = `
+                <svg class="caret-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+                <svg class="caret-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg>
+            `;
             heading.prepend(span);
 
             // Listen for clicks on headings.

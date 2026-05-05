@@ -12,7 +12,7 @@
 
 <div class="card-cta-contained-btn text-center">
     <a class="btn-download" href={{ .ref }}>
-        <i class="fa fa-download"></i>
+        {{ partial "icon.html" (dict "name" "download-simple") }}
         {{ .text }}
     </a>
 </div>

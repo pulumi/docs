@@ -100,6 +100,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
                 @apply mt-8;
             }
         }
+
+        code {
+            letter-spacing: normal;
+        }
     }
 
     h1 {
@@ -249,7 +253,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "header";
     @import "hero";
     @import "hubspot";
-    @import "icons";
+    @import "phosphor";
     @import "marketing/learn";
     @import "lists";
     @import "no-select";

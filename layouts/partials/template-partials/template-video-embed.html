@@ -18,6 +18,14 @@
 {{ $posterAlt := .poster_alt | default $title }}
 {{ $anchor := .anchor }}
 
+{{/* Fingerprint the poster image so it gets cache-busted on change */}}
+{{ $posterURL := $posterImage }}
+{{ if $posterImage }}
+    {{ $fpSrc := $posterImage | strings.TrimPrefix "/" }}
+    {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) | fingerprint }}
+    {{ $posterURL = $fpAsset.RelPermalink }}
+{{ end }}
+
 <section class="template-video-embed"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="max-w-4xl mx-auto">
         <div class="rounded-xl relative h-0 overflow-hidden" style="padding-bottom: 56.25%;">
@@ -26,8 +34,8 @@
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
                 allowfullscreen=""
                 title="{{ $title }}"
-                {{ if $posterImage }}
-                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/{{ $youtubeId }}?autoplay=1><img src='{{ $posterImage }}' alt='{{ $posterAlt }}'></a>"
+                {{ if $posterURL }}
+                srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/{{ $youtubeId }}?autoplay=1><img src='{{ $posterURL }}' alt='{{ $posterAlt }}'></a>"
                 {{ end }}
             ></iframe>
         </div>

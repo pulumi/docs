@@ -32,13 +32,13 @@ sections:
 
       Neo is the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Unlike generic AI tools, Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
     cards:
-      - icon: fa-code
+      - icon: code
         title: Faster provisioning
         description: Automate complex multi-cloud deployments in minutes. Werner Enterprises reduced provisioning time from 3 days to 4 hours.
-      - icon: fa-shield-alt
+      - icon: shield-check
         title: Fewer policy violations
         description: Neo enforces your governance policies automatically. RBAC, compliance rules, and security standards built into every action.
-      - icon: fa-cogs
+      - icon: gear-six
         title: End-to-end automation
         description: From provisioning to updates to debugging, Neo handles the full infrastructure lifecycle, not just code generation.
     anchor: why-neo
@@ -71,31 +71,31 @@ sections:
     icon_style: black
     icon_layout: above
     columns:
-      - icon: fa-comment-alt
+      - icon: chat-circle-dots
         title: Natural language commands
         description: Tell Neo what you need in plain English. It handles dependencies, executes changes, and monitors outcomes automatically.
-      - icon: fa-tasks
+      - icon: list-checks
         title: Approval workflows
         description: Configure how much autonomy Neo has, with customizable human-in-the-loop controls for every action.
-      - icon: fa-shield-alt
+      - icon: shield-check
         title: Full audit trail
         description: Every action is previewed, logged, and reversible, giving you complete visibility into what changed and when.
-      - icon: fa-chart-line
+      - icon: chart-line
         title: Cost optimization
         description: Instantly surface your least-used, most expensive resources and get actionable recommendations to reduce cloud spend.
-      - icon: fa-bug
+      - icon: bug
         title: Debug & diagnose
         description: Ask why a deployment failed or what's misconfigured. Neo investigates and explains in seconds.
-      - icon: fa-check-double
+      - icon: check-circle
         title: Compliance checks
         description: Neo can scan for misconfigurations and policy violations across your infrastructure with a single question.
-      - icon: fa-network-wired
+      - icon: network
         title: Multi-cloud visibility
         description: Neo has visibility across AWS, Azure, Google Cloud, and hundreds of other providers, all in one place.
-      - icon: fa-code
+      - icon: code
         title: Generate infrastructure code
         description: Neo can create Pulumi programs in TypeScript, Python, Go, and more from a simple prompt, following Pulumi best practices.
-      - icon: fa-laptop-code
+      - icon: laptop
         title: IDE integration
         description: Neo works inside VS Code, Cursor, Claude Code, and Windsurf via MCP server, right where you already code.
     anchor: features

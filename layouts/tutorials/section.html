@@ -38,14 +38,14 @@
                                     </div>
                                     <ul class="list-none p-0">
                                         <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
-                                            <i class="far fa-arrow-alt-circle-right w-4 text-gray-700"></i>
+                                            {{ partial "icon.html" (dict "name" "arrow-circle-right" "class" "w-4 text-gray-700") }}
                                             <a class="text-gray-800 font-display text-lg" href="/docs/clouds/{{ $id }}/get-started/">Get started with {{ $provider.name }}</a>
                                         </li>
 
                                         {{ $taxonomy := index $.Site.Taxonomies.collections $id }}
                                         {{ if $taxonomy }}
                                             <li class="rounded border p-4 border-gray-300 shadow-sm flex items-center gap-3">
-                                                <i class="far fa-list-alt w-4 text-gray-700"></i>
+                                                {{ partial "icon.html" (dict "name" "list-bullets" "class" "w-4 text-gray-700") }}
                                                 <a class="text-gray-800 font-display text-lg" href="/tutorials/{{ $id }}">Browse all {{ $provider.name }} tutorials</a>
                                             </li>
                                         {{ end }}
@@ -82,7 +82,7 @@
                                             </p>
                                             <div class="inline-flex flex-wrap gap-2 text-sm">
                                                 <div class="text-gray-700 px-2 py-1 border border-orange-400 rounded">
-                                                    <i class="fa fa-file-alt mr-0.5 text-orange-400"></i>
+                                                    {{ partial "icon.html" (dict "name" "file-text" "class" "mr-0.5 text-orange-400") }}
                                                     <span>{{ len $terms }} tutorial{{ if ne (len $terms) 1 }}s{{ end }}</span>
                                                 </div>
                                             </div>
@@ -115,7 +115,7 @@
 
                                         {{ if .Pages }}
                                         <div class="text-gray-700 px-2 py-1 border border-violet-400 rounded">
-                                            <i class="fa fa-file-alt mr-0.5 text-violet-400"></i>
+                                            {{ partial "icon.html" (dict "name" "file-text" "class" "mr-0.5 text-violet-400") }}
                                             <span>{{ len $item.Pages }} topic{{ if ne (len $item.Pages) 1 }}s{{ end }}</span>
                                         </div>
                                     {{ end }}
@@ -129,7 +129,7 @@
                                             {{ $estimated_time = .Params.estimated_time }}
                                         {{ end }}
                                         <div class="text-gray-700 px-2 py-1 border border-gray-500 rounded">
-                                            <i class="far fa-clock mr-0.5 text-gray-600"></i>
+                                            {{ partial "icon.html" (dict "name" "clock" "class" "mr-0.5 text-gray-600") }}
                                             <span>{{ $estimated_time }} minutes</span>
                                         </div>
                                     </div>

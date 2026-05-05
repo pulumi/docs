@@ -32,27 +32,27 @@ sections:
 - type: button-cards
   heading: Discovery
   cards:
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Get Started
     link: /docs/insights/discovery/get-started/
     description: Scan your cloud accounts and discover all infrastructure resources.
-  - emoji: 💡
+  - icon: lightbulb
     heading: How Discovery Works
     link: /docs/insights/discovery/
     description: Learn how Discovery scans cloud accounts and organizes resources for visibility and import.
-  - emoji: 🔗
+  - icon: link
     heading: Accounts
     link: /docs/insights/discovery/accounts/
     description: Connect cloud accounts to sync and monitor infrastructure resources.
-  - emoji: 🔎
+  - icon: magnifying-glass
     heading: Resource Search
     link: /docs/insights/discovery/search/
     description: Find resources using structured queries or natural language.
-  - emoji: 📊
+  - icon: chart-bar
     heading: Visual Import
     link: /docs/insights/discovery/visual-import/
     description: Import existing cloud resources into Pulumi management.
-  - emoji: 📤
+  - icon: upload
     heading: Data Export
     link: /docs/insights/discovery/data-export/
     description: Export resource data to CSV or integrate via REST API.
@@ -60,23 +60,23 @@ sections:
 - type: button-cards
   heading: Policies
   cards:
-  - emoji: 🚀
+  - icon: rocket-launch
     heading: Get Started
     link: /docs/insights/policy/get-started/
     description: Configure your first policy group and enforce compliance across Pulumi stacks and discovered cloud resources.
-  - emoji: 💡
+  - icon: lightbulb
     heading: Policies Concepts
     link: /docs/insights/policy/
     description: Learn how policies, policy packs, and policy groups work together to enforce compliance.
-  - emoji: 📦
+  - icon: package
     heading: Pre-built Policy Packs
     link: /docs/insights/policy/policy-packs/pre-built-packs/
     description: Use ready-made compliance rules for CIS, PCI DSS, SOC 2, and other frameworks with no code required.
-  - emoji: 🔄
+  - icon: arrows-clockwise
     heading: Policy Groups
     link: /docs/insights/policy/policy-groups/
     description: Apply policy packs with preventative enforcement to block non-compliant deployments or audit mode to scan all discovered resources.
-  - emoji: ⚠️
+  - icon: warning
     heading: Policy Findings
     link: /docs/insights/policy/policy-findings/
     description: View violations, track remediation progress, and monitor compliance trends across all infrastructure.
@@ -84,7 +84,7 @@ sections:
 - type: button-cards
   heading: Self-hosted
   cards:
-  - emoji: 🏢
+  - icon: buildings
     heading: Self-hosted Insights
     link: /docs/insights/self-hosted/
     description: Run Insights discovery scans and policy evaluations in your own environment using customer-managed workflow runners.

@@ -44,7 +44,7 @@
                             <ul class="list-none p-0">
                                 {{ range .Params.youll_learn }}
                                     <li>
-                                        <i class="fas fa-check text-green-500 mr-2"></i>
+                                        {{ partial "icon.html" (dict "name" "check" "class" "text-green-500 mr-2") }}
                                         <span>{{ . }}</span>
                                     </li>
                                 {{ end }}
@@ -59,7 +59,7 @@
                             <ul class="list-none p-0">
                                 {{ range .Params.prereqs }}
                                     <li>
-                                        <i class="far fa-circle text-gray-600 mr-2"></i>
+                                        {{ partial "icon.html" (dict "name" "circle" "class" "text-gray-600 mr-2") }}
                                         <span>{{ . | markdownify }}</span>
                                     </li>
                                 {{ end }}

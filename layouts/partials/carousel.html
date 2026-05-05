@@ -4,11 +4,11 @@
         <div class="carousel-item-label border-b-4 border-white font-semibold text-violet-primary transition-all cursor-pointer border-violet-primary">
             <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 0).label }}</span>
         </div>
-        <i class="fas fa-chevron-right text-violet-100 pb-3 text-sm mx-2 md:mx-4"></i>
+        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold" "class" "text-violet-100 pb-3 text-sm mx-2 md:mx-4") }}
         <div class="carousel-item-label border-b-4 border-white font-semibold text-violet-200 hover:text-violet-300 transition-all cursor-pointer border-violet-primary">
             <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 1).label }}</span>
         </div>
-        <i class="fas fa-chevron-right text-violet-100 pb-3 text-sm mx-2 md:mx-4"></i>
+        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold" "class" "text-violet-100 pb-3 text-sm mx-2 md:mx-4") }}
         <div class="carousel-item-label border-b-4 border-white font-semibold text-violet-200 hover:text-violet-300 transition-all cursor-pointer border-violet-primary">
             <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 2).label }}</span>
         </div>

@@ -1,0 +1,15 @@
+{{/*
+Shortcode wrapper for the icon partial.
+
+Usage in Markdown:
+  {{< icon name="rocket-launch" >}}
+  {{< icon name="brand/slack" class="w-5 h-5" >}}
+  {{< icon name="rocket-launch" weight="bold" title="Launch" >}}
+*/}}
+{{ partial "icon.html" (dict
+    "name"   (.Get "name")
+    "weight" (.Get "weight")
+    "class"  (.Get "class")
+    "size"   (.Get "size")
+    "title"  (.Get "title")
+) }}

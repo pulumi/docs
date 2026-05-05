@@ -292,10 +292,11 @@
 
 // Shared feature card (icon above title + description) — used by template-feature-split and template-three-column (icon_layout: above)
 .template-feature-card-icon {
-    @apply text-black flex items-center justify-center w-12 h-12 text-body-xl rounded-lg mb-6;
-    border: 0.5px solid #CECECE;
+    @apply text-violet-primary mb-3 text-body-xl;
 
-    i {
+    svg {
+        width:32px;
+        height:32px;
         @apply flex-shrink-0;
     }
 }

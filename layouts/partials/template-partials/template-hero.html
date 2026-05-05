@@ -120,7 +120,7 @@
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
                 {{ if $dateAndLocation }}
-                <span><i class="far fa-calendar mr-3"></i></span>
+                <span>{{ partial "icon.html" (dict "name" "calendar" "class" "mr-3") }}</span>
                 <span class="hero-date-and-location"><a href="#location">{{ $dateAndLocation }}</a></span>
                 {{ end }}
                 {{ if and $dateAndLocation $booth }}
@@ -155,18 +155,13 @@
                     {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
-                <img
-                    src="{{ $overlayImage }}"
-                    alt="{{ $overlayAlt }}"
-                    class="hero-code-overlay"
-                    aria-hidden="true"
-                >
+                {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "ariaHidden" "true") }}
                 {{ end }}
             </div>
         </div>
         {{ else if $image }}
         <div class="xl:w-1/2 w-full">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto" "loading" "eager" "style" ($imageStyle | safeCSS)) }}
         </div>
         {{ end }}
     </div>
@@ -218,18 +213,13 @@
                     {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
-                <img
-                    src="{{ $overlayImage }}"
-                    alt="{{ $overlayAlt }}"
-                    class="hero-code-overlay"
-                    aria-hidden="true"
-                >
+                {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "ariaHidden" "true") }}
                 {{ end }}
             </div>
         </div>
         {{ else if $image }}
         <div class="product-hero-visual flex justify-center">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg"{{ with $imageStyle }} style="{{ . | safeCSS }}"{{ end }}>
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "style" ($imageStyle | safeCSS)) }}
         </div>
         {{ end }}
     </div>

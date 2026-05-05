@@ -1,9 +1,38 @@
-{{ $size := "large" }}
-{{ if eq .size "small" }}
-    {{ $size = "small"}}
-{{ end }}
+{{- /* Map legacy icon names to Phosphor equivalents */ -}}
+{{- $nameMap := dict
+    "abstract-shapes" "shapes"
+    "alert"           "warning"
+    "architecture"    "shapes"
+    "cloud-with-nodes" "graph"
+    "code-window"     "terminal-window"
+    "coding"          "code"
+    "collab"          "handshake"
+    "cycle"           "arrows-clockwise"
+    "delivery"        "package"
+    "download-from-cloud" "cloud-arrow-down"
+    "exchange"        "arrows-left-right"
+    "gear"            "gear-six"
+    "git-merged"      "git-merge"
+    "global"          "globe"
+    "guage"           "gauge"
+    "interests"       "sparkle"
+    "nodes"           "graph"
+    "nodes-and-rays"  "graph"
+    "pen"             "pen-nib"
+    "program"         "code-block"
+    "puzzle"          "puzzle-piece"
+    "rocketship"      "rocket-launch"
+    "security"        "shield-check"
+    "ship"            "boat"
+    "team"            "users-three"
+    "testing"         "test-tube"
+    "type-cursor"     "cursor-text"
+    "upload-to-cloud" "cloud-arrow-up"
+    "clouds"          "cloud"
+-}}
 
-<div class="icon-{{ .icon }} icon-{{ .icon }}-{{ .icon_color }} icon-{{ .icon }}-{{ $size }}">
-    {{ $path := .icon | printf "%s/%s" "icons" | printf "%s" }}
-    {{ partial $path }}
-</div>
+{{- $iconName   := default .icon (index $nameMap .icon) -}}
+
+<span class="text-violet-primary">
+    {{ partial "icon.html" (dict "name" $iconName "weight" "duotone" "size" "32") }}
+</span>

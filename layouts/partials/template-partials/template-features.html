@@ -8,8 +8,8 @@
     - image: Optional image path for right column
     - image_alt: Optional alt text for image
     - features: Array of feature objects
-      Example: [{"icon": "fa-rocket", "title": "Title", "description": "Description"}]
-      Note: icon should be Font Awesome icon class (e.g., "fa-rocket", "fa-code")
+      Example: [{"icon": "rocket", "title": "Title", "description": "Description"}]
+      Note: icon should be a Phosphor icon name (e.g., "rocket", "code")
     - anchor: Optional anchor for section id
 */}}
 
@@ -42,7 +42,7 @@
             <div class="py-4 feature-item flex flex-col text-left">
                 <h4 class="feature-title mb-2">
                     {{ if .icon }}
-                    <i class="fa {{ .icon }} mr-3"></i>
+                    {{ partial "icon.html" (dict "name" .icon "weight" "duotone" "class" "mr-3") }}
                     {{ end }}
                     {{ .title }}
                 </h4>
@@ -53,7 +53,7 @@
 
         {{ if $image }}
         <div class="features-image">
-            <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg") }}
         </div>
         {{ end }}
     </div>
