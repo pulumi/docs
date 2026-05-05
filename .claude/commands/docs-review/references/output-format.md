@@ -12,8 +12,13 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ```markdown
 ## Quality Review — Last updated <ISO 8601 timestamp>
 
-> **Goal:** <one paragraph: what this PR is, what failure mode would block its goal, what was checked>.  
-> **Review confidence:** <dimension> · <dimension> · <dimension>.
+> **Summary:** <one paragraph: what this PR is, what failure mode would block its goal, what was checked>.
+>
+> **Review confidence:**
+>
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | <dimension> | <HIGH/MEDIUM/LOW> | <short parenthetical when not HIGH> |
 
 | 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
 | :---: | :---: | :---: | :---: |
@@ -58,13 +63,15 @@ Need a re-review? Want to dispute a finding? Mention `@claude` and include `#upd
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
 
-### Goal preamble and review confidence
+### Summary preamble and review confidence
 
-The goal/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory.
+The summary/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory. Render Summary and Review confidence as separate blockquote paragraphs (blank `>` between them) so they don't run together.
 
-**Goal paragraph.** One paragraph naming three things, in order: (1) what this PR is — content type, subject, and (for new pages) which existing pages it parallels; (2) what specific kind of wrongness would block a reader's success; (3) what investigative passes ran. Scale the paragraph to the change: one sentence is fine for a two-line edit. Don't pad.
+**Summary paragraph.** One paragraph naming three things, in order: (1) what this PR is — content type, subject, and (for new pages) which existing pages it parallels; (2) what specific kind of wrongness would block a reader's success; (3) what investigative passes ran. Scale to the change: one sentence is fine for a two-line edit. Don't pad.
 
-**Review confidence line.** One line, three to five dimensions, each HIGH / MEDIUM / LOW with a short parenthetical when not HIGH. Dimensions are drawn from the references the review applied:
+**Review confidence table.** A blockquoted markdown table — three to five rows, each row a dimension drawn from the references the review applied. Columns: `Dimension`, `Level` (HIGH / MEDIUM / LOW), `Notes` (short parenthetical when not HIGH; empty when HIGH).
+
+Dimensions:
 
 - **mechanics** — links resolve, frontmatter valid, code parses, lint clean (always present).
 - **facts** — claim verification result (always present when fact-check ran; "n/a" for infra-only PRs).
@@ -74,9 +81,13 @@ The goal/confidence block sits under the timestamp and above the bucket count ta
 
 Example:
 
-> *Review confidence: HIGH on mechanics · MEDIUM on facts (2 unverifiable) · LOW on cross-sibling consistency (read 2 of 5 sibling guides).*
+> | Dimension | Level | Notes |
+> | :--- | :---: | :--- |
+> | mechanics | HIGH | |
+> | facts | MEDIUM | 2 unverifiable |
+> | cross-sibling consistency | LOW | read 2 of 5 sibling guides |
 
-**Don't say HIGH unless the dimension's work was actually finished.** A `HIGH on cross-sibling consistency` claim with no evidence-trail line citing the siblings is a false claim; downgrade. The parenthetical's job is to report the ratio that justifies a non-HIGH rating.
+**Don't say HIGH unless the dimension's work was actually finished.** A `HIGH on cross-sibling consistency` row with no evidence-trail line citing the siblings is a false claim; downgrade. The Notes column reports the ratio that justifies a non-HIGH level.
 
 ### Verification trail
 
@@ -163,15 +174,22 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
 - **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
-  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
-    - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
-    - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
+  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
+    - `- **line 42:** _substitution_ — Use 'select' instead of 'click'.`
+    - `- **line 87:** _passive voice_ — Use active voice instead of passive voice ('is created').`
 
     **Always group style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style findings at all.
 
-    **Expand-hint.** Immediately under the H4 heading, render `<sub>Click each filename to expand.</sub>` so readers know the collapsed roll-ups need a click. Skip the hint only when every file's findings render inline (no `<details>` blocks at all on this run).
+    **Render mode — single mode per comment.** Pick one mode for *all* style findings in this review based on file count and total finding count, not per-file:
 
-    **Per-file roll-up summary.** When a single file has more than 5 style findings, render them under a `<details>` block whose summary names the file (bold), the total (bold), and a kind breakdown with each count bolded:
+    - **Inline-all (no collapsing).** When the PR touches a single file *and* the total style-finding count is ≤30. Render every bullet flat under `#### Style findings`. No `<details>` block. No expand-hint.
+    - **Collapse-all.** When the PR touches more than one file, *or* total style findings exceed 30. Render every file as its own `<details>` block (one `<summary>` per file, even files with a single finding) with the file roll-up summary format below. Render the expand-hint once under the H4.
+
+    Mixed-mode (some files inline, some collapsed) is forbidden — it reads as inconsistent. The two-mode rule keeps each comment internally consistent.
+
+    **Expand-hint** (collapse-all mode only). Immediately under the H4 heading, render `<sub>Click each filename to expand.</sub>`.
+
+    **Per-file roll-up summary** (collapse-all mode only). Each file renders under a `<details>` block whose summary names the file (bold), the total (bold), and a kind breakdown with each count bolded:
 
     ```markdown
     #### Style findings
@@ -181,13 +199,13 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
     <details>
     <summary><strong>content/docs/foo.md</strong> (<strong>8</strong> issues: <strong>4</strong> wordiness, <strong>2</strong> punctuation, <strong>1</strong> passive voice, <strong>1</strong> substitution)</summary>
 
-    - **line 12:** [style] _wordiness_ — …
-    - **line 14:** [style] _wordiness_ — …
+    - **line 12:** _wordiness_ — …
+    - **line 14:** _wordiness_ — …
     ...
     </details>
     ```
 
-    Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Files with ≤5 findings render inline (no `<details>`); the breakdown only appears when collapsed.
+    Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Render the breakdown even on single-finding files (the format is uniform across the review).
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
