@@ -1,5 +1,19 @@
-{{/* If a general image is associated with the post, display it full-width at the top. */}}
-{{ if .Params.feature_image }}
+{{/*
+    Hero slot for the post page.
+    If `youtube_id` is set in front matter, embed the video instead of the feature image
+    (feature_image still drives social cards and listing thumbnails — only the in-page hero swaps).
+    Otherwise display the feature image full-width.
+*/}}
+{{ if .Params.youtube_id }}
+    <div class="aspect-video w-full mb-8 rounded-lg overflow-hidden">
+        <iframe
+            class="w-full h-full border-0"
+            src="https://www.youtube.com/embed/{{ .Params.youtube_id }}?rel=0"
+            title="{{ .Title }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+{{ else if .Params.feature_image }}
     {{ $resource := .Resources.GetMatch .Params.feature_image }}
     {{ if $resource }}
         {{ $sm := $resource.Fit "640x427" }}
