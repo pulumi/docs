@@ -111,10 +111,12 @@ jobs:
           BASELINE_SOURCE=""
 
           # (1) Try the marker comment first.
+          # `|| true` on the grep pipeline so a missing footer doesn't kill the
+          # script under `set -e` — fall through to the run-based baseline instead.
           COMMENT_BODY=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
             --jq '[.[] | select(.body | startswith("<!-- social-review -->"))] | .[-1].body // empty')
           if [ -n "$COMMENT_BODY" ]; then
-            COMMENT_SHA=$(echo "$COMMENT_BODY" | grep -oE 'commit \`[a-f0-9]{7,40}\`' | head -1 | grep -oE '[a-f0-9]{7,40}')
+            COMMENT_SHA=$(echo "$COMMENT_BODY" | grep -oE 'commit `[a-f0-9]{7,40}`' | head -1 | grep -oE '[a-f0-9]{7,40}' || true)
             if [ -n "$COMMENT_SHA" ]; then
               PRIOR_SHA="$COMMENT_SHA"
               BASELINE_SOURCE="comment"
