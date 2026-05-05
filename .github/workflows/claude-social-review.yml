@@ -94,22 +94,53 @@ jobs:
           SERVER_URL: ${{ github.server_url }}
         run: |
           set -e
-          # "Successful" prior run = "the workflow ran without crashing on this branch."
-          # The PASS/FAIL verdict lives in the PR comment, not the run conclusion.
-          # Either way, if the social copy hasn't changed, the prior verdict still
-          # applies — re-running risks flapping (PASS<->FAIL on identical copy).
+          # The review verdict lives in the PR comment, not the run conclusion —
+          # if the social copy hasn't changed since the comment was last updated,
+          # the verdict still applies. Re-running risks flapping (PASS<->FAIL on
+          # identical copy) and wastes Claude calls on PRs stuck on a char-limit
+          # fail (where every push to the same over-limit copy would otherwise
+          # trigger a fresh review).
+          #
+          # Baseline preference order:
+          #   1. Our edit-in-place comment's footer SHA (most accurate — atomic
+          #      with the comment write, unaffected by later step failures).
+          #   2. Last successful workflow run on this branch (legacy fallback
+          #      for PRs that pre-date the marker comment).
+          PRIOR_SHA=""
+          PRIOR_RUN_ID=""
+          BASELINE_SOURCE=""
+
+          # (1) Try the marker comment first.
+          COMMENT_BODY=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '[.[] | select(.body | startswith("<!-- social-review -->"))] | .[-1].body // empty')
+          if [ -n "$COMMENT_BODY" ]; then
+            COMMENT_SHA=$(echo "$COMMENT_BODY" | grep -oE 'commit \`[a-f0-9]{7,40}\`' | head -1 | grep -oE '[a-f0-9]{7,40}')
+            if [ -n "$COMMENT_SHA" ]; then
+              PRIOR_SHA="$COMMENT_SHA"
+              BASELINE_SOURCE="comment"
+              echo "Baseline: social-review comment footer SHA $PRIOR_SHA"
+            fi
+          fi
+
+          # (2) Fall back to last successful run on this branch.
           # `gh run list --branch` (and the API's ?branch= query) is unreliable
           # for slash-containing branch names — silently returns empty for some
           # branches that do have runs. Query the workflow's runs unfiltered and
           # filter by head_branch in jq client-side, which always works.
-          PRIOR=$(gh api \
-            "repos/$REPO/actions/workflows/claude-social-review.yml/runs?per_page=30" \
-            --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .event == \"pull_request\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
-          PRIOR_SHA=$(echo "$PRIOR" | jq -r '.head_sha // ""')
-          PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.id // ""')
+          if [ -z "$PRIOR_SHA" ]; then
+            PRIOR=$(gh api \
+              "repos/$REPO/actions/workflows/claude-social-review.yml/runs?per_page=30" \
+              --jq "[.workflow_runs[] | select(.head_branch == \"$HEAD_REF\" and .event == \"pull_request\" and .conclusion == \"success\" and .id != $RUN_ID)] | .[0]")
+            PRIOR_SHA=$(echo "$PRIOR" | jq -r '.head_sha // ""')
+            PRIOR_RUN_ID=$(echo "$PRIOR" | jq -r '.id // ""')
+            if [ -n "$PRIOR_SHA" ]; then
+              BASELINE_SOURCE="run"
+              echo "Baseline: prior successful run $PRIOR_RUN_ID at SHA $PRIOR_SHA"
+            fi
+          fi
 
           if [ -z "$PRIOR_SHA" ]; then
-            echo "No prior successful run on this branch — running review."
+            echo "No prior baseline (no marker comment, no successful run) — running review."
             echo "should_skip=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -137,13 +168,20 @@ jobs:
             # Log to the action run instead of posting a PR comment — the comment
             # was noisy on active PRs (one per push that didn't touch the social
             # block). Anyone wanting a fresh review can still comment `/social-review`.
-            echo "::notice::Skipping social media review — $REASON. Prior run: ${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}. Comment /social-review to force a fresh review."
+            if [ "$BASELINE_SOURCE" = "comment" ]; then
+              VERDICT_LINK="The verdict in the existing social-review PR comment still applies."
+              NOTICE_TAIL="The PR comment from commit $PRIOR_SHA still applies."
+            else
+              VERDICT_LINK="The verdict from the [prior run](${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}) still applies."
+              NOTICE_TAIL="Prior run: ${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}."
+            fi
+            echo "::notice::Skipping social media review — $REASON. $NOTICE_TAIL Comment /social-review to force a fresh review."
             {
               echo "## 🟰 Skipping social media review"
               echo ""
               echo "**Reason:** $REASON"
               echo ""
-              echo "The verdict from the [prior run](${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}) still applies."
+              echo "$VERDICT_LINK"
               echo ""
               echo "Comment \`/social-review\` on the PR to force a fresh review."
             } >> "$GITHUB_STEP_SUMMARY"
