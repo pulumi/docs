@@ -38,6 +38,16 @@ on:
         description: 'PR head SHA (passed by claude-new.yml dispatcher so checkout sees PR content, not base)'
         required: true
         type: string
+      dispatcher_comment_id:
+        description: 'ID of the dispatcher confirmation comment to delete on completion (claude-new.yml only; empty for other dispatchers)'
+        required: false
+        type: string
+        default: ''
+      mention_author:
+        description: 'Author to @-mention in the terminal "Review regenerated" comment on success (claude-new.yml only; empty suppresses the terminal post)'
+        required: false
+        type: string
+        default: ''
 
 jobs:
   # synchronize → just mark the existing pinned review stale.
@@ -377,18 +387,31 @@ jobs:
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
       # always reaches a terminal state regardless of outcome.
       #
-      # Outcome handling:
-      # - success: delete the comment. The pinned review is the durable
+      # Spinner outcome handling:
+      # - success: delete the spinner. The pinned review is the durable
       #   artifact; "Review updated." would read strangely as the bot's
       #   first comment on a fresh PR.
-      # - cancelled / skipped: delete the orphan comment. A cancellation
+      # - cancelled / skipped: delete the orphan spinner. A cancellation
       #   means a newer run preempted this one (concurrency cancel-in-
       #   progress); the new run owns the user-visible state and this
       #   one's progress comment is just noise.
-      # - any other (failure, etc.): edit to "Review errored." This path
-      #   has no @-author to attribute (synchronize-triggered runs and
-      #   workflow_dispatch from #new-review both arrive without a mention
-      #   author), so the message stays unattributed.
+      # - any other (failure, etc.): edit to "Review errored." The
+      #   message stays unattributed; the synchronize path has no
+      #   requester, and on the dispatch path the requester's mention
+      #   is consumed by the success-only "Review regenerated" terminal
+      #   below.
+      #
+      # Dispatcher confirmation comment cleanup (workflow_dispatch from
+      # claude-new.yml only): the dispatcher posts "🤖 @<author> — pinned
+      # review cleared; regenerating from scratch." at the start and
+      # passes its comment ID through `dispatcher_comment_id`. We delete
+      # it regardless of outcome — once we reach finalize the present-
+      # tense "regenerating from scratch" message is no longer accurate.
+      # On success of a dispatch run we also post a fresh terminal
+      # "🤖 Review regenerated on @<author>'s request." mirroring
+      # claude-update.yml's pattern (created, not edited — fires a
+      # notification). Both branches are no-ops when the inputs are
+      # empty (workflow_run path).
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -398,8 +421,19 @@ jobs:
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude-review.outcome }}"
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+
+          if [ -n "$DISPATCHER_COMMENT_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
+          fi
+
           if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
+              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            fi
           else
             BODY='<!-- CLAUDE_PROGRESS -->
           🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
