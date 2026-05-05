@@ -269,7 +269,7 @@ jobs:
 
           $BULLETS
 
-          _Spelling/grammar from a best-effort Haiku pass; style from Vale on PR-added lines. Reject false positives at your discretion._
+          _This is a best-effort spelling/grammar/style check. Reject false positives at your discretion._
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
