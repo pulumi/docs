@@ -1,0 +1,149 @@
+{{- $nav := site.Data.header_nav -}}
+
+<header
+  class="sticky top-0 z-40 w-full border-b border-gray-200 bg-white"
+>
+  <div class="flex h-16 items-center justify-between gap-4 px-4 md:px-6">
+
+    <a href="/" data-track="header-pulumi-logo"
+       class="flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1"
+       aria-label="Pulumi home">
+      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto") }}
+    </a>
+
+    {{ partial "header/nav-desktop.html" $nav }}
+
+    <div class="flex items-center gap-2">
+      <!-- Desktop CTAs -->
+      <a href="{{ $nav.cta.signIn.href }}"
+         {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ $nav.cta.signIn.label }}
+      </a>
+      <a href="{{ $nav.cta.getStarted.href }}"
+         {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-700/80 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ $nav.cta.getStarted.label }}
+      </a>
+      <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
+      <div class="flex gap-2 nav-desktop:hidden">
+        <div class="max-sm:hidden flex gap-2">
+          <a href="{{ $nav.cta.signIn.href }}"
+             {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+             style="background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $nav.cta.signIn.label }}
+          </a>
+          <a href="{{ $nav.cta.getStarted.href }}"
+             {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+             style="background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-700/80 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $nav.cta.getStarted.label }}
+          </a>
+        </div>
+        {{ partial "header/nav-mobile.html" $nav }}
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile sheet overlay and panel — rendered outside <header> so backdrop-filter
+     on the header does not create a new containing block for these fixed elements. -->
+
+<div data-nav-sheet-overlay data-state="closed"
+  class="fixed inset-0 z-50 bg-black/10 transition-opacity duration-150
+         data-[state=closed]:pointer-events-none data-[state=closed]:opacity-0
+         data-[state=open]:opacity-100
+         supports-[backdrop-filter]:backdrop-blur-xs"></div>
+
+<aside data-nav-sheet data-state="closed" data-side="right"
+  class="fixed inset-y-0 right-0 z-50 flex w-3/4 flex-col gap-0 border-l border-gray-100 bg-white text-gray-950 shadow-lg transition duration-200 ease-in-out p-0 sm:max-w-md
+         data-[state=closed]:pointer-events-none data-[state=closed]:translate-x-[2.5rem] data-[state=closed]:opacity-0
+         data-[state=open]:translate-x-0 data-[state=open]:opacity-100"
+  aria-label="Navigation">
+
+  <div class="flex flex-col gap-1.5 p-4">
+    <h2 class="sr-only">Navigation</h2>
+    <button type="button" data-nav-sheet-close aria-label="Close navigation"
+      class="absolute top-4 right-4 inline-flex size-8 items-center justify-center rounded-md text-gray-950 transition-all hover:bg-gray-100 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+      {{ partial "icon.html" (dict "name" "x" "class" "size-4") }}
+    </button>
+  </div>
+
+  <nav class="flex flex-1 flex-col overflow-y-auto px-3 py-2">
+    {{ range $dropdown := $nav.dropdowns }}
+      <div data-nav-collapsible class="border-b border-gray-100">
+        <button type="button" data-nav-collapsible-trigger
+          class="group flex w-full items-center justify-between px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
+          {{ $dropdown.label }}
+          {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "size-4 transition-transform duration-200 [[data-open=true]_&]:rotate-180") }}
+        </button>
+        <div data-nav-collapsible-panel data-state="closed"
+          class="overflow-hidden transition-all duration-200
+                 data-[state=closed]:max-h-0 data-[state=closed]:opacity-0
+                 data-[state=open]:max-h-[2000px] data-[state=open]:opacity-100">
+          <div class="flex flex-col gap-3 pb-3">
+            {{ range $section := $dropdown.sections }}
+              <div class="flex flex-col gap-1">
+                {{ with $section.heading }}
+                  <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
+                {{ end }}
+                <ul class="flex flex-col gap-0.5">
+                  {{ range $item := $section.items }}
+                    <li>
+                      <a href="{{ $item.href }}" data-nav-sheet-close
+                        {{ with $item.track }}data-track="{{ . }}"{{ end }}
+                        class="flex flex-row items-start gap-3 rounded-md p-3 transition-colors hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:outline-none">
+                        <span aria-hidden="true"
+                          class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border border-gray-100 text-violet-700">
+                          {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight) "class" "size-6") }}
+                        </span>
+                        <span class="flex min-w-0 flex-col gap-0.5">
+                          <span class="text-sm font-semibold text-gray-950">{{ $item.label }}</span>
+                          {{ with $item.description }}
+                            <span class="text-xs text-gray-600">{{ . }}</span>
+                          {{ end }}
+                        </span>
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+
+    <ul class="flex flex-col gap-0.5 py-2">
+      {{ range $link := $nav.plainLinks }}
+        <li>
+          <a href="{{ $link.href }}" data-nav-sheet-close
+            {{ with $link.track }}data-track="{{ . }}"{{ end }}
+            class="block rounded-md px-3 py-3 text-base font-semibold text-gray-950 transition-colors hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:outline-none">
+            {{ $link.label }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  <div class="flex flex-col gap-2 border-t border-gray-100 p-4">
+    <a href="{{ $nav.cta.signIn.href }}"
+      {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+      class="inline-flex h-9 items-center justify-center rounded-md border border-gray-100 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:bg-gray-100">
+      {{ $nav.cta.signIn.label }}
+    </a>
+    <a href="{{ $nav.cta.getStarted.href }}"
+      {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+      class="inline-flex h-9 items-center justify-center rounded-md bg-violet-700 px-2.5 text-sm font-regular text-white transition-all hover:bg-violet-700/80">
+      {{ $nav.cta.getStarted.label }}
+    </a>
+  </div>
+</aside>
+
+{{ $headerNavJS := resources.Get "js/header-nav.js" | js.Build (dict "minify" true) }}
+<script src="{{ $headerNavJS.RelPermalink }}" defer></script>

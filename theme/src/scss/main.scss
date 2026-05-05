@@ -3,6 +3,7 @@
 // Tell Tailwind v4 where to scan for utility class usage in templates.
 // Paths are relative to this file (theme/src/scss/).
 @source "../../../layouts/**/*.html";
+@source "../../../layouts/partials/header/*.html";
 @source "../../../content/**/*.{html,md}";
 @source "../../../assets/js/**/*.js";
 @source "../../stencil/src/**/*.tsx";
