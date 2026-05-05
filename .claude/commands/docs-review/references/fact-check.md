@@ -56,7 +56,9 @@ For every changed content file, produce a structured claim list. A "claim" is an
 
 - Stylistic or opinion ("this approach is cleaner")
 - Self-evidently context-only ("In this guide, we'll walk through...")
-- Already cited and linked
+- Stylistic, opinion, or rhetorical phrasing that is also already cited and linked
+
+A specific factual claim — percentage, count, time-bounded statement, framing claim like "in production" vs "in use" — must still extract and verify even when cited. The citation makes verification cheap, not absent. See §Cited-claim spot-check.
 
 ### Scope
 
@@ -290,6 +292,21 @@ mcp__claude_ai_Slack__slack_search_public_and_private
 ```
 
 Default search window: last 6 months. Absence of these tools must not fail the workflow -- annotate the evidence as "internal sources unavailable."
+
+#### Cited-claim spot-check
+
+When a claim has an inline citation (URL, paper reference, named source), the verification step is *not* "trust the link" — it's "fetch the cited source and confirm it supports this exact framing."
+
+Spot-check procedure:
+
+1. Fetch the cited URL via WebFetch (or the source content via the appropriate tool).
+1. Find the supporting passage in the source.
+1. Compare the source's framing to the claim's framing. Does the source say *exactly what the PR claims*, or has the PR strengthened, narrowed, or shifted the framing?
+1. If the source supports the exact framing, mark `verified, confidence: high` with the source pointer in evidence.
+1. If the source is close but not exact (e.g., "in some capacity" became "in production"), mark `contradicted: source mismatch` with the divergence quoted.
+1. If the source is unreachable or the cited URL doesn't actually contain the supporting passage, mark `unverifiable` with an author-question line.
+
+Cited claims that pass spot-check land in ✅ Verified at high confidence — the citation made verification cheap. Cited claims that fail spot-check are *more* damning than unverifiable ones, because the author asserted a source they didn't actually consult.
 
 ### Confidence calibration
 
