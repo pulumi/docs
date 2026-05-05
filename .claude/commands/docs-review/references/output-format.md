@@ -43,8 +43,29 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 ### Bucket rules
 
-- **🚨 Outstanding** is the bucket that says "the author must address this before a human approves the PR."
-- **⚠️ Low-confidence** is for findings where the reviewer is <80% sure *or* where the finding is "worth human attention but not blocking" (e.g., infra risk flags per `docs-review:references:infra`). Don't pad with hedging on findings you're confident in.
+- **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
+
+  **Always-🚨 carve-outs (no judgment required):**
+
+  - Factually contradicted claim, any confidence, **or** unverifiable factual claim (per `docs-review:references:fact-check` §Tier rules).
+  - Code that does not parse in its language, **or** code that imports / calls a symbol that does not exist in the referenced package version (per `docs-review:references:code-examples`).
+  - Missing internal link target (per `docs-review:references:docs`).
+  - Missing aliases on a moved file (per `docs-review:references:shared-criteria`).
+  - Workflow-breaking instruction — reader cannot complete the documented task as written (cross-sibling-verified where applicable; see `docs-review:references:docs`).
+  - Blog publishing-blocker (retired-logo `meta_image`, placeholder `meta_image`, `meta_image` format violation, missing/buried `<!--more-->`, missing/empty `social:` block, missing author avatar) — per `docs-review:references:blog` §Publishing blockers.
+  - Secrets, credentials, or tokens in the diff (per `docs-review:references:infra` §Secret handling).
+  - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
+  - Legal semantic change on `/legal/` content (per `docs-review:references:website`).
+  - Public-source-contradicted competitor claim (per `docs-review:references:website`).
+
+  **Two-question test for non-listed findings.** Promote to 🚨 only when the answer to *both* questions below is yes:
+
+  1. Will a reader following the documented path arrive at a wrong outcome (broken instruction, contradicted claim, dead link, mismatched expectation)?
+  1. Is the wrong outcome non-recoverable from the page itself — no inline workaround, no errata, no "see also" pointing at correct content?
+
+  If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
+
+- **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
   - **Style nits.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
     - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
     - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
