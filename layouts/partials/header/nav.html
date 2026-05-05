@@ -17,12 +17,22 @@
       <!-- Desktop CTAs -->
       <a href="{{ $nav.cta.signIn.href }}"
          {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+         data-nav-signin
          style="background-clip:padding-box"
-         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
         {{ $nav.cta.signIn.label }}
+      </a>
+      <a href="https://app.pulumi.com/signin"
+         data-track="header-dashboard"
+         data-nav-dashboard
+         style="display:none;background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
+        Dashboard
       </a>
       <a href="{{ $nav.cta.getStarted.href }}"
          {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+         data-nav-signin
          style="background-clip:padding-box"
          class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-700/80 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
         {{ $nav.cta.getStarted.label }}
@@ -32,12 +42,22 @@
         <div class="max-sm:hidden flex gap-2">
           <a href="{{ $nav.cta.signIn.href }}"
              {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+             data-nav-signin
              style="background-clip:padding-box"
-             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
             {{ $nav.cta.signIn.label }}
+          </a>
+          <a href="https://app.pulumi.com/signin"
+             data-track="header-dashboard"
+             data-nav-dashboard
+             style="display:none;background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
+            Dashboard
           </a>
           <a href="{{ $nav.cta.getStarted.href }}"
              {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+             data-nav-signin
              style="background-clip:padding-box"
              class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-700/80 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
             {{ $nav.cta.getStarted.label }}
@@ -134,11 +154,21 @@
   <div class="flex flex-col gap-2 border-t border-gray-100 p-4">
     <a href="{{ $nav.cta.signIn.href }}"
       {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
-      class="inline-flex h-9 items-center justify-center rounded-md border border-gray-100 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:bg-gray-100">
+      data-nav-signin
+      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:bg-gray-100">
       {{ $nav.cta.signIn.label }}
+    </a>
+    <a href="https://app.pulumi.com/signin"
+      data-track="header-dashboard"
+      data-nav-dashboard
+      style="display:none"
+      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:bg-gray-100">
+      {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
+      Dashboard
     </a>
     <a href="{{ $nav.cta.getStarted.href }}"
       {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+      data-nav-signin
       class="inline-flex h-9 items-center justify-center rounded-md bg-violet-700 px-2.5 text-sm font-regular text-white transition-all hover:bg-violet-700/80">
       {{ $nav.cta.getStarted.label }}
     </a>
