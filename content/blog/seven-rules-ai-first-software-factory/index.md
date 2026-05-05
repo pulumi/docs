@@ -1,7 +1,7 @@
 ---
 title: "Seven Rules for Building an AI-First Software Factory"
 date: 2026-05-07
-draft: true
+draft: false
 meta_desc: "Ewan Dawson, CTO of Compostable AI, on building a software factory where AI agents write the code. Seven rules learned across nineteen client deployments."
 meta_image: meta.png
 feature_image: feature.png
