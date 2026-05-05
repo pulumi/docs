@@ -44,6 +44,8 @@ Most of the code Compostable ships now, I haven't personally read. The agents ar
 
 ## 1. Transform, don't enhance
 
+<img src="rule-1-chrysalis.png" alt="" class="float-right w-32 ml-4 mb-2 mt-1 rounded-lg sm:w-40 sm:ml-6 lg:w-44">
+
 A few years ago, before I started Compostable, I was working at a large multinational when [GitHub Copilot](https://github.com/features/copilot) first came out. Everyone got excited. It was a ChatGPT moment for software development, and the first time I tried it, I was blown away. This is going to change things, I thought.
 
 But getting it into the hands of engineers at that company turned into an uphill fight with the Governance, Risk, and Compliance team. Copyright, security, compliance. The concerns were reasonable. They also added up. We were trying to drop a future-of-software-development tool into a process designed for none of that. By the time we'd negotiated a limited trial, I'd already worked out that whatever this technology was going to become, it wasn't going to become that inside a big enterprise first. Startups would. So I left and started one.
@@ -57,6 +59,8 @@ Most of the leverage in this technology comes from rebuilding around it. The too
 {{< /notes >}}
 
 ## 2. Remove the problem, don't solve it
+
+<img src="rule-2-knot.png" alt="" class="float-left w-32 mr-4 mb-2 mt-1 rounded-lg sm:w-40 sm:mr-6 lg:w-44">
 
 As we were building Compostable, one of the first problems was a version of the same risk I'd faced at my previous company. Our buyers are large enterprises in regulated industries. They worry about AI risk a lot. "We share a sandbox with the other clients" is not something anyone wants to hear.
 
@@ -73,6 +77,8 @@ Easier to manage a fleet of accounts than to secure a shared environment. Cheape
 {{< /notes >}}
 
 ## 3. Pick tools your agents can drive
+
+<img src="rule-3-wrench.png" alt="" class="float-right w-32 ml-4 mb-2 mt-1 rounded-lg sm:w-40 sm:ml-6 lg:w-44">
 
 Our first attempt at running the fleet was [CDK](https://aws.amazon.com/cdk/), TypeScript-native, the same language as our application code. My initial thinking was that infrastructure is code, it's just code, that'd be straightforward. It wasn't. As we added clients, the accounts started to drift out of sync. Deployments took forever. Retries got complicated when one account update succeeded and another failed. The tooling we were using wasn't up to the job. We needed something that didn't put a human in every deploy loop.
 
@@ -92,6 +98,8 @@ If part of your stack still requires a human to click through a web UI to provis
 
 ## 4. Don't let one agent do everything
 
+<img src="rule-4-constellation.png" alt="" class="float-left w-32 mr-4 mb-2 mt-1 rounded-lg sm:w-40 sm:mr-6 lg:w-44">
+
 Earlier, before the infrastructure story was sorted, we'd been wiring agents into the rest of the development flow. The move I reached for was a god prompt: one big system prompt that defined the whole software factory, with one agent turned loose on the work. It didn't work. The agents that write the code aren't the best at checking their own homework. They're lenient on themselves.
 
 So we don't run one agent. We run a constellation of them, each with a narrow job. One agent reviews the backlog and flags under-specified tickets, adding context the original ticket missed. Another writes the application code. Neo writes the infrastructure. When an agent hits an infra task, [AGENTS.md](https://agents.md/) tells it to delegate to Neo via Pulumi's MCP server. Once a PR is up, four or five checkers go at it. One looks at correctness, another at performance, another at security. One walks the tests, looking for paths the writer skipped. They're running on smaller models than the writer, and you know what? They always find something.
@@ -103,6 +111,8 @@ The checkers are cheap, they each look for one thing, and the writers don't have
 {{< /notes >}}
 
 ## 5. Measure human hours per unit of value
+
+<img src="rule-5-hourglass.png" alt="" class="float-right w-32 ml-4 mb-2 mt-1 rounded-lg sm:w-40 sm:ml-6 lg:w-44">
 
 Once we had agents writing and agents reviewing, throughput went up. Not by the order of magnitude we'd hoped, though. The bottleneck had moved past the PR (which the constellation now handled) to the work surrounding it. Configuration changes that needed to land across nineteen clients. Approvals before anything could ship to production. Per-client rollouts. All of those still ran through a person, and they added up.
 
@@ -117,6 +127,8 @@ Engineers writing or reviewing routine code is a bottleneck you can't afford. Ev
 {{< /notes >}}
 
 ## 6. Design for convergence, not one-shot correctness
+
+<img src="rule-6-spiral.png" alt="" class="float-left w-32 mr-4 mb-2 mt-1 rounded-lg sm:w-40 sm:mr-6 lg:w-44">
 
 Even with multiple agents writing and reviewing each other's work, the first pass was rarely the keeper. Agents drift. They go off-topic, work in areas they're not supposed to. As strong as the models are, you're not shipping the first thing they produce.
 
@@ -135,6 +147,8 @@ It doesn't matter how many tries it takes, as long as the loop closes without a 
 {{< /notes >}}
 
 ## 7. Run the factory in the cloud, not on a laptop
+
+<img src="rule-7-cloud.png" alt="" class="float-right w-32 ml-4 mb-2 mt-1 rounded-lg sm:w-40 sm:ml-6 lg:w-44">
 
 A factory like this has to live somewhere. Once it does, the question becomes where you can actually work on it. When people picture AI coding, they picture one developer in their IDE, watching Copilot autocomplete. That's not what we do. Our agents run in the cloud. The factory keeps producing whether engineers are in meetings, talking to clients, or asleep. Nobody on the team is watching progress bars. The engineers spend that time with clients.
 
