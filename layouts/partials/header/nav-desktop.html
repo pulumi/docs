@@ -7,6 +7,8 @@
           data-nav-trigger-button
           data-nav-index="{{ $i }}"
           aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="nav-desktop-popup"
           class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100 focus:bg-gray-100 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100">
           {{ $dropdown.label }}
           {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
@@ -27,6 +29,7 @@
 
   {{/* Single shared popup — morphs between items without disappearing */}}
   <div data-nav-popup
+    id="nav-desktop-popup"
     class="absolute z-50 rounded-lg bg-white text-gray-950 shadow border border-gray-200"
     style="display:none;top:calc(100% + 0.5rem);left:0;opacity:0;transform:scale(0.95);transform-origin:top left;transition:none">
     <div data-nav-viewport style="position:relative;overflow:hidden;width:100%;height:100%">

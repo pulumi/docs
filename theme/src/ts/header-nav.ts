@@ -235,7 +235,6 @@
           ps.width = `${sz.width}px`;
           ps.height = `${sz.height}px`;
         }
-        closeSheet();
       }, 150);
     });
 
@@ -293,11 +292,13 @@
   const sheetTrigger = document.querySelector<HTMLElement>('[data-nav-sheet-trigger]');
   const sheetCloseEls = document.querySelectorAll<HTMLElement>('[data-nav-sheet-close]');
   const overlay = document.querySelector<HTMLElement>('[data-nav-sheet-overlay]');
+  const navDesktopMql = window.matchMedia('(min-width: 1200px)');
 
   function openSheet(): void {
     if (!sheet) return;
     sheet.dataset.state = 'open';
     if (overlay) overlay.dataset.state = 'open';
+    if (sheetTrigger) sheetTrigger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
 
@@ -305,6 +306,7 @@
     if (!sheet) return;
     sheet.dataset.state = 'closed';
     if (overlay) overlay.dataset.state = 'closed';
+    if (sheetTrigger) sheetTrigger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   }
 
@@ -314,6 +316,12 @@
 
   document.addEventListener('keydown', (e: KeyboardEvent) => {
     if (e.key === 'Escape' && sheet?.dataset.state === 'open') closeSheet();
+  });
+
+  // Close the sheet when the viewport crosses into the desktop breakpoint,
+  // since the trigger button disappears there and would orphan the open sheet.
+  navDesktopMql.addEventListener('change', e => {
+    if (e.matches && sheet?.dataset.state === 'open') closeSheet();
   });
 
   // ---------- Mobile collapsibles ----------
@@ -326,9 +334,11 @@
       if (open) {
         item.removeAttribute('data-open');
         panel.dataset.state = 'closed';
+        trigger.setAttribute('aria-expanded', 'false');
       } else {
         item.dataset.open = 'true';
         panel.dataset.state = 'open';
+        trigger.setAttribute('aria-expanded', 'true');
       }
     });
   });
@@ -343,7 +353,7 @@
     const userCookie = cookies['pulumi_web_user_info'] ?? 'j:{}';
     const userInfo = JSON.parse(decodeURIComponent(userCookie).slice(2));
     if (userInfo?.userId) {
-      document.querySelectorAll<HTMLElement>('[data-nav-signin]').forEach(el => {
+      document.querySelectorAll<HTMLElement>('[data-nav-loggedout]').forEach(el => {
         el.style.display = 'none';
       });
       document.querySelectorAll<HTMLElement>('[data-nav-dashboard]').forEach(el => {
