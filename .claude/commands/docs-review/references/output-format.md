@@ -61,6 +61,8 @@ Need a re-review? Want to dispute a finding? Mention `@claude` and include `#upd
 (For ad-hoc questions or fixes, just `@claude` — no hashtag.)
 ```
 
+**Mandatory sections render on every review** — bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
+
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
 
 ### Summary preamble and review confidence
@@ -99,15 +101,13 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 **Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
 
-**Empty section.** When no claims were extracted (infra-only PR, pure formatting PR), render the explicit-empty form rather than omitting the section:
+**Empty section.** Per the top-level mandatory-sections invariant, render the explicit-empty form when no claims were extracted (infra-only PR, pure formatting PR):
 
 ```markdown
 ### 🔍 Verification trail
 
 _No verifiable claims extracted from this diff._
 ```
-
-A missing 🔍 section on a content PR is a reviewer bug.
 
 ### Editorial balance
 
@@ -118,7 +118,7 @@ Two trigger patterns:
 - **Comparison/listicle:** ≥3 H2 sections under the same parent reading as parallel entities (e.g., `## Pulumi`, `## Terraform`, `## OpenTofu`).
 - **FAQ:** an H2 named "Frequently asked questions" (case-insensitive), or any heading nested under it.
 
-When neither pattern fits, render the explicit-empty form:
+When neither pattern fits, render the explicit-empty form per the top-level mandatory-sections invariant:
 
 ```markdown
 ### 📊 Editorial balance
