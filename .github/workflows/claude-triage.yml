@@ -269,7 +269,7 @@ jobs:
 
           $BULLETS
 
-          _This is a best-effort spelling/grammar/style check. Reject false positives at your discretion._
+          _This is a simplified spelling/grammar/style check in lieu of a full review. Reject false positives at your discretion._
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
