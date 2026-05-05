@@ -1,6 +1,6 @@
 ---
 title: "Seven Rules for Building an AI-First Software Factory"
-date: 2026-05-04
+date: 2026-05-07
 draft: true
 meta_desc: "Ewan Dawson, CTO of Compostable AI, on building a software factory where AI agents write the code. Seven rules learned across nineteen client deployments."
 meta_image: meta.png
@@ -23,11 +23,11 @@ social:
 
         Ewan Dawson, CTO of Compostable AI, on the seven rules he built around the agents that write almost all of his company's code.
     linkedin: |
-        Ewan Dawson used to think of writing code as a craft. Now he runs a factory — and the people on the floor are AI agents.
+        Ewan Dawson runs a five-person software factory at Compostable AI. Most of the code it ships, he hasn't read.
 
-        Ewan is CTO of Compostable AI, where five engineers run an AI-first software factory: nineteen clients, custom AWS deployments, most of them shipped within a day of contract signing. Most of the code his company ships, he hasn't personally read.
+        The agents do the writing. The team handles what the agents can't: defining the work, talking to the customers, deciding what gets built. The factory keeps producing whether the engineers are at their desks or not.
 
-        Adapted from his recent Pulumi webinar — and expanded with the rules they didn't have time to land on stage.
+        In a recent Pulumi webinar, Ewan walked through the rules in brief. The blog post is the expanded version. For anyone trying to figure out how to set their team up for what's happening in software now.
     bluesky: |
         Five engineers. Nineteen clients. Custom code shipped within a day of signing.
 
