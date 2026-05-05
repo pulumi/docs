@@ -34,7 +34,7 @@ social:
         Ewan Dawson's seven rules for an AI-first software factory — where agents write nearly all the code.
 ---
 
-*Ewan Dawson is CTO of [Compostable AI](https://compostable.ai/), where five engineers run an AI-first software factory: nineteen clients, custom AWS deployments, most of them shipped within a day of contract signing. This article is adapted from his recent Pulumi webinar, and covers rules in more depth then we had time for on stage.*
+*Ewan Dawson is CTO of [Compostable AI](https://compostable.ai/), where five engineers run an AI-first software factory: nineteen clients, custom AWS deployments, most of them shipped within a day of contract signing. This article is adapted from his recent Pulumi webinar, and covers rules in more depth than we had time for on stage.*
 
 <!--more-->
 
@@ -46,7 +46,7 @@ Most of the code Compostable ships now, I haven't personally read. The agents ar
 
 A few years ago, before I started Compostable, I was working at a large multinational when [GitHub Copilot](https://github.com/features/copilot) first came out. Everyone got excited. It was a ChatGPT moment for software development, and the first time I tried it, I was blown away. This is going to change things, I thought.
 
-But getting it into the hands of engineers at that company turned into an uphill fight with the Governance, Risk, and Compliance team. Copyright, security, compliance. The concerns were reasonable. They also added up. We were trying to drop a future-of-software-development tool into a process designed for none of that. By the time we'd negotiated a limited trial, I'd already worked out that whatever this technology was going to become, it wasn't going to become it inside a big enterprise first. Startups would. So I left and started one.
+But getting it into the hands of engineers at that company turned into an uphill fight with the Governance, Risk, and Compliance team. Copyright, security, compliance. The concerns were reasonable. They also added up. We were trying to drop a future-of-software-development tool into a process designed for none of that. By the time we'd negotiated a limited trial, I'd already worked out that whatever this technology was going to become, it wasn't going to become that inside a big enterprise first. Startups would. So I left and started one.
 
 When we built Compostable, we were deliberate about it. I wasn't bolting agents onto a process I already knew. I was trying to figure out what the process should look like if AI did most of the writing from day one.
 
@@ -69,7 +69,7 @@ We didn't make the multi-tenant problem go away. We *shifted* it: instead of sec
 {{< notes type="tip" >}}
 **Remove the problem before you try to solve it.**
 
-Easier to manage a fleet of accounts than to secure a shared environment. Easier to reframe the problem than to engineer your way through it.
+Easier to manage a fleet of accounts than to secure a shared environment. Cheaper to reframe the problem than to engineer your way through it.
 {{< /notes >}}
 
 ## 3. Pick tools your agents can drive
@@ -79,8 +79,6 @@ Our first attempt at running the fleet was [CDK](https://aws.amazon.com/cdk/), T
 I went looking for something better. Pulumi solved the parts that were burning us: reliable deployment from code, configuration that varied per-client without forking the codebase. Pulumi had already shipped [Neo](/product/neo/) and an MCP server when most vendors were still figuring out their AI story. They were clearly betting on agents. That's the kind of partner I was looking for. Neo picked up our infrastructure on day one. One of my colleagues put it: "The scary thing about Neo is it just seems to know everything about what we do."
 
 > *"I don't actually care if it's HCL or TypeScript, as long as my software development agents can write it. And they do a better job with TypeScript than HCL."*
->
-> *— Ewan Dawson*
 
 What kept us going wasn't any one feature. It was that the pieces fit together. Pulumi IaC, [Pulumi ESC](/docs/pulumi-cloud/esc/), Neo, and [Pulumi Cloud](/docs/pulumi-cloud/) all built on top of each other, and we got benefits across the stack. We picked Pulumi because it fit our agents. The other pieces, the ESC, Neo, the Cloud, came along with it.
 
@@ -160,4 +158,4 @@ The factory is built one rule at a time. Mine isn't finished. That's the point.
 
 ---
 
-*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](https://www.pulumi.com/product/neo/).*
+*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*
