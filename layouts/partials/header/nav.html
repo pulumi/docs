@@ -175,5 +175,4 @@
   </div>
 </aside>
 
-{{ $headerNavJS := resources.Get "js/header-nav.js" | js.Build (dict "minify" true) }}
-<script src="{{ $headerNavJS.RelPermalink }}" defer></script>
+<script src="/js/{{ index site.Data.js_manifest "header-nav" }}" defer></script>
