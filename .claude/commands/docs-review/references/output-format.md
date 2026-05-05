@@ -20,6 +20,20 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 > | :--- | :---: | :--- |
 > | <dimension> | <HIGH/MEDIUM/LOW> | <short parenthetical when not HIGH> |
 
+<details>
+<summary>Investigation log</summary>
+
+- **Cross-sibling reads:** X of Y siblings (or "not run (not in a templated section)")
+- **External claim verification:** X of Y claims verified (N unverifiable, M contradicted)
+- **Cited-claim spot-checks:** X of X cited claims fetched and compared (or "not run (no cited claims)")
+- **Frontmatter sweep:** ran on <locations> (or "not run (no frontmatter in diff)")
+- **Temporal-trigger sweep:** ran (N matches, X verified) (or "not run (no trigger words)")
+- **Code execution:** ran <programs> (or "not run (no `static/programs/` change)")
+- **Editorial-balance pass:** ran (N H2 sections, K flags fired) / "not run (not under content/blog/)" / "ran (single-subject, N/A)"
+- **AI-drafting-signals pass:** ran (N of 6 patterns triggered) / "not run (file too short)" / "not run (not blog or long-doc)"
+
+</details>
+
 | 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
 | :---: | :---: | :---: | :---: |
 | **N** | **N** | **N** | **N** |
@@ -64,7 +78,7 @@ Need a re-review? Want to dispute a finding? Mention `@claude` and include `#upd
 (For ad-hoc questions or fixes, just `@claude` — no hashtag.)
 ```
 
-**Mandatory sections render on every review** — bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
+**Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
 
@@ -93,6 +107,27 @@ Example:
 > | cross-sibling consistency | LOW | read 2 of 5 sibling guides |
 
 **Don't say HIGH unless the dimension's work was actually finished.** A `HIGH on cross-sibling consistency` row with no evidence-trail line citing the siblings is a false claim; downgrade. The Notes column reports the ratio that justifies a non-HIGH level.
+
+### Investigation log
+
+A flat list of investigation moves the model considered, rendered as a collapsed `<details>` block immediately under the Review confidence table (outside the blockquote). Each move shows one of three states:
+
+- **`X of Y`** — the move produced countable output (e.g., "Read 4 of 5 SAML sibling guides").
+- **`ran`** — binary move; one-line outcome (e.g., "Frontmatter sweep: ran on body + social.{linkedin, bluesky}").
+- **`not run`** — deliberately skipped; brief reason (e.g., "Temporal-trigger sweep: not run (no temporal-trigger words in diff)").
+
+**Render every line on every review, in this order:**
+
+- **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted)."
+- **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
+- **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
+- **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
+- **Code execution** — "ran \<programs\>" or "not run (no `static/programs/` change)."
+- **Editorial-balance pass** — "ran (N H2 sections, K flags fired)" / "not run (not under content/blog/)" / "ran (single-subject, N/A)."
+- **AI-drafting-signals pass** — "ran (N of 6 patterns triggered)" / "not run (file too short)" / "not run (not blog or long-doc)."
+
+Each line is one logical pass, not one tool call. The verification trail is the *hard contract* for items that produced output; the investigation log is the *soft contract* for items that didn't. **Mandatory section** — render on every review.
 
 ### Verification trail
 
