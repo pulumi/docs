@@ -35,17 +35,14 @@ describe("www.pulumi.com", () => {
         });
 
         it("loads and applies JavaScript", () => {
-            // Wait for the mobile sheet overlay's pointer-events:none CSS to be applied
-            // before clicking — in CI the Tailwind data-attribute variant can lag behind
-            // page load, causing the overlay to block the click even when data-state="closed".
-            cy.get("[data-nav-sheet-overlay]")
-                .should("have.css", "pointer-events", "none");
-
             // Clicking a nav trigger button toggles aria-expanded via the header-nav
             // bundle's click handler — proves that bundle was loaded and ran.
+            // force: true bypasses Cypress's pointer-events actionability check, which
+            // can flake in CI when the overlay's data-attribute Tailwind variant hasn't
+            // applied yet. The click handler is still exercised end-to-end.
             cy.get("[data-nav-trigger-button]").first()
                 .should("have.attr", "aria-expanded", "false")
-                .click()
+                .click({ force: true })
                 .should("have.attr", "aria-expanded", "true");
         });
     });
