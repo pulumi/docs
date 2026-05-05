@@ -308,6 +308,45 @@ Spot-check procedure:
 
 Cited claims that pass spot-check land in ✅ Verified at high confidence — the citation made verification cheap. Cited claims that fail spot-check are *more* damning than unverifiable ones, because the author asserted a source they didn't actually consult.
 
+##### Mandatory evidence-line format for cited claims
+
+The verification step must produce a three-field evidence line, not a one-field summary:
+
+```
+- L<line> "<claim text>" → <verdict emoji> <verdict>
+  - source quote: "<verbatim passage from the fetched page>"
+  - framing: <exact-match | strengthened | narrowed | shifted | contradicted>
+```
+
+`(same OutSystems report)` / `(citation linked inline)` / `(URL resolves)` are NOT acceptable evidence for a cited claim — they record that fetching happened, not that comparison happened. **The verbatim source quote is the proof that the comparison was done.** A verdict without a source quote is a verdict without evidence; downgrade to `unverifiable`.
+
+##### Worked example — strengthened framing
+
+This is the case S30 missed across three runs on PR #130.
+
+- **Claim** (PR #130 L40): *"96% of enterprises run AI agents in production today."*
+- **Source** (`outsystems.com/news/enterprise-ai-agent-report-2026/`): page title is *"96% of Organizations Use AI Agents"*; meta description reads *"96% of enterprises now use AI agents."*
+- **Comparison:** the percentage matches; the framing does not. The source's *"use"* / *"now use"* covers pilots, experiments, and internal trials. The PR's *"run in production today"* claims revenue-producing deployment. The claim narrows the source.
+- **Verdict:** 🚨 contradicted — strengthened framing.
+
+Correct evidence line:
+
+```
+- L40 "96% of enterprises run AI agents in production today" → 🚨 contradicted (source mismatch)
+  - source quote: "96% of enterprises now use AI agents"
+  - framing: strengthened — claim narrows source's "use" to "in production today"
+```
+
+The framing labels are deliberate: each one names a *specific* drift pattern.
+
+- **exact-match** — source phrasing is the claim's phrasing or a literal paraphrase of equal scope.
+- **strengthened** — claim is a subset of the source (source: "use"; claim: "use in production"). PR overstates the source.
+- **narrowed** — claim is broader than the source (source: "U.S. enterprise customers"; claim: "enterprise customers"). PR overstates the population.
+- **shifted** — same numeric anchor, different subject (source: "96% of organizations evaluate AI agents"; claim: "96% of organizations deploy AI agents"). The PR cited the right report for the wrong number.
+- **contradicted** — source positively disagrees with the claim. Stronger than the above three; reserved for *negation*, not framing drift.
+
+The first four (`strengthened`, `narrowed`, `shifted`, `contradicted`) all land in 🚨 Outstanding under the always-🚨 carve-out for contradicted-factual-claim. `exact-match` lands in ✅ Verified at high confidence.
+
 ### Confidence calibration
 
 Subagents rate each verified claim as high / medium / low. Use the rubric below; don't default to "medium" when the evidence is ambiguous -- pick based on source quality.
