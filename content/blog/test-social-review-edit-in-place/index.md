@@ -20,7 +20,7 @@ social:
         Trying out edit-in-place: one comment per PR, updated each push, no more thread spam.
 ---
 
-This is a throwaway post used to exercise the `claude-social-review.yml` workflow's edit-in-place behavior. It will be deleted before the workflow PR is merged. (Push 5: body edit — verifying the new gate uses the marker comment's footer SHA as baseline, sees no social block change, and skips.)
+This is a throwaway post used to exercise the `claude-social-review.yml` workflow's edit-in-place behavior. It will be deleted before the workflow PR is merged. (Push 6: body edit retry — exercising the fixed regex, expecting skip via comment baseline.)
 
 The Twitter copy above is deliberately over the 280-character limit to confirm the build still fails on objective character-limit violations. The LinkedIn copy is deliberately AI-toned to confirm Claude's PASS/FAIL judgment still surfaces in the comment without failing the build. The Bluesky copy is clean and human and should PASS.
 
