@@ -50,7 +50,7 @@ But getting it into the hands of engineers at that company turned into an uphill
 
 When we built Compostable, we were deliberate about it. I wasn't bolting agents onto a process I already knew. I was trying to figure out what the process should look like if AI did most of the writing from day one.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Don't bolt AI onto your existing workflow. Redesign the workflow around what agents can do.**
 
 Most of the leverage in this technology comes from rebuilding around it. The tool change is the small part.
@@ -66,7 +66,7 @@ So we didn't build the sandbox. We gave every client their own AWS account inste
 
 We didn't make the multi-tenant problem go away. We *shifted* it: instead of securing a shared environment, we now manage a fleet of accounts. That's a problem with twenty years of well-trodden answers.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Remove the problem before you try to solve it.**
 
 Easier to manage a fleet of accounts than to secure a shared environment. Cheaper to reframe the problem than to engineer your way through it.
@@ -78,11 +78,13 @@ Our first attempt at running the fleet was [CDK](https://aws.amazon.com/cdk/), T
 
 I went looking for something better. Pulumi solved the parts that were burning us: reliable deployment from code, configuration that varied per-client without forking the codebase. Pulumi had already shipped [Neo](/product/neo/) and an MCP server when most vendors were still figuring out their AI story. They were clearly betting on agents. That's the kind of partner I was looking for. Neo picked up our infrastructure on day one. One of my colleagues put it: "The scary thing about Neo is it just seems to know everything about what we do."
 
-> *"I don't actually care if it's HCL or TypeScript, as long as my software development agents can write it. And they do a better job with TypeScript than HCL."*
+{{< pullquote >}}
+"I don't actually care if it's HCL or TypeScript, as long as my software development agents can write it. And they do a better job with TypeScript than HCL."
+{{< /pullquote >}}
 
 What kept us going wasn't any one feature. It was that the pieces fit together. Pulumi IaC, [Pulumi ESC](/docs/pulumi-cloud/esc/), Neo, and [Pulumi Cloud](/docs/pulumi-cloud/) all built on top of each other, and we got benefits across the stack. We picked Pulumi because it fit our agents. The other pieces, the ESC, Neo, the Cloud, came along with it.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Tools have to share your AI-first mindset. If they don't integrate deeply, the human becomes the glue.**
 
 If part of your stack still requires a human to click through a web UI to provision an account, your agents stop there.
@@ -94,7 +96,7 @@ Earlier, before the infrastructure story was sorted, we'd been wiring agents int
 
 So we don't run one agent. We run a constellation of them, each with a narrow job. One agent reviews the backlog and flags under-specified tickets, adding context the original ticket missed. Another writes the application code. Neo writes the infrastructure. When an agent hits an infra task, [AGENTS.md](https://agents.md/) tells it to delegate to Neo via Pulumi's MCP server. Once a PR is up, four or five checkers go at it. One looks at correctness, another at performance, another at security. One walks the tests, looking for paths the writer skipped. They're running on smaller models than the writer, and you know what? They always find something.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Don't let any agent mark its own homework. Specialize by job — a narrow job means a narrow context window.**
 
 The checkers are cheap, they each look for one thing, and the writers don't have to leave room for self-criticism. Infrastructure alone can fill an agent's context. Give one agent the whole job and there's no room left to think.
@@ -108,7 +110,7 @@ The metric I use now is human hours per unit of value produced. Look at every st
 
 The mechanism that keeps the humans out of the middle is configuration. We hold all of it in ESC, and ESC environments inherit from each other: a base layer for the platform, a layer for staging vs. production, per-client overrides as small diffs on top. When something needs to change across all nineteen clients, we update one base environment and run `pulumi up`, or hand it off to Neo to redeploy every stack. One base change updates all nineteen. It used to be a ticket per client and three meetings. If you're managing config sprawl across environments, ESC is where I'd start.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Measure human hours per unit of value. Treat every one as a bottleneck to remove.**
 
 Engineers writing or reviewing routine code is a bottleneck you can't afford. Every one you remove gives the agents more room to run.
@@ -126,7 +128,7 @@ Two things have to be true for that loop to work. You need a way to evaluate whe
 
 Once it converges, the question moves on: how cheap can we make it? Fewer iterations. Smaller models on the checker side. Better prompts so the coding agent lands closer on the first try. The optimization never really ends.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Don't aim for one-shot correctness. Design for convergence.**
 
 It doesn't matter how many tries it takes, as long as the loop closes without a human in it. Get convergence first. The optimization comes after.
@@ -142,7 +144,7 @@ Running it in the cloud isn't just about keeping it on at night. Once you've bui
 
 We keep everything in the cloud. AWS, Pulumi Cloud, GitHub, and so on. But the specific stacks matter less than the principle. On-prem, on laptops, or on a Mac Mini in the corner. Those work fine for running it. They don't work for a team trying to improve it.
 
-{{< notes type="tip" >}}
+{{< notes type="tip" size="large" >}}
 **Build the factory somewhere you can work on it — not just somewhere it can run.**
 
 Cloud isn't just about keeping it on at night. It's about having one place where a whole team can iterate on the factory together.

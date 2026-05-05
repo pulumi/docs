@@ -57,6 +57,15 @@
         min-width: 0;
     }
 
+    &.note-large div.content {
+        font-size: 17px;
+        line-height: 1.65;
+
+        p {
+            line-height: 1.65;
+        }
+    }
+
     &.note-info {
         background: #f6f7fd;
 
@@ -119,8 +128,34 @@
     }
 }
 
-section.docs-content div.note { 
+section.docs-content div.note {
     :last-child {
         padding-bottom: 0;
+    }
+}
+
+blockquote.pullquote {
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.35;
+    font-weight: 300;
+    color: #2a2a2e;
+    margin: 48px auto;
+    padding: 8px 32px;
+    max-width: 92%;
+    border-left: 6px solid var(--color-violet-primary, #9077f3);
+
+    p {
+        margin: 0;
+    }
+
+    cite {
+        display: block;
+        font-style: normal;
+        font-size: 16px;
+        font-weight: 400;
+        color: #6b6b6e;
+        margin-top: 16px;
     }
 }
