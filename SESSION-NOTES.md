@@ -2621,6 +2621,117 @@ Fork PRs:
 
 Commits: `c8f79fd1d9` (Vale-checkout fix), `7491cb9d36` (sub-heading + bold filename), `079b985f91` (issues / bold numerals / expand hint / per-bullet emphasis).
 
+### Hard-wrap reflow (post-S26-notes-commit)
+
+After the S26 notes were committed (`af41a18e58`), Cam noticed the rendered review's `>` quote and ` ```suggestion ``` ` block both wrapped at column ~60. Diagnosis: GitHub PR/issue-comment markdown converts source-newlines to visible `<br>` (GFM convention, not strict CommonMark), so any hard-wrapped prose in the model's output renders with literal breaks. Worse, a "Commit suggestion" click writes the suggestion's hard-wraps **into** the file.
+
+Root-cause sweep:
+
+- The fixture file (`content/docs/iac/concepts/config.md`'s "Tips for working with stack configuration" section) was hard-wrapped at column ~60. The model was faithfully mirroring source. Sibling Pulumi docs files use single-line soft-wrapped paragraphs (e.g., `assets-archives.md` line 4 = 555 chars). Reflowed the fixture to match the real convention. Wordy phrases preserved (Vale still finds 7 issues). Commit on `test/cam-fork-pr-e`: `87e6858b16`.
+- Ran a paragraph-wrap scanner (`/tmp/find-wraps2.py`) over `.claude/commands/` skill markdown — zero hits outside YAML frontmatter. Skill files were already clean.
+- Ran a YAML-prompt-block scanner (`/tmp/find-yaml-prompt-wraps.py`) over `.github/workflows/claude*.yml`. Four paragraphs in `claude-code-review.yml`'s `prompt: |` block were hard-wrapped at column ~70: the "Review pull request..." line (L346-347), the pre-computed-PR-metadata intro (L351-353), the long Style-findings render contract (L371-388), and the post-run-labels footnote (L394-395). Reflowed each to a single line per paragraph. Commit `fb611b4fb2`.
+
+Verification on PR #126 (#new-review fired against fork master at `cc827feb2d`): the new pinned review's `>` quote AND suggestion block render as single soft-wrapped paragraphs. Style findings rollup also still renders correctly with all the polish items from earlier in the session.
+
+Bonus: the model surfaced a second finding (language-equivalence ambiguity around the `pulumi.Config` SDK paragraph) under ⚠️ Low-confidence — same paragraph as the wordy "equivalent" Vale catch.
+
+Methodology lesson: **hard-wrap is evil end-to-end.** Source-side hard-wrap propagates through quote-and-rewrite into rendered comments and into committed file content (via "Commit suggestion"). The audit infrastructure is two short Python scripts (skill markdown scan, YAML-prompt scan) — keep them around as `/tmp/find-wraps*.py` for periodic re-runs.
+
+Commit: `fb611b4fb2` (upstream prompt reflow), `87e6858b16` (fixture reflow on test branch).
+
+### Bucketing-consistency observation
+
+Across the four #126 verification runs in this session, the same factual finding ("`pulumi config get` does not emit JSON by default") landed in 🚨 Outstanding 3/4 times and ⚠️ Low-confidence 1/4 times. The lone outlier was the PR #125 run with the polluted base-shifted diff (workflow files showing as PR changes). Cam flagged this as the kind of inconsistency that a skeptic sub-agent would dampen — see §"Sketches for Session 27" below.
+
+### Lingering #new-review confirmation comments
+
+`claude-new.yml`'s "Post confirmation" step posts `🤖 @<author> — pinned review cleared; regenerating from scratch.` but never captures the comment ID, so nothing downstream can clean it up. The dispatched CCR's finalize step only knows about its own CLAUDE_PROGRESS spinner ID. Result: every #new-review on PR #126 leaves a stale present-tense "regenerating" comment behind. Cam confirmed this was an oversight ("we missed a comment identifier or something") and put the fix at the top of the Session 27 plan — see §"Sketches for Session 27".
+
+### Items NOT shipped (carried into Session 27)
+
+Cam's prioritized plan for next session:
+
+1. **Fix lingering "Regenerating" comments on PR #126** — Path B (symmetric with `#update-review` cleanup). Plumb the dispatcher's comment ID + mention author through `workflow_dispatch` inputs; CCR's finalize step (workflow_dispatch only) deletes the dispatcher's comment and posts a fresh `🤖 Review regenerated on @<author>'s request.` on success.
+2. **Two-layer skepticism (Haiku + Sonnet)** — see §"Sketches for Session 27" below for the full design.
+3. **Full battery of tests + cost/quality benchmark** — same shape as the 2026-04-28 pipeline comparison (§Session 5) and the 2026-05-01 live-vs-legacy comparison (§Session 19). Run after items 1 and 2 land so the new architecture's cost / quality numbers are measured against the prior baseline.
+
+Pre-existing carry-overs that remain open:
+
+4. **CLAUDE_PROGRESS cleanup of prior terminal comments** (S25 carry-over) — `claude-update.yml`'s delete-and-repost only deletes the comment whose id this run posted; prior runs' terminal `🤖 Review updated on @<author>'s request.` comments accumulate over many `#update-review` cycles. Mirrors `pinned-comment.sh clear` for review comments.
+5. **Cam's "quick `/docs-review`" variant** (S18 carry-over) — still open.
+6. **Standard fork-prep rebase step** — codify in BUILD-AND-DEPLOY.md or a fork-prep script: after `git push --force cam-fork CamSoper/pr-review-overhaul:master`, walk every test PR branch and `git rebase cam-fork/master`. Avoids the diff-pollution surface that bit S26 fixture #1.
+
+### Sketches for Session 27
+
+#### Sketch A — Stuck "Regenerating" comment cleanup (Path B)
+
+The architecture mismatch:
+
+- `claude-update.yml` captures its CLAUDE_PROGRESS spinner ID at post time; finalize step deletes by ID on success and posts a terminal `🤖 Review updated on @<author>'s request.` (created, not edited — fires notification).
+- `claude-new.yml` posts a confirmation comment but never captures the ID. The dispatched CCR's finalize step only knows its own spinner ID, not the dispatcher's comment.
+
+Path B implementation (symmetric with `#update-review`):
+
+1. **`claude-new.yml` "Post confirmation" step** — capture the comment ID via `gh api ... --jq '.id'`, expose as a step output `dispatcher_comment_id`. Same body as today.
+2. **`claude-new.yml` "Dispatch claude-code-review.yml" step** — pass two new inputs to the workflow_dispatch:
+   - `-f dispatcher_comment_id="${{ steps.post.outputs.id }}"`
+   - `-f mention_author="${{ steps.check-access.outputs.author }}"`
+3. **`claude-code-review.yml` `workflow_dispatch.inputs`** — add `dispatcher_comment_id` (optional string, blank for non-dispatcher dispatches) and `mention_author` (optional string).
+4. **`claude-code-review.yml` Finalize progress signal step** — extend the workflow_dispatch branch:
+   - Delete the dispatcher's confirmation comment (if `inputs.dispatcher_comment_id` is non-empty).
+   - Post a new `🤖 Review regenerated on @<mention_author>'s request.` (created, not edited — fires notification). Skip if `mention_author` is empty (manually-fired dispatches without a real requester).
+
+Tests: fire `#new-review` on PR #126; confirm the "regenerating" confirmation comment disappears on success and is replaced by a fresh "Review regenerated" comment that triggers a notification.
+
+Cost: ~30 lines of YAML across two workflow files.
+
+#### Sketch B — Two-layer skepticism (bucket + coverage)
+
+Insight from the design conversation: the `Agent` tool is already in both workflows' `--allowed-tools` list, so the model can spawn skeptic sub-agents at runtime with no infrastructure wiring. The "real work" is just rubric guidance + a prompt template for each skeptic.
+
+Two skeptics, separate concerns:
+
+| Skeptic | What it does | When to invoke | Model |
+|---|---|---|---|
+| **Bucket skeptic** | Re-evaluates each finding's `🚨 Outstanding` vs `⚠️ Low-confidence` choice with adversarial framing. "You placed this in ⚠️; defend why it isn't 🚨." Output: bucket recommendation + one-line justification. | Every finding the original review surfaces (batched into one call). | **Haiku** — task is structured (read finding + bucket + evidence; output bucket + reason). Haiku 4.5 handles structured judgment well at ~1/3 the per-token rate of Sonnet. |
+| **Coverage skeptic** | Re-reads the diff with framing "what verifiable claims should have been extracted but weren't?" Output: 0–3 missed claims with `file:line` and one-line reason. **Strong bias toward 'none.'** | Once per review. Bounded output keeps cost predictable. | **Sonnet** — needs more diff comprehension than Haiku reliably gives. |
+
+Cost shape (vs. pre-skeptic baseline):
+
+| Configuration | Tokens beyond original review | Catches missed claims? | Catches mis-buckets? |
+|---|---|---|---|
+| Bucket skeptic only | ~+5% | No | Yes |
+| Coverage skeptic lite only | ~+5-10% | Yes (with strong bias toward none) | No |
+| **Both (recommended)** | **~+10-15%** | **Yes** | **Yes** |
+| Full second-reviewer | ~+80-100% | Yes (high recall) | Yes |
+
+Implementation:
+
+1. **New skeptic prompt templates** — either as small files in `.claude/commands/docs-review/references/skeptic-bucket.md` and `skeptic-coverage.md`, or as inline blocks in `shared-criteria.md`. Each ~20-30 lines: input contract, output contract, adversarial framing, bias toward not-flagging.
+2. **Rubric trigger in `ci.md` and `update.md`** — "before posting, invoke the bucket skeptic via the `Agent` tool with `model: haiku` for each surfaced finding. Apply its bucket recommendation. Then invoke the coverage skeptic via the `Agent` tool with `model: sonnet` once on the full diff. Surface any missed claims it returns under `🚨 Outstanding` (with the same evidence-and-rewrite mandate as any other finding)."
+3. **Explicit `model:` overrides** — the Agent tool's `model` parameter (`sonnet` / `opus` / `haiku`) keeps skeptics from inheriting Opus on the initial-review path. Without the override, initial-review skeptics would cost roughly 5× the planned figure.
+
+Pairing with §3 (the cost/quality benchmark): the benchmark gives us the before/after numbers for skeptic deployment. Run baseline N≥10 first (pre-skeptic), deploy skeptics, run again. Bucketing-consistency rate is the headline metric; missed-claim rate is the secondary metric (harder to measure without an oracle).
+
+#### Sketch C — Full battery + cost/quality benchmark
+
+Reuses the infrastructure from `scratch/2026-04-28-pipeline-comparison/` (Session 5) and `scratch/2026-05-01-live-comparison-v2/` (Session 19):
+
+- `capture.sh` / `cost-data.sh` patterns — fire N reviews on a fixture set, capture cost data and rendered output.
+- `rebase-fixtures.sh` — rebases the bench fixtures onto a fresh master sync.
+- Scoring rubric in `scoring-prompt.md`.
+
+Battery shape:
+
+- **Fork test battery** — same 12-row matrix from S23 / S25, run after items 1 and 2 land. Confirms #new-review confirmation cleanup, skeptic invocation, and the existing surfaces (initial review, mark-stale, compound mention, dispute, etc.).
+- **Cost/quality benchmark** — 11-fixture set from `2026-05-01-live-comparison-v2/`. Pre-skeptic baseline (N≥10 runs to establish bucketing variance) vs post-skeptic (same N). Headline metrics:
+  - Bucketing consistency rate per fixture (same finding in same bucket across runs).
+  - Total cost per review (Opus + Sonnet + Haiku tokens).
+  - Total latency per review.
+  - Missed-claim rate (manual oracle review on a sample).
+
+Output: a REPORT.md alongside the prior comparisons, with the headline numbers and a recommendation on whether to keep the skeptic layer.
+
 ### Memory updates
 
-None. All Session-26 substance is branch state. The fork-prep rebase lesson and the dispatcher-input contract lesson are repo-specific patterns that live in this file rather than auto-memory.
+None. All Session-26 substance is branch state. The fork-prep rebase lesson and the dispatcher-input contract lesson are repo-specific patterns that live in this file rather than auto-memory. The skeptic-architecture sketch is forward-looking design for S27 — concrete enough to execute against, not generalized enough to belong in user memory.
