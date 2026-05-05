@@ -23,8 +23,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 [Findings worth surfacing but not blocking]
 
 ### 💡 Pre-existing issues in touched files (optional)
-> Found while reviewing, not introduced by this PR. Fix any you'd like to;
-> the rest will be triaged during final review.
+> Found while reviewing, not introduced by this PR. If you fix these, great! But no pressure — they were there when you got here.
 
 [Pre-existing findings, capped per file at 15]
 
@@ -35,8 +34,8 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
 
 ---
-
-<sub>Need a re-review? Want to dispute a finding? Mention &#64;claude and include <code>#update-review</code>. (For ad-hoc questions or fixes, just &#64;claude — no hashtag.)</sub>
+Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  
+(For ad-hoc questions or fixes, just `@claude` — no hashtag.)
 ```
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
@@ -66,7 +65,7 @@ The table header row stays fixed; only the number row changes per review. Bold t
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
 - **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
-  - **Style nits.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
+  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
     - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
     - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
 
@@ -90,7 +89,7 @@ The table header row stays fixed; only the number row changes per review. Bold t
     </details>
     ```
 
-    Use the word **issues** (not "style nits") in the summary — the H4 heading already says "Style findings", so saying "nits" again is redundant. Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Files with ≤5 findings render inline (no `<details>`); the breakdown only appears when collapsed.
+    Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Files with ≤5 findings render inline (no `<details>`); the breakdown only appears when collapsed.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
