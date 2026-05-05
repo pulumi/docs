@@ -11,9 +11,9 @@ social:
     twitter: |
         In today's rapidly evolving and dynamic technological landscape of artificial intelligence and machine learning systems, organizations are leveraging cutting-edge solutions to unlock unprecedented value, drive transformational outcomes, and revolutionize the way teams collaborate and ship software in production environments at scale.
     linkedin: |
-        We are excited to announce a new and innovative approach to social media review automation that leverages best-in-class AI capabilities to deliver streamlined, scalable, and synergistic outcomes for engineering teams.
+        Pushed a workflow change that should make the CI social-review comments quieter — one comment per PR, edited in place, no new entries on each push.
 
-        In this transformative era, organizations must embrace cutting-edge solutions to remain competitive.
+        Same pattern pulumi-bot already uses for preview links. Validating the path with a throwaway test post on a side PR.
     bluesky: |
         Quick test post for the new social-review CI workflow.
 
