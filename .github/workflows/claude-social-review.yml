@@ -134,8 +134,19 @@ jobs:
 
           if [ "$SHOULD_SKIP" = "true" ]; then
             echo "should_skip=true" >> "$GITHUB_OUTPUT"
-            gh pr comment "$PR_NUMBER" --repo "$REPO" --body \
-              "🟰 **Skipping social media review** — $REASON. The verdict from the [prior run](${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}) still applies. Comment \`/social-review\` to force a fresh review."
+            # Log to the action run instead of posting a PR comment — the comment
+            # was noisy on active PRs (one per push that didn't touch the social
+            # block). Anyone wanting a fresh review can still comment `/social-review`.
+            echo "::notice::Skipping social media review — $REASON. Prior run: ${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}. Comment /social-review to force a fresh review."
+            {
+              echo "## 🟰 Skipping social media review"
+              echo ""
+              echo "**Reason:** $REASON"
+              echo ""
+              echo "The verdict from the [prior run](${SERVER_URL}/${REPO}/actions/runs/${PRIOR_RUN_ID}) still applies."
+              echo ""
+              echo "Comment \`/social-review\` on the PR to force a fresh review."
+            } >> "$GITHUB_STEP_SUMMARY"
           else
             echo "should_skip=false" >> "$GITHUB_OUTPUT"
           fi
