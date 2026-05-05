@@ -28,9 +28,11 @@ The caller must provide:
   - 🤔 Intuition-check (claim *shape* is suspect even when evidence is absent -- see Intuition-check axis below)
   - ✅ Verified (collapsed under `<details>`)
 - **Author-question buffer** -- one line per unverifiable claim, file:line-anchored
-- **Per-claim evidence trail** -- the raw `{status, confidence, evidence, source, suggested_fix}` tuples, retained for re-entrant re-verification
+- **Per-claim evidence trail** -- the raw `{status, confidence, evidence, source, suggested_fix}` tuples, retained for re-entrant re-verification *and* rendered verbatim into the 🔍 Verification trail section per `docs-review:references:output-format`. Includes cross-sibling-consistency records (see §Cross-sibling consistency).
 
 The skill is callable as a pure function of `(files, scrutiny)` → `(triage_object, author_questions, evidence_trail)`. Do not render the output directly into a comment.
+
+Every claim record must appear in `evidence_trail`, even when the claim also surfaces in a bucket via the always-🚨 carve-outs. The trail is the evidence behind those bucket entries, not a deduplicated summary.
 
 ---
 
@@ -46,7 +48,7 @@ For every changed content file, produce a structured claim list. A "claim" is an
 | Version/availability | "available in v3.230+", "supported on Windows" |
 | Feature existence | "ESC supports rotation for AWS" |
 | Resource API surface | "the `aws.s3.Bucket` constructor takes a `versioning` argument" |
-| Cross-reference | "see the X guide" -- the guide must exist |
+| Cross-reference | "see the X guide" -- the guide must exist; also sibling-consistency claims (nav steps, headings, conventions) checked against parallel pages — see §Cross-sibling consistency |
 | Numerical | pricing, limits, sizes |
 | Quote/attribution | direct quotes, named sources |
 
@@ -68,6 +70,51 @@ Hugo posts duplicate the same load-bearing phrasing across body, `meta_desc`, an
 Example: a blog post says "96% of enterprises run AI agents in production today" in the body, and the same phrase (or a paraphrase: "96% of enterprises run agents in production") appears in `social.linkedin` and `social.bluesky`. Extract one claim, verify once, render the finding with three cited locations. Don't enumerate per-occurrence claims -- that triples verification work and risks the buckets disagreeing on confidence.
 
 This rule also applies when the body is unchanged but a frontmatter sub-key was edited; the body's pre-existing phrasing still surfaces in the same finding if the frontmatter edit triggered a contradicted verdict.
+
+### Cross-sibling consistency
+
+When a new or changed file lives in a structurally-templated directory (≥3 parallel pages on the same subject), every nav step, heading, required-field name, and placeholder is a *sibling-consistency* claim. Extract each as a `claim_type: cross-reference` record and verify by reading the siblings.
+
+Templated sections include (non-exhaustive):
+
+- `content/docs/pulumi-cloud/admin/sso/saml/` (SAML setup guides)
+- `content/docs/pulumi-cloud/admin/scim/` (SCIM provisioning guides)
+- `content/docs/iac/languages-sdks/` (language reference pages)
+- Provider integration directories under `content/docs/iac/` and `content/docs/esc/integrations/`
+
+Any directory with ≥3 files whose H1 titles read as parallel entities qualifies — detect dynamically rather than relying on this list.
+
+**What to extract.** One record per:
+
+- Navigation-step instruction ("Settings → Access Management"; "click *Configure*"; "select the *SAML* tab").
+- H2 heading.
+- Required-field label in setup forms ("Audience URI," "ACS URL," "Entity ID").
+- Placeholder convention (`acmecorp`, `<your-org>`, `example.com`).
+
+Verify each by reading the sibling pages and recording whether the same step / heading / label / convention appears.
+
+**Claim record format:**
+
+```json
+{
+  "id": "c12",
+  "file": "content/docs/pulumi-cloud/admin/sso/saml/<vendor>.md",
+  "line": 42,
+  "claim_text": "Settings → Access Management",
+  "claim_type": "cross-reference",
+  "verification_method": "read-siblings",
+  "sibling_set": ["auth0", "entra", "gsuite", "okta", "onelogin"]
+}
+```
+
+**Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
+
+- `L42 "Settings → Access Management" → ✅ matches entra/gsuite/okta/onelogin (5 of 5 siblings checked; 4 match, 1 has no equivalent step)`
+- `L42 "Settings → SAML SSO" → 🚨 mismatch: scim/{okta,entra,onelogin}.md all use Settings → Access Management; this PR diverges`
+
+**Bucket promotion.** Navigation-step mismatches trigger the workflow-breaking-instruction always-🚨 carve-out — the reader lands on the wrong page. Heading-style, placeholder, or other non-workflow-breaking divergences render as ⚠️, with the divergence noted in the trail.
+
+**Confidence calibration.** The `cross-sibling consistency` dimension is HIGH only when every sibling was read; MEDIUM when most were; LOW when fewer than half were. The parenthetical must report the ratio (e.g., "read 2 of 5").
 
 ### Claim extraction examples
 

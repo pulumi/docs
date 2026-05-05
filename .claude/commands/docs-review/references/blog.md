@@ -42,6 +42,37 @@ Apply `docs-review:references:prose-patterns` and `docs-review:references:spelli
 - **Weak conclusions.** A closing paragraph that doesn't name a specific next step. "Check out Pulumi to learn more" without a specific link or command. Quote the conclusion; propose a concrete CTA: "Try it: `pulumi up` against the example at `<link>`" or "See the X reference at /docs/foo/."
 - **Listicle bloat.** Posts structured as `## item N:` patterns or numbered top-N lists. Cap at 12 items; cap total post length at ≈3,000 words for listicles. If a list goes longer, suggest which items to cut or merge.
 
+### Priority 2.5 — Editorial balance (comparison, listicle, FAQ posts)
+
+Compute and render the editorial-balance pass on any post matching one of the trigger patterns below. The output renders as `### 📊 Editorial balance` per `docs-review:references:output-format`; threshold flags below also surface as ⚠️ findings.
+
+**Trigger patterns** (any one fires the pass):
+
+- **Comparison:** ≥3 H2 sections under the same parent reading as parallel entities (vendors, products, approaches), e.g., `## Pulumi`, `## Terraform`, `## OpenTofu`.
+- **Listicle:** H2s of the form `## item N:` or numbered top-N at the same nesting level.
+- **FAQ:** an H2 named "Frequently asked questions" (case-insensitive), or any heading nested under it.
+
+When none fire, render the explicit-empty form per output-format.md (don't skip — empty is the signal that the check ran).
+
+**Computation rules:**
+
+1. **Section depth.** For each H2 (or each numbered listicle item), count body lines (paragraphs, code blocks, sub-headings) excluding blanks and frontmatter. Report mean, median, std. Outlier: any section ≥3× the median.
+2. **Entity mentions.** Identify the entity set from H2 names. For each entity (including product-line names — e.g., "Pulumi" subsumes "Pulumi Cloud," "Pulumi ESC"), count whole-word case-insensitive occurrences across the body.
+3. **Recommendation steering.** Count `(use|choose|pick|recommend|prefer|go with|stick with) <entity>`, `<entity> is best`, `<entity> wins`, and the inverse `(avoid|skip|don't use) <competitor>`. Group by entity. For FAQs, count each answer as one steering vote toward whichever entity it pushes.
+
+**Threshold flags** (each surfaces as a `⚠️ Low-confidence` bullet quoting the offending section/heading):
+
+- Any one section is **≥3× the median section length**.
+- Any one entity captures **≥5× the recommendation real estate** of competitors in a comparison post (skip if total recommendation count <5).
+- A single entity captures **≥60% of FAQ-answer steering** in a multi-vendor FAQ (skip if <5 answers).
+
+**Don't flag** when:
+
+- The post is a single-subject feature announcement and the comparison trigger fired only on parenthetical competitor mentions ("Unlike Foo and Bar, ...").
+- The comparison-set is intentionally asymmetric and named as such ("Why we chose X over Y; this post focuses on X's tradeoffs").
+
+Data renders regardless; only the threshold flags suppress.
+
 ### Priority 3 — Code correctness
 
 Apply `docs-review:references:code-examples`.

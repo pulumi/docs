@@ -12,9 +12,27 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ```markdown
 ## Quality Review — Last updated <ISO 8601 timestamp>
 
+> **Goal:** <one paragraph: what this PR is, what failure mode would block its goal, what was checked>.  
+> **Review confidence:** <dimension> · <dimension> · <dimension>.
+
 | 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
 | :---: | :---: | :---: | :---: |
 | **N** | **N** | **N** | **N** |
+
+### 🔍 Verification trail
+
+<details>
+<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted</summary>
+
+- L<line> "<claim text>" → ✅ verified (evidence: <source pointer>)
+- L<line> "<claim text>" → ⚠️ unverifiable (no inline citation; author question filed)
+- L<line> "<claim text>" → 🚨 contradicted (<source mismatches the claim how>)
+- L<line> "<sibling-consistency check>" → ✅ matches <sibling-1>, <sibling-2>, <sibling-3>
+- L<line> "<sibling-consistency check>" → 🚨 mismatch: <sibling-1>/<sibling-2> use <X>; this PR uses <Y>
+</details>
+
+### 📊 Editorial balance
+[blog only; see §Editorial balance section below for emit conditions]
 
 ### 🚨 Outstanding in this PR
 [PR-introduced findings the author needs to address]
@@ -39,6 +57,86 @@ Need a re-review? Want to dispute a finding? Mention `@claude` and include `#upd
 ```
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
+
+### Goal preamble and review confidence
+
+The goal/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory.
+
+**Goal paragraph.** One paragraph naming three things, in order: (1) what this PR is — content type, subject, and (for new pages) which existing pages it parallels; (2) what specific kind of wrongness would block a reader's success; (3) what investigative passes ran. Scale the paragraph to the change: one sentence is fine for a two-line edit. Don't pad.
+
+**Review confidence line.** One line, three to five dimensions, each HIGH / MEDIUM / LOW with a short parenthetical when not HIGH. Dimensions are drawn from the references the review applied:
+
+- **mechanics** — links resolve, frontmatter valid, code parses, lint clean (always present).
+- **facts** — claim verification result (always present when fact-check ran; "n/a" for infra-only PRs).
+- **cross-sibling consistency** — sibling-guide compare for new pages in a templated section (SAML guides, SCIM guides, integration guides, language reference pages). Present whenever such a sibling set exists.
+- **editorial balance** — section depth, mention distribution, recommendation steering. Present for `content/blog/**` comparison/listicle/FAQ posts.
+- **code correctness** — present whenever a `static/programs/` change or non-trivial code block is in the diff.
+
+Example:
+
+> *Review confidence: HIGH on mechanics · MEDIUM on facts (2 unverifiable) · LOW on cross-sibling consistency (read 2 of 5 sibling guides).*
+
+**Don't say HIGH unless the dimension's work was actually finished.** A `HIGH on cross-sibling consistency` claim with no evidence-trail line citing the siblings is a false claim; downgrade. The parenthetical's job is to report the ratio that justifies a non-HIGH rating.
+
+### Verification trail
+
+The 🔍 Verification trail section sits between the bucket count table and the 🚨 Outstanding bucket. It renders the `evidence_trail` from `docs-review:references:fact-check` verbatim — one bullet per claim record, including cross-sibling-consistency checks framed as `claim_type: cross-reference`.
+
+**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
+
+**Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <emoji> <verdict> (<evidence pointer>)`. Cross-sibling checks render as `→ ✅ matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ 🚨 mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. Strip credentials per `fact-check.md` §Credential redaction before rendering.
+
+**Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
+
+**Empty section.** When no claims were extracted (infra-only PR, pure formatting PR), render the explicit-empty form rather than omitting the section:
+
+```markdown
+### 🔍 Verification trail
+
+_No verifiable claims extracted from this diff._
+```
+
+A missing 🔍 section on a content PR is a reviewer bug.
+
+### Editorial balance
+
+Emitted only for `content/blog/**` files; sits between the verification trail and the 🚨 Outstanding bucket. Omit entirely on non-blog domains.
+
+Two trigger patterns:
+
+- **Comparison/listicle:** ≥3 H2 sections under the same parent reading as parallel entities (e.g., `## Pulumi`, `## Terraform`, `## OpenTofu`).
+- **FAQ:** an H2 named "Frequently asked questions" (case-insensitive), or any heading nested under it.
+
+When neither pattern fits, render the explicit-empty form:
+
+```markdown
+### 📊 Editorial balance
+
+_Single-subject post; balance check N/A._
+```
+
+When emitted, the section structure is:
+
+```markdown
+### 📊 Editorial balance
+
+<details>
+<summary>Section depth, mention distribution, recommendation steering</summary>
+
+- **Section depth:** <N> H2 sections (mean <X> lines, median <Y>, std <Z>). Outliers: <name>: <lines> (<ratio>× median).
+- **Vendor / entity mentions:** <entity-A>: <count> · <entity-B>: <count> · <entity-C>: <count>.
+- **FAQ steering** (if FAQ section present): <N> entries; <count> recommend <entity X>; <count> recommend <entity Y>.
+
+</details>
+```
+
+**Threshold flags.** When any of the following hold, the same condition also surfaces as a `⚠️ Low-confidence` finding (one bullet per threshold tripped, quoting the offending section/heading):
+
+- Any one section is ≥3× the median section length.
+- Any one entity gets ≥5× the recommendation real estate of competitors in a comparison post.
+- A single entity captures ≥60% of FAQ-answer steering in a multi-vendor FAQ.
+
+Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
 ### Bucket rules
 
