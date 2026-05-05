@@ -49,6 +49,21 @@ Three or more consecutive sentences of similar length (within ±3 words) in a si
 
 Paragraphs longer than 6 sentences or 8 visual lines. Often a sign the content should be a list, sub-section, or split. Quote the opening; propose a split or list conversion.
 
+### AI-drafting signals
+
+Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. Six independent pattern checks; **≥3 triggers fires the section** (rendered per `docs-review:references:output-format` §AI-drafting signals).
+
+1. **Uniform per-section template.** ≥5 H2 sections following the same internal structure: opening sentence + N bullets + closing transition + opening of next section. Detect by extracting per-section structure as a tuple `(opening, list_count, closing_transition)`; ≥5 identical tuples triggers.
+1. **Set-piece transitions.** Phrases that pattern-match the AI-drafting list: "But here's the thing", "And that's the key insight", "Let's dive in", "Now here's where it gets interesting", "Here's what's wild", "The reality is", "But it gets better", "Here's the kicker". ≥3 hits triggers.
+1. **Parallel four-bullet lists.** A bulleted list where each bullet has *exactly* the same structure (e.g., `**Term**: explanation` four times in a row, no irregularity). ≥2 such lists triggers.
+1. **Em-dash density.** Em-dashes per 1000 words exceeds threshold (start at 8 per 1000 words; one em-dash per ~125 words is a strong AI-drafting signal). Tune in re-test if false-positive rate is high.
+1. **Listicle-style numbered intros.** Multiple H2 sections starting with a number (`**1. Foo**` / `**2. Bar**`) AND each section ends with a one-sentence summary in parallel structure.
+1. **Hedge-then-pivot construction.** Sentences of the form "While X is true, Y is also worth considering" or "Although X, what's really important is Y" — three or more occurrences in the same post.
+
+The rendered section is a maintainer-signaling flag, not a finding bucket. Specific pattern instances that *also* constitute findings (set-piece transitions misleading the reader, an em-dash that creates ambiguity) surface separately in ⚠️ with the standard quote-and-rewrite mandate.
+
+Complementary to `claude-triage.yml`'s author-allowlist + AI-trailer detection — that filters by author signals; this filters by content signals. Both can fire on the same PR.
+
 ---
 
 Every finding names the *phrase* and the *pattern*: "nested clauses: 3 subordinates in one sentence; split into 2-3" beats "this prose is hard to follow."

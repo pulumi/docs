@@ -39,6 +39,9 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ### 📊 Editorial balance
 [blog only; see §Editorial balance section below for emit conditions]
 
+### 🤖 AI-drafting signals
+[blog or long-doc only; emitted when ≥3 of 6 patterns triggered — see §AI-drafting signals]
+
 ### 🚨 Outstanding in this PR
 [PR-introduced findings the author needs to address]
 
@@ -148,6 +151,27 @@ When emitted, the section structure is:
 - A single entity captures ≥60% of FAQ-answer steering in a multi-vendor FAQ.
 
 Computation rules live in `docs-review:references:blog` §Priority 2.5.
+
+### AI-drafting signals
+
+Run per `docs-review:references:prose-patterns` §AI-drafting signals. Emit only when ≥3 of 6 patterns trigger; otherwise omit. **Not a mandatory section** — exclude from the top-level mandatory-sections invariant. Place between 📊 Editorial balance and 🚨 Outstanding.
+
+Format:
+
+````markdown
+### 🤖 AI-drafting signals
+
+<details>
+<summary><strong>N of 6 patterns triggered</strong> — read carefully before merging</summary>
+
+- **Uniform per-section template** — H2 sections 1-5 all follow `<opening sentence> · <4-5 bullets> · <transition>`. Quote a representative example and propose breaking the pattern.
+- **Set-piece transitions** — found "But here's the thing" (L42), "Here's the kicker" (L88), "And that's the key insight" (L131). These read as AI-drafted templates; rewrite in author voice.
+- **Em-dash density** — 14 em-dashes in 1,247 words (1 per 89 words; threshold is 1 per 125). Reduce or substitute commas/periods.
+
+</details>
+````
+
+The section never produces 🚨 directly — it's a maintainer-signaling flag. If a specific pattern instance also constitutes a finding (set-piece transitions misleading the reader, an em-dash creating ambiguity), surface that finding separately in ⚠️ with the standard quote-and-rewrite mandate.
 
 ### Bucket rules
 
