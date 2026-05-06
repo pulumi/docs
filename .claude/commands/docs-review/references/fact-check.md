@@ -218,7 +218,25 @@ After verification, render each claim in the bucket dictated by its verification
 
 The 🤔 bucket is therefore **small and specific**: claims whose shape was suspect AND whose verification returned neither a confirmation nor a contradiction. The model should not render 🤔 when the verifier produced a decisive answer either way.
 
-Store the full claim list for the verification phase. No interim user output.
+### Subagent extraction dispatch
+
+Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; overlap is expected and the combine step handles it.
+
+- **Subagent A -- Numerical / temporal.** `Numerical` + `Version/availability` rows + §Temporal-claim handling trigger list.
+- **Subagent B -- Cross-reference / sibling.** `Cross-reference` row + §Cross-sibling consistency *templated-section detection* and *what to extract* (the per-record list -- not the rendering / promotion / calibration tail). Identifies which siblings need reading; the reads themselves are a separate fan-out (see §Cross-sibling consistency).
+- **Subagent C -- Feature / capability.** `Command behavior`, `Flag/option existence`, `Output format`, `Feature existence`, `Resource API surface` rows.
+- **Subagent D -- Author-asserted-as-fact.** Heuristic specialist; the canonical claim-type table is unchanged. `Quote/attribution` row + framing-strength phrase list (`the only`, `the first`, `currently`, `as of <year>`, `is the leading`, `industry standard`, named-source quotes). Flags matches regardless of which canonical type the surrounding sentence falls under.
+
+Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules and §Claim record format. Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Parallel verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
+
+#### Combine step
+
+1. **Dedup.** Key = `<file>:<line>` plus the first 40 chars of `claim_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing.
+1. **Annotate.** `extraction_confidence: "high"` if ≥2 subagents found the claim, `"low"` if one. Add `found_by: ["A"|"B"|"C"|"D", ...]`. Low-confidence claims surface in the verification trail with `[low extraction confidence]`.
+1. **Frontmatter sweep** runs here -- repeated body / `meta_desc` / `social:` phrasings collapse into a single claim with multiple cited locations regardless of which subagent caught each occurrence.
+1. **Hand off.** Deduped list goes to §Parallel verification; downstream schema unchanged.
+
+Store the deduped claim list for the verification phase. No interim user output.
 
 ---
 
