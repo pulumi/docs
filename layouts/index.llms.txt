@@ -21,7 +21,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       curl -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
         https://api.pulumi.com/api/registry/packages/<source>/<publisher>/<private-pkg>/versions/latest/installation
 
-  Endpoints (replace `{version}` with `latest` or a pinned semver):
+  Endpoints (replace `{version}` with a pinned semver where possible, or `latest` for the most recent published version):
 
       /api/registry/packages?search={query}
       /api/registry/packages/{source}/{publisher}/{name}/versions
