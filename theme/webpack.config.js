@@ -15,7 +15,6 @@ module.exports = function (env, argv = {}) {
         entry: {
             "bundle": "./src/ts/main.ts",
             "marketing": "./src/ts/marketing.ts",
-            "marketing-homepage": "./src/ts/marketingHomepage.ts",
             "algolia": "./src/ts/algolia-entry.ts",
             "consent-manager": "./src/ts/consent-manager/index.ts",
             "header-nav": "./src/ts/header-nav.ts",

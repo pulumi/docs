@@ -109,7 +109,7 @@ make clean                # Remove build artifacts and dependencies
 │  1. Asset Compilation (Webpack, Tailwind CSS)                │
 │  2. Documentation Generation (TypeDoc, Sphinx, CLI)          │
 │  3. Hugo Build (Markdown → HTML)                             │
-│  4. CSS Optimization (PurgeCSS, CSSNano)                     │
+│  4. CSS Minification (cssnano)                               │
 │  5. Search Index Generation (Algolia)                        │
 └──────────────────┬───────────────────────────────────────────┘
                    │
@@ -621,10 +621,9 @@ Location: `theme/webpack.config.js`
 {
   bundle: './src/ts/main.ts',        // Main site JavaScript
   marketing: './src/ts/marketing.ts', // Marketing pages
-  'marketing-homepage': './src/ts/marketingHomepage.ts', // Marketing homepage
-  homepage: './src/ts/homepage.ts',   // Homepage-specific JS
   algolia: './src/ts/algolia-entry.ts', // Search (Algolia)
   'consent-manager': './src/ts/consent-manager/index.ts', // Cookie consent (vanilla TS)
+  'header-nav': './src/ts/header-nav.ts', // Site header navigation
 }
 ```
 
@@ -636,10 +635,9 @@ Async chunks use a similar pattern: `chunk-[contenthash:8].js`.
 ```
 static/js/bundle.<hash>.js
 static/js/marketing.<hash>.js
-static/js/marketing-homepage.<hash>.js
-static/js/homepage.<hash>.js
 static/js/algolia.<hash>.js
 static/js/consent-manager.<hash>.js
+static/js/header-nav.<hash>.js
 static/js/chunk-<hash>.js
 assets/css/bundle.css
 assets/css/marketing.css
@@ -676,18 +674,15 @@ Multi-stage CSS optimization pipeline:
    - Autoprefixer for browser compatibility
    - Custom PostCSS plugins
 
-3. **PurgeCSS** (Production Only)
-   - Scans: `public/**/*.html`, `public/js/bundle.*.js`
-   - Removes unused CSS classes
-   - Safelist patterns:
-     - `hs-*` (HubSpot)
-     - `highlight`, `code-*` (syntax highlighting)
-     - `carousel`, `pagination` (UI components)
-     - `st-*` (ShareThis)
-     - `icon-*`, `pulumi-*` (custom icons)
-   - Skips: `azure-native-v1/**/*` (prevents OOM)
+3. **Unused-class purging** is handled by Tailwind v4 itself via `@source`
+   directives in `theme/src/scss/main.scss` and `_marketing.scss` — Tailwind only
+   emits utilities it finds in the scanned files. PurgeCSS used to run as a
+   second pass but was removed: it is incompatible with Tailwind v4's nested-CSS
+   variant output (`.foo { &:hover { ... } }`) and silently dropped every
+   `hover:`, `focus:`, `focus-visible:`, `space-y-*`, and `data-[...]`
+   arbitrary-variant rule.
 
-4. **CSSNano Minification**
+4. **CSSNano Minification** (Production Only, via `scripts/minify-css.js`)
    - Removes whitespace and comments
    - Optimizes declarations
    - Merges rules
@@ -3500,7 +3495,7 @@ All Dependabot PRs automatically receive:
 **Packages:**
 
 - **Webpack Ecosystem:** `webpack*`, `*-loader`, `*-webpack-plugin*`
-- **CSS Processing:** `postcss*`, `sass*`, `cssnano`, `autoprefixer`, `@fullhuman/postcss-purgecss`, `tailwindcss`
+- **CSS Processing:** `postcss*`, `sass*`, `cssnano`, `autoprefixer`, `tailwindcss`
 - **TypeScript:** `typescript`
 - **Pulumi:** `@pulumi/*`
 - **AWS SDK:** `@aws-sdk/*` (Lambda@Edge risk)
@@ -3776,12 +3771,7 @@ ls -lh public/css/
 
 **Optimization Techniques:**
 
-1. **PurgeCSS Configuration**
-   - Review safelist patterns
-   - Remove unused components
-   - Optimize Tailwind config
-
-2. **Scope Tailwind's content scan**
+1. **Scope Tailwind's content scan**
 
    Tailwind v4 tree-shakes by default — it only emits CSS for classes it detects
    in scanned files. If the bundle is larger than expected, narrow the scan with
@@ -3796,7 +3786,7 @@ ls -lh public/css/
    Avoid broad globs like `../../**` that pull in `node_modules` or generated
    files — these inflate the detected class list and slow builds.
 
-3. **Code Splitting**
+2. **Code Splitting**
    - Separate critical CSS
    - Load non-critical CSS async
 
@@ -3861,7 +3851,6 @@ find static -type f \( -name "*.png" -o -name "*.jpg" \) -size +500k
 /js/consent-manager.*.js: 1 year
 /js/algolia.*.js: 1 year
 /js/homepage.*.js: 1 year
-/js/marketing-homepage.*.js: 1 year
 /js/marketing.*.js: 1 year
 /fonts/*: 1 year
 /fingerprinted/*: 1 year
