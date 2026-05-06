@@ -6,53 +6,50 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 ## For agents
 
-If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example. The cloud registry API is the canonical surface for any package question; the others cover documentation pages, enumeration, and code-generation accuracy.
+If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Cloud registry API (canonical, versioned, structured)** — every published package, version-by-version, with five public endpoints: `readme`, `installation`, `nav`, `docs/{token}`, and `examples`. No auth needed for public packages; set `Authorization: token $PULUMI_ACCESS_TOKEN` to also reach private packages. Works without the CLI — curl the endpoints directly. Resolved-version responses are immutable-cached for 24h; `latest` URLs are uncached so a new publish is visible immediately. Strictly preferred over `/registry/*.md` for any version-, token-, or language-aware question.
+- **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
 
-      # CLI (handles auth, paging, error envelopes; self-describing)
-      pulumi cloud api ls | grep registry             # discover routes
-      pulumi cloud api describe ListPackageVersions   # describe an op
-      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions
+      # CLI (auto-fills lang/os from project runtime + host OS)
+      pulumi cloud api ls | grep registry
+      pulumi cloud api describe ListPackageVersions
       pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
 
-      # Direct HTTP (works without the CLI; same endpoints)
-      curl https://api.pulumi.com/api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
+      # Direct HTTP (markdown variant via Accept header)
+      curl -H "Accept: text/markdown" \
+        https://api.pulumi.com/api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
       curl -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
-        https://api.pulumi.com/api/registry/packages/<source>/<publisher>/<private-pkg>/versions/latest/readme
+        https://api.pulumi.com/api/registry/packages/<source>/<publisher>/<private-pkg>/versions/latest/installation
 
-  Endpoint reference (replace `{version}` with `latest` or a pinned semver):
+  Endpoints (replace `{version}` with `latest` or a pinned semver):
 
+      /api/registry/packages?search={query}
       /api/registry/packages/{source}/{publisher}/{name}/versions
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/readme
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/installation
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/nav
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{token}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
 
-  Common parameters: `?lang=typescript|python|go|csharp|java|yaml` and `?os=linux|macos|windows` are auto-filled by `pulumi cloud api` from the project's runtime and host OS, and supplied explicitly when calling over plain HTTP. On `nav`, `?depth=summary|full` (default `summary` is bounded — ~5K tokens for aws — vs ~70K at `full`) and `?q=<term>` filters modules and items. `examples` accepts `?limit=` (capped at 100). Set `Accept: text/markdown` for prose, `application/json` for structured. Tokens passed to `docs/{token}` are RFC 3986 path-segment encoded (e.g. `aws:lambda/alias:Alias` → `aws:lambda%2Falias:Alias`); discover them via `nav?depth=full` or in the per-module response under `?q=`.
+  The `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned provider schema. Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. Set `Accept: text/markdown` for prose. Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
 
-- **Full docs index (JSON)** — hierarchical machine-readable sitemap of every documentation page with titles and nesting. Use this to enumerate or search the full docs surface.
+- **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
-- **Full registry index (JSON)** — index of every provider package, plus per-package sitemaps at `/registry/packages/<name>/llm-sitemap.json`. Use this when you don't yet know a package's `<source>/<publisher>/<name>` triple to call the cloud registry API.
-
-      curl https://www.pulumi.com/registry/llm-sitemap.json
-      curl https://www.pulumi.com/registry/packages/aws/llm-sitemap.json
-
-- **Provider schemas (canonical, structured)** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. This is the same artifact `pulumi package get-schema <name>` returns. Use this to verify resource argument names and types before generating Pulumi code instead of guessing.
+- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. Same artifact `pulumi package get-schema <name>` returns. For a specific version, follow `schemaURL` from the cloud registry API's `versions/{version}` response.
 
       curl https://www.pulumi.com/registry/packages/aws/schema.json
       pulumi package get-schema aws
 
-- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown via two equivalent mechanisms. Use this for `/docs/` pages, for prose intended for humans, or as a convenience fallback when the cloud registry API doesn't fit. For the `.md` URL form, drop the trailing slash from the canonical URL and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — use the cloud registry API's `docs/{token}` endpoint or **Provider schemas** for resource-level reference instead.
+- **Markdown content (per page)** — every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown — use the cloud registry API instead.
 
-      # 1. Accept-header content negotiation (works on every supported page)
+      # Accept-header content negotiation
       curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
       curl -H "Accept: text/markdown" https://www.pulumi.com/registry/packages/aws/
 
-      # 2. .md URL suffix (header-free; same content, same cache entry)
+      # .md URL suffix (header-free; same content, same cache entry)
       curl https://www.pulumi.com/docs/iac/concepts/resources.md
       curl https://www.pulumi.com/registry/packages/aws.md
       curl https://www.pulumi.com/registry.md
