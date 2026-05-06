@@ -8,34 +8,58 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Full docs index (JSON)** — hierarchical machine-readable sitemap of every documentation page with titles and nesting. Use this to enumerate or search the full docs surface.
+- **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
+
+      # CLI (auto-fills lang/os from project runtime + host OS)
+      pulumi cloud api ls | grep registry
+      pulumi cloud api describe ListPackageVersions
+      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
+
+      # Direct HTTP (markdown variant via Accept header)
+      curl -H "Accept: text/markdown" \
+        https://api.pulumi.com/api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
+      curl -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+        https://api.pulumi.com/api/registry/packages/<source>/<publisher>/<private-pkg>/versions/latest/installation
+
+  Endpoints (replace `{version}` with a pinned semver where possible, or `latest` for the most recent published version):
+
+      /api/registry/packages?search={query}
+      /api/registry/packages/{source}/{publisher}/{name}/versions
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/readme
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/installation
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/nav
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{token}
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
+
+  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--format=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
+
+- **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
-- **Full registry index (JSON)** — index of every provider package, plus per-package sitemaps at `/registry/packages/<name>/llm-sitemap.json`.
+- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
 
-      curl https://www.pulumi.com/registry/llm-sitemap.json
-      curl https://www.pulumi.com/registry/packages/aws/llm-sitemap.json
+      # Versioned (via cloud registry API)
+      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
+        | jq -r .schemaURL | xargs curl
 
-- **Markdown content (per page)** — every `/docs/` URL and every `/registry/` URL is available as clean markdown using either of two equivalent mechanisms. For the `.md` URL form, drop the trailing slash from the canonical URL and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). Exception: `/registry/packages/<name>/api-docs/*` is NOT served as markdown — for resource-level reference, use the **Provider schemas** or **Pre-rendered package docs** endpoints below instead.
+      pulumi package get-schema aws
+      pulumi package get-schema aws@6.0.0
 
-      # 1. Accept-header content negotiation (works on every supported page)
+      # Latest only
+      curl https://www.pulumi.com/registry/packages/aws/schema.json
+
+- **Markdown content (per page)** — every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown — use the cloud registry API instead.
+
+      # Accept-header content negotiation
       curl -H "Accept: text/markdown" https://www.pulumi.com/docs/iac/concepts/resources/
       curl -H "Accept: text/markdown" https://www.pulumi.com/registry/packages/aws/
 
-      # 2. .md URL suffix (header-free; same content, same cache entry)
+      # .md URL suffix (header-free; same content, same cache entry)
       curl https://www.pulumi.com/docs/iac/concepts/resources.md
       curl https://www.pulumi.com/registry/packages/aws.md
       curl https://www.pulumi.com/registry.md
-
-- **Provider schemas (canonical, structured)** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. This is the same artifact `pulumi package get-schema <name>` returns. Use this to verify resource argument names and types before generating Pulumi code instead of guessing.
-
-      curl https://www.pulumi.com/registry/packages/aws/schema.json
-      pulumi package get-schema aws
-
-- **Pre-rendered package docs (bundled)** — human-formatted multi-language documentation (TypeScript/Python/Go/C#/Java/YAML) with usage examples, constructor signatures, and property tables. Useful when you need formatted prose rather than raw schema.
-
-      curl https://www.pulumi.com/registry/packages/aws/api-docs/llm-docs.json
 
 ## Site overview
 
