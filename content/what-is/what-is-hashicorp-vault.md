@@ -1,32 +1,33 @@
 ---
-title: What is Hashicorp Vault?
+title: What is HashiCorp Vault?
 meta_desc: |
      HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
 
 type: what-is
 page_title: "What is HashiCorp Vault?"
 ---
-### What is HashiCorp Vault?
 
-HashiCorp Vault is a tool for secure secrets management, essential for storing and safeguarding sensitive data like API keys and passwords. It's one of many options in the ecosystem of secrets and configuration management tools supported by [Pulumi ESC](https://www.pulumi.com/product/esc/). As the complexity of modern cloud infrastructure has grown, so has the need for robust and scalable secrets management solutions. Vault's integration with Pulumi ESC addresses this need by providing a secure, centralized platform for managing sensitive information across multiple cloud environments. By leveraging Vault's capabilities within Pulumi ESC and [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) infrastructure as code solutions, developers can ensure that their cloud infrastructure is secure and compliant with best practices, even as the underlying systems, complexity and requirements evolve.
+Modern applications run across many clouds, regions, and runtime environments, and each of them needs access to sensitive data — API keys, database credentials, TLS certificates, and encryption keys. Storing those secrets safely, rotating them regularly, and controlling who can read them is a problem every cloud team has to solve. [HashiCorp Vault](https://www.hashicorp.com/products/vault) is one of the most widely adopted tools for that job.
 
-In this article, we'll cover the key features of [HashiCorp Vault](https://www.hashicorp.com/products/vault), why secret management is important and share the use cases of how Vault integrates into various cloud architectures, enhancing the security and management of sensitive data in complex cloud environments.
+## What is HashiCorp Vault?
 
-### Key features of HashiCorp Vault?
+HashiCorp Vault is an open-source tool for securely storing, generating, and tightly controlling access to secrets such as tokens, passwords, certificates, and encryption keys. Vault encrypts secrets at rest, brokers access through identity-based policies, and produces a detailed audit log of every access — giving teams a single, centralized way to manage sensitive data across applications, infrastructure, and clouds.
 
-- **Secure secret storage**: Vault has the capability to store a wide range of key/value secrets. Before these secrets are written to persistent storage, Vault encrypts them, ensuring that direct access to the raw storage does not compromise the secrets. Vault supports various storage backends, including disk storage, Consul, among others, for versatile secret storage solutions.
-- **Dynamic secrets**: Vault can generate secrets on-demand for specific systems (like databases or cloud platforms). These secrets are generated dynamically for each request and can be automatically revoked, reducing the risk associated with static secrets.
-- **Data encryption**: Vault provides encryption as a service, allowing users to encrypt and decrypt data without storing it in Vault. This is useful for applications that need to encrypt data but don’t want to handle the intricacies of key management.
-- **Leasing and renewal**: Secrets in Vault can have a lease associated with them. When the lease expires, the secret is automatically revoked. Clients can also renew leases to extend their validity.
-- **Revocation**: Vault can revoke not just individual secrets but entire trees of secrets. For instance, if a particular user or application is compromised, all secrets accessed by that entity can be revoked, enhancing security.
-- **Identity and access management**: Vault supports various authentication methods (like tokens, username/password, cloud IAM, etc.) and uses policies to control what secrets an authenticated user or application can access.
-- **Audit log**: Vault maintains detailed logs of all accesses and changes, which is crucial for security audits and compliance.
+### Key features
 
-### Creating secrets in Hashicorp Vault
+- **Secure secret storage**: Vault stores arbitrary key/value secrets and encrypts them before writing to persistent storage. It supports multiple storage backends, including disk, Consul, and cloud providers.
+- **Dynamic secrets**: Vault can generate short-lived, on-demand credentials for systems like databases and cloud platforms. Each request gets a unique secret that can be automatically revoked, drastically reducing the blast radius of a leak.
+- **Encryption as a service**: Applications can ask Vault to encrypt and decrypt data without ever storing the data itself in Vault — useful for offloading the complexity of key management.
+- **Leasing and renewal**: Secrets can be issued with a lease. When the lease expires, the secret is revoked automatically; clients can renew leases to extend validity.
+- **Revocation**: Vault can revoke individual secrets or entire trees of secrets — for example, every credential a compromised application has accessed.
+- **Identity and access management**: Vault supports many auth methods (tokens, username/password, cloud IAM, OIDC, Kubernetes service accounts, and more) and uses policies to control which secrets each identity can access.
+- **Audit logging**: Vault writes detailed logs of every access and configuration change, which is essential for security audits and compliance.
 
-HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
+## Creating secrets in HashiCorp Vault
 
-Use the `vault kv put` command to create a new secret within a specified mount path.
+HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
+
+Use the `vault kv put` command to create a new secret within a specified mount path:
 
 ```bash
 # Create a new secret
@@ -37,17 +38,17 @@ Replace `myvalue=s3cr3t` with the key-value pair you wish to store as a secret.
 
 {{< notes type="info" >}}
 
-The commands provided in this article include `<key>=<value>` parameters to pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://www.vaultproject.io/docs/secrets/kv/kv-v2) for best practices in production scenarios.
+The commands in this article include `<key>=<value>` parameters that pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://www.vaultproject.io/docs/secrets/kv/kv-v2) for best practices in production scenarios.
 
 {{< /notes >}}
 
-### Reading a secret from HashiCorp Vault
+## Reading a secret from HashiCorp Vault
 
-Once you've stored a secret, you can read it back to ensure it's stored correctly or to use it.
+Once you've stored a secret, you can read it back to verify it was stored correctly or to use it.
 
 Use the `vault kv get` command to retrieve your secret:
 
-```shell
+```bash
 vault kv get secret/hello
 ```
 
@@ -60,25 +61,171 @@ Key         Value
 myvalue     s3cr3t
 ```
 
-### HashiCorp Vault use cases
+## HashiCorp Vault use cases
 
-HashiCorp Vault is a tool that can be integrated into various cloud architecture platforms and architectures, catering to different needs and scenarios. The most common cloud architectures for use with Vault are:
+Vault fits a wide range of cloud architectures. The most common patterns are:
 
-- **Public cloud**: Vault is commonly used in public cloud environments like AWS, Azure, and Google Cloud Platform. It can manage secrets and sensitive data for cloud services and applications, leveraging cloud-specific features like IAM roles for authentication and auto-scaling.
-- **Hybrid cloud**: In hybrid cloud setups, where some resources are managed on-premises and others in the cloud, Vault can serve as a centralized secrets manager. It can bridge on-premises and cloud environments, ensuring consistent secrets management across both.
-- **Multi-cloud**: Organizations using multiple cloud providers often adopt Vault to manage secrets uniformly across these environments. This approach avoids vendor lock-in and ensures that the secrets management strategy remains consistent, regardless of the underlying cloud provider.
-- **Containerized environments**: In architectures using container orchestration tools like Kubernetes, Vault is used to manage secrets for containers. It can dynamically generate secrets and inject them into containers, enhancing security in microservices architectures.
-- **Serverless architectures**: For serverless functions (like AWS Lambda, Azure Functions), Vault can manage API keys and database credentials, providing them securely to serverless functions when needed.
-- **CI/CD pipelines**: Vault is often integrated into CI/CD pipelines to provide dynamic secrets for deployment automation tools, build servers, and testing environments, ensuring these processes are secure and auditable.
-- **Microservices architecture**: In microservices environments, Vault can provide each service with unique credentials, reducing the risk of lateral movement in case of a compromise.
-- **Edge computing**: In edge computing scenarios, Vault can manage secrets used by edge devices and local data processing applications, ensuring security in distributed environments.
+- **Public, hybrid, and multi-cloud environments**: Vault provides a single place to manage secrets across AWS, Azure, Google Cloud, and on-premises systems, avoiding vendor lock-in and keeping the secrets workflow consistent across providers.
+- **Containerized and Kubernetes workloads**: Vault dynamically issues secrets and injects them into containers and pods, so applications never need long-lived credentials baked into images or config maps.
+- **Microservices**: Each service can be issued its own short-lived credentials, limiting lateral movement if a single service is compromised.
+- **CI/CD pipelines**: Build servers and deployment automation can fetch dynamic credentials from Vault at runtime instead of storing static tokens in pipeline configuration.
+- **Encryption for applications**: Vault's transit engine lets applications encrypt and decrypt data without ever managing the underlying keys themselves.
 
-### Conclusion
+## Best practices
 
-Vault's role in each of these architectures is to provide the foundation of secure storage, strict access control, and auditing for secrets and sensitive data. When combined with Pulumi ESC, the capabilities extend even further, ensuring strong security and efficient management across your entire cloud infrastructure and target execution environments.
+- **Prefer dynamic secrets over static ones**: Whenever a backend supports it (databases, cloud IAM, SSH, PKI), use Vault's dynamic secret engines so credentials are short-lived and automatically revoked.
+- **Apply least-privilege policies**: Scope each Vault policy to the smallest set of paths and capabilities the consumer needs, and bind policies to identities rather than to long-lived tokens.
+- **Rotate the root and recovery keys**: Rotate Vault's encryption key (`rotate`) and re-key the master/recovery keys (`rekey`) on a regular schedule.
+- **Enable and monitor audit devices**: Always run at least one audit device, and ship the logs to a SIEM so secret access is visible and alertable.
+- **Manage Vault itself as code**: Define mounts, auth methods, and policies declaratively so the Vault configuration is reviewable, reproducible, and recoverable.
 
-[Pulumi ESC](/docs/pulumi-cloud/esc/) used in combination with Hashicorp Vault enables teams to aggregate secrets and configuration from many sources, manage hierarchical collections of configuration and secrets (“environments”), and consume those configuration and secrets from a variety of different infrastructure and application services. Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, but also works independently from Pulumi IaC, as a solution for managing environments, secrets and configuration for any application or infrastructure project. Get started by using ESC's [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) provider to dynamically import secrets from HashiCorp Vault into your environment.
+## Challenges and considerations
 
-- **Advanced configuration management**: Discover how to efficiently manage configuration data in your cloud applications. Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
+Vault is powerful, but operating it well takes investment. Common considerations include:
+
+- **Operational complexity**: Running Vault in production means managing seal/unseal flows, high availability, storage backends, and disaster recovery. Teams often choose [HCP Vault](https://www.hashicorp.com/products/vault/pricing) to offload this.
+- **Initial setup overhead**: Designing auth methods, policies, and namespaces up front takes time, especially in larger organizations with many teams and environments.
+- **Secret sprawl across tools**: Many organizations end up with secrets in Vault, cloud-native secret managers (AWS Secrets Manager, Azure Key Vault, Google Secret Manager), and CI/CD systems, making consistent access patterns harder to enforce.
+- **Application integration**: Wiring applications to fetch secrets at runtime (sidecars, agents, SDKs) adds moving parts that have to be deployed, monitored, and upgraded.
+
+## Conclusion
+
+HashiCorp Vault gives cloud teams a centralized, auditable way to store secrets, issue short-lived credentials, and encrypt sensitive data. Those capabilities get more valuable as infrastructure spreads across more clouds and environments.
+
+Pairing Vault with Pulumi covers both halves of the problem. Pulumi lets you define your Vault configuration (mounts, policies, auth methods, and secrets) as code in the language you already use, and [Pulumi ESC](/docs/pulumi-cloud/esc/) lets your applications consume secrets from Vault, alongside other providers, through a single environment abstraction.
+
+- **Manage Vault as code with Pulumi**: Define Vault mounts, policies, and KV secrets using the [Pulumi Vault provider](/registry/packages/vault/). Below is a minimal example that creates a KV v2 mount and writes a secret:
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as vault from "@pulumi/vault";
+
+const kv = new vault.Mount("kv", {
+    path: "secret",
+    type: "kv",
+    options: { version: "2" },
+});
+
+const example = new vault.kv.SecretV2("example", {
+    mount: kv.path,
+    name: "hello",
+    dataJson: JSON.stringify({ myvalue: "s3cr3t" }),
+});
+
+export const secretPath = example.path;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import json
+import pulumi
+import pulumi_vault as vault
+
+kv = vault.Mount("kv",
+    path="secret",
+    type="kv",
+    options={"version": "2"},
+)
+
+example = vault.kv.SecretV2("example",
+    mount=kv.path,
+    name="hello",
+    data_json=json.dumps({"myvalue": "s3cr3t"}),
+)
+
+pulumi.export("secret_path", example.path)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-vault/sdk/v7/go/vault"
+	"github.com/pulumi/pulumi-vault/sdk/v7/go/vault/kv"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		kvMount, err := vault.NewMount(ctx, "kv", &vault.MountArgs{
+			Path: pulumi.String("secret"),
+			Type: pulumi.String("kv"),
+			Options: pulumi.StringMap{
+				"version": pulumi.String("2"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+
+		data, err := json.Marshal(map[string]string{"myvalue": "s3cr3t"})
+		if err != nil {
+			return err
+		}
+
+		example, err := kv.NewSecretV2(ctx, "example", &kv.SecretV2Args{
+			Mount:    kvMount.Path,
+			Name:     pulumi.String("hello"),
+			DataJson: pulumi.String(string(data)),
+		})
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("secretPath", example.Path)
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Text.Json;
+using Pulumi;
+using Pulumi.Vault;
+using Pulumi.Vault.Kv;
+
+return await Deployment.RunAsync(() =>
+{
+    var kv = new Mount("kv", new MountArgs
+    {
+        Path = "secret",
+        Type = "kv",
+        Options = { { "version", "2" } },
+    });
+
+    var example = new SecretV2("example", new SecretV2Args
+    {
+        Mount = kv.Path,
+        Name = "hello",
+        DataJson = JsonSerializer.Serialize(new { myvalue = "s3cr3t" }),
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["secretPath"] = example.Path,
+    };
+});
+```
+
+{{% /choosable %}}
+
+- **Centralize secrets and configuration with Pulumi ESC**: [Pulumi ESC](/docs/pulumi-cloud/esc/) lets teams aggregate secrets and configuration from many sources, organize them into hierarchical environments, and consume them from any application or infrastructure tool. Get started by using ESC's [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) provider to dynamically import secrets from HashiCorp Vault into your environment.
+- **Advanced configuration management**: Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
 
 Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals.
