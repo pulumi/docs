@@ -3,12 +3,13 @@
 # or more GitHub comments tagged with `<!-- CLAUDE_REVIEW N/M -->` markers.
 #
 # Subcommands:
-#   find          --pr <N>                           List pinned comment IDs in marker order.
-#   fetch         --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
-#   upsert        --pr <N> --body-file <path>        Split body, edit existing comments in place, append new, prune tail.
-#   prune         --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
-#   clear         --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
-#   last-reviewed-sha --pr <N>                       Print the most recent SHA from the 1/M comment's review history.
+#   find             --pr <N>                           List pinned comment IDs in marker order.
+#   fetch            --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
+#   upsert           --pr <N> --body-file <path>        Split body, edit existing comments in place, append new, prune tail.
+#   upsert-validated --pr <N> --body-file <path>        Run validate-pinned.py first; on success, call upsert. On violation, exit non-zero and write a fix-me marker the model re-reads. Fresh-review path only.
+#   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
+#   clear            --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
+#   last-reviewed-sha --pr <N>                          Print the most recent SHA from the 1/M comment's review history.
 #
 # Common flags:
 #   --repo <owner/repo>   Override repository (default: $GH_REPO, $GITHUB_REPOSITORY, or `gh repo view`).
@@ -261,6 +262,38 @@ cmd_upsert() {
     rm -rf "$pages_dir"
 }
 
+cmd_upsert_validated() {
+    # Wrap upsert with a pre-publish call to validate-pinned.py. On validation
+    # failure (exit 1), write the fix-me marker and exit non-zero so the model
+    # can re-render. The model retries once, then falls back to plain `upsert`
+    # (the soft-floor) — see ci.md Hard Rules.
+    local repo pr body_file
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    body_file="${BODY_FILE:?--body-file required}"
+    [[ -r "$body_file" ]] || die "body file not readable: $body_file"
+
+    local script_dir
+    script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+    local validator="$script_dir/validate-pinned.py"
+    [[ -x "$validator" || -f "$validator" ]] || die "validator not found: $validator"
+
+    local soft_floor_flag=()
+    if [[ -n "${VALIDATE_SOFT_FLOOR:-}" ]]; then
+        soft_floor_flag=(--soft-floor)
+    fi
+
+    if python3 "$validator" check \
+            --body-file "$body_file" \
+            --pr "$pr" \
+            --repo "$repo" \
+            "${soft_floor_flag[@]}"; then
+        cmd_upsert
+    else
+        return 1
+    fi
+}
+
 cmd_prune() {
     local repo pr keep
     repo=$(resolve_repo)
@@ -348,6 +381,7 @@ case "$SUBCOMMAND" in
     find)              cmd_find ;;
     fetch)             cmd_fetch ;;
     upsert)            cmd_upsert ;;
+    upsert-validated)  cmd_upsert_validated ;;
     prune)             cmd_prune ;;
     clear)             cmd_clear ;;
     last-reviewed-sha) cmd_last_reviewed_sha ;;

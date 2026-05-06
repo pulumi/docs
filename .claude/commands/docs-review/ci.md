@@ -12,7 +12,7 @@ This is the **CI entry point** for the docs review pipeline.
 ## Hard rules for CI
 
 1. **Never read working-tree state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo files. The CI runner's working tree is a shallow checkout that may not reflect what's in the PR. Use `gh pr view` and `gh pr diff` for **everything** about the PR.
-2. **Post only via the pinned-comment script** (see §4 below).
+2. **Post only via `pinned-comment.sh upsert-validated`** for the initial post (see §4 below). Never call plain `upsert` directly except as the soft-floor fallback after a second validation failure. The validator catches structural drift the model occasionally introduces (style-count, render-mode, dispatch-metadata, trail-vs-rendered consistency); the wrapper enforces it atomically.
 3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
@@ -56,12 +56,28 @@ Render using `docs-review:references:output-format` and apply its DO-NOT list be
 
 ### 4. Post via the pinned-comment script
 
-Write the rendered output to a temp file and call:
+Write the rendered output to a temp file and call the validating wrapper:
 
 ```bash
-bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert-validated \
   --pr "$PR_NUMBER" \
   --body-file "$REVIEW_OUTPUT_FILE"
 ```
 
-The script handles marker convention, splitting, in-place edits, and overflow. Do not delete the 1/M summary comment.
+The wrapper runs `validate-pinned.py` against the body, then calls `upsert` if validation passes. On a non-zero exit, read the fix-me marker:
+
+```bash
+cat /tmp/validate-pinned.fix-me.md
+```
+
+Each violation lists the rule, expected vs actual, and a hint. Re-render the body addressing every violation, then call `upsert-validated` once more. **Cap the retry at one attempt** — if the second validation also fails, fall back to plain `upsert` with the unfixed body and accept the soft-floor:
+
+```bash
+VALIDATE_SOFT_FLOOR=1 bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+  --pr "$PR_NUMBER" \
+  --body-file "$REVIEW_OUTPUT_FILE"
+```
+
+The validator will have already emitted a `::warning::validate-pinned soft-floor` CI annotation surfacing the residual violations to the maintainer.
+
+The wrapper handles marker convention, splitting, in-place edits, and overflow. Do not delete the 1/M summary comment.
