@@ -259,8 +259,8 @@ The section never produces 🚨 directly — it's a maintainer-signaling flag. I
 
     **Render mode — single mode per comment.** Pick one mode for *all* style findings in this review based on file count and total finding count, not per-file:
 
-    - **Inline-all (no collapsing).** When the PR touches a single file *and* the total style-finding count is ≤30. Render every bullet flat under `#### Style findings`. No `<details>` block. No expand-hint.
-    - **Collapse-all.** When the PR touches more than one file, *or* total style findings exceed 30. Render every file as its own `<details>` block (one `<summary>` per file, even files with a single finding) with the file roll-up summary format below. Render the expand-hint once under the H4.
+    - **Inline-all (no collapsing).** When (a) total style findings ≤5, OR (b) style findings concentrate in a single file AND total ≤30. Render every bullet flat under `#### Style findings`. No `<details>` block. No expand-hint.
+    - **Collapse-all.** When style findings span multiple files AND total >5, OR total >30 regardless of file count. Render every file as its own `<details>` block (one `<summary>` per file, even files with a single finding) with the file roll-up summary format below. Render the expand-hint once under the H4.
 
     Mixed-mode (some files inline, some collapsed) is forbidden — it reads as inconsistent. The two-mode rule keeps each comment internally consistent.
 
