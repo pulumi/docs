@@ -9,9 +9,9 @@
           aria-expanded="false"
           aria-haspopup="menu"
           aria-controls="nav-desktop-popup"
-          class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100 focus:bg-gray-100 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100">
+          class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100/70">
           {{ $dropdown.label }}
-          {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
+          {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
         </button>
       </li>
     {{ end }}
@@ -20,7 +20,7 @@
       <li>
         <a href="{{ $link.href }}"
           {{ with $link.track }}data-track="{{ . }}"{{ end }}
-          class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap transition-all hover:bg-gray-100 focus:bg-gray-100 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+          class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50">
           {{ $link.label }}
         </a>
       </li>
@@ -45,20 +45,7 @@
                 <ul class="grid gap-x-6 gap-y-0.5 {{ if eq $section.columns 2 }}grid-cols-2{{ else }}grid-cols-1{{ end }}">
                   {{ range $item := $section.items }}
                     <li>
-                      <a href="{{ $item.href }}"
-                        {{ with $item.track }}data-track="{{ . }}"{{ end }}
-                        class="flex flex-row items-start gap-3 rounded-md p-3 outline-none transition-all hover:bg-gray-100 focus-visible:bg-gray-100 focus-visible:ring-3 focus-visible:ring-violet-400/50">
-                        <span aria-hidden="true"
-                          class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border border-gray-200 text-violet-700">
-                          {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight) "class" "size-6") }}
-                        </span>
-                        <span class="flex min-w-0 flex-col gap-0.5">
-                          <span class="text-sm font-semibold text-gray-950">{{ $item.label }}</span>
-                          {{ with $item.description }}
-                            <span class="text-xs text-gray-600">{{ . }}</span>
-                          {{ end }}
-                        </span>
-                      </a>
+                      {{ partial "header/nav-dropdown-item.html" (dict "item" $item "variant" "desktop") }}
                     </li>
                   {{ end }}
                 </ul>
