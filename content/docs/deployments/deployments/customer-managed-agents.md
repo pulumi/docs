@@ -53,7 +53,7 @@ Workflow runners support multiple workflow types beyond deployments, including P
 
 ### Scaling and concurrency
 
-Each workflow runner process executes **one workflow job at a time**. Each runner has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
+Each workflow runner process executes **one workflow job at a time** and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
 
 Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. If a runner crashes or loses connectivity in the middle of a job, the claim eventually expires and another runner in the pool picks up the job.
 
