@@ -109,6 +109,8 @@ Verify each by reading the sibling pages and recording whether the same step / h
 }
 ```
 
+**Sibling-read dispatch.** For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Parallel verification's limit). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
+
 **Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
 
 - `L42 "Settings → Access Management" → ✅ matches entra/gsuite/okta/onelogin (5 of 5 siblings checked; 4 match, 1 has no equivalent step)`
