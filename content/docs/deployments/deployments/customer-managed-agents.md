@@ -53,15 +53,15 @@ Workflow runners support multiple workflow types beyond deployments, including P
 
 ### Scaling and concurrency
 
-Each workflow runner process executes **one workflow job at a time**. There is no in-process worker pool to size. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
+Each workflow runner process executes **one workflow job at a time**. Each runner has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
 
-Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. If a runner crashes or loses connectivity in the middle of a job, the claim eventually expires and another runner in the pool picks the job up.
+Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. If a runner crashes or loses connectivity in the middle of a job, the claim eventually expires and another runner in the pool picks up the job.
 
-Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
+Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency limit. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
 
 Patterns for scaling:
 
-- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica = one additional concurrent slot.
+- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one concurrency slot.
 - **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
 - **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
 
@@ -175,7 +175,7 @@ shared_volume_directory: ""
 deploy_target: "docker"
 
 # If true, the runner exits after completing a single workflow job.
-# Useful for ephemeral, one-shot runners (e.g. Kubernetes Jobs).
+# Useful for ephemeral, one-shot runners (for example, Kubernetes Jobs).
 # Environment variable override: PULUMI_AGENT_SINGLE_RUN
 single_run: false
 
@@ -204,7 +204,7 @@ enabled_workflow_types:
 env_forward_allowlist: []
 
 ## OpenID Connect (OIDC) settings
-## See "Leveraging OpenID authentication" above. When oidc_token_file is set,
+## See the "Leveraging OpenID authentication" section. When oidc_token_file is set,
 ## organization_name and runner_pool_id are required, and `token` is not used.
 
 # Path to a file containing an OIDC token that will be exchanged for a
@@ -247,7 +247,7 @@ job_status_loop_interval: "30s"
 # Environment variable override: PULUMI_AGENT_REQUEST_TIMEOUT
 request_timeout: "30s"
 
-# Maximum number of retries for rate-limited / transient API failures.
+# Maximum number of retries for rate-limited or transient API failures.
 # Environment variable override: PULUMI_AGENT_REQUEST_RETRY_COUNT
 request_retry_count: 2
 
