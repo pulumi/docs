@@ -3208,3 +3208,100 @@ S31 is the **decomposition session** — see `scratch/2026-05-06-final-battery/s
 4. **Prior-pinned anchoring on `#new-review`.** Trace the prompt assembly path; confirm whether prior comment content reaches the model on regen. One-edit fix if found.
 
 Plus pre-existing carry-overs (deferred unless raised): 5th bucket "Needs your eyes," commit-aware fix-pass coverage, ⚠️ rename, quick `/docs-review` variant, CLAUDE_PROGRESS terminal cleanup, AI-drafting threshold tuning, Java-truncation classification carve-out.
+
+## Session 31 (2026-05-06) — Decomposition: parallel-subagent claim discovery
+
+**Going in:** S30 had landed *verification* of cited claims via Change 1.1 (structured evidence-line format with verbatim source quote + 5 framing labels). The unfixed problem was *discovery* — whether the model surfaces the right claims to verify. PR #128's "Other tab" finding caught on 1/5 fresh runs in S28; PR #130's OutSystems claim was extracted on r5 only of S30; PR #138's AI-drafting signals fired on r3 only. Replication (run N times) addresses sampling-noise misses but not systematic blind spots ("the model's prior treats a whole category as not-a-claim"). Decomposition does both.
+
+### What shipped (6 commits on `CamSoper/pr-review-overhaul`, PR #18680)
+
+1. **`0d42702fe0` — Change 1: decomposed claim extraction** (`fact-check.md`). 4 parallel claim-finder subagents via `Agent` tool (`general-purpose`, Sonnet 4.6 each):
+   - `numerical` — `Numerical` + `Version/availability` rows + temporal-trigger list.
+   - `cross-reference` — `Cross-reference` row + templated-section detection + per-record extraction list.
+   - `capability` — `Command behavior` + `Flag/option existence` + `Output format` + `Feature existence` + `Resource API surface` rows.
+   - `framing` — heuristic specialist; `Quote/attribution` row + framing-strength phrase list. The OutSystems-shape catcher.
+
+   Each subagent receives ONLY its slice rows + Skip rules + Claim record format — explicit don't-include list to prevent context leak. Combine step deduplicates by `<file>:<line> + first 40 chars of claim_text`, annotates `found_by: [<specialist>...]`, and surfaces `cross_specialist_corroboration: true` only when `framing` co-fires with one of the others (the designed overlap, not noise).
+
+2. **`f9f846e65a` — Change 2: AI-drafting-signals decomposition** (`prose-patterns.md`). 6 detectors → 2 subagents:
+   - `structural` (Sonnet 4.6) — detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
+   - `lexical` (Haiku 4.5) — detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot).
+
+   ≥3-of-6 threshold and rendering format unchanged. Each subagent receives only its three detector definitions verbatim.
+
+3. **`8d2a3ecfda` — Change 3: cross-sibling parallel digest reads** (`fact-check.md` §Cross-sibling consistency). For each detected sibling set, fan out N parallel digest subagents (Haiku 4.5, capped at 5/batch). Subagent prompt is path + JSON schema + "do not analyze" only; main agent owns the comparison. Decomposition makes the reads non-optional (was sequential-and-elidable in S30).
+
+4. **`f49ba46840` — Codify §Subagent decomposition** (`output-format.md`). New section adjacent to §Investigation log. Decompose-when (independent checks AND per-check reasoning) / don't-decompose-when (sequential, composition, simple regex) bullets. `subagent_consensus: N of M` annotation. Investigation-log line extended inline with dispatch metadata: *"4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations."*
+
+5. **`3f7639147e` — Polish: categorical specialist names; drop high/low extraction-confidence.** Per Cam's feedback: with non-overlapping slices by design, marking single-specialist finds as low-confidence is cry-wolf and undermines the rationale for decomposition. Single-specialist is the expected state; cross-specialist corroboration (when `framing` co-fires) is the positive signal.
+
+6. **`f6fc67010b` — Polish: inline fresh-review-only guards at each dispatch site.** Cam observation: the don't-decompose-for-re-entrant rule was a parenthetical in `output-format.md` — easy to skim past. Added inline guards at all three dispatch sites (extraction, cross-sibling, AI-drafting) so a future contributor adding decomposition to a re-entrant pass hits the guard locally.
+
+### Hit-rate retest results
+
+10 fresh `#new-review` runs across 4 fixtures:
+
+| Fixture | Target | Discovery | Strict 🚨 | Compare to S30 |
+|---|---|:---:|:---:|---|
+| PR #128 (JumpCloud Other tab + SCIM) | ≥3/3 in 🚨 | **3/3** ✅ | **1/3** ❌ | S30: 1/3 surfaced + 🚨; S31: 3/3 surfaced, 1/3 in 🚨 (rest in ⚠️) |
+| PR #130 (OutSystems contradicted) | ≥2/3 in 🚨 | **3/3** ✅ | **3/3** ✅ | **S30: 0/3; S31: 3/3** — Change 1.1 verification + framing-specialist extraction both shipped working |
+| PR #138 (AI-drafting signals) | ≥2/3 fire | **2/3** ✅ | n/a | S30: 1/5; S31: 2/3 (third run correctly omitted at 2/6 below threshold) |
+| PR #131 (Java truncation regression) | clean | **1/1** ✅ | **1/1** ✅ | Stable |
+
+### Cost
+
+Mean **$1.81/run** across 10 runs. Total $18.07. Compare S30: $2.00/run mean — **S31 is ~10% cheaper** despite the added decomposition work. Cost framing held: Sonnet specialists offload extraction reasoning Opus would have done in-context. Under the +25% ceiling.
+
+### What I got wrong / what Cam pushed back on
+
+- **First attempt at `extraction_confidence: high/low` was bad.** I designed the combine step to mark single-specialist finds as "low extraction confidence" with a `[low extraction confidence]` annotation in the trail. Cam pushed back: by design, slices don't overlap, so single-specialist IS the expected state. Marking it as low-confidence is cry-wolf. Reframed to `cross_specialist_corroboration: true` as a positive signal only when `framing` co-fires.
+- **Single-letter A/B/C/D codes in `found_by` were unreadable.** Cam: *"perhaps we should give them brief names or categories?"* Fix: dropped letters, used categorical names (`numerical`, `cross-reference`, `capability`, `framing`, `structural`, `lexical`).
+- **Don't-decompose-for-re-entrant rule was a parenthetical.** Cam: *"is this line a strong enough signal to the re-entrant flow?"* Fix: lifted the rule out of the parenthetical AND added inline guards at every dispatch site.
+- **Rebase pollution on test PRs.** First sanity-check on PR #128 came back with the diff polluted by S31 skill churn (3-dot diff merge-base shifted to upstream when only the head branches were rebased, not the `compare/base-pr-*` bases). Diagnosed and fixed mid-session: rebase BOTH base and head branches; rebuild head as `base + cherry-pick(add)`. Worth folding into FORK-PREP.md.
+
+### S32 carry-overs
+
+Captured in `scratch/2026-05-06-final-battery/s31-runs/s32-carry-overs.md`:
+
+1. **Bucket-promotion regression on cross-sibling nav-path findings.** r1/r3 hedged the wording ("either the UI changed or this guide is wrong") and landed in ⚠️; r2 was direct and landed in 🚨. Adherence 1/3. Anti-hedge tightening on `🚨 mismatch` verdicts.
+2. **Encourage fact-checkers to fetch whatever they need (Cam directive).** §Verification source order step 4 reads as a closed allowlist (AWS/Azure/GCP/Kubernetes/Terraform/etc.); rewrite as permissive default. *"`unverifiable` is for genuinely-not-fetchable claims, not the default for vendor pricing/licensing claims when a public source exists."*
+3. **Prior-pinned anchoring on `#new-review`** — deferred from S31; trace-confirm via transcript inspection before any workflow edits.
+4. **Investigation-log dispatch-metadata adherence (4/10 strict).** Promote the metadata to its own bullet or make the format an explicit MUST.
+5. **Style-findings collapse threshold too aggressive for low counts.** PR #128 r3 collapsed 2 findings in 1 file with full `<details>` wrapper. Inline-all when total ≤5 OR style findings concentrate in 1 file, regardless of PR file count.
+6. **Cross-sibling fan-out: skipped reads despite decomposition.** PR #128 r3 read 6 of 8 siblings (entra and troubleshooting elided). Tighten dispatch language to MUST-have-all-digests; surface fail-loudly when missing.
+6b. **Trail-vs-rendered mismatch.** PR #128 r3 had two rendered cross-sibling findings but only one trail record. Render the trail FROM the claim records.
+7. **Bucket-count table excludes style findings (variance).** r1 included style in the ⚠️ count; r2/r3 excluded. The count understates the maintainer's review burden.
+
+### Methodology / repeatable patterns
+
+- **Decomposition delivers measurable wins on systematic blind spots.** OutSystems went 0/3 → 3/3. AI-drafting went 1/5 → 2/3. Cross-sibling discovery 1/3 → 3/3. Single-pass extraction is the discovery bottleneck; specialist subagents close the bottleneck.
+- **Decomposition shifts cost rather than adding it.** S31 mean $1.81 vs S30 $2.00 — Opus offloads extraction reasoning to Sonnet specialists running in parallel; the main-agent combine step is cheap. Cost-flat-to-negative confirmed empirically.
+- **Per-subagent prompt slicing matters.** The plan's explicit context-isolation budget (each subagent gets ONLY its slice + Skip rules + Claim record format; explicit don't-include list) prevented prompt bloat. Default would be to copy the whole skill and let the subagent figure out what's relevant — that wastes tokens and primes the wrong direction.
+- **Inline guards beat parenthetical rules for actionable constraints.** The re-entrant guard sat in `output-format.md` as a parenthetical in a list. After Cam pushback, I duplicated the guard at every dispatch site. Spec-as-document and spec-as-action point at different surfaces; both need the rule.
+- **Fixture maintenance is part of the test surface.** The rebase-pollution issue (3-dot diff merge-base shifted) wasn't visible from the FORK-PREP.md procedure alone because that procedure only handled head branches. Variance retests need to validate fixtures BEFORE firing reviews — `gh pr diff <pr> --name-only` should show only the content add, not the master-side churn.
+
+### Files changed (Session 31 substance)
+
+Upstream `pr-review-overhaul` (6 commits): `0d42702fe0` → `f9f846e65a` → `8d2a3ecfda` → `f49ba46840` → `3f7639147e` → `f6fc67010b`. Net diff vs S30: +44/-5 across `references/{fact-check,prose-patterns,output-format}.md`.
+
+Cam fork master: `1798a66269` (S31 HEAD `f6fc67010b` + bypass commit cherry-picked). Force-pushed during the session.
+
+Scratch (persistent):
+
+- `scratch/2026-05-06-final-battery/REPORT.md` §S31 — full hit-rate + cost table, merge-readiness verdict, S32 carry-overs
+- `scratch/2026-05-06-final-battery/s31-runs/run{1,2,3}/pr{128,130,131,138}-r{1..3}-pinned.md` — 10 fresh `#new-review` captures
+- `scratch/2026-05-06-final-battery/s31-runs/s32-carry-overs.md` — detailed S32 backlog
+
+### Items NOT shipped (carried into Session 32)
+
+See REPORT.md §S31 carry-overs and `s31-runs/s32-carry-overs.md`. Headline:
+
+1. Anti-hedge tightening on cross-sibling 🚨 mismatch verdicts (PR #128 1/3 strict bucketing).
+2. Encourage fact-checkers to fetch whatever they need (Cam directive — §Verification source order step 4 rewrite).
+3. Prior-pinned anchoring on `#new-review` — trace-confirm first.
+4. Investigation-log dispatch metadata MUST (4/10 strict adherence).
+5. Style-findings collapse threshold relaxation for low counts.
+6. Cross-sibling fan-out: MUST-have-all-digests + trail-vs-rendered consistency.
+7. Bucket-count table style-findings inclusion.
+
+Plus pre-existing carry-overs: 5th bucket "Needs your eyes," commit-aware fix-pass coverage, ⚠️ rename, quick `/docs-review` variant, CLAUDE_PROGRESS terminal cleanup, AI-drafting threshold tuning, Java-truncation classification carve-out.
