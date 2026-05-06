@@ -317,7 +317,7 @@ This error means the Pulumi program requires .NET 10, but you have .NET 8 instal
 </Project>
 ```
 
-The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 8 or .NET 9. Install the version that matches your project file.
+The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 8, .NET 9, or .NET 10. Install the version that matches your project file.
 
 To see the versions you have installed, run `dotnet --info`:
 
@@ -350,6 +350,6 @@ Host:
 
 Notice that SDKs, `NETCore.App`, and `AspNetCore.App` runtimes are listed separately. Check the error message to determine which you're missing, then install it. Some installers don't include the ASP.NET Core runtime, which can be confusing if your project needs it but you have the SDK installed.
 
-At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates require .NET 8 or later. If you have an older version installed, upgrade your runtime before using a template. Always check the project file's `<TargetFramework>` property to confirm which version your project requires. We currently test on .NET 8.
+At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates require .NET 8 or later. If you have an older version installed, upgrade your runtime before using a template. Always check the project file's `<TargetFramework>` property to confirm which version your project requires. We currently test on .NET 8, .NET 9, and .NET 10.
 
 When in doubt, reach out! We have an active [Community Slack channel](https://slack.pulumi.com/) and are happy to help you get unblocked if you're running into an issue like this.
