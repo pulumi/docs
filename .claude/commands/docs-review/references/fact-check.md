@@ -302,7 +302,9 @@ ONLY_TEST="program-name" ./scripts/programs/test.sh
 
 #### 4. WebFetch / WebSearch
 
-Used for *non-Pulumi* upstream sources where `gh` doesn't apply: AWS/Azure/GCP provider docs, upstream tool docs (Kubernetes, Terraform), third-party announcements. **Skip in favor of `gh` whenever the claim is about Pulumi itself.**
+Use WebFetch for any non-Pulumi source the claim depends on — provider docs, vendor pricing/licensing/product pages, third-party announcements, regulatory bodies, standards documents, anything publicly fetchable that resolves the claim. The list is illustrative, not exhaustive. Skip in favor of `gh` whenever the claim is about Pulumi itself.
+
+`unverifiable` is a verdict for claims that are genuinely not fetchable (paywalled, internal-only, future-dated). It is NOT the default for vendor capability/pricing/licensing claims when a public web source could resolve them. If a publicly fetchable source could verify or contradict the claim, fetch it before defaulting to `unverifiable`.
 
 #### 5. Notion + Slack (best-effort)
 
