@@ -7,16 +7,16 @@ type: what-is
 page_title: "What is HashiCorp Vault?"
 ---
 
-Modern applications run across many clouds, regions, and runtime environments, and each of them needs access to sensitive data — API keys, database credentials, TLS certificates, and encryption keys. Storing those secrets safely, rotating them regularly, and controlling who can read them is a problem every cloud team has to solve. [HashiCorp Vault](https://www.hashicorp.com/products/vault) is one of the most widely adopted tools for that job.
+Modern applications run across many clouds, regions, and runtime environments, and each of them needs access to sensitive data — API keys, database credentials, TLS certificates, and encryption keys. Storing those secrets safely, rotating them regularly, and controlling who can read them is a problem every cloud team has to solve. [HashiCorp Vault](https://www.hashicorp.com/products/vault) is a popular tool for this.
 
 ## What is HashiCorp Vault?
 
-HashiCorp Vault is an open-source tool for securely storing, generating, and tightly controlling access to secrets such as tokens, passwords, certificates, and encryption keys. Vault encrypts secrets at rest, brokers access through identity-based policies, and produces a detailed audit log of every access — giving teams a single, centralized way to manage sensitive data across applications, infrastructure, and clouds.
+HashiCorp Vault is a source-available tool for securely storing, generating, and tightly controlling access to secrets such as tokens, passwords, certificates, and encryption keys. Vault encrypts secrets at rest, brokers access through identity-based policies, and produces a detailed audit log of every access — giving teams a single, centralized way to manage sensitive data across applications, infrastructure, and clouds.
 
 ### Key features
 
 - **Secure secret storage**: Vault stores arbitrary key/value secrets and encrypts them before writing to persistent storage. It supports multiple storage backends, including disk, Consul, and cloud providers.
-- **Dynamic secrets**: Vault can generate short-lived, on-demand credentials for systems like databases and cloud platforms. Each request gets a unique secret that can be automatically revoked, drastically reducing the blast radius of a leak.
+- **Dynamic secrets**: Vault can generate short-lived, on-demand credentials for systems like databases and cloud platforms. Each request gets a unique secret that can be automatically revoked, limiting exposure if a credential leaks.
 - **Encryption as a service**: Applications can ask Vault to encrypt and decrypt data without ever storing the data itself in Vault — useful for offloading the complexity of key management.
 - **Leasing and renewal**: Secrets can be issued with a lease. When the lease expires, the secret is revoked automatically; clients can renew leases to extend validity.
 - **Revocation**: Vault can revoke individual secrets or entire trees of secrets — for example, every credential a compromised application has accessed.
@@ -25,7 +25,7 @@ HashiCorp Vault is an open-source tool for securely storing, generating, and tig
 
 ## Creating secrets in HashiCorp Vault
 
-HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
+HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin, ensure that you have [Vault installed](https://developer.hashicorp.com/vault/downloads/). After installation, initialize and start the Vault server.
 
 Use the `vault kv put` command to create a new secret within a specified mount path:
 
@@ -38,7 +38,7 @@ Replace `myvalue=s3cr3t` with the key-value pair you wish to store as a secret.
 
 {{< notes type="info" >}}
 
-The commands in this article include `<key>=<value>` parameters that pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://www.vaultproject.io/docs/secrets/kv/kv-v2) for best practices in production scenarios.
+The commands in this article include `<key>=<value>` parameters that pass secrets to Vault directly through the CLI. Be aware that executing these commands can leave sensitive data in your shell's unencrypted history. Consult the [Static Secrets: Key/Value Secrets Engine tutorial](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2) for best practices in production scenarios.
 
 {{< /notes >}}
 
@@ -83,7 +83,7 @@ Vault fits a wide range of cloud architectures. The most common patterns are:
 
 Vault is powerful, but operating it well takes investment. Common considerations include:
 
-- **Operational complexity**: Running Vault in production means managing seal/unseal flows, high availability, storage backends, and disaster recovery. Teams often choose [HCP Vault](https://www.hashicorp.com/products/vault/pricing) to offload this.
+- **Operational complexity**: Running Vault in production means managing seal/unseal flows, high availability, storage backends, and disaster recovery. Teams often choose HCP Vault to offload this.
 - **Initial setup overhead**: Designing auth methods, policies, and namespaces up front takes time, especially in larger organizations with many teams and environments.
 - **Secret sprawl across tools**: Many organizations end up with secrets in Vault, cloud-native secret managers (AWS Secrets Manager, Azure Key Vault, Google Secret Manager), and CI/CD systems, making consistent access patterns harder to enforce.
 - **Application integration**: Wiring applications to fetch secrets at runtime (sidecars, agents, SDKs) adds moving parts that have to be deployed, monitored, and upgraded.
