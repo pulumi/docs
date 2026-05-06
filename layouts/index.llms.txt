@@ -32,14 +32,19 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{token}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
 
-  The `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned provider schema. Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--format=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
+  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--format=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
 
 - **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
-- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. Same artifact `pulumi package get-schema <name>` returns. For a specific version, follow `schemaURL` from the cloud registry API's `versions/{version}` response.
+- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. The static URL and `pulumi package get-schema` return latest only.
 
+      # Versioned (via cloud registry API)
+      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
+        | jq -r .schemaURL | xargs curl
+
+      # Latest only
       curl https://www.pulumi.com/registry/packages/aws/schema.json
       pulumi package get-schema aws
 
