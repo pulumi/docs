@@ -79,3 +79,30 @@ When a doc page or blog uses `{{< example-program >}}` or similar shortcodes poi
 - **CLI examples without paired output.** Not every code block needs a `output` block. Flag when the prose claims specific output and the block is missing; don't flag for "completeness."
 - **Prettier-style formatting on hand-written constructor code.** TypeScript constructor style is an intentional deviation from Prettier defaults.
 - **"Consider adding error handling."** Example programs deliberately skip production-grade error handling. Flag when the example *claims* to handle an error (but doesn't), not when it simply doesn't demonstrate error handling.
+
+---
+
+## Subagent code-block dispatch
+
+*Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
+
+For each code block in the diff (fenced block in a content file or a file under `static/programs/`), spawn four parallel specialist subagents via the Agent tool. The slices are non-overlapping by axis; each specialist receives only its slice of the rules above plus the code block and its language declaration.
+
+- **`syntax`** (Sonnet 4.6, `general-purpose`) -- §Syntax. Does the snippet parse in its declared language? Catches truncation, unclosed brackets, mismatched braces, broken indentation, missing language specifier on fenced blocks.
+- **`imports`** (Haiku 4.5, `general-purpose`) -- §Imports. Do imported symbols exist in the cited package version? Cheap structural lookup; flag typos and v2-only-symbols-in-v1-projects.
+- **`idioms`** (Sonnet 4.6, `general-purpose`) -- §Language-specific casing + §Idiomatic per language. Per-language casing on resource properties + idiomatic patterns (TypeScript `async`/`await` + hand-written constructor style; Python context managers; Go `pulumi.Run` + `pulumi.String(...)` wrappers; C# `RunAsync<MyStack>`; Java `Pulumi.run(ctx -> ...)`). Includes the §Do not flag list verbatim so the specialist knows what cosmetic differences to skip.
+- **`api-currency`** (Haiku 4.5, `general-purpose`) -- §Provider API currency. Does the resource type, required property, enum value, or method/flag still exist in the current SDK / not deprecated/renamed? Verifies against `gh api repos/pulumi/pulumi-<provider>/contents/...` schema; rejects `aws.s3.Bucket` in favor of `BucketV2`-tier carve-outs.
+
+Each subagent prompt copies *only* its slice rows verbatim, plus the code block and language declaration. Do **not** include `§Referenced static/programs/ snippets` (program-existence / per-language compilation -- main agent's combine step), `§Proposed fixes` (composition, not detection), or other axes' rows. Per-finding cap ~250 words.
+
+### Combine step
+
+1. **Dedup.** Key = `<file>:<line>` plus the first 40 characters of `finding_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing.
+1. **Annotate.** Set `found_by: [<specialist>, ...]` from `syntax`, `imports`, `idioms`, `api-currency`. Single-specialist finds are the expected state -- the slices are non-overlapping by axis -- and are not a confidence signal. When two specialists co-fire on the same code-block range (e.g., a `syntax` truncation that also breaks `imports`), set `cross_specialist_corroboration: true` -- a positive signal for compound-bug catches.
+1. **Promote per existing carve-outs.** Per `docs-review:references:output-format` §Bucket rules carve-out list:
+   - `syntax` finds reaching "code does not parse in its language" -> 🚨 (always-🚨 carve-out).
+   - `imports` finds reaching "imports / calls a symbol that does not exist in the referenced package version" -> 🚨 (always-🚨 carve-out).
+   - All other findings default to ⚠️ unless the two-question test promotes them.
+1. **Hand off.** Deduped, annotated list goes to the rendered review. Investigation-log dispatch metadata: `**Code-examples checks** -- "ran (4 specialists: syntax, imports, idioms, api-currency); N findings"` or `not run (no code blocks in diff)`.
+
+No interim user output. Cross-block reasoning (e.g., `static/programs/<name>-<lang>/` compilation parity across language variants) stays with the main agent's combine step -- specialists see a single block at a time.

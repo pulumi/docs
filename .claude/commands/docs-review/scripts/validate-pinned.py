@@ -51,7 +51,7 @@ MANDATORY_H3_SECTIONS = [
 # AI-drafting signals fires only when ≥3 of 6 patterns triggered. We check
 # their conditional presence with dedicated rules, not the order check.
 
-# 8 mandatory investigation-log bullets, in order (output-format.md L119-128).
+# 9 mandatory investigation-log bullets, in order (output-format.md §Investigation log).
 INVESTIGATION_LOG_BULLETS = [
     "Cross-sibling reads",
     "External claim verification",
@@ -59,6 +59,7 @@ INVESTIGATION_LOG_BULLETS = [
     "Frontmatter sweep",
     "Temporal-trigger sweep",
     "Code execution",
+    "Code-examples checks",
     "Editorial-balance pass",
     "AI-drafting-signals pass",
 ]
