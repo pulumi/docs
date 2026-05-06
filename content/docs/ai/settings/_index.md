@@ -223,17 +223,19 @@ Task modes control approvals during execution. [Plan Mode](/docs/ai/tasks/#plan-
 
 ## Notifications
 
-Notifications are user-level settings: each person configures their own preferences from their account settings, independent of any organization. They alert you when Neo needs your attention on a task while the Pulumi Cloud tab is in the background. Both options are off by default.
+Notifications are user-level settings: each person configures their own preferences from their account settings, independent of any organization. They alert you when Neo needs your attention on a task while the Pulumi Cloud tab is in the background. Browser and audio notifications are both off by default.
+
+{{% notes type="info" %}}
+The "Neo settings" panel only appears for users whose organization has Neo enabled.
+{{% /notes %}}
 
 To configure notifications:
 
 1. Navigate to your account settings in Pulumi Cloud
 1. Locate the "Neo settings" panel
-1. Toggle browser notifications and audio notifications independently
+1. Turn browser notifications and audio notifications on or off independently
 
-Notifications fire when Neo finishes a response in a task or when Neo requests your approval before continuing. To avoid interrupting you while you're actively watching a task, both notification types are suppressed whenever the Pulumi Cloud tab has focus.
-
-The "Neo settings" panel appears for users whose organization has Neo enabled.
+Notifications fire when Neo completes a response or requests your approval before continuing. To avoid interrupting you while you're actively watching a task, Neo suppresses both notification types whenever the Pulumi Cloud tab has focus.
 
 ### Browser notifications
 
@@ -241,7 +243,7 @@ When enabled, Neo sends native browser notifications that appear in your operati
 
 Enabling this setting prompts your browser for notification permission. If you decline the prompt, or if you have previously blocked notifications for Pulumi Cloud, the toggle reverts to off and an "Enable notifications in your browser settings" message appears. To re-enable after a block, grant the permission in your browser settings and then turn the toggle on again.
 
-Browser notifications also depend on your operating system allowing notifications for your browser. If you've enabled the toggle and granted browser permission but you don't see notifications, check your operating system's notification settings and confirm notifications are enabled for the browser you're using.
+Browser notifications also require your operating system to allow notifications for your browser. If you've enabled the toggle and granted browser permission but don't see notifications, check your OS notification settings and confirm they are enabled for your browser.
 
 ### Audio notifications
 
