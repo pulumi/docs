@@ -294,7 +294,7 @@ Determining projects to restore...
     Time Elapsed 00:00:00.22
 
     [Pulumi Neo] Would you like help with these diagnostics?
-    https://app.pulumi.com/pulumi/csharp-test/dev/previews/f0ba97bf-762b-465a-9c25-2d59cfe82976?explainFailure
+    https://app.pulumi.com/acmecorp/csharp-test/dev/previews/f0ba97bf-762b-465a-9c25-2d59cfe82976?explainFailure
 
 error: failed to discover package requirements: 'dotnet build -nologo /code/csharp-test' exited with non-zero exit code: 1
 ```
