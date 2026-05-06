@@ -51,6 +51,20 @@ Workflow runners poll Pulumi Cloud for pending workflows at a configurable inter
 
 Workflow runners support multiple workflow types beyond deployments, including Pulumi Insights scans and policy evaluations. By default, all workflow types are enabled. You can restrict which workflow types a workflow runner handles using the `enabled_workflow_types` configuration option.
 
+### Scaling and concurrency
+
+Each workflow runner process executes **one workflow job at a time**. There is no in-process worker pool to size. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
+
+Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. If a runner crashes or loses connectivity in the middle of a job, the claim eventually expires and another runner in the pool picks the job up.
+
+Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
+
+Patterns for scaling:
+
+- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica = one additional concurrent slot.
+- **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
+- **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
+
 {{% notes "info" %}}
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
 {{% /notes %}}
@@ -120,115 +134,158 @@ The workflow runner will look for `pulumi-workflow-agent.yaml` in the following 
 - `/etc`
 - Location of the `customer-managed-workflow-agent` binary
 
-Below are available configuration parameters and their default values. In most cases, only `token` is required.
+Below are the available configuration parameters and their default values. In most cases, only `token` is required.
+
+Any setting can also be provided as an environment variable using the `PULUMI_AGENT_` prefix and the upper-cased key name (for example, `token` → `PULUMI_AGENT_TOKEN`, `polling_interval` → `PULUMI_AGENT_POLLING_INTERVAL`). Environment variables take precedence over values in the configuration file.
+
+Duration values use Go duration syntax: a sequence of decimal numbers each with an optional fraction and a unit suffix, such as `300ms`, `30s`, `1m`, or `1h30m`. Valid units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`.
 
 ```yaml
 # pulumi-workflow-agent.yaml
 
 ## Required settings
 
-# Pulumi token provided when creating a new workflow runner pool
+# Pulumi token provided when creating a new workflow runner pool.
+# Required unless using OIDC (see oidc_token_file below).
 # Environment variable override: PULUMI_AGENT_TOKEN
 token: pul-xxx
 
 ## Optional settings
 
-# Location of temp directory
-# Uses the OS's preferred temporary file location (usually /tmp) by default
-# Environment variable override: PULUMI_AGENT_SHARED_VOLUME_DIRECTORY
-shared_volume_directory: ""
-
-# The base path from which to load the runners
-# This defaults to the location of the customer-managed-workflow-agent binary
-# (usually ~/.pulumi/bin/customer-managed-workflow-agent)
-# Environment variable override: PULUMI_AGENT_WORKING_DIRECTORY
-working_directory: "<location of customer-managed-workflow-agent binary>"
-
-# If using Self-Hosted Pulumi, set this to API domain of instance
+# If using Self-Hosted Pulumi, set this to the API domain of your instance.
+# Trailing slashes are stripped automatically.
 # Environment variable override: PULUMI_AGENT_SERVICE_URL
 service_url: "https://api.pulumi.com"
 
-# If true, exit immediately after completing a single job
-# Environment variable override: PULUMI_AGENT_SINGLE_RUN
-single_run: false
+# The base path from which to load the runner binaries (workflow-runner and,
+# for Docker, workflow-runner-embeddable). Defaults to the directory of the
+# customer-managed-workflow-agent binary (usually ~/.pulumi/bin/).
+# Environment variable override: PULUMI_AGENT_WORKING_DIRECTORY
+working_directory: "<location of customer-managed-workflow-agent binary>"
 
-# If true, always pull the Pulumi image from the Docker registry
-# If false, use a local image
-# Environment variable override: PULUMI_AGENT_PULL_IMAGE
-pull_image: true
+# Host directory used to create temporary directories that are mounted into
+# the runner container. Leave empty to use the OS default temporary location.
+# Environment variable override: PULUMI_AGENT_SHARED_VOLUME_DIRECTORY
+shared_volume_directory: ""
 
-# If true, write errors to syslog instead of stderr
-# Environment variable override: PULUMI_AGENT_SYSLOG
-syslog: false
-
-# Values for configuring OpenID Authentication
-# Environment variable override: PULUMI_AGENT_ORGANIZATION_NAME
-organization_name: ""
-# Environment variable override: PULUMI_AGENT_RUNNER_POOL_ID
-runner_pool_id: ""
-# Environment variable override: PULUMI_AGENT_TOKEN_EXPIRATION
-token_expiration: ""
-# Environment variable override: PULUMI_AGENT_OIDC_TOKEN_FILE
-oidc_token_file: ""
-
-# List of environment variables to pass to the agent
-# Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
-# Environment variable format is: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
-env_forward_allowlist: []
-
-# Deployment target for the agent: docker (default) or kubernetes
+# Where workflow jobs are executed. One of: docker, kubernetes.
+# - docker: the agent launches runner containers via the local Docker socket.
+# - kubernetes: the agent launches runner Pods via the in-cluster Kubernetes API.
 # Environment variable override: PULUMI_AGENT_DEPLOY_TARGET
 deploy_target: "docker"
 
-# Port of health check endpoint
-# Environment variable override: PULUMI_AGENT_HTTP_SERVER_PORT
-http_server_port: 8080
+# If true, the runner exits after completing a single workflow job.
+# Useful for ephemeral, one-shot runners (e.g. Kubernetes Jobs).
+# Environment variable override: PULUMI_AGENT_SINGLE_RUN
+single_run: false
 
-# Workflow types the workflow runner is allowed to execute
-# Valid values: deployment, insights_scan, policy_evaluation
-# All types are enabled by default
+# If true, the runner pulls the workflow image from the registry on each
+# job. If false, it uses a locally cached image. (Docker target only.)
+# Environment variable override: PULUMI_AGENT_PULL_IMAGE
+pull_image: true
+
+# Workflow types this runner is allowed to claim. All types are enabled by
+# default. Set this to dedicate runners to specific kinds of work.
+# Valid values: deployment, insights_scan, policy_evaluation.
 # Environment variable override: PULUMI_AGENT_ENABLED_WORKFLOW_TYPES
-# Environment variable format is comma-separated: PULUMI_AGENT_ENABLED_WORKFLOW_TYPES="deployment,insights_scan,policy_evaluation"
+# Environment variable format is comma-separated:
+#   PULUMI_AGENT_ENABLED_WORKFLOW_TYPES="deployment,insights_scan,policy_evaluation"
 enabled_workflow_types:
     - deployment
     - insights_scan
     - policy_evaluation
 
-# Polling interval for checking for new workflow jobs
+# Host environment variables that are forwarded into runner containers.
+# Use this to pass cloud provider credentials or other secrets defined on the
+# host into workflow jobs. DOCKER_HOST is always forwarded.
+# Environment variable override: PULUMI_AGENT_ENV_FORWARD_ALLOWLIST
+# Environment variable format is space-separated:
+#   PULUMI_AGENT_ENV_FORWARD_ALLOWLIST="VAR1 VAR2"
+env_forward_allowlist: []
+
+## OpenID Connect (OIDC) settings
+## See "Leveraging OpenID authentication" above. When oidc_token_file is set,
+## organization_name and runner_pool_id are required, and `token` is not used.
+
+# Path to a file containing an OIDC token that will be exchanged for a
+# Pulumi token. The file is re-read whenever the Pulumi token expires.
+# Environment variable override: PULUMI_AGENT_OIDC_TOKEN_FILE
+oidc_token_file: ""
+
+# Pulumi organization name. Required when using OIDC.
+# Environment variable override: PULUMI_AGENT_ORGANIZATION_NAME
+organization_name: ""
+
+# Pool ID this runner will connect to. Required when using OIDC.
+# (Without OIDC, the pool is inferred from the token.)
+# Environment variable override: PULUMI_AGENT_RUNNER_POOL_ID
+runner_pool_id: ""
+
+# Requested lifetime for tokens issued via the OIDC exchange (duration).
+# Environment variable override: PULUMI_AGENT_TOKEN_EXPIRATION
+token_expiration: ""
+
+## Polling and retry settings
+
+# Default polling interval for checking for new workflow jobs. The server
+# may return a Retry-After hint that supersedes this value (see
+# polling_interval_override).
 # Environment variable override: PULUMI_AGENT_POLLING_INTERVAL
 polling_interval: "1m"
 
-# If true, ignore the Retry-After header from the server and always use polling_interval
+# If true, ignore any Retry-After header from the server and always use
+# polling_interval instead.
 # Environment variable override: PULUMI_AGENT_POLLING_INTERVAL_OVERRIDE
 polling_interval_override: false
 
-# Timeout for API calls to fetch workflows and check workflow status
+# How often the runner checks the status of an in-progress job (used to
+# detect cancellations).
+# Environment variable override: PULUMI_AGENT_JOB_STATUS_LOOP_INTERVAL
+job_status_loop_interval: "30s"
+
+# Per-call timeout for API requests to Pulumi Cloud.
 # Environment variable override: PULUMI_AGENT_REQUEST_TIMEOUT
 request_timeout: "30s"
 
-# Maximum number of retries for rate-limited requests
+# Maximum number of retries for rate-limited / transient API failures.
 # Environment variable override: PULUMI_AGENT_REQUEST_RETRY_COUNT
 request_retry_count: 2
 
-# Wait time between retries
+# Initial backoff between retries.
 # Environment variable override: PULUMI_AGENT_REQUEST_RETRY_WAIT
 request_retry_wait: "20s"
 
-# Maximum wait time between retries
+# Cap on the backoff between retries.
 # Environment variable override: PULUMI_AGENT_REQUEST_RETRY_MAX_WAIT
 request_retry_max_wait: "2m"
 
-# Number of consecutive failures before the circuit breaker opens
+# Number of consecutive API failures before the circuit breaker trips and
+# polling pauses. Each failure already includes its own retries, so the
+# effective number of failed requests is higher than this value.
 # Environment variable override: PULUMI_AGENT_CIRCUIT_BREAKER_FAILURES
 circuit_breaker_failures: 2
 
-# Timeout for the circuit breaker to mark an operation as failed
+# How long the circuit breaker stays open after tripping.
 # Environment variable override: PULUMI_AGENT_CIRCUIT_BREAKER_TIMEOUT
 circuit_breaker_timeout: "10m"
 
-# Interval for checking workflow job status (e.g., for cancellations)
-# Environment variable override: PULUMI_AGENT_JOB_STATUS_LOOP_INTERVAL
-job_status_loop_interval: "30s"
+## Health and observability
+
+# Port for the runner's local HTTP server, which exposes a health check
+# endpoint.
+# Environment variable override: PULUMI_AGENT_HTTP_SERVER_PORT
+http_server_port: 8080
+
+# Maximum time the runner can go without making progress before the health
+# endpoint reports unhealthy. If unset (the default), the threshold is
+# automatically derived as twice the longer of polling_interval and
+# job_status_loop_interval.
+# Environment variable override: PULUMI_AGENT_HEALTH_THRESHOLD
+health_threshold: ""
+
+# If true, write log output to syslog instead of stderr.
+# Environment variable override: PULUMI_AGENT_SYSLOG
+syslog: false
 ```
 
 ### Kubernetes-managed workflow runners
