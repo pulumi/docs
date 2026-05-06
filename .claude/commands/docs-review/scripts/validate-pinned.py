@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """validate-pinned.py — validate a rendered pinned-review body.
 
-Runs 14 deterministic structural and computational invariants on the rendered
+Runs 15 deterministic structural and computational invariants on the rendered
 review body BEFORE pinned-comment.sh upsert publishes it. On violations, writes
 a structured fix-me marker (JSON + rendered markdown) and exits 1; the caller
 re-renders and re-runs.
@@ -9,7 +9,7 @@ re-renders and re-runs.
 Subcommands:
   check  --body-file <path> --pr <N> [--repo <owner/repo>]
          [--output-json <path>] [--output-markdown <path>]
-                       Run all 14 checks. On violations, write fix-me marker
+                       Run all 15 checks. On violations, write fix-me marker
                        and exit 1; otherwise exit 0.
   show-rules           Print the rule registry (id, description, hint).
   schema-version       Print the validator's schema version.
@@ -19,7 +19,7 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 1
+Schema version: 2
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -78,9 +78,13 @@ TEMPORAL_TRIGGERS = {
 }
 
 # Dispatch-metadata format on the External claim verification line
-# (output-format.md L122).
+# (output-format.md L122). Two segments are required, matched independently:
+# the extraction-side specialists tail and the two-pass verification tail.
 DISPATCH_METADATA_RE = re.compile(
     r"\d+ specialists \([^)]+\); \d+ cross-specialist corroborations"
+)
+PASS_METADATA_RE = re.compile(
+    r"Pass 1: \d+ verified, \d+ deferred; Pass 2: \d+ verified, \d+ unverifiable"
 )
 
 
@@ -515,34 +519,59 @@ def check_mandatory_h3_order(ctx: Context) -> list[Violation]:
     return violations
 
 
-def check_external_claim_dispatch_metadata(ctx: Context) -> list[Violation]:
-    """Investigation-log External claim verification line uses the dispatch-metadata format.
+def _external_claim_line(ctx: Context) -> str | None:
+    """Find the External claim verification investigation-log line, or None if not applicable.
 
-    Only fires when claims were actually extracted (Y > 0 in `X of Y claims verified`).
-    `0 of 0 claims verified` means dispatch wasn't relevant — skip.
+    Returns None when the bullet is absent, `not run`, malformed (no `X of Y`), or
+    `0 of 0` (no claims extracted — dispatch metadata not applicable).
     """
     for line in ctx.body_lines:
         stripped = line.lstrip()
         if not stripped.startswith("- **External claim verification"):
             continue
         if "not run" in line:
-            return []
+            return None
         m = re.search(r"(\d+)\s+of\s+(\d+)\s+claims\s+verified", line)
         if not m:
-            return []
-        y = int(m.group(2))
-        if y == 0:
-            return []  # no claims extracted — dispatch metadata not applicable
-        if not DISPATCH_METADATA_RE.search(line):
-            return [Violation(
-                rule_id="external-claim-dispatch-metadata",
-                line_ref="<investigation log: External claim verification>",
-                expected="line includes `N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations`",
-                actual=line.strip()[:160],
-                hint="Append the dispatch metadata to the External claim verification bullet: e.g., `· 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations`.",
-            )]
+            return None
+        if int(m.group(2)) == 0:
+            return None
+        return line
+    return None
+
+
+def check_external_claim_dispatch_metadata(ctx: Context) -> list[Violation]:
+    """Investigation-log External claim verification line includes the extraction-specialists tail.
+
+    Required segment: `N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations`.
+    """
+    line = _external_claim_line(ctx)
+    if line is None or DISPATCH_METADATA_RE.search(line):
         return []
-    return []
+    return [Violation(
+        rule_id="external-claim-dispatch-metadata",
+        line_ref="<investigation log: External claim verification>",
+        expected="line includes `N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations`",
+        actual=line.strip()[:160],
+        hint="Append the extraction dispatch metadata to the External claim verification bullet: e.g., `· 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations`.",
+    )]
+
+
+def check_external_claim_pass_metadata(ctx: Context) -> list[Violation]:
+    """Investigation-log External claim verification line includes the two-pass verification tail.
+
+    Required segment: `Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable`.
+    """
+    line = _external_claim_line(ctx)
+    if line is None or PASS_METADATA_RE.search(line):
+        return []
+    return [Violation(
+        rule_id="external-claim-pass-metadata",
+        line_ref="<investigation log: External claim verification>",
+        expected="line includes `Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable`",
+        actual=line.strip()[:160],
+        hint="Append the two-pass verification metadata to the External claim verification bullet: e.g., `· Pass 1: 4 verified, 2 deferred; Pass 2: 1 verified, 1 unverifiable`.",
+    )]
 
 
 def check_frontmatter_locations_in_diff(ctx: Context) -> list[Violation]:
@@ -961,9 +990,15 @@ RULES = [
     },
     {
         "id": "external-claim-dispatch-metadata",
-        "desc": "Investigation-log External claim verification line uses dispatch-metadata format.",
+        "desc": "Investigation-log External claim verification line includes the extraction-specialists tail.",
         "hint": "Append `· N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations` to the bullet.",
         "check": check_external_claim_dispatch_metadata,
+    },
+    {
+        "id": "external-claim-pass-metadata",
+        "desc": "Investigation-log External claim verification line includes the two-pass verification tail.",
+        "hint": "Append `· Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable` to the bullet.",
+        "check": check_external_claim_pass_metadata,
     },
     {
         "id": "frontmatter-locations",
@@ -1161,7 +1196,7 @@ def cmd_schema_version(_: argparse.Namespace) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Validate a rendered pinned-review body against 14 deterministic invariants."
+        description="Validate a rendered pinned-review body against 15 deterministic invariants."
     )
     sub = parser.add_subparsers(dest="cmd", required=True)
 

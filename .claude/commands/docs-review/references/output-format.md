@@ -122,7 +122,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 **Render every line on every review, in this order:**
 
 - **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
-- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations."
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable."
 - **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."

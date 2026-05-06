@@ -109,7 +109,7 @@ Verify each by reading the sibling pages and recording whether the same step / h
 }
 ```
 
-**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Parallel verification's limit). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
+**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Two-pass verification's Pass 1 batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
 
 **Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
 
@@ -231,24 +231,49 @@ Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`
 - **`capability`** -- `Command behavior`, `Flag/option existence`, `Output format`, `Feature existence`, `Resource API surface` rows.
 - **`framing`** -- heuristic specialist; canonical claim-type table unchanged. `Quote/attribution` row + framing-strength phrase list (`the only`, `the first`, `currently`, `as of <year>`, `is the leading`, `industry standard`, named-source quotes). Flags matches regardless of which canonical type the surrounding sentence falls under -- corroborates the others where the slices meet.
 
-Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules and §Claim record format. Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Parallel verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
+Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules and §Claim record format. Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Two-pass verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
 
 #### Combine step
 
 1. **Dedup.** Key = `<file>:<line>` plus the first 40 chars of `claim_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing.
 1. **Annotate.** Set `found_by: [<specialist>, ...]` from `numerical`, `cross-reference`, `capability`, `framing`. Single-specialist finds are the expected state -- the slices are non-overlapping by design -- and are not a confidence signal. When `framing` corroborates one of the others on the same claim (e.g., `[capability, framing]` on a feature claim with framing-strength language), set `cross_specialist_corroboration: true` -- a positive signal for the OutSystems-shape catch, not the absence of it as a low-confidence flag.
 1. **Frontmatter sweep** runs here -- repeated body / `meta_desc` / `social:` phrasings collapse into a single claim with multiple cited locations regardless of which subagent caught each occurrence.
-1. **Hand off.** Deduped list goes to §Parallel verification; downstream schema unchanged.
+1. **Hand off.** Deduped list goes to §Two-pass verification; downstream schema unchanged.
 
 Store the deduped claim list for the verification phase. No interim user output.
 
 ---
 
-## Parallel verification
+## Two-pass verification
 
-Spawn parallel subagents using the Agent tool (`general-purpose` type), batched **up to 4 at a time** to avoid context overload. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller).
+*Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-If more than 20 claims are extracted, batch by file rather than per-claim to keep the subagent count manageable.
+Verification splits into two sequential passes. Pass 1 handles the cheap deterministic cases (most claims on Pulumi-heavy PRs close here); Pass 2 fans out per-claim over the web only on what Pass 1 deferred. Pass 2 cost scales with the count of *unverified-after-Pass-1* claims, not the total claim count -- the architecture preserves thoroughness while removing the "slow WebFetch on claim #7 blocks the rest of the batch" pathology of the prior single-pass design.
+
+### Pass 1 — cheap-source attempt
+
+Spawn parallel subagents using the Agent tool (`general-purpose`, Sonnet 4.6), batched **up to 4 at a time** to avoid context overload. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 claims are extracted, batch by file rather than per-claim to keep the subagent count manageable.
+
+For each claim, walk §Verification source order steps **1-3** only (skip step 4 / WebFetch entirely):
+
+1. Local repo / linked docs.
+2. GitHub via `gh` CLI.
+3. Live code execution (read-only).
+
+Emit one of:
+
+- **Verdict + source** — `verified` (with confidence rating), `contradicted` (with the divergence quoted), or `unverifiable` *only* when the claim is genuinely not fetchable from any source (paywalled, internal-only, future-dated). Do **not** default to `unverifiable` for claims a public web source could resolve -- defer instead.
+- **Defer to Pass 2** — claim needs WebFetch / WebSearch. Pass 1 hands it off without rendering a verdict.
+
+### Pass 2 — web fan-out
+
+For each claim still deferred after Pass 1, dispatch one Sonnet 4.6 subagent (`general-purpose`) **in parallel**. Default unit is per-claim. On PRs with **≥10 unverified-after-Pass-1 claims**, batch 2-3 claims per subagent to amortize the per-subagent setup overhead (each prompt carries the framing taxonomy + verdict format). Below 10, per-claim is the right unit.
+
+Each Pass 2 subagent walks §Verification source order step **4** (WebFetch / WebSearch), then runs §Cited-claim spot-check end-to-end on each claim: fetch the cited or searched URL → locate the supporting passage → compare the source's framing to the claim's framing → emit the three-field evidence line (verdict + source quote + framing label).
+
+Pass 2 subagent prompts must be self-contained — copy in §Verification source order step 4, the §Cited-claim spot-check procedure with the framing taxonomy (`exact-match`, `strengthened`, `narrowed`, `shifted`, `contradicted`), and the §Mandatory evidence-line format for cited claims. Per-claim cap stays ~250 words.
+
+Output: deferred claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 2 actively tried).
 
 ### Verification source order (cheapest first)
 
@@ -386,7 +411,7 @@ Examples:
 
 ### Subagent prompts
 
-Subagent prompts must be self-contained — copy the rules into the prompt rather than referencing them. Include the §Verification source order rules, the §Claim record format expected output schema, and a per-claim cap of ~250 words.
+Subagent prompts must be self-contained — copy the rules into the prompt rather than referencing them. Per-pass requirements are spelled out in §Two-pass verification (Pass 1: §Verification source order steps 1-3 + §Claim record format; Pass 2: §Verification source order step 4 + the framing taxonomy + the §Mandatory evidence-line format). Per-claim cap of ~250 words across both passes.
 
 ---
 
