@@ -62,8 +62,8 @@ Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. 
 
 **Dispatch.** Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
 
-- **Subagent E -- Structural** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
-- **Subagent F -- Lexical** (Haiku 4.5). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction).
+- **`structural`** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
+- **`lexical`** (Haiku 4.5). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction).
 
 Each subagent returns `{detector_index, triggered: bool, evidence: [<line-anchored quote>...]}` per detector. Main agent counts triggers across both; the existing **≥3 of 6** threshold and the rendering format (`docs-review:references:output-format` §AI-drafting signals) are unchanged.
 
