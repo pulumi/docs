@@ -82,6 +82,8 @@ Need a re-review? Want to dispute a finding? Mention `@claude` and include `#upd
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
 
+The ⚠️ Low-confidence count includes style findings. The maintainer's review burden equals the count rendered in the table; understating it is a false signal.
+
 ### Summary preamble and review confidence
 
 The summary/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory. Render Summary and Review confidence as separate blockquote paragraphs (blank `>` between them) so they don't run together.
@@ -146,6 +148,8 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 **Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
 
 **Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <emoji> <verdict> (<evidence pointer>)`. Cross-sibling checks render as `→ ✅ matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ 🚨 mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. Strip credentials per `fact-check.md` §Credential redaction before rendering.
+
+**Anti-hedge mandate for `🚨 mismatch` cross-sibling findings.** When the trail records `🚨 mismatch`, the corresponding bucket bullet states the verdict directly and names which sibling pages corroborate the divergence (mirror the trail's `<sibling-A>/<sibling-B>` list). Do NOT insert "either-or" framing that softens the verdict to a manual-check ask ("either the UI changed or this guide is wrong"). The trail has adjudicated; the rendered finding states what the maintainer must change.
 
 **Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
 
@@ -221,6 +225,8 @@ The section never produces 🚨 directly — it's a maintainer-signaling flag. I
 ### Bucket rules
 
 - **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
+
+  **Trail verdict drives bucket placement.** If the verification trail records `🚨 contradicted` or `🚨 mismatch` for a finding, render that finding in 🚨 Outstanding. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. The two-question test applies only to findings whose trail verdict is `⚠️` or `unverifiable`, where the verifier didn't reach a decisive answer.
 
   **Always-🚨 carve-outs (no judgment required):**
 
