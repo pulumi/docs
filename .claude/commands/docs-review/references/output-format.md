@@ -122,7 +122,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 **Render every line on every review, in this order:**
 
 - **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
-- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable."
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2."
 - **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
@@ -135,21 +135,26 @@ Each line is one logical pass, not one tool call. The verification trail is the 
 
 #### Format note — External claim verification
 
-The metadata tail on this bullet is **mandatory verbatim** — the validator enforces (a) the canonical state form `X of Y claims verified (N unverifiable, M contradicted)`, (b) the extraction-specialists segment, and (c) the two-pass verification segment. Substitute the placeholders (X/Y/N/M/K/A/B/C/D) with actual integers; do **not** rewrite the surrounding scaffolding.
+The metadata tail on this bullet is **mandatory verbatim** — the validator enforces (a) the canonical state form `X of Y claims verified (N unverifiable, M contradicted)`, (b) the extraction-specialists segment, and (c) the routed-verification segment. Substitute the placeholders (X/Y/N/M/K/I/P/F) with actual integers; do **not** rewrite the surrounding scaffolding. The routing counters (I + P + F) must sum to Y — every extracted claim takes exactly one route per `docs-review:references:fact-check` §Routed verification.
 
 Common drifts to avoid:
 
-- "single-pass" / "ran (3 claims, ...)" / "single-pass structural review" — when most claims close in Pass 1, render the full Pass 1/Pass 2 form anyway with `B=0` and `D=0`. The structured tail is the hard contract, not a description of what the model did.
-- "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
 - Descriptive prose in place of the metadata segments ("3 web-verifier subagents over 10 cited claims") — the structured form is what the validator parses; prose breaks it.
+- "single-pass" / "ran (3 claims, ...)" — these were S32-era shapes; render the full canonical form even when one lane has zero traffic.
+- "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
+- Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2` counts where each claim *went*, not what each verdict *was*. Outcomes are in the leading `(N unverifiable, M contradicted)` parenthetical.
 
-Worked example (Pass 2 fired on 3 claims, 1 returned unverifiable):
+Worked example (mixed PR — half pulumi-internal, half external-public, two ambiguous):
 
-> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · Pass 1: 7 verified, 3 deferred; Pass 2: 2 verified, 1 unverifiable."
+> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · routed: 4 inline, 2 Pass 1, 4 Pass 2."
 
-Worked example (everything closed in Pass 1, no Pass 2 fan-out):
+Worked example (Pulumi-heavy PR — all claims `pulumi-internal`, resolve inline):
 
-> - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · Pass 1: 5 verified, 0 deferred; Pass 2: 0 verified, 0 unverifiable."
+> - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · routed: 5 inline, 0 Pass 1, 0 Pass 2."
+
+Worked example (external-source-heavy blog — all claims `external-public`, all skip Pass 1):
+
+> - **External claim verification** — "8 of 10 claims verified (0 unverifiable, 2 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 0 inline, 0 Pass 1, 10 Pass 2."
 
 ### Subagent decomposition
 

@@ -109,7 +109,7 @@ Verify each by reading the sibling pages and recording whether the same step / h
 }
 ```
 
-**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Two-pass verification's Pass 1 batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
+**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Routed verification's Pass 1 lane batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
 
 **Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
 
@@ -231,28 +231,64 @@ Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`
 - **`capability`** -- `Command behavior`, `Flag/option existence`, `Output format`, `Feature existence`, `Resource API surface` rows.
 - **`framing`** -- heuristic specialist; canonical claim-type table unchanged. `Quote/attribution` row + framing-strength phrase list (`the only`, `the first`, `currently`, `as of <year>`, `is the leading`, `industry standard`, named-source quotes). Flags matches regardless of which canonical type the surrounding sentence falls under -- corroborates the others where the slices meet.
 
-Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules and §Claim record format. Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Two-pass verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
+Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules, §Claim record format, and §Source-class classification (each emitted claim must carry a `source_class` value). Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Routed verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
+
+#### Source-class classification
+
+Every emitted claim record carries a `source_class` field. The class determines the verification route (see §Routed verification); classifying defensively at extraction time is what makes the route cheap.
+
+| `source_class` | When it applies | Verification route |
+|---|---|---|
+| `pulumi-internal` | References `pulumi/*` package, flag, command, version, schema, or another Pulumi doc page | Inline (main-agent gh check; no subagent) |
+| `external-public` | Cites a URL, names a third-party vendor with a statistic, references a regulatory date, quotes a named source from a public article | Pass 2 web fan-out (skip Pass 1) |
+| `ambiguous` | Shape is mixed; could be either | Pass 1 cheap-source attempt; Pass 2 on miss |
+
+Apply these rules in order; first match wins:
+
+1. Cited URL in the prose → `external-public`. The URL tells the verifier where to look; pulumi-internal claims don't need one.
+1. Names a `pulumi/*` package, flag, version, command, or method → `pulumi-internal`.
+1. Internal cross-reference (other Pulumi doc, sibling page, registry path, `/static/programs/` file) → `pulumi-internal`.
+1. Vendor name + statistic + survey/report reference → `external-public`.
+1. Regulatory body name + date or rule number → `external-public`.
+1. Named-source quote (any "[name] said …" pattern) → `external-public`.
+1. Generic capability or feature claim with no specific source → `ambiguous`.
+1. Otherwise → `ambiguous`.
+
+When uncertain, default to `ambiguous` rather than `pulumi-internal`. The cost of mis-routing an external claim through Pass 1 is higher than mis-routing an ambiguous one — the former wastes the entire Pass 1 attempt; the latter just adds one cheap gh search.
 
 #### Combine step
 
 1. **Dedup.** Key = `<file>:<line>` plus the first 40 chars of `claim_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing.
 1. **Annotate.** Set `found_by: [<specialist>, ...]` from `numerical`, `cross-reference`, `capability`, `framing`. Single-specialist finds are the expected state -- the slices are non-overlapping by design -- and are not a confidence signal. When `framing` corroborates one of the others on the same claim (e.g., `[capability, framing]` on a feature claim with framing-strength language), set `cross_specialist_corroboration: true` -- a positive signal for the OutSystems-shape catch, not the absence of it as a low-confidence flag.
+1. **Reconcile `source_class`.** If specialists disagree on the same deduped claim, take the most external classification (`external-public` > `ambiguous` > `pulumi-internal`) -- routing toward the more thorough lane is the safe default.
 1. **Frontmatter sweep** runs here -- repeated body / `meta_desc` / `social:` phrasings collapse into a single claim with multiple cited locations regardless of which subagent caught each occurrence.
-1. **Hand off.** Deduped list goes to §Two-pass verification; downstream schema unchanged.
+1. **Hand off.** Deduped list goes to §Routed verification; downstream schema unchanged except for the new `source_class` field on each record.
 
 Store the deduped claim list for the verification phase. No interim user output.
 
 ---
 
-## Two-pass verification
+## Routed verification
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-Verification splits into two sequential passes. Pass 1 handles the cheap deterministic cases (most claims on Pulumi-heavy PRs close here); Pass 2 fans out per-claim over the web only on what Pass 1 deferred. Pass 2 cost scales with the count of *unverified-after-Pass-1* claims, not the total claim count -- the architecture preserves thoroughness while removing the "slow WebFetch on claim #7 blocks the rest of the batch" pathology of the prior single-pass design.
+Each claim's `source_class` (set at extraction) routes it to one of three verification lanes. The lanes have different cost / latency / fan-out shapes; routing by classification avoids running Pass 1 on claims it has no chance of resolving (vendor statistics, regulatory dates, named-source quotes) and avoids dispatching a subagent at all for claims that close in two `gh` calls (Pulumi feature/flag/version checks).
 
-### Pass 1 — cheap-source attempt
+| `source_class` | Lane | Mechanism |
+|---|---|---|
+| `pulumi-internal` | **Inline** | Main agent runs the cheap-source check during the combine step. No subagent. |
+| `ambiguous` | **Pass 1 → Pass 2** | Batched cheap-source subagents; defer to Pass 2 on miss. |
+| `external-public` | **Pass 2** | Per-claim Sonnet web fan-out, directly. Pass 1 skipped entirely. |
 
-Spawn parallel subagents using the Agent tool (`general-purpose`, Sonnet 4.6), batched **up to 4 at a time** to avoid context overload. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 claims are extracted, batch by file rather than per-claim to keep the subagent count manageable.
+### Inline lane (`pulumi-internal`)
+
+Main agent walks §Verification source order steps 1-3 sequentially during the combine step. Most pulumi-internal claims close in <3 turns each (one `gh search` or `gh api` call typically resolves them). Emit the verdict directly into the trail; no subagent dispatch.
+
+If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
+
+### Pass 1 lane (`ambiguous`)
+
+Spawn parallel subagents (`general-purpose`, Sonnet 4.6), batched **up to 4 at a time**. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 ambiguous claims are extracted, batch by file rather than per-claim.
 
 For each claim, walk §Verification source order steps **1-3** only (skip step 4 / WebFetch entirely):
 
@@ -265,15 +301,24 @@ Emit one of:
 - **Verdict + source** — `verified` (with confidence rating), `contradicted` (with the divergence quoted), or `unverifiable` *only* when the claim is genuinely not fetchable from any source (paywalled, internal-only, future-dated). Do **not** default to `unverifiable` for claims a public web source could resolve -- defer instead.
 - **Defer to Pass 2** — claim needs WebFetch / WebSearch. Pass 1 hands it off without rendering a verdict.
 
-### Pass 2 — web fan-out
+### Pass 2 lane (`external-public` + Pass 1 deferrals)
 
-For each claim still deferred after Pass 1, dispatch one Sonnet 4.6 subagent (`general-purpose`) **in parallel**. Default unit is per-claim. On PRs with **≥10 unverified-after-Pass-1 claims**, batch 2-3 claims per subagent to amortize the per-subagent setup overhead (each prompt carries the framing taxonomy + verdict format). Below 10, per-claim is the right unit.
+For each `external-public` claim and each `ambiguous` claim deferred from Pass 1, dispatch Sonnet 4.6 subagents (`general-purpose`) **in parallel**.
 
-Each Pass 2 subagent walks §Verification source order step **4** (WebFetch / WebSearch), then runs §Cited-claim spot-check end-to-end on each claim: fetch the cited or searched URL → locate the supporting passage → compare the source's framing to the claim's framing → emit the three-field evidence line (verdict + source quote + framing label).
+**Dispatch unit:**
+
+- Default: **batch 2-3 claims per subagent**. The setup overhead per Pass 2 subagent (framing taxonomy + spot-check procedure + verdict format ≈ 800 words of prompt context) is non-trivial; batching amortizes it across multiple claims.
+- Exception: if **<5 claims total** are routed to Pass 2, drop to per-claim — at small N, parallelism gain dominates batching savings.
+
+For PR shapes:
+- Pulumi-heavy PRs (most claims `pulumi-internal`, 0-2 routed to Pass 2): per-claim or no Pass 2 at all.
+- External-source-heavy blogs (8-15 claims all `external-public`): 4-5 batched subagents.
+
+Each Pass 2 subagent walks §Verification source order step **4** (WebFetch / WebSearch), then runs §Cited-claim spot-check end-to-end per claim: fetch the cited or searched URL → locate the supporting passage → compare the source's framing to the claim's framing → emit the three-field evidence line (verdict + source quote + framing label).
 
 Pass 2 subagent prompts must be self-contained — copy in §Verification source order step 4, the §Cited-claim spot-check procedure with the framing taxonomy (`exact-match`, `strengthened`, `narrowed`, `shifted`, `contradicted`), and the §Mandatory evidence-line format for cited claims. Per-claim cap stays ~250 words.
 
-Output: deferred claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 2 actively tried).
+Output: claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 2 actively tried).
 
 ### Verification source order (cheapest first)
 
@@ -411,7 +456,7 @@ Examples:
 
 ### Subagent prompts
 
-Subagent prompts must be self-contained — copy the rules into the prompt rather than referencing them. Per-pass requirements are spelled out in §Two-pass verification (Pass 1: §Verification source order steps 1-3 + §Claim record format; Pass 2: §Verification source order step 4 + the framing taxonomy + the §Mandatory evidence-line format). Per-claim cap of ~250 words across both passes.
+Subagent prompts must be self-contained — copy the rules into the prompt rather than referencing them. Per-lane requirements are spelled out in §Routed verification (Pass 1: §Verification source order steps 1-3 + §Claim record format; Pass 2: §Verification source order step 4 + the framing taxonomy + the §Mandatory evidence-line format). The inline lane runs on the main agent and needs no subagent prompt. Per-claim cap of ~250 words across both subagent lanes.
 
 ---
 

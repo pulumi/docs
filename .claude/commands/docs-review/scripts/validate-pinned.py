@@ -19,7 +19,7 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 2
+Schema version: 3
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -79,12 +79,16 @@ TEMPORAL_TRIGGERS = {
 
 # Dispatch-metadata format on the External claim verification line
 # (output-format.md L122). Two segments are required, matched independently:
-# the extraction-side specialists tail and the two-pass verification tail.
+# the extraction-side specialists tail and the routed-verification tail.
+# Schema v3: routed-metadata replaces the v2 PASS_METADATA_RE (pass-1/pass-2
+# breakdown). With the routing change in S33 Change 4, claims now dispatch
+# by `source_class` to one of three lanes -- inline, Pass 1, Pass 2 -- and
+# the line carries those route counts instead of pass-resolution counts.
 DISPATCH_METADATA_RE = re.compile(
     r"\d+ specialists \([^)]+\); \d+ cross-specialist corroborations"
 )
-PASS_METADATA_RE = re.compile(
-    r"Pass 1: \d+ verified, \d+ deferred; Pass 2: \d+ verified, \d+ unverifiable"
+ROUTED_METADATA_RE = re.compile(
+    r"routed: \d+ inline, \d+ Pass 1, \d+ Pass 2"
 )
 
 
@@ -586,20 +590,23 @@ def check_external_claim_dispatch_metadata(ctx: Context) -> list[Violation]:
     )]
 
 
-def check_external_claim_pass_metadata(ctx: Context) -> list[Violation]:
-    """Investigation-log External claim verification line includes the two-pass verification tail.
+def check_external_claim_routed_metadata(ctx: Context) -> list[Violation]:
+    """Investigation-log External claim verification line includes the routed-verification tail.
 
-    Required segment: `Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable`.
+    Required segment: `routed: I inline, P Pass 1, F Pass 2`. Counts how many claims
+    took each verification lane (inline / Pass 1 / Pass 2 fan-out); I + P + F must
+    equal Y from the leading `X of Y claims verified` -- but that sum check belongs
+    to a separate rule, not this regex.
     """
     line = _external_claim_line(ctx)
-    if line is None or PASS_METADATA_RE.search(line):
+    if line is None or ROUTED_METADATA_RE.search(line):
         return []
     return [Violation(
-        rule_id="external-claim-pass-metadata",
+        rule_id="external-claim-routed-metadata",
         line_ref="<investigation log: External claim verification>",
-        expected="line includes `Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable`",
+        expected="line includes `routed: I inline, P Pass 1, F Pass 2`",
         actual=line.strip()[:160],
-        hint="Append the two-pass verification metadata to the External claim verification bullet: e.g., `· Pass 1: 4 verified, 2 deferred; Pass 2: 1 verified, 1 unverifiable`.",
+        hint="Append the routed-verification metadata to the External claim verification bullet: e.g., `· routed: 5 inline, 1 Pass 1, 4 Pass 2`. Counts must sum to Y (the total claims extracted).",
     )]
 
 
@@ -1030,10 +1037,10 @@ RULES = [
         "check": check_external_claim_dispatch_metadata,
     },
     {
-        "id": "external-claim-pass-metadata",
-        "desc": "Investigation-log External claim verification line includes the two-pass verification tail.",
-        "hint": "Append `· Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable` to the bullet.",
-        "check": check_external_claim_pass_metadata,
+        "id": "external-claim-routed-metadata",
+        "desc": "Investigation-log External claim verification line includes the routed-verification tail.",
+        "hint": "Append `· routed: I inline, P Pass 1, F Pass 2` to the bullet (counts must sum to Y).",
+        "check": check_external_claim_routed_metadata,
     },
     {
         "id": "frontmatter-locations",
