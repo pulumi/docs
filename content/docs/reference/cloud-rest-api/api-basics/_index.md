@@ -1,7 +1,7 @@
 ---
 title: API Basics
 title_tag: "Pulumi Cloud REST API: API Basics"
-meta_desc: Learn about the Pulumi Cloud REST API endpoint, authentication, and required headers for making API requests.
+meta_desc: The Pulumi Cloud REST API endpoint, authentication, and required headers, plus equivalent calls from the pulumi cloud api CLI command.
 menu:
     reference:
         parent: cloud-rest-api
@@ -45,3 +45,21 @@ The following headers are required for all operations except where explicitly no
 Accept: application/vnd.pulumi+8
 Content-Type: application/json
 ```
+
+## Calling the API from the CLI
+
+The [`pulumi cloud api`](/docs/iac/cli/cloud-api/) command wraps the REST API so you don't have to assemble the headers, base URL, or path-template variables yourself. It uses the same credentials as the rest of the Pulumi CLI, so any token you already use with `pulumi login` is reused automatically.
+
+For example, the following two calls are equivalent:
+
+```bash
+# Direct HTTPS request
+curl -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+     -H "Accept: application/vnd.pulumi+8" \
+     https://api.pulumi.com/api/user
+
+# Same call from the Pulumi CLI
+pulumi cloud api /api/user
+```
+
+`pulumi cloud api list` (alias: `ls`) lists every endpoint in the OpenAPI spec, and `pulumi cloud api describe <path-or-operation-id>` prints the parameter, request, and response schemas for a single operation. See the [`pulumi cloud api` guide](/docs/iac/cli/cloud-api/) for the full set of flags, output formats, and the agent-facing error envelope.

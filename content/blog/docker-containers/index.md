@@ -17,6 +17,10 @@ To provide more flexibility for choosing the version of the programming language
 
 <!--more-->
 
+{{% notes type="info" %}}
+.NET 6.0 has since reached end of life. The .NET 6.0 images referenced in this post are no longer available. See the current [supported .NET versions](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core).
+{{% /notes %}}
+
 For Python we provide images for [Python 3.9 to 3.12](https://hub.docker.com/u/pulumi?page=1&search=pulumi-python), for Node.js we have images for [Node.js 18, 20 and 22](https://hub.docker.com/u/pulumi?page=1&search=pulumi-nodejs), and for .NET we have images for [.NET 6.0 and 8.0](https://hub.docker.com/u/pulumi?page=1&search=pulumi-dotnet). These versioned images include the language version in the image name, for example [pulumi/pulumi-python-3.12](https://hub.docker.com/r/pulumi/pulumi-python-3.12/tags) or [pulumi/pulumi-nodejs-22](https://hub.docker.com/r/pulumi/pulumi-nodejs-22/tags).
 
 {{% notes type="info" %}}

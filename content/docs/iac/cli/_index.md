@@ -47,6 +47,7 @@ The most common commands in the CLI that you'll be using are as follows:
 * [`pulumi up`](/docs/iac/cli/commands/pulumi_up/): preview and deploy changes to your program and/or infrastructure
 * [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/): preview your changes explicitly before deploying
 * [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/): destroy your program and its infrastructure when you're done
+* [`pulumi cloud api`](/docs/iac/cli/cloud-api/): call any [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) endpoint directly from the CLI, with stable exit codes and a JSON error envelope for scripts and agents
 
 ## Complete Reference
 
