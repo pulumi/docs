@@ -285,18 +285,21 @@ While we will always officially support the [current set of .NET versions that a
 This can get confusing. You may encounter an error like this:
 
 ```
-It was not possible to find any compatible framework version
-The framework 'Microsoft.NETCore.App', version '3.1.0' was not found.
-      - The following frameworks were found:
-          5.0.0 at [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-You can resolve the problem by installing the specified framework and/or SDK.
-The specified framework can be found at:
-      - https://aka.ms/dotnet-core-applaunch?framework=Microsoft.NETCore.App&framework_version=3.1.0&arch=x64&rid=osx.11.0-x64
+Determining projects to restore...
+    /usr/local/share/dotnet/sdk/8.0.420/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(166,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 10.0.  Either target .NET 8.0 or lower, or use a version of the .NET SDK that supports .NET 10.0. Download the .NET SDK from https://aka.ms/dotnet/download [/code/csharp-test/csharp-test.csproj]
+    Build FAILED.
+    /usr/local/share/dotnet/sdk/8.0.420/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(166,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 10.0.  Either target .NET 8.0 or lower, or use a version of the .NET SDK that supports .NET 10.0. Download the .NET SDK from https://aka.ms/dotnet/download [/code/csharp-test/csharp-test.csproj]
+        0 Warning(s)
+        1 Error(s)
+    Time Elapsed 00:00:00.22
 
-error: an unhandled error occurred: Program exited with non-zero exit code: 150
+    [Pulumi Neo] Would you like help with these diagnostics?
+    https://app.pulumi.com/<org>/<project>/<stack>/previews/<preview-id>?explainFailure
+
+error: failed to discover package requirements: 'dotnet build -nologo /code/csharp-test' exited with non-zero exit code: 1
 ```
 
-This error means the Pulumi program requires .NET Core 3.1, but you have .NET 5 installed. You can either install .NET Core 3.1 or update the program to use your installed version. The target version is defined in your `.csproj`/`.fsproj`/`.vbproj` file:
+This error means the Pulumi program requires .NET 10, but you have .NET 8 installed. You can either install .NET 10 or update the program to use your installed version. The target version is defined in your `.csproj`/`.fsproj`/`.vbproj` file:
 
 ```
 <Project Sdk="Microsoft.NET.Sdk">
@@ -307,10 +310,14 @@ This error means the Pulumi program requires .NET Core 3.1, but you have .NET 5 
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Pulumi" Version="3.*" />
+  </ItemGroup>
+
 </Project>
 ```
 
-The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 6 through .NET 9. Install the version that matches your project file.
+The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 8, .NET 9, or .NET 10. Install the version that matches your project file.
 
 To see the versions you have installed, run `dotnet --info`:
 
@@ -318,50 +325,31 @@ To see the versions you have installed, run `dotnet --info`:
 $ dotnet --info
 
 .NET SDK:
- Version:   7.0.101
- Commit:    bb24aafa11
+ Version:   8.0.101
+ Commit:    2ef4b6e3a4
 
 Runtime Environment:
  OS Name:     Mac OS X
- OS Version:  13.2
+ OS Version:  14.0
  OS Platform: Darwin
- RID:         osx.13-x64
- Base Path:   /usr/local/share/dotnet/sdk/7.0.101/
+ RID:         osx.14-x64
+ Base Path:   /usr/local/share/dotnet/sdk/8.0.101/
 
 Host:
-  Version:      7.0.1
+  Version:      8.0.1
   Architecture: x64
-  Commit:       97203d38ba
+  Commit:       2ef4b6e3a4
 
 .NET SDKs installed:
-  3.1.424 [/usr/local/share/dotnet/sdk]
-  6.0.201 [/usr/local/share/dotnet/sdk]
-  6.0.202 [/usr/local/share/dotnet/sdk]
-  6.0.402 [/usr/local/share/dotnet/sdk]
-  6.0.404 [/usr/local/share/dotnet/sdk]
-  7.0.101 [/usr/local/share/dotnet/sdk]
+  8.0.101 [/usr/local/share/dotnet/sdk]
 
 .NET runtimes installed:
-  Microsoft.AspNetCore.App 3.1.25 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 3.1.30 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 5.0.15 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 6.0.3 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 6.0.4 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 6.0.10 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 6.0.12 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.AspNetCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.NETCore.App 2.0.9 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 3.1.30 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 5.0.15 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 6.0.3 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 6.0.4 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 6.0.10 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 6.0.12 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-  Microsoft.NETCore.App 7.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+  Microsoft.AspNetCore.App 8.0.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 8.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
 Notice that SDKs, `NETCore.App`, and `AspNetCore.App` runtimes are listed separately. Check the error message to determine which you're missing, then install it. Some installers don't include the ASP.NET Core runtime, which can be confusing if your project needs it but you have the SDK installed.
 
-At the time of this writing, .NET 8 is the current long-term support version, and all of our built-in .NET templates have been upgraded to require .NET 8. If you have an older version like .NET 6 installed, you might need to upgrade your runtime before using a template, or it could give you an error. Always check the project file first! You can also try setting the project file back to .NET 6. We currently test on .NET 6 and .NET 8 so rolling it back to .NET 6 is likely to be fine and would be a simple edit to the project file's `<TargetFramework>` property.
+At the time of this writing, .NET 10 is the current long-term support version, and all of our built-in .NET templates require .NET 8 or later. If you have an older version installed, upgrade your runtime before using a template. Always check the project file's `<TargetFramework>` property to confirm which version your project requires. We currently test on .NET 8, .NET 9, and .NET 10.
 
 When in doubt, reach out! We have an active [Community Slack channel](https://slack.pulumi.com/) and are happy to help you get unblocked if you're running into an issue like this.
