@@ -29,7 +29,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 - **Frontmatter sweep:** ran on <locations> (or "not run (no frontmatter in diff)")
 - **Temporal-trigger sweep:** ran (N matches, X verified) (or "not run (no trigger words)")
 - **Code execution:** ran <programs> (or "not run (no `static/programs/` change)")
-- **Code-examples checks:** ran (4 specialists: syntax, imports, idioms, api-currency); N findings (or "not run (no code blocks in diff)")
+- **Code-examples checks:** ran (2 specialists: structural, existence); N findings (or "not run (no fenced code blocks in content files)")
 - **Editorial-balance pass:** ran (N H2 sections, K flags fired) / "not run (not under content/blog/)" / "ran (single-subject, N/A)"
 - **AI-drafting-signals pass:** ran (N of 6 patterns triggered) / "not run (file too short)" / "not run (not blog or long-doc)"
 
@@ -127,7 +127,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
 - **Code execution** — "ran \<programs\>" or "not run (no `static/programs/` change)."
-- **Code-examples checks** — "ran (4 specialists: syntax, imports, idioms, api-currency); N findings" or "not run (no code blocks in diff)."
+- **Code-examples checks** — "ran (2 specialists: structural, existence); N findings" or "not run (no fenced code blocks in content files)." `static/programs/`-only diffs are `not run` -- CI test harness gates parse + imports.
 - **Editorial-balance pass** — "ran (N H2 sections, K flags fired)" / "not run (not under content/blog/)" / "ran (single-subject, N/A)."
 - **AI-drafting-signals pass** — "ran (N of 6 patterns triggered)" / "not run (file too short)" / "not run (not blog or long-doc)."
 
