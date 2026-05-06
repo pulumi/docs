@@ -60,6 +60,13 @@ Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. 
 1. **Listicle-style numbered intros.** Multiple H2 sections starting with a number (`**1. Foo**` / `**2. Bar**`) AND each section ends with a one-sentence summary in parallel structure.
 1. **Hedge-then-pivot construction.** Sentences of the form "While X is true, Y is also worth considering" or "Although X, what's really important is Y" — three or more occurrences in the same post.
 
+**Dispatch.** Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
+
+- **Subagent E -- Structural** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
+- **Subagent F -- Lexical** (Haiku 4.5). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction).
+
+Each subagent returns `{detector_index, triggered: bool, evidence: [<line-anchored quote>...]}` per detector. Main agent counts triggers across both; the existing **≥3 of 6** threshold and the rendering format (`docs-review:references:output-format` §AI-drafting signals) are unchanged.
+
 The rendered section is a maintainer-signaling flag, not a finding bucket. Specific pattern instances that *also* constitute findings (set-piece transitions misleading the reader, an em-dash that creates ambiguity) surface separately in ⚠️ with the standard quote-and-rewrite mandate.
 
 Complementary to `claude-triage.yml`'s author-allowlist + AI-trailer detection — that filters by author signals; this filters by content signals. Both can fire on the same PR.
