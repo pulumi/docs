@@ -228,6 +228,8 @@ The section never produces 🚨 directly — it's a maintainer-signaling flag. I
 
   **Trail verdict drives bucket placement.** If the verification trail records `🚨 contradicted` or `🚨 mismatch` for a finding, render that finding in 🚨 Outstanding. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. The two-question test applies only to findings whose trail verdict is `⚠️` or `unverifiable`, where the verifier didn't reach a decisive answer.
 
+  **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Style findings under `#### Style findings` use the `**line N:**` prefix below — they're not subject to the trail-prefix mandate.
+
   **Always-🚨 carve-outs (no judgment required):**
 
   - Factually contradicted claim, any confidence, **or** unverifiable factual claim (per `docs-review:references:fact-check` §Tier rules).
