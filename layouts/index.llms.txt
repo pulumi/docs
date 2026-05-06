@@ -8,6 +8,12 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
+- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi cloud api`](https://www.pulumi.com/docs/iac/cli/cloud-api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi cloud api list --format=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
+
+      pulumi cloud api list --format=json
+      pulumi cloud api describe <path-or-operation-id> --format=json
+      pulumi cloud api /api/user
+
 - **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
 
       # CLI (auto-fills lang/os from project runtime + host OS)
