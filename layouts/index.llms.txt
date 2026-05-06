@@ -38,15 +38,17 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 
       curl https://www.pulumi.com/docs/llm-sitemap.json
 
-- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. The static URL and `pulumi package get-schema` return latest only.
+- **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
 
       # Versioned (via cloud registry API)
       pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
         | jq -r .schemaURL | xargs curl
 
+      pulumi package get-schema aws
+      pulumi package get-schema aws@6.0.0
+
       # Latest only
       curl https://www.pulumi.com/registry/packages/aws/schema.json
-      pulumi package get-schema aws
 
 - **Markdown content (per page)** — every `/docs/` URL is available as clean markdown via two equivalent mechanisms. For the `.md` URL form, drop the trailing slash and append `.md` (e.g., `/docs/iac/concepts/resources/` → `/docs/iac/concepts/resources.md`). `/registry/` URLs support the same mechanisms (`/registry/packages/<name>.md`), but only for the latest version. Exception: `/registry/packages/<name>/api-docs/*` is not served as markdown — use the cloud registry API instead.
 
