@@ -119,7 +119,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 **Render every line on every review, in this order:**
 
 - **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
-- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted)."
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · extracted by 4 subagents (H high-confidence, L low-confidence)."
 - **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
@@ -128,6 +128,14 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 - **AI-drafting-signals pass** — "ran (N of 6 patterns triggered)" / "not run (file too short)" / "not run (not blog or long-doc)."
 
 Each line is one logical pass, not one tool call. The verification trail is the *hard contract* for items that produced output; the investigation log is the *soft contract* for items that didn't. **Mandatory section** — render on every review.
+
+### Subagent decomposition
+
+Some passes (claim extraction, AI-drafting-signal detection, cross-sibling reads) fan out into parallel specialist subagents. The aggregator records dispatch metadata inline in the investigation-log line for that pass.
+
+**Decompose when** (a) the checks are independent AND (b) per-check work needs reasoning, not just pattern matching. Each specialist owns a narrow slice; the main agent fans out, dedupes, and aggregates. Annotate aggregated outputs with `subagent_consensus: N of M` so maintainers can spot-check items found by only one specialist.
+
+**Don't decompose when** the work is sequential reasoning (re-entrant updates), composition (final render), or simple pattern matching that fits in one regex -- subagent spawn overhead eats the parallel savings.
 
 ### Verification trail
 
