@@ -133,6 +133,24 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 
 Each line is one logical pass, not one tool call. The verification trail is the *hard contract* for items that produced output; the investigation log is the *soft contract* for items that didn't. **Mandatory section** — render on every review.
 
+#### Format note — External claim verification
+
+The metadata tail on this bullet is **mandatory verbatim** — the validator enforces (a) the canonical state form `X of Y claims verified (N unverifiable, M contradicted)`, (b) the extraction-specialists segment, and (c) the two-pass verification segment. Substitute the placeholders (X/Y/N/M/K/A/B/C/D) with actual integers; do **not** rewrite the surrounding scaffolding.
+
+Common drifts to avoid:
+
+- "single-pass" / "ran (3 claims, ...)" / "single-pass structural review" — when most claims close in Pass 1, render the full Pass 1/Pass 2 form anyway with `B=0` and `D=0`. The structured tail is the hard contract, not a description of what the model did.
+- "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
+- Descriptive prose in place of the metadata segments ("3 web-verifier subagents over 10 cited claims") — the structured form is what the validator parses; prose breaks it.
+
+Worked example (Pass 2 fired on 3 claims, 1 returned unverifiable):
+
+> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · Pass 1: 7 verified, 3 deferred; Pass 2: 2 verified, 1 unverifiable."
+
+Worked example (everything closed in Pass 1, no Pass 2 fan-out):
+
+> - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · Pass 1: 5 verified, 0 deferred; Pass 2: 0 verified, 0 unverifiable."
+
 ### Subagent decomposition
 
 Some passes (claim extraction, AI-drafting-signal detection, cross-sibling reads) fan out into parallel specialist subagents. The aggregator records dispatch metadata inline in the investigation-log line for that pass.

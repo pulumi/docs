@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """validate-pinned.py — validate a rendered pinned-review body.
 
-Runs 15 deterministic structural and computational invariants on the rendered
+Runs 16 deterministic structural and computational invariants on the rendered
 review body BEFORE pinned-comment.sh upsert publishes it. On violations, writes
 a structured fix-me marker (JSON + rendered markdown) and exits 1; the caller
 re-renders and re-runs.
@@ -9,7 +9,7 @@ re-renders and re-runs.
 Subcommands:
   check  --body-file <path> --pr <N> [--repo <owner/repo>]
          [--output-json <path>] [--output-markdown <path>]
-                       Run all 15 checks. On violations, write fix-me marker
+                       Run all 16 checks. On violations, write fix-me marker
                        and exit 1; otherwise exit 0.
   show-rules           Print the rule registry (id, description, hint).
   schema-version       Print the validator's schema version.
@@ -522,8 +522,11 @@ def check_mandatory_h3_order(ctx: Context) -> list[Violation]:
 def _external_claim_line(ctx: Context) -> str | None:
     """Find the External claim verification investigation-log line, or None if not applicable.
 
-    Returns None when the bullet is absent, `not run`, malformed (no `X of Y`), or
-    `0 of 0` (no claims extracted — dispatch metadata not applicable).
+    Returns None when the bullet is absent, `not run`, malformed (no canonical
+    `X of Y claims verified` state — `external-claim-state-format` carries that
+    violation), or `0 of 0` (no claims extracted — dispatch metadata not applicable).
+    Strict word-boundary on `claims\\b` to reject near-canonical drift like
+    "N of M verifiable claims verified".
     """
     for line in ctx.body_lines:
         stripped = line.lstrip()
@@ -531,13 +534,39 @@ def _external_claim_line(ctx: Context) -> str | None:
             continue
         if "not run" in line:
             return None
-        m = re.search(r"(\d+)\s+of\s+(\d+)\s+claims\s+verified", line)
+        m = re.search(r"\d+\s+of\s+(\d+)\s+claims\s+verified\b", line)
         if not m:
             return None
-        if int(m.group(2)) == 0:
+        if int(m.group(1)) == 0:
             return None
         return line
     return None
+
+
+def check_external_claim_state_format(ctx: Context) -> list[Violation]:
+    """External claim verification bullet uses the canonical 'X of Y claims verified' state form.
+
+    The dispatch-metadata and pass-metadata checks can only attach to a canonically
+    shaped line; if the state form drifts (e.g., model writes 'ran (N claims, ...)'
+    or 'N of M verifiable claims verified'), they silently no-op. This check is the
+    fail-loud gate that surfaces the drift before the silent-skip.
+    """
+    for line in ctx.body_lines:
+        stripped = line.lstrip()
+        if not stripped.startswith("- **External claim verification"):
+            continue
+        if "not run" in line:
+            return []
+        if re.search(r"\d+\s+of\s+\d+\s+claims\s+verified\b", line):
+            return []
+        return [Violation(
+            rule_id="external-claim-state-format",
+            line_ref="<investigation log: External claim verification>",
+            expected="line uses canonical `X of Y claims verified (N unverifiable, M contradicted)` state form",
+            actual=line.strip()[:160],
+            hint="Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (...); K cross-specialist corroborations · Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable.` or as `not run (<reason>)`. Compaction (e.g., `single-pass`, `ran (N claims, ...)`, `N of M verifiable claims verified`) is not permitted.",
+        )]
+    return []
 
 
 def check_external_claim_dispatch_metadata(ctx: Context) -> list[Violation]:
@@ -989,6 +1018,12 @@ RULES = [
         "check": check_mandatory_h3_order,
     },
     {
+        "id": "external-claim-state-format",
+        "desc": "Investigation-log External claim verification bullet uses canonical `X of Y claims verified` state form.",
+        "hint": "Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · ...` or `not run (<reason>)`. Compaction is not permitted.",
+        "check": check_external_claim_state_format,
+    },
+    {
         "id": "external-claim-dispatch-metadata",
         "desc": "Investigation-log External claim verification line includes the extraction-specialists tail.",
         "hint": "Append `· N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations` to the bullet.",
@@ -1196,7 +1231,7 @@ def cmd_schema_version(_: argparse.Namespace) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Validate a rendered pinned-review body against 15 deterministic invariants."
+        description="Validate a rendered pinned-review body against 16 deterministic invariants."
     )
     sub = parser.add_subparsers(dest="cmd", required=True)
 
