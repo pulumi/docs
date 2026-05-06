@@ -60,7 +60,7 @@ Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. 
 1. **Listicle-style numbered intros.** Multiple H2 sections starting with a number (`**1. Foo**` / `**2. Bar**`) AND each section ends with a one-sentence summary in parallel structure.
 1. **Hedge-then-pivot construction.** Sentences of the form "While X is true, Y is also worth considering" or "Although X, what's really important is Y" — three or more occurrences in the same post.
 
-**Dispatch.** Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
+**Dispatch.** Fresh-review path only -- re-entrant updates carry the prior trigger count forward unless the diff materially changes the post; see `docs-review:references:update`. Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
 
 - **`structural`** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
 - **`lexical`** (Haiku 4.5). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction).

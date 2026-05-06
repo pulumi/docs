@@ -109,7 +109,7 @@ Verify each by reading the sibling pages and recording whether the same step / h
 }
 ```
 
-**Sibling-read dispatch.** For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Parallel verification's limit). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
+**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Parallel verification's limit). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
 
 **Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
 
@@ -221,6 +221,8 @@ After verification, render each claim in the bucket dictated by its verification
 The 🤔 bucket is therefore **small and specific**: claims whose shape was suspect AND whose verification returned neither a confirmation nor a contradiction. The model should not render 🤔 when the verifier produced a decisive answer either way.
 
 ### Subagent extraction dispatch
+
+*Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
 Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
 

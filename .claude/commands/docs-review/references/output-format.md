@@ -135,7 +135,9 @@ Some passes (claim extraction, AI-drafting-signal detection, cross-sibling reads
 
 **Decompose when** (a) the checks are independent AND (b) per-check work needs reasoning, not just pattern matching. Each specialist owns a narrow slice; the main agent fans out, dedupes, and aggregates. Single-specialist finds are the expected state -- the slices are non-overlapping by design, so absence of consensus is not a confidence flag. Where one specialist is *designed* to overlap with the others (e.g., a heuristic scanner across canonical types), record cross-specialist corroboration as a positive signal so maintainers can spot the high-value catches.
 
-**Don't decompose when** the work is sequential reasoning (re-entrant updates), composition (final render), or simple pattern matching that fits in one regex -- subagent spawn overhead eats the parallel savings.
+**Don't decompose when** the work is sequential reasoning, composition (final render), or simple pattern matching that fits in one regex -- subagent spawn overhead eats the parallel savings.
+
+**Re-entrant updates** (`docs-review:references:update`'s fix-response / dispute / re-verify passes) are a specific case: the deltas are localized, so replication beats decomposition. Each dispatch site that fans out specialists must carry an inline fresh-review-only guard.
 
 ### Verification trail
 
