@@ -909,12 +909,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/css/marketing-homepage.*.css",
-            cachePolicyId: oneYearCachePolicy.id,
-            responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-        {
-            ...baseCacheBehavior,
             pathPattern: "/js/bundle.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
@@ -946,12 +940,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/js/homepage.*.js",
-            cachePolicyId: oneYearCachePolicy.id,
-            responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-        {
-            ...baseCacheBehavior,
-            pathPattern: "/js/marketing-homepage.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },

@@ -16,7 +16,6 @@
         "search-insights": "^2.17.2"
     },
     "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^4.0.3",
         "@tailwindcss/postcss": "^4",
         "@types/jquery": "^3.5.34",
         "autoprefixer": "^10.5.0",

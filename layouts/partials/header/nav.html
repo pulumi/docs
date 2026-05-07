@@ -1,0 +1,89 @@
+{{- $nav := site.Data.header_nav -}}
+
+<header
+  class="sticky top-0 z-40 w-full border-b border-gray-200 bg-white"
+>
+  <div class="flex h-16 items-center justify-between gap-4 px-4 md:px-6">
+
+    <a href="/" data-track="header-pulumi-logo"
+       class="flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1"
+       aria-label="Pulumi home">
+      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto") }}
+    </a>
+
+    {{ partial "header/nav-desktop.html" $nav }}
+
+    <div class="flex items-center gap-2">
+      <!-- Desktop CTAs -->
+      <a href="{{ $nav.cta.contact.href }}"
+         {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ $nav.cta.contact.label }}
+      </a>
+      <a href="{{ $nav.cta.signIn.href }}"
+         {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+         data-nav-loggedout
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ $nav.cta.signIn.label }}
+      </a>
+      <a href="https://app.pulumi.com"
+         data-track="header-dashboard"
+         data-nav-dashboard
+         style="display:none;background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
+        Dashboard
+      </a>
+      <a href="{{ site.Params.cta.primary.href }}"
+         {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+         data-role="cta-get-started"
+         data-nav-loggedout
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ site.Params.cta.primary.label }}
+      </a>
+      <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
+      <div class="flex gap-2 nav-desktop:hidden">
+        <div class="max-sm:hidden flex gap-2">
+          <a href="{{ $nav.cta.contact.href }}"
+            {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+            style="background-clip:padding-box"
+            class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $nav.cta.contact.label }}
+          </a>
+          <a href="{{ $nav.cta.signIn.href }}"
+             {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+             data-nav-loggedout
+             style="background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100/70 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $nav.cta.signIn.label }}
+          </a>
+          <a href="https://app.pulumi.com"
+             data-track="header-dashboard"
+             data-nav-dashboard
+             style="display:none;background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100/70 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
+            Dashboard
+          </a>
+          <a href="{{ site.Params.cta.primary.href }}"
+             data-track="header-signup-mobile"
+             data-role="cta-get-started"
+             data-nav-loggedout
+             style="background-clip:padding-box"
+             class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ site.Params.cta.primary.label }}
+          </a>
+        </div>
+        {{ partial "header/nav-mobile-trigger.html" $nav }}
+      </div>
+    </div>
+
+  </div>
+</header>
+
+{{ partial "header/nav-mobile-sheet.html" $nav }}
+
+<script src="/js/{{ index site.Data.js_manifest "header-nav" }}" defer></script>
