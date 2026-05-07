@@ -47,11 +47,10 @@ MANDATORY_H3_SECTIONS = [
     "⚠️ Low-confidence",
     "📜 Review history",
 ]
-# Conditional sections. Editorial balance is mandatory only on content/blog/**;
-# AI-drafting signals fires only when ≥3 of 6 patterns triggered. We check
-# their conditional presence with dedicated rules, not the order check.
+# Conditional sections. Editorial balance is mandatory only on content/blog/**.
+# Its conditional presence is checked via dedicated rules, not the order check.
 
-# 9 mandatory investigation-log bullets, in order (output-format.md §Investigation log).
+# 8 mandatory investigation-log bullets, in order (output-format.md §Investigation log).
 INVESTIGATION_LOG_BULLETS = [
     "Cross-sibling reads",
     "External claim verification",
@@ -61,7 +60,6 @@ INVESTIGATION_LOG_BULLETS = [
     "Code execution",
     "Code-examples checks",
     "Editorial-balance pass",
-    "AI-drafting-signals pass",
 ]
 
 # Recognized investigation-log line shapes. Each bullet must match exactly one.
@@ -349,7 +347,7 @@ def check_investigation_log_bullets(ctx: Context) -> list[Violation]:
             line_ref="<investigation log>",
             expected=" → ".join(INVESTIGATION_LOG_BULLETS),
             actual=" → ".join(actual_order),
-            hint="Re-order the investigation-log bullets to match the spec (Cross-sibling reads → External claim verification → Cited-claim spot-checks → Frontmatter sweep → Temporal-trigger sweep → Code execution → Editorial-balance pass → AI-drafting-signals pass).",
+            hint="Re-order the investigation-log bullets to match the spec (Cross-sibling reads → External claim verification → Cited-claim spot-checks → Frontmatter sweep → Temporal-trigger sweep → Code execution → Code-examples checks → Editorial-balance pass).",
         ))
 
     # State-format check.
@@ -405,40 +403,6 @@ def check_cross_sibling_math(ctx: Context) -> list[Violation]:
                 hint=f"Either change Y to {len(read_list) + len(skipped_list)} or list all skipped siblings explicitly.",
             ))
         return violations
-    return []
-
-
-def check_ai_drafting_threshold_section(ctx: Context) -> list[Violation]:
-    """`ran (N of 6)` on the AI-drafting line ↔ `### 🤖 AI-drafting signals` H3 presence."""
-    n_pattern_count = None
-    for line in ctx.body_lines:
-        if "AI-drafting-signals pass" not in line:
-            continue
-        m = re.search(r"ran \((\d+) of 6", line)
-        if m:
-            n_pattern_count = int(m.group(1))
-        break
-    if n_pattern_count is None:
-        return []  # "not run" or absent — separate rule covers presence
-
-    has_h3 = any(line.startswith("### 🤖 AI-drafting signals") for line in ctx.body_lines)
-
-    if n_pattern_count >= 3 and not has_h3:
-        return [Violation(
-            rule_id="ai-drafting-threshold-section",
-            line_ref="<### 🤖 AI-drafting signals>",
-            expected=f"AI-drafting H3 section present (N={n_pattern_count} ≥ 3)",
-            actual="H3 missing",
-            hint="Add the `### 🤖 AI-drafting signals` section with quote-and-rewrite suggestions per output-format.md §AI-drafting signals.",
-        )]
-    if n_pattern_count < 3 and has_h3:
-        return [Violation(
-            rule_id="ai-drafting-threshold-section",
-            line_ref="<### 🤖 AI-drafting signals>",
-            expected=f"AI-drafting H3 section absent (N={n_pattern_count} < 3 threshold)",
-            actual="H3 present despite below-threshold count",
-            hint="Either raise the trigger count to ≥3 (with evidence) or drop the H3 entirely.",
-        )]
     return []
 
 
@@ -1077,12 +1041,6 @@ RULES = [
         "desc": "Cross-sibling reads line: count of named-read equals X; named + skipped equals Y.",
         "hint": "Either fix X/Y to match the listed siblings, or list every read/skipped sibling explicitly.",
         "check": check_cross_sibling_math,
-    },
-    {
-        "id": "ai-drafting-threshold",
-        "desc": "AI-drafting threshold ↔ section presence: `ran (N of 6)`; if N ≥ 3, H3 present; else absent.",
-        "hint": "Either render the H3 (when N ≥ 3) or remove it (when N < 3).",
-        "check": check_ai_drafting_threshold_section,
     },
     {
         "id": "style-render-mode",

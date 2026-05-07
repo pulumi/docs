@@ -32,7 +32,6 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 - **Code execution:** ran <programs> (or "not run (no `static/programs/` change)")
 - **Code-examples checks:** ran (2 specialists: structural, existence); N findings (or "not run (no fenced code blocks in content files)")
 - **Editorial-balance pass:** ran (N H2 sections, K flags fired) / "not run (not under content/blog/)" / "ran (single-subject, N/A)"
-- **AI-drafting-signals pass:** ran (N of 6 patterns triggered) / "not run (file too short)" / "not run (not blog or long-doc)"
 
 </details>
 
@@ -55,10 +54,6 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ### 📊 Editorial balance
 
 [blog only; see §Editorial balance section below for emit conditions]
-
-### 🤖 AI-drafting signals
-
-[blog or long-doc only; emitted when ≥3 of 6 patterns triggered — see §AI-drafting signals]
 
 ### 🚨 Outstanding in this PR
 
@@ -138,7 +133,6 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 - **Code execution** — "ran \<programs\>" or "not run (no `static/programs/` change)."
 - **Code-examples checks** — "ran (2 specialists: structural, existence); N findings" or "not run (no fenced code blocks in content files)." `static/programs/`-only diffs are `not run` -- CI test harness gates parse + imports.
 - **Editorial-balance pass** — "ran (N H2 sections, K flags fired)" / "not run (not under content/blog/)" / "ran (single-subject, N/A)."
-- **AI-drafting-signals pass** — "ran (N of 6 patterns triggered)" / "not run (file too short)" / "not run (not blog or long-doc)."
 
 Each line is one logical pass, not one tool call. The verification trail is the *hard contract* for items that produced output; the investigation log is the *soft contract* for items that didn't. **Mandatory section** — render on every review.
 
@@ -167,7 +161,7 @@ Worked example (external-source-heavy blog — all claims `external-public`, all
 
 ### Subagent decomposition
 
-Some passes (claim extraction, AI-drafting-signal detection, cross-sibling reads) fan out into parallel specialist subagents. The aggregator records dispatch metadata inline in the investigation-log line for that pass.
+Some passes (claim extraction, cross-sibling reads) fan out into parallel specialist subagents. The aggregator records dispatch metadata inline in the investigation-log line for that pass.
 
 **Decompose when** (a) the checks are independent AND (b) per-check work needs reasoning, not just pattern matching. Each specialist owns a narrow slice; the main agent fans out, dedupes, and aggregates. Single-specialist finds are the expected state -- the slices are non-overlapping by design, so absence of consensus is not a confidence flag. Where one specialist is *designed* to overlap with the others (e.g., a heuristic scanner across canonical types), record cross-specialist corroboration as a positive signal so maintainers can spot the high-value catches.
 
@@ -234,27 +228,6 @@ When emitted, the section structure is:
 - A single entity captures ≥60% of FAQ-answer steering in a multi-vendor FAQ.
 
 Computation rules live in `docs-review:references:blog` §Priority 2.5.
-
-### AI-drafting signals
-
-Run per `docs-review:references:prose-patterns` §AI-drafting signals. Emit only when ≥3 of 6 patterns trigger; otherwise omit. **Not a mandatory section** — exclude from the top-level mandatory-sections invariant. Place between 📊 Editorial balance and 🚨 Outstanding.
-
-Format:
-
-````markdown
-### 🤖 AI-drafting signals
-
-<details>
-<summary><strong>N of 6 patterns triggered</strong> — read carefully before merging</summary>
-
-- **Uniform per-section template** — H2 sections 1-5 all follow `<opening sentence> · <4-5 bullets> · <transition>`. Quote a representative example and propose breaking the pattern.
-- **Set-piece transitions** — found "But here's the thing" (L42), "Here's the kicker" (L88), "And that's the key insight" (L131). These read as AI-drafted templates; rewrite in author voice.
-- **Em-dash density** — 14 em-dashes in 1,247 words (1 per 89 words; threshold is 1 per 125). Reduce or substitute commas/periods.
-
-</details>
-````
-
-The section never produces 🚨 directly — it's a maintainer-signaling flag. If a specific pattern instance also constitutes a finding (set-piece transitions misleading the reader, an em-dash creating ambiguity), surface that finding separately in ⚠️ with the standard quote-and-rewrite mandate.
 
 ### Bucket rules
 

@@ -49,27 +49,13 @@ Three or more consecutive sentences of similar length (within ±3 words) in a si
 
 Paragraphs longer than 6 sentences or 8 visual lines. Often a sign the content should be a list, sub-section, or split. Quote the opening; propose a split or list conversion.
 
-### AI-drafting signals
+### AI-drafting tells
 
-Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. Six independent pattern checks; **≥3 triggers fires the section** (rendered per `docs-review:references:output-format` §AI-drafting signals).
+A handful of specific AI-drafting tells are caught by Vale rules under `styles/Pulumi/`: `SetPieceTransitions` (stock opener phrases), `EmDashDensity` (paragraph-level em-dash overuse), `ListicleH2Headings` (numbered listicle structure at H2), `HedgeThenPivot` (`While X, Y is also worth ...` constructions). Findings render as `⚠️ Low-confidence` style nits per `docs-review:references:output-format` §Style nits — the model does not aggregate or render a separate "AI-drafting" section.
 
-1. **Uniform per-section template.** ≥5 H2 sections following the same internal structure: opening sentence + N bullets + closing transition + opening of next section. Detect by extracting per-section structure as a tuple `(opening, list_count, closing_transition)`; ≥5 identical tuples triggers.
-1. **Set-piece transitions.** Phrases that pattern-match the AI-drafting list: "But here's the thing", "And that's the key insight", "Let's dive in", "Now here's where it gets interesting", "Here's what's wild", "The reality is", "But it gets better", "Here's the kicker". ≥3 hits triggers.
-1. **Parallel four-bullet lists.** A bulleted list where each bullet has *exactly* the same structure (e.g., `**Term**: explanation` four times in a row, no irregularity). ≥2 such lists triggers.
-1. **Em-dash density.** Em-dashes per 1000 words exceeds threshold (start at 8 per 1000 words; one em-dash per ~125 words is a strong AI-drafting signal). Tune in re-test if false-positive rate is high.
-1. **Listicle-style numbered intros.** Multiple H2 sections starting with a number (`**1. Foo**` / `**2. Bar**`) AND each section ends with a one-sentence summary in parallel structure.
-1. **Hedge-then-pivot construction.** Sentences of the form "While X is true, Y is also worth considering" or "Although X, what's really important is Y" — three or more occurrences in the same post.
+These are heuristics, not classifiers. A single hit is hedged copy ("often appears in AI-drafted prose; consider rewriting"), surfaced for the maintainer to weigh. False positives are expected and easily ignored.
 
-**Dispatch.** Fresh-review path only -- re-entrant updates carry the prior trigger count forward unless the diff materially changes the post; see `docs-review:references:update`. Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
-
-- **`structural`** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
-- **`lexical`** (Sonnet 4.6). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction). Escalated from Haiku 4.5 in S34: the trend across S32 (3/6 reliable) → S33 var-run (0-2/6) → S33 post-C5 (4+3/6) suggested Haiku was missing patterns Sonnet would catch. Sonnet is the cost-quality choice here for a heuristic that tolerates only ~10% recall slack before the AI-drafting section either over-fires (noisy maintainer signal) or under-fires (the canonical signal AI-drafting was designed for goes silent).
-
-Each subagent returns `{detector_index, triggered: bool, evidence: [<line-anchored quote>...]}` per detector. Main agent counts triggers across both; the existing **≥3 of 6** threshold and the rendering format (`docs-review:references:output-format` §AI-drafting signals) are unchanged.
-
-The rendered section is a maintainer-signaling flag, not a finding bucket. Specific pattern instances that *also* constitute findings (set-piece transitions misleading the reader, an em-dash that creates ambiguity) surface separately in ⚠️ with the standard quote-and-rewrite mandate.
-
-Complementary to `claude-triage.yml`'s author-allowlist + AI-trailer detection — that filters by author signals; this filters by content signals. Both can fire on the same PR.
+Complementary to `claude-triage.yml`'s author-allowlist + AI-trailer detection — that filters by author signals; this filters by surface phrasing.
 
 ---
 
