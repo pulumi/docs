@@ -110,27 +110,11 @@ By default, when multiple deployments are pushed, they will be executed sequenti
 
 ## Custom Executor Images
 
-By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image.
-The pulumi/pulumi image is a unix-based image which includes the pulumi CLI in its `$PATH` and the [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported SDK runtime(s) for your Pulumi program.
-
-However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
-
-This is possible by specifying a custom executor image for your deployment. Using the custom executor image field, you can pin to a specific version of the pulumi/pulumi image,
-or point to a completely custom image hosted in a public or private container registry.
+By default, deployments run inside the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image, which includes the `pulumi` CLI and [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported language runtimes. You can override this from the **Custom Executor Image** field in your stack's deployment settings, either to pin a specific Pulumi CLI version or to use your own image with additional tools.
 
 ![Pulumi UI - Custom Executor](../../ui-custom-executor.png)
 
-Image requirements:
-
-- It must be a unix-based image which includes `curl`.
-- It must include the `pulumi` CLI in its `$PATH`.
-- It must include the required SDK runtime(s) for your Pulumi program.
-
-{{% notes "info" %}}
-Using a custom image may result in slower execution due to time spent pulling the image.
-
-Additionally, we only support static credentials in custom executor images.
-{{% /notes %}}
+For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/deployments/execution-environment/).
 
 ## Open ID Connect (OIDC)
 
