@@ -43,13 +43,20 @@ from pathlib import Path
 SURGICAL_CLASSES: set[str] = {
     "internal-link-existence",
     "shortcode-existence",
+    "external-claim-state-format",
+    "external-claim-dispatch-metadata",
+    "external-claim-routed-metadata",
     "external-claim-pass2-outcome",
     "bucket-bullet-line-range-prefix",
     "mandatory-h3-order",
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
-HAIKU_TIMEOUT_S = 60
+# 60s is plenty for --bare mode (~2-3s CLI startup, sub-10s Haiku call). OAuth
+# mode adds ~30s of CLI startup so 60s leaves Haiku very little headroom; bump
+# to 120s when ANTHROPIC_API_KEY is unset (local-test path) to avoid spurious
+# timeouts during corpus runs.
+HAIKU_TIMEOUT_S = 60 if os.environ.get("ANTHROPIC_API_KEY") else 120
 MAX_DISPATCHES_PER_CALL = 5  # cost ceiling — refuse to fix more than this many
 
 
@@ -98,11 +105,102 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
         instr = (
             f"VIOLATION (`bucket-bullet-line-range-prefix`): A bullet in "
             f"the 🚨 Outstanding, ⚠️ Low-confidence, or 💡 Pre-existing "
-            f"section is missing its `**[L<a>-<b>]**` line-range prefix.\n\n"
+            f"section is missing its bracketed line-range prefix.\n\n"
+            f"Expected: bullet starts with `- **[L<start>-<end>]**` (or "
+            f"`- **[L<line>]**` for a single line)\n"
+            f"Actual: {actual}\n"
+            f"Validator hint: {hint}\n\n"
+            f"Find the bullet whose actual content matches the snippet "
+            f"shown in `Actual` above. Look up the corresponding record "
+            f"in `### 🔍 Verification trail` -- the trail record's anchor "
+            f"is the EXACT prefix to use (e.g., trail says `L40` → use "
+            f"`**[L40]**`; trail says `L83-87` → use `**[L83-87]**`). The "
+            f"bracket-then-bold shape is mandatory; do NOT invent a "
+            f"single-line range like `[L40-40]`. If the trail anchor is "
+            f"`L40`, the bullet prefix is `**[L40]**`, not `**[L40-40]**`.\n\n"
+            f"Prepend the prefix to the offending bullet. If the bullet "
+            f"already has a non-bracketed bold prefix like `**L40**` or "
+            f"`**Outstanding**`, replace just that with the bracketed "
+            f"trail anchor; preserve the rest of the bullet text. Do not "
+            f"edit any other bullets."
+        )
+    elif rule_id == "external-claim-state-format":
+        # The leading `X of Y claims verified (...)` state form drifted.
+        instr = (
+            f"VIOLATION (`external-claim-state-format`): The External "
+            f"claim verification investigation-log bullet's leading state "
+            f"form is non-canonical.\n\n"
             f"Expected: {expected}\nActual: {actual}\nValidator hint: {hint}\n\n"
-            f"Find the bullet referenced by the validator hint and prepend "
-            f"the `**[L<a>-<b>]**` prefix as instructed. Do not edit any "
-            f"other bullets."
+            f"Find the bullet starting with `- **External claim verification**` "
+            f"in the Investigation log <details> block. Rewrite ONLY the "
+            f"state portion (the text immediately after the bold label) so "
+            f"it begins with `X of Y claims verified (N unverifiable, M "
+            f"contradicted)` -- substitute integers based on the verdicts "
+            f"in the `### 🔍 Verification trail` section: Y = total claim "
+            f"count, X = number of ✅ verified, N = number of ⚠️ unverifiable, "
+            f"M = number of 🚨 contradicted. Preserve the rest of the bullet "
+            f"(the `· N specialists (...)` and `· routed: ...` segments) "
+            f"verbatim. If the bullet currently says `not run (...)`, leave "
+            f"it alone.\n\n"
+            f"Do not edit anything else."
+        )
+    elif rule_id == "external-claim-dispatch-metadata":
+        # Append `· N specialists (...); K cross-specialist corroborations`.
+        instr = (
+            f"VIOLATION (`external-claim-dispatch-metadata`): The External "
+            f"claim verification investigation-log line is missing the "
+            f"extraction-specialists segment.\n\n"
+            f"Expected: {expected}\nActual: {actual}\nValidator hint: {hint}\n\n"
+            f"Append `· 4 specialists (numerical, cross-reference, "
+            f"capability, framing); K cross-specialist corroborations` to "
+            f"the bullet, where K = the number of trail records whose "
+            f"`found_by` field lists more than one specialist (cross-"
+            f"specialist corroboration). If the trail does not record "
+            f"`found_by`, default K to 0.\n\n"
+            f"Insert the segment after the leading `X of Y claims verified "
+            f"(N unverifiable, M contradicted)` state form, separated by ` · `. "
+            f"Preserve the `routed: ...` segment that follows verbatim.\n\n"
+            f"Do not edit anything else."
+        )
+    elif rule_id == "external-claim-routed-metadata":
+        # Append `· routed: I inline, P Pass 1, F Pass 2[, S Pass 3]` plus
+        # any required V/C/U attribution for non-zero external lanes.
+        instr = (
+            f"VIOLATION (`external-claim-routed-metadata`): The External "
+            f"claim verification investigation-log line is missing the "
+            f"routed-verification segment.\n\n"
+            f"Expected: {expected}\nActual: {actual}\nValidator hint: {hint}\n\n"
+            f"The bullet currently ends after the dispatch-metadata "
+            f"segment (the part reading `...K cross-specialist "
+            f"corroborations`). Your job is to APPEND a new segment to "
+            f"the END of that line. Do NOT replace any existing text. "
+            f"Specifically:\n\n"
+            f"  1. Locate the bullet starting with `- **External claim "
+            f"     verification`.\n"
+            f"  2. Find the dispatch-metadata segment ending in "
+            f"     `cross-specialist corroborations`. Preserve it verbatim.\n"
+            f"  3. Append ` · routed: I inline, P Pass 1, F Pass 2, "
+            f"     S Pass 3` AFTER that segment, before any final period.\n\n"
+            f"Integer values for the routing counts:\n"
+            f"  I = inline (`pulumi-internal` source class; resolved "
+            f"      during combine step via gh / Read / Grep)\n"
+            f"  P = Pass 1 (`ambiguous`; cheap-source subagent fan-out)\n"
+            f"  F = Pass 2 (URL fetch from `.fetched-urls.json`)\n"
+            f"  S = Pass 3 (search-then-fetch via WebSearch + WebFetch)\n\n"
+            f"I + P + F + S must equal Y (the claim count from the leading "
+            f"state form).\n\n"
+            f"**Important:** if F > 0, immediately append "
+            f"`(verified V, contradicted C, unverifiable U)` after "
+            f"`F Pass 2` where V + C + U = F. Same for S Pass 3 -- if "
+            f"S > 0, append the same outcome parenthetical. Compute V/C/U "
+            f"for each external lane by counting trail entries that close "
+            f"as ✅ (verified), 🚨 (contradicted), or ⚠️ (unverifiable). If "
+            f"the trail does not record per-claim routing, default to "
+            f"placing all external claims in Pass 2 (F = number of "
+            f"external claims; S = 0; the S Pass 3 segment then has no "
+            f"V/C/U parenthetical).\n\n"
+            f"Do not edit anything else, especially the dispatch-metadata "
+            f"segment containing `K cross-specialist corroborations`."
         )
     elif rule_id == "external-claim-pass2-outcome":
         # The Pass 2 segment of the External claim verification log line
@@ -154,16 +252,19 @@ def dispatch_haiku(prompt: str) -> str | None:
     """Run one Haiku call via the claude CLI. Returns the edited body or None on error."""
     # --bare skips hooks, LSP, plugin sync, CLAUDE.md auto-discovery, and
     # keychain reads — drops startup from ~30s to ~2-3s per dispatch. It
-    # requires ANTHROPIC_API_KEY explicitly. CI has it via the action; for
-    # local testing of this script, set it in the environment first.
+    # requires ANTHROPIC_API_KEY explicitly. CI has it via the action env;
+    # local testing without the API key falls through to OAuth (~30s per
+    # dispatch). The implicit fallback keeps the script runnable in both
+    # environments without any operator config.
     cmd = [
         "claude",
         "-p", prompt,
         "--model", HAIKU_MODEL,
         "--append-system-prompt", SYSTEM_PROMPT,
         "--allowedTools", "",
-        "--bare",
     ]
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        cmd.append("--bare")
     try:
         result = subprocess.run(
             cmd,
