@@ -1,28 +1,28 @@
 {{- $nav := . -}}
 <nav data-nav-root class="hidden nav-desktop:flex relative self-stretch items-center" aria-label="Primary">
   <ul class="flex items-center gap-0">
-    {{ range $i, $dropdown := $nav.dropdowns }}
+    {{ $dropdownIdx := 0 }}
+    {{ range $item := $nav.items }}
       <li>
-        <button type="button"
-          data-nav-trigger-button
-          data-nav-index="{{ $i }}"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-controls="nav-desktop-popup"
-          class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100/70">
-          {{ $dropdown.label }}
-          {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
-        </button>
-      </li>
-    {{ end }}
-
-    {{ range $link := $nav.plainLinks }}
-      <li>
-        <a href="{{ $link.href }}"
-          {{ with $link.track }}data-track="{{ . }}"{{ end }}
-          class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50">
-          {{ $link.label }}
-        </a>
+        {{ if $item.sections }}
+          <button type="button"
+            data-nav-trigger-button
+            data-nav-index="{{ $dropdownIdx }}"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            aria-controls="nav-desktop-popup"
+            class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100/70">
+            {{ $item.label }}
+            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
+          </button>
+          {{ $dropdownIdx = add $dropdownIdx 1 }}
+        {{ else }}
+          <a href="{{ $item.href }}"
+            {{ with $item.track }}data-track="{{ . }}"{{ end }}
+            class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $item.label }}
+          </a>
+        {{ end }}
       </li>
     {{ end }}
   </ul>
@@ -33,26 +33,30 @@
     class="absolute z-50 rounded-lg bg-white text-gray-950 shadow border border-gray-200"
     style="display:none;top:calc(100% + 0.5rem);left:0;opacity:0;transform:scale(0.95);transform-origin:top left;transition:none">
     <div data-nav-viewport style="position:relative;overflow:hidden;width:100%;height:100%">
-      {{ range $i, $dropdown := $nav.dropdowns }}
-        <div data-nav-content="{{ $i }}"
-          style="position:absolute;top:0;left:0;opacity:0;transform:translateX(0);will-change:opacity,transform">
-          <div class="grid gap-x-6 gap-y-4 p-2 {{ if $dropdown.wide }}w-[640px] grid-cols-2{{ else }}w-[320px] grid-cols-1{{ end }}">
-            {{ range $section := $dropdown.sections }}
-              <div class="flex flex-col gap-1 {{ if eq $section.columns 2 }}col-span-full{{ end }}">
-                {{ with $section.heading }}
-                  <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
-                {{ end }}
-                <ul class="grid gap-x-6 gap-y-0.5 {{ if eq $section.columns 2 }}grid-cols-2{{ else }}grid-cols-1{{ end }}">
-                  {{ range $item := $section.items }}
-                    <li>
-                      {{ partial "header/nav-dropdown-item.html" (dict "item" $item "variant" "desktop") }}
-                    </li>
+      {{ $dropdownIdx := 0 }}
+      {{ range $item := $nav.items }}
+        {{ if $item.sections }}
+          <div data-nav-content="{{ $dropdownIdx }}"
+            style="position:absolute;top:0;left:0;opacity:0;transform:translateX(0);will-change:opacity,transform">
+            <div class="grid gap-x-6 gap-y-4 p-2 {{ if $item.wide }}w-[640px] grid-cols-2{{ else }}w-[320px] grid-cols-1{{ end }}">
+              {{ range $section := $item.sections }}
+                <div class="flex flex-col gap-1 {{ if eq $section.columns 2 }}col-span-full{{ end }}">
+                  {{ with $section.heading }}
+                    <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
                   {{ end }}
-                </ul>
-              </div>
-            {{ end }}
+                  <ul class="grid gap-x-6 gap-y-0.5 {{ if eq $section.columns 2 }}grid-cols-2{{ else }}grid-cols-1{{ end }}">
+                    {{ range $sub := $section.items }}
+                      <li>
+                        {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "desktop") }}
+                      </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              {{ end }}
+            </div>
           </div>
-        </div>
+          {{ $dropdownIdx = add $dropdownIdx 1 }}
+        {{ end }}
       {{ end }}
     </div>
   </div>

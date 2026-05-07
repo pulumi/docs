@@ -29,51 +29,47 @@
   </div>
 
   <nav class="flex flex-1 flex-col overflow-y-auto px-3 py-2">
-    {{ range $dropdown := $nav.dropdowns }}
-      {{ $panelId := printf "nav-mobile-panel-%s" (urlize $dropdown.label) }}
-      <div data-nav-collapsible class="border-b border-gray-100">
-        <button type="button" data-nav-collapsible-trigger
-          aria-expanded="false"
-          aria-controls="{{ $panelId }}"
-          class="group flex w-full items-center justify-between px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
-          {{ $dropdown.label }}
-          {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "size-4 transition-transform duration-200 [[data-open=true]_&]:rotate-180") }}
-        </button>
-        <div data-nav-collapsible-panel data-state="closed"
-          id="{{ $panelId }}"
-          class="overflow-hidden max-h-0 opacity-0 transition-all duration-200
-                 data-[state=open]:max-h-[2000px] data-[state=open]:opacity-100">
-          <div class="flex flex-col gap-3 pb-3">
-            {{ range $section := $dropdown.sections }}
-              <div class="flex flex-col gap-1">
-                {{ with $section.heading }}
-                  <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
-                {{ end }}
-                <ul class="flex flex-col gap-0.5">
-                  {{ range $item := $section.items }}
-                    <li>
-                      {{ partial "header/nav-dropdown-item.html" (dict "item" $item "variant" "mobile") }}
-                    </li>
+    {{ range $item := $nav.items }}
+      {{ if $item.sections }}
+        {{ $panelId := printf "nav-mobile-panel-%s" (urlize $item.label) }}
+        <div data-nav-collapsible class="border-b border-gray-100">
+          <button type="button" data-nav-collapsible-trigger
+            aria-expanded="false"
+            aria-controls="{{ $panelId }}"
+            class="group flex w-full items-center justify-between px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
+            {{ $item.label }}
+            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "size-4 transition-transform duration-200 [[data-open=true]_&]:rotate-180") }}
+          </button>
+          <div data-nav-collapsible-panel data-state="closed"
+            id="{{ $panelId }}"
+            class="overflow-hidden max-h-0 opacity-0 transition-all duration-200
+                   data-[state=open]:max-h-[2000px] data-[state=open]:opacity-100">
+            <div class="flex flex-col gap-3 pb-3">
+              {{ range $section := $item.sections }}
+                <div class="flex flex-col gap-1">
+                  {{ with $section.heading }}
+                    <span class="px-3 pt-2 font-mono text-xs uppercase tracking-wide text-gray-600">{{ . }}</span>
                   {{ end }}
-                </ul>
-              </div>
-            {{ end }}
+                  <ul class="flex flex-col gap-0.5">
+                    {{ range $sub := $section.items }}
+                      <li>
+                        {{ partial "header/nav-dropdown-item.html" (dict "item" $sub "variant" "mobile") }}
+                      </li>
+                    {{ end }}
+                  </ul>
+                </div>
+              {{ end }}
+            </div>
           </div>
         </div>
-      </div>
-    {{ end }}
-
-    <ul class="flex flex-col gap-0.5 py-2">
-      {{ range $link := $nav.plainLinks }}
-        <li>
-          <a href="{{ $link.href }}" data-nav-sheet-close
-            {{ with $link.track }}data-track="{{ . }}"{{ end }}
-            class="block rounded-md px-3 py-3 text-base font-semibold text-gray-950 transition-colors hover:border-gray-300 focus-visible:border-gray-300 focus-visible:outline-none">
-            {{ $link.label }}
-          </a>
-        </li>
+      {{ else }}
+        <a href="{{ $item.href }}" data-nav-sheet-close
+          {{ with $item.track }}data-track="{{ . }}"{{ end }}
+          class="block border-b border-gray-100 px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
+          {{ $item.label }}
+        </a>
       {{ end }}
-    </ul>
+    {{ end }}
   </nav>
 
   <div class="flex flex-col gap-2 border-t border-gray-100 p-4">

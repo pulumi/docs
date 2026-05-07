@@ -1,4 +1,6 @@
-dropdowns:
+# A single ordered list. An item with `sections:` is rendered as a dropdown;
+# an item with `href:` is rendered as a plain link.
+items:
   - label: Product
     wide: true
     sections:
@@ -120,6 +122,11 @@ dropdowns:
             icon: chat-circle
             track: header-enterprise-contact
 
+  - { label: Docs,     href: /docs/,     track: header-docs }
+  - { label: Registry, href: /registry/, track: header-registry }
+  - { label: Blog,     href: /blog/,     track: header-blog }
+  - { label: Pricing,  href: /pricing/,  track: header-pricing }
+
   - label: Company
     sections:
       - items:
@@ -143,12 +150,11 @@ dropdowns:
             description: Recognition from press and analysts
             icon: trophy
             track: header-company-awards
-
-plainLinks:
-  - { label: Registry, href: /registry/, track: header-registry }
-  - { label: Blog,     href: /blog/,     track: header-blog }
-  - { label: Pricing,  href: /pricing/,  track: header-pricing }
-  - { label: Docs,     href: /docs/,     track: header-docs }
+          - label: Contact us
+            href: /contact/
+            description: Get in touch
+            icon: chat-circle
+            track: header-contact
 
 cta:
   signIn:    { label: Sign in,    href: "https://app.pulumi.com/signin", track: header-signin }

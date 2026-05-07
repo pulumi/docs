@@ -202,6 +202,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
+    button {
+        @apply cursor-pointer;
+    }
+
     // Anchor offset for fixed navbar (medium and up).
     @include screen-md {
         :target {
