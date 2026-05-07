@@ -9,6 +9,11 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 
 ---
 
+## Necessity
+
+- **Every image should have a clear purpose.** If the image doesn't add information or clarity beyond the text, it's worth questioning whether it needs to be there.
+- **Consider alternatives to screenshots.** If the image is a screenshot of a UI, could it be replaced with a mermaid diagram or code snippet? Screenshots are brittle and can go stale; flag when a diagram or snippet would be more future-proof.
+
 ## Alt text
 
 - **Every image has alt text.** Markdown form: `![<alt>](<path>)`; HTML form: `<img alt="<alt>" ...>`. Missing alt text is an accessibility failure.
