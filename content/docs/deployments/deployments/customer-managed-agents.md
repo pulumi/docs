@@ -53,15 +53,18 @@ Workflow runners support multiple workflow types beyond deployments, including P
 
 ### Scaling and concurrency
 
-Each workflow runner process executes **one workflow job at a time** and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one additional concurrency slot.
+Each workflow runner process runs **one deployment at a time**, plus optionally **one Insights scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Insights scans or policy evaluations.
 
-Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. If a runner crashes or loses connectivity in the middle of a job, the claim eventually expires and another runner in the pool picks up the job.
+Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
+
+- **Insights scans and policy evaluations** are lease-based: if a runner crashes or loses connectivity mid-job, the lease eventually expires and another runner in the pool picks up the job.
+- **Deployments** are not redelivered. If a runner stops heartbeating for 10 minutes mid-deployment, the deployment is marked failed rather than handed to another runner.
 
 Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency limit. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
 
 Patterns for scaling:
 
-- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one concurrency slot.
+- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one deployment slot, plus an Insights/policy slot if those workflow types are enabled on the pool.
 - **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
 - **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
 
@@ -96,7 +99,7 @@ After registering the provider, the workflow runner requires this information:
 
 - `organization_name`: your Pulumi Organization name
 - `runner_pool_id`: the pool ID that the instance will connect to
-- `token_expiration` (optional): the expiration in seconds for the tokens requested by the workflow runner
+- `token_expiration` (optional): the lifetime of tokens requested by the workflow runner (Go duration syntax, e.g. `1h`)
 - `oidc_token_file`: the location of the file where the OIDC token will be recorded
 
 The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC token and exchange it automatically for a Pulumi token every time the Pulumi token expires.
@@ -146,7 +149,7 @@ Duration values use Go duration syntax: a sequence of decimal numbers each with 
 ## Required settings
 
 # Pulumi token provided when creating a new workflow runner pool.
-# Required unless using OIDC (see oidc_token_file below).
+# Required unless using OIDC.
 # Environment variable override: PULUMI_AGENT_TOKEN
 token: pul-xxx
 
@@ -205,7 +208,7 @@ env_forward_allowlist: []
 
 ## OpenID Connect (OIDC) settings
 ## See the "Leveraging OpenID authentication" section. When oidc_token_file is set,
-## organization_name and runner_pool_id are required, and `token` is not used.
+## `organization_name` and `runner_pool_id` are required, and `token` is not used.
 
 # Path to a file containing an OIDC token that will be exchanged for a
 # Pulumi token. The file is re-read whenever the Pulumi token expires.
