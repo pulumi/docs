@@ -280,13 +280,14 @@ Store the deduped claim list for the verification phase. No interim user output.
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-Each claim's `source_class` (set at extraction) routes it to one of three verification lanes. The lanes have different cost / latency / fan-out shapes; routing by classification avoids running Pass 1 on claims it has no chance of resolving (vendor statistics, regulatory dates, named-source quotes) and avoids dispatching a subagent at all for claims that close in two `gh` calls (Pulumi feature/flag/version checks).
+Each claim's `source_class` (set at extraction) routes it to one of four verification lanes. The lanes have different cost / latency / fan-out shapes; routing by classification avoids running Pass 1 on claims it has no chance of resolving (vendor statistics, regulatory dates, named-source quotes) and avoids dispatching a subagent at all for claims that close in two `gh` calls (Pulumi feature/flag/version checks). Pass 2 and Pass 3 split what older versions of this doc called the single "external" lane — one lane consults pre-fetched URLs from the workflow; the other dispatches WebSearch + WebFetch for claims with no URL in the diff.
 
-| `source_class` | Lane | Mechanism |
-|---|---|---|
-| `pulumi-internal` | **Inline** | Main agent runs the cheap-source check during the combine step. No subagent. |
-| `ambiguous` | **Pass 1 → Pass 2** | Batched cheap-source subagents; defer to Pass 2 on miss. |
-| `external-public` | **Pass 2** | Per-claim Sonnet web fan-out, directly. Pass 1 skipped entirely. |
+| `source_class` | URL in diff? | Lane | Mechanism |
+|---|---|---|---|
+| `pulumi-internal` | n/a | **Inline** | Main agent runs the cheap-source check during the combine step. No subagent. |
+| `ambiguous` | n/a | **Pass 1 → Pass 2 / Pass 3** | Batched cheap-source subagents; defer on miss to whichever external lane fits the claim shape. |
+| `external-public` | yes | **Pass 2 (URL fetch)** | Consult `.fetched-urls.json` (workflow pre-step). Per-claim subagent if extraction needs reasoning; inline read otherwise. |
+| `external-public` | no | **Pass 3 (search-then-fetch)** | Per-claim Sonnet web fan-out: WebSearch + WebFetch top results. |
 
 ### Inline lane (`pulumi-internal`)
 
@@ -307,26 +308,37 @@ For each claim, walk §Verification source order steps **1-3** only (skip step 4
 Emit one of:
 
 - **Verdict + source** — `verified` (with confidence rating), `contradicted` (with the divergence quoted), or `unverifiable` *only* when the claim is genuinely not fetchable from any source (paywalled, internal-only, future-dated). Do **not** default to `unverifiable` for claims a public web source could resolve -- defer instead.
-- **Defer to Pass 2** — claim needs WebFetch / WebSearch. Pass 1 hands it off without rendering a verdict.
+- **Defer to Pass 2 or Pass 3** — claim needs the workflow's pre-fetched URL contents (Pass 2) or WebSearch + WebFetch (Pass 3). Pass 1 hands it off without rendering a verdict; the routing logic at the top of this section picks the right external lane.
 
-### Pass 2 lane (`external-public` + Pass 1 deferrals)
+### Pass 2 lane (`external-public` with URL in diff)
 
-For each `external-public` claim and each `ambiguous` claim deferred from Pass 1, dispatch Sonnet 4.6 subagents (`general-purpose`) **in parallel**.
+The workflow's pre-step `extract-urls-and-fetch.py` parses the PR diff for markdown links / autolinks / bare URLs in `content/(docs|blog)/**/*.md` and fetches each. The result lands in `.fetched-urls.json` at the repo root: `[{url, status, content_text, fetch_ms, error?}, ...]`. Cap 30 URLs per review; per-fetch timeout 10s.
+
+**Pass 2 verification consults `.fetched-urls.json`. Do NOT WebFetch URLs already present in this file** -- the workflow has already done the network round-trip. The model reads the `content_text` for the URL it would have fetched, locates the supporting passage, runs §Cited-claim spot-check on it, and emits the three-field evidence line.
+
+For each `external-public` claim whose URL appears in `.fetched-urls.json`:
+
+- If the cited URL's `status` is 200 and `content_text` addresses the claim → render verdict (`verified` / `contradicted`) per spot-check.
+- If `status` is non-2xx (dead link / paywall / soft-404) **or** `content_text` exists but doesn't address the claim → bounce to **Pass 3** for a fresh search; do not emit ⚠️ unverifiable from Pass 2.
+
+**Dispatch unit:** Pass 2 typically runs inline (the content is already in `.fetched-urls.json`; no subagent needed). Spawn a Sonnet 4.6 subagent only when the claim requires substantial reasoning over the fetched content (multi-paragraph framing comparison, table extraction, etc.). At small N, the subagent overhead dominates -- prefer inline reads.
+
+### Pass 3 lane (`external-public` without URL in diff)
+
+For each `external-public` claim that does NOT have a URL in the PR diff, dispatch Sonnet 4.6 subagents (`general-purpose`) **in parallel**. Pass 3 is the search-then-fetch lane: WebSearch a query derived from the claim, then WebFetch the top 1-3 results.
+
+**Mandatory dispatch.** Pass 3 cannot be skipped for external-public claims that need it. The model cannot silently roll an external-public claim into the Inline / Pass 1 lane to avoid the search dispatch -- the validator's `pass-3-dispatch-mandate` rule trips when external-public claims exist with no URL fetched and Pass 3 count is 0.
 
 **Dispatch unit:**
 
-- Default: **batch 2-3 claims per subagent**. The setup overhead per Pass 2 subagent (framing taxonomy + spot-check procedure + verdict format ≈ 800 words of prompt context) is non-trivial; batching amortizes it across multiple claims.
-- Exception: if **<5 claims total** are routed to Pass 2, drop to per-claim — at small N, parallelism gain dominates batching savings.
+- Default: **batch 2-3 claims per subagent**. Setup overhead per Pass 3 subagent (framing taxonomy + spot-check procedure + verdict format ≈ 800 words) amortizes across claims.
+- Exception: if **<5 claims total** are routed to Pass 3, drop to per-claim -- parallelism gain dominates batching savings at small N.
 
-For PR shapes:
-- Pulumi-heavy PRs (most claims `pulumi-internal`, 0-2 routed to Pass 2): per-claim or no Pass 2 at all.
-- External-source-heavy blogs (8-15 claims all `external-public`): 4-5 batched subagents.
+Each Pass 3 subagent walks §Verification source order step **4** (WebFetch / WebSearch), then runs §Cited-claim spot-check end-to-end per claim. Subagent prompts must be self-contained -- copy in §Verification source order step 4, the §Cited-claim spot-check procedure with the framing taxonomy (`exact-match`, `strengthened`, `narrowed`, `shifted`, `contradicted`), and the §Mandatory evidence-line format. Per-claim cap stays ~250 words.
 
-Each Pass 2 subagent walks §Verification source order step **4** (WebFetch / WebSearch), then runs §Cited-claim spot-check end-to-end per claim: fetch the cited or searched URL → locate the supporting passage → compare the source's framing to the claim's framing → emit the three-field evidence line (verdict + source quote + framing label).
+**Negative-evidence pointer for ⚠️ unverifiable verdicts.** A Pass 3 ⚠️ unverifiable verdict requires the trail entry to name the search that was attempted: `WebSearch ran query "<phrase>"; top N results didn't address the claim`. The validator's `pass-3-unverifiable-evidence` rule trips when the evidence pointer is missing. Pass 3 cannot shortcut to ⚠️ unverifiable without trying.
 
-Pass 2 subagent prompts must be self-contained — copy in §Verification source order step 4, the §Cited-claim spot-check procedure with the framing taxonomy (`exact-match`, `strengthened`, `narrowed`, `shifted`, `contradicted`), and the §Mandatory evidence-line format for cited claims. Per-claim cap stays ~250 words.
-
-Output: claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 2 actively tried).
+Output: claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 3 actively searched and the trail entry names the search).
 
 ### Verification source order (cheapest first)
 

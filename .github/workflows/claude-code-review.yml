@@ -285,6 +285,32 @@ jobs:
             --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
             || echo '[]' > .vale-findings.json
 
+      # Pre-fetch external URLs added by the PR diff. Pass 2 of the External
+      # claim verification lane consults this file instead of dispatching
+      # WebFetch at review time. Pass 3 (search-then-fetch for external-public
+      # claims with no URL in the diff) still runs model-side. continue-on-
+      # error keeps fetch failures from blocking the review; the validator's
+      # `pass-2-fetch-faithfulness` rule catches the unfaithful pattern where
+      # the model claims Pass 2 dispatches that didn't actually happen.
+      - name: Pre-fetch external URLs
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-urls
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '[]' > .fetched-urls.json
+            echo "extract-urls: no docs/blog files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
+            --pr "$PR" --out .fetched-urls.json 2>/dev/null \
+            || echo '[]' > .fetched-urls.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
@@ -372,6 +398,10 @@ jobs:
             ### Changed files
 
             ${{ steps.pr-context.outputs.files_list }}
+
+            ## Pre-fetched URLs
+
+            If `.fetched-urls.json` exists and is non-empty, consult it during Pass 2 verification per `docs-review:references:fact-check` §Routed verification. Do NOT WebFetch URLs already in that file — the workflow has already fetched them. The Pass 2 lane count in the routed-metadata investigation-log line should match the dispatches you actually attribute to fetched URLs (validator rule `pass-2-fetch-faithfulness` flags the unfaithful pattern where Pass 2 is claimed without fetches). Pass 3 (search-then-fetch for external-public claims with no URL in the diff) still runs model-side via WebSearch + WebFetch.
 
             ## Style findings
 

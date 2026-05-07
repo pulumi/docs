@@ -126,7 +126,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 **Render every line on every review, in this order:**
 
 - **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
-- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2 (verified V, contradicted C, unverifiable U)." The `(verified V, contradicted C, unverifiable U)` parenthetical attributes Pass 2 outcomes; required when F > 0, omitted when F = 0. V + C + U must equal F.
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2 (verified V, contradicted C, unverifiable U), S Pass 3 (verified V, contradicted C, unverifiable U)." Per-lane V/C/U parentheticals attribute outcomes for the external lanes (Pass 2 = URL fetch from `.fetched-urls.json`; Pass 3 = WebSearch + WebFetch for claims without URLs). The parenthetical is required when its lane count > 0 and omitted when its lane count = 0. V + C + U must equal the lane count. Older v4 captures may render the form without the `, S Pass 3` segment -- the validator accepts both.
 - **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
@@ -138,26 +138,33 @@ Each line is one logical pass, not one tool call. The verification trail is the 
 
 #### Format note — External claim verification
 
-The metadata tail on this bullet is **mandatory verbatim** — the validator enforces (a) the canonical state form `X of Y claims verified (N unverifiable, M contradicted)`, (b) the extraction-specialists segment, and (c) the routed-verification segment. Substitute the placeholders (X/Y/N/M/K/I/P/F) with actual integers; do **not** rewrite the surrounding scaffolding. The routing counters (I + P + F) must sum to Y — every extracted claim takes exactly one route per `docs-review:references:fact-check` §Routed verification.
+The metadata tail on this bullet is **mandatory verbatim** — the validator enforces (a) the canonical state form `X of Y claims verified (N unverifiable, M contradicted)`, (b) the extraction-specialists segment, and (c) the routed-verification segment. Substitute the placeholders (X/Y/N/M/K/I/P/F/S) with actual integers; do **not** rewrite the surrounding scaffolding. The routing counters (I + P + F + S) must sum to Y — every extracted claim takes exactly one route per `docs-review:references:fact-check` §Routed verification.
 
 Common drifts to avoid:
 
 - Descriptive prose in place of the metadata segments ("3 web-verifier subagents over 10 cited claims") — the structured form is what the validator parses; prose breaks it.
 - "single-pass" / "ran (3 claims, ...)" — these were S32-era shapes; render the full canonical form even when one lane has zero traffic.
 - "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
-- Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2` counts where each claim *went*, not what each verdict *was*. The leading `(N unverifiable, M contradicted)` parenthetical aggregates outcomes across all lanes; the `(verified V, contradicted C, unverifiable U)` parenthetical at the Pass 2 tail attributes Pass 2 outcomes specifically (because Pass 2 is the lane where verdict drift across runs is most observable).
+- Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2, S Pass 3` counts where each claim *went*, not what each verdict *was*. The leading `(N unverifiable, M contradicted)` parenthetical aggregates outcomes across all lanes; the `(verified V, contradicted C, unverifiable U)` parentheticals at the Pass 2 / Pass 3 tails attribute external-lane outcomes specifically (because the external lanes are where verdict drift across runs is most observable).
+- Claiming Pass 2 dispatch when `.fetched-urls.json` is empty — the workflow's URL-fetch is the deterministic floor for Pass 2. The validator's `pass-2-fetch-faithfulness` rule trips on this drift.
+- Skipping Pass 3 for external-public claims without URLs — `pass-3-dispatch-mandate` requires those claims to route to Pass 3, not be silently absorbed into Inline / Pass 1.
+- Pass 3 ⚠️ unverifiable verdicts that don't name the search — `pass-3-unverifiable-evidence` requires a `WebSearch ran query "<phrase>"; top N results didn't address the claim` pointer in the trail entry.
 
-Worked example (mixed PR — half pulumi-internal, half external-public, two ambiguous):
+Worked example (mixed PR — half pulumi-internal, half external-public with URLs, two ambiguous):
 
-> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · routed: 4 inline, 2 Pass 1, 4 Pass 2 (verified 3, contradicted 0, unverifiable 1)."
+> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · routed: 4 inline, 2 Pass 1, 4 Pass 2 (verified 3, contradicted 0, unverifiable 1), 0 Pass 3."
 
-Worked example (Pulumi-heavy PR — all claims `pulumi-internal`, resolve inline; Pass 2 lane unused, V/C/U parenthetical omitted):
+Worked example (Pulumi-heavy PR — all claims `pulumi-internal`, resolve inline; both external lanes unused, V/C/U parentheticals omitted):
 
-> - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · routed: 5 inline, 0 Pass 1, 0 Pass 2."
+> - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · routed: 5 inline, 0 Pass 1, 0 Pass 2, 0 Pass 3."
 
-Worked example (external-source-heavy blog — all claims `external-public`, all skip Pass 1):
+Worked example (external-source-heavy blog — every external-public claim has a URL in the diff, so all route to Pass 2; Pass 3 unused):
 
-> - **External claim verification** — "8 of 10 claims verified (0 unverifiable, 2 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 0 inline, 0 Pass 1, 10 Pass 2 (verified 8, contradicted 2, unverifiable 0)."
+> - **External claim verification** — "8 of 10 claims verified (0 unverifiable, 2 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 0 inline, 0 Pass 1, 10 Pass 2 (verified 8, contradicted 2, unverifiable 0), 0 Pass 3."
+
+Worked example (vendor-licensing capability claim with no URL in the diff — routes to Pass 3):
+
+> - **External claim verification** — "10 of 11 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 10 inline, 0 Pass 1, 0 Pass 2, 1 Pass 3 (verified 0, contradicted 0, unverifiable 1)."
 
 ### Subagent decomposition
 

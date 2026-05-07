@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """validate-pinned.py — validate a rendered pinned-review body.
 
-Runs 16 deterministic structural and computational invariants on the rendered
+Runs 20 deterministic structural and computational invariants on the rendered
 review body BEFORE pinned-comment.sh upsert publishes it. On violations, writes
 a structured fix-me marker (JSON + rendered markdown) and exits 1; the caller
 re-renders and re-runs.
@@ -9,7 +9,7 @@ re-renders and re-runs.
 Subcommands:
   check  --body-file <path> --pr <N> [--repo <owner/repo>]
          [--output-json <path>] [--output-markdown <path>]
-                       Run all 16 checks. On violations, write fix-me marker
+                       Run all 20 checks. On violations, write fix-me marker
                        and exit 1; otherwise exit 0.
   show-rules           Print the rule registry (id, description, hint).
   schema-version       Print the validator's schema version.
@@ -19,7 +19,7 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 4
+Schema version: 5
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -80,8 +80,11 @@ TEMPORAL_TRIGGERS = {
 # the extraction-side specialists tail and the routed-verification tail.
 # Schema v3: routed-metadata replaces the v2 PASS_METADATA_RE (pass-1/pass-2
 # breakdown). With the routing change in S33 Change 4, claims now dispatch
-# by `source_class` to one of three lanes -- inline, Pass 1, Pass 2 -- and
-# the line carries those route counts instead of pass-resolution counts.
+# by `source_class` to one of three lanes -- inline, Pass 1, Pass 2.
+# Schema v5: Pass 2 (URL fetch) is now subdivided from Pass 3 (search-then-
+# fetch). Pass 3 segment is optional in the regex for backward compat with
+# v4 captures (which carry no `, S Pass 3` segment); v5 captures render the
+# four-lane form per `docs-review:references:output-format`.
 DISPATCH_METADATA_RE = re.compile(
     r"\d+ specialists \([^)]+\); \d+ cross-specialist corroborations"
 )
@@ -93,12 +96,26 @@ ROUTED_METADATA_RE = re.compile(
 # unverifiable. Inline + Pass 1 verdicts are already aggregated in the leading
 # `(N unverifiable, M contradicted)` parenthetical; Pass 2 is the lane where
 # verdict drift across runs is observable, so per-lane attribution there is
-# the load-bearing observability for cost-variance analysis.
+# the load-bearing observability for cost-variance analysis. Schema v5
+# extends the same attribution to Pass 3 via parallel ROUTED_PASS3_RE /
+# PASS3_OUTCOME_RE patterns.
 ROUTED_PASS2_RE = re.compile(
     r"routed: \d+ inline, \d+ Pass 1, (\d+) Pass 2"
 )
 PASS2_OUTCOME_RE = re.compile(
     r"\d+ Pass 2 \(verified (\d+), contradicted (\d+), unverifiable (\d+)\)"
+)
+ROUTED_INLINE_PASS1_RE = re.compile(
+    r"routed: (\d+) inline, (\d+) Pass 1"
+)
+ROUTED_PASS3_RE = re.compile(
+    r", (\d+) Pass 3\b"
+)
+PASS3_OUTCOME_RE = re.compile(
+    r"\d+ Pass 3 \(verified (\d+), contradicted (\d+), unverifiable (\d+)\)"
+)
+LEADING_STATE_RE = re.compile(
+    r"(\d+)\s+of\s+(\d+)\s+claims\s+verified\b"
 )
 
 
@@ -131,6 +148,11 @@ class Context:
     diff_text: str
     repo_root: Path
     is_blog: bool
+    # Schema v5: workflow pre-step `extract-urls-and-fetch.py` writes the
+    # fetched URLs here. None means the file wasn't present (e.g., local
+    # invocation with no PR diff context); empty list means the workflow
+    # ran but the diff had no external URLs in content/(docs|blog)/**/*.md.
+    fetched_urls: list[dict] | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -645,6 +667,188 @@ def check_external_claim_pass2_outcome(ctx: Context) -> list[Violation]:
     return []
 
 
+def check_external_claim_pass3_outcome(ctx: Context) -> list[Violation]:
+    """Investigation-log Pass 3 segment carries V/C/U attribution when S > 0.
+
+    Schema v5 mirror of `external-claim-pass2-outcome` for the Pass 3 (search-
+    then-fetch) lane. Pass 3 segment is optional in the routed-metadata regex
+    (back-compat with v4 captures); when the segment is present and S > 0,
+    the V/C/U parenthetical is required. When S = 0 or the segment is absent,
+    the parenthetical is omitted.
+
+    Why split Pass 2 / Pass 3: Pass 3 dispatches WebSearch + WebFetch; Pass 2
+    consults the workflow's pre-fetched URLs. Per-lane verdict attribution
+    keeps cost-variance analysis honest -- a verdict drift in the search
+    lane should not be confused with one in the URL-fetch lane.
+    """
+    line = _external_claim_line(ctx)
+    if line is None:
+        return []
+    m = ROUTED_PASS3_RE.search(line)
+    if not m:
+        return []  # Pass 3 segment absent (v4-shape capture or omitted)
+    pass3_count = int(m.group(1))
+    if pass3_count == 0:
+        if PASS3_OUTCOME_RE.search(line):
+            return [Violation(
+                rule_id="external-claim-pass3-outcome",
+                line_ref="<investigation log: External claim verification>",
+                expected="omit `(verified V, contradicted C, unverifiable U)` when Pass 3 count is 0",
+                actual=line.strip()[:200],
+                hint="Drop the V/C/U parenthetical from `0 Pass 3`. The breakdown only appears when at least one claim routed to Pass 3.",
+            )]
+        return []
+
+    outcome_match = PASS3_OUTCOME_RE.search(line)
+    if not outcome_match:
+        return [Violation(
+            rule_id="external-claim-pass3-outcome",
+            line_ref="<investigation log: External claim verification>",
+            expected=f"`Pass 3` segment carries `(verified V, contradicted C, unverifiable U)` parenthetical when S > 0 (here S = {pass3_count})",
+            actual=line.strip()[:200],
+            hint=f"Append the Pass 3 outcome attribution: e.g., `{pass3_count} Pass 3 (verified V, contradicted C, unverifiable U)` where V + C + U = {pass3_count}.",
+        )]
+
+    v, c, u = (int(outcome_match.group(i)) for i in (1, 2, 3))
+    if v + c + u != pass3_count:
+        return [Violation(
+            rule_id="external-claim-pass3-outcome",
+            line_ref="<investigation log: External claim verification>",
+            expected=f"V + C + U == Pass 3 count ({pass3_count}); got V + C + U = {v + c + u}",
+            actual=f"V={v}, C={c}, U={u}, Pass 3={pass3_count}",
+            hint=f"Pass 3 verdicts must sum to the lane count. Either fix the V/C/U numbers (totals: verified={v}, contradicted={c}, unverifiable={u}) or fix the `{pass3_count} Pass 3` count to match.",
+        )]
+    return []
+
+
+def check_pass2_fetch_faithfulness(ctx: Context) -> list[Violation]:
+    """Strict-zero faithfulness floor for Pass 2: F > 0 requires non-empty `.fetched-urls.json`.
+
+    Schema v5. Catches the actual S35 unfaithful pattern observed in the
+    stream-JSON audit: docs reviews rendered routed-metadata claiming Pass 2
+    dispatch but had ZERO Agent / WebFetch / WebSearch tool calls. The S33
+    validator caught format drift; v4 caught V/C/U arithmetic drift; v5
+    catches the dispatch lie -- if the workflow fetched no URLs, the model
+    cannot honestly report Pass 2 traffic.
+
+    Rule: trip iff `.fetched-urls.json` exists AND is empty AND the routed
+    metadata reports F > 0. Pass when the file is missing (local mode), or
+    when the file is non-empty (any URL count is consistent with model-side
+    bouncing arithmetic), or when F = 0.
+    """
+    if ctx.fetched_urls is None:
+        return []  # local mode / file not present
+    if len(ctx.fetched_urls) > 0:
+        return []  # workflow fetched URLs; F > 0 is plausibly faithful
+    line = _external_claim_line(ctx)
+    if line is None:
+        return []
+    m = ROUTED_PASS2_RE.search(line)
+    if not m:
+        return []  # routed-metadata regex check carries this case
+    pass2_count = int(m.group(1))
+    if pass2_count == 0:
+        return []
+    return [Violation(
+        rule_id="pass-2-fetch-faithfulness",
+        line_ref="<investigation log: External claim verification>",
+        expected=f"Pass 2 count = 0 when `.fetched-urls.json` is empty (no URLs in PR diff); got Pass 2 = {pass2_count}",
+        actual=line.strip()[:200],
+        hint=f"The workflow fetched 0 URLs but the routed-metadata claims {pass2_count} Pass 2 dispatch(es). Either re-route the unrouted external-public claims to Pass 3 (search-then-fetch) and update `Pass 2` to 0, or fix the count to reflect actual URL-fetch verifications. See `docs-review:references:fact-check` §Routed verification.",
+    )]
+
+
+def check_pass3_dispatch_mandate(ctx: Context) -> list[Violation]:
+    """Pass 3 must dispatch when external-public claims exist with no URL.
+
+    Schema v5. When `.fetched-urls.json` is empty (no URLs in the PR diff)
+    AND the routed-metadata accounting leaves claims unrouted (Y > I + P + F),
+    those leftover claims must have routed to Pass 3 (S > 0). The model can
+    no longer silently roll external-public claims into the inline lane to
+    skip the search dispatch.
+
+    Skipped when:
+      - `.fetched-urls.json` is missing or non-empty (Pass 2 has actual fetches).
+      - Pass 2 count > 0 with empty fetched-urls (faithfulness rule trips first;
+        no need to double-flag with dispatch-mandate).
+      - Y == I + P + F (every claim is routed; nothing left to mandate).
+    """
+    if ctx.fetched_urls is None or len(ctx.fetched_urls) > 0:
+        return []
+    line = _external_claim_line(ctx)
+    if line is None:
+        return []
+    leading = LEADING_STATE_RE.search(line)
+    routed_ip = ROUTED_INLINE_PASS1_RE.search(line)
+    routed_p2 = ROUTED_PASS2_RE.search(line)
+    if not (leading and routed_ip and routed_p2):
+        return []  # other rules cover the missing segments
+    y = int(leading.group(2))
+    i = int(routed_ip.group(1))
+    p = int(routed_ip.group(2))
+    f = int(routed_p2.group(1))
+    if f > 0:
+        return []  # faithfulness rule trips; don't double-flag
+
+    routed_p3 = ROUTED_PASS3_RE.search(line)
+    s = int(routed_p3.group(1)) if routed_p3 else 0
+    unrouted = y - i - p - f - s
+    if unrouted <= 0 and s > 0:
+        return []
+    if unrouted == 0 and s == 0:
+        return []  # all claims absorbed inline / Pass 1; no external claims
+    return [Violation(
+        rule_id="pass-3-dispatch-mandate",
+        line_ref="<investigation log: External claim verification>",
+        expected=f"Pass 3 dispatch required: {unrouted} external-public claim(s) unrouted to Pass 2 (no URLs fetched) must route to Pass 3",
+        actual=f"Y={y}, I={i}, P={p}, F={f}, S={s}; unrouted={unrouted}",
+        hint=f"Add `, {unrouted if unrouted > 0 else 1} Pass 3` to the routed-metadata segment with WebSearch + WebFetch dispatches per claim. Pass 3 is mandatory for external-public claims that lack URLs in the diff -- ⚠️ unverifiable verdicts on these claims must include a search-was-run negative-evidence pointer in the trail.",
+    )]
+
+
+def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
+    """Pass 3 ⚠️ unverifiable verdicts must carry search-was-run evidence in the trail.
+
+    Schema v5. Per `docs-review:references:fact-check` §Routed verification:
+    a Pass 3 ⚠️ unverifiable verdict requires a negative-evidence pointer
+    naming the search that was run (`WebSearch ran query X; top N results
+    didn't address the claim`). The model can't shortcut to ⚠️ unverifiable
+    in Pass 3 without trying.
+
+    Implementation: when Pass 3 outcome shows U > 0, the verification trail
+    must include at least U trail entries that name a search/fetch attempt
+    (regex `WebSearch|search ran|searched|query`).
+    """
+    line = _external_claim_line(ctx)
+    if line is None:
+        return []
+    m = PASS3_OUTCOME_RE.search(line)
+    if not m:
+        return []
+    u_pass3 = int(m.group(3))
+    if u_pass3 == 0:
+        return []
+
+    span = find_section(ctx.body, "🔍 Verification trail")
+    if span is None:
+        return []
+    start, end = span
+    evidence_re = re.compile(r"WebSearch|search ran|searched|query", re.IGNORECASE)
+    evidence_count = 0
+    for raw in ctx.body_lines[start:end]:
+        if "⚠️" in raw and "unverifiable" in raw.lower() and evidence_re.search(raw):
+            evidence_count += 1
+    if evidence_count >= u_pass3:
+        return []
+    return [Violation(
+        rule_id="pass-3-unverifiable-evidence",
+        line_ref="<🔍 Verification trail>",
+        expected=f"at least {u_pass3} ⚠️ unverifiable trail entries naming a search dispatch (`WebSearch|search ran|searched|query`)",
+        actual=f"only {evidence_count} of {u_pass3} ⚠️ unverifiable Pass 3 entries cite search evidence",
+        hint=f"For each Pass 3 ⚠️ unverifiable verdict, append a negative-evidence pointer to the trail entry: e.g., `WebSearch ran query \"<phrase>\"; top 5 results didn't address the claim`. Pass 3 cannot shortcut to unverifiable without trying.",
+    )]
+
+
 def check_frontmatter_locations_in_diff(ctx: Context) -> list[Violation]:
     """If the Frontmatter sweep line names locations, those files must exist in the PR diff."""
     for line in ctx.body_lines:
@@ -1079,6 +1283,30 @@ RULES = [
         "check": check_external_claim_pass2_outcome,
     },
     {
+        "id": "external-claim-pass3-outcome",
+        "desc": "Schema v5: Investigation-log Pass 3 segment carries `(verified V, contradicted C, unverifiable U)` attribution when S > 0; V+C+U=S.",
+        "hint": "Append `(verified V, contradicted C, unverifiable U)` after `S Pass 3` when S > 0; omit when S = 0.",
+        "check": check_external_claim_pass3_outcome,
+    },
+    {
+        "id": "pass-2-fetch-faithfulness",
+        "desc": "Schema v5: Pass 2 count > 0 requires `.fetched-urls.json` to be non-empty -- catches the unfaithful pattern where the model claims Pass 2 dispatches without the workflow having fetched any URLs.",
+        "hint": "Either re-route the unrouted external-public claims to Pass 3 (search-then-fetch) and update Pass 2 count to 0, or fix the count to reflect actual URL-fetch verifications.",
+        "check": check_pass2_fetch_faithfulness,
+    },
+    {
+        "id": "pass-3-dispatch-mandate",
+        "desc": "Schema v5: external-public claims without URLs (`.fetched-urls.json` empty) must route to Pass 3 (S > 0) instead of being silently absorbed into Inline / Pass 1.",
+        "hint": "Add `, N Pass 3` to the routed-metadata segment with WebSearch + WebFetch dispatches per claim; Pass 3 is mandatory for external-public claims that lack URLs in the diff.",
+        "check": check_pass3_dispatch_mandate,
+    },
+    {
+        "id": "pass-3-unverifiable-evidence",
+        "desc": "Schema v5: Pass 3 ⚠️ unverifiable verdicts must carry a search-was-run negative-evidence pointer in the trail entry.",
+        "hint": "For each Pass 3 ⚠️ unverifiable verdict, append `WebSearch ran query \"<phrase>\"; top N results didn't address the claim` (or equivalent search-was-run pointer) to the trail entry.",
+        "check": check_pass3_unverifiable_evidence,
+    },
+    {
         "id": "frontmatter-locations",
         "desc": "Frontmatter-sweep listed locations exist in PR diff.",
         "hint": "Restrict the frontmatter sweep to files actually changed in this PR.",
@@ -1184,6 +1412,29 @@ def gh_pr_diff_text(repo: str | None, pr: int) -> str:
         return ""
 
 
+def load_fetched_urls(explicit_path: str | None) -> list[dict] | None:
+    """Load `.fetched-urls.json` if present.
+
+    Returns None when the file isn't present (local mode or workflow didn't
+    run the pre-step); returns the parsed list (possibly empty) otherwise.
+    Schema v5 rules `pass-2-fetch-faithfulness` and `pass-3-dispatch-mandate`
+    distinguish None (skip rule) from `[]` (workflow ran, no URLs in diff).
+    """
+    if explicit_path:
+        path = Path(explicit_path)
+    else:
+        path = Path.cwd() / ".fetched-urls.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, list):
+        return None
+    return data
+
+
 def repo_root() -> Path:
     try:
         result = subprocess.run(
@@ -1265,6 +1516,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     diff_files_added = gh_pr_diff_added_files(args.repo, pr_int) if pr_int else set()
     diff_text = gh_pr_diff_text(args.repo, pr_int) if pr_int else ""
     is_blog = any(f.startswith("content/blog/") for f in diff_files)
+    fetched_urls = load_fetched_urls(args.fetched_urls)
 
     ctx = Context(
         body=body,
@@ -1276,6 +1528,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         diff_text=diff_text,
         repo_root=repo_root(),
         is_blog=is_blog,
+        fetched_urls=fetched_urls,
     )
 
     violations = run_checks(ctx)
@@ -1318,6 +1571,10 @@ def main() -> int:
     p_check.add_argument("--output-markdown", help=f"default {DEFAULT_OUTPUT_MARKDOWN}")
     p_check.add_argument("--soft-floor", action="store_true",
                          help="Annotation labels as soft-floor (second-failure publish-anyway).")
+    p_check.add_argument("--fetched-urls",
+                         help="Path to `.fetched-urls.json` from the workflow pre-step. "
+                              "Defaults to ./.fetched-urls.json. Pass-through to "
+                              "schema-v5 Pass 2/3 faithfulness rules.")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")
