@@ -42,9 +42,9 @@ location: virtual
 
 # Description of the event.
 description: |
-    Coding agents like Claude Code and opencode can write Pulumi for you, but the quality depends almost entirely on how you've configured them. In this workshop we set up both agents from scratch: settings, LSP integration, hooks, and the official Pulumi skills plus a few auxiliary ones, so by the end you have a setup that consistently produces idiomatic Pulumi code instead of plausible-looking guesses.
+    Coding agents like Claude Code and opencode can write Pulumi for you, but the quality depends almost entirely on how you've configured them. In this workshop, we set up both agents from scratch: settings, LSP integration, hooks, and the official Pulumi skills plus a few auxiliary ones, so by the end you have a setup that consistently produces idiomatic Pulumi code instead of plausible-looking guesses.
 
-    From there we go straight into a live use case, putting the configured agents to work on a real Pulumi task so you can see the difference between a stock agent and a properly tuned one.
+    From there, we go straight into a live use case, putting the configured agents to work on a real Pulumi task so you can see the difference between a stock agent and a properly tuned one.
 
 learn:
     - How to configure Claude Code and opencode with settings, LSP, and hooks tuned for Pulumi work.
