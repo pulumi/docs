@@ -264,9 +264,12 @@ cmd_upsert() {
 
 cmd_upsert_validated() {
     # Wrap upsert with a pre-publish call to validate-pinned.py. On validation
-    # failure (exit 1), write the fix-me marker and exit non-zero so the model
-    # can re-render. The model retries once, then falls back to plain `upsert`
-    # (the soft-floor) — see ci.md Hard Rules.
+    # failure (exit 1), attempt a deterministic Haiku surgical-fix pass via
+    # validator-fix.py for the violation classes where the fix is text-localized
+    # (links to remove, missing parentheticals to append, etc.). If the fix-pass
+    # recovers the body, publish; otherwise restore the pre-fix body and exit
+    # non-zero so the model can re-render. The model retries once, then falls
+    # back to plain `upsert` (the soft-floor) — see ci.md Hard Rules.
     local repo pr body_file
     repo=$(resolve_repo)
     pr="${PR:?--pr required}"
@@ -276,6 +279,7 @@ cmd_upsert_validated() {
     local script_dir
     script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
     local validator="$script_dir/validate-pinned.py"
+    local fixer="$script_dir/validator-fix.py"
     [[ -x "$validator" || -f "$validator" ]] || die "validator not found: $validator"
 
     local soft_floor_flag=()
@@ -289,9 +293,35 @@ cmd_upsert_validated() {
             --repo "$repo" \
             "${soft_floor_flag[@]}"; then
         cmd_upsert
-    else
-        return 1
+        return $?
     fi
+
+    # First validator pass failed. Try Haiku surgical-fix BEFORE falling
+    # through. The fixer exits 2 if any violation is non-surgical (model
+    # retry needed); 0 on successful edit; 1 on dispatch error.
+    if [[ -f "$fixer" && -f /tmp/validate-pinned.fix-me.json ]]; then
+        cp "$body_file" "${body_file}.pre-haiku.bak"
+        if python3 "$fixer" \
+                --body-file "$body_file" \
+                --fix-me-json /tmp/validate-pinned.fix-me.json; then
+            # Re-validate the post-fix body. Don't pass --soft-floor here —
+            # we want a clean retry-0 verdict, not a soft-floor downgrade.
+            if python3 "$validator" check \
+                    --body-file "$body_file" \
+                    --pr "$pr" \
+                    --repo "$repo"; then
+                cmd_upsert
+                return $?
+            fi
+        fi
+        # Fix-pass didn't recover; restore pre-fix body so the soft-floor
+        # path publishes the original render, never a Haiku-degraded one.
+        if [[ -f "${body_file}.pre-haiku.bak" ]]; then
+            cp "${body_file}.pre-haiku.bak" "$body_file"
+        fi
+    fi
+
+    return 1
 }
 
 cmd_prune() {

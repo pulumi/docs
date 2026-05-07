@@ -62,21 +62,29 @@ RATE_CARD = {
     "WebSearch": 0.01,
     "Bash:gh": 0.002,
     "Bash:other": 0.002,
+    "Bash:validator-fix": 0.015,  # one Haiku 4.5 dispatch per call (avg, capped at 5/body)
     "Read/Grep/Glob": 0.005,
     "Edit/Write": 0.005,
 }
 
-# Categorize Bash commands by their leading token. Anything starting with `gh `
-# is a GitHub CLI call; everything else is bucketed as "other" (curl, awk, sed,
-# pinned-comment.sh, etc.). The category is informational — costs are roughly
-# the same per call.
+# Categorize Bash commands by their leading token.
+# - `gh` calls are GitHub CLI.
+# - `validator-fix.py` invocations dispatch Haiku 4.5 via the claude CLI as a
+#   subprocess. We can't see the underlying token spend from this layer, so
+#   the rate card carries a synthetic per-call cost reflecting the typical
+#   Haiku-with-medium-prompt size.
+# - Everything else (curl, awk, sed, pinned-comment.sh, validate-pinned.py
+#   itself) is "other".
 _BASH_GH_RE = re.compile(r"^\s*(?:gh|sudo\s+gh)\b")
+_BASH_VALIDATOR_FIX_RE = re.compile(r"validator-fix\.py\b")
 
 
 def categorize_bash(input_obj: dict) -> str:
     cmd = input_obj.get("command", "") or ""
     if _BASH_GH_RE.match(cmd):
         return "Bash:gh"
+    if _BASH_VALIDATOR_FIX_RE.search(cmd):
+        return "Bash:validator-fix"
     return "Bash:other"
 
 
