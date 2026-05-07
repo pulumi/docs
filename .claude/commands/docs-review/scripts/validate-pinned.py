@@ -129,6 +129,7 @@ class Context:
     pr: int | None
     repo: str | None
     diff_files: list[str]
+    diff_files_added: set[str]
     diff_text: str
     repo_root: Path
     is_blog: bool
@@ -997,12 +998,13 @@ def check_internal_link_existence(ctx: Context) -> list[Violation]:
             continue
         # Resolve under content/.
         rel = "content" + path
-        candidates = [
-            ctx.repo_root / f"{rel}.md",
-            ctx.repo_root / rel / "_index.md",
-            ctx.repo_root / rel / "index.md",
-        ]
+        candidates_rel = [f"{rel}.md", f"{rel}/_index.md", f"{rel}/index.md"]
+        candidates = [ctx.repo_root / c for c in candidates_rel]
         if any(c.exists() for c in candidates):
+            continue
+        # Accept if a candidate file is being added by this PR's diff. Without
+        # this check, the validator flags links to pages the PR itself creates.
+        if any(c in ctx.diff_files_added for c in candidates_rel):
             continue
         # Cheap alias check: grep all md files under content/ for `aliases:` containing path.
         try:
@@ -1183,6 +1185,36 @@ def gh_pr_diff_name_only(repo: str | None, pr: int) -> list[str]:
         return []
 
 
+def gh_pr_diff_added_files(repo: str | None, pr: int) -> set[str]:
+    """Return the set of relative paths added (status=A) by this PR.
+
+    Used by `internal-link-existence` to accept links to pages the PR itself
+    is creating — the destination doesn't exist on the base branch but will
+    once the PR merges, so the link is valid.
+    """
+    target_repo = repo
+    if not target_repo:
+        try:
+            result = subprocess.run(
+                ["gh", "repo", "view", "--json", "nameWithOwner",
+                 "--jq", ".nameWithOwner"],
+                capture_output=True, text=True, check=True, timeout=10,
+            )
+            target_repo = result.stdout.strip()
+        except (subprocess.SubprocessError, OSError):
+            return set()
+    cmd = [
+        "gh", "api", f"repos/{target_repo}/pulls/{pr}/files",
+        "--paginate",
+        "--jq", '.[] | select(.status=="added") | .filename',
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True, timeout=30)
+        return {line.strip() for line in result.stdout.splitlines() if line.strip()}
+    except (subprocess.SubprocessError, OSError):
+        return set()
+
+
 def gh_pr_diff_text(repo: str | None, pr: int) -> str:
     cmd = ["gh", "pr", "diff", str(pr)]
     if repo:
@@ -1272,6 +1304,7 @@ def cmd_check(args: argparse.Namespace) -> int:
 
     pr_int = int(args.pr) if args.pr else None
     diff_files = gh_pr_diff_name_only(args.repo, pr_int) if pr_int else []
+    diff_files_added = gh_pr_diff_added_files(args.repo, pr_int) if pr_int else set()
     diff_text = gh_pr_diff_text(args.repo, pr_int) if pr_int else ""
     is_blog = any(f.startswith("content/blog/") for f in diff_files)
 
@@ -1281,6 +1314,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         pr=pr_int,
         repo=args.repo,
         diff_files=diff_files,
+        diff_files_added=diff_files_added,
         diff_text=diff_text,
         repo_root=repo_root(),
         is_blog=is_blog,
