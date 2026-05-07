@@ -36,13 +36,13 @@
         {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
         Dashboard
       </a>
-      <a href="{{ $nav.cta.getStarted.href }}"
+      <a href="{{ site.Params.cta.primary.href }}"
          {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
          data-role="cta-get-started"
          data-nav-loggedout
          style="background-clip:padding-box"
          class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
-        {{ $nav.cta.getStarted.label }}
+        {{ site.Params.cta.primary.label }}
       </a>
       <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
       <div class="flex gap-2 nav-desktop:hidden">
@@ -68,13 +68,13 @@
             {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
             Dashboard
           </a>
-          <a href="{{ $nav.cta.getStarted.href }}"
+          <a href="{{ site.Params.cta.primary.href }}"
              data-track="header-signup-mobile"
              data-role="cta-get-started"
              data-nav-loggedout
              style="background-clip:padding-box"
              class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
-            {{ $nav.cta.getStarted.label }}
+            {{ site.Params.cta.primary.label }}
           </a>
         </div>
         {{ partial "header/nav-mobile-trigger.html" $nav }}
