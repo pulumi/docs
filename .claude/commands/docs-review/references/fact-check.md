@@ -111,6 +111,14 @@ Verify each by reading the sibling pages and recording whether the same step / h
 
 **Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Routed verification's Pass 1 lane batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
 
+**Uniform-dispatch mandate.** Every sibling gets the **same** digest-schema prompt; only the file path differs across the N subagents. The main agent **must not**:
+
+- Substitute a grep / read-snippets / partial-scan for any sibling, even when the diff seems "small enough" or the sibling looks "structurally similar to the others" -- the model cannot know in advance which sibling reveals the navigation-step divergence.
+- Vary the digest schema by sibling (e.g., "skip placeholder_conventions on entra because we already have it from okta") -- consistency across siblings is what makes the comparison sound.
+- Pre-classify which siblings warrant full digests vs. cheap checks. There are no cheap checks; every sibling earns its full digest. The whole point of the schema is uniform extraction.
+
+When the fan-out reports `5 of 5 siblings`, all five must have produced complete `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` records. If even one sibling was partial-read, the count is wrong and the cross-sibling-consistency dimension cannot land at HIGH confidence.
+
 **Evidence-trail rendering** (verbatim into output-format.md §Verification trail):
 
 - `L42 "Settings → Access Management" → ✅ matches entra/gsuite/okta/onelogin (5 of 5 siblings checked; 4 match, 1 has no equivalent step)`
