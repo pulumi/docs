@@ -8,8 +8,22 @@ parser reads the stream-JSON the action saves to
 operators can use to answer "where did the $X go?" — WebFetch retries vs Agent
 dispatches vs gh calls vs Read/Grep.
 
-Output is a workflow artifact, never a public PR comment. The pinned-comment
+Output is operator-side only, never a public PR comment. The pinned-comment
 audience is the PR author / maintainer; cost data is operator-internal.
+
+Operator workflow:
+  1. The Claude Code Review workflow uploads the action's stream-JSON
+     execution log as a private artifact named `claude-execution-pr<N>-run<R>`.
+  2. Download via:
+       gh run download <run-id> --repo <owner>/<repo> --name claude-execution-pr<N>-run<R>
+  3. Run this parser against the downloaded JSON:
+       per-tool-spend.py --execution-log claude-execution-output.json --format markdown
+
+Why operator-side rather than inline in the workflow: the runner checks out the
+PR head, which for fixture branches and most synchronize events doesn't carry
+this script's path. Keeping the parser as an ad-hoc operator tool avoids the
+working-tree dependency. Operators run the latest parser version against any
+historical artifact.
 
 Usage:
   per-tool-spend.py --execution-log <path> [--output <path>] [--format json|markdown]
