@@ -152,15 +152,17 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
 
 def dispatch_haiku(prompt: str) -> str | None:
     """Run one Haiku call via the claude CLI. Returns the edited body or None on error."""
-    # No --bare: --bare requires ANTHROPIC_API_KEY explicitly. CI has the
-    # var set via the action; local dev uses OAuth. Either path works
-    # without --bare and the startup cost (~1s) is fine for fix dispatches.
+    # --bare skips hooks, LSP, plugin sync, CLAUDE.md auto-discovery, and
+    # keychain reads — drops startup from ~30s to ~2-3s per dispatch. It
+    # requires ANTHROPIC_API_KEY explicitly. CI has it via the action; for
+    # local testing of this script, set it in the environment first.
     cmd = [
         "claude",
         "-p", prompt,
         "--model", HAIKU_MODEL,
         "--append-system-prompt", SYSTEM_PROMPT,
         "--allowedTools", "",
+        "--bare",
     ]
     try:
         result = subprocess.run(
