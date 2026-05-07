@@ -15,6 +15,12 @@
 
     <div class="flex items-center gap-2">
       <!-- Desktop CTAs -->
+      <a href="{{ $nav.cta.contact.href }}"
+         {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+         style="background-clip:padding-box"
+         class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+        {{ $nav.cta.contact.label }}
+      </a>
       <a href="{{ $nav.cta.signIn.href }}"
          {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
          data-nav-loggedout
@@ -22,7 +28,7 @@
          class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
         {{ $nav.cta.signIn.label }}
       </a>
-      <a href="https://app.pulumi.com/signin"
+      <a href="https://app.pulumi.com"
          data-track="header-dashboard"
          data-nav-dashboard
          style="display:none;background-clip:padding-box"
@@ -40,6 +46,12 @@
       <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
       <div class="flex gap-2 nav-desktop:hidden">
         <div class="max-sm:hidden flex gap-2">
+          <a href="{{ $nav.cta.contact.href }}"
+            {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+            style="background-clip:padding-box"
+            class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:border-gray-300 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            {{ $nav.cta.contact.label }}
+          </a>
           <a href="{{ $nav.cta.signIn.href }}"
              {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
              data-nav-loggedout
@@ -47,7 +59,7 @@
              class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-gray-200 text-sm font-regular text-gray-950 whitespace-nowrap outline-none select-none transition-all hover:bg-gray-100/70 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
             {{ $nav.cta.signIn.label }}
           </a>
-          <a href="https://app.pulumi.com/signin"
+          <a href="https://app.pulumi.com"
              data-track="header-dashboard"
              data-nav-dashboard
              style="display:none;background-clip:padding-box"

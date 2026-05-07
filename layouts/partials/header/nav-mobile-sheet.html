@@ -73,13 +73,19 @@
   </nav>
 
   <div class="flex flex-col gap-2 border-t border-gray-100 p-4">
+     <a href="{{ $nav.cta.contact.href }}"
+      {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+      data-nav-loggedout
+      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
+      {{ $nav.cta.contact.label }}
+    </a>
     <a href="{{ $nav.cta.signIn.href }}"
       {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
       data-nav-loggedout
       class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
       {{ $nav.cta.signIn.label }}
     </a>
-    <a href="https://app.pulumi.com/signin"
+    <a href="https://app.pulumi.com"
       data-track="header-dashboard"
       data-nav-dashboard
       style="display:none"

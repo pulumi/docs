@@ -150,12 +150,8 @@ items:
             description: Recognition from press and analysts
             icon: trophy
             track: header-company-awards
-          - label: Contact us
-            href: /contact/
-            description: Get in touch
-            icon: chat-circle
-            track: header-contact
 
 cta:
+  contact:    { label: Contact us,    href: "/contact/", track: header-contact }
   signIn:    { label: Sign in,    href: "https://app.pulumi.com/signin", track: header-signin }
   getStarted: { label: Get started, href: "https://app.pulumi.com/signup", track: header-get-started }
