@@ -1,8 +1,8 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting started with DevOps AI Skills
+title: Getting Started with DevOps AI Skills
 meta_desc: Set up coding agents with the right hooks, LSP, and Pulumi skills so they produce clean Pulumi code.
-meta_image:
+meta_image: /images/resources/getting-started-with-devops-ai-skills.png
 
 # A featured event will display first in the list.
 featured: false
@@ -42,14 +42,14 @@ location: virtual
 
 # Description of the event.
 description: |
-    Coding agents like Claude Code and opencode can write Pulumi for you, but the quality depends almost entirely on how you've configured them. In this workshop we set up both agents from scratch: settings, LSP integration, hooks, and the official Pulumi skills plus a few auxiliary ones, so by the end you have a rig that consistently produces idiomatic Pulumi code instead of plausible-looking guesses.
+    Coding agents like Claude Code and opencode can write Pulumi for you, but the quality depends almost entirely on how you've configured them. In this workshop we set up both agents from scratch: settings, LSP integration, hooks, and the official Pulumi skills plus a few auxiliary ones, so by the end you have a setup that consistently produces idiomatic Pulumi code instead of plausible-looking guesses.
 
-    From there we go straight into a live use case, putting the rig to work on a real Pulumi task so you can see the difference between a stock agent and a properly tuned one.
+    From there we go straight into a live use case, putting the configured agents to work on a real Pulumi task so you can see the difference between a stock agent and a properly tuned one.
 
 learn:
     - How to configure Claude Code and opencode with settings, LSP, and hooks tuned for Pulumi work.
     - How to install the official Pulumi skills and the auxiliary skills that fill in the gaps.
-    - How to run a real task through the rig and see where it keeps the agent honest vs. where it still drifts.
+    - How to run a task end-to-end and see where the configuration keeps the agent honest vs. where it still drifts.
 
 # The event presenters
 presenters:
@@ -59,9 +59,9 @@ presenters:
 
 # case-sensitive
 tags:
-    level: Intermediate # Beginner, Intermediate, Advanced
+    level: Beginner # Beginner, Intermediate, Advanced
     topics: ["AI", "DevOps", "Developer Productivity"]
-    languages: ["TypeScript", "Python"]
+    languages: []
     clouds: []
 
 # The right hand side form section.
