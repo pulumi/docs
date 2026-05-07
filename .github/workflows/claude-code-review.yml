@@ -311,6 +311,30 @@ jobs:
             --pr "$PR" --out .fetched-urls.json 2>/dev/null \
             || echo '[]' > .fetched-urls.json
 
+      # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
+      # section-depth stats, outlier flag) so the model renders the rich vs
+      # empty form deterministically. Tier 2 (entity counting, recommendation
+      # steering) remains model-side. Tier 3 (don't-flag exceptions) stays
+      # model-judged.
+      - name: Pre-compute editorial-balance Tier 1
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: editorial-balance
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/blog/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"trigger": null, "files": []}' > .editorial-balance.json
+            echo "editorial-balance: no blog files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/editorial-balance-detect.py \
+            --pr "$PR" --out .editorial-balance.json 2>/dev/null \
+            || echo '{"trigger": null, "files": []}' > .editorial-balance.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
@@ -402,6 +426,10 @@ jobs:
             ## Pre-fetched URLs
 
             If `.fetched-urls.json` exists and is non-empty, consult it during Pass 2 verification per `docs-review:references:fact-check` §Routed verification. Do NOT WebFetch URLs already in that file — the workflow has already fetched them. The Pass 2 lane count in the routed-metadata investigation-log line should match the dispatches you actually attribute to fetched URLs (validator rule `pass-2-fetch-faithfulness` flags the unfaithful pattern where Pass 2 is claimed without fetches). Pass 3 (search-then-fetch for external-public claims with no URL in the diff) still runs model-side via WebSearch + WebFetch.
+
+            ## Editorial balance (blog only)
+
+            If `.editorial-balance.json` exists, source the rendered Editorial balance section's Tier 1 fields from it: trigger (listicle / FAQ / null), section-depth stats (count, mean, median, std), and section-depth outliers (≥3× median). When `trigger=null`, render the empty form (`_Single-subject post; balance check N/A._`). When `trigger != null`, render the rich form with stats and outliers from the JSON. Tier 2 fields (vendor / entity mention counts, FAQ steering ratios) remain model-computed per `docs-review:references:blog` §Priority 2.5. Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain model-judged when surfacing threshold flags as ⚠️ findings.
 
             ## Style findings
 

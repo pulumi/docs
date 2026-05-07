@@ -46,27 +46,29 @@ Apply `docs-review:references:prose-patterns` and `docs-review:references:spelli
 
 Compute and render the editorial-balance pass on any post matching one of the trigger patterns below. The output renders as `### 📊 Editorial balance` per `docs-review:references:output-format`; threshold flags below also surface as ⚠️ findings.
 
+**Three-tier computation:** Tier 1 (listicle / FAQ trigger detection, section-depth statistics, outlier flag) is **deterministic** and runs in the workflow's `editorial-balance-detect.py` pre-step — its output is `.editorial-balance.json`. Tier 2 (comparison-trigger heuristic, entity counts, recommendation steering, FAQ-answer voting) remains model-computed. Tier 3 (don't-flag exceptions) stays model-judged. The validator's `editorial-balance-counts-faithful` rule cross-checks rendered Tier 1 fields against the JSON.
+
 **Trigger patterns** (any one fires the pass):
 
-- **Comparison:** ≥3 H2 sections under the same parent reading as parallel entities (vendors, products, approaches), e.g., `## Pulumi`, `## Terraform`, `## OpenTofu`.
-- **Listicle:** H2s of the form `## item N:` or numbered top-N at the same nesting level.
-- **FAQ:** an H2 named "Frequently asked questions" (case-insensitive), or any heading nested under it.
+- **Comparison** (Tier 2, model-computed): ≥3 H2 sections under the same parent reading as parallel entities (vendors, products, approaches), e.g., `## Pulumi`, `## Terraform`, `## OpenTofu`.
+- **Listicle** (Tier 1, in `.editorial-balance.json`): H2s of the form `## item N:` or `## N. ...` at the same nesting level.
+- **FAQ** (Tier 1, in `.editorial-balance.json`): an H2 named "Frequently asked questions" (case-insensitive), or any heading nested under it.
 
-When none fire, render the explicit-empty form per output-format.md (don't skip — empty is the signal that the check ran).
+When none fire, render the explicit-empty form per output-format.md (don't skip — empty is the signal that the check ran). When `.editorial-balance.json` reports `trigger=null`, the empty form is mandatory; the validator trips on rich-form rendering against a null trigger.
 
 **Computation rules:**
 
-1. **Section depth.** For each H2 (or each numbered listicle item), count body lines (paragraphs, code blocks, sub-headings) excluding blanks and frontmatter. Report mean, median, std. Outlier: any section ≥3× the median.
-2. **Entity mentions.** Identify the entity set from H2 names. For each entity (including product-line names — e.g., "Pulumi" subsumes "Pulumi Cloud," "Pulumi ESC"), count whole-word case-insensitive occurrences across the body.
-3. **Recommendation steering.** Count `(use|choose|pick|recommend|prefer|go with|stick with) <entity>`, `<entity> is best`, `<entity> wins`, and the inverse `(avoid|skip|don't use) <competitor>`. Group by entity. For FAQs, count each answer as one steering vote toward whichever entity it pushes.
+1. **Section depth (Tier 1, sourced from JSON when present):** For each H2 (or each numbered listicle item), count body lines (paragraphs, code blocks, sub-headings) excluding blanks and frontmatter. Report mean, median, std. Outlier: any section ≥3× the median. The pre-step computes these from the post-PR file body and writes them to `.editorial-balance.json`; render the same numbers in the section.
+2. **Entity mentions (Tier 2, model-computed):** Identify the entity set from H2 names. For each entity (including product-line names — e.g., "Pulumi" subsumes "Pulumi Cloud," "Pulumi ESC"), count whole-word case-insensitive occurrences across the body.
+3. **Recommendation steering (Tier 2, model-computed):** Count `(use|choose|pick|recommend|prefer|go with|stick with) <entity>`, `<entity> is best`, `<entity> wins`, and the inverse `(avoid|skip|don't use) <competitor>`. Group by entity. For FAQs, count each answer as one steering vote toward whichever entity it pushes.
 
 **Threshold flags** (each surfaces as a `⚠️ Low-confidence` bullet quoting the offending section/heading):
 
-- Any one section is **≥3× the median section length**.
-- Any one entity captures **≥5× the recommendation real estate** of competitors in a comparison post (skip if total recommendation count <5).
-- A single entity captures **≥60% of FAQ-answer steering** in a multi-vendor FAQ (skip if <5 answers).
+- Any one section is **≥3× the median section length** (Tier 1; the deterministic detector flags these in `.editorial-balance.json` `threshold_flags`).
+- Any one entity captures **≥5× the recommendation real estate** of competitors in a comparison post (Tier 2; skip if total recommendation count <5).
+- A single entity captures **≥60% of FAQ-answer steering** in a multi-vendor FAQ (Tier 2; skip if <5 answers).
 
-**Don't flag** when:
+**Don't flag** (Tier 3, model-judged) when:
 
 - The post is a single-subject feature announcement and the comparison trigger fired only on parenthetical competitor mentions ("Unlike Foo and Bar, ...").
 - The comparison-set is intentionally asymmetric and named as such ("Why we chose X over Y; this post focuses on X's tradeoffs").

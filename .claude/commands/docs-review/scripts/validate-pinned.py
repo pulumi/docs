@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """validate-pinned.py — validate a rendered pinned-review body.
 
-Runs 20 deterministic structural and computational invariants on the rendered
+Runs 21 deterministic structural and computational invariants on the rendered
 review body BEFORE pinned-comment.sh upsert publishes it. On violations, writes
 a structured fix-me marker (JSON + rendered markdown) and exits 1; the caller
 re-renders and re-runs.
@@ -9,7 +9,7 @@ re-renders and re-runs.
 Subcommands:
   check  --body-file <path> --pr <N> [--repo <owner/repo>]
          [--output-json <path>] [--output-markdown <path>]
-                       Run all 20 checks. On violations, write fix-me marker
+                       Run all 21 checks. On violations, write fix-me marker
                        and exit 1; otherwise exit 0.
   show-rules           Print the rule registry (id, description, hint).
   schema-version       Print the validator's schema version.
@@ -153,6 +153,11 @@ class Context:
     # invocation with no PR diff context); empty list means the workflow
     # ran but the diff had no external URLs in content/(docs|blog)/**/*.md.
     fetched_urls: list[dict] | None = None
+    # Schema v5: workflow pre-step `editorial-balance-detect.py` writes
+    # Tier 1 stats here (trigger, sections, mean/median/std, outliers).
+    # None means the file wasn't present; otherwise a dict with keys
+    # `trigger`, `files`. Used by `editorial-balance-counts-faithful`.
+    editorial_balance: dict | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -1055,6 +1060,148 @@ def check_editorial_balance_counts(ctx: Context) -> list[Violation]:
     return violations
 
 
+def check_editorial_balance_counts_faithful(ctx: Context) -> list[Violation]:
+    """Tier 1 faithful counts: rendered section-depth stats match the JSON pre-step.
+
+    Schema v5 companion to `editorial-balance-counts`. The latter recomputes
+    stats from the diff at validate time; this rule reads them from
+    `.editorial-balance.json` (the workflow pre-step's deterministic source
+    of truth). When both agree, both pass; when they diverge, the model has
+    drifted from script-computed Tier 1 numbers (the rule the workflow's
+    pre-step authored) and the rendered section is unfaithful.
+
+    Skipped when:
+      - `.editorial-balance.json` is missing (local mode, non-blog PR).
+      - JSON has `trigger=null` AND the rendered section is the empty form.
+      - JSON has empty `files` list (no analyzable blog markdown in diff).
+
+    Tier 2 fields (entity counts, FAQ steering ratios) stay model-computed
+    and are NOT validated by this rule -- the deterministic floor only
+    covers the script's outputs.
+    """
+    eb = ctx.editorial_balance
+    if eb is None:
+        return []
+    files = eb.get("files") or []
+    trigger = eb.get("trigger")
+
+    span = find_section(ctx.body, "📊 Editorial balance")
+    if span is None:
+        # Mandatory-h3-order rule covers absence on blog PRs; nothing to check here.
+        return []
+    start, end = span
+    section = "\n".join(ctx.body_lines[start:end])
+    is_empty_form = ("Single-subject post" in section
+                     or "balance check N/A" in section)
+
+    if trigger is None:
+        if is_empty_form:
+            return []
+        return [Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance>",
+            expected="empty form (`_Single-subject post; balance check N/A._`) when `.editorial-balance.json` reports `trigger=null`",
+            actual="rich form rendered despite null trigger",
+            hint="The Tier 1 detector found no listicle / FAQ trigger in the PR-changed blog markdown. Render the empty form per `docs-review:references:output-format` §Editorial balance, or override Tier 3 (don't-flag exception) explicitly in the rendered section.",
+        )]
+
+    # Trigger fired in the JSON; rich form expected.
+    if is_empty_form:
+        return [Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance>",
+            expected=f"rich form rendered (`.editorial-balance.json` reports trigger=`{trigger}`)",
+            actual="empty form rendered",
+            hint=f"The Tier 1 detector found a {trigger} trigger in the PR-changed blog markdown. Render the rich form with section-depth stats, vendor mentions, and threshold flags per `docs-review:references:output-format` §Editorial balance.",
+        )]
+
+    if not files:
+        return []
+
+    # Aggregate the JSON's section-depth stats (single file: use as-is;
+    # multiple files: take the file with the trigger fired, falling back to
+    # the first file with non-empty sections).
+    target = next((f for f in files if f.get("trigger_local")), None)
+    if target is None:
+        target = next((f for f in files if f.get("sections")), None)
+    if target is None:
+        return []
+
+    json_n = len(target.get("sections") or [])
+    json_stats = target.get("stats") or {}
+    json_mean = json_stats.get("mean")
+    json_median = json_stats.get("median")
+    json_std = json_stats.get("std")
+    json_outliers = target.get("outliers") or []
+
+    m = re.search(
+        r"(\d+)\s+H2\s+sections\s*\(mean\s+([\d.]+)\s+lines,\s*median\s+([\d.]+),\s*std\s+([\d.]+)\)",
+        section,
+    )
+    if not m:
+        return []  # state-format violation belongs to a separate rule
+
+    rendered_n = int(m.group(1))
+    rendered_mean = float(m.group(2))
+    rendered_median = float(m.group(3))
+    rendered_std = float(m.group(4))
+
+    def diverges(a: float, b: float, tol: float = 0.10) -> bool:
+        if a == b:
+            return False
+        return abs(a - b) > max(tol * max(abs(a), abs(b)), 0.5)
+
+    violations: list[Violation] = []
+    if rendered_n != json_n:
+        violations.append(Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance: section count>",
+            expected=f"{json_n} H2 sections (per `.editorial-balance.json`)",
+            actual=f"{rendered_n} H2 sections rendered",
+            hint=f"Update the rendered section count to match the deterministic detector ({json_n}).",
+        ))
+    if json_mean is not None and diverges(rendered_mean, float(json_mean)):
+        violations.append(Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance: mean>",
+            expected=f"mean = {json_mean}",
+            actual=f"mean = {rendered_mean}",
+            hint=f"Update the rendered mean to match the deterministic detector ({json_mean}).",
+        ))
+    if json_median is not None and diverges(rendered_median, float(json_median)):
+        violations.append(Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance: median>",
+            expected=f"median = {json_median}",
+            actual=f"median = {rendered_median}",
+            hint=f"Update the rendered median to match the deterministic detector ({json_median}).",
+        ))
+    if json_std is not None and diverges(rendered_std, float(json_std)):
+        violations.append(Violation(
+            rule_id="editorial-balance-counts-faithful",
+            line_ref="<### 📊 Editorial balance: std>",
+            expected=f"std = {json_std}",
+            actual=f"std = {rendered_std}",
+            hint=f"Update the rendered std to match the deterministic detector ({json_std}).",
+        ))
+
+    # Outlier presence: each JSON outlier should be cited in the rendered
+    # section by heading. Rendered outliers without a JSON counterpart aren't
+    # flagged here -- the model may also list close-to-3x outliers per its
+    # own judgment; that's a Tier 3 call.
+    for o in json_outliers:
+        h = o.get("heading", "")
+        if h and h not in section:
+            violations.append(Violation(
+                rule_id="editorial-balance-counts-faithful",
+                line_ref="<### 📊 Editorial balance: outliers>",
+                expected=f"outlier `{h}` ({o.get('lines')} lines, {o.get('ratio')}× median) cited in the rendered section",
+                actual="not cited",
+                hint=f"Add the outlier `{h}` to the rendered Section depth bullet (the deterministic detector flagged it as ≥3× median).",
+            ))
+    return violations
+
+
 def check_frontmatter_sweep_repeats(ctx: Context) -> list[Violation]:
     """Detect repeated factual phrasings across body / meta_desc / social.* in the diff.
 
@@ -1325,6 +1472,12 @@ RULES = [
         "check": check_editorial_balance_counts,
     },
     {
+        "id": "editorial-balance-counts-faithful",
+        "desc": "Schema v5: rendered Editorial balance section's Tier 1 stats (count, mean, median, std, outliers, trigger / empty-form selection) match `.editorial-balance.json` written by the workflow's `editorial-balance-detect.py` pre-step.",
+        "hint": "Source Tier 1 fields (trigger, section count, mean/median/std, outliers) from `.editorial-balance.json`; render the rich vs empty form per the JSON's `trigger` field. Tier 2 fields (entity counts, FAQ steering) remain model-computed.",
+        "check": check_editorial_balance_counts_faithful,
+    },
+    {
         "id": "frontmatter-sweep-repeats",
         "desc": "Frontmatter sweep finds repeats across body / meta_desc / social.* — flag if the model reported `not run`.",
         "hint": "Re-run the frontmatter sweep when factual repeats are present.",
@@ -1410,6 +1563,29 @@ def gh_pr_diff_text(repo: str | None, pr: int) -> str:
         return result.stdout
     except (subprocess.SubprocessError, OSError):
         return ""
+
+
+def load_editorial_balance(explicit_path: str | None) -> dict | None:
+    """Load `.editorial-balance.json` if present.
+
+    Returns None when the file isn't present (local mode or workflow didn't
+    run the pre-step); returns the parsed dict otherwise. Schema v5 rule
+    `editorial-balance-counts-faithful` distinguishes None (skip rule) from
+    `{"trigger": null, ...}` (workflow ran, no triggers fired).
+    """
+    if explicit_path:
+        path = Path(explicit_path)
+    else:
+        path = Path.cwd() / ".editorial-balance.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    return data
 
 
 def load_fetched_urls(explicit_path: str | None) -> list[dict] | None:
@@ -1517,6 +1693,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     diff_text = gh_pr_diff_text(args.repo, pr_int) if pr_int else ""
     is_blog = any(f.startswith("content/blog/") for f in diff_files)
     fetched_urls = load_fetched_urls(args.fetched_urls)
+    editorial_balance = load_editorial_balance(args.editorial_balance)
 
     ctx = Context(
         body=body,
@@ -1529,6 +1706,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         repo_root=repo_root(),
         is_blog=is_blog,
         fetched_urls=fetched_urls,
+        editorial_balance=editorial_balance,
     )
 
     violations = run_checks(ctx)
@@ -1575,6 +1753,11 @@ def main() -> int:
                          help="Path to `.fetched-urls.json` from the workflow pre-step. "
                               "Defaults to ./.fetched-urls.json. Pass-through to "
                               "schema-v5 Pass 2/3 faithfulness rules.")
+    p_check.add_argument("--editorial-balance",
+                         help="Path to `.editorial-balance.json` from the workflow "
+                              "pre-step. Defaults to ./.editorial-balance.json. "
+                              "Pass-through to the editorial-balance-counts-faithful "
+                              "rule (Tier 1 deterministic detector).")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")
