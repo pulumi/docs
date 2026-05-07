@@ -94,7 +94,8 @@
       Dashboard
     </a>
     <a href="{{ $nav.cta.getStarted.href }}"
-      {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+      data-track="header-signup-mobile"
+      data-role="cta-get-started"
       data-nav-loggedout
       class="inline-flex h-9 items-center justify-center rounded-md bg-violet-700 px-2.5 text-sm font-regular text-white transition-all hover:bg-violet-800">
       {{ $nav.cta.getStarted.label }}

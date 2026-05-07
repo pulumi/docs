@@ -38,6 +38,7 @@
       </a>
       <a href="{{ $nav.cta.getStarted.href }}"
          {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+         data-role="cta-get-started"
          data-nav-loggedout
          style="background-clip:padding-box"
          class="hidden nav-desktop:inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
@@ -68,7 +69,8 @@
             Dashboard
           </a>
           <a href="{{ $nav.cta.getStarted.href }}"
-             {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+             data-track="header-signup-mobile"
+             data-role="cta-get-started"
              data-nav-loggedout
              style="background-clip:padding-box"
              class="inline-flex h-9 shrink-0 gap-1.5 px-2.5 items-center justify-center rounded-lg border border-transparent bg-violet-700 text-sm font-regular text-white whitespace-nowrap outline-none select-none transition-all hover:bg-violet-800 active:translate-y-px focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">
