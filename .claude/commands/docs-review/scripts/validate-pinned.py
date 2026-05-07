@@ -19,7 +19,7 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 3
+Schema version: 4
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -89,6 +89,18 @@ DISPATCH_METADATA_RE = re.compile(
 )
 ROUTED_METADATA_RE = re.compile(
     r"routed: \d+ inline, \d+ Pass 1, \d+ Pass 2"
+)
+# Schema v4: when Pass 2 count F > 0, the routed-metadata segment carries an
+# attribution parenthetical breaking F into verified / contradicted /
+# unverifiable. Inline + Pass 1 verdicts are already aggregated in the leading
+# `(N unverifiable, M contradicted)` parenthetical; Pass 2 is the lane where
+# verdict drift across runs is observable, so per-lane attribution there is
+# the load-bearing observability for cost-variance analysis.
+ROUTED_PASS2_RE = re.compile(
+    r"routed: \d+ inline, \d+ Pass 1, (\d+) Pass 2"
+)
+PASS2_OUTCOME_RE = re.compile(
+    r"\d+ Pass 2 \(verified (\d+), contradicted (\d+), unverifiable (\d+)\)"
 )
 
 
@@ -610,6 +622,64 @@ def check_external_claim_routed_metadata(ctx: Context) -> list[Violation]:
     )]
 
 
+def check_external_claim_pass2_outcome(ctx: Context) -> list[Violation]:
+    """Investigation-log Pass 2 segment carries V/C/U attribution when F > 0.
+
+    Schema v4. When the Pass 2 lane has any traffic (F > 0), the routed-metadata
+    segment must include `(verified V, contradicted C, unverifiable U)` immediately
+    after `Pass 2`, and V + C + U must equal F. When F = 0, the parenthetical is
+    omitted -- nothing to attribute.
+
+    Why: Pass 2 is the lane where verdict drift across runs is observable
+    (web sources change, retries flake). Inline + Pass 1 outcomes are visible
+    in the leading `(N unverifiable, M contradicted)` parenthetical at the
+    aggregate level. Per-lane attribution at Pass 2 is what closes the
+    observability gap for cost-variance analysis.
+    """
+    line = _external_claim_line(ctx)
+    if line is None:
+        return []
+    m = ROUTED_PASS2_RE.search(line)
+    if not m:
+        # Routed metadata isn't present at all; the routed-metadata check
+        # already flags that. Don't double-flag here.
+        return []
+    pass2_count = int(m.group(1))
+    if pass2_count == 0:
+        # No Pass 2 traffic; V/C/U parenthetical is omitted by design. Reject
+        # if the model added one anyway (an empty parenthetical is noise).
+        if PASS2_OUTCOME_RE.search(line):
+            return [Violation(
+                rule_id="external-claim-pass2-outcome",
+                line_ref="<investigation log: External claim verification>",
+                expected="omit `(verified V, contradicted C, unverifiable U)` when Pass 2 count is 0",
+                actual=line.strip()[:200],
+                hint="Drop the V/C/U parenthetical from `0 Pass 2`. The breakdown only appears when at least one claim routed to Pass 2.",
+            )]
+        return []
+
+    outcome_match = PASS2_OUTCOME_RE.search(line)
+    if not outcome_match:
+        return [Violation(
+            rule_id="external-claim-pass2-outcome",
+            line_ref="<investigation log: External claim verification>",
+            expected=f"`Pass 2` segment carries `(verified V, contradicted C, unverifiable U)` parenthetical when F > 0 (here F = {pass2_count})",
+            actual=line.strip()[:200],
+            hint=f"Append the Pass 2 outcome attribution: e.g., `{pass2_count} Pass 2 (verified V, contradicted C, unverifiable U)` where V + C + U = {pass2_count}.",
+        )]
+
+    v, c, u = (int(outcome_match.group(i)) for i in (1, 2, 3))
+    if v + c + u != pass2_count:
+        return [Violation(
+            rule_id="external-claim-pass2-outcome",
+            line_ref="<investigation log: External claim verification>",
+            expected=f"V + C + U == Pass 2 count ({pass2_count}); got V + C + U = {v + c + u}",
+            actual=f"V={v}, C={c}, U={u}, Pass 2={pass2_count}",
+            hint=f"Pass 2 verdicts must sum to the lane count. Either fix the V/C/U numbers (totals: verified={v}, contradicted={c}, unverifiable={u}) or fix the `{pass2_count} Pass 2` count to match.",
+        )]
+    return []
+
+
 def check_frontmatter_locations_in_diff(ctx: Context) -> list[Violation]:
     """If the Frontmatter sweep line names locations, those files must exist in the PR diff."""
     for line in ctx.body_lines:
@@ -1041,6 +1111,12 @@ RULES = [
         "desc": "Investigation-log External claim verification line includes the routed-verification tail.",
         "hint": "Append `· routed: I inline, P Pass 1, F Pass 2` to the bullet (counts must sum to Y).",
         "check": check_external_claim_routed_metadata,
+    },
+    {
+        "id": "external-claim-pass2-outcome",
+        "desc": "Investigation-log Pass 2 segment carries `(verified V, contradicted C, unverifiable U)` attribution when F > 0; V+C+U=F.",
+        "hint": "Append `(verified V, contradicted C, unverifiable U)` after `F Pass 2` when F > 0; omit when F = 0.",
+        "check": check_external_claim_pass2_outcome,
     },
     {
         "id": "frontmatter-locations",

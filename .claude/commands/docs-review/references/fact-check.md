@@ -384,6 +384,8 @@ Use WebFetch for any non-Pulumi source the claim depends on — provider docs, v
 
 `unverifiable` is a verdict for claims that are genuinely not fetchable (paywalled, internal-only, future-dated). It is NOT the default for vendor capability/pricing/licensing claims when a public web source could resolve them. If a publicly fetchable source could verify or contradict the claim, fetch it before defaulting to `unverifiable`.
 
+**Vendor-licensing carve-out.** When the claim takes the shape `vendor X requires Plan Y or higher`, `feature Z is available on the Enterprise tier`, or any other plan-name / tier-gating phrasing, the vendor's pricing or product-tier page is the canonical source — fetch it before defaulting to ⚠️ unverifiable. Pricing pages are public and stable; the `unverifiable` verdict on a vendor licensing claim almost always indicates "the verifier didn't try" rather than "the page is genuinely paywalled." For JS-rendered pricing pages where WebFetch returns an empty body, `verified weakly` (with the source URL and a note that the body wasn't programmatically extractable) is the right verdict — not ⚠️ unverifiable. Reserve `unverifiable` for vendor pages that are 404, behind a login wall, or actively redirect away (those are real signals to surface to the maintainer).
+
 #### 5. Notion + Slack (best-effort)
 
 Only if MCP tools are present in the runtime tool set. Use these to catch internal context that hasn't made it into a repo yet -- "we decided not to ship this," "this was renamed," "the CEO sketched this in a doc but it's not built."

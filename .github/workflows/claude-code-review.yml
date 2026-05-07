@@ -384,6 +384,46 @@ jobs:
             Post-run labels (`review:claude-ran` add, `review:claude-stale` remove) are applied by a separate workflow step. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(python3 .claude/commands/docs-review/scripts/validate-pinned.py:*),Bash(python3 /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/validate-pinned.py:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
+      # Per-tool spend telemetry — operator-internal observability for cost
+      # variance investigations. Runs after the review completes; reads the
+      # action's stream-JSON execution log, counts tool_use entries by category
+      # (Agent / WebFetch / WebSearch / Bash:gh / Bash:other / Read/Grep/Glob /
+      # Edit/Write), and writes a summary JSON. Both the raw log and the
+      # summary upload as private workflow artifacts — never surfaced in the
+      # public PR comment. Cost data is operator-audience only; the pinned
+      # comment is author-/maintainer-audience.
+      #
+      # Continue-on-error so a parser bug never blocks the review pipeline.
+      - name: Compute per-tool spend summary
+        if: always() && steps.claude-review.outcome == 'success'
+        id: per-tool-spend
+        continue-on-error: true
+        run: |
+          LOG=/home/runner/work/_temp/claude-execution-output.json
+          if [[ ! -s "$LOG" ]]; then
+            echo "per-tool-spend: execution log absent or empty; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/per-tool-spend.py \
+            --execution-log "$LOG" \
+            --output /tmp/per-tool-spend.json \
+            --format json || true
+          python3 .claude/commands/docs-review/scripts/per-tool-spend.py \
+            --execution-log "$LOG" \
+            --output /tmp/per-tool-spend.md \
+            --format markdown || true
+
+      - name: Upload per-tool spend artifact
+        if: always() && steps.per-tool-spend.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: per-tool-spend-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            /tmp/per-tool-spend.json
+            /tmp/per-tool-spend.md
+          retention-days: 90
+          if-no-files-found: ignore
+
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment
       # always reaches a terminal state regardless of outcome.
       #

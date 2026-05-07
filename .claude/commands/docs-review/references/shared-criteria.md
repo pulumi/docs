@@ -50,6 +50,8 @@ When a finding has a concrete fix, render it as a GitHub suggestion block inside
 
 Use suggestion blocks for replacements of five lines or fewer. For larger rewrites, describe the change in prose -- a 40-line suggestion block is unreviewable.
 
+**Suggested paths must resolve.** Internal-link paths (`/docs/...`, `/blog/...`, `/registry/...`) inside a suggestion block must resolve to a file or alias under `content/` in the diff base — same standard as `internal-link-existence` in the validator. The model occasionally proposes a "fix" that cites a hypothetical canonical path the author "should" create rather than one that exists; the validator catches it post-render and surfaces as `internal-link-existence@<body>`. Don't propose a path the diff doesn't add and `content/` doesn't already provide. If the canonical destination genuinely doesn't exist, the right shape is a 🚨 with prose ("either land `content/<path>/_index.md` before this post goes live, or drop the trailing-paragraph link") — not a suggestion block citing a path that 404s.
+
 ### Linter boundary
 
 The following are owned by the lint job. Do not restate findings the linter already catches:

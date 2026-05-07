@@ -12,6 +12,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ```markdown
 ## Quality Review — Last updated <ISO 8601 timestamp>
 
+> [!TIP]
 > **Summary:** <one paragraph: what this PR is, what failure mode would block its goal, what was checked>.
 >
 > **Review confidence:**
@@ -52,26 +53,34 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 </details>
 
 ### 📊 Editorial balance
+
 [blog only; see §Editorial balance section below for emit conditions]
 
 ### 🤖 AI-drafting signals
+
 [blog or long-doc only; emitted when ≥3 of 6 patterns triggered — see §AI-drafting signals]
 
 ### 🚨 Outstanding in this PR
+
 [PR-introduced findings the author needs to address]
 
 ### ⚠️ Low-confidence
+
 [Findings worth surfacing but not blocking]
 
 ### 💡 Pre-existing issues in touched files (optional)
+
+> [!NOTE]
 > Found while reviewing, not introduced by this PR. If you fix these, great! But no pressure — they were there when you got here.
 
 [Pre-existing findings, capped per file at 15]
 
 ### ✅ Resolved since last review
+
 [Empty on initial review; populated on re-entrant runs]
 
 ### 📜 Review history
+
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
 
 ---
@@ -122,7 +131,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 **Render every line on every review, in this order:**
 
 - **Cross-sibling reads** — "X of Y siblings" or "not run (not in a templated section)."
-- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2."
+- **External claim verification** — "X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2 (verified V, contradicted C, unverifiable U)." The `(verified V, contradicted C, unverifiable U)` parenthetical attributes Pass 2 outcomes; required when F > 0, omitted when F = 0. V + C + U must equal F.
 - **Cited-claim spot-checks** — "X of X cited claims fetched and compared" or "not run (no cited claims)."
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
@@ -142,19 +151,19 @@ Common drifts to avoid:
 - Descriptive prose in place of the metadata segments ("3 web-verifier subagents over 10 cited claims") — the structured form is what the validator parses; prose breaks it.
 - "single-pass" / "ran (3 claims, ...)" — these were S32-era shapes; render the full canonical form even when one lane has zero traffic.
 - "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
-- Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2` counts where each claim *went*, not what each verdict *was*. Outcomes are in the leading `(N unverifiable, M contradicted)` parenthetical.
+- Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2` counts where each claim *went*, not what each verdict *was*. The leading `(N unverifiable, M contradicted)` parenthetical aggregates outcomes across all lanes; the `(verified V, contradicted C, unverifiable U)` parenthetical at the Pass 2 tail attributes Pass 2 outcomes specifically (because Pass 2 is the lane where verdict drift across runs is most observable).
 
 Worked example (mixed PR — half pulumi-internal, half external-public, two ambiguous):
 
-> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · routed: 4 inline, 2 Pass 1, 4 Pass 2."
+> - **External claim verification** — "9 of 10 claims verified (1 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 2 cross-specialist corroborations · routed: 4 inline, 2 Pass 1, 4 Pass 2 (verified 3, contradicted 0, unverifiable 1)."
 
-Worked example (Pulumi-heavy PR — all claims `pulumi-internal`, resolve inline):
+Worked example (Pulumi-heavy PR — all claims `pulumi-internal`, resolve inline; Pass 2 lane unused, V/C/U parenthetical omitted):
 
 > - **External claim verification** — "5 of 5 claims verified (0 unverifiable, 0 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 0 cross-specialist corroborations · routed: 5 inline, 0 Pass 1, 0 Pass 2."
 
 Worked example (external-source-heavy blog — all claims `external-public`, all skip Pass 1):
 
-> - **External claim verification** — "8 of 10 claims verified (0 unverifiable, 2 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 0 inline, 0 Pass 1, 10 Pass 2."
+> - **External claim verification** — "8 of 10 claims verified (0 unverifiable, 2 contradicted) · 4 specialists (numerical, cross-reference, capability, framing); 1 cross-specialist corroborations · routed: 0 inline, 0 Pass 1, 10 Pass 2 (verified 8, contradicted 2, unverifiable 0)."
 
 ### Subagent decomposition
 

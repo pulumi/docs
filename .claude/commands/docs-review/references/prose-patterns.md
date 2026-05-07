@@ -63,7 +63,7 @@ Run on `content/blog/**` and on `content/docs/**` files longer than ~300 lines. 
 **Dispatch.** Fresh-review path only -- re-entrant updates carry the prior trigger count forward unless the diff materially changes the post; see `docs-review:references:update`. Run the six detectors as two parallel subagents via the Agent tool (`general-purpose`). Each subagent receives only its three detector definitions (verbatim from the list above) plus the file content -- not the other subagent's detectors, not the rendering format, not this dispatch block.
 
 - **`structural`** (Sonnet 4.6). Detectors 1, 3, 5 (uniform per-section template, parallel four-bullet lists, listicle-style numbered intros).
-- **`lexical`** (Haiku 4.5). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction).
+- **`lexical`** (Sonnet 4.6). Detectors 2, 4, 6 (set-piece transitions, em-dash density, hedge-then-pivot construction). Escalated from Haiku 4.5 in S34: the trend across S32 (3/6 reliable) → S33 var-run (0-2/6) → S33 post-C5 (4+3/6) suggested Haiku was missing patterns Sonnet would catch. Sonnet is the cost-quality choice here for a heuristic that tolerates only ~10% recall slack before the AI-drafting section either over-fires (noisy maintainer signal) or under-fires (the canonical signal AI-drafting was designed for goes silent).
 
 Each subagent returns `{detector_index, triggered: bool, evidence: [<line-anchored quote>...]}` per detector. Main agent counts triggers across both; the existing **≥3 of 6** threshold and the rendering format (`docs-review:references:output-format` §AI-drafting signals) are unchanged.
 
