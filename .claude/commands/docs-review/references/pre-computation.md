@@ -25,9 +25,11 @@ Pre-steps cluster by **what they read**. Bundle by reading pattern, not by topic
 | Existing — Vale lint | `vale-findings-filter.py` | `.vale-findings.json` | All changed `*.md` |
 | Existing — Cross-sibling discovery | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
 | Existing — Frontmatter validation (Ship H) | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter |
-| Queued — Reference graph | `docs-reference-graph.py` | `.docs-references.json` | All `content/**/*.md` markdown body (links, shortcodes, images) |
+| Existing — Hugo build (Ship K, S39) | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
 | Queued — Markdown body scan | `markdown-body-scan.py` | `.markdown-mechanics.json` | PR-changed `*.md` body (heading case, structure, list discipline, placeholder/TODO scan) |
 | Queued — Pulumi-internal lookups | `pulumi-lookups.py` | `.pulumi-lookups.json` | Batched `gh api` against `pulumi/*` repos for versions, archive status |
+
+The originally-queued `docs-reference-graph` bundle is subsumed by Ship K: Hugo's render emits broken-link / broken-shortcode / missing-asset warnings as part of the build, and the sitemap-diff covers added/removed-page detection. Resurrect a separate reference-graph script only if a specific bug class slips through Hugo's checks.
 
 Each pre-step is independent. Each writes a self-contained artifact. The reviewer agent reads what's relevant to its current task.
 

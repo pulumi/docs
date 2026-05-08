@@ -93,6 +93,16 @@ When a new or changed file lives in a structurally-templated directory (≥3 par
 
 The model still calibrates phrasing and may demote to ⚠️ when context overrides (e.g., the PR is *intentionally* renaming an existing identifier and removing the old declaration in the same diff — rare; cite the diff line in the trail when applied). The structural decision is the artifact's; demotion requires explicit reasoning in the trail entry.
 
+**Pre-step artifact `.hugo-build.json`** (workflow pre-step `hugo-build-validate.py`, Ship K). Hugo is the canonical authority for routing and build correctness — read this artifact for the build-correctness floor instead of trying to reason about whether the build would succeed. The artifact carries:
+
+- `errors` — `hugo --renderToMemory` ERROR lines from the PR head. Anything here is a build-breaking failure (broken `{{< ref >}}` shortcode, template render failure, content with malformed frontmatter that can't load). Surface every entry as 🚨 build-failure with the exact Hugo message in the trail.
+- `warnings` — Hugo WARN lines. Most are informational (e.g., `WARN openapi: missing intro — tag has no sidecar`). Triage: surface broken-asset / broken-link warnings as 🚨, surface informational warnings only when the PR introduces them.
+- `link_integrity` — subset of warnings/errors that match link/ref/asset patterns (broken refs, missing assets, unresolvable shortcode targets). Surface as 🚨 unless the target is a page the same PR is adding (PR-internal — false-positive scenario).
+- `sitemap_diff.added` / `sitemap_diff.removed` — URLs gained/lost in the rendered sitemap between the PR base and head. Removed URLs that aren't replaced by an alias on a remaining page are orphan candidates (existing inbound links and external SEO break). Surface as 🚨 orphaned-target unless the move-doc alias-injection pattern is visible in the diff.
+- `head_exit_code` — `hugo` exit. Non-zero is a build break the agent must surface even if `errors` is empty.
+
+**Read this artifact early.** When `errors` or `link_integrity` is non-empty, those findings take priority over prose-level claims — the build floor is non-negotiable. Known false-positive scenarios mirror the frontmatter-validation set: PR adds the missing target in the same diff, PR moves a file with an alias, PR-internal cross-link to a sibling being added concurrently. Demotion requires explicit reasoning in the trail.
+
 Templated sections include (non-exhaustive):
 
 - `content/docs/pulumi-cloud/admin/sso/saml/` (SAML setup guides)

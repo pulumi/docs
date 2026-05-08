@@ -383,6 +383,32 @@ jobs:
             --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
 
+      # Pre-compute Hugo build artifact (Ship K, S39): full `hugo --renderToMemory`
+      # at HEAD for warnings/errors/link-integrity, plus `hugo list all` at HEAD
+      # and BASE for sitemap diff. Hugo is the canonical authority for routing/
+      # build correctness — the agent reads this artifact instead of running
+      # `make build` itself (which the workflow intentionally skips per ci.md
+      # hard rule 4). See references/pre-computation.md and
+      # references/fact-check.md §Hugo build artifact for the contract.
+      - name: Pre-compute Hugo build artifact
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: hugo-build
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          # Resolve base SHA and ensure it's fetched (workflow checkout uses
+          # depth=1 so the base may not be in local history).
+          BASE_SHA=$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json baseRefOid --jq .baseRefOid 2>/dev/null || echo "")
+          if [ -n "$BASE_SHA" ]; then
+            git fetch --depth=1 origin "$BASE_SHA" 2>/dev/null || true
+          fi
+          python3 .claude/commands/docs-review/scripts/hugo-build-validate.py \
+            --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
+            --out .hugo-build.json 2>/dev/null \
+            || echo '{"schema_version": 1, "head_exit_code": -1, "errors": [], "warnings": [], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 0, "warnings_count": 0, "link_integrity_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
