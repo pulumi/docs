@@ -2,7 +2,7 @@
 title: Integrations
 title_tag: Neo Integrations
 h1: Neo Integrations
-meta_desc: Bring context from issue trackers, observability platforms, and wikis into Neo tasks so it can act on what your team already knows.
+meta_desc: Bring context from issue trackers, observability platforms, and wikis into Neo tasks, and give Neo scoped access to cloud CLIs through Pulumi ESC.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
@@ -12,11 +12,16 @@ menu:
         identifier: ai-integrations
 ---
 
-Neo integrations bring context from your existing tools into infrastructure work. Neo reads directly from issue trackers, observability platforms, incident response tools, wikis, and databases, then applies that context to infrastructure tasks.
+Neo integrations connect the agent to the rest of your stack. There are two kinds:
 
-Integrations are configured at the organization level by an administrator. Once enabled, they are available to all tasks in the organization.
+- **MCP integrations** bring **context** into a task — issues from Linear, traces from Honeycomb, runbooks from Confluence, incidents from PagerDuty. Each one is a [Model Context Protocol](https://modelcontextprotocol.io/) server that Neo connects to with credentials you store in the Pulumi Service.
+- **[CLI integrations](/docs/ai/integrations/cli/)** let Neo **act** on cloud resources by running `aws`, `gcloud`, `az`, or `kubectl` against credentials managed by [Pulumi ESC](/docs/esc/). The Pulumi Service does not store these credentials — ESC does, and decrypts them only at task time.
 
-## What you can do with integrations
+The rest of this page covers MCP integrations. For CLI integrations, see the [CLI integrations](/docs/ai/integrations/cli/) page.
+
+Integrations of either kind are configured at the organization level by an administrator. Once enabled, they are available to all tasks in the organization.
+
+## What you can do with MCP integrations
 
 - **Pick up work from your issue tracker.** Connect Linear or Jira and ask Neo to implement an issue. Neo reads the issue description, acceptance criteria, and comments, then writes the infrastructure changes to match.
 - **Follow your runbooks.** Connect Atlassian and point Neo at a Confluence runbook. Neo follows the documented steps, adapting them to your current environment.
@@ -24,11 +29,11 @@ Integrations are configured at the organization level by an administrator. Once 
 - **Respond to incidents.** Connect PagerDuty and let Neo look up active incidents, on-call schedules, and escalation policies while it investigates.
 - **Manage application infrastructure together.** Connect Supabase and let Neo coordinate database changes alongside your Pulumi infrastructure code.
 
-## Enabling an integration
+## Enabling an MCP integration
 
 To enable an integration, navigate to **Neo Settings**, select **Integrations**, select the integration, and provide the required credentials.
 
-Each integration connects Neo to the service's [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server, which means Neo can use the full set of tools that service exposes through MCP.
+Each MCP integration connects Neo to the service's MCP server, which means Neo can use the full set of tools that service exposes through MCP.
 
 ## Credential storage
 
