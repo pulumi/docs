@@ -1,13 +1,13 @@
 {{ define "hero" }}
-    <div class="h-96 w-full relative mb-12">
-        <div class="container w-full h-full overflow-hidden content-center pointer-events-none mx-auto lg:rounded-lg">
-            <img src="/images/about-us/team.png" alt="Pulumi team photo"/>
+    <div class="md:h-112 w-full relative md:mt-6 mb-6">
+        <div class="container w-full h-full overflow-hidden pointer-events-none mx-auto md:rounded-lg">
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/about-us/team-photo.jpg" "alt" "Pulumi Team Photo" "class" "object-cover w-full h-full" "maxWidth" 1600) }}
         </div>
     </div>
 {{ end }}
 
 {{ define "main" }}
-    <section id="we-are-pulumi" class="container mx-auto mb-12">
+    <section id="we-are-pulumi" class="container mx-auto px-6 mb-6">
         <div class="title">
             <h2 class="text-5xl">We are Pulumi</h2>
             <div class="flex h-14 w-full ">
@@ -101,7 +101,7 @@
             <p class="text-3xl text-gray-900 font-display">Pulumi was created to make the cloud vastly simpler (and more fun) to use for developers and engineers.</p>
         </div>
         <div class="visualization justify-center hidden md:flex">
-            <img src="/images/about-us/journey.svg" alt="A timeline of Pulumi's history" />
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/about-us/journey.svg" "alt" "A timeline of Pulumi's history") }}
         </div>
         <div class="timeline items-start flex flex-col md:hidden text-left">
             <div class="text-orange-600 mx-auto my-3 text-center">

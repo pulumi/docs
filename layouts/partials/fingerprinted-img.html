@@ -15,6 +15,10 @@
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
     {{ $sizes := slice 400 600 800 }}
+    {{ if ge $maxWidth 1200 }}{{ $sizes = $sizes | append 1200 }}{{ end }}
+    {{ if ge $maxWidth 1600 }}{{ $sizes = $sizes | append 1600 }}{{ end }}
+    {{ if ge $maxWidth 2000 }}{{ $sizes = $sizes | append 2000 }}{{ end }}
+    {{ if ge $maxWidth 2400 }}{{ $sizes = $sizes | append 2400 }}{{ end }}
     {{ $origImg := resources.Get (printf "fingerprinted/%s" $src) }}
     {{ range $sizes }}
         {{ if ge $origImg.Width . }}
@@ -24,8 +28,8 @@
     {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
-<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with $.alt }}alt="{{ . }}"{{ end }} {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ else }}
     {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}
