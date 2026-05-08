@@ -24,8 +24,8 @@
     {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
-<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with $.alt }}alt="{{ . }}"{{ end }} {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with $.class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ $.alt }}" {{ with $.width }}width="{{ . }}"{{ end }} {{ with $.height }}height="{{ . }}"{{ end }} {{ with $.style }}style="{{ . }}"{{ end }} {{ if $srcset }}srcset="{{ delimit $srcset ", " }}" sizes="(max-width: 768px) 100vw, {{ $maxWidth }}px"{{ end }} loading="{{ $.loading | default "lazy" }}" decoding="async"{{ with $.ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ else }}
     {{ $img = $img | fingerprint }}
-<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" {{ with .alt }}alt="{{ . }}"{{ end }} {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
+<img {{ with .class }}class="{{ . }}"{{ end }} src="{{ $img.RelPermalink }}" alt="{{ .alt }}" {{ with .width }}width="{{ . }}"{{ end }} {{ with .height }}height="{{ . }}"{{ end }} {{ with .style }}style="{{ . }}"{{ end }} loading="{{ .loading | default "lazy" }}" decoding="async"{{ with .ariaHidden }} aria-hidden="{{ . }}"{{ end }} />
 {{ end }}
