@@ -221,6 +221,40 @@ def render_markdown(summary: dict) -> str:
     return "\n".join(parts)
 
 
+def emit_threshold_warnings(summary: dict) -> None:
+    """Emit GitHub Actions ::warning:: annotations to stderr when inline-lane
+    drift indicators exceed thresholds.
+
+    Targets the pr18568 r2 rabbit-hole pattern (74 turns, 30+ inline `gh` calls,
+    zero Pass 1 / zero Pass 3 — pure inline drift). The thresholds are advisory
+    observability, not a hard block: the model already has a per-claim cap in
+    `fact-check.md` §Inline lane, this surfaces violations operators can audit.
+
+    Run in any context (CI, local). When run inside a GitHub Actions workflow,
+    the `::warning::` lines are picked up as job annotations; outside CI they
+    are inert stderr text.
+    """
+    counts = summary.get("counts", {}) or {}
+    rm = summary.get("result_meta", {}) or {}
+    gh_calls = counts.get("Bash:gh", 0)
+    turns = rm.get("num_turns") or 0
+
+    if gh_calls > 25:
+        print(
+            f"::warning title=Inline-lane drift::Bash:gh calls = {gh_calls} "
+            f"(threshold 25). Suspected inline rabbit hole — audit per-claim "
+            f"cap compliance in fact-check.md §Inline lane.",
+            file=sys.stderr,
+        )
+    if turns > 80:
+        print(
+            f"::warning title=Inline-lane drift::num_turns = {turns} "
+            f"(threshold 80). Suspected runaway — audit stream-JSON for "
+            f"unbounded inline iteration.",
+            file=sys.stderr,
+        )
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--execution-log", required=True,
@@ -237,6 +271,7 @@ def main() -> int:
         return 2
 
     summary = parse_stream_json(log_path)
+    emit_threshold_warnings(summary)
 
     fmt = args.format
     if fmt is None and args.output:

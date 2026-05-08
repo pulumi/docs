@@ -291,7 +291,11 @@ Each claim's `source_class` (set at extraction) routes it to one of four verific
 
 ### Inline lane (`pulumi-internal`)
 
-Main agent walks §Verification source order steps 1-3 sequentially during the combine step. Most pulumi-internal claims close in <3 turns each (one `gh search` or `gh api` call typically resolves them). Emit the verdict directly into the trail; no subagent dispatch.
+Main agent walks §Verification source order steps 1-3 sequentially during the combine step. Emit the verdict directly into the trail; no subagent dispatch.
+
+**Per-claim cap: 5 gh CLI calls.** After 5 `gh` calls without resolution on a single claim, stop. Reclassify the claim to `ambiguous` (→ Pass 1) or `external-public` (→ Pass 2 / Pass 3) and let the lane designed for harder verifications take it. The cap is hard, not aspirational — when in doubt at call 4, defer rather than push through.
+
+**Don't iterate to find prior discussion.** Specifically: don't loop `gh api repos/pulumi/docs/issues` or `gh api repos/pulumi/docs/pulls` searching for prior PRs / issues / discussions about a topic. That's exploration, not verification — read the actual code path, release notes, or `pulumi/pulumi` source instead. One targeted `gh search code` or `gh api` call resolves the typical pulumi-internal claim; if that doesn't close it, the claim isn't pulumi-internal and belongs in another lane.
 
 If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
 
