@@ -1,19 +1,17 @@
 ---
 title_tag: "Inputs & Outputs in Go | Languages & SDKs"
-meta_desc: A comprehensive guide to using the Pulumi Go SDK's input and output types, including helper constructors, ApplyT, All, output lifting, and common patterns.
-title: Inputs & outputs in Go
-h1: Inputs & outputs in Go
+meta_desc: A guide to the Pulumi Go SDK's input and output types: helper constructors, ApplyT, All, output lifting, and common patterns.
+title: Inputs & Outputs in Go
+h1: Inputs & Outputs in Go
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Inputs & outputs
+        name: Inputs & Outputs
         parent: iac-languages-go
         weight: 3
     languages:
         parent: go
         weight: 3
-aliases:
-    - /docs/languages-sdks/go/go-inputs-outputs/
 ---
 
 The Pulumi Go SDK expresses inputs and outputs through a system of typed interfaces and concrete wrapper types that map directly onto Go's static type system. If you are already familiar with the [general concept of inputs and outputs](/docs/iac/concepts/inputs-outputs/), this page explains how those ideas are realized in Go specifically—covering the typed helper constructors, the `ApplyT` transformation function, output lifting, and a set of patterns that regularly come up when writing real programs.
@@ -36,13 +34,13 @@ pulumi.Float64(3.14)               // pulumi.Float64Input
 For optional fields that accept a pointer type, use the `Ptr` variants:
 
 ```go
-pulumi.StringPtr("optional-value") // *string
-pulumi.IntPtr(8080)                // *int
-pulumi.BoolPtr(false)              // *bool
-pulumi.Float64Ptr(1.5)             // *float64
+pulumi.StringPtr("optional-value") // pulumi.StringPtrInput
+pulumi.IntPtr(8080)                // pulumi.IntPtrInput
+pulumi.BoolPtr(false)              // pulumi.BoolPtrInput
+pulumi.Float64Ptr(1.5)             // pulumi.Float64PtrInput
 ```
 
-The pointer helpers are typically needed when a resource argument is typed as `*string` (or similar) rather than `pulumi.StringInput`. Resource codegen produces both variants depending on whether the underlying provider schema marks the property as optional.
+The `Ptr` helpers are needed when a resource argument is typed as `pulumi.StringPtrInput` (or similar) rather than the non-optional `pulumi.StringInput`. Resource codegen produces both variants depending on whether the underlying provider schema marks the property as optional.
 
 ### Collection inputs
 
@@ -252,8 +250,6 @@ ctx.Export("bucketUrl", pulumi.Sprintf("https://%s.s3.amazonaws.com", bucket.Buc
 **Type assertions within ApplyT.** When using `pulumi.All`, the `args []interface{}` slice must be type-asserted element by element. If the assertion does not match the actual type of the resolved value, the program will panic at runtime. Check the provider documentation to confirm the concrete Go types that a given resource property resolves to.
 
 **Creating resources inside ApplyT.** As noted above, this breaks `pulumi preview` and should be avoided. If you need a resource that depends on another resource's output, pass the output as a direct input argument.
-
-**Nil receivers.** `ApplyT` can be called on a nil output receiver and will return a zero output—it will not panic. This behavior is occasionally useful in component resources that conditionally populate outputs, but relying on it silently makes programs harder to reason about. Prefer explicitly initializing outputs to a known zero value where possible.
 
 ## Further reading
 
