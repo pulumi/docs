@@ -17,6 +17,10 @@ This is the **CI entry point** for the docs review pipeline.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
 6. **No internal-source MCP servers.** Notion and Slack MCP tools are not whitelisted in CI; review output is public. Live code execution beyond `gh` and file reads is unavailable.
+7. **Bash patterns the runner sandbox rejects.** Three friction patterns the harness blocks regardless of the allow-list — write commands that avoid them:
+   - **Reading or writing under `/tmp/`.** The filesystem-path policy restricts `cat`, `grep`, and output redirection to the runner's working directory. Use the `Read` tool (not Bash `cat`) for any `/tmp/...` path; never redirect output to `/tmp/...`. Workflow-managed scratch files (`.fetched-urls.json`, `.editorial-balance.json`, `.vale-findings.json`) live in the workspace root and are Bash-accessible.
+   - **Shell control flow in Bash (`for`, `while`, `case`, `if`).** The multi-op decomposer rejects loops and conditionals even when each constituent command is allow-listed. For iteration over a list, use `python3 -c "..."` (allow-listed) or sequential single-op `gh` invocations.
+   - **Brace expansion (`{a,b,c}`) and subshell grouping (`(cmd1; cmd2)`).** Both decompose unfavorably; expand the list manually or move the logic to a `python3 -c "..."` script.
 
 ---
 
@@ -64,10 +68,10 @@ bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert-validated \
   --body-file "$REVIEW_OUTPUT_FILE"
 ```
 
-The wrapper runs `validate-pinned.py` against the body, then calls `upsert` if validation passes. On a non-zero exit, read the fix-me marker:
+The wrapper runs `validate-pinned.py` against the body, then calls `upsert` if validation passes. On a non-zero exit, read the fix-me marker with the `Read` tool (not Bash `cat` — see Hard rule 7):
 
-```bash
-cat /tmp/validate-pinned.fix-me.md
+```
+Read /tmp/validate-pinned.fix-me.md
 ```
 
 Each violation lists the rule, expected vs actual, and a hint. Re-render the body addressing every violation, then call `upsert-validated` once more. **Cap the retry at one attempt** — if the second validation also fails, fall back to plain `upsert` with the unfixed body and accept the soft-floor:
