@@ -23,7 +23,7 @@
   <div class="flex flex-col gap-1.5 p-4">
     <h2 id="nav-mobile-sheet-title" class="sr-only">Navigation</h2>
     <button type="button" data-nav-sheet-close aria-label="Close navigation"
-      class="absolute top-4 right-4 inline-flex size-8 items-center justify-center rounded-md text-gray-950 transition-all hover:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+      class="absolute top-4 right-4 inline-flex size-8 items-center justify-center rounded-md text-gray-950 outline-none transition-all hover:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 focus-visible:outline-transparent">
       {{ partial "icon.html" (dict "name" "x" "class" "size-4") }}
     </button>
   </div>
@@ -36,11 +36,11 @@
           <button type="button" data-nav-collapsible-trigger
             aria-expanded="false"
             aria-controls="{{ $panelId }}"
-            class="group flex w-full items-center justify-between px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
+            class="group flex w-full items-center justify-between rounded-md px-3 py-4 text-base font-semibold text-gray-950 outline-none transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1">
             {{ $item.label }}
             {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "size-4 transition-transform duration-200 [[data-open=true]_&]:rotate-180") }}
           </button>
-          <div data-nav-collapsible-panel data-state="closed"
+          <div data-nav-collapsible-panel data-state="closed" inert
             id="{{ $panelId }}"
             class="overflow-hidden max-h-0 opacity-0 transition-all duration-200
                    data-[state=open]:max-h-[2000px] data-[state=open]:opacity-100">
@@ -65,7 +65,7 @@
       {{ else }}
         <a href="{{ $item.href }}" data-nav-sheet-close
           {{ with $item.track }}data-track="{{ . }}"{{ end }}
-          class="block border-b border-gray-100 px-3 py-4 text-base font-semibold text-gray-950 transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:outline-none">
+          class="block rounded-md border-b border-gray-100 px-3 py-4 text-base font-semibold text-gray-950 outline-none transition-colors hover:text-violet-700 focus-visible:text-violet-700 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1">
           {{ $item.label }}
         </a>
       {{ end }}
@@ -75,7 +75,6 @@
   <div class="flex flex-col gap-2 border-t border-gray-100 p-4">
      <a href="{{ $nav.cta.contact.href }}"
       {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
-      data-nav-loggedout
       class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
       {{ $nav.cta.contact.label }}
     </a>

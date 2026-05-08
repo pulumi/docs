@@ -9,7 +9,6 @@
             data-nav-trigger-button
             data-nav-index="{{ $dropdownIdx }}"
             aria-expanded="false"
-            aria-haspopup="menu"
             aria-controls="nav-desktop-popup"
             class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100/70">
             {{ $item.label }}
@@ -19,7 +18,7 @@
         {{ else }}
           <a href="{{ $item.href }}"
             {{ with $item.track }}data-track="{{ . }}"{{ end }}
-            class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+            class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1">
             {{ $item.label }}
           </a>
         {{ end }}
