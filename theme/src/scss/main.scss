@@ -21,7 +21,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // These register custom utility classes with Tailwind v4.
 @utility btn {
     transition: all 120ms linear;
-    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
+    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded-lg inline-block;
     @apply bg-violet-primary border border-violet-primary text-white text-center;
 }
 

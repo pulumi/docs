@@ -1,0 +1,155 @@
+cta:
+  heading: The infrastructure as code platform for any cloud.
+  buttons:
+    - label: Request a demo
+      href: /request-a-demo/
+      style: secondary
+      track: footer-cta-demo
+    - label: Get started
+      href: https://app.pulumi.com/signup
+      style: primary
+      track: footer-cta-signup
+
+brand:
+  tagline_html: |
+    Open source<br>and free forever.
+
+columns:
+  - heading: Resources
+    items:
+      - label: Docs
+        href: /docs/
+        track: footer-docs
+      - label: Registry
+        href: /registry/
+        track: footer-registry
+      - label: Templates
+        href: /templates/
+        track: footer-templates
+      - label: Tutorials
+        href: /tutorials/
+        track: footer-tutorials
+      - label: Guides
+        href: /guides/
+        track: footer-guides
+      - label: Events
+        href: /events/
+        track: footer-events
+      - label: Community
+        href: /community/
+        track: footer-community
+
+  - heading: Platform
+    items:
+      - label: Overview
+        href: /product/
+        track: footer-platform-overview
+      - label: Infrastructure as code
+        href: /product/infrastructure-as-code/
+        track: footer-platform-iac
+      - label: Agentic infrastructure
+        href: /product/neo/
+        track: footer-platform-neo
+      - label: Secrets & configuration
+        href: /product/secrets-management/
+        track: footer-platform-secrets
+      - label: Internal developer platform
+        href: /product/internal-developer-platforms/
+        track: footer-platform-idp
+      - label: Insights & governance
+        href: /product/insights-governance/
+        track: footer-platform-insights
+      - label: Pricing
+        href: /pricing/
+        track: footer-platform-pricing
+
+  - heading: Pulumi for
+    items:
+      - label: Enterprise
+        href: /enterprise/
+        track: footer-for-enterprise
+      - label: AWS
+        href: /aws/
+        track: footer-for-aws
+      - label: Azure
+        href: /azure/
+        track: footer-for-azure
+      - label: Google Cloud
+        href: /gcp/
+        track: footer-for-gcp
+      - label: Kubernetes
+        href: /kubernetes/
+        track: footer-for-kubernetes
+      - label: Artificial intelligence
+        href: /solutions/ai/
+        track: footer-for-ai
+
+  - heading: Company
+    items:
+      - label: About
+        href: /about/
+        track: footer-about
+      - label: Blog
+        href: /blog/
+        track: footer-blog
+      - label: Careers
+        href: /careers/
+        track: footer-careers
+      - label: Newsroom
+        href: /about/newsroom/
+        track: footer-newsroom
+      - label: Awards
+        href: /awards/
+        track: footer-awards
+      - label: Contact us
+        href: /contact/
+        track: footer-contact
+
+  - heading: Get help
+    items:
+      - label: Join our Slack
+        href: https://slack.pulumi.com/
+        track: footer-help-slack
+      - label: Talk to a human
+        href: /contact/
+        track: footer-help-human
+      - label: Submit a ticket
+        href: https://support.pulumi.com/
+        track: footer-help-ticket
+      - label: Request a demo
+        href: /request-a-demo/
+        track: footer-help-demo
+      - label: Professional services
+        href: /proserv/
+        track: footer-help-proserv
+
+connect:
+  heading: Connect
+  # icon: brand-icon name from assets/icons/brand/.
+  social:
+    - label: Pulumi Slack
+      href: https://slack.pulumi.com/
+      icon: brand/slack
+      track: footer-social-slack
+    - label: Pulumi GitHub
+      href: https://github.com/pulumi/
+      icon: brand/github
+      track: footer-social-github
+    - label: Pulumi YouTube
+      href: https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw
+      icon: brand/youtube
+      track: footer-social-youtube
+    - label: Pulumi X
+      href: https://x.com/pulumicorp
+      icon: brand/x
+      track: footer-social-x
+    - label: Pulumi LinkedIn
+      href: https://www.linkedin.com/company/pulumi/
+      icon: brand/linkedin
+      track: footer-social-linkedin
+
+newsletter:
+  heading: Get our newsletter
+  hubspot_form_id: 027b4c6d-9b73-4ad8-b149-3c8b07fff608
+
+# Legal links come from .Site.Menus.legal (content/legal/*.md frontmatter).

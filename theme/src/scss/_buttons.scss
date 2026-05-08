@@ -1,28 +1,32 @@
 @import "mixins";
 
-// NOTE: @utility declarations for btn/btn-lg/btn-orange are in main.scss (top-level)
-// because @utility cannot be nested inside @layer.
+// .btn, .btn-lg, .btn-orange base styles are declared as @utility in main.scss
+// (utilities layer). Pseudo-class states live here in @layer components and
+// would lose to the utilities-layer base — so they need !important to win.
+.btn:hover  {
+    background-color: var(--color-violet-800) !important;
+    border-color: var(--color-violet-800) !important;
+}
+.btn:active {
+    background-color: var(--color-violet-900) !important;
+    border-color: var(--color-violet-900) !important;
+}
 
-.btn {
-    @include transition;
-
-    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-violet-primary border border-violet-primary text-white text-center;
-
-    &:hover {
-        @apply bg-violet-800 border-violet-800 text-white;
-    }
-
-    &:active {
-        @apply bg-violet-900 border-violet-900 text-white;
-    }
+.btn-orange:hover {
+    background-color: var(--color-orange-600) !important;
+    border-color: var(--color-orange-700) !important;
 }
 
 .btn-secondary {
-    @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
+    @apply relative rounded-lg text-lg cursor-pointer z-auto border;
+    background-color: var(--color-white) !important;
+    color: var(--color-black) !important;
+    border-color: var(--color-gray-300) !important;
 
     &:hover {
-        @apply bg-white text-black border-gray-600;
+        background-color: var(--color-white) !important;
+        color: var(--color-black) !important;
+        border-color: var(--color-gray-600) !important;
     }
 }
 
@@ -34,14 +38,6 @@
     @apply py-3 px-5;
 }
 
-.btn-orange {
-    @apply bg-orange-500 border-orange-600;
-
-    &:hover {
-        @apply bg-orange-600 border-orange-700;
-    }
-}
-
 .btn-translucent {
     background-color: color-mix(in srgb, var(--color-violet-primary) 30%, transparent);
     border-color: color-mix(in srgb, var(--color-violet-primary) 50%, transparent);
@@ -49,16 +45,6 @@
     &:hover {
         background-color: color-mix(in srgb, var(--color-violet-primary) 70%, transparent);
         border-color: var(--color-violet-primary);
-    }
-}
-
-.btn-orange-translucent {
-    background-color: color-mix(in srgb, var(--color-orange-500) 30%, transparent);
-    border-color: color-mix(in srgb, var(--color-orange-500) 50%, transparent);
-
-    &:hover {
-        background-color: color-mix(in srgb, var(--color-orange-500) 70%, transparent);
-        border-color: var(--color-orange-500);
     }
 }
 

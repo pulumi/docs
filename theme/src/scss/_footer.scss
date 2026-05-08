@@ -1,24 +1,51 @@
-.footer {
-    a.link {
-        @apply text-black;
-        &:hover {
-            @apply underline;
+@import "mixins";
+
+.footer-heading {
+    @apply font-mono font-normal uppercase mb-3 text-[12px] tracking-[0.05em] leading-6 text-violet-300;
+}
+
+[data-statuspage-state="minor"] [data-statuspage-dot] { @apply bg-yellow-500; }
+[data-statuspage-state="major"] [data-statuspage-dot] { @apply bg-orange-500; }
+[data-statuspage-state="critical"] [data-statuspage-dot] { @apply bg-red-500; }
+[data-statuspage-state="maintenance"] [data-statuspage-dot] { @apply bg-gray-400; }
+
+// Hubspot renders <input> elements at runtime, so we can't apply utilities
+// at template time.
+.newsletter.newsletter-inline {
+    @apply items-stretch w-full md:w-[250px];
+
+    form {
+        @apply flex gap-0;
+    }
+    
+    .hs-submit,
+    .actions,
+    .input {
+        @apply flex items-stretch;
+    }
+
+    .hs-form-field {
+        @apply pt-0!;
+    }
+    
+    .hs-email {
+        @apply w-full!;
+        input {
+            @apply w-full!;
         }
     }
 
-    .footer-nav-container {
-        @apply flex flex-wrap justify-center mt-32 px-8;
+    .hs-submit input {
+        @apply ml-0!;
+    }
 
-        ul {
-            @apply w-1/2 mt-8;
+    input {
+        @apply bg-black text-white border border-gray-800 rounded-l-lg rounded-r-none! h-10 py-0;
 
-            @include screen-md {
-                @apply w-1/5 mt-0;
-            }
+        &::placeholder { @apply text-gray-500; }
 
-            li {
-                @apply mb-4 font-semibold;
-            }
+        &.hs-button {
+            @apply leading-1 bg-violet-primary text-white rounded-l-none! rounded-r-lg! h-10 px-2! py-0 ml-0;
         }
     }
 }
