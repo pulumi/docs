@@ -214,25 +214,33 @@ def main() -> int:
     out_path = Path(args.out)
 
     # 1. Build at HEAD.
+    errors: list[str] = []
+    warnings: list[str] = []
+    link_integrity: list[str] = []
+    exit_code = 0
     try:
         errors, warnings, link_integrity, exit_code = run_hugo_render(workspace)
     except subprocess.TimeoutExpired:
-        errors = [f"hugo --renderToMemory timed out after {HUGO_TIMEOUT_RENDER_S}s"]
-        warnings = []
-        link_integrity = []
+        errors.append(f"hugo --renderToMemory timed out after {HUGO_TIMEOUT_RENDER_S}s")
         exit_code = -1
     except FileNotFoundError:
-        errors = ["hugo binary not found on PATH"]
-        warnings = []
-        link_integrity = []
+        errors.append("hugo binary not found on PATH")
+        exit_code = -1
+    except OSError as e:
+        errors.append(f"hugo --renderToMemory OSError: {e}")
         exit_code = -1
 
     # 2. List pages at HEAD.
+    head_pages: list[dict] = []
     try:
         head_pages = run_hugo_list(workspace)
     except subprocess.TimeoutExpired:
-        head_pages = []
         errors.append(f"hugo list all (head) timed out after {HUGO_TIMEOUT_LIST_S}s")
+    except FileNotFoundError:
+        # Already recorded by run_hugo_render's except.
+        pass
+    except OSError as e:
+        errors.append(f"hugo list all (head) OSError: {e}")
 
     # 3. List pages at BASE in a separate worktree.
     base_pages: list[dict] = []
@@ -248,6 +256,10 @@ def main() -> int:
                     warnings.append(
                         f"hugo list all (base) timed out after {HUGO_TIMEOUT_LIST_S}s"
                     )
+                except FileNotFoundError:
+                    pass
+                except OSError as e:
+                    warnings.append(f"hugo list all (base) OSError: {e}")
                 finally:
                     remove_base_worktree(workspace, dest)
             else:
@@ -278,5 +290,52 @@ def main() -> int:
     return 0
 
 
+def safe_main() -> int:
+    """Top-level wrapper: never crash. Always emit a JSON artifact, even on
+    unexpected exceptions, so the workflow's `||` fallback is reserved for
+    cases where the script itself can't even start (ImportError, etc.)."""
+    try:
+        return main()
+    except SystemExit:
+        raise
+    except BaseException as e:
+        # Try to recover the --out path from argv to emit a structured error.
+        out_path = None
+        argv = sys.argv
+        for i, a in enumerate(argv):
+            if a == "--out" and i + 1 < len(argv):
+                out_path = Path(argv[i + 1])
+                break
+            if a.startswith("--out="):
+                out_path = Path(a.split("=", 1)[1])
+                break
+        if out_path is not None:
+            err_payload = {
+                "schema_version": 1,
+                "head_exit_code": -1,
+                "errors": [f"hugo-build-validate uncaught exception: {type(e).__name__}: {e}"],
+                "warnings": [],
+                "link_integrity": [],
+                "sitemap_diff": {"added": [], "removed": [], "changed": []},
+                "stats": {
+                    "errors_count": 1,
+                    "warnings_count": 0,
+                    "link_integrity_count": 0,
+                    "head_pages_count": 0,
+                    "base_pages_count": 0,
+                    "added_pages_count": 0,
+                    "removed_pages_count": 0,
+                },
+            }
+            try:
+                out_path.write_text(json.dumps(err_payload, indent=2))
+            except OSError:
+                pass
+        # Surface the original error to stderr so workflow logs see it.
+        import traceback
+        traceback.print_exc(file=sys.stderr)
+        return 0  # Don't trip the workflow's || fallback; we wrote a useful artifact.
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(safe_main())

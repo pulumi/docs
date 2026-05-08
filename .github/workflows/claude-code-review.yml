@@ -404,10 +404,15 @@ jobs:
           if [ -n "$BASE_SHA" ]; then
             git fetch --depth=1 origin "$BASE_SHA" 2>/dev/null || true
           fi
+          # Don't redirect stderr — the script's safe_main wrapper guarantees
+          # a useful JSON artifact even on uncaught exceptions, and surfacing
+          # tracebacks in workflow logs is the whole observability story when
+          # things go wrong. The `||` fallback only fires if the script can't
+          # even start (ImportError, missing python3, etc.).
           python3 .claude/commands/docs-review/scripts/hugo-build-validate.py \
             --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
-            --out .hugo-build.json 2>/dev/null \
-            || echo '{"schema_version": 1, "head_exit_code": -1, "errors": [], "warnings": [], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 0, "warnings_count": 0, "link_integrity_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
+            --out .hugo-build.json \
+            || echo '{"schema_version": 1, "head_exit_code": -1, "errors": ["hugo-build-validate.py failed to start"], "warnings": [], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
