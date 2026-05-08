@@ -17,6 +17,12 @@
   const contentPanels: HTMLElement[] = navRoot
     ? Array.from(navRoot.querySelectorAll<HTMLElement>('[data-nav-content]'))
     : [];
+  // All top-level nav items in visual order — dropdown triggers AND plain
+  // links — so forward-Tab out of a popup can land on a plain link that
+  // sits between dropdowns instead of skipping it.
+  const topLevelItems: HTMLElement[] = navRoot
+    ? Array.from(navRoot.querySelectorAll<HTMLElement>(':scope > ul > li > a[href], :scope > ul > li > button[data-nav-trigger-button]'))
+    : [];
 
   let currentIdx = -1;
   let isOpen = false;
@@ -110,7 +116,8 @@
 
   // Slide new content in, old content out, rest hidden.
   // Non-active panels get pointer-events:none so their (invisible) stacked
-  // children don't intercept clicks meant for the active panel.
+  // children don't intercept clicks meant for the active panel, and `inert`
+  // so their links are skipped by Tab and removed from the a11y tree.
   function slideContent(nextIdx: number, prevIdx: number): void {
     const dir = prevIdx >= 0 && prevIdx < nextIdx ? 1 : -1;
     contentPanels.forEach((c, i) => {
@@ -119,6 +126,7 @@
         c.style.opacity = '0';
         c.style.transform = `translateX(${dir * SLIDE_PX}px)`;
         c.style.pointerEvents = 'auto';
+        c.removeAttribute('inert');
         c.offsetHeight; // reflow
         c.style.transition = `opacity ${DUR_MORPH} ${EASE}, transform ${DUR_MORPH} ${EASE}`;
         c.style.opacity = '1';
@@ -128,13 +136,21 @@
         c.style.opacity = '0';
         c.style.transform = `translateX(${-dir * SLIDE_PX}px)`;
         c.style.pointerEvents = 'none';
+        c.setAttribute('inert', '');
       } else {
         c.style.transition = 'none';
         c.style.opacity = '0';
         c.style.transform = 'translateX(0)';
         c.style.pointerEvents = 'none';
+        c.setAttribute('inert', '');
       }
     });
+  }
+
+  function panelItems(idx: number): HTMLElement[] {
+    const panel = contentPanels[idx];
+    if (!panel) return [];
+    return Array.from(panel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'));
   }
 
   function popupLeftFor(idx: number): number {
@@ -264,8 +280,28 @@
 
       btn.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
-          closeDropdowns(true);
-          btn.focus();
+          if (isOpen) closeDropdowns(true);
+          return;
+        }
+        if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (isOpen && currentIdx === idx) {
+            if (e.key === 'ArrowDown') {
+              panelItems(idx)[0]?.focus();
+            } else {
+              closeDropdowns(true);
+            }
+          } else {
+            openDropdown(idx);
+            panelItems(idx)[0]?.focus();
+          }
+          return;
+        }
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (!isOpen || currentIdx !== idx) openDropdown(idx);
+          const items = panelItems(idx);
+          items[items.length - 1]?.focus();
         }
       });
     });
@@ -276,6 +312,63 @@
 
     popup.addEventListener('mouseleave', () => {
       closeTimer = setTimeout(() => closeDropdowns(false), HOVER_CLOSE_DELAY);
+    });
+
+    popup.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (currentIdx < 0) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        const trigger = triggerBtns[currentIdx];
+        closeDropdowns(true);
+        trigger?.focus();
+        return;
+      }
+      const items = panelItems(currentIdx);
+      if (items.length === 0) return;
+      const activeIdx = items.indexOf(document.activeElement as HTMLElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        items[activeIdx >= 0 ? (activeIdx + 1) % items.length : 0].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        items[activeIdx > 0 ? activeIdx - 1 : items.length - 1].focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        items[0].focus();
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        items[items.length - 1].focus();
+      } else if (e.key === 'Tab' && e.shiftKey && activeIdx === 0) {
+        // The popup sits after the triggers in DOM order, so Shift+Tab from
+        // the first item would land on the last trigger — not the one that
+        // opened this menu. Redirect back to the active trigger and close.
+        e.preventDefault();
+        const trigger = triggerBtns[currentIdx];
+        closeDropdowns(true);
+        trigger?.focus();
+      } else if (e.key === 'Tab' && !e.shiftKey && activeIdx === items.length - 1) {
+        // Forward Tab from the last item: close the popup and focus the next
+        // top-level nav item — dropdown trigger or plain link — so we don't
+        // skip plain-link items that sit between dropdowns. If we're at the
+        // last top-level item, fall through to default Tab so focus exits
+        // the nav to the CTAs.
+        const trigger = triggerBtns[currentIdx];
+        const triggerPos = topLevelItems.indexOf(trigger);
+        const nextItem = triggerPos >= 0 ? topLevelItems[triggerPos + 1] : null;
+        if (nextItem) {
+          e.preventDefault();
+          closeDropdowns(true);
+          nextItem.focus();
+        }
+      }
+    });
+
+    // Close when keyboard focus leaves the nav entirely (e.g. Tab past the
+    // last popup item). The popup is the last child of navRoot, so a forward
+    // Tab from the last item naturally exits the nav.
+    navRoot.addEventListener('focusout', (e: FocusEvent) => {
+      const next = e.relatedTarget as Node | null;
+      if (!next || !navRoot.contains(next)) closeDropdowns(false);
     });
 
     document.addEventListener('click', (e: MouseEvent) => {
@@ -294,12 +387,24 @@
   const overlay = document.querySelector<HTMLElement>('[data-nav-sheet-overlay]');
   const navDesktopMql = window.matchMedia('(min-width: 1200px)');
 
+  // Mark every direct child of <body> inert except the sheet and its overlay,
+  // so Tab cannot escape the dialog. The sheet uses role="dialog"
+  // aria-modal="true", but aria-modal alone does not affect focus order.
+  function setBackgroundInert(on: boolean): void {
+    Array.from(document.body.children).forEach(el => {
+      if (el === sheet || el === overlay) return;
+      if (on) el.setAttribute('inert', '');
+      else el.removeAttribute('inert');
+    });
+  }
+
   function openSheet(): void {
     if (!sheet) return;
     sheet.dataset.state = 'open';
     if (overlay) overlay.dataset.state = 'open';
     if (sheetTrigger) sheetTrigger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
   }
 
   function closeSheet(): void {
@@ -308,6 +413,8 @@
     if (overlay) overlay.dataset.state = 'closed';
     if (sheetTrigger) sheetTrigger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    setBackgroundInert(false);
+    sheetTrigger?.focus();
   }
 
   if (sheetTrigger) sheetTrigger.addEventListener('click', openSheet);
@@ -334,10 +441,12 @@
       if (open) {
         item.removeAttribute('data-open');
         panel.dataset.state = 'closed';
+        panel.setAttribute('inert', '');
         trigger.setAttribute('aria-expanded', 'false');
       } else {
         item.dataset.open = 'true';
         panel.dataset.state = 'open';
+        panel.removeAttribute('inert');
         trigger.setAttribute('aria-expanded', 'true');
       }
     });
