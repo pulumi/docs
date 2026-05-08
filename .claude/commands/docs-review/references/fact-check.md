@@ -86,6 +86,8 @@ Templated sections include (non-exhaustive):
 
 Any directory with ≥3 files whose H1 titles read as parallel entities qualifies — detect dynamically rather than relying on this list.
 
+**Zero-peer check.** If the changed file's directory has zero existing peers but the file's category (clouds, integrations, languages, providers, frameworks, etc.) has known parallel pages elsewhere in the docs tree, search adjacent paths before concluding "no siblings exist yet." Different directory layouts for the same category often coexist (e.g., `<root>/<category>/<x>/` vs `<root>/<x>/<category>/`). If a parallel set is found, the new file is both a sibling-consistency claim *and* a 🚨 file-location finding — the PR is establishing the page at a divergent path. The check is non-optional: silence on cross-sibling reads ("not in a templated section") is a positive assertion that *no parallel directory tree exists*; the model can't make that assertion without having looked.
+
 **What to extract.** One record per:
 
 - Navigation-step instruction ("Settings → Access Management"; "click *Configure*"; "select the *SAML* tab").
