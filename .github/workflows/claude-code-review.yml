@@ -335,6 +335,30 @@ jobs:
             --pr "$PR" --out .editorial-balance.json 2>/dev/null \
             || echo '{"trigger": null, "files": []}' > .editorial-balance.json
 
+      # Pre-compute cross-sibling discovery so the model uses a structurally-
+      # guaranteed sibling list instead of computing the "is this in a templated
+      # section?" decision inline. Encodes Ship F's zero-peer parallel-path
+      # check deterministically — see references/fact-check.md §Cross-sibling
+      # consistency for the artifact contract.
+      - name: Pre-compute cross-sibling discovery
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: cross-sibling
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/docs/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"files": []}' > .cross-sibling-discovery.json
+            echo "cross-sibling: no docs files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
+            --pr "$PR" --out .cross-sibling-discovery.json 2>/dev/null \
+            || echo '{"files": []}' > .cross-sibling-discovery.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access

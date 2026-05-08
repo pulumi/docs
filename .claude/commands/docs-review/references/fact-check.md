@@ -77,6 +77,8 @@ This rule also applies when the body is unchanged but a frontmatter sub-key was 
 
 When a new or changed file lives in a structurally-templated directory (≥3 parallel pages on the same subject), every nav step, heading, required-field name, and placeholder is a *sibling-consistency* claim. Extract each as a `claim_type: cross-reference` record and verify by reading the siblings.
 
+**Pre-step artifact `.cross-sibling-discovery.json`** (workflow pre-step `cross-sibling-discover.py`). For each PR-changed `*.md` under `content/docs/`, the pre-step computes `directory_peers` (in-dir `*.md` peers excluding `_index.md`), runs the parallel-path check (Zero-peer rule below) deterministically, and writes the result. Per file, the artifact carries `in_templated_section`, `directory_peers`, `parallel_path_check` (with `found` paths and any `structural_warning`), and `siblings_for_dispatch` (the union of peer files and parallel-path findings, de-duped). **Read this artifact first.** Do *not* recompute the discovery decision inline — the pre-step's output is the structural floor: any `structural_warning` it emits must surface as a 🚨 file-location finding, and the `siblings_for_dispatch` list is the dispatch base. The model still applies sibling-set filtering judgment (e.g., distinguish vendor pages from admin/troubleshooting peers in the same dir) before fan-out, but the discovery decision itself is deterministic.
+
 Templated sections include (non-exhaustive):
 
 - `content/docs/pulumi-cloud/admin/sso/saml/` (SAML setup guides)
