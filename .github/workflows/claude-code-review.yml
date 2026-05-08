@@ -359,6 +359,30 @@ jobs:
             --pr "$PR" --out .cross-sibling-discovery.json 2>/dev/null \
             || echo '{"files": []}' > .cross-sibling-discovery.json
 
+      # Pre-compute frontmatter validation: menu-parent identifier resolution
+      # against the global menu-identifier map, plus alias-collision detection
+      # (PR-internal and repo-wide). See references/fact-check.md §Cross-sibling
+      # consistency for the artifact contract. Bundle 1 of the atomized
+      # discovery pattern (ref: references/pre-computation.md).
+      - name: Pre-compute frontmatter validation
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: frontmatter-validate
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
+            echo "frontmatter-validate: no content files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
+            --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
+            || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
+
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
