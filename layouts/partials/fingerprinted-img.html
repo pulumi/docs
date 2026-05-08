@@ -15,6 +15,10 @@
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
     {{ $sizes := slice 400 600 800 }}
+    {{ if ge $maxWidth 1200 }}{{ $sizes = $sizes | append 1200 }}{{ end }}
+    {{ if ge $maxWidth 1600 }}{{ $sizes = $sizes | append 1600 }}{{ end }}
+    {{ if ge $maxWidth 2000 }}{{ $sizes = $sizes | append 2000 }}{{ end }}
+    {{ if ge $maxWidth 2400 }}{{ $sizes = $sizes | append 2400 }}{{ end }}
     {{ $origImg := resources.Get (printf "fingerprinted/%s" $src) }}
     {{ range $sizes }}
         {{ if ge $origImg.Width . }}
