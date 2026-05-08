@@ -389,16 +389,27 @@
   const overlay = document.querySelector<HTMLElement>('[data-nav-sheet-overlay]');
   const navDesktopMql = window.matchMedia('(min-width: 1200px)');
 
-  // Mark every direct child of <body> inert except the sheet and its overlay,
-  // so Tab cannot escape the dialog. The sheet uses role="dialog"
+  // Mark every direct child of <body> inert except the sheet, its overlay, and
+  // higher-priority overlays (consent banner / consent preferences dialog), so
+  // Tab cannot escape the dialog. The sheet uses role="dialog"
   // aria-modal="true", but aria-modal alone does not affect focus order.
   // Track which elements we modified so closing the sheet doesn't clear
   // `inert` from body-level elements that another component owns.
   let bgInerted: Element[] = [];
+  function isSheetBypass(el: Element): boolean {
+    return (
+      el.id === 'segment-consent-manager' ||
+      el.classList.contains('consent-dialog-overlay')
+    );
+  }
   function setBackgroundInert(on: boolean): void {
     if (on) {
       bgInerted = Array.from(document.body.children).filter(
-        el => el !== sheet && el !== overlay && !el.hasAttribute('inert'),
+        el =>
+          el !== sheet &&
+          el !== overlay &&
+          !isSheetBypass(el) &&
+          !el.hasAttribute('inert'),
       );
       bgInerted.forEach(el => el.setAttribute('inert', ''));
     } else {
