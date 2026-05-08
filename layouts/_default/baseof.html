@@ -2,11 +2,12 @@
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
     <body class="section-{{ .Section }}">
+        <a href="#main" class="fixed left-2 top-2.5 z-[100] inline-flex h-9 -translate-y-16 items-center rounded-lg border border-gray-200 bg-white px-4 text-sm font-regular text-gray-950 no-underline outline-none hover:border-gray-300 focus:translate-y-0 focus-visible:border-violet-400 focus-visible:ring-3 focus-visible:ring-violet-400/50">Skip to main content</a>
         <pulumi-root></pulumi-root>
         {{ partial "header.html" . }}
         {{ block "hero" . }}
         {{ end }}
-        <main>
+        <main id="main" tabindex="-1" class="focus:outline-none">
             {{ block "main" . }}
             {{ end }}
 
