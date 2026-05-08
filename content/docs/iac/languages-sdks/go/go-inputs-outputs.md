@@ -262,4 +262,3 @@ ctx.Export("bucketUrl", pulumi.Sprintf("https://%s.s3.amazonaws.com", bucket.Buc
 - [Accessing multiple outputs with All](/docs/iac/concepts/inputs-outputs/all/) — the `All` function explained
 - [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/) — `pulumi.Sprintf` and JSON helpers
 - [Go SDK API reference](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi) — the complete package documentation
-
