@@ -13,7 +13,7 @@ frontmatter, walk content/**/*.md to build a global menu-identifier map, check
 that each declared parent exists in the same named menu. Same atomization pattern,
 different layer.
 
-Two checks bundled (both walk frontmatter, single tree walk):
+Three checks bundled (single content-tree walk + redirects scan):
 
 1. **Menu-parent validation.** For each `menu.<name>.parent: <X>` in a changed
    file's frontmatter, verify `(name, X)` exists somewhere in the global
@@ -25,6 +25,16 @@ Two checks bundled (both walk frontmatter, single tree walk):
    - PR-internal: any alias appearing in 2+ PR-changed files.
    - Repo-wide: any alias on a PR-changed file that already exists as an alias
      on a different (non-PR-changed) canonical file.
+
+3. **URL-ownership check (Ship J).** Build a global URL-ownership map that
+   unifies Hugo `aliases:` (from all `content/**/*.md` frontmatter) and S3
+   redirects (from `scripts/redirects/*.txt`), each entry tagged with `scope:
+   hugo-alias` or `scope: s3-redirect`. For each PR-changed file, compute its
+   rendered URL and look it up in the map. If another file or redirect entry
+   claims that URL, surface as 🚨 — the PR is dropping content at a URL
+   someone else already owns. Replaces the brittle hardcoded `PARALLEL_PATTERNS`
+   table that lived in `cross-sibling-discover.py`; uses Hugo's own routing
+   model + the S3 layer the move-doc skill maintains.
 
 Usage:
     frontmatter-validate.py --pr <PR_NUMBER> --out <out.json>
@@ -226,30 +236,121 @@ def extract_aliases(fm: dict) -> list[str]:
     return []
 
 
-def build_global_maps(repo_root: Path) -> tuple[dict, dict]:
-    """Walk content/**/*.md and build:
+def build_global_maps(repo_root: Path) -> tuple[dict, dict, dict]:
+    """Walk content/**/*.md + scripts/redirects/*.txt and build:
 
     - identifier_map: {(menu_name, identifier): [file, ...]}
-    - alias_map: {alias: [file, ...]}
+    - alias_map: {alias: [file, ...]}  -- Hugo aliases only, used by alias-collision
+    - url_ownership_map: {url: [{file, scope}, ...]}  -- unified Hugo aliases + S3 redirects
 
-    Files indexed by repo-relative path. Multiple files with the same identifier
-    or alias are recorded (collision detection happens at check time).
+    Files indexed by repo-relative path. The url_ownership_map is the broader
+    "who claims this URL" view; alias_map remains as the narrower "who's declared
+    it as a Hugo alias" view that alias-collision uses.
     """
     identifier_map: dict[tuple[str, str], list[str]] = {}
     alias_map: dict[str, list[str]] = {}
+    url_ownership_map: dict[str, list[dict]] = {}
     content_root = repo_root / "content"
-    if not content_root.is_dir():
-        return identifier_map, alias_map
-    for md_path in content_root.rglob("*.md"):
-        rel = md_path.relative_to(repo_root).as_posix()
-        fm = read_frontmatter(md_path)
-        if fm is None:
-            continue
-        for name, ident in extract_menu_identifiers(fm):
-            identifier_map.setdefault((name, ident), []).append(rel)
-        for alias in extract_aliases(fm):
-            alias_map.setdefault(alias, []).append(rel)
-    return identifier_map, alias_map
+    if content_root.is_dir():
+        for md_path in content_root.rglob("*.md"):
+            rel = md_path.relative_to(repo_root).as_posix()
+            fm = read_frontmatter(md_path)
+            if fm is None:
+                continue
+            for name, ident in extract_menu_identifiers(fm):
+                identifier_map.setdefault((name, ident), []).append(rel)
+            for alias in extract_aliases(fm):
+                normalized = normalize_url(alias)
+                alias_map.setdefault(alias, []).append(rel)
+                url_ownership_map.setdefault(normalized, []).append({
+                    "file": rel, "scope": "hugo-alias",
+                })
+    # Add S3 redirect sources to the url_ownership_map.
+    redirects_root = repo_root / "scripts" / "redirects"
+    if redirects_root.is_dir():
+        for txt_path in sorted(redirects_root.glob("*.txt")):
+            try:
+                lines = txt_path.read_text(encoding="utf-8", errors="replace").splitlines()
+            except OSError:
+                continue
+            rel_redirect = txt_path.relative_to(repo_root).as_posix()
+            for ln_num, line in enumerate(lines, start=1):
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                if "|" not in line:
+                    continue
+                source, _, _ = line.partition("|")
+                source = source.strip()
+                if not source:
+                    continue
+                normalized = normalize_url(source)
+                url_ownership_map.setdefault(normalized, []).append({
+                    "file": f"{rel_redirect}:{ln_num}", "scope": "s3-redirect",
+                })
+    return identifier_map, alias_map, url_ownership_map
+
+
+def normalize_url(raw: str) -> str:
+    """Normalize a URL for comparison across Hugo aliases, S3 redirect sources,
+    and PR-file-derived URLs.
+
+    - Ensure leading slash.
+    - Strip trailing `index.html`; replace other `.html` with trailing slash.
+    - Ensure trailing slash (unless the path is a file with extension).
+    - Lowercase the path (Hugo URLs are case-sensitive in theory, but the
+      Pulumi docs convention is lowercase; lower-casing prevents trivial
+      case-mismatch misses).
+    """
+    s = raw.strip()
+    if not s:
+        return s
+    if not s.startswith("/"):
+        s = "/" + s
+    if s.endswith("index.html"):
+        s = s[: -len("index.html")]
+    elif s.endswith(".html"):
+        s = s[: -len(".html")] + "/"
+    if not s.endswith("/"):
+        # Has some other extension, probably an asset; leave as-is.
+        if "." in s.rsplit("/", 1)[-1]:
+            return s.lower()
+        s = s + "/"
+    return s.lower()
+
+
+def derive_url_from_path(file_rel: str) -> str:
+    """Convert a `content/<...>/<name>.md` path to its rendered Hugo URL.
+
+    Examples:
+    - content/docs/iac/clouds/azure/guides/_index.md → /docs/iac/clouds/azure/guides/
+    - content/docs/iac/clouds/azure/guides/providers.md → /docs/iac/clouds/azure/guides/providers/
+    - content/blog/foo/index.md → /blog/foo/
+    """
+    p = file_rel
+    if p.startswith("content/"):
+        p = p[len("content/"):]
+    if p.endswith("/_index.md") or p.endswith("/index.md"):
+        p = p.rsplit("/", 1)[0] + "/"
+    elif p.endswith(".md"):
+        p = p[: -len(".md")] + "/"
+    return normalize_url(p)
+
+
+def check_url_ownership(
+    file_rel: str,
+    url_ownership_map: dict[str, list[dict]],
+) -> tuple[str, list[dict]]:
+    """Compute PR file's rendered URL and find any claimants in the global map.
+
+    Returns (rendered_url, claimants). Excludes the file itself (a Hugo file
+    legitimately claims its own URL via its own existence; we want claimants
+    that are OTHER files or S3 redirects).
+    """
+    rendered = derive_url_from_path(file_rel)
+    raw_claimants = url_ownership_map.get(rendered, [])
+    claimants = [c for c in raw_claimants if c.get("file") != file_rel]
+    return rendered, claimants
 
 
 def check_menu_parents(
@@ -308,9 +409,11 @@ def discover_for_file(
     file_rel: str,
     identifier_map: dict,
     alias_map: dict,
+    url_ownership_map: dict,
     pr_files: set[str],
 ) -> dict:
     """Compute the frontmatter-validation record for a single PR-changed file."""
+    rendered_url, url_claimants = check_url_ownership(file_rel, url_ownership_map)
     full_path = repo_root / file_rel
     if not full_path.is_file():
         return {
@@ -319,6 +422,8 @@ def discover_for_file(
             "menu_parents": [],
             "aliases_declared": [],
             "alias_collisions": [],
+            "rendered_url": rendered_url,
+            "url_collisions": url_claimants,
         }
     fm = read_frontmatter(full_path)
     if fm is None:
@@ -328,6 +433,8 @@ def discover_for_file(
             "menu_parents": [],
             "aliases_declared": [],
             "alias_collisions": [],
+            "rendered_url": rendered_url,
+            "url_collisions": url_claimants,
         }
     aliases = extract_aliases(fm)
     return {
@@ -336,6 +443,8 @@ def discover_for_file(
         "menu_parents": check_menu_parents(file_rel, fm, identifier_map),
         "aliases_declared": aliases,
         "alias_collisions": check_alias_collisions(file_rel, aliases, alias_map, pr_files),
+        "rendered_url": rendered_url,
+        "url_collisions": url_claimants,
     }
 
 
@@ -353,25 +462,28 @@ def main() -> int:
     else:
         changed = get_changed_files(args.pr)
 
-    # Build global maps via single content tree walk.
-    identifier_map, alias_map = build_global_maps(repo_root)
+    # Build global maps via single content tree walk + redirect-table scan.
+    identifier_map, alias_map, url_ownership_map = build_global_maps(repo_root)
     pr_files = set(changed)
 
     files = [
-        discover_for_file(repo_root, f, identifier_map, alias_map, pr_files)
+        discover_for_file(repo_root, f, identifier_map, alias_map, url_ownership_map, pr_files)
         for f in changed
     ]
+    url_owner_total = sum(len(v) for v in url_ownership_map.values())
     out = {
         "files": files,
         "global_identifier_map_size": sum(len(v) for v in identifier_map.values()),
         "global_alias_map_size": sum(len(v) for v in alias_map.values()),
+        "global_url_ownership_map_size": url_owner_total,
     }
 
     Path(args.out).write_text(json.dumps(out, indent=2) + "\n")
     print(
         f"frontmatter-validate: {len(files)} file(s); "
         f"{out['global_identifier_map_size']} identifiers, "
-        f"{out['global_alias_map_size']} aliases mapped → {args.out}",
+        f"{out['global_alias_map_size']} aliases, "
+        f"{url_owner_total} URL-ownership entries (Hugo+S3) → {args.out}",
         file=sys.stderr,
     )
     return 0
