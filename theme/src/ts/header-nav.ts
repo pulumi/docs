@@ -280,6 +280,8 @@
 
       btn.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
+          // No btn.focus() here: the trigger already has focus. The popup's
+          // own keydown handler handles Escape from inside the popup.
           if (isOpen) closeDropdowns(true);
           return;
         }
@@ -390,12 +392,19 @@
   // Mark every direct child of <body> inert except the sheet and its overlay,
   // so Tab cannot escape the dialog. The sheet uses role="dialog"
   // aria-modal="true", but aria-modal alone does not affect focus order.
+  // Track which elements we modified so closing the sheet doesn't clear
+  // `inert` from body-level elements that another component owns.
+  let bgInerted: Element[] = [];
   function setBackgroundInert(on: boolean): void {
-    Array.from(document.body.children).forEach(el => {
-      if (el === sheet || el === overlay) return;
-      if (on) el.setAttribute('inert', '');
-      else el.removeAttribute('inert');
-    });
+    if (on) {
+      bgInerted = Array.from(document.body.children).filter(
+        el => el !== sheet && el !== overlay && !el.hasAttribute('inert'),
+      );
+      bgInerted.forEach(el => el.setAttribute('inert', ''));
+    } else {
+      bgInerted.forEach(el => el.removeAttribute('inert'));
+      bgInerted = [];
+    }
   }
 
   function openSheet(): void {
