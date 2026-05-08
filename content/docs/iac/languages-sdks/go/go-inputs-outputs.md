@@ -1,6 +1,6 @@
 ---
 title_tag: "Inputs & Outputs in Go | Languages & SDKs"
-meta_desc: A guide to the Pulumi Go SDK's input and output types: helper constructors, ApplyT, All, output lifting, and common patterns.
+meta_desc: "A guide to the Pulumi Go SDK's input and output types: helper constructors, ApplyT, All, output lifting, and common patterns."
 title: Inputs & Outputs in Go
 h1: Inputs & Outputs in Go
 meta_image: /images/docs/meta-images/docs-meta.png
