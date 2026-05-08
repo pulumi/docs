@@ -63,12 +63,6 @@ Self-hosted Pulumi Cloud is only available for Business Critical customers.
 
 Choose [self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/) if you need complete control over your hosting environment. This is ideal for air-gapped environments or customers who require an isolated version of the Pulumi platform. You can deploy anywhere: on-premises, in your cloud account, or any infrastructure you control.
 
-{{% notes type="info" %}}
-
-To get started with self-hosted Pulumi Cloud, follow the guides to set up your [state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/#logging-into-the-aws-s3-backend) and [self-hosting infrastructure](https://www.pulumi.com/docs/administration/self-hosting/)
-
-{{% /notes %}}
-
 ## Choose your billing approach
 
 Pulumi offers flexible billing options to match your organization's procurement preferences.

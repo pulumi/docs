@@ -13,7 +13,7 @@ menu:
 ---
 
 {{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
+Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
 This page covers security hardening recommendations for production self-hosted Pulumi Cloud deployments. For authentication configuration, see [SAML SSO](/docs/administration/self-hosting/saml-sso/).
