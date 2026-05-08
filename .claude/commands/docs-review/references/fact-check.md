@@ -301,26 +301,26 @@ Main agent walks §Verification source order steps 1-3 sequentially during the c
 
 If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
 
-**Canonical sources for pulumi-internal verification.** Most pulumi-internal claims have a known canonical source — read it first instead of searching for context. Use this table to pick the first read; it makes 3-5 targeted calls close the typical structural verification (sibling-pattern check, alias-collision check, menu-tree validation) without exploration overhead.
+**Canonical sources for pulumi-internal verification.** Read the canonical source first.
 
 | Claim shape | Canonical source |
 |---|---|
-| Menu / left-nav (parent, ordering, page presence) | `data/docs_menu_sections.yml`; rendered via `layouts/partials/docs/menu.html` |
-| Example-program (file existence, stack outputs, language coverage) | `static/programs/<name>-<lang>/` — list with `gh api repos/pulumi/docs/contents/static/programs/<name>-<lang>` |
-| Sibling-pattern (frontmatter shape, file location, alias structure) | Nearest sibling under `content/docs/<closest>/` (e.g., `aws.md` when reviewing `azure.md`) |
-| Resource schema / API surface | `pulumi/pulumi-<provider>` (`gh api repos/pulumi/pulumi-<provider>/contents/...`) |
-| Shortcode existence / signature | `layouts/shortcodes/<name>.html` |
-| Alias / redirect (collisions, missing entries) | `aliases:` frontmatter of the related page + `scripts/redirects/*` |
-| Frontmatter field semantics | An existing page in the same content tree that already uses the field |
+| Menu / left-nav | `data/docs_menu_sections.yml`; rendered via `layouts/partials/docs/menu.html` |
+| Example-program | `static/programs/<name>-<lang>/` |
+| Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
+| Resource schema / API surface | `pulumi/pulumi-<provider>` |
+| Shortcode | `layouts/shortcodes/<name>.html` |
+| Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
+| Frontmatter field semantics | An existing page in the same content tree that uses the field |
 
 Search-order rules:
 
-1. **Token first.** If the claim names a specific symbol, flag, filename, or shortcode, `gh search code --owner pulumi "<token>"` is the highest-yield first call — one query covers every Pulumi repo at once.
-2. **Path second.** If the canonical path is known from the table, `gh api repos/<owner>/<repo>/contents/<path>` reads it directly. Don't list the parent directory first to "find" it.
-3. **Never `issues` or `pulls` for context discovery.** `gh api repos/<owner>/<repo>/issues` and `gh api repos/<owner>/<repo>/pulls` are exploration, not verification — they don't contain canonical source. (A targeted `gh issue list -R <repo> --search "<term>"` is fine when the claim is *about* a prior decision; that's a different shape.)
-4. **No recursive tree-walking until 3 targeted reads have failed.** `gh api repos/.../git/trees/<sha>?recursive=1` and equivalents fan out fast and rarely close a claim faster than two more targeted reads from the table above.
+1. **Token first.** `gh search code --owner pulumi "<token>"` when the claim names a symbol/flag/filename/shortcode.
+2. **Path second.** `gh api repos/<owner>/<repo>/contents/<path>` when the canonical path is known.
+3. **Never `issues` or `pulls` for context discovery.** A targeted `gh issue list -R <repo> --search "<term>"` is fine when the claim is *about* a prior decision.
+4. **No recursive tree-walking until 3 targeted reads have failed.**
 
-**Shrug rule.** If 3 targeted reads from the canonical-source table don't close the claim, mark it `ambiguous` in the trail and let the main agent route it to Pass 1. The inline lane is for cheap-path verifications; harder claims belong in a lane built for them.
+**Shrug rule.** If 3 targeted reads don't close the claim, mark it `ambiguous` and route to Pass 1.
 
 ### Pass 1 lane (`ambiguous`)
 
