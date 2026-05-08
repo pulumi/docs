@@ -246,6 +246,14 @@ def emit_threshold_warnings(summary: dict) -> None:
             f"cap compliance in fact-check.md §Inline lane.",
             file=sys.stderr,
         )
+    if gh_calls > 50:
+        print(
+            f"::error title=Inline-lane over-spend::Bash:gh calls = {gh_calls} "
+            f"(threshold 50). Past the PR-level 40-call cap in fact-check.md "
+            f"§Inline lane — the model should have summarized unresolved claims "
+            f"and dispatched a final Pass 1 batch instead of iterating further.",
+            file=sys.stderr,
+        )
     if turns > 80:
         print(
             f"::warning title=Inline-lane drift::num_turns = {turns} "
