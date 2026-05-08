@@ -19,7 +19,7 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 5
+Schema version: 6
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -854,6 +854,68 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
     )]
 
 
+# Schema v6: exploration patterns that don't read canonical source. The trail
+# provenance rule flags trail-entry evidence text containing these substrings.
+EXPLORATION_PATH_RE = re.compile(
+    r"repos/[\w.-]+/[\w.-]+/(?:issues|pulls)(?:[?/]|\b)",
+    re.IGNORECASE,
+)
+# Recursive tree-walks: `git/trees/<sha>?recursive=1`. Anchor on `trees/...?recursive`
+# rather than the bare `?recursive=` query param so we don't over-match unrelated calls.
+TREE_RECURSIVE_RE = re.compile(
+    r"git/trees/[^\s`?]*\?recursive",
+    re.IGNORECASE,
+)
+
+
+def check_pulumi_internal_trail_provenance(ctx: Context) -> list[Violation]:
+    """Schema v6: trail entries must cite canonical-source paths, not exploration.
+
+    Per `docs-review:references:fact-check` §Inline lane → "Canonical sources
+    for pulumi-internal verification": pulumi-internal claims have known
+    canonical sources (`data/docs_menu_sections.yml` for menu, sibling pages
+    under `content/docs/<closest>/`, `static/programs/<name>-<lang>/` for
+    example programs, `pulumi/pulumi-<provider>` for schema, etc.).
+
+    `gh api repos/<owner>/<repo>/issues|pulls` and recursive tree-walks
+    (`tree?recursive=...`) are exploration patterns — they don't read
+    canonical source. The S37 pr18568 r1 rabbit-hole captured 75 gh calls
+    iterating these instead of reading the canonical paths directly. This
+    rule walks every line in 🔍 Verification trail and flags any that
+    reference these patterns.
+
+    Scope: applies trail-wide. Pass 1 / Pass 2 / Pass 3 entries also rarely
+    have a legitimate use of these patterns; if one trips, audit it the
+    same way.
+    """
+    span = find_section(ctx.body, "🔍 Verification trail")
+    if span is None:
+        return []
+    start, end = span
+    violations = []
+    for i, raw in enumerate(ctx.body_lines[start:end], start=start):
+        matched = None
+        m = EXPLORATION_PATH_RE.search(raw)
+        if m:
+            matched = m.group(0)
+        else:
+            tm = TREE_RECURSIVE_RE.search(raw)
+            if tm:
+                matched = tm.group(0)
+        if matched is None:
+            continue
+        line_ref_match = re.search(r"\bL\d+(?:-\d+)?\b", raw)
+        line_ref = line_ref_match.group(0) if line_ref_match else f"<🔍 Verification trail line {i + 1}>"
+        violations.append(Violation(
+            rule_id="pulumi-internal-trail-provenance",
+            line_ref=line_ref,
+            expected="trail evidence cites a canonical-source path under `content/`, `data/`, `layouts/`, `static/programs/`, or `pulumi/pulumi-<provider>`",
+            actual=raw.strip()[:200],
+            hint=f"Replace exploration call (`{matched}`) with a targeted canonical-source read per the playbook in `docs-review:references:fact-check` §Inline lane → \"Canonical sources for pulumi-internal verification\". `gh api repos/.../issues|pulls` and recursive `tree?recursive=...` are exploration, not verification — if the canonical-source table doesn't close the claim in 3 reads, mark it `ambiguous` and route to Pass 1 (the shrug rule).",
+        ))
+    return violations
+
+
 def check_frontmatter_locations_in_diff(ctx: Context) -> list[Violation]:
     """If the Frontmatter sweep line names locations, those files must exist in the PR diff."""
     for line in ctx.body_lines:
@@ -1452,6 +1514,12 @@ RULES = [
         "desc": "Schema v5: Pass 3 ⚠️ unverifiable verdicts must carry a search-was-run negative-evidence pointer in the trail entry.",
         "hint": "For each Pass 3 ⚠️ unverifiable verdict, append `WebSearch ran query \"<phrase>\"; top N results didn't address the claim` (or equivalent search-was-run pointer) to the trail entry.",
         "check": check_pass3_unverifiable_evidence,
+    },
+    {
+        "id": "pulumi-internal-trail-provenance",
+        "desc": "Schema v6: trail entries must cite canonical-source paths; `gh api repos/.../issues|pulls` and recursive `tree?recursive=...` queries are exploration not verification.",
+        "hint": "Per the canonical-source playbook in `docs-review:references:fact-check` §Inline lane → \"Canonical sources for pulumi-internal verification\", verify against `data/docs_menu_sections.yml` (menu), `static/programs/<name>-<lang>/` (example programs), nearest sibling under `content/docs/<closest>/`, or `pulumi/pulumi-<provider>` (schema). Shrug rule: if 3 targeted reads don't close the claim, mark `ambiguous` and route to Pass 1.",
+        "check": check_pulumi_internal_trail_provenance,
     },
     {
         "id": "frontmatter-locations",
