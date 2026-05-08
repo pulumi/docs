@@ -1,70 +1,78 @@
 @import "mixins";
 
-#segment-consent-manager:empty {
-    @apply hidden;
-}
-#segment-consent-manager {
+// -----------------------------------------------------------------------------
+// Consent banner
+//
+// Shown to first-time EU visitors at the bottom of the viewport. Rendered into
+// #segment-consent-manager (a placeholder in baseof.html) by the consent
+// manager. The container is hidden when empty so the layout doesn't reserve
+// space before the banner is injected.
+// -----------------------------------------------------------------------------
 
-    @apply text-black fixed bottom-0 right-0 left-0 m-4 border-2 border-violet-600 rounded-lg shadow-lg;
+#segment-consent-manager {
+    @apply fixed bottom-0 right-0 left-0 sm:m-4 sm:rounded-b-lg
+           overflow-hidden rounded-t-lg shadow-lg
+           border border-gray-200 text-black max-w-xl w-full;
     z-index: 99999;
 
-    @include screen-lg {
-        @apply w-1/3 right-auto m-4 overflow-hidden;
+
+    &:empty {
+        @apply hidden;
     }
 
     div {
-       @apply bg-white;
+        @apply bg-white;
     }
 
     p {
-        @apply text-black text-center text-sm;
+        @apply mt-0 text-center text-sm;
 
         a {
-            text-decoration: none;
+            @apply no-underline;
             color: var(--color-violet-primary);
         }
     }
 
     button {
-        @apply font-bold no-underline;
+        @apply no-underline;
     }
 
     .consent-actions {
-        @apply flex gap-2 w-full pb-4;
+        @apply flex gap-2 w-full flex-col sm:flex-row;
     }
 }
 
-// Preferences dialog overlay
+// -----------------------------------------------------------------------------
+// Preferences dialog
+//
+// Modal opened from the banner's "Manage cookies" button or the footer's
+// "Your Website Preferences" link. Appended directly to <body>, so styles
+// here are scoped to the dialog's own classes — not nested under the banner.
+// -----------------------------------------------------------------------------
+
 .consent-dialog-overlay {
-    position: fixed;
-    inset: 0;
+    @apply fixed inset-0 flex items-center justify-center p-4;
     background: rgba(0, 0, 0, 0.5);
     z-index: 100000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
 }
 
 .consent-dialog {
-    @apply bg-white rounded-lg shadow-lg;
+    @apply w-full p-6 overflow-y-auto bg-white rounded-lg shadow-lg;
     max-width: 800px;
-    width: 100%;
     max-height: 85vh;
-    overflow-y: auto;
-    padding: 1.5rem;
 }
 
 .consent-dialog-header {
     @apply flex items-start justify-between mb-2;
 
     h2 {
-        @apply text-lg font-bold m-0;
+        @apply m-0 text-lg font-semibold;
     }
 }
 
 .consent-dialog-close {
-    @apply text-2xl leading-none text-gray-400 cursor-pointer bg-transparent border-0 p-0 ml-4;
+    @apply ml-4 p-0 bg-transparent border-0
+           text-2xl leading-none text-gray-400 cursor-pointer;
 
     &:hover {
         @apply text-gray-600;
@@ -72,21 +80,26 @@
 }
 
 .consent-dialog-desc {
-    @apply text-sm text-gray-600 mb-4;
-    text-align: left !important;
+    @apply mb-4 text-sm text-left text-gray-600;
+}
+
+.consent-dialog-buttons {
+    @apply flex gap-2 justify-end;
 }
 
 // Category table
+
 .consent-dialog-table {
-    @apply w-full text-sm mb-4;
+    @apply w-full mb-4 text-sm;
     border-collapse: collapse;
 
     th {
-        @apply text-left text-xs font-semibold text-gray-500 uppercase border-b border-gray-200 pb-2 px-3;
+        @apply px-3 pb-2 text-left text-xs font-semibold uppercase text-gray-500
+               border-b border-gray-200;
     }
 
     td {
-        @apply border-b border-gray-100 px-3 py-3 align-top;
+        @apply px-3 py-3 align-top border-b border-gray-100;
     }
 }
 
@@ -103,10 +116,6 @@
     }
 }
 
-.consent-table-na {
-    @apply text-xs text-gray-400;
-}
-
 .consent-table-category {
     @apply font-semibold whitespace-nowrap;
     min-width: 100px;
@@ -121,14 +130,20 @@
     min-width: 120px;
 }
 
-// Dialog action buttons
-.consent-dialog-buttons {
-    @apply flex gap-2 justify-end;
+.consent-table-na {
+    @apply text-xs text-gray-400;
 }
 
-// Shared consent button styles
+// -----------------------------------------------------------------------------
+// Shared buttons
+//
+// Used by both the banner action row and the dialog footer. The
+// `.consent-actions &` nesting widens the buttons to fill the row in the
+// banner's compact layout.
+// -----------------------------------------------------------------------------
+
 .consent-btn {
-    @apply font-bold no-underline py-2 px-5 rounded-md text-center text-sm cursor-pointer;
+    @apply px-5 py-2 rounded-md text-center text-sm cursor-pointer;
     @include transition;
 
     .consent-actions & {
@@ -139,15 +154,17 @@
 .consent-btn-accept {
     @apply bg-violet-primary text-white border-2 border-violet-primary;
 
-    &:hover, &:focus-visible {
-        @apply bg-violet-700 border-violet-700;
+    &:hover,
+    &:focus-visible {
+        @apply bg-violet-800 border-violet-800;
     }
 }
 
 .consent-btn-secondary {
-    @apply bg-white text-violet-primary border-2 border-violet-primary;
+    @apply bg-white text-gray-950 border border-gray-200;
 
-    &:hover, &:focus-visible {
-        @apply bg-violet-primary text-white;
+    &:hover,
+    &:focus-visible {
+        @apply bg-gray-100;
     }
 }
