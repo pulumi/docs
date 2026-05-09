@@ -21,10 +21,5 @@
     {{/* Event list */}}
     {{ partial "events/list-section.html" . }}
 
-    {{/* Footer CTA */}}
-    {{ with .Params.footer_cta }}
-    {{ partial "template-partials/template-footer-cta.html" . }}
-    {{ end }}
-
 </div>
 {{ end }}

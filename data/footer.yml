@@ -1,8 +1,8 @@
 cta:
   heading: The infrastructure as code platform for any cloud.
   buttons:
-    - label: Request a demo
-      href: /request-a-demo/
+    - label: Contact us
+      href: /contact/
       style: secondary
       track: footer-cta-demo
     - label: Get started
@@ -12,7 +12,7 @@ cta:
 
 brand:
   tagline_html: |
-    Open source<br>and free forever.
+    Open source and free forever.
 
 columns:
   - heading: Resources
@@ -47,46 +47,43 @@ columns:
       - label: Infrastructure as code
         href: /product/infrastructure-as-code/
         track: footer-platform-iac
-      - label: Agentic infrastructure
-        href: /product/neo/
-        track: footer-platform-neo
       - label: Secrets & configuration
         href: /product/secrets-management/
         track: footer-platform-secrets
-      - label: Internal developer platform
-        href: /product/internal-developer-platforms/
-        track: footer-platform-idp
       - label: Insights & governance
         href: /product/insights-governance/
         track: footer-platform-insights
+      - label: Agentic infrastructure
+        href: /product/neo/
+        track: footer-platform-neo
+      - label: Internal developer platform
+        href: /product/internal-developer-platforms/
+        track: footer-platform-idp
       - label: Pricing
         href: /pricing/
         track: footer-platform-pricing
 
   - heading: Pulumi for
     items:
-      - label: Enterprise
-        href: /enterprise/
-        track: footer-for-enterprise
       - label: AWS
         href: /aws/
         track: footer-for-aws
-      - label: Azure
+      - label: Microsoft Azure
         href: /azure/
         track: footer-for-azure
-      - label: Google Cloud
+      - label: Google Cloud Platform
         href: /gcp/
         track: footer-for-gcp
       - label: Kubernetes
         href: /kubernetes/
         track: footer-for-kubernetes
-      - label: Artificial intelligence
+      - label: AI/ML workloads
         href: /solutions/ai/
-        track: footer-for-ai
+        track: footer-for-kubernetes
 
   - heading: Company
     items:
-      - label: About
+      - label: About us
         href: /about/
         track: footer-about
       - label: Blog
@@ -101,27 +98,27 @@ columns:
       - label: Awards
         href: /awards/
         track: footer-awards
-      - label: Contact us
-        href: /contact/
-        track: footer-contact
+      - label: Security
+        href: /security/
+        track: footer-security
 
   - heading: Get help
     items:
       - label: Join our Slack
         href: https://slack.pulumi.com/
         track: footer-help-slack
-      - label: Talk to a human
-        href: /contact/
-        track: footer-help-human
-      - label: Submit a ticket
+      - label: Customer support
         href: https://support.pulumi.com/
         track: footer-help-ticket
-      - label: Request a demo
-        href: /request-a-demo/
-        track: footer-help-demo
       - label: Professional services
         href: /proserv/
         track: footer-help-proserv
+      - label: Request a demo
+        href: /request-a-demo/
+        track: footer-help-demo
+      - label: Contact us
+        href: /contact/
+        track: footer-help-contact
 
 connect:
   heading: Connect
