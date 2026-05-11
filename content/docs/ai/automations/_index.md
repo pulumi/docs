@@ -20,7 +20,11 @@ Drift detection, dependency updates, compliance scans, and cost reviews are typi
 
 ## Defaults that fit recurring work
 
-Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/tasks/#task-modes), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. The per-automation setting takes precedence; the org-level default applies next; auto/read-only is the final fallback.
+Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/tasks/#task-modes), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. Settings apply in this order:
+
+1. The per-automation setting, if set
+1. The org-level default
+1. Auto approval and read-only permissions (the built-in fallback)
 
 ## Creating an automation
 

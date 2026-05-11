@@ -13,8 +13,10 @@ menu:
 ---
 
 <script>
+// Redirect anchors that belonged to the MCP content formerly on this page.
+// The MCP integrations content moved to /docs/ai/integrations/mcp/.
 (function() {
-  var mcpAnchors = ['what-you-can-do-with-mcp-integrations', 'enabling-an-mcp-integration', 'credential-storage', 'disabling-an-integration', 'how-integrations-work-at-task-time', 'per-task-control', 'if-an-integration-fails', 'configuration', 'atlassian-jira-confluence', 'datadog', 'honeycomb', 'linear', 'pagerduty', 'supabase'];
+  var mcpAnchors = ['what-you-can-do-with-mcp-integrations', 'enabling-an-mcp-integration', 'credential-storage', 'disabling-an-integration', 'how-integrations-work-at-task-time', 'per-task-control', 'if-an-integration-fails', 'configuration', 'atlassian-jira-and-confluence', 'datadog', 'honeycomb', 'linear', 'pagerduty', 'supabase'];
   var anchor = window.location.hash.replace(/^#/, '');
   if (anchor && mcpAnchors.indexOf(anchor) !== -1) {
     window.location.replace('/docs/ai/integrations/mcp/#' + anchor);

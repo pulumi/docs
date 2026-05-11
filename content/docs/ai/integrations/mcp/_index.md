@@ -20,7 +20,7 @@ MCP integrations are configured at the organization level by an administrator. O
 
 MCP integrations give Neo direct access to the systems your team uses to define, observe, and operate infrastructure: issue trackers, observability platforms, runbook wikis, and on-call tooling. Neo can pick up a ticket from Linear or Jira and write the matching infrastructure changes; during an investigation it can query real traces and metrics rather than reasoning from documentation; and runbooks, incident records, and on-call schedules are first-class inputs rather than things someone has to paste in.
 
-Supported integrations are Atlassian (Jira and Confluence), Linear, Datadog, Honeycomb, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
+Supported integrations are Atlassian (Jira and Confluence), Datadog, Honeycomb, Linear, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
 
 ## Enabling an MCP integration
 
@@ -30,7 +30,7 @@ Each MCP integration connects Neo to the service's MCP server, which means Neo c
 
 ## Credential storage
 
-Integration credentials are encrypted at rest in the Pulumi Service using a per-organization encryption key. When a task needs to connect to an integration, the service decrypts the credentials at task time, constructs the appropriate authentication headers, and connects to the service on Neo's behalf. Credentials are never exposed to the language model and are never embedded in task state.
+Integration credentials are encrypted at rest in Pulumi Cloud using a per-organization encryption key. When a task needs to connect to an integration, Pulumi Cloud decrypts the credentials at task time, constructs the appropriate authentication headers, and connects to the service on Neo's behalf. Credentials are never exposed to the language model and are never embedded in task state.
 
 ## Disabling an integration
 
@@ -56,7 +56,7 @@ If Neo tries to use an integration that isn't available (for example, because th
 
 ## Configuration
 
-### Atlassian (Jira & Confluence)
+### Atlassian (Jira and Confluence)
 
 1. In **admin.atlassian.com**, open **Rovo MCP**
     - Enable **API token authentication**

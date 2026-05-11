@@ -38,4 +38,4 @@ In a repository the app can see, open or comment on a pull request or issue and 
 
 ## Limitations
 
-- Supported on GitHub Cloud only. Self-hosted GitHub Enterprise, GitLab, and Bitbucket are not supported.
+- Supported on GitHub.com only. GitHub Enterprise Server, GitLab, and Bitbucket are not supported.

@@ -28,7 +28,7 @@ When Neo decides to use the CLI, it runs the equivalent of:
 pulumi env run <orgLogin>/<escProject>/<escEnvironment> -- <cli> <args>
 ```
 
-ESC opens the environment, materializes its environment variables and files, runs the CLI, and tears the environment back down. **The Pulumi Service never stores cloud credentials for CLI integrations.** ESC owns the credentials and decrypts them only at task time.
+ESC opens the environment, materializes its environment variables and files, runs the CLI, and tears the environment back down. **Pulumi Cloud never stores cloud credentials for CLI integrations.** ESC owns the credentials and decrypts them only at task time.
 
 ## Supported CLIs
 
