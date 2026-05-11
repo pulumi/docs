@@ -100,9 +100,10 @@ jobs:
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
-    # A review that genuinely hangs (S41 saw one stall ~18 min with no output)
-    # would otherwise sit on the runner for GitHub's 6-hour default. 25 min is
-    # comfortably above the slowest real reviews (blog reviews run 9-12+ min).
+    # A review that genuinely hangs (one observed stall ran ~18 min with no
+    # output before being cancelled) would otherwise sit on the runner for
+    # GitHub's 6-hour default. 25 min is comfortably above the slowest real
+    # reviews (blog reviews run 9-12+ min).
     timeout-minutes: 25
     permissions:
       contents: read
@@ -285,6 +286,20 @@ jobs:
           # on a missing file. Pattern mirrors claude-triage.yml.
           vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
+          # Vale processes markdown to HTML before applying rules, so bracket
+          # constructions (`[here](url)`, `![](url)`) are gone before tokens
+          # match. The companion script scans raw markdown for the missing
+          # syntax patterns and emits Vale-shaped JSON we merge into the raw
+          # findings before filtering. Same `||` fallback discipline.
+          python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
+            $CHANGED > .syntax-findings.json 2>/dev/null \
+            || echo '{}' > .syntax-findings.json
+          # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
+          # *replace* Vale's array with the script's for any overlapping file).
+          jq -s 'reduce .[] as $o ({}; reduce ($o | keys_unsorted[]) as $k (.; .[$k] = ((.[$k] // []) + $o[$k])))' \
+            .vale-raw.json .syntax-findings.json > .vale-raw.merged.json \
+            && mv .vale-raw.merged.json .vale-raw.json \
+            || true
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
             --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
             || echo '[]' > .vale-findings.json
@@ -315,7 +330,7 @@ jobs:
             --pr "$PR" --out .fetched-urls.json 2>/dev/null \
             || echo '[]' > .fetched-urls.json
 
-      # ---- Claim extraction (S42) ------------------------------------------
+      # ---- Claim extraction ------------------------------------------------
       # The claim *floor* the review must verify. Three layers, unioned:
       #   A. extract-claims.py        — deterministic regex/heuristic floor
       #                                 (numbers, version pins, temporal words,

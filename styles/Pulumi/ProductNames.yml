@@ -16,3 +16,24 @@ swap:
   '\bpulumi insights\b': Pulumi Insights
   '\bpulumi policies\b': Pulumi Policies
   '\bpulumi policy\b': Pulumi Policies
+  '\bpulumi neo\b': Pulumi Neo
+  '\bPulumi neo\b': Pulumi Neo
+  '\bpulumi copilot\b': Pulumi Copilot
+  '\bPulumi copilot\b': Pulumi Copilot
+  '\bpulumi operator\b': Pulumi Operator
+  '\bPulumi operator\b': Pulumi Operator
+  '\bpulumi deployments\b': Pulumi Deployments
+  '\bPulumi deployments\b': Pulumi Deployments
+  '\bpulumi ai\b': Pulumi AI
+  '\bPulumi Ai\b': Pulumi AI
+  '\bpulumi cli\b': Pulumi CLI
+  '\bPulumi Cli\b': Pulumi CLI
+  '\bpulumi sdk\b': Pulumi SDK
+  '\bPulumi Sdk\b': Pulumi SDK
+  '\bpulumi service\b': Pulumi Service
+  '\bPulumi service\b': Pulumi Service
+  '\bpulumi cloud console\b': Pulumi Cloud Console
+  '\bPulumi cloud console\b': Pulumi Cloud Console
+  '\bPulumi Cloud console\b': Pulumi Cloud Console
+  '\bpulumi console\b': Pulumi Console
+  '\bPulumi console\b': Pulumi Console

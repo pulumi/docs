@@ -4,8 +4,8 @@
 Self-contained — run with `python3 test_extract_claims.py` (no pytest dep).
 Shells out to the scripts (the same way the workflow does) and asserts on the
 JSON they emit. Fixtures in `testdata/` are committed deterministic diffs of
-real merged pulumi/docs PRs (#18771, #18743, #18541) — the S41 fact-check
-misses are the canonical hard cases the regex floor must guarantee.
+real merged pulumi/docs PRs (#18771, #18743, #18541) — corpus-drawn cases of
+the run-to-run-fragile claim shapes the regex floor must guarantee.
 
 (extract-claims-llm.py isn't tested here — it needs ANTHROPIC_API_KEY and is
 spike-tested in CI; merge-claims.py is tested against hand-crafted Layer-B
@@ -162,14 +162,14 @@ def test_skip_lines() -> None:
     check(not bad, f"skip-lines: blank/delimiter/separator lines yielded claims: {bad}")
 
 
-# ---- extract-claims.py: real fixtures (the S41 misses) ------------------------
+# ---- extract-claims.py: real fixtures (the run-to-run-fragile shapes) ---------
 
 def _claims_containing(doc: dict, *needles: str) -> list[dict]:
     return [c for c in doc["claims"] if all(n in c["text"] for n in needles)]
 
 
 def test_fixture_pr18771_strongdm_mechanics() -> None:
-    print("test_fixture_pr18771_strongdm_mechanics (S41 #18771 — R1 caught, R2 missed)")
+    print("test_fixture_pr18771_strongdm_mechanics (attribution paragraph: number cluster + third-party attribution)")
     d = run_extract_fixture("pr18771-dark-factory.diff")
     # The holdout-mechanics paragraph: numbers (three times / 90%) attributed to StrongDM's pattern.
     mech = _claims_containing(d, "StrongDM's pattern", "three times")
@@ -181,7 +181,7 @@ def test_fixture_pr18771_strongdm_mechanics() -> None:
 
 
 def test_fixture_pr18743_price_and_model() -> None:
-    print("test_fixture_pr18743_price_and_model (S41 #18743 — each run caught one)")
+    print("test_fixture_pr18743_price_and_model (numerical contradiction + entity-spec mislabel on the same PR)")
     d = run_extract_fixture("pr18743-ollama-ec2.diff")
     # The p5.48xlarge $98.32/hr price (R1's catch).
     check(bool(_claims_containing(d, "p5.48xlarge", "98.32")),
@@ -196,7 +196,7 @@ def test_fixture_pr18743_price_and_model() -> None:
 
 
 def test_fixture_pr18541_gcp_version_pin() -> None:
-    print("test_fixture_pr18541_gcp_version_pin (S41 #18541 — staleness both runs missed)")
+    print("test_fixture_pr18541_gcp_version_pin (version-pin in a non-content file — API-currency note)")
     d = run_extract_fixture("pr18541-gcp-programs.diff")
     pin = _claims_containing(d, "pulumi-gcp", "v8.2.0")
     check(bool(pin), "pr18541: expected a version claim whose text contains 'pulumi-gcp' and 'v8.2.0'")

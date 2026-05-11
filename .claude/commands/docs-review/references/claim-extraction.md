@@ -31,7 +31,7 @@ Every claim record carries a `type`. Use the most specific type that fits; a sen
 | `entity-spec` | A named third-party entity asserted to have a specific property — a model and its parameter size ("Llama 3.3 32B"), a hosting fact ("Pulumi-hosted runners run in `us-west-2`"), a product tier ("feature Z is on the Enterprise plan"). | `text` = the entity + the claimed spec. `source_hint` = the entity. Verified against the vendor's docs/registry/pricing page; a spec that doesn't exist (Llama 3.3 ships 70B-only) is contradicted. |
 | `cross-reference` | "See the X guide / the Y page" — the target must exist — *and* sibling-consistency claims in templated directories (nav steps, headings, field labels, placeholder conventions checked against parallel pages). | For "see X": `text` names the link target. For sibling-consistency: this is handled by the cross-sibling sibling-read fan-out (`.cross-sibling-discovery.json` + `docs-review:references:fact-check` §Cross-sibling consistency), not by the prose-claim passes — don't duplicate it here. |
 | `quote` | A direct quotation or a paraphrase attributed to a named source ("Willison writes …", "the README says …"). | `text` = the quoted/paraphrased statement. `source_hint` = the named source. The verifier fetches the source and framing-compares the quote against it. |
-| `attribution` | An assertion of *fact about the world* that the PR attributes to a third party ("StrongDM reported roughly $1,000/day per engineer", "per the BCG piece, X"). The verifiable assertion is **the attribution itself** — does the named source actually say this, in this framing? | `text` = the attributed claim, *including the attribution* ("StrongDM reported X"). `source_hint` = the named source. This is distinct from `quote` (a verbatim quotation) — an attribution restates/summarizes. **An attribution is always a claim, even when the underlying detail would not be a claim on its own** (see §Not a claim). |
+| `attribution` | An assertion of *fact about the world* that the PR attributes to a third party ("per the AWS Lambda docs, retries default to 3 attempts", "Anthropic announced Claude N in <month>", "the Kubernetes deprecation policy guarantees three minor releases"). The verifiable assertion is **the attribution itself** — does the named source actually say this, in this framing? | `text` = the attributed claim, *including the attribution* ("the AWS Lambda docs say retries default to 3 attempts"). `source_hint` = the named source. This is distinct from `quote` (a verbatim quotation) — an attribution restates/summarizes. **An attribution is always a claim, even when the underlying detail would not be a claim on its own** (see §Not a claim). |
 | `positioning` | A market-position / recommendation / canonicality statement — "the only X", "the canonical IaC tool", "the recommended approach", "industry standard", "battle-tested", "actively maintained". | `text` = the positioning statement. `source_hint` = a source if cited. The verifier checks whether it's defensible; superlatives/AI-boilerplate also warrant the intuition-check flag downstream. Marketing voice in docs is itself a finding (`docs-review:references:prose-patterns`). |
 | `comparison` | An explicit comparison — "faster than X", "unlike Terraform, …", "up to 40× …", "outperforms Y". | `text` = the comparison, *including both sides* ("Pulumi uses real programming languages; Terraform does not" — extract the implicit claim about Terraform too). `source_hint` = a benchmark/source if cited. |
 
@@ -73,13 +73,13 @@ Do **not** emit a record for:
 
 ### The third-party-attribution flip — read this carefully
 
-The single line that the S41 #18771 failure turned on: **a design detail stops being "not a claim" the moment it is attributed to a third party.** Compare:
+**A design detail stops being "not a claim" the moment it is attributed to a third party.** Compare:
 
-> *Not a claim:* "Our holdout pipeline runs each scenario three times against an ephemeral deployment; two of three runs must pass, and the overall pass rate has to clear 90%." — the author describing their own design.
+> *Not a claim:* "Our retry logic uses exponential backoff with a 3-attempt cap and a 10-second ceiling." — the author describing their own design.
 
-> *A claim (type `attribution`):* "StrongDM's holdout pattern runs each scenario three times against an ephemeral deployment; two of three runs must pass, and the overall pass rate has to clear 90%." — now the assertion is *"StrongDM does this"*, which is checkable against what StrongDM has actually published. If no public StrongDM source documents these specifics, the attribution is unverifiable → 🚨.
+> *A claim (type `attribution`):* "AWS Lambda's retry logic uses exponential backoff with a 3-attempt cap and a 10-second ceiling." — now the assertion is *"AWS does this"*, which is checkable against the Lambda docs. If the actual default differs (or if the docs don't document those specific numbers), the attribution is contradicted or unverifiable.
 
-The `text` of the attribution record must include the attribution ("StrongDM's pattern runs …", not just "runs …"), because the attribution *is* the verifiable part. Same for numbers: "StrongDM reported roughly $1,000/day per engineer-equivalent" is an `attribution` claim — verify it against StrongDM's actual statement, and **framing-compare** (next section).
+The `text` of the attribution record must include the attribution ("AWS Lambda's retry logic uses …", not just "uses …"), because the attribution *is* the verifiable part. Same for numbers: "Anthropic reported a 41% improvement on benchmark X" is an `attribution` claim — verify it against Anthropic's actual statement, and **framing-compare** (next section).
 
 ---
 
@@ -90,7 +90,7 @@ A claim and its source can share a number but make *different* assertions. The v
 - `exact-match` — the PR says what the source says, at equal scope. → ✅
 - `strengthened` — the PR is a *narrower/stronger* version of the source. Source: "96% of enterprises **use** AI agents"; PR: "96% of enterprises run AI agents **in production**." → 🚨
 - `narrowed` — the PR is *broader* than the source. Source: "U.S. enterprises"; PR: "enterprises." → 🚨
-- `shifted` — same numeric anchor, different subject/speech-act. Source: "if you haven't spent at least $1,000 on tokens today per engineer, your software factory has room to improve" (a manifesto rule / aspirational bar); PR: "StrongDM **reported** roughly $1,000/day per engineer-equivalent" (a factual measurement). Same `$1,000`, different claim. → 🚨/⚠️
+- `shifted` — same anchor, different subject/speech-act. Source: "Kubernetes supports the three most recent minor releases" (a support-window commitment); PR: "Kubernetes deprecates minor releases after two versions" (a deprecation-cadence claim). Same release-window topic, different framing. → 🚨/⚠️
 - `contradicted` — the source positively disagrees.
 
 So: when extracting an attributed/cited claim, capture *how the PR frames it* ("X reported Y", "X recommends Y", "according to X, Y") — not just the bare fact Y. The verifier needs the framing to catch a `shifted`/`strengthened` mismatch.
@@ -138,7 +138,7 @@ Return a single JSON object via the `extract_claims` tool:
 The pre-step runs this prompt twice with different framings; the prompt prepends a one-line mode header telling you which:
 
 - **`atomic`** — go sentence by sentence. For each sentence: does it contain a falsifiable assertion (per the taxonomy and the not-a-claim list)? If yes, emit a self-contained record; if no, skip it. This mode's strength is *completeness on atomic claims* — it removes any discretion about "how many" to return by making it a yes/no decision per sentence.
-- **`holistic`** — read whole paragraphs and the frontmatter together. This mode's strength is *cross-sentence structure*: a paragraph of mechanics followed (two sentences later) by "…that's StrongDM's pattern" is one `attribution` claim that a sentence-at-a-time pass would miss; a number in the body that reappears in `social.linkedin` is one claim with two line ranges. Look especially for attributions, framing shifts, positioning statements, and repeated phrasings.
+- **`holistic`** — read whole paragraphs and the frontmatter together. This mode's strength is *cross-sentence structure*: a paragraph describing some mechanism followed (two sentences later) by "…that's how `<vendor>` does it" is one `attribution` claim that a sentence-at-a-time pass would miss; a number in the body that reappears in `social.linkedin` is one claim with two line ranges. Look especially for attributions, framing shifts, positioning statements, and repeated phrasings.
 
 Both modes use the same taxonomy, the same not-a-claim list, and the same record schema. The two outputs are unioned — extract what your mode is good at; don't try to also do the other mode's job.
 
@@ -146,65 +146,65 @@ Both modes use the same taxonomy, the same not-a-claim list, and the same record
 
 ## Worked examples
 
-Real patterns from the corpus, with the extracted record(s) and the reasoning. The "S41 misses" are the hard cases — the ones a single Opus run got right one run and wrong the next.
+Real patterns from the corpus, with the extracted record(s) and the reasoning. The hard cases are claims a single Opus run got right one run and wrong the next — these examples train extraction to be reliable on exactly that shape.
 
-**1 — The StrongDM holdout-mechanics paragraph (S41 #18771; R1 caught it, R2 missed it).**
+**1 — The StrongDM holdout-mechanics paragraph**
 
 > "StrongDM runs each scenario three times against an ephemeral deployment. Two of three runs must pass, and the overall pass rate has to clear 90%. A failing scenario surfaces the literal evaluator output, e.g. `SQL Injection Detection failed`."
 
 - Record (type `attribution`): `text` = "StrongDM's holdout-evaluation pipeline runs each scenario three times against an ephemeral deployment, requires two of three runs to pass, and gates on a 90% overall pass rate." `source_hint` = "StrongDM" `confidence` = high. Line range = the whole paragraph.
 - Reasoning: every mechanic here is attributed to StrongDM — that's the checkable assertion. Verify against StrongDM's published material; if the specifics (3-run / 2-of-3 / 90% gate / verbatim failure string) aren't documented anywhere public, the attribution is unverifiable → 🚨. **If the same paragraph said "*our* pipeline runs each scenario three times…" it would NOT be a claim** (author's own design). The attribution is the whole difference.
 
-**2 — `p5.48xlarge` price (S41 #18743; R1 caught it, R2 missed it).**
+**2 — `p5.48xlarge` price**
 
 > "The `p5.48xlarge` instance runs about $98.32/hr on-demand."
 
 - Record (type `numerical`): `text` = "The AWS `p5.48xlarge` instance costs about $98.32/hr on-demand." `confidence` = high.
 - Reasoning: a specific dollar figure with no citation → verify against current AWS/Vantage pricing. Current on-demand is ~$55.04/hr → contradicted → 🚨. (Also worth a date anchor — instance prices change.)
 
-**3 — Llama 3.3 32B (S41 #18743; R2 caught it, R1 missed it).**
+**3 — Llama 3.3 32B**
 
 > Model table row: "Llama 3.3 / DeepSeek-R1 | 32B / 32B distill | …"
 
 - Record (type `entity-spec`): `text` = "Llama 3.3 is available as a 32B-parameter model." `source_hint` = "Meta / ollama.com" `confidence` = high.
 - Reasoning: a named model + a claimed parameter size → check the model registry (`ollama.com/library/llama3.3`). Meta released Llama 3.3 as 70B-only → the 32B row is contradicted → 🚨.
 
-**4 — `pulumi-gcp` version pin (S41 #18541; both runs verified the v8 surface but neither flagged the staleness).**
+**4 — `pulumi-gcp` version pin.**
 
 > `go.mod`: `github.com/pulumi/pulumi-gcp/sdk/v8 v8.2.0`
 
 - Record (type `version`): `text` = "These example programs pin `pulumi-gcp` to v8.2.0." `source_hint` = "pulumi/pulumi-gcp" `confidence` = high.
-- Reasoning: a version pin → check the registry's current major. If current is v9.x and the example pins v8.2.0, that's an §API-currency note (the example is a full major version behind), *not* a 🚨 — but it should surface, which it didn't in S41. The verifier should not let "bit-identical to the upstream merged state" suppress the staleness note.
+- Reasoning: a version pin → check the registry's current major. If current is v9.x and the example pins v8.2.0, that's an §API-currency note (the example is a full major version behind), *not* a 🚨 — but it should surface. The verifier should not let "bit-identical to the upstream merged state" suppress the staleness note.
 
-**5 — SDK-image size range (S41 #18831; stable across both runs — included as a positive baseline).**
+**5 — SDK-image size range (a stable-baseline positive example).**
 
 > "Pulumi's SDK Docker images are 200–400 MB."
 
 - Record (type `numerical`): `text` = "The Pulumi language SDK Docker images are 200–400 MB." `confidence` = high.
 - Reasoning: a size range with an authoritative source (the SDK images' README). Framing-compare: the README says "200 to 300 MB" → the PR's "200–400 MB" is `narrowed`/wrong → ⚠️ (a real precision finding, not a 🚨 — the order of magnitude is right).
 
-**6 — "$1,000/day" attribution + framing shift (S41 #18771; R2 caught it, R1 wrongly accepted it as exact-match).**
+**6 — "$1,000/day" attribution + framing shift (the canonical run-to-run-disagreement case: easy to wrongly accept as exact-match).**
 
 > "StrongDM reported roughly $1,000 per day per engineer-equivalent in token spend."
 
 - Record (type `attribution`): `text` = "StrongDM reported roughly $1,000/day per engineer-equivalent in AI token spend." `source_hint` = "StrongDM (via Willison)" `confidence` = high. Framing to capture: the PR frames it as a *reported measurement*.
 - Reasoning: the cited source (Willison quoting StrongDM) frames the figure as an *aspirational bar* — "if you haven't spent at least $1,000 on tokens today per human engineer, your software factory has room for improvement." Same number, different speech act → `shifted` → ⚠️ (the post should match the source's framing or cite a real measurement).
 
-**7 — Kubernetes "two minor versions" (S41 #18745; R2 caught it).**
+**7 — Kubernetes "two minor versions".**
 
 > "Stay within two minor versions of the upstream Kubernetes release."
 
 - Record (type `numerical`): `text` = "You should stay within two minor versions of the upstream Kubernetes release." `confidence` = high.
 - Reasoning: a version-distance number → check Kubernetes' actual support policy. K8s supports the *three* most recent minor releases; "two" is too conservative/ambiguous → ⚠️.
 
-**8 — Hosted-runner region (S41 #18831; correctly landed ⚠️ unverifiable both runs — included to show the *right* outcome for a no-public-source claim).**
+**8 — Hosted-runner region (included to show the *right* outcome for a no-public-source claim — ⚠️ unverifiable).**
 
 > "Pulumi-hosted deployment runners run in AWS `us-west-2`."
 
 - Record (type `entity-spec`): `text` = "Pulumi-hosted deployment runners run in AWS `us-west-2`." `source_hint` = "Pulumi" `confidence` = high.
 - Reasoning: a specific infrastructure fact with no public corroboration. The verifier searches, finds nothing public, and lands it as ⚠️ unverifiable with the search noted — that's correct. The downstream concern (advice to co-locate ECR becomes wrong if the region moved) makes it worth surfacing even though it can't be confirmed.
 
-**9 — Negative: the manifesto quote, *as a quote* (S41 #18771).**
+**9 — Negative: the manifesto quote, *as a quote*.**
 
 > The post quotes Willison: "If you haven't spent at least $1,000 on tokens today per human engineer, your software factory has room for improvement."
 
