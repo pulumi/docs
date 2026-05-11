@@ -28,7 +28,7 @@ Applied to every changed file in every review, in addition to the file's domain 
 
 ### Frontmatter
 
-The frontmatter pre-step (`.frontmatter-validation.json`, Ship H — see `docs-review:references:fact-check`) already walks every changed file's frontmatter plus the redirect tables and reports missing/mistyped required fields, menu-parent breakage, and alias/URL collisions. Read it first; don't recompute these inline.
+The frontmatter pre-step (`.frontmatter-validation.json` — see `docs-review:references:fact-check`) already walks every changed file's frontmatter plus the redirect tables and reports missing/mistyped required fields, menu-parent breakage, and alias/URL collisions. Read it first; don't recompute these inline.
 
 - Required fields per layout (`title`, `description`/`meta_desc`, `date` for time-sensitive content). Validate as YAML; unmatched quotes and inconsistent indentation break the whole site build, not just the page — and the Hugo build pre-step (`.hugo-build.json`) surfaces those as build errors.
 - **`aliases` on move/rename.** When a file appears under a new path with no content change to the old path, the moved file MUST have every prior URL listed in `aliases:` (the pre-step's `alias_collisions` / `url_collisions` records catch the divergence; `gh pr view --json files` is the manual cross-check). Missing aliases are a ranking-destroying SEO failure -- flag as 🚨 every time, with the exact frontmatter addition as a suggestion block.

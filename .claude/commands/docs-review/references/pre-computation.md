@@ -1,6 +1,6 @@
 # Pre-computation reference
 
-Architectural pattern for atomizing deterministic checks into workflow pre-step artifacts the reviewer agent reads. Codifies the principle that emerged across S38 (Ship G + Ship H): structural facts go to scripts, editorial judgment stays with the agent.
+Architectural pattern for atomizing deterministic checks into workflow pre-step artifacts the reviewer agent reads. Codifies the principle that emerged across S38: structural facts go to scripts, editorial judgment stays with the agent.
 
 ## Principle
 
@@ -12,7 +12,7 @@ The agent is **not** a parrot for script output. Each artifact entry is an input
 
 ## Why atomize
 
-S37 → S38 evidence: the model **skips deterministic checks under attention pressure**. Cross-sibling-reads classification was inconsistent across runs (1 of 4 captures caught the structural triplet on pr18568). Encoding the same logic as a deterministic pre-step (Ship G) produced reliable discovery at 47% lower cost and freed the agent's attention budget for the judgment work that actually needs it. The reviewer's value increased — sharper findings, better phrasing — because we removed the rote lookup work crowding it out.
+S37 → S38 evidence: the model **skips deterministic checks under attention pressure**. Cross-sibling-reads classification was inconsistent across runs (1 of 4 captures caught the structural triplet on pr18568). Encoding the same logic as a deterministic pre-step produced reliable discovery at 47% lower cost and freed the agent's attention budget for the judgment work that actually needs it. The reviewer's value increased — sharper findings, better phrasing — because we removed the rote lookup work crowding it out.
 
 ## Bundle architecture
 
@@ -23,15 +23,15 @@ Pre-steps cluster by **what they read**. Bundle by reading pattern, not by topic
 | URL fetch | `extract-urls-and-fetch.py` | `.fetched-urls.json` | PR diff + external URL fetches |
 | Editorial balance (Tier 1) | `editorial-balance-detect.py` | `.editorial-balance.json` | `content/blog/**/*.md` body |
 | Vale lint | `vale-findings-filter.py` | `.vale-findings.json` | All changed `*.md` |
-| Cross-sibling discovery (Ship F/G) | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
-| Frontmatter validation (Ship H) | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter + redirect tables |
-| Hugo build (Ship K, S39) | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
+| Cross-sibling discovery | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
+| Frontmatter validation | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter + redirect tables |
+| Hugo build | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
 
-The originally-queued `docs-reference-graph` bundle is subsumed by Ship K: Hugo's render emits broken-link / broken-shortcode / missing-asset warnings as part of the build, and the sitemap-diff covers added/removed-page detection. Resurrect a separate reference-graph script only if a specific bug class slips through Hugo's checks.
+The originally-queued `docs-reference-graph` bundle is subsumed by the Hugo build pre-step: Hugo's render emits broken-link / broken-shortcode / missing-asset warnings as part of the build, and the sitemap-diff covers added/removed-page detection. Resurrect a separate reference-graph script only if a specific bug class slips through Hugo's checks.
 
 **Next candidates** (priority order, no committed timeline — see `s39-runs/notes/script-candidates.md` in the rebenchmark scratch dir):
 
-1. `markdown-link-validate.py` — flags dangling plain markdown-style internal links (`[x](/docs/...)`) that Hugo silently accepts; closes the one residual gap Ship K's build floor doesn't cover.
+1. `markdown-link-validate.py` — flags dangling plain markdown-style internal links (`[x](/docs/...)`) that Hugo silently accepts; closes the one residual gap the Hugo build pre-step's floor doesn't cover.
 1. `image-validate.py` — file size, format-vs-extension mismatch, 1px-gray-border check, placeholder `meta_image` SHA detection, generic alt-text strings.
 1. Editorial-balance Tier 2 extension — compute entity-mention counts + recommendation-steering counts deterministically (the patterns are already enumerated as regex in the blog criteria).
 

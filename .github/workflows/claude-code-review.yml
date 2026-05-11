@@ -337,8 +337,7 @@ jobs:
 
       # Pre-compute cross-sibling discovery so the model uses a structurally-
       # guaranteed sibling list instead of computing the "is this in a templated
-      # section?" decision inline. Encodes Ship F's zero-peer parallel-path
-      # check deterministically — see references/fact-check.md §Cross-sibling
+      # section?" decision inline — see references/fact-check.md §Cross-sibling
       # consistency for the artifact contract.
       - name: Pre-compute cross-sibling discovery
         if: steps.pr-context.outputs.skip_reason == ''
@@ -362,8 +361,8 @@ jobs:
       # Pre-compute frontmatter validation: menu-parent identifier resolution
       # against the global menu-identifier map, plus alias-collision detection
       # (PR-internal and repo-wide). See references/fact-check.md §Cross-sibling
-      # consistency for the artifact contract. Bundle 1 of the atomized
-      # discovery pattern (ref: references/pre-computation.md).
+      # consistency for the artifact contract, and references/pre-computation.md
+      # for the atomized-discovery pattern.
       - name: Pre-compute frontmatter validation
         if: steps.pr-context.outputs.skip_reason == ''
         id: frontmatter-validate
@@ -383,7 +382,7 @@ jobs:
             --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
 
-      # Pre-compute Hugo build artifact (Ship K, S39): full `hugo --renderToMemory`
+      # Pre-compute Hugo build artifact: full `hugo --renderToMemory`
       # at HEAD for warnings/errors/link-integrity, plus `hugo list all` at HEAD
       # and BASE for sitemap diff. Hugo is the canonical authority for routing/
       # build correctness — the agent reads this artifact instead of running

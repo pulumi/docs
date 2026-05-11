@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""frontmatter-validate.py — pre-step for frontmatter validation (Bundle 1).
+"""frontmatter-validate.py — pre-step for frontmatter validation.
 
 Architectural mirror of `cross-sibling-discover.py`, `editorial-balance-detect.py`,
 and `extract-urls-and-fetch.py`: a workflow pre-step that pre-computes deterministic
 frontmatter checks so the model receives a structurally-guaranteed result instead
 of computing them inline (where they get skipped under attention pressure).
 
-S38 motivation: Ship G's cross-sibling pre-step caught the file-location and alias
+S38 motivation: the cross-sibling pre-step caught the file-location and alias
 collision findings on pr18568, but missed the L11 menu-parent finding. The
 menu-parent identifier check is fully deterministic: parse the changed file's
 frontmatter, walk content/**/*.md to build a global menu-identifier map, check
@@ -26,7 +26,7 @@ Three checks bundled (single content-tree walk + redirects scan):
    - Repo-wide: any alias on a PR-changed file that already exists as an alias
      on a different (non-PR-changed) canonical file.
 
-3. **URL-ownership check (Ship J).** Build a global URL-ownership map that
+3. **URL-ownership check.** Build a global URL-ownership map that
    unifies Hugo `aliases:` (from all `content/**/*.md` frontmatter) and S3
    redirects (from `scripts/redirects/*.txt`), each entry tagged with `scope:
    hugo-alias` or `scope: s3-redirect`. For each PR-changed file, compute its

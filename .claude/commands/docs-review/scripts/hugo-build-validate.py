@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""hugo-build-validate.py — Ship K (S39) pre-step.
+"""hugo-build-validate.py — Hugo build pre-step (added S39).
 
 Runs Hugo build validation on the PR head + sitemap diff vs base.
 
 Architectural mirror of `frontmatter-validate.py`, `cross-sibling-discover.py`,
-and the other Ship A→J pre-steps: a workflow pre-step that emits a JSON
-artifact the reviewer agent reads. Hugo is the canonical authority for
-routing/build correctness — this artifact gives the agent a structurally-
-guaranteed build floor instead of a model-side `make build` it can't run.
+and the other workflow pre-steps: a step that emits a JSON artifact the
+reviewer agent reads. Hugo is the canonical authority for routing/build
+correctness — this artifact gives the agent a structurally-guaranteed build
+floor instead of a model-side `make build` it can't run.
 
-Scope (Ship K MVP):
+Scope (MVP):
 - Build errors and warnings from `hugo --renderToMemory` (one full render at HEAD).
 - Internal-link integrity: WARN/ERROR lines mentioning `ref`, `shortcode`,
   `unmarshal`, `missing`, `not found`.

@@ -7,19 +7,19 @@ and `frontmatter-validate.py`: a workflow pre-step that pre-computes the
 model uses a structurally-guaranteed sibling list instead of computing the
 classification inline (where the decision is skippable under attention pressure).
 
-Scope (Ship J refactor): just the local-directory peer-counting check. The
-parallel-path / wrong-layout detection that originally lived here as the
-hardcoded `PARALLEL_PATTERNS` table is removed — its responsibility moved to
+Scope: just the local-directory peer-counting check. The parallel-path /
+wrong-layout detection that originally lived here as the hardcoded
+`PARALLEL_PATTERNS` table is removed — its responsibility moved to
 `frontmatter-validate.py`'s URL-ownership check, which uses Hugo aliases +
 S3 redirects (data the codebase already curates) instead of hardcoded layout
 patterns. See `references/pre-computation.md` and `references/fact-check.md`
 §Cross-sibling consistency for the unified model.
 
-S38 history: Ship G originally bundled the parallel-path check here using a
+History: an earlier version bundled the parallel-path check here using a
 hardcoded `PARALLEL_PATTERNS` table. The table caught the pr18568 case but
-was brittle — it only handled the one observed layout swap. Ship J replaced
-the hardcoded approach with a data-driven URL-ownership lookup in
-frontmatter-validate; this script now does only what its name says.
+was brittle — it only handled the one observed layout swap. A later refactor
+(S38) replaced the hardcoded approach with a data-driven URL-ownership lookup
+in frontmatter-validate; this script now does only what its name says.
 
 Usage:
     cross-sibling-discover.py --pr <PR_NUMBER> --out <out.json>
