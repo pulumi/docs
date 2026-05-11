@@ -39,6 +39,16 @@
     - code_offsets: Map of CSS offset values {top, right, bottom, left} applied to the code block.
                     Setting both top and bottom constrains the block height (required for height: 100%
                     on the inner code-snippets-container to resolve correctly).
+
+    Parameters — video (renders in the right-hand slot when set and code_snippets is not):
+    - video_youtube_id: YouTube video ID; renders a 16:9 iframe embed.
+    - video_title: Title attribute for the iframe (accessibility).
+
+    Parameters — tertiary CTA (renders alongside primary/secondary as an outline button):
+    - cta_tertiary_text: Optional tertiary CTA button text.
+    - cta_tertiary_link: Optional tertiary CTA button link.
+
+    Right-slot precedence: code_snippets > video_youtube_id > image.
 */}}
 
 {{ $title := .title }}
@@ -50,6 +60,10 @@
 {{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
 {{ $ctaSecondaryText := .cta_secondary_text | default site.Params.cta.secondary.label }}
 {{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
+{{ $ctaTertiaryText := .cta_tertiary_text }}
+{{ $ctaTertiaryLink := .cta_tertiary_link }}
+{{ $videoYouTubeId := .video_youtube_id }}
+{{ $videoTitle := .video_title | default "Watch video" }}
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
 {{ $imageMaxWidth := .image_max_width }}
@@ -132,8 +146,8 @@
             {{ if $description }}
             <p class="product-hero-description mb-10 text-left">{{ $description | markdownify }}</p>
             {{ end }}
-            {{ if or $ctaPrimaryText $ctaSecondaryText }}
-            <div class="flex flex-col sm:flex-row items-start gap-4 w-full">
+            {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
+            <div class="flex flex-col sm:flex-row flex-wrap items-start gap-4 w-full">
                 {{ if $ctaPrimaryText }}
                 <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
@@ -143,6 +157,11 @@
                 {{ if $ctaSecondaryText }}
                 <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
                     <span>{{ $ctaSecondaryText }}</span>
+                </a>
+                {{ end }}
+                {{ if $ctaTertiaryText }}
+                <a href="{{ $ctaTertiaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
+                    <span>{{ $ctaTertiaryText }}</span>
                 </a>
                 {{ end }}
             </div>
@@ -157,6 +176,16 @@
                 {{ if $overlayImage }}
                 {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "ariaHidden" "true") }}
                 {{ end }}
+            </div>
+        </div>
+        {{ else if $videoYouTubeId }}
+        <div class="xl:w-1/2 w-full">
+            <div class="relative rounded-xl overflow-hidden" style="padding-bottom: 56.25%;">
+                <iframe
+                    src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allowfullscreen=""
+                    title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
         {{ else if $image }}
@@ -190,8 +219,8 @@
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
             {{ end }}
-            {{ if or $ctaPrimaryText $ctaSecondaryText }}
-            <div class="flex flex-col lg:flex-row items-center justify-center gap-4 w-full">
+            {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
+            <div class="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-4 w-full">
                 {{ if $ctaPrimaryText }}
                 <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
@@ -201,6 +230,11 @@
                 {{ if $ctaSecondaryText }}
                 <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
                     <span>{{ $ctaSecondaryText }}</span>
+                </a>
+                {{ end }}
+                {{ if $ctaTertiaryText }}
+                <a href="{{ $ctaTertiaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
+                    <span>{{ $ctaTertiaryText }}</span>
                 </a>
                 {{ end }}
             </div>
@@ -215,6 +249,16 @@
                 {{ if $overlayImage }}
                 {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "ariaHidden" "true") }}
                 {{ end }}
+            </div>
+        </div>
+        {{ else if $videoYouTubeId }}
+        <div class="product-hero-visual flex justify-center w-full">
+            <div class="relative rounded-xl overflow-hidden w-full max-w-4xl" style="padding-bottom: 56.25%;">
+                <iframe
+                    src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allowfullscreen=""
+                    title="{{ $videoTitle }}"></iframe>
             </div>
         </div>
         {{ else if $image }}

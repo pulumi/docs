@@ -1,11 +1,10 @@
 {{ define "hero" }}
 <header class="page-hero flex justify-center items-center">
-    <div class="w-full flex flex-col md:flex-row py-16 items-start justify-center px-4 gap-8"
-        style="background: linear-gradient(90deg, white 0%, #ddd6fe 50%, white 100%);">
+    <div class="w-full flex flex-col md:flex-row  items-start justify-center px-4 gap-8">
         <div class="flex w-full mt-0 md:mt-4  md:w-1/2 justify-end">
             <div class="flex flex-col justify-start items-start gap-y-4" style="max-width: 600px;">
-                <div class="font-semibold text-violet-600 uppercase text-base font-body">Official AWS Partnership</div>
-                <h1 class="text-4xl m-0 font-semibold">Deploy AWS Infrastructure at the Speed of AI</h1>
+                <div class="font-semibold text-gray-700 uppercase text-sm tracking-wider font-mono">Official AWS Partnership</div>
+                <h1 class="text-5xl m-0 font-semibold">Deploy AWS Infrastructure at the Speed of AI</h1>
                 <p class="text-gray-700 text-lg m-0">Built on 8 years of infrastructure-as-code expertise and enhanced
                     with
                     AI-powered automation. Pulumi automates AWS
@@ -27,10 +26,7 @@
                 </div>
             </div>
             <a href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
-                target="_blank"
-                class="text-white border-2 rounded-lg cursor-pointer z-auto whitespace-normal p-4 text-center"
-                style="background-color: #FF9400; width: 150px; border-color: #FF9400;">Buy with
-                AWS</a>
+                target="_blank" class="btn-orange w-fit">Buy with AWS</a>
         </div>
     </div>
 </header>
@@ -100,7 +96,7 @@
 
 </section>
 
-<section class="w-full my-16 py-16 px-8 md:px-32" style="background: #5a30c5;">
+<section class="w-full my-16 py-16 px-8 md:px-32 bg-violet-primary">
     <div class="flex flex-col lg:flex-row justify-center items-center gap-16">
         <div class="flex flex-col max-w-4xl mx-auto text-center lg:text-left">
             <h3 class="text-white my-2 text-4xl">
@@ -126,66 +122,28 @@
 
 <section class="container mx-auto my-16 text-center">
     <div class="lg:flex lg:flex-wrap justify-center items-stretch">
-        <div class="lg:w-1/2 px-3 py-6 mb-32" style="max-width: 550px;">
-            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
-                <div class="absolute flex items-center justify-center rounded-full"
-                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid var(--color-violet-primary);">
-                    <img src="/images/aws/smart_toy.svg" alt="Robot" style="width: 72px; height: 72px;" />
-                </div>
-                <div>
-                    <h5 class="font-body">Automate AWS Operations with AI</h5>
-                </div>
-                <div class="description">
-                    <p class="leading-7">Built on Amazon Bedrock AgentCore, Pulumi Neo automates provisioning, migrations, compliance remediation, and runtime upgrades using natural language and pull request workflows.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="lg:w-1/2 px-3 py-6 mb-32" style="max-width: 550px;">
-            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
-                <div class="absolute flex items-center justify-center rounded-full"
-                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #3545D7;">
-                    <img src="/images/aws/pdi_security.svg" alt="Shield" style="width: 72px; height: 72px;" />
-                </div>
-                <div>
-                    <h5 class="font-body">Compliance at Scale, Not Speed Bumps</h5>
-                </div>
-                <div class="description">
-                    <p class="leading-7">Continuously enforce CIS, NIST, PCI-DSS, HITRUST and other standards with automated remediation. Neo opens clear pull requests that fix issues at scale, helping teams stay compliant without slowing delivery.
-                    </p>
+        {{ $neoCards := slice
+            (dict "icon" "robot" "title" "Automate AWS Operations with AI" "body" "Built on Amazon Bedrock AgentCore, Pulumi Neo automates provisioning, migrations, compliance remediation, and runtime upgrades using natural language and pull request workflows.")
+            (dict "icon" "shield-check" "title" "Compliance at Scale, Not Speed Bumps" "body" "Continuously enforce CIS, NIST, PCI-DSS, HITRUST and other standards with automated remediation. Neo opens clear pull requests that fix issues at scale, helping teams stay compliant without slowing delivery.")
+            (dict "icon" "lightning" "title" "Find AWS Waste — Fast" "body" "Ask questions to surface unused or expensive AWS resources and get clear optimization steps, like consolidating duplicate EC2 instances into a single Auto Scaling Group.")
+            (dict "icon" "brain" "title" "From Development to AI ⟶ One Platform" "body" "Neo deploys both traditional workloads and AI systems on AWS. Use simple prompts to launch training and inference workloads, accelerate experimentation, and bring new AI capabilities to market faster.")
+        }}
+        {{ range $i, $card := $neoCards }}
+            <div class="lg:w-1/2 px-3 py-6 mb-16" style="max-width: 550px;">
+                <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
+                    <div class="absolute flex items-center justify-center rounded-full bg-violet-50 border-4 border-violet-200"
+                        style="top: -40px; left: 50%; transform: translateX(-50%); width: 80px; height: 80px;">
+                        {{ partial "color-icon.html" (dict "icon" $card.icon "icon_color" "violet") }}
+                    </div>
+                    <div>
+                        <h5 class="font-body">{{ $card.title }}</h5>
+                    </div>
+                    <div class="description">
+                        <p class="leading-7">{{ $card.body }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="lg:w-1/2 px-3 py-6 mb-32 lg:mb-0" style="max-width: 550px;">
-            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
-                <div class="absolute flex items-center justify-center rounded-full"
-                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #F7BF2A;">
-                    <img src="/images/aws/flash_on.svg" alt="Lightning" style="width: 72px; height: 72px;" />
-                </div>
-                <div>
-                    <h5 class="font-body">Find AWS Waste — Fast</h5>
-                </div>
-                <div class="description">
-                    <p class="leading-7">Ask questions to surface unused or expensive AWS resources and get clear optimization steps, like consolidating duplicate EC2 instances into a single Auto Scaling Group.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="lg:w-1/2 px-3 py-6" style="max-width: 550px;">
-            <div class="card text-left py-6 px-16 relative h-full" style="padding-top: 80px;">
-                <div class="absolute flex items-center justify-center rounded-full"
-                    style="top: -62px; left: 50%; transform: translateX(-50%); width: 100px; height: 100px; background: #FFF; border: 3px solid #A25BA8;">
-                    <img src="/images/aws/psychology.svg" alt="Psychology" style="width: 72px; height: 72px;" />
-                </div>
-                <div>
-                    <h5 class="font-body m-0 my-3">From Development to AI ⟶ One Platform</h5>
-                </div>
-                <div class="description">
-                    <p class="leading-7">Neo deploys both traditional workloads and AI systems on AWS. Use simple prompts to launch training and inference workloads, accelerate experimentation, and bring new AI capabilities to market faster.
-                    </p>
-                </div>
-            </div>
-        </div>
+        {{ end }}
     </div>
 </section>
 
@@ -226,8 +184,7 @@
 
     <div class="flex flex-col md:flex-row gap-16">
         <div class="w-full xl:w-1/2 flex">
-            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between"
-                style="border-top: 4px solid; border-color: #5a30c5;">
+            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between border-t-4 border-violet-primary">
                 <div class="flex flex-col">
                     <div class="flex items-start justify-between mb-2 p-0">
                         <span
@@ -254,8 +211,7 @@
         </div>
 
         <div class="w-full xl:w-1/2 flex">
-            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between"
-                style="border-top: 4px solid; border-color: #5a30c5;">
+            <div class="bg-white rounded-lg shadow-lg p-10 w-full flex flex-col justify-between border-t-4 border-violet-primary">
                 <div class="flex flex-col">
                     <div class="flex items-start justify-between mb-2 p-0">
                         <span
@@ -363,11 +319,9 @@
         <h3 class="my-2 text-4xl">Get started with Pulumi and AWS joint solutions</h3>
         <p class="my-2 text-xl">Ready to deploy AWS infrastructure at AI speed? Start with our quickstart
             guide, explore workshops, or talk to our AWS
-            specialists about your specific needs.</p> <a
-            href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
-            target="_blank"
-            class="text-white border-2 rounded-lg cursor-pointer z-auto whitespace-normal p-4 text-center"
-            style="background-color: #FF9400; width: 150px; border-color: #FF9400;">AWS Partner</a>
+            specialists about your specific needs.</p>
+        <a href="https://aws.amazon.com/marketplace/seller-profile?id=b3d56f96-ff1e-4284-9585-5ef58df12266"
+            target="_blank" class="btn-orange w-fit">AWS Partner</a>
     </div>
 </section>
 

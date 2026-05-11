@@ -9,6 +9,7 @@
     - A dict with:
       - cards: slice of card objects
       - lg_top_class: (optional) Tailwind large-breakpoint top-margin class (default: "lg:mt-20")
+      - cols: (optional) Number of columns at md+ breakpoint (2, 3, or 4). Default: 3.
 
     Each card object:
     - icon: Phosphor icon name (e.g. "code")
@@ -20,12 +21,17 @@
 
 {{ $cards := . }}
 {{ $lgTopClass := "lg:mt-20" }}
+{{ $cols := 3 }}
 {{ if reflect.IsMap . }}
     {{ $cards = .cards }}
     {{ with .lg_top_class }}{{ $lgTopClass = . }}{{ end }}
+    {{ with .cols }}{{ $cols = . }}{{ end }}
 {{ end }}
+{{ $colsClass := "md:grid-cols-3" }}
+{{ if eq $cols 2 }}{{ $colsClass = "md:grid-cols-2" }}{{ end }}
+{{ if eq $cols 4 }}{{ $colsClass = "md:grid-cols-2 lg:grid-cols-4" }}{{ end }}
 
-<div class="product-two-column-cards grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
+<div class="product-two-column-cards grid grid-cols-1 {{ $colsClass }} gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
     {{ range $cards }}
     <div class="product-feature-mini-card">
         {{ if .image }}
