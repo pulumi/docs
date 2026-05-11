@@ -26,7 +26,7 @@ A Slack workspace admin installs the **Pulumi Neo Slack app** to the workspace.
 
 ### 2. Connect your Pulumi user to Slack
 
-In Pulumi Cloud, open your **User account** → **Neo Slack** and connect your Slack identity. This lets Neo recognize you when you mention it in Slack.
+In Pulumi Cloud, open your **User account**, then **Neo Slack** and connect your Slack identity. This lets Neo recognize you when you mention it in Slack.
 
 ### 3. Add Neo to a channel
 
@@ -42,7 +42,7 @@ Neo replies in the same thread.
 
 ## How permissions work
 
-Tasks started from Slack run with the [RBAC permissions](/docs/pulumi-cloud/access-management/rbac/) of the Pulumi Cloud user linked to your Slack identity.
+Tasks started from Slack run with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the Pulumi Cloud user linked to your Slack identity.
 
 ## Limitations
 

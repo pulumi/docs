@@ -16,7 +16,7 @@ Mention `@pulumi-neo` in a pull request description, a review comment (top-level
 
 ## What you can do with `@pulumi-neo`
 
-Neo sees the diff, the stacks linked to the repository, and their current state. Reviewers can ask it to walk through what a proposed change actually does, including resources that change downstream in stacks the PR doesn't touch directly. The responses land in the same thread, so analysis becomes part of the review record and follow-up clarifications happen in-place.
+Neo sees the diff, the stacks linked to the repository, and their current state. Reviewers can ask it to walk through what a proposed change actually does, including resources that change downstream in stacks the PR doesn't touch directly. The responses land in the same thread, so analysis becomes part of the review record and follow-up clarifications happen in place.
 
 ## Setting up the integration
 
@@ -34,7 +34,7 @@ In a repository the app can see, open or comment on a pull request or issue and 
 
 ## How permissions work
 
-[Tasks](/docs/ai/tasks/) started from GitHub run with the [RBAC permissions](/docs/pulumi-cloud/access-management/rbac/) of the corresponding Pulumi Cloud user.
+[Tasks](/docs/ai/tasks/) started from GitHub run with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the corresponding Pulumi Cloud user.
 
 ## Limitations
 

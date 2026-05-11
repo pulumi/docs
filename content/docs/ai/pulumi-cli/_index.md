@@ -24,7 +24,7 @@ Press **Shift+Tab** before sending your first message to toggle [plan mode](/doc
 
 ## How permissions work
 
-`pulumi neo` uses your existing `pulumi login` and the [RBAC permissions](/docs/pulumi-cloud/access-management/rbac/) of your Pulumi user.
+`pulumi neo` uses your existing `pulumi login` and the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi user.
 
 ## Requirements
 

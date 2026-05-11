@@ -1,12 +1,12 @@
 ---
-title: MCP integrations
+title: MCP Integrations
 title_tag: Neo MCP Integrations
 h1: MCP Integrations
 meta_desc: Connect Neo to external services through Model Context Protocol servers, bringing issue tracker, observability, and runbook context into Neo tasks.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
-        name: MCP integrations
+        name: MCP Integrations
         parent: ai-integrations
         weight: 0
         identifier: ai-integrations-mcp
@@ -20,7 +20,7 @@ MCP integrations are configured at the organization level by an administrator. O
 
 MCP integrations give Neo direct access to the systems your team uses to define, observe, and operate infrastructure: issue trackers, observability platforms, runbook wikis, and on-call tooling. Neo can pick up a ticket from Linear or Jira and write the matching infrastructure changes; during an investigation it can query real traces and metrics rather than reasoning from documentation; and runbooks, incident records, and on-call schedules are first-class inputs rather than things someone has to paste in.
 
-Today's supported integrations are Atlassian (Jira and Confluence), Linear, Datadog, Honeycomb, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
+Supported integrations are Atlassian (Jira and Confluence), Linear, Datadog, Honeycomb, PagerDuty, and Supabase. Each one becomes a set of tools Neo can call during a task, with credentials managed centrally in Pulumi Cloud.
 
 ## Enabling an MCP integration
 

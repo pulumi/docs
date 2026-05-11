@@ -34,7 +34,7 @@ Automations inherit the rest of Neo's context model. [Custom Instructions](/docs
 
 ## How permissions work
 
-A scheduled task runs with the [RBAC permissions](/docs/pulumi-cloud/access-management/rbac/) of the user who scheduled it, evaluated at execution time. If that user's permissions change between scheduling and execution, the new permissions apply.
+A scheduled task runs with the [RBAC permissions](/docs/administration/access-identity/rbac/) of the user who scheduled it, evaluated at execution time. If that user's permissions change between scheduling and execution, the new permissions apply.
 
 ## Limitations
 
