@@ -4,7 +4,7 @@ cta:
     - label: Contact us
       href: /contact/
       style: secondary
-      track: footer-contact-us
+      track: footer-cta-contact-us
     - label: Get started
       href: https://app.pulumi.com/signup
       style: primary
@@ -80,6 +80,9 @@ columns:
       - label: AI/ML workloads
         href: /solutions/ai/
         track: footer-artificial-intelligence
+      - label: Teams like yours
+        href: /case-studies/
+        track: footer-case-studies
 
   - heading: Company
     items:
@@ -97,7 +100,7 @@ columns:
         track: footer-newsroom
       - label: Awards
         href: /awards/
-        track: footer-events
+        track: footer-awards
       - label: Security
         href: /security/
         track: footer-security
@@ -115,7 +118,7 @@ columns:
         track: footer-professional-services
       - label: Request a demo
         href: /request-a-demo/
-        track: footer-contact-us
+        track: footer-help-demo
       - label: Contact us
         href: /contact/
         track: footer-contact-us
