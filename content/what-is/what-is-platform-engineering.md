@@ -5,6 +5,7 @@ meta_desc: |
     Understand what platform engineering is, along with the main benefits and importance for modern application development.
 type: what-is
 page_title: What is Platform Engineering?
+lastmod: 2026-05-11
 ---
 
 Platform engineering is a set of modern engineering practices that take a holistic approach to managing the entire software development lifecycle, encompassing infrastructure, tools, and processes. The aim of platform engineering is to provide a scalable and secure platform that supports the development, deployment, and operation of software applications in a standardized and efficient way.
@@ -33,6 +34,20 @@ _Platform engineer_ is a term used to describe the engineers that make up a plat
 
 Practitioners working in platform engineering roles usually have a software engineering mindset, as opposed to a DevOps/sysadmin/scripting mindset.
 
+## How does platform engineering differ from DevOps and SRE?
+
+Platform engineering, [DevOps](/what-is/what-is-devops/), and site reliability engineering (SRE) all aim to make software delivery faster and more reliable, but they answer different questions and produce different artifacts.
+
+|                       | Platform engineering                                            | DevOps                                                | Site reliability engineering (SRE)                 |
+|-----------------------|-----------------------------------------------------------------|-------------------------------------------------------|----------------------------------------------------|
+| Primary goal          | Reduce developer friction with self-service infrastructure      | Bridge dev and ops through shared culture and tooling | Keep production services reliable at scale         |
+| Who they serve        | Application developers, treated as customers                    | The whole engineering organization                    | End users of production services                   |
+| Primary deliverables  | Internal platform, golden paths, IDPs, IaC components           | CI/CD pipelines, automation, shared practices         | SLOs, error budgets, incident response             |
+| Success metric        | Developer self-service adoption and lead time                   | Deployment frequency and change failure rate          | Service availability against SLOs                  |
+| Mindset               | Product engineering for developers                              | Cultural collaboration across functions               | Software engineering applied to operations         |
+
+The three disciplines are complementary, not mutually exclusive. Many organizations run all three: DevOps sets the cultural baseline, SRE protects production, and platform engineering productizes the shared tooling that both depend on.
+
 ## Why is platform engineering important?
 
 Developers need infrastructure to run their applications and services. Traditionally, companies have used central infrastructure teams that provision and manage infrastructure on behalf of developers, but this model is prone to bottlenecks as developer requests for infrastructure overwhelm central teams. As modern development teams have taken responsibility over owning and operating their own infrastructure, they also need simple and fast ways of provisioning it while adhering to best practices.
@@ -46,7 +61,33 @@ Platform teams solve these challenges:
 
 Platform engineering can increase development velocity, improve security, increase infrastructure's adherence to best practices, and reduce operational costs through automation. It helps organizations increase the ROI on cloud investments and improves the software delivery lifecycle so that developers can ship new features faster.
 
-Many companies have already started to create dedicated teams for platform engineering. According to Gartner, by 2026, 80% of software engineering organizations will establish platform teams as internal providers of reusable services, infrastructure components, and tools for application delivery.
+Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of software engineering organizations would establish platform teams as internal providers of reusable services, infrastructure components, and tools for application delivery — a shift that is now well underway across the industry, from financial services to consumer retail (see the case studies below).
+
+## Frequently asked questions
+
+### What is the difference between platform engineering and DevOps?
+
+DevOps is a cultural and process shift that aims to break down silos between development and operations. Platform engineering is one concrete way to operationalize DevOps at scale: a dedicated platform team builds an internal product — the platform — that packages DevOps practices into self-service tools for developers. In short, DevOps is the philosophy; platform engineering is a discipline that productizes it.
+
+### Is platform engineering the same as an Internal Developer Platform (IDP)?
+
+No. Platform engineering is the practice; an Internal Developer Platform (IDP) is one of the artifacts that practice produces. A platform team's deliverables typically include the IDP plus the golden paths, infrastructure code libraries, security guardrails, CI/CD integrations, and operational runbooks that surround it.
+
+### When should an organization invest in a platform team?
+
+The strongest signals are repeated developer wait time on a central ops or infrastructure team, divergent infrastructure patterns across product teams, recurring security or compliance gaps in self-built setups, and growth past the point where shared tooling clearly outweighs the cost of building it. Below that scale, a lightweight set of templates and conventions usually suffices.
+
+### How big should a platform engineering team be?
+
+There is no universal answer, but platform teams often start small — a handful of engineers — and scale with the breadth of the platform's surface area rather than headcount alone. A focused team owning a well-scoped platform consistently outperforms a larger team spread thin across too many internal products.
+
+### Does platform engineering replace SRE?
+
+No — the two are complementary. SRE focuses on the reliability of production services through SLOs, error budgets, and incident response. Platform engineering focuses on developer experience and self-service infrastructure. Most companies that adopt platform engineering keep SRE in place; the platform team often surfaces SRE-defined guardrails through the internal platform itself.
+
+### What tools do platform engineering teams use?
+
+A typical platform stack combines [infrastructure as code](/what-is/what-is-infrastructure-as-code/) (such as Pulumi), a container orchestrator (commonly Kubernetes), a [CI/CD](/what-is/what-is-ci-cd/) system, a secrets and configuration layer, a policy-as-code engine, and an IDP front end (Backstage, Port, or a custom portal). The specific tools matter less than how cleanly they compose into a coherent self-service experience.
 
 ## Case studies
 
