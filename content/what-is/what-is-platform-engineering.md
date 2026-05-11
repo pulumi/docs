@@ -18,6 +18,14 @@ In a platform engineering approach, one or more teams---often referred to as the
 
 Platform teams use a customer-driven mindset where they treat the application developers that they serve as customers that must be understood and won over through products that solve their problems. The products these teams offer are infrastructure tools and building blocks that development teams use to provision and manage standardized infrastructure for their applications and services. Typically, these tools have built-in guardrails that enforce best practices and security standards without impeding developers' agility and workflow. This is all done in service of increasing the speed of delivery for the company's products.
 
+## Golden paths and internal developer platforms
+
+Two ideas anchor most platform engineering practice: the *internal developer platform* and the *golden path*.
+
+An **internal developer platform (IDP)** is the product that a platform team ships to its developers. It is the unified surface — typically combining a developer portal, [infrastructure as code](/what-is/what-is-infrastructure-as-code/) templates, [CI/CD](/what-is/what-is-ci-cd/) pipelines, secrets and policy management, and observability tooling — through which developers self-serve everything they need to build, run, and operate their services. An IDP is not a single product you buy; it is a curated composition of tools and shared services that reflects your organization's stack, security model, and developer workflows.
+
+A **golden path** (sometimes called a *paved road*) is an opinionated, well-supported route through the platform for a common task — for example, "deploy a stateless TypeScript service to production." Golden paths are designed to be the fastest, easiest, and most secure option for the most common case. Developers can still go off-road for unusual needs, but the platform team commits to maintaining, supporting, and improving the golden paths as a product. The combination of an IDP and well-defined golden paths is what makes self-service possible without sacrificing security, compliance, or operational consistency.
+
 ## What are some of the requirements for platform engineering?
 
 Regardless of implementation details or specific methods, there are some simple requirements that many platform engineering teams follow. All of these requirements are driving toward maximizing the use of the cloud at scale across an organization while being secure and compliant and enabling developers and development teams to ship faster.
@@ -33,6 +41,16 @@ Regardless of implementation details or specific methods, there are some simple 
 _Platform engineer_ is a term used to describe the engineers that make up a platform team or a platform engineering team. Typically, these engineers have the multi-disciplinary skills, experience, and empathy needed to build a great product, serve developers' needs, and "go to market" within their company. Often, they have experience with multiple engineering disciplines like infrastructure or DevOps and software engineering. The reality is that many engineers who perform platform engineering responsibilities do not have the title "platform engineer." In practice they have varying job titles like software engineer, DevOps engineer, SRE, cloud architect, cloud engineer, and more. By providing developers with infrastructure and tooling to deploy and operate their applications efficiently, platform engineers enable developers to focus on building great software.
 
 Practitioners working in platform engineering roles usually have a software engineering mindset, as opposed to a DevOps/sysadmin/scripting mindset.
+
+Platform engineers typically take on a mix of responsibilities that span product, infrastructure, and developer-facing work:
+
+* **Discovering developer needs**: Running interviews and surveys with internal customers, tracking feedback, and prioritizing the platform roadmap like a product manager would.
+* **Building shared infrastructure components**: Authoring reusable infrastructure as code modules, secure-by-default templates, and service blueprints that developers can compose.
+* **Operating the platform itself**: Treating the IDP as production software — running it on SLOs, owning its on-call rotation, and managing its own CI/CD.
+* **Embedding guardrails**: Codifying security, compliance, and cost policies so they are enforced automatically rather than reviewed manually.
+* **Enabling adoption**: Producing documentation, examples, office hours, and migration tooling so development teams can self-serve onto the platform.
+
+The role draws on a broad skill base: cloud infrastructure and container orchestration, [infrastructure as code](/what-is/what-is-infrastructure-as-code/), CI/CD, observability, security, and the product and communication skills required to treat developers as customers.
 
 ## How does platform engineering differ from DevOps and SRE?
 
@@ -62,6 +80,29 @@ Platform teams solve these challenges:
 Platform engineering can increase development velocity, improve security, increase infrastructure's adherence to best practices, and reduce operational costs through automation. It helps organizations increase the ROI on cloud investments and improves the software delivery lifecycle so that developers can ship new features faster.
 
 Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of software engineering organizations would establish platform teams as internal providers of reusable services, infrastructure components, and tools for application delivery — a shift that is now well underway across the industry, from financial services to consumer retail (see the case studies below).
+
+## How to get started with platform engineering
+
+There is no one-size-fits-all blueprint, but most successful platform initiatives follow a similar sequence:
+
+1. **Identify your developer customers and their top pain points.** Talk to development teams about what currently slows them down — environment provisioning, secrets management, deployment, observability — and rank the problems by frequency and cost.
+1. **Treat the platform as a product, not a project.** Stand up a dedicated team with a product manager (or product-minded engineer), define a roadmap, and measure success by developer adoption and lead time rather than infrastructure metrics alone.
+1. **Define your first golden path.** Pick the single most common developer workflow — for example, "stand up a new service in production" — and pave it end to end. Resist the temptation to support every framework, language, and cloud up front.
+1. **Build on reusable infrastructure as code components.** Package your golden path as IaC modules, templates, and policies that developers consume rather than copy. Pulumi supports this with general-purpose languages, [reusable components](/docs/iac/concepts/resources/components/), and [policy as code](/docs/insights/policy/).
+1. **Layer in self-service through an internal developer portal.** Whether you use [Backstage](https://backstage.io/), [Port](https://www.port.io/), or a custom portal, surface the platform through an interface that meets developers where they already work.
+1. **Iterate against a maturity model.** The [CNCF Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) defines five capability areas — investment, adoption, interfaces, operations, and measurement — across four stages (provisional, operational, scalable, and optimizing), and gives platform teams a shared vocabulary for tracking progress.
+
+Team structure matters as much as tooling. The [Team Topologies](https://teamtopologies.com/) framework, widely adopted in platform engineering practice, frames the platform team as a dedicated topology that exists to reduce the cognitive load on stream-aligned product teams.
+
+## Common challenges of platform engineering
+
+Even well-resourced platform teams hit a predictable set of pitfalls. Knowing them in advance is half the battle:
+
+* **Building in a vacuum.** Platforms designed without continuous developer feedback tend to ship features no one uses. Treat developer interviews and adoption metrics as core platform telemetry.
+* **Trying to support everything at once.** Spreading the platform across too many languages, frameworks, or clouds before any single golden path is solid leads to a shallow surface that no team trusts.
+* **Confusing platform engineering with shared services.** A central infrastructure team that simply owns shared tooling is not a platform team. Platform engineering requires a product mindset, a defined developer customer, and treating the platform as a first-class internal product.
+* **Heavy-handed governance.** Mandating the platform without making it the easiest path drives developers to work around it. Guardrails should be embedded in golden paths, not bolted on as approval gates.
+* **Under-investing in operations.** An IDP that is unreliable, slow, or undocumented quickly loses developer trust. Run the platform itself with the same SLOs, observability, and on-call discipline you expect of any production service.
 
 ## Frequently asked questions
 
