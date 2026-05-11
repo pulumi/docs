@@ -48,14 +48,8 @@
       {{ end }}
 
     {{ else if eq .Type "what-is" }}
-      {{/* What-is pages: try FAQ first (if they have questions), fallback to Article */}}
-      {{ $faqEntity := partial "schema/collectors/faq-entity.html" . }}
-      {{ if $faqEntity }}
-        {{ $entity = $faqEntity }}
-      {{ else }}
-        {{/* No questions found - treat as educational article */}}
-        {{ $entity = partial "schema/collectors/article-entity.html" . }}
-      {{ end }}
+      {{/* What-is pages always emit Article schema so dateModified and timeRequired are present for SERP */}}
+      {{ $entity = partial "schema/collectors/article-entity.html" . }}
 
     {{ else if eq .Type "docs" }}
       {{/* Documentation pages get TechArticle schema */}}

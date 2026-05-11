@@ -1,5 +1,39 @@
 {{ define "hero" }}
-{{ partial "hero" (dict "title" .Params.page_title "small_title" "true") }}
+{{ $wordCount := .WordCount }}
+{{ if not $wordCount }}{{ $wordCount = 500 }}{{ end }}
+{{ $readTime := div $wordCount 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+{{ $modifiedDate := .Lastmod }}
+{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
+    {{ if and .GitInfo .GitInfo.AuthorDate }}
+        {{ $modifiedDate = .GitInfo.AuthorDate }}
+    {{ else }}
+        {{ $modifiedDate = now }}
+    {{ end }}
+{{ end }}
+<header class="page-hero">
+    <div class="container mx-auto px-6 lg:px-0">
+        <nav aria-label="Breadcrumb" class="max-w-4xl mx-auto mb-6">
+            <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+                <li><a class="hover:text-violet-700" href="/what-is/">What Is</a></li>
+                <li aria-hidden="true" class="text-gray-400">/</li>
+                <li aria-current="page" class="text-gray-900 font-medium">{{ .Params.page_title }}</li>
+            </ol>
+        </nav>
+        <div class="page-hero-title">
+            <h1 class="small-title">
+                <span><span data-text="{{ .Params.page_title }}">{{ .Params.page_title | safeHTML }}</span></span>
+            </h1>
+        </div>
+        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
+            <time datetime="{{ $modifiedDate.Format "2006-01-02T15:04:05Z07:00" }}">
+                Updated {{ $modifiedDate.Format "January 2, 2006" }}
+            </time>
+            <span aria-hidden="true">·</span>
+            <span>{{ $readTime }} min read</span>
+        </div>
+    </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
