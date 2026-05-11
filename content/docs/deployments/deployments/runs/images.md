@@ -107,7 +107,7 @@ A custom executor image must:
 - Include `curl` on `$PATH`
 - Include the `pulumi` CLI on `$PATH`
 - Include the language runtime(s) for the projects that will use it
-- Use a glibc-based libc. Pulumi's bundled language runtimes and provider plugins are glibc-linked, so musl-only images such as Alpine are not supported ([`pulumi/pulumi#5426`](https://github.com/pulumi/pulumi/issues/5426))
+- Use a glibc-based libc. Most Pulumi resource provider plugins are glibc-linked, so musl-only images such as Alpine are not supported
 
 If you start from one of the `pulumi/*` base images, all of these are already true.
 
