@@ -125,3 +125,6 @@ scripts/alias-verification/historical-fixes.json
 
 # Ignore compiled Go binaries in static programs.
 static/programs/*-go/*-go
+
+# Claude Code runtime lock (ScheduleWakeup)
+.claude/scheduled_tasks.lock
