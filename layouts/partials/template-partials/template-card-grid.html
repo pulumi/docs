@@ -10,7 +10,9 @@
     - description: Optional section description rendered below the title (markdown supported).
     - align: Optional "left" (default) or "center" for the title/description block.
     - large_cards: Array of card objects (title, description, image, image_alt, cta_text, cta_link)
-    - small_cards: Array of card objects (title, description, image, image_alt, cta_text, cta_link)
+    - small_cards: Array of card objects (title, description, image, image_alt, icon, cta_text, cta_link)
+        - icon: Optional Phosphor icon name (rendered above the title; ignored if image is set).
+    - small_cards_cols: Optional number of columns at md+ for the small_cards grid (2, 3, or 4). Default 3.
     - anchor: Optional anchor for section id
 */}}
 
@@ -19,6 +21,10 @@
 {{ $align := .align | default "left" }}
 {{ $largeCards := .large_cards }}
 {{ $smallCards := .small_cards }}
+{{ $smallCardsCols := .small_cards_cols | default 3 }}
+{{ $smallColsClass := "md:grid-cols-3" }}
+{{ if eq $smallCardsCols 2 }}{{ $smallColsClass = "md:grid-cols-2" }}{{ end }}
+{{ if eq $smallCardsCols 4 }}{{ $smallColsClass = "md:grid-cols-2 lg:grid-cols-4" }}{{ end }}
 {{ $anchor := .anchor }}
 
 <section class="template-section-card-grid flex flex-col gap-8"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
@@ -59,7 +65,7 @@
     </div>
     {{ end }}
     {{ if $smallCards }}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 {{ $smallColsClass }} gap-6">
         {{ range $smallCards }}
         <div class="flex flex-col rounded-2xl border border-gray-300 overflow-hidden">
             {{ if .image }}
@@ -68,6 +74,11 @@
             </div>
             {{ end }}
             <div class="p-8 flex flex-col flex-1">
+                {{ if and .icon (not .image) }}
+                <div class="template-feature-card-icon mb-4">
+                    {{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}
+                </div>
+                {{ end }}
                 <div class="flex flex-col gap-4 mb-4">
                     <h3 class="template-feature-card-title">{{ .title }}</h3>
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>

@@ -169,6 +169,7 @@
         </div>
         {{ if $codeSnippets }}
         <div class="xl:w-1/2 w-full flex justify-end">
+            {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
                     {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
@@ -177,6 +178,11 @@
                 {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "ariaHidden" "true") }}
                 {{ end }}
             </div>
+            {{ else }}
+            <div class="w-full">
+                {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+            </div>
+            {{ end }}
         </div>
         {{ else if $videoYouTubeId }}
         <div class="xl:w-1/2 w-full">
