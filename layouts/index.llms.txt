@@ -8,18 +8,18 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi cloud api`](https://www.pulumi.com/docs/iac/cli/cloud-api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi cloud api list --format=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
+- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --format=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
 
-      pulumi cloud api list --format=json
-      pulumi cloud api describe <path-or-operation-id> --format=json
-      pulumi cloud api /api/user
+      pulumi api list --format=json
+      pulumi api describe <path-or-operation-id> --format=json
+      pulumi api /api/user
 
 - **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
 
       # CLI (auto-fills lang/os from project runtime + host OS)
-      pulumi cloud api ls | grep registry
-      pulumi cloud api describe ListPackageVersions
-      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
+      pulumi api ls | grep registry
+      pulumi api describe ListPackageVersions
+      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/latest/readme
 
       # Direct HTTP (markdown variant via Accept header)
       curl -H "Accept: text/markdown" \
@@ -47,7 +47,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 - **Provider schemas** — full Pulumi schema for any provider, including resource types, input/output shapes, function signatures, and language-specific type mappings. The cloud registry API's `versions/{version}` response includes a `schemaURL` field — follow it for the version-pinned schema. `pulumi package get-schema` accepts `<name>[@version]`, a plugin binary or folder path, or a local `.json` / `.yaml` schema file. The static URL is latest-only.
 
       # Versioned (via cloud registry API)
-      pulumi cloud api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
+      pulumi api /api/registry/packages/pulumi/pulumi/aws/versions/6.0.0 \
         | jq -r .schemaURL | xargs curl
 
       pulumi package get-schema aws
