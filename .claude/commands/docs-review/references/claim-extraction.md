@@ -70,6 +70,9 @@ Do **not** emit a record for:
 - **Code-internal mechanics not asserted as fact in prose.** A variable name, a loop count inside a code block, a config key the example happens to use — unless the surrounding prose makes a *claim* about it.
 - **Diff / git metadata.** `new file mode 100644`, `index abc..def`, hunk headers — these aren't content. (The pre-step parser never feeds these to you, but if you see them, skip them.)
 - **Tag names inside code/comments that aren't recency claims.** `:latest` in a `Dockerfile` line or comment is an image tag, not a "this is the latest version" assertion. `/latest/` in a URL path is a path segment, not a temporal claim.
+- **Body lines of a pure-rename file.** When a file is renamed with a high similarity index (≥ 95% — i.e., the body is unchanged, only the path moved), nothing in the body is a *new* claim this PR introduced; only the diff hunks (frontmatter changes, the few modified lines) carry claim signal. The Layer-B LLM passes are told the rename similarity and skip the unchanged body; the regex floor walks only `+` lines (which a pure rename has few of). If a rename-file body claim still reaches you, demote it (`not-a-claim — unchanged body of a renamed file`).
+
+When a candidate-claim record reaches the review that turns out to be one of the above, the review **demotes it in the trail** (`- L… "<text>" → ➖ not-a-claim — <one-line reason>`), never silently drops it — that's what satisfies the `candidate-claims-coverage` validator rule. See `docs-review:references:output-format` §Verification trail.
 
 ### The third-party-attribution flip — read this carefully
 
@@ -87,11 +90,11 @@ The `text` of the attribution record must include the attribution ("AWS Lambda's
 
 A claim and its source can share a number but make *different* assertions. The verifier compares framings using this taxonomy (from `docs-review:references:fact-check` §Cited-claim spot-check) — extract the claim with enough fidelity that the comparison is possible:
 
-- `exact-match` — the PR says what the source says, at equal scope. → ✅
-- `strengthened` — the PR is a *narrower/stronger* version of the source. Source: "96% of enterprises **use** AI agents"; PR: "96% of enterprises run AI agents **in production**." → 🚨
-- `narrowed` — the PR is *broader* than the source. Source: "U.S. enterprises"; PR: "enterprises." → 🚨
-- `shifted` — same anchor, different subject/speech-act. Source: "Kubernetes supports the three most recent minor releases" (a support-window commitment); PR: "Kubernetes deprecates minor releases after two versions" (a deprecation-cadence claim). Same release-window topic, different framing. → 🚨/⚠️
-- `contradicted` — the source positively disagrees.
+- `exact-match` — the PR says what the source says, at equal scope. → `verified` (✅)
+- `strengthened` — the PR is a *narrower/stronger* version of the source. Source: "96% of enterprises **use** AI agents"; PR: "96% of enterprises run AI agents **in production**." → `contradicted` (❌)
+- `narrowed` — the PR is *broader* than the source. Source: "U.S. enterprises"; PR: "enterprises." → `contradicted` (❌)
+- `shifted` — same anchor, different subject/speech-act. Source: "Kubernetes supports the three most recent minor releases" (a support-window commitment); PR: "Kubernetes deprecates minor releases after two versions" (a deprecation-cadence claim). Same release-window topic, different framing. → `contradicted` (❌)
+- `contradicted` — the source positively disagrees. → `contradicted` (❌)
 
 So: when extracting an attributed/cited claim, capture *how the PR frames it* ("X reported Y", "X recommends Y", "according to X, Y") — not just the bare fact Y. The verifier needs the framing to catch a `shifted`/`strengthened` mismatch.
 

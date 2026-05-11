@@ -95,6 +95,15 @@ CONTENT_MD_RE = re.compile(r"^content/.*\.md$")
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 DIFF_OLD_FILE_RE = re.compile(r"^--- (a/.+|/dev/null)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+DIFF_GIT_RE = re.compile(r"^diff --git a/(.+?) b/(.+)$")
+SIMILARITY_RE = re.compile(r"^similarity index (\d+)%$")
+RENAME_TO_RE = re.compile(r"^rename to (.+)$")
+# A rename whose body is essentially unchanged carries no *new* body claims —
+# only the diff hunks (frontmatter changes, the few modified lines) matter. Skip
+# the unchanged body at/above this similarity: a renamed-but-unchanged blog body
+# otherwise costs a large output-token tax extracting ~dozens of claims that all
+# correctly demote to `not-a-claim — unchanged`.
+RENAME_BODY_SKIP_THRESHOLD = 95
 
 # Claim types the schema allows — kept in sync with references/claim-extraction.md.
 CLAIM_TYPES = [
@@ -255,6 +264,48 @@ def is_new_file(patch: str, target: str) -> bool:
     return False
 
 
+def rename_similarity(patch: str, target: str) -> int | None:
+    """If `target` is the destination of a `rename` in the diff, return the
+    `similarity index` percentage; otherwise None.
+
+    A `git diff` rename block looks like:
+        diff --git a/<old> b/<new>
+        similarity index 98%
+        rename from <old>
+        rename to <new>
+        [index ...]
+        [--- a/<old>]
+        [+++ b/<new>]
+        [@@ ...hunks...]
+    A 100%-similarity rename has no hunks at all.
+    """
+    in_block = False
+    sim: int | None = None
+    rename_to_target = False
+    for raw in patch.splitlines():
+        gm = DIFF_GIT_RE.match(raw)
+        if gm:
+            if in_block:  # leaving the block of interest without confirming the rename
+                if rename_to_target:
+                    return sim
+            in_block = (gm.group(2) == target)
+            sim = None
+            rename_to_target = False
+            continue
+        if not in_block:
+            continue
+        sm = SIMILARITY_RE.match(raw)
+        if sm:
+            sim = int(sm.group(1))
+            continue
+        if RENAME_TO_RE.match(raw) and RENAME_TO_RE.match(raw).group(1) == target:
+            rename_to_target = True
+            continue
+        if raw.startswith(("--- ", "@@ ")):
+            break  # past the header
+    return sim if rename_to_target else None
+
+
 def changed_line_ranges(patch: str, target: str) -> list[str]:
     """List of 'L<a>-<b>' (or 'L<a>') ranges of added/modified lines in the new file."""
     ranges: list[tuple[int, int]] = []
@@ -361,6 +412,15 @@ def build_user_message(repo_root: Path, patch: str, path: str, scrutiny: str) ->
     note = None
     if scrutiny == "standard" and is_new_file(patch, path):
         effective = "heightened"  # a brand-new file: extract from the whole thing
+
+    # Pure-rename guard: a high-similarity rename's body carries no *new* claims —
+    # only the diff hunks (frontmatter changes etc.) do. Pin scope to the hunks
+    # even when `heightened` would otherwise read the whole body.
+    sim = rename_similarity(patch, path)
+    if sim is not None and sim >= RENAME_BODY_SKIP_THRESHOLD:
+        if effective == "heightened":
+            note = f"{path} is a {sim}% rename — extracting from the diff hunks only (unchanged body skipped)"
+        effective = "standard"
 
     file_path = repo_root / path
     if effective == "heightened":
@@ -497,6 +557,11 @@ def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: 
 def process_file(api_key: str, repo_root: Path, patch: str, path: str, scrutiny: str,
                  mode: str, model: str, system_body: str, dry_run: bool) -> dict:
     result: dict = {"file": path, "claims": [], "error": None, "usage": {}}
+    # A 100%-similarity rename has no hunks at all — nothing to extract; don't
+    # spend an API call on it.
+    if rename_similarity(patch, path) is not None and not numbered_hunks(patch, path).strip():
+        result["error"] = f"{path}: 100% rename (no body changes); skipped"
+        return result
     try:
         user_text, note = build_user_message(repo_root, patch, path, scrutiny)
         if note:

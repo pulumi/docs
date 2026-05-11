@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """validate-pinned.py — validate a rendered pinned-review body.
 
-Runs 21 deterministic structural and computational invariants on the rendered
-review body BEFORE pinned-comment.sh upsert publishes it. On violations, writes
-a structured fix-me marker (JSON + rendered markdown) and exits 1; the caller
-re-renders and re-runs.
+Runs the deterministic structural and computational invariants in the RULES
+registry on the rendered review body BEFORE pinned-comment.sh upsert publishes
+it. On violations, writes a structured fix-me marker (JSON + rendered markdown)
+and exits 1; the caller re-renders and re-runs.
 
 Subcommands:
   check  --body-file <path> --pr <N> [--repo <owner/repo>]
          [--output-json <path>] [--output-markdown <path>]
-                       Run all 21 checks. On violations, write fix-me marker
+                       Run all rules. On violations, write fix-me marker
                        and exit 1; otherwise exit 0.
   show-rules           Print the rule registry (id, description, hint).
   schema-version       Print the validator's schema version.
@@ -19,7 +19,12 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 6
+Schema version: 8 (v7→v8 adds the `.verified-claims.json` artifact gate:
+  `verified-claims-trail-faithful` + `pass-3-evidence-faithful` rules,
+  `pass-2-fetch-faithfulness` strengthened against the artifact, the trail
+  records keyed on the per-verdict word — ✅ `verified` / 🤝 `matches` /
+  ➖ `not-a-claim` / 🤷 `unverifiable` / ❌ `contradicted` / ⚔️ `mismatch` —
+  with `trail-bucket-consistency` re-keyed accordingly).
 """
 
 from __future__ import annotations
@@ -33,7 +38,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 7
+SCHEMA_VERSION = 8
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -74,6 +79,31 @@ TEMPORAL_TRIGGERS = {
     "recently", "now supports", "now available", "new", "just launched",
     "latest", "introduced", "as of", "starting", "going forward",
 }
+
+# Schema v8: per-verdict emojis in the 🔍 Verification trail. The verdict
+# *word* is the source of truth (it drives bucket placement); the emoji is a
+# visual aid. EXPECTED_TRAIL_EMOJI maps each verdict word to the glyph the
+# render contract (`docs-review:references:output-format`) requires.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch")
+EXPECTED_TRAIL_EMOJI = {
+    "verified": "✅",
+    "matches": "🤝",
+    "not-a-claim": "➖",
+    "unverifiable": "🤷",
+    "contradicted": "❌",
+    "mismatch": "⚔️",
+}
+# Verdict words that promote a finding to 🚨 Outstanding.
+OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch"}
+# Legacy/fallback emojis still accepted on trail lines for one transition; the
+# trail-bucket-consistency rule flags them with a "render the per-verdict emoji"
+# nudge. Note: ✅ is *also* the canonical `verified` emoji — it only counts as
+# legacy when paired with `matches` / `not-a-claim`.
+LEGACY_TRAIL_EMOJIS = {"✅", "⚠️", "🚨"}
+# Emojis that, on a trail line, mark the line as 🚨-bucket regardless of the
+# verdict word (used as a fallback when the verdict word isn't one of the
+# canonical TRAIL_VERDICT_WORDS).
+OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️"}
 
 # Dispatch-metadata format on the External claim verification line
 # (output-format.md L122). Two segments are required, matched independently:
@@ -165,6 +195,13 @@ class Context:
     # Used by `candidate-claims-coverage` and by the 0-claim relaxation in
     # `trail-bucket-consistency`.
     candidate_claims: list[dict] | None = None
+    # Schema v8: the verification artifact `.verified-claims.json` written by
+    # the `verify-claims.py` pre-step (`{verdicts: [...], errors: [...],
+    # meta: {...}}`). None means the file wasn't present (local mode or the
+    # workflow didn't run / crashed the pre-step); otherwise the parsed
+    # `verdicts` list (possibly empty). Used by `verified-claims-trail-faithful`,
+    # `pass-2-fetch-faithfulness` (strengthened), and `pass-3-evidence-faithful`.
+    verified_claims: list[dict] | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -256,14 +293,26 @@ def extract_count_table_row(body: str) -> dict[str, int] | None:
     return None
 
 
+_TRAIL_EMOJI_ALT = r"✅|🤝|➖|🤷|❌|⚔️|⚠️|🚨"
+_TRAIL_LINE_RE = re.compile(rf"L(\d+(?:-\d+)?)\b.*?→\s*({_TRAIL_EMOJI_ALT})\s+(\S[^\n]*)")
+
+
 def extract_trail_records(body: str) -> list[dict]:
     """Pull line-anchored verdicts out of 🔍 Verification trail.
 
-    Returns list of {line_ref, line_refs, verdict, raw} dicts where line_ref is
-    the *first* L<n> or L<a>-<b> anchor on the line and line_refs is *all* of
-    them (collapsed frontmatter-sweep entries cite several locations on one
-    line — e.g. `- L12 "..." (also L88, L91) → ✅ matches`). verdict is one of
-    ✅ / ⚠️ / 🚨.
+    Returns list of {line_ref, line_refs, verdict_emoji, verdict_word,
+    verdict_text, raw} dicts. line_ref is the *first* L<n>/L<a>-<b> anchor on
+    the line; line_refs is *all* of them (collapsed frontmatter-sweep entries
+    cite several locations on one line — e.g. `- L12 "..." (also L88, L91) →
+    🤝 matches`). verdict_emoji is the rendered glyph; verdict_word is the
+    canonical verdict (`verified` / `matches` / `not-a-claim` / `unverifiable`
+    / `contradicted` / `mismatch`), parsed from the first token after the
+    emoji, or None when it isn't one of those.
+
+    Schema v8: the verdict *word* is the source of truth for bucket placement;
+    the emoji is a visual aid. Legacy ✅/⚠️/🚨 forms still parse — the
+    `trail-bucket-consistency` rule flags them with a "render the per-verdict
+    emoji" nudge during the transition.
     """
     span = find_section(body, "🔍 Verification trail")
     if span is None:
@@ -271,18 +320,24 @@ def extract_trail_records(body: str) -> list[dict]:
     start, end = span
     records = []
     for raw in body.splitlines()[start:end]:
-        m = re.search(r"L(\d+(?:-\d+)?)\b.*?→\s*(✅|⚠️|🚨)\s+(\S[^\n]*)", raw)
-        if m:
-            # Pull every L<a>[-<b>] token on the line — the verdict applies to
-            # all of them (frontmatter-sweep collapse).
-            all_refs = re.findall(r"L\d+(?:-\d+)?", raw)
-            records.append({
-                "line_ref": f"L{m.group(1)}",
-                "line_refs": all_refs or [f"L{m.group(1)}"],
-                "verdict_emoji": m.group(2),
-                "verdict_text": m.group(3),
-                "raw": raw,
-            })
+        m = _TRAIL_LINE_RE.search(raw)
+        if not m:
+            continue
+        verdict_text = m.group(3)
+        toks = verdict_text.split()
+        first_token = toks[0].strip(":.,;)") if toks else ""
+        verdict_word = first_token if first_token in TRAIL_VERDICT_WORDS else None
+        # Pull every L<a>[-<b>] token on the line — the verdict applies to all
+        # of them (frontmatter-sweep collapse).
+        all_refs = re.findall(r"L\d+(?:-\d+)?", raw)
+        records.append({
+            "line_ref": f"L{m.group(1)}",
+            "line_refs": all_refs or [f"L{m.group(1)}"],
+            "verdict_emoji": m.group(2),
+            "verdict_word": verdict_word,
+            "verdict_text": verdict_text,
+            "raw": raw,
+        })
     return records
 
 
@@ -740,41 +795,95 @@ def check_external_claim_pass3_outcome(ctx: Context) -> list[Violation]:
     return []
 
 
+_URL_RE = re.compile(r"https?://[\w\-._~:/?#\[\]@!$&'*+,;=%()]+")
+
+
+def _norm_url(u: str) -> str:
+    return u.strip().rstrip(".,;)").rstrip("/").lower()
+
+
+def _fetched_status_index(ctx: Context) -> dict[str, int | None]:
+    """Normalized URL → HTTP status from `.fetched-urls.json` (None when the
+    record carries no usable status)."""
+    out: dict[str, int | None] = {}
+    for rec in (ctx.fetched_urls or []):
+        if not isinstance(rec, dict) or not rec.get("url"):
+            continue
+        st = rec.get("status")
+        try:
+            out[_norm_url(str(rec["url"]))] = int(st) if st is not None else None
+        except (TypeError, ValueError):
+            out[_norm_url(str(rec["url"]))] = None
+    return out
+
+
 def check_pass2_fetch_faithfulness(ctx: Context) -> list[Violation]:
-    """Strict-zero faithfulness floor for Pass 2: F > 0 requires non-empty `.fetched-urls.json`.
+    """Pass 2 faithfulness: (a) strict-zero floor on the routed-metadata count,
+    plus (b) the schema-v8 artifact check against `.verified-claims.json`.
 
-    Schema v5. Catches the actual S35 unfaithful pattern observed in the
-    stream-JSON audit: docs reviews rendered routed-metadata claiming Pass 2
-    dispatch but had ZERO Agent / WebFetch / WebSearch tool calls. The S33
-    validator caught format drift; v4 caught V/C/U arithmetic drift; v5
-    catches the dispatch lie -- if the workflow fetched no URLs, the model
-    cannot honestly report Pass 2 traffic.
+    (a) Schema v5 strict-zero floor — catches the unfaithful pattern observed
+    in stream-JSON audits: a review rendering routed-metadata claiming Pass 2
+    dispatch when the workflow fetched zero URLs. Trips iff `.fetched-urls.json`
+    exists AND is empty AND the routed metadata reports F > 0.
 
-    Rule: trip iff `.fetched-urls.json` exists AND is empty AND the routed
-    metadata reports F > 0. Pass when the file is missing (local mode), or
-    when the file is non-empty (any URL count is consistent with model-side
-    bouncing arithmetic), or when F = 0.
+    (b) Schema v8 artifact check — for each `route: pass2` verdict in
+    `.verified-claims.json`: its `source` must cite a URL present in
+    `.fetched-urls.json`, and a `verified`/`matches` pass2 verdict requires
+    that URL's status to be 2xx — a dead/error URL can't verify a claim. This
+    is the direct counter to the "✅ verified against a 404'd citation" false
+    positive. A `contradicted` pass2 verdict against a non-2xx URL is the
+    *correct* shape — never flagged.
+
+    Skipped (both halves) in local mode where the relevant artifact is absent.
     """
-    if ctx.fetched_urls is None:
-        return []  # local mode / file not present
-    if len(ctx.fetched_urls) > 0:
-        return []  # workflow fetched URLs; F > 0 is plausibly faithful
-    line = _external_claim_line(ctx)
-    if line is None:
-        return []
-    m = ROUTED_PASS2_RE.search(line)
-    if not m:
-        return []  # routed-metadata regex check carries this case
-    pass2_count = int(m.group(1))
-    if pass2_count == 0:
-        return []
-    return [Violation(
-        rule_id="pass-2-fetch-faithfulness",
-        line_ref="<investigation log: External claim verification>",
-        expected=f"Pass 2 count = 0 when `.fetched-urls.json` is empty (no URLs in PR diff); got Pass 2 = {pass2_count}",
-        actual=line.strip()[:200],
-        hint=f"The workflow fetched 0 URLs but the routed-metadata claims {pass2_count} Pass 2 dispatch(es). Either re-route the unrouted external-public claims to Pass 3 (search-then-fetch) and update `Pass 2` to 0, or fix the count to reflect actual URL-fetch verifications. See `docs-review:references:fact-check` §Routed verification.",
-    )]
+    violations: list[Violation] = []
+
+    # (a) Strict-zero floor on the routed-metadata Pass 2 count.
+    if ctx.fetched_urls is not None and len(ctx.fetched_urls) == 0:
+        line = _external_claim_line(ctx)
+        if line is not None:
+            m = ROUTED_PASS2_RE.search(line)
+            if m and int(m.group(1)) > 0:
+                pass2_count = int(m.group(1))
+                violations.append(Violation(
+                    rule_id="pass-2-fetch-faithfulness",
+                    line_ref="<investigation log: External claim verification>",
+                    expected=f"Pass 2 count = 0 when `.fetched-urls.json` is empty (no URLs in PR diff); got Pass 2 = {pass2_count}",
+                    actual=line.strip()[:200],
+                    hint=f"The workflow fetched 0 URLs but the routed-metadata claims {pass2_count} Pass 2 dispatch(es). Either re-route the unrouted external-public claims to Pass 3 (search-then-fetch) and update `Pass 2` to 0, or fix the count to reflect actual URL-fetch verifications. See `docs-review:references:fact-check` §Routed verification.",
+                ))
+
+    # (b) Artifact check: pass2 verdicts must point at a fetched URL whose
+    # status is consistent with the verdict.
+    verdicts = ctx.verified_claims
+    if verdicts and ctx.fetched_urls is not None:
+        status_by_url = _fetched_status_index(ctx)
+        for v in verdicts:
+            if not isinstance(v, dict) or v.get("route") != "pass2":
+                continue
+            verdict = v.get("verdict")
+            src = str(v.get("source") or "")
+            lr = str(v.get("line_range") or "?")
+            cited = next((u for u in _URL_RE.findall(src) if _norm_url(u) in status_by_url), None)
+            if cited is None:
+                violations.append(Violation(
+                    rule_id="pass-2-fetch-faithfulness",
+                    line_ref=lr,
+                    expected=f"the pass2 verdict for {lr} cites a URL present in `.fetched-urls.json`",
+                    actual=f"`source: \"{src[:120]}\"` matches no fetched URL",
+                    hint="`.verified-claims.json` routed this claim to Pass 2 but its `source` doesn't point at a URL the workflow fetched. The verify-claims pre-step should have re-routed it to Pass 3 (search-then-fetch); flagging so the maintainer sees the unfaithful Pass 2 attribution.",
+                ))
+                continue
+            st = status_by_url.get(_norm_url(cited))
+            if verdict in ("verified", "matches") and (st is None or not (200 <= st < 300)):
+                violations.append(Violation(
+                    rule_id="pass-2-fetch-faithfulness",
+                    line_ref=lr,
+                    expected=f"a `verified` pass2 verdict for {lr} cites a 2xx URL; `{cited}` has status {st}",
+                    actual=f"`{verdict}` against `{cited}` (HTTP {st})",
+                    hint=f"A dead/error URL (HTTP {st}) can't verify a claim. The trail verdict for {lr} should be `❌ contradicted (cited URL returns HTTP {st})`, not `{verdict}`. If `verify-claims.py` itself recorded `{verdict}` against a non-2xx URL, that's the pre-step bug to fix — the validator catches the rendered drift either way.",
+                ))
+    return violations
 
 
 def check_pass3_dispatch_mandate(ctx: Context) -> list[Violation]:
@@ -973,24 +1082,63 @@ def _bullet_mentions_anchor(bullet: str, anchor: str) -> bool:
     return re.search(rf"\b{re.escape(anchor)}\b", bullet) is not None
 
 
-def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
-    """Every bucket bullet's [L...] prefix matches a trail record. Every 🚨 trail verdict surfaces in 🚨 Outstanding.
+def _trail_is_outstanding(r: dict) -> bool:
+    """A trail record promotes to 🚨 Outstanding when its verdict word is
+    `contradicted`/`mismatch` (the schema-v8 source of truth), or — for legacy
+    lines whose first token isn't a canonical verdict word — when its emoji is
+    one of 🚨 / ❌ / ⚔️."""
+    if r.get("verdict_word") in OUTSTANDING_VERDICT_WORDS:
+        return True
+    if r.get("verdict_word") is None and r.get("verdict_emoji") in OUTSTANDING_TRAIL_EMOJIS:
+        return True
+    return False
 
-    Relaxation (S42): when the 🔍 Verification trail has no parsed records
-    (the explicit-empty form, `_No verifiable claims extracted from this
-    diff._` — the pure-layout / 0-claim case like #18857), the
+
+def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
+    """Every bucket bullet's [L...] prefix matches a trail record; every 🚨 trail
+    verdict (`contradicted`/`mismatch`) surfaces in 🚨 Outstanding; trail lines
+    render the per-verdict emoji.
+
+    Relaxation: when the 🔍 Verification trail has no parsed records (the
+    explicit-empty form, `_No verifiable claims extracted from this diff._` —
+    the pure-layout / 0-claim case), the
     `bucket-bullet-trail-match` half is skipped: there is nothing in the trail
     for a bullet's prefix to match, and ⚠️/💡 code-behavior observations on a
     layout PR legitimately have no fact-check claim behind them. The prefix
     mandate (`bucket-bullet-line-range-prefix`) still applies, and the
     `candidate-claims-coverage` rule independently catches a content PR whose
     review failed to populate the trail.
+
+    Schema v8: 🚨-promotion is keyed on the verdict *word* (not the emoji), and
+    a `trail-per-verdict-emoji` nudge flags any trail line that still renders a
+    legacy bucket emoji (✅ on `matches`/`not-a-claim`, ⚠️ on `unverifiable`,
+    🚨 on `contradicted`/`mismatch`) instead of the per-verdict glyph.
     """
     trail_records = extract_trail_records(ctx.body)
     trail_refs = {r["line_ref"] for r in trail_records}
     trail_is_empty = len(trail_records) == 0
 
     violations: list[Violation] = []
+
+    # Per-verdict-emoji nudge (schema v8). When the verdict word is known and
+    # the rendered emoji differs from the canonical glyph for that word, flag
+    # it. ✅ is the canonical `verified` glyph — it only counts as legacy when
+    # paired with `matches` / `not-a-claim`.
+    for r in trail_records:
+        word = r.get("verdict_word")
+        if not word:
+            continue
+        want = EXPECTED_TRAIL_EMOJI.get(word)
+        if want and r.get("verdict_emoji") != want:
+            violations.append(Violation(
+                rule_id="trail-per-verdict-emoji",
+                line_ref=r["line_ref"],
+                expected=f"trail line for {r['line_ref']} renders `{want}` for verdict `{word}`",
+                actual=f"renders `{r.get('verdict_emoji')}` (legacy bucket emoji)",
+                hint=(f"Use the per-verdict emoji from `docs-review:references:output-format`: "
+                      f"✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · "
+                      f"❌ `contradicted` · ⚔️ `mismatch`. Render `{want} {word}` on this trail line."),
+            ))
 
     # Every bucket bullet must have a [L...] prefix; when the trail is non-empty
     # it must also match a trail record. When the prefix is missing, emit only
@@ -1022,7 +1170,9 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
                     hint=f"Either add the trail record for {prefix} (a `- L... → ...` line under 🔍 Verification trail) or remove this bucket bullet.",
                 ))
 
-    # Every 🚨 trail verdict (contradicted, mismatch) surfaces in 🚨 Outstanding.
+    # Every 🚨 trail verdict (`contradicted` / `mismatch`) surfaces in
+    # 🚨 Outstanding. Keyed on the verdict *word* (schema v8); legacy lines
+    # whose first token isn't a canonical word fall back to the emoji.
     # Match by either: (a) bullet's [L...] prefix, OR (b) fuzzy mention of the
     # anchor anywhere in the Outstanding section text. The text-level fallback
     # tolerates legacy bullet formats and missing-prefix bullets — those are
@@ -1031,7 +1181,7 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
     outstanding_bullets = extract_bucket_bullets(ctx.body, "🚨 Outstanding")
     seen_trail_refs = set()
     for r in trail_records:
-        if r["verdict_emoji"] != "🚨":
+        if not _trail_is_outstanding(r):
             continue
         ref = r["line_ref"]
         if ref in seen_trail_refs:
@@ -1128,13 +1278,134 @@ def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
             actual=f"no trail entry covers candidate claim [{ctype}, found_by={fb}]: \"{text[:120]}\"",
             hint=(
                 f"`.candidate-claims.json` is the claim floor — add a 🔍 Verification trail line for {lr} "
-                "(`- L… \"<claim>\" → <emoji> <verdict>`). Verdict is `verified`/`unverifiable`/`contradicted`/"
-                "`matches`/`mismatch` per `docs-review:references:output-format`; if the candidate is a "
-                "regex-layer false positive (git metadata, a Dockerfile-comment tag, a faithful description of "
-                "the author's own design — see `docs-review:references:claim-extraction` §\"What is NOT a claim\"), "
-                "record `✅ not-a-claim — <one-line reason>` so the demotion is traced. You MAY also add claims "
+                "(`- L… \"<claim>\" → <emoji> <verdict>`). Verdict word is `verified`/`unverifiable`/`contradicted`/"
+                "`matches`/`mismatch`/`not-a-claim` with the per-verdict emoji per `docs-review:references:output-format` "
+                "(✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`); "
+                "if the candidate is a regex-layer false positive (git metadata, a Dockerfile-comment tag, a faithful "
+                "description of the author's own design — see `docs-review:references:claim-extraction` §\"What is NOT a "
+                "claim\"), record `➖ not-a-claim — <one-line reason>` so the demotion is traced. You MAY also add claims "
                 "the artifact missed; you may NOT silently drop one."
             ),
+        ))
+    return violations
+
+
+# Direction matters: the dangerous trail-vs-artifact drift is the trail HIDING
+# a problem the artifact recorded. `not-a-claim` has no forbidden set — the
+# review re-promoting a demoted candidate to a real verdict is fine (more
+# scrutiny, not less).
+_TRAIL_DRIFT_FORBIDDEN = {
+    "contradicted": {"verified", "matches", "not-a-claim"},
+    "mismatch": {"verified", "matches", "not-a-claim"},
+    "unverifiable": {"verified", "matches"},
+    "verified": {"contradicted", "mismatch"},
+    "matches": {"contradicted", "mismatch"},
+}
+
+
+def _trail_entries_with_word(body: str) -> list[tuple[list[tuple[int, int]], str | None, str]]:
+    """(parsed line ranges, verdict_word, raw line) for each 🔍 trail record."""
+    out: list[tuple[list[tuple[int, int]], str | None, str]] = []
+    for r in extract_trail_records(body):
+        rngs: list[tuple[int, int]] = []
+        for tok in r.get("line_refs", [r.get("line_ref", "")]):
+            pr = _parse_line_token(tok)
+            if pr:
+                rngs.append(pr)
+        if rngs:
+            out.append((rngs, r.get("verdict_word"), r.get("raw", "")))
+    return out
+
+
+def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
+    """Schema v8: the rendered 🔍 Verification trail's verdict word for a claim
+    must not contradict `.verified-claims.json`'s verdict for the same claim
+    (matched by line-range overlap).
+
+    Direction matters — the dangerous drift is the trail HIDING a problem the
+    artifact recorded (`contradicted`/`unverifiable` → `verified`/`matches`/
+    `not-a-claim`): the "✅ verified against a 404'd citation" /
+    "✅ verified against a stale cached price" verification-layer false-positive
+    class. The reverse (artifact `verified` → trail `contradicted`/`mismatch`)
+    is also flagged: the review can't invent a
+    problem the verifier didn't find. Non-surgical (the fixer can't honestly
+    synthesize the right verdict) → soft-floors loudly. Skipped in local mode
+    (no `.verified-claims.json`).
+    """
+    verdicts = ctx.verified_claims
+    if not verdicts:
+        return []  # pre-step didn't run / produced nothing — skip
+    trail_entries = _trail_entries_with_word(ctx.body)
+    violations: list[Violation] = []
+    for v in verdicts:
+        if not isinstance(v, dict):
+            continue
+        av = v.get("verdict")
+        forbidden = _TRAIL_DRIFT_FORBIDDEN.get(av)
+        if not forbidden:
+            continue
+        claim_ranges = _parse_line_ranges(str(v.get("line_range") or ""))
+        if not claim_ranges:
+            continue
+        for tr_ranges, tr_word, _raw in trail_entries:
+            if tr_word is None or not _ranges_overlap(claim_ranges, tr_ranges):
+                continue
+            if tr_word in forbidden:
+                lr = str(v.get("line_range") or "<verified claim>")
+                route = v.get("route", "?")
+                ev = (str(v.get("evidence") or ""))[:160]
+                violations.append(Violation(
+                    rule_id="verified-claims-trail-faithful",
+                    line_ref=lr,
+                    expected=f"the 🔍 Verification trail verdict for {lr} matches `.verified-claims.json` (`{av}`, route={route})",
+                    actual=f"trail says `{tr_word}`; artifact says `{av}` — evidence: \"{ev}\"",
+                    hint=(f"`.verified-claims.json` is the verdict source — `verify-claims.py` already verified this claim. "
+                          f"Render the trail line for {lr} as `{EXPECTED_TRAIL_EMOJI.get(av, '')} {av}` with the artifact's "
+                          f"`evidence`/`source` fields. You may NOT silently overwrite the artifact's verdict in the trail; "
+                          f"if you believe it's wrong, render it as recorded and dispute it in a follow-up issue."),
+                ))
+                break  # one violation per artifact verdict
+    return violations
+
+
+_WEBSEARCH_QUERY_RE = re.compile(r'WebSearch ran query\s+"([^"]+)"', re.IGNORECASE)
+
+
+def check_pass3_evidence_faithful(ctx: Context) -> list[Violation]:
+    """Schema v8: for each `route: pass3` verdict in `.verified-claims.json`
+    whose `source` records a `WebSearch ran query "<q>"` pointer, the matching
+    🔍 Verification trail entry must quote the *same* query — the trail can't
+    attribute a search the verifier didn't run (a Pass 3 verdict citing a query
+    that didn't actually produce the cited evidence). Skipped in local mode."""
+    verdicts = ctx.verified_claims
+    if not verdicts:
+        return []
+    trail_entries = _trail_entries_with_word(ctx.body)
+    violations: list[Violation] = []
+    for v in verdicts:
+        if not isinstance(v, dict) or v.get("route") != "pass3":
+            continue
+        src = str(v.get("source") or "")
+        qm = _WEBSEARCH_QUERY_RE.search(src)
+        if not qm:
+            continue  # no recorded query — nothing to cross-check
+        artifact_q = qm.group(1).strip().lower()
+        claim_ranges = _parse_line_ranges(str(v.get("line_range") or ""))
+        if not claim_ranges:
+            continue
+        overlapping = [raw for rngs, _w, raw in trail_entries if _ranges_overlap(claim_ranges, rngs)]
+        if not overlapping:
+            continue  # missing-entry case is carried by candidate-claims-coverage / verified-claims-trail-faithful
+        if any((tm := _WEBSEARCH_QUERY_RE.search(raw)) and tm.group(1).strip().lower() == artifact_q for raw in overlapping):
+            continue
+        trail_qs = [m.group(1) for raw in overlapping for m in [_WEBSEARCH_QUERY_RE.search(raw)] if m]
+        lr = str(v.get("line_range") or "<verified claim>")
+        violations.append(Violation(
+            rule_id="pass-3-evidence-faithful",
+            line_ref=lr,
+            expected=f"the 🔍 Verification trail entry for {lr} quotes the Pass 3 search query the verifier ran: `\"{qm.group(1)}\"`",
+            actual=(f"trail entry quotes {trail_qs}" if trail_qs else "trail entry quotes no search query"),
+            hint=f"`.verified-claims.json` records the Pass 3 query as `\"{qm.group(1)}\"` for this claim. Copy the `source` pointer from the artifact verbatim — the trail must cite the search the verifier actually ran.",
         ))
     return violations
 
@@ -1613,8 +1884,8 @@ RULES = [
     },
     {
         "id": "pass-2-fetch-faithfulness",
-        "desc": "Schema v5: Pass 2 count > 0 requires `.fetched-urls.json` to be non-empty -- catches the unfaithful pattern where the model claims Pass 2 dispatches without the workflow having fetched any URLs.",
-        "hint": "Either re-route the unrouted external-public claims to Pass 3 (search-then-fetch) and update Pass 2 count to 0, or fix the count to reflect actual URL-fetch verifications.",
+        "desc": "Pass 2 faithfulness: routed-metadata Pass 2 count > 0 requires non-empty `.fetched-urls.json` (v5); plus (v8) every `route: pass2` verdict in `.verified-claims.json` must cite a fetched URL and a `verified` pass2 verdict requires that URL's status to be 2xx (a 404'd citation can't verify a claim).",
+        "hint": "Re-route the unrouted external-public claims to Pass 3 and set Pass 2 count to 0; for a `verified` pass2 verdict against a non-2xx URL, render the trail verdict as `❌ contradicted (cited URL returns HTTP <status>)` — and fix the verify-claims pre-step if it recorded the bad verdict.",
         "check": check_pass2_fetch_faithfulness,
     },
     {
@@ -1630,6 +1901,18 @@ RULES = [
         "check": check_pass3_unverifiable_evidence,
     },
     {
+        "id": "pass-3-evidence-faithful",
+        "desc": "Schema v8: a `route: pass3` verdict in `.verified-claims.json` whose `source` records `WebSearch ran query \"<q>\"` requires the matching 🔍 trail entry to quote the same query — the trail can't attribute a search the verifier didn't run.",
+        "hint": "Copy the `source` pointer from `.verified-claims.json` verbatim into the trail entry for the claim.",
+        "check": check_pass3_evidence_faithful,
+    },
+    {
+        "id": "verified-claims-trail-faithful",
+        "desc": "Schema v8: the 🔍 Verification trail's verdict word for a claim must not contradict `.verified-claims.json`'s verdict (matched by line-range overlap) in the dangerous direction — the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verify-claims pre-step recorded, or inventing a `contradicted`/`mismatch` the verifier didn't find.",
+        "hint": "Render each trail line with the verdict + `evidence`/`source` from `.verified-claims.json` (per-verdict emoji: ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). Don't overwrite the artifact's verdict; if you dispute it, render it as recorded and open a follow-up issue.",
+        "check": check_verified_claims_trail_faithful,
+    },
+    {
         "id": "pulumi-internal-trail-provenance",
         "desc": "Schema v6: trail entries must cite canonical-source paths; `gh api repos/.../issues|pulls` and recursive `tree?recursive=...` queries are exploration not verification.",
         "hint": "Per the canonical-source playbook in `docs-review:references:fact-check` §Inline lane → \"Canonical sources for pulumi-internal verification\", verify against `data/docs_menu_sections.yml` (menu), `static/programs/<name>-<lang>/` (example programs), nearest sibling under `content/docs/<closest>/`, or `pulumi/pulumi-<provider>` (schema). Shrug rule: if 3 targeted reads don't close the claim, mark `ambiguous` and route to Pass 1.",
@@ -1643,14 +1926,14 @@ RULES = [
     },
     {
         "id": "trail-bucket-consistency",
-        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every 🚨 trail verdict surfaces in 🚨 Outstanding.",
-        "hint": "Add the line-range prefix to bucket bullets; promote 🚨 trail verdicts to 🚨 Outstanding without relitigation.",
+        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every `contradicted`/`mismatch` trail verdict surfaces in 🚨 Outstanding (v8: keyed on the verdict word, not the emoji). Trail lines render the per-verdict emoji (`trail-per-verdict-emoji` nudge for legacy ✅/⚠️/🚨 forms).",
+        "hint": "Add the line-range prefix to bucket bullets; promote `contradicted`/`mismatch` trail verdicts to 🚨 Outstanding without relitigation; render the per-verdict emoji on each trail line (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`).",
         "check": check_trail_bucket_consistency,
     },
     {
         "id": "candidate-claims-coverage",
         "desc": "Schema v7: every entry in `.candidate-claims.json` (the merged claim-extraction floor: regex ∪ two Sonnet passes) has a 🔍 Verification trail record overlapping its line range — the review may add claims, may not silently drop one.",
-        "hint": "For each uncovered candidate claim, add a 🔍 Verification trail line `- L… \"<claim>\" → <emoji> <verdict>`. If the candidate is a regex-layer false positive (git metadata, Dockerfile-comment tag, faithful description of the author's own design — see `docs-review:references:claim-extraction`), record `✅ not-a-claim — <reason>` so the demotion is traced.",
+        "hint": "For each uncovered candidate claim, add a 🔍 Verification trail line `- L… \"<claim>\" → <emoji> <verdict>`. If the candidate is a regex-layer false positive (git metadata, Dockerfile-comment tag, faithful description of the author's own design — see `docs-review:references:claim-extraction`), record `➖ not-a-claim — <reason>` so the demotion is traced.",
         "check": check_candidate_claims_coverage,
     },
     {
@@ -1825,6 +2108,34 @@ def load_candidate_claims(explicit_path: str | None) -> list[dict] | None:
     return [c for c in claims if isinstance(c, dict)]
 
 
+def load_verified_claims(explicit_path: str | None) -> list[dict] | None:
+    """Load the `verdicts` list from `.verified-claims.json` if present.
+
+    Returns None when the file isn't present (local mode, or the workflow
+    didn't run / crashed the `verify-claims.py` pre-step); returns the parsed
+    `verdicts` list (possibly empty) otherwise. The schema-v8 artifact rules
+    (`verified-claims-trail-faithful`, `pass-2-fetch-faithfulness` part (b),
+    `pass-3-evidence-faithful`) distinguish None (skip) from `[]` (pre-step
+    ran, produced nothing).
+    """
+    if explicit_path:
+        path = Path(explicit_path)
+    else:
+        path = Path.cwd() / ".verified-claims.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    verdicts = data.get("verdicts")
+    if not isinstance(verdicts, list):
+        return None
+    return [v for v in verdicts if isinstance(v, dict)]
+
+
 def repo_root() -> Path:
     try:
         result = subprocess.run(
@@ -1909,6 +2220,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     fetched_urls = load_fetched_urls(args.fetched_urls)
     editorial_balance = load_editorial_balance(args.editorial_balance)
     candidate_claims = load_candidate_claims(args.candidate_claims)
+    verified_claims = load_verified_claims(args.verified_claims)
 
     ctx = Context(
         body=body,
@@ -1923,6 +2235,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         fetched_urls=fetched_urls,
         editorial_balance=editorial_balance,
         candidate_claims=candidate_claims,
+        verified_claims=verified_claims,
     )
 
     violations = run_checks(ctx)
@@ -1979,6 +2292,11 @@ def main() -> int:
                               "pre-step (regex ∪ two Sonnet passes). Defaults to "
                               "./.candidate-claims.json. Pass-through to the "
                               "candidate-claims-coverage rule (schema v7).")
+    p_check.add_argument("--verified-claims",
+                         help="Path to `.verified-claims.json` from the `verify-claims.py` "
+                              "pre-step. Defaults to ./.verified-claims.json. Pass-through to "
+                              "the schema-v8 artifact rules (verified-claims-trail-faithful, "
+                              "pass-2-fetch-faithfulness part (b), pass-3-evidence-faithful).")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")

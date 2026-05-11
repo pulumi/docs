@@ -377,7 +377,7 @@ jobs:
         run: |
           python3 .claude/commands/docs-review/scripts/extract-claims.py \
             --pr "$PR" --out .candidate-claims-regex.json \
-            || echo '{"schema_version": 1, "claims": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+            || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
 
       - name: Extract candidate claims (Layer B — atomic pass)
         if: steps.pr-context.outputs.skip_reason == ''
@@ -422,6 +422,34 @@ jobs:
             --out .candidate-claims.json \
             || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
       # ---- end claim extraction --------------------------------------------
+
+      # ---- Claim verification ----------------------------------------------
+      # verify-claims.py routes every entry in .candidate-claims.json to one of
+      # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
+      # (external w/ a fetched URL: consult .fetched-urls.json), Pass 3
+      # (external w/o a fetched URL: server-side web_search) — fires ≤8 parallel
+      # Sonnet 4.6 verifiers via direct /v1/messages with a forced `verify_claim`
+      # tool, and emits .verified-claims.json. The main review reads that file as
+      # the verdict *source* (it does NOT re-verify); validate-pinned.py's
+      # `verified-claims-trail-faithful` rule fails the review if the rendered
+      # 🔍 Verification trail drifts from the artifact. safe_main() surfaces
+      # failures *inside* the artifact (`errors: [...]`), so the `||` stub is
+      # reserved for can't-even-start failures.
+      - name: Verify candidate claims → .verified-claims.json
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: verify-claims
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/verify-claims.py \
+            --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+            --pr "$PR" --repo "$GITHUB_REPOSITORY" \
+            --out .verified-claims.json \
+            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+      # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
       # section-depth stats, outlier flag) so the model renders the rich vs
@@ -577,6 +605,15 @@ jobs:
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
+      # Wall-clock timestamp for the `## Quality Review — Last updated <ts>`
+      # line. Computed in the workflow (not by the model) so the timestamp is
+      # always a real UTC instant — left to the model, it sometimes renders a
+      # T00:00:00Z / round-hour placeholder instead of the actual time.
+      - name: Compute review timestamp
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: now
+        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
+
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
@@ -608,6 +645,7 @@ jobs:
             - **Base branch:** `${{ steps.pr-context.outputs.base_branch }}`
             - **Diff size:** +${{ steps.pr-context.outputs.additions }} / -${{ steps.pr-context.outputs.deletions }} across ${{ steps.pr-context.outputs.file_count }} files
             - **Labels** (set by claude-triage.yml — informational; routing happens by path inside `ci.md`): ${{ steps.pr-context.outputs.labels_json }}
+            - **Review timestamp (UTC):** `${{ steps.now.outputs.value }}` — use this literal value for the `## Quality Review — Last updated <ts>` line and the new `📜 Review history` entry. Do not invent or round a timestamp.
 
             ### Changed files
 
@@ -615,11 +653,11 @@ jobs:
 
             ## Candidate claims (the claim floor)
 
-            If `.candidate-claims.json` exists and is non-empty, it is the claim *floor* per `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`: extract and verify **every** entry (surface a verdict for each in the 🔍 Verification trail — the validator's `candidate-claims-coverage` rule fails the review otherwise) and **add** any claims the artifact missed. Do NOT re-dispatch the four in-review claim-finder subagents when this artifact is present — classify the pre-computed list into the four type-buckets instead (`fact-check.md` §Subagent extraction dispatch). The regex layer surfaces false positives (a `:latest` tag in a Dockerfile comment, a faithful description of the author's own design, git metadata) — triage those down to `- L… "<text>" → ✅ not-a-claim — <reason>` in the trail; demote, never silently drop. If the artifact carries a non-empty `errors` array (degraded pre-step) or is absent, fall back to the in-review extraction path.
+            If `.candidate-claims.json` exists and is non-empty, it is the claim *floor* per `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`: every entry must surface a verdict line in the 🔍 Verification trail (the validator's `candidate-claims-coverage` rule fails the review otherwise), and you **add** any claims the artifact missed. Do NOT re-dispatch the four in-review claim-finder subagents when this artifact is present — classify the pre-computed list into the four type-buckets instead (`fact-check.md` §Subagent extraction dispatch). The regex layer surfaces false positives (a `:latest` tag in a Dockerfile comment, a faithful description of the author's own design, git metadata) — record those as `- L… "<text>" → ➖ not-a-claim — <reason>` in the trail; demote, never silently drop. If the artifact carries a non-empty `errors` array (degraded pre-step) or is absent, fall back to the in-review extraction path.
 
-            ## Pre-fetched URLs
+            ## Verified claims (the verdict source)
 
-            If `.fetched-urls.json` exists and is non-empty, consult it during Pass 2 verification per `docs-review:references:fact-check` §Routed verification. Do NOT WebFetch URLs already in that file — the workflow has already fetched them. The Pass 2 lane count in the routed-metadata investigation-log line should match the dispatches you actually attribute to fetched URLs (validator rule `pass-2-fetch-faithfulness` flags the unfaithful pattern where Pass 2 is claimed without fetches). Pass 3 (search-then-fetch for external-public claims with no URL in the diff) still runs model-side via WebSearch + WebFetch.
+            If `.verified-claims.json` exists and is non-empty, it is the verdict *source* per `docs-review:references:fact-check` §Routed verification — the workflow's `verify-claims.py` pre-step already routed and verified every candidate claim (Pass 1 = `pulumi-internal` via `gh`/local reads, Pass 2 = a fetched URL from `.fetched-urls.json`, Pass 3 = web search). **Do NOT re-verify.** For each verdict, render one 🔍 Verification trail line using its `verdict`, `evidence`, and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (artifact says `contradicted`/`mismatch`/`unverifiable`, trail hides it). Your remaining work: bucket promotion (`contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → 🚨 Outstanding per the always-🚨 carve-out; a low-confidence `verified` → ⚠️ Low-confidence verified — see `docs-review:references:output-format` §Bucket rules), the framing call on top of each verdict's `framing_note`, the intuition check on top of `intuition_flag`, and rendering. If a verdict carries an error (the verifier crashed on that claim) or the artifact is absent / carries a non-empty top-level `errors` array, fall back to the in-review verification path (`fact-check.md` §Routed verification fallback). `.fetched-urls.json` is the verify-step's Pass 2 input — you don't need to read it directly; do NOT WebFetch URLs already in it. Cross-sibling-consistency checks (`matches` / `mismatch`) still come from the in-review sibling-read fan-out (`docs-review:references:fact-check` §Cross-sibling consistency), not from `.verified-claims.json`.
 
             ## Editorial balance (blog only)
 

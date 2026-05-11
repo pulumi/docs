@@ -49,6 +49,7 @@ SURGICAL_CLASSES: set[str] = {
     "external-claim-pass2-outcome",
     "bucket-bullet-line-range-prefix",
     "mandatory-h3-order",
+    "trail-per-verdict-emoji",
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -99,6 +100,23 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
             f"Find the offending `{{{{< NAME >}}}}` shortcode usage in the "
             f"body and remove the entire line that contains it. Do not "
             f"edit any other shortcodes."
+        )
+    elif rule_id == "trail-per-verdict-emoji":
+        # `expected` ≈ "trail line for L<n> renders `<want>` for verdict `<word>`";
+        # `actual` ≈ "renders `<legacy emoji>` (legacy bucket emoji)".
+        instr = (
+            f"VIOLATION (`trail-per-verdict-emoji`): A line in the 🔍 Verification "
+            f"trail renders a legacy bucket emoji instead of the per-verdict glyph.\n\n"
+            f"Expected: {expected}\n"
+            f"Actual: {actual}\n"
+            f"Validator hint: {hint}\n\n"
+            f"In the 🔍 Verification trail, find the bullet for the cited line "
+            f"reference whose verdict word matches the one named in `Expected` above. "
+            f"Replace ONLY its emoji (the glyph immediately after the `→`) with the "
+            f"glyph named in `Expected`. The per-verdict map is: ✅ `verified`, "
+            f"🤝 `matches`, ➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, "
+            f"⚔️ `mismatch`. Do not change the verdict word, the line text, the "
+            f"evidence pointer, or any other line."
         )
     elif rule_id == "bucket-bullet-line-range-prefix":
         # Validator hint cites the prefix and which bullet.

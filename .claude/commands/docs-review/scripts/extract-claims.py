@@ -73,6 +73,10 @@ TEXT_CAP = 300  # characters retained per claim's `text`
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")  # opens/closes a fenced code block
+DIFF_GIT_RE = re.compile(r"^diff --git a/(.+?) b/(.+)$")
+SIMILARITY_RE = re.compile(r"^similarity index (\d+)%$")
+RENAME_FROM_RE = re.compile(r"^rename from (.+)$")
+RENAME_TO_RE = re.compile(r"^rename to (.+)$")
 
 
 def fetch_pr_patch(pr: str) -> str:
@@ -81,6 +85,36 @@ def fetch_pr_patch(pr: str) -> str:
         check=True, capture_output=True, text=True,
     )
     return proc.stdout
+
+
+def parse_renames(patch: str) -> list[dict]:
+    """Return `[{from, to, similarity}]` for every `rename` block in the diff.
+
+    Observability hint for `extract-claims-llm.py` (which skips the unchanged
+    body of a high-similarity rename) and for whoever is reading the artifact.
+    """
+    out: list[dict] = []
+    cur_sim: int | None = None
+    cur_from: str | None = None
+    for raw in patch.splitlines():
+        if DIFF_GIT_RE.match(raw):
+            cur_sim = None
+            cur_from = None
+            continue
+        sm = SIMILARITY_RE.match(raw)
+        if sm:
+            cur_sim = int(sm.group(1))
+            continue
+        fm = RENAME_FROM_RE.match(raw)
+        if fm:
+            cur_from = fm.group(1)
+            continue
+        tm = RENAME_TO_RE.match(raw)
+        if tm and cur_from is not None:
+            out.append({"from": cur_from, "to": tm.group(1), "similarity": cur_sim})
+            cur_from = None
+            continue
+    return out
 
 
 def iter_added_lines(patch: str):
@@ -383,16 +417,18 @@ def main() -> int:
         return 2  # unreachable
 
     claims, stats = extract_claims_from_patch(patch)
+    renames = parse_renames(patch)
     payload = {
         "schema_version": SCHEMA_VERSION,
         "claims": claims,
+        "renames": renames,
         "errors": [],
         "stats": stats,
     }
     out_path.write_text(json.dumps(payload, indent=2) + "\n")
     print(
         f"extract-claims: {stats['claims_count']} candidate claim(s) "
-        f"across {stats['files_scanned']} file(s) → {out_path}",
+        f"across {stats['files_scanned']} file(s); {len(renames)} rename(s) → {out_path}",
         file=sys.stderr,
     )
     return 0
@@ -420,6 +456,7 @@ def safe_main() -> int:
             payload = {
                 "schema_version": SCHEMA_VERSION,
                 "claims": [],
+                "renames": [],
                 "errors": [f"extract-claims uncaught exception: {type(e).__name__}: {e}"],
                 "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}},
             }

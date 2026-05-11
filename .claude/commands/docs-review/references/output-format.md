@@ -45,10 +45,11 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 <summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted</summary>
 
 - L<line> "<claim text>" → ✅ verified (evidence: <source pointer>)
-- L<line> "<claim text>" → ⚠️ unverifiable (no inline citation; author question filed)
-- L<line> "<claim text>" → 🚨 contradicted (<source mismatches the claim how>)
-- L<line> "<sibling-consistency check>" → ✅ matches <sibling-1>, <sibling-2>, <sibling-3>
-- L<line> "<sibling-consistency check>" → 🚨 mismatch: <sibling-1>/<sibling-2> use <X>; this PR uses <Y>
+- L<line> "<claim text>" → 🤷 unverifiable (no inline citation; author question filed)
+- L<line> "<claim text>" → ❌ contradicted (<source mismatches the claim how>)
+- L<line> "<text the regex layer surfaced that isn't a checkable claim>" → ➖ not-a-claim — <one-line reason>
+- L<line> "<sibling-consistency check>" → 🤝 matches <sibling-1>, <sibling-2>, <sibling-3>
+- L<line> "<sibling-consistency check>" → ⚔️ mismatch: <sibling-1>/<sibling-2> use <X>; this PR uses <Y>
 </details>
 
 ### 📊 Editorial balance
@@ -143,9 +144,9 @@ Common drifts to avoid:
 - "single-pass" / "ran (3 claims, ...)" — these were S32-era shapes; render the full canonical form even when one lane has zero traffic.
 - "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
 - Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2, S Pass 3` counts where each claim *went*, not what each verdict *was*. The leading `(N unverifiable, M contradicted)` parenthetical aggregates outcomes across all lanes; the `(verified V, contradicted C, unverifiable U)` parentheticals at the Pass 2 / Pass 3 tails attribute external-lane outcomes specifically (because the external lanes are where verdict drift across runs is most observable).
-- Claiming Pass 2 dispatch when `.fetched-urls.json` is empty — the workflow's URL-fetch is the deterministic floor for Pass 2. The validator's `pass-2-fetch-faithfulness` rule trips on this drift.
+- Claiming Pass 2 dispatch when `.fetched-urls.json` is empty, or a `verified` Pass 2 verdict against a non-2xx URL — the workflow's URL-fetch is the deterministic floor for Pass 2, and a dead/404 citation can't verify a claim. The validator's `pass-2-fetch-faithfulness` rule (v8: also checks `.verified-claims.json`) trips on both.
 - Skipping Pass 3 for external-public claims without URLs — `pass-3-dispatch-mandate` requires those claims to route to Pass 3, not be silently absorbed into Inline / Pass 1.
-- Pass 3 ⚠️ unverifiable verdicts that don't name the search — `pass-3-unverifiable-evidence` requires a `WebSearch ran query "<phrase>"; top N results didn't address the claim` pointer in the trail entry.
+- Pass 3 `🤷 unverifiable` verdicts that don't name the search — `pass-3-unverifiable-evidence` requires a `WebSearch ran query "<phrase>"; top N results didn't address the claim` pointer in the trail entry; and a Pass 3 trail entry whose query doesn't match `.verified-claims.json`'s recorded `source` query trips `pass-3-evidence-faithful` (v8).
 
 Worked example (mixed PR — half pulumi-internal, half external-public with URLs, two ambiguous):
 
@@ -179,11 +180,24 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 **Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
 
-**The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). A candidate claim you triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ✅ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`.
+**The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). When the workflow's verification pre-step also ran, `.verified-claims.json` is the *verdict source* — render each floor entry's trail line with the verdict + `evidence` + `source` it records there (don't re-verify); the `verified-claims-trail-faithful` validator rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction. A candidate claim you (or the verifier) triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ➖ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json` and §Routed verification.
 
-**Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <emoji> <verdict> (<evidence pointer>)`. Cross-sibling checks render as `→ ✅ matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ 🚨 mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → ✅ matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
+**Per-verdict emoji.** Each verdict word has one canonical glyph — the emoji is a visual aid; the *verdict word* is what drives bucket placement (the validator keys on it):
 
-**Anti-hedge mandate for `🚨 mismatch` cross-sibling findings.** When the trail records `🚨 mismatch`, the corresponding bucket bullet states the verdict directly and names which sibling pages corroborate the divergence (mirror the trail's `<sibling-A>/<sibling-B>` list). Do NOT insert "either-or" framing that softens the verdict to a manual-check ask ("either the UI changed or this guide is wrong"). The trail has adjudicated; the rendered finding states what the maintainer must change.
+| Verdict word | Emoji | Bucket | When |
+|---|:---:|---|---|
+| `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing |
+| `matches` | 🤝 | trail-only | a cross-sibling-consistency check that's consistent with the sibling pages |
+| `not-a-claim` | ➖ | trail-only | a candidate that isn't a falsifiable assertion (git metadata, a comment-tag, a faithful description of the author's own design) — demoted, not failed |
+| `unverifiable` | 🤷 | 🚨 Outstanding (always-🚨 carve-out for unverifiable *factual* claims; see §Bucket rules) | genuinely not checkable — paywalled, internal-only, future-dated, or a dead/404 source with no live alternative |
+| `contradicted` | ❌ | 🚨 Outstanding | a source positively disagrees, or the cited source's framing differs (strengthened / narrowed / shifted) |
+| `mismatch` | ⚔️ | 🚨 Outstanding | a cross-sibling-consistency check where this PR diverges from the siblings' established pattern |
+
+`✅` is the canonical `verified` glyph — it is *not* a generic stand-in for "passed". `matches` uses `🤝`, `not-a-claim` uses `➖`. The `trail-bucket-consistency` rule emits a `trail-per-verdict-emoji` nudge when a trail line still renders a legacy bucket emoji (✅ on `matches`/`not-a-claim`, ⚠️ on `unverifiable`, 🚨 on `contradicted`/`mismatch`) instead of the per-verdict glyph.
+
+**Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <per-verdict emoji> <verdict word> (<evidence pointer>)`. Cross-sibling checks render as `→ 🤝 matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ ⚔️ mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → 🤝 matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
+
+**Anti-hedge mandate for `⚔️ mismatch` cross-sibling findings.** When the trail records `⚔️ mismatch`, the corresponding bucket bullet states the verdict directly and names which sibling pages corroborate the divergence (mirror the trail's `<sibling-A>/<sibling-B>` list). Do NOT insert "either-or" framing that softens the verdict to a manual-check ask ("either the UI changed or this guide is wrong"). The trail has adjudicated; the rendered finding states what the maintainer must change.
 
 **Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
 
@@ -239,7 +253,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
 - **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
 
-  **Trail verdict drives bucket placement.** If the verification trail records `🚨 contradicted` or `🚨 mismatch` for a finding, render that finding in 🚨 Outstanding. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. The two-question test applies only to findings whose trail verdict is `⚠️` or `unverifiable`, where the verifier didn't reach a decisive answer.
+  **Trail verdict drives bucket placement.** If the verification trail records `❌ contradicted` or `⚔️ mismatch` for a finding, render that finding in 🚨 Outstanding. The `trail-bucket-consistency` validator rule enforces this — keyed on the verdict *word* (`contradicted` / `mismatch`), not the emoji. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. It applies only to findings without a decisive trail verdict (a 🤔 intuition-check, a `verified` claim where the residual judgment is about reader impact, etc.) — a `🤷 unverifiable` *factual* claim is itself an always-🚨 carve-out below, not a two-question-test case.
 
   **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Style findings under `#### Style findings` use the `**line N:**` prefix below — they're not subject to the trail-prefix mandate.
 
