@@ -412,7 +412,7 @@ jobs:
           python3 .claude/commands/docs-review/scripts/hugo-build-validate.py \
             --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
             --out .hugo-build.json \
-            || echo '{"schema_version": 1, "head_exit_code": -1, "errors": ["hugo-build-validate.py failed to start"], "warnings": [], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
+            || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "warnings": [], "link_integrity": [], "suppressed_ci_noise": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''

@@ -20,7 +20,13 @@ Scope (Ship K MVP):
 What this is NOT:
 - A complete build. Asset bundling (CSS/JS) is intentionally skipped — Hugo
   still renders templates and content, which is what catches broken refs
-  and missing assets that propagate through the build.
+  and missing assets that propagate through the build. The flip side: the
+  render WILL emit a handful of CI-environment-only errors because the
+  workflow doesn't run `make ensure` first (PostCSS/Hugo-Pipes fingerprint
+  failure on `/404`; `data/openapi-spec.json not found`). Those are filtered
+  out here — see KNOWN_CI_NOISE_PATTERNS — and reported under
+  `suppressed_ci_noise` so the reviewer agent never sees them as findings
+  but the suppression is still auditable in the artifact.
 - A render-graph dump. Skipped for now; can be added later if a specific
   bug class requires it.
 - Authoritative for "changed pages" (URL-stability) detection across runs.
@@ -52,12 +58,41 @@ LINK_INTEGRITY_PATTERNS = [
     re.compile(r"\bcannot find\b", re.IGNORECASE),
 ]
 
+# CI-environment-only noise. This pre-step renders without `make ensure`
+# (asset prep + data fetch are intentionally skipped — see module docstring),
+# so Hugo reliably emits a few errors/warnings that are NOT PR-introduced:
+#   - PostCSS / Hugo-Pipes asset-pipeline failures (the `/404` page fingerprints
+#     a stylesheet that doesn't exist because PostCSS never ran).
+#   - `data/openapi-spec.json not found` (the OpenAPI data file is fetched by
+#     `make ensure`, not committed).
+# Lines matching these are stripped from `errors`/`warnings`/`link_integrity`
+# before the artifact is written and collected under `suppressed_ci_noise`.
+# Keep these anchored to asset-pipeline / data-fetch signatures so a genuine
+# PR-introduced template or shortcode error never gets swallowed.
+KNOWN_CI_NOISE_PATTERNS = [
+    re.compile(r"error calling (fingerprint|resources\.Fingerprint)", re.IGNORECASE),
+    re.compile(r"can ?not be transformed to a resource", re.IGNORECASE),
+    re.compile(r"\bPostCSS\b", re.IGNORECASE),
+    re.compile(r"resources\.(Fingerprint|PostCSS|PostProcess|ToCSS|Babel|Minify|Concat)", re.IGNORECASE),
+    re.compile(r"data/openapi-spec\.json", re.IGNORECASE),
+    re.compile(r"\bopenapi:\b.*\bnot found\b", re.IGNORECASE),
+]
+
 HUGO_TIMEOUT_RENDER_S = 240
 HUGO_TIMEOUT_LIST_S = 90
 
 
-def run_hugo_render(workdir: Path) -> tuple[list[str], list[str], list[str], int]:
-    """Run `hugo --renderToMemory`. Return (errors, warnings, link_integrity, exit)."""
+def _is_ci_noise(line: str) -> bool:
+    return any(pat.search(line) for pat in KNOWN_CI_NOISE_PATTERNS)
+
+
+def run_hugo_render(workdir: Path) -> tuple[list[str], list[str], list[str], int, list[str]]:
+    """Run `hugo --renderToMemory`.
+
+    Return (errors, warnings, link_integrity, exit, suppressed_ci_noise) — the
+    first three already have CI-environment noise stripped; the last is the
+    list of stripped lines, for auditability.
+    """
     proc = subprocess.run(
         ["hugo", "--renderToMemory", "--logLevel", "info"],
         cwd=str(workdir),
@@ -69,9 +104,13 @@ def run_hugo_render(workdir: Path) -> tuple[list[str], list[str], list[str], int
     errors: list[str] = []
     warnings: list[str] = []
     link_integrity: list[str] = []
+    suppressed: list[str] = []
     for line in (proc.stderr or "").splitlines():
         line = line.rstrip()
         if not line:
+            continue
+        if _is_ci_noise(line):
+            suppressed.append(line)
             continue
         # Hugo emits ERROR/WARN at the start of log lines under --logLevel info.
         if line.startswith("ERROR"):
@@ -80,7 +119,7 @@ def run_hugo_render(workdir: Path) -> tuple[list[str], list[str], list[str], int
             warnings.append(line)
         if any(pat.search(line) for pat in LINK_INTEGRITY_PATTERNS):
             link_integrity.append(line)
-    return errors, warnings, link_integrity, proc.returncode
+    return errors, warnings, link_integrity, proc.returncode, suppressed
 
 
 def run_hugo_list(workdir: Path) -> list[dict]:
@@ -217,9 +256,10 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     link_integrity: list[str] = []
+    suppressed_ci_noise: list[str] = []
     exit_code = 0
     try:
-        errors, warnings, link_integrity, exit_code = run_hugo_render(workspace)
+        errors, warnings, link_integrity, exit_code, suppressed_ci_noise = run_hugo_render(workspace)
     except subprocess.TimeoutExpired:
         errors.append(f"hugo --renderToMemory timed out after {HUGO_TIMEOUT_RENDER_S}s")
         exit_code = -1
@@ -269,17 +309,25 @@ def main() -> int:
 
     sitemap_diff = compute_sitemap_diff(base_pages, head_pages)
 
+    # A non-zero Hugo exit with no real errors left after CI-noise filtering is
+    # the known `/404` fingerprint failure — flag it as benign so the agent
+    # doesn't have to reason about it.
+    head_exit_nonzero_is_ci_noise = exit_code != 0 and not errors and bool(suppressed_ci_noise)
+
     out = {
         "schema_version": 1,
         "head_exit_code": exit_code,
+        "head_exit_nonzero_is_ci_noise": head_exit_nonzero_is_ci_noise,
         "errors": errors,
         "warnings": warnings,
         "link_integrity": link_integrity,
+        "suppressed_ci_noise": suppressed_ci_noise,
         "sitemap_diff": sitemap_diff,
         "stats": {
             "errors_count": len(errors),
             "warnings_count": len(warnings),
             "link_integrity_count": len(link_integrity),
+            "suppressed_ci_noise_count": len(suppressed_ci_noise),
             "head_pages_count": len(head_pages),
             "base_pages_count": len(base_pages),
             "added_pages_count": len(sitemap_diff["added"]),
@@ -313,14 +361,17 @@ def safe_main() -> int:
             err_payload = {
                 "schema_version": 1,
                 "head_exit_code": -1,
+                "head_exit_nonzero_is_ci_noise": False,
                 "errors": [f"hugo-build-validate uncaught exception: {type(e).__name__}: {e}"],
                 "warnings": [],
                 "link_integrity": [],
+                "suppressed_ci_noise": [],
                 "sitemap_diff": {"added": [], "removed": [], "changed": []},
                 "stats": {
                     "errors_count": 1,
                     "warnings_count": 0,
                     "link_integrity_count": 0,
+                    "suppressed_ci_noise_count": 0,
                     "head_pages_count": 0,
                     "base_pages_count": 0,
                     "added_pages_count": 0,
