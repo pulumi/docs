@@ -14,13 +14,17 @@ tags:
 
 social:
     twitter: |
-        Neo can now run on a schedule. Define a prompt, pick a cadence, and Neo delivers a pull request each time. Drift detection, compliance scans, and cost reviews: recurring work that teams routinely defer.
+        Neo can now run on a schedule. Define a prompt, pick a cadence, and Neo delivers a pull request each time.
+
+        Drift detection, compliance scans, and cost reviews: recurring work that teams routinely defer.
     linkedin: |
         Drift detection, compliance scans, dependency freshness checks. This is recurring work that teams routinely defer because it's tedious to do by hand.
 
         Neo automations let you schedule any Neo task to run on a cadence. Each run produces a pull request that goes through your normal review process. Same governance, no manual effort.
     bluesky: |
-        Neo can now run on a schedule. Define a prompt, pick a cadence, and Neo delivers a PR each time it runs. Drift detection, compliance scans, and cost reviews, all on autopilot.
+        Neo can now run on a schedule. Define a prompt, pick a cadence, and Neo delivers a PR each time it runs.
+
+        Drift detection, compliance scans, and cost reviews, all on autopilot.
 ---
 
 [Pulumi Neo](/docs/ai/) automations schedule any task to run on a cadence, producing a pull request each time that goes through your normal review process. Drift detection, compliance scans, and dependency freshness checks run on schedule without anyone remembering to kick them off.

@@ -23,7 +23,9 @@ social:
 
         When we launched Neo's Integration Catalog recently, third-party integrations brought context from Datadog, Linear, PagerDuty, and others into Neo's tasks. CLI integrations add the cloud providers themselves. Here's how it works.
     bluesky: |
-        Neo can now run aws, gcloud, az, and kubectl using credentials from Pulumi ESC. Ask it to check your S3 buckets or inspect a Kubernetes deployment and it calls the CLI directly.
+        Neo can now run aws, gcloud, az, and kubectl using credentials from Pulumi ESC.
+
+        Ask it to check your S3 buckets or inspect a Kubernetes deployment and it calls the CLI directly.
 ---
 
 CLI integrations let [Neo](/docs/ai/) run `aws`, `gcloud`, `az`, and `kubectl` using credentials managed by [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration). When we [launched the Integration Catalog](/blog/neo-integration-catalog/), third-party integrations brought context from Datadog, Linear, PagerDuty, and others into Neo's tasks. CLI integrations add the cloud providers themselves, so Neo can query your infrastructure directly.
