@@ -115,11 +115,11 @@ params:
     # CTA configuration
     cta:
         primary:
-            label: "Get Started"
+            label: "Get started"
             label_short: "Sign up"
             href: "https://app.pulumi.com/signup"
         secondary:
-            label: "Contact Us"
+            label: "Contact us"
             href: "/contact/?form=sales"
 
     canonicalURL: https://www.pulumi.com

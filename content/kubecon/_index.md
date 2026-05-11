@@ -136,10 +136,15 @@ location:
   anchor: location
 
 footer_cta:
-  title: The infrastructure as code platform for any cloud.
-  cta_primary_text: Try Pulumi
-  cta_primary_link: /signup
-  cta_secondary_text: Contact sales
-  cta_secondary_link: /contact
+  heading: The infrastructure as code platform for any cloud.
   anchor: get-started
+  buttons:
+    - label: Contact sales
+      href: /contact
+      style: secondary
+      track: footer-cta-kubecon-contact-sales
+    - label: Try Pulumi
+      href: /signup
+      style: primary
+      track: footer-cta-kubecon-signup
 ---

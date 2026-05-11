@@ -64,6 +64,7 @@ static/js/marketing-homepage.*.js
 static/js/header-nav.*.js
 data/js_manifest.json
 data/openapi-spec.json
+data/github_stars.yml
 
 # Ignore webpack-generated assets from the build process.
 /assets/css/
