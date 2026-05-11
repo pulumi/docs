@@ -46,6 +46,7 @@ Output schema (JSON):
         {
           "file": "content/docs/iac/clouds/azure/guides/_index.md",
           "frontmatter_parse_ok": true,
+          "frontmatter_keys": ["title", "meta_desc", "social.twitter", "social.linkedin", "social.bluesky", "menu.iac", "aliases"],
           "menu_parents": [
             {
               "menu_name": "iac",
@@ -236,6 +237,23 @@ def extract_aliases(fm: dict) -> list[str]:
     return []
 
 
+def flatten_frontmatter_keys(fm: dict) -> list[str]:
+    """Flat list of the file's frontmatter keys, with one level of nesting
+    expanded for keys whose value is a map (e.g. `social.twitter`,
+    `social.linkedin`, `menu.iac`). Pins the frontmatter-sweep scope: the
+    review sweeps `body` plus the prose-bearing keys in this list (`meta_desc`,
+    `title`, `description`, `summary`, `social.*`, …) rather than a model-decided
+    subset — this is what stops the #18745-r2 `social.*` omission.
+    """
+    keys: list[str] = []
+    for k, v in fm.items():
+        if isinstance(v, dict):
+            keys.extend(f"{k}.{sub}" for sub in v.keys())
+        else:
+            keys.append(k)
+    return keys
+
+
 def build_global_maps(repo_root: Path) -> tuple[dict, dict, dict]:
     """Walk content/**/*.md + scripts/redirects/*.txt and build:
 
@@ -419,6 +437,7 @@ def discover_for_file(
         return {
             "file": file_rel,
             "frontmatter_parse_ok": False,
+            "frontmatter_keys": [],
             "menu_parents": [],
             "aliases_declared": [],
             "alias_collisions": [],
@@ -430,6 +449,7 @@ def discover_for_file(
         return {
             "file": file_rel,
             "frontmatter_parse_ok": False,
+            "frontmatter_keys": [],
             "menu_parents": [],
             "aliases_declared": [],
             "alias_collisions": [],
@@ -440,6 +460,7 @@ def discover_for_file(
     return {
         "file": file_rel,
         "frontmatter_parse_ok": True,
+        "frontmatter_keys": flatten_frontmatter_keys(fm),
         "menu_parents": check_menu_parents(file_rel, fm, identifier_map),
         "aliases_declared": aliases,
         "alias_collisions": check_alias_collisions(file_rel, aliases, alias_map, pr_files),

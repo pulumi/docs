@@ -182,13 +182,15 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 **Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
 
-**Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <emoji> <verdict> (<evidence pointer>)`. Cross-sibling checks render as `→ ✅ matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ 🚨 mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. Strip credentials per `fact-check.md` §Credential redaction before rendering.
+**The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). A candidate claim you triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ✅ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`.
+
+**Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <emoji> <verdict> (<evidence pointer>)`. Cross-sibling checks render as `→ ✅ matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ 🚨 mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → ✅ matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
 
 **Anti-hedge mandate for `🚨 mismatch` cross-sibling findings.** When the trail records `🚨 mismatch`, the corresponding bucket bullet states the verdict directly and names which sibling pages corroborate the divergence (mirror the trail's `<sibling-A>/<sibling-B>` list). Do NOT insert "either-or" framing that softens the verdict to a manual-check ask ("either the UI changed or this guide is wrong"). The trail has adjudicated; the rendered finding states what the maintainer must change.
 
 **Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
 
-**Empty section.** Per the top-level mandatory-sections invariant, render the explicit-empty form when no claims were extracted (infra-only PR, pure formatting PR):
+**Empty section.** Per the top-level mandatory-sections invariant, render the explicit-empty form when no claims were extracted (infra-only PR, pure formatting PR — and `.candidate-claims.json` is absent or empty). If `.candidate-claims.json` has entries, this form is wrong — `candidate-claims-coverage` will fail the review until every entry has a trail line.
 
 ```markdown
 ### 🔍 Verification trail

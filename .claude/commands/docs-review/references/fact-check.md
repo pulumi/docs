@@ -60,6 +60,20 @@ For every changed content file, produce a structured claim list. A "claim" is an
 
 A specific factual claim — percentage, count, time-bounded statement, framing claim like "in production" vs "in use" — must still extract and verify even when cited. The citation makes verification cheap, not absent. See §Cited-claim spot-check.
 
+The full "what counts as a claim" definition — the enumerated taxonomy, the granularity / compound-decomposition rule, the explicit "what is NOT a claim" list (including the third-party-attribution flip), the framing/speech-act rule, and worked examples — lives in `docs-review:references:claim-extraction`, the single source of truth shared with the claim-extraction pre-step. Read it; this section is the table-of-contents, that file is the body.
+
+### Pre-step artifact `.candidate-claims.json` (the claim floor) — read this first
+
+Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers, version pins, temporal words, source attributions, URLs, named-entity/spec claims, positioning/comparison trigger words) ∪ two redundant Sonnet passes `extract-claims-llm.py` (one atomic/per-sentence-framed, one holistic/paragraph-framed, both prompted with `docs-review:references:claim-extraction`) → unioned and deduped by `merge-claims.py` into `.candidate-claims.json` at the repo root: `{"claims": [{"file", "line_range", "text", "type", "source_hint"?, "confidence", "found_by": [...], "line_range_unverified"?}], "errors": [...], "meta": {...}}`.
+
+**This list is the claim *floor*, not a ceiling.** The review **MUST** extract and verify every entry — surface a verdict for each one in the 🔍 Verification trail (the `candidate-claims-coverage` validator rule fails the review, soft-flooring loudly, if a candidate claim has no overlapping trail record). The review **MAY** add claims the artifact missed — the LLM passes are high-recall, not exhaustive, and the regex floor is shape-based. So: start from the artifact's `claims`, fold in anything else you spot in the diff, dedup, verify the union.
+
+**Known false positives the artifact will contain** (the reviewer's contract is to triage each entry — see `docs-review:references:pre-computation` §"False-positive triage is a contractual responsibility"): the regex layer matches `text` shapes, not meaning, so it surfaces things like a `:latest` tag in a `Dockerfile` comment (a tag name, not a recency claim), a `/latest/` segment in a URL, a faithful description of the author's *own* design ("our pipeline runs three times…" — not a claim unless attributed to a third party), git metadata. When you triage a candidate claim down to "not actually a checkable claim", **record the demotion in the trail** anyway (`- L42 "<text>" → ✅ not-a-claim — <one-line reason>`) — that's what satisfies `candidate-claims-coverage` and traces the call. Demote, never silently drop. See `docs-review:references:claim-extraction` §"What is NOT a claim" for the full list.
+
+**Degraded pre-step.** If `.candidate-claims.json` carries a non-empty `errors` array (an LLM pass failed, no `ANTHROPIC_API_KEY`, etc.), extraction was degraded — note "claim-extraction pre-step degraded; reverting to in-review extraction" in the trail, and run the in-review extraction (§Subagent extraction dispatch) yourself as a fallback. If the artifact is absent entirely (interactive `/docs-review`, or the workflow didn't run the pre-step), use the in-review extraction path as today — same fallback.
+
+`line_range_unverified: true` on an entry means the LLM-asserted line range was out of bounds for the file and got clamped — trust the `text`, treat the line range as approximate when anchoring the trail entry.
+
 ### Scope
 
 - Default (`scrutiny=standard`): extract claims from the diff only -- lines added or modified
@@ -67,9 +81,11 @@ A specific factual claim — percentage, count, time-bounded statement, framing 
 
 ### Frontmatter sweep
 
-Hugo posts duplicate the same load-bearing phrasing across body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body, `meta_desc`, and every `social:` sub-key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
+Hugo posts duplicate the same load-bearing phrasing across the body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body plus every prose-bearing frontmatter key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
 
-Example: a blog post says "96% of enterprises run AI agents in production today" in the body, and the same phrase (or a paraphrase: "96% of enterprises run agents in production") appears in `social.linkedin` and `social.bluesky`. Extract one claim, verify once, render the finding with three cited locations. Don't enumerate per-occurrence claims -- that triples verification work and risks the buckets disagreeing on confidence.
+**Pin the sweep scope to the pre-step artifact.** `.frontmatter-validation.json` (workflow pre-step `frontmatter-validate.py`) carries `frontmatter_keys` per file — the flat list of that file's frontmatter keys with one level of nesting expanded (`title`, `meta_desc`, `description`, `summary`, `social.twitter`, `social.linkedin`, `social.bluesky`, `menu.iac`, `aliases`, …). Sweep **exactly** `body` plus the prose-bearing keys in that list (`meta_desc`, `description`, `summary`, `title`, every `social.*` sub-key) — do **not** decide the scope ad hoc. Skip the structural keys (`menu.*`, `aliases`, `weight`, `date`, `draft`, `meta_image`, `authors`, `tags`). When you render the "Frontmatter sweep" investigation-log line, name the locations you actually swept (`ran on body + meta_desc + social.twitter + social.linkedin`); the validator checks that against `frontmatter_keys`. *(This pins what #18745-r2 got wrong — it swept `body + meta_desc` and silently omitted the `social.*` sub-keys, dropping the social/title framing-mismatch findings.)*
+
+Example: a blog post says "96% of enterprises run AI agents in production today" in the body, and the same phrase (or a paraphrase: "96% of enterprises run agents in production") appears in `social.linkedin` and `social.bluesky` (both in the file's `frontmatter_keys`). Extract one claim, verify once, render the finding with three cited locations. Don't enumerate per-occurrence claims -- that triples verification work and risks the buckets disagreeing on confidence.
 
 This rule also applies when the body is unchanged but a frontmatter sub-key was edited; the body's pre-existing phrasing still surfaces in the same finding if the frontmatter edit triggered a contradicted verdict.
 
@@ -261,7 +277,9 @@ The 🤔 bucket is therefore **small and specific**: claims whose shape was susp
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
+**When `.candidate-claims.json` provided the floor (the normal CI path — see §Pre-step artifact above), do NOT dispatch the four claim-finder subagents below.** The discovery they did inside the review's context — and the run-to-run variance in *which* claims they found — is exactly what the pre-step lifted out (the S41 #18771-R2 failure: a real 🚨 caught one run, the claim never extracted the next). Instead: take the pre-computed `claims` list, **classify** each entry — sort it into the four type-buckets below (`numerical` / `cross-reference` / `capability` / `framing`), set its `source_class` per §Source-class classification, set `cross_specialist_corroboration: true` when the `framing` heuristic also matches the entry's text — then fold in any additional claims you spot in the diff yourself, and run the §Combine step over the union. The four subagents are a **fallback**, run only when the artifact is absent or carries a non-empty `errors` array (degraded pre-step, or interactive `/docs-review`).
+
+When the four subagents *do* run (fallback path): spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
 
 - **`numerical`** -- `Numerical` + `Version/availability` rows + §Temporal-claim handling trigger list.
 - **`cross-reference`** -- `Cross-reference` row + §Cross-sibling consistency *templated-section detection* and *what to extract* (the per-record list -- not the rendering / promotion / calibration tail). Identifies which siblings need reading; the reads themselves are a separate fan-out (see §Cross-sibling consistency).
@@ -269,6 +287,10 @@ Spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`
 - **`framing`** -- heuristic specialist; canonical claim-type table unchanged. `Quote/attribution` row + framing-strength phrase list (`the only`, `the first`, `currently`, `as of <year>`, `is the leading`, `industry standard`, named-source quotes). Flags matches regardless of which canonical type the surrounding sentence falls under -- corroborates the others where the slices meet.
 
 Each subagent prompt copies *only* its slice rows verbatim, plus §Skip rules, §Claim record format, and §Source-class classification (each emitted claim must carry a `source_class` value). Do **not** include the full table, other subagents' rows, §Frontmatter sweep, §Intuition-check axis, §Cited-claim spot-check, §Routed verification, or §Claim extraction examples — those belong to other phases or to the main agent. Per-claim cap ~250 words.
+
+**Cross-sibling note.** The four-way claim-finder dispatch retires (above) — but the *sibling-read* fan-out in §Cross-sibling consistency does **not**. That's a different shape of discovery (reading parallel *pages* to compare nav steps / headings / labels), it's fed by its own deterministic pre-step (`.cross-sibling-discovery.json`), and it stays. The `cross-reference` claim-type bucket still exists as a classification bucket for the candidate claims; it just isn't a dispatched finder on the normal path.
+
+**Investigation-log rendering is unchanged.** Render the "External claim verification" bullet's `· N specialists (numerical, cross-reference, capability, framing); K cross-specialist corroborations` segment exactly as `docs-review:references:output-format` specifies (the validator's `external-claim-dispatch-metadata` rule enforces it verbatim). On the normal path the four "specialists" are the four type-buckets you sorted the candidate-claim floor into rather than four dispatched subagents — the *counts* still mean what they always meant (`K` = candidate claims the `framing` heuristic also flagged); the work moved from dispatch to classification, the rendered metadata didn't change.
 
 #### Source-class classification
 
@@ -295,13 +317,15 @@ When uncertain, default to `ambiguous` rather than `pulumi-internal`. The cost o
 
 #### Combine step
 
-1. **Dedup.** Key = `<file>:<line>` plus the first 40 chars of `claim_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing.
-1. **Annotate.** Set `found_by: [<specialist>, ...]` from `numerical`, `cross-reference`, `capability`, `framing`. Single-specialist finds are the expected state -- the slices are non-overlapping by design -- and are not a confidence signal. When `framing` corroborates one of the others on the same claim (e.g., `[capability, framing]` on a feature claim with framing-strength language), set `cross_specialist_corroboration: true` -- a positive signal for the OutSystems-shape catch, not the absence of it as a low-confidence flag.
-1. **Reconcile `source_class`.** If specialists disagree on the same deduped claim, take the most external classification (`external-public` > `ambiguous` > `pulumi-internal`) -- routing toward the more thorough lane is the safe default.
-1. **Frontmatter sweep** runs here -- repeated body / `meta_desc` / `social:` phrasings collapse into a single claim with multiple cited locations regardless of which subagent caught each occurrence.
-1. **Hand off.** Deduped list goes to §Routed verification; downstream schema unchanged except for the new `source_class` field on each record.
+Operates on the **union** of the `.candidate-claims.json` floor (normal path) — or the four subagents' output (fallback path) — and any additional claims the main agent spotted in the diff.
 
-Store the deduped claim list for the verification phase. No interim user output.
+1. **Dedup.** Key = `<file>:<line>` plus the first 40 chars of `claim_text` (lowercased, whitespace collapsed). Merge near-paraphrase matches; pick the most specific framing. *(The candidate-claims floor is already deduped by `merge-claims.py`; this step folds in your in-review additions and re-collapses.)*
+1. **Annotate.** Set `found_by: [<specialist>, ...]` from `numerical`, `cross-reference`, `capability`, `framing` (the type-buckets you sorted each claim into; on the fallback path, which subagent found it). When `framing` also matches a claim assigned another type-bucket (e.g., a feature claim with framing-strength language → `[capability, framing]`), set `cross_specialist_corroboration: true` -- a positive signal for the OutSystems-shape catch.
+1. **Reconcile `source_class`.** Take the most external classification (`external-public` > `ambiguous` > `pulumi-internal`) when in doubt -- routing toward the more thorough lane is the safe default. (Hint: the candidate claim's `source_hint` field — a URL or named source — is a strong `external-public` signal; a `pulumi/*` reference is `pulumi-internal`.)
+1. **Frontmatter sweep** runs here -- collapse repeated phrasings across body and the prose-bearing frontmatter keys (`meta_desc`, `description`, `summary`, `title`, every `social.*` sub-key — pinned to `.frontmatter-validation.json`'s `frontmatter_keys`, see §Frontmatter sweep) into a single claim with multiple cited locations. (A candidate claim the LLM holistic pass already collapsed will arrive with multiple line ranges; re-collapse any the regex layer emitted as separate per-line records.)
+1. **Hand off.** Deduped list goes to §Routed verification; downstream schema unchanged except for the `source_class` field on each record.
+
+Store the deduped claim list for the verification phase. No interim user output. The 🔍 Verification trail must carry a verdict for **every** entry — the `candidate-claims-coverage` validator rule checks the floor was honored.
 
 ---
 

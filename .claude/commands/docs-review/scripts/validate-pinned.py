@@ -33,7 +33,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 6
+SCHEMA_VERSION = 7
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -158,6 +158,13 @@ class Context:
     # None means the file wasn't present; otherwise a dict with keys
     # `trigger`, `files`. Used by `editorial-balance-counts-faithful`.
     editorial_balance: dict | None = None
+    # Schema v7: the merged claim-extraction artifact `.candidate-claims.json`
+    # (regex floor ∪ two Sonnet passes). None means the file wasn't present
+    # (local mode or workflow didn't run the pre-step); otherwise the parsed
+    # `claims` list (possibly empty — the pre-step ran but found nothing).
+    # Used by `candidate-claims-coverage` and by the 0-claim relaxation in
+    # `trail-bucket-consistency`.
+    candidate_claims: list[dict] | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -252,8 +259,11 @@ def extract_count_table_row(body: str) -> dict[str, int] | None:
 def extract_trail_records(body: str) -> list[dict]:
     """Pull line-anchored verdicts out of 🔍 Verification trail.
 
-    Returns list of {line_ref, verdict, raw} dicts where line_ref is the L<n>
-    or L<a>-<b> anchor and verdict is one of ✅ / ⚠️ / 🚨.
+    Returns list of {line_ref, line_refs, verdict, raw} dicts where line_ref is
+    the *first* L<n> or L<a>-<b> anchor on the line and line_refs is *all* of
+    them (collapsed frontmatter-sweep entries cite several locations on one
+    line — e.g. `- L12 "..." (also L88, L91) → ✅ matches`). verdict is one of
+    ✅ / ⚠️ / 🚨.
     """
     span = find_section(body, "🔍 Verification trail")
     if span is None:
@@ -263,8 +273,12 @@ def extract_trail_records(body: str) -> list[dict]:
     for raw in body.splitlines()[start:end]:
         m = re.search(r"L(\d+(?:-\d+)?)\b.*?→\s*(✅|⚠️|🚨)\s+(\S[^\n]*)", raw)
         if m:
+            # Pull every L<a>[-<b>] token on the line — the verdict applies to
+            # all of them (frontmatter-sweep collapse).
+            all_refs = re.findall(r"L\d+(?:-\d+)?", raw)
             records.append({
                 "line_ref": f"L{m.group(1)}",
+                "line_refs": all_refs or [f"L{m.group(1)}"],
                 "verdict_emoji": m.group(2),
                 "verdict_text": m.group(3),
                 "raw": raw,
@@ -960,15 +974,28 @@ def _bullet_mentions_anchor(bullet: str, anchor: str) -> bool:
 
 
 def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
-    """Every bucket bullet's [L...] prefix matches a trail record. Every 🚨 trail verdict surfaces in 🚨 Outstanding."""
+    """Every bucket bullet's [L...] prefix matches a trail record. Every 🚨 trail verdict surfaces in 🚨 Outstanding.
+
+    Relaxation (S42): when the 🔍 Verification trail has no parsed records
+    (the explicit-empty form, `_No verifiable claims extracted from this
+    diff._` — the pure-layout / 0-claim case like #18857), the
+    `bucket-bullet-trail-match` half is skipped: there is nothing in the trail
+    for a bullet's prefix to match, and ⚠️/💡 code-behavior observations on a
+    layout PR legitimately have no fact-check claim behind them. The prefix
+    mandate (`bucket-bullet-line-range-prefix`) still applies, and the
+    `candidate-claims-coverage` rule independently catches a content PR whose
+    review failed to populate the trail.
+    """
     trail_records = extract_trail_records(ctx.body)
     trail_refs = {r["line_ref"] for r in trail_records}
+    trail_is_empty = len(trail_records) == 0
 
     violations: list[Violation] = []
 
-    # Every bucket bullet must have a [L...] prefix that matches a trail record.
-    # When the prefix is missing, emit only the prefix-mandate violation; the
-    # trail-match violation requires the prefix to check.
+    # Every bucket bullet must have a [L...] prefix; when the trail is non-empty
+    # it must also match a trail record. When the prefix is missing, emit only
+    # the prefix-mandate violation; the trail-match violation requires the
+    # prefix to check.
     for section_label in ("🚨 Outstanding", "⚠️ Low-confidence", "💡 Pre-existing"):
         for bullet in extract_bucket_bullets(ctx.body, section_label):
             # Skip style findings (line N: prefix instead of [L...]).
@@ -984,6 +1011,8 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
                     hint="Add the `**[L<start>-<end>]**` prefix matching the corresponding 🔍 Verification trail record. The prefix is the exact key the validator uses to verify trail/bucket consistency.",
                 ))
                 continue
+            if trail_is_empty:
+                continue  # 0-claim / pure-layout PR — nothing in the trail to match against
             if prefix not in trail_refs:
                 violations.append(Violation(
                     rule_id="bucket-bullet-trail-match",
@@ -1022,6 +1051,91 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
             hint=f"Render a bullet under 🚨 Outstanding starting with `**[{ref}]**` that quotes the contradicted/mismatch finding. Trail verdict drives bucket placement — do not relitigate via the two-question test.",
         ))
 
+    return violations
+
+
+def _parse_line_token(tok: str) -> tuple[int, int] | None:
+    """Parse 'L42' / 'L42-47' → (42, 42) / (42, 47). Returns None if unparseable."""
+    m = re.fullmatch(r"L(\d+)(?:-(\d+))?", tok.strip())
+    if not m:
+        return None
+    a = int(m.group(1))
+    b = int(m.group(2)) if m.group(2) else a
+    return (min(a, b), max(a, b))
+
+
+def _parse_line_ranges(line_range: str) -> list[tuple[int, int]]:
+    """Parse a claim's `line_range` ('L42', 'L42-47', or 'L12, L88, L91') into ranges."""
+    out: list[tuple[int, int]] = []
+    for m in re.finditer(r"L\d+(?:-\d+)?", line_range or ""):
+        r = _parse_line_token(m.group(0))
+        if r:
+            out.append(r)
+    return out
+
+
+def _ranges_overlap(ra: list[tuple[int, int]], rb: list[tuple[int, int]], window: int = 2) -> bool:
+    for a1, b1 in ra:
+        for a2, b2 in rb:
+            if a1 <= b2 + window and a2 <= b1 + window:
+                return True
+    return False
+
+
+def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
+    """Schema v7: every entry in `.candidate-claims.json` has a 🔍 Verification
+    trail record whose line reference overlaps the claim's line range (± a
+    small window). The claim list is the *floor* — the review must verify (or
+    account for) every entry; it may add more. A dropped candidate claim is
+    the #18771-R2 failure mode, and a missing trail entry can't be honestly
+    synthesized by the surgical fixer — so this is non-surgical and soft-floors
+    loudly, surfacing the gap to the maintainer.
+    """
+    claims = ctx.candidate_claims
+    if claims is None:
+        return []  # pre-step didn't run (local mode) — skip the rule
+    if not claims:
+        return []  # pre-step ran, found no claims — nothing to cover
+
+    trail_records = extract_trail_records(ctx.body)
+    # Flatten every trail record's line refs into (record, [parsed ranges]).
+    trail_ranges: list[list[tuple[int, int]]] = []
+    for r in trail_records:
+        rngs = []
+        for tok in r.get("line_refs", [r.get("line_ref", "")]):
+            pr = _parse_line_token(tok)
+            if pr:
+                rngs.append(pr)
+        if rngs:
+            trail_ranges.append(rngs)
+
+    violations: list[Violation] = []
+    for c in claims:
+        lr = c.get("line_range", "")
+        claim_ranges = _parse_line_ranges(lr)
+        if not claim_ranges:
+            continue  # malformed line_range in the artifact — not the review's fault
+        covered = any(_ranges_overlap(claim_ranges, tr) for tr in trail_ranges)
+        if covered:
+            continue
+        text = (c.get("text", "") or "").strip()
+        ctype = c.get("type", "claim")
+        fb = "+".join(c.get("found_by", [])) or "?"
+        violations.append(Violation(
+            rule_id="candidate-claims-coverage",
+            line_ref=lr or "<candidate claim>",
+            expected=f"a 🔍 Verification trail record whose line ref overlaps {lr}",
+            actual=f"no trail entry covers candidate claim [{ctype}, found_by={fb}]: \"{text[:120]}\"",
+            hint=(
+                f"`.candidate-claims.json` is the claim floor — add a 🔍 Verification trail line for {lr} "
+                "(`- L… \"<claim>\" → <emoji> <verdict>`). Verdict is `verified`/`unverifiable`/`contradicted`/"
+                "`matches`/`mismatch` per `docs-review:references:output-format`; if the candidate is a "
+                "regex-layer false positive (git metadata, a Dockerfile-comment tag, a faithful description of "
+                "the author's own design — see `docs-review:references:claim-extraction` §\"What is NOT a claim\"), "
+                "record `✅ not-a-claim — <one-line reason>` so the demotion is traced. You MAY also add claims "
+                "the artifact missed; you may NOT silently drop one."
+            ),
+        ))
     return violations
 
 
@@ -1529,9 +1643,15 @@ RULES = [
     },
     {
         "id": "trail-bucket-consistency",
-        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record. Every 🚨 trail verdict surfaces in 🚨 Outstanding.",
+        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every 🚨 trail verdict surfaces in 🚨 Outstanding.",
         "hint": "Add the line-range prefix to bucket bullets; promote 🚨 trail verdicts to 🚨 Outstanding without relitigation.",
         "check": check_trail_bucket_consistency,
+    },
+    {
+        "id": "candidate-claims-coverage",
+        "desc": "Schema v7: every entry in `.candidate-claims.json` (the merged claim-extraction floor: regex ∪ two Sonnet passes) has a 🔍 Verification trail record overlapping its line range — the review may add claims, may not silently drop one.",
+        "hint": "For each uncovered candidate claim, add a 🔍 Verification trail line `- L… \"<claim>\" → <emoji> <verdict>`. If the candidate is a regex-layer false positive (git metadata, Dockerfile-comment tag, faithful description of the author's own design — see `docs-review:references:claim-extraction`), record `✅ not-a-claim — <reason>` so the demotion is traced.",
+        "check": check_candidate_claims_coverage,
     },
     {
         "id": "editorial-balance-counts",
@@ -1679,6 +1799,32 @@ def load_fetched_urls(explicit_path: str | None) -> list[dict] | None:
     return data
 
 
+def load_candidate_claims(explicit_path: str | None) -> list[dict] | None:
+    """Load the `claims` list from `.candidate-claims.json` if present.
+
+    Returns None when the file isn't present (local mode or the workflow
+    didn't run the claim-extraction pre-step); returns the parsed `claims`
+    list (possibly empty) otherwise. The `candidate-claims-coverage` rule
+    distinguishes None (skip the rule) from `[]` (pre-step ran, no claims).
+    """
+    if explicit_path:
+        path = Path(explicit_path)
+    else:
+        path = Path.cwd() / ".candidate-claims.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    claims = data.get("claims")
+    if not isinstance(claims, list):
+        return None
+    return [c for c in claims if isinstance(c, dict)]
+
+
 def repo_root() -> Path:
     try:
         result = subprocess.run(
@@ -1762,6 +1908,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     is_blog = any(f.startswith("content/blog/") for f in diff_files)
     fetched_urls = load_fetched_urls(args.fetched_urls)
     editorial_balance = load_editorial_balance(args.editorial_balance)
+    candidate_claims = load_candidate_claims(args.candidate_claims)
 
     ctx = Context(
         body=body,
@@ -1775,6 +1922,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         is_blog=is_blog,
         fetched_urls=fetched_urls,
         editorial_balance=editorial_balance,
+        candidate_claims=candidate_claims,
     )
 
     violations = run_checks(ctx)
@@ -1805,7 +1953,7 @@ def cmd_schema_version(_: argparse.Namespace) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Validate a rendered pinned-review body against 16 deterministic invariants."
+        description="Validate a rendered pinned-review body against the deterministic invariants in the RULES registry (run `show-rules`)."
     )
     sub = parser.add_subparsers(dest="cmd", required=True)
 
@@ -1826,6 +1974,11 @@ def main() -> int:
                               "pre-step. Defaults to ./.editorial-balance.json. "
                               "Pass-through to the editorial-balance-counts-faithful "
                               "rule (Tier 1 deterministic detector).")
+    p_check.add_argument("--candidate-claims",
+                         help="Path to `.candidate-claims.json` from the claim-extraction "
+                              "pre-step (regex ∪ two Sonnet passes). Defaults to "
+                              "./.candidate-claims.json. Pass-through to the "
+                              "candidate-claims-coverage rule (schema v7).")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")

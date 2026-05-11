@@ -100,6 +100,10 @@ jobs:
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
+    # A review that genuinely hangs (S41 saw one stall ~18 min with no output)
+    # would otherwise sit on the runner for GitHub's 6-hour default. 25 min is
+    # comfortably above the slowest real reviews (blog reviews run 9-12+ min).
+    timeout-minutes: 25
     permissions:
       contents: read
       pull-requests: write
@@ -311,6 +315,99 @@ jobs:
             --pr "$PR" --out .fetched-urls.json 2>/dev/null \
             || echo '[]' > .fetched-urls.json
 
+      # ---- Claim extraction (S42) ------------------------------------------
+      # The claim *floor* the review must verify. Three layers, unioned:
+      #   A. extract-claims.py        — deterministic regex/heuristic floor
+      #                                 (numbers, version pins, temporal words,
+      #                                 attributions, URLs, named-entity/spec,
+      #                                 positioning/comparison triggers); walks
+      #                                 the WHOLE diff. → .candidate-claims-regex.json
+      #   B. extract-claims-llm.py ×2 — two redundant Sonnet passes (atomic /
+      #                                 holistic framing), one API call per
+      #                                 changed content/**/*.md file.
+      #                                 → .candidate-claims-llm-1.json / -2.json
+      #   merge-claims.py             — union + dedup + line-anchor.
+      #                                 → .candidate-claims.json
+      # The review MUST verify every entry in .candidate-claims.json and MAY add
+      # more; the validator's `candidate-claims-coverage` rule fails the review
+      # if it drops a candidate claim. See references/fact-check.md §Pre-step
+      # artifact `.candidate-claims.json` and references/pre-computation.md.
+      # All steps continue-on-error with schema-matching `||` stubs; the scripts'
+      # safe_main() surfaces failures *inside* the artifact (`errors: [...]`),
+      # not via file-presence heuristics.
+      - name: Pre-compute claim scrutiny scope
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: claim-scrutiny
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          # `heightened` (full-file extraction) when any blog file changed —
+          # AI hallucinates surrounding prose, not just changed lines. Per-file
+          # new-file bumping happens inside extract-claims-llm.py.
+          BLOG=$(gh pr diff "$PR" --name-only | grep -E '^content/blog/.*\.md$' || true)
+          if [ -n "$BLOG" ]; then
+            echo "value=heightened" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=standard" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract candidate claims (Layer A — regex floor)
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-claims-regex
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/extract-claims.py \
+            --pr "$PR" --out .candidate-claims-regex.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+
+      - name: Extract candidate claims (Layer B — atomic pass)
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-claims-llm-atomic
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+            --pr "$PR" --pass atomic --scrutiny "${SCRUTINY:-standard}" \
+            --out .candidate-claims-llm-1.json \
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+
+      - name: Extract candidate claims (Layer B — holistic pass)
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-claims-llm-holistic
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+            --pr "$PR" --pass holistic --scrutiny "${SCRUTINY:-standard}" \
+            --out .candidate-claims-llm-2.json \
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+
+      - name: Merge candidate claims → .candidate-claims.json
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: merge-claims
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/merge-claims.py \
+            --regex .candidate-claims-regex.json \
+            --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+            --out .candidate-claims.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
+      # ---- end claim extraction --------------------------------------------
+
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
       # section-depth stats, outlier flag) so the model renders the rich vs
       # empty form deterministically. Tier 2 (entity counting, recommendation
@@ -500,6 +597,10 @@ jobs:
             ### Changed files
 
             ${{ steps.pr-context.outputs.files_list }}
+
+            ## Candidate claims (the claim floor)
+
+            If `.candidate-claims.json` exists and is non-empty, it is the claim *floor* per `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`: extract and verify **every** entry (surface a verdict for each in the 🔍 Verification trail — the validator's `candidate-claims-coverage` rule fails the review otherwise) and **add** any claims the artifact missed. Do NOT re-dispatch the four in-review claim-finder subagents when this artifact is present — classify the pre-computed list into the four type-buckets instead (`fact-check.md` §Subagent extraction dispatch). The regex layer surfaces false positives (a `:latest` tag in a Dockerfile comment, a faithful description of the author's own design, git metadata) — triage those down to `- L… "<text>" → ✅ not-a-claim — <reason>` in the trail; demote, never silently drop. If the artifact carries a non-empty `errors` array (degraded pre-step) or is absent, fall back to the in-review extraction path.
 
             ## Pre-fetched URLs
 
