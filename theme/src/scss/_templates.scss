@@ -366,17 +366,6 @@
     }
 }
 
-.template-footer {
-    .template-footer-title {
-        @include section-header-small();
-        @apply text-heading-xs;
-
-        @include screen-sm {
-            @apply text-heading-s;
-        }
-    }
-}
-
 .template-sidebar-nav {
     @apply rounded-xl p-5 pb-3;
     border: 0.5px solid #AAA;

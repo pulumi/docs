@@ -399,8 +399,4 @@ sections:
         title: Complete audit trail
         description: |
           Every action logged. Who changed what, when, and why. Export to SIEM. Compliance reports at your fingertips.
-
-  - type: footer_cta
-    title: The infrastructure as code platform for any cloud.
-    anchor: get-started
 ---

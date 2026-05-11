@@ -73,6 +73,10 @@
   </nav>
 
   <div class="flex flex-col gap-2 border-t border-gray-100 p-4">
+    {{ partial "github-star-button.html" (dict
+        "variant" "header"
+        "track" "header-github-stars-sheet"
+        "extraClass" "inline-flex justify-center") }}
      <a href="{{ $nav.cta.contact.href }}"
       {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
       class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">

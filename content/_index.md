@@ -414,8 +414,4 @@ sections:
 
           An equivalent of 50K lines of declarative infra code has been put behind APIs to support the features on the platform with https://www.pulumi.com/docs/using-pulumi/automation-api/
     anchor: community
-
-  - type: footer_cta
-    title: The infrastructure as code platform for any cloud.
-    anchor: get-started
 ---

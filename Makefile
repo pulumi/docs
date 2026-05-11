@@ -19,6 +19,7 @@ ensure: clean
 	./scripts/ensure.sh
 	$(MAKE) sync-icons
 	./scripts/fetch-openapi-spec.sh
+	node scripts/fetch-github-stars.js
 	$(MAKE) build-assets
 
 .PHONY: sync-icons

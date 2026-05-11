@@ -135,10 +135,15 @@ location:
   anchor: location
 
 footer_cta:
-  title: See you at Google Cloud Next.
-  cta_primary_text: Book some booth time
-  cta_primary_link: https://calendly.com/pulumi-meetings/google-cloud-next-booth-demo-2026
-  cta_secondary_text: Register for the workshop
-  cta_secondary_link: /events/getting-started-with-kubernetes-google-cloud
+  heading: See you at Google Cloud Next.
   anchor: get-started
+  buttons:
+    - label: Register for the workshop
+      href: /events/getting-started-with-kubernetes-google-cloud
+      style: secondary
+      track: footer-cta-gcn-workshop
+    - label: Book some booth time
+      href: https://calendly.com/pulumi-meetings/google-cloud-next-booth-demo-2026
+      style: primary
+      track: footer-cta-gcn-booth
 ---
