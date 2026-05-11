@@ -31,11 +31,14 @@ The Pulumi CLI already supports enhanced metadata for several popular CI/CD syst
 The detection of metadata in a CI environment depends on some key environment variables that a CI system injects into the build environment of their build agents. The Pulumi CLI uses those environment variables to try and determine the values for the following properties:
 
 - CI System Name
+- Build ID
+- Build Number
 - Build Type
 - Build URL
 - Commit SHA
-- PR Number
+- Branch Name
 - Commit Message
+- PR Number
 
 The metadata about your CI environment is displayed in the [Pulumi Cloud](https://app.pulumi.com/signin) stack activity log. The metadata from your CI environment and the information about your Git repository allow Pulumi to provide links to pull requests and commits.
 
@@ -50,23 +53,23 @@ There are 2 parts to the CLI for it to be able to correctly detect the environme
 1. Detecting in which CI system the Pulumi CLI is currently running
 1. Detecting additional environment variables for a specific CI system
 
-In the [`pulumi/pulumi`](https://github.com/pulumi/pulumi) repo the [`pkg/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) contains all of the logic necessary for the above. Every stack `preview` or `update` calls the functions exported from this package.
+In the [`pulumi/pulumi`](https://github.com/pulumi/pulumi) repo the [`sdk/go/common/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) package contains all of the logic necessary for the above. Every stack `preview` or `update` calls the functions exported from this package.
 
 ### Detecting The CI System
 
-- Add an entry to the local `map` in [`detect.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/detect.go) where all of the CI systems are registered.
+- Add an entry to the `detectors` slice in [`detect.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/detect.go) where all of the CI systems are registered.
 - When you add the entry, you have two options, either use the `baseCI` as the CI System implementation or add a specific implementation that overrides the `DetectVars` function. More on this later in the next section.
 
 For example, here's the `AppVeyor` entry.
 
 ```go
-AppVeyor: baseCI{
-		Name:            AppVeyor,
-		EnvVarsToDetect: []string{"APPVEYOR"},
+baseCI{
+    Name:            AppVeyor,
+    EnvVarsToDetect: []string{"APPVEYOR"},
 },
 ```
 
-The `EnvVarsToDetect` is used by the `IsCI()` in [`systems.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/systems.go), which iterates through the environment variables that a certain CI system is known to set in its build agents. Some CI systems set specific _values_ in certain environment variables, and in such cases you should use `EnvValuesToDetect`. An example for the latter is `Codeship`. See its entry in the `detectors` map.
+The `EnvVarsToDetect` is used by the `IsCI()` method in [`systems.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/systems.go), which iterates through the environment variables that a certain CI system is known to set in its build agents. Some CI systems set specific _values_ in certain environment variables, and in such cases you should use `EnvValuesToDetect`. An example for the latter is `Codeship`. See its entry in the `detectors` slice.
 
 ### Detecting Additional Metadata About A CI Build
 
@@ -79,8 +82,8 @@ A CI build could have been triggered by a PR or a push build. In this case, the 
 
 All of the above source control systems have a concept of a PR, and PR builds, as well as push builds.
 
-- Add a new file to the [`pkg/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) folder with the name of the CI system for which you are adding support.
-- Define a new struct for the CI system and add `baseCI` to its definition. Refer to any of other pre-existing implementations, such as the [`travis.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/travis.go) file.
+- Add a new file to the [`sdk/go/common/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) folder with the name of the CI system for which you are adding support.
+- Define a new struct for the CI system and embed `baseCI` in its definition. Refer to any of the pre-existing implementations, such as the [`travis.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/travis.go) file.
 - Implement the `DetectVars()` function. This is the function where you should construct a new instance of the `Vars` struct and set its properties accordingly.
 
 That's it! Send us a new [PR](https://github.com/pulumi/pulumi/pulls) in the [`pulumi/pulumi`](https://github.com/pulumi/pulumi) repo with your addition. We would love to help you get that merged as soon as possible.
@@ -90,9 +93,23 @@ That's it! Send us a new [PR](https://github.com/pulumi/pulumi/pulls) in the [`p
 If the CI system you are using is not currently detected by Pulumi, you can set the `PULUMI_CI_SYSTEM` environment variable. Then the following environment variables can be used to surface CI system metadata for an update.
 
 - `PULUMI_CI_SYSTEM`
+- `PULUMI_CI_BRANCH_NAME`
 - `PULUMI_CI_BUILD_ID`
+- `PULUMI_CI_BUILD_NUMBER`
 - `PULUMI_CI_BUILD_TYPE`
 - `PULUMI_CI_BUILD_URL`
 - `PULUMI_CI_PULL_REQUEST_SHA`
+- `PULUMI_COMMIT_MESSAGE`
+- `PULUMI_PR_NUMBER`
 
-You can also find these variables in the [`generic.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/generic.go) file in the [`pkg/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) folder.
+You can also find these variables in the [`generic.go`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil/generic.go) file in the [`sdk/go/common/util/ciutil`](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/util/ciutil) folder.
+
+{{% notes type="info" %}}
+`PULUMI_CI_BRANCH_NAME` and `PULUMI_COMMIT_MESSAGE` are treated as fallbacks rather than overrides. When the Pulumi CLI runs inside a Git repository with a normal (non-detached) HEAD and a non-empty commit message, the values read from Git win and these two environment variables are ignored. They take effect when:
+
+- The Git working tree is in a detached-HEAD state (common on CI runners that check out a commit SHA), or
+- The build runs against a Mercurial repository (in which case the CI branch name overrides the hg branch), or
+- No repository is detected at all and the corresponding `PULUMI_GIT_HEAD_NAME` / `PULUMI_GIT_COMMIT_MESSAGE` variables are not set.
+
+The other `PULUMI_CI_*` variables (build ID, build number, build type, build URL, PR SHA, PR number) are applied whenever they are set.
+{{% /notes %}}
