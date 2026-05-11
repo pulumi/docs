@@ -150,12 +150,12 @@
   ) }}
 {{ end }}
 
-{{/* Add current page (without URL for last item) */}}
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. */}}
 {{ $position = add $position 1 }}
 {{ $breadcrumbs = $breadcrumbs | append (dict
   "@type" "ListItem"
   "position" $position
-  "name" .Title
+  "name" (or .Params.page_title .Title)
 ) }}
 
 {{/* Return breadcrumb entity */}}
