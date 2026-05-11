@@ -1,14 +1,16 @@
 ---
-title: Deployment execution environment
-title_tag: Deployment execution environment | Pulumi Deployments
+title: Images
+title_tag: Deployment images | Pulumi Deployments
 meta_desc: Understand the container image that runs your Pulumi deployments, when to customize it, and how to add the tools your project needs.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
-    name: Execution environment
-    parent: deployments-deployments
-    weight: 45
-    identifier: deployments-deployments-execution-environment
+    name: Images
+    parent: deployments-deployments-runs
+    weight: 10
+    identifier: deployments-deployments-runs-images
+aliases:
+- /docs/deployments/deployments/execution-environment/
 ---
 
 Pulumi Cloud runs your Pulumi program inside a container image called the *deployment executor image*. This page covers what is in that image and how to customize it.
@@ -40,10 +42,10 @@ There are two ways to handle this. Pick based on how often you need the tool and
 
 | Approach | Best for | Cost |
 |---|---|---|
-| **Pre-run install hook** | One-off tools, scripts, or quick experiments | The install runs on every deployment, adding setup time to each run |
+| **Pre-run commands** | One-off tools, scripts, or quick experiments | The install runs on every deployment, adding setup time to each run |
 | **Custom executor image** | Stable tool sets used on every deployment | Slower cold starts on fresh runners, and an image you have to maintain |
 
-## Pre-run install hook
+## Pre-run commands
 
 If you need a tool occasionally, or you are still prototyping, install it from a [pre-run command](/docs/deployments/deployments/using/settings/#pre-run-commands) in your deployment settings:
 
@@ -105,7 +107,7 @@ A custom executor image must:
 - Include `curl` on `$PATH`
 - Include the `pulumi` CLI on `$PATH`
 - Include the language runtime(s) for the projects that will use it
-- Use a glibc-based libc (musl-only images such as Alpine are not supported)
+- Use a glibc-based libc. Pulumi's bundled language runtimes and provider plugins are glibc-linked, so musl-only images such as Alpine are not supported ([`pulumi/pulumi#5426`](https://github.com/pulumi/pulumi/issues/5426))
 
 If you start from one of the `pulumi/*` base images, all of these are already true.
 
@@ -123,11 +125,11 @@ To reduce cold-start time:
 
 #### Static credentials only
 
-If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/deployments/customer-managed-agents/) run in your own infrastructure and can use whatever pull mechanism you configure.
+If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/) run in your own infrastructure and can use whatever pull mechanism you configure.
 
 ## See also
 
 - [Deployment settings](/docs/deployments/deployments/using/settings/): UI walkthrough for configuring the executor image on a stack
-- [Customer-Managed Workflow Runners](/docs/deployments/deployments/customer-managed-agents/): full control over the runner host, registry pulls, network access, and lifecycle
+- [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/): full control over the runner host, registry pulls, network access, and lifecycle
 - [Pre-run commands](/docs/deployments/deployments/using/settings/#pre-run-commands): where pre-run installs run
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

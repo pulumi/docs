@@ -5,12 +5,13 @@ meta_desc: Self-host workflow runners and get all the power and flexibility of P
 menu:
   deployments:
     name: Customer-managed workflow runners
-    parent: deployments-deployments
-    weight: 40
-    identifier: deployments-deployments-customer-managed-agents
+    parent: deployments-deployments-runs
+    weight: 20
+    identifier: deployments-deployments-runs-customer-managed-agents
 
 aliases:
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
+- /docs/deployments/deployments/customer-managed-agents/
 ---
 
 Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/):
