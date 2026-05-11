@@ -144,6 +144,10 @@ connect:
       href: https://www.linkedin.com/company/pulumi/
       icon: brand/linkedin
       track: footer-linkedin
+    - label: Pulumi Bluesky
+      href: https://bsky.app/profile/pulumi.com
+      icon: brand/bluesky
+      track: footer-bluesky
 
 newsletter:
   heading: Get our newsletter
