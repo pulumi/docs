@@ -65,9 +65,6 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 ### 💡 Pre-existing issues in touched files (optional)
 
-> [!NOTE]
-> Found while reviewing, not introduced by this PR. If you fix these, great! But no pressure — they were there when you got here.
-
 [Pre-existing findings, capped per file at 15]
 
 ### ✅ Resolved since last review
