@@ -12,7 +12,7 @@ cta:
 
 brand:
   tagline_html: |
-    Open source and free forever.
+    Open source and&nbsp;free forever.
 
 columns:
   - heading: Resources
