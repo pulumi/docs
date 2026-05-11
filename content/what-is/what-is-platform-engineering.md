@@ -24,7 +24,7 @@ Two ideas anchor most platform engineering practice: the *internal developer pla
 
 An **internal developer platform (IDP)** is the product that a platform team ships to its developers. It is the unified surface through which developers self-serve everything they need to build, run, and operate their services. An IDP typically combines a developer portal, [infrastructure as code](/what-is/what-is-infrastructure-as-code/) templates, [CI/CD](/what-is/what-is-ci-cd/) pipelines, secrets and policy management, and observability tooling. An IDP is not a single product you buy; it is a curated composition of tools and shared services that reflects your organization's stack, security model, and developer workflows.
 
-A **golden path** (sometimes called a *paved road*) is an opinionated, well-supported route through the platform for a common task — for example, "deploy a stateless TypeScript service to production." Golden paths are designed to be the fastest, easiest, and most secure option for the most common case. Developers can still go off-road for unusual needs, but the platform team commits to maintaining, supporting, and improving the golden paths as a product. The combination of an IDP and well-defined golden paths is what makes self-service possible without sacrificing security, compliance, or operational consistency.
+A **golden path** (sometimes called a *paved road*) is an opinionated, well-supported route through the platform for a common task — for example, "deploy a stateless TypeScript service to production." Golden paths are designed to be the fastest, lowest-friction, and most secure option for the most common case. Developers can still go off-road for unusual needs, but the platform team commits to maintaining, supporting, and improving the golden paths as a product. The combination of an IDP and well-defined golden paths is what makes self-service possible without sacrificing security, compliance, or operational consistency.
 
 ## What are some of the requirements for platform engineering?
 
@@ -39,8 +39,6 @@ Regardless of implementation details or specific methods, there are some simple 
 ## What is a platform engineer?
 
 _Platform engineer_ is a term used to describe the engineers that make up a platform team or a platform engineering team. Typically, these engineers have the multi-disciplinary skills, experience, and empathy needed to build a great product, serve developers' needs, and "go to market" within their company. Often, they have experience with multiple engineering disciplines like infrastructure or DevOps and software engineering. The reality is that many engineers who perform platform engineering responsibilities do not have the title "platform engineer." In practice they have varying job titles like software engineer, DevOps engineer, SRE, cloud architect, cloud engineer, and more. By providing developers with infrastructure and tooling to deploy and operate their applications efficiently, platform engineers enable developers to focus on building great software.
-
-Practitioners working in platform engineering roles usually have a software engineering mindset, as opposed to a DevOps/sysadmin/scripting mindset.
 
 Platform engineers typically take on a mix of responsibilities that span product, infrastructure, and developer-facing work:
 
@@ -85,9 +83,9 @@ Many companies have already created dedicated teams for platform engineering. In
 
 Platform engineering is one of the disciplines most directly reshaped by AI. The shift shows up in three places at once:
 
-* **More infrastructure, more surface area to govern.** AI coding assistants let application developers generate infrastructure faster than ever, which means platform teams are now responsible for guardrails over a much larger volume of cloud resources, IaC programs, and configurations than they were even two years ago. Policy as code, drift detection, and centralized observability move from "nice to have" to load-bearing.
-* **AI agents as a new class of platform consumer.** Human developers are no longer the only callers of the platform's APIs. Coding agents, deployment agents, and on-call agents increasingly provision, debug, and remediate infrastructure directly. That makes a clean, programmatic, well-documented platform interface significantly more valuable, with strong authentication, authorization, and audit trails on it as table stakes.
-* **AI as a force multiplier for platform engineers themselves.** Routine platform work (writing new IaC modules, diagnosing failed deployments, reconciling drift, keeping dependencies current across many stacks) is increasingly automatable. The most leveraged platform teams use AI to extend the surface area a small team can credibly support, not to replace headcount.
+* **More infrastructure, more surface area to govern**: AI coding assistants let application developers generate infrastructure faster than ever, which means platform teams are now responsible for guardrails over a much larger volume of cloud resources, IaC programs, and configurations than they were even two years ago. Policy as code, drift detection, and centralized observability move from "nice to have" to load-bearing.
+* **AI agents as a new class of platform consumer**: Human developers are no longer the only callers of the platform's APIs. Coding agents, deployment agents, and on-call agents increasingly provision, debug, and remediate infrastructure directly. That makes a clean, programmatic, well-documented platform interface significantly more valuable, with strong authentication, authorization, and audit trails on it as table stakes.
+* **AI as a force multiplier for platform engineers themselves**: Routine platform work (writing new IaC modules, diagnosing failed deployments, reconciling drift, keeping dependencies current across many stacks) is increasingly automatable. The most leveraged platform teams use AI to extend the surface area a small team can credibly support, not to replace headcount.
 
 [Pulumi Neo](/product/neo/) is a purpose-built AI infrastructure agent designed for this last shift. It works inside a platform team's existing Pulumi setup, enforces the same policy as code, and takes on provisioning, debugging, and remediation work, freeing the team to focus on platform design and developer experience rather than ticket queues.
 
@@ -98,7 +96,7 @@ There is no one-size-fits-all blueprint, but most successful platform initiative
 1. **Identify your developer customers and their top pain points.** Talk to development teams about what currently slows them down (environment provisioning, secrets management, deployment, observability) and rank the problems by frequency and cost.
 1. **Treat the platform as a product, not a project.** Stand up a dedicated team with a product manager (or product-minded engineer), define a roadmap, and measure success by developer adoption and lead time rather than infrastructure metrics alone.
 1. **Define your first golden path.** Pick the single most common developer workflow (for example, "stand up a new service in production") and pave it end to end. Resist the temptation to support every framework, language, and cloud up front.
-1. **Build on reusable infrastructure as code components.** Package your golden path as IaC modules, templates, and policies that developers consume rather than copy. Pulumi supports this with general-purpose languages, [reusable components](/docs/iac/concepts/resources/components/), and [policy as code](/docs/insights/policy/).
+1. **Build on reusable infrastructure as code components.** Package your golden path as IaC modules, templates, and policies that developers consume rather than copy. Pulumi supports this with general-purpose languages, [reusable components](/docs/iac/concepts/components/), and [policy as code](/docs/insights/policy/).
 1. **Layer in self-service through an internal developer portal.** Whether you use [Backstage](https://backstage.io/), [Port](https://www.port.io/), or a custom portal, surface the platform through an interface that meets developers where they already work.
 1. **Iterate against a maturity model.** The [CNCF Platform Engineering Maturity Model](https://tag-app-delivery.cncf.io/whitepapers/platform-eng-maturity-model/) defines five capability areas (investment, adoption, interfaces, operations, and measurement) across four stages (provisional, operational, scalable, and optimizing), and gives platform teams a shared vocabulary for tracking progress.
 
@@ -108,11 +106,11 @@ Team structure matters as much as tooling. The [Team Topologies](https://teamtop
 
 Even well-resourced platform teams hit a predictable set of pitfalls. Knowing them in advance is half the battle:
 
-* **Building in a vacuum.** Platforms designed without continuous developer feedback tend to ship features no one uses. Treat developer interviews and adoption metrics as core platform telemetry.
-* **Trying to support everything at once.** Spreading the platform across too many languages, frameworks, or clouds before any single golden path is solid leads to a shallow surface that no team trusts.
-* **Confusing platform engineering with shared services.** A central infrastructure team that simply owns shared tooling is not a platform team. Platform engineering requires a product mindset, a defined developer customer, and treating the platform as a first-class internal product.
-* **Heavy-handed governance.** Mandating the platform without making it the easiest path drives developers to work around it. Guardrails should be embedded in golden paths, not bolted on as approval gates.
-* **Under-investing in operations.** An IDP that is unreliable, slow, or undocumented quickly loses developer trust. Run the platform itself with the same SLOs, observability, and on-call discipline you expect of any production service.
+* **Building in a vacuum**: Platforms designed without continuous developer feedback tend to ship features no one uses. Treat developer interviews and adoption metrics as core platform telemetry.
+* **Trying to support everything at once**: Spreading the platform across too many languages, frameworks, or clouds before any single golden path is solid leads to a shallow surface that no team trusts.
+* **Confusing platform engineering with shared services**: A central infrastructure team that simply owns shared tooling is not a platform team. Platform engineering requires a product mindset, a defined developer customer, and treating the platform as a first-class internal product.
+* **Heavy-handed governance**: Mandating the platform without making it the lowest-friction path drives developers to work around it. Guardrails should be embedded in golden paths, not bolted on as approval gates.
+* **Under-investing in operations**: An IDP that is unreliable, slow, or undocumented quickly loses developer trust. Run the platform itself with the same SLOs, observability, and on-call discipline you expect of any production service.
 
 ## Frequently asked questions
 
