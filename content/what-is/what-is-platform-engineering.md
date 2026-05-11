@@ -81,6 +81,16 @@ Platform engineering can increase development velocity, improve security, increa
 
 Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of software engineering organizations would establish platform teams as internal providers of reusable services, infrastructure components, and tools for application delivery — a shift that is now well underway across the industry, from financial services to consumer retail (see the [case studies](#case-studies)).
 
+## How is AI changing platform engineering?
+
+Platform engineering is one of the disciplines most directly reshaped by AI. The shift shows up in three places at once:
+
+* **More infrastructure, more surface area to govern.** AI coding assistants let application developers generate infrastructure faster than ever, which means platform teams are now responsible for guardrails over a much larger volume of cloud resources, IaC programs, and configurations than they were even two years ago. Policy as code, drift detection, and centralized observability move from "nice to have" to load-bearing.
+* **AI agents as a new class of platform consumer.** Human developers are no longer the only callers of the platform's APIs. Coding agents, deployment agents, and on-call agents increasingly provision, debug, and remediate infrastructure directly. That makes a clean, programmatic, well-documented platform interface significantly more valuable, with strong authentication, authorization, and audit trails on it as table stakes.
+* **AI as a force multiplier for platform engineers themselves.** Routine platform work (writing new IaC modules, diagnosing failed deployments, reconciling drift, keeping dependencies current across many stacks) is increasingly automatable. The most leveraged platform teams use AI to extend the surface area a small team can credibly support, not to replace headcount.
+
+[Pulumi Neo](/product/neo/) is a purpose-built AI infrastructure agent designed for this last shift. It works inside a platform team's existing Pulumi setup, enforces the same policy as code, and takes on provisioning, debugging, and remediation work, freeing the team to focus on platform design and developer experience rather than ticket queues.
+
 ## How to get started with platform engineering
 
 There is no one-size-fits-all blueprint, but most successful platform initiatives follow a similar sequence:
