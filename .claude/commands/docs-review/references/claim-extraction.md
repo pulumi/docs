@@ -73,7 +73,7 @@ Do **not** emit a record for:
 
 ### The third-party-attribution flip — read this carefully
 
-The single line that the S41 #18771 failure turned on: **a design detail stops being "not a claim" the moment it is attributed to a third party.** Compare:
+**A design detail stops being "not a claim" the moment it is attributed to a third party.** Compare:
 
 > *Not a claim:* "Our holdout pipeline runs each scenario three times against an ephemeral deployment; two of three runs must pass, and the overall pass rate has to clear 90%." — the author describing their own design.
 
@@ -148,21 +148,21 @@ Both modes use the same taxonomy, the same not-a-claim list, and the same record
 
 Real patterns from the corpus, with the extracted record(s) and the reasoning. The "S41 misses" are the hard cases — the ones a single Opus run got right one run and wrong the next.
 
-**1 — The StrongDM holdout-mechanics paragraph (S41 #18771; R1 caught it, R2 missed it).**
+**1 — The StrongDM holdout-mechanics paragraph**
 
 > "StrongDM runs each scenario three times against an ephemeral deployment. Two of three runs must pass, and the overall pass rate has to clear 90%. A failing scenario surfaces the literal evaluator output, e.g. `SQL Injection Detection failed`."
 
 - Record (type `attribution`): `text` = "StrongDM's holdout-evaluation pipeline runs each scenario three times against an ephemeral deployment, requires two of three runs to pass, and gates on a 90% overall pass rate." `source_hint` = "StrongDM" `confidence` = high. Line range = the whole paragraph.
 - Reasoning: every mechanic here is attributed to StrongDM — that's the checkable assertion. Verify against StrongDM's published material; if the specifics (3-run / 2-of-3 / 90% gate / verbatim failure string) aren't documented anywhere public, the attribution is unverifiable → 🚨. **If the same paragraph said "*our* pipeline runs each scenario three times…" it would NOT be a claim** (author's own design). The attribution is the whole difference.
 
-**2 — `p5.48xlarge` price (S41 #18743; R1 caught it, R2 missed it).**
+**2 — `p5.48xlarge` price**
 
 > "The `p5.48xlarge` instance runs about $98.32/hr on-demand."
 
 - Record (type `numerical`): `text` = "The AWS `p5.48xlarge` instance costs about $98.32/hr on-demand." `confidence` = high.
 - Reasoning: a specific dollar figure with no citation → verify against current AWS/Vantage pricing. Current on-demand is ~$55.04/hr → contradicted → 🚨. (Also worth a date anchor — instance prices change.)
 
-**3 — Llama 3.3 32B (S41 #18743; R2 caught it, R1 missed it).**
+**3 — Llama 3.3 32B**
 
 > Model table row: "Llama 3.3 / DeepSeek-R1 | 32B / 32B distill | …"
 

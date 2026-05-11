@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""extract-claims-llm.py — Layer B of the claim-extraction pre-step (added S42).
+"""extract-claims-llm.py — Layer B of the claim-extraction pre-step.
 
 One of two redundant, deliberately differently-framed Sonnet passes over each
 changed `content/**/*.md` file. Each pass emits a JSON claim list against a

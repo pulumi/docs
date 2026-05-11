@@ -285,6 +285,20 @@ jobs:
           # on a missing file. Pattern mirrors claude-triage.yml.
           vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
+          # Vale processes markdown to HTML before applying rules, so bracket
+          # constructions (`[here](url)`, `![](url)`) are gone before tokens
+          # match. The companion script scans raw markdown for the missing
+          # syntax patterns and emits Vale-shaped JSON we merge into the raw
+          # findings before filtering. Same `||` fallback discipline.
+          python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
+            $CHANGED > .syntax-findings.json 2>/dev/null \
+            || echo '{}' > .syntax-findings.json
+          # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
+          # *replace* Vale's array with the script's for any overlapping file).
+          jq -s 'reduce .[] as $o ({}; reduce ($o | keys_unsorted[]) as $k (.; .[$k] = ((.[$k] // []) + $o[$k])))' \
+            .vale-raw.json .syntax-findings.json > .vale-raw.merged.json \
+            && mv .vale-raw.merged.json .vale-raw.json \
+            || true
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
             --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
             || echo '[]' > .vale-findings.json
