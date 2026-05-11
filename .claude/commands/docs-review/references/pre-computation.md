@@ -20,16 +20,22 @@ Pre-steps cluster by **what they read**. Bundle by reading pattern, not by topic
 
 | Bundle | Script | Artifact | Reads |
 |---|---|---|---|
-| Existing — URL fetch | `extract-urls-and-fetch.py` | `.fetched-urls.json` | PR diff + external URL fetches |
-| Existing — Editorial balance | `editorial-balance-detect.py` | `.editorial-balance.json` | `content/blog/**/*.md` body |
-| Existing — Vale lint | `vale-findings-filter.py` | `.vale-findings.json` | All changed `*.md` |
-| Existing — Cross-sibling discovery | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
-| Existing — Frontmatter validation (Ship H) | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter |
-| Existing — Hugo build (Ship K, S39) | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
-| Queued — Markdown body scan | `markdown-body-scan.py` | `.markdown-mechanics.json` | PR-changed `*.md` body (heading case, structure, list discipline, placeholder/TODO scan) |
-| Queued — Pulumi-internal lookups | `pulumi-lookups.py` | `.pulumi-lookups.json` | Batched `gh api` against `pulumi/*` repos for versions, archive status |
+| URL fetch | `extract-urls-and-fetch.py` | `.fetched-urls.json` | PR diff + external URL fetches |
+| Editorial balance (Tier 1) | `editorial-balance-detect.py` | `.editorial-balance.json` | `content/blog/**/*.md` body |
+| Vale lint | `vale-findings-filter.py` | `.vale-findings.json` | All changed `*.md` |
+| Cross-sibling discovery (Ship F/G) | `cross-sibling-discover.py` | `.cross-sibling-discovery.json` | `content/docs/**/*.md` directory tree |
+| Frontmatter validation (Ship H) | `frontmatter-validate.py` | `.frontmatter-validation.json` | All `content/**/*.md` frontmatter + redirect tables |
+| Hugo build (Ship K, S39) | `hugo-build-validate.py` | `.hugo-build.json` | `hugo --renderToMemory` at HEAD + `hugo list all` at HEAD and BASE |
 
 The originally-queued `docs-reference-graph` bundle is subsumed by Ship K: Hugo's render emits broken-link / broken-shortcode / missing-asset warnings as part of the build, and the sitemap-diff covers added/removed-page detection. Resurrect a separate reference-graph script only if a specific bug class slips through Hugo's checks.
+
+**Next candidates** (priority order, no committed timeline — see `s39-runs/notes/script-candidates.md` in the rebenchmark scratch dir):
+
+1. `markdown-link-validate.py` — flags dangling plain markdown-style internal links (`[x](/docs/...)`) that Hugo silently accepts; closes the one residual gap Ship K's build floor doesn't cover.
+1. `image-validate.py` — file size, format-vs-extension mismatch, 1px-gray-border check, placeholder `meta_image` SHA detection, generic alt-text strings.
+1. Editorial-balance Tier 2 extension — compute entity-mention counts + recommendation-steering counts deterministically (the patterns are already enumerated as regex in the blog criteria).
+
+These were tracked as "Queued" bundles (`markdown-body-scan.py`, `pulumi-lookups.py`) in earlier sessions; S39's audit reprioritized — `markdown-link-validate.py` is the higher-value next step than a general markdown-mechanics scan.
 
 Each pre-step is independent. Each writes a self-contained artifact. The reviewer agent reads what's relevant to its current task.
 

@@ -21,15 +21,17 @@ Applied to every changed file in every review, in addition to the file's domain 
 
 ### Links
 
-- **Internal links resolve.** For every added or changed internal link, confirm the target file exists in the PR snapshot (use `gh pr view --json files` + `gh api repos/<owner>/<repo>/contents/<path>` for files not in the diff). Anchor links (`#section`) must point at an existing heading on the target page.
+- **Internal links resolve.** The Hugo build pre-step (`.hugo-build.json`, see `docs-review:references:fact-check` §Hugo build artifact) already renders the site and reports broken `{{< ref >}}` shortcodes, missing assets, and unresolvable targets under `link_integrity` — read that first. For links it doesn't cover (plain markdown-style `[x](/docs/...)` links, which Hugo silently accepts; targets outside the diff), confirm the target file exists in the PR snapshot (`gh pr view --json files` + `gh api repos/<owner>/<repo>/contents/<path>`). Anchor links (`#section`) must point at an existing heading on the target page.
 - **Canonical-path style.** Internal links in `content/docs/` and `content/product/` use the full canonical path (e.g., `/docs/iac/concepts/stacks/`). Flag parent-relative references (`../stacks/`) — they break when pages move.
 - **External links resolve** at HEAD time (200 OK or a 3xx that lands somewhere live). Don't chase deep link-health across the whole site; only verify the ones the PR adds or modifies.
 - **Link text is descriptive.** Flag `[here]`, `[click here]`, `[this link]`, or bare URLs used as link text. This is a `STYLE-GUIDE.md` rule, not a heuristic.
 
 ### Frontmatter
 
-- Required fields per layout (`title`, `description`/`meta_desc`, `date` for time-sensitive content). Validate as YAML; unmatched quotes and inconsistent indentation break the whole site build, not just the page.
-- **`aliases` on move/rename.** When `gh pr view --json files` shows a file under its new path and the diff shows no content change to the old path, the moved file MUST have every prior URL listed in `aliases:`. Missing aliases are a ranking-destroying SEO failure -- flag as 🚨 every time, with the exact frontmatter addition as a suggestion block.
+The frontmatter pre-step (`.frontmatter-validation.json`, Ship H — see `docs-review:references:fact-check`) already walks every changed file's frontmatter plus the redirect tables and reports missing/mistyped required fields, menu-parent breakage, and alias/URL collisions. Read it first; don't recompute these inline.
+
+- Required fields per layout (`title`, `description`/`meta_desc`, `date` for time-sensitive content). Validate as YAML; unmatched quotes and inconsistent indentation break the whole site build, not just the page — and the Hugo build pre-step (`.hugo-build.json`) surfaces those as build errors.
+- **`aliases` on move/rename.** When a file appears under a new path with no content change to the old path, the moved file MUST have every prior URL listed in `aliases:` (the pre-step's `alias_collisions` / `url_collisions` records catch the divergence; `gh pr view --json files` is the manual cross-check). Missing aliases are a ranking-destroying SEO failure -- flag as 🚨 every time, with the exact frontmatter addition as a suggestion block.
 - **S3 redirects for non-Hugo files.** Deleted files outside Hugo's content management need entries in `scripts/redirects/*.txt` (format `source-path|destination-url`). See `AGENTS.md` §Moving and Deleting Files.
 
 ### Shortcode pairing

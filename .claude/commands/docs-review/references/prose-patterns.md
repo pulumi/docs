@@ -51,7 +51,7 @@ Paragraphs longer than 6 sentences or 8 visual lines. Often a sign the content s
 
 ### AI-drafting tells
 
-A handful of specific AI-drafting tells are caught by Vale rules under `styles/Pulumi/`: `SetPieceTransitions` (stock opener phrases), `EmDashDensity` (paragraph-level em-dash overuse), `ListicleH2Headings` (numbered listicle structure at H2), `HedgeThenPivot` (`While X, Y is also worth ...` constructions). Findings render as `⚠️ Low-confidence` style nits per `docs-review:references:output-format` §Style nits — the model does not aggregate or render a separate "AI-drafting" section.
+A handful of specific AI-drafting tells are caught by Vale rules under `styles/Pulumi/`: `SetPieceTransitions` (stock opener phrases), `EmDashDensity` (paragraph-level em-dash overuse), `ListicleH2Headings` (numbered listicle structure at H2), `HedgeThenPivot` (`While X, Y is also worth ...` constructions). Findings render as `⚠️ Low-confidence` style nits per `docs-review:references:output-format` §Style findings — the model does not aggregate or render a separate "AI-drafting" section.
 
 These are heuristics, not classifiers. A single hit is hedged copy ("often appears in AI-drafted prose; consider rewriting"), surfaced for the maintainer to weigh. False positives are expected and easily ignored.
 
@@ -67,4 +67,4 @@ Every finding names the *phrase* and the *pattern*: "nested clauses: 3 subordina
 - **Stylistic preference between equivalents.** "You could say X instead of Y" where both are correct and idiomatic is not a finding. Only flag when a pattern above matches.
 - **Quoted material.** Don't apply these patterns to text inside `>` blockquotes, error messages, fixture data, or API responses being illustrated.
 - **Code identifiers and CLI output.** Variable names, function names, command output, and log lines aren't prose.
-- **Anything Vale catches.** Passive voice, filler phrases, empty intensifiers, difficulty qualifiers, hedging, buzzwords, empty transitions, em-dash density, repetitive openers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style nits. Don't double-flag.
+- **Anything Vale catches.** Passive voice, filler phrases, empty intensifiers, difficulty qualifiers, hedging, buzzwords, empty transitions, em-dash density, repetitive openers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.

@@ -18,7 +18,7 @@ This is the **CI entry point** for the docs review pipeline.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
 6. **No internal-source MCP servers.** Notion and Slack MCP tools are not whitelisted in CI; review output is public. Live code execution beyond `gh` and file reads is unavailable.
 7. **Bash patterns the runner sandbox rejects.** Three friction patterns the harness blocks regardless of the allow-list — write commands that avoid them:
-   - **Reading or writing under `/tmp/`.** The filesystem-path policy restricts `cat`, `grep`, and output redirection to the runner's working directory. Use the `Read` tool (not Bash `cat`) for any `/tmp/...` path; never redirect output to `/tmp/...`. Workflow-managed scratch files (`.fetched-urls.json`, `.editorial-balance.json`, `.vale-findings.json`) live in the workspace root and are Bash-accessible.
+   - **Reading or writing under `/tmp/`.** The filesystem-path policy restricts `cat`, `grep`, and output redirection to the runner's working directory. Use the `Read` tool (not Bash `cat`) for any `/tmp/...` path; never redirect output to `/tmp/...`. Workflow-managed pre-step artifacts (`.fetched-urls.json`, `.editorial-balance.json`, `.vale-findings.json`, `.cross-sibling-discovery.json`, `.frontmatter-validation.json`, `.hugo-build.json` — see `docs-review:references:pre-computation`) live in the workspace root and are Bash-accessible.
    - **Shell control flow in Bash (`for`, `while`, `case`, `if`).** The multi-op decomposer rejects loops and conditionals even when each constituent command is allow-listed. For iteration over a list, use `python3 -c "..."` (allow-listed) or sequential single-op `gh` invocations.
    - **Brace expansion (`{a,b,c}`) and subshell grouping (`(cmd1; cmd2)`).** Both decompose unfavorably; expand the list manually or move the logic to a `python3 -c "..."` script.
 
@@ -52,7 +52,7 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 
-If `.vale-findings.json` exists in the workspace, append each entry to ⚠️ Low-confidence as `[style] <category> — <message>`, citing the line. Use the `category` field; never surface the `rule` field. Per-file roll-up summary (>5 nits) and the full render contract live in `docs-review:references:output-format`. The workflow has already filtered to PR-introduced lines and capped the count.
+If `.vale-findings.json` exists in the workspace, append each entry to ⚠️ Low-confidence per the Style-findings render contract in `docs-review:references:output-format` (bullet form, `#### Style findings` H4, the inline-vs-collapse render-mode rule, and the per-file roll-up summary for files with >5 style findings). Use the `category` field; never surface the `rule` field. The workflow has already filtered to PR-introduced lines and capped the count.
 
 ### 3. Build the output
 

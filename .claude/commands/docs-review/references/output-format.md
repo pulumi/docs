@@ -30,7 +30,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 - **Frontmatter sweep:** ran on <locations> (or "not run (no frontmatter in diff)")
 - **Temporal-trigger sweep:** ran (N matches, X verified) (or "not run (no trigger words)")
 - **Code execution:** ran <programs> (or "not run (no `static/programs/` change)")
-- **Code-examples checks:** ran (2 specialists: structural, existence); N findings (or "not run (no fenced code blocks in content files)")
+- **Code-examples checks:** ran (3 specialists: structural, existence, body-code-coverage); N findings (or "not run (no fenced code blocks in content files)")
 - **Editorial-balance pass:** ran (N H2 sections, K flags fired) / "not run (not under content/blog/)" / "ran (single-subject, N/A)"
 
 </details>
@@ -131,7 +131,7 @@ A flat list of investigation moves the model considered, rendered as a collapsed
 - **Frontmatter sweep** — "ran on \<locations\>" or "not run (no frontmatter in diff)."
 - **Temporal-trigger sweep** — "ran (N matches, X verified)" or "not run (no trigger words)."
 - **Code execution** — "ran \<programs\>" or "not run (no `static/programs/` change)."
-- **Code-examples checks** — "ran (2 specialists: structural, existence); N findings" or "not run (no fenced code blocks in content files)." `static/programs/`-only diffs are `not run` -- CI test harness gates parse + imports.
+- **Code-examples checks** — "ran (3 specialists: structural, existence, body-code-coverage); N findings" or "not run (no fenced code blocks in content files)." On `static/programs/`-only diffs, only `body-code-coverage` runs (the CI test harness gates parse + imports, so the per-block `structural`/`existence` dispatch is exempt; the body-level coverage check still runs because a program-only diff can rebalance a referenced page's language inventory) — render that as "ran (1 specialist: body-code-coverage); N findings."
 - **Editorial-balance pass** — "ran (N H2 sections, K flags fired)" / "not run (not under content/blog/)" / "ran (single-subject, N/A)."
 
 Each line is one logical pass, not one tool call. The verification trail is the *hard contract* for items that produced output; the investigation log is the *soft contract* for items that didn't. **Mandatory section** — render on every review.
@@ -265,9 +265,9 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
 - **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
-  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category. Examples:
-    - `- **line 42:** _substitution_ — Use 'select' instead of 'click'.`
-    - `- **line 87:** _passive voice_ — Use active voice instead of passive voice ('is created').`
+  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style findings` block. Examples:
+    - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
+    - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
 
     **Always group style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style findings at all.
 
@@ -343,7 +343,7 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 4. **No nanny feedback on colloquialisms.** Words like "overkill," "kill," "blow away," "destroy" are fine in technical context. Do not flag.
 5. **No `@claude` trailer on every comment.** The mention prompt at the bottom of the 1/M comment is enough; do not add it to every section.
 6. **No "informational only" findings.** If a finding is not actionable, it does not belong in the output.
-7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, ordered-list `1.` numbering, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`.) Vale findings from `.vale-findings.json` ARE in scope -- render them under ⚠️ Low-confidence (see Style nits below).
+7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`. Ordered-list `1.`-numbering style is *not* lint-caught either — `markdownlint`'s MD029 uses `one_or_ordered` and `.md` is in `.prettierignore` — so it stays in scope per `docs-review:references:shared-criteria` §Ordered-list numbering.) Vale findings from `.vale-findings.json` ARE in scope -- render them under ⚠️ Low-confidence (see Style findings below).
 8. **No pre-existing findings from files the PR doesn't touch.** Pre-existing extraction is scoped to the PR's changed files only.
 9. **No pre-existing findings that would require the author to rewrite rather than fix.** "This whole section is poorly structured" belongs in a separate issue, not in this review.
 10. **No restating outstanding findings on re-review.** If a finding is still in 🚨 Outstanding from the previous run, the author can see it; do not repeat it in the run history.

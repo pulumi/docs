@@ -81,7 +81,7 @@ Apply `docs-review:references:code-examples`.
 
 ### Priority 4 — Product accuracy
 
-Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style nits). The reviewer's job here is the things Vale can't:
+Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style findings). The reviewer's job here is the things Vale can't:
 
 - **Feature names.** Capitalization and punctuation must match how the product refers to itself in docs. If a blog introduces a feature, the feature name should match the canonical doc page's title.
 - **"Generally available," not "generally released."** Release terminology beyond what Vale's substitution list covers.
@@ -134,7 +134,7 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 - **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo, placeholder, and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
-- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style nits. Don't double-flag.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
 
 ## Publishing blockers
 

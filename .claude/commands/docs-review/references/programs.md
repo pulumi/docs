@@ -11,10 +11,6 @@ Applied to changes touching `static/programs/`. These are real, testable Pulumi 
 
 ---
 
-## Scope
-
-- Whole-program read; pre-existing extraction always on (see above).
-
 ## Criteria
 
 The following reference files apply alongside the program-specific checks below. Consult each as content in the diff triggers a relevant rule:
@@ -48,7 +44,7 @@ Render in 💡 per `docs-review:references:output-format`. Scope: broken/unused 
 
 ## Compilability check
 
-Program tests run in the main `make test` job; cite that job's result if available. To run a single program (when not in `scripts/programs/ignore.txt`):
+Program tests (parse + compile + import existence on every variant) run in the main `make test` job — in CI, treat that as the compilability floor; don't try to run it yourself (`make` targets and the test harness aren't on the CI allow-list). Interactive runs only: to run a single program when not in `scripts/programs/ignore.txt`:
 
 ```bash
 ONLY_TEST="program-name" ./scripts/programs/test.sh
