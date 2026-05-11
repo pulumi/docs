@@ -20,28 +20,30 @@ describe("www.pulumi.com", () => {
     describe("home page", () => {
 
         beforeEach(() => {
+            // Force a desktop viewport so the new nav's desktop affordances render
+            // (the nav-desktop breakpoint is 1200px).
+            cy.viewport(1280, 800);
             cy.visit("/");
         });
 
         it("loads and applies CSS", () => {
             // Checking the computed background-color value validates that the CSS bundle
             // was properly loaded and applied.
-            cy.get(".header-container")
+            cy.get("header.sticky")
                 .invoke("css", "background-color")
                 .should("equal", "rgb(255, 255, 255)");
         });
 
         it("loads and applies JavaScript", () => {
-            // Checking the carousel validates that the JS bundle was loaded and applied
-            // (excluding Stencil components, which are bundled separately).
-            cy.get(".header-container")
-                .should("not.have.class", "is-pinned");
-
-            cy.wait(6000)
-            cy.scrollTo(0, 250);
-
-            cy.get(".header-container")
-                .should("have.class", "is-pinned");
+            // Clicking a nav trigger button toggles aria-expanded via the header-nav
+            // bundle's click handler — proves that bundle was loaded and ran.
+            // force: true bypasses Cypress's pointer-events actionability check, which
+            // can flake in CI when the overlay's data-attribute Tailwind variant hasn't
+            // applied yet. The click handler is still exercised end-to-end.
+            cy.get("[data-nav-trigger-button]").first()
+                .should("have.attr", "aria-expanded", "false")
+                .click({ force: true })
+                .should("have.attr", "aria-expanded", "true");
         });
     });
 

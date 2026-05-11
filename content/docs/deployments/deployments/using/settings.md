@@ -53,9 +53,9 @@ When using Pulumi Deployments, you have options for where your workflows run:
 - **Pulumi Hosted Pool**: Managed by Pulumi and available to all Pulumi Cloud customers
 - **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/using-pulumi/crossguard/)
 
-If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](../../customer-managed-agents/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
+If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/deployments/runs/customer-managed-agents/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
 
-For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](../../customer-managed-agents).
+For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/deployments/runs/customer-managed-agents/).
 
 ### Role assignment
 
@@ -110,27 +110,11 @@ By default, when multiple deployments are pushed, they will be executed sequenti
 
 ## Custom Executor Images
 
-By default, the deployment is executed using the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi) image.
-The pulumi/pulumi image is a unix-based image which includes the pulumi CLI in its `$PATH` and the [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported SDK runtime(s) for your Pulumi program.
-
-However, there may be scenarios where you might want to customize the image used for the execution, e.g. if you want to use a different version of python or need to include additional dependencies.
-
-This is possible by specifying a custom executor image for your deployment. Using the custom executor image field, you can pin to a specific version of the pulumi/pulumi image,
-or point to a completely custom image hosted in a public or private container registry.
+By default, deployments run inside the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image, which includes the `pulumi` CLI and [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported language runtimes. You can override this from the **Custom Executor Image** field in your stack's deployment settings, either to pin a specific Pulumi CLI version or to use your own image with additional tools.
 
 ![Pulumi UI - Custom Executor](../../ui-custom-executor.png)
 
-Image requirements:
-
-- It must be a unix-based image which includes `curl`.
-- It must include the `pulumi` CLI in its `$PATH`.
-- It must include the required SDK runtime(s) for your Pulumi program.
-
-{{% notes "info" %}}
-Using a custom image may result in slower execution due to time spent pulling the image.
-
-Additionally, we only support static credentials in custom executor images.
-{{% /notes %}}
+For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/deployments/runs/images/).
 
 ## Open ID Connect (OIDC)
 
@@ -147,7 +131,7 @@ For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/de
 When using Pulumi-managed agents, you can speed up deployments using dependency caching.
 
 {{% notes type="info" %}}
-If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
+If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/runs/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
 {{% /notes %}}
 
 The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to download those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.

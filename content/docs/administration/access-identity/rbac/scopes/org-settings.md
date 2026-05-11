@@ -121,7 +121,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | `oidc_issuers:regenerate_thumbprints` | Regenerate security thumbprints for an OIDC issuer. This is used to maintain secure authentication.<br><br>**Granted by default roles**: `Admin` |
 | `oidc_issuers:update` | Modify OIDC issuer settings. This allows updating identity provider details and authentication parameters.<br><br>**Granted by default roles**: `Admin` |
 | `auth_policies:read` | View authentication policy configurations. This includes access to OIDC, SAML, and other identity provider settings.<br><br>**Granted by default roles**: `Admin` |
-| `auth_policies:update` | Modify authentication policies and identity provider settings. This allows updating security configurations.<br><br>**Granted by default roles**: `Admin` |
+| `auth_policies:update` | Modify authentication policies and identity provider settings. Sufficient on its own to edit OIDC auth policies, regardless of the token types they reference.<br><br>**Granted by default roles**: `Admin` |
 
 ## Organization
 
