@@ -19,19 +19,29 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 9 (v8→v9 adds `trail-canonical-verdict-word`: every 🔍
-  Verification trail line's verdict must be EXACTLY one of the six canonical
-  words — `verified` / `matches` / `not-a-claim` / `unverifiable` /
-  `contradicted` / `mismatch` — so a freelanced token (`source-mismatch`,
-  `author-authored`, `source-title-match`) can't slip past the
-  `verdict_word`-keyed faithfulness / per-verdict-emoji checks. Surgically
-  fixable: the right word is derived from the rendered glyph. v7→v8 added the
-  `.verified-claims.json` artifact gate: `verified-claims-trail-faithful` +
-  `pass-3-evidence-faithful` rules, `pass-2-fetch-faithfulness` strengthened
-  against the artifact, the trail records keyed on the per-verdict word —
-  ✅ `verified` / 🤝 `matches` / ➖ `not-a-claim` / 🤷 `unverifiable` /
-  ❌ `contradicted` / ⚔️ `mismatch` — with `trail-bucket-consistency` re-keyed
-  accordingly.)
+Schema version: 10 (v9→v10 adds `no-todo-tokens`: a `<TODO: …>` (or bare
+  `<TODO>`) placeholder token must not survive to the published body. The
+  workflow's `compose-review.py` pre-step seeds the review body with `<TODO>`
+  markers for the parts that are the reviewer's to fill (summary paragraph,
+  confidence levels, fix prose, cross-sibling read count, review-history
+  summary, Tier-2 editorial balance); the reviewer must replace every one
+  before posting. NOT surgically fixable — the fixer can't synthesize a
+  summary — so a survivor soft-floors loudly. `validate-pinned.py check`
+  takes a `--skip-rule <id>` flag (repeatable) so the composer's self-check
+  on its own still-`<TODO>`-laden draft can suppress just this rule; the
+  publish path (`pinned-comment.sh upsert-validated`) does NOT pass it.
+  v8→v9 added `trail-canonical-verdict-word`: every 🔍 Verification trail
+  line's verdict must be EXACTLY one of the six canonical words — `verified` /
+  `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch` —
+  so a freelanced token (`source-mismatch`, `author-authored`,
+  `source-title-match`) can't slip past the `verdict_word`-keyed faithfulness
+  / per-verdict-emoji checks. Surgically fixable: the right word is derived
+  from the rendered glyph. v7→v8 added the `.verified-claims.json` artifact
+  gate: `verified-claims-trail-faithful` + `pass-3-evidence-faithful` rules,
+  `pass-2-fetch-faithfulness` strengthened against the artifact, the trail
+  records keyed on the per-verdict word — ✅ `verified` / 🤝 `matches` /
+  ➖ `not-a-claim` / 🤷 `unverifiable` / ❌ `contradicted` / ⚔️ `mismatch` —
+  with `trail-bucket-consistency` re-keyed accordingly.)
 """
 
 from __future__ import annotations
@@ -45,7 +55,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 9
+SCHEMA_VERSION = 10
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -975,7 +985,11 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
     evidence_re = re.compile(r"WebSearch|search ran|searched|query", re.IGNORECASE)
     evidence_count = 0
     for raw in ctx.body_lines[start:end]:
-        if "⚠️" in raw and "unverifiable" in raw.lower() and evidence_re.search(raw):
+        # Schema v8: the per-verdict glyph for `unverifiable` is 🤷; the legacy
+        # ⚠️ form is still accepted (the `trail-per-verdict-emoji` rule only
+        # nudges it). Match either so this rule doesn't contradict the
+        # per-verdict-emoji contract.
+        if ("🤷" in raw or "⚠️" in raw) and "unverifiable" in raw.lower() and evidence_re.search(raw):
             evidence_count += 1
     if evidence_count >= u_pass3:
         return []
@@ -1459,8 +1473,20 @@ def check_editorial_balance_counts(ctx: Context) -> list[Violation]:
 
     Computed from the PR diff's blog markdown. Compares model-rendered numbers
     against re-computation. Only runs on blog PRs with the section present.
+
+    When the workflow's `editorial-balance-detect.py` pre-step ran (i.e.
+    `ctx.editorial_balance is not None`), the artifact is the deterministic
+    source of truth and `editorial-balance-counts-faithful` is the authority —
+    skip this re-computation (the two scripts count section length differently:
+    `editorial-balance-detect.py` strips frontmatter and counts non-blank body
+    lines per section, while the chunk-split recompute below counts every line
+    in the post-`## ` chunk; comparing them was a pre-artifact safety net that
+    now just produces false positives). This rule still fires on a local
+    invocation with no artifact present.
     """
     if not ctx.is_blog:
+        return []
+    if ctx.editorial_balance is not None:
         return []
     span = find_section(ctx.body, "📊 Editorial balance")
     if span is None:
@@ -1863,6 +1889,45 @@ def check_shortcode_existence(ctx: Context) -> list[Violation]:
     return violations
 
 
+# `<TODO: …>` placeholders the composer (`compose-review.py`) seeds into the
+# draft for the reviewer to fill. Matches `<TODO:` (with or without a colon) so
+# the bare `<TODO>` form is caught too.
+_TODO_TOKEN_RE = re.compile(r"<TODO\b[^>]*>")
+
+
+def check_no_todo_tokens(ctx: Context) -> list[Violation]:
+    """No `<TODO: …>` (or bare `<TODO>`) placeholder survives to the published body.
+
+    `compose-review.py` seeds the review draft with `<TODO>` markers for the
+    parts that are the reviewer's to fill (summary paragraph, confidence
+    levels, fix prose, cross-sibling read count, review-history summary,
+    Tier-2 editorial balance). The reviewer must replace every one before
+    posting. Not surgically fixable — the fixer can't write a summary — so a
+    survivor soft-floors loudly. The composer's own self-check passes
+    `--skip-rule no-todo-tokens` because its draft is `<TODO>`-laden by design;
+    the publish path does not skip it.
+    """
+    violations: list[Violation] = []
+    for i, line in enumerate(ctx.body_lines, start=1):
+        m = _TODO_TOKEN_RE.search(line)
+        if not m:
+            continue
+        snippet = line.strip()
+        if len(snippet) > 120:
+            snippet = snippet[:117] + "..."
+        violations.append(Violation(
+            rule_id="no-todo-tokens",
+            line_ref=f"<body line {i}>",
+            expected="no `<TODO: …>` placeholder tokens in the published body",
+            actual=f"line {i}: {snippet}",
+            hint="The composer left a placeholder for you to fill — replace every `<TODO: …>` "
+                 "(summary paragraph, review-confidence levels, fix prose / suggestion blocks, "
+                 "the cross-sibling read count, the review-history one-line summary, the Tier-2 "
+                 "editorial-balance counts) with the actual content before posting.",
+        ))
+    return violations
+
+
 # ---- Rule registry ---------------------------------------------------------
 
 RULES = [
@@ -2015,6 +2080,12 @@ RULES = [
         "desc": "Every {{< shortcode >}} resolves to a layout under layouts/shortcodes/.",
         "hint": "Fix the shortcode name or add the corresponding layout file.",
         "check": check_shortcode_existence,
+    },
+    {
+        "id": "no-todo-tokens",
+        "desc": "Schema v10: no `<TODO: …>` (or bare `<TODO>`) placeholder from compose-review.py's draft survives to the published body.",
+        "hint": "Replace every `<TODO: …>` (summary paragraph, confidence levels, fix prose, cross-sibling count, review-history summary, Tier-2 editorial balance) with actual content. The composer's self-check passes `--skip-rule no-todo-tokens`; the publish path does not.",
+        "check": check_no_todo_tokens,
     },
 ]
 
@@ -2191,9 +2262,12 @@ def repo_root() -> Path:
         return Path.cwd()
 
 
-def run_checks(ctx: Context) -> list[Violation]:
+def run_checks(ctx: Context, skip_rules: set[str] | None = None) -> list[Violation]:
+    skip_rules = skip_rules or set()
     out: list[Violation] = []
     for rule in RULES:
+        if rule["id"] in skip_rules:
+            continue
         try:
             out.extend(rule["check"](ctx))
         except Exception as e:  # don't let one rule's bug abort the validator
@@ -2282,7 +2356,13 @@ def cmd_check(args: argparse.Namespace) -> int:
         verified_claims=verified_claims,
     )
 
-    violations = run_checks(ctx)
+    skip_rules = set(args.skip_rule or [])
+    if skip_rules:
+        unknown = skip_rules - {r["id"] for r in RULES}
+        if unknown:
+            print(f"validate-pinned.py: warning: --skip-rule names unknown rule(s): {sorted(unknown)}",
+                  file=sys.stderr)
+    violations = run_checks(ctx, skip_rules=skip_rules)
 
     json_path = Path(args.output_json or DEFAULT_OUTPUT_JSON)
     md_path = Path(args.output_markdown or DEFAULT_OUTPUT_MARKDOWN)
@@ -2322,6 +2402,10 @@ def main() -> int:
     p_check.add_argument("--output-markdown", help=f"default {DEFAULT_OUTPUT_MARKDOWN}")
     p_check.add_argument("--soft-floor", action="store_true",
                          help="Annotation labels as soft-floor (second-failure publish-anyway).")
+    p_check.add_argument("--skip-rule", action="append", default=[],
+                         help="Rule id to skip (repeatable). Used by compose-review.py's self-check "
+                              "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the publish "
+                              "path (pinned-comment.sh upsert-validated) does NOT pass this.")
     p_check.add_argument("--fetched-urls",
                          help="Path to `.fetched-urls.json` from the workflow pre-step. "
                               "Defaults to ./.fetched-urls.json. Pass-through to "

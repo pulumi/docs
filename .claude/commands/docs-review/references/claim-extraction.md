@@ -156,7 +156,7 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 > "StrongDM runs each scenario three times against an ephemeral deployment. Two of three runs must pass, and the overall pass rate has to clear 90%. A failing scenario surfaces the literal evaluator output, e.g. `SQL Injection Detection failed`."
 
 - Record (type `attribution`): `text` = "StrongDM's holdout-evaluation pipeline runs each scenario three times against an ephemeral deployment, requires two of three runs to pass, and gates on a 90% overall pass rate." `source_hint` = "StrongDM" `confidence` = high. Line range = the whole paragraph.
-- Reasoning: every mechanic here is attributed to StrongDM — that's the checkable assertion. Verify against StrongDM's published material; if the specifics (3-run / 2-of-3 / 90% gate / verbatim failure string) aren't documented anywhere public, the attribution is unverifiable → 🚨. **If the same paragraph said "*our* pipeline runs each scenario three times…" it would NOT be a claim** (author's own design). The attribution is the whole difference.
+- Reasoning: every mechanic here is attributed to StrongDM — that's the checkable assertion. Verify against StrongDM's published material; if the specifics (3-run / 2-of-3 / 90% gate / verbatim failure string) aren't documented anywhere public, the attribution is unverifiable → ⚠️ (with an author-question line — see example 8; it still surfaces, just not as a 🚨). **If the same paragraph said "*our* pipeline runs each scenario three times…" it would NOT be a claim** (author's own design). The attribution is the whole difference.
 
 **2 — `p5.48xlarge` price**
 

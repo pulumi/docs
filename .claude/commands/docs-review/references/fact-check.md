@@ -23,8 +23,8 @@ The caller must provide:
 ### Outputs
 
 - **Tiered triage object** with four buckets:
-  - 🚨 Needs your eyes (contradicted + unverifiable)
-  - ⚠️ Low-confidence (verified with low confidence, or medium when `scrutiny=heightened`)
+  - 🚨 Needs your eyes (contradicted)
+  - ⚠️ Low-confidence (verified with low confidence, or medium when `scrutiny=heightened`; plus unverifiable claims, each with an author-question line)
   - 🤔 Intuition-check (claim *shape* is suspect even when evidence is absent -- see Intuition-check axis below)
   - ✅ Verified (collapsed under `<details>`)
 - **Author-question buffer** -- one line per unverifiable claim, file:line-anchored
@@ -111,14 +111,13 @@ When a new or changed file lives in a structurally-templated directory (≥3 par
 
 The model still calibrates phrasing and may demote to ⚠️ when context overrides (e.g., the PR is *intentionally* renaming an existing identifier and removing the old declaration in the same diff — rare; cite the diff line in the trail when applied). The structural decision is the artifact's; demotion requires explicit reasoning in the trail entry.
 
-**Pre-step artifact `.hugo-build.json`** (workflow pre-step `hugo-build-validate.py`). Hugo is the canonical authority for routing and build correctness — read this artifact for the build-correctness floor instead of trying to reason about whether the build would succeed. The pre-step renders without `make ensure` (asset prep + data fetch are intentionally skipped), so it strips a known set of CI-environment-only lines before emitting and reports them under `suppressed_ci_noise` — you don't have to recognize or filter that noise yourself. The artifact carries:
+**Pre-step artifact `.hugo-build.json`** (workflow pre-step `hugo-build-validate.py`). Hugo is the canonical authority for routing and build correctness — read this artifact for the build-correctness floor instead of trying to reason about whether the build would succeed. The pre-step renders without `make ensure` (asset prep + data fetch are intentionally skipped), so it strips a known set of CI-environment-only lines before emitting — you never see them, and the count is in `stats.suppressed_ci_noise_count` for operator audit. The artifact carries:
 
 - `errors` — `hugo --renderToMemory` ERROR lines from the PR head, with CI-environment noise already removed. Anything left here is a build-breaking failure (broken `{{< ref >}}` shortcode, template render failure, content with malformed frontmatter that can't load). Surface each entry as 🚨 build-failure with the exact Hugo message in the trail. If an entry still reads as CI-environment-only rather than PR-introduced (a class the filter didn't anticipate — see "Known CI-environment-only error classes" below), demote it silently and note `suppressed: CI-env-only` in the trail with one line of reasoning.
-- `warnings` — Hugo WARN lines (CI-environment noise already removed). Most are informational (e.g., `WARN found no layout file for ...`). Triage: surface broken-asset / broken-link warnings as 🚨 — but `link_integrity` below already pre-computes that subset, so start there rather than re-scanning the full list — and surface informational warnings only when the PR introduces them.
-- `link_integrity` — subset of warnings/errors that match link/ref/asset patterns (broken refs, missing assets, unresolvable shortcode targets). Surface as 🚨 unless the target is a page the same PR is adding (PR-internal — false-positive scenario).
+- `link_integrity` — the actionable subset of Hugo WARN/ERROR lines: broken refs, missing assets, unresolvable shortcode targets. This is your starting point for build-level findings — surface each entry as 🚨 unless the target is a page the same PR is adding (PR-internal — false-positive scenario). The full Hugo WARN list (mostly informational, e.g. `WARN found no layout file for ...`) is **not** in this artifact — it's operator-side only (count in `stats.warnings_count`; full lines in the `--verbose` operator artifact); work from `link_integrity` and `errors`.
 - `sitemap_diff.added` / `sitemap_diff.removed` — URLs gained/lost in the rendered sitemap between the PR base and head. Removed URLs that aren't replaced by an alias on a remaining page are orphan candidates (existing inbound links and external SEO break). Surface as 🚨 orphaned-target unless the move-doc alias-injection pattern is visible in the diff.
 - `head_exit_code` / `head_exit_nonzero_is_ci_noise` — `hugo`'s exit code, plus a flag. A non-zero exit is a build break the agent must surface even if `errors` is empty — *unless* `head_exit_nonzero_is_ci_noise` is `true`, which means the only thing that failed was the stripped CI-environment noise (the `/404` page fingerprints a stylesheet PostCSS never built); treat that as benign.
-- `suppressed_ci_noise` — the lines the pre-step stripped, for auditing the filter. Not review material; never surface these.
+- `stats` — counts only: `errors_count`, `warnings_count` (the full WARN list is operator-only), `link_integrity_count`, `suppressed_ci_noise_count`, page counts, sitemap-diff counts. The non-zero `suppressed_ci_noise_count` / `warnings_count` are operator-audit signals, not review material.
 
 **Known CI-environment-only error classes** (the pre-step already filters these; listed so you can recognize a near-miss): PostCSS / Hugo-Pipes asset-pipeline failures (`error calling Fingerprint`, `... can not be transformed to a resource`, anything mentioning `PostCSS` or `resources.Fingerprint`/`resources.PostCSS`), and `data/openapi-spec.json not found` (the OpenAPI data file is fetched by `make ensure`, not committed). See `hugo-build-validate.py` §"What this is NOT".
 
@@ -237,7 +236,7 @@ After verification, render each claim in the bucket dictated by its verification
 | Verification result | `intuition_check=true` renders in | Evidence-line note |
 |---|---|---|
 | `contradicted` (any confidence) | 🚨 Needs your eyes | No 🤔 note needed; the contradiction already demands a fix |
-| `unverifiable` | 🚨 Needs your eyes | "Shape also suggests fabrication; cite a source" |
+| `unverifiable` | ⚠️ Low-confidence | "Shape also suggests fabrication; cite a source" (plus the author-question line) |
 | `verified` with `confidence: low` | ⚠️ Low-confidence verified | "Shape was suspect; verifier found a low-confidence match" |
 | `verified` with `confidence: medium` or `high` | ✅ Verified | No 🤔 note; evidence resolves the shape concern |
 | **verification timed out / inconclusive** | 🤔 Intuition-check | "Verifier couldn't resolve; author should cite a source" |
@@ -317,7 +316,7 @@ Store the deduped claim list for the verification phase. No interim user output.
 
 **This is the claim floor *and* the verdict source on the normal path** — `verdicts[]` carries one entry per candidate claim (it's a superset of `.candidate-claims.json`). Don't also open `.candidate-claims.json` when `.verified-claims.json` is present with a non-empty `verdicts[]` (see §Pre-step artifact `.candidate-claims.json`). **Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
 
-1. **Bucket promotion** — `contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → 🚨 Outstanding (always-🚨 carve-out — see `docs-review:references:output-format` §Bucket rules and §Tier rules); a `verified` claim with low confidence (or medium under heightened scrutiny) → ⚠️ Low-confidence verified; `verified`/`matches`/`not-a-claim` otherwise → trail-only (no bucket). Trail verdict drives bucket placement; don't relitigate `contradicted`/`mismatch`/`unverifiable` via the two-question test.
+1. **Bucket promotion** — `contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → ⚠️ Low-confidence (file an author-question buffer line — see §Author-question buffer and `docs-review:references:output-format` §Bucket rules); a `verified` claim with low confidence (or medium under heightened scrutiny) → ⚠️ Low-confidence verified; `verified`/`matches`/`not-a-claim` otherwise → trail-only (no bucket). Trail verdict drives bucket placement; don't relitigate `contradicted`/`mismatch`/`unverifiable` via the two-question test (`unverifiable` still bypasses the two-question test — it just lands in ⚠️, not 🚨).
 2. **Framing call** — on top of each verdict's `framing_note` (`strengthened`/`narrowed`/`shifted`): mirror it into the rendered bucket bullet.
 3. **Intuition check** — on top of each verdict's `intuition_flag`: promote to 🤔 only when the verifier flagged it AND its verdict came back inconclusive (see §Intuition-check axis).
 4. **Render the trail and the bucket findings** per `docs-review:references:output-format`. The investigation-log "External claim verification" line's routed-metadata segment maps `.verified-claims.json`'s `meta` directly: `routed: <meta.n_pass0> inline, <meta.n_pass1> Pass 1, <meta.n_pass2> Pass 2, <meta.n_pass3> Pass 3` — `n_pass0` is verify-claims.py's pass-0 lane (claims resolved deterministically with no model verifier dispatched, e.g. a `:latest` Docker tag demoted to `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check); those map to the `inline` counter. Add your in-review additions' routes (a claim you resolved without dispatching a verifier counts as `inline`). The per-lane `(verified V, contradicted C, unverifiable U)` parentheticals count the `pass2`- and `pass3`-routed verdicts by `verdict`; the leading `(N unverifiable, M contradicted)` parenthetical aggregates all verdicts.
@@ -551,13 +550,13 @@ Build a structured triage object.
 
 ### Tier rules
 
-Tier emoji conventions: 🚨 (Outstanding) and ⚠️ (Low-confidence verified) align with the canonical buckets in `docs-review:references:output-format`. ✅ Verified here is fact-check's own collapsed-details bucket — distinct from the canonical ✅ Resolved-since-last-review used elsewhere; do not conflate them. 🤔 Intuition-check has no canonical counterpart.
+Tier emoji conventions: 🚨 (Outstanding) and ⚠️ (Low-confidence) align with the canonical buckets in `docs-review:references:output-format`. ✅ Verified here is fact-check's own collapsed-details bucket — distinct from the canonical ✅ Resolved-since-last-review used elsewhere; do not conflate them. 🤔 Intuition-check has no canonical counterpart.
 
 | Tier | Contents |
 |---|---|
-| 🚨 Needs your eyes | All `contradicted` claims (any confidence) + all `unverifiable` claims |
+| 🚨 Needs your eyes | All `contradicted` claims (any confidence) |
 | 🤔 Intuition-check | Claims whose `intuition_check` flag was set AND whose verification came back inconclusive (timed out, could not reach a verdict). Cross-reference the shape concern in the evidence line. |
-| ⚠️ Low-confidence verified | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened). Prefix the evidence line with "verified weakly" to distinguish from generic low-confidence findings. |
+| ⚠️ Low-confidence | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened) — prefix the evidence line with "verified weakly" to distinguish from generic low-confidence findings; plus all `unverifiable` claims (the verifier couldn't confirm them) — each also gets an author-question line. |
 | ✅ Verified | Everything else, collapsed under `<details>` |
 
 When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.
@@ -571,6 +570,8 @@ Patterns that trigger redaction on sight:
 - Strings matching common token formats (`ghp_*`, `sk-*`, `AKIA*`, `pul-*`, `xoxb-*`, JWT-like `eyJ*`).
 - Hostnames ending in `.internal`, `.priv`, or any hostname paired with an obvious secret (`https://user:pass@...`).
 - Strings with ≥32 contiguous alphanumeric characters that don't match a known non-secret format (UUIDs are OK; opaque blobs are not).
+
+`compose-review.py` runs this same pattern set as a deterministic backstop over every verdict's `text` / `evidence` / `source` before rendering them into `.review-draft.md` — a structural fact ("this string matches a token format") is exactly the kind of thing a pre-step does. That's belt-and-suspenders; the verifier should still redact at the source, and the reviewer must still flag the underlying leak as a separate 🚨 finding per `docs-review:references:infra` §Secret handling (the composer redacts the *quote*, not the *finding*).
 
 ---
 

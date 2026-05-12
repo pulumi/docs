@@ -551,7 +551,7 @@ jobs:
           python3 .claude/commands/docs-review/scripts/hugo-build-validate.py \
             --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
             --out .hugo-build.json \
-            || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "warnings": [], "link_integrity": [], "suppressed_ci_noise": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
+            || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
       - name: Check repository write access
         if: steps.pr-context.outputs.skip_reason == ''
@@ -614,6 +614,49 @@ jobs:
         id: now
         run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
+      # Compose an ~80%-assembled review draft (.review-draft.md) from the
+      # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
+      # trail (verbatim from .verified-claims.json), bucket-count table,
+      # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
+      # findings block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
+      # out; <TODO> tokens mark the parts that are the reviewer's (summary,
+      # confidence levels, fix prose, cross-sibling read count). The composer
+      # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
+      # and, on a self-check failure, writes a visible `> [!CAUTION]` banner
+      # INTO .review-draft.md (never a silent-empty file) so the model falls
+      # back to manual assembly per ci.md §Fallback. safe_main() guarantees a
+      # valid fallback draft on any uncaught exception; the `||` stub below is
+      # reserved for can't-even-start failures and writes the same banner shape.
+      - name: Compose review draft → .review-draft.md
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: compose-review
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/compose-review.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
+            --out .review-draft.md \
+            --timestamp "${{ steps.now.outputs.value }}" \
+            --head-sha "${{ steps.pr-context.outputs.head_sha }}" \
+            --head-sha-short "${{ steps.pr-context.outputs.head_sha_short }}" \
+            --verified-claims .verified-claims.json \
+            --candidate-claims .candidate-claims.json \
+            --vale-findings .vale-findings.json \
+            --editorial-balance .editorial-balance.json \
+            --cross-sibling .cross-sibling-discovery.json \
+            --frontmatter .frontmatter-validation.json \
+            --hugo-build .hugo-build.json \
+            --fetched-urls .fetched-urls.json \
+          || printf '%s\n' \
+            '## Quality Review — Last updated ${{ steps.now.outputs.value }}' \
+            '' \
+            '> [!CAUTION]' \
+            '> The review composer (compose-review.py) failed to start. Do **not** post the lines below — assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly): read the pre-step artifacts (`.verified-claims.json`, `.vale-findings.json`, `.editorial-balance.json`, `.hugo-build.json`, `.frontmatter-validation.json`, `.cross-sibling-discovery.json`) and render per `docs-review:references:output-format`. This stub exists so the consumer sees the failure rather than a missing file.' \
+            '' \
+            '_(composer stub — see ci.md §Fallback)_' \
+            > .review-draft.md
+
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
@@ -651,25 +694,35 @@ jobs:
 
             ${{ steps.pr-context.outputs.files_list }}
 
-            ## Candidate claims (the claim floor)
+            ## The composed review draft (`.review-draft.md`) — read this first
 
-            `.candidate-claims.json` is the claim *floor* per `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json`: every entry must surface a verdict line in the 🔍 Verification trail (the validator's `candidate-claims-coverage` rule fails the review otherwise), and you **add** any claims the artifact missed. **On the normal path you do NOT read this file directly** — when `.verified-claims.json` exists with a non-empty `verdicts[]` (see below), that artifact's `verdicts[]` is a superset of the candidate-claims floor (one entry per candidate claim) and you work from it. Do NOT re-dispatch the four in-review claim-finder subagents when these artifacts are present — classify the pre-computed list into the four type-buckets instead (`fact-check.md` §Subagent extraction dispatch). The regex layer surfaces false positives (a `:latest` tag in a Dockerfile comment, a faithful description of the author's own design, git metadata) — verify-claims.py's pass-0 lane demotes the obvious ones; for any that reach the trail, record `- L… "<text>" → ➖ not-a-claim — <reason>`; demote, never silently drop. Read `.candidate-claims.json` directly only when `.verified-claims.json` is absent or its `verdicts[]` is empty (the whole verify-claims step crashed) — then it's the floor and you fall back to the in-review extraction + verification path.
+            The workflow ran `compose-review.py` and wrote `.review-draft.md` at the workspace root: an ~80%-assembled review body. **Read it with the `Read` tool before doing anything else.** It already contains, fully assembled and self-consistent:
+            - the `## Quality Review` header + timestamp;
+            - the Summary / Review-confidence-table *skeleton* (with `<TODO>` levels and an empty summary paragraph);
+            - the Investigation-log `<details>` block (all 8 bullets — every one deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder you overwrite);
+            - the bucket-count table (a *starting point* matching the stub-bullet counts);
+            - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️), evidence pointer, source;
+            - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
+            - the `#### Style findings` block (from `.vale-findings.json`, with the correct inline-vs-collapse render mode already chosen);
+            - the empty 💡 / ✅ forms;
+            - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
+            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
 
-            ## Verified claims (the verdict source + the claim floor on the normal path)
+            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
 
-            If `.verified-claims.json` exists with a non-empty `verdicts[]`, it is the verdict *source* AND the claim floor per `docs-review:references:fact-check` §Routed verification — the workflow's `verify-claims.py` pre-step resolved the cheap cases in a pass-0 lane (no model call) and routed-and-verified the rest (Pass 1 = `pulumi-internal` via `gh`/local reads, Pass 2 = a fetched URL from `.fetched-urls.json`, Pass 3 = web search); `verdicts[]` carries one entry per candidate claim. **Do NOT re-verify, and do NOT also open `.candidate-claims.json`.** For each verdict, render one 🔍 Verification trail line using its `verdict`, `evidence`, and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️). Use those six words **verbatim** after the emoji — never a descriptive variant (`source-mismatch`, `author-authored`, `source-title-match`, `verified weakly`); a non-canonical token trips the `trail-canonical-verdict-word` rule. Put any framing nuance (`strengthened`/`narrowed`/`shifted`) in the parenthetical, not in place of the verdict word. The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (artifact says `contradicted`/`mismatch`/`unverifiable`, trail hides it). Your remaining work: bucket promotion (`contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → 🚨 Outstanding per the always-🚨 carve-out; a low-confidence `verified` → ⚠️ Low-confidence verified — see `docs-review:references:output-format` §Bucket rules), the framing call on top of each verdict's `framing_note`, the intuition check on top of `intuition_flag`, and rendering. If a verdict carries an error (the verifier crashed on that claim) or the artifact is absent / carries a non-empty top-level `errors` array, fall back to the in-review verification path (`fact-check.md` §Routed verification fallback). `.fetched-urls.json` is the verify-step's Pass 2 input — you don't need to read it directly; do NOT WebFetch URLs already in it. Cross-sibling-consistency checks (`matches` / `mismatch`) still come from the in-review sibling-read fan-out (`docs-review:references:fact-check` §Cross-sibling consistency), not from `.verified-claims.json`.
+            **If `.review-draft.md` is absent, or its first lines are a `> [!CAUTION]` composer-failed banner, ignore the draft entirely** and assemble the review manually per `ci.md` §Fallback (read `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` / `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` directly and render per `docs-review:references:output-format` — `.candidate-claims.json` is the claim floor whose every entry must surface a verdict line in the trail). That is the pre-composer procedure; it's the safety net, not the normal path.
 
             ## Editorial balance (blog only)
 
-            If `.editorial-balance.json` exists, source the rendered Editorial balance section's Tier 1 fields from it: trigger (listicle / FAQ / null), section-depth stats (count, mean, median, std), and section-depth outliers (≥3× median). When `trigger=null`, render the empty form (`_Single-subject post; balance check N/A._`). When `trigger != null`, render the rich form with stats and outliers from the JSON. Tier 2 fields (vendor / entity mention counts, FAQ steering ratios) remain model-computed per `docs-review:references:blog` §Priority 2.5. Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain model-judged when surfacing threshold flags as ⚠️ findings.
+            The composer already rendered the §📊 Editorial-balance section's Tier 1 form into `.review-draft.md` (empty form when `.editorial-balance.json.trigger=null`, rich form with section-depth count/mean/median/std + outliers otherwise). Don't touch the Tier 1 stats — `editorial-balance-counts-faithful` enforces them against the JSON. Your job: fill the Tier 2 `<TODO>`s (vendor / entity mention counts, FAQ steering ratios) per `docs-review:references:blog` §Priority 2.5, and decide whether the Tier 1 outliers and any Tier 2 threshold trips warrant a ⚠️ bullet — Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain your judgment.
 
             ## Style findings
 
-            If `.vale-findings.json` exists and is non-empty, surface each entry under ⚠️ Low-confidence as `- **line N:** [style] _category_ — <message>` (bold the line number, italicize the category). Use the `category` field; never surface the `rule` field. **Group all style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence** (single sub-heading; appears once, after any regular low-confidence bullets). Immediately under the heading, render `<sub>Click each filename to expand.</sub>` whenever any file rolls up under `<details>` (skip the hint if every file renders inline). When a single file has more than 5 style findings, collapse them under `<details>` with `<summary><strong>filename</strong> (<strong>N</strong> issues: <strong>X</strong> kind1, <strong>Y</strong> kind2, …)</summary>` — bold every numeral and use the word "issues" (not "nits"). Full render contract: `docs-review:references:output-format`. Style findings are nags, not blockers — never put them in 🚨 Outstanding.
+            The composer already rendered the `#### Style findings` block from `.vale-findings.json` (correct inline-vs-collapse render mode, the `category` field never the `rule` field, per-file `<details>` roll-ups in collapse mode). Don't rebuild it. Style findings are nags, not blockers — never put them in 🚨 Outstanding. If you remove a false-positive style bullet, decrement the ⚠️ count-table cell.
 
             ## Posting
 
-            Use **`pinned-comment.sh upsert-validated`** (the relative-path form — the Bash allow-list rejects absolute `/home/runner/...` paths). The wrapper runs `validate-pinned.py` first; on a non-zero exit it writes a fix-me marker at `/tmp/validate-pinned.fix-me.md` listing the structural violations. Read that file, re-render the body addressing each violation, and call `upsert-validated` once more. If validation fails a second time, fall back to plain `upsert` with the unfixed body — the validator will have written a `::warning::` annotation that surfaces the residual to the maintainer. Cap the retry at one attempt; do not loop. See ci.md §4 for the full posting contract.
+            Edit `.review-draft.md` in place (or copy it to a temp file first), then post with **`bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert-validated --pr "$PR_NUMBER" --body-file .review-draft.md`** (the relative-path form — the Bash allow-list rejects absolute `/home/runner/...` paths). The wrapper runs `validate-pinned.py` (which now also enforces `no-todo-tokens` — **every `<TODO:` placeholder must be replaced** before posting) plus a Haiku surgical-fix pass; on a non-zero exit it writes a fix-me marker at `/tmp/validate-pinned.fix-me.md` listing the structural violations. Read that file, address each violation, and call `upsert-validated` once more. If validation fails a second time, fall back to `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --soft-floor --pr "$PR_NUMBER" --body-file .review-draft.md` with the unfixed body (the `--soft-floor` *flag* — NOT `VALIDATE_SOFT_FLOOR=1 bash …`, which the allow-list rejects) — that re-runs the validator with `--soft-floor`, emitting a `::warning::` annotation that surfaces the residual to the maintainer, then publishes. Cap the retry at one attempt; do not loop. See ci.md §4 for the full posting contract.
 
             Post-run labels (`review:claude-ran` add, `review:claude-stale` remove) are applied by a separate workflow step. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(python3 .claude/commands/docs-review/scripts/validate-pinned.py:*),Bash(python3 /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/validate-pinned.py:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'

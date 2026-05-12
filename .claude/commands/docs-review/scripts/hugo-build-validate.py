@@ -24,9 +24,11 @@ What this is NOT:
   render WILL emit a handful of CI-environment-only errors because the
   workflow doesn't run `make ensure` first (PostCSS/Hugo-Pipes fingerprint
   failure on `/404`; `data/openapi-spec.json not found`). Those are filtered
-  out here — see KNOWN_CI_NOISE_PATTERNS — and reported under
-  `suppressed_ci_noise` so the reviewer agent never sees them as findings
-  but the suppression is still auditable in the artifact.
+  out here — see KNOWN_CI_NOISE_PATTERNS — and counted (not surfaced) in
+  `stats.suppressed_ci_noise_count` so the reviewer agent never sees them as
+  findings; the stripped lines themselves are operator-audit data and ship
+  only in the `--verbose` artifact (likewise the full Hugo WARN list —
+  `link_integrity` is the actionable subset the reviewer works from).
 - A render-graph dump. Skipped for now; can be added later if a specific
   bug class requires it.
 - Authoritative for "changed pages" (URL-stability) detection across runs.
@@ -247,6 +249,13 @@ def main() -> int:
         action="store_true",
         help="Skip base hugo list (sitemap diff will be empty). For local dev/self-test.",
     )
+    ap.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Operator-audit mode: also include the full `warnings` list and the stripped "
+             "`suppressed_ci_noise` lines in the artifact. Default: only their counts in `stats` "
+             "(the reviewer works from `link_integrity` + `errors`).",
+    )
     args = ap.parse_args()
 
     workspace = Path.cwd()
@@ -319,9 +328,7 @@ def main() -> int:
         "head_exit_code": exit_code,
         "head_exit_nonzero_is_ci_noise": head_exit_nonzero_is_ci_noise,
         "errors": errors,
-        "warnings": warnings,
         "link_integrity": link_integrity,
-        "suppressed_ci_noise": suppressed_ci_noise,
         "sitemap_diff": sitemap_diff,
         "stats": {
             "errors_count": len(errors),
@@ -334,6 +341,12 @@ def main() -> int:
             "removed_pages_count": len(sitemap_diff["removed"]),
         },
     }
+    # Operator-audit-only: the full Hugo WARN list and the stripped CI-noise
+    # lines. Kept out of the default artifact (the reviewer works from
+    # `link_integrity` + `errors`); their counts are always in `stats`.
+    if args.verbose:
+        out["warnings"] = warnings
+        out["suppressed_ci_noise"] = suppressed_ci_noise
     out_path.write_text(json.dumps(out, indent=2))
     return 0
 
@@ -363,9 +376,7 @@ def safe_main() -> int:
                 "head_exit_code": -1,
                 "head_exit_nonzero_is_ci_noise": False,
                 "errors": [f"hugo-build-validate uncaught exception: {type(e).__name__}: {e}"],
-                "warnings": [],
                 "link_integrity": [],
-                "suppressed_ci_noise": [],
                 "sitemap_diff": {"added": [], "removed": [], "changed": []},
                 "stats": {
                     "errors_count": 1,

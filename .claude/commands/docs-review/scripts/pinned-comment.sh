@@ -5,7 +5,7 @@
 # Subcommands:
 #   find             --pr <N>                           List pinned comment IDs in marker order.
 #   fetch            --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
-#   upsert           --pr <N> --body-file <path>        Split body, edit existing comments in place, append new, prune tail.
+#   upsert           --pr <N> --body-file <path> [--soft-floor]   Split body, edit existing comments in place, append new, prune tail. With --soft-floor: re-run validate-pinned.py --soft-floor first (emits the `soft-floor`-labeled CI annotation surfacing residual violations to the maintainer), then publish regardless — the documented second-failure fallback per ci.md §4.
 #   upsert-validated --pr <N> --body-file <path>        Run validate-pinned.py first; on success, call upsert. On violation, exit non-zero and write a fix-me marker the model re-reads. Fresh-review path only.
 #   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
 #   clear            --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
@@ -217,6 +217,26 @@ cmd_upsert() {
     body_file="${BODY_FILE:?--body-file required}"
     [[ -r "$body_file" ]] || die "body file not readable: $body_file"
 
+    # Soft-floor fallback (the model's one validator retry already failed, per
+    # ci.md §4): re-run validate-pinned.py with --soft-floor so the CI
+    # annotation is labeled `soft-floor` (not `retry-1`) — surfacing the
+    # residual violations to the maintainer — then publish regardless of the
+    # validator's exit. (The env-var spelling `VALIDATE_SOFT_FLOOR=1 bash …`
+    # is kept working for callers that still use it, but it doesn't match the
+    # Bash allow-list pattern; the `--soft-floor` flag is the supported form.)
+    if (( SOFT_FLOOR )) || [[ -n "${VALIDATE_SOFT_FLOOR:-}" ]]; then
+        local script_dir validator
+        script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+        validator="$script_dir/validate-pinned.py"
+        if [[ -f "$validator" ]]; then
+            python3 "$validator" check \
+                --body-file "$body_file" \
+                --pr "$pr" \
+                --repo "$repo" \
+                --soft-floor || true
+        fi
+    fi
+
     local pages_dir
     pages_dir=$(split_body "$body_file" "$MAX_BYTES")
     local pages
@@ -389,6 +409,7 @@ KEEP=""
 REPO_FLAG=""
 MAX_BYTES=$DEFAULT_MAX_BYTES
 DRY_RUN=0
+SOFT_FLOOR=0
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -398,6 +419,7 @@ while [[ $# -gt 0 ]]; do
         --repo)       REPO_FLAG="$2"; shift 2 ;;
         --max-bytes)  MAX_BYTES="$2"; shift 2 ;;
         --dry-run)    DRY_RUN=1; shift ;;
+        --soft-floor) SOFT_FLOOR=1; shift ;;
         -h|--help)    usage ;;
         *)            die "unknown flag: $1" ;;
     esac

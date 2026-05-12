@@ -87,6 +87,14 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 The ⚠️ Low-confidence count includes style findings. The maintainer's review burden equals the count rendered in the table; understating it is a false signal.
 
+### Composed-draft contract
+
+In CI the workflow's `compose-review.py` pre-step assembles most of this body deterministically into `.review-draft.md` and the reviewer *edits* it (see `.claude/commands/docs-review/ci.md` §2-3 and `docs-review:references:pre-computation` §Bundle architecture). The composer produces, fully assembled and self-consistent: the `## Quality Review` header + timestamp; the 🔍 Verification trail (one line per `.verified-claims.json` verdict, verbatim — verdict word + per-verdict emoji + evidence pointer + source); the bucket-count table (a *starting point* equal to the stub-bullet counts — the reviewer keeps it equal as it edits); the Investigation-log `<details>` block (all 8 bullets, all deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder); the 📊 Editorial-balance Tier 1 (blog only); the `#### Style findings` block (correct render mode); the empty 💡/✅ forms; the 📜 Review-history line; and *stub* 🚨/⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker. The composer does **not** decide which findings surface, write the fix prose, fill the summary / confidence levels / cross-sibling count / review-history summary / Tier-2 editorial-balance counts, or add the findings it can't pre-stub (Hugo-build, frontmatter collisions, internal-link/shortcode breaks, cross-sibling mismatches, code-examples findings, editorial-balance threshold flags, intuition promotions, domain two-question-test findings) — those are `<TODO>`s / the reviewer's editorial pass.
+
+**No `<TODO:` placeholder survives to the published body.** Every `<TODO: …>` (and bare `<TODO>`) the composer seeded must be replaced before posting; `validate-pinned.py`'s `no-todo-tokens` rule fails the review otherwise. (The composer suppresses just that one rule when self-checking its own still-`<TODO>`-laden draft, via `--skip-rule no-todo-tokens`; the publish path does not.)
+
+If `.review-draft.md` is absent or starts with a `> [!CAUTION]` composer-failed banner, the reviewer assembles the review manually per `ci.md` §Fallback — the pre-composer procedure (read the artifacts directly, render this format). That's the safety net, not the normal path; everything in this file describes the *output*, which is identical whichever path produced it.
+
 ### Summary preamble and review confidence
 
 The summary/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory. Render Summary and Review confidence as separate blockquote paragraphs (blank `>` between them) so they don't run together.
@@ -189,7 +197,7 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 | `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing |
 | `matches` | 🤝 | trail-only | a cross-sibling-consistency check that's consistent with the sibling pages |
 | `not-a-claim` | ➖ | trail-only | a candidate that isn't a falsifiable assertion (git metadata, a comment-tag, a faithful description of the author's own design) — demoted, not failed |
-| `unverifiable` | 🤷 | 🚨 Outstanding (always-🚨 carve-out for unverifiable *factual* claims; see §Bucket rules) | genuinely not checkable — paywalled, internal-only, future-dated, or a dead/404 source with no live alternative |
+| `unverifiable` | 🤷 | ⚠️ Low-confidence (author-question line filed; see §Bucket rules) | genuinely not checkable — paywalled, internal-only, future-dated, or a dead/404 source with no live alternative |
 | `contradicted` | ❌ | 🚨 Outstanding | a source positively disagrees, or the cited source's framing differs (strengthened / narrowed / shifted) |
 | `mismatch` | ⚔️ | 🚨 Outstanding | a cross-sibling-consistency check where this PR diverges from the siblings' established pattern |
 
@@ -201,7 +209,7 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 **Anti-hedge mandate for `⚔️ mismatch` cross-sibling findings.** When the trail records `⚔️ mismatch`, the corresponding bucket bullet states the verdict directly and names which sibling pages corroborate the divergence (mirror the trail's `<sibling-A>/<sibling-B>` list). Do NOT insert "either-or" framing that softens the verdict to a manual-check ask ("either the UI changed or this guide is wrong"). The trail has adjudicated; the rendered finding states what the maintainer must change.
 
-**Don't deduplicate against the bucket sections.** Contradicted and unverifiable claims render in BOTH the trail AND the 🚨 Outstanding bucket. The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
+**Don't deduplicate against the bucket sections.** A contradicted claim renders in BOTH the trail AND the 🚨 Outstanding bucket; an unverifiable claim renders in BOTH the trail AND the ⚠️ Low-confidence bucket (with an author-question line). The trail is the *evidence*; the bucket is the *finding*. Redundancy is the point.
 
 **Empty section.** Per the top-level mandatory-sections invariant, render the explicit-empty form when no claims were extracted (infra-only PR, pure formatting PR — and `.candidate-claims.json` is absent or empty). If `.candidate-claims.json` has entries, this form is wrong — `candidate-claims-coverage` will fail the review until every entry has a trail line.
 
@@ -255,13 +263,13 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
 - **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
 
-  **Trail verdict drives bucket placement.** If the verification trail records `❌ contradicted` or `⚔️ mismatch` for a finding, render that finding in 🚨 Outstanding. The `trail-bucket-consistency` validator rule enforces this — keyed on the verdict *word* (`contradicted` / `mismatch`), not the emoji. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. It applies only to findings without a decisive trail verdict (a 🤔 intuition-check, a `verified` claim where the residual judgment is about reader impact, etc.) — a `🤷 unverifiable` *factual* claim is itself an always-🚨 carve-out below, not a two-question-test case.
+  **Trail verdict drives bucket placement.** If the verification trail records `❌ contradicted` or `⚔️ mismatch` for a finding, render that finding in 🚨 Outstanding. The `trail-bucket-consistency` validator rule enforces this — keyed on the verdict *word* (`contradicted` / `mismatch`), not the emoji. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. It applies only to findings without a decisive trail verdict (a 🤔 intuition-check, a `verified` claim where the residual judgment is about reader impact, etc.) — a `🤷 unverifiable` *factual* claim isn't a two-question-test case either: it renders in ⚠️ Low-confidence with an author-question line filed (see the ⚠️ entry below and `docs-review:references:fact-check` §Tier rules), unless something *else* about it hits an always-🚨 carve-out.
 
   **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Style findings under `#### Style findings` use the `**line N:**` prefix below — they're not subject to the trail-prefix mandate.
 
   **Always-🚨 carve-outs (no judgment required):**
 
-  - Factually contradicted claim, any confidence, **or** unverifiable factual claim (per `docs-review:references:fact-check` §Tier rules).
+  - Factually contradicted claim, any confidence (per `docs-review:references:fact-check` §Tier rules). (An *unverifiable* factual claim is **not** on this list — it renders in ⚠️ Low-confidence with an author-question line; see the ⚠️ entry below.)
   - Code that does not parse in its language, **or** code that imports / calls a symbol that does not exist in the referenced package version (per `docs-review:references:code-examples`).
   - Missing internal link target (per `docs-review:references:docs`).
   - Missing aliases on a moved file (per `docs-review:references:shared-criteria`).
@@ -279,7 +287,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
-- **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
+- **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus `unverifiable` factual claims (the verifier couldn't confirm them — surface one bullet quoting the claim and asking the author to cite a source, the "author-question buffer line" per `docs-review:references:fact-check`), plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
   - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style findings` block. Examples:
     - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
     - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
