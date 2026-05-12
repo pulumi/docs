@@ -58,9 +58,13 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 ### 🚨 Outstanding in this PR
 
+*These must be resolved or refuted before merging.*
+
 [PR-introduced findings the author needs to address]
 
 ### ⚠️ Low-confidence
+
+*Review each and resolve as appropriate — these don't block the PR.*
 
 [Findings worth surfacing but not blocking]
 
@@ -262,6 +266,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 ### Bucket rules
 
 - **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
+
+  When the section has findings, it opens with the italic one-liner `*These must be resolved or refuted before merging.*` immediately under the `### 🚨 Outstanding in this PR` heading (parallel to the `*Found by pattern-based linting; Findings may be false positives.*` note under `#### Style findings`); omit it on the explicit-empty form. The ⚠️ Low-confidence section opens with `*Review each and resolve as appropriate — these don't block the PR.*` on the same terms.
 
   **Trail verdict drives bucket placement.** If the verification trail records `❌ contradicted` or `⚔️ mismatch` for a finding, render that finding in 🚨 Outstanding. The `trail-bucket-consistency` validator rule enforces this — keyed on the verdict *word* (`contradicted` / `mismatch`), not the emoji. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. It applies only to findings without a decisive trail verdict (a 🤔 intuition-check, a `verified` claim where the residual judgment is about reader impact, etc.) — a `🤷 unverifiable` *factual* claim isn't a two-question-test case either: it renders in ⚠️ Low-confidence with an author-question line filed (see the ⚠️ entry below and `docs-review:references:fact-check` §Tier rules), unless something *else* about it hits an always-🚨 carve-out.
 

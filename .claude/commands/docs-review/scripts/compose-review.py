@@ -415,6 +415,13 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
     )
 
 
+# Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
+# (parallel to `*Found by pattern-based linting; Findings may be false
+# positives.*` under `#### Style findings`) — omitted on the explicit-empty form.
+_OUTSTANDING_NOTE = "*These must be resolved or refuted before merging.*"
+_LOWCONF_NOTE = "*Review each and resolve as appropriate — these don't block the PR.*"
+
+
 # `source` sentinels `verify-claims.py` emits when it has no real citation
 # (turn-cap exhausted, per-claim error, deterministic pass-0 resolution) — not
 # reader-facing "sources"; drop them rather than leak the script name.
@@ -530,7 +537,7 @@ def render_outstanding(stubs: list[dict]) -> str:
     # guidance lives in ci.md §3, never in the published body.
     if not stubs:
         return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
-    lines = ["### 🚨 Outstanding in this PR", ""]
+    lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
     for s in stubs:
         lines.append(s["bullet"])
     return "\n".join(lines)
@@ -540,7 +547,7 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     has_style = bool(vale_findings)
     if not stubs and not has_style:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
-    lines = ["### ⚠️ Low-confidence", ""]
+    lines = ["### ⚠️ Low-confidence", "", _LOWCONF_NOTE, ""]
     for s in stubs:
         lines.append(s["bullet"])
     if has_style:

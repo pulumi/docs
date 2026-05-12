@@ -62,7 +62,7 @@ The workflow ran `compose-review.py` and wrote **`.review-draft.md`** at the wor
 - the `#### Style findings` block (from `.vale-findings.json`, with the inline-vs-collapse render mode already chosen);
 - the empty 💡 / ✅ forms;
 - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
+- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker. When a section has findings it opens with an italic guidance one-liner under the heading (`*These must be resolved or refuted before merging.*` for 🚨 Outstanding; `*Review each and resolve as appropriate — these don't block the PR.*` for ⚠️ Low-confidence) — same pattern as `*Found by pattern-based linting; Findings may be false positives.*` under `#### Style findings`.
 
 **Do NOT rebuild any of these from scratch. Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view.** Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents — extraction already happened.
 
