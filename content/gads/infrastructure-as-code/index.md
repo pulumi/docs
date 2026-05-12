@@ -218,42 +218,6 @@ stats:
         number: "170+"
         description: "Cloud and service integrations"
 
-key_features_below:
-    items:
-        - title: "The fastest and easiest way to use Pulumi IaC at scale"
-          sub_title: "Pulumi Cloud"
-          description: |
-             A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
-          image: "/images/product/pulumi-cloud-iac-stylized-01.png"
-          features:
-              - title: Pulumi IaC
-                description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
-              - title: Pulumi ESC
-                description: |
-                    Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-              - title: Automate deployment workflows
-                description: |
-                    Orchestrate secure deployment workflows through GitHub or an API.
-              - title: Search and analytics
-                description: |
-                    View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
-              - title: Pulumi Automation API
-                description: |
-                    Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
-              - title: Developer portals
-                description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
-              - title: Identity and access control
-                description: |
-                    Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
-              - title: Policy enforcement
-                description: |
-                    Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
-              - title: Audit logs
-                description: |
-                    Track and store user actions and change history with option to export logs.
-
 case_studies:
     title: Customers innovating with Pulumi Cloud
     items:
