@@ -32,7 +32,7 @@
     {{/* Mobile: 1 slide at a time */}}
     <div class="template-social-carousel-rows block md:hidden">
         <div class="template-social-carousel-row">
-            <pulumi-swiper slides="1" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+            <pulumi-swiper slides="1" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true">
                 {{ range $tweet := $tweets }}
                 <pulumi-swipeable>
                     <div class="w-full px-4">
@@ -52,7 +52,7 @@
     {{/* Tablet: 2 slides at a time */}}
     <div class="template-social-carousel-rows hidden md:block lg:hidden">
         <div class="template-social-carousel-row">
-            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true">
                 {{ range $tweet := $row1 }}
                 <pulumi-swipeable>
                     <div class="w-full px-4">
@@ -69,7 +69,7 @@
             </pulumi-swiper>
         </div>
         <div class="template-social-carousel-row">
-            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" allow-touch-move="false" initial-slide="2">
+            <pulumi-swiper slides="2" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" initial-slide="2">
                 {{ range $tweet := $row2 }}
                 <pulumi-swipeable>
                     <div class="w-full px-4">
@@ -89,7 +89,7 @@
     {{/* Desktop: 3 slides at a time */}}
     <div class="template-social-carousel-rows hidden lg:block">
         <div class="template-social-carousel-row">
-            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true" allow-touch-move="false">
+            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="3000" speed="8000" free-mode="true">
                 {{ range $tweet := $row1 }}
                 <pulumi-swipeable>
                     <div class="w-full px-4">
@@ -106,7 +106,7 @@
             </pulumi-swiper>
         </div>
         <div class="template-social-carousel-row">
-            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" allow-touch-move="false" initial-slide="2">
+            <pulumi-swiper slides="3" centered-slides="false" loop="true" autoplay="true" autoplay-delay="11000" speed="8000" free-mode="true" initial-slide="2">
                 {{ range $tweet := $row2 }}
                 <pulumi-swipeable>
                     <div class="w-full px-4">
