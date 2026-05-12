@@ -25,7 +25,15 @@ Why a direct API call (not `claude-code-action`): same reasons as
 a small bounded loop, none of which `claude-code-action` exposes. Precedent:
 `extract-claims-llm.py` and `claude-triage.yml` already call `/v1/messages`.
 
-Routing (first match wins) — see `route_claim()`:
+Routing (first match wins):
+  0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
+     that's an unambiguous not-a-claim shape (a `:latest` Docker image tag with
+     no URL alongside it, raw git/diff metadata) → verdict `not-a-claim`; or a
+     `cross-reference` claim naming a `static/programs/<dir>/` path that exists
+     on disk → verdict `verified`. The claim still gets a `.verified-claims.json`
+     entry (the candidate-claims floor is honoured) — pass0 just resolves the
+     cheap cases the model verifier would resolve the same way.
+  1-4. else — `route_claim()`:
   1. a URL in `source_hint` (or in `text`) is present in `.fetched-urls.json`
      → **pass2** (consult the pre-fetched content)
   2. pulumi-internal signal — names a `pulumi/*` package / command / flag /
@@ -50,7 +58,7 @@ Output schema:
       "verdicts": [
         {"claim_id": "c1", "file": "content/blog/foo.md", "line_range": "L42",
          "text": "...", "type": "...",
-         "route": "pass1" | "pass2" | "pass3",
+         "route": "pass0" | "pass1" | "pass2" | "pass3",
          "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch",
          "confidence": "high" | "medium" | "low",
          "evidence": "...",            # 1-2 sentence summary, verbatim source quote when a source was cited
@@ -63,18 +71,22 @@ Output schema:
         ...
       ],
       "errors": [ "<per-claim failures>" ],
-      "meta": {"n_claims": N, "n_pass1": A, "n_pass2": B, "n_pass3": C,
+      "meta": {"n_claims": N, "n_pass0": Z, "n_pass1": A, "n_pass2": B, "n_pass3": C,
                "input_tokens": T, "output_tokens": T,
                "cache_read_input_tokens": T, "cache_creation_input_tokens": T}
     }
 
+`n_pass0` claims are resolved with no API call; the review folds them into the
+rendered routed-metadata's `inline` counter (see `references/fact-check.md`
+§Routed verification step 4). `n_pass0 + n_pass1 + n_pass2 + n_pass3 == n_claims`.
+
 Degrades gracefully: no `ANTHROPIC_API_KEY` → empty verdicts + an error entry
 (the review falls back to in-review verification per `references/fact-check.md`
-§Routed verification fallback); `.candidate-claims.json` absent / unreadable →
-empty verdicts + an error entry; a per-claim API failure → that claim gets an
-`unverifiable` verdict carrying the error in `evidence` plus an entry in
-`errors[]`; never crashes (`safe_main()`). The workflow's `||` stub is reserved
-for can't-even-start failures.
+§Routed verification fallback — pass0 is skipped on the degraded path);
+`.candidate-claims.json` absent / unreadable → empty verdicts + an error entry;
+a per-claim API failure → that claim gets an `unverifiable` verdict carrying the
+error in `evidence` plus an entry in `errors[]`; never crashes (`safe_main()`).
+The workflow's `||` stub is reserved for can't-even-start failures.
 """
 
 from __future__ import annotations
@@ -100,8 +112,8 @@ ANTHROPIC_VERSION = "2023-06-01"
 MAX_TOKENS_VERIFY = 2048
 HTTP_TIMEOUT = 120          # seconds per API call
 MAX_RETRIES = 3             # API-level retries on 429 / 5xx / transient network
-MAX_CONCURRENCY = 8         # parallel per-claim verifiers
-MAX_TURNS = {"pass1": 8, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane
+MAX_CONCURRENCY = 16        # parallel per-claim verifiers (short HTTPS round-trips — more parallelism trims wall-clock, same $)
+MAX_TURNS = {"pass1": 5, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane (pass1 = the gh+read_file budget)
 
 GH_TIMEOUT = 30             # seconds per `gh` subprocess
 GH_OUTPUT_CAP = 12_000      # chars of `gh` output fed back to the model
@@ -188,7 +200,7 @@ READ_FILE_TOOL = {
 
 # Anthropic server-side web search; the API runs the search and returns results
 # inline, so no client round-trip is needed for the search itself.
-WEB_SEARCH_TOOL = {"type": "web_search_20250305", "name": "web_search", "max_uses": 5}
+WEB_SEARCH_TOOL = {"type": "web_search_20250305", "name": "web_search", "max_uses": 3}
 
 ALLOWED_GH_SUBCOMMANDS = {"search", "api", "release", "issue", "pr"}
 _SHELL_META_RE = re.compile(r"[|;&`$\\]|\$\(")
@@ -307,6 +319,94 @@ def find_fetched_url(claim: dict, fetched_by_url: dict[str, dict]) -> dict | Non
         rec = fetched_by_url.get(_normalize_url(u))
         if rec is not None:
             return rec
+    return None
+
+
+# ---- pass 0: deterministic resolution (zero model calls) -------------------
+
+# Not-a-claim shapes the regex floor over-generates but the LLM extraction
+# passes correctly decline (see `references/claim-extraction.md` §"What is NOT a
+# claim"): a `:latest` Docker image tag (not a recency assertion), raw git/diff
+# metadata. Conservative on purpose — fired only on regex-floor-*only* entries
+# (anything an LLM pass also surfaced still goes through the model verifier,
+# which demotes a real non-claim cheaply), and only on shapes that can't be
+# confused with a cited source. We do NOT pass-0 a bare `/latest/` URL segment:
+# a cited URL containing `/latest/` (e.g. `https://trivy.dev/latest/...`) is a
+# real claim whose link must be checked, not a temporal false positive.
+_PASS0_NOT_A_CLAIM_RES = [
+    (re.compile(r":latest\b"),
+     "`:latest` is a Docker image tag, not a recency claim"),
+    (re.compile(r"^\s*(?:new file mode|deleted file mode|old mode|new mode)\s+\d{6}\b"),
+     "git/diff file-mode metadata, not content"),
+    (re.compile(r"^\s*index [0-9a-f]{7,40}\.\.[0-9a-f]{1,40}\b"),
+     "git diff index line, not content"),
+    (re.compile(r"^\s*@@ -\d+(?:,\d+)? \+\d+(?:,\d+)? @@"),
+     "git diff hunk header, not content"),
+]
+# A nearby recency phrase makes `:latest` a real claim ("the latest version is
+# 3.236", "as of <date> the latest …") — leave those for the verifier.
+_PASS0_TEMPORAL_NEARBY_RE = re.compile(
+    r"\b(?:current(?:ly)?|now|as of|version is|latest version|most recent|newest|up[- ]to[- ]date)\b",
+    re.IGNORECASE,
+)
+# Claim types that name a cited/judgment source — never pass-0-demote these even
+# if the text happens to contain a `:latest`-shaped token.
+_PASS0_CITED_TYPES = {"attribution", "quote", "comparison", "positioning"}
+_PASS0_PROGRAMS_DIR_RE = re.compile(r"\bstatic/programs/([\w.-]+)/?")
+
+
+def _regex_only(claim: dict) -> bool:
+    fb = claim.get("found_by") or []
+    return bool(fb) and all(str(x) == "regex" for x in fb)
+
+
+def _pass0_verdict(claim: dict, verdict: str, confidence: str, evidence: str, source: str) -> dict:
+    return {
+        "claim_id": claim.get("__id", "?"),
+        "file": claim.get("file", ""),
+        "line_range": claim.get("line_range", ""),
+        "text": claim.get("text", ""),
+        "type": claim.get("type", ""),
+        "route": "pass0",
+        "verdict": verdict,
+        "confidence": confidence,
+        "evidence": evidence,
+        "source": source,
+        "model_usage": {**_zero_usage(), "turns": 0},
+    }
+
+
+def pass0_resolve(claim: dict, repo_root: Path) -> dict | None:
+    """Resolve a candidate claim deterministically, no API call. Returns a
+    finalized verdict dict (`verdicts[]` schema, `route: "pass0"`) or None when
+    the claim needs the model verifier. The candidate-claims floor is honoured
+    either way — a pass-0-resolved claim still gets an artifact entry."""
+    text = claim.get("text") or ""
+    ctype = claim.get("type") or ""
+
+    # (a) regex-floor-only, unambiguous not-a-claim shape → not-a-claim.
+    if _regex_only(claim) and ctype not in _PASS0_CITED_TYPES and "http://" not in text and "https://" not in text:
+        for rx, reason in _PASS0_NOT_A_CLAIM_RES:
+            if rx.search(text) and not _PASS0_TEMPORAL_NEARBY_RE.search(text):
+                return _pass0_verdict(claim, "not-a-claim", "high", reason,
+                                      "verify-claims.py pass-0 (deterministic not-a-claim)")
+
+    # (b) a `static/programs/<dir>/` reference that exists on disk → verified.
+    #     Positive case only — a missing dir falls through to the model verifier,
+    #     which can investigate an alternate path form or a dir added in this PR.
+    if ctype == "cross-reference":
+        m = _PASS0_PROGRAMS_DIR_RE.search(text) or _PASS0_PROGRAMS_DIR_RE.search(claim.get("source_hint") or "")
+        if m:
+            name = m.group(1)
+            try:
+                exists = (repo_root / "static" / "programs" / name).is_dir()
+            except OSError:
+                exists = False
+            if exists:
+                return _pass0_verdict(claim, "verified", "high",
+                                      f"`static/programs/{name}/` exists in the repo.",
+                                      f"repo:static/programs/{name}/")
+
     return None
 
 
@@ -617,7 +717,7 @@ def main() -> int:
 
     out_path = Path(args.out)
     repo_root = Path(args.repo_root).resolve()
-    base_meta = {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
+    base_meta = {"n_claims": 0, "n_pass0": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
                  "input_tokens": 0, "output_tokens": 0,
                  "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
 
@@ -646,27 +746,38 @@ def main() -> int:
         print("verify-claims: ANTHROPIC_API_KEY not set; skipping", file=sys.stderr)
         return 0
 
+    # Pass 0: resolve the cheap cases deterministically (no API call); route
+    # the rest to a model lane.
+    pass0_verdicts: list[dict] = []
+    routed_claims: list[dict] = []
     for i, c in enumerate(claims, start=1):
         c["__id"] = f"c{i}"
+        v0 = pass0_resolve(c, repo_root)
+        if v0 is not None:
+            pass0_verdicts.append(v0)
+            continue
         c["__route"] = route_claim(c, fetched_by_url)
+        routed_claims.append(c)
 
     n_by_route = {"pass1": 0, "pass2": 0, "pass3": 0}
-    for c in claims:
+    for c in routed_claims:
         n_by_route[c["__route"]] = n_by_route.get(c["__route"], 0) + 1
 
-    verdicts: list[dict] = []
+    verdicts: list[dict] = list(pass0_verdicts)
     errors: list[str] = []
-    with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(claims))) as pool:
-        futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run)
-                for c in claims]
-        for fut in futs:
-            rec, err = fut.result()
-            verdicts.append(rec)
-            if err:
-                errors.append(err)
+    if routed_claims:
+        with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(routed_claims))) as pool:
+            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run)
+                    for c in routed_claims]
+            for fut in futs:
+                rec, err = fut.result()
+                verdicts.append(rec)
+                if err:
+                    errors.append(err)
 
     meta = dict(base_meta)
     meta["n_claims"] = len(claims)
+    meta["n_pass0"] = len(pass0_verdicts)
     meta["n_pass1"] = n_by_route["pass1"]
     meta["n_pass2"] = n_by_route["pass2"]
     meta["n_pass3"] = n_by_route["pass3"]
@@ -680,7 +791,7 @@ def main() -> int:
     n_unver = sum(1 for v in verdicts if v["verdict"] == "unverifiable")
     print(
         f"verify-claims: {len(verdicts)} verdict(s) "
-        f"({n_by_route['pass1']} pass1, {n_by_route['pass2']} pass2, {n_by_route['pass3']} pass3; "
+        f"({meta['n_pass0']} pass0, {n_by_route['pass1']} pass1, {n_by_route['pass2']} pass2, {n_by_route['pass3']} pass3; "
         f"{n_contra} contradicted/mismatch, {n_unver} unverifiable); "
         f"in={meta['input_tokens']} out={meta['output_tokens']} cache_read={meta['cache_read_input_tokens']} → {out_path}",
         file=sys.stderr,
@@ -714,7 +825,7 @@ def safe_main() -> int:
                     "model": model,
                     "verdicts": [],
                     "errors": [f"verify-claims uncaught exception: {type(e).__name__}: {e}"],
-                    "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
+                    "meta": {"n_claims": 0, "n_pass0": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
                              "input_tokens": 0, "output_tokens": 0,
                              "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0},
                 }, indent=2) + "\n")

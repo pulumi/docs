@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""merge-claims.py — combine the claim-extraction layers into .candidate-claims.json (added S42).
+"""merge-claims.py — combine the claim-extraction layers into .candidate-claims.json.
 
 Unions Layer A (`extract-claims.py` → `.candidate-claims-regex.json`) and the
 two Layer-B LLM passes (`extract-claims-llm.py` → `.candidate-claims-llm-1.json`

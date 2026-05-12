@@ -19,12 +19,19 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 8 (v7→v8 adds the `.verified-claims.json` artifact gate:
-  `verified-claims-trail-faithful` + `pass-3-evidence-faithful` rules,
-  `pass-2-fetch-faithfulness` strengthened against the artifact, the trail
-  records keyed on the per-verdict word — ✅ `verified` / 🤝 `matches` /
-  ➖ `not-a-claim` / 🤷 `unverifiable` / ❌ `contradicted` / ⚔️ `mismatch` —
-  with `trail-bucket-consistency` re-keyed accordingly).
+Schema version: 9 (v8→v9 adds `trail-canonical-verdict-word`: every 🔍
+  Verification trail line's verdict must be EXACTLY one of the six canonical
+  words — `verified` / `matches` / `not-a-claim` / `unverifiable` /
+  `contradicted` / `mismatch` — so a freelanced token (`source-mismatch`,
+  `author-authored`, `source-title-match`) can't slip past the
+  `verdict_word`-keyed faithfulness / per-verdict-emoji checks. Surgically
+  fixable: the right word is derived from the rendered glyph. v7→v8 added the
+  `.verified-claims.json` artifact gate: `verified-claims-trail-faithful` +
+  `pass-3-evidence-faithful` rules, `pass-2-fetch-faithfulness` strengthened
+  against the artifact, the trail records keyed on the per-verdict word —
+  ✅ `verified` / 🤝 `matches` / ➖ `not-a-claim` / 🤷 `unverifiable` /
+  ❌ `contradicted` / ⚔️ `mismatch` — with `trail-bucket-consistency` re-keyed
+  accordingly.)
 """
 
 from __future__ import annotations
@@ -38,7 +45,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 8
+SCHEMA_VERSION = 9
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -93,6 +100,10 @@ EXPECTED_TRAIL_EMOJI = {
     "contradicted": "❌",
     "mismatch": "⚔️",
 }
+# Inverse map — derive the canonical verdict word from its per-verdict glyph.
+# Used by the `trail-canonical-verdict-word` rule (and validator-fix.py) to
+# repair a freelanced verdict token (`source-mismatch`, `author-authored`, …).
+CANONICAL_VERDICT_FOR_EMOJI = {v: k for k, v in EXPECTED_TRAIL_EMOJI.items()}
 # Verdict words that promote a finding to 🚨 Outstanding.
 OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch"}
 # Legacy/fallback emojis still accepted on trail lines for one transition; the
@@ -109,7 +120,7 @@ OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️"}
 # (output-format.md L122). Two segments are required, matched independently:
 # the extraction-side specialists tail and the routed-verification tail.
 # Schema v3: routed-metadata replaces the v2 PASS_METADATA_RE (pass-1/pass-2
-# breakdown). With the routing change in S33 Change 4, claims now dispatch
+# breakdown). When the source-class routing landed, claims began dispatching
 # by `source_class` to one of three lanes -- inline, Pass 1, Pass 2.
 # Schema v5: Pass 2 (URL fetch) is now subdivided from Pass 3 (search-then-
 # fetch). Pass 3 segment is optional in the regex for backward compat with
@@ -241,7 +252,7 @@ def extract_bucket_bullets(body: str, heading_substring: str) -> list[str]:
 
     Sub-bullets (indented), continuation paragraphs (no leading `**`), and
     style-finding bullets (`- **line N:**`) are still counted as findings —
-    style findings belong in the ⚠️ count per the S32 mandate.
+    style findings belong in the ⚠️ count per `references/output-format.md`.
     """
     span = find_section(body, heading_substring)
     if span is None:
@@ -1002,8 +1013,9 @@ def check_pulumi_internal_trail_provenance(ctx: Context) -> list[Violation]:
 
     `gh api repos/<owner>/<repo>/issues|pulls` and recursive tree-walks
     (`tree?recursive=...`) are exploration patterns — they don't read
-    canonical source. The S37 pr18568 r1 rabbit-hole captured 75 gh calls
-    iterating these instead of reading the canonical paths directly. This
+    canonical source. The failure mode this guards against: a review burning
+    50+ `gh` calls iterating issue/PR search instead of reading the canonical
+    paths directly. This
     rule walks every line in 🔍 Verification trail and flags any that
     reference these patterns.
 
@@ -1119,6 +1131,38 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
     trail_is_empty = len(trail_records) == 0
 
     violations: list[Violation] = []
+
+    # Canonical-verdict-word check (schema v9). Every 🔍 trail line's verdict is
+    # exactly one of the six canonical words; a freelanced first token
+    # (`source-mismatch`, `author-authored`, `source-title-match`, …) parses as
+    # `verdict_word=None` and silently slips past the `verdict_word`-keyed
+    # `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks. Flag
+    # it so the model rewrites it (surgical fixer derives the right word from
+    # the rendered glyph). Runs first so a freelanced line isn't also pinged for
+    # a bucket-promotion mismatch on a word the validator can't read.
+    for r in trail_records:
+        if r.get("verdict_word") is not None:
+            continue
+        emoji = r.get("verdict_emoji")
+        toks = (r.get("verdict_text") or "").split()
+        bad_tok = (toks[0].strip(":.,;)") if toks else "") or "<empty>"
+        canonical = CANONICAL_VERDICT_FOR_EMOJI.get(emoji)
+        if canonical:
+            hint = (f"Replace the verdict token `{bad_tok}` with `{canonical}` — the canonical word the `{emoji}` glyph maps to. "
+                    f"Every 🔍 trail line reads `→ <emoji> <word>` where `<word>` is EXACTLY one of: "
+                    f"`verified` (✅) · `matches` (🤝) · `not-a-claim` (➖) · `unverifiable` (🤷) · `contradicted` (❌) · `mismatch` (⚔️). "
+                    f"Do not invent variants.")
+        else:
+            hint = (f"Rewrite this trail line's verdict `→ {emoji} {bad_tok}` to a canonical glyph + word: EXACTLY one of "
+                    f"`✅ verified` · `🤝 matches` · `➖ not-a-claim` · `🤷 unverifiable` · `❌ contradicted` · `⚔️ mismatch`. "
+                    f"Do not invent variants.")
+        violations.append(Violation(
+            rule_id="trail-canonical-verdict-word",
+            line_ref=r["line_ref"],
+            expected="trail verdict is one of: verified / matches / not-a-claim / unverifiable / contradicted / mismatch",
+            actual=f"renders non-canonical verdict token `{bad_tok}` (after `{emoji}`)",
+            hint=hint,
+        ))
 
     # Per-verdict-emoji nudge (schema v8). When the verdict word is known and
     # the rendered emoji differs from the canonical glyph for that word, flag
@@ -1237,8 +1281,8 @@ def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
     trail record whose line reference overlaps the claim's line range (± a
     small window). The claim list is the *floor* — the review must verify (or
     account for) every entry; it may add more. A dropped candidate claim is
-    the #18771-R2 failure mode, and a missing trail entry can't be honestly
-    synthesized by the surgical fixer — so this is non-surgical and soft-floors
+    the failure mode this rule exists for, and a missing trail entry can't be
+    honestly synthesized by the surgical fixer — so this is non-surgical and soft-floors
     loudly, surfacing the gap to the maintainer.
     """
     claims = ctx.candidate_claims
@@ -1926,8 +1970,8 @@ RULES = [
     },
     {
         "id": "trail-bucket-consistency",
-        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every `contradicted`/`mismatch` trail verdict surfaces in 🚨 Outstanding (v8: keyed on the verdict word, not the emoji). Trail lines render the per-verdict emoji (`trail-per-verdict-emoji` nudge for legacy ✅/⚠️/🚨 forms).",
-        "hint": "Add the line-range prefix to bucket bullets; promote `contradicted`/`mismatch` trail verdicts to 🚨 Outstanding without relitigation; render the per-verdict emoji on each trail line (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`).",
+        "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every `contradicted`/`mismatch` trail verdict surfaces in 🚨 Outstanding (v8: keyed on the verdict word, not the emoji). Trail lines render the per-verdict emoji (`trail-per-verdict-emoji` nudge for legacy ✅/⚠️/🚨 forms) and a canonical verdict word (`trail-canonical-verdict-word` flags a freelanced token like `source-mismatch` / `author-authored` — v9).",
+        "hint": "Add the line-range prefix to bucket bullets; promote `contradicted`/`mismatch` trail verdicts to 🚨 Outstanding without relitigation; render `<per-verdict emoji> <canonical word>` on each trail line — the word is EXACTLY one of ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`; never invent variants.",
         "check": check_trail_bucket_consistency,
     },
     {

@@ -6,18 +6,17 @@ and `extract-urls-and-fetch.py`: a workflow pre-step that pre-computes determini
 frontmatter checks so the model receives a structurally-guaranteed result instead
 of computing them inline (where they get skipped under attention pressure).
 
-S38 motivation: the cross-sibling pre-step caught the file-location and alias
-collision findings on pr18568, but missed the L11 menu-parent finding. The
-menu-parent identifier check is fully deterministic: parse the changed file's
-frontmatter, walk content/**/*.md to build a global menu-identifier map, check
-that each declared parent exists in the same named menu. Same atomization pattern,
-different layer.
+Motivation: the cross-sibling pre-step caught the file-location and alias
+collision findings on a representative PR, but missed the menu-parent finding —
+which is fully deterministic: parse the changed file's frontmatter, walk
+content/**/*.md to build a global menu-identifier map, check that each declared
+parent exists in the same named menu. Same atomization pattern, different layer.
 
 Three checks bundled (single content-tree walk + redirects scan):
 
 1. **Menu-parent validation.** For each `menu.<name>.parent: <X>` in a changed
    file's frontmatter, verify `(name, X)` exists somewhere in the global
-   identifier map. The S37/S38 pr18568 case: `menu.iac.parent: azure-clouds`
+   identifier map. The canonical bug: `menu.iac.parent: azure-clouds`
    resolves only against `menu.integrations.identifier: azure-clouds` —
    wrong-named-menu.
 
@@ -243,7 +242,7 @@ def flatten_frontmatter_keys(fm: dict) -> list[str]:
     `social.linkedin`, `menu.iac`). Pins the frontmatter-sweep scope: the
     review sweeps `body` plus the prose-bearing keys in this list (`meta_desc`,
     `title`, `description`, `summary`, `social.*`, …) rather than a model-decided
-    subset — this is what stops the #18745-r2 `social.*` omission.
+    subset — this is what stops the model from quietly omitting the `social.*` keys.
     """
     keys: list[str] = []
     for k, v in fm.items():
@@ -384,7 +383,7 @@ def check_menu_parents(
         # Strip the file itself from the same-menu list (a file can declare its
         # own identifier and use it as a parent — unusual but valid).
         same_menu_files = [f for f in same_menu_files if f != file_rel]
-        # Find this identifier in OTHER menus (the diagnostic case from S37/S38).
+        # Find this identifier in OTHER menus (the wrong-named-menu diagnostic).
         found_in_other_menus = [
             other_name
             for (other_name, ident), files in identifier_map.items()

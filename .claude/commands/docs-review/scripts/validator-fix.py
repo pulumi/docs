@@ -50,6 +50,7 @@ SURGICAL_CLASSES: set[str] = {
     "bucket-bullet-line-range-prefix",
     "mandatory-h3-order",
     "trail-per-verdict-emoji",
+    "trail-canonical-verdict-word",
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -117,6 +118,30 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
             f"🤝 `matches`, ➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, "
             f"⚔️ `mismatch`. Do not change the verdict word, the line text, the "
             f"evidence pointer, or any other line."
+        )
+    elif rule_id == "trail-canonical-verdict-word":
+        # `line_ref` is the trail line's L<n> anchor; `actual` names the bad
+        # token + the rendered emoji; `hint` names the canonical word to use
+        # (when the emoji maps to one of the six).
+        line_ref = violation.get("line_ref", "")
+        instr = (
+            f"VIOLATION (`trail-canonical-verdict-word`): A line in the 🔍 Verification "
+            f"trail uses a freelanced verdict token instead of one of the six canonical "
+            f"verdict words.\n\n"
+            f"Trail line anchor: `{line_ref}`\n"
+            f"Actual: {actual}\n"
+            f"Validator hint: {hint}\n\n"
+            f"In the `### 🔍 Verification trail` section, find the bullet whose line "
+            f"reference is `{line_ref}`. It reads like `- {line_ref} \"...\" → <emoji> "
+            f"<bad-token> (...)`. Replace ONLY the `<bad-token>` (the word(s) "
+            f"immediately after the `→ <emoji>`, before any parenthetical) with the "
+            f"canonical verdict word the validator hint names. If the hint does not name "
+            f"a specific word, pick the one of `verified` / `matches` / `not-a-claim` / "
+            f"`unverifiable` / `contradicted` / `mismatch` that best matches the line's "
+            f"evidence text, and set the emoji to its glyph (✅ `verified`, 🤝 `matches`, "
+            f"➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, ⚔️ `mismatch`). Keep "
+            f"the claim quote, the parenthetical evidence pointer, and every other line "
+            f"unchanged."
         )
     elif rule_id == "bucket-bullet-line-range-prefix":
         # Validator hint cites the prefix and which bullet.

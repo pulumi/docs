@@ -16,10 +16,10 @@ patterns. See `references/pre-computation.md` and `references/fact-check.md`
 §Cross-sibling consistency for the unified model.
 
 History: an earlier version bundled the parallel-path check here using a
-hardcoded `PARALLEL_PATTERNS` table. The table caught the pr18568 case but
-was brittle — it only handled the one observed layout swap. A later refactor
-(S38) replaced the hardcoded approach with a data-driven URL-ownership lookup
-in frontmatter-validate; this script now does only what its name says.
+hardcoded `PARALLEL_PATTERNS` table. The table caught the one layout swap it
+was built for but was brittle. A later refactor replaced the hardcoded approach
+with a data-driven URL-ownership lookup in frontmatter-validate; this script
+now does only what its name says.
 
 Usage:
     cross-sibling-discover.py --pr <PR_NUMBER> --out <out.json>

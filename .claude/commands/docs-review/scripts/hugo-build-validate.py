@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""hugo-build-validate.py — Hugo build pre-step (added S39).
+"""hugo-build-validate.py — Hugo build pre-step.
 
 Runs Hugo build validation on the PR head + sitemap diff vs base.
 

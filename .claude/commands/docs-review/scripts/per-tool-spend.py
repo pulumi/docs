@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """per-tool-spend.py — parse a Claude Code execution log and emit per-tool counts + approximate $.
 
-Closes the cost-variance observability gap from S33: the workflow log carries
+Closes the cost-variance observability gap: the workflow log carries
 total_cost_usd / num_turns / duration_ms, but no per-tool attribution. This
 parser reads the stream-JSON the action saves to
 /home/runner/work/_temp/claude-execution-output.json and emits a JSON summary
@@ -28,7 +28,10 @@ historical artifact.
 Usage:
   per-tool-spend.py --execution-log <path> [--output <path>] [--format json|markdown]
 
-Stream-JSON shape (from anthropic-ai/claude-agent-sdk):
+Stream-JSON shape (from anthropic-ai/claude-agent-sdk) — accepted either as
+ndjson (one JSON object per line) OR as a single pretty-printed JSON array of
+those objects (`[ {...},\n  {...} ]`); newer action versions emit the array
+form. Message objects look like:
   {"type": "assistant", "message": {"content": [{"type": "tool_use", "name": "...", "input": {...}}]}}
   {"type": "user", "message": {"content": [{"type": "tool_result", ...}]}}
   {"type": "result", "total_cost_usd": ..., "num_turns": ..., "duration_ms": ...}
@@ -88,6 +91,38 @@ def categorize_bash(input_obj: dict) -> str:
     return "Bash:other"
 
 
+def _iter_messages(path: Path):
+    """Yield message dicts from an execution log that's either a single JSON
+    array (`[ {...}, {...} ]`, possibly pretty-printed) or ndjson (one JSON
+    object per line). Tries the whole-file parse first; falls back to
+    line-by-line on a JSONDecodeError. Non-dict entries are skipped."""
+    raw = path.read_text(encoding="utf-8").strip()
+    if not raw:
+        return
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        data = None
+    if data is not None:
+        seq = data if isinstance(data, list) else [data]
+        for msg in seq:
+            if isinstance(msg, dict):
+                yield msg
+        return
+    # ndjson fallback — tolerate trailing commas / bare brackets from a
+    # truncated array dump too.
+    for line in raw.splitlines():
+        line = line.strip().rstrip(",")
+        if not line or line in ("[", "]"):
+            continue
+        try:
+            msg = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(msg, dict):
+            yield msg
+
+
 def parse_stream_json(path: Path) -> dict:
     """Parse a stream-JSON execution log and return tool counts + costs.
 
@@ -97,6 +132,8 @@ def parse_stream_json(path: Path) -> dict:
     action's stream-JSON aggregates subagent work under the parent dispatch).
     If a future action version flattens subagent calls into the parent stream,
     this counter will overcount Agents — adjust here if that drift surfaces.
+
+    Accepts the log as a JSON array or as ndjson (see `_iter_messages`).
     """
     counts: Counter[str] = Counter()
     retries: Counter[str] = Counter()  # tool name -> count of error/retry results
@@ -105,75 +142,66 @@ def parse_stream_json(path: Path) -> dict:
 
     result_meta: dict = {}
 
-    with path.open("r", encoding="utf-8") as f:
-        for raw in f:
-            line = raw.strip()
-            if not line:
+    for msg in _iter_messages(path):
+        mtype = msg.get("type")
+
+        if mtype == "result":
+            # Final result line carries authoritative cost + turn metadata.
+            # Keep the LAST occurrence — the action emits one at the end.
+            result_meta = {
+                "total_cost_usd": msg.get("total_cost_usd"),
+                "num_turns": msg.get("num_turns"),
+                "duration_ms": msg.get("duration_ms"),
+                "is_error": msg.get("is_error", False),
+            }
+
+        elif mtype == "assistant":
+            content = msg.get("message", {}).get("content", []) or []
+            if isinstance(content, str):
                 continue
-            try:
-                msg = json.loads(line)
-            except json.JSONDecodeError:
+            for item in content:
+                if not isinstance(item, dict):
+                    continue
+                if item.get("type") != "tool_use":
+                    continue
+                name = item.get("name") or "?"
+                tool_id = item.get("id") or ""
+                if tool_id and tool_id in seen_tool_use_ids:
+                    continue
+                if tool_id:
+                    seen_tool_use_ids.add(tool_id)
+
+                if name == "Bash":
+                    category = categorize_bash(item.get("input", {}) or {})
+                elif name in ("Read", "Grep", "Glob"):
+                    category = "Read/Grep/Glob"
+                elif name in ("Edit", "Write"):
+                    category = "Edit/Write"
+                else:
+                    category = name
+
+                counts[category] += 1
+                if tool_id:
+                    last_tool_per_id[tool_id] = category
+
+        elif mtype == "user":
+            # tool_result with is_error=true counts as a retry indicator
+            # (the model presumably re-tried after the error). Track per
+            # category for the WebFetch retry signal in particular.
+            content = msg.get("message", {}).get("content", []) or []
+            if isinstance(content, str):
                 continue
-
-            mtype = msg.get("type")
-
-            if mtype == "result":
-                # Final result line carries authoritative cost + turn metadata.
-                # Keep the LAST occurrence — the action emits one at the end.
-                result_meta = {
-                    "total_cost_usd": msg.get("total_cost_usd"),
-                    "num_turns": msg.get("num_turns"),
-                    "duration_ms": msg.get("duration_ms"),
-                    "is_error": msg.get("is_error", False),
-                }
-
-            elif mtype == "assistant":
-                content = msg.get("message", {}).get("content", []) or []
-                if isinstance(content, str):
+            for item in content:
+                if not isinstance(item, dict):
                     continue
-                for item in content:
-                    if not isinstance(item, dict):
-                        continue
-                    if item.get("type") != "tool_use":
-                        continue
-                    name = item.get("name") or "?"
-                    tool_id = item.get("id") or ""
-                    if tool_id and tool_id in seen_tool_use_ids:
-                        continue
-                    if tool_id:
-                        seen_tool_use_ids.add(tool_id)
-
-                    if name == "Bash":
-                        category = categorize_bash(item.get("input", {}) or {})
-                    elif name in ("Read", "Grep", "Glob"):
-                        category = "Read/Grep/Glob"
-                    elif name in ("Edit", "Write"):
-                        category = "Edit/Write"
-                    else:
-                        category = name
-
-                    counts[category] += 1
-                    if tool_id:
-                        last_tool_per_id[tool_id] = category
-
-            elif mtype == "user":
-                # tool_result with is_error=true counts as a retry indicator
-                # (the model presumably re-tried after the error). Track per
-                # category for the WebFetch retry signal in particular.
-                content = msg.get("message", {}).get("content", []) or []
-                if isinstance(content, str):
+                if item.get("type") != "tool_result":
                     continue
-                for item in content:
-                    if not isinstance(item, dict):
-                        continue
-                    if item.get("type") != "tool_result":
-                        continue
-                    if not item.get("is_error"):
-                        continue
-                    tid = item.get("tool_use_id") or ""
-                    cat = last_tool_per_id.get(tid)
-                    if cat:
-                        retries[cat] += 1
+                if not item.get("is_error"):
+                    continue
+                tid = item.get("tool_use_id") or ""
+                cat = last_tool_per_id.get(tid)
+                if cat:
+                    retries[cat] += 1
 
     # Compute approximate $ per category from the rate card.
     costs = {cat: round(counts[cat] * RATE_CARD.get(cat, 0.0), 4)
@@ -225,7 +253,7 @@ def emit_threshold_warnings(summary: dict) -> None:
     """Emit GitHub Actions ::warning:: annotations to stderr when inline-lane
     drift indicators exceed thresholds.
 
-    Targets the pr18568 r2 rabbit-hole pattern (74 turns, 30+ inline `gh` calls,
+    Targets the inline-rabbit-hole pattern (70+ turns, 30+ inline `gh` calls,
     zero Pass 1 / zero Pass 3 — pure inline drift). The thresholds are advisory
     observability, not a hard block: the model already has a per-claim cap in
     `fact-check.md` §Inline lane, this surfaces violations operators can audit.

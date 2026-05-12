@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""extract-claims.py — Layer A of the claim-extraction pre-step (added S42).
+"""extract-claims.py — Layer A of the claim-extraction pre-step.
 
 A deterministic regex/heuristic floor for "what claims does this PR introduce?".
 Walks the PR diff hunks and, for every *added/modified* line, always emits a

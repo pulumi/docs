@@ -141,7 +141,7 @@ The metadata tail on this bullet is **mandatory verbatim** — the validator enf
 Common drifts to avoid:
 
 - Descriptive prose in place of the metadata segments ("3 web-verifier subagents over 10 cited claims") — the structured form is what the validator parses; prose breaks it.
-- "single-pass" / "ran (3 claims, ...)" — these were S32-era shapes; render the full canonical form even when one lane has zero traffic.
+- "single-pass" / "ran (3 claims, ...)" — legacy shapes; render the full canonical form even when one lane has zero traffic.
 - "N of M verifiable claims verified" — strip the inserted word; the canonical phrase is `N of M claims verified`.
 - Conflating routing with outcomes — `routed: I inline, P Pass 1, F Pass 2, S Pass 3` counts where each claim *went*, not what each verdict *was*. The leading `(N unverifiable, M contradicted)` parenthetical aggregates outcomes across all lanes; the `(verified V, contradicted C, unverifiable U)` parentheticals at the Pass 2 / Pass 3 tails attribute external-lane outcomes specifically (because the external lanes are where verdict drift across runs is most observable).
 - Claiming Pass 2 dispatch when `.fetched-urls.json` is empty, or a `verified` Pass 2 verdict against a non-2xx URL — the workflow's URL-fetch is the deterministic floor for Pass 2, and a dead/404 citation can't verify a claim. The validator's `pass-2-fetch-faithfulness` rule (v8: also checks `.verified-claims.json`) trips on both.
@@ -194,6 +194,8 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 | `mismatch` | ⚔️ | 🚨 Outstanding | a cross-sibling-consistency check where this PR diverges from the siblings' established pattern |
 
 `✅` is the canonical `verified` glyph — it is *not* a generic stand-in for "passed". `matches` uses `🤝`, `not-a-claim` uses `➖`. The `trail-bucket-consistency` rule emits a `trail-per-verdict-emoji` nudge when a trail line still renders a legacy bucket emoji (✅ on `matches`/`not-a-claim`, ⚠️ on `unverifiable`, 🚨 on `contradicted`/`mismatch`) instead of the per-verdict glyph.
+
+**Use the six canonical words verbatim — never a variant.** On a 🔍 trail line, the verdict immediately after the emoji is EXACTLY one of `verified` / `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch`. Do not freelance descriptive variants — `source-mismatch`, `author-authored`, `author`, `source-title-match`, `failed-to-find`, `verified weakly` and the like are not verdict words. A non-canonical token parses as "no verdict" and slips past the `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks, so the `trail-canonical-verdict-word` rule flags it (the surgical fixer derives the right word from the rendered glyph). A framing nuance (`strengthened`/`narrowed`/`shifted`) belongs in the parenthetical (`→ ❌ contradicted (strengthened — claim narrows "use" to "in production")`), never in place of the verdict word.
 
 **Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <per-verdict emoji> <verdict word> (<evidence pointer>)`. Cross-sibling checks render as `→ 🤝 matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ ⚔️ mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → 🤝 matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
 

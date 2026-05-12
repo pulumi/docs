@@ -72,7 +72,9 @@ Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers,
 
 **Degraded pre-step.** If `.candidate-claims.json` carries a non-empty `errors` array (an LLM pass failed, no `ANTHROPIC_API_KEY`, etc.), extraction was degraded — note "claim-extraction pre-step degraded; reverting to in-review extraction" in the trail, and run the in-review extraction (§Subagent extraction dispatch) yourself as a fallback. If the artifact is absent entirely (interactive `/docs-review`, or the workflow didn't run the pre-step), use the in-review extraction path as today — same fallback.
 
-`line_range_unverified: true` on an entry means the LLM-asserted line range was out of bounds for the file and got clamped — trust the `text`, treat the line range as approximate when anchoring the trail entry.
+**Don't open this artifact when `.verified-claims.json` supersedes it.** On the normal CI path the verify-claims pre-step also ran and wrote `.verified-claims.json` whose `verdicts[]` carries one entry per candidate claim — `claim_id`, `file`, `line_range`, `text`, `type`, plus the verdict, `evidence`, and `source` — so it is a superset of `.candidate-claims.json` for everything the review needs. Read `.verified-claims.json` (§Routed verification) and treat *its* `verdicts[]` as the floor; don't also read `.candidate-claims.json` on that path. Read `.candidate-claims.json` directly only when `.verified-claims.json` is absent or its `verdicts[]` is empty (whole verify-claims-step crash) — then it's the floor and the in-review verification fallback applies.
+
+`line_range_unverified: true` on a `.candidate-claims.json` entry means the LLM-asserted line range was out of bounds for the file and got clamped — trust the `text`, treat the line range as approximate when anchoring the trail entry.
 
 ### Scope
 
@@ -83,7 +85,7 @@ Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers,
 
 Hugo posts duplicate the same load-bearing phrasing across the body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body plus every prose-bearing frontmatter key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
 
-**Pin the sweep scope to the pre-step artifact.** `.frontmatter-validation.json` (workflow pre-step `frontmatter-validate.py`) carries `frontmatter_keys` per file — the flat list of that file's frontmatter keys with one level of nesting expanded (`title`, `meta_desc`, `description`, `summary`, `social.twitter`, `social.linkedin`, `social.bluesky`, `menu.iac`, `aliases`, …). Sweep **exactly** `body` plus the prose-bearing keys in that list (`meta_desc`, `description`, `summary`, `title`, every `social.*` sub-key) — do **not** decide the scope ad hoc. Skip the structural keys (`menu.*`, `aliases`, `weight`, `date`, `draft`, `meta_image`, `authors`, `tags`). When you render the "Frontmatter sweep" investigation-log line, name the locations you actually swept (`ran on body + meta_desc + social.twitter + social.linkedin`); the validator checks that against `frontmatter_keys`. *(This pins what #18745-r2 got wrong — it swept `body + meta_desc` and silently omitted the `social.*` sub-keys, dropping the social/title framing-mismatch findings.)*
+**Pin the sweep scope to the pre-step artifact.** `.frontmatter-validation.json` (workflow pre-step `frontmatter-validate.py`) carries `frontmatter_keys` per file — the flat list of that file's frontmatter keys with one level of nesting expanded (`title`, `meta_desc`, `description`, `summary`, `social.twitter`, `social.linkedin`, `social.bluesky`, `menu.iac`, `aliases`, …). Sweep **exactly** `body` plus the prose-bearing keys in that list (`meta_desc`, `description`, `summary`, `title`, every `social.*` sub-key) — do **not** decide the scope ad hoc. Skip the structural keys (`menu.*`, `aliases`, `weight`, `date`, `draft`, `meta_image`, `authors`, `tags`). When you render the "Frontmatter sweep" investigation-log line, name the locations you actually swept (`ran on body + meta_desc + social.twitter + social.linkedin`); the validator checks that against `frontmatter_keys`. *(The failure mode this guards against: a sweep over `body + meta_desc` that silently omits the `social.*` sub-keys, dropping social/title framing-mismatch findings.)*
 
 Example: a blog post says "96% of enterprises run AI agents in production today" in the body, and the same phrase (or a paraphrase: "96% of enterprises run agents in production") appears in `social.linkedin` and `social.bluesky` (both in the file's `frontmatter_keys`). Extract one claim, verify once, render the finding with three cited locations. Don't enumerate per-occurrence claims -- that triples verification work and risks the buckets disagreeing on confidence.
 
@@ -99,7 +101,7 @@ When a new or changed file lives in a structurally-templated directory (≥3 par
 
 - `menu_parents` — for each `menu.<name>.parent` declared in the file, did the parent identifier resolve in the same named menu? Carries `parent_exists_in_menu` (boolean) and `found_in_other_menus` (list — when the identifier exists in a different menu, the canonical "wrong-menu parent" bug).
 - `alias_collisions` — `{alias, collides_with, scope: pr-internal|repo-wide}` records. Built from a global walk of `aliases:` blocks across `content/**/*.md`; cross-references the PR file's *declared* aliases against everything else.
-- `url_collisions` — `{file, scope: hugo-alias|s3-redirect}` records keyed off the PR file's *rendered* URL. The pre-step builds a unified URL-ownership map combining Hugo aliases and `scripts/redirects/*.txt` entries (with normalization across `index.html`, `.html`, and trailing-slash conventions). When the PR's URL is already claimed by another file's alias or by an S3 redirect source, it surfaces here. **This replaces the brittle hardcoded `PARALLEL_PATTERNS` table from earlier S38 ships** — Hugo's own aliases and the move-doc skill's redirect-table maintenance are the canonical signal of "this URL is already taken."
+- `url_collisions` — `{file, scope: hugo-alias|s3-redirect}` records keyed off the PR file's *rendered* URL. The pre-step builds a unified URL-ownership map combining Hugo aliases and `scripts/redirects/*.txt` entries (with normalization across `index.html`, `.html`, and trailing-slash conventions). When the PR's URL is already claimed by another file's alias or by an S3 redirect source, it surfaces here. Hugo's own aliases and the move-doc skill's redirect-table maintenance are the canonical signal of "this URL is already taken" — there is no hand-maintained pattern table to keep in sync.
 
 **Read this artifact and surface its findings as 🚨 by default.**
 - `parent_exists_in_menu: false` → 🚨 menu-tree-breakage (Hugo will not render the parent linkage; user navigation breaks).
@@ -175,38 +177,7 @@ When the fan-out reports `5 of 5 siblings`, all five must have produced complete
 
 ### Claim extraction examples
 
-Worked examples of correct extraction from real prose patterns. Each shows the paragraph, the extracted claims, and the reasoning.
-
-**Example 1 -- composite claim**
-
-> "Pulumi ESC supports AWS, Azure, and Vault."
-
-- Claim 1: "Pulumi ESC supports AWS." (type: `feature existence`)
-- Claim 2: "Pulumi ESC supports Azure." (type: `feature existence`)
-- Claim 3: "Pulumi ESC supports Vault." (type: `feature existence`)
-- Reasoning: each listed integration is separately verifiable. Combining them hides which one is wrong when only one is.
-
-**Example 2 -- implicit comparison**
-
-> "Unlike Terraform, Pulumi uses real programming languages."
-
-- Claim 1: "Pulumi uses real programming languages." (type: `feature existence`)
-- Claim 2 (implicit): "Terraform does not use real programming languages." (type: `feature existence`)
-- Reasoning: "unlike X" asserts a property of X. Extract the implicit claim so it can be verified independently.
-
-**Example 3 -- quantitative**
-
-> "chardet is 41x faster at encoding detection than its predecessor."
-
-- Claim: "chardet is 41x faster at encoding detection than its predecessor." (type: `numerical` / `benchmark`)
-- Reasoning: any specific multiplier needs a source. The 🤔 intuition-check may also fire -- "41x" is unrounded and suspiciously specific.
-
-**Example 4 -- negative**
-
-> "Pulumi doesn't support ARM templates."
-
-- Claim: "Pulumi doesn't support ARM templates." (type: `feature existence`, negative)
-- Reasoning: harder to verify (proving a negative) -- requires reading the provider registry and confirming no matching package exists. Annotate as `verification_difficulty: high` so the subagent knows it may need extra evidence.
+The canonical worked-example set — composite/split, implicit comparison, quantitative, negative, the third-party-attribution flip, and the hard run-to-run-disagreement shapes — lives in `docs-review:references:claim-extraction` §Worked examples (12 cases). Don't maintain a parallel copy here; the in-review fallback path reads that file.
 
 ### Claim record format
 
@@ -333,23 +304,23 @@ Store the deduped claim list for the verification phase. No interim user output.
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), routes it deterministically — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires ≤8 parallel Sonnet 4.6 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root:
+**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), tries a deterministic pass-0 resolution (no model call — a `:latest` Docker tag → `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check → `verified`), routes the rest — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires parallel Sonnet 4.6 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root:
 
 ```
 {"schema_version": 1, "model": "claude-sonnet-4-6",
  "verdicts": [{"claim_id", "file", "line_range", "text", "type",
-               "route": "pass1"|"pass2"|"pass3",
+               "route": "pass0"|"pass1"|"pass2"|"pass3",
                "verdict": "verified"|"matches"|"not-a-claim"|"unverifiable"|"contradicted"|"mismatch",
                "confidence", "evidence", "source", "framing_note"?, "intuition_flag"?, "model_usage"}],
- "errors": [...], "meta": {...}}
+ "errors": [...], "meta": {"n_claims", "n_pass0", "n_pass1", "n_pass2", "n_pass3", ...}}
 ```
 
-**Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
+**This is the claim floor *and* the verdict source on the normal path** — `verdicts[]` carries one entry per candidate claim (it's a superset of `.candidate-claims.json`). Don't also open `.candidate-claims.json` when `.verified-claims.json` is present with a non-empty `verdicts[]` (see §Pre-step artifact `.candidate-claims.json`). **Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
 
 1. **Bucket promotion** — `contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → 🚨 Outstanding (always-🚨 carve-out — see `docs-review:references:output-format` §Bucket rules and §Tier rules); a `verified` claim with low confidence (or medium under heightened scrutiny) → ⚠️ Low-confidence verified; `verified`/`matches`/`not-a-claim` otherwise → trail-only (no bucket). Trail verdict drives bucket placement; don't relitigate `contradicted`/`mismatch`/`unverifiable` via the two-question test.
 2. **Framing call** — on top of each verdict's `framing_note` (`strengthened`/`narrowed`/`shifted`): mirror it into the rendered bucket bullet.
 3. **Intuition check** — on top of each verdict's `intuition_flag`: promote to 🤔 only when the verifier flagged it AND its verdict came back inconclusive (see §Intuition-check axis).
-4. **Render the trail and the bucket findings** per `docs-review:references:output-format`. The investigation-log "External claim verification" line's routed-metadata segment maps `.verified-claims.json`'s `meta` directly: `routed: 0 inline, <meta.n_pass1> Pass 1, <meta.n_pass2> Pass 2, <meta.n_pass3> Pass 3` (verify-claims.py folds the old "inline" lane into `pass1`, so `inline` is always 0 on the normal path; add your in-review additions' routes). The per-lane `(verified V, contradicted C, unverifiable U)` parentheticals count the `pass2`- and `pass3`-routed verdicts by `verdict`; the leading `(N unverifiable, M contradicted)` parenthetical aggregates all verdicts.
+4. **Render the trail and the bucket findings** per `docs-review:references:output-format`. The investigation-log "External claim verification" line's routed-metadata segment maps `.verified-claims.json`'s `meta` directly: `routed: <meta.n_pass0> inline, <meta.n_pass1> Pass 1, <meta.n_pass2> Pass 2, <meta.n_pass3> Pass 3` — `n_pass0` is verify-claims.py's pass-0 lane (claims resolved deterministically with no model verifier dispatched, e.g. a `:latest` Docker tag demoted to `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check); those map to the `inline` counter. Add your in-review additions' routes (a claim you resolved without dispatching a verifier counts as `inline`). The per-lane `(verified V, contradicted C, unverifiable U)` parentheticals count the `pass2`- and `pass3`-routed verdicts by `verdict`; the leading `(N unverifiable, M contradicted)` parenthetical aggregates all verdicts.
 
 **Claims you added beyond the floor** (claims the artifact missed — see §Combine step) have no verdict in `.verified-claims.json`; verify them in-review using the §Routed verification fallback below, fold their routes into the routed-metadata counts, and render their trail lines the same way.
 
@@ -566,19 +537,7 @@ Subagents rate each verified claim as high / medium / low. Use the rubric below;
 | **Medium** | Indirect evidence: keyword collocation in the relevant repo, partial match in docs (claim phrasing differs from source phrasing but maps to the same concept), source exists but the page is older than the claim's temporal context |
 | **Low** | Circumstantial: pattern-matching across multiple near-matches, a single forum / blog post, plausible but unverified by an authoritative source |
 
-Examples:
-
-- *Claim:* "`pulumi up` accepts a `--stack` flag."
-  *Evidence:* `gh api repos/pulumi/pulumi/contents/sdk/go/cmd/pulumi-language-go/main.go` shows the `--stack` flag registered on the `up` subcommand.
-  *Rating:* **high** -- direct source match.
-
-- *Claim:* "Pulumi ESC integrates with Vault."
-  *Evidence:* `pulumi/esc` README mentions Vault among other providers; no linked doc page shows a worked example.
-  *Rating:* **medium** -- source exists but doesn't exactly match the "integrates with" phrasing; author may have overstated.
-
-- *Claim:* "Most Pulumi users deploy on AWS."
-  *Evidence:* No single source; multiple blog posts reference Pulumi+AWS prominently.
-  *Rating:* **low** -- circumstantial.
+Calibration example: "`pulumi up` accepts a `--stack` flag" verified by `gh api .../pulumi-language-go/main.go` showing the flag registered → **high** (direct source match). A README that *mentions* a provider but no worked example → **medium**. "Most users deploy on AWS" backed only by blog-post collocation → **low**.
 
 ### Subagent prompts
 
