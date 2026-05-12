@@ -1,0 +1,69 @@
+{{- $data := site.Data.announcements -}}
+{{- with $data -}}
+{{- $isDocs := or (hasPrefix $.RelPermalink "/docs/") (hasPrefix $.RelPermalink "/tutorials/") -}}
+{{- $eligible := slice -}}
+{{- range .announcements -}}
+  {{- if .active -}}
+    {{- $display := default "both" .display -}}
+    {{- if or (eq $display "both") (and $isDocs (eq $display "docs")) (and (not $isDocs) (eq $display "marketing")) -}}
+      {{- $eligible = $eligible | append . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $eligible -}}
+{{- $ids := slice -}}{{- range $eligible -}}{{- $ids = $ids | append .id -}}{{- end -}}
+<script>
+(function(){
+  try {
+    var ids = {{ $ids | jsonify | safeJS }};
+    var dismissed = [];
+    try {
+      var parsed = JSON.parse(localStorage.getItem("announcement-banner") || "{}");
+      if (Array.isArray(parsed.dismissed)) dismissed = parsed.dismissed;
+    } catch (e) {}
+    var eligible = ids.filter(function(id){ return dismissed.indexOf(id) < 0; });
+    if (eligible.length === 0) return;
+    var chosen = eligible[Math.floor(Math.random() * eligible.length)];
+    var s = document.createElement("style");
+    s.id = "announcement-banner-reveal";
+    s.textContent = '#announcement-banner{display:block!important}#announcement-banner .announcement[data-announcement-id="' + chosen + '"]{display:flex!important}';
+    document.head.appendChild(s);
+    document.documentElement.setAttribute("data-announcement-chosen", chosen);
+  } catch (e) {}
+})();
+</script>
+<div id="announcement-banner" class="hidden w-full bg-violet-950 text-white group text-sm" data-announcement-banner role="region" aria-label="Site announcement">
+  {{- range $eligible }}
+  {{- $dismissible := true -}}
+  {{- if isset . "dismissible" -}}{{- $dismissible = .dismissible -}}{{- end }}
+  {{- if and .icon .badge -}}
+    {{- errorf "announcement %q: set either `icon` or `badge`, not both" .id -}}
+  {{- end }}
+  <div class="announcement hidden h-10 items-center gap-3 px-4 md:px-6"
+       data-announcement-id="{{ .id }}"
+       data-dismissible="{{ $dismissible }}">
+    {{ $href := "" }}{{ with .cta }}{{ $href = .href }}{{ end }}
+    {{ if $href }}<a href="{{ $href }}" class="contents text-white group-hover:text-white/90 hover:no-underline">{{ end }}
+      {{ with .badge }}<span class="shrink-0 inline-flex items-center rounded-full bg-violet-300 text-violet-950 px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-wide">{{ . }}</span>{{ end }}
+      {{ with .icon }}{{ partial "icon.html" (dict "name" . "class" "size-5 shrink-0 text-violet-300" "weight" "fill") }}{{ end }}
+      <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap" data-announcement-marquee>
+        <span class="inline-block" data-announcement-content>
+          <span class="announcement-text inline-block">{{ .text | markdownify }}</span>
+        </span>
+      </div>
+    {{ if $href }}</a>{{ end }}
+    {{ with .cta }}
+    <a href="{{ .href }}" class="shrink-0 inline-flex items-center rounded-md border border-white/20 px-2 py-0.5 text-xs font-medium text-white hover:bg-white/10 hover:no-underline">{{ .label }}</a>
+    {{ end }}
+    {{ if $dismissible }}
+    <button type="button" aria-label="Dismiss announcement"
+            class="shrink-0 inline-flex h-6 w-6 items-center justify-center rounded text-white hover:bg-white/10"
+            data-announcement-dismiss>
+      {{ partial "icon.html" (dict "name" "x" "class" "size-3") }}
+    </button>
+    {{ end }}
+  </div>
+  {{- end }}
+</div>
+{{- end -}}
+{{- end -}}
