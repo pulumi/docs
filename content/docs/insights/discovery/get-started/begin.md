@@ -46,7 +46,7 @@ Leave the default environment definition for now, and you will return to finish 
 
 {{% choosable cloud aws %}}
 
-To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc/) for authentication. Follow these steps:
+To configure Pulumi Insights with AWS, you will use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/) for authentication. Follow these steps:
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
 2. Go to the **Roles** section and create a new role.
@@ -140,7 +140,7 @@ Alternatively, you can use a Service Principal with a client secret. This requir
 
 {{% choosable cloud oci %}}
 
-To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc/) for authentication.
+To configure Pulumi Insights with OCI, you will use [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/) for authentication.
 
 1. Set up API Key authentication by providing the following credentials:
 

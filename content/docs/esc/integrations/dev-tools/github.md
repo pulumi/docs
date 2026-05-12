@@ -26,7 +26,7 @@ Before using the Pulumi ESC GitHub Action, your workflow must authenticate with 
 
 The recommended approach uses OpenID Connect (OIDC) with the [`pulumi/auth-actions`](https://github.com/marketplace/actions/pulumi-auth-action) GitHub Action. Rather than storing a long-lived Pulumi access token as a repository secret, OIDC allows GitHub Actions to exchange a short-lived identity token for a scoped Pulumi access token at runtime.
 
-Before you can use OIDC, you must configure Pulumi Cloud to trust GitHub Actions as an OIDC issuer. Follow the [Configuring OpenID Connect for GitHub](/docs/administration/access-identity/oidc-client/github/) guide to complete this one-time setup in your Pulumi organization.
+Before you can use OIDC, you must configure Pulumi Cloud to trust GitHub Actions as an OIDC issuer. Follow the [Configuring OpenID Connect for GitHub](/docs/administration/access-identity/oidc-issuers/github/) guide to complete this one-time setup in your Pulumi organization.
 
 Once that trust relationship is established, add the following permissions block to your workflow so that GitHub can issue OIDC tokens:
 
@@ -46,7 +46,7 @@ Then include a `pulumi/auth-actions` step before any ESC action steps:
     requested-token-type: urn:pulumi:token-type:access_token:organization
 ```
 
-The `id-token: write` permission is required for GitHub Actions to issue OIDC tokens to your workflow. The `requested-token-type` value determines the scope of the resulting Pulumi token; see [token types](/docs/administration/access-identity/oidc-client/#token-types-by-edition) for details on which types are available for your Pulumi edition.
+The `id-token: write` permission is required for GitHub Actions to issue OIDC tokens to your workflow. The `requested-token-type` value determines the scope of the resulting Pulumi token; see [token types](/docs/administration/access-identity/oidc-issuers/#token-types-by-edition) for details on which types are available for your Pulumi edition.
 
 ### Access token
 
