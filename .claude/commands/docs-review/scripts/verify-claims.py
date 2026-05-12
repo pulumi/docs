@@ -113,7 +113,7 @@ MAX_TOKENS_VERIFY = 2048
 HTTP_TIMEOUT = 120          # seconds per API call
 MAX_RETRIES = 3             # API-level retries on 429 / 5xx / transient network
 MAX_CONCURRENCY = 16        # parallel per-claim verifiers (short HTTPS round-trips — more parallelism trims wall-clock, same $)
-MAX_TURNS = {"pass1": 5, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane (pass1 = the gh+read_file budget)
+MAX_TURNS = {"pass1": 8, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane (pass1 = the gh+read_file budget; 8 is the floor — at 5, pulumi-internal claims that need a few gh round-trips hit the cap and fall back to `unverifiable`, inflating the 🚨 count)
 
 GH_TIMEOUT = 30             # seconds per `gh` subprocess
 GH_OUTPUT_CAP = 12_000      # chars of `gh` output fed back to the model
