@@ -18,17 +18,17 @@ social:
     linkedin: "We're simplifying how Pulumi billing works. Pulumi Credits gives you one unified currency across the entire platform — IaC, ESC, Deployments, Insights, and Neo all draw from the same pool. No more guessing fixed allocations per product or separate procurement for each new capability. Neo Tokens bring transparent, predictable pricing to AI-powered infrastructure features at $3 per million tokens. Changes are effective June 1, 2026."
 ---
 
-Today, we're announcing an updated metering and billing approach to simplify purchasing and support Pulumi Neo usage. The goal of this change is straightforward: we want the billing model to get out of the way so you can adopt new capabilities when they're useful to you. These changes will be effective June 1, 2026.
+Today, we're announcing an updated metering and billing approach to simplify purchasing and support flexible Pulumi Neo usage. The goal of this change is straightforward: we want the billing model to get out of the way so you can adopt new capabilities when they're useful to you. These changes will be effective June 1, 2026.
 
-Since we launched our consumption-based billing model for Pulumi IaC 5 years ago, our goal has been the same: let teams pay for what they use either monthly on a credit card or with right-sized agreements for our invoiced customers. Since then, our product portfolio has expanded significantly: Pulumi ESC, Pulumi Deployments, Pulumi Insights, and now Pulumi Neo. With these changes, billing has grown more complex. Teams managing multi-year contracts would find themselves pre-purchasing specific quantities of resource-hours, secret-hours, and workflow-minutes, then having to reconfigure those contracts to adopt a new product capability mid-term.
+Since we launched our consumption-based billing model for Pulumi IaC 5 years ago, our goal has been the same: let teams pay for what they use either monthly on a credit card or with right-sized prepaid agreements for our invoiced customers. Since then, our product portfolio has expanded significantly: Pulumi ESC, Pulumi Deployments, Pulumi Insights, and now Pulumi Neo. With these changes, billing has grown more complex. Teams managing multi-year contracts would find themselves pre-purchasing specific quantities of resource-hours, secret-hours, and workflow-minutes, then having to reconfigure those contracts to adopt a new product capability mid-term.
 
-We're introducing two changes that address this directly: **Pulumi Credits** as a unified billing currency across all of Pulumi capabilities and **Neo Tokens** as the meter for LLM-powered features.
+We're introducing two changes that address this directly: **Pulumi Credits** as the unified billing currency across all of Pulumi capabilities and **Neo Tokens** as the new meter for LLM-powered features.
 
 <!--more-->
 
 ## The Problem We're Solving
 
-Under the previous model, adopting a new Pulumi capability during an existing contract often meant separate procurement processes. A team mid-way through a three-year agreement that wanted to start using Pulumi ESC without pre-purchased secret-hours would be billed in arrears monthly for that usage, even if they had unused budget allocated to other features. Self-serve customers faced a similar problem where the fixed allocation of resource-hours and secret-hours might not fit their specific needs.
+Under the previous model, adopting a new Pulumi capability during an existing contract often meant separate procurement processes. A team midway through a three-year agreement that wanted to start using Pulumi ESC without pre-purchased secret-hours would be billed in arrears monthly for that usage, even if they had unused budget allocated to other features. Self-serve customers faced a similar problem where the fixed allocation of resource-hours and secret-hours in their plan might not fit their specific needs.
 
 ## Pulumi Credits: One Currency for the Whole Platform
 
@@ -42,19 +42,19 @@ This means:
 - **Start using new features immediately.** IaC, Neo, ESC, Deployments, Insights and future capabilities all draw from the same pool.
 - **Volume pricing still applies.** Customers on annual and multi-year agreements can still save based on their overall commitment amount.
 
+This is a change from current offerings where "Pulumi Credits" were narrowly defined as 1 resource-hour. In order to shift to this new, more flexible model, an amendment to your agreement is required:
+
 ### For self-serve credit card customers
 
-Your monthly upfront fee transitions from covering a fixed number of resource-hours, secret-hours, and workflow-minutes to providing an equivalent pool of Pulumi Credits. Usage draws from that pool, and any overage is charged to your card at the end of the month following the same cadence as today.
+Your monthly upfront fee transitions from covering a fixed number of resource-hours, secret-hours, and workflow-minutes to providing an equivalent pool of Pulumi Credits. Usage draws from that pool, and any additional use beyond what you've prepaid is charged to your card at the end of the billing month following the same cadence as today.
 
 ### For invoiced customers: your transition options
 
-If you're currently on an invoiced Enterprise or Business Critical agreement, you have three paths forward:
+If you're currently on an invoiced Enterprise or Business Critical agreement, you have two paths forward:
 
-1. **Contract amendment**: Convert the remaining dollar value of your current product purchases (resource-hours, secret-hours, workflow-minutes) into an equivalent pool of Pulumi Credits. From the effective date of the amendment, all usage, including Neo Tokens, draws from that pool.
-
-2. **On-demand billing**: Do nothing. Under our standard Terms and Conditions, new feature usage (including Neo Tokens) can be billed monthly in arrears while your existing contract terms remain in place.
-
-3. **Early renewal**: Work with your Pulumi representative to prepay for anticipated usage across the full product portfolio, including Neo.
+1. **Do nothing:** If you are midway through your agreement and it meets your team's needs, there is no immediate change.
+2. **Contract amendment**: Convert the remaining dollar value of your current product purchases (resource-hours, secret-hours, workflow-minutes) into an equivalent pool of Pulumi Credits. From the effective date of the amendment, all usage, including Neo Tokens, draws from that pool.
+3. **Early renewal**: Work with your Pulumi representative to prepay for any increased anticipated usage across the full product portfolio, including Neo.
 
 Please contact your Pulumi representative to review the options available under your specific terms.
 
@@ -92,10 +92,9 @@ Pulumi Individual Edition remains free and will include a limited monthly alloca
 
 | Your situation | Recommended action |
 |---|---|
-| Invoiced, standard Pulumi [Terms and Conditions](https://www.pulumi.com/terms-and-conditions/) | Contact your Pulumi representative if you'd like to shift to the Pulumi Credits model. |
-| All other invoiced customers including cloud Marketplace customers | Contact your Pulumi representative to review options under your specific agreement. |
-| Credit card (Team or Enterprise) | No action required. Your plan transitions automatically on your next billing cycle. |
-| Individual Edition | No action required. Free Neo Token allocation included monthly. |
+| Annually Invoiced | Contact your Pulumi representative if you'd like to shift to the Pulumi Credits model. |
+| Monthly Credit Card (Team or Enterprise) | No action required. Current plans automatically transition on your next billing cycle. |
+| Individual Edition (Free) | No action required. Free Neo Token allocation included monthly. |
 
 ## Looking Ahead
 
