@@ -19,7 +19,14 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 10 (v9→v10 adds `no-todo-tokens`: a `<TODO: …>` (or bare
+Schema version: 11 (v10→v11 adds `no-placeholder-empty-form`: an explicit-
+  empty-form line — `_No outstanding findings in this PR._`, `_No items resolved
+  since the last review._`, etc. — must be reader-facing; a draft round where
+  the reviewer left compose-review.py's *older* placeholder text verbatim
+  (`_No pre-existing issues surfaced by the composer. Add any … per ci.md §3._`)
+  leaks internal plumbing into the public pinned comment. Anchored on the
+  `^_No ` opener so a finding about a PR that legitimately edits the docs-review
+  skill never trips it. v9→v10 adds `no-todo-tokens`: a `<TODO: …>` (or bare
   `<TODO>`) placeholder token must not survive to the published body. The
   workflow's `compose-review.py` pre-step seeds the review body with `<TODO>`
   markers for the parts that are the reviewer's to fill (summary paragraph,
@@ -55,7 +62,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 10
+SCHEMA_VERSION = 11
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -1894,6 +1901,41 @@ def check_shortcode_existence(ctx: Context) -> list[Violation]:
 # the bare `<TODO>` form is caught too.
 _TODO_TOKEN_RE = re.compile(r"<TODO\b[^>]*>")
 
+# An italic explicit-empty-form line (`_No outstanding findings…._`) that still
+# carries the composer's reviewer-facing instruction text (`per ci.md §`,
+# `surfaced by the composer`, a `docs-review:references:` pointer, `pre-stubbed`)
+# instead of the clean reader-facing form — i.e. the reviewer left the seeded
+# placeholder verbatim. Anchored on the `^_No ` opener so a *finding* about a
+# PR that legitimately edits the docs-review skill (which would discuss those
+# strings in prose, with backticks) never trips it.
+_PLACEHOLDER_EMPTY_FORM_RE = re.compile(
+    r"^\s*_No\b.*(?:per\s+ci\.md|surfaced by the composer|docs-review:references:|pre-stubbed)",
+    re.IGNORECASE,
+)
+
+
+def check_no_placeholder_empty_form(ctx: Context) -> list[Violation]:
+    """An explicit-empty-form line must be reader-facing — no leftover composer instructions.
+
+    `compose-review.py` seeds the empty 💡 / ✅ (and the no-stubs 🚨 / ⚠️) forms
+    as plain reader-facing italics (`_No pre-existing issues in touched files._`,
+    `_No items resolved since the last review._`, …); a draft round where the
+    reviewer left an *older* placeholder form (`_No pre-existing issues surfaced
+    by the composer. Add any … per ci.md §3._`) leaks internal plumbing into the
+    public pinned comment. Catch it.
+    """
+    violations: list[Violation] = []
+    for i, line in enumerate(ctx.body_lines, start=1):
+        if _PLACEHOLDER_EMPTY_FORM_RE.match(line):
+            violations.append(Violation(
+                rule_id="no-placeholder-empty-form",
+                line_ref=f"<body line {i}>",
+                expected="explicit-empty-form line is reader-facing (e.g. `_No pre-existing issues in touched files._`, `_No items resolved since the last review._`, `_No outstanding findings in this PR._`, `_No low-confidence findings._`) — no `per ci.md §`, `composer`, `docs-review:references:`, or `pre-stubbed`",
+                actual=f"line {i}: {line.strip()[:120]}",
+                hint="Replace the line with the clean reader-facing empty form; the 'what to add here' guidance belongs in ci.md §3, not in the published body.",
+            ))
+    return violations
+
 
 def check_no_todo_tokens(ctx: Context) -> list[Violation]:
     """No `<TODO: …>` (or bare `<TODO>`) placeholder survives to the published body.
@@ -2086,6 +2128,12 @@ RULES = [
         "desc": "Schema v10: no `<TODO: …>` (or bare `<TODO>`) placeholder from compose-review.py's draft survives to the published body.",
         "hint": "Replace every `<TODO: …>` (summary paragraph, confidence levels, fix prose, cross-sibling count, review-history summary, Tier-2 editorial balance) with actual content. The composer's self-check passes `--skip-rule no-todo-tokens`; the publish path does not.",
         "check": check_no_todo_tokens,
+    },
+    {
+        "id": "no-placeholder-empty-form",
+        "desc": "Schema v11: an explicit-empty-form line (`_No …._`) must be reader-facing — no leftover composer instructions (`per ci.md §`, `surfaced by the composer`, `docs-review:references:`, `pre-stubbed`).",
+        "hint": "Replace the placeholder line with the clean reader-facing empty form (e.g. `_No pre-existing issues in touched files._`, `_No items resolved since the last review._`); 'what to add here' guidance belongs in ci.md §3, not the published body.",
+        "check": check_no_placeholder_empty_form,
     },
 ]
 

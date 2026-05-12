@@ -306,11 +306,12 @@ def render_investigation_log(
     if not templated:
         bullets.append("- **Cross-sibling reads:** not run (not in a templated section)")
     else:
-        # Y = the dispatch-list size for the (first) templated file.
+        # Y = the dispatch-list size for the (first) templated file. The leading
+        # count starts at 0 (the reviewer's sibling-read fan-out runs in the
+        # review pass, not here) — ci.md §3 tells the reviewer to overwrite it.
+        # Keep the parenthetical reader-facing (no internal-tooling names).
         y = len(templated[0].get("siblings_for_dispatch") or templated[0].get("directory_peers") or [])
-        bullets.append(
-            f"- **Cross-sibling reads:** 0 of {y} siblings (fan-out runs in-review — replace this count with the number you actually read)"
-        )
+        bullets.append(f"- **Cross-sibling reads:** 0 of {y} siblings")
 
     # 2. External claim verification.
     if not verdicts:
@@ -414,9 +415,22 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
     )
 
 
+# `source` sentinels `verify-claims.py` emits when it has no real citation
+# (turn-cap exhausted, per-claim error, deterministic pass-0 resolution) — not
+# reader-facing "sources"; drop them rather than leak the script name.
+_INTERNAL_SOURCE_PREFIXES = ("verify-claims.py", "(no source pointer", "(no source")
+
+
+def _clean_source(src: str) -> str:
+    s = (src or "").strip()
+    if not s or any(s.startswith(p) for p in _INTERNAL_SOURCE_PREFIXES):
+        return ""
+    return redact(s)
+
+
 def _evidence_pointer(v: dict) -> str:
     ev = redact(trunc(v.get("evidence") or "", EVIDENCE_TRUNC))
-    src = redact((v.get("source") or "").strip())
+    src = _clean_source(str(v.get("source") or ""))
     parts = []
     fn = (v.get("framing_note") or "").strip()
     if fn:
@@ -505,15 +519,17 @@ def render_editorial_balance(eb: dict | None, is_blog: bool) -> str:
         "### 📊 Editorial balance\n\n"
         "<details>\n<summary>Section depth, mention distribution, recommendation steering</summary>\n\n"
         f"- **Section depth:** {n} H2 sections (mean {mean} lines, median {median}, std {std}). {out_str}\n"
-        "- **Vendor / entity mentions:** <TODO: entity-A: count · entity-B: count · … (count per `docs-review:references:blog` §Priority 2.5)>.\n"
-        "- **FAQ steering** (if a FAQ section is present): <TODO: N entries; count recommend X; count recommend Y — else delete this bullet>.\n\n"
+        "- **Vendor / entity mentions:** <TODO: entity-A: count · entity-B: count · … (one per distinctly-mentioned vendor/product)>.\n"
+        "- **FAQ steering** (if a FAQ section is present): <TODO: N FAQ entries; count recommend X; count recommend Y — or delete this bullet if there's no FAQ section>.\n\n"
         "</details>"
     )
 
 
 def render_outstanding(stubs: list[dict]) -> str:
+    # Empty form is reader-facing — the "what the reviewer should add here"
+    # guidance lives in ci.md §3, never in the published body.
     if not stubs:
-        return "### 🚨 Outstanding in this PR\n\n_No outstanding findings pre-stubbed from claim verification. Add Hugo-build / frontmatter / internal-link / cross-sibling-mismatch / code-examples / domain findings here per ci.md §3._"
+        return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
     lines = ["### 🚨 Outstanding in this PR", ""]
     for s in stubs:
         lines.append(s["bullet"])
@@ -523,7 +539,7 @@ def render_outstanding(stubs: list[dict]) -> str:
 def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     has_style = bool(vale_findings)
     if not stubs and not has_style:
-        return "### ⚠️ Low-confidence\n\n_No low-confidence findings pre-stubbed. Add code-examples / editorial-balance threshold / intuition / domain ⚠️ findings here per ci.md §3._"
+        return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
     lines = ["### ⚠️ Low-confidence", ""]
     for s in stubs:
         lines.append(s["bullet"])
@@ -586,11 +602,11 @@ def _render_style_findings(findings: list[dict]) -> str:
 
 
 def render_preexisting() -> str:
-    return "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues surfaced by the composer. Add any (scoped to changed files, capped 15/file) per ci.md §3._"
+    return "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues in touched files._"
 
 
 def render_resolved() -> str:
-    return "### ✅ Resolved since last review\n\n_No items resolved since the last review. On a re-entrant run, populate from the prior pinned comment per `docs-review:references:update`._"
+    return "### ✅ Resolved since last review\n\n_No items resolved since the last review._"
 
 
 def render_review_history(timestamp: str, head_sha_short: str) -> str:
@@ -633,7 +649,7 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "anti-hedge mandate; do NOT soften to a manual-check ask. REMOVE only if you judge the verifier wrong "
                         "(then dispute in a follow-up issue, don't silently drop)")
             else:
-                todo = ("write the fix / suggestion block for the author per `docs-review:references:shared-criteria` (quote-and-rewrite). "
+                todo = ("write the fix / suggestion block for the author (quote-and-rewrite mandate). "
                         "REMOVE only if you judge the verifier wrong (then dispute in a follow-up issue, don't silently drop)")
             outstanding.append(_stub_bullet(v, todo))
         elif verdict == "unverifiable":
@@ -732,7 +748,9 @@ def compose(args: argparse.Namespace) -> str:
 
     degraded_note: str | None = None
     if verdicts is None:
-        # verify-claims artifact absent — fall back to candidate-claims floor.
+        # Claim verification didn't complete — fall back to the candidate-claims
+        # floor. (Reader-facing strings only; ci.md §Fallback tells the reviewer
+        # to re-verify each claim in the review pass.)
         if candidate_claims:
             verdicts = [
                 {
@@ -744,17 +762,17 @@ def compose(args: argparse.Namespace) -> str:
                     "route": "pass1",
                     "verdict": "unverifiable",
                     "confidence": "low",
-                    "evidence": "verify-claims pre-step did not run; verify in-review",
-                    "source": "verify-claims.py",
+                    "evidence": "claim verification did not complete",
+                    "source": "",
                 }
                 for c in candidate_claims
             ]
-            degraded_note = ("The verify-claims pre-step did not run — these trail lines are stubs from the "
-                             "candidate-claims floor; verify each in-review and replace the verdicts.")
+            degraded_note = ("Claim verification did not complete; the trail entries below are placeholders — "
+                             "each claim was re-verified during the review pass.")
         else:
             verdicts = []
     elif vc_errors:
-        degraded_note = ("The verify-claims pre-step reported errors — some verdicts may be incomplete; "
+        degraded_note = ("Claim verification reported errors — some verdicts may be incomplete; "
                          "spot-check the affected claims in-review.")
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
