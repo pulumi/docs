@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi vs. AWS CloudFormation"
-meta_desc: A comparison of Pulumi and AWS CloudFormation across language, cloud support, state, secrets, execution, modularity, policy, and migration paths.
+meta_desc: "Pulumi vs. AWS CloudFormation: Pulumi is a multi-cloud IaC tool in general-purpose languages; CloudFormation is AWS-only with JSON/YAML templates."
 title: AWS CloudFormation
 h1: Pulumi vs. AWS CloudFormation
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -26,13 +26,15 @@ aliases:
 - /docs/iac/comparisons/cloud-templates/
 ---
 
-This page compares Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html), two declarative infrastructure as code tools with overlapping capabilities and several meaningful differences. It covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of AWS CloudFormation.
+Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) are both declarative infrastructure as code tools for AWS. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); AWS CloudFormation uses JSON or YAML templates and provisions only AWS resources.
+
+This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of AWS CloudFormation.
 
 ## What is Pulumi?
 
 {{< what-is-pulumi >}}
 
-For users coming from CloudFormation, the most relevant Pulumi providers are the [AWS Classic](/registry/packages/aws/) provider (built on the AWS Terraform provider) and the [AWS Cloud Control](/registry/packages/aws-native/) native provider, which is generated from the AWS Cloud Control API and offers same-day coverage of new AWS resources.
+For users coming from CloudFormation, the most relevant Pulumi providers are the [AWS Classic](/registry/packages/aws/) provider (built on the AWS Terraform provider) and the [AWS Cloud Control](/registry/packages/aws-native/) provider, which is generated from the AWS Cloud Control API and offers same-day coverage of new AWS resources. The Pulumi Registry also covers Azure, Google Cloud, Kubernetes, and SaaS platforms like Datadog, Auth0, GitHub, and Cloudflare.
 
 ## What is AWS CloudFormation?
 
@@ -64,7 +66,7 @@ CloudFormation templates are written in JSON or YAML. Dynamic behavior comes fro
 
 ### Cloud and service coverage
 
-CloudFormation manages AWS resources, with third-party support added through CloudFormation Registry extensions and custom resources backed by AWS Lambda. Pulumi targets any cloud or SaaS platform through the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). For AWS specifically, Pulumi offers the [AWS Classic](/registry/packages/aws/) provider and the [AWS Cloud Control](/registry/packages/aws-native/) native provider, which is generated from the AWS Cloud Control API and offers same-day coverage of new AWS resources. Pulumi also maintains native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated directly from each platform's API schema. When a resource is not available in a Pulumi provider, Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) for use from a Pulumi program.
+CloudFormation manages AWS resources, with third-party support added through CloudFormation Registry extensions and custom resources backed by AWS Lambda. Pulumi targets any cloud or SaaS platform through the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). For AWS specifically, Pulumi offers the [AWS Classic](/registry/packages/aws/) provider, built on the AWS Terraform provider, and the [AWS Cloud Control](/registry/packages/aws-native/) provider, which is generated from the AWS Cloud Control API and offers same-day coverage of new AWS resources. Pulumi also maintains native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated directly from each platform's API schema. When a resource is not available in a Pulumi provider, Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) for use from a Pulumi program.
 
 ### Execution and rollbacks
 
@@ -86,6 +88,23 @@ Pulumi's [Component Resources](/docs/iac/concepts/components/) are runtime objec
 
 The [Automation API](/docs/iac/automation-api/) lets a host application drive Pulumi without shelling out to the CLI. Practical uses include embedding stack creation in a SaaS product, building an internal developer platform that provisions environments per team or per branch, generating ephemeral preview environments from CI, and orchestrating cross-cloud deployments where each step runs as part of a larger workflow. CloudFormation is invoked through the AWS Console, AWS CLI, AWS SDKs, or the CloudFormation API directly, and does not provide an equivalent embeddable SDK.
 
+## When to choose Pulumi vs. AWS CloudFormation
+
+**Choose Pulumi when** you:
+
+1. Manage infrastructure across multiple clouds or SaaS providers (Azure, Google Cloud, Kubernetes, Datadog, Cloudflare, etc.) and want one tool for all of it.
+1. Want to write infrastructure in a general-purpose language with the testing frameworks, package managers, and IDE tooling that already exist in that ecosystem.
+1. Need an embeddable SDK ([Automation API](/docs/iac/automation-api/)) to drive deployments from a host application — internal developer platforms, SaaS products, or ephemeral preview environments per pull request.
+1. Want built-in secrets encryption, pluggable KMS providers, and per-stack encryption keys without bolting on a separate service.
+
+**Choose AWS CloudFormation when** you:
+
+1. Provision only AWS resources and want a service fully managed inside your AWS account with no external dependencies.
+1. Depend on CloudFormation-specific features such as automatic stack rollback on failure, [Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html), or [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) for multi-account deployments.
+1. Have an existing investment in CloudFormation templates, custom resources, and team expertise that you don't want to migrate.
+
+The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and-import) below.
+
 ## Adoption: coexistence, conversion, and import
 
 There are several common paths for adopting Pulumi alongside or in place of AWS CloudFormation, and they can be combined:
@@ -95,6 +114,36 @@ There are several common paths for adopting Pulumi alongside or in place of AWS 
 1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned AWS resources under Pulumi management and generate the corresponding code in your chosen language.
 
 For a complete walkthrough including coexistence patterns and conversion, see [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/).
+
+## Frequently asked questions
+
+### Can Pulumi manage existing AWS CloudFormation stacks?
+
+Yes. A Pulumi program can read outputs from an existing CloudFormation stack via [`aws.cloudformation.getStack`](/registry/packages/aws/api-docs/cloudformation/getstack/), and can create and manage CloudFormation stacks themselves with [`aws.cloudformation.Stack`](/registry/packages/aws/api-docs/cloudformation/stack/). This lets you keep some infrastructure in CloudFormation while incrementally adopting Pulumi.
+
+### How do I migrate from CloudFormation to Pulumi?
+
+You have three options that can be combined: convert templates with [`pulumi convert --from cloudformation`](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/#converting-stacks-and-resources), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) for a full walkthrough.
+
+### Does Pulumi cover the same AWS resources as CloudFormation?
+
+Yes. The [AWS Cloud Control](/registry/packages/aws-native/) provider is generated from the AWS Cloud Control API — the same API CloudFormation uses — so it offers same-day coverage of new AWS resources. The [AWS Classic](/registry/packages/aws/) provider, built on the AWS Terraform provider, offers long-standing, comprehensive coverage and is appropriate for the majority of production use cases.
+
+### Is Pulumi free like AWS CloudFormation?
+
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. CloudFormation itself has no usage cost beyond the resources it manages.
+
+### How does Pulumi handle rollback if there is no automatic stack rollback?
+
+On a failed update, Pulumi leaves the stack in a partially-updated state and reports exactly which resources changed. You roll forward by fixing the program and running `pulumi up` again, or revert the program to a previous commit and re-deploy. This gives direct, scriptable control over the deployment loop at the cost of CloudFormation's automated cleanup behavior.
+
+### Can Pulumi detect drift like CloudFormation?
+
+Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/).
+
+### Can I use Pulumi for non-AWS resources alongside CloudFormation for AWS?
+
+Yes — and this is one of the more common adoption patterns. Teams keep AWS infrastructure in CloudFormation while using Pulumi for Kubernetes, Azure, Google Cloud, Datadog, Cloudflare, or other SaaS platforms, then optionally migrate AWS later.
 
 ## Next steps
 
