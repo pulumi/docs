@@ -36,14 +36,16 @@
   {{- range $eligible }}
   {{- $dismissible := true -}}
   {{- if isset . "dismissible" -}}{{- $dismissible = .dismissible -}}{{- end }}
+  {{- $href := "" -}}{{- with .cta }}{{- $href = .href -}}{{- end }}
   {{- if and .icon .badge -}}
     {{- errorf "announcement %q: set either `icon` or `badge`, not both" .id -}}
   {{- end }}
+  {{- if and $href (in .text "](") -}}
+    {{- errorf "announcement %q: text contains a Markdown link but cta.href is set; nested <a> tags are invalid HTML" .id -}}
+  {{- end }}
   <div class="announcement hidden h-10 items-center gap-3 px-4 md:px-6"
-       data-announcement-id="{{ .id }}"
-       data-dismissible="{{ $dismissible }}">
-    {{ $href := "" }}{{ with .cta }}{{ $href = .href }}{{ end }}
-    {{ if $href }}<a href="{{ $href }}" class="contents text-white group-hover:text-white/90 hover:no-underline">{{ end }}
+       data-announcement-id="{{ .id }}">
+    {{ if $href }}<a href="{{ $href }}" tabindex="-1" class="contents text-white group-hover:text-white/90 hover:no-underline">{{ end }}
       {{ with .badge }}<span class="shrink-0 inline-flex items-center rounded-full bg-violet-300 text-violet-950 px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-wide">{{ . }}</span>{{ end }}
       {{ with .icon }}{{ partial "icon.html" (dict "name" . "class" "size-5 shrink-0 text-violet-300" "weight" "fill") }}{{ end }}
       <div class="min-w-0 flex-1 overflow-hidden whitespace-nowrap" data-announcement-marquee>

@@ -86,8 +86,7 @@ import { LocalStorageService } from "./state";
                 () => {
                     const dismissed = getDismissed();
                     if (!dismissed.includes(id)) {
-                        dismissed.push(id);
-                        store.updateKey(DISMISSED_FIELD, dismissed);
+                        store.updateKey(DISMISSED_FIELD, [...dismissed, id]);
                     }
                     showNext(id);
                 },
