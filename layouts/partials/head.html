@@ -29,6 +29,9 @@
     <link rel="preload" href="/fonts/inter-semibold.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="llms-txt" href="/llms.txt" />
+    {{ with .OutputFormats.Get "markdown" }}
+    <link rel="alternate" type="text/markdown" href="{{ .Permalink }}" />
+    {{ end }}
 
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
