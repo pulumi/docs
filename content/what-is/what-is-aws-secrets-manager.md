@@ -8,7 +8,7 @@ page_title: "What is AWS Secrets Manager?"
 
 AWS Secrets Manager is a fully managed AWS service that lets you store, retrieve, and automatically rotate sensitive credentials such as database passwords, API keys, OAuth tokens, and other application secrets. It removes hard-coded credentials from your source code and replaces them with on-demand, IAM-controlled retrieval at runtime, encrypted in transit and at rest with AWS Key Management Service (KMS).
 
-This guide covers how AWS Secrets Manager works, what you can store in it, how much it costs, how it compares to AWS Systems Manager Parameter Store, the most common use cases, and how to provision and manage secrets as code with Pulumi.
+Below, we break down how it works, what it costs, when to choose it over Parameter Store, and how to manage it with Pulumi.
 
 ## What is AWS Secrets Manager?
 
@@ -20,7 +20,7 @@ Each secret is encrypted at rest with an AWS KMS key, accessed through fine-grai
 
 At a high level, AWS Secrets Manager sits between your applications and the credentials they need:
 
-1. **Create a secret.** An administrator or an Infrastructure as Code tool such as Pulumi creates a secret. Secrets Manager encrypts the secret value using an AWS KMS customer master key (CMK).
+1. **Create a secret.** An administrator or an Infrastructure as Code tool such as Pulumi creates a secret. Secrets Manager encrypts the secret value using an AWS KMS key.
 1. **Grant access with IAM.** IAM identity-based policies and resource-based policies on the secret itself control which principals can read, write, or rotate it.
 1. **Retrieve at runtime.** Your application calls `GetSecretValue` over TLS. Secrets Manager decrypts the value with KMS and returns it to the caller.
 1. **Rotate on a schedule.** An AWS Lambda function (managed by AWS for supported databases, or custom for third-party services) periodically generates a new credential, updates the target system, and stores the new version in Secrets Manager.
@@ -176,7 +176,7 @@ Automatic rotation is one of the main reasons teams choose AWS Secrets Manager. 
 1. **`testSecret`** — Verify the new credential works by connecting to the target service.
 1. **`finishSecret`** — Promote `AWSPENDING` to `AWSCURRENT` and move the previous version to `AWSPREVIOUS` for safe rollback.
 
-For Amazon RDS, Aurora, Redshift, and DocumentDB, AWS provides ready-made rotation Lambdas. For everything else, you can author a custom Lambda or use one of the [community rotation templates](https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas). Schedule rotation in days, hours, or via a cron expression — AWS Secrets Manager supports rotation as frequently as every four hours.
+For Amazon RDS, Aurora, Redshift, and DocumentDB, AWS provides ready-made rotation Lambdas. For everything else, you can author a custom Lambda or use one of the [community rotation templates](https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas). Schedule rotation in days, hours, or via a cron expression. AWS Secrets Manager supports rotation as frequently as every 4 hours.
 
 ## AWS Secrets Manager best practices
 
@@ -204,7 +204,7 @@ AWS Secrets Manager is powerful, but you should plan around a few constraints:
 
 ## Managing AWS Secrets Manager with Pulumi
 
-Provisioning secrets imperatively through the CLI or console is fine for ad-hoc work, but production environments benefit from defining secrets as code. Pulumi lets you declare AWS Secrets Manager secrets, versions, rotation schedules, and IAM policies in TypeScript, Python, Go, C#, or Java — alongside the rest of your AWS infrastructure.
+Provisioning secrets imperatively through the CLI or console is fine for ad-hoc work, but production environments benefit from defining secrets as code. Pulumi lets you declare AWS Secrets Manager secrets, versions, rotation schedules, and IAM policies in TypeScript, Python, Go, or C#, alongside the rest of your AWS infrastructure.
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -314,7 +314,7 @@ class MyStack : Stack
 
 Browse the full [AWS Secrets Manager API reference](/registry/packages/aws/api-docs/secretsmanager/secret/) and the [Pulumi AWS Provider documentation](/registry/packages/aws/) for additional resources such as `SecretRotation`, `SecretPolicy`, and `SecretVersion`.
 
-For organizations that use AWS Secrets Manager alongside other secrets backends — HashiCorp Vault, Azure Key Vault, GCP Secret Manager, or 1Password — [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) provides a unified runtime layer. The [Pulumi ESC AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/) pulls secrets from AWS Secrets Manager into hierarchical, composable environments, and ESC's OIDC integration can dynamically generate short-lived AWS credentials on demand, so you never need to store long-lived access keys.
+For organizations that use AWS Secrets Manager alongside other secrets backends like HashiCorp Vault, Azure Key Vault, GCP Secret Manager, or 1Password, [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/pulumi-cloud/esc/) provides a unified runtime layer. The [Pulumi ESC AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/) pulls secrets from AWS Secrets Manager into hierarchical, composable environments, and ESC's OIDC integration can dynamically generate short-lived AWS credentials on demand, so you never need to store long-lived access keys.
 
 ## Frequently asked questions
 
@@ -332,7 +332,7 @@ AWS Systems Manager Parameter Store is a general-purpose configuration store wit
 
 ### Can AWS Secrets Manager rotate non-AWS secrets?
 
-Yes. AWS provides built-in rotation Lambdas for Amazon RDS, Aurora, Redshift, and DocumentDB, but you can author a custom AWS Lambda rotation function for any third-party service — SaaS API keys, on-premises databases, OAuth tokens, and so on.
+Yes. AWS provides built-in rotation Lambdas for Amazon RDS, Aurora, Redshift, and DocumentDB, but you can author a custom AWS Lambda rotation function for any third-party service, including SaaS API keys, on-premises databases, and OAuth tokens.
 
 ### Is AWS Secrets Manager compliant with SOC 2, PCI DSS, and HIPAA?
 
