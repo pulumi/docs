@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What is a CircleCI Secret?"
+lastmod: 2026-05-12
+about:
+  name: CircleCI
+  sameAs: https://en.wikipedia.org/wiki/CircleCI
+keywords:
+  - circleci secrets
+  - ci/cd secrets
+  - environment variables
+  - pipeline secrets
 ---
 
 [CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](/what-is/what-is-ci-cd/)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.

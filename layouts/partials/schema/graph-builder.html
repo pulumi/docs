@@ -29,6 +29,17 @@
   {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" "#main-content")) }}
 {{ end }}
 
+{{/* What-is pages: additionally emit a FAQPage entity if the body has H3 questions. */}}
+{{/* This lets the same page rank as both a TechArticle and FAQPage in search/AEO. */}}
+{{ if eq .Type "what-is" }}
+  {{ $faqEntity := partial "schema/collectors/faq-entity.html" . }}
+  {{ if and $faqEntity (gt (len $faqEntity) 0) }}
+    {{/* Override @id so it doesn't collide with the TechArticle's #main-content */}}
+    {{ $faqEntity = merge $faqEntity (dict "@id" "#faq") }}
+    {{ $graph = $graph | append $faqEntity }}
+  {{ end }}
+{{ end }}
+
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
 

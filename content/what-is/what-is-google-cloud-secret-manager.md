@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What is Google Cloud Secret Manager?"
+lastmod: 2026-05-12
+about:
+  name: Google Cloud Platform
+  sameAs: https://en.wikipedia.org/wiki/Google_Cloud_Platform
+keywords:
+  - google cloud secret manager
+  - gcp secrets
+  - secrets management
+  - key management
 ---
 
 Google Cloud is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. An important aspect of Google Cloud’s security framework is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". [Google Cloud Secret Manager](https://cloud.google.com/secret-manager) is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.

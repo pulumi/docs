@@ -27,6 +27,15 @@ customer_logos:
       - webflow
       - supabase
       - ro
+lastmod: 2026-05-12
+about:
+  name: YAML
+  sameAs: https://en.wikipedia.org/wiki/YAML
+keywords:
+  - yaml
+  - data serialization
+  - configuration language
+  - pulumi yaml
 ---
 
 YAML is a data serialization language most commonly used for configuration files. Its easy readability and rich feature set have made it an increasingly popular choice over the years, for everything from configuration files to object serialization. Originally named "Yet Another Markup Language," the creators changed the name to "YAML Ain't a Markup Language" in order to better reflect its strength as a data-oriented language rather than simply markup.

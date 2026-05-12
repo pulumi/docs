@@ -5,10 +5,27 @@ meta_desc: |
     Understand what platform engineering is, along with the main benefits and importance for modern application development.
 type: what-is
 page_title: What is Platform Engineering?
-lastmod: 2026-05-11
+lastmod: 2026-05-12
+about:
+  name: Platform engineering
+  sameAs: https://en.wikipedia.org/wiki/Platform_engineering
+keywords:
+  - platform engineering
+  - internal developer platform
+  - idp
+  - golden paths
+  - devops
 ---
 
 Platform engineering is a set of modern engineering practices that take a holistic approach to managing the entire software development lifecycle, encompassing infrastructure, tools, and processes. The aim of platform engineering is to provide a scalable and secure platform that supports the development, deployment, and operation of software applications in a standardized and efficient way.
+
+## Key takeaways
+
+- **Platform engineering builds a paved-road internal developer platform (IDP)** that lets application developers self-serve infrastructure safely.
+- **Two anchor concepts**: the IDP (the product the platform team ships) and golden paths (opinionated, well-supported routes through the platform for common tasks).
+- **It's distinct from [DevOps](/what-is/what-is-devops/) (a cultural movement) and [SRE](#how-does-platform-engineering-differ-from-devops-and-sre)** (operations engineering for production) — platform engineering productizes the tooling both depend on.
+- **Treat the platform as a product**: dedicated team, roadmap, developer customers, and adoption metrics — not a one-off project.
+- **AI changes platform engineering on three axes**: more code to govern, AI agents as platform consumers, and AI as a force multiplier for the platform team itself.
 
 {{< youtube "AUCt28gVR6Y?rel=0" >}}
 
@@ -30,11 +47,11 @@ A **golden path** (sometimes called a *paved road*) is an opinionated, well-supp
 
 Regardless of implementation details or specific methods, there are some simple requirements that many platform engineering teams follow. All of these requirements are driving toward maximizing the use of the cloud at scale across an organization while being secure and compliant and enabling developers and development teams to ship faster.
 
-* **Simple and powerful user experience**: Build curated experiences that empower developers by meeting them at their level of expertise. Use a variety of approaches to provide an ideal user/developer experience, including infrastructure code libraries (reusable pieces of code), infrastructure CLIs, internal developer portals (IDPs), or shared IaC templates.
-* **Automation as default**: Automation reduces devastating errors. Don't leave anything to ClickOps. Every change to infrastructure must be run through tests before rolling into production. No change should be untraceable. All infrastructure from resources, configurations, environments, and secrets are tracked in version control. Everything from infrastructure provisioning to control plane orchestrations needs to be programmable.
-* **Full visibility on everything**: Log, monitor, and observe all infrastructure for greater operational control. Optimize against unnecessary costs.
-* **Security as a foundation**: Security and compliance guardrails need to exist for everything. Fine-grained access controls should exist for every piece of infrastructure. Prefer dynamic, short-lived credentials over long-lived, static credentials with seamless integration into development workflows.
-* **Well architected by design**: Decouple the application complexity from the infrastructure complexity, reducing the blast radius of incidents while increasing resiliency. Construct shareable infrastructure components that are built for high availability and low operational maintenance. Operate seamlessly across heterogeneous environments while implementing best-in-class infrastructure.
+- **Simple and powerful user experience**: Build curated experiences that empower developers by meeting them at their level of expertise. Use a variety of approaches to provide an ideal user/developer experience, including infrastructure code libraries (reusable pieces of code), infrastructure CLIs, internal developer portals (IDPs), or shared IaC templates.
+- **Automation as default**: Automation reduces devastating errors. Don't leave anything to ClickOps. Every change to infrastructure must be run through tests before rolling into production. No change should be untraceable. All infrastructure from resources, configurations, environments, and secrets are tracked in version control. Everything from infrastructure provisioning to control plane orchestrations needs to be programmable.
+- **Full visibility on everything**: Log, monitor, and observe all infrastructure for greater operational control. Optimize against unnecessary costs.
+- **Security as a foundation**: Security and compliance guardrails need to exist for everything. Fine-grained access controls should exist for every piece of infrastructure. Prefer dynamic, short-lived credentials over long-lived, static credentials with seamless integration into development workflows.
+- **Well architected by design**: Decouple the application complexity from the infrastructure complexity, reducing the blast radius of incidents while increasing resiliency. Construct shareable infrastructure components that are built for high availability and low operational maintenance. Operate seamlessly across heterogeneous environments while implementing best-in-class infrastructure.
 
 ## What is a platform engineer?
 
@@ -42,11 +59,11 @@ _Platform engineer_ is a term used to describe the engineers that make up a plat
 
 Platform engineers typically take on a mix of responsibilities that span product, infrastructure, and developer-facing work:
 
-* **Discovering developer needs**: Running interviews and surveys with internal customers, tracking feedback, and prioritizing the platform roadmap like a product manager would.
-* **Building shared infrastructure components**: Authoring reusable infrastructure as code modules, secure-by-default templates, and service blueprints that developers can compose.
-* **Operating the platform itself**: Treating the IDP as production software — running it on SLOs, owning its on-call rotation, and managing its own CI/CD.
-* **Embedding guardrails**: Codifying security, compliance, and cost policies so they are enforced automatically rather than reviewed manually.
-* **Enabling adoption**: Producing documentation, examples, office hours, and migration tooling so development teams can self-serve onto the platform.
+- **Discovering developer needs**: Running interviews and surveys with internal customers, tracking feedback, and prioritizing the platform roadmap like a product manager would.
+- **Building shared infrastructure components**: Authoring reusable infrastructure as code modules, secure-by-default templates, and service blueprints that developers can compose.
+- **Operating the platform itself**: Treating the IDP as production software — running it on SLOs, owning its on-call rotation, and managing its own CI/CD.
+- **Embedding guardrails**: Codifying security, compliance, and cost policies so they are enforced automatically rather than reviewed manually.
+- **Enabling adoption**: Producing documentation, examples, office hours, and migration tooling so development teams can self-serve onto the platform.
 
 The role draws on a broad skill base: cloud infrastructure and container orchestration, [infrastructure as code](/what-is/what-is-infrastructure-as-code/), CI/CD, observability, security, and the product and communication skills required to treat developers as customers.
 
@@ -70,10 +87,10 @@ Developers need infrastructure to run their applications and services. Tradition
 
 Platform teams solve these challenges:
 
-* The cloud is too complex and unwieldy for most developers to use without abstractions and tooling
-* Developers need to know which infrastructure resources to provision
-* Developers need an easy way to provision, configure, and manage infrastructure
-* Infrastructure provisioned by developers needs to adhere to company best practices
+- The cloud is too complex and unwieldy for most developers to use without abstractions and tooling
+- Developers need to know which infrastructure resources to provision
+- Developers need an easy way to provision, configure, and manage infrastructure
+- Infrastructure provisioned by developers needs to adhere to company best practices
 
 Platform engineering can increase development velocity, improve security, increase infrastructure's adherence to best practices, and reduce operational costs through automation. It helps organizations increase the ROI on cloud investments and improves the software delivery lifecycle so that developers can ship new features faster.
 
@@ -83,9 +100,9 @@ Many companies have already created dedicated teams for platform engineering. In
 
 Platform engineering is one of the disciplines most directly reshaped by AI. The shift shows up in three places at once:
 
-* **More infrastructure, more surface area to govern**: AI coding assistants let application developers generate infrastructure faster than ever, which means platform teams are now responsible for guardrails over a much larger volume of cloud resources, IaC programs, and configurations than they were even two years ago. Policy as code, drift detection, and centralized observability move from "nice to have" to load-bearing.
-* **AI agents as a new class of platform consumer**: Human developers are no longer the only callers of the platform's APIs. Coding agents, deployment agents, and on-call agents increasingly provision, debug, and remediate infrastructure directly. That makes a clean, programmatic, well-documented platform interface significantly more valuable, with strong authentication, authorization, and audit trails on it as table stakes.
-* **AI as a force multiplier for platform engineers themselves**: Routine platform work (writing new IaC modules, diagnosing failed deployments, reconciling drift, keeping dependencies current across many stacks) is increasingly automatable. The most leveraged platform teams use AI to extend the surface area a small team can credibly support, not to replace headcount.
+- **More infrastructure, more surface area to govern**: AI coding assistants let application developers generate infrastructure faster than ever, which means platform teams are now responsible for guardrails over a much larger volume of cloud resources, IaC programs, and configurations than they were even two years ago. Policy as code, drift detection, and centralized observability move from "nice to have" to load-bearing.
+- **AI agents as a new class of platform consumer**: Human developers are no longer the only callers of the platform's APIs. Coding agents, deployment agents, and on-call agents increasingly provision, debug, and remediate infrastructure directly. That makes a clean, programmatic, well-documented platform interface significantly more valuable, with strong authentication, authorization, and audit trails on it as table stakes.
+- **AI as a force multiplier for platform engineers themselves**: Routine platform work (writing new IaC modules, diagnosing failed deployments, reconciling drift, keeping dependencies current across many stacks) is increasingly automatable. The most leveraged platform teams use AI to extend the surface area a small team can credibly support, not to replace headcount.
 
 [Pulumi Neo](/product/neo/) is a purpose-built AI infrastructure agent designed for this last shift. It works inside a platform team's existing Pulumi setup, enforces the same policy as code, and takes on provisioning, debugging, and remediation work, freeing the team to focus on platform design and developer experience rather than ticket queues.
 
@@ -106,11 +123,11 @@ Team structure matters as much as tooling. The [Team Topologies](https://teamtop
 
 Even well-resourced platform teams hit a predictable set of pitfalls. Knowing them in advance is half the battle:
 
-* **Building in a vacuum**: Platforms designed without continuous developer feedback tend to ship features no one uses. Treat developer interviews and adoption metrics as core platform telemetry.
-* **Trying to support everything at once**: Spreading the platform across too many languages, frameworks, or clouds before any single golden path is solid leads to a shallow surface that no team trusts.
-* **Confusing platform engineering with shared services**: A central infrastructure team that simply owns shared tooling is not a platform team. Platform engineering requires a product mindset, a defined developer customer, and treating the platform as a first-class internal product.
-* **Heavy-handed governance**: Mandating the platform without making it the lowest-friction path drives developers to work around it. Guardrails should be embedded in golden paths, not bolted on as approval gates.
-* **Under-investing in operations**: An IDP that is unreliable, slow, or undocumented quickly loses developer trust. Run the platform itself with the same SLOs, observability, and on-call discipline you expect of any production service.
+- **Building in a vacuum**: Platforms designed without continuous developer feedback tend to ship features no one uses. Treat developer interviews and adoption metrics as core platform telemetry.
+- **Trying to support everything at once**: Spreading the platform across too many languages, frameworks, or clouds before any single golden path is solid leads to a shallow surface that no team trusts.
+- **Confusing platform engineering with shared services**: A central infrastructure team that simply owns shared tooling is not a platform team. Platform engineering requires a product mindset, a defined developer customer, and treating the platform as a first-class internal product.
+- **Heavy-handed governance**: Mandating the platform without making it the lowest-friction path drives developers to work around it. Guardrails should be embedded in golden paths, not bolted on as approval gates.
+- **Under-investing in operations**: An IDP that is unreliable, slow, or undocumented quickly loses developer trust. Run the platform itself with the same SLOs, observability, and on-call discipline you expect of any production service.
 
 ## Frequently asked questions
 
@@ -151,6 +168,12 @@ Elkjøp Nordic is the leading consumer electronics retailer in the Nordics. The 
 {{< youtube "Q63ZaX340M4?rel=0" >}}
 
 Washington Trust Bank modernized its software development and infrastructure practices since migrating to Azure and adopting infrastructure as code. It enables developers with self-service infrastructure components, prevents developers from deploying forbidden resources with Pulumi Policies, and uses automation to save time and effort.
+
+## Get started with platform engineering using Pulumi
+
+1. **Define your golden path** as reusable [Pulumi components](/docs/iac/concepts/components/) — the building blocks developers consume instead of copy-paste.
+1. **Manage environments and secrets centrally** with [Pulumi ESC](/product/esc/) so every service inherits the right config, secrets, and policies.
+1. **Expose self-service** through the [Automation API](/docs/iac/packages-and-automation/automation-api/) or an internal developer portal like [Backstage](https://backstage.io/), so developers provision without filing tickets.
 
 ## Conclusion
 

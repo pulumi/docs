@@ -5,7 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Kubernetes Secrets?"
-
+lastmod: 2026-05-12
+about:
+  name: Kubernetes
+  sameAs: https://en.wikipedia.org/wiki/Kubernetes
+keywords:
+  - kubernetes secrets
+  - k8s secrets
+  - container secrets
+  - secrets management
 ---
 
 Kubernetes, or K8s, is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications.

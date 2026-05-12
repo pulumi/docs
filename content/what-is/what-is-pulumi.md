@@ -4,6 +4,15 @@ meta_desc: |
     Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
 type: what-is
 page_title: "What is Pulumi?"
+lastmod: 2026-05-12
+about:
+  name: Pulumi
+  sameAs: https://en.wikipedia.org/wiki/Pulumi
+keywords:
+  - pulumi
+  - infrastructure as code
+  - cloud engineering
+  - iac platform
 ---
 
 The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning domain-specific languages. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.

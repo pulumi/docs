@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What is a GitHub Actions Secret?"
+lastmod: 2026-05-12
+about:
+  name: GitHub Actions
+  sameAs: https://en.wikipedia.org/wiki/GitHub
+keywords:
+  - github actions secrets
+  - ci/cd secrets
+  - github secrets
+  - pipeline secrets
 ---
 
 [GitHub Actions](https://github.com/features/actions) is an automation feature provided by [GitHub](https://github.com/) that allows you to define workflows to automate various aspects of your software development process directly within your GitHub repository. A prevalent example is automatically running a linter test every time a commit is made against an opened pull request.

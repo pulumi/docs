@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What is HashiCorp Vault?"
+lastmod: 2026-05-12
+about:
+  name: HashiCorp
+  sameAs: https://en.wikipedia.org/wiki/HashiCorp
+keywords:
+  - hashicorp vault
+  - vault
+  - secrets management
+  - key management
 ---
 ### What is HashiCorp Vault?
 

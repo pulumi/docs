@@ -4,27 +4,39 @@ meta_desc: |
     Understand what is DevOps, Understand key practices of CI/CD, automation, infrastructure testing and security
 type: what-is
 page_title: "What is DevOps"
+lastmod: 2026-05-12
+about:
+  name: DevOps
+  sameAs: https://en.wikipedia.org/wiki/DevOps
+keywords:
+  - devops
+  - ci/cd
+  - infrastructure as code
+  - software delivery
+  - automation
 ---
 
-DevOps integrates the historic siloed disciplines of software development (Dev) and IT operations (Ops) as a methodology and culture shift that aligns people, processes, and technology in the lifecycle of application planning, development, delivery, and operations. For teams that successfully break down these silos and invest in the process and tools, they realize they can respond much more quickly to customer needs and improve products much faster than traditional methods have allowed. Additionally, DevOps practices lead to more reliable and secure software, enabling organizations to adapt swiftly to the pace of technology and market changes.
+DevOps is a cultural and technical movement that unifies software development (Dev) and IT operations (Ops) to shorten the path from idea to production. It aligns people, processes, and technology across the lifecycle of planning, building, delivering, and operating software, producing more reliable releases and faster response to customer needs.
 
-In this article, we'll touch on the following key areas regarding DevOps:
+## Key takeaways
 
-* DevOps essentials
-* DevOps key terms and tools
-* DevOps implementation
+- **DevOps is culture plus tooling** — the cultural shift removes silos between dev and ops; the tooling (CI/CD, IaC, observability) makes the new way of working sustainable.
+- **Core DevOps practices** include [CI/CD](/what-is/what-is-ci-cd/), [infrastructure as code](/what-is/what-is-infrastructure-as-code/), automated testing, monitoring, and version control for everything.
+- **The DORA four metrics** measure DevOps maturity: deployment frequency, lead time for changes, change failure rate, and mean time to recovery.
+- **DevOps overlaps with but is distinct from [SRE](/what-is/what-is-platform-engineering/#how-does-platform-engineering-differ-from-devops-and-sre)** (operations engineering) and **[platform engineering](/what-is/what-is-platform-engineering/)** (productizing shared tooling).
+- **The biggest gains** come from automating the boring, error-prone work: builds, environment provisioning, deployments, rollbacks, and observability.
 
 ## Essentials of DevOps
 
-* **Infrastructure as code (IaC)**: [IaC](/what-is/what-is-infrastructure-as-code/) is a key DevOps practice that involves using code and automation to define and manage your infrastructure rather than manual processes. Traditionally, infrastructure management was more manual and less consistent. Methods ranged from manual configurations via user interfaces or command-line interfaces, to less dynamic scripting or basic configuration tools. These methods often lead to challenges in maintaining consistency, scalability, and efficiency, especially as the complexity and size of infrastructures grows. With IaC, your infrastructure becomes versionable, [testable](/what-is/how-to-step-up-cloud-infrastructure-testing/), and repeatable. Infrastructure code can be packaged and shared both within the company and with the broader community. Many Infrastructure as code tools require you to use domain-specific languages, but tools with a modern approach such as [Pulumi](https://www.pulumi.com/), allow you to use general-purpose languages and apply software engineering practices to your infrastructure.
+- **Infrastructure as code (IaC)**: [IaC](/what-is/what-is-infrastructure-as-code/) is a key DevOps practice that involves using code and automation to define and manage your infrastructure rather than manual processes. Traditionally, infrastructure management was more manual and less consistent. Methods ranged from manual configurations via user interfaces or command-line interfaces, to less dynamic scripting or basic configuration tools. These methods often lead to challenges in maintaining consistency, scalability, and efficiency, especially as the complexity and size of infrastructures grows. With IaC, your infrastructure becomes versionable, [testable](/what-is/how-to-step-up-cloud-infrastructure-testing/), and repeatable. Infrastructure code can be packaged and shared both within the company and with the broader community. Many Infrastructure as code tools require you to use domain-specific languages, but tools with a modern approach such as [Pulumi](https://www.pulumi.com/), allow you to use general-purpose languages and apply software engineering practices to your infrastructure.
 
-* **Continuous integration and continuous delivery (CI/CD)**: Continuous integration (CI) and continuous delivery (CD) are interconnected practices that streamline the software development process. CI involves developers frequently merging code changes into a central repository where automated builds and tests are conducted to identify and fix bugs swiftly, thus enhancing software quality and shortening the update validation period. CD builds on CI's foundation, automatically building, testing, and preparing code for release. It further automates the deployment of these changes to various testing or production environments, ensuring that the code is not just ready for deployment but is continuously delivered to production with minimal manual intervention. This creates a deployment-ready build artifact that has been rigorously tested, facilitating frequent and stable releases, with monitoring systems in place to ensure transparency throughout the process. [Learn more about Pulumi’s CI/CD integration](/docs/guides/continuous-delivery/).
+- **Continuous integration and continuous delivery (CI/CD)**: Continuous integration (CI) and continuous delivery (CD) are interconnected practices that streamline the software development process. CI involves developers frequently merging code changes into a central repository where automated builds and tests are conducted to identify and fix bugs swiftly, thus enhancing software quality and shortening the update validation period. CD builds on CI's foundation, automatically building, testing, and preparing code for release. It further automates the deployment of these changes to various testing or production environments, ensuring that the code is not just ready for deployment but is continuously delivered to production with minimal manual intervention. This creates a deployment-ready build artifact that has been rigorously tested, facilitating frequent and stable releases, with monitoring systems in place to ensure transparency throughout the process. [Learn more about Pulumi’s CI/CD integration](/docs/guides/continuous-delivery/).
 
-* **Version control and change management**: Version control is crucial in DevOps, not just for managing software code but also for deploying using infrastructure as code (IaC). By applying version control to IaC processes, teams gain the ability to track changes, collaborate effectively, and quickly revert to previous states of the infrastructure, ensuring consistency and reliability in both application development and the environments where these applications are deployed. This unified approach to version control across software and infrastructure fosters better alignment, efficiency, and quality assurance in the delivery pipeline. Learn more about [Version control in Pulumi](/docs/intro/concepts/state/#backends).
+- **Version control and change management**: Version control is crucial in DevOps, not just for managing software code but also for deploying using infrastructure as code (IaC). By applying version control to IaC processes, teams gain the ability to track changes, collaborate effectively, and quickly revert to previous states of the infrastructure, ensuring consistency and reliability in both application development and the environments where these applications are deployed. This unified approach to version control across software and infrastructure fosters better alignment, efficiency, and quality assurance in the delivery pipeline. Learn more about [Version control in Pulumi](/docs/intro/concepts/state/#backends).
 
-* **Testing infrastructure as code**: [Testing infrastructure as code](/docs/iac/guides/testing/) (IaC) in DevOps is similar to testing applications using standard testing tools for various test types. Unit tests swiftly validate code segments without real infrastructure, relying on the same programming language as the IaC programs. Property tests take a step further by provisioning real infrastructure to check resource configurations before and after deployment. Integration tests comprehensively establish a temporary infrastructure setup to verify end-to-end functionality, particularly useful in CI/CD workflows. For more robust testing, one might employ fuzz testing to challenge the infrastructure with unexpected inputs, chaos testing to assess resilience by intentionally causing disruptions, and stress testing to push the system to its limits. These advanced tests, enabled by the flexibility of using general-purpose languages for IaC, provide a wide array of tools to ensure the infrastructure's integrity and robustness.
+- **Testing infrastructure as code**: [Testing infrastructure as code](/docs/iac/guides/testing/) (IaC) in DevOps is similar to testing applications using standard testing tools for various test types. Unit tests swiftly validate code segments without real infrastructure, relying on the same programming language as the IaC programs. Property tests take a step further by provisioning real infrastructure to check resource configurations before and after deployment. Integration tests comprehensively establish a temporary infrastructure setup to verify end-to-end functionality, particularly useful in CI/CD workflows. For more robust testing, one might employ fuzz testing to challenge the infrastructure with unexpected inputs, chaos testing to assess resilience by intentionally causing disruptions, and stress testing to push the system to its limits. These advanced tests, enabled by the flexibility of using general-purpose languages for IaC, provide a wide array of tools to ensure the infrastructure's integrity and robustness.
 
-* **Policy as code**: Policy as code refers to the practice of writing high-level policy descriptions in a language that can be processed by a computer. Instead of manually maintaining compliance documentation and procedures, policies are managed in version-controlled systems and integrated into the development and deployment lifecycle. This enables automatic and continuous enforcement of policies, providing a clear, auditable trail of compliance and security practices. Policy as code is an essential part of modern cloud infrastructure, ensuring that policies are consistently applied across all environments and enabling quicker response to policy violations. Learn more about [Policy as code in Pulumi](/docs/insights/policy/)
+- **Policy as code**: Policy as code refers to the practice of writing high-level policy descriptions in a language that can be processed by a computer. Instead of manually maintaining compliance documentation and procedures, policies are managed in version-controlled systems and integrated into the development and deployment lifecycle. This enables automatic and continuous enforcement of policies, providing a clear, auditable trail of compliance and security practices. Policy as code is an essential part of modern cloud infrastructure, ensuring that policies are consistently applied across all environments and enabling quicker response to policy violations. Learn more about [Policy as code in Pulumi](/docs/insights/policy/)
 
 ## DevOps terms and tools
 
@@ -49,13 +61,19 @@ Implementing and scaling a culture of DevOps is enabled by tools that can reliab
 
 For a detailed exploration and implementation of DevOps practices, refer to the following Pulumi tools and resources:
 
-* **Infrastructure as code (IaC)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
+- **Infrastructure as code (IaC)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 
-* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
+- **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
 
-* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+- **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
 
-* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+- **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+
+## Get started with DevOps using Pulumi
+
+1. **Define your infrastructure as code** with `pulumi new` in TypeScript, Python, Go, C#, Java, or YAML.
+1. **Wire your CI/CD pipeline** to run `pulumi preview` on every PR and `pulumi up` on merge — see [Pulumi's CI/CD guides](/docs/iac/using-pulumi/continuous-delivery/) for GitHub Actions, GitLab, CircleCI, and more.
+1. **Add policy as code** with [Pulumi CrossGuard](/docs/insights/policy/) to enforce security, cost, and compliance rules automatically on every deploy.
 
 ## Learn more
 

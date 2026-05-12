@@ -27,6 +27,15 @@ customer_logos:
       - webflow
       - supabase
       - ro
+lastmod: 2026-05-12
+about:
+  name: Autoscaling
+  sameAs: https://en.wikipedia.org/wiki/Autoscaling
+keywords:
+  - autoscaling
+  - cloud autoscaling
+  - horizontal scaling
+  - elastic scaling
 ---
 
 Two of the great advantages to infrastructure in the cloud are flexibility and speed. You can quickly adjust your infrastructure to conform to variable conditions, such as the amount of traffic or the number of requests in a queue. In other words, you can scale your infrastructure up or down, depending on what you need at a particular time. Scaling often refers to servers (or instances), in particular.

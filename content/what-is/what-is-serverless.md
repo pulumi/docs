@@ -4,9 +4,27 @@ meta_desc: |
     Understand serverless architectures, along with some of the benefits of using serverless architectures for modern application development
 type: what-is
 page_title: "What is Serverless?"
+lastmod: 2026-05-12
+about:
+  name: Serverless computing
+  sameAs: https://en.wikipedia.org/wiki/Serverless_computing
+keywords:
+  - serverless
+  - faas
+  - cloud functions
+  - aws lambda
+  - serverless computing
 ---
 
-Serverless architectures have gained and continue to gain significant traction in modern application development. Despite its name, serverless doesn't mean servers are absent; instead, it represents a paradigm shift in how applications are built, deployed, and scaled in the cloud.
+Serverless is a cloud execution model where the provider manages servers, scaling, and patching — you ship code (typically functions) and pay only when it runs. Despite the name, servers still exist; "serverless" means you don't operate them.
+
+## Key takeaways
+
+- **Serverless abstracts away server management** — provisioning, scaling, patching, and capacity planning are handled by the cloud provider.
+- **Functions as a Service (FaaS)** — AWS Lambda, Azure Functions, Google Cloud Functions — is the most common form, but serverless also covers managed databases, queues, and event buses.
+- **Pricing is pay-per-execution** (request count × duration × memory), which makes serverless cheap for spiky workloads and expensive for steady high-traffic ones.
+- **Cold starts and execution-time limits** are the two design constraints serverless developers most often hit; pick a runtime and architecture that mitigate them.
+- **Serverless pairs well with event-driven architectures**, API backends, scheduled jobs, and data-processing pipelines.
 
 ## What is serverless?
 
@@ -18,11 +36,11 @@ The term _functions as a service_ (typically abbreviated as FaaS) focuses specif
 
 Some FaaS platforms used in serverless architectures include:
 
-* [AWS Lambda](https://aws.amazon.com/lambda/)
-* [Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
-* [Google Cloud Functions](https://cloud.google.com/functions/)
-* [Netlify Functions](https://functions.netlify.com/)
-* [Cloudflare Workers](https://workers.cloudflare.com/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [Azure Functions](https://azure.microsoft.com/en-us/products/functions/)
+- [Google Cloud Functions](https://cloud.google.com/functions/)
+- [Netlify Functions](https://functions.netlify.com/)
+- [Cloudflare Workers](https://workers.cloudflare.com/)
 
 ## What is an event-driven architecture, and is it different than serverless?
 
@@ -102,6 +120,24 @@ Adopting a serverless architecture can offer a number of benefits:
     ```
 
 1. **Avoid making direct cross-service references**: In your serverless architecture, there are times when functions depend on other functions. This typically happens a lot in distributed systems. For example in an e-commerce service, the checkout function could depend on the payment function. However, it's advised that services avoid making direct references to one another in order to prevent hard coupling that can cause issues later. A significant amount of reworking may be required if direct references for a service need to be changed. Using message services, such as queues or topics, to facilitate service-to-service communication is a good way to handle this. This decoupling enhances flexibility, scalability, and resilience, as well as simplifies testing and debugging. It also promotes security by allowing access control. When you use a more decoupled architecture, serverless systems can evolve independently and adapt to changing requirements, making them more robust and maintainable over time.
+
+## Get started with serverless using Pulumi
+
+1. **Pick a serverless template**:
+
+   ```bash
+   pulumi new aws-typescript-serverless
+   ```
+
+1. **Define your function and triggers** (API Gateway, event bus, schedule, queue) in code alongside your function logic.
+
+1. **Deploy in seconds**:
+
+   ```bash
+   pulumi up
+   ```
+
+See [Pulumi's serverless application templates](/templates/serverless-application/) for AWS, Azure, and Google Cloud.
 
 ## Conclusion
 

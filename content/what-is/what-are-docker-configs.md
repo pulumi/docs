@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Configs?"
+lastmod: 2026-05-12
+about:
+  name: Docker (software)
+  sameAs: https://en.wikipedia.org/wiki/Docker_(software)
+keywords:
+  - docker configs
+  - docker swarm
+  - container configuration
+  - configuration management
 ---
 
 Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. An essential facet of this ecosystem is the effective management of configuration data. [Docker Configs](https://docs.docker.com/engine/swarm/configs/) is a feature specially crafted to handle non-sensitive configuration information within Docker environments.

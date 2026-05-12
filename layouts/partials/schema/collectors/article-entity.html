@@ -68,8 +68,43 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" (slice $image)) }}
 
-{{/* Add keywords */}}
-{{ $schema = merge $schema (dict "keywords" "infrastructure as code, cloud, devops, automation") }}
+{{/* Add keywords — prefer page-level keywords from frontmatter */}}
+{{ $keywords := "infrastructure as code, cloud, devops, automation" }}
+{{ with .Params.keywords }}
+  {{ if reflect.IsSlice . }}
+    {{ $keywords = delimit . ", " }}
+  {{ else }}
+    {{ $keywords = . }}
+  {{ end }}
+{{ end }}
+{{ $schema = merge $schema (dict "keywords" $keywords) }}
+
+{{/* Add about — anchors the page to a real entity (Wikipedia/Wikidata) */}}
+{{ with .Params.about }}
+  {{ $aboutEntity := dict "@type" "Thing" "name" .name }}
+  {{ with .sameAs }}
+    {{ if reflect.IsSlice . }}
+      {{ $aboutEntity = merge $aboutEntity (dict "sameAs" .) }}
+    {{ else }}
+      {{ $aboutEntity = merge $aboutEntity (dict "sameAs" (slice .)) }}
+    {{ end }}
+  {{ end }}
+  {{ with .description }}
+    {{ $aboutEntity = merge $aboutEntity (dict "description" .) }}
+  {{ end }}
+  {{ $schema = merge $schema (dict "about" $aboutEntity) }}
+{{ end }}
+
+{{/* Add mentions — related entities */}}
+{{ with .Params.mentions }}
+  {{ $mentionsList := slice }}
+  {{ range . }}
+    {{ $m := dict "@type" "Thing" "name" .name }}
+    {{ with .sameAs }}{{ $m = merge $m (dict "sameAs" .) }}{{ end }}
+    {{ $mentionsList = $mentionsList | append $m }}
+  {{ end }}
+  {{ $schema = merge $schema (dict "mentions" $mentionsList) }}
+{{ end }}
 
 {{/* Calculate reading time */}}
 {{ $readTime := div $wordCount 200 }}

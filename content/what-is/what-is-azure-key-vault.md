@@ -5,6 +5,15 @@ meta_desc: |
 
 type: what-is
 page_title: "What is Azure Key Vault?"
+lastmod: 2026-05-12
+about:
+  name: Microsoft Azure
+  sameAs: https://en.wikipedia.org/wiki/Microsoft_Azure
+keywords:
+  - azure key vault
+  - azure secrets
+  - key vault
+  - secrets management
 ---
 
 Microsoft Azure is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. An important aspect of Azure’s security framework is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". Azure Key Vault is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
