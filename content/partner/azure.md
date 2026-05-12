@@ -201,7 +201,7 @@ sections:
         title: Secrets management
         description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
       - icon: cloud
-        title: Multi cloud
+        title: Multi-cloud
         description: Pulumi allows you to use top programming languages across all public clouds with support for over +170 popular cloud and service integrations, including private and hybrid clouds helping ensure any multi-cloud strategy is successful.
       - icon: pen-nib
         title: Convenience functions

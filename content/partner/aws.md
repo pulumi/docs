@@ -34,7 +34,7 @@ sections:
         title: Code infrastructure in languages you already know
         description: Use TypeScript, Python, or Go with your existing IDE, testing tools, and package managers. No YAML. No proprietary DSLs. Just real code.
       - icon: shield-check
-        title: Enterprise security & compliance built in
+        title: Enterprise security and compliance built in
         description: Manage AWS secrets, enforce policies, and maintain audit trails without external tools. SOC2, HIPAA, and PCI compliance included.
     anchor: why-aws
 
