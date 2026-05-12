@@ -8,10 +8,10 @@ Pulumi is an open source infrastructure as code platform that lets you use famil
 
 If you are an AI agent or programmatic consumer, start with these endpoints. Each has a copy-pasteable example.
 
-- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --format=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
+- **Pulumi Cloud REST API (via the CLI)** — call any [Pulumi Cloud REST API](https://www.pulumi.com/docs/reference/cloud-rest-api/) endpoint with [`pulumi api`](https://www.pulumi.com/docs/iac/cli/api/). The command emits a stable JSON error envelope and stable [exit codes](https://www.pulumi.com/docs/iac/cli/exit-codes/) for agent consumers, and `pulumi api list --output=json` returns the full endpoint catalog. Authentication reuses the existing Pulumi CLI credentials.
 
-      pulumi api list --format=json
-      pulumi api describe <path-or-operation-id> --format=json
+      pulumi api list --output=json
+      pulumi api describe <path-or-operation-id> --output=json
       pulumi api /api/user
 
 - **Cloud registry API** — every published package, version-by-version. Public packages need no auth; set `Authorization: token $PULUMI_ACCESS_TOKEN` for private. Works without the CLI.
@@ -38,7 +38,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{token}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
 
-  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--format=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
+  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
 
 - **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
 

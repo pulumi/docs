@@ -22,8 +22,8 @@ The command is modeled after [`gh api`](https://cli.github.com/manual/gh_api): y
 `pulumi api` ships in three forms:
 
 * [`pulumi api <path-or-operation-id>`](/docs/iac/cli/commands/pulumi_api/) issues a single HTTP request against the named endpoint.
-* [`pulumi api list`](/docs/iac/cli/commands/pulumi_api_list/) (alias: `ls`) lists every endpoint exposed by the [Pulumi Cloud OpenAPI spec](/docs/reference/cloud-rest-api/). Output is a TTY-friendly table by default; pass `--format=json` to get a stable, scriptable envelope.
-* [`pulumi api describe <path-or-operation-id>`](/docs/iac/cli/commands/pulumi_api_describe/) prints the parameters, request body, and response schemas for a single operation. Default output is a human-readable text render; pass `--format=markdown` for a piping-friendly markdown document or `--format=json` for the stable JSON envelope.
+* [`pulumi api list`](/docs/iac/cli/commands/pulumi_api_list/) (alias: `ls`) lists every endpoint exposed by the [Pulumi Cloud OpenAPI spec](/docs/reference/cloud-rest-api/). Output is a TTY-friendly table by default; pass `--output=json` to get a stable, scriptable envelope.
+* [`pulumi api describe <path-or-operation-id>`](/docs/iac/cli/commands/pulumi_api_describe/) prints the parameters, request body, and response schemas for a single operation. Default output is a human-readable text render; pass `--output=markdown` for a piping-friendly markdown document or `--output=json` for the stable JSON envelope.
 
 ## Authentication
 
@@ -70,7 +70,7 @@ If a path template and a request body field share a parameter name, the first ma
 | `--silent` | Suppress the response body on success. Errors are still printed. |
 | `--verbose` | Dump the resolved request and the full response to stderr. |
 | `--dry-run` | Print the resolved request without sending it. |
-| `--format` | Drive content negotiation. Default uses the operation's primary response content type (usually JSON). `json` or `markdown` request that format via the `Accept` header — rejected if the operation's spec doesn't declare it. `raw` keeps the operation's default `Accept` and passes the response body through unchanged. |
+| `--output` | Drive content negotiation. Default uses the operation's primary response content type (usually JSON). `json` or `markdown` request that format via the `Accept` header — rejected if the operation's spec doesn't declare it. `raw` keeps the operation's default `Accept` and passes the response body through unchanged. |
 
 Both requests and responses use gzip compression in transit. The CLI routes responses by content type: it pretty-prints JSON, passes text and markdown through as-is, and streams binary responses unchanged.
 
@@ -156,7 +156,7 @@ cat tags.json | pulumi api UpdateStackTags --input -
 Filter the JSON response with `jq`:
 
 ```bash
-pulumi api /api/user --format=json | jq '.githubLogin'
+pulumi api /api/user --output=json | jq '.githubLogin'
 ```
 
 Walk every page of a paginated endpoint:
@@ -170,9 +170,9 @@ pulumi api ListUserStacks --paginate | jq -r '.stacks[].stackName'
 Browse the API surface and inspect a specific operation:
 
 ```bash
-pulumi api list --format=json | jq '.operations[] | select(.tag == "Stacks")'
+pulumi api list --output=json | jq '.operations[] | select(.tag == "Stacks")'
 
-pulumi api describe CreateOrgToken --format=markdown
+pulumi api describe CreateOrgToken --output=markdown
 ```
 
 Preview the resolved request without sending it:
