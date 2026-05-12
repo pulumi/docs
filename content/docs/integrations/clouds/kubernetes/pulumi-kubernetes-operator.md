@@ -131,6 +131,10 @@ Use `spec.envRefs` to attach credentials and to set environment variables for th
 
 See ["States & Backends"][states-backends] for more information.
 
+{{< notes type="info" >}}
+To avoid storing long-lived Pulumi access tokens in your cluster, you can register the cluster as a Pulumi Cloud OIDC Issuer and have workspace pods exchange their projected service account tokens for short-lived Pulumi tokens. See [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/).
+{{< /notes >}}
+
 [tokens]: https://www.pulumi.com/docs/administration/access-identity/access-tokens/
 [states-backends]: https://www.pulumi.com/docs/iac/concepts/state-and-backends/
 

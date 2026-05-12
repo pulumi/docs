@@ -145,7 +145,7 @@ jobs:
 - `pulumi/actions` executes `pulumi up` adhering to the assigned team permissions.
 
 **Detailed documentation:**
-[GitHub OIDC Setup](/docs/administration/access-identity/oidc-client/github/)
+[GitHub OIDC Setup](/docs/administration/access-identity/oidc-issuers/github/)
 [Pulumi GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)
 
 ---
@@ -161,7 +161,7 @@ Pulumi integrates seamlessly with many other popular CI/CD platforms beyond GitH
 
 These platforms can also leverage secure OIDC authentication or token-based workflows tailored to your security needs.
 
-You can [lock down access to specific pipelines](/docs/administration/access-identity/oidc/client/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
+You can [lock down access to specific pipelines](/docs/administration/access-identity/oidc-issuers/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
 
 Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](/docs/iac/using-pulumi/continuous-delivery/)
 

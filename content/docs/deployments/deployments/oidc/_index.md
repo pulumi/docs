@@ -34,7 +34,7 @@ Every time a deployment runs, Pulumi Cloud issues a new OIDC token specific to t
 If you're looking for information about the permissions a deployment has within Pulumi Cloud itself (rather than cloud provider permissions), see the [Deployment Permissions documentation](/docs/deployments/deployments/reference/#deployment-permissions).
 
 {{% notes type="info" %}}
-Pulumi Cloud can also act as an OIDC client, accepting tokens from trusted identity providers. This is a separate feature from the Deployments OIDC integration and is documented in the [OIDC Client documentation](/docs/administration/access-identity/oidc/client/).
+Pulumi Cloud can also accept OIDC tokens from trusted third-party identity providers and exchange them for short-lived Pulumi access tokens. This is a separate feature from the Deployments OIDC integration and is documented in the [OIDC Issuers documentation](/docs/administration/access-identity/oidc-issuers/).
 {{% /notes %}}
 
 ## Token Claims
