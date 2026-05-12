@@ -300,6 +300,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
     ```markdown
     #### Style findings
 
+    *Found by pattern-based linting; Findings may be false positives.*
+
     <sub>Click each filename to expand.</sub>
 
     <details>
