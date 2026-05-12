@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Configs?"
-lastmod: 2026-05-12
 about:
   name: Docker (software)
   sameAs: https://en.wikipedia.org/wiki/Docker_(software)

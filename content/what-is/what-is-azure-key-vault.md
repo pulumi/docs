@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What is Azure Key Vault?"
-lastmod: 2026-05-12
 about:
   name: Microsoft Azure
   sameAs: https://en.wikipedia.org/wiki/Microsoft_Azure

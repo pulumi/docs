@@ -7,21 +7,21 @@ type: what-is
 page_title: "What is HashiCorp Vault?"
 lastmod: 2026-05-12
 about:
-  name: HashiCorp
-  sameAs: https://en.wikipedia.org/wiki/HashiCorp
+  name: HashiCorp Vault
+  sameAs: https://en.wikipedia.org/wiki/HashiCorp#Vault
 keywords:
   - hashicorp vault
   - vault
   - secrets management
   - key management
 ---
-### What is HashiCorp Vault?
+## What is HashiCorp Vault?
 
 HashiCorp Vault is a tool for secure secrets management, essential for storing and safeguarding sensitive data like API keys and passwords. It's one of many options in the ecosystem of secrets and configuration management tools supported by [Pulumi ESC](https://www.pulumi.com/product/esc/). As the complexity of modern cloud infrastructure has grown, so has the need for robust and scalable secrets management solutions. Vault's integration with Pulumi ESC addresses this need by providing a secure, centralized platform for managing sensitive information across multiple cloud environments. By leveraging Vault's capabilities within Pulumi ESC and [Pulumi Cloud](https://www.pulumi.com/product/pulumi-cloud/) infrastructure as code solutions, developers can ensure that their cloud infrastructure is secure and compliant with best practices, even as the underlying systems, complexity and requirements evolve.
 
 In this article, we'll cover the key features of [HashiCorp Vault](https://www.hashicorp.com/products/vault), why secret management is important and share the use cases of how Vault integrates into various cloud architectures, enhancing the security and management of sensitive data in complex cloud environments.
 
-### Key features of HashiCorp Vault?
+## Key features of HashiCorp Vault
 
 - **Secure secret storage**: Vault has the capability to store a wide range of key/value secrets. Before these secrets are written to persistent storage, Vault encrypts them, ensuring that direct access to the raw storage does not compromise the secrets. Vault supports various storage backends, including disk storage, Consul, among others, for versatile secret storage solutions.
 - **Dynamic secrets**: Vault can generate secrets on-demand for specific systems (like databases or cloud platforms). These secrets are generated dynamically for each request and can be automatically revoked, reducing the risk associated with static secrets.
@@ -31,7 +31,7 @@ In this article, we'll cover the key features of [HashiCorp Vault](https://www.h
 - **Identity and access management**: Vault supports various authentication methods (like tokens, username/password, cloud IAM, etc.) and uses policies to control what secrets an authenticated user or application can access.
 - **Audit log**: Vault maintains detailed logs of all accesses and changes, which is crucial for security audits and compliance.
 
-### Creating secrets in Hashicorp Vault
+## Creating secrets in HashiCorp Vault
 
 HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
 
@@ -50,7 +50,7 @@ The commands provided in this article include `<key>=<value>` parameters to pass
 
 {{< /notes >}}
 
-### Reading a secret from HashiCorp Vault
+## Reading a secret from HashiCorp Vault
 
 Once you've stored a secret, you can read it back to ensure it's stored correctly or to use it.
 
@@ -69,7 +69,7 @@ Key         Value
 myvalue     s3cr3t
 ```
 
-### HashiCorp Vault use cases
+## HashiCorp Vault use cases
 
 HashiCorp Vault is a tool that can be integrated into various cloud architecture platforms and architectures, catering to different needs and scenarios. The most common cloud architectures for use with Vault are:
 
@@ -82,7 +82,7 @@ HashiCorp Vault is a tool that can be integrated into various cloud architecture
 - **Microservices architecture**: In microservices environments, Vault can provide each service with unique credentials, reducing the risk of lateral movement in case of a compromise.
 - **Edge computing**: In edge computing scenarios, Vault can manage secrets used by edge devices and local data processing applications, ensuring security in distributed environments.
 
-### Conclusion
+## Conclusion
 
 Vault's role in each of these architectures is to provide the foundation of secure storage, strict access control, and auditing for secrets and sensitive data. When combined with Pulumi ESC, the capabilities extend even further, ensuring strong security and efficient management across your entire cloud infrastructure and target execution environments.
 

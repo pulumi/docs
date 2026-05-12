@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What is Google Cloud Secret Manager?"
-lastmod: 2026-05-12
 about:
   name: Google Cloud Platform
   sameAs: https://en.wikipedia.org/wiki/Google_Cloud_Platform

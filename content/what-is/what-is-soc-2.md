@@ -4,7 +4,6 @@ meta_desc: |
     Learn about SOC 2 compliance, its key trust principles, and how organizations can achieve and maintain this important security framework.
 type: what-is
 page_title: "What is SOC 2?"
-lastmod: 2026-05-12
 about:
   name: System and Organization Controls
   sameAs: https://en.wikipedia.org/wiki/System_and_Organization_Controls

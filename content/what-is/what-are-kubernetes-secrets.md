@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Kubernetes Secrets?"
-lastmod: 2026-05-12
 about:
   name: Kubernetes
   sameAs: https://en.wikipedia.org/wiki/Kubernetes

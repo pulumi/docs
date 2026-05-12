@@ -5,10 +5,9 @@ meta_desc: |
 
 type: what-is
 page_title: "What is a GitHub Actions Secret?"
-lastmod: 2026-05-12
 about:
   name: GitHub Actions
-  sameAs: https://en.wikipedia.org/wiki/GitHub
+  sameAs: https://en.wikipedia.org/wiki/GitHub#GitHub_Actions
 keywords:
   - github actions secrets
   - ci/cd secrets

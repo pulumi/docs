@@ -4,7 +4,6 @@ meta_desc: |
     Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
 type: what-is
 page_title: "What is Pulumi?"
-lastmod: 2026-05-12
 about:
   name: Pulumi
   sameAs: https://en.wikipedia.org/wiki/Pulumi

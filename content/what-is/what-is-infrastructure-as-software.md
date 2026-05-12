@@ -28,7 +28,6 @@ customer_logos:
       - webflow
       - supabase
       - ro
-lastmod: 2026-05-12
 about:
   name: Infrastructure as code
   sameAs: https://en.wikipedia.org/wiki/Infrastructure_as_code

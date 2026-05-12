@@ -27,7 +27,6 @@ customer_logos:
       - webflow
       - supabase
       - ro
-lastmod: 2026-05-12
 about:
   name: YAML
   sameAs: https://en.wikipedia.org/wiki/YAML

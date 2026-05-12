@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What is a Cloudflare Secret?"
-lastmod: 2026-05-12
 about:
   name: Cloudflare
   sameAs: https://en.wikipedia.org/wiki/Cloudflare

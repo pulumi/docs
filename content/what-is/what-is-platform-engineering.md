@@ -23,8 +23,8 @@ Platform engineering is a set of modern engineering practices that take a holist
 
 - **Platform engineering builds a paved-road internal developer platform (IDP)** that lets application developers self-serve infrastructure safely.
 - **Two anchor concepts**: the IDP (the product the platform team ships) and golden paths (opinionated, well-supported routes through the platform for common tasks).
-- **It's distinct from [DevOps](/what-is/what-is-devops/) (a cultural movement) and [SRE](#how-does-platform-engineering-differ-from-devops-and-sre)** (operations engineering for production) — platform engineering productizes the tooling both depend on.
-- **Treat the platform as a product**: dedicated team, roadmap, developer customers, and adoption metrics — not a one-off project.
+- **It's distinct from [DevOps](/what-is/what-is-devops/) (a cultural movement) and [SRE](#how-does-platform-engineering-differ-from-devops-and-sre)** (operations engineering for production); platform engineering productizes the tooling both depend on.
+- **Treat the platform as a product**, with a dedicated team, roadmap, developer customers, and adoption metrics. Not a one-off project.
 - **AI changes platform engineering on three axes**: more code to govern, AI agents as platform consumers, and AI as a force multiplier for the platform team itself.
 
 {{< youtube "AUCt28gVR6Y?rel=0" >}}

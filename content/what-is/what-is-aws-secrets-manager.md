@@ -5,7 +5,6 @@ meta_desc: |
 
 type: what-is
 page_title: "What is AWS Secrets Manager?"
-lastmod: 2026-05-12
 about:
   name: Amazon Web Services
   sameAs: https://en.wikipedia.org/wiki/Amazon_Web_Services

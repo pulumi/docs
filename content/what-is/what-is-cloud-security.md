@@ -19,10 +19,10 @@ Cloud security is the set of technologies, policies, controls, and services that
 
 ## Key takeaways
 
-- **Cloud security is a shared responsibility** between the cloud provider (security *of* the cloud) and the customer (security *in* the cloud) — the boundary shifts depending on whether you use IaaS, PaaS, or SaaS.
+- **Cloud security is a shared responsibility** between the cloud provider (security *of* the cloud) and the customer (security *in* the cloud). The boundary shifts depending on whether you use IaaS, PaaS, or SaaS.
 - **Identity and access management (IAM)** is the most consequential control plane in the cloud; misconfigured permissions are the leading cause of cloud breaches.
-- **Misconfiguration** — not zero-days — is the dominant cloud risk, which is why [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with policy checks materially reduces exposure.
-- **Defense in depth** in the cloud means combining network controls, IAM, encryption, secret management, runtime detection, and audit logging — no single layer is sufficient.
+- **Misconfiguration**, not zero-days, is the dominant cloud risk, which is why [infrastructure as code](/what-is/what-is-infrastructure-as-code/) with policy checks materially reduces exposure.
+- **Defense in depth** in the cloud means combining network controls, IAM, encryption, secret management, runtime detection, and audit logging. No single layer is sufficient.
 - **Compliance frameworks** (SOC 2, HIPAA, PCI DSS, ISO 27001) map to specific cloud controls; treating compliance as code keeps audits continuous rather than annual.
 
 ## Definition and importance

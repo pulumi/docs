@@ -4,7 +4,6 @@ meta_desc: |
     Understand what HIPAA is, its key requirements, compliance implications for healthcare organizations, and how technology can help meet HIPAA standards.
 type: what-is
 page_title: "What is HIPAA?"
-lastmod: 2026-05-12
 about:
   name: Health Insurance Portability and Accountability Act
   sameAs: https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act
