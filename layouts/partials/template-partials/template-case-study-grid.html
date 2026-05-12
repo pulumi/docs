@@ -20,7 +20,7 @@
         - use_quote: Optional bool. When true and no custom title/description
                      is given, render the full quote block (quote + attrib).
                      Default: false — uses headline_stat/headline summary.
-        - cta_text: Optional CTA text (default: "Read Case Study").
+        - cta_text: Optional CTA text (default: "Read case study").
         - cta_link: Optional CTA link (default: the case study page).
     - anchor: Optional anchor for section id.
 */}}
@@ -49,7 +49,7 @@
             {{ $logo := $page.Params.customer_logo }}
             {{ $name := $page.Params.customer_name }}
             {{ $link := default $page.RelPermalink .cta_link }}
-            {{ $ctaText := .cta_text | default "Read Case Study" }}
+            {{ $ctaText := .cta_text | default "Read case study" }}
             {{ $cardTitle := .title }}
             {{ $cardDescription := .description }}
             {{ $useQuote := .use_quote | default false }}

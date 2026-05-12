@@ -196,7 +196,7 @@ sections:
         description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
       - icon: lightning
         title: Efficient adoption
-        description: There's no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to deploy your application to yourself save time and effort.
+        description: There's no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to save time and effort.
       - icon: shield-check
         title: Secrets management
         description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.

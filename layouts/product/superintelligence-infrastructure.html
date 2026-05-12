@@ -4,7 +4,7 @@
     <section id="overview" class="max-w-5xl mx-auto text-center my-12 px-6">
         {{ with .Params.overview }}
             <div class="px-20 md:px-0">
-                <h1 class="font-display font-semibold">{{ .title }}</h2>
+                <h1 class="font-display font-semibold">{{ .title }}</h1>
                 <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
                 <div class="mt-8 flex flex-col md:flex-row justify-center gap-12 mb-12">
                     {{ partial "cta-get-started" (dict "class" "btn-primary") }}

@@ -67,7 +67,6 @@ sections:
     anchor: overview
 
   - type: section_header_with_code
-    flip: true
     title: Infrastructure as code for Kubernetes
     description: |
       Define your Kubernetes resources using the programming languages you know and love. With Pulumi's SDK, you can manage both your cloud infrastructure and Kubernetes workloads with the same tools.
@@ -208,11 +207,6 @@ sections:
                 namespace: ${devNamespace.metadata.name}
                 fetchOpts:
                     repo: "https://charts.helm.sh/stable/"
-    anchor: code-example
-
-  - type: section_header
-    title: Kubernetes superpowers
-    cards_cols: 3
     cards:
       - icon: cloud
         title: Run on any cloud
@@ -232,7 +226,7 @@ sections:
       - icon: lock
         title: Centralize secrets
         description: "[Pulumi ESC](/product/secrets-management/) is integrated with External Secrets Operator (ESO), enabling the passing of secrets from ESC directly as environment variables of applications running in Kubernetes."
-    anchor: superpowers
+    anchor: code-example
 
   - type: section_header
     title: Continue using the tools you love
