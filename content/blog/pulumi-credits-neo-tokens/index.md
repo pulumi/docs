@@ -3,7 +3,6 @@ title: "Introducing Pulumi Credits and Neo Tokens: Simplified Billing for a Grow
 date: 2026-05-08
 draft: false
 meta_desc: "Pulumi Credits unifies billing across all Pulumi capabilities with a single currency, and Neo Tokens bring transparent pricing to AI-powered infrastructure features."
-meta_image: meta.png
 authors:
     - meagan-cojocar
 tags:
