@@ -234,9 +234,9 @@ Bridged providers, which take a Terraform provider as an underlying dependency, 
 
 ## Direct form and output form
 
-Provider functions are exposed in each language as regular functions, in two variations:
+Provider functions are exposed in each language as regular functions, in two variations.
 
-In most languages, the two variations take the form of **two distinct, separately named functions** rather than overloads of a single function. For example, the AWS function `aws.ec2.getAmi` has a corresponding output form named `aws.ec2.getAmiOutput`. Java's naming convention is inverted: `Ec2Functions.getAmi()` is the _output_ form, while `Ec2Functions.getAmiPlain()` is the direct form. In YAML, both forms are invoked using `fn::invoke`, and the runtime handles the distinction transparently.
+In most languages, the two variations take the form of **two separately named functions** rather than overloads of a single function. For example, the AWS function `aws.ec2.getAmi` has a corresponding output form named `aws.ec2.getAmiOutput`. Java's naming convention is inverted: `Ec2Functions.getAmi()` is the _output_ form, while `Ec2Functions.getAmiPlain()` is the direct form. In YAML, both forms are invoked using `fn::invoke`, and the runtime handles the distinction transparently.
 
 ### Direct form
 
@@ -356,11 +356,15 @@ There are several common scenarios where either direct form or output form must 
 * **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
 * **If you need resources to be created or updated before the function is invoked, you should use the output form.** (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
-The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no `apply` wrapper required.
+The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required.
 
 **Using the direct form:**
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{% notes type="info" %}}
+YAML does not distinguish between direct and output forms at the language level — both use `fn::invoke`. The output-form example below applies equally to YAML.
+{{% /notes %}}
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -393,7 +397,7 @@ import pulumi_aws as aws
 # get_ami_ids returns a plain GetAmiIdsResult.
 candidates = aws.ec2.get_ami_ids(
     owners=["amazon"],
-    filters=[{"name": "name", "values": ["amzn2-ami-hvm-*-x86_64-gp3"]}],
+    filters=[aws.ec2.GetAmiIdsFilterArgs(name="name", values=["amzn2-ami-hvm-*-x86_64-gp3"])],
 )
 
 # Because candidates.ids is a plain list, we can branch on it freely.
@@ -492,7 +496,8 @@ return await Deployment.RunAsync(async () =>
 ```java
 package myproject;
 
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
@@ -524,36 +529,6 @@ public class App {
         }
     }
 }
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```yaml
-name: provider
-runtime: yaml
-
-# YAML does not have native conditional resource creation, so the direct-form
-# gating pattern shown in other languages does not apply here. Use fn::invoke
-# with a known-good filter and handle missing results in a downstream system,
-# or switch to a language SDK when conditional resource creation is required.
-variables:
-  candidates:
-    fn::invoke:
-      function: aws:ec2/getAmiIds:getAmiIds
-      arguments:
-        owners: ["amazon"]
-        filters:
-          - name: name
-            values: ["amzn2-ami-hvm-*-x86_64-gp3"]
-
-resources:
-  web:
-    type: aws:ec2:Instance
-    properties:
-      ami: ${candidates.ids[0]}
-      instanceType: t3.micro
 ```
 
 {{% /choosable %}}
@@ -705,7 +680,8 @@ return await Deployment.RunAsync(() =>
 ```java
 package myproject;
 
-import com.pulumi.*;
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
