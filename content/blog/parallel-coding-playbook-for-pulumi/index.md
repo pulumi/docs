@@ -3,7 +3,7 @@ title: "Five Stacks Before Lunch: The Parallel Coding Playbook for Pulumi"
 allow_long_title: true
 date: 2026-05-13
 draft: false
-meta_desc: "Bolting AI onto sequential infra work gets you 2x. The parallel coding playbook gets you 5 stacks before lunch. Translated to Pulumi."
+meta_desc: "AI coding has two shapes: 2x is mostly prompting, 10x is mostly plumbing. The parallel coding playbook, translated to Pulumi."
 meta_image: meta.png
 feature_image: feature.png
 authors:
