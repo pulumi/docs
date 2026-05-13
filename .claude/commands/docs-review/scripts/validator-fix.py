@@ -63,35 +63,54 @@ SURGICAL_CLASSES: set[str] = {
     "verified-claims-trail-faithful",
 }
 
-HAIKU_MODEL = "claude-haiku-4-5-20251001"
+# Sonnet 4.6 for the splice model. Pre-v16 used Haiku 4.5 per call, which
+# handled single-violation splices fine but lacked the reasoning headroom
+# for batched multi-fix prompts — Haiku tracking 30+ independent edit
+# targets in one rewrite started dropping fixes. Sonnet costs ~4× per token
+# but the per-rule batching (see build_batched_prompt) collapses N sequential
+# calls into 1 call per rule_id, so the review-level cost lands ~$0.40 — a
+# 6.5× drop vs Haiku-sequential's ~$2.64, with lower fumble risk.
+SPLICE_MODEL = "claude-sonnet-4-6"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
-# 120s per Haiku call — the body can be 60K tokens and we want plenty of
-# headroom for network jitter / cold-start. Matches verify-claims.py's
-# HTTP_TIMEOUT.
-HAIKU_TIMEOUT_S = 120
+# 180s per call — Sonnet processes large prompts faster than Haiku but the
+# response (full body) is still ~12K output tokens; 180s gives a buffer
+# for the larger model + network jitter.
+SPLICE_TIMEOUT_S = 180
 MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
 # Maximum response tokens from Haiku. The whole body is echoed back verbatim;
 # 16K covers a 60K-char review body with room for any minor expansion. Goes
 # in the messages.create `max_tokens` field.
 MAX_OUTPUT_TOKENS = 16000
-# Sequential dispatches; each rewrites the whole body. Bumped to 50 because
-# `verified-claims-trail-faithful` can fire 30+ times per review (R4 #156
-# hit 33 surgical violations), and we want headroom before deferring to
-# soft-floor. Per-call cost on Haiku is ~$0.005-0.01, so 50 ≈ $0.50/review.
-MAX_DISPATCHES_PER_CALL = 50  # cost / wall-clock ceiling
+# Maximum number of surgical violations to fold into a single batched Haiku
+# call. Pre-v16 was N sequential calls (each one rewrites the whole ~50KB
+# body — ~12K output tokens × ~250 tok/s = ~50s/call); a hot review with 30
+# violations cost ~5-10 min wall-clock per upsert-validated retry and tripped
+# Opus's 2-min Bash timeout, leaving the model to defer to soft-floor without
+# the splices applying. v16 batches all surgical fixes into ONE Haiku call:
+# the body is sent + received once, the per-violation instructions stack
+# above it. 50 fix instructions add ~25KB to the prompt vs the 50KB body —
+# easily within Haiku's 200K context, and Anthropic charges the same tokens
+# regardless of whether they were "input prompt" or "input body".
+MAX_VIOLATIONS_PER_BATCH = 50
 
 
 SYSTEM_PROMPT = (
-    "You edit a single PR-review body to fix one specific validator "
-    "violation. Output ONLY the full edited body — no explanation, no "
-    "preamble, no code fence. Make the smallest change that resolves "
-    "the violation; do not rewrite or restructure anything else."
+    "You edit a single PR-review body to apply ALL the surgical fixes the "
+    "user lists. Output ONLY the full edited body — no explanation, no "
+    "preamble, no code fence, no fix summary. Apply every fix in the list; "
+    "make the smallest change per fix; do not rewrite or restructure "
+    "anything that isn't explicitly targeted by one of the fixes."
 )
 
 
-def build_prompt(rule_id: str, violation: dict, body: str) -> str:
-    """Return a class-specific user prompt for one violation."""
+def build_instruction(rule_id: str, violation: dict) -> str:
+    """Return the class-specific instruction block for ONE violation (no body).
+
+    Factored out of the older single-violation `build_prompt` so the same
+    per-rule instruction can be reused inside a batched prompt that appends
+    the body once at the end.
+    """
     expected = violation.get("expected", "")
     actual = violation.get("actual", "")
     hint = violation.get("hint", "")
@@ -368,12 +387,49 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
         # Defensive — caller already filtered by SURGICAL_CLASSES.
         instr = f"Unrecognized surgical rule: {rule_id}"
 
-    return f"{instr}\n\nFULL BODY (edit and return verbatim with the fix applied):\n\n{body}"
+    return instr
 
 
-def dispatch_haiku(prompt: str, api_key: str) -> str | None:
-    """Run one Haiku call via the Anthropic Messages API. Returns the edited
-    body or None on error.
+def build_batched_prompt(violations: list[dict], body: str) -> str:
+    """Stack N per-violation instructions above the body, append the body once.
+
+    Used for per-rule batched calls — every violation in the list shares the
+    same `rule_id` semantics (hugogeneous fix shape), so the splice model
+    just sees a list of independent targeted edits to apply in one rewrite.
+    """
+    if len(violations) == 1:
+        # Special-case to avoid awkward "FIX 1 of 1" framing on tiny batches;
+        # the body suffix is the same.
+        instr = build_instruction(violations[0]["rule_id"], violations[0])
+        return (
+            f"{instr}\n\n"
+            f"FULL BODY (edit and return verbatim with the fix applied):\n\n"
+            f"{body}"
+        )
+    rule_id = violations[0]["rule_id"]  # all violations share this in per-rule mode
+    fix_blocks = []
+    for i, v in enumerate(violations, 1):
+        block = build_instruction(v["rule_id"], v)
+        fix_blocks.append(f"FIX {i} of {len(violations)}:\n{block}")
+    header = (
+        f"You will apply {len(violations)} independent surgical fixes for the "
+        f"`{rule_id}` rule to a single PR-review body. Each FIX block below "
+        f"targets a different anchor (different L-token, claim, file, or "
+        f"section). Apply EVERY fix; the targets do not overlap. After all "
+        f"fixes are applied, output the FULL edited body verbatim — no "
+        f"explanation, no fix summary, no code fence.\n\n"
+    )
+    return (
+        header +
+        "\n\n".join(fix_blocks) +
+        f"\n\nFULL BODY (edit and return verbatim with all {len(violations)} fixes applied):\n\n" +
+        body
+    )
+
+
+def dispatch_splice(prompt: str, api_key: str) -> str | None:
+    """Run one splice call (Sonnet 4.6) via the Anthropic Messages API.
+    Returns the edited body or None on error.
 
     Pre-v16 used the `claude` CLI as a subprocess, which silently failed in
     CI because Opus's Bash tool truncates output at ~2KB — the actual
@@ -381,9 +437,15 @@ def dispatch_haiku(prompt: str, api_key: str) -> str | None:
     huge CalledProcessError repr (which includes the full `-p <prompt>`
     argument). Direct API calls surface errors as plain readable strings
     and use the same auth path verify-claims.py uses (proven to work in CI).
+
+    Splice model: Sonnet 4.6 (see SPLICE_MODEL note). Haiku 4.5 worked
+    fine on single-violation prompts but lost fixes when ~30 independent
+    edits were batched into one call; Sonnet's reasoning headroom is
+    worth the ~4× per-token cost when per-rule batching collapses the
+    call count anyway.
     """
     body = {
-        "model": HAIKU_MODEL,
+        "model": SPLICE_MODEL,
         "max_tokens": MAX_OUTPUT_TOKENS,
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": prompt}],
@@ -401,7 +463,7 @@ def dispatch_haiku(prompt: str, api_key: str) -> str | None:
     last_err: Exception | None = None
     for attempt in range(MAX_RETRIES):
         try:
-            with urllib.request.urlopen(req, timeout=HAIKU_TIMEOUT_S) as resp:
+            with urllib.request.urlopen(req, timeout=SPLICE_TIMEOUT_S) as resp:
                 payload = json.loads(resp.read().decode("utf-8"))
                 break
         except urllib.error.HTTPError as e:
@@ -415,7 +477,7 @@ def dispatch_haiku(prompt: str, api_key: str) -> str | None:
                 time.sleep(2 ** attempt + 0.5)
                 continue
             print(
-                f"validator-fix.py: Haiku API error: HTTP {e.code}: {detail}",
+                f"validator-fix.py: splice API error: HTTP {e.code}: {detail}",
                 file=sys.stderr,
             )
             return None
@@ -424,11 +486,11 @@ def dispatch_haiku(prompt: str, api_key: str) -> str | None:
                 last_err = e
                 time.sleep(2 ** attempt + 0.5)
                 continue
-            print(f"validator-fix.py: Haiku API error: {type(e).__name__}: {e}",
+            print(f"validator-fix.py: splice API error: {type(e).__name__}: {e}",
                   file=sys.stderr)
             return None
     else:
-        print(f"validator-fix.py: Haiku API gave up after {MAX_RETRIES} retries: {last_err}",
+        print(f"validator-fix.py: splice API gave up after {MAX_RETRIES} retries: {last_err}",
               file=sys.stderr)
         return None
 
@@ -439,7 +501,7 @@ def dispatch_haiku(prompt: str, api_key: str) -> str | None:
     output = "".join(text_parts).strip()
     if not output:
         print(
-            f"validator-fix.py: Haiku returned empty content "
+            f"validator-fix.py: splice model returned empty content "
             f"(stop_reason={payload.get('stop_reason')!r})",
             file=sys.stderr,
         )
@@ -505,38 +567,56 @@ def main() -> int:
         return 2  # all violations are non-surgical → caller re-renders
     violations = surgical
 
-    if len(violations) > MAX_DISPATCHES_PER_CALL:
+    if len(violations) > MAX_VIOLATIONS_PER_BATCH:
         print(
-            f"validator-fix.py: {len(violations)} violations exceeds cap "
-            f"of {MAX_DISPATCHES_PER_CALL}; deferring to soft-floor",
+            f"validator-fix.py: {len(violations)} surgical violations exceeds "
+            f"cap of {MAX_VIOLATIONS_PER_BATCH}; deferring to soft-floor",
             file=sys.stderr,
         )
         return 2
 
-    body = body_path.read_text()
+    # Group surgical violations by rule_id and run one batched splice per
+    # rule. Schema v16: each rule_id's violations are homogeneous edits
+    # (same shape; different anchors), so one Sonnet call per rule handles
+    # them all in a single body rewrite. Wall-clock: ~30-60s × number-of-
+    # distinct-rule-ids per review, vs the pre-v16 N sequential calls.
+    by_rule: dict[str, list[dict]] = {}
     for v in violations:
-        rule_id = v["rule_id"]
-        prompt = build_prompt(rule_id, v, body)
-        edited = dispatch_haiku(prompt, api_key)
+        by_rule.setdefault(v["rule_id"], []).append(v)
+    rule_order = sorted(by_rule.keys())  # deterministic order
+
+    body = body_path.read_text()
+    for rule_id in rule_order:
+        rule_violations = by_rule[rule_id]
+        prompt = build_batched_prompt(rule_violations, body)
+        edited = dispatch_splice(prompt, api_key)
         if edited is None:
-            print(f"validator-fix.py: dispatch failed for `{rule_id}`",
-                  file=sys.stderr)
+            print(
+                f"validator-fix.py: splice dispatch failed for rule "
+                f"`{rule_id}` ({len(rule_violations)} violation(s))",
+                file=sys.stderr,
+            )
             return 1
         body = edited
+        print(
+            f"validator-fix.py: spliced {len(rule_violations)} `{rule_id}` "
+            f"violation(s) in one batched call",
+            file=sys.stderr,
+        )
 
     body_path.write_text(body)
+    summary = (
+        f"applied {len(violations)} surgical fix(es) across "
+        f"{len(rule_order)} batched call(s)"
+    )
     if non_surgical:
         print(
-            f"validator-fix.py: applied {len(violations)} surgical fix(es); "
-            f"{len(non_surgical)} non-surgical violation(s) remain — caller "
-            f"should re-render",
+            f"validator-fix.py: {summary}; {len(non_surgical)} non-surgical "
+            f"violation(s) remain — caller should re-render",
             file=sys.stderr,
         )
         return 2  # partial fix; caller should re-validate + model retry
-    print(
-        f"validator-fix.py: applied {len(violations)} surgical fix(es)",
-        file=sys.stderr,
-    )
+    print(f"validator-fix.py: {summary}", file=sys.stderr)
     return 0
 
 
