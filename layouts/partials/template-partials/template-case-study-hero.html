@@ -45,8 +45,8 @@
             {{ if $link }}
             <div class="flex flex-row gap-4 mt-8">
                 <a href="{{ $link }}" class="btn btn-primary btn-xl">
-                    <span>Read the story</span>
-                    <span>&rarr;</span>
+                    Read the story
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
             </div>
             {{ end }}

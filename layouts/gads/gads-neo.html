@@ -367,13 +367,14 @@
                 </div>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
                     {{ range $button := $item.buttons }}
+                    {{ $variant := cond (eq $button.type "secondary") "outline" $button.type }}
                     {{ if or (eq $button.action "Start Free") (eq $button.action "Book a Demo") }}
                         {{ if eq $button.action "Start Free" }}
-                        <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">Try Neo for FREE</a>
+                        <a href="{{ $button.link }}" class="z-10 btn btn-{{ $variant }} btn-xl">Try Neo for FREE</a>
                         {{ end }}
                         <!-- Book a Demo is removed per requirements -->
                     {{ else }}
-                        <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                        <a href="{{ $button.link }}" class="z-10 btn btn-{{ $variant }} btn-xl">{{ $button.action }}</a>
                     {{ end }}
                     {{ end }}
                 </div>

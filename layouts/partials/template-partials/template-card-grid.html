@@ -55,9 +55,9 @@
             {{ end }}
 
               {{ if .cta_text }}
-                <div class="mt-auto flex">
+                <div class="mt-auto">
                     <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
-                        <span>{{ .cta_text }}</span>
+                        {{ .cta_text }}
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                     </a>
                 </div>
@@ -86,9 +86,9 @@
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>
                 </div>
                 {{ if .cta_text }}
-                <div class="mt-auto flex">
+                <div class="mt-auto">
                     <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
-                        <span>{{ .cta_text }}</span>
+                        {{ .cta_text }}
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                     </a>
                 </div>

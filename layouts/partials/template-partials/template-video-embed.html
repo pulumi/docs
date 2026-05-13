@@ -53,9 +53,9 @@
             ></iframe>
         </div>
         {{ if $ctaText }}
-        <div class="flex justify-center">
+        <div class="text-center">
             <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
-                <span>{{ $ctaText }}</span>
+                {{ $ctaText }}
                 {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
             </a>
         </div>

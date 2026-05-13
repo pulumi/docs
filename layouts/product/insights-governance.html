@@ -143,7 +143,8 @@
                 </div>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4">
                     {{ range $button := $item.buttons }}
-                    <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
+                    {{ $variant := cond (eq $button.type "secondary") "outline" $button.type }}
+                    <a href="{{ $button.link }}" class="btn btn-{{ $variant }} btn-xl">{{ $button.action }}</a>
                     {{ end }}
                 </div>
             </div>

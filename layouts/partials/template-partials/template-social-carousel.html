@@ -27,9 +27,9 @@
         {{ if $title }}<h2>{{ $title }}</h2>{{ end }}
         {{ if $description }}<p class="text-gray-600 text-xl mt-4">{{ $description | markdownify }}</p>{{ end }}
         {{ if $ctaText }}
-        <div class="mt-4 flex justify-center">
+        <div class="mt-4 text-center">
             <a href="{{ $ctaLink }}" class="btn btn-link btn-xl">
-                <span>{{ $ctaText }}</span>
+                {{ $ctaText }}
                 {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
             </a>
         </div>

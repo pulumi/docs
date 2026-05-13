@@ -6,12 +6,12 @@
 // Sizes:    (default) | xs | sm | lg | xl | icon | icon-xs | icon-sm | icon-lg
 
 .btn {
-    @apply inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap
-           text-sm font-normal border border-transparent rounded-lg
-           transition-colors outline-none cursor-pointer select-none
+    @apply inline-block shrink-0 text-center gap-2 whitespace-nowrap max-w-full
+           overflow-hidden text-ellipsis text-sm font-normal border border-transparent 
+           rounded-lg transition-colors outline-none cursor-pointer select-none
            focus-visible:ring-3 focus-visible:ring-violet-primary/50
            disabled:pointer-events-none disabled:opacity-50
-           h-9 px-4 py-2;
+           h-9 px-4 py-1.75;
 }
 
 // Variants
@@ -21,13 +21,13 @@
 .btn-ghost         { @apply text-gray-950 hover:bg-gray-100; }
 .btn-ghost-primary { @apply text-violet-primary hover:bg-gray-100; }
 .btn-destructive   { @apply bg-red-600/10 text-red-600 hover:bg-red-600/20; }
-.btn-link          { @apply text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none h-auto! p-0! [&_svg]:no-underline; }
+.btn-link          { @apply text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none min-h-0! p-0! [&_svg]:no-underline; }
 
 // Sizes — override the base h-9 / px-4
-.btn-xs      { @apply h-6 px-2 text-xs gap-1; }
-.btn-sm      { @apply h-8 px-3 text-xs gap-1; }
-.btn-lg      { @apply h-10 px-6; }
-.btn-xl      { @apply h-12 px-7 text-base; }
+.btn-xs      { @apply h-6 py-0.75 px-2 text-xs gap-1; }
+.btn-sm      { @apply h-8 py-2 px-3 text-xs gap-1; }
+.btn-lg      { @apply h-10 py-2.25 px-6; }
+.btn-xl      { @apply h-12 py-2.5 px-7 text-base; }
 .btn-icon    { @apply size-9 p-0; }
 .btn-icon-xs { @apply size-6 p-0; }
 .btn-icon-sm { @apply size-8 p-0; }

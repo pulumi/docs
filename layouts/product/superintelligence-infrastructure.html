@@ -165,7 +165,8 @@
                             {{ if eq $button.type "primary" }}
                             <a href="{{ site.Params.cta.primary.href }}" class="btn btn-primary btn-xl" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                             {{ else }}
-                            <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
+                            {{ $variant := cond (eq $button.type "secondary") "outline" $button.type }}
+                            <a href="{{ $button.link }}" class="btn btn-{{ $variant }} btn-xl">{{ $button.action }}</a>
                             {{ end }}
                             {{ end }}
                         </div>

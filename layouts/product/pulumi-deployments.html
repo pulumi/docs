@@ -390,8 +390,9 @@
                             <p>{{ $item.description | markdownify }}</p>
                         </div>
                         {{ range $button := $item.buttons }}
+                            {{ $variant := cond (eq $button.type "secondary") "outline" $button.type }}
                             <div class="my-2 py-4 z-10 relative">
-                                <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                                <a href="{{ $button.link }}" class="z-10 btn btn-{{ $variant }} btn-xl">{{ $button.action }}</a>
                             </div>
                         {{ end }}
                     </div>
