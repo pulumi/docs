@@ -13,6 +13,20 @@ on:
       - pulumi-cli
 
 jobs:
+  dispatch-pulumi-cli-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+      - name: Dispatch Pulumi CLI docs workflow
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          gh workflow run pulumi-cli-docs.yml \
+            --repo ${{ github.repository }} \
+            --ref master \
+            -f version=${{ github.event.client_payload.ref }}
   pull-request:
     runs-on: ubuntu-latest
     needs: build-pulumi-cli-docs
@@ -107,24 +121,6 @@ jobs:
         working-directory: docs
       - name: generate python docs
         run: ./scripts/generate_python_docs.sh
-        working-directory: docs
-      - name: generate markdown
-        run: |
-          PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/iac/cli/commands
-        working-directory: docs
-      - name: Update latest version
-        run: |
-          echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version
-        working-directory: docs
-      - name: Update versions
-        run: node scripts/get-versions.js
-        env:
-          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-        working-directory: docs
-      - name: Update version lists
-        run: |
-          NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/get-started/download-install/versions.md
         working-directory: docs
       - name: git status
         run: git status && git diff
