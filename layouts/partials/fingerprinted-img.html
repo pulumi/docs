@@ -4,27 +4,37 @@
 {{ $img := resources.Get (printf "fingerprinted/%s" $src) }}
 {{ if ne $img.MediaType.SubType "svg" }}
     {{ $maxWidth := .maxWidth | default 800 }}
-    {{/* Resize if wider than maxWidth, preserving aspect ratio */}}
+    {{/* Default to q90; raise via `quality` for screenshots / images with fine text where
+         lossy artifacts are visible. */}}
+    {{ $quality := .quality | default 90 }}
+    {{ $processArgs := printf "webp q%d" $quality }}
+    {{/* Cap the 1x `src` at maxWidth, but generate srcset entries up to 2x maxWidth so high-DPI
+         displays get sharp images (the rendered slot is `maxWidth` CSS pixels, so a 2x device needs
+         a 2x-resolution resource). */}}
     {{ if gt $img.Width $maxWidth }}
-        {{ $img = $img.Process (printf "resize %dx webp q90" $maxWidth) }}
+        {{ $img = $img.Process (printf "resize %dx %s" $maxWidth $processArgs) }}
     {{ else }}
-        {{ $img = $img.Process "webp q90" }}
+        {{ $img = $img.Process $processArgs }}
     {{ end }}
-    {{/* Generate srcset for responsive images at 400, 600, 800px if image is large enough */}}
     {{/* Skip srcset for small images (maxWidth < 400) — src already covers 1x, 400px srcset covers 2x */}}
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
-    {{ $sizes := slice 400 600 800 }}
-    {{ if ge $maxWidth 1200 }}{{ $sizes = $sizes | append 1200 }}{{ end }}
-    {{ if ge $maxWidth 1600 }}{{ $sizes = $sizes | append 1600 }}{{ end }}
-    {{ if ge $maxWidth 2000 }}{{ $sizes = $sizes | append 2000 }}{{ end }}
-    {{ if ge $maxWidth 2400 }}{{ $sizes = $sizes | append 2400 }}{{ end }}
+    {{ $maxSrcsetWidth := mul $maxWidth 2 }}
+    {{ $candidates := slice 400 600 800 1200 1600 2000 2400 3200 }}
     {{ $origImg := resources.Get (printf "fingerprinted/%s" $src) }}
-    {{ range $sizes }}
-        {{ if ge $origImg.Width . }}
-            {{ $resized := $origImg.Process (printf "resize %dx webp q90" .) | fingerprint }}
+    {{ range $candidates }}
+        {{ if and (le . $maxSrcsetWidth) (ge $origImg.Width .) }}
+            {{ $resized := $origImg.Process (printf "resize %dx %s" . $processArgs) | fingerprint }}
             {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) }}
         {{ end }}
+    {{ end }}
+    {{/* If the original is smaller than 2x maxWidth, include the original width too so the
+         sharpest available resource is offered (the largest candidate may fall short of the
+         original width — e.g. a 1472w source with a 1200 candidate). Skip when the original
+         width exactly matches a candidate, otherwise the loop above already emitted it. */}}
+    {{ if and (lt $origImg.Width $maxSrcsetWidth) (not (in $candidates $origImg.Width)) }}
+        {{ $resized := $origImg.Process $processArgs | fingerprint }}
+        {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $origImg.Width) }}
     {{ end }}
     {{ end }}
     {{ $img = $img | fingerprint }}
