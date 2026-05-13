@@ -220,7 +220,8 @@
 }
 
 .template-card {
-    @apply flex flex-1 items-start rounded-lg p-8 border border-gray-200;
+    @extend .card;
+    @apply flex flex-1 items-start p-8;
 
     &.template-card--highlight {
         @apply bg-violet-50;
@@ -409,7 +410,8 @@
 }
 
 .template-sidebar-nav {
-    @apply rounded-lg p-5 pb-3 border border-gray-200;
+    @extend .card;
+    @apply p-5 pb-3;
 
     .sidebar-nav-heading {
         @apply font-semibold text-sm text-black mb-2;
@@ -994,7 +996,8 @@
     }
 
     .social-carousel-card {
-        @apply border border-gray-200 rounded-lg p-4 md:p-8 flex flex-col gap-4;
+        @extend .card;
+        @apply p-4 md:p-8 flex flex-col gap-4;
         min-height: 320px;
         width: 100%;
 
@@ -1060,11 +1063,9 @@
     }
 
     .case-study-card {
-        @apply flex flex-col rounded-lg border border-gray-200 no-underline text-black text-left;
-
-        &:hover {
-            @apply border-gray-300;
-        }
+        @extend .card;
+        @extend .card-hover;
+        @apply flex flex-col no-underline text-black text-left;
 
         &--half {
             @apply flex-1 items-center justify-center p-8;

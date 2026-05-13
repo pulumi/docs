@@ -6,7 +6,8 @@
     }
 
     .tile {
-        @include transition;
-        @apply block rounded-lg border border-gray-200 cursor-pointer hover:border-gray-300;
+        @extend .card;
+        @extend .card-hover;
+        @apply block;
     }
 }
