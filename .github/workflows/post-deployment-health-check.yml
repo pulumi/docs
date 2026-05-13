@@ -151,6 +151,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
 
       - name: Send Slack notification
         uses: docker://sholung/action-slack-notify:v2.3.0

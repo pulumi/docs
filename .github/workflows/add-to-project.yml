@@ -12,6 +12,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: Add to Docs
         uses: actions/add-to-project@v1.0.2
         with:

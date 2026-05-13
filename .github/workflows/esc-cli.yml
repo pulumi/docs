@@ -19,6 +19,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: checkout docs repo
         uses: actions/checkout@v6
       - name: set the esc version
@@ -45,6 +47,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: set the esc version
         run: |
           echo "ESC_VERSION=${{ github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -119,6 +123,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

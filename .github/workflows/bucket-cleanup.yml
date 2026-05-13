@@ -18,6 +18,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v6

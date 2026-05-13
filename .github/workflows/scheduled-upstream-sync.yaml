@@ -16,6 +16,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: Checkout target repo
         uses: actions/checkout@v6
         with:
@@ -51,6 +53,8 @@ jobs:
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+        with:
+          oidc-auth: true
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
