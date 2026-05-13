@@ -11,9 +11,9 @@
             <div class="w-full lg:w-1/2 lg:pr-8 order-last lg:order-first flex flex-col justify-center">
                 <h5 class="text-gray-700 text-xl">{{ .Params.overview.description | markdownify }}</h5>
                 <div class="mt-8 text-center flex flex-col xl:flex-row w-11/12 sm:w-9/12 xl:justify-center">
-                    <a href="{{ .Params.overview.link }}" class="btn-primary">{{ .Params.overview.cta}}</a>
+                    <a href="{{ .Params.overview.link }}" class="btn btn-primary btn-xl">{{ .Params.overview.cta}}</a>
                     {{ if .Params.overview.cta_secondary }}
-                    <a href="{{ .Params.overview.link_secondary }}" class="btn-secondary mt-4 xl:ml-4 xl:mt-0">{{ .Params.overview.cta_secondary}}</a>
+                    <a href="{{ .Params.overview.link_secondary }}" class="btn btn-outline btn-xl mt-4 xl:ml-4 xl:mt-0">{{ .Params.overview.cta_secondary}}</a>
                     {{ end }}
                 </div>
             </div>

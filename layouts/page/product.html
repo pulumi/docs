@@ -11,8 +11,8 @@
             </p>
         </div>
         <div class="container mx-auto text-center pt-16 flex flex-col md:flex-row w-11/12 sm:w-9/12 md:justify-center">
-            <a href="{{ site.Params.cta.primary.href }}" class="btn-primary" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
-            <a href="/contact/?form=request-a-demo" class="btn-secondary mt-4 md:ml-4 md:mt-0">Book a Demo</a>
+            <a href="{{ site.Params.cta.primary.href }}" class="btn btn-primary btn-xl" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+            <a href="/contact/?form=request-a-demo" class="btn btn-outline btn-xl mt-4 md:ml-4 md:mt-0">Book a Demo</a>
         </div>
     </section>
 
@@ -75,7 +75,7 @@
                     {{ end }}
                 </div>
                 <div class="pt-8 text-center">
-                    <a href="{{ $feature.button.link }}" class="btn-secondary block sm:inline">{{ $feature.button.text }}</a>
+                    <a href="{{ $feature.button.link }}" class="btn btn-outline btn-xl block sm:inline">{{ $feature.button.text }}</a>
                 </div>
             </div>
         {{ end }}
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="pt-8">
-                    <a href="{{ $item.button.link }}" class="btn-secondary block sm:inline">{{ $item.button.text }}</a>
+                    <a href="{{ $item.button.link }}" class="btn btn-outline btn-xl block sm:inline">{{ $item.button.text }}</a>
                 </div>
             </div>
         {{ end }}

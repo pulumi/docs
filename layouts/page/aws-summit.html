@@ -27,7 +27,7 @@
                             <h5>{{ $item.heading }}</h5>
                             <div class="mb-8 mt-1">{{ $item.description | markdownify }}</div>
                             <div class="mt-4">
-                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary" style="white-space: nowrap;">{{ $item.action }}</a>
+                                <a href="{{ $item.link }}" target="_blank" class="btn btn-outline btn-xl" style="white-space: nowrap;">{{ $item.action }}</a>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                                 </p>
                             </div>
                             <div class="mt-8">
-                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary btn-disabled">{{ $item.action }}{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
+                                <a href="{{ $item.link }}" target="_blank" class="btn btn-outline btn-xl btn-disabled">{{ $item.action }}{{ partial "icon.html" (dict "name" "arrow-right" "class" "ml-2") }}</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                             <h5 class="mt-4">{{ $item.heading }}</h5>
                             <p class="flex-1 px-8 pb-4">{{ $item.description }}</p>
                             <div>
-                                <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn-secondary">{{ $item.action }}</a>
+                                <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn btn-outline btn-xl">{{ $item.action }}</a>
                             </div>
                         </div>
                     </div>

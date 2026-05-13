@@ -48,8 +48,8 @@
                     </p>
                 {{ end }}
                 <div class="header-hero-actions mt-8 flex flex-col space-y-2 items-center space-x-4 md:flex-row md:space-y-0">
-                    <a class="btn-primary" style="width:fit-content" href="/docs/iac/clouds/azure/">Get Started</a>
-                    <a class="btn-secondary" style="width:fit-content" href="https://app.pulumi.com/signup">Try Pulumi Cloud</a>
+                    <a class="btn btn-primary btn-xl" style="width:fit-content" href="/docs/iac/clouds/azure/">Get Started</a>
+                    <a class="btn btn-outline btn-xl" style="width:fit-content" href="https://app.pulumi.com/signup">Try Pulumi Cloud</a>
                 </div>
             </div>
             <div class="w-full order-first px-3 lg:px-0 lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
@@ -182,7 +182,7 @@
                                 {{ end }}
                             </ul>
                             <div class="my-8">
-                                <a class="btn-primary lg:inline-block my-4" href="{{ .cta_url }}">
+                                <a class="btn btn-primary btn-xl lg:inline-block my-4" href="{{ .cta_url }}">
                                     {{ .cta }}
                                 </a>
                             </div>
@@ -202,7 +202,7 @@
                             <h3>{{ .title | markdownify }}</h3>
                             <p>{{ .description | markdownify }}</p>
                             <div class="my-8">
-                                <a class="btn-primary lg:inline-block" href="{{ .cta_url }}">
+                                <a class="btn btn-primary btn-xl lg:inline-block" href="{{ .cta_url }}">
                                     {{ .cta }}
                                 </a>
                             </div>
@@ -246,7 +246,7 @@
             </div>
             {{ if $item.cta }}
                 <div class="container mx-auto md:px-24 lg:px-0 text-center">
-                    <a class="btn-primary my-4" href="{{ $item.cta_url }}">
+                    <a class="btn btn-primary btn-xl my-4" href="{{ $item.cta_url }}">
                         {{ $item.cta }}
                     </a>
                 </div>

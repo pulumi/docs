@@ -8,7 +8,7 @@
                 <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
                 <div class="mt-8 flex flex-col md:flex-row justify-center gap-12 mb-12">
                     {{ partial "cta-get-started" (dict) }}
-                    <a href="#casestudy" class="btn-secondary">See How Supabase Manages 80K Resources</a>
+                    <a href="#casestudy" class="btn btn-outline btn-xl">See How Supabase Manages 80K Resources</a>
                 </div>
             </div>
             <hr/>
@@ -78,7 +78,7 @@
                     <div class="w-full xl:w-1/2 text-left">
                         <p class="text-left">{{ .supabase.description | markdownify }}</p>
                         <div><p class="italic">{{ .supabase.quote }}</p><p> - {{ .supabase.author }}</p></div>
-                        <a href="/case-studies/supabase/" class="btn-secondary flex justify-center items-center text-center" style="width: fit-content;">Read the complete Supabase story</a>
+                        <a href="/case-studies/supabase/" class="btn btn-outline btn-xl flex justify-center items-center text-center" style="width: fit-content;">Read the complete Supabase story</a>
                     </div>
                     <img class="w-full xl:w-1/2" src="/images/case-studies/supabase-architecture-diagram.png"/>
                 </div>
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                     
-                                    <a href={{ $item.link }} class="btn-primary" style="width: fit-content;">{{ $item.cta }}</a>
+                                    <a href={{ $item.link }} class="btn btn-primary btn-xl" style="width: fit-content;">{{ $item.cta }}</a>
                                 </div>
                             </div>
                         {{ end }}
@@ -118,7 +118,7 @@
                         <h6 class="text-center">{{ .subheader | markdownify }}</h6>
                         <p>{{ .subbody | markdownify }}</p>
                         <p class="mb-12">{{ .closing | markdownify }}</p>
-                        <div class="flex justify-center"><a href={{ .link }} class="flex-inline btn-primary">{{ .cta }}</a></div>
+                        <div class="flex justify-center"><a href={{ .link }} class="flex-inline btn btn-primary btn-xl">{{ .cta }}</a></div>
                     </div>
                     <img class="w-full xl:w-1/2" src="/images/product/hcl-to-pulumi.png"/>
                 </div>
@@ -164,7 +164,7 @@
                         <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
                             {{ range $button := $item.buttons }}
                             {{ if eq $button.type "primary" }}
-                            <a href="{{ site.Params.cta.primary.href }}" class="btn-primary" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                            <a href="{{ site.Params.cta.primary.href }}" class="btn btn-primary btn-xl" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                             {{ else }}
                             <a href="{{ $button.link }}" class="btn-{{ $button.type }}">{{ $button.action }}</a>
                             {{ end }}
