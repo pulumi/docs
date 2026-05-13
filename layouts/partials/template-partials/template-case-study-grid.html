@@ -58,7 +58,7 @@
             {{ $headlineStat := $page.Params.quote_block.headline_stat }}
             {{ $headline := $page.Params.quote_block.headline }}
 
-            <div class="flex flex-col rounded-2xl border border-gray-300 p-8 gap-6 h-full">
+            <div class="card flex flex-col p-8 gap-6 h-full">
                 {{ if $logo }}
                 <div class="flex items-start">
                     {{ partial "fingerprinted-img.html" (dict "src" $logo "alt" $name "class" "max-h-12 w-auto object-contain") }}
