@@ -30,34 +30,17 @@
 #      stay visible (e.g., legal or service-status announcements).
 #
 # If no entries are active and in-scope, the banner does not render.
+#
+# Example entry:
+#
+#   - id: blog-dark-factory-pattern-2026-05-UZGwzr
+#     active: true
+#     display: marketing
+#     badge: New
+#     text: "**On the blog:** The Dark Factory Pattern for Infrastructure — running Pulumi lights-out."
+#     cta:
+#       label: "Read post"
+#       href: "/blog/dark-factory-pattern-pulumi-autonomous-iac/"
+#     dismissible: true
 
-announcements:
-  - id: blog-dark-factory-pattern-2026-05
-    active: true
-    display: marketing
-    badge: New
-    text: "**On the blog:** The Dark Factory Pattern for Infrastructure — running Pulumi lights-out."
-    cta:
-      label: "Read post"
-      href: "/blog/dark-factory-pattern-pulumi-autonomous-iac/"
-    dismissible: true
-
-  - id: blog-custom-vcs-2026-05
-    active: true
-    display: both
-    icon: git-branch
-    text: "Connect *any* Git or Mercurial repo to Pulumi Deployments with Custom VCS."
-    cta:
-      label: "Learn more"
-      href: "/blog/connect-any-git-server-to-pulumi-deployments-with-custom-vcs/"
-    dismissible: true
-
-  - id: blog-neo-integration-catalog-2026-04
-    active: true
-    display: docs
-    icon: plugs
-    text: "**Neo's Integration Catalog** — give your agent access to the tools it needs."
-    cta:
-      label: "See the catalog"
-      href: "/docs/ai/integrations/"
-    dismissible: true
+announcements: []
