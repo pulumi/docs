@@ -610,6 +610,17 @@ def _render_style_findings(findings: list[dict]) -> str:
     return "\n".join(out)
 
 
+def render_triaged() -> str:
+    # Always rendered; the section's purpose is to hold bullets the reviewer
+    # moves here during the editorial pass (verifier false positives,
+    # mis-sourced verdicts) so they don't clutter 🚨 / ⚠️.
+    return (
+        "### 📋 Triaged verifier findings\n\n"
+        "*I double-checked these and realized they weren't real findings — verifier-side noise; no author action.*\n\n"
+        "_No triaged findings._"
+    )
+
+
 def render_preexisting() -> str:
     return "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues in touched files._"
 
@@ -642,12 +653,18 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     verdict = v.get("verdict") or "?"
     pointer = _evidence_pointer(v)
     file_path = (v.get("file") or "").strip()
-    # File rendered AFTER `**[L<n>]**` so the validator's
+    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — <commentary>`.
+    # Three visually distinct segments separated by em-dashes:
+    #   1. L-prefix + file path (the validator anchors here)
+    #   2. italicized quoted claim (so the reader can scan claims fast)
+    #   3. verdict + evidence pointer + TODO (the actionable bit)
+    # The file path is rendered AFTER `**[L<n>]**` so the validator's
     # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
     # still anchors on the L-token; the filename disambiguates which file
     # the line number refers to on multi-file PRs.
-    file_part = f" `{file_path}`" if file_path else ""
-    bullet = f"- **[{ref}]**{file_part} {text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
+    file_part = f" `{file_path}` —" if file_path else ""
+    italic_text = f"*{text}*" if text else text
+    bullet = f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
     return {"ref": ref, "bullet": bullet, "verdict": verdict}
 
 
@@ -662,30 +679,35 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
             if verdict == "mismatch":
                 todo = ("write the fix / suggestion block. Anti-hedge mandate: state which sibling pages corroborate the divergence "
                         "and what the author must change; do NOT soften to a manual-check ask. "
-                        "If you judge the verdict spurious or pre-existing, prefix the body with `**Spurious:**` or `**Pre-existing:**` "
-                        "and explain in 1-2 sentences — the labeled explanation IS the resolution. "
-                        "Do NOT remove the bullet (`trail-verdict-bucket-promotion` requires it to stay in 🚨); "
-                        "do NOT add `no author action required`, `nothing to fix`, `the link is correct` or any equivalent coda — "
-                        "the absence of fix prose is the signal")
+                        "If you judge the verdict spurious, replace the body with `**Spurious:** <1-2 sentence reason>` "
+                        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+                        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution). "
+                        "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
+                        "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
             else:
                 todo = ("write the fix / suggestion block for the author (quote-and-rewrite mandate). "
-                        "If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias) "
-                        "or pre-existing (the issue was already there on a line this PR didn't touch), prefix the body with "
-                        "`**Spurious:**` or `**Pre-existing:**` and explain in 1-2 sentences — the labeled explanation IS the resolution. "
-                        "Do NOT remove the bullet (`trail-verdict-bucket-promotion` requires it to stay in 🚨); "
-                        "do NOT add `no author action required`, `nothing to fix`, `the link is correct` or any equivalent coda — "
-                        "the absence of fix prose is the signal")
+                        "If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias / "
+                        "compared a paraphrased version of the claim), replace the body with `**Spurious:** <1-2 sentence reason>` "
+                        "AND move the bullet to `### 📋 Triaged verifier findings` (do NOT leave it in 🚨; "
+                        "do NOT add `no author action required` / `nothing to fix` codas — the `**Spurious:**` label IS the resolution). "
+                        "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
+                        "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
             outstanding.append(_stub_bullet(v, todo))
         elif verdict == "unverifiable":
             if PROMOTE_UNVERIFIABLE_TO == "outstanding":
                 outstanding.append(_stub_bullet(
                     v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "
-                       "otherwise file the author-question buffer line and keep here"))
+                       "otherwise file the author-question buffer line and keep here. "
+                       "If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, etc.), "
+                       "replace the body with `**Mis-sourced:** <reason>` AND move the bullet to `### 📋 Triaged verifier findings`."))
             else:
                 lowconf.append(_stub_bullet(
                     v, "if this is a factual blocker (a price/spec/capability with no citation a reader needs), promote to 🚨 Outstanding; "
                        "either way file the author-question buffer line. REMOVE only if it's not actually a checkable claim "
-                       "(then it should already be `not-a-claim`)"))
+                       "(then it should already be `not-a-claim`). "
+                       "If the verifier was demonstrably mis-sourced (wrong URL followed, ran out of turns on a duplicate, "
+                       "the cited URL was unrelated to the claim subject, etc.), replace the body with `**Mis-sourced:** <reason>` "
+                       "AND move the bullet to `### 📋 Triaged verifier findings`."))
         elif verdict == "verified" and conf == "low":
             lowconf.append(_stub_bullet(
                 v, "this is a `verified weakly` claim — confirm the residual judgment is about reader impact; if it's actually fine, REMOVE; "
@@ -851,6 +873,8 @@ def compose(args: argparse.Namespace) -> str:
         render_outstanding(outstanding_stubs),
         "",
         render_lowconfidence(lowconf_stubs, vale_findings),
+        "",
+        render_triaged(),
         "",
         render_preexisting(),
         "",

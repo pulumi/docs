@@ -1323,7 +1323,7 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
     # it must also match a trail record. When the prefix is missing, emit only
     # the prefix-mandate violation; the trail-match violation requires the
     # prefix to check.
-    for section_label in ("🚨 Outstanding", "⚠️ Low-confidence", "💡 Pre-existing"):
+    for section_label in ("🚨 Outstanding", "⚠️ Low-confidence", "📋 Triaged verifier findings", "💡 Pre-existing"):
         for bullet in extract_bucket_bullets(ctx.body, section_label):
             # Skip style findings (line N: prefix instead of [L...]).
             if bullet.lstrip().startswith("- **line "):
@@ -1350,14 +1350,20 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
                 ))
 
     # Every 🚨 trail verdict (`contradicted` / `mismatch`) surfaces in
-    # 🚨 Outstanding. Keyed on the verdict *word* (schema v8); legacy lines
-    # whose first token isn't a canonical word fall back to the emoji.
-    # Match by either: (a) bullet's [L...] prefix, OR (b) fuzzy mention of the
-    # anchor anywhere in the Outstanding section text. The text-level fallback
-    # tolerates legacy bullet formats and missing-prefix bullets — those are
-    # flagged separately above so the model still gets a fix instruction.
-    outstanding_text = section_text(ctx.body, "🚨 Outstanding")
-    outstanding_bullets = extract_bucket_bullets(ctx.body, "🚨 Outstanding")
+    # 🚨 Outstanding, OR — when the reviewer triaged it as a verifier false
+    # positive or a pre-existing issue — in `📋 Triaged verifier findings` /
+    # `💡 Pre-existing` respectively. Keyed on the verdict *word* (schema v8);
+    # legacy lines whose first token isn't a canonical word fall back to the
+    # emoji. Match by either: (a) bullet's [L...] prefix in ANY of the three
+    # eligible sections, OR (b) fuzzy mention of the anchor anywhere in their
+    # combined section text. The text-level fallback tolerates legacy bullet
+    # formats and missing-prefix bullets — those are flagged separately above
+    # so the model still gets a fix instruction.
+    promote_sections = ("🚨 Outstanding", "📋 Triaged verifier findings", "💡 Pre-existing")
+    promote_text = "\n".join(section_text(ctx.body, s) for s in promote_sections)
+    promote_bullets: list[str] = []
+    for s in promote_sections:
+        promote_bullets.extend(extract_bucket_bullets(ctx.body, s))
     seen_trail_refs = set()
     for r in trail_records:
         if not _trail_is_outstanding(r):
@@ -1366,18 +1372,18 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
         if ref in seen_trail_refs:
             continue  # duplicate trail records — flag once
         seen_trail_refs.add(ref)
-        # Match by prefix.
-        prefix_match = any(extract_bullet_prefix(b) == ref for b in outstanding_bullets)
-        # Fallback: anchor mentioned anywhere in the Outstanding section.
-        text_match = re.search(rf"\b{re.escape(ref)}\b", outstanding_text) is not None
+        # Match by prefix in 🚨, 📋, or 💡.
+        prefix_match = any(extract_bullet_prefix(b) == ref for b in promote_bullets)
+        # Fallback: anchor mentioned anywhere in those sections' text.
+        text_match = re.search(rf"\b{re.escape(ref)}\b", promote_text) is not None
         if prefix_match or text_match:
             continue
         violations.append(Violation(
             rule_id="trail-verdict-bucket-promotion",
             line_ref=ref,
-            expected=f"🚨 trail verdict at {ref} surfaces in 🚨 Outstanding via a bucket bullet with `**[{ref}]**` prefix",
-            actual="not in 🚨 Outstanding",
-            hint=f"Render a bullet under 🚨 Outstanding starting with `**[{ref}]**` that quotes the contradicted/mismatch finding. Trail verdict drives bucket placement — do not relitigate via the two-question test.",
+            expected=f"🚨 trail verdict at {ref} surfaces in 🚨 Outstanding (or 📋 Triaged / 💡 Pre-existing when triaged) via a bucket bullet with `**[{ref}]**` prefix",
+            actual="not in 🚨 Outstanding, 📋 Triaged verifier findings, or 💡 Pre-existing",
+            hint=f"Render a bullet starting with `**[{ref}]**` that quotes the contradicted/mismatch finding. Place it in 🚨 Outstanding for a real finding; move it to 📋 Triaged verifier findings (with a `**Spurious:**` prefix) for a verifier false positive; move it to 💡 Pre-existing (with a `**Pre-existing:**` prefix) if the issue was already there on a line this PR didn't touch.",
         ))
 
     return violations

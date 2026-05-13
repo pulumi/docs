@@ -51,13 +51,15 @@ CANONICAL_VERDICTS = set(EXPECTED_TRAIL_EMOJI.keys())
 
 # Mandatory H3 sections in canonical order (mirror of validate-pinned.py
 # MANDATORY_H3_SECTIONS). 📊 Editorial balance is conditional on blog and
-# sits between 🔍 Verification trail and 🚨 Outstanding; 💡 Pre-existing
-# is optional and sits between ⚠️ Low-confidence and 📜 Review history.
+# sits between 🔍 Verification trail and 🚨 Outstanding; 📋 Triaged
+# verifier findings sits between ⚠️ Low-confidence and 💡 Pre-existing;
+# 💡 Pre-existing is optional and sits between 📋 and 📜 Review history.
 CANONICAL_H3_ORDER = [
     "🔍 Verification trail",
     "📊 Editorial balance",
     "🚨 Outstanding",
     "⚠️ Low-confidence",
+    "📋 Triaged verifier findings",
     "💡 Pre-existing",
     "📜 Review history",
 ]
@@ -69,6 +71,7 @@ EMPTY_FORMS = {
     "📊 Editorial balance": "### 📊 Editorial balance\n\n_Single-subject post; balance check N/A._",
     "🚨 Outstanding": "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._",
     "⚠️ Low-confidence": "### ⚠️ Low-confidence\n\n_No low-confidence findings._",
+    "📋 Triaged verifier findings": "### 📋 Triaged verifier findings\n\n*I double-checked these and realized they weren't real findings — verifier-side noise; no author action.*\n\n_No triaged findings._",
     "💡 Pre-existing": "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues in touched files._",
     "📜 Review history": "### 📜 Review history\n\n- <TODO: timestamp> — <TODO: one-line summary> (<TODO: sha>)",
 }
