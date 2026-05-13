@@ -79,20 +79,20 @@
         "extraClass" "inline-flex justify-center") }}
      <a href="{{ $nav.cta.contact.href }}"
       {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
-      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
+      class="btn btn-outline">
       {{ $nav.cta.contact.label }}
     </a>
     <a href="{{ $nav.cta.signIn.href }}"
       {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
       data-nav-loggedout
-      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
+      class="btn btn-outline">
       {{ $nav.cta.signIn.label }}
     </a>
     <a href="https://app.pulumi.com"
       data-track="header-dashboard"
       data-nav-dashboard
       style="display:none"
-      class="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-gray-200 bg-white px-2.5 text-sm font-regular text-gray-950 shadow-xs transition-all hover:border-gray-300">
+      class="btn btn-outline">
       {{ partial "icon.html" (dict "name" "user-circle" "class" "size-4") }}
       Dashboard
     </a>
@@ -100,7 +100,7 @@
       data-track="header-signup-mobile"
       data-role="cta-get-started"
       data-nav-loggedout
-      class="inline-flex h-9 items-center justify-center rounded-md bg-violet-700 px-2.5 text-sm font-regular text-white transition-all hover:bg-violet-800">
+      class="btn btn-primary">
       {{ site.Params.cta.primary.label }}
     </a>
   </div>
