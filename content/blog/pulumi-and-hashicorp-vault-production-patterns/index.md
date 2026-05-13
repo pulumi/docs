@@ -1,0 +1,137 @@
+---
+title: "Five HashiCorp Vault Patterns for Pulumi Teams"
+date: 2026-06-23
+meta_desc: "Use Pulumi with HashiCorp Vault for production patterns covering secrets engines, namespaces, policies, auth methods, and an ESC migration bridge."
+meta_image: meta.png
+feature_image: feature.png
+authors:
+- pablo-seibelt
+tags:
+- vault
+- secrets
+- patterns
+social:
+    twitter: |
+        Vault plus Pulumi is more than writing secrets.
+
+        Model engines, namespaces, policies, auth methods, and ESC bridges as repeatable platform patterns.
+    linkedin: |
+        HashiCorp Vault management becomes safer when the platform patterns are explicit.
+
+        This guide covers five Pulumi patterns for secrets engines, namespaces, policies, auth methods, and an ESC bridge for consumers.
+    bluesky: |
+        Vault plus Pulumi: secrets engines, namespaces, policies, auth methods, and ESC bridges as repeatable patterns.
+
+        Learn more in the post.
+---
+
+[HashiCorp Vault](https://www.vaultproject.io/) is the industry standard for secrets management, providing a centralized way to store, access, and protect sensitive data. Teams managing Vault configuration with Pulumi need repeatable patterns with the same rigor and automation as cloud infrastructure.
+
+This post is not a product comparison between ESC and Vault. Instead, it's a guide for teams already using Vault who want to automate its configuration and bridge it with ESC.
+
+## The pain of manual Vault configuration
+
+When platform teams manage Vault through the CLI or UI, they often create bespoke clusters. These clusters have inconsistent policies, namespaces, and auth methods that are difficult to audit and impossible to replicate for disaster recovery. Manual configuration also slows down application teams who must wait for secrets engines or roles to be provisioned before they can deploy their workloads.
+
+## Why it matters now
+
+Operational risk and audit pressure increase as secrets management becomes a bottleneck for platform velocity. A single misconfigured policy or a missing auth role can block an entire release cycle or create a security gap. Automating Vault configuration ensures that security controls are applied consistently across every environment, from development to production.
+
+## Reader outcome
+
+By the end of this post, you will implement five production-grade patterns for managing HashiCorp Vault with Pulumi. You will learn how to provision secrets engines, isolate environments with namespaces, define granular policies, configure Kubernetes authentication, and build an ESC migration bridge to orchestrate secrets across your entire platform.
+
+<!--more-->
+
+## Pattern 1: Secrets engines
+
+The first step in any Vault deployment is enabling and configuring secrets engines. With Pulumi, you can manage these as resources, ensuring that your storage backends are consistently configured across environments.
+
+```typescript
+import * as vault from "@pulumi/vault";
+
+const kvv2 = new vault.Mount("kvv2", {
+    path: "secret",
+    type: "kv",
+    options: {
+        version: "2",
+    },
+    description: "Production KV Version 2 secrets engine",
+});
+```
+
+Using `vault.Mount` allows you to define the path, type, and version of your secrets engine. This is particularly useful for KV (Key-Value) stores where you might want to enforce version 2 for features like secret versioning and soft deletes.
+
+## Pattern 2: Namespace per environment
+
+For enterprise deployments, Vault namespaces provide a way to isolate data and configuration. A common pattern is to create a namespace for each environment (e.g., development, staging, production).
+
+```typescript
+const prodNamespace = new vault.Namespace("production", {
+    path: "production",
+});
+```
+
+By managing namespaces with Pulumi, you can ensure that your isolation boundaries are created automatically as part of your infrastructure rollout.
+
+## Pattern 3: Token-bound policies
+
+Vault policies define what actions are allowed on specific paths. In a production environment, you should follow the principle of least privilege by creating granular policies.
+
+```typescript
+
+const appPolicy = new vault.Policy("app-policy", {
+    name: "app-policy",
+    policy: `
+path "secret/data/app/*" {
+  capabilities = ["read"]
+}
+`,
+});
+```
+
+Using `pulumi.interpolate` allows you to dynamically construct policy strings, making it easier to reference other resources or variables in your IaC program.
+
+## Pattern 4: Kubernetes auth method
+
+Vault can authenticate workloads using their native identities. For Kubernetes, this means using ServiceAccounts to authenticate pods.
+
+```typescript
+const config = new pulumi.Config();
+const kubernetesCaCert = config.requireSecret("kubernetesCaCert");
+const tokenReviewerJwt = config.requireSecret("tokenReviewerJwt");
+
+const k8sAuth = new vault.AuthBackend("kubernetes", {
+    type: "kubernetes",
+    path: "kubernetes",
+});
+
+const k8sAuthConfig = new vault.kubernetes.AuthBackendConfig("k8s-config", {
+    backend: k8sAuth.path,
+    kubernetesHost: "https://kubernetes.default.svc.cluster.local:443",
+    kubernetesCaCert: kubernetesCaCert,
+    tokenReviewerJwt: tokenReviewerJwt,
+    issuer: "https://kubernetes.default.svc.cluster.local",
+});
+
+const appRole = new vault.kubernetes.AuthBackendRole("app-role", {
+    backend: k8sAuth.path,
+    roleName: "web-app",
+    boundServiceAccountNames: ["web-app-sa"],
+    boundServiceAccountNamespaces: ["production"],
+    tokenPolicies: [appPolicy.name],
+    tokenTtl: 3600,
+}, { dependsOn: [k8sAuthConfig] });
+```
+
+This pattern involves three steps: enabling the Kubernetes auth backend, configuring it with cluster details, and creating roles that map ServiceAccounts to Vault policies.
+
+## Pattern 5: ESC migration bridge
+
+As organizations modernize their secrets management, they often look to [Pulumi ESC](/docs/esc/) for environment-wide secrets orchestration. You can use Pulumi to bridge your existing Vault secrets into ESC environments.
+
+This bridge allows you to continue using Vault as your primary secret store while using ESC's powerful environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers.
+
+## Conclusion
+
+Managing HashiCorp Vault with Pulumi brings the power of IaC to your security infrastructure. By following these five patterns, you can build a repeatable and secure secrets management platform that fits cleanly into your cloud-native workflows.
