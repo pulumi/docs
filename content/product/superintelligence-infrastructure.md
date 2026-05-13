@@ -6,14 +6,14 @@ meta_desc: Manage AI infrastructure with code, not static configuration. From 10
 meta_image: /images/product/superintelligence-meta.png
 
 overview:
-    title: Superintelligence Infrastructure
+    title: Superintelligence infrastructure
     description: |
         Infrastructure that orchestrates itself alongside AI workloads. Managed with code, not static configuration.
         
         From pre-training on 100,000+ GPUs to serving billions of inference requests, Pulumi enables infrastructure that adapts as your AI workloads change. Built for ML teams who need to move fast without rewriting infrastructure at every scale.
 
 stats:
-    title: Proven at Massive Scale
+    title: Proven at massive scale
     sections:
       supabase:
           number: "80,000+"
@@ -32,28 +32,28 @@ stats:
           link: /case-studies/bmw/
 
 features:
-  title: The Complete AI Infrastructure Lifecycle
+  title: The complete AI infrastructure lifecycle
   description: |
     From research experiments to superintelligence-scale production. 
     
     One platform, one codebase, any cloud.
   items:
-    - header: Pre-Training
+    - header: Pre-training
       items: 
         - Distribute training across 100,000+ GPUs
         - Manage petabytes of checkpoints
         - Orchestrate fault recovery during months-long runs
-    - header: Self-Supervised Learning
+    - header: Self-supervised learning
       items: 
         - Massive training clusters with fault tolerance
         - GPU observability at scale
         - Adapt to hardware heterogeneity across clouds
-    - header: Supervised Fine-Tuning
+    - header: Supervised fine-tuning
       items: 
         - Rapid experimentation with LoRA and full fine-tuning
         - Launch hundreds of training runs with different datasets
         - Track experiments and version datasets
-    - header: Reinforcement Learning
+    - header: Reinforcement learning
       items: 
         - Orchestrate RLHF and RLAIF pipelines
         - "Coordinate multiple models: training, reference, reward, LLM judges"
@@ -65,9 +65,9 @@ features:
         - Rolling deployments of new model versions
 
 casestudy:
-  title: Trusted for Building AI Products at Massive Scale
+  title: Trusted for building AI products at massive scale
   supabase:
-    title: From Terraform's Configuration Language to 80K Resources in Real Code
+    title: From Terraform's configuration language to 80K resources in real code
     description: |
       Supabase needed infrastructure that could scale without operational overhead. Terraform's HCL meant constant context switching between TypeScript (application services) and a proprietary configuration language (infrastructure).
 
@@ -81,27 +81,27 @@ casestudy:
     quote: "\"With Pulumi, everything is TypeScript. Our infrastructure is code, not configuration.\""
     author: Paul Cioanca, Platform Engineer at Supabase
     image: /images/case-studies/supabase-architecture-diagram.png
-  subheading: Also Trusted By Leading AI and Data Platforms
+  subheading: Also trusted by leading AI and data platforms
   items:
     - body: |
         **Snowflake** manages 100K+ daily deployments across AWS, Azure, and GCP with Pulumi — massive-scale infrastructure supporting AI/ML workloads for thousands of enterprise customers.
       logo: /logos/pkg/snowflake.svg
-      cta: Read the Story
+      cta: Read the story
       link: /case-studies/snowflake/
     - body: |
         **BMW** enables 15,000 developers to access self-service infrastructure while maintaining enterprise governance.
-      cta: Read the Story
+      cta: Read the story
       logo: /logos/customers/bmw.svg
       link: /case-studies/bmw/
 
 enablement:
-  title: Code Enables AI-Managed Infrastructure
-  description: Your ML Models Are Written in Python. Your Infrastructure Should Be Too.
+  title: Code enables AI-managed infrastructure
+  description: Your ML models are written in Python. Your infrastructure should be too.
   body: | 
     Pulumi's code-native architecture creates a fundamental advantage: AI systems can read, write, and optimize infrastructure written in Python, TypeScript, or Go. The same languages used to train large language models.
 
     This isn't AI translating natural language into proprietary configuration syntax. This is AI working directly with production infrastructure code.
-  subheader: "Neo: AI-Powered Infrastructure Operations, Grounded in Reality"
+  subheader: "Neo: AI-powered infrastructure operations, grounded in reality"
   subbody: | 
     Once you're managing infrastructure with Pulumi, Neo automates the operations that slow development cycles. Neo is grounded in Pulumi's 2+ petabyte corpus of real production infrastructure deployments. While generic AI tools can hallucinate plausible-sounding configurations, Neo draws on battle-tested patterns from billions of real cloud resources:
 
@@ -109,23 +109,23 @@ enablement:
     - **Drift remediation** detects and fixes configuration drift in GPU clusters based on how teams actually manage these resources at massive scale
     - **Multi-cloud migration** converts AWS SageMaker infrastructure to Azure ML or GCP Vertex AI using production-ready patterns
   closing: |
-    **The Code-Native Advantage:** LLMs are trained on real code, not proprietary configuration languages. Pulumi IS code. This enables fundamentally deeper AI integration than tools that require translation layers.
-  cta: "Get Started with Neo"
+    **The code-native advantage:** LLMs are trained on real code, not proprietary configuration languages. Pulumi IS code. This enables fundamentally deeper AI integration than tools that require translation layers.
+  cta: "Get started with Neo"
   link: /docs/pulumi-cloud/neo/get-started/
   image: /images/product/hcl-to-pulumi.png
 
 
 capabilities:
-    title: Code-Native Infrastructure for Dynamic AI Workloads
+    title: Code-native infrastructure for dynamic AI workloads
     description: |
         Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. 
         
         No proprietary configuration languages.
 
 building_blocks:
-  title: "Why AI Infrastructure Requires Dynamic Orchestration"
+  title: "Why AI infrastructure requires dynamic orchestration"
   items:
-    - header: "Static Configuration Languages (Terraform HCL)"
+    - header: "Static configuration languages (Terraform HCL)"
       body:
         - Designed for long-lived resources that change infrequently
         - Cannot dynamically rebalance GPU capacity as workloads shift
@@ -133,7 +133,7 @@ building_blocks:
         - "AI tools must translate natural language → DSL → infrastructure (abstraction overhead)"
         - "Limited to configuration-specific operations; can't leverage full programming language ecosystems"
         - Testing requires DSL-specific tools and frameworks
-    - header: Get Instant Cloud Insights
+    - header: Code-native infrastructure (Pulumi)
       subheader: "Ask questions about your infrastructure and get actionable answers:"
       body:
         - Built for AI workloads that require real-time resource reallocation
@@ -144,16 +144,16 @@ building_blocks:
         - "Software engineering practices apply directly to infrastructure"
 
 learn:
-    title: Build Superintelligence Infrastructure in Minutes
+    title: Build superintelligence infrastructure in minutes
     items:
-        - title: Get Started with Pulumi Cloud
+        - title: Get started with Pulumi Cloud
           description: |
             Join Snowflake, Supabase, BMW, and leading AI companies managing production-ready infrastructure at massive scale with code, not static configuration.
           buttons:
             - type: primary
             - link: /enterprise/
               type: secondary
-              action: Explore Pulumi for Enterprises
+              action: Explore Pulumi for enterprises
   
 aliases:
     - /pulumi-for-ai-infrastructure

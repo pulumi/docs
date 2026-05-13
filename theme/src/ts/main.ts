@@ -27,6 +27,7 @@ import "./redirects";
 import "./external-links";
 import "./neo-mode";
 import "./console-banner";
+import "./announcement-banner";
 import "./statuspage";
 
 // Register all Stencil components.
