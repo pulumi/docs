@@ -116,17 +116,34 @@ split_body() {
     #   and start a new one with that line.
     # - Prefer splitting at `### ` heading boundaries when within the last
     #   25% of the budget, but never required (size always wins).
+    # - Track open `<details>` blocks. If a flush happens inside one, close
+    #   the block at the end of the page and re-open a continuation
+    #   `<details>` at the start of the next so the spilled list stays
+    #   visually collapsed (otherwise the trailing items render as a naked
+    #   bulleted list under the next H3 heading).
     awk -v max="$max_bytes" -v outdir="$tmpdir" '
         function flush() {
             if (length(buf) == 0) return
+            # If a <details> is open mid-flush, close it on this page; the
+            # next page will re-open a continuation block.
+            if (in_details > 0) {
+                buf = buf "\n</details>\n"
+            }
             page++
             fname = sprintf("%s/page-%03d", outdir, page)
             printf "%s", buf > fname
             close(fname)
             buf = ""
             cur = 0
+            # Re-open the continuation block on the next page so spilled
+            # bullets stay collapsed and self-labeled.
+            if (in_details > 0) {
+                cont = "<details>\n<summary><em>continued from previous comment</em></summary>\n\n"
+                buf = cont
+                cur = length(cont)
+            }
         }
-        BEGIN { page = 0; buf = ""; cur = 0; soft = int(max * 0.75) }
+        BEGIN { page = 0; buf = ""; cur = 0; in_details = 0; soft = int(max * 0.75) }
         /^<!-- CLAUDE_REVIEW [0-9]+\/[0-9]+ -->[[:space:]]*$/ { next }
         {
             line = $0 "\n"
@@ -139,6 +156,15 @@ split_body() {
             }
             buf = buf line
             cur += llen
+            # Update <details> depth AFTER buffering, so flush() above sees
+            # the depth as of the PREVIOUS line. Required so the line that
+            # opens a block ends up on the new page (not the old), and the
+            # line that closes a block does not double-close.
+            if (substr($0, 1, 9) == "<details>") {
+                in_details++
+            } else if (substr($0, 1, 10) == "</details>") {
+                if (in_details > 0) in_details--
+            }
         }
         END { flush() }
     ' "$body_file"
