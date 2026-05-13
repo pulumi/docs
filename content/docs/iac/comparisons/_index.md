@@ -30,8 +30,9 @@ Here are several useful comparisons that will help you understand Pulumi's place
 
 * [HashiCorp Terraform](/docs/iac/comparisons/terraform/)
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
+* [AWS CDK](/docs/iac/comparisons/aws-cdk/)
+* [CDKTF](/docs/iac/comparisons/cdktf/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
-* [Cloud Template Transpilers (AWS CDK, etc.)](/docs/iac/comparisons/cloud-template-transpilers)
 * [Helm](/docs/iac/comparisons/helm/)
 * [Kubernetes YAML and DSLs](/docs/iac/comparisons/k8s-yaml-dsls/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)

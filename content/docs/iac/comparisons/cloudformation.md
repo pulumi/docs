@@ -148,6 +148,6 @@ Yes — and this is one of the more common adoption patterns. Teams keep AWS inf
 ## Next steps
 
 - [Get started with Pulumi](/docs/iac/get-started/)
-- [Pulumi vs. AWS CDK](/docs/iac/comparisons/cloud-template-transpilers/aws-cdk/)
+- [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)
