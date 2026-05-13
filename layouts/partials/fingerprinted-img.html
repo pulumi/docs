@@ -16,7 +16,7 @@
     {{ else }}
         {{ $img = $img.Process $processArgs }}
     {{ end }}
-    {{/* Skip srcset for small images (maxWidth < 400) — src already covers 1x, 400px srcset covers 2x */}}
+    {{/* Skip srcset for very small images (maxWidth < 400) — src already covers 1x and 2x. */}}
     {{ $srcset := slice }}
     {{ if ge $maxWidth 400 }}
     {{ $maxSrcsetWidth := mul $maxWidth 2 }}
@@ -28,11 +28,11 @@
             {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) }}
         {{ end }}
     {{ end }}
-    {{/* If the original is smaller than 2x maxWidth, include the original width too so the
+    {{/* If the original is at or below 2x maxWidth, include the original width too so the
          sharpest available resource is offered (the largest candidate may fall short of the
          original width — e.g. a 1472w source with a 1200 candidate). Skip when the original
          width exactly matches a candidate, otherwise the loop above already emitted it. */}}
-    {{ if and (lt $origImg.Width $maxSrcsetWidth) (not (in $candidates $origImg.Width)) }}
+    {{ if and (le $origImg.Width $maxSrcsetWidth) (not (in $candidates $origImg.Width)) }}
         {{ $resized := $origImg.Process $processArgs | fingerprint }}
         {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $origImg.Width) }}
     {{ end }}
