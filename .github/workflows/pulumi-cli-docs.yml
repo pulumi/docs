@@ -6,11 +6,11 @@ env:
   ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
 
-name: Pulumi CLI docs
+name: Pulumi CLI docs (WIP - do not use)
 on:
-  repository_dispatch:
-    types:
-      - pulumi-cli-docs
+  # WIP: Manual trigger only. Do not add repository_dispatch or wire this into
+  # pulumi-cli.yml until end-to-end verification is complete. Tracked in
+  # https://github.com/pulumi/docs/issues/18934.
   workflow_dispatch:
     inputs:
       version:
