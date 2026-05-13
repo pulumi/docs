@@ -1530,6 +1530,7 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
         claim_ranges = _parse_line_ranges(str(v.get("line_range") or ""))
         if not claim_ranges:
             continue
+        artifact_file = (v.get("file") or "").strip()
         for tr_ranges, tr_word, _raw in trail_entries:
             # window=0: strict pairing. The default window=2 was producing
             # false positives where an artifact verdict at L21 paired against
@@ -1540,8 +1541,26 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
             # this rule on it is incorrect.
             if tr_word is None or not _ranges_overlap(claim_ranges, tr_ranges, window=0):
                 continue
+            # File-path match: two trail lines from DIFFERENT files can share
+            # an overlapping line-range (e.g., L80-81 in hcl-language-reference.md
+            # vs L81-82 in hcl-component-reference.md share line 81). The
+            # pairing must be same-file, since each file's claims are
+            # independent. Skip when the trail line carries a file annotation
+            # AND it doesn't match the artifact's file; pair freely otherwise
+            # (the composer renders most claims with a file annotation, but
+            # synthetic / file-less trail lines fall back to range-only match).
+            trail_file_m = re.search(r"L\d+(?:-\d+)?\s+in\s+`([^`]+)`", _raw)
+            if trail_file_m and artifact_file and trail_file_m.group(1) != artifact_file:
+                continue
             if tr_word in forbidden:
                 lr = str(v.get("line_range") or "<verified claim>")
+                # Encode the artifact's file path inside line_ref so downstream
+                # consumers (splicer.py, validator-fix.py) can replicate the
+                # same-file filter when locating the trail line to splice.
+                # Without this the splicer might find another file's trail
+                # entry that happens to share the line-range overlap.
+                if artifact_file:
+                    lr = f"{lr} in `{artifact_file}`"
                 route = v.get("route", "?")
                 ev = (str(v.get("evidence") or ""))[:160]
                 violations.append(Violation(

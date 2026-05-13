@@ -162,6 +162,31 @@ def test_verified_claims_trail_faithful_restores_artifact_verdict():
     assert applied == ["verified-claims-trail-faithful"]
 
 
+def test_verified_claims_trail_faithful_file_filter_skips_cross_file_overlap():
+    """Two files can have trail lines whose ranges overlap (L80-81 in file A
+    vs L81-82 in file B both touch line 81). The splicer's same-file filter
+    must skip the cross-file match and only splice the same-file trail line."""
+    body = _trail_section(
+        '- L80-81 in `language-reference.md` "Claim about language file" → ✅ verified (...)',
+        '- L81-82 in `component-reference.md` "Claim about component file" → ✅ verified (...)',
+    )
+    # Artifact's line_ref encodes the file scope; splicer must only match the
+    # component-reference.md trail entry, leaving language-reference.md alone.
+    violation = {
+        "rule_id": "verified-claims-trail-faithful",
+        "line_ref": "L81-82 in `component-reference.md`",
+        "expected": "...",
+        "actual": "trail says `verified`; artifact says `unverifiable` — evidence: x",
+        "hint": "...",
+    }
+    new_body, applied, fallback = splicer.apply_splices(body, [violation])
+    # Only the component-reference line should change.
+    assert "- L80-81 in `language-reference.md` \"Claim about language file\" → ✅ verified" in new_body
+    assert "- L81-82 in `component-reference.md` \"Claim about component file\" → 🤷 unverifiable" in new_body
+    assert applied == ["verified-claims-trail-faithful"], (applied, fallback)
+    assert fallback == []
+
+
 def test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch():
     """The validator now pairs with window=0 (strict). A violation whose
     `line_ref` (artifact anchor) doesn't have an EXACT trail line with the
@@ -496,6 +521,7 @@ TESTS = [
     test_trail_per_verdict_emoji_replaces_legacy_glyph,
     test_trail_canonical_verdict_word_replaces_freelanced_token,
     test_verified_claims_trail_faithful_restores_artifact_verdict,
+    test_verified_claims_trail_faithful_file_filter_skips_cross_file_overlap,
     test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch,
     test_verified_claims_trail_faithful_idempotent_across_duplicate_violations,
     test_verified_claims_trail_faithful_matches_by_range_overlap,

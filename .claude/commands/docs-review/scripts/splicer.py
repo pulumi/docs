@@ -175,7 +175,7 @@ def _find_trail_line_index(lines: list[str], anchor: str) -> int:
 
 
 def _find_trail_line_index_by_overlap_and_word(
-    lines: list[str], anchor: str, want_word: str, window: int = 0
+    lines: list[str], anchor: str, want_word: str, file_filter: str = "", window: int = 0
 ) -> int:
     """Find the trail line whose anchor range overlaps `anchor` (within
     ±`window`) AND whose current verdict word equals `want_word`. Mirrors the
@@ -186,7 +186,12 @@ def _find_trail_line_index_by_overlap_and_word(
     verdict is rendered by the composer into its own trail line at the same
     line_range — a window>0 would pair against a neighbor claim's trail.
 
-    Returns -1 if no overlap-and-word match found.
+    `file_filter`, when non-empty, restricts matches to trail lines whose
+    ``L<anchor> in `<path>``` annotation equals that path. Mirrors the
+    validator's same-file pairing check that prevents pairing across files
+    that happen to have overlapping line ranges.
+
+    Returns -1 if no overlap-and-word(-and-file) match found.
     """
     span = _section_span(lines, "🔍 Verification trail")
     if span is None:
@@ -212,6 +217,12 @@ def _find_trail_line_index_by_overlap_and_word(
                 break
         if not overlaps:
             continue
+        # File match (when caller specifies a filter). Trail lines without a
+        # file annotation pass freely; only an explicit mismatch is excluded.
+        if file_filter:
+            file_m = re.search(r"L\d+(?:-\d+)?\s+in\s+`([^`]+)`", lines[i])
+            if file_m and file_m.group(1) != file_filter:
+                continue
         # Extract the verdict word (the token immediately after `→ <glyph> `).
         arrow_m = re.search(r"→\s+\S+\s+(\S+)", lines[i])
         if not arrow_m:
@@ -399,14 +410,22 @@ def splice_verified_claims_trail_faithful(lines: list[str], violation: dict) -> 
         return lines, False
     right_emoji = EXPECTED_TRAIL_EMOJI[right]
 
-    anchor = violation.get("line_ref", "")
-    idx = _find_trail_line_index_by_overlap_and_word(lines, anchor, wrong)
+    # line_ref may carry a ``L<anchor> in `<path>``` form to scope to a
+    # specific file; parse that out so we can replicate the validator's
+    # same-file pairing.
+    line_ref_raw = violation.get("line_ref", "")
+    file_m = re.search(r"in\s+`([^`]+)`", line_ref_raw)
+    file_filter = file_m.group(1) if file_m else ""
+    anchor_m = re.match(r"\s*(L\d+(?:-L?\d+)?)", line_ref_raw)
+    anchor = anchor_m.group(1) if anchor_m else line_ref_raw
+
+    idx = _find_trail_line_index_by_overlap_and_word(lines, anchor, wrong, file_filter)
     if idx < 0:
         # Idempotent: maybe a previous splice already settled the line —
         # check whether there's an overlapping trail entry with the RIGHT
         # word. If so, success without modifying. If not, we have no
         # findable target; defer.
-        idx_already_right = _find_trail_line_index_by_overlap_and_word(lines, anchor, right)
+        idx_already_right = _find_trail_line_index_by_overlap_and_word(lines, anchor, right, file_filter)
         if idx_already_right >= 0:
             return lines, True
         return lines, False
