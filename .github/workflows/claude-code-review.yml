@@ -781,12 +781,19 @@ jobs:
           exit 0
 
       - name: Splice fallback — model lane (Step C2)
-        if: steps.splicer.outputs.splicer_exit == '2' && hashFiles('/tmp/splicer-fallback.json') != ''
+        # Note: `hashFiles()` only inspects $GITHUB_WORKSPACE, so the /tmp
+        # fallback JSON is invisible to it. Gate on splicer's exit code alone
+        # — splicer.py only exits 2 when it has written the fallback JSON.
+        if: steps.splicer.outputs.splicer_exit == '2'
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set +e
+          if [[ ! -f /tmp/splicer-fallback.json ]]; then
+            echo "::warning::Step C2: splicer exited 2 but /tmp/splicer-fallback.json missing — skipping fallback"
+            exit 0
+          fi
           python3 - <<'PYEOF'
           import json, pathlib
           fix_me_path = pathlib.Path('/tmp/validate-pinned.fix-me.json')

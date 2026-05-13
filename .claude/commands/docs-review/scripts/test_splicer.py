@@ -162,6 +162,66 @@ def test_verified_claims_trail_faithful_restores_artifact_verdict():
     assert applied == ["verified-claims-trail-faithful"]
 
 
+def test_verified_claims_trail_faithful_idempotent_across_duplicate_violations():
+    """Two violations may legitimately target the same trail line (different
+    artifact claims overlap the same line range). The first splice settles the
+    line; subsequent splices must see it as already-canonical and succeed,
+    not defer — otherwise the rule wrongly goes to fallback."""
+    body = _trail_section(
+        '- L42 "Claim A" → ✅ verified (source: ...)',
+    )
+    v1 = {
+        "rule_id": "verified-claims-trail-faithful",
+        "line_ref": "L42",
+        "expected": "...",
+        "actual": "trail says `verified`; artifact says `contradicted` — evidence: ...",
+        "hint": "Render the trail line for L42 as `❌ contradicted` ...",
+    }
+    v2 = dict(v1)  # second violation targets the same trail line
+    new_body, applied, fallback = splicer.apply_splices(body, [v1, v2])
+    assert "→ ❌ contradicted" in new_body, new_body
+    assert applied == ["verified-claims-trail-faithful"], (applied, fallback)
+    assert fallback == [], fallback
+
+
+def test_pass3_unverifiable_evidence_idempotent():
+    """Second splice for the same trail line: already has the pointer phrase
+    → success, not defer."""
+    body = _trail_section(
+        '- L88 "Some claim" → 🤷 unverifiable (framing: ok; evidence: insufficient; WebSearch ran query for source: foo)',
+    )
+    violation = {
+        "rule_id": "pass-3-unverifiable-evidence",
+        "line_ref": "<🔍 Verification trail: L88>",
+        "expected": "...",
+        "actual": "...",
+        "hint": "Insert `; WebSearch ran query for source: foo` immediately before that closing `)`.",
+    }
+    new_body, applied, fallback = splicer.apply_splices(body, [violation])
+    assert new_body == body  # phrase already present, no change
+    assert applied == ["pass-3-unverifiable-evidence"]
+    assert fallback == []
+
+
+def test_trail_canonical_verdict_word_idempotent():
+    """Second splice for the same trail line whose verdict word is already
+    canonical → success, not defer."""
+    body = _trail_section(
+        '- L7 "Quoted claim" → ✅ verified (evidence pointer here)',
+    )
+    violation = {
+        "rule_id": "trail-canonical-verdict-word",
+        "line_ref": "L7",
+        "expected": "trail verdict is one of the canonical six",
+        "actual": "renders non-canonical verdict token `verified` (after `✅`)",
+        "hint": "...",
+    }
+    new_body, applied, fallback = splicer.apply_splices(body, [violation])
+    assert new_body == body  # already canonical
+    assert applied == ["trail-canonical-verdict-word"]
+    assert fallback == []
+
+
 def test_verified_claims_trail_faithful_matches_by_range_overlap():
     """Artifact says L42-L58, trail anchor is L42 — overlap, not exact match."""
     body = _trail_section(
@@ -409,8 +469,11 @@ TESTS = [
     test_trail_per_verdict_emoji_replaces_legacy_glyph,
     test_trail_canonical_verdict_word_replaces_freelanced_token,
     test_verified_claims_trail_faithful_restores_artifact_verdict,
+    test_verified_claims_trail_faithful_idempotent_across_duplicate_violations,
     test_verified_claims_trail_faithful_matches_by_range_overlap,
     test_pass3_unverifiable_evidence_inserts_pointer,
+    test_pass3_unverifiable_evidence_idempotent,
+    test_trail_canonical_verdict_word_idempotent,
     test_external_claim_state_format_defers_to_fallback,
     test_external_claim_dispatch_metadata_appends_segment,
     test_external_claim_routed_metadata_appends_segment,

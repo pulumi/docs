@@ -309,7 +309,9 @@ def splice_trail_canonical_verdict_word(lines: list[str], violation: dict) -> tu
     canonical = CANONICAL_VERDICT_FOR_EMOJI.get(emoji)
     if canonical is None:
         return lines, False
-    # Strip trailing punctuation on the bad token (`:.,;)`) when replacing.
+    # Idempotent: if the second token is already the canonical word, success.
+    if bad_tok.rstrip(":.,;)") == canonical:
+        return lines, True
     bad_stripped = bad_tok.rstrip(":.,;)")
     if not bad_stripped:
         return lines, False
@@ -344,18 +346,13 @@ def splice_verified_claims_trail_faithful(lines: list[str], violation: dict) -> 
     if idx < 0:
         return lines, False
     line = lines[idx]
-    # Replace the pair after `→` with the canonical emoji + word.
-    new_line, n = re.subn(
-        r"(→\s+)\S+\s+\S+",
-        lambda m: m.group(1) + f"{right_emoji} {right}",
-        line,
-        count=1,
-    )
-    if n == 0:
-        return lines, False
-    # Restore any trailing punctuation we may have eaten — preserve content
-    # after the word/punct boundary unchanged. Simpler: only consume the
-    # exact two whitespace-separated tokens after the arrow.
+    # Idempotent: if the line already has the canonical `→ <right_emoji> <right>`
+    # pair, treat as success without modifying. Two violations can legitimately
+    # target the same trail line (different artifact claims overlap the same
+    # line range); the first splice settles the line and subsequent splices
+    # find it already correct.
+    if re.search(r"→\s+" + re.escape(right_emoji) + r"\s+" + re.escape(right) + r"\b", line):
+        return lines, True
     new_line = re.sub(
         r"(→\s+)\S+(\s+)\S+",
         lambda m: m.group(1) + right_emoji + m.group(2) + right,
@@ -394,9 +391,10 @@ def splice_pass3_unverifiable_evidence(lines: list[str], violation: dict) -> tup
     if ")" not in line:
         return lines, False
     last_close = line.rfind(")")
-    # Don't re-insert if the phrase is already present.
+    # Idempotent: if the pointer phrase is already present, treat as success
+    # (a previous splice for this rule landed it).
     if phrase[:30] in line:
-        return lines, False
+        return lines, True
     new_line = line[:last_close] + f"; {phrase}" + line[last_close:]
     lines = lines[:]
     lines[idx] = new_line
