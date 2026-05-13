@@ -360,7 +360,7 @@ If the rendered output exceeds 65,000 characters, the **💡 Pre-existing** and 
 
 ### Comment lifecycle
 
-The pinned comment sequence is managed by `bash .claude/commands/docs-review/scripts/pinned-comment.sh`, which the workflow invokes as a post-Opus step after the review draft has been validated and surgically spliced -- it owns marker tagging, splitting, upsert, and prune. Each comment carries a `<!-- CLAUDE_REVIEW N/M -->` marker on its first line. The 1/M comment is sacrosanct: the script refuses to delete index 0, so the table, status counts, and review history survive every re-run. **Reviews do not call this script (or `gh pr comment`) directly — the workflow handles the publish chain after the editorial pass exits.** See `docs-review:ci.md` §4 for the contract.
+The pinned comment sequence is managed by `bash .claude/commands/docs-review/scripts/pinned-comment.sh`, which the workflow invokes after the review draft has been validated and surgically spliced -- it owns marker tagging, splitting, upsert, and prune. Each comment carries a `<!-- CLAUDE_REVIEW N/M -->` marker on its first line. The 1/M comment is sacrosanct: the script refuses to delete index 0, so the table, status counts, and review history survive every re-run. **Reviews do not call this script (or `gh pr comment`) directly — the workflow handles the publish chain after the editorial pass exits.** See `docs-review:ci.md` §4 for the contract.
 
 ---
 

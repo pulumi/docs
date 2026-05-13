@@ -734,17 +734,18 @@ jobs:
             Post-run labels (`review:claude-ran` add, `review:claude-stale` remove) are applied by a separate workflow step. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
-      # ---- A13: post-Opus validate / splice / re-validate / upsert chain ----
-      # Opus exits after editing .review-draft.md. The steps below own the
-      # full publish path:
+      # ---- post-edit validate / splice / re-validate / upsert chain ----
+      # The editorial pass step (above) exits after editing .review-draft.md.
+      # The steps below own the full publish path:
       #   B  validate     → /tmp/validate-pinned.fix-me.json
       #   C  splicer.py   → applies deterministic surgical fixes; defers
       #                      genuinely judgment-heavy rules to /tmp/splicer-fallback.json
-      #   C2 validator-fix.py (model lane fallback; no-op for all current rules)
+      #   C2 validator-fix.py (model-lane fallback; no-op for all current rules)
       #   D  re-validate  → decides body_ready vs soft-floor
       #   E  upsert       → posts the pinned comment (curl/gh; no model)
       # Each step has its own workflow log; debugging is `gh run view <id> --log`
-      # rather than chasing Bash-tool-truncated subprocess output inside Opus.
+      # rather than chasing Bash-tool-truncated subprocess output from inside
+      # the editorial pass.
 
       - name: Validate review body (Step B)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'

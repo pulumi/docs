@@ -103,6 +103,6 @@ If `.review-draft.md` is absent or its first lines are a `> [!CAUTION]` composer
 1. Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 2. Read the pre-step artifacts directly: `.verified-claims.json` for the trail/verdicts (render one trail line per verdict, verbatim — verdict word + per-verdict emoji + evidence + source; **do not re-verify**); `.candidate-claims.json` is the claim *floor* — every entry must surface a verdict line in the 🔍 Verification trail (the `candidate-claims-coverage` rule fails the review otherwise) and you add any claims the artifact missed; `.vale-findings.json` for the `#### Style findings` block; `.editorial-balance.json` for the §📊 Tier 1; `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` for the build / frontmatter / sibling checks. If `.verified-claims.json` is absent or its `verdicts[]` is empty, fall back further to the in-review extraction + verification path per `docs-review:references:fact-check` §Routed verification fallback.
 3. Render per `docs-review:references:output-format` and apply its DO-NOT list before emitting.
-4. Save the assembled body to `.review-draft.md` and exit — the workflow's post-Opus steps publish it. (See §4 above.)
+4. Save the assembled body to `.review-draft.md` and exit — the workflow publishes it. (See §4 above.)
 
 This is the safety net, not the normal path.
