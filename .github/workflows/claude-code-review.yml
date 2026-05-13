@@ -663,6 +663,13 @@ jobs:
         uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Expose ANTHROPIC_API_KEY in the step env so Bash sub-shells (e.g.
+          # `pinned-comment.sh upsert-validated → validator-fix.py → claude -p
+          # --bare`) can authenticate without OAuth — OAuth state isn't
+          # available in subprocesses spawned by the action. The `with:
+          # anthropic_api_key` input below configures the action's own
+          # invocation; this env entry covers nested Bash invocations.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
