@@ -236,6 +236,8 @@ Bridged providers, which take a Terraform provider as an underlying dependency, 
 
 Provider functions are exposed in each language as regular functions, in two variations:
 
+In most languages, the two variations take the form of **two distinct, separately named functions** rather than overloads of a single function. For example, the AWS function `aws.ec2.getAmi` has a corresponding output form named `aws.ec2.getAmiOutput`. Java's naming convention is inverted: `Ec2Functions.getAmi()` is the _output_ form, while `Ec2Functions.getAmiPlain()` is the direct form. In YAML, both forms are invoked using `fn::invoke`, and the runtime handles the distinction transparently.
+
 ### Direct form
 
 The **direct form** accepts plain arguments (e.g., `string`, as opposed to `pulumi.Input<string>`):
@@ -353,6 +355,428 @@ There are several common scenarios where either direct form or output form must 
 
 * **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
 * **If you need resources to be created or updated before the function is invoked, you should use the output form.** (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
+
+The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no `apply` wrapper required.
+
+**Using the direct form:**
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// getAmiIds returns a Promise<GetAmiIdsResult>; await it to get a plain value.
+const candidates = await aws.ec2.getAmiIds({
+    owners: ["amazon"],
+    filters: [{ name: "name", values: ["amzn2-ami-hvm-*-x86_64-gp3"] }],
+});
+
+// Because candidates.ids is a plain string[], we can branch on it freely.
+// The instance is only added to the stack if a matching AMI was found.
+if (candidates.ids.length > 0) {
+    new aws.ec2.Instance("web", {
+        ami: candidates.ids[0],
+        instanceType: "t3.micro",
+    });
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi_aws as aws
+
+# get_ami_ids returns a plain GetAmiIdsResult.
+candidates = aws.ec2.get_ami_ids(
+    owners=["amazon"],
+    filters=[{"name": "name", "values": ["amzn2-ami-hvm-*-x86_64-gp3"]}],
+)
+
+# Because candidates.ids is a plain list, we can branch on it freely.
+# The instance is only added to the stack if a matching AMI was found.
+if candidates.ids:
+    aws.ec2.Instance(
+        "web",
+        ami=candidates.ids[0],
+        instance_type="t3.micro",
+    )
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// GetAmiIds returns plain results synchronously.
+		candidates, err := ec2.GetAmiIds(ctx, &ec2.GetAmiIdsArgs{
+			Owners: []string{"amazon"},
+			Filters: []ec2.GetAmiIdsFilter{
+				{Name: "name", Values: []string{"amzn2-ami-hvm-*-x86_64-gp3"}},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+
+		// Because candidates.Ids is a plain []string, we can branch on it freely.
+		// The instance is only added to the stack if a matching AMI was found.
+		if len(candidates.Ids) > 0 {
+			if _, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+				Ami:          pulumi.String(candidates.Ids[0]),
+				InstanceType: pulumi.String("t3.micro"),
+			}); err != nil {
+				return err
+			}
+		}
+
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+// The async lambda allows us to await the direct form function.
+return await Deployment.RunAsync(async () =>
+{
+    // GetAmiIds.InvokeAsync returns a Task<GetAmiIdsResult>; await it for a plain value.
+    var candidates = await Aws.Ec2.GetAmiIds.InvokeAsync(new Aws.Ec2.GetAmiIdsInvokeArgs
+    {
+        Owners = { "amazon" },
+        Filters =
+        {
+            new Aws.Ec2.Inputs.GetAmiIdsFilterInputArgs
+            {
+                Name = "name",
+                Values = { "amzn2-ami-hvm-*-x86_64-gp3" },
+            },
+        },
+    });
+
+    // Because candidates.Ids is a plain ImmutableArray<string>, we can branch on it freely.
+    // The instance is only added to the stack if a matching AMI was found.
+    if (candidates.Ids.Count > 0)
+    {
+        _ = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+        {
+            Ami = candidates.Ids[0],
+            InstanceType = "t3.micro",
+        });
+    }
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.*;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiIdsArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiIdsFilterArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        // getAmiIdsPlain returns a CompletableFuture<GetAmiIdsResult>; join() for a plain value.
+        var candidates = Ec2Functions.getAmiIdsPlain(GetAmiIdsArgs.builder()
+                .owners("amazon")
+                .filters(GetAmiIdsFilterArgs.builder()
+                        .name("name")
+                        .values("amzn2-ami-hvm-*-x86_64-gp3")
+                        .build())
+                .build()).join();
+
+        // Because candidates.ids() is a plain List<String>, we can branch on it freely.
+        // The instance is only added to the stack if a matching AMI was found.
+        if (!candidates.ids().isEmpty()) {
+            new Instance("web", InstanceArgs.builder()
+                    .ami(candidates.ids().get(0))
+                    .instanceType("t3.micro")
+                    .build());
+        }
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: provider
+runtime: yaml
+
+# YAML does not have native conditional resource creation, so the direct-form
+# gating pattern shown in other languages does not apply here. Use fn::invoke
+# with a known-good filter and handle missing results in a downstream system,
+# or switch to a language SDK when conditional resource creation is required.
+variables:
+  candidates:
+    fn::invoke:
+      function: aws:ec2/getAmiIds:getAmiIds
+      arguments:
+        owners: ["amazon"]
+        filters:
+          - name: name
+            values: ["amzn2-ami-hvm-*-x86_64-gp3"]
+
+resources:
+  web:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${candidates.ids[0]}
+      instanceType: t3.micro
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+**Using the output form:**
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+
+// config.requireSecret returns an Output<string>.  The output form of the
+// function accepts Pulumi Inputs, so we can pass this value directly without
+// an apply() wrapper.
+const amiNameFilter = config.requireSecret("amiNameFilter");
+
+const latestAmi = aws.ec2.getAmiOutput({
+    owners: ["amazon"],
+    mostRecent: true,
+    filters: [{ name: "name", values: [amiNameFilter] }],
+});
+
+new aws.ec2.Instance("web", {
+    ami: latestAmi.id,
+    instanceType: "t3.micro",
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+config = pulumi.Config()
+
+# config.require_secret returns an Output[str].  The output form of the
+# function accepts Pulumi Inputs, so we can pass this value directly without
+# an apply() wrapper.
+ami_name_filter = config.require_secret("amiNameFilter")
+
+latest_ami = aws.ec2.get_ami_output(
+    owners=["amazon"],
+    most_recent=True,
+    filters=[aws.ec2.GetAmiFilterArgs(name="name", values=[ami_name_filter])],
+)
+
+aws.ec2.Instance(
+    "web",
+    ami=latest_ami.id,
+    instance_type="t3.micro",
+)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+
+		// cfg.RequireSecret returns a pulumi.StringOutput.  The output form
+		// of the function accepts Pulumi Inputs, so we can pass this value
+		// directly without an Apply() wrapper.
+		amiNameFilter := cfg.RequireSecret(ctx, "amiNameFilter")
+
+		latestAmi := ec2.LookupAmiOutput(ctx, ec2.LookupAmiOutputArgs{
+			Owners:     pulumi.StringArray{pulumi.String("amazon")},
+			MostRecent: pulumi.BoolPtr(true),
+			Filters: ec2.GetAmiFilterArray{
+				ec2.GetAmiFilterArgs{
+					Name:   pulumi.String("name"),
+					Values: pulumi.StringArray{amiNameFilter},
+				},
+			},
+		}, nil)
+
+		_, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+			Ami:          latestAmi.Id(),
+			InstanceType: pulumi.String("t3.micro"),
+		})
+		return err
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+return await Deployment.RunAsync(() =>
+{
+    var config = new Config();
+
+    // config.RequireSecret returns an Output<string>.  The output form of the
+    // function accepts Pulumi Inputs, so we can pass this value directly without
+    // an Apply() wrapper.
+    var amiNameFilter = config.RequireSecret("amiNameFilter");
+
+    var latestAmi = Aws.Ec2.GetAmi.Invoke(new Aws.Ec2.GetAmiInvokeArgs
+    {
+        Owners = { "amazon" },
+        MostRecent = true,
+        Filters =
+        {
+            new Aws.Ec2.Inputs.GetAmiFilterInputArgs
+            {
+                Name = "name",
+                Values = { amiNameFilter },
+            },
+        },
+    });
+
+    _ = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
+    {
+        Ami = latestAmi.Apply(a => a.Id),
+        InstanceType = "t3.micro",
+    });
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.*;
+import com.pulumi.aws.ec2.Ec2Functions;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiArgs;
+import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var amiNameFilter = ctx.config().requireSecret("amiNameFilter");
+
+        // Ec2Functions.getAmi() is the output form (returns Output<GetAmiResult>).
+        // It accepts Pulumi Inputs, so we can pass the secret Output directly.
+        var latestAmi = Ec2Functions.getAmi(GetAmiArgs.builder()
+                .owners("amazon")
+                .mostRecent(true)
+                .filters(GetAmiFilterArgs.builder()
+                        .name("name")
+                        .values(amiNameFilter)
+                        .build())
+                .build());
+
+        new Instance("web", InstanceArgs.builder()
+                .ami(latestAmi.applyValue(ami -> ami.id()))
+                .instanceType("t3.micro")
+                .build());
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: provider
+runtime: yaml
+
+config:
+  amiNameFilter:
+    type: string
+    secret: true
+
+# In YAML, fn::invoke naturally accepts config variable references.
+# There is no distinction between the direct and output forms; the
+# runtime resolves all variable references before invoking the function.
+variables:
+  latestAmi:
+    fn::invoke:
+      function: aws:ec2/getAmi:getAmi
+      arguments:
+        owners: ["amazon"]
+        mostRecent: true
+        filters:
+          - name: name
+            values: ["${amiNameFilter}"]
+
+resources:
+  web:
+    type: aws:ec2:Instance
+    properties:
+      ami: ${latestAmi.id}
+      instanceType: t3.micro
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 {{% notes type="info" %}}
 Pulumi recommends you choose the output form of a function unless you have a specific need for the direct form. We make this recommendation because:
