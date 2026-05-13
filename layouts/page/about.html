@@ -168,8 +168,11 @@
                     </li>
                 {{ end }}
             </ul>
-            <div>
-                <a class="inline-block mt-6 text-bold text-violet-primary mt-12 font-bold" href="{{ relref . "/awards" }}">View all achievements</a>
+            <div class="mt-12 flex">
+                <a class="btn btn-link btn-xl" href="{{ relref . "/awards" }}">
+                    <span>View all achievements</span>
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
             </div>
         </div>
     </section>
@@ -187,7 +190,10 @@
                         </li>
                     {{ end }}
                 </ul>
-                <a class="text-violet-primary font-bold" href="{{ relref . "newsroom" }}">View all press releases</a>
+                <a class="btn btn-link btn-xl" href="{{ relref . "newsroom" }}">
+                    <span>View all press releases</span>
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
             </div>
             <div class="md:w/1-2 md:px-8">
                 <h3 class="text-center md:text-left font-semibold text-5xl">Recent news</h3>
@@ -201,7 +207,10 @@
                         </li>
                     {{ end }}
                 </ul>
-                <a class="text-violet-primary font-bold" href="{{ relref . "newsroom" }}">View all recent news</a>
+                <a class="btn btn-link btn-xl" href="{{ relref . "newsroom" }}">
+                    <span>View all recent news</span>
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
             </div>
         </div>
     </section>

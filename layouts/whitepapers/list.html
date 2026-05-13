@@ -30,7 +30,12 @@
                         {{ . | markdownify }}
                     </div>
                     {{ end }}
-                    <a href="{{ .RelPermalink }}" class="text-violet-primary hover:text-violet-primary font-semibold mt-auto inline-flex items-center gap-1">Read the whitepaper &rarr;</a>
+                    <div class="mt-auto flex">
+                        <a href="{{ .RelPermalink }}" class="btn btn-link btn-xl">
+                            <span>Read the whitepaper</span>
+                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                        </a>
+                    </div>
                 </div>
             </div>
             {{ end }}
