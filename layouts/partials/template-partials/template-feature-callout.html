@@ -1,0 +1,65 @@
+{{/*
+    Template Feature Callout Partial
+
+    Highlight card on a violet-50 background with a decorative SVG (like the
+    testimonial partial). Used in place of full-bleed violet promo banners
+    when the content is text-only.
+
+    Parameters:
+    - tag_line: Optional overline (small uppercase text above the title).
+    - title: Card title.
+    - lead: Optional larger subhead rendered below the title.
+    - description: Optional body copy (markdown supported).
+    - cta_primary_text: Optional primary CTA label.
+    - cta_primary_link: Primary CTA URL.
+    - cta_secondary_text: Optional secondary (outline) CTA label.
+    - cta_secondary_link: Secondary CTA URL.
+    - background: Optional decorative background variant — 1 or 2 (defaults to 1).
+    - anchor: Optional anchor for section id.
+*/}}
+
+{{ $tagLine := .tag_line }}
+{{ $title := .title }}
+{{ $lead := .lead }}
+{{ $description := .description }}
+{{ $ctaPrimaryText := .cta_primary_text }}
+{{ $ctaPrimaryLink := .cta_primary_link }}
+{{ $ctaSecondaryText := .cta_secondary_text }}
+{{ $ctaSecondaryLink := .cta_secondary_link }}
+{{ $bg := .background | default 1 }}
+{{ $anchor := .anchor }}
+
+<section class="template-feature-callout template-feature-callout-bg-{{ $bg }} relative overflow-hidden rounded-2xl px-6 py-10 md:px-16 md:py-20"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="relative z-10 flex flex-col items-start max-w-3xl">
+        {{ if $tagLine }}
+        <div class="feature-callout-tag-wrap mb-3">
+            <span class="feature-callout-tag-line">{{ $tagLine }}</span>
+        </div>
+        {{ end }}
+        {{ if $title }}
+        <h2 class="feature-callout-title mb-4">{{ $title }}</h2>
+        {{ end }}
+        {{ if $lead }}
+        <p class="feature-callout-lead mb-4">{{ $lead | markdownify }}</p>
+        {{ end }}
+        {{ if $description }}
+        <div class="feature-callout-description">{{ $description | markdownify }}</div>
+        {{ end }}
+        {{ if or $ctaPrimaryText $ctaSecondaryText }}
+        <div class="flex flex-col sm:flex-row flex-wrap items-start gap-x-8 gap-y-4 mt-6">
+            {{ if $ctaPrimaryText }}
+            <a href="{{ $ctaPrimaryLink }}" class="cta inline-flex items-center gap-1">
+                <span>{{ $ctaPrimaryText }}</span>
+                <span>→</span>
+            </a>
+            {{ end }}
+            {{ if $ctaSecondaryText }}
+            <a href="{{ $ctaSecondaryLink }}" class="cta inline-flex items-center gap-1">
+                <span>{{ $ctaSecondaryText }}</span>
+                <span>→</span>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

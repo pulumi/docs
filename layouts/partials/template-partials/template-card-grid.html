@@ -2,22 +2,46 @@
     Template Card Grid Partial
 
     Renders a grid of product cards: large cards in a 2-up row, small cards in a 3-up row.
+    Optionally renders a title and description above the cards with tight spacing
+    (single section).
 
     Parameters:
+    - title: Optional section title rendered above the cards.
+    - description: Optional section description rendered below the title (markdown supported).
+    - align: Optional "left" (default) or "center" for the title/description block.
     - large_cards: Array of card objects (title, description, image, image_alt, cta_text, cta_link)
-    - small_cards: Array of card objects (title, description, image, image_alt, cta_text, cta_link)
+    - small_cards: Array of card objects (title, description, image, image_alt, icon, cta_text, cta_link)
+        - icon: Optional Phosphor icon name (rendered above the title; ignored if image is set).
+    - small_cards_cols: Optional number of columns at md+ for the small_cards grid (2, 3, or 4). Default 3.
     - anchor: Optional anchor for section id
 */}}
 
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $align := .align | default "left" }}
 {{ $largeCards := .large_cards }}
 {{ $smallCards := .small_cards }}
+{{ $smallCardsCols := .small_cards_cols | default 3 }}
+{{ $smallColsClass := "md:grid-cols-3" }}
+{{ if eq $smallCardsCols 2 }}{{ $smallColsClass = "md:grid-cols-2" }}{{ end }}
+{{ if eq $smallCardsCols 4 }}{{ $smallColsClass = "md:grid-cols-2 lg:grid-cols-4" }}{{ end }}
 {{ $anchor := .anchor }}
 
-<section class="template-section-card-grid"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<section class="template-section-card-grid flex flex-col gap-8"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    {{ if or $title $description }}
+    <div class="{{ if eq $align "center" }}text-center max-w-4xl mx-auto{{ else }}text-left{{ end }}">
+        {{ if $title }}
+        <h2 class="section-header-title m-0 mb-4">{{ $title }}</h2>
+        {{ end }}
+        {{ if $description }}
+        <p class="section-header-description {{ if eq $align "left" }}!ml-0 !mr-auto{{ end }}">{{ $description | markdownify }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
     {{ if $largeCards }}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         {{ range $largeCards }}
-        <div class="p-8 flex flex-col items-start rounded-2xl border border-violet-300 overflow-hidden">
+        <div class="p-8 flex flex-col items-start rounded-2xl border border-gray-300 overflow-hidden">
 
             <div class="flex flex-col gap-4 mb-4">
                 <h3 class="template-feature-card-title">{{ .title }}</h3>
@@ -31,7 +55,7 @@
             {{ end }}
 
               {{ if .cta_text }}
-                <a href="{{ .cta_link }}" class="cta inline-flex items-center gap-1 mt-auto">
+                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="cta inline-flex items-center gap-1 mt-auto">
                     <span>{{ .cta_text }}</span>
                     <span>→</span>
                 </a>
@@ -41,21 +65,26 @@
     </div>
     {{ end }}
     {{ if $smallCards }}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 {{ $smallColsClass }} gap-6">
         {{ range $smallCards }}
-        <div class="flex flex-col rounded-2xl border border-violet-300 overflow-hidden">
+        <div class="flex flex-col rounded-2xl border border-gray-300 overflow-hidden">
             {{ if .image }}
             <div class="flex items-center justify-center">
                 {{ partial "fingerprinted-img.html" (dict "src" .image "alt" .image_alt "class" "w-full h-auto object-cover") }}
             </div>
             {{ end }}
             <div class="p-8 flex flex-col flex-1">
+                {{ if and .icon (not .image) }}
+                <div class="template-feature-card-icon mb-4">
+                    {{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}
+                </div>
+                {{ end }}
                 <div class="flex flex-col gap-4 mb-4">
                     <h3 class="template-feature-card-title">{{ .title }}</h3>
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>
                 </div>
                 {{ if .cta_text }}
-                <a href="{{ .cta_link }}" class="cta inline-flex items-center gap-1 mt-auto">
+                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="cta inline-flex items-center gap-1 mt-auto">
                     <span>{{ .cta_text }}</span>
                     <span>→</span>
                 </a>
