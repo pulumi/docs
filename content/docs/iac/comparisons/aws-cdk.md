@@ -8,11 +8,11 @@ menu:
     iac:
         name: AWS CDK
         parent: iac-comparisons
-        weight: 3
+        weight: 25
         identifier: iac-comparisons-aws-cdk
     concepts:
         parent: vs
-        weight: 3
+        weight: 25
 aliases:
 - /docs/intro/vs/cloud-template-transpilers/aws-cdk/
 - /docs/concepts/vs/cloud-template-transpilers/aws-cdk/

@@ -8,11 +8,11 @@ menu:
     iac:
         name: CDKTF
         parent: iac-comparisons
-        weight: 4
+        weight: 27
         identifier: iac-comparisons-cdktf
     concepts:
         parent: vs
-        weight: 4
+        weight: 27
 aliases:
 - /docs/iac/comparisons/cloud-template-transpilers/cdktf/
 ---
