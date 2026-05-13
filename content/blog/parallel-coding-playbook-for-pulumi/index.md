@@ -57,7 +57,7 @@ The five pillars, in one sentence each.
 1. **Issue is the spec.** The GitHub issue carries the acceptance criteria. The pull request is the artifact that gets validated. Input and output of every implementation are versioned, scoped, and reviewable on their own.
 1. **Plan, build, validate.** Three stages, three artifacts. A markdown plan you can read in thirty seconds. A build that produces a diff. A validate step that checks the diff against the spec.
 1. **Parallel worktrees.** Each agent runs in its own git worktree so concurrent changes never trample each other. One repo, five working trees, five branches.
-1. **Fresh-session review.** A different agent, a different conversation, no shared context, reads the output and judges it. The reviewer never sees the writer's chat. Asking a kid to grade their own homework gets you theater.
+1. **Fresh-session review.** A different agent, a different conversation, no shared context, reads the output and judges it. The reviewer never sees the writer's chat. An agent reviewing its own output in the same context is theater.
 1. **Self-healing layer.** When the same issue keeps coming back, fix the system that allowed it. Update the rules, the skills, the `AGENTS.md`. The agent gets better; the bug class disappears.
 
 The application-code version of this playbook leans on ports, node_modules, and databases to get isolation right. The infrastructure version has a different toolbox.
@@ -72,7 +72,7 @@ Walk the pillars again, this time with a Pulumi shop in mind.
 
 **Parallel worktrees.** Worktrees alone are not enough. Two worktrees pointing at the same Pulumi stack will fight over state on the first concurrent `up`. The unit of isolation for infrastructure is the [stack](/docs/iac/concepts/stacks/), not the worktree. Each worktree gets its own ephemeral [review stack](/docs/deployments/deployments/review-stacks/) and its own [ESC environment](/docs/esc/) for credentials. State branches with the work, credentials branch with the work, and the cloud account does not see five agents elbowing each other.
 
-**Fresh-session review.** The hardest part of the application-code version is keeping the reviewer cold. For infrastructure you get it for free. The `pulumi preview` JSON has no memory of the prompt that produced it. A separate agent reading it has the same starting point a human reviewer has: a diff, a stack name, a policy report. [Pulumi Neo reasons over the state graph directly](/blog/grounded-ai-why-neo-knows-your-infrastructure/), so the reviewer grounds every claim in what the change actually does, not what the writer says it does.
+**Fresh-session review.** The hardest part of the application-code version is keeping the reviewer cold. For infrastructure, the substrate hands you the cold context. The `pulumi preview` JSON has no memory of the prompt that produced it. A separate agent reading it has the same starting point a human reviewer has: a diff, a stack name, a policy report. [Pulumi Neo reasons over the state graph directly](/blog/grounded-ai-why-neo-knows-your-infrastructure/), so the reviewer grounds every claim in what the change actually does, not what the writer says it does. Reviewer quality still depends on how well your policies cover the stack, but the cold-context part comes built in.
 
 **Self-healing layer.** Most CrossGuard rule messages today read like assertions. "S3 bucket has no encryption." A self-healing layer needs them to read like instructions. "S3 bucket has no encryption. Set `serverSideEncryptionConfiguration` with SSE-KMS to fix." That single rewrite is the difference between an agent flailing and an agent fixing the violation on the first try. When the same rule keeps tripping, the fix is upstream of the next pull request: in the rules, in the skills, in the policy itself.
 
@@ -98,7 +98,7 @@ Three steps, in order, on a stack with a small blast radius.
 
 1. **Write an `AGENTS.md` for the repo.** Five paragraphs is enough. The component library, the stack naming convention, the policy rules, the review-stack TTL, and the one thing in this repo that bites every newcomer. [Neo reads `AGENTS.md` natively](/blog/pulumi-neo-now-supports-agentsmd/), as do most coding agents. This file is the spec for how the agent should behave even before you write a spec for what it should build.
 1. **Cut a 24-hour review-stack TTL.** Spin up a review stack on PR open, tear it down on PR close or after 24 hours, whichever comes first. This is the gate that turns "ephemeral" from a slogan into a line item that does not appear on next month's bill.
-1. **Run three issues in parallel.** Pick three open issues that touch unrelated resources. Spin up three worktrees, three review stacks, three ESC environments. Let each agent run end-to-end against its own stack. Then have a fourth agent read each preview JSON cold and produce a one-paragraph review. Read the four outputs at lunch.
+1. **Run three issues in parallel.** Pick three open issues that touch unrelated resources. Spin up three worktrees, three review stacks, three ESC environments. Let each agent run end-to-end against its own stack. Then have a fourth agent read each preview JSON cold and produce a one-paragraph review. Read the three PRs and their reviews at lunch.
 
 That last step is the measurement. The first time you run it, half of the changes will fail validation. The second time, fewer. By the third time you will know whether your spec quality, your policies, and your stack hygiene are good enough to scale this to five, then ten, then to every issue tagged `infra:fix`.
 
@@ -106,7 +106,7 @@ If three issues finish cleanly, you have the substrate. If they do not, the gap 
 
 ## Five stacks before lunch
 
-10x is five concurrent humans, working from five issues, against five stacks, behind five fresh-session reviews. The substrate is already there. Stacks isolate state. ESC isolates credentials. `pulumi preview` is the deterministic artifact a fresh reviewer can read cold. CrossGuard is the self-healing layer when you write the rule messages as instructions.
+10x is five concurrent agents, working from five issues, against five stacks, behind five fresh-session reviews. The substrate is already there. Stacks isolate state. ESC isolates credentials. `pulumi preview` is the deterministic artifact a fresh reviewer can read cold. CrossGuard is the self-healing layer when you write the rule messages as instructions.
 
 The remaining work is small and mostly wiring. Write the `AGENTS.md`. Cut the TTL. Pick three issues that touch unrelated resources. Read three PRs at lunch. Five stacks before the room empties out is a realistic Monday.
 
