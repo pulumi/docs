@@ -8,10 +8,10 @@ menu:
     iac:
         name: Kubernetes YAML
         parent: iac-comparisons
-        weight: 7
+        weight: 60
     concepts:
         parent: vs
-        weight: 8
+        weight: 60
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/
 - /docs/intro/vs/k8s_yaml_dsls/

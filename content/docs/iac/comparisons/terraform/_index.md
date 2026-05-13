@@ -8,12 +8,12 @@ menu:
     iac:
         name: Terraform
         parent: iac-comparisons
-        weight: 1
+        weight: 10
         identifier: iac-comparisons-terraform
     concepts:
         identifier: vs-terraform
         parent: vs
-        weight: 1
+        weight: 10
 aliases:
 - /docs/reference/vs/terraform/
 - /docs/intro/vs/terraform/

@@ -8,11 +8,11 @@ menu:
     iac:
         name: AWS CloudFormation
         parent: iac-comparisons
-        weight: 2
+        weight: 20
         identifier: iac-comparisons-cloudformation
     concepts:
         parent: vs
-        weight: 2
+        weight: 20
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
 - /docs/concepts/vs/cloud-templates/cloudformation/
