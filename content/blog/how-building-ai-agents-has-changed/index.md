@@ -71,7 +71,7 @@ Vector search didn't get worse. The context around it improved enough that it st
 
 Taken together, what got pulled into the SDK is the middle of an agent project: the tools layer, the retrieval layer, and the loop. What's left for the team is the system prompt, the skills, and the policies around what the agent is allowed to do.
 
-## Frameworks didn't die, they got narrower
+## When you still need a framework
 
 The first reaction to a lot of this is to declare that frameworks are over. They aren't, but the cases where you reach for one have narrowed.
 
