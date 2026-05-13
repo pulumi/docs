@@ -12,7 +12,7 @@ This is the **CI entry point** for the docs review pipeline.
 ## Hard rules for CI
 
 1. **Never read working-tree *source* state.** No `git status`, `git diff` against the local checkout, no `ls`, no Read against arbitrary repo content files. The CI runner's working tree is a shallow checkout that may not reflect what's in the PR. Use `gh pr view` and `gh pr diff` for **everything** about the PR. *(The workflow-generated pre-step artifacts in the workspace root — `.review-draft.md`, `.verified-claims.json`, etc. per Hard rule 7 — are not "working-tree source state"; Read them freely.)*
-2. **Post only via `pinned-comment.sh upsert-validated`** for the initial post (see §4 below). Never call plain `upsert` directly except as the soft-floor fallback after a second validation failure. The validator catches structural drift the model occasionally introduces (style-count, render-mode, dispatch-metadata, trail-vs-rendered consistency, and now any surviving `<TODO:` placeholder); the wrapper enforces it atomically.
+2. **Do not post the pinned comment yourself.** Edit `.review-draft.md` in place and exit when the editorial pass is done. The workflow runs validate / splice / re-validate / upsert as separate steps after your session ends — you do not call `pinned-comment.sh`, `validate-pinned.py`, or any post-processing script from inside your turn. **Every `<TODO:` placeholder must be replaced** before you exit — the validator's `no-todo-tokens` rule fails the body otherwise.
 3. **Diffs do not show trailing-newline status.** Do not flag missing trailing newlines from CI; the lint job catches this.
 4. **Don't run `make` targets.** No `make build`, `make lint`, `make serve`. Lint and build run in their own jobs.
 5. **No file paths from the working tree in findings.** Every `file:line` reference must come from the PR's diff or `gh pr view --json files` output.
@@ -47,7 +47,7 @@ gh pr diff "$PR_NUMBER"
 
 Treat the diff as the source of truth for what changed. If `--json files` lists a file but the diff doesn't show it (rare — usually a mode-only change), note it but don't invent findings.
 
-**Empty-diff short-circuit.** If `gh pr diff` returns no content (mode-only changes, renames with no content change, or any PR with zero text diff), exit the review with a one-line stdout log (`review: pr=<N> empty-diff skip`) and do **not** call `pinned-comment.sh upsert`.
+**Empty-diff short-circuit.** If `gh pr diff` returns no content (mode-only changes, renames with no content change, or any PR with zero text diff), exit the review with a one-line stdout log (`review: pr=<N> empty-diff skip`) without editing `.review-draft.md`.
 
 ### 2. Read the composed draft
 
@@ -88,34 +88,13 @@ Edit the draft (the composer ASSEMBLES; you JUDGE):
 7. **Keep the body self-consistent** — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add a claim the artifact missed, you may **not** drop a candidate-claims-floor entry — see `docs-review:references:fact-check`); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical. In particular, never drop a `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict: `pass-3-unverifiable-evidence` needs that pointer, the composer rendered it verbatim from `.verified-claims.json` — leave it intact.**
 8. Apply the `docs-review:references:output-format` DO-NOT list before emitting. **Do NOT WebFetch / re-verify claims** — `.verified-claims.json` (rendered into the trail) is the verdict source; editing a trail line to change a verdict word fails the `verified-claims-trail-faithful` rule (if you believe a verdict is wrong, render it as recorded and open a follow-up issue). The only fan-out you run is the cross-sibling sibling-read digest (fresh-review path only).
 9. **On a re-entrant run** (`docs-review:references:update`): the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent.
+10. **Write for the author, not the pipeline.** Bullet bodies and Summary prose must be readable to a PR author who knows nothing about how this review was assembled. Refer to **outcomes** (`✅ verified`, `❌ contradicted`, source URL), not the **processes** that produced them. Avoid pipeline-internal terms like *"the extraction layer"*, *"the verifier / validator / splicer"*, *"Pass 1/2/3"*, *"framing comparison"*, *"soft floor"*, *"the composer"*, or script names (`validate-pinned`, `validator-fix`, `verify-claims`, `splicer`, etc.). If you need to refer to the verification step, say *"the verification step"* or describe the outcome directly.
+    - **Example bad:** "Counted as ❌ contradicted because the extraction layer truncated the claim text..."
+    - **Example good:** "Flagged as ❌ contradicted in error — the source actually supports the claim. The verification step compared a shortened version of the claim against the source."
 
-### 4. Post via the pinned-comment script
+### 4. When you're done
 
-Edit `.review-draft.md` in place (or copy it to a temp file first), then call the validating wrapper:
-
-```bash
-bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert-validated \
-  --pr "$PR_NUMBER" \
-  --body-file .review-draft.md
-```
-
-The wrapper runs `validate-pinned.py` against the body (which now also enforces `no-todo-tokens` — **every `<TODO:` placeholder must be replaced** before posting) plus a Haiku surgical-fix pass, then calls `upsert` if validation passes. On a non-zero exit, read the fix-me marker with the `Read` tool (not Bash `cat` — see Hard rule 7):
-
-```
-Read /tmp/validate-pinned.fix-me.md
-```
-
-Each violation lists the rule, expected vs actual, and a hint. Address every violation in the body, then call `upsert-validated` once more. **Cap the retry at one attempt** — if the second validation also fails, fall back to `upsert --soft-floor` with the unfixed body and accept the soft-floor:
-
-```bash
-bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --soft-floor \
-  --pr "$PR_NUMBER" \
-  --body-file .review-draft.md
-```
-
-Use the `--soft-floor` *flag* — NOT the `VALIDATE_SOFT_FLOOR=1 bash …` env-prefix form (an env prefix makes the command not start with `bash`, so the runner's allow-list rejects it). `upsert --soft-floor` re-runs `validate-pinned.py --soft-floor` (emitting a `::warning::validate-pinned soft-floor` CI annotation that surfaces the residual violations to the maintainer), then publishes regardless.
-
-The wrapper handles marker convention, splitting, in-place edits, and overflow. Do not delete the 1/M summary comment.
+Save `.review-draft.md` and exit. The workflow runs the publish chain as separate steps after your session — validate, deterministic splice (and a model-lane fallback for rules that genuinely can't be spliced deterministically), re-validate, then upsert via `pinned-comment.sh upsert` (with `--soft-floor` if residual violations remain). You do **not** call any of these from inside your turn. Hard rule 2 carries the contract.
 
 ### Fallback (composer crashed / draft absent)
 
@@ -124,6 +103,6 @@ If `.review-draft.md` is absent or its first lines are a `> [!CAUTION]` composer
 1. Route each changed file using `docs-review:references:domain-routing`. Run each file under its domain and merge findings into a single output object.
 2. Read the pre-step artifacts directly: `.verified-claims.json` for the trail/verdicts (render one trail line per verdict, verbatim — verdict word + per-verdict emoji + evidence + source; **do not re-verify**); `.candidate-claims.json` is the claim *floor* — every entry must surface a verdict line in the 🔍 Verification trail (the `candidate-claims-coverage` rule fails the review otherwise) and you add any claims the artifact missed; `.vale-findings.json` for the `#### Style findings` block; `.editorial-balance.json` for the §📊 Tier 1; `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` for the build / frontmatter / sibling checks. If `.verified-claims.json` is absent or its `verdicts[]` is empty, fall back further to the in-review extraction + verification path per `docs-review:references:fact-check` §Routed verification fallback.
 3. Render per `docs-review:references:output-format` and apply its DO-NOT list before emitting.
-4. Post via §4 above.
+4. Save the assembled body to `.review-draft.md` and exit — the workflow's post-Opus steps publish it. (See §4 above.)
 
 This is the safety net, not the normal path.
