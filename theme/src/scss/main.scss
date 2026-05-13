@@ -17,22 +17,6 @@
 $sitenav-height: 90px;
 $sitenav-offset: calc($sitenav-height + 16px);
 
-// @utility declarations must be top-level (cannot be nested inside @layer).
-// These register custom utility classes with Tailwind v4.
-@utility btn {
-    transition: all 120ms linear;
-    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded-lg inline-block;
-    @apply bg-violet-primary border border-violet-primary text-white text-center;
-}
-
-@utility btn-lg {
-    @apply py-3 px-5;
-}
-
-@utility btn-orange {
-    @apply bg-orange-500 border-orange-600;
-}
-
 // Typography token utilities (font sizes from design system).
 @utility text-heading-2xl { font-size: 80px; }
 @utility text-heading-xl { font-size: 72px; }
@@ -235,6 +219,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "badges";
     @import "benefits";
     @import "breadcrumb";
+    @import "button";
     @import "buttons";
     @import "card";
     @import "marketing/cloud-engineering";

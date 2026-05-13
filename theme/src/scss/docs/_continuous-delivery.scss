@@ -3,7 +3,9 @@
     @apply flex flex-row flex-wrap;
 
     > a {
-        @apply btn whitespace-normal bg-transparent border border-gray-300 mb-4 p-4 text-center;
+        @extend .btn;
+        @extend .btn-outline;
+        @apply whitespace-normal mb-4 p-4;
 
         width: calc(50% - 1rem);
         &:not(:nth-child(2n)) {
