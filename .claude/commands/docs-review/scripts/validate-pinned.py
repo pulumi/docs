@@ -19,7 +19,14 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 11 (v10→v11 adds `no-placeholder-empty-form`: an explicit-
+Schema version: 12 (v11→v12 narrows `internal-link-existence` to skip
+  `/docs/…` and `/blog/…` links the review body merely *echoes* from the PR
+  diff: a broken link inside the diff is a content finding the review surfaces
+  (Hugo build / link-integrity catches genuine breakage), not a structural
+  problem with the *review*, so the validator was double-charging the reviewer
+  for it on shallow-checkout runs where the link target hadn't been fetched.
+  The rule still catches genuinely-invented links the review writes that are
+  nowhere in the diff. v10→v11 adds `no-placeholder-empty-form`: an explicit-
   empty-form line — `_No outstanding findings in this PR._`, `_No items resolved
   since the last review._`, etc. — must be reader-facing; a draft round where
   the reviewer left compose-review.py's *older* placeholder text verbatim
@@ -62,7 +69,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 11
+SCHEMA_VERSION = 12
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -1834,6 +1841,13 @@ def check_internal_link_existence(ctx: Context) -> list[Violation]:
             continue
         seen.add(path)
         if not path:
+            continue
+        # If the link target appears anywhere in the PR diff (added, removed, or
+        # context lines), the review is echoing a link from the PR's content —
+        # not authoring an invented one. A broken link inside the diff is a
+        # content finding the review surfaces (Hugo build catches genuine
+        # breakage), not a *review*-quality issue, so don't double-charge.
+        if href in ctx.diff_text or path in ctx.diff_text:
             continue
         # Resolve under content/.
         rel = "content" + path
