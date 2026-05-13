@@ -1519,6 +1519,26 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
     if not verdicts:
         return []  # pre-step didn't run / produced nothing — skip
     trail_entries = _trail_entries_with_word(ctx.body)
+
+    # Pairing strategy: bucket both artifact verdicts and trail entries by
+    # (file, normalized first-range) keys and pair within each bucket BY
+    # INDEX. The composer renders trail entries 1:1 with artifact verdicts in
+    # source order, so the Nth artifact at (file, range) corresponds to the
+    # Nth trail entry at the same (file, range). Bucketing handles the case
+    # where multiple distinct claims share a line range — e.g., two sentences
+    # at L82 in the same file with different verdicts — which the earlier
+    # "first overlapping trail entry" approach cross-paired, producing false
+    # positives where claim A's verdict was checked against claim B's trail.
+    from collections import defaultdict as _defaultdict
+    trail_buckets: dict[tuple[str, tuple[int, int]], list[tuple[str | None, str]]] = _defaultdict(list)
+    for tr_ranges, tr_word, raw in trail_entries:
+        if not tr_ranges:
+            continue
+        tfile_m = re.search(r"L\d+(?:-\d+)?\s+in\s+`([^`]+)`", raw)
+        tfile = tfile_m.group(1) if tfile_m else ""
+        trail_buckets[(tfile, tr_ranges[0])].append((tr_word, raw))
+    bucket_cursors: dict[tuple[str, tuple[int, int]], int] = _defaultdict(int)
+
     violations: list[Violation] = []
     for v in verdicts:
         if not isinstance(v, dict):
@@ -1531,49 +1551,36 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
         if not claim_ranges:
             continue
         artifact_file = (v.get("file") or "").strip()
-        for tr_ranges, tr_word, _raw in trail_entries:
-            # window=0: strict pairing. The default window=2 was producing
-            # false positives where an artifact verdict at L21 paired against
-            # a trail entry at L23 (an entirely different claim that happened
-            # to land within 2 lines). Each artifact verdict is rendered by
-            # the composer into its own trail line at the *same* line_range;
-            # any non-exact overlap is the wrong claim's trail, and firing
-            # this rule on it is incorrect.
-            if tr_word is None or not _ranges_overlap(claim_ranges, tr_ranges, window=0):
-                continue
-            # File-path match: two trail lines from DIFFERENT files can share
-            # an overlapping line-range (e.g., L80-81 in hcl-language-reference.md
-            # vs L81-82 in hcl-component-reference.md share line 81). The
-            # pairing must be same-file, since each file's claims are
-            # independent. Skip when the trail line carries a file annotation
-            # AND it doesn't match the artifact's file; pair freely otherwise
-            # (the composer renders most claims with a file annotation, but
-            # synthetic / file-less trail lines fall back to range-only match).
-            trail_file_m = re.search(r"L\d+(?:-\d+)?\s+in\s+`([^`]+)`", _raw)
-            if trail_file_m and artifact_file and trail_file_m.group(1) != artifact_file:
-                continue
-            if tr_word in forbidden:
-                lr = str(v.get("line_range") or "<verified claim>")
-                # Encode the artifact's file path inside line_ref so downstream
-                # consumers (splicer.py, validator-fix.py) can replicate the
-                # same-file filter when locating the trail line to splice.
-                # Without this the splicer might find another file's trail
-                # entry that happens to share the line-range overlap.
-                if artifact_file:
-                    lr = f"{lr} in `{artifact_file}`"
-                route = v.get("route", "?")
-                ev = (str(v.get("evidence") or ""))[:160]
-                violations.append(Violation(
-                    rule_id="verified-claims-trail-faithful",
-                    line_ref=lr,
-                    expected=f"the 🔍 Verification trail verdict for {lr} matches `.verified-claims.json` (`{av}`, route={route})",
-                    actual=f"trail says `{tr_word}`; artifact says `{av}` — evidence: \"{ev}\"",
-                    hint=(f"`.verified-claims.json` is the verdict source — `verify-claims.py` already verified this claim. "
-                          f"Render the trail line for {lr} as `{EXPECTED_TRAIL_EMOJI.get(av, '')} {av}` with the artifact's "
-                          f"`evidence`/`source` fields. You may NOT silently overwrite the artifact's verdict in the trail; "
-                          f"if you believe it's wrong, render it as recorded and dispute it in a follow-up issue."),
-                ))
-                break  # one violation per artifact verdict
+        key = (artifact_file, claim_ranges[0])
+        bucket = trail_buckets.get(key, [])
+        idx = bucket_cursors[key]
+        if idx >= len(bucket):
+            # No corresponding trail entry for this artifact verdict —
+            # missing-trail-entry is caught by candidate-claims-coverage; this
+            # rule only flags drift on entries that exist.
+            continue
+        tr_word, _raw = bucket[idx]
+        bucket_cursors[key] = idx + 1
+        if tr_word is None or tr_word not in forbidden:
+            continue
+        lr = str(v.get("line_range") or "<verified claim>")
+        # Encode the artifact's file path inside line_ref so downstream
+        # consumers (splicer.py, validator-fix.py) can replicate the
+        # same-file filter when locating the trail line to splice.
+        if artifact_file:
+            lr = f"{lr} in `{artifact_file}`"
+        route = v.get("route", "?")
+        ev = (str(v.get("evidence") or ""))[:160]
+        violations.append(Violation(
+            rule_id="verified-claims-trail-faithful",
+            line_ref=lr,
+            expected=f"the 🔍 Verification trail verdict for {lr} matches `.verified-claims.json` (`{av}`, route={route})",
+            actual=f"trail says `{tr_word}`; artifact says `{av}` — evidence: \"{ev}\"",
+            hint=(f"`.verified-claims.json` is the verdict source — `verify-claims.py` already verified this claim. "
+                  f"Render the trail line for {lr} as `{EXPECTED_TRAIL_EMOJI.get(av, '')} {av}` with the artifact's "
+                  f"`evidence`/`source` fields. You may NOT silently overwrite the artifact's verdict in the trail; "
+                  f"if you believe it's wrong, render it as recorded and dispute it in a follow-up issue."),
+        ))
     return violations
 
 
