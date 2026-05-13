@@ -216,7 +216,7 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 - `matches` — (cross-reference / sibling-consistency claims only) the claim is consistent with its sibling pages.
 - `not-a-claim` — the "claim" is not a falsifiable assertion: git/diff metadata, a code-comment tag (`:latest` in a Dockerfile comment is a tag name, not a recency claim), a faithful description of the PR author's OWN design/pipeline (only third-party-attributed assertions are claims), a path segment that merely looks temporal (`/latest/` in a URL path), or a body line in a pure-rename (unchanged) file. Demote it; don't fail it.
 - `unverifiable` — genuinely not checkable: paywalled, internal-only, future-dated, or a dead/404 source with no live alternative. NOT the default for vendor pricing/licensing/capability claims a public page could resolve — try the page first.
-- `contradicted` — a source positively disagrees with the claim, OR the cited source says something materially different from what the PR claims (the PR strengthened, narrowed, or shifted the framing). A strengthened/narrowed/shifted framing IS a contradiction here.
+- `contradicted` — a source positively disagrees with the claim, OR the claim *overclaims* what the source supports (the PR broadened the framing — see `narrowed`/`shifted` in the framing-check section below). NOTE: a claim that is a *narrower* subset of a broader source statement is NOT contradicted — it's `verified` with a `framing_note: "strengthened"` because the source's broader form proves the claim as a subset.
 - `mismatch` — (cross-reference / sibling-consistency claims only) this PR diverges from its sibling pages' established pattern.
 
 # Confidence
@@ -241,13 +241,15 @@ Cheapest first. Stop as soon as a source closes the claim.
 
 # Cited-claim framing check (pass2 and pass3, any claim that cited a source)
 
-Once you find the supporting passage: does the source say *exactly* what the PR claims?
+Once you find the supporting passage: does the source say *exactly* what the PR claims? Classify the framing relationship, then map to a verdict — the key distinction is which side is broader.
+
 - `exact-match` — source phrasing is the claim's phrasing (or a literal paraphrase of equal scope) → `verified`.
-- `strengthened` — claim is a narrower/stronger subset of the source (source: "use"; claim: "use in production") → `contradicted`, `framing_note: "strengthened — claim narrows '<src>' to '<claim>'"`.
-- `narrowed` — claim is broader than the source (source: "U.S. enterprise"; claim: "enterprise") → `contradicted`, `framing_note: "narrowed"`.
-- `shifted` — same numeric anchor, different subject (source: "evaluate AI agents"; claim: "deploy AI agents") → `contradicted`, `framing_note: "shifted"`.
-- `contradicted` — source positively disagrees → `contradicted`.
-Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage.
+- `strengthened` — **the source is broader; the claim is a narrower subset of it** (source: "do not need to be hardcoded elsewhere"; claim: "do not need to be hardcoded in `PulumiPlugin.yaml`"). The source's broader form proves the claim as a subset — the author has correctly stated a specific case of a more general truth → `verified`, `framing_note: "strengthened — claim narrows '<src>' to '<claim>'; source's broader form proves the claim as a subset"`.
+- `narrowed` — **the claim is broader than the source; the claim overclaims** (source: "U.S. enterprise customers prefer X"; claim: "enterprise customers prefer X"). The source supports only the narrower truth and the claim asserts more → `contradicted`, `framing_note: "narrowed — claim broadens '<src>' to '<claim>'; source supports the narrower form, not the broader claim"`.
+- `shifted` — same anchor, different subject (source: "evaluate AI agents"; claim: "deploy AI agents") → `contradicted`, `framing_note: "shifted — '<src>' vs '<claim>' refer to different subjects"`.
+- `contradicted` — source positively disagrees with the claim → `contradicted`.
+
+Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The `strengthened` → `verified` mapping is the load-bearing distinction: when the source confirms the claim as a special case of a more general statement, the verdict is `verified` (not `contradicted`), and the `framing_note` records the relationship so the reviewer can decide whether to surface a stylistic suggestion about citing a more precise source.
 
 # Intuition check
 
