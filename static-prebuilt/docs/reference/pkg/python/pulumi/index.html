@@ -206,6 +206,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#pulumi.ResourceHookOptions"><code class="docutils literal notranslate"><span class="pre">ResourceHookOptions</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceHookOptions.ignore_errors"><code class="docutils literal notranslate"><span class="pre">ResourceHookOptions.ignore_errors</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pulumi.ResourceHookOptions.on_dry_run"><code class="docutils literal notranslate"><span class="pre">ResourceHookOptions.on_dry_run</span></code></a></li>
 </ul>
 </li>
@@ -2201,8 +2202,14 @@ deleted.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pulumi.ResourceHookOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">ResourceHookOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">on_dry_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceHookOptions" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pulumi.</span></span><span class="sig-name descname"><span class="pre">ResourceHookOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">on_dry_run</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_errors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.ResourceHookOptions" title="Permalink to this definition"></a></dt>
 <dd><p>Options for registering a resource hook.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pulumi.ResourceHookOptions.ignore_errors">
+<span class="sig-name descname"><span class="pre">ignore_errors</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pulumi.ResourceHookOptions.ignore_errors" title="Permalink to this definition"></a></dt>
+<dd><p>If True, errors from this hook are logged as warnings instead of failing the program.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="pulumi.ResourceHookOptions.on_dry_run">
 <span class="sig-name descname"><span class="pre">on_dry_run</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#pulumi.ResourceHookOptions.on_dry_run" title="Permalink to this definition"></a></dt>
