@@ -892,6 +892,23 @@ jobs:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
           path: /home/runner/work/_temp/claude-execution-output.json
           retention-days: 90
+
+      # Debug artifacts for the post-edit chain. Capture the validator's
+      # fix-me JSON, the splicer's fallback list, and the spliced body so
+      # post-mortem on splicer behavior / validator pairing doesn't require
+      # reproducing the run.
+      - name: Upload post-edit chain debug artifacts
+        if: always() && steps.claude-review.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-edit-debug-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            /tmp/validate-pinned.fix-me.json
+            /tmp/validate-pinned.fix-me.md
+            /tmp/splicer-fallback.json
+            .review-draft.md
+          retention-days: 30
+          if-no-files-found: ignore
           if-no-files-found: ignore
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS comment

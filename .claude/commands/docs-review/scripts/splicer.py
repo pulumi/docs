@@ -174,6 +174,54 @@ def _find_trail_line_index(lines: list[str], anchor: str) -> int:
     return -1
 
 
+def _find_trail_line_index_by_overlap_and_word(
+    lines: list[str], anchor: str, want_word: str, window: int = 0
+) -> int:
+    """Find the trail line whose anchor range overlaps `anchor` (within
+    ±`window`) AND whose current verdict word equals `want_word`. Mirrors the
+    validator's pairing logic for `verified-claims-trail-faithful`.
+
+    `window` defaults to 0 (strict pairing). The validator's
+    `_ranges_overlap` uses window=0 for this rule because each artifact
+    verdict is rendered by the composer into its own trail line at the same
+    line_range — a window>0 would pair against a neighbor claim's trail.
+
+    Returns -1 if no overlap-and-word match found.
+    """
+    span = _section_span(lines, "🔍 Verification trail")
+    if span is None:
+        return -1
+    start, end = span
+    needle_range = _parse_l_token(_normalize_anchor(anchor))
+    if not needle_range:
+        return -1
+    for i in range(start, end):
+        m = _TRAIL_LINE_ANCHOR_RE.match(lines[i])
+        if not m:
+            continue
+        # Walk every L-token on the line and check overlap with the artifact range.
+        overlaps = False
+        for tok in re.findall(r"L\d+(?:-\d+)?", lines[i]):
+            tok_range = _parse_l_token(tok)
+            if (
+                tok_range
+                and tok_range[0] <= needle_range[1] + window
+                and needle_range[0] <= tok_range[1] + window
+            ):
+                overlaps = True
+                break
+        if not overlaps:
+            continue
+        # Extract the verdict word (the token immediately after `→ <glyph> `).
+        arrow_m = re.search(r"→\s+\S+\s+(\S+)", lines[i])
+        if not arrow_m:
+            continue
+        tok_word = arrow_m.group(1).rstrip(":.,;)")
+        if tok_word == want_word:
+            return i
+    return -1
+
+
 def _find_external_claim_line_index(lines: list[str]) -> int:
     """Index of the `- **External claim verification**` investigation-log line."""
     for i, line in enumerate(lines):
@@ -331,6 +379,15 @@ def splice_verified_claims_trail_faithful(lines: list[str], violation: dict) -> 
     `actual` ≈ "trail says `<wrong>`; artifact says `<right>` — evidence: ...".
     `line_ref` is the artifact's `line_range` (may be `L42` or `L42-L58`).
     The right glyph is `EXPECTED_TRAIL_EMOJI[right]`.
+
+    Pairing: the validator's `_ranges_overlap` uses a ±2-line window, so an
+    artifact verdict at L21 can pair against a trail entry at L23 (a different
+    claim that happens to be 2 lines away). The splicer must mirror that
+    pairing: find the overlapping trail entry whose CURRENT verdict word
+    matches `wrong`, not just the trail entry whose anchor matches the
+    artifact's. Otherwise we'd splice the wrong line — typically an
+    "innocent" line with a different verdict that just happens to share an
+    L-anchor with the artifact.
     """
     actual = violation.get("actual", "")
     wrong_m = re.search(r"trail says `([^`]+)`", actual)
@@ -342,17 +399,18 @@ def splice_verified_claims_trail_faithful(lines: list[str], violation: dict) -> 
         return lines, False
     right_emoji = EXPECTED_TRAIL_EMOJI[right]
 
-    idx = _find_trail_line_index(lines, violation.get("line_ref", ""))
+    anchor = violation.get("line_ref", "")
+    idx = _find_trail_line_index_by_overlap_and_word(lines, anchor, wrong)
     if idx < 0:
+        # Idempotent: maybe a previous splice already settled the line —
+        # check whether there's an overlapping trail entry with the RIGHT
+        # word. If so, success without modifying. If not, we have no
+        # findable target; defer.
+        idx_already_right = _find_trail_line_index_by_overlap_and_word(lines, anchor, right)
+        if idx_already_right >= 0:
+            return lines, True
         return lines, False
     line = lines[idx]
-    # Idempotent: if the line already has the canonical `→ <right_emoji> <right>`
-    # pair, treat as success without modifying. Two violations can legitimately
-    # target the same trail line (different artifact claims overlap the same
-    # line range); the first splice settles the line and subsequent splices
-    # find it already correct.
-    if re.search(r"→\s+" + re.escape(right_emoji) + r"\s+" + re.escape(right) + r"\b", line):
-        return lines, True
     new_line = re.sub(
         r"(→\s+)\S+(\s+)\S+",
         lambda m: m.group(1) + right_emoji + m.group(2) + right,

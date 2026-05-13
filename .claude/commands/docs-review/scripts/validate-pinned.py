@@ -1531,7 +1531,14 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
         if not claim_ranges:
             continue
         for tr_ranges, tr_word, _raw in trail_entries:
-            if tr_word is None or not _ranges_overlap(claim_ranges, tr_ranges):
+            # window=0: strict pairing. The default window=2 was producing
+            # false positives where an artifact verdict at L21 paired against
+            # a trail entry at L23 (an entirely different claim that happened
+            # to land within 2 lines). Each artifact verdict is rendered by
+            # the composer into its own trail line at the *same* line_range;
+            # any non-exact overlap is the wrong claim's trail, and firing
+            # this rule on it is incorrect.
+            if tr_word is None or not _ranges_overlap(claim_ranges, tr_ranges, window=0):
                 continue
             if tr_word in forbidden:
                 lr = str(v.get("line_range") or "<verified claim>")

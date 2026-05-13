@@ -162,6 +162,33 @@ def test_verified_claims_trail_faithful_restores_artifact_verdict():
     assert applied == ["verified-claims-trail-faithful"]
 
 
+def test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch():
+    """The validator now pairs with window=0 (strict). A violation whose
+    `line_ref` (artifact anchor) doesn't have an EXACT trail line with the
+    `wrong` verdict word is a malformed violation (or a stale fix-me); the
+    splicer must defer rather than splice an innocent neighbor's line."""
+    body = _trail_section(
+        '- L21 "Innocent claim A" → 🤷 unverifiable (evidence: a)',
+        '- L23 "Different claim" → ✅ verified (evidence: c)',
+    )
+    # Synthetic violation: artifact L21, wrong=verified. No trail line at L21
+    # with verdict=verified — only an L23 line has verified. With strict
+    # pairing, splicer must NOT fix the L23 line (it's a different claim).
+    violation = {
+        "rule_id": "verified-claims-trail-faithful",
+        "line_ref": "L21",
+        "expected": "...",
+        "actual": "trail says `verified`; artifact says `contradicted` — evidence: c",
+        "hint": "...",
+    }
+    new_body, applied, fallback = splicer.apply_splices(body, [violation])
+    # Body must be unchanged — neither L21 nor L23 should have been spliced.
+    assert new_body == body, new_body
+    # Rule defers (one violation, zero successes → goes to fallback).
+    assert applied == []
+    assert "verified-claims-trail-faithful" in fallback
+
+
 def test_verified_claims_trail_faithful_idempotent_across_duplicate_violations():
     """Two violations may legitimately target the same trail line (different
     artifact claims overlap the same line range). The first splice settles the
@@ -469,6 +496,7 @@ TESTS = [
     test_trail_per_verdict_emoji_replaces_legacy_glyph,
     test_trail_canonical_verdict_word_replaces_freelanced_token,
     test_verified_claims_trail_faithful_restores_artifact_verdict,
+    test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch,
     test_verified_claims_trail_faithful_idempotent_across_duplicate_violations,
     test_verified_claims_trail_faithful_matches_by_range_overlap,
     test_pass3_unverifiable_evidence_inserts_pointer,
