@@ -27,6 +27,20 @@ jobs:
             --repo ${{ github.repository }} \
             --ref master \
             -f version=${{ github.event.client_payload.ref }}
+  dispatch-pulumi-sdk-typescript-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+      - name: Dispatch Pulumi SDK TypeScript docs workflow
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          gh workflow run pulumi-sdk-typescript-docs.yml \
+            --repo ${{ github.repository }} \
+            --ref master \
+            -f version=${{ github.event.client_payload.ref }}
   pull-request:
     runs-on: ubuntu-latest
     needs: build-pulumi-cli-docs
@@ -100,7 +114,6 @@ jobs:
             docs/infrastructure/yarn.lock
             docs/theme/yarn.lock
             docs/theme/stencil/yarn.lock
-            pulumi/sdk/nodejs/yarn.lock
       - name: Install python
         uses: actions/setup-python@v6
         with:
@@ -112,12 +125,6 @@ jobs:
         with:
           dotnet-version: ${{matrix.dotnetverson}}
       - run: make ensure
-        working-directory: docs
-      - name: run yarn install in nodejs sdk
-        run: yarn install && yarn run tsc
-        working-directory: pulumi/sdk/nodejs
-      - name: run typedoc
-        run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: generate python docs
         run: ./scripts/generate_python_docs.sh
