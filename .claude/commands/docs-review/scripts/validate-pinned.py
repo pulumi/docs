@@ -19,7 +19,20 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 14 (v13→v14 fixes a silent-failure bug in
+Schema version: 15 (v14→v15 makes `verified-claims-trail-faithful` surgically
+  fixable. The rule's violation strings already carry everything a splice
+  needs (wrong verdict word, right verdict word, right per-verdict emoji,
+  L-anchor); validator-fix.py adds a class-specific Haiku prompt that
+  replaces the `<emoji> <verdict>` pair after the trail-line's `→` and
+  preserves the rest of the line verbatim. Combined with a refactor of
+  validator-fix.py's main loop — non-surgical violations no longer gate the
+  surgical pass; a partial fix returns exit 2, the caller keeps the
+  better body, and the model retries with the residual fix-me — the
+  surgical lane finally carries weight on mixed-violation reviews. Pre-v15
+  this rule was tagged "non-surgical (the fixer can't honestly synthesize
+  the right verdict)"; that was conservative — the artifact IS the
+  source of truth, and restoring to it is exactly what the rule's hint
+  already tells the model to do. v13→v14 fixes a silent-failure bug in
   `check_internal_link_existence`'s alias-grep fallback: the pattern
   `- /path` starts with `-`, so `git grep "- /path"` exited 129 with
   "unknown switch" and the function fell through to the violation branch
@@ -89,7 +102,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 14
+SCHEMA_VERSION = 15
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -1493,10 +1506,14 @@ def check_verified_claims_trail_faithful(ctx: Context) -> list[Violation]:
     `not-a-claim`): the "✅ verified against a 404'd citation" /
     "✅ verified against a stale cached price" verification-layer false-positive
     class. The reverse (artifact `verified` → trail `contradicted`/`mismatch`)
-    is also flagged: the review can't invent a
-    problem the verifier didn't find. Non-surgical (the fixer can't honestly
-    synthesize the right verdict) → soft-floors loudly. Skipped in local mode
-    (no `.verified-claims.json`).
+    is also flagged: the review can't invent a problem the verifier didn't
+    find. Schema v14→v15 made it surgically fixable: the violation strings
+    carry the wrong word + the right word + the right emoji, and the Haiku
+    splice in validator-fix.py restores `<emoji> <verdict>` from the
+    artifact's record. The hint still tells the model to dispute via a
+    follow-up issue rather than silently overwrite the trail — the surgical
+    restore covers the "edit slipped through" case, not the "the verdict is
+    actually wrong" case. Skipped in local mode (no `.verified-claims.json`).
     """
     verdicts = ctx.verified_claims
     if not verdicts:

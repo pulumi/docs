@@ -39,7 +39,8 @@ import subprocess
 import sys
 from pathlib import Path
 
-# Rule classes this script handles. Anything else → exit 2.
+# Rule classes this script can splice mechanically. Non-surgical violations
+# are noted but don't gate the surgical pass (see main()).
 SURGICAL_CLASSES: set[str] = {
     "internal-link-existence",
     "shortcode-existence",
@@ -52,6 +53,7 @@ SURGICAL_CLASSES: set[str] = {
     "trail-per-verdict-emoji",
     "trail-canonical-verdict-word",
     "pass-3-unverifiable-evidence",
+    "verified-claims-trail-faithful",
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -60,10 +62,11 @@ HAIKU_MODEL = "claude-haiku-4-5-20251001"
 # to 120s when ANTHROPIC_API_KEY is unset (local-test path) to avoid spurious
 # timeouts during corpus runs.
 HAIKU_TIMEOUT_S = 60 if os.environ.get("ANTHROPIC_API_KEY") else 120
-# Sequential dispatches; each rewrites the whole body. Cap accounts for the
-# pass-3 surgical-per-line emission landed in schema v13 (one violation per
-# Pass 3 unverifiable verdict missing its pointer; a hot review can run 5-8).
-MAX_DISPATCHES_PER_CALL = 10  # cost / wall-clock ceiling
+# Sequential dispatches; each rewrites the whole body. Bumped to 30 because
+# `verified-claims-trail-faithful` (added to SURGICAL_CLASSES in schema v15)
+# can fire 20-30 times per review when Opus rewrites the trail to dodge
+# verdicts; one Haiku call per violation, ~2-3s under --bare, so 30 ≈ 90s.
+MAX_DISPATCHES_PER_CALL = 30  # cost / wall-clock ceiling
 
 
 SYSTEM_PROMPT = (
@@ -271,6 +274,45 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
             f"contradicted C, unverifiable U).\n\n"
             f"Do not edit anything else."
         )
+    elif rule_id == "verified-claims-trail-faithful":
+        # Schema v15. Restore the trail line's verdict word + emoji to what the
+        # `.verified-claims.json` artifact records. The violation strings carry
+        # everything we need: `actual` ≈ "trail says `<wrong>`; artifact says
+        # `<right>` — evidence: ..." and `hint` ≈ "...Render the trail line
+        # for <L-anchor> as `<emoji> <right>` with the artifact's..."
+        line_ref = violation.get("line_ref", "")
+        wrong_m = re.search(r"trail says `([^`]+)`", actual)
+        right_m = re.search(r"artifact says `([^`]+)`", actual)
+        emoji_m = None
+        if right_m:
+            # Parse the right emoji out of the hint's "Render the trail line
+            # for <ref> as `<emoji> <right>`" template; the emoji comes
+            # immediately before the right word inside the backtick pair.
+            emoji_m = re.search(
+                r"Render the trail line[^`]*`(\S+)\s+" + re.escape(right_m.group(1)) + r"`",
+                hint,
+            )
+        wrong = wrong_m.group(1) if wrong_m else "<unknown>"
+        right = right_m.group(1) if right_m else "<unknown>"
+        emoji = emoji_m.group(1) if emoji_m else "?"
+        instr = (
+            f"VIOLATION (`verified-claims-trail-faithful`): A trail line under "
+            f"### 🔍 Verification trail records a verdict word that contradicts "
+            f"the verdict recorded in `.verified-claims.json`. The artifact is "
+            f"the source of truth for verdicts; the trail can't silently "
+            f"overwrite it.\n\n"
+            f"Trail line anchor: `{line_ref}`\n"
+            f"Currently in the trail: `{wrong}` (wrong)\n"
+            f"Recorded in the artifact: `{right}` (right)\n"
+            f"Right per-verdict emoji: `{emoji}`\n\n"
+            f"Find the trail line under ### 🔍 Verification trail whose L-token "
+            f"matches `{line_ref}` (look for `- L<n> ` or `- L<n> in \\`...\\` `). "
+            f"After its `→`, replace the two tokens — the per-verdict glyph "
+            f"AND the verdict word — with `{emoji} {right}`. Preserve the "
+            f"claim text, evidence pointer, and any `(also L<n>, …)` cross-"
+            f"reference verbatim. Do not modify any other trail line, any "
+            f"bucket bullet, or surrounding sections."
+        )
     elif rule_id == "pass-3-unverifiable-evidence":
         # Schema v13. The validator's per-line emission carries an L-token
         # anchor, a claim-text snippet, and the exact pointer phrase to splice
@@ -377,19 +419,27 @@ def main() -> int:
     if not violations:
         return 0  # nothing to fix
 
-    # Gate on surgical-class membership BEFORE dispatching anything. If even
-    # one violation isn't in our set, the body needs a model re-render
-    # decision the caller's soft-floor path handles.
+    # Partition: surgical fixes apply here, non-surgical are noted and left
+    # for the model's retry. Pre-v15 this was an all-or-nothing gate (any
+    # non-surgical → defer everything), which meant a single mandatory-h3
+    # or trail-faithful violation blocked every other surgical fix on the
+    # body. The new behaviour preserves the all-or-nothing exit signal
+    # (2 = caller should re-render) but applies the surgical class anyway,
+    # so a hot review with mixed violations still gets ~80% of its
+    # validator load shed before the model's retry kicks in.
+    surgical = [v for v in violations if v["rule_id"] in SURGICAL_CLASSES]
     non_surgical = [v["rule_id"] for v in violations
                     if v["rule_id"] not in SURGICAL_CLASSES]
     if non_surgical:
         print(
             f"validator-fix.py: {len(non_surgical)} non-surgical violation(s) "
-            f"present ({', '.join(sorted(set(non_surgical)))}); deferring to "
-            f"soft-floor",
+            f"({', '.join(sorted(set(non_surgical)))}) will need a model retry; "
+            f"applying {len(surgical)} surgical fix(es) first",
             file=sys.stderr,
         )
-        return 2
+    if not surgical:
+        return 2  # all violations are non-surgical → caller re-renders
+    violations = surgical
 
     if len(violations) > MAX_DISPATCHES_PER_CALL:
         print(
@@ -411,6 +461,14 @@ def main() -> int:
         body = edited
 
     body_path.write_text(body)
+    if non_surgical:
+        print(
+            f"validator-fix.py: applied {len(violations)} surgical fix(es); "
+            f"{len(non_surgical)} non-surgical violation(s) remain — caller "
+            f"should re-render",
+            file=sys.stderr,
+        )
+        return 2  # partial fix; caller should re-validate + model retry
     print(
         f"validator-fix.py: applied {len(violations)} surgical fix(es)",
         file=sys.stderr,

@@ -317,28 +317,54 @@ cmd_upsert_validated() {
     fi
 
     # First validator pass failed. Try Haiku surgical-fix BEFORE falling
-    # through. The fixer exits 2 if any violation is non-surgical (model
-    # retry needed); 0 on successful edit; 1 on dispatch error.
+    # through. The fixer's exit codes:
+    #   0 — all violations resolved surgically; re-validate + publish.
+    #   2 — surgical fixes applied, but non-surgical violations remain; keep
+    #       the partial-fix body and re-write the fix-me marker so the model's
+    #       retry starts from a strictly-better body. (Was: all-or-nothing
+    #       "any non-surgical → defer everything"; that wedged the surgical
+    #       lane for any review that also tripped a model-retry rule.)
+    #   1 — Haiku CLI / dispatch error; restore the pre-fix body to avoid
+    #       publishing a Haiku-degraded render.
     if [[ -f "$fixer" && -f /tmp/validate-pinned.fix-me.json ]]; then
         cp "$body_file" "${body_file}.pre-haiku.bak"
-        if python3 "$fixer" \
-                --body-file "$body_file" \
-                --fix-me-json /tmp/validate-pinned.fix-me.json; then
-            # Re-validate the post-fix body. Don't pass --soft-floor here —
-            # we want a clean retry-0 verdict, not a soft-floor downgrade.
-            if python3 "$validator" check \
+        python3 "$fixer" \
+            --body-file "$body_file" \
+            --fix-me-json /tmp/validate-pinned.fix-me.json
+        local fix_status=$?
+        case "$fix_status" in
+            0)
+                # All resolved surgically. Re-validate (no --soft-floor —
+                # we want a clean retry-0 verdict).
+                if python3 "$validator" check \
+                        --body-file "$body_file" \
+                        --pr "$pr" \
+                        --repo "$repo"; then
+                    cmd_upsert
+                    return $?
+                fi
+                # Re-validate still fails (defensive — Haiku regression);
+                # restore pre-fix.
+                cp "${body_file}.pre-haiku.bak" "$body_file"
+                ;;
+            2)
+                # Partial fix. Keep the post-fix body. Re-run validate to
+                # rewrite /tmp/validate-pinned.fix-me.{json,md} so the
+                # model's next retry sees the residual non-surgical
+                # violations only, not the pre-fix superset.
+                python3 "$validator" check \
                     --body-file "$body_file" \
                     --pr "$pr" \
-                    --repo "$repo"; then
-                cmd_upsert
-                return $?
-            fi
-        fi
-        # Fix-pass didn't recover; restore pre-fix body so the soft-floor
-        # path publishes the original render, never a Haiku-degraded one.
-        if [[ -f "${body_file}.pre-haiku.bak" ]]; then
-            cp "${body_file}.pre-haiku.bak" "$body_file"
-        fi
+                    --repo "$repo" || true
+                ;;
+            *)
+                # Haiku dispatch error (exit 1) or unexpected exit; restore
+                # pre-fix body.
+                if [[ -f "${body_file}.pre-haiku.bak" ]]; then
+                    cp "${body_file}.pre-haiku.bak" "$body_file"
+                fi
+                ;;
+        esac
     fi
 
     return 1
