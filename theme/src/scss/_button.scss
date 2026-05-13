@@ -16,8 +16,8 @@
 
 // Variants
 .btn-primary       { @apply bg-violet-primary text-white hover:bg-violet-800; }
-.btn-outline       { @apply border-gray-300 bg-white text-gray-950 hover:bg-gray-100; }
-.btn-secondary     { @apply bg-gray-100 text-gray-900 hover:bg-gray-200; }
+.btn-outline       { @apply border-gray-300 bg-white text-gray-950 hover:bg-gray-100 hover:border-gray-500; }
+.btn-secondary     { @apply bg-gray-100/80 text-gray-900 hover:bg-gray-200; }
 .btn-ghost         { @apply text-gray-950 hover:bg-gray-100; }
 .btn-ghost-primary { @apply text-violet-primary hover:bg-gray-100; }
 .btn-destructive   { @apply bg-red-600/10 text-red-600 hover:bg-red-600/20; }
@@ -27,7 +27,7 @@
 .btn-xs      { @apply h-6 px-2 text-xs gap-1; }
 .btn-sm      { @apply h-8 px-3 text-xs gap-1; }
 .btn-lg      { @apply h-10 px-6; }
-.btn-xl      { @apply h-12 px-8 text-base; }
+.btn-xl      { @apply h-12 px-7 text-base; }
 .btn-icon    { @apply size-9 p-0; }
 .btn-icon-xs { @apply size-6 p-0; }
 .btn-icon-sm { @apply size-8 p-0; }
