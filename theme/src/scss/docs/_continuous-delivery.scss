@@ -3,9 +3,8 @@
     @apply flex flex-row flex-wrap;
 
     > a {
-        @extend .btn;
-        @extend .btn-outline;
-        @apply whitespace-normal mb-4 p-4;
+        @apply rounded-lg border border-gray-300 bg-transparent text-gray-950 text-center
+               whitespace-normal mb-4 p-4 no-underline transition-colors;
 
         width: calc(50% - 1rem);
         &:not(:nth-child(2n)) {
@@ -27,7 +26,7 @@
         }
 
         &:hover {
-            @apply bg-gray-100;
+            @apply bg-gray-100 border-gray-500 no-underline;
         }
 
         img {

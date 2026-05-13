@@ -26,7 +26,14 @@
     <div class="template-social-carousel-header">
         {{ if $title }}<h2>{{ $title }}</h2>{{ end }}
         {{ if $description }}<p class="text-gray-600 text-xl mt-4">{{ $description | markdownify }}</p>{{ end }}
-        {{ if $ctaText }}<a href="{{ $ctaLink }}" class="inline-block mt-4 text-violet-700 font-semibold no-underline hover:underline">{{ $ctaText }} →</a>{{ end }}
+        {{ if $ctaText }}
+        <div class="mt-4 flex">
+            <a href="{{ $ctaLink }}" class="btn btn-link btn-xl">
+                <span>{{ $ctaText }}</span>
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+        </div>
+        {{ end }}
     </div>
     {{ if $tweets }}
     {{/* Mobile: 1 slide at a time */}}

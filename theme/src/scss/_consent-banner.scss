@@ -137,34 +137,22 @@
 // -----------------------------------------------------------------------------
 // Shared buttons
 //
-// Used by both the banner action row and the dialog footer. The
-// `.consent-actions &` nesting widens the buttons to fill the row in the
-// banner's compact layout.
+// Class names (.consent-btn, .consent-btn-accept, .consent-btn-secondary) are
+// hardcoded by the @segment/consent-manager JS library and applied to its
+// rendered buttons at runtime, so we map them onto the site-wide button
+// system via @extend rather than rewriting the markup.
+//
+// The `.consent-actions &` nesting widens the buttons to fill the row in
+// the banner's compact layout.
 // -----------------------------------------------------------------------------
 
 .consent-btn {
-    @apply px-5 py-2 rounded-md text-center text-sm cursor-pointer;
-    @include transition;
+    @extend .btn;
 
     .consent-actions & {
-        @apply flex-1 p-3;
+        @apply flex-1;
     }
 }
 
-.consent-btn-accept {
-    @apply bg-violet-primary text-white border-2 border-violet-primary;
-
-    &:hover,
-    &:focus-visible {
-        @apply bg-violet-800 border-violet-800;
-    }
-}
-
-.consent-btn-secondary {
-    @apply bg-white text-gray-950 border border-gray-200;
-
-    &:hover,
-    &:focus-visible {
-        @apply bg-gray-100;
-    }
-}
+.consent-btn-accept   { @extend .btn-primary; }
+.consent-btn-secondary { @extend .btn-outline; }

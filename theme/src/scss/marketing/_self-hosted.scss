@@ -1,13 +1,7 @@
 #self-hosted-overview,
 #self-hosted-deployment {
-    a:not(.btn-secondary, .btn-primary) {
+    a:not(.btn) {
         text-decoration: underline;
-    }
-}
-
-#self-hosted-questions {
-    .btn-primary {
-        border-color: #fff;
     }
 }
 

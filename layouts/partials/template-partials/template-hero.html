@@ -151,7 +151,7 @@
                 {{ if $ctaPrimaryText }}
                 <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
-                    <span>→</span>
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
@@ -230,7 +230,7 @@
                 {{ if $ctaPrimaryText }}
                 <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
-                    <span>→</span>
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}

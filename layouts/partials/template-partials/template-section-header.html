@@ -79,10 +79,12 @@
         <p class="section-header-description">{{ $description | markdownify }}</p>
         {{ end }}
         {{ if $ctaText }}
-        <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link{{ end }} mt-6 {{ $ctaJustifyClass }}">
-            <span>{{ $ctaText }}</span>
-            <span>→</span>
-        </a>
+        <div class="mt-6 {{ $ctaJustifyClass }} flex">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                <span>{{ $ctaText }}</span>
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+        </div>
         {{ end }}
     </div>
     {{ if and $image (not $imageAbove) }}

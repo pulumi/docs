@@ -55,10 +55,12 @@
             {{ end }}
 
               {{ if .cta_text }}
-                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-lg mt-auto">
-                    <span>{{ .cta_text }}</span>
-                    <span>→</span>
-                </a>
+                <div class="mt-auto flex">
+                    <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
+                        <span>{{ .cta_text }}</span>
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </a>
+                </div>
                 {{ end }}
         </div>
         {{ end }}
@@ -84,10 +86,12 @@
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>
                 </div>
                 {{ if .cta_text }}
-                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link mt-auto">
-                    <span>{{ .cta_text }}</span>
-                    <span>→</span>
-                </a>
+                <div class="mt-auto flex">
+                    <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
+                        <span>{{ .cta_text }}</span>
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </a>
+                </div>
                 {{ end }}
             </div>
         </div>

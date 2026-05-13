@@ -85,10 +85,12 @@
                 </div>
 
                 {{ if $ctaText }}
-                <a href="{{ $link }}" class="cta inline-flex items-center gap-1 mt-auto">
-                    <span>{{ $ctaText }}</span>
-                    <span>→</span>
-                </a>
+                <div class="mt-auto flex">
+                    <a href="{{ $link }}" class="btn btn-link btn-xl">
+                        <span>{{ $ctaText }}</span>
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </a>
+                </div>
                 {{ end }}
             </div>
         {{ end }}

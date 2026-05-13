@@ -21,7 +21,7 @@
 .btn-ghost         { @apply text-gray-950 hover:bg-gray-100; }
 .btn-ghost-primary { @apply text-violet-primary hover:bg-gray-100; }
 .btn-destructive   { @apply bg-red-600/10 text-red-600 hover:bg-red-600/20; }
-.btn-link          { @apply text-violet-primary font-semibold underline-offset-5 hover:underline border-none h-auto! p-0!}
+.btn-link          { @apply text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none h-auto! p-0! [&_svg]:no-underline; }
 
 // Sizes — override the base h-9 / px-4
 .btn-xs      { @apply h-6 px-2 text-xs gap-1; }
@@ -32,7 +32,3 @@
 .btn-icon-xs { @apply size-6 p-0; }
 .btn-icon-sm { @apply size-8 p-0; }
 .btn-icon-lg { @apply size-10 p-0; }
-
-// Legacy aliases — remove in the cleanup commit once all callsites are migrated.
-.btn-primary-template-variant   { @extend .btn; @extend .btn-primary; @extend .btn-xl; }
-.btn-secondary-template-variant { @extend .btn; @extend .btn-outline; @extend .btn-xl; }

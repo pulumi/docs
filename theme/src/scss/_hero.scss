@@ -44,15 +44,6 @@
 
     // NOTE: .dot-overlay intentionally removed
 
-    .home-hero-btn-primary {
-        @include gradient-button;
-        @apply py-4 px-8;
-    }
-
-    .home-hero-btn-secondary {
-        @apply py-4 px-8;
-    }
-
     .home-page-hero-content {
         @apply flex flex-col justify-center pt-12;
         z-index: 100;
