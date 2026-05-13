@@ -18,9 +18,9 @@
         </div>
         <div class="container mx-auto text-center pt-8 w-9/12">
             {{ if in .RelPermalink "/gads/neo" }}
-            <a href="https://app.pulumi.com/signup" class="btn-primary">Try Neo for FREE</a>
+            <a href="https://app.pulumi.com/signup" class="btn btn-primary btn-xl">Try Neo for FREE</a>
             {{ else }}
-            {{ partial "cta-get-started" (dict "class" "btn-primary") }}
+            {{ partial "cta-get-started" (dict) }}
             {{ end }}
         </div>
     </section>

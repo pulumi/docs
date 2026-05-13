@@ -46,7 +46,7 @@ Example: [{"icon": "code", "title": "Use real code", "description": "..."}, ...]
             </div>
             {{ end }}
             {{ if $ctaText }}
-            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1 mt-6">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link{{ end }} mt-6">
                 <span>{{ $ctaText }}</span>
                 <span>→</span>
             </a>

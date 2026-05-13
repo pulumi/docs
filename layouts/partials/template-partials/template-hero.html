@@ -135,13 +135,13 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText }}
             <div class="flex flex-col sm:flex-row items-start gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap" data-role="cta-get-started">
+                <a href="{{ $ctaPrimaryLink }}" class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
                     <span>→</span>
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
+                <a href="{{ $ctaSecondaryLink }}" class="btn btn-outline btn-xl w-full sm:w-auto">
                     <span>{{ $ctaSecondaryText }}</span>
                 </a>
                 {{ end }}
@@ -193,13 +193,13 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText }}
             <div class="flex flex-col lg:flex-row items-center justify-center gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}" class="btn-primary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center" data-role="cta-get-started">
+                <a href="{{ $ctaPrimaryLink }}" class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
                     <span>{{ $ctaPrimaryText }}</span>
                     <span>→</span>
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}" class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
+                <a href="{{ $ctaSecondaryLink }}" class="btn btn-outline btn-xl w-full lg:w-auto">
                     <span>{{ $ctaSecondaryText }}</span>
                 </a>
                 {{ end }}

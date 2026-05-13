@@ -31,7 +31,7 @@
             {{ end }}
 
               {{ if .cta_text }}
-                <a href="{{ .cta_link }}" class="cta inline-flex items-center gap-1 mt-auto">
+                <a href="{{ .cta_link }}" class="btn btn-link mt-auto">
                     <span>{{ .cta_text }}</span>
                     <span>→</span>
                 </a>
@@ -55,7 +55,7 @@
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>
                 </div>
                 {{ if .cta_text }}
-                <a href="{{ .cta_link }}" class="cta inline-flex items-center gap-1 mt-auto">
+                <a href="{{ .cta_link }}" class="btn btn-link mt-auto">
                     <span>{{ .cta_text }}</span>
                     <span>→</span>
                 </a>

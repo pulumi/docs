@@ -69,7 +69,7 @@
         <p class="section-header-description">{{ $description | markdownify }}</p>
         {{ end }}
         {{ if $ctaText }}
-        <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1 mt-6 justify-center">
+        <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link{{ end }} mt-6">
             <span>{{ $ctaText }}</span>
             <span>→</span>
         </a>

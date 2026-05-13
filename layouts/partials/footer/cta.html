@@ -7,8 +7,8 @@
         <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">{{ $cta.heading }}</h2>
         <div class="flex gap-2.5 items-center shrink-0">
             {{ range $cta.buttons }}
-                {{ $class := "btn btn-lg" }}
-                {{ if eq .style "secondary" }}{{ $class = "btn btn-secondary btn-lg" }}{{ end }}
+                {{ $class := "btn btn-primary btn-xl" }}
+                {{ if eq .style "secondary" }}{{ $class = "btn btn-outline btn-xl" }}{{ end }}
                 <a class="{{ $class }}"
                    href="{{ .href }}"
                    {{ with .track }}data-track="{{ . }}"{{ end }}>{{ .label }}</a>

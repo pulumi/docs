@@ -46,7 +46,7 @@ Parameters:
             </div>
             {{ end }}
             {{ if $ctaText }}
-            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link{{ end }}">
                 <span>{{ $ctaText }}</span>
                 <span>→</span>
             </a>

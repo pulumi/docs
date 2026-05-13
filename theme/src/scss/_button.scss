@@ -1,13 +1,13 @@
-// Button system — shadcn-inspired, using the existing repo palette tokens.
+// Button system
 // Compose with:  class="btn btn-{variant} btn-{size}"
 // Default size is baked into .btn (h-9 px-4); add a btn-{size} only when overriding.
 //
 // Variants: primary | outline | secondary | ghost | ghost-primary | destructive | link
-// Sizes:    (default) | xs | sm | lg | icon | icon-xs | icon-sm | icon-lg
+// Sizes:    (default) | xs | sm | lg | xl | icon | icon-xs | icon-sm | icon-lg
 
 .btn {
     @apply inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap
-           text-sm font-medium border border-transparent rounded-lg
+           text-sm font-normal border border-transparent rounded-lg
            transition-colors outline-none cursor-pointer select-none
            focus-visible:ring-3 focus-visible:ring-violet-primary/50
            disabled:pointer-events-none disabled:opacity-50
@@ -27,11 +27,12 @@
 .btn-xs      { @apply h-6 px-2 text-xs gap-1; }
 .btn-sm      { @apply h-8 px-3 text-xs gap-1; }
 .btn-lg      { @apply h-10 px-6; }
+.btn-xl      { @apply h-12 px-8 text-base; }
 .btn-icon    { @apply size-9 p-0; }
 .btn-icon-xs { @apply size-6 p-0; }
 .btn-icon-sm { @apply size-8 p-0; }
 .btn-icon-lg { @apply size-10 p-0; }
 
 // Legacy aliases — remove in the cleanup commit once all callsites are migrated.
-.btn-primary-template-variant   { @extend .btn; @extend .btn-primary; @extend .btn-lg; }
-.btn-secondary-template-variant { @extend .btn; @extend .btn-outline; @extend .btn-lg; }
+.btn-primary-template-variant   { @extend .btn; @extend .btn-primary; @extend .btn-xl; }
+.btn-secondary-template-variant { @extend .btn; @extend .btn-outline; @extend .btn-xl; }

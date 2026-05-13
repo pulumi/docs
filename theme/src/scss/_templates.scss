@@ -512,24 +512,6 @@
     }
 }
 
-[class*="template-"] {
-    .cta {
-        @apply text-violet-primary font-semibold font-body no-underline;
-
-        &:hover {
-            @apply underline;
-        }
-
-        &--button {
-            @apply font-normal inline-flex items-center gap-1 px-5 py-3 rounded-lg bg-violet-primary text-white no-underline;
-
-            &:hover {
-                @apply bg-violet-800 no-underline;
-            }
-        }
-    }
-}
-
 .template-section-header {
 
     .section-header-image-above-img {
