@@ -270,27 +270,24 @@ Output directory: `public/`
 
 #### Generating Documentation
 
-```bash
-# Generate all SDK and CLI documentation
-make generate
+In normal operation, SDK and CLI reference docs are regenerated automatically by the per-surface GitHub Actions workflows whenever an upstream source repo cuts a release. See the [Generating SDK and CLI documentation](README.md#generating-sdk-and-cli-documentation) section of the README for the full table of workflows and output paths.
 
-# This runs:
-# 1. run_typedoc.sh (Node.js API docs)
-# 2. generate_python_docs.sh (Python API docs)
-# 3. pulumi gen-markdown (CLI reference)
-```
-
-Generated docs go to `static-prebuilt/docs/reference/pkg/`
-
-**Selective Generation:**
+To regenerate locally (e.g. when modifying a generator script):
 
 ```bash
-# TypeScript only
+# TypeScript SDK (pulumi package)
 NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
 
-# Skip rebuilds (faster)
-NOBUILD=1 make generate
+# Python SDK — one package per invocation
+PACKAGE=pulumi          ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+
+# Pulumi CLI reference (uses the currently-installed `pulumi` binary)
+PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/iac/cli/commands
 ```
+
+Generated docs go to `static-prebuilt/docs/reference/pkg/` (SDK) and `content/docs/{iac,esc}/cli/commands/` (CLI).
 
 #### Linting and Formatting
 
@@ -926,37 +923,48 @@ The docs site includes auto-generated API reference documentation from multiple 
 **Usage:**
 
 ```bash
-# Generate all packages
-make generate
+# Generate the pulumi TypeScript SDK docs (this is what the workflow runs)
+NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
+```
 
-# Skip repository updates (faster)
-NOBUILD=1 make generate
+Or trigger the workflow directly:
 
-# Generate specific package only
-PKGS=pulumi ./scripts/run_typedoc.sh
+```bash
+gh workflow run pulumi-sdk-typescript-docs.yml --repo pulumi/docs --ref master -f version=<pulumi-version>
 ```
 
 #### Sphinx - Python API Documentation
 
 **Script:** `scripts/generate_python_docs.sh`
 
-**Packages Generated:**
+**Packages Generated (one per invocation, via `PACKAGE` env var):**
 
-- pulumi
-- pulumi_policy
-- pulumi_terraform
-- pulumi_esc_sdk
+- `pulumi` (Pulumi SDK)
+- `pulumi_policy` (Pulumi Policy SDK)
+- `pulumi_esc_sdk` (Pulumi ESC SDK)
+
+Each package is built by a dedicated workflow that calls this script with the appropriate `PACKAGE` value. `pulumi_terraform` was previously built here but moved to the Pulumi Registry; see `scripts/redirects/pulumi-terraform-python-redirects.txt`.
 
 **Configuration:**
 
 - Sphinx theme: ReadTheDocs
 - Format: dirhtml
-- Output: `static-prebuilt/docs/reference/pkg/python/`
+- Output: `static-prebuilt/docs/reference/pkg/python/<PACKAGE>/`
 
 **Usage:**
 
 ```bash
-make generate
+PACKAGE=pulumi          ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+```
+
+Or trigger a workflow:
+
+```bash
+gh workflow run pulumi-sdk-python-docs.yml         --repo pulumi/docs --ref master -f version=<version>
+gh workflow run pulumi-policy-sdk-python-docs.yml  --repo pulumi/docs --ref master -f version=<version>
+gh workflow run pulumi-esc-sdk-python-docs.yml     --repo pulumi/docs --ref master -f version=<version>
 ```
 
 #### Pulumi CLI - Command Reference
@@ -965,7 +973,7 @@ make generate
 
 Generates markdown documentation for all Pulumi CLI commands.
 
-**Output:** `content/docs/cli/commands/`
+**Output:** `content/docs/iac/cli/commands/`
 
 **Format:**
 
@@ -3341,8 +3349,8 @@ npm list typedoc
 # Update
 yarn add --dev typedoc@latest typedoc-plugin-script-inject@latest
 
-# Regenerate docs
-make generate
+# Regenerate docs locally to verify
+NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
 ```
 
 **Sphinx:**
@@ -4265,7 +4273,9 @@ Yes:
 ```bash
 make clean
 make ensure
-make generate  # Optional, takes ~10 minutes
+# Optionally regenerate any SDK / CLI reference docs you want to inspect locally
+# (see README's "Generating SDK and CLI documentation" section). Skip for an
+# ordinary site build.
 make build
 make serve-static
 ```
