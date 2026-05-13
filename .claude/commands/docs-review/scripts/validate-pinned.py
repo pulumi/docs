@@ -19,7 +19,17 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 13 (v12→v13 makes `pass-3-unverifiable-evidence` surgically
+Schema version: 14 (v13→v14 fixes a silent-failure bug in
+  `check_internal_link_existence`'s alias-grep fallback: the pattern
+  `- /path` starts with `-`, so `git grep "- /path"` exited 129 with
+  "unknown switch" and the function fell through to the violation branch
+  for EVERY aliased link. Adding `-e` before the pattern makes git grep
+  treat the next arg as the pattern instead of a switch, so aliased
+  paths now resolve correctly. Combined with v11→v12's diff-text skip,
+  the `internal-link-existence` rule should fire only on links that are
+  (a) not echoed from the diff, (b) not resolvable to a content/ file,
+  AND (c) not declared as an alias on any content/ page. v12→v13 makes
+  `pass-3-unverifiable-evidence` surgically
   fixable. When `.verified-claims.json` is available the rule emits one
   violation per Pass 3 unverifiable verdict whose rendered trail line lacks
   the `WebSearch|search ran|searched|query` pointer; each violation carries
@@ -79,7 +89,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 13
+SCHEMA_VERSION = 14
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -1941,10 +1951,14 @@ def check_internal_link_existence(ctx: Context) -> list[Violation]:
         # this check, the validator flags links to pages the PR itself creates.
         if any(c in ctx.diff_files_added for c in candidates_rel):
             continue
-        # Cheap alias check: grep all md files under content/ for `aliases:` containing path.
+        # Cheap alias check: grep all md files under content/ for an `aliases:`
+        # list entry like `- /old/path/`. The `-e` flag is required because the
+        # pattern starts with `-` — without it `git grep` interprets `-` as an
+        # option flag, exits 129, and the validator silently treated every
+        # aliased link as missing. (Schema v13→v14 fix.)
         try:
             result = subprocess.run(
-                ["git", "grep", "-l", f"- {path}", "--", "content/"],
+                ["git", "grep", "-l", "-e", f"- {path}", "--", "content/"],
                 cwd=ctx.repo_root,
                 capture_output=True, text=True, timeout=10,
             )
