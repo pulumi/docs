@@ -55,7 +55,7 @@
             {{ end }}
 
               {{ if .cta_text }}
-                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link mt-auto">
+                <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-lg mt-auto">
                     <span>{{ .cta_text }}</span>
                     <span>→</span>
                 </a>
