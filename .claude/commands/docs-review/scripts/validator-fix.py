@@ -2,23 +2,28 @@
 """validator-fix.py — deterministic surgical-fix for validator violations.
 
 Reads the fix-me JSON from validate-pinned.py and dispatches Haiku 4.5 via
-the claude CLI to make targeted edits for surgical-fixable rule classes.
-On any non-surgical violation, exits 2 (caller falls through to soft-floor
-without invoking Haiku, since the violation needs a re-render decision).
+the Anthropic Messages API to make targeted edits for surgical-fixable rule
+classes. Surgical violations are applied even when non-surgical violations
+are present (the caller restarts the model retry on the residual fix-me).
 
 Usage:
     validator-fix.py --body-file <path> --fix-me-json <path>
 
 Exit codes:
-    0  all violations attempted; body file rewritten in place
-    1  Haiku dispatch error (e.g., claude CLI unavailable, edit produced no output)
-    2  one or more violations fall outside the surgical-fixable set
+    0  all surgical violations applied; no non-surgical residual
+    1  Haiku API error (auth, transient network, malformed response)
+    2  surgical fixes applied OR none to apply, but non-surgical residual
+       remains for the model to handle
 
 Design notes:
     Each violation runs as a single Haiku call with a class-specific prompt
-    template. Tool use is disabled — we want a pure text edit, not an agent
-    that might wander off and run shell or read files. The body is passed
-    verbatim in the prompt; Haiku echoes back the full edited body.
+    template. The body is passed verbatim in the user message; Haiku echoes
+    back the full edited body. We use the Messages API directly (urllib +
+    `x-api-key`) — the same path verify-claims.py uses — rather than the
+    `claude` CLI subprocess, because (a) the API is the proven auth path in
+    CI, (b) errors surface as readable strings instead of being truncated
+    inside a 50KB CalledProcessError repr, and (c) it removes the dependency
+    on the `claude` CLI being installed at a compatible version.
 
     The caller (pinned-comment.sh cmd_upsert_validated) is expected to:
     1. snapshot the pre-fix body to a .pre-haiku.bak file
@@ -35,8 +40,10 @@ import argparse
 import json
 import os
 import re
-import subprocess
 import sys
+import time
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 # Rule classes this script can splice mechanically. Non-surgical violations
@@ -57,16 +64,22 @@ SURGICAL_CLASSES: set[str] = {
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
-# 60s is plenty for --bare mode (~2-3s CLI startup, sub-10s Haiku call). OAuth
-# mode adds ~30s of CLI startup so 60s leaves Haiku very little headroom; bump
-# to 120s when ANTHROPIC_API_KEY is unset (local-test path) to avoid spurious
-# timeouts during corpus runs.
-HAIKU_TIMEOUT_S = 60 if os.environ.get("ANTHROPIC_API_KEY") else 120
-# Sequential dispatches; each rewrites the whole body. Bumped to 30 because
-# `verified-claims-trail-faithful` (added to SURGICAL_CLASSES in schema v15)
-# can fire 20-30 times per review when Opus rewrites the trail to dodge
-# verdicts; one Haiku call per violation, ~2-3s under --bare, so 30 ≈ 90s.
-MAX_DISPATCHES_PER_CALL = 30  # cost / wall-clock ceiling
+ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
+ANTHROPIC_VERSION = "2023-06-01"
+# 120s per Haiku call — the body can be 60K tokens and we want plenty of
+# headroom for network jitter / cold-start. Matches verify-claims.py's
+# HTTP_TIMEOUT.
+HAIKU_TIMEOUT_S = 120
+MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
+# Maximum response tokens from Haiku. The whole body is echoed back verbatim;
+# 16K covers a 60K-char review body with room for any minor expansion. Goes
+# in the messages.create `max_tokens` field.
+MAX_OUTPUT_TOKENS = 16000
+# Sequential dispatches; each rewrites the whole body. Bumped to 50 because
+# `verified-claims-trail-faithful` can fire 30+ times per review (R4 #156
+# hit 33 surgical violations), and we want headroom before deferring to
+# soft-floor. Per-call cost on Haiku is ~$0.005-0.01, so 50 ≈ $0.50/review.
+MAX_DISPATCHES_PER_CALL = 50  # cost / wall-clock ceiling
 
 
 SYSTEM_PROMPT = (
@@ -358,36 +371,78 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
     return f"{instr}\n\nFULL BODY (edit and return verbatim with the fix applied):\n\n{body}"
 
 
-def dispatch_haiku(prompt: str) -> str | None:
-    """Run one Haiku call via the claude CLI. Returns the edited body or None on error."""
-    # --bare skips hooks, LSP, plugin sync, CLAUDE.md auto-discovery, and
-    # keychain reads — drops startup from ~30s to ~2-3s per dispatch. It
-    # requires ANTHROPIC_API_KEY explicitly. CI has it via the action env;
-    # local testing without the API key falls through to OAuth (~30s per
-    # dispatch). The implicit fallback keeps the script runnable in both
-    # environments without any operator config.
-    cmd = [
-        "claude",
-        "-p", prompt,
-        "--model", HAIKU_MODEL,
-        "--append-system-prompt", SYSTEM_PROMPT,
-        "--allowedTools", "",
-    ]
-    if os.environ.get("ANTHROPIC_API_KEY"):
-        cmd.append("--bare")
-    try:
-        result = subprocess.run(
-            cmd,
-            capture_output=True, text=True,
-            timeout=HAIKU_TIMEOUT_S,
-            check=True,
-        )
-    except (subprocess.SubprocessError, OSError) as e:
-        print(f"validator-fix.py: claude CLI error: {e}", file=sys.stderr)
+def dispatch_haiku(prompt: str, api_key: str) -> str | None:
+    """Run one Haiku call via the Anthropic Messages API. Returns the edited
+    body or None on error.
+
+    Pre-v16 used the `claude` CLI as a subprocess, which silently failed in
+    CI because Opus's Bash tool truncates output at ~2KB — the actual
+    `returned non-zero exit status N` error tail got pushed out by the
+    huge CalledProcessError repr (which includes the full `-p <prompt>`
+    argument). Direct API calls surface errors as plain readable strings
+    and use the same auth path verify-claims.py uses (proven to work in CI).
+    """
+    body = {
+        "model": HAIKU_MODEL,
+        "max_tokens": MAX_OUTPUT_TOKENS,
+        "system": SYSTEM_PROMPT,
+        "messages": [{"role": "user", "content": prompt}],
+    }
+    req = urllib.request.Request(
+        ANTHROPIC_URL,
+        data=json.dumps(body).encode("utf-8"),
+        headers={
+            "x-api-key": api_key,
+            "anthropic-version": ANTHROPIC_VERSION,
+            "content-type": "application/json",
+        },
+        method="POST",
+    )
+    last_err: Exception | None = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            with urllib.request.urlopen(req, timeout=HAIKU_TIMEOUT_S) as resp:
+                payload = json.loads(resp.read().decode("utf-8"))
+                break
+        except urllib.error.HTTPError as e:
+            detail = ""
+            try:
+                detail = e.read().decode("utf-8", errors="replace")[:300]
+            except Exception:  # noqa: BLE001
+                pass
+            if e.code in (429, 500, 502, 503, 529) and attempt < MAX_RETRIES - 1:
+                last_err = RuntimeError(f"HTTP {e.code}: {detail}")
+                time.sleep(2 ** attempt + 0.5)
+                continue
+            print(
+                f"validator-fix.py: Haiku API error: HTTP {e.code}: {detail}",
+                file=sys.stderr,
+            )
+            return None
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            if attempt < MAX_RETRIES - 1:
+                last_err = e
+                time.sleep(2 ** attempt + 0.5)
+                continue
+            print(f"validator-fix.py: Haiku API error: {type(e).__name__}: {e}",
+                  file=sys.stderr)
+            return None
+    else:
+        print(f"validator-fix.py: Haiku API gave up after {MAX_RETRIES} retries: {last_err}",
+              file=sys.stderr)
         return None
-    output = result.stdout.strip()
+
+    # Successful 2xx → extract the assistant text content. The response shape:
+    #   {"content": [{"type":"text","text":"<edited body>"}, ...], ...}
+    content = payload.get("content") or []
+    text_parts = [c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text"]
+    output = "".join(text_parts).strip()
     if not output:
-        print("validator-fix.py: claude CLI returned empty output", file=sys.stderr)
+        print(
+            f"validator-fix.py: Haiku returned empty content "
+            f"(stop_reason={payload.get('stop_reason')!r})",
+            file=sys.stderr,
+        )
         return None
     # Defensive: strip code fences if Haiku wrapped the output despite
     # the system prompt's instruction.
@@ -413,6 +468,15 @@ def main() -> int:
     if not fix_path.is_file():
         print(f"validator-fix.py: fix-me JSON not found: {fix_path}", file=sys.stderr)
         return 1
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not api_key:
+        print(
+            "validator-fix.py: ANTHROPIC_API_KEY is unset; cannot dispatch "
+            "Haiku — deferring to soft-floor",
+            file=sys.stderr,
+        )
+        return 2
 
     fix_data = json.loads(fix_path.read_text())
     violations = fix_data.get("violations", [])
@@ -453,7 +517,7 @@ def main() -> int:
     for v in violations:
         rule_id = v["rule_id"]
         prompt = build_prompt(rule_id, v, body)
-        edited = dispatch_haiku(prompt)
+        edited = dispatch_haiku(prompt, api_key)
         if edited is None:
             print(f"validator-fix.py: dispatch failed for `{rule_id}`",
                   file=sys.stderr)
