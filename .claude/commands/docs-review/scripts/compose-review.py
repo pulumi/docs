@@ -483,7 +483,9 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
             also = " (also " + ", ".join(refs[1:]) + ")"
         text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
         pointer = _evidence_pointer(v)
-        lines.append(f"- {first} {text}{also} → {emoji} {verdict} ({pointer})")
+        file_path = (v.get("file") or "").strip()
+        file_in = f" in `{file_path}`" if file_path else ""
+        lines.append(f"- {first}{file_in} {text}{also} → {emoji} {verdict} ({pointer})")
     header = (
         f"<details>\n<summary><strong>{n} claims extracted</strong> · "
         f"<strong>{x}</strong> verified · <strong>{y}</strong> unverifiable · "
@@ -639,7 +641,13 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
     verdict = v.get("verdict") or "?"
     pointer = _evidence_pointer(v)
-    bullet = f"- **[{ref}]** {text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
+    file_path = (v.get("file") or "").strip()
+    # File rendered AFTER `**[L<n>]**` so the validator's
+    # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
+    # still anchors on the L-token; the filename disambiguates which file
+    # the line number refers to on multi-file PRs.
+    file_part = f" `{file_path}`" if file_path else ""
+    bullet = f"- **[{ref}]**{file_part} {text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
     return {"ref": ref, "bullet": bullet, "verdict": verdict}
 
 

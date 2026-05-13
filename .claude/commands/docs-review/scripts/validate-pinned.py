@@ -1081,13 +1081,15 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
                 pointer_phrase = f"WebSearch ran query for source: {artifact_source}"
             else:
                 pointer_phrase = "WebSearch dispatched but verification did not converge within the turn budget"
+            file_path = (v.get("file") or "").strip()
+            file_hint = f" in `{file_path}`" if file_path else ""
             per_line.append(Violation(
                 rule_id="pass-3-unverifiable-evidence",
-                line_ref=f"<🔍 Verification trail: {anchor or 'L?'}>",
+                line_ref=f"<🔍 Verification trail: {anchor or 'L?'}{file_hint}>",
                 expected="trail line for a Pass 3 unverifiable verdict carries a `WebSearch|search ran|searched|query` negative-evidence pointer",
                 actual=f"trail line lacks pointer — {raw.strip()[:160]}",
                 hint=(
-                    f"Find the trail line under ### 🔍 Verification trail starting with `- {anchor or '<L-token>'} ` "
+                    f"Find the trail line under ### 🔍 Verification trail starting with `- {anchor or '<L-token>'}{file_hint} ` "
                     f"that quotes the claim text beginning `{text_anchor}` (the line's verdict is 🤷 unverifiable). "
                     f"The line ends with a `)` closing the `(framing/evidence/source/intuition)` parenthetical "
                     f"but contains no `WebSearch|search ran|searched|query` keyword. Insert `; {pointer_phrase}` "
