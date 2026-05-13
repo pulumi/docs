@@ -9,8 +9,9 @@
             data-nav-trigger-button
             data-nav-index="{{ $dropdownIdx }}"
             aria-expanded="false"
+            aria-haspopup="menu"
             aria-controls="nav-desktop-popup"
-            class="group/trigger inline-flex h-9 items-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1 data-[open=true]:bg-gray-100/70">
+            class="btn btn-ghost group/trigger inline-flex items-center justify-center px-4">
             {{ $item.label }}
             {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
           </button>
@@ -18,7 +19,7 @@
         {{ else }}
           <a href="{{ $item.href }}"
             {{ with $item.track }}data-track="{{ . }}"{{ end }}
-            class="inline-flex h-9 items-center justify-center rounded-md px-4 py-2 text-sm font-regular text-gray-950 whitespace-nowrap outline-none transition-all hover:bg-gray-100/70 focus:bg-gray-100/70 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:outline-1">
+            class="btn btn-ghost inline-flex items-center justify-center">
             {{ $item.label }}
           </a>
         {{ end }}

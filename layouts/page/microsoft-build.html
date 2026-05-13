@@ -27,7 +27,7 @@
                             <h5>{{ $item.heading }}</h5>
                             <p>{{ $item.description | markdownify }}</p>
                             <div class="mt-8">
-                                <a href="{{ $item.link }}" target="_blank" class="btn btn-outline btn-xl btn-disabled">{{ $item.action }}</a>
+                                <a href="{{ $item.link }}" target="_blank" class="btn btn-outline btn-xl" aria-disabled="true">{{ $item.action }}</a>
                             </div>
                         </div>
                     </div>
