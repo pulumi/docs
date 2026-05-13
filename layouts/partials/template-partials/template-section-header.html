@@ -57,7 +57,6 @@
     <div class="{{ $alignClasses }}">
         {{ if and $image $imageAbove }}
         <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
-            {{/* Lives inside the centered max-w-4xl wrapper (~896px). */}}
             {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "section-header-image-above-img rounded-lg" "maxWidth" 1000 "quality" 95) }}
         </div>
         {{ end }}
@@ -88,8 +87,6 @@
     </div>
     {{ if and $image (not $imageAbove) }}
     <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
-        {{/* Fills the full page container (~1472px at 2xl). Bump quality — these are usually
-             product screenshots with fine text where q90 artifacts are visible. */}}
         {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full rounded-lg" "maxWidth" 1500 "quality" 95) }}
     </div>
     {{ end }}
