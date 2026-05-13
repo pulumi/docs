@@ -19,14 +19,24 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 12 (v11→v12 narrows `internal-link-existence` to skip
-  `/docs/…` and `/blog/…` links the review body merely *echoes* from the PR
-  diff: a broken link inside the diff is a content finding the review surfaces
-  (Hugo build / link-integrity catches genuine breakage), not a structural
-  problem with the *review*, so the validator was double-charging the reviewer
-  for it on shallow-checkout runs where the link target hadn't been fetched.
-  The rule still catches genuinely-invented links the review writes that are
-  nowhere in the diff. v10→v11 adds `no-placeholder-empty-form`: an explicit-
+Schema version: 13 (v12→v13 makes `pass-3-unverifiable-evidence` surgically
+  fixable. When `.verified-claims.json` is available the rule emits one
+  violation per Pass 3 unverifiable verdict whose rendered trail line lacks
+  the `WebSearch|search ran|searched|query` pointer; each violation carries
+  the L-token anchor, a claim-text snippet, and the canonical pointer phrase
+  (from the artifact's `source` if it names a search dispatch, else the
+  composer's synthetic "WebSearch dispatched but verification did not
+  converge"). validator-fix.py's Haiku lane splices the pointer back into
+  the offending line. Coarse pre-v13 behavior is preserved as a fallback
+  when the artifact is missing or trail lines can't be matched. v11→v12
+  narrowed `internal-link-existence` to skip `/docs/…` and `/blog/…` links
+  the review body merely *echoes* from the PR diff: a broken link inside
+  the diff is a content finding the review surfaces (Hugo build / link-
+  integrity catches genuine breakage), not a structural problem with the
+  *review*, so the validator was double-charging the reviewer for it on
+  shallow-checkout runs where the link target hadn't been fetched. The rule
+  still catches genuinely-invented links the review writes that are nowhere
+  in the diff. v10→v11 adds `no-placeholder-empty-form`: an explicit-
   empty-form line — `_No outstanding findings in this PR._`, `_No items resolved
   since the last review._`, etc. — must be reader-facing; a draft round where
   the reviewer left compose-review.py's *older* placeholder text verbatim
@@ -69,7 +79,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 12
+SCHEMA_VERSION = 13
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -981,6 +991,17 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
     Implementation: when Pass 3 outcome shows U > 0, the verification trail
     must include at least U trail entries that name a search/fetch attempt
     (regex `WebSearch|search ran|searched|query`).
+
+    Schema v12→v13: surgically fixable. When `.verified-claims.json` is
+    available, the rule emits one violation per Pass 3 unverifiable verdict
+    whose rendered trail line lacks the pointer; each violation carries the
+    line anchor + claim-text snippet + the canonical pointer phrase the
+    composer would have rendered (from the artifact's `source`, or the
+    synthetic "WebSearch dispatched but verification did not converge" form
+    when the source lacks search-keywords). validator-fix.py's Haiku lane
+    splices the pointer back into the offending trail line. When the
+    artifact isn't available or trail lines can't be matched, falls back
+    to the coarse pre-v13 count check.
     """
     line = _external_claim_line(ctx)
     if line is None:
@@ -1007,6 +1028,67 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
             evidence_count += 1
     if evidence_count >= u_pass3:
         return []
+
+    # Schema v13 — surgical per-line emission. For each Pass 3 unverifiable
+    # verdict in the artifact, locate the corresponding trail line (by L-token
+    # anchor + a short claim-text substring) and confirm it lacks the pointer.
+    # The hint identifies the line via both anchors and supplies the exact
+    # phrase to splice in, so the Haiku surgical-fix lane can edit just that
+    # one line.
+    if ctx.verified_claims:
+        per_line: list[Violation] = []
+        for v in ctx.verified_claims:
+            if v.get("route") != "pass3" or v.get("verdict") != "unverifiable":
+                continue
+            line_range = v.get("line_range") or ""
+            l_match = re.search(r"L\d+", line_range)
+            anchor = l_match.group(0) if l_match else ""
+            claim_text = (v.get("text") or "").strip()
+            text_anchor = claim_text[:30]
+            if not anchor and not text_anchor:
+                continue
+            trail_idx = None
+            for i in range(start, end):
+                raw = ctx.body_lines[i]
+                # Trail lines start with `- L<n>`; match anchor first if present
+                # so we don't trip on prose that quotes the claim text.
+                if anchor:
+                    if f"- {anchor} " not in raw and f"- {anchor}\t" not in raw:
+                        continue
+                if text_anchor and text_anchor not in raw:
+                    continue
+                trail_idx = i
+                break
+            if trail_idx is None:
+                continue
+            raw = ctx.body_lines[trail_idx]
+            if evidence_re.search(raw):
+                continue
+            # Pick the canonical phrase: prefer the artifact's `source` if it
+            # already names a search dispatch; otherwise the composer's synthetic.
+            artifact_source = (v.get("source") or "").strip()
+            if evidence_re.search(artifact_source):
+                pointer_phrase = f"WebSearch ran query for source: {artifact_source}"
+            else:
+                pointer_phrase = "WebSearch dispatched but verification did not converge within the turn budget"
+            per_line.append(Violation(
+                rule_id="pass-3-unverifiable-evidence",
+                line_ref=f"<🔍 Verification trail: {anchor or 'L?'}>",
+                expected="trail line for a Pass 3 unverifiable verdict carries a `WebSearch|search ran|searched|query` negative-evidence pointer",
+                actual=f"trail line lacks pointer — {raw.strip()[:160]}",
+                hint=(
+                    f"Find the trail line under ### 🔍 Verification trail starting with `- {anchor or '<L-token>'} ` "
+                    f"that quotes the claim text beginning `{text_anchor}` (the line's verdict is 🤷 unverifiable). "
+                    f"The line ends with a `)` closing the `(framing/evidence/source/intuition)` parenthetical "
+                    f"but contains no `WebSearch|search ran|searched|query` keyword. Insert `; {pointer_phrase}` "
+                    f"immediately before that closing `)` — preserve the rest of the parenthetical verbatim. "
+                    f"Do not modify any other trail line, the verdict word, the emoji, or surrounding sections."
+                ),
+            ))
+        if per_line:
+            return per_line
+
+    # Pre-v13 coarse fallback (artifact missing or no trail-line match).
     return [Violation(
         rule_id="pass-3-unverifiable-evidence",
         line_ref="<🔍 Verification trail>",

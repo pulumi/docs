@@ -51,6 +51,7 @@ SURGICAL_CLASSES: set[str] = {
     "mandatory-h3-order",
     "trail-per-verdict-emoji",
     "trail-canonical-verdict-word",
+    "pass-3-unverifiable-evidence",
 }
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
@@ -59,7 +60,10 @@ HAIKU_MODEL = "claude-haiku-4-5-20251001"
 # to 120s when ANTHROPIC_API_KEY is unset (local-test path) to avoid spurious
 # timeouts during corpus runs.
 HAIKU_TIMEOUT_S = 60 if os.environ.get("ANTHROPIC_API_KEY") else 120
-MAX_DISPATCHES_PER_CALL = 5  # cost ceiling — refuse to fix more than this many
+# Sequential dispatches; each rewrites the whole body. Cap accounts for the
+# pass-3 surgical-per-line emission landed in schema v13 (one violation per
+# Pass 3 unverifiable verdict missing its pointer; a hot review can run 5-8).
+MAX_DISPATCHES_PER_CALL = 10  # cost / wall-clock ceiling
 
 
 SYSTEM_PROMPT = (
@@ -266,6 +270,27 @@ def build_prompt(rule_id: str, violation: dict, body: str) -> str:
             f"  routed: I inline, P Pass 1, F Pass 2 (verified V, "
             f"contradicted C, unverifiable U).\n\n"
             f"Do not edit anything else."
+        )
+    elif rule_id == "pass-3-unverifiable-evidence":
+        # Schema v13. The validator's per-line emission carries an L-token
+        # anchor, a claim-text snippet, and the exact pointer phrase to splice
+        # in (all in `hint`). Haiku just executes the splice.
+        line_ref = violation.get("line_ref", "")
+        instr = (
+            f"VIOLATION (`pass-3-unverifiable-evidence`): A trail line under "
+            f"### 🔍 Verification trail is for a Pass 3 ⚠️/🤷 unverifiable "
+            f"verdict but is missing the search-was-run negative-evidence "
+            f"pointer the composer rendered from `.verified-claims.json`.\n\n"
+            f"Trail line anchor: `{line_ref}`\n"
+            f"Actual (the offending line): {actual}\n"
+            f"Validator hint: {hint}\n\n"
+            f"Follow the hint exactly: locate the single trail line it "
+            f"identifies (by L-token + claim-text prefix), insert the "
+            f"specified `; <pointer phrase>` immediately before the closing "
+            f"`)` of the line's parenthetical, and preserve the rest of the "
+            f"parenthetical verbatim. Do not modify any other trail line, "
+            f"the verdict word, the emoji, the count table, or surrounding "
+            f"sections."
         )
     elif rule_id == "mandatory-h3-order":
         # Re-order H3s OR insert missing _explicit empty form_ block.

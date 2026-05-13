@@ -28,6 +28,11 @@ Output schema (flat list, sorted by URL):
        "status": 200,
        "content_text": "<plain text, capped>",
        "fetch_ms": 412},
+      {"url": "https://github.com/owner/repo/blob/main/README.md",
+       "fetched_url": "https://raw.githubusercontent.com/owner/repo/main/README.md",
+       "status": 200,
+       "content_text": "<plain text, capped>",
+       "fetch_ms": 380},
       {"url": "https://broken.example",
        "status": 0,
        "content_text": "",
@@ -39,6 +44,21 @@ Output schema (flat list, sorted by URL):
 Empty input (no diff, no PR-changed content/(docs|blog) files, no external
 URLs) produces an empty list (`[]`), never errors. The script does not call
 any APIs except `gh pr diff` and HTTP fetches via urllib.
+
+URL normalization: GitHub and Docker Hub serve SPA / JS-rendered HTML for
+their human-facing URLs, which yields ~empty `content_text` after the HTML
+strip and silently turns external-fact claims into Pass 3 unverifiable
+verdicts. Before fetching, this script rewrites known SPA URLs to their
+content-API equivalents:
+
+    github.com/<o>/<r>/blob/<rev>/<path>  → raw.githubusercontent.com/<o>/<r>/<rev>/<path>
+    github.com/<o>/<r>/raw/<rev>/<path>   → raw.githubusercontent.com/<o>/<r>/<rev>/<path>
+    hub.docker.com/r/<o>/<r>              → hub.docker.com/v2/repositories/<o>/<r>/tags/?page_size=20
+    hub.docker.com/_/<r>                  → hub.docker.com/v2/repositories/library/<r>/tags/?page_size=20
+
+The `url` field in the record stays the original (so verifier pattern-
+matching against the diff text still works); a `fetched_url` field appears
+only when normalization changed the target.
 """
 
 from __future__ import annotations
@@ -67,6 +87,40 @@ BARE_URL_RE = re.compile(r"https?://[\w\-._~:/?#\[\]@!$&'*+,;=%]+")
 
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+
+# Normalization patterns (see module docstring). Anchored so we don't over-
+# match. Owner / repo / rev capture the URL-safe segment up to the next `/`;
+# the path is greedy and stops at a fragment or query.
+GITHUB_BLOB_RE = re.compile(
+    r"^https://github\.com/([^/\s#?]+)/([^/\s#?]+)/(?:blob|raw)/([^/\s#?]+)/([^\s#?]+)"
+)
+DOCKERHUB_R_RE = re.compile(
+    r"^https://hub\.docker\.com/r/([^/\s#?]+)/([^/\s#?]+)(?:/[^\s#?]*)?"
+)
+DOCKERHUB_LIBRARY_RE = re.compile(
+    r"^https://hub\.docker\.com/_/([^/\s#?]+)(?:/[^\s#?]*)?"
+)
+
+
+def normalize_url(url: str) -> str:
+    """Rewrite known SPA / JS-rendered URLs to content-API equivalents.
+
+    Returns the URL unchanged if no rewrite applies. See module docstring
+    for the full pattern list.
+    """
+    m = GITHUB_BLOB_RE.match(url)
+    if m:
+        owner, repo, rev, path = m.groups()
+        return f"https://raw.githubusercontent.com/{owner}/{repo}/{rev}/{path}"
+    m = DOCKERHUB_R_RE.match(url)
+    if m:
+        owner, repo = m.groups()
+        return f"https://hub.docker.com/v2/repositories/{owner}/{repo}/tags/?page_size=20"
+    m = DOCKERHUB_LIBRARY_RE.match(url)
+    if m:
+        (repo,) = m.groups()
+        return f"https://hub.docker.com/v2/repositories/library/{repo}/tags/?page_size=20"
+    return url
 
 
 def fetch_pr_patch(pr: str) -> str:
@@ -135,18 +189,35 @@ def cache_path(url: str) -> Path:
 
 
 def fetch_one(url: str) -> dict:
-    """Fetch a URL, write to cache, return the record dict."""
-    cached = cache_path(url)
+    """Fetch a URL, write to cache, return the record dict.
+
+    `url` is the original URL from the PR diff (preserved on the record so
+    verifier pattern-matching against the diff text still works). If
+    `normalize_url(url)` produces a different target, we fetch the normalized
+    form and add a `fetched_url` field; the cache is keyed on the normalized
+    URL so multiple original URLs that normalize to the same target share
+    one cache entry.
+    """
+    fetched = normalize_url(url)
+    cached = cache_path(fetched)
     if cached.is_file():
         try:
-            return json.loads(cached.read_text())
+            record = json.loads(cached.read_text())
+            record["url"] = url
+            if fetched != url:
+                record["fetched_url"] = fetched
+            else:
+                record.pop("fetched_url", None)
+            return record
         except (OSError, json.JSONDecodeError):
             pass
 
     start = time.monotonic()
     record: dict = {"url": url, "status": 0, "content_text": "", "fetch_ms": 0}
+    if fetched != url:
+        record["fetched_url"] = fetched
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        req = urllib.request.Request(fetched, headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
             status = getattr(resp, "status", 200)
             raw = resp.read(CONTENT_TEXT_CAP * 4)  # over-read; HTML-strip below

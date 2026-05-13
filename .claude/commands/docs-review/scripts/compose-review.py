@@ -652,12 +652,21 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
         conf = (v.get("confidence") or "").lower()
         if verdict in OUTSTANDING_VERDICTS:
             if verdict == "mismatch":
-                todo = ("state which sibling pages corroborate the divergence and what the author must change — "
-                        "anti-hedge mandate; do NOT soften to a manual-check ask. REMOVE only if you judge the verifier wrong "
-                        "(then dispute in a follow-up issue, don't silently drop)")
+                todo = ("write the fix / suggestion block. Anti-hedge mandate: state which sibling pages corroborate the divergence "
+                        "and what the author must change; do NOT soften to a manual-check ask. "
+                        "If you judge the verdict spurious or pre-existing, prefix the body with `**Spurious:**` or `**Pre-existing:**` "
+                        "and explain in 1-2 sentences — the labeled explanation IS the resolution. "
+                        "Do NOT remove the bullet (`trail-verdict-bucket-promotion` requires it to stay in 🚨); "
+                        "do NOT add `no author action required`, `nothing to fix`, `the link is correct` or any equivalent coda — "
+                        "the absence of fix prose is the signal")
             else:
                 todo = ("write the fix / suggestion block for the author (quote-and-rewrite mandate). "
-                        "REMOVE only if you judge the verifier wrong (then dispute in a follow-up issue, don't silently drop)")
+                        "If you judge the verdict spurious (verifier checked stale data / wrong site / SPA page / missed a PR-local alias) "
+                        "or pre-existing (the issue was already there on a line this PR didn't touch), prefix the body with "
+                        "`**Spurious:**` or `**Pre-existing:**` and explain in 1-2 sentences — the labeled explanation IS the resolution. "
+                        "Do NOT remove the bullet (`trail-verdict-bucket-promotion` requires it to stay in 🚨); "
+                        "do NOT add `no author action required`, `nothing to fix`, `the link is correct` or any equivalent coda — "
+                        "the absence of fix prose is the signal")
             outstanding.append(_stub_bullet(v, todo))
         elif verdict == "unverifiable":
             if PROMOTE_UNVERIFIABLE_TO == "outstanding":
