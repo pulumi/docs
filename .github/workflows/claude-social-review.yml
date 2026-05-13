@@ -194,9 +194,7 @@ jobs:
       - name: Fetch secrets from ESC
         if: steps.gate.outputs.should_skip != 'true'
         id: esc-secrets
-        uses: pulumi/esc-action@v1
-        with:
-          oidc-auth: true
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896
 
       - name: Configure AWS Credentials
         if: steps.gate.outputs.should_skip != 'true'

@@ -23,9 +23,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
-        with:
-          oidc-auth: true
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896
       - name: checkout docs repo
         uses: actions/checkout@v6
       - name: set the java sdk version
@@ -51,9 +49,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
-        with:
-          oidc-auth: true
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896
       - name: set the java sdk version
         run: |
           echo "JAVA_SDK_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -115,9 +111,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
-        with:
-          oidc-auth: true
+        uses: pulumi/esc-action@197ccaa42ab49560ce838a3010eb8345ce086896
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
