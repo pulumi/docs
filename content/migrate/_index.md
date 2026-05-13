@@ -38,12 +38,12 @@ migrations:
       image: /logos/tech/aws.svg
       selfServeUrl: /docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation
       selfServeWebUrl: /migrate/cf2pulumi
-      comparisonUrl: /docs/iac/comparisons/cloud-templates/cloudformation
+      comparisonUrl: /docs/iac/comparisons/cloudformation/
     - title: Azure Resource Manager (ARM)
       image: /logos/tech/azure.svg
       selfServeUrl: /docs/iac/guides/migration/migrating-to-pulumi/from-arm
       selfServeWebUrl: /migrate/arm2pulumi
-      comparisonUrl: /docs/concepts/vs/cloud-templates
+      comparisonUrl: /docs/iac/comparisons/
     - title: Infrastructure source not listed?
       summary: Don't worry, we've got you covered. Please get in touch!
       selfServeUrl: /docs/iac/guides/migration

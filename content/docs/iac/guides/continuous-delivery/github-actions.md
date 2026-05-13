@@ -382,7 +382,7 @@ This approach is preferred because it is:
 To set this up:
 
 1. Configure OIDC between Pulumi ESC and your cloud provider using one of the [ESC OIDC guides](/docs/esc/guides/configuring-oidc/).
-1. Configure Pulumi Cloud to trust GitHub OIDC tokens using the [GitHub OIDC client guide](/docs/administration/access-identity/oidc-client/github/).
+1. Configure Pulumi Cloud to trust GitHub OIDC tokens using the [GitHub OIDC client guide](/docs/administration/access-identity/oidc-issuers/github/).
 1. Update your workflow to use `pulumi/auth-actions` and `pulumi/esc-action` instead of long-lived secrets:
 
 ```yaml

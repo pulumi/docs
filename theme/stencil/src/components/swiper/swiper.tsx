@@ -52,6 +52,7 @@ export class Swiper {
     private dragStartX = 0;
     private currentTranslate = 0;
     private isDragging = false;
+    private dragArmed = false;
 
     componentDidLoad() {
         this.container = this.el.querySelector(".swiper") as HTMLElement;
@@ -142,14 +143,14 @@ export class Swiper {
         this.wrapper.style.transform = `translate3d(${this.currentTranslate}px, 0, 0)`;
     }
 
-    private slideTo(index: number) {
-        this.wrapper.style.transitionDuration = `${this.speed}ms`;
+    private slideTo(index: number, duration: number = this.speed) {
+        this.wrapper.style.transitionDuration = `${duration}ms`;
         this.wrapper.style.transitionTimingFunction = "ease";
         this.currentTranslate = this.translateForIndex(index);
         this.wrapper.style.transform = `translate3d(${this.currentTranslate}px, 0, 0)`;
     }
 
-    private advance = (dir: number) => {
+    private advance = (dir: number, duration?: number) => {
         if (this.isTransitioning) return;
         const next = this.currentIndex + dir;
         if (!this.loop) {
@@ -160,7 +161,7 @@ export class Swiper {
             this.currentIndex = next;
         }
         this.isTransitioning = true;
-        this.slideTo(this.currentIndex);
+        this.slideTo(this.currentIndex, duration);
     };
 
     private onTransitionEnd = () => {
@@ -190,35 +191,79 @@ export class Swiper {
     private onMouseEnter = () => this.clearAutoplay();
     private onMouseLeave = () => { if (this.autoplay) this.startAutoplay(); };
 
+    // Pointer handling treats every press as a potential tap until movement
+    // crosses the 5px threshold in onPointerMove. Only then do we commit to a
+    // drag and call setPointerCapture — capturing earlier retargets the eventual
+    // click away from anchors inside slides, breaking link navigation.
     private onPointerDown = (e: PointerEvent) => {
         if (e.button !== 0) return;
-        if ((e.target as HTMLElement).closest("a, button, .swiper-button-prev, .swiper-button-next")) return;
-        this.isDragging = true;
-        this.isTransitioning = false;
+        if ((e.target as HTMLElement).closest(".swiper-button-prev, .swiper-button-next")) return;
+        this.dragArmed = true;
+        this.isDragging = false;
         this.dragStartX = e.clientX;
-        this.clearAutoplay();
-        this.wrapper.style.transitionDuration = "0ms";
-        this.container.setPointerCapture(e.pointerId);
         document.addEventListener("pointermove", this.onPointerMove);
         document.addEventListener("pointerup", this.onPointerUp);
     };
 
     private onPointerMove = (e: PointerEvent) => {
-        if (!this.isDragging) return;
+        if (!this.dragArmed) return;
         const delta = e.clientX - this.dragStartX;
-        this.wrapper.style.transform = `translate3d(${this.currentTranslate + delta}px, 0, 0)`;
+        if (!this.isDragging) {
+            if (Math.abs(delta) < 5) return;
+            this.isDragging = true;
+            this.isTransitioning = false;
+            this.clearAutoplay();
+            this.wrapper.style.transitionDuration = "0ms";
+            try { this.container.setPointerCapture(e.pointerId); } catch {}
+        }
+        const tx = this.clampTranslate(this.currentTranslate + delta);
+        this.wrapper.style.transform = `translate3d(${tx}px, 0, 0)`;
     };
 
+    // Bounds the wrapper translate to its content extent so dragging past the
+    // first or last slide never exposes whitespace beyond the cloned edges.
+    private clampTranslate(tx: number): number {
+        const step = this.getStep();
+        const totalSlides = this.slideCount + 2 * this.cloneCount;
+        const totalWidth = totalSlides * step - this.spaceBetween;
+        const containerWidth = this.container.offsetWidth;
+        const offset = this.centeredSlides && this.slides > 1
+            ? (containerWidth - (step - this.spaceBetween)) / 2
+            : 0;
+        const maxTx = offset;
+        const minTx = Math.min(offset, containerWidth - totalWidth + offset);
+        return Math.max(minTx, Math.min(maxTx, tx));
+    }
+
     private onPointerUp = (e: PointerEvent) => {
-        if (!this.isDragging) return;
-        this.isDragging = false;
+        if (!this.dragArmed) return;
+        this.dragArmed = false;
         document.removeEventListener("pointermove", this.onPointerMove);
         document.removeEventListener("pointerup", this.onPointerUp);
+        // No drag committed → tap. Bail out and let the native click reach the link.
+        if (!this.isDragging) return;
+        this.isDragging = false;
         const delta = e.clientX - this.dragStartX;
+        // SNAP_MS is intentionally short so post-drag positioning feels responsive
+        // even when `this.speed` is tuned for a slow autoplay drift (e.g. 8000ms).
+        const SNAP_MS = 300;
+        // Drag was committed → swallow the trailing click that some browsers fire
+        // after pointerup so the user doesn't accidentally navigate a slide link
+        // they were swiping. The setTimeout guards against touch devices that
+        // don't fire a trailing click at all — otherwise the suppressor would
+        // sit armed and eat the user's next legitimate tap.
+        const suppressClick = (ev: Event) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+        };
+        this.container.addEventListener("click", suppressClick, { capture: true, once: true });
+        setTimeout(() => {
+            this.container.removeEventListener("click", suppressClick, true);
+        }, 300);
         if (Math.abs(delta) > 50) {
-            this.advance(delta < 0 ? 1 : -1);
+            this.advance(delta < 0 ? 1 : -1, SNAP_MS);
         } else {
-            this.slideTo(this.currentIndex);
+            this.slideTo(this.currentIndex, SNAP_MS);
         }
         if (this.autoplay) this.startAutoplay();
     };

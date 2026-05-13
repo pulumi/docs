@@ -20,6 +20,16 @@ aliases:
 Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
 {{% /notes %}}
 
+## 2026
+
+### April
+
+* Added SSRF (server-side request forgery) protection to Pulumi ESC providers to prevent requests to private, loopback, and link-local IP addresses
+
+{{< notes type="warning" >}}
+Breaking Change: ESC providers now block requests to private, loopback, and link-local IP addresses by default. If you run dependent services (for example, local secret stores or webhooks) on the same host or private network as your self-hosted Pulumi Cloud, you may need to disable SSRF protection by setting the `PULUMI_DISABLE_ESC_SSRF_PROTECTION=true` environment variable.
+{{< /notes >}}
+
 ## 2025
 
 ### November

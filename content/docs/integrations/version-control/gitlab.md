@@ -120,7 +120,7 @@ The Pulumi GitLab integration posts results back to GitLab regardless of which C
 
 ## OIDC authentication
 
-Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-client/gitlab/) for configuration details.
+Use GitLab CI's built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as CI variables. See [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) for configuration details.
 
 ## Template sources
 

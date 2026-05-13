@@ -302,10 +302,9 @@
 }
 
 .template-feature-card-title {
-    @apply font-body text-black font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black font-semibold mt-0! mb-3 text-heading-xs;
     line-height: 38.5px;
     letter-spacing: -1.4px;
-    margin: 0 !important;
 }
 
 .template-feature-card-description {
@@ -339,6 +338,49 @@
         height: 48px;
         width: auto;
         @apply grayscale brightness-0;
+    }
+}
+
+.template-feature-callout {
+    @apply font-body bg-violet-50;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.template-feature-callout-bg-1 {
+        background-image: url('/images/template-testimonial-bg-1.svg');
+    }
+
+    &.template-feature-callout-bg-2 {
+        background-image: url('/images/template-testimonial-bg-2.svg');
+    }
+
+    .feature-callout-tag-line {
+        font-family: "Monaspace Neon Var", monospace;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #404041;
+    }
+
+    .feature-callout-title {
+        @include section-header();
+        @apply mb-0;
+    }
+
+    .feature-callout-lead {
+        @apply text-xl md:text-2xl text-black m-0;
+    }
+
+    .feature-callout-description {
+        @include section-description();
+        @apply text-body-s text-black;
+
+        a {
+            @apply text-inherit no-underline;
+        }
     }
 }
 
@@ -544,6 +586,16 @@
 
         a {
             @apply text-inherit no-underline;
+        }
+    }
+
+    &.section-header--left {
+        .section-header-tag-line {
+            @apply text-left;
+        }
+
+        .section-header-description {
+            @apply max-w-2xl ml-0 mr-auto;
         }
     }
 }
