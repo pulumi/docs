@@ -209,6 +209,16 @@ jobs:
             SKIP="empty-diff"
           fi
 
+          # Detect whether the diff touches any Hugo-templating-relevant path.
+          # When it doesn't (content-only PR — the 95% case), the heavy
+          # `hugo --renderToMemory` pre-step skips entirely. The companion
+          # build-and-deploy workflow runs a real Hugo build on every PR;
+          # any templating error there blocks the merge regardless.
+          TEMPLATING_CHANGED="false"
+          if printf '%s\n' "$FILES_LIST" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
+            TEMPLATING_CHANGED="true"
+          fi
+
           {
             echo "pr_number=$PR"
             echo "is_draft=$IS_DRAFT"
@@ -224,6 +234,7 @@ jobs:
             echo "additions=$ADDITIONS"
             echo "deletions=$DELETIONS"
             echo "file_count=$FILE_COUNT"
+            echo "templating_changed=$TEMPLATING_CHANGED"
             echo "title=$TITLE"
             echo "files_list<<EOF_FILES"
             echo "$FILES_LIST"
@@ -529,6 +540,14 @@ jobs:
       # `make build` itself (which the workflow intentionally skips per ci.md
       # hard rule 4). See references/pre-computation.md and
       # references/fact-check.md §Hugo build artifact for the contract.
+      #
+      # Conditional: runs only when the diff touches templating-relevant paths
+      # (assets/, config/, data/, i18n/, layouts/, styles/, theme/, root
+      # hugo.{toml,yaml,yml}). For content-only PRs (~95% of the corpus), the
+      # step writes a skip-stub artifact so downstream consumers see an empty
+      # findings shape — the companion build-and-deploy workflow runs a real
+      # Hugo build on every PR, so templating errors are still caught (just not
+      # surfaced inline in the pinned comment).
       - name: Pre-compute Hugo build artifact
         if: steps.pr-context.outputs.skip_reason == ''
         id: hugo-build
@@ -536,7 +555,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
+          TEMPLATING_CHANGED: ${{ steps.pr-context.outputs.templating_changed }}
         run: |
+          if [[ "$TEMPLATING_CHANGED" != "true" ]]; then
+            echo "review: hugo-build skipped (content-only PR; templating paths untouched)"
+            python3 -c "import json; print(json.dumps({'schema_version': 1, 'skipped': True, 'skipped_reason': 'content-only PR; templating paths untouched. Full Hugo build runs in build-and-deploy.yml.', 'head_exit_code': 0, 'errors': [], 'link_integrity': [], 'sitemap_diff': {'added': [], 'removed': [], 'changed': []}, 'stats': {'errors_count': 0, 'warnings_count': 0, 'link_integrity_count': 0, 'suppressed_ci_noise_count': 0, 'head_pages_count': 0, 'base_pages_count': 0, 'added_pages_count': 0, 'removed_pages_count': 0}}, indent=2))" > .hugo-build.json
+            exit 0
+          fi
           # Resolve base SHA and ensure it's fetched (workflow checkout uses
           # depth=1 so the base may not be in local history).
           BASE_SHA=$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json baseRefOid --jq .baseRefOid 2>/dev/null || echo "")
