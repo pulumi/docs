@@ -1,5 +1,3 @@
-import {LocalStorageService} from "./state";
-
 (function (document) {
     var isTouchDevice = "ontouchstart" in document;
 
@@ -51,27 +49,5 @@ import {LocalStorageService} from "./state";
             learnOpened = !learnOpened;
         });
     })();
-
-    const bannerState = new LocalStorageService("banner-state");
-    const banner = document.getElementById("dismissable-banner");
-    loadBannerState();
-
-    function loadBannerState() {
-        if (banner) {
-            if (bannerState.getKey("dismissed") !== "true") {
-                banner.style.display = "block";
-            } else {
-                banner.style.display = "none";
-            }
-        }
-    }
-
-    document.getElementById("dismiss-banner")?.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (banner) {
-            banner.style.display = "none";
-        }
-        bannerState.updateKey("dismissed", "true");
-    });
 
 })(document);

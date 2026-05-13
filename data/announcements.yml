@@ -1,0 +1,46 @@
+# Sitewide announcement banner configuration.
+#
+# Each entry in `announcements` renders into the banner above the main header.
+# On every page load, one entry is picked at random from those that are:
+#   - active,
+#   - in-scope for the current page (see `display`),
+#   - not previously dismissed by the visitor (tracked in localStorage by id).
+#
+# Adding a new announcement:
+#   1. Append a new entry below with a unique, stable `id`. This id is also
+#      used as the localStorage key for dismissals — never reuse an old id for
+#      a new message, or visitors who dismissed the old one won't see the new.
+#   2. Set `active: true` to enable. Set `active: false` to keep the entry
+#      without showing it (preserves the id for future re-enabling).
+#   3. `display` controls where the entry can appear:
+#        - `marketing` — non-docs pages (homepage, product, blog, etc.)
+#        - `docs`      — paths under /docs/ or /tutorials/
+#        - `both`      — everywhere (default if omitted)
+#   4. `icon` is optional. Use any name from the Phosphor icon set; see
+#      assets/icons/phosphor/regular/ for the available names (file basename
+#      without the .svg extension). For a text marker instead of an icon,
+#      use `badge` (short uppercase label, e.g. "NEW", "BLOG", "EVENT") —
+#      `icon` and `badge` are mutually exclusive.
+#   5. `text` supports inline Markdown — **bold**, *italics*, `code`. Avoid
+#      inline links inside `text` when `cta.href` is set: the icon/badge and
+#      text are already wrapped in a link to the CTA href, and a nested <a>
+#      from a Markdown link produces invalid HTML.
+#   6. `cta` is optional — omit if no call to action is needed.
+#   7. `dismissible` defaults to `true`. Set to `false` for notices that must
+#      stay visible (e.g., legal or service-status announcements).
+#
+# If no entries are active and in-scope, the banner does not render.
+#
+# Example entry:
+#
+#   - id: blog-dark-factory-pattern-2026-05-UZGwzr
+#     active: true
+#     display: marketing
+#     badge: New
+#     text: "**On the blog:** The Dark Factory Pattern for Infrastructure — running Pulumi lights-out."
+#     cta:
+#       label: "Read post"
+#       href: "/blog/dark-factory-pattern-pulumi-autonomous-iac/"
+#     dismissible: true
+
+announcements: []
