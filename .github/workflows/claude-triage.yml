@@ -37,6 +37,48 @@ jobs:
       id-token: write
 
     steps:
+      # Surface "triage is running" as visible label state from workflow
+      # start — fires ~3s after PR open, before checkout + mise install
+      # (~15-50s combined). Uses `actions/github-script` so the swap runs
+      # pre-checkout (set-review-label.sh isn't on disk yet) without
+      # shell-escape concerns; the cleanup step at end-of-job uses
+      # set-review-label.sh --clear (checkout has completed by then).
+      # STATE_LABELS list mirrors the script's; extend both if the set
+      # ever grows.
+      - name: Set review:triaging label
+        uses: actions/github-script@v7
+        continue-on-error: true
+        with:
+          script: |
+            const pr = context.payload.pull_request.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const stateLabels = [
+              'review:in-progress',
+              'review:outstanding-issues',
+              'review:no-blockers',
+              'review:stale',
+              'review:error',
+            ];
+            const { data: existing } = await github.rest.issues.listLabelsOnIssue({
+              owner, repo, issue_number: pr,
+            });
+            const names = new Set(existing.map(l => l.name));
+            await Promise.all(
+              stateLabels
+                .filter(s => names.has(s))
+                .map(name =>
+                  github.rest.issues.removeLabel({
+                    owner, repo, issue_number: pr, name,
+                  }).catch(() => {})
+                )
+            );
+            if (!names.has('review:triaging')) {
+              await github.rest.issues.addLabels({
+                owner, repo, issue_number: pr, labels: ['review:triaging'],
+              });
+            }
+
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
@@ -78,24 +120,6 @@ jobs:
             echo "has_write_access=false" >> $GITHUB_OUTPUT
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
-
-      # Surface "triage is running" as a visible label state from the moment
-      # this workflow kicks off (~5s after PR open / ready-for-review). The
-      # cleanup step below — gated `if: always()` — clears it when triage
-      # finishes, regardless of whether classification succeeded. If the
-      # downstream review fires (eligible PR), claude-code-review.yml's own
-      # `Set review:in-progress label` step will swap triaging → in-progress
-      # atomically via the same mutually-exclusive STATE_LABELS contract.
-      - name: Set review:triaging label
-        if: steps.check-access.outputs.has_write_access == 'true'
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          .claude/commands/docs-review/scripts/set-review-label.sh \
-            --pr "${{ github.event.pull_request.number }}" \
-            --repo "${{ github.repository }}" \
-            --label review:triaging
 
       # Triage is a narrow classification task: read the PR, decide which
       # domains it touches, and emit a label delta. Almost all of that is
@@ -308,16 +332,15 @@ jobs:
           VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
           echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
 
-      # Clear the triaging label whether classification succeeded or not —
-      # the next state (review:in-progress / nothing) is owned by
+      # Clear the triaging label whether classification succeeded or not
+      # — the early-set step ran unconditionally (no access gate), so the
+      # cleanup must also run unconditionally to leave no orphan label.
+      # The next state (review:in-progress / nothing) is owned by
       # claude-code-review.yml or by the trivial/frontmatter-only
       # short-circuit. set-review-label.sh --clear strips any state label
-      # currently present without adding a new one; if a downstream workflow
-      # already ran past this step (rare — triage is short) and set
-      # in-progress, --clear's idempotency means it'll only remove what's
-      # there now (triaging) and leave the rest alone.
+      # currently present without adding a new one.
       - name: Clear review:triaging label
-        if: always() && steps.check-access.outputs.has_write_access == 'true'
+        if: always()
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
