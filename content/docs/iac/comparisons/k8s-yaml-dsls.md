@@ -31,7 +31,7 @@ This page covers what each tool is, a feature-by-feature comparison, the most im
 
 For users coming from Kubernetes YAML, Pulumi maintains a first-party [Kubernetes provider](/registry/packages/kubernetes/) generated from the Kubernetes OpenAPI spec, so every Kubernetes API object is available with the same fidelity as a hand-written manifest. The same Pulumi program can also provision the cluster itself and any non-Kubernetes cloud resources it depends on.
 
-## What is Kubernetes YAML Manifests?
+## What are Kubernetes YAML Manifests?
 
 Kubernetes YAML manifests are the native declarative configuration format of the [Kubernetes](https://kubernetes.io/) API. Each manifest is a YAML (or JSON) document describing the desired state of a Kubernetes API object — a `Deployment`, `Service`, `ConfigMap`, `Namespace`, and so on. Manifests are applied to a cluster with `kubectl apply` or by a GitOps controller such as [Argo CD](https://argo-cd.readthedocs.io/) or [Flux](https://fluxcd.io/), and the Kubernetes control plane reconciles the cluster toward the state they describe.
 
