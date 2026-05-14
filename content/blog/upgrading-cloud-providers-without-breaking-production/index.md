@@ -7,9 +7,8 @@ feature_image: feature.png
 authors:
     - pablo-seibelt
 tags:
-    - day-2
+    - day-2-operations
     - providers
-    - upgrades
 social:
     twitter: |
         Provider upgrades should feel like game days, not fire drills.
@@ -42,15 +41,15 @@ Imagine a platform team owns a shared AWS baseline used by application stacks. T
 
 The team needs to upgrade `@pulumi/aws` to pick up new resources and fixes. The risky part is not the package install. The risky part is discovering whether the new provider interprets existing state differently.
 
-## Step 1: Pin the upgrade in the dependency lockfile
+## Step 1: Pin the upgrade in package and lock files
 
-Most Pulumi provider versions are inferred from your language package dependencies and lockfile. Keep that boring on purpose. Make one dependency change, commit it on a branch, and let every preview use the same provider version.
+Most Pulumi provider versions are inferred from your language package dependencies and lockfile. Keep that boring on purpose. Make one dependency change, commit the package and lockfile changes on a branch, and let every preview use the same provider version.
 
 ```bash
-npm install @pulumi/aws@6.66.0
+npm install @pulumi/aws@6.66.0 --save-exact
 ```
 
-Avoid scattering one-off provider versions through resource options. The `version` resource option exists, but [Pulumi documents it as an override](/docs/iac/concepts/resources/options/version/) that should rarely be used directly during normal operations. For fleet upgrades, package pins and lockfiles are auditable in a single commit and reversible with one revert.
+Avoid scattering one-off provider versions through resource options. The `version` resource option exists, but [Pulumi documents it as an override](/docs/iac/concepts/resources/options/version/) that should rarely be used directly during normal operations. For fleet upgrades, exact package pins and lockfiles are auditable in a single commit and reversible with one revert.
 
 ## Step 2: Build an upgrade canary stack
 
@@ -84,12 +83,11 @@ The goal is not to test every resource in the estate. The goal is to force dange
 
 ## Step 3: Turn previews into a risk report
 
-Run a diff preview and save the machine-readable output:
+Baseline drift before changing the provider, then run a diff preview with the upgraded dependency and save the machine-readable output. Avoid running `pulumi refresh --yes` after the provider bump because refresh writes provider-normalized state before reviewers see the diff. If you need live cloud reads during the game day, use preview refresh so the state file is not updated.
 
 ```bash
 pulumi stack select platform/canary
-pulumi refresh --yes
-pulumi preview --diff --json > preview-provider-upgrade.json
+pulumi preview --refresh --diff --json > preview-provider-upgrade.json
 ```
 
 Then mine the preview for operations that deserve human review:
