@@ -1065,7 +1065,12 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
             if v.get("route") != "pass3" or v.get("verdict") != "unverifiable":
                 continue
             line_range = v.get("line_range") or ""
-            l_match = re.search(r"L\d+", line_range)
+            # Capture the full first L-token including any range form (e.g.
+            # `L81-82`); compose-review.py renders the trail line's leading
+            # anchor as the verbatim first token, so a bare `L\d+` capture
+            # against `L81-82` silently dropped the surgical match and the
+            # rule fell back to the coarse single-violation path.
+            l_match = re.search(r"L\d+(?:-\d+)?", line_range)
             anchor = l_match.group(0) if l_match else ""
             claim_text = (v.get("text") or "").strip()
             text_anchor = claim_text[:30]
