@@ -32,13 +32,13 @@ The cost of an uncoordinated observability stack is measured in Mean Time to Res
 In this post, you will learn how to wire Datadog, New Relic, and PagerDuty together using Pulumi. You will build:
 
 1. **PagerDuty services routed to an existing escalation policy** to define who gets paged and when.
-2. **Datadog monitors** that automatically route alerts to the correct PagerDuty service.
-3. **New Relic alert conditions** with consistent tags and runbook context.
-4. **Unified tagging** across all three providers to ensure fast navigation during an incident.
+1. **Datadog monitors** that automatically route alerts to the correct PagerDuty service.
+1. **New Relic alert conditions** with consistent tags and runbook context.
+1. **Unified tagging** across all three providers to ensure fast navigation during an incident.
 
 By the end, you will have a cohesive observability stack that eliminates the telemetry gap and provides your on-call engineers with the context they need to resolve incidents faster.
 
-## Managing Credentials with [Pulumi ESC](/docs/esc/)
+## Managing credentials with Pulumi ESC
 
 Before we dive into the code, we need to handle our provider credentials. Using [Pulumi ESC](/docs/esc/), we can securely manage API keys for Datadog, New Relic, and PagerDuty without hardcoding them or passing them as environment variables manually.
 
@@ -63,7 +63,7 @@ values:
     PAGERDUTY_TOKEN: ${pagerduty.token}
 ```
 
-## The Implementation
+## The implementation
 
 Here is a TypeScript program that wires these three providers together. We'll create a PagerDuty service, a Datadog monitor that notifies that service, and a New Relic alert policy with a notification channel.
 
@@ -130,10 +130,11 @@ const condition = new newrelic.NrqlAlertCondition("high-error-rate", {
 After running `pulumi up`, you can validate your observability stack:
 
 1. **PagerDuty Integration**: Check the "Integrations" tab of your PagerDuty service to confirm that the Datadog integration key is correctly configured.
-2. **Monitor Test**: Manually trigger a test alert in Datadog and verify that a PagerDuty incident is created with the correct service and tags.
-3. **New Relic Routing**: Trigger the NRQL condition and verify that New Relic sends a notification through the configured policy channel.
+1. **Monitor Test**: Manually trigger a test alert in Datadog and verify that a PagerDuty incident is created with the correct service and tags.
+1. **New Relic Routing**: Trigger the NRQL condition and verify that New Relic sends a notification through the configured policy channel.
 
 By wiring your observability stack as code, you ensure that every service is monitored from day one and that your on-call engineers always have the context they need to resolve incidents quickly.
+
 Pulumi allows you to promote these configurations across environments. You can have a "staging" observability stack that notifies a Slack channel and a "production" stack that triggers PagerDuty.
 
 By treating your monitors and dashboards with the same rigor as your infrastructure, you eliminate "monitoring debt" and ensure that your team is always ready for the next incident.
