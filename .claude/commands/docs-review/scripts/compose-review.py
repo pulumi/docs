@@ -540,7 +540,13 @@ def render_outstanding(stubs: list[dict]) -> str:
     if not stubs:
         return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
     lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
-    for s in stubs:
+    # Blank line between bullets renders as a "loose list" — each bullet gets
+    # paragraph-level vertical spacing so a stack of 8+ findings doesn't read
+    # as a wall of text. Validators' extract_bucket_bullets keys off the
+    # leading `**` so blank lines between bullets don't false-positive.
+    for i, s in enumerate(stubs):
+        if i > 0:
+            lines.append("")
         lines.append(s["bullet"])
     return "\n".join(lines)
 
@@ -550,7 +556,9 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     if not stubs and not has_style:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
     lines = ["### ⚠️ Low-confidence", "", _LOWCONF_NOTE, ""]
-    for s in stubs:
+    for i, s in enumerate(stubs):
+        if i > 0:
+            lines.append("")
         lines.append(s["bullet"])
     if has_style:
         if stubs:

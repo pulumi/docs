@@ -273,6 +273,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
   **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Style findings under `#### Style findings` use the `**line N:**` prefix below — they're not subject to the trail-prefix mandate.
 
+  **Loose-list spacing.** Separate top-level bullets in 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged verifier findings, and 💡 Pre-existing with a blank line so each renders as its own paragraph (a "loose list"). A stack of 8+ findings without spacing reads as a wall of text. When moving a bullet between buckets, preserve the surrounding blank-line separation in the destination.
+
   **Always-🚨 carve-outs (no judgment required):**
 
   - Factually contradicted claim, any confidence (per `docs-review:references:fact-check` §Tier rules). (An *unverifiable* factual claim is **not** on this list — it renders in ⚠️ Low-confidence with an author-question line; see the ⚠️ entry below.)
