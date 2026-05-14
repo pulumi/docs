@@ -8,10 +8,10 @@ menu:
     iac:
         name: Custom solutions
         parent: iac-comparisons
-        weight: 10
+        weight: 110
     concepts:
         parent: vs
-        weight: 11
+        weight: 110
 aliases:
 - /docs/reference/vs/custom/
 - /docs/intro/vs/custom/

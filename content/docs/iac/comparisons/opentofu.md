@@ -8,11 +8,11 @@ menu:
     iac:
         name: OpenTofu
         parent: iac-comparisons
-        weight: 6
+        weight: 30
     concepts:
         identifier: vs-opentofu
         parent: vs
-        weight: 6
+        weight: 30
 aliases:
 - /docs/reference/vs/opentofu/
 - /docs/intro/vs/opentofu/
