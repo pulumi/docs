@@ -79,7 +79,6 @@ By managing namespaces with Pulumi, you can ensure that your isolation boundarie
 Vault policies define what actions are allowed on specific paths. In a production environment, you should follow the principle of least privilege by creating granular policies.
 
 ```typescript
-
 const appPolicy = new vault.Policy("app-policy", {
     name: "app-policy",
     policy: `
@@ -90,11 +89,11 @@ path "secret/data/app/*" {
 });
 ```
 
-Using `pulumi.interpolate` allows you to dynamically construct policy strings, making it easier to reference other resources or variables in your IaC program.
+Template literals make it easy to compose policy bodies from variables or other resource outputs when you need dynamic values.
 
 ## Pattern 4: Kubernetes auth method
 
-Vault can authenticate workloads using their native identities. For Kubernetes, this means using ServiceAccounts to authenticate pods.
+Vault can authenticate workloads using their native identities. For [Kubernetes](https://kubernetes.io/), this means using ServiceAccounts to authenticate pods.
 
 ```typescript
 const config = new pulumi.Config();
@@ -130,7 +129,25 @@ This pattern involves three steps: enabling the Kubernetes auth backend, configu
 
 As organizations modernize their secrets management, they often look to [Pulumi ESC](/docs/esc/) for environment-wide secrets orchestration. You can use Pulumi to bridge your existing Vault secrets into ESC environments.
 
-This bridge allows you to continue using Vault as your primary secret store while using ESC's powerful environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers.
+This bridge allows you to continue using Vault as your primary secret store while using ESC's environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers.
+
+```yaml
+values:
+  vault:
+    login:
+      fn::open::vault-login:
+        address: https://vault.example.com
+        jwt:
+          role: esc-reader
+    secrets:
+      fn::open::vault-secrets:
+        login: ${vault.login}
+        get:
+          database:
+            path: secret/database
+  app:
+    databasePassword: ${vault.secrets.database.data.password}
+```
 
 ## Conclusion
 
