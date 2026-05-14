@@ -193,9 +193,9 @@ jobs:
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
-          # for a regenerate; trivial / fmonly / draft / bot-author are
-          # all overridable. Empty-diff is NOT overridable — there's
-          # nothing to review.
+          # for a regenerate; trivial / fmonly / draft / bot-author /
+          # already-reviewed are all overridable. Empty-diff is NOT
+          # overridable — there's nothing to review.
           SKIP=""
           if [[ "$FORCE" != "true" ]]; then
             if [[ "$IS_DRAFT" == "true" ]]; then
@@ -206,6 +206,23 @@ jobs:
               SKIP="frontmatter-only"
             elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
               SKIP="bot-author"
+            # Auto-fire path (workflow_run from triage) on a PR that the
+            # review pipeline has already touched: don't burn API on a
+            # reopen / re-triage. Any terminal state label means an
+            # explicit user action (`@claude #new-review` or
+            # `#update-review`) is the documented refresh path.
+            # outstanding-issues / no-blockers: review ran and is current
+            # (no commits since — mark-stale would have transitioned
+            # otherwise). stale: review ran, commits pushed; refresh via
+            # explicit mention. error: workflow failed; explicit retry
+            # avoids transient-error loops.
+            elif [[ "${{ github.event_name }}" == "workflow_run" ]] && (
+              [[ ",$LABELS_CSV," == *",review:outstanding-issues,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:no-blockers,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:stale,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:error,"* ]]
+            ); then
+              SKIP="already-reviewed"
             fi
           fi
           if [[ -z "$SKIP" && "$FILE_COUNT" == "0" ]]; then
