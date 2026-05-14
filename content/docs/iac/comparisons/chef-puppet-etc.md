@@ -19,7 +19,7 @@ aliases:
 - /docs/iac/concepts/vs/chef-puppet-etc/
 ---
 
-Chef, Puppet, Ansible, and Salt are all popular _configuration management tools_. These tools help you install and
+Chef, Puppet, Ansible, and Salt are all popular _configuration managment tools_. These tools help you install and
 manage software on existing cloud infrastructure, either for bootstrapping a virtual machine, or patching one. They do
 not attempt to solve the problem of provisioning or updating infrastructure, containers, or serverless resources.
 
