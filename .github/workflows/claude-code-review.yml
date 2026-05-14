@@ -270,6 +270,65 @@ jobs:
             --jq '.id' || echo "")
           echo "check_id=$CHECK_ID" >> "$GITHUB_OUTPUT"
 
+      # Resolve write-access and post the "Reviewing" signal up front,
+      # before the LLM-heavy pre-steps. The signal needs to be visible
+      # while pre-steps run, not after them — moving these two steps
+      # collapses perceived latency from ~4 min to <30s without changing
+      # wall-clock. check-access must precede progress because progress
+      # gates on has_write_access.
+      - name: Check repository write access
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: check-access
+        run: |
+          # Use the actual repository the workflow is running in, not a hardcoded
+          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
+          # hardcoded owner/repo would always return "none" in fork-based testing
+          # and in repo transfers.
+          REPO_FULL="${{ github.repository }}"
+          AUTHOR="${{ steps.pr-context.outputs.author }}"
+
+          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
+            exit 0
+          fi
+
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
+          fi
+
+      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
+      # "something is happening" while the pre-steps and Opus run. The post
+      # step below edits it to a done/errored state when the review completes.
+      # Separate marker from the pinned review so pinned-comment.sh never
+      # touches it.
+      - name: Post progress signal
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: progress
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          BODY=$(cat <<'EOF'
+          <!-- CLAUDE_PROGRESS -->
+          <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
+          EOF
+          )
+          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
+            -f body="$BODY" --jq '.id' || echo "")
+          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
+
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
       # are filtered to PR-introduced lines only, capped (10/file, 50 total),
       # and written to .vale-findings.json for the review skill to consume.
@@ -390,9 +449,9 @@ jobs:
             --pr "$PR" --out .candidate-claims-regex.json \
             || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
 
-      - name: Extract candidate claims (Layer B — atomic pass)
+      - name: Extract candidate claims (Layer B — atomic + holistic in parallel)
         if: steps.pr-context.outputs.skip_reason == ''
-        id: extract-claims-llm-atomic
+        id: extract-claims-llm
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -400,25 +459,30 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
           SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
         run: |
+          # Run the two Sonnet extraction passes concurrently — wall-clock
+          # collapses from sum(atomic + holistic) to max(atomic, holistic).
+          # Each writes its own artifact; merge-claims.py reads both
+          # independently. Per pre-step fallback discipline, failure is
+          # surfaced INSIDE the artifact (errors: [...]), not via a
+          # missing-file or silent-empty heuristic.
+          set +e
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
             --pr "$PR" --pass atomic --scrutiny "${SCRUTINY:-standard}" \
-            --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
-
-      - name: Extract candidate claims (Layer B — holistic pass)
-        if: steps.pr-context.outputs.skip_reason == ''
-        id: extract-claims-llm-holistic
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          PR: ${{ steps.pr-context.outputs.pr_number }}
-          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
-        run: |
+            --out .candidate-claims-llm-1.json &
+          ATOMIC_PID=$!
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
             --pr "$PR" --pass holistic --scrutiny "${SCRUTINY:-standard}" \
-            --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            --out .candidate-claims-llm-2.json &
+          HOLISTIC_PID=$!
+          wait "$ATOMIC_PID";   ATOMIC_RC=$?
+          wait "$HOLISTIC_PID"; HOLISTIC_RC=$?
+          if [ "$ATOMIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-1.json ]; then
+            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+          fi
+          if [ "$HOLISTIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-2.json ]; then
+            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+          fi
+          exit 0
 
       - name: Merge candidate claims → .candidate-claims.json
         if: steps.pr-context.outputs.skip_reason == ''
@@ -577,58 +641,6 @@ jobs:
             --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
             --out .hugo-build.json \
             || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
-
-      - name: Check repository write access
-        if: steps.pr-context.outputs.skip_reason == ''
-        id: check-access
-        run: |
-          # Use the actual repository the workflow is running in, not a hardcoded
-          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
-          # hardcoded owner/repo would always return "none" in fork-based testing
-          # and in repo transfers.
-          REPO_FULL="${{ github.repository }}"
-          AUTHOR="${{ steps.pr-context.outputs.author }}"
-
-          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
-            echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
-            exit 0
-          fi
-
-          PERMISSION=$(curl -s \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
-            | jq -r '.permission // "none"')
-
-          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
-            echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
-          else
-            echo "has_write_access=false" >> $GITHUB_OUTPUT
-            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
-          fi
-
-      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
-      # "something is happening" while Opus works. The post step below edits
-      # it to a done/errored state when the review completes. Separate marker
-      # from the pinned review so pinned-comment.sh never touches it.
-      - name: Post progress signal
-        if: steps.check-access.outputs.has_write_access == 'true'
-        id: progress
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR="${{ steps.pr-context.outputs.pr_number }}"
-          REPO="${{ github.repository }}"
-          BODY=$(cat <<'EOF'
-          <!-- CLAUDE_PROGRESS -->
-          <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
-          EOF
-          )
-          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
-            -f body="$BODY" --jq '.id' || echo "")
-          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
 
       # Wall-clock timestamp for the `## Quality Review — Last updated <ts>`
       # line. Computed in the workflow (not by the model) so the timestamp is
