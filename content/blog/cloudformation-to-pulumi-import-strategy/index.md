@@ -73,7 +73,7 @@ Then, use the `--generate-code` flag to import a resource and create the TypeScr
 pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0 --generate-code --out index.ts
 ```
 
-Pulumi will query the AWS API, determine the current configuration of the VPC, and append the resource definition to your `index.ts` file.
+Pulumi will query the AWS API, determine the current configuration of the VPC, and write the resource definition to your `index.ts` file.
 
 ## Step 3: The "retain and adopt" strategy
 
@@ -102,9 +102,9 @@ Run the `pulumi import` commands for all resources in the stack. Ensure your Pul
 
 Once the resources are safely managed by Pulumi, you can delete the CloudFormation stack. Because of the `Retain` policy, the resources stay alive.
 
-### 4. Clean up Pulumi code
+### 4. Verify the imported code
 
-After the import is complete, you'll notice an `import` ID in the resource options. Once the resource is successfully part of your Pulumi state, you should remove this property from your code to prevent Pulumi from attempting to import it again on subsequent updates.
+After the import is complete, review the generated resource definition and keep protective options such as `protect: true` in place until you have a safe deletion plan.
 
 ```typescript
 const vpc = new aws.ec2.Vpc("my-vpc", {
