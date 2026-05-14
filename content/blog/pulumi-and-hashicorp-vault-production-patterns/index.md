@@ -64,19 +64,20 @@ Using `vault.Mount` allows you to define the path, type, and version of your sec
 
 ## Pattern 2: Namespace per environment
 
-For enterprise deployments, Vault namespaces provide a way to isolate data and configuration. A common pattern is to create a namespace for each environment (e.g., development, staging, production).
+Vault namespaces, a Vault Enterprise feature, isolate data and configuration. A common pattern is one namespace per environment: development, staging, and production.
 
 ```typescript
-const prodNamespace = new vault.Namespace("production", {
-    path: "production",
-});
+const environments = ["development", "staging", "production"];
+const namespaces = environments.map(env => new vault.Namespace(env, {
+    path: env,
+}));
 ```
 
 By managing namespaces with Pulumi, you can ensure that your isolation boundaries are created automatically as part of your infrastructure rollout.
 
 ## Pattern 3: Token-bound policies
 
-Vault policies define what actions are allowed on specific paths. In a production environment, you should follow the principle of least privilege by creating granular policies.
+Vault policies define what actions are allowed on specific paths. Apply least privilege by scoping each policy to the smallest path set its role needs.
 
 ```typescript
 const appPolicy = new vault.Policy("app-policy", {
@@ -151,4 +152,6 @@ values:
 
 ## Conclusion
 
-Managing HashiCorp Vault with Pulumi brings the power of IaC to your security infrastructure. By following these five patterns, you can build a repeatable and secure secrets management platform that fits cleanly into your cloud-native workflows.
+Managing HashiCorp Vault with Pulumi brings the power of IaC to your security infrastructure. Start by codifying one Vault mount, namespace, or auth method, then use Pulumi ESC to expose the secrets your applications already consume.
+
+{{< blog/cta-button "Manage secrets with Pulumi ESC" "/docs/esc/integrations/dynamic-secrets/vault-secrets/" >}}
