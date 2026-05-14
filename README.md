@@ -99,11 +99,11 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
 * `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
+* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`). Note: Hugo's dev server does not serve content from `static-prebuilt/`, so generated SDK reference pages under `/docs/reference/pkg/{nodejs,python,dotnet,java}/...` will 404 in dev mode — use `make build && make serve-static` to preview those.
 * `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
-* `make build` generates the website and writes it to `./public`
+* `make build` generates the website and writes it to `./public`. This includes copying `static-prebuilt/` (where the auto-generated SDK reference docs live) into the output, which is why this combined with `make serve-static` is the way to preview SDK pages locally.
 * `make build-assets` builds only the CSS and JavaScript asset bundles
-* `make serve-static` runs a local HTTP server that serves the contents of `./public`
+* `make serve-static` runs a local HTTP server that serves the contents of `./public` — use this after `make build` when you need to verify SDK reference pages or anything else served out of `static-prebuilt/`
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial
