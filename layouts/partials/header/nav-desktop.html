@@ -13,7 +13,7 @@
             aria-controls="nav-desktop-popup"
             class="btn btn-ghost group/trigger inline-flex items-center justify-center px-4">
             {{ $item.label }}
-            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px ml-1 size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
+            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
           </button>
           {{ $dropdownIdx = add $dropdownIdx 1 }}
         {{ else }}
