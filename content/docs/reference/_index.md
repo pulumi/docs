@@ -75,6 +75,24 @@ sections:
     link: /docs/reference/pkg/python/pulumi_policy/
 
 - type: button-cards
+  heading: ESC SDKs
+  cards:
+  - image: /logos/tech/typescript.svg
+    heading: TypeScript ESC SDK ↗
+    description: API reference for automating Pulumi ESC from Node.js with TypeScript or JavaScript.
+    link: /docs/reference/pkg/nodejs/pulumi/esc-sdk/
+
+  - image: /logos/tech/python.svg
+    heading: Python ESC SDK ↗
+    description: API reference for automating Pulumi ESC from Python.
+    link: /docs/reference/pkg/python/pulumi_esc_sdk/
+
+  - image: /logos/tech/go.svg
+    heading: Go ESC SDK ↗
+    description: API reference for automating Pulumi ESC from Go.
+    link: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk
+
+- type: button-cards
   heading: APIs & Configuration
   cards:
   - icon: plug
