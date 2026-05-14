@@ -9,7 +9,7 @@ authors:
     - pablo-seibelt
 tags:
     - snowflake
-    - data-platform
+    - data
     - esc
 social:
     twitter: |
@@ -34,7 +34,7 @@ When data teams manage Snowflake through the web UI or ad hoc SQL scripts, they 
 
 Operational risk and audit pressure increase as data platforms become central to business operations. Waiting to automate Snowflake governance leads to technical debt that is difficult to unwind once object sprawl takes hold. Platform teams need a way to enforce consistency and security from the first warehouse onward.
 
-By the end of this post, you will build a complete Snowflake environment using Pulumi. This includes provisioning virtual warehouses with auto-suspend policies, creating databases, and establishing a secure, hierarchical RBAC model. You will also learn how to inject the necessary credentials using [Pulumi ESC](/docs/esc/) to eliminate static secrets.
+By the end of this post, you will build a Snowflake environment using Pulumi. This includes provisioning virtual warehouses with auto-suspend policies, creating databases and schemas, and establishing a secure, hierarchical RBAC model. You will also learn how to inject the necessary credentials using [Pulumi ESC](/docs/esc/) to eliminate static secrets.
 
 <!--more-->
 
@@ -57,9 +57,10 @@ Let's look at how to define a standard Snowflake environment using the Pulumi Sn
 
 ### 1. Define compute and storage
 
-First, we'll create a virtual warehouse and a database.
+First, we'll create a virtual warehouse, database, and schema.
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
 import * as snowflake from "@pulumi/snowflake";
 
 const warehouse = new snowflake.Warehouse("my-warehouse", {
@@ -71,6 +72,11 @@ const warehouse = new snowflake.Warehouse("my-warehouse", {
 
 const database = new snowflake.Database("my-database", {
     name: "MY_DATABASE",
+});
+
+const schema = new snowflake.Schema("analytics-schema", {
+    database: database.name,
+    name: "ANALYTICS",
 });
 ```
 
@@ -95,7 +101,7 @@ const roleGrants = new snowflake.GrantAccountRole("role-grants", {
 
 ### 3. Grant privileges
 
-Finally, we grant specific privileges to these roles.
+Finally, we grant the reader enough access to query tables in the analytics schema and let the writer role inherit those privileges. The writer role also gets table and schema privileges needed for write workflows.
 
 ```typescript
 const readerDbGrant = new snowflake.GrantPrivilegesToAccountRole("reader-db-grant", {
@@ -107,12 +113,72 @@ const readerDbGrant = new snowflake.GrantPrivilegesToAccountRole("reader-db-gran
     },
 });
 
-const writerWhGrant = new snowflake.GrantPrivilegesToAccountRole("writer-wh-grant", {
+const readerSchemaGrant = new snowflake.GrantPrivilegesToAccountRole("reader-schema-grant", {
     privileges: ["USAGE"],
-    accountRoleName: writerRole.name,
+    accountRoleName: readerRole.name,
+    onSchema: {
+        schemaName: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+    },
+});
+
+const readerWhGrant = new snowflake.GrantPrivilegesToAccountRole("reader-wh-grant", {
+    privileges: ["USAGE"],
+    accountRoleName: readerRole.name,
     onAccountObject: {
         objectType: "WAREHOUSE",
         objectName: warehouse.name,
+    },
+});
+
+const readerExistingTableGrant = new snowflake.GrantPrivilegesToAccountRole("reader-existing-table-grant", {
+    privileges: ["SELECT"],
+    accountRoleName: readerRole.name,
+    onSchemaObject: {
+        all: {
+            objectTypePlural: "TABLES",
+            inSchema: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+        },
+    },
+});
+
+const readerFutureTableGrant = new snowflake.GrantPrivilegesToAccountRole("reader-future-table-grant", {
+    privileges: ["SELECT"],
+    accountRoleName: readerRole.name,
+    onSchemaObject: {
+        future: {
+            objectTypePlural: "TABLES",
+            inSchema: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+        },
+    },
+});
+
+const writerSchemaGrant = new snowflake.GrantPrivilegesToAccountRole("writer-schema-grant", {
+    privileges: ["CREATE TABLE"],
+    accountRoleName: writerRole.name,
+    onSchema: {
+        schemaName: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+    },
+});
+
+const writerExistingTableGrant = new snowflake.GrantPrivilegesToAccountRole("writer-existing-table-grant", {
+    privileges: ["INSERT", "UPDATE", "DELETE", "TRUNCATE"],
+    accountRoleName: writerRole.name,
+    onSchemaObject: {
+        all: {
+            objectTypePlural: "TABLES",
+            inSchema: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+        },
+    },
+});
+
+const writerFutureTableGrant = new snowflake.GrantPrivilegesToAccountRole("writer-future-table-grant", {
+    privileges: ["INSERT", "UPDATE", "DELETE", "TRUNCATE"],
+    accountRoleName: writerRole.name,
+    onSchemaObject: {
+        future: {
+            objectTypePlural: "TABLES",
+            inSchema: pulumi.interpolate`"${database.name}"."${schema.name}"`,
+        },
     },
 });
 ```
@@ -131,17 +197,17 @@ values:
         oidc:
           account: my-org-account
           user: PULUMI_ESC_USER
-          role: ACCOUNTADMIN
+          role: PULUMI_DEPLOYER
 ```
 
-This configuration allows Pulumi to authenticate to Snowflake using a short-lived OIDC token, meaning no static secrets are ever stored in your environment.
+This configuration allows Pulumi to authenticate to Snowflake using a short-lived OIDC token, meaning no static secrets are ever stored in your environment. Use a dedicated deployment role such as `PULUMI_DEPLOYER` with only the grants needed to manage the Snowflake objects in your Pulumi program. Before opening the environment, configure a Snowflake `EXTERNAL_OAUTH` security integration that trusts Pulumi ESC, create the service user, and grant that user the deployer role.
 
-For large organizations, Pulumi Insights allows you to query your entire infrastructure using [Resource Search](/docs/insights/discovery/search/) syntax or natural language. You can easily find "ungoverned" warehouses that don't follow naming conventions:
+For large organizations, Pulumi Insights allows you to query your entire infrastructure using [Resource Search](/docs/insights/discovery/search/) syntax or natural language. You can find Snowflake warehouses whose Pulumi logical names do not include your production naming convention:
 
 ```text
-type:snowflake:index/warehouse:Warehouse -name:PROD_
+type:snowflake:index/warehouse:Warehouse -name:prod
 ```
 
 ## Conclusion
 
-By combining Pulumi's infrastructure as code with Pulumi ESC's secret management, you can build a secure, scalable, and governed Snowflake environment. Whether you're managing one warehouse or many environments, the patterns remain the same: define, version, and secure.
+By combining Pulumi's infrastructure as code with Pulumi ESC's secret management, you can build a secure, scalable, and governed Snowflake environment. Whether you're managing one warehouse or many environments, the patterns remain the same: define, version, grant least privilege, and secure.
