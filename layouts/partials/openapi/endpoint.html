@@ -52,37 +52,41 @@
                             {{ $schemaDetails = index $.openapi.components.schemas $schemaName }}
                         {{ end }}
                         {{ if $schemaDetails }}
-                            <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
-                            {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $.openapi) }}
-                            {{ if $resolved.properties }}
+                            <div class="api-request-body">
+                                <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
+                                {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $.openapi) }}
+                                {{ if $resolved.properties }}
+                                    <ul class="api-params">
+                                        {{ partial "openapi/property-rows.html" (dict
+                                            "properties" $resolved.properties
+                                            "required" $resolved.required
+                                            "openapi" $.openapi
+                                            "depth" 0
+                                            "maxDepth" 1
+                                        ) }}
+                                    </ul>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    {{ else }}
+                        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                        {{ if $resolved.properties }}
+                            <div class="api-request-body">
                                 <ul class="api-params">
                                     {{ partial "openapi/property-rows.html" (dict
                                         "properties" $resolved.properties
-                                        "required" $resolved.required
+                                        "required" ($resolved.required | default slice)
                                         "openapi" $.openapi
                                         "depth" 0
                                         "maxDepth" 1
                                     ) }}
                                 </ul>
-                            {{ end }}
+                            </div>
                         {{ end }}
-                    {{ else }}
-                        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
-                        {{ if $resolved.properties }}
-                        <ul class="api-params">
-                            {{ partial "openapi/property-rows.html" (dict
-                                "properties" $resolved.properties
-                                "required" ($resolved.required | default slice)
-                                "openapi" $.openapi
-                                "depth" 0
-                                "maxDepth" 1
-                            ) }}
-                        </ul>
                     {{ end }}
                 {{ end }}
             {{ end }}
         {{ end }}
-    {{ end }}
 
         {{/* Request/response examples hidden for now — revisit once example
              quality is validated across the full public spec. */}}

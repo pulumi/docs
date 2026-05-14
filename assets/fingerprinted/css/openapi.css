@@ -337,6 +337,36 @@
     font-size: 0.9rem;
 }
 
+/* Request body block: bordered card so the body's fields are visually nested
+   under the Request Body heading instead of sitting flush with the section's
+   top-level Request Parameters list. */
+
+.api-request-body {
+    margin: 1rem 0 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.api-request-body .api-params {
+    margin-top: 0.5rem;
+    border-top: none;
+}
+
+.api-request-body .api-param:first-child {
+    padding-top: 0;
+}
+
+.api-request-body .api-param:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.api-request-body .api-schema-label {
+    margin-top: 0;
+}
+
 /* Response blocks: one per inline-rendered status (2xx, or 4xx/5xx with a
    schema). Stock errors collapse into .api-response-errors below. */
 
