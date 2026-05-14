@@ -25,13 +25,13 @@ social:
         ESC can compose AWS Secrets Manager, Vault, and 1Password into one resolved config view.
 ---
 
-Modern infrastructure often relies on multiple secret stores. You might use AWS Secrets Manager for cloud-native services, HashiCorp Vault for enterprise-wide secrets, and 1Password for team-shared credentials. Pulumi ESC gives teams one resolved view without forcing a migration away from the systems they already trust.
+Modern infrastructure often relies on multiple secret stores. You might use [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/) for cloud-native services, [HashiCorp Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/) for enterprise-wide secrets, and [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/) for team-shared credentials. Pulumi ESC gives teams one resolved view without forcing a migration away from the systems they already trust.
 
 This post focuses on composing and orchestrating secrets across heterogeneous providers, including how to connect to Vault, handle naming conflicts, and define clear consumer interfaces.
 
 ## Why it matters now
 
-Operational complexity and the risk of fragmented security policies increase as organizations adopt best-of-breed secret stores. Without a central orchestration layer, it is impossible to get a unified view of who has access to what across the entire platform. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
+Operational complexity and the risk of fragmented security policies increase as organizations adopt specialized secret stores. Without a central orchestration layer, it is impossible to get a unified view of who has access to what across the entire platform. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
 
 ## Reader outcome
 
@@ -41,7 +41,7 @@ By the end of this post, you will compose a single [Pulumi ESC](/docs/esc/) envi
 
 ## The challenge of secret sprawl
 
-As organizations grow, secrets naturally scatter across different platforms. This sprawl leads to several issues:
+As organizations grow, secrets spread across different platforms. This sprawl leads to several issues:
 
 1. Developers must learn multiple APIs and CLI tools.
 2. Auditing access becomes difficult across fragmented systems.
@@ -84,7 +84,7 @@ values:
         login: ${vault.login}
         read:
           stripe-key:
-            path: secret/data/stripe
+            path: secret/stripe
 
   # 1Password for shared team credentials
   onepassword:
@@ -104,7 +104,7 @@ values:
     GITHUB_TOKEN: ${onepassword.secrets.github-token}
 ```
 
-The Vault connection happens in two steps. `fn::open::vault-login` authenticates ESC to Vault using the JWT/OIDC role configured in Vault, and `fn::open::vault-secrets` uses that login session to read a specific secret path. In the unified view, `${vault.secrets.stripe-key.data.key}` refers to the `key` field stored at `secret/data/stripe`.
+The Vault connection happens in two steps. `fn::open::vault-login` authenticates ESC to Vault using the JWT/OIDC role configured in Vault, and `fn::open::vault-secrets` uses that login session to read a specific secret path. In the unified view, `${vault.secrets.stripe-key.data.key}` refers to the `key` field in the KV v2 response wrapper for `secret/stripe`.
 
 ## Namespacing and precedence
 
@@ -116,7 +116,7 @@ If you need to override a secret for a specific environment, you can use ESC's i
 
 Once your environment is defined, consumers don't need to know where the secrets originated. They only need to interact with the Pulumi ESC environment.
 
-You can view the resolved secrets using the Pulumi CLI:
+You can view the resolved secrets using the [Pulumi CLI](/docs/install/):
 
 ```bash
 pulumi env open <org>/<project>/multi-source-env
@@ -124,4 +124,6 @@ pulumi env open <org>/<project>/multi-source-env
 
 This command returns a single JSON object containing all the resolved values. Your applications can also consume these secrets as environment variables or through the Pulumi SDKs, ensuring a secure and consistent workflow.
 
-By centralizing your secrets management with Pulumi ESC, you reduce complexity and improve your security posture without having to migrate your existing secret stores.
+By centralizing your secrets management with Pulumi ESC, you reduce complexity and strengthen your secrets management model without having to migrate your existing secret stores.
+
+{{< blog/cta-button "Explore ESC dynamic secrets" "/docs/esc/integrations/dynamic-secrets/" >}}
