@@ -23,7 +23,7 @@ social:
     bluesky: |
         Snowflake IaC needs warehouses, roles, grants, databases, and better credential handling.
 
-        Use Pulumi plus ESC.
+        Use Pulumi and ESC to manage Snowflake access without long-lived secrets.
 ---
 
 Managing a modern data platform requires more than just creating a few tables. As data teams scale, the complexity of managing compute resources, access controls, and secure credentials grows quickly. Manual governance becomes impractical once warehouses, roles, and grants span multiple environments.
@@ -136,7 +136,7 @@ values:
 
 This configuration allows Pulumi to authenticate to Snowflake using a short-lived OIDC token, meaning no static secrets are ever stored in your environment.
 
-For large organizations, Pulumi Insights allows you to query your entire infrastructure using Resource Search syntax or natural language. You can easily find "ungoverned" warehouses that don't follow naming conventions:
+For large organizations, Pulumi Insights allows you to query your entire infrastructure using [Resource Search](/docs/insights/discovery/search/) syntax or natural language. You can easily find "ungoverned" warehouses that don't follow naming conventions:
 
 ```text
 type:snowflake:index/warehouse:Warehouse -name:PROD_
