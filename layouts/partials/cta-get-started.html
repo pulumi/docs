@@ -9,14 +9,14 @@
           href: "https://app.pulumi.com/signup"
 
   Usage:
-    {{ partial "cta-get-started" (dict "class" "btn-primary" "style" "width:fit-content") }}
+    {{ partial "cta-get-started" (dict "style" "width:fit-content") }}
 
   Parameters:
-    - class: CSS class for the button (default: "btn-primary")
+    - class: CSS class for the button (default: "btn btn-primary btn-xl")
     - style: Optional inline style
 */}}
 
-{{ $class := .class | default "btn-primary" }}
+{{ $class := .class | default "btn btn-primary btn-xl" }}
 {{ $style := .style | default "" }}
 {{ $label := site.Params.cta.primary.label | default "Get Started" }}
 {{ $href := site.Params.cta.primary.href | default "/docs/get-started/" }}

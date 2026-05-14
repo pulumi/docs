@@ -27,7 +27,7 @@
                             <h5>{{ $item.heading }}</h5>
                             <p>{{ $item.description | markdownify }}</p>
                             <div class="mt-8">
-                                <a href="{{ $item.link }}" target="_blank" class="btn-secondary btn-disabled">{{ $item.action }}</a>
+                                <a href="{{ $item.link }}" target="_blank" class="btn btn-outline btn-xl" aria-disabled="true">{{ $item.action }}</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                             </span>
                             <p>{{ .description }}</p>
                             <div class="my-8">
-                                <a href="{{ .link }}" class="btn-secondary">
+                                <a href="{{ .link }}" class="btn btn-outline btn-xl">
                                     <span class="text-violet-600">{{ .action }} &#8594;</span>
                                 </a>
                             </div>
@@ -76,7 +76,7 @@
                     demos, and panel sessions.
                 </p>
             </div>
-            <a href="/pulumi-up" target="_blank" style="z-index: 1" class="btn-primary">Register for PulumiUP</a>
+            <a href="/pulumi-up" target="_blank" style="z-index: 1" class="btn btn-primary btn-xl">Register for PulumiUP</a>
         </div>
     </section>
 
@@ -98,7 +98,7 @@
                                 <h5 class="mt-4">{{ $item.heading }}</h5>
                                 <p>{{ $item.description }}</p>
                                 <div class="mt-8">
-                                    <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn-secondary">{{ $item.action }}</a>
+                                    <a href="{{ $item.link }}" target="_blank" style="font-size: 0.9rem" class="btn btn-outline btn-xl">{{ $item.action }}</a>
                                 </div>
                             </div>
                         </div>

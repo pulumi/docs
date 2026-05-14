@@ -1,3 +1,8 @@
 .card {
-    @apply rounded-xl border border-gray-200 bg-white relative;
+    @apply rounded-lg border border-gray-200;
+}
+
+.card-hover {
+    @include transition;
+    @apply cursor-pointer hover:border-gray-300;
 }

@@ -51,13 +51,6 @@ generate-related-tags:
 	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
 	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
 
-.PHONY: generate
-generate:
-	@echo -e "\033[0;32mGENERATE:\033[0m"
-	NOBUILD=true ./scripts/run_typedoc.sh
-	./scripts/generate_python_docs.sh
-	PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/cli/commands
-
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
