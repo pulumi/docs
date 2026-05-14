@@ -90,7 +90,7 @@ sections:
   - image: /logos/tech/go.svg
     heading: Go ESC SDK ↗
     description: API reference for automating Pulumi ESC from Go.
-    link: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk
+    link: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
 
 - type: button-cards
   heading: APIs & Configuration
