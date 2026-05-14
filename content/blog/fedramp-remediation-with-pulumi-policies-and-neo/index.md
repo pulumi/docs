@@ -6,8 +6,6 @@ authors:
 meta_desc: "Use Pulumi Policies and Neo-assisted remediation to triage FedRAMP findings, review previews, and capture evidence without claiming certification."
 meta_image: meta.png
 feature_image: feature.png
-aliases:
-    - /blog/fedramp-remediation-with-crossguard-and-neo/
 tags:
     - compliance
     - fedramp
@@ -27,11 +25,11 @@ social:
         Pulumi Policies plus Neo-assisted changes can help triage, preview, review, and capture evidence.
 ---
 
-Achieving [FedRAMP](https://www.fedramp.gov/program-basics/) readiness is a significant milestone for organizations that need to meet FedRAMP authorization requirements. Compliance work needs to live in the same workflow as infrastructure changes, but the path to FedRAMP readiness is often paved with complex controls, rigorous documentation requirements, and the constant challenge of maintaining a compliant state. Traditional compliance workflows are often reactive, relying on manual audits and late-stage security scans that slow down development cycles.
+Achieving [FedRAMP](https://www.fedramp.gov/) readiness is a significant milestone for organizations that need to meet FedRAMP authorization requirements. Compliance work needs to live in the same workflow as infrastructure changes, but the path to FedRAMP readiness is often paved with complex controls, rigorous documentation requirements, and the constant challenge of maintaining a compliant state. Traditional compliance workflows are often reactive, relying on manual audits and late-stage security scans that slow down development cycles.
 
-Pulumi is transforming this process by bringing compliance into the infrastructure as code (IaC) lifecycle. By combining **[Pulumi Policies](/docs/insights/policy/)** for preventative policy enforcement and **[Pulumi Neo](/product/neo/)** for AI-assisted remediation, teams can automate FedRAMP controls, triage findings efficiently, and maintain continuous compliance.
+Pulumi is transforming this process by bringing compliance into the infrastructure as code (IaC) lifecycle. By combining **[Pulumi Policies](/docs/insights/policy/)** for preventative policy enforcement and **[Pulumi Neo](/product/neo/)** for AI-assisted remediation, teams can automate policy checks, triage findings efficiently, and support continuous compliance workflows.
 
-This post outlines a documentation and remediation workflow that assists teams in meeting FedRAMP requirements. Note that while Pulumi tools support compliance efforts, they do not guarantee authorization or provide automated certification. In this post, you will build a FedRAMP remediation workflow using Pulumi Policies and Neo.
+This post outlines a documentation and remediation workflow that assists teams in meeting FedRAMP requirements. Note that while Pulumi tools support compliance efforts, they do not guarantee authorization or provide automated certification.
 
 <!--more-->
 
@@ -78,9 +76,9 @@ For broad framework coverage, start with Pulumi's [pre-built compliance policy p
 
 ## Neo-assisted remediation workflow
 
-Even with preventative guardrails, existing infrastructure may have compliance gaps, or new policy requirements may be introduced. This is where the **Policy Findings** hub and **Pulumi Neo** come into play.
+Even with preventative guardrails, existing infrastructure may have compliance gaps, or new policy requirements may be introduced. This is where **[Policy Findings](/docs/insights/policy/policy-findings/)** and **Pulumi Neo** come into play.
 
-When a Pulumi policy identifies a violation in an existing stack, it appears in the Policy Findings hub. This centralized view allows security and platform teams to triage issues, assess risk, and assign remediation tasks.
+When a Pulumi policy identifies a violation in an existing stack, it appears in Policy Findings. This centralized view allows security and platform teams to triage issues, assess risk, and assign remediation tasks.
 
 Instead of manually researching the fix and updating the code, you can use Pulumi Neo to assist with remediation. By providing Neo with the context of the violation, it can suggest the necessary code changes to bring the resource into compliance.
 
@@ -97,8 +95,8 @@ Neo can help analyze your existing program and propose a draft change set. You c
 Compliance is not a one-time event; it's a continuous process. Pulumi provides the tools to maintain and prove compliance over time:
 
 1. **Policy Findings triage:** Track the lifecycle of every compliance issue from discovery to resolution.
-1. **Audit mode:** Run compliance packs in audit mode to scan your entire environment without blocking deployments, providing a comprehensive view of your posture.
-1. **Evidence generation:** Use the history of policy checks and remediation actions as evidence for auditors, demonstrating that controls are actively enforced and monitored.
+1. **Advisory enforcement:** Use advisory enforcement, or assign packs to an audit-mode policy group, so violations surface in Policy Findings without blocking deployments.
+1. **Evidence generation:** Use the history of policy checks and remediation actions as evidence for auditors, demonstrating that controls are actively enforced or monitored.
 
 ## Compliance disclaimer
 
@@ -106,4 +104,4 @@ While Pulumi helps produce evidence and provides powerful guardrails to support 
 
 ## Conclusion
 
-FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate security controls, accelerate remediation, and build a culture of continuous compliance. Whether you are just starting your FedRAMP journey or looking to optimize your existing processes, start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
+FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate policy checks, accelerate remediation, and build a culture of continuous compliance review. Whether you are just starting your FedRAMP journey or looking to optimize your existing processes, start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
