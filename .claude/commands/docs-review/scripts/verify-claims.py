@@ -230,10 +230,11 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 Cheapest first. Stop as soon as a source closes the claim.
 
 1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first.
-2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` ships:
-   - `gh search code --owner pulumi "<term>"` — find a feature/flag/method across all Pulumi repos at once
-   - `gh api repos/pulumi/<repo>/contents/<path>` — read source to verify API surface (resource properties, CLI flags)
-   - `gh release list -R pulumi/pulumi --limit 20` / `gh release view <tag> -R pulumi/pulumi` — version-availability claims
+2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL specifically lives under `pulumi-labs/pulumi-hcl`, and other in-progress providers / SDK experiments ship under `pulumi-labs/*` too; when a claim mentions Pulumi HCL by name (or references a `pulumi-labs/<repo>` package), query BOTH owners before considering escalation:
+   - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
+   - `gh search code --owner pulumi-labs "<term>"` — Pulumi HCL, in-progress providers, SDK experiments
+   - `gh api repos/pulumi/<repo>/contents/<path>` / `gh api repos/pulumi-labs/<repo>/contents/<path>` — read source to verify API surface (resource properties, CLI flags)
+   - `gh release list -R pulumi/pulumi --limit 20` / `gh release view <tag> -R pulumi/pulumi` / `gh release list -R pulumi-labs/<repo>` — version-availability claims
    - `gh issue list -R pulumi/<repo> --search "<term>"` / `gh pr list -R pulumi/<repo> --search "<term>"` — prior decisions ("we decided not to ship this", "this was renamed")
    `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for context discovery; read the actual code path. Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
 3. **Pre-fetched URL** (pass2 lane) — the cited URL's content (HTTP status + body) is in the user message. Do NOT try to fetch it again. Read the body, find the supporting passage, run the framing check. If the status is not 2xx (dead link / soft-404) → `contradicted` with `evidence: "cited URL returns HTTP <status>"` and `source: "<url>"`; do NOT return `unverifiable` for a dead Pass-2 URL — a broken citation is a contradiction the author must fix. If the body is 2xx but doesn't contain the supporting passage → `unverifiable` (note the page was fetched but didn't address the claim).
