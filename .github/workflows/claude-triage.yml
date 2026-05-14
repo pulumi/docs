@@ -5,7 +5,9 @@ name: Claude Triage
 # ask for feedback. `ready_for_review` only fires on draft → ready, so
 # `opened` is still needed for PRs that skip the draft phase.
 # It does NOT run on every push (synchronize) — that fires the
-# `review:claude-stale` label step in claude-code-review.yml instead.
+# review-state mark-stale step in claude-code-review.yml instead, which
+# transitions terminal review-state labels (outstanding-issues / no-blockers)
+# to review:stale.
 on:
   pull_request:
     types: [opened, ready_for_review]
@@ -209,7 +211,7 @@ jobs:
           declare -A EXISTING
           while IFS= read -r lbl; do
             case "$lbl" in
-              review:claude-ran|review:claude-stale|needs-author-response)
+              review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
                 continue ;;
               domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;

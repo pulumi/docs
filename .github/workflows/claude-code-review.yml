@@ -67,14 +67,21 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
         run: |
-          # Only mark stale if a prior review actually ran. The two labels
-          # are mutually exclusive — claude-stale means "current review is
-          # out of date" and claude-ran means "current review is fresh," so
-          # adding stale always also removes ran. The post-run label step
-          # below maintains the inverse.
+          # Only mark stale if a prior review actually completed — i.e. the
+          # PR carries one of the two terminal-success state labels. The
+          # transition is an inline gh pr edit (this job has no checkout,
+          # so we can't shell out to set-review-label.sh); the labels are
+          # mutually exclusive by convention. in-progress / error / stale
+          # are not transitioned: in-progress means a run is mid-flight,
+          # error is a workflow failure (separate triage), and stale is
+          # already terminal.
           LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
-          if [[ ",$LABELS," == *",review:claude-ran,"* ]]; then
-            gh pr edit "$PR" --repo "${{ github.repository }}" --add-label "review:claude-stale" --remove-label "review:claude-ran"
+          if [[ ",$LABELS," == *",review:outstanding-issues,"* ]]; then
+            gh pr edit "$PR" --repo "${{ github.repository }}" \
+              --add-label "review:stale" --remove-label "review:outstanding-issues"
+          elif [[ ",$LABELS," == *",review:no-blockers,"* ]]; then
+            gh pr edit "$PR" --repo "${{ github.repository }}" \
+              --add-label "review:stale" --remove-label "review:no-blockers"
           fi
 
   claude-review:
@@ -328,6 +335,22 @@ jobs:
           COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
             -f body="$BODY" --jq '.id' || echo "")
           echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
+
+      # Set the in-progress state label right after the progress signal so
+      # the PR's labels reflect "Claude is reviewing right now." The
+      # finalization step at job end transitions this to outstanding-issues
+      # / no-blockers (on success) or error (on failure). The mark-stale
+      # step on a later synchronize event moves it again to review:stale.
+      - name: Set review:in-progress label
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
 
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
       # are filtered to PR-introduced lines only, capped (10/file, 50 total),
@@ -768,7 +791,7 @@ jobs:
 
             When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
 
-            Post-run labels (`review:claude-ran` add, `review:claude-stale` remove) are applied by a separate workflow step. Do not apply them yourself.
+            Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
@@ -993,22 +1016,68 @@ jobs:
               -f body="$BODY" >/dev/null || true
           fi
 
-      # Apply the review:claude-ran label and clear review:claude-stale on
-      # successful completion. Gated on claude-review.outcome == 'success' so
-      # skipped (trivial / draft / bot) and failed runs do NOT mark the PR as
-      # reviewed. The empty-diff short-circuit inside ci.md still exits cleanly
-      # (success), which is the intended path — stale-marking on subsequent
-      # pushes depends on review:claude-ran being applied.
-      - name: Apply post-run review labels
-        if: steps.claude-review.outcome == 'success'
+      # Finalize the review-state label based on the published body. Counts
+      # bullets in 🚨 Outstanding from the actual pinned comment (post-upsert);
+      # ≥1 outstanding → review:outstanding-issues, else → review:no-blockers.
+      # Skipped runs (trivial / draft / bot / empty-diff) deliberately leave
+      # the label untouched: in-progress was never set for them.
+      - name: Finalize review-state label (success path)
+        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set +e
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
-          gh pr edit "$PR" --repo "$REPO" \
-            --add-label review:claude-ran \
-            --remove-label review:claude-stale || true
+          # Pull the published <!-- CLAUDE_REVIEW --> body via --paginate so
+          # PRs with many comments don't lose the pinned content past page 1.
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py \
+            count-buckets --pr "$PR" --repo "$REPO" > /tmp/bucket-counts.txt
+          rc=$?
+          if [ $rc -ne 0 ]; then
+            echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
+            exit 0
+          fi
+          OUTSTANDING=$(grep '^outstanding=' /tmp/bucket-counts.txt | cut -d= -f2)
+          if [ -z "$OUTSTANDING" ]; then
+            echo "::warning::count-buckets returned no outstanding count; leaving label untouched"
+            exit 0
+          fi
+          if [ "$OUTSTANDING" -gt 0 ]; then
+            LABEL="review:outstanding-issues"
+          else
+            LABEL="review:no-blockers"
+          fi
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label "$LABEL"
+
+      # Failure trap: if the workflow didn't succeed AND no pinned review
+      # was published (no <!-- CLAUDE_REVIEW comment on the PR yet), set
+      # review:error so the failure is visible at-a-glance on the PR's
+      # labels. If a publish DID happen but a later step failed, the
+      # success-path step above already set outstanding-issues / no-blockers
+      # and this step short-circuits.
+      - name: Finalize review-state label (error trap)
+        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome != 'success' && steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          # Check whether a pinned <!-- CLAUDE_REVIEW --> comment exists.
+          # If it does, the success-path step above already set the label;
+          # don't overwrite to error.
+          PUBLISHED=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+            --jq '[.[] | select(.body | test("<!-- CLAUDE_REVIEW"))] | length' 2>/dev/null || echo "0")
+          if [ "${PUBLISHED:-0}" -gt 0 ]; then
+            echo "review-state error trap: pinned review present; success-path already labeled"
+            exit 0
+          fi
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label review:error
 
       # Finalize the check-run created at job start. Runs on success or
       # failure so contributors always see a terminal state in the PR's

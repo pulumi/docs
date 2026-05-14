@@ -95,6 +95,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import statistics
 import subprocess
@@ -2604,6 +2605,53 @@ def cmd_schema_version(_: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_count_buckets(args: argparse.Namespace) -> int:
+    """Emit per-bucket bullet counts in `key=value` form for `>> $GITHUB_OUTPUT`.
+
+    The review-state label refactor reads `outstanding` to decide between
+    `review:outstanding-issues` (N>0) and `review:no-blockers` (N==0). The
+    other counts are emitted for symmetry / future use. Body input is either
+    a local file (`--body-file`) or the published pinned comment for a PR
+    (`--pr`); the latter pulls the body via `gh api … --paginate` so PRs
+    with many comments don't false-negative on pagination.
+    """
+    if args.body_file:
+        try:
+            body = Path(args.body_file).read_text(encoding="utf-8")
+        except FileNotFoundError:
+            print(f"::error::count-buckets: body file not found: {args.body_file}", file=sys.stderr)
+            return 1
+    elif args.pr:
+        repo = args.repo or os.environ.get("GITHUB_REPOSITORY", "")
+        if not repo:
+            print("::error::count-buckets: --repo or $GITHUB_REPOSITORY required when --pr is set", file=sys.stderr)
+            return 1
+        cmd = [
+            "gh", "api", "--paginate",
+            f"repos/{repo}/issues/{args.pr}/comments",
+            "--jq", '[.[] | select(.body | test("<!-- CLAUDE_REVIEW")) | .body] | join("\n\n")',
+        ]
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, check=False)
+        except FileNotFoundError:
+            print("::error::count-buckets: gh CLI not on PATH", file=sys.stderr)
+            return 1
+        if r.returncode != 0:
+            print(f"::error::count-buckets: gh failed (rc={r.returncode}): {r.stderr.strip()}", file=sys.stderr)
+            return 1
+        body = r.stdout
+    else:
+        print("::error::count-buckets: one of --body-file or --pr is required", file=sys.stderr)
+        return 1
+
+    print(f"outstanding={len(extract_bucket_bullets(body, '🚨 Outstanding'))}")
+    print(f"low_confidence={len(extract_bucket_bullets(body, '⚠️ Low-confidence'))}")
+    print(f"triaged={len(extract_bucket_bullets(body, '📋 Triaged'))}")
+    print(f"pre_existing={len(extract_bucket_bullets(body, '💡 Pre-existing'))}")
+    print(f"resolved={len(extract_bucket_bullets(body, '✅ Resolved'))}")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Validate a rendered pinned-review body against the deterministic invariants in the RULES registry (run `show-rules`)."
@@ -2648,6 +2696,13 @@ def main() -> int:
 
     p_ver = sub.add_parser("schema-version", help="Print the validator schema version.")
     p_ver.set_defaults(func=cmd_schema_version)
+
+    p_cb = sub.add_parser("count-buckets",
+                          help="Emit per-bucket bullet counts (key=value) for $GITHUB_OUTPUT.")
+    p_cb.add_argument("--body-file", help="Path to a local review body to count.")
+    p_cb.add_argument("--pr", help="PR number; fetch the published <!-- CLAUDE_REVIEW --> comment(s).")
+    p_cb.add_argument("--repo", help="owner/repo for --pr (defaults to $GITHUB_REPOSITORY).")
+    p_cb.set_defaults(func=cmd_count_buckets)
 
     args = parser.parse_args()
     return args.func(args)

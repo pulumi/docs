@@ -74,8 +74,10 @@ Determine the pinned-review state from labels and fetch output:
 
 | State | Detection | What Step 3 does |
 |---|---|---|
-| `CURRENT` | `review:claude-ran` set, `review:claude-stale` absent, fetch returns body | Nothing — proceed to Step 4 |
-| `STALE` | `review:claude-stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
+| `CURRENT` | `review:outstanding-issues` or `review:no-blockers` set; `review:stale` / `review:in-progress` / `review:error` absent; fetch returns body | Nothing — proceed to Step 4 |
+| `STALE` | `review:stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
+| `IN_PROGRESS` | `review:in-progress` set | Wait briefly for the workflow to finish; re-check labels. If it stays >15 min, treat as `ERROR`. |
+| `ERROR` | `review:error` set (or `review:in-progress` stuck) | Investigate the Actions logs before proceeding |
 | `ABSENT` | Fetch returns no `<!-- CLAUDE_REVIEW -->` markers | Fall back: run a local review (see Step 3 §Absent path) |
 
 Store the parsed pinned-comment findings (🚨 Outstanding, ⚠️ Low-confidence, 💡 Pre-existing, ✅ Resolved, 📜 Review history) for Step 6.

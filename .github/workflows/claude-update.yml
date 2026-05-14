@@ -322,10 +322,10 @@ jobs:
       # - cancelled / skipped: delete the orphan comment (newer run owns
       #   the surface). No replacement.
       #
-      # On success the post-run label dance restores review:claude-ran
-      # and clears review:claude-stale — mark-stale removed claude-ran
-      # when the new commit landed, so without re-adding here the PR
-      # would carry neither label.
+      # On success the review-state label transitions based on the
+      # refreshed body's 🚨 Outstanding count: ≥1 → review:outstanding-issues,
+      # else → review:no-blockers. On failure, set review:error if no review
+      # was published; otherwise the existing terminal label is preserved.
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -348,12 +348,33 @@ jobs:
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
           if [ "$OUTCOME" = "success" ]; then
-            gh pr edit "$PR" --repo "$REPO" \
-              --add-label review:claude-ran \
-              --remove-label review:claude-stale || true
-          else
-            gh pr edit "$PR" --repo "$REPO" \
-              --remove-label review:claude-stale || true
+            set +e
+            python3 .claude/commands/docs-review/scripts/validate-pinned.py \
+              count-buckets --pr "$PR" --repo "$REPO" > /tmp/bucket-counts.txt
+            rc=$?
+            if [ $rc -eq 0 ]; then
+              OUTSTANDING=$(grep '^outstanding=' /tmp/bucket-counts.txt | cut -d= -f2)
+              if [ -n "$OUTSTANDING" ] && [ "$OUTSTANDING" -gt 0 ]; then
+                LABEL="review:outstanding-issues"
+              else
+                LABEL="review:no-blockers"
+              fi
+              .claude/commands/docs-review/scripts/set-review-label.sh \
+                --pr "$PR" --repo "$REPO" --label "$LABEL" || \
+                echo "::warning::set-review-label failed (label=$LABEL); leaving labels untouched"
+            else
+              echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
+            fi
+          elif [ "$OUTCOME" != "cancelled" ] && [ "$OUTCOME" != "skipped" ]; then
+            # Workflow errored. Only set review:error if no pinned review
+            # exists yet — otherwise the previous run's terminal label is
+            # still meaningful and shouldn't be overwritten by this failure.
+            PUBLISHED=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+              --jq '[.[] | select(.body | test("<!-- CLAUDE_REVIEW"))] | length' 2>/dev/null || echo "0")
+            if [ "${PUBLISHED:-0}" -eq 0 ]; then
+              .claude/commands/docs-review/scripts/set-review-label.sh \
+                --pr "$PR" --repo "$REPO" --label review:error || true
+            fi
           fi
 
 env:
