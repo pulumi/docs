@@ -60,7 +60,7 @@ const kvv2 = new vault.Mount("kvv2", {
 });
 ```
 
-Using `vault.Mount` allows you to define the path, type, and version of your secrets engine. This is particularly useful for KV (Key-Value) stores where you might want to enforce version 2 for features like secret versioning and soft deletes.
+Using `vault.Mount` allows you to define the path, type, and version of your secrets engine. This is particularly useful for KV (Key-Value) stores where you might want to enforce version 2 for features like secret versioning and soft deletes. If your Vault already has a `secret/` mount, choose a free path or import the existing mount instead of creating a duplicate.
 
 ## Pattern 2: Namespace per environment
 
@@ -97,6 +97,8 @@ Template literals make it easy to compose policy bodies from variables or other 
 Vault can authenticate workloads using their native identities. For [Kubernetes](https://kubernetes.io/), this means using ServiceAccounts to authenticate pods.
 
 ```typescript
+import * as pulumi from "@pulumi/pulumi";
+
 const config = new pulumi.Config();
 const kubernetesCaCert = config.requireSecret("kubernetesCaCert");
 const tokenReviewerJwt = config.requireSecret("tokenReviewerJwt");
@@ -124,13 +126,13 @@ const appRole = new vault.kubernetes.AuthBackendRole("app-role", {
 }, { dependsOn: [k8sAuthConfig] });
 ```
 
-This pattern involves three steps: enabling the Kubernetes auth backend, configuring it with cluster details, and creating roles that map ServiceAccounts to Vault policies.
+This pattern involves three steps: enabling the Kubernetes auth backend, configuring it with cluster details, and creating roles that map ServiceAccounts to Vault policies. The `production` value in `boundServiceAccountNamespaces` is the Kubernetes namespace, not the Vault Enterprise namespace.
 
 ## Pattern 5: ESC migration bridge
 
 As organizations modernize their secrets management, they often look to [Pulumi ESC](/docs/esc/) for environment-wide secrets orchestration. You can use Pulumi to bridge your existing Vault secrets into ESC environments.
 
-This bridge allows you to continue using Vault as your primary secret store while using ESC's environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers.
+This bridge allows you to continue using Vault as your primary secret store while using ESC's environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers. The example assumes the KV v2 mount and database secret exist inside the `production` Vault namespace; provision them with the same patterns above and set the Vault provider namespace when managing namespaced resources.
 
 ```yaml
 values:
@@ -138,16 +140,18 @@ values:
     login:
       fn::open::vault-login:
         address: https://vault.example.com
+        namespace: production
         jwt:
           role: esc-reader
     secrets:
       fn::open::vault-secrets:
         login: ${vault.login}
-        get:
+        read:
           database:
-            path: secret/database
+            path: secret/data/database
+            field: password
   app:
-    databasePassword: ${vault.secrets.database.data.password}
+    databasePassword: ${vault.secrets.database}
 ```
 
 ## Conclusion
