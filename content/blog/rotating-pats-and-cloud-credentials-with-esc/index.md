@@ -70,7 +70,7 @@ values:
           ciphertext: <encrypted-key>
 ```
 
-## AWS: Dynamic vs. rotated credentials
+## AWS: dynamic vs. rotated credentials
 
 For cloud providers like AWS, Pulumi ESC offers two distinct strategies depending on your application's needs.
 
