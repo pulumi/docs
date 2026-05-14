@@ -611,13 +611,18 @@ def _render_style_findings(findings: list[dict]) -> str:
 
 
 def render_triaged() -> str:
-    # Always rendered; the section's purpose is to hold bullets the reviewer
-    # moves here during the editorial pass (verifier false positives,
-    # mis-sourced verdicts) so they don't clutter 🚨 / ⚠️.
+    # Always rendered, always wrapped in a collapsed <details>. The reviewer
+    # moves verifier-side noise (false positives, mis-sourced verdicts) here
+    # during the editorial pass so they don't clutter 🚨 / ⚠️. The empty
+    # marker `_No triaged findings._` is the signal strip-empty-triaged.py
+    # uses to remove the whole section when the reviewer didn't move any
+    # bullets in.
     return (
         "### 📋 Triaged verifier findings\n\n"
-        "*I double-checked these and realized they weren't real findings — verifier-side noise; no author action.*\n\n"
-        "_No triaged findings._"
+        "<details>\n"
+        "<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>\n\n"
+        "_No triaged findings._\n\n"
+        "</details>"
     )
 
 

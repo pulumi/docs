@@ -90,6 +90,38 @@ def test_mandatory_h3_order_inserts_missing_section():
     assert applied == ["mandatory-h3-order"]
 
 
+def test_mandatory_h3_order_inserts_triaged_with_details_wrapper():
+    """When 📋 Triaged is inserted via EMPTY_FORMS, it must arrive in the new
+    collapsed <details> shape with the `_No triaged findings._` placeholder
+    that strip-empty-triaged.py keys off of."""
+    body = (
+        "### 🔍 Verification trail\n\n"
+        "_No verifiable claims._\n\n"
+        "### ⚠️ Low-confidence\n\n"
+        "_No low-confidence findings._\n\n"
+        "### 💡 Pre-existing issues in touched files (optional)\n\n"
+        "_No pre-existing issues in touched files._\n"
+    )
+    violation = {
+        "rule_id": "mandatory-h3-order",
+        "line_ref": "<### 📋 Triaged verifier findings>",
+        "expected": "`### 📋 Triaged verifier findings` present after the previously-rendered section",
+        "actual": "missing or out-of-order",
+        "hint": "Render `### 📋 Triaged verifier findings` in the spec order.",
+    }
+    new_body, applied, fallback = splicer.apply_splices(body, [violation])
+    assert "📋 Triaged verifier findings" in new_body, new_body
+    assert "<details>" in new_body, "Triaged section must be wrapped in <details>"
+    assert "<summary><em>I double-checked these" in new_body
+    assert "_No triaged findings._" in new_body, "empty marker must be present so strip-empty-triaged keys off it"
+    assert "</details>" in new_body
+    triaged_idx = new_body.index("📋 Triaged verifier findings")
+    pre_idx = new_body.index("💡 Pre-existing")
+    low_idx = new_body.index("⚠️ Low-confidence")
+    assert low_idx < triaged_idx < pre_idx, "📋 must sit between ⚠️ and 💡"
+    assert applied == ["mandatory-h3-order"]
+
+
 def test_mandatory_h3_order_defers_when_already_present():
     """If the section exists but in the wrong position, splicer defers to fallback."""
     body = (
@@ -517,6 +549,7 @@ TESTS = [
     test_internal_link_existence_unwraps_markdown_link,
     test_shortcode_existence_deletes_line,
     test_mandatory_h3_order_inserts_missing_section,
+    test_mandatory_h3_order_inserts_triaged_with_details_wrapper,
     test_mandatory_h3_order_defers_when_already_present,
     test_trail_per_verdict_emoji_replaces_legacy_glyph,
     test_trail_canonical_verdict_word_replaces_freelanced_token,

@@ -71,7 +71,7 @@ EMPTY_FORMS = {
     "📊 Editorial balance": "### 📊 Editorial balance\n\n_Single-subject post; balance check N/A._",
     "🚨 Outstanding": "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._",
     "⚠️ Low-confidence": "### ⚠️ Low-confidence\n\n_No low-confidence findings._",
-    "📋 Triaged verifier findings": "### 📋 Triaged verifier findings\n\n*I double-checked these and realized they weren't real findings — verifier-side noise; no author action.*\n\n_No triaged findings._",
+    "📋 Triaged verifier findings": "### 📋 Triaged verifier findings\n\n<details>\n<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>\n\n_No triaged findings._\n\n</details>",
     "💡 Pre-existing": "### 💡 Pre-existing issues in touched files (optional)\n\n_No pre-existing issues in touched files._",
     "📜 Review history": "### 📜 Review history\n\n- <TODO: timestamp> — <TODO: one-line summary> (<TODO: sha>)",
 }

@@ -868,6 +868,19 @@ jobs:
           fi
           exit 0
 
+      # Strip the 📋 Triaged section if the reviewer didn't move any
+      # bullets into it. The composer always renders the section as a
+      # collapsed <details> block with a `_No triaged findings._`
+      # placeholder; if the placeholder survived the editorial pass, the
+      # section is just visual noise and gets removed here. Validators
+      # don't require 📋 to be present (it's not in MANDATORY_H3_SECTIONS).
+      - name: Strip empty 📋 section (Step D2)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
+            --body-file .review-draft.md
+
       - name: Upsert pinned comment (Step E)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         env:
