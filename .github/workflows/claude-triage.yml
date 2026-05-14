@@ -1,16 +1,19 @@
 name: Claude Triage
 
-# Triage runs on non-draft PR open and on the draft → ready transition.
-# Drafts are the author's workbench — we don't apply labels until they
-# ask for feedback. `ready_for_review` only fires on draft → ready, so
-# `opened` is still needed for PRs that skip the draft phase.
+# Triage runs on non-draft PR open, on the draft → ready transition,
+# and on reopen of a closed PR. Drafts are the author's workbench — we
+# don't apply labels until they ask for feedback. `ready_for_review`
+# only fires on draft → ready, so `opened` is still needed for PRs that
+# skip the draft phase; `reopened` fires when a closed PR is reopened
+# (e.g., manual close-then-reopen to re-trigger classification after
+# label policy changes).
 # It does NOT run on every push (synchronize) — that fires the
 # review-state mark-stale step in claude-code-review.yml instead, which
 # transitions terminal review-state labels (outstanding-issues / no-blockers)
 # to review:stale.
 on:
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, reopened, ready_for_review]
 
 jobs:
   triage:
@@ -76,6 +79,24 @@ jobs:
             echo "has_write_access=false" >> $GITHUB_OUTPUT
             echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
+
+      # Surface "triage is running" as a visible label state from the moment
+      # this workflow kicks off (~5s after PR open / ready-for-review). The
+      # cleanup step below — gated `if: always()` — clears it when triage
+      # finishes, regardless of whether classification succeeded. If the
+      # downstream review fires (eligible PR), claude-code-review.yml's own
+      # `Set review:in-progress label` step will swap triaging → in-progress
+      # atomically via the same mutually-exclusive STATE_LABELS contract.
+      - name: Set review:triaging label
+        if: steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:triaging
 
       # Triage is a narrow classification task: read the PR, decide which
       # domains it touches, and emit a label delta. Almost all of that is
@@ -207,11 +228,14 @@ jobs:
             TARGET["review:prose-flagged"]=1
           fi
 
-          # 5. Current triage-managed labels (exclude state labels).
+          # 5. Current triage-managed labels (exclude state labels —
+          # review:triaging is owned by the wrapping set/clear steps in
+          # this workflow; the others are owned by claude-code-review.yml /
+          # claude-update.yml).
           declare -A EXISTING
           while IFS= read -r lbl; do
             case "$lbl" in
-              review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
+              review:triaging|review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
                 continue ;;
               domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;
@@ -284,3 +308,32 @@ jobs:
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
           VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
           echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+
+      # Clear the triaging label whether classification succeeded or not —
+      # the next state (review:in-progress / nothing) is owned by
+      # claude-code-review.yml or by the trivial/frontmatter-only
+      # short-circuit. set-review-label.sh --clear strips any state label
+      # currently present without adding a new one; if a downstream workflow
+      # already ran past this step (rare — triage is short) and set
+      # in-progress, --clear's idempotency means it'll only remove what's
+      # there now (triaging) and leave the rest alone.
+      - name: Clear review:triaging label
+        if: always() && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Read current label state and only --clear if triaging is still
+          # the active state label — avoids stomping on a downstream
+          # in-progress (theoretically possible if claude-code-review's
+          # workflow_run fires between our final label-edit and this step,
+          # but unlikely given triage is the same job).
+          LABELS=$(gh pr view "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" --json labels \
+            --jq '[.labels[].name] | join(",")' || echo "")
+          if [[ ",$LABELS," == *",review:triaging,"* ]]; then
+            .claude/commands/docs-review/scripts/set-review-label.sh \
+              --pr "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --clear
+          fi

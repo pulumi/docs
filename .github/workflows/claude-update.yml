@@ -172,6 +172,27 @@ jobs:
             echo "has_pinned=$HAS_PINNED"
           } >> "$GITHUB_OUTPUT"
 
+      # Flip the PR's state label to review:in-progress for the duration of
+      # the refresh — mirrors claude-code-review.yml's early step on the
+      # auto-fire / #new-review path. Without this, a #update-review mention
+      # leaves the PR's prior terminal label (outstanding-issues /
+      # no-blockers) visible the entire 5-10 min the refresh takes — so the
+      # author has no signal that a fresh review is in flight. The
+      # finalize step at end-of-job transitions it back to the appropriate
+      # terminal state.
+      - name: Set review:in-progress label
+        if: |
+          steps.check-access.outputs.has_write_access == 'true' &&
+          steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
+
       # Save the triggering comment / review / issue body to a file in
       # the workspace so the model can read it as MENTION_BODY without
       # scraping the event payload at runtime. Env vars carry the body

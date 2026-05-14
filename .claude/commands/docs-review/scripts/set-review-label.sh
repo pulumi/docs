@@ -17,6 +17,13 @@
 #
 # Usage:
 #   set-review-label.sh --pr 123 --label review:in-progress [--repo owner/repo]
+#   set-review-label.sh --pr 123 --clear                    [--repo owner/repo]
+#
+# `--clear` removes any state label currently on the PR without adding a new
+# one — used by claude-triage.yml at the end of its run to clear
+# `review:triaging` when the downstream state will be set by another workflow
+# (claude-code-review.yml on the proceed path) or by no one (the trivial
+# / frontmatter-only short-circuit paths).
 #
 # If --repo is omitted, $GITHUB_REPOSITORY is used; failing that, gh's
 # default resolution from the current directory.
@@ -25,12 +32,14 @@ set -euo pipefail
 
 PR=""
 LABEL=""
+CLEAR="false"
 REPO="${GITHUB_REPOSITORY:-}"
 
 while [ $# -gt 0 ]; do
   case "$1" in
     --pr) PR="$2"; shift 2 ;;
     --label) LABEL="$2"; shift 2 ;;
+    --clear) CLEAR="true"; shift ;;
     --repo) REPO="$2"; shift 2 ;;
     -h|--help)
       grep '^# ' "$0" | sed 's/^# \{0,1\}//'
@@ -40,14 +49,26 @@ while [ $# -gt 0 ]; do
   esac
 done
 
-if [ -z "$PR" ] || [ -z "$LABEL" ]; then
-  echo "::error::set-review-label: --pr and --label are required" >&2
+if [ -z "$PR" ]; then
+  echo "::error::set-review-label: --pr is required" >&2
+  exit 2
+fi
+if [ "$CLEAR" = "true" ] && [ -n "$LABEL" ]; then
+  echo "::error::set-review-label: --clear and --label are mutually exclusive" >&2
+  exit 2
+fi
+if [ "$CLEAR" = "false" ] && [ -z "$LABEL" ]; then
+  echo "::error::set-review-label: one of --label or --clear is required" >&2
   exit 2
 fi
 
 # The mutually-exclusive set. Order doesn't matter; we strip everything
-# that isn't the target, then add the target.
+# that isn't the target, then add the target. `review:triaging` is the
+# triage workflow's runtime state — set when claude-triage.yml starts
+# classifying, transitioned out (to nothing, or to a downstream state)
+# when triage finishes.
 STATE_LABELS=(
+  "review:triaging"
   "review:in-progress"
   "review:outstanding-issues"
   "review:no-blockers"
@@ -56,14 +77,16 @@ STATE_LABELS=(
 )
 
 # Validate the target is in the known set so a typo doesn't silently
-# create a one-off label.
-known=false
-for s in "${STATE_LABELS[@]}"; do
-  if [ "$s" = "$LABEL" ]; then known=true; break; fi
-done
-if [ "$known" = "false" ]; then
-  echo "::error::set-review-label: '$LABEL' is not in the mutually-exclusive review-state set (${STATE_LABELS[*]})" >&2
-  exit 2
+# create a one-off label. Skipped on --clear (no target to validate).
+if [ "$CLEAR" = "false" ]; then
+  known=false
+  for s in "${STATE_LABELS[@]}"; do
+    if [ "$s" = "$LABEL" ]; then known=true; break; fi
+  done
+  if [ "$known" = "false" ]; then
+    echo "::error::set-review-label: '$LABEL' is not in the mutually-exclusive review-state set (${STATE_LABELS[*]})" >&2
+    exit 2
+  fi
 fi
 
 REPO_ARG=()
@@ -86,18 +109,30 @@ for s in "${STATE_LABELS[@]}"; do
 done
 
 ADD_ARGS=()
-if [[ ",$CURRENT," != *",$LABEL,"* ]]; then
+if [ "$CLEAR" = "false" ] && [[ ",$CURRENT," != *",$LABEL,"* ]]; then
   ADD_ARGS+=(--add-label "$LABEL")
 fi
 
 if [ "${#REMOVE_ARGS[@]}" -eq 0 ] && [ "${#ADD_ARGS[@]}" -eq 0 ]; then
-  echo "set-review-label: PR $PR already at $LABEL; no-op"
+  if [ "$CLEAR" = "true" ]; then
+    echo "set-review-label: PR $PR has no state labels to clear; no-op"
+  else
+    echo "set-review-label: PR $PR already at $LABEL; no-op"
+  fi
   exit 0
 fi
 
 if ! gh pr edit "$PR" "${REPO_ARG[@]}" "${ADD_ARGS[@]}" "${REMOVE_ARGS[@]}"; then
-  echo "::error::set-review-label: gh pr edit failed for PR $PR (label=$LABEL)" >&2
+  if [ "$CLEAR" = "true" ]; then
+    echo "::error::set-review-label: gh pr edit failed for PR $PR (--clear)" >&2
+  else
+    echo "::error::set-review-label: gh pr edit failed for PR $PR (label=$LABEL)" >&2
+  fi
   exit 1
 fi
 
-echo "set-review-label: PR $PR → $LABEL (removed: ${REMOVE_ARGS[*]:-none})"
+if [ "$CLEAR" = "true" ]; then
+  echo "set-review-label: PR $PR cleared state labels (removed: ${REMOVE_ARGS[*]:-none})"
+else
+  echo "set-review-label: PR $PR → $LABEL (removed: ${REMOVE_ARGS[*]:-none})"
+fi
