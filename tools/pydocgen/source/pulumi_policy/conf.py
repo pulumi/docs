@@ -10,7 +10,7 @@ from importlib.metadata import version as _pkg_version
 sys.path.append(os.path.abspath('.'))
 
 project = 'Pulumi Policy SDK'
-copyright = 'Pulumi'
+copyright = '2026, Pulumi'
 author = 'Pulumi'
 
 try:
