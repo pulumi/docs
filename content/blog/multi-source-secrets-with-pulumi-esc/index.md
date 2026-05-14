@@ -61,7 +61,8 @@ values:
     login:
       fn::open::aws-login:
         oidc:
-          roleArn: arn:aws:iam::123456789:role/esc-oidc
+          roleArn: arn:aws:iam::123456789012:role/esc-oidc
+          sessionName: esc-multi-source-env
     secrets:
       fn::open::aws-secrets:
         region: us-west-2
@@ -83,6 +84,7 @@ values:
         read:
           stripe-key:
             path: secret/stripe
+            field: api_key
 
   # 1Password for shared team credentials
   onepassword:
@@ -98,17 +100,31 @@ values:
   # Unified view for the application
   app-secrets:
     DB_PASSWORD: ${aws.secrets.db-password}
-    STRIPE_API_KEY: ${vault.secrets.stripe-key.data.key}
+    STRIPE_API_KEY: ${vault.secrets.stripe-key}
     GITHUB_TOKEN: ${onepassword.secrets.github-token}
+  environmentVariables:
+    DB_PASSWORD: ${app-secrets.DB_PASSWORD}
+    STRIPE_API_KEY: ${app-secrets.STRIPE_API_KEY}
+    GITHUB_TOKEN: ${app-secrets.GITHUB_TOKEN}
 ```
 
-The Vault connection happens in two steps. `fn::open::vault-login` authenticates ESC to Vault using the JWT/OIDC role configured in Vault, and `fn::open::vault-secrets` uses that login session to read a specific secret path. In the unified view, `${vault.secrets.stripe-key.data.key}` refers to the `key` field in the KV v2 response wrapper for `secret/stripe`.
+The Vault connection happens in two steps. `fn::open::vault-login` authenticates ESC to Vault using the JWT/OIDC role configured in Vault, and `fn::open::vault-secrets` uses that login session to read a specific secret path. The `field: api_key` setting selects the literal `api_key` field stored at `secret/stripe`, so the unified view can reference `${vault.secrets.stripe-key}` without exposing the Vault response wrapper to consumers.
 
 ## Namespacing and precedence
 
 By mapping secrets into specific keys like `app-secrets`, you create a clean interface for your applications. This namespacing prevents collisions between different sources.
 
-If you need to override a secret for a specific environment, you can use ESC's inheritance model. You can define a base environment with common secrets and then override specific values in a child environment.
+If you need to override a secret for a specific environment, use `imports:` to compose a base environment and then override specific values in the child environment:
+
+```yaml
+imports:
+  - acme/platform/base-secrets
+values:
+  app-secrets:
+    DB_PASSWORD: ${aws.secrets.db-password}
+```
+
+Values defined in the child environment take precedence over imported values with the same path, which lets you keep common provider configuration in one place while overriding environment-specific secrets.
 
 ## Consuming the resolved view
 
@@ -120,7 +136,7 @@ You can view the resolved secrets using the [Pulumi CLI](/docs/install/):
 pulumi env open <org>/<project>/multi-source-env
 ```
 
-This command returns a single JSON object containing all the resolved values. Your applications can also consume these secrets as environment variables or through the Pulumi SDKs, ensuring a secure and consistent workflow.
+This command returns a single JSON object containing all the resolved values. The `environmentVariables` block exposes selected values to `pulumi env run` and shell-based tools. Applications can also consume the resolved values through the Pulumi SDKs, ensuring a secure and consistent workflow.
 
 By centralizing your secrets management with Pulumi ESC, you reduce complexity and strengthen your secrets management model without having to migrate your existing secret stores.
 
