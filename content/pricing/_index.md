@@ -63,7 +63,6 @@ tiers:
               cta_secondary:
                   label: Contact Sales
                   href: /contact/?form=sales
-                  style: link
               features_intro: "Everything in **Team**, plus:"
               features:
                   - Unlimited users
@@ -122,7 +121,6 @@ comparison_table:
             # Pulumi IaC table
             - header: Infrastructure as Code
               icon: custom/pulumi-iac
-              subheader: Foundational capability is included in all editions
               rows:
                 - title: On-demand resource price
                   items:
@@ -346,7 +344,6 @@ comparison_table:
             ## Pulumi ESC table
           - header: Secrets & Configuration
             icon: custom/pulumi-secrets
-            subheader: Secure configuration management across all environments
             rows:
               - title: On-demand secret price
                 items:
@@ -464,7 +461,6 @@ comparison_table:
           ## Pulumi Insights Table
           - header: Insights & Governance
             icon: custom/pulumi-insights
-            subheader: Visibility and governance across your entire cloud estate
             rows:
               - title: On-demand resource price
                 items:
@@ -551,7 +547,6 @@ comparison_table:
           ## Pulumi Neo Table
           - header: Infrastructure AI
             icon: custom/pulumi-neo
-            subheader: Intelligent assistance across all platform capabilities
             rows:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
@@ -563,7 +558,6 @@ comparison_table:
           ## Pulumi Workflow table
           - header: Internal Developer Platform
             icon: custom/pulumi-idp
-            subheader: Self-service capabilities with guardrails
             rows:
               - title: Developer portal
                 items:
@@ -573,7 +567,6 @@ comparison_table:
                   - content: Host private templates
           - header: Support
             icon: phosphor/lifebuoy
-            subheader: 
             rows:
               - title: Support
                 items:
