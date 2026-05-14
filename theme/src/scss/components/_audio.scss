@@ -11,7 +11,8 @@ $green600: theme("colors.green.600");
 
 pulumi-audio {
     .error-callout {
-        @apply btn btn-orange inline-block;
+        @extend .btn;
+        @apply bg-orange-500 border-orange-600 hover:bg-orange-600 hover:border-orange-700 text-white;
         cursor: default;
     }
 
@@ -22,7 +23,9 @@ pulumi-audio {
         }
 
         .audio-button {
-            @apply btn btn-orange py-3 px-8 rounded-full;
+            @extend .btn;
+            @apply bg-orange-500 border-orange-600 hover:bg-orange-600 hover:border-orange-700 text-white;
+            @apply py-3 px-8 rounded-full;
 
             box-shadow: 0 0 15px, 0 0 2px, 0 0 1em $orange600, 0 0 0.5em $orange600, 0 0 0.1em $orange600;
         }

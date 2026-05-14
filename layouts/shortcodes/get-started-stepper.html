@@ -37,7 +37,7 @@
 <div class="mt-6">
     {{ if ne $step $first }}
         {{ $prev := index $pages (sub $step 1) }}
-        <a data-track="previous-step" class="btn btn-secondary" href="{{ $prev.RelPermalink }}">&larr; Previous step</a>
+        <a data-track="previous-step" class="btn btn-outline" href="{{ $prev.RelPermalink }}">&larr; Previous step</a>
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
