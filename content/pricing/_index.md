@@ -14,41 +14,58 @@ tiers:
         items:
             - title: Individual
               subtitle: Free forever for individuals.
-              price: Free
-              price_label:
+              price: $0
+              price_label: forever
               unit:
               note: No credit card required
-              items: |
-                You get:
-                - 1 user
-                - IaC state management
-                - Unlimited projects, stacks, and environments
-                - Unlimited updates and history
-                - 500 free deployment minutes
+              cta:
+                  label: Get started
+                  href: https://app.pulumi.com/signup
+                  style: outline
+              features_intro: "Includes:"
+              features:
+                  - 1 user
+                  - IaC state management
+                  - Unlimited projects, stacks, and environments
+                  - Unlimited updates and history
+                  - 500 free deployment minutes
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
               price_label: /mo
               unit: "**500** resources included"
-              note: Additional resources **$0.1825**/mo
-              items: |
-                Everything in **Individual**, plus:
-                - Up to 10 users
-                - Secure collaboration and CI/CD
-                - AI assistance with Pulumi Neo
-                - Resource search
-                - OIDC and Org Access Tokens
-                - Webhooks
-                - Automatic secrets rotation
-                - Community support
+              note: Additional resources $0.1825/mo
+              cta:
+                  label: Start a free trial
+                  href: https://app.pulumi.com/signup?create-organization=1
+                  style: primary
+              features_intro: "Everything in **Individual**, plus:"
+              features:
+                  - Up to 10 users
+                  - Secure collaboration and CI/CD
+                  - AI assistance with Pulumi Neo
+                  - Resource search
+                  - OIDC and Org Access Tokens
+                  - Webhooks
+                  - Automatic secrets rotation
+                  - Community support
             - title: Enterprise
               subtitle: Security and collaboration for large teams.
+              badge: Popular
               price: $400
               price_label: /mo
               unit: "**2,000** resources included"
-              note: Additional resources start at **$0.365**/mo
-              items: |
-                  Everything in **Team**, plus:
+              note: Additional resources start at $0.365/mo
+              cta:
+                  label: Start a free trial
+                  href: https://app.pulumi.com/signup?create-organization=1
+                  style: primary
+              cta_secondary:
+                  label: Contact Sales
+                  href: /contact/?form=sales
+                  style: link
+              features_intro: "Everything in **Team**, plus:"
+              features:
                   - Unlimited users
                   - SAML/SSO and RBAC
                   - Internal developer platform (IDP)
@@ -60,19 +77,29 @@ tiers:
                   - 12x5 Enterprise Support available
             - title: Business Critical
               subtitle: Advanced governance, policies, and controls.
-              price: Custom
+              price: Custom Pricing
               price_label:
               unit:
               note: Volume discounts and invoicing
-              items: |
-                  Everything in **Enterprise**, plus:
-                  - [Self-hosting available](/product/self-hosted)
+              cta:
+                  label: Contact sales
+                  href: /contact/?form=sales
+                  style: primary
+              features_intro: "Everything in **Enterprise**, plus:"
+              features:
+                  - "[Self-hosting available](/product/self-hosted)"
                   - Built-in compliance (NIST, PCI, and more)
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
                   - Volume pricing and invoicing
                   - Private Slack and Professional Services
                   - 24x7 Enterprise Support available
+
+testimonial:
+    quote: Pulumi helped our team ship a new product faster. We needed one tool to setup and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
+    author: Justin Pflughaupt
+    role: VP of Cloud Platform Engineering
+    logo: snowflake
 
 customers:
     - stat: "**5x faster** time to market"

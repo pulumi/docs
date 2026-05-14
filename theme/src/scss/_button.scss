@@ -21,7 +21,7 @@
 // Variants
 .btn-primary       { @apply bg-violet-primary text-white hover:bg-violet-800; }
 .btn-outline       { @apply border-gray-300 bg-white text-gray-950 hover:bg-gray-100 hover:border-gray-500 aria-expanded:bg-gray-100; }
-.btn-secondary     { @apply bg-gray-100 text-gray-900 hover:bg-gray-200/30 aria-expanded:bg-gray-200/30; }
+.btn-secondary     { @apply bg-gray-100 text-gray-900 hover:bg-gray-200 aria-expanded:bg-gray-200/30; }
 .btn-ghost         { @apply text-gray-950 hover:bg-gray-100 aria-expanded:bg-gray-100; }
 .btn-ghost-primary { @apply text-violet-primary hover:bg-violet-50 aria-expanded:bg-violet-50; }
 .btn-ghost-nav     { @apply text-gray-950 hover:bg-violet-50 hover:text-violet-primary aria-expanded:text-violet-primary aria-expanded:bg-violet-50 }

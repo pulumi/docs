@@ -74,7 +74,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     h4,
     h5,
     h6 {
-        @apply font-display text-black mb-2;
+        @apply font-display text-service-black mb-2;
         font-weight: 600;
         letter-spacing: -0.05em;
         line-height: 1.1em;
@@ -120,7 +120,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     body {
-        @apply font-body text-black;
+        @apply font-body text-service-black;
 
         figure {
             figcaption {
@@ -134,7 +134,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     main {
-        @apply text-black;
+        @apply text-service-black;
 
         p,
         li,
@@ -253,7 +253,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "neo-card";
     @import "docs/packages";
     @import "pagination";
-    @import "marketing/pricing";
     @import "marketing/product";
     @import "responsive-video";
     @import "marketing/pulumi-deployments";
