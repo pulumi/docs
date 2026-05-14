@@ -200,6 +200,162 @@ def load_hugo_build(path: str | None) -> dict | None:
     return data if isinstance(data, dict) else None
 
 
+# ---- preflight synthetic verdicts (Hugo + frontmatter pre-stubs) -----------
+
+
+# Hugo error lines often embed a file path + optional line number. Recognise:
+#   "page.md:LINE:COL"   (most common)
+#   "page.md:LINE"
+#   `"page.md"`          (no line — fall back to L1)
+#   anywhere `content/.../page.md` appears
+_HUGO_FILE_LINE_RE = re.compile(
+    r"""
+    (?P<file>(?:content|layouts|themes)/[\w./\-]+\.(?:md|html|toml|yaml|yml))
+    (?::(?P<line>\d+))?
+    """,
+    re.VERBOSE,
+)
+
+
+def _hugo_extract_file_line(raw: str) -> tuple[str, str]:
+    """Return (file, L-anchor) parsed from a Hugo error/link-integrity line.
+    Anchor is empty string when no line number is recoverable; the synthetic
+    verdict then falls back to L1 (the frontmatter block / top of file)."""
+    m = _HUGO_FILE_LINE_RE.search(raw)
+    if not m:
+        return ("", "")
+    file = m.group("file")
+    line = m.group("line")
+    return (file, f"L{line}" if line else "")
+
+
+_HUGO_SOURCE = "hugo --renderToMemory pre-step"
+_FM_SOURCE = "frontmatter-validate.py pre-step"
+
+
+def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
+    """Synthesize verdict-shaped dicts from `.hugo-build.json` so the composer
+    pre-stubs Hugo errors and link-integrity breakages into 🚨 Outstanding.
+    These flow through render_trail (as `❌ contradicted` lines) and
+    build_stubs (as `**[L<n>]**` bullets) just like real fact-check verdicts.
+    Routed as `preflight` so build_stubs writes a confirm-or-REMOVE TODO
+    rather than the fact-check fix-or-spurious-or-mis-sourced TODO.
+    """
+    if not isinstance(hugo_artifact, dict):
+        return []
+    if hugo_artifact.get("skipped"):
+        return []
+    out: list[dict] = []
+    for entry in hugo_artifact.get("errors", []) or []:
+        if not isinstance(entry, str) or not entry.strip():
+            continue
+        file, anchor = _hugo_extract_file_line(entry)
+        out.append({
+            "claim_id": f"hugo-error-{len(out)}",
+            "file": file,
+            "line_range": anchor or "L1",
+            "text": entry.strip()[:TEXT_TRUNC],
+            "type": "hugo-build-error",
+            "route": "preflight",
+            "verdict": "contradicted",
+            "confidence": "high",
+            "evidence": entry.strip(),
+            "source": _HUGO_SOURCE,
+        })
+    for entry in hugo_artifact.get("link_integrity", []) or []:
+        if not isinstance(entry, str) or not entry.strip():
+            continue
+        file, anchor = _hugo_extract_file_line(entry)
+        out.append({
+            "claim_id": f"hugo-link-{len(out)}",
+            "file": file,
+            "line_range": anchor or "L1",
+            "text": entry.strip()[:TEXT_TRUNC],
+            "type": "hugo-link-integrity",
+            "route": "preflight",
+            "verdict": "contradicted",
+            "confidence": "high",
+            "evidence": entry.strip(),
+            "source": _HUGO_SOURCE,
+        })
+    return out
+
+
+def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]:
+    """Synthesize verdicts from `.frontmatter-validation.json`'s `files[]` array.
+
+    Three failure classes get pre-stubbed as `⚔️ mismatch` (so they surface
+    in 🚨 Outstanding via the mismatch promotion path):
+      - `menu_parents[].parent_exists_in_menu == false`  (broken nav parent)
+      - `alias_collisions[]`                              (alias hits another file)
+      - `url_collisions[]`                                (URL hits another file)
+
+    No line number is recoverable from the artifact, so all anchor at L1
+    (the frontmatter block at the top of the file). The reviewer's editorial
+    pass triages PR-internal-rename cases (move the bullet to 💡 Pre-existing
+    with a `**Pre-existing:**` label) vs real collisions.
+    """
+    out: list[dict] = []
+    for fm in frontmatter_files or []:
+        if not isinstance(fm, dict):
+            continue
+        fpath = fm.get("file") or ""
+        for parent in fm.get("menu_parents", []) or []:
+            if not isinstance(parent, dict) or parent.get("parent_exists_in_menu") is not False:
+                continue
+            menu = parent.get("menu_name") or "?"
+            pid = parent.get("parent_identifier") or "?"
+            also = parent.get("found_in_other_menus") or []
+            also_note = f" (parent identifier exists in: {', '.join(also)})" if also else ""
+            out.append({
+                "claim_id": f"fm-parent-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter `menu.{menu}.parent: {pid}` does not exist in the `{menu}` menu{also_note}"[:TEXT_TRUNC],
+                "type": "frontmatter-menu-parent",
+                "route": "preflight",
+                "verdict": "mismatch",
+                "confidence": "high",
+                "evidence": f"menu={menu} parent={pid} parent_exists_in_menu=false",
+                "source": _FM_SOURCE,
+            })
+        for col in fm.get("alias_collisions", []) or []:
+            if not isinstance(col, dict):
+                continue
+            alias = col.get("alias") or "?"
+            collides = col.get("collides_with") or "?"
+            out.append({
+                "claim_id": f"fm-alias-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter alias `{alias}` collides with `{collides}`"[:TEXT_TRUNC],
+                "type": "frontmatter-alias-collision",
+                "route": "preflight",
+                "verdict": "mismatch",
+                "confidence": "high",
+                "evidence": f"alias={alias} collides_with={collides}",
+                "source": _FM_SOURCE,
+            })
+        for col in fm.get("url_collisions", []) or []:
+            if not isinstance(col, dict):
+                continue
+            url = col.get("url") or col.get("alias") or "?"
+            collides = col.get("collides_with") or col.get("claimants") or "?"
+            out.append({
+                "claim_id": f"fm-url-{len(out)}",
+                "file": fpath,
+                "line_range": "L1",
+                "text": f"frontmatter URL `{url}` collides with `{collides}`"[:TEXT_TRUNC],
+                "type": "frontmatter-url-collision",
+                "route": "preflight",
+                "verdict": "mismatch",
+                "confidence": "high",
+                "evidence": f"url={url} collides_with={collides}",
+                "source": _FM_SOURCE,
+            })
+    return out
+
+
 # ---- gh helpers ------------------------------------------------------------
 
 
@@ -688,6 +844,24 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
     for v in verdicts:
         verdict = v.get("verdict")
         conf = (v.get("confidence") or "").lower()
+        route = v.get("route") or ""
+        # Preflight verdicts (Hugo + frontmatter pre-step) carry a different
+        # TODO shape — the reviewer's job is "confirm or REMOVE if CI noise,"
+        # not "triage against verifier source choices."
+        if route == "preflight" and verdict in OUTSTANDING_VERDICTS:
+            vtype = v.get("type") or ""
+            if vtype.startswith("hugo-"):
+                todo = ("confirm the fix needed (or REMOVE the bullet if this is a CI-environment near-miss — "
+                        "e.g., a transient render-time warning that doesn't reproduce on a clean Hugo build). "
+                        "If pre-existing on a line this PR didn't touch, replace the body with `**Pre-existing:** <reason>` "
+                        "AND move the bullet to `### 💡 Pre-existing`.")
+            else:
+                todo = ("triage: is this a real collision (alias or URL clashes with another live page) "
+                        "or a PR-internal rename (an old alias for a file this PR is restructuring)? "
+                        "Confirm the fix needed, or REMOVE the bullet if the collision is intentional and announced. "
+                        "If pre-existing, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`.")
+            outstanding.append(_stub_bullet(v, todo))
+            continue
         if verdict in OUTSTANDING_VERDICTS:
             if verdict == "mismatch":
                 todo = ("write the fix / suggestion block. Anti-hedge mandate: state which sibling pages corroborate the divergence "
@@ -833,6 +1007,14 @@ def compose(args: argparse.Namespace) -> str:
     elif vc_errors:
         degraded_note = ("Claim verification reported errors — some verdicts may be incomplete; "
                          "spot-check the affected claims in-review.")
+
+    # Append synthetic verdicts from the Hugo + frontmatter pre-steps so the
+    # composer pre-stubs those findings into 🚨 Outstanding rather than
+    # leaving them for Opus to discover and triage from `.hugo-build.json`
+    # / `.frontmatter-validation.json` artifacts. Routed as `preflight` —
+    # build_stubs branches on the route to emit a confirm-or-REMOVE TODO
+    # instead of the fact-check spurious-or-mis-sourced TODO.
+    verdicts = list(verdicts) + _hugo_synthetic_verdicts(hugo_build) + _frontmatter_synthetic_verdicts(frontmatter)
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
