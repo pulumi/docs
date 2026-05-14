@@ -261,7 +261,7 @@
         </div>
         {{ else if $image }}
         <div class="product-hero-visual flex justify-center">
-            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "style" ($imageStyle | safeCSS)) }}
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "style" ($imageStyle | safeCSS) "maxWidth" 1500 "quality" 95) }}
         </div>
         {{ end }}
     </div>
