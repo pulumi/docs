@@ -11,15 +11,15 @@
             aria-expanded="false"
             aria-haspopup="menu"
             aria-controls="nav-desktop-popup"
-            class="btn btn-ghost group/trigger inline-flex items-center justify-center px-4">
+            class="btn btn-ghost-nav group/trigger inline-flex items-center justify-center px-4">
             {{ $item.label }}
-            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 relative top-px size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
+            {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 group-hover/trigger:text-violet-500 [[data-open=true]_&]:text-violet-300; relative top-px size-3 transition duration-300 [[data-open=true]_&]:rotate-180") }}
           </button>
           {{ $dropdownIdx = add $dropdownIdx 1 }}
         {{ else }}
           <a href="{{ $item.href }}"
             {{ with $item.track }}data-track="{{ . }}"{{ end }}
-            class="btn btn-ghost inline-flex items-center justify-center">
+            class="btn btn-ghost-nav inline-flex items-center justify-center">
             {{ $item.label }}
           </a>
         {{ end }}
