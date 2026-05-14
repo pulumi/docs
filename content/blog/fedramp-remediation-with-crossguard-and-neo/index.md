@@ -46,8 +46,8 @@ The most effective way to maintain compliance is to prevent non-compliant resour
 For FedRAMP, this means you can enforce rules such as:
 
 1. **Encryption at rest:** Ensure all S3 buckets, RDS instances, and EBS volumes use approved encryption keys.
-2. **Network isolation:** Prevent public access to sensitive databases or internal services.
-3. **Identity management:** Enforce multi-factor authentication (MFA) and least-privilege access for IAM roles.
+1. **Network isolation:** Prevent public access to sensitive databases or internal services.
+1. **Identity management:** Enforce multi-factor authentication (MFA) and least-privilege access for IAM roles.
 
 Here is a representative snippet of a Pulumi policy enforcing encryption configuration for S3 buckets:
 
@@ -84,19 +84,19 @@ Instead of manually researching the fix and updating the code, you can use Pulum
 
 ### Example remediation prompt
 
-You can prompt Neo directly from the [Pulumi Cloud](/product/pulumi-cloud/) console or via the CLI:
+You can use Pulumi Neo where it is available in your workflow to request a remediation plan:
 
 > "Neo, I have a FedRAMP violation for `s3-bucket-encryption-enabled` on the `production-data` bucket. Update the Pulumi code to enable AES256 server-side encryption for this bucket."
 
-Neo analyzes your existing program and generates a draft change set. You can then review the proposed changes, run a preview to verify the fix, and deploy the update. This workflow significantly reduces the time to remediate findings while ensuring that the fix follows your organization's coding standards.
+Neo can help analyze your existing program and propose a draft change set. You can then review the proposed changes, run a preview to verify the fix, and deploy the update. This workflow can reduce remediation time while keeping review and deployment under your control.
 
 ## Continuous re-validation and evidence
 
 Compliance is not a one-time event; it's a continuous process. Pulumi provides the tools to maintain and prove compliance over time:
 
 1. **Policy Findings triage:** Track the lifecycle of every compliance issue from discovery to resolution.
-2. **Audit mode:** Run compliance packs in audit mode to scan your entire environment without blocking deployments, providing a comprehensive view of your posture.
-3. **Evidence generation:** Use the history of policy checks and remediation actions as evidence for auditors, demonstrating that controls are actively enforced and monitored.
+1. **Audit mode:** Run compliance packs in audit mode to scan your entire environment without blocking deployments, providing a comprehensive view of your posture.
+1. **Evidence generation:** Use the history of policy checks and remediation actions as evidence for auditors, demonstrating that controls are actively enforced and monitored.
 
 ## Compliance disclaimer
 
@@ -104,4 +104,4 @@ While Pulumi helps produce evidence and provides powerful guardrails to support 
 
 ## Conclusion
 
-FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate security controls, accelerate remediation, and build a culture of continuous compliance. Whether you are just starting your FedRAMP journey or looking to optimize your existing processes, Start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
+FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate security controls, accelerate remediation, and build a culture of continuous compliance. Whether you are just starting your FedRAMP journey or looking to optimize your existing processes, start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
