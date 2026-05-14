@@ -77,7 +77,7 @@ tiers:
                   - 12x5 Enterprise Support available
             - title: Business Critical
               subtitle: Advanced governance, policies, and controls.
-              price: Custom Pricing
+              price: Custom
               price_label:
               unit:
               note: Volume discounts and invoicing
@@ -121,6 +121,7 @@ comparison_table:
           tables:
             # Pulumi IaC table
             - header: Infrastructure as Code
+              icon: custom/pulumi-iac
               subheader: Foundational capability is included in all editions
               rows:
                 - title: On-demand resource price
@@ -344,6 +345,7 @@ comparison_table:
           tables:
             ## Pulumi ESC table
           - header: Secrets & Configuration
+            icon: custom/pulumi-secrets
             subheader: Secure configuration management across all environments
             rows:
               - title: On-demand secret price
@@ -461,6 +463,7 @@ comparison_table:
               
           ## Pulumi Insights Table
           - header: Insights & Governance
+            icon: custom/pulumi-insights
             subheader: Visibility and governance across your entire cloud estate
             rows:
               - title: On-demand resource price
@@ -547,6 +550,7 @@ comparison_table:
                   - content: Advisory, Mandatory & Remediation 
           ## Pulumi Neo Table
           - header: Infrastructure AI
+            icon: custom/pulumi-neo
             subheader: Intelligent assistance across all platform capabilities
             rows:
               - title: Pulumi Neo
@@ -558,6 +562,7 @@ comparison_table:
                   - content: _check
           ## Pulumi Workflow table
           - header: Internal Developer Platform
+            icon: custom/pulumi-idp
             subheader: Self-service capabilities with guardrails
             rows:
               - title: Developer portal
@@ -567,6 +572,7 @@ comparison_table:
                   - content: Host private templates
                   - content: Host private templates
           - header: Support
+            icon: phosphor/lifebuoy
             subheader: 
             rows:
               - title: Support

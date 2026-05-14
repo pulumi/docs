@@ -1,217 +1,264 @@
 {{ define "main" }}
-    {{ $planNames := slice "Individual" "Team" "Enterprise" "Business Critical" }}
+{{ $planNames := slice "Individual" "Team" "Enterprise" "Business Critical" }}
 
-    {{/* Hero with decorative background SVG anchored top-right */}}
-    <section class="relative">
-        <div aria-hidden="true" class="pointer-events-none absolute top-0 right-0 -z-10 select-none">
-            {{ partial "fingerprinted-img.html" (dict
+{{/* Hero with decorative background SVG anchored top-right */}}
+<section class="relative overflow-hidden">
+    <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-10 md:top-0 lg:right-0 -z-10 select-none">
+        {{ partial "fingerprinted-img.html" (dict
                 "src" "/images/pricing/bg-lines-top-right-1.svg"
                 "alt" ""
                 "ariaHidden" "true"
                 "class" "w-[340px] md:w-[450px]") }}
-        </div>
-        <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
-            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Plans for teams of all sizes</h1>
-            <p class="max-w-xl mx-auto mt-5 text-lg md:text-xl text-gray-secondary">
-                Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
-            </p>
-        </div>
-    </section>
+    </div>
+    <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Plans for teams of all&nbsp;sizes</h1>
+        <p class="max-w-xl mx-auto mt-5 text-lg md:text-xl text-gray-secondary">
+            Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
+        </p>
+    </div>
+</section>
 
-    {{/* Tier cards */}}
-    <section id="plans" class="container mx-auto relative z-10 px-6">
-        <div class="grid grid-cols-1 card bg-white md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
-            {{ range $tier := .Params.tiers.trialed.items }}
-                {{ $borderClass := "" }}
-                {{ if $tier.badge }}{{ $borderClass = "rounded-lg ring relative z-10 ring-violet-primary" }}{{ end }}
+{{/* Tier cards */}}
+<section id="plans" class="container mx-auto relative z-10 px-6">
+    <div class="grid grid-cols-1 card bg-white md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
+        {{ range $tier := .Params.tiers.trialed.items }}
+        {{ $borderClass := "" }}
+        {{ if $tier.badge }}{{ $borderClass = "rounded-lg ring relative z-10 ring-violet-primary" }}{{ end }}
+        <div>
+            <div class=" p-8 flex flex-col gap-6 {{ $borderClass }}">
+                {{/* Header: title + optional badge */}}
                 <div>
-                    <div class=" p-8 flex flex-col gap-6 {{ $borderClass }}">
+                    <div class="flex items-center gap-3">
+                        <h3 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h3>
+                        {{ with $tier.badge }}
+                        <span
+                            class="inline-flex items-center rounded-full bg-violet-100 text-violet-primary px-2.5 py-0.5 text-xs font-mono uppercase tracking-wider"
+                            >{{ . }}</span
+                        >
+                        {{ end }}
+                    </div>
+                    <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $tier.subtitle }}</p>
+                </div>
 
-                        {{/* Header: title + optional badge */}}
-                        <div>
-                            <div class="flex items-center gap-3">
-                                <h3 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h3>
-                                {{ with $tier.badge }}
-                                    <span class="inline-flex items-center rounded-full bg-violet-100 text-violet-primary px-2.5 py-0.5 text-xs font-mono uppercase tracking-wider">{{ . }}</span>
-                                {{ end }}
-                            </div>
-                            <p class="mt-2 text-base text-gray-700 m-0 min-h-[3rem] block">{{ $tier.subtitle }}</p>
-                        </div>
-
-                        {{/* Price block — large `$X` style when price_label is set; smaller heading style otherwise */}}
-                        <div>
-                            {{ if $tier.price_label }}
-                                <div class="flex items-baseline gap-2">
-                                    <span class="text-5xl font-semibold tracking-tight">{{ $tier.price }}</span>
-                                    <span class="text-xl text-gray-500">{{ $tier.price_label }}</span>
-                                </div>
-                            {{ else }}
-                                <p class="text-3xl font-semibold tracking-tight m-0">{{ $tier.price }}</p>
-                            {{ end }}
-                            <div class="mt-4 min-h-[3rem] text-sm">
-                            {{ with $tier.unit }}<p class="m-0">{{ . | markdownify }}</p>{{ end }}
-                            {{ with $tier.note }}<p class="text-gray-700 m-0">{{ . | markdownify }}</p>{{ end }}
-                            </div>
-                        </div>
-
-                        {{/* CTAs */}}
-                        <div class="flex flex-col items-stretch gap-2 min-h-[6rem]">
-                            {{ with $tier.cta }}
-                                <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full">{{ .label }}</a>
-                            {{ end }}
-                            {{ with $tier.cta_secondary }}
-                                 <a href="{{ .href }}" class="btn btn-secondary">
-                                        {{ .label }}
-                                        {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
-                                    </a>
-                            {{ end }}
-                        </div>
-
-                        {{/* Features */}}
-                        <div class="flex flex-col gap-3">
-                            {{ with $tier.features_intro }}
-                                <p class="font-mono uppercase text-xs tracking-wider m-0">{{ . | markdownify }}</p>
-                            {{ end }}
-                            <ul class="list-none p-0 m-0 flex flex-col gap-2">
-                                {{ range $tier.features }}
-                                    <li class="flex items-start gap-2 text-sm m-0">
-                                        {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-5 mt-0.5 flex-shrink-0" "weight" "bold") }}
-                                        <span>{{ . | markdownify }}</span>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        </div>
+                {{/* Price block — large `$X` style when price_label is set; smaller heading style otherwise */}}
+                <div>
+                    {{ if $tier.price_label }}
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-5xl font-semibold tracking-tight">{{ $tier.price }}</span>
+                        <span class="text-xl text-gray-500">{{ $tier.price_label }}</span>
+                    </div>
+                    {{ else }}
+                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $tier.price }}</p>
+                    {{ end }}
+                    <div class="mt-4 md:min-h-[3rem] text-sm">
+                        {{ with $tier.unit }}
+                        <p class="m-0">{{ . | markdownify }}</p>
+                        {{ end }} {{ with $tier.note }}
+                        <p class="text-gray-700 m-0">{{ . | markdownify }}</p>
+                        {{ end }}
                     </div>
                 </div>
-            {{ end }}
-        </div>
-    </section>
 
-    {{/* Pulumi for startups — single text line, not a card */}}
-    <section class="container mx-auto -mt-4 mb-10 px-6">
-        <div class="bg-violet-50 rounded-lg p-4 pt-8">
+                {{/* CTAs */}}
+                <div class="flex flex-col items-stretch gap-2 md:min-h-[6rem]">
+                    {{ with $tier.cta }}
+                    <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full">{{ .label }}</a>
+                    {{ end }}
+                    {{ with $tier.cta_secondary }}
+                    <a href="{{ .href }}" class="btn btn-secondary">
+                        {{ .label }}
+                        {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                    </a>
+                    {{ end }}
+                </div>
+
+                {{/* Features */}}
+                <div class="flex flex-col gap-3">
+                    {{ with $tier.features_intro }}
+                    <p class="font-mono uppercase text-xs tracking-wider m-0">{{ . | markdownify }}</p>
+                    {{ end }}
+                    <ul class="list-none p-0 m-0 flex flex-col gap-2">
+                        {{ range $tier.features }}
+                        <li class="flex items-start gap-2 text-sm m-0">
+                            {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-5 mt-0.5 flex-shrink-0" "weight" "bold") }}
+                            <span>{{ . | markdownify }}</span>
+                        </li>
+                        {{
+                            end
+                        }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{/* Pulumi for startups — single text line, not a card */}}
+<section class="container mx-auto -mt-4 mb-10 px-6">
+    <div class="bg-violet-50 rounded-lg p-4 pt-8">
         <p class="text-center text-sm md:text-base m-0 text-service-black">
-            Are you a scaling startup?
+            <strong>Are you a scaling startup?</strong>
             <a href="/pulumi-for-startups" class="text-violet-primary hover:underline">Apply now</a>
             to receive <strong>$10,000</strong> in free credits.
         </p>
-        </div>
-    </section>
+    </div>
+</section>
 
-    {{/* Customer stats — single horizontal strip with vertical rules, not 3 cards */}}
-    <section id="customers" class="container mx-auto px-6 my-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
-            {{ range $customer := .Params.customers }}
-                <a href="{{ $customer.link }}" class="flex flex-col gap-4 px-6 py-6 group">
-                    <span class="h-10">
-                        {{ partial "fingerprinted-img.html" (dict
+{{/* Customer stats — single horizontal strip with vertical rules, not 3 cards */}}
+<section id="customers" class="container mx-auto px-6 my-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
+        {{ range $customer := .Params.customers }}
+        <a href="{{ $customer.link }}" class="flex flex-col gap-4 px-6 py-6 group">
+            <span class="h-10">
+                {{ partial "fingerprinted-img.html" (dict
                             "src" (printf "/logos/customers/%s.svg" $customer.logo)
                             "alt" (printf "%s logo" $customer.logo)
                             "class" "h-10 w-auto saturate-0 group-hover:saturate-100") }}
+            </span>
+            <p class="text-2xl tracking-tight m-0 group-hover:[&>strong]:text-violet-primary">{{ $customer.stat | markdownify }}</p>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+{{/* Compare editions */}}
+<section id="compare" class="container mx-auto px-6">
+
+    {{/* Sticky tier header — repeats the tier name + price + CTA across the comparison */}}
+    <div class="sticky top-16 z-30 bg-white py-4">
+        <div class="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-4 items-end">
+            <div class="hidden md:block"></div>
+            {{ range $tier := .Params.tiers.trialed.items }}
+            <div class="flex flex-col gap-2 text-center">
+                <div class="flex items-baseline justify-center xl:justify-between gap-1.5">
+                    <span class="text-sm sm:text-base font-semibold leading-tight">{{ $tier.title }}</span>
+                    <span class="text-sm whitespace-nowrap hidden xl:block">
+                        <span class="font-semibold">{{ $tier.price }}</span
+                        >{{ with $tier.price_label }} <span class="text-xs">{{ . }}</span
+                        >{{ end }}
                     </span>
-                    <p class="text-2xl tracking-tight m-0 group-hover:[&>strong]:text-violet-primary">{{ $customer.stat | markdownify }}</p>
-
-                </a>
-            {{ end }}
-        </div>
-    </section>
-
-    {{/* Compare editions */}}
-    <section id="compare" class="container mx-auto px-6 my-24">
-        <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Compare Editions</h2>
-        {{ range .Params.comparison_table.sections }}
-            <h3 class="text-2xl font-semibold tracking-tight mt-12 mb-4">{{ .header }}</h3>
-            <div class="space-y-3">
-                {{ range .tables }}
-                    <details class="card bg-white group" open>
-                        <summary class="flex items-center justify-between cursor-pointer p-6 list-none [&::-webkit-details-marker]:hidden">
-                            <div>
-                                <h4 class="text-xl font-semibold m-0">{{ .header }}</h4>
-                                {{ with .subheader }}<p class="mt-1 text-sm text-gray-600 m-0">{{ . }}</p>{{ end }}
-                            </div>
-                            {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180") }}
-                        </summary>
-
-                        {{/* Desktop column header */}}
-                        <div class="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-4 px-6 py-3 border-t border-gray-200 bg-gray-50 text-sm font-semibold">
-                            <div></div>
-                            {{ range $planNames }}<div class="text-center">{{ . }}</div>{{ end }}
-                        </div>
-
-                        {{ range $row := .rows }}
-                            <div class="border-t border-gray-200 px-6 py-4 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
-                                <div class="col-span-4 md:col-span-1 font-medium md:font-normal mb-3 md:mb-0">
-                                    {{ if $row.link }}<a class="text-violet-primary underline" href="{{ $row.link }}">{{ $row.title }}</a>{{ else }}{{ $row.title }}{{ end }}
-                                    {{ with $row.tooltip }}
-                                        <pulumi-tooltip>
-                                            {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-violet-primary") }}
-                                            <span slot="content">{{ . }}</span>
-                                        </pulumi-tooltip>
-                                    {{ end }}
-                                </div>
-                                {{ range $i, $item := $row.items }}
-                                    <div class="flex flex-col items-center text-sm md:contents">
-                                        <div class="text-[10px] uppercase tracking-wider text-gray-500 mb-1 md:hidden">{{ index $planNames $i }}</div>
-                                        <div class="text-center">
-                                            {{ if eq $item.content "_check" }}
-                                                {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-5 inline-block") }}
-                                            {{ else if eq $item.content "_blank" }}
-                                                <span class="text-gray-300">—</span>
-                                            {{ else }}
-                                                <span>{{ $item.content | markdownify }}</span>
-                                            {{ end }}
-                                            {{ with $item.tooltip }}
-                                                <pulumi-tooltip>
-                                                    {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-violet-primary") }}
-                                                    <span slot="content">{{ . }}</span>
-                                                </pulumi-tooltip>
-                                            {{ end }}
-                                        </div>
-                                    </div>
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    </details>
+                </div>
+                {{ with $tier.cta }}
+                <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex">{{ .label }}</a>
                 {{ end }}
             </div>
-        {{ end }}
-    </section>
+            {{ end }}
+        </div>
+    </div>
 
-    {{/* Testimonial */}}
-    {{ with .Params.testimonial }}
-        <section class="container mx-auto px-6 my-24">
-            {{ partial "template-partials/template-testimonial.html" (dict
+    {{ range.Params.comparison_table.sections }}
+    <div>
+        {{ range.tables }}
+        <details class="group border-b border-gray-200 overflow-x-hidden" data-pricing-table open>
+            <summary class="flex items-center justify-between cursor-pointer py-2 list-none [&::-webkit-details-marker]:hidden">
+                <div class="flex items-center gap-3">
+                    {{ with.icon }}
+                    <span class="inline-flex items-center justify-center size-12 rounded-md border border-gray-200 text-violet-primary flex-shrink-0">
+                        {{ partial "icon.html" (dict "name" . "class" "size-8") }}
+                    </span>
+                    {{ end }}
+                    <h4 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h4>
+                </div>
+                {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-4 text-gray-600 transition-transform group-open:rotate-180" "weight" "bold") }}
+            </summary>
+
+            {{ range $row := .rows }}
+            <div class="border-b border-gray-100 last:border-none first-of-type:pt-0 py-3 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
+                <div class="col-span-4 md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
+                    {{ if $row.link }}<a class="text-violet-primary underline-offset-5 hover:underline decoration-violet-300" href="{{ $row.link }}">{{ $row.title }}</a
+                    >{{ else }}{{ $row.title }}{{ end }}
+                    {{ with $row.tooltip }}
+                    <pulumi-tooltip class="inline-block">
+                        {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
+                        <span slot="content">{{ . }}</span>
+                    </pulumi-tooltip>
+                    {{ end }}
+                </div>
+                {{ range $i, $item := $row.items }}
+                <div class="flex flex-col items-center text-xs sm:text-sm md:contents">
+                    <div class="text-center">
+                        {{ if eq $item.content "_check" }}
+                        {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
+                        {{ else if eq $item.content "_blank" }}
+                        <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-secondary size-6 inline-block") }} </span>
+                        {{ else }}
+                        <span>{{ $item.content | markdownify }}</span>
+                        {{ end }}
+                        {{ with $item.tooltip }}
+                        <pulumi-tooltip class="inline-block">
+                            {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
+                            <span slot="content">{{ . }}</span>
+                        </pulumi-tooltip>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </details>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+
+{{/* Collapse all but the first comparison table on mobile (<md). Desktop keeps them all open. */}}
+<script>
+    (function () {
+        var mq = window.matchMedia("(min-width: 768px)");
+        var tables = document.querySelectorAll("[data-pricing-table]");
+        function sync() {
+            if (mq.matches) {
+                tables.forEach(function (t) { t.setAttribute("open", ""); });
+            } else {
+                tables.forEach(function (t, i) {
+                    if (i === 0) t.setAttribute("open", "");
+                    else t.removeAttribute("open");
+                });
+            }
+        }
+        sync();
+        mq.addEventListener("change", sync);
+    })();
+</script>
+
+{{/* Testimonial */}}
+{{ with.Params.testimonial }}
+<section class="container mx-auto px-6 my-24">
+    {{ partial "template-partials/template-testimonial.html" (dict
                 "quote" .quote
                 "author" .author
                 "title" .role
                 "company" .logo
                 "logo" (printf "/logos/customers/%s.svg" .logo)
                 "anchor" "testimonial") }}
-        </section>
-    {{ end }}
+</section>
+{{ end }}
 
-    {{/* FAQ — minimal rows with bottom dividers, grouped by category heading */}}
-    <section id="faq" class="container mx-auto px-6 my-24">
-        <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Frequently asked questions</h2>
-        <div class="max-w-4xl mx-auto">
-            {{ range .Params.faq }}
-                <h3 class="text-2xl font-semibold tracking-tight mt-12 mb-2">{{ .category }}</h3>
-                <ul class="list-none p-0 m-0 border-t border-gray-200">
-                    {{ range $question := .items }}
-                        <li class="m-0 border-b border-gray-200">
-                            <details class="group">
-                                <summary class="flex items-center justify-between cursor-pointer py-5 list-none [&::-webkit-details-marker]:hidden">
-                                    <span class="text-base md:text-lg font-medium pr-4">{{ $question.question }}</span>
-                                    {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180 flex-shrink-0") }}
-                                </summary>
-                                <div class="pb-5 text-base text-gray-700 prose prose-sm max-w-none">
-                                    {{ $question.answer | markdownify }}
-                                </div>
-                            </details>
-                        </li>
-                    {{ end }}
-                </ul>
-            {{ end }}
-        </div>
-    </section>
+{{/* FAQ — minimal rows with bottom dividers, grouped by category heading */}}
+<section id="faq" class="container mx-auto px-6 my-24">
+    <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Frequently asked questions</h2>
+    <div class="max-w-4xl mx-auto">
+        {{ range.Params.faq }}
+        <h3 class="font-mono uppercase tracking-wider text-xs mt-12 mb-2">{{ .category }}</h3>
+        <ul class="list-none p-0 m-0">
+            {{ range $question := .items }}
+            <li class="m-0 border-b border-gray-200">
+                <details class="group">
+                    <summary class="flex items-center justify-between cursor-pointer py-5 list-none [&::-webkit-details-marker]:hidden">
+                        <span class="text-sm font-semibold pr-4">{{ $question.question }}</span>
+                        {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180 flex-shrink-0") }}
+                    </summary>
+                    <div class="pb-5 text-base text-gray-700 prose prose-sm max-w-none">
+                        {{ $question.answer | markdownify }}
+                    </div>
+                </details>
+            </li>
+            {{
+                end
+            }}
+        </ul>
+        {{ end }}
+    </div>
+</section>
 {{ end }}
