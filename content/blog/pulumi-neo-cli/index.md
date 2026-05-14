@@ -43,7 +43,7 @@ Neo inherits your setup when it runs locally. The CLIs you've authenticated, the
 
 That makes `pulumi neo` a fit for paired, interactive sessions where you and Neo work through a problem together. For asynchronous, autonomous tasks you set up and come back to, Pulumi Cloud Neo is still the surface to reach for. Both reach the same Neo.
 
-The CLI also makes Neo reachable from other agent sessions. The [Neo handoff skill](https://github.com/pulumi/agent-skills/tree/main/delegation) takes the current thread (goal, repo pointers, conversation summary) and starts a Neo task using `pulumi neo` under the hood. From Claude Code, Cursor, or anywhere else that supports skills, you can launch Neo without leaving your current session.
+You can also hand tasks to Neo from other agent sessions. Simply ask your agent, such as Claude Code or Codex, to hand the task off to Neo, and the [Neo handoff skill](https://github.com/pulumi/agent-skills/tree/main/delegation) packages the current thread (goal, repo pointers, conversation summary) and starts a Neo task using `pulumi neo` under the hood. This works anywhere skills are supported, without leaving your current session.
 
 ## What carries over
 
