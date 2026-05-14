@@ -12,11 +12,11 @@ menu:
         weight: 25
 ---
 
-Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval, producing a [pull request](/docs/ai/pull-requests/) each time that goes through your normal review process.
+Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval. When a run produces changes, Neo opens a [pull request](/docs/ai/pull-requests/) that goes through your normal review process.
 
 ## What you can do with an automation
 
-Drift detection, dependency updates, compliance scans, and cost reviews are typical starting points: work that's important every time but identical enough that a prompt can capture it. Because every run produces a pull request, branch protection rules and required reviewers still gate what reaches your infrastructure. The autonomy level is configurable per automation for tighter oversight.
+Provider freshness checks, encryption audits, backup audits, and activity digests are typical starting points: work that's important every time but identical enough that a prompt can capture it. When a run produces changes, Neo opens a pull request, so branch protection rules and required reviewers still gate what reaches your infrastructure. The autonomy level is configurable per automation for tighter oversight.
 
 ## Defaults that fit recurring work
 
@@ -34,7 +34,7 @@ You can edit or delete an automation from the **Automations** tab.
 
 ## How automations interact with the rest of Neo
 
-Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/settings/) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/integrations/cli/) default to inheriting the organization's connected CLIs, overridable per automation.
+Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/settings/) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/integrations/cli/) use the credentials configured during setup.
 
 ## How permissions work
 
