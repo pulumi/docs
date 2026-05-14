@@ -1,4 +1,4 @@
-name: Claude Code
+name: Claude Code (chat)
 
 # Off-the-shelf @claude responder. Tag mode (no custom `prompt:`) lets
 # the action auto-post its animated tracking comment with per-tool-call

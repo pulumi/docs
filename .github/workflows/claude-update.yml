@@ -1,4 +1,4 @@
-name: Claude Code (update-review)
+name: Quality Review (update-review)
 
 # Re-entrant pinned-review refresh, dispatched by the explicit hashtag
 # `#update-review` on an `@claude` mention. Hashtag-driven routing means

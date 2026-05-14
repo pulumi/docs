@@ -1,4 +1,4 @@
-name: Claude Code Review
+name: Quality Review (main)
 
 # Full review is chained to complete AFTER Claude Triage, so the review
 # sees the freshly-applied state labels. Listening to the same
@@ -16,7 +16,7 @@ on:
   pull_request:
     types: [synchronize]
   workflow_run:
-    workflows: ["Claude Triage"]
+    workflows: ["Quality Review (triage)"]
     types: [completed]
   # Manual dispatch entry point used by claude-new.yml when an authorized
   # user invokes `@claude #new-review` to regenerate the pinned review
@@ -287,7 +287,7 @@ jobs:
           HEAD_SHA="${{ github.event.workflow_run.head_sha || steps.pr-context.outputs.head_sha }}"
           DETAILS_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           CHECK_ID=$(gh api -X POST "repos/${{ github.repository }}/check-runs" \
-            -f name="Claude Code Review" \
+            -f name="Quality Review" \
             -f head_sha="$HEAD_SHA" \
             -f status="in_progress" \
             -f details_url="$DETAILS_URL" \
@@ -1125,7 +1125,7 @@ jobs:
           fi
           jq -n \
             --arg conclusion "$CONCLUSION" \
-            --arg title "Claude Code Review" \
+            --arg title "Quality Review" \
             --arg summary "$SUMMARY" \
             '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
             | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true

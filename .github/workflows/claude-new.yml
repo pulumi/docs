@@ -1,4 +1,4 @@
-name: Claude Code (new-review)
+name: Quality Review (new-review)
 
 # Power-user "regenerate from scratch" path. Dispatched by the explicit
 # hashtag `#new-review` on an `@claude` mention — typically used to
