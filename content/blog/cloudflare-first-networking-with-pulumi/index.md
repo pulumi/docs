@@ -25,7 +25,7 @@ social:
         Build DNS, WAF, Workers, and Access policies as a Pulumi baseline.
 ---
 
-Platform teams managing multi-cloud applications often face a dangerous visibility gap. While origin infrastructure is tightly controlled, the edge configuration often drifts through manual console tweaks. DNS records point to stale origins, WAF rules are inconsistent across environments, and Zero Trust policies fail to keep pace with team changes. This edge drift leads to application exposure or routing failures that origin teams only notice after users report them.
+Platform teams managing multi-cloud applications face a dangerous visibility gap. While origin infrastructure is tightly controlled, the edge configuration often drifts through manual console tweaks. DNS records point to stale origins, WAF rules are inconsistent across environments, and Zero Trust policies fail to keep pace with team changes. This edge drift leads to application exposure or routing failures that origin teams only notice after users report them.
 
 As applications span multiple clouds, the edge becomes the only consistent layer for security and traffic management. The cost of waiting for a unified edge strategy is high. Every manual change is a potential security hole or a performance bottleneck that bypasses your standard CI/CD rigor.
 
@@ -36,9 +36,9 @@ As applications span multiple clouds, the edge becomes the only consistent layer
 In this post, you will build a standardized Cloudflare edge baseline. You'll use Pulumi to define:
 
 1. **DNS records** to point to your multi-cloud origins.
-2. **WAF custom rules** to block malicious traffic before it hits your network.
-3. **A Worker canary** to handle edge logic and header validation.
-4. **Zero Trust Access policies** to secure internal tools and origin access.
+1. **WAF custom rules** to block malicious traffic before it hits your network.
+1. **A Worker canary** to handle edge logic and header validation.
+1. **Zero Trust Access policies** to secure internal tools and origin access.
 
 By the end, you will have a version-controlled edge that you can validate and deploy across any environment.
 
@@ -48,10 +48,10 @@ We'll build a Pulumi program that sets up a complete edge environment. This appr
 
 ### Setting up the provider
 
-First, ensure you have the `@pulumi/cloudflare` package installed and your credentials configured.
+First, ensure you have the `@pulumi/cloudflare` package installed and your credentials configured. The examples below are checked against `@pulumi/cloudflare@6.15.0`, the current v6 Pulumi Registry API at the time of writing.
 
 ```bash
-npm install @pulumi/cloudflare
+npm install @pulumi/cloudflare@6.15.0
 pulumi config set --secret cloudflare:apiToken "$CLOUDFLARE_API_TOKEN"
 ```
 
@@ -96,15 +96,15 @@ const wafRule = new cloudflare.Ruleset("waf-rule", {
 const worker = new cloudflare.WorkersScript("canary-worker", {
     accountId: accountId,
     scriptName: "edge-canary",
+    mainModule: "worker.js",
     content: `
-        addEventListener('fetch', event => {
-            event.respondWith(handleRequest(event.request))
-        })
-        async function handleRequest(request) {
-            return new Response('Edge Baseline Validated', {
-                headers: { 'x-edge-baseline': 'active' },
-            })
-        }
+        export default {
+            async fetch(request) {
+                return new Response("Edge Baseline Validated", {
+                    headers: { "x-edge-baseline": "active" },
+                });
+            },
+        };
     `,
 });
 
@@ -146,9 +146,9 @@ const accessApp = new cloudflare.ZeroTrustAccessApplication("internal-tool", {
 
 Once you run `pulumi up`, you can validate your edge baseline with these steps:
 
-1. **DNS Check**: Run `dig www.example.com` to confirm the record points to Cloudflare's proxied IPs.
-2. **WAF Test**: Attempt to access `example.com/admin` from an unauthorized IP and verify you receive a 403 Forbidden response.
-3. **Worker Canary**: Use `curl -I https://example.com` and check for the `x-edge-baseline: active` header.
-4. **Access Policy**: Navigate to `admin.example.com` and verify you are redirected to the Cloudflare Access login page.
+1. **DNS check**: Run `dig www.example.com` to confirm the record points to Cloudflare's proxied IPs.
+1. **WAF test**: Attempt to access `example.com/admin` from an unauthorized IP and verify you receive a 403 Forbidden response.
+1. **Worker canary**: Use `curl -I https://example.com` and check for the `x-edge-baseline: active` header.
+1. **Access policy**: Navigate to `admin.example.com` and verify you are redirected to the Cloudflare Access login page.
 
 By managing these resources as code, you eliminate the risk of manual drift and ensure that every environment starts with a secure, validated edge baseline.
