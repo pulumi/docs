@@ -37,17 +37,21 @@ The risk of unauthorized data access or accidental data loss increases every tim
 In this post, you will learn how to manage PostgreSQL access control as code using Pulumi. You will build:
 
 1. **Custom roles** for applications and developers.
-2. **Database and schema grants** that follow the principle of least privilege.
-3. **Default privileges** to ensure that new tables automatically inherit the correct permissions.
+1. **Database and schema grants** that follow the principle of least privilege.
+1. **Default privileges** to ensure that new tables automatically inherit the correct permissions.
 
 By the end, you will have a secure, automated database access model that survives schema changes and team rotations.
 
-## Modeling Roles and Databases
+## Modeling roles and databases
 
 The first step is to define the roles and databases. In PostgreSQL, a role can represent a user or a group.
 
 ```typescript
 import * as postgresql from "@pulumi/postgresql";
+import * as pulumi from "@pulumi/pulumi";
+
+const config = new pulumi.Config();
+const dbPassword = config.requireSecret("dbPassword");
 
 const myDatabase = new postgresql.Database("my-database", {
     name: "app_db",
@@ -56,11 +60,11 @@ const myDatabase = new postgresql.Database("my-database", {
 const appRole = new postgresql.Role("app-role", {
     name: "app_user",
     login: true,
-    password: "very-secure-password",
+    password: dbPassword,
 });
 ```
 
-## Managing Grants
+## Managing grants
 
 Once you have roles and databases, you need to grant permissions. The `postgresql.Grant` resource allows you to specify exactly what a role can do.
 
@@ -81,7 +85,7 @@ const schemaGrant = new postgresql.Grant("schema-grant", {
 });
 ```
 
-## Automating with Default Privileges
+## Automating with default privileges
 
 To avoid manual grants for every new table, use `postgresql.DefaultPrivileges`. This ensures that any new table created by a specific role automatically has the correct permissions.
 
@@ -96,12 +100,14 @@ const defaultPrivs = new postgresql.DefaultPrivileges("read-only-defaults", {
 });
 ```
 
+Default privileges apply only to future objects created by the configured `owner` role. They do not retroactively grant access to existing tables.
+
 ## Validation
 
 After running `pulumi up`, you can validate your PostgreSQL RBAC model:
 
 1. **Role Check**: Run `\du` in `psql` to verify that the `app_user` role exists with the correct attributes.
-2. **Grant Verification**: Run `\z` to see the access control list for your tables and schemas.
-3. **Default Privilege Test**: Create a new table as the `postgres` user and verify that the `app_user` automatically has `SELECT` permissions on it.
+1. **Grant Verification**: Run `\z` to see the access control list for your tables and schemas.
+1. **Default Privilege Test**: Create a new table as the `postgres` user and verify that the `app_user` automatically has `SELECT` permissions on it.
 
 By managing your PostgreSQL roles and grants as code, you ensure that your security model is always in sync with your database schema, providing a clear audit trail and reducing the risk of stale or excessive permissions.
