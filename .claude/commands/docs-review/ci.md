@@ -70,31 +70,60 @@ The workflow ran `compose-review.py` and wrote **`.review-draft.md`** at the wor
 
 ### 3. Your editorial pass
 
-Edit the draft (the composer ASSEMBLES; you JUDGE):
+Edit the draft (the composer ASSEMBLES; you JUDGE). Each numbered step below is wrapped in a `<step>` tag for structural anchoring — work through them in order.
 
-1. **Triage the stub bucket bullets.** For each `- **[L…]**` bullet with a `<TODO>` marker under 🚨 Outstanding / ⚠️ Low-confidence: decide whether the finding is real and pick the matching outcome. The principle: 🚨 Outstanding should only contain things the **author must address before merging**. Findings that turn out to be verifier noise move out of 🚨 / ⚠️ into 📋 Triaged verifier findings so the active sections stay clean (and 🚨 stays meaningful for a future merge-gate).
+**Bucket-transition vocabulary (used by steps 1 + 2).** Every `- **[L<line>]**` stub bullet has four possible outcomes; the `**Spurious:** / **Mis-sourced:** / **Pre-existing:**` label IS the resolution — never add a `No author action required` / `nothing to fix` / `the link is correct` coda after one.
 
-   **🚨 stubs** (composer-promoted from `contradicted` / `mismatch` trail verdicts). The validator's `trail-verdict-bucket-promotion` rule requires every `contradicted` / `mismatch` trail verdict to surface as a `**[L<line>]**` bullet somewhere — **🚨 Outstanding, 📋 Triaged verifier findings, or 💡 Pre-existing** — so you **MUST NOT delete** the bullet outright; you may only triage it to one of those sections. Pick:
-   - **Actionable contradiction** — keep the bullet in 🚨. Replace the `<TODO: …>` with the fix prose / suggestion block per `docs-review:references:shared-criteria` (quote-and-rewrite mandate); mirror any `framing:` note already in the bullet (anti-hedge mandate for `⚔️ mismatch`: state the verdict, name the corroborating siblings, no either-or softening).
-   - **Spurious — verifier false-positive** (the verifier checked stale data, the wrong site, missed a PR-local alias, hit an SPA / JS-rendered page, compared against a paraphrased version of the claim, etc.): replace the bullet body with `**Spurious:** <1-2 sentence reason naming what went wrong>` and **move the bullet to `### 📋 Triaged verifier findings`**. Do **NOT** keep it in 🚨; do **NOT** add `No author action required`, `nothing to fix`, `the link is correct`, or any equivalent coda — the `**Spurious:**` label IS the resolution.
-   - **Pre-existing in this file, not introduced by this PR** (a dead link, stale anchor, broken shortcode that was already there on a line you didn't touch): replace the bullet body with `**Pre-existing:** <1-2 sentence reason>` and a one-sentence judgment on whether the author should fix it here or open a follow-up. **Move the bullet to `### 💡 Pre-existing issues in touched files`**, not 🚨.
+- Keep in **🚨 Outstanding** — actionable; replace the `<TODO: …>` with the fix prose / suggestion block (quote-and-rewrite mandate; anti-hedge mandate for `⚔️ mismatch`). Default for `contradicted` / `mismatch` / Hugo preflight / frontmatter preflight.
+- Move to **📋 Triaged verifier findings** with `**Spurious:** <reason>` — verifier got it wrong (stale data, wrong site, SPA page, paraphrased claim, ran out of turns on a duplicate). Applies to fact-check verdicts only; not preflight.
+- Move to **📋 Triaged verifier findings** with `**Mis-sourced:** <reason>` — same shape as Spurious but applies to `unverifiable` ⚠️ entries (wrong URL followed, cited URL unrelated to claim subject, etc.).
+- Move to **💡 Pre-existing issues in touched files** with `**Pre-existing:** <reason>` — already broken on a line this PR didn't touch (or, for frontmatter preflight, a PR-internal rename whose collision is intentional and announced).
 
-   **⚠️ stubs** (`unverifiable` or low-confidence `verified`). The italic guidance under ⚠️ is *"Review each and resolve as appropriate — these don't block the PR"*, so the resolution surface here is softer. Pick:
-   - **Genuine low-confidence** (the claim is plausible but no canonical source was reachable; the author should consider providing one) — keep in ⚠️; replace the `<TODO: …>` with the author-check question.
-   - **Factual blocker** (a price / spec / capability with no citation a reader needs, AND the claim looks wrong on the merits): promote to 🚨 Outstanding and apply the 🚨 rules above.
-   - **Mis-sourced verifier noise** (the verifier followed the wrong URL, hit a dead/SPA page, ran out of turns on a duplicate claim, the cited URL was unrelated to the claim subject, the claim was duplicated elsewhere in the PR and ✅ verified there): replace the bullet body with `**Mis-sourced:** <1-2 sentence reason>` and **move the bullet to `### 📋 Triaged verifier findings`**. Do **NOT** leave it in ⚠️; do **NOT** add a `no author action needed` coda — the `**Mis-sourced:**` label IS the resolution.
-   - **Not a checkable claim** (it's actually descriptive of the author's own design, git/diff metadata, a path segment, etc.): you may remove the bullet entirely and decrement the count cell — but the right upstream fix is for the verification step to return `not-a-claim`. No validator rule forces it to stay.
-2. **Hugo-build and frontmatter findings are now pre-stubbed by the composer** — each Hugo error / link-integrity break and each frontmatter alias / URL / menu-parent collision arrives as a `**[L<line>]**` bullet in 🚨 Outstanding with a `<TODO: confirm or REMOVE …>` marker (route: `preflight`). Confirm the suggested fix and write the rewrite/diff into the bullet body, or REMOVE the bullet if it's a CI-environment near-miss / intentional collision / PR-internal rename (then decrement the count cell). PR-internal-rename frontmatter cases get `**Pre-existing:** <reason>` and move to `### 💡 Pre-existing`. **Add the findings the composer couldn't pre-stub** — internal-link / shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (the 3-specialist checks), editorial-balance threshold flags (Tier 2 + the Tier 1 outliers shown in §📊), intuition-flag promotions, and any two-question-test findings from the domain rules. **Every `**[L<line>]**` bucket bullet you ADD MUST be backed by a matching 🔍 Verification trail line — `bucket-bullet-trail-match` / `bucket-bullet-line-range-prefix` enforce this and a missing anchor soft-floors the review.** Render the file path as a backticked literal immediately after the `**[L<line>]**` prefix so the line number isn't ambiguous on multi-file PRs — e.g. `- **[L45]** `content/docs/foo/_index.md` "claim text" — ...`; the corresponding trail line uses `- L45 in `content/docs/foo/_index.md` "..."` (matches what the composer already renders for pre-stubbed bullets). If the finding has no fact-check claim behind it (code-examples, editorial-balance threshold, intuition, two-question-test), add its trail line first (`- L<line> in `path` "<short description>" → <emoji> <verdict>` — e.g. `⚔️ mismatch` for a cross-sibling divergence, `🤷 unverifiable` for an editorial-balance flag whose verdict needs reviewer judgment). If a finding genuinely has no line anchor at all, **fold it into prose elsewhere — not into a `**[L…]**` bullet**.
-3. **Fill the cross-sibling investigation-log line** — replace `0 of N siblings (fan-out runs in-review — replace this count)` with the actual `X of N siblings` from your fan-out (or with a carried-forward count on a re-entrant run).
-4. **Write the Summary paragraph and the Review-confidence table** — fill the `<TODO>` summary (one paragraph: what this PR is / what wrongness blocks a reader / what passes ran) and each confidence row's `<TODO: HIGH/MEDIUM/LOW>` + Notes. Add or remove confidence rows per the references you actually applied; don't say HIGH unless the work finished.
-5. **Fill the Review-history `<TODO: one-line summary>`** with a one-line summary of what this review found.
-6. **Fill the Tier-2 editorial-balance `<TODO>`s** (vendor / entity mention counts, FAQ steering ratios) if the §📊 section is in rich form; don't touch the Tier 1 stats (`editorial-balance-counts-faithful` enforces them against the JSON).
-7. **Keep the body self-consistent** — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add a claim the artifact missed, you may **not** drop a candidate-claims-floor entry — see `docs-review:references:fact-check`); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical. In particular, never drop a `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict: `pass-3-unverifiable-evidence` needs that pointer, the composer rendered it verbatim from `.verified-claims.json` — leave it intact.**
-8. Apply the `docs-review:references:output-format` DO-NOT list before emitting. **Do NOT WebFetch / re-verify claims** — `.verified-claims.json` (rendered into the trail) is the verdict source; editing a trail line to change a verdict word fails the `verified-claims-trail-faithful` rule (if you believe a verdict is wrong, render it as recorded and open a follow-up issue). The only fan-out you run is the cross-sibling sibling-read digest (fresh-review path only).
-9. **On a re-entrant run** (`docs-review:references:update`): the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent.
-10. **Write for the author, not the pipeline.** Bullet bodies and Summary prose must be readable to a PR author who knows nothing about how this review was assembled. Refer to **outcomes** (`✅ verified`, `❌ contradicted`, source URL), not the **processes** that produced them. Avoid pipeline-internal terms like *"the extraction layer"*, *"the verifier / validator / splicer"*, *"Pass 1/2/3"*, *"framing comparison"*, *"soft floor"*, *"the composer"*, or script names (`validate-pinned`, `validator-fix`, `verify-claims`, `splicer`, etc.). If you need to refer to the verification step, say *"the verification step"* or describe the outcome directly.
-    - **Example bad:** "Counted as ❌ contradicted because the extraction layer truncated the claim text..."
-    - **Example good:** "Flagged as ❌ contradicted in error — the source actually supports the claim. The verification step compared a shortened version of the claim against the source."
+`trail-verdict-bucket-promotion` accepts any of 🚨, 📋, or 💡 for `contradicted` / `mismatch` trail verdicts — you may NOT delete a stub bullet outright (only move it). REMOVE is allowed for ⚠️ `not-a-claim` cases and for preflight stubs that the reviewer confirms are CI-environment noise (then decrement the count cell).
+
+<step number="1" name="Triage stub bucket bullets">
+For each `- **[L…]**` `<TODO>`-marked bullet under 🚨 / ⚠️, apply the bucket-transition vocabulary above. 🚨 stubs come from `contradicted` / `mismatch` trail verdicts (or from preflight Hugo / frontmatter pre-stubs — see step 2). ⚠️ stubs come from `unverifiable` or low-confidence `verified`. The principle: 🚨 stays meaningful for a future merge-gate — only things the author must address before merging.
+</step>
+
+<step number="2" name="Add findings the composer couldn't pre-stub">
+Hugo-build errors / link-integrity breaks and frontmatter alias/URL/menu-parent collisions are now pre-stubbed by the composer (route: `preflight`); their bullets carry a `<TODO: confirm or REMOVE …>` marker — confirm the fix or REMOVE per the bucket-transition vocabulary. **Add** the rest: internal-link / shortcode breaks in content, cross-sibling mismatches (from your in-review sibling-read fan-out — `docs-review:references:fact-check` §Cross-sibling consistency), code-examples findings (3-specialist checks), editorial-balance threshold flags (Tier 2 + Tier 1 outliers from §📊), intuition-flag promotions, two-question-test findings from the domain rules.
+
+Every `**[L<line>]**` bucket bullet you ADD MUST be backed by a matching 🔍 trail line (`bucket-bullet-trail-match` / `bucket-bullet-line-range-prefix` enforce this — a missing anchor soft-floors the review). Render the file path as a backticked literal after the L-prefix: `- **[L45]** ` `content/docs/foo/_index.md` ` "claim text" — …`; the trail line uses `- L45 in ` `content/docs/foo/_index.md` ` "…"`. If the finding has no fact-check claim behind it, add its trail line first (`- L<line> in ` `path` ` "<short description>" → <emoji> <verdict>` — `⚔️ mismatch` for cross-sibling, `🤷 unverifiable` for an editorial-balance flag, etc.). Findings with no line anchor at all go in prose elsewhere — not in a `**[L…]**` bullet.
+</step>
+
+<step number="3" name="Fill cross-sibling investigation-log count">
+Replace `0 of N siblings (fan-out runs in-review — replace this count)` with the actual `X of N siblings` from your fan-out (or carried-forward count on a re-entrant run).
+</step>
+
+<step number="4" name="Write Summary + Review-confidence table">
+Fill the `<TODO>` summary paragraph (what this PR is / what wrongness blocks a reader / what passes ran) and each confidence row's `<TODO: HIGH/MEDIUM/LOW>` + Notes. Add or remove rows per the references you actually applied; don't say HIGH unless the work finished.
+</step>
+
+<step number="5" name="Fill Review-history one-line summary">
+One line summarizing what this review found.
+</step>
+
+<step number="6" name="Fill Tier-2 editorial-balance TODOs">
+Vendor / entity mention counts, FAQ steering ratios — if §📊 is in rich form. Don't touch the Tier 1 stats (`editorial-balance-counts-faithful` enforces them against the JSON).
+</step>
+
+<step number="7" name="Keep the body self-consistent">
+Count-table cells == bucket-bullet counts (style findings count in ⚠️). Every 🔍 trail line corresponds to a verdict; you may add a claim the artifact missed but may NOT drop a candidate-claims-floor entry (`docs-review:references:fact-check`). Every `**[L…]**` bucket bullet matches a trail record. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical.** In particular, the `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict is load-bearing for `pass-3-unverifiable-evidence` — the composer rendered it verbatim from `.verified-claims.json`; leave it intact.
+</step>
+
+<step number="8" name="Apply output-format DO-NOT list">
+See `docs-review:references:output-format`. Do NOT WebFetch / re-verify claims — `.verified-claims.json` (rendered into the trail) is the verdict source. Editing a trail line to change a verdict word fails `verified-claims-trail-faithful`; if you believe a verdict is wrong, render it as recorded and open a follow-up issue. The only fan-out you run is the cross-sibling sibling-read digest (fresh-review path only).
+</step>
+
+<step number="9" name="On a re-entrant run">
+Per `docs-review:references:update`: the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent.
+</step>
+
+<step number="10" name="Write for the author, not the pipeline">
+Bullet bodies and Summary prose must read to a PR author who knows nothing about how this review was assembled. Refer to **outcomes** (`✅ verified`, `❌ contradicted`, source URL), not the **processes**. Avoid pipeline-internal terms like *"the extraction layer"*, *"the verifier / validator / splicer"*, *"Pass 1/2/3"*, *"framing comparison"*, *"soft floor"*, *"the composer"*, or script names. Say *"the verification step"* or describe the outcome directly.
+- **Bad:** "Counted as ❌ contradicted because the extraction layer truncated the claim text..."
+- **Good:** "Flagged as ❌ contradicted in error — the source actually supports the claim. The verification step compared a shortened version of the claim against the source."
+</step>
 
 ### 4. When you're done
 
