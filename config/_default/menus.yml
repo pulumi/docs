@@ -301,7 +301,7 @@ reference:
     parent: reference-home
     identifier: reference-pre-built-policy-packs
     weight: 3
-  - name: TypeScript (Node.js) ↗
+  - name: TypeScript ↗
     parent: reference-sdks
     url: /docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
