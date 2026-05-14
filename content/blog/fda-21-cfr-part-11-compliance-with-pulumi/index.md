@@ -30,34 +30,34 @@ Life sciences organizations operate in a highly regulated environment where the 
 
 As infrastructure moves to the cloud, the systems managing that infrastructure must also meet these rigorous standards. Teams in regulated industries need clear documentation on how Pulumi can support an FDA 21 CFR Part 11 compliance program.
 
-In this post, we will explore how Pulumi features map to Part 11 controls and how you can use Infrastructure as Code (IaC) to support a compliance evidence workflow for your regulated workloads.
+In this post, we will map Pulumi features to Part 11 control areas and show how Infrastructure as Code (IaC) can support compliance evidence for regulated workloads.
 
-This post provides compliance documentation support for organizations meeting FDA 21 CFR Part 11 requirements. Note that while Pulumi tools support compliance efforts, they do not provide automated certification or guarantee regulatory approval. In this post, you will build a compliance evidence workflow for regulated workloads.
+This post provides compliance documentation support for organizations meeting FDA 21 CFR Part 11 requirements. Note that while Pulumi tools support compliance efforts, they do not provide automated certification or guarantee regulatory approval. You will see patterns for compliance evidence workflows in regulated workloads.
 
 <!--more-->
 
-## Understanding 21 CFR Part 11 in the Cloud
+## Understanding 21 CFR Part 11 in the cloud
 
 FDA 21 CFR Part 11 applies to records in electronic form that are created, modified, maintained, archived, retrieved, or transmitted under any records requirements set forth in agency regulations. For infrastructure, this means the configurations, deployment logs, and state history that define your regulated environments are considered electronic records.
 
 The regulation focuses on several key areas:
 1. **Validation**: Ensuring systems are accurate, reliable, and perform consistently.
-2. **Audit Trails**: Computer-generated, time-stamped records of all actions.
-3. **Record Protection**: Ensuring records are retained and can be retrieved throughout their retention period.
-4. **Authority Checks**: Ensuring only authorized individuals can access the system and perform actions.
+1. **Audit trails**: Computer-generated, time-stamped records of all actions.
+1. **Record protection**: Ensuring records are retained and can be retrieved throughout their retention period.
+1. **Authority checks**: Ensuring only authorized individuals can access the system and perform actions.
 
-## Mapping Pulumi to Part 11 Controls
+## Mapping Pulumi to Part 11 controls
 
 Pulumi provides a suite of features that can help address these requirements, allowing you to treat your infrastructure with the same level of rigor as your application code.
 
-### 1. System Validation (11.10(a))
+### 1. System validation (11.10(a))
 
 Validation is the process of demonstrating that a system does what it is intended to do. With Pulumi, validation starts before a single resource is deployed.
 
 * **[Pulumi Policies](/docs/insights/policy/)**: You can enforce compliance rules across your entire organization. For example, you can require that all S3 buckets have versioning and encryption enabled, or that only approved instance types are used.
 * **Testing**: Pulumi supports unit, property, and integration testing in familiar languages like TypeScript. This allows you to verify your infrastructure logic before deployment.
 
-### 2. Audit Trails (11.10(e))
+### 2. Audit trails (11.10(e))
 
 Part 11 requires a computer-generated, time-stamped audit trail that records the date and time of operator entries and actions that create, modify, or delete electronic records.
 
@@ -68,14 +68,14 @@ Part 11 requires a computer-generated, time-stamped audit trail that records the
 
 Part 11 auditability also depends on the systems you deploy, not only the platform you use to deploy them. Use Pulumi to provision cloud-native audit trails for regulated workloads, such as AWS CloudTrail delivered to encrypted, versioned S3 buckets, integrated with CloudWatch Logs for monitoring and alerting. AWS maps Part 11 controls to capabilities such as CloudTrail log file validation, CloudTrail encryption, CloudWatch Logs integration, and S3 data event logging. Pulumi lets you define those controls as code and review every change before it reaches production.
 
-### 3. Record Protection and Retrieval (11.10(b) and (c))
+### 3. Record protection and retrieval (11.10(b) and (c))
 
 Electronic records must be protected to enable their accurate and ready retrieval throughout the records retention period.
 
 * **State Management**: Pulumi Cloud stores your state files securely, with built-in versioning and history.
 * **Human-Readable Exports**: You can export your stack state at any time using `pulumi stack export`, providing a JSON representation of your infrastructure that is both human-readable and suitable for long-term archiving.
 
-### 4. Authority Checks (11.10(g))
+### 4. Authority checks (11.10(g))
 
 Access to the system must be limited to authorized individuals.
 
@@ -84,7 +84,7 @@ Access to the system must be limited to authorized individuals.
 
 Apply the same model to the cloud systems that hold regulated records. Pulumi can configure IAM roles, groups, permission boundaries, and service-specific access controls from a central identity provider (IdP) model so that access to audit logs, storage buckets, and application environments follows the same reviewable least-privilege baseline.
 
-## Configuring Audit Trails for Regulated Workloads
+## Configuring audit trails for regulated workloads
 
 The following AWS example shows the kind of infrastructure baseline Pulumi can manage for systems that need audit trails. It creates a versioned and encrypted S3 bucket for audit records, a CloudWatch Log Group for near real-time monitoring, and a multi-region CloudTrail trail with log file validation enabled.
 
@@ -176,21 +176,21 @@ const trail = new aws.cloudtrail.Trail("part11-audit-trail", {
 
 This does not make an environment compliant by itself. It gives the validation team a concrete, reviewable definition of where audit records are stored, how they are protected, and which services generate them.
 
-## Neo-Assisted Compliance and Documentation
+## Neo-assisted compliance and documentation
 
 [Pulumi Neo](/product/neo/), our AI-powered infrastructure agent, can assist in maintaining and documenting your compliance posture. While Neo does not replace the need for human oversight, it can significantly accelerate the documentation process.
 
-### Generating Validation Documentation
+### Generating validation documentation
 
 You can use Neo to generate summaries of your infrastructure state and policy compliance for your validation reports. For example, you might use a prompt like this:
 
 > "Neo, generate a report of all resources in the 'production' stack. Include their encryption status and any active Pulumi policy violations. Format this as a table suitable for a system validation document."
 
-### Continuous Compliance and Drift Detection
+### Continuous compliance and drift detection
 
 Maintaining compliance is not a one-time event. Pulumi's scheduled drift detection can automatically check your environment for changes made outside of Pulumi. When drift is detected, it can trigger an alert or a review workflow, ensuring your "as-built" infrastructure matches your "as-validated" code.
 
-## Enforcing Audit Trail Controls with Pulumi Policies
+## Enforcing audit trail controls with Pulumi Policies
 
 Once you define an approved audit-trail baseline, use Pulumi Policies to prevent drift from that baseline. For example, the following policy requires CloudTrail resources to use multi-region logging, log file validation, and CloudWatch Logs integration.
 
@@ -223,5 +223,7 @@ You can combine this with policies for S3 versioning, S3 encryption, S3 public a
 ## Conclusion
 
 Pulumi provides tools that can help build and manage infrastructure in alignment with the high standards of FDA 21 CFR Part 11. By using Infrastructure as Code, Pulumi Policies, IdP-backed access controls, cloud-native audit trails, and the audit capabilities of Pulumi Cloud, life sciences organizations can configure regulated systems with clearer evidence and stronger deployment guardrails.
+
+{{< blog/cta-button "Explore Pulumi Policies" "/docs/insights/policy/" >}}
 
 *Disclaimer: This post provides implementation guidance and illustrates how Pulumi features can support compliance efforts. It does not constitute legal advice or a formal compliance attestation for FDA 21 CFR Part 11. Organizations are responsible for their own regulatory validation and compliance.*
