@@ -31,52 +31,22 @@ Pulumi stores state in a _backend_ of your choosing. A backend is an API and sto
 
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
-> Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/concepts/secrets/).
-
 {{% notes "info" %}}
-This page covers the technical details of state management and backend configuration. To understand the benefits and features of Pulumi Cloud versus DIY backends, see [Pulumi Cloud and Open Source Pulumi](/docs/iac/concepts/pulumi-cloud/).
+Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/concepts/secrets/).
 {{% /notes %}}
 
-## Deciding On a State Backend
+{{% notes "info" %}}
+This page covers the technical details of state management and backend configuration. To understand the benefits and features of Pulumi Cloud versus DIY backends, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/).
+{{% /notes %}}
 
-Pulumi supports two classes of state backends for storing your infrastructure state:
+## Choosing a state backend
 
-- **Pulumi Cloud**: a managed cloud experience using the online or self-hosted Pulumi Cloud application
-- **DIY backend**: "Do it Yourself"- a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem
+Pulumi supports two classes of state backend:
 
-Pulumi's SDK works great with all backends, although some details differ between them.
+- **Pulumi Cloud**: a managed backend using the online or self-hosted Pulumi Cloud application. It is the default backend and requires no additional configuration after [installing the CLI](/docs/install/).
+- **DIY backend**: a "Do It Yourself" backend that stores state in an object store you manage—AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem.
 
-Pulumi Cloud, hosted at <a href="https://app.pulumi.com/signin">`app.pulumi.com`</a>, is the default backend, as it provides the best combination of usability, safety, and security for most users. Important features include:
-
-- Robust state management, with transactional checkpointing for fault tolerance and recovery
-- Concurrent state locking to prevent corrupting your infrastructure state in a team environment
-- Full deployment history for auditing and rollback purposes
-- Encrypted state in transit and at rest
-- Managed encryption and key management for secrets
-- Secure access to cloud resource metadata, with client-side authentication to your cloud provider
-- Team policies, including Policy as Code and Role Based Access Control (RBAC)
-
-The Pulumi Cloud backend requires no additional configuration after [installing the CLI](/docs/install/). Pulumi offers this backend hosted online free for individuals, with [advanced tiers](/pricing/) available for teams and enterprises (with <a href="https://app.pulumi.com/site/trial">free trials</a>). It has successfully undergone multiple security audits including SOC2, pen-testing, and more.
-
-> To learn more about the Pulumi Cloud backend's design, including why it doesn't need your cloud credentials, see [Pulumi Cloud Architecture](#pulumi-cloud-architecture). If you are interested in hosting your own instance, see the [Self-Hosting User Guide](/docs/pulumi-cloud/self-hosted/).
-
-Pulumi also lets you manage state yourself using a DIY backend. Your state is stored in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server such as Minio or Ceph, a PostgreSQL database, or on your local filesystem. These DIY backends are all open source and free to use in any setting.
-
-DIY backends include several important built-in features:
-
-- **State locking**: Enabled by default to prevent concurrent state modifications
-- **History tracking**: Automatic checkpoint history for each stack
-- **Project-scoped stacks**: Stacks are [namespaced by project](#scoping) for backends created with Pulumi v3.61.0+
-- **Secrets encryption**: Support for multiple encryption providers including passphrase, AWS KMS, Azure Key Vault, Google Cloud KMS, and HashiCorp Vault
-
-However, using a DIY backend requires you to manage operational aspects yourself, including:
-
-- Configuring secure access to your storage backend (IAM policies, network security)
-- Implementing backup and disaster recovery procedures
-- Monitoring and maintaining high availability
-- Managing team access and permissions
-
-To choose a DIY backend, use the `pulumi login` command [as documented below](#using-a-diy-backend).
+Pulumi's SDK works with all backends, although some details differ between them. For a full comparison of the two options—including the operational concerns each one entails—see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/). For DIY backend setup instructions, see [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
 
 ## Logging into and out of State Backends
 
@@ -114,7 +84,7 @@ backend:
 ....
 ```
 
-For details on the various backend URL formats and options, please see the sections on using Pulumi Cloud and DIY backends.
+For details on the various backend URL formats and options, see the Pulumi Cloud backend section below and [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
 
 If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
 
@@ -149,8 +119,6 @@ To automatically generate and use a new access token, hit `<ENTER>`. This will o
 
 To view your access tokens, or create a new one manually, view the <a href="https://app.pulumi.com/account/tokens">Access Tokens</a> page.  You will see a list of past tokens, when they were last used, as well as the ability to revoke them.
 
-<img src="/images/docs/reference/state_tokens.png" alt="Pulumi.com Tokens Page" class="img-bordered">
-
 To log into a self-hosted instance of Pulumi Cloud, pass its API URL to the `login` command:
 
 ```sh
@@ -159,148 +127,11 @@ $ pulumi login https://pulumi.acmecorp.com
 
 Everything works the same as with the standard Pulumi Cloud, except that Pulumi will target your private instance instead of the shared one hosted at `app.pulumi.com`.
 
-### Pulumi Cloud Architecture
+To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/concepts/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).
 
-Pulumi Cloud is comprised of two Internet-accessible endpoints&mdash;a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`&mdash;with an assortment of cloud infrastructure to support its features. A simplified diagram of its architecture looks like this:
+## Using a DIY backend
 
-<img src="/images/docs/reference/state_saas.png" alt="Pulumi Cloud Architecture" class="img-bordered">
-
-Pulumi Cloud doesn't ever acquire your cloud credentials, and does not communicate with your cloud provider directly. Instead, the CLI itself coordinates with both Pulumi Cloud's API and your cloud provider's API directly. This ensures your IAM and key management does not need to change while adopting Pulumi. In particular, if you are running Pulumi deployments from [within a CI/CD environment](/docs/using-pulumi/continuous-delivery/), you can rely on existing mechanisms and security practices that your organization has already put in place.
-
-Pulumi Cloud is reliable, secure, and has undergone multiple audits, including SOC2 and professional pen-testing. Because of the client/server division of responsibilities &mdash; notably that the server doesn't have direct access to your cloud credentials, runtime data, or PII &mdash; Pulumi Cloud has been used in organizations with advanced compliance needs, including PCI, ISO 27001, HIPAA, and more. If you'd like to discuss any of these topics, please [contact us](/contact/).
-
-It is possible to host your own version of Pulumi Cloud in your private cloud environment. Pulumi offers versions that run natively on AWS, Azure, Google Cloud, Kubernetes, or simple virtual machine-based private and hybrid cloud environments. The architecture is very similar to the online version, but is privately hosted and does not depend on public access over the Internet:
-
-<img src="/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise Architecture" class="img-bordered">
-
-To learn more about self-host options, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) or [Contact Us](/pricing#contact).
-
-## Using a DIY Backend
-
-The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For DIY backends, state management including backup, sharing, and team access synchronization is custom and implemented manually. A basic file-based locking system is enabled by default for all DIY backends.
-
-> **Note**: Both Pulumi Cloud and DIY backends provide reliable state management. DIY backends include built-in state locking and history tracking. However, most users find Pulumi Cloud to be the easiest way to get started and scale. Pulumi Cloud handles operational concerns automatically, including backup and recovery, team collaboration, RBAC, and audit logging. It also provides a transactional API that offers stronger guarantees than blob storage protocols. With DIY backends, you will need to implement your own backup procedures and manage access control. For advanced state management concepts, see [Advanced State](#advanced-state).
-
-To use a DIY backend, specify a storage endpoint URL as `pulumi login`'s `<backend-url>` argument: `s3://<bucket-path>`, `azblob://<container-path>`, `gs://<bucket-path>`, or `file://<fs-path>`. This will tell Pulumi to store state in AWS S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem, respectively. Checkpoint files are stored in a relative`.pulumi` directory. For example, if you were using the Amazon S3 DIY backend, your checkpoint files would be stored at `s3://my-pulumi-state-bucket/.pulumi` where `my-pulumi-state-bucket` represents the name of your S3 bucket.
-
-Inside the `.pulumi` folder, we access the following subdirectories:
-
-1. `meta.yaml`: This is the metadata file. It does not hold information about the stacks but rather information about the backend itself.
-1. `stacks/`: Active state files for each stack (e.g. `dev.json` or `proj/dev.json` if the stack is scoped to a project).
-1. `locks/`: Lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
-1. `history/`: History for each stack (e.g. `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created).
-
-The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate, as described below.
-
-### Local Filesystem
-
-To use the filesystem backend to store your state files locally on your machine, pass the `--local` flag when logging in:
-
-```sh
-$ pulumi login --local
-```
-
-You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. All subsequent stack state will be stored as JSON files locally on your machine.
-
-The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
-
-```sh
-$ pulumi login file:///app/data
-```
-
-> **Note:** If you use a relative path (e.g. `file://./einstein`), it will be relative to _the current working directory_.
-
-Notice that `pulumi login --local` is syntactic sugar for `pulumi login file://~`.
-
-### AWS S3
-
-To use the [AWS S3](https://aws.amazon.com/s3/) backend, pass the `s3://<bucket-name>` as your `<backend-url>`:
-
-```sh
-$ pulumi login s3://<bucket-name>
-```
-
-{{% notes type="info"%}}
-As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile, add `awssdk=v2` along with the region and profile to the query string. The URL should be quoted to escape the shell operator `&`, and used as follows:
-
-```sh
-pulumi login 's3://<bucket-name>?region=us-east-1&awssdk=v2&profile=<profile-name>'
-```
-
-{{% /notes %}}
-
-{{% notes type="info"%}}
-The `bucket-name` value can include multiple folders, such as `my-bucket/app/project1`. This is useful when storing multiple projects' state in the same bucket.
-{{% /notes %}}
-
-To configure credentials and authorize access, please see the [AWS Session documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/). For additional configuration options, see [AWS Setup](/registry/packages/aws/installation-configuration/). If you're new to AWS S3, see [the AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
-
-This backend also supports [alternative object storage servers with AWS S3 compatible REST APIs](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services), including [Minio](https://www.minio.io/), [Ceph](https://ceph.io/), or [SeaweedFS](https://github.com/chrislusf/seaweedfs). To use such a server, you may pass `endpoint`, `disableSSL`, and `s3ForcePathStyle` querystring parameters to your `<backend-url>`, as follows:
-
-```sh
-$ pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true'
-```
-
-### Azure Blob Storage
-
-To use the [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) backend, pass the `azblob://<container-path>` as your `<backend-url>`:
-
-```sh
-$ pulumi login azblob://<container-path>
-```
-
-Set the `AZURE_STORAGE_ACCOUNT` environment variable to specify which Azure storage account to use. For authentication, you may set `AZURE_STORAGE_KEY` (a storage account access key) or `AZURE_STORAGE_SAS_TOKEN` (a shared access signature token). If neither is provided, the backend authenticates using [Azure SDK for Go's `DefaultAzureCredential`](https://learn.microsoft.com/en-us/azure/developer/go/azure-sdk-authentication), which attempts a series of methods in order, including managed identity, workload identity federation, service principal credentials (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`), and the Azure CLI. If you're new to Azure Blob Storage, see [the Azure documentation](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-cli).
-
-{{% notes type="info" %}}
-This backend authenticates using [Azure SDK for Go](https://learn.microsoft.com/en-us/azure/developer/go/azure-sdk-authentication), not the Pulumi Azure provider's authentication mechanism. The Azure provider's environment variables — such as `ARM_TENANT_ID`, `ARM_CLIENT_ID`, and `ARM_USE_OIDC` — are not supported. Use the Azure SDK's own environment variables (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`) for service principal authentication.
-{{% /notes %}}
-
-{{% notes type="info"%}}
-As of Pulumi CLI v3.41.1, you can also specify the storage account directly in the backend URL after authenticating with `az login`:
-
-```sh
-$ pulumi login azblob://<container-path>?storage_account=account_name
-```
-
-{{% /notes %}}
-
-{{% notes type="info"%}}
-The Azure account must have the [Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) or an equivalent role with permissions to read, write, and delete blobs.
-{{% /notes %}}
-
-### Google Cloud Storage
-
-To use the [Google Cloud Storage](https://cloud.google.com/storage/) backend pass the `gs://<bucket-path>` as your `<backend-url>`:
-
-```sh
-$ pulumi login gs://<my-pulumi-state-bucket>
-```
-
-To configure credentials for this backend, see [Application Default Credentials](https://cloud.google.com/docs/authentication/production). For additional configuration options, see [Google Cloud Setup](/registry/packages/gcp/installation-configuration/). If you're new to Google Cloud Storage, see [the Google Cloud documentation](https://cloud.google.com/storage/docs/quickstarts).
-
-### PostgreSQL
-
-To use the [PostgreSQL](https://www.postgresql.org/) backend pass the `postgres://<username>:<password>@<hostname>:<port>/<database>` as your `<backend-url>`:
-
-```sh
-$ pulumi login postgres://<username>:<password>@<hostname>:<port>/<database>
-```
-
-{{% notes type="warning" %}}
-Avoid including credentials directly in commands. Consider using environment variables or other secure credential management methods.
-{{% /notes %}}
-
-For additional configuration options, see the [README ↗](https://github.com/pulumi/pulumi/blob/master/pkg/backend/diy/postgres/README.md).
-
-### Scoping
-
-Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default&mdash;same as the Pulumi Cloud backend.
-
-Existing DIY backends will continue to use the global namespace for stacks. You can upgrade an existing DIY backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
-
-{{% notes type="info"%}}
-`pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
-{{% /notes %}}
+You can manage state yourself with a DIY backend that stores state in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. For setup instructions and per-backend configuration details, see [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
 
 ## Migrating Between State Backends
 
@@ -331,7 +162,9 @@ $ pulumi stack import --file my-app-production.stack.json
 
 After performing these steps, your stack will now be under the management of Pulumi Cloud. All subsequent operations should be performed using this new backend.
 
-> **Note:**: After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
+{{% notes type="info" %}}
+After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
+{{% /notes %}}
 
 ## Refreshing state
 
