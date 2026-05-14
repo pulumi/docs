@@ -6,7 +6,7 @@
 // Sizes:    (default) | xs | sm | lg | xl | icon | icon-xs | icon-sm | icon-lg
 
 .btn {
-    @apply inline-block shrink-0 text-center whitespace-nowrap max-w-full
+    @apply inline-flex items-center justify-center gap-1 shrink-0 max-w-full
            overflow-hidden text-ellipsis text-sm font-normal border border-transparent
            bg-clip-padding rounded-lg transition-all outline-none cursor-pointer select-none
            focus-visible:border-violet-primary focus-visible:ring-3 focus-visible:ring-violet-primary/50
@@ -20,18 +20,18 @@
 
 // Variants
 .btn-primary       { @apply bg-violet-primary text-white hover:bg-violet-800; }
-.btn-outline       { @apply border-gray-300 bg-white text-gray-950 hover:bg-gray-100 hover:border-gray-500 aria-expanded:bg-gray-100; }
+.btn-outline       { @apply border-gray-300 bg-white text-gray-950 hover:bg-gray-200/30 hover:border-gray-500 aria-expanded:bg-gray-100; }
 .btn-secondary     { @apply bg-gray-100/80 text-gray-900 hover:bg-gray-200 aria-expanded:bg-gray-200; }
-.btn-ghost         { @apply text-gray-950 hover:bg-gray-100/70 aria-expanded:bg-gray-100/70; }
-.btn-ghost-primary { @apply text-violet-primary hover:bg-gray-100/70 aria-expanded:bg-gray-100/70; }
+.btn-ghost         { @apply text-gray-950 hover:bg-gray-200/30 aria-expanded:bg-gray-200/30; }
+.btn-ghost-primary { @apply text-violet-primary hover:bg-violet-200/30 aria-expanded:bg-violet-100/70; }
 .btn-destructive   { @apply bg-red-600/10 text-red-600 hover:bg-red-600/20
                             focus-visible:border-red-600/40 focus-visible:ring-red-600/20; }
-.btn-link          { @apply text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none min-h-0! p-0! [&_svg]:no-underline; }
+.btn-link          { @apply h-auto inline-block text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none min-h-0! p-0! [&_svg]:no-underline; }
 
 // Sizes — override the base h-9 / px-2.5
 .btn-xs      { @apply h-6 py-0.75 px-2 text-xs gap-1; }
 .btn-sm      { @apply h-8 py-2 px-3 text-xs gap-1; }
-.btn-lg      { @apply h-10 py-2.25 px-6; }
+.btn-lg      { @apply h-10 py-2.25 px-6 gap-1.5; }
 .btn-xl      { @apply h-12 py-2.5 px-7 text-base; }
 .btn-icon    { @apply size-9 p-0; }
 .btn-icon-xs { @apply size-6 p-0; }

@@ -3,17 +3,17 @@
 
     <section id="overview" class="max-w-5xl mx-auto text-center my-12 px-6">
         {{ with .Params.overview }}
-            <div class="px-20 md:px-0">
+            <div class="md:px-0">
                 <h1 class="font-display font-semibold">{{ .title }}</h1>
                 <p class="text-center text-2xl w-full lg:w-3/4 mx-auto">{{ .description | markdownify }}</p>
-                <div class="mt-8 flex flex-col md:flex-row justify-center gap-12 mb-12">
+                <div class="mt-8 flex flex-col md:flex-row justify-center gap-4 mb-12">
                     {{ partial "cta-get-started" (dict) }}
-                    <a href="#casestudy" class="btn btn-outline btn-xl">See how Supabase manages 80K resources</a>
+                    <a href="#casestudy" class="btn btn-outline h-auto btn-xl">See how Supabase manages 80K resources</a>
                 </div>
             </div>
             <hr/>
-            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/hero.png" "alt" "Code speaks to code" "class" "mt-12 hidden md:block" "loading" "eager") }}
-            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/superintelligence-hero-mobile.png" "alt" "Code speaks to code" "class" "mt-12 block md:hidden" "loading" "eager") }}
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/hero.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 hidden md:block" "loading" "eager") }}
+            {{ partial "fingerprinted-img.html" (dict "src" "/images/product/superintelligence-hero-mobile.png" "alt" "Code speaks to code" "class" "mx-auto mt-12 block md:hidden" "loading" "eager") }}
         {{ end }}
     </section>
 
