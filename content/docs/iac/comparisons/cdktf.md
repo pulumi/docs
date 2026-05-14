@@ -49,7 +49,7 @@ CDK for Terraform (CDKTF) was a HashiCorp project, released in 2020 and [depreca
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | None |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers; and the [Pulumi Registry](/registry/) for publicly available packages | CDKTF constructs (built on the [constructs](https://github.com/aws/constructs) library) and direct consumption of Terraform modules |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | `cdktf import` and `terraform import`, with hand-authored code wrappers |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and SOC 2 | None first-party; teams typically integrated [OPA](https://www.openpolicyagent.org/) or Sentinel (Terraform Cloud commercial plans) against the synthesized Terraform JSON |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and NIST | None first-party; teams typically integrated [OPA](https://www.openpolicyagent.org/) or Sentinel (Terraform Cloud commercial plans) against the synthesized Terraform JSON |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | The CDKTF framework was [Mozilla Public License 2.0](https://github.com/hashicorp/terraform-cdk/blob/main/LICENSE) until archived; the Terraform CLI that deployed its output moved to the [Business Source License 1.1](https://github.com/HashiCorp/terraform/blob/main/LICENSE) in 2023 |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | HashiCorp Cloud Platform (HCP Terraform, formerly Terraform Cloud); CDKTF itself had no separate commercial tier |
 
@@ -57,7 +57,7 @@ CDK for Terraform (CDKTF) was a HashiCorp project, released in 2020 and [depreca
 
 ### Language support and the authoring experience
 
-Pulumi and CDKTF both let you author infrastructure in general-purpose languages. Pulumi additionally supports [YAML](/docs/iac/languages-sdks/yaml/) and runs programs directly through its deployment engine, so programs can be unit-tested against their own object graph using the [Pulumi testing tools](/docs/iac/using-pulumi/testing/). CDKTF programs were always synthesized to Terraform JSON before deployment, so testing centered on assertions against the synthesized JSON.
+Pulumi and CDKTF both let you author infrastructure in general-purpose languages. Pulumi additionally supports [YAML](/docs/iac/languages-sdks/yaml/) and runs programs directly through its deployment engine, so programs can be unit-tested against their own object graph using the [Pulumi testing tools](/docs/iac/guides/testing/). CDKTF programs were always synthesized to Terraform JSON before deployment, so testing centered on assertions against the synthesized JSON.
 
 ### Cloud and service coverage
 
@@ -73,7 +73,7 @@ Pulumi has built-in support for [secrets management](/docs/iac/concepts/secrets/
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free, with rules written in Python, TypeScript, or Open Policy Agent Rego. Pulumi Cloud adds centralized management and [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for frameworks like CIS, PCI DSS, and SOC 2. CDKTF had no first-party policy engine; teams typically wired up [Open Policy Agent](https://www.openpolicyagent.org/) against synthesized Terraform JSON, or relied on Sentinel (commercial Terraform Cloud / HCP Terraform).
+[Pulumi Policies](/docs/insights/policy/) is open source and free, with rules written in Python, TypeScript, or Open Policy Agent Rego. Pulumi Cloud adds centralized management and [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for frameworks like CIS, PCI DSS, and NIST. CDKTF had no first-party policy engine; teams typically wired up [Open Policy Agent](https://www.openpolicyagent.org/) against synthesized Terraform JSON, or relied on Sentinel (commercial Terraform Cloud / HCP Terraform).
 
 ### Modularity and reuse
 
