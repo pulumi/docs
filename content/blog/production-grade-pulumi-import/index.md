@@ -25,7 +25,7 @@ social:
         Learn more in the post.
 ---
 
-Adopting existing infrastructure into Infrastructure as Code (IaC) is a common challenge for growing teams. The demand is clear from sustained community interest in import workflows and custom provider support. While the basic `pulumi import` command is great for a single S3 bucket, production environments often require importing many resources across multiple providers.
+Adopting existing infrastructure into Infrastructure as Code (IaC) is a common challenge for growing teams. The demand is clear from sustained community interest in import workflows and custom provider support. While the basic [`pulumi import`](/docs/iac/guides/migration/import/) command is great for a single S3 bucket, production environments often require importing many resources across multiple providers.
 
 To move beyond simple demos, you need to understand the different import modes, how to handle bulk operations, and how to manage long-running adoptions without breaking your production stacks.
 
@@ -39,7 +39,7 @@ Pulumi provides three distinct ways to bring resources under management. Choosin
 
 ### 1. CLI import (state and code)
 
-The standard `pulumi import` command is the most common starting point. It performs two actions: it adds the resource to your stack state and prints the corresponding TypeScript, Python, Go, or C# code to your terminal.
+The standard [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command is the most common starting point. It performs two actions: it adds the resource to your stack state and prints the corresponding TypeScript, Python, Go, or C# code to your terminal.
 
 ```bash
 pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0
@@ -59,7 +59,7 @@ const vpc = new aws.ec2.Vpc("my-vpc", {
 });
 ```
 
-This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, you should remove the `import` option from your code to prevent Pulumi from trying to re-import it on every update.
+This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, you should remove the `import` option from your code to keep future updates focused on normal resource management.
 
 ### 3. State-only import
 
@@ -130,17 +130,17 @@ Break your adoption into logical chunks. Start with foundational resources like 
 
 ### Idempotency and checkpoint recovery
 
-Pulumi imports are generally idempotent. If a bulk import fails halfway through due to a network error or a rate limit, you can usually fix the issue and run the command again. Pulumi will skip resources that are already in the state and continue with the remaining ones.
+Pulumi imports are idempotent. If a bulk import fails halfway through due to a network error or a rate limit, you can usually fix the issue and run the command again. Pulumi will skip resources that are already in the state and continue with the remaining ones.
 
 ### Validating with a no-op preview
 
 After any import, your goal is to reach a "no-op" state where `pulumi preview` shows zero changes.
 
 1. Run `pulumi preview` after the import.
-2. If Pulumi shows "updates" to your resources, it means your code doesn't perfectly match the cloud configuration.
-3. Adjust your code properties until the preview shows no changes.
-4. Only then should you consider the import complete.
+1. If Pulumi shows "updates" to your resources, it means your code doesn't perfectly match the cloud configuration.
+1. Adjust your code properties until the preview shows no changes.
+1. Only then should you consider the import complete.
 
 ## Conclusion
 
-Production-grade imports require more than just the basic CLI command. By using bulk import files, choosing the right import modes, and following a structured adoption strategy, you can bring even the most complex legacy environments under Pulumi management with confidence.
+Production-grade imports require more than the basic CLI command. Start with one low-risk stack, run a no-op preview after every import batch, and only then expand the pattern to larger parts of your estate.
