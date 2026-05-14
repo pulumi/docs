@@ -51,7 +51,7 @@ Snowflake's architecture separates compute (warehouses) from storage (databases)
 
 Snowflake uses Role-Based Access Control (RBAC). Privileges are granted to roles, and roles are granted to users or other roles to create a hierarchy. A common pattern is to create "functional roles" for users and "access roles" for specific resources.
 
-## Walkthrough: Warehouses, databases, and roles
+## Walkthrough: warehouses, databases, and roles
 
 Let's look at how to define a standard Snowflake environment using the Pulumi Snowflake provider.
 
