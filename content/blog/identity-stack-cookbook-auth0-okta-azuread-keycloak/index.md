@@ -58,20 +58,26 @@ Prerequisites: an Auth0 tenant, a Machine-to-Machine application with Management
 ```typescript
 import * as auth0 from "@pulumi/auth0";
 
-const client = new auth0.Client("my-app", {
+const client = new auth0.Client("auth0-app", {
     name: "My Application",
     appType: "regular_web",
     callbacks: ["https://myapp.com/callback"],
 });
 
-const group = new auth0.Organization("my-group", {
+const organization = new auth0.Organization("auth0-group", {
     name: "my-group",
     displayName: "My Group",
 });
 
-const connection = new auth0.Connection("my-connection", {
+const connection = new auth0.Connection("auth0-connection", {
     name: "my-connection",
     strategy: "auth0",
+    enabledClients: [client.clientId],
+});
+
+const organizationConnection = new auth0.OrganizationConnection("auth0-org-connection", {
+    organizationId: organization.id,
+    connectionId: connection.id,
 });
 ```
 
@@ -84,7 +90,7 @@ Prerequisites: an Okta organization, an API token or OAuth service app with appl
 ```typescript
 import * as okta from "@pulumi/okta";
 
-const app = new okta.app.OAuth("my-app", {
+const app = new okta.app.OAuth("okta-app", {
     label: "My Application",
     type: "browser",
     grantTypes: ["authorization_code"],
@@ -92,12 +98,12 @@ const app = new okta.app.OAuth("my-app", {
     responseTypes: ["code"],
 });
 
-const group = new okta.group.Group("my-group", {
+const group = new okta.group.Group("okta-group", {
     name: "My Group",
     description: "My Group Description",
 });
 
-const assignment = new okta.app.GroupAssignment("my-assignment", {
+const assignment = new okta.app.GroupAssignment("okta-assignment", {
     appId: app.id,
     groupId: group.id,
 });
@@ -112,23 +118,23 @@ Prerequisites: a Microsoft Entra tenant, permissions to create applications, ser
 ```typescript
 import * as azuread from "@pulumi/azuread";
 
-const app = new azuread.Application("my-app", {
+const app = new azuread.Application("entra-app", {
     displayName: "My Application",
     signInAudience: "AzureADMyOrg",
 });
 
-const group = new azuread.Group("my-group", {
+const group = new azuread.Group("entra-group", {
     displayName: "My Group",
     mailEnabled: false,
     securityEnabled: true,
     types: ["Unified"],
 });
 
-const servicePrincipal = new azuread.ServicePrincipal("my-sp", {
+const servicePrincipal = new azuread.ServicePrincipal("entra-sp", {
     clientId: app.clientId,
 });
 
-const assignment = new azuread.AppRoleAssignment("my-assignment", {
+const assignment = new azuread.AppRoleAssignment("entra-assignment", {
     appRoleId: "00000000-0000-0000-0000-000000000000", // Default access role; replace with an appRoles[].id for custom roles.
     principalObjectId: group.objectId,
     resourceObjectId: servicePrincipal.objectId,
@@ -144,12 +150,12 @@ Prerequisites: a Keycloak realm, an admin client or service account with realm-m
 ```typescript
 import * as keycloak from "@pulumi/keycloak";
 
-const realm = new keycloak.Realm("my-realm", {
+const realm = new keycloak.Realm("keycloak-realm", {
     realm: "my-realm",
     enabled: true,
 });
 
-const client = new keycloak.openid.Client("my-app", {
+const client = new keycloak.openid.Client("keycloak-app", {
     realmId: realm.id,
     clientId: "my-app",
     name: "My Application",
@@ -158,9 +164,21 @@ const client = new keycloak.openid.Client("my-app", {
     validRedirectUris: ["https://myapp.com/callback"],
 });
 
-const group = new keycloak.Group("my-group", {
+const group = new keycloak.Group("keycloak-group", {
     realmId: realm.id,
     name: "My Group",
+});
+
+const role = new keycloak.openid.ClientRole("keycloak-app-user-role", {
+    realmId: realm.id,
+    clientId: client.id,
+    name: "app-user",
+});
+
+const groupRoles = new keycloak.GroupRoles("keycloak-group-roles", {
+    realmId: realm.id,
+    groupId: group.id,
+    roleIds: [role.id],
 });
 ```
 
