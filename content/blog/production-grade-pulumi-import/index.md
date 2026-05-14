@@ -130,7 +130,7 @@ Break your adoption into logical chunks. Start with foundational resources like 
 
 ### Idempotency and checkpoint recovery
 
-Pulumi imports are idempotent. If a bulk import fails halfway through due to a network error or a rate limit, you can usually fix the issue and run the command again. Pulumi will skip resources that are already in the state and continue with the remaining ones.
+Pulumi imports are idempotent. If a bulk import fails halfway through due to a network error or a rate limit, you can fix the issue and run the command again. Pulumi will skip resources that are already in the state and continue with the remaining ones.
 
 ### Validating with a no-op preview
 
