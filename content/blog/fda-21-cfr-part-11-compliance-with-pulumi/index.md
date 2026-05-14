@@ -222,7 +222,7 @@ Unset values are treated as non-compliant so new trails must explicitly enable v
 
 ## Conclusion
 
-Pulumi provides tools that can help build and manage infrastructure in alignment with the high standards of FDA 21 CFR Part 11. By using Infrastructure as Code, Pulumi Policies, IdP-backed access controls, cloud-native audit trails, and the audit capabilities of Pulumi Cloud, life sciences organizations can configure regulated systems with clearer evidence and stronger deployment guardrails.
+Pulumi supports infrastructure evidence workflows aligned with FDA 21 CFR Part 11 expectations. By using Infrastructure as Code, Pulumi Policies, IdP-backed access controls, cloud-native audit trails, and the audit capabilities of Pulumi Cloud, life sciences organizations can configure regulated systems with clearer evidence and stronger deployment guardrails.
 
 {{< blog/cta-button "Explore Pulumi Policies" "/docs/insights/policy/" >}}
 
