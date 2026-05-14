@@ -27,11 +27,7 @@ social:
 
 Static, long-lived credentials are a major security vulnerability. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, the longer a secret remains unchanged, the greater the risk of compromise.
 
-This post is not about Snowflake-specific rotation. Instead, it focuses on the broader challenge of rotating GitHub and cloud provider credentials that power your entire CI/CD ecosystem.
-
-## The pain of the 90-day calendar reminder
-
-Most platform teams manage credential rotation through a combination of calendar reminders and manual updates. This process is fragile. A developer forgets to update a PAT, or an AWS access key expires in the middle of a production deployment, causing the pipeline to fail. Even when rotation happens, the "cutover" period where the old secret is replaced by the new one often leads to transient errors as different parts of the system sync at different speeds.
+This post focuses on rotating GitHub and cloud provider credentials that power your entire CI/CD ecosystem. Most platform teams still manage rotation through calendar reminders and manual updates, which makes cutovers fragile when a PAT or cloud key expires during deployment.
 
 ## Why it matters now
 
