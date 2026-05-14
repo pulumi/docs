@@ -22,7 +22,7 @@ social:
     bluesky: |
         Vault plus Pulumi: secrets engines, namespaces, policies, auth methods, and ESC bridges as repeatable patterns.
 
-        Learn more in the post.
+        See how the five Vault patterns fit together.
 ---
 
 [HashiCorp Vault](https://www.vaultproject.io/) is the industry standard for secrets management, providing a centralized way to store, access, and protect sensitive data. Teams managing Vault configuration with Pulumi need repeatable patterns with the same rigor and automation as cloud infrastructure.
