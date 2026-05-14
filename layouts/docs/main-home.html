@@ -25,10 +25,10 @@
                 {{ .Params.description | safeHTML }}
                 <div class="link-buttons">
                     {{ if $primary_link_button }}
-                    <a class="docs-primary-link-btn" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
+                    <a class="btn btn-primary" href="{{ $primary_link_button.link }}">{{ $primary_link_button.label }}</a>
                     {{ end }}
                     {{ if $secondary_link_button }}
-                    <a class="docs-secondary-link-btn" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
+                    <a class="btn btn-outline" href="{{ $secondary_link_button.link }}">{{ $secondary_link_button.label }}</a>
                     {{ end }}
                 </div>
             </div>
@@ -106,7 +106,7 @@
                                         <a href="{{ .primary_button_link }}" class="btn btn-primary">{{ .primary_button_label }}</a>
                                         {{ end }}
                                         {{ if .secondary_button_link }}
-                                        <a href="{{ .secondary_button_link }}" class="btn btn-secondary">{{ .secondary_button_label }}</a>
+                                        <a href="{{ .secondary_button_link }}" class="btn btn-outline">{{ .secondary_button_label }}</a>
                                         {{ end }}
                                     </div>
                                 </div>

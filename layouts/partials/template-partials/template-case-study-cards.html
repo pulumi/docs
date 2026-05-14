@@ -53,9 +53,14 @@
         {{ if $title }}<h2 class="xl:w-2/5 shrink-0">{{ $title }}</h2>{{ end }}
         <div class="flex-1 flex flex-col">
             {{ if $description }}<div class="case-study-cards-description">{{ $description | markdownify }}</div>{{ end }}
-            {{ if $ctaText }}<a href="{{ $ctaLink }}" class="cta inline-flex items-center gap-1 mt-6">
-                <span>{{ $ctaText }}</span><span>→</span>
-            </a>{{ end }}
+            {{ if $ctaText }}
+            <div class="mt-6">
+                <a href="{{ $ctaLink }}" class="btn btn-link btn-xl">
+                    {{ $ctaText }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            </div>
+            {{ end }}
         </div>
     </div>
     {{ end }}

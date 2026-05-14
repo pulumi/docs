@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 {{ end }}
-                <div class="mt-4 mx-auto md:w-7/12 md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+                <div class="card mt-4 mx-auto md:w-7/12 md:mt-0 p-10 bg-white shadow-lg">
                     <div class="mx-auto flex justify-center">
                         <div class="hs-form hs-form-fg-dark font-normal">
                             <pulumi-hubspot-form form-id="{{ .form.hubspot_form_id }}" class="{{ .form.class_names }}"></pulumi-hubspot-form>
@@ -38,7 +38,7 @@
         </div>
     </section>
 {{ else }}
-    <div class="mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white rounded rounded-lg shadow-lg border border-gray-300">
+    <div class="card mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white shadow-lg">
         <h3 class="text-center">{{ .form.headline }}</h3>
         <div class="mx-auto flex justify-center">
             <div class="hs-form hs-form-fg-dark font-normal">

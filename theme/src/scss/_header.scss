@@ -173,11 +173,6 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
         @include screen-lg {
             @apply flex items-center justify-end;
         }
-
-        .header-btn-primary {
-            @include gradient-button;
-            @apply py-3 px-6 whitespace-nowrap;
-        }
     }
 
     .desktop-menu {

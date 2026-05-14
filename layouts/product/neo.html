@@ -25,8 +25,8 @@
 {{ end }}
 
 <section id="cta" class="container mx-auto text-center mb-16">
-    {{ partial "cta-get-started" (dict "class" "btn-primary") }}
-    <a href="/contact/?form=request-a-demo" class="btn-secondary ml-4">Book a Demo</a>
+    {{ partial "cta-get-started" (dict) }}
+    <a href="/contact/?form=request-a-demo" class="btn btn-outline btn-xl ml-4">Book a Demo</a>
 </section>
 
 <section id="benefits" class="container mx-auto my-16 px-4">
@@ -174,7 +174,8 @@
                 </div>
                 <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center xl:justify-start">
                     {{ range $button := $item.buttons }}
-                    <a href="{{ $button.link }}" class="z-10 btn-{{ $button.type }}">{{ $button.action }}</a>
+                    {{ $variant := cond (eq $button.type "secondary") "outline" $button.type }}
+                    <a href="{{ $button.link }}" class="z-10 btn btn-{{ $variant }} btn-xl">{{ $button.action }}</a>
                     {{ end }}
                 </div>
             </div>

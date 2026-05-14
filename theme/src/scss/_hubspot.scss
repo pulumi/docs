@@ -56,7 +56,9 @@
     }
 
     input[type="submit"] {
-        @apply btn py-3 px-6;
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-lg;
     }
 
     .hs-error-msgs {
@@ -106,7 +108,10 @@
             }
 
             &.hs-button {
-                @apply block btn btn-lg border-none py-3 px-6 rounded-lg w-auto ml-2;
+                @extend .btn;
+                @extend .btn-primary;
+                @extend .btn-lg;
+                @apply w-auto ml-2;
             }
 
             &:focus {

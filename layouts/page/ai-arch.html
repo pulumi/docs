@@ -10,7 +10,7 @@
                 <h2>{{ .Params.overview.title }}</h2>
                 <p>{{ .Params.overview.description | markdownify }}</p>
                 <div class="my-8">
-                    <a class="btn-primary" href="https://github.com/pinecone-io/aws-reference-architecture-pulumi/">Get Started</a>
+                    <a class="btn btn-primary btn-xl" href="https://github.com/pinecone-io/aws-reference-architecture-pulumi/">Get Started</a>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 p-6">
@@ -63,7 +63,7 @@
                 <div class="lg:shadow-2xl bg-violet-primary p-8 lg:px-24 lg:pt-4 g:pb-12 rounded-xl">
                     <h4 class="text-white">{{ .Params.get_started.get_started.title }}</h4>
                     <p class="mb-12 text-white">{{ .Params.get_started.get_started.description }}</p>
-                    <a href="{{ relref . "/contact?form=sales" }}" class="btn-secondary">{{ .Params.get_started.get_started.cta_text }}</a>
+                    <a href="{{ relref . "/contact?form=sales" }}" class="btn btn-outline btn-xl">{{ .Params.get_started.get_started.cta_text }}</a>
                 </div>
             </div>
         </div>
