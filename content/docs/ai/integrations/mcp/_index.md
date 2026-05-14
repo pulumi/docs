@@ -38,12 +38,6 @@ To remove an integration from your organization, navigate to **Neo Settings**, s
 
 Disabling an integration deletes its stored credentials and immediately prevents any new tasks from using it. Tasks that are already running will lose access to the integration the next time Neo tries to use it.
 
-## How integrations work at task time
-
-When Neo starts a task, it connects to each enabled integration's MCP server using the stored credentials. From there, Neo can use any tools the MCP server provides. For example, with the Honeycomb integration enabled, Neo can query traces to investigate a performance issue that came up during an infrastructure review. With Linear enabled, Neo can look up the details of an issue referenced in a task description.
-
-The integration connection is transparent. Neo decides when to use an integration based on the context of your conversation, just as it decides when to use any other tool.
-
 ## Per-task control
 
 By default, every task inherits all integrations the organization has enabled. If you want to narrow Neo's focus for a specific task (for example, running a deployment review without giving Neo access to your issue tracker), you can toggle individual integrations off from the task composer before starting the conversation. The toggles only affect the current task; the org-level configuration is unchanged.
