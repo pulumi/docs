@@ -1,4 +1,4 @@
-name: Quality Review (new-review)
+name: Pre-merge Review (new-review)
 
 # Power-user "regenerate from scratch" path. Dispatched by the explicit
 # hashtag `#new-review` on an `@claude` mention — typically used to

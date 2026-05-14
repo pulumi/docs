@@ -53,7 +53,7 @@ Treat the diff as the source of truth for what changed. If `--json files` lists 
 
 The workflow ran `compose-review.py` and wrote **`.review-draft.md`** at the workspace root — an ~80%-assembled review body. **Read it with the `Read` tool.** It already contains, fully assembled and self-consistent:
 
-- the `## Quality Review` header + timestamp;
+- the `## Pre-merge Review` header + timestamp;
 - the Summary / Review-confidence-table *skeleton* (with `<TODO>` levels and an empty summary paragraph);
 - the Investigation-log `<details>` block (all 8 bullets — every one deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder you overwrite);
 - the bucket-count table (a *starting point* matching the stub-bullet counts);

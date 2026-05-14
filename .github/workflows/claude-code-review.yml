@@ -1,4 +1,4 @@
-name: Quality Review (main)
+name: Pre-merge Review (main)
 
 # Full review is chained to complete AFTER Claude Triage, so the review
 # sees the freshly-applied state labels. Listening to the same
@@ -16,7 +16,7 @@ on:
   pull_request:
     types: [synchronize]
   workflow_run:
-    workflows: ["Quality Review (triage)"]
+    workflows: ["Pre-merge Review (triage)"]
     types: [completed]
   # Manual dispatch entry point used by claude-new.yml when an authorized
   # user invokes `@claude #new-review` to regenerate the pinned review
@@ -287,7 +287,7 @@ jobs:
           HEAD_SHA="${{ github.event.workflow_run.head_sha || steps.pr-context.outputs.head_sha }}"
           DETAILS_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           CHECK_ID=$(gh api -X POST "repos/${{ github.repository }}/check-runs" \
-            -f name="Quality Review" \
+            -f name="Pre-merge Review" \
             -f head_sha="$HEAD_SHA" \
             -f status="in_progress" \
             -f details_url="$DETAILS_URL" \
@@ -682,7 +682,7 @@ jobs:
             --out .hugo-build.json \
             || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
 
-      # Wall-clock timestamp for the `## Quality Review — Last updated <ts>`
+      # Wall-clock timestamp for the `## Pre-merge Review — Last updated <ts>`
       # line. Computed in the workflow (not by the model) so the timestamp is
       # always a real UTC instant — left to the model, it sometimes renders a
       # T00:00:00Z / round-hour placeholder instead of the actual time.
@@ -726,7 +726,7 @@ jobs:
             --hugo-build .hugo-build.json \
             --fetched-urls .fetched-urls.json \
           || printf '%s\n' \
-            '## Quality Review — Last updated ${{ steps.now.outputs.value }}' \
+            '## Pre-merge Review — Last updated ${{ steps.now.outputs.value }}' \
             '' \
             '> [!CAUTION]' \
             '> The review composer (compose-review.py) failed to start. Do **not** post the lines below — assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly): read the pre-step artifacts (`.verified-claims.json`, `.vale-findings.json`, `.editorial-balance.json`, `.hugo-build.json`, `.frontmatter-validation.json`, `.cross-sibling-discovery.json`) and render per `docs-review:references:output-format`. This stub exists so the consumer sees the failure rather than a missing file.' \
@@ -772,7 +772,7 @@ jobs:
             - **Base branch:** `${{ steps.pr-context.outputs.base_branch }}`
             - **Diff size:** +${{ steps.pr-context.outputs.additions }} / -${{ steps.pr-context.outputs.deletions }} across ${{ steps.pr-context.outputs.file_count }} files
             - **Labels** (set by claude-triage.yml — informational; routing happens by path inside `ci.md`): ${{ steps.pr-context.outputs.labels_json }}
-            - **Review timestamp (UTC):** `${{ steps.now.outputs.value }}` — use this literal value for the `## Quality Review — Last updated <ts>` line and the new `📜 Review history` entry. Do not invent or round a timestamp.
+            - **Review timestamp (UTC):** `${{ steps.now.outputs.value }}` — use this literal value for the `## Pre-merge Review — Last updated <ts>` line and the new `📜 Review history` entry. Do not invent or round a timestamp.
 
             ### Changed files
 
@@ -781,7 +781,7 @@ jobs:
             ## The composed review draft (`.review-draft.md`) — read this first
 
             The workflow ran `compose-review.py` and wrote `.review-draft.md` at the workspace root: an ~80%-assembled review body. **Read it with the `Read` tool before doing anything else.** It already contains, fully assembled and self-consistent:
-            - the `## Quality Review` header + timestamp;
+            - the `## Pre-merge Review` header + timestamp;
             - the Summary / Review-confidence-table *skeleton* (with `<TODO>` levels and an empty summary paragraph);
             - the Investigation-log `<details>` block (all 8 bullets — every one deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder you overwrite);
             - the bucket-count table (a *starting point* matching the stub-bullet counts);
@@ -1125,7 +1125,7 @@ jobs:
           fi
           jq -n \
             --arg conclusion "$CONCLUSION" \
-            --arg title "Quality Review" \
+            --arg title "Pre-merge Review" \
             --arg summary "$SUMMARY" \
             '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
             | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true

@@ -93,7 +93,7 @@ EVIDENCE_TRUNC = 240
 
 GH_TIMEOUT = 30
 
-FALLBACK_BANNER_DRAFT = """## Quality Review — Last updated {ts}
+FALLBACK_BANNER_DRAFT = """## Pre-merge Review — Last updated {ts}
 
 > [!CAUTION]
 > The review composer (`compose-review.py`) did not produce a usable draft ({reason}). Do **not** post the lines below — assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly): read the pre-step artifacts (`.verified-claims.json` for the trail/verdicts, `.vale-findings.json` for style, `.editorial-balance.json` for Tier 1, `.hugo-build.json`, `.frontmatter-validation.json`, `.cross-sibling-discovery.json`) and render per `docs-review:references:output-format`. This stub exists so the consumer sees the failure rather than a missing file.
@@ -421,7 +421,7 @@ def touches_programs(diff_files: list[str]) -> bool:
 
 
 def render_header(timestamp: str) -> str:
-    return f"## Quality Review — Last updated {timestamp}"
+    return f"## Pre-merge Review — Last updated {timestamp}"
 
 
 def render_summary_block(confidence_dims: list[str]) -> str:
@@ -1135,7 +1135,7 @@ def prepend_caution_banner(draft_path: Path, violations: list[dict], timestamp: 
     if len(violations) > 8:
         summary += f"; (+{len(violations) - 8} more)"
     banner = (
-        f"## Quality Review — Last updated {timestamp}\n\n"
+        f"## Pre-merge Review — Last updated {timestamp}\n\n"
         "> [!CAUTION]\n"
         f"> The review composer (`compose-review.py`) produced a structurally-invalid draft "
         f"({len(violations)} validator violation(s)). Do **not** use the sections below as-is — "
@@ -1146,9 +1146,9 @@ def prepend_caution_banner(draft_path: Path, violations: list[dict], timestamp: 
         existing = draft_path.read_text()
     except OSError:
         existing = ""
-    # Drop the draft's own `## Quality Review` first line if present, then prepend.
+    # Drop the draft's own `## Pre-merge Review` first line if present, then prepend.
     lines = existing.splitlines()
-    if lines and lines[0].startswith("## Quality Review"):
+    if lines and lines[0].startswith("## Pre-merge Review"):
         lines = lines[1:]
         # also drop a single leading blank
         if lines and not lines[0].strip():
