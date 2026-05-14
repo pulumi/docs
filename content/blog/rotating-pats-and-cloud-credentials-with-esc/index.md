@@ -54,8 +54,8 @@ GitHub Personal Access Tokens (PATs) are notoriously difficult to manage. They a
 Instead of storing a PAT as a GitHub Secret, you register a GitHub App and use ESC to issue an installation access token. These tokens are:
 
 1. **Short-lived**: They expire automatically after 1 hour.
-2. **Scoped**: They only have the permissions granted to the GitHub App.
-3. **On-demand**: They are generated only when a workflow needs them.
+1. **Scoped**: They only have the permissions granted to the GitHub App.
+1. **On-demand**: They are generated only when a workflow needs them.
 
 ### ESC environment for GitHub
 
@@ -115,7 +115,7 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v1
         with:
