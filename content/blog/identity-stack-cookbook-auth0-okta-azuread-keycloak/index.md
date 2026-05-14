@@ -1,7 +1,7 @@
 ---
 title: "Identity Stack Cookbook: Auth0, Okta, Entra ID, and Keycloak"
 date: 2026-06-18
-meta_desc: "Manage common identity platform patterns with Pulumi across Auth0, Okta, Microsoft Entra ID, and Keycloak, including SSO, SCIM, apps, and groups."
+meta_desc: "Manage common identity platform patterns with Pulumi across Auth0, Okta, Microsoft Entra ID, and Keycloak, including SSO, apps, and groups."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -18,14 +18,14 @@ social:
     linkedin: |
         Auth0, Okta, Microsoft Entra ID, and Keycloak solve similar identity problems with different resource models.
 
-        This cookbook shows Pulumi patterns for SSO, SCIM, apps, groups, and provider-specific prerequisites.
+        This cookbook shows Pulumi patterns for SSO, apps, groups, and provider-specific prerequisites.
     bluesky: |
         Auth0, Okta, Entra ID, and Keycloak all model identity differently.
 
         This Pulumi cookbook compares practical IaC patterns.
 ---
 
-Managing identity at scale requires more than a login box. As organizations grow, the need for standardized Single Sign-On (SSO) and System for Cross-domain Identity Management (SCIM) patterns becomes critical. As organizations grow, platform teams need consistent application access patterns across Auth0, Okta, Microsoft Entra ID, and Keycloak.
+Managing identity at scale requires more than a login box. Platform teams need consistent application access patterns across Auth0, Okta, Microsoft Entra ID, and Keycloak.
 
 In this cookbook, we'll explore how to implement a portable identity pattern using Pulumi. We'll cover Auth0, Okta, Microsoft Entra ID, and Keycloak, focusing on a common requirement: one application and one access group.
 
@@ -105,7 +105,7 @@ const assignment = new okta.app.GroupAssignment("my-assignment", {
 
 ## Microsoft Entra ID
 
-For organizations heavily invested in the Microsoft ecosystem, Microsoft Entra ID (now Entra ID) is the standard. Pulumi allows you to manage applications and service principals with ease.
+For organizations heavily invested in the Microsoft ecosystem, Microsoft Entra ID is the standard. Pulumi allows you to manage applications and service principals with ease.
 
 Prerequisites: a Microsoft Entra tenant, permissions to create applications, service principals, groups, and app role assignments, and the Pulumi Microsoft Entra ID provider authenticated through your chosen Azure identity flow.
 
@@ -114,7 +114,7 @@ import * as azuread from "@pulumi/azuread";
 
 const app = new azuread.Application("my-app", {
     displayName: "My Application",
-    signInAudience: "Microsoft Entra IDMyOrg",
+    signInAudience: "AzureADMyOrg",
 });
 
 const group = new azuread.Group("my-group", {
@@ -129,7 +129,7 @@ const servicePrincipal = new azuread.ServicePrincipal("my-sp", {
 });
 
 const assignment = new azuread.AppRoleAssignment("my-assignment", {
-    appRoleId: "00000000-0000-0000-0000-000000000000",
+    appRoleId: "00000000-0000-0000-0000-000000000000", // Default access role; replace with an appRoles[].id for custom roles.
     principalObjectId: group.objectId,
     resourceObjectId: servicePrincipal.objectId,
 });
