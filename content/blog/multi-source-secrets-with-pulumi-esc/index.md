@@ -29,15 +29,13 @@ Modern infrastructure often relies on multiple secret stores. You might use [AWS
 
 This post focuses on composing and orchestrating secrets across heterogeneous providers, including how to connect to Vault, handle naming conflicts, and define clear consumer interfaces.
 
-## Why it matters now
-
-Operational complexity and the risk of fragmented security policies increase as organizations adopt specialized secret stores. Without a central orchestration layer, it is impossible to get a unified view of who has access to what across the entire platform. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
-
-## Reader outcome
-
 By the end of this post, you will compose a single [Pulumi ESC](/docs/esc/) environment that aggregates secrets from AWS Secrets Manager, HashiCorp Vault, and 1Password. You will learn how to define provider boundaries, handle naming conflicts through namespacing, and provide a clean, resolved view of all secrets for your applications and CI/CD pipelines.
 
 <!--more-->
+
+## Why it matters now
+
+Operational complexity and the risk of fragmented security policies increase as organizations adopt specialized secret stores. Without a central orchestration layer, it is impossible to get a unified view of who has access to what across the entire platform. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
 
 ## The challenge of secret sprawl
 
