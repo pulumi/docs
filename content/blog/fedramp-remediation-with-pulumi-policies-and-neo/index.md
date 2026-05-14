@@ -6,6 +6,8 @@ authors:
 meta_desc: "Use Pulumi Policies and Neo-assisted remediation to triage FedRAMP findings, review previews, and capture evidence without claiming certification."
 meta_image: meta.png
 feature_image: feature.png
+aliases:
+    - /blog/fedramp-remediation-with-crossguard-and-neo/
 tags:
     - compliance
     - fedramp
