@@ -25,7 +25,7 @@ social:
         See how the five Vault patterns fit together.
 ---
 
-[HashiCorp Vault](https://www.vaultproject.io/) is the industry standard for secrets management, providing a centralized way to store, access, and protect sensitive data. Teams managing Vault configuration with Pulumi need repeatable patterns with the same rigor and automation as cloud infrastructure.
+[HashiCorp Vault](https://www.vaultproject.io/) is a widely used secrets management platform that provides a centralized way to store, access, and protect sensitive data. Teams managing Vault configuration with Pulumi need repeatable patterns with the same rigor and automation as cloud infrastructure.
 
 This post is not a product comparison between ESC and Vault. Instead, it's a guide for teams already using Vault who want to automate its configuration and bridge it with ESC.
 
