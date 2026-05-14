@@ -9,7 +9,7 @@ authors:
     - pablo-seibelt
 tags:
     - compliance
-    - neo
+    - pulumi-neo
     - life-sciences
 social:
     twitter: |
@@ -195,15 +195,15 @@ Maintaining compliance is not a one-time event. Pulumi's scheduled drift detecti
 Once you define an approved audit-trail baseline, use Pulumi Policies to prevent drift from that baseline. For example, the following policy requires CloudTrail resources to use multi-region logging, log file validation, and CloudWatch Logs integration.
 
 ```typescript
+import * as aws from "@pulumi/aws";
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
-import { Trail } from "@pulumi/aws/cloudtrail";
 
 new PolicyPack("part11-audit-trail-controls", {
     policies: [{
         name: "cloudtrail-audit-controls-required",
         description: "CloudTrail trails must be multi-region, validated, and integrated with CloudWatch Logs.",
         enforcementLevel: "mandatory",
-        validateResource: validateResourceOfType(Trail, (trail, args, reportViolation) => {
+        validateResource: validateResourceOfType(aws.cloudtrail.Trail, (trail, args, reportViolation) => {
             if (!trail.isMultiRegionTrail) {
                 reportViolation("CloudTrail must be configured as a multi-region trail.");
             }
@@ -218,7 +218,7 @@ new PolicyPack("part11-audit-trail-controls", {
 });
 ```
 
-You can combine this with policies for S3 versioning, S3 encryption, S3 public access blocks, and IAM access patterns. That moves Part 11 support from a manual checklist to a deployment gate: non-compliant infrastructure fails before it is created.
+Unset values are treated as non-compliant so new trails must explicitly enable validation, global-service events, and multi-region logging. You can combine this with policies for S3 versioning, S3 encryption, S3 public access blocks, and IAM access patterns. That moves Part 11 support from a manual checklist to a deployment gate: non-compliant infrastructure fails before it is created.
 
 ## Conclusion
 
