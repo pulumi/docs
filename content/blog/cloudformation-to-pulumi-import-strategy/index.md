@@ -29,7 +29,7 @@ Many teams start their infrastructure journey with AWS CloudFormation. It's a re
 
 The good news is that you don't have to choose between a "big bang" migration and staying stuck in template hell. By using Pulumi's import capabilities and CloudFormation's retention policies, you can adopt existing resources into a modern programming environment with zero downtime.
 
-This post outlines a concrete adoption flow, from retaining resources in CloudFormation to importing them and generating code, that allows you to move to managed Pulumi resources at your own pace. By the end, you will have a step-by-step strategy for migrating CloudFormation stacks to Pulumi with zero downtime.
+By the end, you will have a step-by-step strategy for migrating CloudFormation stacks to Pulumi with zero downtime.
 
 <!--more-->
 
@@ -38,9 +38,9 @@ This post outlines a concrete adoption flow, from retaining resources in CloudFo
 CloudFormation is a powerful tool, but it often leads to "template sprawl" where large YAML files become difficult to test, refactor, or share across teams. Moving to Pulumi allows you to use familiar languages like TypeScript, Python, or Go. This shift enables:
 
 1. **Real programming constructs**: Use loops, functions, and classes to reduce duplication.
-2. **Strong typing**: Catch errors at development time rather than during a deployment.
-3. **Better testing**: Use standard unit and integration testing frameworks.
-4. **Faster iterations**: Pulumi's engine often provides faster feedback loops than waiting for CloudFormation stack updates.
+1. **Strong typing**: Catch errors at development time rather than during a deployment.
+1. **Better testing**: Use standard unit and integration testing frameworks.
+1. **Faster iterations**: Pulumi's engine often provides faster feedback loops than waiting for CloudFormation stack updates.
 
 ## Step 1: Discovery and planning
 
@@ -77,7 +77,7 @@ Pulumi will query the AWS API, determine the current configuration of the VPC, a
 
 ## Step 3: The "retain and adopt" strategy
 
-The most critical part of a CloudFormation migration is ensuring that deleting the old stack doesn't delete your actual infrastructure. We use a "Retain and Adopt" strategy to handle this safely.
+The most critical part of a CloudFormation migration is ensuring that deleting the old stack doesn't delete your actual infrastructure. Use a "Retain and Adopt" strategy to handle this safely.
 
 ### 1. Update the CloudFormation DeletionPolicy
 
@@ -149,11 +149,11 @@ const subnet = new aws.ec2.Subnet("migrated-subnet", {
 Watch for these migration details before you delete the CloudFormation stack:
 
 1. **Drift**: If your CloudFormation stack has drifted from its template, `pulumi import` will capture the *actual* state of the resource, which might differ from what you expect.
-2. **IAM Roles**: Circular dependencies between IAM roles and policies can be tricky. Sometimes it's easier to recreate IAM resources in Pulumi rather than importing them.
-3. **Custom Resources**: CloudFormation Custom Resources don't have a direct 1:1 mapping in Pulumi. You'll likely need to replace these with Pulumi [Dynamic Resources](/docs/iac/concepts/providers/dynamic-providers/) or specific provider resources.
+1. **IAM Roles**: Circular dependencies between IAM roles and policies can be tricky. Sometimes it's easier to recreate IAM resources in Pulumi rather than importing them.
+1. **Custom Resources**: CloudFormation Custom Resources don't have a direct 1:1 mapping in Pulumi. You'll likely need to replace these with Pulumi [Dynamic Resources](/docs/iac/concepts/providers/dynamic-providers/) or specific provider resources.
 
 ## Conclusion
 
 Migrating from CloudFormation to Pulumi doesn't have to be a high-risk operation. By using the `import --generate-code` feature and CloudFormation's retention policies, you can move your infrastructure into a more flexible and powerful environment one stack at a time.
 
-If you're ready to start your migration, check out our [CloudFormation migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) for more examples and advanced configuration options.
+If you're ready to start your migration, check out our [CloudFormation migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) and [`pulumi import`](/docs/iac/guides/migration/import/) guide for more examples and advanced configuration options.
