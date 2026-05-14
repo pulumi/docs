@@ -1027,13 +1027,28 @@ def check_pass3_unverifiable_evidence(ctx: Context) -> list[Violation]:
     artifact isn't available or trail lines can't be matched, falls back
     to the coarse pre-v13 count check.
     """
-    line = _external_claim_line(ctx)
-    if line is None:
-        return []
-    m = PASS3_OUTCOME_RE.search(line)
-    if not m:
-        return []
-    u_pass3 = int(m.group(3))
+    # Prefer the artifact for the expected count — the verifier's actual
+    # route field is authoritative. Falling back to the metadata-line count
+    # (the original behavior) caused false-positive coarse violations on
+    # bodies where the metadata's Pass-3 unverifiable column didn't match
+    # the artifact's route data: the surgical lookup correctly found 0
+    # entries to splice, but the coarse fallback fired anyway against the
+    # higher metadata count and soft-floored the publish. Deriving from
+    # the artifact aligns the coarse check with the surgical lookup.
+    u_pass3 = 0
+    if ctx.verified_claims:
+        u_pass3 = sum(
+            1 for v in ctx.verified_claims
+            if isinstance(v, dict) and v.get("route") == "pass3" and v.get("verdict") == "unverifiable"
+        )
+    else:
+        line = _external_claim_line(ctx)
+        if line is None:
+            return []
+        m = PASS3_OUTCOME_RE.search(line)
+        if not m:
+            return []
+        u_pass3 = int(m.group(3))
     if u_pass3 == 0:
         return []
 
