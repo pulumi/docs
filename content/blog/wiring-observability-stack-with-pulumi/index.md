@@ -18,7 +18,7 @@ social:
     bluesky: |
         Wire Datadog, New Relic, and PagerDuty with Pulumi so monitors, alerts, and escalation do not drift apart.
 
-        Learn more in the post.
+        See how to connect monitors, alert policies, and on-call routing as code.
 ---
 
 SRE teams often face a "telemetry gap" where critical incidents fall between disconnected monitoring tools. A [Datadog](https://www.datadoghq.com/) monitor might trigger, but if the corresponding [PagerDuty](https://www.pagerduty.com/) service is missing the correct runbook link or escalation path, the on-call engineer is left flying blind. Manually wiring these tools together for every new service is a recipe for inconsistent alerting, leading to missed signals or alert fatigue from misconfigured thresholds that no longer match service behavior.
@@ -34,7 +34,7 @@ In this post, you will learn how to wire Datadog, New Relic, and PagerDuty toget
 1. **PagerDuty services routed to an existing escalation policy** to define who gets paged and when.
 1. **Datadog monitors** that automatically route alerts to the correct PagerDuty service.
 1. **New Relic alert conditions** with consistent tags and runbook context.
-1. **Unified tagging** across all three providers to ensure fast navigation during an incident.
+1. **Shared incident context** across providers to ensure fast navigation during an incident.
 
 By the end, you will have a cohesive observability stack that eliminates the telemetry gap and provides your on-call engineers with the context they need to resolve incidents faster.
 
@@ -65,7 +65,7 @@ values:
 
 ## The implementation
 
-Here is a TypeScript program that wires these three providers together. We'll create a PagerDuty service, a Datadog monitor that notifies that service, and a New Relic alert policy with a notification channel.
+Here is a TypeScript program that wires these three providers together. We'll create a PagerDuty service, a Datadog monitor that notifies that service, and a New Relic alert policy with a notification channel. The New Relic channel resources shown here match the classic alerting model; teams on newer New Relic provider versions can use NotificationDestination, NotificationChannel, and Workflow resources for the same routing pattern.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -141,4 +141,6 @@ By treating your monitors and dashboards with the same rigor as your infrastruct
 
 ## Conclusion
 
-Wiring Datadog, New Relic, and PagerDuty with Pulumi gives you a unified, version-controlled view of your entire observability posture. Whether you're managing a small service or a large fleet, Pulumi provides the scale and flexibility needed for modern operations.
+Wiring Datadog, New Relic, and PagerDuty with Pulumi gives you a unified, version-controlled view of your entire observability posture. Whether you're managing a small service or a large fleet, Start with one service, codify its monitor and escalation path, then promote that baseline across the rest of your applications.
+
+{{< blog/cta-button "Explore Pulumi ESC" "/docs/esc/" >}}
