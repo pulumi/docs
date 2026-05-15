@@ -50,7 +50,7 @@
                                     <a href={{ $subsection.link }} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
                                 </div>
                             {{ end }}
-                            <img src="{{ $subsection.image }}" />
+                            {{ partial "fingerprinted-img.html" (dict "src" $subsection.image "alt" $subsection.header) }}
 
                             <ul class="list-none mt-6 mb-20">
                                 {{ $listLength := len $subsection.details }}
@@ -82,7 +82,7 @@
         {{ with .Params.open_source }}
             <h2>{{ .title }}</h2>
             <div class="max-w-4xl mx-auto">{{ .description | markdownify }}</div>
-            <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+            {{ partial "fingerprinted-img.html" (dict "src" .image "alt" "Pulumi Open Source" "class" "mx-auto") }}
         {{ end }}
     </section>
 
@@ -91,7 +91,7 @@
             {{ with .Params.security }}
                 <h2>{{ .title }}</h2>
                 <p class="max-w-3xl mx-auto">{{ .description | markdownify }}</p>
-                <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+                {{ partial "fingerprinted-img.html" (dict "src" .image "alt" "Pulumi Open Source" "class" "mx-auto") }}
             {{ end }}
         </div>
     </section>
