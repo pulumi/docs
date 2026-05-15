@@ -61,6 +61,10 @@ docs/intro/console/extensions/ci-cd-integration-assistant/index.html|/docs/deplo
 docs/intro/console/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
 docs/intro/pulumi-service/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
 docs/intro/pulumi-cloud/ci-cd-integration-assistant/index.html|/docs/deployments/deployments/
+product/waitlist/index.html|/product/insights-governance/
+waitlist/index.html|/product/insights-governance/
+product/private-previews/index.html|/product/insights-governance/
+solutions/shared-services-platforms/index.html|/product/internal-developer-platforms/
 images/logo/avatar-on-black.svg|/logos/brand/avatar-on-black.svg
 images/logo/avatar-on-white.svg|/logos/brand/avatar-on-white.svg
 images/logo/logo-black-normal.svg|/logos/brand/logo-black-normal.svg
