@@ -89,24 +89,4 @@ Every one of these is banned. If you draft a comment and find any of them, delet
 - **Padded pre-merge checklist**: "One thing to eyeball before merging: ...," "A few things to watch for: ...," any multi-item list framed as a favor.
 - **LLM tells**: em-dashes as punctuation, tricolons, "Overall, ...", "That said, ...", "I'd note that...", hedged openers like "This looks mostly good, but..."
 
-## Tone Guidelines
-
-### External contributors
-
-Warm but brief. One "Thanks!" is the whole warmth budget. Emojis (🎉, 🙏) are fine on first-time contributions, sparing otherwise.
-
-### Internal contributors
-
-Terse and professional. `LGTM.` is the default. Add one sentence only when there's a real thing to say.
-
-### Bot PRs
-
-Factual, no emojis, one line. For Dependabot, the risk tier can appear as a single word ("security patch," "high-risk update," "quarterly batch") -- nothing more.
-
-## Implementation notes
-
-- Always use the confirmed/edited content from the Step 8 preview.
-- Base template selection on the contributor type from Step 1.
-- For Dependabot, pick the single-word risk descriptor from the table above.
-- Keep bot messages factual and one line.
-- Voice and length rules override any other instinct. If a template cell and the voice rules seem to conflict, the voice rules win.
+**Voice and length rules override any other instinct.** If a template cell and the voice rules seem to conflict, the voice rules win.

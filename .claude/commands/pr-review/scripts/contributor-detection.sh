@@ -137,6 +137,7 @@ echo "CONTENT_SCRUTINY=$CONTENT_SCRUTINY"
 echo "AI_SUSPECT=$AI_SUSPECT"
 echo "AI_SUSPECT_REASONS=$AI_SUSPECT_REASONS"
 echo "RISK_TIER=$RISK_TIER"
+echo "LABELS=$(echo "$PR_DATA" | jq -r '[.labels[].name] | join(",")')"
 echo ""
 echo "PR_METADATA:"
 echo "$PR_DATA" | jq -r '{number, title, url}'

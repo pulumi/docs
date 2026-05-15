@@ -1,6 +1,10 @@
 <!--Thanks for your contribution. See [CONTRIBUTING](CONTRIBUTING.md)
     for Pulumi's documentation contribution guidelines.
 
+    Tip: open this PR as a **draft** while you iterate. Automated review
+    fires when you mark it ready for review — drafting first keeps the
+    review fresh and avoids comment noise.
+
     Help us merge your changes more quickly by adding more details such
     as labels, milestones, and reviewers.-->
 

@@ -1,0 +1,696 @@
+diff --git a/content/docs/iac/clouds/gcp/_index.md b/content/docs/iac/clouds/gcp/_index.md
+index 32f1c91c7ad4..df8871d27f07 100644
+--- a/content/docs/iac/clouds/gcp/_index.md
++++ b/content/docs/iac/clouds/gcp/_index.md
+@@ -16,10 +16,10 @@ get_started_guide:
+   link: /docs/iac/get-started/gcp/
+   icon: google-cloud
+ providers:
+-  description: The Google Cloud Classic provider can provision many Google Cloud resources. Use the Google Cloud Native provider for same-day access to Google Cloud resources.
++  description: The Google Cloud Classic provider is the primary, actively maintained provider for Google Cloud. The Google Cloud Native provider is not actively maintained and is not recommended for new projects.
+   provider_list:
+   - display_name: Google Cloud Classic
+-    description: The AWS Classic provider can provision many AWS cloud resources. Use the AWS Native provider for same-day access to all AWS resources.
++    description: The Google Cloud Classic provider can provision many Google Cloud resources. It is the primary, actively maintained provider recommended for all new projects.
+     recommended: true
+     content_links:
+     - display_name: Overview
+@@ -35,7 +35,6 @@ providers:
+       icon: question-small-black
+       url: gcp/how-to-guides/
+   - display_name: Google Cloud Native
+-    public_preview: true
+     content_links:
+     - display_name: Overview
+       icon: page-small-black
+diff --git a/content/docs/iac/clouds/gcp/guides/_index.md b/content/docs/iac/clouds/gcp/guides/_index.md
+new file mode 100644
+index 000000000000..acfe7c322747
+--- /dev/null
++++ b/content/docs/iac/clouds/gcp/guides/_index.md
+@@ -0,0 +1,33 @@
++---
++title_tag: "Google Cloud Guides | Pulumi IaC"
++title: Guides
++h1: Google Cloud Guides
++meta_desc: Guides for working with Google Cloud services using Pulumi's GCP provider.
++meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
++menu:
++  iac:
++    name: Guides
++    identifier: gcp-clouds-guides
++    parent: google-clouds
++    weight: 1
++
++aliases:
++- /docs/clouds/gcp/guides/
++---
++
++This section contains guides for working with Google Cloud using Pulumi. If you are unsure which Google Cloud
++package to use for your project, see [Choosing a Pulumi GCP provider](providers/) for a comparison of the
++available packages and guidance on when to use each one.
++
++The guides use the following packages:
++
++- [GCP Classic provider (`@pulumi/gcp`)](/registry/packages/gcp/) — the primary, recommended provider for managing
++  Google Cloud resources
++- [Google Cloud Native provider (`@pulumi/google-native`)](/registry/packages/google-native/) — a provider built
++  directly on Google Cloud REST API discovery documents (not actively maintained; new projects should use the GCP
++  Classic provider)
++
++## Getting started
++
++- [Choosing a provider](providers/)
++- [Get started with Google Cloud](/docs/iac/get-started/gcp/)
+diff --git a/content/docs/iac/clouds/gcp/guides/providers.md b/content/docs/iac/clouds/gcp/guides/providers.md
+new file mode 100644
+index 000000000000..863b4d183b1d
+--- /dev/null
++++ b/content/docs/iac/clouds/gcp/guides/providers.md
+@@ -0,0 +1,165 @@
++---
++title_tag: "Choosing a Pulumi GCP Provider"
++title: Choosing a Provider
++h1: Choosing a Pulumi GCP Provider
++meta_desc: Learn when to use the GCP Classic and Google Cloud Native packages for managing Google Cloud infrastructure with Pulumi, and how to migrate between them.
++meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
++menu:
++  iac:
++    parent: gcp-clouds-guides
++    name: Choosing a Provider
++    identifier: gcp-guides-providers
++    weight: 0
++aliases:
++- /docs/clouds/gcp/guides/providers/
++---
++
++Pulumi offers two packages for working with Google Cloud at the provider level, plus a pair of smaller component
++libraries for specific use cases. This guide explains what each package does, how they compare, and which one to
++choose for your project.
++
++{{% notes type="info" %}}
++For all new Google Cloud projects, use the **[GCP Classic provider (`@pulumi/gcp`)](/registry/packages/gcp/)**. It
++is the primary, actively maintained choice with the broadest resource coverage, documentation, and community
++support. The Google Cloud Native provider is no longer actively maintained and is not recommended for new projects.
++{{% /notes %}}
++
++## Packages at a glance
++
++### Providers
++
++| | [GCP Classic](/registry/packages/gcp/) | [Google Cloud Native](/registry/packages/google-native/) |
++|---|---|---|
++| **Node.js** | `@pulumi/gcp` | `@pulumi/google-native` |
++| **Python** | `pulumi_gcp` | `pulumi_google_native` |
++| **Go** | `github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp` | `github.com/pulumi/pulumi-google-native/sdk/go/google` |
++| **.NET** | `Pulumi.Gcp` | `Pulumi.GoogleNative` |
++| **Java** | `com.pulumi.gcp` | `com.pulumi.googlenative` |
++| **Built on** | Terraform Google provider (via Pulumi TF bridge) | Google Cloud REST API discovery documents |
++| **Resource coverage** | Comprehensive | Limited to REST API discovery resources |
++| **Maintenance status** | Actively maintained | Not actively maintained (last release: Nov 2023) |
++| **Best for** | All new and existing projects | Legacy projects; not recommended for new use |
++
++### Component libraries
++
++Component libraries build on top of the GCP Classic provider and package common patterns into higher-level
++constructs. They are not separate providers — they do not have their own state and they do not replace the GCP
++provider.
++
++| | [GCP Global CloudRun](/registry/packages/gcp-global-cloudrun/) | [Google Cloud static website](/registry/packages/google-cloud-static-website/) |
++|---|---|---|
++| **Covers** | Multi-region Cloud Run with global load balancing | Static website hosting on Cloud Storage |
++
++## GCP Classic provider
++
++The [GCP Classic provider](/registry/packages/gcp/) is the primary and recommended package for managing Google
++Cloud infrastructure with Pulumi. It is built on the
++[Terraform Google provider](https://github.com/hashicorp/terraform-provider-google) via the
++[Pulumi Terraform bridge](https://github.com/pulumi/pulumi-terraform-bridge), which translates the mature
++HashiCorp Google provider into native Pulumi resources. This gives you access to a comprehensive, well-tested
++interface to Google Cloud services, refined by a large community over many years.
++
++The GCP Classic provider covers the full breadth of Google Cloud services: Compute Engine, Cloud Storage, Google
++Kubernetes Engine, Cloud Run, Cloud SQL, Pub/Sub, BigQuery, IAM, networking, and much more. It follows a
++predictable naming convention where resource types map closely to the underlying Terraform resource names (e.g.,
++`gcp.storage.Bucket`, `gcp.compute.Instance`, `gcp.container.Cluster`).
++
++For all Google Cloud infrastructure — whether you are starting a new project or maintaining an existing one —
++the GCP Classic provider is the right choice. Its resources are thoroughly documented, support all Pulumi features
++(including import, state management, and drift detection), and are actively updated to track new Google Cloud
++services and API changes.
++
++## Google Cloud Native provider
++
++The [Google Cloud Native provider](/registry/packages/google-native/) was originally built directly on Google
++Cloud's REST API discovery documents, enabling same-day coverage of newly launched resources. However, this
++provider is no longer actively maintained. Its last release was in November 2023, and it has not been updated
++to reflect changes in the Google Cloud API since then.
++
++{{% notes type="warning" %}}
++The Google Cloud Native provider is **not recommended for new projects**. Users on Google Cloud Native who need
++continued access to Google Cloud resources should migrate to the GCP Classic provider. See
++[Migrating from Google Cloud Native to GCP Classic](#migrating-from-google-cloud-native-to-gcp-classic) below.
++{{% /notes %}}
++
++If you are maintaining a project that already uses the Google Cloud Native provider, it will continue to function
++for resources that have not changed since November 2023. However, you should plan a migration to the GCP Classic
++provider to ensure access to new resource types, bug fixes, and ongoing support.
++
++## Component libraries
++
++### GCP Global CloudRun
++
++[GCP Global CloudRun](/registry/packages/gcp-global-cloudrun/) provides a higher-level component for deploying
++Cloud Run services with global load balancing. It abstracts the complexity of configuring a Cloud Run service
++alongside a global HTTPS load balancer, making it straightforward to expose a containerized workload to the
++public internet with a global anycast IP address.
++
++### Google Cloud static website
++
++[Google Cloud static website](/registry/packages/google-cloud-static-website/) is a component for hosting a
++static website on Cloud Storage. It handles bucket creation, public access configuration, and optional CDN
++setup, making it easy to deploy a static site to Google Cloud with minimal boilerplate.
++
++## Choosing the right package
++
++For any new project on Google Cloud, use the GCP Classic provider. It is the only actively maintained provider
++with comprehensive resource coverage, and it is the choice recommended by Pulumi.
++
++If you have a specific use case for which no lower-level provider resource exists, consider whether the GCP
++Global CloudRun or Google Cloud static website component libraries cover it. For all other resources, work
++directly with `@pulumi/gcp`.
++
++Avoid starting new projects with the Google Cloud Native provider. Its maintenance has ceased, and users with
++existing projects on it should migrate to the GCP Classic provider as described below.
++
++## Migrating from Google Cloud Native to GCP Classic
++
++If you have an existing project using the Google Cloud Native provider, migrating to the GCP Classic provider
++will give you access to actively maintained resources, bug fixes, and ongoing support.
++
++The general migration approach is:
++
++1. **Identify your Google Cloud Native resources.** Review your Pulumi program for imports from
++   `@pulumi/google-native` (TypeScript/JavaScript), `pulumi_google_native` (Python), or equivalent packages in
++   other languages.
++
++1. **Find the GCP Classic equivalents.** Most resources in the Google Cloud Native provider have a direct
++   counterpart in the GCP Classic provider under the `gcp.*` namespace. For example:
++   - `google-native.storage/v1.Bucket` → `gcp.storage.Bucket`
++   - `google-native.compute/v1.Instance` → `gcp.compute.Instance`
++   - `google-native.container/v1.Cluster` → `gcp.container.Cluster`
++
++1. **Rewrite your resource definitions.** Update your program to use GCP Classic resource types and property
++   names. Property names and structures will differ in some cases, so consult the
++   [GCP Classic API docs](/registry/packages/gcp/api-docs/) for each resource.
++
++1. **Import existing resources.** Use `pulumi import` to bring your existing Google Cloud resources under the
++   management of the GCP Classic provider, rather than destroying and recreating them. This requires the resource
++   type and its Google Cloud resource ID. See the [import documentation](/docs/iac/guides/migration/import/) for
++   full details.
++
++1. **Remove the Google Cloud Native provider** from your project's dependencies once all resources have been
++   migrated.
++
++The migration is resource-by-resource and can be done incrementally — you do not need to migrate an entire stack
++at once. Running both providers in the same stack during a phased migration is supported.
++
++## Using the GCP Classic provider
++
++The following example demonstrates the GCP Classic provider creating a Cloud Storage bucket and a Cloud Run
++service — two of the most commonly used Google Cloud resources:
++
++{{< example-program path="gcp-providers-classic" >}}
++
++When you run `pulumi up`, Pulumi provisions both resources and records their state in your
++[Pulumi Cloud](https://app.pulumi.com) backend, giving you a full audit history and enabling collaboration across
++your team.
++
++## Next steps
++
++- [GCP Classic provider documentation](/registry/packages/gcp/)
++- [GCP Classic provider API docs](/registry/packages/gcp/api-docs/)
++- [GCP Classic provider how-to guides](/registry/packages/gcp/how-to-guides/)
++- [Get started with Google Cloud](/docs/iac/get-started/gcp/)
++- [Importing existing infrastructure](/docs/iac/guides/migration/import/)
+diff --git a/static/programs/gcp-providers-classic-csharp/Program.cs b/static/programs/gcp-providers-classic-csharp/Program.cs
+new file mode 100644
+index 000000000000..3c0331a8b84d
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-csharp/Program.cs
+@@ -0,0 +1,37 @@
++using System.Collections.Generic;
++using Pulumi;
++using Gcp = Pulumi.Gcp;
++
++return await Deployment.RunAsync(() =>
++{
++    // Create a Cloud Storage bucket using the GCP Classic provider.
++    var bucket = new Gcp.Storage.Bucket("my-bucket", new()
++    {
++        Location = "US",
++        UniformBucketLevelAccess = true,
++        ForceDestroy = true,
++    });
++
++    // Create a Cloud Run service.
++    var service = new Gcp.CloudRunV2.Service("my-service", new()
++    {
++        Location = "us-central1",
++        DeletionProtection = false,
++        Template = new Gcp.CloudRunV2.Inputs.ServiceTemplateArgs
++        {
++            Containers = new[]
++            {
++                new Gcp.CloudRunV2.Inputs.ServiceTemplateContainerArgs
++                {
++                    Image = "us-docker.pkg.dev/cloudrun/container/hello",
++                },
++            },
++        },
++    });
++
++    return new Dictionary<string, object?>
++    {
++        ["bucketName"] = bucket.Name,
++        ["serviceUrl"] = service.Uri,
++    };
++});
+diff --git a/static/programs/gcp-providers-classic-csharp/Pulumi.yaml b/static/programs/gcp-providers-classic-csharp/Pulumi.yaml
+new file mode 100644
+index 000000000000..886ffa01e76a
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-csharp/Pulumi.yaml
+@@ -0,0 +1,7 @@
++name: gcp-providers-classic-csharp
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime: dotnet
++config:
++  pulumi:tags:
++    value:
++      pulumi:template: gcp-csharp
+diff --git a/static/programs/gcp-providers-classic-csharp/gcp-providers-classic-csharp.csproj b/static/programs/gcp-providers-classic-csharp/gcp-providers-classic-csharp.csproj
+new file mode 100644
+index 000000000000..900ef5b9e649
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-csharp/gcp-providers-classic-csharp.csproj
+@@ -0,0 +1,14 @@
++<Project Sdk="Microsoft.NET.Sdk">
++
++  <PropertyGroup>
++    <OutputType>Exe</OutputType>
++    <TargetFramework>net8.0</TargetFramework>
++    <Nullable>enable</Nullable>
++  </PropertyGroup>
++
++  <ItemGroup>
++    <PackageReference Include="Pulumi" Version="3.*" />
++    <PackageReference Include="Pulumi.Gcp" Version="8.*" />
++  </ItemGroup>
++
++</Project>
+diff --git a/static/programs/gcp-providers-classic-go/Pulumi.yaml b/static/programs/gcp-providers-classic-go/Pulumi.yaml
+new file mode 100644
+index 000000000000..40f856d606d9
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-go/Pulumi.yaml
+@@ -0,0 +1,3 @@
++name: gcp-providers-classic-go
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime: go
+diff --git a/static/programs/gcp-providers-classic-go/go.mod b/static/programs/gcp-providers-classic-go/go.mod
+new file mode 100644
+index 000000000000..981842d7284f
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-go/go.mod
+@@ -0,0 +1,8 @@
++module gcp-providers-classic-go
++
++go 1.21
++
++require (
++	github.com/pulumi/pulumi-gcp/sdk/v8 v8.2.0
++	github.com/pulumi/pulumi/sdk/v3 v3.130.0
++)
+diff --git a/static/programs/gcp-providers-classic-go/main.go b/static/programs/gcp-providers-classic-go/main.go
+new file mode 100644
+index 000000000000..f7b793acbfbb
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-go/main.go
+@@ -0,0 +1,41 @@
++package main
++
++import (
++	"github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp/cloudrunv2"
++	"github.com/pulumi/pulumi-gcp/sdk/v8/go/gcp/storage"
++	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
++)
++
++func main() {
++	pulumi.Run(func(ctx *pulumi.Context) error {
++		// Create a Cloud Storage bucket using the GCP Classic provider.
++		bucket, err := storage.NewBucket(ctx, "my-bucket", &storage.BucketArgs{
++			Location:                 pulumi.String("US"),
++			UniformBucketLevelAccess: pulumi.Bool(true),
++			ForceDestroy:             pulumi.Bool(true),
++		})
++		if err != nil {
++			return err
++		}
++
++		// Create a Cloud Run service.
++		service, err := cloudrunv2.NewService(ctx, "my-service", &cloudrunv2.ServiceArgs{
++			Location:           pulumi.String("us-central1"),
++			DeletionProtection: pulumi.Bool(false),
++			Template: &cloudrunv2.ServiceTemplateArgs{
++				Containers: cloudrunv2.ServiceTemplateContainerArray{
++					&cloudrunv2.ServiceTemplateContainerArgs{
++						Image: pulumi.String("us-docker.pkg.dev/cloudrun/container/hello"),
++					},
++				},
++			},
++		})
++		if err != nil {
++			return err
++		}
++
++		ctx.Export("bucketName", bucket.Name)
++		ctx.Export("serviceUrl", service.Uri)
++		return nil
++	})
++}
+diff --git a/static/programs/gcp-providers-classic-java/Pulumi.yaml b/static/programs/gcp-providers-classic-java/Pulumi.yaml
+new file mode 100644
+index 000000000000..4ad781b1fe67
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-java/Pulumi.yaml
+@@ -0,0 +1,3 @@
++name: gcp-providers-classic-java
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime: java
+diff --git a/static/programs/gcp-providers-classic-java/pom.xml b/static/programs/gcp-providers-classic-java/pom.xml
+new file mode 100644
+index 000000000000..c64ee882d045
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-java/pom.xml
+@@ -0,0 +1,83 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>com.pulumi</groupId>
++    <artifactId>gcp-providers-classic-java</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <encoding>UTF-8</encoding>
++        <maven.compiler.source>11</maven.compiler.source>
++        <maven.compiler.target>11</maven.compiler.target>
++        <maven.compiler.release>11</maven.compiler.release>
++        <mainClass>myproject.App</mainClass>
++        <mainArgs/>
++    </properties>
++
++    <dependencies>
++        <dependency>
++            <groupId>com.pulumi</groupId>
++            <artifactId>pulumi</artifactId>
++            <version>(,1.0]</version>
++        </dependency>
++        <dependency>
++            <groupId>com.pulumi</groupId>
++            <artifactId>gcp</artifactId>
++            <version>[8.0.0,8.99]</version>
++        </dependency>
++    </dependencies>
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-jar-plugin</artifactId>
++                <version>3.2.2</version>
++                <configuration>
++                    <archive>
++                        <manifest>
++                            <addClasspath>true</addClasspath>
++                            <mainClass>myproject.App</mainClass>
++                        </manifest>
++                    </archive>
++                </configuration>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-assembly-plugin</artifactId>
++                <version>3.4.0</version>
++                <configuration>
++                    <descriptorRefs>
++                        <descriptorRef>jar-with-dependencies</descriptorRef>
++                    </descriptorRefs>
++                    <archive>
++                        <manifest>
++                            <mainClass>myproject.App</mainClass>
++                        </manifest>
++                    </archive>
++                </configuration>
++                <executions>
++                    <execution>
++                        <id>make-assembly</id>
++                        <phase>package</phase>
++                        <goals>
++                            <goal>single</goal>
++                        </goals>
++                    </execution>
++                </executions>
++            </plugin>
++            <plugin>
++                <groupId>org.codehaus.mojo</groupId>
++                <artifactId>exec-maven-plugin</artifactId>
++                <version>3.0.0</version>
++                <configuration>
++                    <mainClass>myproject.App</mainClass>
++                    <commandlineArgs>${mainArgs}</commandlineArgs>
++                </configuration>
++            </plugin>
++        </plugins>
++    </build>
++</project>
+diff --git a/static/programs/gcp-providers-classic-java/src/main/java/myproject/App.java b/static/programs/gcp-providers-classic-java/src/main/java/myproject/App.java
+new file mode 100644
+index 000000000000..4f680b677300
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-java/src/main/java/myproject/App.java
+@@ -0,0 +1,36 @@
++package myproject;
++
++import com.pulumi.Pulumi;
++import com.pulumi.gcp.storage.Bucket;
++import com.pulumi.gcp.storage.BucketArgs;
++import com.pulumi.gcp.cloudrunv2.Service;
++import com.pulumi.gcp.cloudrunv2.ServiceArgs;
++import com.pulumi.gcp.cloudrunv2.inputs.ServiceTemplateArgs;
++import com.pulumi.gcp.cloudrunv2.inputs.ServiceTemplateContainerArgs;
++
++public class App {
++    public static void main(String[] args) {
++        Pulumi.run(ctx -> {
++            // Create a Cloud Storage bucket using the GCP Classic provider.
++            var bucket = new Bucket("my-bucket", BucketArgs.builder()
++                .location("US")
++                .uniformBucketLevelAccess(true)
++                .forceDestroy(true)
++                .build());
++
++            // Create a Cloud Run service.
++            var service = new Service("my-service", ServiceArgs.builder()
++                .location("us-central1")
++                .deletionProtection(false)
++                .template(ServiceTemplateArgs.builder()
++                    .containers(ServiceTemplateContainerArgs.builder()
++                        .image("us-docker.pkg.dev/cloudrun/container/hello")
++                        .build())
++                    .build())
++                .build());
++
++            ctx.export("bucketName", bucket.name());
++            ctx.export("serviceUrl", service.uri());
++        });
++    }
++}
+diff --git a/static/programs/gcp-providers-classic-python/Pulumi.yaml b/static/programs/gcp-providers-classic-python/Pulumi.yaml
+new file mode 100644
+index 000000000000..4383ca99a096
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-python/Pulumi.yaml
+@@ -0,0 +1,11 @@
++name: gcp-providers-classic-python
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime:
++  name: python
++  options:
++    toolchain: pip
++    virtualenv: venv
++config:
++  pulumi:tags:
++    value:
++      pulumi:template: gcp-python
+diff --git a/static/programs/gcp-providers-classic-python/__main__.py b/static/programs/gcp-providers-classic-python/__main__.py
+new file mode 100644
+index 000000000000..91e4318ec751
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-python/__main__.py
+@@ -0,0 +1,27 @@
++import pulumi
++import pulumi_gcp as gcp
++
++# Create a Cloud Storage bucket using the GCP Classic provider.
++bucket = gcp.storage.Bucket(
++    "my-bucket",
++    location="US",
++    uniform_bucket_level_access=True,
++    force_destroy=True,
++)
++
++# Create a Cloud Run service.
++service = gcp.cloudrunv2.Service(
++    "my-service",
++    location="us-central1",
++    deletion_protection=False,
++    template=gcp.cloudrunv2.ServiceTemplateArgs(
++        containers=[
++            gcp.cloudrunv2.ServiceTemplateContainerArgs(
++                image="us-docker.pkg.dev/cloudrun/container/hello",
++            ),
++        ],
++    ),
++)
++
++pulumi.export("bucketName", bucket.name)
++pulumi.export("serviceUrl", service.uri)
+diff --git a/static/programs/gcp-providers-classic-python/requirements.txt b/static/programs/gcp-providers-classic-python/requirements.txt
+new file mode 100644
+index 000000000000..56036af9f073
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-python/requirements.txt
+@@ -0,0 +1,2 @@
++pulumi>=3.0.0,<4.0.0
++pulumi-gcp>=8.0.0,<9.0.0
+diff --git a/static/programs/gcp-providers-classic-typescript/Pulumi.yaml b/static/programs/gcp-providers-classic-typescript/Pulumi.yaml
+new file mode 100644
+index 000000000000..eae2fcfbb5ba
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-typescript/Pulumi.yaml
+@@ -0,0 +1,10 @@
++name: gcp-providers-classic-typescript
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime:
++  name: nodejs
++  options:
++    packagemanager: npm
++config:
++  pulumi:tags:
++    value:
++      pulumi:template: gcp-typescript
+diff --git a/static/programs/gcp-providers-classic-typescript/index.ts b/static/programs/gcp-providers-classic-typescript/index.ts
+new file mode 100644
+index 000000000000..804284cea126
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-typescript/index.ts
+@@ -0,0 +1,23 @@
++import * as pulumi from "@pulumi/pulumi";
++import * as gcp from "@pulumi/gcp";
++
++// Create a Cloud Storage bucket using the GCP Classic provider.
++const bucket = new gcp.storage.Bucket("my-bucket", {
++    location: "US",
++    uniformBucketLevelAccess: true,
++    forceDestroy: true,
++});
++
++// Create a Cloud Run service.
++const service = new gcp.cloudrunv2.Service("my-service", {
++    location: "us-central1",
++    deletionProtection: false,
++    template: {
++        containers: [{
++            image: "us-docker.pkg.dev/cloudrun/container/hello",
++        }],
++    },
++});
++
++export const bucketName = bucket.name;
++export const serviceUrl = service.uri;
+diff --git a/static/programs/gcp-providers-classic-typescript/package.json b/static/programs/gcp-providers-classic-typescript/package.json
+new file mode 100644
+index 000000000000..59a69850845f
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-typescript/package.json
+@@ -0,0 +1,12 @@
++{
++    "name": "gcp-providers-classic-typescript",
++    "main": "index.ts",
++    "devDependencies": {
++        "@types/node": "^18",
++        "typescript": "^5.0.0"
++    },
++    "dependencies": {
++        "@pulumi/gcp": "^8.0.0",
++        "@pulumi/pulumi": "^3.0.0"
++    }
++}
+diff --git a/static/programs/gcp-providers-classic-typescript/tsconfig.json b/static/programs/gcp-providers-classic-typescript/tsconfig.json
+new file mode 100644
+index 000000000000..ab65afa6135b
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-typescript/tsconfig.json
+@@ -0,0 +1,18 @@
++{
++    "compilerOptions": {
++        "strict": true,
++        "outDir": "bin",
++        "target": "es2016",
++        "module": "commonjs",
++        "moduleResolution": "node",
++        "sourceMap": true,
++        "experimentalDecorators": true,
++        "pretty": true,
++        "noFallthroughCasesInSwitch": true,
++        "noImplicitReturns": true,
++        "forceConsistentCasingInFileNames": true
++    },
++    "files": [
++        "index.ts"
++    ]
++}
+diff --git a/static/programs/gcp-providers-classic-yaml/Pulumi.yaml b/static/programs/gcp-providers-classic-yaml/Pulumi.yaml
+new file mode 100644
+index 000000000000..09be0da8add4
+--- /dev/null
++++ b/static/programs/gcp-providers-classic-yaml/Pulumi.yaml
+@@ -0,0 +1,24 @@
++name: gcp-providers-classic-yaml
++description: An example that uses the GCP Classic provider to create a Cloud Storage bucket and a Cloud Run service.
++runtime: yaml
++
++resources:
++  my-bucket:
++    type: gcp:storage:Bucket
++    properties:
++      location: US
++      uniformBucketLevelAccess: true
++      forceDestroy: true
++
++  my-service:
++    type: gcp:cloudrunv2:Service
++    properties:
++      location: us-central1
++      deletionProtection: false
++      template:
++        containers:
++          - image: us-docker.pkg.dev/cloudrun/container/hello
++
++outputs:
++  bucketName: ${my-bucket.name}
++  serviceUrl: ${my-service.uri}
