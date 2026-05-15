@@ -83,7 +83,8 @@ If you don't already have one, create an ESC environment that emits the credenti
 1. Open your organization's **Neo Settings**, then **Integrations**, then the **CLI tools** section.
 1. Under **Available**, find the CLI you want to connect (for example, **AWS**) and select **Connect**.
 1. Fill in the form:
-    - **Name**: a short, unique name for this CLI integration instance (for example, `aws-dev` or `production-aws`). The name shows up in audit log entries and the per-task selector, **and Neo sees it too**. It's how the agent decides which integration to reach for ("use `production-aws` to investigate the prod outage"). Pick a name that conveys what the integration is for.
+    - **Name**: a short, unique name for this CLI integration instance (for example, `aws-dev` or `production-aws`). The name shows up in audit log entries, the per-task selector, and Neo's task transcripts.
+    - **Notes** (optional): a short description Neo reads when deciding which integration to use (for example, "read-only production diagnostics" or "compliance account, avoid mutations"). Cover what the integration is for and when Neo should reach for it, so users don't have to spell it out in every task prompt.
     - **ESC environment**: pick the environment you created in the previous step from the dropdown. Only environments in the current organization are listed.
 1. Select **Connect**.
 
