@@ -76,6 +76,16 @@ jobs:
           path: esc-sdk
           ref: v${{ env.ESC_SDK_VERSION }}
           submodules: recursive
+      # The pulumi/esc-sdk repo commits sdk/typescript/package.json with a
+      # literal "version": "${VERSION}" placeholder that its release pipeline
+      # substitutes at npm-publish time. TypeDoc's --includeVersion reads
+      # package.json verbatim, so without this substitution every generated
+      # page title would render "v${VERSION}". Replace the placeholder with
+      # the real release version before running typedoc.
+      - name: substitute version in esc-sdk package.json
+        run: |
+          sed -i "s/\${VERSION}/${ESC_SDK_VERSION}/g" esc-sdk/sdk/typescript/package.json
+          grep '"version"' esc-sdk/sdk/typescript/package.json
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:

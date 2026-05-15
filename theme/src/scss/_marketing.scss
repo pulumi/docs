@@ -83,7 +83,7 @@
         }
 
         p {
-            @apply text-gray-700;
+            @apply text-service-black;
         }
 
         .large-container {
@@ -93,7 +93,7 @@
 
         .description a,
         a.link {
-            @apply text-black font-semibold;
+            @apply text-violet-primary font-semibold;
 
             &:hover {
                 @apply underline;
