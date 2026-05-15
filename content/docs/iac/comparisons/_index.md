@@ -32,6 +32,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 * [AWS CDK](/docs/iac/comparisons/aws-cdk/)
 * [CDKTF](/docs/iac/comparisons/cdktf/)
+* [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
 * [Helm](/docs/iac/comparisons/helm/)
