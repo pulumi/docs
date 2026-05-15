@@ -2,24 +2,24 @@
 title_tag: "Update Plans | Pulumi Concepts"
 meta_desc: Learn about Pulumi update plans and how they can be used.
 title: Update plans
-h1: Update  plans
+h1: Update plans
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Update plans
-        parent: iac-guides-basics
-        weight: 60
+        parent: iac-concepts
+        weight: 80
     concepts:
         weight: 11
 aliases:
 - /docs/iac/guides/update-plans/
+- /docs/iac/guides/basics/update-plans/
 - /updateplans/
 - /docs/intro/concepts/plans/
 - /docs/intro/concepts/update-plans/
 - /docs/intro/vs/
 - /docs/concepts/plans/
 - /docs/concepts/update-plans/
-- /docs/iac/concepts/update-plans/
 ---
 
 The result of previews can be saved to an _update plan_, this can then be used during a later update to
