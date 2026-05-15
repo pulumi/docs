@@ -41,7 +41,7 @@ The move from Crossplane to Pulumi is usually driven by a few key factors:
 
 1. **Logic and abstraction**: Crossplane Compositions historically used patch-and-transform expressions in YAML, with Composition Functions now allowing imperative logic in Go, Python, or KCL. Pulumi expresses the same logic directly in TypeScript, Python, Go, and other languages, making loops, conditionals, and complex data transformations easier to model.
 1. **Tooling and ecosystem**: Pulumi integrates with existing IDEs, testing frameworks, and CI/CD pipelines without requiring custom Kubernetes controllers for every piece of logic.
-1. **Debugging**: Troubleshooting a failing Crossplane claim involves digging through multiple layers of Kubernetes events and status fields. Pulumi provides clear, actionable error messages and a local execution model that simplifies debugging.
+1. **Debugging**: Troubleshooting a failing Crossplane request involves digging through multiple layers of Kubernetes events and status fields. Pulumi provides clear, actionable error messages and a local execution model that simplifies debugging.
 
 ## Mapping Crossplane concepts to Pulumi
 
@@ -51,7 +51,7 @@ If you're familiar with Crossplane, you'll find that Pulumi has direct equivalen
 | :--- | :--- | :--- |
 | Composite Resource (XR) | `ComponentResource` | A logical grouping of resources that defines a higher-level abstraction. |
 | Composition | Component class implementation | The actual logic that defines how the abstraction is built. |
-| Claim (XRC) | Stack or Component instance | The specific request for a set of resources with defined parameters. |
+| Claim (XRC) or namespaced XR | Stack or Component instance | The specific request for a set of resources with defined parameters. Crossplane v1 commonly used claims; Crossplane v2 emphasizes namespaced composite resources. |
 | ProviderConfig | Explicit `Provider` resource (e.g. `new aws.Provider(...)`) | Configuration for how the provider authenticates and interacts with the cloud. |
 
 ## Side-by-side: provisioning a database
@@ -60,7 +60,7 @@ Let's look at how you would define a managed database in both tools.
 
 ### Crossplane YAML
 
-In Crossplane, you might define a `CompositeResourceDefinition` and a `Composition` to wrap an RDS instance.
+In Crossplane, the `CompositeResourceDefinition` and `Composition` define the abstraction, while a composite resource instance requests it. The simplified example below shows the request shape platform users might apply.
 
 ```yaml
 apiVersion: database.example.org/v1alpha1
@@ -74,7 +74,7 @@ spec:
 
 ### Pulumi TypeScript
 
-In Pulumi, you use a `ComponentResource` to create the same abstraction.
+In Pulumi, you use a `ComponentResource` to create the same abstraction. Pass the database password as a Pulumi secret, for example from stack configuration or Pulumi ESC.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -82,6 +82,8 @@ import * as aws from "@pulumi/aws";
 
 export interface DatabaseArgs {
     storageGB: pulumi.Input<number>;
+    username: pulumi.Input<string>;
+    password: pulumi.Input<string>;
 }
 
 export class PostgreSQLInstance extends pulumi.ComponentResource {
@@ -92,6 +94,9 @@ export class PostgreSQLInstance extends pulumi.ComponentResource {
             allocatedStorage: args.storageGB,
             engine: "postgres",
             instanceClass: "db.t3.micro",
+            username: args.username,
+            password: args.password,
+            skipFinalSnapshot: true,
         }, { parent: this });
     }
 }
@@ -103,18 +108,18 @@ You don't have to migrate everything at once. A "big bang" migration is rarely t
 
 1. **Leave Crossplane running**: Keep your existing Crossplane resources under management while you build out your Pulumi components.
 1. **Reference existing resources**: Use Pulumi's `get` functions to reference resources managed by Crossplane. This allows you to build new infrastructure that depends on the old.
-1. **Import by boundary**: Migrate resources one namespace or one claim boundary at a time. Use the [`pulumi import`](/docs/iac/guides/migration/import/) command to bring existing cloud resources under Pulumi management without downtime.
+1. **Import by boundary**: Migrate resources one namespace or one request boundary at a time. Before importing a cloud resource into Pulumi, stop Crossplane from writing to the same object. Use provider-specific management policies or deletion policies so disabling Crossplane reconciliation does not delete the external resource, or switch to an observe-only pattern if your provider supports that. Then use the [`pulumi import`](/docs/iac/guides/migration/import/) command so only one control plane owns writes at a time.
 
 ## Cutover checklist
 
 When you're ready to move a resource from Crossplane to Pulumi, follow this checklist:
 
 1. **Ownership**: Ensure the cloud resource's tags or ownership fields are updated to reflect that Pulumi is now the manager.
-1. **State import**: Use `pulumi import` to generate the code and state for the existing resource.
+1. **State import**: Use `pulumi import` to generate the code and state for the existing resource after Crossplane is no longer reconciling changes to that object.
 1. **Policy check**: Run your Pulumi stack through [Pulumi Policies](/docs/insights/policy/) to ensure it meets compliance standards.
 1. **Secrets**: Migrate any secrets from Kubernetes Secrets (used by Crossplane) to a dedicated secret manager or Pulumi's built-in secrets provider.
-1. **Rollback plan**: Always have a plan to revert to Crossplane management if the initial Pulumi deployment fails.
+1. **Rollback plan**: Always have a plan to revert to Crossplane management if the initial Pulumi deployment fails, including how you will remove Pulumi ownership before resuming Crossplane reconciliation.
 
-Migrating from Crossplane to Pulumi lets your team keep the benefits of infrastructure as code while gaining the flexibility of modern programming languages. Next, pick one low-risk Crossplane composition, map its claim inputs to a Pulumi component, and use [Pulumi import](/docs/iac/guides/migration/import/) to adopt existing resources without a rewrite.
+Migrating from Crossplane to Pulumi lets your team keep the benefits of infrastructure as code while gaining the flexibility of modern programming languages. Next, pick one low-risk Crossplane composition, map its request inputs to a Pulumi component, and use [Pulumi import](/docs/iac/guides/migration/import/) to adopt existing resources without a rewrite.
 
 {{< blog/cta-button "Plan your Pulumi migration" "/docs/iac/guides/migration/" >}}
