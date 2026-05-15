@@ -47,6 +47,16 @@ See also:
 
 ### Toolchain
 
+#### mise (Recommended)
+
+This repository tracks tool versions in [`mise.toml`](./mise.toml). If you have [mise](https://mise.jdx.dev/) installed, you can install the core website toolchain (Hugo, Node.js, Yarn, Go, and Vale) at the pinned versions in one step:
+
+```bash
+mise install
+```
+
+For SDK and CLI documentation builds, you'll also need Python, .NET, Pulumi, and Pulumi ESC — see [Manual Installation](#manual-installation) below for those.
+
 #### Manual Installation
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
