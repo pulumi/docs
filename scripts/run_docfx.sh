@@ -1,15 +1,35 @@
 #!/bin/bash
 # Usage: run_docfx
+#
+# Configurable via environment variables (defaults preserve the IaC .NET build):
+#   DOCFX_CONFIG          docfx config file name inside docfx/ (default: docfx.json)
+#   DOCFX_BUILD_PROJECTS  space-separated csproj paths to `dotnet build` first
+#   DOCFX_OUT             post-processing target dir (default: the IaC dotnet output)
+#   DOCFX_SDK_VERSION     optional SDK version string to surface on generated pages
 
 set -o nounset -o errexit -o pipefail
 
+DOCFX_CONFIG="${DOCFX_CONFIG:-docfx.json}"
+DOCFX_BUILD_PROJECTS="${DOCFX_BUILD_PROJECTS:-../pulumi-dotnet/sdk/Pulumi/Pulumi.csproj ../pulumi-dotnet/sdk/Pulumi.Automation/Pulumi.Automation.csproj}"
+DOCFX_OUT="${DOCFX_OUT:-../static-prebuilt/docs/reference/pkg/dotnet}"
+DOCFX_SDK_VERSION="${DOCFX_SDK_VERSION:-}"
+
 # Build the .NET projects first so that protobuf-generated types (Pulumirpc) are
 # present in the obj/ directories before docfx tries to compile them.
-dotnet build ../pulumi-dotnet/sdk/Pulumi/Pulumi.csproj
-dotnet build ../pulumi-dotnet/sdk/Pulumi.Automation/Pulumi.Automation.csproj
+for proj in $DOCFX_BUILD_PROJECTS; do
+    dotnet build "$proj"
+done
 
 cd docfx
-docfx
+if [ -n "$DOCFX_SDK_VERSION" ]; then
+    # Surface the SDK version on generated pages via DocFX global metadata.
+    # This file lives only in docfx/ and is never committed (workflows add
+    # static-prebuilt/ only).
+    printf '{ "_appVersion": "%s" }\n' "$DOCFX_SDK_VERSION" > version-metadata.json
+    docfx "$DOCFX_CONFIG" --globalMetadataFiles version-metadata.json
+else
+    docfx "$DOCFX_CONFIG"
+fi
 
 # Post-process DocFX output: lowercase all paths for case-insensitive URL serving.
 # Requires GNU sed (\L...\E syntax) — available on Ubuntu GitHub Actions runners.
@@ -21,7 +41,7 @@ if ! sed --version 2>/dev/null | grep -q 'GNU sed'; then
     exit 1
 fi
 
-DOTNET_OUT="../static-prebuilt/docs/reference/pkg/dotnet"
+DOTNET_OUT="$DOCFX_OUT"
 
 echo "Post-processing DocFX output: lowercasing filenames and rewriting hrefs..."
 

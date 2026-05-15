@@ -1,5 +1,6 @@
 <div class="hidden-sm col-md-2" role="complementary">
   <div class="sideaffix">
+    {{#_appVersion}}<p class="sdk-version">Version {{_appVersion}}</p>{{/_appVersion}}
     {{^_disableContribution}}
     <div class="contribution">
       <ul class="nav">
