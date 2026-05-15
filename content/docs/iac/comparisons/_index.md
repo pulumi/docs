@@ -36,7 +36,6 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
 * [Helm](/docs/iac/comparisons/helm/)
 * [Kubernetes YAML Manifests](/docs/iac/comparisons/k8s-yaml-dsls/)
-* [Crossplane](/docs/iac/comparisons/crossplane/)
 * [Serverless Framework](/docs/iac/comparisons/serverless/)
 * [Chef, Puppet, Ansible, Salt, etc.](/docs/iac/comparisons/chef-puppet-etc/)
 * [Cloud SDKs (AWS Boto, etc.)](/docs/iac/comparisons/cloud-sdks)
