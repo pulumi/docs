@@ -9,6 +9,9 @@ menu:
     weight: 1
     parent: iac-cli
     identifier: iac-cli-commands
+cascade:
+  cli_command_page: true
+  cli_tool: pulumi
 ---
 
 ## Common Commands
