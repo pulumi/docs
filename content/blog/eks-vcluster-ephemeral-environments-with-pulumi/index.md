@@ -45,7 +45,7 @@ The environment factory architecture consists of two main layers.
 1. **Host cluster**: A single, reliable EKS cluster managed with EKS Auto Mode. This cluster provides the underlying compute, networking, and storage.
 1. **Tenant environments**: Virtual clusters (vCluster) running as pods within host namespaces.
 
-According to the [vCluster architecture](https://www.vcluster.com/docs/vcluster/main/introduction/architecture), the virtual control plane handles API requests while a syncer maps virtual resources to the host cluster. This separation allows tenants to manage their own CRDs, namespaces, and RBAC while platform teams use quotas, NetworkPolicies, pod security, IAM boundaries, and node isolation controls to protect the host and other tenants.
+According to the [vCluster architecture](https://www.vcluster.com/docs/vcluster/introduction/architecture), the virtual control plane handles API requests while a syncer maps virtual resources to the host cluster. This separation allows tenants to manage their own CRDs, namespaces, and RBAC while platform teams use quotas, NetworkPolicies, pod security, IAM boundaries, and node isolation controls to protect the host and other tenants.
 
 ## Implementation: the EKS Auto Mode host
 
