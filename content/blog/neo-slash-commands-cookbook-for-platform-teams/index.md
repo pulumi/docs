@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Neo Slash Commands for Real Platform Workflows"
 date: 2026-07-14
-meta_desc: "Use Pulumi Neo slash commands and operating modes for practical platform workflows such as base image refreshes, drift cleanup, and reviewed automation."
+meta_desc: "Use Pulumi Neo slash commands and task modes for practical platform workflows such as base image refreshes, drift cleanup, and reviewed automation."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -18,7 +18,7 @@ social:
     linkedin: |
         Pulumi Neo slash commands work best when they turn repeated platform workflows into reviewed, auditable actions.
 
-        This cookbook covers practical commands for base image refreshes, drift cleanup, and operating modes that keep humans in control.
+        This cookbook covers practical commands for base image refreshes, drift cleanup, and task modes that keep humans in control.
     bluesky: |
         Pulumi Neo slash commands can encode real platform workflows: base image refreshes, drift cleanup, reviewed automation.
 
@@ -27,13 +27,13 @@ social:
 
 Platform engineering teams often find themselves caught between two worlds: the need for high-velocity infrastructure changes and the reality of manual SRE toil. Tasks like upgrading runtimes, refreshing AMIs for security compliance, and cleaning up drift are essential but repetitive. [Pulumi Neo](/product/neo/) closes this gap by turning these workflows into interactive, AI-assisted experiences.
 
-By combining slash commands with operating modes, you can encode your team's best practices into shortcuts the team can run with predictable guardrails. By the end, you will have a set of Neo slash commands for common SRE tasks like runtime upgrades and drift cleanup.
+By combining slash commands with Neo task modes, you can encode your team's best practices into shortcuts the team can run with predictable guardrails. By the end, you will have a set of Neo slash commands for common SRE tasks like runtime upgrades and drift cleanup.
 
 <!--more-->
 
 ## Closing the SRE-toil gap
 
-Slash commands in Neo are more than just shortcuts. They are pre-configured prompts that capture the context, constraints, and expected outcomes of a specific task. When paired with operating modes, they allow you to delegate the heavy lifting to Neo while maintaining the exact level of oversight your organization requires.
+Slash commands in Neo are more than just shortcuts. They are pre-configured prompts that capture the context, constraints, and expected outcomes of a specific task. When paired with task modes, they allow you to delegate the heavy lifting to Neo while maintaining the level of oversight your organization requires.
 
 ## Upgrade runtimes
 
@@ -41,10 +41,10 @@ Slash commands in Neo are more than just shortcuts. They are pre-configured prom
 
 Upgrading Lambda runtimes or container base images across a stack fleet is a classic example of toil.
 
-**Intent**: Identify and upgrade outdated runtimes to the latest supported versions.
+**Intent**: Identify and upgrade outdated runtimes to a team-approved supported version.
 
 **Slash command body**:
-> "Scan all stacks in the current project for AWS Lambda resources using Node.js 16 or 18. Draft a change to upgrade them to Node.js 20, ensuring that any associated environment variables or layers remain compatible. Prepare a reviewed workflow for the update."
+> "Scan all stacks in the current project for AWS Lambda resources using Node.js 18 or 20. Draft a change to upgrade them to our approved Node.js runtime for each region, ensuring that any associated environment variables or layers remain compatible. Prepare a reviewed workflow for the update."
 
 **Expected output**: Neo identifies the affected resources, modifies the Pulumi code, and presents a preview of the changes for approval.
 
@@ -80,14 +80,14 @@ Infrastructure drift is inevitable, but managing it shouldn't be a full-time job
 
 Managing secret rotation across multiple environments is high-stakes and error-prone.
 
-For stack secrets stored in [Pulumi Cloud](/product/pulumi-cloud/), Neo can help trace references and prepare the reviewed update.
+For stack secrets stored in [Pulumi Cloud](/product/pulumi-cloud/), Neo can help trace references and prepare the reviewed rotation workflow.
 
 **Intent**: Rotate specific stack secrets and update the associated resources.
 
 **Slash command body**:
-> "Identify all resources using the 'dbPassword' stack config key. Generate a new random password, update the secret in Pulumi Cloud, and draft the necessary changes to update the resources using it. Prepare a reviewed workflow."
+> "Identify all resources using the 'dbPassword' stack config key. Trace the dependent resources, draft the approved rotation steps for our config or secret store, and prepare the code changes needed for consumers to use the new value. Do not mutate production secrets without approval."
 
-**Expected output**: Neo helps draft the rotation plan and reviewed code changes to update the infrastructure.
+**Expected output**: Neo helps draft the rotation plan, approval checkpoints, and reviewed code changes to update dependent infrastructure.
 
 ## Bump provider dependencies
 
@@ -98,9 +98,9 @@ Keeping your Pulumi programs up to date with the latest provider versions ensure
 **Intent**: Update Pulumi provider packages and resolve any breaking changes.
 
 **Slash command body**:
-> "Check for updates to the 'pulumi-aws' and 'pulumi-kubernetes' packages. Update them to the latest minor versions in the package.json or requirements.txt. Run a preview to ensure no breaking changes were introduced."
+> "Check for updates to the Pulumi AWS and Kubernetes provider packages: `@pulumi/aws` and `@pulumi/kubernetes` in `package.json`, or `pulumi-aws` and `pulumi-kubernetes` in `requirements.txt`. Draft the dependency changes and run a preview to surface provider-driven infrastructure changes before update."
 
-**Expected output**: Updated dependency files and a clean preview confirming compatibility.
+**Expected output**: Updated dependency files, release-note callouts, and a preview summary that highlights any provider-driven infrastructure changes.
 
 ## Rename stacks
 
@@ -115,13 +115,13 @@ Refactoring stack names or moving resources between stacks can be complex due to
 
 **Expected output**: A step-by-step rename plan that preserves state in place, updates dependencies, and avoids an unnecessary import cycle.
 
-## Operating modes and safety
+## Task modes and safety
 
-The power of these recipes comes from how you run them. Neo's operating modes and permissions settings provide a safety net for platform teams:
+The power of these recipes comes from how you run them. Neo task modes and per-task permission settings provide a safety net for platform teams:
 
-1. **Review mode**: Neo requests approval for previews, updates, and pull requests. This is the default mode and the safest fit for production workflows.
-1. **Balanced mode**: Neo can perform routine work but requests approval before `pulumi up`.
-1. **Auto mode**: Neo runs without approval prompts, which is best reserved for tightly scoped non-production workflows.
-1. **Read-only permissions**: Read-only access is a permissions setting, not an operating mode. Use it for exploration workflows where Neo should analyze infrastructure and draft changes without mutating live environments. See [Neo read-only mode](/blog/neo-read-only-mode/) for details.
+1. **Review mode**: Neo requests approval for the proposed task plan, previews, updates, and pull requests. It is the most restrictive mode and a strong starting point for production workflows.
+1. **Balanced mode**: Neo auto-approves operations that do not run `pulumi up`; `pulumi up` still requires approval.
+1. **Auto mode**: Neo does not request approvals, which is best reserved for tightly scoped non-production workflows.
+1. **Read-only permissions**: Read-only is a per-task permission cap, not a task mode. Pair it with any task mode for exploration workflows where Neo should analyze infrastructure and draft changes without mutating live environments. See [Neo read-only mode](/blog/neo-read-only-mode/) for details.
 
-By combining these modes with custom slash commands, you give platform teams a faster way to draft, review, and apply infrastructure changes under your standards and controls.
+By combining task modes with custom slash commands, you give platform teams a faster way to draft, review, and apply infrastructure changes under your standards and controls.
