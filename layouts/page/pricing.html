@@ -6,7 +6,6 @@
         {{ partial "fingerprinted-img.html" (dict
                 "src" "/images/pricing/bg-lines-top-right-1.svg"
                 "alt" ""
-                "ariaHidden" "true"
                 "class" "w-[340px] md:w-[450px]") }}
     </div>
     <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
@@ -28,7 +27,7 @@
                 {{/* Header: title + optional badge */}}
                 <div>
                     <div class="flex items-center gap-3">
-                        <h3 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h3>
+                        <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h2>
                         {{ with $tier.badge }}
                         <span
                             class="inline-flex items-center rounded-full bg-violet-100 text-violet-primary px-2.5 py-0.5 text-xs font-mono uppercase tracking-wider"
@@ -157,7 +156,7 @@
                         {{ partial "icon.html" (dict "name" . "class" "size-8") }}
                     </span>
                     {{ end }}
-                    <h4 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h4>
+                    <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h3>
                 </div>
                 {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-4 text-gray-600 transition-transform group-open:rotate-180" "weight" "bold") }}
             </summary>
