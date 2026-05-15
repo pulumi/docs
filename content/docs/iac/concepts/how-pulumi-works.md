@@ -468,9 +468,9 @@ By default, if a resource must be replaced, Pulumi will attempt to create a new 
 
 ## Pulumi Cloud architecture
 
-The components described above—the language host, deployment engine, and resource providers—all run on the client, wherever the Pulumi CLI runs. When you use the default [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to store [state](/docs/iac/concepts/state-and-backends/), the CLI also coordinates with Pulumi Cloud.
+The components described above—the language host, deployment engine, and resource providers—all run on the client, wherever the Pulumi CLI runs. When you use the default [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to store state, the CLI also coordinates with Pulumi Cloud.
 
-Pulumi Cloud is comprised of two Internet-accessible endpoints—a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`—along with supporting cloud infrastructure.
+Pulumi Cloud comprises two Internet-accessible endpoints—a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`—along with supporting cloud infrastructure.
 
 Pulumi Cloud never acquires your cloud credentials and does not communicate with your cloud provider directly. Instead, the CLI coordinates with both Pulumi Cloud's API and your cloud provider's API. This client/server division means your IAM and key management do not need to change when adopting Pulumi: if you run Pulumi from [within a CI/CD environment](/docs/iac/using-pulumi/continuous-delivery/), you can rely on the security mechanisms your organization already has in place.
 
