@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class EnvironmentDefinitionSerializer </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class EnvironmentDefinitionSerializer ">
+    
+    <meta name="description" content="Provides serialization and deserialization for . The ESC API returns environment definitions as application/x-yaml content from the GetEnvironment, GetEnvironmentAtVersion, and DecryptEnvironment endpoints. The generated client cannot deserialize YAML, so this class bridges that gap.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer">
+
+
+  <h1 id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer" class="text-break">Class EnvironmentDefinitionSerializer</h1>
+  <div class="markdown level0 summary"><p>Provides serialization and deserialization for <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>.
+The ESC API returns environment definitions as <code>application/x-yaml</code> content
+from the GetEnvironment, GetEnvironmentAtVersion, and DecryptEnvironment endpoints.
+The generated client cannot deserialize YAML, so this class bridges that gap.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">EnvironmentDefinitionSerializer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.esc.html">Esc</a>.<a class="xref" href="pulumi.esc.sdk.html">Sdk</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Esc.Sdk.dll</h6>
+  <h5 id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class EnvironmentDefinitionSerializer</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EnvironmentDefinitionSerializer.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_Deserialize_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.Deserialize*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_Deserialize_System_String_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.Deserialize(System.String)">Deserialize(string?)</h4>
+  <div class="markdown level1 summary"><p>Deserializes YAML content returned by the ESC API into an <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>.
+This handles the <code>application/x-yaml</code> responses from GetEnvironment,
+GetEnvironmentAtVersion, and DecryptEnvironment endpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static EnvironmentDefinition? Deserialize(string? yaml)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">yaml</span></td>
+        <td><p>The raw YAML string from the API response.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a></td>
+        <td><p>A parsed <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>, or null if the input is empty.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EnvironmentDefinitionSerializer.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_Serialize_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.Serialize*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_Serialize_Pulumi_Esc_Sdk_Model_EnvironmentDefinition_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.Serialize(Pulumi.Esc.Sdk.Model.EnvironmentDefinition)">Serialize(EnvironmentDefinition)</h4>
+  <div class="markdown level1 summary"><p>Serializes an <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a> to JSON.
+JSON is valid YAML, so this output can be sent directly to the ESC API
+for environment definition updates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string Serialize(EnvironmentDefinition definition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td><p>The environment definition to serialize.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A JSON string representation of the environment definition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EnvironmentDefinitionSerializer.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_SerializeToYaml_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.SerializeToYaml*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EnvironmentDefinitionSerializer_SerializeToYaml_Pulumi_Esc_Sdk_Model_EnvironmentDefinition_" data-uid="Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.SerializeToYaml(Pulumi.Esc.Sdk.Model.EnvironmentDefinition)">SerializeToYaml(EnvironmentDefinition)</h4>
+  <div class="markdown level1 summary"><p>Serializes an <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a> to YAML.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string SerializeToYaml(EnvironmentDefinition definition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td><p>The environment definition to serialize.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A YAML string representation of the environment definition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 0.13.1</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EnvironmentDefinitionSerializer.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
