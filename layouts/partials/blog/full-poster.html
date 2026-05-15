@@ -7,17 +7,17 @@
         {{ $md := $resource.Process (printf "fit 942x628 %s" $processArgs) | fingerprint }}
         {{ $lg := $resource.Process (printf "fit 1280x854 %s" $processArgs) | fingerprint }}
         <div class="rounded-lg overflow-hidden w-full mb-8 bg-violet-950 h-[min(40vh,380px)]">
-        <img
-            class="object-contain object-center w-full h-full"
-            src="{{ $md.RelPermalink }}"
-            srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 942w, {{ $lg.RelPermalink }} 1280w"
-            sizes="(min-width: 1024px) 75vw, 100vw"
-            alt="{{ .Title }}"
-            width="{{ $md.Width }}" height="{{ $md.Height }}"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-        />
+            <img
+                class="object-contain object-center w-full h-full"
+                src="{{ $md.RelPermalink }}"
+                srcset="{{ $sm.RelPermalink }} 640w, {{ $md.RelPermalink }} 942w, {{ $lg.RelPermalink }} 1280w"
+                sizes="(min-width: 1024px) 75vw, 100vw"
+                alt="{{ .Title }}"
+                width="{{ $md.Width }}" height="{{ $md.Height }}"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+            />
         </div>
     {{ end }}
 {{ end }}
