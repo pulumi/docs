@@ -8,12 +8,12 @@ menu:
     iac:
         name: Kubernetes YAML Manifests
         parent: iac-comparisons
-        weight: 7
+        weight: 60
         identifier: iac-comparisons-k8s-yaml
     concepts:
         identifier: vs-k8s-yaml
         parent: vs
-        weight: 8
+        weight: 60
 aliases:
 - /docs/reference/vs/k8s_yaml_dsls/
 - /docs/intro/vs/k8s_yaml_dsls/
@@ -51,7 +51,7 @@ Kubernetes is an open-source project governed by the [Cloud Native Computing Fou
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | The [Kubernetes API](https://kubernetes.io/docs/reference/using-api/) and client libraries operate on individual objects, but there is no orchestration SDK for driving a full apply/preview/destroy lifecycle |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | Reuse is by copying manifests or by [Kustomize](https://kustomize.io/) bases and overlays; there is no package manager or typed interface for sharing manifest libraries |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | The cluster is itself the source of truth; `kubectl get -o yaml` exports an object's current state as a manifest |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and SOC 2 | No built-in policy-as-code; admission controllers such as [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) enforce policy inside the cluster as a separate component |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS and PCI DSS | No built-in policy-as-code; admission controllers such as [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/) enforce policy inside the cluster as a separate component |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Yes — Kubernetes and `kubectl` are [Apache License 2.0](https://github.com/kubernetes/kubernetes/blob/master/LICENSE) |
 | Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | None — manifests are the input format of the Kubernetes API; managed Kubernetes is sold by cloud providers, but the manifest format itself has no commercial tier |
 
@@ -75,7 +75,7 @@ A Kubernetes [`Secret`](https://kubernetes.io/docs/concepts/configuration/secret
 
 ### Policy as code
 
-Kubernetes manifests have no built-in policy-as-code mechanism; enforcement is done inside the cluster by an admission controller such as [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/), installed and managed as a separate component. [Pulumi Policies](/docs/insights/policy/) is open source and free, with rules written in Python, TypeScript, or Open Policy Agent Rego that run during `pulumi preview` and `pulumi up` — before resources are created. Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks, and commercial plans include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2, HITRUST, NIST).
+Kubernetes manifests have no built-in policy-as-code mechanism; enforcement is done inside the cluster by an admission controller such as [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/) or [Kyverno](https://kyverno.io/), installed and managed as a separate component. [Pulumi Policies](/docs/insights/policy/) is open source and free, with rules written in Python, TypeScript, or Open Policy Agent Rego that run during `pulumi preview` and `pulumi up` — before resources are created. Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks, and commercial plans include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, HITRUST, NIST).
 
 ### Modularity and reuse
 

@@ -2124,7 +2124,7 @@ Production CloudFront distribution applies security headers via response headers
 
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
 - `X-Frame-Options: DENY`
-- `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com`
+- `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com academy.pulumi.com`
 - `X-XSS-Protection: 1; mode=block`
 - `X-Content-Type-Options: nosniff`
 - `Referrer-Policy: strict-origin-when-cross-origin`

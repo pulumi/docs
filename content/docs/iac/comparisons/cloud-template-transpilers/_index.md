@@ -9,10 +9,10 @@ menu:
         name: Cloud Template Transpilers
         parent: iac-comparisons
         identifier: iac-comparisons-transpilers
-        weight: 4
+        weight: 40
     concepts:
         parent: vs
-        weight: 2
+        weight: 40
 aliases:
 - /docs/intro/vs/cloud_template_transpilers/
 - /docs/concepts/vs/cloud-template-transpilers/

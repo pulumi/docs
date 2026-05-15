@@ -560,7 +560,7 @@ const baseSecurityHeadersConfig = {
     contentSecurityPolicy: {
         // Allow embedding from LearnWorlds (LMS). X-Frame-Options is ignored by modern
         // browsers when frame-ancestors is present in CSP.
-        contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com",
+        contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com academy.pulumi.com",
         override: false,
     },
     // These remaining options are derived from:
