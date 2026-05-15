@@ -126,8 +126,10 @@ comparison_table:
                 - title: On-demand resource price
                   items:
                     - content: Free
-                    - content: $0.00025/hour<br>($0.185/month)
-                    - content: Starting at $0.0005/hour<br>($0.365/month)
+                    - content: $0.00025/hour
+                      subtext: $0.185/month
+                    - content: Starting at $0.0005/hour
+                      subtext: $0.365/month
                     - content: Custom
                 - title: Commitment pricing
                   items:
@@ -349,8 +351,10 @@ comparison_table:
               - title: On-demand secret price
                 items:
                   - content: 25 free
-                  - content: $0.000685/hour<br>($0.50/mo)
-                  - content: $0.001/hour<br>($0.75/mo)
+                  - content: $0.000685/hour
+                    subtext: $0.50/mo
+                  - content: $0.001/hour
+                    subtext: $0.75/mo
                   - content: Custom
               - title: Price per plaintext config
                 items:
@@ -466,16 +470,21 @@ comparison_table:
               - title: On-demand resource price
                 items:
                   - content: Free
-                  - content: $0.00025/hour<br>($0.185/month)
-                  - content: Starting at $0.0005/hour<br>($0.365/month)
+                  - content: $0.00025/hour
+                    subtext: $0.185/month
+                  - content: Starting at $0.0005/hour
+                    subtext: $0.365/month
                   - content: Custom
               - title: Workflow cost per minute/ included per month
                 link: /pricing#faq
                 items:
                   - content: 500 free
-                  - content: $0.01<br>3,000 included
-                  - content: $0.01 / Custom<br>3,000 included
-                  - content: $0.01 / Custom<br>3,000 included
+                  - content: $0.01
+                    subtext: 3,000 included
+                  - content: $0.01 / Custom
+                    subtext: 3,000 included
+                  - content: $0.01 / Custom
+                    subtext: 3,000 included
               - title: Resource search
                 link: /docs/insights/search/
                 items:
@@ -535,8 +544,10 @@ comparison_table:
                 link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: Up to 25 policies (1 pack limit)
-                  - content: Up to 100 policies (3 pack limit)
+                  - content: Up to 25 policies
+                    subtext: 1 pack limit
+                  - content: Up to 100 policies
+                    subtext: 3 pack limit
                   - content: Unlimited
               - title: Enforcement Modes
                 link: /docs/insights/policy/#local-policy-execution

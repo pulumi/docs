@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-{{/* Hero with decorative background SVG anchored top-right */}}
 <section class="relative overflow-hidden">
     <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-10 md:top-0 lg:right-0 -z-10 select-none">
         {{ partial "fingerprinted-img.html" (dict
@@ -16,15 +15,13 @@
     </div>
 </section>
 
-{{/* Tier cards */}}
 <section id="plans" class="container mx-auto relative z-10 px-6">
-    <div class="grid grid-cols-1 card bg-white md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
+    <div class="grid grid-cols-1 card md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
         {{ range $tier := .Params.tiers.trialed.items }}
         {{ $borderClass := "" }}
-        {{ if $tier.badge }}{{ $borderClass = "rounded-lg ring relative z-10 ring-violet-primary" }}{{ end }}
+        {{ if $tier.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
         <div>
-            <div class=" p-8 flex flex-col gap-6 {{ $borderClass }}">
-                {{/* Header: title + optional badge */}}
+            <div class=" p-8 flex flex-col gap-6 bg-white h-full overflow-hidden rounded-lg {{ $borderClass }}">
                 <div>
                     <div class="flex items-center gap-3">
                         <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h2>
@@ -38,7 +35,6 @@
                     <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $tier.subtitle }}</p>
                 </div>
 
-                {{/* Price block — large `$X` style when price_label is set; smaller heading style otherwise */}}
                 <div>
                     {{ if $tier.price_label }}
                     <div class="flex items-baseline gap-2">
@@ -57,7 +53,6 @@
                     </div>
                 </div>
 
-                {{/* CTAs */}}
                 <div class="flex flex-col items-stretch gap-2 md:min-h-[6rem]">
                     {{ with $tier.cta }}
                     <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
@@ -70,7 +65,6 @@
                     {{ end }}
                 </div>
 
-                {{/* Features */}}
                 <div class="flex flex-col gap-3">
                     {{ with $tier.features_intro }}
                     <p class="font-mono uppercase text-xs tracking-wider m-0">{{ . | markdownify }}</p>
@@ -92,7 +86,6 @@
     </div>
 </section>
 
-{{/* Pulumi for startups — single text line, not a card */}}
 <section class="container mx-auto -mt-4 mb-10 px-6">
     <div class="bg-violet-50 rounded-lg p-4 pt-8">
         <p class="text-center text-sm md:text-base m-0 text-service-black">
@@ -103,27 +96,24 @@
     </div>
 </section>
 
-{{/* Customer stats — single horizontal strip with vertical rules, not 3 cards */}}
-<section id="customers" class="container mx-auto px-6 my-16">
+<section id="customers" class="container mx-auto px-6 my-8 md:my-16 lg:my-24">
     <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x">
         {{ range $customer := .Params.customers }}
-        <a href="{{ $customer.link }}" class="flex flex-col gap-4 px-6 py-6 group">
+        <a href="{{ $customer.link }}" class="flex flex-col gap-4 py-8 md:px-8 group">
             <span class="h-10">
                 {{ partial "fingerprinted-img.html" (dict
                             "src" (printf "/logos/customers/%s.svg" $customer.logo)
                             "alt" (printf "%s logo" (strings.Title $customer.logo))
                             "class" "h-10 w-auto saturate-0 group-hover:saturate-100") }}
             </span>
-            <p class="text-2xl tracking-tight m-0 group-hover:[&>strong]:text-violet-primary">{{ $customer.stat | markdownify }}</p>
+            <p class="text-xl tracking-tight m-0 group-hover:[&>strong]:text-violet-primary">{{ $customer.stat | markdownify }}</p>
         </a>
         {{ end }}
     </div>
 </section>
 
-{{/* Compare editions */}}
 <section id="compare" class="container mx-auto px-6">
 
-    {{/* Sticky tier header — repeats the tier name + price + CTA across the comparison */}}
     <div class="sticky top-16 z-30 bg-white py-4">
         <div class="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-4 items-end">
             <div class="hidden md:block"></div>
@@ -152,8 +142,8 @@
             <summary class="flex items-center justify-between cursor-pointer py-2 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-3">
                     {{ with .icon }}
-                    <span class="inline-flex items-center justify-center size-12 rounded-md border border-gray-200 text-violet-primary flex-shrink-0">
-                        {{ partial "icon.html" (dict "name" . "class" "size-8") }}
+                    <span class="inline-flex items-center justify-center size-9 rounded-md bg-violet-background text-violet-primary flex-shrink-0">
+                        {{ partial "icon.html" (dict "name" . "class" "size-6") }}
                     </span>
                     {{ end }}
                     <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h3>
@@ -162,9 +152,9 @@
             </summary>
 
             {{ range $row := .rows }}
-            <div class="border-b border-gray-100 last:border-none first-of-type:pt-0 py-3 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
+            <div class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
                 <div class="col-span-4 md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
-                    {{ if $row.link }}<a class="text-violet-primary underline-offset-5 hover:underline decoration-violet-300" href="{{ $row.link }}">{{ $row.title }}</a
+                    {{ if $row.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $row.link }}">{{ $row.title }}</a
                     >{{ else }}{{ $row.title }}{{ end }}
                     {{ with $row.tooltip }}
                     <pulumi-tooltip class="inline-block">
@@ -182,6 +172,9 @@
                         <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-secondary size-6 inline-block") }} </span>
                         {{ else }}
                         <span>{{ $item.content | markdownify }}</span>
+                        {{ with $item.subtext }}
+                        <div class="text-xs text-gray-600 mt-0.5">{{ . | markdownify }}</div>
+                        {{ end }}
                         {{ end }}
                         {{ with $item.tooltip }}
                         <pulumi-tooltip class="inline-block">
@@ -220,7 +213,6 @@
     })();
 </script>
 
-{{/* Testimonial */}}
 {{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">
     {{ partial "template-partials/template-testimonial.html" (dict
@@ -233,7 +225,6 @@
 </section>
 {{ end }}
 
-{{/* FAQ — minimal rows with bottom dividers, grouped by category heading */}}
 <section id="faq" class="container mx-auto px-6 my-24">
     <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Frequently asked questions</h2>
     <div class="max-w-4xl mx-auto">
