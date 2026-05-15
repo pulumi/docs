@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $planNames := slice "Individual" "Team" "Enterprise" "Business Critical" }}
 
 {{/* Hero with decorative background SVG anchored top-right */}}
 <section class="relative overflow-hidden">
@@ -62,7 +61,7 @@
                 {{/* CTAs */}}
                 <div class="flex flex-col items-stretch gap-2 md:min-h-[6rem]">
                     {{ with $tier.cta }}
-                    <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full">{{ .label }}</a>
+                    <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                     {{ end }}
                     {{ with $tier.cta_secondary }}
                     <a href="{{ .href }}" class="btn btn-secondary">
@@ -113,7 +112,7 @@
             <span class="h-10">
                 {{ partial "fingerprinted-img.html" (dict
                             "src" (printf "/logos/customers/%s.svg" $customer.logo)
-                            "alt" (printf "%s logo" $customer.logo)
+                            "alt" (printf "%s logo" (strings.Title $customer.logo))
                             "class" "h-10 w-auto saturate-0 group-hover:saturate-100") }}
             </span>
             <p class="text-2xl tracking-tight m-0 group-hover:[&>strong]:text-violet-primary">{{ $customer.stat | markdownify }}</p>
@@ -147,13 +146,13 @@
         </div>
     </div>
 
-    {{ range.Params.comparison_table.sections }}
+    {{ range .Params.comparison_table.sections }}
     <div>
-        {{ range.tables }}
+        {{ range .tables }}
         <details class="group border-b border-gray-200 overflow-x-hidden" data-pricing-table open>
             <summary class="flex items-center justify-between cursor-pointer py-2 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-3">
-                    {{ with.icon }}
+                    {{ with .icon }}
                     <span class="inline-flex items-center justify-center size-12 rounded-md border border-gray-200 text-violet-primary flex-shrink-0">
                         {{ partial "icon.html" (dict "name" . "class" "size-8") }}
                     </span>
@@ -223,13 +222,13 @@
 </script>
 
 {{/* Testimonial */}}
-{{ with.Params.testimonial }}
+{{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">
     {{ partial "template-partials/template-testimonial.html" (dict
                 "quote" .quote
                 "author" .author
                 "title" .role
-                "company" .logo
+                "company" (strings.Title .logo)
                 "logo" (printf "/logos/customers/%s.svg" .logo)
                 "anchor" "testimonial") }}
 </section>
@@ -239,8 +238,8 @@
 <section id="faq" class="container mx-auto px-6 my-24">
     <h2 class="text-center text-3xl md:text-4xl font-semibold tracking-tight mb-12">Frequently asked questions</h2>
     <div class="max-w-4xl mx-auto">
-        {{ range.Params.faq }}
-        <h3 class="font-mono uppercase tracking-wider text-xs mt-12 mb-2">{{ .category }}</h3>
+        {{ range .Params.faq }}
+        <h3 id="faq-{{ .id }}" class="font-mono uppercase tracking-wider text-xs mt-12 mb-2">{{ .category }}</h3>
         <ul class="list-none p-0 m-0">
             {{ range $question := .items }}
             <li class="m-0 border-b border-gray-200">

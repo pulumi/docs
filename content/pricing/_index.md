@@ -22,6 +22,7 @@ tiers:
                   label: Get started
                   href: https://app.pulumi.com/signup
                   style: outline
+                  data_role: cta-get-started
               features_intro: "Includes:"
               features:
                   - 1 user
@@ -61,7 +62,7 @@ tiers:
                   href: https://app.pulumi.com/signup?create-organization=1
                   style: primary
               cta_secondary:
-                  label: Contact Sales
+                  label: Contact sales
                   href: /contact/?form=sales
               features_intro: "Everything in **Team**, plus:"
               features:
@@ -95,7 +96,7 @@ tiers:
                   - 24x7 Enterprise Support available
 
 testimonial:
-    quote: Pulumi helped our team ship a new product faster. We needed one tool to setup and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
+    quote: Pulumi helped our team ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
     author: Justin Pflughaupt
     role: VP of Cloud Platform Engineering
     logo: snowflake

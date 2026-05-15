@@ -25,6 +25,7 @@ pulumi-tooltip {
     }
 
     .tooltip-target {
+        @apply cursor-help;
 
         &.active {
             + .tooltip-content {
