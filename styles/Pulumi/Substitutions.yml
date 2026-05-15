@@ -1,0 +1,13 @@
+extends: substitution
+message: "Use '%s' instead of '%s' (STYLE-GUIDE.md)."
+level: error
+ignorecase: true
+action:
+  name: replace
+swap:
+  '\bclick\b': select
+  '\bgo to\b': navigate to
+  '\bpublic beta\b': public preview
+  '\bcross-language package\b': Pulumi package
+  '\bsingle-language package\b': native language package
+  '\blanguage-native package\b': native language package

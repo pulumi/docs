@@ -1,63 +1,738 @@
-name: Claude Code Review
+name: Pre-merge Review (main)
 
+# Full review is chained to complete AFTER Claude Triage, so the review
+# sees the freshly-applied state labels. Listening to the same
+# ready_for_review event as triage produced a race: review read labels
+# at workflow-start time, before triage wrote them, so review:trivial
+# and review:frontmatter-only short-circuits were broken on initial runs.
+#
+# Triage runs on [opened, reopened, ready_for_review]. When it completes,
+# the workflow_run event fires here. A runtime pr-context step then
+# decides whether this particular PR is eligible (skip drafts, trivial
+# PRs, and bot authors).
+#
+# Synchronize events keep the mark-stale behavior on pull_request.
 on:
   pull_request:
-    types: [opened, reopened, ready_for_review]
-    # Optional: Only run on specific file changes
-    # paths:
-    #   - "src/**/*.ts"
-    #   - "src/**/*.tsx"
-    #   - "src/**/*.js"
-    #   - "src/**/*.jsx"
+    types: [synchronize]
+  workflow_run:
+    workflows: ["Pre-merge Review (triage)"]
+    types: [completed]
+  # Manual dispatch entry point used by claude-new.yml when an authorized
+  # user invokes `@claude #new-review` to regenerate the pinned review
+  # from scratch. force=true bypasses the trivial / frontmatter-only /
+  # draft / bot-author skip-reason heuristics — explicit user request
+  # overrides the auto-skip path.
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to review'
+        required: true
+        type: string
+      force:
+        description: 'Bypass skip-reason heuristics (trivial/fmonly/draft/bot-author)'
+        required: false
+        type: boolean
+        default: false
+      head_sha:
+        description: 'PR head SHA (passed by claude-new.yml dispatcher so checkout sees PR content, not base)'
+        required: true
+        type: string
+      dispatcher_comment_id:
+        description: 'ID of the dispatcher confirmation comment to delete on completion (claude-new.yml only; empty for other dispatchers)'
+        required: false
+        type: string
+        default: ''
+      mention_author:
+        description: 'Author to @-mention in the terminal "Review regenerated" comment on success (claude-new.yml only; empty suppresses the terminal post)'
+        required: false
+        type: string
+        default: ''
 
 jobs:
+  # synchronize → just mark the existing pinned review stale.
+  mark-stale:
+    if: |
+      github.event_name == 'pull_request' &&
+      github.event.action == 'synchronize' &&
+      github.event.pull_request.user.login != 'pulumi-bot' &&
+      github.event.pull_request.user.login != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Mark previous Claude review as stale
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          # Only mark stale if a prior review actually completed — i.e. the
+          # PR carries one of the two terminal-success state labels. The
+          # transition is an inline gh pr edit (this job has no checkout,
+          # so we can't shell out to set-review-label.sh); the labels are
+          # mutually exclusive by convention. in-progress / error / stale
+          # are not transitioned: in-progress means a run is mid-flight,
+          # error is a workflow failure (separate triage), and stale is
+          # already terminal.
+          LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
+          if [[ ",$LABELS," == *",review:outstanding-issues,"* ]]; then
+            gh pr edit "$PR" --repo "${{ github.repository }}" \
+              --add-label "review:stale" --remove-label "review:outstanding-issues"
+          elif [[ ",$LABELS," == *",review:no-blockers,"* ]]; then
+            gh pr edit "$PR" --repo "${{ github.repository }}" \
+              --add-label "review:stale" --remove-label "review:no-blockers"
+          fi
+
   claude-review:
-    # Skip automated PRs from pulumi-bot and dependabot (secrets not available)
-    if: github.event.pull_request.user.login != 'pulumi-bot' && github.event.pull_request.user.login != 'dependabot[bot]'
+    # Fire only for workflow_run events from Claude Triage that were
+    # themselves triggered by a pull_request AND completed successfully.
+    # The conclusion gate matters: triage is now skipped on draft opens
+    # (see claude-triage.yml's !draft guard). Without this gate, the
+    # skipped triage workflow_run still fires this job, which then races
+    # the ready_for_review-triggered run and gets cancelled by the
+    # concurrency group — orphaning a CLAUDE_PROGRESS comment.
+    # The pull_requests array is populated by GitHub when the originating
+    # workflow ran in a PR context on the same repo.
+    if: |
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.event == 'pull_request' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.pull_requests != null &&
+       github.event.workflow_run.pull_requests[0] != null) ||
+      github.event_name == 'workflow_dispatch'
+
+    concurrency:
+      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
+      cancel-in-progress: true
 
     runs-on: ubuntu-latest
+    # A review that genuinely hangs (one observed stall ran ~18 min with no
+    # output before being cancelled) would otherwise sit on the runner for
+    # GitHub's 6-hour default. 25 min is comfortably above the slowest real
+    # reviews (blog reviews run 9-12+ min).
+    timeout-minutes: 25
     permissions:
       contents: read
       pull-requests: write
       issues: read
       id-token: write
+      checks: write
 
     steps:
+      # Check out the PR head, not the base. workflow_run carries the
+      # originating commit on the event payload; workflow_dispatch
+      # doesn't, so claude-new.yml passes it through as an input.
+      # Without this, Vale below ran against base prose and produced
+      # empty findings.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
 
+      # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
+      # step below has the pinned vale binary on PATH. Cache speeds up
+      # subsequent runs.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+
+      # Resolve all PR state freshly via gh pr view so we see labels
+      # that triage just wrote. Decides eligibility and skip reasons
+      # in one place.
+      - name: Resolve PR context
+        id: pr-context
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # PR number comes from the workflow_run pull_requests array on
+          # the triage-chained path, or from the workflow_dispatch input
+          # on the #new-review path.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PR="${{ github.event.inputs.pr_number }}"
+          else
+            PR="${{ github.event.workflow_run.pull_requests[0].number }}"
+          fi
+          FORCE="${{ github.event.inputs.force || 'false' }}"
+          REPO="${{ github.repository }}"
+
+          # GitHub re-evaluates a PR's diff lazily after force-pushes to
+          # head or base. Right after a rebase the API can briefly return
+          # 0 files / 0 additions / 0 deletions even though the PR has
+          # real changes. Retry once after a pause to catch the race
+          # before falling through to the empty-diff skip.
+          fetch_pr() {
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title
+          }
+          DATA=$(fetch_pr)
+          if [[ "$(echo "$DATA" | jq -r '.files | length')" == "0" ]]; then
+            echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
+            sleep 30
+            DATA=$(fetch_pr)
+          fi
+          IS_DRAFT=$(echo "$DATA" | jq -r '.isDraft')
+          AUTHOR=$(echo "$DATA" | jq -r '.author.login')
+          LABELS_JSON=$(echo "$DATA" | jq -c '[.labels[].name]')
+          LABELS_CSV=$(echo "$DATA" | jq -r '[.labels[].name] | join(",")')
+          # Pre-compute PR metadata so the review model doesn't burn turns
+          # re-deriving it via gh pr view / git remote / etc. The 2026-04-28
+          # cost-optimization measurement showed ~85% denial reduction and
+          # ~51% cost reduction stacked with the broadened allowed-tools
+          # list (see scratch/2026-04-28-pipeline-comparison/SONNET-EVERYWHERE-ANALYSIS.md).
+          HEAD_SHA=$(echo "$DATA" | jq -r '.headRefOid')
+          HEAD_SHA_SHORT="${HEAD_SHA:0:7}"
+          HEAD_BRANCH=$(echo "$DATA" | jq -r '.headRefName')
+          BASE_BRANCH=$(echo "$DATA" | jq -r '.baseRefName')
+          ADDITIONS=$(echo "$DATA" | jq -r '.additions')
+          DELETIONS=$(echo "$DATA" | jq -r '.deletions')
+          TITLE=$(echo "$DATA" | jq -r '.title')
+          FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
+          FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
+
+          # force=true (set by claude-new.yml on #new-review dispatch)
+          # bypasses the auto-skip heuristics. The user explicitly asked
+          # for a regenerate; trivial / fmonly / draft / bot-author /
+          # already-reviewed are all overridable. Empty-diff is NOT
+          # overridable — there's nothing to review.
+          SKIP=""
+          if [[ "$FORCE" != "true" ]]; then
+            if [[ "$IS_DRAFT" == "true" ]]; then
+              SKIP="draft"
+            elif [[ ",$LABELS_CSV," == *",review:trivial,"* ]]; then
+              SKIP="trivial"
+            elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
+              SKIP="frontmatter-only"
+            elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
+              SKIP="bot-author"
+            # Auto-fire path (workflow_run from triage) on a PR that the
+            # review pipeline has already touched: don't burn API on a
+            # reopen / re-triage. Any terminal state label means an
+            # explicit user action (`@claude #new-review` or
+            # `#update-review`) is the documented refresh path.
+            # outstanding-issues / no-blockers: review ran and is current
+            # (no commits since — mark-stale would have transitioned
+            # otherwise). stale: review ran, commits pushed; refresh via
+            # explicit mention. error: workflow failed; explicit retry
+            # avoids transient-error loops.
+            elif [[ "${{ github.event_name }}" == "workflow_run" ]] && (
+              [[ ",$LABELS_CSV," == *",review:outstanding-issues,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:no-blockers,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:stale,"* ]] || \
+              [[ ",$LABELS_CSV," == *",review:error,"* ]]
+            ); then
+              SKIP="already-reviewed"
+            fi
+          fi
+          if [[ -z "$SKIP" && "$FILE_COUNT" == "0" ]]; then
+            # Empty diff after retry — GitHub still hasn't re-evaluated.
+            # Skip cleanly instead of letting the model run with no diff
+            # context (which previously errored with "directory mismatch").
+            # The author can flip draft → ready or push to retry.
+            SKIP="empty-diff"
+          fi
+
+          # Detect whether the diff touches any Hugo-templating-relevant path.
+          # When it doesn't (content-only PR — the 95% case), the heavy
+          # `hugo --renderToMemory` pre-step skips entirely. The companion
+          # build-and-deploy workflow runs a real Hugo build on every PR;
+          # any templating error there blocks the merge regardless.
+          TEMPLATING_CHANGED="false"
+          if printf '%s\n' "$FILES_LIST" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
+            TEMPLATING_CHANGED="true"
+          fi
+
+          {
+            echo "pr_number=$PR"
+            echo "is_draft=$IS_DRAFT"
+            echo "author=$AUTHOR"
+            echo "labels_csv=$LABELS_CSV"
+            echo "labels_json=$LABELS_JSON"
+            echo "skip_reason=$SKIP"
+            echo "repo_full=$REPO"
+            echo "head_sha=$HEAD_SHA"
+            echo "head_sha_short=$HEAD_SHA_SHORT"
+            echo "head_branch=$HEAD_BRANCH"
+            echo "base_branch=$BASE_BRANCH"
+            echo "additions=$ADDITIONS"
+            echo "deletions=$DELETIONS"
+            echo "file_count=$FILE_COUNT"
+            echo "templating_changed=$TEMPLATING_CHANGED"
+            echo "title=$TITLE"
+            echo "files_list<<EOF_FILES"
+            echo "$FILES_LIST"
+            echo "EOF_FILES"
+          } >> "$GITHUB_OUTPUT"
+
+          if [[ -n "$SKIP" ]]; then
+            echo "review: pr=$PR skip=$SKIP (labels=$LABELS_CSV, draft=$IS_DRAFT, author=$AUTHOR)"
+          else
+            echo "review: pr=$PR proceed (labels=$LABELS_CSV, files=$FILE_COUNT, +$ADDITIONS/-$DELETIONS, head=$HEAD_SHA_SHORT)"
+          fi
+
+      # Publish a Checks API check-run pinned to the PR's head SHA so
+      # the review status appears in the PR's Status checks list.
+      # workflow_run-triggered jobs don't surface in PR Checks by default;
+      # this is the standard escape hatch. Runs unconditionally so even
+      # skipped reviews (trivial, draft, bot-author) get a check entry.
+      - name: Publish check-run (in_progress)
+        id: check-run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # workflow_run carries the originating commit SHA on the event
+          # payload; workflow_dispatch doesn't, so fall back to the head
+          # SHA pr-context just resolved via gh pr view.
+          HEAD_SHA="${{ github.event.workflow_run.head_sha || steps.pr-context.outputs.head_sha }}"
+          DETAILS_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          CHECK_ID=$(gh api -X POST "repos/${{ github.repository }}/check-runs" \
+            -f name="Pre-merge Review" \
+            -f head_sha="$HEAD_SHA" \
+            -f status="in_progress" \
+            -f details_url="$DETAILS_URL" \
+            --jq '.id' || echo "")
+          echo "check_id=$CHECK_ID" >> "$GITHUB_OUTPUT"
+
+      # Resolve write-access and post the "Reviewing" signal up front,
+      # before the LLM-heavy pre-steps. The signal needs to be visible
+      # while pre-steps run, not after them — moving these two steps
+      # collapses perceived latency from ~4 min to <30s without changing
+      # wall-clock. check-access must precede progress because progress
+      # gates on has_write_access.
       - name: Check repository write access
+        if: steps.pr-context.outputs.skip_reason == ''
         id: check-access
         run: |
-          # Check if PR author has write access to the repository
-          OWNER="pulumi"
-          REPO="docs"
-          AUTHOR="${{ github.event.pull_request.user.login }}"
+          # Use the actual repository the workflow is running in, not a hardcoded
+          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
+          # hardcoded owner/repo would always return "none" in fork-based testing
+          # and in repo transfers.
+          REPO_FULL="${{ github.repository }}"
+          AUTHOR="${{ steps.pr-context.outputs.author }}"
 
-          # Allow GitHub Copilot bot PRs (whitelist trusted automation)
           if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
             exit 0
           fi
 
-          # Get user's permission level (admin, write, read, or none)
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
             | jq -r '.permission // "none"')
 
-          # Allow admin or write access
           if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
           else
             echo "has_write_access=false" >> $GITHUB_OUTPUT
-            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
+
+      # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author sees
+      # "something is happening" while the pre-steps and Opus run. The post
+      # step below edits it to a done/errored state when the review completes.
+      # Separate marker from the pinned review so pinned-comment.sh never
+      # touches it.
+      - name: Post progress signal
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: progress
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          BODY=$(cat <<'EOF'
+          <!-- CLAUDE_PROGRESS -->
+          <img src="https://github.com/user-attachments/assets/5ac382c7-e004-429b-8e35-7feb3e8f9c6f" width="16"> Reviewing — this can take several minutes.
+          EOF
+          )
+          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
+            -f body="$BODY" --jq '.id' || echo "")
+          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
+
+      # Set the in-progress state label right after the progress signal so
+      # the PR's labels reflect "Claude is reviewing right now." The
+      # finalization step at job end transitions this to outstanding-issues
+      # / no-blockers (on success) or error (on failure). The mark-stale
+      # step on a later synchronize event moves it again to review:stale.
+      - name: Set review:in-progress label
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --label review:in-progress
+
+      # Run Vale on PR-changed files in content/docs and content/blog. Findings
+      # are filtered to PR-introduced lines only, capped (10/file, 50 total),
+      # and written to .vale-findings.json for the review skill to consume.
+      # continue-on-error keeps Vale problems from blocking the review --
+      # style nits are nags, not gates.
+      - name: Run Vale on PR-changed prose
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: vale
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{}' > .vale-raw.json
+            echo '[]' > .vale-findings.json
+            echo "vale: no docs/blog files changed; skipping"
+            exit 0
+          fi
+          # `||` fallbacks guarantee both files exist even when vale is
+          # missing or the filter crashes. The downstream prompt's "if
+          # file exists and is non-empty" check would otherwise fall over
+          # on a missing file. Pattern mirrors claude-triage.yml.
+          vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
+            || echo '{}' > .vale-raw.json
+          # Vale processes markdown to HTML before applying rules, so bracket
+          # constructions (`[here](url)`, `![](url)`) are gone before tokens
+          # match. The companion script scans raw markdown for the missing
+          # syntax patterns and emits Vale-shaped JSON we merge into the raw
+          # findings before filtering. Same `||` fallback discipline.
+          python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
+            $CHANGED > .syntax-findings.json 2>/dev/null \
+            || echo '{}' > .syntax-findings.json
+          # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
+          # *replace* Vale's array with the script's for any overlapping file).
+          jq -s 'reduce .[] as $o ({}; reduce ($o | keys_unsorted[]) as $k (.; .[$k] = ((.[$k] // []) + $o[$k])))' \
+            .vale-raw.json .syntax-findings.json > .vale-raw.merged.json \
+            && mv .vale-raw.merged.json .vale-raw.json \
+            || true
+          python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            || echo '[]' > .vale-findings.json
+
+      # Pre-fetch external URLs added by the PR diff. Pass 2 of the External
+      # claim verification lane consults this file instead of dispatching
+      # WebFetch at review time. Pass 3 (search-then-fetch for external-public
+      # claims with no URL in the diff) still runs model-side. continue-on-
+      # error keeps fetch failures from blocking the review; the validator's
+      # `pass-2-fetch-faithfulness` rule catches the unfaithful pattern where
+      # the model claims Pass 2 dispatches that didn't actually happen.
+      - name: Pre-fetch external URLs
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-urls
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '[]' > .fetched-urls.json
+            echo "extract-urls: no docs/blog files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
+            --pr "$PR" --out .fetched-urls.json 2>/dev/null \
+            || echo '[]' > .fetched-urls.json
+
+      # ---- Claim extraction ------------------------------------------------
+      # The claim *floor* the review must verify. Three layers, unioned:
+      #   A. extract-claims.py        — deterministic regex/heuristic floor
+      #                                 (numbers, version pins, temporal words,
+      #                                 attributions, URLs, named-entity/spec,
+      #                                 positioning/comparison triggers); walks
+      #                                 the WHOLE diff. → .candidate-claims-regex.json
+      #   B. extract-claims-llm.py ×2 — two redundant Sonnet passes (atomic /
+      #                                 holistic framing), one API call per
+      #                                 changed content/**/*.md file.
+      #                                 → .candidate-claims-llm-1.json / -2.json
+      #   merge-claims.py             — union + dedup + line-anchor.
+      #                                 → .candidate-claims.json
+      # The review MUST verify every entry in .candidate-claims.json and MAY add
+      # more; the validator's `candidate-claims-coverage` rule fails the review
+      # if it drops a candidate claim. See references/fact-check.md §Pre-step
+      # artifact `.candidate-claims.json` and references/pre-computation.md.
+      # All steps continue-on-error with schema-matching `||` stubs; the scripts'
+      # safe_main() surfaces failures *inside* the artifact (`errors: [...]`),
+      # not via file-presence heuristics.
+      - name: Pre-compute claim scrutiny scope
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: claim-scrutiny
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          # `heightened` (full-file extraction) when any blog file changed —
+          # AI hallucinates surrounding prose, not just changed lines. Per-file
+          # new-file bumping happens inside extract-claims-llm.py.
+          BLOG=$(gh pr diff "$PR" --name-only | grep -E '^content/blog/.*\.md$' || true)
+          if [ -n "$BLOG" ]; then
+            echo "value=heightened" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=standard" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract candidate claims (Layer A — regex floor)
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-claims-regex
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/extract-claims.py \
+            --pr "$PR" --out .candidate-claims-regex.json \
+            || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+
+      - name: Extract candidate claims (Layer B — atomic + holistic in parallel)
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: extract-claims-llm
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
+        run: |
+          # Run the two Sonnet extraction passes concurrently — wall-clock
+          # collapses from sum(atomic + holistic) to max(atomic, holistic).
+          # Each writes its own artifact; merge-claims.py reads both
+          # independently. Per pre-step fallback discipline, failure is
+          # surfaced INSIDE the artifact (errors: [...]), not via a
+          # missing-file or silent-empty heuristic.
+          set +e
+          python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+            --pr "$PR" --pass atomic --scrutiny "${SCRUTINY:-standard}" \
+            --out .candidate-claims-llm-1.json &
+          ATOMIC_PID=$!
+          python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+            --pr "$PR" --pass holistic --scrutiny "${SCRUTINY:-standard}" \
+            --out .candidate-claims-llm-2.json &
+          HOLISTIC_PID=$!
+          wait "$ATOMIC_PID";   ATOMIC_RC=$?
+          wait "$HOLISTIC_PID"; HOLISTIC_RC=$?
+          if [ "$ATOMIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-1.json ]; then
+            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+          fi
+          if [ "$HOLISTIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-2.json ]; then
+            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+          fi
+          exit 0
+
+      - name: Merge candidate claims → .candidate-claims.json
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: merge-claims
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/merge-claims.py \
+            --regex .candidate-claims-regex.json \
+            --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+            --out .candidate-claims.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
+      # ---- end claim extraction --------------------------------------------
+
+      # ---- Claim verification ----------------------------------------------
+      # verify-claims.py routes every entry in .candidate-claims.json to one of
+      # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
+      # (external w/ a fetched URL: consult .fetched-urls.json), Pass 3
+      # (external w/o a fetched URL: server-side web_search) — fires ≤8 parallel
+      # Sonnet 4.6 verifiers via direct /v1/messages with a forced `verify_claim`
+      # tool, and emits .verified-claims.json. The main review reads that file as
+      # the verdict *source* (it does NOT re-verify); validate-pinned.py's
+      # `verified-claims-trail-faithful` rule fails the review if the rendered
+      # 🔍 Verification trail drifts from the artifact. safe_main() surfaces
+      # failures *inside* the artifact (`errors: [...]`), so the `||` stub is
+      # reserved for can't-even-start failures.
+      - name: Verify candidate claims → .verified-claims.json
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: verify-claims
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/verify-claims.py \
+            --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+            --pr "$PR" --repo "$GITHUB_REPOSITORY" \
+            --out .verified-claims.json \
+            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+      # ---- end claim verification ------------------------------------------
+
+      # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
+      # section-depth stats, outlier flag) so the model renders the rich vs
+      # empty form deterministically. Tier 2 (entity counting, recommendation
+      # steering) remains model-side. Tier 3 (don't-flag exceptions) stays
+      # model-judged.
+      - name: Pre-compute editorial-balance Tier 1
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: editorial-balance
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/blog/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"trigger": null, "files": []}' > .editorial-balance.json
+            echo "editorial-balance: no blog files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/editorial-balance-detect.py \
+            --pr "$PR" --out .editorial-balance.json 2>/dev/null \
+            || echo '{"trigger": null, "files": []}' > .editorial-balance.json
+
+      # Pre-compute cross-sibling discovery so the model uses a structurally-
+      # guaranteed sibling list instead of computing the "is this in a templated
+      # section?" decision inline — see references/fact-check.md §Cross-sibling
+      # consistency for the artifact contract.
+      - name: Pre-compute cross-sibling discovery
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: cross-sibling
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/docs/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"files": []}' > .cross-sibling-discovery.json
+            echo "cross-sibling: no docs files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
+            --pr "$PR" --out .cross-sibling-discovery.json 2>/dev/null \
+            || echo '{"files": []}' > .cross-sibling-discovery.json
+
+      # Pre-compute frontmatter validation: menu-parent identifier resolution
+      # against the global menu-identifier map, plus alias-collision detection
+      # (PR-internal and repo-wide). See references/fact-check.md §Cross-sibling
+      # consistency for the artifact contract, and references/pre-computation.md
+      # for the atomized-discovery pattern.
+      - name: Pre-compute frontmatter validation
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: frontmatter-validate
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+        run: |
+          CHANGED=$(gh pr diff "$PR" --name-only \
+            | grep -E '^content/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
+            echo "frontmatter-validate: no content files changed; skipping"
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
+            --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
+            || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
+
+      # Pre-compute Hugo build artifact: full `hugo --renderToMemory`
+      # at HEAD for warnings/errors/link-integrity, plus `hugo list all` at HEAD
+      # and BASE for sitemap diff. Hugo is the canonical authority for routing/
+      # build correctness — the agent reads this artifact instead of running
+      # `make build` itself (which the workflow intentionally skips per ci.md
+      # hard rule 4). See references/pre-computation.md and
+      # references/fact-check.md §Hugo build artifact for the contract.
+      #
+      # Conditional: runs only when the diff touches templating-relevant paths
+      # (assets/, config/, data/, i18n/, layouts/, styles/, theme/, root
+      # hugo.{toml,yaml,yml}). For content-only PRs (~95% of the corpus), the
+      # step writes a skip-stub artifact so downstream consumers see an empty
+      # findings shape — the companion build-and-deploy workflow runs a real
+      # Hugo build on every PR, so templating errors are still caught (just not
+      # surfaced inline in the pinned comment).
+      - name: Pre-compute Hugo build artifact
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: hugo-build
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          TEMPLATING_CHANGED: ${{ steps.pr-context.outputs.templating_changed }}
+        run: |
+          if [[ "$TEMPLATING_CHANGED" != "true" ]]; then
+            echo "review: hugo-build skipped (content-only PR; templating paths untouched)"
+            python3 -c "import json; print(json.dumps({'schema_version': 1, 'skipped': True, 'skipped_reason': 'content-only PR; templating paths untouched. Full Hugo build runs in build-and-deploy.yml.', 'head_exit_code': 0, 'errors': [], 'link_integrity': [], 'sitemap_diff': {'added': [], 'removed': [], 'changed': []}, 'stats': {'errors_count': 0, 'warnings_count': 0, 'link_integrity_count': 0, 'suppressed_ci_noise_count': 0, 'head_pages_count': 0, 'base_pages_count': 0, 'added_pages_count': 0, 'removed_pages_count': 0}}, indent=2))" > .hugo-build.json
+            exit 0
+          fi
+          # Resolve base SHA and ensure it's fetched (workflow checkout uses
+          # depth=1 so the base may not be in local history).
+          BASE_SHA=$(gh pr view "$PR" --repo "$GITHUB_REPOSITORY" --json baseRefOid --jq .baseRefOid 2>/dev/null || echo "")
+          if [ -n "$BASE_SHA" ]; then
+            git fetch --depth=1 origin "$BASE_SHA" 2>/dev/null || true
+          fi
+          # Don't redirect stderr — the script's safe_main wrapper guarantees
+          # a useful JSON artifact even on uncaught exceptions, and surfacing
+          # tracebacks in workflow logs is the whole observability story when
+          # things go wrong. The `||` fallback only fires if the script can't
+          # even start (ImportError, missing python3, etc.).
+          python3 .claude/commands/docs-review/scripts/hugo-build-validate.py \
+            --pr "$PR" --base-sha "$BASE_SHA" --repo "$GITHUB_REPOSITORY" \
+            --out .hugo-build.json \
+            || echo '{"schema_version": 1, "head_exit_code": -1, "head_exit_nonzero_is_ci_noise": false, "errors": ["hugo-build-validate.py failed to start"], "link_integrity": [], "sitemap_diff": {"added": [], "removed": [], "changed": []}, "stats": {"errors_count": 1, "warnings_count": 0, "link_integrity_count": 0, "suppressed_ci_noise_count": 0, "head_pages_count": 0, "base_pages_count": 0, "added_pages_count": 0, "removed_pages_count": 0}}' > .hugo-build.json
+
+      # Wall-clock timestamp for the `## Pre-merge Review — Last updated <ts>`
+      # line. Computed in the workflow (not by the model) so the timestamp is
+      # always a real UTC instant — left to the model, it sometimes renders a
+      # T00:00:00Z / round-hour placeholder instead of the actual time.
+      - name: Compute review timestamp
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: now
+        run: echo "value=$(date -u '+%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
+
+      # Compose an ~80%-assembled review draft (.review-draft.md) from the
+      # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
+      # trail (verbatim from .verified-claims.json), bucket-count table,
+      # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
+      # findings block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
+      # out; <TODO> tokens mark the parts that are the reviewer's (summary,
+      # confidence levels, fix prose, cross-sibling read count). The composer
+      # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
+      # and, on a self-check failure, writes a visible `> [!CAUTION]` banner
+      # INTO .review-draft.md (never a silent-empty file) so the model falls
+      # back to manual assembly per ci.md §Fallback. safe_main() guarantees a
+      # valid fallback draft on any uncaught exception; the `||` stub below is
+      # reserved for can't-even-start failures and writes the same banner shape.
+      - name: Compose review draft → .review-draft.md
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: compose-review
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/compose-review.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" --repo "$GITHUB_REPOSITORY" \
+            --out .review-draft.md \
+            --timestamp "${{ steps.now.outputs.value }}" \
+            --head-sha "${{ steps.pr-context.outputs.head_sha }}" \
+            --head-sha-short "${{ steps.pr-context.outputs.head_sha_short }}" \
+            --verified-claims .verified-claims.json \
+            --candidate-claims .candidate-claims.json \
+            --vale-findings .vale-findings.json \
+            --editorial-balance .editorial-balance.json \
+            --cross-sibling .cross-sibling-discovery.json \
+            --frontmatter .frontmatter-validation.json \
+            --hugo-build .hugo-build.json \
+            --fetched-urls .fetched-urls.json \
+          || printf '%s\n' \
+            '## Pre-merge Review — Last updated ${{ steps.now.outputs.value }}' \
+            '' \
+            '> [!CAUTION]' \
+            '> The review composer (compose-review.py) failed to start. Do **not** post the lines below — assemble the review manually per `.claude/commands/docs-review/ci.md` §Fallback (manual assembly): read the pre-step artifacts (`.verified-claims.json`, `.vale-findings.json`, `.editorial-balance.json`, `.hugo-build.json`, `.frontmatter-validation.json`, `.cross-sibling-discovery.json`) and render per `docs-review:references:output-format`. This stub exists so the consumer sees the failure rather than a missing file.' \
+            '' \
+            '_(composer stub — see ci.md §Fallback)_' \
+            > .review-draft.md
 
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
@@ -65,16 +740,392 @@ jobs:
         uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Expose ANTHROPIC_API_KEY in the step env so Bash sub-shells (e.g.
+          # `pinned-comment.sh upsert-validated → validator-fix.py → claude -p
+          # --bare`) can authenticate without OAuth — OAuth state isn't
+          # available in subprocesses spawned by the action. The `with:
+          # anthropic_api_key` input below configures the action's own
+          # invocation; this env entry covers nested Bash invocations.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Invoke the docs-review slash command, which contains all review criteria and CI-specific guidance.
-          # See .claude/commands/docs-review.md for the complete review workflow.
+          # Initial review uses Opus; re-entrant updates (via @claude mentions)
+          # use Sonnet — see .github/workflows/claude.yml.
+          # The CI prompt lives at .claude/commands/docs-review/ci.md and is
+          # diff-only by hard rule. Output goes through pinned-comment.sh so
+          # the review survives across re-runs as a single logical comment.
           prompt: |
             You are running in a CI environment.
 
-            Review pull request #${{ github.event.pull_request.number }} by following the instructions in `.claude/commands/docs-review.md` under the "Continuous Integration (CI) Context" section.
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          # Allow essential file reading tools (Read, Glob, Grep) and gh commands for PR interaction
-          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Glob,Grep,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr comment:*),Bash(gh issue view:*)"'
+            Review pull request #${{ steps.pr-context.outputs.pr_number }} by following the instructions in `.claude/commands/docs-review/ci.md`.
 
+            ## Pre-computed PR metadata
+
+            The workflow has already gathered the following so you do NOT need to call `gh pr view`, `git remote get-url`, or similar lookups for these values. Use them directly in any `gh api` or output-formatting calls.
+
+            - **Repository:** `${{ steps.pr-context.outputs.repo_full }}`
+            - **PR number:** `${{ steps.pr-context.outputs.pr_number }}`
+            - **Title:** `${{ steps.pr-context.outputs.title }}`
+            - **Author:** `${{ steps.pr-context.outputs.author }}`
+            - **Head SHA:** `${{ steps.pr-context.outputs.head_sha }}` (short: `${{ steps.pr-context.outputs.head_sha_short }}`)
+            - **Head branch:** `${{ steps.pr-context.outputs.head_branch }}`
+            - **Base branch:** `${{ steps.pr-context.outputs.base_branch }}`
+            - **Diff size:** +${{ steps.pr-context.outputs.additions }} / -${{ steps.pr-context.outputs.deletions }} across ${{ steps.pr-context.outputs.file_count }} files
+            - **Labels** (set by claude-triage.yml — informational; routing happens by path inside `ci.md`): ${{ steps.pr-context.outputs.labels_json }}
+            - **Review timestamp (UTC):** `${{ steps.now.outputs.value }}` — use this literal value for the `## Pre-merge Review — Last updated <ts>` line and the new `📜 Review history` entry. Do not invent or round a timestamp.
+
+            ### Changed files
+
+            ${{ steps.pr-context.outputs.files_list }}
+
+            ## The composed review draft (`.review-draft.md`) — read this first
+
+            The workflow ran `compose-review.py` and wrote `.review-draft.md` at the workspace root: an ~80%-assembled review body. **Read it with the `Read` tool before doing anything else.** It already contains, fully assembled and self-consistent:
+            - the `## Pre-merge Review` header + timestamp;
+            - the Summary / Review-confidence-table *skeleton* (with `<TODO>` levels and an empty summary paragraph);
+            - the Investigation-log `<details>` block (all 8 bullets — every one deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder you overwrite);
+            - the bucket-count table (a *starting point* matching the stub-bullet counts);
+            - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️), evidence pointer, source;
+            - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
+            - the `#### Style findings` block (from `.vale-findings.json`, with the correct inline-vs-collapse render mode already chosen);
+            - the empty 💡 / ✅ forms;
+            - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
+            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
+
+            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
+
+            **If `.review-draft.md` is absent, or its first lines are a `> [!CAUTION]` composer-failed banner, ignore the draft entirely** and assemble the review manually per `ci.md` §Fallback (read `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` / `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` directly and render per `docs-review:references:output-format` — `.candidate-claims.json` is the claim floor whose every entry must surface a verdict line in the trail). That is the pre-composer procedure; it's the safety net, not the normal path.
+
+            ## Editorial balance (blog only)
+
+            The composer already rendered the §📊 Editorial-balance section's Tier 1 form into `.review-draft.md` (empty form when `.editorial-balance.json.trigger=null`, rich form with section-depth count/mean/median/std + outliers otherwise). Don't touch the Tier 1 stats — `editorial-balance-counts-faithful` enforces them against the JSON. Your job: fill the Tier 2 `<TODO>`s (vendor / entity mention counts, FAQ steering ratios) per `docs-review:references:blog` §Priority 2.5, and decide whether the Tier 1 outliers and any Tier 2 threshold trips warrant a ⚠️ bullet — Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain your judgment.
+
+            ## Style findings
+
+            The composer already rendered the `#### Style findings` block from `.vale-findings.json` (correct inline-vs-collapse render mode, the `category` field never the `rule` field, per-file `<details>` roll-ups in collapse mode). Don't rebuild it. Style findings are nags, not blockers — never put them in 🚨 Outstanding. If you remove a false-positive style bullet, decrement the ⚠️ count-table cell.
+
+            ## Output
+
+            When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
+
+            Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
+          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
+
+      # ---- post-edit validate / splice / re-validate / upsert chain ----
+      # The editorial pass step (above) exits after editing .review-draft.md.
+      # The steps below own the full publish path:
+      #   B  validate     → /tmp/validate-pinned.fix-me.json
+      #   C  splicer.py   → applies deterministic surgical fixes; defers
+      #                      genuinely judgment-heavy rules to /tmp/splicer-fallback.json
+      #   C2 validator-fix.py (model-lane fallback; no-op for all current rules)
+      #   D  re-validate  → decides body_ready vs soft-floor
+      #   E  upsert       → posts the pinned comment (curl/gh; no model)
+      # Each step has its own workflow log; debugging is `gh run view <id> --log`
+      # rather than chasing Bash-tool-truncated subprocess output from inside
+      # the editorial pass.
+
+      - name: Validate review body (Step B)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        id: validate-body
+        continue-on-error: true
+        run: |
+          set +e
+          rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md /tmp/splicer-fallback.json
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .review-draft.md \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ steps.pr-context.outputs.repo_full }}"
+          rc=$?
+          echo "validate_exit=$rc" >> "$GITHUB_OUTPUT"
+          if [[ $rc -eq 1 ]]; then
+            echo "violations_present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "violations_present=false" >> "$GITHUB_OUTPUT"
+          fi
+          exit 0
+
+      - name: Splice surgical fixes (Step C)
+        if: steps.validate-body.outputs.violations_present == 'true'
+        id: splicer
+        continue-on-error: true
+        run: |
+          set +e
+          python3 .claude/commands/docs-review/scripts/splicer.py \
+            --body-file .review-draft.md \
+            --fix-me-json /tmp/validate-pinned.fix-me.json \
+            --fallback-json /tmp/splicer-fallback.json
+          echo "splicer_exit=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Splice fallback — model lane (Step C2)
+        # Note: `hashFiles()` only inspects $GITHUB_WORKSPACE, so the /tmp
+        # fallback JSON is invisible to it. Gate on splicer's exit code alone
+        # — splicer.py only exits 2 when it has written the fallback JSON.
+        if: steps.splicer.outputs.splicer_exit == '2'
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set +e
+          if [[ ! -f /tmp/splicer-fallback.json ]]; then
+            echo "::warning::Step C2: splicer exited 2 but /tmp/splicer-fallback.json missing — skipping fallback"
+            exit 0
+          fi
+          python3 - <<'PYEOF'
+          import json, pathlib
+          fix_me_path = pathlib.Path('/tmp/validate-pinned.fix-me.json')
+          fallback_path = pathlib.Path('/tmp/splicer-fallback.json')
+          fix_me = json.loads(fix_me_path.read_text())
+          fallback = json.loads(fallback_path.read_text())
+          keep = set(fallback.get('fallback_needed') or [])
+          fix_me['violations'] = [v for v in fix_me.get('violations', []) if v.get('rule_id') in keep]
+          fix_me_path.write_text(json.dumps(fix_me))
+          print(f"filtered fix-me to {len(fix_me['violations'])} violation(s) for model fallback")
+          PYEOF
+          python3 .claude/commands/docs-review/scripts/validator-fix.py \
+            --body-file .review-draft.md \
+            --fix-me-json /tmp/validate-pinned.fix-me.json
+          echo "validator_fix_exit=$?"
+          exit 0
+
+      - name: Re-validate review body (Step D)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        id: revalidate
+        continue-on-error: true
+        run: |
+          set +e
+          rm -f /tmp/validate-pinned.fix-me.json /tmp/validate-pinned.fix-me.md
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .review-draft.md \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ steps.pr-context.outputs.repo_full }}"
+          rc=$?
+          if [[ $rc -eq 0 ]]; then
+            echo "body_ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "body_ready=soft-floor" >> "$GITHUB_OUTPUT"
+            echo "::warning::Review body has residual structural violations after splicing; publishing with --soft-floor."
+          fi
+          exit 0
+
+      # Strip the 📋 Triaged section if the reviewer didn't move any
+      # bullets into it. The composer always renders the section as a
+      # collapsed <details> block with a `_No triaged findings._`
+      # placeholder; if the placeholder survived the editorial pass, the
+      # section is just visual noise and gets removed here. Validators
+      # don't require 📋 to be present (it's not in MANDATORY_H3_SECTIONS).
+      - name: Strip empty 📋 section (Step D2)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
+            --body-file .review-draft.md
+
+      - name: Upsert pinned comment (Step E)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [[ "${{ steps.revalidate.outputs.body_ready }}" == "soft-floor" ]]; then
+            bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+              --soft-floor \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --body-file .review-draft.md
+          else
+            bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert \
+              --pr "${{ steps.pr-context.outputs.pr_number }}" \
+              --body-file .review-draft.md
+          fi
+
+      # Per-tool spend telemetry — operator-internal observability for cost
+      # variance investigations. Uploads the action's stream-JSON execution log
+      # as a private workflow artifact; the operator runs
+      # `.claude/commands/docs-review/scripts/per-tool-spend.py` against the
+      # downloaded artifact to produce per-tool counts + approximate $.
+      # Telemetry never surfaces in the public PR comment — cost data is
+      # operator-audience only; the pinned comment is author-/maintainer-
+      # audience.
+      #
+      # The parser is intentionally NOT run inline: the runner checks out the
+      # PR head, which (for fixture branches and most synchronize events)
+      # doesn't carry the parser script path. Keeping the parser as an
+      # operator-side ad-hoc tool sidesteps that working-tree dependency.
+      - name: Upload Claude execution log
+        if: always() && steps.claude-review.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: /home/runner/work/_temp/claude-execution-output.json
+          retention-days: 90
+          if-no-files-found: ignore
+
+      # Debug artifacts for the post-edit chain. Capture the validator's
+      # fix-me JSON, the splicer's fallback list, and the spliced body so
+      # post-mortem on splicer behavior / validator pairing doesn't require
+      # reproducing the run.
+      - name: Upload post-edit chain debug artifacts
+        if: always() && steps.claude-review.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-edit-debug-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
+          path: |
+            /tmp/validate-pinned.fix-me.json
+            /tmp/validate-pinned.fix-me.md
+            /tmp/splicer-fallback.json
+            .review-draft.md
+          retention-days: 30
+          if-no-files-found: ignore
+
+      # Runs on success or failure so the transient CLAUDE_PROGRESS comment
+      # always reaches a terminal state regardless of outcome.
+      #
+      # Spinner outcome handling:
+      # - success: delete the spinner. The pinned review is the durable
+      #   artifact; "Review updated." would read strangely as the bot's
+      #   first comment on a fresh PR.
+      # - cancelled / skipped: delete the orphan spinner. A cancellation
+      #   means a newer run preempted this one (concurrency cancel-in-
+      #   progress); the new run owns the user-visible state and this
+      #   one's progress comment is just noise.
+      # - any other (failure, etc.): edit to "Review errored." The
+      #   message stays unattributed; the synchronize path has no
+      #   requester, and on the dispatch path the requester's mention
+      #   is consumed by the success-only "Review regenerated" terminal
+      #   below.
+      #
+      # Dispatcher confirmation comment cleanup (workflow_dispatch from
+      # claude-new.yml only): the dispatcher posts "🤖 @<author> — pinned
+      # review cleared; regenerating from scratch." at the start and
+      # passes its comment ID through `dispatcher_comment_id`. We delete
+      # it regardless of outcome — once we reach finalize the present-
+      # tense "regenerating from scratch" message is no longer accurate.
+      # On success of a dispatch run we also post a fresh terminal
+      # "🤖 Review regenerated on @<author>'s request." mirroring
+      # claude-update.yml's pattern (created, not edited — fires a
+      # notification). Both branches are no-ops when the inputs are
+      # empty (workflow_run path).
+      - name: Finalize progress signal
+        if: always() && steps.progress.outputs.comment_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
+
+          if [ -n "$DISPATCHER_COMMENT_ID" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
+          fi
+
+          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
+            if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
+              gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
+            fi
+          else
+            BODY='<!-- CLAUDE_PROGRESS -->
+          🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
+          fi
+
+      # Finalize the review-state label based on the published body. Counts
+      # bullets in 🚨 Outstanding from the actual pinned comment (post-upsert);
+      # ≥1 outstanding → review:outstanding-issues, else → review:no-blockers.
+      # Skipped runs (trivial / draft / bot / empty-diff) deliberately leave
+      # the label untouched: in-progress was never set for them.
+      - name: Finalize review-state label (success path)
+        if: steps.claude-review.outcome == 'success' && steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          # Pull the published <!-- CLAUDE_REVIEW --> body via --paginate so
+          # PRs with many comments don't lose the pinned content past page 1.
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py \
+            count-buckets --pr "$PR" --repo "$REPO" > /tmp/bucket-counts.txt
+          rc=$?
+          if [ $rc -ne 0 ]; then
+            echo "::warning::count-buckets failed (rc=$rc); leaving label untouched"
+            exit 0
+          fi
+          OUTSTANDING=$(grep '^outstanding=' /tmp/bucket-counts.txt | cut -d= -f2)
+          if [ -z "$OUTSTANDING" ]; then
+            echo "::warning::count-buckets returned no outstanding count; leaving label untouched"
+            exit 0
+          fi
+          if [ "$OUTSTANDING" -gt 0 ]; then
+            LABEL="review:outstanding-issues"
+          else
+            LABEL="review:no-blockers"
+          fi
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label "$LABEL"
+
+      # Failure trap: if the workflow didn't succeed AND no pinned review
+      # was published (no <!-- CLAUDE_REVIEW comment on the PR yet), set
+      # review:error so the failure is visible at-a-glance on the PR's
+      # labels. If a publish DID happen but a later step failed, the
+      # success-path step above already set outstanding-issues / no-blockers
+      # and this step short-circuits.
+      - name: Finalize review-state label (error trap)
+        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome != 'success' && steps.pr-context.outputs.skip_reason == ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          PR="${{ steps.pr-context.outputs.pr_number }}"
+          REPO="${{ github.repository }}"
+          # Check whether a pinned <!-- CLAUDE_REVIEW --> comment exists.
+          # If it does, the success-path step above already set the label;
+          # don't overwrite to error.
+          PUBLISHED=$(gh api --paginate "repos/$REPO/issues/$PR/comments" \
+            --jq '[.[] | select(.body | test("<!-- CLAUDE_REVIEW"))] | length' 2>/dev/null || echo "0")
+          if [ "${PUBLISHED:-0}" -gt 0 ]; then
+            echo "review-state error trap: pinned review present; success-path already labeled"
+            exit 0
+          fi
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "$PR" --repo "$REPO" --label review:error
+
+      # Finalize the check-run created at job start. Runs on success or
+      # failure so contributors always see a terminal state in the PR's
+      # Checks list. Skip detection (trivial/draft/bot) takes precedence
+      # over claude-review.outcome since the review step is skipped in
+      # those cases and outcome would be "skipped" without that nuance.
+      - name: Finalize check-run
+        if: always() && steps.check-run.outputs.check_id != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CHECK_ID="${{ steps.check-run.outputs.check_id }}"
+          REPO="${{ github.repository }}"
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
+          if [ "$OUTCOME" = "success" ]; then
+            CONCLUSION="success"
+            SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
+          elif [ -n "$SKIP_REASON" ]; then
+            CONCLUSION="skipped"
+            SUMMARY="Review skipped: $SKIP_REASON"
+          elif [ "$OUTCOME" = "cancelled" ]; then
+            CONCLUSION="neutral"
+            SUMMARY="Cancelled — superseded by a newer run."
+          else
+            CONCLUSION="failure"
+            SUMMARY="Review failed. See workflow logs."
+          fi
+          jq -n \
+            --arg conclusion "$CONCLUSION" \
+            --arg title "Pre-merge Review" \
+            --arg summary "$SUMMARY" \
+            '{status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
+            | gh api --input - -X PATCH "repos/$REPO/check-runs/$CHECK_ID" >/dev/null || true

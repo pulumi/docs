@@ -16,6 +16,7 @@ Agents must use these exact commands:
   - Normal: `make serve` 
   - With asset rebuilds: `make serve-all`
 - Lint: `make lint` (must pass before commit/merge)
+- Lint prose: `make lint-prose` (Vale; nags, never blocks. Also surfaces in pinned PR reviews.)
 - Format: `make format`
 - Run all tests: `make test`
 - Run specific program test:  
@@ -66,46 +67,21 @@ For all content files (docs, blogs, tutorials, etc.):
 
 ## Moving and Deleting Files
 
-**⚠️ SEO CRITICAL**: Missing aliases on moved files will break search engine rankings and external links. Always verify aliases after file moves.
+**⚠️ SEO CRITICAL**: Missing aliases on moved files break search rankings and external links.
 
-**Use the `/move-doc` skill** when moving Hugo content files — it handles `git mv`, alias injection, link updates, and verification automatically. If moving manually:
-
-- Use `git mv` to preserve file history.
-- Add an `aliases` field to the frontmatter listing the old paths:
-
-  ```yaml
-  aliases:
-  - /old/path/to/file/
-  - /another/old/path/
-  ```
-
-- Verify aliases using the scripts in `/scripts/alias-verification/`.
-- **Non-Hugo files**: For generated content or files outside Hugo's content management, add redirects to the S3 redirect files located in `/scripts/redirects/`.
-  - When adding S3 redirects, place entries in topic-appropriate files (e.g., `neo-redirects.txt` for Neo-related content).
-  - S3 redirect format: `source-path|destination-url` (e.g., `docs/old/path/index.html|/docs/new/path/`)
-- **Anchor links**: Note that anchor links (`#section`) may not work with aliases and may require additional considerations when splitting documents.
+Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias injection, link updates, and verification. For non-Hugo files (generated content, static assets), add S3 redirects in `/scripts/redirects/` (format: `source-path|destination-url`, place entries in topic-appropriate files). Manual move procedure and anchor-link caveats: see `.claude/commands/move-doc/SKILL.md`.
 
 ---
 
 ## Updating Internal Links
 
-When moving documentation files, aliases automatically handle redirects. Update internal links strategically:
+When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
-- **DO update links in**:
-  - `/content/docs/` - Active documentation
-  - `/content/product/` - Product pages
-- **DO NOT update links in**:
-  - `/content/blog/` - Blog posts are historical documents
-  - `/content/tutorials/` - Tutorials are historical content
-- **Implementation**: When using `find` or `sed` to update links, always exclude blog and tutorial directories:
+- **DO update** links in `/content/docs/` and `/content/product/`.
+- **DO NOT update** links in `/content/blog/` or `/content/tutorials/` — they're historical.
+- **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
-  ```bash
-  find content/docs content/product -name "*.md" -exec sed -i 's|/old/path|/new/path|g' {} +
-  ```
-
-- **Link Style**: To ensure links don't break when files are moved:
-  - Links within `/docs/` must use the full canonical path, e.g. `/docs/iac/concepts/stacks/`.
-  - Never use parent-directory references (`../stacks/`) in links — they break when files move.
+For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
 
 ---
 
@@ -117,6 +93,14 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ## Workflow Skills
 
-Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.
+Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review/SKILL.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.
 
 **Non-Claude agents**: If the user runs a slash command or issues a short command that could be a skill name (e.g., `fix-issue`, `new-doc`), look for a matching file in `.claude/commands/` to guide your actions.
+
+---
+
+## PR Lifecycle for AI-Assisted Contributions
+
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. To refresh a stale review, mention `@claude #update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Bare `@claude` (no hashtag) is for ad-hoc help,
+
+For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.

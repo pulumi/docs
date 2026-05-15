@@ -34,6 +34,8 @@ This repository hosts all of the hand-crafted documentation, guides, tutorials, 
 
 We welcome all contributions to this repository. Be sure to read our [contributing guide](CONTRIBUTING.md) and [code of conduct](CODE-OF-CONDUCT.md) first, then [submit a pull request](https://github.com/pulumi/docs/pulls) here on GitHub. If you see something that needs fixing but don't have time to contribute, you can also [file an issue](https://github.com/pulumi/docs/issues).
 
+> Tip: open your PR as a **draft** while you iterate. Automated review fires when you mark it ready for review, so a draft-first flow keeps the CI noise down and the review fresh. See [CONTRIBUTING.md](CONTRIBUTING.md#draft-first-pull-requests) for the full lifecycle.
+
 See also:
 
 * [Build and deployment guide](./BUILD-AND-DEPLOY.md)
@@ -45,6 +47,16 @@ See also:
 
 ### Toolchain
 
+#### mise (Recommended)
+
+This repository tracks tool versions in [`mise.toml`](./mise.toml). If you have [mise](https://mise.jdx.dev/) installed, you can install the core website toolchain (Hugo, Node.js, Yarn, Go, and Vale) at the pinned versions in one step:
+
+```bash
+mise install
+```
+
+For SDK and CLI documentation builds, you'll also need Python, .NET, Pulumi, and Pulumi ESC — see [Manual Installation](#manual-installation) below for those.
+
 #### Manual Installation
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
@@ -53,6 +65,7 @@ We build the Pulumi website with Hugo, manage our dependencies with Node.js and 
   * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
 * [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
+* [Vale](https://vale.sh/docs/install) (3.14.1) — required by `make ensure` for prose linting.
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
 
@@ -67,6 +80,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
 
 * Hugo, Node.js, Yarn, and Markdown tooling.
+* Vale for prose linting.
 * Go, Python, .NET, and the Pulumi CLI.
 * VS Code extensions for Markdown linting, link checking, and Pulumi support.
 * Google Cloud CLI and GitHub CLI.
