@@ -27,7 +27,7 @@ social:
 
 Managing identity at scale requires more than a login box. Platform teams need consistent application access patterns across Auth0, Okta, Microsoft Entra ID, and Keycloak.
 
-In this cookbook, we'll explore how to implement a portable identity pattern using Pulumi. We'll cover Auth0, Okta, Microsoft Entra ID, and Keycloak, focusing on a common requirement: one application and one access group.
+In this cookbook, we'll explore how to implement a portable identity pattern using Pulumi. We'll cover Auth0, Okta, Microsoft Entra ID, and Keycloak, focusing on a common requirement: one application and one provider-specific access container.
 
 This post provides a common SSO application pattern across these providers for your own applications, rather than configuring Pulumi organization SSO. By the end, you will have implemented a portable identity pattern across Auth0, Okta, Microsoft Entra ID, and Keycloak.
 
@@ -47,13 +47,13 @@ Identity providers (IdPs) are often treated as static infrastructure, but they a
 The goal is to create a reusable pattern that works across different providers. This pattern includes:
 
 1. **An application**: The service or platform users will access.
-1. **A group**: A collection of users who should have access to the application.
+1. **An access container**: A provider-specific organization, group, or role assignment that controls who should have access to the application.
 
 ## Auth0
 
-Auth0 is known for its developer-friendly approach and extensibility. While Auth0 handles SCIM through Enterprise Connections or Actions, the core setup involves defining a client and a connection.
+Auth0 is known for its developer-friendly approach and extensibility. Auth0 does not model application access as a generic group assignment. A practical baseline is to define an application client that requires organization login, an organization as the access boundary, and a connection enabled for that client.
 
-Prerequisites: an Auth0 tenant, a Machine-to-Machine application with Management API scopes for clients, organizations, and connections, and the Pulumi Auth0 provider configured with the tenant domain, client ID, and client secret.
+Prerequisites: an Auth0 tenant, a Machine-to-Machine application with Management API scopes for clients, organizations, connections, and connection clients, and the Pulumi Auth0 provider configured with the tenant domain, client ID, and client secret.
 
 ```typescript
 import * as auth0 from "@pulumi/auth0";
@@ -62,16 +62,22 @@ const client = new auth0.Client("auth0-app", {
     name: "My Application",
     appType: "regular_web",
     callbacks: ["https://myapp.com/callback"],
+    organizationUsage: "require",
+    organizationRequireBehavior: "pre_login_prompt",
 });
 
-const organization = new auth0.Organization("auth0-group", {
-    name: "my-group",
-    displayName: "My Group",
+const organization = new auth0.Organization("auth0-organization", {
+    name: "my-organization",
+    displayName: "My Organization",
 });
 
 const connection = new auth0.Connection("auth0-connection", {
     name: "my-connection",
     strategy: "auth0",
+});
+
+const connectionClients = new auth0.ConnectionClients("auth0-connection-clients", {
+    connectionId: connection.id,
     enabledClients: [client.clientId],
 });
 
@@ -111,9 +117,11 @@ const assignment = new okta.app.GroupAssignment("okta-assignment", {
 
 ## Microsoft Entra ID
 
-For organizations heavily invested in the Microsoft ecosystem, Microsoft Entra ID is the standard. Pulumi allows you to manage applications and service principals with ease.
+For organizations heavily invested in the Microsoft ecosystem, Microsoft Entra ID is the standard. Pulumi allows you to manage applications and service principals with ease. This minimal example focuses on the application, service principal, group, and assignment resources; add redirect URI and platform configuration for your specific application type before using it as a live SSO app.
 
 Prerequisites: a Microsoft Entra tenant, permissions to create applications, service principals, groups, and app role assignments, and the Pulumi Microsoft Entra ID provider authenticated through your chosen Azure identity flow.
+
+The default app role ID assigns the group to the application without requiring a custom app role. Replace it with an `appRoles[].id` value when your application defines custom roles.
 
 ```typescript
 import * as azuread from "@pulumi/azuread";
@@ -127,7 +135,6 @@ const group = new azuread.Group("entra-group", {
     displayName: "My Group",
     mailEnabled: false,
     securityEnabled: true,
-    types: ["Unified"],
 });
 
 const servicePrincipal = new azuread.ServicePrincipal("entra-sp", {
@@ -135,7 +142,7 @@ const servicePrincipal = new azuread.ServicePrincipal("entra-sp", {
 });
 
 const assignment = new azuread.AppRoleAssignment("entra-assignment", {
-    appRoleId: "00000000-0000-0000-0000-000000000000", // Default access role; replace with an appRoles[].id for custom roles.
+    appRoleId: "00000000-0000-0000-0000-000000000000",
     principalObjectId: group.objectId,
     resourceObjectId: servicePrincipal.objectId,
 });
@@ -169,7 +176,7 @@ const group = new keycloak.Group("keycloak-group", {
     name: "My Group",
 });
 
-const role = new keycloak.openid.ClientRole("keycloak-app-user-role", {
+const role = new keycloak.Role("keycloak-app-user-role", {
     realmId: realm.id,
     clientId: client.id,
     name: "app-user",
@@ -179,6 +186,7 @@ const groupRoles = new keycloak.GroupRoles("keycloak-group-roles", {
     realmId: realm.id,
     groupId: group.id,
     roleIds: [role.id],
+    exhaustive: false,
 });
 ```
 
@@ -186,4 +194,4 @@ const groupRoles = new keycloak.GroupRoles("keycloak-group-roles", {
 
 Choosing an identity provider depends on your specific needs. Auth0 is a strong fit for external application authentication. Okta and Microsoft Entra ID are common choices for internal workforce management. Keycloak is ideal for teams that need full control over their identity infrastructure.
 
-When switching providers, the key is to maintain the same logical structure. By using Pulumi, you can swap the provider-specific resources while keeping your application logic intact. This approach ensures that your identity stack remains as portable as your cloud infrastructure.
+When switching providers, the key is to maintain the same logical structure. By using Pulumi, you can keep the same intent in code while mapping it to each provider's resource model. Auth0 organizations, Okta groups, Entra ID groups, and Keycloak groups are not identical, so migrations still require a provider-specific access review.
