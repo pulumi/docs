@@ -138,7 +138,7 @@
                     </span>
                 </div>
                 {{ with $tier.cta }}
-                <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex">{{ .label }}</a>
+                <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                 {{ end }}
             </div>
             {{ end }}
