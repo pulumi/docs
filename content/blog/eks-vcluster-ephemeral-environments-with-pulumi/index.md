@@ -28,26 +28,26 @@ social:
 
 <!--more-->
 
-AWS reports in an AWS Architecture Blog case study that Deloitte's move to a virtual cluster model on Amazon EKS resulted in 89% faster testing environment provisioning. By consolidating dozens of disparate clusters into a single host cluster with over 50 virtual clusters, the case study says Deloitte saved about 500 QA hours per year. This "Environment Factory" pattern allows platform teams to provide isolated, ephemeral Kubernetes environments on demand without the cost or lag of full cluster provisioning.
+AWS reports in an [AWS Architecture Blog case study](https://aws.amazon.com/blogs/architecture/deloitte-optimizes-eks-environment-provisioning-and-achieves-89-faster-testing-environments-using-amazon-eks-and-vcluster/) that Deloitte's move to a virtual cluster model on Amazon EKS resulted in 89% faster testing environment provisioning. By consolidating dozens of disparate clusters into a single host cluster with over 50 virtual clusters, the case study says Deloitte saved about 500 QA hours per year. This "Environment Factory" pattern allows platform teams to provide isolated, ephemeral Kubernetes environments on demand without the cost or lag of full cluster provisioning.
 
 This post adapts that general architecture with Pulumi to orchestrate Amazon EKS Auto Mode and vCluster. It is not Deloitte's implementation.
 
-## The problem: Environment sprawl and provisioning lag
+## The problem: environment sprawl and provisioning lag
 
 Traditional development workflows often rely on one full EKS cluster per developer or feature branch. While this provides maximum isolation, it introduces significant pain points. Provisioning a full cluster can take 15 minutes or more, which slows down CI/CD pipelines. Managing dozens of clusters also leads to high costs and significant operational overhead.
 
 Platform teams need a "soft multi-tenancy" model. This model should feel like a dedicated cluster to the developer but run on shared infrastructure to keep costs low and startup times fast.
 
-## Architecture overview: The host and the tenants
+## Architecture overview: the host and the tenants
 
 The environment factory architecture consists of two main layers.
 
 1. **Host Cluster**: A single, reliable EKS cluster managed with EKS Auto Mode. This cluster provides the underlying compute, networking, and storage.
-1. **Tenant Environments**: Virtual clusters (vCluster) running as pods within host namespaces. Each vCluster has its own API server and data store, providing a dedicated control plane for each tenant.
+1. **Tenant Environments**: Virtual clusters (vCluster) running as pods within host namespaces.
 
 According to the [vCluster architecture](https://www.vcluster.com/docs/vcluster/next/introduction/architecture), the virtual control plane handles API requests while a syncer process maps virtual resources to the host cluster. This separation allows tenants to manage their own CRDs, namespaces, and RBAC while platform teams use quotas, NetworkPolicies, pod security, IAM boundaries, and node isolation controls to protect the host and other tenants.
 
-## Implementation: The EKS Auto Mode host
+## Implementation: the EKS Auto Mode host
 
 EKS Auto Mode simplifies the host cluster by automating infrastructure management. It handles node provisioning, scaling, and updates based on pod requirements.
 
@@ -100,7 +100,7 @@ const hostProvider = new k8s.Provider("host-provider", {
 });
 ```
 
-## Implementation: The environment factory
+## Implementation: the environment factory
 
 Once the host cluster is ready, we can build the factory that stamps out tenant environments. Each tenant needs a dedicated namespace, resource quotas, and the vCluster itself.
 
@@ -192,6 +192,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as k8s from "@pulumi/kubernetes";
 
 // Retrieve the vCluster kubeconfig from the generated secret.
+// The vCluster-generated secret can lag behind Helm release readiness on first creation,
+// so teams may choose an explicit readiness check or rerun after the virtual control plane initializes.
 const vclusterKubeconfig = k8s.core.v1.Secret.get("vcluster-secret",
     pulumi.interpolate`${tenantNamespace.metadata.name}/vc-vcluster-alpha`,
     {
@@ -213,11 +215,11 @@ const vclusterProvider = new k8s.Provider("vcluster-provider", {
 
 While this pattern is powerful, there are a few things to keep in mind.
 
-* **RBAC and Permissions**: vCluster generates default RBAC rules that work for most scenarios. However, if your host cluster is heavily locked down, you may need to provide additional permissions to the vCluster service account.
-* **Helm Release Previews**: When using `kubernetes.helm.v3.Release`, Pulumi previews may not show every detail of the rendered Kubernetes resources. It primarily tracks the state of the Helm release itself.
-* **EKS Auto Mode Node Lifetime**: EKS Auto Mode uses immutable AMIs and has a 21-day node lifetime. Kubernetes reschedules vCluster pods and tenant workloads when nodes are replaced, so configure replicas, PodDisruptionBudgets, requests, and persistent storage for disruption tolerance.
+* **RBAC and permissions**: vCluster generates default RBAC rules that work for most scenarios. However, if your host cluster is heavily locked down, you may need to provide additional permissions to the vCluster service account.
+* **Helm release previews**: When using `kubernetes.helm.v3.Release`, Pulumi previews may not show every detail of the rendered Kubernetes resources. It primarily tracks the state of the Helm release itself.
+* **EKS Auto Mode node lifetime**: EKS Auto Mode uses immutable AMIs and has a 21-day node lifetime. Kubernetes reschedules vCluster pods and tenant workloads when nodes are replaced, so configure replicas, PodDisruptionBudgets, requests, and persistent storage for disruption tolerance.
 
-## Conclusion: Ephemeral environments at scale
+## Conclusion: ephemeral environments at scale
 
 By combining Pulumi with EKS Auto Mode and vCluster, you can build a scalable environment factory. This approach provides the isolation developers need while maintaining the speed and cost-efficiency required by platform teams.
 
