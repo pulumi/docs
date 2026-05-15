@@ -121,6 +121,10 @@ Alternatively, a package value can be an object with the following properties:
 
 ### `config` options
 
+{{% notes %}}
+This is the project-level `config` schema parsed by the Pulumi engine. It applies to programs in every language — TypeScript, JavaScript, Python, Go, .NET, Java, and YAML — including the `config` block of a Pulumi YAML program. See the [Pulumi YAML reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/#config) for a YAML-flavored example.
+{{% /notes %}}
+
 `config` is a map of config property keys to either values or structured declarations.
 
 Non-object values are allowed to be set directly. Anything more complex must be defined using the structured
@@ -138,7 +142,7 @@ Schemas are only valid for project property keys. For setting the value of a pro
 
 | Name | Required | Description |
 | - | - | - |
-| `type` | required | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. |
+| `type` | optional | The type of this config property, either `string`, `boolean`, `integer`, `array`, or `object`. Either `type` or `default` is required; when omitted, the type is inferred from `default`. |
 | `description` | optional | A description for this config property. |
 | `secret` | optional | True if this config property should be a secure secret value. |
 | `default` | optional | The default value for this config property, must match the given type. |
