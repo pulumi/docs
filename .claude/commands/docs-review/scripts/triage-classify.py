@@ -40,6 +40,14 @@ def classify_path(path: str) -> str | None:
         return "domain:infra"
     if WEBPACK_RE.match(path):
         return "domain:infra"
+    # Hugo templates + asset-pipeline source + static-served files — build-time
+    # infrastructure that affects how content renders. static/programs/ is
+    # already routed at the top of this function (programs check returns
+    # first); the explicit exclusion below documents intent for readers.
+    if path.startswith("layouts/") or path.startswith("assets/"):
+        return "domain:infra"
+    if path.startswith("static/") and not path.startswith("static/programs/"):
+        return "domain:infra"
     # Marketing / landing pages under content/ that aren't blog or docs
     # (about/, pricing/, vs/, why-pulumi/, legal/, careers/, etc.). These
     # carry pricing, legal, and competitive claims with real consequences
