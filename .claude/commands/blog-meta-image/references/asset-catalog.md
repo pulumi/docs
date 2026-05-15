@@ -24,7 +24,7 @@ Located in `templates/`. Two sets of PNGs:
 
 ### Meta Assets (1200×628)
 
-The meta image is built from scratch (solid `#20054E` background) rather than from a template PNG. Two overlay assets are composited on top of the feature image:
+The meta image is built from scratch (solid `#231F33` background) rather than from a template PNG. Two overlay assets are composited on top of the feature image:
 
 | Filename | Type | Description |
 |----------|------|-------------|

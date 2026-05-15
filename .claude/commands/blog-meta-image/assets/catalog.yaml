@@ -11,10 +11,10 @@ meta_canvas:
   height: 628
 
 text:
-  font: inter-bold.woff
-  font_weight: 700
+  font: inter-semibold.woff
+  font_weight: 600
   color: "#FFFFFF"
-  letter_spacing_em: -0.025
+  letter_spacing_em: -0.05
   line_height_pct: 110
   x: 90
   y: 80
