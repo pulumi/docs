@@ -27,9 +27,9 @@ social:
 
 Platform engineering teams use Pulumi components to codify organizational standards and provide golden paths for developers. Shared component versioning quickly becomes a platform-wide concern when many stacks depend on the same building blocks. Without a clear versioning strategy, a simple update to a shared component can trigger unexpected resource replacements or build failures across a stack estate.
 
-Semantic Versioning (SemVer) provides a predictable framework for communicating the nature of changes to your users. When applied to Pulumi components, it ensures that platform teams can innovate rapidly while giving application developers the confidence to adopt new versions at their own pace.
+Semantic Versioning (SemVer) provides a predictable framework for communicating the nature of changes to your users. When applied to Pulumi components, it helps platform teams innovate rapidly while giving application developers the confidence to adopt new versions at their own pace.
 
-This post establishes a concrete versioning and release policy for shared components, ensuring you can roll users forward without breaking downstream stacks. By the end, you will have a SemVer-based workflow for publishing and deprecating Pulumi components.
+This post establishes a concrete versioning and release policy for shared components, so you can roll users forward with fewer surprises in downstream stacks. By the end, you will have a SemVer-based workflow for publishing, deprecating, and safely migrating Pulumi components.
 
 <!--more-->
 
@@ -45,6 +45,12 @@ A breaking change in a component isn't just a TypeScript type error. It's any ch
 1. Changing a property on a child resource that forces its replacement.
 
 Understanding this contract is the first step toward a predictable versioning workflow.
+
+## Versioning state safely
+
+SemVer communicates intent, but Pulumi still needs enough information to preserve existing resources. When you rename a component, rename a child resource, change a component type token, or move children under a different parent, use [aliases](/docs/iac/concepts/resources/options/aliases/) to tell Pulumi how the old URN maps to the new one.
+
+Aliases are part of the migration plan, not just a code cleanup detail. Keep them until the stacks that used the old shape have been updated. Removing aliases too early can turn a safe rename into an unexpected replacement for teams that upgrade later.
 
 ## Trunk-based development and conventional commits
 
@@ -66,7 +72,7 @@ With a clean commit history, you can use tools like `semantic-release`, Changese
 
 ## Publishing to the private registry
 
-Once the tag is pushed, publishing to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) is a single command. This makes the new version discoverable and generates updated API documentation automatically.
+Once the tag is pushed and the package is configured for registry publishing, you can publish to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) with `pulumi package publish`. This makes the new version discoverable, and the registry generates API documentation from the package schema.
 
 ```bash
 # Tag and push
@@ -79,9 +85,15 @@ pulumi package publish github.com/acme/cloud-bucket@1.2.0
 
 ## Consumer pinning and updates
 
-Application developers should pin their component usage to a specific major version. This protects them from breaking changes while allowing them to receive non-breaking features and fixes.
+Application developers should pin their component usage to a specific major version or a compatible version range. This protects them from breaking changes while allowing them to receive non-breaking features and fixes according to your organization's upgrade policy.
 
 In a Pulumi program, this typically means pinning the package version in `package.json`, `requirements.txt`, or `go.mod`. For components consumed via the [Private Registry](/docs/idp/concepts/private-registry/), the registry itself helps manage these versions.
+
+## Previews and policy checks
+
+Treat every component upgrade as an infrastructure change, not just a dependency update. Run `pulumi preview` against representative stacks before promoting a new component version, and review any resource replacements the preview reports.
+
+For high-risk components, add checks where the relevant upgrade metadata is visible to the workflow. CI can require migration notes for v2 adoption or block unapproved major-version jumps in dependency files. Pulumi Policies can then enforce preview-visible guardrails, such as requiring `protect` on tagged or critical resources and validating resource inputs that represent your component contract.
 
 ## Managing deprecations
 
