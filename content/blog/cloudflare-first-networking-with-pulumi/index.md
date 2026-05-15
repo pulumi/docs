@@ -57,12 +57,13 @@ pulumi config set --secret cloudflare:apiToken "$CLOUDFLARE_API_TOKEN"
 
 ### Defining the infrastructure
 
-Here is the complete Pulumi program in TypeScript.
+Here is the complete Pulumi program in TypeScript. If your zone already has a custom WAF ruleset for the same phase, import that ruleset or add the rule to your existing ruleset instead of creating a duplicate.
 
 ```typescript
 import * as cloudflare from "@pulumi/cloudflare";
 
-const accountId = "023e105f4ecef8ad9ca31a8372d0c353";
+const accountId = "<your-cloudflare-account-id>";
+const trustedAdminIp = "198.51.100.10";
 
 const zone = new cloudflare.Zone("my-zone", {
     account: {
@@ -80,6 +81,15 @@ const www = new cloudflare.DnsRecord("www", {
     proxied: true,
 });
 
+const admin = new cloudflare.DnsRecord("admin", {
+    zoneId: zone.id,
+    name: "admin",
+    content: "1.2.3.4",
+    ttl: 1,
+    type: "A",
+    proxied: true,
+});
+
 const wafRule = new cloudflare.Ruleset("waf-rule", {
     zoneId: zone.id,
     name: "Block suspicious traffic",
@@ -88,7 +98,7 @@ const wafRule = new cloudflare.Ruleset("waf-rule", {
     phase: "http_request_firewall_custom",
     rules: [{
         action: "block",
-        expression: "(http.request.uri.path contains '/admin' and not ip.src in {1.2.3.4})",
+        expression: `(http.request.uri.path contains "/admin" and not ip.src in {${trustedAdminIp}})`,
         description: "Block unauthorized admin access",
     }],
 });
@@ -96,6 +106,7 @@ const wafRule = new cloudflare.Ruleset("waf-rule", {
 const worker = new cloudflare.WorkersScript("canary-worker", {
     accountId: accountId,
     scriptName: "edge-canary",
+    compatibilityDate: "2026-01-01",
     mainModule: "worker.js",
     content: `
         export default {
@@ -110,17 +121,17 @@ const worker = new cloudflare.WorkersScript("canary-worker", {
 
 const workerRoute = new cloudflare.WorkersRoute("canary-route", {
     zoneId: zone.id,
-    pattern: "example.com/*",
+    pattern: "www.example.com/*",
     script: worker.scriptName,
 });
 
 const adminGroup = new cloudflare.ZeroTrustAccessGroup("admin-group", {
     accountId: accountId,
     name: "Administrators",
-    include: [{
-        email: [{
+    includes: [{
+        email: {
             email: "admin@example.com",
-        }],
+        },
     }],
 });
 
@@ -147,8 +158,8 @@ const accessApp = new cloudflare.ZeroTrustAccessApplication("internal-tool", {
 Once you run `pulumi up`, you can validate your edge baseline with these steps:
 
 1. **DNS check**: Run `dig www.example.com` to confirm the record points to Cloudflare's proxied IPs.
-1. **WAF test**: Attempt to access `example.com/admin` from an unauthorized IP and verify you receive a 403 Forbidden response.
-1. **Worker canary**: Use `curl -I https://example.com` and check for the `x-edge-baseline: active` header.
+1. **WAF test**: Attempt to access `www.example.com/admin` from an unauthorized IP and verify you receive a 403 Forbidden response.
+1. **Worker canary**: Use `curl -I https://www.example.com` and check for the `x-edge-baseline: active` header.
 1. **Access policy**: Navigate to `admin.example.com` and verify you are redirected to the Cloudflare Access login page.
 
 By managing these resources as code, you eliminate the risk of manual drift and ensure that every environment starts with a secure, validated edge baseline.
