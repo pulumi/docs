@@ -1,0 +1,2502 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class EscClient </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class EscClient ">
+    
+    <meta name="description" content="A high-level client for the Pulumi ESC (Environments, Secrets, Config) API. Wraps the generated  and provides a more convenient interface.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Esc.Sdk.EscClient">
+
+
+  <h1 id="Pulumi_Esc_Sdk_EscClient" data-uid="Pulumi.Esc.Sdk.EscClient" class="text-break">Class EscClient</h1>
+  <div class="markdown level0 summary"><p>A high-level client for the Pulumi ESC (Environments, Secrets, Config) API.
+Wraps the generated <a class="xref" href="pulumi.esc.sdk.api.iescapi.html">IEscApi</a> and provides a more convenient interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">EscClient</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.esc.html">Esc</a>.<a class="xref" href="pulumi.esc.sdk.html">Sdk</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Esc.Sdk.dll</h6>
+  <h5 id="Pulumi_Esc_Sdk_EscClient_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EscClient : IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_RawApi_" data-uid="Pulumi.Esc.Sdk.EscClient.RawApi*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_RawApi" data-uid="Pulumi.Esc.Sdk.EscClient.RawApi">RawApi</h4>
+  <div class="markdown level1 summary"><p>The underlying raw API client. Use this for advanced scenarios not covered by the convenience methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public IEscApi RawApi { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.api.iescapi.html">IEscApi</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L342">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CheckEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CheckEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CheckEnvironmentAsync_System_String_Pulumi_Esc_Sdk_Model_EnvironmentDefinition_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CheckEnvironmentAsync(System.String,Pulumi.Esc.Sdk.Model.EnvironmentDefinition,System.Threading.CancellationToken)">CheckEnvironmentAsync(string, EnvironmentDefinition, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Checks an <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a> for errors.
+The definition is serialized to YAML before sending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CheckEnvironment?&gt; CheckEnvironmentAsync(string orgName, EnvironmentDefinition definition, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.checkenvironment.html">CheckEnvironment</a>&gt;</td>
+        <td><p>The check result, which may contain diagnostics even on error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CheckEnvironmentYamlAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CheckEnvironmentYamlAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CheckEnvironmentYamlAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CheckEnvironmentYamlAsync(System.String,System.String,System.Threading.CancellationToken)">CheckEnvironmentYamlAsync(string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Checks an environment YAML definition for errors.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;CheckEnvironment?&gt; CheckEnvironmentYamlAsync(string orgName, string yaml, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">yaml</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.checkenvironment.html">CheckEnvironment</a>&gt;</td>
+        <td><p>The check result, which may contain diagnostics even on error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CloneEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CloneEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CloneEnvironmentAsync_System_String_System_String_System_String_System_String_System_String_Pulumi_Esc_Sdk_CloneEnvironmentOptions_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CloneEnvironmentAsync(System.String,System.String,System.String,System.String,System.String,Pulumi.Esc.Sdk.CloneEnvironmentOptions,System.Threading.CancellationToken)">CloneEnvironmentAsync(string, string, string, string, string, CloneEnvironmentOptions?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Clones an existing environment into a new environment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task CloneEnvironmentAsync(string orgName, string srcProjectName, string srcEnvName, string destProjectName, string destEnvName, CloneEnvironmentOptions? options = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">srcProjectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">srcEnvName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">destProjectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">destEnvName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.cloneenvironmentoptions.html">CloneEnvironmentOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_Create_" data-uid="Pulumi.Esc.Sdk.EscClient.Create*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_Create_System_String_System_String_" data-uid="Pulumi.Esc.Sdk.EscClient.Create(System.String,System.String)">Create(string, string?)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a> with the specified access token and backend URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static EscClient Create(string accessToken, string? backendUrl = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">accessToken</span></td>
+        <td><p>The Pulumi access token for authentication.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">backendUrl</span></td>
+        <td><p>The ESC API base URL (e.g. &quot;https://api.pulumi.com/api/esc&quot;).
+If null, defaults to the standard Pulumi Cloud ESC API endpoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a></td>
+        <td><p>A new <a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CreateDefault_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateDefault*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CreateDefault" data-uid="Pulumi.Esc.Sdk.EscClient.CreateDefault">CreateDefault()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a> with default configuration.
+The access token is resolved from <code>PULUMI_ACCESS_TOKEN</code> environment variable
+or the currently logged-in Pulumi CLI / ESC CLI account.
+The backend URL is resolved from <code>PULUMI_BACKEND_URL</code> environment variable
+or the currently logged-in account URL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static EscClient CreateDefault()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a></td>
+        <td><p>A new <a class="xref" href="pulumi.esc.sdk.escclient.html">EscClient</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>If no access token can be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">CreateEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new environment with the given name in the given organization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task CreateEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L623">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentRevisionTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentRevisionTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentRevisionTagAsync_System_String_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentRevisionTagAsync(System.String,System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">CreateEnvironmentRevisionTagAsync(string, string, string, string, int, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new environment revision tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task CreateEnvironmentRevisionTagAsync(string orgName, string projectName, string envName, string tagName, int revision, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">revision</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L528">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_CreateEnvironmentTagAsync_System_String_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.CreateEnvironmentTagAsync(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">CreateEnvironmentTagAsync(string, string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new environment tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentTag&gt; CreateEnvironmentTagAsync(string orgName, string projectName, string envName, string tagName, string tagValue, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmenttag.html">EnvironmentTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L306">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_DecryptEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.DecryptEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_DecryptEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.DecryptEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">DecryptEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition with static secrets in plaintext and returns a parsed <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentDefinition?&gt; DecryptEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L243">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_DecryptEnvironmentYamlAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.DecryptEnvironmentYamlAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_DecryptEnvironmentYamlAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.DecryptEnvironmentYamlAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">DecryptEnvironmentYamlAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition with static secrets in plaintext and returns the raw YAML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;string&gt; DecryptEnvironmentYamlAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">DeleteEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes the environment with the given name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task DeleteEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L647">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentRevisionTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentRevisionTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentRevisionTagAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentRevisionTagAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">DeleteEnvironmentRevisionTagAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes an environment revision tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task DeleteEnvironmentRevisionTagAsync(string orgName, string projectName, string envName, string tagName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L563">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_DeleteEnvironmentTagAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.DeleteEnvironmentTagAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">DeleteEnvironmentTagAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Deletes an environment tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task DeleteEnvironmentTagAsync(string orgName, string projectName, string envName, string tagName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L743">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_Dispose_" data-uid="Pulumi.Esc.Sdk.EscClient.Dispose*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_Dispose" data-uid="Pulumi.Esc.Sdk.EscClient.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Disposes the underlying service provider and HttpClient resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L752">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_Dispose_" data-uid="Pulumi.Esc.Sdk.EscClient.Dispose*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_Dispose_System_Boolean_" data-uid="Pulumi.Esc.Sdk.EscClient.Dispose(System.Boolean)">Dispose(bool)</h4>
+  <div class="markdown level1 summary"><p>Disposes managed resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L288">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition and returns a parsed <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentDefinition?&gt; GetEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L297">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAtVersionAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAtVersionAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAtVersionAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAtVersionAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentAtVersionAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition at a specific version and returns a parsed <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentDefinition?&gt; GetEnvironmentAtVersionAsync(string orgName, string projectName, string envName, string version, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAtVersionYamlAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAtVersionYamlAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentAtVersionYamlAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentAtVersionYamlAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentAtVersionYamlAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition at a specific version and returns the raw YAML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;string&gt; GetEnvironmentAtVersionYamlAsync(string orgName, string projectName, string envName, string version, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L609">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentRevisionTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentRevisionTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentRevisionTagAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentRevisionTagAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentRevisionTagAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets an environment revision tag by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentRevisionTag&gt; GetEnvironmentRevisionTagAsync(string orgName, string projectName, string envName, string tagName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentrevisiontag.html">EnvironmentRevisionTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L514">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentTagAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentTagAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentTagAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Gets an environment tag by name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentTag&gt; GetEnvironmentTagAsync(string orgName, string projectName, string envName, string tagName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmenttag.html">EnvironmentTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L223">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentYamlAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentYamlAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_GetEnvironmentYamlAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.GetEnvironmentYamlAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">GetEnvironmentYamlAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the environment definition and returns the raw YAML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;string&gt; GetEnvironmentYamlAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L576">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionTagsAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionTagsAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionTagsAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionTagsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">ListEnvironmentRevisionTagsAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all environment revision tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentRevisionTags&gt; ListEnvironmentRevisionTagsAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentrevisiontags.html">EnvironmentRevisionTags</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L590">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionTagsPaginatedAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionTagsPaginatedAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionTagsPaginatedAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionTagsPaginatedAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ListEnvironmentRevisionTagsPaginatedAsync(string, string, string, string?, int?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists environment revision tags with pagination support.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentRevisionTags&gt; ListEnvironmentRevisionTagsPaginatedAsync(string orgName, string projectName, string envName, string? after = null, int? count = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">after</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentrevisiontags.html">EnvironmentRevisionTags</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L660">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionsAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionsAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionsAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">ListEnvironmentRevisionsAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all revisions of the environment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;List&lt;EnvironmentRevision&gt;&gt; ListEnvironmentRevisionsAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentrevision.html">EnvironmentRevision</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L674">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionsPaginatedAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionsPaginatedAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentRevisionsPaginatedAsync_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentRevisionsPaginatedAsync(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">ListEnvironmentRevisionsPaginatedAsync(string, string, string, int?, int?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists revisions of the environment with pagination support.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;List&lt;EnvironmentRevision&gt;&gt; ListEnvironmentRevisionsPaginatedAsync(string orgName, string projectName, string envName, int? before = null, int? count = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">before</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentrevision.html">EnvironmentRevision</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L481">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentTagsAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentTagsAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentTagsAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentTagsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">ListEnvironmentTagsAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all environment tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;ListEnvironmentTags&gt; ListEnvironmentTagsAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.listenvironmenttags.html">ListEnvironmentTags</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L495">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentTagsPaginatedAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentTagsPaginatedAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentTagsPaginatedAsync_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentTagsPaginatedAsync(System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Threading.CancellationToken)">ListEnvironmentTagsPaginatedAsync(string, string, string, string?, int?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists environment tags with pagination support.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;ListEnvironmentTags&gt; ListEnvironmentTagsPaginatedAsync(string orgName, string projectName, string envName, string? after = null, int? count = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">after</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.listenvironmenttags.html">ListEnvironmentTags</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L201">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentsAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentsAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ListEnvironmentsAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ListEnvironmentsAsync(System.String,System.String,System.Threading.CancellationToken)">ListEnvironmentsAsync(string, string?, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Lists all environments in the given organization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;OrgEnvironments&gt; ListEnvironmentsAsync(string orgName, string? continuationToken = null, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td><p>Organization name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">continuationToken</span></td>
+        <td><p>Optional continuation token for pagination.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>Cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.orgenvironments.html">OrgEnvironments</a>&gt;</td>
+        <td><p>The list of environments.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L456">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_OpenAndReadEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenAndReadEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_OpenAndReadEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenAndReadEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">OpenAndReadEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Opens and reads an environment in a single call.
+Returns the full environment model and the unwrapped value dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(ModelEnvironment Environment, Dictionary&lt;string, object?&gt;? Values)&gt; OpenAndReadEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="pulumi.esc.sdk.model.modelenvironment.html">ModelEnvironment</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.environment">Environment</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.values">Values</a>)&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L467">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_OpenAndReadEnvironmentAtVersionAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenAndReadEnvironmentAtVersionAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_OpenAndReadEnvironmentAtVersionAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenAndReadEnvironmentAtVersionAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">OpenAndReadEnvironmentAtVersionAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Opens and reads an environment at a specific version in a single call.
+Returns the full environment model and the unwrapped value dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(ModelEnvironment Environment, Dictionary&lt;string, object?&gt;? Values)&gt; OpenAndReadEnvironmentAtVersionAsync(string orgName, string projectName, string envName, string version, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="pulumi.esc.sdk.model.modelenvironment.html">ModelEnvironment</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.environment">Environment</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.values">Values</a>)&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L356">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_OpenEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_OpenEnvironmentAsync_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenEnvironmentAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">OpenEnvironmentAsync(string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Opens an environment session and returns the session ID and any diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(string Id, List&lt;EnvironmentDiagnostic&gt;? Diagnostics)&gt; OpenEnvironmentAsync(string orgName, string projectName, string envName, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.list-pulumi.esc.sdk.model.environmentdiagnostic--.id">Id</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdiagnostic.html">EnvironmentDiagnostic</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.list-pulumi.esc.sdk.model.environmentdiagnostic--.diagnostics">Diagnostics</a>)&gt;</td>
+        <td><p>A tuple of (sessionId, diagnostics).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L371">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_OpenEnvironmentAtVersionAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenEnvironmentAtVersionAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_OpenEnvironmentAtVersionAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.OpenEnvironmentAtVersionAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">OpenEnvironmentAtVersionAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Opens an environment session at a specific version and returns the session ID and any diagnostics.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(string Id, List&lt;EnvironmentDiagnostic&gt;? Diagnostics)&gt; OpenEnvironmentAtVersionAsync(string orgName, string projectName, string envName, string version, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.list-pulumi.esc.sdk.model.environmentdiagnostic--.id">Id</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdiagnostic.html">EnvironmentDiagnostic</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.collections.generic.list-pulumi.esc.sdk.model.environmentdiagnostic--.diagnostics">Diagnostics</a>)&gt;</td>
+        <td><p>A tuple of (sessionId, diagnostics).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L386">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ReadOpenEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ReadOpenEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ReadOpenEnvironmentAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ReadOpenEnvironmentAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">ReadOpenEnvironmentAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads the resolved values of an open environment session.
+Returns both the full environment model and the unwrapped value dictionary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(ModelEnvironment Environment, Dictionary&lt;string, object?&gt;? Values)&gt; ReadOpenEnvironmentAsync(string orgName, string projectName, string envName, string openSessionId, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">openSessionId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="pulumi.esc.sdk.model.modelenvironment.html">ModelEnvironment</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.environment">Environment</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.modelenvironment,system.collections.generic.dictionary-system.string,system.object--.values">Values</a>)&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L411">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_ReadOpenEnvironmentPropertyAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.ReadOpenEnvironmentPropertyAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_ReadOpenEnvironmentPropertyAsync_System_String_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.ReadOpenEnvironmentPropertyAsync(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">ReadOpenEnvironmentPropertyAsync(string, string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Reads a specific property from an open environment session.
+Returns both the raw Value and the unwrapped primitive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;(Value Value, object? Primitive)&gt; ReadOpenEnvironmentPropertyAsync(string orgName, string projectName, string envName, string openSessionId, string propertyPath, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">openSessionId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">propertyPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;(<a class="xref" href="pulumi.esc.sdk.model.value.html">Value</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.value,system.object-.value">Value</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-pulumi.esc.sdk.model.value,system.object-.primitive">Primitive</a>)&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Pulumi_Esc_Sdk_EscClient_ReadOpenEnvironmentPropertyAsync_System_String_System_String_System_String_System_String_System_String_System_Threading_CancellationToken__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The generated ReadOpenEnvironmentProperty API endpoint uses a double-slash (//) in its
+URL path to differentiate it from the ReadOpenEnvironment endpoint. .NET's Uri class
+normalizes // to /, breaking the request. As a workaround, this method reads the full
+environment and extracts the requested property using dot-separated path navigation.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L279">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentAsync_System_String_System_String_System_String_Pulumi_Esc_Sdk_Model_EnvironmentDefinition_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentAsync(System.String,System.String,System.String,Pulumi.Esc.Sdk.Model.EnvironmentDefinition,System.Threading.CancellationToken)">UpdateEnvironmentAsync(string, string, string, EnvironmentDefinition, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the environment definition using an <a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a> object.
+The definition is serialized to YAML before sending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentDiagnostics?&gt; UpdateEnvironmentAsync(string orgName, string projectName, string envName, EnvironmentDefinition definition, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.model.environmentdefinition.html">EnvironmentDefinition</a></td>
+        <td><span class="parametername">definition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdiagnostics.html">EnvironmentDiagnostics</a>&gt;</td>
+        <td><p>Diagnostics from the update, if any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L635">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentRevisionTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentRevisionTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentRevisionTagAsync_System_String_System_String_System_String_System_String_System_Int32_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentRevisionTagAsync(System.String,System.String,System.String,System.String,System.Int32,System.Threading.CancellationToken)">UpdateEnvironmentRevisionTagAsync(string, string, string, string, int, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates an environment revision tag to point to a different revision.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task UpdateEnvironmentRevisionTagAsync(string orgName, string projectName, string envName, string tagName, int revision, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">revision</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L545">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentTagAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentTagAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentTagAsync_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentTagAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">UpdateEnvironmentTagAsync(string, string, string, string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates an environment tag.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentTag?&gt; UpdateEnvironmentTagAsync(string orgName, string projectName, string envName, string tagName, string currentTagValue, string newTagName, string newTagValue, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">tagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">currentTagValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">newTagName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">newTagValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmenttag.html">EnvironmentTag</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L254">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentYamlAsync_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentYamlAsync*"></a>
+  <h4 id="Pulumi_Esc_Sdk_EscClient_UpdateEnvironmentYamlAsync_System_String_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Pulumi.Esc.Sdk.EscClient.UpdateEnvironmentYamlAsync(System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">UpdateEnvironmentYamlAsync(string, string, string, string, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Updates the environment definition using a raw YAML string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Task&lt;EnvironmentDiagnostics?&gt; UpdateEnvironmentYamlAsync(string orgName, string projectName, string envName, string yaml, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">orgName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">projectName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">envName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">yaml</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="pulumi.esc.sdk.model.environmentdiagnostics.html">EnvironmentDiagnostics</a>&gt;</td>
+        <td><p>Diagnostics from the update, if any.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+  </div>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 0.13.1</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscClient.cs/#L71" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
