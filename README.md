@@ -55,6 +55,7 @@ We build the Pulumi website with Hugo, manage our dependencies with Node.js and 
   * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
 * [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
+* [Vale](https://vale.sh/docs/install) (3.14.1) — required by `make ensure` for prose linting.
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
 
@@ -69,6 +70,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
 
 * Hugo, Node.js, Yarn, and Markdown tooling.
+* Vale for prose linting.
 * Go, Python, .NET, and the Pulumi CLI.
 * VS Code extensions for Markdown linting, link checking, and Pulumi support.
 * Google Cloud CLI and GitHub CLI.
