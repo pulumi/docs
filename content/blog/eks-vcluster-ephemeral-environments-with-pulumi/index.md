@@ -129,11 +129,36 @@ const quota = new k8s.core.v1.ResourceQuota("tenant-quota", {
         },
     },
 }, { provider: hostProvider });
+
+// Define a Role for the tenant within their namespace.
+const tenantRole = new k8s.rbac.v1.Role("tenant-role", {
+    metadata: { namespace: tenantNamespace.metadata.name },
+    rules: [{
+        apiGroups: [""],
+        resources: ["pods", "services", "configmaps", "secrets"],
+        verbs: ["get", "list", "watch", "create", "update", "patch", "delete"],
+    }],
+}, { provider: hostProvider });
+
+// Bind the Role to a tenant user or group.
+const tenantRoleBinding = new k8s.rbac.v1.RoleBinding("tenant-role-binding", {
+    metadata: { namespace: tenantNamespace.metadata.name },
+    subjects: [{
+        kind: "User",
+        name: "tenant-user",
+        apiGroup: "rbac.authorization.k8s.io",
+    }],
+    roleRef: {
+        kind: "Role",
+        name: tenantRole.metadata.name,
+        apiGroup: "rbac.authorization.k8s.io",
+    },
+}, { provider: hostProvider });
 ```
 
 ### Deploying vCluster with Helm
 
-We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled Helm lifecycle management for the vCluster release.
+We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled Helm lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -147,6 +172,14 @@ const vcluster = new k8s.helm.v3.Release("vcluster-alpha", {
         repo: "https://charts.loft.sh",
     },
     namespace: tenantNamespace.metadata.name,
+    values: {
+        // Conservative settings for the virtual cluster.
+        sync: {
+            toHost: {
+                pods: { enabled: true },
+            },
+        },
+    },
 }, { provider: hostProvider });
 ```
 
