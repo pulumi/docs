@@ -361,12 +361,6 @@ Before Pulumi v3.84, `RemoteAsset` and `RemoteArchive` were fetched synchronousl
 v3.84, these fetches are batched and cached in the engine's content-addressable store
 under `~/.pulumi/asset-cache/`.
 
-For archives larger than 100 MiB, the SDK switches from in-memory tarball construction to
-a streaming codepath added in v3.92, reducing peak memory usage by roughly 40% in internal
-benchmarks. Stack states still record the SHA-256 of every asset, so cache eviction never
-affects determinism — a fresh fetch on cache miss is verified against the stored hash
-before the resource update proceeds.
-
 ### Cache configuration
 
 The cache is enabled by default and stores up to 512 MiB of asset content, with entries
@@ -379,8 +373,7 @@ expiring after 7 days. Both limits are configurable via environment variables:
 | `PULUMI_ASSET_CACHE_DIR`   | `~/.pulumi/asset-cache/` | Directory used for the cache.                              |
 
 To disable caching entirely — useful in CI where the runner is ephemeral — set
-`PULUMI_ASSET_CACHE_SIZE=0`. To purge the cache manually, run `pulumi cache clear
---type=assets`.
+`PULUMI_ASSET_CACHE_SIZE=0`.
 
 ### Programmatic prefetching
 
