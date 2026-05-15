@@ -1,7 +1,7 @@
 ---
 title: "Pulumi Import for Real Production Estates"
 date: 2026-07-07
-meta_desc: "Use Pulumi import beyond demos with codegen-only mode, bulk import files, provider edge cases, and reviewable adoption workflows."
+meta_desc: "Use Pulumi import beyond demos with bulk import files, provider edge cases, state-only imports, and reviewable adoption workflows."
 authors:
     - pablo-seibelt
 tags:
@@ -12,15 +12,15 @@ meta_image: meta.png
 feature_image: feature.png
 social:
     twitter: |
-        Pulumi import gets interesting at production scale: bulk files, codegen-only mode, third-party providers, and long-running adoption workflows.
+        Pulumi import gets interesting at production scale: bulk files, state-only imports, third-party providers, and long-running adoption workflows.
 
         Learn more in the post.
     linkedin: |
         Production imports are rarely one-resource demos.
 
-        This guide covers Pulumi import patterns for real estates: codegen-only mode, bulk import files, third-party providers, long-running operations, and reviewable adoption workflows.
+        This guide covers Pulumi import patterns for real estates: bulk import files, state-only imports, third-party providers, long-running operations, and reviewable adoption workflows.
     bluesky: |
-        Pulumi import at production scale means bulk files, codegen-only mode, third-party providers, and careful adoption workflows.
+        Pulumi import at production scale means bulk files, state-only imports, third-party providers, and careful adoption workflows.
 
         Learn more in the post.
 ---
@@ -29,7 +29,7 @@ Adopting existing infrastructure into Infrastructure as Code (IaC) is a common c
 
 To move beyond simple demos, you need to understand the different import modes, how to handle bulk operations, and how to manage long-running adoptions without breaking your production stacks.
 
-This post covers production-grade import strategies, including bulk import files, pure-codegen modes, and common pitfalls when working with custom providers. By the end, you will have a playbook for mass infrastructure adoption using Pulumi's advanced import features.
+This post covers production-grade import strategies, including bulk import files, state-only imports, and common pitfalls when working with custom providers. By the end, you will have a playbook for mass infrastructure adoption using Pulumi's advanced import features.
 
 <!--more-->
 
@@ -39,7 +39,7 @@ Pulumi provides three distinct ways to bring resources under management. Choosin
 
 ### 1. CLI import (state and code)
 
-The standard [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command is the most common starting point. It performs two actions: it adds the resource to your stack state and prints the corresponding TypeScript, Python, Go, or C# code to your terminal.
+The standard [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command is the most common starting point. It performs two actions: it adds the resource to your stack state and prints the corresponding TypeScript, Python, Go, C#, Java, or YAML code to your terminal.
 
 ```bash
 pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0
@@ -69,7 +69,7 @@ Sometimes you already have the code perfectly written, perhaps by copying it fro
 pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0 --generate-code=false
 ```
 
-This updates the state file directly, assuming your code already matches the resource configuration.
+This updates the state file directly, assuming your code already matches the resource configuration. After import, the resource is managed like any other Pulumi resource, so keep protection in place until the team intentionally owns delete behavior and consider `retainOnDelete` for resources that must survive stack destruction.
 
 ## Bulk imports with import files
 
@@ -99,22 +99,25 @@ This command will process all resources in the file in a single operation, signi
 
 Not every resource belongs to the standard AWS, Azure, or Google Cloud providers. When importing resources from custom or third-party providers, you may need to specify the provider explicitly.
 
-If you have multiple instances of a provider (e.g., different AWS regions), you can pass the provider's URN to the import command:
+If you have multiple instances of a provider (e.g., different AWS regions), pass the provider name and URN to the import command in `name=urn` form:
 
 ```bash
-pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0 --provider "urn:pulumi:stack::project::pulumi:providers:aws::my-provider-name"
+pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0 --provider "awsProvider=urn:pulumi:stack::project::pulumi:providers:aws::my-provider-name::12345678-1234-1234-1234-123456789abc"
 ```
 
-In a bulk import file, you can specify the provider for each resource individually:
+In a bulk import file, define provider names in `nameTable`, then reference those names from each resource:
 
 ```json
 {
+    "nameTable": {
+        "awsProvider": "urn:pulumi:stack::project::pulumi:providers:aws::my-provider-name::12345678-1234-1234-1234-123456789abc"
+    },
     "resources": [
         {
             "type": "aws:ec2/vpc:Vpc",
             "name": "my-vpc",
             "id": "vpc-0123456789abcdef0",
-            "provider": "urn:pulumi:stack::project::pulumi:providers:aws::my-provider-name"
+            "provider": "awsProvider"
         }
     ]
 }
@@ -128,9 +131,9 @@ When importing a large resource estate, a single massive import can be risky. He
 
 Break your adoption into logical chunks. Start with foundational resources like VPCs and subnets, then move to security groups, and finally to application-level resources like databases and load balancers. This makes it easier to verify each step and recover if something goes wrong.
 
-### Idempotency and checkpoint recovery
+### Checkpoint recovery
 
-Pulumi imports are idempotent. If a bulk import fails halfway through due to a network error or a rate limit, you can fix the issue and run the command again. Pulumi will skip resources that are already in the state and continue with the remaining ones.
+Bulk import recovery is a checkpoint-management workflow, not an idempotent retry. If an import file fails partway through, inspect the stack state and the failed operation output, remove resources that were already imported from the import file, then rerun `pulumi import --file` with only the remaining resources. This keeps the next import focused on resources that are not already registered in the stack.
 
 ### Validating with a no-op preview
 
