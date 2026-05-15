@@ -139,11 +139,11 @@
     <div>
         {{ range .tables }}
         <details class="group border-b border-gray-200 overflow-x-hidden" data-pricing-table open>
-            <summary class="flex items-center justify-between cursor-pointer py-2 list-none [&::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer py-4 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-3">
-                    {{ with .icon }}
+                    {{ if .icon }}
                     <span class="inline-flex items-center justify-center size-9 rounded-md bg-violet-background text-violet-primary flex-shrink-0">
-                        {{ partial "icon.html" (dict "name" . "class" "size-6") }}
+                        {{ partial "icon.html" (dict "name" .icon "class" "size-6" "weight" (.icon_weight | default "regular")) }}
                     </span>
                     {{ end }}
                     <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h3>

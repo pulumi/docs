@@ -559,6 +559,7 @@ comparison_table:
           ## Pulumi Neo Table
           - header: Infrastructure AI
             icon: custom/pulumi-neo
+            icon_weight: fill
             rows:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
