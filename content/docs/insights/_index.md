@@ -71,7 +71,7 @@ sections:
   - icon: package
     heading: Pre-built Policy Packs
     link: /docs/insights/policy/policy-packs/pre-built-packs/
-    description: Use ready-made compliance rules for CIS, PCI DSS, SOC 2, and other frameworks with no code required.
+    description: Use ready-made compliance rules for CIS, HITRUST, NIST, and PCI DSS with no code required.
   - icon: arrows-clockwise
     heading: Policy Groups
     link: /docs/insights/policy/policy-groups/

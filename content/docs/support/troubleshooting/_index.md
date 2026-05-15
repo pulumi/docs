@@ -45,8 +45,13 @@ sections:
     link: /docs/support/troubleshooting/editing-state-files/
     description: Safe techniques for modifying Pulumi state files when necessary.
 
+  - icon: target
+    heading: Targeted Updates
+    link: /docs/iac/guides/basics/targeted-updates/
+    description: Limit operations to specific resources with --target and --exclude when a stuck or misbehaving resource is blocking a wider update.
+
   - icon: wrench
-    heading: Using dev builds
+    heading: Using Dev Builds
     link: /docs/support/troubleshooting/using-dev-builds/
     description: Install pre-release builds to access bug fixes that haven't shipped in a stable release yet.
 

@@ -1,0 +1,493 @@
+#!/usr/bin/env bash
+# pinned-comment.sh — manage a single logical Claude review on a PR as one
+# or more GitHub comments tagged with `<!-- CLAUDE_REVIEW N/M -->` markers.
+#
+# Subcommands:
+#   find             --pr <N>                           List pinned comment IDs in marker order.
+#   fetch            --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
+#   upsert           --pr <N> --body-file <path> [--soft-floor]   Split body, edit existing comments in place, append new, prune tail. With --soft-floor: re-run validate-pinned.py --soft-floor first (emits the `soft-floor`-labeled CI annotation surfacing residual violations to the maintainer), then publish regardless — the documented second-failure fallback per ci.md §4.
+#   upsert-validated --pr <N> --body-file <path>        Run validate-pinned.py first; on success, call upsert. On violation, exit non-zero and write a fix-me marker the model re-reads. Fresh-review path only.
+#   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
+#   clear            --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
+#   last-reviewed-sha --pr <N>                          Print the most recent SHA from the 1/M comment's review history.
+#
+# Common flags:
+#   --repo <owner/repo>   Override repository (default: $GH_REPO, $GITHUB_REPOSITORY, or `gh repo view`).
+#   --max-bytes <N>       Maximum body size per comment (default: 60000; GitHub hard cap is 65536).
+#   --dry-run             Print intended API calls; do not mutate.
+#
+# Marker convention: every managed comment starts with a single line
+#   <!-- CLAUDE_REVIEW N/M -->
+# where N is 1-indexed and M is the total comment count in the sequence.
+#
+# Hard rule: the 1/M comment is sacrosanct. This script will NEVER delete it
+# while a sequence is being managed in place. Tail-end deletes are fine.
+
+set -euo pipefail
+
+MARKER_RE='^<!-- CLAUDE_REVIEW ([0-9]+)/([0-9]+) -->'
+DEFAULT_MAX_BYTES=60000
+
+usage() {
+    sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//' >&2
+    exit 2
+}
+
+die() {
+    printf 'pinned-comment.sh: %s\n' "$1" >&2
+    exit 1
+}
+
+require_cmd() {
+    command -v "$1" >/dev/null 2>&1 || die "missing required command: $1"
+}
+
+resolve_repo() {
+    if [[ -n "${REPO_FLAG:-}" ]]; then
+        printf '%s' "$REPO_FLAG"
+    elif [[ -n "${GH_REPO:-}" ]]; then
+        printf '%s' "$GH_REPO"
+    elif [[ -n "${GITHUB_REPOSITORY:-}" ]]; then
+        printf '%s' "$GITHUB_REPOSITORY"
+    else
+        gh repo view --json nameWithOwner -q .nameWithOwner
+    fi
+}
+
+# list_pinned_comments <repo> <pr>
+# Emits TSV: comment_id<TAB>position<TAB>total<TAB>created_at
+# Sorted by position ascending.
+list_pinned_comments() {
+    local repo="$1" pr="$2"
+    # jq does the parsing: extract the leading line of each body, capture
+    # the N/M marker, and emit only matching comments. Avoids relying on
+    # gawk-specific match() captures.
+    # Note: no regex flags on `capture`. Not every jq build ships with
+    # extended-mode (`x`) support, and the GitHub Actions runner's jq
+    # errors with "unsupported regular expression flag: x" -- caught
+    # during fork-based re-entrant testing. The pattern has no
+    # extended-mode features to preserve, so the flag is unneeded.
+    gh api --paginate "repos/$repo/issues/$pr/comments" --jq '
+        .[]
+        | . as $c
+        | (.body | split("\n") | .[0]) as $line1
+        | ($line1 | capture("^<!-- CLAUDE_REVIEW (?<n>[0-9]+)/(?<m>[0-9]+) -->")? // empty)
+        | [$c.id, .n, .m, $c.created_at] | @tsv
+    ' | sort -t$'\t' -k2,2n
+}
+
+# fetch_pinned_bodies <repo> <pr>
+# Emits the full bodies, one after another, separated by a delimiter line.
+fetch_pinned_bodies() {
+    local repo="$1" pr="$2"
+    local ids
+    ids=$(list_pinned_comments "$repo" "$pr" | cut -f1)
+    if [[ -z "$ids" ]]; then
+        return 0
+    fi
+    local first=1
+    while IFS= read -r id; do
+        [[ -z "$id" ]] && continue
+        if (( first )); then
+            first=0
+        else
+            printf '\n----- PINNED-COMMENT-DELIMITER -----\n'
+        fi
+        gh api "repos/$repo/issues/comments/$id" --jq '.body'
+    done <<< "$ids"
+}
+
+# split_body <body_file> <max_bytes>
+# Writes split pages to a temp dir; prints the temp dir path on stdout.
+# Each page is a file named page-001, page-002, ...
+split_body() {
+    local body_file="$1" max_bytes="$2"
+    local tmpdir
+    tmpdir=$(mktemp -d)
+
+    # We split at line boundaries only. Algorithm:
+    # - Strip any inbound <!-- CLAUDE_REVIEW N/M --> marker lines first. This
+    #   script is the sole writer of markers; re-entrant callers sometimes
+    #   echo the previous pinned body (marker included) into the upsert
+    #   input, and without this filter render_with_markers would prepend a
+    #   second marker on top of the stale one.
+    # - Walk the remaining lines, accumulating into the current page.
+    # - When adding the next line would exceed max_bytes, finalize the page
+    #   and start a new one with that line.
+    # - Prefer splitting at `### ` heading boundaries when within the last
+    #   25% of the budget, but never required (size always wins).
+    # - Track open `<details>` blocks. If a flush happens inside one, close
+    #   the block at the end of the page and re-open a continuation
+    #   `<details>` at the start of the next so the spilled list stays
+    #   visually collapsed (otherwise the trailing items render as a naked
+    #   bulleted list under the next H3 heading).
+    awk -v max="$max_bytes" -v outdir="$tmpdir" '
+        function flush() {
+            if (length(buf) == 0) return
+            # If a <details> is open mid-flush, close it on this page; the
+            # next page will re-open a continuation block.
+            if (in_details > 0) {
+                buf = buf "\n</details>\n"
+            }
+            page++
+            fname = sprintf("%s/page-%03d", outdir, page)
+            printf "%s", buf > fname
+            close(fname)
+            buf = ""
+            cur = 0
+            # Re-open the continuation block on the next page so spilled
+            # bullets stay collapsed and self-labeled.
+            if (in_details > 0) {
+                cont = "<details>\n<summary><em>continued from previous comment</em></summary>\n\n"
+                buf = cont
+                cur = length(cont)
+            }
+        }
+        BEGIN { page = 0; buf = ""; cur = 0; in_details = 0; soft = int(max * 0.75) }
+        /^<!-- CLAUDE_REVIEW [0-9]+\/[0-9]+ -->[[:space:]]*$/ { next }
+        {
+            line = $0 "\n"
+            llen = length(line)
+            if (cur + llen > max && cur > 0) {
+                flush()
+            } else if (cur > soft && llen > 0 && substr($0, 1, 4) == "### ") {
+                # Soft-split at section boundaries when over 75% of budget.
+                flush()
+            }
+            buf = buf line
+            cur += llen
+            # Update <details> depth AFTER buffering, so flush() above sees
+            # the depth as of the PREVIOUS line. Required so the line that
+            # opens a block ends up on the new page (not the old), and the
+            # line that closes a block does not double-close.
+            if (substr($0, 1, 9) == "<details>") {
+                in_details++
+            } else if (substr($0, 1, 10) == "</details>") {
+                if (in_details > 0) in_details--
+            }
+        }
+        END { flush() }
+    ' "$body_file"
+
+    printf '%s' "$tmpdir"
+}
+
+# render_with_markers <pages_dir> <total>
+# Reads page-NNN files, prepends the CLAUDE_REVIEW N/M marker, writes back.
+render_with_markers() {
+    local pages_dir="$1" total="$2"
+    local i=0
+    for page in "$pages_dir"/page-*; do
+        i=$((i + 1))
+        local marker="<!-- CLAUDE_REVIEW $i/$total -->"
+        local tmp
+        tmp=$(mktemp)
+        printf '%s\n' "$marker" >"$tmp"
+        cat "$page" >>"$tmp"
+        mv "$tmp" "$page"
+    done
+}
+
+# patch_comment <repo> <comment_id> <body_file>
+patch_comment() {
+    local repo="$1" id="$2" body_file="$3"
+    if (( DRY_RUN )); then
+        printf '[dry-run] PATCH repos/%s/issues/comments/%s (%d bytes)\n' \
+            "$repo" "$id" "$(wc -c <"$body_file")" >&2
+        return 0
+    fi
+    gh api -X PATCH "repos/$repo/issues/comments/$id" \
+        --field "body=@$body_file" >/dev/null
+}
+
+# create_comment <repo> <pr> <body_file>
+create_comment() {
+    local repo="$1" pr="$2" body_file="$3"
+    if (( DRY_RUN )); then
+        printf '[dry-run] POST repos/%s/issues/%s/comments (%d bytes)\n' \
+            "$repo" "$pr" "$(wc -c <"$body_file")" >&2
+        return 0
+    fi
+    gh api -X POST "repos/$repo/issues/$pr/comments" \
+        --field "body=@$body_file" >/dev/null
+}
+
+# delete_comment <repo> <comment_id>
+delete_comment() {
+    local repo="$1" id="$2"
+    if (( DRY_RUN )); then
+        printf '[dry-run] DELETE repos/%s/issues/comments/%s\n' "$repo" "$id" >&2
+        return 0
+    fi
+    gh api -X DELETE "repos/$repo/issues/comments/$id" >/dev/null
+}
+
+cmd_find() {
+    local repo pr
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    list_pinned_comments "$repo" "$pr" | cut -f1
+}
+
+cmd_fetch() {
+    local repo pr
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    fetch_pinned_bodies "$repo" "$pr"
+}
+
+cmd_upsert() {
+    local repo pr body_file
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    body_file="${BODY_FILE:?--body-file required}"
+    [[ -r "$body_file" ]] || die "body file not readable: $body_file"
+
+    # Soft-floor fallback (the model's one validator retry already failed, per
+    # ci.md §4): re-run validate-pinned.py with --soft-floor so the CI
+    # annotation is labeled `soft-floor` (not `retry-1`) — surfacing the
+    # residual violations to the maintainer — then publish regardless of the
+    # validator's exit. (The env-var spelling `VALIDATE_SOFT_FLOOR=1 bash …`
+    # is kept working for callers that still use it, but it doesn't match the
+    # Bash allow-list pattern; the `--soft-floor` flag is the supported form.)
+    if (( SOFT_FLOOR )) || [[ -n "${VALIDATE_SOFT_FLOOR:-}" ]]; then
+        local script_dir validator
+        script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+        validator="$script_dir/validate-pinned.py"
+        if [[ -f "$validator" ]]; then
+            python3 "$validator" check \
+                --body-file "$body_file" \
+                --pr "$pr" \
+                --repo "$repo" \
+                --soft-floor || true
+        fi
+    fi
+
+    local pages_dir
+    pages_dir=$(split_body "$body_file" "$MAX_BYTES")
+    local pages
+    pages=( "$pages_dir"/page-* )
+    local total=${#pages[@]}
+    (( total > 0 )) || die "split produced no pages (empty input?)"
+    render_with_markers "$pages_dir" "$total"
+
+    # Re-glob after marker prepend.
+    pages=( "$pages_dir"/page-* )
+
+    local existing_tsv
+    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
+    local existing_ids=()
+    if [[ -n "$existing_tsv" ]]; then
+        while IFS=$'\t' read -r id _pos _tot _created; do
+            existing_ids+=("$id")
+        done <<< "$existing_tsv"
+    fi
+
+    local existing_count=${#existing_ids[@]}
+    local i
+    for (( i = 0; i < total; i++ )); do
+        local page="${pages[$i]}"
+        if (( i < existing_count )); then
+            patch_comment "$repo" "${existing_ids[$i]}" "$page"
+        else
+            create_comment "$repo" "$pr" "$page"
+        fi
+    done
+
+    # Prune surplus tail comments. Skip index 0 always (1/M is sacrosanct).
+    if (( existing_count > total )); then
+        for (( i = total; i < existing_count; i++ )); do
+            if (( i == 0 )); then
+                printf 'pinned-comment.sh: refusing to delete 1/M (sacrosanct)\n' >&2
+                continue
+            fi
+            delete_comment "$repo" "${existing_ids[$i]}"
+        done
+    fi
+
+    rm -rf "$pages_dir"
+}
+
+cmd_upsert_validated() {
+    # Wrap upsert with a pre-publish call to validate-pinned.py. On validation
+    # failure (exit 1), attempt a deterministic Haiku surgical-fix pass via
+    # validator-fix.py for the violation classes where the fix is text-localized
+    # (links to remove, missing parentheticals to append, etc.). If the fix-pass
+    # recovers the body, publish; otherwise restore the pre-fix body and exit
+    # non-zero so the model can re-render. The model retries once, then falls
+    # back to plain `upsert` (the soft-floor) — see ci.md Hard Rules.
+    local repo pr body_file
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    body_file="${BODY_FILE:?--body-file required}"
+    [[ -r "$body_file" ]] || die "body file not readable: $body_file"
+
+    local script_dir
+    script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+    local validator="$script_dir/validate-pinned.py"
+    local fixer="$script_dir/validator-fix.py"
+    [[ -x "$validator" || -f "$validator" ]] || die "validator not found: $validator"
+
+    local soft_floor_flag=()
+    if [[ -n "${VALIDATE_SOFT_FLOOR:-}" ]]; then
+        soft_floor_flag=(--soft-floor)
+    fi
+
+    if python3 "$validator" check \
+            --body-file "$body_file" \
+            --pr "$pr" \
+            --repo "$repo" \
+            "${soft_floor_flag[@]}"; then
+        cmd_upsert
+        return $?
+    fi
+
+    # First validator pass failed. Try Haiku surgical-fix BEFORE falling
+    # through. The fixer's exit codes:
+    #   0 — all violations resolved surgically; re-validate + publish.
+    #   2 — surgical fixes applied, but non-surgical violations remain; keep
+    #       the partial-fix body and re-write the fix-me marker so the model's
+    #       retry starts from a strictly-better body. (Was: all-or-nothing
+    #       "any non-surgical → defer everything"; that wedged the surgical
+    #       lane for any review that also tripped a model-retry rule.)
+    #   1 — Haiku CLI / dispatch error; restore the pre-fix body to avoid
+    #       publishing a Haiku-degraded render.
+    if [[ -f "$fixer" && -f /tmp/validate-pinned.fix-me.json ]]; then
+        cp "$body_file" "${body_file}.pre-haiku.bak"
+        python3 "$fixer" \
+            --body-file "$body_file" \
+            --fix-me-json /tmp/validate-pinned.fix-me.json
+        local fix_status=$?
+        case "$fix_status" in
+            0)
+                # All resolved surgically. Re-validate (no --soft-floor —
+                # we want a clean retry-0 verdict).
+                if python3 "$validator" check \
+                        --body-file "$body_file" \
+                        --pr "$pr" \
+                        --repo "$repo"; then
+                    cmd_upsert
+                    return $?
+                fi
+                # Re-validate still fails (defensive — Haiku regression);
+                # restore pre-fix.
+                cp "${body_file}.pre-haiku.bak" "$body_file"
+                ;;
+            2)
+                # Partial fix. Keep the post-fix body. Re-run validate to
+                # rewrite /tmp/validate-pinned.fix-me.{json,md} so the
+                # model's next retry sees the residual non-surgical
+                # violations only, not the pre-fix superset.
+                python3 "$validator" check \
+                    --body-file "$body_file" \
+                    --pr "$pr" \
+                    --repo "$repo" || true
+                ;;
+            *)
+                # Haiku dispatch error (exit 1) or unexpected exit; restore
+                # pre-fix body.
+                if [[ -f "${body_file}.pre-haiku.bak" ]]; then
+                    cp "${body_file}.pre-haiku.bak" "$body_file"
+                fi
+                ;;
+        esac
+    fi
+
+    return 1
+}
+
+cmd_prune() {
+    local repo pr keep
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    keep="${KEEP:?--keep required}"
+
+    local existing_tsv
+    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
+    [[ -z "$existing_tsv" ]] && return 0
+
+    local i=0
+    while IFS=$'\t' read -r id _pos _tot _created; do
+        if (( i >= keep )); then
+            if (( i == 0 )); then
+                printf 'pinned-comment.sh: refusing to delete 1/M (sacrosanct)\n' >&2
+            else
+                delete_comment "$repo" "$id"
+            fi
+        fi
+        i=$((i + 1))
+    done <<< "$existing_tsv"
+}
+
+cmd_clear() {
+    local repo pr
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    local existing_tsv
+    existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
+    [[ -z "$existing_tsv" ]] && return 0
+    while IFS=$'\t' read -r id _pos _tot _created; do
+        delete_comment "$repo" "$id"
+    done <<< "$existing_tsv"
+}
+
+cmd_last_reviewed_sha() {
+    local repo pr first_id
+    repo=$(resolve_repo)
+    pr="${PR:?--pr required}"
+    first_id=$(list_pinned_comments "$repo" "$pr" | head -1 | cut -f1)
+    [[ -z "$first_id" ]] && return 0
+    # Read the body and pull out the last (sha) parenthetical inside the
+    # `### 📜 Review history` section. Awk segments by section; grep + sed
+    # extract the SHA portably without gawk-specific match() captures.
+    gh api "repos/$repo/issues/comments/$first_id" --jq '.body' \
+        | awk '
+            /^### .*Review history/ { in_hist = 1; next }
+            in_hist && /^### / { in_hist = 0 }
+            in_hist { print }
+        ' \
+        | grep -oE '\([0-9a-f]{7,40}\)' \
+        | tail -1 \
+        | tr -d '()'
+}
+
+# Argument parsing.
+[[ $# -ge 1 ]] || usage
+SUBCOMMAND="$1"; shift
+
+PR=""
+BODY_FILE=""
+KEEP=""
+REPO_FLAG=""
+MAX_BYTES=$DEFAULT_MAX_BYTES
+DRY_RUN=0
+SOFT_FLOOR=0
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --pr)         PR="$2"; shift 2 ;;
+        --body-file)  BODY_FILE="$2"; shift 2 ;;
+        --keep)       KEEP="$2"; shift 2 ;;
+        --repo)       REPO_FLAG="$2"; shift 2 ;;
+        --max-bytes)  MAX_BYTES="$2"; shift 2 ;;
+        --dry-run)    DRY_RUN=1; shift ;;
+        --soft-floor) SOFT_FLOOR=1; shift ;;
+        -h|--help)    usage ;;
+        *)            die "unknown flag: $1" ;;
+    esac
+done
+
+require_cmd gh
+require_cmd jq
+require_cmd awk
+
+case "$SUBCOMMAND" in
+    find)              cmd_find ;;
+    fetch)             cmd_fetch ;;
+    upsert)            cmd_upsert ;;
+    upsert-validated)  cmd_upsert_validated ;;
+    prune)             cmd_prune ;;
+    clear)             cmd_clear ;;
+    last-reviewed-sha) cmd_last_reviewed_sha ;;
+    *)                 usage ;;
+esac

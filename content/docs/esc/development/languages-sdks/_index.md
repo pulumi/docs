@@ -1,6 +1,6 @@
 ---
 title_tag: Pulumi ESC SDK
-meta_desc: An overview of how to use Node.js, Go, and Python when using Pulumi ESC in your application and infrastructure code. 
+meta_desc: An overview of how to use Node.js, Go, Python, and .NET when using Pulumi ESC in your application and infrastructure code. 
 title: Languages & SDKs
 h1: Pulumi ESC SDK Languages
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -44,6 +44,14 @@ The following language runtimes are currently supported in Pulumi ESC. Select on
                 Go
             </p>
             <img class="h-12 mx-auto inline" src="/logos/tech/go.svg" alt="Go">
+        </a>
+    </div>
+    <div class="pb-4 md:w-1/2">
+        <a class="tile p-8 pb-16 text-center" href="./dotnet">
+            <p class="mx-auto text-xl font-semibold link">
+                .NET
+            </p>
+            <img class="h-12 mx-auto inline" src="/logos/tech/dotnet.svg" alt=".NET">
         </a>
     </div>
 </div>

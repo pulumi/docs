@@ -335,3 +335,9 @@ Use **"Pulumi package"** (not "cross-language package") when referring to compon
 ## Blog Posts
 
 See [BLOGGING.md](BLOGGING.md) for guidance on writing Pulumi blog posts.
+
+---
+
+## Automated checks
+
+The rules in this guide are enforced — where mechanically possible — by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` and layer on top of the Google Developer Style Guide and write-good packages. Run locally with `make lint-prose`. Vale findings also surface in the pinned PR review under ⚠️ Low-confidence and never block merges.

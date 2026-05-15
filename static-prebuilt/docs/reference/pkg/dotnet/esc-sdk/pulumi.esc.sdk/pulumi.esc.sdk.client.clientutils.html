@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class ClientUtils </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class ClientUtils ">
+    
+    <meta name="description" content="Utility functions providing some benefit to API client consumers.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils">
+
+
+  <h1 id="Pulumi_Esc_Sdk_Client_ClientUtils" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils" class="text-break">Class ClientUtils</h1>
+  <div class="markdown level0 summary"><p>Utility functions providing some benefit to API client consumers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">ClientUtils</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.esc.html">Esc</a>.<a class="xref" href="pulumi.esc.sdk.html">Sdk</a>.<a class="xref" href="pulumi.esc.sdk.client.html">Client</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Esc.Sdk.dll</h6>
+  <h5 id="Pulumi_Esc_Sdk_Client_ClientUtils_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ClientUtils</code></pre>
+  </div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L286">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_BASE_ADDRESS" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.BASE_ADDRESS">BASE_ADDRESS</h4>
+  <div class="markdown level1 summary"><p>The base path of the API</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public const string BASE_ADDRESS = &quot;https://api.pulumi.com/api/esc&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L296">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_CONTEXT_PATH" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.CONTEXT_PATH">CONTEXT_PATH</h4>
+  <div class="markdown level1 summary"><p>The context path of the API</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public const string CONTEXT_PATH = &quot;/api/esc&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L301">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_HOST" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.HOST">HOST</h4>
+  <div class="markdown level1 summary"><p>The host of the API</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public const string HOST = &quot;api.pulumi.com&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L306">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_ISO8601_DATETIME_FORMAT" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ISO8601_DATETIME_FORMAT">ISO8601_DATETIME_FORMAT</h4>
+  <div class="markdown level1 summary"><p>The format to use for DateTime serialization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public const string ISO8601_DATETIME_FORMAT = &quot;o&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L264">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_JsonRegex" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.JsonRegex">JsonRegex</h4>
+  <div class="markdown level1 summary"><p>Provides a case-insensitive check that a provided content type is a known JSON-like content type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static readonly Regex JsonRegex</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex">Regex</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L291">View Source</a>
+  </span>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_SCHEME" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SCHEME">SCHEME</h4>
+  <div class="markdown level1 summary"><p>The scheme of the API</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public const string SCHEME = &quot;https&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_ApiKeyHeaderToString_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeaderToString*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_ApiKeyHeaderToString_Pulumi_Esc_Sdk_Client_ClientUtils_ApiKeyHeader_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeaderToString(Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeader)">ApiKeyHeaderToString(ApiKeyHeader)</h4>
+  <div class="markdown level1 summary"><p>Converte an ApiKeyHeader to a string</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string ApiKeyHeaderToString(ClientUtils.ApiKeyHeader value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="pulumi.esc.sdk.client.clientutils.html">ClientUtils</a>.<a class="xref" href="pulumi.esc.sdk.client.clientutils.apikeyheader.html">ApiKeyHeader</a></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.invalidenumargumentexception">InvalidEnumArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_Base64Encode_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.Base64Encode*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_Base64Encode_System_String_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.Base64Encode(System.String)">Base64Encode(string)</h4>
+  <div class="markdown level1 summary"><p>Encode string in base64 format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string Base64Encode(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">text</span></td>
+        <td><p>string to be encoded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Encoded string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L276">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_IsJsonMime_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.IsJsonMime*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_IsJsonMime_System_String_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.IsJsonMime(System.String)">IsJsonMime(string)</h4>
+  <div class="markdown level1 summary"><p>Check if the given MIME is a JSON MIME.
+JSON MIME examples:
+application/json
+application/json; charset=UTF8
+APPLICATION/JSON
+application/vnd.company+json</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static bool IsJsonMime(string mime)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">mime</span></td>
+        <td><p>MIME</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>Returns True if MIME type is json.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L134">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_ParameterToString_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ParameterToString*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_ParameterToString_System_Object_System_String_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ParameterToString(System.Object,System.String)">ParameterToString(object?, string?)</h4>
+  <div class="markdown level1 summary"><p>If parameter is DateTime, output in a formatted string (default ISO 8601), customizable with Configuration.DateTime.
+If parameter is a list, join the list with &quot;,&quot;.
+Otherwise just return the string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string? ParameterToString(object? obj, string? format = &quot;o&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></td>
+        <td><span class="parametername">obj</span></td>
+        <td><p>The parameter (header, path, query, form).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The DateTime serialization format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Formatted string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L213">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_ReadAsBytes_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ReadAsBytes*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_ReadAsBytes_System_IO_Stream_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.ReadAsBytes(System.IO.Stream)">ReadAsBytes(Stream)</h4>
+  <div class="markdown level1 summary"><p>Convert stream to byte array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static byte[] ReadAsBytes(Stream inputStream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">inputStream</span></td>
+        <td><p>Input stream to be converted</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</td>
+        <td><p>Byte array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_SanitizeFilename_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SanitizeFilename*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_SanitizeFilename_System_String_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SanitizeFilename(System.String)">SanitizeFilename(string)</h4>
+  <div class="markdown level1 summary"><p>Sanitize filename by removing the path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string SanitizeFilename(string filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">filename</span></td>
+        <td><p>Filename</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Filename</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_SelectHeaderAccept_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SelectHeaderAccept*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_SelectHeaderAccept_System_String___" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SelectHeaderAccept(System.String[])">SelectHeaderAccept(string[])</h4>
+  <div class="markdown level1 summary"><p>Select the Accept header's value from the given accepts array:
+if JSON exists in the given array, use it;
+otherwise use all of them (joining into a string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string? SelectHeaderAccept(string[] accepts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td><span class="parametername">accepts</span></td>
+        <td><p>The accepts array to select from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The Accept header to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L229">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_SelectHeaderContentType_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SelectHeaderContentType*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_SelectHeaderContentType_System_String___" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.SelectHeaderContentType(System.String[])">SelectHeaderContentType(string[])</h4>
+  <div class="markdown level1 summary"><p>Select the Content-Type header's value from the given content-type array:
+if JSON type exists in the given array, use it;
+otherwise use the first one defined in 'consumes'</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string? SelectHeaderContentType(string[] contentTypes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</td>
+        <td><span class="parametername">contentTypes</span></td>
+        <td><p>The Content-Type array to select from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>The Content-Type header to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_TryDeserialize_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.TryDeserialize*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_TryDeserialize__1_System_String_System_Text_Json_JsonSerializerOptions___0__" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.TryDeserialize``1(System.String,System.Text.Json.JsonSerializerOptions,``0@)">TryDeserialize&lt;T&gt;(string, JsonSerializerOptions, out T?)</h4>
+  <div class="markdown level1 summary"><p>Returns true when deserialization succeeds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static bool TryDeserialize&lt;T&gt;(string json, JsonSerializerOptions options, out T? result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">json</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_TryDeserialize_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.TryDeserialize*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_TryDeserialize__1_System_Text_Json_Utf8JsonReader__System_Text_Json_JsonSerializerOptions___0__" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.TryDeserialize``1(System.Text.Json.Utf8JsonReader@,System.Text.Json.JsonSerializerOptions,``0@)">TryDeserialize&lt;T&gt;(ref Utf8JsonReader, JsonSerializerOptions, out T?)</h4>
+  <div class="markdown level1 summary"><p>Returns true when deserialization succeeds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static bool TryDeserialize&lt;T&gt;(ref Utf8JsonReader reader, JsonSerializerOptions options, out T? result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.utf8jsonreader">Utf8JsonReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.json.jsonserializeroptions">JsonSerializerOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Esc_Sdk_Client_ClientUtils_UrlEncode_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.UrlEncode*"></a>
+  <h4 id="Pulumi_Esc_Sdk_Client_ClientUtils_UrlEncode_System_String_" data-uid="Pulumi.Esc.Sdk.Client.ClientUtils.UrlEncode(System.String)">UrlEncode(string)</h4>
+  <div class="markdown level1 summary"><p>URL encode a string
+Credit/Ref: <a href="https://github.com/restsharp/RestSharp/blob/master/RestSharp/Extensions/StringExtensions.cs#L50">https://github.com/restsharp/RestSharp/blob/master/RestSharp/Extensions/StringExtensions.cs#L50</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public static string UrlEncode(string input)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">input</span></td>
+        <td><p>string to be URL encoded</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Byte array</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 0.13.1</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/Client/ClientUtils.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -39,14 +39,7 @@ Before manually editing your state file, consider these troubleshooting steps:
 These steps don’t always resolve the issue in every case, but they often help and are worth trying before manually editing your state file.
 
 {{% notes type="info" %}}
-If your Pulumi issue is causing a serious outage for your workload(s), and Pulumi CLI operations are taking too long, consider the `--target` option, which allows you to limit the refresh operation only to the resources you specify. (The flag can be specified more than once.)
-
-The following commands support the `--target` option:
-
-- `pulumi refresh`
-- `pulumi preview`
-- `pulumi up`
-- `pulumi destroy`
+If your Pulumi issue is causing a serious outage for your workload(s), and Pulumi CLI operations are taking too long, consider the [`--target` option](/docs/iac/guides/basics/targeted-updates/), which allows you to limit the operation to only the resources you specify. The flag is supported on `pulumi refresh`, `pulumi preview`, `pulumi up`, and `pulumi destroy`, and can be specified more than once.
 {{% /notes %}}
 
 ## How to edit your state file safely

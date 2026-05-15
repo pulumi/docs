@@ -465,3 +465,13 @@ By default, Pulumi creates the replacement before deleting the original to minim
 Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/concepts/resources#dependson) resource option.
 
 By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option. If you have disabled [auto-naming](/docs/concepts/resources/names/#autonaming) using configuration or by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
+
+## Pulumi Cloud architecture
+
+The components described above—the language host, deployment engine, and resource providers—all run on the client, wherever the Pulumi CLI runs. When you use the default [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to store state, the CLI also coordinates with Pulumi Cloud.
+
+Pulumi Cloud comprises two Internet-accessible endpoints—a web application at `app.pulumi.com` and a REST API at `api.pulumi.com`—along with supporting cloud infrastructure.
+
+Pulumi Cloud never acquires your cloud credentials and does not communicate with your cloud provider directly. Instead, the CLI coordinates with both Pulumi Cloud's API and your cloud provider's API. This client/server division means your IAM and key management do not need to change when adopting Pulumi: if you run Pulumi from [within a CI/CD environment](/docs/iac/using-pulumi/continuous-delivery/), you can rely on the security mechanisms your organization already has in place.
+
+Because the server does not have direct access to your cloud credentials, runtime data, or PII, Pulumi Cloud has been used in organizations with advanced compliance needs, including SOC 2, PCI, ISO 27001, and HIPAA. It is also possible to run your own instance of Pulumi Cloud in a private cloud environment—the architecture is very similar to the hosted version, but does not depend on public Internet access. To learn more, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).

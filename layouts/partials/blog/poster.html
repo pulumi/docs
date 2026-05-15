@@ -4,8 +4,9 @@
 {{ if .Params.feature_image }}
     {{ $resource := .Resources.GetMatch .Params.feature_image }}
     {{ if $resource }}
-        {{ $sm := $resource.Fit "640x427" }}
-        {{ $lg := $resource.Fit "942x628" }}
+        {{ $processArgs := "webp q90" }}
+        {{ $sm := $resource.Process (printf "fit 640x427 %s" $processArgs) | fingerprint }}
+        {{ $lg := $resource.Process (printf "fit 942x628 %s" $processArgs) | fingerprint }}
         <a href="{{ .RelPermalink }}"
             ><img
                 class="rounded-lg md:m-2 md:mt-0 w-full md:max-w-xs md:float-right my-8 border-2 border-gray-100"
@@ -14,6 +15,7 @@
                 sizes="(min-width: 768px) 320px, 100vw"
                 alt="{{ .Title }}"
                 width="{{ $sm.Width }}" height="{{ $sm.Height }}"
+                loading="lazy" decoding="async"
         /></a>
     {{ end }}
 {{ end }}

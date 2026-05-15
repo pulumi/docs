@@ -52,7 +52,7 @@ Policy as Code is implemented via [analyzer plugins](/docs/iac/concepts/plugins/
 Pulumi Policies uses a hierarchy of components to enforce compliance rules:
 
 1. **Policies** are individual rules that validate infrastructure configuration (e.g., "S3 buckets must be private" or "VMs must use approved instance types").
-1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/insights/policy/policy-packs/authoring/#opa).
+1. **Policy packs** are versioned collections of related policies that you publish and manage together. You can use [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS) or [write custom packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, Python, or [OPA (Rego)](/docs/insights/policy/policy-packs/authoring/#opa).
 1. **Policy groups** apply policy packs to specific stacks or cloud accounts. This lets you enforce stricter policies in production and more permissive policies in development environments. Learn more about [policy groups](/docs/insights/policy/policy-groups/).
 
 ### Enforcement modes

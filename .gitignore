@@ -129,3 +129,6 @@ static/programs/*-go/*-go
 
 # Local MCP server config (developer-specific, points at local Figma desktop)
 .mcp.json
+
+# Claude Code runtime lock (ScheduleWakeup)
+.claude/scheduled_tasks.lock

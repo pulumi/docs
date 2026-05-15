@@ -28,13 +28,16 @@ of these are complementary and can be used together, whereas some are "either or
 
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
-* [Hashicorp Terraform](/docs/iac/comparisons/terraform/)
+* [HashiCorp Terraform](/docs/iac/comparisons/terraform/)
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
-* [Cloud Template Transpilers (AWS CDK, etc.)](/docs/iac/comparisons/cloud-template-transpilers)
-* [Cloud SDKs (AWS Boto, etc.)](/docs/iac/comparisons/cloud-sdks)
-* [Serverless Framework](/docs/iac/comparisons/serverless/)
-* [Kubernetes YAML and DSLs](/docs/iac/comparisons/k8s-yaml-dsls/)
-* [Chef, Puppet, Ansible, Salt, etc.](/docs/iac/comparisons/chef-puppet-etc/)
-* [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [AWS CDK](/docs/iac/comparisons/aws-cdk/)
+* [CDKTF](/docs/iac/comparisons/cdktf/)
+* [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
+* [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [Helm](/docs/iac/comparisons/helm/)
+* [Kubernetes YAML Manifests](/docs/iac/comparisons/k8s-yaml-dsls/)
+* [Serverless Framework](/docs/iac/comparisons/serverless/)
+* [Chef, Puppet, Ansible, Salt, etc.](/docs/iac/comparisons/chef-puppet-etc/)
+* [Cloud SDKs (AWS Boto, etc.)](/docs/iac/comparisons/cloud-sdks)
 * [Custom Solutions](/docs/iac/comparisons/custom/)
