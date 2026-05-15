@@ -65,7 +65,6 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.CommandBackticks": "unbacked CLI command",
     "Pulumi.Repetition": "repeated word",
     "Google.Acronyms": "acronym",
-    "Google.Colons": "punctuation",
     "Google.Contractions": "contractions",
     "Google.Ellipses": "punctuation",
     "Google.Exclamation": "tone",
