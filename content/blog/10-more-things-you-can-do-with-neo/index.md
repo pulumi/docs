@@ -34,40 +34,28 @@ With Neo, it collapses to a prompt. Point Neo at a repo with a Dockerfile and as
 {{< video title="Neo deploying an app to AWS: prompt, Plan Mode, PR, public URL" src="deploy-to-aws2.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Neo planning a PR and deploying an app to AWS{{< /figcaption >}}
 
-{{< neo-card title="Ask Neo &quot;deploy this to AWS&quot; via CLI and get a PR" prompt="Deploy this app to AWS as a public service" >}}
+{{< neo-card title="Ask Neo &quot;deploy this to AWS&quot; via CLI and get a PR" prompt="I'd like to deploy this app to AWS. Confirm what you'll create." >}}
 
-## 2. Implement a Linear ticket end-to-end
-
-*Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, plans against your stack, and opens a PR.*
-
-Some tickets pile up not because they're unimportant, but because they're not urgent. Ongoing maintenance gets away from a team. Bumping a provider version, centralizing secret management, working through small policy violations: each one matters, none of them ever moves to the top of the queue. Explaining each one to an agent is its own overhead.
-
-The fix is letting Neo read the ticket itself. Connect Linear or Jira through the [integration catalog](/blog/neo-integration-catalog/) (GitHub Issues works too), and Neo pulls the ticket the same way an engineer would: title, description, acceptance criteria. Ask Neo: *"Hey, implement CAD-1234 in our payments stack"*. Neo reads the ticket, plans against your existing stack, opens a PR, and drops a comment back on the ticket. The ticket and the PR end up linked, and your backlog of small tickets gets smaller.
-
-<!-- TODO: Image for this -->
-![Neo's task panel showing the ticket it pulled and the PR it opened](ticket-backlog.png)
-{{< figcaption >}}Neo pulls a ticket from Linear, Jira, or GitHub Issues, plans against your stack, and opens a PR.{{< /figcaption >}}
-
-## 3. Diagnose a slow API from metrics, logs, and code
+## 2. Diagnose a slow API from metrics, logs, and code
 
 *Slow endpoints live at the seam between runtime metrics and the stack that runs them. Neo reads both and proposes a fix with the metric evidence as the rationale.*
 
 Production incidents don't like to contain themselves to one tool. When the `/checkout` API's p95 climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program is an exercise in detective work.
 
-Neo's integration catalog reaches further than Linear. Datadog, PagerDuty, and Honeycomb sit alongside it, so Neo can read traces and metrics the same way it reads the ticket.
+Neo's [integration catalog](/blog/neo-integration-catalog/) bridges this gap. Datadog, PagerDuty, and Honeycomb sit alongside Pulumi state, so Neo can read traces and metrics from the tools your team already uses.
 
 Ask Neo: *"Find the scaling bottleneck on /checkout from the last 7 days of metrics and propose a fix"*. Neo pulls the metric history, matches the Datadog tag `db.cluster=checkout-rds` to the RDS instance in your `prod-checkout` Pulumi stack, and opens a PR with a Pulumi diff that bumps the storage IOPS and raises the connection-pool ceiling. You review and roll out the fix.
 
 {{< video title="Enabling the Honeycomb integration in Neo" src="honey-comb.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Toggle on the Honeycomb integration so Neo can read traces and metrics alongside your Pulumi stacks.{{< /figcaption >}}
 
-## 4. Triage a PagerDuty alert from Slack
+## 3. Triage a PagerDuty alert from Slack
 
 *A page comes in. You paste it into your on-call channel and tag Neo, and Neo replies with the cross-system view you'd otherwise spend the first 20 minutes assembling.*
 
 On-call triage is mostly about catching up. You get paged because something is in the red, and you don't know why.
 
-You mention Neo in the Slack on-call channel: *"@neo, what's going on with this alert?"*. Neo starts querying metrics and traces. With PagerDuty and Datadog in Neo's [integration catalog](/blog/neo-integration-catalog/), it correlates the alert with every deploy and stack change tagged with the alert's service in the last hour, and finds the change that lines up:
+You mention Neo in the Slack on-call channel: *"@neo, what's going on with this alert?"*. Neo starts querying metrics and traces. With PagerDuty and Datadog in the integration catalog, it correlates the alert with every deploy and stack change tagged with the alert's service in the last hour, and finds the change that lines up:
 
 *"Two deploys in the last hour touched services tagged `service:checkout`: `checkout-api@a3f9c2` (12min ago, app-layer deploy) and Pulumi stack `prod-checkout-rds` (45min ago, decreased `max_connections` from 200 → 100). p99 inflection at 14:03 lines up with the stack change. Likely cause: the connection-pool reduction is starving the API under current load."*
 
@@ -75,6 +63,16 @@ You ask a couple of clarifying questions in-thread, then ask Neo to open a rollb
 
 ![Neo Settings → Integrations page: six integrations available with Authorize buttons for Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase](neo-integration-catalog.png)
 {{< figcaption >}}Authorize PagerDuty and Datadog in Neo's settings. Neo can then read alerts in your Slack on-call channel, find the change that correlates, and open a PR when you ask.{{< /figcaption >}}
+
+## 4. Implement a Linear ticket end-to-end
+
+*Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, plans against your stack, and opens a PR.*
+
+Some tickets pile up not because they're unimportant, but because they're not urgent. Ongoing maintenance gets away from a team. Bumping a provider version, centralizing secret management, working through small policy violations: each one matters, none of them ever moves to the top of the queue. Explaining each one to an agent is its own overhead.
+
+The fix is letting Neo read the ticket itself. Connect Linear or Jira through the integration catalog (GitHub Issues works too), and Neo pulls the ticket the same way an engineer would: title, description, acceptance criteria. Ask Neo: *"Hey, implement CAD-1234 in our payments stack"*. Neo reads the ticket, plans against your existing stack, opens a PR, and drops a comment back on the ticket. The ticket and the PR end up linked, and your backlog of small tickets gets smaller.
+
+{{< neo-card title="Implement a Linear ticket end-to-end" prompt="I'd like to implement a ticket from Linear (or Jira, or GitHub Issues). Ask me for the ticket number." >}}
 
 ## 5. Tighten over-privileged IAM roles
 
@@ -89,13 +87,15 @@ If you're unclear about which roles count as in-scope or what your team consider
 {{< video title="Neo auditing IAM and proposing narrower policies" src="iam-narrow.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Neo auditing an over-privileged IAM role and proposing a narrower policy, with the actually-used permissions as evidence.{{< /figcaption >}}
 
+{{< neo-card title="Audit IAM and tighten over-privileged roles" prompt="Audit IAM permissions across my accounts and propose narrower policies for over-privileged stack-managed roles" >}}
+
 ## 6. Migrate from CDK onto your platform's golden paths
 
 *Neo reads your existing CDK app and lands a PR that swaps AWS's defaults for your team's published components.*
 
-CDK's L2 constructs encode AWS's defaults. `s3.Bucket` with `encryption: BucketEncryption.S3_MANAGED` is a sane choice, but it's AWS's idea of sane, not yours. A platform team that's published its own components to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) has already decided what *your* bucket defaults looks like: encryption with the right KMS key, tagging by cost center.
+CDK's L2 constructs encode AWS's defaults. `s3.Bucket` with `encryption: BucketEncryption.S3_MANAGED` is a sane choice, but it's AWS's idea of sane, not yours. A platform team that's published its own components to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) has already decided what *your* bucket defaults look like: encryption with the right KMS key, tagging by cost center.
 
-Ask Neo: *"Migrate the `payments-vpc` CDK stack to Pulumi using our published components"*.[^6-original] Neo reads the source CDK app and your registry side by side. It maps each CDK construct to its closest team-published equivalent, clarifiying with you where ambiguous.
+Ask Neo: *"Migrate the `payments-vpc` CDK stack to Pulumi using our published components"*.[^6-original] Neo reads the source CDK app and your registry side by side. It maps each CDK construct to its closest team-published equivalent, clarifying with you where ambiguous.
 
 ```typescript
 // Before (AWS CDK, AWS's defaults)
@@ -116,7 +116,7 @@ const bucket = new platform.Bucket("assets", {
 });
 ```
 
-{{< neo-card title="Migrate CDK onto your golden paths" prompt="Migrate this CDK stack to Pulumi using our published components" >}}
+{{< neo-card title="Migrate CDK onto your golden paths" prompt="I'd like to migrate this CDK stack to Pulumi. Use our published components where you can." >}}
 
 ## 7. Migrate a VM service to Kubernetes from a runbook
 
@@ -126,7 +126,7 @@ Containerizing an app and moving it to Kubernetes involves a number of small dec
 
 Ask Neo: *"Containerize the `billing-api` service and write its Kubernetes manifests, following our K8s migration runbook in confluence"*. Neo reads the source repo, and the runbook in Confluence via the [integration catalog](/blog/neo-integration-catalog/) and starts working on your request.
 
-You can even add this to Neo skill, with requests to split into multiple PRs, Dockerfile first, ECR config next, Deployment/Service/Ingress manifests after, and link back to each runbook convention for ease of review. The output reflects your conventions: the labels you actually use, the ingress class you've standardized on, the External Secrets Operator config your team prefers.
+You can even add this to a Neo skill, with requests to split into multiple PRs, Dockerfile first, ECR config next, Deployment/Service/Ingress manifests after, and link back to each runbook convention for ease of review. The output reflects your conventions: the labels you actually use, the ingress class you've standardized on, the External Secrets Operator config your team prefers.
 
 You're still the one reviewing the PRs and deciding what the cutover looks like in production. Neo follows your internal standards, so the new service ends up shaped like the last one you migrated.
 
@@ -165,6 +165,8 @@ The same task catches container base images with critical CVEs and bumps them to
 {{< video title="Setting up a weekly scheduled task in Neo" src="neo-schedule-setup.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Setting up the weekly task in the Scheduled Tasks UI. Once saved, Neo runs the prompt every Sunday night and opens PRs you review on Monday.{{< /figcaption >}}
 
+{{< neo-card title="Schedule a weekly runtime upgrade check" prompt="Every Sunday night at 10 PM, check our Lambdas for runtimes nearing end-of-support and open PRs to upgrade them." >}}
+
 ## 10. Fix CIS Benchmark failures with daily PRs
 
 *Run the Benchmark on a schedule. Wake up to PRs that fix what failed.*
@@ -190,10 +192,10 @@ What was missing wasn't the appetite. It was an agent with enough organizational
 
 The theme across these tasks is clear. A thing platform engineers used to keep in their heads becomes a task you delegate, then becomes work that runs without you. Neo isn't generating infrastructure from a template. It's a teammate that knows your code, your providers, your conventions, your production metrics, and can raise PRs for you to review.
 
-Neo lives in your terminal, in your pull requests, in your team channel, and in Pulumi Cloud. Pick one of these workflows and [give them it try](/docs/pulumi-cloud/neo/).
+Neo lives in your terminal, in your pull requests, in your team channel, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/pulumi-cloud/neo/).
 
 [^6-original]: The observant reader will notice Terraform-to-Pulumi was covered [in the original post](/blog/10-things-you-can-do-with-neo/).
 
-[^9-original]: Also covered in the [original post](/blog/10-things-you-can-do-with-neo/).Last year you could ask Neo to do it once. This year you can put it on a schedule.
+[^9-original]: Also covered in the [original post](/blog/10-things-you-can-do-with-neo/). Last year you could ask Neo to do it once. This year you can put it on a schedule.
 
 [^10-original]: Also covered in the [original post](/blog/10-things-you-can-do-with-neo/). Last year Neo could remediate violations on demand. This year Security Hub feeds findings to a scheduled task that knows your runbook's interpretation of each control.
