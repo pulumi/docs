@@ -4,6 +4,7 @@ date: 2026-05-19
 draft: false
 meta_desc: "Ten more platform-engineering workflows you can hand to Pulumi Neo: deployments, tickets, incident triage, IAM, migration, and continuous ops."
 meta_image: meta.png
+feature_image: feature.png
 authors:
     - adam-gordon-bell
 tags:
