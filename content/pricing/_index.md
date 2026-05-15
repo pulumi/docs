@@ -97,7 +97,7 @@ tiers:
 
 testimonial:
     quote: Pulumi helped our team ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
-    author: Justin Pflughaupt
+    author: Justin Fitzhugh
     role: VP of Cloud Platform Engineering
     logo: snowflake
 
