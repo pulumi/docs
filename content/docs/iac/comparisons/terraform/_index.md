@@ -51,7 +51,7 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [`terraform import`](https://developer.hashicorp.com/terraform/cli/commands/import) and [`import` blocks](https://developer.hashicorp.com/terraform/language/import); HCL must be hand-authored, though `terraform plan -generate-config-out` can emit a draft |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and SOC 2 | [Sentinel](https://developer.hashicorp.com/sentinel) (proprietary, HCP Terraform / Enterprise only) and Open Policy Agent |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | No — [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE) |
-| Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | HCP Terraform / Terraform Enterprise |
+| Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | HCP Terraform / Terraform Enterprise |
 
 ## Key differences
 
@@ -130,7 +130,7 @@ You have three options that can be combined: convert HCL with [`pulumi convert -
 
 ### Is Pulumi free and open source like Terraform used to be?
 
-The Pulumi CLI and SDKs are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Note that Terraform is no longer open source: since version 1.6 it has been distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE). [OpenTofu](/docs/iac/comparisons/opentofu/) is the MPL-2.0 open source fork maintained by the Linux Foundation.
+The Pulumi CLI and SDKs are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Note that Terraform is no longer open source: since version 1.6 it has been distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE). [OpenTofu](/docs/iac/comparisons/opentofu/) is the MPL-2.0 open source fork maintained by the Linux Foundation.
 
 ### Does Pulumi support remote state and state locking like Terraform?
 
