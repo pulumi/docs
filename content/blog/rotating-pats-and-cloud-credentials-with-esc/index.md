@@ -1,7 +1,7 @@
 ---
-title: "Rotate PATs and Cloud Credentials Without Static Secrets"
+title: "Replace PATs and Rotate Cloud Credentials with Pulumi ESC"
 date: 2026-06-30
-meta_desc: "Use Pulumi ESC to replace static GitHub PATs and cloud keys with short-lived credentials, scheduled rotation, and CI-friendly configuration."
+meta_desc: "Use Pulumi ESC to replace static GitHub PATs with installation tokens and rotate cloud keys with short-lived credentials and CI-friendly configuration."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -14,7 +14,7 @@ social:
     twitter: |
         Static PATs and cloud keys are easy to forget.
 
-        Use Pulumi ESC to move CI toward short-lived credentials and scheduled rotation.
+        Use Pulumi ESC to move CI toward GitHub App installation tokens, short-lived cloud credentials, and scheduled rotation.
     linkedin: |
         Long-lived PATs and cloud keys create operational risk in CI.
 
@@ -22,10 +22,10 @@ social:
     bluesky: |
         Static PATs and cloud keys linger too long.
 
-        Use ESC for short-lived credentials and scheduled rotation in CI.
+        Use ESC for installation tokens, short-lived cloud credentials, and scheduled rotation in CI.
 ---
 
-Static, long-lived credentials are a major security vulnerability. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, the longer a secret remains unchanged, the greater the risk of compromise.
+Static, long-lived credentials are a major security vulnerability, especially when they are copied into CI systems. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, the longer a secret remains unchanged, the greater the risk of compromise.
 
 This post focuses on rotating GitHub and cloud provider credentials that power your entire CI/CD ecosystem. Most platform teams still manage rotation through calendar reminders and manual updates, which makes cutovers fragile when a PAT or cloud key expires during deployment.
 
@@ -35,7 +35,7 @@ Compliance mandates like SOC 2 and PCI DSS increasingly require proof of automat
 
 ## Reader outcome
 
-By the end of this post, you will automate the rotation of GitHub PATs and cloud credentials using [Pulumi ESC](/docs/esc/). You will learn how to move from static PATs to short-lived installation tokens, implement a "two-secret" rotation strategy for AWS IAM keys to ensure zero downtime, and configure GitHub Actions to fetch these rotated credentials on-demand.
+By the end of this post, you will replace static GitHub PATs with short-lived GitHub App installation tokens and automate cloud credential rotation using [Pulumi ESC](/docs/esc/). You will learn how to protect the GitHub App private key, implement a "two-secret" rotation strategy for AWS IAM keys to reduce downtime risk, and configure GitHub Actions to fetch credentials on demand.
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Many security frameworks require rotating administrative credentials every 90 da
 
 ## GitHub: from PATs to short-lived tokens
 
-GitHub Personal Access Tokens (PATs) are notoriously difficult to manage. They are often over-privileged and rarely rotated. Pulumi ESC replaces the need for static PATs in CI/CD by using the `gh-login` provider.
+GitHub Personal Access Tokens (PATs) are notoriously difficult to manage. They are often over-privileged and rarely rotated. Pulumi ESC replaces static PATs in CI/CD by using the `gh-login` provider. The GitHub App private key still needs to be stored securely in ESC and rotated or revoked through your GitHub App process.
 
 Instead of storing a PAT as a GitHub Secret, you register a GitHub App and use ESC to issue an installation access token. These tokens are:
 
@@ -60,10 +60,19 @@ values:
   github:
     fn::open::gh-login:
       appId: 123456
-      installationId: 789012
       privateKey:
-        fn::secret:
-          ciphertext: <encrypted-key>
+        fn::secret: |
+          -----BEGIN RSA PRIVATE KEY-----
+          ...
+          -----END RSA PRIVATE KEY-----
+      owner: my-org
+      repositories:
+        - infrastructure
+      permissions:
+        contents: read
+        pull_requests: write
+  environmentVariables:
+    GH_TOKEN: ${github.accessToken}
 ```
 
 ## AWS: dynamic vs. rotated credentials
@@ -72,22 +81,30 @@ For cloud providers like AWS, Pulumi ESC offers two distinct strategies dependin
 
 ### 1. Dynamic credentials (OIDC)
 
-This is the gold standard for CI/CD. Using OpenID Connect (OIDC), your GitHub Actions workflow exchanges a short-lived identity token for temporary AWS credentials. There are zero static secrets stored in GitHub.
+This is the preferred pattern for CI/CD. GitHub Actions authenticates to Pulumi Cloud with OIDC, then ESC exchanges its own OIDC token for temporary AWS credentials. There are no long-lived cloud secrets stored in GitHub.
 
 ```yaml
 values:
   aws:
-    fn::open::aws-login:
-      oidc:
-        roleArn: arn:aws:iam::123456789012:role/esc-oidc
-        sessionName: github-actions-session
+    login:
+      fn::open::aws-login:
+        oidc:
+          duration: 1h
+          roleArn: arn:aws:iam::123456789012:role/esc-oidc
+          sessionName: github-actions-session
+          subjectAttributes:
+            - currentEnvironment.name
+  environmentVariables:
+    AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
+    AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
+    AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
 ### 2. Rotated secrets
 
-Some legacy applications or third-party integrations cannot use OIDC and require a static access key. For these cases, ESC's Rotated Secrets automate the 90-day rotation requirement.
+Some legacy applications or third-party integrations cannot use OIDC and require a static access key. For these cases, ESC's Rotated Secrets automate periodic rotation on a schedule you configure.
 
-ESC uses a "two-secret" strategy, keeping both the current and previous keys valid during the rotation window to prevent downtime.
+ESC uses a "two-secret" strategy, keeping both the current and previous keys valid during the rotation window to reduce downtime risk while consumers move to the new key.
 
 ```yaml
 values:
@@ -99,9 +116,9 @@ values:
         userArn: arn:aws:iam::123456789012:user/ci-user
 ```
 
-## Zero static secrets in GitHub Actions
+## No long-lived secrets in GitHub Actions
 
-By combining these features, you can build a CI/CD pipeline that contains no long-lived secrets. The `pulumi/auth-actions` and `pulumi/esc-action` work together to fetch exactly what is needed for each run.
+By combining these features, you can build a CI/CD pipeline that contains no long-lived secrets in GitHub Actions. The `pulumi/auth-actions` and `pulumi/esc-action` work together to fetch exactly what is needed for each run.
 
 ```yaml
 jobs:
@@ -116,14 +133,15 @@ jobs:
         uses: pulumi/auth-actions@v1
         with:
           organization: my-org
-      - name: Fetch Secrets
+          requested-token-type: urn:pulumi:token-type:access_token:organization
+      - name: Fetch ESC environment
         uses: pulumi/esc-action@v1
         with:
-          environment: production
+          environment: my-org/platform/production
       - name: Deploy
-        run: pulumi up
+        run: pulumi up --yes
 ```
 
 ## Audit trail and compliance
 
-Every time a secret is opened or rotated, Pulumi ESC logs the event. This provides a granular audit trail showing exactly which identity accessed which secret and when. For security teams, this turns a "black box" of static secrets into a transparent, governed system that satisfies even the strictest 90-day rotation requirements.
+When an environment is opened, read, or rotated, Pulumi ESC can log the event. This provides an audit trail for environment opens and rotations, including the identity and timing of access events. For security teams, this turns a "black box" of static secrets into a more transparent, governed system that can support evidence for rotation controls.
