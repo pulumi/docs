@@ -43,47 +43,9 @@
                 {{ $schema := .schema }}
                 {{ if $schema }}
                     <h4>Request Body</h4>
-                    {{ if isset $schema "$ref" }}
-                        {{ $refPath := index $schema "$ref" }}
-                        {{ $refParts := split $refPath "/" }}
-                        {{ $schemaName := index $refParts (sub (len $refParts) 1) }}
-                        {{ $schemaDetails := "" }}
-                        {{ if isset $.openapi.components.schemas $schemaName }}
-                            {{ $schemaDetails = index $.openapi.components.schemas $schemaName }}
-                        {{ end }}
-                        {{ if $schemaDetails }}
-                            <div class="api-request-body">
-                                <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $schemaName | urlize }}/">{{ $schemaName }}</a></div>
-                                {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $.openapi) }}
-                                {{ if $resolved.properties }}
-                                    <ul class="api-params">
-                                        {{ partial "openapi/property-rows.html" (dict
-                                            "properties" $resolved.properties
-                                            "required" $resolved.required
-                                            "openapi" $.openapi
-                                            "depth" 0
-                                            "maxDepth" 1
-                                        ) }}
-                                    </ul>
-                                {{ end }}
-                            </div>
-                        {{ end }}
-                    {{ else }}
-                        {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
-                        {{ if $resolved.properties }}
-                            <div class="api-request-body">
-                                <ul class="api-params">
-                                    {{ partial "openapi/property-rows.html" (dict
-                                        "properties" $resolved.properties
-                                        "required" ($resolved.required | default slice)
-                                        "openapi" $.openapi
-                                        "depth" 0
-                                        "maxDepth" 1
-                                    ) }}
-                                </ul>
-                            </div>
-                        {{ end }}
-                    {{ end }}
+                    <div class="api-request-body">
+                        {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                    </div>
                 {{ end }}
             {{ end }}
         {{ end }}
