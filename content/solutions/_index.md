@@ -18,21 +18,6 @@ use_cases:
 
             [Learn more about Pulumi for Platform Teams](/product/internal-developer-platforms/)
 
-        - name: Shared services platforms
-          case_studies:
-            - name: Atlassian
-              link: /case-studies/atlassian
-            - name: Mercedes-Benz
-              link: /case-studies/mercedes-benz
-            - name: Lemonade
-              link: /case-studies/lemonade
-          description: |
-            Create reusable infrastructure components or self-service infrastructure platforms
-            that empower your application developers to easily and quickly deploy and use
-            infrastructure they need to build applications.
-
-            [Learn more about shared services platforms](/solutions/shared-services-platforms/)
-
         - name: Infrastructure CI/CD
           case_studies:
             - name: Atlassian
