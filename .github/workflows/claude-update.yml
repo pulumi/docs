@@ -71,9 +71,19 @@ jobs:
             echo "sha=$SHA" >> "$GITHUB_OUTPUT"
           fi
 
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — pushes made by claude-code-action later in the workflow
+      # then go out as pulumi-bot rather than github-actions[bot],
+      # which is what lets downstream workflows (build-and-deploy, social
+      # review, etc.) fire on those commits.
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           ref: ${{ steps.head.outputs.sha }}
           fetch-depth: 1
 
@@ -83,10 +93,6 @@ jobs:
         uses: jdx/mise-action@v2
         with:
           cache: true
-
-      - name: Fetch secrets from ESC
-        id: esc-secrets
-        uses: pulumi/esc-action@v1
 
       - name: Check repository write access
         id: check-access

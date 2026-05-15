@@ -42,14 +42,20 @@ jobs:
       id-token: write
       actions: write # Required to dispatch claude-code-review.yml.
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 1
-
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout. claude-new.yml doesn't push today (it just clears the
+      # pinned comment and dispatches claude-code-review.yml), but kept
+      # consistent with the other claude-*.yml workflows in case a future
+      # change adds a push path here.
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          fetch-depth: 1
 
       - name: Check repository write access
         id: check-access
