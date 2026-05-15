@@ -8,7 +8,7 @@ menu:
     iac:
         name: Cloud SDKs
         parent: iac-comparisons
-        weight: 90
+        weight: 105
     concepts:
         parent: vs
         weight: 90

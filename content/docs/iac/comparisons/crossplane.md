@@ -8,7 +8,7 @@ menu:
     iac:
         name: Crossplane
         parent: iac-comparisons
-        weight: 70
+        weight: 29
     concepts:
         identifier: vs-crossplane
         parent: vs
