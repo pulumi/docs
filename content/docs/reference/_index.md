@@ -92,6 +92,11 @@ sections:
     description: API reference for automating Pulumi ESC from Go.
     link: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
 
+  - image: /logos/tech/dotnet.svg
+    heading: .NET ESC SDK ↗
+    description: API reference for automating Pulumi ESC from .NET.
+    link: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
+
 - type: button-cards
   heading: APIs & Configuration
   cards:
