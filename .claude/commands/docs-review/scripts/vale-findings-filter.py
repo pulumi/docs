@@ -51,7 +51,7 @@ TOTAL_CAP = 50
 # Unmapped rules fall back to "style".
 RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.Substitutions": "substitution",
-    "Pulumi.ProductNames": "product name",
+    "Pulumi.Nomenclature": "nomenclature",
     "Pulumi.BannedWords": "inclusive language",
     "Pulumi.Difficulty": "difficulty qualifier",
     "Pulumi.PoliciesSingular": "agreement",
