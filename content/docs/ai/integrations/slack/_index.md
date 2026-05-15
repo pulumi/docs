@@ -22,23 +22,21 @@ Neo has the same capabilities it does anywhere else: it can check stack state, i
 
 ### 1. Install the Pulumi Neo Slack app
 
-A Slack workspace admin installs the **Pulumi Neo Slack app** to the workspace.
+A Slack workspace admin installs the [**Pulumi Neo Slack app**](https://api.pulumi.com/api/slack/neo/install) to the workspace.
 
 ### 2. Connect your Pulumi user to Slack
 
-In Pulumi Cloud, open your **User account**, then **Neo Slack** and connect your Slack identity. This lets Neo recognize you when you mention it in Slack.
+In Pulumi Cloud, open your **Account settings**, then **Neo settings** and connect your Slack identity. This lets Neo recognize you when you mention it in Slack.
 
-### 3. Add Neo to a channel
-
-In the channel where you want to mention Neo, open the channel's settings, navigate to **Integrations**, then **Add apps**, and add the Pulumi Neo app. Once per channel.
-
-### 4. Mention `@Neo`
+### 3. Mention `@Neo` in a channel
 
 Mention `@Neo` followed by what you want:
 
 > @Neo summarize the production stack.
 
 Neo replies in the same thread.
+
+_Slack will prompt you to add Neo to the channel if it's not there already._
 
 ## How permissions work
 
@@ -48,4 +46,3 @@ Tasks started from Slack run with the [RBAC permissions](/docs/administration/ac
 
 - Starting a conversation with Neo in a direct message isn't supported.
 - One task per thread.
-- Approve and reject happen in the Pulumi console, not in Slack.
