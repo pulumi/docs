@@ -97,7 +97,7 @@ jobs:
         run: yarn install && yarn run tsc
         working-directory: pulumi-policy/sdk/nodejs/policy
       - name: run typedoc
-        run: PKGS=policy NOBUILD=true INCLUDE_VERSION=true ./scripts/run_typedoc.sh
+        run: PKGS=policy NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: git status
         run: git status && git diff

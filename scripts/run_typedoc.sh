@@ -59,16 +59,11 @@ generate_docs() {
         PKG_REPO_DIR=$PKG_REPO_DIR/$4
         fi
 
-        INCLUDE_VERSION_FLAG=""
-        if [[ "$INCLUDE_VERSION" == "true" ]]; then
-            INCLUDE_VERSION_FLAG="--includeVersion"
-        fi
-
         ${TOOL_TYPEDOC} --out "${OUTDIR}/$1" \
             --excludeInternal --excludeExternals --excludePrivate \
             --cleanOutputDir \
             --skipErrorChecking \
-            ${INCLUDE_VERSION_FLAG} \
+            --includeVersion \
             --options "$TOOL_TYPEDOC_CONFIG" \
             "$2"
 
