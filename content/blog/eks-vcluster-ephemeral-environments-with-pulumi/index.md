@@ -26,15 +26,15 @@ social:
         Model the host cluster, vCluster tenants, guardrails, and cleanup as code.
 ---
 
+AWS reports in an [AWS Architecture Blog case study](https://aws.amazon.com/blogs/architecture/deloitte-optimizes-eks-environment-provisioning-and-achieves-89-faster-testing-environments-using-amazon-eks-and-vcluster/) that Deloitte's move to a virtual cluster model on Amazon EKS resulted in 89% faster testing environment provisioning. By consolidating dozens of disparate clusters into a single host cluster with over 50 [vCluster](https://www.vcluster.com/) instances, the case study says Deloitte saved about 500 QA hours per year. This "Environment Factory" pattern allows platform teams to provide isolated, ephemeral Kubernetes environments on demand without the cost or lag of full cluster provisioning.
+
+This post adapts that general architecture with Pulumi to orchestrate Amazon [EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/automode.html) and vCluster. It is not Deloitte's implementation.
+
 <!--more-->
-
-AWS reports in an [AWS Architecture Blog case study](https://aws.amazon.com/blogs/architecture/deloitte-optimizes-eks-environment-provisioning-and-achieves-89-faster-testing-environments-using-amazon-eks-and-vcluster/) that Deloitte's move to a virtual cluster model on Amazon EKS resulted in 89% faster testing environment provisioning. By consolidating dozens of disparate clusters into a single host cluster with over 50 virtual clusters, the case study says Deloitte saved about 500 QA hours per year. This "Environment Factory" pattern allows platform teams to provide isolated, ephemeral Kubernetes environments on demand without the cost or lag of full cluster provisioning.
-
-This post adapts that general architecture with Pulumi to orchestrate Amazon EKS Auto Mode and vCluster. It is not Deloitte's implementation.
 
 ## The problem: environment sprawl and provisioning lag
 
-Traditional development workflows often rely on one full EKS cluster per developer or feature branch. While this provides maximum isolation, it introduces significant pain points. Provisioning a full cluster can take 15 minutes or more, which slows down CI/CD pipelines. Managing dozens of clusters also leads to high costs and significant operational overhead.
+Traditional development workflows often rely on one full EKS cluster per developer or feature branch. While this provides maximum isolation, it introduces major pain points. Provisioning a full cluster can take 15 minutes or more, which slows down CI/CD pipelines. Managing dozens of clusters also leads to high costs and significant operational overhead.
 
 Platform teams need a "soft multi-tenancy" model. This model should feel like a dedicated cluster to the developer but run on shared infrastructure to keep costs low and startup times fast.
 
@@ -42,10 +42,10 @@ Platform teams need a "soft multi-tenancy" model. This model should feel like a 
 
 The environment factory architecture consists of two main layers.
 
-1. **Host Cluster**: A single, reliable EKS cluster managed with EKS Auto Mode. This cluster provides the underlying compute, networking, and storage.
-1. **Tenant Environments**: Virtual clusters (vCluster) running as pods within host namespaces.
+1. **Host cluster**: A single, reliable EKS cluster managed with EKS Auto Mode. This cluster provides the underlying compute, networking, and storage.
+1. **Tenant environments**: Virtual clusters (vCluster) running as pods within host namespaces.
 
-According to the [vCluster architecture](https://www.vcluster.com/docs/vcluster/next/introduction/architecture), the virtual control plane handles API requests while a syncer process maps virtual resources to the host cluster. This separation allows tenants to manage their own CRDs, namespaces, and RBAC while platform teams use quotas, NetworkPolicies, pod security, IAM boundaries, and node isolation controls to protect the host and other tenants.
+According to the [vCluster architecture](https://www.vcluster.com/docs/vcluster/main/introduction/architecture), the virtual control plane handles API requests while a syncer maps virtual resources to the host cluster. This separation allows tenants to manage their own CRDs, namespaces, and RBAC while platform teams use quotas, NetworkPolicies, pod security, IAM boundaries, and node isolation controls to protect the host and other tenants.
 
 ## Implementation: the EKS Auto Mode host
 
@@ -86,7 +86,7 @@ const vpc = new awsx.ec2.Vpc("environment-factory", {
 // Create an EKS cluster with Auto Mode enabled.
 const hostCluster = new eks.Cluster("host-cluster", {
     name: clusterName,
-    authenticationMode: eks.AuthenticationMode.Api,
+    authenticationMode: eks.AuthenticationMode.Api, // Auto Mode requires API authentication mode.
     vpcId: vpc.vpcId,
     publicSubnetIds: vpc.publicSubnetIds,
     privateSubnetIds: vpc.privateSubnetIds,
@@ -145,6 +145,7 @@ const tenantRoleBinding = new k8s.rbac.v1.RoleBinding("tenant-role-binding", {
     metadata: { namespace: tenantNamespace.metadata.name },
     subjects: [{
         kind: "User",
+        // Replace "tenant-user" with the IAM-mapped user or group for this tenant.
         name: "tenant-user",
         apiGroup: "rbac.authorization.k8s.io",
     }],
@@ -156,9 +157,11 @@ const tenantRoleBinding = new k8s.rbac.v1.RoleBinding("tenant-role-binding", {
 }, { provider: hostProvider });
 ```
 
+For production use, map these Kubernetes identities to IAM principals using EKS Access Entries or the `aws-auth` ConfigMap.
+
 ### Deploying vCluster with Helm
 
-We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled Helm lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior.
+We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled [Helm](https://helm.sh/) lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -167,13 +170,13 @@ import * as k8s from "@pulumi/kubernetes";
 const vcluster = new k8s.helm.v3.Release("vcluster-alpha", {
     name: "vcluster-alpha",
     chart: "vcluster",
-    version: "0.20.0",
+    version: "0.20.0", // Tested with vCluster 0.20.x; values schema and secret naming changed in 0.21+.
     repositoryOpts: {
         repo: "https://charts.loft.sh",
     },
     namespace: tenantNamespace.metadata.name,
     values: {
-        // Conservative settings for the virtual cluster.
+        // Explicit sync configuration; adjust per tenant profile.
         sync: {
             toHost: {
                 pods: { enabled: true },
@@ -213,8 +216,6 @@ const vclusterProvider = new k8s.Provider("vcluster-provider", {
 
 ## Operational caveats
 
-While this pattern is powerful, there are a few things to keep in mind.
-
 * **RBAC and permissions**: vCluster generates default RBAC rules that work for most scenarios. However, if your host cluster is heavily locked down, you may need to provide additional permissions to the vCluster service account.
 * **Helm release previews**: When using `kubernetes.helm.v3.Release`, Pulumi previews may not show every detail of the rendered Kubernetes resources. It primarily tracks the state of the Helm release itself.
 * **EKS Auto Mode node lifetime**: EKS Auto Mode uses immutable AMIs and has a 21-day node lifetime. Kubernetes reschedules vCluster pods and tenant workloads when nodes are replaced, so configure replicas, PodDisruptionBudgets, requests, and persistent storage for disruption tolerance.
@@ -223,4 +224,6 @@ While this pattern is powerful, there are a few things to keep in mind.
 
 By combining Pulumi with EKS Auto Mode and vCluster, you can build a scalable environment factory. This approach provides the isolation developers need while maintaining the speed and cost-efficiency required by platform teams.
 
-The snippets provided here are adapted for illustration. In a production environment, you would likely wrap these resources into a Pulumi ComponentResource to provide a clean, reusable API for your internal developers. When a feature branch is merged, deleting the Pulumi stack removes the resources managed by that stack, but validate namespace finalizers, persistent volume reclaim policies, and external cloud artifacts as part of cleanup.
+The snippets provided here are adapted for illustration. In a production environment, you would likely wrap these resources into a Pulumi [ComponentResource](/docs/iac/concepts/resources/components/) to provide a clean, reusable API for your internal developers. When a feature branch is merged, deleting the Pulumi stack removes the resources managed by that stack, but validate namespace finalizers, persistent volume reclaim policies, and external cloud artifacts as part of cleanup.
+
+For more on managing EKS with Pulumi, see the [EKS guide](/docs/clouds/aws/guides/eks/).
