@@ -351,6 +351,11 @@ reference:
     url: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
     weight: 10
     identifier: reference-sdks-go-esc
+  - name: .NET ESC SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
+    weight: 11
+    identifier: reference-sdks-dotnet-esc
   - name: CIS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-cis
