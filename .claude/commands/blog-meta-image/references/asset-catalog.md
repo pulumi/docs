@@ -81,8 +81,8 @@ Located in `logos/`. SVG product/technology logos placed on top of white placeho
 
 From `catalog.yaml` (applied to the meta image only):
 
-- **Font**: inter-bold.woff (static bold, always white #FFFFFF)
-- **Letter-spacing**: -0.025em (tighter tracking)
+- **Font**: inter-semibold.woff (static semibold, always white #FFFFFF)
+- **Letter-spacing**: -0.05em (tighter tracking)
 - **Line-height**: 110% of font size
 - **X position**: 90px from left edge (aligned with Pulumi logo)
 - **Y position**: 80px from top edge (top-anchored, flows downward)
