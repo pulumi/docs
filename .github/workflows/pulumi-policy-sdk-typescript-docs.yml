@@ -72,6 +72,12 @@ jobs:
           repository: pulumi/pulumi-policy
           path: pulumi-policy
           ref: v${{ env.POLICY_SDK_VERSION }}
+      # The pulumi/pulumi-policy repo commits sdk/nodejs/policy/package.json
+      # with a literal "version": "${VERSION}" placeholder that its release
+      # pipeline substitutes at npm-publish time. TypeDoc's --includeVersion
+      # reads package.json verbatim, so without this substitution every
+      # generated page title would render "v${VERSION}". Replace the
+      # placeholder with the real release version before running typedoc.
       - name: substitute version in policy SDK package.json
         run: |
           sed -i "s/\${VERSION}/${POLICY_SDK_VERSION}/g" pulumi-policy/sdk/nodejs/policy/package.json
