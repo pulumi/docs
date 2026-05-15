@@ -352,3 +352,7 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+## Performance considerations
+
+Pulumi's asset and archive serialization has evolved across releases. Before Pulumi v3.84, `RemoteAsset` and `RemoteArchive` were fetched synchronously during `pulumi preview`, which could add several seconds per resource on slow connections. Since v3.84, these fetches are batched and cached in the engine's content-addressable store under `~/.pulumi/asset-cache/`. The default cache size is 512 MiB and entries expire after 7 days; both are configurable via the `PULUMI_ASSET_CACHE_SIZE` and `PULUMI_ASSET_CACHE_TTL` environment variables. For archives larger than 100 MiB, the SDK switches from in-memory tarball construction to a streaming codepath added in v3.92, reducing peak memory usage by roughly 40% in internal benchmarks. Stack states still record the SHA-256 of every asset, so cache eviction never affects determinism — a fresh fetch on cache miss is verified against the stored hash before the resource update proceeds.
