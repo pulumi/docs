@@ -27,9 +27,9 @@ social:
 
 Many teams start their infrastructure journey with AWS CloudFormation. It's a reliable service, but as infrastructure grows, the limitations of YAML and JSON templates become apparent. A common migration challenge is finding a clear path to move existing CloudFormation stacks into Pulumi without tearing everything down and starting over.
 
-The good news is that you don't have to choose between a "big bang" migration and staying stuck in template hell. By using Pulumi's import capabilities and CloudFormation's retention policies, you can adopt existing resources into a modern programming environment with zero downtime.
+The good news is that you don't have to choose between a "big bang" migration and staying stuck in template hell. By using Pulumi's import capabilities and CloudFormation's retention policies, you can adopt existing resources into a modern programming environment while reducing downtime risk.
 
-By the end, you will have a step-by-step strategy for migrating CloudFormation stacks to Pulumi with zero downtime.
+By the end, you will have a step-by-step strategy for migrating CloudFormation stacks to Pulumi while reducing downtime risk.
 
 <!--more-->
 
@@ -98,11 +98,15 @@ Update the CloudFormation stack with this change. Now, if the stack is deleted, 
 
 Run the `pulumi import` commands for all resources in the stack. Ensure your Pulumi code matches the existing configuration exactly. You can run `pulumi preview` to verify that Pulumi sees no pending changes.
 
-### 3. Delete the CloudFormation stack
+### 3. Validate CloudFormation detach safety
 
-Once the resources are safely managed by Pulumi, you can delete the CloudFormation stack. Because of the `Retain` policy, the resources stay alive.
+Before deleting the CloudFormation stack, review the stack template and resource list, verify that every logical resource that must survive has `DeletionPolicy: Retain`, and use a change set only for the preceding stack update that adds retention policies. Confirm no dependent stacks still consume this stack's exports through `Fn::ImportValue`. Migrate or replace those cross-stack references before the cutover.
 
-### 4. Verify the imported code
+### 4. Delete the CloudFormation stack
+
+Once the resources are safely managed by Pulumi and detach safety checks pass, you can delete the CloudFormation stack. Because of the `Retain` policy, retained resources stay alive, while non-retained resources are still subject to normal CloudFormation deletion behavior.
+
+### 5. Verify the imported code
 
 After the import is complete, review the generated resource definition and keep protective options such as `protect: true` in place until you have a safe deletion plan.
 
@@ -116,7 +120,7 @@ const vpc = new aws.ec2.Vpc("my-vpc", {
 
 ## Side-by-side example: VPC and Subnet
 
-Here is how a typical migration looks for a network stack.
+Here is how a typical migration looks for a network stack. The Pulumi example shows the steady-state code after importing the existing VPC and subnet, not code to run before import.
 
 **CloudFormation (Before):**
 
@@ -129,19 +133,19 @@ Resources:
       CidrBlock: 10.0.1.0/24
 ```
 
-**Pulumi (After):**
+**Pulumi (After Import):**
 
 ```typescript
 const vpc = new aws.ec2.Vpc("migrated-vpc", {
     cidrBlock: "10.0.0.0/16",
     enableDnsHostnames: true,
     enableDnsSupport: true,
-});
+}, { protect: true });
 
 const subnet = new aws.ec2.Subnet("migrated-subnet", {
     vpcId: vpc.id,
     cidrBlock: "10.0.1.0/24",
-});
+}, { protect: true });
 ```
 
 ## Common gotchas
@@ -154,6 +158,6 @@ Watch for these migration details before you delete the CloudFormation stack:
 
 ## Conclusion
 
-Migrating from CloudFormation to Pulumi doesn't have to be a high-risk operation. By using the `import --generate-code` feature and CloudFormation's retention policies, you can move your infrastructure into a more flexible and powerful environment one stack at a time.
+Migrating from CloudFormation to Pulumi doesn't have to be a high-risk operation. By using the `pulumi import --generate-code` feature and CloudFormation's retention policies, you can move your infrastructure into a more flexible and powerful environment one stack at a time.
 
 If you're ready to start your migration, check out our [CloudFormation migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) and [`pulumi import`](/docs/iac/guides/migration/import/) guide for more examples and advanced configuration options.
