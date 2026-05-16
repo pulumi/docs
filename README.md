@@ -53,24 +53,21 @@ The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, an
 
 [mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The build scripts route tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
 
-On Linux, mise installs everything including Hugo. On macOS, mise installs everything *except* Hugo — Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's standard backend can't unpack, so Mac users install Hugo via Homebrew.
-
 ```bash
 # 1. Install mise (one time).
 brew install mise              # macOS
 # or: curl https://mise.run | sh   # Linux / other
 
-# 2. macOS only: install Hugo separately.
-brew install hugo
-
-# 3. Install all pinned tools + project dependencies.
+# 2. Install all pinned tools + project dependencies.
 make ensure
 
-# 4. Run the site locally on http://localhost:1313.
+# 3. Run the site locally on http://localhost:1313.
 make serve
 ```
 
-`make ensure` warns if your local Hugo version doesn't match the version we deploy with (0.157.0 extended), but doesn't enforce it — Hugo is generally backwards-compatible across minor releases, and the production artifact is built with the pinned version in CI.
+That's it on every platform.
+
+> **Note for macOS users:** Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's default backend can't unpack, so we use a small third-party plugin ([`NeoHsu/asdf-hugo`](https://github.com/NeoHsu/asdf-hugo)) to extract the Hugo binary from the `.pkg`. If `make ensure` fails on the Hugo step, fall back to `brew install hugo` — `scripts/ensure.sh` will pick up the system Hugo and warn on version mismatch.
 
 #### Without mise
 
