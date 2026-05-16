@@ -2,13 +2,19 @@
     Template Video Embed Partial
 
     Centered YouTube video embed with a poster image (lazy-loaded via srcdoc).
-    Clicking the poster image loads and autoplays the video.
+    Clicking the poster image loads and autoplays the video. Optionally renders
+    a heading above the video and a CTA button below it (tight spacing, single
+    section).
 
     Parameters:
     - youtube_id: YouTube video ID (e.g. "JY3Cm1UUIYE")
     - title: Video title, used for iframe accessibility label
     - poster_image: Path to poster/thumbnail image (displayed before play)
     - poster_alt: Alt text for the poster image
+    - heading: Optional visible heading rendered above the video
+    - cta_text: Optional CTA link text rendered below the video
+    - cta_link: Optional CTA link URL
+    - cta_as_button: Optional boolean. When true, renders the CTA as a pill button. Default: false.
     - anchor: Optional anchor id for the section
 */}}
 
@@ -16,6 +22,10 @@
 {{ $title := .title | default "Watch video" }}
 {{ $posterImage := .poster_image }}
 {{ $posterAlt := .poster_alt | default $title }}
+{{ $heading := .heading }}
+{{ $ctaText := .cta_text }}
+{{ $ctaLink := .cta_link }}
+{{ $ctaAsButton := .cta_as_button | default false }}
 {{ $anchor := .anchor }}
 
 {{/* Fingerprint the poster image so it gets cache-busted on change */}}
@@ -27,8 +37,11 @@
 {{ end }}
 
 <section class="template-video-embed"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="max-w-4xl mx-auto">
-        <div class="rounded-xl relative h-0 overflow-hidden" style="padding-bottom: 56.25%;">
+    <div class="max-w-4xl mx-auto flex flex-col items-center gap-8">
+        {{ if $heading }}
+        <h2 class="section-header-title m-0 text-center">{{ $heading }}</h2>
+        {{ end }}
+        <div class="w-full rounded-xl relative h-0 overflow-hidden" style="padding-bottom: 56.25%;">
             <iframe
                 src="https://www.youtube.com/embed/{{ $youtubeId }}?rel=0"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
@@ -39,5 +52,13 @@
                 {{ end }}
             ></iframe>
         </div>
+        {{ if $ctaText }}
+        <div class="text-center">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                {{ $ctaText }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+        </div>
+        {{ end }}
     </div>
 </section>

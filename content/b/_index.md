@@ -130,7 +130,7 @@ customer_quotes:
     logo: starburst
   snowflake:
     text: |
-      “Pulumi helped our team to ship a new product faster. We needed <b>one tool to setup and manage multi-cloud, multi-region Kubernetes clusters</b> that infrastructure and applications teams could use collaboratively”
+      “Pulumi helped our team to ship a new product faster. We needed <b>one tool to set up and manage multi-cloud, multi-region Kubernetes clusters</b> that infrastructure and applications teams could use collaboratively”
     author: Justin Fitzhugh, VP of Cloud Platform Engineering
     logo: snowflake
 

@@ -1,9 +1,9 @@
 @font-face {
     font-family: "Monaspace Neon Var";
-    font-weight: 100 900;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/monaspace-neon-var.woff2") format("woff2");
+    src: url("/fonts/monaspace-neon-regular.woff2") format("woff2");
 }
 
 
@@ -12,7 +12,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/inter-regular.woff2") format("woff2"), url("/fonts/inter-regular.woff") format("woff");
+    src: url("/fonts/inter-regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -20,7 +20,7 @@
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/inter-medium.woff2") format("woff2"), url("/fonts/inter-medium.woff") format("woff");
+    src: url("/fonts/inter-medium.woff2") format("woff2");
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     font-weight: 600;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/inter-semibold.woff2") format("woff2"), url("/fonts/inter-semibold.woff") format("woff");
+    src: url("/fonts/inter-semibold.woff2") format("woff2");
 }
 
 @font-face {
@@ -36,7 +36,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: url("/fonts/inter-bold.woff2") format("woff2"), url("/fonts/inter-bold.woff") format("woff");
+    src: url("/fonts/inter-bold.woff2") format("woff2");
 }
 
 @font-face {
@@ -44,7 +44,7 @@
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    src: url("/fonts/inter-italic.woff2") format("woff2"), url("/fonts/inter-italic.woff") format("woff");
+    src: url("/fonts/inter-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -52,7 +52,7 @@
     font-weight: 600;
     font-style: italic;
     font-display: swap;
-    src: url("/fonts/inter-semibold-italic.woff2") format("woff2"), url("/fonts/inter-semibold-italic.woff") format("woff");
+    src: url("/fonts/inter-semibold-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -60,5 +60,5 @@
     font-weight: 700;
     font-style: italic;
     font-display: swap;
-    src: url("/fonts/inter-bold-italic.woff2") format("woff2"), url("/fonts/inter-bold-italic.woff") format("woff");
+    src: url("/fonts/inter-bold-italic.woff2") format("woff2");
 }

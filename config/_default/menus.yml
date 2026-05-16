@@ -301,7 +301,7 @@ reference:
     parent: reference-home
     identifier: reference-pre-built-policy-packs
     weight: 3
-  - name: TypeScript (Node.js) ↗
+  - name: TypeScript ↗
     parent: reference-sdks
     url: /docs/reference/pkg/nodejs/pulumi/pulumi/
     weight: 1
@@ -336,6 +336,26 @@ reference:
     url: /docs/reference/pkg/python/pulumi_policy/
     weight: 7
     identifier: reference-sdks-python-policy
+  - name: TypeScript ESC SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/nodejs/pulumi/esc-sdk/
+    weight: 8
+    identifier: reference-sdks-javascript-esc
+  - name: Python ESC SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/python/pulumi_esc_sdk/
+    weight: 9
+    identifier: reference-sdks-python-esc
+  - name: Go ESC SDK ↗
+    parent: reference-sdks
+    url: https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go
+    weight: 10
+    identifier: reference-sdks-go-esc
+  - name: .NET ESC SDK ↗
+    parent: reference-sdks
+    url: /docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html
+    weight: 11
+    identifier: reference-sdks-dotnet-esc
   - name: CIS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-cis

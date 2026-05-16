@@ -1,5 +1,42 @@
 {{ define "hero" }}
-{{ partial "hero" (dict "title" .Params.page_title "small_title" "true") }}
+{{/* Use the same word-count source as the schema collector so visible "X min read" matches JSON-LD timeRequired. */}}
+{{ $wordCount := .Content | plainify | countwords }}
+{{ if not $wordCount }}{{ $wordCount = 500 }}{{ end }}
+{{ $readTime := div $wordCount 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+
+{{/* Only show the "Updated" line when we have a real source of truth — never fall back to now, which would churn each build. */}}
+{{ $modifiedDate := "" }}
+{{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+    {{ $modifiedDate = .Lastmod }}
+{{ else if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+{{ end }}
+<header class="page-hero">
+    <div class="container mx-auto px-6 lg:px-0">
+        <nav aria-label="Breadcrumb" class="max-w-4xl mx-auto mb-6">
+            <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+                <li><a class="hover:text-violet-700" href="/what-is/">What Is</a></li>
+                <li aria-hidden="true" class="text-gray-400">/</li>
+                <li aria-current="page" class="text-gray-900 font-medium">{{ .Params.page_title | safeHTML }}</li>
+            </ol>
+        </nav>
+        <div class="page-hero-title">
+            <h1 class="small-title">
+                <span><span data-text="{{ .Params.page_title }}">{{ .Params.page_title | safeHTML }}</span></span>
+            </h1>
+        </div>
+        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
+            {{ with $modifiedDate }}
+                <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+                    Updated {{ .Format "January 2, 2006" }}
+                </time>
+                <span aria-hidden="true">·</span>
+            {{ end }}
+            <span>{{ $readTime }} min read</span>
+        </div>
+    </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
@@ -43,9 +80,9 @@
 <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
     <div class="w-full bg-violet-50 card p-6 lg:p-16 lg:pt-24 text-center">
         <div class="max-w-xl mx-auto">
-                <h2 class="text-white hidden lg:block px-0 lg:px-16">Get started today</h2>
-                <h4 class="text-white mt-0 lg:hidden">Get started today</h4>
-                <p class="text-white">Pulumi is open source and free to get started. Deploy your first stack today.</p>
+                <h2 class="text-gray-900 hidden lg:block px-0 lg:px-16">Get started today</h2>
+                <h4 class="text-gray-900 mt-0 lg:hidden">Get started today</h4>
+                <p class="text-gray-700">Pulumi is open source and free to get started. Deploy your first stack today.</p>
                 <div class="mt-16">
                     <a class="btn" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                 </div>

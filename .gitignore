@@ -61,8 +61,10 @@ static/js/homepage.*.js
 static/js/marketing.*.js
 static/js/consent-manager.*.js
 static/js/marketing-homepage.*.js
+static/js/header-nav.*.js
 data/js_manifest.json
 data/openapi-spec.json
+data/github_stars.yml
 
 # Ignore webpack-generated assets from the build process.
 /assets/css/
@@ -124,3 +126,9 @@ scripts/alias-verification/historical-fixes.json
 
 # Ignore compiled Go binaries in static programs.
 static/programs/*-go/*-go
+
+# Local MCP server config (developer-specific, points at local Figma desktop)
+.mcp.json
+
+# Claude Code runtime lock (ScheduleWakeup)
+.claude/scheduled_tasks.lock

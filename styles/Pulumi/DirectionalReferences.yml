@@ -1,0 +1,9 @@
+extends: existence
+message: "Directional reference ('%s') -- link directly to the target (an `#anchor` or relative path) rather than relying on 'above'/'below' (STYLE-GUIDE.md §Inclusive Language)."
+level: warning
+ignorecase: true
+nonword: false
+tokens:
+  - 'see (the )?(\w+ ){0,4}(above|below)\b'
+  - 'as (shown|described|noted|illustrated|mentioned|outlined) (above|below)\b'
+  - '(in|from) the (section|table|list|diagram|figure|example|code|paragraph|note) (above|below)\b'

@@ -1,0 +1,25 @@
+{{- /*
+  Shared dropdown item link with icon, label, and optional description.
+  Used by both the desktop nav-popup and the mobile sheet collapsible panels.
+
+  Parameters:
+    item    — item object: { href, label, icon, iconWeight?, description?, track? }
+    variant — "desktop" or "mobile"
+*/ -}}
+{{- $item := .item -}}
+{{- $isMobile := eq .variant "mobile" -}}
+<a href="{{ $item.href }}"
+  {{ if $isMobile }}data-nav-sheet-close{{ end }}
+  {{ with $item.track }}data-track="{{ . }}"{{ end }}
+  class="group flex flex-row items-start gap-3 rounded-md p-3 outline-none transition-all hover:bg-violet-50 focus-visible:bg-violet-50 focus-visible:ring-3 focus-visible:ring-violet-400/50">
+  <span aria-hidden="true"
+    class="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-md border group-hover:border-violet-200 border-gray-200 group-hover text-violet-700">
+    {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight) "class" "size-6") }}
+  </span>
+  <span class="flex min-w-0 flex-col gap-0.5">
+    <span class="text-sm font-semibold text-gray-950 group-hover:text-violet-primary">{{ $item.label }}</span>
+    {{ with $item.description }}
+      <span class="text-xs text-gray-600 group-hover:text-gray-800">{{ . }}</span>
+    {{ end }}
+  </span>
+</a>

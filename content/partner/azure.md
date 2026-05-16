@@ -1,6 +1,7 @@
 ---
 title: Infrastructure as Code for Azure with Pulumi
-layout: azure
+layout: product-page
+type: page
 url: /azure
 
 meta_desc: Use Pulumi to manage Azure infrastructure with code. Replace or extend Azure Resource Manager (ARM) templates using C#, Python, Go, or TypeScript.
@@ -9,254 +10,246 @@ schema:
   type: TechArticle
   headline: Infrastructure as Code for Azure with Pulumi
 
-hero:
-    title: Modern Infrastructure as Code for Microsoft Azure
+sections:
+  - type: hero
+    layout: split
+    title: Modern infrastructure as code for Microsoft Azure
     description: |
-        Pulumi brings Infrastructure as Code to Azure using familiar programming languages.
-        Manage 100% of your Azure resources, including compute, containers, and serverless with
-        C#, Python, Go, TypeScript, and more. Replace or interoperate with Azure Resource Manager
-        (ARM) templates using Pulumi’s modern SDKs.
-    ide:
-        tabs:
-            - title: C#
-              language: csharp
-              code: |
-                using Pulumi;
-                using Pulumi.AzureNative.Resources;
-                using Pulumi.AzureNative.Storage;
-                using Pulumi.AzureNative.Storage.Inputs;
+      Pulumi brings Infrastructure as Code to Azure using familiar programming languages. Manage 100% of your Azure resources, including compute, containers, and serverless with C#, Python, Go, TypeScript, and more. Replace or interoperate with Azure Resource Manager (ARM) templates using Pulumi's modern SDKs.
+    cta_primary_text: Get started
+    cta_primary_link: /docs/iac/get-started/azure/
+    cta_secondary_text: Try Pulumi Cloud
+    cta_secondary_link: https://app.pulumi.com/signup
+    code_title: index.ts
+    code_snippets:
+      - language: typescript
+        label: TypeScript
+        title: index.ts
+        code: |
+          import * as resources from "@pulumi/azure-native/resources";
+          import * as storage from "@pulumi/azure-native/storage";
 
-                class MyStack : Stack
-                {
-                    public MyStack()
-                    {
-                        var resourceGroup = new ResourceGroup("resourceGroup");
+          const resourceGroup = new resources.ResourceGroup("resourceGroup");
 
-                        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
-                        {
-                            ResourceGroupName = resourceGroup.Name,
-                            Sku = new SkuArgs { Name = "Standard_LRS" },
-                            Kind = "StorageV2"
-                        });
-                    }
-                }
-            - title: TypeScript
-              language: typescript
-              code: |
-                import * as resources from "@pulumi/azure-native/resources";
-                import * as storage from "@pulumi/azure-native/storage";
+          const storageAccount = new storage.StorageAccount("sa", {
+              resourceGroupName: resourceGroup.name,
+              sku: {
+                  name: "Standard_LRS",
+              },
+              kind: "StorageV2",
+          });
+      - language: python
+        label: Python
+        title: __main__.py
+        code: |
+          from pulumi_azure_native import storage
+          from pulumi_azure_native import resources
 
-                const resourceGroup = new resources.ResourceGroup("resourceGroup");
+          resource_group = resources.ResourceGroup('resource_group')
 
-                const storageAccount = new storage.StorageAccount("sa", {
-                    resourceGroupName: resourceGroup.name,
-                    sku: {
-                        name: "Standard_LRS",
-                    },
-                    kind: "StorageV2",
-                });
-            - title: Python
-              language: python
-              code: |
-                from pulumi_azure_native import storage
-                from pulumi_azure_native import resources
+          account = storage.StorageAccount('sa',
+              resource_group_name=resource_group.name,
+              sku=storage.SkuArgs(name='Standard_LRS'),
+              kind='StorageV2')
+      - language: go
+        label: Go
+        title: main.go
+        code: |
+          package main
 
-                resource_group = resources.ResourceGroup('resource_group')
+          import (
+              "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+              "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
+              "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+          )
 
-                account = storage.StorageAccount('sa',
-                    resource_group_name=resource_group.name,
-                    sku=storage.SkuArgs(name='Standard_LRS'),
-                    kind='StorageV2')
-            - title: Go
-              language: go
-              code: |
-                package main
+          func main() {
+              pulumi.Run(func(ctx *pulumi.Context) error {
+                  resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
+                  if err != nil {
+                      return err
+                  }
 
-                import (
-                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
-                    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
-                    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-                )
+                  account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+                      ResourceGroupName: resourceGroup.Name,
+                      Sku: &storage.SkuArgs{
+                          Name: pulumi.String("Standard_LRS"),
+                      },
+                      Kind: pulumi.String("StorageV2"),
+                  })
 
-                func main() {
-                    pulumi.Run(func(ctx *pulumi.Context) error {
-                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
-                        if err != nil {
-                            return err
-                        }
+                  return err
+              })
+          }
+      - language: csharp
+        label: C#
+        title: MyStack.cs
+        code: |
+          using Pulumi;
+          using Pulumi.AzureNative.Resources;
+          using Pulumi.AzureNative.Storage;
+          using Pulumi.AzureNative.Storage.Inputs;
 
-                        account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
-                            ResourceGroupName: resourceGroup.Name,
-                            Sku: &storage.SkuArgs{
-                                Name: pulumi.String("Standard_LRS"),
-                            },
-                            Kind: pulumi.String("StorageV2"),
-                        })
+          class MyStack : Stack
+          {
+              public MyStack()
+              {
+                  var resourceGroup = new ResourceGroup("resourceGroup");
 
-                        return err
-                    })
-                }
+                  var storageAccount = new StorageAccount("sa", new StorageAccountArgs
+                  {
+                      ResourceGroupName = resourceGroup.Name,
+                      Sku = new SkuArgs { Name = "Standard_LRS" },
+                      Kind = "StorageV2"
+                  });
+              }
+          }
+      - language: java
+        label: Java
+        title: Main.java
+        code: |
+          package com.pulumi.example.infra;
 
-            - title: YAML
-              language: yaml
-              code: |
-                name: azure-storage-account
-                runtime: yaml
-                description: A simple Pulumi program.
-                resources:
-                  resourcegroup:
-                    type: azure-native:resources:ResourceGroup
-                  sa:
-                    type: azure-native:storage:StorageAccount
-                    properties:
-                      resourceGroupName: ${resourcegroup.name}
-                      kind: 'StorageV2'
-                      sku: { name: 'Standard_LRS' }
+          import com.pulumi.Context;
+          import com.pulumi.Exports;
+          import com.pulumi.Pulumi;
+          import com.pulumi.azurenative.resources.ResourceGroup;
+          import com.pulumi.azurenative.storage.StorageAccount;
+          import com.pulumi.azurenative.storage.StorageAccountArgs;
+          import com.pulumi.azurenative.storage.enums.Kind;
+          import com.pulumi.azurenative.storage.enums.SkuName;
+          import com.pulumi.azurenative.storage.inputs.SkuArgs;
 
-            - title: Java
-              language: java
-              code: |
-                package com.pulumi.example.infra;
+          public class Main {
+              public static void main(String[] args) {
+                  Pulumi.run(Main::stack);
+              }
 
-                import com.pulumi.Context;
-                import com.pulumi.Exports;
-                import com.pulumi.Pulumi;
-                import com.pulumi.azurenative.resources.ResourceGroup;
-                import com.pulumi.azurenative.storage.StorageAccount;
-                import com.pulumi.azurenative.storage.StorageAccountArgs;
-                import com.pulumi.azurenative.storage.enums.Kind;
-                import com.pulumi.azurenative.storage.enums.SkuName;
-                import com.pulumi.azurenative.storage.inputs.SkuArgs;
+              private static Exports stack(Context ctx) {
+                  var resourceGroup = new ResourceGroup("linux-fn-rg");
 
-                public class Main {
+                  var storageAccount = new StorageAccount("linux-fn-sa", StorageAccountArgs.builder()
+                      .resourceGroupName(resourceGroup.name())
+                      .kind(Kind.StorageV2)
+                      .sku(SkuArgs.builder()
+                          .name(SkuName.Standard_LRS)
+                          .build())
+                      .build());
 
-                    public static void main(String[] args) {
-                        Pulumi.run(Main::stack);
-                    }
+                  return ctx.exports();
+              }
+          }
+      - language: yaml
+        label: YAML
+        title: Pulumi.yaml
+        code: |
+          name: azure-storage-account
+          runtime: yaml
+          description: A simple Pulumi program.
+          resources:
+            resourcegroup:
+              type: azure-native:resources:ResourceGroup
+            sa:
+              type: azure-native:storage:StorageAccount
+              properties:
+                resourceGroupName: ${resourcegroup.name}
+                kind: 'StorageV2'
+                sku: { name: 'Standard_LRS' }
+    anchor: hero
 
-                    private static Exports stack(Context ctx) {
-                        var resourceGroup = new ResourceGroup("linux-fn-rg");
-
-                        var storageAccount = new StorageAccount("linux-fn-sa", StorageAccountArgs.builder()
-                                .resourceGroupName(resourceGroup.name())
-                                .kind(Kind.StorageV2)
-                                .sku(SkuArgs.builder()
-                                        .name(SkuName.Standard_LRS)
-                                        .build())
-                                .build());
-
-                        return ctx.exports();
-                    }
-                }
-
-azure_overview:
-  title: Azure Infrastructure in any Programming Language
-  list:
-    - Define infrastructure in JavaScript, TypeScript, Python, Go, Java, YAML, or any .NET language, including C#, F#, and VB.
-    - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
-    - Keep your cloud secure and in compliance by enforcing policies on every deployment.
-    - Codify best practices and policies, then share them with your team or community as self-service architectures.
-  cta: Get Started
-  cta_url: "/docs/iac/get-started/azure/"
-
-arm2pulumi:
-  title: ARM &rarr; Pulumi
-  description: |
-    Whether you're new to Microsoft Azure or already using it to manage your infrastructure, Pulumi makes getting started easy. If you're just starting out, you can write your infrastructure code using the Pulumi Azure SDK. Or if you're already managing resources with Azure, you can deploy an existing ARM template using Pulumi or you can rewrite the ARM template JSON in a programming language, either entirely, or one resource at a time.
-
-    If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
-
-  cta: Learn More
-  cta_url: "/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/"
-
-detail_sections:
-  - title: 100% API Coverage
+  - type: section_header_with_image
+    flip: true
+    title: Azure infrastructure in any programming language
     description: |
-        The Pulumi Azure provider covers 100% of the resources available in Azure
-        Resource Manager giving you the full power of Azure at your fingertips. Every
-        property of each resource is always represented in the SDKs.
-    items:
-        - title: Everything In One Place
-          icon: cloud-with-nodes
-          icon_color: violet
-          description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
+      - Define infrastructure in JavaScript, TypeScript, Python, Go, Java, YAML, or any .NET language, including C#, F#, and VB.
+      - Increase your productivity using the full ecosystem of dev tools such as IDE auto-completion, type & error checking, linting, refactoring, and test frameworks to validate all of your Azure resources.
+      - Keep your cloud secure and in compliance by enforcing policies on every deployment.
+      - Codify best practices and policies, then share them with your team or community as self-service architectures.
+    image: /images/partners/azure-insights.png
+    image_alt: Azure dashboard
+    cta_text: Get started
+    cta_link: /docs/iac/get-started/azure/
+    anchor: overview
 
-        - title: Efficient Adoption
-          icon: lightning
-          icon_color: yellow
-          description: There’s no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to deploy your application to yourself save time and effort.
-
-        - title: Secrets Management
-          icon: security
-          icon_color: violet
-          description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
-
-        - title: Multi Cloud
-          icon: cloud
-          icon_color: blue
-          description: Pulumi allows you to use top programming languages across all public clouds with support for over +170 popular cloud and service integrations, including private and hybrid clouds helping ensure any multi-cloud strategy is successful.
-
-        - title: Convenience Functions
-          icon: pen
-          icon_color: violet
-          description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
-
-        - title: Automate Delivery
-          icon: delivery
-          icon_color: violet
-          description: You can integrate Pulumi directly with your favorite CI/CD and SCM systems to continuously deliver Azure infrastructure and applications. Improve the velocity and visibility into your deployments from simple to complex global environments.
-    cta: Get Started
-    cta_url: "/docs/iac/get-started/azure/"
-
-  - title: Always Up to Date
+  - type: section_header_with_image
+    title: ARM → Pulumi
     description: |
-        Pulumi's Microsoft Azure Native provider is designed to stay up-to-date with additions and changes
-        to Azure APIs. The `azure-native` SDK is generated automatically from the Azure API
-        specifications published by Microsoft, which means you'll always have access to the latest
-        Azure features and improvements.
-    items:
-        - title: Auto Generated
-          icon: cycle
-          icon_color: blue
-          description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto-generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
+      Whether you're new to Microsoft Azure or already using it to manage your infrastructure, Pulumi makes getting started easy. If you're just starting out, you can write your infrastructure code using the Pulumi Azure SDK. Or if you're already managing resources with Azure, you can deploy an existing ARM template using Pulumi or you can rewrite the ARM template JSON in a programming language, either entirely, or one resource at a time.
 
-        - title: Familiar Concepts
-          icon: collab
-          icon_color: violet
-          description: Azure Resource Manager API is structured around Resource Providers &mdash; high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
+      If you can deploy a resource with ARM templates, you can deploy it with the Pulumi Azure provider!
+    image: /images/partners/arm2pulumi.png
+    image_alt: ARM to Pulumi
+    cta_text: Learn more
+    cta_link: /docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/
+    anchor: arm2pulumi
 
-        - title: API Versions
-          icon: nodes
-          icon_color: violet
-          description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
+  - type: section_header
+    align: center
+    title: 100% API coverage
+    description: The Pulumi Azure provider covers 100% of the resources available in Azure Resource Manager giving you the full power of Azure at your fingertips. Every property of each resource is always represented in the SDKs.
+    cta_text: Get started
+    cta_link: /docs/iac/get-started/azure/
+    cards_cols: 3
+    cards:
+      - icon: cloud
+        title: Everything in one place
+        description: The SDKs include full coverage for Azure services, including Azure Static Web Apps, Azure Synapse Analytics, Azure Logic Apps, Azure Service Fabric, Azure Blockchain Service, Azure API Management, and dozens of other services.
+      - icon: lightning
+        title: Efficient adoption
+        description: There's no need to rewrite your existing Azure configurations to get started with Pulumi. You can efficiently adopt existing Azure resources to save time and effort.
+      - icon: shield-check
+        title: Secrets management
+        description: Use Pulumi to ensure secret data is encrypted in transit, at rest, and physically anywhere it gets stored. Bring your own preferred cloud encryption provider or use Pulumi's native secrets provider.
+      - icon: cloud
+        title: Multi-cloud
+        description: Pulumi allows you to use top programming languages across all public clouds with support for over +170 popular cloud and service integrations, including private and hybrid clouds helping ensure any multi-cloud strategy is successful.
+      - icon: pen-nib
+        title: Convenience functions
+        description: The provider also contains functions to retrieve keys, secrets, and connection strings from all resources that expose them.
+      - icon: package
+        title: Automate delivery
+        description: You can integrate Pulumi directly with your favorite CI/CD and SCM systems to continuously deliver Azure infrastructure and applications. Improve the velocity and visibility into your deployments from simple to complex global environments.
+    anchor: api-coverage
 
-        - title: All Languages
-          icon: code
-          icon_color: yellow
-          description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
+  - type: section_header
+    align: center
+    title: Always up to date
+    description: |
+      Pulumi's Microsoft Azure Native provider is designed to stay up-to-date with additions and changes to Azure APIs. The `azure-native` SDK is generated automatically from the Azure API specifications published by Microsoft, which means you'll always have access to the latest Azure features and improvements.
+    cta_text: Get started
+    cta_link: /docs/iac/get-started/azure/
+    cards_cols: 3
+    cards:
+      - icon: arrows-clockwise
+        title: Auto generated
+        description: An automated pipeline releases updated resources within hours after any current API specifications are merged. Auto-generated means less manual implementation and fewer chances for bugs, meaning a high fidelity, high quality experience.
+      - icon: handshake
+        title: Familiar concepts
+        description: Azure Resource Manager API is structured around Resource Providers — high-level groups like `storage`, `compute`, or `web`. We map Resource Providers to top-level modules or namespaces in Pulumi SDKs.
+      - icon: graph
+        title: API versions
+        description: Each resource provider defines one or more API versions, for example, `2015-05-01`, `2020-09-01`, or `2020-08-01-preview`. Every version of every ARM API is available in Pulumi SDKs, and each version has its own module or namespace.
+      - icon: code
+        title: All languages
+        description: The Pulumi Azure Native provider is available in all Pulumi languages, including JavaScript, TypeScript, Python, Go, .NET, Java, and YAML. All SDKs are open source on GitHub and available as npm, NuGet, PyPI, and Go modules.
+      - icon: shield-check
+        title: Built-in guardrails
+        description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
+      - icon: test-tube
+        title: Reduce deployment complexity
+        description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
+    anchor: always-up-to-date
 
-        - title: Built-in Guardrails
-          icon: shield
-          icon_color: blue
-          description: When you enable Pulumi's Policy as Code feature, you instantly gain the power to prevent mistakes from being deployed. Enforce security, compliance, cost controls, and best practices using policies defined in modern languages.
-
-        - title: Reduce Deployment Complexity
-          icon: testing
-          icon_color: violet
-          description: Pulumi lets you take advantage of common tools, frameworks, and techniques to unit, integration, and property test your Azure infrastructure. Ensure your infrastructure is correct before and after deployment.
-    cta: Get Started
-    cta_url: "/docs/iac/get-started/azure/"
-
-contact_us_form:
-    section_id: contact-us
-    hubspot_form_id: 826f708b-53a9-4abc-9cb9-950f47362b72
-    headline: Need help with Azure?
-    quote:
-        title: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
-        name: Josh Imhoff
-        name_title: Site Reliability Engineer, Cockroach Labs
-        content: |
-            We are building a distributed-database-as-a-service product that runs on Kubernetes clusters across
-            multiple public clouds including Google Cloud, AWS and others. Pulumi's declarative model, the support for real
-            programming languages, and the uniform workflow on any cloud make our SRE team much more efficient.
+  - type: two_column
+    columns:
+      - title: Need help with Azure?
+        description: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
+        cta_primary_text: Request a demo
+        cta_primary_link: /contact/?form=request-a-demo
+      - title: Get started with Pulumi and Azure
+        description: Deploy your first Azure project in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
+        cta_primary_text: Get started
+        cta_primary_link: /docs/iac/get-started/azure/
+    anchor: get-started
+    highlight_first_card: true
 ---

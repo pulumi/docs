@@ -1,0 +1,2376 @@
+{
+  "source_base_path": "/home/runner/work/docs/docs/docs/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CheckEnvironmentYamlApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.checkenvironmentyamlapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.CheckEnvironmentYamlApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CheckEnvironmentYamlApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.CheckEnvironmentYamlApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CloneEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.cloneenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.CloneEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CloneEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.CloneEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.createenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.createenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.createenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.CreateEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DecryptEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.decryptenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.DecryptEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DecryptEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.DecryptEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.deleteenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.deleteenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.deleteenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.DeleteEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.getenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentAtVersionApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.getenvironmentatversionapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentAtVersionApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentAtVersionApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentAtVersionApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentETagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.getenvironmentetagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentETagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentETagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentETagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.getenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.getenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.GetEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionTagsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.listenvironmentrevisiontagsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionTagsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionTagsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionTagsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.listenvironmentrevisionsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentRevisionsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentTagsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.listenvironmenttagsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentTagsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentTagsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentTagsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.listenvironmentsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ListEnvironmentsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.openenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentAtVersionApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.openenvironmentatversionapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentAtVersionApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentAtVersionApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.OpenEnvironmentAtVersionApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.readopenenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentPropertyApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.readopenenvironmentpropertyapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentPropertyApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentPropertyApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.ReadOpenEnvironmentPropertyApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.updateenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.updateenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentYamlApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.updateenvironmentyamlapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentYamlApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentYamlApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.EscApi.UpdateEnvironmentYamlApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApi",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApiEvents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.escapievents.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.EscApiEvents",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.EscApiEvents.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iapi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IApi",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IApi.yml\" sourcestartlinenumber=\"1\">Any Api client</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICheckEnvironmentYamlApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.icheckenvironmentyamlapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.ICheckEnvironmentYamlApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICheckEnvironmentYamlApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.ICheckEnvironmentYamlApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICloneEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.icloneenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.ICloneEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICloneEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.ICloneEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.icreateenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.ICreateEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.ICreateEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.icreateenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.ICreateEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.ICreateEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.icreateenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.ICreateEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.ICreateEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.ICreateEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDecryptEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.idecryptenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IDecryptEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDecryptEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IDecryptEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ideleteenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IDeleteEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IDeleteEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ideleteenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IDeleteEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IDeleteEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ideleteenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IDeleteEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IDeleteEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IDeleteEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IEscApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iescapi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IEscApi",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IEscApi.yml\" sourcestartlinenumber=\"1\">Represents a collection of functions to interact with the API endpoints\nThis class is registered as transient.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.igetenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IGetEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IGetEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentAtVersionApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.igetenvironmentatversionapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IGetEnvironmentAtVersionApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentAtVersionApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IGetEnvironmentAtVersionApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentETagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.igetenvironmentetagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IGetEnvironmentETagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentETagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IGetEnvironmentETagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.igetenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IGetEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IGetEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.igetenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IGetEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IGetEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IGetEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionTagsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ilistenvironmentrevisiontagsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionTagsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionTagsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionTagsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ilistenvironmentrevisionsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IListEnvironmentRevisionsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentTagsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ilistenvironmenttagsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IListEnvironmentTagsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentTagsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IListEnvironmentTagsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentsApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ilistenvironmentsapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IListEnvironmentsApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IListEnvironmentsApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IListEnvironmentsApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IOpenEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iopenenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IOpenEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IOpenEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IOpenEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IOpenEnvironmentAtVersionApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iopenenvironmentatversionapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IOpenEnvironmentAtVersionApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IOpenEnvironmentAtVersionApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IOpenEnvironmentAtVersionApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ireadopenenvironmentapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentPropertyApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.ireadopenenvironmentpropertyapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentPropertyApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentPropertyApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IReadOpenEnvironmentPropertyApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentRevisionTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iupdateenvironmentrevisiontagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IUpdateEnvironmentRevisionTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentRevisionTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IUpdateEnvironmentRevisionTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentTagApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iupdateenvironmenttagapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IUpdateEnvironmentTagApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentTagApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IUpdateEnvironmentTagApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentYamlApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.iupdateenvironmentyamlapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api.IUpdateEnvironmentYamlApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.IUpdateEnvironmentYamlApiResponse.yml\" sourcestartlinenumber=\"1\">The <xref href=\"Pulumi.Esc.Sdk.Api.IUpdateEnvironmentYamlApiResponse\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.api.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Api",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.apiexception.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ApiException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiException.yml\" sourcestartlinenumber=\"1\">API Exception</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.apifactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ApiFactory",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiFactory.yml\" sourcestartlinenumber=\"1\">An ApiFactory</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiKeyToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.apikeytoken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ApiKeyToken",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiKeyToken.yml\" sourcestartlinenumber=\"1\">A token constructed from an apiKey.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.apiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiResponse.yml\" sourcestartlinenumber=\"1\">API Response</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiResponseEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.apiresponseeventargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ApiResponseEventArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ApiResponseEventArgs.yml\" sourcestartlinenumber=\"1\">Useful for tracking server health</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.clientutils.apikeyheader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeader",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.ApiKeyHeader.yml\" sourcestartlinenumber=\"1\">An enum of headers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.EventHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.clientutils.eventhandler-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ClientUtils.EventHandler<T>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.EventHandler-1.yml\" sourcestartlinenumber=\"1\">A delegate for events.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.clientutils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ClientUtils",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ClientUtils.yml\" sourcestartlinenumber=\"1\">Utility functions providing some benefit to API client consumers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.CookieContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.cookiecontainer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.CookieContainer",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.CookieContainer.yml\" sourcestartlinenumber=\"1\">A class containing a CookieContainer</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.dateonlyjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.DateOnlyJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyJsonConverter.yml\" sourcestartlinenumber=\"1\">Formatter for 'date' openapi formats ss defined by full-date - RFC3339\nsee <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types\" sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyJsonConverter.yml\" sourcestartlinenumber=\"2\">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyNullableJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.dateonlynullablejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.DateOnlyNullableJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyNullableJsonConverter.yml\" sourcestartlinenumber=\"1\">Formatter for 'date' openapi formats ss defined by full-date - RFC3339\nsee <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types\" sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateOnlyNullableJsonConverter.yml\" sourcestartlinenumber=\"2\">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.datetimejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.DateTimeJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeJsonConverter.yml\" sourcestartlinenumber=\"1\">Formatter for 'date-time' openapi formats ss defined by full-date - RFC3339\nsee <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types\" sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeJsonConverter.yml\" sourcestartlinenumber=\"2\">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeNullableJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.datetimenullablejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.DateTimeNullableJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeNullableJsonConverter.yml\" sourcestartlinenumber=\"1\">Formatter for 'date-time' openapi formats ss defined by full-date - RFC3339\nsee <a href=\"https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types\" sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.DateTimeNullableJsonConverter.yml\" sourcestartlinenumber=\"2\">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#data-types</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ExceptionEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.exceptioneventargs.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.ExceptionEventArgs",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.ExceptionEventArgs.yml\" sourcestartlinenumber=\"1\">Useful for tracking server health</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.HostConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.hostconfiguration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.HostConfiguration",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.HostConfiguration.yml\" sourcestartlinenumber=\"1\">Provides hosting configuration for Pulumi.Esc.Sdk</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IApiFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iapifactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IApiFactory",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IApiFactory.yml\" sourcestartlinenumber=\"1\">An IApiFactory interface</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iapiresponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IApiResponse",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IApiResponse.yml\" sourcestartlinenumber=\"1\">Provides a non-generic contract for the ApiResponse wrapper.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IBadRequest-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.ibadrequest-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IBadRequest<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IBadRequest-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IConflict-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iconflict-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IConflict<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IConflict-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IDefault-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.idefault-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IDefault<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IDefault-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IInternalServerError-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iinternalservererror-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IInternalServerError<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IInternalServerError-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.INotFound-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.inotfound-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.INotFound<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.INotFound-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IOk-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iok-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IOk<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IOk-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IUnauthorized-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.iunauthorized-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.IUnauthorized<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.IUnauthorized-1.yml\" sourcestartlinenumber=\"1\">An interface for responses of type</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.JsonSerializerOptionsProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.jsonserializeroptionsprovider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.JsonSerializerOptionsProvider",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.JsonSerializerOptionsProvider.yml\" sourcestartlinenumber=\"1\">Provides the JsonSerializerOptions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.Option-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.option-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.Option<TType>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.Option-1.yml\" sourcestartlinenumber=\"1\">A wrapper for operation parameters which are not required</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.RateLimitProvider-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.ratelimitprovider-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.RateLimitProvider<TTokenBase>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.RateLimitProvider-1.yml\" sourcestartlinenumber=\"1\">Provides a token to the api clients. Tokens will be rate limited based on the provided TimeSpan.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.TokenBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.tokenbase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.TokenBase",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.TokenBase.yml\" sourcestartlinenumber=\"1\">The base for all tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.TokenContainer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.tokencontainer-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client.TokenContainer<TTokenBase>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.TokenContainer-1.yml\" sourcestartlinenumber=\"1\">A container for a collection of tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Client.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.client.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Client",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.CloneEnvironmentOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.cloneenvironmentoptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.CloneEnvironmentOptions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.CloneEnvironmentOptions.yml\" sourcestartlinenumber=\"1\">Options for cloning an environment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.environmentdefinitionserializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EnvironmentDefinitionSerializer.yml\" sourcestartlinenumber=\"1\">Provides serialization and deserialization for <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentDefinition\" data-throw-if-not-resolved=\"false\"></xref>.\nThe ESC API returns environment definitions as <code>application/x-yaml</code> content\nfrom the GetEnvironment, GetEnvironmentAtVersion, and DecryptEnvironment endpoints.\nThe generated client cannot deserialize YAML, so this class bridges that gap.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscApiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.escapiexception.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.EscApiException",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscApiException.yml\" sourcestartlinenumber=\"1\">Exception thrown when an ESC API operation fails.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscAuth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.escauth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.EscAuth",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscAuth.yml\" sourcestartlinenumber=\"1\">Provides authentication helpers for the Pulumi ESC SDK.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.escclient.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.EscClient",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.EscClient.yml\" sourcestartlinenumber=\"1\">A high-level client for the Pulumi ESC (Environments, Secrets, Config) API.\nWraps the generated <xref href=\"Pulumi.Esc.Sdk.Api.IEscApi\" data-throw-if-not-resolved=\"false\"></xref> and provides a more convenient interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IHostBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.extensions.ihostbuilderextensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Extensions.IHostBuilderExtensions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IHostBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for IHostBuilder</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IHttpClientBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.extensions.ihttpclientbuilderextensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Extensions.IHttpClientBuilderExtensions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IHttpClientBuilderExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for IHttpClientBuilder</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.extensions.iservicecollectionextensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Extensions.IServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.IServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for IServiceCollection</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Access.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.access.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Access",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Access.yml\" sourcestartlinenumber=\"1\">Access</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.AccessJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.accessjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.AccessJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.AccessJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Access\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Accessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.accessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Accessor",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Accessor.yml\" sourcestartlinenumber=\"1\">Accessor</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.AccessorJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.accessorjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.AccessorJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.AccessorJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Accessor\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CheckEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.checkenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CheckEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CheckEnvironment.yml\" sourcestartlinenumber=\"1\">CheckEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CheckEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.checkenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CheckEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CheckEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.CheckEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CloneEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.cloneenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CloneEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CloneEnvironment.yml\" sourcestartlinenumber=\"1\">CloneEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CloneEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.cloneenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CloneEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CloneEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.CloneEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironment.yml\" sourcestartlinenumber=\"1\">CreateEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.CreateEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironmentrevisiontag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTag.yml\" sourcestartlinenumber=\"1\">CreateEnvironmentRevisionTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironmentrevisiontagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.CreateEnvironmentRevisionTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironmenttag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironmentTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentTag.yml\" sourcestartlinenumber=\"1\">CreateEnvironmentTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.createenvironmenttagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.CreateEnvironmentTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.CreateEnvironmentTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.CreateEnvironmentTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDefinition",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinition.yml\" sourcestartlinenumber=\"1\">EnvironmentDefinition</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdefinitionjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDefinitionJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentDefinition\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdefinitionvalues.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValues",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValues.yml\" sourcestartlinenumber=\"1\">EnvironmentDefinitionValues</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValuesJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdefinitionvaluesjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValuesJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValuesJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentDefinitionValues\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnostic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdiagnostic.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDiagnostic",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnostic.yml\" sourcestartlinenumber=\"1\">EnvironmentDiagnostic</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdiagnosticjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentDiagnostic\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnostics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdiagnostics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDiagnostics",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnostics.yml\" sourcestartlinenumber=\"1\">EnvironmentDiagnostics</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticsJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentdiagnosticsjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticsJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentDiagnosticsJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentDiagnostics\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevision",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevision.yml\" sourcestartlinenumber=\"1\">EnvironmentRevision</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevisionjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevisionJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentRevision\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevisiontag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevisionTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTag.yml\" sourcestartlinenumber=\"1\">EnvironmentRevisionTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevisiontagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentRevisionTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevisiontags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevisionTags",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTags.yml\" sourcestartlinenumber=\"1\">EnvironmentRevisionTags</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagsJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmentrevisiontagsjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagsJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentRevisionTagsJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentRevisionTags\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmenttag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentTag.yml\" sourcestartlinenumber=\"1\">EnvironmentTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.environmenttagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EnvironmentTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EnvironmentTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EnvironmentTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Error.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.error.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Error",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Error.yml\" sourcestartlinenumber=\"1\">Error</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ErrorJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.errorjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ErrorJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ErrorJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Error\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EvaluatedExecutionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.evaluatedexecutioncontext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EvaluatedExecutionContext",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EvaluatedExecutionContext.yml\" sourcestartlinenumber=\"1\">EvaluatedExecutionContext</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EvaluatedExecutionContextJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.evaluatedexecutioncontextjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.EvaluatedExecutionContextJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.EvaluatedExecutionContextJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.EvaluatedExecutionContext\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Expr.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.expr.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Expr",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Expr.yml\" sourcestartlinenumber=\"1\">Expr</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprBuiltin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.exprbuiltin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ExprBuiltin",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprBuiltin.yml\" sourcestartlinenumber=\"1\">ExprBuiltin</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprBuiltinJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.exprbuiltinjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ExprBuiltinJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprBuiltinJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.ExprBuiltin\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.exprjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ExprJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ExprJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Expr\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Interpolation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.interpolation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Interpolation",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Interpolation.yml\" sourcestartlinenumber=\"1\">Interpolation</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.InterpolationJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.interpolationjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.InterpolationJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.InterpolationJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Interpolation\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ListEnvironmentTags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.listenvironmenttags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ListEnvironmentTags",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ListEnvironmentTags.yml\" sourcestartlinenumber=\"1\">ListEnvironmentTags</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ListEnvironmentTagsJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.listenvironmenttagsjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ListEnvironmentTagsJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ListEnvironmentTagsJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.ListEnvironmentTags\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ModelEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.modelenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ModelEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ModelEnvironment.yml\" sourcestartlinenumber=\"1\">ModelEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ModelEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.modelenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ModelEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ModelEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.ModelEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OpenEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.openenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OpenEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OpenEnvironment.yml\" sourcestartlinenumber=\"1\">OpenEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OpenEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.openenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OpenEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OpenEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.OpenEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.orgenvironment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OrgEnvironment",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironment.yml\" sourcestartlinenumber=\"1\">OrgEnvironment</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironmentJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.orgenvironmentjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OrgEnvironmentJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironmentJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.OrgEnvironment\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.orgenvironments.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OrgEnvironments",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironments.yml\" sourcestartlinenumber=\"1\">OrgEnvironments</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironmentsJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.orgenvironmentsjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.OrgEnvironmentsJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.OrgEnvironmentsJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.OrgEnvironments\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Pos.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.pos.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Pos",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Pos.yml\" sourcestartlinenumber=\"1\">Pos</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PosJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.posjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.PosJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PosJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Pos\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PropertyAccessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.propertyaccessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.PropertyAccessor",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PropertyAccessor.yml\" sourcestartlinenumber=\"1\">PropertyAccessor</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PropertyAccessorJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.propertyaccessorjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.PropertyAccessorJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.PropertyAccessorJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.PropertyAccessor\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Range.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.range.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Range",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Range.yml\" sourcestartlinenumber=\"1\">Range</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.RangeJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.rangejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.RangeJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.RangeJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Range\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Reference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.reference.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Reference",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Reference.yml\" sourcestartlinenumber=\"1\">Reference</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ReferenceJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.referencejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ReferenceJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ReferenceJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Reference\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Trace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.trace.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Trace",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Trace.yml\" sourcestartlinenumber=\"1\">Trace</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.TraceJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.tracejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.TraceJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.TraceJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Trace\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmentrevisiontag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTag.yml\" sourcestartlinenumber=\"1\">UpdateEnvironmentRevisionTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmentrevisiontagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.UpdateEnvironmentRevisionTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTag.yml\" sourcestartlinenumber=\"1\">UpdateEnvironmentTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttagcurrenttag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTag.yml\" sourcestartlinenumber=\"1\">UpdateEnvironmentTagCurrentTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttagcurrenttagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagCurrentTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.UpdateEnvironmentTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttagnewtag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTag",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTag.yml\" sourcestartlinenumber=\"1\">UpdateEnvironmentTagNewTag</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTagJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.updateenvironmenttagnewtagjsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTagJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTagJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.UpdateEnvironmentTagNewTag\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Value.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.value.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.Value",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.Value.yml\" sourcestartlinenumber=\"1\">Value</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ValueJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.valuejsonconverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model.ValueJsonConverter",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.ValueJsonConverter.yml\" sourcestartlinenumber=\"1\">A Json converter for type <xref href=\"Pulumi.Esc.Sdk.Model.Value\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.model.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.Model",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.TokenProvider-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.tokenprovider-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.TokenProvider<TTokenBase>",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.TokenProvider-1.yml\" sourcestartlinenumber=\"1\">A class which will provide tokens.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.ValueMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.valuemapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk.ValueMapper",
+      "Summary": "<p sourcefile=\"metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.ValueMapper.yml\" sourcestartlinenumber=\"1\">Provides utilities for converting <xref href=\"Pulumi.Esc.Sdk.Model.Value\" data-throw-if-not-resolved=\"false\"></xref> trees into plain .NET objects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/Pulumi.Esc.Sdk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/pulumi.esc.sdk.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.Esc.Sdk",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "metadata/Pulumi.Esc.Sdk/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "pulumi.esc.sdk/toc.json"
+        },
+        ".html": {
+          "relative_path": "pulumi.esc.sdk/toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

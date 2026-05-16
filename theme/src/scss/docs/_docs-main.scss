@@ -92,7 +92,7 @@ body.section-registry {
             margin-bottom: 1.5rem;
         }
 
-        p a:not(.btn-secondary),
+        p a:not(.btn),
         ul li a[href]  {
             color: var(--color-violet-primary);
             background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,var(--color-gray-500),var(--color-gray-500));

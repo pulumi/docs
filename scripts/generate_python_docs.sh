@@ -1,16 +1,33 @@
 #!/usr/bin/env bash
 
+# Builds Sphinx HTML docs for a single Pulumi Python SDK package as an
+# independent docset and writes the output to
+# static-prebuilt/docs/reference/pkg/python/${PACKAGE}/.
+#
+# Each package has its own sphinx source dir under tools/pydocgen/source/<pkg>/
+# with its own conf.py and index.rst, so per-package builds don't affect each
+# other's output.
+#
+# Required env:
+#   PACKAGE  one of: pulumi, pulumi_policy, pulumi_esc_sdk
+
 set -o errexit -o pipefail
 set -x
 
-PACKAGES=(
-  "pulumi"
-  "pulumi_policy"
-  "pulumi_terraform"
-  "pulumi_esc_sdk"
-)
+PACKAGE="${PACKAGE:?Set PACKAGE to one of: pulumi, pulumi_policy, pulumi_esc_sdk}"
 
-OUTDIR="../../static-prebuilt/docs/reference/pkg/python"
+case "$PACKAGE" in
+  pulumi)         INSTALL=("pulumi") ;;
+  pulumi_policy)  INSTALL=("pulumi" "pulumi_policy") ;;
+  pulumi_esc_sdk) INSTALL=("pulumi_esc_sdk") ;;
+  *)
+    echo "Unknown PACKAGE: $PACKAGE (expected: pulumi, pulumi_policy, pulumi_esc_sdk)" >&2
+    exit 1
+    ;;
+esac
+
+SOURCE_DIR="./source/${PACKAGE}"
+OUTDIR="../../static-prebuilt/docs/reference/pkg/python/${PACKAGE}"
 
 pushd "tools/pydocgen"
 
@@ -18,13 +35,13 @@ pipenv --python 3
 pipenv install
 pipenv run pip install sphinx-rtd-theme
 
-echo "Building all Python docs..."
-# Install each package.
-for PACKAGE in "${PACKAGES[@]}" ; do \
-    pipenv run pip install --upgrade "${PACKAGE}"
+echo "Installing packages for ${PACKAGE} docs build: ${INSTALL[*]}"
+for p in "${INSTALL[@]}" ; do
+    pipenv run pip install --upgrade "${p}"
 done
 
-rm -rf "$OUTDIR"
-pipenv run sphinx-build -j auto -b dirhtml ./source "$OUTDIR"
+mkdir -p "$(dirname "$OUTDIR")"
+rm -rf "${OUTDIR}"
+pipenv run sphinx-build -j auto -b dirhtml "$SOURCE_DIR" "$OUTDIR"
 
 popd

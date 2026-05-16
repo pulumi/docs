@@ -5,13 +5,11 @@ description: Action menu options for bot and non-bot PRs
 
 # Action Menus
 
-**Decision Point**: Select the appropriate section based on contributor type and review findings.
-
-**Key principle**: The Step 7 menu chooses *what action to take*. Whether the action is followed by an auto-merge is a **toggle on the Step 8 preview screen**, not a separate menu choice. See `pr-review:references:action-preview-templates` for the merge-toggle logic and defaults.
+Select the appropriate section based on contributor type and review findings. Auto-merge is a toggle on the Step 8 preview, not a Step 7 menu choice.
 
 ## Dependabot PRs
 
-Parse labels from PR data: `deps-risk-*`, `deps-security-patch`, `deps-lambda-edge-risk`, `deps-bulk-update`, `deps-merge-after-test`, `deps-quarterly-review`
+Parse Dependabot risk and special-handling labels per `pr-review:references:dependabot-labels`.
 
 ### Display Header
 
@@ -28,21 +26,21 @@ Use AskUserQuestion with header:
 
 #### For HIGH Risk or Security Patches
 
-1. **Approve** (Recommended after testing) — merge toggle defaults ON when CI green and tests passed
+1. **Approve** (Recommended after testing)
 2. **Request changes** - Technical feedback needed
 3. **Close PR** - Reject the dep update
 4. **Do nothing yet** - Need to test/investigate
 
 #### For LOW/MEDIUM Risk with quarterly-review Label
 
-1. **Approve** (Recommended) — merge toggle starts OFF for quarterly batch (deferred)
+1. **Approve** (Recommended)
 2. **Close with quarterly note** - Defer to next quarterly batch
 3. **Request changes** - Technical feedback needed
 4. **Do nothing yet** - Need to test/investigate
 
 #### For Other Dependabot PRs (No Clear Risk Label)
 
-1. **Approve** (Recommended) — merge toggle defaults ON for clean low-risk dep updates
+1. **Approve** (Recommended)
 2. **Request changes** - Technical feedback needed
 3. **Close PR** - Reject
 4. **Do nothing yet** - Need investigation
@@ -68,7 +66,7 @@ For non-Dependabot bots (pulumi-bot, renovate, etc.)
 
 ### Options (Max 4)
 
-1. **Approve** (Recommended) — merge toggle defaults ON for bots
+1. **Approve** (Recommended)
 2. **Request changes** - Issues need addressing
 3. **Close PR** - Reject
 4. **Do nothing yet** - Need investigation
@@ -92,7 +90,7 @@ Choose the appropriate menu based on review findings:
 
 ### Scenario A: Issues with Suggested Fixes — Make Changes Recommended
 
-Use this when Step 5 surfaced contradictions and **every** contradiction has a high-confidence `suggested_fix`. Applying the fixes yourself is faster than round-tripping with the author.
+Use this when Step 2's parsed pinned-review findings include 🚨 Outstanding contradictions and **every** contradiction has a high-confidence `suggested_fix`. Applying the fixes yourself is faster than round-tripping with the author.
 
 **Options**:
 1. **Make changes and approve** (Recommended) — apply trivial fixes + suggested fixes, then approve
@@ -113,7 +111,7 @@ Use this when contradictions are unverifiable, lack suggested fixes, or are styl
 ### Scenario C: Clean Review — Approve Recommended
 
 **Options**:
-1. **Approve** (Recommended) — merge toggle defaults OFF (Pulumi convention: authors merge their own PRs)
+1. **Approve** (Recommended)
 2. **Make changes and approve** - Minor edits (typos, formatting) + approve
 3. **Request changes** - Hold for author input
 4. **Do nothing yet** - Need more time/discussion
@@ -126,40 +124,4 @@ Use this when contradictions are unverifiable, lack suggested fixes, or are styl
 3. **Approve** - Override concerns and approve anyway
 4. **Do nothing yet** - Need discussion before closing
 
-## Merge Toggle Defaults (Step 8)
-
-Whether the action is followed by an auto-merge is decided by the **`Auto-merge after approval` toggle** on the Step 8 preview screen, not by which Step 7 option is picked. This eliminates manual "approve and merge" typing without breaking the Pulumi convention that authors merge their own PRs.
-
-### Default ON
-
-Toggle defaults ON only when **all** of:
-
-- Contributor is a **bot** (dependabot, pulumi-bot, renovate, copilot, github-actions)
-- CI is green
-- No remaining contradictions or unverifiable claims
-- `AI_SUSPECT=false`
-
-### Default OFF
-
-Toggle defaults OFF for **all human-authored PRs**, regardless of seniority, contributor type, or CI status. **Reason:** Pulumi has a strong culture of authors merging their own PRs. As a reviewer, the default action is approve-and-let-the-author-merge; auto-merging on someone's behalf is the exception, not the norm.
-
-The toggle exists so the user can flip it on for the rare case where they actually want to merge on the author's behalf — typically:
-
-- External first-timer who doesn't have merge rights
-- Stale PR the author has abandoned
-- Time-sensitive fix where the author is out
-
-### AI-Suspect Override
-
-When `AI_SUSPECT=true`, the toggle defaults OFF unconditionally — even for bot PRs. This forces a conscious keystroke before merging anything that may contain AI-generated content.
-
-## Implementation Notes
-
-- Always use AskUserQuestion tool with max 4 options
-- Select the adaptive menu based on review findings (A/B/C/D for non-bot)
-- Display risk indicators and labels for Dependabot PRs
-- Show testing checklists for dependency PRs
-- Tone adjusts based on `etiquette_trust` (low → warm/welcoming; standard → friendly; high → professional/terse)
-- "Make changes and approve" preserves contributor credit for minor fixes
-- Bot PRs exclude "Make changes and approve" (breaks automation)
-- The merge-toggle is decided in Step 8, not Step 7 — never add an "Approve and merge" option to a Step 7 menu
+Tone adjusts based on `etiquette_trust` (low → warm/welcoming; standard → friendly; high → professional/terse). For merge-toggle defaults, see `pr-review:references:action-preview-templates`.

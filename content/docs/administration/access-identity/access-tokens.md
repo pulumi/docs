@@ -22,6 +22,8 @@ aliases:
 
 Use access tokens to sign into the Pulumi Cloud via the CLI or automate your usage of the Pulumi Cloud using the REST API. Learn more about the REST API in the [Pulumi Cloud REST API docs](/docs/reference/cloud-rest-api/).
 
+The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/iac/cli/api/) command, which calls any REST API endpoint directly from the CLI without needing to set the `Authorization` header yourself.
+
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.

@@ -34,6 +34,8 @@ This repository hosts all of the hand-crafted documentation, guides, tutorials, 
 
 We welcome all contributions to this repository. Be sure to read our [contributing guide](CONTRIBUTING.md) and [code of conduct](CODE-OF-CONDUCT.md) first, then [submit a pull request](https://github.com/pulumi/docs/pulls) here on GitHub. If you see something that needs fixing but don't have time to contribute, you can also [file an issue](https://github.com/pulumi/docs/issues).
 
+> Tip: open your PR as a **draft** while you iterate. Automated review fires when you mark it ready for review, so a draft-first flow keeps the CI noise down and the review fresh. See [CONTRIBUTING.md](CONTRIBUTING.md#draft-first-pull-requests) for the full lifecycle.
+
 See also:
 
 * [Build and deployment guide](./BUILD-AND-DEPLOY.md)
@@ -45,6 +47,16 @@ See also:
 
 ### Toolchain
 
+#### mise (Recommended)
+
+This repository tracks tool versions in [`mise.toml`](./mise.toml). If you have [mise](https://mise.jdx.dev/) installed, you can install the core website toolchain (Hugo, Node.js, Yarn, Go, and Vale) at the pinned versions in one step:
+
+```bash
+mise install
+```
+
+For SDK and CLI documentation builds, you'll also need Python, .NET, Pulumi, and Pulumi ESC — see [Manual Installation](#manual-installation) below for those.
+
 #### Manual Installation
 
 We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
@@ -53,6 +65,7 @@ We build the Pulumi website with Hugo, manage our dependencies with Node.js and 
   * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
 * [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
 * [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
+* [Vale](https://vale.sh/docs/install) (3.14.1) — required by `make ensure` for prose linting.
 
 Additionally, to build the SDK and CLI documentation, you'll also need:
 
@@ -67,6 +80,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
 
 * Hugo, Node.js, Yarn, and Markdown tooling.
+* Vale for prose linting.
 * Go, Python, .NET, and the Pulumi CLI.
 * VS Code extensions for Markdown linting, link checking, and Pulumi support.
 * Google Cloud CLI and GitHub CLI.
@@ -99,13 +113,12 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
 * `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
+* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`). Note: Hugo's dev server does not serve content from `static-prebuilt/`, so generated SDK reference pages under `/docs/reference/pkg/{nodejs,python,dotnet,java}/...` will 404 in dev mode — use `make build && make serve-static` to preview those.
 * `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
-* `make build` generates the website and writes it to `./public`
+* `make build` generates the website and writes it to `./public`. This includes copying `static-prebuilt/` (where the auto-generated SDK reference docs live) into the output, which is why this combined with `make serve-static` is the way to preview SDK pages locally.
 * `make build-assets` builds only the CSS and JavaScript asset bundles
-* `make serve-static` runs a local HTTP server that serves the contents of `./public`
+* `make serve-static` runs a local HTTP server that serves the contents of `./public` — use this after `make build` when you need to verify SDK reference pages or anything else served out of `static-prebuilt/`
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
-* `make generate` builds the TypeScript, Python, and Pulumi CLI documentation
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial
 * `make new-tutorial-topic` scaffolds a new tutorial topic and adds it to an existing multi-page tutorial
@@ -137,84 +150,100 @@ This will display the complete list of documentation tools and commands with des
 
 ## Generating SDK and CLI documentation
 
-We generate two kinds of reference documentation with this repository: language-specific SDK docs (for a subset of Pulumi packages) and CLI docs (for command-line tools like `pulumi` and `esc`). Instructions for generating both types of docs are listed below.
+We generate reference documentation in two surfaces — language-specific SDK docs and command-line tool docs — and check the output into this repository. In normal operation each one is regenerated automatically by a dedicated GitHub Actions workflow whenever its upstream source repo cuts a release; you only need to regenerate manually when you're modifying a generator script or investigating a regression.
 
-### SDK docs
+### What gets generated and by which workflow
 
-We build and host language-specific SDK documentation for the following Pulumi packages:
+| Surface | Source repo | Workflow file | Output |
+|---|---|---|---|
+| Pulumi CLI commands | `pulumi/pulumi` | [`pulumi-cli-docs.yml`](.github/workflows/pulumi-cli-docs.yml) | `content/docs/iac/cli/commands/` |
+| Pulumi ESC CLI commands | `pulumi/esc` | [`esc-cli.yml`](.github/workflows/esc-cli.yml) | `content/docs/esc/cli/commands/` |
+| Pulumi SDK — TypeScript | `pulumi/pulumi` | [`pulumi-sdk-typescript-docs.yml`](.github/workflows/pulumi-sdk-typescript-docs.yml) | `static-prebuilt/docs/reference/pkg/nodejs/pulumi/` |
+| Pulumi SDK — Python | `pulumi/pulumi` | [`pulumi-sdk-python-docs.yml`](.github/workflows/pulumi-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi/` |
+| Pulumi SDK — .NET | `pulumi/pulumi-dotnet` | [`pulumi-sdk-dotnet-docs.yml`](.github/workflows/pulumi-sdk-dotnet-docs.yml) | `static-prebuilt/docs/reference/pkg/dotnet/` |
+| Pulumi SDK — Java | `pulumi/pulumi-java` | [`pulumi-sdk-java-docs.yml`](.github/workflows/pulumi-sdk-java-docs.yml) | `static-prebuilt/docs/reference/pkg/jvm/` |
+| Pulumi Policy SDK — Python | `pulumi/pulumi-policy`* | [`pulumi-policy-sdk-python-docs.yml`](.github/workflows/pulumi-policy-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_policy/` |
+| Pulumi ESC SDK — Python | `pulumi/esc-sdk`* | [`pulumi-esc-sdk-python-docs.yml`](.github/workflows/pulumi-esc-sdk-python-docs.yml) | `static-prebuilt/docs/reference/pkg/python/pulumi_esc_sdk/` |
 
-* [pulumi](https://github.com/pulumi/pulumi)
-* [pulumi-policy](https://github.com/pulumi/pulumi-policy)
+(\*) These two workflows are `workflow_dispatch`-only today; an upstream `repository_dispatch` from the source repo is a planned follow-up.
 
-The Node.js, Python, and .NET versions of these docs are built using language-specific tooling and checked into the repository as stand-alone docsets. (Go versions are sourced directly from GitHub and hosted at [pkg.go.dev](/github.com/pulumi/pulumi/sdk/v3/go/pulumi).)
+(Go SDK docs aren't generated here — they're hosted at [pkg.go.dev](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi) directly from `pulumi/pulumi`.)
 
-To build the docs for these packages yourself, you'll first need to clone each package into a sibling directory. The easiest way to do this is to use the `make update-repos` helper:
+### Two ways to regenerate
+
+#### Option A — Trigger the GitHub Actions workflow (recommended)
+
+For the CLI and the Pulumi-SDK workflows (TypeScript, Python, .NET, Java), the canonical way to regenerate is to fire the workflow from your terminal. The workflow installs the right toolchains, runs the generator, opens a PR, and (because of the `automation/merge` label) auto-merges it once CI passes.
 
 ```bash
-# Clone and update all of the repositories above into sibling directories of this repo.
-make update-repos
+# Pulumi SDK - Python at the currently-released CLI version
+gh workflow run pulumi-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=3.238.0
+
+# Pulumi SDK - TypeScript
+gh workflow run pulumi-sdk-typescript-docs.yml --repo pulumi/docs --ref master -f version=3.238.0
+
+# Pulumi SDK - .NET
+gh workflow run pulumi-sdk-dotnet-docs.yml --repo pulumi/docs --ref master -f version=<dotnet-version>
+
+# Pulumi SDK - Java
+gh workflow run pulumi-sdk-java-docs.yml --repo pulumi/docs --ref master -f version=<java-version>
+
+# Pulumi Policy SDK / Pulumi ESC SDK - Python
+gh workflow run pulumi-policy-sdk-python-docs.yml --repo pulumi/docs --ref master -f version=<policy-version>
+gh workflow run pulumi-esc-sdk-python-docs.yml   --repo pulumi/docs --ref master -f version=<esc-sdk-version>
+
+# Pulumi CLI markdown
+gh workflow run pulumi-cli-docs.yml --repo pulumi/docs --ref master -f version=3.238.0
 ```
 
-Once you've done this, you can generate the docs for each package.
+> ⚠️ **Don't run these against non-current versions under normal circumstances.** The generated PR carries `automation/merge` and auto-merges as soon as CI passes, which means firing a workflow against an older version will roll back the docs on master. For an exploratory regen against a non-current version, immediately strip `automation/merge` from the generated PR and disable auto-merge (`gh pr merge <N> --disable-auto`) before CI completes, or close the PR.
 
-### Generating the Node.js and Python SDK docs
+#### Option B — Run the generator locally
 
-The Node and Python SDK docs are built with [TypeDoc](http://typedoc.org/) and [Pydocgen](https://pypi.org/project/pydocgen/). The easiest way to generate these docs is to use the `make generate` helper:
+Useful when you're modifying a generator script (e.g. `scripts/run_typedoc.sh`, `scripts/generate_python_docs.sh`) and want to inspect the output without round-tripping through CI.
 
 ```bash
-make ensure          # Install dependencies.
-make update-repos    # Clone and update all package repositories.
-make generate        # Generate the Node.js and Python docs for all packages.
+make ensure         # Install dependencies (one-time).
+make update-repos   # Clone sibling pulumi/pulumi (etc.) repos — needed for the TypeScript build.
+
+# TypeScript: pulumi package only
+NOBUILD=true PKGS=pulumi ./scripts/run_typedoc.sh
+
+# Python: pick one package per invocation. Valid PACKAGE values: pulumi, pulumi_policy, pulumi_esc_sdk.
+PACKAGE=pulumi          ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_policy   ./scripts/generate_python_docs.sh
+PACKAGE=pulumi_esc_sdk  ./scripts/generate_python_docs.sh
+
+# .NET (requires `dotnet` and the `docfx` global tool on PATH)
+dotnet tool install -g docfx    # one-time
+./scripts/run_docfx.sh
+
+# Java (requires Java 17 + Gradle; see pulumi-sdk-java-docs.yml for details)
+JAVA_REPO=../pulumi-java ./scripts/gen_javadoc.sh
+
+# Pulumi CLI markdown — uses the currently-installed `pulumi` binary, so install
+# the version you're documenting before running.
+PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/iac/cli/commands
+
+# Pulumi ESC CLI markdown
+esc gen-docs ./content/docs/esc/cli/commands
 ```
 
-Generated docs are rendered into the `./static-prebuilt/nodejs` and `./static-prebuilt/python` folders. At deploy-time, we copy the contents of these folders into `./docs/reference/pkg` to make them available on pulumi.com -- for example, [here](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi) and [here](https://www.pulumi.com/docs/reference/pkg/python/pulumi).
-
-See below to learn how to view these rendered docs locally.
-
-### Generating the .NET SDK docs
-
-The .NET SDK docs are built with [Docfx](https://github.com/dotnet/docfx). To generate these, you'll need both `dotnet` and `docfx` installed and on your PATH. For example, assuming you've already [installed the `dotnet` executable](https://dotnet.microsoft.com/download) for your platform, you can:
+The generated content lands in the output paths from the table above. Preview locally with:
 
 ```bash
-make ensure                     # Install dependencies.
-make update-repos               # Clone and update all package repositories.
-dotnet tool install -g docfx    # Install docfx globally, following the instructions to ensure it's on your PATH.
-docfx build docfx/docfx.json    # Generate the .NET docs.
-```
-
-### CLI docs
-
-The `make generate` helper also generates the Pulumi CLI documentation. If you'd prefer not to use that helper (e.g., to avoid having to clone all the repos and generate SDK docs), you can build them directly using the `pulumi` and `esc` CLIs:
-
-```bash
-pulumi gen-markdown ./content/docs/cli/commands    # Generate Pulumi CLI documentation.
-esc gen-docs ./content/docs/esc-cli/commands       # Generate Pulumi ESC CLI documentation.
-```
-
-Generated docs reflect the functionality of the currently installed CLI, so make sure you've installed the latest public version of each one ([`pulumi`](https://github.com/pulumi/pulumi/releases), [`esc`](https://github.com/pulumi/esc/releases)) before running these commands and submitting your PR.
-
-### Viewing rendered SDK and CLI docs locally
-
-After building the SDK and/or CLI docs, you can view them locally with `make build` and `make serve-static`.
-
-For example, from a fresh clone of this repository, you can install all dependencies and generate and browse the Node.js, Python, and Pulumi CLI docs using the following sequence:
-
-```bash
-make ensure          # Install dependencies.
-make update-repos    # Clone and update all package repositories.
-make generate        # Generate the Node.js, Python, and Pulumi CLI docs.
 make build           # Build the website, copying all generated docs into place.
-make serve-static    # Serve the built website statically to make sure everything looks right.
+make serve-static    # Serve the built site on http://localhost:8080.
 ```
 
-With `make serve-static` running, you can browse to the docs by navigating to http://localhost:8080/docs. Then, from the left-hand menu:
+With `make serve-static` running, browse to <http://localhost:8080/docs>:
 
-* Choose Languages &amp; SDKs followed by your language of choice, then scroll to the bottom of the page to find the package you're interested in
-* Choose Pulumi CLI or Pulumi ESC CLI, then Commands
+* Choose **Languages & SDKs** → your language → scroll to the package you're interested in.
+* Choose **Pulumi CLI** or **Pulumi ESC CLI** → **Commands**.
 
 ### Checking in generated docs
 
-All generated docs, including all Node.js, Python, and .NET SDK docs and all Pulumi and Pulumi ESC CLI docs, get checked into this repository.
+All generated docs (CLI markdown + Node.js, Python, .NET, Java SDK reference) are checked into this repository. In normal operation the workflows above create the commits and PRs automatically; you don't need to commit generated output yourself.
 
 ## Search
 

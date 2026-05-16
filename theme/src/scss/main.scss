@@ -3,6 +3,7 @@
 // Tell Tailwind v4 where to scan for utility class usage in templates.
 // Paths are relative to this file (theme/src/scss/).
 @source "../../../layouts/**/*.html";
+@source "../../../layouts/partials/header/*.html";
 @source "../../../content/**/*.{html,md}";
 @source "../../../assets/js/**/*.js";
 @source "../../stencil/src/**/*.tsx";
@@ -15,22 +16,6 @@
 // Sass variables (no CSS output)
 $sitenav-height: 90px;
 $sitenav-offset: calc($sitenav-height + 16px);
-
-// @utility declarations must be top-level (cannot be nested inside @layer).
-// These register custom utility classes with Tailwind v4.
-@utility btn {
-    transition: all 120ms linear;
-    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-violet-primary border border-violet-primary text-white text-center;
-}
-
-@utility btn-lg {
-    @apply py-3 px-5;
-}
-
-@utility btn-orange {
-    @apply bg-orange-500 border-orange-600;
-}
 
 // Typography token utilities (font sizes from design system).
 @utility text-heading-2xl { font-size: 80px; }
@@ -89,7 +74,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     h4,
     h5,
     h6 {
-        @apply font-display text-black mb-2;
+        @apply font-display text-service-black mb-2;
         font-weight: 600;
         letter-spacing: -0.05em;
         line-height: 1.1em;
@@ -135,7 +120,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     body {
-        @apply font-body text-black;
+        @apply font-body text-service-black;
 
         figure {
             figcaption {
@@ -149,7 +134,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     main {
-        @apply text-black;
+        @apply text-service-black;
 
         p,
         li,
@@ -214,6 +199,11 @@ $sitenav-offset: calc($sitenav-height + 16px);
             }
         }
     }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
 }
 
 @layer components {
@@ -229,10 +219,11 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "badges";
     @import "benefits";
     @import "breadcrumb";
+    @import "button";
     @import "buttons";
     @import "card";
     @import "marketing/cloud-engineering";
-    @import "marketing/dismissable-banner";
+    @import "announcement-banner";
     @import "code";
     @import "container";
     @import "copy-button";
@@ -262,7 +253,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "neo-card";
     @import "docs/packages";
     @import "pagination";
-    @import "marketing/pricing";
     @import "marketing/product";
     @import "responsive-video";
     @import "marketing/pulumi-deployments";

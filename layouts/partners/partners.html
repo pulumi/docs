@@ -7,7 +7,7 @@
 <section id="overview" class="container mx-auto text-center p-8 mb-8">
     <h2>{{ .Params.overview.title }}</h2>
     <p class="text-xl my-12">{{ .Params.overview.description }}</p>
-    <a href="#form" rel="noopener noreferrer" class="btn-secondary mt-8">Contact our Partner Team</a>
+    <a href="#form" rel="noopener noreferrer" class="btn btn-outline btn-xl mt-8">Contact our Partner Team</a>
 </section>
 
 <section id="types" class="relative text-center p-8">
@@ -49,7 +49,7 @@
             </div>
         {{ end }}
     </div>
-    <a class="btn btn-secondary my-4" href="/registry/">See our ecosystem partners</a>
+    <a class="btn btn-outline my-4" href="/registry/">See our ecosystem partners</a>
 </section>
 
 <section id="case-studies" class="relative px-6 mt-28">
@@ -63,7 +63,7 @@
                         <h5>{{ .name }}</h5>
                         <p class="pb-8">{{ .description | markdownify }}</p>
                         <div class="absolute bottom-0 left-0 w-full">
-                            <a href="{{ .link }}" class="btn-secondary whitespace-nowrap"
+                            <a href="{{ .link }}" class="btn btn-outline btn-xl whitespace-nowrap"
                                 >{{ .name }}
                                 Case Study</a
                             >

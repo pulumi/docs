@@ -1,0 +1,13 @@
+extends: existence
+message: "Avoid '%s' (STYLE-GUIDE.md §Inclusive Language). Consider an alternative."
+level: warning
+ignorecase: true
+tokens:
+  - crazy
+  - dummy
+  - guys
+  - sanity check
+  - whitelist
+  - blacklist
+  - master
+  - slave

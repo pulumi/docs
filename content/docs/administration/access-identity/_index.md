@@ -46,8 +46,8 @@ sections:
     description: Automate user provisioning and deprovisioning.
 
   - icon: identification-card
-    heading: OIDC Client
-    link: /docs/administration/access-identity/oidc-client/
+    heading: OIDC Issuers
+    link: /docs/administration/access-identity/oidc-issuers/
     description: Configure OpenID Connect authentication.
 
 - type: flat

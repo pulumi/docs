@@ -1280,11 +1280,11 @@
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi.Automation/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "pulumi.automation/toc.html"
-        },
         ".json": {
           "relative_path": "pulumi.automation/toc.json"
+        },
+        ".html": {
+          "relative_path": "pulumi.automation/toc.html"
         }
       },
       "version": ""
@@ -3379,11 +3379,11 @@
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "pulumi/toc.html"
-        },
         ".json": {
           "relative_path": "pulumi/toc.json"
+        },
+        ".html": {
+          "relative_path": "pulumi/toc.html"
         }
       },
       "version": ""

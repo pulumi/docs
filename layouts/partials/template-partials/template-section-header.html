@@ -20,6 +20,8 @@
     - cta_link: Optional CTA link URL
     - cards: Optional array of mini feature cards rendered below the image.
       Each item: { icon: "code", title: "Title", description: "..." }
+    - cards_cols: Optional number of columns at md+ for the mini cards grid (2, 3, or 4). Default 3.
+    - align: Optional "left" or "center" (default). Controls horizontal alignment of the header block.
     - anchor: Optional anchor for section id
 */}}
 
@@ -35,6 +37,14 @@
 {{ $ctaLink := .cta_link }}
 {{ $ctaAsButton := .cta_as_button | default false }}
 {{ $cards := .cards }}
+{{ $cardsCols := .cards_cols | default 3 }}
+{{ $align := .align | default "center" }}
+{{ $alignClasses := "text-center max-w-4xl mx-auto" }}
+{{ if eq $align "left" }}{{ $alignClasses = "text-left" }}{{ end }}
+{{ $ctaAlignClass := "text-center" }}
+{{ if eq $align "left" }}{{ $ctaAlignClass = "text-left" }}{{ end }}
+{{ $imageJustifyClass := "justify-center" }}
+{{ if eq $align "left" }}{{ $imageJustifyClass = "justify-start" }}{{ end }}
 {{ $anchor := .anchor }}
 
 {{/* Build responsive visibility classes for the image container. */}}
@@ -43,11 +53,11 @@
     {{ $imageDisplayClass = printf "hidden %s:flex" $imageVisibleFrom }}
 {{ end }}
 
-<section class="template-section-header"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
-    <div class="text-center max-w-4xl mx-auto">
+<section class="template-section-header{{ if eq $align "left" }} section-header--left{{ end }}"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="{{ $alignClasses }}">
         {{ if and $image $imageAbove }}
-        <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} justify-center">
-            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "section-header-image-above-img rounded-lg") }}
+        <div class="section-header-image section-header-image-above mb-6 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "section-header-image-above-img rounded-lg" "maxWidth" 1000 "quality" 95) }}
         </div>
         {{ end }}
         {{ if $tagLine }}
@@ -69,18 +79,20 @@
         <p class="section-header-description">{{ $description | markdownify }}</p>
         {{ end }}
         {{ if $ctaText }}
-        <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1 mt-6 justify-center">
-            <span>{{ $ctaText }}</span>
-            <span>→</span>
-        </a>
+        <div class="mt-6 {{ $ctaAlignClass }}">
+            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                {{ $ctaText }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+        </div>
         {{ end }}
     </div>
     {{ if and $image (not $imageAbove) }}
-    <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} justify-center">
-        {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full rounded-lg") }}
+    <div class="section-header-image mt-10 w-full {{ $imageDisplayClass }} {{ $imageJustifyClass }}">
+        {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full rounded-lg" "maxWidth" 1500 "quality" 95) }}
     </div>
     {{ end }}
     {{ if $cards }}
-    {{ partial "template-partials/template-mini-cards.html" $cards }}
+    {{ partial "template-partials/template-mini-cards.html" (dict "cards" $cards "cols" $cardsCols) }}
     {{ end }}
 </section>

@@ -1,4 +1,3 @@
-/* purgecss start ignore */
 @mixin container-2xl {
     @media (min-width: 1536px) {
         max-width: 1536px;
@@ -16,4 +15,3 @@
         @include container-2xl();
     }
 }
-/* purgecss end ignore */

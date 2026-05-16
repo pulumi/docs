@@ -560,7 +560,7 @@ const baseSecurityHeadersConfig = {
     contentSecurityPolicy: {
         // Allow embedding from LearnWorlds (LMS). X-Frame-Options is ignored by modern
         // browsers when frame-ancestors is present in CSP.
-        contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com",
+        contentSecurityPolicy: "frame-ancestors 'self' *.learnworlds.com academy.pulumi.com",
         override: false,
     },
     // These remaining options are derived from:
@@ -909,12 +909,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
-            pathPattern: "/css/marketing-homepage.*.css",
-            cachePolicyId: oneYearCachePolicy.id,
-            responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-        {
-            ...baseCacheBehavior,
             pathPattern: "/js/bundle.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
@@ -946,12 +940,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/js/homepage.*.js",
-            cachePolicyId: oneYearCachePolicy.id,
-            responseHeadersPolicyId: ImmutableCachePolicy.id,
-        },
-        {
-            ...baseCacheBehavior,
-            pathPattern: "/js/marketing-homepage.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },

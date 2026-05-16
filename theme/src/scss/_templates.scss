@@ -220,7 +220,8 @@
 }
 
 .template-card {
-    @apply flex flex-1 items-start rounded-2xl p-8 border border-gray-300;
+    @extend .card;
+    @apply flex flex-1 items-start p-8;
 
     &.template-card--highlight {
         @apply bg-violet-50;
@@ -302,10 +303,9 @@
 }
 
 .template-feature-card-title {
-    @apply font-body text-black font-semibold mb-6 text-heading-xs;
+    @apply font-body text-black font-semibold mt-0! mb-3 text-heading-xs;
     line-height: 38.5px;
     letter-spacing: -1.4px;
-    margin: 0 !important;
 }
 
 .template-feature-card-description {
@@ -342,6 +342,49 @@
     }
 }
 
+.template-feature-callout {
+    @apply font-body bg-violet-50;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.template-feature-callout-bg-1 {
+        background-image: url('/images/template-testimonial-bg-1.svg');
+    }
+
+    &.template-feature-callout-bg-2 {
+        background-image: url('/images/template-testimonial-bg-2.svg');
+    }
+
+    .feature-callout-tag-line {
+        font-family: "Monaspace Neon Var", monospace;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: #404041;
+    }
+
+    .feature-callout-title {
+        @include section-header();
+        @apply mb-0;
+    }
+
+    .feature-callout-lead {
+        @apply text-xl md:text-2xl text-black m-0;
+    }
+
+    .feature-callout-description {
+        @include section-description();
+        @apply text-body-s text-black;
+
+        a {
+            @apply text-inherit no-underline;
+        }
+    }
+}
+
 .template-location {
     .location-tag-line {
         @include section-hint-accent();
@@ -366,20 +409,9 @@
     }
 }
 
-.template-footer {
-    .template-footer-title {
-        @include section-header-small();
-        @apply text-heading-xs;
-
-        @include screen-sm {
-            @apply text-heading-s;
-        }
-    }
-}
-
 .template-sidebar-nav {
-    @apply rounded-xl p-5 pb-3;
-    border: 0.5px solid #AAA;
+    @extend .card;
+    @apply p-5 pb-3;
 
     .sidebar-nav-heading {
         @apply font-semibold text-sm text-black mb-2;
@@ -523,24 +555,6 @@
     }
 }
 
-[class*="template-"] {
-    .cta {
-        @apply text-violet-primary font-semibold font-body no-underline;
-
-        &:hover {
-            @apply underline;
-        }
-
-        &--button {
-            @apply font-normal inline-flex items-center gap-1 px-5 py-3 rounded-lg bg-violet-primary text-white no-underline;
-
-            &:hover {
-                @apply bg-violet-800 no-underline;
-            }
-        }
-    }
-}
-
 .template-section-header {
 
     .section-header-image-above-img {
@@ -573,6 +587,16 @@
 
         a {
             @apply text-inherit no-underline;
+        }
+    }
+
+    &.section-header--left {
+        .section-header-tag-line {
+            @apply text-left;
+        }
+
+        .section-header-description {
+            @apply max-w-2xl ml-0 mr-auto;
         }
     }
 }
@@ -972,7 +996,8 @@
     }
 
     .social-carousel-card {
-        @apply border border-gray-300 rounded-2xl p-4 md:p-8 flex flex-col gap-4;
+        @extend .card;
+        @apply p-4 md:p-8 flex flex-col gap-4;
         min-height: 320px;
         width: 100%;
 
@@ -1038,11 +1063,9 @@
     }
 
     .case-study-card {
-        @apply flex flex-col rounded-2xl border border-gray-300 no-underline text-black text-left;
-
-        &:hover {
-            @apply border-violet-400;
-        }
+        @extend .card;
+        @extend .card-hover;
+        @apply flex flex-col no-underline text-black text-left;
 
         &--half {
             @apply flex-1 items-center justify-center p-8;

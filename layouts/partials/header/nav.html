@@ -1,0 +1,89 @@
+{{- $nav := site.Data.header_nav -}}
+
+<header
+  class="sticky top-0 z-40 w-full border-b border-gray-200 bg-white"
+>
+  <div class="flex h-16 items-center justify-between gap-2 px-4 md:px-6">
+
+    <a href="/" data-track="header-pulumi-logo"
+       class="flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:ring-offset-4 focus-visible:outline-1 focus-visible:outline-transparent"
+       aria-label="Pulumi home">
+      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+    </a>
+
+    {{ partial "header/nav-desktop.html" $nav }}
+
+    <div class="flex items-center gap-2">
+      <!-- Desktop CTAs -->
+      {{ partial "github-star-button.html" (dict
+          "variant" "header"
+          "track" "header-github-stars"
+          "extraClass" "hidden nav-desktop:inline-flex") }}
+      <a href="{{ $nav.cta.contact.href }}"
+         {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+         class="hidden nav-desktop:inline-flex btn btn-outline">
+        {{ $nav.cta.contact.label }}
+      </a>
+      <a href="{{ $nav.cta.signIn.href }}"
+         {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+         data-nav-loggedout
+         class="hidden nav-desktop:inline-flex btn btn-outline">
+        {{ $nav.cta.signIn.label }}
+      </a>
+      <a href="https://app.pulumi.com"
+         data-track="header-dashboard"
+         data-nav-dashboard
+         style="display:none"
+         class="hidden nav-desktop:inline-flex btn btn-primary">
+        Dashboard
+      </a>
+      <a href="{{ site.Params.cta.primary.href }}"
+         {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+         data-role="cta-get-started"
+         data-nav-loggedout
+         class="hidden nav-desktop:inline-flex btn btn-primary">
+        {{ site.Params.cta.primary.label }}
+      </a>
+      <!-- Mobile: CTAs visible at sm+, hamburger always visible -->
+      <div class="flex gap-2 nav-desktop:hidden">
+        <div class="max-sm:hidden flex gap-2">
+          {{ partial "github-star-button.html" (dict
+              "variant" "header"
+              "track" "header-github-stars-mobile"
+              "extraClass" "inline-flex") }}
+          <a href="{{ $nav.cta.contact.href }}"
+            {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+            class="btn btn-outline">
+            {{ $nav.cta.contact.label }}
+          </a>
+          <a href="{{ $nav.cta.signIn.href }}"
+             {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+             data-nav-loggedout
+             class="btn btn-outline">
+            {{ $nav.cta.signIn.label }}
+          </a>
+          <a href="https://app.pulumi.com"
+             data-track="header-dashboard"
+             data-nav-dashboard
+             style="display:none"
+             class="btn btn-primary">
+            Dashboard
+          </a>
+          <a href="{{ site.Params.cta.primary.href }}"
+             data-track="header-signup-mobile"
+             data-role="cta-get-started"
+             data-nav-loggedout
+             class="btn btn-primary">
+            {{ site.Params.cta.primary.label }}
+          </a>
+        </div>
+        {{ partial "header/nav-mobile-trigger.html" $nav }}
+      </div>
+    </div>
+
+  </div>
+</header>
+
+{{ partial "header/nav-mobile-sheet.html" $nav }}
+
+<script src="/js/{{ index site.Data.js_manifest "header-nav" }}" defer></script>

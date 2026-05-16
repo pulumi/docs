@@ -47,19 +47,24 @@
                     <div class="card-description mb-6">
                         {{ .Description | markdownify }}
                     </div>
-                    {{ if (isset .Params "redirect_to") }}
-                    <a href="{{ .Params.redirect_to }}" class="text-violet-primary hover:text-violet-primary font-semibold mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
-                    {{ else }}
-                    <a href="{{ .RelPermalink }}" class="text-violet-primary hover:text-violet-primary font-semibold mt-auto inline-flex items-center gap-1 cursor-pointer">Read the story &rarr;</a>
-                    {{ end }}
+                    <div class="mt-auto">
+                        {{ if (isset .Params "redirect_to") }}
+                        <a href="{{ .Params.redirect_to }}" class="btn btn-link btn-xl">
+                            Read the story
+                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                        </a>
+                        {{ else }}
+                        <a href="{{ .RelPermalink }}" class="btn btn-link btn-xl">
+                            Read the story
+                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                        </a>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
             {{ end }}
         </div>
     </section>
-
-    {{/* Footer CTA */}}
-    {{ partial "template-partials/template-footer-cta.html" dict }}
 
 </div>
 {{ end }}

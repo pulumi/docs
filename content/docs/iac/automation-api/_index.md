@@ -27,6 +27,10 @@ Automation API allows you to embed Pulumi within your application code, making i
 Automation API requires the Pulumi CLI to be installed and available in your `PATH` environment variable.
 {{% /notes %}}
 
+{{% notes type="tip" %}}
+Automation API drives the Pulumi engine itself, running updates, previews, refreshes, and destroys from a program. If you instead need to read or modify Pulumi Cloud resources (for example, stack metadata, access tokens, or [Insights](/docs/insights/) data) without running a Pulumi program, use [`pulumi api`](/docs/iac/cli/api/), the CLI command for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) directly.
+{{% /notes %}}
+
 ## Getting started
 
 To learn how to use Automation API, see [Getting Started with Automation API](/docs/using-pulumi/automation-api/getting-started-automation-api/).

@@ -1,0 +1,26 @@
+<svg width="421" height="474" viewBox="0 0 421 474" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_5_1244)">
+<mask id="mask0_5_1244" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-7" y="-82" width="810" height="524">
+<rect width="810" height="524" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 -7 442)" fill="url(#paint0_linear_5_1244)"/>
+</mask>
+<g mask="url(#mask0_5_1244)">
+<path vector-effect="non-scaling-stroke" d="M1084.12 297.573L345.039 297.573C332.55 297.573 322.422 287.448 322.422 274.958L322.422 -368.882" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1085.18 279.919L358.372 279.919C348.73 279.919 340.888 272.087 340.888 262.439L340.888 -376.304" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1082 262.247L371.687 262.247C364.864 262.247 359.345 256.726 359.345 249.903L359.346 -363.58" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1108.54 244.602L385.02 244.602C381.044 244.602 377.812 241.374 377.812 237.393L377.812 -373.123" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1047.04 316.034L191.959 316.034C181.729 316.034 171.922 320.097 164.686 327.314L-56 547.719" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1049.16 334.376L196.339 334.376C188.011 334.376 180.022 337.677 174.136 343.565L-48.6444 566.061" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1052.35 352.718L200.71 352.718C194.282 352.718 188.112 355.267 183.566 359.807L-41.3166 584.403" stroke="#9077F3" stroke-miterlimit="10"/>
+<path vector-effect="non-scaling-stroke" d="M1053.41 371.06L205.09 371.06C200.563 371.06 196.22 372.857 193.015 376.058L-33.9615 602.745" stroke="#9077F3" stroke-miterlimit="10"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_5_1244" x1="405" y1="0" x2="405" y2="83.6384" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<clipPath id="clip0_5_1244">
+<rect width="421" height="474" fill="white" transform="matrix(-1 -1.74846e-07 -1.74846e-07 1 421 0)"/>
+</clipPath>
+</defs>
+</svg>

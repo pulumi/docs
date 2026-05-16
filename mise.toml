@@ -1,5 +1,7 @@
 [tools]
 golang = "1.26"
+hugo = "0.157.0"
 node = "24"
 yarn = "1.22.22"
+vale = "3.14.1"
 

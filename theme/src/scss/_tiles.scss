@@ -6,12 +6,8 @@
     }
 
     .tile {
-        @include transition;
-        @apply block rounded border border-gray-300 cursor-pointer;
-
-        &:hover {
-            @apply shadow-md;
-            transform: scale(1.03);
-        }
+        @extend .card;
+        @extend .card-hover;
+        @apply block;
     }
 }

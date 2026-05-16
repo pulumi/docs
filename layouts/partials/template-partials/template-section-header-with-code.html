@@ -17,6 +17,7 @@ Parameters:
 - code_title: Optional default filename shown in the code panel title bar.
 - cards: Optional array of mini feature cards rendered below the two-column section.
     Each item: { icon: "code", title: "Title", description: "..." }
+- flip: Optional boolean. When true, the code panel renders on the left and the text on the right.
 - anchor: Optional anchor for section id
 */}}
 
@@ -28,11 +29,12 @@ Parameters:
 {{ $codeSnippets := .code_snippets }}
 {{ $codeTitle := .code_title }}
 {{ $cards := .cards }}
+{{ $flip := .flip | default false }}
 {{ $anchor := .anchor }}
 {{ $ctaAsButton := .cta_as_button | default false }}
 
 <section class="template-section-header-with-code" {{ if $anchor }} id="{{ $anchor }}" {{ end }}>
-    <div class="section-header-split-inner flex flex-col xl:flex-row items-start">
+    <div class="section-header-split-inner flex flex-col {{ if $flip }}xl:flex-row-reverse{{ else }}xl:flex-row{{ end }} items-start">
         <div class="section-header-split-content xl:min-w-0">
             {{ if $tagLine }}
             <p class="section-header-split-tag mb-3">{{ $tagLine }}</p>
@@ -46,10 +48,12 @@ Parameters:
             </div>
             {{ end }}
             {{ if $ctaText }}
-            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1">
-                <span>{{ $ctaText }}</span>
-                <span>→</span>
-            </a>
+            <div>
+                <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                    {{ $ctaText }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            </div>
             {{ end }}
         </div>
         {{ if $codeSnippets }}

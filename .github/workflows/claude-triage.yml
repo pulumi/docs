@@ -1,0 +1,361 @@
+name: Pre-merge Review (triage)
+
+# Triage runs on non-draft PR open and on the draft → ready transition.
+# Drafts are the author's workbench — we don't apply labels until they
+# ask for feedback. `ready_for_review` only fires on draft → ready, so
+# `opened` is still needed for PRs that skip the draft phase.
+# It does NOT run on every push (synchronize) — that fires the
+# review-state mark-stale step in claude-code-review.yml instead, which
+# transitions terminal review-state labels (outstanding-issues / no-blockers)
+# to review:stale. It does NOT run on reopen — reopening is usually
+# administrative; the explicit `@claude #new-review` path is the way to
+# request a fresh review on an existing PR.
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+
+jobs:
+  triage:
+    # Skip drafts (the `opened` event fires for both draft and non-draft)
+    # and skip automated PRs from pulumi-bot and dependabot — they have
+    # their own labeling pipelines (label-dependabot.yml) and don't
+    # carry secrets. `ready_for_review` always has `draft: false`, so
+    # the draft guard is a no-op for that event.
+    if: >-
+      !github.event.pull_request.draft
+      && github.event.pull_request.user.login != 'pulumi-bot'
+      && github.event.pull_request.user.login != 'dependabot[bot]'
+
+    concurrency:
+      group: claude-triage-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+
+    steps:
+      # Surface "triage is running" as visible label state from workflow
+      # start — fires ~3s after PR open, before checkout + mise install
+      # (~15-50s combined). Uses `actions/github-script` so the swap runs
+      # pre-checkout (set-review-label.sh isn't on disk yet) without
+      # shell-escape concerns; the cleanup step at end-of-job uses
+      # set-review-label.sh --clear (checkout has completed by then).
+      # STATE_LABELS list mirrors the script's; extend both if the set
+      # ever grows.
+      - name: Set review:triaging label
+        uses: actions/github-script@v7
+        continue-on-error: true
+        with:
+          script: |
+            const pr = context.payload.pull_request.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const stateLabels = [
+              'review:in-progress',
+              'review:outstanding-issues',
+              'review:no-blockers',
+              'review:stale',
+              'review:error',
+            ];
+            const { data: existing } = await github.rest.issues.listLabelsOnIssue({
+              owner, repo, issue_number: pr,
+            });
+            const names = new Set(existing.map(l => l.name));
+            await Promise.all(
+              stateLabels
+                .filter(s => names.has(s))
+                .map(name =>
+                  github.rest.issues.removeLabel({
+                    owner, repo, issue_number: pr, name,
+                  }).catch(() => {})
+                )
+            );
+            if (!names.has('review:triaging')) {
+              await github.rest.issues.addLabels({
+                owner, repo, issue_number: pr, labels: ['review:triaging'],
+              });
+            }
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      # Install mise-managed tools (Vale, etc.) so the prose-check pass
+      # below can run vale alongside the Haiku spelling/grammar call.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+
+      - name: Check repository write access
+        id: check-access
+        run: |
+          # Use the actual repository the workflow is running in, not a hardcoded
+          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
+          # hardcoded owner/repo would always return "none" in fork-based testing
+          # and in repo transfers.
+          REPO_FULL="${{ github.repository }}"
+          AUTHOR="${{ github.event.pull_request.user.login }}"
+
+          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ Copilot bot $AUTHOR is whitelisted for triage"
+            exit 0
+          fi
+
+          PERMISSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
+            | jq -r '.permission // "none"')
+
+          if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
+          else
+            echo "has_write_access=false" >> $GITHUB_OUTPUT
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
+          fi
+
+      # Triage is a narrow classification task: read the PR, decide which
+      # domains it touches, and emit a label delta. Almost all of that is
+      # deterministic path matching and grep-on-diff, so it runs in shell
+      # via triage-classify.py — no API call needed.
+      #
+      # The model is invoked ONLY when the shell classifies the PR as
+      # trivial or frontmatter-only — the two cases that short-circuit the
+      # full review and therefore need a sanity-check prose pass to guard
+      # against rubber-stamping. Most PRs skip the model entirely.
+      #
+      # When invoked, the model gets a focused prose-check prompt and a
+      # diff slice (capped at 50KB — trivial/frontmatter-only PRs are
+      # small by definition). Direct curl to the Anthropic API keeps
+      # cold-start latency near zero.
+      #
+      # continue-on-error keeps the workflow green on transient API or
+      # gh failures. A missed triage is self-healing at the next
+      # ready-transition, and claude-code-review.yml has a missing-label
+      # fallback so initial review still runs correctly.
+      - name: Run triage classification
+        if: steps.check-access.outputs.has_write_access == 'true'
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # 1. Gather PR state.
+          PR_DATA=$(gh pr view "$PR" --repo "$REPO" \
+            --json title,body,author,files,labels,additions,deletions,commits,isDraft)
+          # 100KB diff cap. The
+          # classifier doesn't need every byte to detect frontmatter /
+          # link / code-block / version-claim signals.
+          DIFF=$(gh pr diff "$PR" --repo "$REPO" | head -c 100000 || true)
+
+          # 2. Deterministic classification. No API call.
+          PR_DATA_FILE=$(mktemp)
+          trap 'rm -f "$PR_DATA_FILE"' EXIT
+          printf '%s' "$PR_DATA" > "$PR_DATA_FILE"
+          CLASS=$(printf '%s' "$DIFF" \
+            | python3 .claude/commands/docs-review/scripts/triage-classify.py "$PR_DATA_FILE" 2>&1) \
+            || CLASS=""
+          if [[ -z "$CLASS" ]] || ! echo "$CLASS" | jq -e . >/dev/null 2>&1; then
+            echo "triage: pr=$PR error=classifier_failed"
+            echo "$CLASS" | head -c 2000 >&2
+            exit 0
+          fi
+
+          DOMAINS_JSON=$(echo "$CLASS" | jq -r '.target_domains // [] | .[]')
+          MIXED=$(echo "$CLASS" | jq -r '.mixed // false')
+          TRIVIAL=$(echo "$CLASS" | jq -r '.trivial // false')
+          FRONTMATTER_ONLY=$(echo "$CLASS" | jq -r '.frontmatter_only // false')
+          PROSE_CHECK_NEEDED=$(echo "$CLASS" | jq -r '.prose_check_needed // false')
+
+          # 3. Conditional prose check (model call only for trivial /
+          #    frontmatter-only PRs).
+          PROSE_CONCERNS=""
+          if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
+            # 50KB diff cap — trivial/frontmatter-only PRs are tiny.
+            PROSE_DIFF=$(printf '%s' "$DIFF" | head -c 50000)
+            PROSE_RULES=$(cat .claude/commands/docs-review/triage-prose.md \
+                              .claude/commands/docs-review/references/spelling-grammar.md)
+            REQUEST=$(jq -n \
+              --arg rules "$PROSE_RULES" \
+              --arg diff "$PROSE_DIFF" \
+              '{
+                model: "claude-haiku-4-5-20251001",
+                max_tokens: 512,
+                messages: [{
+                  role: "user",
+                  content: ("Apply the rules below to the diff that follows.\n\n=== RULES ===\n\n" + $rules + "\n\n=== DIFF (truncated to 50000 bytes) ===\n\n" + $diff)
+                }]
+              }')
+            RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+              -H "x-api-key: $ANTHROPIC_API_KEY" \
+              -H "anthropic-version: 2023-06-01" \
+              -H "content-type: application/json" \
+              -d "$REQUEST" || echo '{"error":"curl_failed"}')
+            TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+            if [[ -n "$TEXT" ]]; then
+              PROSE_JSON=$(echo "$TEXT" \
+                | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+                | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+                | tr -d '\r')
+              if echo "$PROSE_JSON" | jq -e . >/dev/null 2>&1; then
+                PROSE_CONCERNS=$(echo "$PROSE_JSON" | jq -r '.prose_concerns // [] | .[]')
+              fi
+            fi
+          fi
+
+          # 3b. Vale style check — runs alongside the Haiku call (different
+          # coverage). Same gate (PROSE_CHECK_NEEDED) because trivial /
+          # frontmatter-only PRs skip the full review and therefore skip
+          # the Vale step in claude-code-review.yml. Findings are filtered
+          # to PR-added lines so we don't surface pre-existing prose.
+          VALE_CONCERNS=""
+          if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
+            VALE_FILES=$(gh pr diff "$PR" --repo "$REPO" --name-only \
+              | grep -E '^content/(docs|blog)/.*\.md$' || true)
+            if [[ -n "$VALE_FILES" ]]; then
+              vale --no-exit --output=JSON $VALE_FILES > .vale-raw.json 2>/dev/null \
+                || echo '{}' > .vale-raw.json
+              python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+                --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+                || echo '[]' > .vale-findings.json
+              VALE_CONCERNS=$(jq -r '.[] | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
+            fi
+          fi
+
+          # 4. Build TARGET label set.
+          declare -A TARGET
+          for d in $DOMAINS_JSON; do
+            TARGET[$d]=1
+          done
+          [[ "$MIXED" == "true" ]] && TARGET["domain:mixed"]=1
+          if [[ "$TRIVIAL" == "true" ]]; then
+            TARGET["review:trivial"]=1
+          elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
+            TARGET["review:frontmatter-only"]=1
+          fi
+          # Prose concerns flag — applies to either trivial or
+          # frontmatter-only when EITHER the Haiku spelling/grammar check
+          # OR the Vale style check turned up issues.
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
+            TARGET["review:prose-flagged"]=1
+          fi
+
+          # 5. Current triage-managed labels (exclude state labels —
+          # review:triaging is owned by the wrapping set/clear steps in
+          # this workflow; the others are owned by claude-code-review.yml /
+          # claude-update.yml).
+          declare -A EXISTING
+          while IFS= read -r lbl; do
+            case "$lbl" in
+              review:triaging|review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
+                continue ;;
+              domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
+                EXISTING["$lbl"]=1 ;;
+            esac
+          done < <(echo "$PR_DATA" | jq -r '.labels[].name')
+
+          # 6. Compute ADD / REMOVE.
+          ADD_LIST=()
+          for t in "${!TARGET[@]}"; do
+            [[ -z "${EXISTING[$t]:-}" ]] && ADD_LIST+=("$t")
+          done
+          REMOVE_LIST=()
+          for e in "${!EXISTING[@]}"; do
+            [[ -z "${TARGET[$e]:-}" ]] && REMOVE_LIST+=("$e")
+          done
+
+          # 7. Apply the delta. Single gh pr edit call when non-empty.
+          ARGS=()
+          if (( ${#ADD_LIST[@]} > 0 )); then
+            ARGS+=(--add-label "$(IFS=,; echo "${ADD_LIST[*]}")")
+          fi
+          if (( ${#REMOVE_LIST[@]} > 0 )); then
+            ARGS+=(--remove-label "$(IFS=,; echo "${REMOVE_LIST[*]}")")
+          fi
+          if (( ${#ARGS[@]} > 0 )); then
+            gh pr edit "$PR" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+
+          # 8. Prose-check advisory comment.
+          # Always delete any prior TRIAGE_PROSE comment first so re-triage
+          # cleans up (e.g., a re-classification that demotes the PR from
+          # trivial to non-trivial must drop the stale prose comment).
+          # Then post fresh when prose_check_needed AND concerns are non-empty.
+          gh api "repos/$REPO/issues/$PR/comments" \
+              --jq '.[] | select(.body | startswith("<!-- TRIAGE_PROSE -->")) | .id' \
+              | while read -r cid; do
+                  [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+                done
+
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
+              if [[ "$TRIVIAL" == "true" ]]; then
+                SHORTCIRCUIT_LABEL="review:trivial"
+              else
+                SHORTCIRCUIT_LABEL="review:frontmatter-only"
+              fi
+              BULLETS=""
+              if [[ -n "$PROSE_CONCERNS" ]]; then
+                BULLETS+=$(echo "$PROSE_CONCERNS" | sed 's/^/- [spelling] /')
+              fi
+              if [[ -n "$VALE_CONCERNS" ]]; then
+                [[ -n "$BULLETS" ]] && BULLETS+=$'\n'
+                BULLETS+=$(echo "$VALE_CONCERNS" | sed 's/^/- [style] /')
+              fi
+              BODY=$(cat <<EOF
+          <!-- TRIAGE_PROSE -->
+          🔍 **Triage prose check** — possible issues in the diff. Full review is skipped (\`$SHORTCIRCUIT_LABEL\`); please double-check before merging.
+
+          $BULLETS
+
+          _This is a simplified spelling/grammar/style check in lieu of a full review. Reject false positives at your discretion._
+          EOF
+          )
+              gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
+          fi
+
+          # 9. Summary line for the workflow log.
+          DOMAINS_CSV=$(echo "$DOMAINS_JSON" | paste -sd, -)
+          ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
+          REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
+          PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
+          VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+
+      # Clear the triaging label whether classification succeeded or not
+      # — the early-set step ran unconditionally (no access gate), so the
+      # cleanup must also run unconditionally to leave no orphan label.
+      # The next state (review:in-progress / nothing) is owned by
+      # claude-code-review.yml or by the trivial/frontmatter-only
+      # short-circuit. set-review-label.sh --clear strips any state label
+      # currently present without adding a new one.
+      - name: Clear review:triaging label
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Read current label state and only --clear if triaging is still
+          # the active state label — avoids stomping on a downstream
+          # in-progress (theoretically possible if claude-code-review's
+          # workflow_run fires between our final label-edit and this step,
+          # but unlikely given triage is the same job).
+          LABELS=$(gh pr view "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}" --json labels \
+            --jq '[.labels[].name] | join(",")' || echo "")
+          if [[ ",$LABELS," == *",review:triaging,"* ]]; then
+            .claude/commands/docs-review/scripts/set-review-label.sh \
+              --pr "${{ github.event.pull_request.number }}" \
+              --repo "${{ github.repository }}" \
+              --clear
+          fi

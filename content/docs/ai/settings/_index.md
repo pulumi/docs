@@ -2,7 +2,7 @@
 title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
-meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, and task modes.
+meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, task modes, and notification preferences.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
@@ -12,7 +12,7 @@ menu:
         identifier: ai-settings
 ---
 
-Neo can be configured at both the organization and repository level. Organization-level settings control default behaviors and capabilities for your team, while repository-level instructions let you define project-specific conventions that Neo follows automatically.
+Neo can be configured at the organization, repository, and user level. Organization-level settings control default behaviors and capabilities for your team, repository-level instructions let you define project-specific conventions that Neo follows automatically, and user-level settings let each person tailor their own experience.
 
 ## Neo access
 
@@ -220,3 +220,31 @@ Organization administrators can set the default task mode. The available modes d
 {{% notes type="info" %}}
 Task modes control approvals during execution. [Plan Mode](/docs/ai/tasks/#plan-mode) is a separate, opt-in feature that controls what happens before execution. You can use Plan Mode with any task mode.
 {{% /notes %}}
+
+## Notifications
+
+Notifications are user-level settings: each person configures their own preferences from their account settings, independent of any organization. They alert you when Neo needs your attention on a task while the Pulumi Cloud tab is in the background. Browser and audio notifications are both off by default.
+
+{{% notes type="info" %}}
+The "Neo settings" panel only appears for users whose organization has Neo enabled.
+{{% /notes %}}
+
+To configure notifications:
+
+1. Navigate to your account settings in Pulumi Cloud
+1. Locate the "Neo settings" panel
+1. Turn browser notifications and audio notifications on or off independently
+
+Notifications fire when Neo completes a response or requests your approval before continuing. To avoid interrupting you while you're actively watching a task, Neo suppresses both notification types whenever the Pulumi Cloud tab has focus.
+
+### Browser notifications
+
+When enabled, Neo sends native browser notifications that appear in your operating system's notification area, including when the Pulumi Cloud tab is in the background or your browser is minimized. Clicking a notification brings the browser to the foreground and opens the relevant task.
+
+Enabling this setting prompts your browser for notification permission. If you decline the prompt, or if you have previously blocked notifications for Pulumi Cloud, the toggle reverts to off and an "Enable notifications in your browser settings" message appears. To re-enable after a block, grant the permission in your browser settings and then turn the toggle on again.
+
+Browser notifications also require your operating system to allow notifications for your browser. If you've enabled the toggle and granted browser permission but don't see notifications, check your OS notification settings and confirm they are enabled for your browser.
+
+### Audio notifications
+
+When enabled, Neo plays a short two-note chime when a task needs your attention.

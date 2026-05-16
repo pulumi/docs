@@ -14,41 +14,58 @@ tiers:
         items:
             - title: Individual
               subtitle: Free forever for individuals.
-              price: Free
-              price_label:
+              price: $0
+              price_label: forever
               unit:
               note: No credit card required
-              items: |
-                You get:
-                - 1 user
-                - IaC state management
-                - Unlimited projects, stacks, and environments
-                - Unlimited updates and history
-                - 500 free deployment minutes
+              cta:
+                  label: Get started
+                  href: https://app.pulumi.com/signup
+                  style: outline
+                  data_role: cta-get-started
+              features_intro: "Includes:"
+              features:
+                  - 1 user
+                  - IaC state management
+                  - Unlimited projects, stacks, and environments
+                  - Unlimited updates and history
+                  - 500 free deployment minutes
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
               price_label: /mo
               unit: "**500** resources included"
-              note: Additional resources **$0.1825**/mo
-              items: |
-                Everything in **Individual**, plus:
-                - Up to 10 users
-                - Secure collaboration and CI/CD
-                - AI assistance with Pulumi Neo
-                - Resource search
-                - OIDC and Org Access Tokens
-                - Webhooks
-                - Automatic secrets rotation
-                - Community support
+              note: Additional resources $0.1825/mo
+              cta:
+                  label: Start a free trial
+                  href: https://app.pulumi.com/signup?create-organization=1
+                  style: primary
+              features_intro: "Everything in **Individual**, plus:"
+              features:
+                  - Up to 10 users
+                  - Secure collaboration and CI/CD
+                  - AI assistance with Pulumi Neo
+                  - Resource search
+                  - OIDC and Org Access Tokens
+                  - Webhooks
+                  - Automatic secrets rotation
+                  - Community support
             - title: Enterprise
               subtitle: Security and collaboration for large teams.
+              badge: Popular
               price: $400
               price_label: /mo
               unit: "**2,000** resources included"
-              note: Additional resources start at **$0.365**/mo
-              items: |
-                  Everything in **Team**, plus:
+              note: Additional resources start at $0.365/mo
+              cta:
+                  label: Start a free trial
+                  href: https://app.pulumi.com/signup?create-organization=1
+                  style: primary
+              cta_secondary:
+                  label: Contact sales
+                  href: /contact/?form=sales
+              features_intro: "Everything in **Team**, plus:"
+              features:
                   - Unlimited users
                   - SAML/SSO and RBAC
                   - Internal developer platform (IDP)
@@ -64,15 +81,25 @@ tiers:
               price_label:
               unit:
               note: Volume discounts and invoicing
-              items: |
-                  Everything in **Enterprise**, plus:
-                  - [Self-hosting available](/product/self-hosted)
+              cta:
+                  label: Contact sales
+                  href: /contact/?form=sales
+                  style: primary
+              features_intro: "Everything in **Enterprise**, plus:"
+              features:
+                  - "[Self-hosting available](/product/self-hosted)"
                   - Built-in compliance (NIST, PCI, and more)
                   - Automatic group & user sync (SCIM)
                   - Audit logs export
                   - Volume pricing and invoicing
                   - Private Slack and Professional Services
                   - 24x7 Enterprise Support available
+
+testimonial:
+    quote: Pulumi helped our team ship a new product faster. We needed one tool to set up and manage multi-cloud, multi-region Kubernetes clusters that infrastructure and applications teams could use collaboratively.
+    author: Justin Fitzhugh
+    role: VP of Cloud Platform Engineering
+    logo: snowflake
 
 customers:
     - stat: "**5x faster** time to market"
@@ -94,13 +121,15 @@ comparison_table:
           tables:
             # Pulumi IaC table
             - header: Infrastructure as Code
-              subheader: Foundational capability is included in all editions
+              icon: custom/pulumi-iac
               rows:
                 - title: On-demand resource price
                   items:
                     - content: Free
-                    - content: $0.00025/hour<br>($0.185/month)
-                    - content: Starting at $0.0005/hour<br>($0.365/month)
+                    - content: $0.00025/hour
+                      subtext: $0.185/month
+                    - content: Starting at $0.0005/hour
+                      subtext: $0.365/month
                     - content: Custom
                 - title: Commitment pricing
                   items:
@@ -317,13 +346,15 @@ comparison_table:
           tables:
             ## Pulumi ESC table
           - header: Secrets & Configuration
-            subheader: Secure configuration management across all environments
+            icon: custom/pulumi-secrets
             rows:
               - title: On-demand secret price
                 items:
                   - content: 25 free
-                  - content: $0.000685/hour<br>($0.50/mo)
-                  - content: $0.001/hour<br>($0.75/mo)
+                  - content: $0.000685/hour
+                    subtext: $0.50/mo
+                  - content: $0.001/hour
+                    subtext: $0.75/mo
                   - content: Custom
               - title: Price per plaintext config
                 items:
@@ -431,24 +462,29 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-              
+
           ## Pulumi Insights Table
           - header: Insights & Governance
-            subheader: Visibility and governance across your entire cloud estate
+            icon: custom/pulumi-insights
             rows:
               - title: On-demand resource price
                 items:
                   - content: Free
-                  - content: $0.00025/hour<br>($0.185/month)
-                  - content: Starting at $0.0005/hour<br>($0.365/month)
+                  - content: $0.00025/hour
+                    subtext: $0.185/month
+                  - content: Starting at $0.0005/hour
+                    subtext: $0.365/month
                   - content: Custom
               - title: Workflow cost per minute/ included per month
                 link: /pricing#faq
                 items:
                   - content: 500 free
-                  - content: $0.01<br>3,000 included
-                  - content: $0.01 / Custom<br>3,000 included
-                  - content: $0.01 / Custom<br>3,000 included                  
+                  - content: $0.01
+                    subtext: 3,000 included
+                  - content: $0.01 / Custom
+                    subtext: 3,000 included
+                  - content: $0.01 / Custom
+                    subtext: 3,000 included
               - title: Resource search
                 link: /docs/insights/search/
                 items:
@@ -478,28 +514,28 @@ comparison_table:
                   - content: _check
               - title: Policy Enforcement
                 link: /docs/insights/policy-as-code
-                items: 
+                items:
                   - content: "Manual"
                   - content: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
                   - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
                   - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
               - title: Preventative Policies
                 link: /docs/insights/preventative-vs-audit-policies/
-                items: 
+                items:
                   - content: Manual
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Audit Policies
                 link: /docs/insights/preventative-vs-audit-policies/
-                items: 
+                items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Pre-built Policy Packs
                 link: /docs/insights/pre-built-packs
-                items: 
+                items:
                   - content: _blank
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices
@@ -508,8 +544,10 @@ comparison_table:
                 link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
                 items:
                   - content: _blank
-                  - content: Up to 25 policies (1 pack limit)
-                  - content: Up to 100 policies (3 pack limit)
+                  - content: Up to 25 policies
+                    subtext: 1 pack limit
+                  - content: Up to 100 policies
+                    subtext: 3 pack limit
                   - content: Unlimited
               - title: Enforcement Modes
                 link: /docs/insights/policy/#local-policy-execution
@@ -517,10 +555,11 @@ comparison_table:
                   - content: _blank
                   - content: Advisory & Mandatory
                   - content: Advisory & Mandatory
-                  - content: Advisory, Mandatory & Remediation 
+                  - content: Advisory, Mandatory & Remediation
           ## Pulumi Neo Table
           - header: Infrastructure AI
-            subheader: Intelligent assistance across all platform capabilities
+            icon: custom/pulumi-neo
+            icon_weight: fill
             rows:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
@@ -531,7 +570,7 @@ comparison_table:
                   - content: _check
           ## Pulumi Workflow table
           - header: Internal Developer Platform
-            subheader: Self-service capabilities with guardrails
+            icon: custom/pulumi-idp
             rows:
               - title: Developer portal
                 items:
@@ -540,7 +579,7 @@ comparison_table:
                   - content: Host private templates
                   - content: Host private templates
           - header: Support
-            subheader: 
+            icon: phosphor/lifebuoy
             rows:
               - title: Support
                 items:
@@ -648,7 +687,7 @@ faq:
         - question: How are ESC secrets billed?
           answer: |
             ESC secrets are billed hourly at the rate of $0.000685 for Team ($0.50 per secret per month) and $0.001 for Enterprise ($0.75 per secret per month). This is the cost of managing an ESC secret for a full hour.
-            
+
             For example, if you have your secrets stored for 4 days on Pulumi Cloud Team Edition, the price you pay would be 4 x 24 x 0.5 / 730 = $0.0657
 
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.

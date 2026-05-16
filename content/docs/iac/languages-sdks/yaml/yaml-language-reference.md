@@ -23,7 +23,7 @@ Pulumi supports programs written in YAML or JSON.  In both cases, the programs (
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `config` | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
+| `config` | [config options](#config) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
 | `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
 | `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
 | `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
@@ -38,17 +38,24 @@ The supported expression forms for each of these is detailed below.
 
 ### Config
 
-`config` is a map of config property keys to either values or structured declarations ([see here](/docs/reference/pulumi-yaml/#config-options)).
+{{% notes %}}
+Pulumi YAML programs declare config using the same project-level `config` schema documented in the [Pulumi project file reference](/docs/iac/concepts/projects/project-file/#config-options). The schema is shown again here for convenience, alongside YAML-flavored examples.
+{{% /notes %}}
 
-In beta, Pulumi YAML projects used the `configuration` key. This will eventually be deprecated; switching from `configuration` to `config` will not break existing projects.
+`config` is a map of config property keys to either values or structured declarations. The value of `config` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required; when `type` is omitted, the type is inferred from `default`.
 
-The value of `config` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below. Each item in this object represents an independent config input. Either `type` or `default` is required.
+A config key can also map directly to a scalar value as a shorthand for a structured declaration with only `default` set. For example, `replicas: 3` is equivalent to `replicas: { default: 3 }`.
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `type` | string | No | No | The data type for the config value. Valid types are: `String`, `Number`, `Integer`, `Boolean`, `Object`, `List<String>`, `List<Number>`, `List<Integer>`, `List<Boolean>`, and `List<Object>`. |
-| `default` | any | No | No | Default is a value of the appropriate type for the template to use if no value is specified. |
-| `secret` | bool | No | No | Secret specifies if the config value should be encrypted as a secret. |
+| `type` | string | No | No | The data type for the config value. Valid types are: `string`, `boolean`, `integer`, `array`, and `object`. |
+| `items` | object | Required if `type` is `array` | No | A nested structured declaration of the type of the items in the array. |
+| `default` | any | No | No | A default value of the appropriate type for the program to use if no value is set on the stack. |
+| `secret` | bool | No | No | When `true`, the config value is encrypted as a secret. Secret values must be set with `pulumi config set --secret`. |
+
+{{% notes type="warning" %}}
+In beta, Pulumi YAML projects used a top-level `configuration` key, which accepted a different schema with Title-Case types — `String`, `Number`, `Integer`, `Boolean`, `Object`, and the generic forms `List<String>`, `List<Number>`, `List<Integer>`, `List<Boolean>`, and `List<Object>`. Programs that still use `configuration` continue to work, but the YAML runtime emits a deprecation warning when it loads `Pulumi.yaml`. New programs should use `config` with the schema above; the `array` + `items` form replaces `List<T>`, and `number` is not a separate type (use `integer`).
+{{% /notes %}}
 
 The following example demonstrates several common config declarations, including scalar types, secrets, lists, and objects:
 
@@ -56,26 +63,34 @@ The following example demonstrates several common config declarations, including
 name: my-project
 runtime: yaml
 config:
+  # Shorthand for a default value (type inferred from the value)
+  greeting: hello
   # A required string value (no default)
   environment:
-    type: String
-  # A number with a default
+    type: string
+  # An integer with a default
   replicas:
-    type: Number
+    type: integer
     default: 3
-  # A secret string (encrypted at rest)
+  # A boolean flag with a default
+  enableLogging:
+    type: boolean
+    default: true
+  # A required secret string (set with `pulumi config set --secret`)
   databasePassword:
-    type: String
+    type: string
     secret: true
   # A list of strings
   allowedRegions:
-    type: List<String>
+    type: array
+    items:
+      type: string
     default:
       - us-east-1
       - us-west-2
   # An object (map of string keys to any values)
   apiConfig:
-    type: Object
+    type: object
     default:
       endpoint: https://api.example.com
       timeout: 30

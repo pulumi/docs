@@ -185,11 +185,11 @@ Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta
 }
 ```
 
-**Meta config** — no template; starts from a `#20054E` background, composites the feature image offset to the right, applies the overlay and logo, then draws the title text:
+**Meta config** — no template; starts from a `#231F33` background, composites the feature image offset to the right, applies the overlay and logo, then draws the title text:
 
 ```json
 {
-  "background_color": "#20054E",
+  "background_color": "#231F33",
   "feature_image": "<absolute-path-to-blog-dir>/feature.png",
   "overlay": "templates/meta-overlay.png",
   "logo": "templates/meta-logo.png",

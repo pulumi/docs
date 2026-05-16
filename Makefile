@@ -19,6 +19,7 @@ ensure: clean
 	./scripts/ensure.sh
 	$(MAKE) sync-icons
 	./scripts/fetch-openapi-spec.sh
+	node scripts/fetch-github-stars.js
 	$(MAKE) build-assets
 
 .PHONY: sync-icons
@@ -49,13 +50,6 @@ generate-related-tags:
 	@echo -e "\033[0;32mGenerating tag-based related posts...\033[0m"
 	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
 	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
-
-.PHONY: generate
-generate:
-	@echo -e "\033[0;32mGENERATE:\033[0m"
-	NOBUILD=true ./scripts/run_typedoc.sh
-	./scripts/generate_python_docs.sh
-	PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/cli/commands
 
 .PHONY: build
 build:
@@ -177,6 +171,11 @@ new-blog-post:
 .PHONY: lint
 lint:
 	./scripts/lint.sh
+
+.PHONY: lint-prose
+lint-prose:
+	@echo -e "\033[0;32mLINT PROSE (Vale):\033[0m"
+	./scripts/lint-prose.sh $(ARGS)
 
 .PHONY: format
 format:

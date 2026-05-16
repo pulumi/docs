@@ -21,8 +21,9 @@
       features                — template-features.html
       social_carousel          — template-social-carousel.html (fields: title, description, cta_text, cta_link, tweets, anchor)
       case_study_cards        — template-case-study-cards.html (fields: title, description, cta_text, cta_link, cards[{slug, size}], anchor)
-      footer_cta              — template-footer-cta.html
+      case_study_grid         — template-case-study-grid.html (fields: title, description, cards[{slug, title, description, use_quote, cta_text, cta_link}], anchor)
       video_embed             — template-video-embed.html (fields: youtube_id, title, poster_image, poster_alt, anchor)
+      feature_callout         — template-feature-callout.html (fields: tag_line, title, lead, description, cta_primary_text/link, cta_secondary_text/link, background, anchor)
 
     Usage in layouts:
     {{ partial "template-page-content.html" . }}

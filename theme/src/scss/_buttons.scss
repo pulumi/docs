@@ -1,88 +1,13 @@
-@import "mixins";
-
-// NOTE: @utility declarations for btn/btn-lg/btn-orange are in main.scss (top-level)
-// because @utility cannot be nested inside @layer.
-
-.btn {
-    @include transition;
-
-    @apply cursor-pointer text-sm whitespace-nowrap py-2 px-3 rounded inline-block;
-    @apply bg-violet-primary border border-violet-primary text-white text-center;
-
-    &:hover {
-        @apply bg-violet-800 border-violet-800 text-white;
-    }
-
-    &:active {
-        @apply bg-violet-900 border-violet-900 text-white;
-    }
-}
-
-.btn-secondary {
-    @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
-
-    &:hover {
-        @apply bg-white text-black border-gray-600;
-    }
-}
-
-.btn-sm {
-    @apply text-xs;
-}
-
-.btn-lg {
-    @apply py-3 px-5;
-}
-
-.btn-orange {
-    @apply bg-orange-500 border-orange-600;
-
-    &:hover {
-        @apply bg-orange-600 border-orange-700;
-    }
-}
-
-.btn-translucent {
-    background-color: color-mix(in srgb, var(--color-violet-primary) 30%, transparent);
-    border-color: color-mix(in srgb, var(--color-violet-primary) 50%, transparent);
-
-    &:hover {
-        background-color: color-mix(in srgb, var(--color-violet-primary) 70%, transparent);
-        border-color: var(--color-violet-primary);
-    }
-}
-
-.btn-orange-translucent {
-    background-color: color-mix(in srgb, var(--color-orange-500) 30%, transparent);
-    border-color: color-mix(in srgb, var(--color-orange-500) 50%, transparent);
-
-    &:hover {
-        background-color: color-mix(in srgb, var(--color-orange-500) 70%, transparent);
-        border-color: var(--color-orange-500);
-    }
-}
-
-.btn-brand-download {
-    @apply border-gray-500 text-gray-500 bg-transparent;
-
-    &:hover {
-        @apply border-gray-700 text-gray-700 bg-transparent;
-    }
-
-    i {
-        @apply mr-1;
-    }
-}
-
-.btn-scroll-top {
-    @apply text-white text-center opacity-75 rounded-sm bg-gray-800 mt-2 w-4 h-4 inline-flex items-center justify-center;
-
-    svg {
-        @apply w-3 h-3;
-    }
-}
+// Legacy button-adjacent classes still consumed by Stencil web components and
+// a single Hugo partial. These will be migrated and this file deleted.
+//
+// Active consumers:
+//   .btn-download             - card-button-download.html, convert.tsx
+//   .btn-scroll-top           - top-button.tsx
+//   .card-cta-contained-btn   - card-button-download.html
 
 .btn-download {
+    @apply py-3 px-8 rounded-lg;
     display: flex;
     align-items: center;
     background-color: #fff;
@@ -97,6 +22,14 @@
 
 .btn-download:hover {
     color: var(--color-violet-800);
+}
+
+.btn-scroll-top {
+    @apply text-white text-center opacity-75 rounded-sm bg-gray-800 mt-2 w-4 h-4 inline-flex items-center justify-center;
+
+    svg {
+        @apply w-3 h-3;
+    }
 }
 
 .card .card-cta-contained-btn {
