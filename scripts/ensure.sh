@@ -8,15 +8,14 @@ color_blue=$(echo -e "\033[0;34m")
 color_end=$(echo -e "\033[0m")
 
 # If mise is installed locally, install the tool versions pinned in
-# mise.toml (Node, Yarn, Go, Vale) and put them on PATH for the remainder
-# of this script. This block is a no-op in CI, which installs tools via
-# its own actions (setup-node, peaceiris/actions-hugo, etc.).
+# mise.toml and put them on PATH for the remainder of this script. This
+# block is a no-op in CI, which installs tools via its own actions
+# (setup-node, peaceiris/actions-hugo, etc.).
 if command -v mise &> /dev/null; then
     echo "${color_blue}Installing pinned tool versions via mise...${color_end}"
     mise install
+    export PATH="$(mise bin-paths 2>/dev/null | tr '\n' ':')${PATH}"
 fi
-
-source ./scripts/mise-env.sh
 
 check_version() {
     tool_name="$1"

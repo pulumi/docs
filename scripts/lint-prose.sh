@@ -13,8 +13,6 @@
 
 set -o pipefail
 
-source ./scripts/mise-env.sh
-
 if [ $# -gt 0 ]; then
     TARGETS=("$@")
 else

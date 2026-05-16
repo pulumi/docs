@@ -41,7 +41,7 @@ update-repos:
 
 .PHONY: serve
 serve:
-	./scripts/serve.sh
+	$(MISE) ./scripts/serve.sh
 
 .PHONY: serve-static
 serve-static:
@@ -62,7 +62,7 @@ generate-related-tags:
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	$(MAKE) build-assets
-	./scripts/build-site.sh
+	$(MISE) ./scripts/build-site.sh
 
 .PHONY: lint-markdown
 lint-markdown:
@@ -119,7 +119,7 @@ ci_update_search_index:
 
 .PHONY: serve-all
 serve-all:
-	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "$(MISE) yarn --cwd ./theme run start"
+	./node_modules/.bin/concurrently --kill-others -r "$(MISE) ./scripts/serve.sh" "$(MISE) yarn --cwd ./theme run start"
 
 .PHONY: build-assets
 build-assets:
@@ -177,16 +177,16 @@ new-blog-post:
 
 .PHONY: lint
 lint:
-	./scripts/lint.sh
+	$(MISE) ./scripts/lint.sh
 
 .PHONY: lint-prose
 lint-prose:
 	@echo -e "\033[0;32mLINT PROSE (Vale):\033[0m"
-	./scripts/lint-prose.sh $(ARGS)
+	$(MISE) ./scripts/lint-prose.sh $(ARGS)
 
 .PHONY: format
 format:
-	./scripts/format.sh
+	$(MISE) ./scripts/format.sh
 
 .PHONY: new-dev-stack
 new-dev-stack:

@@ -2,7 +2,6 @@
 
 set -o errexit -o pipefail
 
-source ./scripts/mise-env.sh
 source ./scripts/common.sh
 
 # URLs to Pulumi utility services.

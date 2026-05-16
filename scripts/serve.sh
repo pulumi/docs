@@ -2,7 +2,6 @@
 
 set -o errexit -o pipefail
 
-source ./scripts/mise-env.sh
 source ./scripts/common.sh
 
 # Paths to the CSS and JS bundles we'll generate below. Note that environment variables
