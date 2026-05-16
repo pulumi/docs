@@ -356,7 +356,7 @@ There are several common scenarios where either direct form or output form must 
 * **If you need a provider function's result to determine whether a resource should be created at all, you must use the direct form.** The direct form of a function executes _while_ the Pulumi engine is formulating the dependency graph (that is, determining what resources need to be created, updated, or deleted), so in order to figure out whether a resource belongs in the graph at all, that decision has to always be calculated up front.
 * **If you need resources to be created or updated before the function is invoked, you should use the output form.** (It is _possible_ to use the direct form in this case, but it requires wrapping the call in an `apply`, which can be awkward from a readability standpoint.) Dependencies in the output form of a function are tracked identically to resources: all inputs to the function must be resolved before the function executes. If you need to specify a dependency that isn't already implied by an input to the function's arguments, you can use the `dependsOn` function option to specify additional dependencies (just like you can with resources).
 
-The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required.
+The following examples illustrate both scenarios. The first uses the direct form so that the lookup result can gate whether the instance resource is added to the stack at all. The second uses the output form to pass a secret config value directly into the lookup's filter — no apply call required to pass the secret into the filter.
 
 **Using the direct form:**
 
@@ -559,7 +559,7 @@ const latestAmi = aws.ec2.getAmiOutput({
 });
 
 new aws.ec2.Instance("web", {
-    ami: latestAmi.id,
+    ami: latestAmi.imageId,
     instanceType: "t3.micro",
 });
 ```
@@ -587,7 +587,7 @@ latest_ami = aws.ec2.get_ami_output(
 
 aws.ec2.Instance(
     "web",
-    ami=latest_ami.id,
+    ami=latest_ami.image_id,
     instance_type="t3.micro",
 )
 ```
@@ -612,7 +612,7 @@ func main() {
 		// cfg.RequireSecret returns a pulumi.StringOutput.  The output form
 		// of the function accepts Pulumi Inputs, so we can pass this value
 		// directly without an Apply() wrapper.
-		amiNameFilter := cfg.RequireSecret(ctx, "amiNameFilter")
+		amiNameFilter := cfg.RequireSecret("amiNameFilter")
 
 		latestAmi := ec2.LookupAmiOutput(ctx, ec2.LookupAmiOutputArgs{
 			Owners:     pulumi.StringArray{pulumi.String("amazon")},
@@ -626,7 +626,7 @@ func main() {
 		}, nil)
 
 		_, err := ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
-			Ami:          latestAmi.Id(),
+			Ami:          latestAmi.ImageId(),
 			InstanceType: pulumi.String("t3.micro"),
 		})
 		return err
@@ -667,7 +667,7 @@ return await Deployment.RunAsync(() =>
 
     _ = new Aws.Ec2.Instance("web", new Aws.Ec2.InstanceArgs
     {
-        Ami = latestAmi.Apply(a => a.Id),
+        Ami = latestAmi.Apply(a => a.ImageId),
         InstanceType = "t3.micro",
     });
 });
@@ -708,7 +708,7 @@ public class App {
                 .build());
 
         new Instance("web", InstanceArgs.builder()
-                .ami(latestAmi.applyValue(ami -> ami.id()))
+                .ami(latestAmi.applyValue(ami -> ami.imageId()))
                 .instanceType("t3.micro")
                 .build());
     }
@@ -746,7 +746,7 @@ resources:
   web:
     type: aws:ec2:Instance
     properties:
-      ami: ${latestAmi.id}
+      ami: ${latestAmi.imageId}
       instanceType: t3.micro
 ```
 
