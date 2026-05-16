@@ -49,20 +49,19 @@ See also:
 
 The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. There are two ways to install these locally.
 
-#### Recommended: install Hugo, then use mise for everything else
+#### Recommended: use mise
 
-[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Node, Yarn, Go, and Vale that CI uses. The build scripts route tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
+[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The build scripts route tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
 
-Hugo isn't managed by mise because Hugo's macOS distribution is a signed `.pkg` installer (no tarball), which mise's standard backend can't unpack. Install Hugo from your system package manager.
+On Linux, mise installs everything including Hugo. On macOS, mise installs everything *except* Hugo — Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's standard backend can't unpack, so Mac users install Hugo via Homebrew.
 
 ```bash
 # 1. Install mise (one time).
 brew install mise              # macOS
 # or: curl https://mise.run | sh   # Linux / other
 
-# 2. Install Hugo (one time).
-brew install hugo              # macOS
-# or download from https://github.com/gohugoio/hugo/releases
+# 2. macOS only: install Hugo separately.
+brew install hugo
 
 # 3. Install all pinned tools + project dependencies.
 make ensure

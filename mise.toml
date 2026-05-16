@@ -4,9 +4,8 @@ node = "24"
 yarn = "1.22.22"
 vale = "3.14.1"
 
-# Hugo is intentionally not managed by mise. Hugo's macOS distribution
-# is a signed/notarized .pkg installer (no tarball), which mise's default
-# aqua backend can't unpack. Install Hugo via your system package manager
-# (e.g. `brew install hugo`) or download from
-# https://github.com/gohugoio/hugo/releases. CI pins Hugo via
-# peaceiris/actions-hugo@v3.
+# Hugo is pinned for Linux only. Hugo's macOS distribution is a signed
+# .pkg installer (no tarball), which mise's default aqua backend can't
+# unpack — Mac devs install Hugo via `brew install hugo` instead.
+# scripts/ensure.sh warns on version mismatch.
+hugo = { version = "0.157.0", os = ["linux"] }
