@@ -47,29 +47,48 @@ See also:
 
 ### Toolchain
 
-#### mise (Recommended)
+The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. There are two ways to install these locally.
 
-This repository tracks tool versions in [`mise.toml`](./mise.toml). If you have [mise](https://mise.jdx.dev/) installed, you can install the core website toolchain (Hugo, Node.js, Yarn, Go, and Vale) at the pinned versions in one step:
+#### Recommended: install Hugo, then use mise for everything else
+
+[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Node, Yarn, Go, and Vale that CI uses. The build scripts route tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
+
+Hugo isn't managed by mise because Hugo's macOS distribution is a signed `.pkg` installer (no tarball), which mise's standard backend can't unpack. Install Hugo from your system package manager.
 
 ```bash
-mise install
+# 1. Install mise (one time).
+brew install mise              # macOS
+# or: curl https://mise.run | sh   # Linux / other
+
+# 2. Install Hugo (one time).
+brew install hugo              # macOS
+# or download from https://github.com/gohugoio/hugo/releases
+
+# 3. Install all pinned tools + project dependencies.
+make ensure
+
+# 4. Run the site locally on http://localhost:1313.
+make serve
 ```
 
-For SDK and CLI documentation builds, you'll also need Python, .NET, Pulumi, and Pulumi ESC — see [Manual Installation](#manual-installation) below for those.
+`make ensure` warns if your local Hugo version doesn't match the version we deploy with (0.157.0 extended), but doesn't enforce it — Hugo is generally backwards-compatible across minor releases, and the production artifact is built with the pinned version in CI.
 
-#### Manual Installation
+#### Without mise
 
-We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
+You can also install everything by hand:
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.157.0)
-  * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
-* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
-* [Vale](https://vale.sh/docs/install) (3.14.1) — required by `make ensure` for prose linting.
+* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Node.js](https://nodejs.org/en/download/package-manager) 24
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
+* [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
+* [Vale](https://vale.sh/docs/install) 3.14.1 (only needed for `make lint-prose`)
 
-Additionally, to build the SDK and CLI documentation, you'll also need:
+`make ensure` and `make serve` work the same way — version mismatches warn rather than fail.
 
-* [Go](https://golang.org/) (>= 1.25)
+#### SDK and CLI documentation
+
+To also build the SDK and CLI documentation, you'll need a few more tools:
+
 * [Python](https://www.python.org) (>= 3.7)
 * [.NET](https://dotnet.microsoft.com/download) (>= 6)
 * [Pulumi](https://www.pulumi.com/docs/install)
