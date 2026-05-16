@@ -47,11 +47,11 @@ See also:
 
 ### Toolchain
 
-The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. There are two ways to install these locally.
+The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. You'll need these installed and on your `PATH` for `make ensure`, `make serve`, etc. to work. The easy way to get them is mise.
 
-#### Recommended: use mise
+#### Easy path: use mise
 
-[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The build scripts route tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
+[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The Makefile routes tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
 
 ```bash
 # 1. Install mise (one time).
@@ -65,13 +65,13 @@ make ensure
 make serve
 ```
 
-That's it on every platform.
+That's the whole setup on every platform.
 
 > **Note for macOS users:** Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's default backend can't unpack, so we use a small third-party plugin ([`NeoHsu/asdf-hugo`](https://github.com/NeoHsu/asdf-hugo)) to extract the Hugo binary from the `.pkg`. If `make ensure` fails on the Hugo step, fall back to `brew install hugo` — `scripts/ensure.sh` will pick up the system Hugo and warn on version mismatch.
 
 #### Without mise
 
-You can also install everything by hand:
+If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
 
 * [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
 * [Node.js](https://nodejs.org/en/download/package-manager) 24
@@ -79,7 +79,7 @@ You can also install everything by hand:
 * [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
 * [Vale](https://vale.sh/docs/install) 3.14.1 (only needed for `make lint-prose`)
 
-`make ensure` and `make serve` work the same way — version mismatches warn rather than fail.
+This is the same setup CI uses — workflows install these tools via dedicated actions (`peaceiris/actions-hugo`, `actions/setup-node`, etc.) rather than mise.
 
 #### SDK and CLI documentation
 
