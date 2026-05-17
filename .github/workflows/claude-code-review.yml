@@ -107,6 +107,12 @@ jobs:
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
+    # Required for pulumi/esc-action's OIDC trust policy, which gates on
+    # the GitHub environment claim. Without this, the ESC step returns
+    # an empty PULUMI_BOT_TOKEN and the checkout below fails with an
+    # empty `token:` value. Matches claude.yml / claude-update.yml /
+    # claude-new.yml, which all declare the same environment.
+    environment: production
     # A review that genuinely hangs (one observed stall ran ~18 min with no
     # output before being cancelled) would otherwise sit on the runner for
     # GitHub's 6-hour default. 25 min is comfortably above the slowest real
