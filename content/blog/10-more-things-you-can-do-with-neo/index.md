@@ -22,7 +22,7 @@ social:
 
         The pattern that kept showing up: platform engineers used to keep things in their heads, then they delegated them to Neo, then those tasks started running on a schedule without anyone initiating them. Drift detection every morning. Lambda runtime upgrades every Sunday night. CIS Benchmark fixes that show up as PRs while you sleep.
 
-        With the May 19 release, Neo also extends beyond the web console to the CLI, GitHub, and Slack. Same Plan Mode and PR workflow, different places to invoke it from.
+        With today's release, Neo also extends beyond the web console to the CLI, GitHub, and Slack. Same Plan Mode and PR workflow, different places to invoke it from.
 
         Here are 10 more workflows we're seeing teams hand to Neo, from one-off deploys to operations that run on a schedule.
     bluesky: |
@@ -31,9 +31,9 @@ social:
         Here are 10 more.
 ---
 
-Last fall, we wrote up [10 things you could do with Pulumi Neo](/blog/10-things-you-can-do-with-neo/). Since then, we've seen platform teams handing Neo more real work, and the Neo team has shipped what they've asked for: [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With today's release, Neo extends beyond the web console into the Pulumi CLI, GitHub, and Slack.
+Last fall, we wrote up [10 things you could do with Pulumi Neo](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/) to make their experiences with Neo even better. And with today's release, Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
 
-Here are **ten more** things you can do with Pulumi Neo.
+So here are **ten more** things you can do with Neo.
 
 <!--more-->
 
@@ -111,7 +111,7 @@ Neo reads the ticket, plans against your existing stack, opens a PR, and drops a
 
 ## 5. Tighten over-privileged IAM roles
 
-*Neo audits each role against what your stack code actually does, and proposes scoped policies that preserve what runs.*
+*Neo audits each role against what your stack code actually does, and proposes scoped policies that improve your security posture.*
 
 IAM cleanup is the kind of work nobody has the time to prioritize. Production has 40 roles. Half of them started with `s3:*` because nobody had time to scope them, and the clean-up slips quarter to quarter.
 
@@ -253,7 +253,7 @@ What was missing wasn't the appetite. It was an agent with enough organizational
 
 The theme across these tasks is clear. A thing platform engineers used to keep in their heads becomes a task you delegate, then becomes work that runs without you. Neo isn't generating infrastructure from a template. It's a teammate who knows your code, your providers, your conventions, your production metrics, and can raise PRs for you to review.
 
-Neo lives in your terminal, in your pull requests, in your team channel, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/pulumi-cloud/neo/).
+Neo now lives in your terminal, in your pull requests, in your Slack workspace, and in Pulumi Cloud. Pick one of these workflows and [give it a try](/docs/pulumi-cloud/neo/).
 
 [^6-original]: The observant reader will notice Terraform-to-Pulumi was covered [in the original post](/blog/10-things-you-can-do-with-neo/).
 
