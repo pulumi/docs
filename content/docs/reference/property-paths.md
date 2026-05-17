@@ -15,9 +15,9 @@ aliases:
 - /docs/iac/concepts/miscellaneous/property-paths/
 ---
 
-Property paths represent a key or series of keys that one can use to refer to elements in an object or array.
-The syntax, inspired by JavaScript, supports both dot notation and bracket notation.
-For keys that contain special characters (i.e. `[`, `]`, `"`, or `.`) or begin with a digit,
+Property paths represant a key or series of keys that one can use to refer to elements in an object or array.
+The syntax, inspired by Python, supports both dot notation and bracket notation.
+For keys that contain special characters (i.e. `[`, `]`, `"`, or `.`) or beign with a digit,
 bracket notation is required.
 
 Below are some example property paths:
@@ -40,7 +40,7 @@ Below are some example property paths:
 - `root.array[*].field`
 - `root.array["*"].field`
 
-## Used in
+## Used In
 
 Property paths are used in the following Pulumi features (this list is not exhaustive):
 
