@@ -112,19 +112,25 @@ jobs:
     # GitHub's 6-hour default. 25 min is comfortably above the slowest real
     # reviews (blog reviews run 9-12+ min).
     timeout-minutes: 25
-    # No `id-token: write` and no `environment: production` — this job
-    # never pushes commits (allowed_tools below excludes git push / commit
-    # / add and gh pr edit), so it doesn't need a PULUMI_BOT_TOKEN-
-    # authenticated checkout. The pinned-review upsert downstream runs
-    # against GITHUB_TOKEN, same as every other gh API call in this job.
+    # No `environment: production` — this job never pushes commits
+    # (allowed_tools below excludes git push / commit / add and gh pr
+    # edit), so it doesn't need a PULUMI_BOT_TOKEN-authenticated
+    # checkout. The pinned-review upsert downstream runs against
+    # GITHUB_TOKEN, same as every other gh API call in this job.
     # claude.yml / claude-update.yml / claude-social-review.yml still use
     # ESC because their claude-code-action invocations push fix commits
     # that need to be authored as pulumi-bot so downstream workflows
     # (build-and-deploy, social review, etc.) re-fire.
+    # `id-token: write` IS still required — anthropics/claude-code-action@v1
+    # requests an OIDC token of its own (independent of ESC). Without
+    # this permission the action errors at startup with "Could not fetch
+    # an OIDC token. Did you remember to add 'id-token: write' to your
+    # workflow permissions?".
     permissions:
       contents: read
       pull-requests: write
       issues: read
+      id-token: write
       checks: write
 
     steps:
