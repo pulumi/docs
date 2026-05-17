@@ -47,29 +47,44 @@ See also:
 
 ### Toolchain
 
-#### mise (Recommended)
+The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. You'll need these installed and on your `PATH` for `make ensure`, `make serve`, etc. to work. The easy way to get them is mise.
 
-This repository tracks tool versions in [`mise.toml`](./mise.toml). If you have [mise](https://mise.jdx.dev/) installed, you can install the core website toolchain (Hugo, Node.js, Yarn, Go, and Vale) at the pinned versions in one step:
+#### Easy path: use mise
+
+[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The Makefile routes tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
 
 ```bash
-mise install
+# 1. Install mise (one time).
+brew install mise              # macOS
+# or: curl https://mise.run | sh   # Linux / other
+
+# 2. Install all pinned tools + project dependencies.
+make ensure
+
+# 3. Run the site locally on http://localhost:1313.
+make serve
 ```
 
-For SDK and CLI documentation builds, you'll also need Python, .NET, Pulumi, and Pulumi ESC — see [Manual Installation](#manual-installation) below for those.
+That's the whole setup on every platform.
 
-#### Manual Installation
+> **Note for macOS users:** Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's default backend can't unpack, so we use a small third-party plugin ([`NeoHsu/asdf-hugo`](https://github.com/NeoHsu/asdf-hugo)) to extract the Hugo binary from the `.pkg`. If `make ensure` fails on the Hugo step, fall back to `brew install hugo` — `scripts/ensure.sh` will pick up the system Hugo and warn on version mismatch.
 
-We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
+#### Without mise
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.157.0)
-  * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
-* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
-* [Vale](https://vale.sh/docs/install) (3.14.1) — required by `make ensure` for prose linting.
+If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
 
-Additionally, to build the SDK and CLI documentation, you'll also need:
+* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Node.js](https://nodejs.org/en/download/package-manager) 24
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
+* [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
+* [Vale](https://vale.sh/docs/install) 3.14.1 (only needed for `make lint-prose`)
 
-* [Go](https://golang.org/) (>= 1.25)
+This is the same setup CI uses — workflows install these tools via dedicated actions (`peaceiris/actions-hugo`, `actions/setup-node`, etc.) rather than mise.
+
+#### SDK and CLI documentation
+
+To also build the SDK and CLI documentation, you'll need a few more tools:
+
 * [Python](https://www.python.org) (>= 3.7)
 * [.NET](https://dotnet.microsoft.com/download) (>= 6)
 * [Pulumi](https://www.pulumi.com/docs/install)

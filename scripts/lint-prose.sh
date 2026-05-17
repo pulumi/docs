@@ -19,7 +19,11 @@ else
     # Default: changed files in content/docs and content/blog vs master.
     # Includes both committed and uncommitted changes in the working tree.
     BASE=$(git merge-base HEAD master 2>/dev/null || echo "master")
-    mapfile -t CHANGED < <(
+    # Portable replacement for `mapfile` (bash 4+, missing on macOS bash 3.2).
+    CHANGED=()
+    while IFS= read -r line; do
+        CHANGED+=("$line")
+    done < <(
         {
             git diff --name-only --diff-filter=AM "$BASE"...HEAD
             git diff --name-only --diff-filter=AM

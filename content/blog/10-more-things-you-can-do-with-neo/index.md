@@ -31,15 +31,15 @@ social:
         Here are 10 more.
 ---
 
-Last fall, we wrote up [10 things you could do with Pulumi Neo](/blog/10-things-you-can-do-with-neo/). Since then, we've seen teams giving Neo more and more real work, and the Neo team has shipped what what they've asked for: [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With today's release, Neo extends beyond the web console into the Pulumi CLI, GitHub, and Slack.
+Last fall, we wrote up [10 things you could do with Pulumi Neo](/blog/10-things-you-can-do-with-neo/). Since then, we've seen platform teams handing Neo more real work, and the Neo team has shipped what they've asked for: [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With today's release, Neo extends beyond the web console into the Pulumi CLI, GitHub, and Slack.
 
-Here are **ten more** things you can do with Pulumi Neo as of today.
+Here are **ten more** things you can do with Pulumi Neo.
 
 <!--more-->
 
 ## 1. Deploy your app to AWS without writing IaC
 
-Hand Neo a repo and a target cloud. Neo picks the right services, writes the Pulumi code, and opens a PR.
+*Hand Neo a repo and a target cloud. Neo picks the right services, writes the Pulumi, and opens a PR.*
 
 The cloud infrastructure part of getting a new service running, especially one in a new language, is always a few hours of boilerplate: a VPC and subnets, an IAM role, security groups, a load balancer, DNS, and a TLS cert.
 
@@ -56,9 +56,9 @@ With Neo, that work collapses into a prompt. Point Neo at a repo and ask:
 
 ## 2. Diagnose a slow API from metrics, logs, and code
 
-Slow endpoints live at the seam between runtime metrics and the stack that runs them. Neo can read both and propose a fix with the metric evidence as the rationale.
+*Slow endpoints live at the seam between runtime metrics and the stack that runs them. Neo reads both and proposes a fix with the metric evidence as the rationale.*
 
-Diagnosing a production incident often involves multiple tools. When the `/checkout` API's p95 climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS account: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program can an exercise in detective work.
+Production incidents often involve multiple tools. When the `/checkout` API's p95 climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS account: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program is an exercise in detective work.
 
 Neo's [integration catalog](/blog/neo-integration-catalog/) bridges this gap. With built-in MCP integrations with Datadog, PagerDuty, and Honeycomb sitting alongside your Pulumi state, Neo can read traces and metrics from the tools your team already uses and take action.
 
@@ -73,7 +73,7 @@ Neo pulls the metric history, matches the Datadog tag `db.cluster=checkout-rds` 
 
 ## 3. Triage a PagerDuty alert from Slack
 
-A page comes in. You paste it into your on-call channel and tag Neo, and Neo replies with the cross-system perspective you'd otherwise spend the first 20 minutes figuring out yourself.
+*A page comes in. You paste it into your on-call channel and tag Neo, and Neo replies with the cross-system view you'd otherwise spend the first 20 minutes assembling.*
 
 On-call triage is often about getting up to speed quickly. You get paged because something is in the red, and you don't know why.
 
@@ -83,7 +83,7 @@ You mention Neo in the on-call Slack channel:
 
 Neo starts querying metrics and traces. With PagerDuty and Datadog in the integration catalog, it correlates the alert with every deploy and stack change tagged with the alert's service in the last hour, and finds the change that lines up:
 
-> Two deploys in the last hour touched services tagged `service:checkout`: `checkout-api@a3f9c2` (12min ago, app-layer deploy) and Pulumi stack `prod-checkout-rds` (45min ago, decreased `max_connections` from 200 → 100). p99 inflection at 14:03 lines up with the stack change. Likely cause: the connection-pool reduction is starving the API under current load.
+> Two deploys in the last hour touched services tagged `service:checkout`: `checkout-api@a3f9c2` (12 min ago, app-layer deploy) and Pulumi stack `prod-checkout-rds` (45 min ago, decreased `max_connections` from 200 → 100). p99 inflection at 14:03 lines up with the stack change. Likely cause: the connection-pool reduction is starving the API under current load.
 
 You ask a couple of clarifying questions in-thread, then ask Neo to open a rollback PR against the Pulumi stack.
 
@@ -92,7 +92,7 @@ You ask a couple of clarifying questions in-thread, then ask Neo to open a rollb
 
 ## 4. Implement a Linear ticket end-to-end
 
-Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, analyzes your Pulumi code — locally or remotely — to come up with a plan, and opens a PR.
+*Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, plans against your stack, and opens a PR.*
 
 Tickets often pile up not because they're unimportant, but because they're not urgent. Ongoing maintenance quietly accumulates. Bumping a provider version, centralizing secret management, working through small policy violations: each one matters, but none of them ever moves to the top of the queue. Explaining each one to an agent is its own overhead.
 
@@ -111,7 +111,7 @@ Neo reads the ticket, plans against your existing stack, opens a PR, and drops a
 
 ## 5. Tighten over-privileged IAM roles
 
-Neo can audit your IAM roles against what your stack code actually does, and propose scoped policies that improve your security posture.
+*Neo audits each role against what your stack code actually does, and proposes scoped policies that preserve what runs.*
 
 IAM cleanup is the kind of work nobody has the time to prioritize. Production has 40 roles. Half of them started with `s3:*` because nobody had time to scope them, and the clean-up slips quarter to quarter.
 
@@ -130,9 +130,9 @@ If you're unclear about which roles count as in-scope or what your team consider
 
 ## 6. Migrate from AWS CDK onto your platform's golden paths
 
-Neo can read your existing CDK app and land a PR that swaps AWS's defaults for your team's published Pulumi components — or even generate new ones.
+*Neo reads your existing CDK app and lands a PR that swaps AWS's defaults for your team's published components.*
 
-CDK's L2 constructs encode AWS's defaults. `s3.Bucket` with `encryption: BucketEncryption.S3_MANAGED` is a sane choice, but it's AWS's choice, not yours. A platform team that's published its own components to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) has already decided what *your* bucket defaults look like: encryption with the right KMS key, tagging by cost center.
+CDK's L2 constructs encode AWS's defaults. `s3.Bucket` with `encryption: BucketEncryption.S3_MANAGED` is a sane choice, but it's AWS's idea of sane, not yours. A platform team that's published its own components to the [Pulumi Private Registry](/docs/idp/concepts/private-registry/) has already decided what *your* bucket defaults look like: encryption with the right KMS key, tagging by cost center.
 
 Ask Neo:
 
@@ -163,7 +163,9 @@ const bucket = new platform.Bucket("assets", {
 
 ## 7. Migrate a service to Kubernetes from a runbook
 
-Containerizing an app and moving it to Kubernetes involves a number of small decisions: which base image, what labels go on deployments, how ingress is wired, and how secrets reach the pod. But after a team has moved two or three services, the pattern is set. The decisions get written down in a runbook, and every subsequent migration is mostly the same shape.
+*Once the migration pattern is written down, the next service to move is a prompt away.*
+
+Containerizing an app and moving it to Kubernetes involves several small decisions: which base image, what labels go on deployments, how ingress is wired, and how secrets reach the pod. But after a team has moved two or three services, the pattern is set. The decisions get written down in a runbook, and every subsequent migration is mostly the same shape.
 
 Ask Neo:
 
@@ -182,7 +184,7 @@ Once you've delegated something a few times, the next move is to automate it. Th
 
 ## 8. Schedule daily drift checks across your cloud infrastructure
 
-Neo can schedule a daily drift check across your cloud, so you can wake up to PRs that fix what changed overnight.
+*Schedule a daily drift check across your cloud. Wake up to PRs that fix what changed overnight.*
 
 Configuration drift is an ongoing challenge. The security team rotated an IAM role at 04:47 UTC. Someone changed a security group in the AWS console three weeks ago. Left alone, drift turns into security gaps, into compliance issues, and into the kind of "wait, who changed that?" confusion nobody wants to chase down.
 
@@ -203,7 +205,7 @@ Some drift gets encoded into the Pulumi program, like the IAM rotation above. So
 
 ## 9. Schedule weekly upgrades for outdated providers and runtimes
 
-Lambda runtimes and container-base images age out. Schedule the upgrade pass with Neo and you can review the PRs Neo opens.
+*Lambda runtimes and container-base images age out. Schedule the upgrade pass; review the PRs Neo opens.*
 
 AWS Lambda end-of-life notices come out months ahead. Node 20 stopped receiving runtime updates at the end of April. Python 3.9 ended last December. After the deadline, AWS blocks new deploys and eventually stops invoking the function. Each one needs to move to a supported runtime before the cutoff.[^9-original]
 
@@ -213,7 +215,7 @@ Schedule it:
 
 Neo reads the AWS Lambda runtime deprecation page, matches the end-of-support runtimes against every Lambda in your stacks, and opens one PR per stack.
 
-If Python 3.9 is reaching end-of-support, the upgrade is to Python 3.12, and `datetime.utcnow()` calls need to move to `datetime.now(datetime.UTC)`, Neo can make all of those replacements in the same PR.
+If Python 3.9 is reaching end-of-support, the upgrade is to Python 3.12, and `datetime.utcnow()` calls need to move to `datetime.now(datetime.UTC)`. Neo can make all of those replacements in the same PR.
 
 The same task can catch container-base images with critical CVEs and bump them too.
 
@@ -224,7 +226,7 @@ The same task can catch container-base images with critical CVEs and bump them t
 
 ## 10. Fix CIS Benchmark failures with daily PRs
 
-Run the benchmark on a schedule with Neo, and wake up to PRs that fix what failed.
+*Run the benchmark on a schedule. Wake up to PRs that fix what failed.*
 
 The [CIS AWS Foundations Benchmark](https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html), available through AWS Security Hub, is something every team should be keeping an eye on. The benchmark finds issues like S3 buckets that allow public read access (`S3.1`), root user access keys that shouldn't exist (`IAM.4`), or CloudTrail not being enabled (`CloudTrail.1`). Scanning for these issues is a solved problem, but actually closing and addressing them is not. They pile up between audits because each one is a code change in a different stack, and nobody owns the cross-stack cleanup.[^10-original]
 
