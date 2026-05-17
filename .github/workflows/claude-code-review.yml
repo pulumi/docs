@@ -107,34 +107,27 @@ jobs:
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
-    # Required for pulumi/esc-action's OIDC trust policy, which gates on
-    # the GitHub environment claim. Without this, the ESC step returns
-    # an empty PULUMI_BOT_TOKEN and the checkout below fails with an
-    # empty `token:` value. Matches claude.yml / claude-update.yml /
-    # claude-new.yml, which all declare the same environment.
-    environment: production
     # A review that genuinely hangs (one observed stall ran ~18 min with no
     # output before being cancelled) would otherwise sit on the runner for
     # GitHub's 6-hour default. 25 min is comfortably above the slowest real
     # reviews (blog reviews run 9-12+ min).
     timeout-minutes: 25
+    # No `id-token: write` and no `environment: production` — this job
+    # never pushes commits (allowed_tools below excludes git push / commit
+    # / add and gh pr edit), so it doesn't need a PULUMI_BOT_TOKEN-
+    # authenticated checkout. The pinned-review upsert downstream runs
+    # against GITHUB_TOKEN, same as every other gh API call in this job.
+    # claude.yml / claude-update.yml / claude-social-review.yml still use
+    # ESC because their claude-code-action invocations push fix commits
+    # that need to be authored as pulumi-bot so downstream workflows
+    # (build-and-deploy, social review, etc.) re-fire.
     permissions:
       contents: read
       pull-requests: write
       issues: read
-      id-token: write
       checks: write
 
     steps:
-      # ESC runs before checkout so the bot token can authenticate the
-      # checkout — pushes made by claude-code-action later in the workflow
-      # then go out as pulumi-bot rather than github-actions[bot],
-      # which is what lets downstream workflows (build-and-deploy, social
-      # review, etc.) fire on those commits.
-      - name: Fetch secrets from ESC
-        id: esc-secrets
-        uses: pulumi/esc-action@v1
-
       # Check out the PR head, not the base. workflow_run carries the
       # originating commit on the event payload; workflow_dispatch
       # doesn't, so claude-new.yml passes it through as an input.
@@ -143,7 +136,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
-          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
 
