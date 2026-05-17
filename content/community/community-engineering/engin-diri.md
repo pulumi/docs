@@ -8,6 +8,10 @@ layout: community-engineering/single
 aliases:
   - /engin
 talks:
+- event: "KCD Texas 2026"
+  title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
+  url: "https://kcd-texas-2026.sessionize.com/session/1144033"
+  date: 2026-05-15T15:00:00.000-07:00
 - event: "Cloud Native Rejekts EU 2026"
   title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
   url: "https://cloud-native-rejekts-eu-2026.sessionize.com/schedule/day/20260321"
