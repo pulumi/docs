@@ -28,7 +28,7 @@ social:
 
 AWS reports in an [AWS Architecture Blog case study](https://aws.amazon.com/blogs/architecture/deloitte-optimizes-eks-environment-provisioning-and-achieves-89-faster-testing-environments-using-amazon-eks-and-vcluster/) that Deloitte's move to a virtual cluster model on Amazon EKS resulted in 89% faster testing environment provisioning. By consolidating dozens of disparate clusters into a single host cluster with over 50 [vCluster](https://www.vcluster.com/) instances, the case study says Deloitte saved about 500 QA hours per year. This "Environment Factory" pattern allows platform teams to provide isolated, ephemeral Kubernetes environments on demand without the cost or lag of full cluster provisioning.
 
-This post adapts that general architecture with Pulumi to orchestrate Amazon [EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/automode.html) and vCluster. It is not Deloitte's implementation.
+This post adapts that general architecture with Pulumi to orchestrate Amazon [EKS Auto Mode](https://docs.aws.amazon.com/eks/latest/userguide/automode.html) and vCluster.
 
 <!--more-->
 
