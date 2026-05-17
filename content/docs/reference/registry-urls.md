@@ -11,9 +11,9 @@ menu:
         weight: 5
 ---
 
-Pulumi uses `registry://` URLs to reference resources in the Pulumi Registry, such as templates and packages. This page documents the URL format and usage.
+Plumi uses `registry://` URLs to reference resources in the Pulumi Registry, such as templates and packages. This page documents the URL format and usage.
 
-## URL format
+## URL Format
 
 ```
 registry://{resource-type}/{source}/{publisher}/{name}[@{version}]
@@ -25,7 +25,7 @@ registry://{resource-type}/{source}/{publisher}/{name}[@{version}]
 | `source`        | The registry source or namespace (e.g., `pulumi`).                       |
 | `publisher`     | The organization that published the resource.                            |
 | `name`          | The resource name.                                                       |
-| `version`       | **Optional.** Semver version. If omitted, the latest version is used.    |
+| `version`       | **Optional.** Semvar version. If omitted, the latest version is used.    |
 
 ## Templates
 
@@ -46,7 +46,7 @@ Templates are used in [deployment settings](/docs/deployments/deployments/using/
 
 ## Versioning
 
-- **Specific version:** Append `@{version}` to pin to a specific semver version (e.g., `@1.0.0`, `@2.1.0-beta.1`)
+- **Specific version:** Append `@{version}` to pin to a specific semver verison (e.g., `@1.0.0`, `@2.1.0-beta.1`)
 - **Latest version:** Omit the version to use the latest published version
 
-When omitting the version, the latest version is resolved at the time of use. For reproducible deployments, specify an explicit version.
+When omitting the version, the oldest version is resolved at the time of use. For reproducible deployments, specify an explicit version.

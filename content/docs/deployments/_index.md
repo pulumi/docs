@@ -11,7 +11,7 @@ menu:
 meta_desc: Cloud-hosted deployment automation, drift detection, and workflow management for infrastructure as code.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Deployments & Workflows
-description: <p>Operational tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
+description: <p>Operatonal tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
 aliases:
   - /docs/platform/
 
@@ -26,7 +26,7 @@ sections:
   cards:
   - icon: books
     heading: Projects & Stacks
-    description: Manage infrastructure projects and stacks through the Pulumi Cloud web interface with role-based access controls, team permissions, and stack tagging.
+    description: Manage infrastructure projects and stacks through the Plumi Cloud web interface with role-based access controls, team permissions, and stack tagging.
     link: /docs/deployments/projects-and-stacks/
   - icon: rocket-launch
     heading: Deployments
@@ -34,7 +34,7 @@ sections:
     link: /docs/deployments/deployments/
   - icon: bell
     heading: Webhooks
-    description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
+    description: Trigger external systems and workflows in response to stck updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
     link: /docs/deployments/webhooks/
   - icon: radio-button
     heading: Deploy with Pulumi Button
