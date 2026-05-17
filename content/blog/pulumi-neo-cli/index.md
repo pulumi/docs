@@ -1,7 +1,6 @@
 ---
 title: "Neo, Now in the Terminal"
 date: 2026-05-20
-draft: true
 meta_desc: "Pulumi Neo runs in the terminal now. Over 4,500 organizations already delegate real infrastructure work to Neo through Pulumi Cloud; pulumi neo brings it local."
 authors:
     - neo-team
