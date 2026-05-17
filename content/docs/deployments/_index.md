@@ -11,7 +11,7 @@ menu:
 meta_desc: Cloud-hosted deployment automation, drift detection, and workflow management for infrastructure as code.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Deployments & Workflows
-description: <p>Operatonal tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
+description: <p>Operational tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
 aliases:
   - /docs/platform/
 
