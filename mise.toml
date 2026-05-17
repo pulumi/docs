@@ -1,7 +1,12 @@
 [tools]
 golang = "1.26"
-hugo = "0.157.0"
 node = "24"
 yarn = "1.22.22"
 vale = "3.14.1"
 
+# Hugo: aqua backend on Linux (official, ships a tarball), asdf-hugo
+# plugin on macOS (extracts the binary from Hugo's signed .pkg, which
+# aqua can't unpack). The plugin is third-party; if Mac install breaks,
+# `brew install hugo` is the fallback.
+hugo = { version = "0.157.0", os = ["linux"] }
+"asdf:NeoHsu/asdf-hugo" = { version = "extended_0.157.0", os = ["macos"] }
