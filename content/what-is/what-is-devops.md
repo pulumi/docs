@@ -29,7 +29,7 @@ For most companies, software is now the product, and the pace it has to change a
 
 ### Delivery speed has become a competitive requirement
 
-Customers expect new features, fixes, and security patches in days, not quarters. The best-performing engineering teams deploy multiple times per day with change-failure rates in the low single digits, while teams at the other end of the curve release once a month and spend days recovering from a bad change. That gap shows up in the business: faster teams ship more, learn more, and respond to the market more quickly.
+Customers expect new features, fixes, and security patches in days, not quarters. DORA's "State of DevOps" research has consistently shown the highest-performing engineering teams deploying on demand (often multiple times per day) and keeping change-failure rates inside the 0–15% Elite band, while teams at the other end of the curve release once a month and spend days recovering from a bad change. That gap shows up in the business: faster teams ship more, learn more, and respond to the market more quickly.
 
 ### Cloud infrastructure changes constantly
 
@@ -53,7 +53,7 @@ In 2007, Belgian engineer Patrick Debois grew frustrated with the gulf between d
 
 ### Cloud, containers, and CI/CD (2010s)
 
-The 2010s gave DevOps the tooling it needed. Public cloud APIs made infrastructure programmable. Docker (2013) and Kubernetes (2014) made application packaging and orchestration uniform. CI/CD systems like Jenkins, CircleCI, GitHub Actions, and GitLab matured. Infrastructure as code tools followed: first Chef, Puppet, and CFEngine for configuring servers, then Terraform, AWS CloudFormation, and [Pulumi](/) for provisioning whole cloud environments. The platform itself became something you could ship through a pull request.
+The 2010s gave DevOps the tooling it needed. Public cloud APIs made infrastructure programmable. Docker (open-sourced in 2013) and Kubernetes (open-sourced in 2014, with v1.0 shipping in 2015) made application packaging and orchestration uniform. CI/CD systems like Jenkins, CircleCI, GitHub Actions, and GitLab matured. Infrastructure as code tools followed: first Chef, Puppet, and CFEngine for configuring servers, then Terraform, AWS CloudFormation, and [Pulumi](/) for provisioning whole cloud environments. The platform itself became something you could ship through a pull request.
 
 ### Platform engineering and DevSecOps (2020s)
 
@@ -114,7 +114,7 @@ These are the concrete engineering practices that turn the CALMS pillars into da
 Once the practices above are in place, the payoff shows up in measurable ways.
 
 * **Faster time to market.** Teams release in hours or days instead of weeks. DORA's "State of DevOps" reports have consistently shown elite performers deploying on demand (multiple times per day) while the lowest-performing group deploys between once a month and once every six months.
-* **Higher reliability.** Smaller, more frequent changes are easier to test and easier to revert. Elite DevOps teams report change-failure rates of 5% or less and mean times to recover measured in minutes, not days.
+* **Higher reliability.** Smaller, more frequent changes are easier to test and easier to revert. DORA's Elite cohort consistently lands change-failure rates inside the 0–15% band and recovers from failed deployments in under an hour, while lower-performing teams measure recovery in days or weeks.
 * **Better security and compliance.** Security tests, dependency scanning, and policy checks run on every change. Compliance audits become a query against version control rather than a fire drill.
 * **Improved collaboration.** Shared ownership of the lifecycle removes the "throw it over the wall" handoff and the political friction that came with it.
 * **Scalability.** Automated provisioning, configuration, and deployment let small teams operate large, multi-cloud footprints without proportionally growing headcount.
@@ -221,7 +221,7 @@ The four DORA metrics: **deployment frequency**, **lead time for changes**, **ch
 
 ### How long does it take to adopt DevOps?
 
-Serious transformations are measured in quarters and years, not weeks. Most teams see meaningful improvements in deployment frequency and lead time within the first few months of focused work on one value stream. The cultural and platform changes that compound the benefits play out over the next several years.
+Serious transformations are measured in quarters and years, not weeks. Teams that focus on a single value stream (instead of trying to "do DevOps" across an entire engineering org at once) usually start to see deployment-frequency and lead-time improvements well before the broader cultural and platform changes pay off.
 
 ## Learn more
 
