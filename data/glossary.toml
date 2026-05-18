@@ -1,185 +1,317 @@
-[[entries]]
-term = "Component"
-description = "A Pulumi component is a logical group of resources that contains other components and physical cloud resources."
-link = "/docs/concepts/resources/components/"
+# `description` is rendered through Hugo's `markdownify` (see layouts/shortcodes/glossary.html),
+# so inline markdown — backticks for code, links, emphasis — works. Block-level markdown does not.
 
 [[entries]]
-term = "Stack"
-description = "A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev)."
-link = "/docs/concepts/stack/"
+term = "Alias"
+description = "A resource option that lets a resource keep its identity in state while its URN changes (renaming, moving between parents, or refactoring). Pulumi treats aliased resources as the same resource instead of replacing them."
+link = "/docs/iac/concepts/resources/options/aliases/"
 
 [[entries]]
-term = "Program"
-description = "Pulumi programs are authored in general-purpose programming languages such as JavaScript or Python. You can use any packages supported by the language’s package manager, as well as Pulumi packages."
-link = "/docs/concepts/how-pulumi-works/"
+term = "Audit Log"
+description = "An immutable record of user and service activity in a Pulumi Cloud organization. Audit logs are available to organization admins and can be exported via the CLI or REST API."
+link = "/docs/administration/security-compliance/audit-logs/"
 
 [[entries]]
-term = "Deployment Engine"
-description = "The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program."
-link = "/docs/concepts/how-pulumi-works/"
+term = "Automation API"
+description = "A programmable interface for driving Pulumi from your own code instead of the CLI. Use it to embed updates, previews, refreshes, and destroys in applications, custom CLIs, web services, or higher-level platforms."
+link = "/docs/iac/automation-api/"
 
 [[entries]]
-term = "Self-hosted"
-description = "Self-hosted in Pulumi applies to on-premise \"behind a firewall\" scenarios, as well as environments hosted within your own AWS, Azure, or Google Cloud account."
-link = "/docs/iac/concepts/state-and-backends/#deciding-on-a-state-backend"
-
-[[entries]]
-term = "Pulumi Cloud"
-description = "The Pulumi Cloud refers to the web application at `app.pulumi.com` which automatically manages deployment state and enables collaboration between developers and operators."
-link = "/docs/pulumi-cloud/"
-
-[[entries]]
-term = "IdP"
-description = "IdP stands for Identity Provider. A Security Assertion Markup Language (SAML) IdP is a service that acts as a user directory."
-link = "https://en.wikipedia.org/wiki/Identity_provider#SAML_identity_provider"
-
-[[entries]]
-term = "SP"
-description = "SP stands for Service Provider. A Security Assertion Markup Language (SAML) service provider relies on an identity provider for authentication."
-link = "https://en.wikipedia.org/wiki/Service_provider_(SAML)"
-
-[[entries]]
-term = "IdP Metadata XML"
-description = "IdP Metadata XML is the XML configuration document provided by your Security Assertion Markup Language (SAML) IdP. It contains public information about your user directory, which can be used by the service provider to make authentication requests."
-link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadata"
-
-[[entries]]
-term = "Organization"
-description = "An organization is the primary grouping unit for stacks within the Pulumi Cloud."
-link = "/docs/pulumi-cloud/admin/organizations/"
-
-[[entries]]
-term = "Language Host"
-description = "The language host is responsible for running a Pulumi program and setting up an environment where it can register resources with the deployment engine."
-link = "/docs/concepts/how-pulumi-works/"
-
-[[entries]]
-term = "Language Executor"
-description = "A language executor is a binary named pulumi-language-<language-name>, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI."
-link = "/docs/concepts/how-pulumi-works/"
-
-[[entries]]
-term = "Resource Provider"
-description = "A Pulumi resource provider consists of two different pieces: a resource plugin and an SDK."
-link = "/docs/concepts/resources/providers/"
-
-[[entries]]
-term = "Resource Plugin"
-description = "A resource plugin is the binary used by the deployment engine to manage a resource."
-link = "/docs/concepts/how-pulumi-works/"
-
-[[entries]]
-term = "SDK"
-description = "A Pulumi Software Development Kit (SDK) provides bindings for each type of resource that the provider can manage."
-link = "https://en.wikipedia.org/wiki/Software_development_kit"
-
-[[entries]]
-term = "Resources"
-description = "All resources have a name, which must be unique in the Pulumi program."
-link = "/docs/concepts/resources/"
-
-[[entries]]
-term = "Resource Args"
-description = "The args provided to a resource determine what inputs will be used to initialize the resource. These can be either raw values or outputs from other resources."
-link = "/docs/concepts/resources/"
-
-[[entries]]
-term = "Outputs"
-description = "Outputs are a key part of how Pulumi tracks dependencies between resources. Because the values of Outputs are not available until resources are created, these are represented using the special Output type."
-link = "/docs/concepts/inputs-outputs/"
-
-[[entries]]
-term = "Secrets"
-description = "The Pulumi CLI and programming model offer ways for you to encrypt configuration values with the --secret flag or by programmatically wrapping it as a secret at runtime."
-link = "/docs/concepts/config/"
-
-[[entries]]
-term = "Stack Output"
-description = "A stack output is a value exported from a stack. A stack’s outputs can be easily retrieved from the Pulumi CLI and are displayed on pulumi.com."
-link = "/docs/concepts/stack/#outputs"
-
-[[entries]]
-term = "Stack Reference"
-description = "Stack references provide a way to access the outputs of one stack from another stack."
-link = "/docs/concepts/stack/#stack/references/"
-
-[[entries]]
-term = "Config"
-description = "Configuration values are always stored as strings, but can be parsed as richly typed values. You may set and get configuration values via the CLI or by using the Config object."
-link = "/docs/concepts/config/"
-
-[[entries]]
-term = "Dynamic Providers"
-description = "Dynamic Providers are a flexible and low-level mechanism to plug arbitrary code directly into the deployment process. It is currently in preview."
-link = "/docs/concepts/resources/dynamic-providers/"
-
-[[entries]]
-term = "Packages"
-description = "Pulumi packages are normal NPM or Python packages. They transitively depend on @pulumi/pulumi which defines how resources created by a Pulumi program will be communicated to the Pulumi engine. The ability to register resources with the Pulumi engine is the only difference between a Pulumi package and any other NPM package."
-link = "/registry/"
-
-[[entries]]
-term = "Runtime Code"
-description = "You can create libraries and components that allow the caller to pass in JavaScript callbacks to invoke at runtime."
-link = "/docs/concepts/function-serialization/"
-
-[[entries]]
-term = "SAML"
-description = "Security Assertion Markup Language. You may use a SAML 2.0-compatible identity provider in order to sign in to the Pulumi Cloud via single sign-on. The SAML SSO feature is only available in Pulumi Enterprise."
-link = "https://en.wikipedia.org/wiki/SAML_2.0"
-
-[[entries]]
-term = "Stack Tags"
-description = "Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. Stack tags are only supported when logged into the Pulumi Cloud backend."
-link = "/docs/concepts/stack/#stack-tags"
-
-[[entries]]
-term = "API"
-description = "Application Programming Interface. Pulumi offers APIs for working with a wide variety of cloud platforms, as well as higher-level APIs that make it easier to deliver cloud applications and infrastructure."
-link = "/registry/"
-
-[[entries]]
-term = "CLI"
-description = "Command-line Interface. The Pulumi CLI is open source and works in conjunction with the Pulumi Cloud to deploy changes to your cloud apps and infrastructure."
-link = "/docs/cli/"
-
-[[entries]]
-term = "Project"
-description = "A Pulumi project is any folder which contains a Pulumi.yaml file."
-link = "/docs/concepts/projects/"
-
-[[entries]]
-term = "Project File"
-description = "The Pulumi.yaml project file specifies metadata about your project."
-link = "/docs/concepts/projects/project-file/"
-
-[[entries]]
-term = "Paths"
-description = "When your Pulumi program references resources in the local filesystem, they are always relative to the working directory."
-link = "/docs/concepts/projects/#project-relative-paths"
-
-[[entries]]
-term = "State"
-description = "Pulumi stores its own copy of the current state of your infrastructure. This is often called state, and is stored in transactional snapshots we call checkpoints."
+term = "Backend"
+description = "The system that stores and serves stack state. Pulumi supports the managed Pulumi Cloud backend (the default) and self-managed backends backed by object storage such as Amazon S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem."
 link = "/docs/iac/concepts/state-and-backends/"
-
 
 [[entries]]
 term = "Checkpoint"
-description = "A checkpoint is recorded by Pulumi at various points so that it can operate reliably—whether that means diffing goal state versus current state during an update, recovering from failure, or destroying resources accurately to clean up afterwards."
+description = "A snapshot of stack state that Pulumi writes during operations. Checkpoints let the engine compute diffs between desired and actual state, recover from interruptions, and safely tear down resources during a destroy."
 link = "/docs/iac/concepts/state-and-backends/"
 
 [[entries]]
-term = "Secrets Encryption"
-description = "The Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using --secret or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored."
-link = "/docs/concepts/secrets/"
-
-[[entries]]
-term = "Native language package"
-description = "A component published to a language-specific package registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. A native language package can only be consumed in the programming language in which it was authored; it has no cross-language SDK generation support."
+term = "Component"
+description = "A logical grouping of other components and physical cloud resources, authored as a subclass of `ComponentResource`. Components let you package higher-level abstractions and reuse them across stacks and projects."
 link = "/docs/iac/concepts/components/"
 
 [[entries]]
-term = "Pulumi package"
-description = "A component or provider packaged with a Pulumi plugin (source-based or executable) that enables Pulumi to generate SDKs for any supported language. Pulumi packages are consumable in all Pulumi-supported languages, either by running `pulumi package add` to generate an SDK on-the-fly or by installing a pre-published SDK from the appropriate package registry."
+term = "Config"
+description = "Per-stack key-value settings that a Pulumi program reads at runtime. Configuration values are stored as strings but can be parsed as richer types, and they can be marked as secrets so they are encrypted at rest and in transit."
+link = "/docs/iac/concepts/config/"
+
+[[entries]]
+term = "Deployment Engine"
+description = "The component of Pulumi responsible for computing the operations needed to drive current state into the desired state declared by a program, then executing those operations through resource providers."
+link = "/docs/iac/concepts/how-pulumi-works/"
+
+[[entries]]
+term = "Destroy"
+description = "The operation that tears down all resources managed by a stack. After a successful destroy the stack's state contains no resources, but the stack itself still exists until you remove it."
+link = "/docs/iac/cli/commands/pulumi_destroy/"
+
+[[entries]]
+term = "Drift Detection"
+description = "An automated check that compares the actual state of cloud resources with what Pulumi recorded in state. Drift detection runs on a schedule in Pulumi Deployments and surfaces unexpected changes for review or automatic remediation."
+link = "/docs/deployments/deployments/drift/"
+
+[[entries]]
+term = "Dynamic Providers"
+description = "A mechanism for plugging arbitrary code directly into the deployment process from inside a program, without authoring a separate provider plugin. Useful for managing resources that no existing provider covers."
+link = "/docs/iac/concepts/providers/dynamic-providers/"
+
+[[entries]]
+term = "Environment"
+description = "An ESC concept: a versioned, hierarchical collection of configuration values and secrets stored in Pulumi Cloud. Environments can be consumed by Pulumi programs, CLIs, applications, and CI systems through `esc open`, `esc run`, file mounts, or direct imports from a stack."
+link = "/docs/esc/environments/"
+
+[[entries]]
+term = "Environment Definition"
+description = "The YAML document that declares an ESC environment: the values it exposes, the providers it pulls secrets from, the environments it imports, and the credentials it dynamically generates."
+link = "/docs/esc/environments/syntax/"
+
+[[entries]]
+term = "Function Serialization"
+description = "Pulumi's ability to capture a JavaScript or TypeScript function — including its lexical environment — and ship it to a cloud service (for example, an AWS Lambda or Azure Function) to execute at runtime. Previously referred to as runtime code."
+link = "/docs/iac/concepts/functions/function-serialization/"
+
+[[entries]]
+term = "Import"
+description = "Adopt an existing cloud resource into a stack so Pulumi manages it going forward. You can import individual resources from the CLI or bulk-import many resources at once from a JSON file."
+link = "/docs/iac/concepts/resources/options/import/"
+
+[[entries]]
+term = "Internal Developer Platform (IDP)"
+description = "Pulumi's set of building blocks for platform teams to deliver self-service infrastructure to developers: organization templates, no-code stacks, private registries, and policy enforcement working together as a platform layer on top of Pulumi IaC, ESC, and Cloud."
+link = "/docs/idp/"
+
+[[entries]]
+term = "Language Executor"
+description = "A small binary named `pulumi-language-<language>` that the Pulumi CLI launches to run a program in the corresponding language runtime (Node.js, Python, .NET, Go, Java, or YAML). Language executors ship with the CLI."
+link = "/docs/iac/concepts/how-pulumi-works/"
+
+[[entries]]
+term = "Language Host"
+description = "The process started by a language executor that runs your Pulumi program and registers resources with the deployment engine through Pulumi's RPC protocol."
+link = "/docs/iac/concepts/how-pulumi-works/"
+
+[[entries]]
+term = "MCP Server"
+description = "Pulumi's Model Context Protocol server, which exposes Pulumi capabilities (registry lookups, deployments, resource search, and more) to MCP-compatible AI clients such as Claude Desktop, Cursor, and Pulumi Neo."
+link = "/docs/ai/mcp-server/"
+
+[[entries]]
+term = "Native language package"
+description = "A component published to a language-specific package registry (npm, PyPI, NuGet, Maven, and so on) without a Pulumi plugin. Native language packages can only be consumed in the language they were authored in; they do not generate SDKs for other Pulumi-supported languages."
+link = "/docs/iac/concepts/components/"
+
+[[entries]]
+term = "No-Code Stacks"
+description = "An IDP feature that lets developers create and manage stacks through the Pulumi Cloud UI without writing or running any code, using organization templates configured by platform teams."
+link = "/docs/idp/concepts/no-code-stacks/"
+
+[[entries]]
+term = "OIDC"
+description = "OpenID Connect. Pulumi Cloud uses OIDC trust relationships to let workloads in CI systems and clouds (GitHub Actions, GitLab CI, AWS, Azure, Google Cloud, and others) authenticate without long-lived credentials. Pulumi can also act as an OIDC issuer for downstream cloud accounts."
+link = "/docs/administration/access-identity/oidc-issuers/"
+
+[[entries]]
+term = "Organization"
+description = "The primary grouping unit in Pulumi Cloud. An organization owns stacks, environments, teams, policy packs, deployment settings, and audit logs, and is where access control and billing are scoped."
+link = "/docs/administration/organizations-teams/organizations/"
+
+[[entries]]
+term = "Organization Template"
+description = "A reusable project template scoped to a Pulumi Cloud organization. Platform teams use organization templates to standardize new projects and to power IDP features like no-code stacks."
+link = "/docs/idp/concepts/organization-templates/"
+
+[[entries]]
+term = "Outputs"
+description = "Values produced by resources during an update. Because their concrete values are not known until the resource is created, Pulumi wraps them in an `Output<T>` type that tracks dependencies and propagates them through `apply` and `all`."
+link = "/docs/iac/concepts/inputs-outputs/"
+
+[[entries]]
+term = "Packages"
+description = "Distributable units of Pulumi code. A Pulumi package is a component or provider paired with a Pulumi plugin so SDKs can be generated for every supported language; a native language package is restricted to its authoring language. Both are installed through `pulumi package add` or a language package manager."
 link = "/docs/iac/concepts/packages/"
+
+[[entries]]
+term = "Policy as Code"
+description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against resources discovered by Pulumi Insights, regardless of how they were created."
+link = "/docs/insights/policy/"
+
+[[entries]]
+term = "Preview"
+description = "The dry-run operation that shows the changes Pulumi would make to reach the desired state of a program, without performing them. Previews are the basis for review stacks and CI gating."
+link = "/docs/iac/cli/commands/pulumi_preview/"
+
+[[entries]]
+term = "Private Registry"
+description = "An organization-scoped registry inside Pulumi Cloud where platform teams publish internal components and templates for use by other teams in the same organization."
+link = "/docs/idp/concepts/private-registry/"
+
+[[entries]]
+term = "Program"
+description = "The user-authored code that declares the resources, components, and outputs of a Pulumi stack. Programs are written in general-purpose languages (TypeScript, JavaScript, Python, Go, .NET, Java) or YAML and use packages from the Pulumi Registry and the language ecosystem."
+link = "/docs/iac/concepts/how-pulumi-works/"
+
+[[entries]]
+term = "Project"
+description = "A directory containing a `Pulumi.yaml` file. The project file declares the program's name, runtime, and per-stack configuration, and is the unit you operate on with most CLI commands."
+link = "/docs/iac/concepts/projects/"
+
+[[entries]]
+term = "Project File"
+description = "The `Pulumi.yaml` file at the root of a project. It specifies the runtime, project name, description, template metadata, and optional configuration schemas, plugin requirements, and backend settings."
+link = "/docs/iac/concepts/projects/project-file/"
+
+[[entries]]
+term = "Pulumi Cloud"
+description = "The managed SaaS at `app.pulumi.com` that stores stack state, secrets, environments, deployment settings, policies, audit logs, and Insights data. It is Pulumi's default backend and the host for collaboration, governance, and automation features."
+link = "/product/pulumi-cloud/"
+
+[[entries]]
+term = "Pulumi Deployments"
+description = "A managed remote execution service in Pulumi Cloud that runs Pulumi operations (`up`, `preview`, `refresh`, `destroy`) on Pulumi-hosted or self-hosted agents. Deployments power Git push-to-deploy, scheduled drift detection, review stacks, and click-to-deploy templates."
+link = "/docs/deployments/"
+
+[[entries]]
+term = "Pulumi ESC"
+description = "Environments, Secrets, and Configuration. A Pulumi Cloud service for centralizing secrets and configuration in versioned, hierarchical environments that Pulumi programs, CLIs, applications, and CI systems can consume safely."
+link = "/docs/esc/"
+
+[[entries]]
+term = "Pulumi Insights"
+description = "The Insights & Governance product in Pulumi Cloud. It discovers resources across all your cloud accounts (including those Pulumi did not create), provides a searchable graph, and enforces policy as code on top of them."
+link = "/docs/insights/"
+
+[[entries]]
+term = "Pulumi Neo"
+description = "Pulumi's AI agent for infrastructure work. Neo takes natural-language requests, plans the changes, and runs Pulumi (and other tooling) to carry them out, either fully managed in the cloud or with local tool execution via the `pulumi neo` CLI."
+link = "/docs/ai/"
+
+[[entries]]
+term = "Pulumi Neo Task"
+description = "A single agent invocation in Pulumi Neo. A task captures the request, the agent's plan and tool calls, and the resulting changes, and can be reviewed and replayed from Pulumi Cloud."
+link = "/docs/ai/tasks/"
+
+[[entries]]
+term = "Pulumi Registry"
+description = "The public catalog at `pulumi.com/registry` where Pulumi packages — providers, components, and templates — are published, versioned, and discovered. Programs install packages from the Registry through `pulumi package add` or the language's package manager. Distinct from a private registry, which is the organization-scoped counterpart inside Pulumi Cloud."
+link = "/registry/"
+
+[[entries]]
+term = "Pulumi package"
+description = "A component or provider distributed with a Pulumi plugin (source-based or executable) so SDKs can be generated for any supported language. Pulumi packages can be consumed by running `pulumi package add` or by installing a pre-published SDK from the appropriate package registry."
+link = "/docs/iac/concepts/packages/"
+
+[[entries]]
+term = "RBAC"
+description = "Role-based access control. Pulumi Cloud RBAC lets organization admins assign users and teams to roles whose permissions are defined by reusable permission sets, then scope those roles to specific projects, stacks, environments, or other resources."
+link = "/docs/administration/access-identity/rbac/"
+
+[[entries]]
+term = "Refresh"
+description = "An operation that reconciles Pulumi's state with the actual configuration of resources in the cloud. Use it to pick up changes made outside Pulumi or to recover from drift."
+link = "/docs/iac/cli/commands/pulumi_refresh/"
+
+[[entries]]
+term = "Resource Args"
+description = "The object of inputs passed to a resource's constructor that determine how the resource is created. Inputs can be plain values or `Output` values from other resources, which establishes dependencies."
+link = "/docs/iac/concepts/resources/"
+
+[[entries]]
+term = "Resource Plugin"
+description = "A Pulumi plugin that the deployment engine invokes to manage resources of a given provider. Plugins can ship as a native executable or as a source-based package that Pulumi loads through a language host. They implement create, read, update, and delete operations for their resource types and are distributed through the Pulumi Registry."
+link = "/docs/iac/concepts/how-pulumi-works/"
+
+[[entries]]
+term = "Resource Provider"
+description = "The combination of a resource plugin and one or more language SDKs that lets a Pulumi program declare resources of a particular type (for example, AWS, Azure, Kubernetes). Providers are distributed through the Pulumi Registry."
+link = "/docs/iac/concepts/providers/"
+
+[[entries]]
+term = "Resource Search"
+description = "The Pulumi Insights feature for querying every resource Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
+link = "/docs/insights/discovery/search/"
+
+[[entries]]
+term = "Resources"
+description = "The cloud objects Pulumi creates and tracks. Every resource has a logical name unique within its parent, a URN that uniquely identifies it across the stack, a set of inputs, and a set of outputs."
+link = "/docs/iac/concepts/resources/"
+
+[[entries]]
+term = "Review Stacks"
+description = "A Pulumi Deployments feature that automatically creates a short-lived stack for each pull request, runs a preview (and optionally an update), and posts the results back to the PR for review."
+link = "/docs/deployments/deployments/review-stacks/"
+
+[[entries]]
+term = "Rotation"
+description = "An ESC capability for rotating secrets on a schedule or on demand. Rotators replace credentials in the source system and update the environment's configuration so consumers always receive fresh values."
+link = "/docs/esc/environments/rotation/"
+
+[[entries]]
+term = "SDK"
+description = "Software Development Kit. A language-specific library, typically generated from a Pulumi provider, that lets programs in TypeScript, Python, Go, .NET, Java, or YAML declare and read resources of that provider."
+link = "https://en.wikipedia.org/wiki/Software_development_kit"
+
+[[entries]]
+term = "Secrets"
+description = "Configuration values or program data that Pulumi must encrypt. Marking a value as a secret causes Pulumi to encrypt it at rest in state and configuration, mask it in CLI output, and propagate the secret marking through computations."
+link = "/docs/iac/concepts/secrets/"
+
+[[entries]]
+term = "Secrets Encryption"
+description = "The mechanism Pulumi uses to encrypt secret values in stack state and configuration. Pulumi Cloud manages per-stack keys automatically; with self-managed backends you can supply your own KMS provider (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault, or a passphrase)."
+link = "/docs/iac/concepts/secrets/"
+
+[[entries]]
+term = "Self-hosted"
+description = "A deployment model in which you run Pulumi infrastructure inside your own environment instead of relying on the managed Pulumi Cloud SaaS. Pulumi offers self-hosted Pulumi Cloud (on-prem or in your cloud account) and self-managed state backends backed by object storage."
+link = "/docs/administration/self-hosting/"
+
+[[entries]]
+term = "Stack"
+description = "An isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to model environments (dev, staging, production), per-developer sandboxes, or per-feature instances."
+link = "/docs/iac/concepts/stacks/"
+
+[[entries]]
+term = "Stack Output"
+description = "A value exported from a stack with `export` (TypeScript), `pulumi.export` (Python), or the equivalent in other languages. Stack outputs are visible in the CLI and Pulumi Cloud and can be consumed by other stacks through stack references."
+link = "/docs/iac/concepts/stacks/#outputs"
+
+[[entries]]
+term = "Stack Reference"
+description = "A way for one stack to read the outputs of another stack. Stack references are the recommended pattern for splitting infrastructure into independently deployable layers."
+link = "/docs/iac/concepts/stacks/#stackreferences"
+
+[[entries]]
+term = "Stack Tags"
+description = "Name-value metadata attached to a stack. Tags are searchable in Pulumi Cloud and useful for grouping stacks by team, environment, region, or any other dimension. Stack tags are only available on the Pulumi Cloud backend."
+link = "/docs/iac/concepts/stacks/#stack-tags"
+
+[[entries]]
+term = "State"
+description = "Pulumi's record of the resources a stack manages, their inputs and outputs, and the dependencies between them. State is stored by the backend and read by the deployment engine on every operation."
+link = "/docs/iac/concepts/state-and-backends/"
+
+[[entries]]
+term = "Team"
+description = "A named group of users inside a Pulumi Cloud organization. Teams are the unit you assign roles and permissions to, and they can also be granted access to specific stacks, environments, and other resources."
+link = "/docs/administration/access-identity/rbac/teams/"
+
+[[entries]]
+term = "Token"
+description = "A credential used to authenticate to Pulumi Cloud non-interactively. Personal access tokens belong to a user; organization and team access tokens belong to the organization and can be scoped to specific permissions."
+link = "/docs/administration/access-identity/access-tokens/"
+
+[[entries]]
+term = "Update"
+description = "The operation, invoked with `pulumi up`, that computes a desired state from your program and applies the necessary changes to reach it. Updates create, modify, and delete resources, and record the result in stack state."
+link = "/docs/iac/cli/commands/pulumi_up/"
+
+[[entries]]
+term = "URN"
+description = "Uniform Resource Name. The string Pulumi uses to uniquely identify a resource within a stack, derived from the stack, project, parent chain, resource type, and logical name. URNs appear in CLI output and are the keys used by aliases and resource-targeting flags."
+link = "/docs/iac/concepts/resources/names/#urns"
+
+[[entries]]
+term = "Webhook"
+description = "An HTTP callback Pulumi Cloud sends when something happens — for example, a stack update completes, drift is detected, or an environment changes. Webhooks are scoped to a stack, environment, or organization."
+link = "/docs/deployments/webhooks/"

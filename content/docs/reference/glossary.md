@@ -5,15 +5,13 @@ title: Pulumi glossary
 h1: Pulumi glossary
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  iac:
-    name: Glossary
-    parent: iac-concepts
-    weight: 100
-  concepts:
-    weight: 15
+    reference:
+        name: Glossary
+        parent: reference-home
+        weight: 100
 aliases:
-- /docs/reference/glossary/
 - /docs/concepts/glossary/
+- /docs/iac/concepts/glossary/
 ---
 
 {{< glossary >}}
