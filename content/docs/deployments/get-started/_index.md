@@ -67,7 +67,6 @@ To collaborate with other developers or use advanced features like [SAML SSO](/d
 - **Identity and access**: [Organizations](/docs/administration/organizations-teams/organizations/), [teams](/docs/administration/organizations-teams/teams/), and role-based access control
 - **[SAML/SSO](/docs/administration/access-identity/saml/)**: Enterprise identity provider integration
 - **[Audit logs](/docs/administration/security-compliance/audit-logs/)**: Complete activity tracking and compliance reporting
-- **[Projects and stacks](/docs/deployments/projects-and-stacks/)**: Organized infrastructure with full deployment history
 
 ### Developer experience
 
