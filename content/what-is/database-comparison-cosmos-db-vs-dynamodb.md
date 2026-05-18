@@ -3,6 +3,7 @@ title: "Database Comparison: Cosmos DB vs DynamoDB"
 meta_desc: |
      Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
+meta_image: /images/what-is/database-comparison-cosmos-db-vs-dynamodb-meta.png
 type: what-is
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 

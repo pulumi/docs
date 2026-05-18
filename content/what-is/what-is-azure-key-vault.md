@@ -3,6 +3,7 @@ title: What is Azure Key Vault?
 meta_desc: |
      Learn more about what Azure Key Vault is and how to use it.
 
+meta_image: /images/what-is/what-is-azure-key-vault-meta.png
 type: what-is
 page_title: "What is Azure Key Vault?"
 authors: ["torian-crane"]

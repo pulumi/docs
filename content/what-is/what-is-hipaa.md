@@ -2,6 +2,7 @@
 title: What is HIPAA?
 meta_desc: |
     Understand what HIPAA is, its key requirements, compliance implications for healthcare organizations, and how technology can help meet HIPAA standards.
+meta_image: /images/what-is/what-is-hipaa-meta.png
 type: what-is
 page_title: "What is HIPAA?"
 authors: ["asaf-ashirov"]
