@@ -1,8 +1,6 @@
 ---
 title: What is DevOps?
-meta_desc: |
-    DevOps combines software development and IT operations to ship faster and more reliably. Learn the lifecycle, principles, practices, tools, and how to adopt it.
-    Understand what is DevOps, Understand key practices of CI/CD, automation, infrastructure testing and security
+meta_desc: DevOps combines software development and IT operations to ship faster and more reliably. Learn lifecycle, CI/CD, automation, testing, and security.
 meta_image: /images/what-is/what-is-devops-meta.png
 type: what-is
 page_title: "What is DevOps?"
