@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: Run 'aws dynamodb list-tables' with Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws dynamodb list-tables`](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/list-tables.html) command is part of the AWS Command Line Interface (CLI) and retrieves a list of Amazon DynamoDB tables within your AWS account.

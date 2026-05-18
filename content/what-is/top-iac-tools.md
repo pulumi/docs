@@ -4,6 +4,7 @@ meta_desc: |
      Explore top Infrastructure as Code (IaC) tools for cloud resource management. Find the best fit for your DevOps needs.
 type: what-is
 page_title: "Top Infrastructure as Code Tools"
+authors: ["adam-gordon-bell"]
 ---
 
 Infrastructure as Code tools (IaC tools) let you automate the setup of your cloud resources. Instead of manually configuring resources in your cloud web console, you can write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.

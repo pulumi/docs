@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: "What is AWS Secrets Manager?"
+authors: ["torian-crane"]
 ---
 
 Amazon Web Services (AWS) is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. A critical aspect of this landscape is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". AWS Secrets Manager is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.

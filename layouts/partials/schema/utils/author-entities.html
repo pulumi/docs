@@ -45,10 +45,11 @@
       {{/* Add URL to author page */}}
       {{ $author = merge $author (dict "url" (printf "https://www.pulumi.com/authors/%s/" .id)) }}
 
-      {{/* Add image if available */}}
-      {{ with .image }}
-        {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" .)) }}
-      {{ end }}
+      {{/* Add image. Team avatars live at /images/team/<id>.jpg by convention; an
+           explicit .image in the team toml overrides it. Including a Person image
+           is what unlocks the author byline in Google's rich results. */}}
+      {{ $imagePath := or .image (printf "/images/team/%s.jpg" .id) }}
+      {{ $author = merge $author (dict "image" (printf "https://www.pulumi.com%s" $imagePath)) }}
 
       {{/* Add expertise based on title */}}
       {{ $knowsAbout := slice "Infrastructure as Code" "Cloud Computing" "DevOps" }}
