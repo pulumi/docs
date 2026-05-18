@@ -1,5 +1,6 @@
 ---
 title: "Agent-Friendly Markdown Docs for Pulumi Providers and Components"
+allow_long_title: true
 date: 2026-05-19
 draft: false
 meta_desc: "Public Pulumi Cloud registry endpoints serve READMEs, nav, per-resource docs, and examples for any package version. Markdown or JSON, via `pulumi api`."
@@ -15,34 +16,40 @@ tags:
 schema_type: auto
 
 social:
-    twitter: "Five new public endpoints on the Pulumi Cloud registry serve docs for any package version, including private ones over `pulumi api`. Query params tune the output: lang, os, depth, limit, search."
+    twitter: |
+        Five new public endpoints on the Pulumi Cloud registry serve docs for any package version, including private ones over pulumi api.
+
+        Query params tune the output: lang, os, depth, limit, search.
     linkedin: |
         We've made five Pulumi Cloud registry documentation endpoints public: READMEs, installation guides, navigation trees, per-resource docs, and aggregated examples for any package version.
 
-        pulumi.com/registry already serves markdown variants of its pages, which works well for public packages and the versions we publish on the marketing site. The cloud registry endpoints fill in two gaps: every published version is addressable, and `pulumi api` reuses your CLI auth to reach private packages.
+        The marketing registry already serves markdown variants of its pages, which works well for public packages and the versions we publish there. The cloud registry endpoints fill in two gaps: every published version is addressable, and pulumi api reuses your CLI auth to reach private packages.
 
-        Query parameters tune the response: lang to filter to one language, os for OS choosers, `q` + `depth=full` to search the nav tree, limit on examples. `pulumi package add` now prints a copy-pasteable `pulumi api` pointer when it detects an AI coding agent.
-    bluesky: "Five new public endpoints on the Pulumi Cloud registry serve docs for any package version, including private ones over `pulumi api`."
+        Query parameters tune the response: lang to filter to one language, os for OS choosers, q + depth=full to search the nav tree, limit on examples. pulumi package add now prints a copy-pasteable pulumi api pointer when it detects an AI coding agent.
+    bluesky: |
+        Five new public endpoints on the Pulumi Cloud registry serve docs for any package version, including private ones over pulumi api.
+
+        pulumi package add now prints a copy-pasteable pointer when it detects an AI coding agent.
 ---
 
-Five Pulumi Cloud registry documentation endpoints flipped from Preview to Public this month: package READMEs, installation guides, navigation trees, per-resource docs, and aggregated examples. The schemas are in the [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/registry/). Every published version of every package is addressable, and private packages resolve through the CLI's existing auth via `pulumi api`.
+Coding agents and CLI users need to see what's inside a Pulumi package: READMEs, installation guides, navigation trees, per-resource docs, examples. They need it pinned to the version the project actually uses, filterable to one language, and reachable over the same auth as the CLI, so private packages work the same way as public ones. Five Pulumi Cloud registry documentation endpoints flipped from Preview to Public this month to make that work for every published package. The schemas are in the [Pulumi Cloud REST API reference](/docs/reference/cloud-rest-api/registry/). Every published version of every package is addressable, and private packages resolve through the CLI's existing auth via `pulumi api`.
 
 <!--more-->
 
 ## How to use them now
 
-The examples below use [`pulumi api`](/docs/iac/cli/cloud-api/), available in Pulumi CLI v3.238.0 and later. See [Download & Install Pulumi](/docs/install/) if you need to upgrade.
+The examples below use [`pulumi api`](/docs/iac/cli/api/), available in Pulumi CLI v3.238.0 and later. See [Download & Install Pulumi](/docs/install/) if you need to upgrade.
 
 The five endpoints share a version-pinned prefix:
 
-```
+```text
 /api/registry/packages/{source}/{publisher}/{name}/versions/{version}
 ```
 
 With these suffixes:
 
 - [`/readme`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversionreadme): package overview.
-- [`/installation`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversioninstallation): installation and configuration guide. 404 when the package doesn't ship one.
+- [`/installation`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversioninstallation): installation and configuration guide; returns 404 when the package doesn't ship one.
 - [`/nav`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversionnav): navigation tree of modules, resources, and functions.
 - [`/docs/{token}`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversiondocstoken): structured docs for a single resource or function, keyed by Pulumi token.
 - [`/examples`](/docs/reference/cloud-rest-api/registry/#get-apiregistrypackagessourcepublishernameversionsversionexamples): code examples across the package, filterable and paginated.
@@ -79,7 +86,7 @@ Resolved-version responses (anything that isn't `latest`) are immutable and carr
 
 `pulumi package add` and `pulumi package gen-sdk` now print a docs pointer when they detect they're running inside an AI coding agent (Claude Code, Cursor, Codex, Aider, and so on):
 
-```
+```text
 Added package random
 Documentation:
   pulumi api --output=markdown '/api/registry/packages/pulumi/pulumi/random/versions/4.19.1/readme'                    # package readme
@@ -132,12 +139,12 @@ A pattern that's emerged across documentation tooling is to put a `<link rel="al
 
 The cloud registry endpoints extend the convention into the API surface. Every JSON response from the five endpoints carries a `Link` header advertising the Markdown twin at the same URL:
 
-```
+```http
 Link: </api/registry/packages/pulumi/pulumi/random/versions/4.19.1/docs/random%3Aindex%2FrandomPassword%3ARandomPassword>; rel="alternate"; type="text/markdown"
 ```
 
-A client that lands on the JSON response discovers, from the header alone, that the same URL serves Markdown when asked with `Accept: text/markdown`. The negotiation runs through a [small shared helper](https://github.com/pulumi/pulumi-service/blob/master/cmd/service/api/rest/negotiate.go) in our REST framework: handlers declare which media types they support, and the helper parses the client's `Accept` header (including `q=` weights, comma-separated alternatives, and `*/*` wildcard) to pick one. An unsupported `Accept` value returns 406 with a list of what works.
+A client that lands on the JSON response discovers, from the header alone, that the same URL serves Markdown when asked with `Accept: text/markdown`. The negotiation runs through a small shared helper in our REST framework: handlers declare which media types they support, and the helper parses the client's `Accept` header (including `q=` weights, comma-separated alternatives, and `*/*` wildcard) to pick one. An unsupported `Accept` value returns 406 with a list of what works.
 
 On the discovery side, we reorganized [llms.txt](https://www.pulumi.com/llms.txt) to lead the "For agents" block with the cloud registry API, so an agent consuming the standard llms.txt file lands on these endpoints first, with copy-pasteable `pulumi api` and `curl` examples right there.
 
-If you build with these endpoints, or your agent uses them, we'd like to hear about it in the [Community Slack](https://slack.pulumi.com/) or on [GitHub](https://github.com/pulumi/pulumi-service/issues).
+If you build with these endpoints, or your agent uses them, we'd like to hear about it in the [Community Slack](https://slack.pulumi.com/) or on [GitHub](https://github.com/pulumi/pulumi/issues).
