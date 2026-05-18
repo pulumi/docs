@@ -106,7 +106,7 @@ If you need to delegate billing-only access to a team member without granting fu
 
 Stack admins can transfer individual stacks between personal accounts and organizations, or between organizations. Organization admins can transfer stacks in bulk.
 
-To transfer stacks _into_ an organization, an organization admin must first enable **Allow organization members to create stacks and transfer stacks to this organization** on the **Access Management** page in the organization's settings.
+Transferring a stack requires two permissions: the right to transfer the stack from its current owner, and the right to create stacks in the destination organization. Both are configured through your organization's access controls — see [Role-based access control](/docs/administration/access-identity/rbac/) for details.
 
 To transfer an individual stack:
 
@@ -120,7 +120,7 @@ To transfer stacks in bulk:
 1. Select the three dot menu beside **Create project**.
 1. Choose **Transfer stacks** from the dropdown.
 1. Choose the **Transfer destination** from the dropdown.
-1. Tick the stacks you'd like to transfer and select **Transfer stacks**.
+1. Tick the stacks you'd like to transfer (up to 15 at a time) and select **Transfer stacks**.
 
 ## Restoring a deleted stack
 
@@ -128,7 +128,7 @@ To transfer stacks in bulk:
 The ability to restore a deleted stack is limited to Enterprise and Business Critical editions.
 {{% /notes %}}
 
-Restoring a stack recovers a previously deleted stack along with its update history. The last 25 stacks deleted in an organization can be restored by an organization admin, and only stacks deleted within the previous year are eligible.
+Restoring a stack recovers a previously deleted stack along with its update history. The 25 most recently deleted stacks in an organization can be restored by an organization admin.
 
 To restore a stack:
 

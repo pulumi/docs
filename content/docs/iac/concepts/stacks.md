@@ -207,7 +207,7 @@ Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> 
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm). Custom tags can also be created, edited, and deleted from each stack's page in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
 
 ## Stack outputs {#outputs}
 
@@ -421,7 +421,7 @@ with open('./Pulumi.README.md') as f:
 ```go
 func main() {
   pulumi.Run(func(ctx *pulumi.Context) error {
-    readmeBytes, err := ioutil.ReadFile("./Pulumi.README.md")
+    readmeBytes, err := os.ReadFile("./Pulumi.README.md")
     if err != nil {
       return fmt.Errorf("failed to read readme: %w", err)
     }
