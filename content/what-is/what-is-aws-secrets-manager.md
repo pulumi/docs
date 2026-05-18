@@ -3,6 +3,7 @@ title: What is AWS Secrets Manager?
 meta_desc: |
      Learn more about what AWS Secrets Manager is and how to use it.
 
+meta_image: /images/what-is/what-is-aws-secrets-manager-meta.png
 type: what-is
 page_title: "What is AWS Secrets Manager?"
 authors: ["torian-crane"]

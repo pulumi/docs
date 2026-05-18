@@ -182,6 +182,6 @@ After installing Pulumi, verify everything is in working order by running the `p
 
 {{% /chooser %}}
 
-If you run into trouble, please refer to the [Download and install Pulumi](/docs/iac/download-install/) page to troubleshoot your setup before moving on.
+If you run into trouble, please refer to the [Download and install Pulumi](/docs/install/) page to troubleshoot your setup before moving on.
 
 {{< get-started-stepper >}}

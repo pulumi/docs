@@ -2,6 +2,7 @@
 title: What is Cloud Security?
 meta_desc: |
     Learn about cloud security concepts, best practices, and how infrastructure as code helps secure cloud environments.
+meta_image: /images/what-is/what-is-cloud-security-meta.png
 type: what-is
 page_title: "What is Cloud Security?"
 authors: ["asaf-ashirov"]

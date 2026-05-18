@@ -3,6 +3,7 @@ title: What is a CircleCI Secret?
 meta_desc: |
     Learn more about CircleCI secrets and how to use them.
 
+meta_image: /images/what-is/what-is-a-circleci-secret-meta.png
 type: what-is
 page_title: "What is a CircleCI Secret?"
 authors: ["diana-esteves"]

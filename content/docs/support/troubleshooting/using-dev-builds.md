@@ -67,7 +67,7 @@ curl -fsSL https://get.pulumi.com | sh -s -- --version dev
 
 {{% /chooser %}}
 
-For more installation options, see the [download and install documentation](/docs/get-started/download-install/#installing-dev-releases).
+For more installation options, see the [download and install documentation](/docs/install/#installing-dev-releases).
 
 ### Language SDKs
 
@@ -93,11 +93,11 @@ After installing the dev build:
 Once an official release containing your fix is published:
 
 1. Uninstall the dev build
-1. Install the latest stable version using the standard [installation instructions](/docs/get-started/download-install/)
+1. Install the latest stable version using the standard [installation instructions](/docs/install/)
 1. For SDKs, update your dependencies to the latest stable version
 
 ## Related resources
 
-- [Download and install Pulumi](/docs/get-started/download-install/)
-- [Pulumi CLI versions](/docs/get-started/download-install/versions/)
+- [Download and install Pulumi](/docs/install/)
+- [Pulumi CLI versions](/docs/install/versions/)
 - [Filing GitHub issues](/docs/support/filing-issues/)

@@ -2,6 +2,7 @@
 title: What is Pulumi?
 meta_desc: |
     Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
+meta_image: /images/what-is/what-is-pulumi-meta.png
 type: what-is
 page_title: "What is Pulumi?"
 authors: ["asaf-ashirov"]

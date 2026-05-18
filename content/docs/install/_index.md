@@ -5,12 +5,9 @@ title: "Download & Install Pulumi"
 h1: Download & Install Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    get-started:
-        parent: get-started-home
-        weight: 1
-        identifier: download-install
     install:
-        name: Overview
+        name: "Download & Install Pulumi"
+        identifier: install-home
         weight: 1
 
 aliases:
@@ -20,6 +17,14 @@ aliases:
   - /install/
   - /docs/install
   - /docs/get-started/install/
+  - /docs/get-started/download-install/
+  - /docs/install/migrating-3.0/
+  - /docs/install/migrating-2.0
+  - /docs/iac/download-install/migrating-3.0/
+  - /docs/get-started/install/migrating-3.0/
+  - /docs/get-started/install/migrating-2.0/
+  - /docs/get-started/download-install/migrating-3.0/
+  - /docs/iac/install
 
 search:
    boost: true
@@ -31,6 +36,12 @@ search:
 ---
 
 The latest version of Pulumi is **{{< latest-version >}}**. For previous versions, see [Available versions](/docs/install/versions/). For a list of features, bug fixes, and more see the [CHANGELOG](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md).
+
+By default, the Pulumi CLI stores state in [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/), our free, hosted state-management backend. Pulumi Cloud is free for individuals and is the recommended backend when you're learning Pulumi — no credit card required. If you'd rather host state yourself (S3, Azure Blob, GCS, or local), see [self-managed state backends](/docs/iac/concepts/state-and-backends/).
+
+{{% notes "info" %}}
+You don't need a Pulumi Cloud account to install the CLI. You'll be prompted to sign in (or to pick a self-managed backend) the first time you run `pulumi login`.
+{{% /notes %}}
 
 ## Choose an operating system
 
@@ -515,10 +526,6 @@ For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the 
 ```bash
 npx skills add pulumi/agent-skills --skill '*'
 ```
-
-## Upgrading Pulumi
-
-If you are upgrading from Pulumi 2.0 to 3.0, please see our [migration guide](/docs/install/migrating-3.0).
 
 ## Installing betas and previous versions
 
