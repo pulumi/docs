@@ -18,11 +18,11 @@ social:
 
         Here are 10 more.
     linkedin: |
-        Last fall we wrote up 10 things you could do with Pulumi Neo. Since then platform teams have actually handed Neo real work.
+        Last fall we wrote up 10 things you could do with Pulumi Neo. Since then platform teams have handed Neo real work.
 
         The pattern that kept showing up: platform engineers used to keep things in their heads, then they delegated them to Neo, then those tasks started running on a schedule without anyone initiating them. Drift detection every morning. Lambda runtime upgrades every Sunday night. CIS Benchmark fixes that show up as PRs while you sleep.
 
-        With today's release, Neo also extends beyond the web console to the CLI, GitHub, and Slack. Same Plan Mode and PR workflow, different places to invoke it from.
+        With today's release, Neo also extends beyond the web console to the CLI, GitHub, and Slack. Same plan mode and PR workflow, different places to invoke it from.
 
         Here are 10 more workflows we're seeing teams hand to Neo, from one-off deploys to operations that run on a schedule.
     bluesky: |
@@ -31,9 +31,9 @@ social:
         Here are 10 more.
 ---
 
-Last fall, we wrote up [10 things you could do with Pulumi Neo](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/) to make their experiences with Neo even better. And with today's release, Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
+Last fall, after launching [Pulumi Neo](/neo/), we wrote up [10 things you could do with it](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With today's release, Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
 
-So here are **ten more** things you can do with Neo.
+So here are **10 more** things you can do with Neo.
 
 <!--more-->
 
@@ -45,11 +45,11 @@ The cloud infrastructure part of getting a new service running, especially one i
 
 With Neo, that work collapses into a prompt. Point Neo at a repo and ask:
 
-> Deploy this app to AWS as a public service.
+> Deploy this app to AWS as a publicly accessible service.
 
-[Plan Mode](/blog/neo-plan-mode/) comes back with the resources Neo will create, named and sized: ECS Fargate, an ALB, and the VPC wiring. Approve, and Neo writes the Pulumi program, runs a preview, and opens a PR. You, the human in the loop, merge it after review.
+[Plan mode](/blog/neo-plan-mode/) comes back with the resources Neo will create, named and sized: ECS Fargate, an ALB, and the VPC wiring. Approve, and Neo writes the Pulumi program, runs a preview, and opens a PR. You, the human in the loop, merge it after review.
 
-{{< video title="Neo deploying an app to AWS: prompt, Plan Mode, PR, public URL" src="deploy-to-aws2.mp4" autoplay="true" loop="true" controls="false" >}}
+{{< video title="Neo deploying an app to AWS: prompt, plan mode, PR, public URL" src="deploy-to-aws2.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Neo planning a PR and deploying an app to AWS.{{< /figcaption >}}
 
 {{< neo-card title="Ask Neo to deploy your app to AWS and make a PR" prompt="I'd like to deploy this app to AWS. Confirm what you'll create." >}}
@@ -58,9 +58,9 @@ With Neo, that work collapses into a prompt. Point Neo at a repo and ask:
 
 *Slow endpoints live at the seam between runtime metrics and the stack that runs them. Neo reads both and proposes a fix with the metric evidence as the rationale.*
 
-Production incidents often involve multiple tools. When the `/checkout` API's p95 climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS account: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program is an exercise in detective work.
+Production incidents often involve multiple tools. When the `checkout` endpoint's p95 climbs from 200ms to 1.2s, the metric is in Datadog, but the cause might be somewhere in your AWS account: maybe RDS is out of IOPS, maybe the connection pool is too small, maybe the autoscaler isn't keeping up. Connecting "this metric looks bad" to a recent backend change and then to a one-line fix in your Pulumi program is an exercise in detective work.
 
-Neo's [integration catalog](/blog/neo-integration-catalog/) bridges this gap. With built-in MCP integrations with Datadog, PagerDuty, and Honeycomb sitting alongside your Pulumi state, Neo can read traces and metrics from the tools your team already uses and take action.
+Neo's [integration catalog](/blog/neo-integration-catalog/) bridges this gap. With built-in Datadog, PagerDuty, and Honeycomb integrations sitting alongside your Pulumi state, Neo can read traces and metrics from the tools your team already uses and take action.
 
 Ask Neo:
 
@@ -100,7 +100,7 @@ The fix is letting Neo read the ticket itself. Connect Linear or Jira through th
 
 Ask Neo:
 
-> Hey, implement CAD-1234 in our payments stack.
+> Implement CAD-1234 in our payments stack.
 
 Neo reads the ticket, plans against your existing stack, opens a PR, and drops a comment back on the ticket. The ticket and the PR end up linked, and your backlog shrinks.
 
@@ -113,7 +113,7 @@ Neo reads the ticket, plans against your existing stack, opens a PR, and drops a
 
 *Neo audits each role against what your stack code actually does, and proposes scoped policies that improve your security posture.*
 
-IAM cleanup is the kind of work nobody has the time to prioritize. Production has 40 roles. Half of them started with `s3:*` because nobody had time to scope them, and the clean-up slips quarter to quarter.
+IAM cleanup is the kind of work nobody has the time to prioritize. Production has 40 roles. Half of them started with `s3:*` because nobody had time to scope them, and the cleanup slips quarter to quarter.
 
 Ask Neo:
 
@@ -121,12 +121,12 @@ Ask Neo:
 
 Neo cross-references each role's policy against what the stack code actually calls, and opens a PR per role. The PR body lists the API calls Neo found in the stack code, like `s3:GetObject` on `audit-logs-*` and `s3:PutObject` on `audit-logs-staging`, as the justification for the scoped policy. The evidence sits next to the diff.
 
-If you're unclear about which roles count as in-scope or what your team considers over-privileged, start in [Plan Mode](/blog/neo-plan-mode/) and agree on that with Neo first.
+If you're unclear about which roles count as in-scope or what your team considers over-privileged, start in [plan mode](/blog/neo-plan-mode/) and agree on that with Neo first.
 
 {{< video title="Neo auditing IAM and proposing narrower policies" src="iam-narrow.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Neo auditing an over-privileged IAM role and proposing a narrower policy, with the actually-used permissions as evidence.{{< /figcaption >}}
 
-{{< neo-card title="Audit IAM and tighten over-privileged roles" prompt="Audit IAM permissions across my accounts and propose narrower policies for over-privileged stack-managed roles" >}}
+{{< neo-card title="Audit IAM and tighten over-privileged roles" prompt="Audit IAM permissions across my accounts and propose narrower policies for over-privileged stack-managed roles." >}}
 
 ## 6. Migrate from AWS CDK onto your platform's golden paths
 
@@ -138,7 +138,7 @@ Ask Neo:
 
 > Migrate the `payments-vpc` CDK stack to Pulumi using our published components.[^6-original]
 
-Neo reads the source CDK app and your registry side by side. It maps each CDK construct to its closest team-published equivalent, clarifying with you where ambiguous.
+Neo reads the source CDK app and your registry side by side. It maps each CDK construct to its closest team-published equivalent, clarifying with you where the mapping is ambiguous.
 
 ```typescript
 // Before (AWS CDK, AWS's defaults)
@@ -173,7 +173,7 @@ Ask Neo:
 
 Neo reads the source repo and the runbook in Confluence via the [integration catalog](/blog/neo-integration-catalog/) and starts working on your request.
 
-You can even add this to a Neo skill, with requests to split into multiple PRs — Dockerfile first, ECR config next, Deployment/Service/Ingress manifests after — and link back to each runbook convention for ease of review. The output reflects your conventions: the labels you actually use, the ingress class you've standardized on, and the External Secrets Operator config your team prefers.
+You can save this as a Neo skill that splits the work into multiple PRs — Dockerfile first, ECR config next, Deployment/Service/Ingress manifests after — and link back to each runbook convention for ease of review. The output reflects your conventions: the labels you actually use, the ingress class you've standardized on, and the External Secrets Operator config your team prefers.
 
 You're still the one reviewing the PRs and deciding what the cutover looks like in production. Neo follows your internal standards, so the new service ends up shaped like the last one you migrated.
 
@@ -205,7 +205,7 @@ Some drift gets encoded into the Pulumi program, like the IAM rotation above. So
 
 ## 9. Schedule weekly upgrades for outdated providers and runtimes
 
-*Lambda runtimes and container-base images age out. Schedule the upgrade pass; review the PRs Neo opens.*
+*Lambda runtimes and container base images age out. Schedule the upgrade pass; review the PRs Neo opens.*
 
 AWS Lambda end-of-life notices come out months ahead. Node 20 stopped receiving runtime updates at the end of April. Python 3.9 ended last December. After the deadline, AWS blocks new deploys and eventually stops invoking the function. Each one needs to move to a supported runtime before the cutoff.[^9-original]
 
@@ -217,7 +217,7 @@ Neo reads the AWS Lambda runtime deprecation page, matches the end-of-support ru
 
 If Python 3.9 is reaching end-of-support, the upgrade is to Python 3.12, and `datetime.utcnow()` calls need to move to `datetime.now(datetime.UTC)`. Neo can make all of those replacements in the same PR.
 
-The same task can catch container-base images with critical CVEs and bump them too.
+The same task can catch container base images with critical CVEs and bump them too.
 
 {{< video title="Setting up a weekly scheduled task in Neo" src="neo-schedule-setup.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Setting up a weekly task in the Scheduled Tasks UI. Once saved, Neo runs the prompt every Sunday night and opens PRs you review on Monday.{{< /figcaption >}}
@@ -228,7 +228,7 @@ The same task can catch container-base images with critical CVEs and bump them t
 
 *Run the benchmark on a schedule. Wake up to PRs that fix what failed.*
 
-The [CIS AWS Foundations Benchmark](https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html), available through AWS Security Hub, is something every team should be keeping an eye on. The benchmark finds issues like S3 buckets that allow public read access (`S3.1`), root user access keys that shouldn't exist (`IAM.4`), or CloudTrail not being enabled (`CloudTrail.1`). Scanning for these issues is a solved problem, but actually closing and addressing them is not. They pile up between audits because each one is a code change in a different stack, and nobody owns the cross-stack cleanup.[^10-original]
+The [CIS AWS Foundations Benchmark](https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html), available through AWS Security Hub, is something every team should be keeping an eye on. The benchmark finds issues like S3 buckets that allow public read access (`S3.1`), root user access keys that shouldn't exist (`IAM.4`), or CloudTrail not being enabled (`CloudTrail.1`). Scanning for these issues is a solved problem, but closing and addressing them is not. They pile up between audits because each one is a code change in a different stack, and nobody owns the cross-stack cleanup.[^10-original]
 
 Schedule the cleanup:
 
@@ -236,7 +236,7 @@ Schedule the cleanup:
 
 Neo opens one PR per failure. A bucket failing `S3.1` arrives as a Pulumi diff that adds `blockPublicAccess` to the bucket in your `prod-checkout` stack. The PR body lists the CIS rule number, the resource ID, the diff, and a clean `pulumi preview` against the live infrastructure.
 
-The runbook is where your security team writes down what each control actually means for your stacks. Block public S3 buckets, except the ones tagged `public-content=true` for CloudFront origins. Don't auto-touch the break-glass IAM roles; page a human instead. Multi-region CloudTrail stays on, no exceptions. Neo reads that file, checks each Security Hub finding against it, and only opens a PR for the ones you've said are safe to fix. The rest get routed or ignored, the way your team already handles them.
+The runbook is where your security team writes down what each control means for your stacks. Block public S3 buckets, except the ones tagged `public-content=true` for CloudFront origins. Don't auto-touch the break-glass IAM roles; page a human instead. Multi-region CloudTrail stays on, no exceptions. Neo reads that file, checks each Security Hub finding against it, and only opens a PR for the ones you've said are safe to fix. The rest get routed or ignored, the way your team already handles them.
 
 {{< video title="Scrolling through Neo's morning CIS Benchmark PR" src="neo-cis-pr.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}A PR raised by Neo to fix a CIS Benchmark failure, with the failing rule, the resource, and the runbook decision laid out in the body.{{< /figcaption >}}
