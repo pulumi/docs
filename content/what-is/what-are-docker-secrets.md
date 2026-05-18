@@ -3,6 +3,7 @@ title: What are Docker Secrets?
 meta_desc: |
      Learn more about what Docker Secrets are and how to use them.
 
+meta_image: /images/what-is/what-are-docker-secrets-meta.png
 type: what-is
 page_title: "What are Docker Secrets?"
 authors: ["torian-crane"]

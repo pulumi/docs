@@ -3,6 +3,7 @@ title: An error occurred (ExpiredToken) when calling the ListBuckets operation
 allow_long_title: true
 meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_image: /images/what-is/resolve-list-buckets-expired-token-meta.png
 type: what-is
 page_title: An error occurred (ExpiredToken) when calling the ListBuckets operation
 authors: ["torian-crane"]

@@ -3,6 +3,7 @@ title: Run 'aws dynamodb list-tables' with Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws dynamodb list-tables' more securely and efficiently.
 
+meta_image: /images/what-is/run-aws-dynamodb-list-tables-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws dynamodb list-tables' with Dynamic Credentials
 authors: ["diana-esteves"]
