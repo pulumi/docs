@@ -4,6 +4,7 @@ meta_desc: |
     Understand serverless architectures, along with some of the benefits of using serverless architectures for modern application development
 type: what-is
 page_title: "What is Serverless?"
+authors: ["scott-lowe"]
 ---
 
 Serverless architectures have gained and continue to gain significant traction in modern application development. Despite its name, serverless doesn't mean servers are absent; instead, it represents a paradigm shift in how applications are built, deployed, and scaled in the cloud.

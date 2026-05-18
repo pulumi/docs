@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: Run 'aws s3 sync' with Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws s3 sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) command is part of the AWS Command Line Interface (CLI) and synchronizes files and directories between your local file system and Amazon S3 buckets. This command simplifies uploading files to and downloading files from S3.

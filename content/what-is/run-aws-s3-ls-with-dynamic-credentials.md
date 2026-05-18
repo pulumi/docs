@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: Run 'aws s3 ls' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws s3 ls` command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html) is part of the AWS Command Line Interface (CLI) and is used to list the contents of buckets and directories in Amazon Simple Storage Service (Amazon S3). Amazon S3 is a scalable object storage service offered by Amazon Web Services (AWS) and is commonly used for backup and storage, serving content, and hosting static websites.
