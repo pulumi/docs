@@ -48,8 +48,14 @@
       {{ end }}
 
     {{ else if eq .Type "what-is" }}
-      {{/* What-is pages always emit Article schema so dateModified and timeRequired are present for SERP */}}
-      {{ $entity = partial "schema/collectors/article-entity.html" . }}
+      {{/* Single what-is pages get Article schema (with dateModified, timeRequired).
+           The /what-is/ section index gets CollectionPage + ItemList so it's
+           treated as a directory, not an article. */}}
+      {{ if .IsPage }}
+        {{ $entity = partial "schema/collectors/article-entity.html" . }}
+      {{ else }}
+        {{ $entity = partial "schema/collectors/collection-entity.html" . }}
+      {{ end }}
 
     {{ else if eq .Type "docs" }}
       {{/* Documentation pages get TechArticle schema */}}

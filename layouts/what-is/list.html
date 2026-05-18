@@ -14,7 +14,15 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?").ByTitle }}
+    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "IsPage" true).ByTitle }}
+
+    {{ with .Content }}
+        <section class="container mx-auto px-6 lg:px-0 pb-12">
+            <div class="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed">
+                {{ . }}
+            </div>
+        </section>
+    {{ end }}
 
     <section class="container mx-auto px-6 lg:px-0 pb-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
