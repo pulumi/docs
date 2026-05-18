@@ -3,6 +3,7 @@ title: Run 'aws iam list-users' using Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws iam list-users' in a more secure and efficient manner.
 
+meta_image: /images/what-is/run-aws-iam-list-users-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws iam list-users' using Dynamic Credentials
 authors: ["diana-esteves"]

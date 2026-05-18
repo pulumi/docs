@@ -3,6 +3,7 @@ title: Infrastructure as Code for Kubernetes
 meta_desc: |
      Infrastructure as code for Kubernetes is a truly effective way to manage your clusters, making them versionable, testable and scalable.
 
+meta_image: /images/what-is/infrastructure-as-code-for-kubernetes-meta.png
 type: what-is
 page_title: "Infrastructure as Code for Kubernetes"
 

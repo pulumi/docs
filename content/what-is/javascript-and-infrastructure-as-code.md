@@ -3,6 +3,7 @@ title: JavaScript and Infrastructure as Code
 meta_desc: |
     Learn why JavaScript and Infrastructure as Code are a perfect match for creating versionable, testable and repeatable infrastructure.
 
+meta_image: /images/what-is/javascript-and-infrastructure-as-code-meta.png
 type: what-is
 page_title: "JavaScript and Infrastructure as Code"
 

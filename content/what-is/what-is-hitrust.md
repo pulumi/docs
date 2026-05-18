@@ -2,6 +2,7 @@
 title: What is HITRUST?
 meta_desc: |
     Understand what HITRUST is, its Common Security Framework (CSF), benefits for healthcare organizations, and how it helps with regulatory compliance.
+meta_image: /images/what-is/what-is-hitrust-meta.png
 type: what-is
 page_title: "What is HITRUST?"
 authors: ["asaf-ashirov"]
