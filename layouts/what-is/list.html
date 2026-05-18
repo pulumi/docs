@@ -1,34 +1,58 @@
 {{ define "hero" }}
-    {{ partial "hero" (dict "title" .Params.title ) }}
+<header class="page-hero">
+    <div class="container mx-auto px-6 lg:px-0">
+        <div class="page-hero-title">
+            <h1 class="small-title">
+                <span><span data-text="{{ .Title }}">{{ .Title }}</span></span>
+            </h1>
+        </div>
+        {{ with .Params.meta_desc }}
+            <p class="max-w-3xl mx-auto mt-6 text-center text-lg text-gray-700">{{ . }}</p>
+        {{ end }}
+    </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
-    <!-- Set the page context in a variable in a loop. -->
-    {{ $pageContext := . }}
+    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?").ByTitle }}
 
-
-    <!-- Grab the what-is page data. -->
-    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "Title" "ne" "What Is?") }}
-
-
-    <div class="container mx-auto pb-16">
-        <h2>Topics</h2>
-
-        <div class="lg:flex lg:flex-wrap lg:items-stretch">
+    <section class="container mx-auto px-6 lg:px-0 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {{ range $topics }}
-                <div class="lg:w-1/2 p-6">
-                    <div class="card p-6 h-full">
-                        <a class="hover:underline" href="{{ .RelPermalink }}">
-                            <div>
-                                <h5>{{ .Params.title }}</h5>
-                            </div>
-                            <div class="description">
-                                <p>{{ .Params.meta_desc }}</p>
-                            </div>
-                        </a>
+                {{ $page := . }}
+
+                {{/* Read time */}}
+                {{ $wordCount := .Content | plainify | countwords }}
+                {{ if not $wordCount }}{{ $wordCount = 500 }}{{ end }}
+                {{ $readTime := div $wordCount 200 }}
+                {{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+
+                {{/* Resolve first author from team data */}}
+                {{ $author := false }}
+                {{ with .Params.authors }}
+                    {{ range first 1 . }}
+                        {{ with index site.Data.team.team . }}
+                            {{ $author = . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+
+                <a class="group flex flex-col h-full p-6 rounded-lg border border-gray-200 bg-white hover:border-violet-400 hover:shadow-md transition" href="{{ .RelPermalink }}" data-track="what-is-card-{{ .Title | urlize }}">
+                    <h3 class="no-anchor text-lg font-semibold text-gray-900 group-hover:text-violet-700 mb-3">{{ .Params.title }}</h3>
+                    {{ with .Params.meta_desc }}
+                        <p class="text-sm text-gray-700 mb-6 line-clamp-3 flex-grow">{{ . }}</p>
+                    {{ end }}
+                    <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-100 mt-auto">
+                        <span class="flex items-center gap-2 min-w-0">
+                            {{ if $author }}
+                                <img class="w-6 h-6 rounded-full flex-shrink-0" src="/images/team/{{ $author.id }}.jpg" alt="{{ $author.name }}" title="{{ $author.name }}" loading="lazy" />
+                                <span class="truncate">{{ $author.name }}</span>
+                            {{ end }}
+                        </span>
+                        <span class="flex-shrink-0">{{ $readTime }} min read</span>
                     </div>
-                </div>
+                </a>
             {{ end }}
         </div>
-    </div>
+    </section>
 {{ end }}
