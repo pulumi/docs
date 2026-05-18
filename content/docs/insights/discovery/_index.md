@@ -67,7 +67,7 @@ This helps identify which infrastructure is under IaC management and which could
 
 ## Access controls
 
-Resource search is available to all organization members, but users can only see and query resources they have [permission](/docs/deployments/projects-and-stacks/#stack-permissions) to access:
+Resource search is available to all organization members, but users can only see and query resources they have [permission](/docs/administration/access-identity/stack-permissions/) to access:
 
 - Organization admins have access to all resources
 - If an organization has a default permission of read or write, all users can query all resources

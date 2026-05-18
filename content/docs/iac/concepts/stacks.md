@@ -17,6 +17,13 @@ aliases:
 - /docs/intro/concepts/stack/
 - /docs/concepts/stack/
 - /docs/concepts/stacks/
+- /docs/deployments/projects-and-stacks/
+- /docs/pulumi-cloud/projects-and-stacks/
+- /docs/platform/projects-and-stacks/
+- /docs/intro/console/project-and-stack-management/
+- /docs/intro/console/projects-and-stacks/
+- /docs/intro/pulumi-service/projects-and-stacks/
+- /docs/intro/pulumi-cloud/projects-and-stacks/
 ---
 
 Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/concepts/config/)
@@ -200,7 +207,7 @@ Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> 
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm).
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm). Custom tags can also be created, edited, and deleted from each stack's page in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
 
 ## Stack outputs {#outputs}
 
@@ -380,6 +387,111 @@ Note: If you export an actual resource, it too will be JSON serialized. This usu
 {{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
+
+## Stack README
+
+[Pulumi Cloud](https://app.pulumi.com/signin) renders a per-stack README on each stack's **README** tab from a stack output named `readme`. The README can include links, embedded documentation, and templated values that reference the stack's other outputs.
+
+To add a README to a stack, export a stack output named `readme` whose value is the rendered markdown — most commonly by reading from a template file checked into your project (for example, `Pulumi.README.md`):
+
+{{< chooser language "typescript,python,go,csharp,java" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import { readFileSync } from "fs";
+// The stack output must be named "readme".
+export const readme = readFileSync("./Pulumi.README.md").toString();
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+with open('./Pulumi.README.md') as f:
+    pulumi.export('readme', f.read())
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+func main() {
+  pulumi.Run(func(ctx *pulumi.Context) error {
+    readmeBytes, err := ioutil.ReadFile("./Pulumi.README.md")
+    if err != nil {
+      return fmt.Errorf("failed to read readme: %w", err)
+    }
+    ctx.Export("readme", pulumi.String(string(readmeBytes)))
+    return nil
+  })
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using Pulumi;
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        this.Readme = Output.Create(System.IO.File.ReadAllText("./Pulumi.README.md"));
+    }
+    [Output]
+    public Output<string> Readme { get; set; }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package stackreadme;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            try {
+                var readme = Files.readString(Paths.get("./Pulumi.README.md"));
+                ctx.export("readme", Output.of(readme));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+The template file can reference other stack outputs (or resource properties) with `${...}` placeholders that Pulumi Cloud resolves when rendering. For example:
+
+```markdown
+# Pulumi Cloud README
+
+[Sign in to AWS to view stack resources!](https://top-secret-url.com)
+
+## On Call Operations
+
+### Monitor
+
+1. [Cloudwatch Metrics](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#dashboards:name=${outputs.dashboardName}): Monitor holistic metrics tracking overall service health
+1. [RDS Performance Metrics](https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#performance-insights-v20206:/resourceId/${database.databaseCluster.id}/resourceName/${outputs.rdsClusterWriterInstance}): Monitor RDS performance (wait times, top queries)
+1. [Cloudwatch Logs](https://us-west-2.console.aws.amazon.com/cloudwatch/home?region=us-west-2#logStream:group=${outputs.cloudwatchLogGroup}): Search across service logs
+```
+
+After running `pulumi up`, the rendered README appears on the stack's **README** tab in the Pulumi Cloud UI.
 
 ## Getting the current stack programmatically
 

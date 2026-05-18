@@ -32,7 +32,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Page | Description |
 |--------|--------|
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
-| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Project and Stack Management](/docs/deployments/projects-and-stacks/). |
+| All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Stacks](/docs/iac/concepts/stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
 | Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/using-pulumi/continuous-delivery/). |
 
@@ -101,6 +101,41 @@ To update billing information:
 1. Under **Payment methods**, select **Update**.
 
 If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+
+## Transferring stacks
+
+Stack admins can transfer individual stacks between personal accounts and organizations, or between organizations. Organization admins can transfer stacks in bulk.
+
+To transfer stacks _into_ an organization, an organization admin must first enable **Allow organization members to create stacks and transfer stacks to this organization** on the **Access Management** page in the organization's settings.
+
+To transfer an individual stack:
+
+1. Navigate to the stack and then the stack's **Settings**.
+1. Select **Transfer stack**.
+1. Provide the destination personal account or organization name and select **Transfer**.
+
+To transfer stacks in bulk:
+
+1. Navigate to the **Stacks** page.
+1. Select the three dot menu beside **Create project**.
+1. Choose **Transfer stacks** from the dropdown.
+1. Choose the **Transfer destination** from the dropdown.
+1. Tick the stacks you'd like to transfer and select **Transfer stacks**.
+
+## Restoring a deleted stack
+
+{{% notes type="info" %}}
+The ability to restore a deleted stack is limited to Enterprise and Business Critical editions.
+{{% /notes %}}
+
+Restoring a stack recovers a previously deleted stack along with its update history. The last 25 stacks deleted in an organization can be restored by an organization admin, and only stacks deleted within the previous year are eligible.
+
+To restore a stack:
+
+1. Navigate to the **Stacks** page.
+1. Select the three dot menu beside **Create project**.
+1. Choose **Restore deleted stacks** from the dropdown.
+1. Use the three dot menu on the stack you want to restore and select **Restore stack**.
 
 ## Deleting an organization
 
