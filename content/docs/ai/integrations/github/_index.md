@@ -26,7 +26,7 @@ A GitHub organization admin installs the **Pulumi Neo GitHub App** on the organi
 
 ### 2. Link your Pulumi user to GitHub
 
-When you mention `@pulumi-neo`, Neo identifies you by matching your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link is already in place. Otherwise, add GitHub as an identity provider from your Pulumi user settings.
+When you mention `@pulumi-neo`, Neo identifies you by matching your GitHub identity to your Pulumi user. If you signed in to Pulumi with GitHub, that link is already in place. Otherwise, [link a GitHub identity to your Pulumi account](/docs/administration/organizations-teams/accounts/#adding-new-identities).
 
 ### 3. Mention `@pulumi-neo`
 
@@ -38,4 +38,4 @@ In a repository the app can see, open or comment on a pull request or issue and 
 
 ## Limitations
 
-- Supported on GitHub.com only. GitHub Enterprise Server, GitLab, and Bitbucket are not supported.
+- Supported on GitHub.com only. GitHub Enterprise Server is not supported.
