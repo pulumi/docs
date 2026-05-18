@@ -1,22 +1,15 @@
 ---
-title_tag: "OpenTofu vs. Terraform"
-authors: ["joe-duffy"]
+title: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
-title: OpenTofu vs. Terraform
-h1: OpenTofu vs. Terraform
+type: what-is
+page_title: "OpenTofu vs. Terraform"
+authors: ["joe-duffy"]
 include_floqer: true
-menu:
-    iac:
-        name: OpenTofu vs. Terraform
-        parent: iac-comparisons-terraform
-        weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 2
 aliases:
-    - /docs/intro/vs/terraform/opentofu/
-    - /docs/concepts/vs/terraform/opentofu/
-    - /docs/iac/concepts/vs/terraform/opentofu/
+- /docs/iac/comparisons/terraform/opentofu/
+- /docs/intro/vs/terraform/opentofu/
+- /docs/concepts/vs/terraform/opentofu/
+- /docs/iac/concepts/vs/terraform/opentofu/
 ---
 
 OpenTofu and Terraform are both infrastructure as code technologies that have similarities but fundamental differences. They both provide infrastructure as code software for cloud service management with a consistent CLI workflow. They allow you to write, plan, and apply changes to deliver infrastructure as code. In this comprehensive guide, we'll explore their key differences and similarities to help you choose the right infrastructure as code platform to meet your needs.
