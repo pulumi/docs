@@ -4,6 +4,7 @@ meta_desc: |
     Understand what is DevOps, Understand key practices of CI/CD, automation, infrastructure testing and security
 type: what-is
 page_title: "What is DevOps"
+authors: ["james-denyer"]
 ---
 
 DevOps integrates the historic siloed disciplines of software development (Dev) and IT operations (Ops) as a methodology and culture shift that aligns people, processes, and technology in the lifecycle of application planning, development, delivery, and operations. For teams that successfully break down these silos and invest in the process and tools, they realize they can respond much more quickly to customer needs and improve products much faster than traditional methods have allowed. Additionally, DevOps practices lead to more reliable and secure software, enabling organizations to adapt swiftly to the pace of technology and market changes.

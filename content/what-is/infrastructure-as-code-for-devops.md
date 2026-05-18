@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 DevOps isn’t any one thing. It’s a term that represents a blend of culture, tools and practices that aims to improve the software delivery life cycle (SDLC)  and to deliver your products (which may be an app for outside customers but might also be cloud infrastructure to internal developers) as quickly and reliably as possible. Two of the most important aspects of DevOps are automation and culture. [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) (IaC) is a practice that’s fundamental to both.

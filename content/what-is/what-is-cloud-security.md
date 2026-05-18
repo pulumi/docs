@@ -4,6 +4,7 @@ meta_desc: |
     Learn about cloud security concepts, best practices, and how infrastructure as code helps secure cloud environments.
 type: what-is
 page_title: "What is Cloud Security?"
+authors: ["asaf-ashirov"]
 ---
 
 Cloud security encompasses the technologies, policies, controls, and services designed to protect cloud computing environments, data, applications, and infrastructure against threats and vulnerabilities. As organizations accelerate their digital transformation and migrate critical workloads to the cloud, implementing robust cloud infrastructure security measures becomes essential for preventing data breaches, ensuring regulatory compliance, and maintaining business continuity.

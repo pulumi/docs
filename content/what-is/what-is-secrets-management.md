@@ -4,6 +4,7 @@ meta_desc: |
     Understand secrets management, the importance of secrets management, and how secrets management relates to infrastructure as code and configuration management
 type: what-is
 page_title: "What is Secrets Management?"
+authors: ["scott-lowe"]
 ---
 
 Secrets management refers to the **secure storage, distribution, and protection of sensitive information**, also known as "secrets." Secret creation is a vital process for securely generating and managing credentials within a secrets management framework. These secrets can include passwords, privileged accounts, API keys, cryptographic keys, and other confidential data crucial for the functioning of applications, systems, and networks. The goal of secrets management is to prevent unauthorized access, reduce the risk of data breaches, and ensure the confidentiality of sensitive information.

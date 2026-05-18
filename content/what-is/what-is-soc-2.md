@@ -4,6 +4,7 @@ meta_desc: |
     Learn about SOC 2 compliance, its key trust principles, and how organizations can achieve and maintain this important security framework.
 type: what-is
 page_title: "What is SOC 2?"
+authors: ["asaf-ashirov"]
 ---
 
 SOC 2 (System and Organization Controls 2) is a framework and auditing standard designed to help service organizations demonstrate the security, availability, and integrity of their systems and data. Developed by the American Institute of CPAs (AICPA), SOC 2 has become the gold standard for verifying that service providers securely manage customer data and systems, particularly for cloud-based services and SaaS companies.
