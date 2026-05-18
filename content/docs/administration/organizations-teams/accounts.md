@@ -35,7 +35,7 @@ Your account lets you authenticate with the Pulumi Cloud, where you can do the f
 
 * Manage your profile settings, including your account password, and subscriptions
 * [Add an organization](/docs/pulumi-cloud/organizations/) backed by Atlassian, GitHub, GitLab, or a SAML 2.0-compatible identity provider, such as Active Directory, Okta, or Google Workspace.
-* [Manage your projects and stacks](/docs/deployments/projects-and-stacks/)
+* [Manage your projects and stacks](/docs/iac/concepts/stacks/)
 
 ## Profile
 
