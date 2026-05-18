@@ -1,7 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-05-18
-draft: true
+draft: false
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 meta_image: meta.png
 feature_image: feature.png
@@ -14,12 +14,18 @@ tags:
     - platform-engineering
 schema_type: auto
 social:
-    twitter: "Why choose Pulumi over Terraform? See how Pulumi improves refactoring, secrets, testing, provider wiring, and safer infrastructure changes, plus where IaC still needs care."
+    twitter: |
+        Why choose Pulumi over Terraform?
+
+        See how Pulumi improves refactoring, secrets, testing, provider wiring, and safer infrastructure changes, plus where IaC still needs care.
     linkedin: |
         Why choose Pulumi over Terraform?
 
-        Pulumi brings infrastructure as code into general-purpose languages and familiar software engineering workflows. This post walks through practical advantages for refactoring, secrets, testing, provider wiring, stack-based environments, and safer lifecycle controls, plus the caveats teams should still plan for.
-    bluesky: "Why choose Pulumi over Terraform? Practical examples for refactoring, secrets, testing, provider wiring, safer changes, and honest IaC caveats."
+        We compare the two tools across refactoring, secrets management, testing, and provider wiring to show how Pulumi handles complex infrastructure patterns.
+    bluesky: |
+        Why choose Pulumi over Terraform?
+
+        Practical examples for refactoring, secrets, testing, provider wiring, safer changes, and honest IaC caveats.
 ---
 
 ## Why choose Pulumi over Terraform?
