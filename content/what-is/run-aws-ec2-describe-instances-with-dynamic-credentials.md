@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: Run 'aws ec2 describe-instances' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws ec2 describe-instances` command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-commands.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving details about instances in Amazon Elastic Compute Cloud (Amazon EC2). Amazon EC2 provides scalable computing capacity in the AWS cloud, enabling users to launch and manage virtual servers as per their requirements.

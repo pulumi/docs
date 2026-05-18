@@ -34,6 +34,19 @@
                 <span aria-hidden="true">·</span>
             {{ end }}
             <span>{{ $readTime }} min read</span>
+            {{ with .Params.authors }}
+                <span aria-hidden="true">·</span>
+                {{ range $id := . }}
+                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                    {{ $authorData := index site.Data.team.team $id }}
+                    {{ if $authorData }}
+                        <a class="inline-flex items-center gap-2 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" rel="author" data-track="{{ $authorData.name | urlize }}-byline">
+                            <img class="w-6 h-6 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
+                            <span>{{ $authorData.name }}</span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
         </div>
     </div>
 </header>

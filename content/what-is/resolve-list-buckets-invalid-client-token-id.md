@@ -5,6 +5,7 @@ meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
 type: what-is
 page_title: An error occurred (InvalidClientTokenId) when calling the ListBuckets operation
+authors: ["torian-crane"]
 ---
 
 The error message "An error occurred (InvalidClientTokenId) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that the security token included in the request is invalid. AWS uses security tokens for authentication and authorization purposes. When you attempt an AWS CLI operation with an invalid token value, this error arises.

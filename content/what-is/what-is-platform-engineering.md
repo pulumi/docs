@@ -6,6 +6,7 @@ meta_desc: |
 type: what-is
 page_title: What is Platform Engineering?
 lastmod: 2026-05-11
+authors: ["christian-nunciato"]
 ---
 
 Platform engineering is a set of modern engineering practices that take a holistic approach to managing the entire software development lifecycle, encompassing infrastructure, tools, and processes. The aim of platform engineering is to provide a scalable and secure platform that supports the development, deployment, and operation of software applications in a standardized and efficient way.

@@ -5,6 +5,7 @@ meta_desc: |
     Understand what an Internal Developer Platform (IDP) is, its benefits, key components, and how it streamlines development workflows.
 type: what-is
 page_title: What is an Internal Developer Platform (IDP)?
+authors: ["sarah-hughes"]
 ---
 
 An Internal Developer Platform (IDP) is a layer that sits on top of your organization's infrastructure and tools, providing a standardized, self-service experience for developers. It abstracts away the complexity of underlying infrastructure, allowing developers to provision and manage the resources they need without having to understand all the underlying details.

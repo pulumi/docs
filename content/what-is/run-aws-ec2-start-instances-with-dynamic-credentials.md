@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: Run 'aws ec2 start-instances' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws ec2 start-instances` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/start-instances.html) is part of the AWS Command Line Interface (CLI) and is utilized for starting Amazon Elastic Compute Cloud (Amazon EC2) instances that were previously stopped. Amazon EC2 provides scalable computing capacity in the AWS cloud, enabling users to launch and manage virtual servers as per their requirements.

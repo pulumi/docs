@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: "What are Docker Secrets?"
+authors: ["torian-crane"]
 ---
 
 Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments.

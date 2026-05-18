@@ -4,6 +4,7 @@ meta_desc: |
     DevOps combines software development and IT operations to ship faster and more reliably. Learn the lifecycle, principles, practices, tools, and how to adopt it.
 type: what-is
 page_title: "What is DevOps?"
+authors: ["james-denyer"]
 ---
 
 **DevOps is a set of practices, cultural philosophies, and tools that combines software development (Dev) and IT operations (Ops) so teams can deliver applications and services faster, more reliably, and at greater scale than traditional siloed processes allow.** DevOps teams automate the full software delivery lifecycle (plan, code, build, test, release, deploy, operate, monitor) and apply the same engineering discipline to infrastructure that they already apply to application code.

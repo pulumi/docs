@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB

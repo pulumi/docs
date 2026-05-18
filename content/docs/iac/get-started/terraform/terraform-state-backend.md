@@ -21,7 +21,7 @@ Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicor
 If you are managing Terraform state in S3, Azure Blob Storage, or another DIY backend, migrating to Pulumi Cloud gives you:
 
 - **Encrypted state** — state is encrypted in transit and at rest, a common concern with S3 backends
-- **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [stack Activity tab](/docs/deployments/projects-and-stacks/#stack-activity)
+- **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [Pulumi Cloud](https://app.pulumi.com/signin) stack Activity tab
 - **Automatic state locking** — prevents concurrent operations from corrupting state
 - **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/access-identity/rbac/)
 - **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/pulumi-cloud/insights/search/)

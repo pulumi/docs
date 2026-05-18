@@ -5,6 +5,7 @@ meta_desc: |
 
 type: what-is
 page_title: "What is HashiCorp Vault?"
+authors: ["james-denyer"]
 ---
 ### What is HashiCorp Vault?
 

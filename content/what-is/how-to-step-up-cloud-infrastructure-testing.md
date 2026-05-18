@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 Infrastructure testing isn’t new and, over the years, there have been various tools that people have used to perform it. However, what tends to happen is that standard ops testing focuses on acceptance tests. That means the ops team spins up some infrastructure in the cloud and they then test that infrastructure to see if it’s correct. Of course, if it wasn’t spun up correctly, the team needs to destroy and recreate it. That’s not a great approach because, potentially, something that shouldn’t have happened already has, depending on how quickly the team took a look.
