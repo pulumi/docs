@@ -1,9 +1,5 @@
 {{ if or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/tutorials/") }}
 {{ partial "docs-top-nav" . }}
-<div class="header-container docs-hero">
-    <span class="hide-on-pinned"> </span>
-    {{ .Scratch.Set "mode" .Section }}
-</div>
 {{ else }}
 {{ partial "header/nav.html" . }}
 {{ end }}
