@@ -1,5 +1,66 @@
 # Contributing Pulumi Documentation
 
+## Draft-first pull requests
+
+Open new PRs as **drafts** while you iterate. Automated review (style, accuracy, fact-check) fires only when you mark a PR **ready for review**, so a draft-first flow:
+
+- Keeps your branch out of the noisy "every push triggers a review" loop.
+- Lets you push iteratively without spamming the PR with new comments each time.
+- Means the eventual review reflects your finished thinking, not a half-finished commit.
+
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
+
+If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
+
+## AI-assisted contributions
+
+The repository runs a tiered review pipeline on every PR. AI-assisted contributors should know how it works so they can collaborate with it instead of fighting it.
+
+### What ready-for-review triggers
+
+Transitioning to **Ready for review** triggers:
+
+1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
+1. The full Claude review (currently `claude-opus-4-7`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+
+Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
+
+### Author a clean commit history
+
+If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`Co-Authored-By: Claude ...`, `Generated with Claude Code`, etc.). Stripping them to disguise authorship is bad form and does not change which review runs.
+
+### After review — three paths to refresh
+
+A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
+
+1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
+    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-4-6`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
+        - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
+        - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
+        - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
+    - **`@claude` alone, no hashtag** — ad-hoc questions, code fixes, or one-off requests. Tag mode: the action handles it directly with its own animated tracking comment. Doesn't touch the pinned review. Use this when you want help, not a re-review.
+1. **Transition through draft and back to ready** — re-triggers the full initial review. Use this when the PR has changed substantially since the last review.
+1. **Wait for the human reviewer** — Cam's local `pr-review` skill reads the pinned comment as source of truth and refreshes it during adjudication if needed.
+
+#### Power-user escape hatch: `@claude #new-review`
+
+Rare. Use when the pinned-review state is corrupted (the 1/M comment was manually deleted, the comment sequence is malformed, the review is stuck in a wrong state that `#update-review` can't reconcile). Clears every existing `<!-- CLAUDE_REVIEW N/M -->` comment and dispatches a fresh initial review from scratch — same workflow that fires on ready-for-review, just bypassing the trivial / frontmatter-only / draft / bot-author skips. Don't use it for routine refreshes; `#update-review` is the right tool for those.
+
+### Don't fight the pinned comment
+
+The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
+
+### Trivial and frontmatter-only short-circuits
+
+Two label-driven short-circuits skip the full Claude review (linters still run):
+
+- **`review:trivial`** — ≤10 added lines, prose-only body changes, ≤2 docs/blog `.md` files, no frontmatter changes, no link changes, no code blocks. Typo fixes, wording polish, small same-claim sweeps across siblings, and removal-dominant cleanup (no upper bound on deletions). Marketing/website pages (`domain:website`) get full review regardless of size.
+- **`review:frontmatter-only`** — any number of docs/blog `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
+
+For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
+
+Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
+
 ## Documentation structure
 
 The mapping from documentation page to section and table-of-contents (TOC) is stored largely in each page's front matter, leveraging [Hugo Menus](https://gohugo.io/content-management/menus/). Menus for the CLI commands and API reference are specified in `./config.toml`.

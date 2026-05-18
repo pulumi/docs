@@ -5,11 +5,11 @@ description: Two-axis trust model, risk tiering, and AI-suspect detection for pr
 
 # Trust, Scrutiny, and AI-Suspect Detection
 
-This reference defines how `/pr-review` reasons about contributors and PR risk. The model is intentionally split into orthogonal axes so that "this contributor is trusted" never relaxes the scrutiny of content that may have been AI-generated.
+This reference defines how `/pr-review` reasons about contributors and PR risk. Etiquette trust controls tone; content scrutiny controls review depth. They are independent — etiquette trust never relaxes content scrutiny.
 
 ## Two-axis trust model
 
-`contributor-detection.sh` emits two independent fields. **Conflating them was the original bug** — high etiquette trust used to relax content scrutiny, which is exactly wrong for AI-authored PRs from senior contributors.
+`contributor-detection.sh` emits two independent fields.
 
 ### Etiquette trust
 
@@ -38,13 +38,13 @@ There is deliberately no "relaxed" content-scrutiny tier. Every PR gets at least
 
 | Tier | Heuristic | Effect |
 |---|---|---|
-| `typo` | ≤5 changed lines, only prose, no code blocks touched | Skip Step 5 entirely; minimal review |
+| `typo` | ≤5 changed lines, only prose, no code blocks touched | Skip fact-check entirely; minimal review |
 | `minor` | ≤30 changed lines, single file, no new files | Standard review, no full-file claim extraction |
-| `standard` | Default | Full Step 5 if gated in |
-| `major` | New page, >300 lines, structural changes, file moves | Full Step 5; recommend reading whole file in Step 4 |
-| `infra` | Touches `scripts/`, `.github/workflows/`, `Makefile`, `infrastructure/`, `package.json`, `webpack.config.js` | Triggers Step 3 deployment prompt; uses existing infra review path |
+| `standard` | Default | Full fact-check if gated in |
+| `major` | New page, >300 lines, structural changes, file moves | Full fact-check; whole-file read recommended |
+| `infra` | Touches `scripts/`, `.github/workflows/`, `Makefile`, `infrastructure/`, `package.json`, `webpack.config.js` | Triggers the infrastructure deployment prompt; uses existing infra review path |
 
-When `CONTENT_SCRUTINY=heightened`, the `typo` and `minor` tiers no longer skip Step 5 — AI hallucinations show up in tiny diffs too.
+When `CONTENT_SCRUTINY=heightened`, the `typo` and `minor` tiers no longer skip fact-check — AI hallucinations show up in tiny diffs too.
 
 ## AI-suspect detection
 
@@ -60,7 +60,7 @@ A PR is flagged AI-suspect when **any** of the following signals fire. The flag 
 
 If the PR author appears in the file, the flag is set.
 
-**This file is local-only and is never created, written, or committed by the skill.** It contains specific colleagues' names with the implicit message "this person ships AI-drafted PRs," which is a private judgment call. Tracking it in git would be a political landmine. Each user maintains their own file (or doesn't). The other detection signals work without an allowlist, so the skill behaves correctly on machines that don't have one.
+**This file is local-only and is never created, written, or committed by the skill.** Each user maintains their own (or doesn't). The other detection signals work without an allowlist.
 
 **File format:** one GitHub username per line, optional `#` comments, blank lines ignored. Example:
 
@@ -97,8 +97,6 @@ For every added prose line in the diff (lines starting with `+` in `.md` files, 
 
 If any density exceeds threshold AND the PR has more than 10 added prose lines (to avoid false positives on tiny diffs), set the flag with the corresponding reason.
 
-These thresholds are starting points and should be tuned over time based on false-positive feedback from `/pr-review` runs.
-
 ### Signal 4: Manual override (reason: `manual`)
 
 The user can pass:
@@ -110,25 +108,9 @@ Manual override always wins over the other three signals.
 
 ## Heightened-scrutiny behaviors
 
-When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`), the skill behaves differently in several places:
+When `CONTENT_SCRUTINY=heightened` (i.e., `AI_SUSPECT=true`):
 
-| Where | Behavior |
-|---|---|
-| Step 5 gating | `should-fact-check.sh` always returns RUN, even for non-content paths and bot/dependabot PRs |
-| Step 5 claim extraction | Runs over the **full file**, not just diff context. AI hallucinates surrounding prose. |
-| Step 5 verification | Web/`gh`/schema verification runs by default on every claim, not just claims that would normally graduate to it |
-| Step 5 triage tiers | The bar for "Low-confidence verified" drops one level. Medium-confidence verified claims become *visible* instead of collapsed under `<details>`. |
-| Step 6 confidence gauge | Prepends `🤖 AI-suspect (<reasons>)` and caps the gauge at MEDIUM. HIGH is impossible when AI-suspect is set. |
-| Step 6 trivial-fix preview | Suppressed entirely, replaced with: `Trivial-fix auto-apply disabled (AI-suspect — manual review required)` |
-| Step 8 merge toggle | Defaults **OFF** regardless of contributor type. |
-| Make-changes-and-approve trivial fixes | Agent skips all trivial-fix application during the make-changes workflow. The AI may have introduced subtly wrong "fixes" that look like typos but aren't (e.g., renaming a real method to a hallucinated one). |
-
-## Why heightened scrutiny doesn't depend on contributor type
-
-The original conflation: "internal contributor → trusted → relax review." This is exactly wrong for AI-drafted PRs, because:
-
-1. The most prolific AI-PR authors on the team are often the most senior people — they have the leverage to ship a lot, and they use AI to amplify it.
-2. AI hallucinations in docs don't get caught by "trust the author" reasoning — they get caught by *actually verifying the claims*.
-3. A trusted author who ships AI slop without checking it is, for review purposes, indistinguishable from an untrusted author. The signal that matters is "did a human verify this?" not "is the GitHub username on the org roster?"
-
-So the rule is: **etiquette trust never relaxes content scrutiny.** Etiquette trust controls how warm the comment is. Content scrutiny controls how carefully the words are checked. They are independent.
+- **Fact-check** — see `docs-review:references:fact-check` §Heightened-scrutiny overrides.
+- **Trivial-fix auto-apply** (preview and execution) — suppressed; see `pr-review:references:action-preview-templates` §AI-suspect override.
+- **Merge toggle** — defaults OFF; see `pr-review:references:action-preview-templates` §Auto-merge toggle defaults.
+- **Confidence gauge** — caps at MEDIUM and surfaces the AI-suspect reasons; see `pr-review` Step 6.

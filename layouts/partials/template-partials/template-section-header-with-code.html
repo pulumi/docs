@@ -48,10 +48,12 @@ Parameters:
             </div>
             {{ end }}
             {{ if $ctaText }}
-            <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}cta cta--button{{ else }}cta{{ end }} inline-flex items-center gap-1">
-                <span>{{ $ctaText }}</span>
-                <span>→</span>
-            </a>
+            <div>
+                <a href="{{ $ctaLink }}" class="{{ if $ctaAsButton }}btn btn-primary btn-xl{{ else }}btn btn-link btn-xl{{ end }}">
+                    {{ $ctaText }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            </div>
             {{ end }}
         </div>
         {{ if $codeSnippets }}

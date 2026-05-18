@@ -1,3 +1,10 @@
+# If mise (https://mise.jdx.dev) is installed locally, route tool
+# invocations through `mise exec --` so the versions pinned in mise.toml
+# resolve whether or not the dev has activated mise in their shell.
+# If mise isn't present (e.g. in CI, which installs tools via dedicated
+# actions), $(MISE) expands to nothing and the system PATH is used.
+MISE := $(shell command -v mise > /dev/null 2>&1 && echo "mise exec --")
+
 .PHONY: default
 default: banner generate build
 
@@ -19,14 +26,14 @@ ensure: clean
 	./scripts/ensure.sh
 	$(MAKE) sync-icons
 	./scripts/fetch-openapi-spec.sh
-	node scripts/fetch-github-stars.js
+	$(MISE) node scripts/fetch-github-stars.js
 	$(MAKE) build-assets
 
 .PHONY: sync-icons
 sync-icons:
-	node scripts/sync-icons.js
-	node scripts/normalize-custom-icons.js
-	node scripts/build-icon-sprite.js
+	$(MISE) node scripts/sync-icons.js
+	$(MISE) node scripts/normalize-custom-icons.js
+	$(MISE) node scripts/build-icon-sprite.js
 
 .PHONY: update-repos
 update-repos:
@@ -34,11 +41,11 @@ update-repos:
 
 .PHONY: serve
 serve:
-	./scripts/serve.sh
+	$(MISE) ./scripts/serve.sh
 
 .PHONY: serve-static
 serve-static:
-	yarn run http-server public
+	$(MISE) yarn run http-server public
 
 .PHONY: recent-posts
 recent-posts:
@@ -51,27 +58,20 @@ generate-related-tags:
 	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
 	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
 
-.PHONY: generate
-generate:
-	@echo -e "\033[0;32mGENERATE:\033[0m"
-	NOBUILD=true ./scripts/run_typedoc.sh
-	./scripts/generate_python_docs.sh
-	PULUMI_EXPERIMENTAL=true pulumi gen-markdown ./content/docs/cli/commands
-
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
 	$(MAKE) build-assets
-	./scripts/build-site.sh
+	$(MISE) ./scripts/build-site.sh
 
 .PHONY: lint-markdown
 lint-markdown:
 	@echo -e "\033[0;32mLINT MARKDOWN OUTPUT:\033[0m"
-	node scripts/join-markdown-lines.js
+	$(MISE) node scripts/join-markdown-lines.js
 	cp .markdownlint-cli2-markdown-output.jsonc public/.markdownlint-cli2.jsonc
 	# --fix pass may exit non-zero after applying fixes; the unfixed lint run below is the real gate
-	cd public && npx markdownlint-cli2 --fix "docs/**/index.md" || true
-	cd public && npx markdownlint-cli2 "docs/**/index.md"
+	cd public && $(MISE) npx markdownlint-cli2 --fix "docs/**/index.md" || true
+	cd public && $(MISE) npx markdownlint-cli2 "docs/**/index.md"
 
 .PHONY: check_links
 check_links:
@@ -119,11 +119,11 @@ ci_update_search_index:
 
 .PHONY: serve-all
 serve-all:
-	./node_modules/.bin/concurrently --kill-others -r "./scripts/serve.sh" "yarn --cwd ./theme run start"
+	./node_modules/.bin/concurrently --kill-others -r "$(MISE) ./scripts/serve.sh" "$(MISE) yarn --cwd ./theme run start"
 
 .PHONY: build-assets
 build-assets:
-	yarn --cwd ./theme run build
+	$(MISE) yarn --cwd ./theme run build
 
 .PHONY: test
 test:
@@ -177,11 +177,16 @@ new-blog-post:
 
 .PHONY: lint
 lint:
-	./scripts/lint.sh
+	$(MISE) ./scripts/lint.sh
+
+.PHONY: lint-prose
+lint-prose:
+	@echo -e "\033[0;32mLINT PROSE (Vale):\033[0m"
+	$(MISE) ./scripts/lint-prose.sh $(ARGS)
 
 .PHONY: format
 format:
-	./scripts/format.sh
+	$(MISE) ./scripts/format.sh
 
 .PHONY: new-dev-stack
 new-dev-stack:

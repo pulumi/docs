@@ -7,9 +7,12 @@
                 </div>
             </div>
             <div>
-                <h4>Learn more</h3>
+                <h4>Learn more</h4>
                 <p class="mb-6">Discover the getting started guides and learn about Pulumi concepts.</p>
-                <a class="text-violet-primary hover:text-violet-800 transition-colors" href="{{ relref . "/docs/" }}">Explore the docs &rarr;</a>
+                <a class="btn btn-link btn-xl" href="{{ relref . "/docs/" }}">
+                    Explore the docs
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
             </div>
         </div>
         <div class="md:w-1/2 flex md:ml-6">
@@ -19,9 +22,12 @@
                 </div>
             </div>
             <div>
-                <h4>Pulumi AI</h3>
+                <h4>Pulumi AI</h4>
                 <p class="mb-6">Generate Pulumi infrastructure-as-code programs in any language.</p>
-                <a class="text-violet-primary hover:text-violet-800 transition-colors" href="/ai">Try Pulumi AI &rarr;</a>
+                <a class="btn btn-link btn-xl" href="/ai">
+                    Try Pulumi AI
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
             </div>
         </div>
     </div>

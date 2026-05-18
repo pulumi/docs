@@ -83,7 +83,7 @@
         }
 
         p {
-            @apply text-gray-700;
+            @apply text-service-black;
         }
 
         .large-container {
@@ -93,61 +93,12 @@
 
         .description a,
         a.link {
-            @apply text-black font-semibold;
+            @apply text-violet-primary font-semibold;
 
             &:hover {
                 @apply underline;
             }
 
-            &.btn-primary, &.btn-primary-template-variant {
-                @apply text-white;
-            }
-        }
-
-        // Buttons
-        a[class^="btn-"],
-        a[class*=" btn-"] {
-            @apply py-3 px-8 rounded-lg;
-
-            &:hover {
-                @apply no-underline;
-            }
-
-            &.disabled {
-                @apply cursor-default pointer-events-none;
-            }
-        }
-
-        .btn-primary,
-        .btn-secondary,
-        .btn-primary-template-variant,
-        .btn-secondary-template-variant {
-            @apply whitespace-normal;
-        }
-
-        .btn-primary,
-        .btn-primary-template-variant {
-            @apply relative text-white text-lg bg-violet-primary rounded-lg cursor-pointer z-auto;
-
-            &:hover {
-                @apply bg-violet-800;
-            }
-        }
-
-        .btn-secondary,
-        .btn-secondary-template-variant {
-            @apply bg-white relative text-black rounded-lg text-lg cursor-pointer z-auto border border-gray-300;
-
-            &:hover {
-                @apply bg-white text-black border-gray-600;
-            }
-        }
-
-       
-
-        // Make the borders transparent when the button is over a background of the same color.
-        .bg-violet-primary .btn-secondary {
-            @apply border-transparent;
         }
 
         // white secondary button for violet-primary background

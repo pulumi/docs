@@ -8,6 +8,10 @@
     extraClass extra classes appended to the button (e.g. responsive visibility)
     label      optional label text — when set, renders as a split button:
                [icon] label | count
+
+  The header variant uses the .btn / .btn-outline classes from _button.scss.
+  The footer variant is bespoke (dark theme, white/15 borders) — buttons on
+  the dark footer background don't have a matching variant in the system yet.
 */ -}}
 {{- $variant := default "header" .variant -}}
 {{- $track := default "" .track -}}
@@ -23,21 +27,26 @@
 {{- if not $display -}}{{- $display = "GitHub" -}}{{- end -}}
 
 {{- $isFooter := eq $variant "footer" -}}
+{{- $isSplit := ne $label "" -}}
 
 {{- /* Note: callers must supply a display class (e.g. "inline-flex" or
        "hidden nav-desktop:inline-flex") via extraClass. We deliberately
        omit `inline-flex` from the base so it can't collide with `hidden`. */ -}}
-{{- $shellBase := "items-stretch h-9 shrink-0 rounded-lg border text-sm font-regular whitespace-nowrap outline-none select-none transition-all overflow-hidden active:translate-y-px focus-visible:ring-3 focus-visible:ring-violet-400/50" -}}
-{{- $shellVariant := "" -}}
+{{- $shellClass := "" -}}
 {{- $dividerColor := "" -}}
 {{- if $isFooter -}}
-    {{- $shellVariant = "border-white/15 text-white hover:border-white/40 hover:bg-white/5 focus-visible:border-violet-400" -}}
+    {{- /* Footer variant — bespoke dark theme. */ -}}
+    {{- $base := "items-stretch h-9 shrink-0 rounded-lg border text-sm font-normal whitespace-nowrap outline-none select-none transition-all overflow-hidden focus-visible:ring-3 focus-visible:ring-violet-400/50" -}}
+    {{- $shellClass = printf "%s border-white/15 text-white hover:border-white/40 hover:bg-white/5 focus-visible:border-violet-400 %s" $base $extraClass -}}
     {{- $dividerColor = "rgba(255,255,255,0.15)" -}}
+{{- else if $isSplit -}}
+    {{- /* Header split — strip btn padding so inner spans control segment widths. */ -}}
+    {{- $shellClass = printf "btn btn-outline p-0 items-stretch overflow-hidden %s" $extraClass -}}
+    {{- $dividerColor = "var(--color-gray-300)" -}}
 {{- else -}}
-    {{- $shellVariant = "border-gray-200 text-gray-950 hover:border-gray-300 focus-visible:border-violet-400" -}}
-    {{- $dividerColor = "rgb(229,231,235)" -}}
+    {{- /* Header simple — single icon + count. Override default px-4 with px-2.5. */ -}}
+    {{- $shellClass = printf "btn btn-ghost-nav px-2.5 gap-1.5 %s" $extraClass -}}
 {{- end -}}
-{{- $shellClass := printf "%s %s %s" $shellBase $shellVariant $extraClass -}}
 
 {{- $aria := "Star pulumi/pulumi on GitHub" -}}
 {{- if gt $count 0 -}}
@@ -48,10 +57,9 @@
    target="_blank"
    rel="noopener"
    {{ with $track }}data-track="{{ . }}"{{ end }}
-   style="background-clip:padding-box"
    class="{{ $shellClass }}"
    aria-label="{{ $aria }}">
-    {{- if $label -}}
+    {{- if $isSplit -}}
         <span class="inline-flex items-center gap-1.5 px-2.5">
             {{ partial "icon.html" (dict "name" "brand/github" "class" "size-4") }}
             <span>{{ $label }}</span>
@@ -59,9 +67,7 @@
         <span aria-hidden="true" style="{{ printf "width:1px;background-color:%s;" $dividerColor | safeCSS }}"></span>
         <span class="inline-flex items-center px-2.5">{{ $display }}</span>
     {{- else -}}
-        <span class="inline-flex items-center gap-1.5 px-2.5">
-            {{ partial "icon.html" (dict "name" "brand/github" "class" "size-4") }}
-            <span>{{ $display }}</span>
-        </span>
+        {{ partial "icon.html" (dict "name" "brand/github" "class" "size-4") }}
+        <span>{{ $display }}</span>
     {{- end -}}
 </a>

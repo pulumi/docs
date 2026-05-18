@@ -50,7 +50,7 @@
                                     <a href={{ $subsection.link }} class="text-lg underline group-hover:cursor-pointer">{{ $subsection.subheader }}</a>
                                 </div>
                             {{ end }}
-                            <img src="{{ $subsection.image }}" />
+                            {{ partial "fingerprinted-img.html" (dict "src" $subsection.image "alt" $subsection.header) }}
 
                             <ul class="list-none mt-6 mb-20">
                                 {{ $listLength := len $subsection.details }}
@@ -82,7 +82,7 @@
         {{ with .Params.open_source }}
             <h2>{{ .title }}</h2>
             <div class="max-w-4xl mx-auto">{{ .description | markdownify }}</div>
-            <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+            {{ partial "fingerprinted-img.html" (dict "src" .image "alt" "Pulumi Open Source" "class" "mx-auto") }}
         {{ end }}
     </section>
 
@@ -91,7 +91,7 @@
             {{ with .Params.security }}
                 <h2>{{ .title }}</h2>
                 <p class="max-w-3xl mx-auto">{{ .description | markdownify }}</p>
-                <img class="mx-auto" src="{{ .image }}" alt="Pulumi Open Source" />
+                {{ partial "fingerprinted-img.html" (dict "src" .image "alt" "Pulumi Open Source" "class" "mx-auto") }}
             {{ end }}
         </div>
     </section>
@@ -107,7 +107,7 @@
                             <h5>{{ .name }}</h5>
                             <p class="pb-8">{{ .description | markdownify }}</p>
                             <div class="absolute bottom-0 left-0 w-full">
-                                <a href="{{ .link }}" class="btn-secondary whitespace-nowrap"
+                                <a href="{{ .link }}" class="btn btn-outline btn-xl whitespace-nowrap"
                                     >{{ .name }}
                                     Case Study</a
                                 >
@@ -145,7 +145,7 @@
             <h2>{{ .title }}</h2>
             <p class="max-w-xl mx-auto">{{ .description | markdownify }}</p>
             <div class="mt-12">
-                <a href="{{ relref $pageContext "/pricing" }}" class="btn-secondary">Pricing</a>
+                <a href="{{ relref $pageContext "/pricing" }}" class="btn btn-outline btn-xl">Pricing</a>
             </div>
         {{ end }}
     </section>
@@ -157,7 +157,7 @@
                 <h4 class="text-white mt-0 lg:hidden">{{ .Params.get_started.title }}</h4>
                 <p class="text-white">{{ .Params.get_started.description }}</p>
                 <div class="mt-16">
-                    <a class="btn-secondary" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
+                    <a class="btn btn-outline btn-xl" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
                 </div>
             </div>
         </div>

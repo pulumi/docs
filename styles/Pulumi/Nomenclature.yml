@@ -1,0 +1,33 @@
+extends: substitution
+message: "Use Pulumi's canonical spelling: '%s' instead of '%s' (STYLE-GUIDE.md §Product Names)."
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  '\bpulumi esc\b': Pulumi ESC
+  '\bPulumi Esc\b': Pulumi ESC
+  '\bpulumi iac\b': Pulumi IaC
+  '\bPulumi Iac\b': Pulumi IaC
+  '\bPulumi IAC\b': Pulumi IaC
+  '\bpulumi idp\b': Pulumi IDP
+  '\bPulumi Idp\b': Pulumi IDP
+  '\bpulumi cloud\b': Pulumi Cloud
+  '\bpulumi insights\b': Pulumi Insights
+  '\bpulumi policies\b': Pulumi Policies
+  '\bpulumi policy\b': Pulumi Policies
+  '\bpulumi neo\b': Pulumi Neo
+  '\bPulumi neo\b': Pulumi Neo
+  '\bpulumi kubernetes operator\b': Pulumi Kubernetes Operator
+  '\bPulumi kubernetes operator\b': Pulumi Kubernetes Operator
+  '\bPulumi Kubernetes operator\b': Pulumi Kubernetes Operator
+  '\bpulumi deployments\b': Pulumi Deployments
+  '\bPulumi deployments\b': Pulumi Deployments
+  '\bpulumi cli\b': Pulumi CLI
+  '\bPulumi Cli\b': Pulumi CLI
+  '\bpulumi sdk\b': Pulumi SDK
+  '\bPulumi Sdk\b': Pulumi SDK
+  '\bpulumi service\b': Pulumi Service
+  '\bPulumi service\b': Pulumi Service
+  '\bPulumi Cloud Console\b': Pulumi Cloud console
+  '\bPulumi Console\b': Pulumi Cloud console

@@ -13,7 +13,9 @@ pulumi-convert {
         }
 
         .btn-convert {
-            @apply btn bg-blue-500 border-blue-500 flex items-center w-full text-xs justify-center py-3 text-white;
+            @extend .btn;
+            @apply bg-blue-500 border-blue-500 hover:bg-blue-600 hover:border-blue-600 text-white;
+            @apply flex items-center w-full text-xs justify-center py-3;
 
             .icon {
                 @apply ml-2;
@@ -142,11 +144,8 @@ pulumi-convert {
 
                     .btn-download,
                     .btn-copy {
-                        @apply ml-2 btn bg-gray-800 border-gray-800 text-xs;
-
-                        &:hover {
-                            @apply bg-gray-700 border-gray-700;
-                        }
+                        @extend .btn;
+                        @apply ml-2 bg-gray-800 border-gray-800 hover:bg-gray-700 hover:border-gray-700 text-white text-xs;
                     }
 
                     .btn-download {

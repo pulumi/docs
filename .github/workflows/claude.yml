@@ -1,4 +1,13 @@
-name: Claude Code
+name: Claude Code (chat)
+
+# Off-the-shelf @claude responder. Tag mode (no custom `prompt:`) lets
+# the action auto-post its animated tracking comment with per-tool-call
+# updates -- the most common path for ad-hoc questions / fixes.
+#
+# This workflow fires only on bare `@claude` mentions. Hashtag-driven
+# routing sends review-bearing intents to:
+#   - `@claude #update-review` → claude-update.yml (refresh pinned)
+#   - `@claude #new-review`    → claude-new.yml    (regenerate from scratch)
 
 on:
   issue_comment:
@@ -12,11 +21,18 @@ on:
 
 jobs:
   claude:
+    # Trigger requires:
+    #   1. `@claude` mention.
+    #   2. NEITHER `#update-review` NOR `#new-review` -- those hashtags
+    #      route to claude-update.yml / claude-new.yml respectively.
+    #   3. Author is not claude[bot] itself -- the pinned-review footer
+    #      contains literal "@claude" instructions which would otherwise
+    #      re-trigger on every review post.
     if: |
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||
-      (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
+      ((github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && !contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && !contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
+       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && !contains(github.event.issue.body, '#update-review') && !contains(github.event.issue.title, '#update-review') && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -26,21 +42,29 @@ jobs:
       id-token: write
       actions: read # Required for Claude to read CI results on PRs
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 1
-
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — pushes made by claude-code-action later in the workflow
+      # then go out as pulumi-bot rather than github-actions[bot],
+      # which is what lets downstream workflows (build-and-deploy, social
+      # review, etc.) fire on those commits.
       - name: Fetch secrets from ESC
         id: esc-secrets
         uses: pulumi/esc-action@v1
 
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          fetch-depth: 1
+
       - name: Check repository write access
         id: check-access
         run: |
-          # Check if user who invoked Claude has write access to the repository
-          OWNER="pulumi"
-          REPO="docs"
+          # Use the actual repository the workflow is running in, not a hardcoded
+          # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
+          # hardcoded owner/repo would always return "none" in fork-based testing
+          # and in repo transfers.
+          REPO_FULL="${{ github.repository }}"
 
           # Determine the author based on event type
           if [ "${{ github.event_name }}" = "issue_comment" ]; then
@@ -59,16 +83,16 @@ jobs:
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$OWNER/$REPO/collaborators/$AUTHOR/permission" \
+            "https://api.github.com/repos/$REPO_FULL/collaborators/$AUTHOR/permission" \
             | jq -r '.permission // "none"')
 
           # Allow admin or write access
           if [[ "$PERMISSION" == "admin" || "$PERMISSION" == "write" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ User $AUTHOR has $PERMISSION access to $OWNER/$REPO"
+            echo "✓ User $AUTHOR has $PERMISSION access to $REPO_FULL"
           else
             echo "has_write_access=false" >> $GITHUB_OUTPUT
-            echo "✗ User $AUTHOR has $PERMISSION access to $OWNER/$REPO (insufficient permissions)"
+            echo "✗ User $AUTHOR has $PERMISSION access to $REPO_FULL (insufficient permissions)"
           fi
 
       - name: Run Claude Code
@@ -80,17 +104,15 @@ jobs:
           # Use bot token so pushes trigger downstream workflows (e.g., social review)
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
 
-          # This is an optional setting that allows Claude to read CI results on PRs
+          # Optional setting that allows Claude to read CI results on PRs.
           additional_permissions: |
             actions: read
 
-          # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
-          # prompt: 'Update the pull request description to include a summary of changes.'
-
-          # Optional: Add claude_args to customize behavior and configuration
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          # claude_args: '--model claude-opus-4-1-20250805 --allowed-tools Bash(gh pr:*)'
+          # No `prompt:` argument → tag mode. The action auto-posts its
+          # animated tracking comment with per-tool-call updates and
+          # decides what to do based on the mention text and project
+          # context (CLAUDE.md / AGENTS.md). Sonnet handles ad-hoc work.
+          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
 env:
   ESC_ACTION_OIDC_AUTH: true
@@ -98,4 +120,3 @@ env:
   ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
   ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
-

@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi vs. OpenTofu"
-meta_desc: Pulumi and OpenTofu have a few similarities, but they differ in many key ways. This page helps provide a rundown of these major differences.
+meta_desc: "Pulumi vs. OpenTofu: Pulumi is a multi-cloud IaC platform in general-purpose languages; OpenTofu is a Linux Foundation Terraform fork that uses HCL."
 title: OpenTofu
 h1: Pulumi vs. OpenTofu
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -8,11 +8,11 @@ menu:
     iac:
         name: OpenTofu
         parent: iac-comparisons
-        weight: 6
+        weight: 30
     concepts:
         identifier: vs-opentofu
         parent: vs
-        weight: 6
+        weight: 30
 aliases:
 - /docs/reference/vs/opentofu/
 - /docs/intro/vs/opentofu/
@@ -20,175 +20,126 @@ aliases:
 - /docs/iac/concepts/vs/opentofu/
 ---
 
-<style>
-    main table {
-        font-size: 0.94em;
-    }
+Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML); OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
 
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
-
-Pulumi and OpenTofu are both infrastructure as code technologies that have similarities but many fundamental differences. For example, Pulumi is open source and offers the flexibility to use any programming language for managing infrastructure. This makes Pulumi widely accessible to developers and DevOps engineers from any background. However, OpenTofu requires a proprietary domain-specific language (DSL). In this comprehensive guide, we'll explore their key differences, similarities, and real-world scenarios, mapping OpenTofu concepts to Pulumi to help you choose the right infrastructure as code platform to meet your needs.
+This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of OpenTofu.
 
 ## What is Pulumi?
 
-Pulumi is an open source [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that helps teams tame the cloud’s complexity using the world’s most popular programming languages (TypeScript, Go, .NET, Python, and Java) and markup languages (YAML, CUE).
+{{< what-is-pulumi >}}
+
+For users coming from OpenTofu, Pulumi can also consume the existing OpenTofu ecosystem directly: the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry, and Pulumi can [execute existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) as components inside a Pulumi program.
 
 ## What is OpenTofu?
 
-OpenTofu is a Terraform fork that provides infrastructure as code software for cloud service management with a consistent CLI workflow. OpenTofu allows you to write, plan, and apply changes to deliver infrastructure as code.
+OpenTofu is an open-source, declarative infrastructure as code tool forked from Terraform 1.6 and governed by the [Linux Foundation](https://www.linuxfoundation.org/press/announcing-opentofu). OpenTofu uses the [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE) and the HashiCorp Configuration Language (HCL), the same DSL as Terraform. OpenTofu supports the same provider ecosystem as Terraform — the [OpenTofu Registry](https://search.opentofu.org/) indexes the same providers as the Terraform Registry, along with additional community providers. OpenTofu itself has no commercial tier; managed-state and collaboration features come from third-party services such as Spacelift, env0, and Scalr.
 
-## Pulumi vs. OpenTofu: Similarities {#similarities}
-
-Similarities between OpenTofu and Pulumi include the ability to create, deploy, and manage infrastructure as code on any cloud. Both OpenTofu and Pulumi follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both OpenTofu and Pulumi support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. Finally, with Pulumi you get access to all Pulumi providers as well as support for all open source Terraform providers.
-
-## Pulumi vs. OpenTofu: Key Differences {#differences}
-
-Pulumi and OpenTofu differ in that OpenTofu requires the use of a domain-specific language: HashiCorp Configuration Language (HCL). In contrast, Pulumi allows you to use familiar general purpose languages like [Python](/docs/languages-sdks/python/), [TypeScript](/docs/languages-sdks/javascript/), [JavaScript](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET](/docs/languages-sdks/dotnet/), [Java](/docs/languages-sdks/java/), and markup languages like [YAML](/docs/languages-sdks/yaml/), with the tools you already use to accomplish the same goals.
-
-Here is a summary of the key differences between Pulumi and OpenTofu:
+## Detailed comparison
 
 | Feature | Pulumi | OpenTofu |
-| ------- | ------ | --------- |
-| [OSS License](#license) | Yes, Apache License 2.0 | Yes, Mozilla Public License 2.0 |
-| [Language Support](#language) | Python, TypeScript, JavaScript, Go, C#, F#, Java, YAML | HashiCorp Configuration Language (HCL) |
-| [IDE Support](#ide) | Code completion, strong typing, error squiggles, rich resource documentation, etc. | Limited |
-| [State Management](#state) | Managed through Pulumi Cloud by default, self-managed options available. | Self-managed by default, managed SaaS offerings available. |
-| [Provider Support](#providers) | Native cloud providers with 100% same-day resource coverage plus Terraform-based providers for additional coverage. | Support across multiple IaaS, SaaS, and PaaS providers. |
-| [Cloud Native Support](#cloud-native) | Richly typed. Includes CRDs & in-cluster operator support for GitOps delivery. | Core API typed. Generic support for CRD. |
-| [Dynamic Provider Support](#dynamic-providers) | Yes | No |
-| [Infrastructure Reuse and Modularity](#reuse) | Flexible. Reuse functions, classes, packages, and Pulumi components. | Constrained. Can only reuse OpenTofu modules. |
-| [Testing and Validation](#testing) | Unit, property, and integration testing. Supports popular test frameworks. | Integration testing only |
-| [Modes of Execution](#modes) | Run CLI commands or initiate commands programmatically with Automation API. | Run CLI commands only. |
-| [Embed within Application Code](#embedding) | Yes, via Automation API | No |
-| [Third-party CI/CD Tools Support](#cicd) | Yes | No |
-| [Policy as Code](#policy) | Yes | No |
-| [Secrets Management](#secrets) | Yes. Secrets are encrypted in transit and in the state file. | No. Secrets can be stored in a 3rd party product. There is no way to encrypt them in the state file. |
-| [Audit Capabilities](#auditing) | Yes | No |
-| [Adopt Existing Resources](#adopting) | Yes. Generates code as part of the import process. | Yes. No code generation capabilities. |
-| [Aliases](#aliases) | Yes | Limited |
-| [Transformations](#transformations) | Yes | No |
-| [Import Code from other IaC Tools](#converting) | Yes | No |
+| --- | --- | --- |
+| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | [HashiCorp Configuration Language (HCL)](https://opentofu.org/docs/language/) — a declarative DSL with a fixed set of functions and meta-arguments |
+| Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any OpenTofu or Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be generated into a Pulumi SDK with `pulumi package add terraform-provider <name>` | Providers from the [OpenTofu Registry](https://search.opentofu.org/) or the Terraform Registry; community and custom providers are installed and pinned through the `required_providers` block |
+| Transpiled to another format? | No — programs run directly in their host language | No — HCL is interpreted by the OpenTofu CLI |
+| State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | [Self-managed by default](https://opentofu.org/docs/language/state/) (local file); remote backends include S3, GCS, Azure Blob, HTTP, and others; managed offerings available from third parties (Spacelift, env0, Scalr) |
+| Secrets management | [Encrypted in transit and at rest](/docs/iac/concepts/secrets/) in the state file by default, with per-stack encryption keys; pluggable KMS providers (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault) | [State and plan encryption](https://opentofu.org/docs/language/state/encryption/) (added in OpenTofu 1.7) with pluggable key providers; individual variable values are not encrypted as a first-class primitive |
+| Execution model | Local CLI, programmatic via [Automation API](/docs/iac/automation-api/), or remote runs in [Pulumi Deployments](/docs/deployments/) | Local CLI; remote execution requires a third-party runner |
+| Rollback on failed operation | Failed updates leave the stack in a partially-updated state; subsequent `pulumi up` runs reconcile toward the desired state, and you can roll forward by reverting program code | No automatic rollback; failed `tofu apply` runs leave resources in their last reported state and require a follow-up `apply` to reconcile |
+| Programmatic API for tools and platforms | [Automation API](/docs/iac/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through `tofu` CLI invocations |
+| Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Modules](https://opentofu.org/docs/language/modules/) referenced from local paths, Git, or registries; Pulumi can also [consume OpenTofu modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) |
+| Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [`tofu import`](https://opentofu.org/docs/cli/commands/import/) and the [`import` block](https://opentofu.org/docs/language/import/); HCL for the imported resource must be authored by hand |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | No built-in policy-as-code; external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) can evaluate plan output |
+| Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | Yes — [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE) |
+| Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | None from the OpenTofu project itself; commercial managed-state and collaboration tooling comes from third parties (Spacelift, env0, Scalr) |
 
-Getting started with Pulumi is easy. If you have experience with OpenTofu and already have HCL, you can convert it to Pulumi. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) to use our [self-service migration tools](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. As part of Pulumi Enterprise and Business Critical Editions, [OpenTofu workspace migrations](/blog/tf-migration-offer) are bundled as part of the onboarding process.
+## Key differences
 
-If you would like to deploy a simple program, follow our Get Started guide:
+### Language support and the authoring experience
 
-{{< get-started >}}
+OpenTofu configurations are written in [HCL](https://opentofu.org/docs/language/), a declarative DSL with a fixed set of [built-in functions](https://opentofu.org/docs/language/functions/) and meta-arguments (`for_each`, `count`, `dynamic`) for shaping resources. The DSL keeps configurations declarative but constrains abstraction: there are no classes, no first-class testing frameworks, and no general-purpose package ecosystem. Pulumi programs are written in general-purpose languages, so authors get loops, conditionals, classes, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems. Pulumi also supports [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format.
 
-The following sections go into further detail on the differences between Pulumi and OpenTofu.
+### Cloud and service coverage
 
-### Language Support {#language}
+OpenTofu and Pulumi target broadly the same set of clouds and SaaS platforms, but reach them through different mechanisms. OpenTofu uses providers from the [OpenTofu Registry](https://search.opentofu.org/) (and, where compatible, the Terraform Registry), installed and pinned through the `required_providers` block. Pulumi pulls from the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). Pulumi also maintains native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/), generated directly from each platform's API schema for same-day coverage of new resources.
 
-OpenTofu requires that you and your team write programs in a custom domain-specific language (DSL) called HashiCorp Configuration Language (HCL). In contrast, Pulumi lets you use programming languages like Python, Go, JavaScript, TypeScript, C#, and Java. Because of the use of familiar languages, you get familiar constructs like conditionals, loops, functions, and classes. This significantly improves the ability to cut down on boilerplate and enforce best practices. With HCL, it is common to copy and paste blocks of HCL code between different projects. Pulumi’s supported programming languages have been built over multiple decades to tame complexity at scale---the very complexity modern cloud architectures operating at global scale need to tackle. Instead of creating a new ecosystem of modules and sharing, Pulumi lets you leverage existing package management tools and techniques.
+When a provider is not packaged in the Pulumi Registry, the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry by running `pulumi package add terraform-provider <name>`. The result is a strongly typed local package usable from any Pulumi language — so an OpenTofu user's existing third-party providers are first-class citizens in Pulumi without writing or maintaining a separate bridge.
 
-### IDE Support {#ide}
+### Execution and rollbacks
 
-OpenTofu has plugins for some IDEs. However, the features are varied and limited. With Pulumi, you can tap into decades of innovation with great IDEs. The IDEs automatically provide code completion, strong typing, error squiggles, rich resource documentation, and more.
+OpenTofu runs locally through the `tofu` CLI; remote execution requires a third-party runner (Spacelift, env0, Scalr, or a custom CI pipeline). Pulumi runs through the local CLI, programmatically through the [Automation API](/docs/iac/automation-api/), or remotely through [Pulumi Deployments](/docs/deployments/). Neither tool performs automatic rollback on a failed `apply`/`up`: both leave the stack in a partially-updated state and reconcile on the next run. The difference is in surface area — Pulumi offers an embeddable SDK and a first-party managed runner; OpenTofu relies on the CLI and external automation.
 
-### State Management {#state}
+### Secrets handling
 
-The OpenTofu engine takes care of provisioning and updating resources. With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure.
+Pulumi treats secrets as a first-class primitive. Values marked as secrets are encrypted in transit and at rest in the state file, anything derived from a secret is also encrypted, and each stack has its own encryption key. The default encryption provider can be replaced with [AWS KMS, Azure Key Vault, Google Cloud KMS, or HashiCorp Vault](/docs/iac/concepts/secrets/#available-encryption-providers). OpenTofu added [state and plan encryption](https://opentofu.org/docs/language/state/encryption/) in version 1.7, which encrypts the entire state and plan files using a pluggable key provider, but individual sensitive variables are not encrypted as their own primitive — sensitive values are typically fetched at runtime from a secrets store such as HashiCorp Vault or AWS Secrets Manager.
 
-By default, OpenTofu requires that you manage concurrency and state manually, by way of its “state files.” Pulumi, in contrast, uses the free [Pulumi Cloud](https://app.pulumi.com/signup) to eliminate these concerns. This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like OpenTofu, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
+### Policy as code
 
-For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/concepts/state/).
+[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. OpenTofu has no built-in policy-as-code feature; teams typically reach for external tools such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Checkov](https://www.checkov.io/) to evaluate plan output as a separate step.
 
-### Provider Support {#providers}
+### Modularity and reuse
 
-OpenTofu uses the same providers as Terraform. Pulumi supports over 150 of the leading cloud providers and modern cloud SaaS offerings including Amazon Web Services, Microsoft Azure, Google Cloud, Kubernetes, Auth0, CloudFlare, Confluent Cloud, Datadog, DigitalOcean, Docker, GitHub, Kong, MinIO, MongoDB Atlas, PagerDuty, Snowflake, Spot by NetApp, and SumoLogic. Pulumi also has [native providers](/blog/pulumiup-native-providers/) for AWS, Azure, Google, and Kubernetes that provide same-day support for every new release. For more information on Pulumi providers, see [Pulumi Registry](/registry/).
+OpenTofu modules are units of HCL referenced from a local path, a Git URL, or a registry. They compose well within HCL but cannot share runtime helpers or types with non-module code. Pulumi's [Component Resources](/docs/iac/concepts/components/) are runtime objects with explicit parent/child relationships, so a component and the resources inside it form a coherent unit in plan output, deletion, and state. Components can be authored in one language and consumed from any other supported language by publishing them as a [Pulumi Package](/docs/iac/concepts/packages/). Pulumi can also [consume OpenTofu modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), automatically installing and invoking OpenTofu to execute them — useful for teams that have invested heavily in module libraries and want to keep using them while moving to Pulumi.
 
-Pulumi also has deep support for cloud native technologies like Kubernetes, and supports advanced deployment scenarios that cannot be expressed with OpenTofu. This includes Prometheus-based canaries, automatic Envoy sidecar injection, and more. Pulumi is a proud member of the Cloud Native Computing Foundation (CNCF).
+### Automation API
 
-#### Using Terraform Providers {#providers-terraform}
+The [Automation API](/docs/iac/automation-api/) lets a host application drive Pulumi without shelling out to the CLI. Practical uses include embedding stack creation in a SaaS product, building an internal developer platform that provisions environments per team or per branch, generating ephemeral preview environments from CI, and orchestrating cross-cloud deployments where each step runs as part of a larger workflow. OpenTofu is invoked through the `tofu` CLI and does not provide an equivalent embeddable SDK; programmatic use means shelling out to the CLI and parsing its output.
 
-Pulumi is able to adapt [any Terraform Provider](https://github.com/terraform-providers) for use with Pulumi, enabling management of any infrastructure supported by the Terraform Providers ecosystem using Pulumi programs.
+## When to choose Pulumi vs. OpenTofu
 
-Indeed, some of Pulumi’s most interesting providers have been created this way, delivering access to robust, tried-and-true infrastructure management. The Terraform Providers ecosystem is mature and healthy, and enjoys contributions from many cloud and infrastructure leaders across the industry, ourselves included.
+**Choose Pulumi when** you:
 
-Most Pulumi users don’t need to know about this detail, however we are proud to be building on the work of others, and contributing our own open source back to this vibrant ecosystem, and thought you should know.
+1. Want to write infrastructure in a general-purpose language with the testing frameworks, package managers, and IDE tooling that already exist in that ecosystem.
+1. Need an embeddable SDK ([Automation API](/docs/iac/automation-api/)) to drive deployments from a host application — internal developer platforms, SaaS products, or ephemeral preview environments per pull request.
+1. Want first-class encrypted secrets with pluggable KMS providers and per-stack encryption keys.
+1. Want a single managed offering ([Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/)) that covers state, RBAC, audit logs, policy management, and remote runs.
 
-In the event you’d like to add new providers, or understand how this integration works, check out the [Pulumi Terraform bridge repo](https://github.com/pulumi/pulumi-terraform-bridge). This bridge is fully open source and makes it easy to create new Pulumi providers out of existing Terraform Providers.
+**Choose OpenTofu when** you:
 
-#### Converting From OpenTofu to Pulumi {#providers-converting}
+1. Want a fully open-source, vendor-neutral IaC tool governed by an independent foundation, with no commercial tier from the project itself.
+1. Have a large existing investment in HCL configurations, Terraform/OpenTofu modules, and team expertise that you don't want to migrate.
+1. Prefer to assemble managed-state and collaboration features from third-party services (Spacelift, env0, Scalr) rather than buying them from a single vendor.
 
-The Pulumi CLI can be used to convert HCL to Pulumi via `pulumi convert --from terraform`. To learn more, see [Converting HCL to Pulumi](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) in our Adopting Pulumi user guide.
+The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and-import) below.
 
-#### Using Pulumi and OpenTofu Side-by-Side {#providers-side-by-side}
+## Adoption: coexistence, conversion, and import
 
-Pulumi supports [consuming local or remote OpenTofu state](/blog/using-terraform-remote-state-with-pulumi/) from your Pulumi programs. This helps with incremental adoption, whereby you continue managing a subset of your infrastructure with OpenTofu while you incrementally move to Pulumi.
+There are several common paths for adopting Pulumi alongside or in place of OpenTofu, and they can be combined:
 
-For example, maybe you would like to keep your VPC and low-level network definitions written in OpenTofu so as to avoid any disruption, or maybe some of the team would like to stay on OpenTofu for now and make a shift in the future. Using the state reference support described previously, you can author higher-level infrastructure in Pulumi that consumes the OpenTofu-provisioned VPC information (such as the VPC ID, Subnet IDs, etc.), making the co-existence of Pulumi and OpenTofu easy to automate.
+1. **Use OpenTofu alongside Pulumi.** A Pulumi program can reference an existing OpenTofu state file and read its outputs through [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/) or [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) (both functions live in the `terraform` package and work with OpenTofu state). Pulumi can also [execute existing OpenTofu modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) — Pulumi auto-installs and invokes OpenTofu to run the module — which lets teams keep using their module libraries while adopting Pulumi for new work.
+1. **Convert HCL with `pulumi convert`.** [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) translates HCL into a Pulumi program in the language of your choice. The same flag handles both Terraform and OpenTofu HCL — there is no separate `--from opentofu` flag, because the configuration language is the same.
+1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned resources under Pulumi management and generate the corresponding code in your chosen language.
 
-To learn more, see [Referencing OpenTofu State](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/#referencing-terraform-state) in our Adopting Pulumi user guide.
+For a complete walkthrough including coexistence patterns and conversion, see [Migrating from Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) — the same guide applies to OpenTofu.
 
-### Cloud Native Support {#cloud-native}
+## Frequently asked questions
 
-Pulumi supports the cloud native ecosystem. This includes a native Kubernetes provider with 100% Kubernetes API coverage in all languages, including compile-time type-checking. Pulumi also includes Helm 2 and 3 support, strongly typed CustomResourceDefinitions (CRDs), deploying Kubernetes YAML or Kustomize templates, as well as a YAML-to-Pulumi conversion tool that can translate any Kubernetes YAML into your desired language. Pulumi also offers playbooks with built-in best practices for production cluster deployments for AWS EKS, Azure AKS, and Google GKE. Pulumi also offers a Kubernetes operator that allows you to continuously deliver via GitOps. OpenTofu offers similar support for the Kubernetes core API and Helm but has generic support for CRDs, meaning no compile-time type-checking or auto-complete.
+### Is OpenTofu the same as Terraform?
 
-### Dynamic Provider Support {#dynamic-providers}
+OpenTofu was forked from Terraform 1.6 in 2023 after HashiCorp changed Terraform's license from MPL 2.0 to the Business Source License. The two projects share the HCL configuration language and a largely overlapping provider ecosystem, but they have since diverged: OpenTofu is governed by the Linux Foundation and has added features such as state encryption that Terraform does not have, while Terraform has continued to ship its own new features. For most existing configurations, OpenTofu is a drop-in replacement, but the projects are not identical.
 
-Pulumi provides dynamic providers that allow you to extend your system by creating new kinds of custom resources by directly coding CRUD operations for the new resource in your Pulumi program. This can be used to support new resource types in addition to performing complex integrations like database migrations, configuration management for virtual machines, and more, all orchestrated alongside your IaC workflows. OpenTofu does not have a direct equivalent to Dynamic Providers and would require writing complex and proprietary modules in order to build custom resources with CRUD operations. To learn more, see [Dynamic Providers](/docs/concepts/resources/dynamic-providers/).
+### Can Pulumi use existing OpenTofu providers and modules?
 
-### OSS License {#license}
+Yes. The [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry by running `pulumi package add terraform-provider <name>`. Pulumi can also [execute existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) as components inside a Pulumi program — Pulumi auto-installs OpenTofu and invokes it to run the module.
 
-OpenTofu uses the weak copyleft [Mozilla Public License 2.0](https://github.com/opentofu/opentofu/blob/main/LICENSE). Conversely, Pulumi open-source projects use the permissive and business-friendly [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE). This includes the core [Pulumi repo](https://github.com/pulumi/pulumi), all of the open-source Pulumi resource providers (such as the [Azure Native provider](https://github.com/pulumi/pulumi-azure-native)), and other useful projects.
+### How do I migrate from OpenTofu to Pulumi?
 
-### Infrastructure Reuse and Modularity {#reuse}
+You have three options that can be combined: convert HCL with [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) (which handles OpenTofu HCL — there is no separate `--from opentofu` flag), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a full walkthrough.
 
-Pulumi promotes creating reusable and modular components which allows standard and well-architected infrastructure building blocks to be templatized and easily reused. With Pulumi, you can reuse functions, classes, and packages. Pulumi also has a built-in component model that lets you abstract and encapsulate complexity with higher-level abstractions. These components have a trackable state, appear in diffs, and use a logical name that tracks the resource identity across deployments. Pulumi also provides Pulumi Packages which allows you to author components in one language and make the component accessible in all the other languages that Pulumi supports. OpenTofu uses HCL which requires you to build proprietary modules and Go-based providers in order to build modular and reusable infrastructure. For more information about how to author reusable components, see [Component Resources](/docs/concepts/resources/#components).
+### Does Pulumi support OpenTofu state files?
 
-Pulumi also provides the [Pulumi Registry](/registry/) which is a searchable collection of Pulumi Packages published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building.
+Yes. A Pulumi program can read outputs from an OpenTofu state file via [`terraform.state.getLocalReference`](/registry/packages/terraform/api-docs/state/getlocalreference/) for local state and [`terraform.state.getRemoteReference`](/registry/packages/terraform/api-docs/state/getremotereference/) for remote backends. Both functions live in the `terraform` package and work with OpenTofu state because the state file format is shared between the two tools.
 
-### Testing and Validation {#testing}
+### Is Pulumi free like OpenTofu?
 
-OpenTofu supports integration testing. With Pulumi, you can take advantage of native testing frameworks and perform automated tests of your infrastructure because Pulumi uses general purpose programming languages to provision cloud resources. Pulumi provides unit tests (fast in-memory tests that mock all external calls), property tests (run resource-level assertions while infrastructure is being deployed), and integration tests (deploy ephemeral infrastructure and run external tests against it). For more information on how to run tests with Pulumi, see [Testing](/docs/using-pulumi/testing/).
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. OpenTofu itself is free under MPL 2.0; commercial managed-state and collaboration tooling is sold separately by third parties such as Spacelift, env0, and Scalr.
 
-### Modes of Execution {#modes}
+### Can Pulumi and OpenTofu run side by side during migration?
 
-Both Pulumi and OpenTofu can execute commands through their CLI. Pulumi also provides two APIs by which you can execute Pulumi commands. First, the Automation API allows you to provision, update, and destroy infrastructure through Pulumi directly in your application code. This enables higher order orchestration workflows and dynamically managed infrastructure. Second, the REST API allows you to query and interact with state information, history, stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/using-pulumi/automation-api/) and [REST API](/docs/pulumi-cloud/cloud-rest-api/).
+Yes — and this is one of the more common adoption patterns. Pulumi can read outputs from OpenTofu state files and execute OpenTofu modules directly, so teams typically keep existing infrastructure under OpenTofu while using Pulumi for new work, then incrementally convert or import as the project allows.
 
-### Embed within Application Code {#embedding}
+## Next steps
 
-Pulumi has the ability to embed Pulumi programs directly into your application code through the Automation API, a programmatic interface for running Pulumi programs without the Pulumi CLI. The Automation API is a strongly typed and safe way to use Pulumi in embedded contexts such as web servers without having to shell out to a CLI. You can easily create custom experiences on top of Pulumi that are tailored to your use-case, domain, and team. OpenTofu does not have an equivalent to Automation API. To learn more, see [Automation API](/docs/using-pulumi/automation-api/).
-
-### Third-Party CI/CD Tools Support {#cicd}
-
-Pulumi integrates with existing CI/CD providers including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, Jetbrains TeamCity, Spinnaker, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. OpenTofu does not have support with existing CI/CD providers.
-
-For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
-
-### Policy as Code {#policy}
-
-OpenTofu does not have support for policy as code. Pulumi, however, provides policy as code through Pulumi Policies which acts as programmable guardrails to enforce security, best practices, and cost across all infrastructure. Pulumi Policies is open source, free to use, and lets you write rules in Python, JavaScript, or Open Policy Agent (OPA) Rego. For more information on how to implement policy as code using Pulumi, see [Pulumi Policies](/docs/insights/policy/).
-
-### Secrets Management {#secrets}
-
-Pulumi always transmits and stores entire state files securely. However, Pulumi also supports encrypting sensitive values (e.g., database passwords, SaaS tokens, credentials files)  as secrets for extra protection. Secrets are supported as a first-class primitive within Pulumi.  Pulumi encrypts secrets in transit and at rest, and anything a secret touches (e.g., CLI outputs, Pulumi logs, Pulumi program, state file) is tainted and gets encrypted, which prevents you from accidentally disclosing a secret. Every stack has its own encryption key. Pulumi also provides an extensible encryption facility that allows you to elect to use your own keys managed by a 3rd party solution. OpenTofu does not have a native secrets manager and must utilize 3rd party solutions. However, even when pulling secrets from a 3rd party secrets manager, secrets are stored as plaintext and not encrypted within the state file. For more information on storing secrets with Pulumi, see [Secrets](/docs/concepts/secrets/).
-
-### Audit Capabilities {#auditing}
-
-Pulumi provides audit logs that enable you to track the activity of users within an organization. Audit logs capture the UNIX timestamp of the event, the user who invoked the action, the event that took place, and the source IP of the call the user made. These logs are available to organizations with an Enterprise level subscription. The logs are immutable and record all user actions. OpenTofu does not have audit logging capabilities. To learn more, see [Audit Logs](/docs/pulumi-cloud/audit-logs/).
-
-### Adopt Existing Resources {#adopting}
-
-Both Pulumi and OpenTofu support importing existing resources so that they can be managed by each. Pulumi also allows you to generate code in your language of choice from the existing state. OpenTofu only supports importing state but requires you to hand-author the HCL. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in our Adopting Pulumi user guide.
-
-### Aliases
-
-Aliases help facilitate refactoring by allowing you to modify certain properties of a resource without risk of replacing it. With an alias, you can change the logical name of a given resource, change its parent (i.e., move it from one component to another), change its underlying resource type, or even move it to an entirely different project or stack. Both Pulumi and OpenTofu support the notion of resource renaming and reparenting, but OpenTofu does not currently support declaratively changing a resource's underlying type or moving it to another workspace. To learn more, see [Aliases](/docs/concepts/options/aliases/) in the Resource documentation.
-
-### Transformations
-
-Transformations, which are unique to Pulumi, allow you to programmatically set or override the input properties of resources belonging to a particular collection, such as the child resources of a Pulumi component or even all of the resources belonging to a stack. Transformations make it easy to apply consistent settings across your infrastructure without having to manipulate the properties of individual resources. To learn more, see [Transformations](/docs/concepts/options/transformations/) in the Resource documentation.
-
-### Import Code from Other IaC Tools {#converting}
-
-Pulumi allows you to convert templates from HCL , Kubernetes YAML, and Azure ARM into Pulumi programs. This preserves existing program structure, which may be important if you carefully designed your existing infrastructure as code layout in terms of names, modules, and configurability. Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. To learn more, see [Conversion](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) in our Adopting Pulumi user guide.
-
-## Get Started with Pulumi
-
-Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+- [Get started with Pulumi](/docs/iac/get-started/)
+- [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
+- [Using any Terraform or OpenTofu provider with Pulumi](/docs/iac/concepts/providers/any-terraform-provider/)
+- [Migrating from Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)

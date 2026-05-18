@@ -63,6 +63,7 @@ generate_docs() {
             --excludeInternal --excludeExternals --excludePrivate \
             --cleanOutputDir \
             --skipErrorChecking \
+            --includeVersion \
             --options "$TOOL_TYPEDOC_CONFIG" \
             "$2"
 

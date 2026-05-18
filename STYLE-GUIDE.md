@@ -40,7 +40,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - H2 and deeper: **Sentence case**.
 - Only increment one heading level at a time (no skipping levels).
 - Use capitalization only for proper nouns. For example, use "stack" not "Stack."
-- Do not end headings with punctuation.
+- Do not end headings with punctuation, with one exception: headings in a "Frequently asked questions" section may end with `?` so the site's FAQPage JSON-LD auto-collector (`layouts/partials/schema/collectors/faq-entity.html`) detects them as questions.
 - Headings should be surrounded by blank lines.
 
 **Navigation menu items**: Use **Title Case** for frontmatter menu fields (`menu.name`, `menu.title`). Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
@@ -335,3 +335,9 @@ Use **"Pulumi package"** (not "cross-language package") when referring to compon
 ## Blog Posts
 
 See [BLOGGING.md](BLOGGING.md) for guidance on writing Pulumi blog posts.
+
+---
+
+## Automated checks
+
+The rules in this guide are enforced — where mechanically possible — by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` and layer on top of the Google Developer Style Guide and write-good packages. Run locally with `make lint-prose`. Vale findings also surface in the pinned PR review under ⚠️ Low-confidence and never block merges.

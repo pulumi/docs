@@ -8,10 +8,10 @@ menu:
     iac:
         name: Cloud SDKs
         parent: iac-comparisons
-        weight: 4
+        weight: 105
     concepts:
         parent: vs
-        weight: 4
+        weight: 90
 aliases:
 - /docs/reference/vs/cloud_sdks/
 - /docs/intro/vs/cloud_sdks/

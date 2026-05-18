@@ -1,0 +1,4 @@
+docs/reference/pkg/python/pulumi_terraform/index.html|/registry/packages/terraform/api-docs/
+docs/reference/pkg/python/pulumi_terraform/state/index.html|/registry/packages/terraform/api-docs/state/
+docs/reference/pkg/python/providers/pulumi_terraform/index.html|/registry/packages/terraform/api-docs/
+docs/reference/pkg/python/providers/pulumi_terraform/state/index.html|/registry/packages/terraform/api-docs/state/

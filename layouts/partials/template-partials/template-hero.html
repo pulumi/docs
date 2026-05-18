@@ -149,20 +149,16 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
             <div class="flex flex-col sm:flex-row flex-wrap items-start gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn-primary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap" data-role="cta-get-started">
-                    <span>{{ $ctaPrimaryText }}</span>
-                    <span>→</span>
+                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
+                    {{ $ctaPrimaryText }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
-                    <span>{{ $ctaSecondaryText }}</span>
-                </a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn-secondary-template-variant inline-flex items-center gap-2 w-full sm:w-auto justify-center whitespace-nowrap">
-                    <span>{{ $ctaTertiaryText }}</span>
-                </a>
+                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaTertiaryText }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -228,20 +224,16 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
             <div class="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn-primary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center" data-role="cta-get-started">
-                    <span>{{ $ctaPrimaryText }}</span>
-                    <span>→</span>
+                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
+                    {{ $ctaPrimaryText }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
-                    <span>{{ $ctaSecondaryText }}</span>
-                </a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn-secondary-template-variant inline-flex items-center gap-2 w-full lg:w-auto justify-center">
-                    <span>{{ $ctaTertiaryText }}</span>
-                </a>
+                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaTertiaryText }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -269,7 +261,7 @@
         </div>
         {{ else if $image }}
         <div class="product-hero-visual flex justify-center">
-            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "style" ($imageStyle | safeCSS)) }}
+            {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto rounded-lg" "loading" "eager" "style" ($imageStyle | safeCSS) "maxWidth" 1500 "quality" 95) }}
         </div>
         {{ end }}
     </div>
