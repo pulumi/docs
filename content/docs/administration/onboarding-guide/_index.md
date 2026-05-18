@@ -19,7 +19,7 @@ In this guide, you’ll find everything you need to know about using Pulumi with
 **Pro tips**
 
 * To help everyone quickly adopt Pulumi in your organization, identify a group of “Pulumi champions” across your organization who will encourage other team members to get started right away. The faster your team uses Pulumi, the faster you can ship.
-* Check out the [Pulumi Glossary](/docs/iac/concepts/glossary/) for specific terms we use across our sites and documentation.
+* Check out the [Pulumi Glossary](/docs/reference/glossary/) for specific terms we use across our sites and documentation.
 {{% /notes %}}
 
 ## In this guide
