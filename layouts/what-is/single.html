@@ -26,29 +26,7 @@
                 <span><span data-text="{{ .Params.page_title }}">{{ .Params.page_title | safeHTML }}</span></span>
             </h1>
         </div>
-        {{ with .Params.authors }}
-            <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-700">
-                {{ range $id := . }}
-                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
-                    {{ $authorData := index site.Data.team.team $id }}
-                    {{ if $authorData }}
-                        <span class="flex items-center gap-3">
-                            <a class="rounded-full p-1 bg-violet-200" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" data-track="{{ $authorData.name | urlize }}-img">
-                                <img class="w-12 h-12 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
-                            </a>
-                            <span>
-                                <span class="text-gray-500">By </span>
-                                <a class="font-medium text-gray-900 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" data-track="{{ $authorData.name | urlize }}-name" rel="author">{{ $authorData.name }}</a>
-                                {{ with $authorData.title }}
-                                    <span class="block text-xs text-gray-500">{{ . }}</span>
-                                {{ end }}
-                            </span>
-                        </span>
-                    {{ end }}
-                {{ end }}
-            </div>
-        {{ end }}
-        <div class="max-w-4xl mx-auto mt-4 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
+        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
             {{ with $modifiedDate }}
                 <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
                     Updated {{ .Format "January 2, 2006" }}
@@ -56,6 +34,19 @@
                 <span aria-hidden="true">·</span>
             {{ end }}
             <span>{{ $readTime }} min read</span>
+            {{ with .Params.authors }}
+                <span aria-hidden="true">·</span>
+                {{ range $id := . }}
+                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                    {{ $authorData := index site.Data.team.team $id }}
+                    {{ if $authorData }}
+                        <a class="inline-flex items-center gap-2 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" rel="author" data-track="{{ $authorData.name | urlize }}-byline">
+                            <img class="w-6 h-6 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
+                            <span class="font-medium text-gray-900">{{ $authorData.name }}</span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
         </div>
     </div>
 </header>
