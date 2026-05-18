@@ -18,7 +18,7 @@ aliases:
 
 ## Security and Isolation
 
-Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. In addition, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It is also possible to use [customer-managed workflow runners](/docs/deployments/deployments/runs/customer-managed-agents/) if you require additional isolation. The same isolation applies to all workflow types supported by workflow runners, including [Insights](/docs/insights/) discovery scans and [policy evaluations](/docs/using-pulumi/crossguard/).
+Deployments run on single-use virtual machines and compute and storage are never shared across runs. We designed our architecture to maximize isolation. Additionally, security features like OIDC allow you to fine tune credential scope, lifetime, and expiration policies at a per-deployment level. It's also possible to use [customer-managed workflow runners](/docs/deployments/deployments/runs/customer-managed-agents/) if you require more isolation. The same isolation applies to all workflow types supported by workflow runners, including [Insights](/docs/insights/) discovery scans and [policy evaluations](/docs/insights/policy/).
 
 ## Deployment queue
 
