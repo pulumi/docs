@@ -28,9 +28,9 @@ social:
         Practical examples for refactoring, secrets, testing, provider wiring, safer changes, and honest IaC caveats.
 ---
 
-Terraform is a proven infrastructure as code tool with a large ecosystem and years of production use. Many teams choose Pulumi when they want to keep that infrastructure as code model, but write and maintain infrastructure with general-purpose programming languages, familiar package managers, IDEs, [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and software engineering patterns, while still understanding the refactoring tradeoffs in Terraform's own [module refactoring guidance](https://developer.hashicorp.com/terraform/language/modules/develop/refactoring).
+[Terraform](https://developer.hashicorp.com/terraform/intro) is a proven infrastructure as code tool with a large [provider and module ecosystem](https://registry.terraform.io/). Many teams choose Pulumi when they want to keep that infrastructure as code model, but write and maintain infrastructure with general-purpose programming languages, familiar package managers, IDEs, [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and software engineering patterns, while still understanding the refactoring tradeoffs in Terraform's own [module refactoring guidance](https://developer.hashicorp.com/terraform/language/modules/develop/refactoring).
 
-Why choose Pulumi over Terraform? Pulumi lets teams define cloud infrastructure in TypeScript, Python, Go, C#, Java, or YAML while adding first-class workflows for refactoring with [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/), [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/), [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/options/deletebeforereplace/), [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/), [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [Pulumi stacks](https://www.pulumi.com/docs/concepts/stacks/), [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and incremental migration with [pulumi import](https://www.pulumi.com/docs/iac/adopting-pulumi/import/). Pulumi does not remove every hard problem in cloud infrastructure, but it gives teams stronger tools for many day-to-day pain points.
+Why choose Pulumi over Terraform? Pulumi's [language SDKs](https://www.pulumi.com/docs/iac/languages-sdks/) let teams define cloud infrastructure in TypeScript, Python, Go, C#, Java, or YAML while adding first-class workflows for refactoring with [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/), [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/), [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/options/deletebeforereplace/), [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/), [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/), [Pulumi stacks](https://www.pulumi.com/docs/concepts/stacks/), [testing](https://www.pulumi.com/docs/iac/concepts/testing/), and incremental migration with [pulumi import](https://www.pulumi.com/docs/iac/adopting-pulumi/import/). Pulumi does not remove every hard problem in cloud infrastructure, but it gives teams stronger tools for many day-to-day pain points.
 
 <!--more-->
 
@@ -49,13 +49,13 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Environments | Workspaces or separate configurations | [Pulumi stacks](https://www.pulumi.com/docs/concepts/stacks/) model environments with per-stack config, secrets, history, and outputs | Stack boundaries still need thoughtful design |
 | Code reuse | Modules and HCL composition patterns | Pulumi components and packages use normal language abstractions | Over-abstracted components can become hard to use |
 | Imports and migration | Import blocks, generated config, and state operations | [pulumi import](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
-| Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/) make multi-region and multi-account wiring clearer | Provider versions and bugs can still affect deployments |
+| Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/) make multi-region and multi-account wiring visible in code review | Provider versions and bugs can still affect deployments |
 | Testing | Validation, plan review, and external test harnesses | Pulumi programs can use normal [unit and integration test frameworks](https://www.pulumi.com/docs/iac/concepts/testing/) | Tests complement previews, they do not replace them |
 | Caveats | Declarative planning still has unknowns and drift | Pulumi improves the workflow around many pain points | It does not eliminate [drift](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/), provider bugs, or eventual consistency |
 
 ## Use programming languages and familiar tools
 
-Terraform modules are powerful, but larger HCL codebases can push teams toward domain-specific patterns for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever programming language they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
+Terraform modules are powerful, but larger HCL codebases can require teams to maintain separate conventions for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever [supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/) they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
 
 For example, a platform team can wrap a standard storage pattern in a `ComponentResource` and share it like any other TypeScript abstraction:
 
@@ -99,11 +99,11 @@ const queue = new aws.sqs.Queue("app-jobs", {
 });
 ```
 
-Aliases are not a substitute for review. They work when the old identity is modeled correctly, including details such as name, parent, type, project, and stack when those changed.
+[Aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/) are not a substitute for review. They work when the old identity is modeled correctly, including details such as name, parent, type, project, and stack when those changed.
 
 ## Handle secrets with encrypted configuration and secret outputs
 
-Secrets are one of the most common places where infrastructure workflows become risky. Terraform has sensitive values and backend guidance, but teams still need to understand how plans, state, outputs, and backend access interact. Pulumi treats secrets as first-class values, encrypts them in state, and preserves secrecy as values flow through outputs.
+Secrets are one of the most common places where infrastructure workflows become risky. Terraform has [sensitive values and backend guidance](https://developer.hashicorp.com/terraform/language/manage-sensitive-data), but teams still need to understand how plans, state, outputs, and backend access interact. Pulumi treats [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/) as first-class values, encrypts them in state, and preserves secrecy as values flow through outputs.
 
 ```typescript
 const config = new pulumi.Config();
@@ -115,7 +115,7 @@ const passwordParameter = new aws.ssm.Parameter("db-password", {
 });
 ```
 
-This improves the default experience, but it is not runtime isolation. Your program can still access the decrypted value while it runs, so reviews, least privilege, and secret-provider choices still matter. If a value starts as a plain input instead of coming from `requireSecret`, `pulumi.secret(...)` can mark it as secret.
+This improves the default experience, but it is not runtime isolation. In the TypeScript SDK, `config.requireSecret("dbPassword")` retrieves secret configuration, and your program can still access the decrypted value while it runs, so reviews, least privilege, and secret-provider choices still matter. If a value starts as a plain input instead of coming from `requireSecret`, [`pulumi.secret(...)`](https://www.pulumi.com/docs/iac/concepts/secrets/) can mark it as secret.
 
 ## Add safer lifecycle controls for destructive changes
 
@@ -138,7 +138,7 @@ These controls are guardrails, not guarantees. Provider bugs, cloud API eventual
 
 ## Model environments with stacks
 
-Terraform workspaces can represent environments, but many teams eventually need stronger boundaries for configuration, secrets, history, and cross-environment outputs. Pulumi stacks make environment boundaries explicit and pair them with per-stack config and outputs.
+Terraform workspaces can represent environments, but many teams eventually need stronger boundaries for configuration, secrets, history, and cross-environment outputs. [Pulumi stacks](https://www.pulumi.com/docs/concepts/stacks/) make environment boundaries explicit and pair them with per-stack config and outputs.
 
 ```typescript
 const networking = new pulumi.StackReference("acme/networking/prod");
@@ -181,7 +181,7 @@ Testing does not replace previews. It catches a different class of problems: bro
 
 ## Wire providers explicitly
 
-Provider configuration is another place where explicit code can reduce ambiguity. In Terraform, provider inheritance and aliases are often managed across module boundaries. In Pulumi, provider objects are normal resources that can be passed through resource options, which makes multi-region or multi-account deployments easier to follow in code review.
+Provider configuration is another place where explicit code can reduce ambiguity. In Terraform, provider inheritance and aliases are often managed across module boundaries. In Pulumi, [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/) are normal resources that can be passed through resource options, which makes multi-region or multi-account deployments easier to follow in code review.
 
 ```typescript
 const west = new aws.Provider("west", {
@@ -205,7 +205,7 @@ The provider object does not remove provider versioning or schema-change risk, b
 
 ## Import and migrate incrementally
 
-Teams rarely get to rebuild infrastructure from scratch. Pulumi supports incremental adoption with `pulumi import`, generated code, and Terraform interoperability paths. That makes it possible to start with one resource, one component, or one stack instead of forcing a big-bang migration.
+Teams rarely get to rebuild infrastructure from scratch. Pulumi supports incremental adoption with [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/), generated code, and Terraform interoperability paths. That makes it possible to start with one resource, one component, or one stack instead of forcing a big-bang migration.
 
 Pulumi also supports interoperability paths for teams that need to bring existing Terraform assets forward over time, including Terraform provider access and migration workflows. That makes migration an engineering sequence, not an all-or-nothing rewrite.
 
@@ -237,4 +237,4 @@ Pulumi can also work with Terraform provider ecosystems, including long-tail pro
 
 If your team is evaluating infrastructure as code options, start with the workflow that creates the most leverage: write infrastructure in the language your team already uses, test shared components, protect critical resources, and migrate one stack at a time.
 
-To go deeper, [get started with Pulumi](/docs/iac/get-started/) or read the [Terraform migration guide](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/).
+To go deeper, [get started with Pulumi](/docs/iac/get-started/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/).
