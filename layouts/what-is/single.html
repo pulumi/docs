@@ -42,7 +42,7 @@
                     {{ if $authorData }}
                         <a class="inline-flex items-center gap-2 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" rel="author" data-track="{{ $authorData.name | urlize }}-byline">
                             <img class="w-6 h-6 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
-                            <span class="font-medium text-gray-900">{{ $authorData.name }}</span>
+                            <span>{{ $authorData.name }}</span>
                         </a>
                     {{ end }}
                 {{ end }}
