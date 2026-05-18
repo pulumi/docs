@@ -34,7 +34,7 @@ You can edit or delete an automation from the **Automations** tab.
 
 ## How automations interact with the rest of Neo
 
-Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/settings/) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/integrations/cli/) use the credentials configured during setup.
+Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/settings/#custom-instructions) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/integrations/cli/) use the credentials configured during setup.
 
 ## How permissions work
 
