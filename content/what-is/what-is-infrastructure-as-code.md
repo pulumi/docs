@@ -138,7 +138,7 @@ The IaC tooling landscape has grown a lot since CFEngine kicked off the category
 * **[Pulumi](/)** is declarative IaC written in general-purpose programming languages: TypeScript, Python, Go, C#, Java, or YAML. It supports [200+ cloud and SaaS providers](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
 * **Terraform** is HashiCorp's tool. It uses the HashiCorp Configuration Language (HCL) and moved to a source-available BUSL license in 2023.
 * **OpenTofu** is an open-source fork of Terraform under the Linux Foundation, started in response to that license change.
-* **AWS CloudFormation** is AWS's native IaC service. It's declarative, written in YAML or JSON, and only manages AWS resources.
+* **AWS CloudFormation** is AWS's native IaC service. It's declarative, written in YAML or JSON, and is focused on AWS resources.
 * **AWS CDK** sits on top of CloudFormation and lets you generate templates from TypeScript, Python, Java, C#, or Go.
 * **Azure Resource Manager (ARM) and Bicep** are Azure's native equivalents. Bicep is the modern DSL that compiles down to ARM JSON.
 * **Google Cloud Deployment Manager** is Google Cloud's native option, using YAML and Python templates.
@@ -199,7 +199,7 @@ No. DevOps is a broader culture and set of practices for delivering software; Ia
 
 ### What languages are used for infrastructure as code?
 
-Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses YAML or JSON, and Bicep is a DSL for Azure. Pulumi is the outlier in supporting general-purpose languages: TypeScript, JavaScript, Python, Go, C#, Java, and YAML.
+Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses YAML or JSON, and Bicep is a DSL for Azure. Pulumi is the outlier in supporting general-purpose languages: TypeScript, Python, Go, C#, Java, or YAML.
 
 ### Which infrastructure as code tool should I use?
 
@@ -207,7 +207,7 @@ The right answer usually comes down to three things: what languages your team is
 
 ### Can I use infrastructure as code with my existing infrastructure?
 
-Yes. Every major IaC tool supports importing resources that already exist, so you don't have to tear anything down and rebuild it. Pulumi's [`pulumi import`](/docs/iac/adopting-pulumi/import/) command can pull in individual resources or generate code for an entire cloud account.
+Yes. Every major IaC tool supports importing resources that already exist, so you don't have to tear anything down and rebuild it. Pulumi's [`pulumi import`](/docs/iac/adopting-pulumi/import/) command can pull in individual resources, or import many resources at once from a JSON file that lists them.
 
 ### Is infrastructure as code only for the cloud?
 
