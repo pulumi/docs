@@ -6,8 +6,8 @@ name: Claude Code (chat)
 #
 # This workflow fires only on bare `@claude` mentions. Hashtag-driven
 # routing sends review-bearing intents to:
-#   - `@claude #update-review` → claude-update.yml (refresh pinned)
-#   - `@claude #new-review`    → claude-new.yml    (regenerate from scratch)
+#   - `@claude #update-review` → claude-update.yml      (refresh pinned)
+#   - `@claude #new-review`    → claude-code-review.yml (regenerate from scratch)
 
 on:
   issue_comment:
@@ -24,7 +24,7 @@ jobs:
     # Trigger requires:
     #   1. `@claude` mention.
     #   2. NEITHER `#update-review` NOR `#new-review` -- those hashtags
-    #      route to claude-update.yml / claude-new.yml respectively.
+    #      route to claude-update.yml / claude-code-review.yml respectively.
     #   3. Author is not claude[bot] itself -- the pinned-review footer
     #      contains literal "@claude" instructions which would otherwise
     #      re-trigger on every review post.
