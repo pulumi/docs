@@ -897,7 +897,7 @@ Migrating from the Serverless Framework to Pulumi gives you:
 * **Real programming languages** instead of YAML configuration, with IDE support, type checking, and testing
 * **Full cloud coverage**: manage Lambda functions alongside databases, queues, VPCs, DNS, CDNs, and any other cloud resource, all in one program
 * **Built-in state management**: no separate CloudFormation dependency or stack limits
-* **[Policy as code](/docs/using-pulumi/crossguard/)**: enforce compliance and security rules across all your infrastructure
+* **[Policy as code](/docs/insights/policy/)**: enforce compliance and security rules across all your infrastructure
 * **Multi-cloud support**: use the same tool and workflows across AWS, Azure, Google Cloud, and [100+ providers](/registry/)
 * **[Pulumi ESC](/docs/esc/)**: centralized secrets and configuration management that replaces scattered environment variable management
 
