@@ -1,21 +1,13 @@
 ---
-title_tag: "OpenTofu vs. Terraform"
+title: "OpenTofu vs. Terraform"
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
-title: OpenTofu vs. Terraform
-h1: OpenTofu vs. Terraform
-meta_image: /images/docs/meta-images/docs-meta.png
-menu:
-    iac:
-        name: OpenTofu vs. Terraform
-        parent: iac-comparisons-terraform
-        weight: 2
-    concepts:
-        parent: vs-terraform
-        weight: 2
+type: what-is
+page_title: "OpenTofu vs. Terraform"
 aliases:
-    - /docs/intro/vs/terraform/opentofu/
-    - /docs/concepts/vs/terraform/opentofu/
-    - /docs/iac/concepts/vs/terraform/opentofu/
+- /docs/iac/comparisons/terraform/opentofu/
+- /docs/intro/vs/terraform/opentofu/
+- /docs/concepts/vs/terraform/opentofu/
+- /docs/iac/concepts/vs/terraform/opentofu/
 ---
 
 <style>

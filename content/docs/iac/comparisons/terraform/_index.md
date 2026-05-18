@@ -19,6 +19,10 @@ aliases:
 - /docs/intro/vs/terraform/
 - /docs/concepts/vs/terraform/
 - /docs/iac/concepts/vs/terraform/
+- /docs/iac/comparisons/terraform/terminology/
+- /docs/intro/vs/terraform/terminology/
+- /docs/concepts/vs/terraform/terminology/
+- /docs/iac/concepts/vs/terraform/terminology/
 ---
 
 Pulumi and [HashiCorp Terraform](https://developer.hashicorp.com/terraform) are both declarative infrastructure as code tools with overlapping capabilities and several meaningful differences. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, .NET, Java, or YAML) and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); Terraform uses [HashiCorp Configuration Language (HCL)](https://developer.hashicorp.com/terraform/language) with HashiCorp's provider ecosystem.
@@ -144,9 +148,54 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/) that runs on a configurable cadence and can auto-remediate.
 
+## Terraform terms and command equivalents
+
+If you're already familiar with Terraform, many concepts and CLI commands have direct Pulumi equivalents.
+
+### Terminology
+
+| Terraform | Pulumi |
+| --------- | ------ |
+| Workspace | [Stack](/docs/iac/concepts/stacks/) |
+| Variables | [Stack Config](/docs/iac/concepts/config/) |
+| Directory | [Project](/docs/iac/concepts/projects/) |
+| Module | [Component](/docs/iac/concepts/components/) |
+| Resource | [Resource](/docs/iac/concepts/resources/) |
+| Interpolation | [Interpolation](/docs/iac/concepts/inputs-outputs/#working-with-outputs) |
+| Run | [Up](/docs/iac/cli/commands/pulumi_up/) |
+| Output Values | [Outputs](/docs/iac/concepts/inputs-outputs/) |
+| State | [State](/docs/iac/concepts/state-and-backends/) |
+| State Version | [Update Events](/docs/reference/cloud-rest-api/) |
+| Backend | [Backend](/docs/iac/concepts/state-and-backends/) |
+| Deposed | [Pending Operations](/docs/support/troubleshooting/common-issues/interrupted-updates/) |
+
+### Commands
+
+| Terraform | Pulumi |
+| --------- | ------ |
+| `init` | `pulumi new` |
+| `validate` | Validation is performed with the inherent syntax checking and testing frameworks in the supported programming languages |
+| `plan` | `pulumi preview` |
+| `apply` | `pulumi up` |
+| `destroy` | `pulumi destroy` |
+| `console` | Pulumi commands can be evaluated in a standard programming language shell |
+| `fmt` | Standard programming language linting tools checks for format and style |
+| `force-unlock` | `pulumi cancel` |
+| `get` | Reusable modules are directly imported as a library in the programming language |
+| `graph` | `pulumi stack graph` |
+| `import` | `pulumi import -f resources.json` |
+| `login` | `pulumi login` |
+| `logout` | `pulumi logout` |
+| `output` | `pulumi stack output` |
+| `providers` | `pulumi plugin` |
+| `refresh` | `pulumi refresh` |
+| `show` | `pulumi stack` |
+| `state` | `pulumi state` |
+| `version` | `pulumi version` |
+| `workspace` | `pulumi stack` |
+
 ## Next steps
 
 - [Get started with Pulumi](/docs/iac/get-started/)
-- [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
 - [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-- [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)
+- [OpenTofu vs. Terraform](/what-is/opentofu-vs-terraform/)
