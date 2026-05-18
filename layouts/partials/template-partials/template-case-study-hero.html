@@ -24,7 +24,7 @@
 {{ $link := .link }}
 {{ $anchor := .anchor }}
 
-<div class="template-case-study-hero rounded-2xl border border-gray-300 overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<div class="template-case-study-hero card overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col md:flex-row">
         {{/* Left: logo + quote (white background) */}}
         <div class="case-study-hero-quote-panel p-8 md:p-12">
@@ -44,9 +44,9 @@
 
             {{ if $link }}
             <div class="flex flex-row gap-4 mt-8">
-                <a href="{{ $link }}" class="btn-primary-template-variant inline-flex items-center gap-2">
-                    <span>Read the story</span>
-                    <span>&rarr;</span>
+                <a href="{{ $link }}" class="btn btn-primary btn-xl">
+                    Read the story
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
             </div>
             {{ end }}

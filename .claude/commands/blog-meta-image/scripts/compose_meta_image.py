@@ -87,7 +87,7 @@ def draw_text(
     catalog_text: dict,
     font_size: int = 71,
 ) -> Image.Image:
-    """Render text directly with Pillow using the Inter variable font.
+    """Render text directly with Pillow using the Inter Semibold font.
 
     Supports inline code spans delimited by backticks — these are rendered
     with a monospace font (Iosevka Bold) and a rounded-rectangle pill background.
@@ -207,7 +207,7 @@ def _word_wrap(text: str, font: ImageFont.FreeTypeFont, max_width: float) -> lis
 
 
 def hex_to_rgba(hex_color: str) -> tuple[int, int, int, int]:
-    """Convert a hex color string like #20054E to an RGBA tuple."""
+    """Convert a hex color string like #231F33 to an RGBA tuple."""
     h = hex_color.lstrip("#")
     return int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16), 255
 
@@ -283,7 +283,7 @@ def tint_image(img: Image.Image, hex_color: str, mode: str = "overlay") -> Image
     mode="color": CSS color blend — takes H and S from the tint color and the
     Lightness from each logo pixel. Every pixel is recolored to the tint hue
     and saturation while preserving the logo's internal brightness distribution.
-    Use with #A68ECF to shift logos into Pulumi's light-purple palette while
+    Use with #C3BDFF to shift logos into Pulumi's lavender accent palette while
     keeping internal contrast.
     """
     r, g, b, _ = hex_to_rgba(hex_color)
@@ -380,7 +380,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
         # Meta mode: solid background using catalog meta_canvas dimensions
         mc = catalog["meta_canvas"]
         canvas_w, canvas_h = mc["width"], mc["height"]
-        bg = config.get("background_color", "#20054E")
+        bg = config.get("background_color", "#231F33")
         canvas = Image.new("RGBA", (canvas_w, canvas_h), hex_to_rgba(bg))
 
     # 2. Composite feature image (meta mode)
@@ -412,7 +412,7 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
         if template_entry and "placeholders" in template_entry:
             canvas = place_logos(
                 canvas, logos, template_entry["placeholders"], assets_dir,
-                logo_tint=config.get("logo_tint", "#A68ECF"),
+                logo_tint=config.get("logo_tint", "#C3BDFF"),
                 logo_tint_mode=config.get("logo_tint_mode", "overlay"),
             )
 

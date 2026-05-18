@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-# Builds Sphinx HTML docs for a single Pulumi Python SDK package and atomically
-# replaces only that package's subdirectory under
-# static-prebuilt/docs/reference/pkg/python/<package>.
+# Builds Sphinx HTML docs for a single Pulumi Python SDK package as an
+# independent docset and writes the output to
+# static-prebuilt/docs/reference/pkg/python/${PACKAGE}/.
+#
+# Each package has its own sphinx source dir under tools/pydocgen/source/<pkg>/
+# with its own conf.py and index.rst, so per-package builds don't affect each
+# other's output.
 #
 # Required env:
 #   PACKAGE  one of: pulumi, pulumi_policy, pulumi_esc_sdk
-#
-# Output:
-#   ../../static-prebuilt/docs/reference/pkg/python/${PACKAGE}/
 
 set -o errexit -o pipefail
 set -x
@@ -25,7 +26,8 @@ case "$PACKAGE" in
     ;;
 esac
 
-OUTDIR="../../static-prebuilt/docs/reference/pkg/python"
+SOURCE_DIR="./source/${PACKAGE}"
+OUTDIR="../../static-prebuilt/docs/reference/pkg/python/${PACKAGE}"
 
 pushd "tools/pydocgen"
 
@@ -38,26 +40,8 @@ for p in "${INSTALL[@]}" ; do
     pipenv run pip install --upgrade "${p}"
 done
 
-TMP_SRC=$(mktemp -d)
-TMP_OUT=$(mktemp -d)
-trap 'rm -rf "$TMP_SRC" "$TMP_OUT"' EXIT
-
-cp source/conf.py "$TMP_SRC/"
-cp "source/${PACKAGE}.rst" "$TMP_SRC/"
-
-underline=$(printf '=%.0s' $(seq 1 ${#PACKAGE}))
-cat > "$TMP_SRC/index.rst" <<EOF
-${PACKAGE}
-${underline}
-
-.. toctree::
-    ${PACKAGE}
-EOF
-
-pipenv run sphinx-build -j auto -b dirhtml "$TMP_SRC" "$TMP_OUT"
-
-mkdir -p "$OUTDIR"
-rm -rf "${OUTDIR:?}/${PACKAGE}"
-cp -r "$TMP_OUT/${PACKAGE}" "$OUTDIR/${PACKAGE}"
+mkdir -p "$(dirname "$OUTDIR")"
+rm -rf "${OUTDIR}"
+pipenv run sphinx-build -j auto -b dirhtml "$SOURCE_DIR" "$OUTDIR"
 
 popd

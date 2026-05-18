@@ -11,6 +11,9 @@ menu:
 aliases:
     - /docs/esc/cli/commands/
     - /docs/esc-cli/commands/
+cascade:
+  cli_command_page: true
+  cli_tool: esc
 ---
 
 {{% notes type="info" %}}

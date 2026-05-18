@@ -1,0 +1,13 @@
+extends: existence
+message: "Avoid difficulty qualifier '%s' -- it judges difficulty for the reader (STYLE-GUIDE.md §Inclusive Language)."
+level: warning
+ignorecase: true
+tokens:
+  - easy
+  - easily
+  - simple
+  - simply
+  - just
+  - obviously
+  - clearly
+  - of course

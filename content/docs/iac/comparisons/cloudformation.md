@@ -8,11 +8,11 @@ menu:
     iac:
         name: AWS CloudFormation
         parent: iac-comparisons
-        weight: 2
+        weight: 20
         identifier: iac-comparisons-cloudformation
     concepts:
         parent: vs
-        weight: 2
+        weight: 20
 aliases:
 - /docs/intro/vs/cloud-templates/cloudformation/
 - /docs/concepts/vs/cloud-templates/cloudformation/
@@ -54,9 +54,9 @@ AWS CloudFormation is an AWS-managed service for provisioning AWS resources from
 | Programmatic API for tools and platforms | [Automation API](/docs/iac/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | No embeddable SDK; orchestration goes through the AWS CLI, AWS SDKs, or the CloudFormation API |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html), [CloudFormation modules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) registered through the CloudFormation Registry, and [Cross-stack references](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref.html) via exported outputs |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [Import existing resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) through a change set, with a hand-authored template fragment describing the resources to adopt |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and SOC 2 | [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html) (authored in Java, Python, or TypeScript and registered with the CloudFormation Registry) and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) for policy-as-code rules |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html) (authored in Java, Python, or TypeScript and registered with the CloudFormation Registry) and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html) for policy-as-code rules |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | No — CloudFormation is a closed-source AWS service |
-| Commercial option | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) | None — CloudFormation is part of AWS and has no separate commercial tier |
+| Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | None — CloudFormation is part of AWS and has no separate commercial tier |
 
 ## Key differences
 
@@ -78,7 +78,7 @@ Pulumi treats secrets as a first-class primitive. Values marked as secrets are e
 
 ### Policy as code
 
-[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, PCI DSS, SOC 2, HITRUST, NIST), so teams don't have to author and maintain those rules themselves. CloudFormation's first-party options are [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html), which run pre-provisioning checks authored in Java, Python, or TypeScript and registered with the CloudFormation Registry, and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html), an open-source CLI for evaluating templates against rules.
+[Pulumi Policies](/docs/insights/policy/) is open source and free. Policies can be written in Python, TypeScript, or Open Policy Agent Rego, and Pulumi Cloud adds centralized management, policy groups, and enforcement across stacks. Pulumi Cloud commercial plans also include [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for common compliance frameworks (CIS, HITRUST, NIST, and PCI DSS), so teams don't have to author and maintain those rules themselves. CloudFormation's first-party options are [CloudFormation Hooks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/hooks.html), which run pre-provisioning checks authored in Java, Python, or TypeScript and registered with the CloudFormation Registry, and [CloudFormation Guard](https://docs.aws.amazon.com/cfn-guard/latest/ug/what-is-guard.html), an open-source CLI for evaluating templates against rules.
 
 ### Modularity and reuse
 
@@ -103,17 +103,17 @@ The [Automation API](/docs/iac/automation-api/) lets a host application drive Pu
 1. Depend on CloudFormation-specific features such as automatic stack rollback on failure, [Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html), or [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) for multi-account deployments.
 1. Have an existing investment in CloudFormation templates, custom resources, and team expertise that you don't want to migrate.
 
-The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and-import) below.
+The two can also coexist — see [Adoption](#adoption-coexistence-import-and-rewrite) below.
 
-## Adoption: coexistence, conversion, and import
+## Adoption: coexistence, import, and rewrite
 
 There are several common paths for adopting Pulumi alongside or in place of AWS CloudFormation, and they can be combined:
 
 1. **Use CloudFormation alongside Pulumi.** A Pulumi program can reference an existing CloudFormation stack and read its outputs through [`aws.cloudformation.getStack`](/registry/packages/aws/api-docs/cloudformation/getstack/), which lets you keep some infrastructure in CloudFormation while incrementally adopting Pulumi for new work. Pulumi can also manage CloudFormation stacks themselves through [`aws.cloudformation.Stack`](/registry/packages/aws/api-docs/cloudformation/stack/) when you need a CloudFormation-specific feature.
-1. **Convert templates with `pulumi convert`.** [`pulumi convert --from cloudformation`](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/#converting-stacks-and-resources) translates a CloudFormation JSON or YAML template into a Pulumi program in the language of your choice, preserving names and structure where possible.
 1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned AWS resources under Pulumi management and generate the corresponding code in your chosen language.
+1. **Rewrite templates as Pulumi code.** Translate CloudFormation JSON or YAML into a Pulumi program in the language of your choice, importing the underlying AWS resources as you go so nothing is recreated.
 
-For a complete walkthrough including coexistence patterns and conversion, see [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/).
+For a complete walkthrough including coexistence patterns and resource adoption, see [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/).
 
 ## Frequently asked questions
 
@@ -123,7 +123,7 @@ Yes. A Pulumi program can read outputs from an existing CloudFormation stack via
 
 ### How do I migrate from CloudFormation to Pulumi?
 
-You have three options that can be combined: convert templates with [`pulumi convert --from cloudformation`](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/#converting-stacks-and-resources), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) for a full walkthrough.
+You have several options that can be combined: bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), rewrite CloudFormation templates as Pulumi code, or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) for a full walkthrough.
 
 ### Does Pulumi cover the same AWS resources as CloudFormation?
 
@@ -131,7 +131,7 @@ Yes. The [AWS Cloud Control](/registry/packages/aws-native/) provider is generat
 
 ### Is Pulumi free like AWS CloudFormation?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. CloudFormation itself has no usage cost beyond the resources it manages.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. CloudFormation itself has no usage cost beyond the resources it manages.
 
 ### How does Pulumi handle rollback if there is no automatic stack rollback?
 
@@ -148,6 +148,8 @@ Yes — and this is one of the more common adoption patterns. Teams keep AWS inf
 ## Next steps
 
 - [Get started with Pulumi](/docs/iac/get-started/)
-- [Pulumi vs. AWS CDK](/docs/iac/comparisons/cloud-template-transpilers/aws-cdk/)
+- [Get started with Pulumi and AWS](/docs/iac/get-started/aws/)
+- [Pulumi for AWS](/docs/integrations/clouds/aws/)
+- [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Migrating from AWS CloudFormation to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/)

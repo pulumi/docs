@@ -28,7 +28,7 @@ Automation API requires the Pulumi CLI to be installed and available in your `PA
 {{% /notes %}}
 
 {{% notes type="tip" %}}
-Automation API drives the Pulumi engine itself, running updates, previews, refreshes, and destroys from a program. If you instead need to read or modify Pulumi Cloud resources (for example, stack metadata, access tokens, or [Insights](/docs/insights/) data) without running a Pulumi program, use [`pulumi cloud api`](/docs/iac/cli/cloud-api/), the CLI command for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) directly.
+Automation API drives the Pulumi engine itself, running updates, previews, refreshes, and destroys from a program. If you instead need to read or modify Pulumi Cloud resources (for example, stack metadata, access tokens, or [Insights](/docs/insights/) data) without running a Pulumi program, use [`pulumi api`](/docs/iac/cli/api/), the CLI command for calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) directly.
 {{% /notes %}}
 
 ## Getting started

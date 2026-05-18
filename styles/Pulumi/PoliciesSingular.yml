@@ -1,0 +1,6 @@
+extends: existence
+message: "'Pulumi Policies' is a singular proper noun. Use a singular verb (STYLE-GUIDE.md §Product Names)."
+level: error
+ignorecase: false
+tokens:
+  - 'Pulumi Policies (?:are|enforce|have|allow|provide|support|enable|require)\b'

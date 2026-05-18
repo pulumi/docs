@@ -34,6 +34,8 @@ This repository hosts all of the hand-crafted documentation, guides, tutorials, 
 
 We welcome all contributions to this repository. Be sure to read our [contributing guide](CONTRIBUTING.md) and [code of conduct](CODE-OF-CONDUCT.md) first, then [submit a pull request](https://github.com/pulumi/docs/pulls) here on GitHub. If you see something that needs fixing but don't have time to contribute, you can also [file an issue](https://github.com/pulumi/docs/issues).
 
+> Tip: open your PR as a **draft** while you iterate. Automated review fires when you mark it ready for review, so a draft-first flow keeps the CI noise down and the review fresh. See [CONTRIBUTING.md](CONTRIBUTING.md#draft-first-pull-requests) for the full lifecycle.
+
 See also:
 
 * [Build and deployment guide](./BUILD-AND-DEPLOY.md)
@@ -45,18 +47,44 @@ See also:
 
 ### Toolchain
 
-#### Manual Installation
+The website is built with Hugo, with supporting tooling in Node.js, Yarn, Go, and Vale. You'll need these installed and on your `PATH` for `make ensure`, `make serve`, etc. to work. The easy way to get them is mise.
 
-We build the Pulumi website with Hugo, manage our dependencies with Node.js and Yarn, and write our documentation in Markdown. Below is a list of the tools you'll need if you'd like to work on the website (e.g., to contribute docs content, a blog post, etc.):
+#### Easy path: use mise
 
-* [Hugo](https://gohugo.io/installation/) (>= 0.157.0)
-  * Hugo 0.157.0 is highly recommended. This is the version we use in our deployment pipelines.
-* [Node.js](https://nodejs.org/en/download/package-manager) (>= 24)
-* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) (1.x)
+[mise](https://mise.jdx.dev/) is a version manager that reads [`mise.toml`](./mise.toml) and installs the exact versions of Hugo, Node, Yarn, Go, and Vale that CI uses. The Makefile routes tool invocations through `mise exec` automatically, so you don't need to `mise activate` in your shell.
 
-Additionally, to build the SDK and CLI documentation, you'll also need:
+```bash
+# 1. Install mise (one time).
+brew install mise              # macOS
+# or: curl https://mise.run | sh   # Linux / other
 
-* [Go](https://golang.org/) (>= 1.25)
+# 2. Install all pinned tools + project dependencies.
+make ensure
+
+# 3. Run the site locally on http://localhost:1313.
+make serve
+```
+
+That's the whole setup on every platform.
+
+> **Note for macOS users:** Hugo's macOS release is a signed `.pkg` installer (no tarball) that mise's default backend can't unpack, so we use a small third-party plugin ([`NeoHsu/asdf-hugo`](https://github.com/NeoHsu/asdf-hugo)) to extract the Hugo binary from the `.pkg`. If `make ensure` fails on the Hugo step, fall back to `brew install hugo` — `scripts/ensure.sh` will pick up the system Hugo and warn on version mismatch.
+
+#### Without mise
+
+If you don't use mise, **you're responsible for installing these tools yourself and having them on your `PATH`**. The Makefile and scripts will use whatever versions they find; `make ensure` warns when versions don't match the pinned ones but doesn't fail.
+
+* [Hugo](https://gohugo.io/installation/) 0.157.0 (extended)
+* [Node.js](https://nodejs.org/en/download/package-manager) 24
+* [Yarn](https://classic.yarnpkg.com/lang/en/docs/install) 1.x
+* [Go](https://golang.org/) 1.26 (only needed for SDK doc builds and example-program tests)
+* [Vale](https://vale.sh/docs/install) 3.14.1 (only needed for `make lint-prose`)
+
+This is the same setup CI uses — workflows install these tools via dedicated actions (`peaceiris/actions-hugo`, `actions/setup-node`, etc.) rather than mise.
+
+#### SDK and CLI documentation
+
+To also build the SDK and CLI documentation, you'll need a few more tools:
+
 * [Python](https://www.python.org) (>= 3.7)
 * [.NET](https://dotnet.microsoft.com/download) (>= 6)
 * [Pulumi](https://www.pulumi.com/docs/install)
@@ -67,6 +95,7 @@ Additionally, to build the SDK and CLI documentation, you'll also need:
 This repository includes a dev container configuration that provides a fully pre-configured environment with all the tools you need for developing and contributing to the Pulumi documentation. Using the dev container eliminates the need to install dependencies manually, as it comes with:
 
 * Hugo, Node.js, Yarn, and Markdown tooling.
+* Vale for prose linting.
 * Go, Python, .NET, and the Pulumi CLI.
 * VS Code extensions for Markdown linting, link checking, and Pulumi support.
 * Google Cloud CLI and GitHub CLI.
@@ -99,11 +128,11 @@ The `Makefile` exposes a number of useful helpers for authoring:
 * `make ensure` resolves and installs all dependencies
 * `make lint` checks all Markdown files for correctness
 * `make format` formats all applicable files to ensure they conform to style guidelines
-* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`)
+* `make serve` runs the Hugo server locally at <http://localhost:1313> and watches for changes. You can set `BUILD_FUTURE=false` to simulate production behavior by excluding future-dated content (e.g., `BUILD_FUTURE=false make serve`). Note: Hugo's dev server does not serve content from `static-prebuilt/`, so generated SDK reference pages under `/docs/reference/pkg/{nodejs,python,dotnet,java}/...` will 404 in dev mode — use `make build && make serve-static` to preview those.
 * `make serve-all` does the same as `make serve`, but also watches for changes to CSS and JS source files
-* `make build` generates the website and writes it to `./public`
+* `make build` generates the website and writes it to `./public`. This includes copying `static-prebuilt/` (where the auto-generated SDK reference docs live) into the output, which is why this combined with `make serve-static` is the way to preview SDK pages locally.
 * `make build-assets` builds only the CSS and JavaScript asset bundles
-* `make serve-static` runs a local HTTP server that serves the contents of `./public`
+* `make serve-static` runs a local HTTP server that serves the contents of `./public` — use this after `make build` when you need to verify SDK reference pages or anything else served out of `static-prebuilt/`
 * `make test` tests all of the programs in `./static/programs` (see `./scripts/programs/test.sh` for options)
 * `make new-tutorial` scaffolds a new single-page tutorial
 * `make new-tutorial-module` scaffolds a new multi-page tutorial

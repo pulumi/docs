@@ -255,6 +255,8 @@ The site will be available at <http://localhost:1313>.
 
 > **Note:** The dev server uses `--buildDrafts` and `--buildFuture` flags, showing content not visible in production.
 
+> **Note:** Hugo's dev server (`make serve`, `make serve-all`) only serves content from `content/` and `static/`. It does **not** serve `static-prebuilt/`, which is where the auto-generated SDK reference docs live. As a result, any link under `/docs/reference/pkg/{nodejs,python,dotnet,java}/...` will 404 in dev mode. To preview SDK reference pages locally, run `make build` (which copies `static-prebuilt/` into `public/` via `make copy_static_prebuilt`) and then `make serve-static`.
+
 #### Building the Site
 
 ```bash
@@ -2122,7 +2124,7 @@ Production CloudFront distribution applies security headers via response headers
 
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
 - `X-Frame-Options: DENY`
-- `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com`
+- `Content-Security-Policy: frame-ancestors 'self' *.learnworlds.com academy.pulumi.com`
 - `X-XSS-Protection: 1; mode=block`
 - `X-Content-Type-Options: nosniff`
 - `Referrer-Policy: strict-origin-when-cross-origin`

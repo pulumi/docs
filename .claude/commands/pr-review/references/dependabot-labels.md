@@ -43,38 +43,13 @@ Determine risk tier from labels:
    - No risk label present, OR
    - Has `deps-risk-unknown` label
 
-## Testing Checklists by Risk Tier
-
-### HIGH Risk Testing
-
-- Run `make serve-all` (full rebuild with asset pipeline)
-- Test site search functionality
-- Check browser console for errors (F12)
-- Verify markdown rendering
-- Test PR deployment: URL loads, Lambda@Edge errors via F12, search, navigation
-
-### MEDIUM Risk Testing
-
-- Run `make build`
-- Check for build warnings
-- If build tools affected: Verify PR deployment URL loads
-
-### LOW Risk Testing
-
-- Run `make lint`
+Testing checklists by risk tier live in `pr-review:references:action-menus`.
 
 ## Quarterly Review Workflow
 
-For PRs with `deps-quarterly-review` label:
+For PRs with `deps-quarterly-review` label, accumulate LOW/MEDIUM risk updates and merge quarterly.
 
-### Batching Strategy
-
-- Accumulate LOW/MEDIUM risk dependency updates
-- Review and merge quarterly (every 3 months)
-- Reduces testing overhead for low-impact changes
-- Keeps dependencies reasonably current without constant churn
-
-### Handling Options
+Handling options:
 
 1. **Approve for batch** - Add to quarterly batch (recommended)
 2. **Merge now** - Urgent update needed before quarterly cycle

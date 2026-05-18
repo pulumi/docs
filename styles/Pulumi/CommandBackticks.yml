@@ -1,0 +1,22 @@
+extends: existence
+message: "CLI command '%s' should be wrapped in backticks in prose (STYLE-GUIDE.md §References to Commands or UI). Example: `pulumi up`."
+level: warning
+ignorecase: false
+nonword: false
+tokens:
+  - '\bpulumi up\b'
+  - '\bpulumi preview\b'
+  - '\bpulumi destroy\b'
+  - '\bpulumi new\b'
+  - '\bpulumi stack\b'
+  - '\bpulumi config\b'
+  - '\bpulumi login\b'
+  - '\bpulumi logout\b'
+  - '\bpulumi whoami\b'
+  - '\bpulumi refresh\b'
+  - '\bpulumi import\b'
+  - '\bpulumi state\b'
+  - '\bpulumi env\b'
+  - '\bpulumi install\b'
+  - '\bpulumi plugin\b'
+  - '\bpulumi about\b'
