@@ -4,7 +4,7 @@ name: Pre-merge Review (update-review)
 # `#update-review` on an `@claude` mention. Hashtag-driven routing means
 # this workflow only fires when the user explicitly asks for a review
 # refresh -- bare `@claude` mentions go to claude.yml (off-the-shelf tag
-# mode) and `@claude #new-review` goes to claude-code-review.yml (regenerate).
+# mode) and `@claude #new-review` goes to claude-new.yml (regenerate).
 # The compound-mention contract is documented inline in the prompt.
 
 on:
@@ -23,8 +23,8 @@ jobs:
     #   1. `@claude` mention.
     #   2. `#update-review` hashtag.
     #   3. NOT `#new-review` -- if both hashtags are present, the more
-    #      decisive #new-review wins (handled by claude-code-review.yml's
-    #      filter; this workflow excludes itself in that case).
+    #      decisive #new-review wins (handled by claude-new.yml's filter;
+    #      this workflow excludes itself in that case).
     #   4. Author is not claude[bot] itself -- the pinned-review footer
     #      contains literal "@claude" instructions which would otherwise
     #      re-trigger on every review post.

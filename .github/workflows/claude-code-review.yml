@@ -12,41 +12,42 @@ name: Pre-merge Review (main)
 # PRs, and bot authors).
 #
 # Synchronize events keep the mark-stale behavior on pull_request.
-#
-# issue_comment / pull_request_review_comment / pull_request_review are
-# the `@claude #new-review` entry points: a hashtag mention triggers a
-# regenerate-from-scratch directly in this workflow. Listening here
-# (rather than via a dispatcher) keeps github.actor as the human
-# commenter (type=User), which claude-code-action@v1 requires, and
-# avoids burning pulumi-bot's shared rate-limit bucket on every fire.
-# Skip-bypass and pinned-comment cleanup that used to live in
-# claude-new.yml are now inline (see early steps below).
 on:
   pull_request:
     types: [synchronize]
   workflow_run:
     workflows: ["Pre-merge Review (triage)"]
     types: [completed]
-  # Manual dispatch entry point retained as a maintainer escape hatch
-  # (e.g. re-running a specific PR's review from the Actions UI).
-  # force=true is implied for manual dispatch — if you're invoking by
-  # hand, you mean it.
+  # Manual dispatch entry point used by claude-new.yml when an authorized
+  # user invokes `@claude #new-review` to regenerate the pinned review
+  # from scratch. force=true bypasses the trivial / frontmatter-only /
+  # draft / bot-author skip-reason heuristics — explicit user request
+  # overrides the auto-skip path.
   workflow_dispatch:
     inputs:
       pr_number:
         description: 'PR number to review'
         required: true
         type: string
+      force:
+        description: 'Bypass skip-reason heuristics (trivial/fmonly/draft/bot-author)'
+        required: false
+        type: boolean
+        default: false
       head_sha:
-        description: 'PR head SHA (checkout pins to this so the review sees PR content, not base)'
+        description: 'PR head SHA (passed by claude-new.yml dispatcher so checkout sees PR content, not base)'
         required: true
         type: string
-  issue_comment:
-    types: [created]
-  pull_request_review_comment:
-    types: [created]
-  pull_request_review:
-    types: [submitted]
+      dispatcher_comment_id:
+        description: 'ID of the dispatcher confirmation comment to delete on completion (claude-new.yml only; empty for other dispatchers)'
+        required: false
+        type: string
+        default: ''
+      mention_author:
+        description: 'Author to @-mention in the terminal "Review regenerated" comment on success (claude-new.yml only; empty suppresses the terminal post)'
+        required: false
+        type: string
+        default: ''
 
 jobs:
   # synchronize → just mark the existing pinned review stale.
@@ -99,23 +100,10 @@ jobs:
        github.event.workflow_run.conclusion == 'success' &&
        github.event.workflow_run.pull_requests != null &&
        github.event.workflow_run.pull_requests[0] != null) ||
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'issue_comment' &&
-       github.event.issue.pull_request != null &&
-       contains(github.event.comment.body, '@claude') &&
-       contains(github.event.comment.body, '#new-review') &&
-       github.event.comment.user.login != 'claude[bot]') ||
-      (github.event_name == 'pull_request_review_comment' &&
-       contains(github.event.comment.body, '@claude') &&
-       contains(github.event.comment.body, '#new-review') &&
-       github.event.comment.user.login != 'claude[bot]') ||
-      (github.event_name == 'pull_request_review' &&
-       contains(github.event.review.body, '@claude') &&
-       contains(github.event.review.body, '#new-review') &&
-       github.event.review.user.login != 'claude[bot]')
+      github.event_name == 'workflow_dispatch'
 
     concurrency:
-      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number || github.event.issue.number || github.event.pull_request.number }}
+      group: claude-review-${{ github.event.workflow_run.pull_requests[0].number || github.event.inputs.pr_number }}
       cancel-in-progress: true
 
     runs-on: ubuntu-latest
@@ -146,75 +134,16 @@ jobs:
       checks: write
 
     steps:
-      # Fast user feedback for the #new-review path: post the "regenerating"
-      # acknowledgement before checkout / mise-install run, so the requester
-      # sees something within seconds rather than after the ~30s of setup.
-      # Captures the comment ID into a job output so the finalize step at
-      # end-of-job can delete it on completion. Skipped on workflow_run /
-      # workflow_dispatch / synchronize — those paths have no requester.
-      - name: Post regenerate confirmation
-        id: post-confirmation
-        if: |
-          github.event_name == 'issue_comment' ||
-          github.event_name == 'pull_request_review_comment' ||
-          github.event_name == 'pull_request_review'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          AUTHOR: ${{ github.event.comment.user.login || github.event.review.user.login }}
-          PR: ${{ github.event.issue.number || github.event.pull_request.number }}
-          REPO: ${{ github.repository }}
-        run: |
-          BODY=$(printf '🤖 @%s — regenerating review from scratch.' "$AUTHOR")
-          COMMENT_ID=$(gh api "repos/$REPO/issues/$PR/comments" \
-            -f body="$BODY" --jq '.id' || echo "")
-          echo "comment_id=$COMMENT_ID" >> "$GITHUB_OUTPUT"
-
-      # The new-review trigger events don't carry head_sha in the payload
-      # (unlike workflow_run, which surfaces it on workflow_run.head_sha).
-      # Resolve it via gh pr view before checkout so the working tree
-      # reflects PR content, not the base branch. Mirror of
-      # claude-update.yml's "Resolve PR head SHA" step.
-      - name: Resolve PR head SHA
-        id: head
-        if: |
-          github.event_name == 'issue_comment' ||
-          github.event_name == 'pull_request_review_comment' ||
-          github.event_name == 'pull_request_review'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ github.event.issue.number || github.event.pull_request.number }}
-        run: |
-          SHA=$(gh pr view "$PR" --repo "${{ github.repository }}" --json headRefOid --jq .headRefOid)
-          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
-
       # Check out the PR head, not the base. workflow_run carries the
-      # originating commit on the event payload; workflow_dispatch passes
-      # it through as an input; the new-review triggers resolve it via
-      # the Resolve PR head SHA step above. Without this, Vale below ran
-      # against base prose and produced empty findings.
+      # originating commit on the event payload; workflow_dispatch
+      # doesn't, so claude-new.yml passes it through as an input.
+      # Without this, Vale below ran against base prose and produced
+      # empty findings.
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha || steps.head.outputs.sha }}
+          ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
-
-      # Wipe every existing <!-- CLAUDE_REVIEW N/M --> comment so the
-      # dispatched review starts from a blank slate. The `clear`
-      # subcommand is the only path that bypasses pinned-comment.sh's
-      # 1/M-sacrosanct rule — explicit regenerate-from-scratch use only.
-      # Skipped on workflow_run / workflow_dispatch / synchronize.
-      - name: Clear existing pinned review comments
-        if: |
-          github.event_name == 'issue_comment' ||
-          github.event_name == 'pull_request_review_comment' ||
-          github.event_name == 'pull_request_review'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ github.event.issue.number || github.event.pull_request.number }}
-        run: |
-          bash .claude/commands/docs-review/scripts/pinned-comment.sh \
-            clear --pr "$PR" \
-            --repo "${{ github.repository }}" || true
 
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH. Cache speeds up
@@ -232,34 +161,15 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # PR number routing:
-          # - workflow_run (auto-fire after triage): pull_requests[0]
-          # - workflow_dispatch (manual escape hatch): inputs.pr_number
-          # - issue_comment (`@claude #new-review`): issue.number
-          # - pull_request_review_comment / pull_request_review: pull_request.number
-          #
-          # FORCE=true bypasses the trivial / fmonly / draft / bot-author /
-          # already-reviewed skips. Implicit for every entry point except
-          # the auto-fire workflow_run path — the latter honors skips so
-          # routine triage doesn't burn review API on every reopened PR.
-          case "${{ github.event_name }}" in
-            issue_comment)
-              PR="${{ github.event.issue.number }}"
-              FORCE="true"
-              ;;
-            pull_request_review_comment|pull_request_review)
-              PR="${{ github.event.pull_request.number }}"
-              FORCE="true"
-              ;;
-            workflow_dispatch)
-              PR="${{ github.event.inputs.pr_number }}"
-              FORCE="true"
-              ;;
-            *)
-              PR="${{ github.event.workflow_run.pull_requests[0].number }}"
-              FORCE="false"
-              ;;
-          esac
+          # PR number comes from the workflow_run pull_requests array on
+          # the triage-chained path, or from the workflow_dispatch input
+          # on the #new-review path.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PR="${{ github.event.inputs.pr_number }}"
+          else
+            PR="${{ github.event.workflow_run.pull_requests[0].number }}"
+          fi
+          FORCE="${{ github.event.inputs.force || 'false' }}"
           REPO="${{ github.repository }}"
 
           # GitHub re-evaluates a PR's diff lazily after force-pushes to
@@ -295,11 +205,11 @@ jobs:
           FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
           FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
 
-          # force=true (set above for #new-review and workflow_dispatch
-          # entry points) bypasses the auto-skip heuristics. The user
-          # explicitly asked for a regenerate; trivial / fmonly / draft /
-          # bot-author / already-reviewed are all overridable. Empty-diff
-          # is NOT overridable — there's nothing to review.
+          # force=true (set by claude-new.yml on #new-review dispatch)
+          # bypasses the auto-skip heuristics. The user explicitly asked
+          # for a regenerate; trivial / fmonly / draft / bot-author /
+          # already-reviewed are all overridable. Empty-diff is NOT
+          # overridable — there's nothing to review.
           SKIP=""
           if [[ "$FORCE" != "true" ]]; then
             if [[ "$IS_DRAFT" == "true" ]]; then
@@ -853,6 +763,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Accept github-actions[bot] as a trigger actor. The #new-review
+          # path dispatches this workflow from claude-new.yml using
+          # GITHUB_TOKEN (so we don't burn pulumi-bot's shared rate-limit
+          # bucket); that makes the dispatched run's actor a Bot, which
+          # claude-code-action@v1 rejects by default. The auto-fire path
+          # (workflow_run after triage) is gated by claude-triage.yml's
+          # own access checks, so opening this door doesn't widen the
+          # trust surface.
+          allowed_bots: 'github-actions[bot]'
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
@@ -1097,17 +1016,17 @@ jobs:
       #   is consumed by the success-only "Review regenerated" terminal
       #   below.
       #
-      # Regenerate-confirmation comment cleanup (#new-review path only):
-      # the post-confirmation step at job start posts "🤖 @<author> —
-      # regenerating review from scratch." and exports its ID. We delete
-      # it here regardless of outcome — once we reach finalize the
-      # present-tense "regenerating" message is no longer accurate.
-      # On success of a #new-review run we also post a fresh terminal
+      # Dispatcher confirmation comment cleanup (workflow_dispatch from
+      # claude-new.yml only): the dispatcher posts "🤖 @<author> — pinned
+      # review cleared; regenerating from scratch." at the start and
+      # passes its comment ID through `dispatcher_comment_id`. We delete
+      # it regardless of outcome — once we reach finalize the present-
+      # tense "regenerating from scratch" message is no longer accurate.
+      # On success of a dispatch run we also post a fresh terminal
       # "🤖 Review regenerated on @<author>'s request." mirroring
       # claude-update.yml's pattern (created, not edited — fires a
-      # notification). Both branches are no-ops on workflow_run /
-      # workflow_dispatch / synchronize (post-confirmation didn't run,
-      # so the values are empty).
+      # notification). Both branches are no-ops when the inputs are
+      # empty (workflow_run path).
       - name: Finalize progress signal
         if: always() && steps.progress.outputs.comment_id != ''
         env:
@@ -1117,8 +1036,8 @@ jobs:
           REPO="${{ github.repository }}"
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude-review.outcome }}"
-          DISPATCHER_COMMENT_ID="${{ steps.post-confirmation.outputs.comment_id }}"
-          MENTION_AUTHOR="${{ github.event.comment.user.login || github.event.review.user.login }}"
+          DISPATCHER_COMMENT_ID="${{ github.event.inputs.dispatcher_comment_id }}"
+          MENTION_AUTHOR="${{ github.event.inputs.mention_author }}"
 
           if [ -n "$DISPATCHER_COMMENT_ID" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
