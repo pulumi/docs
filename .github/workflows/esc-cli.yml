@@ -107,6 +107,11 @@ jobs:
           rm /tmp/vale.tar.gz
       - run: make ensure
         working-directory: docs
+      - name: Clean stale generated command pages
+        run: |
+          find ./content/docs/esc/cli/commands -type f \
+            ! -name '_index.md' ! -name 'README.txt' -delete
+        working-directory: docs
       - name: Generate Markdown docs
         run: |
           esc gen-docs ./content/docs/esc/cli/commands
