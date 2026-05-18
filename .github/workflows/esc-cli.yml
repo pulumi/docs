@@ -110,7 +110,10 @@ jobs:
       - name: Clean stale generated command pages
         run: |
           find ./content/docs/esc/cli/commands -type f \
-            ! -name '_index.md' ! -name 'README.txt' -delete
+            ! -name '_index.md' ! -name 'README.txt' -print0 \
+          | while IFS= read -r -d '' f; do
+              grep -aq '^redirect_to:' "$f" || rm -- "$f"
+            done
         working-directory: docs
       - name: Generate Markdown docs
         run: |
