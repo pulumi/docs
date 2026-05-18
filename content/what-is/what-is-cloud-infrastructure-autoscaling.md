@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 Two of the great advantages to infrastructure in the cloud are flexibility and speed. You can quickly adjust your infrastructure to conform to variable conditions, such as the amount of traffic or the number of requests in a queue. In other words, you can scale your infrastructure up or down, depending on what you need at a particular time. Scaling often refers to servers (or instances), in particular.

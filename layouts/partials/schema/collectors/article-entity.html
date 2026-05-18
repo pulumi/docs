@@ -80,10 +80,14 @@
 {{ $duration := printf "PT%dM" $readTime }}
 {{ $schema = merge $schema (dict "timeRequired" $duration) }}
 
-{{/* Add author as organization for docs */}}
-{{ $schema = merge $schema (dict
-  "author" (dict "@id" "https://www.pulumi.com/#organization")
-) }}
+{{/* Add author. Prefer Person entities from frontmatter (e.g. what-is pages) so
+     Google can render the author byline in rich results; fall back to the
+     Pulumi organization for pages with no declared authors (most docs). */}}
+{{ $authors := partial "schema/utils/author-entities.html" . }}
+{{ if not $authors }}
+  {{ $authors = slice (dict "@id" "https://www.pulumi.com/#organization") }}
+{{ end }}
+{{ $schema = merge $schema (dict "author" $authors) }}
 
 {{/* Add publisher reference */}}
 {{ $schema = merge $schema (dict

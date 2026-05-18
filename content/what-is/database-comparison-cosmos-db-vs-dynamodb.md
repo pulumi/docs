@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs DynamoDB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#dynamo-db-vs-cosmos-db) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**

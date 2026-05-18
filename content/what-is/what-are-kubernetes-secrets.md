@@ -6,6 +6,7 @@ meta_desc: |
 type: what-is
 page_title: "What are Kubernetes Secrets?"
 
+authors: ["diana-esteves"]
 ---
 
 Kubernetes, or K8s, is an open-source container orchestration platform designed to automate the deployment, scaling, and management of containerized applications.

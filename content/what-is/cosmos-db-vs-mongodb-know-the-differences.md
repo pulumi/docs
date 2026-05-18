@@ -27,6 +27,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs Mongo DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#cosmos-db-vs-mongodb) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**
