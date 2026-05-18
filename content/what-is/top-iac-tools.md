@@ -2,6 +2,7 @@
 title: Top Infrastructure as Code Tools
 meta_desc: |
      Explore top Infrastructure as Code (IaC) tools for cloud resource management. Find the best fit for your DevOps needs.
+meta_image: /images/what-is/top-iac-tools-meta.png
 type: what-is
 page_title: "Top Infrastructure as Code Tools"
 authors: ["adam-gordon-bell"]

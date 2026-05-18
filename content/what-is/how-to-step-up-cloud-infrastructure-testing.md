@@ -3,6 +3,7 @@ title: How to Step Up Cloud Infrastructure Testing
 meta_desc: |
     Learn more about modeling infrastructure testing on standard software practices by including other tests, such as unit, integration, policy and security tests.
 
+meta_image: /images/what-is/how-to-step-up-cloud-infrastructure-testing-meta.png
 type: what-is
 page_title: "Stepping Up Your Infrastructure Testing: A Quick Introduction"
 

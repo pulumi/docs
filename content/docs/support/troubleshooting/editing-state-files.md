@@ -30,7 +30,7 @@ You might need to edit your state file in the following situations:
 Before manually editing your state file, consider these troubleshooting steps:
 
 1. Run the `pulumi refresh` command.
-1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/iac/download-install/)) and attempt your operation again.
+1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/install/)) and attempt your operation again.
 1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) command instead of editing your state file.
 1. If you have recently updated the Pulumi CLI, consider downgrading back to the previous known-good version and attempt your operation again.
 1. Update the Pulumi SDK to the version that matches the Pulumi CLI.

@@ -3,6 +3,7 @@ title: Run 'aws s3 sync' with Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws s3 sync' more securely and efficiently.
 
+meta_image: /images/what-is/run-aws-s3-sync-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws s3 sync' with Dynamic Credentials
 authors: ["diana-esteves"]

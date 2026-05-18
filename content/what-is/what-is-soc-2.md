@@ -2,6 +2,7 @@
 title: What is SOC 2?
 meta_desc: |
     Learn about SOC 2 compliance, its key trust principles, and how organizations can achieve and maintain this important security framework.
+meta_image: /images/what-is/what-is-soc-2-meta.png
 type: what-is
 page_title: "What is SOC 2?"
 authors: ["asaf-ashirov"]
