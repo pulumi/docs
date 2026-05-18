@@ -43,6 +43,7 @@ The Resource Search interface provides:
 - **Advanced search**: Query resources by name, type, stack, project, properties, and more using a rich query syntax
 - **Filtering and grouping**: Organize resources by dragging column headers to create custom views
 - **Column customization**: Show or hide information to focus on what matters
+- **Property columns**: Promote any resource property into a sortable, filterable, and groupable column (Team, Enterprise, and Business Critical editions)
 - **Favorites**: Save and share custom views with your team
 - **AI assist**: Use natural language queries to find resources (e.g., "How many VPCs do I have?")
 
