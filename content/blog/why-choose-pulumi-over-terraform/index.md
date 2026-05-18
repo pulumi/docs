@@ -57,7 +57,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 
 ## Use programming languages and familiar tools
 
-Terraform modules are powerful, but larger HCL codebases can push teams toward domain-specific patterns for composition, validation, and reuse. Pulumi lets infrastructure teams use the same TypeScript features they already use in application code: classes, functions, types, loops, package managers, linters, and test frameworks.
+Terraform modules are powerful, but larger HCL codebases can push teams toward domain-specific patterns for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever programming language they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
 
 For example, a platform team can wrap a standard storage pattern in a `ComponentResource` and share it like any other TypeScript abstraction:
 
