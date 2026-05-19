@@ -54,7 +54,15 @@ sections:
   - icon: plug
     heading: Integrations
     link: /docs/ai/integrations/
-    description: Connect Neo to third-party services like Datadog, Honeycomb, and Linear.
+    description: Connect Neo to external services, cloud CLIs, GitHub, and Slack.
+  - icon: terminal
+    heading: Pulumi CLI
+    link: /docs/ai/pulumi-cli/
+    description: Run pulumi neo to start an interactive Neo session in your terminal.
+  - icon: clock
+    heading: Automations
+    link: /docs/ai/automations/
+    description: Turn any Neo task into recurring work that produces pull requests on a schedule.
 
 - type: flat
   heading: Have questions?
