@@ -137,7 +137,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 * **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
 * **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
-* **Policy as code in TypeScript.** [CrossGuard](/docs/insights/policy/) policies can be written in the same language as the IaC, with the same typing over the resource model.
+* **Policy as code in TypeScript.** [Pulumi policies](/docs/insights/policy/) can be written in the same language as the IaC, with the same typing over the resource model.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Node.js programs, CI jobs, and applications, with audit trails.
 
 [Get started with Pulumi and TypeScript](/docs/get-started/) to provision cloud infrastructure with the same tools you already use for application code.
