@@ -93,7 +93,7 @@ The same CI/CD machinery that ships application code can ship infrastructure onc
 1. CI runs `pulumi up` to apply the change to staging, then to production after smoke tests pass.
 1. Drift detection runs on a schedule against the deployed state.
 
-The principle is the same as application CI: fast feedback for in-progress changes, slower and broader checks closer to production. Pulumi integrates with all major CI/CD systems via [the Pulumi CI/CD integration guide](/docs/iac/guides/continuous-delivery/) and [GitHub Actions](/docs/iac/packages-and-automation/github-actions/).
+The principle is the same as application CI: fast feedback for in-progress changes, slower and broader checks closer to production. Pulumi integrates with all major CI/CD systems via [the Pulumi CI/CD integration guide](/docs/iac/guides/continuous-delivery/) and [GitHub Actions](/docs/iac/guides/continuous-delivery/github-actions/).
 
 ## How does IaC enable shift-left testing and policy as code?
 
@@ -102,7 +102,7 @@ The principle is the same as application CI: fast feedback for in-progress chang
 * **Unit tests** verify the logic of IaC programs in memory, with mocked cloud responses. Examples: every resource is tagged, no security group opens SSH to the internet, encryption is enabled on every bucket.
 * **Property tests** assert specific properties on the planned resource graph (every database has backups enabled with a 7-day retention; every Kubernetes cluster uses the LTS provider version).
 * **Integration tests** spin up ephemeral stacks in a sandbox account, run end-to-end assertions, and tear down.
-* **Policy as code** enforces organizational rules across every change. [Pulumi CrossGuard](/docs/insights/policy/) lets you write policies in TypeScript, Python, Java, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge.
+* **Policy as code** enforces organizational rules across every change. [Pulumi CrossGuard](/docs/insights/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
 * **Security scans** (Checkov, tfsec, Snyk IaC) run on every commit and surface known-bad configurations.
 
 For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
@@ -157,7 +157,7 @@ Pulumi is IaC built for engineering teams that already use DevOps practices. Con
 
 * **Real languages.** Write IaC in TypeScript, Python, Go, C#, Java, or YAML. The same languages, test runners, and IDE tooling that work for application code work for the platform.
 * **Same review process.** Pulumi programs live in the same repos as application code (or in their own platform repos). Every change is a pull request with a diff that reviewers can read.
-* **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/packages-and-automation/github-actions/) and [CI/CD guide](/docs/iac/guides/continuous-delivery/) document common patterns.
+* **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/guides/continuous-delivery/github-actions/) and [CI/CD guide](/docs/iac/guides/continuous-delivery/) document common patterns.
 * **Policy as code through CrossGuard.** Write policies in the same language as the IaC. Run them on every preview and update.
 * **Secrets through Pulumi ESC.** Centralized, encrypted, audited. [Pulumi ESC](/product/esc/) pulls secrets at runtime into Pulumi programs, CI jobs, and applications without leaving plaintext copies in code or state.
 * **Self-service through automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) turns Pulumi programs into libraries that other software can call, which is how platform teams expose self-service over their components.
