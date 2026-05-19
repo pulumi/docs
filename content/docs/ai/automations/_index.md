@@ -30,7 +30,7 @@ Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/ta
 
 Open **Neo Tasks**, then the **Automations** tab, then **New automation**. You can start from a template (provider freshness check, encryption audit, backup audit, activity digest) or from a blank canvas. The form asks for a name, the prompt (which includes the same integration selector as an ad-hoc task), and the frequency (hourly, daily, weekdays, or weekly). Save the automation and it begins running at the next scheduled tick.
 
-You can edit or delete an automation from the **Automations** tab.
+You can edit or delete an automation from the **Automations** tab. Deleting an automation also removes access to its previous runs.
 
 ## How automations interact with the rest of Neo
 
