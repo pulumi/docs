@@ -25,7 +25,7 @@ social:
         Version Pulumi components with SemVer, deprecation windows, upgrade paths, and policy checks.
 ---
 
-Platform engineering teams use Pulumi components to codify organizational standards and provide golden paths for developers. Shared component versioning quickly becomes a platform-wide concern when many stacks depend on the same building blocks. Without a clear versioning strategy, a simple update to a shared component can trigger unexpected resource replacements or build failures across a stack estate.
+Platform engineering teams use Pulumi components to codify organizational standards and provide golden paths for developers. Shared component versioning quickly becomes a platform-wide concern when many stacks depend on the same building blocks. Without a clear versioning strategy, an update to a shared component can trigger unexpected resource replacements or build failures across a stack estate.
 
 Semantic Versioning (SemVer) provides a predictable framework for communicating the nature of changes to your users. When applied to Pulumi components, it helps platform teams innovate rapidly while giving application developers the confidence to adopt new versions at their own pace.
 
@@ -37,10 +37,10 @@ This post establishes a concrete versioning and release policy for shared compon
 
 In the context of a `ComponentResource`, the "public API" consists of its input arguments and its output properties. However, Pulumi components have an additional layer of compatibility: the resource state.
 
-A breaking change in a component isn't just a TypeScript type error. It's any change that forces a resource replacement when a user didn't expect one. Common breaking changes include:
+A breaking change in a component is more than a TypeScript type error. It's any change that forces a resource replacement when a user didn't expect one. Common breaking changes include:
 
 1. Removing or renaming an input property.
-1. Changing the type of an input property in a way that isn't backward compatible.
+1. Changing an input property type in a way that is not backward compatible.
 1. Renaming a child resource within the component (which changes its URN).
 1. Changing a property on a child resource that forces its replacement.
 
@@ -50,7 +50,7 @@ Understanding this contract is the first step toward a predictable versioning wo
 
 SemVer communicates intent, but Pulumi still needs enough information to preserve existing resources. When you rename a component, rename a child resource, change a component type token, or move children under a different parent, use [aliases](/docs/iac/concepts/resources/options/aliases/) to tell Pulumi how the old URN maps to the new one.
 
-Aliases are part of the migration plan, not just a code cleanup detail. Keep them until the stacks that used the old shape have been updated. Removing aliases too early can turn a safe rename into an unexpected replacement for teams that upgrade later.
+Aliases are part of the migration plan, not only a code cleanup detail. Keep them until the stacks that used the old shape have been updated. Removing aliases too early can turn a safe rename into an unexpected replacement for teams that upgrade later.
 
 ## Trunk-based development and conventional commits
 
