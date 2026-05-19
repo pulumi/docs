@@ -32,7 +32,7 @@ The phrase "AI infrastructure" now means two different things. One is the GPUs, 
 
 The pressure to think about both is real. [McKinsey research](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) puts the productivity lift from generative AI in software development at 20–45%, which is great for application teams and a problem for platform teams trying to keep up with the resulting feature flow. Infrastructure investment is climbing on both fronts: more spend on the compute that trains and serves models, more spend on AI tools that manage everything else.
 
-This guide covers 17 tools across the two categories. Part 1 is the compute and MLOps stack. Part 2 is AI-powered infrastructure management, where the more interesting product shift is happening.
+This guide covers both categories: the compute and MLOps stack in Part 1, and AI-powered infrastructure management in Part 2, where the more interesting product shift is happening.
 
 ## AI infrastructure tools overview
 
