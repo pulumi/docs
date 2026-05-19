@@ -74,10 +74,10 @@ What's common across the list: Python is rarely the only language, but it's almo
 
 ## How is Python used for infrastructure as code?
 
-Python is one of the four primary languages for IaC tools that support real programming languages (alongside TypeScript, Go, and C#/.NET). With Pulumi, a Python IaC program describes the desired state of cloud infrastructure as ordinary Python classes and functions:
+Python is one of the primary languages for IaC tools that support real programming languages (alongside TypeScript, Go, .NET, and Java). With Pulumi, a Python IaC program describes the desired state of cloud infrastructure as ordinary Python classes and functions:
 
 * **Generated, typed SDKs.** Pulumi's Python providers ship type hints for every cloud resource (AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Datadog, Snowflake, and more). IDEs like PyCharm and VS Code surface the available properties as you type.
-* **Real abstractions.** A reusable VPC pattern becomes a Python class (`MyVpc(...)`), not a folder of templates. Components ship as PyPI packages.
+* **Real abstractions.** A reusable VPC pattern becomes a Python class (`MyVpc(...)`), not a folder of templates. Components can ship as PyPI packages.
 * **Standard testing tools.** `pytest`, `unittest`, mocks via `unittest.mock`, and Pulumi's own [Python mocks](/docs/iac/using-pulumi/testing/unit/) for cloud responses. IaC tests run alongside application tests in the same CI job.
 * **Standard packaging.** `pip`, `poetry`, `uv`, or Pipenv manage dependencies. Lock files (`requirements.txt`, `poetry.lock`, `uv.lock`) make deploys reproducible.
 
@@ -137,7 +137,7 @@ Python is a first-class language for Pulumi, supported on par with TypeScript, G
 
 * **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and 100+ other providers. Generated from each provider's API, including full type hints and docstrings.
 * **`pulumi new python`.** Creates a project with a `Pulumi.yaml`, a virtualenv setup, and a starter program in seconds. See the [Python language guide](/docs/languages-sdks/python/) and [the get-started flow](/docs/get-started/).
-* **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) ship as PyPI packages, with full type hints.
+* **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) can be distributed as PyPI packages with full type hints, among other formats.
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
 * **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
