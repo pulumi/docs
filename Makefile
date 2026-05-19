@@ -39,6 +39,10 @@ sync-icons:
 update-repos:
 	./scripts/update_repos.sh
 
+.PHONY: update-versions
+update-versions:
+	$(MISE) node scripts/get-cli-versions.js
+
 .PHONY: serve
 serve:
 	$(MISE) ./scripts/serve.sh

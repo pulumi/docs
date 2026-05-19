@@ -829,14 +829,6 @@
   resolved "https://registry.yarnpkg.com/@nodable/entities/-/entities-2.1.0.tgz#f543e5c6446720d4cf9e498a83019dd159973bc2"
   integrity sha512-nyT7T3nbMyBI/lvr6L5TyWbFJAI9FTgVRakNoBqCD+PmID8DzFrrNdLLtHMwMszOtqZa8PAOV24ZqDnQrhQINA==
 
-"@octokit/auth-action@^5.1.1":
-  version "5.1.2"
-  resolved "https://registry.npmjs.org/@octokit/auth-action/-/auth-action-5.1.2.tgz"
-  integrity sha512-KgR3hIHz1iHytBrWdsVRN7elYtF6TP2fKIlnpjagT1rGY2WnALckO6aOUjwxGOyrnXd44j/QSKQilCnAswJg3A==
-  dependencies:
-    "@octokit/auth-token" "^5.0.0"
-    "@octokit/types" "^14.0.0"
-
 "@octokit/auth-token@^5.0.0":
   version "5.1.2"
   resolved "https://registry.npmjs.org/@octokit/auth-token/-/auth-token-5.1.2.tgz"
@@ -863,7 +855,7 @@
     "@octokit/types" "^14.0.0"
     universal-user-agent "^7.0.2"
 
-"@octokit/graphql@^8.1.1", "@octokit/graphql@^8.2.2":
+"@octokit/graphql@^8.2.2":
   version "8.2.2"
   resolved "https://registry.npmjs.org/@octokit/graphql/-/graphql-8.2.2.tgz"
   integrity sha512-Yi8hcoqsrXGdt0yObxbebHXFOiUA+2v3n53epuOg1QUgOB6c4XzvisBNVXJSl8RYA5KrDuSL2yq9Qmqe5N0ryA==

@@ -1,10 +1,10 @@
 const path = require("path");
 const fs = require("fs");
-const { graphql } = require("@octokit/graphql");
-const { createActionAuth } = require("@octokit/auth-action");
 
 const destination = path.join(__dirname, "..", "data", "versions.json");
 const latestVersionPath = path.join(__dirname, "..", "static", "latest-version");
+
+const baseUrl = "https://get.pulumi.com/releases/sdk";
 
 const query = `
   query GetTagsWithDate($cursor: String) {
@@ -18,9 +18,7 @@ const query = `
           name
           target {
             ... on Tag {
-              tagger {
-                date
-              }
+              tagger { date }
             }
             ... on Commit {
               committedDate
@@ -32,23 +30,38 @@ const query = `
   }
 `;
 
-const listTags = async (graphqlWithAuth, cursor) => {
-  const {
-    repository: { refs },
-  } = await graphqlWithAuth(query, {
-    cursor,
+const fetchTagsPage = async (token, cursor) => {
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      authorization: `token ${token}`,
+      "content-type": "application/json",
+      "user-agent": "pulumi-docs-get-cli-versions",
+    },
+    body: JSON.stringify({ query, variables: { cursor } }),
   });
-
-  if (refs.pageInfo.hasNextPage) {
-    const res = await listTags(graphqlWithAuth, refs.pageInfo.endCursor);
-    return [...refs.nodes, ...res];
+  if (!res.ok) {
+    throw new Error(`GitHub GraphQL HTTP ${res.status}: ${await res.text()}`);
   }
-  return refs.nodes;
+  const body = await res.json();
+  if (body.errors) {
+    throw new Error(`GitHub GraphQL errors: ${JSON.stringify(body.errors)}`);
+  }
+  return body.data.repository.refs;
 };
 
-const baseUrl = "https://get.pulumi.com/releases/sdk";
+const listTags = async (token) => {
+  const all = [];
+  let cursor = null;
+  for (;;) {
+    const refs = await fetchTagsPage(token, cursor);
+    all.push(...refs.nodes);
+    if (!refs.pageInfo.hasNextPage) return all;
+    cursor = refs.pageInfo.endCursor;
+  }
+};
 
-const createDownloadLinks = (version) => ({
+const downloadLinks = (version) => ({
   "linux-x64": `${baseUrl}/pulumi-${version}-linux-x64.tar.gz`,
   "linux-arm64": `${baseUrl}/pulumi-${version}-linux-arm64.tar.gz`,
   "darwin-x64": `${baseUrl}/pulumi-${version}-darwin-x64.tar.gz`,
@@ -58,24 +71,23 @@ const createDownloadLinks = (version) => ({
 });
 
 const main = async () => {
-  const auth = createActionAuth();
-  const graphqlWithAuth = graphql.defaults({
-    request: {
-      hook: auth.hook,
-    },
-  });
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) {
+    console.error(
+      "GITHUB_TOKEN is required. In CI it's exported from ESC. Locally, run `export GITHUB_TOKEN=$(gh auth token)` and re-run."
+    );
+    process.exit(1);
+  }
 
-  const tags = await listTags(graphqlWithAuth);
+  const tags = await listTags(token);
+  const latestVersion = fs.readFileSync(latestVersionPath, "utf-8");
 
-  const latestVersion = fs.readFileSync(latestVersionPath, 'utf-8');
-
-  // We only want ordinary release tags
   const releases = tags
     .filter((tag) => !tag.name.match(/sdk|pkg/))
     .map((tag) => ({
       version: tag.name,
       date: tag.target?.committedDate || tag.target?.tagger?.date,
-      downloads: createDownloadLinks(tag.name),
+      downloads: downloadLinks(tag.name),
       checksums: `${baseUrl}/pulumi-${tag.name.slice(1)}-checksums.txt`,
       latest: latestVersion === tag.name.slice(1) ? true : undefined,
     }))
@@ -84,4 +96,7 @@ const main = async () => {
   fs.writeFileSync(destination, JSON.stringify(releases, null, 2));
 };
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
