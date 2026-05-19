@@ -27,7 +27,7 @@ social:
 
 Adopting existing infrastructure into Infrastructure as Code (IaC) is a common challenge for growing teams. The demand is clear from sustained community interest in import workflows and custom provider support. While the basic [`pulumi import`](/docs/iac/guides/migration/import/) command is great for a single S3 bucket, production environments often require importing many resources across multiple providers.
 
-To move beyond simple demos, you need to understand the different import modes, how to handle bulk operations, and how to manage long-running adoptions without breaking your production stacks.
+To move beyond demos, you need to understand the different import modes, how to handle bulk operations, and how to manage long-running adoptions without breaking your production stacks.
 
 This post covers production-grade import strategies, including bulk import files, state-only imports, and common pitfalls when working with custom providers. By the end, you will have a playbook for mass infrastructure adoption using Pulumi's advanced import features.
 
@@ -59,11 +59,11 @@ const vpc = new aws.ec2.Vpc("my-vpc", {
 });
 ```
 
-This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, you should remove the `import` option from your code to keep future updates focused on normal resource management.
+This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, remove the `import` option from your code as hygiene so future updates focus on normal resource management.
 
 ### 3. State-only import
 
-Sometimes you already have the code perfectly written, perhaps by copying it from another project or using a template, and you just want to link it to an existing resource without seeing the generated code again. You can use the `--generate-code=false` flag for this.
+Sometimes you already have the code written, perhaps by copying it from another project or using a template, and you want to link it to an existing resource without seeing the generated code again. You can use the `--generate-code=false` flag for this.
 
 ```bash
 pulumi import aws:ec2/vpc:Vpc my-vpc vpc-0123456789abcdef0 --generate-code=false
@@ -93,7 +93,7 @@ Once your `bulk-import.json` is ready, run the import command pointing to the fi
 pulumi import --file bulk-import.json
 ```
 
-This command will process all resources in the file in a single operation, significantly speeding up the adoption process.
+This command processes all resources in the file in a single operation, reducing repetitive import work.
 
 ## Custom and third-party providers
 
@@ -133,7 +133,7 @@ Break your adoption into logical chunks. Start with foundational resources like 
 
 ### Checkpoint recovery
 
-Bulk import recovery is a checkpoint-management workflow, not an idempotent retry. If an import file fails partway through, inspect the stack state and the failed operation output, remove resources that were already imported from the import file, then rerun `pulumi import --file` with only the remaining resources. This keeps the next import focused on resources that are not already registered in the stack.
+In our experience, bulk import recovery is a checkpoint-management workflow, not an idempotent retry. If an import file fails partway through, inspect the stack state and the failed operation output, remove resources that were already imported from the import file, then rerun `pulumi import --file` with only the remaining resources. This keeps the next import focused on resources that are not already registered in the stack.
 
 ### Validating with a no-op preview
 
