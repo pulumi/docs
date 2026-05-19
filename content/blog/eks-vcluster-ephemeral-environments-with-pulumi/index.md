@@ -34,7 +34,7 @@ This post adapts that general architecture with Pulumi to orchestrate Amazon [EK
 
 ## The problem: environment sprawl and provisioning lag
 
-Traditional development workflows often rely on one full EKS cluster per developer or feature branch. While this provides maximum isolation, it introduces major pain points. Provisioning a full cluster can take 15 minutes or more, which slows down CI/CD pipelines. Managing dozens of clusters also leads to high costs and significant operational overhead.
+Traditional development workflows often rely on one full EKS cluster per developer or feature branch. While this provides strong isolation, it introduces major pain points. Provisioning a full cluster can take 15 minutes or more, which slows down CI/CD pipelines. Managing dozens of clusters also leads to high costs and significant operational overhead.
 
 Platform teams need a "soft multi-tenancy" model. This model should feel like a dedicated cluster to the developer but run on shared infrastructure to keep costs low and startup times fast.
 
@@ -157,11 +157,11 @@ const tenantRoleBinding = new k8s.rbac.v1.RoleBinding("tenant-role-binding", {
 }, { provider: hostProvider });
 ```
 
-For production use, map these Kubernetes identities to IAM principals using EKS Access Entries or the `aws-auth` ConfigMap.
+For production use, map these Kubernetes identities to IAM principals using EKS Access Entries, with the legacy `aws-auth` ConfigMap still appearing in older clusters.
 
 ### Deploying vCluster with Helm
 
-We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled [Helm](https://helm.sh/) lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior.
+We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled [Helm](https://helm.sh/) lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior. Review the vCluster release notes when changing chart versions because values schema and generated secret names can change across releases.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
