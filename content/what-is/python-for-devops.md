@@ -3,6 +3,7 @@ title: Python for DevOps
 meta_desc: |
      Learn Python for DevOps with Pulumi’s Cloud Engineering Platform to deliver modern cloud applications faster and speed innovation.
 
+meta_image: /images/what-is/python-for-devops-meta.png
 type: what-is
 page_title: "Python for DevOps"
 

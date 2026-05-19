@@ -164,17 +164,19 @@ jobs:
       # workflow_dispatch fires the "claude-review" job in
       # claude-code-review.yml; the existing PR-context resolution,
       # Vale, prompt, posting, and post-run labels all reuse.
-      # Dispatch with PULUMI_BOT_TOKEN (User account) rather than the default
-      # GITHUB_TOKEN. The dispatched workflow_dispatch run inherits its actor
-      # from this token; using GITHUB_TOKEN makes the actor github-actions[bot]
-      # (type=Bot), which claude-code-action@v1 rejects. pulumi-bot is a User
-      # account, so the action accepts naturally.
+      # Dispatch with GITHUB_TOKEN — the dispatched run's actor becomes
+      # github-actions[bot] (type=Bot). claude-code-action@v1 rejects
+      # Bot actors by default; claude-code-review.yml opts in via
+      # `allowed_bots: github-actions[bot]` on the action step.
+      # Previously dispatched with PULUMI_BOT_TOKEN to get a User actor;
+      # that path burned pulumi-bot's shared 5K/hr rate-limit bucket
+      # whenever a user fired many #new-reviews in a row.
       - name: Dispatch claude-code-review.yml
         if: |
           steps.check-access.outputs.has_write_access == 'true' &&
           steps.pr-context.outputs.pr_number != ''
         env:
-          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh workflow run claude-code-review.yml \
             --repo "${{ github.repository }}" \

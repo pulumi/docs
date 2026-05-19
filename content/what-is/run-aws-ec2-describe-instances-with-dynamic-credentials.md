@@ -3,6 +3,7 @@ title: Run 'aws ec2 describe-instances' using Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws ec2 describe-instances' in a more secure and efficient manner.
 
+meta_image: /images/what-is/run-aws-ec2-describe-instances-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws ec2 describe-instances' using Dynamic Credentials
 authors: ["diana-esteves"]

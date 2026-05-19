@@ -4,6 +4,7 @@ meta_desc: |
     Infrastructure as Software (IaS) is the next step in managing your cloud environments by adopting
     tried and true software engineering best practices.
 
+meta_image: /images/what-is/what-is-infrastructure-as-software-meta.png
 type: what-is
 page_title: "Infrastructure as Software: The Next Step in Cloud Management"
 

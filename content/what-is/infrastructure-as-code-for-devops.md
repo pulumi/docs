@@ -3,6 +3,7 @@ title: Infrastructure as Code for DevOps
 meta_desc: |
      Discover how infrastructure as code for devops helps foster two important aspects of devops by enabling automation and building a true devops culture.
 
+meta_image: /images/what-is/infrastructure-as-code-for-devops-meta.png
 type: what-is
 page_title: "Infrastructure as Code for DevOps"
 

@@ -1,6 +1,7 @@
 ---
 title: What is Cloud Security?
 meta_desc: "Cloud security is the practice of protecting cloud workloads, data, and identities. Learn the shared responsibility model, key risks, and proven controls."
+meta_image: /images/what-is/what-is-cloud-security-meta.png
 type: what-is
 page_title: "What is Cloud Security?"
 authors: ["asaf-ashirov"]

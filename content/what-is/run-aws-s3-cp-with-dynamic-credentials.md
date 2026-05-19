@@ -3,6 +3,7 @@ title: Run 'aws s3 cp' using Dynamic Credentials
 meta_desc: |
      Learn more about using dynamic credentials in Pulumi ESC to run commands like aws s3 cp in a more secure and seamless way.
 
+meta_image: /images/what-is/run-aws-s3-cp-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws s3 cp' using Dynamic Credentials
 authors: ["diana-esteves"]
