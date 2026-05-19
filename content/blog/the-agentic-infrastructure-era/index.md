@@ -118,6 +118,8 @@ We know real code is the right substrate for agentic infrastructure – but we a
 
 **Pulumi Cloud in the CLI.** Over the years, we've added tons of great capabilities to Pulumi Cloud – things like change history, time-to-live stacks, drift detection, resource discovery and search, private registries, IDP, audit logs, secrets management, team-wide policy enforcement – but didn't add the respective ergonomic commands to the CLI. These are the sort of features that matter at scale. Now it's all there in your terminal where agents can use them. Over 30 new commands, you can think of this as the equivalent of the `gh` CLI which agents really like.
 
+[**Read the blog**: Better CLI Interactions for Agents and Humans &rarr;](/blog/better-cli-interactions-for-agents-and-humans/)
+
 ### Neo, everywhere you work
 
 Once an agent (or a team) has graduated through these capabilities, what comes next is asynchronous infrastructure work and, increasingly, autonomy. That's where Neo comes in: Pulumi's own infrastructure agent, now upgraded with the surfaces, integrations, and cadences teams actually need to run agentic infrastructure in production. We are shipping:
@@ -129,6 +131,8 @@ Once an agent (or a team) has graduated through these capabilities, what comes n
 **Neo Integration Catalog.** A new integration catalog lets you configure connectors to other systems that bring valuable infrastructure management context, including Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase. This lets you tap into additional planning, specification, observability, and live site incident data, expanding what agents can do on Days 0, 1, and especially 2.
 
 **Scheduled Tasks and Read-Only Sessions.** Now you can automate recurring infrastructure tasks, including confining Neo to read-only operations for extra safety. This opens up scenarios like reporting on infrastructure patterns weekly, automatically cleaning up waste in your dev accounts daily, or scheduled maintenance and upgrades.
+
+[**Read the blog**: 10 More Things You Can Do with Pulumi Neo &rarr;](/blog/10-more-things-you-can-do-with-neo/)
 
 ### Partnering with the frontier of AI infrastructure
 
