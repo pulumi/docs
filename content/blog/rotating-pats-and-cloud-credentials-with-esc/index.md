@@ -31,7 +31,7 @@ This post focuses on rotating GitHub and cloud provider credentials that power y
 
 ## Why it matters now
 
-Compliance frameworks like SOC 2 and PCI DSS increasingly drive teams toward automated rotation for administrative credentials. PCI DSS v4.0 §8.6.3 mandates scheduled rotation for service accounts, and SOC 2 auditors commonly expect automated controls as evidence of access management. Beyond compliance, the risk of a long-lived credential leak is a top-tier operational threat. If a secret is leaked, an attacker has a 90-day window to exploit it if you only rotate quarterly. Automating this process reduces the window of exposure and eliminates the human error inherent in manual rotation.
+Compliance frameworks like SOC 2 and PCI DSS increasingly drive teams toward automated rotation for administrative credentials. PCI DSS v4.0 §8.6.3 requires periodic rotation of service account credentials on an entity-defined schedule, and SOC 2 Type II auditors frequently look for system-enforced controls as evidence of consistent access management. Beyond compliance, the risk of a long-lived credential leak is a top-tier operational threat. If a secret is leaked, an attacker has a 90-day window to exploit it if you only rotate quarterly. Automating this process reduces the window of exposure and eliminates the human error inherent in manual rotation.
 
 ## Reader outcome
 
@@ -81,7 +81,7 @@ For cloud providers like AWS, Pulumi ESC offers two distinct strategies dependin
 
 ### 1. Dynamic credentials (OIDC)
 
-This pattern works best for CI/CD. GitHub Actions authenticates to Pulumi Cloud with OIDC, then ESC exchanges its own OIDC token for temporary AWS credentials. No long-lived cloud secrets are stored in GitHub.
+This pattern works best for CI/CD. GitHub Actions authenticates to Pulumi Cloud with OIDC (OpenID Connect), then ESC exchanges its own OIDC token for temporary AWS credentials. No long-lived cloud secrets are stored in GitHub.
 
 ```yaml
 values:
@@ -118,7 +118,7 @@ values:
 
 ## No long-lived secrets in GitHub Actions
 
-By combining these features, you can build a CI/CD pipeline that contains no long-lived secrets in GitHub Actions. The `pulumi/auth-actions` and `pulumi/esc-action` work together to fetch exactly what is needed for each run.
+By combining these features, you can build a CI/CD pipeline that contains no long-lived secrets in GitHub Actions. The [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) and [`pulumi/esc-action`](https://github.com/pulumi/esc-action) work together to fetch exactly what is needed for each run.
 
 ```yaml
 jobs:
@@ -144,4 +144,4 @@ jobs:
 
 ## Audit trail and compliance
 
-When an environment is opened, read, or rotated, Pulumi ESC can log the event. This provides an audit trail for environment opens and rotations, including the identity and timing of access events. For security teams, this turns a "black box" of static secrets into a more transparent, governed system that can support evidence for rotation controls.
+When an environment is opened, read, or rotated, Pulumi ESC can log the event. This provides an audit trail for environment opens and rotations, including the identity and timing of access events. For security teams, this turns a "black box" of static secrets into a more transparent, governed system that can support evidence for rotation controls. To try this pattern, start with the [Pulumi ESC getting started guide](/docs/esc/get-started/) and the [GitHub dynamic login credentials guide](/docs/esc/integrations/dynamic-login-credentials/gh-login/).
