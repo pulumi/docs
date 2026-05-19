@@ -1,12 +1,12 @@
 ---
-title_tag: "Using ArgoCD with Pulumi Kubernetes Operator | CI/CD"
-meta_desc: This page details how to use ArgoCD with the Pulumi Kubernetes Operator to deploy infrastructure and applications through GitOps workflows.
-title: ArgoCD
-h1: ArgoCD with Pulumi Kubernetes Operator
+title_tag: "Using Argo CD with Pulumi | CI/CD"
+meta_desc: This page details how to use Argo CD with the Pulumi Kubernetes Operator to deploy infrastructure and applications through pull-based GitOps workflows.
+title: Argo CD
+h1: Using Argo CD with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: ArgoCD
+        name: Argo CD
         parent: iac-using-pulumi-cicd
         weight: 2
 aliases:
@@ -16,77 +16,110 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/argocd/
 ---
 
-ArgoCD (Argo Continuous Deployment) is a declarative, GitOps continuous delivery tool for Kubernetes. When combined with the Pulumi Kubernetes Operator (PKO), ArgoCD provides powerful capabilities for managing both infrastructure and applications through GitOps workflows.
+[Argo CD](https://argo-cd.readthedocs.io/) is a declarative, pull-based GitOps continuous delivery tool for Kubernetes. Pulumi integrates with Argo CD through the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) (PKO), which lets Argo CD manage Pulumi infrastructure the same way it manages any other Kubernetes manifest. This means you can use Argo CD to provision and update cloud resources beyond the Kubernetes API—including the clusters themselves.
 
-This integration allows you to:
+## How Pulumi works with Argo CD
 
-- **Manage multiple clusters**: Use ArgoCD's dashboard to control and monitor Pulumi deployments across multiple Kubernetes clusters
-- **Deploy complete environments**: Create entire clusters and deploy applications into them in a single workflow
-- **Maintain separation of concerns**: ArgoCD users work with familiar Stack objects while Pulumi handles the complex infrastructure provisioning
-- **Leverage GitOps principles**: All changes flow through Git, providing audit trails and rollback capabilities
+Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack`](/docs/iac/concepts/stacks/) custom resource—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
 
-## Why combine ArgoCD with Pulumi?
+The integration relies on two pieces:
 
-Traditional GitOps tools like ArgoCD work well with Kubernetes manifests but are limited when it comes to provisioning infrastructure beyond Kubernetes resources. While tools like Crossplane can create some cloud resources, they're typically limited to generating Kubernetes manifests and objects.
+- **Argo CD** syncs `Stack` manifests from Git to your cluster, like any other Kubernetes resource.
+- **The Pulumi Kubernetes Operator** watches for `Stack` objects and runs the Pulumi deployment in a dedicated workspace pod.
 
-Pulumi with PKO breaks these limitations:
+A change flows through the system like this:
 
-- **Provision entire clusters**: Create new Kubernetes clusters, then deploy applications into them
-- **Use real programming languages**: Write infrastructure as code using TypeScript, Python, Go, .NET, Java, or YAML
-- **Access the full cloud API**: Provision any cloud resource supported by your cloud provider
-- **Manage complex dependencies**: Handle intricate relationships between cloud resources and applications
+1. You commit a change to a `Stack` manifest (or to the Pulumi program it points at).
+1. Argo CD detects the change in Git and syncs the `Stack` object to the cluster.
+1. PKO reconciles the `Stack`, running `pulumi up` in a workspace pod.
+1. PKO reports the result back through the `Stack` object's status, which Argo CD surfaces in its UI.
 
-## How it works
-
-The integration works through Kubernetes custom resources:
-
-1. **ArgoCD manages Stack objects**: ArgoCD treats Pulumi `Stack` resources like any other Kubernetes manifest
-2. **PKO executes Pulumi operations**: The Pulumi Kubernetes Operator watches for Stack objects and runs `pulumi up` to create infrastructure
-3. **Clean separation**: ArgoCD users think in terms of Stack objects, while Pulumi handles the infrastructure details
+Because the deployment runs inside the operator, there is no pipeline step that invokes the Pulumi CLI. Argo CD's role is to keep the desired `Stack` specification in sync with Git.
 
 ## Prerequisites
 
-Before you begin, ensure you have:
+Before you begin, make sure you have:
 
-- A Kubernetes cluster with ArgoCD installed
-- [Pulumi Kubernetes Operator](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) installed in your cluster
-- A Git repository containing your Pulumi programs
-- Access to Pulumi Cloud or a self-managed backend
+- A Kubernetes cluster with [Argo CD installed](https://argo-cd.readthedocs.io/en/stable/getting_started/).
+- The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) installed in the cluster.
+- A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+- A Git repository containing your Pulumi program.
+- A Git repository (or a directory within an existing repository) for the Kubernetes manifests that Argo CD will sync.
 
-## Basic setup
+This guide assumes you are using Pulumi Cloud. PKO also supports self-managed state backends through the `Stack` resource's `spec.backend` field—see [States & backends](/docs/iac/concepts/state-and-backends/) for details.
 
-### 1. Install ArgoCD
+## Authenticate with Pulumi Cloud
 
-If you haven't already installed ArgoCD, you can install it using the official manifests:
+When you use Pulumi Cloud, your cluster only needs to authenticate to Pulumi Cloud. [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then delivers cloud credentials, secrets, and configuration to every `Stack` consistently, so you don't have to store separate cloud provider keys in the cluster for each stack.
 
-```bash
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+### Attach an ESC environment
+
+Use the `spec.environment` field on a `Stack` to attach one or more ESC environment names. The configuration and secrets from those environments—including dynamically brokered, short-lived cloud credentials—become available to your Pulumi program automatically:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: webapp-staging
+  namespace: pulumi
+spec:
+  serviceAccountName: webapp
+  stack: myorg/webapp/staging
+  projectRepo: https://github.com/myorg/pulumi-webapp.git
+  branch: main
+  environment:
+    - aws-credentials
+    - shared-config
 ```
 
-Alternatively, use the Helm chart for more configuration options:
+### Eliminate static tokens with OIDC
+
+The recommended way to give the cluster its Pulumi Cloud identity is OpenID Connect (OIDC). Register the Kubernetes cluster as a Pulumi Cloud [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/), and PKO workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. No long-lived `PULUMI_ACCESS_TOKEN` secret is stored in the cluster.
+
+See [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/) for setup steps. Once the issuer is configured, the `Stack` manifests in this guide need no `envRefs.PULUMI_ACCESS_TOKEN` block.
+
+### Use a static access token (alternative)
+
+For clusters that are not registered as OIDC issuers, store a Pulumi [access token](/docs/administration/access-identity/access-tokens/) in a Kubernetes Secret and reference it from the `Stack`. Prefer an organization or team token over a personal token:
 
 ```bash
-helm repo add argo https://argoproj.github.io/argo-helm
-helm install argocd argo/argo-cd -n argocd --create-namespace
+kubectl create secret generic pulumi-access-token \
+  --from-literal=token=$PULUMI_ACCESS_TOKEN \
+  -n pulumi
 ```
 
-### 2. Create a Pulumi Stack manifest
+Reference the secret with `spec.envRefs`:
 
-Create a Kubernetes manifest file that defines your Pulumi Stack. This example creates a simple web application:
+```yaml
+spec:
+  envRefs:
+    PULUMI_ACCESS_TOKEN:
+      type: Secret
+      secret:
+        name: pulumi-access-token
+        key: token
+```
+
+{{% notes type="info" %}}
+Static tokens are long-lived credentials stored in the cluster. Where possible, use the [OIDC approach](#eliminate-static-tokens-with-oidc) instead so workspace pods receive short-lived tokens.
+{{% /notes %}}
+
+## Define a Pulumi Stack manifest
+
+A `Stack` manifest tells PKO which Pulumi stack to deploy, where the program lives, and how to run it. The example below also declares a service account and the cluster role bindings the deployment needs to create resources in the cluster.
 
 ```yaml
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: pulumi-stack-sa
-  namespace: default
+  name: webapp
+  namespace: pulumi
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pulumi-stack-sa:system:auth-delegator
+  name: webapp:system:auth-delegator
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 roleRef:
@@ -95,13 +128,13 @@ roleRef:
   name: system:auth-delegator
 subjects:
 - kind: ServiceAccount
-  name: pulumi-stack-sa
-  namespace: default
+  name: webapp
+  namespace: pulumi
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: pulumi-stack-sa:cluster-admin
+  name: webapp:cluster-admin
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 roleRef:
@@ -110,40 +143,48 @@ roleRef:
   name: cluster-admin
 subjects:
 - kind: ServiceAccount
-  name: pulumi-stack-sa
-  namespace: default
+  name: webapp
+  namespace: pulumi
 ---
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
   name: webapp-dev
-  namespace: default
+  namespace: pulumi
   annotations:
     argocd.argoproj.io/sync-wave: "2"
+    pulumi.com/reconciliation-request: "before-first-update"
     link.argocd.argoproj.io/external-link: https://app.pulumi.com/myorg/webapp/dev
 spec:
-  serviceAccountName: pulumi-stack-sa
+  serviceAccountName: webapp
   stack: myorg/webapp/dev
-  projectRepo: "https://github.com/myorg/pulumi-webapp.git"
+  projectRepo: https://github.com/myorg/pulumi-webapp.git
   branch: main
   refresh: true
-  continueResyncOnCommitMatch: true
-  resyncFrequencySeconds: 300
   destroyOnFinalize: true
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-access-token
-        key: token
+  environment:
+    - aws-credentials
   config:
-    webapp:environment: development
     webapp:replicas: "2"
 ```
 
-### 3. Create an ArgoCD Application
+The key `spec` fields are:
 
-Create an ArgoCD Application that monitors your Git repository:
+- `serviceAccountName`: the service account the workspace pod runs as.
+- `stack`: the fully qualified Pulumi stack name, in `organization/project/stack` form.
+- `projectRepo` and `branch`: the Git location of the Pulumi program PKO executes. Use `commit` instead of `branch` to pin an exact revision.
+- `refresh`: refreshes Pulumi state before each update so it reflects the real state of your infrastructure.
+- `destroyOnFinalize`: runs `pulumi destroy` when the `Stack` object is deleted, so removing the manifest from Git tears the infrastructure down.
+
+The Pulumi program referenced by `projectRepo` can be written in any supported language—TypeScript, Python, Go, .NET, Java, or YAML. The `Stack` manifest itself is language-agnostic, so this guide uses a single set of YAML examples.
+
+{{% notes type="warning" %}}
+The `cluster-admin` binding above is shown for simplicity. For production, grant the service account only the permissions its Pulumi program actually needs.
+{{% /notes %}}
+
+## Create an Argo CD Application
+
+An Argo CD `Application` tells Argo CD which Git directory to sync and where to apply the resulting manifests. Point its `source.path` at the directory containing your `Stack` manifest:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -156,244 +197,148 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/myorg/webapp-infrastructure.git
+    repoURL: https://github.com/myorg/webapp-manifests.git
     targetRevision: main
     path: manifests/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: pulumi
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-    - CreateNamespace=true
 ```
 
-### 4. Configure secrets
+The `syncPolicy.automated` block keeps the cluster in sync with Git without manual intervention: `prune` removes resources deleted from Git, and `selfHeal` reverts out-of-band changes. The `resources-finalizer.argocd.argoproj.io/background` finalizer pairs with `destroyOnFinalize` on the `Stack`—when the `Application` is deleted, Argo CD removes the `Stack` object in the background, which triggers PKO to destroy the infrastructure.
 
-Create a Kubernetes Secret containing your Pulumi access token:
+## Build a trunk-based GitOps workflow
 
-```bash
-kubectl create secret generic pulumi-access-token \
-  --from-literal=token=$PULUMI_ACCESS_TOKEN \
-  -n default
-```
+In trunk-based development, contributors merge small changes into a single main branch frequently. Because Argo CD reconciles `Stack` manifests from Git rather than running pipeline steps, each environment is represented by its own `Stack` manifest in its own directory, watched by its own `Application`. Promoting a change means changing which Git ref a `Stack` tracks—not running a deploy command.
 
-## Advanced patterns
+### Preview infrastructure changes in a pull request
 
-### Multi-cluster deployments
-
-ArgoCD excels at managing deployments across multiple clusters. You can use this capability with Pulumi to provision infrastructure in different regions or environments:
+When a pull request is opened against a Pulumi program, you want a dry run rather than a deployment. Add a `Stack` manifest with `spec.preview: true` and point `spec.branch` at the PR's feature branch:
 
 ```yaml
-# Production cluster in us-west-2
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: webapp-prod-usw2
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/myorg/webapp-infrastructure.git
-    targetRevision: main
-    path: manifests/prod
-  destination:
-    server: https://prod-usw2-cluster.example.com
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
----
-# Production cluster in eu-west-1
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: webapp-prod-euw1
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/myorg/webapp-infrastructure.git
-    targetRevision: main
-    path: manifests/prod
-  destination:
-    server: https://prod-euw1-cluster.example.com
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
-```
-
-### Creating clusters and applications together
-
-One of the most powerful features of this integration is the ability to provision entire environments, including the Kubernetes cluster itself:
-
-```yaml
-# First, create the cluster
 apiVersion: pulumi.com/v1
 kind: Stack
 metadata:
-  name: cluster-dev
-  namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
+  name: webapp-preview
+  namespace: pulumi
 spec:
-  serviceAccountName: pulumi-stack-sa
-  stack: myorg/eks-cluster/dev
-  projectRepo: "https://github.com/myorg/pulumi-eks.git"
-  branch: main
-  destroyOnFinalize: true
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-access-token
-        key: token
-  config:
-    aws:region: us-west-2
-    cluster:nodeCount: "3"
-    cluster:instanceType: t3.medium
----
-# Then deploy applications to the cluster
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: apps-dev
-  namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
-spec:
-  serviceAccountName: pulumi-stack-sa
-  stack: myorg/k8s-apps/dev
-  projectRepo: "https://github.com/myorg/pulumi-apps.git"
-  branch: main
-  prerequisites:
-  - type: Stack
-    requirement: cluster-dev
-    succeededWithinDuration: 30m
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-access-token
-        key: token
-    KUBECONFIG:
-      type: StackOutput
-      stack: cluster-dev
-      output: kubeconfig
+  serviceAccountName: webapp
+  stack: myorg/webapp/preview
+  projectRepo: https://github.com/myorg/pulumi-webapp.git
+  branch: feature/add-cache
+  preview: true
+  environment:
+    - aws-credentials
 ```
 
-### Using ArgoCD sync waves
+PKO runs `pulumi preview` instead of `pulumi up`. The `Stack` status surfaces the preview link and program outputs without changing any infrastructure, and Argo CD shows the preview `Stack` as healthy once the dry run succeeds. Point the preview `Stack` at a dedicated Pulumi stack (`myorg/webapp/preview` above) to avoid state contention with your real environments. See [Preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#preview-mode) in the PKO documentation for more detail.
 
-ArgoCD sync waves allow you to control the order of resource deployment. This is particularly useful when you have dependencies between different Pulumi stacks:
+### Deploy to dev or staging on merge to main
+
+Your dev or staging `Stack` tracks the main branch:
 
 ```yaml
-# Wave 1: Create secrets and service accounts
+spec:
+  stack: myorg/webapp/staging
+  branch: main
+```
+
+When a pull request merges, PKO's branch polling detects the new commit on `main` and runs `pulumi up` against the staging environment. Tune the polling interval with `spec.resyncFrequencySeconds`, or trigger an immediate Argo CD sync.
+
+### Promote to production with a release branch
+
+Production should not track `main` directly. PKO's `spec.branch` field takes a branch reference, so the Argo CD equivalent of a moving release tag is a long-lived `release` branch that you fast-forward to a vetted commit to promote:
+
+```yaml
+spec:
+  stack: myorg/webapp/production
+  branch: release
+```
+
+To promote, advance the `release` branch to the commit you have validated in staging and push it. PKO reconciles production to that commit on its next sync.
+
+If you need fully immutable, auditable releases, pin `spec.commit` to an exact SHA and update it for each promotion instead:
+
+```yaml
+spec:
+  stack: myorg/webapp/production
+  commit: a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0
+```
+
+A moving `release` branch makes promotion a single Git operation; a pinned `commit` records exactly which revision is live. Either way, promotion is an explicit, reviewable change in Git.
+
+A typical repository layout for this workflow keeps one directory per environment:
+
+```text
+webapp-manifests/
+├── manifests/
+│   ├── preview/
+│   │   └── stack.yaml        # tracks the PR branch, preview: true
+│   ├── staging/
+│   │   └── stack.yaml        # tracks main
+│   └── production/
+│       └── stack.yaml        # tracks the release branch
+└── applications/
+    ├── preview.yaml          # Argo CD Application for manifests/preview
+    ├── staging.yaml          # Argo CD Application for manifests/staging
+    └── production.yaml       # Argo CD Application for manifests/production
+```
+
+## Order deployments with sync waves
+
+Argo CD sync waves control the order in which resources are applied. Annotate resources with `argocd.argoproj.io/sync-wave`; lower numbers are applied first. The [`Stack` manifest above](#define-a-pulumi-stack-manifest) uses waves to apply the RBAC resources (wave `1`) before the `Stack` itself (wave `2`):
+
+```yaml
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
----
-# Wave 2: Deploy infrastructure
-metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
----
-# Wave 3: Deploy applications
-metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
 ```
 
-## Best practices
+For dependencies between Pulumi stacks—for example, creating a cluster before deploying applications into it—use the `Stack` resource's own `spec.prerequisites` field, which lets one `Stack` wait for another to succeed. See [Stack Prerequisites](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#stack-prerequisites) in the PKO documentation.
 
-### Resource organization
+## Monitor deployments
 
-- **Separate repositories**: Keep infrastructure code and manifests in separate repositories for better security and access control
-- **Environment branching**: Use different branches or directories for different environments (dev, staging, prod)
-- **Stack naming**: Use consistent naming conventions for your Pulumi stacks that align with your ArgoCD applications
-
-### Security considerations
-
-- **Service account permissions**: Grant minimal required permissions to your Pulumi stack service accounts
-- **Secret management**: Use Kubernetes secrets for sensitive data and consider external secret management tools
-- **Access control**: Leverage ArgoCD's RBAC features to control who can deploy to which environments
-
-### Monitoring and observability
-
-- **External links**: Use ArgoCD's external link annotations to link directly to Pulumi Cloud for detailed deployment information:
+- **Link to Pulumi Cloud**: The `link.argocd.argoproj.io/external-link` annotation adds a link from the Argo CD UI directly to the stack in Pulumi Cloud, where you can see detailed deployment information:
 
   ```yaml
-  annotations:
-    link.argocd.argoproj.io/external-link: https://app.pulumi.com/myorg/mystack/dev
+  metadata:
+    annotations:
+      link.argocd.argoproj.io/external-link: https://app.pulumi.com/myorg/webapp/dev
   ```
 
-- **Health checks**: Configure appropriate health checks for your Pulumi Stack resources
-- **Notifications**: Set up ArgoCD notifications for deployment failures or successes
-
-### Performance optimization
-
-- **Resync frequency**: Adjust `resyncFrequencySeconds` based on your needs - shorter intervals provide faster drift detection but consume more resources
-- **Refresh settings**: Enable `refresh: true` to ensure state accuracy, but be aware of the performance impact
-- **Resource limits**: Set appropriate resource limits in your PKO workspace templates
+- **Health status**: PKO ships custom Argo CD health checks for the `Stack` resource, so Argo CD reports an accurate `Healthy`, `Progressing`, or `Degraded` status that reflects the underlying Pulumi deployment.
+- **Force a sync**: The `pulumi.com/reconciliation-request` annotation triggers PKO to reconcile the `Stack`. Setting it to a new value—`"before-first-update"` for the initial deployment, or any unique string afterward—requests a fresh update.
 
 ## Troubleshooting
 
-### Common issues
-
 **Stack deployment fails**
 
-- Check the Pulumi Stack's status in the ArgoCD UI
-- Examine the PKO pod logs: `kubectl logs -l app.kubernetes.io/name=pulumi-kubernetes-operator`
-- Verify your Pulumi access token is correct and has the required permissions
+- Check the `Stack` object's status in the Argo CD UI or with `kubectl describe stack <name> -n pulumi`.
+- PKO runs each deployment in a workspace pod. List the pods with `kubectl get pods -n pulumi` and inspect the logs of the one for the failing stack with `kubectl logs <pod-name> -n pulumi`.
+- Verify that the cluster can authenticate to Pulumi Cloud—confirm the OIDC issuer is configured, or that the access token secret exists and has the required permissions.
 
-**ArgoCD shows Stack as "Unknown" or "Progressing"**
+**Argo CD shows the Stack as `Unknown` or `Progressing`**
 
-- The PKO includes custom health checks for Stack resources
-- Check if the Stack is waiting for dependencies to be resolved
-- Verify that the referenced Git repository and path are accessible
+- PKO provides custom health checks for `Stack` resources. A `Progressing` status means the deployment is still in flight; if it persists, check the workspace pod logs.
+- Check whether the `Stack` is waiting on a prerequisite to be satisfied.
+- Verify that the referenced Git repository and path are accessible from the cluster.
 
-**Stack stuck in "Updating" state**
+**Stack stuck in an updating state**
 
-- Check for resource conflicts or locks in your cloud provider
-- Review the Pulumi deployment logs in the workspace pod
-- Consider enabling `refresh: true` to resolve state inconsistencies
+- Check for resource conflicts or locks in your cloud provider.
+- Review the workspace pod logs for the stack.
+- Enable `refresh: true` so PKO reconciles Pulumi state with the real state of your infrastructure before each update.
 
-### Getting help
+## Next steps
 
-- Review the [Pulumi Kubernetes Operator documentation](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/)
-- Check the [PKO GitHub repository](https://github.com/pulumi/pulumi-kubernetes-operator) for known issues
-- Visit the [ArgoCD documentation](https://argo-cd.readthedocs.io/) for ArgoCD-specific guidance
-- Join the [Pulumi Community Slack](https://slack.pulumi.com/) for community support
-
-## Example: GitOps workflow
-
-Here's a example that demonstrates a typical GitOps workflow/directory strucvture using ArgoCD and PKO:
-
-1. **Infrastructure repository** (`infrastructure/`): Contains Pulumi programs for creating cloud resources
-2. **Application repository** (`applications/`): Contains Pulumi programs for deploying applications
-3. **GitOps repository** (`gitops/`): Contains Kubernetes manifests for ArgoCD Applications and Pulumi Stacks
-
-```bash
-# Repository structure
-gitops-repo/
-├── clusters/
-│   ├── dev/
-│   │   ├── infrastructure.yaml      # Stack for dev cluster creation
-│   │   └── applications.yaml        # Stack for dev applications
-│   └── prod/
-│       ├── infrastructure.yaml      # Stack for prod cluster creation
-│       └── applications.yaml        # Stack for prod applications
-└── argocd/
-    ├── dev-app.yaml                 # ArgoCD App for dev environment
-    └── prod-app.yaml                # ArgoCD App for prod environment
-```
-
-This separation allows different teams to manage different aspects:
-
-- **Platform team**: Manages infrastructure Pulumi programs and cluster creation
-- **Application teams**: Manage application Pulumi programs and deployments
-- **Operations team**: Manages GitOps repository and ArgoCD configuration
-
-The result is a powerful, scalable GitOps workflow that combines the best of ArgoCD's orchestration capabilities with Pulumi's infrastructure provisioning power.
+- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
+- [Pulumi ESC](/docs/esc/)
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/)
+- [Kubernetes provider](/registry/packages/kubernetes/)
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/)
+- [Argo CD documentation](https://argo-cd.readthedocs.io/)
+- [Pulumi Kubernetes Operator on GitHub](https://github.com/pulumi/pulumi-kubernetes-operator)
