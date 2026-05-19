@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["cam-soper"]
 ---
 
 **Cloud infrastructure testing is the practice of validating the code that defines your cloud resources the same way you'd validate application code: with unit tests, property tests, integration tests, and security tests running in CI before changes reach production.** When infrastructure lives in source control as [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), the same engineering disciplines that catch bugs in applications can catch bugs in VPCs, IAM policies, Kubernetes clusters, and DNS records before they cause an outage or a compliance finding.
