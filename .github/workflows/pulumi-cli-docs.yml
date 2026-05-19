@@ -105,13 +105,9 @@ jobs:
         run: |
           echo -n "${{ env.PULUMI_VERSION }}" > ./static/latest-version
       - name: Update versions
-        run: node scripts/get-versions.js
+        run: node scripts/get-cli-versions.js
         env:
           GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-      - name: Update version lists
-        run: |
-          NL=$'\n'
-          sed -e "s/<tbody>/<tbody>\\${NL}        {{< changelog-table-row version=\"${{ env.PULUMI_VERSION}}\" date=\"$(date +%Y-%m-%d)\" showChecksum=\"true\" >}}/" -i ./content/docs/install/versions.md
       - name: git status
         run: git status && git diff
       - name: commit changes
