@@ -147,7 +147,7 @@ Concrete patterns that help:
 * **Encrypt ePHI by default.** Customer-managed keys (KMS, Cloud KMS, Key Vault) for storage; TLS 1.2+ for transit. Encode this in Pulumi components so every new resource inherits compliant defaults.
 * **Lock down access with least-privilege IAM.** Short-lived credentials, MFA, just-in-time elevation. Treat any wildcard permission as a finding.
 * **Centralize secrets.** Use [Pulumi ESC](/product/esc/), AWS Secrets Manager, HashiCorp Vault, or Azure Key Vault. No plaintext secrets in code or state.
-* **Enforce policy as code.** [Pulumi CrossGuard](/docs/insights/policy/) policies in CI block insecure configurations (public S3, missing encryption, non-HIPAA-eligible service usage) before they merge.
+* **Enforce policy as code.** [Pulumi Policies](/docs/insights/policy/) in CI block insecure configurations (public S3, missing encryption, non-HIPAA-eligible service usage) before they merge.
 * **Log everything.** CloudTrail, Activity Log, Cloud Audit Logs into a central store with retention that matches your policy. Alert on anything that looks like PHI exfiltration.
 * **Audit your IaC.** Because every change is a pull request, you have a defensible record of who changed what and when. That record is exactly the artifact an OCR investigator asks for.
 
