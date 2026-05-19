@@ -94,7 +94,7 @@ Property tests are well suited to enforcing organizational rules like:
 * "All compute lives inside a non-default VPC with private subnets."
 * "Every service has logging enabled and shipped to the central log account."
 
-In Pulumi, these checks are usually written as [policy as code](/docs/insights/policy/) using CrossGuard. The same policy code runs against `pulumi preview` (blocking the merge) and as a deploy-time gate.
+In Pulumi, these checks are usually written as [policy as code](/docs/insights/policy/) using Pulumi Policies. The same policy code runs against `pulumi preview` (blocking the merge) and as a deploy-time gate.
 
 ## What is integration testing for infrastructure?
 
@@ -118,7 +118,7 @@ Security testing for IaC has two halves.
 
 **Static scans of the code** catch known bad configurations before deploy: hardcoded secrets, public buckets, missing encryption, dangerous IAM. Tools like Checkov, Terrascan, Trivy, and Snyk IaC scan Terraform, CloudFormation, and Kubernetes manifests against built-in rulesets; Checkov also has a Pulumi-output mode. Run them in CI on every change.
 
-**Policy as code** enforces the rules your security team writes for the organization itself. Pulumi [CrossGuard](/docs/insights/policy/) lets you author policies in TypeScript/JavaScript, Python, or OPA's Rego against the actual Pulumi resource model, with three enforcement levels (`advisory`, `mandatory`, `disabled`). (CrossGuard policies apply to Pulumi stacks written in any supported language, including Go, .NET, and Java.) Policies run during `pulumi preview` and `pulumi up`, so a non-compliant change can't get past CI.
+**Policy as code** enforces the rules your security team writes for the organization itself. [Pulumi Policies](/docs/insights/policy/) lets you author policies in TypeScript/JavaScript, Python, or OPA's Rego against the actual Pulumi resource model, with three enforcement levels (`advisory`, `mandatory`, `disabled`). (Pulumi Policies apply to Pulumi stacks written in any supported language, including Go, .NET, and Java.) Policies run during `pulumi preview` and `pulumi up`, so a non-compliant change can't get past CI.
 
 Beyond IaC-specific scans, the wider security testing menu still applies:
 
@@ -133,9 +133,9 @@ Whatever the mix, the consistent rule is **shift left**: every security check th
 A common shape for an IaC pipeline:
 
 1. **On every commit:** lint, static security scan (Checkov / Trivy), unit tests.
-1. **On every pull request:** the above, plus `pulumi preview`, plus CrossGuard policies in advisory mode.
+1. **On every pull request:** the above, plus `pulumi preview`, plus Pulumi policies in advisory mode.
 1. **On merge to main:** `pulumi preview` against staging, deploy to staging, run integration tests against staging.
-1. **On promotion to production:** CrossGuard policies in mandatory mode, `pulumi up`, smoke tests against production.
+1. **On promotion to production:** Pulumi policies in mandatory mode, `pulumi up`, smoke tests against production.
 
 The principle is the same as application CI: fast feedback for changes in progress, slower and broader checks closer to production.
 
@@ -145,7 +145,7 @@ The principle is the same as application CI: fast feedback for changes in progre
 |---|---|
 | Unit testing | Jest, Vitest, pytest, `go test`, xUnit, JUnit (standard test runners for the language you write IaC in) |
 | Static IaC scanning | Checkov, Terrascan, Trivy, Snyk IaC |
-| Policy as code | [Pulumi CrossGuard](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Property and integration testing | Pulumi automation API, Terratest, Kitchen-Terraform |
 | Cloud emulation | LocalStack (AWS), Moto (AWS), Azurite (Azure) |
 | Image and dependency scanning | Trivy, Snyk, Anchore, Grype |
@@ -160,7 +160,7 @@ Pulumi treats infrastructure as software, which means every testing tool that ex
 * **Real programming languages.** Write Pulumi programs in TypeScript, Python, Go, C#, Java, or YAML, and use the same test runners and mocking libraries you already know.
 * **Unit testing with mocks.** Pulumi's [test mocks](/docs/iac/guides/testing/unit/) replace cloud provider calls with canned responses, so unit tests run in milliseconds and don't need any cloud credentials.
 * **Integration testing through the automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you script `pulumi up` and `pulumi destroy` from a test runner, so integration tests can deploy and tear down ephemeral stacks programmatically.
-* **CrossGuard policy as code.** [CrossGuard](/docs/insights/policy/) policies run during preview and update, blocking changes that violate organizational rules. Policy packs are versioned and shipped alongside your code.
+* **Policy as code.** [Pulumi Policies](/docs/insights/policy/) run during preview and update, blocking changes that violate organizational rules. Policy packs are versioned and shipped alongside your code.
 * **CI/CD integration.** Pulumi runs in every major CI/CD platform via the [GitHub Actions integration](/docs/iac/guides/continuous-delivery/github-actions/) or any other system that can run a CLI.
 
 [Get started with Pulumi](/docs/get-started/) to provision and test infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
@@ -181,7 +181,7 @@ No. Test the resources and modules that carry real risk: anything with security 
 
 ### What is "property testing" in the IaC sense?
 
-A check that runs against the planned or deployed resource graph and asserts properties on it (for example: every database has backups enabled, every Kubernetes cluster uses the supported version). In Pulumi, property tests are typically written as [CrossGuard policies](/docs/insights/policy/).
+A check that runs against the planned or deployed resource graph and asserts properties on it (for example: every database has backups enabled, every Kubernetes cluster uses the supported version). In Pulumi, property tests are typically written as [Pulumi policies](/docs/insights/policy/).
 
 ### How do I test infrastructure without spending a lot on cloud resources?
 
@@ -201,7 +201,7 @@ Policy as code is the operating model for organization-wide rules: things like "
 
 ### Do compliance frameworks (SOC 2, HIPAA, PCI) accept IaC test results as evidence?
 
-Yes — SOC 2, HIPAA, and PCI DSS audits routinely accept IaC test output and policy-as-code run logs as evidence that a control is enforced. A CrossGuard policy run, for example, produces a record of a control being checked against a specific change at a specific time, which is more concrete than a written policy with no enforcement mechanism behind it.
+Yes — SOC 2, HIPAA, and PCI DSS audits routinely accept IaC test output and policy-as-code run logs as evidence that a control is enforced. A Pulumi Policies run, for example, produces a record of a control being checked against a specific change at a specific time, which is more concrete than a written policy with no enforcement mechanism behind it.
 
 ### How do I introduce testing to an existing IaC codebase?
 
@@ -209,7 +209,7 @@ Start with the cheapest layer that produces the most value: static scanning and 
 
 ## Learn more
 
-Pulumi lets you take advantage of the testing frameworks, mock libraries, and CI/CD tooling that already work for your application code, and apply them to your infrastructure. Combined with [CrossGuard policy as code](/docs/insights/policy/), [the automation API](/docs/iac/packages-and-automation/automation-api/), and a real testing pyramid, that closes the gap between how teams treat application code and how they treat the cloud infrastructure it runs on. [Get started today](/docs/get-started/).
+Pulumi lets you take advantage of the testing frameworks, mock libraries, and CI/CD tooling that already work for your application code, and apply them to your infrastructure. Combined with [Pulumi policy as code](/docs/insights/policy/), [the automation API](/docs/iac/packages-and-automation/automation-api/), and a real testing pyramid, that closes the gap between how teams treat application code and how they treat the cloud infrastructure it runs on. [Get started today](/docs/get-started/).
 
 Related reading:
 
