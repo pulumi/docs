@@ -3,8 +3,10 @@ title: An error occurred (ExpiredToken) when calling the ListBuckets operation
 allow_long_title: true
 meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_image: /images/what-is/resolve-list-buckets-expired-token-meta.png
 type: what-is
 page_title: An error occurred (ExpiredToken) when calling the ListBuckets operation
+authors: ["torian-crane"]
 ---
 
 The error message "An error occurred (ExpiredToken) when calling the ListBuckets operation" in AWS (Amazon Web Services) typically means that the temporary credentials used for the AWS CLI (Command Line Interface) operation have expired. AWS employs temporary credentials for services like IAM roles and AWS Security Token Service (STS), which expire for security reasons. When you attempt an AWS CLI operation with these expired credentials, this error arises.

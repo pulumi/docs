@@ -3,8 +3,10 @@ title: Unable to locate credentials
 allow_long_title: true
 meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_image: /images/what-is/resolve-unable-to-locate-credentials-meta.png
 type: what-is
 page_title: Unable to locate credentials
+authors: ["torian-crane"]
 ---
 
 The error message "Unable to locate credentials" typically occurs in AWS (Amazon Web Services) when the AWS CLI or SDKs cannot find the necessary credentials for authentication. AWS requires a valid AWS Access Key ID and AWS Secret Access Key or an IAM role with associated permissions to access its services. This error arises when these credentials are either missing or incorrectly configured.

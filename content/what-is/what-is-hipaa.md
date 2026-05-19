@@ -2,8 +2,10 @@
 title: What is HIPAA?
 meta_desc: |
     Understand what HIPAA is, its key requirements, compliance implications for healthcare organizations, and how technology can help meet HIPAA standards.
+meta_image: /images/what-is/what-is-hipaa-meta.png
 type: what-is
 page_title: "What is HIPAA?"
+authors: ["asaf-ashirov"]
 ---
 
 HIPAA, or the Health Insurance Portability and Accountability Act, is a federal law passed in 1996 that established national standards for protecting sensitive patient health information from being disclosed without the patient's consent or knowledge. HIPAA created regulations that mandate how healthcare providers, health plans, healthcare clearinghouses, and business associates handle Protected Health Information (PHI).

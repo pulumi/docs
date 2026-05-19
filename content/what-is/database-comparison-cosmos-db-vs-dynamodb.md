@@ -3,6 +3,7 @@ title: "Database Comparison: Cosmos DB vs DynamoDB"
 meta_desc: |
      Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
+meta_image: /images/what-is/database-comparison-cosmos-db-vs-dynamodb-meta.png
 type: what-is
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs DynamoDB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#dynamo-db-vs-cosmos-db) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**

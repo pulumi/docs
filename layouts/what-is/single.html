@@ -34,6 +34,19 @@
                 <span aria-hidden="true">·</span>
             {{ end }}
             <span>{{ $readTime }} min read</span>
+            {{ with .Params.authors }}
+                <span aria-hidden="true">·</span>
+                {{ range $id := . }}
+                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                    {{ $authorData := index site.Data.team.team $id }}
+                    {{ if $authorData }}
+                        <a class="inline-flex items-center gap-2 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" rel="author" data-track="{{ $authorData.name | urlize }}-byline">
+                            <img class="w-6 h-6 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
+                            <span>{{ $authorData.name }}</span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
         </div>
     </div>
 </header>
@@ -78,14 +91,12 @@
 </section>
 
 <section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
-    <div class="w-full bg-violet-50 card p-6 lg:p-16 lg:pt-24 text-center">
+    <div class="w-full bg-violet-50 card p-8 lg:p-12 text-center">
         <div class="max-w-xl mx-auto">
-                <h2 class="text-gray-900 hidden lg:block px-0 lg:px-16">Get started today</h2>
-                <h4 class="text-gray-900 mt-0 lg:hidden">Get started today</h4>
-                <p class="text-gray-700">Pulumi is open source and free to get started. Deploy your first stack today.</p>
-                <div class="mt-16">
-                    <a class="btn" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
-                </div>
+                <h2 class="text-gray-900 hidden lg:block mt-0 mb-4">Get started today</h2>
+                <h4 class="text-gray-900 mt-0 mb-4 lg:hidden">Get started today</h4>
+                <p class="text-gray-700 mb-8">Pulumi is open source and free to get started. Deploy your first stack today.</p>
+                <a class="btn btn-primary btn-xl" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
         </div>
     </div>
 </section>

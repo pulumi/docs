@@ -24,10 +24,6 @@ sections:
 - type: button-cards
   heading: Capabilities
   cards:
-  - icon: books
-    heading: Projects & Stacks
-    description: Manage infrastructure projects and stacks through the Pulumi Cloud web interface with role-based access controls, team permissions, and stack tagging.
-    link: /docs/deployments/projects-and-stacks/
   - icon: rocket-launch
     heading: Deployments
     description: Managed CI/CD platform with git integration, automated drift detection and remediation, ephemeral review stacks for pull requests, scheduled operations, and TTL-based cleanup for temporary infrastructure.

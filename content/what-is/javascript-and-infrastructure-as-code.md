@@ -3,6 +3,7 @@ title: JavaScript and Infrastructure as Code
 meta_desc: |
     Learn why JavaScript and Infrastructure as Code are a perfect match for creating versionable, testable and repeatable infrastructure.
 
+meta_image: /images/what-is/javascript-and-infrastructure-as-code-meta.png
 type: what-is
 page_title: "JavaScript and Infrastructure as Code"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering](/blog/what-exactly-is-cloud-engineering/) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable](/what-is/how-to-step-up-cloud-infrastructure-testing/) and repeatable.

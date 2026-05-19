@@ -324,7 +324,7 @@ products:
               more_info: |
                 Invite new team members and share projects to collaborate on infrastructure.
 
-                View [timelines](/docs/platform/projects-and-stacks/#stack-activity) that show diffs of changed resources and who made the changes.
+                View timelines in the [Pulumi Cloud](https://app.pulumi.com/signin) UI that show diffs of changed resources and who made the changes.
 
                 [Tag stacks](/docs/concepts/stack/#stack-tags) for easier filtering and searching.
 

@@ -4,6 +4,7 @@ meta_desc: |
     Infrastructure as Software (IaS) is the next step in managing your cloud environments by adopting
     tried and true software engineering best practices.
 
+meta_image: /images/what-is/what-is-infrastructure-as-software-meta.png
 type: what-is
 page_title: "Infrastructure as Software: The Next Step in Cloud Management"
 
@@ -28,6 +29,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 [Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code) is now a widely adopted practice. With IaC, you describe your infrastructure programmatically using a tool that provides its own domain-specific language (DSL). IaC is a huge improvement over earlier ways of managing infrastructure, such as using a web console or having a collection of batch scripts. With IaC, you can apply many of the best engineering practices, which you already use with application software, to your infrastructure. Some best practices include:

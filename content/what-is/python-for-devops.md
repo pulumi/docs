@@ -3,6 +3,7 @@ title: Python for DevOps
 meta_desc: |
      Learn Python for DevOps with Pulumi’s Cloud Engineering Platform to deliver modern cloud applications faster and speed innovation.
 
+meta_image: /images/what-is/python-for-devops-meta.png
 type: what-is
 page_title: "Python for DevOps"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 [Python](/why-is-python-so-popular/) is a popular, approachable programming language. It’s easy both to write your own Python code and to understand the code other people have written. Python is open source and the Python community has developed a large number of tools, libraries, frameworks and support groups. Even though Python is a great language for people just learning to program, it’s not a toy. Thanks to its well-designed syntax, modularity, support, and ecosystem, it’s easy to scale up from simple projects to complex ones. It is common to use Python for DevOps to tackle everything from web scraping to machine learning to managing infrastructure in the cloud.

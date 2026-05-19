@@ -3,6 +3,7 @@ title: Infrastructure as Code for Kubernetes
 meta_desc: |
      Infrastructure as code for Kubernetes is a truly effective way to manage your clusters, making them versionable, testable and scalable.
 
+meta_image: /images/what-is/infrastructure-as-code-for-kubernetes-meta.png
 type: what-is
 page_title: "Infrastructure as Code for Kubernetes"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) (IaC) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure, including your Kubernetes clusters, versionable, testable and repeatable.
