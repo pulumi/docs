@@ -26,7 +26,7 @@ social:
         Use Pulumi and ESC to manage Snowflake access without long-lived secrets.
 ---
 
-Managing a modern data platform requires more than just creating a few tables. As data teams scale, the complexity of managing compute resources, access controls, and secure credentials grows quickly. Manual governance becomes impractical once warehouses, roles, and grants span multiple environments.
+Managing a modern data platform requires more than creating a few tables. As data teams scale, the complexity of managing compute resources, access controls, and secure credentials grows quickly. Manual governance becomes impractical once warehouses, roles, and grants span multiple environments.
 
 Pulumi ESC can provide short-lived Snowflake credentials so your Pulumi programs can manage warehouses, databases, and RBAC roles without storing long-lived private keys or passwords in CI/CD.
 
