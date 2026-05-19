@@ -22,7 +22,7 @@ Every resource constructor in the Go SDK accepts an `Args` struct whose fields a
 
 ### Constructing input values
 
-The SDK provides a family of helper functions that wrap plain Go values in the appropriate input type:
+The SDK provides a family of typed wrappers and helper functions that convert plain Go values to the appropriate input type:
 
 ```go
 pulumi.String("us-east-1")        // pulumi.StringInput
@@ -30,6 +30,8 @@ pulumi.Int(8080)                   // pulumi.IntInput
 pulumi.Bool(true)                  // pulumi.BoolInput
 pulumi.Float64(3.14)               // pulumi.Float64Input
 ```
+
+(`pulumi.String`, `pulumi.Int`, `pulumi.Bool`, and `pulumi.Float64` are named-type conversions — for example, `type String string` — rather than functions. The `Ptr` variants described below are genuine constructor functions.)
 
 For optional fields that accept a pointer type, use the `Ptr` variants:
 
@@ -113,7 +115,7 @@ url := bucket.Bucket.ApplyT(func(name string) string {
 }).(pulumi.StringOutput)
 ```
 
-Because `ApplyT` accepts and returns the untyped `pulumi.Output` interface, the result must be type-asserted to the concrete output type you expect. The type assertion `.(pulumi.StringOutput)` is idiomatic Go and will panic at program startup if the types do not match—a mismatch is always a programming error, never a runtime condition.
+Because `ApplyT` accepts and returns the untyped `pulumi.Output` interface, the result must be type-asserted to the concrete output type you expect. The type assertion `.(pulumi.StringOutput)` is idiomatic Go and will panic at runtime if the types do not match — a mismatch is always a programming error, never a recoverable condition.
 
 When the transformation can fail, return `(value, error)`:
 
@@ -210,7 +212,7 @@ recordNameLifted := cert.DomainValidationOptions.
     Elem()
 ```
 
-The `.Index()` method is available on array output types and returns the output for a single element. The generated accessor methods like `.ResourceRecordName()` then expose the fields of structured elements. `.Elem()` dereferences a pointer output (`*pulumi.StringOutput`) to its value type (`pulumi.StringOutput`).
+The `.Index()` method is available on array output types and returns the output for a single element. The generated accessor methods like `.ResourceRecordName()` then expose the fields of structured elements. `.Elem()` converts a pointer output (`pulumi.StringPtrOutput`) to its value type (`pulumi.StringOutput`).
 
 Not all output types have generated accessors; when they are absent, `ApplyT` is the right tool.
 
