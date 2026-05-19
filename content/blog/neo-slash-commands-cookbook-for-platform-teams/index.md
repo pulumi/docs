@@ -33,7 +33,7 @@ By combining slash commands with Neo task modes, you can encode your team's best
 
 ## Closing the SRE-toil gap
 
-Slash commands in Neo are more than just shortcuts. They are pre-configured prompts that capture the context, constraints, and expected outcomes of a specific task. When paired with task modes, they allow you to delegate the heavy lifting to Neo while maintaining the level of oversight your organization requires.
+Slash commands in Neo are more than shortcuts. They are pre-configured prompts that capture the context, constraints, and expected outcomes of a specific task. When paired with task modes, they allow you to delegate the heavy lifting to Neo while maintaining the level of oversight your organization requires.
 
 ## Upgrade runtimes
 
@@ -111,7 +111,7 @@ Refactoring stack names or moving resources between stacks can be complex due to
 **Intent**: Safely rename a stack while preserving state and updating dependents.
 
 **Slash command body**:
-> "I need to rename the 'staging-old' stack to 'staging-new'. Draft a plan that uses pulumi stack rename, updates any StackReference callers in dependent projects, and calls out backend-specific checks before the reviewed workflow runs."
+> "I need to rename the 'staging-old' stack to 'staging-new'. Draft a plan that uses `pulumi stack rename`, updates any `StackReference` callers in dependent projects, and calls out backend-specific checks before the reviewed workflow runs."
 
 **Expected output**: A step-by-step rename plan that preserves state in place, updates dependencies, and avoids an unnecessary import cycle.
 
