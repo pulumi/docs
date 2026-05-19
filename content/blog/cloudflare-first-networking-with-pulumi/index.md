@@ -27,7 +27,7 @@ social:
 
 Platform teams managing multi-cloud applications face a dangerous visibility gap. While origin infrastructure is tightly controlled, the edge configuration often drifts through manual console tweaks. DNS records point to stale origins, WAF rules are inconsistent across environments, and Zero Trust policies fail to keep pace with team changes. This edge drift leads to application exposure or routing failures that origin teams only notice after users report them.
 
-As applications span multiple clouds, the edge becomes the only consistent layer for security and traffic management. The cost of waiting for a unified edge strategy is high. Every manual change is a potential security hole or a performance bottleneck that bypasses your standard CI/CD rigor.
+As applications span multiple clouds, the edge often becomes the most consistent layer for enforcing security and traffic policies. The cost of waiting for a unified edge strategy is high. Every manual change is a potential security hole or a performance bottleneck that bypasses your standard CI/CD rigor.
 
 <!--more-->
 
@@ -57,7 +57,7 @@ pulumi config set --secret cloudflare:apiToken "$CLOUDFLARE_API_TOKEN"
 
 ### Defining the infrastructure
 
-Here is the complete Pulumi program in TypeScript. If your zone already has a custom WAF ruleset for the same phase, import that ruleset or add the rule to your existing ruleset instead of creating a duplicate.
+Here is the complete Pulumi program in TypeScript. If your zone already has a custom WAF ruleset for the same phase, import that ruleset or add the rule to your existing ruleset instead of creating another phase-level ruleset that may fail or conflict.
 
 ```typescript
 import * as cloudflare from "@pulumi/cloudflare";
