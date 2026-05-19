@@ -230,7 +230,7 @@ jobs:
           printf '%s' "$BODY" > .claude-mention-body.txt
 
       # Run Vale on PR-changed prose files (content/docs, content/blog,
-      # content/what-is, content/tutorials, content/learn) so the
+      # content/what-is, content/tutorials) so the
       # refreshed review reflects style nits in the current commit.
       # Skipped on issue mentions and when no in-scope prose files were
       # touched. The `||` fallbacks ensure both files exist even when
@@ -246,7 +246,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
