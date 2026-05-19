@@ -66,7 +66,7 @@ DevOps work has gotten broad enough that a single chart of "what Python is for" 
 | **Cloud automation** | One-off and scheduled scripts using `boto3`/`google-cloud`/`azure-sdk` for housekeeping, audits, and remediation |
 | **Observability and alerting** | Custom collectors, Datadog/New Relic/Prometheus exporters, OpenTelemetry instrumentation, log shippers |
 | **ChatOps and runbooks** | Slack/Teams bots, on-call automation, incident response scripts |
-| **Security and compliance** | IAM analyzers, secret scanners, custom Open Policy Agent / CrossGuard policies, vulnerability scanning glue |
+| **Security and compliance** | IAM analyzers, secret scanners, custom Open Policy Agent / Pulumi policy packs, vulnerability scanning glue |
 | **MLOps** | Training pipelines, model serving, feature stores, experiment tracking (MLflow, Weights & Biases) |
 | **FinOps** | Cost-tagging audits, budget reports, anomaly detection on cloud spend |
 
@@ -141,7 +141,7 @@ Python is a first-class language for Pulumi, supported on par with TypeScript, G
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
 * **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
-* **CrossGuard policies in Python.** Write [policy as code](/docs/insights/policy/) in the same language as your infrastructure.
+* **Pulumi policies in Python.** Write [policy as code](/docs/insights/policy/) in the same language as your infrastructure.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Python programs, CI jobs, and applications.
 
 [Get started with Pulumi and Python](/docs/get-started/) to provision cloud infrastructure with the language your team is already using.
@@ -166,7 +166,7 @@ Pick the language your team writes most of its other code in. Both are first-cla
 
 ### How do you test Python IaC?
 
-Use pytest and Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [CrossGuard policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/packages-and-automation/automation-api/) to spin up ephemeral stacks for integration tests.
+Use pytest and Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/packages-and-automation/automation-api/) to spin up ephemeral stacks for integration tests.
 
 ### What's MLOps and how does it relate to DevOps?
 
