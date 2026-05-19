@@ -47,7 +47,7 @@ By the end, you will have a reproducible workspace configuration that you can de
 
 When managing Databricks with Pulumi, understand the boundary between account-level and workspace-level resources.
 
-1. **Account-level**: Creating cloud prerequisites such as VPCs, subnets, IAM roles, and Azure resource groups uses the cloud provider for your target platform. On AWS and GCP, Databricks workspace creation and account-level identity use the Databricks provider's account APIs; on Azure, the workspace itself is commonly managed with `azure-native`.
+1. **Account-level**: Creating cloud prerequisites such as VPCs, subnets, IAM roles, and Azure resource groups uses the cloud provider for your target platform. On AWS and GCP, Databricks workspace creation and account-level identity use the Databricks provider's account APIs, such as `databricks.MwsWorkspaces`; on Azure, the workspace itself is commonly managed with `azure-native`.
 1. **Workspace-level**: Managing clusters, jobs, notebooks, permissions, and secret scopes within a specific workspace. This example uses the `@pulumi/databricks` provider against an Azure Databricks workspace URL, and the same workspace-resource pattern applies once your provider is configured for the target workspace.
 
 For this tutorial, we'll assume you have an existing Databricks workspace and want to manage the resources within it.
@@ -69,7 +69,7 @@ values:
     databricks:token: ${databricks.token}
 ```
 
-Once configured, import this environment into your Pulumi stack. The Databricks provider reads the `databricks:host` and `databricks:token` configuration values without requiring static secrets in stack config.
+Once configured, import this environment into your Pulumi stack. The Databricks provider reads configuration values such as [`databricks:host` and `databricks:token`](https://www.pulumi.com/registry/packages/databricks/installation-configuration/) without requiring static secrets in stack config.
 
 ## Defining your data infrastructure
 
