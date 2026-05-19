@@ -26,11 +26,11 @@ social:
         New guide walks through 17 tools across both categories — what each is good at, where it falls short, and a decision framework for picking one.
 ---
 
-There are now two things people mean when they say "AI infrastructure." One is the GPUs, schedulers, and MLOps platforms that exist to run AI workloads. The other is AI that runs infrastructure — agents and assistants that generate, deploy, and govern cloud resources on your behalf. They're different markets with different vendors, and most teams need to think about both.
+The phrase "AI infrastructure" now means two different things. One is the GPUs, schedulers, and MLOps platforms that exist to run AI workloads. The other is AI that runs infrastructure — agents and assistants that generate, deploy, and govern cloud resources on your behalf. They're different markets with different vendors, and most teams need to think about both.
 
 <!--more-->
 
-The pressure to think about both is real. [McKinsey research](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) puts the productivity lift from generative AI in software development at 20–45%, which is great for application teams and a problem for platform teams trying to keep up with the resulting feature flow. So infrastructure investment is climbing on both fronts: more spend on the compute that trains and serves models, more spend on AI tools that manage everything else.
+The pressure to think about both is real. [McKinsey research](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) puts the productivity lift from generative AI in software development at 20–45%, which is great for application teams and a problem for platform teams trying to keep up with the resulting feature flow. Infrastructure investment is climbing on both fronts: more spend on the compute that trains and serves models, more spend on AI tools that manage everything else.
 
 This guide covers 17 tools across the two categories. Part 1 is the compute and MLOps stack. Part 2 is AI-powered infrastructure management, where the more interesting product shift is happening.
 
@@ -53,14 +53,14 @@ This guide covers 17 tools across the two categories. Part 1 is the compute and 
 1. [env0 Cloud Compass](#env0-cloud-compass) — multi-IaC insights and analysis
 1. [Spacelift AI](#spacelift-ai) — run explanation and troubleshooting
 1. [Crossplane with Upbound](#crossplane-with-upbound) — Kubernetes-native infrastructure
-1. [GitHub Copilot](#github-copilot) — general-purpose code assistance
+1. [GitHub Copilot](#github-copilot) — general-purpose coding assistant
 1. [AWS Application Composer](#aws-application-composer) — visual serverless builder
 
 ## Quick picks
 
 If you only have two minutes:
 
-- **Enterprise compliance**: [Pulumi Neo](#pulumi-neo). Executes changes (not just suggestions), ships with policy packs for CIS, HITRUST, NIST, and PCI DSS, and works with Terraform, CloudFormation, and resources created by hand.
+- **Enterprise compliance**: [Pulumi Neo](#pulumi-neo). Executes changes (not only suggestions), ships with policy packs for CIS, HITRUST, NIST, and PCI DSS, and works with Terraform, CloudFormation, and resources created by hand.
 - **Serious GPU compute**: [CoreWeave](#coreweave). Purpose-built for AI workloads, deep NVIDIA partnership, and prices that generally undercut the hyperscalers.
 - **Best developer experience for ML**: [Modal](#modal). Decorate a Python function, get a GPU, pay by the second.
 - **Open-source MLOps**: [MLflow](#mlflow). No vendor lock-in, runs anywhere, plays well with everything.
@@ -94,7 +94,7 @@ Lambda has been the approachable GPU cloud for a long time. Environments come pr
 
 - **License**: Proprietary
 - **Best for**: Research teams, startups, and individual practitioners who want GPUs without a configuration tax
-- **Strengths**: Genuinely easy to start on; pre-configured deep learning environments; competitive on-demand pricing; strong learning resources
+- **Strengths**: Straightforward to start on; pre-configured deep learning environments; competitive on-demand pricing; strong learning resources
 - **Watch out for**: Smaller scale than CoreWeave or the hyperscalers; availability gets tight during demand spikes
 
 ### Modal
@@ -103,8 +103,8 @@ Modal's pitch is that you write a Python function, decorate it, and Modal handle
 
 - **License**: Proprietary
 - **Best for**: Variable ML workloads where reserved capacity would sit idle; data scientists who'd rather not learn Kubernetes
-- **Strengths**: Excellent developer experience; serverless GPUs with automatic scaling; pay-per-second pricing; cold starts are fast for what they are
-- **Watch out for**: You give up infrastructure control. Not ideal for long training jobs that benefit from reserved hardware or strict configuration requirements.
+- **Strengths**: Strong developer experience; serverless GPUs with automatic scaling; pay-per-second pricing; cold starts are fast for what they are
+- **Watch out for**: You give up infrastructure control. Not ideal for long training jobs that need reserved hardware or strict configuration requirements.
 
 ### Weights & Biases
 
@@ -112,12 +112,12 @@ Weights & Biases is the de facto standard for ML experiment tracking and model m
 
 - **License**: Proprietary with a free tier
 - **Best for**: ML teams that need shared experiment tracking, model versioning, and reporting
-- **Strengths**: Industry-leading experiment tracking and visualization; comprehensive model registry; strong team collaboration; huge integration surface
+- **Strengths**: Industry-leading experiment tracking and visualization; comprehensive model registry; strong team collaboration; broad integration surface
 - **Watch out for**: Costs scale quickly past the free tier; some teams self-host alternatives for data residency reasons
 
 ### MLflow
 
-MLflow is the leading open-source MLOps platform — experiment tracking, packaging, registry, and serving, with no lock-in. Originally built at Databricks, it's now a CNCF-style ecosystem with managed offerings from multiple vendors.
+MLflow is the leading open-source MLOps platform — experiment tracking, packaging, registry, and serving, with no lock-in. Originally built at Databricks, it's now a broad open-source ecosystem with managed offerings from multiple vendors (including Databricks and the major clouds).
 
 - **License**: Apache 2.0
 - **Best for**: Teams that want MLOps without a vendor; or want the option to start managed and self-host later
@@ -126,11 +126,11 @@ MLflow is the leading open-source MLOps platform — experiment tracking, packag
 
 ### Hyperscaler AI platforms
 
-The major clouds all sell end-to-end ML platforms. None of them are best-in-class at any single thing, but the integration with the rest of the cloud is the point.
+The major clouds all sell end-to-end ML platforms. Each leads on the dimensions that line up with its parent cloud — Vertex for Google's models and TPUs, SageMaker for AWS-native data pipelines, Azure ML for Microsoft-stack integration — but the wider integration with the rest of the cloud is usually the deciding factor.
 
-- **AWS SageMaker** — end-to-end ML on AWS, deeply integrated with S3, Glue, Lambda, and ECS. The default pick if your data already lives in AWS.
-- **Google Vertex AI** — Google's ML stack, including TPUs for workloads that benefit from them, plus access to Google's foundation models. Strongest when paired with BigQuery.
-- **Azure Machine Learning** — Microsoft's MLOps story, tied to Azure DevOps for pipelines and Power BI for insights. The right choice if you're already an Azure shop with Microsoft compliance requirements.
+- **AWS SageMaker** — end-to-end ML on AWS, deeply integrated with S3 and Glue, with first-class connections to Lambda for serverless inference and to the rest of the AWS data stack. The default pick if your data already lives in AWS.
+- **Google Vertex AI** — Google's ML stack, including TPUs for workloads that need them, plus access to Google's foundation models. Strongest when paired with BigQuery.
+- **Azure Machine Learning** — the natural choice when the rest of your stack is Microsoft; first-party MLOps integrations across GitHub Actions, Azure DevOps, and Microsoft Fabric for downstream reporting. The right choice if you're already an Azure shop with Microsoft compliance requirements.
 
 The shared tradeoff: hyperscaler GPU compute typically runs 2–3x the per-hour price of specialized providers, and the platforms work best when you commit to them top to bottom. For organizations already inside one cloud, the unified billing and single support contract usually justifies the premium. For a new ML team starting from scratch, it rarely does.
 
@@ -172,7 +172,7 @@ A few things that set it apart in practice:
 
 **Progressive autonomy.** Trust levels are configurable. Start with human approval for everything; loosen it for well-defined, low-risk operations as confidence builds; keep production and sensitive resources behind strict approvals. This is the part that tends to determine whether enterprises actually deploy agentic AI in anger, versus letting it sit as a sandbox toy.
 
-**IDE and CI/CD integration.** The Pulumi MCP Server brings Neo into VS Code, Cursor, Windsurf, and any other MCP-compatible editor. The Pulumi Cloud UI is the home base for approvals, history, and remediation status. Neo also slots into CI/CD pipelines for pre-merge policy remediation.
+**IDE and CI/CD integration.** The Pulumi MCP Server brings Neo into Cursor, Claude Code, Claude Desktop, Windsurf, and any other MCP-compatible client. The Pulumi Cloud UI is the home base for approvals, history, and remediation status. Neo also slots into CI/CD pipelines for pre-merge policy remediation.
 
 **Case studies**:
 
@@ -206,7 +206,7 @@ env0's Cloud Compass adds AI to env0's IaC automation platform, focusing on anal
 - **License**: Proprietary
 - **Best for**: Multi-IaC shops that want AI-generated PR summaries, drift explanations, and cost insights
 
-Strengths: multi-tool support across Terraform, OpenTofu, Pulumi, and CloudFormation; AI-generated PR summaries; drift cause analysis; cost estimation. Caveat: this is analysis and explanation, not action — Cloud Compass complements an agentic tool rather than replacing one.
+Strengths: multi-tool support across Terraform, OpenTofu, Pulumi, and Terragrunt; AI-generated PR summaries; drift cause analysis; cost estimation. Caveat: this is analysis and explanation, not action — Cloud Compass complements an agentic tool rather than replacing one.
 
 ### Spacelift AI
 
@@ -266,7 +266,7 @@ Strengths: visual development for serverless; direct AWS integration; AI suggest
 | Pulumi Neo | Agentic AI | Execution + policy automation | Best within Pulumi ecosystem | Pulumi Cloud tiers | Enterprise platform teams |
 | System Initiative | Digital twin | Real-time infrastructure modeling | Newer, fewer references | Open source + commercial | Paradigm-shift teams |
 | Firefly AIaC | Asset management | Asset codification, IaC generation | AI is supplementary | Proprietary | Codifying existing infra |
-| env0 Cloud Compass | Multi-IaC platform | Multi-tool support, PR analysis | Analysis, not execution | Proprietary | Multi-IaC environments |
+| env0 Cloud Compass | Multi-IaC platform | Multi-tool support (TF/OpenTofu/Pulumi/Terragrunt), PR analysis | Analysis, not execution | Proprietary | Multi-IaC environments |
 | Spacelift AI | CI/CD platform | Run explanation, troubleshooting | Observation, not action | Proprietary | GitOps workflows |
 | Crossplane / Upbound | Kubernetes-native | K8s patterns for infra | Requires K8s expertise | Open source + commercial | Kubernetes-native teams |
 | GitHub Copilot | Code assistant | Broad language support, IDE | No infrastructure context | Subscription | General code assistance |
@@ -342,7 +342,7 @@ Match the tool to your context: existing clouds and IaC, team skills, compliance
 
 ### What are the best tools for machine learning infrastructure?
 
-For GPU compute, CoreWeave leads at scale, Modal wins for variable workloads and developer experience, and the hyperscalers are the easy pick if you're already inside one of them. For experiment tracking and model management, Weights & Biases is the industry standard with MLflow as the open-source alternative. For the cloud infrastructure underneath the ML workloads, the same infrastructure management story applies: Pulumi Neo can provision and govern ML infrastructure the same way it handles everything else.
+For GPU compute, CoreWeave leads at scale, Modal wins for variable workloads and developer experience, and the hyperscalers are the default pick if you're already inside one of them. For experiment tracking and model management, Weights & Biases is the leading commercial platform; MLflow is the leading open-source one — most teams pick on the deploy model and pricing fit rather than capability gap. For the cloud infrastructure underneath the ML workloads, the same infrastructure management story applies: Pulumi Neo can provision and govern ML infrastructure the same way it handles everything else.
 
 ## Conclusion
 
