@@ -81,7 +81,7 @@ Examples of what a unit test should assert:
 
 Unit tests run in seconds and produce the tightest feedback loop. The trade-off is that they only test what you wrote; they can't catch a problem in how the cloud provider actually behaves.
 
-For Pulumi-specific patterns, see the [unit testing guide](/docs/iac/using-pulumi/testing/unit/).
+For Pulumi-specific patterns, see the [unit testing guide](/docs/iac/guides/testing/unit/).
 
 ## What is property testing for infrastructure?
 
@@ -110,15 +110,15 @@ A typical integration test:
 
 Integration tests are the slowest and most expensive layer (they consume cloud resources), so run them selectively: on PRs that touch production-relevant code paths, on a nightly schedule, or as a deploy-time smoke gate.
 
-See Pulumi's [integration testing guide](/docs/iac/using-pulumi/testing/integration/) for end-to-end test patterns.
+See Pulumi's [integration testing guide](/docs/iac/guides/testing/integration/) for end-to-end test patterns.
 
 ## What is security and policy testing for infrastructure?
 
 Security testing for IaC has two halves.
 
-**Static scans of the code** catch known bad configurations before deploy: hardcoded secrets, public buckets, missing encryption, dangerous IAM. Tools like Checkov, tfsec, Terrascan, and Snyk IaC scan Terraform, CloudFormation, and Pulumi outputs against a built-in ruleset. Run them in CI on every change.
+**Static scans of the code** catch known bad configurations before deploy: hardcoded secrets, public buckets, missing encryption, dangerous IAM. Tools like Checkov, Terrascan, Trivy, and Snyk IaC scan Terraform, CloudFormation, and Kubernetes manifests against built-in rulesets; Checkov also has a Pulumi-output mode. Run them in CI on every change.
 
-**Policy as code** enforces the rules your security team writes for the organization itself. Pulumi [CrossGuard](/docs/insights/policy/) lets you author policies in TypeScript, Python, Java, or OPA's Rego against the actual Pulumi resource model, with three enforcement levels (`advisory`, `mandatory`, `disabled`). Policies run during `pulumi preview` and `pulumi up`, so a non-compliant change can't get past CI.
+**Policy as code** enforces the rules your security team writes for the organization itself. Pulumi [CrossGuard](/docs/insights/policy/) lets you author policies in TypeScript/JavaScript, Python, or OPA's Rego against the actual Pulumi resource model, with three enforcement levels (`advisory`, `mandatory`, `disabled`). (CrossGuard policies apply to Pulumi stacks written in any supported language, including Go, .NET, and Java.) Policies run during `pulumi preview` and `pulumi up`, so a non-compliant change can't get past CI.
 
 Beyond IaC-specific scans, the wider security testing menu still applies:
 
@@ -132,7 +132,7 @@ Whatever the mix, the consistent rule is **shift left**: every security check th
 
 A common shape for an IaC pipeline:
 
-1. **On every commit:** lint, static security scan (Checkov / tfsec), unit tests.
+1. **On every commit:** lint, static security scan (Checkov / Trivy), unit tests.
 1. **On every pull request:** the above, plus `pulumi preview`, plus CrossGuard policies in advisory mode.
 1. **On merge to main:** `pulumi preview` against staging, deploy to staging, run integration tests against staging.
 1. **On promotion to production:** CrossGuard policies in mandatory mode, `pulumi up`, smoke tests against production.
@@ -144,7 +144,7 @@ The principle is the same as application CI: fast feedback for changes in progre
 | Category | Representative tools |
 |---|---|
 | Unit testing | Jest, Vitest, pytest, `go test`, xUnit, JUnit (standard test runners for the language you write IaC in) |
-| Static IaC scanning | Checkov, tfsec, Terrascan, Snyk IaC |
+| Static IaC scanning | Checkov, Terrascan, Trivy, Snyk IaC |
 | Policy as code | [Pulumi CrossGuard](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Property and integration testing | Pulumi automation API, Terratest, Kitchen-Terraform |
 | Cloud emulation | LocalStack (AWS), Moto (AWS), Azurite (Azure) |
@@ -158,10 +158,10 @@ The point of a testing toolchain isn't to have the most tools; it's to have one 
 Pulumi treats infrastructure as software, which means every testing tool that exists for your application code is available for your IaC:
 
 * **Real programming languages.** Write Pulumi programs in TypeScript, Python, Go, C#, Java, or YAML, and use the same test runners and mocking libraries you already know.
-* **Unit testing with mocks.** Pulumi's [test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud provider calls with canned responses, so unit tests run in milliseconds and don't need any cloud credentials.
+* **Unit testing with mocks.** Pulumi's [test mocks](/docs/iac/guides/testing/unit/) replace cloud provider calls with canned responses, so unit tests run in milliseconds and don't need any cloud credentials.
 * **Integration testing through the automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you script `pulumi up` and `pulumi destroy` from a test runner, so integration tests can deploy and tear down ephemeral stacks programmatically.
 * **CrossGuard policy as code.** [CrossGuard](/docs/insights/policy/) policies run during preview and update, blocking changes that violate organizational rules. Policy packs are versioned and shipped alongside your code.
-* **CI/CD integration.** Pulumi runs in every major CI/CD platform via the [GitHub Actions integration](/docs/iac/packages-and-automation/github-actions/) or any other system that can run a CLI.
+* **CI/CD integration.** Pulumi runs in every major CI/CD platform via the [GitHub Actions integration](/docs/iac/guides/continuous-delivery/github-actions/) or any other system that can run a CLI.
 
 [Get started with Pulumi](/docs/get-started/) to provision and test infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
 
@@ -201,7 +201,7 @@ Policy as code is the operating model for organization-wide rules: things like "
 
 ### Do compliance frameworks (SOC 2, HIPAA, PCI) accept IaC test results as evidence?
 
-Yes, and increasingly they prefer it. A CrossGuard policy run is a concrete artifact that proves a control was enforced on a specific change at a specific time. Auditors much prefer that to "the policy says we don't allow public buckets" with no enforcement mechanism behind it.
+Yes — SOC 2, HIPAA, and PCI DSS audits routinely accept IaC test output and policy-as-code run logs as evidence that a control is enforced. A CrossGuard policy run, for example, produces a record of a control being checked against a specific change at a specific time, which is more concrete than a written policy with no enforcement mechanism behind it.
 
 ### How do I introduce testing to an existing IaC codebase?
 
