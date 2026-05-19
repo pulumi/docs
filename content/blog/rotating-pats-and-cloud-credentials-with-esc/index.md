@@ -25,13 +25,13 @@ social:
         Use ESC for installation tokens, short-lived cloud credentials, and scheduled rotation in CI.
 ---
 
-Static, long-lived credentials are a major security vulnerability, especially when they are copied into CI systems. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, the longer a secret remains unchanged, the greater the risk of compromise.
+Static, long-lived credentials are a major security vulnerability, especially when they are copied into CI systems. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, a secret that remains unchanged increases compromise risk over time.
 
 This post focuses on rotating GitHub and cloud provider credentials that power your entire CI/CD ecosystem. Most platform teams still manage rotation through calendar reminders and manual updates, which makes cutovers fragile when a PAT or cloud key expires during deployment.
 
 ## Why it matters now
 
-Compliance mandates like SOC 2 and PCI DSS increasingly require proof of automated rotation for administrative credentials. Beyond compliance, the risk of a long-lived credential leak is a top-tier operational threat. If a secret is leaked, an attacker has a 90-day window to exploit it if you only rotate quarterly. Automating this process reduces the window of exposure and eliminates the human error inherent in manual rotation.
+Compliance frameworks like SOC 2 and PCI DSS increasingly drive teams toward automated rotation for administrative credentials. PCI DSS v4.0 §8.6.3 mandates scheduled rotation for service accounts, and SOC 2 auditors commonly expect automated controls as evidence of access management. Beyond compliance, the risk of a long-lived credential leak is a top-tier operational threat. If a secret is leaked, an attacker has a 90-day window to exploit it if you only rotate quarterly. Automating this process reduces the window of exposure and eliminates the human error inherent in manual rotation.
 
 ## Reader outcome
 
@@ -128,7 +128,7 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v4
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v1
         with:
