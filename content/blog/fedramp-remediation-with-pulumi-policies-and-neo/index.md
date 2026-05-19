@@ -104,4 +104,4 @@ While Pulumi helps produce evidence and provides powerful guardrails to support 
 
 ## Conclusion
 
-FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate policy checks, accelerate remediation, and build a culture of continuous compliance review. Whether you are just starting your FedRAMP journey or looking to optimize your existing processes, start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
+FedRAMP compliance doesn't have to be a bottleneck for innovation. By integrating Pulumi Policies and Neo into your workflow, you can automate policy checks, speed up remediation, and build a culture of continuous compliance review. Whether you are starting your FedRAMP journey or looking to optimize your existing processes, start by mapping one FedRAMP finding to a [Pulumi policy](/docs/insights/policy/) and routing the resulting policy findings into your review workflow.
