@@ -17,9 +17,10 @@ aliases:
 <!--
   The table body is rendered from data/versions.json, which is regenerated
   from pulumi/pulumi release tags by scripts/get-cli-versions.js. To refresh
-  it locally, run `make update-versions` (requires GITHUB_TOKEN). The CLI
-  docs workflow (.github/workflows/pulumi-cli-docs.yml) runs the same
-  script on every release. Edit the shortcode at
+  it locally, run `make update-versions` (requires GITHUB_TOKEN). In CI,
+  the same script runs as part of the CLI docs workflow
+  (.github/workflows/pulumi-cli-docs.yml), which is dispatched on each
+  release by upstream automation. Edit the shortcode at
   layouts/shortcodes/changelog-table-body.html to change row layout.
 
   The matching `static/latest-version` file is written by the same
