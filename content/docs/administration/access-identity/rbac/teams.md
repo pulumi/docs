@@ -73,3 +73,81 @@ Team entity access grants allow team admins to manage their team's access to spe
 Teams can be granted direct access to stacks, environments, and insights accounts. All team members receive access to those entities at the selected permission level.
 
 ![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
+
+### Managing environment access via the REST API
+
+Team environment grants can also be managed programmatically using the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/). This is useful for automated provisioning workflows where team permissions need to be applied consistently across many environments or as part of a broader infrastructure-as-code setup.
+
+All three operations — adding, editing, and removing an environment permission — use the same endpoint:
+
+```
+PATCH https://api.pulumi.com/api/orgs/{orgName}/teams/{teamName}
+Authorization: token {token}
+Content-Type: application/json
+```
+
+**Add an environment permission:**
+
+```bash
+curl -s -X PATCH \
+  "https://api.pulumi.com/api/orgs/{orgName}/teams/{teamName}" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "addEnvironmentPermission": {
+      "projectName": "{projectName}",
+      "envName": "{envName}",
+      "permission": "read"
+    }
+  }'
+```
+
+Or equivalently using the `pulumi cloud api` command:
+
+```bash
+pulumi cloud api PATCH \
+  /orgs/{orgName}/teams/{teamName} \
+  -- --body '{"addEnvironmentPermission":{"projectName":"{projectName}","envName":"{envName}","permission":"read"}}'
+```
+
+The valid permission values are:
+
+| Value   | Console label        | Description |
+|---------|----------------------|-------------|
+| `read`  | Environment reader   | Team members can view environment definitions but cannot decrypt secrets or retrieve dynamic credentials. |
+| `open`  | Environment opener   | Team members can decrypt secrets and retrieve dynamic credentials from the environment. |
+| `write` | Environment editor   | Team members can open and update the environment. |
+| `admin` | Environment admin    | Team members can open, update, and delete the environment. |
+
+**Edit an existing environment permission:**
+
+```bash
+curl -s -X PATCH \
+  "https://api.pulumi.com/api/orgs/{orgName}/teams/{teamName}" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "editEnvironmentPermission": {
+      "projectName": "{projectName}",
+      "envName": "{envName}",
+      "permission": "write"
+    }
+  }'
+```
+
+**Remove an environment permission:**
+
+```bash
+curl -s -X PATCH \
+  "https://api.pulumi.com/api/orgs/{orgName}/teams/{teamName}" \
+  -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "removeEnvironment": {
+      "projectName": "{projectName}",
+      "envName": "{envName}"
+    }
+  }'
+```
+
+The endpoint returns `204 No Content` on success. These operations require a Pulumi access token scoped to a user with team administration rights; organization admins always have this access. The `projectName` field refers to the ESC project in which the environment resides — this is the project specified when the environment was created (for example, `default` if no explicit project was given).
