@@ -91,7 +91,7 @@ In a Pulumi program, this typically means pinning the package version in `packag
 
 ## Previews and policy checks
 
-Treat every component upgrade as an infrastructure change, not just a dependency update. Run `pulumi preview` against representative stacks before promoting a new component version, and review any resource replacements the preview reports.
+Treat every component upgrade as an infrastructure change, not only a dependency update. Run `pulumi preview` against representative stacks before promoting a new component version, and review any resource replacements the preview reports.
 
 For high-risk components, add checks where the relevant upgrade metadata is visible to the workflow. CI can require migration notes for v2 adoption or block unapproved major-version jumps in dependency files. Pulumi Policies can then enforce preview-visible guardrails, such as requiring `protect` on tagged or critical resources and validating resource inputs that represent your component contract.
 
