@@ -154,7 +154,7 @@ Watch for these migration details before you delete the CloudFormation stack:
 
 1. **Drift**: If your CloudFormation stack has drifted from its template, `pulumi import` will capture the *actual* state of the resource, which might differ from what you expect.
 1. **IAM Roles**: Circular dependencies between IAM roles and policies can be tricky. Sometimes it's easier to recreate IAM resources in Pulumi rather than importing them.
-1. **Custom Resources**: CloudFormation Custom Resources don't have a direct 1:1 mapping in Pulumi. You'll likely need to replace these with Pulumi [Dynamic Resources](/docs/iac/concepts/providers/dynamic-providers/) or specific provider resources.
+1. **Custom Resources**: Lambda-backed CloudFormation Custom Resources can be lifted into Pulumi with [`aws-native.cloudformation.CustomResourceEmulator`](https://www.pulumi.com/registry/packages/aws-native/api-docs/cloudformation/customresourceemulator/), which invokes the same Lambda by using the CloudFormation Custom Resource protocol. For SNS-backed custom resources, or when you want to leave CloudFormation behind entirely, replace them with Pulumi [Dynamic Resources](/docs/iac/concepts/providers/dynamic-providers/) or equivalent provider resources.
 
 ## Conclusion
 
