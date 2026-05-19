@@ -31,7 +31,7 @@ authors: ["zack-chase"]
 
 **JavaScript and TypeScript can be used to define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) the same way they're used to build web applications: real programs, real types, real package management, real tests, real IDE tooling.** Instead of describing cloud resources in a custom DSL like HCL or in YAML, you write a Node.js program whose API calls describe a VPC, a Kubernetes cluster, or an S3 bucket. An IaC engine then reconciles your declared state with what's running in the cloud.
 
-For teams already running on Node.js, this collapses the gap between the application layer and the platform under it. The same TypeScript types, the same `npm install` workflow, the same Jest test setup, the same VS Code experience, and the same code review process apply to the infrastructure your app runs on. Pulumi is the IaC platform built around this idea; this page covers why JavaScript and TypeScript are a strong fit for IaC, what the tradeoffs look like, and how to set up a JS/TS IaC project well.
+For teams already running on Node.js, this collapses the gap between the application layer and the platform under it. The same TypeScript types, the same `npm install` workflow, the same Jest test setup, the same VS Code experience, and the same code review process apply to the infrastructure your app runs on. Pulumi treats TypeScript and JavaScript as first-class IaC languages alongside Python, Go, .NET, Java, and YAML; this page covers why JavaScript and TypeScript are a strong fit for IaC, what the tradeoffs look like, and how to set up a JS/TS IaC project well.
 
 In this article, we'll cover the key questions about JavaScript and infrastructure as code:
 
@@ -134,7 +134,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 * **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and 100+ other providers. Generated from each provider's API, so the types reflect the real cloud surface.
 * **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
-* **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, EKS clusters, API Gateway routes) in higher-level TypeScript classes with sensible defaults.
+* **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
 * **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
 * **Policy as code in TypeScript.** [CrossGuard](/docs/insights/policy/) policies can be written in the same language as the IaC, with the same typing over the resource model.
@@ -182,7 +182,7 @@ Yes. Pulumi can import existing cloud resources with `pulumi import` and can int
 
 ### Does Pulumi's TypeScript SDK update when the cloud provider's API changes?
 
-Yes. Pulumi regenerates the provider SDKs from each cloud's API definition, so new resource types and properties appear in the npm packages shortly after the cloud provider ships them. Provider versions are pinned in `package.json` so you control when to adopt new releases.
+Yes. Pulumi regenerates the provider SDKs from each provider's source schema — either the upstream cloud API for native providers, or the Terraform provider schema for bridged providers — so new resource types and properties appear in the npm packages shortly after the provider ships them. Provider versions are pinned in `package.json` so you control when to adopt new releases.
 
 ## Learn more
 
