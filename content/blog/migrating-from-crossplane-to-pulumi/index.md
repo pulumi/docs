@@ -39,7 +39,7 @@ This transition starts when teams want to keep Kubernetes-native workflows but n
 
 The move from Crossplane to Pulumi is usually driven by a few key factors:
 
-1. **Logic and abstraction**: Crossplane Compositions historically used patch-and-transform expressions in YAML, with Composition Functions now allowing imperative logic in Go, Python, or KCL. Pulumi expresses the same logic directly in TypeScript, Python, Go, and other languages, making loops, conditionals, and complex data transformations easier to model.
+1. **Logic and abstraction**: Crossplane Compositions historically used patch-and-transform expressions in YAML, with Composition Functions now allowing custom logic in Go, Python, or KCL. Pulumi expresses infrastructure logic directly in TypeScript, Python, Go, and other languages, making loops, conditionals, and complex data transformations easier to model.
 1. **Tooling and ecosystem**: Pulumi integrates with existing IDEs, testing frameworks, and CI/CD pipelines without requiring custom Kubernetes controllers for every piece of logic.
 1. **Debugging**: Troubleshooting a failing Crossplane request involves digging through multiple layers of Kubernetes events and status fields. Pulumi provides clear, actionable error messages and a local execution model that simplifies debugging.
 
