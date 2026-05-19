@@ -29,6 +29,15 @@
   {{ $webpage = merge $webpage (dict "mainEntity" (dict "@id" "#main-content")) }}
 {{ end }}
 
+{{/* Collect comparison table schema before finalizing WebPage so hasPart can be wired */}}
+{{ $comparisonTable := dict }}
+{{ if not .IsHome }}
+  {{ $comparisonTable = partial "schema/collectors/comparison-table-entity.html" . }}
+  {{ if and $comparisonTable (ne $comparisonTable (dict)) }}
+    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#comparison-table")) }}
+  {{ end }}
+{{ end }}
+
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
 
@@ -168,6 +177,11 @@
     "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
   }}
   {{ $graph = $graph | append $software }}
+{{ end }}
+
+{{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}
+{{ if and $comparisonTable (ne $comparisonTable (dict)) }}
+  {{ $graph = $graph | append $comparisonTable }}
 {{ end }}
 
 {{/* Add video schema if page contains YouTube videos */}}
