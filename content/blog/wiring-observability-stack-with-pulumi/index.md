@@ -197,7 +197,7 @@ After running `pulumi up`, you can validate your observability stack:
 1. **Monitor test:** Manually trigger a test alert in Datadog and verify that a PagerDuty incident is created with the correct service and tags.
 1. **New Relic routing:** Trigger the NRQL condition and verify that New Relic routes the issue through the configured workflow and email channel.
 
-By wiring your observability stack as code, you ensure that every service is monitored from day one and that your on-call engineers always have the context they need to resolve incidents quickly.
+By wiring your observability stack as code, you help ensure that every service is monitored from day one and that your on-call engineers have the context they need to resolve incidents quickly.
 
 Pulumi allows you to promote these configurations across environments. You can have a "staging" observability stack that notifies a Slack channel and a "production" stack that triggers PagerDuty.
 
@@ -205,6 +205,6 @@ By treating your monitors and dashboards with the same rigor as your infrastruct
 
 ## Conclusion
 
-Wiring Datadog, New Relic, and PagerDuty with Pulumi gives you a unified, version-controlled view of your observability posture. Whether you're managing a small service or a large fleet, start with one service, codify its monitor and escalation path, then promote that baseline across the rest of your applications.
+Wiring Datadog, New Relic, and PagerDuty with Pulumi makes the three-provider integration version-controlled and reproducible. Whether you're managing a small service or a large fleet, start with one service, codify its monitor and escalation path, then promote that baseline across the rest of your applications.
 
 {{< blog/cta-button "Explore Pulumi ESC" "/docs/esc/" >}}
