@@ -48,7 +48,7 @@ In this article, we'll cover the key questions about cloud infrastructure autosc
 
 Three pressures explain why autoscaling is now table stakes for any production workload:
 
-* **Cost.** Fixed capacity sized for peak load wastes money the rest of the time. Autoscaling keeps the fleet sized to actual demand and shrinks the over-provisioning bill, which routinely runs 30–50% of compute spend on legacy environments.
+* **Cost.** Fixed capacity sized for peak load wastes money the rest of the time. Autoscaling keeps the fleet sized to actual demand and shrinks the over-provisioning bill, which industry estimates routinely put at 30–50% of cloud compute spend.
 * **Reliability.** When traffic spikes, the gap between adding capacity in minutes and adding it in days is the gap between absorbing a launch and serving 5xx errors. Autoscaling closes the gap.
 * **Operations.** Without autoscaling, someone has to be on call to watch dashboards and run scale-up scripts. With it, that human is replaced by a policy that runs in seconds. The on-call rotation gets to spend its time on the things automation can't handle.
 
@@ -65,7 +65,7 @@ Two ways to add capacity to a workload, with very different operational characte
 | Cost shape | Often nonlinear: a 2× instance can cost more than 2× | Roughly linear: 2× instances ≈ 2× cost |
 | Common autoscaler | Less common; usually a manual or scheduled action | The dominant pattern for autoscaling |
 
-In practice, "autoscaling" almost always means horizontal autoscaling. Vertical scaling decisions tend to be manual or change-managed because they involve a restart and a sizing analysis. A few services (RDS, Aurora Serverless, Azure SQL serverless) support automatic vertical scaling for databases.
+In practice, "autoscaling" almost always means horizontal autoscaling. Vertical scaling decisions tend to be manual or change-managed because they involve a restart and a sizing analysis. A few managed serverless databases (Aurora Serverless v2, Azure SQL Database serverless) automatically scale compute capacity up and down with load. Standard RDS only autoscales storage; instance-class changes there are a manual operation.
 
 ## What types of autoscaling are there?
 
@@ -158,7 +158,7 @@ A model that forecasts future load using historical data and scales out in advan
 
 ### Can I autoscale stateful workloads?
 
-Read replicas and stateless components of stateful systems can autoscale. Primary database instances usually cannot, because adding or removing a primary requires explicit failover logic. The newer serverless database tier (Aurora Serverless v2, DynamoDB on-demand, Azure SQL serverless, Spanner autoscaler) provides autoscaled state by handling the failover and resharding inside the managed service.
+Read replicas and stateless components of stateful systems can autoscale. Primary database instances usually cannot, because adding or removing a primary requires explicit failover logic. The newer serverless database tier (Aurora Serverless v2, DynamoDB on-demand, Azure SQL serverless, Spanner autoscaler) provides autoscaled state by handling the underlying scaling operations — failover, resharding, or compute resizing depending on the service — inside the managed service.
 
 ### What's the relationship between HPA, VPA, and Cluster Autoscaler?
 
