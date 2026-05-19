@@ -25,7 +25,7 @@ social:
         Use ESC for installation tokens, short-lived cloud credentials, and scheduled rotation in CI.
 ---
 
-Static, long-lived credentials are a major security vulnerability, especially when they are copied into CI systems. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether it is a GitHub PAT or an AWS IAM access key, a secret that remains unchanged increases compromise risk over time.
+Static, long-lived credentials are a major security vulnerability, especially when they are copied into CI systems. For teams that manage GitHub Personal Access Tokens (PATs) and cloud credentials across many repositories and accounts, 90-day rotation needs to become an automated operating model, not a calendar reminder. Whether the credential is a GitHub PAT or an AWS IAM access key, leaving it unchanged increases compromise risk over time.
 
 This post focuses on rotating GitHub and cloud provider credentials that power your entire CI/CD ecosystem. Most platform teams still manage rotation through calendar reminders and manual updates, which makes cutovers fragile when a PAT or cloud key expires during deployment.
 
