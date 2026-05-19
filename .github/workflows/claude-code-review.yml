@@ -397,11 +397,11 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
-            echo "vale: no docs/blog files changed; skipping"
+            echo "vale: no in-scope prose files changed; skipping"
             exit 0
           fi
           # `||` fallbacks guarantee both files exist even when vale is
@@ -444,10 +444,10 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '[]' > .fetched-urls.json
-            echo "extract-urls: no docs/blog files changed; skipping"
+            echo "extract-urls: no in-scope prose files changed; skipping"
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
