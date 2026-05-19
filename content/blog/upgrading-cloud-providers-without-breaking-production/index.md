@@ -49,7 +49,7 @@ Most Pulumi provider versions are inferred from your language package dependenci
 npm install @pulumi/aws@6.66.0 --save-exact
 ```
 
-Avoid scattering one-off provider versions through resource options. The `version` resource option exists, but [Pulumi documents it as an override](/docs/iac/concepts/resources/options/version/) that should rarely be used directly during normal operations. For fleet upgrades, exact package pins and lockfiles are auditable in a single commit and reversible with one revert.
+Avoid scattering one-off provider versions through resource options. The `version` resource option exists, but [Pulumi documents it as an override](/docs/iac/concepts/resources/options/version/) that should not be used directly during normal operations. For fleet upgrades, exact package pins and lockfiles are auditable in a single commit and reversible with one revert.
 
 ## Step 2: Build an upgrade canary stack
 
