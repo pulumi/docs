@@ -101,7 +101,7 @@ const sequenceGrant = new postgresql.Grant("sequence-grant", {
 });
 ```
 
-The table grant covers existing tables in the schema. Sequence grants matter for applications that call sequence functions such as `currval` or `nextval`, including inserts into tables that use `SERIAL` columns.
+When `objects` is omitted, the table grant applies to all existing tables in the schema. Sequence grants matter for applications that call sequence functions such as `currval` or `nextval`, including inserts into tables that use `SERIAL` columns.
 
 ## Automating with default privileges
 
