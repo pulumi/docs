@@ -79,7 +79,7 @@ The everyday capabilities that come for free with IaS are the ones DSL-based IaC
 * **Standard package management.** Internal components ship through npm, PyPI, Go modules, NuGet, or Maven, depending on the language. Versions follow semver. Dependencies are locked.
 * **Real testing.** Use the test runner that already works for your application code (Jest, pytest, `go test`, xUnit, JUnit) for your IaC. Pulumi's [test mocks](/docs/iac/using-pulumi/testing/unit/) let unit tests run in memory without touching the cloud.
 * **IDE-grade tooling.** Autocomplete, jump-to-definition, refactoring, inline error squiggles. The same VS Code, JetBrains, or Neovim setup that works for the app works for the infra.
-* **Policy as code in the same language.** [Pulumi CrossGuard](/docs/insights/policy/) policies can be written in TypeScript, Python, Java, or OPA's Rego against the actual resource model. The same engineers who wrote the infrastructure can write the policies that govern it.
+* **Policy as code in the same language.** [Pulumi CrossGuard](/docs/insights/policy/) policies can be written in TypeScript, JavaScript, Python, or OPA's Rego against the actual resource model. The same engineers who wrote the infrastructure can write the policies that govern it.
 * **Composability with non-infra code.** Pull configuration from an internal service, fetch a list of allowed regions from a database, compute a resource name from a feature-flag value. Any of those is one library call away in IaS; they require an external preprocessing step in a DSL.
 
 ## Where does IaS shine in practice?
@@ -140,7 +140,7 @@ IaC is the broad practice of defining cloud infrastructure in code. IaS is the s
 
 ### Is Terraform IaS?
 
-No. Terraform's HCL is a DSL designed specifically for IaC. The CDK for Terraform (CDKTF) layer on top of Terraform is closer to IaS because it lets you write TypeScript, Python, Go, or Java that synthesizes HCL. Pulumi differs from CDKTF in that there's no HCL layer in the middle: the IaS program drives the Pulumi engine directly.
+No. Terraform's HCL is a DSL designed specifically for IaC. The CDK for Terraform (CDKTF) layer on top of Terraform is closer to IaS because it lets you write TypeScript, Python, Go, Java, or C# that synthesizes HCL. Pulumi differs from CDKTF in that there's no HCL layer in the middle: the IaS program drives the Pulumi engine directly.
 
 ### Is CloudFormation IaS?
 
