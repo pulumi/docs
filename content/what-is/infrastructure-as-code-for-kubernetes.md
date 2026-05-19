@@ -82,7 +82,7 @@ Pulumi's Kubernetes provider supports every resource type Kubernetes itself supp
 
 GitOps and IaC aren't competing approaches. They're complementary, and most production Kubernetes shops use both.
 
-| Aspect | Imperative IaC for Kubernetes (e.g. `pulumi up` from CI) | GitOps (ArgoCD, Flux) |
+| Aspect | IaC engine for Kubernetes (e.g. `pulumi up` from CI) | GitOps controller (ArgoCD, Flux) |
 |---|---|---|
 | Source of truth | Git repo containing IaC program | Git repo containing manifests or Kustomize/Helm output |
 | Apply mechanism | CI pipeline runs IaC engine | In-cluster controller reconciles toward Git |
@@ -118,7 +118,7 @@ A few patterns that hold up across providers and team sizes:
 * **Avoid naked pods.** A bare `Pod` isn't rescheduled when the node fails. Use Deployments, StatefulSets, or DaemonSets so the workload survives. Enforce this with a policy in CI.
 * **Use IRSA / Workload Identity / Azure AD.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
-* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. [Pulumi ESC](/product/esc/) and the External Secrets Operator both let Kubernetes pull secrets from a central vault at runtime.
+* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time — either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
 * **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [CrossGuard](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
 * **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
 * **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
@@ -128,8 +128,8 @@ A few patterns that hold up across providers and team sizes:
 Pulumi treats Kubernetes the same way it treats every other cloud target: as resources in a real programming language, with dependencies, types, and tests. Common patterns:
 
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
-* **Import existing Kubernetes YAML.** Pulumi's `ConfigFile` and `ConfigGroup` resources can consume existing manifests, Helm charts, or Kustomize bundles directly, so adoption can be incremental.
-* **Pulumi Crosswalk for Kubernetes.** Higher-level components that bundle the right defaults for managed Kubernetes: EKS clusters with sensible networking, GKE clusters with Workload Identity, AKS clusters with managed addons. See [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks).
+* **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format — `ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles — so adoption can be incremental without re-authoring the source artifacts.
+* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
 * **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. Misspelled field names fail at compile time instead of at `kubectl apply` time.
 * **Policy as code through CrossGuard.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
