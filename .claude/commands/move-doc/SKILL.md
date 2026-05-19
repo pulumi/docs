@@ -475,6 +475,44 @@ Searching for internal references...
 
 **Important**: Always skip `blog/` and `tutorials/` per AGENTS.md. See `move-doc:references:link-updates` for patterns and edge cases.
 
+**Additional check: References in `.github/workflows/` and `scripts/`**
+
+Hugo aliases redirect URLs at request time — they do **not** rewrite filesystem paths or hard-coded URL strings in CI workflows or repository scripts. If automation reads or writes the moved file by its old path (e.g. a `sed -i ./content/...` line in a workflow), the move silently breaks that automation at the next scheduled run.
+
+**Real example**: PR #19137 moved `content/docs/get-started/download-install/versions.md` to `content/docs/install/versions.md`. The Hugo alias kept all user-facing URLs working, but `.github/workflows/pulumi-cli-docs.yml` had `sed -i ./content/docs/get-started/download-install/versions.md` hard-coded, and the next scheduled CLI docs run failed with `sed: can't read ...: No such file or directory`.
+
+Search both the old URL and the old filesystem path:
+
+```bash
+# Combine URL and filesystem-path searches; trim leading ./ from path
+old_path_trimmed="${source_file#./}"
+grep -rn "{old_url}\|${old_path_trimmed}" .github/workflows/ scripts/ 2>/dev/null
+```
+
+**Do not auto-update these matches.** Workflow and script references appear inside shell strings, regex, JS, YAML literals, JSON, etc., where a blind `sed` substitution can corrupt surrounding syntax or the meaning of adjacent code. Surface matches as a manual-review warning instead.
+
+**On matches found**, display:
+
+```
+⚠️  External references that this skill will NOT auto-update:
+
+  .github/workflows/foo.yml:42 — old URL
+  scripts/bar.sh:9 — old filesystem path
+
+Hugo aliases do not redirect filesystem writes or URL constants inside CI.
+Review each match and update by hand if the surrounding code still expects
+the old location. Common offenders:
+
+  - sed -i / cat / cp commands writing to the moved file
+  - Lighthouse / link-checker URL lists
+  - Algolia ranking rules keyed on the old canonical URL
+  - Redirect destinations in scripts/redirects/*.txt
+```
+
+Add a "Manual review: external references" line to the Step 8 summary if any matches were found, listing the file:line locations so the user can act on them in the same PR as the move.
+
+**On no matches**: silently continue — no message needed unless the user has asked for verbose output.
+
 ### Step 8: Summary and Next Steps
 
 **Goal**: Provide comprehensive summary with orphaned menu detection and actionable next steps.
@@ -643,6 +681,7 @@ This skill uses detailed reference documentation:
 3. **Always verify aliases** with repository scripts
 4. **Update links in `docs/` and `product/`** only (skip `blog/` and `tutorials/`)
 5. **Never break existing URLs** - aliases must redirect properly
+6. **Always scan `.github/workflows/` and `scripts/`** for references to the old URL or filesystem path — Hugo aliases do not redirect filesystem writes or URL constants embedded in CI/automation
 
 ## Error Recovery
 

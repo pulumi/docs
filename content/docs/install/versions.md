@@ -14,6 +14,24 @@ aliases:
 - /docs/get-started/download-install/versions/
 ---
 
+<!--
+  AUTOMATED FILE — DO NOT MOVE OR RENAME WITHOUT UPDATING CI.
+
+  A new changelog-table-row entry is appended to the table body below by
+  the "Update version lists" step in .github/workflows/pulumi-cli-docs.yml
+  every time the Pulumi CLI docs workflow runs. (That step targets the
+  literal opening table-body tag via sed, so don't add another one above
+  the table or the wrong line will get rewritten.)
+
+  If you move or rename this file, you MUST also update the hard-coded
+  path in that workflow (currently `./content/docs/install/versions.md`)
+  — Hugo aliases do not redirect filesystem writes, and the workflow
+  will fail at the `sed -i` step.
+
+  The matching `static/latest-version` file is written by the same
+  workflow's "Update latest version" step.
+-->
+
 The current stable version of Pulumi is **{{< latest-version >}}**.
 
 <table>
