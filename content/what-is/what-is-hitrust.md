@@ -46,7 +46,7 @@ The CSF is **risk-based and scalable**. The requirements that apply to your orga
 
 ## What does the HITRUST CSF harmonize?
 
-The point of the CSF is to roll many compliance regimes into one. The latest CSF versions cross-reference over 70 authoritative sources, including:
+The point of the CSF is to roll many compliance regimes into one. The latest CSF versions cross-reference 60+ major authoritative sources (HITRUST's marketing site totals "over 70" when you count sub-standards), including:
 
 * **Healthcare:** HIPAA, HITECH, 42 CFR Part 2
 * **US federal:** NIST SP 800-53, NIST SP 800-171, FedRAMP, CMMC
@@ -64,7 +64,7 @@ HITRUST publishes three assessment levels. They differ in scope, rigor, validity
 | Assessment | Scope | Validity | Best for |
 |---|---|---|---|
 | **e1 (Essentials)** | ~44 foundational requirements covering basic cyber hygiene. | 1 year | Early-stage vendors and small organizations establishing a baseline. |
-| **i1 (Implemented)** | ~182 controls covering leading security practices, threat-adapted. | 1 year (with a mid-cycle interim assessment) | Mid-market vendors that need to demonstrate solid practices to enterprise buyers. |
+| **i1 (Implemented)** | ~182 controls covering leading security practices, threat-adapted. | 1 year (rapid recertification in year 2) | Mid-market vendors that need to demonstrate solid practices to enterprise buyers. |
 | **r2 (Risk-Based, 2-Year)** | Customized scope drawn from the full CSF (often 350+ requirements), tailored by risk factors. | 2 years (with an interim assessment at year 1) | The traditional "HITRUST certified" report. Required by most healthcare enterprise buyers. |
 
 The earlier terminology ("HITRUST CSF Validated," "HITRUST CSF Certified") still appears in older contracts; r2 is the current name for the highest-rigor option.
@@ -90,7 +90,7 @@ These frameworks overlap heavily, but they answer different questions.
 | **HIPAA** | US federal law for health information | No (outcomes, not controls) | HHS / OCR enforcement | Mandatory for US health data |
 | **HITRUST CSF** | Certifiable framework that maps to many regimes | Yes (1,900+ requirement statements) | HITRUST + External Assessor | Healthcare and other regulated vendors that want one audit for many regimes |
 | **SOC 2** | AICPA attestation against Trust Services Criteria | Partially (criteria, customer-defined controls) | Independent CPA firm | SaaS vendors selling to US enterprise buyers |
-| **ISO/IEC 27001** | International ISMS standard | Yes (Annex A controls) | Accredited certification body | International enterprises and vendors selling globally |
+| **ISO/IEC 27001** | International ISMS standard | Partially (risk-based selection from Annex A via SoA) | Accredited certification body | International enterprises and vendors selling globally |
 
 In practice:
 
@@ -103,7 +103,7 @@ Many healthcare-adjacent vendors maintain both SOC 2 and HITRUST. SOC 2 gives bu
 
 ## What does HITRUST certification involve?
 
-A typical r2 certification runs 12–18 months from kickoff to report. The major phases:
+A typical r2 certification runs 6–18 months from kickoff to report, depending on scope, prior maturity, and remediation load. The major phases:
 
 1. **Readiness assessment (optional but typical).** A self-assessment or facilitated gap analysis using HITRUST's MyCSF platform to identify control gaps before a paid audit.
 1. **Scoping.** Determine which systems, locations, and data types are in scope and which risk factors drive your specific requirement set.
@@ -148,7 +148,7 @@ HITRUST originally stood for "Health Information Trust Alliance." The organizati
 
 ### Is HITRUST only for healthcare?
 
-No. HITRUST originated in healthcare and is still most common there, but the CSF is industry-agnostic and is used in financial services, public sector, retail, and SaaS. The harmonized control set works for any organization that has to satisfy multiple compliance regimes at once.
+No. HITRUST originated in healthcare and is still most common there, but the CSF is used well beyond it — financial services, public sector, and SaaS in particular. The harmonized control set works for any organization that has to satisfy multiple compliance regimes at once.
 
 ### Is HITRUST certification required for HIPAA compliance?
 
@@ -156,15 +156,15 @@ No. HIPAA is a US federal law; HITRUST is a private framework. You can be HIPAA-
 
 ### What's the difference between HITRUST CSF Certified and HITRUST r2?
 
-They refer to the same assessment level. "HITRUST CSF Certified" was the older naming; "r2" (Risk-Based, 2-Year) is the current name. Reports issued before 2022 typically use the older terminology, but the rigor is unchanged.
+They refer to the same assessment level. "HITRUST CSF Certified" was the older naming; "r2" (Risk-Based, 2-Year) is the current name, introduced in 2021. Reports issued before then typically use the older terminology, but the rigor is unchanged.
 
 ### How long does HITRUST certification take?
 
-A first-time r2 certification typically runs 12–18 months from kickoff to issued report, including readiness, remediation, validated assessment, and HITRUST QA review. The lighter-weight e1 and i1 assessments run shorter (often 4–9 months for first-time issuance). Recertification cycles are faster than the first round.
+A first-time r2 certification typically runs 6–18 months from kickoff to issued report, including readiness, remediation, validated assessment, and HITRUST QA review. The lighter-weight e1 and i1 assessments run shorter (often 4–9 months for first-time issuance). Recertification cycles are faster than the first round.
 
 ### How much does HITRUST certification cost?
 
-Total cost varies widely by scope and assessment level. The MyCSF platform license is a few thousand dollars per year. The External Assessor fee for an r2 is typically in the low-to-mid six figures for a first-time assessment. Internal remediation and program-building costs usually exceed the external fees. Smaller e1 and i1 assessments are correspondingly cheaper.
+Total cost varies widely by scope and assessment level. MyCSF platform subscriptions start around $18,000 per year (per HITRUST's published pricing). The External Assessor fee for an r2 is typically in the low-to-mid six figures for a first-time assessment. Internal remediation and program-building costs usually exceed the external fees. Smaller e1 and i1 assessments are correspondingly cheaper.
 
 ### Can a HITRUST report replace a SOC 2 report?
 
