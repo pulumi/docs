@@ -1,73 +1,80 @@
-<nav class="top-nav-bar docs actually-docs transition-all">
-    <div class="top-nav-container">
-        <div class="logo-get-started">
-            <div data-track="header-pulumi-logo" class="logo-nav-button logo-parent" aria-haspopup="true" aria-controls="logo-nav-menu">
-                <div class="logo">
-                    {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "width" "96" "height" "24" "loading" "eager") }}
-                    {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold") }}
-                </div>
-                <ul id="logo-nav-menu" role="menu" class="logo-nav-menu hidden">
-                    <li role="none"><a role="menuitem" href="/">Pulumi home</a></li>
-                    <li role="none"><a role="menuitem" href="/pricing/">Pricing</a></li>
-                    <li role="none"><a role="menuitem" href="/blog/">Blog</a></li>
-                    <li role="none"><a role="menuitem" href="/events/">Events & workshops</a></li>
-                </ul>
-            </div>
-            <div class="get-started">
-                <a class="btn btn-primary" data-track="get-started-practitioner-nav" href="/docs/get-started/">Get Started</a>
-            </div>
-        </div>
-        <div class="nav-items">
-            <ul>
-                <li class="github-widget">
-                    <a
-                        data-track="header-github-pulumi"
-                        class="github-button"
-                        href="https://github.com/pulumi/pulumi"
-                        data-size="small"
-                        data-show-count="true"
-                        aria-label="Star pulumi/pulumi on GitHub"
-                    >
-                        Star
-                    </a>
-                </li>
-                <li class="slack">
-                    <a data-track="header-slack" href="https://slack.pulumi.com/">
-                        {{ partial "icon.html" (dict "name" "brand/slack") }}
-                        Slack
-                    </a>
-                </li>
-                <li class="docs">
-                    <a data-track="header-docs" href="/docs/">
-                        {{ partial "icon.html" (dict "name" "books") }}
-                        Docs
-                    </a>
-                </li>
-                <li class="registry">
-                    <a data-track="header-registry" href="/registry/">
-                        {{ partial "icon.html" (dict "name" "package") }}
-                        Registry
-                    </a>
-                </li>
-                <li class="ai">
-                    <a data-track="header-ai" href="/product/neo/">
-                        {{ partial "icon.html" (dict "name" "custom/pulumi-neo" "weight" "fill") }}
-                        Pulumi Neo
-                    </a>
-                </li>
-                <li class="contact">
-                    <a data-track="header-contact" href="/contact/">
-                        {{ partial "icon.html" (dict "name" "chat-circle") }}
-                        Contact Us
-                    </a>
-                </li>
-                <li>
-                    <a data-track="header-console" href="https://app.pulumi.com/signin">
-                        {{ partial "icon.html" (dict "name" "user-circle") }}
-                        {{ partial "top-nav-user-toggle" }}
-                    </a>
-                </li>
-            </ul>
-        </div>
+{{- $nav := site.Data.docs_nav -}}
+{{- /* Keep these as literal class strings so Tailwind's content scan finds them. */ -}}
+{{- $showAt := dict
+    "sm" "hidden sm:inline-flex"
+    "md" "hidden md:inline-flex"
+    "lg" "hidden lg:inline-flex" -}}
+
+<header class="z-40 w-full border-b border-gray-200 bg-white">
+  <div class="flex h-16 items-center justify-between gap-2 px-4 md:px-6">
+
+    <div class="relative shrink-0">
+      <button type="button"
+        data-logo-nav-trigger
+        data-track="header-pulumi-logo"
+        aria-haspopup="menu"
+        aria-expanded="false"
+        aria-controls="logo-nav-menu"
+        class="group/logo flex gap-2 shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:ring-offset-4 focus-visible:outline-1 focus-visible:outline-transparent">
+        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+        {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 group-hover/logo:text-violet-500 [[aria-expanded=true]_&]:text-violet-300 size-3 transition duration-300 [[aria-expanded=true]_&]:rotate-180") }}
+      </button>
+      <div id="logo-nav-menu"
+        data-logo-nav-menu
+        role="menu"
+        hidden
+        class="card absolute left-0 top-full z-50 mt-1 w-[240px] bg-white py-2 text-gray-950 shadow">
+        <ul class="flex flex-col gap-0.5">
+          {{ range $item := $nav.logoMenu }}
+            <li role="none"><a role="menuitem" href="{{ $item.href }}"
+              class="block rounded-md px-3 py-2 text-sm font-semibold text-gray-950 outline-none transition-colors hover:bg-violet-50 hover:text-violet-primary focus-visible:bg-violet-50 focus-visible:ring-3 focus-visible:ring-violet-400/50">{{ $item.label }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
-</nav>
+
+    <div class="flex items-center gap-2">
+      {{ range $item := $nav.items }}
+        <a href="{{ $item.href }}"
+          {{ with $item.track }}data-track="{{ . }}"{{ end }}
+          class="{{ index $showAt $item.showAt }} btn btn-ghost-nav gap-1.5">
+          {{ partial "icon.html" (dict "name" $item.icon "weight" (default "regular" $item.iconWeight)) }}
+          {{ $item.label }}
+        </a>
+      {{ end }}
+
+      {{ partial "github-star-button.html" (dict
+          "variant" "header"
+          "track" $nav.cta.github.track
+          "extraClass" (index $showAt $nav.cta.github.showAt)) }}
+
+      <a href="{{ $nav.cta.contact.href }}"
+        {{ with $nav.cta.contact.track }}data-track="{{ . }}"{{ end }}
+        class="{{ index $showAt $nav.cta.contact.showAt }} btn btn-outline gap-1.5">
+        {{ $nav.cta.contact.label }}
+      </a>
+      <a href="{{ $nav.cta.signIn.href }}"
+        {{ with $nav.cta.signIn.track }}data-track="{{ . }}"{{ end }}
+        data-nav-loggedout
+        class="btn btn-outline">
+        {{ $nav.cta.signIn.label }}
+      </a>
+      <a href="{{ $nav.cta.dashboard.href }}"
+        {{ with $nav.cta.dashboard.track }}data-track="{{ . }}"{{ end }}
+        data-nav-dashboard
+        class="btn btn-primary">
+        {{ $nav.cta.dashboard.label }}
+      </a>
+      <a href="{{ $nav.cta.getStarted.href }}"
+        {{ with $nav.cta.getStarted.track }}data-track="{{ . }}"{{ end }}
+        data-role="cta-get-started"
+        data-nav-loggedout
+        class="btn btn-primary">
+        {{ $nav.cta.getStarted.label }}
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<script src="/js/{{ index site.Data.js_manifest "header-nav" }}" defer></script>

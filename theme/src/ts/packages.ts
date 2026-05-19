@@ -126,37 +126,3 @@ document.querySelector(".section-registry")?.addEventListener("packageSearch", (
     const allCount = document.querySelectorAll(".all-packages .package:not(.hidden)").length;
     document.querySelectorAll(".all-count").forEach(el => el.textContent = String(allCount));
 });
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const logoNavMenuButton = document.querySelector(".logo-nav-button") as HTMLElement;
-    const bgMask = document.querySelector(".logo-nav-bg-mask") as HTMLElement;
-    const logoNavMenu = document.getElementById("logo-nav-menu");
-
-    if (!logoNavMenuButton || !logoNavMenu) return;
-
-    function toggleMenu() {
-        logoNavMenu.classList.toggle("hidden");
-        const navMenuVisible = !logoNavMenu.classList.contains("hidden");
-        logoNavMenuButton.setAttribute("aria-expanded", `${navMenuVisible}`);
-        document.querySelectorAll(".logo-nav-button .mobile-menu-toggle-icon").forEach(el => el.classList.toggle("hidden"));
-        bgMask?.classList.toggle("hidden");
-    }
-
-    logoNavMenuButton.addEventListener("click", toggleMenu);
-    bgMask?.addEventListener("click", toggleMenu);
-
-    document.addEventListener("click", function (event) {
-        const target = event.target as HTMLElement;
-        if (!target.closest(".logo-nav-button") && !target.closest("#logo-nav-menu") && !logoNavMenu.classList.contains("hidden")) {
-            toggleMenu();
-        }
-    });
-
-    document.addEventListener("scroll", function () {
-        const PRACTITIONER_NAV_HEIGHT = 53;
-        if (window.scrollY > PRACTITIONER_NAV_HEIGHT && !logoNavMenu.classList.contains("hidden")) {
-            toggleMenu();
-        }
-    });
-});
