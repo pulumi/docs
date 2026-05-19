@@ -81,7 +81,7 @@ Pulumi has guides for running in the following CI/CD systems:
 If the system you use isn't listed, see [adding support for CI/CD systems](#adding-support-for-cicd-systems).
 
 {{% notes %}}
-For Pulumi-maintained version control integrations — including the GitHub App, Azure DevOps, and GitLab — see [Version Control](/docs/integrations/version-control/).
+For Pulumi-maintained version control integrations — including the GitHub App, GitLab, Bitbucket, and Azure DevOps — see [Version Control](/docs/integrations/version-control/).
 {{% /notes %}}
 
 ## Adding support for CI/CD systems

@@ -12,7 +12,6 @@ menu:
         weight: 1
 aliases:
     - /docs/guides/testing/unit/
-    - /docs/using-pulumi/testing/property-testing/
     - /docs/using-pulumi/testing/unit/
     - /docs/iac/concepts/testing/unit/
 ---
