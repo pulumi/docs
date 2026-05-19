@@ -116,7 +116,7 @@ Organizations can register GitLab repositories as template sources. Pulumi scans
 
 ## CI integration
 
-The Pulumi GitLab integration posts results back to GitLab regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in GitLab CI/CD pipelines. See the [GitLab CI guide](/docs/iac/guides/continuous-delivery/gitlab-ci/) for setup instructions and example pipeline configurations.
+The Pulumi GitLab integration posts results back to GitLab regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in GitLab CI/CD pipelines. See the [GitLab CI guide](/docs/iac/operations/continuous-delivery/gitlab-ci/) for setup instructions and example pipeline configurations.
 
 ## OIDC authentication
 

@@ -27,7 +27,7 @@ Policies can be written in TypeScript/JavaScript (Node.js), Python, or OPA (Rego
 
 This guide walks you through creating a policy pack manually, but [Neo](/product/neo/) can help streamline the process.  
 
-Neo can generate policy pack content tailored to your preferred programming language and cloud providers, allowing you to quickly build policies that meet your specific requirements while reducing errors. When paired with the [GitHub App](/docs/iac/guides/continuous-delivery/github-app/), Neo can even open pull requests directly in your repository.  
+Neo can generate policy pack content tailored to your preferred programming language and cloud providers, allowing you to quickly build policies that meet your specific requirements while reducing errors. When paired with the [GitHub App](/docs/iac/operations/continuous-delivery/github-app/), Neo can even open pull requests directly in your repository.  
 
 Here are some example prompts to inspire your workflow:
 

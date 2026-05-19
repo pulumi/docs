@@ -51,7 +51,7 @@ aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE UPDATE_COMP
 Because the Serverless Framework creates standard CloudFormation stacks, [Neo](/product/neo/) can convert them to Pulumi code automatically.
 
 1. **Prerequisites**:
-    * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository
+    * Install the [Pulumi GitHub app](/docs/iac/operations/continuous-delivery/github-app/) with access to your repository
     * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
     * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
 

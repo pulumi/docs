@@ -26,7 +26,7 @@ sections:
 
   - icon: wrench
     heading: Troubleshooting
-    link: /docs/support/troubleshooting/
+    link: /docs/iac/operations/troubleshooting/
     description: Debug and resolve issues with Pulumi programs, deployments, and CI/CD pipelines.
 
   - icon: bug
