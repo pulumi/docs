@@ -103,7 +103,7 @@ The Kubernetes IaC tooling landscape is wider than for any other cloud target be
 | Cluster provisioning (focused) | eksctl, gcloud, az aks, ClusterAPI |
 | Workload templating | Helm, Kustomize, jsonnet |
 | GitOps controllers | ArgoCD, Flux |
-| Policy as code | [Pulumi CrossGuard](/docs/insights/policy/), Kyverno, OPA Gatekeeper |
+| Policy as code | [Pulumi policy as code](/docs/insights/policy/), Kyverno, OPA Gatekeeper |
 | Secrets | [Pulumi ESC](/product/esc/), External Secrets Operator, Sealed Secrets, Vault |
 | Cluster security scanning | Trivy, kube-bench, Falco |
 | Service mesh | Istio, Linkerd, Cilium |
@@ -119,7 +119,7 @@ A few patterns that hold up across providers and team sizes:
 * **Use IRSA / Workload Identity / Azure AD.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
 * **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time — either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
-* **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [CrossGuard](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
+* **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
 * **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
 * **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
 
@@ -131,7 +131,7 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 * **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format — `ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles — so adoption can be incremental without re-authoring the source artifacts.
 * **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
 * **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
-* **Policy as code through CrossGuard.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
+* **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
 * **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
 
@@ -161,11 +161,11 @@ Don't put secret values in IaC code. Use [Pulumi ESC](/product/esc/), HashiCorp 
 
 ### How do you test Kubernetes IaC?
 
-Unit-test the program with mocks, run static scans (Checkov, Trivy) against the rendered manifests, run policy-as-code checks in CI (CrossGuard, OPA), and run integration tests that deploy to an ephemeral cluster (kind, k3d, or a sandbox managed cluster) and exercise the workload before tearing it down. See [How to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) for the broader pattern.
+Unit-test the program with mocks, run static scans (Checkov, Trivy) against the rendered manifests, run policy-as-code checks in CI (Pulumi policy as code, OPA), and run integration tests that deploy to an ephemeral cluster (kind, k3d, or a sandbox managed cluster) and exercise the workload before tearing it down. See [How to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) for the broader pattern.
 
 ### What's "naked pods" and why are they bad?
 
-A naked pod is a `Pod` object created directly, not through a controller like a Deployment, StatefulSet, or DaemonSet. If the node hosting a naked pod fails or is drained, the pod isn't rescheduled. It just disappears. Controllers re-create the pod automatically. A CrossGuard or Kyverno policy that fails any naked-pod definition is a small but high-value guardrail.
+A naked pod is a `Pod` object created directly, not through a controller like a Deployment, StatefulSet, or DaemonSet. If the node hosting a naked pod fails or is drained, the pod isn't rescheduled. It just disappears. Controllers re-create the pod automatically. A Pulumi policy-as-code or Kyverno policy that fails any naked-pod definition is a small but high-value guardrail.
 
 ### Can a single Pulumi program span multiple Kubernetes clusters?
 
