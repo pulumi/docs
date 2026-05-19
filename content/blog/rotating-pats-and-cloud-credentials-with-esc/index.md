@@ -81,7 +81,7 @@ For cloud providers like AWS, Pulumi ESC offers two distinct strategies dependin
 
 ### 1. Dynamic credentials (OIDC)
 
-This is the preferred pattern for CI/CD. GitHub Actions authenticates to Pulumi Cloud with OIDC, then ESC exchanges its own OIDC token for temporary AWS credentials. There are no long-lived cloud secrets stored in GitHub.
+This pattern works best for CI/CD. GitHub Actions authenticates to Pulumi Cloud with OIDC, then ESC exchanges its own OIDC token for temporary AWS credentials. No long-lived cloud secrets are stored in GitHub.
 
 ```yaml
 values:
