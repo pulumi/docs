@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["cam-soper"]
 ---
 
 **Infrastructure as code for Kubernetes is the practice of defining a cluster, the workloads that run on it, and the supporting cloud resources around it in version-controlled code, then letting an engine reconcile the real world to match.** It covers both halves of the platform: the cluster lifecycle (control plane, node groups, IAM, networking, storage classes) and the workload lifecycle (Deployments, Services, Ingress, ConfigMaps, Secrets), often in the same program.
@@ -86,7 +86,7 @@ GitOps and IaC aren't competing approaches. They're complementary, and most prod
 |---|---|---|
 | Source of truth | Git repo containing IaC program | Git repo containing manifests or Kustomize/Helm output |
 | Apply mechanism | CI pipeline runs IaC engine | In-cluster controller reconciles toward Git |
-| Cluster-level resources | Excellent (cloud accounts, IAM, networks) | Limited (most controllers only handle Kubernetes objects) |
+| Cluster-level resources | Excellent (cloud accounts, IAM, networks) | Limited — most controllers reconcile Kubernetes API objects, not cloud-side resources like VPCs or IAM |
 | Workload-level resources | Good | Excellent |
 | Drift detection | Engine compares declared state to live state | Controller continuously reconciles |
 | Rollback | Re-run with previous code | Revert the Git commit; controller reconciles |
@@ -130,10 +130,10 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
 * **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format — `ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles — so adoption can be incremental without re-authoring the source artifacts.
 * **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
-* **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. Misspelled field names fail at compile time instead of at `kubectl apply` time.
+* **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
 * **Policy as code through CrossGuard.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
-* **Automation API.** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
+* **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
 
 [Get started with Pulumi Kubernetes](/docs/iac/clouds/kubernetes/get-started/) to manage a cluster and its workloads in TypeScript, Python, Go, C#, Java, or YAML.
 
@@ -177,7 +177,7 @@ The same way IaC supports compliance for the broader cloud: every change is a re
 
 ### How do I migrate an existing console-managed cluster to IaC?
 
-Start with the simplest thing that gives you a baseline: a Pulumi program that imports the existing cluster spec and the high-value workloads. Use `pulumi import` to bring resources under management without recreating them. Once that program runs in CI, layer policies on top to prevent regression. Migrate additional workloads as their owners are ready; there's no need to convert everything at once.
+Start with the simplest thing that gives you a baseline: a Pulumi program that imports the existing cluster spec and the high-value workloads. Use [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) to bring resources under management without recreating them. Once that program runs in CI, layer policies on top to prevent regression. Migrate additional workloads as their owners are ready; there's no need to convert everything at once.
 
 ## Learn more
 
