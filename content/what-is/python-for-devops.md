@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["pablo-seibelt"]
 ---
 
 **Python is the most common general-purpose language for DevOps work: writing automation scripts, defining infrastructure as code, building CI/CD glue, instrumenting observability, and running the data and machine-learning pipelines that increasingly sit alongside traditional services.** Its readable syntax, deep standard library, and large ecosystem of vendor SDKs make it the path of least resistance whenever a DevOps team needs to wire two systems together or replace a manual task with a script.
@@ -49,7 +49,7 @@ In this article, we'll cover the key questions about Python for DevOps:
 A handful of properties keep Python at the top of DevOps language surveys year after year:
 
 * **Readability.** Python's syntax is forgiving and close to pseudocode, so on-call engineers can read and edit each other's scripts without weeks of ramp-up. That matters more for ops tooling than for application code, because the same script may be touched by SREs, security engineers, data engineers, and product engineers.
-* **A library for everything.** PyPI has wrappers around every major cloud API, every messaging system, every monitoring vendor, and every IaC and configuration tool. Most DevOps tasks reduce to glue code on top of existing libraries.
+* **A library for everything.** PyPI has wrappers for almost every major cloud API, messaging system, monitoring vendor, and IaC and configuration tool. Most DevOps tasks reduce to glue code on top of existing libraries.
 * **The data and ML overlap.** Pandas, NumPy, scikit-learn, PyTorch, and TensorFlow live in the same language. As MLOps pipelines mature, the DevOps team that already knows Python can ship them without picking up a second language.
 * **First-class IaC support.** Modern IaC tools, including Pulumi, support Python natively. The same engineers who wrote the deploy scripts can write the platform itself.
 * **Cloud and Kubernetes SDKs.** Every major provider ships an official Python SDK: `boto3` (AWS), `google-cloud-*` (Google Cloud), `azure-sdk-for-python` (Azure), the Kubernetes Python client. The first thing a DevOps engineer reaches for is usually one of these.
@@ -87,7 +87,7 @@ For a deeper look at IaC concepts, see [What is Infrastructure as Code?](/what-i
 
 ## How is Python used for MLOps?
 
-MLOps is the application of DevOps practices to machine-learning systems: version control for models and training data, CI/CD for retraining pipelines, observability of model behavior in production, and rollback when a model regresses. Python is the dominant language at every layer:
+MLOps is the application of DevOps practices to machine-learning systems: version control for models and training data, CI/CD for retraining pipelines, observability of model behavior in production, and rollback when a model regresses. Python is the dominant language across MLOps:
 
 * **Training pipelines.** Frameworks like PyTorch, TensorFlow, JAX, and Hugging Face Transformers are Python-first.
 * **Pipeline orchestration.** Tools like Airflow, Prefect, Dagster, Kubeflow, Metaflow, and ZenML use Python as the orchestration language.
@@ -135,7 +135,7 @@ A few patterns that hold up across team sizes:
 
 Python is a first-class language for Pulumi, supported on par with TypeScript, Go, .NET, and Java.
 
-* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and 100+ other providers. Generated from each provider's API, including full type hints and docstrings.
+* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and hundreds of other providers. Generated from each provider's API, including full type hints and docstrings.
 * **`pulumi new python`.** Creates a project with a `Pulumi.yaml`, a virtualenv setup, and a starter program in seconds. See the [Python language guide](/docs/languages-sdks/python/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) can be distributed as PyPI packages with full type hints, among other formats.
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
