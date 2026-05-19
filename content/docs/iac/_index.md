@@ -82,10 +82,6 @@ sections:
     heading: Testing
     description: Unit, property, and integration testing for infrastructure code.
     link: /docs/iac/guides/testing/
-  - icon: rocket-launch
-    heading: Continuous Delivery
-    description: Integrate Pulumi with your CI/CD platform.
-    link: /docs/iac/guides/continuous-delivery/
   - icon: package
     heading: Migration
     description: Move existing infrastructure to Pulumi.
@@ -94,6 +90,25 @@ sections:
     heading: AI Integration
     description: Integrate AI assistants with Pulumi infrastructure.
     link: /docs/ai/
+- type: button-cards
+  heading: Operations
+  cards:
+  - icon: target
+    heading: Stack Management
+    description: Targeted updates, update plans, and editing state files.
+    link: /docs/iac/operations/stack-management/
+  - icon: rocket-launch
+    heading: Continuous Delivery
+    description: Integrate Pulumi with your CI/CD platform.
+    link: /docs/iac/operations/continuous-delivery/
+  - icon: warning
+    heading: Troubleshooting
+    description: Diagnose and recover from common Pulumi failures.
+    link: /docs/iac/operations/troubleshooting/
+  - icon: shield
+    heading: Least Privilege Security
+    description: Configure cloud credentials with minimum permissions.
+    link: /docs/iac/operations/iac-least-privileges/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

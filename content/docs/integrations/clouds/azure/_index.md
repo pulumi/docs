@@ -52,7 +52,7 @@ Hands-on Infrastructure as Code guides for building on Azure with Pulumi.
 
 - [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/) — compare Azure Native and Azure Classic.
 - [Convert ARM templates to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/) — migrate existing ARM templates.
-- [Azure DevOps CI/CD](/docs/iac/guides/continuous-delivery/azure-devops/) — drive Pulumi stack updates from Azure DevOps pipelines.
+- [Azure DevOps CI/CD](/docs/iac/operations/continuous-delivery/azure-devops/) — drive Pulumi stack updates from Azure DevOps pipelines.
 
 ## Secrets & configuration (ESC)
 

@@ -47,13 +47,13 @@ GitHub Actions downloads policy packs on each workflow run. You can cache the `~
       ${{ runner.os }}-pulumi-policies-
 ```
 
-For complete workflow examples including plugin caching, multiple languages, and environment configuration, see the [GitHub Actions guide](/docs/iac/guides/continuous-delivery/github-actions/#caching-plugins-and-policy-packs).
+For complete workflow examples including plugin caching, multiple languages, and environment configuration, see the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/#caching-plugins-and-policy-packs).
 
 ## Google Cloud Build
 
 Google Cloud Build can enforce Pulumi policies using the Pulumi Cloud Builder. Policy packs enabled through Pulumi Cloud are applied automatically during build steps that run `pulumi preview` or `pulumi up`.
 
-For detailed setup instructions, see the [Google Cloud Build guide](/docs/iac/guides/continuous-delivery/google-cloud-build/).
+For detailed setup instructions, see the [Google Cloud Build guide](/docs/iac/operations/continuous-delivery/google-cloud-build/).
 
 ## Other CI/CD providers
 
@@ -61,14 +61,14 @@ Pulumi policies work with any CI/CD system that can run the Pulumi CLI. Policy e
 
 Pulumi provides integration guides for many CI/CD providers:
 
-- [AWS Code Services](/docs/iac/guides/continuous-delivery/aws-code-services/)
-- [Azure DevOps](/docs/iac/guides/continuous-delivery/azure-devops/)
-- [CircleCI](/docs/iac/guides/continuous-delivery/circleci/)
-- [GitLab CI](/docs/iac/guides/continuous-delivery/gitlab-ci/)
-- [Jenkins](/docs/iac/guides/continuous-delivery/jenkins/)
-- [Travis CI](/docs/iac/guides/continuous-delivery/travis/)
+- [AWS Code Services](/docs/iac/operations/continuous-delivery/aws-code-services/)
+- [Azure DevOps](/docs/iac/operations/continuous-delivery/azure-devops/)
+- [CircleCI](/docs/iac/operations/continuous-delivery/circleci/)
+- [GitLab CI](/docs/iac/operations/continuous-delivery/gitlab-ci/)
+- [Jenkins](/docs/iac/operations/continuous-delivery/jenkins/)
+- [Travis CI](/docs/iac/operations/continuous-delivery/travis/)
 
-For the full list of CI/CD integrations, see the [continuous delivery guides](/docs/iac/guides/continuous-delivery/).
+For the full list of CI/CD integrations, see the [continuous delivery guides](/docs/iac/operations/continuous-delivery/).
 
 ## Best practices
 

@@ -35,7 +35,7 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
 
 1. **Prerequisites**:
    * Ensure you have access to your state file (`.tfstate`)
-   * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository that contains your Terraform configuration files
+   * Install the [Pulumi GitHub app](/docs/iac/operations/continuous-delivery/github-app/) with access to your repository that contains your Terraform configuration files
    * Configure cloud credentials in [Pulumi ESC](/docs/esc/)
    * Have [Pulumi Neo](/product/neo/) access
 
