@@ -27,7 +27,7 @@ social:
         Learn more in the post.
 ---
 
-Many platform teams start with [Crossplane](https://www.crossplane.io/) because they want to manage infrastructure using the Kubernetes API. It's a powerful idea: treat your cloud resources just like your pods and services. However, as infrastructure grows, the limitations of YAML-based compositions lead teams to look for more flexible alternatives.
+Many platform teams start with [Crossplane](https://www.crossplane.io/) because they want to manage infrastructure using the Kubernetes API. It's a powerful idea: treat your cloud resources like your pods and services. However, as infrastructure grows, YAML-based compositions can lead teams to look for more flexible alternatives.
 
 This guide provides a clear migration map from Crossplane concepts to Pulumi, including coexistence strategies and import paths for teams looking to modernize their Kubernetes-native infrastructure. In this post, you will build a migration strategy that maps Crossplane compositions to Pulumi component resources.
 
