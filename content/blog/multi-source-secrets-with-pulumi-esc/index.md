@@ -35,7 +35,7 @@ By the end of this post, you will compose a single [Pulumi ESC](/docs/esc/) envi
 
 ## Why it matters now
 
-Operational complexity and the risk of fragmented security policies increase as organizations adopt specialized secret stores. Without a central orchestration layer, it is impossible to get a unified view of who has access to what across the entire platform. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
+Operational complexity and the risk of fragmented security policies increase as organizations adopt specialized secret stores. Without a central orchestration layer, getting a unified view of who has access to what across the entire platform is difficult. Platform teams need a way to provide a consistent interface for developers while maintaining the security controls of each underlying provider.
 
 ## The challenge of secret sprawl
 
