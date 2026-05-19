@@ -86,7 +86,7 @@ const vpc = new awsx.ec2.Vpc("environment-factory", {
 // Create an EKS cluster with Auto Mode enabled.
 const hostCluster = new eks.Cluster("host-cluster", {
     name: clusterName,
-    authenticationMode: eks.AuthenticationMode.Api, // Auto Mode requires API authentication mode.
+    authenticationMode: eks.AuthenticationMode.Api, // Use API authentication mode for EKS access entries.
     vpcId: vpc.vpcId,
     publicSubnetIds: vpc.publicSubnetIds,
     privateSubnetIds: vpc.privateSubnetIds,
@@ -161,7 +161,7 @@ For production use, map these Kubernetes identities to IAM principals using EKS 
 
 ### Deploying vCluster with Helm
 
-We use the `kubernetes.helm.v3.Release` resource to install vCluster. This resource provides controlled [Helm](https://helm.sh/) lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior. Review the vCluster release notes when changing chart versions because values schema and generated secret names can change across releases.
+We use the [`kubernetes.helm.v3.Release`](/registry/packages/kubernetes/api-docs/helm/v3/release/) resource to install vCluster. This resource provides controlled [Helm](https://helm.sh/) lifecycle management for the vCluster release. The `values` block should be adjusted for each tenant profile to control resource synchronization and control plane behavior. Review the [vCluster release notes](https://github.com/loft-sh/vcluster/releases) when changing chart versions because values schema and generated secret names can change across releases.
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -170,7 +170,7 @@ import * as k8s from "@pulumi/kubernetes";
 const vcluster = new k8s.helm.v3.Release("vcluster-alpha", {
     name: "vcluster-alpha",
     chart: "vcluster",
-    version: "0.20.0", // Tested with vCluster 0.20.x; values schema and secret naming changed in 0.21+.
+    version: "0.20.0", // Tested with vCluster 0.20.x; review release notes before changing versions.
     repositoryOpts: {
         repo: "https://charts.loft.sh",
     },
@@ -217,7 +217,7 @@ const vclusterProvider = new k8s.Provider("vcluster-provider", {
 ## Operational caveats
 
 * **RBAC and permissions**: vCluster generates default RBAC rules that work for most scenarios. However, if your host cluster is heavily locked down, you may need to provide additional permissions to the vCluster service account.
-* **Helm release previews**: When using `kubernetes.helm.v3.Release`, Pulumi previews may not show every detail of the rendered Kubernetes resources. It primarily tracks the state of the Helm release itself.
+* **Helm release previews**: When using [`kubernetes.helm.v3.Release`](/registry/packages/kubernetes/api-docs/helm/v3/release/), Pulumi previews may not show every detail of the rendered Kubernetes resources. It primarily tracks the state of the Helm release itself.
 * **EKS Auto Mode node lifetime**: EKS Auto Mode uses immutable AMIs and has a 21-day node lifetime. Kubernetes reschedules vCluster pods and tenant workloads when nodes are replaced, so configure replicas, PodDisruptionBudgets, requests, and persistent storage for disruption tolerance.
 
 ## Conclusion: ephemeral environments at scale
