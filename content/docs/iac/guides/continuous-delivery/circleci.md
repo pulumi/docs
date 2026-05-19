@@ -8,7 +8,7 @@ menu:
     iac:
         name: CircleCI
         parent: iac-using-pulumi-cicd
-        weight: 4
+        weight: 60
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/circleci/
 - /docs/reference/cd-circleci/

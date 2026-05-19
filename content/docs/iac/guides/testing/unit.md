@@ -10,8 +10,6 @@ menu:
         name: Unit testing
         parent: iac-guides-testing
         weight: 1
-    usingpulumi:
-        parent: testing
 aliases:
     - /docs/guides/testing/unit/
     - /docs/using-pulumi/testing/property-testing/
