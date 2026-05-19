@@ -10,7 +10,6 @@ menu:
         parent: iac-guides-basics
         weight: 70
 aliases:
-  - /docs/iac/concepts/pulumi-cloud/
   - /docs/deployments/get-started/what-is-it/
   - /docs/pulumi-cloud/get-started/what-is-it/
 ---

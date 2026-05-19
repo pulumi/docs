@@ -763,6 +763,15 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Accept github-actions[bot] as a trigger actor. The #new-review
+          # path dispatches this workflow from claude-new.yml using
+          # GITHUB_TOKEN (so we don't burn pulumi-bot's shared rate-limit
+          # bucket); that makes the dispatched run's actor a Bot, which
+          # claude-code-action@v1 rejects by default. The auto-fire path
+          # (workflow_run after triage) is gated by claude-triage.yml's
+          # own access checks, so opening this door doesn't widen the
+          # trust surface.
+          allowed_bots: 'github-actions[bot]'
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
