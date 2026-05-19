@@ -1,0 +1,43 @@
+# Docs/tutorials top nav. Consumed by layouts/partials/docs-top-nav.html.
+# `showAt` (sm | md | lg) hides the item below that breakpoint.
+
+logoMenu:
+  - { label: Pulumi home,        href: /          }
+  - { label: Pricing,            href: /pricing/  }
+  - { label: Blog,               href: /blog/     }
+  - { label: Events & workshops, href: /events/   }
+
+items:
+  - label: Docs
+    href: /docs/
+    icon: book-open
+    track: header-docs
+    showAt: lg
+  - label: Registry
+    href: /registry/
+    icon: package
+    track: header-registry
+    showAt: lg
+  - label: Pulumi Neo
+    href: /product/neo/
+    icon: custom/pulumi-neo
+    iconWeight: fill
+    track: header-ai
+    showAt: lg
+  - label: Slack
+    href: https://slack.pulumi.com/
+    icon: brand/slack
+    track: header-slack
+    showAt: md
+
+cta:
+  github:
+    track: header-github-stars
+    showAt: sm
+  contact:   { label: Contact us, href: /contact/,                     track: header-contact,  showAt: sm }
+  signIn:    { label: Sign in,    href: https://app.pulumi.com/signin, track: header-console               }
+  dashboard: { label: Dashboard,  href: https://app.pulumi.com,        track: header-dashboard             }
+  getStarted:
+    label: Get started
+    href: /docs/get-started/
+    track: get-started-practitioner-nav
