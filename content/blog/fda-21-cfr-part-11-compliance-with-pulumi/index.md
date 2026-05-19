@@ -68,9 +68,9 @@ Part 11 requires a computer-generated, time-stamped audit trail that records the
 
 Part 11 auditability also depends on the systems you deploy, not only the platform you use to deploy them. Use Pulumi to provision cloud-native audit trails for regulated workloads, such as AWS CloudTrail delivered to encrypted, versioned S3 buckets, integrated with CloudWatch Logs for monitoring and alerting. AWS maps Part 11 controls to capabilities such as CloudTrail log file validation, CloudTrail encryption, CloudWatch Logs integration, and S3 data event logging. Pulumi lets you define those controls as code and review every change before it reaches production.
 
-### 3. Record protection and retrieval (11.10(b) and (c))
+### 3. Record protection, retrieval, and copies for inspection (11.10(b) and (c))
 
-Electronic records must be protected to enable their accurate and ready retrieval throughout the records retention period.
+Electronic records must be protected to enable their accurate and ready retrieval throughout the records retention period (§11.10(c)). Teams must also be able to generate accurate and complete copies of records in human-readable and electronic form for inspection, review, and copying by the agency (§11.10(b)).
 
 * **State Management**: Pulumi Cloud stores your state files securely, with built-in versioning and history.
 * **Human-Readable Exports**: You can export your stack state at any time using `pulumi stack export`, providing a JSON representation of your infrastructure that is both human-readable and suitable for long-term archiving.
