@@ -20,7 +20,11 @@ aliases:
 
 ## How Pulumi works with Argo CD
 
-Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack`](/docs/iac/concepts/stacks/) custom resource—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
+Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack` custom resource](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#create-a-stack-resource)—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
+
+{{% notes type="info" %}}
+The `Stack` custom resource is not the same thing as a [Pulumi stack](/docs/iac/concepts/stacks/). A Pulumi stack is an isolated instance of a Pulumi program, identified as `organization/project/stack`. The `Stack` custom resource is a Kubernetes object that tells PKO which Pulumi stack to deploy and how—each one targets a single Pulumi stack through its `spec.stack` field.
+{{% /notes %}}
 
 The integration relies on two pieces:
 
@@ -104,9 +108,9 @@ spec:
 Static tokens are long-lived credentials stored in the cluster. Where possible, use the [OIDC approach](#eliminate-static-tokens-with-oidc) instead so workspace pods receive short-lived tokens.
 {{% /notes %}}
 
-## Define a Pulumi Stack manifest
+## Define a Stack custom resource
 
-A `Stack` manifest tells PKO which Pulumi stack to deploy, where the program lives, and how to run it. The example below also declares a service account and the cluster role bindings the deployment needs to create resources in the cluster.
+A `Stack` custom resource tells PKO which Pulumi stack to deploy, where the program lives, and how to run it. The example below also declares a service account and the cluster role bindings the deployment needs to create resources in the cluster.
 
 ```yaml
 ---
@@ -290,7 +294,7 @@ webapp-manifests/
 
 ## Order deployments with sync waves
 
-Argo CD sync waves control the order in which resources are applied. Annotate resources with `argocd.argoproj.io/sync-wave`; lower numbers are applied first. The [`Stack` manifest above](#define-a-pulumi-stack-manifest) uses waves to apply the RBAC resources (wave `1`) before the `Stack` itself (wave `2`):
+Argo CD sync waves control the order in which resources are applied. Annotate resources with `argocd.argoproj.io/sync-wave`; lower numbers are applied first. The [`Stack` custom resource above](#define-a-stack-custom-resource) uses waves to apply the RBAC resources (wave `1`) before the `Stack` itself (wave `2`):
 
 ```yaml
 metadata:
