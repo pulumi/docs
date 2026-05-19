@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["cam-soper"]
 ---
 
 **Infrastructure as code (IaC) is the substrate that makes DevOps work at cloud scale: every cloud resource is defined in version-controlled code, every change ships through CI/CD, and every policy and test that applies to application code now applies to the platform underneath it.** Without IaC, the rest of a DevOps program (CI/CD, automated testing, policy as code, blameless postmortems, platform engineering) doesn't have anything to act on past the application boundary.
