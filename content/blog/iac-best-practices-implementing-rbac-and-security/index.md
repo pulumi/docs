@@ -1,6 +1,5 @@
 ---
 title: "IaC Best Practices: Implementing RBAC and Security"
-canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-05-23
 updated: 2025-03-04
 meta_desc: Discover best practices for securing Pulumi stacks with role-based access control (RBAC). Learn how to manage permissions and enforce least privilege.
