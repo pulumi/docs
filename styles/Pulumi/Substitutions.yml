@@ -11,3 +11,5 @@ swap:
   '\bcross-language package\b': Pulumi package
   '\bsingle-language package\b': native language package
   '\blanguage-native package\b': native language package
+  '\bPulumi CrossGuard\b': Pulumi Policies
+  '\bCrossGuard\b': Pulumi Policies
