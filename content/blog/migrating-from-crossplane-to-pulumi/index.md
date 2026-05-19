@@ -33,11 +33,11 @@ This guide provides a clear migration map from Crossplane concepts to Pulumi, in
 
 <!--more-->
 
-This transition starts when teams want to keep Kubernetes-native workflows but need more flexibility for complex infrastructure logic. While the Kubernetes Resource Model (KRM) is excellent for container orchestration, it can become a bottleneck for multi-cloud resources, reusable abstractions, and policy-driven platform workflows. Pulumi offers the same "infrastructure as data" benefits while providing the full power of general-purpose programming languages.
+This transition starts when teams want to keep Kubernetes-native workflows but need more flexibility for complex infrastructure logic. While the Kubernetes Resource Model (KRM) works well for container orchestration, it can make some multi-cloud resources, reusable abstractions, and policy-driven platform workflows harder to model. Pulumi keeps declarative desired-state infrastructure management while adding general-purpose programming languages.
 
 ## Why teams move to Pulumi
 
-The move from Crossplane to Pulumi is usually driven by a few key factors:
+The move from Crossplane to Pulumi is often driven by a few key factors:
 
 1. **Logic and abstraction**: Crossplane Compositions historically used patch-and-transform expressions in YAML, with Composition Functions now allowing custom logic in Go, Python, or KCL. Pulumi expresses infrastructure logic directly in TypeScript, Python, Go, and other languages, making loops, conditionals, and complex data transformations easier to model.
 1. **Tooling and ecosystem**: Pulumi integrates with existing IDEs, testing frameworks, and CI/CD pipelines without requiring custom Kubernetes controllers for every piece of logic.
