@@ -60,7 +60,7 @@ const kvv2 = new vault.Mount("kvv2", {
 });
 ```
 
-Using `vault.Mount` allows you to define the path, type, and version of your secrets engine. This is particularly useful for KV (Key-Value) stores where you might want to enforce version 2 for features like secret versioning and soft deletes. If your Vault already has a `secret/` mount, choose a free path or import the existing mount instead of creating a duplicate.
+Using `vault.Mount` allows you to define the path, type, and version of your secrets engine. This is particularly useful for KV (Key-Value) stores where you might want to enforce [KV version 2](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2) for features like secret versioning and soft deletes. If your Vault already has a `secret/` mount, choose a free path or import the existing mount instead of creating a duplicate.
 
 ## Pattern 2: Namespace per environment
 
@@ -90,7 +90,7 @@ path "secret/data/app/*" {
 });
 ```
 
-Template literals make it easy to compose policy bodies from variables or other resource outputs when you need dynamic values.
+Template literals let you compose policy bodies from variables or other resource outputs when you need dynamic values.
 
 ## Pattern 4: Kubernetes auth method
 
@@ -132,7 +132,7 @@ This pattern involves three steps: enabling the Kubernetes auth backend, configu
 
 As organizations modernize their secrets management, they often look to [Pulumi ESC](/docs/esc/) for environment-wide secrets orchestration. You can use Pulumi to bridge your existing Vault secrets into ESC environments.
 
-This bridge allows you to continue using Vault as your primary secret store while using ESC's environment tagging and inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers. The example assumes the KV v2 mount and database secret exist inside the `production` Vault namespace; provision them with the same patterns above and set the Vault provider namespace when managing namespaced resources.
+This bridge allows you to continue using Vault as your primary secret store while using ESC's version tagging and import-based inheritance features. By referencing Vault paths in your ESC configuration, you can provide a unified interface for your developers. The example assumes the KV v2 mount and database secret exist inside the `production` Vault namespace; provision them with the same patterns above and set the Vault provider namespace when managing namespaced resources.
 
 ```yaml
 values:
