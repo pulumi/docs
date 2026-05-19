@@ -1,6 +1,6 @@
 ---
 title: "The Agentic Infrastructure Era"
-date: 2026-05-19
+date: 2026-05-19T03:00:00-07:00
 draft: false
 meta_desc: "Joe Duffy on why infrastructure as code is the natural substrate for AI agents, and what Pulumi is shipping today to make agentic infrastructure real."
 meta_image: meta.png

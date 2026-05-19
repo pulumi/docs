@@ -1,6 +1,6 @@
 ---
 title: "Better CLI Interactions for Agents and Humans"
-date: 2026-05-19
+date: 2026-05-19T01:00:00-07:00
 draft: false
 meta_desc: "The Pulumi CLI is reorganized so commands are guessable and everything in Pulumi Cloud is reachable from the terminal, for humans and AI agents alike."
 meta_image: meta.png
