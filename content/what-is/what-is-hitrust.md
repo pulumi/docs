@@ -125,11 +125,11 @@ Pulumi ships a HITRUST policy pack specifically for AWS:
 pulumi policy new aws-hitrust-compliance-policies-typescript
 ```
 
-The pack contains prebuilt [CrossGuard](/docs/insights/policy/) policies that block non-compliant configurations in CI before they deploy. Source and customization details are in the [aws-hitrust-compliance-policies-typescript template](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript).
+The pack contains prebuilt [Pulumi policies](/docs/insights/policy/) that block non-compliant configurations in CI before they deploy. Source and customization details are in the [aws-hitrust-compliance-policies-typescript template](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript).
 
 More broadly, Pulumi helps with HITRUST control maturity in concrete ways:
 
-* **Policy maturity (level 1).** Encode security policy as code with [Pulumi CrossGuard](/docs/insights/policy/). Policy lives in version control with the same review process as application code.
+* **Policy maturity (level 1).** Encode security policy as code with [Pulumi Policies](/docs/insights/policy/). Policy lives in version control with the same review process as application code.
 * **Procedure maturity (level 2).** The Pulumi program is itself the procedure. The same code is run by every engineer in every environment.
 * **Implementation maturity (level 3).** Pulumi applies the configuration. The state file is evidence that the control was deployed.
 * **Measurement maturity (level 4).** `pulumi preview` and policy reports give auditors continuous evidence of compliance status across accounts and clouds.
@@ -184,7 +184,7 @@ A way to reuse controls operated by another party (a cloud provider, a SaaS vend
 
 ## Learn more
 
-Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [CrossGuard policies](/docs/insights/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to accelerate the technical work. [Get started today](/docs/get-started/).
+Pulumi gives engineering teams the tooling to make HITRUST CSF controls live in code: encrypted resources by default, least-privilege IAM, [Pulumi policies](/docs/insights/policy/) that block non-compliant infrastructure in CI, and a pre-built [AWS HITRUST policy pack](https://github.com/pulumi/templates-policy/tree/master/aws-hitrust-compliance-policies-typescript) to accelerate the technical work. [Get started today](/docs/get-started/).
 
 Related reading:
 
