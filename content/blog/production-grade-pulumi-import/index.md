@@ -59,7 +59,7 @@ const vpc = new aws.ec2.Vpc("my-vpc", {
 });
 ```
 
-This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, remove the `import` option from your code as hygiene so future updates focus on normal resource management.
+This is a "code-only" approach because the CLI doesn't imperatively modify your state. Instead, the import happens during the next `pulumi up`. Once the resource is imported, remove the [`import` resource option](/docs/iac/concepts/resources/options/import/) from your code as hygiene so future updates focus on normal resource management.
 
 ### 3. State-only import
 
