@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["pablo-seibelt"]
 ---
 
 **JavaScript and TypeScript can be used to define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) the same way they're used to build web applications: real programs, real types, real package management, real tests, real IDE tooling.** Instead of describing cloud resources in a custom DSL like HCL or in YAML, you write a Node.js program whose API calls describe a VPC, a Kubernetes cluster, or an S3 bucket. An IaC engine then reconciles your declared state with what's running in the cloud.
@@ -162,7 +162,7 @@ No. Pulumi supports Python, Go, .NET (C#, F#, VB), Java, and YAML alongside Node
 
 ### Can I write Pulumi infrastructure tests with Jest?
 
-Yes. Jest is the default in Pulumi's TypeScript templates and the recommended choice for unit testing. Pulumi provides mocks that replace cloud calls so the tests run entirely in memory. See the [unit testing guide](/docs/iac/using-pulumi/testing/unit/).
+Yes. Jest is the most common choice for unit testing Pulumi TypeScript programs. Pulumi provides mocks that replace cloud calls so the tests run entirely in memory. See the [unit testing guide](/docs/iac/using-pulumi/testing/unit/).
 
 ### Can I publish a Pulumi component to npm?
 
