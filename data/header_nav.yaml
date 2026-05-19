@@ -92,6 +92,11 @@ items:
             description: Practical infrastructure patterns for cloud providers
             icon: compass
             track: header-engineers-guides
+          - label: Releases
+            href: /releases/
+            description: Major platform updates from the team
+            icon: megaphone-simple
+            track: header-engineers-releases
 
   - label: For enterprises
     sections:

@@ -1,0 +1,109 @@
+{{/*
+    Releases Card
+
+    A single card inside a section's flexible 2-col grid. Variant drives the
+    grid spans + internal layout; presence of `link` flips the card into a
+    hover treatment (violet-50 background + violet-primary border).
+
+    Images are rendered FLUSH with the card edges:
+      - image-top:   image at the top, no padding above or to the sides.
+      - image-left:  image fills the left half top-to-bottom, flush left edge.
+      - image-right: image fills the right half top-to-bottom, flush right edge.
+
+    Parameters:
+    - variant:     "text" | "image-top" | "image-left" | "image-right"
+    - icon:        Optional Phosphor icon name (rendered above the title).
+    - title:       Card title.
+    - description: Card description (markdown).
+    - image:       Optional image path under /images/releases/<slug>/...
+    - image_alt:   Alt text for the image.
+    - link:        Optional URL. When set, the whole card becomes a hover-enabled anchor
+                   and an arrow icon is appended to the description.
+*/}}
+
+{{ $variant := .variant | default "text" }}
+{{ $icon := .icon }}
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $image := .image }}
+{{ $imageAlt := .image_alt | default $title }}
+{{ $link := .link }}
+
+{{/* Span classes per variant (mobile is always single-column) */}}
+{{ $spanClass := "lg:col-span-1 lg:row-span-1" }}
+{{ if eq $variant "image-top" }}{{ $spanClass = "lg:col-span-1 lg:row-span-2" }}{{ end }}
+{{ if eq $variant "image-left" }}{{ $spanClass = "lg:col-span-2 lg:row-span-1" }}{{ end }}
+{{ if eq $variant "image-right" }}{{ $spanClass = "lg:col-span-2 lg:row-span-1" }}{{ end }}
+
+{{ $isLinked := false }}
+{{ if $link }}{{ $isLinked = true }}{{ end }}
+
+{{ $cardClasses := printf "card bg-white flex flex-col overflow-hidden h-full %s" $spanClass }}
+{{ if $isLinked }}{{ $cardClasses = printf "%s group/linked transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary no-underline hover:no-underline" $cardClasses }}{{ end }}
+
+{{/* Resolve whether the image asset exists; render a placeholder if not. */}}
+{{ $imageExists := false }}
+{{ with $image }}
+    {{ $fpSrc := strings.TrimPrefix "/" . }}
+    {{ if resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+        {{ $imageExists = true }}
+    {{ end }}
+{{ end }}
+
+{{ $textBlockArgs := dict "icon" $icon "title" $title "description" $description "isLinked" $isLinked }}
+
+{{ if $isLinked }}<a href="{{ $link }}" class="{{ $cardClasses }}">{{ else }}<div class="{{ $cardClasses }}">{{ end }}
+
+    {{ if eq $variant "image-top" }}
+        <div class="w-full overflow-hidden">
+            {{ if $imageExists }}
+                {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-auto block transition-transform group-hover/linked:scale-105" "maxWidth" 800) }}
+            {{ else if $image }}
+                <div class="w-full aspect-video bg-gray-100 flex items-center justify-center text-gray-400" aria-hidden="true">
+                    {{ partial "icon.html" (dict "name" "image" "weight" "duotone" "class" "size-10") }}
+                </div>
+            {{ end }}
+        </div>
+        <div class="p-8 flex flex-col flex-1">
+            {{ partial "releases/card-text-block.html" $textBlockArgs }}
+        </div>
+
+    {{ else if eq $variant "image-left" }}
+        <div class="flex flex-col md:flex-row items-stretch h-full">
+            <div class="w-full md:w-1/2 flex items-stretch">
+                {{ if $imageExists }}
+                    {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-full object-cover block transition-transform group-hover/linked:scale-105" "maxWidth" 800) }}
+                {{ else if $image }}
+                    <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400" aria-hidden="true">
+                        {{ partial "icon.html" (dict "name" "image" "weight" "duotone" "class" "size-10") }}
+                    </div>
+                {{ end }}
+            </div>
+            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+                {{ partial "releases/card-text-block.html" $textBlockArgs }}
+            </div>
+        </div>
+
+    {{ else if eq $variant "image-right" }}
+        <div class="flex flex-col md:flex-row items-stretch h-full">
+            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center order-2 md:order-1">
+                {{ partial "releases/card-text-block.html" $textBlockArgs }}
+            </div>
+            <div class="w-full md:w-1/2 flex items-stretch order-1 md:order-2">
+                {{ if $imageExists }}
+                    {{ partial "fingerprinted-img.html" (dict "src" $image "alt" $imageAlt "class" "w-full h-full object-cover block transition-transform group-hover/linked:scale-105" "maxWidth" 800) }}
+                {{ else if $image }}
+                    <div class="w-full aspect-square bg-gray-100 flex items-center justify-center text-gray-400" aria-hidden="true">
+                        {{ partial "icon.html" (dict "name" "image" "weight" "duotone" "class" "size-10") }}
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+
+    {{ else }}
+        <div class="p-8 flex flex-col flex-1">
+            {{ partial "releases/card-text-block.html" $textBlockArgs }}
+        </div>
+    {{ end }}
+
+{{ if $isLinked }}</a>{{ else }}</div>{{ end }}
