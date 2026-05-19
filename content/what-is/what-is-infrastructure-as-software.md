@@ -26,7 +26,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["cam-soper"]
 ---
 
 **Infrastructure as Software (IaS) is the practice of defining cloud infrastructure in general-purpose programming languages and applying the full toolchain of modern software engineering to it: real types, real abstractions, real tests, real package management, real APIs, and real CI/CD.** It's the natural next step after [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), which uses domain-specific languages (DSLs) or markup formats like HCL, JSON, and YAML, and which makes most of these engineering practices either awkward or unavailable.
@@ -114,7 +114,7 @@ IaS isn't a free win in every direction. A few honest trade-offs:
 * **A general-purpose language is more powerful than a DSL, and the same engineer can write less-readable code with it.** A poorly written TypeScript Pulumi program with nested conditionals and side effects is harder to read than a flat HCL file. Coding standards and reviewer discipline matter more, not less.
 * **The team has to know the language.** A pure ops team that's been writing HCL for years has a real adoption cost. The win comes when the team already has TypeScript / Python / Go skills, or when the platform team can mediate.
 * **Programmatic flexibility makes some patterns easy that you shouldn't use.** Imperative side effects inside an IaC program (talking to external systems mid-apply) are tempting and rarely a good idea. IaS programs should still describe desired state, not script imperative steps. The discipline has to come from the team.
-* **DSL-based tools have a longer history and a larger module ecosystem in some categories.** Terraform's public module registry is still bigger than Pulumi's component ecosystem for many niche providers. The gap is closing, but it exists.
+* **DSL-based tools have a longer history and a larger module ecosystem in some categories.** Terraform's public module registry has a longer history and more entries in some categories. The gap is closing, but it exists.
 
 The pragmatic answer for most teams: start with the language they already use, write IaS programs that read like code review-ready software (small functions, typed inputs, components for repeated patterns), and treat the IaS advantages as a way to do less work, not as a license to do more.
 
