@@ -345,4 +345,3 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - [Kubernetes provider](/registry/packages/kubernetes/)
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/)
 - [Argo CD documentation](https://argo-cd.readthedocs.io/)
-- [Pulumi Kubernetes Operator on GitHub](https://github.com/pulumi/pulumi-kubernetes-operator)
