@@ -17,8 +17,8 @@ docs/pulumi-cloud/developer-portals/new-project-wizard/index.html|/docs/idp/deve
 docs/pulumi-cloud/developer-portals/backstage/index.html|/docs/idp/developer-portals/backstage/
 docs/pulumi-cloud/access-management/scim/azuread/index.html|/docs/administration/access-identity/scim/entra/
 docs/iac/packages-and-automation/crossguard/core-concepts/index.html|/docs/insights/policy/
-docs/pulumi-cloud/access-management/oidc/index.html|/docs/administration/access-identity/oidc-client/
-docs/pulumi-cloud/access-management/oidc/client/index.html|/docs/administration/access-identity/oidc-client/
+docs/pulumi-cloud/access-management/oidc/index.html|/docs/administration/access-identity/oidc-issuers/
+docs/pulumi-cloud/access-management/oidc/client/index.html|/docs/administration/access-identity/oidc-issuers/
 docs/administration/self-hosting/pulumi-cloud/index.html|/docs/administration/self-hosting/
 docs/esc/environments/structure/index.html|/docs/esc/environments/syntax/
 docs/reference/cloud-rest-api/cloud-rest-api/index.html|/docs/reference/cloud-rest-api/
