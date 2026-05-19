@@ -106,7 +106,7 @@ If the report shows a replacement on a protected database or load balancer, stop
 
 ## Step 4: Batch by blast radius, not alphabetically
 
-Once the canary is clean, roll out in batches ordered by risk:
+Once the canary is clean, a sensible rollout order is to batch by risk:
 
 1. Ephemeral development stacks.
 2. Shared non-production stacks.
