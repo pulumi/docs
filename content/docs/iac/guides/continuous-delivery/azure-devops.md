@@ -26,6 +26,10 @@ aliases:
 
 The task runs CLI commands, so it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/). It also works with [any cloud provider](/registry/) Pulumi supports, not only Azure.
 
+{{% notes type="info" %}}
+This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
+{{% /notes %}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

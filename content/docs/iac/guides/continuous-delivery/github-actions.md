@@ -1,9 +1,8 @@
 ---
-title_tag: "Using Pulumi GitHub Actions | CI/CD"
-meta_desc: Pulumi's GitHub Actions help you deploy apps and infrastructure to your cloud of
-           choice, using nothing but code in your favorite language and GitHub.
+title_tag: "Using GitHub Actions with Pulumi | CI/CD"
+meta_desc: Run Pulumi in GitHub Actions with the official Pulumi GitHub Action, and ship infrastructure through a trunk-based CI/CD workflow.
 title: GitHub Actions
-h1: GitHub Actions for Pulumi
+h1: Using GitHub Actions with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -21,806 +20,513 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/github-actions/
 ---
 
-{{% notes type="info" %}}
-The content and examples in this guide refer to Pulumi's GitHub Action v6. Pulumi's GitHub Action v1 has been deprecated
-and reached its End of Life (EOL) on August 31st, 2021.
-{{% /notes %}}
+[GitHub Actions](https://docs.github.com/actions) is the CI/CD service built into GitHub. It runs workflows defined in YAML files under `.github/workflows/` in your repository, triggered by events such as pull requests, pushes, and tags.
 
-Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and
-infrastructure to your cloud of choice, using nothing but code in your favorite language
-and GitHub. This includes previewing, validating, and collaborating on proposed
-deployments in the context of Pull Requests, and triggering deployments or promotions
-between different environments by merging or directly committing changes.
+You run Pulumi in a workflow with the [Pulumi GitHub Action](https://github.com/pulumi/actions) (`pulumi/actions`), an official, Pulumi-maintained action that installs the Pulumi CLI and runs Pulumi commands as a workflow step. Because it wraps the CLI, it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
+
+{{< cicd-cloud-note >}}
+
+## Pulumi's GitHub Actions
+
+Pulumi publishes and maintains several actions on the GitHub Marketplace. This guide centers on `pulumi/actions`, the action that runs Pulumi commands; the others handle authentication and configuration and are covered in the sections below.
+
+| Action | Purpose |
+|--------|---------|
+| [`pulumi/actions`](https://github.com/pulumi/actions) | Installs the Pulumi CLI and runs a Pulumi command (`preview`, `up`, `destroy`, and so on) as a workflow step. |
+| [`pulumi/setup-pulumi`](https://github.com/pulumi/setup-pulumi) | Installs the Pulumi CLI only, for workflows that invoke `pulumi` commands directly rather than through `pulumi/actions`. |
+| [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) | Exchanges a GitHub OIDC token for a short-lived Pulumi Cloud access token, removing the need to store a token as a secret. |
+| [`pulumi/esc-action`](https://github.com/pulumi/esc-action) | Opens a [Pulumi ESC](/docs/esc/) environment and injects its environment variables — cloud credentials, secrets, and configuration — into the workflow. |
+| [`pulumi/esc-export-secrets-action`](https://github.com/pulumi/esc-export-secrets-action) | Exports GitHub Actions secrets into a Pulumi ESC environment, useful when migrating existing secrets to ESC. |
 
 ## Prerequisites
 
-Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/signup) (if you
-haven't already). This guide also assumes you've reviewed the [GitHub Actions
-documentation](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
-and are generally familiar with its concepts and syntax.
+Before you begin, make sure you have:
 
-For your workflow to do anything interesting, you'll want to create a new Pulumi project
-for it. There are three ways to do this:
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A GitHub repository.
+1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-1. [Clone an existing Pulumi example](https://github.com/pulumi/examples)
-2. [Use the New Project wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI](/docs/install/) and run `pulumi new` to
-   select a template
+## Authenticate with Pulumi Cloud
 
-## Creating a workflow
+Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
 
-Although the full power of the Pulumi CLI is available to use with GitHub Actions, we
-recommend starting with our standard workflow, which consists of two workflow files, each
-triggered by common GitHub events:
+Add the token as an [encrypted secret](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) named `PULUMI_ACCESS_TOKEN` under your repository's **Settings > Secrets and variables > Actions**. The workflow then reads it through the `secrets` context, as shown in the examples below.
 
-1. **Pulumi Preview** runs `pulumi preview` in response to a Pull Request, showing a preview of the changes
-   to the target branch when the PR gets merged.
-2. **Pulumi Up** runs `pulumi up` on the target branch, in response to a commit on that
-   branch.
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a workflow or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as repository secrets.
 
-### Committing the workflow files
+## Authenticate without a stored token using OIDC
 
-Let's get started by adding these two new workflow files to the GitHub repository
-containing your Pulumi project.
+You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
 
-#### The pull_request Workflow File
+Pair it with [`pulumi/esc-action`](https://github.com/pulumi/esc-action) to pull cloud credentials, secrets, and configuration from a [Pulumi ESC](/docs/esc/) environment. This is the recommended way to provide cloud credentials in GitHub Actions because it's:
 
-Add a new file to your Pulumi project repository at `.github/workflows/pull_request.yml`
-containing the following workflow definition, which instructs GitHub Actions to run
-`pulumi preview` in response to all `pull_request` events:
+- **Provider-agnostic** — works with [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/), and others through the same pattern.
+- **Portable** — the same ESC environment works locally and in any CI/CD system, not only GitHub Actions.
+- **Centralized** — credential configuration lives in ESC, not scattered across individual workflows.
 
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
+A job that uses OIDC needs the `id-token: write` permission. Add `pull-requests: write` as well if the workflow comments on pull requests:
 
 ```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: npm install
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: pip install -r requirements.txt
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: go mod download
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-#### The push Workflow File
-
-Next, add a second workflow file at `.github/workflows/push.yml` containing the following
-definition, which tells GitHub to run `pulumi up` in response to a commit on the `main`
-branch:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
-
-```yaml
-name: Pulumi
-on:
-  push:
-    branches:
-      - main
-jobs:
-  update:
-    name: Update
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: npm install
-      - uses: pulumi/actions@v6
-        with:
-          command: up
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```yaml
-name: Pulumi
-on:
-  push:
-    branches:
-      - main
-jobs:
-  update:
-    name: Update
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: pip install -r requirements.txt
-      - uses: pulumi/actions@v6
-        with:
-          command: up
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```yaml
-name: Pulumi
-on:
-  push:
-    branches:
-      - main
-jobs:
-  update:
-    name: Update
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: go mod download
-      - uses: pulumi/actions@v6
-        with:
-          command: up
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  push:
-    branches:
-      - main
-jobs:
-  update:
-    name: Update
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - uses: pulumi/actions@v6
-        with:
-          command: up
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Now that you've got these two common workflows defined, you'll need to configure your
-secrets. Secrets are exposed as environment variables to the GitHub Actions runtime
-environment. Minimally, you'll need to supply a [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens)
-to allow the Pulumi CLI to communicate with Pulumi Cloud on your behalf, and
-you'll probably want to provide credentials for communicating with your cloud
-provider as well.
-
-### Configuring your secrets
-
-With your workflow files committed and pushed to GitHub, head on over
-to your repo's **Settings** tab, where you'll find the new **Secrets** area:
-
-![Secrets](/images/docs/reference/gh-actions-secrets.png)
-
-First, [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens), then
-submit that token as a new secret named `PULUMI_ACCESS_TOKEN`. This enables your
-GitHub Action to communicate with Pulumi Cloud on your behalf.
-
-Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
-based on your provider of choice. For example:
-
-* `AWS_ACCESS_KEY_ID`, `AWS_REGION` and `AWS_SECRET_ACCESS_KEY` for [AWS](/registry/packages/aws/installation-configuration/)
-* `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure](/registry/packages/azure/installation-configuration/)
-* `GOOGLE_CREDENTIALS` for [Google Cloud](/registry/packages/gcp/installation-configuration/)
-* `KUBECONFIG` for [Kubernetes](/registry/packages/kubernetes/installation-configuration/)
-
-## Using OIDC for cloud provider credentials
-
-Instead of storing long-lived cloud provider credentials as GitHub Secrets, you can use OpenID Connect (OIDC) to obtain short-lived credentials at runtime. This eliminates static API keys that never expire and reduces credential exposure.
-
-### Using Pulumi ESC (recommended)
-
-[Pulumi ESC](/docs/esc/) is the recommended approach for OIDC-based cloud credentials in GitHub Actions. Rather than configuring trust between GitHub Actions and each cloud provider separately, you configure trust once between Pulumi ESC and your cloud provider. ESC then surfaces the resulting short-lived credentials as environment variables that the Pulumi CLI and cloud provider SDKs consume automatically.
-
-This approach is preferred because it is:
-
-* **Provider-agnostic**: Works with [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/), and others using the same workflow pattern.
-* **Portable**: The same ESC environment works locally and in any CI/CD system, not just GitHub Actions.
-* **Centralized**: Credential configuration lives in ESC, not scattered across individual pipelines.
-
-To set this up:
-
-1. Configure OIDC between Pulumi ESC and your cloud provider using one of the [ESC OIDC guides](/docs/esc/guides/configuring-oidc/).
-1. Configure Pulumi Cloud to trust GitHub OIDC tokens using the [GitHub OIDC client guide](/docs/administration/access-identity/oidc-issuers/github/).
-1. Update your workflow to use `pulumi/auth-actions` and `pulumi/esc-action` instead of long-lived secrets:
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
 permissions:
   id-token: write
   contents: read
-  pull-requests: write # Required when using comment-on-pr: true
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
+  pull-requests: write # Only needed when commenting on pull requests
+```
+
+The job below authenticates with `pulumi/auth-actions`, loads an ESC environment with `pulumi/esc-action`, and then runs Pulumi — with no `PULUMI_ACCESS_TOKEN` secret and no stored cloud provider keys:
+
+```yaml
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: package.json
+          node-version-file: infra/package.json
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v1
         with:
-          organization: org-name
+          organization: acme
           requested-token-type: urn:pulumi:token-type:access_token:organization
-      - name: Inject ESC environment variables
+      - name: Load the ESC environment
         uses: pulumi/esc-action@v1
         with:
-          environment: org-name/project-name/env-name
+          environment: acme/website/ci
       - run: npm install
-      - uses: pulumi/actions@v6
+        working-directory: infra
+      - uses: pulumi/actions@v7
         with:
           command: preview
-          stack-name: org-name/stack-name
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          stack-name: acme/website/staging
+          work-dir: infra
 ```
 
-The `pulumi/auth-actions` step exchanges the GitHub OIDC token for a short-lived Pulumi access token, so no `PULUMI_ACCESS_TOKEN` secret is required. The `pulumi/esc-action` step opens the specified ESC environment and injects its `environmentVariables` into the workflow — for example, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN` for AWS — which the Pulumi AWS provider picks up automatically.
+For more detail, see the [Pulumi ESC GitHub Action documentation](/docs/esc/integrations/dev-tools/github/).
 
-Replace the `npm install` step with the appropriate install command for your language. For more details, see the [Pulumi ESC GitHub Action documentation](/docs/esc/integrations/dev-tools/github/).
+To configure OIDC directly between GitHub Actions and a cloud provider without ESC — for example, with `aws-actions/configure-aws-credentials` and a `role-to-assume` input — follow that provider's GitHub Actions OIDC guide. This approach is provider-specific: each cloud requires its own trust relationship, whereas ESC configures that trust once and reuses it everywhere.
 
-### Direct GitHub → AWS OIDC (without ESC)
+## The trunk-based development workflow
 
-If you prefer to configure OIDC directly between GitHub Actions and AWS without ESC, use the `aws-actions/configure-aws-credentials` action with the `role-to-assume` parameter. You must first [configure an IAM identity provider and role trust policy in AWS](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services) that allows GitHub Actions to assume an IAM role.
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. This guide splits that across two workflow files:
 
-Note that this approach is AWS-specific. For other cloud providers you would need to configure separate trust relationships.
+- `.github/workflows/pr.yml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
+- `.github/workflows/main.yml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-When using OIDC, the workflow job requires the `id-token: write` permission. When also posting PR comments via `comment-on-pr: true`, you must add `pull-requests: write` as well:
+Both files check out the repository, set up your program's language, install dependencies, and then invoke `pulumi/actions`. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the language setup and dependency-install steps differ between languages:
 
-```yaml
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write # Required when using comment-on-pr: true
-```
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
-Replace the static credentials step with:
+{{% choosable language typescript %}}
 
 ```yaml
-- name: Configure AWS credentials
-  uses: aws-actions/configure-aws-credentials@v4
-  with:
-    role-to-assume: arn:aws:iam::123456789012:role/my-github-actions-role
-    aws-region: us-east-1
-```
-
-A complete pull request workflow using direct AWS OIDC:
-
-```yaml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
-  - pull_request
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write
+  pull_request:
 jobs:
   preview:
-    name: Preview
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version-file: package.json
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::123456789012:role/my-github-actions-role
-          aws-region: us-east-1
+          node-version-file: infra/package.json
       - run: npm install
-      - uses: pulumi/actions@v6
+        working-directory: infra
+      - uses: pulumi/actions@v7
         with:
           command: preview
-          stack-name: org-name/stack-name
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          stack-name: acme/website/staging
+          work-dir: infra
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-## Try it out!
-
-To try things out, create a Pull Request or commit, and you will see these new
-actions showing up in the usual GitHub Checks dialog, with a green checkmark if everything
-went as planned:
-
-![Action Checks](/images/docs/reference/gh-actions-checks.png)
-
-Select the Logs pane to see the full output of the Pulumi CLI, along with the URL of your
-deployment on Pulumi Cloud with more details:
-
-![Action Logs](/images/docs/reference/gh-actions-logs.png)
-
-For even better Pull Request integration, make sure to also [install our GitHub App](/docs/using-pulumi/continuous-delivery/github-app/)!
-
-![Action Pull Requests](/images/docs/reference/gh-actions-prs.png)
-
-## Pull request flow
-
-If you are using Pulumi's GitHub Actions to preview infrastructure changes from Pull
-Requests, you may want to have Pulumi comment on those PRs so that you don't need to look
-at the specific update logs to see if there were any changes.
-
-There are two ways to do this: using the Pulumi GitHub App (recommended), or configuring
-the GitHub Actions container directly.
-
-### Pulumi GitHub App
-
-The [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) is something you install on your
-GitHub organization. It allows Pulumi Cloud to leave comments on Pull Requests.
-
-Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
-any resource changes will be left on the Pull Request, as well as links to the Pulumi
-Console for more detailed information.
-
-<a class="btn btn-secondary" href="https://github.com/apps/pulumi" target="_blank">
-    Install Pulumi GitHub App
-</a>
-
-Example comment when using the Pulumi GitHub App:
-
-![Comment from the Pulumi GitHub App](/images/docs/github-actions/pr-comment-gh-app.png)
-
-### Comments by GitHub Actions
-
-If you don't want to use the Pulumi GitHub App, you can configure Pulumi's GitHub Actions
-to copy the output of the `pulumi` invocation on the Pull Request. This option doesn't
-have as rich an output display as the Pulumi GitHub App, as it copies the raw
-output of the Pulumi CLI.
-
-To allow your GitHub Action to leave Pull Request comments, you'll need to add
-`comment-on-pr` and `github-token` to the list of inputs
-passed to the action. Update the action as follows:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
-
 ```yaml
-name: Pulumi
+# .github/workflows/main.yml
+name: Pulumi deploy
 on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: npm install
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: pip install -r requirements.txt
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: go mod download
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-Example comment when using GitHub Actions directly:
-
-![Comment from GitHub Actions](/images/docs/github-actions/pr-comment-actions.png)
-
-### GitHub step summary
-
-In addition to (or instead of) Pull Request comments, you can publish the results of a
-Pulumi operation to the [GitHub Actions step summary](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#adding-a-job-summary).
-The step summary is visible on the workflow run page and persists even after the run
-completes, making it useful for push-triggered deployments that do not have a Pull Request
-to comment on.
-
-To enable this, add `comment-on-summary: true` to your action inputs:
-
-```yaml
-- uses: pulumi/actions@v6
-  with:
-    command: up
-    stack-name: org-name/stack-name
-    comment-on-summary: true
-  env:
-    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-`comment-on-summary` can be combined with `comment-on-pr: true` to publish results in
-both places simultaneously.
-
-## Stack outputs
-
-When Pulumi updates a stack, any values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) become available for use in subsequent steps of your workflow. This is useful when downstream jobs or steps need information produced by your infrastructure, such as a service endpoint, a storage bucket name, or a database connection string, without needing to re-query the cloud provider.
-
-### Using the `pulumi/actions` GitHub Action
-
-The `pulumi/actions` action exposes each stack output as a named step output. To access a stack output, give the Pulumi step an `id` and then reference `steps.<id>.outputs.<output-name>` in subsequent steps.
-
-For example, if your Pulumi program exports an output named `url`:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-// ... resource definitions ...
-
-export const url = myResource.endpoint;
-```
-
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-```python
-import pulumi
-
-# ... resource definitions ...
-
-pulumi.export("url", my_resource.endpoint)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-ctx.Export("url", myResource.Endpoint)
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```csharp
-return new Dictionary<string, object?>
-{
-    ["url"] = myResource.Endpoint,
-};
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-You can capture and use that value in your workflow as follows:
-
-```yaml
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy infrastructure
-        id: pulumi
-        uses: pulumi/actions@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: infra/package.json
+      - run: npm install
+        working-directory: infra
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
         with:
           command: up
-          stack-name: org-name/stack-name
+          stack-name: acme/website/staging
+          work-dir: infra
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-      - name: Use the stack output
-        run: echo "Deployed to ${{ steps.pulumi.outputs.url }}"
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-The `id` field on the Pulumi step is what makes the output available as `steps.pulumi.outputs.<output-name>`. Output names map directly to the keys your program passes to `ctx.Export` (Go), `pulumi.export` (Python), `export const` (TypeScript), or the returned dictionary (C#).
-
-If a stack output name contains characters that are not valid in GitHub Actions expression syntax (such as hyphens), GitHub Actions still makes them available; refer to the [GitHub Actions documentation](https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/passing-information-between-jobs) for how to reference outputs with special characters.
-
-### Using the Pulumi CLI directly
-
-If you are not using the `pulumi/actions` action for a particular step, you can retrieve stack outputs using the Pulumi CLI and write them to the `$GITHUB_OUTPUT` environment file, which is the standard GitHub Actions mechanism for passing values between steps.
-
-To retrieve a single output value:
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```yaml
-- name: Get stack output
-  run: echo "url=$(pulumi stack output url)" >> "$GITHUB_OUTPUT"
-  id: stack
-  working-directory: infra
-  env:
-    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-- name: Use the output
-  run: echo "Deployed to ${{ steps.stack.outputs.url }}"
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+        working-directory: infra
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
-
-To retrieve all outputs as a JSON object and access individual values from it:
 
 ```yaml
-- name: Get all stack outputs
-  run: echo "outputs=$(pulumi stack output --json)" >> "$GITHUB_OUTPUT"
-  id: stack
-  working-directory: infra
-  env:
-    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-- name: Use a value from the JSON outputs
-  run: echo "Deployed to ${{ fromJSON(steps.stack.outputs.outputs).url }}"
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+        working-directory: infra
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
-{{% notes type="warning" %}}
-Stack outputs may include sensitive values such as passwords or private keys. Avoid logging output values directly in workflow run logs, and use [GitHub Encrypted Secrets](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) to store and pass sensitive data rather than stack outputs when appropriate. You can also set `suppress-outputs: true` on the `pulumi/actions` step to prevent output values from appearing in GitHub Actions logs.
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```yaml
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with:
+          go-version: 'stable'
+      - run: go mod download
+        working-directory: infra
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with:
+          go-version: 'stable'
+      - run: go mod download
+        working-directory: infra
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```yaml
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```yaml
+# .github/workflows/pr.yml
+name: Pulumi preview
+on:
+  pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: pulumi/actions@v7
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'release-*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      # Push to main: deploy to the staging environment.
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/main'
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+      # Release tag: promote to production.
+      - name: Deploy to production
+        if: startsWith(github.ref, 'refs/tags/release-')
+        uses: pulumi/actions@v7
+        with:
+          command: up
+          stack-name: acme/website/production
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The `pulumi/actions` step runs Pulumi non-interactively, so `pulumi up` applies changes without a confirmation prompt. For Java and C#, the language runtime resolves and builds dependencies as part of the Pulumi run, so no separate install step is needed.
+
+To promote a release, push a tag that matches the `release-*` pattern:
+
+```bash
+git tag release-2026-05-20
+git push origin release-2026-05-20
+```
+
+Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
+
+To let reviewers exercise a change in a live environment, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+
+{{% notes type="info" %}}
+The Pulumi CLI automatically detects when it runs inside GitHub Actions and records the build and commit metadata. Each update in Pulumi Cloud then links back to the workflow run and pull request that triggered it — no extra configuration required.
 {{% /notes %}}
 
-### Passing stack outputs between jobs
+## Report results on pull requests
 
-The examples above show how to use stack outputs within steps of the same job. When your workflow separates infrastructure provisioning and application deployment into distinct jobs, you need to propagate the outputs across that boundary.
+When a workflow runs `pulumi preview` on a pull request, you'll usually want the proposed changes summarized on the pull request itself rather than buried in the workflow logs. There are two ways to do this.
 
-GitHub Actions provides a `jobs.<job-id>.outputs` map for this purpose. Step outputs can be promoted to job-level outputs and then referenced by any downstream job using `needs.<job-id>.outputs.<output-name>`.
+### Pulumi GitHub App (recommended)
 
-Building on the `pulumi/actions` approach:
+The [Pulumi GitHub App](/docs/integrations/version-control/github-app/) lets Pulumi Cloud post a rich summary of resource changes — with links to the Pulumi Cloud console — directly on the pull request. Install it once on your GitHub organization and it works for every repository, regardless of which CI/CD system runs Pulumi.
+
+### Comments from the action
+
+Without the GitHub App, the `pulumi/actions` action can post the raw CLI output itself. Set `comment-on-pr: true` and pass a `github-token`:
+
+```yaml
+- uses: pulumi/actions@v7
+  with:
+    command: preview
+    stack-name: acme/website/staging
+    work-dir: infra
+    comment-on-pr: true
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+For push-triggered deployments that have no pull request to comment on, set `comment-on-summary: true` to publish the result to the [workflow run summary](https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/workflow-commands-for-github-actions#adding-a-job-summary) instead. The two inputs can be combined.
+
+For the action's full set of inputs, see the [`pulumi/actions` documentation](https://github.com/pulumi/actions).
+
+## Stack outputs
+
+When Pulumi updates a stack, the values your program exports as [stack outputs](/docs/iac/concepts/stacks/#outputs) — a service endpoint, a bucket name, a connection string — become available to later steps in the workflow.
+
+Give the `pulumi/actions` step an `id`, and each stack output becomes a step output at `steps.<id>.outputs.<name>`:
+
+```yaml
+- name: Deploy
+  id: pulumi
+  uses: pulumi/actions@v7
+  with:
+    command: up
+    stack-name: acme/website/staging
+    work-dir: infra
+  env:
+    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+- name: Use a stack output
+  run: echo "Deployed to ${{ steps.pulumi.outputs.url }}"
+```
+
+To pass an output to a downstream job, promote it to a job output and depend on the producing job with `needs`:
 
 ```yaml
 jobs:
@@ -830,12 +536,12 @@ jobs:
       url: ${{ steps.pulumi.outputs.url }}
     steps:
       - uses: actions/checkout@v4
-      - name: Deploy infrastructure
-        id: pulumi
-        uses: pulumi/actions@v6
+      - id: pulumi
+        uses: pulumi/actions@v7
         with:
           command: up
-          stack-name: org-name/stack-name
+          stack-name: acme/website/staging
+          work-dir: infra
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
@@ -843,610 +549,64 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Run integration tests
-        run: ./run-tests.sh
+      - run: ./run-tests.sh
         env:
           SERVICE_URL: ${{ needs.deploy.outputs.url }}
 ```
 
-The `outputs` declaration at the job level promotes the step output to something the workflow can route between jobs. Without it, the step output is scoped to its containing job and is not visible elsewhere. The `needs: deploy` declaration in the downstream job ensures it runs after the infrastructure job completes and makes those outputs available for reference.
-
-The same promotion pattern applies when you use the CLI approach. An output written to `$GITHUB_OUTPUT` inside a step becomes a step output, which you can then declare as a job output and consume from downstream jobs in exactly the same way.
-
-## Configuration
-
-You can configure how Pulumi's GitHub Actions work to have more control about which stacks get updated, and when.
-
-### Using a different root directory
-
-By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root
-directory. If you are using a different root directory for your project, set the
-`work-dir` variable in your workflow action, with a relative path to your Pulumi
-project directory. For example:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: npm install
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: pip install -r requirements.txt
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: go mod download
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-This tells Pulumi that the project can be found underneath the repo's `infra` directory.
-
-### Stack upsert
-
-Pulumi has a concept of *stacks*, which are isolated environments for your application
-(e.g., production, staging, or even distinct services).
-
-A stack name is a required input for the Pulumi Action. If you need the GitHub Action to create the stack
-(passed through the `stack-name` parameter) on your behalf you can do so with the `upsert` config option
-as follows:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: npm install
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-          upsert: true
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: pip install -r requirements.txt
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-          upsert: true
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - run: go mod download
-        working-directory: infra
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-          upsert: true
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name # When using an individual account, only use stack-name.
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          work-dir: infra
-          upsert: true
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-### Refreshing state before operations
-
-The `refresh` input tells Pulumi to reconcile its state with the actual state of your
-cloud resources before performing any changes. In v6, this is equivalent to passing the
-`--refresh` flag to the Pulumi CLI directly.
-
-```yaml
-- uses: pulumi/actions@v6
-  with:
-    command: up
-    stack-name: org-name/stack-name
-    refresh: true
-  env:
-    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
 {{% notes type="warning" %}}
-The behavior of `refresh: true` changed in v6. In v5 and earlier, the action ran
-`pulumi refresh` as a separate step before the requested command. In v6, the `--refresh`
-flag is passed directly to `pulumi up` or `pulumi preview`, which is more efficient but
-produces a single combined operation rather than two distinct steps. If your workflow
-logic depended on a standalone `pulumi refresh` step completing independently (for
-example, to capture its exit code separately), you may need to add an explicit
-`pulumi refresh` step to your workflow instead of using this input.
+Stack outputs can contain sensitive values such as passwords or private keys. Set `suppress-outputs: true` on the `pulumi/actions` step to keep output values out of the workflow logs, and store secrets as [encrypted secrets](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) rather than passing them through stack outputs when possible.
 {{% /notes %}}
 
-### Caching plugins and policy packs
+## Speed up runs with caching
 
-GitHub Actions downloads plugins and policy packs on each workflow run. To improve CI performance and reduce workflow execution times, you can cache these artifacts using GitHub's [`actions/cache`](https://github.com/actions/cache).
-
-Pulumi stores plugins in `~/.pulumi/plugins` and policy packs in `~/.pulumi/policies`. By caching these directories, subsequent workflow runs skip re-downloading plugins and policies, significantly reducing setup time.
-
-Here's an example workflow that caches both plugins and policy packs:
-
-{{< chooser language "typescript,python,go,csharp" >}}
-
-{{% choosable language typescript %}}
+GitHub Actions starts each run on a clean runner, so Pulumi re-downloads its plugins and policy packs every time. Caching `~/.pulumi/plugins` and `~/.pulumi/policies` with [`actions/cache`](https://github.com/actions/cache) avoids that. Add this step before the `pulumi/actions` step:
 
 ```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: package.json
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Cache Pulumi plugins
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/plugins
-          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-plugins-
-      - name: Cache Pulumi policy packs
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/policies
-          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-policies-
-      - run: npm install
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+- name: Cache Pulumi plugins and policy packs
+  uses: actions/cache@v4
+  with:
+    path: |
+      ~/.pulumi/plugins
+      ~/.pulumi/policies
+    key: ${{ runner.os }}-pulumi-${{ hashFiles('infra/package.json') }}
+    restore-keys: |
+      ${{ runner.os }}-pulumi-
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
+The cache key includes a hash of your dependency manifest so the cache is rebuilt when dependencies change; use the file appropriate to your language — `package.json`, `requirements.txt`, `go.sum`, the `.csproj`, or `pom.xml`. The `restore-keys` fallback lets a run reuse a recent cache even when there's no exact match.
 
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.11
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Cache Pulumi plugins
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/plugins
-          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-plugins-
-      - name: Cache Pulumi policy packs
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/policies
-          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-policies-
-      - run: pip install -r requirements.txt
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
+## Control concurrent runs
 
-{{% /choosable %}}
-{{% choosable language go %}}
+When pull requests stack up or commits land faster than a workflow finishes, runs accumulate. [Concurrency groups](https://docs.github.com/actions/using-jobs/using-concurrency) bound how many run at once.
 
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v6
-        with:
-          go-version: 'stable'
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Cache Pulumi plugins
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/plugins
-          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-plugins-
-      - name: Cache Pulumi policy packs
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/policies
-          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-policies-
-      - run: go mod download
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```yaml
-name: Pulumi
-on:
-  - pull_request
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 10.0.x
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      - name: Cache Pulumi plugins
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/plugins
-          key: ${{ runner.os }}-pulumi-plugins-${{ hashFiles('**/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-plugins-
-      - name: Cache Pulumi policy packs
-        uses: actions/cache@v4
-        with:
-          path: ~/.pulumi/policies
-          key: ${{ runner.os }}-pulumi-policies-${{ hashFiles('**/*.csproj') }}
-          restore-keys: |
-            ${{ runner.os }}-pulumi-policies-
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-The cache key includes a hash of your dependency files (e.g., `package.json`, `requirements.txt`, `go.sum`, or `.csproj`) to invalidate the cache when dependencies change and may require different plugins. The `restore-keys` fallback allows the cache to be used even if there isn't an exact match, providing benefit in most scenarios.
-
-{{% notes type="info" %}}
-If your workflow uses multiple language runtimes or has specific versioning requirements, you can create more sophisticated cache keys by incorporating additional environment variables. For example, you might include the Python version, Node.js version, or GitHub Actions runner image version in your cache key to ensure compatibility.
-{{% /notes %}}
-
-For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
-
-### Configuring workflow concurrency
-
-GitHub Actions workflows for Pulumi can accumulate unnecessary runs when multiple pull requests are open simultaneously or when commits arrive faster than the previous workflow completes. Configuring [concurrency groups](https://docs.github.com/en/actions/using-jobs/using-concurrency) lets you control how many workflow runs can execute at the same time, which reduces wasted compute and prevents conflicting deployments.
-
-**For pull request preview workflows**, use a concurrency group keyed to the pull request number and set `cancel-in-progress: true`. This cancels any in-flight preview runs for the same PR when a new commit is pushed, so that reviewers always see the result of the latest code:
+For **pull request previews**, key the group to the pull request and cancel superseded runs so reviewers always see the result of the latest commit:
 
 ```yaml
 concurrency:
-  group: pr-infra-${{ github.event.pull_request.number }}
+  group: pulumi-pr-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 ```
 
-**For push-to-main deployment workflows**, use a shared concurrency group without `cancel-in-progress`. This queues deployments instead of canceling them, ensuring every commit to your main branch is eventually applied. Setting `cancel-in-progress: true` on a deployment workflow would silently drop intermediate deployments, which is rarely desirable:
+For **deployments**, use a shared group *without* `cancel-in-progress` so updates queue instead of being dropped — canceling a deployment mid-run can leave infrastructure half-applied:
 
 ```yaml
 concurrency:
-  group: deploy-infra
+  group: pulumi-deploy
 ```
 
-The `concurrency` key is a top-level workflow field placed at the same level as `on` and `jobs`. For example, a complete pull request workflow with concurrency configured looks like this:
+`concurrency` is a top-level workflow key, placed alongside `on` and `jobs`. You can also scope it to a single job when a workflow contains jobs with different concurrency needs.
 
-```yaml
-name: Pulumi
-on:
-  - pull_request
-concurrency:
-  group: pr-infra-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
-jobs:
-  preview:
-    name: Preview
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: org-name/stack-name
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
+## Managing GitHub with Pulumi
 
-{{% notes type="info" %}}
-You can also scope concurrency to the job level rather than the workflow level by placing the `concurrency` key inside the job definition. Job-level concurrency is useful when a single workflow file contains multiple jobs with different concurrency requirements.
-{{% /notes %}}
+You can manage GitHub itself — repositories, teams, branch protection rules, and Actions secrets — as code with the [GitHub provider](/registry/packages/github/) in the Pulumi Registry. This lets you define the workflow secrets and repository settings this guide describes as part of a Pulumi program.
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [`pulumi/actions`](https://github.com/pulumi/actions) — the Pulumi GitHub Action's full input reference.
+- [Pulumi GitHub App](/docs/integrations/version-control/github-app/) — rich pull request comments and commit checks from Pulumi Cloud.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to workflows and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
