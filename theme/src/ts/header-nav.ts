@@ -472,22 +472,32 @@
     });
   });
 
-  // ---------- Auth-aware sign-in / dashboard toggle ----------
-  try {
-    const cookies: Record<string, string> = {};
-    document.cookie.split(';').forEach(c => {
-      const eq = c.indexOf('=');
-      if (eq > -1) cookies[c.slice(0, eq).trim()] = c.slice(eq + 1).trim();
+  // ---------- Docs nav: Pulumi-logo dropdown ----------
+  const logoTrigger = document.querySelector<HTMLElement>('[data-logo-nav-trigger]');
+  const logoMenu = document.querySelector<HTMLElement>('[data-logo-nav-menu]');
+  if (logoTrigger && logoMenu) {
+    const setLogoOpen = (open: boolean): void => {
+      logoTrigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) logoMenu.removeAttribute('hidden');
+      else logoMenu.setAttribute('hidden', '');
+    };
+    logoTrigger.addEventListener('click', e => {
+      e.stopPropagation();
+      setLogoOpen(logoTrigger.getAttribute('aria-expanded') !== 'true');
     });
-    const userCookie = cookies['pulumi_web_user_info'] ?? 'j:{}';
-    const userInfo = JSON.parse(decodeURIComponent(userCookie).slice(2));
-    if (userInfo?.userId) {
-      document.querySelectorAll<HTMLElement>('[data-nav-loggedout]').forEach(el => {
-        el.style.display = 'none';
-      });
-      document.querySelectorAll<HTMLElement>('[data-nav-dashboard]').forEach(el => {
-        el.style.removeProperty('display');
-      });
-    }
-  } catch (e) {}
+    document.addEventListener('click', e => {
+      if (logoTrigger.getAttribute('aria-expanded') !== 'true') return;
+      const t = e.target as Node;
+      if (!logoTrigger.contains(t) && !logoMenu.contains(t)) setLogoOpen(false);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && logoTrigger.getAttribute('aria-expanded') === 'true') {
+        setLogoOpen(false);
+        logoTrigger.focus();
+      }
+    });
+  }
+
+  // The .is-signed-in class on <html> is set pre-paint by the inline script in
+  // head.html — see CSS rules in main.scss. Nothing to do here at hydration.
 })();

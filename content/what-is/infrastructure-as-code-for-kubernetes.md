@@ -1,7 +1,6 @@
 ---
 title: Infrastructure as Code for Kubernetes
-meta_desc: |
-     Infrastructure as code for Kubernetes is a truly effective way to manage your clusters, making them versionable, testable and scalable.
+meta_desc: "How to manage Kubernetes as infrastructure as code: the cluster, the workloads in it, and the surrounding cloud resources, in one reviewable program."
 
 meta_image: /images/what-is/infrastructure-as-code-for-kubernetes-meta.png
 type: what-is
@@ -28,60 +27,168 @@ customer_logos:
       - webflow
       - supabase
       - ro
-authors: ["zack-chase"]
+authors: ["cam-soper"]
 ---
 
-[Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) (IaC) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure, including your Kubernetes clusters, versionable, testable and repeatable.
+**Infrastructure as code for Kubernetes is the practice of defining a cluster, the workloads that run on it, and the supporting cloud resources around it in version-controlled code, then letting an engine reconcile the real world to match.** It covers both halves of the platform: the cluster lifecycle (control plane, node groups, IAM, networking, storage classes) and the workload lifecycle (Deployments, Services, Ingress, ConfigMaps, Secrets), often in the same program.
 
-## What is Kubernetes?
+Kubernetes is itself already declarative. Every object you create is described as a desired state that the control plane reconciles. The job of [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/) is to put that desired state under the same engineering discipline as the rest of your platform: reviewed in pull requests, tested in CI, gated by policy, and deployed by automation. Once both the cluster and its workloads live in IaC, "deploying" stops being a sequence of `kubectl apply` commands and becomes an ordinary code review.
 
-[Kubernetes](/blog/kubernetes-fundamentals-part-one/) is a container orchestration tool. Modern applications are increasingly built using containers, which are microservices packaged with their dependencies and configurations. Kubernetes is open-source software for deploying and managing those containers. Keeping containerized apps up and running can be complex because they often use many containers deployed across different machines. Kubernetes provides a way to schedule and deploy those containers—at scale. Those words “at scale” are important because they underline the need for IaC. A simple script or a point-and-click approach simply won’t work. Kubernetes demands an automated approach and an automated approach means IaC.
+In this article, we'll cover the key questions about IaC for Kubernetes:
 
-### The Kubernetes cluster
+* Why does Kubernetes need infrastructure as code?
+* What are the two layers of IaC for Kubernetes?
+* What Kubernetes objects are managed as IaC?
+* How does IaC for Kubernetes compare to GitOps?
+* What tools support IaC for Kubernetes?
+* What are best practices for IaC on Kubernetes?
+* How does Pulumi handle Kubernetes as code?
+* Frequently asked questions about IaC for Kubernetes
 
-A [Kubernetes cluster](/blog/kubernetes-fundamentals-part-one#anatomy-of-a-cluster) is a set of node machines that run containerized applications. If you’re running Kubernetes, you’re running a cluster. At a minimum, a cluster contains a control plane and one or more compute machines, or nodes. The control plane maintains the desired state of the cluster, such as which applications are running and which container images they use. Nodes actually run the applications and workloads.
+## Why does Kubernetes need infrastructure as code?
 
-### Deployment
+Kubernetes is the densest, most fast-changing layer of most cloud-native stacks. A single production cluster can hold thousands of objects across hundreds of namespaces, and the cluster itself is just one of many that span dev, staging, prod, and per-region replicas. Three forces make IaC the only realistic operating model:
 
-A [Deployment](/blog/kubernetes-fundamentals-part-one#deployment) is an abstraction of your deployment configuration. It specifies what container image your application is running, which version, the environment variables it needs, and so on. A deployment governs another two Kubernetes components: the Pod and the ReplicaSet.
+* **Scale.** Even one production cluster crosses any threshold where hand-edited YAML is workable. With multiple clusters, the only way to keep them consistent is to derive them from the same code.
+* **Drift.** Kubernetes lets anyone with the right RBAC run `kubectl apply`. Without an authoritative source of truth, the cluster drifts away from whatever was last reviewed. IaC makes the gap between intended and actual state visible.
+* **Day-2 changes.** Most of a platform team's work isn't standing up new clusters; it's rolling node-group upgrades, swapping CNIs, rotating certificates, changing storage classes. Each of those changes is much safer when the proposed diff is something a reviewer can read.
 
-### The Kubernetes Pod
+## What are the two layers of IaC for Kubernetes?
 
-A pod is the smallest Kubernetes building block. Within a cluster, a pod represents a process that’s running. The inside of a pod can have one or more containers.
+A complete IaC program for Kubernetes covers two distinct concerns.
 
-### ReplicaSet
+| Layer | What it manages | Typical lifecycle |
+|---|---|---|
+| **Cluster lifecycle** | EKS / GKE / AKS clusters, node groups, IAM roles, VPC and subnets, addons, CNI, ingress controllers, observability agents | Weeks to months between substantive changes |
+| **Workload lifecycle** | Deployments, StatefulSets, Services, Ingress, ConfigMaps, Secrets, Jobs, CronJobs, namespaces, RBAC | Hours to days; tied to application releases |
 
-A ReplicaSet makes sure that an x number of pods are running at any given time.
+Some teams keep the two layers in separate Pulumi programs (one for the platform, one for the app), so the platform team owns the cluster repo and product teams own their workload repos. Other teams keep them in a single program when the cluster and the app are tightly coupled (a managed service offered to customers, for example). Both shapes work; the deciding factor is who needs to ship changes to what.
 
-### Services
+## What Kubernetes objects are managed as IaC?
 
-Pods don’t know how to communicate with the outer world or to pods from other deployments. A service defines how you expose your pods and how other pods can discover your pods.
+The most common Kubernetes resources that end up in IaC programs:
 
-## General Benefits of Infrastructure as Code for Kubernetes
+* **Cluster shape.** Cluster spec, version, region, node groups, addons.
+* **Networking.** VPC and subnets, security groups, CNI configuration, NetworkPolicies, Ingress, Service mesh resources (Istio, Linkerd).
+* **Identity and access.** IAM roles for the cluster and workloads (IRSA on EKS, Workload Identity on GKE, Azure AD on AKS), Kubernetes RBAC (ClusterRoles, RoleBindings).
+* **Workloads.** Deployments, StatefulSets, DaemonSets, Jobs, CronJobs.
+* **Configuration.** ConfigMaps and Secrets (with the actual secret values pulled from a vault like [Pulumi ESC](/product/esc/), not stored in code).
+* **Service exposure.** Services, Ingress, Gateway API resources.
+* **Storage.** PersistentVolumes, StorageClasses, PVCs.
+* **Custom resources.** ArgoCD Applications, Flux Kustomizations, cert-manager Certificates, ExternalSecret objects, and any operator-defined CRDs.
 
-As we said, IaC is the only effective way to manage a Kubernetes cluster. The benefits you get are similar to the benefits you get from IaC for the rest of your infrastructure.
+Pulumi's Kubernetes provider supports every resource type Kubernetes itself supports, including CRDs through a dynamic provider. See the [Pulumi Kubernetes documentation](/docs/iac/clouds/kubernetes/) for full coverage.
 
-- **Tracking and Auditability.** IaC code can be stored in git repositories, and along with allowing automation, it also acts as a history of your infrastructure. You can test the IaC code and track who has made changes to the code.
-- **Speed.** With IaC and automation you can provision Kubernetes clusters very quickly.
-- **Reusability.** IaC code acts as a template that’s been tested and reviewed. You can predictably provision Kubernetes clusters across various regions in the cloud and easily deploy microservices on different Kubernetes clusters.
-- **Consistency.** Manual provisioning always results in inconsistencies. IaC systemizes the provisioning process and guarantees that the same infrastructure is built over and over. Microservices will be deployed with the same configuration on different Kubernetes clusters.
+## How does IaC for Kubernetes compare to GitOps?
 
-## Evaluate Your Platform for Infrastructure as Code for Kubernetes
+GitOps and IaC aren't competing approaches. They're complementary, and most production Kubernetes shops use both.
 
-If you’re evaluating platforms that will help you adopt infrastructure as code for Kubernetes, make sure your final choice helps you adopt best practices for your Kubernetes infrastructure. Here are a few examples.
+| Aspect | IaC engine for Kubernetes (e.g. `pulumi up` from CI) | GitOps controller (ArgoCD, Flux) |
+|---|---|---|
+| Source of truth | Git repo containing IaC program | Git repo containing manifests or Kustomize/Helm output |
+| Apply mechanism | CI pipeline runs IaC engine | In-cluster controller reconciles toward Git |
+| Cluster-level resources | Excellent (cloud accounts, IAM, networks) | Limited — most controllers reconcile Kubernetes API objects, not cloud-side resources like VPCs or IAM |
+| Workload-level resources | Good | Excellent |
+| Drift detection | Engine compares declared state to live state | Controller continuously reconciles |
+| Rollback | Re-run with previous code | Revert the Git commit; controller reconciles |
 
-### Applications shouldn’t crash because a dependency isn’t ready.
+A common production pattern: Pulumi (or another IaC tool) manages the cluster, the IAM, the cloud resources around it, and seeds the cluster with the GitOps controller. The GitOps controller then manages the application workloads. Both halves are version-controlled, both halves are reviewable, and neither is doing work the other is better suited for.
 
-Kubernetes starts all services concurrently, letting containers crash and restart until all the resources have started. Look for a platform that can attempt to start all services concurrently but also understands resource dependencies that can prevent a resource from starting. In other words, the platform should understand the correct starting order for a service.
+## What tools support IaC for Kubernetes?
 
-### Prohibit naked pods
+The Kubernetes IaC tooling landscape is wider than for any other cloud target because the community has produced both general IaC tools and Kubernetes-specific layers.
 
-Pods not bound to a ReplicaSet or Deployment (known as naked pods) aren’t rescheduled if a node fails. An automated strategy to replace Pods is preferable to creating them directly. Your platform should help you write policies as code, where a policy is code that enforces your organization's cloud governance in terms of security, compliance, cost controls and so on. For example you can write a policy that checks for naked Pods.
+| Category | Representative tools |
+|---|---|
+| General IaC (cluster + workloads) | [Pulumi](/), Terraform, OpenTofu |
+| Cluster provisioning (focused) | eksctl, gcloud, az aks, ClusterAPI |
+| Workload templating | Helm, Kustomize, jsonnet |
+| GitOps controllers | ArgoCD, Flux |
+| Policy as code | [Pulumi policy as code](/docs/insights/policy/), Kyverno, OPA Gatekeeper |
+| Secrets | [Pulumi ESC](/product/esc/), External Secrets Operator, Sealed Secrets, Vault |
+| Cluster security scanning | Trivy, kube-bench, Falco |
+| Service mesh | Istio, Linkerd, Cilium |
 
-### Keep your production clusters separate
+Most teams use a combination: a general IaC tool for the cloud-and-cluster layer, Helm or Kustomize for some workload templating, ArgoCD or Flux for continuous reconciliation, and policy as code for guardrails.
 
-Your production environment should be separate from other environments. One way to separate environments is to tag resources such as clusters and use a policy to enforce that the cluster is only used for production. Again, you want a platform that makes it easy to write policies that, for example, check to see if environments such as test or dev are in your production environment.
+## What are best practices for IaC on Kubernetes?
 
-## Learn More
+A few patterns that hold up across providers and team sizes:
 
-[Pulumi](/) streamlines Kubernetes cluster configuration, management, and app workload deployments to your clusters. With Pulumi infrastructure as code for Kubernetes you can, for example, manage your Kubernetes clusters, automate Kubernetes deployments and increase your productivity by using standard programming languages, IDEs and test frameworks. [Get started for free today](/docs/get-started/), or check out our on-demand workshops for tutorials on [IaC and Kubernetes](/events/from-zero-to-production-in-kubernetes/).
+* **Keep clusters in version control.** Cluster spec, addons, node groups, RBAC: everything in code, even (especially) for managed clusters. Reproducing a cluster from scratch should be a CI job, not a wiki page.
+* **Avoid naked pods.** A bare `Pod` isn't rescheduled when the node fails. Use Deployments, StatefulSets, or DaemonSets so the workload survives. Enforce this with a policy in CI.
+* **Use IRSA / Workload Identity / Azure AD.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
+* **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
+* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time — either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
+* **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
+* **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
+* **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
+
+## How does Pulumi handle Kubernetes as code?
+
+Pulumi treats Kubernetes the same way it treats every other cloud target: as resources in a real programming language, with dependencies, types, and tests. Common patterns:
+
+* **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
+* **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format — `ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles — so adoption can be incremental without re-authoring the source artifacts.
+* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
+* **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
+* **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
+* **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
+* **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
+
+[Get started with Pulumi Kubernetes](/docs/iac/clouds/kubernetes/get-started/) to manage a cluster and its workloads in TypeScript, Python, Go, C#, Java, or YAML.
+
+## Frequently asked questions about IaC for Kubernetes
+
+### Isn't Kubernetes already declarative?
+
+Yes, inside the cluster. What Kubernetes doesn't provide is a single source of truth, versioning, code review, or testing for the desired state. IaC sits in front of the cluster and produces those properties. The two layers compose: IaC describes the desired Kubernetes state, Kubernetes reconciles to it.
+
+### Should I use Pulumi or Helm for Kubernetes?
+
+They're not really substitutes. Helm packages and templates Kubernetes manifests; Pulumi defines and applies them (and can consume Helm charts directly). Most teams use Pulumi for the cluster and the platform-level Kubernetes objects, and use Helm or Kustomize for community-maintained workload charts that they consume rather than author.
+
+### Should I use Pulumi or ArgoCD/Flux?
+
+Most production teams use both. Pulumi manages the cluster, IAM, networking, and bootstraps the GitOps controller. The GitOps controller then continuously reconciles application workloads from Git. The split avoids the weaknesses of either tool alone: GitOps controllers aren't great at cloud-level resources, and a CI-driven IaC tool isn't great at continuous reconciliation inside a cluster.
+
+### Can I import existing Kubernetes manifests into IaC?
+
+Yes. Pulumi has `ConfigFile` (single manifest), `ConfigGroup` (multiple manifests), and `Chart` (Helm) resources that consume existing artifacts without rewriting them. Most teams use this to wrap operator installs (cert-manager, ingress-nginx, ArgoCD) without re-authoring the maintainers' charts.
+
+### How do I keep Kubernetes Secrets out of Git?
+
+Don't put secret values in IaC code. Use [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, or the External Secrets Operator to pull secrets at runtime. The IaC defines *what* secret references look like; the secret material lives in the vault.
+
+### How do you test Kubernetes IaC?
+
+Unit-test the program with mocks, run static scans (Checkov, Trivy) against the rendered manifests, run policy-as-code checks in CI (Pulumi policy as code, OPA), and run integration tests that deploy to an ephemeral cluster (kind, k3d, or a sandbox managed cluster) and exercise the workload before tearing it down. See [How to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) for the broader pattern.
+
+### What's "naked pods" and why are they bad?
+
+A naked pod is a `Pod` object created directly, not through a controller like a Deployment, StatefulSet, or DaemonSet. If the node hosting a naked pod fails or is drained, the pod isn't rescheduled. It just disappears. Controllers re-create the pod automatically. A Pulumi policy-as-code or Kyverno policy that fails any naked-pod definition is a small but high-value guardrail.
+
+### Can a single Pulumi program span multiple Kubernetes clusters?
+
+Yes. Pulumi providers can be parameterized by a kubeconfig, so a single program can address multiple clusters by instantiating multiple providers. This is how multi-region or multi-cloud Kubernetes platforms are typically defined.
+
+### How does IaC for Kubernetes support compliance?
+
+The same way IaC supports compliance for the broader cloud: every change is a reviewed pull request with author and timestamp; every policy violation is logged in CI; every deploy is recorded in state. For SOC 2, HIPAA, and HITRUST, auditors get a concrete artifact for each control rather than a written-down policy that may or may not be enforced.
+
+### How do I migrate an existing console-managed cluster to IaC?
+
+Start with the simplest thing that gives you a baseline: a Pulumi program that imports the existing cluster spec and the high-value workloads. Use [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) to bring resources under management without recreating them. Once that program runs in CI, layer policies on top to prevent regression. Migrate additional workloads as their owners are ready; there's no need to convert everything at once.
+
+## Learn more
+
+Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/esc/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/clouds/kubernetes/get-started/).
+
+Related reading:
+
+* [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
+* [What is DevOps?](/what-is/what-is-devops/)
+* [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
+* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [What is Configuration Management?](/what-is/what-is-configuration-management/)
+* [What are Kubernetes Secrets?](/what-is/what-are-kubernetes-secrets/)

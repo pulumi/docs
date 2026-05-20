@@ -229,7 +229,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "copy-button";
     @import "docs/continuous-delivery";
     @import "docs/docs-main";
-    @import "docs/docs-top-nav";
     @import "docs/main-nav";
     @import "docs/docs-home";
     @import "customer-logo";
@@ -464,4 +463,14 @@ $sitenav-offset: calc($sitenav-height + 16px);
 }
 
 @import "consent-banner";
+
+// Auth-aware header swap. The inline script in head.html adds .is-signed-in
+// to <html> when the auth cookie is present, before first paint. These rules
+// live unlayered so they win against the buttons' display utilities (which
+// live in @layer utilities/components). When signed-in, the dashboard rule
+// is dropped and the buttons' own `hidden nav-desktop:inline-flex` style
+// rules decide visibility per breakpoint — so we don't end up showing both
+// the desktop and mobile dashboard variants at once.
+html:not(.is-signed-in) [data-nav-dashboard] { display: none; }
+html.is-signed-in [data-nav-loggedout] { display: none; }
 

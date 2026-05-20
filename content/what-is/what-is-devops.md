@@ -106,7 +106,7 @@ These are the concrete engineering practices that turn the CALMS pillars into da
 * **[Configuration management](/what-is/what-is-configuration-management/) and secrets.** Keep environment-specific configuration and secrets out of code, and manage them centrally with auditing, rotation, and least-privilege access. [Pulumi ESC](/product/esc/) provides hierarchical configuration and dynamic secrets across environments.
 * **Automated testing.** Beyond unit tests, DevOps teams run integration tests, [infrastructure tests](/docs/iac/guides/testing/), security tests (SAST, DAST, dependency scanning), and load tests in CI so regressions are caught before deploy.
 * **Microservices and containers.** Splitting applications into independently deployable services, packaged in containers and orchestrated by Kubernetes, frees teams from waiting on each other. The tradeoff is needing strong automation to manage the resulting complexity.
-* **Policy as code.** Encode security, compliance, and cost rules as code that runs against every change. Pulumi [CrossGuard](/docs/insights/policy/) policies can be written in the same language as your infrastructure and enforced in CI.
+* **Policy as code.** Encode security, compliance, and cost rules as code that runs against every change. [Pulumi Policies](/docs/insights/policy/) can be written in the same language as your infrastructure and enforced in CI.
 * **Observability.** Metrics, structured logs, distributed traces, and SLOs make production behavior legible. When something breaks, you can see what changed and roll it back instead of guessing.
 * **Continuous feedback.** User analytics, error budgets, and incident reviews flow back into planning so the next iteration is shaped by what actually happened in production.
 
@@ -147,7 +147,7 @@ There is no single "DevOps tool." A real DevOps toolchain stitches together a to
 | Configuration management | Ansible, Chef, Puppet, SaltStack |
 | Containers and orchestration | Docker, Podman, Kubernetes, Amazon ECS |
 | Secrets and config | [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
-| Policy as code | [Pulumi CrossGuard](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Observability | Prometheus, Grafana, Datadog, New Relic, Honeycomb, OpenTelemetry |
 | Incident management | PagerDuty, Opsgenie, FireHydrant, Rootly |
 | Collaboration / ChatOps | Slack, Microsoft Teams, GitHub Discussions |
