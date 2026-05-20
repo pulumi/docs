@@ -228,14 +228,14 @@ The Random provider is available as a package in all Pulumi languages:
 
 Even compared to JSON (which is itself a significant improvement over HTML), Markdown is a much more token-efficient format for agents to work with:
 
-| Package      | Endpoint                  | JSON     | Markdown | Tokens saved |
-| ------------ | ------------------------- | -------- | -------- | ------------ |
-| random       | `/readme`                 | 10.68 KB | 6.04 KB  | 43%          |
-| aws          | `/readme`                 | 4.22 KB  | 2.54 KB  | 40%          |
-| aws          | `/nav?depth=full`         | 204 KB   | 170 KB   | 17%          |
-| aws          | `/docs/{resource token}`  | 15.24 KB | 11.28 KB | 26%          |
-| azure-native | `/docs/{resource token}`  | 48.13 KB | 30.37 KB | 37%          |
-| aws          | `/docs/{function token}`  | 2.40 KB  | 1.46 KB  | 39%          |
+| Package      | Endpoint                      | JSON     | Markdown | Tokens saved |
+| ------------ | ----------------------------- | -------- | -------- | ------------ |
+| random       | `/readme`                     | 10.68 KB | 6.04 KB  | 43%          |
+| aws          | `/readme`                     | 4.22 KB  | 2.54 KB  | 40%          |
+| aws          | `/nav?depth=full`             | 204 KB   | 170 KB   | 17%          |
+| aws          | `/docs/{resource type token}` | 15.24 KB | 11.28 KB | 26%          |
+| azure-native | `/docs/{resource type token}` | 48.13 KB | 30.37 KB | 37%          |
+| aws          | `/docs/{function type token}` | 2.40 KB  | 1.46 KB  | 39%          |
 
 Learn more about our Registry endpoints in the [REST API docs](/docs/reference/cloud-rest-api/registry-preview/). (Or just ask your agent!)
 
