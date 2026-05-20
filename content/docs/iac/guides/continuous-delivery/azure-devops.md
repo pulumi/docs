@@ -46,10 +46,6 @@ The task looks for the pipeline variable `pulumi.access.token` and maps it autom
 
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys in the pipeline.
 
-{{% notes type="info" %}}
-You can remove the static access token entirely by registering Azure Pipelines as a Pulumi Cloud [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/). The pipeline then exchanges a short-lived OIDC token for a short-lived Pulumi access token, so no long-lived credential is stored anywhere. The OIDC Issuer model accepts any service that issues OIDC ID tokens; dedicated setup walkthroughs currently cover GitHub Actions, GitLab CI/CD, and Kubernetes.
-{{% /notes %}}
-
 ## The trunk-based development workflow
 
 The most common way to run Pulumi in Azure Pipelines follows a trunk-based development model, where work merges into a single main branch and deployments flow outward from there:
