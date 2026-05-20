@@ -1,72 +1,65 @@
 ---
 title: Run 'aws sts get-caller-identity' using Dynamic Credentials
-meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws sts get-caller-identity' in a more secure and efficient manner.
-
+meta_desc: Run aws sts get-caller-identity with short-lived, OIDC-issued credentials from Pulumi ESC. No static IAM keys, scoped by role, auditable in CloudTrail.
 meta_image: /images/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Security Token Service (STS)  enables users to request temporary, limited-privilege credentials for AWS interactions.
+**This guide shows how to run `aws sts get-caller-identity` using short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `AKIA...` keys in `~/.aws/credentials`.** The credentials are issued by AWS STS at the moment the command runs, scoped to a specific IAM role, expire automatically, and show up in CloudTrail as an assumed-role principal. `aws sts get-caller-identity` returns the account, user ID, and ARN of the calling identity. It requires no IAM permissions, which makes it the ideal first command to verify that your dynamic credential pipeline works end to end.
 
-Using the `aws sts get-caller-identity` command is key in managing access to AWS, providing an easy way to view the details of the entity that was used to make a specific call to AWS. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws sts get-caller-identity`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+* Why dynamic credentials beat static IAM keys
+* Prerequisites for this guide
+* Step-by-step ESC setup with the `aws-login` provider
+* Running `aws sts get-caller-identity` through `esc run`
+* Verifying the assumed-role principal in CloudTrail
+* Common errors and how to fix them
+* Frequently asked questions
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static IAM keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+Static IAM access keys (`AKIA...` plus a secret) sit in `~/.aws/credentials` indefinitely, are easily leaked, and grant every permission attached to the IAM user. Dynamic credentials invert every one of those defaults:
 
-- Securely share credentials with teammates in a consistent way.
-- Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like aws sts get-caller-identity without requiring deep security expertise.
+* **No long-lived secrets on disk.** Pulumi ESC issues a fresh `AccessKeyId`, `SecretAccessKey`, and `SessionToken` on every `esc run`. Nothing lingers in `~/.aws/credentials`.
+* **Scoped by IAM role.** The IAM role's trust policy and attached policies define exactly what the session can do. STS get-caller-identity itself needs no permissions, but the same plumbing enforces least privilege for every other command.
+* **Time-bound.** Sessions expire after the duration in the ESC environment (1 hour by default, configurable up to the IAM role's `MaxSessionDuration`). A leaked token is useless once it expires.
+* **Auditable.** CloudTrail records the call under the assumed-role ARN, with `sessionName` from the ESC environment, so it's clear which Pulumi org and user triggered the command.
+* **Centrally rotated.** Updating the IAM role trust policy or session duration in one ESC environment immediately affects every developer and CI job that consumes it.
 
-## What is the esc run command?
+## Prerequisites
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+* An AWS account where you can create or update IAM roles
+* The [Pulumi CLI](/docs/install/) and [Pulumi ESC CLI](/docs/install/esc/) installed
+* A [Pulumi Cloud account](https://app.pulumi.com/signup) and access to an organization
+* The [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed locally
+* An IAM role with OIDC trust configured for Pulumi (see [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/))
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+For `aws sts get-caller-identity` specifically, the IAM role needs **no managed policies** — STS get-caller-identity is allowed for any authenticated principal. Use that to your advantage: this command is the cleanest way to confirm OIDC works before layering on real permissions.
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws sts get-caller-identity` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+## Step-by-step setup
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
-
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
-
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
-
-## Getting started with esc run
-
-### Step 1: Install and login to Pulumi ESC
-
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+### 1. Log in to Pulumi ESC
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+esc login
 ```
 
-### Step 2: Create the OIDC configuration
+Follow the browser prompt or paste an access token from <https://app.pulumi.com/account/tokens>.
 
-Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+### 2. Configure OIDC between Pulumi and AWS
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform STS actions.
+Follow the [Pulumi OIDC + AWS guide](/docs/esc/environments/configuring-oidc/aws/) to create an IAM role whose trust policy accepts a JWT from `api.pulumi.com/oidc`. Note the role ARN — you'll paste it into your ESC environment below.
 
-### Step 3: Create a new Pulumi ESC environment
+### 3. Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+In [Pulumi Cloud](https://app.pulumi.com/), open your organization, click **Environments**, then **Create environment**. Name it something like `aws-prod-env`.
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+### 4. Add the `aws-login` provider to the environment
 
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+Replace the placeholder YAML in the editor with the following, substituting `<your-oidc-iam-role-arn>`:
 
 ```yaml
 values:
@@ -83,32 +76,106 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws sts get-caller-identity command
+The `fn::open::aws-login` function exchanges the Pulumi-issued OIDC token for AWS STS credentials. The `environmentVariables` block exposes them to any subprocess started by `esc run`.
 
-First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
-
-```bash
-$ aws configure list
-      Name                    Value             Type    Location
-      ----                    -----             ----    --------
-   profile                <not set>             None    None
-access_key                <not set>             None    None
-secret_key                <not set>             None    None
-    region                <not set>             None    None
-```
-
-To list the details of the calling entity, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+### 5. Confirm there are no static credentials on disk
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws sts get-caller-identity
+aws configure list
 ```
 
-## Conclusion
+You should see `<not set>` for `access_key` and `secret_key`. This guarantees that the next step is using ESC-issued credentials and not something stale on the machine.
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws sts get-caller-identity`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+## Run `aws sts get-caller-identity`
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+```bash
+esc run <your-org>/<your-project>/<your-env> -- aws sts get-caller-identity
+```
 
-Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+Expected output:
+
+```json
+{
+    "UserId": "AROAEXAMPLE12345:pulumi-environments-session",
+    "Account": "123456789012",
+    "Arn": "arn:aws:sts::123456789012:assumed-role/pulumi-esc-role/pulumi-environments-session"
+}
+```
+
+Three things to notice in that response:
+
+* **`Arn` starts with `assumed-role/`** — confirming you're not using static IAM user credentials.
+* **The role name** matches the IAM role you set in the ESC environment.
+* **The session name** (`pulumi-environments-session`) matches the `sessionName` field in your YAML — useful for filtering CloudTrail.
+
+## Verify in CloudTrail
+
+Within ~5 minutes the call appears in CloudTrail with `eventName=GetCallerIdentity` and a `userIdentity` block like:
+
+```json
+{
+  "type": "AssumedRole",
+  "principalId": "AROAEXAMPLE12345:pulumi-environments-session",
+  "arn": "arn:aws:sts::123456789012:assumed-role/pulumi-esc-role/pulumi-environments-session",
+  "sessionContext": {
+    "sessionIssuer": {
+      "type": "Role",
+      "arn": "arn:aws:iam::123456789012:role/pulumi-esc-role"
+    }
+  }
+}
+```
+
+That `AssumedRole` type is the signal an auditor wants to see: every call is tied to a specific IAM role and a specific session, not an anonymous long-lived access key.
+
+## Common errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| `InvalidClientTokenId` | The ESC environment didn't issue credentials, or they were overridden by stale env vars | Run `unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN` and retry under `esc run` |
+| `ExpiredToken` | Session exceeded `duration` (default 1h) | Re-run the command; `esc run` requests fresh credentials each invocation |
+| `AccessDenied` on AssumeRoleWithWebIdentity | OIDC trust policy mismatch | Check `roleArn`, the trust policy's `sub` claim, and that the audience matches `api.pulumi.com` |
+| `Unable to locate credentials` | `esc run` env vars not exported to the subprocess | Confirm the YAML's `environmentVariables` block uses `${aws.login.*}` references and is at the top level |
+| `RegionDisabledException` | The account hasn't enabled the region for STS | Use the global STS endpoint or enable the region in the AWS console |
+
+## Frequently asked questions
+
+### What permissions does `aws sts get-caller-identity` require?
+
+None. AWS explicitly allows any authenticated principal to call `GetCallerIdentity`, regardless of attached IAM policies. This is what makes it the canonical "am I authenticated, and as whom?" diagnostic.
+
+### Why does the `Arn` look different from a normal IAM user ARN?
+
+Because you're not signed in as an IAM user. The `assumed-role/<role-name>/<session-name>` format is how STS reports any principal that arrived via `AssumeRole`, `AssumeRoleWithWebIdentity`, or `AssumeRoleWithSAML` — including OIDC sessions issued by Pulumi ESC.
+
+### How long do ESC-issued AWS credentials last?
+
+By default, 1 hour, controlled by the `duration` field in the ESC environment. The maximum is bounded by the IAM role's `MaxSessionDuration` attribute (up to 12 hours for role chaining and 1 hour for OIDC by default).
+
+### Can I use this in CI/CD instead of static `AWS_*` secrets?
+
+Yes — that is the primary production use case. The Pulumi GitHub Action, GitLab integration, and `esc open` / `esc run` in any CI runner all work the same way. See the [esc-env-run-aws blog post](/blog/esc-env-run-aws/) and [Pulumi ESC docs](/docs/pulumi-cloud/esc/) for examples.
+
+### How do I know the credentials came from ESC and not from `~/.aws/credentials`?
+
+Run `aws configure list` outside of `esc run` and confirm `access_key` is `<not set>`. Inside `esc run`, the value will be reported with `Type=env`, indicating it came from environment variables injected by ESC.
+
+### Why doesn't `aws sts get-caller-identity` need a region?
+
+STS has a global endpoint (`sts.amazonaws.com`) plus regional endpoints. For OIDC `AssumeRoleWithWebIdentity` Pulumi ESC uses the regional endpoint matching `AWS_REGION` if set, otherwise the global endpoint. The call itself does not require an active region.
+
+### What's the difference between `aws sts get-caller-identity` and `aws iam get-user`?
+
+`get-caller-identity` works for any principal type (user, role, assumed-role session) and needs no permissions. `iam get-user` only works for IAM users, requires `iam:GetUser`, and fails when the caller is a role session — making it useless for verifying OIDC.
+
+## Learn more
+
+* [Pulumi ESC product page](/product/esc/)
+* [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [Resolve `Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
+* [Resolve `InvalidClientTokenId`](/what-is/resolve-list-buckets-invalid-client-token-id/)
+* [Resolve `ExpiredToken`](/what-is/resolve-list-buckets-expired-token/)
+* [Run `aws s3 ls` with dynamic credentials](/what-is/run-aws-s3-ls-with-dynamic-credentials/)
+* [Run `aws iam list-users` with dynamic credentials](/what-is/run-aws-iam-list-users-with-dynamic-credentials/)
+
+[Join our community on Slack](https://slack.pulumi.com/) to discuss further, and let us know what you build.
