@@ -1,16 +1,14 @@
 ---
-title_tag: Pulumi Architecture
-meta_desc: "An in-depth look at Pulumi's internal architecture: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
-title: Pulumi Architecture
-h1: Pulumi Architecture
+title_tag: "How Pulumi IaC Works | Pulumi Guides"
+meta_desc: "How Pulumi IaC works internally: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
+title: How Pulumi IaC Works
+h1: How Pulumi IaC Works
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Pulumi Architecture
+        name: How Pulumi IaC Works
         weight: 10
-        parent: iac-concepts
-    concepts:
-        weight: 1
+        parent: iac-guides-basics
 aliases:
     - /docs/reference/how/
     - /docs/tour/basics-programs/
@@ -20,39 +18,12 @@ aliases:
     - /docs/tour/programs-stacks/
     - /docs/intro/concepts/how-pulumi-works/
     - /docs/concepts/how-pulumi-works/
+    - /docs/iac/concepts/how-pulumi-works/
 ---
 
-{{< notes >}}
-Most Pulumi users don't need to understand these internals. The key concept is that Pulumi uses a **declarative model**: you describe the desired state of your infrastructure in code, and Pulumi figures out what changes to make. This page covers advanced architecture details useful for troubleshooting or deeper understanding.
-{{< /notes >}}
+This page describes how Pulumi Infrastructure as Code (IaC) turns a program into deployed cloud resources.
 
-Pulumi's three main components work together when you run `pulumi up`: a _language host_, a _deployment engine_, and [resource providers](/docs/iac/concepts/providers/). The following diagram illustrates how they interact:
-
-<img src="/images/docs/reference/engine-block-diagram.png" alt="Pulumi IaC system architecture, the Pulumi engine and providers" width="600">
-
-## Language hosts
-
-The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the _deployment engine_. Language hosts are implemented via [plugins](/docs/iac/concepts/plugins/) (specifically, language plugins). The language host consists of two different pieces:
-
-1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
-2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_ (via `new Resource()` in JavaScript or `Resource(...)` in Python), the language SDK communicates the registration request back to the _deployment engine_. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the Node SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
-
-## Deployment engine
-
-The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a _resource registration_ is received from the language host, the engine consults the existing [state](/docs/iac/concepts/state-and-backends/) to determine if that resource has been created before. If it has not, the engine uses a _resource provider_ to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can _update_ the resource in place or if it must _replace_ it by _creating_ a new version and _deleting_ the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
-
-The deployment engine is embedded in the `pulumi` CLI itself.
-
-## Resource providers
-
-A resource provider is made up of two different pieces:
-
-1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin) set of commands.
-2. An _SDK_ which provides bindings for each type of resource the provider can manage.
-
-Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
-
-## Putting it all together
+## Running a Pulumi program
 
 Let's walk through a simple example. Suppose we have the following Pulumi program, which creates two S3 buckets:
 
@@ -163,15 +134,23 @@ In this case, since the last deployed state has no resources, the engine determi
 
 As the engine was creating the `media-bucket` bucket, the language host continued to execute the Pulumi program. This caused another resource registration to be generated (for `content-bucket`). Since there is no dependency between these two buckets, the engine is able to process that request in parallel with the creation of `media-bucket`.
 
-After both operations have completed, the language host exits as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
+After both operations have completed, the language host exits as the program has finished running. Then the engine and resource providers shut down. The `pulumi up` output reports the resources that were created:
 
 ```
-stack mystack
-   - aws.s3.Bucket "media-bucket653a4"
-   - aws.s3.Bucket "content-bucket125ce"
+Updating (mystack)
+
+     Type                      Name                Status
+ +   pulumi:pulumi:Stack       my-project-mystack  created (6s)
+ +   ├─ aws:s3/bucket:Bucket   media-bucket        created (2s)
+ +   └─ aws:s3/bucket:Bucket   content-bucket      created (2s)
+
+Resources:
+    + 3 created
+
+Duration: 7s
 ```
 
-Note the extra suffixes on the end of these bucket names. This is due to a process called [auto-naming](/docs/concepts/resources/names/#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
+The names shown above—`media-bucket` and `content-bucket`—are the _logical names_ you gave the resources in your program. By default, Pulumi appends a random suffix to each resource's _physical name_ in AWS (for example, `media-bucket-653a4f2`). This is due to a process called [auto-naming](/docs/iac/concepts/resources/names/#autonaming), which Pulumi uses by default in order to allow you to deploy multiple copies of your infrastructure without creating name collisions for resources. This behavior can be disabled if desired.
 
 Now, let's make a change to one of resources and run `pulumi up` again.  Since Pulumi operates on a desired state model, it will use the last deployed state to compute the minimal set of changes needed to update your deployed infrastructure. For example, imagine that we wanted to add tags to the S3 `media-bucket`.  We change our program to express this new desired state:
 
@@ -458,15 +437,178 @@ When a resource property changes in a way that cannot be updated in place, Pulum
 1. Creating the new resource with the updated configuration (create-replacement)
 1. Deleting the old resource after the new one is ready (delete-replaced)
 
-By default, Pulumi creates the replacement before deleting the original to minimize downtime. You can change this behavior with the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option.
+By default, Pulumi creates the replacement before deleting the original to minimize downtime. You can change this behavior with the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option.
 
 ## Creation and deletion order
 
-Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/concepts/resources#dependson) resource option.
+Pulumi executes resource operations in parallel whenever possible, but understands that some resources may have dependencies on other resources. If an [output](/docs/iac/concepts/inputs-outputs/) of one resource is provided as an input to another, the engine records the dependency between these two resources as part of the state and uses these when scheduling operations. This list can also be augmented by using the [dependsOn](/docs/iac/concepts/resources/options/dependson/) resource option.
 
-By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/concepts/resources#deletebeforereplace) option. If you have disabled [auto-naming](/docs/concepts/resources/names/#autonaming) using configuration or by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
+By default, if a resource must be replaced, Pulumi will attempt to create a new copy of the resource before destroying the old one. This is helpful because it allows updates to infrastructure to happen without downtime. This behavior can be controlled by the [deleteBeforeReplace](/docs/iac/concepts/resources/options/deletebeforereplace/) option. If you have disabled [auto-naming](/docs/iac/concepts/resources/names/#autonaming) using configuration or by providing a specific name for a resource, it will be treated as if it was marked as `deleteBeforeReplace` automatically (otherwise the create operation for the new version would fail since the name is in use).
 
-## Pulumi Cloud architecture
+## Architecture
+
+Three main components work together when you run `pulumi up`: a _language host_, a _deployment engine_, and [resource providers](/docs/iac/concepts/providers/). The following diagram illustrates how they interact. Because each language has its own language host and program entrypoint, select your language to see the corresponding diagram:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```mermaid
+flowchart LR
+    subgraph host["Node language host"]
+        program["index.ts"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"new aws.s3.Bucket()"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```mermaid
+flowchart LR
+    subgraph host["Python language host"]
+        program["__main__.py"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"s3.Bucket()"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```mermaid
+flowchart LR
+    subgraph host["Go language host"]
+        program["main.go"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"s3.NewBucket()"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```mermaid
+flowchart LR
+    subgraph host[".NET language host"]
+        program["Program.cs"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"new Aws.S3.Bucket()"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```mermaid
+flowchart LR
+    subgraph host["JVM language host"]
+        program["App.java"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"new Bucket()"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```mermaid
+flowchart LR
+    subgraph host["YAML language host"]
+        program["Pulumi.yaml"]
+    end
+    state[("Last deployed<br/>state")]
+    engine["Pulumi CLI &<br/>deployment engine"]
+    subgraph providers["Resource providers"]
+        aws["AWS"]
+        azure["Azure"]
+        k8s["Kubernetes"]
+    end
+    program -->|"aws:s3:Bucket"| engine
+    engine <-->|"read / write"| state
+    engine -->|"create, update, delete"| aws
+    engine -->|"create, update, delete"| azure
+    engine -->|"create, update, delete"| k8s
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Language hosts
+
+The _language host_ is responsible for running a Pulumi program and setting up an environment where it can register resources with the _deployment engine_. Language hosts are implemented via [plugins](/docs/iac/concepts/plugins/) (specifically, language plugins). The language host consists of two different pieces:
+
+1. A language executor, which is a binary named `pulumi-language-<language-name>`, that Pulumi uses to launch the runtime for the language your program is written in (e.g. Node or Python). This binary is distributed with the Pulumi CLI.
+2. A language SDK is responsible for preparing your program to be executed and observing its execution in order to detect resource registrations. When a resource is _registered_—by constructing a resource object in your program—the language SDK communicates the registration request back to the _deployment engine_. The language SDK is distributed as a regular package, just like any other code that might depend on your program. For example, the TypeScript and JavaScript SDK is contained in the [`@pulumi/pulumi`](https://www.npmjs.com/package/@pulumi/pulumi) package available on npm, and the Python SDK is contained in the [`pulumi`](https://pypi.org/project/pulumi/) package available on PyPI.
+
+### Deployment engine
+
+The _deployment engine_ is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program. When a _resource registration_ is received from the language host, the engine consults the existing [state](/docs/iac/concepts/state-and-backends/) to determine if that resource has been created before. If it has not, the engine uses a _resource provider_ to create it. If it already exists, the engine works with the resource provider to determine what, if anything, has changed by comparing the old state of the resource with the new desired state of the resource as expressed by the program. If there are changes, the engine determines if it can _update_ the resource in place or if it must _replace_ it by _creating_ a new version and _deleting_ the old version. The decision depends on what properties of the resource are changing and the type of the resource itself. When the language host communicates to the engine that it has completed the execution of the Pulumi program, the engine looks for any existing resources that it did not see a new resource registration and schedules these resources for deletion.
+
+The deployment engine is embedded in the `pulumi` CLI itself.
+
+### Resource providers
+
+A resource provider is made up of two different pieces:
+
+1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin) set of commands.
+2. An _SDK_ which provides bindings for each type of resource the provider can manage.
+
+Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
+
+### Pulumi Cloud architecture
 
 The components described above—the language host, deployment engine, and resource providers—all run on the client, wherever the Pulumi CLI runs. When you use the default [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to store state, the CLI also coordinates with Pulumi Cloud.
 

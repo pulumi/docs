@@ -222,7 +222,7 @@ jobs:
           VALE_CONCERNS=""
           if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
             VALE_FILES=$(gh pr diff "$PR" --repo "$REPO" --name-only \
-              | grep -E '^content/(docs|blog)/.*\.md$' || true)
+              | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
             if [[ -n "$VALE_FILES" ]]; then
               vale --no-exit --output=JSON $VALE_FILES > .vale-raw.json 2>/dev/null \
                 || echo '{}' > .vale-raw.json

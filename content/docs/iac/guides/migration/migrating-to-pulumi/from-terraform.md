@@ -37,7 +37,7 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
    * Ensure you have access to your state file (`.tfstate`)
    * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository that contains your Terraform configuration files
    * Configure cloud credentials in [Pulumi ESC](/docs/esc/)
-   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+   * Have [Pulumi Neo](/product/neo/) access
 
 2. **Start the migration**:
 

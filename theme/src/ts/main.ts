@@ -17,7 +17,6 @@ import "./code-snippets-dropdown";
 import "./resources";
 import "./packages";
 import "./pricing-trial";
-import "./pulumi-cloud";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";

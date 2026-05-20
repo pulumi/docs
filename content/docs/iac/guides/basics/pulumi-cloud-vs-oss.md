@@ -8,7 +8,7 @@ menu:
     iac:
         name: Pulumi Cloud vs. OSS
         parent: iac-guides-basics
-        weight: 70
+        weight: 20
 aliases:
   - /docs/deployments/get-started/what-is-it/
   - /docs/pulumi-cloud/get-started/what-is-it/

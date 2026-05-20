@@ -5,6 +5,12 @@ meta_image: /images/product/overview/overview-meta.png
 type: page
 layout: product-page
 
+aliases:
+  - /product/pulumi-cloud/
+  - /product/pulumi-service/
+  - /product/cloud/
+  - /cloud/
+
 sections:
   - type: hero
     title_primary: The unified platform

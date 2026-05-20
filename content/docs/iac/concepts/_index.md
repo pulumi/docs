@@ -77,7 +77,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 ### Core concepts
 
-- [Pulumi Architecture](/docs/iac/concepts/how-pulumi-works) — Learn more about how Pulumi works under the hood.
+- [How Pulumi IaC Works](/docs/iac/guides/basics/how-pulumi-works/) — Learn how the language host, deployment engine, and resource providers work together under the hood.
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) — Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.
 - [Projects](/docs/iac/concepts/projects) — Learn how Pulumi projects are organized and configured.
 - [Stacks](/docs/iac/concepts/stacks) — Learn how to create and deploy stacks.

@@ -53,7 +53,7 @@ Because the Serverless Framework creates standard CloudFormation stacks, [Neo](/
 1. **Prerequisites**:
     * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository
     * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
-    * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+    * Have [Pulumi Neo](/product/neo/) access
 
 1. **Identify your CloudFormation stacks**: Find the stack names created by the Serverless Framework (e.g., `my-api-dev`, `my-api-prod`).
 

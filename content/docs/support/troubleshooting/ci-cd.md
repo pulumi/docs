@@ -138,7 +138,7 @@ package(s) from the private feed are accessible or you can use a [pre-built bina
 
 * You might be caching the library dependencies but not the Pulumi plugins. Some services offer dependency caching by capturing a specific folder and restoring
 that folder when your pipeline executes. However, note that Pulumi dependencies have a post-install step that also pulls-down
-a [plugin](/docs/concepts/how-pulumi-works#resource-providers) binary from our CDN. So be sure to cache the plugins path as well.
+a [plugin](/docs/iac/guides/basics/how-pulumi-works#resource-providers) binary from our CDN. So be sure to cache the plugins path as well.
 
   If in doubt about problems encountered during execution, clear out all caches and restore dependencies from scratch.
 
