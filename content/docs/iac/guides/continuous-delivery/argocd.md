@@ -337,7 +337,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - Review the workspace pod logs for the stack.
 - Enable `refresh: true` so PKO reconciles Pulumi state with the real state of your infrastructure before each update.
 
-## Next steps
+## Additional resources
 
 - [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
 - [Pulumi ESC](/docs/esc/)

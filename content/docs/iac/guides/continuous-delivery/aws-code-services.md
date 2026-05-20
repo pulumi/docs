@@ -151,7 +151,7 @@ See the AWS provider's [CodeBuild](/registry/packages/aws/api-docs/codebuild/), 
 
 If you operate many pipelines that are similar or identical, package the pattern once instead of copying it. Wrap these resources in a [component](/docs/iac/concepts/components/) so each pipeline becomes a single resource with a small set of inputs, or publish a [template](/docs/iac/guides/building-extending/creating-templates/) so teams can scaffold a new pipeline with `pulumi new`.
 
-## Next steps
+## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/)
 - [Pulumi ESC](/docs/esc/)
