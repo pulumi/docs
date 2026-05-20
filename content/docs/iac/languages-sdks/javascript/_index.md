@@ -191,7 +191,7 @@ Writing a Pulumi program in Node.js involves declaring infrastructure resources 
 The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
 
 - [Pulumi Concepts](/docs/iac/concepts/)
-- [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/)
+- [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/)
 
 ## Program execution
 
