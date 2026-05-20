@@ -40,7 +40,7 @@ Install the [Pulumi Task Extension](https://marketplace.visualstudio.com/items?i
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate.
+Your pipeline needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to authenticate with Pulumi Cloud.
 
 The task looks for the pipeline variable `pulumi.access.token` and maps it automatically to the `PULUMI_ACCESS_TOKEN` environment variable. Store the token as a [secret pipeline variable](https://learn.microsoft.com/azure/devops/pipelines/process/set-secret-variables) or in a linked [variable group](https://learn.microsoft.com/azure/devops/pipelines/library/variable-groups) so it isn't checked into source control. Prefer an organization or team token over a personal token.
 
