@@ -1,70 +1,115 @@
 ---
 title: An error occurred (InvalidClientTokenId) when calling the ListBuckets operation
 allow_long_title: true
-meta_desc: |
-     Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_desc: "The InvalidClientTokenId error from aws s3 ls means the security token in your request isn't valid. Usually a mismatched or stale AWS_SESSION_TOKEN."
 meta_image: /images/what-is/resolve-list-buckets-invalid-client-token-id-meta.png
 type: what-is
 page_title: An error occurred (InvalidClientTokenId) when calling the ListBuckets operation
 authors: ["torian-crane"]
 ---
 
-The error message "An error occurred (InvalidClientTokenId) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that the security token included in the request is invalid. AWS uses security tokens for authentication and authorization purposes. When you attempt an AWS CLI operation with an invalid token value, this error arises.
+**The `InvalidClientTokenId` error from `aws s3 ls` means the security token included in the request is not valid for the access key the SDK is using.** It almost always comes from a mismatched or partially-exported set of temporary credentials: an `AWS_SESSION_TOKEN` left over from a previous role, or an `AWS_ACCESS_KEY_ID` that no longer corresponds to the token. Re-fetch a fresh set of credentials together with `aws sso login` or `aws sts assume-role`, and re-export all three values in one go.
 
-[Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a solution to the challenges of managing temporary credentials and can make errors like this a thing of the past. By enabling the [management of dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), Pulumi ESC simplifies and secures your AWS CLI operations. This approach eliminates the need for manual refreshing of temporary credentials and is a more secure solution than the use of long-term credentials, which can often present a security risk. Pulumi ESC also enables you to focus on your tasks without the interruption of credential-related errors, providing a more efficient flow for your AWS operations and tasks.
+In this article, we'll cover:
 
-## Using Pulumi ESC for dynamic credentials with AWS
+* What the `InvalidClientTokenId` error means
+* What causes it
+* How to fix it in four steps
+* How to prevent it from happening again
+* Common variations and related errors
+* How Pulumi ESC eliminates manual session-token juggling
+* Frequently asked questions
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+## What does this error mean?
 
-- Securely share credentials with teammates in a consistent way.
-- Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like  without requiring deep security expertise.
+`InvalidClientTokenId` is an AWS Security Token Service (STS) authentication error. AWS validates every signed request by looking up the access key ID, computing the expected signature with the matching secret, and (for temporary credentials) verifying the session token. When the session token doesn't match the access key/secret pair AWS expects, the request is rejected with `InvalidClientTokenId`.
 
-## What is the esc run command?
+The wording is misleading. It's not "your token is malformed." It's "the token you sent does not go with this access key." That distinction is what makes this error tricky: each of the three values may look correct in isolation, yet still produce the error when combined.
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+## What causes it?
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+| Cause | Symptom | Fix |
+|---|---|---|
+| Stale `AWS_SESSION_TOKEN` from a previous role | Switched roles and re-exported only two of three vars | Re-export all three together; unset first |
+| `AKIA…` long-lived key with a session token attached | Combined IAM-user key with a leftover STS token | `unset AWS_SESSION_TOKEN` |
+| Partial paste from STS output | Newline or space inside the token | Re-copy from a fresh `assume-role` call |
+| Region mismatch for STS | Used a regional STS endpoint that doesn't recognize the token | Use the global endpoint or the same region that issued it |
+| Mixed env vars and `~/.aws/credentials` | Profile has IAM-user keys, shell has STS token | Pick one source; unset the other |
+| Cross-partition (commercial vs GovCloud) | Token issued in one partition used against the other | Use the matching partition's STS |
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+## How to fix it
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+Follow these steps in order. Each one is copy-pasteable.
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+1. **Inspect what the SDK is reading.** The credential chain decides everything; check it first.
 
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
+   ```bash
+   aws configure list
+   env | grep -E '^AWS_(ACCESS_KEY_ID|SECRET_ACCESS_KEY|SESSION_TOKEN)' | cut -d= -f1
+   ```
 
-## Getting started with esc run
+   If you see `AWS_SESSION_TOKEN` set alongside an `AKIA…` access key (visible via the first command), that's almost certainly the problem.
 
-### Step 1: Install and login to Pulumi ESC
+1. **Clear the slate.** Unset the three environment variables so the next refresh produces a coherent set:
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+   ```bash
+   unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+   ```
 
-```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
-```
+1. **Get a fresh, matching set of credentials.** Use the same flow that issued the temporary credentials originally:
 
-### Step 2: Create the OIDC configuration
+   ```bash
+   aws sso login --profile my-profile
+   ```
 
-Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+   Or, for a direct `assume-role`:
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform S3 actions.
+   ```bash
+   aws sts assume-role \
+     --role-arn arn:aws:iam::123456789012:role/MyRole \
+     --role-session-name my-session
+   ```
 
-### Step 3: Create a new Pulumi ESC environment
+   Export all three returned values — `AccessKeyId`, `SecretAccessKey`, and `SessionToken` — in the same shell.
 
-Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+1. **Verify.**
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+   ```bash
+   aws sts get-caller-identity
+   aws s3 ls
+   ```
 
-### Step 4: Add the AWS provider integration
+   `get-caller-identity` returns immediately when authentication succeeds, which makes it a clean smoke test before you run anything that matters.
 
-Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+## How to prevent it
+
+* **Never export `AWS_SESSION_TOKEN` by itself.** It always travels with its `ACCESS_KEY_ID` and `SECRET_ACCESS_KEY`. If you switch identities, replace all three.
+* **Use profiles instead of raw env vars.** Named profiles in `~/.aws/credentials` and `~/.aws/config` keep the three values atomically grouped, which removes most "I exported the wrong two" cases.
+* **Use a credential helper.** `aws-vault`, `granted`, and `aws sso login` manage the three values as a unit. Manual shell exports are how this error gets created in the first place.
+* **Adopt OIDC for CI.** GitHub Actions, GitLab, and other runners mint short-lived role credentials per job, eliminating the manual export step entirely.
+
+## Common variations
+
+The same root cause produces a few closely related messages:
+
+* `An error occurred (InvalidClientTokenId) when calling the GetCallerIdentity operation: The security token included in the request is invalid.`
+* `InvalidClientTokenId: The security token included in the request is expired.` — actually `ExpiredToken` territory; check session lifetime first.
+* `InvalidClientTokenId` against STS itself — the credentials you're trying to use to *call* STS are themselves invalid; you need to re-authenticate at the source.
+
+The fix is always the same: re-fetch a complete, fresh set of credentials.
+
+## Related errors
+
+* [InvalidAccessKeyId](/what-is/resolve-list-buckets-invalid-access-key-id/) — the access key doesn't exist; this error is about token mismatch instead.
+* [SignatureDoesNotMatch](/what-is/resolve-list-buckets-signature-does-not-match/) — the secret is wrong (or clock is skewed).
+* [ExpiredToken](/what-is/resolve-list-buckets-expired-token/) — the token is well-formed but past its lifetime.
+* [Unable to locate credentials](/what-is/resolve-unable-to-locate-credentials/) — the SDK found no credentials at all.
+
+## How Pulumi ESC eliminates manual session-token juggling
+
+[Pulumi ESC](/product/esc/) (Environments, Secrets, and Configurations) manages the three credential values as a single atomic set. Each invocation of `esc run` calls AWS STS via OIDC and exports a fresh, internally-consistent triple, so the mismatched-token case literally cannot happen.
+
+Define the environment once:
 
 ```yaml
 values:
@@ -73,7 +118,7 @@ values:
       fn::open::aws-login:
         oidc:
           duration: 1h
-          roleArn: <your-oidc-iam-role-arn>
+          roleArn: arn:aws:iam::123456789012:role/PulumiESCRole
           sessionName: pulumi-environments-session
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
@@ -81,20 +126,43 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws CLI command
-
-With your environment set up, you can validate your configuration and verify that the error has been resolved by running the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+Then run any AWS command with credentials that are always coherent:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
+esc run my-org/aws/dev -- aws s3 ls
 ```
 
-## Conclusion
+For Pulumi programs that need to operate across accounts, the AWS provider's [`assumeRole` configuration](/registry/packages/aws/api-docs/provider/) handles the equivalent role-chain logic inside a deployment, without exposing the underlying STS calls to the operator.
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about credential errors like "InvalidClientTokenId" as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
+## Frequently asked questions
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+### What's the difference between `InvalidClientTokenId` and `ExpiredToken`?
 
-Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+`InvalidClientTokenId` means the session token doesn't match the access key. `ExpiredToken` means the credentials are well-formed and known to AWS but are past their lifetime. Practically, the diagnostic is the same — refresh the credentials — but the underlying cause is different.
+
+### Why do I see this only after switching profiles?
+
+Because environment variables override profile lookups. When you ran `assume-role` once, `AWS_SESSION_TOKEN` got exported. The next time you used `aws --profile other`, the SDK picked up the profile's access key and secret but kept the stale session token from your shell. Unset `AWS_SESSION_TOKEN` before switching profiles.
+
+### Can `InvalidClientTokenId` happen with IAM-user keys?
+
+Yes, but only if you accidentally combine them with a session token. IAM-user keys (`AKIA…`) are not paired with a session token; setting `AWS_SESSION_TOKEN` while using them produces this exact error.
+
+### Does this error indicate a security incident?
+
+Almost never. It is overwhelmingly a configuration mistake. AWS does return this error if someone tampered with the request signature in flight, but the realistic cause for an interactive user is mismatched env vars.
+
+### Why doesn't AWS tell me which value is wrong?
+
+For security reasons. AWS does not echo back which part of the credential triple it rejected. Use `aws sts get-caller-identity` once you have a fresh set; if that fails, you know the whole triple is still broken.
+
+### Will using `aws configure` to re-set my access key fix this?
+
+Only if you also remove the stale session token. `aws configure` writes profile values; it does not unset environment variables. After re-running it, run `unset AWS_SESSION_TOKEN` (or close and reopen your shell).
+
+## Learn more
+
+* [Pulumi ESC documentation](/docs/pulumi-cloud/esc/)
+* [Configuring OIDC between Pulumi ESC and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [AWS provider reference](/registry/packages/aws/api-docs/provider/)
+* [AWS STS temporary security credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html)
