@@ -1,70 +1,107 @@
 ---
 title: Unable to locate credentials
 allow_long_title: true
-meta_desc: |
-     Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_desc: "The Unable to locate credentials error means the AWS SDK searched every source in the credential chain and found nothing. Configure a profile, role, or env vars."
 meta_image: /images/what-is/resolve-unable-to-locate-credentials-meta.png
 type: what-is
 page_title: Unable to locate credentials
 authors: ["torian-crane"]
 ---
 
-The error message "Unable to locate credentials" typically occurs in AWS (Amazon Web Services) when the AWS CLI or SDKs cannot find the necessary credentials for authentication. AWS requires a valid AWS Access Key ID and AWS Secret Access Key or an IAM role with associated permissions to access its services. This error arises when these credentials are either missing or incorrectly configured.
+**The `Unable to locate credentials` error means the AWS CLI or SDK searched every source in the credential provider chain — environment variables, `~/.aws/credentials`, EC2 or EKS instance roles, ECS task roles — and found nothing.** Either no credentials are configured for the current identity, or the SDK is looking in a different place than you expect. Fix it by setting `AWS_PROFILE`, exporting `AWS_ACCESS_KEY_ID`/`AWS_SECRET_ACCESS_KEY`, running `aws sso login`, or attaching an instance role.
 
-[Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a solution to the challenges of managing credentials and can make errors like this a thing of the past. By enabling the [management of dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), Pulumi ESC simplifies and secures your AWS CLI operations. This approach eliminates the need for manually providing credentials and is a more secure solution than the use of long-term credentials, which can often present a security risk. Pulumi ESC also enables you to focus on your tasks without the interruption of credential-related errors, providing a more efficient flow for your AWS operations and tasks.
+In this article, we'll cover:
 
-## Using Pulumi ESC for dynamic credentials with AWS
+* What the error means
+* The AWS credential provider chain
+* What causes it
+* How to fix it in four steps
+* How to prevent it from happening again
+* How Pulumi ESC provides credentials automatically
+* Related errors
+* Frequently asked questions
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+## What does this error mean?
 
-- Securely share credentials with teammates in a consistent way.
-- Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like  without requiring deep security expertise.
+Unlike `InvalidAccessKeyId` or `SignatureDoesNotMatch`, this error never reaches AWS. The SDK gives up locally because it can't find anything to sign a request with. The credential resolution chain ran to completion and every source returned empty.
 
-## What is the esc run command?
+The text varies slightly across SDKs (`botocore.exceptions.NoCredentialsError`, `Unable to load credentials from any of the providers in the chain`, etc.), but they all mean the same thing: nothing to send.
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+## The AWS credential provider chain
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+Most AWS SDKs check sources in this order. The first source that returns credentials wins:
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+1. **Environment variables** — `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, optionally `AWS_SESSION_TOKEN`.
+1. **AWS SSO / IAM Identity Center cache** — populated by `aws sso login`.
+1. **Shared credentials file** — `~/.aws/credentials` (and `~/.aws/config` for profiles), selected via `AWS_PROFILE` or `--profile`.
+1. **Container credentials** — ECS task role, served on `169.254.170.2`.
+1. **Instance metadata** — EC2 instance profile or EKS pod identity, served on `169.254.169.254`.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+If you see this error, every source above was checked and came back empty.
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+## What causes it?
 
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
+| Cause | Symptom | Fix |
+|---|---|---|
+| No profile configured | `~/.aws/credentials` missing or empty | `aws configure` or `aws sso login` |
+| Wrong `AWS_PROFILE` | `aws --profile other` works, plain `aws` doesn't | `export AWS_PROFILE=other` |
+| Container has no IAM role | ECS task without a task role | Attach a task role |
+| EC2 IMDSv2 hop limit too low | Container on EC2 cannot reach `169.254.169.254` | Raise `HttpPutResponseHopLimit` to 2 |
+| SSO session not initialized | `~/.aws/sso/cache/` empty | `aws sso login --profile <name>` |
+| Wrong user running the command | `sudo` strips environment variables | Use `sudo -E` or set the profile globally |
+| `AWS_PROFILE` set to a profile that doesn't exist | Silent fallthrough to "no credentials" | Check spelling in `~/.aws/config` |
 
-## Getting started with esc run
+## How to fix it
 
-### Step 1: Install and login to Pulumi ESC
+Follow these steps in order. Each one is copy-pasteable.
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+1. **Ask the SDK what it sees.**
 
-```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
-```
+   ```bash
+   aws configure list
+   env | grep -E '^AWS_'
+   ```
 
-### Step 2: Create the OIDC configuration
+   The `Source` column points at exactly which source the CLI is consulting, or `<not set>` if nothing is configured. This is usually enough to identify the gap.
 
-Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+1. **Pick a credential source and configure it.** For a developer laptop with SSO:
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform S3 actions.
+   ```bash
+   aws configure sso
+   aws sso login
+   ```
 
-### Step 3: Create a new Pulumi ESC environment
+   For a long-lived IAM user (not recommended for humans, but fine for tests):
 
-Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+   ```bash
+   aws configure
+   ```
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+   For a CI runner, prefer OIDC into AWS rather than static keys.
 
-### Step 4: Add the AWS provider integration
+1. **For containers and EC2 instances, attach a role.** Servers and containers should never read static keys. Attach an IAM instance profile (EC2), task role (ECS), or service account (EKS with IRSA or EKS Pod Identity). The SDK picks them up automatically.
 
-Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+1. **Verify.**
+
+   ```bash
+   aws sts get-caller-identity
+   aws s3 ls
+   ```
+
+   If `get-caller-identity` works, credentials are loaded correctly. If it still fails, the SDK is still finding the wrong source — re-check `AWS_PROFILE` and the environment variables.
+
+## How to prevent it
+
+* **Use one credential source per environment.** Mixing env vars, profiles, and instance roles is the leading source of "wait, which credentials is it using?" confusion.
+* **Don't run AWS commands under `sudo`.** `sudo` strips `AWS_*` environment variables by default. Use `sudo -E` if you really need to elevate.
+* **Adopt OIDC for CI.** Static keys in CI are the largest source of leaked credentials. GitHub Actions, GitLab, and CircleCI all support short-lived OIDC into AWS.
+* **Document where credentials come from.** Even a single sentence in the README about which profile or role is expected prevents this for newcomers.
+
+## How Pulumi ESC provides credentials automatically
+
+[Pulumi ESC](/product/esc/) (Environments, Secrets, and Configurations) brokers OIDC-issued AWS credentials and injects them as environment variables for the duration of a command. As long as you're logged into Pulumi (`pulumi login` / `esc login`), `Unable to locate credentials` cannot occur — `esc run` always exports a complete credential triple.
+
+Define the environment once:
 
 ```yaml
 values:
@@ -73,7 +110,7 @@ values:
       fn::open::aws-login:
         oidc:
           duration: 1h
-          roleArn: <your-oidc-iam-role-arn>
+          roleArn: arn:aws:iam::123456789012:role/PulumiESCRole
           sessionName: pulumi-environments-session
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
@@ -81,20 +118,50 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws CLI command
-
-With your environment set up, you can now validate your configuration. Run the `aws s3 ls` command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+Then run any AWS command without configuring credentials locally:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -i aws s3 ls --query "Buckets[].Name"
+esc run my-org/aws/dev -- aws s3 ls
 ```
 
-## Conclusion
+For Pulumi programs themselves, the AWS provider's [`assumeRole` configuration](/registry/packages/aws/api-docs/provider/) supplies credentials inside a deployment, so a `pulumi up` never depends on the operator's shell.
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Because Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud, you no longer have to worry about credential errors like "Unable to locate credentials" as the service will dynamically generate and refresh them for you. Check out the following links to learn more about Pulumi ESC today.
+## Related errors
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+* [InvalidAccessKeyId](/what-is/resolve-list-buckets-invalid-access-key-id/) — credentials *were* found, but the key isn't recognized by AWS.
+* [SignatureDoesNotMatch](/what-is/resolve-list-buckets-signature-does-not-match/) — credentials were found and the key exists, but the secret is wrong.
+* [InvalidClientTokenId](/what-is/resolve-list-buckets-invalid-client-token-id/) — temporary credentials present but inconsistent.
+* [ExpiredToken](/what-is/resolve-list-buckets-expired-token/) — temporary credentials present but past their lifetime.
 
-Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+## Frequently asked questions
+
+### Why does `aws --profile foo` work but plain `aws` does not?
+
+Because the default chain didn't find anything. Either `AWS_PROFILE` is unset (so `default` is the implicit profile, and `default` is empty), or environment variables are partially set. Set `AWS_PROFILE=foo` in your shell to make the working profile the default.
+
+### Why does it work in my terminal but not in cron or systemd?
+
+Cron and systemd have minimal environments. They don't inherit your interactive shell's `AWS_PROFILE` or `AWS_*` exports. Set credentials in the unit's `Environment=` directive or load them from a credentials file inside the service.
+
+### My code runs on EC2 but still says "Unable to locate credentials". Why?
+
+Either the instance has no IAM role attached, or the metadata service is unreachable. From a container on EC2, the hop limit is the usual culprit: AWS sets `HttpPutResponseHopLimit` to 1 by default, which doesn't reach inside Docker. Increase it to 2.
+
+### How is this different from `NoCredentialProviders`?
+
+It isn't — `NoCredentialProviders` is the Go SDK's version of the same error. The Python SDK calls it `NoCredentialsError`. They all mean the chain returned empty.
+
+### Do I need to set `AWS_REGION` too?
+
+Not for this error, but yes for most operations. `Unable to locate credentials` is strictly about credentials. Region-related failures show up as `You must specify a region` or as a 301 redirect when calling S3.
+
+### Will `aws configure` fix this on a server?
+
+It will, but you shouldn't. Servers should use instance roles, ECS task roles, or EKS Pod Identity instead of static keys. Static keys on servers are a credential-leak waiting to happen.
+
+## Learn more
+
+* [Pulumi ESC documentation](/docs/pulumi-cloud/esc/)
+* [Configuring OIDC between Pulumi ESC and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [AWS provider reference](/registry/packages/aws/api-docs/provider/)
+* [AWS CLI configuration and credential files](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
