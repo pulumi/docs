@@ -1,7 +1,7 @@
 ---
 title: "Neo Integrations: MCP Servers and Cloud CLIs"
 date: 2026-05-20
-meta_desc: "Connect Pulumi Neo to Datadog, Linear, and PagerDuty through MCP, and to aws, gcloud, az, and kubectl through Pulumi ESC."
+meta_desc: "Connect Pulumi Neo to services like Datadog, Linear, and PagerDuty through MCP, and to AWS, Google Cloud, Azure, and Kubernetes through Pulumi ESC."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -18,9 +18,9 @@ aliases:
 
 social:
     twitter: |
-        Infra work lives between tabs: PagerDuty in one, Datadog in another, the AWS console in a third, Pulumi in a fourth.
+        Infrastructure work often lives between browser tabs: PagerDuty in one, Datadog in another, the AWS console in a third, Pulumi Cloud in a fourth.
 
-        Today Neo pulls all of it into one conversation.
+        With today's release, Neo pulls it all into one conversation.
     linkedin: |
         Three tabs in, you still don't know whether your last deploy caused the latency spike. PagerDuty in one. Datadog in another. The AWS console in a third. Your Pulumi state somewhere else entirely.
 
@@ -32,12 +32,12 @@ social:
 
         The agent that already knew your Pulumi code now knows the rest of your stack too.
     bluesky: |
-        Three tabs in, you still don't know if your last deploy caused the spike. PagerDuty here, Datadog there, AWS console somewhere else. Pulumi off to the side.
+        Infrastructure work often lives between browser tabs: PagerDuty in one, Datadog in another, the AWS console in a third, Pulumi Cloud in a fourth.
 
-        Today Neo pulls all of it into one conversation.
+        With today's release, Neo pulls it all into one conversation.
 ---
 
-[Pulumi Neo](product/neo/) already understands your infrastructure: your code, your stacks, your state. Today we're launching new capabilities that extend Neo's reach in two directions: into the third-party systems your team uses to plan and observe, and out to the cloud CLIs that actually drive your infrastructure.
+[Pulumi Neo](/product/neo/) already understands your infrastructure: your code, your stacks, your state. Today we're launching new capabilities that extend Neo's reach in two directions: into the third-party systems your team uses to plan and observe, and out to the cloud CLIs that actually drive your infrastructure.
 
 The first half is MCP integrations: connections to [Atlassian](/docs/ai/integrations/mcp/#atlassian-jira-and-confluence), [Datadog](/docs/ai/integrations/mcp/#datadog), [Honeycomb](/docs/ai/integrations/mcp/#honeycomb), [Linear](/docs/ai/integrations/mcp/#linear), [PagerDuty](/docs/ai/integrations/mcp/#pagerduty), and [Supabase](/docs/ai/integrations/mcp/#supabase) that show up as tools Neo can call during a [task](/docs/ai/tasks/). The second half is CLI integrations: scopable access to [`aws`](/docs/ai/integrations/cli/#supported-clis), [`gcloud`](/docs/ai/integrations/cli/#supported-clis), [`az`](/docs/ai/integrations/cli/#supported-clis), and [`kubectl`](/docs/ai/integrations/cli/#supported-clis). Both are configured once at the org level and available to every Neo task in the organization.
 
@@ -55,7 +55,7 @@ Neo pulls the active incident from PagerDuty, decides on its own to check Datado
 
 Neo edits the `payments` stack's Pulumi program to raise `maxAllocatedStorage` from 200 to 500 on the RDS instance, runs `pulumi preview` to confirm the change is scoped to that one resource, and opens a pull request with the diff, the preview output, and links to the PagerDuty incident and the Datadog graph. You review the PR and merge it. Pulumi applies the change, and Neo posts the resolution back to PagerDuty.
 
-Three integrations — PagerDuty, Datadog, and the AWS CLI — and a few minutes later, with one conversation, the change is reviewed and shipped, and the alert is resolved.
+With three integrations and one conversation, the change is reviewed, shipped, and the alert resolved a few minutes later.
 
 ## MCP integrations: context from your existing tools
 
