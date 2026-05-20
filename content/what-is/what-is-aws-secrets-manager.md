@@ -1,241 +1,205 @@
 ---
 title: What is AWS Secrets Manager?
-meta_desc: |
-     Learn more about what AWS Secrets Manager is and how to use it.
-
+meta_desc: "AWS Secrets Manager is a managed service for storing, rotating, and retrieving secrets. Learn its rotation model, IAM integration, pricing, and how Pulumi ESC fits."
 meta_image: /images/what-is/what-is-aws-secrets-manager-meta.png
 type: what-is
 page_title: "What is AWS Secrets Manager?"
 authors: ["torian-crane"]
 ---
 
-Amazon Web Services (AWS) is a leader in cloud computing, transforming the way organizations manage their digital infrastructure. A critical aspect of this landscape is the management of sensitive data, commonly known as "[secrets](/what-is/what-is-secrets-management/)". AWS Secrets Manager is a service designed for the secure handling of these secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
+**AWS Secrets Manager is a fully managed Amazon Web Services product that stores, rotates, and retrieves credentials, API keys, and other secrets used by applications running on AWS or elsewhere.** Secrets are encrypted at rest with AWS KMS, accessed via IAM-controlled APIs, audited through CloudTrail, and can be rotated automatically by an AWS Lambda function on a schedule you define.
 
-## What is AWS Secrets Manager?
+Secrets Manager is the default secrets store for AWS-centric organizations because it shares the same identity, encryption, audit, and Region model as the rest of AWS. A workload running on EC2, ECS, EKS, or Lambda authenticates with its IAM role and reads a secret with one API call; the operator manages access through IAM policies and resource policies; everything that happened is in CloudTrail. [Pulumi ESC](/product/esc/) integrates with Secrets Manager as a [secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/), pulling AWS-managed secrets into Pulumi programs, CI pipelines, and applications through a single audited interface.
 
-AWS Secrets Manager is a cloud service for managing, retrieving, and storing sensitive information such as database credentials, API keys, and other secrets. It helps in securing access to applications, services, and IT resources without hard-coding sensitive information in plain text.
+In this article, we'll cover the key questions about AWS Secrets Manager:
 
-### Key features
+* Why do teams use AWS Secrets Manager?
+* What are the core features of AWS Secrets Manager?
+* How does automatic rotation work?
+* How does AWS Secrets Manager compare to Parameter Store?
+* How does AWS Secrets Manager compare to other vaults?
+* How does pricing work?
+* How does AWS Secrets Manager handle replication and disaster recovery?
+* What are the regional and service limits?
+* How does Pulumi ESC integrate with AWS Secrets Manager?
+* Frequently asked questions about AWS Secrets Manager
 
-- **Secure and encrypted storage**: Secrets in AWS Secrets Manager are encrypted during transit and at rest, ensuring a high level of security.
-- **Secrets lifecycle management**: AWS Secrets Manager allows you to rotate, manage, and retrieve secrets throughout their lifecycle without disrupting the applications.
-- **Fine-grained access control**: You can control access to secrets using AWS Identity and Access Management (IAM) policies.
+## Why do teams use AWS Secrets Manager?
 
-## Creating AWS Secrets Manager secrets
+Three reasons that AWS-centric workloads usually pick Secrets Manager over a self-hosted alternative.
 
-AWS Secrets Manager secrets can be created via the AWS CLI. Before creating secrets in AWS, you must first make sure you have the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) installed. Once you have installed the AWS CLI, run the `aws configure` command to [set up your AWS credentials](https://docs.aws.amazon.com/cli/latest/reference/configure/).
+### Native IAM and CloudTrail integration
 
-```bash
-$ aws configure
+Access to a secret is controlled by IAM policies (identity-based) and resource policies (secret-based) — the same model that controls every other AWS resource. Every read, write, and rotation is logged to CloudTrail with the IAM principal that performed it.
 
-AWS Access Key ID [None]: ********
-AWS Secret Access Key [None]:  ********
-Default region name [None]:  ********
-Default output format [None]:  ********
-```
+### Automatic rotation for native services
 
-### Create a secret via the CLI
+Secrets Manager natively supports automatic rotation for Amazon RDS (Aurora MySQL, Aurora PostgreSQL, MySQL, PostgreSQL, Oracle, SQL Server, MariaDB), Amazon Redshift, and Amazon DocumentDB. For other secret types, you provide a Lambda function that implements the rotation contract.
 
-You can create a secret by running the `aws secretsmanager create-secret` command:
+### Replication across Regions
 
-```bash
-$ aws secretsmanager create-secret --name MySecretName --secret-string "MySecretValue"
+A single secret can be replicated to multiple AWS Regions for disaster recovery and low-latency reads. Replica secrets are encrypted in the target Region's KMS keys; failover is handled by promoting a replica to primary.
 
-{
-    "ARN": "arn:aws:secretsmanager:eu-central-1:111111111111:secret:MySecretName-86zArI",
-    "Name": "MySecretName",
-    "VersionId": "41c3c47e-4542-438c-929f-92f02d3261e4"
-}
-```
+## What are the core features of AWS Secrets Manager?
 
-Verify the secret was created with the `aws secretsmanager list-secrets` command.
+| Feature | What it does |
+|---|---|
+| **Encryption at rest** | AES-256 with a customer-managed or AWS-managed KMS key per secret |
+| **Encryption in transit** | TLS for all API calls |
+| **Access control** | IAM identity-based policies, resource-based policies on the secret, KMS key policies |
+| **Versioning** | Multiple versions per secret with stage labels (AWSCURRENT, AWSPENDING, AWSPREVIOUS) |
+| **Automatic rotation** | Built-in support for RDS, Redshift, DocumentDB; custom rotation via Lambda |
+| **Cross-Region replication** | Replicate a secret to one or more secondary Regions |
+| **Audit logging** | CloudTrail records every API call; integration with EventBridge for event-driven workflows |
+| **Resource sharing** | Cross-account access via resource policies |
+| **VPC endpoint** | Private connectivity via interface VPC endpoints (AWS PrivateLink) |
 
-```bash
-$ aws secretsmanager list-secrets
-{
-    "SecretList": [
-        {
-            "ARN": "arn:aws:secretsmanager:eu-central-1:111111111111:secret:MySecretName-86zArI",
-            "Name": "MySecretName",
-            "LastChangedDate": "2023-11-28T17:16:05.840000+00:00",
-            "SecretVersionsToStages": {
-                "41c3c47e-4542-438c-929f-92f02d3261e4": [
-                    "AWSCURRENT"
-                ]
-            },
-            "CreatedDate": "2023-11-28T17:16:05.791000+00:00"
-        }
-    ]
-}
-```
+A secret in Secrets Manager is a versioned key/value document (typically JSON), encrypted with a KMS key, addressable by name or ARN.
 
-{{< notes type="info" >}}
+## How does automatic rotation work?
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Rotation in Secrets Manager follows a four-step state machine driven by an AWS Lambda function:
 
-{{< /notes >}}
+1. **createSecret.** The Lambda generates a new credential (e.g. a new database password) and stores it as a new version with the `AWSPENDING` label.
+1. **setSecret.** The Lambda updates the downstream service (e.g. runs `ALTER USER` against RDS) to accept the new credential.
+1. **testSecret.** The Lambda verifies the new credential works by connecting with it.
+1. **finishSecret.** The Lambda swaps the version labels: the new version becomes `AWSCURRENT`, the old one becomes `AWSPREVIOUS`.
 
-## Accessing Secrets Manager secrets
+For RDS, Redshift, and DocumentDB, AWS supplies the rotation Lambda. For other secrets, you write one — patterns are well-documented and many open source templates exist. Rotation can be scheduled (every N days) or triggered on demand.
 
-Now that you have created a Secrets Manager secret, you can access the value via the AWS CLI using the `aws secretsmanager get-secret-value` command.
+Multi-user rotation (alternating between two database users) is supported and recommended for zero-downtime rotations: while one user's password is rotated, the other handles application traffic.
 
-```bash
-$ aws secretsmanager get-secret-value --secret-id MySecretName
-{
-    "ARN": "arn:aws:secretsmanager:eu-central-1:111111111111:secret:MySecretName-86zArI",
-    "Name": "MySecretName",
-    "VersionId": "41c3c47e-4542-438c-929f-92f02d3261e4",
-    "SecretString": "MySecretValue",
-    "VersionStages": [
-        "AWSCURRENT"
-    ],
-    "CreatedDate": "2023-11-28T17:16:05.836000+00:00"
-}
-```
+## How does AWS Secrets Manager compare to Parameter Store?
 
-## Best practices
+Both store values in AWS, but they target different use cases.
 
-- **Rotate secrets regularly**: Implement a routine for regularly rotating secrets to enhance security.
-- **Provide least-privilege access**: Employ IAM policies for granular access control to secrets.
-- **Audit and monitor secret access**: Use AWS CloudTrail and other monitoring tools to track access and modifications to your secrets.
+| Aspect | Secrets Manager | Systems Manager Parameter Store |
+|---|---|---|
+| Primary use | Secrets that need rotation | Configuration values (with or without encryption) |
+| Built-in rotation | Yes | No |
+| Cross-Region replication | Yes (native) | No (Advanced parameters via custom tooling) |
+| Encryption | Always (KMS-backed) | Optional (SecureString uses KMS) |
+| Versioning | Multiple labeled versions | History up to 100 versions per parameter |
+| Pricing | Per secret/month + API calls | Standard parameters: free. Advanced: per parameter + API calls |
+| Free tier | No (always paid) | Standard parameters are free up to limits |
+| Common use | Database passwords, API keys, OAuth client secrets | Application config, feature flags, non-rotating tokens |
 
-## Challenges and considerations
+A common pattern is to use Parameter Store SecureString for general configuration and reserve Secrets Manager for credentials that genuinely need rotation. Many teams use both.
 
-AWS Secrets Manager is a powerful tool for managing secrets and cryptographic keys, but  it does come with its own set of challenges, considerations, and limitations. Some of the key aspects to be aware of include:
+## How does AWS Secrets Manager compare to other vaults?
 
-- **Compatibility and integration**: AWS Secrets Manager primarily integrates with AWS services and applications. Integrating it with on-premises applications might require additional configurations.
-- **Cost management**: While AWS Secrets Manager offers robust features, it is important to manage costs associated with the number of API calls and secret versions.
-- **API request quotas and throttling**: AWS Secrets Manager has quotas on the rate of API requests. For example, the combined rate of certain API requests like DescribeSecret and GetSecretValue is limited to 10,000 transactions per second per region. Exceeding these limits can result in throttling, where valid requests are rejected and a throttling error is returned.
+| Capability | AWS Secrets Manager | [HashiCorp Vault](/what-is/what-is-hashicorp-vault/) | [Azure Key Vault](/what-is/what-is-azure-key-vault/) | [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/) |
+|---|---|---|---|---|
+| Hosting | Fully managed (AWS) | Self-hosted or HCP managed | Fully managed (Azure) | Fully managed (GCP) |
+| Cloud scope | AWS-native | Multi-cloud, hybrid, on-prem | Azure-native | GCP-native |
+| Built-in rotation | RDS, Redshift, DocumentDB; Lambda for others | Dynamic secrets engines | Certificates (built-in); secrets via Functions | Not built-in |
+| Encryption-as-a-service | Use AWS KMS separately | Yes (transit engine) | Use Key Vault keys separately | Use Cloud KMS separately |
+| Compliance | SOC 1/2/3, PCI DSS, HIPAA, FedRAMP High, IRAP, others | Vault Enterprise FIPS 140-2 | FIPS 140-2 (Premium / Managed HSM) | FIPS 140-2 (Cloud HSM via CMEK) |
+| Best fit | AWS-centric workloads | Multi-cloud, dynamic-secrets-heavy | Azure-centric workloads | GCP-centric workloads |
 
-Understanding the limitations of AWS Secrets Manager and effectively planning its usage are crucial for seamless integration into your AWS infrastructure. Properly addressing these challenges and considerations is key to leveraging the full benefits of the service.
+For workloads that run mostly inside AWS, Secrets Manager is almost always the right default. For multi-cloud or hybrid deployments, organizations frequently pair it with HashiCorp Vault and use [Pulumi ESC](/product/esc/) to compose both under a single interface.
 
-## Conclusion
+## How does pricing work?
 
-AWS Secrets Manager is an essential tool for secure secret management in cloud environments, particularly for applications running on AWS. Properly utilizing AWS Secrets Manager can significantly strengthen the security and management of sensitive data in cloud applications. Consider exploring more AWS services and tools to enhance your cloud infrastructure's security and management efficiency.
+AWS Secrets Manager pricing has two components:
 
-Now that you’re equipped with the knowledge of AWS Secrets Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
+1. **Per secret, per month.** Each secret incurs a flat charge regardless of size; in most AWS Regions this is around $0.40 per secret per month (check the [AWS Secrets Manager pricing page](https://aws.amazon.com/secrets-manager/pricing/) for current rates in your Region).
+1. **Per 10,000 API calls.** A small per-API-call charge applies for retrievals and other operations.
 
-- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing AWS Secrets Manager secrets](/registry/packages/aws/api-docs/secretsmanager/secret/) as well as other AWS resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate AWS Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's AWS Provider documentation](/registry/packages/aws/). Below are some examples of how to create an AWS Secrets Manager secret in a number of supported programming languages:
+Replica secrets are billed at the same per-secret rate in each Region they're replicated to. The first 30 days of any new secret are typically free as part of a free trial. KMS key usage is billed separately under KMS pricing.
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+The pricing model means cost scales with the *number* of secrets more than with read volume. For applications that read the same secret thousands of times per day, the cost-effective pattern is to cache the secret in memory and refresh on rotation.
 
-{{% choosable language typescript %}}
+## How does AWS Secrets Manager handle replication and disaster recovery?
 
-```typescript
-// Copyright 2016-2019, Pulumi Corporation.  All rights reserved.
-// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-ts-secrets-manager
+A secret has a primary Region and can be replicated to any number of secondary Regions. Properties of the replication model:
 
-import * as aws from "@pulumi/aws";
+* **Same name, different Region.** Replicas share the secret name; applications in each Region read the local copy.
+* **Per-Region KMS keys.** Each replica is encrypted with a KMS key in the local Region; the source key is never copied.
+* **Eventual consistency.** Updates to the primary propagate to replicas within seconds under normal conditions.
+* **Promotion on failure.** A replica can be promoted to primary if the source Region is unavailable. The original primary then becomes a replica when it returns.
 
-// Create a secret
-const secret = new aws.secretsmanager.Secret("secret");
+For DR purposes, replicate every secret your DR workload depends on, and include the promotion step in your runbook. For pure low-latency reads, replicate to the same Regions where your application runs.
 
-// Store a new secret version
-const secretVersion = new aws.secretsmanager.SecretVersion("secretVersion", {
-    secretId: secret.id,
-    secretString: "mysecret",
-});
+## What are the regional and service limits?
 
-// Export secret ID (in this case the ARN)
-export const secretId = secret.id;
-```
+A few service quotas to plan around:
 
-{{% /choosable %}}
+| Limit | Value |
+|---|---|
+| Maximum secret value size | 64 KB |
+| Default secrets per Region per account | 500,000 (soft limit; can be raised) |
+| Default API rate (GetSecretValue, DescribeSecret) | 10,000 RPS per Region |
+| Default API rate (other operations) | Lower; see the AWS Secrets Manager quotas docs |
+| Maximum versions per secret | 100 |
+| Rotation function timeout | Inherits Lambda timeout (max 15 minutes) |
 
-{{% choosable language python %}}
+Hitting the API rate limit returns `ThrottlingException`. The standard mitigation is client-side caching (the AWS Secrets Manager Java, Python, Node.js, .NET, and Go caching libraries implement this for you).
 
-```python
-# Copyright 2016-2020, Pulumi Corporation.
-# View the full example code here: https://github.com/pulumi/examples/tree/master/aws-py-secrets-manager
+## How does Pulumi ESC integrate with AWS Secrets Manager?
 
-import pulumi
-from pulumi_aws import secretsmanager
+[Pulumi ESC](/product/esc/) treats AWS Secrets Manager as one of many secret sources. The [AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/) lets an ESC environment read secrets from Secrets Manager and broker them to Pulumi programs, CI jobs, and applications.
 
-# Create secret
-secret = secretsmanager.Secret("secret")
+Concrete patterns:
 
-# Create secret version
-secret_version = secretsmanager.SecretVersion("secret_version",
-                                              secret_id=secret.id,
-                                              secret_string="mysecret"
-                                              )
+* **Dynamic AWS credentials via OIDC.** ESC mints short-lived AWS credentials at the moment a consumer opens the environment, removing the need for long-lived access keys anywhere. See the [aws-login provider](/docs/pulumi-cloud/esc/providers/aws-login/).
+* **Compose with other vaults.** A single ESC environment can pull a database credential from AWS Secrets Manager, an OAuth client secret from HashiCorp Vault, and an OIDC client secret from Azure Key Vault.
+* **Broker secrets to non-AWS consumers.** A workload running outside AWS can still read Secrets Manager secrets via an ESC environment, without having to manage IAM credentials directly.
+* **Audit trail unification.** ESC logs every environment open with identity and timestamp; CloudTrail still records the underlying Secrets Manager API call. The two together produce a complete chain of custody.
 
-# Export secret ID (in this case the ARN)
-pulumi.export("secret_id", secret.id)
-```
+The [aws.secretsmanager Pulumi resource](/registry/packages/aws/api-docs/secretsmanager/secret/) lets you define and manage AWS Secrets Manager resources as code in TypeScript, Python, Go, C#, Java, or YAML.
 
-{{% /choosable %}}
+## Frequently asked questions about AWS Secrets Manager
 
-{{% choosable language go %}}
+### How much does AWS Secrets Manager cost?
 
-```go
-// Copyright 2016-2021, Pulumi Corporation.
-// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-go-secrets-manager
+Per the [AWS Secrets Manager pricing page](https://aws.amazon.com/secrets-manager/pricing/), pricing in most Regions is roughly $0.40 per secret per month plus a small per-API-call fee, with a 30-day free trial for new secrets. Cross-Region replicas are billed at the per-secret rate in each Region. KMS usage is billed separately.
 
-package main
+### Does AWS Secrets Manager rotate secrets automatically?
 
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/secretsmanager"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
+Yes for natively supported services (Amazon RDS engines, Amazon Redshift, Amazon DocumentDB) using AWS-supplied rotation Lambdas. For other secret types, you provide a Lambda implementing the four-step rotation contract (createSecret, setSecret, testSecret, finishSecret). Rotation can be scheduled or triggered on demand.
 
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		secret, err := secretsmanager.NewSecret(ctx, "secretcontainer", nil)
-		if err != nil {
-			return err
-		}
+### How is AWS Secrets Manager different from Parameter Store?
 
-		_, err = secretsmanager.NewSecretVersion(ctx, "secret", &secretsmanager.SecretVersionArgs{
-			SecretId:     secret.ID(),
-			SecretString: pulumi.String("mysecret"),
-		})
-		if err != nil {
-			return err
-		}
+Secrets Manager always encrypts, supports automatic rotation, and replicates across Regions. Parameter Store is cheaper, supports both plain and encrypted (SecureString) parameters, has no built-in rotation, and is a better fit for general configuration. Many teams use both.
 
-		// Export the ID (in this case the ARN) of the secret
-		ctx.Export("secretContainer", secret.ID())
-		return nil
-	})
-}
-```
+### Can I use AWS Secrets Manager outside AWS?
 
-{{% /choosable %}}
+Yes. The API is reachable from anywhere the caller has AWS credentials. In practice, workloads running outside AWS often use AWS IAM Roles Anywhere or OIDC federation to obtain temporary credentials, then call Secrets Manager.
 
-{{% choosable language csharp %}}
+### Is AWS Secrets Manager HIPAA-eligible?
 
-```csharp
-// Copyright 2016-2021, Pulumi Corporation.
-// View the full example code here: https://github.com/pulumi/examples/tree/master/aws-cs-secrets-manager
+Yes. AWS Secrets Manager is a HIPAA-eligible service under the AWS Business Associate Addendum. It's also in scope for SOC 1, SOC 2, SOC 3, PCI DSS, ISO 27001, FedRAMP High, and several other AWS compliance programs.
 
-using Pulumi;
-using Pulumi.Aws.SecretsManager;
+### How do I share a secret across AWS accounts?
 
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create secret
-        var secret = new Secret("secret");
+Attach a resource-based policy to the secret that grants access to the target account's IAM principals, and grant `kms:Decrypt` on the underlying KMS key. The target account can then call `GetSecretValue` directly. For programmatic creation, see the [Pulumi AWS provider's SecretPolicy resource](/registry/packages/aws/api-docs/secretsmanager/secretpolicy/).
 
-        // Create secret version
-        var secretVersion = new SecretVersion("secretVersion", new SecretVersionArgs
-        {
-            SecretId = secret.Id,
-            SecretString = "mysecret"
-        });
+### What happens if I exceed the API rate limit?
 
-        this.SecretId = secret.Id;
-    }
+You get `ThrottlingException` and the standard AWS SDK retry-with-backoff applies. For applications that read secrets frequently, use the AWS Secrets Manager client-side caching libraries (Java, Python, Node.js, .NET, Go) which cache secrets in memory and refresh on rotation.
 
-    [Output]
-    public Output<string> SecretId { get; set; }
-}
-```
+### How does AWS Secrets Manager work in a VPC?
 
-{{% /choosable %}}
+Create an interface VPC endpoint for `com.amazonaws.<region>.secretsmanager`. API calls then stay on the AWS network and never traverse the public internet. The endpoint can have its own security group and endpoint policy.
 
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+### Can I migrate secrets from AWS Secrets Manager to HashiCorp Vault?
 
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+Yes, though it's a one-time export-and-import. List secrets via the AWS API, fetch each value, write into Vault's KV v2 engine, and update your applications to read from Vault. [Pulumi ESC](/product/esc/) often makes migration unnecessary by sitting above both and brokering whichever vault each secret happens to live in.
+
+### How does AWS Secrets Manager integrate with EKS?
+
+Use the AWS Secrets and Configuration Provider for the Kubernetes Secrets Store CSI Driver. Workloads in EKS mount secrets as files in the pod or sync them into Kubernetes Secret resources. Authentication uses IAM roles for service accounts (IRSA) or EKS Pod Identity.
+
+## Learn more
+
+Pulumi makes AWS Secrets Manager part of a coherent secrets program: [Pulumi ESC](/docs/pulumi-cloud/esc/) brokers Secrets Manager values to Pulumi programs, CI jobs, and applications under a single audited interface, and the [Pulumi AWS provider](/registry/packages/aws/) lets you declare every Secrets Manager resource as code in TypeScript, Python, Go, C#, Java, or YAML.
+
+Related reading:
+
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What is HashiCorp Vault?](/what-is/what-is-hashicorp-vault/)
+* [What is Azure Key Vault?](/what-is/what-is-azure-key-vault/)
+* [What is Google Cloud Secret Manager?](/what-is/what-is-google-cloud-secret-manager/)
+* [What is Cloud Security?](/what-is/what-is-cloud-security/)
+* [What is SOC 2?](/what-is/what-is-soc-2/)
