@@ -8,7 +8,7 @@ menu:
     iac:
         name: Octopus Deploy
         parent: iac-using-pulumi-cicd
-        weight: 12
+        weight: 130
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/octopus-deploy/
 - /docs/guides/continuous-delivery/octopus-deploy/

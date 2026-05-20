@@ -11,9 +11,6 @@ menu:
         parent: iac-guides-testing
         weight: 3
         identifier: iac-guides-testing-integration
-    usingpulumi:
-        parent: testing
-        identifier: testing-integration
 aliases:
     - /docs/guides/testing/integration/
     - /docs/using-pulumi/testing/integration/

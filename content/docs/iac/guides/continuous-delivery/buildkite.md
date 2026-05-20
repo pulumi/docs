@@ -10,7 +10,7 @@ menu:
     iac:
         name: Buildkite
         parent: iac-using-pulumi-cicd
-        weight: 2
+        weight: 50
 ---
 
 [Buildkite](https://buildkite.com/) is a continuous integration and delivery platform designed to scale with your projects. This guide shows you how to install, configure, and run Pulumi in a Buildkite pipeline.

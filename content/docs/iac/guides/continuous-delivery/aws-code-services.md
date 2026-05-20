@@ -9,7 +9,7 @@ menu:
     iac:
         name: AWS Code Services
         parent: iac-using-pulumi-cicd
-        weight: 1
+        weight: 20
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/aws-code-services/
 - /docs/reference/cd-aws-code-services/

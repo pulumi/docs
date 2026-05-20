@@ -10,7 +10,7 @@ menu:
     iac:
         name: Bitbucket Pipelines
         parent: iac-using-pulumi-cicd
-        weight: 3
+        weight: 40
 ---
 
 [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/) is a CI/CD service built into Bitbucket Cloud. It allows you to build, test, and deploy your code automatically to your Pulumi staging and production stacks based on commits to specific Git branches.

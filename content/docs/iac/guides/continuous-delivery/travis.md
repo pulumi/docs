@@ -9,7 +9,7 @@ menu:
     iac:
         name: Travis CI
         parent: iac-using-pulumi-cicd
-        weight: 13
+        weight: 160
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/travis/
 - /docs/reference/cd-travis/
