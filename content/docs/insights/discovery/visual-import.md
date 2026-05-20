@@ -1,6 +1,6 @@
 ---
 title_tag: "Visual Import"
-meta_desc: Use Pulumi Visual Import to convert discovered cloud resources into clean IaC code with a guided 5-step workflow—no manual setup required..
+meta_desc: Use Pulumi Visual Import to convert discovered cloud resources into clean IaC code with a guided 5-step workflow—no manual setup required.
 title: Visual Import
 h1: Visual Import
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -23,7 +23,7 @@ Pulumi Visual Import allows platform and development teams to leverage [Pulumi I
 4. Enhance your IaC code using Pulumi Neo
 5. Refine and integrate that code into your own Pulumi projects
 
-This feature is available to users on Team, Enterprise, and Business Critical SKUs with Pulumi Insights enabled.
+This feature is available to users on the Team, Enterprise, and Business Critical editions with Pulumi Insights enabled.
 
 ## Prerequisites
 
@@ -31,12 +31,11 @@ Before you start, ensure you have at least one [Pulumi Insights account](/docs/i
 
 ## Accessing visual import
 
-1. Log in to [Pulumi Cloud Console](https://app.pulumi.com/signin)
-2. From the left navigation bar, select **IaC / Import**
+1. Log in to the [Pulumi Cloud console](https://app.pulumi.com/signin)
+2. From the left navigation bar, select **Stacks**
+3. Select the **Import** button
 
 This opens the Visual Import workflow.
-
-![Pulumi Import](/docs/insights/assets/import-left-nav.png)
 
 ### Step 1: Select resources
 
@@ -49,8 +48,6 @@ You begin by selecting the cloud resources you want to convert to code.
 * Avoid selecting hundreds of resources at once; the intent is to codify logical components or services
 
 Once you've selected the resources, click **Next** to proceed.
-
-![Pulumi Import](/docs/insights/assets/import-select-resources.png)
 
 ### Step 2: Review referenced resources
 
@@ -66,8 +63,6 @@ The referenced resources will show a direction: 'from' or 'to'. 'from' refers to
 
 You can deselect referenced resources if needed. When you're ready, click **Next**.
 
-![Pulumi Import](/docs/insights/assets/import-select-references.png)
-
 ### Step 3: Generate and review code
 
 This step lets you create, review, and refine the generated Pulumi IaC code.
@@ -75,13 +70,9 @@ This step lets you create, review, and refine the generated Pulumi IaC code.
 * Choose the target language (e.g., TypeScript, Python, Go, C\#, Java, YAML)
 * The editor displays the generated code as a single file and enables you to edit the code to ensure seamless integration into existing code
 
-![Pulumi Import](/docs/insights/assets/import-review-code.png)
-
 ### Step 4: Enhance
 
 The Enhance button enables Pulumi Neo to take an additional pass over the generated code to improve formatting, provide more meaningful variable names and comments, and add references between selected components if available.
-
-![Pulumi Import](/docs/insights/assets/import-review-enhance.png)
 
 ### Step 5: Integrate code
 
@@ -98,7 +89,7 @@ When finished, click **Done** to return to the Visual Import start page.
 Ensure that you run the pulumi CLI commands using credentials that match the cloud accounts for the imported resources, or the import will fail.
 {{% /notes %}}
 
-All generated resources include the `import` property, which allows Pulumi to recognize and import them into the state during update or preview. Once `pulumi up` is complete, you can use make changes to the cloud resources from your IaC program.
+All generated resources include the `import` property, which allows Pulumi to recognize and import them into the state during update or preview. Once `pulumi up` is complete, you can make changes to the cloud resources from your IaC program.
 
 After a successful stack update, these resources become Pulumi-managed. Changes to the stack will update the imported cloud resources in the same way as IaC-created resources.
 
@@ -108,7 +99,3 @@ After a successful stack update, these resources become Pulumi-managed. Changes 
 * **Validate**: Use `pulumi preview` after importing the generated code to confirm correctness
 * **Enhance**: Let Neo help improve readability and conformance with your coding standards
 * **Integrate Carefully**: Consider how the generated code fits into your existing IaC structure
-
-## Feedback and support
-
-We welcome your feedback on Visual IaC Import. If you encounter issues or have suggestions, please reach out via the [Pulumi feedback](https://github.com/pulumi/pulumi-cloud-requests)  site or your customer success representative.
