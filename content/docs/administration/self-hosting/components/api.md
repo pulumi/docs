@@ -281,6 +281,16 @@ The database migrations container is configurable to enable connections to the d
 
 Audit Logs are persisted in MySQL by default. Alternative backends can be configured to support a higher volume of writes without scaling out MySQL.
 
+### Client IP extraction
+
+Audit logs rely on headers to correctly record the client IP address for each action. The default settings should work for most recommended deployments, but you may need to adjust these settings if you are using a CDN or other reverse proxies with public addresses.
+
+| Variable Name                  | Description                                                                                                                                                                                                                                            |
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PULUMI_REAL_IP_HEADER          | (Optional) Header name for extracting the real client IP address (e.g., `CloudFront-Viewer-Address`, `CF-Connecting-IP`, `X-Real-IP`). Only configure this if your deployment is behind a CDN or proxy that sets a trusted header and cannot be bypassed. When set, the value in this header takes preference over parsing X-Forwarder-For. Not set by default. |
+| PULUMI_TRUSTED_PROXY_IP_RANGES | (Optional) Comma-separated CIDR ranges defining which proxy IPs to trust when extracting the client IP from X-Forwarded-For (e.g., `203.0.113.0/24, 198.51.100.0/24`). To prevent spoofing, the rightmost non-trusted address in the X-Forwarded-For chain will be returned as the client address. Must use CIDR notation (e.g., `192.168.1.1/32` not `192.168.1.1`). Default: RFC1918 private ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16), loopback, and CGNAT ranges. |
+
+
 ### DynamoDB
 
 To use [AWS DynamoDB](https://aws.amazon.com/dynamodb) to persist Audit Logs, specify the name of the table in the environment variable `PULUMI_AUDIT_LOGS_DYNAMO_TABLE`. The table provided must be configured with following attributes:
