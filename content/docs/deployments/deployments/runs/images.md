@@ -17,7 +17,7 @@ Pulumi Cloud runs your Pulumi program inside a container image called the *deplo
 
 ## The default executor image
 
-By default, every deployment runs in [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi), a Linux image that includes:
+By default, every deployment runs in [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi), a Debian-based Linux image that includes:
 
 - The `pulumi` CLI on `$PATH`
 - [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported language runtimes: Node.js, Python, Go, .NET, and Java
