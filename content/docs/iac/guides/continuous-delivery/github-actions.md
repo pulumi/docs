@@ -24,9 +24,19 @@ aliases:
 
 You run Pulumi in a workflow with the [Pulumi GitHub Action](https://github.com/pulumi/actions) (`pulumi/actions`), an official, Pulumi-maintained action that installs the Pulumi CLI and runs Pulumi commands as a workflow step. Because it wraps the CLI, it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
 
-{{% notes type="info" %}}
-This guide assumes [Pulumi Cloud](/docs/pulumi-cloud/) as your backend. Pulumi Cloud isn't required to run Pulumi in CI/CD — Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/) — but the access token, OIDC, and ESC features described here are specific to Pulumi Cloud.
-{{% /notes %}}
+{{< cicd-cloud-note >}}
+
+## Pulumi's GitHub Actions
+
+Pulumi publishes and maintains several actions on the GitHub Marketplace. This guide centers on `pulumi/actions`, the action that runs Pulumi commands; the others handle authentication and configuration and are covered in the sections below.
+
+| Action | Purpose |
+|--------|---------|
+| [`pulumi/actions`](https://github.com/pulumi/actions) | Installs the Pulumi CLI and runs a Pulumi command (`preview`, `up`, `destroy`, and so on) as a workflow step. |
+| [`pulumi/setup-pulumi`](https://github.com/pulumi/setup-pulumi) | Installs the Pulumi CLI only, for workflows that invoke `pulumi` commands directly rather than through `pulumi/actions`. |
+| [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) | Exchanges a GitHub OIDC token for a short-lived Pulumi Cloud access token, removing the need to store a token as a secret. |
+| [`pulumi/esc-action`](https://github.com/pulumi/esc-action) | Opens a [Pulumi ESC](/docs/esc/) environment and injects its environment variables — cloud credentials, secrets, and configuration — into the workflow. |
+| [`pulumi/esc-export-secrets-action`](https://github.com/pulumi/esc-export-secrets-action) | Exports GitHub Actions secrets into a Pulumi ESC environment, useful when migrating existing secrets to ESC. |
 
 ## Prerequisites
 
@@ -95,32 +105,52 @@ To configure OIDC directly between GitHub Actions and a cloud provider without E
 
 ## The trunk-based development workflow
 
-The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there.
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. This guide splits that across two workflow files:
 
-A single workflow file handles all three stages, with each `pulumi/actions` step gated by an `if` condition on the event that triggered the run:
+- `.github/workflows/pr.yml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
+- `.github/workflows/main.yml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
 
-- A **pull request** runs `pulumi preview` to surface the proposed changes for review.
-- A **push to `main`** runs `pulumi up` to deploy to a continuously delivered environment, such as staging.
-- A **release tag** runs `pulumi up` to promote the change to production.
-
-Add the file below at `.github/workflows/pulumi.yml`. It assumes a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the language setup and dependency-install steps differ between languages:
+Both files check out the repository, set up your program's language, install dependencies, and then invoke `pulumi/actions`. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the language setup and dependency-install steps differ between languages:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
 ```yaml
-# .github/workflows/pulumi.yml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
   pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: infra/package.json
+      - run: npm install
+        working-directory: infra
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
   push:
     branches:
       - main
     tags:
       - 'release-*'
 jobs:
-  pulumi:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -130,20 +160,9 @@ jobs:
       - run: npm install
         working-directory: infra
 
-      # Pull request: preview the proposed changes.
-      - name: Preview
-        if: github.event_name == 'pull_request'
-        uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: acme/website/staging
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      # Merge to main: deploy to the staging environment.
+      # Push to main: deploy to the staging environment.
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: pulumi/actions@v6
         with:
           command: up
@@ -168,17 +187,40 @@ jobs:
 {{% choosable language python %}}
 
 ```yaml
-# .github/workflows/pulumi.yml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
   pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+        working-directory: infra
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
   push:
     branches:
       - main
     tags:
       - 'release-*'
 jobs:
-  pulumi:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -188,20 +230,9 @@ jobs:
       - run: pip install -r requirements.txt
         working-directory: infra
 
-      # Pull request: preview the proposed changes.
-      - name: Preview
-        if: github.event_name == 'pull_request'
-        uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: acme/website/staging
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      # Merge to main: deploy to the staging environment.
+      # Push to main: deploy to the staging environment.
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: pulumi/actions@v6
         with:
           command: up
@@ -226,17 +257,40 @@ jobs:
 {{% choosable language go %}}
 
 ```yaml
-# .github/workflows/pulumi.yml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
   pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v6
+        with:
+          go-version: 'stable'
+      - run: go mod download
+        working-directory: infra
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
   push:
     branches:
       - main
     tags:
       - 'release-*'
 jobs:
-  pulumi:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -246,20 +300,9 @@ jobs:
       - run: go mod download
         working-directory: infra
 
-      # Pull request: preview the proposed changes.
-      - name: Preview
-        if: github.event_name == 'pull_request'
-        uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: acme/website/staging
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      # Merge to main: deploy to the staging environment.
+      # Push to main: deploy to the staging environment.
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: pulumi/actions@v6
         with:
           command: up
@@ -284,17 +327,38 @@ jobs:
 {{% choosable language csharp %}}
 
 ```yaml
-# .github/workflows/pulumi.yml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
   pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.0.x'
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
   push:
     branches:
       - main
     tags:
       - 'release-*'
 jobs:
-  pulumi:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -302,20 +366,9 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      # Pull request: preview the proposed changes.
-      - name: Preview
-        if: github.event_name == 'pull_request'
-        uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: acme/website/staging
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      # Merge to main: deploy to the staging environment.
+      # Push to main: deploy to the staging environment.
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: pulumi/actions@v6
         with:
           command: up
@@ -340,17 +393,39 @@ jobs:
 {{% choosable language java %}}
 
 ```yaml
-# .github/workflows/pulumi.yml
-name: Pulumi
+# .github/workflows/pr.yml
+name: Pulumi preview
 on:
   pull_request:
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: pulumi/actions@v6
+        with:
+          command: preview
+          stack-name: acme/website/staging
+          work-dir: infra
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+```
+
+```yaml
+# .github/workflows/main.yml
+name: Pulumi deploy
+on:
   push:
     branches:
       - main
     tags:
       - 'release-*'
 jobs:
-  pulumi:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -359,20 +434,9 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      # Pull request: preview the proposed changes.
-      - name: Preview
-        if: github.event_name == 'pull_request'
-        uses: pulumi/actions@v6
-        with:
-          command: preview
-          stack-name: acme/website/staging
-          work-dir: infra
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-
-      # Merge to main: deploy to the staging environment.
+      # Push to main: deploy to the staging environment.
       - name: Deploy to staging
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         uses: pulumi/actions@v6
         with:
           command: up
