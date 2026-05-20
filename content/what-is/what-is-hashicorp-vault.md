@@ -1,6 +1,6 @@
 ---
 title: What is HashiCorp Vault?
-meta_desc: "HashiCorp Vault is an identity-based secrets and encryption management system. Learn its engines, dynamic secrets, deployment modes, and how it pairs with Pulumi ESC."
+meta_desc: "HashiCorp Vault is an identity-based secrets and encryption management system. Learn its basics and how it pairs with Pulumi ESC."
 meta_image: /images/what-is/what-is-hashicorp-vault-meta.png
 type: what-is
 page_title: "What is HashiCorp Vault?"
