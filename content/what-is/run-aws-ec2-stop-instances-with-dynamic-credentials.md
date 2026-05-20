@@ -1,72 +1,56 @@
 ---
 title: Run 'aws ec2 stop-instances' using Dynamic Credentials
-meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws ec2 stop-instances' in a more secure and efficient manner.
-
+meta_desc: "Stop EC2 instances with 'aws ec2 stop-instances' using short-lived, OIDC-scoped credentials brokered by Pulumi ESC. No static keys, fully auditable."
 meta_image: /images/what-is/run-aws-ec2-stop-instances-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws ec2 stop-instances' using Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws ec2 stop-instances` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/stop-instances.html) is part of the AWS Command Line Interface (CLI) and is utilized for stopping Amazon Elastic Compute Cloud (Amazon EC2) instances that are currently running. Amazon EC2 provides scalable computing capacity in the AWS cloud, enabling users to launch and manage virtual servers as per their requirements.
+**This guide shows you how to run `aws ec2 stop-instances` with dynamic, short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `aws_access_key_id` / `aws_secret_access_key` pairs on disk.** Dynamic credentials are issued by AWS STS at the moment the command runs, scoped to a single IAM role, time-bound to the role's session duration, and visible end-to-end in CloudTrail. You'll need the Pulumi CLI, the [`esc` CLI](/docs/install/esc/), a Pulumi Cloud account, and an AWS IAM role configured to trust Pulumi as an OIDC provider.
 
-Using the `aws ec2 stop-instances` command is key in managing EC2 instances, providing an easy way to bring an instance into an inactive state. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws ec2 stop-instances`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+- Why dynamic credentials beat static AWS keys for state-changing EC2 calls
+- Prerequisites for the `esc run` workflow
+- How to create an ESC environment with the `aws-login` provider
+- The `aws ec2 stop-instances` invocation, explained flag-by-flag
+- How to verify the call ran with assumed-role credentials
+- Common errors and how to fix them
+- FAQs about CI use, multi-account, tag-scoped permissions, and `aws-vault` differences
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static AWS keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+- **No `aws_access_key_id` on disk.** Nothing to leak from `~/.aws/credentials`, a developer laptop, a CI runner cache, or a screenshot in Slack.
+- **Scoped to one IAM role.** The role's policy is the upper bound. For stop automation, scope to a tag like `aws:ResourceTag/Automation=true` so the session can only touch instances you've opted in.
+- **Time-bound by STS.** Sessions expire on the `duration` you configure (default 1 hour). An exfiltrated session token is useless within the hour.
+- **Auditable in CloudTrail.** Every `StopInstances` event carries the assumed-role principal and a session name you control, so you can prove which automation stopped which instance and when.
+- **One source of truth.** The ESC environment defines the role and trust policy once; every teammate, CI job, and script gets the same credentials, never their own copy.
 
-- Securely share credentials with teammates in a consistent way.
-- Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like aws ec2 stop-instances without requiring deep security expertise.
+## Prerequisites
 
-## What is the esc run command?
+- A [Pulumi Cloud](https://app.pulumi.com/signin) account and an organization you can create environments in.
+- The Pulumi CLI and the [ESC CLI](/docs/install/esc/) installed and authenticated (`esc login`).
+- An AWS account with permission to create and update IAM roles.
+- An IAM role with `ec2:StopInstances` and `ec2:DescribeInstances`, and a trust policy that allows Pulumi's OIDC issuer to assume it. Use the [Pulumi + AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) to set it up.
+- The AWS CLI v2 installed.
+- One or more running EC2 instances whose IDs you know.
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+## Step-by-step: set up dynamic credentials for EC2 stop
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+### 1. Configure the OIDC trust between Pulumi and AWS
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws ec2 stop-instances` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+Follow the [configuring OIDC between Pulumi and AWS guide](/docs/esc/guides/configuring-oidc/aws/) to create an IAM role whose trust policy accepts Pulumi's OIDC issuer. Note the role's ARN.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
-
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
-
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
-
-## Getting started with esc run
-
-### Step 1: Install and login to Pulumi ESC
-
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+### 2. Create a Pulumi ESC environment
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+$ esc env init <your-pulumi-org>/<your-project>/aws-ec2-control
 ```
 
-### Step 2: Create the OIDC configuration
+### 3. Add the `aws-login` provider to the environment
 
-Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
-
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform EC2 actions.
-
-### Step 3: Create a new Pulumi ESC environment
-
-Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
-
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
-
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+Open the environment in `esc env edit` (or in the Pulumi Cloud console) and paste the following, replacing `<your-oidc-iam-role-arn>` with the ARN from step 1:
 
 ```yaml
 values:
@@ -83,9 +67,9 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws ec2 stop-instances command
+The `fn::open::aws-login` provider performs the `AssumeRoleWithWebIdentity` call against AWS STS at runtime. The `environmentVariables` block exposes the resulting short-lived credentials to any process `esc run` invokes.
 
-First check that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+### 4. Confirm no static credentials are leaking in
 
 ```bash
 $ aws configure list
@@ -97,18 +81,120 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To stop a running instance, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<your-running-instance-id>` with the names of your own Pulumi organization, environment, and desired EC2 instance ID respectively:
+If `access_key` shows a value, unset `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_PROFILE`, or use a fresh shell. The point is to prove the next call cannot fall back to a long-lived key.
+
+## Run `aws ec2 stop-instances` with dynamic credentials
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws ec2 stop-instances --instance-ids <your-running-instance-id>
+$ esc run <your-pulumi-org>/<your-project>/aws-ec2-control -- \
+    aws ec2 stop-instances \
+      --instance-ids i-0123456789abcdef0 i-0fedcba9876543210 \
+      --region <aws-region>
 ```
 
-## Conclusion
+What each flag does:
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws ec2 stop-instances`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+- `esc run <env> --` opens the named ESC environment, assumes the IAM role, and injects the short-lived credentials as environment variables for the command that follows.
+- `--instance-ids` is the space-separated list of instance IDs to stop.
+- `--region` picks the AWS region — EC2 is region-scoped, so the IDs must live in the region you query.
+- `--hibernate` (optional) stops the instances by hibernating them rather than shutting them down, if they were launched with hibernation enabled.
+- `--force` (optional, dangerous) forces stop without a graceful shutdown — use only if a normal stop is stuck.
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+A successful response looks like:
 
-Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+```json
+{
+  "StoppingInstances": [
+    {
+      "InstanceId": "i-0123456789abcdef0",
+      "CurrentState": { "Code": 64, "Name": "stopping" },
+      "PreviousState": { "Code": 16, "Name": "running" }
+    }
+  ]
+}
+```
+
+To wait until the instances are fully stopped before continuing a script:
+
+```bash
+$ esc run <your-pulumi-org>/<your-project>/aws-ec2-control -- \
+    aws ec2 wait instance-stopped \
+      --instance-ids i-0123456789abcdef0 \
+      --region <aws-region>
+```
+
+## Verify you used dynamic credentials
+
+Run a `sts get-caller-identity` through the same environment and inspect the principal:
+
+```bash
+$ esc run <your-pulumi-org>/<your-project>/aws-ec2-control -- aws sts get-caller-identity
+{
+  "UserId": "AROAEXAMPLE:pulumi-environments-session",
+  "Account": "123456789012",
+  "Arn": "arn:aws:sts::123456789012:assumed-role/pulumi-esc-oidc/pulumi-environments-session"
+}
+```
+
+The `assumed-role` ARN and the `pulumi-environments-session` suffix confirm you're using a role session, not an IAM user. The matching CloudTrail `StopInstances` event will show `userIdentity.type = AssumedRole` and the same session name.
+
+## Common errors
+
+| Error | Likely cause | Fix |
+|---|---|---|
+| `AccessDenied: not authorized to perform: sts:AssumeRoleWithWebIdentity` | IAM role trust policy does not allow Pulumi's OIDC issuer or your org's audience | Re-check the trust policy against the [Pulumi + AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) |
+| `UnauthorizedOperation: ... ec2:StopInstances` | Role's identity policy lacks the action or the tag-scoped condition isn't met | Add `ec2:StopInstances` and confirm the instance carries the tags your policy expects |
+| `IncorrectInstanceState` | The instance is already stopped or in a transitional state | Verify state with `describe-instances` first; retry once the state settles |
+| `InvalidClientTokenId` | The ESC env didn't inject credentials; you're hitting AWS with stale or empty keys | Confirm the `environmentVariables` block and that you invoked via `esc run --` ([more](/what-is/resolve-list-buckets-invalid-client-token-id/)) |
+| `ExpiredToken` | Session lived past the configured `duration` | Re-run the command; `esc run` mints a fresh session each invocation ([more](/what-is/resolve-list-buckets-expired-token/)) |
+| `Unable to locate credentials` | `esc run` was not used and no other AWS credential source is configured | Wrap the command in `esc run <env> --` ([more](/what-is/resolve-unable-to-locate-credentials/)) |
+
+## Frequently asked questions
+
+### Can I use `esc run` in CI to stop instances on a schedule?
+
+Yes — nightly shutdowns of non-production fleets are a canonical use case. Set `PULUMI_ACCESS_TOKEN` on the runner and invoke `esc run <env> -- aws ec2 stop-instances ...` from a cron job or scheduled workflow. The runner needs no long-lived AWS credentials. Pulumi's GitHub Actions, GitLab CI, and CircleCI integrations all support this pattern.
+
+### What is the minimum IAM permission the role needs?
+
+`ec2:StopInstances` for the stop action and `ec2:DescribeInstances` so the CLI can resolve and validate the IDs you pass. For least privilege, scope `StopInstances` with the `ec2:ResourceTag/<key>` condition so the session can only act on opted-in instances:
+
+```json
+{
+  "Effect": "Allow",
+  "Action": "ec2:StopInstances",
+  "Resource": "arn:aws:ec2:*:*:instance/*",
+  "Condition": { "StringEquals": { "aws:ResourceTag/Automation": "true" } }
+}
+```
+
+### Does this work with multiple AWS accounts?
+
+Yes. Create one ESC environment per account or use [environment imports](/docs/esc/environments/imports/) to compose a base environment with account-specific overrides. Each environment maps to one `roleArn`, so the credentials are always scoped to one account.
+
+### Can I stop instances in multiple regions in one command?
+
+No — `stop-instances` is a single-region call. Run one `esc run` per region, or loop through your regions in a script and pass `--region` each time. The role is assumed once per `esc run`.
+
+### Do I still need static AWS keys for anything?
+
+For local dev, CI, and one-off CLI work against AWS, no. Static keys are only needed by legacy tooling that can't be wrapped in `esc run` or that doesn't accept environment-variable credentials.
+
+### How is this different from `aws-vault`?
+
+`aws-vault` stores long-lived keys in your OS keychain and brokers temporary sessions locally. Pulumi ESC removes the long-lived key entirely: the trust is OIDC-based and lives in IAM, so no key is ever issued to a developer or runner. ESC also gives you centralized environments, secret aggregation from other providers, and audit logs across the team.
+
+### How long can a session last?
+
+Up to the role's `MaxSessionDuration` (default 1 hour, configurable up to 12 hours for non-chained roles). The `duration` field in the `aws-login` block requests the value; AWS enforces the cap.
+
+## Learn more
+
+- [Pulumi ESC product page](/product/esc/)
+- [Configuring OIDC between Pulumi and AWS](/docs/esc/guides/configuring-oidc/aws/)
+- [`esc run` command reference](/docs/esc/cli/commands/esc_run/)
+- Related dynamic-credentials guides:
+  - [Run `aws ec2 start-instances` with dynamic credentials](/what-is/run-aws-ec2-start-instances-with-dynamic-credentials/)
+  - [Run `aws ec2 describe-instances` with dynamic credentials](/what-is/run-aws-ec2-describe-instances-with-dynamic-credentials/)
+  - [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/)
+- Related error resolution: [`InvalidClientTokenId`](/what-is/resolve-list-buckets-invalid-client-token-id/), [`ExpiredToken`](/what-is/resolve-list-buckets-expired-token/), [`Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
