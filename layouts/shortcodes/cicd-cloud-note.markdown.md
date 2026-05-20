@@ -1,0 +1,1 @@
+> **Note:** This guide assumes [Pulumi Cloud](/docs/pulumi-cloud/) as your backend. Pulumi Cloud isn't required to run Pulumi in CI/CD — Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/) — but the access token, OIDC, and ESC features described here are specific to Pulumi Cloud.
