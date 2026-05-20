@@ -11,7 +11,7 @@ menu:
     iac:
         name: Harness
         parent: iac-using-pulumi-cicd
-        weight: 7
+        weight: 110
 ---
 
 [Harness](https://www.harness.io/) is a modern software delivery platform that provides comprehensive CI/CD, feature flags, cloud cost management, and security testing capabilities. This page shows how to use Harness CI/CD to deploy infrastructure with Pulumi and how to manage Harness platform resources using the Pulumi Harness provider.

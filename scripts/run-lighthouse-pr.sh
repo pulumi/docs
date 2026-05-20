@@ -6,7 +6,7 @@ source ./scripts/common.sh
 
 # Pages to audit.
 page_names=("Homepage" "Install Pulumi" "AWS Get Started")
-page_paths=("/" "/docs/get-started/download-install/" "/docs/iac/get-started/aws/")
+page_paths=("/" "/docs/install/" "/docs/iac/get-started/aws/")
 
 # Read preview URL from the metadata file created by sync-and-test-bucket.sh.
 metadata_file="$(origin_bucket_metadata_filepath)"

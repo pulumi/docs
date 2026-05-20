@@ -359,13 +359,44 @@
         // Initialize mermaid with manual control to preserve source before rendering
         mermaid.initialize({ startOnLoad: false });
 
-        // Preserve original mermaid source, then render
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('pre.mermaid').forEach(pre => {
+            const diagrams = document.querySelectorAll('pre.mermaid');
+
+            // Preserve original mermaid source before rendering replaces it.
+            diagrams.forEach(pre => {
                 pre.setAttribute('data-mermaid-source', pre.textContent.trim());
             });
-            // Render mermaid diagrams after preserving source
-            mermaid.run();
+
+            // Render a single diagram, skipping ones already rendered. Diagrams
+            // inside a chooser start hidden (display:none) and cannot be measured,
+            // so they are rendered lazily once they become visible.
+            const render = pre => {
+                if (pre.dataset.processed === 'true') return;
+                mermaid.run({ nodes: [pre] }).catch(err => {
+                    console.error('Mermaid render error:', err);
+                });
+            };
+
+            const isHidden = el => el.offsetParent === null;
+
+            // Render everything that is visible now.
+            diagrams.forEach(pre => {
+                if (!isHidden(pre)) render(pre);
+            });
+
+            // Render hidden diagrams when a chooser reveals them.
+            const hidden = [...diagrams].filter(isHidden);
+            if (hidden.length) {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            render(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                hidden.forEach(pre => observer.observe(pre));
+            }
         });
     </script>
     {{ end }}
@@ -390,4 +421,15 @@
     {{ if and (eq .Type "blog") .IsPage .Params.updated }}
         <meta http-equiv="last-modified" content="{{ (time .Params.updated).Format "2006-01-02T15:04:05Z0700" }}" />
     {{ end }}
+
+    {{- /* Sets <html class="is-signed-in"> before first paint when the auth
+           cookie is present, so the header's Sign-in -> Dashboard swap doesn't
+           cause layout shift for logged-in users. Paired with CSS in main.scss. */ -}}
+    <script>
+      try {
+        var c = document.cookie.split("; ").find(function (s) { return s.indexOf("pulumi_web_user_info=") === 0; });
+        var v = c ? JSON.parse(decodeURIComponent(c.slice(c.indexOf("=") + 1)).slice(2)) : null;
+        if (v && v.userId) document.documentElement.classList.add("is-signed-in");
+      } catch (e) {}
+    </script>
 </head>

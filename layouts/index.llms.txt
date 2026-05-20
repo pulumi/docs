@@ -35,10 +35,10 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/readme
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/installation
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/nav
-      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{token}
+      /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/docs/{typeToken}
       /api/registry/packages/{source}/{publisher}/{name}/versions/{version}/examples
 
-  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). Tokens for `docs/{token}` are percent-encoded; discover them via `nav?depth=full`.
+  Common parameters: `?lang=typescript|python|go|csharp|java|yaml`, `?os=linux|macos|windows`, `?depth=summary|full` and `?q=<term>` on `nav`, `?limit=` (max 100) on `examples`. For prose: `--output=markdown` (CLI) or `Accept: text/markdown` (HTTP). Type tokens for `docs/{typeToken}` are URL-encoded — use `encodeURIComponent` (or equivalent), e.g. `random:index/RandomPassword` becomes `random%3Aindex%2FRandomPassword`. Discover them via `nav?depth=full`.
 
 - **Full docs index (JSON)** — hierarchical sitemap of every documentation page with titles and nesting.
 

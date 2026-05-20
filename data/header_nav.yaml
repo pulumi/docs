@@ -55,7 +55,7 @@ items:
           - label: Documentation
             href: /docs/
             description: Complete guides and API references
-            icon: books
+            icon: book-open
             track: header-engineers-docs
           - label: Registry
             href: /registry/

@@ -38,7 +38,11 @@ Given that LLMs are natural coders, most of us simply assumed that the breakout 
 
 Andrej Karpathy noted nearly a year ago that, "Building a modern app is a bit like assembling IKEA furniture," observing that, though writing the code was easy, fun, and fast, the next mile of actually getting the application running in production entailed many things the LLM wasn't naturally good at, including "services, API keys, configurations, dev/prod deployments."
 
-At the same time, we're seeing something magical happen here at Pulumi: LLMs are now doing 20% of the infrastructure deployments, up from virtually zero a year ago. We expect this to grow to over 50% before the end of this year and well beyond afterwards. The agentic infrastructure era is here. Today we're announcing several new platform capabilities to accelerate it further.
+At the same time, we're seeing something magical happen here at Pulumi: LLMs are now doing over 20% of the infrastructure deployments, up from virtually zero a year ago. We expect this to grow to over 50% before the end of this year and well beyond afterwards.
+
+![Over 20% of all Pulumi operations are now being handled by LLMs.](./agentic-share-circular-light.png)
+
+The agentic infrastructure era is here. Today we're announcing several new platform capabilities to accelerate it further.
 
 Before getting to what's new, however, why are we seeing this happening in reality?
 
