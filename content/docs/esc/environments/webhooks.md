@@ -411,6 +411,17 @@ func computeSignature(payload []byte, secret string) string {
 
 {{< /chooser >}}
 
+## Webhook deliveries
+
+Pulumi Cloud records the recent deliveries for each webhook so you can confirm that events
+were received and troubleshoot any that failed. Environment and organization webhook
+deliveries can be viewed and redelivered from the webhook's page in the Pulumi Cloud UI.
+For step-by-step instructions, see [Webhook deliveries](/docs/deployments/webhooks/#webhook-deliveries)
+on the Pulumi Cloud Webhooks page.
+
+The experimental `pulumi stack webhook delivery` CLI commands apply to stack webhooks
+only, so ESC environment and organization webhooks must be redelivered from the UI.
+
 ## Additional Resources
 
 - [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)

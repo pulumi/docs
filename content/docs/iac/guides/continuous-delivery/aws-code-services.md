@@ -41,7 +41,7 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, CodeBuild needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
+CodeBuild authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
 
 Because the token is a sensitive credential, store it in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) (as a `SecureString`) or [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), and reference it from the CodeBuild project rather than hardcoding it. CodeBuild resolves the value at build time and never persists it in the build definition.
 
@@ -151,18 +151,6 @@ See the AWS provider's [CodeBuild](/registry/packages/aws/api-docs/codebuild/), 
 
 If you operate many pipelines that are similar or identical, package the pattern once instead of copying it. Wrap these resources in a [component](/docs/iac/concepts/components/) so each pipeline becomes a single resource with a small set of inputs, or publish a [template](/docs/iac/guides/building-extending/creating-templates/) so teams can scaffold a new pipeline with `pulumi new`.
 
-## Troubleshooting
-
-**`pulumi: command not found`** — The `install` phase did not add the CLI to `PATH`. Confirm both the `curl` install step and the `export PATH=$PATH:$HOME/.pulumi/bin` line ran.
-
-**Authentication or 401 errors against Pulumi Cloud** — `PULUMI_ACCESS_TOKEN` is missing or empty. Verify the CodeBuild environment variable resolves from Parameter Store and that the token has not expired.
-
-**`AccessDenied` errors from AWS** — The CodeBuild service role lacks the IAM permissions your program needs, or the ESC environment is not brokering credentials. Attach the required policies to the service role, or check the ESC environment configuration.
-
-**Dependency or build failures** — `pulumi install` could not resolve your program's dependencies. Confirm the language runtime your program uses is available in the CodeBuild image you selected.
-
-For more, see the [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/).
-
 ## Next steps
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/)
@@ -171,3 +159,4 @@ For more, see the [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci
 - [AWS provider](/registry/packages/aws/)
 - [Component resources](/docs/iac/concepts/components/)
 - [Review Stacks](/docs/deployments/deployments/review-stacks/)
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/)
