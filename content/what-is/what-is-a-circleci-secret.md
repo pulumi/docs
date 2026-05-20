@@ -1,159 +1,220 @@
 ---
 title: What is a CircleCI Secret?
-meta_desc: |
-    Learn more about CircleCI secrets and how to use them.
-
+meta_desc: "CircleCI secrets are encrypted environment variables for CI/CD jobs. Learn project env vars, contexts, restricted contexts, OIDC, and rotation best practices."
 meta_image: /images/what-is/what-is-a-circleci-secret-meta.png
 type: what-is
 page_title: "What is a CircleCI Secret?"
 authors: ["diana-esteves"]
 ---
 
-[CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](/what-is/what-is-ci-cd/)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
+**A CircleCI secret is an encrypted environment variable that CircleCI injects into a job's execution environment as a regular env var, scoped either to a single project or to an organization-level context that selected projects can opt into.** Secrets cover the credentials a pipeline needs at runtime — cloud access keys, deploy tokens, container registry credentials, and the like — without putting them in `.circleci/config.yml`.
 
-## What is a CircleCI secret?
+CircleCI provides three primary scopes (project environment variables, organization contexts, and restricted contexts), encrypts values at rest, and masks them in job output by default. For long-lived cloud credentials, modern CircleCI pipelines often skip stored secrets entirely and use [OIDC federation](https://circleci.com/docs/openid-connect-tokens/) to mint short-lived credentials per run — the same pattern recommended for GitHub Actions and other CI systems. Pulumi ESC integrates with CircleCI's OIDC issuer so [Pulumi ESC environments](/product/esc/) can broker AWS, GCP, and other cloud credentials into pipelines without storing them on either side.
 
-CircleCI secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain security and integrity. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
+In this article, we'll cover the key questions about CircleCI secrets:
 
-### Key features
+* What is a CircleCI secret used for?
+* What are the CircleCI secret scopes (project, context, restricted context)?
+* How are CircleCI secrets stored and protected?
+* How do jobs access secrets?
+* What is OIDC and how does it compare to stored secrets?
+* What are the limits of CircleCI secrets?
+* What are best practices for CircleCI secrets?
+* How does Pulumi work with CircleCI secrets?
+* Frequently asked questions about CircleCI secrets
 
-- **Pipeline integration:** CircleCI secrets integrate into workflows, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials throughout the build, test, and deployment phases.
-- **Environment variable flexibility:** CircleCI secrets can be easily referenced as environment variables across workflows. This flexibility allows a single codebase to cater to various development environments, including Dev, QA, pre-prod, etc.
-- **Centralized version control:** CircleCI centralizes configuration files with secret references in the `.circleci` home directory. This approach removes the necessity of embedding sensitive data directly into your application.
-- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports—all without the hassle of installing additional complex systems.
+## What is a CircleCI secret used for?
 
-## Getting started with CircleCI secrets
+A CircleCI secret is the right place for anything sensitive a pipeline needs at runtime. Typical uses:
 
-### Define a CircleCI secret via the CLI
+* Cloud credentials (AWS access keys, GCP service-account JSON, Azure client secrets).
+* Container registry tokens for `docker login` and image pushes.
+* Deployment tokens for hosting platforms (Heroku, Vercel, Netlify).
+* Third-party API tokens for monitoring, error reporting, or Slack notifications.
+* Signing keys for package publishing, code signing, or release artifacts.
+* `PULUMI_ACCESS_TOKEN` and other IaC backend credentials.
 
-To complete the CLI Installation, visit the [official installation page](https://circleci.com/docs/local-cli/). Then, define a secret via the CLI as follows:
+Non-sensitive values that vary per project (region, log level, application name) are usually better placed in project env vars too, but they're best kept as plain text that's also safe to log.
 
-```bash
-$ circleci api create-secret MY_PROJECT_NAME MY_ENV_VAR_NAME
-```
+## What are the CircleCI secret scopes (project, context, restricted context)?
 
-### Reference secrets in CircleCI jobs
+CircleCI offers three secret scopes that determine which jobs can read which values.
 
-A CircleCI job is a collection of steps. You can leverage CircleCI secrets within your jobs to allow the pipeline to access confidential data without exposing it directly in the code. Here's a `.circleci/config.yml` file definition using a secret named `API_KEY` inside of a job:
+| Scope | Where defined | Available to | Best for |
+|---|---|---|---|
+| **Project environment variable** | Project Settings → Environment Variables | Every job in the project | Project-specific tokens |
+| **Context** | Organization Settings → Contexts | Jobs in any project that opt into the context | Shared credentials across projects |
+| **Restricted context** | Organization Settings → Contexts (with security groups) | Only jobs that match branch, tag, or security-group rules | Production credentials, signing keys |
+
+[Contexts](https://circleci.com/docs/contexts/) are the more powerful tier: secrets live at the organization level, projects opt in by listing the context in their workflow, and **restricted contexts** can be further locked down by branch, tag, or organization security group. The standard pattern: project env vars for repo-specific tokens, contexts for shared services, restricted contexts for production-only credentials.
+
+## How are CircleCI secrets stored and protected?
+
+CircleCI encrypts secret values at rest using a [HashiCorp Vault](/what-is/what-is-hashicorp-vault/) backend on its platform, and TLS protects values in transit. Once a secret is written, the value can no longer be read from the UI or API — only updated or removed.
+
+| Stage | Protection |
+|---|---|
+| Submission | TLS to the CircleCI API |
+| Storage | Encrypted at rest in CircleCI's secrets backend |
+| Delivery to executor | Injected as env vars into the job's execution environment |
+| In the job | Available as standard env vars; not readable from the UI or API after creation |
+| In logs | Values are masked from job output by default |
+| After job ends | Discarded with the ephemeral executor |
+
+The trust boundary is CircleCI plus the executor that runs your job. For higher-assurance setups, self-hosted runners shrink that boundary and OIDC federation (next section) removes the stored-secret requirement entirely for cloud credentials.
+
+## How do jobs access secrets?
+
+Inside a `.circleci/config.yml`, secrets are referenced as standard shell environment variables. Project env vars are available automatically; context-scoped secrets require the workflow to opt into the context.
 
 ```yaml
 version: 2.1
 
 jobs:
-  build:
-    docker:
-      - image: circleci/python:3.8
-    steps:
-      - checkout
-      # Your build steps here...
-  test:
-    docker:
-      - image: circleci/node:18
-    steps:
-      - checkout
-      # Your test steps here...
   deploy:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/base:stable
     steps:
       - checkout
-      # Deploy step that uses the secret
       - run:
-          name: Deploy to Production
+          name: Deploy
           command: |
-            echo "Deploying to production..."
-            # Use the API_KEY secret in your deployment script or command
-            ./deploy_script.sh $API_KEY
+            aws s3 sync ./dist s3://my-bucket
+          environment:
+            AWS_DEFAULT_REGION: us-west-2
 
 workflows:
-  version: 2
   build_and_deploy:
     jobs:
-      - build
-      - test
       - deploy:
-          # Specify the API_KEY secret for the deploy job
-          secrets:
-            - API_KEY
+          context:
+            - aws-prod
+          filters:
+            branches:
+              only: main
 ```
 
-In this example:
+Two patterns that catch teams out:
 
-1. Three jobs are defined: `build`, `test`, and `deploy`.
-2. The `deploy` job includes a deploy step that uses the `$API_KEY` secret. The secret is accessed securely without exposing its actual value in the configuration file.
-3. The `build_and_deploy` workflow is defined to execute the `build`, `test`, and `deploy` jobs in sequence.
-4. The `deploy` job is specified to use the `API_KEY` secret, ensuring that the secret is available for this specific job in the workflow.
+* **Secrets are env vars.** Don't `echo` them. CircleCI masks known values from output, but transformations (`echo $TOKEN | base64`, `set -x`) can leak values past the masker.
+* **Context membership is what unlocks org-level secrets.** A project not listed in a context can't see its env vars, even if jobs in that project reference the names.
 
-This example illustrates how CircleCI secrets can be leveraged within jobs to securely access confidential data during different stages of your CI/CD pipeline. The secret is referenced in the job configuration without exposing its value in the code, enhancing security and maintaining best practices for handling sensitive information.
+## What is OIDC and how does it compare to stored secrets?
 
-### Configure CircleCI workflows with secrets
+CircleCI issues an [OpenID Connect token](https://circleci.com/docs/openid-connect-tokens/) for every job, signed by CircleCI and verifiable by any cloud provider that accepts OIDC. The job can exchange that token for short-lived cloud credentials without ever holding a long-lived access key.
 
-A workflow is a set of rules defining a collection of jobs and their run order. You can integrate CircleCI secrets into workflows by referencing them in the configuration files. Doing so ensures your sensitive data remains secure while being accessible during the execution of CI/CD pipelines. For example, assume you have a secret named `API_KEY` defined for your CircleCI project. In your `.circleci/config.yml` file, you can reference this secret within your workflow steps:
+| Approach | Credential lifetime | Rotation | Surface area |
+|---|---|---|---|
+| **Stored secret** | Until you rotate it (often months) | Manual | Anything that can read the env var |
+| **OIDC + cloud role** | Minutes (provider-controlled) | Automatic per run | Only the specific job's identity |
+
+For AWS, Azure, GCP, [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), and [Pulumi ESC](/product/esc/), OIDC is the recommended path. The job presents the OIDC token, the provider validates the issuer and claims, and short-lived credentials come back for that run only. Stored secrets remain useful for SaaS APIs that don't accept OIDC.
+
+## What are the limits of CircleCI secrets?
+
+* **No native rotation.** CircleCI doesn't expire or refresh values for you; you have to update them out of band (or use OIDC to avoid storing them at all).
+* **No first-class versioning.** Updating a secret overwrites the previous value; the only history is in your team's records.
+* **Write-only after creation.** A stored value can be updated or removed but not read back through the UI or API. That's a feature for security but can be frustrating during debugging.
+* **Limited audit detail.** The audit log captures create/update/delete events on secrets and contexts, but not per-job reads.
+* **Context-level access is binary.** A project either opts into a context or it doesn't; there's no sub-context filtering inside a project beyond restricted-context branch/tag rules.
+* **No built-in size cap published**, but treat large credential blobs (full service-account JSON, multi-megabyte certs) as a smell and store them in an external vault instead.
+
+## What are best practices for CircleCI secrets?
+
+* **Prefer OIDC to stored secrets.** For any cloud that supports it (AWS, Azure, GCP, [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), [Pulumi ESC](/product/esc/)), federate identity instead of storing long-lived credentials.
+* **Use restricted contexts for production.** Pair production-only credentials with branch/tag filters and security-group restrictions so a feature branch can't deploy to prod.
+* **Don't echo secrets.** CircleCI masks known values, but transformations defeat the masker. Pass secrets as env vars and let the tools that need them read them directly.
+* **Scope to contexts, not project env vars, for anything shared.** A token used by three repos belongs in a context, not duplicated three times. Rotation is the difference between updating one value and updating three.
+* **Rotate stored secrets on a schedule.** Document a cadence and use the [CircleCI API](https://circleci.com/docs/api/v2/index.html) or a small script to push new values, rather than relying on console clicks.
+* **Pair secrets with policy.** [CircleCI runtime policies](https://circleci.com/docs/runtime-policies/) and config validation can block jobs that try to consume contexts they shouldn't.
+
+## How does Pulumi work with CircleCI secrets?
+
+Pulumi runs in CircleCI through the [Pulumi Orb](https://circleci.com/developer/orbs/orb/pulumi/pulumi). The orb expects a `PULUMI_ACCESS_TOKEN` (and any provider credentials) to be available as env vars; the recommended source is OIDC into [Pulumi ESC](/product/esc/), with ESC then brokering AWS, Azure, GCP, or other credentials into the same run.
 
 ```yaml
 version: 2.1
 
+orbs:
+  pulumi: pulumi/pulumi@2
+
 jobs:
-  build:
+  preview:
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/node:lts
     steps:
       - checkout
-      # Your build steps here...
+      - pulumi/login
+      - pulumi/preview:
+          stack: my-org/my-project/prod
 
 workflows:
-  version: 2
-  build_and_deploy:
+  pulumi:
     jobs:
-      - build
-      # Deploy step that uses the secret
-      - deploy:
-          name: Deploy to Production
-          command: |
-            echo "Deploying to production..."
-            # Use the API_KEY secret in your deployment script or command
-            ./deploy_script.sh $API_KEY
+      - preview:
+          context:
+            - pulumi-prod
 ```
 
-In this example:
+What you get from this pattern:
 
-- The `build` job is defined with its necessary steps.
-- The `build_and_deploy` workflow is defined, including the `build` job.
-- A subsequent job, named `deploy`, is included in the workflow. This job may represent the deployment step of your CI/CD process.
-- In the `deploy` job, you can reference the `API_KEY` secret using the `$API_KEY` syntax. The reference lets you securely pass the secret value to your deployment script or command.
+* Cloud credentials never live in CircleCI as long-lived secrets — ESC issues per-run AWS/Azure/GCP credentials based on the OIDC token CircleCI presents.
+* `PULUMI_ACCESS_TOKEN` itself can be issued from the OIDC token (via `pulumi/auth-actions`-equivalent flows), eliminating the only static secret the pipeline used to need.
+* Contexts give you the org-level scoping; restricted contexts give you the prod-only gates.
 
-Adjust the job names, workflow structure, and secret references according to your project requirements. This example demonstrates the basic concept of integrating a CircleCI secret into your workflow by referencing it in the configuration file.
+[Get started with Pulumi on CircleCI](/docs/iac/packages-and-automation/continuous-delivery/circleci/) to wire up IaC pipelines in TypeScript, Python, Go, C#, Java, or YAML.
 
-### Best practices
+## Frequently asked questions about CircleCI secrets
 
-Here are five best practices for managing CircleCI secrets:
+### Are CircleCI secrets encrypted?
 
-- **Adopt context-based management:**  Organize your secrets using [contexts](https://circleci.com/docs/contexts/) in CircleCI. Group related secrets together in a context, making managing access controls and permissions easier. Contexts ensure that only authorized personnel can access specific secrets based on their roles or responsibilities.
-- **Use fine-grained access controls:**  Set up fine-grained access controls and permissions for each context to restrict who can manage and utilize the secrets within that context. By carefully assigning permissions, you reduce the risk of unauthorized access to sensitive information, enhancing the overall security of your CI/CD process.
-- **Avoid hardcoding secrets in configuration files:**  Refrain from hardcoding secret values directly in your configuration files. Instead, reference secrets using the `$SECRET_NAME` syntax. This approach keeps sensitive information separate from the codebase, minimizing the risk of accidental exposure and making it easier to update or rotate secrets without modifying the code.
-- **Rotate secrets:** Implement a regular rotation schedule for your secrets, especially for long-lived API keys or credentials. CircleCI provides an easy way to update secrets without modifying the configuration files. Note that OIDC can eliminate the need to store long-lived secrets in CircleCI. Learn [how to use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-connect-for-your-cloud-provider) to connect to AWS, GCP, ECR, and more.
-- **Perform auditing and monitoring:** Implement auditing and monitoring mechanisms to track changes and usage of secrets within your CI/CD pipeline. CircleCI provides tools and logs that enable you to monitor when and how secrets are accessed.
+Yes. Values are stored encrypted at rest in CircleCI's secrets backend, transmitted over TLS, and injected into a job's execution environment only when the job runs. Once a secret is written, the value can no longer be read through the UI or API; only updated or removed.
 
-Check out [more security recommendations](https://circleci.com/docs/security-recommendations/) provided by CircleCI.
+### What is the difference between a CircleCI context and a project environment variable?
 
-### Challenges and considerations
+A **project environment variable** lives in one project and is available to every job in that project. A **context** lives at the organization level and is available to any project that explicitly opts into it. Contexts are the right answer for credentials shared across multiple projects; project env vars are for repo-specific values.
 
-Using CircleCI secrets comes with particular challenges and considerations that organizations should know to ensure a secure and efficient CI/CD pipeline.
+### What is a restricted context?
 
-- **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
-- **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secret management using external tools, and integrating these with CircleCI secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with CircleCI and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
+A [restricted context](https://circleci.com/docs/contexts/) layers branch, tag, or security-group rules on top of a regular context. Only jobs that match the rules can read the context's secrets. The canonical use case is production credentials that should only be readable from jobs running on the `main` branch or release tags.
 
-Addressing these challenges and considerations requires a thoughtful approach to [secrets management](/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
+### How do I rotate a CircleCI secret?
 
-## Conclusion
+Update the value through the UI (Project Settings → Environment Variables, or Organization Settings → Contexts) or the CircleCI API. Old jobs in flight finish with the previous value; new jobs pick up the new value. For automated rotation, use the API together with the upstream credential's own rotation mechanism.
 
-Securing secrets in CircleCI is crucial for reinforcing the security of your CI/CD pipelines without compromising efficiency. Properly managing sensitive data within these workflows is essential to maintain the confidentiality of critical information. CircleCI secrets streamline development processes, balancing security and operational agility.
+### Can I read a CircleCI secret value from the UI?
 
-Now that you know about CircleCI secrets, take your cloud infrastructure management to the next level with Pulumi:
+No. Once written, a secret's value is masked in the UI and not returned by the API. You can update or delete it but not retrieve it. This is intentional; for debugging, log into the upstream system to verify the value.
 
-- **Connect [Pulumi IaC to CircleCI](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
-- **Integrate Pulumi in your pipelines**: Review a comprehensive guide on how to [build cloud infrastructure from your CI pipeline with Pulumi](https://circleci.com/blog/reusable-ci-cd-components-with-circleci-orbs-and-pulumi/)
-- **Use Pulumi ESC**: Discover how to manage sensitive information in your cloud applications. Dive into Pulumi's [Secrets management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
+### How do I share a secret across multiple projects?
 
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+Use a context. Define the secret in **Organization Settings → Contexts**, then list the context in each project's workflow under `context:`. The same value flows into every project that opts in, and rotating it is a single update.
+
+### Should I use OIDC instead of storing secrets?
+
+For any cloud provider that supports it (AWS, Azure, GCP, [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), [Pulumi ESC](/product/esc/)), yes. OIDC issues short-lived credentials per job run, eliminates long-lived stored values, and dramatically reduces rotation overhead. Stored secrets remain useful for SaaS APIs that don't accept OIDC.
+
+### Are CircleCI secrets visible in job logs?
+
+CircleCI masks known secret values from job output by default, replacing matches with asterisks. The masker works for direct prints but not for transformations (`echo $TOKEN | base64`, partial outputs, files later cat'd). Treat masking as defense-in-depth, not the primary control.
+
+### Can I limit which jobs in a project can read a context?
+
+Indirectly, via restricted contexts with branch, tag, or security-group rules. There isn't a per-job ACL within a regular context; if a project opts into a context, every job in that project's workflow can declare it.
+
+### How do I audit who used a CircleCI secret?
+
+CircleCI's audit log records secret-management events (create, update, delete, context membership changes). It does not record per-job reads of a stored value. For tighter audit, use OIDC and rely on the cloud provider's audit log (CloudTrail, etc.) to see what the issued credential did.
+
+## Learn more
+
+Pulumi pairs with CircleCI through the Pulumi Orb and [Pulumi ESC](/product/esc/): cloud credentials are minted per run via OIDC, ESC brokers access, and the orb runs `pulumi up` or `pulumi preview` against your stacks. [Get started today](/docs/get-started/).
+
+Related reading:
+
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What is a GitHub Actions Secret?](/what-is/what-is-a-github-action-secret/)
+* [What is a Cloudflare Secret?](/what-is/what-is-a-cloudflare-secret/)
+* [What is HashiCorp Vault?](/what-is/what-is-hashicorp-vault/)
+* [What is AWS Secrets Manager?](/what-is/what-is-aws-secrets-manager/)
+* [What is CI/CD?](/what-is/what-is-ci-cd/)
