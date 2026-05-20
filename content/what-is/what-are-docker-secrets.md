@@ -1,187 +1,215 @@
 ---
 title: What are Docker Secrets?
-meta_desc: |
-     Learn more about what Docker Secrets are and how to use them.
-
+meta_desc: "Docker Secrets are encrypted, Swarm-only objects for delivering sensitive data to services as in-memory files under /run/secrets/. Learn limits and best practices."
 meta_image: /images/what-is/what-are-docker-secrets-meta.png
 type: what-is
 page_title: "What are Docker Secrets?"
 authors: ["torian-crane"]
 ---
 
-Docker, a leading platform in containerization technology, has revolutionized how applications are developed, shipped, and deployed. One critical aspect of this process is managing sensitive information, commonly known as "secrets." [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/) is a feature specifically designed for safely transmitting and storing confidential data within Docker environments.
+**Docker Secrets are an encrypted, Swarm-only mechanism for delivering sensitive data (passwords, API tokens, TLS keys, SSH keys) to services, mounted into containers as in-memory files under `/run/secrets/`.** Secrets are stored encrypted in the Raft log on the Swarm manager nodes, encrypted in transit between nodes, and never written to a container's writable filesystem.
 
-## What are Docker Secrets?
+The biggest constraint to understand up front: Docker Secrets only work with [Docker Swarm](https://docs.docker.com/engine/swarm/) services. Standalone `docker run` containers cannot consume them. Most teams not running Swarm reach for a different solution — application-level reads from a secrets manager, Kubernetes Secrets with [External Secrets Operator](https://external-secrets.io/), or runtime injection via [Pulumi ESC](/product/esc/) — for the same problem.
 
-Docker Secrets is a resource for securely managing sensitive data like passwords, tokens, and SSH keys within [Docker Swarm](https://docs.docker.com/engine/swarm/) environments. Unlike [Docker Configs](/what-is/what-are-docker-configs/) which only encrypts data in transit, Docker Secrets are designed to keep data safe both in transit and at rest.
+In this article, we'll cover the key questions about Docker Secrets:
 
-### Key Features
+* What is a Docker Secret used for?
+* How does Docker Secret encryption work?
+* How do containers access secrets at runtime?
+* What are the limits of Docker Secrets?
+* How do Docker Secrets compare to other options?
+* How do you create and use a Docker Secret?
+* What are Docker Secrets best practices?
+* How does Pulumi handle Docker Secrets?
+* Frequently asked questions about Docker Secrets
 
-- **Secure storage**: Docker Secrets are encrypted during transit and at rest, offering a robust level of security.
-- **Managed lifecycle**: Secrets can be created, updated, and removed without restarting containers, ensuring seamless management.
-- **Access control**: Only services granted explicit access can retrieve these secrets, enhancing security through compartmentalization.
+## What is a Docker Secret used for?
 
-## Creating secrets
+A Docker Secret is the right place for any sensitive value a Swarm service needs at runtime that you don't want baked into the image or visible in `docker inspect`. Typical uses:
 
-Secrets can be created via the Docker CLI or Docker Compose files. Once created, they are stored in a secure part of the Docker Swarm. Before creating secrets in Docker, you must first make sure you have [Docker installed](https://docs.docker.com/get-docker/). Once you have installed Docker, enable and start the Docker service.
+* Database passwords and connection strings.
+* API tokens and OAuth client secrets.
+* TLS certificates and private keys.
+* SSH private keys for pulling Git repositories or reaching managed instances.
+* External secret-manager bootstrap credentials.
 
-```bash
-sudo systemctl enable docker
-sudo systemctl start docker
-```
+For non-sensitive configuration (nginx config files, application settings, feature flags), use [Docker Configs](/what-is/what-are-docker-configs/) instead. Docker Configs are stored unencrypted at rest and aren't intended for sensitive data.
 
-You can optionally add your user to the Docker group to provide non-root access.
+## How does Docker Secret encryption work?
 
-```bash
-sudo usermod -a -G docker ${USER}
-```
+Docker Secrets are protected at every stage of their lifecycle inside a Swarm cluster.
 
-Restart your terminal to apply the changes to the group, then check that Docker has installed correctly.
+| Layer | Protection |
+|---|---|
+| At rest on managers | Encrypted in the Raft log on Swarm manager nodes |
+| In transit between nodes | Encrypted via mutual TLS over the Swarm overlay |
+| Delivery to workers | Sent only to nodes running a task that needs the secret |
+| In the container | Mounted as an in-memory `tmpfs` file; never written to disk |
+| After container stop | The `tmpfs` mount is destroyed with the container |
 
-```bash
-docker --version
-```
+A secret value is delivered to a worker only when a task that needs it is scheduled there. Nodes that don't run any task referencing the secret never receive the value.
 
-{{< notes type="info" >}}
+## How do containers access secrets at runtime?
 
-The command to start Docker depends on your operating system. The above commands show examples for how to do this on Linux. You can find the commands relevant to your own operating system in the [Docker documentation](https://docs.docker.com/engine/install/).
-
-{{< /notes >}}
-
-You will also need to initialize a swarm since Docker secrets are a feature of [Docker Swarm](https://docs.docker.com/engine/swarm/key-concepts/).
-
-```
-$ docker swarm init
-
-Swarm initialized: current node (u26cvq5cro6ro76sv47fs2nr4) is now a manager.
-
-To add a worker to this swarm, run the following command:
-
-    docker swarm join --token SWMTKN-1-5fev6zooqj2vi3n4ffhnkzjx96oiogfziizivyordmf12iv0yo-7bqlgowmz7sy2k932cjkbukpi 172.31.30.90:2377
-
-To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
-```
-
-### Create a secret via CLI
-
-You can create a secret by piping the secret data into the `docker secret create` command.
+Inside a container, a Docker Secret named `db_password` appears as a regular file at `/run/secrets/db_password`. The application reads it the same way it would read any file:
 
 ```bash
-$ echo "my_secret_data" | docker secret create my_secret -
-
-ix4v0pm352e7a4idpshbrbrt4
-```
-
-Verify the secret is created:
-
-```bash
-$ docker secret ls
-
-ID                          NAME        DRIVER    CREATED          UPDATED
-ix4v0pm352e7a4idpshbrbrt4   my_secret             14 seconds ago   14 seconds ago
-```
-
-Now you will create a [service](https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/). When doing so, you can grant it access to specific secrets. These secrets are then available to the service in a `tmpfs` mount, which is not stored on disk and gets deleted when the container stops.
-
-```bash
-$ docker service create --name myservice --secret my_secret nginx
-
-u7drojmomleop9fz8pi9aosmw
-overall progress: 1 out of 1 tasks
-1/1: running   [==================================================>]
-verify: Service converged
-```
-
-Inspect the service to ensure it is running.
-
-```bash
-$ docker service ps myservice
-ID             NAME          IMAGE          NODE                                            DESIRED STATE   CURRENT STATE            ERROR     PORTS
-w6i5cct5o9gw   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute.internal   Running         Running 52 seconds ago
-```
-
-### Create a secret via Docker Compose
-
-Before implementing Docker Secrets with Docker Compose, ensure [Docker Compose is installed](https://docs.docker.com/compose/install/) on your system.
-
-Next, create a file named `my_secret_data.txt` and add your secret data to this file. Then, create a `docker-compose.yml` file for your application. Add a secrets section in your Docker Compose file and define your secret, making sure to specify the file containing the secret data.
-
-```yaml
-version: "3.9"  # or higher
-services:
-  my_service:
-    image: "nginx:latest" # or the name of your image
-    secrets:
-      - my_secret
-secrets:
-  my_secret:
-    file: ./my_secret_data.txt
-```
-
-In this example, `my_secret` is the name of your secret, and `my_secret_data.txt` contains the secret data.
-
-Now use Docker Compose to deploy your stack. This will create the secret and attach it to your service.
-
-```bash
-docker-compose up -d
-```
-
-### Accessing secrets inside a container
-
-Now that you have created a service with a secret, you can access the value of this secret from within the container.
-
-First, login to the container using the `docker exec` command:
-
-```bash
-docker exec -it <container_id> /bin/bash
-```
-
-Replace `<container_id>` with the ID of the container created in the previous step. You can find this value by running the following command:
-
-```bash
-$ docker ps
-CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
-00a6ae3d1bd5   nginx:latest   "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes   80/tcp    myservice.1.w6i5cct5o9gwmb3ud43c5ienl
-```
-
-Taking the value of the container ID in the output, the full command will look something like this:
-
-```bash
-$ docker exec -it 00a6ae3d1bd5 /bin/bash
-root@00a6ae3d1bd5:/#
-
-```
-
-The secret is mounted into the service's containers under `/run/secrets/`. Once inside the container, you can access the secret like a regular file:
-
-```bash
-root@00a6ae3d1bd5:/# cat /run/secrets/my_secret
+$ cat /run/secrets/db_password
 my_secret_data
 ```
 
-## Best practices
+The mount is backed by `tmpfs`, so the value lives only in memory and disappears with the container. Applications generally read the file at startup (and re-read it on a SIGHUP if they support hot reloads) rather than caching the value.
 
-When using Docker Secrets, it's important to follow best practices to ensure efficient and secure management of your sensitive data:
+You can choose a different mount path, ownership, or file mode at service-create time:
 
-- **Restrict Access**: Limit access to Docker Secrets to only those services and users that absolutely need it. This minimizes the risk of unauthorized access.
-- **Regular Rotation of Secrets**: Implement a routine for regularly rotating secrets. Although Docker Secrets do not have a built-in mechanism for automatic rotation, regularly changing secrets is crucial for maintaining security.
-- **Use Secrets for Sensitive Data Only**: Store only sensitive information (like passwords, SSL certificates, SSH keys) as Docker Secrets. Avoid using it for non-sensitive configuration data, as this could unnecessarily increase complexity.
-- **Immutable Secrets**: Treat secrets as immutable. If a secret needs to be updated, create a new secret and update the service to use the new secret, instead of updating the existing one.
-- **Integrate with Existing Secret Management Tools**: If you already use secret management tools like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, consider integrating Docker Secrets with these tools for centralized management.
+```bash
+docker service create \
+  --name api \
+  --secret source=db_password,target=/secrets/db,uid=1000,gid=1000,mode=0400 \
+  myorg/api:1.2.3
+```
 
-By following these best practices, you can maximize the benefits of Docker Secrets in managing your application's sensitive data effectively and securely.
+## What are the limits of Docker Secrets?
 
-## Challenges and considerations
+Docker Secrets have well-defined boundaries that drive most of the friction teams hit.
 
-While Docker Secrets is a valuable tool for managing sensitive data in Docker Swarm, it has its limitations. One major challenge is its confinement to Docker Swarm environments, meaning it's not applicable for standalone Docker containers or other orchestrators like Kubernetes. Additionally, Docker Secrets lacks a direct mechanism for automatic secrets rotation, a crucial aspect for maintaining security over time.
+* **Swarm-only.** Not available to `docker run`, `docker-compose up` outside of Swarm mode, Kubernetes, ECS, or any other orchestrator.
+* **500 KB maximum size** per secret. Sufficient for credentials and most TLS material; too small for large key bundles or full configuration files.
+* **Immutable once created.** A secret's value can't be edited in place. Rotation means creating a new secret with a different name and updating the service to reference it.
+* **No built-in rotation.** Docker doesn't expire or refresh secrets on a schedule. Rotation is your responsibility (or an integration with an external secrets manager).
+* **No native versioning or audit history.** Once a secret is removed, its previous value is gone. Track secret names and update events in your IaC repo if you need a paper trail.
+* **Service-scoped delivery.** A secret is only readable inside containers of services that explicitly reference it; there's no way to grant ad-hoc access to a running container.
 
-## Conclusion
+## How do Docker Secrets compare to other options?
 
-Docker Secrets is a vital feature for anyone using Docker Swarm, offering a secure and straightforward way to handle sensitive data. By understanding and implementing Docker Secrets correctly, teams can significantly enhance the security posture of their containerized applications.
+The right tool depends on the orchestrator and the level of integration you need.
 
-Now that you're equipped with the knowledge of Docker Secrets, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
+| Mechanism | Encrypted at rest | Encrypted in transit | Rotation | Works outside Swarm |
+|---|---|---|---|---|
+| **Docker Secrets** | Yes | Yes | Manual (rename + redeploy) | No |
+| **Docker Configs** | No | Yes | Manual | No |
+| **Environment variables** | No | No | Manual | Yes |
+| **[Kubernetes Secrets](/what-is/what-are-kubernetes-secrets/)** | Off by default (base64); optional KMS | Yes (TLS to API) | Via external operator | Yes |
+| **External vault** ([Vault](/what-is/what-is-hashicorp-vault/), [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/)) | Yes | Yes | Built-in | Yes |
+| **[Pulumi ESC](/product/esc/)** | Yes | Yes | Dynamic credentials, lease-based | Yes |
 
-- **Advanced secrets management**: Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-- **Container management solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/templates/container-service/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments​.
+For new projects past Swarm, the typical pattern is to keep the source of truth in an external store and inject values at deploy or runtime; Docker Secrets remain the simplest option for teams already running Swarm.
 
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+## How do you create and use a Docker Secret?
+
+The full lifecycle is short. From an initialized Swarm:
+
+```bash
+$ echo "my_secret_data" | docker secret create db_password -
+ix4v0pm352e7a4idpshbrbrt4
+
+$ docker secret ls
+ID                          NAME           DRIVER    CREATED          UPDATED
+ix4v0pm352e7a4idpshbrbrt4   db_password              14 seconds ago   14 seconds ago
+
+$ docker service create --name api --secret db_password nginx:alpine
+
+$ docker exec -it $(docker ps -qf name=api) cat /run/secrets/db_password
+my_secret_data
+```
+
+With Docker Compose (v3.1+) running in Swarm mode:
+
+```yaml
+services:
+  api:
+    image: myorg/api:1.2.3
+    secrets:
+      - db_password
+
+secrets:
+  db_password:
+    external: true
+```
+
+Setting `external: true` tells Compose the secret was created out of band (with `docker secret create`); otherwise Compose creates it from a file at deploy time. External-source secrets are the safer default: the secret value never lives next to your `docker-compose.yml`.
+
+## What are Docker Secrets best practices?
+
+* **Use Docker Secrets only for sensitive data.** Move non-sensitive configuration to [Docker Configs](/what-is/what-are-docker-configs/) so a secret's blast radius stays small.
+* **Rotate by replacement.** Create a new secret (`db_password_v2`), update the service to reference it, remove the old secret once no service uses it. Don't try to mutate values in place.
+* **Mount as files, not env vars.** Docker Secrets are always file-mounted; resist any temptation to copy them into environment variables, which leak into `docker inspect`, child processes, and crash logs.
+* **Scope secrets to specific services.** Each service should declare only the secrets it actually needs. Don't grant a service every secret in the swarm.
+* **Pull from an external store when possible.** Even with Docker Secrets, prefer pulling the source of truth from a centralized store (HashiCorp Vault, AWS Secrets Manager, [Pulumi ESC](/product/esc/)) so rotation and audit live in one place.
+* **Keep an audit trail in code.** Manage `docker service create`/`docker secret create` commands through IaC, not console history. The Git log becomes the audit log.
+
+## How does Pulumi handle Docker Secrets?
+
+For Swarm clusters managed through Pulumi, the [Docker provider](/registry/packages/docker/) treats secrets and services as first-class resources, and [Pulumi ESC](/product/esc/) is the natural source of truth for the underlying values.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as docker from "@pulumi/docker";
+
+const config = new pulumi.Config();
+const dbPassword = config.requireSecret("dbPassword");
+
+const dbSecret = new docker.Secret("db-password", {
+    name: "db_password",
+    data: dbPassword.apply(v => Buffer.from(v).toString("base64")),
+});
+```
+
+What you get from this pattern:
+
+* The plaintext value lives in [Pulumi ESC](/product/esc/) (or a stack-level encrypted config), never in Git or the Pulumi state file in plaintext.
+* Every secret-create or service-update flows through a pull request and Pulumi's preview/apply cycle, so rotations are reviewable changes.
+* For teams not on Swarm, the same Pulumi program can broker secrets directly from ESC into Kubernetes, ECS, or application runtimes.
+
+[Get started with Pulumi](/docs/get-started/) to manage container infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
+
+## Frequently asked questions about Docker Secrets
+
+### Are Docker Secrets encrypted at rest?
+
+Yes. Secrets are encrypted in the Raft log on Swarm manager nodes. The encryption key is held by the cluster; Docker can be configured to use an external key with `docker swarm unlock`. Worker nodes only ever hold a secret in memory while a task that needs it is running.
+
+### Can I use Docker Secrets without Docker Swarm?
+
+No. Docker Secrets are a Swarm-only feature. Standalone `docker run` or non-Swarm `docker-compose` deployments can't use them. Common alternatives for non-Swarm environments: read from a secrets manager at startup, mount secrets via a sidecar, or use orchestrator-native primitives like [Kubernetes Secrets](/what-is/what-are-kubernetes-secrets/).
+
+### What is the maximum size of a Docker Secret?
+
+500 KB. Enough for nearly all credentials, API tokens, and individual TLS certs and keys. For larger payloads (full certificate bundles, signed key sets), store the payload in object storage and put only the reference and signing key in a Docker Secret.
+
+### Where is a Docker Secret mounted inside a container?
+
+By default, at `/run/secrets/<secret_name>`. You can override the path, file mode, and ownership at service-create time with the `target`, `mode`, `uid`, and `gid` options on `--secret`.
+
+### How do I rotate a Docker Secret?
+
+Create a new secret with a different name, update the referencing service(s) to use the new secret, then remove the old one once nothing references it. Docker Secrets are immutable in place, so rotation is always create-new + redeploy + delete-old.
+
+### Are Docker Secrets visible in `docker inspect`?
+
+No. Secret values are excluded from `docker inspect` output. References to the secret (name, ID, target path) are shown, but the value itself is only readable from inside a container that mounts it.
+
+### Can multiple services share a single Docker Secret?
+
+Yes. Any number of services in the same Swarm can reference the same secret. Each service declares the secret on its own `docker service create` (or its Compose definition), and Swarm delivers the value to each container that needs it.
+
+### Should I integrate Docker Secrets with an external vault?
+
+Often, yes. Even with Docker Secrets in Swarm, teams typically keep the source of truth in [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/), or [Pulumi ESC](/product/esc/) and project values into Swarm at deploy time. That keeps rotation, audit, and access control consistent across Swarm, Kubernetes, and standalone services.
+
+### Are Docker Secrets a good fit for compliance?
+
+For teams already running Swarm, yes — encryption at rest, encrypted transit, scoped delivery, and in-memory mounts cover the main control objectives auditors care about. Most compliance friction comes from the rotation and audit gaps; pairing Docker Secrets with an external vault or [Pulumi ESC](/product/esc/) closes those.
+
+## Learn more
+
+Pulumi treats Docker Secrets like any other resource: declared in code, reviewed in pull requests, populated from [Pulumi ESC](/product/esc/), and rolled forward through CI. [Get started today](/docs/get-started/).
+
+Related reading:
+
+* [What are Docker Configs?](/what-is/what-are-docker-configs/)
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What are Kubernetes Secrets?](/what-is/what-are-kubernetes-secrets/)
+* [What is HashiCorp Vault?](/what-is/what-is-hashicorp-vault/)
+* [What is AWS Secrets Manager?](/what-is/what-is-aws-secrets-manager/)
+* [What is Azure Key Vault?](/what-is/what-is-azure-key-vault/)
