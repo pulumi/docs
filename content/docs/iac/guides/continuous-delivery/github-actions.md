@@ -92,7 +92,7 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
           environment: acme/website/ci
       - run: npm install
         working-directory: infra
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -131,7 +131,7 @@ jobs:
           node-version-file: infra/package.json
       - run: npm install
         working-directory: infra
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -163,7 +163,7 @@ jobs:
       # Push to main: deploy to the staging environment.
       - name: Deploy to staging
         if: github.ref == 'refs/heads/main'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
@@ -174,7 +174,7 @@ jobs:
       # Release tag: promote to production.
       - name: Deploy to production
         if: startsWith(github.ref, 'refs/tags/release-')
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/production
@@ -201,7 +201,7 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt
         working-directory: infra
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -233,7 +233,7 @@ jobs:
       # Push to main: deploy to the staging environment.
       - name: Deploy to staging
         if: github.ref == 'refs/heads/main'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
@@ -244,7 +244,7 @@ jobs:
       # Release tag: promote to production.
       - name: Deploy to production
         if: startsWith(github.ref, 'refs/tags/release-')
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/production
@@ -271,7 +271,7 @@ jobs:
           go-version: 'stable'
       - run: go mod download
         working-directory: infra
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -303,7 +303,7 @@ jobs:
       # Push to main: deploy to the staging environment.
       - name: Deploy to staging
         if: github.ref == 'refs/heads/main'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
@@ -314,7 +314,7 @@ jobs:
       # Release tag: promote to production.
       - name: Deploy to production
         if: startsWith(github.ref, 'refs/tags/release-')
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/production
@@ -339,7 +339,7 @@ jobs:
       - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '10.0.x'
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -369,7 +369,7 @@ jobs:
       # Push to main: deploy to the staging environment.
       - name: Deploy to staging
         if: github.ref == 'refs/heads/main'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
@@ -380,7 +380,7 @@ jobs:
       # Release tag: promote to production.
       - name: Deploy to production
         if: startsWith(github.ref, 'refs/tags/release-')
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/production
@@ -402,11 +402,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
         with:
           command: preview
           stack-name: acme/website/staging
@@ -429,7 +429,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
@@ -437,7 +437,7 @@ jobs:
       # Push to main: deploy to the staging environment.
       - name: Deploy to staging
         if: github.ref == 'refs/heads/main'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
@@ -448,7 +448,7 @@ jobs:
       # Release tag: promote to production.
       - name: Deploy to production
         if: startsWith(github.ref, 'refs/tags/release-')
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/production
@@ -491,7 +491,7 @@ The [Pulumi GitHub App](/docs/integrations/version-control/github-app/) lets Pul
 Without the GitHub App, the `pulumi/actions` action can post the raw CLI output itself. Set `comment-on-pr: true` and pass a `github-token`:
 
 ```yaml
-- uses: pulumi/actions@v6
+- uses: pulumi/actions@v7
   with:
     command: preview
     stack-name: acme/website/staging
@@ -515,7 +515,7 @@ Give the `pulumi/actions` step an `id`, and each stack output becomes a step out
 ```yaml
 - name: Deploy
   id: pulumi
-  uses: pulumi/actions@v6
+  uses: pulumi/actions@v7
   with:
     command: up
     stack-name: acme/website/staging
@@ -537,7 +537,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: pulumi
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
         with:
           command: up
           stack-name: acme/website/staging
