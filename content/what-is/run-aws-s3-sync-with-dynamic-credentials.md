@@ -1,82 +1,85 @@
 ---
 title: Run 'aws s3 sync' with Dynamic Credentials
-meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws s3 sync' more securely and efficiently.
-
+meta_desc: Run aws s3 sync with short-lived, OIDC-issued credentials from Pulumi ESC. No static AWS keys, scoped by IAM role, fully auditable in CloudTrail.
 meta_image: /images/what-is/run-aws-s3-sync-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws s3 sync' with Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws s3 sync`](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html) command is part of the AWS Command Line Interface (CLI) and synchronizes files and directories between your local file system and Amazon S3 buckets. This command simplifies uploading files to and downloading files from S3.
+**This guide shows how to run `aws s3 sync` using short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `AKIA...` keys in `~/.aws/credentials`.** Pulumi ESC exchanges a Pulumi-issued OIDC token for an AWS STS session, scoped to a specific IAM role, expiring automatically. `aws s3 sync` performs incremental, one-way synchronization between a local directory and an S3 prefix (or between two S3 prefixes), using file size and modification time to decide what to transfer. The IAM permissions you grant the role determine which directions of sync are allowed.
 
-The `aws s3 sync` command can be a powerful tool, especially when dealing with large datasets or multiple files. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials. Typically, two kinds of credentials are used: temporary credentials, which offer heightened security but require manual updates, and long-term credentials, which are more convenient but pose more significant security risks.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes more straightforward and secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws s3 sync`, execute successfully. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+* Why dynamic credentials beat static IAM keys
+* How `aws s3 sync` decides what to transfer
+* The IAM permissions sync needs (upload, download, bucket-to-bucket)
+* Prerequisites for this guide
+* Step-by-step ESC setup with the `aws-login` provider
+* Running `aws s3 sync` in both directions
+* Common errors and FAQ
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static IAM keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service, in particular, helps to resolve concerns around how to:
+Static IAM access keys persist in `~/.aws/credentials` until you delete them, leak easily into git or shell history, and carry every permission attached to the user. Dynamic credentials reverse all of that:
 
-- Share credentials with teammates consistently and securely.
-- Minimize the risks associated with locally configured, long-lived, and highly privileged credentials.
-- Ensure teams can quickly and safely run commands like `aws s3 sync` without requiring deep security expertise.
+* **No long-lived secrets on disk.** Pulumi ESC issues a fresh `AccessKeyId`, `SecretAccessKey`, and `SessionToken` on every `esc run`. Nothing persists locally.
+* **Scoped by IAM role.** The role's trust and permission policies define exactly which buckets the session can read or write.
+* **Time-bound.** Sessions expire after the ESC environment's `duration` (1 hour by default). A leaked token is useless almost immediately.
+* **Auditable.** CloudTrail records each S3 operation under the assumed-role ARN with the `sessionName` you configured.
+* **Centrally rotated.** Update the IAM role or session duration in one ESC environment and every developer and CI job that consumes it picks up the change.
 
-## What is the esc run command?
+## How `aws s3 sync` decides what to transfer
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+`aws s3 sync` compares source and destination by **file size** and **last-modified time** — not by content hash. An object is copied when:
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+* It exists in the source but not the destination, **or**
+* The source object's size differs from the destination's, **or**
+* The source object's last-modified time is **newer** than the destination's.
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 sync` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+Use `--exact-timestamps` to also re-upload files whose timestamps differ even by a second (useful when downloading; the AWS CLI's default treats older-source-than-destination as no-op). `--delete` removes objects from the destination that no longer exist in the source — be careful with this flag in production.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+## What `aws s3 sync` does (and the IAM you need)
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. Removing the local storage of credentials reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+| Direction | Example | Min IAM permissions |
+|---|---|---|
+| Local → S3 | `aws s3 sync ./dir s3://bucket/prefix/` | `s3:PutObject`, `s3:ListBucket` |
+| S3 → Local | `aws s3 sync s3://bucket/prefix/ ./dir` | `s3:GetObject`, `s3:ListBucket` |
+| S3 → S3 | `aws s3 sync s3://src/ s3://dst/` | `s3:GetObject` on source, `s3:PutObject` on destination, `s3:ListBucket` on both |
+| With `--delete` | `... --delete` | Above + `s3:DeleteObject` on the destination |
 
-- **Streamlined Collaboration** - Because credentials are centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to leverage. Everyone can access the same secure environment, reducing the complexities of coordinating credentials and configurations across teams.
+`s3:ListBucket` is required for sync to enumerate objects on both sides. Scope it by bucket ARN, and add a `Condition` on `s3:prefix` for least privilege.
 
-## Getting started with esc run
+## Prerequisites
 
-### Step 1: Install and login to Pulumi ESC
+* An AWS account where you can create or update IAM roles
+* The [Pulumi CLI](/docs/install/) and [Pulumi ESC CLI](/docs/install/esc/) installed
+* A [Pulumi Cloud account](https://app.pulumi.com/signup) and access to an organization
+* The [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed locally
+* An IAM role with OIDC trust configured for Pulumi (see [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)), with the S3 permissions from the table above attached
+* An existing S3 bucket
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
+## Step-by-step setup
+
+### 1. Log in to Pulumi ESC
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+esc login
 ```
 
-### Step 2: Create the OIDC configuration
+Follow the browser prompt or paste an access token from <https://app.pulumi.com/account/tokens>.
 
-Pulumi ESC allows you to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+### 2. Configure OIDC between Pulumi and AWS
 
-This service can dynamically generate credentials on your behalf whenever you interact with your AWS environments. To do so, follow the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Ensure the IAM role you create has sufficient permissions to perform the AWS S3 actions.
+Follow the [Pulumi OIDC + AWS guide](/docs/esc/environments/configuring-oidc/aws/) to create an IAM role whose trust policy accepts a JWT from `api.pulumi.com/oidc`. Attach a policy granting the S3 sync permissions you need. Note the role ARN.
 
-### Step 3: Create a new Pulumi ESC environment
+### 3. Create a new Pulumi ESC environment
 
-Once you have OIDC configured between Pulumi and AWS, the next step is to create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin).
+In [Pulumi Cloud](https://app.pulumi.com/), open your organization, click **Environments**, then **Create environment**. Name it something like `aws-prod-env`.
 
-- Navigate to your [Pulumi Cloud](https://app.pulumi.com/signin) home page.
-- Select the correct organization in the left-hand navigation menu.
-- Click the **Environments** link.
-- Click the **Create environment** button.
-- In the pop-up window, provide a name for your environment. e.g., `aws-prod-env`
-- Click the **Create environment** button.
+### 4. Add the `aws-login` provider to the environment
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
-
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view.
-
-- Clear out the default placeholder content in the editor on the left-hand side.
-- Replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the configure OIDC step:
+Paste the following YAML, replacing `<your-oidc-iam-role-arn>`:
 
 ```yaml
 values:
@@ -93,47 +96,117 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run aws s3 sync
+The `fn::open::aws-login` function exchanges the Pulumi-issued OIDC token for AWS STS credentials. The `environmentVariables` block exposes them to any subprocess `esc run` starts.
 
-With your environment set up, validate your configuration.
-
-- Check your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+### 5. Confirm there are no static credentials on disk
 
 ```bash
-$ aws configure list
-      Name                    Value             Type    Location
-      ----                    -----             ----    --------
-   profile                <not set>             None    None
-access_key                <not set>             None    None
-secret_key                <not set>             None    None
-    region                <not set>             None    None
+aws configure list
 ```
 
-You can optionally create a dummy local directory and file to test the sync functionality.
+You should see `<not set>` for `access_key` and `secret_key`. This guarantees the next step uses ESC-issued credentials.
+
+## Run `aws s3 sync`
+
+### Upload a local directory to S3
 
 ```bash
-$ mkdir my-local-dir
-$ touch my-local-dir/helloWorld.txt
+mkdir my-local-dir
+echo "hello pulumi" > my-local-dir/helloWorld.txt
+
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws s3 sync ./my-local-dir/ s3://<your-bucket>/ --region <aws-region>
 ```
 
-To sync to s3, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, `<your-s3-bucket>` and `<aws-region>` with the names of your own Pulumi organization, ESC environment, your existing S3 Bucket, and AWS Region, respectively.
+Expected output:
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws s3 sync ./my-local-dir/ s3://<your-s3-bucket>/ --region <aws-region>
+upload: my-local-dir/helloWorld.txt to s3://your-bucket/helloWorld.txt
 ```
 
-Then validate that your output is similar to the following:
+Re-run the same command and you'll see no output — sync skipped the file because size and mtime match.
+
+### Download an S3 prefix to local
 
 ```bash
-upload: my-local-dir/helloWorld.txt to s3://pulumi-esc-demo/helloWorld.txt
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws s3 sync s3://<your-bucket>/ ./my-local-dir/
 ```
 
-## Conclusion
+### Sync between two S3 buckets
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 sync`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+```bash
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws s3 sync s3://source-bucket/prefix/ s3://dest-bucket/prefix/
+```
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+S3-to-S3 sync executes server-side `CopyObject` calls; bytes do not transit your laptop.
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+### Mirror with `--delete`
+
+To make the destination an exact mirror of the source (deleting anything in the destination that doesn't exist in the source):
+
+```bash
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws s3 sync ./dist s3://<your-bucket>/ --delete
+```
+
+The IAM role needs `s3:DeleteObject` on the destination for this to succeed.
+
+## Verify in CloudTrail
+
+In CloudTrail the events appear as `PutObject` (uploads), `GetObject` (downloads), `CopyObject` (S3-to-S3), or `DeleteObject` (`--delete`), each with `userIdentity.type=AssumedRole` and an `arn` containing `assumed-role/<your-role>/pulumi-environments-session`.
+
+## Common errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| `AccessDenied` on `ListObjects` | IAM role missing `s3:ListBucket` | Add the action, scoped to the bucket ARN |
+| `AccessDenied` on `PutObject` / `GetObject` | Role missing the matching object action | Add `s3:PutObject` or `s3:GetObject` on the prefix or bucket |
+| `AccessDenied` on `DeleteObject` (`--delete`) | Role lacks `s3:DeleteObject` | Add the action — and double-check the intent of `--delete` |
+| `KMS.AccessDenied` | Bucket uses SSE-KMS and role can't decrypt or wrap | Grant `kms:Decrypt` (download) or `kms:GenerateDataKey` (upload) on the bucket's KMS key |
+| `InvalidClientTokenId` | Stale local `AWS_*` env vars overriding ESC | Run `unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN` and retry |
+| `ExpiredToken` mid-sync | Session expired during a long sync | Raise `duration` in the ESC environment, or chunk the work |
+| Files re-uploading unnecessarily | mtime drift between local fs and S3 | Use `--size-only`, or `--exact-timestamps` for downloads |
+
+## Frequently asked questions
+
+### Does `aws s3 sync` check file content?
+
+No. It compares **size** and **last-modified time** only. Two different files with the same size and mtime will not be detected as different. For content-aware sync use `--size-only` plus an ETag check, or a tool like `rclone` that supports hashes.
+
+### Why does `aws s3 sync` keep re-uploading the same files?
+
+The local filesystem's mtime is newer than the S3 object's. This happens after `git clone` (which sets mtimes to checkout time), after build steps, or on file systems with lower mtime resolution than S3. Use `--size-only` to skip the timestamp check.
+
+### Is `--delete` dangerous?
+
+Yes — treat it like `rm -rf`. It deletes any object in the destination that is not in the source. Always run a dry run first with `--dryrun`, and never combine `--delete` with a typo'd source path.
+
+### How does sync handle large files?
+
+Files above the multipart threshold (8 MB by default) upload in parallel parts. If an upload fails partway, the next sync run will re-upload. Set a lifecycle rule on the bucket to abort incomplete multipart uploads after a few days to avoid charges for orphaned parts.
+
+### How long are ESC-issued credentials valid?
+
+By default 1 hour, set by the `duration` field in the ESC environment YAML. The maximum is bounded by the IAM role's `MaxSessionDuration` attribute (1 hour for OIDC by default). For multi-hour syncs raise both.
+
+### Can I sync to a bucket in a different region or account?
+
+Yes for both. Use `--source-region` and `--region` to disambiguate. For cross-account, the source bucket policy must allow `s3:GetObject` and `s3:ListBucket` to the role's ARN, and the destination policy must allow `s3:PutObject` (and optionally `s3:PutObjectAcl` for destination-account ownership).
+
+### How do I confirm the credentials really came from ESC?
+
+Run `aws sts get-caller-identity` inside the same `esc run`. The returned `Arn` should be `assumed-role/<your-role>/pulumi-environments-session`. See [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/).
+
+## Learn more
+
+* [Pulumi ESC product page](/product/esc/)
+* [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [Run `aws s3 cp` with dynamic credentials](/what-is/run-aws-s3-cp-with-dynamic-credentials/)
+* [Run `aws s3 ls` with dynamic credentials](/what-is/run-aws-s3-ls-with-dynamic-credentials/)
+* [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/)
+* [Resolve `Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
+* [Resolve `ExpiredToken`](/what-is/resolve-list-buckets-expired-token/)
+
+[Join our community on Slack](https://slack.pulumi.com/) to discuss further, and let us know what you build.
