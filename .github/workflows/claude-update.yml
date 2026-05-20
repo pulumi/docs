@@ -246,7 +246,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
