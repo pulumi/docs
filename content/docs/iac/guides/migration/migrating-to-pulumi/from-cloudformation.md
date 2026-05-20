@@ -37,7 +37,7 @@ If your team has already provisioned infrastructure using AWS CloudFormation, an
 1. **Prerequisites**:
    * Install the [Pulumi GitHub app](/docs/iac/guides/continuous-delivery/github-app/) with access to your repository that contains your CloudFormation template files
    * Configure AWS credentials in [Pulumi ESC](/docs/esc/)
-   * Have Neo access (available in [Pulumi Cloud](/product/pulumi-cloud/))
+   * Have [Pulumi Neo](/product/neo/) access
 
 1. **Start the migration**:
 
