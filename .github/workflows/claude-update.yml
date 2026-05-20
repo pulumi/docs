@@ -229,9 +229,10 @@ jobs:
           esac
           printf '%s' "$BODY" > .claude-mention-body.txt
 
-      # Run Vale on PR-changed files in content/docs and content/blog so
-      # the refreshed review reflects style nits in the current commit.
-      # Skipped on issue mentions and when no docs/blog files were
+      # Run Vale on PR-changed prose files (content/docs, content/blog,
+      # content/what-is, content/tutorials) so the
+      # refreshed review reflects style nits in the current commit.
+      # Skipped on issue mentions and when no in-scope prose files were
       # touched. The `||` fallbacks ensure both files exist even when
       # vale is missing or the filter crashes (mirrors claude-triage.yml).
       - name: Run Vale on PR-changed prose
@@ -245,11 +246,11 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
-            echo "vale: no docs/blog files changed; skipping"
+            echo "vale: no in-scope prose files changed; skipping"
             exit 0
           fi
           vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
