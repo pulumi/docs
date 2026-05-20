@@ -520,9 +520,12 @@ and
 [`pulumi stack webhook delivery redeliver`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_redeliver/).
 
 {{% notes "info" %}}
-The `pulumi stack webhook delivery` commands are experimental, available in recent
-releases of the Pulumi CLI, and currently apply to stack webhooks only. Redeliver
-organization and environment webhooks from the Pulumi Cloud UI.
+The `pulumi stack webhook delivery` commands are experimental and available in recent
+releases of the Pulumi CLI. Listing recent deliveries is also available for organization
+webhooks (`pulumi org webhook delivery list`) and environment webhooks
+(`pulumi env webhook delivery list`, or `esc env webhook delivery list`), but
+redelivery is currently a stack-only CLI affordance — redeliver organization and
+environment webhooks from the Pulumi Cloud UI.
 {{% /notes %}}
 
 ## Additional Resources
