@@ -21,8 +21,16 @@ jobs:
     # their own labeling pipelines (label-dependabot.yml) and don't
     # carry secrets. `ready_for_review` always has `draft: false`, so
     # the draft guard is a no-op for that event.
+    #
+    # Also skip fork PRs: `pull_request` from a fork runs without secrets
+    # (ANTHROPIC_API_KEY is empty) and with a read-only GITHUB_TOKEN, and
+    # the downstream write-access check would reject the external author
+    # anyway. Letting the workflow start just to no-op every step burns
+    # Actions minutes and leaves a misleading green workflow_run that
+    # claude-code-review.yml then has to filter out.
     if: >-
       !github.event.pull_request.draft
+      && github.event.pull_request.head.repo.full_name == github.repository
       && github.event.pull_request.user.login != 'pulumi-bot'
       && github.event.pull_request.user.login != 'dependabot[bot]'
 
