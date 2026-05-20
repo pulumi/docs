@@ -459,6 +459,72 @@ func computeSignature(payload []byte, secret string) string {
 
 {{< /chooser >}}
 
+## Webhook deliveries
+
+Pulumi Cloud records the recent deliveries for each webhook so you can confirm that events
+were received and troubleshoot any that failed. Each delivery records the event kind, when
+it was sent, and the HTTP response status returned by the payload URL.
+
+### Viewing recent deliveries
+
+1. Navigate to the webhook you want to inspect:
+   1. For an organization webhook, navigate to **Settings** > **Integrations** > **Webhooks**.
+   1. For a stack webhook, navigate to the stack, then **Settings** > **Webhooks**.
+1. Select the webhook to open its page.
+1. Review the list of recent deliveries. Each entry shows the event kind, when it was
+   sent, and the HTTP response status returned by your endpoint.
+1. Expand a delivery to inspect the full request payload, the request headers, and the
+   response. Failed deliveries are the ones whose endpoint returned a non-`2xx` HTTP
+   status (or did not respond at all).
+
+The `Pulumi-Webhook-ID` header on each request — described in [Headers](#headers) —
+uniquely identifies the delivery, which is useful when correlating a delivery with logs
+on your receiving service.
+
+### Redelivering a failed webhook
+
+If a delivery failed because your endpoint was unavailable, returned an error, or
+processed the event incorrectly, you can redeliver the same event from the Pulumi Cloud
+UI.
+
+1. Open the webhook and locate the delivery you want to resend, as described in
+   [Viewing recent deliveries](#viewing-recent-deliveries).
+1. Expand the delivery to view its request and response.
+1. Select the redelivery control next to the **Response**.
+
+Redelivery resends the original payload unchanged. Webhooks do not guarantee event
+order, so a redelivered event may arrive after later events.
+
+### Redelivering from the CLI
+
+Stack webhook deliveries can also be inspected and redelivered with the Pulumi CLI. Both
+commands identify a webhook by its ID, which appears in the `ID` column of
+`pulumi stack webhook list`.
+
+List the recent deliveries for a webhook. Each row's `ID` column is the event ID, and the
+`STATUS` column is the HTTP status returned by your endpoint:
+
+```bash
+pulumi stack webhook delivery list <webhook-id>
+```
+
+Then redeliver a specific event by passing the webhook ID and the event ID:
+
+```bash
+pulumi stack webhook delivery redeliver <webhook-id> <event-id>
+```
+
+See the CLI reference for
+[`pulumi stack webhook delivery list`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_list/)
+and
+[`pulumi stack webhook delivery redeliver`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_redeliver/).
+
+{{% notes "info" %}}
+The `pulumi stack webhook delivery` commands are experimental, available in recent
+releases of the Pulumi CLI, and currently apply to stack webhooks only. Redeliver
+organization and environment webhooks from the Pulumi Cloud UI.
+{{% /notes %}}
+
 ## Additional Resources
 
 * [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
