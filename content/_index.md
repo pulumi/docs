@@ -12,7 +12,7 @@ sections:
     badge_text: "AI for infrastructure"
     badge_link: /product/neo/
     title_primary: "Next-level"
-    title_secondary: "infrastructure as code \n for humans and agents."
+    title_secondary: "infrastructure as code \n for humans and agents."
     description: |
       Ship cloud infrastructure at the speed of AI with languages and tools that stay out of your way.
     anchor: hero

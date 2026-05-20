@@ -39,7 +39,7 @@
 {{ $cards := .cards }}
 {{ $cardsCols := .cards_cols | default 3 }}
 {{ $align := .align | default "center" }}
-{{ $alignClasses := "text-center max-w-4xl mx-auto" }}
+{{ $alignClasses := "sm:text-center max-w-4xl mx-auto" }}
 {{ if eq $align "left" }}{{ $alignClasses = "text-left" }}{{ end }}
 {{ $ctaAlignClass := "text-center" }}
 {{ if eq $align "left" }}{{ $ctaAlignClass = "text-left" }}{{ end }}

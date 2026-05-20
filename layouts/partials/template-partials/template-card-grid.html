@@ -29,7 +29,7 @@
 
 <section class="template-section-card-grid flex flex-col gap-8"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     {{ if or $title $description }}
-    <div class="{{ if eq $align "center" }}text-center max-w-4xl mx-auto{{ else }}text-left{{ end }}">
+    <div class="{{ if eq $align "center" }}sm:text-center max-w-4xl mx-auto{{ else }}text-left{{ end }}">
         {{ if $title }}
         <h2 class="section-header-title m-0 mb-4">{{ $title }}</h2>
         {{ end }}
