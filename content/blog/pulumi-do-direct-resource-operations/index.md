@@ -48,15 +48,9 @@ Earlier this week, Joe Duffy described [the agentic infrastructure era](/blog/th
 
 Infrastructure-as-code is the right model for production systems. State tracking, drift detection, dependency graphs, policy enforcement, and repeatable deployments all matter when you're managing real workloads. But not every interaction with the cloud is a production deployment.
 
-As Andrej Karpathy [put it](https://karpathy.bearblog.dev/vibe-coding-menugen/):
+When an LLM needs a Postgres database on AWS, the straightest-line path with IaC is eight steps: create a directory, initialize a project, pick a language, install packages, configure credentials, write infrastructure code, preview, deploy. That is a lot of surface area for errors. The LLM defaults to `aws rds create-db-instance` because it is one command and already in the training data. `pulumi do` collapses those eight steps into one.
 
-> "I didn't even spend all that much work in the code editor itself. I spent most of it in the browser, moving between tabs and settings and configuring and gluing a monster."
-
-Account creation, credential plumbing, configuration files, service wiring. LLMs can write the code, but the infrastructure around it is where they stall. We're tackling this across the board: `pulumi do` collapses resource operations to a single command, [agent accounts](/docs/administration/organizations-teams/agent-accounts/) remove the Pulumi Cloud signup step entirely, and [Pulumi ESC](/docs/esc/) unifies credentials across every provider. And we're just getting started. More is coming to close the remaining gaps.
-
-When an LLM needs a Postgres database on AWS, the straightest-line path with IaC is eight steps: create a project, pick a language, install packages, write infrastructure code, preview, deploy. That is a lot of surface area for errors. The LLM defaults to `aws rds create-db-instance` because it is one command and already in the training data.
-
-`pulumi do` collapses those eight steps into one. No project directory, no `Pulumi.yaml`, no state backend. And unlike cloud-specific CLIs, the syntax is the same across all 150+ providers in the Pulumi ecosystem. An agent (or a human) that knows how to call `pulumi do aws s3 Bucket create` also knows how to call `pulumi do azure storage StorageAccount create` or `pulumi do gcp storage Bucket create`.
+But as Joe described in [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), resource creation is only part of the problem. The real blocker for AI agents is everything around the code: creating cloud accounts, plumbing credentials, wiring configuration across services. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) tackle the first piece by letting agents provision a Pulumi Cloud account on the fly, no signup form, no browser. [Pulumi ESC](/docs/esc/) tackles the second by unifying credentials across every provider. Together with `pulumi do`, an agent goes from zero to deployed infrastructure without leaving the terminal. And we're just getting started. More is coming to close the remaining gaps.
 
 ## One command, any provider
 
@@ -190,7 +184,7 @@ Three design choices make `pulumi do` work well for AI agents, and they make it 
 
 **Predictable output contract.** JSON on stdout, progress on stderr, consistent exit codes. An agent can parse the result programmatically without scraping human-formatted tables.
 
-**150+ providers under one syntax.** Many cloud and SaaS providers don't have a full CLI at all. Datadog's CLI is CI-only. Cloudflare's covers a subset of its API. `pulumi do` generates commands from the provider schema, so if a Pulumi provider exists for it, the CLI works. An agent doesn't need to learn (or even know about) each provider's native tooling.
+**150+ providers under one syntax.** Many cloud and SaaS providers don't have a full CLI at all. Datadog's CLI focuses on CI/CD and serverless instrumentation rather than general resource management. Cloudflare's covers a subset of its API. `pulumi do` generates commands from the provider schema, so if a Pulumi provider exists for it, the CLI works. An agent doesn't need to learn (or even know about) each provider's native tooling.
 
 ## What's next
 
