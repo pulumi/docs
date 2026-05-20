@@ -1,203 +1,243 @@
 ---
 title: What is Pulumi?
-meta_desc: |
-    Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
+meta_desc: "Pulumi is an open-source infrastructure as code platform that lets you manage cloud resources using TypeScript, Python, Go, C#, Java, or YAML."
 meta_image: /images/what-is/what-is-pulumi-meta.png
 type: what-is
 page_title: "What is Pulumi?"
 authors: ["asaf-ashirov"]
 ---
 
-The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning domain-specific languages. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
+**Pulumi is an open-source infrastructure as code (IaC) platform that lets engineering teams define, deploy, and manage cloud resources on any cloud using general-purpose programming languages (TypeScript, JavaScript, Python, Go, C#, Java) or YAML.** It combines a deployment engine, a multi-language SDK, a registry of more than 200 providers, and a managed control plane (Pulumi Cloud) for state, policy, secrets, and team collaboration.
 
-Pulumi is a cloud engineering platform that treats infrastructure as software, allowing teams to define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, Go, C#, Java, and YAML. Rather than forcing teams to learn proprietary configuration languages or rely on limited templating systems, Pulumi brings the full power of modern software development practices to infrastructure management.
+Pulumi replaces clicking through cloud consoles and one-off scripts with code that you check into Git, review in pull requests, and ship through your existing CI/CD pipeline. Unlike tools built around a custom configuration language, Pulumi lets you use the languages, package managers, IDEs, and testing frameworks your team already knows, while still running on a deterministic, declarative deployment engine.
 
-## The evolution of infrastructure management
+In this article, we'll cover the key questions about Pulumi:
 
-To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
+* Why does Pulumi matter?
+* How does Pulumi work?
+* What are Pulumi's core components?
+* How is Pulumi different from Terraform and CloudFormation?
+* What languages and clouds does Pulumi support?
+* What are the main Pulumi products?
+* Who uses Pulumi?
+* How do I get started with Pulumi?
+* Frequently asked questions about Pulumi
 
-The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. However, these tools introduced their own challenges through domain-specific languages that required additional learning curves and offered limited expressiveness compared to general-purpose programming languages.
+## Why does Pulumi matter?
 
-Pulumi represents the next evolution in this space by embracing what the company calls "infrastructure as software." This approach enables teams to leverage the full software engineering ecosystem—including testing frameworks, package managers, IDEs, and development workflows—when managing their cloud infrastructure.
+Most cloud teams have outgrown the tooling they started with. Console clicks and shell scripts can't keep up with hundreds of resources changing daily, and configuration-language IaC tools force teams to learn a parallel ecosystem alongside the languages they already use. Pulumi exists to close that gap.
 
-## Pulumi in the AI coding era
+### Real languages for real infrastructure
 
-The emergence of AI-powered code generation tools is fundamentally transforming how software is developed. More code is being written faster than ever before, with AI assistants generating complex applications and infrastructure configurations at unprecedented speeds. However, this shift brings both opportunities and challenges that make platforms like Pulumi more essential, not less.
+When infrastructure is written in TypeScript, Python, Go, C#, or Java, every feature of the language and its ecosystem comes with it: loops and conditionals, functions, classes, package managers, IDE autocompletion, unit tests, linters, and the wider open-source library catalog. Teams that already write software stop maintaining a second mental model just to manage their cloud.
 
-While AI can accelerate code creation, it doesn't eliminate the need for governance, security, and operational best practices. In fact, as teams generate more code with potentially less deep understanding of every component, the importance of having robust infrastructure management practices becomes even more critical. Code still needs to run securely, cost-effectively, and in compliance with organizational policies regardless of how it was created.
+### A unified workflow across clouds and SaaS
 
-Pulumi serves as the essential building block for this AI-driven future—functioning as "Git for your cloud infrastructure." Just as version control systems became indispensable as software development scaled, infrastructure as code platforms have become crucial as AI accelerates both application and infrastructure development. The platform provides the governance layer that ensures AI-generated infrastructure follows organizational standards, security requirements, and cost controls.
+A typical modern application doesn't live in one cloud anymore. It runs on AWS or Azure or Google Cloud, talks to managed databases like Snowflake or MongoDB Atlas, uses Cloudflare or Fastly for edge, sends telemetry to Datadog, and pulls identity from Auth0 or Okta. Pulumi manages all of these through one workflow and one state model, instead of forcing a different tool for each.
 
-The combination of AI coding tools with Pulumi's platform capabilities, particularly through Internal Developer Platforms (IDPs), enables organizations to marry the speed and creativity of AI-assisted development with the reliability and governance required for production cloud environments. This approach prevents AI from becoming the new "ClickOps"—where rapid changes bypass proper controls and oversight.
+### Built for governance from day one
 
-## How Pulumi works
+Pulumi was designed for the platform-engineering and security teams who have to keep ahead of a fast-moving cloud footprint. [Policy as code](/docs/insights/policy/), [reusable components](/docs/iac/concepts/components/), encrypted secrets via [Pulumi ESC](/product/esc/), and detailed audit trails are first-class capabilities rather than add-ons.
 
-At its core, Pulumi follows a declarative model where you describe your desired infrastructure state in code, and the platform handles the complexities of provisioning, updating, and managing cloud resources to achieve that state. This process involves several key components working together seamlessly.
+## How does Pulumi work?
 
-The Pulumi SDK provides language-specific libraries that offer strongly-typed bindings for cloud resources across 150+ providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
+Pulumi follows a declarative model. You write code that describes the desired state of your infrastructure. The Pulumi engine reads that code, compares the result to the current state, and computes the minimal set of cloud API calls needed to reconcile reality with the declaration.
 
-When you run a [Pulumi program](/docs/iac/concepts/projects/), the deployment engine analyzes your code, computes the necessary changes to reach your desired state, and executes those changes in the optimal order while respecting resource dependencies. The engine maintains a detailed record of your infrastructure state, enabling features like drift detection, rollback capabilities, and collaborative workflows.
+```mermaid
+flowchart LR
+    Code["Pulumi program<br/>(TypeScript / Python / Go / C# / Java / YAML)"] --> Engine["Pulumi engine<br/>(plan + reconcile)"]
+    Engine --> State["State<br/>(Pulumi Cloud or self-managed)"]
+    Engine --> Providers["Providers<br/>(AWS, Azure, GCP, Kubernetes, 200+ more)"]
+    Providers --> Cloud["Cloud + SaaS APIs"]
+```
 
-The [Pulumi CLI](/docs/iac/cli/) serves as the primary interface for managing deployments, providing commands for previewing changes, executing deployments, and managing the infrastructure lifecycle. For teams requiring additional collaboration and governance features, Pulumi Cloud offers a managed service that provides centralized state management, team collaboration tools, policy enforcement, and detailed audit trails.
+The basic loop:
 
-## Key concepts and architecture
+1. **Write a Pulumi program** in your language of choice. Each resource is an object: an `aws.s3.Bucket`, a `kubernetes.core.v1.Service`, an `azure_native.web.WebApp`.
+1. **Run `pulumi preview`** to see exactly what will change. The engine prints a diff of resources to create, update, replace, or delete.
+1. **Run `pulumi up`** to apply the changes. The engine drives the cloud APIs in dependency order, handles partial failures, and records the result in state.
+1. **Iterate.** Edit the program, send a pull request, let CI run preview and policy checks, merge, deploy.
 
-Understanding Pulumi's architecture requires familiarity with several foundational concepts that distinguish it from traditional infrastructure tools.
+State (the record of what exists and how it's configured) is stored by default in [Pulumi Cloud](/product/pulumi-cloud/), with encryption, history, and team access controls included. Teams that need a different backend can self-host or use S3, Azure Blob, or Google Cloud Storage instead.
 
-**[Projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/)** form the organizational backbone of Pulumi's approach. A project represents a directory containing your infrastructure code and metadata, while stacks provide isolated instances of your project for different environments like development, staging, and production. This separation enables teams to manage multiple environments from a single codebase while maintaining appropriate isolation and configuration differences.
+## What are Pulumi's core components?
 
-**[Resources](/docs/iac/concepts/resources/)** represent the fundamental building blocks of your infrastructure, from individual cloud services like AWS S3 buckets to complex, multi-resource constructs like entire application architectures. Pulumi's resource model supports both primitive resources that map directly to cloud provider APIs and component resources that encapsulate multiple resources into reusable abstractions.
+Pulumi is more than a CLI. The platform is organized into a handful of components that fit together.
 
-**Configuration and secrets management** is handled through an advanced system that provides stack-specific configuration values while ensuring sensitive information remains encrypted. Pulumi ESC (Environments, Secrets, and Configuration) extends this capability by providing centralized secrets management across environments and applications, integrating with existing secret stores and identity providers.
+| Component | What it does |
+|---|---|
+| **[Pulumi CLI](/docs/iac/cli/)** | Drives previews, deployments, stack management, and state operations from a developer machine or CI runner. |
+| **Language SDKs** | TypeScript, JavaScript, Python, Go, C#, Java, and YAML libraries that expose every supported resource as a strongly-typed object. |
+| **[Pulumi Registry](/registry/)** | The catalog of 200+ providers (AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Datadog, Snowflake, GitHub, and more), plus reusable components published by Pulumi and the community. |
+| **Pulumi engine** | The declarative reconciler. Computes plans, drives cloud APIs, handles dependencies, and records state. |
+| **[Pulumi Cloud](/product/pulumi-cloud/)** | Managed state backend, team collaboration, RBAC, audit logs, deployment runs, and the integration surface for the rest of the products. |
+| **[Pulumi IaC](/product/pulumi-iac/)** | The core infrastructure-as-code product: write a program, run `pulumi up`, manage cloud resources. |
+| **[Pulumi ESC](/product/esc/)** | Environments, Secrets, and Configuration. Centralized, hierarchical secrets and config that any application, CI job, or Pulumi program can pull from with audit trails. |
+| **[Pulumi Insights](/product/pulumi-insights/)** | Search, analytics, and AI over every resource Pulumi manages, across stacks and clouds. |
+| **[Pulumi Policies](/docs/insights/policy/)** | Policy as code. Block insecure or non-compliant changes in CI before they deploy. |
+| **[Pulumi Deployments](/docs/pulumi-cloud/deployments/)** | Managed CI/CD for Pulumi programs: run `pulumi up` on Pulumi-hosted runners triggered by Git, schedules, or REST API. |
+| **[Automation API](/docs/iac/packages-and-automation/automation-api/)** | A programmable interface to the Pulumi engine so you can embed IaC directly inside applications, internal portals, or higher-level platforms. |
+| **[Pulumi Neo](/product/neo/)** | A purpose-built AI infrastructure agent that provisions, debugs, and remediates inside the same Pulumi setup, governed by your existing policies. |
 
-The **state management** system maintains a comprehensive record of your infrastructure's current state, enabling Pulumi to compute the minimal set of changes needed for any deployment. Unlike some tools that store state in plain text, Pulumi encrypts sensitive information by default and provides robust state management capabilities through both local and cloud-based backends.
+Most teams adopt the CLI and one of the language SDKs first, then add Pulumi Cloud for state and collaboration, then layer on ESC, Policies, and Deployments as their footprint grows.
 
-## The Pulumi Registry: A comprehensive ecosystem
+## How is Pulumi different from Terraform and CloudFormation?
 
-The [Pulumi Registry](/registry/) represents one of Pulumi's most significant advantages over traditional infrastructure tools. This comprehensive ecosystem provides access to over 150 cloud and SaaS providers through a unified, multi-language interface that goes far beyond what any single cloud provider offers.
+Pulumi, Terraform, and AWS CloudFormation are all declarative IaC tools, but they make different choices about language, cloud coverage, and the surrounding platform. A side-by-side:
 
-### Native cloud providers
+| Capability | Pulumi | Terraform / OpenTofu | AWS CloudFormation |
+|---|---|---|---|
+| Languages | TypeScript, JavaScript, Python, Go, C#, Java, YAML | HCL (Terraform's DSL) | YAML or JSON |
+| Cloud coverage | 200+ providers, multi-cloud and SaaS | Large provider ecosystem, multi-cloud | AWS only |
+| Testing | Native to each language (Jest, Pytest, Go test, xUnit, JUnit) | Limited; mostly via Terratest in Go | Limited |
+| Reusable abstractions | Classes, functions, packages — full language features and [components](/docs/iac/concepts/components/) | HCL modules | Nested stacks |
+| State backend | Pulumi Cloud (default), S3, Azure Blob, GCS, self-hosted, local | Terraform Cloud, S3, etc. | Managed by AWS |
+| Secrets | Encrypted in state; [Pulumi ESC](/product/esc/) for centralized secrets and config | Plaintext in state by default (unless explicitly configured) | Plaintext in templates and stack parameters |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, JS/TS, or OPA, included | Sentinel (HCP paid tier) or OPA | AWS-specific (Service Control Policies, IAM, Config rules) |
+| Licensing | Apache 2.0 (open source) | BUSL 1.1 (source-available, Terraform); MPL (OpenTofu) | Closed, AWS-managed service |
 
-Pulumi maintains native, first-party providers for major cloud platforms that offer same-day support for new services and features. The AWS provider covers over 900 resources, while Azure Native provides access to the full Azure API surface area, and Google Cloud offers comprehensive coverage of GCP services. These native providers are generated directly from cloud provider APIs, ensuring immediate access to new features without waiting for community contributions or manual updates.
+For deeper, capability-by-capability comparisons see [Pulumi vs. Terraform](/docs/iac/concepts/vs/terraform/), [Pulumi vs. CloudFormation](/docs/iac/concepts/vs/cloudformation/), and the full [comparisons index](/docs/iac/concepts/vs/).
 
-### Beyond traditional clouds
+## What languages and clouds does Pulumi support?
 
-The registry extends far beyond traditional cloud providers to include specialized services that modern applications depend on. Teams can manage Datadog monitoring, Auth0 identity, GitHub repositories, Cloudflare edge services, and dozens of other SaaS platforms using the same patterns and languages they use for their core infrastructure.
+Pulumi is unusual in giving you a real choice of language *and* cloud.
 
-### Community and official packages
+**Supported languages:**
 
-The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, C#, and Java bindings.
+* TypeScript and JavaScript (Node.js)
+* Python
+* Go
+* C# and other .NET languages
+* Java
+* YAML (for simple, declarative scenarios or generated code)
 
-### AWSx components
+**Supported clouds and platforms (selected):**
 
-Pulumi AWSx components represent opinionated, well-architected patterns for common cloud scenarios. These components encapsulate cloud provider best practices into higher-level abstractions, enabling teams to deploy production-ready architectures with minimal code. For example, AWSx provides secure, scalable patterns for containers, serverless applications, and data processing pipelines.
+* AWS, Azure, and Google Cloud (with first-party native providers that map the full provider API)
+* Kubernetes (any conformant cluster, including EKS, AKS, GKE, OpenShift, and self-hosted)
+* Oracle Cloud, IBM Cloud, Alibaba Cloud, DigitalOcean, Linode, Vultr, Civo
+* Private cloud: VMware vSphere, Nutanix, OpenStack, Proxmox
+* Edge and SaaS: Cloudflare, Fastly, Datadog, New Relic, Splunk, Snowflake, MongoDB Atlas, Confluent Cloud, Auth0, Okta, GitHub, GitLab, PagerDuty, Stripe, and many more
 
-## The power of real programming languages
+A full list lives in the [Pulumi Registry](/registry/). Because every provider is exposed through the same SDK shape, a team that already uses Pulumi for AWS can pick up Cloudflare or Datadog without learning a new tool.
 
-One of Pulumi's most significant differentiators is its support for general-purpose programming languages rather than domain-specific languages. This design choice has profound implications for how teams approach infrastructure management.
+## What are the main Pulumi products?
 
-Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can leverage the full ecosystem of language features, including package managers, testing frameworks, and development tools. This approach eliminates the need to learn proprietary configuration languages and enables teams to create more sophisticated, maintainable infrastructure code.
+Pulumi's surface area is built around a small set of products that fit together. The platform is anchored on three:
 
-The ability to use standard programming constructs like loops, conditionals, and functions enables dynamic infrastructure definitions that would be difficult or impossible with templating-based approaches. For example, you might programmatically create resources based on environment variables, implement complex business logic within your infrastructure code, or generate resources based on external data sources.
+* **[Pulumi IaC](/product/pulumi-iac/)** — the core infrastructure as code product. Write infrastructure in your language, run `pulumi up`, manage any cloud.
+* **[Pulumi ESC](/product/esc/)** — Environments, Secrets, and Configuration. Pull configuration and dynamic, short-lived secrets at runtime from a single, audited source. Usable with or without Pulumi IaC.
+* **[Pulumi Insights](/product/pulumi-insights/)** — search and AI-driven analytics across every resource you manage, regardless of cloud.
 
-Furthermore, Pulumi's language support extends beyond basic resource definitions to include comprehensive [testing capabilities](/docs/iac/guides/testing/). Teams can write unit tests for their infrastructure code, validate resource configurations before deployment, and implement integration tests to ensure their infrastructure behaves correctly in different scenarios.
+Built on top of those, several capabilities address specific workflows:
 
-## Advanced platform capabilities
+* **[Pulumi Cloud](/product/pulumi-cloud/)** — managed state, team collaboration, RBAC, audit logs, and the control plane the other products plug into.
+* **[Pulumi Policies](/docs/insights/policy/)** — policy as code that runs in CI to block non-compliant changes before they ship.
+* **[Pulumi Deployments](/docs/pulumi-cloud/deployments/)** — managed runners that execute `pulumi up` on Pulumi-hosted infrastructure, triggered by Git events, schedules, or the REST API.
+* **[Automation API](/docs/iac/packages-and-automation/automation-api/)** — embed the Pulumi engine inside applications, internal developer platforms, or self-service portals.
+* **[Pulumi Neo](/product/neo/)** — an AI agent that operates inside the same Pulumi setup, governed by the same policies, to provision, debug, and remediate infrastructure.
 
-Pulumi goes beyond basic infrastructure provisioning to provide a comprehensive platform for modern cloud engineering.
+Pulumi IaC is open source under Apache 2.0. Pulumi Cloud and the products built on it have a free tier and paid Team, Enterprise, and Business Critical plans documented on the [pricing page](/pricing/).
 
-### Automation API
+## Who uses Pulumi?
 
-The Automation API enables teams to embed infrastructure management directly into their applications, creating custom deployment tools, self-service portals, and dynamic infrastructure provisioning systems. This programmatic approach enables organizations to build advanced infrastructure automation that integrates seamlessly with their development workflows, particularly valuable when dealing with AI-generated code that requires automated deployment pipelines.
+Pulumi is used by thousands of teams from early-stage startups to global enterprises. A few public examples:
 
-### Policy as Code with Pulumi Policies
+* **Snowflake** uses Pulumi to manage cloud infrastructure across multiple environments and accelerated deployments significantly after migration.
+* **BMW** manages infrastructure for thousands of developers on Pulumi, using shared components and policy as code to enforce consistency across a global engineering organization.
+* **Mercedes-Benz, Atlassian, Panasonic, NextEra Energy, and CrowdStrike** all run Pulumi in production for parts of their cloud footprint.
 
-Pulumi Policies provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments—whether created by humans or AI—meet organizational standards.
+The full list of public stories is on the [case studies](/case-studies/) page.
 
-### Pulumi ESC for secrets and configuration
+## How do I get started with Pulumi?
 
-Pulumi ESC addresses one of the most critical challenges in modern cloud operations: secrets and configuration management. This service provides centralized, auditable secrets management that can pull from multiple secret stores, generate dynamic short-lived credentials via OIDC, and compose configurations across environments. ESC can be used with or without Pulumi IaC, making it valuable for any cloud application.
+You can have a working Pulumi program deploying real cloud resources in a few minutes.
 
-### AI-powered development assistance
+1. **Install the Pulumi CLI.**
 
-Pulumi integrates artificial intelligence to accelerate infrastructure development while maintaining quality and governance standards. Pulumi AI can generate infrastructure code from natural language descriptions, translate between different infrastructure tools, and provide intelligent suggestions based on best practices. This AI integration helps teams achieve dramatic productivity improvements while ensuring that generated code follows organizational patterns and policies.
+   ```bash
+   curl -fsSL https://get.pulumi.com | sh
+   ```
 
-## Multi-cloud and provider ecosystem
+1. **Log in to Pulumi Cloud (or pick a different backend).**
 
-Pulumi's architecture supports an extensive ecosystem of cloud providers, enabling teams to adopt multi-cloud strategies or migrate between providers without rewriting their infrastructure code. The platform maintains native providers for major cloud platforms like AWS, Microsoft Azure, and Google Cloud Platform, ensuring same-day support for new cloud services and features.
+   ```bash
+   pulumi login
+   ```
 
-This multi-cloud capability extends beyond traditional cloud providers to include specialized services like Cloudflare, Datadog, Auth0, and GitHub, as well as private cloud technologies like VMware vSphere and OpenStack. The consistent API across all providers means teams can apply the same patterns and practices regardless of their underlying infrastructure choices.
+1. **Create a new project from a template.**
 
-The provider ecosystem also includes community-maintained providers and the ability to create custom providers for internal services or specialized requirements. This extensibility ensures that Pulumi can adapt to virtually any infrastructure environment or organizational need.
+   ```bash
+   pulumi new aws-typescript
+   ```
 
-## Enterprise-grade security and governance
+   Pick the cloud (AWS, Azure, GCP, Kubernetes, etc.) and language combination that matches your team.
 
-Pulumi provides comprehensive security and governance capabilities that meet the needs of the largest enterprises while remaining accessible to smaller teams.
+1. **Preview the deployment.**
 
-### Security by default
+   ```bash
+   pulumi preview
+   ```
 
-Unlike tools that store secrets in plain text, Pulumi encrypts all sensitive information by default, both in transit and at rest. The platform maintains SOC 2 Type II compliance and provides comprehensive audit trails for all infrastructure changes. Integration with existing security tools and identity providers ensures that Pulumi fits seamlessly into enterprise security practices.
+1. **Deploy.**
 
-### Team collaboration and governance
+   ```bash
+   pulumi up
+   ```
 
-Pulumi Cloud provides sophisticated team management capabilities, including role-based access controls, stack-level permissions, and policy enforcement across the entire organization. Teams can implement GitOps workflows, automated testing, and deployment pipelines while maintaining the security and governance controls required for enterprise environments.
+The full walkthrough — including importing existing resources, wiring up CI/CD, and adding policy as code — lives in the [Get started guide](/docs/iac/get-started/). Teams migrating from other tools can use the converters described in the [adopting Pulumi](/docs/iac/adopting-pulumi/) guide for Terraform HCL, CloudFormation, ARM, and Kubernetes YAML.
 
-### Self-hosted deployment options
+## Frequently asked questions about Pulumi
 
-For organizations with strict data sovereignty requirements, Pulumi offers self-hosted deployment options that provide the same enterprise features while maintaining complete control over data and infrastructure. These options support air-gapped environments and can be deployed in private clouds or on-premises infrastructure.
+### Is Pulumi open source?
 
-## Real-world applications and success stories
+Yes. Pulumi IaC (the engine, CLI, SDKs, and providers) is licensed under Apache 2.0 and developed in the open on [GitHub](https://github.com/pulumi/pulumi). Pulumi Cloud is a separate managed service with a free individual tier and paid plans for teams and enterprises.
 
-Organizations across various industries have adopted Pulumi to address diverse infrastructure challenges, demonstrating the platform's versatility and effectiveness in real-world scenarios.
+### Is Pulumi free?
 
-Snowflake, a leading cloud data platform, used Pulumi to reduce its deployment time from 1.5 weeks to a single day while improving reliability and maintainability. The ability to use familiar programming languages enabled their development teams to contribute directly to infrastructure management, reducing silos between development and operations.
+The Pulumi IaC engine, CLI, SDKs, and providers are free and open source. Pulumi Cloud has a free Individual tier with generous limits for personal and small-project use, and paid plans (Team, Enterprise, Business Critical) for larger teams. See the [pricing page](/pricing/) for current details.
 
-BMW manages infrastructure for over 11,000 developers using Pulumi, leveraging the platform's collaboration features and policy enforcement capabilities to maintain consistency and security across their global development organization. The company particularly benefits from Pulumi's ability to create reusable components that encapsulate their infrastructure best practices.
+### Which language should I use with Pulumi?
 
-Starburst achieved a 112x improvement in deployment speed, reducing deployment times from two weeks to just three hours. This dramatic improvement was enabled by Pulumi's testing capabilities and the ability to create sophisticated deployment pipelines using familiar programming languages.
+The one your team is most fluent in. TypeScript and Python are the most popular Pulumi languages and have the largest tutorial and example library, but Go, C#, and Java are fully supported. YAML is available for simple cases where a real language is overkill. The choice doesn't lock you in: providers and components are generated for every supported language.
 
-These success stories demonstrate how Pulumi enables organizations to achieve substantial improvements in deployment speed, developer productivity, and operational reliability while maintaining the security and governance capabilities required for enterprise environments.
+### Can I use Pulumi with my existing Terraform code?
 
-## Competitive advantages and positioning
+Yes. Pulumi can [convert Terraform HCL](/docs/iac/using-pulumi/adopting-pulumi/migrating-from-terraform/) into a Pulumi program in any supported language, and can also consume existing Terraform modules directly through the [terraform-module](/registry/packages/terraform-module/) provider. Many teams adopt Pulumi gradually, leaving older Terraform stacks in place while writing new infrastructure in Pulumi.
 
-When compared to established infrastructure as code tools, Pulumi offers several distinct advantages that address common pain points in infrastructure management.
+### How does Pulumi handle state?
 
-Traditional tools like Terraform require teams to learn domain-specific languages with limited expressiveness compared to general-purpose programming languages. Pulumi's approach enables teams to leverage existing language skills while providing access to the full ecosystem of development tools and practices.
+Pulumi stores a state file that describes the resources it manages. By default, state is held in Pulumi Cloud with encryption, versioning, and team access controls. Self-managed backends — S3, Azure Blob, Google Cloud Storage, or a local file — are also supported. Secrets in state are always encrypted at rest with a key you control.
 
-The testing capabilities represent another significant advantage. While some tools offer limited testing options, Pulumi's integration with language-native testing frameworks enables comprehensive testing strategies including unit tests, integration tests, and property-based testing approaches.
+### Does Pulumi work with Kubernetes?
 
-Security represents a critical differentiator, particularly regarding secrets management. While some tools store sensitive information in plain text within state files, Pulumi encrypts secrets by default and provides comprehensive secrets management capabilities that integrate with existing organizational security practices.
+Yes. Pulumi has a first-class Kubernetes provider that supports raw manifests, Helm charts, kustomize directories, and CRDs. You can also use Pulumi to provision the cluster itself (EKS, AKS, GKE, or self-hosted) and then deploy workloads onto it from the same program. See the [Kubernetes guide](/docs/iac/clouds/kubernetes/) for examples.
 
-The provider ecosystem and same-day support for new cloud services ensure that teams can take advantage of the latest cloud capabilities without waiting for provider updates or community contributions. This agility is particularly important in rapidly evolving cloud environments where new services and features are constantly being introduced.
+### How does Pulumi integrate with CI/CD?
 
-Additionally, Pulumi's open source foundation under the Apache 2.0 license provides greater flexibility compared to tools with more restrictive licensing models, ensuring that organizations can adopt and modify the platform according to their needs without vendor lock-in concerns.
+Pulumi integrates with every major CI/CD system (GitHub Actions, GitLab CI, CircleCI, Jenkins, Azure DevOps, Buildkite, Argo, and more) through CLI invocations gated by automated tests and policy checks. Teams that don't want to manage their own runners can use [Pulumi Deployments](/docs/pulumi-cloud/deployments/), which runs `pulumi up` on managed infrastructure triggered by Git events, schedules, or REST calls. See the [CI/CD guide](/docs/iac/packages-and-automation/continuous-delivery/) for details.
 
-## The future of cloud engineering and platform engineering
+### Is Pulumi SOC 2 compliant?
 
-Pulumi's approach reflects broader trends in cloud engineering that emphasize developer productivity, collaboration, and the application of software engineering practices to infrastructure management. As cloud environments become increasingly complex and organizations adopt multi-cloud strategies, the need for sophisticated infrastructure management tools continues to grow.
+Yes. Pulumi Cloud maintains SOC 2 Type II compliance, and the [Trust Center](https://trust.pulumi.com/) documents the company's broader security and compliance posture, including encryption, access control, and incident response.
 
-The platform's emphasis on treating infrastructure as software aligns with the DevOps movement and the broader trend toward breaking down silos between development and operations teams. By enabling developers to contribute directly to infrastructure management using familiar tools and languages, Pulumi helps organizations achieve the collaborative, cross-functional approach that defines modern cloud engineering.
+### How does Pulumi handle secrets?
 
-Platform engineering represents one of the most significant trends in modern cloud operations, and Pulumi provides purpose-built capabilities to make all aspects of platform engineering vastly simpler. The platform enables organizations to build internal developer platforms that provide self-service capabilities while maintaining security, scalability, repeatability, and consistency.
+Secrets in Pulumi state are encrypted by default with a key you control (Pulumi Cloud-managed by default, or your own KMS/HSM if you prefer). For centralized, cross-environment secret and config management, [Pulumi ESC](/product/esc/) lets applications, CI jobs, and Pulumi programs pull dynamic, short-lived secrets from a single audited source instead of embedding long-lived credentials in code or pipeline variables.
 
-In the emerging AI-driven development landscape, Pulumi's governance and policy capabilities become even more crucial. As AI tools generate infrastructure code at unprecedented speeds, organizations require robust platforms that ensure generated code adheres to security policies, cost controls, and operational best practices while enabling the rapid innovation that AI makes possible.
+### Can I self-host Pulumi?
 
-Looking forward, Pulumi continues to evolve with features like AI-powered assistance for infrastructure development, enhanced policy enforcement capabilities, and deeper integration with cloud-native development workflows. These developments position Pulumi as a platform that not only addresses current infrastructure challenges but also anticipates the needs of future cloud engineering practices in an AI-augmented world.
-
-## Getting started with Pulumi
-
-For organizations interested in exploring Pulumi, the platform offers multiple entry points depending on your current infrastructure management approach and technical requirements.
-
-Teams with existing infrastructure can leverage Pulumi's import capabilities to bring existing resources under management without disrupting current operations. The platform provides converters for Terraform configurations, AWS CloudFormation templates, Azure Resource Manager templates, and Kubernetes YAML, enabling gradual adoption where teams can start with new projects while progressively migrating existing infrastructure.
-
-The extensive library of example programs and templates in the Pulumi Registry provides starting points for common infrastructure patterns, enabling teams to quickly understand best practices and adapt them to their specific requirements. These examples span multiple cloud providers and use cases, from simple web applications to complex multi-tier architectures and AI/ML workloads.
-
-For teams with specific requirements or complex existing infrastructure, Pulumi offers professional services and consulting to help organizations design and implement infrastructure strategies that align with their business objectives and technical constraints. This includes migration planning, architecture design, and training programs to ensure successful adoption.
-
-The platform provides comprehensive documentation, tutorials, and learning resources that help teams get started quickly while building expertise over time. The community-driven support model, combined with enterprise support options, ensures that organizations can get the assistance they need at every stage of their cloud journey.
-
-## Conclusion
-
-Pulumi represents a fundamental shift in how organizations approach cloud infrastructure management, moving beyond the limitations of domain-specific languages and templating systems to embrace the full power of modern software development practices. By treating infrastructure as software, Pulumi enables teams to leverage existing skills, tools, and workflows while providing the advanced capabilities required for modern cloud environments.
-
-The platform's combination of open source foundation, comprehensive registry ecosystem, and enterprise capabilities ensures that it can serve organizations of all sizes, from startups building their first cloud applications to large enterprises managing complex multi-cloud environments. The proven results achieved by customers demonstrate the real-world impact of adopting a software-centric approach to infrastructure management.
-
-As cloud infrastructure continues to evolve in complexity and importance, particularly in an era where AI is accelerating code generation, Pulumi's approach to infrastructure as software positions it as a crucial tool for organizations seeking to maximize the value of their cloud investments while maintaining the agility and reliability required for modern business operations. The platform's emphasis on governance, security, and policy enforcement ensures that rapid development—whether human or AI-driven—doesn't compromise operational excellence.
-
-Whether you're a developer looking to apply your programming skills to infrastructure problems, an operations team seeking better collaboration with development teams, or an organization pursuing a comprehensive cloud engineering strategy in the AI era, Pulumi offers a path forward that embraces the best practices of modern software development while addressing the unique challenges of cloud infrastructure management at scale.
+Yes. The Pulumi engine, CLI, SDKs, and providers run anywhere. State can be kept in a self-managed backend (S3, Azure Blob, GCS, or local), and a self-hosted version of [Pulumi Cloud](/product/pulumi-cloud/) is available for customers with strict data-residency or air-gap requirements.
 
 ## Learn more
 
-Ready to experience infrastructure as software? Explore Pulumi's comprehensive platform and discover how it can transform your approach to cloud infrastructure management.
+Pulumi is built for engineering teams that want to manage cloud infrastructure with the same languages, tools, and engineering discipline they already use for application code. [Get started today](/docs/iac/get-started/), explore the [Pulumi Registry](/registry/), or [request a demo](/contact?form=demo) of the platform.
 
-- [Get started with Pulumi](/docs/get-started/)
-- [Explore the registry](/registry/)
-- [Read customer success stories](/case-studies/)
-- [Compare infrastructure as code tools](/blog/infrastructure-as-code-tools/)
+Related reading:
 
-### Related topics
-
-- [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code/)
-- [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software/)
-- [What is DevOps?](/what-is/what-is-devops/)
-- [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
+* [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
+* [What is DevOps?](/what-is/what-is-devops/)
+* [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
+* [What is CI/CD?](/what-is/what-is-ci-cd/)
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What is Cloud Security?](/what-is/what-is-cloud-security/)
