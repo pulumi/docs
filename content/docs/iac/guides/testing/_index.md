@@ -10,9 +10,6 @@ menu:
         parent: iac-using-pulumi
         weight: 50
         identifier: iac-guides-testing
-    usingpulumi:
-        identifier: testing
-        weight: 8
 aliases:
 - /docs/iac/guides/testing/
 - /docs/guides/testing/

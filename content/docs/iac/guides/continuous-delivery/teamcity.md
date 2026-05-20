@@ -8,7 +8,7 @@ menu:
     iac:
         name: TeamCity
         parent: iac-using-pulumi-cicd
-        weight: 15
+        weight: 150
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/teamcity/
 - /docs/guides/continuous-delivery/teamcity/

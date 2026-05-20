@@ -8,10 +8,7 @@ menu:
     iac:
         name: Jenkins
         parent: iac-using-pulumi-cicd
-        weight: 11
-    usingpulumi:
-        parent: cont_delivery
-        weight: 1
+        weight: 120
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/jenkins/
 - /docs/console/continuous-delivery/jenkins/

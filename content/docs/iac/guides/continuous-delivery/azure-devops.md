@@ -8,7 +8,7 @@ menu:
   iac:
     name: Azure DevOps
     parent: iac-using-pulumi-cicd
-    weight: 1
+    weight: 30
 aliases:
     - /docs/integrations/azure-devops/
     - /docs/iac/integrations/azure-devops/
