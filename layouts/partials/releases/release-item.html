@@ -9,8 +9,7 @@
     - overline:                Small uppercase eyebrow text (e.g., "May 2026 release").
     - heading:                 Card heading.
     - description:             Body copy (markdown).
-    - feature_image_split:     Image path.
-    - feature_image:           Fallback if feature_image_split is unset.
+    - feature_image:           Image path.
     - feature_image_alt:       Alt text for the feature image.
     - link:                    Optional URL — turns the card into an anchor with
                                a violet hover treatment.
@@ -19,7 +18,7 @@
 {{ $overline := .overline }}
 {{ $heading := .heading }}
 {{ $description := .description }}
-{{ $featureImage := .feature_image_split | default .feature_image }}
+{{ $featureImage := .feature_image }}
 {{ $featureImageAlt := .feature_image_alt | default $heading }}
 {{ $link := .link }}
 

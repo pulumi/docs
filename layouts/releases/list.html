@@ -12,12 +12,11 @@
         {{ $items := where (where .Site.Pages "Type" "releases") "Kind" "eq" "page" }}
         {{ range sort $items ".Params.date" "desc" }}
         {{ partial "releases/release-item.html" (dict
-            "overline" .Params.hero.overline
-            "heading" .Params.hero.heading
-            "description" .Params.hero.description
-            "feature_image_split" .Params.hero.feature_image_split
-            "feature_image" .Params.hero.feature_image
-            "feature_image_alt" .Params.hero.feature_image_alt
+            "overline" .Params.label
+            "heading" .Params.title
+            "description" .Params.short_description
+            "feature_image" .Params.feature_image
+            "feature_image_alt" .Params.feature_image_alt
             "link" .RelPermalink
         ) }}
         {{ end }}
