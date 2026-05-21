@@ -1,64 +1,130 @@
 ---
-title_tag: "Getting Started with Automation API"
-meta_desc: This page contains a getting started guide for Automation API.
-title: Get started
-h1: Get started with Automation API
-weight: 1
+title_tag: "Using Automation API"
+meta_desc: A step-by-step guide to provisioning infrastructure programmatically with the Pulumi Automation API by deploying an inline program.
+title: Automation API
+h1: Using Automation API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: Getting Started
-        parent: iac-automation-api
-        weight: 1
+        name: Automation API
+        parent: iac-guides-building-extending
+        weight: 16
 aliases:
 - /docs/guides/automation-api/getting-started-automation-api/
 - /docs/using-pulumi/automation-api/getting-started-automation-api/
 - /docs/iac/packages-and-automation/automation-api/getting-started-automation-api/
 - /docs/iac/using-pulumi/automation-api/getting-started-automation-api/
+- /docs/iac/automation-api/getting-started-automation-api/
 ---
 
-Pulumi’s Automation API enables you to provision your infrastructure programmatically using the Pulumi engine by exposing Pulumi programs and stacks as strongly-typed and composable building blocks.
+The Pulumi [Automation API](/docs/iac/concepts/automation-api/) lets you provision infrastructure programmatically by driving the Pulumi engine from your own code, exposing Pulumi programs and stacks as strongly typed, composable building blocks.
 
-In this guide, you will deploy an inline Pulumi program to create a static website using Automation API.
+In this guide, you'll deploy an inline Pulumi program that creates a static website with Automation API. For background on workspaces, stacks, and inline versus local programs, see [Automation API concepts](/docs/iac/concepts/automation-api/).
 
 ## Prerequisites
 
-### Install Pulumi
+Before you begin, make sure you have:
 
-{{< install-pulumi />}}
+- The [Pulumi CLI](/docs/install/) installed and available on your `PATH`. Automation API drives the CLI under the hood. Alternatively, you can [install the CLI programmatically](#install-the-cli-programmatically) from your Automation API program.
+- The runtime for your chosen language installed: Node.js, Python, Go, .NET, or Java.
+- A [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) so your program can store state in Pulumi Cloud. Run `pulumi login` to authenticate, or set the `PULUMI_ACCESS_TOKEN` environment variable.
+- AWS credentials configured, since this guide deploys resources to AWS.
 
-Install the required language runtime, if you have not already.
+### Install the CLI programmatically
 
-### Install language runtime
-
-#### Choose your language
+Because Automation API runs the Pulumi CLI for you, the CLI must be available at runtime. Rather than requiring everyone who runs your program to install it themselves, you can have the program download and manage its own copy. The TypeScript, Python, Go, and .NET SDKs expose an install method that downloads a specific CLI version---by default, the version matching the SDK---into `~/.pulumi/versions/<version>`. You then pass the resulting command object to the workspace that runs your stack.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language "typescript" %}}
-{{< install-node >}}
+
+```typescript
+import { LocalWorkspace, PulumiCommand } from "@pulumi/pulumi/automation";
+
+// Install the CLI version matching the SDK into ~/.pulumi/versions/<version>.
+const pulumiCommand = await PulumiCommand.install();
+```
+
+Pass it to the workspace through the `pulumiCommand` option when you create the stack:
+
+```typescript
+const stack = await LocalWorkspace.createOrSelectStack(args, { pulumiCommand });
+```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
-{{< install-python >}}
+
+```python
+from pulumi.automation import PulumiCommand, LocalWorkspaceOptions
+
+# Install the CLI version matching the SDK into ~/.pulumi/versions/<version>.
+pulumi_command = PulumiCommand.install()
+```
+
+Pass it to the workspace through the `pulumi_command` option when you create the stack:
+
+```python
+stack = auto.create_or_select_stack(stack_name=stack_name,
+                                    project_name=project_name,
+                                    program=pulumi_program,
+                                    opts=LocalWorkspaceOptions(pulumi_command=pulumi_command))
+```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
-{{< install-go >}}
+
+```go
+import "github.com/pulumi/pulumi/sdk/v3/go/auto"
+
+ctx := context.Background()
+
+// Install the CLI version matching the SDK into ~/.pulumi/versions/<version>.
+pulumiCmd, err := auto.InstallPulumiCommand(ctx, &auto.PulumiCommandOptions{})
+if err != nil {
+    fmt.Printf("Failed to install the Pulumi CLI: %v\n", err)
+    os.Exit(1)
+}
+```
+
+Pass it to the workspace with the `auto.Pulumi` option when you create the stack:
+
+```go
+s, err := auto.UpsertStackInlineSource(ctx, stackName, projectName, deployFunc, auto.Pulumi(pulumiCmd))
+```
+
 {{% /choosable %}}
 
 {{% choosable language "csharp,fsharp,visualbasic" %}}
-{{< install-dotnet >}}
+
+```csharp
+using Pulumi.Automation;
+using Pulumi.Automation.Commands;
+
+// Install the CLI version matching the SDK into ~/.pulumi/versions/<version>.
+var pulumiCommand = await LocalPulumiCommand.Install();
+```
+
+Pass it to the workspace through the `PulumiCommand` property when you create the stack:
+
+```csharp
+var stackArgs = new InlineProgramArgs(projectName, stackName, program)
+{
+    PulumiCommand = pulumiCommand,
+};
+var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
+```
+
 {{% /choosable %}}
 
-{{% choosable language "java,fsharp,visualbasic" %}}
-{{< install-java >}}
+{{% choosable language "java" %}}
+
+The Java SDK doesn't support installing the Pulumi CLI programmatically. Install the [Pulumi CLI](/docs/install/) manually and make sure it's available on your `PATH`.
+
 {{% /choosable %}}
+
 {{< /chooser >}}
-
-### Obtain a Pulumi access token
-
-You'll need a [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) so that your programs can store the resulting state in Pulumi Cloud. The easiest way to obtain a token is to run `pulumi login` from the command line.
 
 ## Define your Pulumi program
 
@@ -844,4 +910,9 @@ var result = stack.up(UpOptions.builder().onStandardOutput(System.out::println).
 
 Notice how you can choose to have a callback function for standard output. In addition, the command returns a result of the update, which you can programmatically use to drive decisions within your program. For example, the result includes the stack outputs as well as a summary of the changes. This means you could choose to take different actions if there were no resources updated. Conversely, you could use the stack outputs to drive another Pulumi program within the same Automation program.
 
-By now, you've hopefully gained a clearer understanding of how to utilize the Automation API. For additional ideas, see the [Automation API examples](https://github.com/pulumi/automation-api-examples).
+## Next steps
+
+You've now seen how to define, configure, and deploy an inline program with Automation API. To go further:
+
+- Review the [Automation API concepts](/docs/iac/concepts/automation-api/) to understand workspaces, stacks, and the difference between inline and local programs.
+- Explore the [`automation-api-examples` repository](https://github.com/pulumi/automation-api-examples) for runnable examples in every supported language, covering patterns such as cross-language programs, database migrations, and exposing Pulumi over HTTP.

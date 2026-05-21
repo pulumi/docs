@@ -12,7 +12,7 @@ menu:
         weight: 2
 ---
 
-Pulumi's [Automation API](/docs/iac/automation-api/) provides a programmatic interface for integration testing. While not a purpose-built integration testing framework, you can use Automation API in your integration tests to accomplish the same objectives of basic correctness testing, resource validation, and runtime testing. Automation API is available in all Pulumi languages except YAML and is a part of the Pulumi SDK.
+Pulumi's [Automation API](/docs/iac/concepts/automation-api/) provides a programmatic interface for integration testing. While not a purpose-built integration testing framework, you can use Automation API in your integration tests to accomplish the same objectives of basic correctness testing, resource validation, and runtime testing. Automation API is available in all Pulumi languages except YAML and is a part of the Pulumi SDK.
 
 ## Testing workflow
 
