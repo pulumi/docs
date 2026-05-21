@@ -22,6 +22,22 @@ social:
     bluesky:
 ---
 
+Infrastructure as code is the right model for production systems. State tracking, drift detection, and repeatable deployments all matter when you're managing real workloads. But there are also times you need a quick, one-off interaction with the cloud: create a bucket, look up a VPC, delete a leftover resource.
+
+Today we're introducing `pulumi do`, a new command for direct resource operations. Create, read, update, delete, and query any cloud resource from the terminal with a single command, across all 150+ Pulumi providers. No project, no stack, no state file required.
+
+<!--more-->
+
+## The problem: IaC is too heavy for every interaction
+
+When you're managing production workloads, IaC earns its weight. State tracking catches drift before it causes outages. Dependency graphs sequence changes safely. Policy enforcement keeps teams in bounds. That full lifecycle is exactly what you want for systems that matter.
+
+But when an LLM needs a Postgres database on AWS, the straightest-line path with IaC is eight steps: create a directory, initialize a project, pick a language, install packages, configure credentials, write infrastructure code, preview, deploy. That is a lot of surface area for errors, a lot of tokens consumed across those steps, and a lot of cost for what should be a simple operation. `pulumi do` collapses those eight steps into one, while using the same providers and type system that power a full Pulumi program.
+
+As Joe described in [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), resource creation is only part of the problem. The real blocker for AI agents is everything around the code: creating cloud accounts, plumbing credentials, wiring configuration across services. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) tackle the first piece by letting agents provision a Pulumi Cloud account on the fly, no signup form, no browser. [Pulumi ESC](/docs/esc/) tackles the second by unifying credentials across every provider. Together with `pulumi do`, an agent goes from zero to deployed infrastructure without leaving the terminal. We also shipped a [redesigned CLI](/blog/better-cli-interactions-for-agents-and-humans/) so both humans and agents can find the right command on the first try. And when that one-off resource grows into a production system, `pulumi do` provides a graduation path back to full IaC.
+
+## What it looks like
+
 You need to spin up an S3 bucket. With the AWS CLI, you assemble `aws s3api create-bucket` with the right flags, region constraints, and JSON input. With `pulumi do`:
 
 ```bash
@@ -37,20 +53,6 @@ $ pulumi do aws:ec2:getVpc --input-file query.pcl
 ```
 
 Same CLI, same output contract, same provider ecosystem.
-
-Earlier this week, Joe Duffy described [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) and framed the key design principle: agents should start with the smallest possible commitment and progressively level up. We also shipped a [redesigned CLI](/blog/better-cli-interactions-for-agents-and-humans/) so both humans and agents can find the right command on the first try.
-
-`pulumi do` is the next piece. It ships with provider functions (read-only queries against any cloud API) and resource operations (create, read, patch, delete, list) across all 150+ Pulumi providers.
-
-<!--more-->
-
-## The problem: IaC is too heavy for every interaction
-
-Infrastructure-as-code is the right model for production systems. State tracking, drift detection, dependency graphs, policy enforcement, and repeatable deployments all matter when you're managing real workloads. But not every interaction with the cloud is a production deployment.
-
-When an LLM needs a Postgres database on AWS, the straightest-line path with IaC is eight steps: create a directory, initialize a project, pick a language, install packages, configure credentials, write infrastructure code, preview, deploy. That is a lot of surface area for errors. The LLM defaults to `aws rds create-db-instance` because it is one command and already in the training data. `pulumi do` collapses those eight steps into one.
-
-But as Joe described in [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), resource creation is only part of the problem. The real blocker for AI agents is everything around the code: creating cloud accounts, plumbing credentials, wiring configuration across services. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) tackle the first piece by letting agents provision a Pulumi Cloud account on the fly, no signup form, no browser. [Pulumi ESC](/docs/esc/) tackles the second by unifying credentials across every provider. Together with `pulumi do`, an agent goes from zero to deployed infrastructure without leaving the terminal. And we're just getting started. More is coming to close the remaining gaps.
 
 ## One command, any provider
 
@@ -192,40 +194,13 @@ Resource operations and provider functions are the foundation. The `pulumi do` r
 
 One of the hardest parts of multi-cloud operations is credential management. Each provider has its own authentication scheme, environment variables, and session lifecycle. An agent working across AWS, Cloudflare, and Datadog today manages three separate credential mechanisms. That friction adds up fast.
 
-We're building [Pulumi ESC](/docs/esc/) integration into `pulumi do` so you manage credentials once and resolve them everywhere:
-
-```bash
-$ pulumi do aws s3 Bucket create \
-    --env my-org/aws-prod \
-    --input-file bucket.pcl
-```
-
-The `--env` flag will reference an ESC environment by name. ESC handles credential resolution (including OIDC-based dynamic credential generation and short-lived tokens) and deep-merges the environment's values with any CLI flags. No need to know how AWS authentication works or set `AWS_ACCESS_KEY_ID` in the environment. Name the credential set, and ESC does the rest.
-
-This is what will make `pulumi do` different from running `aws s3api create-bucket` with ambient credentials. ESC gives you one credential layer across every provider, with rotation, RBAC, and audit built in.
+We're building [Pulumi ESC](/docs/esc/) integration into `pulumi do` so you manage credentials once and resolve them everywhere. ESC handles credential resolution (including OIDC-based dynamic credential generation and short-lived tokens) across all your providers. No need to know how each provider's authentication works or manage environment variables manually. Name the credential set, and ESC does the rest, with rotation, RBAC, and audit built in.
 
 ### Cross-resource references
 
 Real infrastructure has dependencies. A subnet needs a VPC ID. A security group rule needs a security group ID. When you're building resources one at a time, those references need to flow between commands.
 
-A future version of `pulumi do` will handle this with explicit interpolation in property values:
-
-```bash
-# Create a VPC
-$ pulumi do aws:ec2:Vpc create --input-file vpc.pcl
-
-# Create a subnet that references the VPC
-$ pulumi do aws:ec2:Subnet create --input-file subnet.pcl
-```
-
-Where `subnet.pcl` references the VPC:
-
-```hcl
-vpcId = myVpc.id
-cidrBlock = "10.0.1.0/24"
-```
-
-The `myVpc.id` interpolation will tell the CLI to look up `myVpc` in the current stack's state and resolve its `id` output. The CLI stores the reference as an expression, so the dependency graph stays intact. When you later project these resources into a full IaC program with `pulumi convert`, the generated code contains `subnet.vpcId = myVpc.id` rather than a hard-coded string.
+A future version of `pulumi do` will let resource inputs reference outputs from previously created resources. The CLI will resolve those references automatically and preserve the dependency graph. When you later graduate to a full IaC program, the generated code contains proper resource references rather than hard-coded strings.
 
 ### Stateful mode and the graduation path
 
@@ -233,20 +208,15 @@ Today, `pulumi do` is stateless. Each command runs independently. A planned stat
 
 The planned progression:
 
-1. **Zero setup.** Your first `pulumi do` mutation silently creates a default project at `$PULUMI_HOME/do/default/` with a `dev` stack. No manual initialization.
+1. **Zero setup.** Your first `pulumi do` mutation automatically creates a default project and stack. No manual initialization.
 
-1. **Accumulate resources.** Each `create` and `patch` stores a PCL fragment per resource in the stack's snapshot. The fragments record your inputs as expressions, including cross-resource references. After a few commands, you have a lightweight program in state.
+1. **Accumulate resources.** Each operation stores resource state. After a few commands, you have a lightweight representation of your infrastructure.
 
-1. **Eject to a full project.** When complexity demands it, run `pulumi init --import-from-do`. This generates a Pulumi project in your chosen language, with all resources imported and dependency graphs intact. `pulumi convert` walks the PCL fragments and emits real TypeScript, Python, Go, or C#.
+1. **Eject to a full project.** When complexity demands it, generate a Pulumi project in your chosen language with all resources imported and dependency graphs intact.
 
 1. **Connect to Pulumi Cloud.** Layer on governance, compliance, team collaboration, and deployment automation through [Pulumi Cloud](/product/). Resources created via `pulumi do` can be governed by [Pulumi Insights](/product/insights-governance/) from day one, even before you opt into a full IaC workflow.
 
 The eject path works because `pulumi do` uses the same providers, resource types, and property schemas as `pulumi up`. The cloud resources stay exactly as they are. You're layering management capabilities on top of what already exists.
-
-Also on the roadmap:
-
-- **Flag-based inputs**: Pass resource properties as CLI flags for quick one-liners, no input file needed.
-- **Schema discovery**: `pulumi do <package> schema` to output the full provider type system for agent consumption.
 
 ## Get started
 
