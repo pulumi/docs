@@ -295,6 +295,6 @@ More on how it works, and what you can do with it, in the days ahead.
 
 ## Try it yourself
 
-A lot of what makes a developer tool worth using is in the details, and most of what's in this release is exactly that, across the whole CLI, with humans and agents in mind.
+A lot of what makes a developer tool worth using is in the details, and most of what's in [this release](/releases/agentic-infrastructure-era/) is exactly that, across the whole CLI, with humans and agents in mind.
 
 We'd love for you to [grab the latest release](/docs/get-started/download-install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.
