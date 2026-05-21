@@ -1,156 +1,136 @@
 ---
 title: What is a Cloudflare Secret?
-meta_desc: |
-    Learn more about Cloudflare secrets and how to use them.
-
+meta_desc: "Cloudflare secrets are encrypted variables bound to Workers and Pages projects at runtime. Learn Workers secrets, Pages env vars, Secrets Store, and Wrangler."
 meta_image: /images/what-is/what-is-a-cloudflare-secret-meta.png
 type: what-is
 page_title: "What is a Cloudflare Secret?"
 authors: ["diana-esteves"]
 ---
 
-[Cloudflare](https://www.cloudflare.com/) operates one of the world's largest networks, providing network and cloud services to improve website and application security and performance. A critical security aspect of building applications and solutions integrating with Cloudflare involves the management of sensitive data, commonly known as [secrets](/what-is/what-is-secrets-management/). Cloudflare has a secure mechanism for handling secrets, offering tools for storing, accessing, and managing confidential information in the cloud.
+**A Cloudflare secret is an encrypted variable bound to a [Cloudflare Workers](https://developers.cloudflare.com/workers/) script, a [Cloudflare Pages](https://developers.cloudflare.com/pages/) project, or the account-level [Cloudflare Secrets Store](https://developers.cloudflare.com/secrets-store/), and exposed to the runtime as a property of the `env` object.** Secrets keep API tokens, database credentials, and signing keys out of your worker source and your Git history while still being available to the code at request time.
 
-## What is a Cloudflare secret?
+Cloudflare offers a few overlapping mechanisms depending on what you're building: **Workers Secrets** for individual Workers scripts, **Pages environment variables** for preview and production builds of a Pages project, and the newer **Cloudflare Secrets Store** for account-level secrets that can be bound to many Workers at once. All three encrypt values at rest, deliver them only to the runtime that needs them, and expose them through the same `env.<NAME>` programming model. The `wrangler` CLI is the canonical way to create and update secrets from a developer machine or a CI pipeline.
 
-Cloudflare secrets are sensitive information stored as encrypted environment variables for [Cloudflare Workers](https://developers.cloudflare.com/workers/) (execution environments for serverless applications). Secrets include but are not limited to database credentials, API keys, and other confidential data. There is no need to hard-code sensitive information in plain text.
+In this article, we'll cover the key questions about Cloudflare secrets:
 
-### Key features
+* What is a Cloudflare secret used for?
+* What are the Cloudflare secret types?
+* How do Workers access secrets at runtime?
+* How do you create a Cloudflare secret with Wrangler?
+* How does Cloudflare protect secrets?
+* What are the limits of Cloudflare secrets?
+* What are best practices for Cloudflare secrets?
+* How does Pulumi manage Cloudflare secrets?
+* Frequently asked questions about Cloudflare secrets
 
-- **Secure and encrypted storage**: Secrets in Cloudflare are encrypted during transit and at rest, ensuring high security.
-- **Native application integration:** Cloudflare secrets integrate directly with Cloudflare Workers, eliminating the need for complex setup. This built-in solution provides automatic retrieval and management of credentials.
-- **Environment variable flexibility:** Cloudflare secrets are easily referenced as environment variables across Workers.
+## What is a Cloudflare secret used for?
 
-## Creating Cloudflare secrets via the CLI
+A Cloudflare secret is the right place for any sensitive value a Worker or Pages function needs at request time. Typical uses:
 
-You can create secrets via [Wrangler](https://developers.cloudflare.com/workers/wrangler/), the Cloudflare Workers CLI.
+* API tokens for third-party services the Worker calls (Stripe, OpenAI, Slack).
+* Database and KV/D1 credentials.
+* Signing keys for JWT issuance or webhook verification.
+* OAuth client secrets for redirect flows.
+* Provider credentials for outbound integrations (AWS access keys, GCP service-account JSON).
 
-### Prerequisites
+For non-sensitive configuration (feature flags, environment names, region settings), use plain text **variables** (`vars` in `wrangler.toml`) instead. Variables aren't encrypted but are visible in the dashboard, which is often what you want for non-sensitive values.
 
-- Install [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
-- Sign up for a free [Cloudflare account](https://dash.cloudflare.com/sign-up/)
-- Create a new project and navigate to its directory:
+## What are the Cloudflare secret types?
 
-    ```bash
-    $ npx wrangler init secrets-demo
-    # Select "Hello World" Worker
-    # Confirm "Yes" to using Typescript
-    # Confirm "Yes" to using using Git
-    # Select "No" to deploy the application
+Cloudflare exposes secrets through a few different surfaces, each with a slightly different scope.
 
-    $ cd secrets-demo
-    ```
+| Type | Scope | Created with | Available to |
+|---|---|---|---|
+| **Workers Secrets** | A single Workers script | `wrangler secret put` | One Worker's `env.<NAME>` |
+| **Cloudflare Pages env vars** | A Pages project (preview or production) | Dashboard or `wrangler pages` | Pages Functions and build steps |
+| **Cloudflare Secrets Store** | Account-level | Dashboard or API | Any Worker bound to the store |
+| **Plain text vars** (not a secret) | Workers or Pages, set in `wrangler.toml` | `wrangler.toml` `[vars]` | Same as the surface, but visible in dashboard |
 
-- Login to your Cloudflare account and authorize Wrangler:
+Workers Secrets are the oldest and most common path. Pages env vars are the Pages-specific equivalent, with separate values per preview and production environment. The newer [Secrets Store](https://developers.cloudflare.com/secrets-store/) is account-level and lets the same secret be bound to many Workers without per-Worker duplication, which makes rotation much easier in large estates.
 
-    ```bash
-    $ npx wrangler login  
-    # Confirm authorization to Wrangler
-    ```
+## How do Workers access secrets at runtime?
 
-### Create a secret
+Inside a Worker, a secret named `MY_API_KEY` appears as a property on the `env` object that's passed to the handler:
 
-You can create a secret by running the command:
-
-```bash
-$ npx wrangler secret put MY_SECRET_NAME_KEY
+```typescript
+export default {
+    async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+        const apiKey = env.MY_API_KEY;
+        // use apiKey to call an upstream service ...
+        return new Response("ok");
+    },
+};
 ```
 
-Next, you will be prompted to input the secret’s value, type:
+Where `Env` is a TypeScript interface you declare yourself (or generate with `wrangler types`):
 
-```bash
- ⛅️ wrangler 3.19.0
--------------------
-? Enter a secret value: › dragons and unicorns are real
+```typescript
+interface Env {
+    MY_API_KEY: string;
+}
 ```
 
-Press Enter to save the secret. You'll see output similar to the following:
+The value lives only in the isolate that handles the request. It doesn't appear in `wrangler` output, the Worker's source bundle, or the Cloudflare dashboard once it's set. For Pages Functions, the same `env` model applies; environment variables and secrets are merged into a single `context.env` object.
+
+## How do you create a Cloudflare secret with Wrangler?
+
+The canonical workflow is `wrangler secret put`, which prompts for the value interactively (so it never lives in shell history):
 
 ```bash
-✔ Enter a secret value: … *****************************
-🌀 Creating the secret for the Worker "secrets-demo"
-✨ Success! Uploaded secret MY_SECRET_NAME_KEY
-```
+$ wrangler secret put MY_API_KEY
+? Enter a secret value: › ****************
+🌀 Creating the secret for the Worker "my-worker"
+✨ Success! Uploaded secret MY_API_KEY
 
-Verify the secret was created:
-
-```bash
-$ npx wrangler secret list
+$ wrangler secret list
 [
   {
-    "name": "MY_SECRET_NAME_KEY",
+    "name": "MY_API_KEY",
     "type": "secret_text"
   }
 ]
 ```
 
-### Accessing the secret from a Cloudflare Worker
+To rotate, run `wrangler secret put` again with the same name; Cloudflare overwrites the existing value and redeploys the Worker. To remove, `wrangler secret delete MY_API_KEY`.
 
-Now that you have created a secret, your application can access it by referencing it in the Worker code.
+For CI environments, the API token itself (`CLOUDFLARE_API_TOKEN`) should be a CI secret in GitHub Actions, CircleCI, or [Pulumi ESC](/product/esc/) rather than a static value committed to the pipeline.
 
-For example, in TypeScript you might use code that looks something like this to retrieve and return the value of the Cloudflare secret:
+## How does Cloudflare protect secrets?
 
-```typescript
-export default {
-        async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-                return new Response(`Secret: ${env.MY_SECRET_NAME_KEY}`);
-        },
-};
-```
+Cloudflare encrypts secrets at rest and only exposes them to the isolates that need them.
 
-Deploy the changes.
+| Stage | Protection |
+|---|---|
+| Submission | TLS to the Cloudflare API or dashboard |
+| Storage | Encrypted at rest in Cloudflare's storage |
+| Delivery to isolate | Decrypted only when an isolate is spun up to handle a request |
+| In the isolate | Available as a property on `env`; not readable from source code or build output |
+| In logs | Cloudflare doesn't print secret values to standard log streams |
+| Across deploys | Persisted through Worker deploys; not bundled into the script source |
 
-```bash
-$ npx wrangler deploy
- ⛅️ wrangler 3.19.0
--------------------
-Total Upload: 0.21 KiB / gzip: 0.18 KiB
-Uploaded secrets-demo (0.92 sec)
-Published secrets-demo (3.61 sec)
-  https://secrets-demo.diana-247.workers.dev
-Current Deployment ID: e7c2b8e7-e13a-4a11-9667-024eed3cce05
-```
+Secrets Store adds an account-level encryption layer and shared access controls, so a single secret can be bound to many Workers without duplicating the encrypted blob per script.
 
-Here's an example of using `curl` against a Cloudflare Worker serverless application using the code above to retrieve and return a Cloudflare secret value:
+## What are the limits of Cloudflare secrets?
 
-```bash
-$ curl https://secrets-demo.diana-247.workers.dev
+* **No native rotation.** Cloudflare doesn't expire or refresh values for you. Rotation means re-running `wrangler secret put` (or the API equivalent) and redeploying.
+* **No first-class versioning.** A secret has one current value; the previous value is overwritten on update.
+* **Per-Worker scope (without Secrets Store).** Workers Secrets are tied to a single Worker. Sharing the same secret across many Workers traditionally meant uploading it once per Worker; Secrets Store fixes this.
+* **Pages env vars are scoped per environment.** Preview and production are independent; setting a value in preview doesn't propagate to production.
+* **No fine-grained access within a Worker.** Any code in the Worker can read any of its bound secrets.
+* **Limited audit detail.** Audit logs cover secret-management events (create, update, delete) but not per-request reads from the runtime.
 
-Secret: dragons and unicorns are real
-```
+## What are best practices for Cloudflare secrets?
 
-## Best practices
+* **Use `wrangler secret put`, not `wrangler.toml`.** Secrets entered through the CLI are encrypted at rest and never written to your config file. Anything you put in `[vars]` is plain text.
+* **Use Secrets Store for shared values.** For credentials used by many Workers (a single Stripe API key, a single internal token), bind a Secrets Store entry instead of duplicating it per script.
+* **Separate preview and production.** Pages env vars and Workers Secrets can take different values per environment; production credentials should never live in a preview environment.
+* **Rotate on a schedule.** Even without native rotation, document a cadence and update secrets via `wrangler` or the API.
+* **Brokerage over duplication.** When credentials need to live in many places (Cloudflare Workers, a Kubernetes cluster, a CI pipeline), keep the source of truth in [Pulumi ESC](/product/esc/), [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/), or [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/) and project values into Cloudflare from there.
+* **Don't log `env` objects.** Treat `env` like any other credential vector; serializing it in a debug log is a leak.
 
-- **Rotate secrets regularly**: Implement a routine for periodically rotating secrets to enhance security.
-- **Provide least-privilege access**: Employ policies for granular access control to secrets.
-- **Audit and monitor secret access**: Use monitoring tools to track access and modifications to your secrets.
+## How does Pulumi manage Cloudflare secrets?
 
-### Challenges and considerations
-
-Using Cloudflare secrets comes with particular challenges and considerations:
-
-- **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
-- **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) and [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/).
-
-Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
-/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to facilitate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
-
-## Conclusion  
-
-Following security best practices for Cloudflare secrets are crucial in managing sensitive information in your solutions, applications, and cloud environments.
-
-Now that you know Cloudflare secrets, take your cloud infrastructure management to the next level with [Pulumi](https://www.pulumi.com/):
-
-- **Streamlined infrastructure management with Infrastructure as Code (IaC)**: Learn about other Cloudflare resources using Pulumi’s IaC capabilities. Pulumi lets you define and provision your cloud infrastructure using familiar programming languages, directly integrating secrets management into your workflows. Discover how to integrate Cloudflare secrets into your broader cloud infrastructure with Pulumi by exploring the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are some examples of how to create a Cloudflare secret in several supported programming languages:
-
-```bash
-$ pulumi config set secrets-demo --secret
-value:  ****
-```
-
-{{< chooser language "typescript,python,go" / >}}
-{{% choosable language typescript %}}
+The [Pulumi Cloudflare provider](/registry/packages/cloudflare/) treats Workers, Pages projects, and secret bindings as first-class resources, and [Pulumi ESC](/product/esc/) is the natural source of truth for the values.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -159,96 +139,78 @@ import * as fs from "fs";
 
 const config = new pulumi.Config();
 const accountId = config.require("accountId");
-const secret = config.require("secrets-demo");  // mark as required
+const apiKey = config.requireSecret("apiKey");
 
-const myScript = new cloudflare.WorkerScript("myScript", {
+const script = new cloudflare.WorkerScript("my-worker", {
     accountId: accountId,
-    name: "script_1",
-    content: fs.readFileSync("script.js", "utf8"),
+    name: "my-worker",
+    content: fs.readFileSync("./worker.js", "utf8"),
     secretTextBindings: [{
-        name: "MY_SECRET_NAME_KEY",   // secret key
-        text: secret,                 // secret value
+        name: "MY_API_KEY",
+        text: apiKey,
     }],
 });
 ```
 
-{{% /choosable %}}
-{{% choosable language python %}}
+What you get from this pattern:
 
-```python
-"""A Python Pulumi program"""
+* The plaintext value lives in [Pulumi ESC](/product/esc/) (or stack-level encrypted config), not in Git or the Pulumi state file in plaintext.
+* The Worker script, its secret bindings, and any Pages or Secrets Store resources sit in the same program; refactoring or rolling new credentials is a single PR.
+* For estates where the same credential needs to land in Cloudflare, Kubernetes, and a SaaS API, the same ESC environment can broker values into all three.
 
-import pulumi
-import pulumi_cloudflare as cloudflare
+[Get started with Pulumi for Cloudflare](/registry/packages/cloudflare/) to manage Workers, Pages, DNS, and secrets as code in TypeScript, Python, Go, C#, Java, or YAML.
 
-config = pulumi.Config()
-account_id = config.require("accountId")
-secret = config.require("secrets-demo")
+## Frequently asked questions about Cloudflare secrets
 
-# Sets the script with the name "script_1"
-my_script = cloudflare.WorkerScript("myScript",
-    account_id=account_id,
-    name="script_1",
-    content=(lambda path: open(path).read())("script.js"),
-    secret_text_bindings=[cloudflare.WorkerScriptSecretTextBindingArgs(
-        name="MY_SECRET_NAME_KEY",
-        text=secret,
-    )],
+### Are Cloudflare secrets encrypted?
 
-    )
-```
+Yes. Workers Secrets, Pages env vars marked as secrets, and Secrets Store entries are all encrypted at rest, transmitted over TLS, and delivered only to the runtime isolate that needs them. Plain text variables defined under `[vars]` in `wrangler.toml` are not encrypted — those are for non-sensitive configuration.
 
-{{% /choosable %}}
-{{% choosable language go %}}
+### What's the difference between a Workers Secret and an env var?
 
-```go
-package main
+Both end up as properties on `env` at runtime, but a **secret** (created with `wrangler secret put`) is encrypted at rest and hidden from the dashboard, while an **env var** (declared under `[vars]` in `wrangler.toml`) is stored as plain text and visible in the dashboard. Use secrets for sensitive values, vars for everything else.
 
-import (
-	"os"
+### How do I rotate a Cloudflare secret?
 
-	"github.com/pulumi/pulumi-cloudflare/sdk/v5/go/cloudflare"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
+Run `wrangler secret put MY_NAME` again with the new value (or update via API/dashboard). Cloudflare overwrites the previous value and redeploys the Worker. For Pages projects, update the environment variable from the dashboard or `wrangler pages`.
 
-func readFileOrPanic(path string) pulumi.StringInput {
-	data, err := os.ReadFile(path)
-	if err != nil {
-		panic(err.Error())
-	}
-	return pulumi.String(string(data))
-}
+### What is Cloudflare Secrets Store?
 
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		conf := config.New(ctx, "")
+[Cloudflare Secrets Store](https://developers.cloudflare.com/secrets-store/) is an account-level secrets store that holds a value once and binds it to many Workers, eliminating the need to upload the same secret per script. It's the recommended path for credentials shared across multiple Workers and for rotating values across an estate.
 
-		accountId := conf.Require("accountId")
-		secret := conf.Require("secrets-demo")
+### Can multiple Workers share the same secret?
 
-		_, err := cloudflare.NewWorkerScript(ctx, "myScript", &cloudflare.WorkerScriptArgs{
-			AccountId: pulumi.String(accountId),
-			Name:      pulumi.String("script_1"),
-			Content:   readFileOrPanic("script.js"),
-			SecretTextBindings: cloudflare.WorkerScriptSecretTextBindingArray{
-				&cloudflare.WorkerScriptSecretTextBindingArgs{
-					Name: pulumi.String("MY_SECRET_NAME_KEY"),
-					Text: pulumi.String(secret),
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
+With the traditional `wrangler secret put` flow, no — each Worker has its own copy. With **Secrets Store**, yes — define the secret once at the account level and bind it to as many Workers as you need. Rotating then means updating one value.
 
-{{% /choosable %}}
+### Are Pages environment variables the same as Workers Secrets?
 
-- **Get started tutorial**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
-- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+They use the same mental model (encrypted variables exposed through `env`) but are scoped to a Pages project rather than a Worker, with separate values for preview and production. The mechanism is the same; the scope is different.
 
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+### Can I read a Cloudflare secret value from the dashboard?
+
+No. Once a value is uploaded via `wrangler secret put` or marked as a secret in Pages, it can be updated or deleted but not read back. For debugging, log into the upstream system to verify the value.
+
+### How do I store a multi-line value (like a TLS key) as a Cloudflare secret?
+
+`wrangler secret put` accepts multi-line input through stdin: `wrangler secret put MY_KEY < private-key.pem`. The value is uploaded as a single string; your Worker code reads it back through `env.MY_KEY` and can parse it as needed.
+
+### Should I integrate Cloudflare secrets with an external vault?
+
+For estates beyond a single Cloudflare account, yes. Keep the source of truth in [HashiCorp Vault](/what-is/what-is-hashicorp-vault/), [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/), [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/), or [Pulumi ESC](/product/esc/), and project values into Cloudflare at deploy time. That keeps rotation and audit consistent across providers.
+
+### How do I avoid storing `CLOUDFLARE_API_TOKEN` in plain text in CI?
+
+Treat it as any other CI secret: store it in GitHub Actions secrets, CircleCI contexts, or [Pulumi ESC](/product/esc/), and reference it as an env var in the pipeline. For higher assurance, use Cloudflare's [scoped API tokens](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/) so the CI credential can only do what the pipeline actually needs.
+
+## Learn more
+
+Pulumi puts Cloudflare Workers, Pages, and their secrets into the same IaC workflow as the rest of your stack. Values come from [Pulumi ESC](/product/esc/), `wrangler secret put` is replaced by a reviewable Pulumi diff, and the same program can broker the same credential into Kubernetes or a CI pipeline. [Get started today](/docs/get-started/).
+
+Related reading:
+
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What is a GitHub Actions Secret?](/what-is/what-is-a-github-action-secret/)
+* [What is a CircleCI Secret?](/what-is/what-is-a-circleci-secret/)
+* [What is HashiCorp Vault?](/what-is/what-is-hashicorp-vault/)
+* [What is AWS Secrets Manager?](/what-is/what-is-aws-secrets-manager/)
+* [What is Google Cloud Secret Manager?](/what-is/what-is-google-cloud-secret-manager/)
