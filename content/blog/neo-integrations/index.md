@@ -85,6 +85,6 @@ Failures behave the same way for both. If an integration can't be reached, Neo l
 
 Both MCP and CLI integrations are available now for Neo-enabled organizations. Open your org's Neo settings, connect the MCP server or CLI of your choice, and let Neo do the next investigation against the tools you already use. The [MCP integrations docs](/docs/ai/integrations/mcp/) and [CLI integrations docs](/docs/ai/integrations/cli/) walk through credential setup for each one, and the [Neo integrations hub](/docs/ai/integrations/) ties it all together.
 
-Today's launch is part of a bigger story. Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal.
+Today's launch is part of a bigger story. See [the release overview](/releases/agentic-infrastructure-era/) for everything that shipped, our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal.
 
 As always, we'd love to hear what you think — and if you have any suggestions for integrations that'd make Neo even better, file an issue in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
