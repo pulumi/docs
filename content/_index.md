@@ -8,8 +8,8 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
-    badge_highlight_text: "New This Week:"
-    badge_text: "Meeting agents where they are"
+    badge_highlight_text: "NEW RELEASE:"
+    badge_text: "Building for agentic infrastructure"
     badge_link: /releases/agentic-infrastructure-era/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
