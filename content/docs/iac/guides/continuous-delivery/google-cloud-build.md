@@ -332,6 +332,12 @@ To let reviewers exercise a change in a live environment, pair the preview build
 The Pulumi CLI doesn't automatically detect Cloud Build as a CI/CD system, so updates won't link back to the triggering build or commit on their own. To record that metadata in Pulumi Cloud, set the `PULUMI_CI_SYSTEM` environment variable, along with the `PULUMI_CI_*` fallback variables, in your build steps. See [adding support for CI/CD systems](/docs/iac/guides/continuous-delivery/#adding-support-for-cicd-systems).
 {{% /notes %}}
 
+## Report results on pull requests
+
+By default, the output of a `pulumi preview` build lands in the Cloud Build logs. To surface the proposed infrastructure changes on the pull request itself, connect your repository to Pulumi Cloud with a [version control integration](/docs/integrations/version-control/).
+
+These integrations work independently of Cloud Build: Pulumi Cloud posts a summary of resource changes as a pull request comment and status check, and links each stack update back to the commit and pull request that produced it. Pulumi maintains native integrations for the [GitHub App](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/) — install the one that matches where your repository is hosted.
+
 ## Connect a repository and create a trigger
 
 A trigger ties a repository event to a build configuration. To run the two build configurations above, create three triggers on the same repository:
@@ -352,6 +358,7 @@ You can define those triggers — and the repository connection itself — as pa
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Version control integrations](/docs/integrations/version-control/) — pull request comments, status checks, and commit linking from Pulumi Cloud.
 - [Google Cloud provider](/registry/packages/gcp/) — manage Cloud Build triggers, repository connections, and the rest of Google Cloud as code.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
