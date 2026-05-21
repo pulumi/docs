@@ -1,6 +1,6 @@
 ---
 title: "Ten More Things You Can Do With Pulumi Neo"
-date: 2026-05-19T02:00:00-07:00
+date: 2026-05-19T05:00:00-07:00
 draft: false
 meta_desc: "Ten more platform-engineering workflows you can hand to Pulumi Neo: deployments, tickets, incident triage, IAM, migration, and continuous ops."
 meta_image: meta.png
