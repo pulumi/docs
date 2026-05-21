@@ -17,12 +17,10 @@ aliases:
 
 The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state (most commonly when creating the resource).
 
+{{< resource-option-scope "ignoreChanges" >}}
+
 {{% notes type="info" %}}
 The `ignoreChanges` option only applies to resource inputs, not outputs.
-{{% /notes %}}
-
-{{% notes type="warning" %}}
-The `ignoreChanges` resource option does not automatically apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
 {{% /notes %}}
 
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
