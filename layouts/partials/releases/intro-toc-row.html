@@ -1,13 +1,6 @@
 {{/*
     Releases Intro + TOC Row
 
-    Figma tokens applied:
-      - Quote (heading-2): 30px / font-semibold / leading-1.1 / tracking-tighter / service-black
-      - Attribution (body regular): 16px / service-black / leading-6
-      - TOC overline: mono 14px / tracking-wider / service-black
-      - TOC ".01" number: mono 14px / tracking-wider / violet-primary
-      - TOC label (heading-3): 24px / font-semibold / leading-1.1 / tracking-tighter / service-black
-
     Parameters:
     - intro:        Map with .quote (markdown), .attribution (markdown), and optional .link.
     - toc_heading:  Heading text for the TOC card. Defaults to "What we're shipping".
@@ -44,7 +37,7 @@
     {{/* TOC card */}}
     {{ with $sections }}
     <aside class="card bg-white p-8 lg:p-10 self-start h-full">
-        <p class="font-mono text-sm tracking-wider uppercase text-service-black m-0 mb-6">{{ $tocHeading }}</p>
+        <p class="font-mono text-xs md:text-sm tracking-wider uppercase text-service-black m-0 mb-6">{{ $tocHeading }}</p>
         <ul class="list-none p-0 m-0 flex flex-col gap-4">
             {{ range $i, $section := . }}
             <li class="m-0 flex items-baseline gap-4">

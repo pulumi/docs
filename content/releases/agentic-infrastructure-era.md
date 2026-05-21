@@ -1,21 +1,23 @@
 ---
-title: Building for the agentic infrastructure era
+title: Building for agentic infrastructure
 date: 2026-05-19
 meta_desc: As agents take on more of the work of cloud infrastructure, they need tools that meet them where they are. Here's a closer look at what we've just shipped.
 meta_image: /images/releases/may-2026/meta.png
+label: May 2026 release
+short_description: As agents take on more of the work of infrastructure, they need tools that meet them where they are.
+feature_image: /images/releases/may-2026/release-hero-right-light.svg
+feature_image_alt: Agent surfaces — Claude Code, OpenCode, Codex, and Pulumi Neo — around the Pulumi mark
 
 hero:
-  overline: May 2026 release
   breadcrumb_label: May 2026
   heading: Building for agentic infrastructure
   description: |
     As agents take on more of the work of infrastructure, they need tools that meet them where they are.
     This month, we've got new commands, providers, integrations, and more that help humans and agents do
     infrastructure better.
-  feature_image_centered: /images/releases/may-2026/release-hero-bottom-dark.svg
-  feature_image_split: /images/releases/may-2026/release-hero-right-light.svg
-  feature_image_alt: Agent surfaces — Claude Code, OpenCode, Codex, and Pulumi Neo — around the Pulumi mark
-  feature_image_max_width: 430
+  hero_image: /images/releases/may-2026/release-hero-bottom-dark.svg
+  hero_image_alt: Agent surfaces — Claude Code, OpenCode, Codex, and Pulumi Neo — around the Pulumi mark
+  hero_image_max_width: 430
 
 intro:
   quote: |
@@ -83,7 +85,7 @@ sections:
         description: |
           The new `pulumi neo` command brings Neo out of Pulumi Cloud and into your terminal, so you can do
           agentic infrastructure anywhere you can run Pulumi.
-        link: blog/pulumi-neo-cli/
+        link: /blog/pulumi-neo-cli/
 
       - variant: image-top
         image: /images/releases/may-2026/release-neo-github-slack.svg
