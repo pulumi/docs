@@ -48,8 +48,8 @@ Approvals in Pulumi ESC are configured at the environment level using **approval
 ### Enabling Approvals
 
 1. Navigate to your environment in the Pulumi Cloud console.
-2. Go to **Settings → Approval Rulesets**.
-3. Click **Create Ruleset** to add a new approval policy, or select an existing ruleset to edit.
+1. Go to **Settings → Approval Rulesets**.
+1. Click **Create Ruleset** to add a new approval policy, or select an existing ruleset to edit.
 
 ![Approvals ruleset configuration](/images/docs/esc/approvals/approvals-ruleset.png)
 
@@ -65,11 +65,53 @@ When creating or editing a ruleset, you can:
 
 ## Update approvals
 
-Update approvals control changes to environment configurations. When an update approval ruleset is enabled on an environment, direct writes to the environment are blocked. Instead, users must create **change requests** that specify the proposed configuration changes.
+Update approvals control changes to environment configurations. When an update approval ruleset is enabled on an environment, direct writes to the environment are blocked. Instead, users must create **drafts** that propose configuration changes. Drafts go through a review and approval workflow before they can be applied to the environment, ensuring that updates to critical configuration values and secrets are intentional and auditable.
 
-Change requests must be reviewed and approved according to the rules defined in your ruleset. After the required approvals are granted, the changes can be applied to the environment. This ensures that updates to critical configuration values and secrets are intentional and auditable.
+Only one draft can be active on an environment at a time. A draft is mutable — team members can continue editing it until it is approved and applied, similar to collaborating on a shared document.
 
 To enable update approvals, follow the steps in [Configuring a Ruleset](#configuring-a-ruleset) and select **Update** for the **Action**.
+
+### Creating a draft
+
+#### From the Pulumi Cloud console
+
+When update approvals are enabled on an environment, the **Save** button is replaced with a **Create Draft** button. To propose changes:
+
+1. Navigate to your environment in the Pulumi Cloud console.
+1. Make your changes in the editor.
+1. Select **Create Draft** to submit your proposed changes.
+
+If a draft already exists, the editor opens in read-only mode with a banner indicating that the draft is pending approval.
+
+#### From the CLI
+
+Use the `--draft` flag with [`esc env set`](/docs/esc/cli/commands/esc_env_set/) or [`esc env edit`](/docs/esc/cli/commands/esc_env_edit/) to create or update a draft:
+
+```bash
+# Create a new draft
+esc env set --draft my-org/my-project/prod-env FEATURE_X_ENABLED true
+
+# Update an existing draft by ID
+esc env set --draft=cr-123 my-org/my-project/prod-env FEATURE_X_ENABLED true
+
+# Edit the full environment definition as a draft
+esc env edit --draft my-org/my-project/prod-env
+```
+
+### Editing and reviewing drafts
+
+To edit an existing draft, select **Edit draft** from the read-only banner or from the approval diff view.
+
+The environment editor provides two modes when working with drafts:
+
+- **Edit mode**: The editor is fully editable, allowing you to modify the draft. Select **Update Draft** to save your changes. A banner with a **Review diff to approve** button lets you switch to the approval view when your changes are ready.
+- **Approval mode**: A read-only diff view showing what changed between the draft and the current revision. This view includes the review and approval controls along with an **Edit draft** button to switch back to edit mode if further changes are needed.
+
+### Approving and applying drafts
+
+Open drafts are listed in the **Approvals** tab in Pulumi Cloud. Select **Review changes** to open the approval mode diff view, where reviewers can approve or close the draft. Once the required number of approvals is met, the draft can be applied to update the environment.
+
+If the ruleset requires re-approval when changes are modified, any edits to an approved draft reset the approval count and require a fresh round of reviews.
 
 ## Open approvals
 
@@ -128,7 +170,7 @@ Open requests use two time-based controls to limit access:
 
 ### Approving and applying open requests
 
-Reviewers can approve open requests from the **Approvals** tab in Pulumi Cloud. Once the required number of approvals is met, the request must be applied to activate the access grant. You can apply the request from the Pulumi Cloud console by selecting the approved request and choosing **Apply**.
+Open requests are listed in the **Approvals** tab in Pulumi Cloud. Select **Review changes** to open the review view, where reviewers can approve or close the request. Once the required number of approvals is met, the request must be applied to activate the access grant. You can apply the request from the review view by selecting **Apply**.
 
 ### Opening an environment with an active grant
 
