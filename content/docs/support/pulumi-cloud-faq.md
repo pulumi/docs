@@ -33,7 +33,7 @@ The Pulumi Cloud supports the following browsers:
 
 ### How does Pulumi depend on the Pulumi Cloud?
 
-Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/concepts/how-pulumi-works/).
+Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
 
 ### What happens if app.pulumi.com is down?
 
@@ -112,7 +112,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring Stacks](/docs/deployments/projects-and-stacks#transferring-stacks).
+To learn more about this process, see [Transferring stacks](/docs/administration/organizations-teams/organizations/#transferring-stacks).
 
 ### How can I delete a Pulumi organization?
 

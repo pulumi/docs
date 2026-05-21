@@ -1,6 +1,5 @@
 ---
 title: "IaC Best Practices: Structuring Pulumi Projects"
-canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2023-03-17
 updated: 2025-03-04
 meta_desc: See how you can structures Pulumi projects as your infrastructure grows. Learn best practices for managing complexity and scaling teams.

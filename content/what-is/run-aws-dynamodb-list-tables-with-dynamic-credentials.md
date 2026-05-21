@@ -3,8 +3,10 @@ title: Run 'aws dynamodb list-tables' with Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws dynamodb list-tables' more securely and efficiently.
 
+meta_image: /images/what-is/run-aws-dynamodb-list-tables-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws dynamodb list-tables' with Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws dynamodb list-tables`](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/list-tables.html) command is part of the AWS Command Line Interface (CLI) and retrieves a list of Amazon DynamoDB tables within your AWS account.

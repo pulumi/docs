@@ -3,8 +3,10 @@ title: An error occurred (InvalidAccessKeyId) when calling the ListBuckets opera
 allow_long_title: true
 meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_image: /images/what-is/resolve-list-buckets-invalid-access-key-id-meta.png
 type: what-is
 page_title: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation
+authors: ["torian-crane"]
 ---
 
 The error message "An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that the provided AWS Access Key Id does not exist in their records. AWS Access Key IDs are used by AWS to authenticate and authorize access to various AWS services and resources. When you attempt an AWS CLI operation with an invalid or nonexistent Access Key ID, this error arises, as AWS cannot validate the provided identifier.

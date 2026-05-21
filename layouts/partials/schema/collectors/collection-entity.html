@@ -1,0 +1,44 @@
+{{/* Returns CollectionPage entity with embedded ItemList for hub/index pages.
+     Lets search engines recognize the page as a directory of articles and
+     unlocks itemList rich results in SERPs. */}}
+
+{{ $items := slice }}
+{{ $position := 0 }}
+{{ $topics := (where (where $.Site.Pages "Type" .Type) "IsPage" true).ByTitle }}
+{{ range $topics }}
+  {{ $position = add $position 1 }}
+  {{ $items = $items | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "url" .Permalink
+    "name" .Title
+  ) }}
+{{ end }}
+
+{{ $schema := dict
+  "@type" "CollectionPage"
+  "@id" "#main-content"
+  "name" .Title
+  "url" .Permalink
+  "inLanguage" "en-US"
+}}
+
+{{ with (or .Params.meta_desc .Summary) }}
+  {{ $schema = merge $schema (dict "description" .) }}
+{{ end }}
+
+{{ $schema = merge $schema (dict "mainEntity" (dict
+  "@type" "ItemList"
+  "numberOfItems" $position
+  "itemListElement" $items
+)) }}
+
+{{ $schema = merge $schema (dict
+  "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+) }}
+
+{{ $schema = merge $schema (dict
+  "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+) }}
+
+{{ return $schema }}

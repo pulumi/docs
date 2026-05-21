@@ -3,8 +3,10 @@ title: Run 'aws cloudwatch get-metric-data' w/ Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws cloudwatch get-metric-data' more securely and efficiently.
 
+meta_image: /images/what-is/run-aws-cloudwatch-get-metric-data-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws cloudwatch get-metric-data' with Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws cloudwatch get-metric-data`](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-data.html) command is part of the AWS Command Line Interface (CLI). It retrieves metric data from Amazon CloudWatch, a monitoring service provided by AWS. This command allows you to query and retrieve time-series data for a specified metric or set of metrics.

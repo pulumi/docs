@@ -3,8 +3,10 @@ title: An error occurred (SignatureDoesNotMatch) when calling the ListBuckets op
 allow_long_title: true
 meta_desc: |
      Use Pulumi ESC and dynamic credentials to run commands like aws ListBuckets in a more secure and seamless way.
+meta_image: /images/what-is/resolve-list-buckets-signature-does-not-match-meta.png
 type: what-is
 page_title: An error occurred (SignatureDoesNotMatch) when calling the ListBuckets operation
+authors: ["torian-crane"]
 ---
 
 The error message "An error occurred (SignatureDoesNotMatch) when calling the ListBuckets operation" in AWS (Amazon Web Services) indicates that there's a mismatch between the request signature calculated by AWS and the signature you provided. AWS relies on two key components for authentication: the AWS Access Key ID and the AWS Secret Access Key. The Secret Access Key is used for securely signing requests to AWS services. When you encounter this error, it typically signifies that the provided AWS Secret Access Key is incorrect or has been used with an inappropriate signing method.

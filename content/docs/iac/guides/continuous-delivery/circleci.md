@@ -1,14 +1,14 @@
 ---
-title_tag: "Using CircleCI | CI/CD"
-meta_desc: This page details how to use CircleCI CI/CD to deploy Pulumi stacks.
+title_tag: "Using CircleCI with Pulumi | CI/CD"
+meta_desc: Run Pulumi in CircleCI with the Pulumi Orbs, authenticate with Pulumi Cloud, and ship infrastructure through a trunk-based CI/CD workflow.
 title: CircleCI
-h1: Pulumi CI/CD & CircleCI
+h1: Using CircleCI with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: CircleCI
         parent: iac-using-pulumi-cicd
-        weight: 4
+        weight: 60
 aliases:
 - /docs/iac/using-pulumi/continuous-delivery/circleci/
 - /docs/reference/cd-circleci/
@@ -20,60 +20,186 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/circleci/
 ---
 
-This page details how to use [CircleCI](https://circleci.com/) to deploy Pulumi stacks.
+[CircleCI](https://circleci.com/) is a CI/CD platform that runs build, test, and deployment jobs defined in a `.circleci/config.yml` file in your repository. You run Pulumi in CircleCI with the [Pulumi Orbs for CircleCI](https://circleci.com/developer/orbs/orb/pulumi/pulumi), a Pulumi-maintained [orb](https://circleci.com/docs/orb-intro/) that provides reusable commands to install the Pulumi CLI and run Pulumi operations without custom scripts.
 
-You can refer to [CircleCI's documentation](https://circleci.com/docs/2.0/config-intro/#section=configuration)
-for information on how to configure your CircleCI jobs and workflows.
+The orb runs CLI commands, so it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/). It also works with [any cloud provider](/registry/) Pulumi supports.
 
-When it comes to integrating Pulumi, just like other CI/CD services, it is generally a matter
-of downloading the Pulumi command-line tool and running `pulumi up` from within the CircleCI
-environment. However, [Pulumi Orbs for CircleCI](https://circleci.com/orbs/registry/orb/pulumi/pulumi)
-enable a standard way to do this integration, without needing any custom scripting.
+{{% notes type="info" %}}
+This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
+{{% /notes %}}
 
-## Pulumi Orbs
+## Prerequisites
 
-The Pulumi orbs for CircleCI takes care of the mechanics of downloading and installing the Pulumi
-command-line tool, so that you can just focus on the specific steps to deploy your stacks within
-your CircleCI configuration.
+Before you begin, make sure you have:
 
-> For the most up-to-date information about Pulumi orbs, refer to the Pulumi page within the CircleCI
-> orb registry at [https://circleci.com/orbs/registry/orb/pulumi/pulumi](https://circleci.com/orbs/registry/orb/pulumi/pulumi).
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A CircleCI account with a project connected to your Git repository.
+1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-The following CircleCI `config.yaml` shows the Pulumi orbs in-action. It references the
-`pulumi/pulumi@1.0.0` orb package, and then downloads starts Pulumi using the  `pulumi/login` orb,
-and finally updates a stack using the `pulumi/update` orb.
+## Add the Pulumi orb
+
+Reference the orb at the top of your `.circleci/config.yml`. Pin a specific version so builds stay reproducible:
 
 ```yaml
 version: 2.1
+
 orbs:
-  pulumi: pulumi/pulumi@1.0.0
+  pulumi: pulumi/pulumi@2.2.0
+```
+
+Once the orb is referenced, its commands — such as `pulumi/login`, `pulumi/preview`, and `pulumi/update` — are available in any job's `steps`.
+
+## Authenticate with Pulumi Cloud
+
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. The `pulumi/login` command reads the token from the `PULUMI_ACCESS_TOKEN` environment variable.
+
+Store the token in a CircleCI [context](https://circleci.com/docs/contexts/) rather than committing it to your repository. A context holds environment variables at the organization level, so the same token is available to every project that needs it. You can also set it as a [project environment variable](https://circleci.com/docs/set-environment-variable/#set-an-environment-variable-in-a-project) if it's used by only one project. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a CircleCI job or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys in CircleCI.
+
+## Install program dependencies
+
+The `pulumi/login` command installs the Pulumi CLI, but it does not install your program's language dependencies. Add a step that runs [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) before any `preview` or `update` step:
+
+```yaml
+- run:
+    name: Install dependencies
+    command: pulumi install --cwd infra/
+```
+
+`pulumi install` installs the program's language dependencies and required plugins, so the same step works for a Pulumi program written in any supported language.
+
+{{% notes type="info" %}}
+The CircleCI executor image must include the runtime for your program's language — for example, a `cimg/node` image for TypeScript or JavaScript, or a `cimg/python` image for Python. See the [CircleCI convenience images](https://circleci.com/developer/images) for the available options.
+{{% /notes %}}
+
+## Build a trunk-based CI/CD workflow
+
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there.
+
+CircleCI does not have a dedicated pull request trigger; instead, you control when a job runs with [workflow filters](https://circleci.com/docs/configuration-reference/#filters) on branches and tags. The workflow below maps each stage of the trunk-based model to its own job:
+
+1. **Open a pull request.** The `preview` job runs on every non-main branch and reports the proposed changes with `pulumi preview`.
+1. **Merge to the main branch.** The `deploy-staging` job runs on `main` and deploys the change to a staging environment with `pulumi up`.
+1. **Promote to production.** Pushing a `release-*` tag runs the `deploy-production` job, which deploys to production.
+
+The following `.circleci/config.yml` implements all three stages. It assumes a Pulumi program in an `infra/` directory, stacks named `acme/website/staging` and `acme/website/production`, and a context named `pulumi` that holds `PULUMI_ACCESS_TOKEN`:
+
+```yaml
+version: 2.1
+
+orbs:
+  pulumi: pulumi/pulumi@2.2.0
+
 jobs:
-  build:
+  preview:
     docker:
-      - image: circleci/node:16.15
-    working_directory: ~/repo
+      - image: cimg/node:lts
     steps:
       - checkout
       - pulumi/login
       - run:
-          command: |
-            npm install
-            npm run build
+          name: Install dependencies
+          command: pulumi install --cwd infra/
+      - pulumi/preview:
+          stack: acme/website/staging
+          working_directory: infra/
+
+  deploy-staging:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - pulumi/login
+      - run:
+          name: Install dependencies
+          command: pulumi install --cwd infra/
       - pulumi/update:
-          stack: website-prod
+          stack: acme/website/staging
+          working_directory: infra/
+
+  deploy-production:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - pulumi/login
+      - run:
+          name: Install dependencies
+          command: pulumi install --cwd infra/
+      - pulumi/update:
+          stack: acme/website/production
+          working_directory: infra/
+
+workflows:
+  pulumi:
+    jobs:
+      # Pull request: preview the proposed changes on any non-main branch.
+      - preview:
+          context: pulumi
+          filters:
+            branches:
+              ignore: main
+      # Merge to main: deploy to the staging environment.
+      - deploy-staging:
+          context: pulumi
+          filters:
+            branches:
+              only: main
+      # Tag push: promote to production.
+      - deploy-production:
+          context: pulumi
+          filters:
+            tags:
+              only: /^release-.*/
+            branches:
+              ignore: /.*/
 ```
 
-Integrating Pulumi into CircleCI starts with the `pulumi/login` orb, which will take care of
-downloading the Pulumi command-line tool if it is not on the current `$PATH`. It will then run
-`pulumi login` using available credentials.
+By default, CircleCI ignores tag pushes, so the `deploy-production` job sets an explicit `filters.tags` entry and ignores all branches. To promote a release, push a tag that matches the `release-*` pattern:
 
-You can either specify the [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens)
-with the `access-token` parameter, or default to using the `$PULUMI_ACCESS_TOKEN` environment variable.
-Using the environment variable is preferred, as you can secure store that using secure
-[project-level configuration](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)
-within CircleCI.
+```bash
+git tag release-2026-05-20
+git push origin release-2026-05-20
+```
 
-### Reference
+For an optional ephemeral environment on each pull request, pair the `preview` job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
-The full [reference documentation](https://github.com/pulumi/circleci#orb-reference) for the Pulumi
-orbs can be found along side their source code [on Github](https://github.com/pulumi/circleci).
+## Orb command reference
+
+The Pulumi orb provides the following commands. Every command except `login` accepts a `working_directory` parameter (default `.`) for a Pulumi program in a subdirectory.
+
+| Command | Description | Key parameters |
+|---------|-------------|----------------|
+| `pulumi/login` | Installs the Pulumi CLI and runs `pulumi login`. | `version` (default `latest`), `cloud-url`, `access-token` (default `${PULUMI_ACCESS_TOKEN}`) |
+| `pulumi/preview` | Runs `pulumi preview` for a stack. | `stack` |
+| `pulumi/update` | Runs `pulumi up` for a stack. | `stack`, `skip-preview` |
+| `pulumi/refresh` | Runs `pulumi refresh` for a stack. | `stack`, `expect_no_changes`, `skip-preview` |
+| `pulumi/destroy` | Runs `pulumi destroy` for a stack. | `stack`, `skip-preview` |
+| `pulumi/stack_init` | Creates a new stack. | `stack`, `secrets_provider`, `copy` |
+| `pulumi/stack_rm` | Removes a stack and its configuration. | `stack`, `force` |
+| `pulumi/stack_output` | Reads a stack output into an environment variable. | `stack`, `property_name`, `env_var`, `show_secrets` |
+
+For the full parameter documentation, see the [orb registry page](https://circleci.com/developer/orbs/orb/pulumi/pulumi) and the [orb source](https://github.com/pulumi/circleci).
+
+## Using with other cloud providers
+
+To use the orb with AWS, Google Cloud, or another provider, supply the required credentials as environment variables in a CircleCI context or project. Your Pulumi program reads them when it runs in the `preview` and `update` jobs.
+
+Using [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials through [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/) avoids storing long-lived provider keys in CircleCI at all — the job needs only its Pulumi access token, and everything else flows from ESC.
+
+## Managing CircleCI with Pulumi
+
+You can manage CircleCI itself — projects, contexts, and environment variables — as code with the [CircleCI provider](/registry/packages/circleci/) in the Pulumi Registry. The provider is bridged from a Terraform provider; add it to your project with:
+
+```bash
+pulumi package add terraform-provider mrolla/circleci
+```
+
+## See also
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD identity token for a short-lived Pulumi access token.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.

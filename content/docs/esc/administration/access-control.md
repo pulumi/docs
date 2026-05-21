@@ -42,6 +42,8 @@ You can grant environment-wise permissions to members of a Team. There are four 
 * `Environment editor`: Team members will have `write` permissions
 * `Environment admin`: Team members will have `write` and `delete` permissions
 
+Team environment permissions can also be managed programmatically via the REST API. See [Managing environment access via the REST API](/docs/administration/access-identity/rbac/teams/#managing-environment-access-via-the-rest-api) for `curl` and `pulumi cloud api` examples.
+
 ### Just-in-time access
 
 In many organizations, certain environments contain sensitive credentials or configuration that should only be accessible on a temporary, as-needed basis. For example, an on-call engineer may need to open a production environment to troubleshoot an incident, but shouldn't have standing access outside of those situations.

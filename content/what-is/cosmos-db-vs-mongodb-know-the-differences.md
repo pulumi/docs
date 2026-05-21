@@ -3,6 +3,7 @@ title: Cosmos DB vs MongoDB, Know The Differences?
 meta_desc: |
      Compare Cosmos DB and MongoDB strengths and limitations to determine the best database option.
 
+meta_image: /images/what-is/cosmos-db-vs-mongodb-know-the-differences-meta.png
 type: what-is
 page_title: "Cosmos DB vs MongoDB, Know The Differences"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 {{% notes type="info" %}}
 **This document has been updated and expanded into [Cosmos DB vs Mongo DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/#cosmos-db-vs-mongodb) section of the [When to use Cosmos DB Guide](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/).**

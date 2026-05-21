@@ -17,6 +17,7 @@ tags:
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-code-organization-and-stacks/
+    - /blog/understanding-code-organization-stacks/
 ---
 
 This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->

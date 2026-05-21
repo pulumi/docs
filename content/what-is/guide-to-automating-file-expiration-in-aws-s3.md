@@ -3,8 +3,10 @@ title: Automating AWS S3 File Expiration with Pulumi
 meta_desc: |
      A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
+meta_image: /images/what-is/guide-to-automating-file-expiration-in-aws-s3-meta.png
 type: what-is
 page_title: Automate AWS S3 File Expiration with Pulumi
+authors: ["james-denyer"]
 ---
 
 ## A guide to automate AWS S3 file expiration with Pulumi

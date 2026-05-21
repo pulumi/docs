@@ -136,6 +136,14 @@ Java does not provide a dedicated JSON stringify helper. Use `apply` with a JSON
 
 {{% /choosable %}}
 
+{{% choosable language yaml %}}
+
+- **`fn::toJSON`** — Converts a value into its JSON representation. Because Pulumi YAML resolves resource outputs automatically, you can pass values that reference other resources directly, without an `apply`-style helper.
+
+For more details, see the [YAML language reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/#fntojson).
+
+{{% /choosable %}}
+
 ### Converting JSON strings to outputs
 
 If you have an output in the form of a JSON string and need to read individual fields from it or pass it to a function that expects a plain object, use one of the JSON parse helpers. These accept an output containing a JSON string and return a deserialized output.
@@ -177,5 +185,11 @@ For more details, see the [.NET SDK documentation](/docs/reference/pkg/dotnet/pu
 {{% choosable language java %}}
 
 Java does not provide a dedicated JSON parse helper. Use `apply` with a JSON library such as Jackson or Gson to deserialize JSON string outputs into Java objects manually.
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+Pulumi YAML does not provide a function for parsing JSON strings into objects.
 
 {{% /choosable %}}

@@ -1,8 +1,8 @@
 ---
 title: JavaScript and Infrastructure as Code
-meta_desc: |
-    Learn why JavaScript and Infrastructure as Code are a perfect match for creating versionable, testable and repeatable infrastructure.
+meta_desc: "Define cloud infrastructure as code in JavaScript or TypeScript: real types, npm packages, IDE tooling, and Jest tests for VPCs and clusters."
 
+meta_image: /images/what-is/javascript-and-infrastructure-as-code-meta.png
 type: what-is
 page_title: "JavaScript and Infrastructure as Code"
 
@@ -27,44 +27,172 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["pablo-seibelt"]
 ---
 
-[Infrastructure as Code (IaC)](/what-is/what-is-infrastructure-as-code) means that you use code to define and manage your infrastructure automatically rather than with manual processes. In a broader sense, IaC enables [cloud engineering](/blog/what-exactly-is-cloud-engineering/) and allows you to effectively apply software engineering practices to your infrastructure. With IaC, you can automatically build, deploy and manage your infrastructure much more effectively and reliably than you can manually. IaC makes your whole infrastructure versionable, [testable](/what-is/how-to-step-up-cloud-infrastructure-testing/) and repeatable.
+**JavaScript and TypeScript can be used to define [infrastructure as code](/what-is/what-is-infrastructure-as-code/) the same way they're used to build web applications: real programs, real types, real package management, real tests, real IDE tooling.** Instead of describing cloud resources in a custom DSL like HCL or in YAML, you write a Node.js program whose API calls describe a VPC, a Kubernetes cluster, or an S3 bucket. An IaC engine then reconciles your declared state with what's running in the cloud.
 
-People use many different programming languages to implement IaC (for our purposes, we mean infrastructure in the cloud). One of the most widely used is JavaScript.
+For teams already running on Node.js, this collapses the gap between the application layer and the platform under it. The same TypeScript types, the same `npm install` workflow, the same Jest test setup, the same VS Code experience, and the same code review process apply to the infrastructure your app runs on. Pulumi treats TypeScript and JavaScript as first-class IaC languages alongside Python, Go, .NET, Java, and YAML; this page covers why JavaScript and TypeScript are a strong fit for IaC, what the tradeoffs look like, and how to set up a JS/TS IaC project well.
 
-## Why is JavaScript So Popular?
+In this article, we'll cover the key questions about JavaScript and infrastructure as code:
 
-On its own, JavaScript is a programming language for writing client-side scripts. Those scripts run in a browser. How then can we use it to build our infrastructure? Enter Node.js. Node.js is a cross-platform, open-source, run-time environment that allows JavaScript to run on the server-side. In other words, Node.js allows Javascript code to run outside the browser.
+* Why use JavaScript or TypeScript for infrastructure as code?
+* Should I use JavaScript or TypeScript?
+* What does JS/TS offer that an IaC DSL doesn't?
+* How does writing IaC in JS/TS compare to HCL or YAML?
+* What ecosystem tools come with JavaScript IaC?
+* What patterns and pitfalls should I know about?
+* How does Pulumi support JavaScript and TypeScript?
+* Frequently asked questions about JavaScript and infrastructure as code
 
-JavaScript has always been popular. It is relatively easy to learn and has an active, helpful community that has created a large number of libraries, tools and frameworks that make it easy to develop and test JavaScript code. With the advent of Node.js, its popularity dramatically increased because the idea of “JavaScript everywhere” became possible. All forms of web development could use a single programming language. Consequently, different teams had a common language and could communicate and collaborate more effectively. As any DevOps advocate will tell you, good communication is essential for fostering innovation and decreasing time to market.
+## Why use JavaScript or TypeScript for infrastructure as code?
 
-Node.js has also made it possible for developers to expand their areas of expertise. They can apply their existing JavaScript skills to new areas, such as creating infrastructure in the cloud with JavaScript and infrastructure as code. They don’t have to learn specialized, vendor-specific languages that have many more limitations than a standard programming language. Because virtually all cloud providers support JavaScript, developers can pick the vendor (or even vendors) they prefer rather than being tied to a specific provider.
+A few practical reasons drive most adoptions:
 
-## JavaScript Infrastructure as Code and Serverless Computing
+* **The team already knows it.** Most full-stack and frontend-heavy organizations already run Node.js in production. Using the same language for IaC means no new training, no new style guides, no new package manager.
+* **The npm ecosystem is huge.** Thousands of utility libraries, validators, AWS/GCP/Azure SDK clients, retry helpers, schema validators, and logging libraries are already published, tested, and vetted at scale.
+* **Real abstractions, not text templates.** Functions, classes, modules, generics. A repeating VPC pattern becomes a Pulumi component you import, not a folder of copy-pasted HCL.
+* **Real testing tools.** Jest, Vitest, ts-mocha, supertest. Unit tests for IaC use the same runners you already configured for the application code.
+* **Real IDE support.** Autocomplete, jump-to-definition, refactoring, inline error squiggles. The same VS Code or WebStorm experience that helps with app code helps with cloud APIs that have hundreds of optional properties.
 
-Many developers now use JavaScript to create IaC, often in [serverless applications](/blog/architecture-as-code-serverless/). Serverless computing (or serverless for short), is an execution model where the cloud provider is responsible for executing a piece of code by dynamically allocating the resources. You are only charged for the resources used to run that code. Typically, some sort of event, such as a http request or a monitoring event, triggers the code. Some of the reasons that Javascript (running in Node.js) is so popular for IaC and serverless apps are:
+## Should I use JavaScript or TypeScript?
 
-- Programmers can use the JavaScript skills they already possess so they become productive right away.
-- Node.js is a very fast runtime.
-- Node.js requires very little memory.
-- Node.js doesn’t need to be compiled.
-- There is a vast ecosystem of reusable modules that developers can leverage to create microservices.
-- The npm package manager makes it easy to make JavaScript modules easy to discover and it manages dependency conflicts.
-- JavaScript is the best language for processing the JSON format. A common serverless function (called Lambdas on AWS, Azure Functions on Azure and Google Cloud Functions on Google Cloud) is to perform some sort of translation on a JSON object.
+TypeScript, in almost every case. Modern infrastructure has hundreds of optional properties per resource (a single AWS RDS instance has 50+ configuration fields), and the cost of a typo or a missing required field is a failed deploy or a security incident. TypeScript catches both at compile time.
 
-## The Serverless Framework
+| Aspect | JavaScript | TypeScript |
+|---|---|---|
+| Typing | None at compile time | Full static types, including for cloud resource shapes |
+| IDE experience | Decent | Excellent (autocomplete, jump-to-definition, refactor) |
+| Catches typos before deploy | No | Yes |
+| Setup overhead | None | A `tsconfig.json` + a build step |
+| Learning curve from JS | Same | A few hours to get productive; gradual adoption supported |
 
-The Serverless Framework is another reason for JavaScript’s popularity for serverless architectures. It is written in Node.js and it lets you develop and deploy serverless applications to AWS, Azure, Google Cloud and other cloud providers. A Serverless app can be as simple as a couple of lambda functions or an entire back-end composed of hundreds of lambda functions.
+Pulumi templates generate TypeScript projects by default for this reason. The runtime cost of TypeScript is zero (it compiles to plain JavaScript); the development-time payoff for IaC is high.
 
-## Find the Right Platform: JavaScript and Infrastructure as Code
+## What does JS/TS offer that an IaC DSL doesn't?
 
-There are platforms available that can really boost your productivity when it comes to JavaScript and Infrastructure as Code. Here are a few qualities to look for:
+DSLs like HCL or CloudFormation YAML are deliberately limited: no functions, limited loops, no real type system, no module system other than what the DSL provides. That keeps the surface area small at the cost of expressiveness. JS/TS gives back what the DSL took away:
 
-- **Support for Standard Languages.** Of course, you need a platform that [fully supports JavaScript and Node.js](/docs/languages-sdks/javascript/).
-- **Multi-cloud support.** Make sure the platform allows you to build, manage and deploy your infrastructure to [any cloud provider](/registry/).
-- **Improves on the Serverless Framework.** While the Serverless Framework definitely helps with serverless computing, it only helps with that part of your application. Find a platform that lets you adopt a more holistic approach and treats the entire program as cloud-native. You should be able to write entire applications within that platform. Some parts of that application may be serverless functions, but you should also be able to include resources such as containers, databases, and cloud services.
+* **Loops and conditionals that compose.** A subnet per availability zone, a Lambda per region, or a Kubernetes namespace per tenant, all expressed as familiar `.map()` and `for` loops rather than DSL-specific iteration features.
+* **Abstractions you actually own.** A Pulumi component is just a TypeScript class. It can take typed inputs, build any combination of underlying resources, and expose typed outputs. You can publish it to npm, version it semantically, and depend on it from many stacks.
+* **Sharing through npm.** Internal Pulumi packages live in a private npm registry next to your other internal libraries. Public packages live on npm.
+* **Real types over cloud APIs.** Every AWS, Azure, Google Cloud, and Kubernetes resource has a generated TypeScript type. The compiler knows what fields exist, which are required, and what types they take.
+* **Standard testing infrastructure.** Jest tests for IaC live next to Jest tests for the app, run in the same CI step, and use the same mocking patterns.
 
-## Pulumi Corporation
+## How does writing IaC in JS/TS compare to HCL or YAML?
 
-Pulumi's Cloud Engineering Platform unites infrastructure teams, application developers, and compliance teams around a unified software engineering process for delivering modern cloud applications faster and speeding innovation. Pulumi’s open-source tools help infrastructure teams tame the cloud’s complexity with Universal Infrastructure-as-Code using the world’s most popular programming languages and communities, including [Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript), [Go](/docs/languages-sdks/go/), and [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet). [Get started for free today](/docs/get-started/), or check out one of our on-demand workshops on getting started with [Infrastructure as Code and JavaScript](/events#on-demand).
+| Dimension | HCL (Terraform / OpenTofu) | YAML (CloudFormation, raw K8s) | JS / TS (Pulumi) |
+|---|---|---|---|
+| Language model | Domain-specific | Markup with macros | General-purpose |
+| Loops & conditionals | Limited (`for_each`, `count`) | None (manual templating) | Full language constructs |
+| Types | Limited | None | Full TypeScript types |
+| Package ecosystem | Terraform registry | None | npm |
+| IDE support | Good | OK | Excellent |
+| Testing | Terratest, limited unit | Limited | Jest/Vitest, mocks, full TDD |
+| Sharing modules | Registry modules | Nested stacks / Helm | npm packages, Pulumi components |
+| Onboarding for JS devs | Steep | Easy | Trivial |
+
+The right choice depends on what your team already knows and what skills you want to scale. Teams with deep JS/TS expertise tend to find Pulumi's TS workflow more natural; teams that have invested heavily in Terraform sometimes prefer to stay on HCL.
+
+## What ecosystem tools come with JavaScript IaC?
+
+JavaScript and TypeScript IaC plugs straight into the toolchain your application code already uses:
+
+| Tool category | Representative tools |
+|---|---|
+| Package management | npm, yarn, pnpm |
+| Testing | Jest, Vitest, Mocha + Chai, supertest |
+| Linting / formatting | ESLint, Prettier, Biome |
+| TypeScript build | `tsc`, esbuild, swc |
+| IDE | VS Code, WebStorm, Neovim with `tsserver` |
+| Static analysis | Knip, ts-prune, `noImplicitAny`, `strict` |
+| CI/CD | GitHub Actions, GitLab CI, CircleCI, anything that runs `npm` |
+| Bundling (where needed) | esbuild, webpack |
+| Cloud SDKs | AWS SDK v3, Azure SDK for JS, Google Cloud client libraries (used directly from Pulumi programs when needed) |
+| Schema validation | Zod, Yup, JSON Schema validators |
+
+Combined with Pulumi's typed resource SDK, this means every workflow that exists for JavaScript apps (PR review, type checking, formatting, dependency updates via Dependabot or Renovate, deploy pipelines) applies unchanged to your infrastructure.
+
+## What patterns and pitfalls should I know about?
+
+A few patterns that hold up in production Node.js + Pulumi codebases:
+
+* **Use TypeScript with `strict` enabled.** Strict mode catches the entire class of "undefined is not a function" issues at compile time. Worth setting on day one.
+* **Don't import the cloud SDKs to "do something real time" inside a Pulumi program.** Pulumi programs describe desired state; they don't execute imperative calls against the cloud at apply time. Use Pulumi resources for declared state and `pulumi.runtime.runInPulumiStack` only for the small set of advanced cases that genuinely need it.
+* **Don't put secrets in source.** Use [Pulumi ESC](/product/esc/) or another secrets store and pull them at runtime. Configuration stays in code; secret material doesn't.
+* **Write components for any pattern you repeat.** If you copy-paste a VPC three times, the fourth time it should be `new MyVpc()`. Components version like any other npm package.
+* **Treat `package-lock.json` (or `pnpm-lock.yaml`) as part of your IaC.** Lock files make `pulumi up` reproducible. Without them, a new transitive dependency can break a deploy.
+* **Pin Pulumi providers explicitly.** Like any other npm dependency, Pulumi provider packages can release breaking changes. Pin major versions and upgrade deliberately.
+* **Run `pulumi preview` on every PR.** Show the planned change as a comment so the reviewer doesn't have to guess what your TypeScript program is going to do.
+* **Keep `async`/`await` and Pulumi outputs distinct.** Pulumi outputs (`Output<T>`) are not the same as JavaScript promises. Use `.apply()`, `pulumi.all`, and string interpolation helpers rather than awaiting them.
+
+The most common pitfall: writing IaC like a script. JS/TS lets you do that, but you give up the strengths of declarative IaC if you do. Describe state; let Pulumi reconcile.
+
+## How does Pulumi support JavaScript and TypeScript?
+
+Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java, and YAML.
+
+* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and 100+ other providers. Generated from each provider's API, so the types reflect the real cloud surface.
+* **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
+* **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
+* **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
+* **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
+* **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
+* **Policy as code in TypeScript.** [Pulumi policies](/docs/insights/policy/) can be written in the same language as the IaC, with the same typing over the resource model.
+* **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Node.js programs, CI jobs, and applications, with audit trails.
+
+[Get started with Pulumi and TypeScript](/docs/get-started/) to provision cloud infrastructure with the same tools you already use for application code.
+
+## Frequently asked questions about JavaScript and infrastructure as code
+
+### Can I use Node.js to manage infrastructure on every cloud?
+
+Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
+
+### Is TypeScript meaningfully better than JavaScript for IaC?
+
+Yes. Cloud resources have large, complex shapes; the compiler catching a missing required property or a typo before deploy is a continuous productivity win. The runtime is the same Node.js you'd get with plain JS, and the build step is unobtrusive.
+
+### How does JS/TS compare to HCL for IaC?
+
+HCL is a domain-specific language built for IaC; TypeScript is a general-purpose language used for IaC. HCL is simpler if you're starting from scratch and the team doesn't have a JS background. TypeScript wins on abstraction, testing, IDE support, and team familiarity once you're already in the npm ecosystem. See the comparison table above.
+
+### Do I have to use Node.js to use Pulumi?
+
+No. Pulumi supports Python, Go, .NET (C#, F#, VB), Java, and YAML alongside Node.js (JavaScript / TypeScript). Pick whichever language your team already uses.
+
+### Can I write Pulumi infrastructure tests with Jest?
+
+Yes. Jest is the most common choice for unit testing Pulumi TypeScript programs. Pulumi provides mocks that replace cloud calls so the tests run entirely in memory. See the [unit testing guide](/docs/iac/using-pulumi/testing/unit/).
+
+### Can I publish a Pulumi component to npm?
+
+Yes. A Pulumi component is just a TypeScript class. Compile it, publish it to npm (public or private), and depend on it from any number of stacks. Many platform teams maintain an internal npm registry of opinionated components for the rest of the company.
+
+### What's the difference between an Output and a Promise?
+
+A Pulumi `Output<T>` represents a value that's resolved during deploy time, often with dependencies on other resources. JavaScript `Promise<T>` is a generic asynchronous-value abstraction. Awaiting an `Output` directly doesn't work the way you'd expect; use `.apply()`, `pulumi.all([...])`, or string interpolation (`pulumi.interpolate`) to read or compose them.
+
+### How do you handle secrets in a Node.js Pulumi program?
+
+Use `pulumi.secret()` for values that should be encrypted in state, and pull anything sensitive from [Pulumi ESC](/product/esc/), AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault at runtime. The Pulumi program references the secret; the secret material doesn't live in source.
+
+### Can I migrate from Terraform / HCL to TypeScript?
+
+Yes. Pulumi can import existing cloud resources with `pulumi import` and can interoperate with Terraform state via `pulumi convert` for the source code. Many teams do an incremental migration: new infrastructure in TypeScript, existing HCL stays put until it changes, eventually retiring HCL as resources move under Pulumi management.
+
+### Does Pulumi's TypeScript SDK update when the cloud provider's API changes?
+
+Yes. Pulumi regenerates the provider SDKs from each provider's source schema — either the upstream cloud API for native providers, or the Terraform provider schema for bridged providers — so new resource types and properties appear in the npm packages shortly after the provider ships them. Provider versions are pinned in `package.json` so you control when to adopt new releases.
+
+## Learn more
+
+Pulumi makes JavaScript and TypeScript a first-class option for infrastructure as code: typed SDKs for every major cloud, reusable components as npm packages, Jest tests with cloud mocks, and the same CI/CD and code review workflow you already use for the app. [Get started today](/docs/get-started/).
+
+Related reading:
+
+* [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
+* [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
+* [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
+* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [Python for DevOps](/what-is/python-for-devops/)

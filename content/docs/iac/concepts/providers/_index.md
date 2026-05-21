@@ -21,7 +21,7 @@ aliases:
 
 A resource provider handles communications with a cloud or SaaS service to create, read, update, and delete the resources you define in your Pulumi programs.
 
-Providers are composed of two parts: an executable, which makes the actual call to the cloud provider's API, and an SDK, which allows you to consume the provider in the language of your Pulumi program. When you run your Pulumi program, Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the provider executable to produce that state. The resource provider translates those requests into API calls to the cloud service.
+Providers are composed of two parts: an executable, which makes the actual call to the cloud provider's API, and an SDK, which allows you to consume the provider in the language of your Pulumi program. When you run your Pulumi program, Pulumi passes your code to a language host such as Node.js, waits to be notified of resource registrations, assembles a model of your desired state, and calls on the provider executable to produce that state. The resource provider translates those requests into API calls to the cloud service. To see how providers fit into the larger picture, see [How Pulumi IaC works](/docs/iac/guides/basics/how-pulumi-works/).
 
 {{% notes type="info" %}}
 Providers are a specific type of [plugin](/docs/iac/concepts/plugins/) called a resource plugin. For more information about plugins and how they work in Pulumi, see the [plugins concept page](/docs/iac/concepts/plugins/).

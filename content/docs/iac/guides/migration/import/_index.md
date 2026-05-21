@@ -32,6 +32,10 @@ There are two ways to import an existing cloud resource into a Pulumi project:
 
 Both approaches allow you to adopt and begin managing existing cloud resources with Pulumi, but they work in slightly different ways, and are suited to slightly different use cases. The sections below explain both in more detail.
 
+{{% notes "info" %}}
+Pulumi Cloud also offers [Visual Import](/docs/insights/discovery/visual-import/), a guided, point-and-click workflow that discovers existing cloud resources and generates IaC code for them --- no CLI required. It's available to [Pulumi Insights](/docs/insights/) users on the Team, Enterprise, and Business Critical editions.
+{{% /notes %}}
+
 ## How resource import works
 
 Import uses the selected stack's configured [provider](/docs/concepts/resources/providers/) to look up the desired resource in the cloud provider, read its current configuration, and add the resource to the stack to bring it under management by Pulumi from that point forward. For this, it requires two pieces of information:

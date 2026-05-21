@@ -1,6 +1,5 @@
 ---
-title: What Is?
-meta_desc: |
-    Pulumi's "What Is?" series provides deep dives into popular Cloud Engineering terminology, topics,
-    and leading techniques.
+title: "Cloud Engineering Concepts Explained"
+page_title: "Cloud Engineering Concepts Explained"
+meta_desc: "Plain-English explainers of infrastructure as code, DevOps, CI/CD, Kubernetes, platform engineering, secrets management, and other cloud engineering topics."
 ---

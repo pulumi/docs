@@ -55,7 +55,7 @@ items:
           - label: Documentation
             href: /docs/
             description: Complete guides and API references
-            icon: books
+            icon: book-open
             track: header-engineers-docs
           - label: Registry
             href: /registry/
@@ -92,6 +92,11 @@ items:
             description: Practical infrastructure patterns for cloud providers
             icon: compass
             track: header-engineers-guides
+          - label: Releases
+            href: /releases/
+            description: Major platform updates from the team
+            icon: megaphone-simple
+            track: header-engineers-releases
 
   - label: For enterprises
     sections:

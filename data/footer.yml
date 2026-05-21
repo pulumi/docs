@@ -35,6 +35,9 @@ columns:
       - label: Events
         href: /events/
         track: footer-events
+      - label: Releases
+        href: /releases/
+        track: footer-releases
       - label: Community
         href: /community/
         track: footer-community

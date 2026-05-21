@@ -3,6 +3,7 @@ title: Amazon DynamoDB vs Google Cloud Bigtable
 meta_desc: |
      Compare Bigtable vs DynamoDB to learn the many similarities and differences between these two noSQL databases. Learn which is best with Pulumi.
 
+meta_image: /images/what-is/amazon-dynamodb-vs-google-cloud-bigtable-meta.png
 type: what-is
 page_title: "Amazon DynamoDB vs Google Cloud Bigtable"
 
@@ -27,6 +28,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["kat-cosgrove"]
 ---
 
 ## Biggest Similarities and Differences Between Google Cloud Bigtable and AWS DynamoDB

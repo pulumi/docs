@@ -82,7 +82,7 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 The GitHub app only requires that your code is hosted on GitHub and that you use pull requests to manage changes. It does not require GitHub Actions — any CI/CD system works, including GitHub Actions, CircleCI, Jenkins, Pulumi Deployments, or any other system.
 
-Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub. See the [Continuous Delivery](/docs/using-pulumi/continuous-delivery/) guide for integration instructions.
+Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub. See [Continuous delivery](/docs/iac/guides/continuous-delivery/) for integration instructions, or the [GitHub Actions guide](/docs/iac/guides/continuous-delivery/github-actions/) if you run Pulumi in GitHub Actions.
 
 ## Uninstallation
 

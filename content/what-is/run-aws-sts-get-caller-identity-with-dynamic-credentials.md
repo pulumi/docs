@@ -3,8 +3,10 @@ title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws sts get-caller-identity' in a more secure and efficient manner.
 
+meta_image: /images/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Security Token Service (STS)  enables users to request temporary, limited-privilege credentials for AWS interactions.

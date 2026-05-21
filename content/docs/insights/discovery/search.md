@@ -444,12 +444,12 @@ You do not need to query AI Assist with English:
 
 ## Access controls
 
-Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/deployments/projects-and-stacks/#stack-permissions) to access.
+Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/administration/access-identity/stack-permissions/) to access.
 More specifically:
 
 - Organization admins have access to all resources.
 - If an organization has a default permission of read or write, then all users can query all resources.
-- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/deployments/projects-and-stacks/#stack-permissions) or [Team](/docs/administration/organizations-teams/teams/#team-permissions) permissions.
+- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/access-identity/stack-permissions/) or [Team](/docs/administration/organizations-teams/teams/#team-permissions) permissions.
 
 [types]: /docs/concepts/resources/names/#types
 [urn]: /docs/concepts/resources/names/#urns

@@ -3,8 +3,10 @@ title: What is Configuration Management?
 allow_long_title: true
 meta_desc: |
     Learn about what configuration management is and why configuration management is instrumental in maintaining the health and consistency of software systems.
+meta_image: /images/what-is/what-is-configuration-management-meta.png
 type: what-is
 page_title: What is Configuration Management?
+authors: ["scott-lowe"]
 ---
 
 ## What is configuration management?

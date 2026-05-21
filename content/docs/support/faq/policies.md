@@ -41,8 +41,6 @@ This means that if a stack belongs to multiple Policy Groups that specify differ
 
 Under a stack's "Settings" tab you can take a look at the Policy Packs that would be enforced on a `preview` or `update` as well as the Policy Groups that the stack belongs to.
 
-![Stack Policy Settings](/images/docs/guides/crossguard/stack-policies.png)
-
 ## How does Policy as Code work during a stack import or refresh?
 
 During `pulumi stack import`, Policy Packs are not run. This command does not modify any resources and allows you to make manual changes to the state file. During the next update, the resources and state file would be updated based on the stack's Pulumi program, which must be in compliance to succeed.

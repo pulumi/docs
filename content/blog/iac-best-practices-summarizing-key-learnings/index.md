@@ -1,6 +1,5 @@
 ---
 title: "IaC Best Practices: Summarizing Key Learnings"
-canonical_url: https://www.pulumi.com/blog/understanding-code-organization-stacks/
 date: 2024-04-08
 updated: 2025-03-04
 draft: false

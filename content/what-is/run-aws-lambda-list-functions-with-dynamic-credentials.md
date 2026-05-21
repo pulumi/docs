@@ -3,8 +3,10 @@ title: Run 'aws lambda list-functions' with Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws lambda list-functions' more securely and efficiently.
 
+meta_image: /images/what-is/run-aws-lambda-list-functions-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws lambda list-functions' with Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws lambda list-functions`](https://docs.aws.amazon.com/cli/latest/reference/lambda/list-functions.html) command is part of the AWS Command Line Interface (CLI) and retrieves a list of AWS Lambda functions within your AWS account. It returns a JSON-formatted list of information such as function name, ARN (Amazon Resource Name), runtime, memory size, and more.

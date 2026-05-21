@@ -1,289 +1,212 @@
 ---
 title: What is Cloud Security?
-meta_desc: |
-    Learn about cloud security concepts, best practices, and how infrastructure as code helps secure cloud environments.
+meta_desc: "Cloud security is the practice of protecting cloud workloads, data, and identities. Learn the shared responsibility model, key risks, and proven controls."
+meta_image: /images/what-is/what-is-cloud-security-meta.png
 type: what-is
 page_title: "What is Cloud Security?"
+authors: ["cam-soper"]
 ---
 
-Cloud security encompasses the technologies, policies, controls, and services designed to protect cloud computing environments, data, applications, and infrastructure against threats and vulnerabilities. As organizations accelerate their digital transformation and migrate critical workloads to the cloud, implementing robust cloud infrastructure security measures becomes essential for preventing data breaches, ensuring regulatory compliance, and maintaining business continuity.
+**Cloud security is the set of policies, controls, technologies, and operational practices that protect cloud workloads, data, identities, and infrastructure from attack and accidental exposure.** It spans every layer of a modern stack, from the cloud provider's physical data centers to your IAM policies, network rules, container images, secrets, and the application code that runs on top.
 
-The shift from traditional on-premises infrastructure to cloud computing environments has fundamentally transformed security approaches. Organizations must now adapt their security strategies to address the unique characteristics of cloud infrastructure while navigating shared responsibility models with their cloud service providers.
+Cloud security is a partnership: the provider secures the platform, and you secure what you build on it. That division is the shared responsibility model, and the large majority of cloud security incidents are not provider failures. They're customer-side misconfigurations. Modern teams treat cloud security as an engineering problem: configurations live in [infrastructure as code](/what-is/what-is-infrastructure-as-code/), [policies](/docs/insights/policy/) run in CI, secrets are pulled from a [centralized vault](/product/esc/), and every change is reviewed in Git before it touches production.
 
-In this comprehensive guide to cloud security, we'll explore:
+In this article, we'll cover the key questions about cloud security:
 
-* [What is cloud security and why is it important?](#definition-and-importance)
-* [How cloud security differs from traditional security](#cloud-vs-traditional-security)
-* [Key components of cloud infrastructure security](#key-components)
-* [Cloud security best practices for organizations](#best-practices)
-* [Common cloud security challenges and pitfalls](#common-challenges)
-* [Frequently asked questions about cloud security](#frequently-asked-questions)
+* Why does cloud security matter?
+* How is cloud security different from on-premises security?
+* What is the shared responsibility model?
+* What are the CIA triad and core principles of cloud security?
+* What are the main domains of cloud security?
+* What are the biggest cloud security risks?
+* What are cloud security best practices?
+* How does infrastructure as code strengthen cloud security?
+* Frequently asked questions about cloud security
 
-## Definition and importance
+## Why does cloud security matter?
 
-Cloud security refers to the collection of technologies, policies, controls, and services that protect cloud-based systems and data from threats. It encompasses multiple dimensions including network security, identity management, access control, data protection, and compliance management in cloud computing environments.
+Public cloud is where most new software is built and run, and the stakes are higher than they were on-prem. Three forces make cloud security a board-level concern.
 
-> [!INFO]
-> Cloud security requires a different approach than traditional infrastructure security because of cloud computing's unique characteristics: shared resources, broad network access, rapid elasticity, measured service, and on-demand self-service.
+### The attack surface keeps growing
 
-Cloud security is critical for modern organizations for several reasons:
+A typical cloud-native app spans hundreds of resources: VMs, container clusters, managed databases, object storage, queues, IAM roles, API gateways, SaaS integrations. Each one is reachable through an API. The attack surface is no longer a single network edge; it now extends across credentials, public storage, and overly-permissive roles in every account.
 
-* **Data protection** - Cloud environments store massive amounts of sensitive data that require strong protection against unauthorized access and data breaches
-* **Compliance requirements** - Many industries face strict regulatory mandates that require specific security controls and protections in cloud environments
-* **Business reputation** - Security incidents can severely damage customer trust and brand reputation
-* **Operational continuity** - Security measures help ensure cloud services remain available and resilient against disruptions
-* **Cost management** - Proactive security is significantly more cost-effective than responding to security breaches
-* **Evolving threats** - Cloud environments face sophisticated and constantly evolving security threats requiring robust defenses
+### Misconfigurations are the dominant failure mode
 
-The strategic importance of cloud security continues to grow as organizations increase their reliance on [cloud infrastructure](/what-is/what-is-infrastructure-as-code) and services for business-critical operations.
+The large majority of cloud breaches trace back to customer-side configuration mistakes, not exploits of the cloud platforms themselves. Public S3 buckets, IAM roles with `*` permissions, unrestricted security groups, and forgotten dev environments all create exposures that automated scanners are continuously hunting for.
 
-## Cloud vs traditional security
+### Regulation has caught up
 
-Cloud security differs significantly from traditional security approaches in several key ways:
+GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001, FedRAMP, and HITRUST all now require demonstrable controls on cloud workloads. Failure to comply has direct financial and contractual consequences, and the cost of a serious breach (incident response, regulatory penalties, customer churn, reputational damage) routinely reaches the millions.
 
-### Distributed perimeter
+## How is cloud security different from on-premises security?
 
-Traditional security focused on protecting a well-defined network perimeter with firewalls and intrusion detection systems. Cloud security must address a distributed perimeter where resources can be accessed from anywhere and data flows across multiple environments.
+The disciplines overlap, but the cloud changes most of the operating assumptions.
 
-### Dynamic environments
+| Dimension | On-premises | Cloud |
+|---|---|---|
+| Perimeter | Network edge (firewalls, DMZ) | Identity and API surface |
+| Infrastructure | Long-lived, manually configured | Ephemeral, API-provisioned |
+| Responsibility | Fully owned by the organization | Shared with the provider |
+| Pace of change | Days to weeks | Minutes to hours |
+| Primary risk | External network attack | Misconfiguration and excessive permissions |
+| Inventory | Static asset database | Dynamic, multi-account, multi-cloud |
 
-Unlike relatively static on-premises infrastructure, cloud environments are highly dynamic with resources being provisioned, scaled, and decommissioned rapidly. Security controls must be equally dynamic and automated to keep pace.
+The practical consequence is that cloud security has to be automated. There are too many resources changing too quickly for manual reviews to keep up, which is why infrastructure as code, policy as code, and continuous detection are the standard tooling rather than optional add-ons.
 
-### Shared responsibility model
+## What is the shared responsibility model?
 
-In traditional environments, organizations managed all security aspects themselves. Cloud security operates under a shared responsibility model where:
+Every major cloud provider (AWS, Azure, Google Cloud) operates a shared responsibility model that splits security duties between provider and customer. The split depends on the service model.
 
-* **Cloud providers** are responsible for securing the underlying infrastructure (compute, storage, networking) and physical facilities
-* **Customers** are responsible for securing their data, applications, access management, and configurations
+| Layer | IaaS (e.g. EC2) | PaaS (e.g. App Engine) | SaaS (e.g. Microsoft 365) |
+|---|---|---|---|
+| Physical security | Provider | Provider | Provider |
+| Network infrastructure | Provider | Provider | Provider |
+| Host operating system | **Customer** | Provider | Provider |
+| Application runtime | **Customer** | Provider | Provider |
+| Application code | **Customer** | **Customer** | Provider |
+| Data and content | **Customer** | **Customer** | **Customer** |
+| Identity and access | **Customer** | **Customer** | **Customer** |
+| Configuration | **Customer** | **Customer** | **Customer** |
 
-Understanding this division of responsibilities is crucial, as many security incidents in the cloud stem from customer misconfigurations rather than provider vulnerabilities.
+Customers always own data, identity, and configuration. The lower the abstraction (IaaS), the more operating-system and runtime work the customer takes on. The higher the abstraction (SaaS), the more the provider handles. Most avoidable cloud breaches live in one of the rows labeled **Customer**.
 
-### Identity-centric security
+## What are the CIA triad and core principles of cloud security?
 
-Traditional security was largely network-centric, while cloud security shifts toward identity as the primary security perimeter. This requires robust identity and access management across all cloud resources.
+The CIA triad is the canonical framework for what security controls should achieve. It maps cleanly onto cloud workloads.
 
-### API-driven infrastructure
+* **Confidentiality.** Only authorized identities can read sensitive data. Achieved through encryption at rest and in transit, IAM, network isolation, and secrets management.
+* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and drift detection.
+* **Availability.** Services stay reachable to the people meant to reach them, even during attack or failure. Achieved through redundancy, DDoS protection, capacity planning, and incident response.
 
-Cloud environments are API-driven, creating both security challenges (API vulnerabilities) and opportunities (security automation). Traditional infrastructure lacked this API-centric architecture.
+A handful of additional principles round out modern cloud security practice: **defense in depth** (multiple overlapping controls), **least privilege** (only the access strictly required), **zero trust** (no implicit trust based on network location), and **secure by default** (insecure configurations require a deliberate override).
 
-## Key components
+## What are the main domains of cloud security?
 
-Effective cloud security strategies require multiple layers of protection working together:
+Cloud security is broad. Most programs are organized around six domains.
 
-### Identity and access management
+### Identity and access management (IAM)
 
-Controlling who can access cloud resources and what actions they can perform:
-
-* Role-based access controls (RBAC) aligned with least privilege principles
-* Multi-factor authentication (MFA) for all user accounts
-* Just-in-time and just-enough access provisioning
-* Strong service account management
-* Identity governance and regular access reviews
-
-For more information on effective access management, see our guide on [configuration management](/what-is/what-is-configuration-management).
+The cloud's primary perimeter. Modern IAM covers user federation, role-based and attribute-based access control, service identities (workload identity, IAM roles for service accounts), MFA, just-in-time elevation, and short-lived credentials.
 
 ### Data protection
 
-Securing data throughout its lifecycle in the cloud:
+Classification, encryption with keys managed via KMS or HSM, data loss prevention, secure backups, and data residency controls.
 
-* Encryption for data at rest and in transit
-* Data classification and handling policies
-* Data loss prevention (DLP) controls
-* Secure key management practices
-* Backup and recovery mechanisms
-* Data residency and sovereignty controls
+### Network security
 
-### Cloud infrastructure security
+VPC design, security groups, network ACLs, service mesh policies, private endpoints, egress filtering, web application firewalls, and DDoS protection.
 
-Protecting the underlying cloud infrastructure components:
+### Application and workload security
 
-* Network security controls (security groups, NACLs, firewalls)
-* Secure resource configurations
-* Vulnerability and patch management
-* Container and serverless security measures
-* Host-based security tools
-* Network segmentation and micro-segmentation
+SBOM and dependency scanning, container image signing and scanning, runtime protection, API gateways, and secrets injection at runtime via [Pulumi ESC](/product/esc/) or similar tooling.
 
-### Cloud application security
+### Configuration and posture management
 
-Securing cloud-native and migrated applications:
+Cloud security posture management (CSPM), infrastructure as code, [policy as code](/docs/insights/policy/), drift detection, and automated remediation.
 
-* Secure development practices for cloud-native apps
-* DevSecOps integration throughout the development lifecycle
-* API security mechanisms
-* Microservices security
-* Web application firewalls
-* Runtime application self-protection
+### Detection and response
 
-### Security operations
+Centralized logging, SIEM, threat detection, behavior analytics, and cloud-native incident response runbooks.
 
-Continuous monitoring and response functions:
+## What are the biggest cloud security risks?
 
-* Cloud security monitoring and logging
-* Threat detection and response capabilities
-* Security information and event management (SIEM)
-* Security orchestration, automation, and response (SOAR)
-* Incident response procedures specifically for cloud environments
+The OWASP Cloud-Native Application Security Top 10 and the Cloud Security Alliance's "Top Threats" reports converge on a fairly consistent list:
 
-### Governance and compliance
+1. **Misconfigurations.** Publicly accessible storage, overly permissive IAM, open security groups. The single biggest source of cloud breaches.
+1. **Identity and credential compromise.** Phished users, leaked access keys, long-lived service account credentials.
+1. **Insecure APIs and interfaces.** Unauthenticated endpoints, broken object-level authorization, missing rate limits.
+1. **Insider threat and account abuse.** Employees, contractors, or compromised accounts with more access than they need.
+1. **Supply chain attacks.** Compromised dependencies, container base images, or CI/CD pipelines.
+1. **Insufficient logging and monitoring.** Without telemetry, attackers can operate undetected for months.
+1. **Data exfiltration.** Lateral movement leading to bulk extraction of customer or PII data.
+1. **Shared-technology vulnerabilities.** Cross-tenant issues in multi-tenant services. Rare but high-impact.
+1. **Compliance and regulatory failures.** Controls that exist on paper but aren't enforced in the running system.
+1. **Shadow IT and unsanctioned cloud usage.** Teams spinning up resources outside the central security program.
 
-Managing overall cloud security posture:
+## What are cloud security best practices?
 
-* Cloud security posture management (CSPM)
-* Compliance monitoring and reporting
-* Security policies and standards
-* Risk assessment and management
-* Third-party vendor security management
+A practical baseline that holds up across providers and team sizes:
 
-## Best practices
+* **Define infrastructure as code.** Replace console clicks with version-controlled [infrastructure as code](/what-is/what-is-infrastructure-as-code/) so every cloud change is reviewable and reproducible.
+* **Enforce policy as code in CI.** Block insecure configurations before they deploy with tools like [Pulumi Policies](/docs/insights/policy/) or Open Policy Agent.
+* **Apply least privilege everywhere.** Default deny; grant the minimum access needed; prefer short-lived, scoped credentials over long-lived keys.
+* **Centralize secrets and configuration.** Keep secrets out of code and CI logs. Pull secrets at runtime from a dedicated store such as HashiCorp Vault or AWS Secrets Manager, and use [Pulumi ESC](/product/esc/) to aggregate and broker access to those stores so applications, CI jobs, and Pulumi programs all see a single, audited interface.
+* **Encrypt by default.** Use provider-managed or customer-managed keys for data at rest and TLS for data in transit. Make the unencrypted path the harder one.
+* **Centralize logging and monitoring.** Ship logs from every account, region, and service to a single store, and define alerts on policy violations, not just on errors.
+* **Patch and rotate continuously.** Rebuild images, rotate keys, and refresh certificates on a schedule rather than on incident.
+* **Practice incident response.** Maintain cloud-specific runbooks, automate the obvious responses, and run tabletop exercises before you need them.
+* **Audit IAM regularly.** Run least-privilege reviews, expire dormant credentials, and use tooling that surfaces unused permissions.
 
-Organizations can strengthen their cloud security posture by implementing these proven practices:
+## How does infrastructure as code strengthen cloud security?
 
-### Implement infrastructure as code
+The configurations that cause most cloud breaches (public buckets, open ports, wildcard IAM) are the exact configurations that infrastructure as code makes reviewable, auditable, and enforceable.
 
-Using infrastructure as code (IaC) for cloud deployments offers significant security benefits:
+With Pulumi:
 
-* **Consistent security configurations** - Eliminate manual configuration errors by defining infrastructure with code
-* **Security validation** - Test security configurations before deployment
-* **Version control** - Track changes to infrastructure with full audit history
-* **Policy enforcement** - Implement security guardrails through programmatic policies
-* **Compliance automation** - Continuously validate infrastructure against compliance requirements
+* **Every change is a pull request.** Security reviewers see exactly what's about to happen before it lands.
+* **Policy as code blocks insecure changes.** [Pulumi Policies](/docs/insights/policy/) run in CI alongside `pulumi preview`, so a public bucket or a `0.0.0.0/0` ingress rule never reaches production.
+* **Secrets are pulled at runtime.** [Pulumi ESC](/product/esc/) holds encrypted secrets and pulls them on demand into Pulumi programs, CI jobs, and applications. No plaintext secrets in code or state files.
+* **Drift is observable.** When a console click breaks the IaC contract, the next preview surfaces it.
+* **Reuse safe defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with the right encryption, logging, and IAM settings baked in, so product teams consume secure infrastructure without having to relearn it every time.
 
-To learn more about securing cloud infrastructure through code, see our guide on [infrastructure as code](/what-is/what-is-infrastructure-as-code).
+[Get started with Pulumi](/docs/get-started/) to manage cloud infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
 
-### Adopt the principle of least privilege
+## Frequently asked questions about cloud security
 
-Minimize potential damage from compromised accounts:
+### What is cloud security in simple terms?
 
-* Implement fine-grained access controls based on specific job requirements
-* Use just-in-time access for administrative functions
-* Regularly review and revoke unnecessary permissions
-* Implement privilege escalation workflows with approval gates
-* Ensure service accounts have minimal required permissions
+Cloud security is the discipline of protecting workloads, data, and identities that run in or rely on cloud services. It combines technical controls (encryption, IAM, network rules, monitoring), operational practices (change management, incident response), and a shared responsibility model with the cloud provider.
 
-### Secure your cloud configurations
+### Who is responsible for cloud security?
 
-Prevent the most common source of cloud security incidents:
+Both the cloud provider and the customer. The provider secures the physical infrastructure and the platform; the customer secures their data, identities, configuration, and (for IaaS) the operating system and runtime. The split shifts depending on whether the service is IaaS, PaaS, or SaaS, but the customer is always responsible for their own data and access controls.
 
-* Use configuration validation tools to identify misconfigurations
-* Implement guardrails to prevent insecure resource deployments
-* Regularly audit cloud resources for security best practices
-* Enable infrastructure drift detection
-* Remediate insecure configurations quickly
+### What are the most common causes of cloud breaches?
 
-### Implement comprehensive monitoring
+Misconfigurations. Public storage, IAM roles with overly broad permissions, open security groups, and leaked long-lived credentials account for the majority of incidents — far more than vulnerabilities in the cloud platforms themselves.
 
-Maintain visibility across your cloud environment:
+### What is the shared responsibility model?
 
-* Centralize logging from all cloud services and resources
-* Implement real-time threat detection with contextual alerting
-* Monitor for unusual user behaviors and access patterns
-* Track configuration changes and policy violations
-* Create dashboards for security metrics and status
+A formal split of security duties between the cloud provider and the customer. The provider is responsible for the security *of* the cloud (hardware, networking, host hypervisor). The customer is responsible for security *in* the cloud (data, IAM, configuration, application code).
 
-### Plan for incident response
+### What is the difference between cloud security and cybersecurity?
 
-Prepare for security incidents in cloud environments:
+Cybersecurity is the broader discipline of protecting any digital system. Cloud security is the specialization that focuses on workloads and data hosted in cloud environments, with extra emphasis on identity, API surfaces, and configuration — the areas where cloud differs most from on-premises.
 
-* Develop cloud-specific incident response playbooks
-* Define roles and responsibilities for incident handling
-* Implement automated response for common scenarios
-* Practice incident response through tabletop exercises
-* Establish communication protocols for security events
+### Is the cloud more secure than on-premises infrastructure?
 
-## Common challenges
+Generally yes, when it's used well. Cloud providers invest more in physical, network, and platform security than most individual organizations can. The catch is that the customer side of the shared responsibility model still has to be done correctly, and most "cloud breaches" are misconfigurations on the customer side rather than provider failures.
 
-Organizations face several significant challenges when securing their cloud environments:
+### What is cloud security posture management (CSPM)?
 
-### Misunderstanding shared responsibility
+CSPM tools continuously inspect cloud accounts for misconfigurations, policy violations, and risky permissions, and either flag or auto-remediate them. They sit on top of the provider's APIs and produce a continuous report card on configuration drift across many accounts and clouds.
 
-Many organizations incorrectly assume cloud providers handle all security aspects, leading to critical gaps in their security posture. Understanding exactly what security responsibilities fall to your organization versus your cloud provider is essential.
+### How does compliance relate to cloud security?
 
-### Configuration mistakes to avoid
+Compliance frameworks (SOC 2, ISO 27001, HIPAA, PCI DSS, FedRAMP) define what controls have to be in place; cloud security is how you implement and continuously prove them. Cloud-native tools like IAM analyzers, policy as code, audit logs, and CSPM make it easier to demonstrate compliance because the configuration is itself an artifact you can audit.
 
-The most common cloud security incidents stem from preventable misconfigurations:
+### What is zero trust in a cloud context?
 
-* Excessive permissions and privileges
-* Unrestricted network access to sensitive resources
-* Public exposure of storage buckets and databases
-* Inadequate encryption implementation
-* Disabled logging and monitoring
-* Unpatched vulnerabilities in cloud workloads
+Zero trust means no identity, network, or device is trusted by default. Every request is authenticated, authorized, and ideally encrypted, regardless of where it comes from. In the cloud, that translates into workload identity, mTLS between services, just-in-time access elevation, and continuous verification of session context.
 
-### Skills and expertise gaps
+### How do I start improving cloud security on an existing footprint?
 
-Organizations often struggle with:
-
-* Shortage of cloud security expertise
-* Keeping pace with rapidly evolving cloud technologies
-* Understanding cloud-specific security tools and practices
-* Managing security across complex multi-cloud environments
-
-### Visibility and control limitations
-
-Cloud environments can create challenges for:
-
-* Maintaining comprehensive asset inventory
-* Detecting shadow IT and unauthorized cloud services
-* Monitoring data movement between cloud services
-* Ensuring consistent security across cloud providers
-
-## Frequently asked questions
-
-### How does cloud security differ from traditional security?
-
-Cloud security differs from traditional security in several fundamental ways:
-
-Traditional security focused on network perimeters, relatively static infrastructure, and full control of all security aspects. Cloud security addresses distributed perimeters, highly dynamic environments, shared responsibility models, and API-driven infrastructure.
-
-The key difference is that cloud security requires more automation, identity-centric approaches, and careful attention to configurations rather than physical security and network controls.
-
-### What security responsibilities do I have versus my cloud provider?
-
-While specific responsibilities vary by service model (IaaS, PaaS, SaaS), the general division includes:
-
-**Cloud provider responsibilities:**
-
-* Physical security of data centers
-* Host infrastructure and virtualization layer
-* Network and storage infrastructure
-* Service availability and resilience
-
-**Customer responsibilities:**
-
-* Data security and classification
-* Identity and access management
-* Application security
-* Network controls and configurations
-* Operating system security (for IaaS)
-* Regulatory compliance
-
-Understanding this division is crucial—most cloud security incidents result from customers not fulfilling their security responsibilities rather than provider failures.
-
-### What are common cloud security mistakes to avoid?
-
-Several critical mistakes frequently lead to cloud security incidents:
-
-* **Excessive permissions** - Granting more access than necessary, creating unnecessary risk
-* **Inadequate visibility** - Failing to implement proper logging and monitoring
-* **Security as an afterthought** - Not integrating security from the beginning of cloud adoption
-* **Manual security management** - Attempting to manage cloud security without automation
-* **Neglecting data protection** - Inadequate encryption and data lifecycle controls
-* **Inconsistent security** - Different security approaches across multiple cloud environments
-* **Insufficient testing** - Not regularly testing security controls and response plans
-
-Avoiding these common pitfalls requires a strategic approach to cloud security with consistent policies, automation, and continuous validation.
+1. Inventory what you have. Many breaches start with assets the security team didn't know existed.
+1. Turn on logging in every account and region; ship logs to a central store.
+1. Enforce MFA on every human user and remove long-lived access keys.
+1. Run a CSPM or [Pulumi Policies](/docs/insights/policy/) pass to find public storage, wildcard IAM, and open ports.
+1. Move new infrastructure to [code](/what-is/what-is-infrastructure-as-code/) and adopt policy as code so the same mistakes don't recur.
 
 ## Learn more
 
-Cloud security is an evolving discipline that requires ongoing attention as organizations expand their cloud footprints. By implementing consistent security controls and leveraging automation to maintain security posture, organizations can confidently leverage cloud technologies while effectively managing risks.
+Pulumi is built for the teams responsible for cloud security: platform engineers, security engineers, and SREs who want infrastructure they can review, test, and prove safe before it ships. [Get started today](/docs/get-started/).
 
-Modern infrastructure as code practices play a critical role in cloud security by enabling teams to define secure configurations, enforce policies, and maintain consistency across environments. While these tools aren't a complete security solution on their own, they provide a strong foundation for implementing security controls at the infrastructure level.
+Related reading:
 
-For more information about related security topics:
-
-* [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code)
-* [What is Secrets Management?](/what-is/what-is-secrets-management)
-* [What is DevOps Automation?](/what-is/what-is-devops-automation)
-* [What is Configuration Management?](/what-is/what-is-configuration-management)
-* [What is Cloud Infrastructure Autoscaling?](/what-is/what-is-cloud-infrastructure-autoscaling)
+* [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
+* [What is Configuration Management?](/what-is/what-is-configuration-management/)
+* [What is SOC 2?](/what-is/what-is-soc-2/)
+* [What is HIPAA?](/what-is/what-is-hipaa/)
+* [What is HITRUST?](/what-is/what-is-hitrust/)

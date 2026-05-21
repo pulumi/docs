@@ -51,19 +51,22 @@
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
-{{/* Add image */}}
+{{/* Add image. meta_image can be either site-absolute ("/images/...") or
+     page-relative ("meta.png", typical for blog post bundles). Resolve each
+     case from the right base — the previous code unconditionally prepended
+     the page permalink, which produced 404 URLs for site-absolute paths. */}}
 {{ $image := "" }}
 {{ if .Params.meta_image }}
-  {{/* Fix URL concatenation to avoid double slashes */}}
-  {{ $baseURL := .Permalink }}
-  {{ if not (strings.HasSuffix $baseURL "/") }}
-    {{ $baseURL = printf "%s/" $baseURL }}
-  {{ end }}
   {{ $imagePath := .Params.meta_image }}
   {{ if strings.HasPrefix $imagePath "/" }}
-    {{ $imagePath = strings.TrimPrefix "/" $imagePath }}
+    {{ $image = printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) $imagePath }}
+  {{ else }}
+    {{ $baseURL := .Permalink }}
+    {{ if not (strings.HasSuffix $baseURL "/") }}
+      {{ $baseURL = printf "%s/" $baseURL }}
+    {{ end }}
+    {{ $image = printf "%s%s" $baseURL $imagePath }}
   {{ end }}
-  {{ $image = printf "%s%s" $baseURL $imagePath }}
 {{ else if in .RelPermalink "/docs/clouds/aws/" }}
   {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-clouds-aws-meta-image.png" }}
 {{ else }}
@@ -80,10 +83,14 @@
 {{ $duration := printf "PT%dM" $readTime }}
 {{ $schema = merge $schema (dict "timeRequired" $duration) }}
 
-{{/* Add author as organization for docs */}}
-{{ $schema = merge $schema (dict
-  "author" (dict "@id" "https://www.pulumi.com/#organization")
-) }}
+{{/* Add author. Prefer Person entities from frontmatter (e.g. what-is pages) so
+     Google can render the author byline in rich results; fall back to the
+     Pulumi organization for pages with no declared authors (most docs). */}}
+{{ $authors := partial "schema/utils/author-entities.html" . }}
+{{ if not $authors }}
+  {{ $authors = slice (dict "@id" "https://www.pulumi.com/#organization") }}
+{{ end }}
+{{ $schema = merge $schema (dict "author" $authors) }}
 
 {{/* Add publisher reference */}}
 {{ $schema = merge $schema (dict

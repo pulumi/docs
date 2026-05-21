@@ -1,3 +1,5 @@
+- menu: install
+  label: Download & Install
 - menu: get-started
   label: Getting Started
 - menu: iac

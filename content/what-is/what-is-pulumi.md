@@ -2,8 +2,10 @@
 title: What is Pulumi?
 meta_desc: |
     Discover what Pulumi is, how it works, and why it's revolutionizing infrastructure as code with familiar programming languages.
+meta_image: /images/what-is/what-is-pulumi-meta.png
 type: what-is
 page_title: "What is Pulumi?"
+authors: ["asaf-ashirov"]
 ---
 
 The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning domain-specific languages. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.

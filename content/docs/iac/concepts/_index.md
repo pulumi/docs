@@ -28,7 +28,7 @@ If this is your first time using Pulumi, you likely want to begin with [the Gett
 
 Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that allows you to use familiar programming languages and tools to build, deploy, and manage cloud infrastructure.
 
-Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to make managing infrastructure secure, reliable, and hassle-free.
+Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) to make managing infrastructure secure, reliable, and hassle-free.
 
 ## Supported languages and SDKs
 
@@ -51,7 +51,7 @@ The Pulumi platform comprises several components:
 
 - **Software development kit (SDK)**: Pulumi Software Development Kit (SDK) provides bindings for each type of resource that the provider can manage. This provides the necessary tools and libraries for defining and managing cloud resources on any cloud and with any provider.
 
-- **Command-Line interface (CLI)**: Pulumi is controlled primarily using the command line interface [(CLI)](https://www.pulumi.com/docs/cli/). It works in conjunction with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.
+- **Command-Line interface (CLI)**: Pulumi is controlled primarily using the command line interface [(CLI)](https://www.pulumi.com/docs/cli/). It works in conjunction with [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) to deploy changes to your cloud apps and infrastructure. It keeps a history of who updated what in your team and when. This CLI has been designed for great inner loop productivity, in addition to continuous integration and delivery scenarios.
 
 - **Deployment engine** The deployment engine is responsible for computing the set of operations needed to drive the current state of your infrastructure into the desired state expressed by your program.
 
@@ -77,8 +77,8 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 ### Core concepts
 
-- [Pulumi Architecture](/docs/iac/concepts/how-pulumi-works) — Learn more about how Pulumi works under the hood.
-- [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) — Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.
+- [How Pulumi IaC Works](/docs/iac/guides/basics/how-pulumi-works/) — Learn how the language host, deployment engine, and resource providers work together under the hood.
+- [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) — Learn how Pulumi Cloud relates to the open source tool and what it offers for teams.
 - [Projects](/docs/iac/concepts/projects) — Learn how Pulumi projects are organized and configured.
 - [Stacks](/docs/iac/concepts/stacks) — Learn how to create and deploy stacks.
 - [Resources](/docs/iac/concepts/resources) — Learn more about how to use and manage resources in your programs.
@@ -95,6 +95,6 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 
 ### Reference
 
-- [Glossary](/docs/iac/concepts/glossary) — Look up definitions for commonly used terms.
+- [Glossary](/docs/reference/glossary/) — Look up definitions for commonly used terms.
 - [Comparisons](/docs/iac/comparisons/) — Learn about how Pulumi compares to other infrastructure tools.
 - [Converters](/docs/iac/concepts/converters) — Learn how to translate IaC from other tools into Pulumi programs.

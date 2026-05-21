@@ -43,4 +43,13 @@
 #       href: "/blog/dark-factory-pattern-pulumi-autonomous-iac/"
 #     dismissible: true
 
-announcements: []
+announcements:
+  - id: blog-agentic-infrastructure-era-2026-05-Kp4nQ2
+    active: true
+    display: both
+    icon: sparkle
+    text: "**It's launch week!** The agentic infrastructure era is here, and we've got some new things to share."
+    cta:
+      label: Read the blog
+      href: "/blog/the-agentic-infrastructure-era/"
+    dismissible: true

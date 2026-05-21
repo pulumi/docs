@@ -3,8 +3,10 @@ title: Run 'aws ec2 describe-instances' using Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws ec2 describe-instances' in a more secure and efficient manner.
 
+meta_image: /images/what-is/run-aws-ec2-describe-instances-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws ec2 describe-instances' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws ec2 describe-instances` command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-commands.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving details about instances in Amazon Elastic Compute Cloud (Amazon EC2). Amazon EC2 provides scalable computing capacity in the AWS cloud, enabling users to launch and manage virtual servers as per their requirements.

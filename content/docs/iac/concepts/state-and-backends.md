@@ -125,7 +125,7 @@ $ pulumi login https://pulumi.acmecorp.com
 
 Everything works the same as with the standard Pulumi Cloud, except that Pulumi will target your private instance instead of the shared one hosted at `app.pulumi.com`.
 
-To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/concepts/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).
+To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).
 
 ## Using a DIY backend
 

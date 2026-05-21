@@ -3,8 +3,10 @@ title: Run 'aws iam list-users' using Dynamic Credentials
 meta_desc: |
      Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws iam list-users' in a more secure and efficient manner.
 
+meta_image: /images/what-is/run-aws-iam-list-users-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws iam list-users' using Dynamic Credentials
+authors: ["diana-esteves"]
 ---
 
 The [`aws iam list-users` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/list-users.html) is part of the AWS Command Line Interface (CLI) and is utilized for listing all Identity and Access Management (IAM) users in an AWS account. Amazon IAM enables users to specify who or what can access services and resources in AWS.
