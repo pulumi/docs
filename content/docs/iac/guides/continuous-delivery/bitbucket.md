@@ -131,11 +131,11 @@ The Pulumi Cloud [Bitbucket version control integration](/docs/integrations/vers
 
 The integration can also replace a hand-written pipeline entirely: with [push-to-deploy](/docs/deployments/deployments/using/triggers/#push-to-deploy) and [review stacks](/docs/deployments/deployments/review-stacks/), Pulumi Cloud runs your updates on Pulumi-hosted infrastructure in response to Bitbucket events, with no `bitbucket-pipelines.yml` to maintain.
 
-## Next steps
+## Additional resources
 
-- [Continuous delivery](/docs/iac/guides/continuous-delivery/)
-- [Pulumi ESC](/docs/esc/)
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/)
-- [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/)
-- [Review Stacks](/docs/deployments/deployments/review-stacks/)
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/)
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/) — pull request comments and commit statuses from Pulumi Cloud.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.

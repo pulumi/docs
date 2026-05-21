@@ -155,12 +155,12 @@ See the AWS provider's [CodeBuild](/registry/packages/aws/api-docs/codebuild/), 
 
 If you operate many pipelines that are similar or identical, package the pattern once instead of copying it. Wrap these resources in a [component](/docs/iac/concepts/components/) so each pipeline becomes a single resource with a small set of inputs, or publish a [template](/docs/iac/guides/building-extending/creating-templates/) so teams can scaffold a new pipeline with `pulumi new`.
 
-## Next steps
+## Additional resources
 
-- [Continuous delivery](/docs/iac/guides/continuous-delivery/)
-- [Pulumi ESC](/docs/esc/)
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/)
-- [AWS provider](/registry/packages/aws/)
-- [Component resources](/docs/iac/concepts/components/)
-- [Review Stacks](/docs/deployments/deployments/review-stacks/)
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/)
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [AWS provider](/registry/packages/aws/) — manage AWS resources, including the pipeline itself, as code.
+- [Component resources](/docs/iac/concepts/components/) — package a reusable pipeline pattern as a single resource.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.

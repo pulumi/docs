@@ -342,11 +342,11 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - Review the workspace pod logs for the stack.
 - Enable `refresh: true` so PKO reconciles Pulumi state with the real state of your infrastructure before each update.
 
-## Next steps
+## Additional resources
 
-- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
-- [Pulumi ESC](/docs/esc/)
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/)
-- [Kubernetes provider](/registry/packages/kubernetes/)
-- [Continuous delivery](/docs/iac/guides/continuous-delivery/)
-- [Argo CD documentation](https://argo-cd.readthedocs.io/)
+- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — the operator that reconciles Pulumi stacks from inside your cluster.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to stacks and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a cluster's OIDC token for a short-lived Pulumi access token.
+- [Kubernetes provider](/registry/packages/kubernetes/) — manage Kubernetes resources with Pulumi.
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Argo CD documentation](https://argo-cd.readthedocs.io/) — official Argo CD project documentation.
