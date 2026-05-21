@@ -34,7 +34,7 @@ Recurring platform work slips: provider versions fall behind, drift accumulates 
 
 ## Automations in action
 
-Your platform team has thirty stacks across staging and production, and the [AWS](/registry/packages/aws/), [GCP](/registry/packages/gcp/), and [Kubernetes](/registry/packages/kubernetes/) providers keep shipping new versions. Nobody has time to bump them stack by stack.
+Your platform team runs stacks across staging and production, and the [AWS](/registry/packages/aws/), [GCP](/registry/packages/gcp/), and [Kubernetes](/registry/packages/kubernetes/) providers keep shipping new versions. Nobody has time to bump them stack by stack.
 
 You write one automation:
 
@@ -64,6 +64,6 @@ Open Neo in [Pulumi Cloud](/product/pulumi-cloud/), switch to the **Automations*
 
 ![Setting up a scheduled task for Pulumi Neo](./neo-freshness.check.png)
 
-This post is one piece of the Neo launch. Joe Duffy's [agentic infrastructure era](/blog/the-agentic-infrastructure-era/) post lays out the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) covers the third-party tools and CLIs your automations can use.
+Today's launch is part of a bigger story. Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) for the third-party tools and CLIs your automations can use.
 
-File feature requests in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
+As always, we'd love to hear what you think — and if you have any suggestions for automations that'd make Neo even better, file an issue in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).

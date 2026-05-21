@@ -29,21 +29,21 @@ social:
         Mention @pulumi-neo and you get the answer in the thread. Mention @Neo in Slack and you get the same agent there too, with the same context and permissions it has anywhere else.
 ---
 
-This week, [Pulumi Neo](/blog/pulumi-neo/) joined two more places where infrastructure work happens: GitHub and Slack. The agent that already runs Pulumi tasks from the Cloud console and the [terminal](/blog/pulumi-neo-cli/) now participates in the threads where your team discusses changes.
+This week, [Pulumi Neo](/blog/pulumi-neo/) started working in two more places: GitHub and Slack. The agent that already runs Pulumi tasks from the Cloud console and the [terminal](/blog/pulumi-neo-cli/) now participates in the threads where your team discusses changes.
 
-Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/integrations/github/) and Neo replies in the thread. Mention `@Neo` in a [Slack channel](/docs/ai/integrations/slack/) and Neo starts a [task](/docs/ai/tasks/) and continues the conversation as you reply.
+Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/integrations/github/) and Neo replies in the thread. Mention `@Neo` in a [Slack channel](/docs/ai/integrations/slack/) and Neo starts a [task](/docs/ai/tasks/), continuing the conversation as you reply.
 
 <!--more-->
 
 ## Neo in GitHub
 
-Mention `@pulumi-neo` in a pull request description, a top-level or inline review comment, or an issue. Neo sees the diff, the stacks linked to the repository, and their current state. Reviewers can ask Neo to walk through what a proposed change does, including resources that change in stacks the PR doesn't touch directly. Responses land in the same thread, so the analysis becomes part of the review record and follow-up clarifications happen there too.
+Mention `@pulumi-neo` in a pull request description, a top-level or inline review comment, or an issue. Neo sees the diff, the stacks linked to the repository, and their current state. Reviewers can ask Neo to walk through what a proposed change does, including resources that change in stacks the PR doesn't touch directly. Responses land in the same thread, so the analysis becomes part of the review record and any follow-up stays with it.
 
 {{< video title="Delegating a GitHub issue to Neo" src="neo-github.mp4" autoplay="true" loop="true" controls="false" >}}
 
 ## Neo in Slack
 
-Mention `@Neo` in any channel where Neo has been added, and Neo starts a task in the thread. The reply lands in the same thread, follow-up messages continue the conversation, and the rest of the channel can see what was asked and what Neo found. Neo has the same capabilities here that it does in the Pulumi Cloud console or the terminal: check stack state, investigate failures, walk through what a change will do, or carry out actions the team has approved.
+Mention `@Neo` in any channel where Neo has been added, and Neo starts a task in the thread. The reply lands in the same thread, and follow-up messages continue the conversation there. The rest of the channel can see what was asked and what Neo found. Neo has the same capabilities here as in the Pulumi Cloud console or the terminal: check stack state, investigate failures, walk through what a change will do, or carry out actions the team has approved.
 
 {{< video title="Tagging Neo for help with an issue in Slack" src="neo-slack.mp4" autoplay="true" loop="true" controls="false" >}}
 
@@ -67,12 +67,12 @@ The investigation moved from Slack to GitHub, and both threads keep the record.
 
 ## Permissions and governance
 
-Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi Cloud user. Stack-level controls, organization-level guardrails, and audit logging apply the same way they do for a task started from the console. A conversation in a different surface doesn't grant Neo new permissions; it just changes where the conversation happens.
+Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC permissions](/docs/administration/access-identity/rbac/) of your Pulumi Cloud user. Stack-level controls, organization-level guardrails, and audit logging apply the same way they do for a task started from the console. Starting a conversation in a new place doesn't grant Neo new permissions; it just changes where the conversation happens.
 
 ## Try it out
 
 Both integrations are available now for Neo-enabled organizations. The [GitHub integration docs](/docs/ai/integrations/github/) and [Slack integration docs](/docs/ai/integrations/slack/) cover the one-time setup. From there, every engineer with a linked Pulumi Cloud identity can mention Neo from the threads they already work in.
 
-Read more from this week: Joe Duffy on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP and CLI integrations that ship alongside.
+Today's launch is part of a bigger story. Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP servers and cloud CLIs that ship with this release.
 
-As always, file requests for additional surfaces or platforms in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose). We're prioritizing based on what teams use.
+As always, we'd love to hear what you think — and if you have any suggestions for places we should put Neo next, file an issue in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
