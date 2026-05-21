@@ -50,7 +50,7 @@ I joined Compostable AI soon after it was founded 2.5 years ago, and I built the
 
 Going AI-native isn't an upgrade to your existing process. If you treat AI as a way to hand your developers smarter tools, you leave most of the value on the table. You get the leverage by rebuilding how you write software — and the culture and processes around it.
 
-I know that's a tall order for a large, mature engineering org. My advice: start small. Pick one team or one business area and run it as a fully AI-native function. Take what you learn and roll it out from there. And do the political work early, especially with your Governance, Risk, and Compliance function. Get GRC on side early. Otherwise AI becomes a compliance fight instead of a structural advantage.
+I know that's a tall order for a large, mature engineering org. My advice: start small. Pick one team or one business area and run it as a fully AI-native function. Take what you learn and roll it out from there. And do the political work early, especially with your Governance, Risk, and Compliance function. Get GRC on your side early. Otherwise AI becomes a compliance fight instead of a structural advantage.
 
 {{< notes type="tip" size="large" >}}
 **Don't bolt AI onto your existing workflow. Redesign the workflow around what agents can do.**
