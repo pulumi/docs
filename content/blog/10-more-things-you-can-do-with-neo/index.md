@@ -1,6 +1,6 @@
 ---
 title: "Ten More Things You Can Do With Pulumi Neo"
-date: 2026-05-19T02:00:00-07:00
+date: 2026-05-19T05:00:00-07:00
 draft: false
 meta_desc: "Ten more platform-engineering workflows you can hand to Pulumi Neo: deployments, tickets, incident triage, IAM, migration, and continuous ops."
 meta_image: meta.png
@@ -31,7 +31,7 @@ social:
         Here are 10 more.
 ---
 
-Last fall, after launching [Pulumi Neo](/neo/), we wrote up [10 things you could do with it](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With today's release, Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
+Last fall, after launching [Pulumi Neo](/neo/), we wrote up [10 things you could do with it](/blog/10-things-you-can-do-with-neo/). In the months that followed, as platform teams handed Neo more real work, we watched and listened, shipping a steady stream of features like [plan mode](/blog/neo-plan-mode/), [read-only mode](/blog/neo-read-only-mode/), [AGENTS.md](/blog/pulumi-neo-now-supports-agentsmd/), an [integration catalog](/blog/neo-integration-catalog/), [cross-cloud migration](/blog/neo-migration/), and [task sharing](/blog/neo-task-sharing/). With [today's release](/releases/agentic-infrastructure-era/), Neo extends beyond the Pulumi Cloud console into the Pulumi CLI, GitHub, and Slack.
 
 So here are **10 more** things you can do with Neo.
 
