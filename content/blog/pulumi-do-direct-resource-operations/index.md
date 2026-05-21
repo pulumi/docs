@@ -25,7 +25,7 @@ social:
 You need to spin up an S3 bucket. With the AWS CLI, you assemble `aws s3api create-bucket` with the right flags, region constraints, and JSON input. With `pulumi do`:
 
 ```bash
-$ pulumi do aws s3 Bucket create --input-file bucket.pcl
+$ pulumi do aws:s3:Bucket create --input-file bucket.pcl
 ```
 
 The bucket exists. The result is JSON on stdout. No project, no stack, no state file.
@@ -33,7 +33,7 @@ The bucket exists. The result is JSON on stdout. No project, no stack, no state 
 Need to look up a VPC instead?
 
 ```bash
-$ pulumi do aws ec2 getVpc --input-file query.pcl
+$ pulumi do aws:ec2:getVpc --input-file query.pcl
 ```
 
 Same CLI, same output contract, same provider ecosystem.
@@ -60,10 +60,10 @@ The command dynamically builds its CLI tree from any installed Pulumi provider's
 
 ```
 # Provider functions (read-only queries)
-pulumi do <package> [<module>] <function> [flags]
+pulumi do <package:module:function> [flags]
 
 # Resource operations (create, read, patch, delete, list)
-pulumi do <package> [<module>] <type> <operation> [<id>] [flags]
+pulumi do <package:module:type> <operation> [<id>] [flags]
 ```
 
 The package, module, and type/function segments come directly from the provider schema, so `--help` works at every level of the tree. Pass a package name, an optional module, and a function or resource type. The CLI resolves the rest.
@@ -74,7 +74,7 @@ Provider functions are read-only operations that query cloud APIs through Pulumi
 
 ```bash
 # Look up a VPC by tags
-$ pulumi do aws ec2 getVpc --input-file query.pcl
+$ pulumi do aws:ec2:getVpc --input-file query.pcl
 
 {
   "arn": "arn:aws:ec2:us-west-2:123456789:vpc/vpc-abc123",
@@ -99,7 +99,7 @@ Internally, the CLI parses the input and binds it against the function's schema 
 YAML input files also work. Pass `--input yaml` alongside `--input-file` and the CLI converts the YAML through a converter plugin before evaluation:
 
 ```bash
-$ pulumi do aws ec2 getVpc --input-file query.yaml --input yaml
+$ pulumi do aws:ec2:getVpc --input-file query.yaml --input yaml
 ```
 
 Secrets in function results appear as `[secret]` by default. Pass `--show-secrets` to reveal them. The `--dry-run` flag sets the operation to preview mode, signaling the provider to return placeholder values instead of live data.
@@ -111,7 +111,7 @@ Resource operations let you create, read, update, delete, and list cloud resourc
 **Create** a resource by passing inputs via a file:
 
 ```bash
-$ pulumi do aws s3 Bucket create --input-file bucket.pcl
+$ pulumi do aws:s3:Bucket create --input-file bucket.pcl
 ```
 
 Where `bucket.pcl` contains:
@@ -125,38 +125,36 @@ The CLI prompts for confirmation before creating. Pass `--yes` to auto-approve. 
 ```json
 {
   "id": "my-data-bucket",
-  "properties": {
-    "arn": "arn:aws:s3:::my-data-bucket",
-    "bucket": "my-data-bucket",
-    "region": "us-west-2"
-  }
+  "arn": "arn:aws:s3:::my-data-bucket",
+  "bucket": "my-data-bucket",
+  "region": "us-west-2"
 }
 ```
 
 **Read** a resource's current state by its cloud provider ID:
 
 ```bash
-$ pulumi do aws s3 Bucket read my-data-bucket
+$ pulumi do aws:s3:Bucket read my-data-bucket
 ```
 
-The output follows the same `{"id", "properties"}` shape.
+The output follows the same `{"id", [properties]}` shape.
 
 **Patch** (update) a resource by providing new inputs. The CLI reads the current state, merges your changes, shows a diff, and prompts for confirmation:
 
 ```bash
-$ pulumi do aws s3 Bucket patch my-data-bucket --input-file updates.pcl
+$ pulumi do aws:s3:Bucket patch my-data-bucket --input-file updates.pcl
 ```
 
 **Delete** a resource. The CLI prompts for confirmation before destroying:
 
 ```bash
-$ pulumi do aws s3 Bucket delete my-data-bucket
+$ pulumi do aws:s3:Bucket delete my-data-bucket
 ```
 
 **List** resources of a given type (when the provider supports it):
 
 ```bash
-$ pulumi do aws s3 Bucket list
+$ pulumi do aws:s3:Bucket list
 ```
 
 The `--all` flag retrieves every resource. `--count N` limits the result set. The output is a JSON array of `{"id", "name"}` objects.
@@ -170,7 +168,7 @@ Providers need credentials to operate. Today, `pulumi do` resolves provider conf
 You can also supply provider configuration via a PCL file:
 
 ```bash
-$ pulumi do aws ec2 getVpc --input-file query.pcl \
+$ pulumi do aws:ec2:getVpc --input-file query.pcl \
     --provider-file aws-config.pcl
 ```
 
@@ -180,7 +178,7 @@ $ pulumi do aws ec2 getVpc --input-file query.pcl \
 
 Three design choices make `pulumi do` work well for AI agents, and they make it better for humans too.
 
-**Consistent command structure across every provider.** The `<package> <module> <type> <operation>` pattern is the same for AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Datadog, and every other Pulumi provider. An agent that learns the pattern once can operate across any cloud. This is the guessability principle from [the CLI redesign](/blog/better-cli-interactions-for-agents-and-humans/) applied to resource operations: the right command should be the one you can guess.
+**Consistent command structure across every provider.** The `<package:module:type> <operation>` pattern is the same for AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Datadog, and every other Pulumi provider. An agent that learns the pattern once can operate across any cloud. This is the guessability principle from [the CLI redesign](/blog/better-cli-interactions-for-agents-and-humans/) applied to resource operations: the right command should be the one you can guess.
 
 **Predictable output contract.** JSON on stdout, progress on stderr, consistent exit codes. An agent can parse the result programmatically without scraping human-formatted tables.
 
@@ -214,20 +212,20 @@ A future version of `pulumi do` will handle this with explicit interpolation in 
 
 ```bash
 # Create a VPC
-$ pulumi do aws ec2 Vpc create --input-file vpc.pcl
+$ pulumi do aws:ec2:Vpc create --input-file vpc.pcl
 
 # Create a subnet that references the VPC
-$ pulumi do aws ec2 Subnet create --input-file subnet.pcl
+$ pulumi do aws:ec2:Subnet create --input-file subnet.pcl
 ```
 
 Where `subnet.pcl` references the VPC:
 
 ```hcl
-vpcId = "${myVpc.id}"
+vpcId = myVpc.id
 cidrBlock = "10.0.1.0/24"
 ```
 
-The `${myVpc.id}` interpolation will tell the CLI to look up `myVpc` in the current stack's state and resolve its `id` output. The CLI stores the reference as an expression, so the dependency graph stays intact. When you later project these resources into a full IaC program with `pulumi convert`, the generated code contains `subnet.vpcId = myVpc.id` rather than a hard-coded string.
+The `myVpc.id` interpolation will tell the CLI to look up `myVpc` in the current stack's state and resolve its `id` output. The CLI stores the reference as an expression, so the dependency graph stays intact. When you later project these resources into a full IaC program with `pulumi convert`, the generated code contains `subnet.vpcId = myVpc.id` rather than a hard-coded string.
 
 ### Stateful mode and the graduation path
 
