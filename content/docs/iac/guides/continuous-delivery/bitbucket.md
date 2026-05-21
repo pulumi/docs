@@ -34,6 +34,15 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
+Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
+
+- **A stored access token** — a long-lived Pulumi access token kept as a secured repository variable. Simplest to set up.
+- **OIDC token exchange** — no stored secret; the pipeline exchanges a short-lived OIDC token for a Pulumi access token at runtime. Recommended.
+
+Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as repository variables.
+
+### Authenticate with a stored access token
+
 Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
 
 Add the token as a [repository variable](https://support.atlassian.com/bitbucket-cloud/docs/variables-and-secrets/) under **Repository settings > Repository variables**. Name it `PULUMI_ACCESS_TOKEN` and select the **Secured** checkbox so the value is encrypted and masked in build logs. Secured variables are exposed to every step of the pipeline as environment variables.
@@ -42,9 +51,7 @@ Add the token as a [repository variable](https://support.atlassian.com/bitbucket
 Always mark sensitive values — access tokens, cloud provider keys — as **Secured**. An unsecured variable is stored and printed in plaintext.
 {{% /notes %}}
 
-[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as repository variables.
-
-## Authenticate without a stored token using OIDC
+### Authenticate without a stored token using OIDC
 
 You can remove the static token entirely. Bitbucket Pipelines can issue a short-lived [OpenID Connect (OIDC)](https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/) token for any step that sets `oidc: true`, exposing it as the `BITBUCKET_STEP_OIDC_TOKEN` environment variable.
 

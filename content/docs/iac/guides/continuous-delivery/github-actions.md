@@ -48,13 +48,20 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
+Give your workflow a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
+
+- **A stored access token** — a long-lived Pulumi access token kept as an encrypted repository secret. Simplest to set up.
+- **OIDC token exchange** — no stored secret; the workflow exchanges a short-lived OIDC token for a Pulumi access token at runtime. Recommended.
+
+Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a workflow or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as repository secrets.
+
+### Authenticate with a stored access token
+
 Your workflow authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the workflow's identity isn't tied to an individual.
 
 Add the token as an [encrypted secret](https://docs.github.com/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions) named `PULUMI_ACCESS_TOKEN` under your repository's **Settings > Secrets and variables > Actions**. The workflow then reads it through the `secrets` context, as shown in the examples below.
 
-[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a workflow or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as repository secrets.
-
-## Authenticate without a stored token using OIDC
+### Authenticate without a stored token using OIDC
 
 You can remove the static token entirely. GitHub Actions can issue a short-lived [OpenID Connect (OIDC)](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect) token for a workflow job. Register GitHub Actions as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/github/) in Pulumi Cloud, and the [`pulumi/auth-actions`](https://github.com/pulumi/auth-actions) action exchanges that OIDC token for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a repository secret.
 

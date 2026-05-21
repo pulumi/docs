@@ -36,6 +36,15 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
+Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
+
+- **A stored access token** — a long-lived Pulumi access token kept as a CI/CD variable. Simplest to set up.
+- **OIDC token exchange** — no stored secret; the pipeline exchanges a short-lived OIDC token for a Pulumi access token at runtime. Recommended where you can use it.
+
+Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as CI/CD variables.
+
+### Authenticate with a stored access token
+
 Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 Add the token as a [CI/CD variable](https://docs.gitlab.com/ci/variables/) named `PULUMI_ACCESS_TOKEN` under your project's **Settings > CI/CD > Variables**. Mark it **Masked** so it doesn't appear in job logs, and **Protected** so it's exposed only to pipelines running on [protected branches and tags](https://docs.gitlab.com/user/project/protected_branches/). The Pulumi CLI reads the variable from the environment automatically — no explicit `pulumi login` is required.
@@ -44,9 +53,7 @@ Add the token as a [CI/CD variable](https://docs.gitlab.com/ci/variables/) named
 A protected CI/CD variable is available only to jobs that run on a protected branch or tag. If a job that runs on an unprotected branch needs the token, either remove the **Protected** flag or extend branch protection to those branches with a [wildcard rule](https://docs.gitlab.com/user/project/protected_branches/#protect-multiple-branches-with-wildcard-rules).
 {{% /notes %}}
 
-[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as CI/CD variables.
-
-## Authenticate without a stored token using OIDC
+### Authenticate without a stored token using OIDC
 
 You can remove the static token entirely. GitLab CI/CD can issue a short-lived [OpenID Connect (OIDC)](https://docs.gitlab.com/ci/secrets/id_token_authentication/) `id_token` for a job. Register GitLab as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/gitlab/) in Pulumi Cloud, and the job exchanges that `id_token` for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a CI/CD variable.
 
