@@ -1,6 +1,6 @@
 ---
 title: "Bringing Neo to GitHub and Slack"
-date: 2026-05-21
+date: 2026-05-21T08:00:00-07:00
 meta_desc: "Mention @pulumi-neo in GitHub or @Neo in your Slack workspace to bring Pulumi Neo into the threads where your team works on infrastructure."
 meta_image: meta.png
 feature_image: feature.png

@@ -1,6 +1,6 @@
 ---
 title: "Neo Automations: Scheduled Tasks Shipped as Pull Requests"
-date: 2026-05-21
+date: 2026-05-21T07:00:00-07:00
 meta_desc: "Schedule any Neo task on a cadence. Drift checks, provider freshness, and encryption audits run themselves and deliver results as pull requests."
 meta_image: meta.png
 feature_image: feature.png
