@@ -1,0 +1,68 @@
+{{/*
+    Release Item
+
+    Light .card used on /releases/ as one item per release. Overline / heading / description on the
+    left; feature image flush with the right, top, and bottom edges. When
+    `link` is set, the whole card becomes a hover-enabled anchor.
+
+    Parameters:
+    - overline:                Small uppercase eyebrow text (e.g., "May 2026 release").
+    - heading:                 Card heading.
+    - description:             Body copy (markdown).
+    - feature_image_split:     Image path.
+    - feature_image:           Fallback if feature_image_split is unset.
+    - feature_image_alt:       Alt text for the feature image.
+    - link:                    Optional URL — turns the card into an anchor with
+                               a violet hover treatment.
+*/}}
+
+{{ $overline := .overline }}
+{{ $heading := .heading }}
+{{ $description := .description }}
+{{ $featureImage := .feature_image_split | default .feature_image }}
+{{ $featureImageAlt := .feature_image_alt | default $heading }}
+{{ $link := .link }}
+
+{{ $featureImageExists := false }}
+{{ with $featureImage }}
+    {{ $fpSrc := strings.TrimPrefix "/" . }}
+    {{ if resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+        {{ $featureImageExists = true }}
+    {{ end }}
+{{ end }}
+
+{{ $cardClasses := "card block bg-white text-gray-900 overflow-hidden no-underline hover:no-underline" }}
+{{ if $link }}{{ $cardClasses = printf "%s group/linked transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary" $cardClasses }}{{ end }}
+
+{{ if $link }}<a href="{{ $link }}" class="{{ $cardClasses }}">{{ else }}<div class="{{ $cardClasses }}">{{ end }}
+    <div class="flex flex-col lg:flex-row items-center">
+        <div class="pb-0 xl:pl-52 flex-1 min-w-0 flex flex-col gap-5 px-8 py-10 md:px-12 md:py-14 lg:px-16 lg:py-16">
+            {{ with $overline }}
+            <span
+                class="inline-flex items-center self-start rounded-full bg-violet-100 text-violet-primary px-4 py-2 text-xs font-mono uppercase tracking-wider"
+                >{{ . }}</span
+            >
+            {{ end }}
+            {{ with $heading }}
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h2>
+            {{ end }}
+            {{ with $description }}
+            <div class="text-lg max-w-xl leading-6">{{ . | markdownify }}</div>
+            {{ end }}
+        </div>
+        {{ if $featureImage }}
+        <div class="w-full lg:ml-24 lg:w-2/5 flex items-stretch shrink-0">
+            {{ if $featureImageExists }}
+                {{ partial "fingerprinted-img.html" (dict
+                    "src" $featureImage
+                    "alt" $featureImageAlt
+                    "class" "w-full h-full object-cover block transition-transform group-hover/linked:scale-105"
+                    "loading" "eager"
+                    "maxWidth" 900
+                    "quality" 90
+                ) }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+{{ if $link }}</a>{{ else }}</div>{{ end }}

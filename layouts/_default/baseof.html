@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
-    <body class="section-{{ .Section }}">
+    <body class="section-{{ .Section }} antialiased min-h-screen flex flex-col">
         <a href="#main" class="btn btn-outline fixed left-2 top-2.5 z-[100] -translate-y-16 no-underline focus:translate-y-0">Skip to main content</a>
         <pulumi-root></pulumi-root>
         {{ partial "announcement-banner.html" . }}
         {{ partial "header.html" . }}
         {{ block "hero" . }}
         {{ end }}
-        <main id="main" tabindex="-1" class="focus:outline-none">
+        <main id="main" tabindex="-1" class="focus:outline-none flex-1">
             {{ block "main" . }}
             {{ end }}
 

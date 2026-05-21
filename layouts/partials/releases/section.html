@@ -1,0 +1,43 @@
+{{/*
+    Releases Section
+
+    One page section on /releases/[slug]: optional numeric prefix + heading +
+    description, followed by a flexible 2-col card grid.
+
+    Parameters:
+    - anchor:      Section ID for TOC link targets.
+    - number:      Optional zero-based index. Renders ".01", ".02", … above the heading.
+    - heading:     Section H2.
+    - description: Optional section description (markdown).
+    - cards:       Array of card objects (see releases/card.html).
+*/}}
+
+{{ $anchor := .anchor }}
+{{ $number := .number }}
+{{ $heading := .heading }}
+{{ $description := .description }}
+{{ $cards := .cards }}
+
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="flex flex-col gap-10 scroll-mt-28">
+    {{ if or $heading $description (ne $number nil) }}
+    <div class="md:text-center max-w-3xl mx-auto">
+        {{ if ne $number nil }}
+        <p class="font-mono text-sm tracking-wider uppercase text-violet-primary m-0 mb-4">.{{ printf "%02d" (add $number 1) }}</p>
+        {{ end }}
+        {{ with $heading }}
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold tracking-tighter text-service-black m-0 mb-4 leading-[1.1]">{{ . }}</h2>
+        {{ end }}
+        {{ with $description }}
+        <p class="md:text-lg text-gray-900 m-0 leading-relaxed">{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $cards }}
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-6">
+        {{ range . }}
+        {{ partial "releases/card.html" . }}
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
