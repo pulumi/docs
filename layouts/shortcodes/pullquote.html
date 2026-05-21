@@ -1,0 +1,12 @@
+{{/*
+    Larger pull-quote for breaking up long-form posts.
+    Renders as a styled blockquote with bigger text and italic body.
+    Optional `attribution` param appears below the quote.
+*/}}
+{{ $attribution := .Get "attribution" }}
+<blockquote class="pullquote">
+    <p>{{- .Inner | markdownify -}}</p>
+    {{ with $attribution }}
+        <cite>— {{ . }}</cite>
+    {{ end }}
+</blockquote>

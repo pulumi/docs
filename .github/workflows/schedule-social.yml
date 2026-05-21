@@ -1,8 +1,13 @@
 name: Schedule social media posts
 on:
-  push:
-    branches:
-      - master
+  # Fire after Build and deploy finishes on master so posts only go out
+  # after the blog page is actually live. Posting on `push: master` raced
+  # the deploy and produced 404 link cards (especially sticky on Bluesky,
+  # which caches the first fetch of the og:image).
+  workflow_run:
+    workflows: ["Build and deploy"]
+    types: [completed]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -16,7 +21,9 @@ concurrency:
 
 jobs:
   schedule-social:
-    if: github.repository == 'pulumi/docs'
+    if: |
+      github.repository == 'pulumi/docs' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     name: Schedule social media posts
     runs-on: ubuntu-latest
     environment: production
@@ -32,6 +39,9 @@ jobs:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          # On workflow_run, pin to the SHA the deploy actually built. Default
+          # ref under workflow_run is master HEAD, which may have moved on.
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6
