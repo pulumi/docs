@@ -5,8 +5,25 @@
 // @utility must live at the top level of the stylesheet — do not nest this
 // import inside `@layer base { ... }`.
 
+@utility heading-xl {
+    @apply font-display mb-2 text-4xl md:text-5xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
 @utility heading-1 {
-    @apply font-display mb-2 text-2xl md:text-3xl lg:text-4xl;
+    @apply font-display mb-2 text-3xl md:text-4xl;
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1em;
@@ -23,7 +40,7 @@
 }
 
 @utility heading-2 {
-    @apply font-display mb-2 text-xl md:text-2xl lg:text-3xl;
+    @apply font-display mb-2 text-2xl md:text-3xl;
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1em;
@@ -40,7 +57,7 @@
 }
 
 @utility heading-3 {
-    @apply font-display mb-2 text-lg md:text-xl lg:text-2xl;
+    @apply font-display mb-2 text-xl md:text-2xl;
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1em;
@@ -57,7 +74,7 @@
 }
 
 @utility heading-4 {
-    @apply font-display mb-2 text-base md:text-lg lg:text-xl;
+    @apply font-display mb-2 text-lg md:text-xl;
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1em;
@@ -74,7 +91,7 @@
 }
 
 @utility heading-5 {
-    @apply font-display mb-2 text-sm md:text-base lg:text-lg;
+    @apply font-display mb-2 text-base md:text-lg;
     font-weight: 600;
     letter-spacing: -0.05em;
     line-height: 1.1em;
@@ -107,23 +124,6 @@
     }
 }
 
-@utility heading-xl {
-    @apply font-display mb-2 text-3xl md:text-4xl lg:text-5xl;
-    font-weight: 600;
-    letter-spacing: -0.05em;
-    line-height: 1.1em;
-
-    &:not(:first-child) {
-        &:not([class*="mt-"]):not([class*="m-"]) {
-            @apply mt-8;
-        }
-    }
-
-    code {
-        letter-spacing: normal;
-    }
-}
-
 @utility body-sm {
     @apply font-body text-xs md:text-sm;
 }
@@ -137,11 +137,11 @@
 }
 
 @utility body-xl {
-    @apply font-body text-base md:text-lg lg:text-xl;
+    @apply font-body text-lg md:text-xl;
 }
 
 @utility body-2xl {
-    @apply font-body text-xl md:text-2xl lg:text-3xl;
+    @apply font-body text-xl md:text-2xl;
 }
 
 @utility font-overline {

@@ -14,11 +14,11 @@
 
 
 @mixin product-hero-heading {
-    @apply text-black text-center not-italic heading-xl;
+    @apply text-black text-center not-italic heading-xl mb-4;
 }
 
 @mixin section-description {
-    @apply font-normal leading-normal body-xl;
+    @apply font-normal leading-normal body-xl mt-0;
 }
 
 @mixin section-subheader-bold {
@@ -274,7 +274,7 @@
     }
 
     .three-column-item-description {
-        @apply body-base;
+        @apply body-base mt-0;
     }
 }
 

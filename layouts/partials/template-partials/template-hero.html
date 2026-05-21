@@ -104,7 +104,7 @@
     <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
         <div class="xl:w-1/2 flex flex-col items-start">
             {{ if or $badgeText $badgeHighlightText }}
-            <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 mb-4 no-underline hover:border-violet-500 transition-colors">
+            <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 no-underline hover:border-violet-500 transition-colors">
                 <span class="text-violet-primary whitespace-nowrap">{{ $badgeHighlightText }}</span>
                 <span class="text-gray-900 whitespace-nowrap">{{ $badgeText }} <span class="text-gray-500">{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</span></span>
             </a>
@@ -115,7 +115,7 @@
             </div>
             {{ end }}
             {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading text-left mb-6">
+            <h1 class="product-hero-heading text-left">
                 {{ if and $titlePrimary $titleSecondary }}
                 {{ if $titleReversed }}
                 <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
@@ -202,7 +202,7 @@
     <div class="flex flex-col items-center gap-12">
         <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
             {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading mb-6">
+            <h1 class="product-hero-heading">
                 {{ if and $titlePrimary $titleSecondary }}
                 {{ if $titleReversed }}
                 <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>

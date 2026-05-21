@@ -43,7 +43,7 @@
         {{ range $largeCards }}
         <div class="card p-8 flex flex-col items-start overflow-hidden">
 
-            <div class="flex flex-col gap-4 mb-4">
+            <div class="flex flex-col mb-4">
                 <h3 class="template-feature-card-title">{{ .title }}</h3>
                 <div class="template-feature-card-description">{{ .description | markdownify }}</div>
             </div>
@@ -81,7 +81,7 @@
                     {{ partial "icon.html" (dict "name" .icon "weight" "duotone") }}
                 </div>
                 {{ end }}
-                <div class="flex flex-col gap-4 mb-4">
+                <div class="flex flex-col mb-4">
                     <h3 class="template-feature-card-title">{{ .title }}</h3>
                     <div class="template-feature-card-description">{{ .description | markdownify }}</div>
                 </div>
