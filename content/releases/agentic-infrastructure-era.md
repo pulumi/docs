@@ -95,6 +95,7 @@ sections:
         description: |
           Now you can @-mention Neo in GitHub issues and pull requests, and in your team's Slack workspace, to
           kick off full-context infra tasks wherever you are.
+        link: /blog/neo-github-slack/
 
       - variant: text
         icon: plugs
@@ -110,6 +111,7 @@ sections:
         description: |
           Use Neo to automate recurring infrastructure tasks like keeping providers updated, identifying
           non-compliant resources, and summarizing infrastructure changes from week to week.
+        link: /blog/neo-automations/
 
   - anchor: ai-frontier
     label: Partnering with the frontier of AI infrastructure
@@ -146,6 +148,7 @@ sections:
         description: |
           We now serve all of our documentation, including the complete Pulumi Registry, in easily consumable,
           agent-friendly Markdown.
+        link: /blog/better-cli-interactions-for-agents-and-humans/#agent-friendly-markdown-docs-for-providers-and-components
 
       - variant: image-top
         image: /images/releases/may-2026/release-new-skills.svg
@@ -175,11 +178,13 @@ sections:
           infrastructure tasks — like the infrastructure equivalent of SWE-bench.
 
 blog_section:
-  title: More from the blog
+  title: From the blog
   posts:
     - /blog/the-agentic-infrastructure-era
     - /blog/better-cli-interactions-for-agents-and-humans
     - /blog/10-more-things-you-can-do-with-neo
     - /blog/pulumi-neo-cli
     - /blog/neo-integrations
+    - /blog/neo-github-slack
+    - /blog/neo-automations
 ---
