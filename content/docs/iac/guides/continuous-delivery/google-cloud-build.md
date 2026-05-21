@@ -336,7 +336,7 @@ The Pulumi CLI doesn't automatically detect Cloud Build as a CI/CD system, so up
 
 By default, the output of a `pulumi preview` build lands in the Cloud Build logs. To surface the proposed infrastructure changes on the pull request itself, connect your repository to Pulumi Cloud with a [version control integration](/docs/integrations/version-control/).
 
-These integrations work independently of Cloud Build: Pulumi Cloud posts a summary of resource changes as a pull request comment and status check, and links each stack update back to the commit and pull request that produced it. Pulumi maintains native integrations for the [GitHub App](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/) — install the one that matches where your repository is hosted.
+These integrations work independently of Cloud Build: Pulumi Cloud posts a summary of resource changes as a pull request comment and status check, and links each stack update back to the commit and pull request that produced it. Pulumi maintains integrations for popular version control systems — see the [version control integrations](/docs/integrations/version-control/) documentation for the current list and setup instructions.
 
 ## Connect a repository and create a trigger
 
