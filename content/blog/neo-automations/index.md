@@ -64,6 +64,6 @@ Open Neo in [Pulumi Cloud](/product/pulumi-cloud/), switch to the **Automations*
 
 ![Setting up a scheduled task for Pulumi Neo](./neo-freshness.check.png)
 
-Today's launch is part of a bigger story. Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) for the third-party tools and CLIs your automations can use.
+Today's launch is part of a [bigger story](/releases/agentic-infrastructure-era/). Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) for the third-party tools and CLIs your automations can use.
 
 As always, we'd love to hear what you think — and if you have any suggestions for automations that'd make Neo even better, file an issue in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).

@@ -196,7 +196,7 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 
 Check each repository's README for Cursor, Codex, Windsurf, and other agents.
 
-If you want a managed experience that handles orchestration for you, [Pulumi Neo](/product/neo/) is [grounded in your actual infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/), not internet patterns. It understands your stacks, your dependencies, and your deployment history. The [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) post shows what that looks like in practice, and the [May 2026 release](/releases/agentic-infrastructure-era/) extends Neo into the CLI, GitHub, and Slack.
+If you want a managed experience that handles orchestration for you, [Pulumi Neo](/product/neo/) is [grounded in your actual infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/), not internet patterns. It understands your stacks, your dependencies, and your deployment history. The [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) post shows what that looks like in practice.
 
 Pick one and give it a project. You will know within an hour whether it fixes your particular failure mode.
 

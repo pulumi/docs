@@ -185,6 +185,8 @@ blog_section:
     - /blog/10-more-things-you-can-do-with-neo
     - /blog/pulumi-neo-cli
     - /blog/neo-integrations
+    - /blog/neo-automations
+    - /blog/neo-github-slack
     - /blog/neo-github-slack
     - /blog/neo-automations
 ---

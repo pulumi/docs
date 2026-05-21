@@ -245,7 +245,7 @@ When we launched [Pulumi Neo](/neo/) last year, the only way to use it was in th
 
 Now you do. Running `pulumi neo` with or without a prompt launches a Pulumi Cloud-connected session that gives Neo access to your local environment just like any other coding agent. Use it on its own to scaffold a new project, understand an existing codebase, or debug a failing deployment — or pull it into an active session with the coding agent you're already using. Either way, it stays in the shell you're already working in.
 
-We'll cover Neo in the CLI in more detail later this week. In the meantime, here's a peek:
+We'll cover Neo in the CLI in more detail [later this week](/blog/pulumi-neo-cli/). In the meantime, here's a peek:
 
 ![Running Neo in the Pulumi CLI](./neo-cli.png)
 
