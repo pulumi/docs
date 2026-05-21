@@ -44,7 +44,10 @@
                 {{ if $schema }}
                     <h4>Request Body</h4>
                     <div class="api-request-body">
-                        {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi) }}
+                        {{/* maxDepth 0: render top-level properties only. Nested $ref fields
+                             render as a link in the type column; users drill into the linked
+                             schema page rather than expanding inline. */}}
+                        {{ template "openapi/response-schema.html" (dict "schema" $schema "openapi" $.openapi "maxDepth" 0) }}
                     </div>
                 {{ end }}
             {{ end }}

@@ -8,7 +8,9 @@
 {{ $required := .required | default slice }}
 {{ $openapi := .openapi }}
 {{ $depth := .depth | default 0 }}
-{{ $maxDepth := .maxDepth | default 2 }}
+{{/* maxDepth is checked with isset so an explicit 0 isn't coerced to the default. */}}
+{{ $maxDepth := 2 }}
+{{ if isset . "maxDepth" }}{{ $maxDepth = .maxDepth }}{{ end }}
 
 {{ $sortedNames := slice }}
 {{ range $propName, $prop := $properties }}
