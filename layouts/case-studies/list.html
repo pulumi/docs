@@ -2,7 +2,7 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
+<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
 
     {{/* Hero */}}
     <section class="template-hero template-hero--centered" id="hero">
@@ -10,7 +10,7 @@
             <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
                 <h1 class="title mb-6">{{ .Title }}</h1>
                 {{ with .Params.description }}
-                <p class="description mb-10">{{ . | markdownify }}</p>
+                <p class="description mb-10 max-w-2xl">{{ . | markdownify }}</p>
                 {{ end }}
             </div>
         </div>
