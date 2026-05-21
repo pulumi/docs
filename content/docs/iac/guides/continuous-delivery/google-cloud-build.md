@@ -353,6 +353,58 @@ Because the deploy configuration inspects `$TAG_NAME` to choose the target stack
 
 You can define those triggers — and the repository connection itself — as part of a Pulumi program with the [Google Cloud provider](/registry/packages/gcp/), rather than creating them by hand. Use the [`gcp.cloudbuild.Trigger`](/registry/packages/gcp/api-docs/cloudbuild/trigger/) resource for the triggers and [`gcp.cloudbuildv2.Repository`](/registry/packages/gcp/api-docs/cloudbuildv2/repository/) for the repository connection; each resource's Registry page has usage examples in every supported language. Managing triggers this way keeps your CI/CD configuration versioned and reviewed alongside the rest of your infrastructure.
 
+## Speed up builds with caching
+
+Cloud Build starts each build on a clean worker and keeps nothing between builds, so by default Pulumi re-downloads its provider plugins on every run. Cloud Build has no built-in cross-build cache, but you can avoid the repeated downloads in one of two ways.
+
+### Bake plugins into a custom builder image
+
+Build a custom image from the official Pulumi image for your language and pre-install the [provider plugins](/docs/iac/concepts/plugins/) your program uses. The plugins are baked into the image, so no build step downloads them at run time:
+
+```dockerfile
+FROM pulumi/pulumi-nodejs:latest
+
+# Pre-install each provider plugin your program uses, pinned to the version
+# from your dependency lockfile — for example, the Google Cloud provider:
+RUN pulumi plugin install resource gcp 8.0.0
+```
+
+Push the image to [Artifact Registry](https://cloud.google.com/artifact-registry/docs) and reference it as the step `name` in place of `pulumi/pulumi-nodejs`. Rebuild the image whenever you change a provider version. This is the simplest and most deterministic option, and it's the [recommended approach](/docs/iac/concepts/plugins/) for CI/CD.
+
+### Cache the plugins directory in a Cloud Storage bucket
+
+If your set of providers changes often, cache Pulumi's plugin directory in a [Cloud Storage](https://cloud.google.com/storage/docs) bucket instead. Cloud Build persists only the `/workspace` directory between steps, so point `PULUMI_HOME` at a path under `/workspace`, then add a step before the Pulumi step to restore the cache and a step after it to save the cache back:
+
+```yaml
+steps:
+  # Restore the plugin cache, if any.
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud storage rsync --recursive gs://my-cache-bucket/pulumi-plugins /workspace/.pulumi/plugins || true'
+
+  - name: 'pulumi/pulumi-nodejs'
+    dir: 'infra'
+    entrypoint: 'bash'
+    env: ['PULUMI_HOME=/workspace/.pulumi']
+    args:
+      - '-c'
+      - |
+        npm install
+        pulumi preview --stack acme/website/staging
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+
+  # Save the plugin cache for the next build.
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud storage rsync --recursive /workspace/.pulumi/plugins gs://my-cache-bucket/pulumi-plugins'
+```
+
+The `availableSecrets` and `options` blocks are unchanged from the build configurations shown earlier. Set a [lifecycle rule](https://cloud.google.com/storage/docs/lifecycle) on the bucket so stale plugin versions don't accumulate.
+
 ## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
