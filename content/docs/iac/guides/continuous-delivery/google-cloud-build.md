@@ -345,25 +345,7 @@ Because the deploy configuration inspects `$TAG_NAME` to choose the target stack
 
 ### Manage triggers as code
 
-You can define those triggers — and the repository connection itself — as part of a Pulumi program with the [Google Cloud provider](/registry/packages/gcp/). The [`gcp.cloudbuild.Trigger`](/registry/packages/gcp/api-docs/cloudbuild/trigger/) resource creates a trigger against a repository connection, which you create with [`gcp.cloudbuildv2.Repository`](/registry/packages/gcp/api-docs/cloudbuildv2/repository/):
-
-```typescript
-import * as gcp from "@pulumi/gcp";
-
-// `repository` is a gcp.cloudbuildv2.Repository connected to your Git host.
-const previewTrigger = new gcp.cloudbuild.Trigger("preview", {
-    location: "us-central1",
-    filename: "cloudbuild-preview.yaml",
-    repositoryEventConfig: {
-        repository: repository.id,
-        pullRequest: {
-            branch: "^main$",
-        },
-    },
-});
-```
-
-Managing triggers this way keeps your CI/CD configuration versioned and reviewed alongside the rest of your infrastructure.
+You can define those triggers — and the repository connection itself — as part of a Pulumi program with the [Google Cloud provider](/registry/packages/gcp/), rather than creating them by hand. Use the [`gcp.cloudbuild.Trigger`](/registry/packages/gcp/api-docs/cloudbuild/trigger/) resource for the triggers and [`gcp.cloudbuildv2.Repository`](/registry/packages/gcp/api-docs/cloudbuildv2/repository/) for the repository connection; each resource's Registry page has usage examples in every supported language. Managing triggers this way keeps your CI/CD configuration versioned and reviewed alongside the rest of your infrastructure.
 
 ## Additional resources
 
