@@ -1,7 +1,7 @@
 ---
 title: "Bringing Neo to GitHub and Slack"
 date: 2026-05-21
-meta_desc: "Mention @pulumi-neo in GitHub and @Neo in Slack channels to bring Pulumi Neo into the threads where your team works on infrastructure."
+meta_desc: "Mention @pulumi-neo in GitHub or @Neo in your Slack workspace to bring Pulumi Neo into the threads where your team works on infrastructure."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -31,7 +31,7 @@ social:
 
 This week, [Pulumi Neo](/blog/pulumi-neo/) joined two more places where infrastructure work happens: GitHub and Slack. The agent that already runs Pulumi tasks from the Cloud console and the [terminal](/blog/pulumi-neo-cli/) now participates in the threads where your team discusses changes.
 
-Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/integrations/github/) and Neo replies in the thread. Mention `@Neo` in a [Slack](/docs/ai/integrations/slack/) channel and Neo starts a [task](/docs/ai/tasks/) and continues the conversation as you reply.
+Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/integrations/github/) and Neo replies in the thread. Mention `@Neo` in a [Slack channel](/docs/ai/integrations/slack/) and Neo starts a [task](/docs/ai/tasks/) and continues the conversation as you reply.
 
 <!--more-->
 
@@ -39,9 +39,13 @@ Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/integrations/github/
 
 Mention `@pulumi-neo` in a pull request description, a top-level or inline review comment, or an issue. Neo sees the diff, the stacks linked to the repository, and their current state. Reviewers can ask Neo to walk through what a proposed change does, including resources that change in stacks the PR doesn't touch directly. Responses land in the same thread, so the analysis becomes part of the review record and follow-up clarifications happen there too.
 
+{{< video title="Delegating a GitHub issue to Neo" src="neo-github.mp4" autoplay="true" loop="true" controls="false" >}}
+
 ## Neo in Slack
 
 Mention `@Neo` in any channel where Neo has been added, and Neo starts a task in the thread. The reply lands in the same thread, follow-up messages continue the conversation, and the rest of the channel can see what was asked and what Neo found. Neo has the same capabilities here that it does in the Pulumi Cloud console or the terminal: check stack state, investigate failures, walk through what a change will do, or carry out actions the team has approved.
+
+{{< video title="Tagging Neo for help with an issue in Slack" src="neo-slack.mp4" autoplay="true" loop="true" controls="false" >}}
 
 ## Integrations in action
 
@@ -69,6 +73,6 @@ Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC perm
 
 Both integrations are available now for Neo-enabled organizations. The [GitHub integration docs](/docs/ai/integrations/github/) and [Slack integration docs](/docs/ai/integrations/slack/) cover the one-time setup. From there, every engineer with a linked Pulumi Cloud identity can mention Neo from the threads they already work in.
 
-Read more from this week: Joe Duffy on [the agentic infrastructure era](/blog/agentic-infrastructure-era/), the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP and CLI integrations that ship alongside.
+Read more from this week: Joe Duffy on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP and CLI integrations that ship alongside.
 
 As always, file requests for additional surfaces or platforms in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose). We're prioritizing based on what teams use.

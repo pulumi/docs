@@ -62,6 +62,8 @@ A scheduled task uses the same context as an interactive Neo task. [Custom Instr
 
 Open Neo in [Pulumi Cloud](/product/pulumi-cloud/), switch to the **Automations** tab, and pick a template or write your own prompt. The [automations docs](/docs/ai/automations/) cover the form, scheduling options, and per-automation overrides.
 
-This post is one piece of the Neo launch. Joe Duffy's [agentic infrastructure era](/blog/agentic-infrastructure-era/) post lays out the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) covers the third-party tools and CLIs your automations can use.
+![Setting up a scheduled task for Pulumi Neo](./neo-freshness.check.png)
+
+This post is one piece of the Neo launch. Joe Duffy's [agentic infrastructure era](/blog/the-agentic-infrastructure-era/) post lays out the broader vision, and the [Neo Integrations post](/blog/neo-integrations/) covers the third-party tools and CLIs your automations can use.
 
 File feature requests in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).
