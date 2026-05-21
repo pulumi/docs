@@ -1,87 +1,207 @@
 ---
 title: What is Continuous Integration/Continuous Delivery (CI/CD)?
-meta_desc: |
-    Learn about CI/CD practices that improve dev process with automation for effective, rapid software delivery.
+meta_desc: "CI/CD automates the path from code change to production. Learn how continuous integration, delivery, and deployment work and how to build a CI/CD pipeline."
 meta_image: /images/what-is/what-is-ci-cd-meta.png
 type: what-is
 page_title: "What is Continuous Integration/Continuous Delivery (CI/CD)?"
 authors: ["james-denyer"]
 ---
 
-Continuous integration/continuous delivery (CI/CD) is a methodology in software development that emphasizes frequent, automated integration of code changes into a shared repository, followed by automated and reliable software release processes. As a foundational component of [modern DevOps practices](/what-is/what-is-devops/) CI/CD practices and tools increase efficiency, reduce bugs, and enable faster release cycles, thereby enhancing overall software quality and accelerating time-to-market for new features.
+**Continuous integration and continuous delivery (CI/CD) is the practice of automating the path from a developer's code change to a production-ready release.** Continuous integration (CI) merges code into a shared mainline many times a day, with every merge gated by automated builds and tests. Continuous delivery (CD) takes every CI-passing artifact and prepares it for release, so the codebase is always in a deployable state.
 
-In Continuous Integration (CI), developers frequently merge code changes, often multiple times a day, which are immediately tested to identify and fix integration issues early. Continuous Delivery (CD) builds on this by ensuring that the codebase is always in a deployable state, automating the deployment process to enable rapid and safe release to production. This approach enables developers to deliver features and fixes more quickly and reliably, reducing manual efforts and enhancing the quality of software deployments.
+CI/CD is the engineering substrate of modern [DevOps](/what-is/what-is-devops/). It replaces the long, manual release cycles that once produced quarterly "big bang" deployments with a continuous flow of small, tested, reversible changes. With CI/CD in place, teams ship more often, recover faster, and treat every commit as a candidate for production.
 
-In this article, we'll touch on the following key areas:
+In this article, we'll cover the key questions about CI/CD:
 
-* CI/CD essentials
-* CI/CD key terms and tools
-* CI/CD best practices
+* Why does CI/CD matter?
+* What is continuous integration (CI)?
+* What is continuous delivery (CD)?
+* What is continuous deployment, and how is it different from continuous delivery?
+* What does a CI/CD pipeline look like?
+* What are the key stages of a CI/CD pipeline?
+* What are the most popular CI/CD tools?
+* What are CI/CD best practices?
+* How does infrastructure as code fit into CI/CD?
+* Frequently asked questions about CI/CD
 
-### What is CI/CD - essentials
+## Why does CI/CD matter?
 
-CI/CD comprises two software development practices that work in tandem to improve software development and deployment processes.
+For most engineering teams, CI/CD is now a baseline requirement rather than an aspirational practice. Three forces drive that shift.
 
-### What is continuous integration (CI)
+### Releases moved from quarterly to continuous
 
-Continuous integration (CI) is a development practice that encourages frequent integration of tested code changes into a shared code repository.
+DORA's "State of DevOps" research has consistently found elite-performing engineering teams deploying on demand (often multiple times a day) while the lowest-performing teams release between once a month and once every six months. The gap is large enough to be a competitive moat: faster teams learn from production faster and respond to customers faster.
 
-Developers submit the new code changes, and automated builds and tests are triggered to ensure the new code integrates with the existing codebase. A test can be a simple code linter or a more complex process like checking for security vulnerabilities. Proper tests, including unit, integration, and regression tests, are standard in CI.
+### Small, frequent changes are easier to recover from
 
-### What is continuous delivery (CD)
+Big-bang releases concentrate risk. Hundreds of changes ship at once, and when something breaks, root-causing the failure is a forensic exercise. CI/CD breaks that monolithic deploy into a stream of small, isolated changes that are easier to test, easier to revert, and easier to attribute when they go wrong.
 
-In continuous delivery (CD), developers ensure that software is consistently maintained in a deployable state by automating various release process stages, including testing, deployment, and configuration. A release typically consists of a set of new features, improvements, bug fixes, or other changes that have been implemented since the previous release. Release creation may require bundling configuration files, binaries, and other artifacts such as certificates. The new release may be intended for end-user consumption, where it is deployed to production environments, or it may undergo user acceptance testing (UAT) before being released to a broader audience. CD facilitates the automation of these processes.
+### Engineering throughput depends on it
 
-### What is continuous deployment?
+Manual integration and release work doesn't scale. A team of five engineers can hand-coordinate a release; a team of fifty cannot, and they certainly can't do it weekly. CI/CD is what lets growing engineering organizations keep their per-developer throughput from collapsing.
 
-You may have also heard the phrase "continuous deployment." Continuous deployment encompasses the automatic release of software to production. It deploys the packaged code and makes the application available to end users.
+## What is continuous integration (CI)?
 
-To add continuous deployment to our Hello World example, we'd take the latest Docker image tag and deploy it in a running container so that end users can take advantage of the new code changes. However, let's first learn about pipelines before we show you how to do so.
+**Continuous integration** is the practice of merging code changes into a shared mainline branch frequently — typically multiple times a day per developer — with every merge gated by an automated build and test suite. The goal is to catch integration issues immediately, when they are still small and cheap to fix, rather than discovering them weeks later during a "merge week."
 
-### What is a CI/CD pipeline?
+A typical CI pipeline:
 
-The sequential nature of continuous integration, delivery, and deployment practices creates a symbolic pipeline, hence the CI/CD pipeline.
+1. A developer commits to a feature branch and opens a pull request.
+1. The CI system checks out the code, restores dependencies, and builds an artifact.
+1. Unit tests, integration tests, linters, and security scans run against the build.
+1. Results are reported back to the pull request; the merge is gated by a green pipeline.
 
-A pipeline is the deployable unit path for CI/CD. A pipeline starts when code is committed to a repository like GitHub. The next step is a notification to a build system, such as [GitHub Actions](https://docs.github.com/en/actions). The build system compiles the code and runs unit tests. Integration tests are the next step if your code passes the unit tests. If your code passes both unit and integration tests, the images will be created and pushed into a registry service in the case of containers. This is the simplest example of a pipeline. Still, you can do many more things, such as security scans, check modules for CVEs (Common Vulnerabilities and Exploits), send Slack notifications, and run quality checks. A pipeline can be fully automated or have checkpoints that require approval before resuming.
+CI is the technical practice that makes trunk-based development viable: many small commits, frequent merges, and a mainline that is always (or almost always) green.
 
-### CI/CD terms and tools
+## What is continuous delivery (CD)?
 
-The following terms provide a foundational understanding of the key concepts and practices in the field of CI/CD.
+**Continuous delivery** extends CI: every commit that passes the CI pipeline is automatically prepared for release. The build is packaged, dependencies are vendored, artifacts are signed, and the release candidate is staged in a way that a human (or an automated gate) can promote to production at any moment.
 
-| Topic | Description | Tools |
-|-------|-------------|-------|
-| Build automation | The process of automating the creation of a software build and the associated processes including compiling computer source code into binary code, packaging binary code, and running automated tests. | [Docker](https://www.docker.com/), [GitHub Actions](https://github.com/features/actions) |
-| Continuous deployment | An extension of continuous delivery, where every change that passes the automated tests is deployed to production automatically, without explicit approval from a developer, making the deployment process fully automated. | [Pulumi Deployments](/docs/platform/deployments/) |
-| Continuous delivery (CD) | A software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released at any time. It aims at building, testing, and releasing software with greater speed and frequency. | [Codefresh](https://codefresh.io/docs/docs/getting-started/cd-codefresh/), [AWS CodePipeline](https://aws.amazon.com/codepipeline/), [GitHub Actions](https://github.com/features/actions) |
-| Continuous integration (CI) | A development practice where developers integrate code into a shared repository frequently, ideally several times a day. Each integration is verified by an automated build, allowing teams to detect problems early. | [Jenkins](https://www.jenkins.io/), [CircleCI](https://circleci.com/) |
-| Continuous testing | The process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. | [Selenium](https://www.selenium.dev/), [Appium](https://appium.io/docs/en/2.2/) |
-| Feature flagging | A technique that allows developers to turn certain functionalities on and off, typically used in a continuous delivery environment. | [LaunchDarkly](https://launchdarkly.com/), [FeatureToggle](https://featuretoggle.org/) |
-| Test automation | Using special software to control the execution of tests and the comparison of actual outcomes with predicted outcomes. | [Selenium](https://www.selenium.dev/), [JUnit](https://junit.org/junit5/) |
-| Version control systems (VCS) | Systems that record changes to a file or set of files over time so that you can recall specific versions later. | [Git](https://git-scm.com/), [Subversion](https://subversion.apache.org/) |
+The defining property of continuous delivery is that the answer to "can we ship right now?" is always yes. Releases happen on the team's schedule rather than on a build engineer's queue, and the decision to deploy is decoupled from the work of producing a deployable artifact.
 
-## Best practices for CI/CD pipelines
+## What is continuous deployment, and how is it different from continuous delivery?
 
-To build an effective CI/CD pipeline, platform and development teams must adopt and invest in DevOps best practices.
+The two terms sound interchangeable, but they're not. **Continuous deployment** is continuous delivery taken one step further: every change that passes the automated pipeline is *also automatically deployed to production*, with no human in the loop.
 
-* **Use a single repository** - Maintain a centralized repository containing all the necessary files, scripts, source code, and resources for the build and deployment processes.
-* **Adopt [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)**  - Integrate code changes regularly into the main branch to avoid complex merges and ensure a continuous flow of minor, incremental updates.
-* **Automate the build** - Automatically compile code to catch errors early and use tools to check and improve code standards.
-* **Include comprehensive testing** - Implement automated testing at various levels (unit, integration, and end-to-end) to ensure code quality and functionality.  Integrate tools to identify and fix security vulnerabilities.
-* **Deploy stable environments** - Automate setting up and deploying to different environments such as development, QA, pre-production, and production.
-* **Perform routine deployments** - Deployments ought to be familiar enough for the team to execute them confidently at any time. Opting for frequent deployments with minimal changes reduces risks and allows straightforward rollback procedures when needed.
-* **Provide team-wide visibility** - Integrate monitoring tools to receive real-time application performance feedback, helping you promptly identify and resolve issues.
-An effective CI/CD pipeline automates and streamlines software development and delivery, ensuring rapid and reliable releases with high code quality.
+| Practice | What's automated | Who decides to ship |
+|---|---|---|
+| Continuous integration | Build, test on every commit | Humans manually deploy |
+| Continuous delivery | Build, test, package, stage a release candidate | Humans approve and trigger production deploy |
+| Continuous deployment | All of the above, plus production deploy itself | Pipeline ships every green change automatically |
 
-For a detailed exploration and steps to implement CI/CD and DevOps practices, refer to the following Pulumi tools and resources:
+Continuous deployment requires very high confidence in tests, monitoring, and automated rollback. Many teams stay at continuous delivery for compliance or product reasons (feature timing, regulated industries, change-management windows) while still getting most of the value.
 
-* **Continuous integration and continuous delivery (CI/CD)**: For integrating CI/CD processes with Pulumi, visit our [CI/CD integration documentation](https://www.pulumi.com/docs/guides/continuous-delivery/).
+## What does a CI/CD pipeline look like?
 
-* **Policy as code**: To manage policies using Pulumi Policies, visit the [Pulumi Policies documentation](https://www.pulumi.com/docs/insights/policy/).
+A CI/CD pipeline is the automated workflow that takes a commit from source control to a deployable (and optionally deployed) artifact. Conceptually:
 
-* **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
+```mermaid
+flowchart LR
+    Source["Source control<br/>(GitHub / GitLab / Bitbucket)"] --> Build["Build<br/>(compile, package)"]
+    Build --> Test["Test<br/>(unit, integration, security)"]
+    Test --> Artifact["Artifact registry<br/>(container, package, binary)"]
+    Artifact --> Stage["Staging<br/>(automated env)"]
+    Stage --> Approve["Promote<br/>(manual or auto)"]
+    Approve --> Prod["Production deploy"]
+    Prod --> Monitor["Monitor + feedback"]
+    Monitor --> Source
+```
 
-* **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+In practice each stage often has multiple jobs running in parallel — different test suites, different security scanners, different target environments — but the linear flow above captures the shape that most pipelines share.
+
+## What are the key stages of a CI/CD pipeline?
+
+A production-grade pipeline typically includes the following stages:
+
+1. **Source.** A commit or pull request to a Git repository (GitHub, GitLab, Bitbucket) triggers the pipeline through a webhook.
+1. **Build.** The CI system checks out the code, restores dependencies, compiles, and produces immutable artifacts (a container image, a JAR, a Wheel, a binary).
+1. **Test.** Unit tests, integration tests, contract tests, and security scans run in parallel. Results gate the pipeline. This is where [infrastructure tests](/docs/iac/guides/testing/) and [policy as code](/docs/insights/policy/) belong.
+1. **Package and sign.** Artifacts are tagged, signed (Cosign, Sigstore), and pushed to a registry along with provenance metadata.
+1. **Deploy to staging.** The pipeline applies the change to a staging environment that mirrors production, often using [infrastructure as code](/what-is/what-is-infrastructure-as-code/) to keep the two environments in sync.
+1. **Smoke and acceptance tests.** Lightweight tests confirm the staged release is healthy before it's eligible for promotion.
+1. **Promote to production.** Either manually approved or automated, often using progressive techniques like canary or blue/green deploys.
+1. **Monitor.** Metrics, logs, and traces feed back into the next iteration. Failed deploys trigger automated rollback.
+
+## What are the most popular CI/CD tools?
+
+The CI/CD landscape is large. Most teams pick one tool from each of a few categories.
+
+| Category | Representative tools |
+|---|---|
+| Source control | GitHub, GitLab, Bitbucket |
+| CI/CD platforms | GitHub Actions, GitLab CI/CD, CircleCI, Jenkins, Buildkite, Azure DevOps, Travis CI |
+| Container registries | Docker Hub, GitHub Container Registry, Amazon ECR, Google Artifact Registry, Azure Container Registry |
+| Continuous delivery / GitOps | Argo CD, Flux CD, Spinnaker, Harness |
+| Infrastructure as code | [Pulumi](/), Terraform, OpenTofu, AWS CloudFormation |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
+| Secrets and configuration | [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
+| Security scanning | Snyk, Dependabot, Trivy, GitHub Advanced Security, Aqua |
+| Feature flags | LaunchDarkly, Split.io, Unleash, Flagsmith |
+| Observability | Datadog, New Relic, Honeycomb, Grafana, Prometheus, OpenTelemetry |
+| Incident management | PagerDuty, Opsgenie, FireHydrant, Rootly |
+
+The choice of tools matters less than how cleanly they integrate. A pipeline that hops between five tools with manual copy-paste between them is no better than a manually-run release. The goal is one continuous flow from commit to production with policy and observability layered in at every stage.
+
+## What are CI/CD best practices?
+
+A practical baseline that holds up across team sizes and stacks:
+
+* **Use a single source of truth.** Application code, infrastructure code, pipeline definitions, and policies all live in the same Git repository (or a small set of them) with the same review process.
+* **Adopt trunk-based development.** Merge to a single mainline branch many times a day. Long-lived feature branches are where integration debt accumulates.
+* **Build once, promote everywhere.** Produce a single artifact and promote the *same* artifact across staging and production. Re-building per environment introduces drift.
+* **Automate testing at every level.** Unit, integration, contract, and security tests in CI. Smoke and acceptance tests against staging. Synthetic monitoring in production.
+* **Treat infrastructure as code.** Define dev, staging, and production with [infrastructure as code](/what-is/what-is-infrastructure-as-code/) so environments stay aligned and rollbacks are deterministic.
+* **Enforce policy as code in the pipeline.** Block insecure or non-compliant changes with [Pulumi Policies](/docs/insights/policy/) or Open Policy Agent before they reach production.
+* **Keep secrets out of code and logs.** Pull secrets at runtime from a centralized store like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud-native secrets manager.
+* **Deploy small and often.** Smaller changes are easier to test, easier to review, and easier to revert. Frequent practice keeps the muscle strong.
+* **Make rollback the default response.** A failed deploy should trigger automated rollback long before the on-call engineer is paged.
+* **Measure the four DORA metrics.** Deployment frequency, lead time for changes, change-failure rate, and mean time to recover. Use them to prove the pipeline is actually helping.
+
+## How does infrastructure as code fit into CI/CD?
+
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is what makes a CI/CD pipeline cover the whole stack instead of just the application. The same pull-request, preview, test, and promote loop that ships your application now also ships the network, the cluster, the IAM roles, and the managed databases the application depends on.
+
+With Pulumi:
+
+* **Every infrastructure change is a pull request.** Reviewers see a `pulumi preview` diff before anything lands.
+* **CI runs policy as code on every change.** [Pulumi Policies](/docs/insights/policy/) block public buckets, overly broad IAM, and missing encryption before merge.
+* **Secrets stay out of pipelines.** [Pulumi ESC](/product/esc/) pulls dynamic, short-lived credentials at runtime instead of pasting long-lived keys into CI variables.
+* **[Pulumi Deployments](/docs/pulumi-cloud/deployments/)** runs `pulumi up` on managed runners triggered by Git events, schedules, or REST calls — a turnkey CD option for teams that don't want to maintain their own runners.
+* **Reusable components carry secure defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) that bake in encryption, logging, and IAM, so product teams consume secure infrastructure by default.
+
+For details on wiring Pulumi into specific CI systems, see the [CI/CD integration guide](/docs/iac/packages-and-automation/continuous-delivery/).
+
+## Frequently asked questions about CI/CD
+
+### What is the difference between CI, CD, and continuous deployment?
+
+CI (continuous integration) automates build and test on every commit. CD (continuous delivery) extends that by automatically packaging and staging a release candidate, leaving the production deploy as a one-click step. Continuous deployment goes one step further and ships every green change to production automatically.
+
+### Do I need both CI and CD?
+
+Almost always, yes. CI without CD produces well-tested code that still has to be released by hand, which is where most release pain lives. CD without CI is unsafe — you'd be auto-releasing untested code. The two are designed to compose.
+
+### Is CI/CD only for application code?
+
+No. The most leveraged CI/CD pipelines cover application code, infrastructure code, configuration, and policy together. [Infrastructure as code](/what-is/what-is-infrastructure-as-code/) is what makes that possible: the same pipeline that ships a microservice can also ship a new Kubernetes cluster, a managed database, or an IAM role change.
+
+### How do CI/CD and GitOps relate?
+
+GitOps is a deployment pattern in which a controller continuously reconciles a live environment with a declared state stored in Git. CI/CD is the broader pipeline that produces, tests, and promotes those declarations. GitOps tools (Argo CD, Flux) are typically the *CD* half of a CI/CD pipeline whose CI half runs in GitHub Actions, GitLab CI, or another platform.
+
+### What's the difference between CI/CD and DevOps?
+
+[DevOps](/what-is/what-is-devops/) is a broader culture and set of practices for delivering software with shared ownership across Dev, Ops, and Security. CI/CD is the technical backbone that makes DevOps work in practice. A team can have CI/CD without all of DevOps, but DevOps without CI/CD is mostly aspirational.
+
+### How does CI/CD work with Kubernetes?
+
+Most Kubernetes teams use a CI system (GitHub Actions, GitLab CI, etc.) to build and test container images, push them to a registry, and update either Helm charts, Kustomize overlays, or Pulumi programs that describe the cluster state. A GitOps controller like Argo CD or Flux then reconciles the cluster with the declared state. Pulumi can drive the same workflow without GitOps if you'd rather have the engine push changes directly.
+
+### Are CI/CD pipelines secure by default?
+
+No. A pipeline with broad cloud credentials, weak secret handling, or no policy checks is a serious attack vector. Best practices include least-privilege deployment credentials (ideally short-lived OIDC tokens), centralized secret management, signed and provenance-tracked artifacts, and policy as code that runs against every change.
+
+### What metrics should I track for CI/CD?
+
+The DORA four: **deployment frequency**, **lead time for changes**, **change-failure rate**, and **mean time to recover**. Together they capture both speed and stability. Many teams also track pipeline duration, queue time, and flaky-test rate, since slow or noisy pipelines erode all the other metrics.
+
+### How long should a CI/CD pipeline take?
+
+Most high-performing teams target under 10 minutes from commit to a deployable artifact, and under 30 minutes end-to-end including staging. Longer pipelines push developers to batch changes, which undermines the whole reason for adopting CI/CD in the first place.
+
+### What's the easiest way to get started with CI/CD?
+
+Pick one service, set up a hosted CI system (GitHub Actions is a low-friction choice for most teams), and add a single workflow that runs your tests on every pull request. Once that's green and trusted, add build, package, and deploy steps for a single environment. Expand from there. Trying to build a five-environment, multi-cloud, policy-enforced pipeline on day one is a common way to never ship anything.
 
 ## Learn more
 
-Pulumi offers a truly modern approach to implementing DevOps practices and infrastructure as code. With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know. [Get started today](/docs/get-started/).
+Pulumi treats infrastructure as software, which lets you put your entire cloud platform through the same CI/CD pipeline that ships your application code. Every change is a reviewable pull request, [policy as code](/docs/insights/policy/) blocks unsafe configurations in CI, and [Pulumi ESC](/product/esc/) keeps secrets out of pipelines. [Get started today](/docs/iac/get-started/), or see the [CI/CD integration guide](/docs/iac/packages-and-automation/continuous-delivery/) for specifics on GitHub Actions, GitLab, CircleCI, Jenkins, and more.
+
+Related reading:
+
+* [What is DevOps?](/what-is/what-is-devops/)
+* [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
+* [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
+* [What is Pulumi?](/what-is/what-is-pulumi/)
+* [What is Configuration Management?](/what-is/what-is-configuration-management/)
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)
