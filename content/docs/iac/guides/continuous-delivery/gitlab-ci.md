@@ -57,21 +57,24 @@ A protected CI/CD variable is available only to jobs that run on a protected bra
 
 You can remove the static token entirely. GitLab CI/CD can issue a short-lived [OpenID Connect (OIDC)](https://docs.gitlab.com/ci/secrets/id_token_authentication/) `id_token` for a job. Register GitLab as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/gitlab/) in Pulumi Cloud, and the job exchanges that `id_token` for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a CI/CD variable.
 
-The trust flows inbound: GitLab issues the `id_token`, and `pulumi login --oidc-token` exchanges it with Pulumi Cloud for an access token. A job requests the token with the `id_tokens` keyword and then logs in before running Pulumi:
+The trust flows inbound: GitLab issues the `id_token`, and `pulumi login --oidc-token` exchanges it with Pulumi Cloud for an access token. A job requests the token with the `id_tokens` keyword and logs in before running Pulumi. Apply this by adding the `id_tokens` block and the `pulumi login` step to the `.pulumi` hidden job in the [workflow below](#the-trunk-based-development-workflow):
 
 ```yaml
 variables:
   PULUMI_ORG: acme
 
+# This replaces the `.pulumi` hidden job in the workflow below.
 .pulumi:
   id_tokens:
     PULUMI_OIDC_TOKEN:
       aud: urn:pulumi:org:$PULUMI_ORG
   before_script:
     - pulumi login --oidc-token "$PULUMI_OIDC_TOKEN" --oidc-org "$PULUMI_ORG"
+    - cd infra
+    - npm ci # replace with your language's dependency-install command
 ```
 
-For the full setup — registering the issuer and writing the authorization policy that controls which projects and branches may exchange a token — see [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) and the central [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) reference.
+With OIDC, the pipeline needs no `PULUMI_ACCESS_TOKEN` CI/CD variable. For the full setup — registering the issuer and writing the authorization policy that controls which projects and branches may exchange a token — see [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) and the central [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) reference.
 
 ## The trunk-based development workflow
 
