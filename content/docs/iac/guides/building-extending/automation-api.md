@@ -25,9 +25,9 @@ In this guide, you'll deploy an inline Pulumi program that creates a static webs
 
 Before you begin, make sure you have:
 
-- The [Pulumi CLI](/docs/install/) installed and available on your `PATH`. Automation API drives the CLI under the hood. Alternatively, you can [install the CLI programmatically](#install-the-cli-programmatically) from your Automation API program.
+- The [Pulumi CLI](/docs/install/) installed and available on your `PATH`. Automation API drives the CLI under the hood. Or, your program can [install the CLI programmatically](#install-the-cli-programmatically) at runtime.
 - The runtime for your chosen language installed: Node.js, Python, Go, .NET, or Java.
-- A [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) so your program can store state in Pulumi Cloud. Run `pulumi login` to authenticate, or set the `PULUMI_ACCESS_TOKEN` environment variable.
+- A [Pulumi access token](/docs/administration/access-identity/access-tokens/) so your program can store state in Pulumi Cloud. Run `pulumi login` to authenticate, or set the `PULUMI_ACCESS_TOKEN` environment variable.
 - AWS credentials configured, since this guide deploys resources to AWS.
 
 ### Install the CLI programmatically
@@ -56,10 +56,10 @@ const stack = await LocalWorkspace.createOrSelectStack(args, { pulumiCommand });
 {{% choosable language python %}}
 
 ```python
-from pulumi.automation import PulumiCommand, LocalWorkspaceOptions
+from pulumi import automation as auto
 
 # Install the CLI version matching the SDK into ~/.pulumi/versions/<version>.
-pulumi_command = PulumiCommand.install()
+pulumi_command = auto.PulumiCommand.install()
 ```
 
 Pass it to the workspace through the `pulumi_command` option when you create the stack:
@@ -68,7 +68,7 @@ Pass it to the workspace through the `pulumi_command` option when you create the
 stack = auto.create_or_select_stack(stack_name=stack_name,
                                     project_name=project_name,
                                     program=pulumi_program,
-                                    opts=LocalWorkspaceOptions(pulumi_command=pulumi_command))
+                                    opts=auto.LocalWorkspaceOptions(pulumi_command=pulumi_command))
 ```
 
 {{% /choosable %}}
