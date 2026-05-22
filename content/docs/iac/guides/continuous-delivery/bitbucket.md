@@ -138,4 +138,4 @@ The integration can also replace a hand-written pipeline entirely: with [push-to
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/) — pull request comments and commit statuses from Pulumi Cloud.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

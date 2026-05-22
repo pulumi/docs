@@ -30,7 +30,7 @@ aliases:
 Pulumi models cloud resources as source code, so changes to your infrastructure can be reviewed, tested, and deployed through the same pipeline you already use for application code: pull requests, code review, and automated tests. Pulumi integrates with any continuous integration and continuous delivery (CI/CD) system.
 
 {{% notes %}}
-Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/).
+Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/).
 {{% /notes %}}
 
 ## The trunk-based development workflow

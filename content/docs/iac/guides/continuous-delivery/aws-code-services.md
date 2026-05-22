@@ -163,4 +163,4 @@ If you operate many pipelines that are similar or identical, package the pattern
 - [AWS provider](/registry/packages/aws/) — manage AWS resources, including the pipeline itself, as code.
 - [Component resources](/docs/iac/concepts/components/) — package a reusable pipeline pattern as a single resource.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
