@@ -24,15 +24,15 @@ social:
 
 Infrastructure as code is the right model for production systems. State tracking, drift detection, and repeatable deployments all matter when you're managing real workloads. But there are also times you need a quick, one-off interaction with the cloud: create a bucket, look up a VPC, delete a leftover resource.
 
-Today we're introducing `pulumi do`, a new command for direct resource operations. Create, read, update, delete, and query any cloud resource from the terminal with a single command, across all 150+ Pulumi providers. No project, no stack, no state file required.
+Today we're introducing `pulumi do`, a new command for direct resource operations. Create, read, update, delete, and query any cloud resource from the terminal with a single command, across thousands of Pulumi providers. No project, no stack, no state file required.
 
 <!--more-->
 
-## The problem: IaC is too heavy for every interaction
+## The problem: not every cloud interaction needs a full lifecycle
 
-When you're managing production workloads, IaC earns its weight. State tracking catches drift before it causes outages. Dependency graphs sequence changes safely. Policy enforcement keeps teams in bounds. That full lifecycle is exactly what you want for systems that matter.
+IaC gives you state tracking, dependency graphs, policy enforcement, and repeatable deployments. Those capabilities exist because production infrastructure demands them. But when you're exploring a new provider, testing whether an API behaves the way you expect, or spinning up a throwaway resource to validate a configuration, you don't need a full lifecycle yet. You need a fast answer.
 
-But when an LLM needs a Postgres database on AWS, the straightest-line path with IaC is eight steps: create a directory, initialize a project, pick a language, install packages, configure credentials, write infrastructure code, preview, deploy. That is a lot of surface area for errors, a lot of tokens consumed across those steps, and a lot of cost for what should be a simple operation. `pulumi do` collapses those eight steps into one, while using the same providers and type system that power a full Pulumi program.
+For an LLM agent provisioning a Postgres database, the overhead is even more visible: create a directory, initialize a project, pick a language, install packages, configure credentials, write infrastructure code, preview, deploy. That's a lot of tokens and surface area for errors when the goal is a single resource. `pulumi do` collapses that into one command, while using the same providers and type system that power a full Pulumi program.
 
 As Joe described in [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/), resource creation is only part of the problem. The real blocker for AI agents is everything around the code: creating cloud accounts, plumbing credentials, wiring configuration across services. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) tackle the first piece by letting agents provision a Pulumi Cloud account on the fly, no signup form, no browser. [Pulumi ESC](/docs/esc/) tackles the second by unifying credentials across every provider. Together with `pulumi do`, an agent goes from zero to deployed infrastructure without leaving the terminal. We also shipped a [redesigned CLI](/blog/better-cli-interactions-for-agents-and-humans/) so both humans and agents can find the right command on the first try. And when that one-off resource grows into a production system, `pulumi do` provides a graduation path back to full IaC.
 
@@ -64,7 +64,7 @@ The command dynamically builds its CLI tree from any installed Pulumi provider's
 # Provider functions (read-only queries)
 pulumi do <package:module:function> [flags]
 
-# Resource operations (create, read, patch, delete, list)
+# Resource operations (create, read, patch, delete)
 pulumi do <package:module:type> <operation> [<id>] [flags]
 ```
 
@@ -72,7 +72,7 @@ The package, module, and type/function segments come directly from the provider 
 
 ### Provider functions
 
-Provider functions are read-only operations that query cloud APIs through Pulumi's provider layer. They shipped in [Pulumi CLI v3.242.0](https://github.com/pulumi/pulumi/releases/tag/v3.242.0).
+Provider functions are read-only operations that query cloud APIs through Pulumi's provider layer. They shipped in [Pulumi CLI v3.243.0](https://github.com/pulumi/pulumi/releases/tag/v3.243.0).
 
 ```bash
 # Look up a VPC by tags
@@ -98,17 +98,11 @@ tags = {
 
 Internally, the CLI parses the input and binds it against the function's schema using a new `BindFunction` method in the PCL codegen library. You get full type checking before the provider is ever called. The bound PCL then runs through the same evaluation logic the engine uses for resource registrations (defaults, type casting, secret marking). The provider's `Invoke` call executes, and the result lands as JSON on stdout.
 
-YAML input files also work. Pass `--input yaml` alongside `--input-file` and the CLI converts the YAML through a converter plugin before evaluation:
-
-```bash
-$ pulumi do aws:ec2:getVpc --input-file query.yaml --input yaml
-```
-
 Secrets in function results appear as `[secret]` by default. Pass `--show-secrets` to reveal them. The `--dry-run` flag sets the operation to preview mode, signaling the provider to return placeholder values instead of live data.
 
 ### Resource operations
 
-Resource operations let you create, read, update, delete, and list cloud resources directly from the CLI. Each operation maps to a provider CRUD method, using the same provider logic a full Pulumi program would use.
+Resource operations let you create, read, update, and delete cloud resources directly from the CLI. Each operation maps to a provider CRUD method, using the same provider logic a full Pulumi program would use.
 
 **Create** a resource by passing inputs via a file:
 
@@ -153,14 +147,6 @@ $ pulumi do aws:s3:Bucket patch my-data-bucket --input-file updates.pcl
 $ pulumi do aws:s3:Bucket delete my-data-bucket
 ```
 
-**List** resources of a given type (when the provider supports it):
-
-```bash
-$ pulumi do aws:s3:Bucket list
-```
-
-The `--all` flag retrieves every resource. `--count N` limits the result set. The output is a JSON array of `{"id", "name"}` objects.
-
 All mutating operations (create, patch, delete) prompt for confirmation. Pass `--yes` to skip the prompt, which is useful for scripting and agent workflows.
 
 ### Provider configuration
@@ -184,7 +170,7 @@ Three design choices make `pulumi do` work well for AI agents, and they make it 
 
 **Predictable output contract.** JSON on stdout, progress on stderr, consistent exit codes. An agent can parse the result programmatically without scraping human-formatted tables.
 
-**150+ providers under one syntax.** Many cloud and SaaS providers don't have a full CLI at all. Datadog's CLI focuses on CI/CD and serverless instrumentation rather than general resource management. Cloudflare's covers a subset of its API. `pulumi do` generates commands from the provider schema, so if a Pulumi provider exists for it, the CLI works. An agent doesn't need to learn (or even know about) each provider's native tooling.
+**Thousands of providers under one syntax.** Many cloud and SaaS providers don't have a full CLI at all. Datadog's CLI focuses on CI/CD and serverless instrumentation rather than general resource management. Cloudflare's covers a subset of its API. `pulumi do` generates commands from the provider schema, so if a Pulumi provider exists for it, the CLI works. An agent doesn't need to learn (or even know about) each provider's native tooling.
 
 ## What's next
 
@@ -220,7 +206,7 @@ The eject path works because `pulumi do` uses the same providers, resource types
 
 ## Get started
 
-`pulumi do` ships as a research preview in [Pulumi CLI v3.242.0](https://github.com/pulumi/pulumi/releases/tag/v3.242.0) and later. Install or update the CLI, install a provider plugin, and start running commands. The [documentation](/docs/iac/cli/direct-resource-operations/) has the full reference.
+`pulumi do` ships as a research preview in [Pulumi CLI v3.243.0](https://github.com/pulumi/pulumi/releases/tag/v3.243.0) and later. Install or update the CLI and start running commands. Provider plugins auto-install on first use, so there's no separate setup step. The [documentation](/docs/iac/cli/direct-resource-operations/) has the full reference.
 
 We'd like your feedback. Try `pulumi do`, tell us what works, and help shape the CLI that agents and humans both reach for first.
 

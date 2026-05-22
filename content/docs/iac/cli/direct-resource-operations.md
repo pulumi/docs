@@ -25,7 +25,7 @@ The `pulumi do` command provides direct operations on cloud resources through th
 `pulumi do` supports two types of operations:
 
 - **Provider functions**: Read-only queries against cloud APIs (e.g., looking up a VPC, fetching an AMI).
-- **Resource operations**: Create, read, patch (update), delete, and list cloud resources.
+- **Resource operations**: Create, read, patch (update), and delete cloud resources.
 
 ### Command syntax
 
@@ -105,17 +105,9 @@ nestedParameter = {
 
 The PCL input is bound against the function's schema for full type checking before execution.
 
-**YAML:** Pass `--input yaml` alongside `--input-file`:
-
-```bash
-$ pulumi do aws:ec2:getVpc --input-file query.yaml --input yaml
-```
-
-The CLI converts YAML to PCL through a converter plugin before evaluation.
-
 ## Resource operations
 
-Resource operations let you create, read, update, delete, and list cloud resources directly. Each operation uses the same provider logic as a full Pulumi program.
+Resource operations let you create, read, update, and delete cloud resources directly. Each operation uses the same provider logic as a full Pulumi program.
 
 ### Create
 
@@ -151,25 +143,12 @@ Deletes a resource. The CLI prompts for confirmation before destroying.
 $ pulumi do <package:module:type> delete <provider-resource-id>
 ```
 
-### List
-
-Lists resources of a given type (when the provider supports listing).
-
-```bash
-$ pulumi do <package:module:type> list
-```
-
-| Flag | Description |
-|------|-------------|
-| `--all` | Retrieve all resources (no pagination limit) |
-| `--count N` | Limit the number of results returned |
-
 ## Flags
 
 | Flag | Type | Default | Description |
 |------|------|---------|-------------|
 | `--input-file` | string | | Path to a file containing function or resource inputs |
-| `--input` | string | `pcl` | Input file format (`pcl` built-in; other formats like `yaml` require a converter plugin) |
+| `--input` | string | `pcl` | Input file format |
 | `--provider-file` | string | | Path to a file containing provider configuration |
 | `--provider-format` | string | `pcl` | Format of the provider configuration file |
 | `--dry-run` | bool | `false` | Run in preview mode (provider returns placeholder values) |
