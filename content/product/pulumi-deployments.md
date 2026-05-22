@@ -34,7 +34,7 @@ benefits:
     description: |
         Pulumi Deployments makes it easier for you and engineers on your team to manage the entire lifecycle of infrastructure from provisioning to tear down. You can choose from different workflows such as GitHub pull request triggered deployments, stacks with time based automatic deletions, scheduled automations, and more.
 
-        You can also orchestrate custom workflows with [Automation API](/docs/using-pulumi/automation-api/) and offload the workflow execution to Pulumi Deployments instead of running the Automation API code locally yourself. Pulumi Deployments is a fully managed service with minimal setup and is available through [Pulumi](/product/).
+        You can also orchestrate custom workflows with [Automation API](/docs/iac/concepts/automation-api/) and offload the workflow execution to Pulumi Deployments instead of running the Automation API code locally yourself. Pulumi Deployments is a fully managed service with minimal setup and is available through [Pulumi](/product/).
 
 preview:
   youtube_url: https://www.youtube.com/embed/v48U7CNWutc

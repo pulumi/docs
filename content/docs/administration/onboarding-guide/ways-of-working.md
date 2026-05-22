@@ -111,7 +111,7 @@ Developers log into a portal and provision infrastructure through a graphical in
 
 - [Pulumi IDP](/docs/idp/)
 - [Pulumi's Backstage plugin](/blog/pulumi-backstage-plugin/)
-- Custom portals powered by [Pulumi's Automation API](/docs/iac/automation-api/)
+- Custom portals powered by [Pulumi's Automation API](/docs/iac/concepts/automation-api/)
 
 [Learn more about building developer portals](/docs/idp/concepts/).
 
@@ -153,7 +153,7 @@ Pulumi was built with extensibility in mind, following a "building blocks" philo
 **[Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)**
 The well-documented, powerful API that powers the CLI and cloud console experiences.
 
-**[Pulumi Automation API](/docs/iac/automation-api/)**
+**[Pulumi Automation API](/docs/iac/concepts/automation-api/)**
 Embed IaC capabilities into any software, enabling custom tools, self-serve portals, complex deployment orchestrations, and even SaaS products that provision cloud resources.
 
 **[Pulumi Cloud Webhooks](/docs/deployments/webhooks/)**

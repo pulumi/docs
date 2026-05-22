@@ -282,7 +282,7 @@ Consumers of your component will then be able to use it without needing to regen
 
 ## Using local packages with Automation API
 
-For documentation on how to use local packages with Pulumi's [Automation API](/docs/iac/automation-api/) see [Using local packages with Automation API](/docs/iac/automation-api/getting-started-automation-api/#using-local-packages-with-automation-api).
+For documentation on how to use local packages with Pulumi's [Automation API](/docs/iac/concepts/automation-api/) see [Using local packages with Automation API](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api).
 
 ## See also
 

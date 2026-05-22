@@ -197,7 +197,7 @@ The Pulumi SDK provides constructs for working with key Pulumi concepts. For mor
 
 Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI handles authentication, state management, and orchestrating resource operations.
 
-Alternatively, you can use the [Automation API](/docs/using-pulumi/automation-api/) to programmatically control the Pulumi engine from within your Node.js code. The Automation API allows you to:
+Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Node.js code. The Automation API allows you to:
 
 - Embed Pulumi operations in regular Node.js applications
 - Build custom deployment tools and workflows

@@ -44,9 +44,9 @@ CDK for Terraform (CDKTF) was a HashiCorp project, released in 2020 and [depreca
 | Transpiled to another format? | No — programs run directly in their host language | Yes — programs are synthesized into Terraform JSON and deployed by the Terraform CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Local, remote, or cloud-hosted (the Terraform state model) |
 | Secrets management | [Encrypted in transit and at rest](/docs/iac/concepts/secrets/) in the state file by default, with per-stack encryption keys; pluggable KMS providers (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault) | No built-in secrets primitive |
-| Execution model | Local CLI, programmatic via [Automation API](/docs/iac/automation-api/), or remote runs in [Pulumi Deployments](/docs/deployments/) | Terraform CLI only (invoked by the `cdktf` CLI) |
+| Execution model | Local CLI, programmatic via [Automation API](/docs/iac/concepts/automation-api/), or remote runs in [Pulumi Deployments](/docs/deployments/) | Terraform CLI only (invoked by the `cdktf` CLI) |
 | Rollback on failed operation | Failed updates leave the stack in a partially-updated state; subsequent `pulumi up` runs reconcile toward the desired state, and you can roll forward by reverting program code | No automatic rollback; reconciliation requires fixing code and re-running `terraform apply` |
-| Programmatic API for tools and platforms | [Automation API](/docs/iac/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | None |
+| Programmatic API for tools and platforms | [Automation API](/docs/iac/concepts/automation-api/) — a programmatic SDK for building custom CLIs, internal developer platforms, and services that drive `up`, `preview`, and `destroy` without shelling out to the Pulumi CLI | None |
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers; and the [Pulumi Registry](/registry/) for publicly available packages | CDKTF constructs (built on the [constructs](https://github.com/aws/constructs) library) and direct consumption of Terraform modules |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | `cdktf import` and `terraform import`, with hand-authored code wrappers |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, PCI DSS, and NIST | None first-party; teams typically integrated [OPA](https://www.openpolicyagent.org/) or Sentinel (Terraform Cloud commercial plans) against the synthesized Terraform JSON |
@@ -65,7 +65,7 @@ CDKTF supported Terraform providers through project-specific SDKs generated on d
 
 ### Execution and rollbacks
 
-CDKTF provisioned and managed exclusively through the Terraform CLI: `cdktf synth` produced Terraform JSON, then `cdktf deploy` invoked `terraform apply` on it. Pulumi runs deployments through the local CLI, programmatically through the [Automation API](/docs/iac/automation-api/), or remotely through [Pulumi Deployments](/docs/deployments/). Neither tool performs automatic rollback on failure; both leave failed updates in a partially-updated state for the operator to reconcile.
+CDKTF provisioned and managed exclusively through the Terraform CLI: `cdktf synth` produced Terraform JSON, then `cdktf deploy` invoked `terraform apply` on it. Pulumi runs deployments through the local CLI, programmatically through the [Automation API](/docs/iac/concepts/automation-api/), or remotely through [Pulumi Deployments](/docs/deployments/). Neither tool performs automatic rollback on failure; both leave failed updates in a partially-updated state for the operator to reconcile.
 
 ### Secrets handling
 
@@ -81,7 +81,7 @@ Pulumi's [Component Resources](/docs/iac/concepts/components/) are runtime objec
 
 ### Automation API
 
-The [Automation API](/docs/iac/automation-api/) lets a host application drive Pulumi without shelling out to the CLI. Practical uses include embedding stack creation in a SaaS product, building an internal developer platform that provisions environments per team or per branch, generating ephemeral preview environments from CI, and orchestrating cross-cloud deployments where each step runs as part of a larger workflow. CDKTF had no equivalent embeddable SDK.
+The [Automation API](/docs/iac/concepts/automation-api/) lets a host application drive Pulumi without shelling out to the CLI. Practical uses include embedding stack creation in a SaaS product, building an internal developer platform that provisions environments per team or per branch, generating ephemeral preview environments from CI, and orchestrating cross-cloud deployments where each step runs as part of a larger workflow. CDKTF had no equivalent embeddable SDK.
 
 ## When to choose Pulumi vs. CDKTF
 
@@ -90,7 +90,7 @@ The [Automation API](/docs/iac/automation-api/) lets a host application drive Pu
 1. Need an actively maintained, supported infrastructure as code platform — CDKTF was deprecated in December 2025 and no longer receives updates.
 1. Want one tool that targets the Pulumi Registry, Terraform providers, and Terraform modules from the same program.
 1. Need built-in secrets encryption, pluggable KMS providers, and per-stack encryption keys.
-1. Need an embeddable SDK ([Automation API](/docs/iac/automation-api/)) to drive deployments from a host application.
+1. Need an embeddable SDK ([Automation API](/docs/iac/concepts/automation-api/)) to drive deployments from a host application.
 1. Want a free, open-source policy-as-code engine with rules in Python, TypeScript, or Rego.
 
 **Choose CDKTF when** you:
