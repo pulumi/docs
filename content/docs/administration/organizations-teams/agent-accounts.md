@@ -36,7 +36,6 @@ Agent accounts automatically give AI agents a free ephemeral Pulumi Cloud accoun
 1. The agent continues to use Pulumi CLI, collaborating with the user in their Pulumi Cloud account.
    - The Pulumi CLI finds Pulumi Cloud credentials and proceeds normally.
 
-
 ```
 pulumi: created an agent account on Pulumi Cloud so this work persists.
         Claim within 30 days to take ownership.
