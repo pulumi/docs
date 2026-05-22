@@ -17,6 +17,8 @@ aliases:
 
 The `provider` resource option sets a provider for the resource. For more information, see [Providers](../providers). The default is to inherit this value from the parent resource, and to use the ambient provider specified by Pulumi configuration for resources without a parent.
 
+{{< resource-option-scope "provider" >}}
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}

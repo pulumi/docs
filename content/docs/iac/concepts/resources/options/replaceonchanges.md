@@ -19,6 +19,8 @@ The `replaceOnChanges` resource option can be used to indicate that changes to c
 
 For example, with Kubernetes `CustomResource` resources, the Kubernetes resource model doesn't know whether or not a specific input property on a specific kind of `CustomResource` requires a replacement, and so assumes that *any* change can be made without replacement.  However, in practice, many specific kinds of `CustomResource` in the Kubernetes ecosystem *do* require replacement when certain input properties are changed.  The Kubernetes provider itself can't know this, but users can use `replaceOnChanges` to ensure that these changes can be made correctly via Pulumi.
 
+{{< resource-option-scope "replaceOnChanges" >}}
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
@@ -120,9 +122,5 @@ The property paths passed to `replaceOnChanges` should always be the "camelCase"
 If there are initialization errors on a resource (because the resource was created but failed to fully initialize correctly on a previous deployment) then the resource will normally be updated on the following Pulumi update, even if there are no other changes to the resource's inputs.  If `*` is specified as a property path for `replaceOnChanges`, then initialization errors will trigger a replacement instead of an update.
 
 The `replaceOnChanges` resource option can be combined with the [`deleteBeforeReplace`](/docs/concepts/options/deletebeforereplace) resource option to trigger a resource to be deleted before it is replaced whenever a given input has changes.
-
-{{% notes type="warning" %}}
-The `replaceOnChanges` resource option does not apply to component resources, and will not have the intended effect.
-{{% /notes %}}
 
 For one-time resource replacements without code changes, see [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/) and [`pulumi state untaint`](/docs/iac/cli/commands/pulumi_state_untaint/).

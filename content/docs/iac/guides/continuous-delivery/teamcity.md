@@ -123,7 +123,7 @@ A clean build agent starts with an empty plugin cache, so Pulumi re-downloads it
 ## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
-- [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.

@@ -16,6 +16,8 @@ aliases:
 
 The `hideDiffs` resource option specifies a list of property paths whose diff details Pulumi will compact in CLI output. Setting `hideDiffs` does not affect what resources are updated, only how those updates are displayed.
 
+{{< resource-option-scope "hideDiffs" >}}
+
 {{% notes type="info" %}}
 The `hideDiffs` option only affects CLI display output. It does not change resource update behavior, prevent changes from being detected, or modify what gets stored in state.
 {{% /notes %}}

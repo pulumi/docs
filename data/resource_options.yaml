@@ -1,0 +1,204 @@
+# Classification of Pulumi resource options for the
+# content/docs/iac/concepts/resources/options/ reference pages.
+#
+# This file is the single source of truth consumed by:
+#   - the `resource-option-scope` shortcode (the per-page classification
+#     callout: layouts/shortcodes/resource-option-scope.html, which builds its
+#     text via layouts/partials/resource-option-scope-body.html)
+#   - the `resource-options-table` shortcode (the options table in
+#     options/_index.md: layouts/shortcodes/resource-options-table.html)
+#
+# -----------------------------------------------------------------------------
+# ADDING A NEW RESOURCE OPTION
+# -----------------------------------------------------------------------------
+# When you add a new resource option, keep this system in sync:
+#
+#   1. Create the reference page at
+#      content/docs/iac/concepts/resources/options/<name>.md (lowercase file
+#      name; camelCase `title` in frontmatter, like the existing pages).
+#   2. Add an entry to THIS file, keyed by the camelCase option name, filling
+#      in every field documented below. Verify `applies_to` and `typed_on`
+#      against the SDK source (see "Determining typed_on" below).
+#   3. In the new page, add the callout immediately after the opening
+#      descriptive paragraph:  {{< resource-option-scope "<name>" >}}
+#      The argument MUST exactly match the key you added in step 2.
+#   4. Nothing else to update: the options table in options/_index.md is
+#      generated from this file, so it picks up the new option automatically.
+#   5. Run `make build`. The `resource-option-scope` shortcode fails the build
+#      if its argument has no matching key here, so a forgotten entry can't
+#      ship silently.
+#
+# Determining `typed_on` (where the strongly typed SDKs declare the option):
+#   - TypeScript: sdk/nodejs/resource.ts                in pulumi/pulumi
+#   - C#:         sdk/Pulumi/Resources/*Options.cs       in pulumi/pulumi-dotnet
+#   - Java:       .../com/pulumi/resources/*Options.java in pulumi/pulumi-java
+#   An option declared on `CustomResourceOptions` is `typed_on: custom-options`;
+#   one on `ComponentResourceOptions` is `component-options`; one on the base
+#   `ResourceOptions` type is `base`. Python and Go expose a single options
+#   type and never enforce this distinction, so they need no per-SDK lookup.
+#
+# Fields per option:
+#   description      One-line, sentence-case summary rendered in the
+#                    options/_index.md table.
+#   applies_to       custom | component | both | provider
+#                    Whether the option has a meaningful effect on custom
+#                    resources, component resources, both, or only on
+#                    explicitly configured provider resources.
+#   typed_on         base | custom-options | component-options
+#                    Where the option is declared in the strongly typed SDKs
+#                    (TypeScript, C#, Java). Options on `CustomResourceOptions`
+#                    or `ComponentResourceOptions` are compile-time enforced;
+#                    options on the base `ResourceOptions` type are not.
+#   components_note  Short note on component behavior, used in the per-page
+#                    callout reasoning.
+#   note             Optional extra sentence appended to the per-page callout
+#                    for behavior that needs more explanation.
+
+additionalSecretOutputs:
+  description: Specify output properties that must be encrypted as secrets.
+  applies_to: custom
+  typed_on: custom-options
+  components_note: Components don't have provider-managed outputs.
+
+aliases:
+  description: Specify aliases so that renaming or refactoring doesn't replace a resource.
+  applies_to: both
+  typed_on: base
+  components_note: Works for renaming or refactoring components.
+
+customTimeouts:
+  description: Override the default retry/timeout behavior for resource provisioning.
+  applies_to: custom
+  typed_on: base
+  components_note: Components don't have provider operations to time out.
+
+deleteBeforeReplace:
+  description: Delete the existing resource before creating its replacement.
+  applies_to: custom
+  typed_on: custom-options
+  components_note: A provider doesn't replace component resources.
+
+deletedWith:
+  description: Skip this resource's delete when the named resource is also being deleted.
+  applies_to: both
+  typed_on: base
+  components_note: Controls deletion behavior for the component.
+
+dependsOn:
+  description: Specify explicit dependencies in addition to those in the dependency graph.
+  applies_to: both
+  typed_on: base
+  components_note: Creates explicit dependencies on the component.
+
+envVarMappings:
+  description: Remap environment variables to custom keys for provider authentication.
+  applies_to: provider
+  typed_on: base
+  components_note: Affects only explicitly configured provider resources.
+  note: >-
+    In the C# SDK, `envVarMappings` is defined on `CustomResourceOptions`, so
+    passing it to a component resource is a compile-time error; in the other
+    SDKs it is on the base resource-options type and is silently ignored at
+    runtime when used on a resource that doesn't support it.
+
+hideDiffs:
+  description: Compact the display of diffs for specified properties in CLI output.
+  applies_to: custom
+  typed_on: base
+  components_note: Components don't have provider-generated diffs.
+
+hooks:
+  description: Run custom logic at specific points in the resource lifecycle.
+  applies_to: custom
+  typed_on: base
+  components_note: Components don't have provider lifecycle events.
+
+ignoreChanges:
+  description: Ignore changes to specified properties during a diff.
+  applies_to: custom
+  typed_on: base
+  components_note: >-
+    Components don't have provider-managed inputs; a component's implementation
+    may choose to propagate this to its children.
+  note: >-
+    `ignoreChanges` is not applied automatically to a component resource's
+    inputs. If you pass it to a component, that component's implementation
+    decides whether and how to honor it.
+
+import:
+  description: Bring an existing cloud resource under Pulumi management.
+  applies_to: custom
+  typed_on: custom-options
+  components_note: Components can't be imported from a cloud provider.
+
+parent:
+  description: Establish a parent/child relationship between resources.
+  applies_to: both
+  typed_on: base
+  components_note: Establishes parent-child relationships.
+
+protect:
+  description: Prevent accidental deletion by marking the resource as protected.
+  applies_to: both
+  typed_on: base
+  components_note: Protects the component from deletion.
+
+provider:
+  description: Pass an explicitly configured provider instead of the default.
+  applies_to: custom
+  typed_on: base
+  components_note: Use `providers` instead to configure a component's child resources.
+
+providers:
+  description: Pass explicitly configured providers for a component's child resources.
+  applies_to: component
+  typed_on: component-options
+  components_note: Passes providers used by the component's child resources.
+
+replacementTrigger:
+  description: Force a replacement whenever a specified trigger value changes.
+  applies_to: both
+  typed_on: base
+  components_note: A component is replaced when the trigger value changes.
+
+replaceOnChanges:
+  description: Treat changes to specified properties as forcing a replacement.
+  applies_to: custom
+  typed_on: base
+  components_note: A provider doesn't replace component resources.
+
+replaceWith:
+  description: Replace this resource whenever one of the named resources is replaced.
+  applies_to: custom
+  typed_on: base
+  components_note: A provider doesn't replace component resources.
+
+retainOnDelete:
+  description: Retain the resource in the cloud provider when Pulumi deletes it.
+  applies_to: custom
+  typed_on: base
+  components_note: Components don't have cloud resources to retain.
+
+transformations:
+  description: Dynamically transform a resource's properties (prefer `transforms`).
+  applies_to: both
+  typed_on: base
+  components_note: Transforms the component's child resources.
+  note: >-
+    When applied to a component resource, `transformations` runs against the
+    component's child resources rather than the component itself.
+
+transforms:
+  description: Dynamically transform a resource's properties on the fly.
+  applies_to: both
+  typed_on: base
+  components_note: Transforms the component's child resources.
+  note: >-
+    When applied to a component resource, `transforms` runs against the
+    component's child resources rather than the component itself.
+
+version:
+  description: Pin the provider plugin version used when operating on a resource.
+  applies_to: custom
+  typed_on: base
+  components_note: Components don't use provider plugins.

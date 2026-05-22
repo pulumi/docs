@@ -37,7 +37,7 @@ sections:
 
   - icon: arrows-clockwise
     heading: CI/CD Troubleshooting
-    link: /docs/support/troubleshooting/ci-cd/
+    link: /docs/iac/guides/continuous-delivery/troubleshooting/
     description: Resolve continuous integration and deployment pipeline issues.
 
   - icon: note-pencil

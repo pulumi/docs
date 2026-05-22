@@ -413,4 +413,4 @@ The `availableSecrets` and `options` blocks are unchanged from the build configu
 - [Version control integrations](/docs/integrations/version-control/) — pull request comments, status checks, and commit linking from Pulumi Cloud.
 - [Google Cloud provider](/registry/packages/gcp/) — manage Cloud Build triggers, repository connections, and the rest of Google Cloud as code.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

@@ -616,4 +616,4 @@ You can manage GitHub itself — repositories, teams, branch protection rules, a
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to workflows and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

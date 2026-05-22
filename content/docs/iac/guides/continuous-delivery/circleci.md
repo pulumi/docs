@@ -202,4 +202,4 @@ pulumi package add terraform-provider mrolla/circleci
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

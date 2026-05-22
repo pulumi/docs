@@ -91,6 +91,12 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
+## Resource options
+
+The reference pages under `content/docs/iac/concepts/resources/options/` show a classification callout (custom resource / component resource / both, plus per-SDK enforcement) rendered by the `resource-option-scope` shortcode. The classification data — and the summary table on that section's `_index.md` — is generated from `data/resource_options.yaml`, which is the single source of truth. **When you add a new resource option, you must add an entry to `data/resource_options.yaml` and place the `{{< resource-option-scope "<name>" >}}` shortcode on the new page.** That file's header comment is the authoritative step-by-step checklist; the build fails if a page references an option missing from the data file.
+
+---
+
 ## Workflow Skills
 
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review/SKILL.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.

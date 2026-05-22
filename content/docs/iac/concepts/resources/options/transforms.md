@@ -19,6 +19,8 @@ The `transforms` resource option provides a list of transforms to apply to a res
 
 Each transform is a callback that gets invoked by the Pulumi engine. It receives the resource type, name, input properties, and resource options. The callback returns a new set of resource input properties and resource options that will be used to construct the resource instead of the original values.
 
+{{< resource-option-scope "transforms" >}}
+
 ## VPC example
 
 This example looks for all VPC and Subnet resources inside of a component’s child hierarchy and adds an option to ignore any changes for tags properties (perhaps because we manage all VPC and Subnet tags outside of Pulumi):

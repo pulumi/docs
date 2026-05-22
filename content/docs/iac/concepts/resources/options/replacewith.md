@@ -1,7 +1,7 @@
 ---
-title_tag: "replacewith | Resource Options"
-meta_desc: The replacewith resource option allows for explicit replace dependencies to be declared between resources.
-title: "replacewith"
+title_tag: "replaceWith | Resource Options"
+meta_desc: The replaceWith resource option allows for explicit replace dependencies to be declared between resources.
+title: "replaceWith"
 h1: "Resource option: replaceWith"
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
@@ -20,6 +20,8 @@ The `replaceWith` resource option allows you to force a replace operation on the
 However, not all relationships are visible to Pulumi: perhaps there are differences in behavior between providers, or your application introduces its own specific relationships, such as two services that depend on one another and thus must always be replaced together.
 
 In these cases, you can use `replaceWith` to make these relationships explicit to the Pulumi engine. In the following example, an explicit dependency is declared: whenever the database is replaced, we must also replace the server.
+
+{{< resource-option-scope "replaceWith" >}}
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 

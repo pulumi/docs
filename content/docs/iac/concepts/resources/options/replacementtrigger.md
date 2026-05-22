@@ -19,6 +19,8 @@ The `replacementTrigger` resource option forces a replacement operation on a res
 
 For example, you might want to rotate cryptographic keys monthly by using a `YYYY-MM` string as the trigger, or synchronize infrastructure updates with application releases by using a version number. Unlike `replaceOnChanges`, which triggers replacements based on resource property changes, `replacementTrigger` allows you to control replacement timing based on arbitrary values.
 
+{{< resource-option-scope "replacementTrigger" >}}
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}

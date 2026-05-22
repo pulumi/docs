@@ -17,6 +17,8 @@ aliases:
 
 The `customTimeouts` resource option provides a set of custom timeouts for `create`, `update`, and `delete` operations on a resource. These timeouts are specified using a duration string such as "5m" (5 minutes), "40s" (40 seconds), or "12h" (12 hours). Supported duration units are "ns", "us" (or "µs"), "ms", "s", "m", and "h" (nanoseconds, microseconds, milliseconds, seconds, minutes, and hours, respectively).
 
+{{< resource-option-scope "customTimeouts" >}}
+
 For the most part, Pulumi automatically waits for operations to complete and times out appropriately. In some circumstances, such as working around bugs in the infrastructure provider, custom timeouts may be necessary.
 
 This example specifies that the create operation should wait up to 30 minutes to complete before timing out:
@@ -85,10 +87,6 @@ resources:
 {{% /choosable %}}
 
 {{< /chooser >}}
-
-{{% notes type="warning" %}}
-The `customTimeouts` resource option does not apply to component resources, and will not have the intended effect.
-{{% /notes %}}
 
 {{% notes type="warning" %}}
 Not all Pulumi resources support `customTimeouts` as support is dependent upon the particular resource's implementation in a given provider. Most resources will print a warning when `customTimeouts` is not supported, e.g.:
