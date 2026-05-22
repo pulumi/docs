@@ -371,6 +371,8 @@ The method is passed the `id` of the resource, as tracked in the cloud provider,
 
 The inputs to your `pulumi.dynamic.ResourceProvider`'s functions come from subclasses of `pulumi.dynamic.Resource`. These inputs include any values in the input arguments passed to the `pulumi.dynamic.Resource` constructor. This is just a map of key/value pairs however, in statically typed languages, you can declare types for these input shapes.
 
+An important detail: Pulumi resolves all [`Input<T>`](/docs/concepts/inputs-outputs/) values before invoking provider functions like `create`, `update`, and `diff`. This means provider methods always receive plain, fully-resolved values — not wrapped `Input<T>` values. For strong typing, use two separate type definitions: one with `Input<T>` wrappers for the resource constructor, and a second with plain (unwrapped) types for the provider methods.
+
 For example, `props`, in the `MyResource` class shown below, defines the inputs to the resource provider functions:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
@@ -378,15 +380,29 @@ For example, `props`, in the `MyResource` class shown below, defines the inputs 
 {{% choosable language typescript %}}
 
 ```typescript
+// Used in the resource constructor — properties accept Output<T>, Promise<T>, or plain T.
 interface MyResourceInputs {
     myStringProp: pulumi.Input<string>;
     myBoolProp: pulumi.Input<boolean>;
-    ...
+}
+
+// Used inside provider methods — Pulumi resolves all Input<T> values before
+// calling these functions, so use plain (unwrapped) types here.
+interface MyResourceProviderInputs {
+    myStringProp: string;
+    myBoolProp: boolean;
+}
+
+class MyResourceProvider implements pulumi.dynamic.ResourceProvider {
+    async create(inputs: MyResourceProviderInputs): Promise<pulumi.dynamic.CreateResult> {
+        // inputs.myStringProp is a plain string here, not an Input<string>
+        return { id: "...", outs: {} };
+    }
 }
 
 class MyResource extends pulumi.dynamic.Resource {
     constructor(name: string, props: MyResourceInputs, opts?: pulumi.CustomResourceOptions) {
-        super(myprovider, name, props, opts);
+        super(new MyResourceProvider(), name, props, opts);
     }
 }
 ```
@@ -396,9 +412,10 @@ class MyResource extends pulumi.dynamic.Resource {
 
 ```python
 from pulumi import Input, ResourceOptions
-from pulumi.dynamic import Resource
-from typing import Any, Optional
+from pulumi.dynamic import Resource, ResourceProvider, CreateResult
+from typing import Optional
 
+# Used in the resource constructor — properties accept Output[T] or plain T.
 class MyResourceInputs(object):
     my_string_prop: Input[str]
     my_bool_prop: Input[bool]
@@ -406,9 +423,23 @@ class MyResourceInputs(object):
         self.my_string_prop = my_string_prop
         self.my_bool_prop = my_bool_prop
 
+# Used inside provider methods — Pulumi resolves all Input[T] values before
+# calling these functions, so use plain (unwrapped) types here.
+class _MyResourceProviderInputs(object):
+    my_string_prop: str
+    my_bool_prop: bool
+    def __init__(self, my_string_prop: str, my_bool_prop: bool):
+        self.my_string_prop = my_string_prop
+        self.my_bool_prop = my_bool_prop
+
+class MyResourceProvider(ResourceProvider):
+    def create(self, inputs) -> CreateResult:
+        # inputs["my_string_prop"] is a plain str here, not an Input[str]
+        return CreateResult(id_="...", outs={})
+
 class MyResource(Resource):
     def __init__(self, name: str, props: MyResourceInputs, opts: Optional[ResourceOptions] = None):
-         super().__init__(MyProvider(), name, {**vars(props)}, opts)
+         super().__init__(MyResourceProvider(), name, {**vars(props)}, opts)
 ```
 
 {{% /choosable %}}
@@ -457,7 +488,11 @@ If you need to access the outputs of your custom resource outside it with strong
 **Important:** Use the `declare` keyword rather than `public readonly` for output properties. Using `public readonly` with the definite assignment assertion (`!`) can cause outputs to be `undefined` in some TypeScript configurations. The `declare` keyword tells TypeScript the property exists without emitting any JavaScript, which is the correct behavior since Pulumi sets these properties dynamically.
 {{% /notes %}}
 
-The name of the class member must match the names of the output properties as returned by the `create` function.
+The name of each class member must match the key name of the corresponding output property as returned by the `create` (and `update`) function. There is no generic `outputs` property that automatically exposes all outputs with type safety — each output you want to access in a type-safe way must be individually declared as a class member. Initialize each output to `undefined` in the `super()` call so that Pulumi knows to track it as an output:
+
+```typescript
+super(new MyResourceProvider(), name, { myOutput: undefined, ...props }, opts);
+```
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
