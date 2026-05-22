@@ -15,13 +15,13 @@ Successfully migrating to Pulumi requires strategic decisions about your migrati
 
 ## Migrating existing infrastructure
 
-If you have existing cloud infrastructure to bring into Pulumi IaC, you have several strategies available.
+If you have existing cloud infrastructure to bring into Pulumi IaC, you have multiple strategies available.
 
 ### Choose your migration approach
 
-**Start fresh:** Simply throw away existing infrastructure and begin anew. This ensures you can adopt all best practices from the outset without technical debt. This option isn't always practical for business-critical services.
+**Start fresh:** Throw away existing infrastructure and begin anew. This ensures you can adopt all best practices from the outset without technical debt. This option isn't always practical for business-critical services.
 
-**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure regardless of how it was created — even manually through cloud consoles. The [Visual Import](https://www.pulumi.com/docs/insights/import/) feature is the recommended approach for importing resources. However, Pulumi also offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
+**Import existing infrastructure:** Pulumi has tools to import any cloud infrastructure — including resources created manually through cloud consoles. The [Visual Import](/docs/insights/discovery/visual-import/) feature is the recommended approach for importing resources. However, Pulumi also offers tailored migration tools for Terraform, AWS CloudFormation/CDK, Azure ARM, and Kubernetes YAML. These tools generate Pulumi IaC code in your chosen language and actively place existing resource management under Pulumi IaC, swapping out management without disrupting resources for zero downtime.
 
 **Coexist and migrate incrementally:** Pulumi supports coexisting with existing ecosystems. You can deploy Helm charts as-is or consume Terraform workspace outputs. This enables incremental migration over time when the value is right.
 
@@ -29,7 +29,7 @@ If you have existing cloud infrastructure to bring into Pulumi IaC, you have sev
 
 {{% notes type="info" %}}
 
-Learn more at the [Pulumi Migration Hub](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/) or [detailed migration tooling documentation](https://www.pulumi.com/docs/iac/adopting-pulumi/).
+Learn more at the [Pulumi Migration Hub](/docs/iac/guides/migration/) or [detailed migration tooling documentation](/docs/iac/guides/migration/).
 
 {{%/notes%}}
 
@@ -51,7 +51,7 @@ These workloads should be automated with CI/CD pipelines and use as many best pr
 
 ### Stay focused on impact
 
-**Take a "workload-first" strategy:** Rather than creating dozens of abstractly-useful components, inform specific component requirements from real-world applications emerging from your beachhead win.
+**Take a "workload-first" strategy:** Rather than creating dozens of abstractly useful components, inform specific component requirements from real-world applications emerging from your beachhead win.
 
 **Resist the redesign temptation:** Don't conflate redesigning projects with new cloud architectures and platform migration. This adds risk. Get workloads onto Pulumi first, then refactor and redesign in place.
 
@@ -60,13 +60,13 @@ These workloads should be automated with CI/CD pipelines and use as many best pr
 An internal cloud platform is a product requiring superb developer experiences. While self-service is the primary goal, it's a journey. Start by:
 
 - Getting your platform well-architected
-- Documenting components and templates. You can use [Pulumi Cloud IDP](https://www.pulumi.com/product/internal-developer-platforms/) to provide user visibility and access to your templates and components.
+- Documenting components and templates. You can use [Pulumi Cloud IDP](/product/internal-developer-platforms/) to provide user visibility and access to your templates and components.
 - Instituting an internal open source strategy for collaboration
 - Building comprehensive platform capabilities over time
 
 ### Don't defer security
 
-Use this moment of change to build security into your platform from day one. Implement Pulumi IaC's Policy as Code features and short-lived cloud credentials with [Pulumi ESC and OIDC](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/). Teams that build up technical debt in this area face costly implications later.
+Use this moment of change to build security into your platform from day one. Implement Pulumi IaC's Policy as Code features and short-lived cloud credentials with [Pulumi ESC and OIDC](/docs/esc/integrations/dynamic-login-credentials/). Teams that build up technical debt in this area face costly implications later.
 
 ### Measure your success
 
