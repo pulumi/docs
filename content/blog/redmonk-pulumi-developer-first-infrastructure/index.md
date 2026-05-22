@@ -38,11 +38,11 @@ Joe describes five principles of developer-first infrastructure that make develo
 1. Secure and Observable By-Construction
 1. An API for Everything
 
-![Principles of developer-first infrastructure](./developer-first-infra-principles.png)
+![Principles of developer-first infrastructure](/blog/redmonk-pulumi-developer-first-infrastructure/developer-first-infra-principles.png)
 
 Finally, Joe dives into the best practices of developer-first infrastructure:
 
-![Best practices of developer-first infrastructure](./developer-first-infra-best-practices.png)
+![Best practices of developer-first infrastructure](/blog/redmonk-pulumi-developer-first-infrastructure/developer-first-infra-best-practices.png)
 
 1. **Unified Engineering**: Software engineering tools and practices for applications and infrastructure.
 1. **APIs**: Making everything programmable and composable with APIs.

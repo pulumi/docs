@@ -20,7 +20,7 @@ And as a JavaScript developer, I certainly have options---too many, in fact, and
 
 MERN-stack apps are three-tier web apps built with [MongoDB](https://www.mongodb.com/), [Express](https://expressjs.com/), [React](https://reactjs.org/), and [Node.js](https://nodejs.org/). You can read all about them [in the MongoDB docs](https://www.mongodb.com/mern-stack), but the gist is that they allow you use one language---JavaScript (or TypeScript, if you like)---to manage all three layers of the application stack: the front end as a single-page app built statically with React, the back end as a REST API managed with Express, and the database as a collection of JSON-like documents with MongoDB. MERN might not _always_ the right tool for the job, but for the kinds of apps I tend to find myself building, it generally works out pretty well.
 
-![The tiers of a typical web application: front end, back end, and database](./tiers.png)
+![The tiers of a typical web application: front end, back end, and database](/blog/fullstack-pulumi-mern-stack-digitalocean/tiers.png)
 
 Still, once I'm _finished_ building my app, I'm often faced with a whole other problem: figuring out how to get the app off of my laptop and onto the web.
 
@@ -82,13 +82,13 @@ $ npm start
 
 With the development server running, you can browse to <http://localhost:3000> and see the app:
 
-![The application running in a browser on localhost](./localhost.png)
+![The application running in a browser on localhost](/blog/fullstack-pulumi-mern-stack-digitalocean/localhost.png)
 
 The front-end and back-end dev servers are set up to compile your TypeScript to JavaScript automatically, and the front-end server is configured to proxy the back-end service (which runs at `http://localhost:8000`) at a root-relative path of `/api`. Proxying the API in this way lets you avoid having to wrestle with [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)-related issues, and as you'll see when we deploy to DigitalOcean later, App Platform conveniently supports the same configuration out of the box.
 
 Try adding a few items and marking them off, just to make sure everything's working as expected. If you've got a MongoDB client installed as well---I generally use [MongoDB Compass](https://www.mongodb.com/products/compass)---you should be able to find the `grocery-list` database and see the `items` collection filling up with delicious foods:
 
-![MongoDB Compass, showing the grocery-list database and the items collection](./localhost-db.png)
+![MongoDB Compass, showing the grocery-list database and the items collection](/blog/fullstack-pulumi-mern-stack-digitalocean/localhost-db.png)
 
 Now let's have a look at how to go about deploying this stuff.
 
@@ -104,7 +104,7 @@ App Platform apps can be configured in one of two ways: manually, by configuring
 * A `service` component mapped to the `backend` folder
 * A `database` component mapped to a managed MongoDB cluster (which we'll also configure to be accessible only by the `service` component)
 
-![Front end, back end, and database tiers mapped to their corresponding App Platform components](./mapped-tiers.png)
+![Front end, back end, and database tiers mapped to their corresponding App Platform components](/blog/fullstack-pulumi-mern-stack-digitalocean/mapped-tiers.png)
 
 And once deployed, it'll all be available at a single DigitalOcean-provided URL.
 
@@ -509,7 +509,7 @@ When you deploy this app in a moment with [`pulumi up`](/docs/iac/cli/commands/p
 
 Make sure you've installed the DigitalOcean GitHub app as described above---you should see it listed at <https://github.com/settings/installations>:
 
-![The Applications tab on GitHub, showing the DigitalOcean app installed](./digitalocean-github-app.png)
+![The Applications tab on GitHub, showing the DigitalOcean app installed](/blog/fullstack-pulumi-mern-stack-digitalocean/digitalocean-github-app.png)
 
 Now return to the command line and run `pulumi up`:
 
@@ -570,15 +570,15 @@ $ open $(pulumi stack output live_url)
 
 {{% /choosable %}}
 
-![The app now running in the DigitalOcean cloud](./deployed.png)
+![The app now running in the DigitalOcean cloud](/blog/fullstack-pulumi-mern-stack-digitalocean/deployed.png)
 
 You should also be able to explore your shiny new grocery-list app in the DigitalOcean Console, with all three of its components (and their build-time and runtime logs!) now represented:
 
-![The grocery-list app and its components in the DigitalOcean console](./in-the-console.png)
+![The grocery-list app and its components in the DigitalOcean console](/blog/fullstack-pulumi-mern-stack-digitalocean/in-the-console.png)
 
 Now try making a commit to your repository (any commit will do, but ideally one to the `frontend` or `backend` folder), and watch as the app redeploys automatically:
 
-![App Platform rebuilding the app in response to a GitHub commit](./redeploying.png)
+![App Platform rebuilding the app in response to a GitHub commit](/blog/fullstack-pulumi-mern-stack-digitalocean/redeploying.png)
 
 And finally, try scaling the service by bumping the `instanceCount` from `1` to `2` in the code---or better, if you're up for it, making that value configurable by stack:
 

@@ -22,7 +22,7 @@ cloud:
 
 The Google Cloud Static Website template scaffolds a Pulumi project that stores site files in a [Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) configured for static website hosting and serves them through Cloud CDN, fronted by a [Global Address](/registry/packages/gcp/api-docs/compute/globaladdress/) for low-latency delivery and caching. The template ships with placeholder web content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Google Cloud Static Website template](./architecture.png)
+![An architecture diagram of the Google Cloud Static Website template](/templates/static-website/gcp/architecture.png)
 
 ## Using this template
 

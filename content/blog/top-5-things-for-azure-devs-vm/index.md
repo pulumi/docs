@@ -28,45 +28,45 @@ This article uses a simple example to deploy a static web application on a virtu
 
 Under `Azure Services`, select `Virtual machines`
 
-![Azure portal](./image3.png)
+![Azure portal](/blog/top-5-things-for-azure-devs-vm/image3.png)
 
 Select `Create` > `Virtual Machine`
 
-![Create VM](./image8.png)
+![Create VM](/blog/top-5-things-for-azure-devs-vm/image8.png)
 
 **Step 2**: Create a Resource Group
 
 A Resource Group is a logical collection of virtual machines, storage, virtual networks, web apps, and databases. Users will commonly group an application's related resources. We'll create `myResourceGroup` for our application.
 
-![Resource group](./image6.png)
+![Resource group](/blog/top-5-things-for-azure-devs-vm/image6.png)
 
 **Step 3**: Configure the VM
 
 Next, we'll provide details for the VM by giving it a name, `myVM`, setting the `Region` and `Availability options` to `No infrastructure redundancy required`. We'll use an Ubuntu image and set the VM size `Standard_DS1_v2`.
 
-![Configure VM](./image2.png)
+![Configure VM](/blog/top-5-things-for-azure-devs-vm/image2.png)
 
 **Step 4**: Configure the Administrator Account
 
 Virtual machines are Infrastructure as a Service, which means you will have to perform provisioning, updates, and maintenance. You'll need an administrator account to perform these tasks. To keep this example simple, we'll use `Password` as the `Authentication type`, but in practice, you should use [Public Key Infrastructure (PKI)](https://en.wikipedia.org/wiki/Public_key_infrastructure) because it is more secure than a password that can be brute-forced.
 
-![Configure Admin](./image5.png)
+![Configure Admin](/blog/top-5-things-for-azure-devs-vm/image5.png)
 
 **Step 5**: Configure inbound ports
 
 You have to log into your virtual machine as well as allowing inbound requests to the static website. Select both `HTTP (80)` and `SSH (22)` then click on `Review + create`.  Note that you can also add storage by clicking on `Disks`, but we'll use the defaults for this example.
 
-![Configure ingress](./image4.png)
+![Configure ingress](/blog/top-5-things-for-azure-devs-vm/image4.png)
 
 If your configuration is valid, you'll see the following screen. Click `Create` to instantiate the vm.
 
-![Create VM](./image1.png)
+![Create VM](/blog/top-5-things-for-azure-devs-vm/image1.png)
 
 **Step 6**: Enjoy your success
 
 You can go and check out your VM by clicking on `Go to resource`.
 
-![Complete deployment](./image7.png)
+![Complete deployment](/blog/top-5-things-for-azure-devs-vm/image7.png)
 
 Well, that seems simple and easy, but what if you had to deploy several virtual machines for the application that includes a web server, a worker to process requests, a message queuing system, and a database? What if your current system has multiple web servers and backend workers behind a load balancer? You'll have to create, deploy, and maintain each VM because this is an IaaS.
 
@@ -228,4 +228,4 @@ class CopyFile(dynamic.Resource):
 
 Although it's relatively simple to create virtual machines using the Azure Portal or the Azure CLI, provisioning and maintaining them manually can be complex and error-prone. If we use code to build, deploy, and manage VMs and applications, we can automate the process making updates and maintenance repeatable processes and reduce errors. We can tear down existing VMs and replace them with updated and provisioned versions using infrastructure as code. This is a lot of information if you're starting your Azure cloud journey, so try something fun and deploy [Minecraft on Azure](/blog/deploying-minecraft-on-azure/)!
 
-![Minecraft](./image9.png)
+![Minecraft](/blog/top-5-things-for-azure-devs-vm/image9.png)

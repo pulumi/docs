@@ -48,7 +48,7 @@ know what's up with a deployment? Did something fail, or get stuck?
 The vision in our heads, which we set out to build, was something more
 like this:
 
-![Oh no, an error!](./error.gif)
+![Oh no, an error!](/blog/simple-reproducible-kubernetes-deployments/error.gif)
 
 In this example, we can clearly see the entire set of resource objects
 being created, their ongoing status, and when and why something might
@@ -58,7 +58,7 @@ screengrab of our CLI.
 The service works in tandem with the CLI, so we always have a history
 and record of successful or failed deployments:
 
-![deployments](./screenshot.png)
+![deployments](/blog/simple-reproducible-kubernetes-deployments/screenshot.png)
 
 ## Let's Deploy Some Code!
 
@@ -182,7 +182,7 @@ deployment process is subsumed by `pulumi`.
 Indeed, if we take our project and simply run `pulumi up` we'll see
 something like the following:
 
-![deploy](./deploy.gif)
+![deploy](/blog/simple-reproducible-kubernetes-deployments/deploy.gif)
 
 Compared to `kubectl apply`, many things are happening:
 
@@ -269,7 +269,7 @@ changing the container image from `nginx:1.15-alpine` to
 [index.ts](https://github.com/pulumi/examples/blob/master/kubernetes-ts-exposed-deployment/index.ts),
 and then run `pulumi preview --diff`. You will see something like this:
 
-![diff](./diff.gif)
+![diff](/blog/simple-reproducible-kubernetes-deployments/diff.gif)
 
 You can see several things happening here:
 

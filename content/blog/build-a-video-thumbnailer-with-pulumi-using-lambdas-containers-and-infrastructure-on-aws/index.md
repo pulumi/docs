@@ -29,7 +29,7 @@ process](https://serverless.com/blog/serverless-application-for-long-running-pro
 Let's see how a similar app would be implemented in Pulumi entirely in
 code.
 
-![video-thumbnail-diagram](./video-thumbnail-diagram.png)
+![video-thumbnail-diagram](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/video-thumbnail-diagram.png)
 
 ## Setup
 
@@ -166,17 +166,17 @@ repository in ECR, builds the Docker container, and places the image in
 the repository. This all happens automatically and does not require
 manual configuration on your part.
 
-![pulumi-update-output](./pulumi-update-output.png)
+![pulumi-update-output](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/pulumi-update-output.png)
 
 At the end of the update, you'll see a link to the Pulumi Service that
 shows the details of the deployment.
 
-![pulumi-update-complete-1](./pulumi-update-complete-1.png)
+![pulumi-update-complete-1](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/pulumi-update-complete-1.png)
 
 Go to the **Resources** tab and filter to S3 resources. Then, on the S3
 bucket, click the link to go to the AWS Console.
 
-![console-s3-filtered](./console-s3-filtered.png)
+![console-s3-filtered](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/console-s3-filtered.png)
 
 ## Upload a Video
 
@@ -198,7 +198,7 @@ the `--follow` or `-f` parameter. This command aggregates all the logs
 for your compute, so the logs for the Lambda function **and** the
 Fargate task are all in one place!
 
-![terminal-logs](./terminal-logs.png)
+![terminal-logs](/blog/build-a-video-thumbnailer-with-pulumi-using-lambdas-containers-and-infrastructure-on-aws/terminal-logs.png)
 
 Once the thumbnail has been generated, either view it in the S3 console,
 or download it with the AWS CLI:

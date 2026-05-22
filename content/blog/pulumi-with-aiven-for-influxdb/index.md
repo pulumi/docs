@@ -112,7 +112,7 @@ $ pulumi config set aiven_project <Aiven project> Example: sa-demo
 - Supported regions/clouds for each service are listed on the [pricing page](https://aiven.io/pricing).
 - Project names are on the top left corner of the Aiven console.
 
-![Aiven console](./aiven_console.png)
+![Aiven console](/blog/pulumi-with-aiven-for-influxdb/aiven_console.png)
 
 ### Use Pulumi to create two services in Aiven
 
@@ -126,7 +126,7 @@ Select **Yes** to confirm the deployment.
 
 After about 5 minutes or so, you should see that all of the resources have been created. The URLs and username/password combinations listed are needed to access the services. The `influxdb_uri` shown here is also added as an environment variable in the Lambda function so that the Python client can connect to InfluxDB.
 
-![Pulumi outputs](./pulumi_outputs.png)
+![Pulumi outputs](/blog/pulumi-with-aiven-for-influxdb/pulumi_outputs.png)
 
 ### Aiven console
 
@@ -138,7 +138,7 @@ To see the new services, log into the [Aiven console](https://console.aiven.io/)
 
 In the AWS console, the lambda function has also been created and will be executed by EventBridge every 60 seconds.
 
-![AWS Console](./aws_console.png)
+![AWS Console](/blog/pulumi-with-aiven-for-influxdb/aws_console.png)
 
 ### Grafana
 
@@ -148,7 +148,7 @@ Open up the `grafana_uri` (shown in the console output) and log in with the prov
 
 Click on the Explore panel and search for the outside_temp value written by the lambda function every minute (triggered by EventBridge).
 
-![Grafana](./grafana.png)
+![Grafana](/blog/pulumi-with-aiven-for-influxdb/grafana.png)
 
 ## Migrate your service from one region to another
 
@@ -161,15 +161,15 @@ $ pulumi config set aiven_cloud_region aws-us-east-1
 $ pulumi up -y
 ```
 
-![Pulumi migrate](./pulumi_migrate.png)
+![Pulumi migrate](/blog/pulumi-with-aiven-for-influxdb/pulumi_migrate.png)
 
 The output shows that two resources have changed, and both Grafana and the InfluxDB service show as rebuilding. A quick check in the Aiven console shows that both services are indeed being migrated to AWS:
 
-![Current services](./migrated_services.png)
+![Current services](/blog/pulumi-with-aiven-for-influxdb/migrated_services.png)
 
 If we switch back to Grafana, you can see that outside_temp_value is still being written to InfluxDB even as we migrate to a different cloud!
 
-![Grafana](./grafana.png)
+![Grafana](/blog/pulumi-with-aiven-for-influxdb/grafana.png)
 
 ## Clean up
 

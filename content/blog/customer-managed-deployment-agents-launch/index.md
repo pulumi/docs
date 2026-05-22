@@ -92,7 +92,7 @@ If you run into issues, ensure docker is running before you configure and start 
 
 Now your first agent should be up and running! You can verify the status of the agent by refreshing the page. Additionally, you can use the same token to set up multiple agents to increase concurrency of your deployments and they will be assigned to the same pool.
 
-![Pool Details view](./view-agent-status.png)
+![Pool Details view](/blog/customer-managed-deployment-agents-launch/view-agent-status.png)
 
 Agents poll Pulumi Cloud every 30 seconds to check for pending deployments. In the pool page, you can see the last online status of the agents. Agents will disappear from the list after 1-2 hours of being offline. If you are running the agent inside a firewall ensure to allow outbound requests to api.pulumi.com.
 
@@ -132,7 +132,7 @@ You should see the logs in the agent running on the machine you configured and a
 
 On the deployments page, you can see all the deployments including pending deployments, and which deployment agents were used in a deployment.
 
-![Deployments page](./view-deployment-status.png)
+![Deployments page](/blog/customer-managed-deployment-agents-launch/view-deployment-status.png)
 
 ## Your Journey, Our Support
 

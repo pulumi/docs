@@ -384,15 +384,15 @@ After a few moments (deploying a new cluster takes about five minutes), you shou
 
 Choose **Query data &gt; Query in query editor v2** to open the Redshift query editor:
 
-![The newly created cluster in the AWS Console](./aws-console-redshift-cluster.png)
+![The newly created cluster in the AWS Console](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-cluster.png)
 
 Then, from the query editor, find your newly created cluster in the left-hand pane and connect using the database, username, and password you configured earlier:
 
-![The connection dialog for the newly created cluster](./aws-console-redshift-query-connect.png)
+![The connection dialog for the newly created cluster](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-connect.png)
 
 Choose **Create connection**, expand `my-redshift-cluster`, and you should see the `dev` database there, ready to go (only without any tables --- we'll get to that next):
 
-![The Redshift query editor, now connected to the cluster and database](./aws-console-redshift-query-connected.png)
+![The Redshift query editor, now connected to the cluster and database](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-connected.png)
 
 Now let's load some data!
 
@@ -429,7 +429,7 @@ CREATE TABLE events (
 
 You should see that the query succeeded and that the table was created:
 
-![The Redshift query editor showing the events table was created successfully](./aws-console-redshift-query-table-created.png)
+![The Redshift query editor showing the events table was created successfully](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-table-created.png)
 
 Now you're ready to import the data. Replace the contents of the query editor with the following [Redshift `COPY command`](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html), replacing the `{bucket-name}`, `{iam-role}`, and `{aws-region}` placeholders with the corresponding values from your Pulumi stack:
 
@@ -443,7 +443,7 @@ REGION AS '{aws-region}';
 
 Here's what I see, for example, after running that command:
 
-![The Redshift query editor showing the data was imported successfully](./aws-console-redshift-query-data-imported.png)
+![The Redshift query editor showing the data was imported successfully](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-data-imported.png)
 
 After the `COPY` command completes (which may take a few seconds), you should be able to run a new query the `events` table and see the new data:
 
@@ -453,7 +453,7 @@ SELECT *
  ORDER BY id;
 ```
 
-![The Redshift query editor showing three new records retrieved from the dev database](./aws-console-redshift-query-data-retrieved.png)
+![The Redshift query editor showing three new records retrieved from the dev database](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-data-retrieved.png)
 
 Huzzah! You've now got yourself a working data warehouse.
 
@@ -479,7 +479,7 @@ All good questions, and I'm glad that you asked them.
 
 First, as you'll notice, adding lines to `events.txt` and running `COPY` a second time probably doesn't behave as you might hope:
 
-![The Redshift query editor showing three new duplicate records and one new one](./aws-console-redshift-query-duplicates.png)
+![The Redshift query editor showing three new duplicate records and one new one](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/aws-console-redshift-query-duplicates.png)
 
 Duplicate records --- the bane of the data scientist.
 

@@ -42,7 +42,7 @@ Apologies to those of you who are screaming *"FFS - CDK is the best thing ever!
 
 You might already know a bit of Pulumi, but here's a very quick overview plus some advice on where to go from here.
 
-![image.png](./resources.png)
+![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/resources.png)
 
 - Pulumi allows you to write your IaC using TypeScript, Javascript, Python, Go or C#.
 - You define *resources* which have *inputs* and *outputs*. As an example, a resource could be an RDS database Instance. One of it's inputs would be the database version to use. One of the outputs would be the hostname / address of the server.
@@ -99,9 +99,9 @@ As you can see it's really simple and clean for me to set up a Redis server now.
 
 There's also the fact that I can use the Pulumi Console (web interface) to check the state of my infrastructure really quickly. I found myself doing this instead of logging in to the AWS console or using the AWS cli.
 
-![image.png](./image1.jpeg)
+![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/image1.jpeg)
 
-![image.png](./image2.jpeg)
+![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/image2.jpeg)
 
 ### How I went about the migration
 
@@ -142,7 +142,7 @@ $ pulumi stack
 
 As you can see I've defined a component called "vt:RedisServer" which I use to group all the resources associated with my Redis server. You'll get a graph representation of your whole infrastructure in the [Pulumi Web Console](/docs/pulumi-cloud/) .
 
-![image.png](./graph.jpeg)
+![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/graph.jpeg)
 
 It might seem like a small thing, but it *really* helps to have a logical grouping of your resources as your infrastructure grows. It also help because you can suddenly decide which resources your component exposes and which ones are "internal" to the component. Check out the code sample from earlier in the article to see how to do this using `self.`.
 
@@ -383,7 +383,7 @@ I did things quite differently from what's described in the Pulumi docs. I used 
 
 You are normally able to have Pulumi post a report of the planned changes [attached to your merge request](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/gitlab-app/) .
 
-![image.png](./preview.jpeg)
+![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/preview.jpeg)
 
 However I couldn't make this work because of authentication issues. With the help of their support (which was excellent btw) we figured out that it was related to the fact that I was using [Gitlab groups](https://docs.gitlab.com/ee/user/group/) to organise my repositories.
 

@@ -33,7 +33,7 @@ After your run completes you can see the drift run via the [Drift tab](#drift-ta
 
 You can run a drift or remediate drift run ad hoc using the Click to Deploy option from your stack.
 
-![Click to Deploy](../click-to-deploy-drift.png)
+![Click to Deploy](/docs/deployments/deployments/click-to-deploy-drift.png)
 
 ### Drift tab
 
@@ -41,7 +41,7 @@ We've added a new Drift tab to the stack page. If the stack is currently in a dr
 
 Regardless of how a drift run is initiated, all results will appear in this tab. If there is drift detected for a run, a diff summary of the changes will be included in the information card.
 
-![Drift tab](../drift-tab.png)
+![Drift tab](/docs/deployments/deployments/drift-tab.png)
 
 ### Configuring Drift Detection on a schedule
 
@@ -51,14 +51,14 @@ In order to set up Drift Detection and Remediation in the Pulumi Cloud console, 
 1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/deployments/reference)
 2. Navigate to the Stack > Settings > Schedules
 
-![Schedule](../schedule.png)
+![Schedule](/docs/deployments/deployments/schedule.png)
 
 3. Select "Drift"
 4. (Optional) Turn on auto-remediation if applicable
 5. Set the schedule using a cron expression
 6. Save the Schedule
 <!-- markdownlint-enable ol-prefix -->
-![Drift Schedule](../set-up-drift.png)
+![Drift Schedule](/docs/deployments/deployments/set-up-drift.png)
 
 ### Configuring notifications for Drift Detection
 
@@ -69,7 +69,7 @@ You can integrate Drift notifications to Slack, MS Teams, and more using Pulumi 
 3. Give your webhook a Display name, destination URL and optional secret.
 4. All events will include drift events, but you can also filter the events to Drift events:
 
-![Drift Webhook Events](../drift-webhook-events.png)
+![Drift Webhook Events](/docs/deployments/deployments/drift-webhook-events.png)
 
 ### Summary of Drift Detection and Remediation events
 

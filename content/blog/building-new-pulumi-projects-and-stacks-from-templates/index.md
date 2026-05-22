@@ -53,7 +53,7 @@ display a preview of the stack, and ask if you'd like to create it for
 real. Assuming you have setup the relevant cloud provider, that's all
 there is to it.
 
-![Pulumi-New-1](./pulumi-new-1.gif)
+![Pulumi-New-1](/blog/building-new-pulumi-projects-and-stacks-from-templates/pulumi-new-1.gif)
 
 Back in the dashboard, you can now see the state of your stack, and
 you're ready to flesh it out with the detail you need.
@@ -64,7 +64,7 @@ Alternatively, you can do the same thing from the CLI. Create a folder,
 then type `pulumi new` in there to retrieve a list of available
 templates. Templates ahoy!
 
-![pulumi-new-cli](./pulumi-new-cli.png)
+![pulumi-new-cli](/blog/building-new-pulumi-projects-and-stacks-from-templates/pulumi-new-cli.png)
 
 After you've selected the template you'd like, you can again
 `pulumi preview` or `pulumi up` to get your stack running.

@@ -53,7 +53,7 @@ A hub-and-spoke network is a common architecture for creating a network topology
 
 A fully fleshed-out version of the architecture, with multiple spoke VPCs follows:
 
-![Diagram of a hub-and-spoke architecture in AWS with Transit Gateway and AWS Firewall](./hub-and-spoke-architecture.png)
+![Diagram of a hub-and-spoke architecture in AWS with Transit Gateway and AWS Firewall](/blog/advanced-aws-networking-part-1/hub-and-spoke-architecture.png)
 
 {{% notes type="info" %}}
 We could also enable communication _between_ the spoke VPCs by adding routes to the Transit Gateway routing table. Traffic between spoke VPCs _would not_ be desirable for security reasons if those VPCs represent different environments of the same workload (e.g., QA, UAT, and production). Traffic between spoke VPCs _would_ potentially be desirable if those VPCs represent multiple workloads in the _same_ environment, for example, our production online store and our production ERP software.

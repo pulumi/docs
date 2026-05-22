@@ -105,7 +105,7 @@ information about the progress we're making as we try to deploy the
 Chart. To get a sense of what this looks like, take a look at the
 progress reported as we deploy the Wordpress Chart:
 
-![helm-pulumi-deploy](./helm-pulumi-deploy.gif)
+![helm-pulumi-deploy](/blog/using-helm-and-pulumi-to-define-cloud-native-infrastructure-as-code/helm-pulumi-deploy.gif)
 
 ## Toward Cloud Native Infrastructure as Code
 

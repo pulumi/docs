@@ -50,7 +50,7 @@ For this example, we'll use [Visual Studio Code](https://code.visualstudio.com/)
 - Name your function, e.g., myHttpTrigger.
 - Set the Authorization level to Anonymous
 
-![New Project](./image2.png)
+![New Project](/blog/top-5-things-for-azure-devs-serverless/image2.png)
 
 When finished, you'll have a template.
 
@@ -97,7 +97,7 @@ Press `Control-C` in the terminal to stop the debugger.
 
 Make sure you are signed into Azure and click on `Deploy function app…`
 
-![Deploy function](./image3.png)
+![Deploy function](/blog/top-5-things-for-azure-devs-serverless/image3.png)
 
 - Select `Create a new Function App in Azure` and enter a name, "exampleHttpTrigger"
 - Select a runtime stack, `Node.js 14 LTS`
@@ -112,7 +112,7 @@ Hello, Pulumipus. This HTTP triggered function executed successfully.
 
 Don't forget to delete the function in the Azure Portal!
 
-![Azure Portal](./image1.png)
+![Azure Portal](/blog/top-5-things-for-azure-devs-serverless/image1.png)
 
 ## Deploying Azure Functions with code
 

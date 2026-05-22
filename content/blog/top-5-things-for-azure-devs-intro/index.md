@@ -37,7 +37,7 @@ Azure provides Infrastructure as a Service (IaaS) for deploying your application
 
 If your application doesn't fit into a Platform as a Service (PaaS) model, consider using virtual machines to provide the fine-grained control required for your deployment.
 
-![VM in Azure Portal](./image3.png)
+![VM in Azure Portal](/blog/top-5-things-for-azure-devs-intro/image3.png)
 
 ## Serverless
 
@@ -47,7 +47,7 @@ Azure Functions lets you focus on the application's business logic, and the code
 
 If you don’t need a completely hosted project and only pay for what you use, choose Azure Functions triggered by web-based events, a schedule, or other Azure services.
 
-![Serverless function](./image2.png)
+![Serverless function](/blog/top-5-things-for-azure-devs-intro/image2.png)
 
 ## Static websites
 
@@ -97,7 +97,7 @@ We'll examine these options and do a deep dive on application deployment in a fo
 
 Before Continuous integration (CI) and Continuous Deployment (CD) became prevalent, applications were manually built, compiled, and maintained in a large codebase. CI/CD automation lets you build quickly, test, and deploy services. Both application fixes and new features are shipped quickly to your customers, and you can rapidly respond to changing customer demands. For example, if demand increases, you can quickly add resources to your application or add a serverless function that increases and decreases resources as needed.
 
-![Devops architecture](./image1.png)
+![Devops architecture](/blog/top-5-things-for-azure-devs-intro/image1.png)
 
 If you're deploying applications on Azure Functions, virtual machines, AKS, or provisioning infrastructure, the build process should be automated. Azure offers a range of services such as Azure Container Registry, AKS, and Azure Cosmos DB that can integrate with popular CI/CD pipelines like Azure DevOps, Jenkins, Github, and TeamCity.
 

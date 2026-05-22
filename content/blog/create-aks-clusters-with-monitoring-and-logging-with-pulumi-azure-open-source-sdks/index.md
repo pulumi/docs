@@ -170,14 +170,14 @@ a) Check with Pulumi CLI and `kubectl`
 b) Check Pulumi Service Console for the resource creation on the stack
 you just initialized: `d-nishi/azure-mean/dev`.
 
-![initialized](./initialized.png)
+![initialized](/blog/create-aks-clusters-with-monitoring-and-logging-with-pulumi-azure-open-source-sdks/initialized.png)
 
 c) Check your Azure portal for the cluster-id and to find all the
 metrics (Insights) and logs (Logs) show up as follows:
 
-![insights](./insights.png)
+![insights](/blog/create-aks-clusters-with-monitoring-and-logging-with-pulumi-azure-open-source-sdks/insights.png)
 
-![logs](./logs.png)
+![logs](/blog/create-aks-clusters-with-monitoring-and-logging-with-pulumi-azure-open-source-sdks/logs.png)
 
 ## Summary
 

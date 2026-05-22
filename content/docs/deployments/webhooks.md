@@ -155,7 +155,7 @@ class PulumiServiceWebhook: Stack
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
 5. Choose which events you would like to receive using groups and filters menu.
 
-![Stack webhooks form](../ui-webhooks.png)
+![Stack webhooks form](/docs/deployments/ui-webhooks.png)
 
 ## Event Filtering
 

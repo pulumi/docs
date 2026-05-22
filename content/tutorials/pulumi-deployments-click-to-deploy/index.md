@@ -42,7 +42,7 @@ To create a new Pulumi project, commit its code, and deploy it entirely from you
 
 First, navigate to the **New Project** tab in the Pulumi Cloud console. Choose your source template from Pulumi, then you can optionally choose your cloud and language to filter the results or search all templates.
 
-![Animation of how to create a new project in Pulumi Cloud](./pulumi-create-new-project.gif)
+![Animation of how to create a new project in Pulumi Cloud](/tutorials/pulumi-deployments-click-to-deploy/pulumi-create-new-project.gif)
 
 {{% notes type="info" %}}
 If your Pulumi administrator has configured [custom templates](/docs/pulumi-cloud/developer-portals/templates) for your organization, you will be able to choose from your organization's custom templates from your own image source.
@@ -89,13 +89,13 @@ A full description of each setting is available on the [deployment settings](/do
 
 Finally, select Pulumi Deployments as the deployment method and **Create project** to finish the wizard and trigger an initial deployment. You will see the deployment start in the **Deployments** tab.
 
-![Animation of how to create a new project in Pulumi](./pulumi-new-project-wizard.gif)
+![Animation of how to create a new project in Pulumi](/tutorials/pulumi-deployments-click-to-deploy/pulumi-new-project-wizard.gif)
 
 When your deployment is complete, you can manage and deploy your infrastructure from the Pulumi Cloud console. For example, in the stack's **Actions** tab, you can use the **[Click to Deploy](https://www.pulumi.com/docs/pulumi-cloud/deployments/reference/#click-to-deploy)** button to trigger another deployment.
 
 This feature is useful for day-to-day operational tasks, such as debugging a stuck stack or rectifying drift by performing a refresh. With click to deploy, you can execute these actions without needing to pull the stack and its source code onto your local machine.
 
-![Image of the Pulumi cloud console actions](./pulumi-cloud-actions.png)
+![Image of the Pulumi cloud console actions](/tutorials/pulumi-deployments-click-to-deploy/pulumi-cloud-actions.png)
 
 ### Destroy all stack resources
 

@@ -49,7 +49,7 @@ Below is a gif demonstrating the CLI experience. You can watch in
 real-time as the `Service` comes online, finds pods to target, and
 finally is allocated a public IP address:
 
-![trace-success-ip-allocated](./trace-success-ip-allocated.gif)
+![trace-success-ip-allocated](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/trace-success-ip-allocated.gif)
 
 ## What is kubespy, again?
 
@@ -95,20 +95,20 @@ specify which `Pod`s get traffic --- their IPs, which ports to direct
 traffic to, and so on. In this case, there are no `Pod`s to target,
 which `kubespy trace` tells us:
 
-![trace-success-create-svc](./trace-success-create-svc.gif)
+![trace-success-create-svc](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/trace-success-create-svc.gif)
 
 **Second: `Pod`s that match the `Service`'s `.spec.selector` are
 created; their readiness probes immediately pass.** The `Endpoints`
 object is updated to reflect this. As we will see below, if the `Pods`
 failed the readiness probes, `kubespy trace` would note this.
 
-![trace-success-pods-ready](./trace-success-pods-ready.gif)
+![trace-success-pods-ready](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/trace-success-pods-ready.gif)
 
 **Third: `Service` is allocated a public IP address.** The `Service` has
 `.spec.type` set to `LoadBalancer`, which on most cloud platforms means
 that a public IP address should be allocated for it.
 
-![trace-success-ip-allocated](./trace-success-ip-allocated.gif)
+![trace-success-ip-allocated](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/trace-success-ip-allocated.gif)
 
 ## Exercise: Other Service types, watching rollouts, deleting Services!
 
@@ -121,7 +121,7 @@ You can also use `kubespy trace` to watch an unhealthy deployment become
 healthy. In the following gif, we see a bunch of `Pod`s that are failing
 readiness checks become healthy as a new version is rolled out:
 
-![become-alive](./become-alive.gif)
+![become-alive](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service/become-alive.gif)
 
 ## Conclusions
 

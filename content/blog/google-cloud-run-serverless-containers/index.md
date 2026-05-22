@@ -109,7 +109,7 @@ Outputs:
 
 Navigate to the URL to see the welcome screen:
 
-![Cloud Run Hello World container running](./cloud-run-hello-running.png)
+![Cloud Run Hello World container running](/blog/google-cloud-run-serverless-containers/cloud-run-hello-running.png)
 
 Congratulations, your first Cloud Run service is up and running. Now, it's time to deploy some custom code.
 
@@ -240,7 +240,7 @@ It's important to understand that the CPU and memory metrics are calculated per 
 
 The following picture illustrates the pricing for three executions running on the same container host.
 
-![Parallel executions at Cloud Run](./executions.png)
+![Parallel executions at Cloud Run](/blog/google-cloud-run-serverless-containers/executions.png)
 
 Multiple requests can share the allocated CPU and memory, so it makes sense to set the concurrency setting as high as possible for a given application (but not higher). This model is a big difference to Cloud Functions, which are charged for each request independently.
 

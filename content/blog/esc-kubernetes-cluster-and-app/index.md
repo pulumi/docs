@@ -21,7 +21,7 @@ With Pulumi and ESC, we provide an automated workflow that generates a kubeconfi
 This makes it easy for your team to connect to a given Kubernetes environment, and it works well with Kubernetes tools
 such as `kubectl` and the Pulumi Kubernetes provider. Let's take a look.
 
-![pulumi-esc-kubectl](./pulumi-esc-kubectl.gif)
+![pulumi-esc-kubectl](/blog/esc-kubernetes-cluster-and-app/pulumi-esc-kubectl.gif)
 
 In this post, we will create a Kubernetes cluster, deploy an application to the created cluster,
 and then use `kubectl` to check on the deployed application. Pulumi gives you great flexibility to [factor your infrastructure into reusable parts](/docs/using-pulumi/organizing-projects-stacks), and we'll do that here. With ESC, we'll define an environment that provides

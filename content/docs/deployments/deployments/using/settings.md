@@ -22,7 +22,7 @@ You can create and manage deployment settings in several ways:
 
 From the Pulumi Console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/integrations/version-control/) configured), click-to-deploy and the REST API.
 
-![Pulumi UI - Deployment Settings](../../ui-settings.png)
+![Pulumi UI - Deployment Settings](/docs/deployments/deployments/ui-settings.png)
 
 ### From the API
 
@@ -42,7 +42,7 @@ When using a [VCS integration](/docs/integrations/version-control/) and push-to-
 
 Path filters are relative to the repository root, and should reference a file by name or a directory must reference files by name relative to the repository or directories via glob patterns such as `/**` to include all changes within a directory.
 
-![Pulumi UI - Path Filters](../../ui-path-filters.png)
+![Pulumi UI - Path Filters](/docs/deployments/deployments/ui-path-filters.png)
 
 As with any other deployment setting, the path filters may be set via the Pulumi Console, using the REST API or defined in code using the Pulumi Cloud provider.
 
@@ -69,7 +69,7 @@ If no role is selected, the deployment will only have access to the specific sta
 
 By selecting an appropriate role, you provide the deployment with the necessary permissions to access these additional resources. For fine-grained access control, you can create custom roles with specific permissions tailored to what the deployment needs to accomplish.
 
-Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](../../../access-management/rbac/roles/).
+Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/access-identity/rbac/roles/).
 
 ## Pre-Run Commands
 
@@ -100,19 +100,19 @@ By default, the deployment executor will attempt to install dependencies for you
 
 This is enabled by skipping the default dependency installation step (under Advanced Settings in the UI), and setting a few pre-run commands and environment variables.
 
-![Pulumi UI - Node Version](../../ui-node-version.png)
+![Pulumi UI - Node Version](/docs/deployments/deployments/ui-node-version.png)
 
 ## Skipping Intermediate Deployments
 
 By default, when multiple deployments are pushed, they will be executed sequentially until the backlog is completed. In some cases, you may wish to only execute the most recent deployment since the changes are accumulative. By enabling the `Skip intermediate deployments` setting, Pulumi will skip all intermediary deployments of the same type and will execute only the latest.
 
-![Pulumi UI - Skip intermediate deployments](../../ui-skip-intermediate-deployments.png)
+![Pulumi UI - Skip intermediate deployments](/docs/deployments/deployments/ui-skip-intermediate-deployments.png)
 
 ## Custom Executor Images
 
 By default, deployments run inside the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image, which includes the `pulumi` CLI and [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported language runtimes. You can override this from the **Custom Executor Image** field in your stack's deployment settings, either to pin a specific Pulumi CLI version or to use your own image with additional tools.
 
-![Pulumi UI - Custom Executor](../../ui-custom-executor.png)
+![Pulumi UI - Custom Executor](/docs/deployments/deployments/ui-custom-executor.png)
 
 For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/deployments/runs/images/).
 
@@ -167,7 +167,7 @@ By default, there are a set of environment variables set by the process automati
 
 These can be overridden or extended by configuring custom environment variables:
 
-![Pulumi UI - Environment Variables](../../ui-custom-env-variables.png)
+![Pulumi UI - Environment Variables](/docs/deployments/deployments/ui-custom-env-variables.png)
 
 ### PULUMI_ENV
 

@@ -42,13 +42,13 @@ within them. Immediate options include:
   infrastructure and application resources for an entire vertical
   service as represented in the image below:
 
-![Monolithic structure](./image-2.png)
+![Monolithic structure](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-2.png)
 
 - **Micro-stacks project/stack structure:** A project broken into
   separately managed smaller projects, often across different
   dimensions as represented in the image below:
 
-![Micro-stack structure structure](./image-3.png)
+![Micro-stack structure structure](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-3.png)
 
 Working with Inter-Stack Dependencies with the latter option is more
 suited in a production setup giving users more flexibility and
@@ -72,7 +72,7 @@ please refer to our [organizaing documentation](/docs/using-pulumi/organizing-pr
 
 Please read more about managing [stack tags in Pulumi](/docs/concepts/stack#stack-tags).
 
-![Stack tags](./image-4.png)
+![Stack tags](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-4.png)
 
 Let's now work through our example with GitLab Pipelines.
 
@@ -101,7 +101,7 @@ Let's now work through our example with GitLab Pipelines.
     provided the cycle of `pulumi preview` and `pulumi deploy` completes
     without any failure.
 
-    ![No failures](./image-4.png)
+    ![No failures](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-4.png)
 
 4. To use Pulumi within GitLab CI, there are a few environment
     variables you'll need to set for each build.
@@ -421,7 +421,7 @@ This file describes a three-stage pipeline for the `sample-iam` project:
 Despite being powerful, conceptually this setup is quite simple and
 doesn't require much code to get right.
 
-![The final result](./image-5.png)
+![The final result](/blog/continuous-delivery-with-gitlab-and-pulumi-on-amazon-eks/image-5.png)
 
 Upon a successful update, each tier's pipeline will trigger a pipeline
 for the tiers that depend on it. Pulumi's StackReference feature ensures

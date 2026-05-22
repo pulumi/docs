@@ -35,7 +35,7 @@ with [GKE](https://github.com/pulumi/examples/tree/master/gcp-ts-gke),
 [AKS](/blog/create-aks-clusters-with-monitoring-and-logging-with-pulumi-azure-open-source-sdks/)
 and then reference them directly in your Pulumi code!
 
-![Create an EKS cluster](./creating-an-eks-cluster.png)
+![Create an EKS cluster](/blog/pulumi-a-better-way-to-kubernetes/creating-an-eks-cluster.png)
 
 ## Apps as code (not YAML!)
 
@@ -55,9 +55,9 @@ to the more esoteric
 ([gate a canary deployment with Prometheus](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/),
 Pulumi keeps the simple things simple, and makes the hard things possible.
 
-![Write real code to deploy a guestbook app](./guestbook.png)
+![Write real code to deploy a guestbook app](/blog/pulumi-a-better-way-to-kubernetes/guestbook.png)
 
-![Deploy the app to Kubernetes using Pulumi](./app-cli.png)
+![Deploy the app to Kubernetes using Pulumi](/blog/pulumi-a-better-way-to-kubernetes/app-cli.png)
 
 ## Integrate with existing Helm charts or manifests
 
@@ -75,7 +75,7 @@ know-how to
 [make your deployments more reproducible](/blog/simple-reproducible-kubernetes-deployments/)
 and maintainable.
 
-![Deploying a Helm chart with Pulumi](./helm-deploy-using-pulumi.gif)
+![Deploying a Helm chart with Pulumi](/blog/pulumi-a-better-way-to-kubernetes/helm-deploy-using-pulumi.gif)
 
 ## Make full use of your cloud
 
@@ -90,7 +90,7 @@ running in the cloud, think outside of k8s, and use the power of the
 cloud! It's far easier to maintain an app at scale if you strategically
 mix in managed cloud resources.
 
-![Use a managed database in a Kubernetes app](./cosmos.png)
+![Use a managed database in a Kubernetes app](/blog/pulumi-a-better-way-to-kubernetes/cosmos.png)
 
 ## Debugging failures
 
@@ -130,7 +130,7 @@ application, run tests, and then tear the whole stack back down! This
 saves you money and builds confidence that you can recover from disaster
 scenarios.
 
-![It's real code, so write tests for infrastructure and apps](./test.png)
+![It's real code, so write tests for infrastructure and apps](/blog/pulumi-a-better-way-to-kubernetes/test.png)
 
 ## Learn more
 

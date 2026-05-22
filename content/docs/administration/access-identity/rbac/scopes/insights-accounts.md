@@ -16,9 +16,9 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/insights-accounts/
 ---
 
-This document defines all the available [scopes](../) in Pulumi Cloud assignable to specific insights accounts or sets of insights accounts.
+This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific insights accounts or sets of insights accounts.
 
-Note that creating, listing, or restoring insights accounts are organization-level operations, and these scopes can be found in the [organization settings scopes](../org-settings).
+Note that creating, listing, or restoring insights accounts are organization-level operations, and these scopes can be found in the [organization settings scopes](/docs/administration/access-identity/rbac/scopes/org-settings).
 
 ## Insights Accounts
 
