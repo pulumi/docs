@@ -20,9 +20,9 @@ social:
     bluesky:
 ---
 
-The Pulumi Service Provider's new `pulumiservice:api/*` resource surface is generated directly from Pulumi Cloud's OpenAPI spec at runtime. The spec is the source of truth, and the provider stays in sync with it on every startup, with no field-by-field transcription in between.
+The Pulumi Service Provider's new `pulumiservice:api/*` resource surface is generated directly from Pulumi Cloud's OpenAPI spec at runtime.
 
-This is the v1.0 release of the Pulumi Service Provider. Entire capability areas of Pulumi Cloud land in the provider at once: fine-grained RBAC as code, stack config as a managed resource, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the legacy `pulumiservice:index:*` resources continue to be the production-supported path.
+This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, stack config as a managed resource, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the legacy `pulumiservice:index:*` resources continue to be the production-supported path.
 
 <!--more-->
 
@@ -33,16 +33,14 @@ Historically, every new Pulumi Cloud feature implied a follow-up PR in the provi
 The `api/*` surface changes both timelines. Because the schema is derived from the OpenAPI spec at runtime:
 
 1. Whole new resource families land in the provider the same release they reach Pulumi Cloud. v1.0 shipped fine-grained RBAC, stack config, Pulumi IDP catalog management, and audit-log exports as managed resources with no bespoke provider code.
-1. New fields, feature flags, and enum additions on existing resources show up across all five language SDKs the moment they appear in the spec.
+1. New fields, features, and enum values on existing resources show up across all five language SDKs the moment they appear in the spec.
 1. Field renames in the upstream API flow through cleanly, with no per-rename PR required in the provider.
-
-Concretely: you stop waiting for the provider to catch up with the platform.
 
 ## What's new in v1.0
 
 v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not just incremental field additions. None of it required bespoke provider code.
 
-1. **Fine-grained RBAC as code.** Custom roles (`Role`), organization membership (`OrganizationMember`), and team role assignments are now managed resources. Helper data sources like `buildAllowPermissions`, `buildEnvironmentScopedPermissions`, and `buildStackScopedPermissions` build permission descriptors for the common grant patterns, so you skip the raw JSON. The full descriptor grammar is still available for complex cases, and roles authored in the Pulumi Cloud UI can be `pulumi import`ed cleanly.
+1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources. Helper data sources like `buildAllowPermissions`, `buildEnvironmentScopedPermissions`, and `buildStackScopedPermissions` build permission descriptors for the common grant patterns, so you skip the raw JSON. The full descriptor grammar is still available for complex cases, and roles authored in the Pulumi Cloud UI can be `pulumi import`ed cleanly.
 1. **Stack config as a managed resource.** `stacks:Config` lets you declare stack configuration values directly in a Pulumi program, closing a gap where stack config used to live outside IaC. Existing config can be adopted via `pulumi import`.
 1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
 1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path. Compliance plumbing now lives next to the rest of your IaC instead of in click-ops runbooks.
@@ -86,4 +84,4 @@ If you want to take the preview for a spin:
 1. The [`examples/api/`](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples/api) directory has runnable programs for each resource, in every supported language.
 1. The [`pulumi-pulumiservice` repo](https://github.com/pulumi/pulumi-pulumiservice) is open source if you want to read the runtime, the embedded spec, or the metadata file directly.
 
-Feedback during preview is the most useful thing you can give us. The shape we ship at GA depends on what we hear now.
+Feedback during preview is very beneficial.  Please open an issue [here](https://github.com/pulumi/pulumi-pulumiservice/issues) if you run into any problems.
