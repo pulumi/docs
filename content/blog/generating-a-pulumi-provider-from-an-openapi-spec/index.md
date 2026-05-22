@@ -22,7 +22,7 @@ social:
 
 The Pulumi Service Provider's new `pulumiservice:api/*` resource surface is generated directly from Pulumi Cloud's OpenAPI spec at runtime.
 
-This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, stack config as a managed resource, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the legacy `pulumiservice:index:*` resources continue to be the production-supported path.
+This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, stack config as a managed resource, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the existing `pulumiservice:index:*` resources continue to be the production-supported path.
 
 <!--more-->
 
@@ -49,7 +49,7 @@ The pattern isn't "we stay aligned on fields." It's that whole capability areas 
 
 ## How it works
 
-The Pulumi Service Provider embeds Pulumi Cloud's OpenAPI 3 document, available at <https://api.pulumi.com/api/openapi/pulumi-spec.json>. At startup, the provider parses the spec together with a small companion metadata file. The metadata file captures the Pulumi-specific semantics that an OpenAPI document can't express on its own: which endpoints pair up to form a single resource, what a resource's composite ID looks like, which response fields are secrets that arrive exactly once at create time, and so on.
+The Pulumi Service Provider bundles Pulumi Cloud's OpenAPI 3 document (published at <https://api.pulumi.com/api/openapi/pulumi-spec.json>) into the provider binary when the provider is built and released, so there is no runtime download. When the provider process starts as part of a Pulumi operation, it parses the embedded spec together with a small companion metadata file. The metadata file captures the Pulumi-specific semantics that an OpenAPI document can't express on its own: which endpoints pair up to form a single resource, what a resource's composite ID looks like, which response fields are secrets that arrive exactly once at create time, and so on.
 
 Most of that metadata is auto-derived by a scaffolder that runs as part of `go generate`. Existing values are preserved as pins, so when a heuristic would suggest something different, the human override stays in place and the tool logs an `INFO` to keep the override visible. What stays hand-curated is the editorial layer: resource descriptions, examples, v0 aliases, and explicit exclusions.
 
@@ -69,7 +69,7 @@ For resources that have an ancestor under `pulumiservice:index:*`, the mapping l
 
 Two things worth being explicit about:
 
-1. **The legacy `pulumiservice:index:*` resources remain supported.** They are not being deprecated as part of v1.0 and continue to be the production-supported path during preview. Migration to `api/*` is opt-in via Pulumi `aliases`. There is no implicit v0 → api aliasing, by design.
+1. **The existing `pulumiservice:index:*` resources remain supported.** They are not being deprecated as part of v1.0 and continue to be the production-supported path during preview. Migration to `api/*` is opt-in via Pulumi `aliases`. There is no implicit v0 → api aliasing, by design.
 1. **Pulumi-resource semantics still live in the metadata, not in the spec.** Composite IDs, secret outputs that arrive once, replace-vs-update behavior, and exclusions are hand-curated. The point of generation-from-spec isn't that the provider writes itself; it's that the provider can't silently fall behind on a field rename or a new feature flag the spec already describes.
 
 ## Try it
