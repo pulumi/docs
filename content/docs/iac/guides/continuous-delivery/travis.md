@@ -1,9 +1,8 @@
 ---
-title_tag: "Using Travis CI | CI/CD"
-meta_desc: This page details how to use Travis CI to manage deploying
-           staging and production stacks based on commits to specific Git branches.
+title_tag: "Using Travis CI with Pulumi | CI/CD"
+meta_desc: Run Pulumi in a Travis CI build to preview and deploy infrastructure through a trunk-based CI/CD workflow.
 title: Travis CI
-h1: Pulumi CI/CD & Travis CI
+h1: Using Travis CI with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -21,164 +20,151 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/travis/
 ---
 
-This page details how to use [Travis CI](https://travis-ci.com/) to manage deploying
-staging and production stacks based on commits to specific Git branches. This is sometimes
-referred to as Push-to-Deploy.
+[Travis CI](https://www.travis-ci.com/) is a CI/CD service that builds and tests projects hosted in source control. You run Pulumi in a Travis build by installing the Pulumi CLI and invoking it from a `.travis.yml` file in your repository.
 
-Pulumi doesn't require any particular arrangement of stacks or workflow to work in a
-continuous integration / continuous deployment system. So the steps described here can be
-altered to fit into any existing type of deployment setup.
+Because Travis runs the CLI directly, this works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and with [any cloud provider](/registry/) Pulumi supports.
 
-## Stack and Branch Mappings
+{{< cicd-cloud-note >}}
 
-The scripts below act on two hypothetical stacks: `acme/website-staging` and
-`acme/website-production`. The source code for both stacks are in the same repository. And we will
-update the `website-staging` stack whenever code is pushed into the `master` branch, and update the
-`website-production` stack whenever code is pushed into the `production` branch.
+## Prerequisites
 
-We will also run previews of infrastructure changes for pull requests into the `master` and
-`production` branches, to identify an potentially impactful changes before they get merged.
+Before you begin, make sure you have:
 
-## Configuring Travis
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A Travis CI account with your repository activated.
+1. A Git repository connected to Travis CI.
+1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-To support this deployment strategy, you need to enable Travis to create both `push` and
-`pull_request` jobs. In the Travis UI, this is done by checking the "Build pushed branches" and
-"Build pushed pull requests" options.
+## Install and configure Pulumi
 
-`push` jobs are created when a Git push is made to a branch. We configure the build script for
-`push` jobs to run `pulumi up`, i.e. carry out the push-to-deploy operation.
-
-`pull_request` jobs are created when a push is made to a _pull request topic branch_. (That same
-push will also trigger a separate `push` job.) We configure the `pull_request` job to run
-`pulumi preview` to see any infrastructure changes that would happen as _a result of_ the pull
-request being merged.
-
-### Environment Variables
-
-To use Pulumi within Travis CI, there are a few environment variables you'll need to set for each
-build.
-
-The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
-perform the preview or update. You can create a new
-[Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens) specifically for your
-CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
-
-Next, you will also need to set environment variables specific to your cloud resource provider.
-For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
-`AWS_SECRET_ACCESS_KEY`.
-
-## Scripts
-
-With Travis configured, we then just need to add three files to the repository:
-`.travis.yml`, `scripts/travis_push.sh`, and `scripts/travis_pull_request.sh`. (Though of course
-you are free to rename and/or move these files to whatever makes sense in your repo.)
-
-### Travis.yaml
-
-The following is a minimal `.travis.yml`, which describes the steps Travis CI will perform as part
-of building the repository.
-
-If you already have an existing Travis configuration file, the only thing you'll need to add are
-the steps to download the Pulumi CLI and add it to the path.
-
-The example `.travis.yml` file then calls either `scripts/travis_pull.sh` or
-`scripts/travis_pull_request.sh`, depending on the build type. However, if you already have a
-build script or `Makefile` target to deploy your software, you can add the commands
-to run Pulumi to that.
+Travis runs the build steps defined in a `.travis.yml` file in the root of your repository. Install the Pulumi CLI in the `before_install` phase so later phases can call it:
 
 ```yaml
-language: generic
+# .travis.yml
+language: node_js
+node_js:
+  - lts/*
+
 before_install:
-  - curl -fsSL https://get.pulumi.com/ | sh
-  - export PATH=$PATH:$HOME/.pulumi/bin
+  - curl -fsSL https://get.pulumi.com | sh
+  - export PATH="$PATH:$HOME/.pulumi/bin"
+
 script:
-  - ./scripts/travis_${TRAVIS_EVENT_TYPE}.sh
+  - pulumi version
 ```
 
-### scripts/travis_push.sh
+As an alternative to installing the CLI on each build, you can run your build steps inside one of Pulumi's official [container images](https://github.com/pulumi/pulumi-docker-containers), which ship the Pulumi CLI and a language runtime preinstalled. Enable Travis's Docker service and select the image for your language:
 
-`scripts/travis_push.sh` is the script that is executed on `push` jobs. And for the push-to-deploy strategy,
-is when we will run `pulumi up`. For `push` jobs, the `TRAVIS_BRANCH` environment variable is the
-pushed branch. So we use that to determine which stack to update, e.g. pushes to `master` update the
-staging stack and `production` update the production stack.
+```yaml
+language: minimal
+services:
+  - docker
 
-We can do this in Bash using a simple switch statement.
+script:
+  - docker run --rm -e PULUMI_ACCESS_TOKEN -v "$PWD:/work" -w /work/infra
+      pulumi/pulumi-nodejs bash -c "npm ci && pulumi preview --stack acme/website/staging"
+```
+
+## Authenticate with Pulumi Cloud
+
+When your pipeline uses Pulumi Cloud as its backend, it needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Prefer an organization or team token over a personal one.
+
+Provide the token to the build as the `PULUMI_ACCESS_TOKEN` environment variable. Set it as an encrypted variable so it isn't exposed in build logs or committed to source control. The recommended way is the Travis repository settings — under **Settings → Environment Variables** add `PULUMI_ACCESS_TOKEN` and leave **Display value in build log** off. You can also encrypt it into `.travis.yml` with the Travis CLI:
 
 ```bash
-echo "Travis push job"
-
-# Download dependencies and build
-npm install
-npm run build
-
-# Update the stack
-case ${TRAVIS_BRANCH} in
-    master)
-        pulumi stack select acme/website-staging
-        pulumi up --yes
-        ;;
-    production)
-        pulumi stack select acme/website-production
-        pulumi up --yes
-        ;;
-    *)
-        echo "No Pulumi stack associated with branch ${TRAVIS_BRANCH}."
-        ;;
-esac
+travis encrypt PULUMI_ACCESS_TOKEN=pul-xxxxxxxx --add env.global
 ```
 
-### scripts/travis_pull_request.sh
+The Pulumi CLI reads `PULUMI_ACCESS_TOKEN` automatically and logs in non-interactively — no `pulumi login` step is required.
 
-`scripts/travis_pull_request.sh` is triggered on pushes to a pull request branch. For these jobs
-the meaning of `TRAVIS_BRANCH` is the branch being _targeted_ by the pull request.
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys in Travis.
 
-So if the pull request is going to be merged into the `master` branch, then we would want to
-preview the changes that would be made to the staging stack. For pull requests targeting the
-`production` branch, we want to preview the production stack.
+## The trunk-based development workflow
+
+The most common way to run Pulumi in Travis CI follows a trunk-based development model, where work merges into a single main branch and deployments flow outward from there:
+
+1. **Open a pull request.** The build runs `pulumi preview` and surfaces the proposed changes for review.
+1. **Merge to the main branch.** The build runs `pulumi up` to deploy the change to an environment that receives continuous delivery, such as a shared development or staging environment.
+1. **Promote to production.** Pushing a git tag triggers a deployment to production, keeping production updates deliberate and traceable.
+
+The `.travis.yml` below implements all three stages with conditional jobs. It assumes a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`:
+
+```yaml
+# .travis.yml
+language: node_js
+node_js:
+  - lts/*
+
+before_install:
+  - curl -fsSL https://get.pulumi.com | sh
+  - export PATH="$PATH:$HOME/.pulumi/bin"
+
+# Skip the default root-level `npm install`; the Pulumi program lives in infra/.
+install: true
+
+jobs:
+  include:
+    # Pull request: preview the changes the merge would make.
+    - stage: preview
+      if: type = pull_request
+      script:
+        - cd infra && npm ci
+        - pulumi preview --stack acme/website/staging
+
+    # Push to the main branch: deploy to the staging environment.
+    - stage: deploy to staging
+      if: branch = main AND type = push AND tag IS blank
+      script:
+        - cd infra && npm ci
+        - pulumi up --yes --stack acme/website/staging
+
+    # Tag push: promote to production.
+    - stage: deploy to production
+      if: tag IS present
+      script:
+        - cd infra && npm ci
+        - pulumi up --yes --stack acme/website/production
+```
+
+To promote a release, push a tag:
 
 ```bash
-echo "Travis pull_request job"
-
-# Download dependencies and build
-npm install
-npm run build
-
-# Preview changes that would be made if the PR were merged.
-case ${TRAVIS_BRANCH} in
-    master)
-        pulumi stack select acme/website-staging
-        pulumi preview
-        ;;
-    production)
-        pulumi stack select acme/website-production
-        pulumi preview
-        ;;
-    *)
-        echo "No Pulumi stack targeted by pull request branch ${TRAVIS_BRANCH}."
-        ;;
-esac
+git tag release-2026-05-20
+git push origin release-2026-05-20
 ```
+
+Travis decides *when* to start a build — on pull requests, branch pushes, and tags — primarily through your repository's Travis settings (for example, **Build pushed branches** and **Build pushed pull requests**). The `.travis.yml` file can further restrict which branches or tags trigger a build via the top-level `branches:` key, and the `if:` conditions above then select which job runs for each build.
+
+For an optional ephemeral environment on each pull request, pair the preview job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+
+{{% notes type="info" %}}
+The Pulumi CLI automatically detects when it runs inside Travis CI and records the build and commit metadata. Each update in Pulumi Cloud then links back to the build and pull request that triggered it — no extra configuration required.
+{{% /notes %}}
+
+## Report results on pull requests
+
+Independently of the build you run in Travis, Pulumi offers native [version control integrations](/docs/integrations/version-control/) for popular version control systems. A version control integration lets Pulumi Cloud post infrastructure-change summaries directly on pull requests as comments and status checks, and link each stack update back to the commit and pull request that produced it. See the [Version Control](/docs/integrations/version-control/) page for the systems currently supported.
+
+## Speed up builds with caching
+
+Travis workers don't persist state across runs, so without caching Pulumi must fetch its provider [plugins](/docs/iac/concepts/plugins/) on every build. Use Travis's [caching](https://docs.travis-ci.com/user/caching/) to persist the Pulumi plugin directory — and your language dependencies — across builds:
+
+```yaml
+cache:
+  directories:
+    - $HOME/.pulumi/plugins
+    - infra/node_modules
+```
+
+Pulumi plugin versions are tied to the provider package versions your program uses, so the cache stays correct as long as those packages are unchanged. For the most deterministic builds, bake the provider plugins into a custom builder image derived from an official `pulumi/pulumi-*` image and reference that image from your build. See the [plugins documentation](/docs/iac/concepts/plugins/) for details.
 
 ## Concurrency
 
-When using Travis to continuously deploy your Pulumi stacks, you may run into a problem. What
-happens if there are multiple commits merged into the `master` branch in rapid succession?
+If commits merge to the main branch in quick succession, Travis can start overlapping builds that each run `pulumi up` on the same stack. Pulumi locks stack state during an update, so a concurrent update can't corrupt your state — the second update fails fast rather than clashing with the first. To avoid those failed builds, set **Limit concurrent jobs** to `1` in your repository's settings so deployment builds run one at a time. You can also enable auto-cancellation, which discards builds that are still *waiting to run* when a newer build arrives — note this won't cancel a build that has already started.
 
-Travis will trigger multiple `push` jobs, which will then both try to run `pulumi up` on the
-same stack at the same time.
+## Additional resources
 
-Pulumi blocks any stack updates while one is already in progress. (To avoid conflicting resource
-updates or corrupting resource state.) So the stack and its resources won't be harmed by the
-concurrent update, but it will likely fail your Travis build.
-
-There are a few ways to address this, such as preventing Travis from starting concurrent builds.
-However, the recommended way is to use the [travisqueue](https://github.com/pulumi/travisqueue)
-tool.
-
-`travisqueue` is a tool that you can add to your `.travis.yml` file to limit build concurrency on
-a per-branch basis. This allows you to limit the number of concurrent builds for any branches that
-are configured to perform a Pulumi update. So Travis will only have one build for the `master`
-branch at a time, but could be running any number of concurrent builds for other branches.
-
-See the [README.md](https://github.com/pulumi/travisqueue/blob/master/README.md) file for more
-information on how it works and how to add it to your Travis configuration file.
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
