@@ -15,26 +15,17 @@ menu:
 Agent accounts are in **preview**. Behavior and limits may change based on feedback.
 {{% /notes %}}
 
-Agent accounts automatically give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account silently and continues. The human claims the account later to take permanent ownership.
+Agent accounts give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human user to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account automatically and continues. The human claims the account later to take permanent ownership.
 
 ## How it works
 
-1. An AI agent uses the Pulumi CLI with an automatically-created ephemeral Pulumi Cloud account.
-   - An AI agent (Claude Code, Codex, Cursor, etc.) runs a Pulumi CLI command that would normally prompt for login, such as `pulumi do`.
-   - The Pulumi CLI finds no Pulumi Cloud credentials: no `PULUMI_ACCESS_TOKEN`, no entry in `~/.pulumi/credentials.json`.
-   - Instead of prompting, the CLI provisions a new Pulumi Cloud account.
-   - The CLI prints a claim link on stderr, where the agent sees it.
-   - The CLI command continues and does its work normally in the new cloud account.
-1. The agent relays the claim link to the user and continues to use Pulumi CLI to achieve their vision.
-   - The CLI continues to print the claim link on stderr, where the agent sees it.
-   - As time passes and new sessions occur, the agent re-presents the claim link periodically so it is not forgotten.
-1. The user claims the account at any time by visiting the link and signing in.
-   - All stacks and esc environments are transferred to the user's account.
-   - The agent's access is disabled until the user logs in to their account.
-1. The user logs the agent into their Pulumi Cloud account.
-   - The user runs `pulumi login` or sets the `PULUMI_ACCESS_TOKEN` to their credentials.
-1. The agent continues to use Pulumi CLI, collaborating with the user in their Pulumi Cloud account.
-   - The Pulumi CLI finds Pulumi Cloud credentials and proceeds normally.
+1. **The agent gets an account on first use.** An AI agent (Claude Code, Codex, Cursor, etc.) runs a Pulumi CLI command that would normally prompt for login. The CLI finds no Pulumi Cloud credentials, provisions a new ephemeral account, and prints a claim link on stderr. The command continues and does its work normally in the new account.
+
+1. **The agent keeps working and surfaces the claim link.** The CLI prints the claim link on stderr with every subsequent command. The agent relays the link to the user alongside results. Across sessions, the agent re-presents the link periodically so it is not forgotten.
+
+1. **The user claims the account.** The user visits the claim link and signs in at any time. All stacks and ESC environments transfer to the user's account. Once claimed, the ephemeral credentials are invalidated.
+
+1. **The user logs the agent into their account.** The user runs `pulumi login` or sets `PULUMI_ACCESS_TOKEN` to their own credentials. From this point on, the agent works directly in the user's Pulumi Cloud account with full capabilities.
 
 ```
 pulumi: created an agent account on Pulumi Cloud so this work persists.
@@ -53,9 +44,8 @@ The provisioned account is a Pulumi Cloud individual account. Agents can:
 
 ## Claiming an account
 
-The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, or SAML SSO). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically. No migration is needed.
-
-Claiming never reduces capability. Everything available before the claim is still available after, plus features gated on having a real identity (inviting teammates, billing, Neo).
+The user clicks the claim link and signs in with any supported identity (GitHub, GitLab, Google, Atlassian, email/password, or SAML SSO). The claim replaces the placeholder identity with the user's real identity. All state, history, and resources transfer automatically.
+Claiming never reduces capability. Everything available before the claim is still available after. Once the account is claimed and email is verified, you get access to various Pulumi Cloud features, including [Neo](/product/neo/), our AI infrastructure agent.
 
 ## Lifecycle
 
@@ -80,9 +70,9 @@ In these cases, the CLI uses the existing credentials. If multiple agents run on
 ## Limitations
 
 - **Agent context only.** The automatic provisioning only triggers when the CLI detects it is running under an AI agent. Humans still see the standard login prompt.
-- **Single user.** Agent accounts support one owner. Multi-admin is not available until the account is claimed and upgraded.
-- **Active period is 3 days.** After 72 hours, unclaimed accounts go read-only. Claim within 30 days to restore full access.
-- **Claim link is the only recovery path.** If the claim link is lost and no email was set, recovery requires running the CLI on the same machine where the account was created.
+- **Individual account.** An agent account supports one owner. If you have an existing organization with a paid Pulumi subscription, you can transfer the account to your organization after claiming. Otherwise, the agent account is specific to a single user.
+- **Write access for 3 days.** The agent account has write access for 72 hours from provisioning. You have 30 days total from provisioning to claim the account and restore full access.
+- **Claim link is the only recovery path.** If the claim link is lost, there is no recovery path.
 
 ## See also
 
