@@ -29,7 +29,7 @@ If you have existing cloud infrastructure to bring into Pulumi IaC, you have mul
 
 {{% notes type="info" %}}
 
-Learn more at the [Pulumi Migration Hub](/docs/iac/guides/migration/) or [detailed migration tooling documentation](/docs/iac/guides/migration/).
+Learn more in the [migration guide](/docs/iac/guides/migration/).
 
 {{%/notes%}}
 
