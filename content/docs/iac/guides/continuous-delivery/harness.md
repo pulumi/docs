@@ -210,4 +210,4 @@ You can manage Harness itself — projects, environments, services, connectors, 
 - [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Version Control](/docs/integrations/version-control/) — post infrastructure-change summaries on pull requests.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
-- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.
