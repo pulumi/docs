@@ -2,6 +2,10 @@
 # These tags will be displayed on the /blog/series/ page
 # Ordered by most recent post date (newest first)
 series:
+  - slug: "neo-things"
+    title: "Things You Can Do With Neo"
+    description: "Real workflows platform teams are handing to Pulumi Neo: one-off deploys, incident triage, IAM audits, drift checks, runtime upgrades, and compliance fixes that run on a schedule."
+    meta_image: "/blog/10-things-you-can-do-with-neo/meta.png"
   - slug: "idp-best-practices"
     title: "IDP Best Practices Series"
     description: "A 6-part blog series on how to design, build, and scale an Internal Developer Platform (IDP). Learn best practices for developer self-service, platform engineering, security, and infrastructure automation using Pulumi."
