@@ -34,3 +34,7 @@ $
 ```
 
 If you have a system-wide proxy server running on your machine, it may be misconfigured. The [Pulumi architecture](/docs/iac/guides/basics/how-pulumi-works/) has three different components, running as separate processes that talk to each other using a bidirectional gRPC protocol on IP address `127.0.0.1`. Your proxy server should be configured **NOT** to proxy these local network connections. Add both `127.0.0.1` and `localhost` to the exclusion list of your proxy server.
+
+## Cannot access a DIY backend
+
+If you're using a [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) and see an error like `read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") ... AccessDenied` when running `pulumi login` or other commands, the CLI reached your storage provider but couldn't authenticate or wasn't configured correctly. See [Error reading `.pulumi/meta.yaml`](/docs/iac/guides/basics/using-a-diy-backend/#error-reading-pulumimetayaml) for common causes and fixes.

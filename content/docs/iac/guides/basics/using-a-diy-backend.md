@@ -139,3 +139,27 @@ Existing DIY backends will continue to use the global namespace for stacks. You 
 {{% notes type="info" %}}
 `pulumi state upgrade` will make upgraded stacks inaccessible to older versions of Pulumi. This is a one-way operation. Once you have upgraded your backend, you cannot downgrade to the previous version.
 {{% /notes %}}
+
+## Troubleshooting
+
+### Error reading `.pulumi/meta.yaml`
+
+When the Pulumi CLI can't access your DIY backend's storage, you'll see an error similar to one of these when you run `pulumi login`, `pulumi config`, or another command that reads state:
+
+```
+error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown): AccessDenied: Access Denied
+        status code: 403
+```
+
+```
+error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown): MissingRegion: could not find region configuration
+```
+
+`meta.yaml` is the first file Pulumi reads from a DIY backend, so this error almost always means the CLI reached the storage provider but couldn't authenticate or wasn't configured correctly—not that the file itself is missing or corrupt. The error is surfaced directly from the cloud provider's SDK, which is why it can be hard to interpret. Common causes:
+
+- **Expired or invalid credentials.** Temporary credentials—such as those from AWS SSO, `aws sts assume-role`, or short-lived Azure service principal tokens—may have expired. Refresh your credentials and try the command again.
+- **Insufficient permissions.** The identity in use can authenticate but lacks read/write access to the bucket or container. Confirm it has the permissions required to read, write, and delete blobs. For Azure Blob Storage, this means the [Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) or an equivalent role.
+- **Missing region configuration (AWS S3).** The AWS SDK can't determine which region the bucket is in. Specify the region in the backend URL—for example, `pulumi login 's3://<bucket-name>?region=us-east-1'`—or set the `AWS_REGION` environment variable before logging in.
+- **Missing authentication environment variables.** DIY backends authenticate using the cloud provider's own SDK. Verify that the variables that SDK expects are set—see the section for your backend ([AWS S3](#aws-s3), [Azure Blob Storage](#azure-blob-storage), or [Google Cloud Storage](#google-cloud-storage)) above for the specifics.
+
+To get more detail while diagnosing the problem, re-run the command with [CLI verbose logging](/docs/support/debugging/logging/#cli-verbose-logging) enabled.
