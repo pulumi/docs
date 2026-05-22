@@ -59,15 +59,11 @@ Two CI workflows tie a spec refresh to a release tag. A manually-triggered refre
 
 ## What the api namespace covers
 
-The `api` namespace already spans most of Pulumi Cloud's resource model. The current resource families include:
+The `api` namespace already spans most of Pulumi Cloud's resource model.
 
-> agent-pools · approval-rules · audit-log-export · auth-policy · custom-vcs · default-organization · deployment-settings · environment-config · environments · esc-environment-schedule · esc-revision-tag · esc-webhook · insights-account · oidc-issuer · organization-members · platform-bootstrap · policy-groups · rbac · saml-organization · schedules · service · service-catalog-demo · service-items · stack · stack-config · stack-tags · task · teams · template-sources · vcs-integrations · webhooks · access-tokens
-
-For resources that have a v0 ancestor under `pulumiservice:index:*`, the mapping lives in [`docs/v0-api-coverage.md`](https://github.com/pulumi/pulumi-pulumiservice/blob/main/docs/v0-api-coverage.md). That file is auto-generated, so it stays in sync. Each `api/*` resource ships hand-maintained per-language examples in TypeScript, Python, Go, C#, Java, and YAML.
+For resources that have an ancestor under `pulumiservice:index:*`, the mapping lives in [`docs/v0-api-coverage.md`](https://github.com/pulumi/pulumi-pulumiservice/blob/main/docs/v0-api-coverage.md). That file is auto-generated, so it stays in sync. Each `api/*` resource ships hand-maintained per-language examples in TypeScript, Python, Go, C#, Java, and YAML.
 
 ## What to know before adopting the preview
-
-Lifted from the provider's [`examples/api/README.md`](https://github.com/pulumi/pulumi-pulumiservice/blob/main/examples/api/README.md):
 
 > The pulumiservice:api:* resource surface is in preview. Resource shape and module layout may change before GA; not yet recommended for production.
 
