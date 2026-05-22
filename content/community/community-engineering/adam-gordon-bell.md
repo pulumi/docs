@@ -8,34 +8,26 @@ layout: community-engineering/single
 aliases:
   - /adam
 talks:
-- event: "KCDC 2026"
-  title: "Demystifying the Magic: Let's Build an Infrastructure-as-Code Tool from Scratch"
-  url: "https://www.kcdc.info/"
-  date: 2026-09-10T09:00:00.000-05:00
 - event: "MLCon San Diego 2026"
   title: "Building Action-Taking AI Agents: Reliability Lessons from Real Systems"
   url: "https://mlconference.ai/"
   date: 2026-06-03T09:00:00.000-07:00
+- event: "PyTexas 2026"
+  title: "I Built an AI Running Coach (That Actually Remembers My Training)"
+  url: "https://www.pytexas.org/2026/talks/#i-built-an-ai-running-coach-that-actually-remembers-my-training"
+  date: 2026-04-18T09:00:00.000-05:00
 - event: "SCaLE 23x"
   title: "When AI Agents Meet Production Infrastructure"
   url: "https://www.socallinuxexpo.org/scale/23x/presentations/when-ai-agents-meet-production-infrastructure"
   date: 2026-03-07T09:00:00.000-08:00
 - event: "SCaLE 23x"
   title: "I Built an AI Running Coach"
-  url: "https://adamgordonbell.com/speaking/"
+  url: "https://www.socallinuxexpo.org/scale/23x/presentations/i-built-ai-running-coach-and-my-homebrew-bot-runs-my-training"
   date: 2026-03-07T09:00:00.000-08:00
-- event: "MCP Academy"
-  title: "When AI Agents Meet Production Infrastructure"
-  url: "https://adamgordonbell.com/speaking/"
-  date: 2025-10-01T09:00:00.000-07:00
-- event: "Pulumi Workshop"
-  title: "Discover Pulumi Through Hands-On Practice"
-  url: "https://www.youtube.com/watch?v=ttUVmRPAzCo"
-  date: 2025-01-01T09:00:00.000-08:00
-- event: "Pulumi"
-  title: "Pulumi Interview / Demo"
-  url: "https://www.youtube.com/watch?v=9KMIpOofv0s"
-  date: 2025-01-01T09:00:00.000-08:00
+- event: "MCP Academy PNW"
+  title: "Bridge Agents and Infrastructure to Extend Agents into Cloud Environments"
+  url: "https://www.youtube.com/watch?v=StEKKBRnqYc"
+  date: 2025-10-29T13:40:00.000-08:00
 - event: "SCaLE 20x"
   title: "Build Your Own Container Runtime with chroot"
   url: "https://www.youtube.com/watch?v=89ESCBzM-3Q"
