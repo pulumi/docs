@@ -14,7 +14,7 @@ talks:
   date: 2026-06-03T09:00:00.000-07:00
 - event: "PyTexas 2026"
   title: "I Built an AI Running Coach (That Actually Remembers My Training)"
-  url: "https://www.pytexas.org/2026/talks/#i-built-an-ai-running-coach-that-actually-remembers-my-training"
+  url: "https://www.pytexas.org/2026/schedule/talks/#i-built-an-ai-running-coach-that-actually-remembers-my-training"
   date: 2026-04-18T09:00:00.000-05:00
 - event: "SCaLE 23x"
   title: "When AI Agents Meet Production Infrastructure"
