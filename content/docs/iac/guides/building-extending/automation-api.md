@@ -6,6 +6,7 @@ h1: Using Automation API
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: using-automation-api
         name: Automation API
         parent: iac-guides-building-extending
         weight: 16
