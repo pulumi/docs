@@ -48,21 +48,12 @@ talks:
   title: "Beating TimSort at Merging"
   url: "https://www.youtube.com/watch?v=L4a0SSinGi8"
   date: 2022-12-03T09:00:00.000-08:00
-- event: "Conf42 Cloud Native 2021"
-  title: "Compiling Containers"
-  url: "https://www.youtube.com/watch?v=RHqNNTqmfEA"
-  date: 2021-06-02T09:00:00.000-07:00
 - event: "DockerCon 2021"
   title: "Compiling to Containers with BuildKit"
   url: "https://www.youtube.com/watch?v=1x9OJ-Z-gnc"
   date: 2021-05-27T09:00:00.000-07:00
-- event: "Dev Ops Exchange"
-  title: "What if Dockerfiles and Makefiles Had a Baby?"
-  url: "https://www.youtube.com/watch?v=bL432C2Hqfo"
-  date: 2020-11-26T09:00:00.000-08:00
 - event: "Houston Functional Programmers Meetup"
   title: "Trends in FP"
-  url: "https://www.meetup.com/houston-functional-programmers/"
   date: 2020-10-21T19:00:00.000-05:00
 ---
 
