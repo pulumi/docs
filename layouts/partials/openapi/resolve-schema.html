@@ -58,9 +58,11 @@
 {{ else if isset $schema "$ref" }}
   {{ $refPath := index $schema "$ref" }}
   {{ $refParts := split $refPath "/" }}
-  {{ $schemaName = index $refParts (sub (len $refParts) 1) }}
-  {{ with index $openapi.components.schemas $schemaName }}
-    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" . "openapi" $openapi "depth" (add $depth 1)) }}
+  {{ $candidateName := index $refParts (sub (len $refParts) 1) }}
+  {{ if isset $openapi.components.schemas $candidateName }}
+    {{ $schemaName = $candidateName }}
+    {{ $schemaDetails := index $openapi.components.schemas $candidateName }}
+    {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" $schemaDetails "openapi" $openapi "depth" (add $depth 1)) }}
     {{ $properties = $resolved.properties }}
     {{ $required = $resolved.required }}
     {{ $description = $resolved.description }}
