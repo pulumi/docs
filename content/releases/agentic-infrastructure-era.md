@@ -26,6 +26,7 @@ intro:
   attribution: |
     — Joe Duffy, co-founder and CEO, on the increasing pace at which teams are adopting AI-driven infrastructure
   link: /blog/the-agentic-infrastructure-era/
+  link_label: Read the blog post
 
 toc_heading: What's New in This Release
 
