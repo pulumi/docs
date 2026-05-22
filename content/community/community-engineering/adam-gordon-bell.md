@@ -24,6 +24,10 @@ talks:
   title: "I Built an AI Running Coach"
   url: "https://www.socallinuxexpo.org/scale/23x/presentations/i-built-ai-running-coach-and-my-homebrew-bot-runs-my-training"
   date: 2026-03-07T09:00:00.000-08:00
+- event: "Houston AWS SIG"
+  title: "AWS's AI Bet: What re:Invent 2025 Actually Means"
+  url: "https://www.youtube.com/watch?v=M1OEOmqLz9s"
+  date: 2026-01-22T17:30:00.000-06:00
 - event: "MCP Academy PNW"
   title: "Bridge Agents and Infrastructure to Extend Agents into Cloud Environments"
   url: "https://www.youtube.com/watch?v=StEKKBRnqYc"
@@ -40,6 +44,26 @@ talks:
   title: "Beating Timsort"
   url: "https://confoo.ca/en/2023/session/beating-timsort"
   date: 2023-02-22T09:00:00.000-08:00
+- event: "PyjamasConf 2022"
+  title: "Beating TimSort at Merging"
+  url: "https://www.youtube.com/watch?v=L4a0SSinGi8"
+  date: 2022-12-03T09:00:00.000-08:00
+- event: "Conf42 Cloud Native 2021"
+  title: "Compiling Containers"
+  url: "https://www.youtube.com/watch?v=RHqNNTqmfEA"
+  date: 2021-06-02T09:00:00.000-07:00
+- event: "DockerCon 2021"
+  title: "Compiling to Containers with BuildKit"
+  url: "https://www.youtube.com/watch?v=1x9OJ-Z-gnc"
+  date: 2021-05-27T09:00:00.000-07:00
+- event: "Dev Ops Exchange"
+  title: "What if Dockerfiles and Makefiles Had a Baby?"
+  url: "https://www.youtube.com/watch?v=bL432C2Hqfo"
+  date: 2020-11-26T09:00:00.000-08:00
+- event: "Houston Functional Programmers Meetup"
+  title: "Trends in FP"
+  url: "https://www.meetup.com/houston-functional-programmers/"
+  date: 2020-10-21T19:00:00.000-05:00
 ---
 
 Over twenty years in software. I started at Operitel on learning management (later acquired by OpenText), then three years at Tenable building application security tools in Scala — the kind of work that sits at the intersection of static analysis and functional programming.
