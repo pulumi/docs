@@ -196,10 +196,10 @@ You can manage CircleCI itself — projects, contexts, and environment variables
 pulumi package add terraform-provider mrolla/circleci
 ```
 
-## See also
+## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD identity token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
 - [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
