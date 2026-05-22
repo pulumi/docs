@@ -12,6 +12,7 @@ tags:
     - platform-engineering
     - pulumi-neo
     - aws
+    - neo-things
 social:
     twitter: |
         Last fall we wrote up 10 things you could do with Pulumi Neo. Since then platform teams have handed Neo real work: drift, dependency upgrades, on-call triage from Slack.
@@ -161,6 +162,8 @@ const bucket = new platform.Bucket("assets", {
 
 {{< neo-card title="Migrate CDK onto your golden paths" prompt="I'd like to migrate this CDK stack to Pulumi. Use our published components where you can." >}}
 
+Neo handles [Terraform and Azure ARM migrations](/blog/neo-migration/) the same way.
+
 ## 7. Containerize a service and migrate it to Kubernetes from a runbook
 
 *Write the containerization pattern down once. Every service after that is a prompt away.*
@@ -180,7 +183,7 @@ You're still the one reviewing the PRs and deciding what the cutover looks like 
 ![Five GitHub PRs in a row, one per migration step (Dockerfile, Deployment, Service+Ingress, ExternalSecret, HPA+PDB), each citing the runbook section it implements](neo-migration-prs.png)
 {{< figcaption >}}Neo migrating a VM-based service to Kubernetes step by step, following the team's Confluence runbook.{{< /figcaption >}}
 
-Once you've delegated something a few times, the next move is to automate it. The remaining three tasks are the kind Neo doesn't need to be asked for. Drift, deps, compliance: they're the operations you put on a schedule.
+Once you've delegated something a few times, the next move is to automate it. The remaining three tasks are the kind Neo doesn't need to be asked for. Drift, deps, compliance: they're the operations you put on a schedule via [Neo Automations](/blog/neo-automations/).
 
 ## 8. Schedule daily configuration drift checks across your cloud infrastructure
 
