@@ -17,6 +17,8 @@ aliases:
 
 The `hooks` resource option provides a set of resource hooks linked to a resource. Hooks are used to execute custom logic at specific points in the resource lifecycle, such as before or after creation, update, or deletion.
 
+{{< resource-option-scope "hooks" >}}
+
 {{% notes type="info" %}}
 Resource hooks are supported in TypeScript/JavaScript, Python, Go, and C#/.NET. Java and YAML do not support resource hooks.
 {{% /notes %}}

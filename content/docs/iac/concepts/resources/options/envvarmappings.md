@@ -18,17 +18,13 @@ aliases:
 The `envVarMappings` resource option allows you to remap environment variables that a provider expects to custom environment variable names.
 This is useful when you need to run multiple providers or provider instances that require different values for the same environment variable.
 
+{{< resource-option-scope "envVarMappings" >}}
+
 ## When to use envVarMappings
 
 Use this option when:
 
 - **Running multiple providers targeting different accounts or regions**: For example, two AWS providers targeting different accounts can each use their own environment variable-based credentials without conflicting.
-
-{{% notes type="info" %}}
-The `envVarMappings` resource option only applies to provider resources.
-It cannot be used on regular resources or component resources.
-You must define an explicit provider to use this resource option.
-{{% /notes %}}
 
 ## Example
 

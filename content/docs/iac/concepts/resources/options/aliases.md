@@ -18,6 +18,8 @@ aliases:
 
 The `aliases` resource option provides a list of aliases for a resource or component resource. If you’re changing the name, type, or parent path of a resource or component resource, you can add the old name to the list of aliases for a resource to ensure that existing resources will be migrated to the new name instead of being deleted and replaced with the new named resource.
 
+{{< resource-option-scope "aliases" >}}
+
 Aliases are frequently used when refactoring Pulumi programs.
 
 For example, imagine we change a database resource’s name from `old-name-for-db` to `new-name-for-db`. By default, when we run `pulumi up`, we see that the old resource is deleted and the new one created. If we annotate that resource with the aliases option, however, the resource is updated in-place. Pulumi identifies resources by their [URN](/docs/iac/concepts/resources/names/#urns), which encodes the resource name, so the alias tells Pulumi to treat the old URN as equivalent to the new one:

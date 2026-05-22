@@ -17,6 +17,8 @@ aliases:
 
 The `providers` resource option is supported only on [component resources](/docs/iac/concepts/components/). It sets a map of providers (keyed by package name) for the component and its child resources — the map flows from the component to every child via parent inheritance. To pass an explicit provider to a single custom resource, use the [`provider`](/docs/iac/concepts/resources/options/provider/) option instead.
 
+{{< resource-option-scope "providers" >}}
+
 When the SDK creates a resource it picks a provider by checking, in order:
 
 1. The explicit `provider` option, if set.
