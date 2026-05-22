@@ -44,7 +44,7 @@ A deployment may be triggered on demand by clicking a button in the Pulumi Conso
 ## Push to Deploy
 
 {{% notes type="info" %}}
-Push to Deploy requires a [version control integration](/docs/integrations/version-control/) to be configured for your organization. This is available with [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). The integration requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
+Push to Deploy requires a [version control integration](/docs/integrations/version-control/) to be configured for your organization. Every Pulumi version control integration supports Push to Deploy. The integration requires read access to your repos so it can clone your Pulumi programs and listen to merge commits to automatically trigger deployments on `git push`.
 {{% /notes %}}
 
 Pulumi Deployments can run a `pulumi preview` for a stack (e.g., `dev`) when a Pull Request is opened against a particular git branch (e.g., a proposed change to the `main` branch). This will give the reviewer the full context necessary to understand the impact of the changes in your Pull Request: both the code changes _and the changes to your resources_ (i.e., the `pulumi preview` output). Your VCS integration will create or update a comment on your Pull Request with the results of `pulumi preview`.

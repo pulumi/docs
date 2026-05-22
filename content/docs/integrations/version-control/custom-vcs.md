@@ -15,7 +15,7 @@ aliases:
 
 Custom VCS integrations let you connect any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/deployments/), including self-hosted and third-party servers. You configure webhooks on your VCS server to notify Pulumi Cloud when commits are pushed, and Pulumi automatically triggers deployments for matching stacks.
 
-Unlike the first-party [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/) integrations, Custom VCS uses [ESC environments](/docs/esc/) for credential management and requires manual webhook configuration. It supports push-to-deploy but does not support pull request comments, commit status checks, or review stacks.
+Unlike the first-party [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/) integrations, Custom VCS uses [ESC environments](/docs/esc/) for credential management and requires manual webhook configuration. It supports push-to-deploy but does not support pull request comments, commit status checks, or review stacks.
 
 [Neo](/docs/ai/), Pulumi's AI assistant, can clone and push to Git and Mercurial repositories registered with a Custom VCS integration using the credentials from the integration's ESC environment. Neo cannot open pull requests or create new repositories on Custom VCS servers at this time. Those operations require VCS-specific APIs only available through native integrations.
 

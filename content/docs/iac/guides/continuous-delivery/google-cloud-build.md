@@ -1,8 +1,8 @@
 ---
-title_tag: "Integrate Google Cloud Build | CI/CD"
-meta_desc: This page gives an overview of how to integrate Google Cloud Build with a Pulumi program.
+title_tag: "Using Google Cloud Build with Pulumi | CI/CD"
+meta_desc: Run Pulumi in Google Cloud Build using the official Pulumi container images, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Google Cloud Build
-h1: Pulumi CI/CD & Google Cloud Build
+h1: Using Google Cloud Build with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -20,146 +20,397 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/
 ---
 
+[Google Cloud Build](https://cloud.google.com/build/docs) is Google Cloud's serverless CI/CD platform. It runs builds as a series of container-image steps defined in a `cloudbuild.yaml` file, started by triggers that respond to repository events such as pull requests, branch pushes, and tags.
+
+You run Pulumi in a build step by using one of Pulumi's official Docker images as the step's container image. Each image bundles the Pulumi CLI with a language runtime — `pulumi/pulumi-nodejs`, `pulumi/pulumi-python`, `pulumi/pulumi-go`, `pulumi/pulumi-dotnet`, and `pulumi/pulumi-java` — so a step can install dependencies and run Pulumi commands against a program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
+
+{{< cicd-cloud-note >}}
+
 ## Prerequisites
 
-### Google Cloud Platform
+Before you begin, make sure you have:
 
-- A Google Cloud Platform account with the following APIs enabled:
-    - Cloud Build API
-    - Cloud Functions API (and/or any other relevant resource that will be deployed).
-- Add `Cloud Functions Developer` role (and/or any other relevant resource that will be deployed) and the `Service Account User` role to the Cloud Build's service account. You can do this by navigating to the IAM tab in the Google Cloud Console.
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A Google Cloud project with the [Cloud Build API](https://cloud.google.com/build/docs/set-up) enabled.
+1. A source repository that Cloud Build can build from. Cloud Build connects to repositories hosted on GitHub, GitLab, or Bitbucket through a [repository connection](https://cloud.google.com/build/docs/repositories). (Cloud Source Repositories, Google's own hosted Git service, has been closed to new customers since June 2024.)
+1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-![Cloud Build service account](/images/docs/reference/google-cloud-build/cloud-build-service-account.png)
+## Authenticate with Pulumi Cloud
 
-- If you do not grant the necessary permissions to the Cloud Build service account, you may see an error like this while deploying Cloud Functions (or whichever resource you are deploying.)
+Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
+- **A stored access token** — create a [Pulumi access token](/docs/administration/access-identity/access-tokens/) and keep it in [Secret Manager](https://cloud.google.com/secret-manager/docs), where a build step reads it at runtime.
+- **OIDC** — exchange a short-lived OpenID Connect token for a Pulumi access token at build time, so no long-lived credential is stored anywhere. Prefer this where your CI/CD system supports it well.
+
+This guide's examples use the stored-token path, because Cloud Build has no Pulumi-maintained OIDC integration yet — see [Authenticate without a stored token using OIDC](#authenticate-without-a-stored-token-using-oidc) below.
+
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a build step or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys in Secret Manager.
+
+### Store the access token in Secret Manager
+
+Create a Pulumi access token, preferring an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+
+Store the token in Secret Manager and grant the Cloud Build service account permission to read it:
+
+```bash
+# Store the token as a secret.
+printf '%s' "$PULUMI_ACCESS_TOKEN" | gcloud secrets create pulumi-access-token --data-file=-
+
+# Grant the Cloud Build service account read access to the secret.
+gcloud secrets add-iam-policy-binding pulumi-access-token \
+  --member="serviceAccount:CLOUD_BUILD_SERVICE_ACCOUNT" \
+  --role="roles/secretmanager.secretAccessor"
 ```
-error: Plan apply failed: googleapi: Error 403: Missing necessary permission iam.serviceAccounts.actAs for  on resource cloud-build-samples@appspot.gserviceaccount.com. Please grant  the roles/iam.serviceAccountUser role. You can do that by running 'gcloud iam service-accounts add-iam-policy-binding cloud-build-samples@appspot.gserviceaccount.com --member= --role=roles/iam.serviceAccountUser', forbidden
+
+A build configuration then exposes the secret to a step as the `PULUMI_ACCESS_TOKEN` environment variable through its `availableSecrets` block, as shown in the examples below.
+
+### Authenticate without a stored token using OIDC
+
+You can avoid storing a static token by having Cloud Build obtain a short-lived [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) token at build time. A build step can request an OIDC id_token for the build's Google Cloud service account, and Pulumi Cloud can register that as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/) and exchange it for a short-lived Pulumi access token.
+
+Unlike GitHub Actions and GitLab CI, Cloud Build has no Pulumi-maintained action or component that performs this exchange for you — you would script the token request and the `pulumi login` exchange yourself. Until a dedicated integration exists, the stored-token path above is the simpler and recommended choice, and it's what the rest of this guide uses.
+
+## The trunk-based development workflow
+
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. This guide splits that across two build configurations:
+
+- `cloudbuild-preview.yaml` runs `pulumi preview` on every pull request, surfacing the proposed changes for review.
+- `cloudbuild-deploy.yaml` runs `pulumi up` when changes land — to staging on a push to `main`, and to production on a `release-*` tag.
+
+Both configurations install your program's dependencies and run Pulumi from one of the official `pulumi/pulumi-*` images. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. Only the step image and the dependency-install command differ between languages.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-nodejs'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        pulumi preview --stack acme/website/staging
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
 ```
 
-### Pulumi
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-nodejs'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        npm install
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-- A Pulumi account. Don't have one? [Signup](https://app.pulumi.com/signup) now.
-- An existing stack or create one based off a template.
-- This page uses the [Google Cloud Functions example](https://github.com/pulumi/examples/tree/master/gcp-ts-functions) from the Pulumi examples repo.
-    - The choice of example has no bearing on the information presented on this page. You may choose any example. However, the Cloud Functions example is the easiest and quickest to get up and running with Cloud Build.
+{{% /choosable %}}
+{{% choosable language python %}}
 
-## Deploying from a Cloud Source repo
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-python'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        pip install -r requirements.txt
+        pulumi preview --stack acme/website/staging
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-### Hosted on Cloud Source
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-python'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        pip install -r requirements.txt
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-Don't have a repo on Cloud Source yet? See this page for a [quickstart](https://cloud.google.com/source-repositories/docs/quickstart) tutorial.
+{{% /choosable %}}
+{{% choosable language go %}}
 
-### External repos
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-go'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        go mod download
+        pulumi preview --stack acme/website/staging
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-Have an existing repo already? Cloud Source supports [mirroring repositories](https://cloud.google.com/source-repositories/docs/mirroring-a-github-repository) that are on GitHub or Bitbucket.
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-go'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        go mod download
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-## Pulumi Config
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
-Set the appropriate `gcp:project` and `gcp:region` values. For example, if your Google Cloud project ID is `awesome-project` and you would like to deploy resources to `us-central1`, then you should run:
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-dotnet'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'pulumi preview --stack acme/website/staging'
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-`pulumi config set gcp:project awesome-project` and `pulumi config set gcp:region us-central`
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-dotnet'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-**Note**: Not all resources are available in all regions. Check that Google Cloud supports [the region and resource combination](https://cloud.google.com/about/locations/).
+{{% /choosable %}}
+{{% choosable language java %}}
 
-## Build Configuration
+```yaml
+# cloudbuild-preview.yaml
+steps:
+  - name: 'pulumi/pulumi-java'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'pulumi preview --stack acme/website/staging'
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-### `cloudbuild.yaml`
+```yaml
+# cloudbuild-deploy.yaml
+steps:
+  - name: 'pulumi/pulumi-java'
+    dir: 'infra'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        if [ -n "$TAG_NAME" ]; then
+          pulumi up --yes --stack acme/website/production
+        else
+          pulumi up --yes --stack acme/website/staging
+        fi
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/pulumi-access-token/versions/latest
+      env: 'PULUMI_ACCESS_TOKEN'
+options:
+  logging: CLOUD_LOGGING_ONLY
+```
 
-The Cloud Build configuration file below is a sample, to show you how to install the Pulumi CLI and run pulumi commands such as `pulumi preview` or `pulumi up` as part of your CI/CD workflow.
+{{% /choosable %}}
 
-**Note:** The `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` substitution is a simple way to specify the token, but you should consider using encrypted variables.
+{{< /chooser >}}
+
+Pulumi runs non-interactively inside Cloud Build, so `pulumi up --yes` applies changes without a confirmation prompt. For C# and Java, the language runtime resolves and builds dependencies as part of the Pulumi run, so no separate install step is needed.
+
+The deploy configuration reads the built-in `$TAG_NAME` substitution — which Cloud Build sets only for tag-triggered builds — to decide whether to update the staging or the production stack. The `availableSecrets` block reads the access token from Secret Manager and exposes it to the step as `PULUMI_ACCESS_TOKEN`, and `logging: CLOUD_LOGGING_ONLY` lets the build run without a Cloud Storage logs bucket.
+
+To promote a release, push a tag that matches the `release-*` pattern:
+
+```bash
+git tag release-2026-05-21
+git push origin release-2026-05-21
+```
+
+Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
+
+To let reviewers exercise a change in a live environment, pair the preview build with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+
+{{% notes type="info" %}}
+The Pulumi CLI doesn't automatically detect Cloud Build as a CI/CD system, so updates won't link back to the triggering build or commit on their own. To record that metadata in Pulumi Cloud, set the `PULUMI_CI_SYSTEM` environment variable, along with the `PULUMI_CI_*` fallback variables, in your build steps. See [adding support for CI/CD systems](/docs/iac/guides/continuous-delivery/#adding-support-for-cicd-systems).
+{{% /notes %}}
+
+## Report results on pull requests
+
+By default, the output of a `pulumi preview` build lands in the Cloud Build logs. To surface the proposed infrastructure changes on the pull request itself, connect your repository to Pulumi Cloud with a [version control integration](/docs/integrations/version-control/).
+
+These integrations work independently of Cloud Build: Pulumi Cloud posts a summary of resource changes as a pull request comment and status check, and links each stack update back to the commit and pull request that produced it. Pulumi maintains integrations for popular version control systems — see the [version control integrations](/docs/integrations/version-control/) documentation for the current list and setup instructions.
+
+## Connect a repository and create a trigger
+
+A trigger ties a repository event to a build configuration. To run the two build configurations above, create three triggers on the same repository:
+
+1. Connect your GitHub, GitLab, or Bitbucket repository to Cloud Build by creating a [repository connection](https://cloud.google.com/build/docs/repositories) in the region where you intend to run builds.
+1. Create a **pull request** trigger that runs `cloudbuild-preview.yaml` when a pull request targets `main`.
+1. Create a **push** trigger that runs `cloudbuild-deploy.yaml` on pushes to the `main` branch.
+1. Create a second **push** trigger that runs `cloudbuild-deploy.yaml` on tags matching `release-*`.
+
+Because the deploy configuration inspects `$TAG_NAME` to choose the target stack, both push triggers can share the one file.
+
+### Manage triggers as code
+
+You can define those triggers — and the repository connection itself — as part of a Pulumi program with the [Google Cloud provider](/registry/packages/gcp/), rather than creating them by hand. Use the [`gcp.cloudbuild.Trigger`](/registry/packages/gcp/api-docs/cloudbuild/trigger/) resource for the triggers and [`gcp.cloudbuildv2.Repository`](/registry/packages/gcp/api-docs/cloudbuildv2/repository/) for the repository connection; each resource's Registry page has usage examples in every supported language. Managing triggers this way keeps your CI/CD configuration versioned and reviewed alongside the rest of your infrastructure.
+
+## Speed up builds with caching
+
+Cloud Build starts each build on a clean worker and keeps nothing between builds, so by default Pulumi re-downloads its provider plugins on every run. Cloud Build has no built-in cross-build cache, but you can avoid the repeated downloads in one of two ways.
+
+### Bake plugins into a custom builder image
+
+Build a custom image from the official Pulumi image for your language and pre-install the [provider plugins](/docs/iac/concepts/plugins/) your program uses. The plugins are baked into the image, so no build step downloads them at run time:
+
+```dockerfile
+FROM pulumi/pulumi-nodejs:latest
+
+# Pre-install each provider plugin your program uses, pinned to the version
+# from your dependency lockfile — for example, the Google Cloud provider:
+RUN pulumi plugin install resource gcp 9.0.0
+```
+
+Push the image to [Artifact Registry](https://cloud.google.com/artifact-registry/docs) and reference it as the step `name` in place of `pulumi/pulumi-nodejs`. Rebuild the image whenever you change a provider version. This is the simplest and most deterministic option, and it's the [recommended approach](/docs/iac/concepts/plugins/) for CI/CD.
+
+### Cache the plugins directory in a Cloud Storage bucket
+
+If your set of providers changes often, cache Pulumi's plugin directory in a [Cloud Storage](https://cloud.google.com/storage/docs) bucket instead. Cloud Build persists only the `/workspace` directory between steps, so point `PULUMI_HOME` at a path under `/workspace`, then add a step before the Pulumi step to restore the cache and a step after it to save the cache back:
 
 ```yaml
 steps:
-- name: 'gcr.io/cloud-builders/yarn'
-  entrypoint: /bin/sh
-  args:
-  - '-c'
-  - 'chmod +x *.sh && ./pulumi.sh'
-  env:
-  # We use substitution for an example. Your Pulumi access token is sensitive and as such should be encrypted.
-  # See the Encrypted Variables section below on how to do that.
-  - 'PULUMI_ACCESS_TOKEN=$_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN'
-  - 'BUILD_TYPE=$_BUILD_TYPE'
+  # Restore the plugin cache, if any.
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud storage rsync --recursive gs://my-cache-bucket/pulumi-plugins /workspace/.pulumi/plugins || true'
+
+  - name: 'pulumi/pulumi-nodejs'
+    dir: 'infra'
+    entrypoint: 'bash'
+    env: ['PULUMI_HOME=/workspace/.pulumi']
+    args:
+      - '-c'
+      - |
+        npm install
+        pulumi preview --stack acme/website/staging
+    secretEnv: ['PULUMI_ACCESS_TOKEN']
+
+  # Save the plugin cache for the next build.
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud storage rsync --recursive /workspace/.pulumi/plugins gs://my-cache-bucket/pulumi-plugins'
 ```
 
-In the above configuration, both `_BUILD_TYPE` and `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` are substitutions configured in Cloud Build Triggers. More about [triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+The `availableSecrets` and `options` blocks are unchanged from the build configurations shown earlier. Set a [lifecycle rule](https://cloud.google.com/storage/docs/lifecycle) on the bucket so stale plugin versions don't accumulate.
 
-- `_BUILD_TYPE` is used to indicate to the build environment about the type of build it is running. This allows us to run a `preview` or an `update` based on the build type. To configure the substitution, you need to setup build triggers for each type of branch builds you intend to support for your project.
+## Additional resources
 
-- `_INSECURE_SUBSTITUTION_PULUMI_ACCESS_TOKEN` is used to supply the [Pulumi Access Token](https://app.pulumi.com/account/tokens) value.
-
-For example, if you only want to support PR and merge builds, setup two triggers with the filter pattern `master` for all merge builds and `^master` for all other builds.
-
-![Cloud Build Triggers](/images/docs/reference/google-cloud-build/cloud-build-triggers.png)
-
-Here's the configuration of the "PR build" type trigger:
-
-![Cloud Build Trigger configuration](/images/docs/reference/google-cloud-build/cloud-build-trigger-config.png)
-
-### `pulumi.sh`
-
-A basic bash script that does the following:
-
-- Restore the Node dependencies for your Pulumi program.
-- Perform a `pulumi login`.
-- Select your stack.
-- Run either `pulumi preview` or `pulumi up --yes` based on the `BUILD_TYPE` env var.
-
-```bash
-#!/bin/bash
-
-# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed.
-set -e -x
-
-# Download and install required tools.
-# pulumi
-curl -L https://get.pulumi.com/ | bash
-export PATH=$PATH:$HOME/.pulumi/bin
-
-# Restore npm dependencies for our infra app.
-yarn install
-
-# Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable.
-pulumi login
-
-# Select the appropriate stack.
-pulumi stack select praneetloke/gcp-functions/dev
-
-case $BUILD_TYPE in
-  PullRequest)
-      pulumi preview
-    ;;
-  *)
-      pulumi up --yes
-    ;;
-esac
-```
-
-### Build Triggers
-
-Cloud Build supports triggers that can start a new instance of your cloud build using the configuration defined in your repo.
-To setup a build trigger, navigate to the [Cloud Build service](https://console.cloud.google.com/cloud-build/triggers) in your Google Cloud Console, making sure that you have the correct project selected.
-Click on **Add Trigger** and follow the prompts to setup a trigger for your repo. In the final step **Trigger settings**, select the following settings:
-
-- **Branch (regex)**: `[^master]`
-    - This will match any branch _except_ `master`.
-    - This means that this trigger will run for any branch other than `master`.
-    - Alternatively, you can set this to `master` if you want this trigger to only run for `master` branches.
-    - The default `.*` will match all branches, and therefore, the trigger will run for pushes against any branch.
-- **Build configuration**: `Cloud Build configuration`.
-
-## Next Steps
-
-### Use the Pulumi community builder image for Google Cloud Build
-
-We have created a builder image that will install the Pulumi CLI for you in a Node-based image. Since the builder is part of Google Cloud Build's community builders, you will need to make the builder available to your project by cloning the community builders' Git repo. See [Google Cloud Cloud Builders Community Repository](https://github.com/GoogleCloudPlatform/cloud-builders-community/tree/master/pulumi) for more information and an example for how to use the builder in your project.
-
-### Encrypted Variables
-
-If you have sensitive variables that may require encryption, you should create an encryption on Google KMS, then use that to encrypt your sensitive values. You may then use the encrypted strings in your cloud build configuration safely. Cloud Build can automatically decrypt sensitive strings at build time. See [this](https://cloud.google.com/cloud-build/docs/securing-builds/use-encrypted-secrets-credentials#using_the_encrypted_variable_in_build_requests) page to learn more.
-
-### Substitutions
-
-In the configuration above, we used custom substitutions. Cloud Build also has [default substitutions](https://cloud.google.com/cloud-build/docs/configuring-builds/substitute-variable-values). Using the default substitutions, you can make decisions in your CI or CD workflow.
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Version control integrations](/docs/integrations/version-control/) — pull request comments, status checks, and commit linking from Pulumi Cloud.
+- [Google Cloud provider](/registry/packages/gcp/) — manage Cloud Build triggers, repository connections, and the rest of Google Cloud as code.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [CI/CD troubleshooting](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.

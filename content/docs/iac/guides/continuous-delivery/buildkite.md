@@ -162,7 +162,7 @@ The Pulumi CLI automatically detects when it runs inside Buildkite and records t
 
 You can also manage Buildkite itself — pipelines, teams, and agent tokens — as code with the community-maintained [Pulumiverse Buildkite provider](/registry/packages/buildkite/) in the Pulumi Registry.
 
-## See also
+## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.

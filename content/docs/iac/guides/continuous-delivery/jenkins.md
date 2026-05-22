@@ -1,8 +1,8 @@
 ---
-title_tag: "Set Up A Jenkins Pipeline | CI/CD"
-meta_desc: This document will help you setup a Jenkins Pipeline to deploy a sample app to Azure using Pulumi.
+title_tag: "Using Jenkins with Pulumi | CI/CD"
+meta_desc: Run Pulumi in Jenkins pipelines to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: Jenkins
-h1: Pulumi CI/CD & Jenkins Pipelines
+h1: Using Jenkins with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -17,114 +17,95 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/jenkins/
 ---
 
-This document will help you setup a [Jenkins Pipeline](https://jenkins.io/doc/book/pipeline/) to deploy a sample app to Azure using Pulumi.
-The source code will be hosted on GitHub just for the purpose of showing the GitHub integration between Jenkins and GitHub. Your source repository could be on any other VCS supported by Jenkins.
+[Jenkins](https://www.jenkins.io/) is an open-source automation server that runs CI/CD pipelines defined in a `Jenkinsfile`. You run Pulumi in a pipeline stage that executes inside the official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container image. That image ships the Pulumi CLI and every language runtime, so the same pipeline works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/) Pulumi supports.
 
-Pulumi doesn't require any particular arrangement of stacks or workflow to work in a
-continuous integration / continuous deployment system. So the steps described here can be
-altered to fit into any existing type of deployment setup.
+{{< cicd-cloud-note >}}
+
+## How Pulumi works with Jenkins
+
+To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI. A Jenkins pipeline stage with a [Docker agent](https://www.jenkins.io/doc/book/pipeline/docker/) provides that environment: it runs the stage's steps inside a container image you choose. Point the agent at `pulumi/pulumi` and the stage can run any `pulumi` command — `install`, `preview`, `up` — exactly as you would on your own machine.
+
+There is no Pulumi-specific Jenkins plugin to install — the `pulumi/pulumi` container image is the integration point. Pulumi runs on both free and paid accounts. You wire up authentication through Jenkins credentials, described below.
 
 ## Prerequisites
 
-- A working installation of a recent version of Jenkins.
-- An account in the [Pulumi Cloud](https://app.pulumi.com/signup).
-- The [latest version of Pulumi](/docs/install/).
-- Setup a new project and [stack](/docs/concepts/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
-and choosing one of the many templates that are available.
-- A bare repo and set the remote URL to be your GitHub project.
+Before you begin, make sure you have:
 
-## Sample Project
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A working Jenkins installation with the [Docker Pipeline](https://plugins.jenkins.io/docker-workflow/) and [Git](https://plugins.jenkins.io/git/) plugins, on an agent that can run Docker containers.
+1. A Pulumi program in a Git repository Jenkins can build. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-You can download an [example project](https://github.com/pulumi/examples/tree/846811de2c7faa4694454c64edc9bbcdb31d533e/classic-azure-ts-appservice-springboot) and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo into your Jenkins workspace.
+## Authenticate with Pulumi Cloud
 
-## Stack and Branch Mappings
+Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-The scripts below act on a hypothetical stack: `homer/acme/product-catalog-service-stack`.
-You can create a new stack by running [`pulumi stack init`](/docs/iac/cli/commands/pulumi_stack_init) if you have already created a project.
-The source code for the stack is in a repository in GitHub and uses TypeScript as the language.
+- **A stored access token.** A long-lived [Pulumi access token](/docs/administration/access-identity/access-tokens/) saved as a Jenkins credential. Simple to set up and works on any Jenkins installation.
+- **An OIDC token exchange.** The pipeline exchanges a short-lived token for a temporary Pulumi access token, so no long-lived secret is stored anywhere. Recommended where available, but on Jenkins it requires a community plugin (see below).
 
-**Note**: The names used above are purely for demonstration purposes only.
-You may choose a naming convention that best suits your organization.
+### Use a stored access token
 
-Alternatively, you can also run `pulumi new [template]` to create a [template project](/docs/iac/cli/commands/pulumi_new/).
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
-## PULUMI_ACCESS_TOKEN
+Store the token as a Jenkins [credential](https://www.jenkins.io/doc/book/using/using-credentials/) of kind **Secret text** rather than committing it to source control, then expose it to the pipeline with the `environment` block:
 
-To login non-interactively in to the CLI, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a build parameter when setting up the Jenkins build. To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in Pulumi Cloud.
+```groovy
+environment {
+    PULUMI_ACCESS_TOKEN = credentials("pulumi-access-token")
+}
+```
 
-## Creating a New Jenkins Build
+Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
-### Classic UI
+### Exchange an OIDC token
 
-The classic UI lets you create manual (UI) builds, as well as a Declarative pipeline-based build. There are several options available to cater to your specific setup, but for the purposes of this walkthrough, we will assume a single branch, declarative pipeline.
+You can remove the static token entirely with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/). Pulumi Cloud can register any trusted service that issues OIDC tokens as an [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/). The pipeline obtains a short-lived OIDC token from its host and exchanges it with Pulumi Cloud for a temporary Pulumi access token:
 
-### Jenkins Blue Ocean
+```bash
+pulumi login --oidc-token "$OIDC_TOKEN" --oidc-org "your-org"
+```
 
-Blue Ocean is an overhaul of the classic Jenkins UI. It features a new and intuitive pipeline configuration UI that helps you setup a CI pipeline in a matter of just minutes. [Learn more](https://jenkins.io/projects/blueocean/) about the Jenkins Blue Ocean project.
+The OIDC token originates in Jenkins and is exchanged *inbound* with Pulumi Cloud; Pulumi Cloud doesn't issue OIDC tokens to Jenkins or otherwise establish an outbound trust relationship.
 
-**Note** Regardless of the type of interface you choose to work with, the `Jenkinsfile` (more on that later) can be used interchangeably with both. The underlying pipeline configuration system is the same.
+{{% notes type="info" %}}
+Jenkins does not issue OIDC tokens for build pipelines on its own. To use this path, install the community [OpenID Connect Provider plugin](https://plugins.jenkins.io/oidc-provider/), which adds an OpenID Connect id token credential type that mints a fresh, short-lived token each time a pipeline reads it.
+{{% /notes %}}
 
-### Plugins
+### Deliver configuration with Pulumi ESC
 
-Ensure you have the following plugins installed:
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places.
 
-- Git
-- NodeJS
+## Provide cloud credentials
 
-You can find available plugins by navigating to the Jenkins administration page and then selecting the **Manage Plugins** option on the Manage Jenkins page.
+When Pulumi runs, your program also needs credentials for the cloud provider it manages. You can supply them in one of two ways:
 
-### Project Parameters (Environment Variables)
+- **Pulumi ESC (recommended).** Configure an [ESC environment](/docs/esc/) to broker short-lived cloud credentials through OIDC. Your program receives temporary credentials scoped to exactly what it needs, and the pipeline stores nothing but its Pulumi access token.
+- **Jenkins credentials.** Store the provider's credentials in the Jenkins [credentials store](https://www.jenkins.io/doc/book/using/using-credentials/) and bind them into a stage with `withCredentials`. Jenkins provides built-in typed bindings such as a `usernamePassword` pair or a plain **Secret text** entry for values such as `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`; the [Azure Credentials plugin](https://plugins.jenkins.io/azure-credentials/) adds an `azureServicePrincipal` binding for the Azure example.
 
-In order to deploy to one of the cloud providers, you will need to ensure that the authentication environment variables are set, so that the Pulumi CLI can use them to deploy your infrastructure resources. The set of environment variables to configure vary for each cloud. For Azure, depending on your setup, you may have to set at most 4 environment variables. In this example, we will assume you are using a [Service Principal](/registry/packages/azure/installation-configuration#creating-a-service-principal).
+{{% notes type="warning" %}}
+Never commit cloud credentials or the Pulumi access token to your repository. Keep them in the Jenkins credentials store so the values stay protected and access is auditable.
+{{% /notes %}}
 
-The screenshot below shows you how you can parameterize your `Jenkinsfile` using environment variables.
+## Configure a Jenkins pipeline
 
-![Jenkins Project Parameters](/images/docs/reference/jenkins/project-params.png)
-
-#### Configuring the Node JS plugin
-
-In order to use the Node JS plugin, you must first ensure you add at least one installation to it. Navigate to the **Global Tool Configuration** menu option on the Manage Jenkins page.
-
-**Note** The name you enter in the configuration section will later be referenced in the `Jenkinsfile`, so be sure to save that name somewhere so you can easily copy/paste it into your pipeline configuration.
-
-![Jenkins Global Tool Configuration](/images/docs/reference/jenkins/global-tool-config.png)
-
-### Jenkinsfile
+A Jenkins pipeline is defined in a `Jenkinsfile` at the root of your repository. The following declarative pipeline runs Pulumi against a [stack](/docs/iac/concepts/stacks/) inside the `pulumi/pulumi` container:
 
 ```groovy
 pipeline {
-    agent any
+    agent {
+        docker { image "pulumi/pulumi" }
+    }
+
+    environment {
+        PULUMI_ACCESS_TOKEN = credentials("pulumi-access-token")
+    }
 
     stages {
-        stage ("Checkout code") {
+        stage("Deploy") {
             steps {
-                git url: "git@github.com:your-github-account/you-repo.git",
-                    // Set your credentials id value here.
-                    // See https://jenkins.io/doc/book/using/using-credentials/#adding-new-global-credentials
-                    credentialsId: "yourCredentialsId",
-                    // You could define a new stage that specifically runs for, say, feature/* branches
-                    // and run only "pulumi preview" for those.
-                    branch: "master"
-            }
-        }
-
-        stage ("Install dependencies") {
-            steps {
-                sh "curl -fsSL https://get.pulumi.com | sh"
-                sh "$HOME/.pulumi/bin/pulumi version"
-            }
-        }
-
-        stage ("Pulumi up") {
-            steps {
-                // The value "node 16.15.0" is the configuration name in our Global Tool Configuration setup for node.
-                // You should use the name that you used when you added the installation on that page.
-                nodejs(nodeJSInstallationName: "node 16.15.0") {
-                    withEnv(["PATH+PULUMI=$HOME/.pulumi/bin"]) {
-                        sh "cd infrastructure && npm install"
-                        sh "pulumi stack select ${PULUMI_STACK} --cwd infrastructure/"
-                        sh "pulumi up --yes --cwd infrastructure/"
-                    }
+                dir("infra") {
+                    sh "pulumi install"
+                    sh "pulumi stack select acme/website/staging"
+                    sh "pulumi up --yes"
                 }
             }
         }
@@ -132,25 +113,100 @@ pipeline {
 }
 ```
 
-## Additional Information
+The example assumes a Pulumi program in an `infra/` directory. [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) installs the program's language dependencies and required plugins, so the same step works for a program written in any supported language.
 
-### Single-quotes vs. double-quotes in Jenkinsfile
+{{% notes type="info" %}}
+Wrap arguments in double quotes throughout a `Jenkinsfile`. Single quotes suppress Groovy string interpolation and can cause commands to silently fail.
+{{% /notes %}}
 
-While the pipeline script editor may not complain about the use of single-quotes, we have noticed that using single-quotes can cause certain commands to silently fail. It is better to use double-quotes always to wrap arguments in your `Jenkinsfile`.
+## Build a trunk-based CI/CD workflow
 
-### The Manage Jenkins page
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. A Jenkins [multibranch pipeline](https://www.jenkins.io/doc/book/pipeline/multibranch/) builds pull requests and branches from one `Jenkinsfile`, and — once tag discovery is enabled — tags too. A [`when`](https://www.jenkins.io/doc/book/pipeline/syntax/#when) directive then gates each stage of the workflow on the condition that should let it run.
 
-You can get to the administration in one of two ways depending on which UI (Classic vs. Blue Ocean) you are using. In the Classic UI, there is a **Manage Jenkins** link on the left nav menu, and in Blue Ocean you should see an **Administration** link on the top nav. You will only see these options if you are an admin in your Jenkins installation.
+### Preview infrastructure changes in a pull request
 
-### Using the withCredentials binding plugin
-
-Jenkins allows you to [manage credentials in a global credentials store](https://jenkins.io/doc/pipeline/steps/credentials-binding/). By using the `withCredentials` plugin, you could store your AWS, Azure or Google Cloud credentials in the credentials store, and inject it into the pipeline easily. For example, in order to use the Azure CLI credentials, you will need the Azure CLI plugin additionally. Once added, you can add a new Service Principal credential and map its properties to the appropriate env variables needed by the Pulumi CLI.
+When a pull request is opened, run a dry run instead of a deployment. Gate the stage on `changeRequest()` and run [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/):
 
 ```groovy
-...
-withCredentials([azureServicePrincipal(credentialsId: "your-credentials-id", clientIdVariable: "ARM_CLIENT_ID", clientSecretVariable: "ARM_CLIENT_SECRET", subscriptionIdVariable: "ARM_SUBSCRIPTION_ID", tenantIdVariable: "ARM_TENANT_ID")]) {
-    ...
-    sh "pulumi preview"
+stage("Preview") {
+    when { changeRequest() }
+    steps {
+        dir("infra") {
+            sh "pulumi install"
+            sh "pulumi stack select acme/website/staging"
+            sh "pulumi preview"
+        }
+    }
 }
-...
 ```
+
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+
+### Deploy to staging on merge to the main branch
+
+When a pull request merges, run [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) against an environment that receives continuous delivery, such as a shared development or staging environment. Gate the stage on the main branch:
+
+```groovy
+stage("Deploy to staging") {
+    when { branch "main" }
+    steps {
+        dir("infra") {
+            sh "pulumi install"
+            sh "pulumi stack select acme/website/staging"
+            sh "pulumi up --yes"
+        }
+    }
+}
+```
+
+### Promote to production with a git tag
+
+Production updates should be deliberate. Keep production on its own stack and deploy it only when you push a release tag — for example, a moving `production` tag that you advance to a commit already validated in staging:
+
+```groovy
+stage("Deploy to production") {
+    when { buildingTag() }
+    steps {
+        dir("infra") {
+            sh "pulumi install"
+            sh "pulumi stack select acme/website/production"
+            sh "pulumi up --yes"
+        }
+    }
+}
+```
+
+Configure the multibranch pipeline to discover tags so tag pushes trigger a build. Promotion then becomes a single, traceable Git operation, and production never deploys from an untested commit.
+
+## Report results on pull requests
+
+Independently of Jenkins, Pulumi Cloud's [version control integrations](/docs/integrations/version-control/) connect Pulumi to popular version control systems. With one configured, Pulumi Cloud posts infrastructure-change summaries as comments and status checks on pull and merge requests, and links each stack update back to the commit and pull request that produced it — review context that a Jenkins pipeline alone does not provide.
+
+## Speed up builds with caching
+
+A clean Jenkins agent starts with an empty plugin cache, so Pulumi re-downloads its provider plugins on every run. Jenkins has no native cross-build cache, so the most reliable fix is to bake the plugins your program uses into a custom builder image derived from `pulumi/pulumi`:
+
+```dockerfile
+FROM pulumi/pulumi
+RUN pulumi plugin install resource aws <version> \
+    && pulumi plugin install resource random <version>
+```
+
+Build and publish that image, then reference it from the pipeline's Docker agent:
+
+```groovy
+agent {
+    docker { image "your-registry/pulumi-builder" }
+}
+```
+
+Because the plugins are present in the image, every build starts with a warm cache. See the [plugins documentation](/docs/iac/concepts/plugins/) for details on how Pulumi resolves and caches provider plugins.
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/) — diagnose common failures when running Pulumi in a pipeline.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system for pull request reporting.
