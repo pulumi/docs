@@ -64,7 +64,7 @@ You can remove the static token entirely with [OpenID Connect (OIDC)](/docs/admi
 pulumi login --oidc-token "$OIDC_TOKEN" --oidc-org "your-org"
 ```
 
-The OIDC token is issued *by Jenkins* and exchanged *inbound* for a Pulumi token — Pulumi Cloud never issues credentials out to Jenkins.
+The OIDC token originates in Jenkins and is exchanged *inbound* with Pulumi Cloud; Pulumi Cloud doesn't issue OIDC tokens to Jenkins or otherwise establish an outbound trust relationship.
 
 {{% notes type="info" %}}
 Jenkins does not issue OIDC tokens for build pipelines on its own. To use this path, install the community [OpenID Connect Provider plugin](https://plugins.jenkins.io/oidc-provider/), which adds an OpenID Connect id token credential type that mints a fresh, short-lived token each time a pipeline reads it.
@@ -79,7 +79,7 @@ Jenkins does not issue OIDC tokens for build pipelines on its own. To use this p
 When Pulumi runs, your program also needs credentials for the cloud provider it manages. You can supply them in one of two ways:
 
 - **Pulumi ESC (recommended).** Configure an [ESC environment](/docs/esc/) to broker short-lived cloud credentials through OIDC. Your program receives temporary credentials scoped to exactly what it needs, and the pipeline stores nothing but its Pulumi access token.
-- **Jenkins credentials.** Store the provider's credentials in the Jenkins [credentials store](https://www.jenkins.io/doc/book/using/using-credentials/) and bind them into a stage with `withCredentials`. Jenkins provides typed bindings for common cases — an `azureServicePrincipal` for Azure, a `usernamePassword` pair, or a plain **Secret text** entry for values such as `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+- **Jenkins credentials.** Store the provider's credentials in the Jenkins [credentials store](https://www.jenkins.io/doc/book/using/using-credentials/) and bind them into a stage with `withCredentials`. Jenkins provides built-in typed bindings such as a `usernamePassword` pair or a plain **Secret text** entry for values such as `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`; the [Azure Credentials plugin](https://plugins.jenkins.io/azure-credentials/) adds an `azureServicePrincipal` binding for the Azure example.
 
 {{% notes type="warning" %}}
 Never commit cloud credentials or the Pulumi access token to your repository. Keep them in the Jenkins credentials store so the values stay protected and access is auditable.
@@ -121,7 +121,7 @@ Wrap arguments in double quotes throughout a `Jenkinsfile`. Single quotes suppre
 
 ## Build a trunk-based CI/CD workflow
 
-The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. A Jenkins [multibranch pipeline](https://www.jenkins.io/doc/book/pipeline/multibranch/) builds pull requests, branches, and tags from one `Jenkinsfile`, and a [`when`](https://www.jenkins.io/doc/book/pipeline/syntax/#when) directive maps each stage of the workflow to the event that should trigger it.
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. A Jenkins [multibranch pipeline](https://www.jenkins.io/doc/book/pipeline/multibranch/) builds pull requests and branches from one `Jenkinsfile`, and — once tag discovery is enabled — tags too. A [`when`](https://www.jenkins.io/doc/book/pipeline/syntax/#when) directive then gates each stage of the workflow on the condition that should let it run.
 
 ### Preview infrastructure changes in a pull request
 
