@@ -189,13 +189,13 @@ spec:
       - "~/.pulumi/plugins"
 ```
 
-On self-managed build infrastructure, use the [`Save Cache`/`Restore Cache` steps](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/saving-cache/) to store the same directory in an S3 or GCS bucket.
+On self-managed build infrastructure, use the [`Save Cache`/`Restore Cache` steps](https://developer.harness.io/docs/category/share-and-cache-ci-data) to store the same directory in an [S3](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/saving-cache/) or [GCS](https://developer.harness.io/docs/continuous-integration/use-ci/caching-ci-data/save-cache-in-gcs/) bucket.
 
 The most deterministic option is to bake the plugins into a custom builder image: derive it from `pulumi/pulumi`, `pulumi plugin install` the providers your program uses, and reference that image from the `Run` step instead of `pulumi/pulumi`. See the [plugins documentation](/docs/iac/concepts/plugins/) for details.
 
 ## Report results on pull requests
 
-When the `preview` stage runs `pulumi preview` on a pull request, you'll usually want the proposed changes summarized on the pull request itself rather than buried in the pipeline logs.
+When the `preview` stage runs `pulumi preview` on a pull request, you'll want the proposed changes summarized on the pull request itself rather than buried in the pipeline logs.
 
 Pulumi offers native [version control integrations](/docs/integrations/version-control/) for popular version control systems. Independently of which CI/CD system runs Pulumi, a version control integration lets Pulumi Cloud post infrastructure-change summaries as pull request comments and status checks, and link each stack update back to the commit and pull request that produced it. See the [Version Control](/docs/integrations/version-control/) page for the current list of supported systems.
 
