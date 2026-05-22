@@ -33,6 +33,10 @@ talks:
   url: "https://www.youtube.com/watch?v=89ESCBzM-3Q"
   date: 2023-03-09T09:00:00.000-08:00
 - event: "ConFoo 2023"
+  title: "The Other Kind of Staff Software Engineer"
+  url: "https://confoo.ca/en/2023/session/the-other-kind-of-staff-software-engineer"
+  date: 2023-02-23T09:00:00.000-08:00
+- event: "ConFoo 2023"
   title: "Beating Timsort"
   url: "https://confoo.ca/en/2023/session/beating-timsort"
   date: 2023-02-22T09:00:00.000-08:00
