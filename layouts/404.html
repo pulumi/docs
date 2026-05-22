@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     {{ partial "head.html" . }}
-    <body class="page-404">
-        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi" "class" "logo") }}
+    <body class="font-mono bg-service-black text-white min-h-screen flex flex-col items-center px-4">
+     <div class="h-12 w-full mt-4 -mb-16 flex justify-center bg-service-black">
+        <a href="/" aria-label="Home" class="block w-12 h-12">
+            <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+                <path fill="var(--color-violet-400)" d="M4.75,20.1c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M22.37,18.31c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--color-violet-400)" d="M10.62,23.5c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M16.5,21.7c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--color-violet-400)" d="M12,3.96c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M4.75,13.32c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M6.13,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M22.36,11.53c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--color-violet-400)" d="M17.87,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M10.62,16.71c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                <path fill="var(--color-violet-400)" d="M16.5,14.92c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                <path fill="var(--color-violet-400)" d="M12,10.73c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+            </svg>
+        </a>
+        </div>
+        <main class="flex flex-col items-center justify-center w-full max-w-full my-auto">
+            <div class="flex items-center justify-center w-full h-[24em]">
+                <pre
+                    id="ascii-404"
+                    aria-hidden="true"
+                    class="text-violet-400 bg-transparent m-0 font-mono whitespace-pre leading-[1.15] text-[clamp(0.75rem,1.1vw,1rem)] [text-shadow:0_0_12px_rgba(139,92,246,0.5)]"
+                ></pre>
+            </div>
+            <div class="text-violet-400 uppercase text-center mt-2 max-w-xl">
+                <h1 class="font-mono text-2xl md:text-3xl font-normal mb-2 text-violet-400">Page not found</h1>
+                <p class="text-sm md:text-base text-violet-400">
+                    Sorry, the page you're looking for could not be found.
+                    <br />Try visiting our <a href="/" class="underline text-violet-200 hover:text-violet-400">homepage</a> instead.
+                </p>
+            </div>
+        </main>
 
-        <div class="anim1">
-            <img src="/images/docs/404/beam1.svg" class="beam1" />
-        </div>
-        <div class="anim2">
-            <img src="/images/docs/404/beam2.svg" class="beam2" />
-        </div>
-        <div class="anim3">
-            <img src="/images/docs/404/beam3.svg" class="beam3" />
-        </div>
-        <div class="anim4">
-            <img src="/images/docs/404/beam4.svg" class="beam4" />
-        </div>
+        <div id="ascii-arts" hidden>{{ partial "404-art.html" . }}</div>
 
-        <div class="anim4">
-            <img src="/images/docs/404/cloud4.svg" class="cloud4" />
-        </div>
-        <div class="anim2">
-            <img src="/images/docs/404/cloud2.svg" class="cloud2" />
-        </div>
-        <div class="anim3">
-            <img src="/images/docs/404/cloud3.svg" class="cloud3" />
-            <!-- <img src="/images/docs/404/lightning.svg" class="lightning3"> -->
-        </div>
-        <div class="anim1">
-            <img src="/images/docs/404/cloud1.svg" class="cloud1" />
-        </div>
+        <script>
+            (function () {
+                const target = document.getElementById("ascii-404");
+                const sources = Array.from(document.querySelectorAll("#ascii-arts pre"));
+                if (!target || sources.length === 0) return;
 
-        <div id="clouds-and-beams">
-            <h1 class="no-anchor">404</h1>
-            <h2 class="no-anchor">Sorry, the page you're looking for could not be found.</h2>
-            <p>Try visiting our <a href="/">homepage</a> instead.</p>
-        </div>
+                const arts = sources.map(function (el) {
+                    return el.textContent;
+                });
+                let i = Math.floor(Math.random() * arts.length);
+
+                function render() {
+                    target.textContent = arts[i % arts.length];
+                    i++;
+                }
+
+                render();
+                setInterval(render, 1500);
+            })();
+        </script>
     </body>
 </html>
