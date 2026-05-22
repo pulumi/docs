@@ -15,15 +15,27 @@ menu:
 Agent accounts are in **preview**. Behavior and limits may change based on feedback.
 {{% /notes %}}
 
-Agent accounts let AI agents provision ephemeral Pulumi Cloud accounts automatically, without requiring a human to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account silently and continues. The human claims the account later to take permanent ownership.
+Agent accounts automatically give AI agents a free ephemeral Pulumi Cloud account to work in, without requiring a human to sign up first. When the Pulumi CLI detects it is running in an agent context and no Pulumi Cloud credentials are available, it creates an account silently and continues. The human claims the account later to take permanent ownership.
 
 ## How it works
 
-1. An AI agent (Claude Code, Codex, Cursor, or any tool that calls the Pulumi CLI) runs a command that would normally prompt for login.
-1. The CLI detects there are no Pulumi Cloud credentials (no `PULUMI_ACCESS_TOKEN`, no entry in `~/.pulumi/credentials.json`).
-1. Instead of prompting, the CLI provisions a new Pulumi Cloud account and prints a claim link on stderr.
-1. The agent relays the claim link to the user alongside the command results.
+1. An AI agent uses the Pulumi CLI with an automatically-created ephemeral Pulumi Cloud account.
+   - An AI agent (Claude Code, Codex, Cursor, etc.) runs a Pulumi CLI command that would normally prompt for login, such as `pulumi do`.
+   - The Pulumi CLI finds no Pulumi Cloud credentials: no `PULUMI_ACCESS_TOKEN`, no entry in `~/.pulumi/credentials.json`.
+   - Instead of prompting, the CLI provisions a new Pulumi Cloud account.
+   - The CLI prints a claim link on stderr, where the agent sees it.
+   - The CLI command continues and does its work normally in the new cloud account.
+1. The agent relays the claim link to the user and continues to use Pulumi CLI to achieve their vision.
+   - The CLI continues to print the claim link on stderr, where the agent sees it.
+   - As time passes and new sessions occur, the agent re-presents the claim link periodically so it is not forgotten.
 1. The user claims the account at any time by visiting the link and signing in.
+   - All stacks and esc environments are transferred to the user's account.
+   - The agent's access is disabled until the user logs in to their account.
+1. The user logs the agent into their Pulumi Cloud account.
+   - The user runs `pulumi login` or sets the `PULUMI_ACCESS_TOKEN` to their credentials.
+1. The agent continues to use Pulumi CLI, collaborating with the user in their Pulumi Cloud account.
+   - The Pulumi CLI finds Pulumi Cloud credentials and proceeds normally.
+
 
 ```
 pulumi: created an agent account on Pulumi Cloud so this work persists.
