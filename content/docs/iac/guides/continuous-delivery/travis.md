@@ -133,7 +133,7 @@ git tag release-2026-05-20
 git push origin release-2026-05-20
 ```
 
-Travis decides *when* to start a build — on pull requests, branch pushes, and tags — through your repository's Travis settings, not the `.travis.yml` file. The `if:` conditions above then select which job runs for each build.
+Travis decides *when* to start a build — on pull requests, branch pushes, and tags — primarily through your repository's Travis settings (for example, **Build pushed branches** and **Build pushed pull requests**). The `.travis.yml` file can further restrict which branches or tags trigger a build via the top-level `branches:` key, and the `if:` conditions above then select which job runs for each build.
 
 For an optional ephemeral environment on each pull request, pair the preview job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
@@ -147,7 +147,7 @@ Independently of the build you run in Travis, Pulumi offers native [version cont
 
 ## Speed up builds with caching
 
-A clean Travis worker starts with an empty plugin cache, so Pulumi re-downloads its provider plugins on every build. Use Travis's [caching](https://docs.travis-ci.com/user/caching/) to persist the Pulumi plugin directory — and your language dependencies — across builds:
+Travis workers don't persist state across runs, so without caching Pulumi must fetch its provider [plugins](/docs/iac/concepts/plugins/) on every build. Use Travis's [caching](https://docs.travis-ci.com/user/caching/) to persist the Pulumi plugin directory — and your language dependencies — across builds:
 
 ```yaml
 cache:
@@ -160,7 +160,7 @@ Pulumi plugin versions are tied to the provider package versions your program us
 
 ## Concurrency
 
-If commits merge to the main branch in quick succession, Travis can start overlapping builds that each run `pulumi up` on the same stack. Pulumi locks stack state during an update, so a concurrent update can't corrupt your state — the second update fails fast rather than clashing with the first. To avoid those failed builds, limit how many jobs Travis runs at once in your repository's **Settings → Limit concurrent jobs**, or enable auto-cancellation so a newer build supersedes an in-progress one.
+If commits merge to the main branch in quick succession, Travis can start overlapping builds that each run `pulumi up` on the same stack. Pulumi locks stack state during an update, so a concurrent update can't corrupt your state — the second update fails fast rather than clashing with the first. To avoid those failed builds, set **Limit concurrent jobs** to `1` in your repository's settings so deployment builds run one at a time. You can also enable auto-cancellation, which discards builds that are still *waiting to run* when a newer build arrives — note this won't cancel a build that has already started.
 
 ## Additional resources
 
