@@ -123,7 +123,7 @@ Pulumi allows you to embed Pulumi programs directly within your application code
 
 ### Third-Party CI/CD Tools Support {#cicd}
 
-Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, Spinnaker, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
+Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
 
 ### Policy as Code {#policy}
 

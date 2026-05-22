@@ -82,7 +82,6 @@ Pulumi has guides for running in the following CI/CD systems:
 - [Harness](/docs/iac/guides/continuous-delivery/harness/)
 - [Jenkins](/docs/iac/guides/continuous-delivery/jenkins/)
 - [Octopus Deploy](/docs/iac/guides/continuous-delivery/octopus-deploy/)
-- [Spinnaker](/docs/iac/guides/continuous-delivery/spinnaker/)
 - [TeamCity](/docs/iac/guides/continuous-delivery/teamcity/)
 - [Travis CI](/docs/iac/guides/continuous-delivery/travis/)
 
