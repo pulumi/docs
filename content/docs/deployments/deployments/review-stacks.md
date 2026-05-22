@@ -15,7 +15,7 @@ menu:
     identifier: deployments-deployments-review-stacks
 ---
 
-Review stacks are dedicated cloud environments powered by Pulumi Deployments. They are created automatically when a pull request is opened, updated on each new commit, and destroyed when the pull request is merged or closed. They work with [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). When a pull request is opened, Pulumi Deployments stands up a stack with your changes and adds a comment to the PR with the outputs from your deployment.
+Review stacks are dedicated cloud environments powered by Pulumi Deployments. They are created automatically when a pull request is opened, updated on each new commit, and destroyed when the pull request is merged or closed. They work with all of Pulumi's native version control integrations — [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). (Review stacks are not available with [Custom VCS](/docs/integrations/version-control/custom-vcs/) integrations, which support push-to-deploy only.) When a pull request is opened, Pulumi Deployments stands up a stack with your changes and adds a comment to the PR with the outputs from your deployment.
 
 ## Configuring review stacks
 

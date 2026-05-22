@@ -172,7 +172,7 @@ Using [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials avoids st
 
 You can also manage Azure DevOps itself — projects, repositories, pipelines, and service connections — as code with the [Azure DevOps provider](/registry/packages/azuredevops/) in the Pulumi Registry.
 
-## See also
+## Additional resources
 
 - [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Azure DevOps version control integration](/docs/integrations/version-control/azure-devops-integration/) — connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push and preview pull requests without managing your own pipeline.
