@@ -158,7 +158,7 @@ This will create gcp:cloudrunv2/service:Service with the following inputs:
 
 The result:
 
-```plain
+```json
 {
   "createTime": "2026-05-22T23:00:22.415839Z",
   ...
@@ -176,7 +176,7 @@ Most resources support the full set of CRUD operations — create, read, update,
 ```bash
 # Create a resource
 $ pulumi do aws:s3:Bucket create --yes | jq -r ".name"
-bucket-5919be3r
+bucket-4f5cb22
 
 # Fetch it
 $ pulumi do aws:s3:Bucket read bucket-4f5cb22 | jq -r ".hostedZoneId"
