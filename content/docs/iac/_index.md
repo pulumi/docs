@@ -95,7 +95,7 @@ sections:
   cards:
   - icon: target
     heading: Stack Management
-    description: Targeted updates, update plans, and editing state files.
+    description: Targeted updates, update plans, editing state files, and DIY backends.
     link: /docs/iac/operations/stack-management/
   - icon: rocket-launch
     heading: Continuous Delivery
@@ -105,6 +105,10 @@ sections:
     heading: Troubleshooting
     description: Diagnose and recover from common Pulumi failures.
     link: /docs/iac/operations/troubleshooting/
+  - icon: bug
+    heading: Debugging
+    description: Attach a debugger, capture verbose logs, and trace performance.
+    link: /docs/iac/operations/debugging/
   - icon: shield
     heading: Least Privilege Security
     description: Configure cloud credentials with minimum permissions.

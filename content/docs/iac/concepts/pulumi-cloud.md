@@ -13,7 +13,7 @@ aliases:
     - /docs/iac/concepts/pulumi-cloud/
 ---
 
-Pulumi Cloud is the default [state backend](/docs/iac/concepts/state-and-backends/) for the Pulumi CLI. It is also a managed platform that adds the capabilities teams need to operate Pulumi at scale: access control, reusable configuration and secrets, policy enforcement, cloud resource inventory, scheduled drift detection, managed deployments, and an AI agent. Using Pulumi Cloud is optional; Pulumi also works with a [self-managed (DIY) backend](/docs/iac/guides/basics/using-a-diy-backend/). Pulumi Cloud is the default because it removes the work of running, securing, and scaling a backend yourself.
+Pulumi Cloud is the default [state backend](/docs/iac/concepts/state-and-backends/) for the Pulumi CLI. It is also a managed platform that adds the capabilities teams need to operate Pulumi at scale: access control, reusable configuration and secrets, policy enforcement, cloud resource inventory, scheduled drift detection, managed deployments, and an AI agent. Using Pulumi Cloud is optional; Pulumi also works with a [self-managed (DIY) backend](/docs/iac/operations/stack-management/using-a-diy-backend/). Pulumi Cloud is the default because it removes the work of running, securing, and scaling a backend yourself.
 
 On top of state, Pulumi Cloud adds:
 

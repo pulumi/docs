@@ -5,10 +5,11 @@ title: Using Dev Builds for Unreleased Fixes
 h1: Using Dev Builds for Unreleased Fixes
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    support:
-        parent: support-debugging
+    iac:
+        parent: iac-operations-debugging
         weight: 70
 aliases:
+- /docs/support/debugging/using-dev-builds/
 - /docs/support/troubleshooting/using-dev-builds/
 ---
 

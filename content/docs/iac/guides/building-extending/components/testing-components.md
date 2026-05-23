@@ -45,7 +45,7 @@ Set up **integration tests** using tools like:
 
 - Language-specific [unit testing](/docs/iac/guides/testing/unit/) tools
 - Local test benches ([see below](#yaml-test-benches))
-- CI/CD workflows (like [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)) that validate downstream usage
+- CI/CD workflows (like [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/)) that validate downstream usage
 
 These tests can assert that the updated component produces expected outputs and maintains compatibility. This approach works well when you don't have access to the end-user programs. However, there are limits to what these types of tests can detect: It's often difficult to write enough tests to have 100% test coverage for all possible inputs. Often there are environment-specific problems related to configuration, secrets, or other factors that are not able to be recreated in the testing environment. So, while these approaches give you *some* security, they are not as comprehensive as simply running `pulumi preview` in a consuming program and seeing what breaks.
 

@@ -104,7 +104,7 @@ To help us resolve your issue quickly:
 1. **Search existing issues** - your issue might already be reported
 1. **Include version information** - run `pulumi version` and include the output
 1. **Provide reproduction steps** - minimal code examples are extremely helpful
-1. **Enable verbose logging** - see our [logging guide](/docs/support/debugging/logging/) for instructions
+1. **Enable verbose logging** - see our [logging guide](/docs/iac/operations/debugging/logging/) for instructions
 1. **Redact sensitive information** - remove credentials, tokens, and secrets from logs
 
 {{% notes type="warning" %}}

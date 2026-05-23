@@ -8,7 +8,7 @@ menu:
     iac:
         name: Least Privilege Security
         parent: iac-operations
-        weight: 40
+        weight: 50
 aliases:
 - /docs/iac/using-pulumi/iac-least-privileges/
 - /docs/iac/guides/basics/iac-least-privileges/
@@ -20,13 +20,13 @@ When using Pulumi Infrastructure as Code (IaC) alongside Pulumi ESC (Environment
 
 Pulumi IaC programs are full-fledged applications capable of performing any action the developer can code, including accessing sensitive secrets. This capability is inherent to IaC tools in general, as they execute with the full privileges of their runtime environment.
 
-Given this capability, developers with direct access to execute IaC code inherently have access to secrets that the program uses. For production or sensitive environments, it’s therefore essential to ensure deployments run in isolated, secure environments.
+Given this capability, developers with direct access to execute IaC code inherently have access to secrets that the program uses. For production or sensitive environments, deployments must run in isolated, secure environments.
 
-## Balancing Developer Access Across Environments
+## Balancing developer access across environments
 
-To balance security with developer productivity, clearly differentiate access between environments:
+To balance security with developer productivity, differentiate access between environments:
 
-### Development and Test Environments:
+### Development and test environments
 
 Allow developers direct access to execute Pulumi IaC (`pulumi up`) and access ESC environments. This direct access is necessary to:
 
@@ -34,17 +34,17 @@ Allow developers direct access to execute Pulumi IaC (`pulumi up`) and access ES
 - Efficiently test changes and debug infrastructure issues.
 - Quickly troubleshoot and fix configuration errors.
 
-### Production or Sensitive Environments:
+### Production or sensitive environments
 
 For production or similarly sensitive environments:
 
 - Restrict developers from directly executing IaC.
 - Require infrastructure changes to go through a structured pull request (PR) approval process.
-- Execute deployments exclusively through secure, isolated CI/CD systems.
+- Execute deployments through secure, isolated CI/CD systems.
 
-## Implementing Least Privilege with Pulumi
+## Implementing least privilege with Pulumi
 
-### 1. Configure Stack and ESC Permissions
+### 1. Configure stack and ESC permissions
 
 Use Pulumi's [role-based access control (RBAC)](/docs/administration/organizations-teams/teams/) to enforce least privilege effectively:
 
@@ -53,12 +53,12 @@ Use Pulumi's [role-based access control (RBAC)](/docs/administration/organizatio
   - Explicitly grant elevated permissions (`Write` or `Admin`) only when necessary.
 
 - **Team-based permissions:**
-  - Organize users into teams in the Pulumi Cloud console (`Settings > Teams`).
+  - Organize users into teams in the Pulumi Cloud console (**Settings > Teams**).
   - Assign stack and ESC permissions explicitly to teams, aligning access to organizational roles.
 
-### 2. Setting Up Team-Based Permissions
+### 2. Setting up team-based permissions
 
-- **Create teams** in the Pulumi Cloud console (`Settings > Teams`).
+- **Create teams** in the Pulumi Cloud console (**Settings > Teams**).
 - **Assign stack permissions:** Grant teams permissions such as `Read`, `Write`, or `Admin` for specific stacks.
 - **Assign ESC permissions:** Grant teams roles like `Environment reader`, `opener`, `editor`, or `admin`.
 
@@ -70,11 +70,11 @@ pulumi stack init --teams YourTeamName
 
 This grants the specified team immediate read/write access to the new stack.
 
-### 3. Secure Deployment Approaches for Production
+### 3. Secure deployment approaches for production
 
 Choose one of these secure deployment approaches in your sensitive environments:
 
-### Option A: Pulumi Deployments (with GitHub and Other Integrations)
+### Option A: Pulumi Deployments (with GitHub and other integrations)
 
 [Pulumi Deployments](/docs/deployments/deployments/) provides automated, managed, and secure infrastructure deployments:
 
@@ -86,11 +86,11 @@ Choose one of these secure deployment approaches in your sensitive environments:
 **Setup steps for GitHub integration:**
 
 1. **Install the Pulumi GitHub App:**
-   - Navigate to Pulumi Cloud Console → **Management** > **Version control**.
-   - Select **Add account**, choose **GitHub**, and authorize it for your GitHub repository.
+   - Navigate to the Pulumi Cloud console → **Management** > **Version control**.
+   - Select **Add account**, choose **GitHub**, and grant access to your GitHub repository.
 
-2. **Configure deployment triggers:**
-   - Navigate to your stack in Pulumi Cloud Console → `Stack Settings > Deploy`.
+1. **Configure deployment triggers:**
+   - Navigate to your stack in the Pulumi Cloud console → **Stack Settings > Deploy**.
    - Set deployment triggers (e.g., PR merges to `main` branch).
 
 **Learn more:** [Pulumi Deployments GitHub Integration](/docs/integrations/version-control/github-app/)
@@ -99,12 +99,12 @@ Choose one of these secure deployment approaches in your sensitive environments:
 
 ---
 
-### Option B: CI/CD with GitHub Actions and OIDC Authentication
+### Option B: CI/CD with GitHub Actions and OIDC authentication
 
-Use GitHub Actions with Pulumi’s OIDC integration for secure, token-less deployments:
+Use GitHub Actions with Pulumi's OIDC integration for secure, token-less deployments:
 
-- Configure Pulumi Cloud to trust GitHub’s OIDC provider.
-- Obtain a Pulumi access token scoped specifically to a team rather than the entire organization.
+- Configure Pulumi Cloud to trust GitHub's OIDC provider.
+- Get a Pulumi access token scoped specifically to a team rather than the entire organization.
 
 **Full Example Workflow (Team-Scoped):**
 
@@ -147,11 +147,11 @@ jobs:
 
 **Detailed documentation:**
 [GitHub OIDC Setup](/docs/administration/access-identity/oidc-issuers/github/)
-[Pulumi GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/)
+[Pulumi GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/)
 
 ---
 
-### Option C: CI/CD with Other Providers
+### Option C: CI/CD with other providers
 
 Pulumi integrates seamlessly with many other popular CI/CD platforms beyond GitHub Actions, such as:
 
@@ -164,11 +164,11 @@ These platforms can also leverage secure OIDC authentication or token-based work
 
 You can [lock down access to specific pipelines](/docs/administration/access-identity/oidc-issuers/#configure-the-authorization-policies) using the `sub`, `aud`, and custom claims coming from your CI/CD provider.
 
-Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](/docs/iac/using-pulumi/continuous-delivery/)
+Explore integrations and detailed setup guides here in our [Continuous Delivery documentation.](/docs/iac/operations/continuous-delivery/)
 
 ---
 
-## Auditing and Monitoring
+## Auditing and monitoring
 
 Ensure your security posture remains robust by:
 
@@ -176,7 +176,7 @@ Ensure your security posture remains robust by:
 - Monitoring ESC logs for secret access patterns.
 - Auditing team-based permissions regularly to ensure compliance.
 
-## Summary of Best Practices
+## Summary of best practices
 
 - **Development/Test:** Provide developers direct IaC execution for productivity.
 - **Production/Sensitive:** Restrict direct IaC execution; enforce structured approvals and secure, isolated deployments.

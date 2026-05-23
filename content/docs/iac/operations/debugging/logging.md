@@ -5,12 +5,13 @@ title: Logging
 h1: Logging
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    support:
+    iac:
         name: Logging
-        parent: support-debugging
+        parent: iac-operations-debugging
         weight: 5
-        identifier: support-debugging-logging
+        identifier: iac-operations-debugging-logging
 aliases:
+- /docs/support/debugging/logging/
 - /docs/intro/concepts/logging/
 - /docs/concepts/logging/
 - /docs/iac/concepts/logging/

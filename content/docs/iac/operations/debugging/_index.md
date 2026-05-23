@@ -10,12 +10,13 @@ h1: Debugging
 description: <p>Tools and techniques for diagnosing and fixing Pulumi programs.</p>
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    support:
+    iac:
         name: Debugging
-        parent: support-home
-        weight: 3
-        identifier: support-debugging
+        parent: iac-operations
+        weight: 40
+        identifier: iac-operations-debugging
 aliases:
+    - /docs/support/debugging/
     - /docs/support/troubleshooting/debugging/
     - /docs/support/troubleshooting/infrastructure/debugging/
     - /docs/iac/troubleshooting/debugging/
@@ -26,17 +27,17 @@ sections:
   cards:
   - icon: chart-bar
     heading: Logging
-    link: /docs/support/debugging/logging/
+    link: /docs/iac/operations/debugging/logging/
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
   - icon: bug
     heading: Attaching a Debugger
-    link: /docs/support/debugging/debugger-attachment/
+    link: /docs/iac/operations/debugging/debugger-attachment/
     description: Set up debugger attachment for step-by-step program debugging.
 
   - icon: lightning
     heading: Performance and Tracing
-    link: /docs/support/debugging/performance-tracing/
+    link: /docs/iac/operations/debugging/performance-tracing/
     description: Analyze deployment performance and trace operations.
 
 - type: flat

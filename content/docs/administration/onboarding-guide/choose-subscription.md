@@ -65,7 +65,7 @@ Choose [self-hosted Pulumi Cloud](/product/self-hosted/) if you need complete co
 
 {{% notes type="info" %}}
 
-To get started with self-hosted Pulumi Cloud, follow the [self-hosting infrastructure](/docs/administration/self-hosting/) guide. Because Pulumi Cloud isn't yet available to store state during the initial bootstrap process, you'll need a [DIY backend](/docs/iac/guides/basics/using-a-diy-backend/) to manage state for the deployment that stands up the platform.
+To get started with self-hosted Pulumi Cloud, follow the [self-hosting infrastructure](/docs/administration/self-hosting/) guide. Because Pulumi Cloud isn't yet available to store state during the initial bootstrap process, you'll need a [DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) to manage state for the deployment that stands up the platform.
 
 {{% /notes %}}
 

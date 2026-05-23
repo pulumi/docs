@@ -83,12 +83,12 @@ sections:
 
   - icon: chart-bar
     heading: Logging
-    link: /docs/support/debugging/logging/
+    link: /docs/iac/operations/debugging/logging/
     description: CLI verbose logging and program logging for debugging and diagnostics.
 
   - icon: wrench
     heading: Using Dev Builds
-    link: /docs/support/debugging/using-dev-builds/
+    link: /docs/iac/operations/debugging/using-dev-builds/
     description: Install pre-release builds to access bug fixes that haven't shipped in a stable release yet.
 
 - type: flat
@@ -113,6 +113,6 @@ if (window.location.hash === "#conflict") {
 // Redirect to the new verbose logging page
 // https://github.com/pulumi/docs/issues/16985
 if (window.location.hash === "#verbose-logging") {
-  window.location = "/docs/support/debugging/logging/#cli-verbose-logging"
+  window.location = "/docs/iac/operations/debugging/logging/#cli-verbose-logging"
 }
 </script>

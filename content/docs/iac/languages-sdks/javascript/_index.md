@@ -377,7 +377,7 @@ For provider packages, use the same `dev` tag:
 npm add @pulumi/aws@dev
 ```
 
-For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/support/debugging/using-dev-builds/).
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/iac/operations/debugging/using-dev-builds/).
 
 ### Testing
 

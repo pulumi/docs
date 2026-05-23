@@ -1,6 +1,6 @@
 ---
 title_tag: "Stack management | Pulumi Operations"
-meta_desc: Manage Pulumi stacks day-to-day with targeted updates, update plans, and safe state file editing techniques.
+meta_desc: Manage Pulumi stacks day-to-day with targeted updates, update plans, safe state file editing, and self-managed state backends.
 title: Stack management
 h1: Stack management
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -12,7 +12,7 @@ menu:
         identifier: iac-operations-stack-management
 ---
 
-These pages cover the day-to-day operations of running Pulumi stacks: scoping updates to specific resources, previewing changes before they apply, and safely editing state when recovery is needed.
+These pages cover the day-to-day operations of running Pulumi stacks: scoping updates to specific resources, previewing changes before they apply, safely editing state when recovery is needed, and configuring a self-managed state backend.
 
 ## Pages
 
@@ -21,3 +21,5 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 **[Update plans](/docs/iac/operations/stack-management/update-plans/)** - Preview and review infrastructure changes before applying them. Update plans help you catch unintended modifications and coordinate changes across teams.
 
 **[Editing state files](/docs/iac/operations/stack-management/editing-state-files/)** - Safe techniques for modifying Pulumi state when normal operations can't recover. Use sparingly and always back up state first.
+
+**[Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.

@@ -5,12 +5,13 @@ title: Attaching a debugger
 h1: Attaching a debugger to a Pulumi program
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    support:
+    iac:
         name: Attaching a Debugger
-        parent: support-debugging
+        parent: iac-operations-debugging
         weight: 20
-        identifier: support-debugging-debugger-attachment
+        identifier: iac-operations-debugging-debugger-attachment
 aliases:
+    - /docs/support/debugging/debugger-attachment/
     - /docs/using-pulumi/debugging/
     - /docs/concepts/debugging/
     - /docs/iac/concepts/debugging/
@@ -45,26 +46,26 @@ The extension automatically generates a debug configuration to run `pulumi up` o
 3. Choose __Show all automatic debug configurations__.
 4. Select "Pulumi..." then "pulumi preview" or "pulumi up".  Debugging will start automatically.
 
-    ![Automatic Debug Configuration](/docs/support/debugging/images/automatic-1.png)
+    ![Automatic Debug Configuration](/docs/iac/operations/debugging/images/automatic-1.png)
 
-    ![Automatic Debug Configuration](/docs/support/debugging/images/automatic-2.png)
+    ![Automatic Debug Configuration](/docs/iac/operations/debugging/images/automatic-2.png)
 
 5. Select or create a stack if prompted to do so.
 
-    ![Stack Selection](/docs/support/debugging/images/stack-selection-1.png)
+    ![Stack Selection](/docs/iac/operations/debugging/images/stack-selection-1.png)
 
 ### Debug your Program
 
 Set breakpoints in your program code and enjoy the full functionality of the VS Code debugger.
 See [VS Code Debugging](https://code.visualstudio.com/docs/editor/debugging) for more information.
 
-![Debugging](/docs/support/debugging/images/debugging.png)
+![Debugging](/docs/iac/operations/debugging/images/debugging.png)
 
 ### Pulumi CLI Output
 
 Access the CLI output via the Debug Console view.
 
-![Debug Console](/docs/support/debugging/images/debug-console.png)
+![Debug Console](/docs/iac/operations/debugging/images/debug-console.png)
 
 ## Debugging with other IDEs
 

@@ -295,7 +295,7 @@ jobs:
         run: go test
 ```
 
-In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/), as well as some off-the-shelf standard actions.
+In this workflow, we use some [Pulumi-specific GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/), as well as some off-the-shelf standard actions.
 
 For the integration tests:
 
@@ -304,7 +304,7 @@ For the integration tests:
 - [`aws-actions/configure-aws-credentials`](https://github.com/aws-actions/configure-aws-credentials) - set up AWS credentials
 - [`pulumi/actions`](https://github.com/pulumi/actions) - Run a Pulumi command, in this case, `pulumi preview`
 
-In the `pulumi/actions` step, we use one of [Pulumi's GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/) and configure it to run the `preview` command, change the root directory with `work-dir`, set the correct stack name by passing in the Pulumi organization name via the `env.PULUMI_ORG` variable we set earlier in the file, and configure `upsert` to make sure that the stack gets created if it doesn't exist yet, or updated if it does.
+In the `pulumi/actions` step, we use one of [Pulumi's GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/) and configure it to run the `preview` command, change the root directory with `work-dir`, set the correct stack name by passing in the Pulumi organization name via the `env.PULUMI_ORG` variable we set earlier in the file, and configure `upsert` to make sure that the stack gets created if it doesn't exist yet, or updated if it does.
 
 For the unit tests we also use [`actions/setup-go`](https://github.com/actions/setup-go) to install the Golang tooling. That sets us up to run `go mod download` to install our dependencies and `go test` to run the unit tests.
 
@@ -431,5 +431,5 @@ Once your automated publishing workflow is established, consider these enhanceme
 - [Build a Component](/docs/iac/using-pulumi/build-a-component)
 - [Testing Components](/docs/iac/concepts/components/testing-components)
 - [Private Registry](/docs/idp/concepts/private-registry)
-- [GitHub Actions for Pulumi](/docs/iac/using-pulumi/continuous-delivery/github-actions)
+- [GitHub Actions for Pulumi](/docs/iac/operations/continuous-delivery/github-actions)
 - [Pulumi Deployments](/docs/pulumi-cloud/deployments)

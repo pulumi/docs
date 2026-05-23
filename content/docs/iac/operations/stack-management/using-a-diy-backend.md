@@ -1,5 +1,5 @@
 ---
-title_tag: "Using a DIY Backend | Pulumi Guides"
+title_tag: "Using a DIY Backend | Pulumi Operations"
 meta_desc: Configure a self-managed Pulumi state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
 title: Using a DIY Backend
 h1: Using a DIY Backend
@@ -7,8 +7,10 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Using a DIY Backend
-        parent: iac-guides-basics
-        weight: 80
+        parent: iac-operations-stack-management
+        weight: 40
+aliases:
+- /docs/iac/guides/basics/using-a-diy-backend/
 ---
 
 A DIY ("Do It Yourself") backend stores Pulumi [state](/docs/iac/concepts/state-and-backends/) in an object store or on your local machine instead of in Pulumi Cloud. The filesystem and cloud storage backends allow you to store state locally on your machine or remotely within a cloud object store. For DIY backends, state management—including backup, sharing, and team access synchronization—is custom and implemented manually. A basic file-based locking system is enabled by default for all DIY backends.
@@ -26,7 +28,7 @@ Inside the `.pulumi` folder, we access the following subdirectories:
 1. `locks/`: Lock files for each stack if the stack is currently being operated on by a Pulumi operation (e.g. `dev/$lock.json` or `proj/dev/$lock.json` where `$lock` is a unique identifier for the lock).
 1. `history/`: History for each stack (e.g. `dev/dev-$timestamp.history.json` or `proj/dev/dev-$timestamp.history.json` where `$timestamp` records the time the history file was created).
 
-The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate, as described below.
+The detailed format of the `<backend-url>` differs by backend and each has different options such as how to authenticate. See the per-backend sections that follow.
 
 ## Local filesystem
 
@@ -36,7 +38,7 @@ To use the filesystem backend to store your state files locally on your machine,
 $ pulumi login --local
 ```
 
-You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. All subsequent stack state will be stored as JSON files locally on your machine.
+You will see `Logged into <my-machine> as <my-user> (file://~)` as a result where `<my-machine>` and `<my-user>` are your configured machine and user names, respectively. Stack state will be stored as JSON files locally on your machine.
 
 The default directory for these JSON files is `~/.pulumi`. To store state files in an alternative location, specify a `file://<path>` URL instead, where `<path>` is the full path to the target directory where state files will be stored. For instance, to store state underneath `/app/data/.pulumi/` instead, run:
 
@@ -132,7 +134,7 @@ For additional configuration options, see the [README ↗](https://github.com/pu
 
 ## Scoping
 
-Versions of Pulumi prior to v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default—same as the Pulumi Cloud backend.
+Versions of Pulumi before v3.61.0 placed stacks in a global namespace in DIY backends. This meant that you couldn't share stack names (e.g. `dev`, `prod`, `staging`) across multiple projects in the same DIY backend. With Pulumi v3.61.0 and later, stacks created in new or empty DIY backends are scoped by project by default—same as the Pulumi Cloud backend.
 
 Existing DIY backends will continue to use the global namespace for stacks. You can upgrade an existing DIY backend to use project-scoped stacks using the `pulumi state upgrade` command. This command will upgrade all stacks in the backend to be scoped by project.
 

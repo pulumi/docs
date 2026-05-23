@@ -1,16 +1,17 @@
 ---
-title_tag: "How to Debug Pulumi Provider"
+title_tag: "How to Debug a Pulumi Provider"
 meta_desc: "Learn the process for debugging Pulumi providers locally."
-title: Debugging providers
-h1: Debugging Pulumi providers
+title: Debugging Providers
+h1: Debugging Pulumi Providers
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-    support:
-        name: Debugging providers
-        parent: support-debugging
+    iac:
+        name: Debugging Providers
+        parent: iac-guides-providers
         weight: 40
-        identifier: support-debugging-debugging-providers
 aliases:
+    - /docs/iac/operations/debugging/debugging-providers/
+    - /docs/support/debugging/debugging-providers/
     - /docs/using-pulumi/pulumi-packages/
     - /docs/using-pulumi/pulumi-packages/debugging-provider-packages/
     - /docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/
@@ -20,14 +21,13 @@ aliases:
     - /docs/iac/extending-pulumi/debugging-providers/
     - /docs/iac/build-with-pulumi/debugging-providers/
     - /docs/iac/troubleshooting/debugging/debugging-providers/
-    - /docs/iac/guides/building-extending/providers/debugging-providers/
 ---
 
 When developing or troubleshooting Pulumi providers, you may need to debug the provider code locally. This guide walks you through starting your provider in debug mode, setting breakpoints, and running tests.
 
 ## Starting the provider in debug mode
 
-To setup a process to debug, you will need to start the provider in debug mode through your local IDE. Upon startup, the provider should output a port number to the console (e.g., `12345`), indicating it is ready for a debugger to attach. Here are two examples for GoLand and VS Code.
+To set up a process to debug, you will need to start the provider in debug mode through your local IDE. Upon startup, the provider should output a port number to the console (e.g., `12345`), indicating that a debugger can attach. Here are two examples for GoLand and VS Code.
 
 ### Example for GoLand
 
@@ -35,7 +35,7 @@ For GoLand you can follow these steps.
 
 1. Configure the working directory to the program you are going to run to mirror how Pulumi would start the provider
 
-    ![Screenshot of GoLand configuration for debugging providers](/docs/support/debugging/images/goland-debug-config.png)
+    ![Screenshot of GoLand configuration for debugging providers](/docs/iac/guides/building-extending/providers/images/goland-debug-config.png)
 
 ### Example for VS Code
 
@@ -44,12 +44,12 @@ For VS Code you can follow these steps.
 1. Navigate to **Run -> Add Configuration** and add the **Go: launch package** configuration
 1. Edit `"program": "${fileDirname}"` to point to `cmd/pulumi-resource-<PROVIDER>` , e.g., `cmd/pulumi-resource-azure-native` for the Azure Native provider
 
-    ![Screenshot of VS Code configuration for debugging providers](/docs/support/debugging/images/vscode-launch-config.png)
+    ![Screenshot of VS Code configuration for debugging providers](/docs/iac/guides/building-extending/providers/images/vscode-launch-config.png)
 
 1. Edit "name": `"Launch Package"` to give it a descriptive name
 1. Launch package
 
-    ![Screenshot of VS Code configuration for debugging providers](/docs/support/debugging/images/vscode-debug-config.png)
+    ![Screenshot of VS Code configuration for debugging providers](/docs/iac/guides/building-extending/providers/images/vscode-debug-config.png)
 
 ## Setting breakpoints
 
@@ -82,7 +82,7 @@ Once Pulumi runs or tests are initiated with the `PULUMI_DEBUG_PROVIDERS` enviro
 **Terminating the Provider Process**: Be cautious when terminating the provider process as the Pulumi state can get out of sync with the actual cloud resources. When in doubt, `pulumi refresh` will address this.
 {{< /notes >}}
 
-## Debugging Bridged Providers
+## Debugging bridged providers
 
 ### Debugging tfgen
 
@@ -137,9 +137,9 @@ For VS Code you can follow these steps to connect to the debugger.
 
 1. Navigate to **Run -> Add Configuration** and add the **Go: Connect to server** configuration
 
-    ![Screenshot of VS Code configuration for debugging providers](/docs/support/debugging/images/vscode-launch-config-connect-to-server.png)
+    ![Screenshot of VS Code configuration for debugging providers](/docs/iac/guides/building-extending/providers/images/vscode-launch-config-connect-to-server.png)
 
 1. Edit "name": `"Connect to server"` to give it a descriptive name
 1. Connect to server
 
-    ![Screenshot of VS Code configuration for debugging tfgen](/docs/support/debugging/images/vscode-debug-config-connect-to-server.png)
+    ![Screenshot of VS Code configuration for debugging tfgen](/docs/iac/guides/building-extending/providers/images/vscode-debug-config-connect-to-server.png)
