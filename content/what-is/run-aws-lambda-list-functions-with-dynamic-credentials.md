@@ -1,82 +1,76 @@
 ---
 title: Run 'aws lambda list-functions' with Dynamic Credentials
-meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws lambda list-functions' more securely and efficiently.
-
+meta_desc: Run aws lambda list-functions with short-lived, OIDC-issued credentials from Pulumi ESC. No static AWS keys, scoped by IAM role, auditable in CloudTrail.
 meta_image: /images/what-is/run-aws-lambda-list-functions-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws lambda list-functions' with Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws lambda list-functions`](https://docs.aws.amazon.com/cli/latest/reference/lambda/list-functions.html) command is part of the AWS Command Line Interface (CLI) and retrieves a list of AWS Lambda functions within your AWS account. It returns a JSON-formatted list of information such as function name, ARN (Amazon Resource Name), runtime, memory size, and more.
+**This guide shows how to run `aws lambda list-functions` using short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `AKIA...` keys in `~/.aws/credentials`.** Pulumi ESC exchanges a Pulumi-issued OIDC token for an AWS STS session, scoped to a specific IAM role, expiring automatically. `aws lambda list-functions` enumerates Lambda functions in a single region and returns their ARNs, runtimes, memory sizes, and configuration metadata. The result is per-region, paginated, and gated by a single IAM permission: `lambda:ListFunctions`.
 
-The `aws lambda list-functions` command is handy when managing multiple functions, and there's a need to verify their existence, configurations, or other details. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials. Typically, two kinds of credentials are used: temporary credentials, which offer heightened security but require manual updates, and long-term credentials, which are more convenient but pose more significant security risks.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes more straightforward and secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws lambda list-functions`, execute successfully. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+* Why dynamic credentials beat static IAM keys
+* What `aws lambda list-functions` returns and the IAM it needs
+* Prerequisites for this guide
+* Step-by-step ESC setup with the `aws-login` provider
+* Running `aws lambda list-functions` and paginating across regions
+* Verification, common errors, and FAQ
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static IAM keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service, in particular, helps to resolve concerns around how to:
+Static IAM access keys persist in `~/.aws/credentials`, leak easily, and carry every permission attached to the user. Dynamic credentials reverse all of that:
 
-- Share credentials with teammates consistently and securely.
-- Minimize the risks associated with locally configured, long-lived, and highly privileged credentials.
-- Ensure teams can quickly and safely run commands like `aws lambda list-functions` without requiring deep security expertise.
+* **No long-lived secrets on disk.** Pulumi ESC issues a fresh `AccessKeyId`, `SecretAccessKey`, and `SessionToken` on every `esc run`. Nothing persists locally.
+* **Scoped by IAM role.** The IAM role's trust policy and attached permissions define exactly what the session can do — read Lambda metadata, nothing else.
+* **Time-bound.** Sessions expire after the ESC environment's `duration` (1 hour by default). A leaked token is useless almost immediately.
+* **Auditable.** CloudTrail records the call under the assumed-role ARN with the `sessionName` you configured.
+* **Centrally rotated.** Update the IAM role or session duration in one ESC environment and every developer and CI job that consumes it picks up the change.
 
-## What is the esc run command?
+## What `aws lambda list-functions` does (and the IAM you need)
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+`aws lambda list-functions` returns a JSON array of function metadata for a single region. Each entry includes `FunctionName`, `FunctionArn`, `Runtime`, `Role`, `Handler`, `CodeSize`, `MemorySize`, `Timeout`, and `LastModified`. The output does **not** include the function code or environment variables — those require `lambda:GetFunction`.
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+| Aspect | Detail |
+|---|---|
+| Min IAM permission | `lambda:ListFunctions` |
+| Scope | **Per-region**; run once per region you care about |
+| Pagination | Server-side; AWS CLI handles automatically (default 50 per page, `--max-items` to limit) |
+| Read-only | Yes; no Lambda invocations triggered |
+| Cross-account | Requires the destination account to allow the role's ARN in its IAM policy |
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws lambda list-functions` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+For least privilege, attach a policy with just `lambda:ListFunctions` and (optionally) `lambda:ListLayerVersions` if you also want layer metadata.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+## Prerequisites
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. Removing the local storage of credentials reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+* An AWS account with one or more Lambda functions to enumerate
+* The [Pulumi CLI](/docs/install/) and [Pulumi ESC CLI](/docs/install/esc/) installed
+* A [Pulumi Cloud account](https://app.pulumi.com/signup) and access to an organization
+* The [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed locally
+* An IAM role with OIDC trust configured for Pulumi (see [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)), with `lambda:ListFunctions` attached
 
-- **Streamlined Collaboration** - Because credentials are centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to leverage. Everyone can access the same secure environment, reducing the complexities of coordinating credentials and configurations across teams.
+## Step-by-step setup
 
-## Getting started with esc run
-
-### Step 1: Install and login to Pulumi ESC
-
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
+### 1. Log in to Pulumi ESC
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+esc login
 ```
 
-### Step 2: Create the OIDC configuration
+Follow the browser prompt or paste an access token from <https://app.pulumi.com/account/tokens>.
 
-Pulumi ESC allows you to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+### 2. Configure OIDC between Pulumi and AWS
 
-This service can dynamically generate credentials on your behalf whenever you interact with your AWS environments. To do so, follow the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Ensure the IAM role you create has sufficient permissions to perform the AWS Lambda actions.
+Follow the [Pulumi OIDC + AWS guide](/docs/esc/environments/configuring-oidc/aws/) to create an IAM role whose trust policy accepts a JWT from `api.pulumi.com/oidc`. Attach a policy with `lambda:ListFunctions`. Note the role ARN.
 
-### Step 3: Create a new Pulumi ESC environment
+### 3. Create a new Pulumi ESC environment
 
-Once you have OIDC configured between Pulumi and AWS, the next step is to create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin).
+In [Pulumi Cloud](https://app.pulumi.com/), open your organization, click **Environments**, then **Create environment**. Name it something like `aws-prod-env`.
 
-- Navigate to your [Pulumi Cloud](https://app.pulumi.com/signin) home page.
-- Select the correct organization in the left-hand navigation menu.
-- Click the **Environments** link.
-- Click the **Create environment** button.
-- In the pop-up window, provide a name for your environment. e.g., `aws-prod-env`
-- Click the **Create environment** button.
+### 4. Add the `aws-login` provider to the environment
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
-
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view.
-
-- Clear out the default placeholder content in the editor on the left-hand side.
-- Replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the configure OIDC step:
+Paste the following YAML, replacing `<your-oidc-iam-role-arn>`:
 
 ```yaml
 values:
@@ -93,45 +87,128 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run aws lambda list-functions
+The `fn::open::aws-login` function exchanges the Pulumi-issued OIDC token for AWS STS credentials. The `environmentVariables` block exposes them to any subprocess `esc run` starts.
 
-With your environment set up, validate your configuration.
-
-- Check your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+### 5. Confirm there are no static credentials on disk
 
 ```bash
-$ aws configure list
-      Name                    Value             Type    Location
-      ----                    -----             ----    --------
-   profile                <not set>             None    None
-access_key                <not set>             None    None
-secret_key                <not set>             None    None
-    region                <not set>             None    None
+aws configure list
 ```
 
-To get the list of Lambda functions, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+You should see `<not set>` for `access_key` and `secret_key`. This guarantees the next step uses ESC-issued credentials.
+
+## Run `aws lambda list-functions`
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws lambda list-functions --region <aws-region>
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws lambda list-functions --region <aws-region>
 ```
 
-Your output will vary depending on the number of deployed Lambda functions. Example,
+Expected output:
 
-```bash
+```json
 {
     "Functions": [
         {
-            "FunctionName": "fn2-1234dc3",
-            "FunctionArn": "arn:aws:lambda:us-west-2:123123123123:function:fn2-1234dc3",
-# ... other output not shown
+            "FunctionName": "my-api-handler",
+            "FunctionArn": "arn:aws:lambda:us-west-2:123456789012:function:my-api-handler",
+            "Runtime": "nodejs20.x",
+            "Role": "arn:aws:iam::123456789012:role/my-api-handler-role",
+            "Handler": "index.handler",
+            "CodeSize": 1024,
+            "MemorySize": 256,
+            "Timeout": 30,
+            "LastModified": "2025-05-09T11:02:11.000+0000"
+        }
+    ]
+}
 ```
 
-## Conclusion
+### Filter the output with `--query`
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws lambda list-functions`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+Use JMESPath to extract only what you need:
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+```bash
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws lambda list-functions --region us-west-2 \
+    --query 'Functions[].[FunctionName,Runtime,MemorySize]' --output table
+```
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+### Paginate across many functions
+
+The AWS CLI paginates automatically. For accounts with hundreds of functions use `--max-items` and `--starting-token` for manual control:
+
+```bash
+esc run <your-org>/<your-project>/<your-env> -- \
+    aws lambda list-functions --region us-west-2 --max-items 50
+```
+
+### List functions across all regions
+
+`list-functions` is per-region. To enumerate every region, loop:
+
+```bash
+for region in $(aws ec2 describe-regions --query 'Regions[].RegionName' --output text); do
+    echo "== $region =="
+    esc run <your-org>/<your-project>/<your-env> -- \
+        aws lambda list-functions --region "$region" \
+        --query 'Functions[].FunctionName' --output text
+done
+```
+
+## Verify in CloudTrail
+
+In CloudTrail the event appears as `ListFunctions20150331` with `userIdentity.type=AssumedRole` and an `arn` containing `assumed-role/<your-role>/pulumi-environments-session` — confirmation the session came from ESC.
+
+## Common errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| `AccessDeniedException` | IAM role missing `lambda:ListFunctions` | Add the permission to the role's policy |
+| `InvalidClientTokenId` | Stale local `AWS_*` env vars overriding ESC | Run `unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN` and retry |
+| `ExpiredToken` | Session exceeded `duration` | Re-run; `esc run` fetches fresh credentials each invocation |
+| Empty `Functions: []` | Wrong region — Lambda is regional | Confirm with `--region` or loop across regions |
+| `EndpointConnectionError` | Region disabled in account | Enable the region or pick another |
+| `Unable to locate credentials` | `esc run` env vars not exported to the subprocess | Verify the `environmentVariables` block in the ESC YAML is at the top level |
+
+## Frequently asked questions
+
+### Is `aws lambda list-functions` global or regional?
+
+Regional. Each Lambda function lives in a single AWS region, and `ListFunctions` only returns functions from the region in the API call. To inventory every region, iterate over `aws ec2 describe-regions` (see the example above).
+
+### What's the minimum IAM permission?
+
+`lambda:ListFunctions`. That single action is enough to enumerate all functions and their basic metadata in the region. Function code and environment variables require `lambda:GetFunction` and `lambda:GetFunctionConfiguration` respectively — keep those off the role if you only need an inventory.
+
+### How does pagination work?
+
+The AWS CLI transparently follows the `NextMarker` pointer in each response, so `aws lambda list-functions` returns the complete set by default. Override with `--max-items` to cap the number of items returned, and `--starting-token` to resume from a previous run.
+
+### Can I see functions in other AWS accounts?
+
+Only if those accounts grant your role explicit `lambda:ListFunctions` via a resource-based policy or AssumeRole chain. Cross-account Lambda inventory typically uses a delegated read-only role per account; Pulumi ESC handles the role assumption regardless.
+
+### How long are ESC-issued credentials valid?
+
+By default 1 hour, set by the `duration` field in the ESC environment YAML. The maximum is bounded by the IAM role's `MaxSessionDuration` attribute (1 hour for OIDC by default; raise it on the IAM role if needed).
+
+### Does this work in CI/CD?
+
+Yes — this is the recommended pattern. Replace `AWS_*` secrets in your CI configuration with a single `esc run` invocation. The Pulumi GitHub Action, GitLab integration, and `esc open` for shell exports all work the same way.
+
+### How do I confirm the credentials really came from ESC?
+
+Run `aws sts get-caller-identity` inside the same `esc run`. The returned `Arn` should be `assumed-role/<your-role>/pulumi-environments-session`. See [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/).
+
+## Learn more
+
+* [Pulumi ESC product page](/product/esc/)
+* [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/)
+* [Run `aws ec2 describe-instances` with dynamic credentials](/what-is/run-aws-ec2-describe-instances-with-dynamic-credentials/)
+* [Run `aws iam list-users` with dynamic credentials](/what-is/run-aws-iam-list-users-with-dynamic-credentials/)
+* [Resolve `Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
+* [Resolve `InvalidClientTokenId`](/what-is/resolve-list-buckets-invalid-client-token-id/)
+
+[Join our community on Slack](https://slack.pulumi.com/) to discuss further, and let us know what you build.
