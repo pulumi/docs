@@ -47,7 +47,7 @@ As an example, say you wanted to provision an S3 bucket. With the AWS CLI, you'd
 $ pulumi do aws:s3:Bucket create
 ```
 
-That might not look all that different on the surface — but because you're using the Pulumi engine and resource model, you can provide a minimal set of input properties, take advantage of provider-defined defaults, and use Pulumi's [auto-naming](https://www.pulumi.com/docs/iac/concepts/resources/names/) feature to give the bucket a unique name automatically:
+That might not look all that different on the surface — but because you're using the Pulumi engine and resource model, you can provide a minimal set of input properties, take advantage of provider-defined defaults, and use Pulumi's [auto-naming](/docs/iac/concepts/resources/names/) feature to give the bucket a unique name automatically:
 
 ```bash
 $ pulumi do aws:s3:Bucket create
@@ -87,7 +87,7 @@ Same CLI, same output contract, same provider ecosystem.
 
 ### The command shape
 
-The `do` command accepts a Pulumi resource type, or [_type token_](https://www.pulumi.com/docs/iac/concepts/resources/names/#types), to determine the action to take. Type tokens have the form `<package:module:resource>`. For example, `aws:s3:Bucket` refers to the [Amazon S3 Bucket resource](/registry/packages/aws/api-docs/s3/bucket/) that belongs to the `s3` module of the `aws` package.
+The `do` command accepts a Pulumi resource type, or [_type token_](/docs/iac/concepts/resources/names/#types), to determine the action to take. Type tokens have the form `<package:module:resource>`. For example, `aws:s3:Bucket` refers to the [Amazon S3 Bucket resource](/registry/packages/aws/api-docs/s3/bucket/) that belongs to the `s3` module of the `aws` package.
 
 You can also provide a portion of the token to help you find what you're looking for without ever having to leave the terminal:
 
@@ -196,7 +196,7 @@ $ pulumi do aws:s3:Bucket delete bucket-4f5cb22
 
 ### Provider configuration
 
-Today, `pulumi do` resolves provider configuration — for example, applying your AWS credentials — using environment variables or credential files as supported by each individual Pulumi provider. See the [Pulumi Registry](https://www.pulumi.com/registry/) for provider-specific configuration details.
+Today, `pulumi do` resolves provider configuration — for example, applying your AWS credentials — using environment variables or credential files as supported by each individual Pulumi provider. See the [Pulumi Registry](/registry/) for provider-specific configuration details.
 
 ## Designed for humans and agents
 
