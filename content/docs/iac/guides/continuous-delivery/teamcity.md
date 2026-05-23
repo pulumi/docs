@@ -1,8 +1,8 @@
 ---
-title_tag: "Using JetBrains TeamCity | CI/CD"
-meta_desc: "This page provides an overview of how to use Pulumi with JetBrains TeamCity."
-title: JetBrains TeamCity
-h1: Pulumi CI/CD & JetBrains TeamCity
+title_tag: "Using TeamCity with Pulumi | CI/CD"
+meta_desc: Run Pulumi in TeamCity build configurations to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
+title: TeamCity
+h1: Using TeamCity with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -16,174 +16,115 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/teamcity/
 ---
 
-This page details how to use [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) to deploy a sample infrastructure, using Pulumi. In the example below, we will deploy to AWS, but any cloud can be used.
+[TeamCity](https://www.jetbrains.com/teamcity/) is a CI/CD server from JetBrains, available both as self-hosted TeamCity On-Premises and as the hosted TeamCity Cloud. You run Pulumi in TeamCity by adding a build step that invokes the Pulumi CLI, so the same build configuration works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/) Pulumi supports.
+
+{{< cicd-cloud-note >}}
+
+## How Pulumi works with TeamCity
+
+A TeamCity [build configuration](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html) is an ordered sequence of [build steps](https://www.jetbrains.com/help/teamcity/configuring-build-steps.html). To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI, so you add a **Command Line** build step that runs `pulumi` commands — `install`, `preview`, `up` — exactly as you would on your own machine.
+
+The Command Line runner can execute its script inside a Docker container. Point it at the official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image, which ships the Pulumi CLI and every language runtime, and the step works for a program in any supported language with no extra setup. If you prefer to run directly on the build agent, install the Pulumi CLI on the agent instead.
+
+You can define build configurations through the TeamCity UI or version-control them alongside your code with the [Kotlin DSL](https://www.jetbrains.com/help/teamcity/kotlin-dsl.html).
 
 ## Prerequisites
 
-- A working installation of TeamCity
-- An account in the [Pulumi Cloud](https://app.pulumi.com/signup).
-- [Latest version of Pulumi](/docs/install/).
-- Setup a new project and [stack](/docs/concepts/stack/) using one of our
-[Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
-and choosing one of the many templates that are available.
+Before you begin, make sure you have:
 
-## Sample Project
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A TeamCity project with a build configuration attached to a [VCS root](https://www.jetbrains.com/help/teamcity/configuring-vcs-roots.html) for your Git repository.
+1. A Pulumi program in that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-[Example Repository](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate).
-You may download the project and upload it to your own repo to avoid having to clone the entire Pulumi Examples repo onto
-your TeamCity server.
+## Authenticate with Pulumi Cloud
 
-## Configuring the TeamCity Project
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
-For the purposes of this guide, we are going to build a TeamCity project via the UI. An alternative way to do this, would
-be to use the [Kotlin DSL](https://www.jetbrains.com/help/teamcity/kotlin-dsl.html).
+Store the token outside of source control. Add it as a [build parameter](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) of type **Password** named `env.PULUMI_ACCESS_TOKEN` so TeamCity keeps the value encrypted and masks it in build logs. Define it on a parent project to reuse it across every build configuration underneath. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
-When creating a new project via the UI, we will see the project creation wizard. We are going to create a project
-`From a repository URL` from the [Pulumi Examples](https://github.com/pulumi/examples) repository. This specific
-repository is open source so we do not need to enter a `Username` and `Password`. We can then instruct TeamCity to
-proceed to the next step.
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places.
 
-TeamCity will tell us if it can successfully connect to the repository. If it can, then it will ask us to name this project
-and to create a [build configuration](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html) name. We are going to
-name the project `Examples` and we will create a build configuration called `Tutorial`. We can then `Proceed` to the next step.
-We can click the link that says `configure build steps manually` and then can start creating our project.
+## Provide cloud credentials
 
-A TeamCity configuration is made of [build steps](https://www.jetbrains.com/help/teamcity/configuring-build-steps.html).
-We can break down the steps required for us to deploy this application into a number of build steps.
+When Pulumi runs, your program also needs credentials for the cloud provider it manages. You can supply them in one of two ways:
 
-### Install NodeJS and NPM Build Step
+- **Pulumi ESC (recommended).** Configure an [ESC environment](/docs/esc/) to broker short-lived cloud credentials through OIDC. Your program receives temporary credentials scoped to exactly what it needs, and the build stores nothing but its Pulumi access token.
+- **Build parameters.** Set the provider's credentials as `Password`-type build parameters — for example, `env.AWS_ACCESS_KEY_ID` and `env.AWS_SECRET_ACCESS_KEY` for AWS — so they're exposed as environment variables to the build step.
 
-The first thing we need to do is to ensure that [NodeJS](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) are
-installed on our build agents. We would chose `Command Line` as the [build runner](https://www.jetbrains.com/help/teamcity/build-runner.html)
-type and TeamCity will present us with the build runner wizard
+{{% notes type="warning" %}}
+Never commit cloud credentials or the Pulumi access token to your repository. Keep them in `Password`-type build parameters or an ESC environment so the values stay encrypted and access is auditable.
+{{% /notes %}}
 
-We are going to create a Build Step with the following parameters:
+## Configure a TeamCity build
 
-`Runner type`: Command Line<br />
-`Step name`: Install NodeJS & NPM<br />
-`Execute step`: If all previous steps finished successfully<br />
-`Working directory`: aws-ts-eks-hello-world<br />
-`Run`: Custom script<br />
-`Custom Script`:
+Add a **Command Line** build step that runs Pulumi against a [stack](/docs/iac/concepts/stacks/). Set the step's runner to run inside the `pulumi/pulumi` Docker container, and use the following custom script:
 
 ```bash
-yum -y install nodejs
-npm version
-```
-
-We can `Save` the step. Let's add the next build step by clicking on `Add Build Step`.
-
-### Installing Pulumi Build Step
-
-We are going to create a Build Step with the following parameters:
-
-`Runner type`: Command Line<br />
-`Step name`: Install Pulumi<br />
-`Execute step`: If all previous steps finished successfully<br />
-`Working directory`: aws-ts-eks-hello-world<br />
-`Run`: Custom script<br />
-`Custom Script`:
-
-```bash
-curl -sSL https://get.pulumi.com | sh
-```
-
-Again, we can `Save` the step and add the next build step by clicking on `Add Build Step`.
-
-### Restoring NPM Dependencies Build Step
-
-We are going to create a Build Step with the following parameters:
-
-`Runner type`: Command Line<br />
-`Step name`: Restore Dependencies<br />
-`Execute step`: If all previous steps finished successfully<br />
-`Working directory`: aws-ts-eks-hello-world<br />
-`Run`: Custom script<br />
-`Custom Script`:
-
-```bash
-curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.13.7/2019-06-11/bin/linux/amd64/aws-iam-authenticator
-chmod +x ./aws-iam-authenticator
-mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator
-npm install
-```
-
-Again, we can `Save` the step and add the next build step by clicking on `Add Build Step`.
-
-### Pulumi Stack Creation Build Step
-
-We are going to create a Build Step with the following parameters:
-
-`Runner type`: Command Line<br />
-`Step name`: Stack Creation<br />
-`Execute step`: If all previous steps finished successfully<br />
-`Working directory`: aws-ts-eks-hello-world<br />
-`Run`: Custom script<br />
-`Custom Script`:
-
-```bash
-pulumi stack init %STACK_NAME%
-pulumi config set aws:region %AWS_REGION%
-```
-
-Again, we can `Save` the step and add the last build step by clicking on `Add Build Step`.
-
-### Pulumi Up Build Step
-
-`Runner type`: Command Line<br />
-`Step name`: Pulumi Up<br />
-`Execute step`: If all previous steps finished successfully<br />
-`Working directory`: aws-ts-eks-hello-world<br />
-`Run`: Custom script<br />
-`Custom Script`:
-
-```bash
+pulumi install
+pulumi stack select acme/website/staging
 pulumi up --yes
 ```
 
-### Configuring Build Parameters
+[`pulumi install`](/docs/iac/cli/commands/pulumi_install/) installs the program's language dependencies and required plugins, so the same step works for a program written in any supported language. The step picks up the `env.PULUMI_ACCESS_TOKEN` build parameter automatically, so no `pulumi login` call is needed.
 
-We need to create a few build parameters before we can actually run the build. The
-[TeamCity Documentation](https://www.jetbrains.com/help/teamcity/configuring-build-parameters.html) describes how to
-create these parameters. The parameters we will create are as follows:
+If your Pulumi program lives in a subdirectory of the repository, set the build step's **Working directory** to that path.
 
-`AWS_REGION`: us-east-2<br />
-`STACK_NAME`: development-example
+## Build a trunk-based CI/CD workflow
 
-`env.AWS_ACCESS_KEY_ID`: <redacted><br />
-`env.AWS_SECRET_ACCESS_KEY`: <redacted><br />
-`env.PULUMI_ACCESS_TOKEN`: <redacted><br />
-`env.PATH`: `%env.PATH%:%env.HOME%/.pulumi/bin:%env.HOME%/bin`
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. In TeamCity, a VCS root's [branch specification](https://www.jetbrains.com/help/teamcity/working-with-feature-branches.html) controls which branches a build configuration watches, and a [VCS trigger](https://www.jetbrains.com/help/teamcity/configuring-vcs-triggers.html) starts a build when those branches change — so you can map each stage of the workflow to its own build configuration.
 
-### Running the build
+### Preview infrastructure changes in a pull request
 
-Now that all the steps are created and the configuration has been added to TeamCity, we can run the build by clicking on the
-`Run` button. After a few minutes, we should have a successful build. On inspection of the build log, we can see that the
-infrastructure has been successfully deployed:
+When a pull request is opened, run a dry run instead of a deployment. Add the [Pull Requests build feature](https://www.jetbrains.com/help/teamcity/pull-requests.html) so TeamCity discovers pull request branches, and have the Command Line step run [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/):
 
 ```bash
-[17:05:48][Step 5/5]                     exec: {
-[17:05:48][Step 5/5]                         apiVersion: "client.authentication.k8s.io/v1alpha1"
-[17:05:48][Step 5/5]                         args      : [
-[17:05:48][Step 5/5]                             [0]: "token"
-[17:05:48][Step 5/5]                             [1]: "-i"
-[17:05:48][Step 5/5]                             [2]: "helloworld-eksCluster-c5bd220"
-[17:05:48][Step 5/5]                         ]
-[17:05:48][Step 5/5]                         command   : "aws-iam-authenticator"
-[17:05:48][Step 5/5]                     }
-[17:05:48][Step 5/5]                 }
-[17:05:48][Step 5/5]             }
-[17:05:48][Step 5/5]         ]
-[17:05:48][Step 5/5]     }
-[17:05:48][Step 5/5]     namespaceName  : "helloworld-eyay6eno"
-[17:05:48][Step 5/5]     serviceHostname: "a2b21d9e5f4ee11e99d67026bafffdcc-603547860.us-east-2.elb.amazonaws.com"
-[17:05:48][Step 5/5]     serviceName    : "helloworld-d4oadgeg"
-[17:05:48][Step 5/5]
-[17:05:48][Step 5/5] Resources:
-[17:05:48][Step 5/5]     + 40 created
-[17:05:48][Step 5/5]
-[17:05:48][Step 5/5] Duration: 13m0s
-[17:05:48][Step 5/5]
-[17:05:48][Step 5/5] Permalink: https://app.pulumi.com/stack72/aws-ts-eks-hello-world/development-example/updates/1
-[17:05:48][Step 5/5] Process exited with code 0
+pulumi install
+pulumi stack select acme/website/staging
+pulumi preview
 ```
+
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+
+### Deploy to staging on merge to the main branch
+
+When a pull request merges, run [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) against an environment that receives continuous delivery, such as a shared development or staging environment. Use a build configuration whose VCS trigger fires on changes to the main branch:
+
+```bash
+pulumi install
+pulumi stack select acme/website/staging
+pulumi up --yes
+```
+
+### Promote to production with a git tag
+
+Production updates should be deliberate. Keep production on its own stack and deploy it only when you push a release tag — for example, a moving `production` tag that you advance to a commit already validated in staging.
+
+Give the production build configuration a VCS root with a branch specification that watches tags, such as `+:refs/tags/*`, and target the production stack:
+
+```bash
+pulumi install
+pulumi stack select acme/website/production
+pulumi up --yes
+```
+
+Promotion then becomes a single, traceable Git operation, and production never deploys from an untested commit.
+
+## Report results on pull requests
+
+Independently of TeamCity, Pulumi offers native [version control integrations](/docs/integrations/version-control/) for popular Git hosts. With one configured, Pulumi Cloud posts infrastructure-change summaries as pull request comments and status checks, and links each stack update back to the commit and pull request that produced it. See the [Version Control](/docs/integrations/version-control/) page for the integrations currently available.
+
+## Speed up builds with caching
+
+A clean build agent starts with an empty plugin cache, so Pulumi re-downloads its provider plugins on every run. How you avoid that depends on your agents:
+
+- **Persistent agents** retain Pulumi's plugin directory (`~/.pulumi/plugins`) between builds when the CLI runs directly on the agent, so the cache warms itself after the first run. If the step runs inside the `pulumi/pulumi` container, the plugin directory is discarded with the container — mount a persistent volume for it, or use the custom builder image described below.
+- **Ephemeral or cloud agents** start fresh each time. Bake the provider plugins into a custom builder image: derive it from the official `pulumi/pulumi` image, `pulumi plugin install` the providers your program uses, and run the Command Line step in that image. This is the most deterministic option even where a cache exists — see the [plugins documentation](/docs/iac/concepts/plugins/).
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens on CI/CD systems that can issue OIDC tokens.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your Git host for pull request reporting.

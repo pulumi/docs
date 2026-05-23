@@ -30,7 +30,7 @@ aliases:
 Pulumi models cloud resources as source code, so changes to your infrastructure can be reviewed, tested, and deployed through the same pipeline you already use for application code: pull requests, code review, and automated tests. Pulumi integrates with any continuous integration and continuous delivery (CI/CD) system.
 
 {{% notes %}}
-Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/).
+Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/).
 {{% /notes %}}
 
 ## The trunk-based development workflow
@@ -41,9 +41,17 @@ The most common way to run Pulumi in CI/CD follows a trunk-based development mod
 1. **Merge to the main branch.** The pipeline runs [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) to deploy the change to an environment that receives continuous delivery, such as a shared development or staging environment.
 1. **Promote to production.** Pushing a git tag — or otherwise marking a release — triggers a deployment to production, keeping production updates deliberate and traceable.
 
+## Review infrastructure changes before merging
+
+A preview compares your code against the *current* state of your infrastructure, so a change merged to the main branch can alter what an open pull request would actually do. Require that a branch be up to date with the main branch before it merges, and re-run `pulumi preview` after each update to the branch. Review the refreshed preview carefully: an intervening change to the main branch can invalidate an earlier preview in consequential ways — for example, by adding or removing resources that the original review never showed.
+
+{{% notes type="warning" %}}
+A CI/CD pipeline for infrastructure **must** run a preview on every pull request. Declarative infrastructure as code — whether Pulumi or any other IaC tool — cannot be reviewed from the code change alone: the same code edit can produce very different infrastructure changes depending on the current state of your resources. Reviewers need to see *both* the code diff *and* the proposed infrastructure changes that the preview reports.
+{{% /notes %}}
+
 ## Authentication and configuration with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate.
+Your pipeline needs a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to authenticate with Pulumi Cloud.
 
 You can remove even that static secret with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): the pipeline exchanges the OIDC token issued by your CI/CD system for a short-lived Pulumi access token, so no long-lived credential is stored anywhere.
 
@@ -74,7 +82,6 @@ Pulumi has guides for running in the following CI/CD systems:
 - [Harness](/docs/iac/guides/continuous-delivery/harness/)
 - [Jenkins](/docs/iac/guides/continuous-delivery/jenkins/)
 - [Octopus Deploy](/docs/iac/guides/continuous-delivery/octopus-deploy/)
-- [Spinnaker](/docs/iac/guides/continuous-delivery/spinnaker/)
 - [TeamCity](/docs/iac/guides/continuous-delivery/teamcity/)
 - [Travis CI](/docs/iac/guides/continuous-delivery/travis/)
 

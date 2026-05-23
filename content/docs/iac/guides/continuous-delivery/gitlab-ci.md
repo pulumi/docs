@@ -1,13 +1,12 @@
 ---
-title_tag: "Using GitLab CI | CI/CD"
-meta_desc: This page details how to use GitLab CI to manage deploying staging and
-           production stacks based on commits to specific Git branches.
-title: GitLab CI
-h1: Pulumi CI/CD & GitLab
+title_tag: "Using GitLab CI/CD with Pulumi | CI/CD"
+meta_desc: Run Pulumi in GitLab CI/CD pipelines and ship infrastructure through a trunk-based workflow, with static-token or OIDC authentication.
+title: GitLab CI/CD
+h1: Using GitLab CI/CD with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: GitLab CI
+        name: GitLab CI/CD
         parent: iac-using-pulumi-cicd
         weight: 90
 aliases:
@@ -21,197 +20,419 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/
 ---
 
-[GitLab CI/CD](https://docs.gitlab.com/ee/topics/build_your_application.html) enables the management of deploying
-staging and production stacks based on commits to specific Git branches. This is sometimes
-referred to as Push-to-Deploy.
+[GitLab CI/CD](https://docs.gitlab.com/ci/) is the CI/CD service built into GitLab. It runs pipelines defined in a `.gitlab-ci.yml` file at the root of your repository, triggered by events such as merge requests, pushes, and tags.
 
-Using GitLab with Pulumi is a great way to combine software development and infrastructure
-as code (IaC) best practices. Pulumi is built with CI/CD integration in mind because:
+You run Pulumi in a pipeline by invoking the Pulumi CLI directly. The official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container images ship the CLI together with a language runtime, so a job can run `pulumi preview` or `pulumi up` with no install step. Because the pipeline runs the CLI, it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
 
-- It doesn't require any particular arrangement of stacks or workflow to work in CI/CD processes.
-- It can be run from anywhere and your infrastructure code can be hosted anywhere.
-
-The examples provided in this guide were created under the context of a Pulumi TypeScript project with the project code hosted in a GitLab repository,
-but the steps described below can be altered to fit into any existing type of deployment setup.
+{{< cicd-cloud-note >}}
 
 ## Prerequisites
 
-- Sign up for a [Pulumi account](https://app.pulumi.com/signup).
-- Create a [Pulumi Access Token](https://app.pulumi.com/account/tokens).
-- Install the [latest Pulumi CLI](/docs/install/).
-- Create a [blank GitLab project](https://docs.gitlab.com/ee/user/project/) without a README.
-- Create a [new Pulumi project](https://www.pulumi.com/learn/pulumi-fundamentals/create-a-pulumi-project/) and [initialize it as a git repository](https://git-scm.com/docs/git-init)
-- Set the remote URL of the Pulumi project to be your GitLab project.
-  - Ex: `git remote add origin <your-gitlab-repo-url>`
+Before you begin, make sure you have:
 
-## Environment Variables
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A GitLab project.
+1. A Pulumi program committed to that project. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-To use Pulumi within GitLab CI, there are a few environment variables you'll need to set for each
-build.
+## Authenticate with Pulumi Cloud
 
-The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with `pulumi.com` in order to
-perform the preview or update.
+Give your pipeline a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-Next, you will also need to set environment variables specific to your cloud resource provider.
-For example, if your stack is managing resources on AWS, you will need to set `AWS_ACCESS_KEY_ID` and
-`AWS_SECRET_ACCESS_KEY`.
+- **A stored access token** — a long-lived Pulumi access token kept as a CI/CD variable. Simplest to set up.
+- **OIDC token exchange** — no stored secret; the pipeline exchanges a short-lived OIDC token for a Pulumi access token at runtime. Recommended where you can use it.
 
-{{% notes type="info" %}}
+Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as CI/CD variables.
 
-It is a security best practice to mark any sensitive variables as protected in GitLab. You can learn how
-to set and protect environment variables in GitLab by referencing their [variables](https://docs.gitlab.com/ee/ci/variables/) documentation.
+### Authenticate with a stored access token
 
-{{% /notes %}}
+Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
-## Protected Branches
+Add the token as a [CI/CD variable](https://docs.gitlab.com/ci/variables/) named `PULUMI_ACCESS_TOKEN` under your project's **Settings > CI/CD > Variables**. Mark it **Masked** so it doesn't appear in job logs. The Pulumi CLI reads the variable from the environment automatically — no explicit `pulumi login` is required.
 
-In order to prevent abuse of protected resources as well as other sensitive information used
-by your repository, GitLab has the concept of [Protected Branches and Tags](https://gitlab.com/help/user/project/protected_branches.md).
+### Authenticate without a stored token using OIDC
 
-Your GitLab repository's `main` or `master` branch is the only branch that is created as a protected branch by default. If you are running Pulumi CLI commands from any branch other than the `main | master` branch,
-you are likely to run into a login error. This is due to the `PULUMI_ACCESS_TOKEN` environment variable only being accessible by protected branches and tags.
+You can remove the static token entirely. GitLab CI/CD can issue a short-lived [OpenID Connect (OIDC)](https://docs.gitlab.com/ci/secrets/id_token_authentication/) `id_token` for a job. Register GitLab as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/gitlab/) in Pulumi Cloud, and the job exchanges that `id_token` for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a CI/CD variable.
 
-You can fix this by configuring branch protection using [wildcard rules](https://docs.gitlab.com/ee/user/project/protected_branches.html#protect-multiple-branches-with-wildcard-rules). Doing this will
-allow any branches with names that match this rule the ability to access the secret environment variables.
-
-## Merge Request Builds
-
-GitLab has the ability to restrict jobs to run only on [merge requests](https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html). This is done by adding the following configuration to your GitLab pipeline config file:
-
-```
-only:
-- merge_requests
-```
-
-The example script provided below will demonstrate how to use this configuration to run the `pulumi preview` command only in merge request pipelines.
-
-## Sample Scripts
-
-In GitLab, a CI/CD pipeline is defined in a yaml file labeled `.gitlab-ci.yml`. This file must exist
-in the root of your repository as GitLab looks there by default.
-
-If you are storing this file in an alternate location, be sure to reflect this location in the CI/CD settings of your GitLab project
-by going to [https://gitlab.com](https://gitlab.com) > (select your project) > Settings > CI/CD and updating the value of
-"CI/CD configuration file" under the "General pipelines" section.
-
-The following are samples only. You may choose to structure your configuration any way you like.
-
-The `pulumi-preview.sh` script (not shown here) is similar to the `run-pulumi.sh` script, except that
-it runs the `pulumi preview` command instead of the `pulumi up --yes` command. The preview command performs a dry-run
-of your project deployment and only shows you changes (if any) in your infrastructure.
-
-### `.gitlab-ci.yml`
+The trust flows inbound: GitLab issues the `id_token`, and `pulumi login --oidc-token` exchanges it with Pulumi Cloud for an access token. A job requests the token with the `id_tokens` keyword and logs in before running Pulumi. Apply this by adding the `id_tokens` block and the `pulumi login` step to the `.pulumi` hidden job in the [workflow below](#the-trunk-based-development-workflow):
 
 ```yaml
-#
-# This sample yaml configuration file contains two stages and three jobs.
-# This configuration uses GitLab's `only`, `when`, and `except` configuration
-# options to create a pipeline that will create the `pulumi-preview` job in the pipeline,
-# for all branches except the master.
-# Only for master branch merges, the main `pulumi` job is executed automatically.
-stages:
-  - build
-  - infrastructure-update
+variables:
+  PULUMI_ORG: acme
 
-# Each stage may require multiple jobs to complete that stage.
-# Consider a build stage, which may require building the UI, service, and a CLI.
-# All 3 individual build jobs can be attributed to the build _stage_.
-complex_build_job:
-  stage: build
-  script:
-    - echo "pulumi rocks!"
-
-pulumi:
-  stage: infrastructure-update
+# This replaces the `.pulumi` hidden job in the workflow below.
+.pulumi:
+  id_tokens:
+    PULUMI_OIDC_TOKEN:
+      aud: urn:pulumi:org:$PULUMI_ORG
   before_script:
-    - chmod +x ./scripts/*.sh
-    - ./scripts/setup.sh
-  script:
-    - ./scripts/run-pulumi.sh
-  # Create an artifact archive with just the pulumi log file,
-  # which is created using console-redirection in run-pulumi.sh.
-  artifacts:
-    paths:
-    - pulumi-log.txt
-    # This is just a sample of how artifacts can be expired (removed) automatically in GitLab.
-    # You may choose to not set this at all based on your organization's or team's preference.
-    expire_in: 1 week
-  # This job should only be created if the pipeline is created for the master (or main) branch.
-  only:
-  - master # or main
-
-pulumi-preview:
-  stage: infrastructure-update
-  before_script:
-    - chmod +x ./scripts/*.sh
-    - ./scripts/setup.sh
-  script:
-    - ./scripts/pulumi-preview.sh
-  only:
-  - merge_requests
+    - pulumi login --oidc-token "$PULUMI_OIDC_TOKEN" --oidc-org "$PULUMI_ORG"
+    - cd infra
+    - npm ci # replace with your language's dependency-install command
 ```
 
-### `setup.sh`
+With OIDC, the pipeline needs no `PULUMI_ACCESS_TOKEN` CI/CD variable. For the full setup — registering the issuer and writing the authorization policy that controls which projects and branches may exchange a token — see [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) and the central [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) reference.
 
-The `setup.sh` script installs the Pulumi CLI on the GitLab CI Runner, along with other tools.
-It also installs `yarn` and `nodejs` since that's the runtime for this sample project.
+## The trunk-based development workflow
+
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. A single `.gitlab-ci.yml` covers the whole flow with three jobs:
+
+- `preview` runs `pulumi preview` on every merge request, surfacing the proposed changes for review.
+- `deploy-staging` runs `pulumi up` against the staging stack when changes land on `main`.
+- `deploy-production` runs `pulumi up` against the production stack when a `release-*` tag is pushed.
+
+GitLab [`rules`](https://docs.gitlab.com/ci/yaml/#rules) decide which jobs run for a given pipeline. The examples assume a Pulumi program in an `infra/` directory and stacks named `acme/website/staging` and `acme/website/production`. A hidden `.pulumi` job, reused through [`extends`](https://docs.gitlab.com/ci/yaml/#extends), holds the steps the three jobs share; only the image and the dependency-install command differ between languages:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-nodejs:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory and install dependencies.
+.pulumi:
+  before_script:
+    - cd infra
+    - npm ci
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-python:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory and install dependencies.
+.pulumi:
+  before_script:
+    - cd infra
+    - pip install -r requirements.txt
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-go:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory and install dependencies.
+.pulumi:
+  before_script:
+    - cd infra
+    - go mod download
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-dotnet:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory.
+# The .NET runtime restores and builds the project during the Pulumi run.
+.pulumi:
+  before_script:
+    - cd infra
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - preview
+  - deploy
+
+default:
+  image:
+    name: pulumi/pulumi-java:latest
+    entrypoint: [""]
+
+variables:
+  PULUMI_STACK_STAGING: acme/website/staging
+  PULUMI_STACK_PRODUCTION: acme/website/production
+
+# Shared setup: enter the program directory.
+# The Java runtime resolves and builds the project during the Pulumi run.
+.pulumi:
+  before_script:
+    - cd infra
+
+# Merge request: preview the proposed changes.
+preview:
+  extends: .pulumi
+  stage: preview
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - pulumi preview --stack "$PULUMI_STACK_STAGING"
+
+# Push to main: deploy to the staging environment.
+deploy-staging:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment:
+    name: staging
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_STAGING"
+
+# Release tag: promote to production.
+deploy-production:
+  extends: .pulumi
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^release-/
+  environment:
+    name: production
+  script:
+    - pulumi up --yes --stack "$PULUMI_STACK_PRODUCTION"
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The `pulumi up --yes` flag applies changes without an interactive confirmation prompt, which is required in a non-interactive pipeline. The `environment` keyword records each deployment against a [GitLab environment](https://docs.gitlab.com/ci/environments/), giving you a deployment history and a one-click rollback in the GitLab UI.
+
+To promote a release, push a tag that matches the `release-*` pattern:
+
+```bash
+git tag release-2026-05-21
+git push origin release-2026-05-21
+```
+
+Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
+
+To let reviewers exercise a change in a live environment, pair the `preview` job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the merge request and destroys it when the merge request closes.
 
 {{% notes type="info" %}}
-This script assumes the CI runner executes jobs as root, which is typical for containerized GitLab runners. If your runner doesn't run as root, you may need to prefix commands with `sudo`.
+The Pulumi CLI automatically detects when it runs inside GitLab CI/CD and records the build and commit metadata. Each update in Pulumi Cloud then links back to the pipeline and merge request that triggered it — no extra configuration required.
 {{% /notes %}}
 
-```bash
-#!/bin/bash
+## Report results to GitLab
 
-# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed
-set -e -x
-# Download and install required tools.
-# pulumi
-curl -fsSL https://get.pulumi.com/ | bash
-export PATH=$PATH:$HOME/.pulumi/bin
-# Login into pulumi. This will require the PULUMI_ACCESS_TOKEN environment variable
-pulumi login
-# update the GitLab Runner's packages
-apt-get update -y
-apt-get install -y ca-certificates curl gnupg
-# nodejs
-mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-apt-get update -y
-apt-get install -y nodejs
-# yarn
-npm i -g yarn
+When a pipeline runs `pulumi preview` on a merge request, you'll usually want the proposed changes summarized on the merge request itself rather than buried in the job logs. The [Pulumi GitLab integration](/docs/integrations/version-control/gitlab/) does this: connect your GitLab group to Pulumi Cloud once, and Pulumi posts a summary of resource changes — with links to the Pulumi Cloud console — as a merge request comment, along with commit status checks. It works for every project in the group regardless of which CI/CD system runs Pulumi.
+
+## Speed up runs with caching
+
+GitLab CI/CD starts each job in a fresh container, so Pulumi re-downloads its plugins and policy packs every time. GitLab's [`cache`](https://docs.gitlab.com/ci/caching/) can only store paths inside the project directory, so point [`PULUMI_HOME`](/docs/iac/cli/environment-variables/) at a directory in the workspace and cache that:
+
+```yaml
+variables:
+  PULUMI_HOME: $CI_PROJECT_DIR/.pulumi
+
+cache:
+  key:
+    files:
+      - infra/package-lock.json
+  paths:
+    - .pulumi/plugins
+    - .pulumi/policies
 ```
 
-### `run-pulumi.sh`
+Keying the cache on your dependency manifest rebuilds it when dependencies change; use the file appropriate to your language — `package-lock.json`, `requirements.txt`, `go.sum`, the `.csproj`, or `pom.xml`.
 
-The `run-pulumi.sh` script runs the `pulumi up` command to apply any stack changes and to start
-updating your infrastructure.
+## Serialize deployments
 
-```bash
-#!/bin/bash
+When commits land faster than a pipeline finishes, deployment jobs can overlap. Running two `pulumi up` jobs against the same stack at once causes one to fail on an [update conflict](/docs/support/troubleshooting/common-issues/update-conflicts/). Assign deployment jobs a [`resource_group`](https://docs.gitlab.com/ci/resource_groups/) so GitLab runs them one at a time:
 
-# exit if a command returns a non-zero exit code and also print the commands and their args as they are executed
-set -e -x
+```yaml
+deploy-staging:
+  # ...
+  resource_group: staging
 
-# Add the pulumi CLI to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
-
-yarn install
-pulumi stack select product-catalog-service
-# The following is just a sample config setting that the hypothetical pulumi
-# program needs.
-# Learn more about pulumi configuration at: {{< absurl "/docs/concepts/config/" >}}
-pulumi config set mysetting myvalue
-pulumi up --yes # this line will be the pulumi preview command in pulumi-preview.sh
+deploy-production:
+  # ...
+  resource_group: production
 ```
 
-## Enhance Merge Requests With Pulumi
+Jobs in the same resource group queue instead of running concurrently, while jobs in different groups — staging and production here — still run in parallel.
 
-Pulumi now supports enhancing your merge requests with insights into changes to your infrastructure.
-Never miss another unintended change with the infrastructure change summary shown inline with the rest of your
-merge request notes. Learn how to [configure](/docs/using-pulumi/continuous-delivery/gitlab-app/) the integration with Pulumi.
+## Managing GitLab with Pulumi
 
-![Merge Request Note](/images/docs/guides/continuous-delivery/gitlab-app/merge_request_note.png)
+You can manage GitLab itself — projects, groups, branch protection rules, and CI/CD variables — as code with the [GitLab provider](/registry/packages/gitlab/) in the Pulumi Registry. This lets you define the CI/CD variables and project settings this guide describes as part of a Pulumi program.
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Pulumi GitLab integration](/docs/integrations/version-control/gitlab/) — merge request comments, commit statuses, and review stacks from Pulumi Cloud.
+- [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) — register GitLab as a trusted OIDC issuer.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each merge request.
+- [CI/CD troubleshooting](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

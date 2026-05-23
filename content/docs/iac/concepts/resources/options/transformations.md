@@ -19,6 +19,8 @@ The `transformations` resource option provides a list of transformations to appl
 
 Each transformation is a callback that gets invoked by the Pulumi runtime. It receives the resource type, name, input properties, resource options, and the resource instance object itself. The callback returns a new set of resource input properties and resource options that will be used to construct the resource instead of the original values.
 
+{{< resource-option-scope "transformations" >}}
+
 {{% notes type="warning" %}}
 Note that Transformations will be deprecated in the future in favor of [Transforms](/docs/concepts/options/transforms).
 

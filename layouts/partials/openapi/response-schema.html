@@ -1,5 +1,10 @@
 {{ define "openapi/response-schema.html" }}
 {{ if .schema }}
+    {{/* maxDepth defaults to 1 (one level of nested $ref expansion) for responses.
+         Callers can pass 0 to render top-level fields only and let the type-column
+         link be the drill-down (used by Request Body). */}}
+    {{ $maxDepth := 1 }}
+    {{ if isset . "maxDepth" }}{{ $maxDepth = .maxDepth }}{{ end }}
     {{ $resolved := partial "openapi/resolve-schema.html" (dict "schema" .schema "openapi" .openapi) }}
     {{ if $resolved.schemaName }}
         <div class="api-schema-label">Schema: <a href="/docs/reference/cloud-rest-api/schema/{{ $resolved.schemaName | urlize }}/">{{ $resolved.schemaName }}</a></div>
@@ -11,7 +16,7 @@
                 "required" $resolved.required
                 "openapi" .openapi
                 "depth" 0
-                "maxDepth" 1
+                "maxDepth" $maxDepth
             ) }}
         </ul>
     {{ end }}

@@ -337,15 +337,34 @@
     font-size: 0.9rem;
 }
 
-/* Response blocks: one per inline-rendered status (2xx, or 4xx/5xx with a
-   schema). Stock errors collapse into .api-response-errors below. */
+/* Bordered card used for the Request Body and each Response. Both nest a
+   field list (.api-params) under a section heading; sharing the selector
+   keeps them visually in lockstep. */
 
+.api-request-body,
 .api-response {
     margin: 1rem 0 1.25rem;
     padding: 0.75rem 1rem;
     border: 1px solid #eaeaea;
     border-radius: 4px;
     background: #fff;
+}
+
+.api-request-body .api-params,
+.api-response .api-params {
+    margin-top: 0.5rem;
+    border-top: none;
+}
+
+.api-request-body .api-param:first-child,
+.api-response .api-param:first-child {
+    padding-top: 0;
+}
+
+.api-request-body .api-param:last-child,
+.api-response .api-param:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .api-response-header {
@@ -380,18 +399,8 @@
     color: #5b3fa3;
 }
 
-.api-response .api-params {
-    margin-top: 0.5rem;
-    border-top: none;
-}
-
-.api-response .api-param:first-child {
-    padding-top: 0;
-}
-
-.api-response .api-param:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+.api-request-body .api-schema-label {
+    margin-top: 0;
 }
 
 /* Status chip: compact pill showing HTTP status code with semantic color. */

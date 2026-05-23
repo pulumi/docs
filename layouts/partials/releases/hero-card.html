@@ -1,0 +1,78 @@
+{{/*
+    Releases Hero Card
+
+    Dark card used on /releases/[slug] as the page hero. Breadcrumb at the top (linking back
+    to /releases), then heading and description, then a hero image flush
+    with the bottom and side edges of the card.
+
+    Parameters:
+    - breadcrumb_label:      Right-side breadcrumb segment (e.g., "May 2026").
+    - heading:               Card heading.
+    - description:           Body copy (markdown).
+    - hero_image:            Image path.
+    - hero_image_alt:        Alt text for the hero image.
+    - hero_image_max_width:  Optional max-width (in px) for the image,
+                             centered horizontally and flush with the
+                             bottom of the card. Image goes full-width
+                             when unset.
+*/}}
+
+{{ $breadcrumbLabel := .breadcrumb_label }}
+{{ $heading := .heading }}
+{{ $description := .description }}
+{{ $heroImage := .hero_image }}
+{{ $heroImageAlt := .hero_image_alt | default $heading }}
+{{ $heroImageMaxWidth := .hero_image_max_width }}
+
+{{ $maxWidthAttr := "" }}
+{{ with $heroImageMaxWidth }}
+    {{ $maxWidthAttr = printf ` style="max-width: %vpx;"` . }}
+{{ end }}
+
+{{ $heroImageExists := false }}
+{{ with $heroImage }}
+    {{ $fpSrc := strings.TrimPrefix "/" . }}
+    {{ if resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+        {{ $heroImageExists = true }}
+    {{ end }}
+{{ end }}
+
+<div class="bg-violet-950 text-white rounded-lg overflow-hidden">
+    <div class="flex flex-col items-center text-center gap-12 px-8 pt-16 md:px-12 md:pt-20 lg:px-16 lg:pt-24">
+        <div class="flex flex-col items-center gap-6 max-w-3xl">
+            <p class="font-mono text-sm tracking-wider uppercase m-0 flex items-center gap-2">
+                <a href="/releases/" class="text-violet-500 hover:text-white no-underline hover:no-underline">Releases</a>
+                {{ if $breadcrumbLabel }}
+                <span class="text-violet-500" aria-hidden="true">/</span>
+                <span class="text-white">{{ $breadcrumbLabel }}</span>
+                {{ end }}
+            </p>
+            {{ with $heading }}
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold tracking-tighter text-white m-0 leading-[1.1]">{{ . }}</h1>
+            {{ end }}
+            {{ with $description }}
+            <div class="text-lg text-gray-300 max-w-2xl leading-relaxed">{{ . | markdownify }}</div>
+            {{ end }}
+        </div>
+    </div>
+    {{ if $heroImage }}
+    <div class="w-full flex justify-center mt-24">
+        <div class="w-full"{{ $maxWidthAttr | safeHTMLAttr }}>
+            {{ if $heroImageExists }}
+                {{ partial "fingerprinted-img.html" (dict
+                    "src" $heroImage
+                    "alt" $heroImageAlt
+                    "class" "w-full h-auto block"
+                    "loading" "eager"
+                    "maxWidth" (or $heroImageMaxWidth 1500)
+                    "quality" 95
+                ) }}
+            {{ else }}
+                <div class="w-full aspect-[2/1] bg-violet-900/40 flex items-center justify-center text-violet-300" aria-hidden="true">
+                    {{ partial "icon.html" (dict "name" "image" "weight" "duotone" "class" "size-12") }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

@@ -1,4 +1,5 @@
 {{ $type := default "info" (.Get "type") }}
+{{ $size := .Get "size" }}
 {{ $icon := "info" }}
 
 {{ if eq $type "tip" }}
@@ -10,7 +11,7 @@
 {{ end }}
 
 
-<div class="note note-{{ $type }}">
+<div class="note note-{{ $type }}{{ if $size }} note-{{ $size }}{{ end }}">
     <div class="icon-and-line">
         {{ partial "icon.html" (dict "name" $icon "weight" "fill") }}
         <div class="line"></div>

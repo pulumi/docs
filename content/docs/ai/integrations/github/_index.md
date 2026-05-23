@@ -20,9 +20,9 @@ Neo sees the diff, the stacks linked to the repository, and their current state.
 
 ## Setting up the integration
 
-### 1. Install the Pulumi Neo GitHub App
+### 1. Install the Pulumi GitHub App
 
-A GitHub organization admin installs the **Pulumi Neo GitHub App** on the organization or user account that owns the repositories you want Neo to access.
+A GitHub organization admin installs the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) on the organization or user account that owns the repositories you want Neo to access.
 
 ### 2. Link your Pulumi user to GitHub
 

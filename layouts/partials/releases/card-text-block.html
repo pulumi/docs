@@ -1,0 +1,44 @@
+{{/*
+    Releases Card — Text Block
+
+    Internal partial. Renders the icon + title + description block used by
+    every card variant.
+
+    Figma tokens applied:
+      - Icon: 32px (size-8), violet-primary
+      - Title (heading-2): 30px / font-semibold / leading-1.1 / tracking-tighter / service-black
+      - Description (body regular): 16px / service-black / leading-6
+      - Inline arrow icon appended when isLinked.
+
+    Parameters:
+    - icon:        Optional Phosphor icon name (rendered above the title).
+    - title:       Card title.
+    - description: Card description (markdown).
+    - isLinked:    Bool. Adds the inline arrow icon when true.
+*/}}
+
+{{ $icon := .icon }}
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $isLinked := .isLinked }}
+
+<div class="flex flex-col gap-3">
+    {{ with $icon }}
+    <div class="text-violet-primary mb-1">
+        {{ partial "icon.html" (dict "name" . "weight" "duotone" "class" "size-8") }}
+    </div>
+    {{ end }}
+    {{ with $title }}
+    <h3 class="text-xl md:text-2xl lg:text-3xl font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h3>
+    {{ end }}
+    {{ with $description }}
+    <div class="text-base text-service-black leading-6">
+        {{ . | markdownify }}
+        {{ if $isLinked }}
+        <span class="inline-flex items-center text-violet-primary ml-1 align-middle -mt-1">
+            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+        </span>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>

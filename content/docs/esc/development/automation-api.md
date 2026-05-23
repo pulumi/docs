@@ -20,7 +20,7 @@ Automation API methods for ESC include:
 
 These methods provide the building blocks for advanced automation scenarios such as dynamically configuring applications based on environments, managing environment dependencies, and integrating ESC into CI/CD pipelines.
 
-If you haven't used Automation API before, get started [here](/docs/using-pulumi/automation-api/getting-started-automation-api/).
+If you haven't used Automation API before, get started [here](/docs/iac/guides/building-extending/automation-api/).
 
 Pulumi ESC Automation API capabilities are available for [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Here are some examples:
 

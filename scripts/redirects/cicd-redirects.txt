@@ -1,0 +1,5 @@
+docs/iac/guides/continuous-delivery/spinnaker/index.html|https://www.pulumi.com/docs/iac/guides/continuous-delivery/
+docs/iac/using-pulumi/continuous-delivery/spinnaker/index.html|https://www.pulumi.com/docs/iac/guides/continuous-delivery/
+docs/guides/continuous-delivery/spinnaker/index.html|https://www.pulumi.com/docs/iac/guides/continuous-delivery/
+docs/using-pulumi/continuous-delivery/spinnaker/index.html|https://www.pulumi.com/docs/iac/guides/continuous-delivery/
+docs/iac/packages-and-automation/continuous-delivery/spinnaker/index.html|https://www.pulumi.com/docs/iac/guides/continuous-delivery/

@@ -92,7 +92,7 @@ Pulumi Cloud includes an AI agent, [Pulumi Neo](/docs/ai/), that works across th
 
 ## Workflows
 
-With open source Pulumi, you run Pulumi operations yourself—from a local machine or from automation you set up, such as a CI job or a script using the [Automation API](/docs/iac/automation-api/). There is no built-in mechanism for emitting events when something changes; reacting to deployments or resource changes is something you would wire up yourself.
+With open source Pulumi, you run Pulumi operations yourself—from a local machine or from automation you set up, such as a CI job or a script using the [Automation API](/docs/iac/concepts/automation-api/). There is no built-in mechanism for emitting events when something changes; reacting to deployments or resource changes is something you would wire up yourself.
 
 Pulumi Cloud includes a managed [deployment service](/docs/deployments/deployments/) that runs Pulumi operations remotely rather than from a local machine—for example, in response to Git pushes or on demand. It can also send [webhooks](/docs/deployments/webhooks/) for events such as deployments, resource updates, and policy violations, which you can use to trigger custom, event-driven workflows.
 

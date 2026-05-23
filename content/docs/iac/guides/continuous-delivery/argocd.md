@@ -54,27 +54,12 @@ This guide assumes you are using Pulumi Cloud. PKO also supports self-managed st
 
 ## Authenticate with Pulumi Cloud
 
-When you use Pulumi Cloud, your cluster only needs to authenticate to Pulumi Cloud. [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then delivers cloud credentials, secrets, and configuration to every `Stack` consistently, so you don't have to store separate cloud provider keys in the cluster for each stack.
+Your cluster needs a Pulumi Cloud identity. Give it one in one of two ways. **Choose one — you don't need both:**
 
-### Attach an ESC environment
+- **OIDC token exchange** — no stored secret; PKO workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. Recommended.
+- **A static access token** — a long-lived Pulumi access token stored in a Kubernetes Secret.
 
-Use the `spec.environment` field on a `Stack` to attach one or more ESC environment names. The configuration and secrets from those environments—including dynamically brokered, short-lived cloud credentials—become available to your Pulumi program automatically:
-
-```yaml
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: webapp-staging
-  namespace: pulumi
-spec:
-  serviceAccountName: webapp
-  stack: myorg/webapp/staging
-  projectRepo: https://github.com/myorg/pulumi-webapp.git
-  branch: main
-  environment:
-    - aws-credentials
-    - shared-config
-```
+Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then delivers cloud credentials, secrets, and configuration to every `Stack` consistently, so you don't have to store separate cloud provider keys in the cluster for each stack.
 
 ### Eliminate static tokens with OIDC
 
@@ -107,6 +92,26 @@ spec:
 {{% notes type="info" %}}
 Static tokens are long-lived credentials stored in the cluster. Where possible, use the [OIDC approach](#eliminate-static-tokens-with-oidc) instead so workspace pods receive short-lived tokens.
 {{% /notes %}}
+
+### Attach an ESC environment
+
+Once the cluster is authenticated, use the `spec.environment` field on a `Stack` to attach one or more ESC environment names. The configuration and secrets from those environments—including dynamically brokered, short-lived cloud credentials—become available to your Pulumi program automatically:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: webapp-staging
+  namespace: pulumi
+spec:
+  serviceAccountName: webapp
+  stack: myorg/webapp/staging
+  projectRepo: https://github.com/myorg/pulumi-webapp.git
+  branch: main
+  environment:
+    - aws-credentials
+    - shared-config
+```
 
 ## Define a Stack custom resource
 
@@ -337,11 +342,11 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - Review the workspace pod logs for the stack.
 - Enable `refresh: true` so PKO reconciles Pulumi state with the real state of your infrastructure before each update.
 
-## Next steps
+## Additional resources
 
-- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
-- [Pulumi ESC](/docs/esc/)
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/)
-- [Kubernetes provider](/registry/packages/kubernetes/)
-- [Continuous delivery](/docs/iac/guides/continuous-delivery/)
-- [Argo CD documentation](https://argo-cd.readthedocs.io/)
+- [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — the operator that reconciles Pulumi stacks from inside your cluster.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to stacks and developers consistently.
+- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a cluster's OIDC token for a short-lived Pulumi access token.
+- [Kubernetes provider](/registry/packages/kubernetes/) — manage Kubernetes resources with Pulumi.
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [Argo CD documentation](https://argo-cd.readthedocs.io/) — official Argo CD project documentation.

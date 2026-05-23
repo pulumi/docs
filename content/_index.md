@@ -8,9 +8,9 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
-    badge_highlight_text: "Meet Neo: "
-    badge_text: "AI for infrastructure"
-    badge_link: /product/neo/
+    badge_highlight_text: "New Release:"
+    badge_text: "Building for the Agentic Era"
+    badge_link: /releases/agentic-infrastructure-era/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |

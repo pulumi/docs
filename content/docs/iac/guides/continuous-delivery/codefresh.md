@@ -1,8 +1,8 @@
 ---
-title_tag: "Using Codefresh | CI/CD"
-meta_desc: This page will walk you through setting up Codefresh CI/CD with a Pulumi program.
+title_tag: "Using Codefresh with Pulumi | CI/CD"
+meta_desc: Run Pulumi in Codefresh pipelines to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: Codefresh
-h1: Pulumi CI/CD & Codefresh
+h1: Using Codefresh with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -18,114 +18,129 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/codefresh/
 ---
 
-[Codefresh](https://codefresh.io) is a CI/CD platform designed for containers and microservices. It has built-in support for Docker, Kubernetes and Helm.
+[Codefresh](https://codefresh.io) is a CI/CD platform for Kubernetes and Argo CD, now part of Octopus Deploy. Its CI pipelines run each step as a container, so you run Pulumi in a pipeline step that uses the official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) container image. That image ships the Pulumi CLI and every language runtime, so the same pipeline works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/) Pulumi supports.
 
-Codefresh pipelines are composed by different [steps](https://codefresh.io/docs/docs/codefresh-yaml/steps/) where each step runs inside a Docker container.
-Since Pulumi is also released as [Docker container](https://hub.docker.com/r/pulumi/pulumi), it is very easy to use Pulumi in Codefresh pipelines.
+{{% notes type="info" %}}
+This guide assumes Pulumi Cloud as the [state backend](/docs/iac/concepts/state-and-backends/). Pulumi can also run in CI/CD with a self-managed backend, but Pulumi Cloud is assumed throughout because it simplifies pipeline authentication and is the most common choice.
+{{% /notes %}}
 
-## Project setup
+## How Pulumi works with Codefresh
 
-First of all follow the instructions for creating a Pulumi stack. There are three ways to do this:
+To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI. A Codefresh [freestyle step](https://codefresh.io/docs/docs/pipelines/steps/freestyle/) provides that environment: it runs a set of commands inside a container image you choose. Point the step at `pulumi/pulumi` and it can run any `pulumi` command — `install`, `preview`, `up` — exactly as you would on your own machine.
 
-1. [Clone an Existing Example](https://github.com/pulumi/examples)
-2. [Use the New Project Wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI](/docs/install/) and run `pulumi new` to select a template.
+No special setup is required on the Codefresh side, and Pulumi runs on both free and paid accounts. You wire up authentication through pipeline variables, described below.
 
-Then [signup for a Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) and [create a pipeline](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/pipelines/). There is no special setup needed on the Codefresh side (i.e. you can use Pulumi on both free and paid Codefresh accounts).
+{{% notes type="info" %}}
+Codefresh's GitOps offering is built on Argo CD. If you deploy with Argo CD rather than Codefresh CI pipelines, see the [Argo CD guide](/docs/iac/guides/continuous-delivery/argocd/) and the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/).
+{{% /notes %}}
 
-### Environment Variables
+## Prerequisites
 
-To use Pulumi within Codefresh, there are a few environment variables you'll need to set for each
-build.
+Before you begin, make sure you have:
 
-The first is `PULUMI_ACCESS_TOKEN`, which is required to authenticate with pulumi.com in order to
-perform the preview or update. You can create a new [Pulumi access token](/docs/pulumi-cloud/accounts#access-tokens)
-specifically for your CI/CD job on your [Pulumi Account page](https://app.pulumi.com/account/tokens).
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. A [Codefresh account](https://codefresh.io/docs/docs/getting-started/create-a-codefresh-account/) with a [pipeline](https://codefresh.io/docs/docs/pipelines/pipelines/) connected to your Git repository.
+1. A Pulumi program in that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
 
-You can either add the token on the pipeline itself as a variable, or store it globally using [Codefresh shared configuration](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/shared-configuration/).
+## Authenticate with Pulumi Cloud
 
-![Pulumi token in Codefresh](/images/docs/reference/codefresh/codefresh-pulumi-token.png)
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Pulumi reads the token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login.
 
-Next, you will also need to set environment variables specific to your cloud resource provider.
-For example, if your stack is managing resources on AWS, `AWS_ACCESS_KEY_ID` and
-`AWS_SECRET_ACCESS_KEY`.
+Store the token outside of source control. Add it as an encrypted variable on the pipeline itself, or — to reuse it across pipelines — create a [shared configuration](https://codefresh.io/docs/docs/pipelines/configuration/shared-configuration/) context and import it. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
-## Codefresh CI/CD pipeline with Pulumi
+[Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a pipeline or a developer's machine, a single environment definition works in both places.
 
-In your pipeline you need at least two steps.
+You can remove the static token entirely with [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): the pipeline exchanges a short-lived OIDC token issued by Codefresh for a temporary Pulumi access token, so no long-lived credential is stored anywhere.
 
-1. A step that downloads all Pulumi dependencies according to your programming language
-1. A step that performs the actual deployment
+## Provide cloud credentials
 
-In all cases you use a [Codefresh freestyle step](https://codefresh.io/docs/docs/codefresh-yaml/steps/freestyle/) with the Pulumi Docker image.
+When Pulumi runs, your program also needs credentials for the cloud provider it manages. You can supply them in one of two ways:
 
-```yaml
-  RunMyPulumiStep:
-    title: Running Pulumi inside Codefresh
-    image: pulumi/pulumi
-    commands:
-      # run any pulumi command that you would run locally such as:
-      - pulumi login
-      - pulumi stack
-```
+- **Pulumi ESC (recommended).** Configure an [ESC environment](/docs/esc/) to broker short-lived cloud credentials through OIDC. Your program receives temporary credentials scoped to exactly what it needs, and the pipeline stores nothing but its Pulumi access token.
+- **Pipeline variables.** Set the provider's credentials as encrypted pipeline variables — for example, `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` for AWS — and expose them to the freestyle step.
 
-Pulumi will search for a login token named `PULUMI_ACCESS_TOKEN` so assuming that you have setup this variable in the pipeline, Pulumi will not ask for interactive login.
+{{% notes type="warning" %}}
+Never commit cloud credentials or the Pulumi access token to your repository. Keep them in encrypted pipeline variables or a shared secret context so the values stay protected and access is auditable.
+{{% /notes %}}
 
-For Kubernetes based deployments, there is no other setup needed. Codefresh is setting up automatically a `kubeconfig` in all freestyle steps which is the same mechanism used by `kubectl` and Pulumi to access Kubernetes clusters. You only need to select your cluster if you have more than one, using a `kubectl config use-context` command prior to running `pulumi`.
+## Configure a Codefresh pipeline
 
-For other non-Kubernetes deployments, you need to add additional environment variables in your pipeline that will be used by Pulumi for accessing your cloud provider.
-
-Here is a full example:
-
- `codefresh.yml`
+A Codefresh pipeline is defined in a `codefresh.yml` file. The following pipeline clones your repository and runs Pulumi against a [stack](/docs/iac/concepts/stacks/):
 
 ```yaml
 version: '1.0'
 stages:
-  - prepare
-  - build
+  - clone
   - deploy
 steps:
-  main_clone:
-    title: Cloning main repository...
+  clone:
+    title: Clone repository
     type: git-clone
+    stage: clone
     repo: '${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}'
     revision: '${{CF_REVISION}}'
-    stage: prepare
-    git: github-1
-  BuildProject:
-    title: Build project
-    stage: build
-    image: pulumi/pulumi
-    commands:
-      - yarn install
-  SelectMyCluster:
-    title: Select K8s cluster
-    stage: deploy
-    image: codefresh/kubectl:1.13.3
-    commands:
-      - kubectl config get-contexts
-      - kubectl config use-context "kostis-demo@FirstKubernetes"
-  RunPulumi:
-    title: Deploying
+  deploy:
+    title: Deploy with Pulumi
+    type: freestyle
     stage: deploy
     image: pulumi/pulumi
+    working_directory: '${{clone}}/infra'
+    environment:
+      - PULUMI_ACCESS_TOKEN=${{PULUMI_ACCESS_TOKEN}}
     commands:
-      - pulumi login
-      - pulumi stack select dev
-      # (Optional) Use pulumi stack to get more information in CI/CD logs about the current stack
-      - pulumi stack
-      - pulumi up --non-interactive --yes
+      - pulumi install
+      - pulumi stack select acme/website/staging
+      - pulumi up --yes
 ```
 
-This pipeline uses a Kubernetes/Typescript Pulumi stack. Once you run it you should see a new entry in your Pulumi history as well as the deployment in the Codefresh Kubernetes Dashboard.
+The example assumes a Pulumi program in an `infra/` directory. [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) installs the program's language dependencies and required plugins, so the same step works for a program written in any supported language.
 
-![Pulumi in Codefresh pipeline](/images/docs/reference/codefresh/pulumi-pipeline.png)
+## Build a trunk-based CI/CD workflow
 
-You can find the full more details at the [full documentation page](https://codefresh.io/docs/docs/yaml-examples/examples/pulumi/).
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. Codefresh [Git triggers](https://codefresh.io/docs/docs/pipelines/triggers/git-triggers/) distinguish pull request, branch, and tag events, so you can map each stage of the workflow to its own trigger.
 
-## Previewing pull requests
+### Preview infrastructure changes in a pull request
 
-Codefresh has full support for [branch triggers](https://codefresh.io/docs/docs/configure-ci-cd-pipeline/triggers/git-triggers/) with specific expressions as well as [conditionals](https://codefresh.io/docs/docs/codefresh-yaml/conditional-execution-of-steps/).
-You can modify your existing pipeline or add another pipeline with a different trigger that runs `pulumi preview` or any other Pulumi command
-in a different scenario.
+When a pull request is opened, run a dry run instead of a deployment. Attach a Git trigger that fires on pull request events and have the freestyle step run [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/):
+
+```yaml
+    commands:
+      - pulumi install
+      - pulumi stack select acme/website/staging
+      - pulumi preview
+```
+
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+
+### Deploy to staging on merge to the main branch
+
+When a pull request merges, run [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) against an environment that receives continuous delivery, such as a shared development or staging environment. Attach a Git trigger that fires on pushes to the main branch:
+
+```yaml
+    commands:
+      - pulumi install
+      - pulumi stack select acme/website/staging
+      - pulumi up --yes
+```
+
+### Promote to production with a git tag
+
+Production updates should be deliberate. Keep production on its own stack and deploy it only when you push a release tag — for example, a moving `production` tag that you advance to a commit already validated in staging:
+
+```yaml
+    commands:
+      - pulumi install
+      - pulumi stack select acme/website/production
+      - pulumi up --yes
+```
+
+Configure this pipeline's Git trigger to fire on tag push events rather than branch pushes. Promotion then becomes a single, traceable Git operation, and production never deploys from an untested commit.
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Argo CD](/docs/iac/guides/continuous-delivery/argocd/) — deploy Pulumi stacks with Argo CD, which underpins Codefresh GitOps.

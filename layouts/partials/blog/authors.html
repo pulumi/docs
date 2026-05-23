@@ -1,11 +1,17 @@
 <span class="flex items-center">
+    {{/* Optional per-author role labels from front matter, e.g. `author_roles: { adam-gordon-bell: "as told to" }`. */}}
+    {{ $roles := $.context.Params.author_roles }}
     {{ range $id := $.authors }}
         {{ $authorPage := $.context.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
         {{ $authorData := index site.Data.team.team $id }}
-
+        {{ $role := "" }}
+        {{ with $roles }}{{ with index . $id }}{{ $role = . }}{{ end }}{{ end }}
 
         <span class="flex items-center">
             {{ if $authorData }}
+                {{ if $role }}
+                    <span class="mr-2 italic text-gray-600">{{ $role }}</span>
+                {{ end }}
                 <a data-track="{{ $authorData.name | urlize }}-img" class="rounded-full p-1 bg-violet-200 mr-2" href="{{ $authorPage.RelPermalink }}">
                     <img class="w-8 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" />
                 </a>

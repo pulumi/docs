@@ -1,8 +1,8 @@
 ---
-title_tag: "Integrate Octopus Deploy | CI/CD"
-meta_desc: This page gives an overview of how to integrate Octopus Deploy with a Pulumi program.
+title_tag: "Using Octopus Deploy with Pulumi | CI/CD"
+meta_desc: Run Pulumi in an Octopus Deploy deployment process to deploy infrastructure changes and promote them to production through Octopus environments.
 title: Octopus Deploy
-h1: Pulumi CI/CD & Octopus Deploy
+h1: Using Octopus Deploy with Pulumi
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
@@ -16,111 +16,123 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/octopus-deploy/
 ---
 
-[Octopus Deploy](https://octopus.com) is a deployment automation server, designed to make it easy to orchestrate releases and deploy applications, whether on-premises or in the cloud. It can integrate with your existing build pipeline such as Jenkins, TeamCity, Azure DevOps etc.
+[Octopus Deploy](https://octopus.com) is a deployment automation server that orchestrates releases across environments. Octopus is organized around [projects](https://octopus.com/docs/projects), versioned releases, and [environments](https://octopus.com/docs/infrastructure/environments) that a release advances through. You run Pulumi as a step in an Octopus [deployment process](https://octopus.com/docs/projects/deployment-process), so an infrastructure change is deployed and promoted with the same release mechanics Octopus already uses for application code.
+
+{{< cicd-cloud-note >}}
+
+## How Pulumi works with Octopus Deploy
+
+Octopus Deploy is a *continuous delivery* server, not a continuous integration server: it does not track your version control system, and it does not watch for pull requests or branch pushes. Octopus is typically paired with an upstream CI system — such as [GitHub Actions](/docs/iac/guides/continuous-delivery/github-actions/), [Jenkins](/docs/iac/guides/continuous-delivery/jenkins/), or [TeamCity](/docs/iac/guides/continuous-delivery/teamcity/) — that builds and tests your code, runs pull request previews, and produces the versioned package Octopus releases.
+
+To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI. In an Octopus deployment process, a **Run a Script** step provides that environment. Octopus [execution containers](https://octopus.com/docs/projects/steps/execution-containers-for-workers) let that step run inside a container image you choose: point it at the official [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image and the step has the Pulumi CLI and every language runtime preinstalled. The same deployment process then works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/) Pulumi supports.
 
 ## Prerequisites
 
-- A working installation of Octopus or a hosted instance from [https://octopus.com](https://octopus.com).
-- An account in the [Pulumi Cloud](https://app.pulumi.com/signup).
-- The [latest version of Pulumi](/docs/install/).
-- Setup a new project and [stack](/docs/concepts/stack/) using one of our [Get Started](/docs/get-started/) guides or by running [`pulumi new`](/docs/iac/cli/commands/pulumi_new)
-and choosing one of the many templates that are available.
-- Optionally, also create a CI pipeline from a source control repository of your choice to be the source of packages. You will learn more about packages and how to create them later in this guide.
+Before you begin, make sure you have:
 
-## Sample Project
+1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
+1. An Octopus Deploy instance — [Octopus Cloud](https://octopus.com) or a self-hosted server — with a project and one or more environments configured.
+1. A Pulumi program in a Git repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. An upstream CI system that builds your program and publishes it as a [package](https://octopus.com/docs/packaging-applications) for Octopus to release.
 
-For the sake of this walkthrough, we will try to deploy an [AWS example](https://github.com/pulumi/examples/tree/master/aws-ts-hello-fargate). The example deploys a containerized Python Flask app on [AWS Fargate](https://aws.amazon.com/fargate/). This example also shows a pattern that is common with Pulumi -- keeping your infrastructure app (Pulumi) with your actual application code, but certainly not necessary. Regardless of how you decide to structure your project, you will need to provide the package to Octopus somehow.
+## Authenticate with Pulumi Cloud
 
-## Stack and Branch Mappings
+Give your deployment process a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-The steps below act on a hypothetical stack: `my-org/my-project/aws-ts-hello-fargate`.
-You can create a new stack by running [`pulumi stack init`](/docs/iac/cli/commands/pulumi_stack_init) from the folder containing the `Pulumi.yaml` file.
+- **A stored access token.** Save a long-lived [Pulumi access token](/docs/administration/access-identity/access-tokens/) as a sensitive Octopus variable. Simple to set up and works on every Octopus version.
+- **OpenID Connect (OIDC), recommended where supported.** Exchange a short-lived token issued by Octopus for a temporary Pulumi access token, so no long-lived credential is stored anywhere.
 
-**Note**: The names used above are purely for demonstration purposes only.
-You may choose a naming convention that best suits your organization.
+### Use a stored access token
 
-## Octopus Setup
+Pulumi reads its access token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login. Store the token as a **sensitive** Octopus [project variable](https://octopus.com/docs/projects/variables) — or, to reuse it across projects, in a [library variable set](https://octopus.com/docs/projects/variables/library-variable-sets) — named `PULUMI_ACCESS_TOKEN`. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the deployment's identity isn't tied to an individual.
 
-### Infrastructure
+Marking the variable sensitive keeps its value out of logs and the Octopus UI. Scope it to the environments that should use it.
 
-Infrastructure in Octopus is represented as environments, deployment targets and workers (tentacles or SSH machines.) You could think of each environment as representing one of your Pulumi stacks. For example, if you are creating cloud infrastructure that represents your dev, staging and prod environments, each of those would typically map to a [Pulumi stack](/docs/concepts/stack/) and you could create an Octopus environment for each of those.
+### Use OIDC
 
-In a typical scenario where Pulumi is creating your cloud infrastructure, you will only need to a worker that can run the Pulumi CLI commands against your code package.
+Octopus Deploy 2025.1 and later can issue a short-lived OIDC token for a deployment run through a [Generic OpenID Connect account](https://octopus.com/docs/infrastructure/accounts/openid-connect). Pulumi Cloud can register Octopus Server as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/), which removes the need to store a static `PULUMI_ACCESS_TOKEN`.
 
-### Project
+The flow is generic:
 
-A project represents the application being deployed and uses versioned packages (detailed below) as well as variables, during the deployment process. A project also contains a deployment process, which is a series of steps that are associated with "deploying" your project. Projects can contain the actual runtime application (a Go service, or a Python Flask app, etc.), as well as any infrastructure required.
+1. Register your Octopus Server as an OIDC issuer in Pulumi Cloud, and configure a Generic OIDC account in Octopus whose audience matches what Pulumi Cloud expects.
+1. During the deployment, the Run a Script step reads the issued token from the account's `OpenIdConnect.Jwt` variable.
+1. The step exchanges that token for a temporary Pulumi access token with `pulumi login --oidc-token <token> --oidc-org <your-org>`.
 
-### Packages
+{{% notes type="info" %}}
+The OIDC path requires Octopus Deploy 2025.1 or later, and Pulumi Cloud must be able to reach your Octopus Server's OIDC discovery endpoint to validate the token. This works for Octopus Cloud; a firewalled self-hosted server may not be reachable. See [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) for the full configuration reference.
+{{% /notes %}}
 
-Packages can be your source code bundled-up in one of the [supported formats](https://octopus.com/docs/packaging-applications#supported-formats). They can also just be a handful of scripts that you may want to use during your deployment process.
+## Provide cloud credentials
 
-In order to create a package, Octopus offers several ways that you can integrate into your existing build (CI) system. [Learn more](https://octopus.com/docs/packaging-applications/create-packages) about the options available to you for packaging your apps.
+When Pulumi runs, your program also needs credentials for the cloud provider it manages. You can supply them in one of two ways:
 
-For Pulumi apps, you can package the entire Pulumi app and extract the bundled package onto a worker where the Pulumi CLI can access them.
+- **Pulumi ESC (recommended).** Configure a [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) environment to broker short-lived cloud credentials through OIDC. Your program receives temporary credentials scoped to exactly what it needs, and the deployment stores nothing but its Pulumi access token. Because ESC delivers those values the same way whether the consumer is an Octopus deployment or a developer's machine, a single environment definition works in both places.
+- **Octopus accounts and variables.** Add the provider's credentials as an Octopus [account](https://octopus.com/docs/infrastructure/accounts) — for example an AWS or Azure account — or as sensitive variables for other clouds, and expose them to the Run a Script step.
 
-## Deployment Process
+{{% notes type="warning" %}}
+Never commit cloud credentials or the Pulumi access token to your repository. Keep them in sensitive Octopus variables or accounts so the values stay protected and access is auditable.
+{{% /notes %}}
 
-In order to create an [Octopus deployment process](https://octopus.com/docs/deployment-process), project variables need to be configured for each of the environments which maps to a Pulumi stack. Each Pulumi stack could use environment-specific configuration. For example, each stack (or environment) could be deployed using different cloud credentials. So at a minimum you would need to configure those credentials needed for deploying a Pulumi stack.
+## Run Pulumi in a deployment process
 
-### Configure Project Variables
+Add a **Run a Script** step to your project's deployment process and run the Pulumi CLI against a [stack](/docs/iac/concepts/stacks/). The following inline Bash script assumes the Pulumi program lives in an `infra/` directory of the deployed package:
 
-You can configure your AWS Account and Azure Subscription credentials as project variables using the built-in `AWS Account` and `Azure Subscription` variable types. Before you can do that, though, you will need to add them to the **Accounts** section under **Infrastructure** in your Octopus instance.
+```bash
+cd infra
 
-For other cloud providers, you will need to add the account credentials directly as a project variable using the appropriate built-in variable type.
+# Install the program's language dependencies and required plugins.
+pulumi install
 
-Variables can be scoped right down to the environment that can access them. For sensitive strings, be sure to set the right scopes so that the account credentials are not accidentally used by the wrong environments.
+# Select the stack for the environment being deployed.
+pulumi stack select acme/website/staging
 
-#### PULUMI_ACCESS_TOKEN
+# Apply the infrastructure changes.
+pulumi up --yes
+```
 
-To run Pulumi commands non-interactively, you will need to set the env var `PULUMI_ACCESS_TOKEN` as a [project variable](https://octopus.com/docs/deployment-process/variables). To [create a new access token](/docs/pulumi-cloud/accounts#access-tokens), go the [Access Tokens](https://app.pulumi.com/account/tokens) page in Pulumi Cloud.
+Bind `PULUMI_ACCESS_TOKEN` to the step from the sensitive variable you created, or run the OIDC `pulumi login` exchange before the other commands. Set the step's [execution container](https://octopus.com/docs/projects/steps/execution-containers-for-workers) image to `pulumi/pulumi` so the CLI and every language runtime are already present — no installation step required.
 
-### Create the Process
+[`pulumi install`](/docs/iac/cli/commands/pulumi_install/) installs the program's language dependencies and required plugins, so the same step works for a program written in any supported language.
 
-A process consists of the steps to execute in a project. The following sections outline the steps for configuring your process in order to use Pulumi to deploy infrastructure (not be confused with Octopus Infrastructure).
+## Build a trunk-based CI/CD workflow
 
-#### Extract the Code Package
+The most common way to run Pulumi in CI/CD follows a [trunk-based development model](/docs/iac/guides/continuous-delivery/#the-trunk-based-development-workflow): work merges into a single main branch, and deployments flow outward from there. Because Octopus is a delivery server, the work is split: your upstream CI system handles the pull request and packaging stages, and Octopus deploys each release and promotes it through its environments.
 
-- Click on the **Add Step** button in your project's **Process** section.
-- Click the **Referenced Packages** and choose the package that contains your Pulumi infrastructure app.
-    - **Package feed**: Choose the appropriate source for your package.
-    - **Package ID**: This is usually derived from your package, but enter a name of your choice. This ID will be used later.
-    - **Package Name**: Enter any name.
+### Preview infrastructure changes
 
-  ![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/package-reference.png)
+A [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) reports the proposed changes without modifying any resources. Run it on every pull request in your upstream CI system so reviewers see the infrastructure changes alongside the code diff.
 
-- Select the **Run a Script**, fill out the following fields as follows:
-    - **Script Source**: Inline source code
-    - **Inline Source Code**: (click the **Bash** radio button)
+Within Octopus, you can also preview before applying: run `pulumi preview` as an early step in the deployment process, then add a [manual intervention and approval step](https://octopus.com/docs/projects/built-in-step-templates/manual-intervention-and-approvals) that pauses the deployment until someone signs off on the preview. The `pulumi up` step runs only after approval.
 
-    ```bash
-      # Remove any previously extracted packages
-      rm -rf /tmp/pulumi-app
-      # Use the pre-defined variable to get the extracted path for the package.
-      extractedPath=$(get_octopusvariable "Octopus.Action.Package[aws-typescript].ExtractedPath")
-      # Copy the extracted package contents to another directory that can be accessed by other steps.
-      cp -r "${extractedPath}/infrastructure/" /tmp/pulumi-app
-      cd /tmp/pulumi-app
-    ```
+To let reviewers exercise a change in a live environment before it merges, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
-#### Run Pulumi
+### Deploy to staging on merge
 
-- Click on **Add Step** again and search for `Pulumi` from the **Community Library Steps**.
-- Fill out the configuration as appropriate for your stack.
-    - In the following screenshot the stack configuration is overridden using a file that is created in a separate **Run a script** step.
-    - Overriding the stack configuration is not required. It was done here for demonstrating the use of the `--config-file` flag.
+When a pull request merges, your upstream CI system publishes a new package and creates an Octopus release. Octopus deploys that release to an environment that receives continuous delivery — such as a shared development or staging environment — by running `pulumi up` against the stack for that environment.
 
-![Add Package Reference](/images/docs/guides/continuous-delivery/octopus-deploy/run-pulumi.png)
+### Promote to production
 
-To deploy a package, create a release from the latest package using the appropriate package feed and deploy it to an environment.
-To do that, click on **Releases** under the **Projects** tab and click on **Create Release**, and follow the on-screen instructions.
+Octopus [lifecycles](https://octopus.com/docs/releases/lifecycles) make the production deployment a deliberate, traceable step. Rather than rebuilding, you *promote* the same release that was validated in staging to the Production environment, where the deployment process runs `pulumi up` against the production stack. Trigger the promotion from a release marker in your upstream CI — for example, a moving `production` Git tag that you advance to a commit already verified in staging. Production never deploys an untested build.
 
-## Additional Information
+## Speed up builds with caching
 
-### Manual Intervention Steps
+A fresh Octopus worker starts with an empty plugin cache, so Pulumi re-downloads its provider plugins on every deployment. Octopus has no native cross-deployment cache for these runs. To avoid the repeated downloads, bake the provider plugins into a custom image:
 
-Since Octopus Deploy is a _deployment_ automation server it does not inherit the capabilities of a traditional VCS wherein you have Pull Request or Push builds. With Pulumi modifying your infrastructure, you may be interested in running `pulumi preview` first, then run `pulumi up` but only if the `preview` looks right to you. One way to do this is, to add a [Manual Intervention and Approval Step](https://octopus.com/docs/deployment-process/steps/manual-intervention-and-approvals). With this step, you can effectively pause the deployment of your infrastructure changes until someone has signed-off on it. This is desirable in a team-based environment where several members might be making changes.
+1. Derive an image from `pulumi/pulumi`.
+1. Run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install/) for each provider your program uses.
+1. Use that image as the execution container for the Run a Script step.
 
-### Variable Sets
+This makes each deployment deterministic and removes plugin-download time from every run. See the [plugins documentation](/docs/iac/concepts/plugins/) for details.
 
-In addition to Project Variables, Octopus Deploy also supports [Variable Sets](https://octopus.com/docs/deployment-process/variables/library-variable-sets) which are variables that are common across deployment environments. Variable Sets can be scoped just like regular Project-specific variables. [Learn more](https://octopus.com/docs/deployment-process/variables) about all of the ways you can make use of the rich configuration system in Octopus Deploy.
+## Report results on pull requests
+
+Octopus Deploy is not aware of pull requests, but Pulumi Cloud's [version control integrations](/docs/integrations/version-control/) work independently of whichever system runs Pulumi. A version control integration lets Pulumi Cloud post infrastructure-change summaries as pull request comments and status checks, and link each stack update back to the commit and pull request that produced it. Pulumi maintains integrations for popular version control systems — see [Version Control](/docs/integrations/version-control/) for the current list.
+
+## Additional resources
+
+- [Continuous delivery](/docs/iac/guides/continuous-delivery/) — overview of running Pulumi in CI/CD.
+- [CI/CD troubleshooting guide](/docs/iac/guides/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
+- [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to deployments and developers consistently.
+- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
+- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system.
