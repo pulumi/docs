@@ -53,6 +53,7 @@ sections:
         description: |
           The new `pulumi do` command enables direct operations like create, read, update, delete, and list
           across all Pulumi-supported clouds and services.
+        link: /blog/pulumi-do-direct-resource-operations/
 
       - variant: text
         icon: user-circle-plus
@@ -60,6 +61,7 @@ sections:
         description: |
           Ephemeral Pulumi Cloud accounts allow agents like Claude Code and Codex to spin up Pulumi-managed
           infrastructure without requiring a human in the loop.
+        link: /docs/administration/organizations-teams/agent-accounts/
 
       - variant: image-left
         image: /images/releases/may-2026/release-cloud-cli.svg
@@ -188,4 +190,5 @@ blog_section:
     - /blog/neo-integrations
     - /blog/neo-github-slack
     - /blog/neo-automations
+    - /blog/pulumi-do-direct-resource-operations
 ---
