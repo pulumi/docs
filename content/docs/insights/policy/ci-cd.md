@@ -47,7 +47,7 @@ GitHub Actions downloads policy packs on each workflow run. You can cache the `~
       ${{ runner.os }}-pulumi-policies-
 ```
 
-For complete workflow examples including plugin caching, multiple languages, and environment configuration, see the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/#caching-plugins-and-policy-packs).
+For complete workflow examples including plugin caching, multiple languages, and environment configuration, see the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/#speed-up-runs-with-caching).
 
 ## Google Cloud Build
 

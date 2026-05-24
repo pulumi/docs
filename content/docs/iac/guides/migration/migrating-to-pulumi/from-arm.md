@@ -58,7 +58,7 @@ While Bicep addresses some of the shortcomings of ARM templates, it remains boun
 #### Quick start with Neo
 
 1. **Prerequisites**:
-   * Install the [Pulumi GitHub app](/docs/iac/operations/continuous-delivery/github-app/) with access to your repository that contains your ARM template files
+   * Install the [Pulumi GitHub app](/docs/integrations/version-control/github-app/) with access to your repository that contains your ARM template files
    * Configure Azure credentials in [Pulumi ESC](/docs/esc/)
    * Have [Pulumi Neo](/product/neo/) access
 
