@@ -44,6 +44,7 @@ sections:
         description: |
           A new Node.js package enables `npx pulumi <anything>`-style commands so that agents can discover
           and run Pulumi commands more easily.
+        link: https://www.npmjs.com/package/pulumi
 
       - variant: image-top
         image: /images/releases/may-2026/release-pulumi-do.svg
@@ -181,6 +182,7 @@ sections:
           infrastructure tasks — like the infrastructure equivalent of SWE-bench.
 
 blog_section:
+  anchor: from-the-blog
   title: From the blog
   posts:
     - /blog/the-agentic-infrastructure-era
