@@ -40,19 +40,14 @@ The `api/*` surface changes both timelines. Because the schema is derived from t
 v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not just incremental field additions. None of it required bespoke provider code.
 
 1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources.
-1. **Stack config as a managed resource.** `stacks:Config` lets you declare stack configuration values directly in a Pulumi program, closing a gap where stack config used to live outside IaC.
-1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs. Platform teams can publish service definitions as code rather than only through the IDP console.
+1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
 1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path.
 
 ## How it works
 
-The Pulumi Service Provider bundles Pulumi Cloud's OpenAPI 3 document (published at <https://api.pulumi.com/api/openapi/pulumi-spec.json>) into the provider binary when the provider is built and released, so there is no runtime download. When the provider process starts as part of a Pulumi operation, it parses the embedded spec together with a small companion metadata file. The metadata file captures the Pulumi-specific semantics that an OpenAPI document can't express on its own: which endpoints pair up to form a single resource, what a resource's composite ID looks like, which response fields are secrets that arrive exactly once at create time, and so on.
+Pulumi Cloud's OpenAPI document (published at <https://api.pulumi.com/api/openapi/pulumi-spec.json>) is embedded in the provider binary at build time, so the provider version you pin is the API surface you get. Preview and update are deterministic, and a version released today will still behave the same way years from now. Alongside the spec, the runtime loads a small companion metadata file that captures the Pulumi-specific semantics OpenAPI can't express: which endpoints pair into a single resource, what a resource's ID looks like, and which response fields are secrets that arrive exactly once at create time. That metadata is what lets `api/*` resources behave as expected.
 
-Most of that metadata is auto-derived by a scaffolder that runs as part of `go generate`. Existing values are preserved as pins, so when a heuristic would suggest something different, the human override stays in place and the tool logs an `INFO` to keep the override visible. What stays hand-curated is the editorial layer: resource descriptions, examples, v0 aliases, and explicit exclusions.
-
-The language SDKs are still generated (Pulumi requires typed SDKs per language), but they are built against the runtime-emitted schema rather than against hand-written Go code. No resource Go file is written to disk for the `api/*` surface.
-
-Two CI workflows tie a spec refresh to a release tag. A manually-triggered refresh workflow pulls the latest spec, regenerates the SDKs, and opens a labeled PR. When that PR merges, a tag workflow pushes the corresponding release tag and the standard release pipeline takes over. End to end, one button click moves a spec change through to published packages and registry docs.
+Most of that metadata is auto-derived by a scaffolder, but the editorial layer, including resource descriptions, examples, and the v0 aliases that make migration safe, stays handmade. Any human override is pinned across regeneration so a future spec change can't quietly override it. The language SDKs are still generated against the runtime schema, so new fields and enum values reach typed SDKs in all five languages the moment the spec ships.
 
 ## What the api namespace covers
 
