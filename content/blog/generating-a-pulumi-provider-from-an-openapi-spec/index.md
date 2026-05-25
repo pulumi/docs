@@ -62,7 +62,7 @@ For resources that have an ancestor under `pulumiservice:index:*`, the mapping l
 
 ## What to know before adopting the preview
 
-> The pulumiservice:api:* resource surface is in preview. Resource shape and module layout may change before GA; not yet recommended for production.
+> The pulumiservice:api:* resource surface is in preview. Resource shape and module layout may change before GA.
 
 1. **The existing `pulumiservice:index:*` resources remain supported.** They are not being deprecated as part of v1.0 and continue to be supported. Migration to `api/*` is opt-in via Pulumi `aliases`. There is no implicit v0 to api, by design.
 
