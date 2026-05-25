@@ -41,7 +41,7 @@ v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not 
 
 1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources.
 1. **Stack config as a managed resource.** `stacks:Config` lets you declare stack configuration values directly in a Pulumi program, closing a gap where stack config used to live outside IaC.
-1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
+1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs. Platform teams can publish service definitions as code rather than only through the IDP console.
 1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path.
 
 ## How it works
