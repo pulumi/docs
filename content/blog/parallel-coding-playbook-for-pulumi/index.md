@@ -1,7 +1,7 @@
 ---
 title: "Five Stacks Before Lunch: The Parallel Coding Playbook for Pulumi"
 allow_long_title: true
-date: 2026-05-13
+date: 2026-07-02
 draft: false
 meta_desc: "AI coding has two shapes: 2x is mostly prompting, 10x is mostly plumbing. The parallel coding playbook, translated to Pulumi."
 meta_image: meta.png
