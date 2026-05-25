@@ -22,7 +22,7 @@ social:
 
 The Pulumi Service Provider's new `pulumiservice:api/*` resource surface is generated directly from Pulumi Cloud's OpenAPI spec at runtime.
 
-This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, stack config as a managed resource, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the existing `pulumiservice:index:*` resources continue to be the production-supported path.
+This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the existing `pulumiservice:index:*` resources continue to be the production-supported path.
 
 <!--more-->
 
@@ -34,18 +34,15 @@ The `api/*` surface changes both timelines. Because the schema is derived from t
 
 1. Whole new resource families land in the provider the same release they reach Pulumi Cloud. v1.0 shipped fine-grained RBAC, stack config, Pulumi IDP catalog management, and audit-log exports as managed resources with no bespoke provider code.
 1. New fields, features, and enum values on existing resources show up across all five language SDKs the moment they appear in the spec.
-1. Field renames in the upstream API flow through cleanly, with no per-rename PR required in the provider.
 
 ## What's new in v1.0
 
 v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not just incremental field additions. None of it required bespoke provider code.
 
-1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources. Provider functions like `buildAllowPermissions`, `buildEnvironmentScopedPermissions`, and `buildStackScopedPermissions` build permission descriptors for the common grant patterns, so you skip the raw JSON. The full descriptor grammar is still available for complex cases, and roles authored in the Pulumi Cloud UI can be `pulumi import`ed cleanly.
-1. **Stack config as a managed resource.** `stacks:Config` lets you declare stack configuration values directly in a Pulumi program, closing a gap where stack config used to live outside IaC. Existing config can be adopted via `pulumi import`.
+1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources.
+1. **Stack config as a managed resource.** `stacks:Config` lets you declare stack configuration values directly in a Pulumi program, closing a gap where stack config used to live outside IaC.
 1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
-1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path. Compliance plumbing now lives next to the rest of your IaC instead of in click-ops runbooks.
-
-The pattern isn't "we stay aligned on fields." It's that whole capability areas of Pulumi Cloud reach the provider the same release they reach the platform, with no per-feature provider code written.
+1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path.
 
 ## How it works
 
@@ -67,10 +64,7 @@ For resources that have an ancestor under `pulumiservice:index:*`, the mapping l
 
 > The pulumiservice:api:* resource surface is in preview. Resource shape and module layout may change before GA; not yet recommended for production.
 
-Two things worth being explicit about:
-
-1. **The existing `pulumiservice:index:*` resources remain supported.** They are not being deprecated as part of v1.0 and continue to be the production-supported path during preview. Migration to `api/*` is opt-in via Pulumi `aliases`. There is no implicit v0 → api aliasing, by design.
-1. **Pulumi-resource semantics still live in the metadata, not in the spec.** Composite IDs, secret outputs that arrive once, replace-vs-update behavior, and exclusions are hand-curated. The point of generation-from-spec isn't that the provider writes itself; it's that the provider can't silently fall behind on a field rename or a new feature flag the spec already describes.
+1. **The existing `pulumiservice:index:*` resources remain supported.** They are not being deprecated as part of v1.0 and continue to be supported. Migration to `api/*` is opt-in via Pulumi `aliases`. There is no implicit v0 to api, by design.
 
 ## Try it
 
