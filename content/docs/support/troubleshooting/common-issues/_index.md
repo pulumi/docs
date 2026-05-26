@@ -21,6 +21,7 @@ Guide to fixing specific problems that may arise in Pulumi programs, including u
 - **[Server errors](/docs/support/troubleshooting/common-issues/server-errors/)** - Handle 500 internal server errors from Pulumi Cloud
 - **[Post-step event errors](/docs/support/troubleshooting/common-issues/post-step-errors/)** - Troubleshoot post-step event failures and engine bugs
 - **[Connection issues](/docs/support/troubleshooting/common-issues/connection-issues/)** - Fix network connectivity and proxy problems
+- **[DIY backend access errors](/docs/iac/guides/basics/using-a-diy-backend/#error-reading-pulumimetayaml)** - Resolve `read ".pulumi/meta.yaml"` errors when the CLI can't access a self-managed state backend
 - **[Destroy failures](/docs/support/troubleshooting/common-issues/destroy-failures/)** - Handle scenarios when `pulumi destroy` fails
 - **[Interrupted updates](/docs/support/troubleshooting/common-issues/interrupted-updates/)** - Recover from interrupted deployments
 - **[macOS architecture mismatch](/docs/support/troubleshooting/common-issues/architecture-mismatch/)** - Fix crashes or hangs on Apple Silicon caused by x86_64 binaries running under Rosetta 2
