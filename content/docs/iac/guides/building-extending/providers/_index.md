@@ -37,7 +37,7 @@ Providers require a deeper level of Pulumi expertise and maintenance overhead co
 
 - **Is there already a Pulumi provider?** Search the [Pulumi Registry](/registry/). If a well-maintained provider exists, use it.
 - **Is there a well-maintained Terraform or OpenTofu provider?** If so, reach for [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/), which lets a Pulumi program consume any provider from the OpenTofu registry without writing a Pulumi provider at all.
-- **Do you actually need a provider?** If your goal is to group resources into a reusable abstraction, a [component](/docs/iac/guides/building-extending/components/build-a-component/) is usually the right answer. For one-off programmatic resources, a [dynamic provider](/docs/iac/concepts/providers/dynamic-providers/) may be simpler than a full provider package.
+- **Do you actually need a provider?** If your goal is to group resources into a reusable abstraction, a [component](/docs/iac/guides/building-extending/components/build-a-component/) is usually the right answer. For one-off programmatic resources, a [dynamic provider](/docs/iac/guides/building-extending/providers/dynamic-providers/) may be simpler than a full provider package.
 
 Build a standalone provider when none of the above apply.
 
@@ -54,5 +54,6 @@ For guidance on choosing between the available options, see [Provider Architectu
 
 - [Provider Architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) — the three-layer model of the provider stack and how to choose your layer.
 - [Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/) — step-by-step guide to using the Pulumi Go Provider SDK.
+- [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/) — implementing a lightweight provider inline in a TypeScript or Python program.
 - [Provider Configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) — declaring configuration keys, secrets, and environment variable defaults in your provider schema.
 - [Direct Provider Implementation](/docs/iac/guides/building-extending/providers/implementers/) — implementing providers in Python or TypeScript against the gRPC protocol directly.
