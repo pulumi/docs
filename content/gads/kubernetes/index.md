@@ -29,7 +29,6 @@ key_features_above:
           sub_title: "Pulumi Kubernetes Provider"
           description:
             Stop juggling Terraform for clusters and kubectl for workloads. Pulumi manages both your cloud infrastructure and Kubernetes resources in a single program. Use real programming languages to define deployments, services, and config maps with full type safety and auto-completion.
-          image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Full Kubernetes API coverage
                 description: |
@@ -188,12 +187,15 @@ key_features:
                   kubeconfig: ${my-cluster.kubeconfig}
           features:
               - title: EKS, AKS, and GKE components
+                icon: clouds
                 description: |
                     Production-ready cluster components with built-in best practices for networking, IAM, and node management. Minutes, not days.
               - title: Deploy Helm charts
+                icon: clouds
                 description: |
                     Install and manage Helm charts as first-class Pulumi resources. Override values with real code instead of YAML templating.
               - title: Server-side apply
+                icon: cycle
                 description: |
                     Use Kubernetes server-side apply for conflict-free management of resources shared across multiple controllers and tools.
 
@@ -204,12 +206,15 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           features:
               - title: Version and review
+                icon: git-merged
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
+                icon: eye
                 description: |
                     Get rapid feedback on your code with fast unit tests, and run integration tests against ephemeral infrastructure.
               - title: Continuous delivery
+                icon: cycle
                 description: |
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
@@ -236,30 +241,39 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           features:
               - title: Pulumi IaC
+                icon: code
                 description: |
                     Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
+                icon: lock
                 description: |
                     Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
               - title: Automate deployment workflows
+                icon: cycle
                 description: |
                     Orchestrate secure deployment workflows through GitHub or an API.
               - title: Search and analytics
+                icon: eye
                 description: |
                     View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
               - title: Pulumi Automation API
+                icon: gear
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
               - title: Developer portals
+                icon: buildings
                 description: |
                     Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
               - title: Identity and access control
+                icon: security
                 description: |
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
               - title: Policy enforcement
+                icon: gavel
                 description: |
                     Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
+                icon: clipboard
                 description: |
                     Track and store user actions and change history with option to export logs.
 
@@ -286,7 +300,7 @@ case_studies:
 
         - name: Atlassian
           link: /case-studies/atlassian/
-          logo: atlassian
+          logo: atlassian-wordmark
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
