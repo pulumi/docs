@@ -63,7 +63,7 @@ For resources that have an ancestor under `pulumiservice:index:*`, the mapping l
 
 ## Try it
 
-If you want to take the preview for a spin:
+If you want to take the expanded provider for a spin:
 
 1. The [Pulumi Registry page for `pulumiservice`](/registry/packages/pulumiservice/) has install instructions for every language.
 1. The [`examples/api/`](https://github.com/pulumi/pulumi-pulumiservice/tree/main/examples/api) directory has runnable programs for each resource, in every supported language.
