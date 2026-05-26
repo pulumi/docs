@@ -1,0 +1,84 @@
+// Shared @layer base rules for both the docs bundle (main.scss) and the
+// marketing bundle (_marketing.scss). Each bundle ships its own Tailwind
+// preflight, so anything that needs to defeat the second preflight to load
+// (headings, border-color, custom-element display) belongs here.
+// Keep this file consumable from inside an `@layer base { ... }` block.
+
+// Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
+// currentColor, which makes `.border` dividers render too dark. Restore the old default.
+*,
+::before,
+::after {
+    border-color: var(--color-gray-200);
+}
+
+// Custom elements default to display: inline in browsers. Tailwind v4 preflight
+// does not reset them to block, so we do it here for all Pulumi web components.
+pulumi-chooser,
+pulumi-choosable,
+pulumi-tabs,
+pulumi-tab-panel,
+pulumi-install,
+pulumi-banner,
+pulumi-examples,
+pulumi-convert,
+pulumi-tooltip,
+pulumi-audio,
+pulumi-slot-machine,
+pulumi-tertiary-nav,
+pulumi-greenhouse-jobs-list,
+pulumi-resource-links,
+pulumi-filter-select,
+pulumi-user-toggle,
+pulumi-hubspot-form {
+    display: block;
+}
+
+// Heading + paragraph element defaults. The `.heading-1`–`.heading-6`,
+// `.heading-xl`, `.body-*`, and `.font-overline` class versions live in
+// `_utilities-shared.scss` as @utility blocks so they can be composed via @apply.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-display text-service-black mb-2;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        // Don't apply top margin when one's being specified.
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+h1 {
+    @apply text-3xl md:text-4xl;
+}
+h2 {
+    @apply text-2xl md:text-3xl;
+}
+h3 {
+    @apply text-xl md:text-2xl;
+}
+h4 {
+    @apply text-lg md:text-xl;
+}
+h5 {
+    @apply text-base md:text-lg;
+}
+h6 {
+    @apply text-sm md:text-base;
+}
+
+p {
+    @apply leading-normal my-4 text-service-black;
+}

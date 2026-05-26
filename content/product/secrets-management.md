@@ -20,7 +20,7 @@ sections:
     anchor: hero
 
   - type: feature_split
-    heading: One interface for all your secrets and configuration
+    heading: One interface for all your secrets and configuration
     description: |
       **Connect any secrets store and control everything centrally.**
 

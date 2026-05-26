@@ -8,8 +8,8 @@
                 "class" "w-[340px] md:w-[450px]") }}
     </div>
     <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Plans for teams of all&nbsp;sizes</h1>
-        <p class="max-w-xl mx-auto mt-5 text-lg md:text-xl text-gray-secondary">
+        <h1 class="heading-xl tracking-tight">Plans for teams of all&nbsp;sizes</h1>
+        <p class="max-w-xl mx-auto mt-5 body-xl">
             Start for free. Stay free forever for open source and individuals, or scale with advanced editions for your team.
         </p>
     </div>
@@ -169,7 +169,7 @@
                         {{ if eq $item.content "_check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
                         {{ else if eq $item.content "_blank" }}
-                        <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-secondary size-6 inline-block") }} </span>
+                        <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-primary size-6 inline-block") }} </span>
                         {{ else }}
                         <span>{{ $item.content | markdownify }}</span>
                         {{ with $item.subtext }}

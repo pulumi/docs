@@ -18,7 +18,9 @@ meta_image: /images/product/neo/neo-meta.png
 
 sections:
   - type: hero
-    title: "Meet Neo, your new AI infrastructure agent."
+    title_primary: "AI infrastructure agent."
+    title_secondary: "Meet Neo, your new"
+    title_reversed: true
     description: Neo provisions, governs, and optimizes your cloud infrastructure — with enterprise controls built in.
     image: /images/product/neo/neo-hero.svg
     image_alt: Neo AI infrastructure agent diagram showing Kubernetes cluster upgrade automation

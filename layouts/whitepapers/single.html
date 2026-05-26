@@ -11,7 +11,7 @@
                 <a href="/whitepapers/" class="hero-tag-line no-underline hover:no-underline">Whitepaper</a>
                 <h1 class="title mb-6">{{ .Title }}</h1>
                 {{ with .Description }}
-                <p class="description mb-10">{{ . | markdownify }}</p>
+                <p class="description mb-10 max-w-2xl">{{ . | markdownify }}</p>
                 {{ end }}
             </div>
         </div>

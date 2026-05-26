@@ -76,34 +76,13 @@
 }
 
 .page-hero {
-    @apply relative w-full py-10 mb-10 border-b border-gray-300;
+    @apply relative w-full py-10 mb-10 border-b border-gray-200;
 
     .page-hero-title {
         @apply text-black w-full flex flex-col items-center justify-center pointer-events-none;
 
-        h1 {
+        h1, h2, h3 {
             @apply text-center max-w-4xl;
-            font-weight: 600;
-            @include screen-lg {
-                font-size: 3.75rem;
-                line-height: 1.1em;
-            }
-        }
-
-        h2 {
-            @apply text-center max-w-4xl;
-            @include screen-lg {
-                font-size: 3rem;
-                line-height: 1.1em;
-            }
-        }
-
-        h3 {
-            @apply text-center max-w-4xl;
-            @include screen-lg {
-                font-size: 2.5rem;
-                line-height: 1.1em;
-            }
         }
     }
 }

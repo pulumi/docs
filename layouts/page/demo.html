@@ -4,16 +4,16 @@
 
     <section>
         <div class="container mx-auto py-12">
-            <div class="flex items-center flex-col md:flex-row">
-                <div class="w-full md:w-1/2 p-6">
-                    <h1 class="text-5xl font-bold mb-6">{{ .Params.overview.title }}</h1>
-                    <ul class="text-xl max-w-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                <div class="p-6">
+                    <h1 class="heading-xl mb-6 max-w-lg">{{ .Params.overview.title }}</h1>
+                    <ul class="body-xl max-w-xl">
                         {{ range $detail := .Params.overview.details }}
                             <li>{{ $detail }}</li>
                         {{ end }}
                     </ul>
 
-                    <div class="flex flex-wrap justify-center items-center mt-12">
+                    <div class="flex flex-wrap justify-center items-center mt-12 max-w-lg">
                         {{ range $logo := .Params.customer_logos.logos }}
                             <div class="w-1/4 p-3">
                                 {{ if $logo.link }}
@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-1/2 p-6 flex items-center">
+                <div class="p-6 flex items-center">
                     <div class="card mt-10 md:mt-0 p-12 mx-auto">
                         <h4>Request a demo</h4>
                         <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}"></pulumi-hubspot-form>

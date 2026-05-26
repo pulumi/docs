@@ -8,20 +8,20 @@
     - duration: Duration string (e.g., "60 minutes")
 */}}
 
-<div class="template-timing-info flex flex-row flex-wrap gap-3">
-    <div class="timing-info-item flex-1 min-w-0">
+<div class="template-timing-info grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div class="timing-info-item">
         <div class="timing-info-label">
             {{ partial "icon.html" (dict "name" "calendar" "class" "mr-2") }}Date
         </div>
         <div class="timing-info-value">{{ .datetime | time.Format ":date_medium" }}</div>
     </div>
-    <div class="timing-info-item flex-1 min-w-0">
+    <div class="timing-info-item">
         <div class="timing-info-label">
             {{ partial "icon.html" (dict "name" "clock" "class" "mr-2") }}Time
         </div>
         <div class="timing-info-value"><pulumi-datetime date="{{ .datetime }}" timeonly></pulumi-datetime></div>
     </div>
-    <div class="timing-info-item flex-1 min-w-0">
+    <div class="timing-info-item">
         <div class="timing-info-label">
             {{ partial "icon.html" (dict "name" "hourglass" "class" "mr-2") }}Duration
         </div>

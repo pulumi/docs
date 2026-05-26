@@ -1,0 +1,153 @@
+// Shared utility classes for both the docs bundle (main.scss) and the
+// marketing bundle (_marketing.scss). Declared with `@utility` so they can be
+// composed via `@apply` from anywhere in either bundle.
+//
+// @utility must live at the top level of the stylesheet — do not nest this
+// import inside `@layer base { ... }`.
+
+@utility heading-xl {
+    @apply font-display mb-2 text-4xl md:text-5xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-1 {
+    @apply font-display mb-2 text-3xl md:text-4xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-2 {
+    @apply font-display mb-2 text-2xl md:text-3xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-3 {
+    @apply font-display mb-2 text-xl md:text-2xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-4 {
+    @apply font-display mb-2 text-lg md:text-xl;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-5 {
+    @apply font-display mb-2 text-base md:text-lg;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility heading-6 {
+    @apply font-display mb-2 text-sm md:text-base;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.1em;
+
+    &:not(:first-child) {
+        &:not([class*="mt-"]):not([class*="m-"]) {
+            @apply mt-8;
+        }
+    }
+
+    code {
+        letter-spacing: normal;
+    }
+}
+
+@utility body-sm {
+    @apply font-body text-xs md:text-sm;
+}
+
+@utility body-base {
+    @apply font-body text-sm md:text-base;
+}
+
+@utility body-lg {
+    @apply font-body text-base md:text-lg;
+}
+
+@utility body-xl {
+    @apply font-body text-lg md:text-xl;
+}
+
+@utility body-2xl {
+    @apply font-body text-xl md:text-2xl;
+}
+
+@utility font-overline {
+    @apply font-mono text-xs md:text-sm uppercase tracking-wider;
+}
+
+@utility font-overline-sm {
+    @apply font-mono text-xs uppercase tracking-wider;
+}

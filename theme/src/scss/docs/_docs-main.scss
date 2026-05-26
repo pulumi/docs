@@ -1,11 +1,6 @@
 .docs-list-main .docs-main-content,
 body.section-registry {
     h1 {
-        font-family: Inter;
-        line-height: 1.1em;
-        font-weight: 600;
-        font-size: 30px;
-        color: var(--color-gray-950);
         margin: 16px 0;
     }
 
@@ -15,8 +10,6 @@ body.section-registry {
 
     section.docs-content {
         h1, h2, h3, h4, h5, h6 {
-            font-family: Inter;
-            line-height: 1.1em;
             scroll-margin-top: 60px;
         }
 
@@ -37,41 +30,7 @@ body.section-registry {
         }
 
         h1 {
-            font-weight: 600;
-            font-size: 30px;
-            color: var(--color-gray-950);
             margin: 16px 0;
-        }
-
-        h2 {
-            font-weight: 600;
-            font-size: 24px;
-            color: var(--color-gray-950);
-        }
-
-        h3 {
-            font-weight: 600;
-            font-size: 21px;
-            color: var(--color-gray-950);
-        }
-
-        h4 {
-            font-weight: 600;
-            font-size: 18px;
-            color: var(--color-gray-700);
-        }
-
-        h5 {
-            font-weight: 600;
-            font-size: 18px;
-            color: var(--color-gray-950);
-        }
-
-        h6 {
-            font-weight: 600;
-            font-size: 16px;
-            color: var(--color-gray-700);
-
         }
 
         p {
