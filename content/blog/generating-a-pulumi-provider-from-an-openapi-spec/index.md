@@ -1,6 +1,6 @@
 ---
 title: "Generating a Pulumi Provider from an OpenAPI Spec"
-date: 2026-05-22
+date: 2026-05-26
 draft: false
 meta_desc: "Pulumi Service Provider v1.0 generates its pulumiservice:api/* surface from Pulumi Cloud's OpenAPI spec at runtime, so new features land without provider PRs."
 meta_image: meta.png
