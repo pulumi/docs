@@ -29,3 +29,61 @@ On top of state, Pulumi Cloud adds:
 Pulumi Cloud is available as a hosted SaaS and as a [self-hosted](/docs/pulumi-cloud/self-hosted/) edition you can run in your own environment. The Individual tier is free. [Sign up for a Pulumi account](https://app.pulumi.com/signup) to get started.
 
 For a detailed, capability-by-capability comparison of Pulumi Cloud and open source Pulumi, including which features are available with each option and what operational concerns each one entails, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/).
+
+## Organizations
+
+An organization is the top-level account in Pulumi Cloud that groups related projects, stacks, and people. It is the primary unit of collaboration: [teams](/docs/administration/organizations-teams/teams/) and [role-based access control](/docs/administration/organizations-teams/), billing, and shared [Pulumi ESC](/docs/esc/) environments all belong to an organization. The organization name is also the first segment of a stack's fully qualified name, in the form `<organization>/<project>/<stack>`.
+
+When you sign up for Pulumi Cloud, you automatically get a personal organization named after your username. You can also create organizations for your teams or be invited to existing ones. You can be a member of multiple organizations at once, and you switch between them in the Pulumi Cloud console or with the [`pulumi org`](/docs/iac/cli/commands/pulumi_org/) CLI commands.
+
+### Getting the current organization programmatically
+
+Your program can read the name of the organization it is deploying into at runtime, which is useful for naming or tagging resources or for constructing references to other stacks.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+const organization = pulumi.getOrganization();
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+organization = pulumi.get_organization()
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+organization := ctx.Organization()
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+var organization = Deployment.Instance.OrganizationName;
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+var organization = ctx.organizationName();
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  organization: ${pulumi.organization}
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
