@@ -20,6 +20,8 @@ You run Pulumi in Harness with standard [`Run` steps](https://developer.harness.
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

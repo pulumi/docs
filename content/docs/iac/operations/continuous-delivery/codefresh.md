@@ -25,6 +25,8 @@ aliases:
 This guide assumes Pulumi Cloud as the [state backend](/docs/iac/concepts/state-and-backends/). Pulumi can also run in CI/CD with a self-managed backend, but Pulumi Cloud is assumed throughout because it simplifies pipeline authentication and is the most common choice.
 {{% /notes %}}
 
+{{< pulumi-docker-images-note >}}
+
 ## How Pulumi works with Codefresh
 
 To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI. A Codefresh [freestyle step](https://codefresh.io/docs/docs/pipelines/steps/freestyle/) provides that environment: it runs a set of commands inside a container image you choose. Point the step at `pulumi/pulumi` and it can run any `pulumi` command — `install`, `preview`, `up` — exactly as you would on your own machine.
