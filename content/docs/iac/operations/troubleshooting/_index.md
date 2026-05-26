@@ -49,6 +49,11 @@ sections:
     description: Fix network connectivity and proxy problems.
 
   - icon: warning
+    heading: DIY Backend Access Errors
+    link: /docs/iac/operations/stack-management/using-a-diy-backend/#error-reading-pulumimetayaml
+    description: Resolve `read ".pulumi/meta.yaml"` errors when the CLI can't access a self-managed state backend.
+
+  - icon: warning
     heading: Destroy Failures
     link: /docs/iac/operations/troubleshooting/destroy-failures/
     description: Handle scenarios when `pulumi destroy` fails.

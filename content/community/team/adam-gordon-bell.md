@@ -3,10 +3,11 @@ title: Adam Gordon Bell
 id: adam-gordon-bell
 first_name: Adam
 meta_desc: Adam Gordon Bell is a Community Engineer at Pulumi, focused on developer communication around infrastructure-as-code.
-meta_image: community/community-engineering/adam-social-card.png
-layout: community-engineering/single
+meta_image: community/team/adam-social-card.png
+layout: team/single
 aliases:
   - /adam
+  - /community/community-engineering/adam-gordon-bell/
 talks:
 - event: "MLCon San Diego 2026"
   title: "Building Action-Taking AI Agents: Reliability Lessons from Real Systems"
