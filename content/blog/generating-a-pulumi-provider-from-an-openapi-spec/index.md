@@ -39,7 +39,27 @@ The `api/*` surface changes both timelines. Because the schema is derived from t
 
 v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not just incremental field additions. None of it required bespoke provider code.
 
-1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources.
+1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources. For example, defining a read-only role and assigning it to a team:
+
+    ```typescript
+    const readOnly = new ps.api.Role("readOnly", {
+        orgName: "acme",
+        name: "stack-reader",
+        description: "Read-only access to stacks across the org.",
+        uxPurpose: "role",
+        details: {
+            __type: "PermissionDescriptorAllow",
+            permissions: ["stack:read", "stack:list"],
+        },
+    });
+
+    new ps.api.teams.Role("readOnlyForPlatform", {
+        orgName: "acme",
+        teamName: "platform",
+        roleId: readOnly.roleId,
+    });
+    ```
+
 1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
 1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path.
 
