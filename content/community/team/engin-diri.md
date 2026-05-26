@@ -3,10 +3,11 @@ title: Engin Diri
 id: engin-diri
 first_name: Engin
 meta_desc: Engin Diri is a senior solutions architect on the community engineering team.
-meta_image: community/community-engineering/engin-social-card.png
-layout: community-engineering/single
+meta_image: community/team/engin-social-card.png
+layout: team/single
 aliases:
   - /engin
+  - /community/community-engineering/engin-diri/
 talks:
 - event: "PlatforMa 2026"
   title: "Stop Building Portals, Start Building Conversations"
