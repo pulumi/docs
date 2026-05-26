@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "PlatforMa 2026"
+  title: "Stop Building Portals, Start Building Conversations"
+  url: "https://www.platfor-ma.com/agenda2026"
+  date: 2026-05-26T09:45:00.000+03:00
 - event: "KCD Texas 2026"
   title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
   url: "https://kcd-texas-2026.sessionize.com/session/1144033"

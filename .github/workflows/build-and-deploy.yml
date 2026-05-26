@@ -4,10 +4,17 @@ on:
     branches:
       - master
   schedule:
-    # Run at 6 AM Eastern
-    - cron: '0 11 * * *'
-    # Run at noon Pacific
-    - cron: '0 20 * * *'
+    # Three off-hour slots to dodge GHA's top-of-hour scheduling congestion.
+    # GHA silently drops scheduled runs when load is high (no notification, no
+    # retry); off-hour minutes (:17, :43, :23) hit a fraction of the load that
+    # :00 does. Morning has two slots ahead of the 10am ET social-post fire
+    # so a future-dated blog goes live before its social goes out.
+    # Primary morning rebuild — 7:17 AM Eastern
+    - cron: '17 11 * * *'
+    # Fallback morning rebuild — 8:43 AM Eastern (86 min after primary)
+    - cron: '43 12 * * *'
+    # Afternoon rebuild for hour-granular dates — 4:23 PM Eastern
+    - cron: '23 20 * * *'
   workflow_dispatch: null
   # Allows manual triggering of the workflow
 permissions:
