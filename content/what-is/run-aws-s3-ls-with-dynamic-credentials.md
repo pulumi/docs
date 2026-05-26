@@ -1,72 +1,76 @@
 ---
 title: Run 'aws s3 ls' using Dynamic Credentials
-meta_desc: |
-     Learn more about using dynamic credentials in Pulumi ESC to run commands like aws s3 ls in a more secure and seamless way.
-
+meta_desc: Run aws s3 ls with short-lived, OIDC-issued credentials from Pulumi ESC. No static AWS keys, scoped by IAM role, fully auditable in CloudTrail.
 meta_image: /images/what-is/run-aws-s3-ls-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws s3 ls' using Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws s3 ls` command](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html) is part of the AWS Command Line Interface (CLI) and is used to list the contents of buckets and directories in Amazon Simple Storage Service (Amazon S3). Amazon S3 is a scalable object storage service offered by Amazon Web Services (AWS) and is commonly used for backup and storage, serving content, and hosting static websites.
+**This guide shows how to run `aws s3 ls` using short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `AKIA...` keys in `~/.aws/credentials`.** ESC exchanges a Pulumi-issued OIDC token for an AWS STS session, scoped to a specific IAM role, expiring automatically. `aws s3 ls` has two modes: with no argument it lists every bucket the caller's identity owns (`s3:ListAllMyBuckets`), and with a bucket name it lists objects inside that bucket (`s3:ListBucket`). The IAM permissions you grant the role determine which mode works.
 
-Listing files and directories in S3 buckets is a frequent operation for navigating and managing your data stored in AWS. This task is performed in your terminal using the AWS CLI. It requires proper handling of your AWS credentials to maintain security. There are typically two types of credentials used: temporary credentials, which offer better security but need manual refreshing, and long-term credentials, which are easier to use but carry a higher security risk.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) you have an easier and more secure option. Pulumi ESC can help you [manage dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), to make all your AWS CLI commands run seamlessly so you never have to worry about invalid credentials, or run the risk of manual copy and paste security risks.
+* Why dynamic credentials beat static IAM keys
+* The two modes of `aws s3 ls` and the IAM permissions each one needs
+* Prerequisites for this guide
+* Step-by-step ESC setup with the `aws-login` provider
+* Running `aws s3 ls` for buckets and for objects
+* Verification and common errors
+* Frequently asked questions
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static IAM keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+Static IAM access keys sit in `~/.aws/credentials` until you delete them, are easily leaked into shell history or git, and carry every permission attached to the user. Dynamic credentials reverse all of that:
 
-- Securely share credentials with teammates in a consistent way.
-- Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like aws s3 ls without requiring deep security expertise.
+* **No long-lived secrets on disk.** Pulumi ESC issues a fresh `AccessKeyId`, `SecretAccessKey`, and `SessionToken` on every `esc run`. Nothing persists locally.
+* **Scoped by IAM role.** The role's trust policy and attached policies define exactly what the session can do — read one bucket prefix, nothing else.
+* **Time-bound.** Sessions expire after the ESC environment's `duration` (1 hour by default). A leaked token is useless almost immediately.
+* **Auditable.** CloudTrail records the call under the assumed-role ARN with the `sessionName` you configured, so each S3 read is traceable to a specific Pulumi session.
+* **Centrally rotated.** Update the IAM role or session duration in one ESC environment and every developer and CI job that consumes it picks up the change.
 
-## What is the esc run command?
+## What `aws s3 ls` does (and the IAM you need)
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+`aws s3 ls` has two modes, with different IAM requirements:
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+| Mode | Command | Min IAM permission |
+|---|---|---|
+| List all buckets in the account | `aws s3 ls` | `s3:ListAllMyBuckets` |
+| List objects in a single bucket | `aws s3 ls s3://my-bucket/` | `s3:ListBucket` on the bucket |
+| List objects under a prefix | `aws s3 ls s3://my-bucket/logs/` | `s3:ListBucket` with a `Condition` on `s3:prefix` |
+| Recursive object listing | `aws s3 ls s3://my-bucket/ --recursive` | `s3:ListBucket` on the bucket |
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws s3 ls` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+Grant only the mode you need. `s3:ListAllMyBuckets` is account-wide and discloses every bucket name; `s3:ListBucket` on a single bucket is the least-privilege option for most scripts.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+## Prerequisites
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+* An AWS account where you can create or update IAM roles
+* The [Pulumi CLI](/docs/install/) and [Pulumi ESC CLI](/docs/install/esc/) installed
+* A [Pulumi Cloud account](https://app.pulumi.com/signup) and access to an organization
+* The [AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed locally
+* An IAM role with OIDC trust configured for Pulumi (see [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)), with `s3:ListAllMyBuckets` and/or `s3:ListBucket` attached
 
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
+## Step-by-step setup
 
-## Getting started with esc run
-
-### Step 1: Install and login to Pulumi ESC
-
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+### 1. Log in to Pulumi ESC
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+esc login
 ```
 
-### Step 2: Create the OIDC configuration
+Follow the browser prompt or paste an access token from <https://app.pulumi.com/account/tokens>.
 
-Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
+### 2. Configure OIDC between Pulumi and AWS
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform S3 actions.
+Follow the [Pulumi OIDC + AWS guide](/docs/esc/environments/configuring-oidc/aws/) to create an IAM role whose trust policy accepts a JWT from `api.pulumi.com/oidc`. Attach a policy granting at minimum the S3 listing permissions you need (see the table above). Note the role ARN.
 
-### Step 3: Create a new Pulumi ESC environment
+### 3. Create a new Pulumi ESC environment
 
-Once OIDC has been configured between Pulumi and AWS, the next step is to create a new environment in the [Pulumi Cloud](https://app.pulumi.com/signin). Make sure that you have the correct organization selected in the left-hand navigation menu. From there, click the **Environments** link, then click the **Create environment** button. In the following pop-up, provide a name for your environment before clicking the **Create environment** button.
+In [Pulumi Cloud](https://app.pulumi.com/), open your organization, click **Environments**, then **Create environment**. Name it something like `aws-prod-env`.
 
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
+### 4. Add the `aws-login` provider to the environment
 
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view. You’ll want to clear out the default placeholder content in the editor on the left-hand side and replace it with the following code, making sure to replace <your-oidc-iam-role-arn> with the value of your IAM role ARN from the configure OIDC step:
+Paste the following YAML, replacing `<your-oidc-iam-role-arn>`:
 
 ```yaml
 values:
@@ -83,32 +87,100 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Run the aws s3 ls command
+The `fn::open::aws-login` function exchanges the Pulumi-issued OIDC token for AWS STS credentials. The `environmentVariables` block exposes them to any subprocess `esc run` starts.
 
-First make sure that your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
-
-```bash
-$ aws configure list
-      Name                    Value             Type    Location
-      ----                    -----             ----    --------
-   profile                <not set>             None    None
-access_key                <not set>             None    None
-secret_key                <not set>             None    None
-    region                <not set>             None    None
-```
-
-To get a list of S3 buckets, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+### 5. Confirm there are no static credentials on disk
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws s3 ls
+aws configure list
 ```
 
-## Conclusion
+You should see `<not set>` for `access_key` and `secret_key`. This guarantees the next step uses ESC-issued credentials.
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws s3 ls`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+## Run `aws s3 ls`
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+### List every bucket in the account
 
-Feel free to [join our community on Slack](https://slack.pulumi.com/) and let us know what you think!
+```bash
+esc run <your-org>/<your-project>/<your-env> -- aws s3 ls
+```
+
+Expected output:
+
+```bash
+2025-04-12 09:14:02 my-app-logs
+2025-05-01 17:33:48 my-app-backups
+2025-05-09 11:02:11 pulumi-esc-demo
+```
+
+Each row is `creation-date creation-time bucket-name`. The list is account-wide; bucket-level policies do not filter it.
+
+### List objects inside a single bucket
+
+```bash
+esc run <your-org>/<your-project>/<your-env> -- aws s3 ls s3://pulumi-esc-demo/
+```
+
+```bash
+                           PRE logs/
+2025-05-10 14:08:55       1024 helloWorld.txt
+```
+
+`PRE` indicates a prefix (a "folder" in S3's flat namespace). Append the prefix to drill deeper, or add `--recursive` to traverse the whole bucket.
+
+## Verify in CloudTrail
+
+S3 list operations show up in CloudTrail as `ListBuckets` (account-level) or `ListObjects` / `ListObjectsV2` (bucket-level). The `userIdentity.type` should be `AssumedRole` and the `arn` should include `assumed-role/<your-role>/pulumi-environments-session` — confirmation that the session came from ESC and not from a long-lived access key.
+
+## Common errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| `AccessDenied` on `ListBuckets` | IAM role missing `s3:ListAllMyBuckets` | Add the permission to the role's policy, or list objects in a specific bucket instead |
+| `AccessDenied` on `ListObjectsV2` | IAM role missing `s3:ListBucket` on the named bucket | Attach a statement allowing `s3:ListBucket` on `arn:aws:s3:::my-bucket` |
+| `InvalidClientTokenId` | Stale local `AWS_*` env vars overriding ESC | Run `unset AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN` and retry |
+| `ExpiredToken` | Session exceeded `duration` | Re-run; `esc run` fetches fresh credentials each invocation |
+| `NoSuchBucket` | Bucket name typo or region mismatch | Confirm bucket exists in the account; add `--region` if non-default |
+| `Unable to locate credentials` | `esc run` env vars not exported to the subprocess | Verify the `environmentVariables` block in the ESC YAML is at the top level |
+
+## Frequently asked questions
+
+### Why does `aws s3 ls` (with no bucket) fail when the bucket-level call works?
+
+The two calls map to different IAM actions. `aws s3 ls` with no arguments calls `ListBuckets`, which requires `s3:ListAllMyBuckets` — an account-level permission. `aws s3 ls s3://bucket/` calls `ListObjectsV2`, which requires `s3:ListBucket` scoped to that bucket's ARN.
+
+### Can I scope the role to a single bucket or prefix?
+
+Yes. Attach a policy with `s3:ListBucket` on `arn:aws:s3:::my-bucket` and add a `Condition` on `s3:prefix` to restrict to specific paths. Pulumi ESC's role assumption respects any IAM restrictions you place on the role.
+
+### How long are the credentials valid?
+
+By default 1 hour, set by the `duration` field in the ESC environment. The maximum is bounded by the IAM role's `MaxSessionDuration` (1 hour for OIDC by default; raise it on the IAM role if needed).
+
+### Can `aws s3 ls` page through millions of objects?
+
+Yes. The AWS CLI handles pagination automatically. For very large buckets prefer `aws s3api list-objects-v2 --max-items` with manual pagination for finer control, or filter by `--prefix` to limit scope.
+
+### Does this work in CI?
+
+Yes — it's the recommended pattern. Replace `AWS_*` secrets in your CI configuration with a single `esc run <org>/<project>/<env> -- <command>` invocation. Pulumi's GitHub Action, GitLab integration, and the `esc open` command for shell exports all work the same way.
+
+### How do I confirm the credentials really came from ESC?
+
+Run `aws sts get-caller-identity` inside the same `esc run`. The returned `Arn` should be `assumed-role/<your-role>/pulumi-environments-session`, not a long-lived IAM user ARN. See [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/).
+
+### What about S3 Block Public Access — does this affect `ls`?
+
+No. Block Public Access controls public anonymous access, not authenticated calls from your IAM role. `aws s3 ls` operates as the assumed role and is unaffected by BPA.
+
+## Learn more
+
+* [Pulumi ESC product page](/product/esc/)
+* [Configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/)
+* [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/)
+* [Run `aws s3 cp` with dynamic credentials](/what-is/run-aws-s3-cp-with-dynamic-credentials/)
+* [Run `aws s3 sync` with dynamic credentials](/what-is/run-aws-s3-sync-with-dynamic-credentials/)
+* [Resolve `Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
+* [Resolve `InvalidClientTokenId`](/what-is/resolve-list-buckets-invalid-client-token-id/)
+
+[Join our community on Slack](https://slack.pulumi.com/) to discuss further, and let us know what you build.
