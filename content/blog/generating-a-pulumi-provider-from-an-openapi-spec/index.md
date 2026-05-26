@@ -32,8 +32,8 @@ Historically, every new Pulumi Cloud feature implied a follow-up PR in the provi
 
 The `api/*` surface changes both timelines. Because the schema is derived from the OpenAPI spec at runtime:
 
-1. Whole new resource families land in the provider the same release they reach Pulumi Cloud. v1.0 shipped fine-grained RBAC, stack config, Pulumi IDP catalog management, and audit-log exports as managed resources with no bespoke provider code.
-1. New fields, features, and enum values on existing resources show up across all five language SDKs the moment they appear in the spec.
+1. Whole new resource families land in the provider the same release they reach Pulumi Cloud.
+1. New fields, features, and enum values on existing resources show up across all five language SDKs the soon after they appear in the spec.
 
 ## What's new in v1.0
 
