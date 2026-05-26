@@ -31,7 +31,7 @@
 {{ if eq $cols 2 }}{{ $colsClass = "md:grid-cols-2" }}{{ end }}
 {{ if eq $cols 4 }}{{ $colsClass = "md:grid-cols-2 lg:grid-cols-4" }}{{ end }}
 
-<div class="product-two-column-cards grid grid-cols-1 {{ $colsClass }} gap-12 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
+<div class="product-two-column-cards grid grid-cols-1 {{ $colsClass }} gap-8 md:gap-16 lg:gap-36 mt-12 md:mt-16 {{ $lgTopClass }} w-full">
     {{ range $cards }}
     <div class="product-feature-mini-card">
         {{ if .image }}
