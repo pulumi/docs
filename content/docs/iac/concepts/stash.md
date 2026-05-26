@@ -337,7 +337,7 @@ When viewing stashed secret values, their plaintext content will not be shown by
 
 To update the value stored in a `Stash` you need to replace it. There are a few ways to do this.
 
-1. Using the [`--target-replace`](/docs/iac/guides/basics/targeted-updates/#replacing-a-single-resource) argument to `up` to tell the engine to replace it.
+1. Using the [`--target-replace`](/docs/iac/operations/stack-management/targeted-updates/#replacing-a-single-resource) argument to `up` to tell the engine to replace it.
 1. Using `pulumi state taint` to mark the resource to be replaced on the next deployment.
 1. Using the `TriggerReplacement` resource option to trigger the resource to replace on a change of value.
 

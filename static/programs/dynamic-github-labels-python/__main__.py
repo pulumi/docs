@@ -1,6 +1,8 @@
+import re
 import pulumi
 from pulumi import Input, Output
-from pulumi.dynamic import Resource, ResourceProvider, CreateResult, UpdateResult, ConfigureRequest
+from pulumi.dynamic import (Resource, ResourceProvider, CreateResult, UpdateResult,
+                            ConfigureRequest, CheckResult, CheckFailure, DiffResult)
 from typing import Optional
 from github import Github, GithubObject
 
@@ -23,6 +25,16 @@ class GithubLabelProvider(ResourceProvider):
         # Set a stack config variable named githubToken (e.g. pulumi config set githubToken <VALUE> --secret)
         self.auth = req.config.require("githubToken")
 
+    def check(self, _olds, news):
+        # check runs before any other method and validates the user's inputs.
+        failures = []
+        color = news.get("color") or ""
+        # GitHub label colors are six hexadecimal digits with no leading "#".
+        if not re.fullmatch(r"[0-9a-fA-F]{6}", color):
+            failures.append(CheckFailure("color",
+                f'invalid color "{color}": expected six hexadecimal digits with no leading "#"'))
+        return CheckResult(news, failures)
+
     def create(self, props):
         g = Github(self.auth)
         l = g.get_user(props["owner"]).get_repo(props["repo"]).create_label(
@@ -30,6 +42,12 @@ class GithubLabelProvider(ResourceProvider):
             color=props["color"],
             description=props.get("description", GithubObject.NotSet))
         return CreateResult(l.name, {**props, **l.raw_data})
+    def diff(self, _id, olds, news):
+        # GitHub labels can be updated in place, so a change never forces a replacement.
+        changed = (olds.get("name") != news.get("name")
+                   or olds.get("color") != news.get("color")
+                   or olds.get("description") != news.get("description"))
+        return DiffResult(changes=changed)
     def update(self, id, _olds, props):
         g = Github(self.auth)
         l = g.get_user(props["owner"]).get_repo(props["repo"]).get_label(id)

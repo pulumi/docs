@@ -15,7 +15,7 @@ menu:
 When you encounter a bug or have a feature request, filing it in the correct GitHub repository helps our team respond faster and more effectively. Use this guide to determine where to file your issue.
 
 {{% notes type="info" %}}
-Need help troubleshooting first? Join the [Pulumi Community Slack](https://slack.pulumi.com/) to get quick answers from the community, or check our [troubleshooting guide](/docs/support/troubleshooting/).
+Need help troubleshooting first? Join the [Pulumi Community Slack](https://slack.pulumi.com/) to get quick answers from the community, or check our [troubleshooting guide](/docs/iac/operations/troubleshooting/).
 {{% /notes %}}
 
 ## Quick decision guide
@@ -100,11 +100,11 @@ If you're unsure where to file your issue:
 
 To help us resolve your issue quickly:
 
-1. **Check the troubleshooting guide** - see our [troubleshooting documentation](/docs/support/troubleshooting/) for solutions to common issues
+1. **Check the troubleshooting guide** - see our [troubleshooting documentation](/docs/iac/operations/troubleshooting/) for solutions to common issues
 1. **Search existing issues** - your issue might already be reported
 1. **Include version information** - run `pulumi version` and include the output
 1. **Provide reproduction steps** - minimal code examples are extremely helpful
-1. **Enable verbose logging** - see our [logging guide](/docs/support/debugging/logging/) for instructions
+1. **Enable verbose logging** - see our [logging guide](/docs/iac/operations/debugging/logging/) for instructions
 1. **Redact sensitive information** - remove credentials, tokens, and secrets from logs
 
 {{% notes type="warning" %}}

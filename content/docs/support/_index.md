@@ -11,28 +11,41 @@ menu:
 meta_desc: Get help with Pulumi through FAQs, troubleshooting guides, community resources, and support options.
 meta_image: /images/docs/meta-images/docs-meta.png
 h1: Support & Troubleshooting
-description: <p>Get help with Pulumi through logging, troubleshooting guides, debugging tools, FAQs, and community resources.</p>
+description: <p>Hitting an error or trying to diagnose a problem with a Pulumi program? Day-to-day troubleshooting, debugging, and logging guides live with the rest of the day-2 workflows under <a href="/docs/iac/operations/">IaC Operations</a>. This page covers FAQs, support channels, and how to file an issue.</p>
 aliases:
   - /docs/support/
 
 sections:
 - type: button-cards
-  heading: Getting started
+  heading: Operations and diagnostics
   cards:
-  - icon: chart-bar
-    heading: Logging
-    link: /docs/support/debugging/logging/
-    description: CLI verbose logging and program logging for debugging and diagnostics.
+  - icon: gear-six
+    heading: IaC Operations
+    link: /docs/iac/operations/
+    description: Day-2 workflows for running Pulumi — stack management, continuous delivery, troubleshooting, and debugging.
 
   - icon: wrench
     heading: Troubleshooting
-    link: /docs/support/troubleshooting/
-    description: Debug and resolve issues with Pulumi programs, deployments, and CI/CD pipelines.
+    link: /docs/iac/operations/troubleshooting/
+    description: Diagnose and recover from common failures including update conflicts, destroy failures, and CI/CD pipeline issues.
 
   - icon: bug
     heading: Debugging
-    link: /docs/support/debugging/
-    description: Tools and techniques for diagnosing and fixing Pulumi programs.
+    link: /docs/iac/operations/debugging/
+    description: Attach a debugger, capture verbose logs, and trace performance for your Pulumi programs.
+
+  - icon: chart-bar
+    heading: Logging
+    link: /docs/iac/operations/debugging/logging/
+    description: CLI verbose logging and program logging for debugging and diagnostics.
+
+- type: button-cards
+  heading: FAQs and help
+  cards:
+  - icon: lifebuoy
+    heading: Getting Support
+    link: /docs/support/getting-support/
+    description: Community channels and paid support options — what's available depending on your Pulumi plan.
 
   - icon: question
     heading: Frequently Asked Questions
@@ -48,13 +61,4 @@ sections:
     heading: GitHub Issues
     link: /docs/support/filing-issues/
     description: Learn how to report bugs and request features in the right repository.
-
-  - icon: envelope
-    heading: Contact Support
-    link: /contact/
-    description: Reach out to the Pulumi team for assistance.
-
-- type: flat
-  heading: Have questions?
-  description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
 ---

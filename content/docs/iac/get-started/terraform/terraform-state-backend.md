@@ -261,7 +261,7 @@ pulumi stack export --version <version-number> > previous_checkpoint.json
 pulumi stack import --file previous_checkpoint.json
 ```
 
-You can find version numbers in the stack's **Activity** tab in the Pulumi Cloud console. For more details on working with state files, see [Editing state files](/docs/support/troubleshooting/editing-state-files/).
+You can find version numbers in the stack's **Activity** tab in the Pulumi Cloud console. For more details on working with state files, see [Editing state files](/docs/iac/operations/stack-management/editing-state-files/).
 
 ## FAQ
 

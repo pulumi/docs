@@ -12,7 +12,7 @@ menu:
   support:
     parent: support-home
     identifier: support-faq
-    weight: 4
+    weight: 10
 
 sections:
 - type: button-cards

@@ -1,0 +1,2 @@
+community/community-engineering/adam-gordon-bell/index.html|/community/team/adam-gordon-bell/
+community/community-engineering/engin-diri/index.html|/community/team/engin-diri/

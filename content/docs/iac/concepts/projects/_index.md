@@ -30,71 +30,127 @@ The project file specifies which runtime to use and determines where to look for
 
 Project files also contain metadata about your project. The project file must begin with a capital `P`, although either `.yml` or `.yaml` extension will work.
 
-A typical `Pulumi.yaml` file looks like the following:
+A typical `Pulumi.yaml` file looks like the following. The `runtime` value depends on the language you choose:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
 
 ```yaml
 name: webserver
 runtime: nodejs
-description: A minimal JavaScript Pulumi program.
+description: A minimal Pulumi program.
 ```
 
-In addition, when using JavaScript or TypeScript, the working directory for the project should contain a `package.json` file that points to an entrypoint such as `index.js`. In Python, the presence of a `__main__.py` or `setup.py` file defines the entrypoint.
+{{% /choosable %}}
+{{% choosable language python %}}
 
-The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases:
+```yaml
+name: webserver
+runtime: python
+description: A minimal Pulumi program.
+```
 
-* A `Pulumi.yaml` file for a Node.js program that uses JavaScript rather than TypeScript:
+{{% /choosable %}}
+{{% choosable language go %}}
 
-    ```yaml
-    name: my-project
-    runtime:
-      name: nodejs
-      options:
-        typescript: false
-    ```
+```yaml
+name: webserver
+runtime: go
+description: A minimal Pulumi program.
+```
 
-* A `Pulumi.yaml` file for a Go program that uses a pre-built executable named `mybinary`:
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
-    ```yaml
-    name: my-project
-    description: A precompiled Go Pulumi program.
-    runtime:
-      name: go
-      options:
-        binary: mybinary
-    ```
+```yaml
+name: webserver
+runtime: dotnet
+description: A minimal Pulumi program.
+```
 
-* A `Pulumi.yaml` file for a .NET program that uses a pre-built assembly named `MyInfra.dll` in the `bin` directory:
+{{% /choosable %}}
+{{% choosable language java %}}
 
-    ```yaml
-    name: my-project
-    description: A precompiled .NET Pulumi program.
-    runtime:
-      name: dotnet
-      options:
-        binary: bin/MyInfra.dll
+```yaml
+name: webserver
+runtime: java
+description: A minimal Pulumi program.
+```
 
-    ```
+{{% /choosable %}}
+{{% choosable language yaml %}}
 
-* A `Pulumi.yaml` file for a Java program that uses a pre-built JAR file:
+```yaml
+name: webserver
+runtime: yaml
+description: A minimal Pulumi program.
+```
 
-    ```yaml
-    name: my-project
-    description: A precompiled Java Pulumi program.
-    runtime:
-        name: java
-        options:
-            binary: target/my-project-1.0-SNAPSHOT-jar-with-dependencies.jar
-    ```
+{{% /choosable %}}
 
-* A `Pulumi.yaml` file for a `YAML` program that includes its resources inline:
+{{< /chooser >}}
 
-    ```yaml
-    name: my-project
-    runtime: yaml
-    resources:
-      bucket:
-        type: aws:s3:Bucket
-    ```
+Each language has its own conventions for locating the program's entrypoint. For TypeScript, the working directory should contain a `package.json` file that points to an entrypoint such as `index.ts`. For Python, the presence of a `__main__.py` or `setup.py` file defines the entrypoint. Go, .NET, and Java follow the conventions of their respective build tools.
+
+The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases.
+
+### Compiled languages with a pre-built executable
+
+For Go, .NET, and Java, you can point the runtime at a pre-built executable or assembly with the `binary` option. This skips the build step at deployment time:
+
+{{< chooser language "go,csharp,java" >}}
+
+{{% choosable language go %}}
+
+```yaml
+name: my-project
+description: A precompiled Go Pulumi program.
+runtime:
+  name: go
+  options:
+    binary: mybinary
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```yaml
+name: my-project
+description: A precompiled .NET Pulumi program.
+runtime:
+  name: dotnet
+  options:
+    binary: bin/MyInfra.dll
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```yaml
+name: my-project
+description: A precompiled Java Pulumi program.
+runtime:
+  name: java
+  options:
+    binary: target/my-project-1.0-SNAPSHOT-jar-with-dependencies.jar
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+### Inline resources with the YAML runtime
+
+A `Pulumi.yaml` file for a YAML program can include its resources inline:
+
+```yaml
+name: my-project
+runtime: yaml
+resources:
+  bucket:
+    type: aws:s3:Bucket
+```
 
 For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/reference/pulumi-yaml/).
 
@@ -106,7 +162,7 @@ When your Pulumi program refers to resources in the local filesystem, paths are 
 
 ## Root-relative paths
 
-You can get the directory containing the `Pulumi.yaml` file, which may differ from your working directory if it specified a `main` option (see [main attribute](/docs/reference/pulumi-yaml/#attributes)), with the `ProjectDirectory` function.
+You can get the directory containing the `Pulumi.yaml` file, which may differ from your working directory if the project sets a `main` option (see [main attribute](/docs/reference/pulumi-yaml/#attributes)). Each language provides its own function to retrieve this path, as shown in the example below.
 
 The path returned is an absolute path. When using this in resource properties, ensure it's relative to the working directory. This prevents diffs from running the project on multiple machines with different roots.
 
@@ -163,6 +219,8 @@ variables:
 {{% /choosable %}}
 
 {{< /chooser >}}
+
+To get the name of the currently deploying stack instead, see [Getting the current stack programmatically](/docs/iac/concepts/stacks/#getting-the-current-stack-programmatically).
 
 ## Stack settings files {#stack-settings-file}
 

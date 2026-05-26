@@ -59,7 +59,7 @@ Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
 - [Amazon ECR](/docs/iac/guides/clouds/aws/ecr/) — build and publish images to Elastic Container Registry.
 - [Elastic Load Balancing](/docs/iac/guides/clouds/aws/elb/) — configure application and network load balancers.
 - [AWS API Gateway](/docs/iac/guides/clouds/aws/api-gateway/) — configure HTTP and REST APIs on API Gateway.
-- [AWS CodePipeline & CodeDeploy](/docs/iac/guides/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
+- [AWS CodePipeline & CodeDeploy](/docs/iac/operations/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
 
 ## Secrets & configuration (ESC)
 

@@ -1164,7 +1164,7 @@ $ pulumi stack import --file stack.json
 Before deleting a stack, if the stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
 
 {{% notes type="info" %}}
-There are scenarios when `pulumi destroy` may fail to delete resources as expected due to dependencies, permissions, or the resources being in a locked or protected state. For detailed steps on how to troubleshoot and resolve these issues, refer to our [troubleshooting guide](/docs/support/troubleshooting/).
+There are scenarios when `pulumi destroy` may fail to delete resources as expected due to dependencies, permissions, or the resources being in a locked or protected state. For detailed steps on how to troubleshoot and resolve these issues, refer to our [troubleshooting guide](/docs/iac/operations/troubleshooting/).
 {{% /notes %}}
 
 ## Delete a stack

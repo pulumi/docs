@@ -127,7 +127,7 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 
 - **[Pulumi Deployments](/docs/deployments/deployments/)** (recommended): Purpose-built for IaC deployments and integrated into Pulumi Cloud
 - **[Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)**: Trigger deployments from within Kubernetes clusters
-- **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](/docs/iac/guides/continuous-delivery/)
+- **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](/docs/iac/operations/continuous-delivery/)
 
 **GitHub users**: Install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) for instant GitOps workflow support, including deployment previews in pull requests.
 

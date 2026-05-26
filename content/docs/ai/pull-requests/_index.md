@@ -53,4 +53,4 @@ When reviewing Neo's pull requests, you can ask for modifications through follow
 
 Neo's pull requests can automatically trigger your existing CI/CD workflows. When configured, your Pulumi previews, security scans, policy checks, and tests will run automatically on Neo's PRs, just like any other pull request. If a workflow fails, you can ask Neo to address the specific issue, and it will push fixes to the same PR.
 
-To set up CI/CD with Pulumi, see the documentation for [GitHub Actions](/docs/iac/using-pulumi/continuous-delivery/github-actions/), [Azure DevOps Pipelines](/docs/iac/using-pulumi/continuous-delivery/azure-devops/), or [GitLab CI](/docs/iac/using-pulumi/continuous-delivery/gitlab-ci/).
+To set up CI/CD with Pulumi, see the documentation for [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/), [Azure DevOps Pipelines](/docs/iac/operations/continuous-delivery/azure-devops/), or [GitLab CI](/docs/iac/operations/continuous-delivery/gitlab-ci/).
