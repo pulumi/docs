@@ -53,7 +53,7 @@ The sections below describe each area in more detail.
 
 Pulumi stores [state](/docs/iac/concepts/state-and-backends/)—the metadata it uses to manage your cloud resources—in a backend. Open source Pulumi supports two classes of backend:
 
-- **DIY backend**: a storage endpoint you manage yourself, such as AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. DIY backends are open source and free to use. See [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/) for setup instructions.
+- **DIY backend**: a storage endpoint you manage yourself, such as AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. DIY backends are open source and free to use. See [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/) for setup instructions.
 - **Pulumi Cloud**: a managed backend, available as a hosted service or self-hosted.
 
 DIY backends include built-in state locking, checkpoint history, project-scoped stacks, and support for several secrets encryption providers. However, they leave operational concerns to you, including securing access to the storage backend, backup and disaster recovery, monitoring availability, and managing team access.
@@ -104,4 +104,4 @@ Pulumi Cloud has a free tier and paid plans. It moves the operational work of ru
 
 ## Next steps
 
-For the technical details of how Pulumi manages state with either option, see [State and backends](/docs/iac/concepts/state-and-backends/) and [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/). A complete list of Pulumi Cloud's features is available on the [pricing page](/pricing#compare).
+For the technical details of how Pulumi manages state with either option, see [State and backends](/docs/iac/concepts/state-and-backends/) and [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/). A complete list of Pulumi Cloud's features is available on the [pricing page](/pricing#compare).

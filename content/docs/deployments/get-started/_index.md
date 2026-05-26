@@ -58,7 +58,7 @@ To collaborate with other developers or use advanced features like [SAML SSO](/d
 ### Deployment and automation
 
 - **[Pulumi Deployments](/docs/deployments/deployments/)**: Hosted Git-based deployments with built-in CI/CD
-- **CI/CD integrations**: Connect with [GitHub Actions, GitLab, and other pipelines](/docs/iac/using-pulumi/continuous-delivery/)
+- **CI/CD integrations**: Connect with [GitHub Actions, GitLab, and other pipelines](/docs/iac/operations/continuous-delivery/)
 - **[Review Stacks](/docs/deployments/deployments/review-stacks/)**: Ephemeral environments for pull request validation
 - **[Drift detection](/docs/deployments/deployments/drift/)**: Identify and remediate infrastructure changes made outside IaC
 

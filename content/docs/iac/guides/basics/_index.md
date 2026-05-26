@@ -14,7 +14,7 @@ aliases:
     - /docs/iac/using-pulumi/
 ---
 
-Whether you're just starting with Pulumi or looking to refine your workflow, these guides cover essential practices for organizing infrastructure code, securing deployments, and managing changes with confidence.
+Whether you're new to Pulumi or looking to refine your workflow, these guides cover essential practices for organizing infrastructure code, securing deployments, and managing changes with confidence.
 
 These fundamentals apply across all cloud providers and help you build maintainable infrastructure from the start.
 
@@ -26,10 +26,4 @@ These fundamentals apply across all cloud providers and help you build maintaina
 
 **[Organizing projects & stacks](/docs/iac/guides/basics/organizing-projects-stacks/)** - Learn how to structure your infrastructure code into projects and stacks. Understand when to split infrastructure into multiple projects versus using a single project with multiple stacks.
 
-**[Least privilege security](/docs/iac/guides/basics/iac-least-privileges/)** - Implement security best practices by granting only the minimum permissions needed for infrastructure operations. Learn how to configure cloud provider credentials with appropriate access controls.
-
-**[Update plans](/docs/iac/guides/basics/update-plans/)** - Preview and review infrastructure changes before applying them. Update plans help you catch unintended modifications and coordinate changes across teams.
-
-**[Targeted updates](/docs/iac/guides/basics/targeted-updates/)** - Limit which resources Pulumi operates on with `--target`, `--exclude`, and `--target-replace`. Learn the trade-offs of partial operations and when to use them.
-
-**[Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
+For day-to-day operations — targeted updates, update plans, state file editing, self-managed state backends, least-privilege setup — see [Operations](/docs/iac/operations/).

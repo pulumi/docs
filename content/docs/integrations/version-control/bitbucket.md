@@ -117,7 +117,7 @@ Bitbucket repositories cannot be used as [template sources](/docs/idp/concepts/o
 
 ## CI integration
 
-The Pulumi Bitbucket integration posts results back to Bitbucket regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in Bitbucket Pipelines. See the [Bitbucket Pipelines guide](/docs/iac/guides/continuous-delivery/bitbucket/) for setup instructions and example pipeline configurations.
+The Pulumi Bitbucket integration posts results back to Bitbucket regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in Bitbucket Pipelines. See the [Bitbucket Pipelines guide](/docs/iac/operations/continuous-delivery/bitbucket/) for setup instructions and example pipeline configurations.
 
 ## OIDC authentication
 
