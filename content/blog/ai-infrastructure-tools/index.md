@@ -12,18 +12,6 @@ tags:
     - platform-engineering
     - devops
     - pulumi-news
-social:
-    twitter: "The AI infrastructure market split into two halves: the GPUs and MLOps that run your models, and the AI agents that run your infrastructure. Here's what's actually worth using in 2026."
-    linkedin: |
-        AI infrastructure now means two different things, and the tools you pick for one half rarely overlap with the other.
-
-        Half one: GPU clouds and MLOps. CoreWeave, Lambda, Modal, Weights & Biases, MLflow, plus the hyperscalers. This is where you run training and inference.
-
-        Half two: AI that runs your infrastructure. Code assistants like Copilot, analysis tools like env0 and Spacelift, and agentic platforms like Pulumi Neo that actually execute changes against your cloud.
-
-        The interesting shift is in half two. We've gone from "AI suggests code" to "AI does the deploy" in about eighteen months, and that changes how governance has to work.
-
-        New guide walks through the tools that matter across both categories: what each is good at, where it falls short, and a decision framework for picking one.
 ---
 
 The phrase "AI infrastructure" now means two different things. One is the GPUs, schedulers, and MLOps platforms that exist to run AI workloads. The other is AI that runs infrastructure: agents and assistants that generate, deploy, and govern cloud resources on your behalf. They're different markets with different vendors, and most teams need to think about both.
