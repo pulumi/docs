@@ -20,6 +20,8 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 **[Update plans](/docs/iac/operations/stack-management/update-plans/)** - Preview and review infrastructure changes before applying them. Update plans help you catch unintended modifications and coordinate changes across teams.
 
+**[Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/)** - Detect when your cloud resources diverge from your Pulumi program, then choose to remediate (re-apply code) or adopt (accept reality into the program).
+
 **[Editing state files](/docs/iac/operations/stack-management/editing-state-files/)** - Safe techniques for modifying Pulumi state when normal operations can't recover. Use sparingly and always back up state first.
 
 **[Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
