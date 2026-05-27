@@ -21,6 +21,8 @@ aliases:
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## How Pulumi works with Octopus Deploy
 
 Octopus Deploy is a *continuous delivery* server, not a continuous integration server: it does not track your version control system, and it does not watch for pull requests or branch pushes. Octopus is typically paired with an upstream CI system — such as [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/), [Jenkins](/docs/iac/operations/continuous-delivery/jenkins/), or [TeamCity](/docs/iac/operations/continuous-delivery/teamcity/) — that builds and tests your code, runs pull request previews, and produces the versioned package Octopus releases.

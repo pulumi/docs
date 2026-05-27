@@ -17,6 +17,18 @@ aliases:
 
 There are scenarios when `pulumi destroy` will fail to delete resources as expected. This is anticipated due to the nature of cloud provider dependencies, permissions, resources being in a state that prevents their deletion, or when a timeout is not long enough for the cloud provider to complete its operation. Review the output to identify which resources were not deleted and consider the following steps depending on the nature of the failure.
 
+## Stale or expired credentials
+
+If your Pulumi program fetches provider credentials at runtime — from an OIDC exchange, a secrets manager, or a platform-team library — `pulumi destroy` does not re-run the program by default. It reuses the provider configuration recorded during the last update, so any short-lived credential it captured has likely expired. The destroy then fails with what looks like an auth error from the cloud provider.
+
+Re-run the program before destroying by passing `--run-program`:
+
+```bash
+pulumi destroy --run-program
+```
+
+See [Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/) for the full explanation.
+
 ## Check to see if a resource was deleted after all
 
 Some resources take time to be removed. Common examples include CloudFront Lambda@Edge functions, which will fail to `destroy` but will eventually disappear without requiring further action. In these cases, you can wait and run `pulumi refresh` to see if the cloud provider was able to remove the resource.

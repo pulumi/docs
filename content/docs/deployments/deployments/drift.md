@@ -27,6 +27,8 @@ Any preview of a refresh is considered a drift detection run in Pulumi Cloud. Ru
 
 After your run completes you can see the drift run via the [Drift tab](#drift-tab) for your stack.
 
+For background on the CLI-side drift workflow (detection, remediation, adoption, and `--expect-no-changes` for CI), see [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/).
+
 ## Pulumi Cloud UI
 
 ### Running via Click to Deploy

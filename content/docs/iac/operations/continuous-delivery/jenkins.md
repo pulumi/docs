@@ -22,6 +22,8 @@ aliases:
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## How Pulumi works with Jenkins
 
 To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI. A Jenkins pipeline stage with a [Docker agent](https://www.jenkins.io/doc/book/pipeline/docker/) provides that environment: it runs the stage's steps inside a container image you choose. Point the agent at `pulumi/pulumi` and the stage can run any `pulumi` command — `install`, `preview`, `up` — exactly as you would on your own machine.

@@ -33,6 +33,8 @@ Each Pulumi Deployment is centered around a given operation, that is, a `pulumi`
 - **Detect drift:** Refresh your stack's state file with the `pulumi refresh` command and fail if any changes are detected
 - **Remediate drift:** Refresh your stack's state file and ensure that the state of your resources matches the declared state in your Pulumi program via the `pulumi update --refresh` command
 
+For background on choosing between remediation and adoption, and what each direction means for your infrastructure, see [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/).
+
 Note that not every operation is available for every trigger.
 
 ## Click to Deploy

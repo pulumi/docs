@@ -26,4 +26,6 @@ These pages cover the Day 2 workflows for running Pulumi at scale.
 
 **[Debugging](/docs/iac/operations/debugging/)** - Attach a debugger, capture verbose logs, and trace performance for your Pulumi programs.
 
+**[Docker images](/docs/iac/operations/docker-images/)** - Pulumi's officially published container images: what's in each, where to pull from, release cadence, and how to use them as a base for custom images.
+
 **[Least privilege security](/docs/iac/operations/iac-least-privileges/)** - Configure cloud provider credentials with the minimum permissions needed for safe infrastructure operations.

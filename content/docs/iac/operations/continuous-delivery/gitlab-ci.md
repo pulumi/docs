@@ -27,6 +27,8 @@ You run Pulumi in a pipeline by invoking the Pulumi CLI directly. The official [
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

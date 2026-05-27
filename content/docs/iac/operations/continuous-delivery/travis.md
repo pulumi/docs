@@ -27,6 +27,8 @@ Because Travis runs the CLI directly, this works with a Pulumi program written i
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

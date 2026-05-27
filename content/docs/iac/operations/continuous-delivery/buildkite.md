@@ -22,6 +22,8 @@ Because the plugin runs CLI commands, it works with a Pulumi program written in 
 This guide assumes [Pulumi Cloud](/docs/pulumi-cloud/) as your backend. Pulumi Cloud isn't required to run Pulumi in CI/CD — Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/) — but the access token, OIDC, and ESC features described here are specific to Pulumi Cloud.
 {{% /notes %}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

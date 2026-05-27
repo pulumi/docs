@@ -29,6 +29,8 @@ Pulumi runs in **CodeBuild**: it executes your Pulumi program to compute the des
 This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
 {{% /notes %}}
 
+{{< pulumi-docker-images-note >}}
+
 ## How Pulumi works with AWS Code Services
 
 To apply infrastructure changes, Pulumi has to run your program with the Pulumi CLI. A CodeBuild project provides that environment: it checks out your source, installs the CLI and your program's dependencies, and runs `pulumi` commands.
