@@ -20,7 +20,7 @@ Anyone using Pulumi — including users of Pulumi open source and the free tier 
 
 - **[Pulumi Community Slack](https://slack.pulumi.com/)** — Ask questions and discuss Pulumi with other users. The community Slack is used by other Pulumi users and is regularly monitored by Pulumi employees, including engineers and members of the developer relations team.
 - **[GitHub issues](/docs/support/filing-issues/)** — Report bugs and request features. The linked guide explains how to pick the right Pulumi repository for your issue.
-- **[Documentation](/docs/)** — Find answers to common questions about Pulumi infrastructure, secrets, policies, and platform features.
+- **[Documentation](/docs/)** — Browse the full Pulumi documentation for guidance on infrastructure, secrets, policies, and platform features.
 
 Pulumi staff are active in both the community Slack and on GitHub, but response times depend on availability and are not covered by an SLA.
 
