@@ -90,7 +90,13 @@ aliases:
   description: Specify aliases so that renaming or refactoring doesn't replace a resource.
   applies_to: both
   typed_on: base
-  inherited_by_children: no
+  inherited_by_children: yes
+  note: >-
+    A child resource's stored state does not contain a copy of its parent's
+    `aliases`. Instead, the engine combines a parent's aliases with each
+    child's own name and type when computing the child's identity, so renaming
+    or retyping a component with `aliases` set on the component preserves its
+    children without requiring per-child aliases.
 
 customTimeouts:
   description: Override the default retry/timeout behavior for resource provisioning.
