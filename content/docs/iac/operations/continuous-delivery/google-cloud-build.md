@@ -27,6 +27,8 @@ You run Pulumi in a build step by using one of Pulumi's official Docker images a
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

@@ -25,6 +25,8 @@ aliases:
 
 Pulumi runs in a pipeline as plain CLI commands, so this guide works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/) and targeting [any cloud provider](/registry/).
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

@@ -29,6 +29,8 @@ The orb runs CLI commands, so it works with a Pulumi program written in any [sup
 This guide assumes you use [Pulumi Cloud](https://app.pulumi.com/signin) as your [state backend](/docs/iac/concepts/state-and-backends/). Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend) in CI/CD, but the authentication steps in this guide are written for Pulumi Cloud.
 {{% /notes %}}
 
+{{< pulumi-docker-images-note >}}
+
 ## Prerequisites
 
 Before you begin, make sure you have:

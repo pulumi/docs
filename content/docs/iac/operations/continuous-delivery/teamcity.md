@@ -21,6 +21,8 @@ aliases:
 
 {{< cicd-cloud-note >}}
 
+{{< pulumi-docker-images-note >}}
+
 ## How Pulumi works with TeamCity
 
 A TeamCity [build configuration](https://www.jetbrains.com/help/teamcity/creating-and-editing-build-configurations.html) is an ordered sequence of [build steps](https://www.jetbrains.com/help/teamcity/configuring-build-steps.html). To apply infrastructure changes, Pulumi runs your program with the Pulumi CLI, so you add a **Command Line** build step that runs `pulumi` commands — `install`, `preview`, `up` — exactly as you would on your own machine.
