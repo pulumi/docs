@@ -626,7 +626,7 @@ In order for delete hooks to run successfully, Pulumi must have access to any ne
 
 * When removing resources from your program, first remove *only* the resources you wish to delete, *leaving any delete hooks in place*. Upon running e.g. `pulumi up`, Pulumi will delete the resources and run any relevant delete hooks. Once this operation is complete, you can then remove the delete hooks from your program.
 
-* When running `pulumi destroy`, you must pass the `--run-program` flag to instruct Pulumi to run your program and register any hooks that are to be executed. If Pulumi detects that you are trying to `destroy` a stack that contains hooks _without_ the `--run-program` flag, it will fail with an error.
+* When running `pulumi destroy`, you must pass the `--run-program` flag to instruct Pulumi to run your program and register any hooks that are to be executed. If Pulumi detects that you are trying to `destroy` a stack that contains hooks _without_ the `--run-program` flag, it will fail with an error. See [Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/) for other situations where the flag is useful.
 
 ## Error hooks
 
