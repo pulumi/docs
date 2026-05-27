@@ -23,6 +23,8 @@ The `hooks` resource option provides a set of resource hooks linked to a resourc
 Resource hooks are supported in TypeScript/JavaScript, Python, Go, and C#/.NET. Java and YAML do not support resource hooks.
 {{% /notes %}}
 
+Hooks can be attached to both custom resources and component resources. A hook attached to a component fires on the component's own create, update, and delete lifecycle events. Hooks are not automatically inherited by a component's child resources — attach hooks to each child individually if you want them to fire there as well.
+
 Each hook is a callback that gets invoked by the Pulumi engine. Hooks that execute before an action are called **before hooks** and have names beginning with `before` or `Before` depending on the language. Hooks that execute after an action are called **after hooks** and have names beginning with `after` or `After` depending on the language. Pulumi currently supports the following hook types:
 
 * *Create hooks* are called before or after a resource is created. This may occur during the initial creation of a resource or when a resource requires replacement due to e.g. a change in an immutable property.

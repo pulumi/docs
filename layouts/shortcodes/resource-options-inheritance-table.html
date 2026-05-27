@@ -1,0 +1,18 @@
+{{- /*
+  Renders the inheritance table — which options propagate from a component
+  to its child custom resources at registration time — driven by
+  data/resource_options.yaml.
+  Usage: {{< resource-options-inheritance-table >}}
+*/ -}}
+{{- $labels := dict
+  "yes" "Yes"
+  "no" "No"
+  "n/a" "N/A" -}}
+{{- $rows := slice -}}
+{{- range $name, $d := site.Data.resource_options -}}
+  {{- $link := printf "[%s](/docs/iac/concepts/resources/options/%s/)" $name (lower $name) -}}
+  {{- $inherited := index $labels (printf "%v" $d.inherited_by_children) -}}
+  {{- $rows = $rows | append (printf "| %s | %s |" $link $inherited) -}}
+{{- end -}}
+{{- $table := printf "| Resource option | Inherited by children of a component |\n|---|---|\n%s\n" (delimit $rows "\n") -}}
+{{ $table | markdownify }}

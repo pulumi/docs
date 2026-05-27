@@ -105,3 +105,5 @@ resources:
 ## Inheritance from parent
 
 `deletedWith` is inherited from a resource's [`parent`](/docs/iac/concepts/options/parent). Setting `deletedWith` on a parent causes every descendant in the resource tree to skip its provider delete as well, which makes it the idiomatic way to apply `deletedWith` for [component resources](/docs/iac/concepts/components/).
+
+Because the Pulumi engine never invokes Delete on a component itself, setting `deletedWith` on a component has no direct effect on the component. Its effect comes entirely from propagating the value to each of the component's child custom resources, which then skip their own deletes.
