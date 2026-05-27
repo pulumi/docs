@@ -18,6 +18,8 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 **[Targeted updates](/docs/iac/operations/stack-management/targeted-updates/)** - Limit which resources Pulumi operates on with `--target`, `--exclude`, and `--target-replace`. Learn the trade-offs of partial operations and when to use them.
 
+**[Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/)** - Use `--run-program` to execute your Pulumi program before `refresh` or `destroy`. Required for dynamic credentials and useful for diff-clean provider upgrades.
+
 **[Update plans](/docs/iac/operations/stack-management/update-plans/)** - Preview and review infrastructure changes before applying them. Update plans help you catch unintended modifications and coordinate changes across teams.
 
 **[Editing state files](/docs/iac/operations/stack-management/editing-state-files/)** - Safe techniques for modifying Pulumi state when normal operations can't recover. Use sparingly and always back up state first.
