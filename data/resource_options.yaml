@@ -5,8 +5,11 @@
 #   - the `resource-option-scope` shortcode (the per-page classification
 #     callout: layouts/shortcodes/resource-option-scope.html, which builds its
 #     text via layouts/partials/resource-option-scope-body.html)
-#   - the `resource-options-table` shortcode (the options table in
+#   - the `resource-options-table` shortcode (the summary options table in
 #     options/_index.md: layouts/shortcodes/resource-options-table.html)
+#   - the `resource-options-inheritance-table` shortcode (the inheritance
+#     table in options/_index.md:
+#     layouts/shortcodes/resource-options-inheritance-table.html)
 #
 # -----------------------------------------------------------------------------
 # ADDING A NEW RESOURCE OPTION
@@ -17,13 +20,14 @@
 #      content/docs/iac/concepts/resources/options/<name>.md (lowercase file
 #      name; camelCase `title` in frontmatter, like the existing pages).
 #   2. Add an entry to THIS file, keyed by the camelCase option name, filling
-#      in every field documented below. Verify `applies_to` and `typed_on`
-#      against the SDK source (see "Determining typed_on" below).
+#      in every field documented below. Verify `applies_to`, `typed_on`, and
+#      `inherited_by_children` against the SDK source and the engine's actual
+#      runtime behavior (see "Re-verifying applies_to" below).
 #   3. In the new page, add the callout immediately after the opening
 #      descriptive paragraph:  {{< resource-option-scope "<name>" >}}
 #      The argument MUST exactly match the key you added in step 2.
-#   4. Nothing else to update: the options table in options/_index.md is
-#      generated from this file, so it picks up the new option automatically.
+#   4. Nothing else to update: the options tables in options/_index.md are
+#      generated from this file, so they pick up the new option automatically.
 #   5. Run `make build`. The `resource-option-scope` shortcode fails the build
 #      if its argument has no matching key here, so a forgotten entry can't
 #      ship silently.
@@ -38,63 +42,91 @@
 #   type and never enforce this distinction, so they need no per-SDK lookup.
 #
 # Fields per option:
-#   description      One-line, sentence-case summary rendered in the
-#                    options/_index.md table.
-#   applies_to       custom | component | both | provider
-#                    Whether the option has a meaningful effect on custom
-#                    resources, component resources, both, or only on
-#                    explicitly configured provider resources.
-#   typed_on         base | custom-options | component-options
-#                    Where the option is declared in the strongly typed SDKs
-#                    (TypeScript, C#, Java). Options on `CustomResourceOptions`
-#                    or `ComponentResourceOptions` are compile-time enforced;
-#                    options on the base `ResourceOptions` type are not.
-#   components_note  Short note on component behavior, used in the per-page
-#                    callout reasoning.
-#   note             Optional extra sentence appended to the per-page callout
-#                    for behavior that needs more explanation.
+#   description             One-line, sentence-case summary rendered in the
+#                           options/_index.md summary table.
+#   applies_to              custom | component | both | provider
+#                           Whether the option has a meaningful effect when
+#                           set DIRECTLY on a resource of that scope.
+#                           Inheritance from a component parent to its
+#                           children is a separate axis (see
+#                           `inherited_by_children` below and `note`).
+#   typed_on                base | custom-options | component-options
+#                           Where the option is declared in the strongly
+#                           typed SDKs (TypeScript, C#, Java). Options on
+#                           `CustomResourceOptions` or
+#                           `ComponentResourceOptions` are compile-time
+#                           enforced; options on the base `ResourceOptions`
+#                           type are not.
+#   inherited_by_children   yes | no | n/a
+#                           Whether a child custom resource of a component
+#                           automatically picks up this option from the
+#                           component at resource-registration time. `n/a`
+#                           for custom-only options, provider-scoped options,
+#                           and `parent` (which defines the relationship
+#                           rather than being inheritable).
+#   note                    Optional extra sentence(s) appended to the
+#                           per-page callout. Use this for everything that
+#                           needs more explanation than the generic
+#                           boilerplate from `applies_to`/`typed_on` — in
+#                           particular, inheritance from a component parent
+#                           to its children, or options that are settable on
+#                           a component but silently ignored by the engine.
+#
+# -----------------------------------------------------------------------------
+# RE-VERIFYING `applies_to` / `inherited_by_children`
+# -----------------------------------------------------------------------------
+# To re-verify an entry, write a small program that sets the option on a
+# custom component resource, runs `pulumi up`, and inspects state via
+# `pulumi stack export` (and any side effects like engine warnings or refusal
+# to delete). The `random` provider works without cloud credentials.
 
 additionalSecretOutputs:
   description: Specify output properties that must be encrypted as secrets.
   applies_to: custom
   typed_on: custom-options
-  components_note: Components don't have provider-managed outputs.
+  inherited_by_children: n/a
 
 aliases:
   description: Specify aliases so that renaming or refactoring doesn't replace a resource.
   applies_to: both
   typed_on: base
-  components_note: Works for renaming or refactoring components.
+  inherited_by_children: no
 
 customTimeouts:
   description: Override the default retry/timeout behavior for resource provisioning.
   applies_to: custom
   typed_on: base
-  components_note: Components don't have provider operations to time out.
+  inherited_by_children: no
 
 deleteBeforeReplace:
   description: Delete the existing resource before creating its replacement.
   applies_to: custom
   typed_on: custom-options
-  components_note: A provider doesn't replace component resources.
+  inherited_by_children: n/a
 
 deletedWith:
   description: Skip this resource's delete when the named resource is also being deleted.
-  applies_to: both
+  applies_to: custom
   typed_on: base
-  components_note: Controls deletion behavior for the component.
+  inherited_by_children: yes
+  note: >-
+    Setting `deletedWith` on a component is accepted by the SDK but has no
+    direct effect, because the engine never calls Delete on components. The
+    value does propagate to every child custom resource of the component, so
+    using it on a component is the idiomatic way to apply `deletedWith` to a
+    whole subtree.
 
 dependsOn:
   description: Specify explicit dependencies in addition to those in the dependency graph.
   applies_to: both
   typed_on: base
-  components_note: Creates explicit dependencies on the component.
+  inherited_by_children: no
 
 envVarMappings:
   description: Remap environment variables to custom keys for provider authentication.
   applies_to: provider
   typed_on: base
-  components_note: Affects only explicitly configured provider resources.
+  inherited_by_children: n/a
   note: >-
     In the C# SDK, `envVarMappings` is defined on `CustomResourceOptions`, so
     passing it to a component resource is a compile-time error; in the other
@@ -105,21 +137,24 @@ hideDiffs:
   description: Compact the display of diffs for specified properties in CLI output.
   applies_to: custom
   typed_on: base
-  components_note: Components don't have provider-generated diffs.
+  inherited_by_children: no
 
 hooks:
   description: Run custom logic at specific points in the resource lifecycle.
-  applies_to: custom
+  applies_to: both
   typed_on: base
-  components_note: Components don't have provider lifecycle events.
+  inherited_by_children: no
+  note: >-
+    Hooks attached to a component fire on the component's own
+    create/update/delete lifecycle events. They are not automatically
+    inherited by the component's child resources — attach hooks to each child
+    individually if you want them to fire there as well.
 
 ignoreChanges:
   description: Ignore changes to specified properties during a diff.
   applies_to: custom
   typed_on: base
-  components_note: >-
-    Components don't have provider-managed inputs; a component's implementation
-    may choose to propagate this to its children.
+  inherited_by_children: no
   note: >-
     `ignoreChanges` is not applied automatically to a component resource's
     inputs. If you pass it to a component, that component's implementation
@@ -129,61 +164,82 @@ import:
   description: Bring an existing cloud resource under Pulumi management.
   applies_to: custom
   typed_on: custom-options
-  components_note: Components can't be imported from a cloud provider.
+  inherited_by_children: n/a
 
 parent:
   description: Establish a parent/child relationship between resources.
   applies_to: both
   typed_on: base
-  components_note: Establishes parent-child relationships.
+  inherited_by_children: n/a
 
 protect:
   description: Prevent accidental deletion by marking the resource as protected.
   applies_to: both
   typed_on: base
-  components_note: Protects the component from deletion.
+  inherited_by_children: yes
+  note: >-
+    Setting `protect: true` on a component propagates `protect: true` to every
+    child custom resource. The engine refuses to delete any protected resource
+    in the subtree until the flag is removed (or the resource is unprotected
+    with `pulumi state unprotect`).
 
 provider:
   description: Pass an explicitly configured provider instead of the default.
-  applies_to: custom
+  applies_to: both
   typed_on: base
-  components_note: Use `providers` instead to configure a component's child resources.
+  inherited_by_children: yes
+  note: >-
+    A `provider` set on a component is inherited by its child custom resources
+    of the same package, acting as the default provider for the subtree. For
+    components whose children span multiple packages, prefer `providers`,
+    which accepts a list keyed by package name.
 
 providers:
   description: Pass explicitly configured providers for a component's child resources.
   applies_to: component
   typed_on: component-options
-  components_note: Passes providers used by the component's child resources.
+  inherited_by_children: yes
 
 replacementTrigger:
   description: Force a replacement whenever a specified trigger value changes.
-  applies_to: both
+  applies_to: custom
   typed_on: base
-  components_note: A component is replaced when the trigger value changes.
+  inherited_by_children: no
+  note: >-
+    `replacementTrigger` is settable on a component, but the engine never
+    replaces components, so it has no effect there. It also is not inherited
+    by the component's children — set it on each child custom resource that
+    you want to be replaced by the trigger, or use a `transforms` function on
+    the component to inject it into matching children.
 
 replaceOnChanges:
   description: Treat changes to specified properties as forcing a replacement.
   applies_to: custom
   typed_on: base
-  components_note: A provider doesn't replace component resources.
+  inherited_by_children: no
 
 replaceWith:
   description: Replace this resource whenever one of the named resources is replaced.
   applies_to: custom
   typed_on: base
-  components_note: A provider doesn't replace component resources.
+  inherited_by_children: no
 
 retainOnDelete:
   description: Retain the resource in the cloud provider when Pulumi deletes it.
   applies_to: custom
   typed_on: base
-  components_note: Components don't have cloud resources to retain.
+  inherited_by_children: yes
+  note: >-
+    Setting `retainOnDelete` on a component has no direct effect — components
+    don't have cloud resources to retain. The value propagates to every child
+    custom resource of the component, which is the idiomatic way to retain a
+    whole subtree.
 
 transformations:
   description: Dynamically transform a resource's properties (prefer `transforms`).
   applies_to: both
   typed_on: base
-  components_note: Transforms the component's child resources.
+  inherited_by_children: yes
   note: >-
     When applied to a component resource, `transformations` runs against the
     component's child resources rather than the component itself.
@@ -192,7 +248,7 @@ transforms:
   description: Dynamically transform a resource's properties on the fly.
   applies_to: both
   typed_on: base
-  components_note: Transforms the component's child resources.
+  inherited_by_children: yes
   note: >-
     When applied to a component resource, `transforms` runs against the
     component's child resources rather than the component itself.
@@ -201,4 +257,4 @@ version:
   description: Pin the provider plugin version used when operating on a resource.
   applies_to: custom
   typed_on: base
-  components_note: Components don't use provider plugins.
+  inherited_by_children: no

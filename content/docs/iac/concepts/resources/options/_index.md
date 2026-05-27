@@ -23,8 +23,18 @@ Resource constructors accept the following resource options. Each option's refer
 
 ## Resource options and component resources
 
-Not all resource options apply to [component resources](/docs/iac/concepts/components/). Component resources are logical groupings that don't have a backing cloud provider, so options that affect provider behavior have no effect on the component itself (though they may affect child resources). The **Applies to** column in the table above shows which options apply to component resources; each option's reference page explains the behavior in detail.
+Not all resource options apply to [component resources](/docs/iac/concepts/components/). Component resources are logical groupings that don't have a backing cloud provider, so options that affect provider behavior have no effect on the component itself (though, as described below, several of them are inherited by the component's children). The **Applies to** column in the table above shows which options have a direct effect on the component itself; each option's reference page explains the behavior in detail.
 
 {{% notes type="info" %}}
-When you apply a resource option to a component that doesn't support it, the option is silently ignored. To apply options like `protect` or `ignoreChanges` to the child resources within a component, use the `transforms` option to modify child resources as they're created.
+When you apply a resource option to a component that doesn't support it, the option has no direct effect on the component. To apply options like `ignoreChanges` to the child resources within a component, use the `transforms` option to modify child resources as they're created.
 {{% /notes %}}
+
+### Options inherited from a component to its children
+
+When a resource option is set on a component, several options propagate from the component to each of its child resources automatically. The child resource doesn't need to set the option itself; the engine carries the value down the parent/child chain at resource registration time. Each option's reference page describes how the option behaves on a component in detail.
+
+{{< resource-options-inheritance-table >}}
+
+Options marked **N/A** can't be set on a component to begin with: `additionalSecretOutputs`, `deleteBeforeReplace`, and `import` are custom-resource-only (and a compile-time error on components in TypeScript, C#, and Java); `envVarMappings` only applies to explicitly configured provider resources; and `parent` defines the parent/child relationship itself rather than being a value that's inherited.
+
+For options that aren't inherited, set them on each child resource that needs the behavior, or use `transforms` on the component to inject the option into matching child registrations as they're created.
