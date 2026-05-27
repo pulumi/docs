@@ -40,11 +40,11 @@ Pull from whichever is closest to your runner to minimize cold-start time.
 
 ## Tags and release cadence
 
-Image tags mirror the Pulumi CLI's git tags. When [`pulumi v3.244.0`](https://github.com/pulumi/pulumi/releases) is released, you'll find a corresponding [`pulumi/pulumi:3.244.0`](https://hub.docker.com/r/pulumi/pulumi) in all three registries. The `latest` tag tracks the latest stable Pulumi CLI release.
+Image tags mirror the Pulumi CLI's git tags. When [`pulumi v3.243.0`](https://github.com/pulumi/pulumi/releases) is released, you'll find a corresponding [`pulumi/pulumi:3.243.0`](https://hub.docker.com/r/pulumi/pulumi) in all three registries. The `latest` tag tracks the latest stable Pulumi CLI release.
 
 The images are released automatically as part of the Pulumi CLI's release process. New minor releases arrive roughly weekly, with patch releases more frequently as needed.
 
-For reproducible builds, pin to a specific version (`pulumi/pulumi:3.244.0`) rather than `latest`. Pinning also keeps the image and your local CLI from drifting apart.
+For reproducible builds, pin to a specific version (e.g., `pulumi/pulumi:3.243.0` — check the [releases page](https://github.com/pulumi/pulumi/releases) for the current version) rather than `latest`. Pinning also keeps the image and your local CLI from drifting apart.
 
 ## Base images and platforms
 
@@ -98,7 +98,9 @@ If you build your own image on top of `pulumi/pulumi`, you can change the defaul
 The base and SDK images intentionally don't ship tools that are specific to a single provider or workflow — for example, `helm` and `kubectl` for the [Kubernetes provider](/registry/packages/kubernetes/), cloud-provider CLIs, or private credential helpers. When you need one of those tools available alongside the Pulumi CLI, derive your own image from the closest Pulumi image and install what you need:
 
 ```dockerfile
-FROM pulumi/pulumi-base:3.244.0
+# Replace the tag with the current Pulumi CLI version:
+# https://github.com/pulumi/pulumi/releases
+FROM pulumi/pulumi-base:3.243.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends helm kubectl \
