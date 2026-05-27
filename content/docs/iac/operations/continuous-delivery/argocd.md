@@ -219,7 +219,7 @@ spec:
       selfHeal: true
 ```
 
-The `syncPolicy.automated` block keeps the cluster in sync with Git without manual intervention: `prune` removes resources deleted from Git, and `selfHeal` reverts out-of-band changes. The `resources-finalizer.argocd.argoproj.io/background` finalizer pairs with `destroyOnFinalize` on the `Stack`—when the `Application` is deleted, Argo CD removes the `Stack` object in the background, which triggers PKO to destroy the infrastructure.
+The `syncPolicy.automated` block keeps the cluster in sync with Git without manual intervention: `prune` removes resources deleted from Git, and `selfHeal` reverts out-of-band changes. For background on when continuous reconciliation is the right fit (and when it isn't), see [GitOps and continuous reconciliation](/docs/iac/operations/stack-management/drift/#gitops-and-continuous-reconciliation). The `resources-finalizer.argocd.argoproj.io/background` finalizer pairs with `destroyOnFinalize` on the `Stack`—when the `Application` is deleted, Argo CD removes the `Stack` object in the background, which triggers PKO to destroy the infrastructure.
 
 ## Build a trunk-based GitOps workflow
 
