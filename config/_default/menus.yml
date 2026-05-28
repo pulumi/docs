@@ -49,7 +49,7 @@ iac:
   - name: SDK docs ↗
     parent: iac-languages-go
     url: https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi
-    weight: 1
+    weight: 100
     identifier: iac-languages-go-sdk
   - name: SDK docs ↗
     parent: iac-languages-dotnet
