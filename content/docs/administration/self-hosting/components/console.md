@@ -16,11 +16,9 @@ aliases:
   - /docs/pulumi-cloud/admin/self-hosted/components/console/
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Cloud, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-
+{{< self-hosting-trial-note >}}
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
-{{% /notes %}}
+{{< /self-hosting-trial-note >}}
 
 The Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 

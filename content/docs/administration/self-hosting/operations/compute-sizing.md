@@ -12,9 +12,7 @@ menu:
     identifier: administration-security-compliance-self-hosted-operations-compute-sizing
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 The API service and console are stateless containers. This page documents recommended container resource allocations and minimum infrastructure requirements.
 

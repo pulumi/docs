@@ -12,9 +12,7 @@ menu:
     identifier: administration-security-compliance-self-hosted-operations-backup-recovery
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 A reliable backup and recovery strategy is essential for self-hosted Pulumi Cloud. This page covers database backups, object storage protection, and recovery procedures.
 
