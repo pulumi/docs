@@ -1,6 +1,6 @@
 ---
 title_tag: "C#, VB, F# (.NET) | Languages & SDKs"
-meta_desc: An overview of how to use .NET languages like C# and F# with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: An overview of how to use .NET languages like C#, F#, and VB with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: C#, VB, F# (.NET)
 h1: Pulumi & C#, VB, F# (.NET)
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -19,289 +19,165 @@ aliases:
     - /docs/languages-sdks/dotnet/
 ---
 
-<img src="/logos/tech/dotnet.png" align="right" width="150" style="padding:8px; margin-top: -64px">
+Pulumi supports writing your infrastructure as code in any .NET language, including C#, F#, and Visual Basic. Using a general-purpose language for infrastructure as code provides several key advantages:
 
-Pulumi supports writing your infrastructure as code in any .NET language using any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle).
+- **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
+- **Rich ecosystem**: Leverage the [NuGet](https://www.nuget.org/) package ecosystem in your infrastructure code
+- **Native tooling**: Use your existing IDE, such as Visual Studio, Visual Studio Code, or Rider, along with test frameworks such as xUnit, NUnit, and MSTest, without requiring plugins or extensions
+- **Type safety**: Catch errors at compile time with .NET's static type system
 
-You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
+## Installation requirements
 
-<a class="btn btn-secondary" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET">Install .NET</a>
+### .NET runtime
 
-## Prerequisites
+Pulumi supports any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle) of .NET. We recommend using a recent release for the best experience. Pulumi currently tests against .NET 8, .NET 9, and .NET 10.
 
-Before using Pulumi for .NET, you will need to install both Pulumi and a [supported .NET version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle).
+To use the .NET runtime, set `runtime: dotnet` in your `Pulumi.yaml`:
 
-1. [Install Pulumi](/docs/install/)
-1. [Install .NET SDK](https://dotnet.microsoft.com/download)
-
-## Example
-
-{{% chooser language "csharp,fsharp,visualbasic" %}}
-
-{{% choosable language csharp %}}
-For example, this C# program provisions an Azure resource group and storage account:
-
-```csharp
-using System.Threading.Tasks;
-
-using Pulumi;
-using Pulumi.Azure.Core;
-using Pulumi.Azure.Storage;
-
-class Program
-{
-    static Task<int> Main() => Deployment.RunAsync<MyStack>();
-}
-
-public class MyStack : Stack
-{
-    public MyStack()
-    {
-        // Create an Azure Resource Group
-        var resourceGroup = new ResourceGroup("resourceGroup", new ResourceGroupArgs
-        {
-            Location = "West Europe",
-        });
-
-        // Create an Azure Storage Account
-        var storageAccount = new Account("storage", new AccountArgs
-        {
-            ResourceGroupName = resourceGroup.Name,
-            AccountReplicationType = "LRS",
-            AccountTier = "Standard",
-        });
-
-        // Export the connection string for the storage account
-        this.ConnectionString = storageAccount.PrimaryConnectionString;
-    }
-
-    [Output] public Output<string> ConnectionString { get; set; }
-}
+```yaml
+runtime: dotnet
 ```
 
-{{% /choosable %}}
+Install the [.NET SDK](https://dotnet.microsoft.com/download) for your platform.
 
-{{% choosable language fsharp %}}
-For example, this F# program provisions an Azure resource group and storage account:
+### Supported .NET languages
 
-```fsharp
-module Program
+Pulumi provides templates and first-class support for the three main .NET languages:
 
-open Pulumi.FSharp
-open Pulumi.Azure.Core
-open Pulumi.Azure.Storage
+- **C#**: Fully supported
+- **F#**: Fully supported
+- **Visual Basic**: Fully supported
 
-let infra () =
-    // Create an Azure Resource Group
-    let resourceGroup = new ResourceGroup "resourceGroup"
+Because Pulumi runs your compiled .NET assembly, any other language that targets the .NET runtime can also be used, though only C#, F#, and Visual Basic ship with `pulumi new` templates.
 
-    // Create an Azure Storage Account
-    let storageAccount =
-        new Account("storage",
-            new AccountArgs
-               (ResourceGroupName = io resourceGroup.Name,
-                AccountReplicationType = input "LRS",
-                AccountTier = input "Standard"))
+### Package management
 
-    // Export the connection string for the storage account
-    dict [("connectionString", storageAccount.PrimaryConnectionString :> obj)]
-
-[<EntryPoint>]
-let main _ =
-  Deployment.run infra
-```
-
-{{% /choosable %}}
-
-{{% choosable language visualbasic %}}
-For example, this Visual Basic program provisions an Azure resource group and storage account:
-
-```vb
-Imports System.Threading.Tasks
-Imports Pulumi
-Imports Pulumi.Azure.Core
-Imports Pulumi.Azure.Storage
-
-Module Program
-    Public Function Run() As IDictionary(Of String, Object)
-        ' Create an Azure Resource Group
-        Dim resourceGroup = New ResourceGroup("resourceGroup")
-
-        ' Create an Azure Storage Account
-        Dim storageAccount = New Account("storageAccount", New AccountArgs With {
-            .ResourceGroupName = resourceGroup.Name,
-            .AccountReplicationType = "LRS",
-            .AccountTier = "Standard"
-        })
-
-        ' Export the connection string for the storage account
-        Return New Dictionary(Of String, Object) From {
-            {"connectionString", storageAccount.PrimaryConnectionString}
-        }
-    End Function
-
-    Sub Main()
-        Deployment.RunAsync(AddressOf Run).Wait()
-    End Sub
-
-End Module
-```
-
-{{% /choosable %}}
-
-{{% /chooser %}}
-
-## C#, F#, and VB Templates
-
-The fastest way to get started is to use a template. The template will autogenerate a set of files and initialize a Pulumi project.
-
-{{< chooser language "csharp,fsharp,visualbasic" >}}
-
-{{% choosable language csharp %}}
-From an empty directory, create a new C# project:
+Pulumi packages are distributed on [NuGet](https://www.nuget.org/packages?q=pulumi) and managed with the standard `dotnet` CLI. Add the Pulumi SDK and provider packages to your project with `dotnet add package`:
 
 ```bash
-$ mkdir myproject && cd myproject
+$ dotnet add package Pulumi
+```
+
+## Getting started
+
+The fastest way to get started with Pulumi and .NET is to use a template:
+
+```bash
 $ pulumi new csharp
 ```
 
-This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.csproj` file, and a `Program.cs` file containing the program entry point and resource definitions. The directory name becomes the project name in `Pulumi.yaml` and the `csproj` file name.
-
-Additional cloud-specific templates are available:
-
-* `pulumi new aws-csharp`
-* `pulumi new azure-csharp`
-* `pulumi new gcp-csharp`
-{{% /choosable %}}
-
-{{% choosable language fsharp %}}
-From an empty directory, create a new F# project:
+Templates are also available for `fsharp` and `visualbasic`. You can discover additional templates by running `pulumi new` with no arguments, or you can initialize a Pulumi program by supplying a specific URL to the `pulumi new` command. For example:
 
 ```bash
-$ mkdir myproject && cd myproject
-$ pulumi new fsharp
+$ pulumi new https://github.com/pulumi/templates/tree/master/aws-csharp
 ```
 
-This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.fsproj` file, and a `Program.fs` file containing your program. The directory name becomes the project name in `Pulumi.yaml` and the `fsproj` file name.
+See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for full details.
 
-Additional cloud-specific templates are available:
+The base templates are cloud agnostic, and you will need to install additional NuGet packages for the cloud provider of your choice. Additional templates are available that do this for you:
 
-* `pulumi new aws-fsharp`
-* `pulumi new azure-fsharp`
-* `pulumi new gcp-fsharp`
-{{% /choosable %}}
+- `pulumi new aws-csharp`: creates a starter AWS C# project
+- `pulumi new azure-csharp`: creates a starter Azure C# project
+- `pulumi new gcp-csharp`: creates a starter Google Cloud C# project
 
-{{% choosable language visualbasic %}}
-From an empty directory, create a new Visual Basic project:
+Equivalent cloud-specific templates are available for F# (for example, `aws-fsharp`) and Visual Basic (for example, `aws-visualbasic`).
+
+### Program entrypoint
+
+A Pulumi .NET program is an ordinary .NET console application whose entry point calls `Deployment.RunAsync`. New C# templates use top-level statements:
+
+```csharp
+using Pulumi;
+
+return await Deployment.RunAsync(() =>
+{
+    // Declare your resources here.
+});
+```
+
+By default, Pulumi builds and runs the .NET project in the project directory using `dotnet run`. You can point at a different project file with the top-level `main` attribute in your `Pulumi.yaml`:
+
+```yaml
+name: my-project
+runtime: dotnet
+main: ./infra/infra.csproj
+```
+
+If you prefer to build the program yourself, set the `binary` runtime option to the path of a prebuilt assembly, and Pulumi will run it directly instead of compiling on each invocation:
+
+```yaml
+runtime:
+  name: dotnet
+  options:
+    binary: bin/MyInfra.dll
+```
+
+## Defining resources
+
+Writing a Pulumi program in .NET involves declaring infrastructure resources using resource constructors. Here are the key concepts:
+
+- **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `new Bucket("my-bucket")` creates an S3 bucket.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
+- **Stack outputs**: Export values from your program by returning a dictionary from `Deployment.RunAsync` (or by decorating fields with the `[Output]` attribute) to make them accessible from the CLI or to other Pulumi programs.
+
+The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
+
+- [Pulumi Concepts](/docs/iac/concepts/)
+- [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/)
+
+## Program execution
+
+Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI builds your .NET program and handles authentication, state management, and orchestrating resource operations.
+
+Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your .NET code. The Automation API allows you to:
+
+- Embed Pulumi operations in regular .NET applications
+- Build custom deployment tools and workflows
+- Create self-service infrastructure platforms
+
+With Automation API, your .NET code controls Pulumi, rather than Pulumi controlling your code.
+
+## Documentation and resources
+
+### Pulumi SDK
+
+The [Pulumi SDK (`Pulumi`)](/docs/reference/pkg/dotnet/pulumi/pulumi.html) is distributed on NuGet and contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs. F# users can also reference the [`Pulumi.FSharp`](/docs/reference/pkg/dotnet/pulumi.fsharp/pulumi.fsharp.html) package for idiomatic F# helpers, and the [`Pulumi.Automation`](/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html) package provides the Automation API.
+
+### Provider SDKs
+
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses 100+ .NET packages.
+
+### Policy SDK
+
+Pulumi Policy as Code packs cannot be authored in .NET. Policy packs are authored in [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/policy/) or [Python](/docs/reference/pkg/python/pulumi_policy/). A .NET program can still be validated by policy packs written in those languages. For more information, see [Pulumi Policy as Code](/docs/insights/policy/).
+
+### Dev versions
+
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. To install a pre-release version, add the `--prerelease` flag to `dotnet add package`. For example:
 
 ```bash
-$ mkdir myproject && cd myproject
-$ pulumi new visualbasic
+$ dotnet add package Pulumi --prerelease
 ```
 
-This creates a `Pulumi.yaml` [project file](/docs/concepts/projects/), an `myproject.vbproj` file, and a `Program.vb` file containing the program entry point and resource definitions. The directory name becomes the project name in `Pulumi.yaml` and the `vbproj` file name.
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/iac/operations/debugging/using-dev-builds/).
 
-Additional cloud-specific templates are available:
+### Testing
 
-* `pulumi new aws-visualbasic`
-* `pulumi new azure-classic-visualbasic`
-* `pulumi new gcp-visualbasic`
-{{% /choosable %}}
+- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
 
-{{< /chooser >}}
+## Troubleshooting .NET versions
 
-To deploy your infrastructure, run `pulumi up`. The Pulumi engine automatically runs `dotnet build` as part of the deployment.
-
-The base templates are cloud agnostic. To use cloud-specific resources, install the appropriate NuGet packages for your cloud provider or use one of the cloud-specific templates listed above.
-
-## .NET Tools
-
-Pulumi packages are distributed on [NuGet for download](https://www.nuget.org/packages?q=pulumi).
-
-Although you can use any editor, [Visual Studio Code](https://code.visualstudio.com/download), [Visual Studio](https://visualstudio.microsoft.com/downloads/), or [Rider](https://www.jetbrains.com/rider/) will deliver full tooling support for .NET out-of-the-box, including auto-completion, red error markers and build errors.
-
-![VSCode](/images/docs/quickstart/vscode-dotnet.png)
-
-## Pulumi Programming Model
-
-The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
-with examples available in Python. These concepts are made available to you in the Pulumi SDK.
-
-The Pulumi SDK is available to .NET developers as a Nuget package. To learn more,
-[refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/dotnet/pulumi/pulumi.html).
-
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with .NET and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
-
-## Continuous Delivery
-
-In addition to the CLI-driven workflows shown above, you can continuously deploy your infrastructure using .NET by integrating with your CI/CD provider of choice. This ensures automated deployments triggered by events such as commits to your Git repo.
-
-### Azure DevOps Pipelines
-
-<img src="/logos/tech/azuredevops.png" align="right" width="100" style="padding:0 0 16px 32px">
-
-Pulumi can deploy infrastructure changes from your Azure DevOps Pipelines. This enables easy integration with your existing automation while using .NET for your infrastructure as code, leveraging the Pulumi task in the Visual Studio Marketplace.
-
-To learn more, [see the Pulumi Azure DevOps user guide](/docs/using-pulumi/continuous-delivery/azure-devops/).
-
-### GitHub Actions
-
-<img src="/logos/tech/githubactions.png" align="right" width="120" style="padding:0 0 16px 32px">
-
-Pulumi can deploy infrastructure using GitHub Actions, making Git-driven deployments of your infrastructure as code straightforward. To learn more, [see the Pulumi GitHub Actions user guide](/docs/using-pulumi/continuous-delivery/github-actions/).
-
-There is also a [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) that integrates with Pull Requests so that you get previews of deployments before they are merged inline in your PRs where it's easy to comment and collaborate.
-
-### Other CI/CD Integrations
-
-If you don't use Azure DevOps or GitHub Actions, Pulumi also supports a number of other [CI/CD integrations](/docs/using-pulumi/continuous-delivery/).
-
-## Package Documentation
-
-### Standard Packages
-
-In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ .NET packages.
-
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/pulumi/pulumi.html">Pulumi</a></dd>
-    <dt>Pulumi FSharp SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/pulumi.fsharp/pulumi.fsharp.html">Pulumi.FSharp</a></dd>
-    <dt>Pulumi Automation API</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html">Pulumi.Automation</a></dd>
-</dl>
-
-### Dev Versions
-
-Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. To use them, add the `--prerelease` flag. For example: `dotnet add package Pulumi --prerelease`.
-
-## Troubleshooting
-
-### What .NET version do I need to have installed?
-
-While we will always officially support the [current set of .NET versions that are supported by Microsoft](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle), that isn't what is always in use at the moment. Pulumi supports multiple side-by-side versions of the .NET runtime at once. You might be supporting multiple programs that depend on different runtimes. Luckily, Pulumi actually is able to use a wide range of .NET runtime versions side-by-side.
-
-This can get confusing. You may encounter an error like this:
+Pulumi supports multiple side-by-side versions of the .NET runtime at once, so you can maintain programs that target different runtimes on the same machine. If the version your project targets is not installed, you may encounter an error like this:
 
 ```
-Determining projects to restore...
-    /usr/local/share/dotnet/sdk/8.0.420/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(166,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 10.0.  Either target .NET 8.0 or lower, or use a version of the .NET SDK that supports .NET 10.0. Download the .NET SDK from https://aka.ms/dotnet/download [/code/csharp-test/csharp-test.csproj]
-    Build FAILED.
-    /usr/local/share/dotnet/sdk/8.0.420/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(166,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 10.0.  Either target .NET 8.0 or lower, or use a version of the .NET SDK that supports .NET 10.0. Download the .NET SDK from https://aka.ms/dotnet/download [/code/csharp-test/csharp-test.csproj]
-        0 Warning(s)
-        1 Error(s)
-    Time Elapsed 00:00:00.22
-
-    [Pulumi Neo] Would you like help with these diagnostics?
-    https://app.pulumi.com/<org>/<project>/<stack>/previews/<preview-id>?explainFailure
-
-error: failed to discover package requirements: 'dotnet build -nologo /code/csharp-test' exited with non-zero exit code: 1
+error NETSDK1045: The current .NET SDK does not support targeting .NET 10.0.  Either target .NET 8.0 or lower, or use a version of the .NET SDK that supports .NET 10.0. Download the .NET SDK from https://aka.ms/dotnet/download
 ```
 
-This error means the Pulumi program requires .NET 10, but you have .NET 8 installed. You can either install .NET 10 or update the program to use your installed version. The target version is defined in your `.csproj`/`.fsproj`/`.vbproj` file:
+This error means the program requires a .NET version you do not have installed. The target version is defined by the `<TargetFramework>` property in your `.csproj`, `.fsproj`, or `.vbproj` file:
 
-```
+```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -317,39 +193,6 @@ This error means the Pulumi program requires .NET 10, but you have .NET 8 instal
 </Project>
 ```
 
-The `<TargetFramework>` value `net8.0` indicates this code requires .NET 8. Depending on your project, this could be .NET 8, .NET 9, or .NET 10. Install the version that matches your project file.
+The `<TargetFramework>` value (`net8.0` above) indicates which .NET version the program requires. Install that version, or update the property to match a version you already have. To see what is installed, run `dotnet --info`. Note that SDKs, the `NETCore.App` runtime, and the `AspNetCore.App` runtime are listed separately; check the error message to determine which one you are missing, since some installers do not include the ASP.NET Core runtime.
 
-To see the versions you have installed, run `dotnet --info`:
-
-```
-$ dotnet --info
-
-.NET SDK:
- Version:   8.0.101
- Commit:    2ef4b6e3a4
-
-Runtime Environment:
- OS Name:     Mac OS X
- OS Version:  14.0
- OS Platform: Darwin
- RID:         osx.14-x64
- Base Path:   /usr/local/share/dotnet/sdk/8.0.101/
-
-Host:
-  Version:      8.0.1
-  Architecture: x64
-  Commit:       2ef4b6e3a4
-
-.NET SDKs installed:
-  8.0.101 [/usr/local/share/dotnet/sdk]
-
-.NET runtimes installed:
-  Microsoft.AspNetCore.App 8.0.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
-  Microsoft.NETCore.App 8.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
-```
-
-Notice that SDKs, `NETCore.App`, and `AspNetCore.App` runtimes are listed separately. Check the error message to determine which you're missing, then install it. Some installers don't include the ASP.NET Core runtime, which can be confusing if your project needs it but you have the SDK installed.
-
-At the time of this writing, .NET 10 is the current long-term support version, and all of our built-in .NET templates require .NET 8 or later. If you have an older version installed, upgrade your runtime before using a template. Always check the project file's `<TargetFramework>` property to confirm which version your project requires. We currently test on .NET 8, .NET 9, and .NET 10.
-
-When in doubt, reach out! We have an active [Community Slack channel](https://slack.pulumi.com/) and are happy to help you get unblocked if you're running into an issue like this.
+If you are still stuck, reach out on the [Community Slack](https://slack.pulumi.com/) and we are happy to help you get unblocked.
