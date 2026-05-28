@@ -1,6 +1,6 @@
 ---
 title_tag: "Python | Languages & SDKs"
-meta_desc: An overview of how to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
+meta_desc: Learn to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Python
 h1: Pulumi & Python
 meta_image: /images/docs/meta-images/docs-meta.png
@@ -20,48 +20,80 @@ aliases:
     - /docs/languages-sdks/python/
 ---
 
-<img src="/logos/tech/logo-python.svg" align="right" width="150" style="padding:8px; margin-top: -64px">
+Pulumi supports writing your infrastructure as code in Python. Using a general-purpose language for infrastructure as code provides several key advantages:
 
-Pulumi supports writing your infrastructure as code in the Python language running on any [supported version](https://devguide.python.org/versions/#versions).
+- **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
+- **Rich ecosystem**: Leverage the vast [PyPI](https://pypi.org/) package ecosystem in your infrastructure code
+- **Native tooling**: Use your existing IDE, linters, test frameworks such as `pytest` and `unittest`, and other development tools without requiring plugins or extensions
+- **Type safety**: Pulumi's Python libraries ship with type hints, and Pulumi has first-class support for the `mypy` and `pyright` type checkers
 
-{{< install-python >}}
+## Installation requirements
 
-## Pulumi Programming Model
+### Python runtime
 
-The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
-with examples available in Python. These concepts are made available to you in the Pulumi SDK.
+Pulumi supports any [currently supported version](https://devguide.python.org/versions/#versions) of Python. We recommend using a recent release for the best experience.
 
-The Pulumi SDK is available to Python developers as a package distributed on PyPI. To learn more,
-[refer to the Pulumi SDK Reference Guide](/docs/reference/pkg/python/pulumi/).
+To use the Python runtime, set `runtime: python` in your `Pulumi.yaml`:
 
-### Inputs and Outputs
+```yaml
+runtime: python
+```
 
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource.  This concept is important to understand when getting started with Python and Pulumi, and the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation is recommended to get a feel for how to work with this core part of Pulumi in common cases.
-
-In Python, inputs that are objects, that is inputs that group multiple values together, can be represented either as classes or as dictionary literals. The types for the argument classes have the suffix `Args`, whereas the types for the dictionaries have the suffix `ArgsDict`. Both types take the same arguments, but the dictionary types are often more concise.
+Install [Python](https://www.python.org/downloads/). To reduce potential issues with setting up your Python environment on Windows or macOS, you should install Python through the official Python installer.
 
 {{% notes type="info" %}}
-The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/iac/guides/basics/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
+Either `pip`, `poetry` or `uv` is required to install dependencies. If you installed Python from source, with an installer from [python.org](https://python.org/), or via [Homebrew](https://brew.sh/) you should already have `pip`. If Python is installed using your OS package manager, you may have to install `pip` separately, see [Installing pip/setuptools/wheel with Linux Package Managers](https://packaging.python.org/guides/installing-using-linux-tools/). For example, on Debian/Ubuntu you must run `sudo apt install python3-venv python3-pip`. To install `poetry` follow the [installation instructions](https://python-poetry.org/docs/#installation). To install `uv` follow the [installation instructions](https://docs.astral.sh/uv/getting-started/installation/).
 {{% /notes %}}
 
-This example shows two ways to create an `ecr.Repository` resource in Python, once using a dictionary literal and once using a class:
+### Package managers
 
-```python
-import pulumi_aws as aws
+Pulumi supports the following Python package managers:
 
-repo1 = aws.ecr.Repository("repo1-with-dictionary-literals",
-    image_tag_mutability="MUTABLE",
-    image_scanning_configuration={
-        "scan_on_push": True,
-    })
+- **pip**: Fully supported (default)
+- **Poetry**: Fully supported (requires Poetry 1.8.0 or later)
+- **uv**: Fully supported
 
-repo2 = aws.ecr.Repository("repo2-with-args",
-    image_tag_mutability="MUTABLE",
-    image_scanning_configuration=aws.ecr.RepositoryImageScanningConfigurationArgs(
-        scan_on_push=True
-    ))
+You choose a package manager when you run `pulumi new`, and you can change it at any time with the `toolchain` option in `Pulumi.yaml`. See [Managing Python dependencies](#pypi-packages) below for configuration details.
+
+## Getting started
+
+The fastest way to get started with Pulumi and Python is to use a template:
+
+```bash
+$ pulumi new python
 ```
+
+You can discover additional templates by running `pulumi new` with no arguments, or you can initialize a Pulumi program by supplying a specific URL to the `pulumi new` command. For example:
+
+```bash
+$ pulumi new https://github.com/pulumi/templates/tree/master/aws-python
+```
+
+See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for full details.
+
+### Program entrypoint
+
+By default, Pulumi runs your program from the `__main__.py` file (or a `setup.py` file) in the project directory. Alternatively, you can set the top-level `main` attribute in your `Pulumi.yaml` to point at a different module file, and Pulumi will pass it to `python`:
+
+```yaml
+name: my-project
+runtime: python
+main: app.py
+```
+
+## Defining resources
+
+Writing a Pulumi program in Python involves declaring infrastructure resources using resource constructors. Here are the key concepts:
+
+- **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `aws.s3.Bucket("my-bucket")` creates an S3 bucket.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
+- **Stack outputs**: Export values from your program with `pulumi.export(...)` to make them accessible from the CLI or to other Pulumi programs.
+
+The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
+
+- [Pulumi Concepts](/docs/iac/concepts/)
+- [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/)
 
 ### Resource identity
 
@@ -71,18 +103,25 @@ For example, the `parent` and `depends_on` fields in `ResourceOptions` expect th
 
 See [Resource identity in Python](/docs/iac/languages-sdks/python/resource-identity/) for a complete guide to each identity form, common type-mismatch pitfalls, and debugging advice.
 
-### Blocking and Asynchronous Code
+## Program execution
 
-A Python Pulumi program is single threaded and the Pulumi runtime creates an
-event loop to enable the runtime to be asynchronous.
+Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI handles authentication, state management, and orchestrating resource operations.
 
-Given these constraints, [Blocking and Async Python with
-Pulumi](python-blocking-async) gives some recommendations on using blocking and
-asynchronous code within Python Pulumi programs.
+Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Python code. The Automation API allows you to:
 
-## Using Pulumi PyPI Packages {#pypi-packages}
+- Embed Pulumi operations in regular Python applications
+- Build custom deployment tools and workflows
+- Create self-service infrastructure platforms
 
-### Virtual Environments
+With Automation API, your Python code controls Pulumi, rather than Pulumi controlling your code.
+
+### Asynchronous code
+
+A Python Pulumi program is single threaded, and the Pulumi runtime creates an event loop to enable the runtime to be asynchronous. Given these constraints, [Blocking and Async Python with Pulumi](/docs/iac/languages-sdks/python/python-blocking-async/) gives some recommendations on using blocking and asynchronous code within Python Pulumi programs.
+
+## Managing Python dependencies {#pypi-packages}
+
+### Virtual environments
 
 It is not required, but we recommend using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to isolate the dependencies of your projects and ensure reproducibility between machines.
 
@@ -137,7 +176,7 @@ To further configure `poetry`, you can provide a [`poetry.toml` configuration fi
 
 {{< /chooser >}}
 
-#### Self managed virtual environments
+#### Self-managed virtual environments
 
 If you prefer to manage the virtual environment on your own (for example, using a tool like [Pipenv](https://github.com/pypa/pipenv)), you can delete the local `venv` directory and unset the `virtualenv` option in `Pulumi.yaml`:
 
@@ -147,22 +186,7 @@ runtime: python
 
 When managing the virtual environment on your own, you'll need to run any `pulumi` commands (such as `pulumi up`) from an activated virtual environment shell (or, if using a tool like [Pipenv](https://github.com/pypa/pipenv), prefix any `pulumi` commands with `pipenv run pulumi ...`).
 
-### Type Checking
-
-Pulumi Python libraries ship with type hints. You can manually run a type checking system of your choice when developing with Pulumi to make use of these type hints. As of 3.113.0 Pulumi also has first class support for `mypy` and `pyright` when running your program.
-
-This behavior is controlled by the following `typechecker` `runtime` option in `Pulumi.yaml`:
-
-```yaml
-runtime:
-  name: python
-  options:
-    typechecker: mypy
-```
-
-When set, Pulumi will invoke the type checker before running your program. This can be used to ensure your program is always type safe when running `pulumi up` without you having to remember to run a separate checking command beforehand.
-
-### Adding a new dependency {#packages}
+### Adding a dependency {#packages}
 
 There are many [Pulumi Python packages](/registry) available.
 
@@ -200,19 +224,48 @@ uv add ${PACKAGE_NAME}
 
 {{< /chooser >}}
 
-### Dev Versions
+### Type checking
 
-Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch.  If you would like to install a pre-release version, you can use the `--pre` flag with `pip` or the `--allow-prereleases` flag with `poetry`. For example:
+Pulumi Python libraries ship with type hints. You can manually run a type checking system of your choice when developing with Pulumi to make use of these type hints. As of 3.113.0 Pulumi also has first class support for `mypy` and `pyright` when running your program.
+
+This behavior is controlled by the following `typechecker` `runtime` option in `Pulumi.yaml`:
+
+```yaml
+runtime:
+  name: python
+  options:
+    typechecker: mypy
+```
+
+When set, Pulumi will invoke the type checker before running your program. This can be used to ensure your program is always type safe when running `pulumi up` without you having to remember to run a separate checking command beforehand.
+
+## Documentation and resources
+
+### Pulumi SDK
+
+The [Pulumi SDK (`pulumi`)](/docs/reference/pkg/python/pulumi/) is distributed on PyPI and contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
+
+### Provider SDKs
+
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
+
+### Policy SDK
+
+The [Pulumi Policy SDK (`pulumi_policy`)](/docs/reference/pkg/python/pulumi_policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
+
+### Dev versions
+
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. If you would like to install a pre-release version, you can use the `--pre` flag with `pip`, the `--allow-prereleases` flag with `poetry`, or the `--prerelease=allow` flag with `uv`. For example:
 
 ```bash
 pip install --pre -r requirements.txt
 poetry add --allow-prereleases ${PACKAGE_NAME}
+uv add --prerelease=allow ${PACKAGE_NAME}
 ```
 
-## Package Documentation
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/iac/operations/debugging/using-dev-builds/).
 
-The following reference documentation resources are available:
+### Testing
 
-* The [Pulumi SDK `pulumi`](/docs/reference/pkg/python/pulumi) allows you to work with with basic Pulumi constructs. You will need to reference it in most Pulumi IaC programs.
-* The [Pulumi Policy SDK `pulumi_policy`](/docs/reference/pkg/python/pulumi_policy) allows you to author Pulumi Policy as Code policies. You will need to reference it when authoring Pulumi Policy as code.
-* For managing resources in a Pulumi IaC program, you can find the relevant SDK reference docs for a given provider in [the Pulumi Registry](/registry/).
+- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end

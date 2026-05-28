@@ -202,6 +202,32 @@ resources:
 {{% /choosable %}}
 {{< /chooser >}}
 
+### Object-typed inputs in Python
+
+In Python, inputs that are objects, that is inputs that group multiple values together, can be represented either as classes or as dictionary literals. The types for the argument classes have the suffix `Args`, whereas the types for the dictionaries have the suffix `ArgsDict`. Both types take the same arguments, but the dictionary types are often more concise.
+
+{{% notes type="info" %}}
+The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/iac/guides/basics/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
+{{% /notes %}}
+
+This example shows two ways to create an `ecr.Repository` resource in Python, once using a dictionary literal and once using a class:
+
+```python
+import pulumi_aws as aws
+
+repo1 = aws.ecr.Repository("repo1-with-dictionary-literals",
+    image_tag_mutability="MUTABLE",
+    image_scanning_configuration={
+        "scan_on_push": True,
+    })
+
+repo2 = aws.ecr.Repository("repo2-with-args",
+    image_tag_mutability="MUTABLE",
+    image_scanning_configuration=aws.ecr.RepositoryImageScanningConfigurationArgs(
+        scan_on_push=True
+    ))
+```
+
 ## Working with outputs
 
 All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are called outputs.
