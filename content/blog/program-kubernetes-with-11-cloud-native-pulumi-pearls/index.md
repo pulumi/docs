@@ -106,7 +106,7 @@ as code; despite us using an imperative language, the code declares a
 goal state that Pulumi understands and converges towards, in a reliable
 way:
 
-![1](./1.png)
+![1](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/1.png)
 
 Notice we are using TypeScript. This gives us great IDE support and
 compile-time checking for common mistakes. (Pulumi is multi-language and
@@ -114,18 +114,18 @@ doesn't mind what language runs at runtime.) For example, if I
 accidentally enter a string for the replica count, I get instant IDE
 feedback:
 
-![2](./2.png)
+![2](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/2.png)
 
 From here, we can make changes to our program -- like changing Nginx
 from 1.7.9 to 1.8 -- and then rerun `pulumi up` . It will compute the
 minimal set of changes to bring the running application in line with our
 new desired state, show us a diff, and ask if we'd like to proceed:
 
-![3](./3.png)
+![3](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/3.png)
 
 Selecting yes will carry out the update:
 
-![4](./4.png)
+![4](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/4.png)
 
 At this point, we've seen that we can gain some advantages from
 infrastructure as code (like good IDE support and the use of a
@@ -188,7 +188,7 @@ The deployment workflow is similar to using the raw resources, with a
 simple `pulumi up`, and we can see the underlying resources expanded in
 a tree view during our update:
 
-![5](./5.png)
+![5](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/5.png)
 
 Notice that the frontend's allocated IP is printed here thanks to the
 `export` line:
@@ -334,7 +334,7 @@ export const frontendIp =
 The resulting Pulumi program can be deployed using `pulumi up` in the
 usual way:
 
-![deploy-1](./deploy-1.gif)
+![deploy-1](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/deploy-1.gif)
 
 An even more exciting example that highlights mixing cloud resources
 alongside a Helm Chart, check out [our example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
@@ -503,7 +503,7 @@ The incredible thing about this example is that, with it, we simply run
 pulumi up, and a little over two minutes later, we have a fully
 functioning GKE cluster with a canary deployment up and running:
 
-![6](./6.png)
+![6](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/6.png)
 
 In addition to the GKE example, our examples repo also has fully
 functioning examples for doing the same thing with
@@ -663,14 +663,14 @@ events.
 For instance, if we specify an invalid image, we'll see fine-grained
 status errors as they arise:
 
-![2](./status-errors.gif)
+![2](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/status-errors.gif)
 
 This allows us to "export" values from the completed resources, which
 gives a way to elevate the most important output values. In the last
 line, we see that we're exporting the public IP address allocated to the
 Nginx Pod. This allows us to use this IP address as a value:
 
-![3](./export.gif)
+![3](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/export.gif)
 
 Finally, in true infrastructure as code fashion, Pulumi works on the
 notion of goal states. This means it can always diff the desired goal
@@ -680,7 +680,7 @@ part of the typical `pulumi up` sequence, but the
 resource graph. In this example, we've changed our container image from
 `nginx:15-alpine` to `nginx:16-alpine`:
 
-![4](./container.gif)
+![4](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/container.gif)
 
 The ability to look at previews before making an update ensures mistakes
 don't get made and that deployments don't have unanticipated impacts.
@@ -760,7 +760,7 @@ detect that the ConfigMap changed, perform those changes, and then
 cascade the updates to the Deployment such that it ingests those
 changes:
 
-![5](./ingest-changes.gif)
+![5](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/ingest-changes.gif)
 
 ## 11. Staged Application Rollouts Gated by Prometheus Checks
 
@@ -816,7 +816,7 @@ deployment is at any given time. Most of the time will be spent waiting
 on Prometheus, but then we'll see the final deployment scale out --
 assuming our canary passed the health checks, of course!
 
-![6](./health-checks.gif)
+![6](/blog/program-kubernetes-with-11-cloud-native-pulumi-pearls/health-checks.gif)
 
 ## Wrapping Up
 

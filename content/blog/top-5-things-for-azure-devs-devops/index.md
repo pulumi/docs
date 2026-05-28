@@ -41,27 +41,27 @@ Let's go step-by-step to create a pipeline.
 
 **Step 1**: Sign in to your Azure DevOps organization or create one if you don't have one.
 
-![DevOps organization](./devops_organization.png)
+![DevOps organization](/blog/top-5-things-for-azure-devs-devops/devops_organization.png)
 
 **Step 2**: Create a project.
 
-![Create a project](./create_project.png)
+![Create a project](/blog/top-5-things-for-azure-devs-devops/create_project.png)
 
 **Step 3**: Create a pipeline.
 
-![Create a pipeline](./create_pipeline.png)
+![Create a pipeline](/blog/top-5-things-for-azure-devs-devops/create_pipeline.png)
 
 **Step 4**: Connect and select your repository.
 
-![Select repository](./select_repository.png)
+![Select repository](/blog/top-5-things-for-azure-devs-devops/select_repository.png)
 
 **Step 5**: Connect the pipeline to the repository on GitHub by approving the install.
 
-![Connect repository](./connect_repository.png)
+![Connect repository](/blog/top-5-things-for-azure-devs-devops/connect_repository.png)
 
 **Step 6**: Examine the pipeline YAML and, if everything appears correct, select **Save and run**.
 
-![Save and run](./save_and_run.png)
+![Save and run](/blog/top-5-things-for-azure-devs-devops/save_and_run.png)
 
 You can follow the [Azure DevOps Pipelines tutorial](https://docs.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?), which covers creating software artifacts. However, because we are deploying infrastructure and an application, we will need to expand pipeline tasks with an extension.
 

@@ -122,7 +122,7 @@ With a few clicks, developers can create new software projects provisioned with 
 
 The Pulumi Backstage Plugin extends Backstage by displaying essential details like the Pulumi stack, organization, project name, and description, as well as providing an activity view with aggregated information from the Pulumi Cloud. See a screenshot of the new Pulumi tab within Backstage below:
 
-![Pulumi Backstage Plugin](./backstage-plugin.png)
+![Pulumi Backstage Plugin](/blog/building-developer-portals/backstage-plugin.png)
 
 Check out the [Pulumi Backstage Plugin](https://github.com/pulumi/pulumi-backstage-plugin) in the [Backstage Plugin directory](https://backstage.io/plugins/) or the [Roadie Pulumi Backstage Plugin guide](https://roadie.io/docs/integrations/pulumi/) to get started today.
 

@@ -29,8 +29,8 @@ The following will allow you to configure a private key and allow access to GitH
      cd .. && git config --global --add url.\"git@github.com:\".insteadOf \"https://github.com\"
     ```
 
-   ![SSH Key Prerun Command](../../limit-prerun-cmd.png)
+   ![SSH Key Prerun Command](/docs/deployments/deployments/limit-prerun-cmd.png)
 
 2. Add the `$SSHKEY` field as a secret environment variable:
 
-![SSH Key Env Variable](../../limit-env.png)
+![SSH Key Env Variable](/docs/deployments/deployments/limit-env.png)

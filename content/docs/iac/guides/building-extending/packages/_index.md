@@ -30,13 +30,13 @@ Choose this when:
 - Your consumers can reasonably install the authoring language's runtime.
 - You're publishing to the Pulumi IDP Private Registry, or to no registry at all (source-based packages work fine consumed directly from Git).
 
-See [Authoring a Source-Based Plugin Package](./source-based-plugin/) for the full workflow.
+See [Authoring a Source-Based Plugin Package](/docs/iac/guides/building-extending/packages/source-based-plugin/) for the full workflow.
 
 ### Executable-based plugin package
 
 A Pulumi package whose plugin is a pre-built executable, typically a Pulumi [provider](/docs/iac/concepts/providers/). The Pulumi CLI downloads the binary at `pulumi install` time from a `pluginDownloadURL` and runs it as a subprocess, so no authoring-language runtime is required on the consumer's machine. SDKs are usually pre-published to npm, PyPI, NuGet, Maven Central, and as a tagged Go module — consumers can still generate SDKs locally from the schema, but since you're already running a CI/CD pipeline to publish binaries, publishing the SDKs alongside is a natural extension.
 
-Pulumi only provides supported tooling for authoring executable plugins in Go (via [`pulumi-go-provider`](./pulumi-go-provider-sdk/)), and for practical purposes new executable plugins should be written in Go. Other languages are documented but require hand-authoring the schema and managing serialization details yourself.
+Pulumi only provides supported tooling for authoring executable plugins in Go (via [`pulumi-go-provider`](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)), and for practical purposes new executable plugins should be written in Go. Other languages are documented but require hand-authoring the schema and managing serialization details yourself.
 
 Choose this when:
 
@@ -44,14 +44,14 @@ Choose this when:
 - You need to expose custom resources or provider functions from any authoring language.
 - You want zero consumer runtime dependencies and are willing to invest in cross-compilation and (usually) per-language SDK publishing.
 
-See [Authoring an Executable Plugin Package](./executable-plugin/) for the full workflow.
+See [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/) for the full workflow.
 
 ## Comparison
 
 | | Source-based plugin package | Executable-based plugin package |
 |---|---|---|
 | Consumer runtime required | Authoring language | None |
-| Custom resources and functions | Go only via [`pulumi-go-provider`](./source-based-plugin/#package-contents-by-authoring-language) | Yes (all languages) |
+| Custom resources and functions | Go only via [`pulumi-go-provider`](/docs/iac/guides/building-extending/packages/source-based-plugin/#package-contents-by-authoring-language) | Yes (all languages) |
 | Pulumi IDP Private Registry | Supported | Supported |
 | Public Pulumi Registry | Not supported today | Supported |
 | Pre-publishing SDKs | Optional (usually generated locally) | Typical (consumers can still generate locally) |
@@ -60,11 +60,11 @@ See [Authoring an Executable Plugin Package](./executable-plugin/) for the full 
 
 ## Guides in this section
 
-- [Authoring a Source-Based Plugin Package](./source-based-plugin/) — author a Pulumi package distributed as source and consumed via `pulumi package add`. Pulumi generates the SDK in the consumer's language on demand.
-- [Authoring an Executable Plugin Package](./executable-plugin/) — cross-compile a plugin binary, configure `pluginDownloadURL`, and publish per-language SDKs so the package runs on any consumer with no runtime dependency.
-- [Publishing a Package to the Pulumi Registry](./publishing-packages/) — publish to the public Pulumi Registry.
+- [Authoring a Source-Based Plugin Package](/docs/iac/guides/building-extending/packages/source-based-plugin/) — author a Pulumi package distributed as source and consumed via `pulumi package add`. Pulumi generates the SDK in the consumer's language on demand.
+- [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending/packages/executable-plugin/) — cross-compile a plugin binary, configure `pluginDownloadURL`, and publish per-language SDKs so the package runs on any consumer with no runtime dependency.
+- [Publishing a Package to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/) — publish to the public Pulumi Registry.
 - [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/) — publish to the Pulumi IDP Private Registry.
-- [Repository Strategy for Pulumi Packages](./repository-strategy/) — group components and providers across repositories and versions; applies to both source-based and executable-based packages.
-- [Local Packages](./local-packages/) — consume a package from a local path for iteration and monorepos.
-- [Pulumi Go Provider SDK](./pulumi-go-provider-sdk/) — build components, custom resources, and functions in Go.
-- [Schema Reference](./schema/) — Pulumi package schema for providers.
+- [Repository Strategy for Pulumi Packages](/docs/iac/guides/building-extending/packages/repository-strategy/) — group components and providers across repositories and versions; applies to both source-based and executable-based packages.
+- [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) — consume a package from a local path for iteration and monorepos.
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) — build components, custom resources, and functions in Go.
+- [Schema Reference](/docs/iac/guides/building-extending/packages/schema/) — Pulumi package schema for providers.

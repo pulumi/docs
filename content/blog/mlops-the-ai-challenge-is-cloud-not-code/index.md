@@ -172,7 +172,7 @@ curl -s -X 'POST' 'http://${RUNPOD_FQDN}/v1/chat' -H 'accept: application/json' 
 ```
 
 > Figure 3. A prompt and response from [meta-llama/Llama-2-7b-chat-hf](https://huggingface/meta-llama/Llama-2-7b-chat-hf) hosted on Katwalk Server
-![chatbot-api-response](./chatbot-api-prompt.png)
+![chatbot-api-response](/blog/mlops-the-ai-challenge-is-cloud-not-code/chatbot-api-prompt.png)
 
 In a world where "data is the new black gold" and tokens are money, deploying a chatbot in 30 minutes is not just interesting, it is a novel capability quickly becoming a necessity.
 

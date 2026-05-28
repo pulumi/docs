@@ -37,9 +37,9 @@ of JavaScript, improving time to ship code, time to provision and
 onboard new customers, and unify their Development and DevOps teams and
 techniques.
 
-![code comparision](./code-comparison.png)
+![code comparision](/blog/upcoming-aws-pulumi-webinar-on-feb-5/code-comparison.png)
 
-[Download the case study](./AWS-Pulumi-CaseStudy.pdf)
+[Download the case study](/blog/upcoming-aws-pulumi-webinar-on-feb-5/AWS-Pulumi-CaseStudy.pdf)
 
 This webinar will be useful to developers, System Architects, IT
 managers and DevOps managers. (register
@@ -50,4 +50,4 @@ Partner Solutions Architect), Luke Hoban (CTO, Pulumi), and Kim Hamilton
 Duffy (CTO & Principal Architect, Learning Machine).
 
 To learn more about the webinar, check out our
-[e-book](./AWS-Ebook.pdf) and [case study](./AWS-Pulumi-CaseStudy.pdf).
+[e-book](/blog/upcoming-aws-pulumi-webinar-on-feb-5/AWS-Ebook.pdf) and [case study](/blog/upcoming-aws-pulumi-webinar-on-feb-5/AWS-Pulumi-CaseStudy.pdf).

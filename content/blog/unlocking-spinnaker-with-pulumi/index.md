@@ -17,11 +17,11 @@ Here's a brief overview of the plugin.
 
 * Create a new Spinnaker pipeline with the Pulumi stage.
 
-![Pulumi plugin config](./pipeline-config.png)
+![Pulumi plugin config](/blog/unlocking-spinnaker-with-pulumi/pipeline-config.png)
 
 * When you run a pipeline that has a Pulumi stage in it, you'll be able to see the logs of the Pulumi CLI within your pipeline execution details window. Click the **Console Output** to view the logs.
 
-![Pulumi logs](./spinnaker-pulumi-preview.png)
+![Pulumi logs](/blog/unlocking-spinnaker-with-pulumi/spinnaker-pulumi-preview.png)
 
 Here's a demo of the plugin:
 

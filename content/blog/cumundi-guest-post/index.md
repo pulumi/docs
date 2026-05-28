@@ -38,7 +38,7 @@ const config = new pulumi.Config('gitlab')
 
 Applying the above code does nothing, which you can see in the *Resources* tab on the hosted Pulumi platform:
 
-![Starting point](./start.png)
+![Starting point](/blog/cumundi-guest-post/start.png)
 
 ### Adding the Git Repository
 
@@ -71,7 +71,7 @@ const firstCustomer = new gitlab.Project("FirstCustomer",
 
 We wrote the code in the simplest way to get the job done. After `pulumi up`, the Gitlab project is created:
 
-![Step 1](./step1.png)
+![Step 1](/blog/cumundi-guest-post/step1.png)
 
 ### A Customer Needs Cloud Infrastructure
 
@@ -119,7 +119,7 @@ const secondCustomerGitlabCIVariable = new gitlab.ProjectVariable("SecondCustome
 
 These resources are all added with the `Stack` as their parent in the resource view, as seen below. This is getting clumsy.
 
-![Step 2](./step2.png)
+![Step 2](/blog/cumundi-guest-post/step2.png)
 
 Visualization goes a long way, but a flat list of resources does not clearly show what belongs together.
 
@@ -164,7 +164,7 @@ const serviceAccountSecondCustomerKey = new gcp.serviceAccount.Key("ServiceAccou
 
 Before going forward, we also changed the relationship between the Gitlab repository and the Gitlab CI variable. When you run `pulumi up`, nothing changes on Gitlab and Google Cloud. But after applying the changes, refreshing the resource view on the Pulumi platform displays the following state graph.
 
-![Step 3](./step3.png)
+![Step 3](/blog/cumundi-guest-post/step3.png)
 
 ### Clean Up Duplication
 
@@ -243,7 +243,7 @@ const secondCustomerProject = new customer.Project('SecondCustomer',
 
 When we apply this to our infrastructure, two custom resources are created and saved to your Pulumi state.
 
-![Step 4](./step4.png)
+![Step 4](/blog/cumundi-guest-post/step4.png)
 
 However, we have not updated the parent-child relationships.
 
@@ -289,7 +289,7 @@ export class Project extends pulumi.ComponentResource {
 
 While we are changing parent-child relationships, the service account resource is also updated to have the Google Cloud project as its parent. The result should look like the state graph below.
 
-![Step 5](./step5.png)
+![Step 5](/blog/cumundi-guest-post/step5.png)
 
 If another developer reads this code, they might not immediately have a clear picture of how everything is wired together. However, looking at the Pulumi resource visualization, the following properties can immediately be deduced:
 

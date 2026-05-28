@@ -127,7 +127,7 @@ After each workflow run, you can download the generated diagrams from the Action
 
 For a more sophisticated setup, you could extend this workflow to automatically commit diagrams back to your repository, post them to Slack, or integrate them with your documentation system.
 
-![Pulumi Natively Generated Diagram](./architecture.png)
+![Pulumi Natively Generated Diagram](/blog/automating-diagramming-in-your-CI-CD/architecture.png)
 
 ## AI-powered diagramming with Claude and Mermaid
 
@@ -298,7 +298,7 @@ Pulumi Neo streamlines enterprise diagramming through an intelligent, organizati
    - Template files that Neo can model new diagrams from
    - README documentation explaining the repository's purpose and conventions
 
-   ![Folder Structure](./folder_structure.png)
+   ![Folder Structure](/blog/automating-diagramming-in-your-CI-CD/folder_structure.png)
 
 1. **Neo prompt engineering**: Use structured prompts to guide Neo's diagram generation with enterprise-grade specificity. You can also select your architecture diagram repository to tell Neo where to store his work:
 
@@ -318,7 +318,7 @@ Pulumi Neo streamlines enterprise diagramming through an intelligent, organizati
    1. Format: Generate diagrams as Mermaid code that can be rendered in documentation
    ```
 
-   ![Neo Prompt](./neo_prompt.png)
+   ![Neo Prompt](/blog/automating-diagramming-in-your-CI-CD/neo_prompt.png)
 
 1. **Automated pull request generation**: Neo analyzes your entire organization's infrastructure state, identifies changes, and automatically creates pull requests with updated diagrams for review and approval.
 

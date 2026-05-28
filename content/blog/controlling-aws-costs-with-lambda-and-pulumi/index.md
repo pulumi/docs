@@ -136,7 +136,7 @@ Duration: 27s
 We can go to the AWS Lambda console and trigger the application. To do this, we must trigger a test event. Our application
 doesn't accept any inputs, so the test event appears as follows:
 
-![Lambda Test Event](./test-event.png)
+![Lambda Test Event](/blog/controlling-aws-costs-with-lambda-and-pulumi/test-event.png)
 
 When we trigger the lambda, we should get an output as follows:
 
@@ -364,6 +364,6 @@ it needs to be added to the map of providers.
 The Go application we built continues to evolve. There are new areas of our account that have started to accumulate costs.
 After a few iterations of the application, we were able to drop 64% of our daily AWS costs.
 
-![Cost Reduction Results](./cost-reduction.png)
+![Cost Reduction Results](/blog/controlling-aws-costs-with-lambda-and-pulumi/cost-reduction.png)
 
 We look forward to hearing the results of your work in this area!

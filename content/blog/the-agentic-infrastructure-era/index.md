@@ -40,7 +40,7 @@ Andrej Karpathy noted nearly a year ago that, "Building a modern app is a bit li
 
 At the same time, we're seeing something magical happen here at Pulumi: LLMs are now doing over 20% of the infrastructure deployments, up from virtually zero a year ago. We expect this to grow to over 50% before the end of this year and well beyond afterwards.
 
-![Over 20% of all Pulumi operations are now being handled by LLMs.](./agentic-share-circular-light.png)
+![Over 20% of all Pulumi operations are now being handled by LLMs.](/blog/the-agentic-infrastructure-era/agentic-share-circular-light.png)
 
 The agentic infrastructure era is here. Today we're announcing several new platform capabilities to accelerate it further.
 

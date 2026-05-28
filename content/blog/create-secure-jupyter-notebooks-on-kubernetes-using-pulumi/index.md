@@ -250,7 +250,7 @@ export const jupyternotebookingress = new k8s.extensions.v1beta1.Ingress(appName
 
 Once complete, you will see the GKE cluster components show up as follows:
 
-![GKE and Jupyter](./gke-jupyter.png)
+![GKE and Jupyter](/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/gke-jupyter.png)
 
 Open a browser to access the jupyter-notebook Service using the domain name declared in the host
 section of your ingress code above. In our example, I used the domain name `nishidavidson.com`.
@@ -258,12 +258,12 @@ section of your ingress code above. In our example, I used the domain name `nish
 When you open your DNS, you will be asked for the "username: jupyter" and "password" for the secret
 you created in auth.txt file as shown below:
 
-![Jupyter notebook login](./jupyter-notebook-login.png)
+![Jupyter notebook login](/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/jupyter-notebook-login.png)
 
 As soon as the password is accepted, You should now be able to go to your website from anywhere in
 the world and access your password-protected Jupyter notebook running on GKE on secure SSL connection.
 
-![Jupyter notebook access](./jupyter-notebook-access.png)
+![Jupyter notebook access](/blog/create-secure-jupyter-notebooks-on-kubernetes-using-pulumi/jupyter-notebook-access.png)
 
 Success! We worked through a simple example of creating a GKE cluster, an NGINX ingress controller
 and stood up our password protected Jupyter notebook Ingress, Service, and Deployment with a simple

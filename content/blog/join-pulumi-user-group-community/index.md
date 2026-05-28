@@ -66,11 +66,11 @@ Our very first in-person PUG meetup took place in London, UK. The event was well
 
 During the meetup, attendees heard from several speakers, including Joe Duffy, Co-Founder & CEO at Pulumi, who was there to speak about Infrastructure as Code that writes itself after the release of [Pulumi Insights](/blog/pulumi-insights/), which happened that same day.
 
-![Photo of Pulumi CEO Joe Duffy speaking at a Pulumi User Group (PUG) in London, UK](./pulumi-user-group-pug-london-joe-duffy.png)
+![Photo of Pulumi CEO Joe Duffy speaking at a Pulumi User Group (PUG) in London, UK](/blog/join-pulumi-user-group-community/pulumi-user-group-pug-london-joe-duffy.png)
 
 Other speakers included Liam Hampton, Sr. Regional Cloud Advocate at Microsoft, who spoke about Microsoft Azure and IaC, and Sam Cogan, Director of Solution Architecture at Willis Towers Watson, who spoke about building a library of reusable modules you can repeatedly reuse in your IaC projects.
 
-![Photo of Sam Cogan speaking at a Pulumi User Group (PUG) in London, UK](./pulumi-user-group-pug-london-sam-cogan.png)
+![Photo of Sam Cogan speaking at a Pulumi User Group (PUG) in London, UK](/blog/join-pulumi-user-group-community/pulumi-user-group-pug-london-sam-cogan.png)
 
 Overall, the first PUG meetup was a huge success, and attendees left feeling inspired and energized about Pulumi's tools and the community's possibilities. With the launch of PUGs, Pulumi is demonstrating its commitment to building a strong and supportive community of professionals passionate about cloud infrastructure.
 

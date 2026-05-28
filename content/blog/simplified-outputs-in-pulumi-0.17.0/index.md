@@ -163,7 +163,7 @@ expressed and the entire tooling ecosystem understands them. For
 example, in VSCode, if you try to write code like the above, you'll see
 all the expected properties with the expected types:
 
-![Completion Lists](./comp-list.png)
+![Completion Lists](/blog/simplified-outputs-in-pulumi-0.17.0/comp-list.png)
 
 ## Conclusion
 

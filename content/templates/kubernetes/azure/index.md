@@ -22,7 +22,7 @@ cloud:
 
 The Azure Kubernetes Cluster template scaffolds a Pulumi project that provisions a managed [Azure Kubernetes Service (AKS) cluster](/registry/packages/azure-native/api-docs/containerservice/managedcluster) inside a new [Azure Virtual Network](/registry/packages/azure-native/api-docs/network/virtualnetwork/) with three subnets. Worker nodes are deployed with private IP addresses for improved security and spread across multiple availability zones for resilience.
 
-![An architecture diagram of the Azure Kubernetes Cluster template](./architecture.png)
+![An architecture diagram of the Azure Kubernetes Cluster template](/templates/kubernetes/azure/architecture.png)
 
 ## Using this template
 

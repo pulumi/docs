@@ -22,7 +22,7 @@ cloud:
 
 The Kubernetes Web Application template scaffolds a Pulumi project that deploys a web application to an existing Kubernetes cluster using Pulumi's [Kubernetes provider](/registry/packages/kubernetes). The template creates a new namespace, a Deployment to run the application, and a Service that exposes it outside the cluster. It ships with placeholder app content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Kubernetes Web Application template](./architecture.png)
+![An architecture diagram of the Kubernetes Web Application template](/templates/kubernetes-application/web-application/architecture.png)
 
 ## Using this template
 

@@ -12,7 +12,7 @@ tags:
 
 At Pulumi we read every single error message that our API produces. This is the primary mechanism that led to a 17x YoY reduction in our error rate. You’re probably wondering how reading error messages make them go away.<!--more-->
 
-![Pulumi Service API Error Rate Graph](./error_rate.png)
+![Pulumi Service API Error Rate Graph](/blog/reducing-our-error-rate/error_rate.png)
 
 Doesn’t common wisdom tell us that we need a fancy observability toolchain, or to follow the Google SRE model? I can confidently say that you don’t. I’ll go a step further and state that throughout my career, every system I’ve worked on that relied on aggregate views of errors was a complete dumpster fire. In every team where we instead chose to read all the errors, reliability naturally improved over time.
 

@@ -30,7 +30,7 @@ Here is what we think makes Pulumi stand out from the rest.
 
 And we like to think that our mascot, Pulumipus, is also pretty cool.
 
-!["Pulumipus"](./teenagerpus_2x.png)
+!["Pulumipus"](/blog/gartner-cool-vendor-award/teenagerpus_2x.png)
 
 Although Pulumi is cool, we have hundreds of organizations worldwide that have decided to run their production infrastructure using Pulumi. [Check out some select stories here](/case-studies/).
 

@@ -111,7 +111,7 @@ In addition to the preview and auditing mentioned above, the Pulumi CLI
 also provides rich status and repeatable deployments to Kubernetes
 through its support for dependency-based orchestration of deployments:
 
-![exposed-deploy](./exposed-deploy.gif)
+![exposed-deploy](/blog/pulumi-heart-google-cloud-platform/exposed-deploy.gif)
 
 And if you need a Kubernetes cluster, spinning one up with GKE using
 Pulumi is a breeze. Best of all you have easy access to the full breadth
@@ -227,7 +227,7 @@ for teams working with GitHub, Pulumi's GitHub App gives you rich
 feedback on what changes will be deployed as part of a Pull Request, so
 you can see and approve infrastructure changes before they happen:
 
-![Pulumi in a Pull Request](./pulumi_pr.png)
+![Pulumi in a Pull Request](/blog/pulumi-heart-google-cloud-platform/pulumi_pr.png)
 
 Learn more about integrating Pulumi with CI/CD in our
 [continuous delivery](/docs/iac/packages-and-automation/continuous-delivery/) documentation.
@@ -242,7 +242,7 @@ controls for teams, and details of all resources under management.
 With deep links into the Google Cloud Console, Pulumi provides quick
 access to all resources in your project.
 
-![Pulumi Service](./pulumi_console.png)
+![Pulumi Service](/blog/pulumi-heart-google-cloud-platform/pulumi_console.png)
 
 And because Pulumi works with both Google Cloud and Kubernetes resources
 at the same time, it's just as easy to deep link into resources in the
