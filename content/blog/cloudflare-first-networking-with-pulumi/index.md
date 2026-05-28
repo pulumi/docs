@@ -1,6 +1,6 @@
 ---
 title: "Cloudflare-First Networking as Code with Pulumi"
-date: 2026-06-02
+date: 2026-06-09
 meta_desc: "Build a Cloudflare-first edge baseline with Pulumi, including DNS, WAF rules, Workers, Zero Trust Access policies, and repeatable validation."
 meta_image: meta.png
 feature_image: feature.png
