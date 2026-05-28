@@ -12,7 +12,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/vault-secrets/
     - /docs/esc/providers/vault-secrets/
     - /docs/esc/integrations/dynamic-secrets/vault-secrets/
-    - /docs/esc/providers/secrets/vault-secrets/
     - /docs/esc/concepts/providers/secrets/vault-secrets/
 ---
 

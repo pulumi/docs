@@ -14,7 +14,6 @@ aliases:
   - /docs/esc/get-started/retrieve-external-secrets/
   - /docs/pulumi-cloud/esc/get-started/retrieve-external-secrets/
   - /docs/esc/integrations/dynamic-secrets/
-  - /docs/esc/providers/secrets/
   - /docs/esc/concepts/providers/secrets/
 ---
 

@@ -10,7 +10,6 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/integrations/rotated-secrets/mysql/
-  - /docs/esc/providers/rotators/mysql/
   - /docs/esc/concepts/providers/rotators/mysql/
 ---
 

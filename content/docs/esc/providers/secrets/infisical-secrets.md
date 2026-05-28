@@ -12,7 +12,6 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/infisical-secrets/
   - /docs/esc/providers/infisical-secrets/
   - /docs/esc/integrations/dynamic-secrets/infisical-secrets/
-  - /docs/esc/providers/secrets/infisical-secrets/
   - /docs/esc/concepts/providers/secrets/infisical-secrets/
 ---
 

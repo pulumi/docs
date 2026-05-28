@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/vault-login/
     - /docs/esc/providers/vault-login/
     - /docs/esc/integrations/dynamic-login-credentials/vault-login/
-    - /docs/esc/providers/login/vault-login/
     - /docs/esc/concepts/providers/login/vault-login/
 ---
 

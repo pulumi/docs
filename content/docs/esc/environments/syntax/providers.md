@@ -35,5 +35,5 @@ ESC providers allow users to access credentials, configuration, and secrets stor
 | [aws-secrets](/docs/esc/providers/secrets/aws-secrets/)                 | The `aws-secrets` provider enables you to dynamically import Secrets from AWS Secrets Manager into your Environment.            |
 | [azure-secrets](/docs/esc/providers/secrets/azure-secrets/)             | The `azure-secrets` provider enables you to dynamically import Secrets from Azure Key Vault into your Environment.              |
 | [gcp-secrets](/docs/esc/providers/secrets/gcp-secrets/)                 | The `gcp-secrets` provider enables you to dynamically import Secrets from Google Cloud Secrets Manager into your Environment.   |
-| [pulumi-stacks](/docs/esc/integrations/pulumi-iac/pulumi-stacks)    | The `pulumi-stacks` provider enables you to dynamically import Stack outputs from Pulumi IaC into your Environment.
+| [pulumi-stacks](/docs/esc/providers/secrets/pulumi-stacks/)    | The `pulumi-stacks` provider enables you to dynamically import Stack outputs from Pulumi IaC into your Environment.
 | [vault-secrets](/docs/esc/providers/secrets/vault-secrets/)             | The `vault-secrets` provider enables you to dynamically import Secrets from HashiCorp Vault into your Environment.              |

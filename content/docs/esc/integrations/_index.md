@@ -8,9 +8,6 @@ menu:
     identifier: esc-integrations
     parent: esc-home
     weight: 7
-aliases:
-  - /docs/esc/providers/
-  - /docs/pulumi-cloud/esc/providers/
 ---
 
 Integrations with a dedicated ESC component — a Pulumi-built provider, extension, operator, or driver — that consumes environments. For "use ESC with X" walkthroughs of tools without a dedicated integration component (Docker, direnv, GitHub Actions, Cloudflare, Kubernetes cluster access, Pulumi IaC), see [Guides](/docs/esc/guides/) instead.

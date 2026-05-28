@@ -12,7 +12,6 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/doppler-secrets/
   - /docs/esc/providers/doppler-secrets/
   - /docs/esc/integrations/dynamic-secrets/doppler-secrets/
-  - /docs/esc/providers/secrets/doppler-secrets/
   - /docs/esc/concepts/providers/secrets/doppler-secrets/
 ---
 

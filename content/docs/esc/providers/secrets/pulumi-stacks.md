@@ -13,7 +13,6 @@ aliases:
     - /docs/esc/providers/pulumi-stacks/
     - /docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/
     - /docs/esc/integrations/pulumi-stacks/
-    - /docs/esc/providers/secrets/pulumi-stacks/
     - /docs/esc/concepts/providers/secrets/pulumi-stacks/
 ---
 

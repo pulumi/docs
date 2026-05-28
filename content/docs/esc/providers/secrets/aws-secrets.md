@@ -12,7 +12,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/aws-secrets/
     - /docs/esc/providers/aws-secrets/
     - /docs/esc/integrations/dynamic-secrets/aws-secrets/
-    - /docs/esc/providers/secrets/aws-secrets/
     - /docs/esc/concepts/providers/secrets/aws-secrets/
 ---
 

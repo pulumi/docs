@@ -11,7 +11,6 @@ menu:
     weight: 3
 aliases:
   - /docs/esc/integrations/rotated-secrets/
-  - /docs/esc/providers/rotators/
   - /docs/esc/concepts/providers/rotators/
 ---
 

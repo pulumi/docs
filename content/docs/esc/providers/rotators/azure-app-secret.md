@@ -10,7 +10,6 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/integrations/rotated-secrets/azure-app-secret/
-  - /docs/esc/providers/rotators/azure-app-secret/
   - /docs/esc/concepts/providers/rotators/azure-app-secret/
 ---
 

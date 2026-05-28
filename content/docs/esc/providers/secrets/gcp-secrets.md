@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/gcp-secrets/
     - /docs/esc/providers/gcp-secrets/
     - /docs/esc/integrations/dynamic-secrets/gcp-secrets/
-    - /docs/esc/providers/secrets/gcp-secrets/
     - /docs/esc/concepts/providers/secrets/gcp-secrets/
 ---
 

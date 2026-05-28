@@ -14,13 +14,12 @@ aliases:
   - /docs/esc/get-started/use-short-term-credentials/
   - /docs/pulumi-cloud/esc/get-started/use-short-term-credentials/
   - /docs/esc/integrations/dynamic-login-credentials/
-  - /docs/esc/providers/login/
   - /docs/esc/concepts/providers/login/
 ---
 
 Login providers issue short-lived credentials for downstream services. Each provider is invoked through `fn::open::<name>-login` in an environment definition and returns a set of credentials that other providers (and your own code) can consume.
 
-OpenID Connect (OIDC) is the recommended authentication mode wherever supported — see [Configuring OIDC](/docs/esc/integrations/configuring-oidc/) for per-provider setup.
+OpenID Connect (OIDC) is the recommended authentication mode wherever supported — see [Configuring OIDC](/docs/esc/guides/configuring-oidc/) for per-provider setup.
 
 | Provider | Description |
 |---|---|

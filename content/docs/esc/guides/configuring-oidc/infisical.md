@@ -11,7 +11,6 @@ menu:
     weight: 6
 aliases:
   - /docs/esc/environments/configuring-oidc/infisical/
-  - /docs/esc/guides/configuring-oidc/infisical/
   - /docs/esc/providers/login/oidc-setup/infisical/
   - /docs/esc/concepts/providers/login/oidc-setup/infisical/
 ---

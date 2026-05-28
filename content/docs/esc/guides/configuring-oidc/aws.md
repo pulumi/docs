@@ -11,7 +11,6 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/environments/configuring-oidc/aws/
-  - /docs/esc/guides/configuring-oidc/aws/
   - /docs/esc/providers/login/oidc-setup/aws/
   - /docs/esc/concepts/providers/login/oidc-setup/aws/
 ---

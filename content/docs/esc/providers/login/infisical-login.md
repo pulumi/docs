@@ -13,7 +13,6 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/infisical-login/
   - /docs/esc/providers/infisical-login/
   - /docs/esc/integrations/dynamic-login-credentials/infisical-login/
-  - /docs/esc/providers/login/infisical-login/
   - /docs/esc/concepts/providers/login/infisical-login/
 ---
 

@@ -15,7 +15,6 @@ aliases:
   - /docs/pulumi-cloud/oidc/provider/vault/
   - /docs/administration/access-identity/oidc/provider/vault
   - /docs/administration/access-identity/oidc/provider/vault/
-  - /docs/esc/guides/configuring-oidc/vault/
   - /docs/esc/providers/login/oidc-setup/vault/
   - /docs/esc/concepts/providers/login/oidc-setup/vault/
 ---

@@ -13,7 +13,6 @@ aliases:
   - /docs/esc/providers/terraform-state/
   - /docs/esc/integrations/infrastructure/terraform/terraform-state/
   - /docs/esc/integrations/terraform-state/
-  - /docs/esc/providers/secrets/terraform-state/
   - /docs/esc/concepts/providers/secrets/terraform-state/
 ---
 

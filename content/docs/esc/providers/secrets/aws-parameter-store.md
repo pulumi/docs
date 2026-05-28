@@ -12,7 +12,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/aws-parameter-store/
     - /docs/esc/providers/aws-parameter-store/
     - /docs/esc/integrations/dynamic-secrets/aws-parameter-store/
-    - /docs/esc/providers/secrets/aws-parameter-store/
     - /docs/esc/concepts/providers/secrets/aws-parameter-store/
 ---
 

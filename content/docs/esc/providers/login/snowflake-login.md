@@ -10,7 +10,6 @@ menu:
     weight: 8
 aliases:
   - /docs/esc/integrations/dynamic-login-credentials/snowflake-login/
-  - /docs/esc/providers/login/snowflake-login/
   - /docs/esc/concepts/providers/login/snowflake-login/
 ---
 

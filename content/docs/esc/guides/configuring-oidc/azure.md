@@ -11,7 +11,6 @@ menu:
     weight: 2
 aliases:
   - /docs/esc/environments/configuring-oidc/azure/
-  - /docs/esc/guides/configuring-oidc/azure/
   - /docs/esc/providers/login/oidc-setup/azure/
   - /docs/esc/concepts/providers/login/oidc-setup/azure/
 ---

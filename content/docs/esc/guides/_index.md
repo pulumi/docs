@@ -36,6 +36,10 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 
 - [Kubernetes cluster access](/docs/esc/guides/kubernetes-cluster-access/) — store and consume `kubeconfig` files and cluster credentials in ESC.
 
+## Infrastructure tools
+
+- [Terraform](/docs/esc/guides/terraform/) — supply temporary credentials and input variables to the Terraform CLI via `esc run`.
+
 ## Cloud platforms
 
 - [Cloudflare](/docs/esc/guides/cloudflare/) — manage Cloudflare Workers secrets via ESC.

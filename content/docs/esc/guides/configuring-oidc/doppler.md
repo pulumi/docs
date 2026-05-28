@@ -11,7 +11,6 @@ menu:
     weight: 4
 aliases:
   - /docs/esc/environments/configuring-oidc/doppler/
-  - /docs/esc/guides/configuring-oidc/doppler/
   - /docs/esc/providers/login/oidc-setup/doppler/
   - /docs/esc/concepts/providers/login/oidc-setup/doppler/
 ---

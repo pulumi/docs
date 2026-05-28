@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/gcp-login/
     - /docs/esc/providers/gcp-login/
     - /docs/esc/integrations/dynamic-login-credentials/gcp-login/
-    - /docs/esc/providers/login/gcp-login/
     - /docs/esc/concepts/providers/login/gcp-login/
 ---
 

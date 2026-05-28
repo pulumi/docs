@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/1password-secrets/
     - /docs/esc/providers/1password-secrets/
     - /docs/esc/integrations/dynamic-secrets/1password-secrets/
-    - /docs/esc/providers/secrets/1password-secrets/
     - /docs/esc/concepts/providers/secrets/1password-secrets/
 ---
 

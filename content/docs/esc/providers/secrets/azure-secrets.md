@@ -12,7 +12,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/azure-secrets/
     - /docs/esc/providers/azure-secrets/
     - /docs/esc/integrations/dynamic-secrets/azure-secrets/
-    - /docs/esc/providers/secrets/azure-secrets/
     - /docs/esc/concepts/providers/secrets/azure-secrets/
 ---
 

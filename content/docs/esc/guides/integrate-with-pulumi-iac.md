@@ -11,8 +11,8 @@ menu:
 aliases:
   - /docs/esc/get-started/integrate-with-pulumi-iac/
   - /docs/pulumi-cloud/esc/get-started/integrate-with-pulumi-iac/
-  - /docs/esc/guides/integrate-with-pulumi-iac/
   - /docs/esc/integrations/integrate-with-pulumi-iac/
+  - /docs/esc/integrations/infrastructure/pulumi-iac/
 ---
 
 This guide shows you how to integrate Pulumi ESC with your Pulumi IaC projects to centralize configuration and secrets across all your stacks.
@@ -167,9 +167,30 @@ values:
 
 Learn more in [Importing environments](/docs/esc/environments/importing-environments/).
 
+## Convert existing stack config to an ESC environment
+
+To convert your existing stack config to a new ESC environment, use the Pulumi CLI:
+
+```shell
+pulumi config env init
+```
+
+See the [`pulumi config env init`](/docs/iac/cli/commands/pulumi_config_env_init/) reference for more information.
+
+## Automation API integration
+
+You can manage a stack's imported environments with [Automation API](/docs/iac/concepts/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported:
+
+- `addEnvironments(...)`: Append environments to your Pulumi stack's import list.
+- `listEnvironments()`: Retrieve the environments currently imported into your stack.
+- `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
+
+## Accessing Pulumi stack outputs
+
+You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [Pulumi stacks](/docs/iac/concepts/stacks/) into an ESC environment with the [`pulumi-stacks` provider](/docs/esc/providers/secrets/pulumi-stacks/).
+
 ## Next steps
 
 - [Dynamic login credentials](/docs/esc/providers/login/) - Generate dynamic cloud credentials with OIDC
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull from AWS, Azure, GCP secret stores
 - [Importing environments](/docs/esc/environments/importing-environments/) - Compose configuration hierarchies
-- [Pulumi IaC integration reference](/docs/esc/integrations/pulumi-iac/) - Complete integration documentation

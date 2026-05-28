@@ -10,7 +10,6 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/integrations/rotated-secrets/postgres/
-  - /docs/esc/providers/rotators/postgres/
   - /docs/esc/concepts/providers/rotators/postgres/
 ---
 

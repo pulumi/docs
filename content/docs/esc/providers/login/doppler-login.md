@@ -13,7 +13,6 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/doppler-login/
   - /docs/esc/providers/doppler-login/
   - /docs/esc/integrations/dynamic-login-credentials/doppler-login/
-  - /docs/esc/providers/login/doppler-login/
   - /docs/esc/concepts/providers/login/doppler-login/
 ---
 

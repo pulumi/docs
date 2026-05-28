@@ -11,7 +11,6 @@ menu:
     weight: 5
 aliases:
   - /docs/esc/environments/configuring-oidc/gcp/
-  - /docs/esc/guides/configuring-oidc/gcp/
   - /docs/esc/providers/login/oidc-setup/gcp/
   - /docs/esc/concepts/providers/login/oidc-setup/gcp/
 ---

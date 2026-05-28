@@ -10,7 +10,6 @@ menu:
     weight: 1
 aliases:
   - /docs/esc/integrations/rotated-secrets/aws-iam/
-  - /docs/esc/providers/rotators/aws-iam/
   - /docs/esc/concepts/providers/rotators/aws-iam/
 ---
 

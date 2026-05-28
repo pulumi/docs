@@ -12,7 +12,6 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/external/
   - /docs/esc/providers/external/
   - /docs/esc/integrations/dynamic-secrets/external/
-  - /docs/esc/providers/secrets/external/
   - /docs/esc/concepts/providers/secrets/external/
 ---
 

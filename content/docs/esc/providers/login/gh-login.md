@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/gh-login/
     - /docs/esc/providers/gh-login/
     - /docs/esc/integrations/dynamic-login-credentials/gh-login/
-    - /docs/esc/providers/login/gh-login/
     - /docs/esc/concepts/providers/login/gh-login/
 ---
 

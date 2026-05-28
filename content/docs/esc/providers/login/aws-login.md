@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/aws-login/
     - /docs/esc/providers/aws-login/
     - /docs/esc/integrations/dynamic-login-credentials/aws-login/
-    - /docs/esc/providers/login/aws-login/
     - /docs/esc/concepts/providers/login/aws-login/
 ---
 

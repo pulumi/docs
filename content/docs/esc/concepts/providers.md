@@ -9,8 +9,6 @@ menu:
     identifier: esc-concepts-providers
     parent: esc-concepts
     weight: 5
-aliases:
-  - /docs/esc/concepts/providers/
 ---
 
 Providers and rotators are the first-party plugins shipped with Pulumi ESC. They run inside the environment evaluator and produce values you can reference, import, or expose to other tools. There is no separate install step — every plugin ships with ESC and is invoked directly from environment YAML.

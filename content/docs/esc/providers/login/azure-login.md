@@ -13,7 +13,6 @@ aliases:
     - /docs/pulumi-cloud/esc/providers/azure-login/
     - /docs/esc/providers/azure-login/
     - /docs/esc/integrations/dynamic-login-credentials/azure-login/
-    - /docs/esc/providers/login/azure-login/
     - /docs/esc/concepts/providers/login/azure-login/
 ---
 

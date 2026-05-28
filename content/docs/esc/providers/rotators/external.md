@@ -10,7 +10,6 @@ menu:
     weight: 99
 aliases:
   - /docs/esc/integrations/rotated-secrets/external/
-  - /docs/esc/providers/rotators/external/
   - /docs/esc/concepts/providers/rotators/external/
 ---
 
