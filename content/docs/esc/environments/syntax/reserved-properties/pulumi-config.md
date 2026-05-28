@@ -13,7 +13,7 @@ menu:
     weight: 3
 ---
 
-The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration docs](/docs/esc/integrations/infrastructure/pulumi-iac) for an overview.
+The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration docs](/docs/esc/integrations/pulumi-iac) for an overview.
 
 ## Properties
 

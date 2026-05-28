@@ -18,7 +18,7 @@ Writes an `fn::open::aws-login` block with static credentials at the configured
 path under `values`. The secret access key and session token, if any, are
 wrapped in `fn::secret`. If a block already exists at the path it is replaced.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/
+See https://www.pulumi.com/docs/esc/providers/login/aws-login/
 for the full provider reference.
 
 

@@ -87,7 +87,7 @@ $ export ARM_SUBSCRIPTION_ID="<YOUR_SUBSCRIPTION_ID>"
 {{% /choosable %}}
 
 {{% notes type="info" %}}
-Consider using [Pulumi ESC's Azure login support](/docs/esc/integrations/dynamic-login-credentials/azure-login) for dynamic,
+Consider using [Pulumi ESC's Azure login support](/docs/esc/providers/login/azure-login) for dynamic,
 short-lived Azure credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
 {{% /notes %}}
 
