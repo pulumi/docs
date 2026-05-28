@@ -1,7 +1,6 @@
 ---
 title: "Build an EKS Environment Factory with Pulumi and vCluster"
-date: 2026-05-22
-draft: false
+date: 2026-06-04
 meta_desc: "Build EKS-hosted vCluster test environments with Pulumi, EKS Auto Mode, Helm, RBAC, quotas, and safe cleanup workflows."
 meta_image: meta.png
 feature_image: feature.png
