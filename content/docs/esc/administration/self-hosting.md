@@ -15,9 +15,7 @@ menu:
         weight: 2
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud with ESC, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note product="self-hosted Pulumi Cloud with ESC" />}}
 
 Pulumi ESC is available in a self-hosted model, providing the same secrets and configuration management capabilities as the managed Pulumi Cloud. ESC helps teams securely manage infrastructure configurations, enforce best practices, and simplify access controls. All ESC features including hierarchical environments, fine-grained access controls, and integrations with identity providers are fully available in the self-hosted deployment.
 

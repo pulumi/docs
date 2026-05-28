@@ -12,9 +12,7 @@ menu:
     identifier: administration-security-compliance-self-hosted-operations-database
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 Pulumi Cloud uses MySQL 8.0 for metadata, stack state references, and user/organization data. This page covers best practices for database configuration in production self-hosted deployments.
 
