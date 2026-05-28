@@ -9,7 +9,6 @@ menu:
     parent: esc-cli-overview
     weight: 2
 aliases:
-    - /docs/esc/cli/commands/
     - /docs/esc-cli/commands/
 cascade:
   cli_command_page: true

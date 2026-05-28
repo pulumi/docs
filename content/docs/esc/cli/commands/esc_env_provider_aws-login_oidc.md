@@ -18,7 +18,7 @@ configured path under `values`. The OIDC IAM role and trust policy must be
 provisioned separately (e.g. with Pulumi). If a block already exists at the
 path it is replaced.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/
+See https://www.pulumi.com/docs/esc/providers/login/aws-login/
 for the full provider reference.
 
 

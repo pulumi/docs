@@ -24,56 +24,56 @@ link_buttons:
 sections:
 - type: cards-logo-label-link
   heading: Secrets Integrations
-  description: <p>Integrate with popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/integrations/dynamic-secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/integrations/dynamic-secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/integrations/dynamic-secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/integrations/dynamic-secrets/1password-secrets/">1Password</a>.</p>
+  description: <p>Integrate with popular secrets stores to pull and synchronize secrets and configuration data, including <a href="/docs/esc/providers/secrets/aws-secrets/">AWS Secrets Manager</a>, <a href="/docs/esc/providers/secrets/azure-secrets/">Azure Key Vault</a>, <a href="/docs/esc/providers/secrets/gcp-secrets/">GCP Secret Manager</a>, <a href="/docs/esc/providers/secrets/vault-secrets/">HashiCorp Vault</a>, and <a href="/docs/esc/providers/secrets/1password-secrets/">1Password</a>.</p>
   cards:
   - label: AWS Secrets Manager
     icon: aws-40
-    link: /docs/esc/integrations/dynamic-secrets/aws-secrets/
+    link: /docs/esc/providers/secrets/aws-secrets/
   - label: Azure Key Vault
     icon: azure-40
-    link: /docs/esc/integrations/dynamic-secrets/azure-secrets/
+    link: /docs/esc/providers/secrets/azure-secrets/
   - label: GCP Secret Manager
     icon: google-cloud-40
-    link: /docs/esc/integrations/dynamic-secrets/gcp-secrets/
+    link: /docs/esc/providers/secrets/gcp-secrets/
   - label: HashiCorp Vault
     icon: vault-40
-    link: /docs/esc/integrations/dynamic-secrets/vault-secrets/
+    link: /docs/esc/providers/secrets/vault-secrets/
 - type: cards-logo-label-link
   heading: Languages
   description: Manage configuration and secrets intuitively on any cloud using familiar languages.
   cards:
   - label: Node.js
     icon: icon-32-32 node-color-32-32
-    link: /docs/esc/development/languages-sdks/javascript/
+    link: /docs/esc/languages-sdks/javascript/
   - label: Python
     icon: icon-32-32 python-color-32-32
-    link: /docs/esc/development/languages-sdks/python/
+    link: /docs/esc/languages-sdks/python/
   - label: Go
     icon: icon-32-32 go-color-32-32
-    link: /docs/esc/development/languages-sdks/go/
+    link: /docs/esc/languages-sdks/go/
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
     link: /docs/esc/environments/syntax/
 - type: button-cards
-  heading: Guides
-  description: Step-by-step tutorials for common ESC workflows.
+  heading: Operations
+  description: Day-to-day workflows for running Pulumi ESC.
   cards:
-  - icon: pulumi-iac
-    heading: Integrate with Pulumi IaC
-    description: Use ESC environments in your Pulumi infrastructure code.
-    link: /docs/esc/guides/integrate-with-pulumi-iac/
   - icon: lock-key
-    heading: Managing secrets
+    heading: Manage secrets
     description: Store, retrieve, and organize secrets in ESC environments.
-    link: /docs/esc/guides/managing-secrets/
+    link: /docs/esc/operations/managing-secrets/
   - icon: play
-    heading: Running commands with esc run
-    description: Inject secrets into any command or script.
-    link: /docs/esc/guides/running-commands-with-esc/
+    heading: Run commands with esc run
+    description: Inject environment values into any command or script.
+    link: /docs/esc/guides/running-commands/
+  - icon: pulumi-iac
+    heading: Use ESC with Pulumi IaC
+    description: Consume environments from a Pulumi program.
+    link: /docs/esc/guides/integrate-with-pulumi-iac/
   - icon: package
-    heading: Importing environments
-    description: Compose environments and share configuration across teams.
-    link: /docs/esc/guides/importing-environments/
+    heading: Compose environments
+    description: Import environments to share configuration across teams.
+    link: /docs/esc/environments/importing-environments/
 - type: button-cards
   heading: Capabilities
   cards:
@@ -82,36 +82,36 @@ sections:
     link: /docs/esc/cli/
     description: Command-line interface for managing environments, secrets, and configuration.
   - icon: key
-    heading: Dynamic Login Credentials
-    description: Support for short-lived OIDC login credentials for popular cloud providers.
-    link: /docs/esc/integrations/dynamic-login-credentials/
+    heading: Login providers
+    description: Issue short-lived OIDC credentials for AWS, Azure, GCP, GitHub, and more.
+    link: /docs/esc/providers/login/
   - icon: lock-key
-    heading: Dynamic Secrets Providers
-    description: Integrate with secrets stored in external providers using dynamic configuration providers.
-    link: /docs/esc/integrations/dynamic-secrets/
+    heading: Secrets providers
+    description: Dynamically import secrets from external stores into your environment.
+    link: /docs/esc/providers/secrets/
   - icon: bell
-    heading: ESC Webhooks
-    description: Automate your processes with environment event webhooks.
+    heading: Webhooks
+    description: Automate processes with environment event webhooks.
     link: /docs/esc/environments/webhooks/
 - type: button-cards
   heading: Resources
   cards:
   - icon: lightbulb
     heading: Concepts
-    description: Understand core ESC concepts including environments, sources, targets, and management.
+    description: Understand core ESC concepts including environments, sources, targets, and composition.
     link: /docs/esc/concepts/
   - icon: folder
     heading: Environments
-    description: Create and manage environments for organizing secrets and configuration.
+    description: Reference for the ESC YAML syntax, imports, versioning, and webhooks.
     link: /docs/esc/environments/
   - icon: link
-    heading: Integrations
-    description: Connect to external secret stores, cloud providers, and development tools.
-    link: /docs/esc/integrations/
+    heading: Guides
+    description: Use ESC with Docker, direnv, GitHub Actions, Kubernetes, Cloudflare, and Pulumi IaC.
+    link: /docs/esc/guides/
   - icon: wrench
-    heading: Development
-    description: Use SDKs, Pulumi Service Provider, and Automation API for programmatic access.
-    link: /docs/esc/development/
+    heading: Languages & SDKs
+    description: Manage ESC programmatically from .NET, Go, JavaScript, and Python.
+    link: /docs/esc/languages-sdks/
 # - type: full-width-cards
 #   heading: Reference
 #   cards:

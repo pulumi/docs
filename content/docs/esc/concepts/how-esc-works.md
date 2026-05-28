@@ -31,11 +31,11 @@ By aggregating secrets from these providers, Pulumi ESC provides a unified inter
 
 Pulumi ESC integrates with many popular cloud login providers and secrets managers, including:
 
-* [AWS OIDC](/docs/esc/integrations/dynamic-login-credentials/aws-login/) and [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/)
-* [Azure OIDC](/docs/esc/integrations/dynamic-login-credentials/azure-login) and [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets/)
-* [GCP OIDC](/docs/esc/integrations/dynamic-login-credentials/gcp-login/) and [GCP Secrets Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)
-* [HashiCorp Vault OIDC](/docs/esc/integrations/dynamic-login-credentials/vault-login/) and [Vault Secrets](/docs/esc/integrations/dynamic-secrets/vault-secrets/)
-* [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), [Kubernetes](/docs/esc/integrations/kubernetes/), among others.
+* [AWS OIDC](/docs/esc/providers/login/aws-login/) and [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/)
+* [Azure OIDC](/docs/esc/providers/login/azure-login) and [Azure KeyVault](/docs/esc/providers/secrets/azure-secrets/)
+* [GCP OIDC](/docs/esc/providers/login/gcp-login/) and [GCP Secrets Manager](/docs/esc/providers/secrets/gcp-secrets/)
+* [HashiCorp Vault OIDC](/docs/esc/providers/login/vault-login/) and [Vault Secrets](/docs/esc/providers/secrets/vault-secrets/)
+* [1Password](/docs/esc/providers/secrets/1password-secrets/), [Kubernetes](/docs/esc/integrations/kubernetes/), among others.
 
 Teams can setup [OpenID Connect integration](/docs/esc/guides/configuring-oidc/) in their cloud providers to allow ESC environments to pull short-lived credentials via **OIDC** for secure, time-limited access to secrets. These credentials can then be used in both [Pulumi IaC](/docs/pulumi-cloud/esc/environments/#using-with-pulumi-iac) workflows and [external CLIs](/docs/pulumi-cloud/esc/environments/#running-third-party-commands-using-pulumi-esc-secrets-and-config) like `aws`, `kubectl`, etc.
 
@@ -129,12 +129,12 @@ Every function of the ESC CLI is also available as a subcommand in the Pulumi Ia
 
 ### Standalone CLI and API
 
-The [Pulumi ESC CLI](/docs/esc/cli/) and [ESC Automation API](/docs/esc/development/automation-api/) allow teams to interact with environments outside of [Pulumi IaC](/docs/iac/). This means secrets and configurations can be accessed from external applications, infrastructure providers, or automation systems.
+The [Pulumi ESC CLI](/docs/esc/cli/) and [ESC Automation API](/docs/esc/integrations/automation-api/) allow teams to interact with environments outside of [Pulumi IaC](/docs/iac/). This means secrets and configurations can be accessed from external applications, infrastructure providers, or automation systems.
 
 ### First-Class developer tools integration
 
-Pulumi ESC also integrates with popular developer tools like [GitHub Actions](https://github.com/features/actions), [DirEnv](/docs/esc/integrations/dev-tools/direnv/), and [Docker](/docs/esc/integrations/dev-tools/docker/), enabling teams to pull configurations into their CI/CD pipelines and local development workflows.
+Pulumi ESC also integrates with popular developer tools like [GitHub Actions](https://github.com/features/actions), [DirEnv](/docs/esc/guides/direnv/), and [Docker](/docs/esc/guides/docker/), enabling teams to pull configurations into their CI/CD pipelines and local development workflows.
 
 ### Multi-language SDKs
 
-Pulumi ESC can also be used directly in your [TypeScript/JavaScript](/docs/esc/development/languages-sdks/javascript), [Go](/docs/esc/development/languages-sdks/go), or [Python](/docs/esc/development/languages-sdks/python) code using one of our [language-specific SDKs](/docs/esc/development/languages-sdks/). From the comfort of your favorite IDE, you can create and manage environments, retrieve dynamic secrets and configuration, and automate tagging and versioning directly from your CI/CD workflows.
+Pulumi ESC can also be used directly in your [TypeScript/JavaScript](/docs/esc/languages-sdks/javascript), [Go](/docs/esc/languages-sdks/go), or [Python](/docs/esc/languages-sdks/python) code using one of our [language-specific SDKs](/docs/esc/languages-sdks/). From the comfort of your favorite IDE, you can create and manage environments, retrieve dynamic secrets and configuration, and automate tagging and versioning directly from your CI/CD workflows.

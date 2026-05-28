@@ -20,55 +20,125 @@ aliases:
     - /docs/languages-sdks/go/
 ---
 
-<img src="/logos/tech/logo-golang.png" align="right" width="150" style="padding:8px; margin-top: -64px">
+Pulumi supports writing your infrastructure as code in Go. Using a general-purpose language for infrastructure as code provides several key advantages:
 
-Pulumi supports writing your infrastructure as code in the Go language built for any [supported version](https://go.dev/doc/devel/release#policy).
+- **Familiar syntax**: Write infrastructure code using the same language and patterns you already know
+- **Rich ecosystem**: Leverage the Go module ecosystem in your infrastructure code
+- **Native tooling**: Use your existing IDE, linters, test frameworks, and other development tools without requiring plugins or extensions
+- **Type safety**: Catch errors at compile time with Go's static type system
 
-<a class="btn btn-secondary" href="https://golang.org/doc/install" target="_blank" title="Install Go">Install Go</a>
+## Installation requirements
 
-## Templates
+### Go runtime
 
-The fastest way to get started is to use a template. The template will initialize a Pulumi project.
+Pulumi supports any [supported version](https://go.dev/doc/devel/release#policy) of Go. We recommend using a recent release for the best experience.
 
-From an empty directory, create a new project:
+To use the Go runtime, set `runtime: go` in your `Pulumi.yaml`:
+
+```yaml
+runtime: go
+```
+
+Install [Go](https://go.dev/doc/install) for your platform.
+
+### Dependency management
+
+Pulumi Go programs use [Go modules](https://go.dev/ref/mod) for dependency management. A new project includes a `go.mod` file; if you are starting from an existing directory, run `go mod init` to create one. Add the Pulumi SDK and provider packages with `go get`:
 
 ```bash
-$ mkdir myproject && cd myproject
+$ go get github.com/pulumi/pulumi/sdk/v3
+```
+
+## Getting started
+
+The fastest way to get started with Pulumi and Go is to use a template:
+
+```bash
 $ pulumi new go
 ```
 
-This will create a `Pulumi.yaml` [project file](/docs/concepts/projects/) containing some minimal metadata about your project (including a name and description which you may wish to change) and a `main.go` file containing your program. The name of the directory is used as the project name in `Pulumi.yaml`. Use your favorite Go dependency manager (such as Go's built-in modules system, by running `go mod init` in your project's directory).
+You can discover additional templates by running `pulumi new` with no arguments, or you can initialize a Pulumi program by supplying a specific URL to the `pulumi new` command. For example:
 
-To deploy your infrastructure, first build your Go program: `go build -o $(basename $(pwd))`. Then run `pulumi up` and Pulumi will perform the operations needed to deploy the infrastructure you have declared.
+```bash
+$ pulumi new https://github.com/pulumi/templates/tree/master/aws-go
+```
 
-This `go` template is cloud agnostic, and you will need to install additional Go modules for the cloud provider of your choice. Additional templates are available that do this for you:
+See the [`pulumi new` documentation](/docs/iac/cli/commands/pulumi_new/) for full details.
 
-* `pulumi new aws-go`: creates a starter AWS Go project
-* `pulumi new azure-go`: creates a starter Azure Go project
-* `pulumi new gcp-go`: creates a starter Google Cloud Go project
+The `go` template is cloud agnostic, and you will need to install additional Go modules for the cloud provider of your choice. Additional templates are available that do this for you:
 
-## Pulumi Programming Model
+- `pulumi new aws-go`: creates a starter AWS Go project
+- `pulumi new azure-go`: creates a starter Azure Go project
+- `pulumi new gcp-go`: creates a starter Google Cloud Go project
 
-The Pulumi programming model defines the core concepts you will use when creating infrastructure as code programs using
-Pulumi. [Concepts](/docs/intro/concepts) describes these concepts
-with examples available in Go. These concepts are made available to you in the Pulumi SDK.
+### Program entrypoint
 
-The Pulumi SDK is available to Go developers in source form on GitHub. To learn more,
-[refer to the Pulumi SDK Reference Guide](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi).
+A Pulumi Go program is an ordinary Go `main` package whose `main` function calls `pulumi.Run`. By default, Pulumi compiles and runs the program in the project directory. You can point at a different program directory with the top-level `main` attribute in your `Pulumi.yaml`:
 
-The Pulumi programming model includes a core concept of `Input` and `Output` values, which are used to track how outputs of one resource flow in as inputs to another resource. This concept is important to understand when getting started with Go and Pulumi. See [Inputs & outputs in Go](/docs/iac/languages-sdks/go/go-inputs-outputs/) for a detailed guide to the Go-specific type model, and [Inputs & outputs](/docs/iac/concepts/inputs-outputs/) for the language-neutral conceptual overview.
+```yaml
+name: my-project
+runtime: go
+main: ./infra
+```
 
-## Package Documentation
+If you prefer to build the program yourself, set the `binary` runtime option to the path of a prebuilt executable, and Pulumi will run it directly instead of compiling on each invocation:
 
-In addition to the standard packages the [Pulumi Registry](/registry/) houses 100+ Go packages.
+```yaml
+runtime:
+  name: go
+  options:
+    binary: ./bin/my-program
+```
 
-## Dev Versions
+## Defining resources
 
-You can install the latest pre-release version from the main development branch using the regular `go get` tooling.  For example `go get github.com/pulumi/pulumi/sdk/v3@master`.
+Writing a Pulumi program in Go involves declaring infrastructure resources using resource constructors. Here are the key concepts:
 
-### Standard Packages
+- **Declare resources**: Create infrastructure resources by instantiating resource types from provider packages. For example, `s3.NewBucket(ctx, "my-bucket", nil)` creates an S3 bucket.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See [Inputs and outputs](/docs/concepts/inputs-outputs/) for the language-neutral overview, and [Inputs & outputs in Go](/docs/iac/languages-sdks/go/go-inputs-outputs/) for the Go-specific type model — `Input`/`Output` types, `ApplyT`, `All`, and output lifting.
+- **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
+- **Stack outputs**: Export values from your program with `ctx.Export(...)` to make them accessible from the CLI or to other Pulumi programs.
 
-<dl class="tabular">
-    <dt>Pulumi SDK</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi">pulumi</a></dd>
-</dl>
+The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
+
+- [Pulumi Concepts](/docs/iac/concepts/)
+- [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/)
+
+## Program execution
+
+Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI compiles your Go program and handles authentication, state management, and orchestrating resource operations.
+
+Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Go code. The Automation API allows you to:
+
+- Embed Pulumi operations in regular Go applications
+- Build custom deployment tools and workflows
+- Create self-service infrastructure platforms
+
+With Automation API, your Go code controls Pulumi, rather than Pulumi controlling your code.
+
+## Documentation and resources
+
+### Pulumi SDK
+
+The [Pulumi SDK (`pulumi`)](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
+
+### Provider SDKs
+
+For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/), which houses 100+ Go packages.
+
+### Dev versions
+
+Pulumi SDKs also publish pre-release versions that include all the latest changes from the main development branch. You can install them using the regular `go get` tooling. For example:
+
+```bash
+$ go get github.com/pulumi/pulumi/sdk/v3@master
+```
+
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/iac/operations/debugging/using-dev-builds/).
+
+### Testing
+
+- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
+</content>
+</invoke>
