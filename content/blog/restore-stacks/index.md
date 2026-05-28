@@ -21,6 +21,9 @@ meta_desc: Pulumi Cloud launches new Restore Stacks feature for Enterprise and B
 # has been provided for you.
 meta_image: meta.png
 
+# Point search engines to the docs page as the authoritative source for this content.
+canonical_url: "https://www.pulumi.com/docs/iac/operations/stack-management/restoring-deleted-stacks/"
+
 # At least one author is required.
 # The values in this list correspond with the `id` properties
 # of the team member files at /data/team/team.
@@ -38,6 +41,8 @@ tags:
 # for additional details,
 # and please remove these comments before submitting for review.
 ---
+
+> This post announced the Restore Stacks feature. For the most up-to-date information on recovering deleted stacks, see the [Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/) documentation.
 
 Starting today, you can restore previously deleted stacks in the Pulumi Cloud console. We've had a number of requests from customers to recover stacks, either because the stack was accidentally deleted or the stack was intentionally deleted but, later on, they want to restore and preserve the activity history on the stack and just remove its resources.
 

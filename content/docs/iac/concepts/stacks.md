@@ -1172,3 +1172,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
 
 To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
+
+{{% notes type="info" %}}
+If a stack is deleted by mistake, organization administrators can restore it from the Pulumi Cloud console for a limited time. See [Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/).
+{{% /notes %}}
