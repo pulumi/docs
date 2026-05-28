@@ -7,6 +7,7 @@ meta_desc: |
     Self-host Qwen 3.5 on your GPU with Pulumi, llama.cpp, and Tailscale. One pulumi up gives you a private OpenAI-compatible API on your tailnet.
 
 meta_image: meta.png
+feature_image: feature.png
 
 authors:
 - pablo-seibelt
