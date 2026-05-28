@@ -17,7 +17,7 @@ Add an Azure login provider to an environment
 Subcommands select the authentication mode: `static` for static credentials,
 `oidc` for federated identity via OpenID Connect.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/azure-login/
+See https://www.pulumi.com/docs/esc/providers/login/azure-login/
 for the full provider reference.
 
 

@@ -12,9 +12,7 @@ menu:
     identifier: administration-security-compliance-self-hosted-operations
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 This guide provides best practices for deploying and operating Pulumi Cloud in a self-hosted configuration with high availability (HA) and disaster recovery (DR). These recommendations are derived from how Pulumi operates its own managed service and adapted for self-hosted deployments.
 

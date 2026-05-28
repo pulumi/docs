@@ -55,17 +55,17 @@ See the [ESC onboarding blog post](/blog/esc-new-onboarding/) for a walkthrough 
 
 If you didn't use the wizard, or you'd rather configure the trust relationship explicitly, set up the cloud-side trust and the ESC environment yourself:
 
-- **AWS: use OIDC with the [`aws-login`](/docs/esc/integrations/dynamic-login-credentials/aws-login/) provider.** Pulumi Cloud federates with AWS IAM via OpenID Connect; the `aws-login` provider exchanges a Pulumi-issued OIDC token for short-lived AWS credentials at task time. Follow [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/) to set up the IAM role and trust policy.
-- **Google Cloud: use OIDC with the [`gcp-login`](/docs/esc/integrations/dynamic-login-credentials/gcp-login/) provider.** Uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation). Follow [Configuring OpenID Connect for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) to set up the workload identity pool and provider.
-- **Azure: use OIDC with the [`azure-login`](/docs/esc/integrations/dynamic-login-credentials/azure-login/) provider.** Uses workload identity federation against a Microsoft Entra App. Follow [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/) to set up the federated credential.
+- **AWS: use OIDC with the [`aws-login`](/docs/esc/providers/login/aws-login/) provider.** Pulumi Cloud federates with AWS IAM via OpenID Connect; the `aws-login` provider exchanges a Pulumi-issued OIDC token for short-lived AWS credentials at task time. Follow [Configuring OpenID Connect for AWS](/docs/esc/guides/configuring-oidc/aws/) to set up the IAM role and trust policy.
+- **Google Cloud: use OIDC with the [`gcp-login`](/docs/esc/providers/login/gcp-login/) provider.** Uses [workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation). Follow [Configuring OpenID Connect for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) to set up the workload identity pool and provider.
+- **Azure: use OIDC with the [`azure-login`](/docs/esc/providers/login/azure-login/) provider.** Uses workload identity federation against a Microsoft Entra App. Follow [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/) to set up the federated credential.
 
 If you can't use OIDC (for example, while you're getting started), the same `*-login` providers also accept static credentials. See each provider's documentation for the static-credentials syntax.
 
 #### Kubernetes
 
-The [Kubernetes Cluster Access](/docs/esc/integrations/kubernetes/kubernetes/) guide walks through both options:
+The [Kubernetes Cluster Access](/docs/esc/guides/kubernetes-cluster-access/) guide walks through both options:
 
-- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. This way the cluster Neo connects to is always the cluster Pulumi just deployed, with no manual config drift.
+- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/secrets/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. This way the cluster Neo connects to is always the cluster Pulumi just deployed, with no manual config drift.
 - **Static kubeconfig.** Drop a kubeconfig directly into `files.KUBECONFIG` for clusters not managed by a Pulumi program.
 
 ## Setting up a CLI integration

@@ -41,11 +41,15 @@ If you need to create a resource that depends on an output value, pass the outpu
 You cannot create [stack outputs](/docs/iac/concepts/stacks/#outputs) (using `export` in TypeScript/JavaScript, `pulumi.export()` in Python, `ctx.Export()` in Go, etc.) inside an `apply`. Stack outputs must be created at the top level of your Pulumi program. If you need to export a value that depends on an output, you can export the output directly—Pulumi will automatically handle resolving the value when the stack output is accessed.
 {{% /notes %}}
 
+{{% notes type="info" %}}
+The `apply` method does not apply to Pulumi YAML. YAML is a declarative language with no facility for running a function against a resolved value, so it has no `apply` equivalent. To use an output value in a YAML program, reference it directly with interpolation syntax (for example, `${myResource.myProperty}`) and Pulumi resolves the value for you. For this reason, the examples on this page do not include YAML.
+{{% /notes %}}
+
 ## Printing output values { search.keywords="pulumi.apply" }
 
 Suppose you want to print the ID of a resource you've created. These kinds of values are outputs - values that cannot be known until after a resource is provisioned. You might try logging the value like you would any other string:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java" / >}}
 
 {{% choosable language typescript %}}
 
@@ -197,19 +201,11 @@ Duration: 2m17s
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-This example is not applicable in YAML.
-```
-
-{{% /choosable %}}
-
 This is where {{< pulumi-apply >}} comes into play: When a Pulumi program is executed with `pulumi up`, the {{< pulumi-apply >}} function will wait for the resource to be created and for its properties to be resolved before printing the desired value of the property.
 
 To print out the value of the VPC ID, use the `apply` function:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java" / >}}
 
 {{% choosable language typescript %}}
 
@@ -252,7 +248,7 @@ vpc.vpc_id.apply(lambda id: print('VPC ID:', id))
 ```
 
 {{% notes %}}
-The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`.
+The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`. For details on how errors returned from the callback surface during an update, see [Handling errors in apply](#handling-errors-in-apply).
 {{% /notes %}}
 
 {{% /choosable %}}
@@ -286,18 +282,6 @@ The function `ApplyT` spawns a Goroutine to await the availability of the implic
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-# YAML does not have the Apply method, but you can access values directly.
-{{< example-program-snippet path="awsx-vpc" language="yaml" from="1" to="4" >}}
-{{< example-program-snippet path="awsx-vpc" language="yaml" from="6" to="7" >}}
-{{< example-program-snippet path="awsx-vpc" language="yaml" from="9" to="9" >}}
-{{< example-program-snippet path="awsx-vpc" language="yaml" from="11" to="11" >}}
-```
-
-{{% /choosable %}}
-
 The above example will wait for the value to be returned from the API and print it to the console as shown below:
 
 ```bash
@@ -315,7 +299,7 @@ Diagnostics:
 
 Sometimes a resource has an output property that is an array or a more complex object multiple levels of nested values. For example, if you created an [AWS Certificate Manager certificate resource](/registry/packages/aws/api-docs/acm/certificate/) as shown below:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java" / >}}
 
 {{% choosable language typescript %}}
 
@@ -357,14 +341,6 @@ Sometimes a resource has an output property that is an array or a more complex o
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-{{< example-program-snippet path="apply-nested-output-values" language="yaml" from="1" to="14" >}}
-```
-
-{{% /choosable %}}
-
 This resource will have outputs that resemble the following:
 
 ```plain
@@ -390,7 +366,7 @@ cert: {
 
 Suppose you want to validate your certificate by creating an [Amazon Route 53 record](/registry/packages/aws/api-docs/route53/record/). To do so, you will need to retrieve the value of the resource record from the ACM certificate. This value is nested in the domain validation options property of the certificate resource, which is an array. Because that value is an output, you would normally need to use {{< pulumi-apply >}} to retrieve it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -432,14 +408,6 @@ Suppose you want to validate your certificate by creating an [Amazon Route 53 re
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-This example is not applicable in YAML.
-```
-
-{{% /choosable %}}
-
 {{< /chooser >}}
 
 ### Using lifting to simplify nested access
@@ -454,7 +422,7 @@ Lifting works in most scenarios for accessing nested properties and array elemen
 
 Returning to the certificate validation example from the previous section, you can use lifting to simplify the code as shown below:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -501,14 +469,6 @@ Returning to the certificate validation example from the previous section, you c
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-{{< example-program-snippet path="apply-nested-output-values" language="yaml" from="16" to="25" >}}
-```
-
-{{% /choosable %}}
-
 {{< /chooser >}}
 
 ## Creating new output values
@@ -523,7 +483,7 @@ For the common case of building a string from output values, Pulumi's [output he
 
 For example, the following code creates an HTTPS URL from the DNS name (the plain value) of a virtual machine (in this case an EC2 instance):
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java" / >}}
 
 {{% choosable language typescript %}}
 
@@ -603,19 +563,6 @@ pulumi.export("InstanceUrl", url)
 
 {{% /choosable %}}
 
-{{% choosable language yaml %}}
-
-```yaml
-# YAML does not have the Apply method, but you can access values directly.
-name: aws-ec2-instance-yaml
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="yaml" from="2" to="4" >}}
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="yaml" from="15" to="19" >}}
-{{< example-program-snippet path="aws-ec2-instance-with-sg" language="yaml" from="22" to="22" >}}
-  InstanceUrl: https://${server.publicDns}
-```
-
-{{% /choosable %}}
-
 The CLI output of this code would look something like the following:
 
 ```bash
@@ -643,13 +590,13 @@ If you need to construct a JSON string using output values from Pulumi resources
 
 The following example demonstrates using helper methods for JSON serialization:
 
-{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="javascript,typescript,python,go,csharp" >}}
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify" languages="typescript,python,go,csharp,java" >}}
 
 When constructing a JSON policy document, it is often necessary to build a resource identifier by appending a path suffix to an output value. For example, Amazon S3 bucket policies that apply to objects rather than to the bucket itself require a resource ARN ending in `/*`. Because the bucket ARN is a Pulumi output, you must combine the JSON stringify helper with your language's string interpolation facility to produce the correct value.
 
 The following example demonstrates this pattern, using the bucket's ARN as a base and appending `/*` to target all objects in the bucket:
 
-{{< example-program path="aws-s3-bucketpolicy-jsonstringify-interpolate" languages="javascript,typescript,python,go,csharp" >}}
+{{< example-program path="aws-s3-bucketpolicy-jsonstringify-interpolate" languages="typescript,python,go,csharp,java" >}}
 
 #### Converting JSON strings to outputs
 
@@ -657,7 +604,7 @@ If you have an output in the form of a JSON string and you need to interact with
 
 The following example shows how to use a helper method to parse an IAM policy defined as a `pulumi.Output<string>` into a native object and then manipulate that object to remove all of the policy statements:
 
-{{< example-program path="aws-iampolicy-jsonparse" >}}
+{{< example-program path="aws-iampolicy-jsonparse" languages="typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -682,6 +629,109 @@ For more details [view the Go documentation](https://pkg.go.dev/github.com/pulum
 For more details [view the .NET documentation](/docs/reference/pkg/dotnet/pulumi/pulumi.output.html).
 
 {{% /choosable %}}
+
+## Handling errors in apply
+
+The function you pass to {{< pulumi-apply >}} can fail—for example, when a resolved value doesn't meet a condition your program requires. In every Pulumi language, an unhandled error raised inside an `apply` callback is reported as a deployment failure: `pulumi up` aborts the update and prints the error in its diagnostics. The error is not swallowed (with one Go-specific exception described below), and the language process is not left in an unrecoverable state—you do not need to wrap `apply` in your language's try/catch construct to surface it. In fact, raising an error from inside the callback is the idiomatic way to fail an update when a value doesn't satisfy a requirement.
+
+How you signal an error from the callback depends on the language.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language typescript %}}
+
+Throw an exception from the callback (or return a rejected promise). The thrown error rejects the resulting output and fails the update.
+
+```typescript
+const validated = name.apply(n => {
+    if (!n.includes("a")) {
+        throw new Error(`name "${n}" must contain the letter 'a'`);
+    }
+    return n;
+});
+```
+
+The update fails whether or not `validated` is later used in the program.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+Raise an exception from the callback. The exception rejects the resulting output and fails the update.
+
+```python
+def validate(n: str) -> str:
+    if "a" not in n:
+        raise Exception(f'name "{n}" must contain the letter \'a\'')
+    return n
+
+validated = name.apply(validate)
+```
+
+The update fails whether or not `validated` is later used in the program.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+Return a non-nil error as the second return value. The `ApplyT` callback accepts either a `func(T) U` or a `func(T) (U, error)` signature; the second form is what lets you report an error. Returning an error does **not** panic—it rejects the resulting output.
+
+```go
+validated := name.ApplyT(func(n string) (string, error) {
+    if !strings.Contains(n, "a") {
+        return "", fmt.Errorf("name %q must contain the letter 'a'", n)
+    }
+    return n, nil
+})
+```
+
+{{% notes type="warning" %}}
+Unlike the other Pulumi languages, Go surfaces a rejected output's error only when the output is _consumed_—that is, exported as a [stack output](/docs/iac/concepts/stacks/#outputs) or passed as an input to another resource. If you call `ApplyT` purely for a side effect (such as printing) and discard the returned output, an error you return from the callback is silently dropped and the update succeeds. To make sure validation errors fail the update, either consume the resulting output or handle the error inside the callback.
+{{% /notes %}}
+
+For cancellation-aware error handling, use `ApplyTWithContext`, whose callback receives a `context.Context` that can be used to reject the output when the context is canceled.
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+Throw an exception from the callback. The thrown error rejects the resulting output and fails the update.
+
+```csharp
+var validated = name.Apply(n =>
+{
+    if (!n.Contains("a"))
+    {
+        throw new Exception($"name \"{n}\" must contain the letter 'a'");
+    }
+    return n;
+});
+```
+
+The update fails whether or not `validated` is later used in the program.
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+Throw an exception from the callback. The thrown error rejects the resulting output and fails the update.
+
+```java
+var validated = name.applyValue(n -> {
+    if (!n.contains("a")) {
+        throw new RuntimeException("name \"" + n + "\" must contain the letter 'a'");
+    }
+    return n;
+});
+```
+
+The update fails whether or not `validated` is later used in the program.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+To handle a potential failure gracefully and continue rather than failing the update, do the handling inside the callback—for example, catch the error and return a fallback value instead of raising.
 
 ## Converting inputs to outputs
 

@@ -16,11 +16,9 @@ aliases:
   - /docs/pulumi-cloud/admin/self-hosted/components/search/
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the Self-Hosted Pulumi Cloud, sign up for the [30 day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-
+{{< self-hosting-trial-note >}}
 To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
-{{% /notes %}}
+{{< /self-hosting-trial-note >}}
 
 Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster and changes to the API container configuration to enable these features.
 

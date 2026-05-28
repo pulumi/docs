@@ -15,9 +15,7 @@ aliases:
 - /docs/pulumi-cloud/admin/self-hosted/airgapped/
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 For organizations operating in highly regulated industries or environments with strict security requirements, deploying cloud infrastructure in an air-gapped environment is often a requirement. Such environments do not have network connectivity with the outside world, which many of Pulumi's default workflows assume.
 

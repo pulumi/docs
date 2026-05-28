@@ -1,33 +1,45 @@
 ---
 title: Guides
-title_tag: Pulumi ESC Guides
-h1: Pulumi ESC Guides
-meta_desc: Step-by-step guides for common Pulumi ESC tasks including IaC integration, OIDC setup, and secrets management.
+title_tag: Pulumi ESC guides
+h1: Guides
+meta_desc: Step-by-step guides for using Pulumi ESC with Docker, direnv, GitHub Actions, Kubernetes, Cloudflare, and Pulumi IaC.
 menu:
   esc:
-    parent: esc-home
     identifier: esc-guides
-    weight: 4
+    parent: esc-home
+    weight: 6
 ---
 
-These guides walk you through common Pulumi ESC tasks. Each guide is self-contained and provides step-by-step instructions for accomplishing a specific goal.
+How-to guides for consuming Pulumi ESC from the tools you already use. Each page is a self-contained walkthrough — install steps, the YAML or commands you need, and where ESC fits in the flow.
 
-## Getting started guides
+For first-party ESC integrations (the Pulumi Service Provider, Automation API, the VS Code extension, the External Secrets Operator, and the Secrets Store CSI Driver), see [Integrations](/docs/esc/integrations/).
 
-- **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your Pulumi infrastructure code
-- **[Configuring OIDC](/docs/esc/guides/configuring-oidc/)** - Set up OpenID Connect for secure, credential-free authentication
-- **[Managing secrets](/docs/esc/guides/managing-secrets/)** - Store, retrieve, and organize secrets in ESC environments
-- **[Running commands with esc run](/docs/esc/guides/running-commands-with-esc/)** - Inject secrets into any command or script
+## Authentication
 
-## Advanced configuration
+- [Configuring OIDC](/docs/esc/guides/configuring-oidc/) — set up OpenID Connect trust between ESC and AWS, Azure, GCP, Doppler, Infisical, or Vault.
 
-- **[Importing environments](/docs/esc/guides/importing-environments/)** - Compose environments and share configuration across teams
+## Use ESC with Pulumi IaC
 
-## Reference documentation
+- [Manage ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) — consume environments from a Pulumi program.
 
-For comprehensive syntax and feature documentation, see:
+## Development tools
 
-- [Environments reference](/docs/esc/environments/) - Complete environment syntax and features
-- [Integrations](/docs/esc/integrations/) - Provider-specific documentation
-- [CLI reference](/docs/esc/cli/) - Command-line tool documentation
-- [API and SDKs](/docs/esc/development/) - Programmatic access to ESC
+- [Run commands with esc run](/docs/esc/guides/running-commands/) — inject environment values into any command or script.
+- [Docker](/docs/esc/guides/docker/) — load environment variables and secrets into Docker workflows.
+- [direnv](/docs/esc/guides/direnv/) — load ESC values automatically when you `cd` into a directory.
+
+## CI / CD
+
+- [GitHub Actions](/docs/esc/guides/github-actions/) — inject ESC values and short-lived cloud credentials into workflows.
+
+## Kubernetes
+
+- [Kubernetes cluster access](/docs/esc/guides/kubernetes-cluster-access/) — store and consume `kubeconfig` files and cluster credentials in ESC.
+
+## Infrastructure tools
+
+- [Terraform](/docs/esc/guides/terraform/) — supply temporary credentials and input variables to the Terraform CLI via `esc run`.
+
+## Cloud platforms
+
+- [Cloudflare](/docs/esc/guides/cloudflare/) — manage Cloudflare Workers secrets via ESC.

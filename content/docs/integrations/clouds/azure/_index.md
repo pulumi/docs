@@ -60,9 +60,9 @@ Hands-on Infrastructure as Code guides for building on Azure with Pulumi.
 
 ESC integrates directly with Azure for short-lived credentials and secret retrieval:
 
-- [Azure OIDC login](/docs/esc/integrations/dynamic-login-credentials/azure-login/) — generate short-lived Azure credentials for Pulumi programs and workflows.
-- [Azure Key Vault](/docs/esc/integrations/dynamic-secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
-- [Azure application secret rotation](/docs/esc/integrations/rotated-secrets/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
+- [Azure OIDC login](/docs/esc/providers/login/azure-login/) — generate short-lived Azure credentials for Pulumi programs and workflows.
+- [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
+- [Azure application secret rotation](/docs/esc/providers/rotators/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
 
 ## Insights
 

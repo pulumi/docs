@@ -41,7 +41,7 @@ To execute a `pulumi preview`, Neo needs the necessary configuration and credent
 
 Using [ESC](https://www.pulumi.com/docs/esc/) is the recommended approach for defining stack configuration and secrets. It is the most flexible and scalable option, and has native OIDC integration with all of the major cloud providers.
 
-Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/integrations/infrastructure/pulumi-iac/) environment with a stack.
+Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/guides/integrate-with-pulumi-iac/) environment with a stack.
 
 ## Using previews
 

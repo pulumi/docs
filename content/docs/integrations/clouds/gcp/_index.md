@@ -56,8 +56,8 @@ Hands-on Infrastructure as Code guides for building on Google Cloud with Pulumi.
 
 ESC integrates directly with Google Cloud for short-lived credentials and secret retrieval:
 
-- [Google Cloud OIDC login](/docs/esc/integrations/dynamic-login-credentials/gcp-login/) — generate short-lived Google Cloud credentials for Pulumi programs and workflows.
-- [Google Cloud Secret Manager](/docs/esc/integrations/dynamic-secrets/gcp-secrets/) — pull secrets from Secret Manager into ESC environments.
+- [Google Cloud OIDC login](/docs/esc/providers/login/gcp-login/) — generate short-lived Google Cloud credentials for Pulumi programs and workflows.
+- [Google Cloud Secret Manager](/docs/esc/providers/secrets/gcp-secrets/) — pull secrets from Secret Manager into ESC environments.
 
 ## Insights
 

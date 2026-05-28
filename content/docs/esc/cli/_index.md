@@ -8,7 +8,7 @@ menu:
   esc:
     parent: esc-home
     identifier: esc-cli-overview
-    weight: 7
+    weight: 10
   reference:
     name: ESC CLI
     parent: reference-cli

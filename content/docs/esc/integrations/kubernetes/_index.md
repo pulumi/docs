@@ -1,23 +1,22 @@
 ---
 title: Kubernetes
-title_tag: Kubernetes integrations | Pulumi ESC
-h1: ESC Kubernetes integrations
-meta_desc: Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files.
+title_tag: Pulumi ESC Kubernetes integrations
+h1: Kubernetes
+meta_desc: Project Pulumi ESC values into Kubernetes via External Secrets Operator or mount them into pods with the Secrets Store CSI Driver.
 menu:
   esc:
     identifier: esc-kubernetes-integrations
     parent: esc-integrations
-    weight: 6
+    weight: 50
 aliases:
   - /docs/esc/kubernetes-integrations
 ---
 
-Pulumi ESC's rich metadata and support for popular configuration formats enables easy integration with Kubernetes. This allows you to manage configurations, credentials, and `kubeconfig` files for Kubernetes clusters, and to interact with Kubernetes tools such as `kubectl` and `helm`. Additionally, Pulumi ESC integrates with different tools in the Kubernetes ecosystem, such as the Pulumi Kubernetes provider and the External Secrets Operator (ESO).
+Two operators consume ESC values inside a Kubernetes cluster. Pick based on whether you want ESC values exposed as `Secret` objects or mounted directly into pods at runtime.
 
-To learn how to configure Kubernetes with Pulumi ESC, see the following topics:
+| Pattern | What it does |
+|---|---|
+| [External Secrets Operator (ESO)](/docs/esc/integrations/kubernetes/external-secrets-operator/) | Sync ESC values into Kubernetes `Secret` objects via ESO. |
+| [Secrets Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) | Mount ESC values directly into pods as files via the upstream CSI driver. |
 
-| Tool                                                                                              | Description                                                                                                                                               |
-|---------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Kubernetes](/docs/esc/integrations/kubernetes/kubernetes)                                        | Pulumi ESC integrates with Kubernetes to manage configurations, credentials, and kubeconfig files, with kubectl and helm, and Pulumi Kubernetes provider. |
-| [External Secrets Operator (ESO)](/docs/esc/integrations/kubernetes/external-secrets-operator)    | Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.                                      |                                                             |
-| [Secrets Store CSI Driver](/docs/esc/integrations/kubernetes/secrets-store-csi-driver)            | Pulumi ESC integrates with the Secrets Store CSI driver to mount Pulumi ESC secrets directly into Kubernetes pods.                                        |                                                             |
+For using ESC to store and serve `kubeconfig` files for `kubectl`, `helm`, or the Pulumi Kubernetes provider, see the [Kubernetes cluster access](/docs/esc/guides/kubernetes-cluster-access/) guide.

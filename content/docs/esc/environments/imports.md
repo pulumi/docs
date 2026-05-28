@@ -12,7 +12,7 @@ menu:
 ---
 
 {{% notes type="info" %}}
-New to environment imports? Start with the [step-by-step guide](/docs/esc/guides/importing-environments/) for a hands-on tutorial.
+New to environment imports? Start with the [step-by-step guide](/docs/esc/environments/importing-environments/) for a hands-on tutorial.
 {{% /notes %}}
 
 Pulumi ESC allows you to compose environments by importing configuration and secrets from other environments. This reduces duplication, ensures consistency, and enables you to organize configuration hierarchically. You can import both static and dynamic values, including secrets, from any number of other environments.

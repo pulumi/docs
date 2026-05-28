@@ -25,7 +25,7 @@ This guide walks through migrating an existing AWS CDK application to a Pulumi p
 1. **Prerequisites**:
    * Ensure your CDK application synthesizes cleanly: `cdk synth`
    * Install the [Pulumi GitHub app](/docs/integrations/version-control/github-app/) with access to your repository that contains your CDK application
-   * Configure AWS credentials in [Pulumi ESC](/docs/esc/integrations/dynamic-login-credentials/aws-login/)
+   * Configure AWS credentials in [Pulumi ESC](/docs/esc/providers/login/aws-login/)
 
 2. **Start the migration**:
 

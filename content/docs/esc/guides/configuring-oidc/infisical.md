@@ -11,6 +11,8 @@ menu:
     weight: 6
 aliases:
   - /docs/esc/environments/configuring-oidc/infisical/
+  - /docs/esc/providers/login/oidc-setup/infisical/
+  - /docs/esc/concepts/providers/login/oidc-setup/infisical/
 ---
 
 This document outlines the steps required to configure Pulumi to use OpenID Connect to authenticate with Infisical. OIDC

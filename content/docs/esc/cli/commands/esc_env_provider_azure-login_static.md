@@ -17,7 +17,7 @@ Writes an `fn::open::azure-login` block at the configured path under `values`.
 The client secret is wrapped in `fn::secret`. If a block already exists at the
 path it is replaced.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/azure-login/
+See https://www.pulumi.com/docs/esc/providers/login/azure-login/
 for the full provider reference.
 
 

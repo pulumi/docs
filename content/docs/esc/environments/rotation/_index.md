@@ -77,13 +77,13 @@ Many organizations keep their databases in private networks, making it impossibl
 
 Pulumi ESC's solution to that problem are Rotation Connectors - open-source, easy-to-deploy pieces of insfrastructure that will securely rotate your credentials and store them in your ESC Environment for easy use.
 
-See [Rotated Secrets](/docs/esc/integrations/rotated-secrets) page for details on which rotators require you to deploy a rotation connector.
+See [Rotated Secrets](/docs/esc/providers/rotators) page for details on which rotators require you to deploy a rotation connector.
 
 Once you determined that you need one, follow the links below to learn how to set up and use each Rotation Connector.
 
 | Rotation Connector                                                             | Description                                                                                                                     |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| [AWS Lambda](/docs/esc/environments/rotation/aws-lambda)                       | The `AWS Lambda` rotation connector enables you to rotate credentials inside private AWS VPCs.                                  |
+| [AWS Lambda](/docs/esc/operations/rotation/aws-lambda)                       | The `AWS Lambda` rotation connector enables you to rotate credentials inside private AWS VPCs.                                  |
 
 ## Permissions
 
@@ -97,7 +97,7 @@ Once you determined that you need one, follow the links below to learn how to se
 
 It is recommended to follow the principle of least privilege when defining the permissions for the user or role that will be used to rotate the secret. The user or role should have only the necessary permissions to perform the rotation action, and no more.
 
-The minimum required permissions for each rotation function are documented in the [Rotated Secret](/docs/esc/integrations/rotated-secrets) provider documentation.
+The minimum required permissions for each rotation function are documented in the [Rotated Secret](/docs/esc/providers/rotators) provider documentation.
 
 ### Separation of concerns
 

@@ -131,10 +131,10 @@ You've created an environment, stored configuration and secrets, and retrieved t
 Now that you've created your first environment, explore these essential guides:
 
 - **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your infrastructure code to centralize secrets across all stacks
-- **[Managing secrets](/docs/esc/guides/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
-- **[Running commands with esc run](/docs/esc/guides/running-commands-with-esc/)** - Inject secrets into any command or script as environment variables
-- **[Importing environments](/docs/esc/guides/importing-environments/)** - Compose environments to share configuration across teams and projects
-- **[Dynamic login credentials](/docs/esc/integrations/dynamic-login-credentials/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
+- **[Managing secrets](/docs/esc/operations/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
+- **[Running commands with esc run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
+- **[Importing environments](/docs/esc/environments/importing-environments/)** - Compose environments to share configuration across teams and projects
+- **[Dynamic login credentials](/docs/esc/providers/login/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
 
 New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
 
@@ -142,7 +142,7 @@ New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-start
 
 Extend ESC with external secret providers and advanced OIDC configuration:
 
-- **[Dynamic secrets](/docs/esc/integrations/dynamic-secrets/)** - Pull secrets from external providers like AWS Secrets Manager, Azure Key Vault, and 1Password
+- **[Dynamic secrets](/docs/esc/providers/secrets/)** - Pull secrets from external providers like AWS Secrets Manager, Azure Key Vault, and 1Password
 - **[Configuring OIDC](/docs/esc/guides/configuring-oidc/)** - Deep dive into OpenID Connect configuration and trust relationships
 
 ### Learn the fundamentals

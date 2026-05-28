@@ -145,7 +145,7 @@ jobs:
 
 You can run the `terraform` CLI app with environment variables provided by Pulumi ESC, or generate a var file that can be passed to Terraform.
 
-To learn more, read this in-depth article showing how to [integrate Terraform and Pulumi ESC](/docs/esc/integrations/infrastructure/terraform/).
+To learn more, read this in-depth article showing how to [integrate Terraform and Pulumi ESC](/docs/esc/guides/terraform/).
 
 ## Dependency management strategies
 
