@@ -112,7 +112,7 @@ $ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/path/to/service-account-key.json"
 {{% /choosable %}}
 
 {{% notes type="info" %}}
-Consider using [Pulumi ESC's Google Cloud login support](/docs/esc/integrations/dynamic-login-credentials/gcp-login) for dynamic,
+Consider using [Pulumi ESC's Google Cloud login support](/docs/esc/providers/login/gcp-login) for dynamic,
 short-lived Google Cloud credentials via OpenID Connect (OIDC) instead of long-lived static credentials. This is a security best practice.
 {{% /notes %}}
 

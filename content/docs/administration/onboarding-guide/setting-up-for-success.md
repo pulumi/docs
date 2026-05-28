@@ -31,9 +31,9 @@ Pulumi Cloud maintains an audit log of every activity and who performed it for c
 
 Pulumi supports hundreds of cloud providers, though most organizations use AWS, Azure, Google Cloud, and Kubernetes. Other supported providers include SaaS infrastructure products like Cloudflare, DataDog, MongoDB, and Snowflake, plus on-premises technologies like VMware vSphere. Find the complete list in the [Pulumi Registry](/registry/), your one-stop shop for provider documentation and configuration guidance.
 
-**Recommended approach:** Use Pulumi ESC's OpenID Connect (OIDC) support for [dynamic, short-lived credentials](/docs/esc/integrations/dynamic-login-credentials/). This is the most secure method and should be preferred for supported providers.
+**Recommended approach:** Use Pulumi ESC's OpenID Connect (OIDC) support for [dynamic, short-lived credentials](/docs/esc/providers/login/). This is the most secure method and should be preferred for supported providers.
 
-**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. See [AWS Installation & Configuration](/docs/esc/integrations/dynamic-login-credentials/) as an example. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
+**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. See [AWS Installation & Configuration](/docs/esc/providers/login/) as an example. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
 
 ## Test your infrastructure code
 

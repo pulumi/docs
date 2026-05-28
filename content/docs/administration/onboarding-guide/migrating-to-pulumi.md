@@ -66,7 +66,7 @@ An internal cloud platform is a product requiring superb developer experiences. 
 
 ### Don't defer security
 
-Use this moment of change to build security into your platform from day one. Implement Pulumi IaC's Policy as Code features and short-lived cloud credentials with [Pulumi ESC and OIDC](/docs/esc/integrations/dynamic-login-credentials/). Teams that build up technical debt in this area face costly implications later.
+Use this moment of change to build security into your platform from day one. Implement Pulumi IaC's Policy as Code features and short-lived cloud credentials with [Pulumi ESC and OIDC](/docs/esc/providers/login/). Teams that build up technical debt in this area face costly implications later.
 
 ### Measure your success
 

@@ -16,7 +16,7 @@ Add an AWS login provider to an environment
 Subcommands select the authentication mode: `static` for static credentials,
 `oidc` for federated identity via OpenID Connect.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/
+See https://www.pulumi.com/docs/esc/providers/login/aws-login/
 for the full provider reference.
 
 

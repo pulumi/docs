@@ -18,7 +18,7 @@ Writes an `fn::open::gcp-login` block at the configured path under `values`. The
 access token is wrapped in `fn::secret`. <project-number> must be the numerical
 GCP project ID. If a block already exists at the path it is replaced.
 
-See https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/gcp-login/
+See https://www.pulumi.com/docs/esc/providers/login/gcp-login/
 for the full provider reference.
 
 
