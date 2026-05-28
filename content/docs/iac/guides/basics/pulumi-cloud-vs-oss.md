@@ -58,7 +58,7 @@ Pulumi stores [state](/docs/iac/concepts/state-and-backends/)—the metadata it 
 
 DIY backends include built-in state locking, checkpoint history, project-scoped stacks, and support for several secrets encryption providers. However, they leave operational concerns to you, including securing access to the storage backend, backup and disaster recovery, monitoring availability, and managing team access.
 
-The Pulumi Cloud backend exposes a transactional REST API rather than a blob storage protocol. This allows it to record state incrementally and recover cleanly from partial failures—such as a network interruption during an update—where a blob storage backend has a coarser-grained protocol. Pulumi Cloud also handles the operational concerns above on your behalf. In addition to Pulumi state, Pulumi Cloud can store and manage Terraform state.
+The Pulumi Cloud backend exposes a transactional REST API rather than a blob storage protocol. This allows it to record state incrementally and recover cleanly from partial failures—such as a network interruption during an update—where a blob storage backend has a coarser-grained protocol. Pulumi Cloud also handles the operational concerns above on your behalf, including retaining the state of recently deleted stacks so that an organization administrator can [restore a stack](/docs/iac/operations/stack-management/restoring-deleted-stacks/) that was removed by mistake. In addition to Pulumi state, Pulumi Cloud can store and manage Terraform state.
 
 ## Access management
 
