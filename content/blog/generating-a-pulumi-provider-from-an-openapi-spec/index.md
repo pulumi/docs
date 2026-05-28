@@ -1,6 +1,6 @@
 ---
 title: "Generating a Pulumi Provider from an OpenAPI Spec"
-date: 2026-05-27
+date: 2026-05-28
 draft: false
 meta_desc: "Pulumi Service Provider v1.0 generates its pulumiservice:api/* surface from Pulumi Cloud's OpenAPI spec at runtime, so new features land without provider PRs."
 meta_image: meta.png
@@ -41,24 +41,144 @@ v1.0 lifts whole capability areas of Pulumi Cloud into the `api/*` surface, not 
 
 1. **Fine-grained RBAC as code.** Custom roles, organization membership, and team role assignments are now managed resources. For example, defining a read-only role and assigning it to a team:
 
-    ```typescript
-    const readOnly = new ps.api.Role("readOnly", {
-        orgName: "acme",
-        name: "stack-reader",
-        description: "Read-only access to stacks across the org.",
-        uxPurpose: "role",
-        details: {
-            __type: "PermissionDescriptorAllow",
-            permissions: ["stack:read", "stack:list"],
-        },
-    });
+    {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+    {{% choosable language typescript %}}
 
-    new ps.api.teams.Role("readOnlyForPlatform", {
-        orgName: "acme",
-        teamName: "platform",
-        roleId: readOnly.roleId,
-    });
-    ```
+```typescript
+const readOnly = new ps.api.Role("readOnly", {
+    orgName: "acme",
+    name: "stack-reader",
+    description: "Read-only access to stacks across the org.",
+    uxPurpose: "role",
+    details: {
+        __type: "PermissionDescriptorAllow",
+        permissions: ["stack:read", "stack:list"],
+    },
+});
+
+new ps.api.teams.Role("readOnlyForPlatform", {
+    orgName: "acme",
+    teamName: "platform",
+    roleID: readOnly.roleID,
+});
+```
+
+    {{% /choosable %}}
+    {{% choosable language python %}}
+
+```python
+read_only = pulumiservice.api.Role("readOnly",
+    org_name="acme",
+    name="stack-reader",
+    description="Read-only access to stacks across the org.",
+    ux_purpose="role",
+    details={
+        "__type": "PermissionDescriptorAllow",
+        "permissions": ["stack:read", "stack:list"],
+    })
+
+pulumiservice.api.teams.Role("readOnlyForPlatform",
+    org_name="acme",
+    team_name="platform",
+    role_id=read_only.role_id)
+```
+
+    {{% /choosable %}}
+    {{% choosable language go %}}
+
+```go
+readOnly, _ := api.NewRole(ctx, "readOnly", &api.RoleArgs{
+    OrgName:     pulumi.String("acme"),
+    Name:        pulumi.String("stack-reader"),
+    Description: pulumi.String("Read-only access to stacks across the org."),
+    UxPurpose:   pulumi.String("role"),
+    Details: pulumi.Map{
+        "__type":      pulumi.String("PermissionDescriptorAllow"),
+        "permissions": pulumi.StringArray{pulumi.String("stack:read"), pulumi.String("stack:list")},
+    },
+})
+
+teams.NewRole(ctx, "readOnlyForPlatform", &teams.RoleArgs{
+    OrgName:  pulumi.String("acme"),
+    TeamName: pulumi.String("platform"),
+    RoleID:   readOnly.RoleID,
+})
+```
+
+    {{% /choosable %}}
+    {{% choosable language csharp %}}
+
+```csharp
+var readOnly = new Ps.Api.Role("readOnly", new()
+{
+    OrgName = "acme",
+    Name = "stack-reader",
+    Description = "Read-only access to stacks across the org.",
+    UxPurpose = "role",
+    Details = ImmutableDictionary.CreateRange(new[]
+    {
+        new KeyValuePair<string, object>("__type", "PermissionDescriptorAllow"),
+        new KeyValuePair<string, object>("permissions", new[] { "stack:read", "stack:list" }),
+    }),
+});
+
+new Ps.Api.Teams.Role("readOnlyForPlatform", new()
+{
+    OrgName = "acme",
+    TeamName = "platform",
+    RoleID = readOnly.RoleID,
+});
+```
+
+    {{% /choosable %}}
+    {{% choosable language java %}}
+
+```java
+var readOnly = new Role("readOnly", RoleArgs.builder()
+    .orgName("acme")
+    .name("stack-reader")
+    .description("Read-only access to stacks across the org.")
+    .uxPurpose("role")
+    .details(Map.of(
+        "__type", "PermissionDescriptorAllow",
+        "permissions", List.of("stack:read", "stack:list")))
+    .build());
+
+new com.pulumi.pulumiservice.api_teams.Role("readOnlyForPlatform",
+    com.pulumi.pulumiservice.api_teams.RoleArgs.builder()
+        .orgName("acme")
+        .teamName("platform")
+        .roleID(readOnly.roleID())
+        .build());
+```
+
+    {{% /choosable %}}
+    {{% choosable language yaml %}}
+
+```yaml
+resources:
+  readOnly:
+    type: pulumiservice:api:Role
+    properties:
+      orgName: acme
+      name: stack-reader
+      description: Read-only access to stacks across the org.
+      uxPurpose: role
+      details:
+        __type: PermissionDescriptorAllow
+        permissions:
+          - stack:read
+          - stack:list
+  readOnlyForPlatform:
+    type: pulumiservice:api/teams:Role
+    properties:
+      orgName: acme
+      teamName: platform
+      roleID: ${readOnly.roleID}
+```
+
+    {{% /choosable %}}
+    {{< /chooser >}}
 
 1. **Pulumi IDP as code.** `services:Service` makes the [Pulumi IDP](/docs/idp/) catalog manageable from your Pulumi programs, surfaced the same release IDP ships in Pulumi Cloud. Platform teams can publish service definitions as code rather than only through the IDP console.
 1. **Audit-log export as IaC.** `AuditLogExportConfiguration` brings audit-log export sinks under Pulumi management with a real destroy path.
