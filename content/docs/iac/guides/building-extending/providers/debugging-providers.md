@@ -31,14 +31,14 @@ To set up a process to debug, you will need to start the provider in debug mode 
 
 ### Example for GoLand
 
-Create a **Go Build** run/debug configuration that points at the provider's command directory — `cmd/pulumi-resource-<PROVIDER>` (for example, `cmd/pulumi-resource-azure-native` for the Azure Native provider). Set the configuration's working directory to mirror how Pulumi starts the provider, then run it in debug mode.
+Create a **Go Build** run/debug configuration that points at the provider's command directory — `provider/cmd/pulumi-resource-<PROVIDER>` (for example, `provider/cmd/pulumi-resource-azure-native` for the Azure Native provider). Set the configuration's working directory to mirror how Pulumi starts the provider, then run it in debug mode.
 
 ### Example for VS Code
 
 In VS Code, configuring a working directory isn't necessary.
 
 1. Navigate to **Run** > **Add Configuration** and add the **Go: Launch Package** configuration.
-1. Set `"program"` to the provider's command directory, `cmd/pulumi-resource-<PROVIDER>` (for example, `cmd/pulumi-resource-azure-native` for the Azure Native provider).
+1. Set `"program"` to the provider's command directory, `provider/cmd/pulumi-resource-<PROVIDER>` (for example, `provider/cmd/pulumi-resource-azure-native` for the Azure Native provider).
 1. Set `"name"` to something descriptive, such as `"Debug Provider"`.
 1. Run the configuration to launch the provider.
 
