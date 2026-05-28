@@ -81,6 +81,11 @@ sections:
     link: /docs/iac/operations/stack-management/editing-state-files/
     description: Safe techniques for modifying Pulumi state files when necessary.
 
+  - icon: clock-counter-clockwise
+    heading: Restoring Deleted Stacks
+    link: /docs/iac/operations/stack-management/restoring-deleted-stacks/
+    description: Recover a recently deleted stack from the Pulumi Cloud console, including after an accidental `pulumi stack rm --force`.
+
   - icon: target
     heading: Targeted Updates
     link: /docs/iac/operations/stack-management/targeted-updates/

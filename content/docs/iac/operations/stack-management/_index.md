@@ -26,6 +26,8 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 **[Editing state files](/docs/iac/operations/stack-management/editing-state-files/)** - Safe techniques for modifying Pulumi state when normal operations can't recover. Use sparingly and always back up state first.
 
+**[Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/)** - Recover a recently deleted stack from the Pulumi Cloud console, including after an accidental `pulumi stack rm --force`.
+
 **[Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
 
 **[Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/)** - Use the `aliases` resource option to rename, re-parent, change the type, or move resources across stacks without destroying and recreating them.
