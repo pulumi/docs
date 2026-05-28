@@ -16,7 +16,7 @@ ephemeral infrastructure, and the connection of application code and
 infrastructure code, demands a different view of cloud development and
 devops.
 
-![infrastructure - cloud native - functions](./graph.png)
+![infrastructure - cloud native - functions](/blog/delivering-cloud-native-infrastructure-as-code-a-pulumi-white-paper/graph.png)
 
 To a first approximation, all developers are cloud developers, all
 applications are cloud native, and all operations are cloud-first. Yet,
@@ -26,7 +26,7 @@ technology generation, and even by cloud vendor, and so deny the full
 potential of cloud native application delivery.
 
 In our latest white paper,
-[Delivering Cloud Native Infrastructure as Code](./Pulumi-Delivering-CNI-as-Code.pdf),
+[Delivering Cloud Native Infrastructure as Code](/blog/delivering-cloud-native-infrastructure-as-code-a-pulumi-white-paper/Pulumi-Delivering-CNI-as-Code.pdf),
 we make the case for a consistent programming model for the cloud and examine:
 
 - How the cloud has already evolved three times as it increasingly
@@ -40,6 +40,6 @@ we make the case for a consistent programming model for the cloud and examine:
   development and operations functions, and does not satisfy the need
   for increasing delivery speed in the cloud.
 
-You can read the paper in full [here](./Pulumi-Delivering-CNI-as-Code.pdf).
+You can read the paper in full [here](/blog/delivering-cloud-native-infrastructure-as-code-a-pulumi-white-paper/Pulumi-Delivering-CNI-as-Code.pdf).
 
 Let us know what you think!

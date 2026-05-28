@@ -25,11 +25,11 @@ Cloud engineering testing differs from application testing because multiple depe
 
 The resource graph for the application layer shows many dependencies. The application deploys containers in AWS Fargate, which are instantiated with an application service that requires a service definition with many inputs.
 
-![Resource graph](./image2.png)
+![Resource graph](/blog/testing-in-practice/image2.png)
 
 Unit tests are ideal for validating inputs and ensuring that cloud resources are created. Let's look at a simple example with just two resources, an EC2 instance running a web server and a SecurityGroup policy.
 
-![Simple example](./image1.png)
+![Simple example](/blog/testing-in-practice/image1.png)
 
 We can use [mocks](https://devopedia.org/mock-testing) to test if the webserver has a name tag. First, we'll create the mocks and import the infrastructure that uses the mocks.
 

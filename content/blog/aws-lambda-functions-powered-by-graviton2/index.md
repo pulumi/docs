@@ -269,7 +269,7 @@ Resources:
 Duration: 25s
 ```
 
-![AWS Console Showing Correctly Deployed AWS Lambda Function](./aws-console.png)
+![AWS Console Showing Correctly Deployed AWS Lambda Function](/blog/aws-lambda-functions-powered-by-graviton2/aws-console.png)
 
 If the `architectures` input is not specified, AWS will set the value by default to `x86_64`.
 

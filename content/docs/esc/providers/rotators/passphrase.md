@@ -17,7 +17,7 @@ aliases:
 The `passphrase` rotator enables you to any user defined key in your ESC environment generating memorable passphrases.
 
 {{% notes "info" %}}
-If you want to generate _random passwords_ use the [password rotator](../password)
+If you want to generate _random passwords_ use the [password rotator](/docs/esc/integrations/rotated-secrets/password)
 {{% /notes %}}
 
 ## Inputs

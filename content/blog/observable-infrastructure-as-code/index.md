@@ -26,7 +26,7 @@ I read something about [Honeycomb's](https://www.honeycomb.io/) observability ap
 
 This is what a trace could look like in Honeycomb:
 
-[![Example Trace](./example-trace.png)](./example-trace.png)
+[![Example Trace](/blog/observable-infrastructure-as-code/example-trace.png)](/blog/observable-infrastructure-as-code/example-trace.png)
 
 Why not setting things up before I move deployment from my development machine to the cloud?
 
@@ -190,7 +190,7 @@ In the end, we also send a `duration_ms` attribute to track how long things take
 
 The result will look like this:
 
-[![Honeycomb trace graph](./trace-result.png)](./trace-result.png)
+[![Honeycomb trace graph](/blog/observable-infrastructure-as-code/trace-result.png)](/blog/observable-infrastructure-as-code/trace-result.png)
 
 Not very interesting, but at least we know it run without crashing and how long it took.
 
@@ -306,7 +306,7 @@ Also, the `init` event gets the `event.preludeEvent.config` object, so we can se
 
 If we run that example, we should see something like this:
 
-[![Honeycomb span with details](./second-result.png)](./second-result.png)
+[![Honeycomb span with details](/blog/observable-infrastructure-as-code/second-result.png)](/blog/observable-infrastructure-as-code/second-result.png)
 
 ## Getting Resource Deployment Durations
 
@@ -384,7 +384,7 @@ If the operation for the resource is an `update`, we also add the `diffs` to tha
 
 The final trace should look a bit like this:
 
-[![Final Honeycomb trace](./final-trace.png)](./final-trace.png)
+[![Final Honeycomb trace](/blog/observable-infrastructure-as-code/final-trace.png)](/blog/observable-infrastructure-as-code/final-trace.png)
 
 ## Getting Errors
 

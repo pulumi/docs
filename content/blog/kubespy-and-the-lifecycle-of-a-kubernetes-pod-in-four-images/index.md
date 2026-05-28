@@ -39,7 +39,7 @@ We will spend the rest of this short post using `kubespy` to take a
 closer look at what happens to a `Pod` when it's deployed to the
 cluster.
 
-![status](./status.gif)
+![status](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/status.gif)
 
 ## What happens when you boot up a Pod?
 
@@ -59,12 +59,12 @@ of what Kubernetes is doing internally to try to run the `Pod`:
 **First: Acknowledging the `Pod` definition is written to etcd.**
 The API server receives the `Pod` definition and begins trying to schedule it.
 
-![1-created](./1-created.png)
+![1-created](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/1-created.png)
 
 **Second: Scheduling the `Pod`.**
 The scheduler successfully schedules the `Pod` to run on a node.
 
-![2-scheduled](./2-scheduled.png)
+![2-scheduled](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/2-scheduled.png)
 
 **Third: Creating the `Pod`.**
 The kubelet running on the node receives the `Pod` definition and begins "creating"
@@ -72,7 +72,7 @@ the `Pod`. This involves pulling the
 container image, adding volume mounts, *etc*. At the end of all of this,
 it will attempt to run the container.
 
-![3-creating](./3-creating.png)
+![3-creating](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/3-creating.png)
 
 **Fourth: Marking the `Pod` as `Running`.**
 The kubelet has now resolved the image
@@ -81,7 +81,7 @@ the required configuration, and has successfully started the `nginx`
 container. In this case, the `Pod` contains only one container to run,
 and once it's initialized, the whole `Pod` gets marked running.
 
-![4-running](./4-running.png)
+![4-running](/blog/kubespy-and-the-lifecycle-of-a-kubernetes-pod-in-four-images/4-running.png)
 
 ## Exercises:
 

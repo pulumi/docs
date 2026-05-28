@@ -68,7 +68,7 @@ Each test case looks like this (you can see more details in
         return harness("sns", Number(ev.Records[0].Sns.Message), sendTopicValue);
     });
 
-![pulumi-console](./pulumi-console.png)
+![pulumi-console](/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/pulumi-console.png)
 
 All up, it creates 6 Lambda functions connected to a variety of event
 sources.
@@ -86,18 +86,18 @@ runtime. Each event source triggers a lambda attached to it, which both
 triggers that same event source again, and also logs to a central
 datastore that keeps track of statistics.
 
-![Epsagon-console](./espagon-console.png)
+![Epsagon-console](/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/espagon-console.png)
 
 I can also drill in and see details about each piece of this, and what
 performance looked like across all of these.
 
-![epsagon-console-2](./espagon-console-2.png)
+![epsagon-console-2](/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/espagon-console-2.png)
 
 And finally, I can see what chain of events in my infrastructure led to
 an operation occurring in DynamoDB - in this case, a REST API was
 handled by a Lambda, which invoked a Table scan.
 
-![epsagon-console-3](./espagon-console-3.png)
+![epsagon-console-3](/blog/pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications/espagon-console-3.png)
 
 ## Conclusion
 

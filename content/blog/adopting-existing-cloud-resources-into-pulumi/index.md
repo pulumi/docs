@@ -242,11 +242,11 @@ Deploying this, Pulumi shows we will update the existing resource to add the new
 
 Since the resources are now being managed by Pulumi, we can use the Pulumi Service to see them:
 
-![The Pulumi Service stack resources page](./console.png)
+![The Pulumi Service stack resources page](/blog/adopting-existing-cloud-resources-into-pulumi/console.png)
 
 And then navigate to the Virtual Machine in the Azure Portal and see the newly added `managedBy: Pulumi` tag.
 
-![The Azure Portal virtual machine page](./portal.png)
+![The Azure Portal virtual machine page](/blog/adopting-existing-cloud-resources-into-pulumi/portal.png)
 
 The result is that we have migrated our existing infrastructure into Pulumi and can now use all the rich features of Pulumi to manage it going forward!
 

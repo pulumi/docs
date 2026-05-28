@@ -145,7 +145,7 @@ In [nx.json](https://github.com/pulumi/examples/blob/master/nx-monorepo/nx.json)
 
 The full dependency graph, as understood by Nx, can be visualized by running `npx nx deploy infra --graph`.
 
-![Dependency graph of our monorepo example](./dependency-graph.png)
+![Dependency graph of our monorepo example](/blog/nx-monorepo/dependency-graph.png)
 
 ## Walkthrough
 

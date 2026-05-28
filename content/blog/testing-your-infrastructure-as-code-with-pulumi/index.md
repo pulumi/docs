@@ -25,7 +25,7 @@ In this article, we will see the many ways in which Pulumi lets us test
 our infrastructure as code.
 <!--more-->
 
-![Testing Infrastructure](./InfraTesting.png)
+![Testing Infrastructure](/blog/testing-your-infrastructure-as-code-with-pulumi/InfraTesting.png)
 
 ## Why Test Your Infrastructure?
 
@@ -577,7 +577,7 @@ run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with
 infrastructure previews, updates, and test results seamlessly:
 
-![pr-comment](./pr-comment.png)
+![pr-comment](/blog/testing-your-infrastructure-as-code-with-pulumi/pr-comment.png)
 
 By leveraging Pulumi for your core acceptance test workflow, you'll
 unlock new automation capabilities that improve your team's productivity

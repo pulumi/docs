@@ -26,7 +26,7 @@ Let's get going.
 
 The plan is to begin with a Pulumi stack to act as the keeper of our hypothetical organization's shared configuration. This stack will define two config settings: a message of the day, which we'll store in plain text, and a _secret_ message of the day (ssh!), which we'll store as an encrypted secret. Later, we'll build two stacks to act as downstream consumers of this shared-config stack --- one, a static website that'll use our config values to render some text in the browser, the other a serverless function that'll return those values as JSON. Both will use Pulumi [stack references](/docs/concepts/stack#stackreferences) to obtain their config values from Parameter Store. Here's a visual:
 
-![A diagram of three stacks: shared configuration, website, and serverless API.](./aws-ssm-shared-config-diagram.png)
+![A diagram of three stacks: shared configuration, website, and serverless API.](/blog/shared-config-with-aws-systems-manager-parameter-store/aws-ssm-shared-config-diagram.png)
 
 Let's start Stack 1 --- the `shared-config` stack.
 
@@ -137,7 +137,7 @@ Duration: 4s
 
 Notice we've named our outputs clearly, and that the secret message is safely encrypted in `Pulumi.dev.yaml` and in Parameter Store. You can confirm the latter by visiting the AWS Console:
 
-![The secret message tracked as a secret in the AWS Systems Manager Console](./aws-systems-manager-console.png)
+![The secret message tracked as a secret in the AWS Systems Manager Console](/blog/shared-config-with-aws-systems-manager-parameter-store/aws-systems-manager-console.png)
 
 Now let's put these two new values to practical use.
 
@@ -242,11 +242,11 @@ Duration: 5s
 
 With the exported URL, open the website in your favorite browser, and you should also see the message of the day on the homepage, along with a button you can click to reveal the secret message:
 
-![A website showing the message of the day and secret message.](./my-website.png)
+![A website showing the message of the day and secret message.](/blog/shared-config-with-aws-systems-manager-parameter-store/my-website.png)
 
 If you're using the Pulumi Service, which tracks dependencies between stacks, you should see that the `my-website` stack is now listed as a downstream consumer of `shared-config`:
 
-![The shared-config stack showing my-website as a downstream reference](./pulumi-service.png)
+![The shared-config stack showing my-website as a downstream reference](/blog/shared-config-with-aws-systems-manager-parameter-store/pulumi-service.png)
 
 Now, when the hypothetical team managing the `shared-config` stack decides it's time to update the message of the day, it can do so with a `pulumi config set` and `pulumi up`, and `my-website` will be able to pick up the new message automatically.
 

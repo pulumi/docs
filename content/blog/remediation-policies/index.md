@@ -409,7 +409,7 @@ This can be done at the command line in one of two ways:
 
 It is also possible to edit or alter the configuration in the Pulumi Cloud console UI:
 
-![Pulumi Cloud Policy Editor](./cloud-policy.png)
+![Pulumi Cloud Policy Editor](/blog/remediation-policies/cloud-policy.png)
 
 This Pulumi Cloud console experience makes it very easy to set default policies that apply to all stacks in your organization, hyper-target individual stacks with specific policies, or even group stacks together and enforce policies homogeneously across them, e.g. "all SOC2 stacks."
 

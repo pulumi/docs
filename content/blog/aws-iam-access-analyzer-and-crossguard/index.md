@@ -33,7 +33,7 @@ As AWS makes their own platform more secure by default, however, we would love t
 
 Thanks to CrossGuard's use of full-blown programming languages, we can easily tap into the AWS SDK support for IAM Access Analyzer. The result is that if we try to deploy the above program with our custom policy pack &mdash; `pulumi up --policy-pack ~/iam-analyzer-policy` &mdash; we get an error:
 
-![AWS IAM Bucket Violation](./badbucket.png)
+![AWS IAM Bucket Violation](/blog/aws-iam-access-analyzer-and-crossguard/badbucket.png)
 
 Nice! Security catastrophe averted! Now let's dig into how it all works.
 

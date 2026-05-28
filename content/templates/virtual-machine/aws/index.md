@@ -22,7 +22,7 @@ cloud:
 
 The AWS Virtual Machine template scaffolds a Pulumi project that provisions an [Amazon EC2 instance](/registry/packages/aws/api-docs/ec2/instance/) running Amazon Linux 2023 inside a new [Amazon VPC](/registry/packages/aws/api-docs/ec2/vpc/). The instance boots a small Python HTTP server on port 80 from user data, so the project deploys end to end out of the box. Use it as a starting point for a web application, backend service, or database VM.
 
-![An architecture diagram of the AWS Virtual Machine template](./architecture.png)
+![An architecture diagram of the AWS Virtual Machine template](/templates/virtual-machine/aws/architecture.png)
 
 ## Using this template
 

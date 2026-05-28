@@ -55,11 +55,11 @@ Indeed, this arrangement is the API contract of a [Lambda _proxy_ integration](h
 
 Imagine you were building a print-on-demand service, for example, and you wanted to expose an API to let your customers upload documents and have them converted into orders. On AWS, you might reach for API Gateway, as above, to define an HTTP method and route (`POST /uploads`, say), wire it up to an AWS Lambda, and have the Lambda parse the upload, write the order to a database, and return a response. Visually, such a design might look something like this:
 
-![A diagram showing an HTTP POST made to an API Gateway endpoint, the endpoint invoking a Lambda function, and the Lambda function writing an order to a database.](./figure-1.png)
+![A diagram showing an HTTP POST made to an API Gateway endpoint, the endpoint invoking a Lambda function, and the Lambda function writing an order to a database.](/blog/api-gateway-to-eventbridge/figure-1.png)
 
 It'd definitely work, and again, it's quite common. But at some point, you might find this tight coupling between API Gateway and Lambda too limiting. Say you wanted to be notified whenever a new order was received, with a Slack message, maybe, in one of your team's shared workspace channels. Under the current design, you'd probably add a few lines of code to the Lambda function to import an HTTP library and make a call to the Slack API to post the message:
 
-![The same diagram showing the same Lambda function extended to post a message to Slack.](./figure-2.png)
+![The same diagram showing the same Lambda function extended to post a message to Slack.](/blog/api-gateway-to-eventbridge/figure-2.png)
 
 That'd work, too---but it'd be less than ideal for a number of reasons. For one, that Lambda would now have two jobs: taking orders and sending Slack notifications. That might be fine for today (it’s only a few lines of code, after all), but over time, those two jobs could easily become three, and then four, and soon enough, that poor Lambda could wind up becoming a lot more difficult to maintain. And given the importance of its main job---capturing orders---it's not something you'd want to risk failing at runtime because of a random Slack outage or other transient internet mishap. Moreover, with every bit of extra work you tack on to that function, you take a tiny step closer to hitting API Gateway's [30-second limit](https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html).
 
@@ -73,7 +73,7 @@ For this particular application, EventBridge would let you address the multiple-
 
 Let's see how. Here's a revised architecture diagram showing how you might approach building an application like this one with EventBridge positioned between API Gateway and Lambda:
 
-![An expanded diagram showing API Gateway now publishing to EventBridge, with EventBridge invoking two separate Lambda functions: one writing an order to a database, the other posting a message to Slack.](./figure-3.png)
+![An expanded diagram showing API Gateway now publishing to EventBridge, with EventBridge invoking two separate Lambda functions: one writing an order to a database, the other posting a message to Slack.](/blog/api-gateway-to-eventbridge/figure-3.png)
 
 Now let's have a look at what it'd be like to build it with Pulumi. We won't build _everything_ in this diagram---things like writing to the database or messaging Slack are left for you to explore---but we will build enough to give you clear picture and a working example of how to connect all of these parts into a working application. Specifically:
 

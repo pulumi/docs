@@ -167,7 +167,7 @@ return new Dictionary<string, object?>{
 
 You can check out the implementation of this `ServiceDeployment` component in the [Guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-cs-guestbook/components) in the Pulumi Examples repo on GitHub.
 
-![Guestbook Application](./guestbook.png)
+![Guestbook Application](/blog/managing-kubernetes-infrastructure-with-dotnet-and-pulumi/guestbook.png)
 
 ### Building Docker Images for Kubernetes with .NET
 
@@ -298,7 +298,7 @@ Note that this example deploys resources first into DigitalOcean (a Kubernetes `
 
 Check out the full [DigitalOcean Kubernetes Cluster in C#](https://github.com/pulumi/examples/blob/master/digitalocean-cs-k8s/Program.cs) example for more details.
 
-![Digital Ocean and Kubernetes Resources](./do-kubernetes-resources.png)
+![Digital Ocean and Kubernetes Resources](/blog/managing-kubernetes-infrastructure-with-dotnet-and-pulumi/do-kubernetes-resources.png)
 
 ## Conclusion
 

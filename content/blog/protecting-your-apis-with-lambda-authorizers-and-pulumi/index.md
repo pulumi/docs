@@ -81,7 +81,7 @@ will create our API Gateway and Hello World Lambda. In Step 2, we will
 set up the logic for our Lambda authorizer. And finally in Step 3, we
 will bring it all together by telling API Gateway to use our authorizer.
 
-![lambda_authorizer workflow to be used by Pulumi for set up: Auth0, Client, API Gateway, Lambda Authorizer, Hello World Lambda](./lambda-authorizer.png)
+![lambda_authorizer workflow to be used by Pulumi for set up: Auth0, Client, API Gateway, Lambda Authorizer, Hello World Lambda](/blog/protecting-your-apis-with-lambda-authorizers-and-pulumi/lambda-authorizer.png)
 
 ### 1 - Define Your Routes
 

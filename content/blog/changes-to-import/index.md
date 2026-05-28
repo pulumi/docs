@@ -263,7 +263,7 @@ const test = new aws.ec2.Instance("test", {
 
 To quote our old friend, Harlan, "Everything is better, yes?"
 
-![Comtrya](./Comtrya.gif)
+![Comtrya](/blog/changes-to-import/Comtrya.gif)
 
 While we've only shown you a couple of examples of this new behaviour, rest assured that the benefits of it stretch far and wide across the majority of Pulumi resources.
 

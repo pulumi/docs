@@ -41,7 +41,7 @@ Note that not every operation is available for every trigger.
 
 A deployment may be triggered on demand by clicking a button in the Pulumi Console. This deployment trigger allows you to perform any supported Pulumi Deployments operation.
 
-![Pulumi UI - Click to Deploy](../../ui-deploy-button.png)
+![Pulumi UI - Click to Deploy](/docs/deployments/deployments/ui-deploy-button.png)
 
 ## Push to Deploy
 
@@ -67,7 +67,7 @@ Push to Deploy can also be configured to run a `pulumi update` for a stack when 
 
 [Review Stacks](/docs/deployments/deployments/review-stacks) are dedicated cloud environments that get created automatically every time a pull request is opened. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
 
-![Review Stack Pull Request Comment](../../comment.png)
+![Review Stack Pull Request Comment](/docs/deployments/deployments/comment.png)
 
 ## REST API
 

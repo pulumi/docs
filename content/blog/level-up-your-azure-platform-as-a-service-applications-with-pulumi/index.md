@@ -70,7 +70,7 @@ pipeline in Azure DevOps.
 
 Here is a sketch of the solution:
 
-![Pulumi and Azure PaaS - Application Diagram](./pulumi-app-service.png)
+![Pulumi and Azure PaaS - Application Diagram](/blog/level-up-your-azure-platform-as-a-service-applications-with-pulumi/pulumi-app-service.png)
 
 Let's get started building together!
 
@@ -423,19 +423,19 @@ Marketplace, you can call the Pulumi CLI from a custom shell script, see
 
 When everything is wired correctly, I see this screen in Azure DevOps:
 
-![Green Build of a Pulumi Program in DevOps](./pulumi-devops-build.png)
+![Green Build of a Pulumi Program in DevOps](/blog/level-up-your-azure-platform-as-a-service-applications-with-pulumi/pulumi-devops-build.png)
 
 The newly created resource group contains six resources:
 
-![Azure Resource created by Pulumi](./pulumi-resource-graph.png)
+![Azure Resource created by Pulumi](/blog/level-up-your-azure-platform-as-a-service-applications-with-pulumi/pulumi-resource-graph.png)
 
 The application is up and running:
 
-![Todo List App deployed to Azure with Pulumi](./pulumi-todo-app.png)
+![Todo List App deployed to Azure with Pulumi](/blog/level-up-your-azure-platform-as-a-service-applications-with-pulumi/pulumi-todo-app.png)
 
 The telemetry is flowing into Application Insights:
 
-![Application Map from App Insights](./app-insights.png)
+![Application Map from App Insights](/blog/level-up-your-azure-platform-as-a-service-applications-with-pulumi/app-insights.png)
 
 You can find the full code of the application, infrastructure
 definition, and deployment pipeline in

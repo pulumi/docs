@@ -188,7 +188,7 @@ $ esc run demo/aws-staging -- aws s3 ls
 
 Note that when we run this command, `esc run` uses our local authentication credentials (including RBAC permissions) for Pulumi ESC to authenticate our access to this environment, and then uses the environment’s identity to get a short-lived AWS credential via AWS OIDC.  It then brings back this unique credential just for the lifetime of the `aws s3 ls` subcommand.  This provides very granular authentication and auditability of the operations run, while also not requiring the user to have a long lived AWS credential on their machine to run operational commands against the account.
 
-![A Pulumi ESC Environment in the Pulumi Console](./console-env.png)
+![A Pulumi ESC Environment in the Pulumi Console](/blog/environments-secrets-configurations-management/console-env.png)
 
 ### Using Pulumi ESC with Pulumi IaC
 
@@ -250,7 +250,7 @@ Resources:
 
 Finally, we can give other users in our organization access to this environment by configuring our Engineering team within Pulumi Cloud to be allowed to "Open" the environment.
 
-![RBAC for ESC in the Pulumi Cloud console](./console-rbac.png)
+![RBAC for ESC in the Pulumi Cloud console](/blog/environments-secrets-configurations-management/console-rbac.png)
 
 Pulumi ESC enables us to define environments containing secrets and configuration using a flexible, code-based approach, leveraging composition in order to keep our configuration DRY, as well as dynamic providers to pull secrets and credentials from other providers like AWS OIDC.  While this example used AWS, everything discussed works with any cloud, and with an even wider variety of secrets providers.
 
@@ -278,7 +278,7 @@ At launch, environments are managed directly in Pulumi Cloud.  But we’ve alrea
 
 For the preview, we focused on document-based editing experience for environments, which provides direct access to the full richness of Pulumi ESC.  For many common use cases, it’s helpful to have a simple key/value-based interface for adding and configuring secrets. We will add the ability to switch between both of these UI experiences in the Pulumi Cloud console soon.  See [pulumi/esc#62](https://github.com/pulumi/esc/issues/62). Below is an early sketch of this additional table-based user interface.
 
-![Key/Value based Environment Editor in the Pulumi Console](./table-view.png)
+![Key/Value based Environment Editor in the Pulumi Console](/blog/environments-secrets-configurations-management/table-view.png)
 
 ## Conclusion
 

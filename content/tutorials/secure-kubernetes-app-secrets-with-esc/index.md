@@ -126,7 +126,7 @@ Now, you can add your `postgres.password` as a secret by:
 2. Click on **+Secret/config**
 3. Add `postgres.password` as the **Path**, enter your desired password as the **Value**, then change from **Plaintext**, to **Secret** in the drop-down.
 
-![Image of the Pulumi ESC in the Pulumi cloud console actions](./add-esc-secret.png)
+![Image of the Pulumi ESC in the Pulumi cloud console actions](/tutorials/secure-kubernetes-app-secrets-with-esc/add-esc-secret.png)
 
 Click **Done** and then click **Save**.
 
@@ -159,7 +159,7 @@ Click **Save**.
 
 To confirm that the `base` environment has been imported successfully, you can see this reflected in the see an **Environment preview** of your `db` environment:
 
-![Image of the Pulumi ESC in the Pulumi cloud console actions](./esc-environment-values.png)
+![Image of the Pulumi ESC in the Pulumi cloud console actions](/tutorials/secure-kubernetes-app-secrets-with-esc/esc-environment-values.png)
 
 ## Deploying the voting app to Kubernetes
 
@@ -255,7 +255,7 @@ kubectl port-forward svc/voting-app-service-c7f2a549 8080:80
 
 Open your browser and go to `http://localhost:8080` to view the voting app.
 
-![Image of a browser with your new voting-app](./pulumi-kubernetes-voting-app.png)
+![Image of a browser with your new voting-app](/tutorials/secure-kubernetes-app-secrets-with-esc/pulumi-kubernetes-voting-app.png)
 
 ## Cleanup
 

@@ -97,7 +97,7 @@ In terms of [project organization](https://www.webiny.com/docs/key-topics/projec
 
 Packages are just regular NPM packages, or in other words, folders with a `package.json` manifest file and some code. On the other hand, project applications are higher-level organizational units formed from one or more packages that form applications, as the name itself suggests. Applications consist of both application code and cloud infrastructure needed to run them.
 
-![Webiny Project Organization](./project-organization.png)
+![Webiny Project Organization](/blog/how-webiny-built-a-serverless-application-framework/project-organization.png)
 
 A single Webiny project can contain multiple project applications, where each one has its own independent set of necessary cloud infrastructure resources that need to be deployed.
 

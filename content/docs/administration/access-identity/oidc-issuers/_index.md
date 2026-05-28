@@ -134,6 +134,14 @@ pulumi login --oidc-token <token> --oidc-org <org-name>
 
 The `--oidc-token` flag accepts either a raw token string or a file path prefixed with `file://`. You can also pass `--oidc-team`, `--oidc-user`, or `--oidc-expiration`. For more details, see the [`pulumi login` documentation](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange).
 
+{{% notes type="warning" %}}
+If you see an error like:
+
+`OIDC token exchange failed: Post "/api/oauth/token": unsupported protocol scheme ""`
+
+Include the backend URL explicitly: `pulumi login https://api.pulumi.com --oidc-token <token> --oidc-org <org-name>` (or the equivalent URL for a self-hosted backend).
+{{% /notes %}}
+
 ### Using the REST API directly
 
 For advanced scenarios where you need direct control over the token exchange process, call the OAuth 2.0 token endpoint with the token-exchange grant type. The endpoint accepts both `application/json` and `application/x-www-form-urlencoded` content types.

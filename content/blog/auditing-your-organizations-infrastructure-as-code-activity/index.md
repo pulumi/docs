@@ -31,7 +31,7 @@ by selecting your organization from the organization drop down. Then click on th
 On the left nav-bar you should see a tab called Audit Logs. Clicking here will allow you to view
 the most recent audit logs for your organization.
 
-![auditlogs](./auditlogs.png)
+![auditlogs](/blog/auditing-your-organizations-infrastructure-as-code-activity/auditlogs.png)
 
 This will show the most recent events in decending order. You can
 also filter logs by a particular user by clicking on the user's avatar. Doing so will

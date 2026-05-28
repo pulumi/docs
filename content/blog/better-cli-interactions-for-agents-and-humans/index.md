@@ -247,7 +247,7 @@ Now you do. Running `pulumi neo` with or without a prompt launches a Pulumi Clou
 
 We'll cover Neo in the CLI in more detail [later this week](/blog/pulumi-neo-cli/). In the meantime, here's a peek:
 
-![Running Neo in the Pulumi CLI](./neo-cli.png)
+![Running Neo in the Pulumi CLI](/blog/better-cli-interactions-for-agents-and-humans/neo-cli.png)
 
 ## Smaller changes that add up
 

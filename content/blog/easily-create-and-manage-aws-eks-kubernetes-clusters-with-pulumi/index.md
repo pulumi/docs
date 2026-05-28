@@ -55,7 +55,7 @@ resources that will be deployed to create the cluster, before actually
 performing any operation. Once you have reviewed and selected "Yes," the
 cluster will begin deploying. The terminal output will look like this:
 
-![Pulumi-EKS-1](./eks-1.jpg)
+![Pulumi-EKS-1](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/eks-1.jpg)
 
 Following these steps will provide a complete managed Amazon EKS
 cluster, configured similarly to the steps outlined in the
@@ -358,7 +358,7 @@ to AWS, you can manage the deployment on
 AWS console and Kubernetes dashboard to get real-time insights on your
 cluster.
 
-![Pulumi-EKS-2](./eks-2.jpg)
+![Pulumi-EKS-2](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/eks-2.jpg)
 
 All of the provisioned resources across AWS and Kubernetes are available
 from this single view, along with an audit history of deployments to

@@ -61,7 +61,7 @@ New revision '19' was created.
 
 #### Via the Pulumi Cloud UI
 
-![button.png](../button.png)
+![button.png](/docs/esc/environments/button.png)
 
 ### Schedule
 
@@ -69,7 +69,7 @@ You can create a schedule for automatic rotation of your secrets in the Pulumi C
 
 The rotation schedule can be defined as a [cron expression](https://crontab.cronhub.io/).
 
-![schedule.png](../schedule.png)
+![schedule.png](/docs/esc/environments/schedule.png)
 
 ### Rotation Connectors
 

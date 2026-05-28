@@ -120,7 +120,7 @@ pattern-matching type, without it having any trouble understanding it or applyin
 It amazes us how well this works and how expressive TypeScript is here. As you can see here, TypeScript completely
 understands what’s going on and will give you all the great type-checking support and tooling that we know and love:
 
-![TypeScript completion list](./completion-list.png)
+![TypeScript completion list](/blog/advanced-typescript-type-ftw/completion-list.png)
 
 Since adding support for this, we’ve been able to start using this new function across our own codebase and we’ve seen
 things get dramatically simpler. The pyramid-of-doom goes away and code becomes much cleaner and easier to read and

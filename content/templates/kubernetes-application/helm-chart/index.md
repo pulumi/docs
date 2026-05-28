@@ -22,7 +22,7 @@ cloud:
 
 The Helm Chart template scaffolds a Pulumi project that deploys a [Helm chart](/registry/packages/kubernetes/api-docs/helm/v3) to an existing Kubernetes cluster using Pulumi's [Kubernetes provider](/registry/packages/kubernetes). The template creates a new namespace in the cluster and installs an Nginx ingress controller as the default chart, so the project deploys end to end out of the box.
 
-![An architecture diagram of the Helm Chart template](./architecture.png)
+![An architecture diagram of the Helm Chart template](/templates/kubernetes-application/helm-chart/architecture.png)
 
 ## Using this template
 

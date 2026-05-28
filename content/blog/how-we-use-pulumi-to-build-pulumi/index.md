@@ -68,7 +68,7 @@ that are commonly needed, but can be configured with a much smaller
 space of configuration values in the common case, so we factored out
 `new awsinfra.Cluster`.
 
-![carbon](./carbon.png)
+![carbon](/blog/how-we-use-pulumi-to-build-pulumi/carbon.png)
 
 Defining infrastructure in Pulumi made it easy to stand up many
 instances of our service, including per-developer stacks, with just
@@ -81,7 +81,7 @@ quickly iterate on changes. This includes not just the basic
 infrastructure, but also provisioning of DNS entries in Route53 and
 creation of custom CloudWatch dashboards (see more on this below).
 
-![image-2](./image-2.png)
+![image-2](/blog/how-we-use-pulumi-to-build-pulumi/image-2.png)
 
 We have three shared environments - **development**, **staging** and
 **production** - each an isolated environment with separate
@@ -123,7 +123,7 @@ it to the private repository, and turn-over each service task to use the
 new image. All of that workflow complexity is abstracted away behind a
 simple API and a single CLI command.
 
-![image-3](./image-3.png)
+![image-3](/blog/how-we-use-pulumi-to-build-pulumi/image-3.png)
 
 ## Metrics, Alarms and Dashboards
 
@@ -140,7 +140,7 @@ just physical infrastructure, but also that alarms and dashboards are
 behaving as expected prior to pushing code to production. Here's a
 sample of our CloudWatch dashboards:
 
-![image-4](./image-4.png)
+![image-4](/blog/how-we-use-pulumi-to-build-pulumi/image-4.png)
 
 We build up AWS resources representing CloudWatch dashboards using a
 compositional framework shown below. As this example shows, bringing
@@ -149,7 +149,7 @@ new approaches to how code is authored and factored - and ultimately to
 the creation of higher level frameworks for building domain-specific
 cloud infrastructure - in this case, CloudWatch dashboards.
 
-![carbon](./image-5.png)
+![carbon](/blog/how-we-use-pulumi-to-build-pulumi/image-5.png)
 
 The same metrics that power these dashboards are also used to power
 notifications and alarms. In these cases, we want to define both the
@@ -167,7 +167,7 @@ program. This code can even reach out and reference configuration used
 to provision our Pulumi deployment - key to enabling this to be deployed
 seamlessly into a variety of different development environments.
 
-![image-6](./image-6.png)
+![image-6](/blog/how-we-use-pulumi-to-build-pulumi/image-6.png)
 
 ## Static Content
 
@@ -178,14 +178,14 @@ of our `pulumi` CLI installer. It's a very simple program, and even
 better - it's [open source on GitHub](https://github.com/pulumi/get.pulumi.com).
 It combines AWS S3, CloudFront and Route53.
 
-![image-7](./image-7.png)
+![image-7](/blog/how-we-use-pulumi-to-build-pulumi/image-7.png)
 
 This infrastructure is deployed and managed using the Pulumi Service at
 [app.pulumi.com](https://app.pulumi.com/signin), allowing us to track the
 history of deployments and changes to the infrastructure and quickly
 jump in to the resources defined by this stack in the AWS console.
 
-![image-8](./image-8.png)
+![image-8](/blog/how-we-use-pulumi-to-build-pulumi/image-8.png)
 
 ## Conclusion
 

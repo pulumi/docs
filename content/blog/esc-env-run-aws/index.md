@@ -108,7 +108,7 @@ You will be directed to the last page of the wizard, where you can provide the n
 
 One area that we want to draw your attention to is the **Select trusted entities** section which is where the trust policy of the role is defined.
 
-![An image of the IAM role trust policy](./review-trust-policy.png)
+![An image of the IAM role trust policy](/blog/esc-env-run-aws/review-trust-policy.png)
 
 This definition currently allows any Pulumi service to assume this role, but only if the request comes from your organization. You can edit this policy to further limit access to this role to just the Pulumi ESC service, and you can make it even more granular by limiting access to a specific environment. This more detailed configuration is outside the scope of this blog post, but you can learn more about it by checking out the [relevant Pulumi documentation](https://www.pulumi.com/docs/pulumi-cloud/esc/providers/aws-login/#configuring-the-iam-role-and-trust-policy).
 

@@ -29,7 +29,7 @@ I start simple and make a non-distributed version of the application
 first. It consists of two main components: a [Cosmos DB](https://www.pulumi.com/blog/when-to-use-azure-cosmos-db/) container to
 store URL mappings and two Azure Functions to handle HTTP requests:
 
-![The basic version of URL Shortener with Azure and Pulumi](./pulumi-azure-url-shortener-basic.png)
+![The basic version of URL Shortener with Azure and Pulumi](/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/pulumi-azure-url-shortener-basic.png)
 
 Let's define this infrastructure in a Pulumi program.
 
@@ -202,7 +202,7 @@ be handled by Cosmos DB multi-region accounts. We need to take care of
 deploying the code in multiple locations and routing the traffic to the
 nearest one. Here is the plan:
 
-![The distributed version of URL Shortener with Azure and Pulumi](./pulumi-azure-url-shortener-distributed.png)
+![The distributed version of URL Shortener with Azure and Pulumi](/blog/globally-distributed-serverless-application-in-100-lines-of-code-infrastructure-included/pulumi-azure-url-shortener-distributed.png)
 
 I don't care too much about the latency of Add URL function, so I left
 it out of the picture.
