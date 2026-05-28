@@ -340,19 +340,19 @@ You can now test that centralized egress is working as expected. First, log into
 
 First, take note of the NAT gateway IP address which you included as a [Pulumi stack output](https://www.pulumi.com/learn/building-with-pulumi/stack-outputs/):
 
-![Screenshot of Pulumi CLI output with the IP address of a NAT gateway as a stack output](./1-stack-output.png)
+![Screenshot of Pulumi CLI output with the IP address of a NAT gateway as a stack output](/blog/advanced-aws-networking-part-2/1-stack-output.png)
 
 Then, in the AWS console, locate an instance running in a spoke VPC which you created as part of the workload component resource, and select Connect from the drop-down menu:
 
-![Screenshot of the AWS EC2 console listing instances with an instance selected and the Connect menu item selected](./2-ec2-console-connect.png)
+![Screenshot of the AWS EC2 console listing instances with an instance selected and the Connect menu item selected](/blog/advanced-aws-networking-part-2/2-ec2-console-connect.png)
 
 Connect to the instance to start an SSH session (note that the IAM principal must have permissions to perform SSM Systems Manager actions in order to connect):
 
-![AWS EC2 connect dialog](./3-connect-dialog.png)
+![AWS EC2 connect dialog](/blog/advanced-aws-networking-part-2/3-connect-dialog.png)
 
 Finally, verify your public IP address from the host in the spoke VPC:
 
-![AWS EC2 Systems Manager SSH session with a cURL command](./4-curl-verification.png)
+![AWS EC2 Systems Manager SSH session with a cURL command](/blog/advanced-aws-networking-part-2/4-curl-verification.png)
 
 If your public IP address for the instance in the spoke VPC matches the public IP address of the NAT gateway in the inspection VPC, you've successfully verified that centralized egress is working!
 
@@ -523,11 +523,11 @@ for subnet_id in tgw_subnet_ids:
 
 In order to test that our firewall rules are in effect, connect to one of your spoke EC2 instances like before. Traffic to `amazon.com` should be allowed:
 
-![Screenshot of a cURL command to amazon.com succeeding](./5-amazon-traffic-allowed.png)
+![Screenshot of a cURL command to amazon.com succeeding](/blog/advanced-aws-networking-part-2/5-amazon-traffic-allowed.png)
 
 But traffic to other domains should be blocked:
 
-![Screenshot of a cURL command to google.com being blocked by AWS Network Firewall](./6-non-amazon-traffic-blocked.png)
+![Screenshot of a cURL command to google.com being blocked by AWS Network Firewall](/blog/advanced-aws-networking-part-2/6-non-amazon-traffic-blocked.png)
 
 ## Conclusion
 

@@ -28,7 +28,7 @@ on AWS using [Pulumi](https://www.pulumi.com), a modern infrastructure as code (
 
 Large Language Models (LLMs) are sophisticated AI models trained on vast amounts of text data, enabling them to generate human-like text responses.  Retrieval-Augmented Generated (RAG) is a cutting-edge approach to chatbot development that combines the capabilities of LLMs with information retrieval techniques. RAG chatbots can generate responses based on both the input query and relevant information retrieved from a knowledge base, resulting in more contextually relevant and informative interactions.
 
-![A diagram of a LM chatbot workflow and RAG chatbot workflows](./diagram.png)
+![A diagram of a LM chatbot workflow and RAG chatbot workflows](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/diagram.png)
 
 ## What's an Embedchain?
 
@@ -38,7 +38,7 @@ Embedchain supports configuration for various [data sources](https://docs.embedc
 
 ## Creating a Slack bot
 
-![A screenshot of a Slack conversation with a custom built Slack bot, Arti](./arti-slack.png)
+![A screenshot of a Slack conversation with a custom built Slack bot, Arti](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/arti-slack.png)
 
 Start by cloning the project:
 

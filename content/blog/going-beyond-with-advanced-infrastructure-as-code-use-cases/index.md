@@ -68,7 +68,7 @@ Just as Pulumi Cloud lets you use general-purpose languages for your Infrastruct
 
 If we violate a policy, we get an error (for mandatory checks) or warning (for advisory ones) before the mistake even makes its way into production:
 
-![Policy Error](./policy-error.png)
+![Policy Error](/blog/going-beyond-with-advanced-infrastructure-as-code-use-cases/policy-error.png)
 
 This might be “boring” from an engineer’s point of view but tends to be very important for an organization, especially for folks who are building out a platform team.
 

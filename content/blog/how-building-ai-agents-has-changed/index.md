@@ -67,7 +67,7 @@ Progressive disclosure isn't a new idea. What's new is that the agent harness no
 
 Vector search didn't get worse. The context around it improved enough that it stopped being the right first move.
 
-![Three eras of agent building. 2024 to 2025: framework plus tools plus RAG plus glue code. Early 2026: SDK with built-in tools plus skills plus MCP. Today: same SDK base, with frameworks layered on only for multi-provider or complex orchestration.](./eras.png)
+![Three eras of agent building. 2024 to 2025: framework plus tools plus RAG plus glue code. Early 2026: SDK with built-in tools plus skills plus MCP. Today: same SDK base, with frameworks layered on only for multi-provider or complex orchestration.](/blog/how-building-ai-agents-has-changed/eras.png)
 
 Taken together, what got pulled into the SDK is the middle of an agent project: the tools layer, the retrieval layer, and the loop. What's left for the team is the system prompt, the skills, and the policies around what the agent is allowed to do.
 
@@ -86,7 +86,7 @@ The mental model that works for me: start with the SDK, reach for a framework wh
 
 If none of those four are biting, the SDK is probably enough, and adding a framework on top is a layer you'll regret in six months.
 
-![Decision flow for picking an agent stack. Start with the SDK. If you need multi-provider routing, multi-agent orchestration, deterministic typing, or deeper observability, add a framework. Otherwise stay with the SDK.](./decision.png)
+![Decision flow for picking an agent stack. Start with the SDK. If you need multi-provider routing, multi-agent orchestration, deterministic typing, or deeper observability, add a framework. Otherwise stay with the SDK.](/blog/how-building-ai-agents-has-changed/decision.png)
 
 ## Where this lands for infrastructure work
 

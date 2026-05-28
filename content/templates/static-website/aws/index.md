@@ -22,7 +22,7 @@ cloud:
 
 The AWS Static Website template scaffolds a Pulumi project that stores site files in a private [Amazon S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) and serves them through an [Amazon CloudFront distribution](/registry/packages/aws/api-docs/cloudfront/distribution/) using [Origin Access Control](/registry/packages/aws/api-docs/cloudfront/originaccesscontrol/). The bucket isn't publicly readable; CloudFront authenticates to the S3 REST endpoint via a bucket policy scoped to the distribution. The template ships with placeholder web content so the project deploys end to end out of the box.
 
-![An architecture diagram of the AWS Static Website template](./architecture.png)
+![An architecture diagram of the AWS Static Website template](/templates/static-website/aws/architecture.png)
 
 ## Using this template
 

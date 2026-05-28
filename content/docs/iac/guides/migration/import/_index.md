@@ -48,7 +48,7 @@ Import uses the selected stack's configured [provider](/docs/concepts/resources/
 
 You'll find the type token and lookup property in the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). The type token is quoted in the `pulumi import` example, and the lookup property can be found in the description just above it:
 
-![Where to find the type token and lookup property for a resource](./token-and-lookup.png)
+![Where to find the type token and lookup property for a resource](/docs/iac/guides/migration/import/token-and-lookup.png)
 
 {{< notes >}}
 Make sure the resource provider is configured in a way that allows it to locate the resource you want to import --- e.g., that the resource is in the same region as other resources in your stack --- or the import operation may fail.

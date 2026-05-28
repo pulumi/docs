@@ -453,7 +453,7 @@ For additional options and details, see `esc run --help`.
 Pulumi ESC lets you define common configuration values once as reusable environments and then import them into other environments to avoid duplication, delegate ownership, and share settings (including secrets) across applications.
 
 {{% notes type="info" %}}
-For a detailed description on how to work with imports, please refer to [Importing other Environments](../imports) documentation page.
+For a detailed description on how to work with imports, please refer to [Importing other Environments](/docs/esc/environments/imports) documentation page.
 {{% /notes %}}
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
@@ -642,7 +642,7 @@ $ esc env version tag myorg/myproject/test@prod @3
 
 You can also manage tags in the Pulumi Cloud Console by selecting the environment's `Versions` tab and then selecting the `Actions` menu for the given version of the environment you want to tag:
 
-![envtagui.png](../envtagui.png)
+![envtagui.png](/docs/esc/environments/envtagui.png)
 
 ### Using Tagged Versions
 

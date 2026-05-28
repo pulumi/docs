@@ -75,7 +75,7 @@ dotnet add package PulumiCSharpAnalyzer
 
 Now your IDE, whether that is Rider, Visual Studio or VS Code with OmniSharp should report the error inside the IDE like any compile error or warning. Here is for example how it looks like inside Rider:
 
-![missing property Kind when initializing resource arguments](./missing-kind-property.png)
+![missing property Kind when initializing resource arguments](/blog/csharp-static-analyzer/missing-kind-property.png)
 
 Not just your IDE, it integrates into your build pipeline too. When you `dotnet build` your project, the detected errors will show up there:
 
@@ -94,11 +94,11 @@ Build succeeded.
 
 Besides detecting missing properties when creating resources, the analyzer also detects missing properties for function invokes which follow a similar pattern:
 
-![missing required parameter when invoking a SDK function](./error-missing-required-properties-function-invokes.png)
+![missing required parameter when invoking a SDK function](/blog/csharp-static-analyzer/error-missing-required-properties-function-invokes.png)
 
 Finally, an anti-pattern that the analyzer can detect is creating resources within an `.Apply(...)` call:
 
-![a warning being reported when creating a resource inside apply call](./resource-inside-apply.png)
+![a warning being reported when creating a resource inside apply call](/blog/csharp-static-analyzer/resource-inside-apply.png)
 
 We always recommend developers to avoid creating resources inside `.Apply(...)` calls because the execution plan of Pulumi will be different during the `pulumi preview` and `pulumi up` phase.
 

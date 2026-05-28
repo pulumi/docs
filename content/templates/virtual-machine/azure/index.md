@@ -22,7 +22,7 @@ cloud:
 
 The Azure Virtual Machine template scaffolds a Pulumi project that provisions an [Azure virtual machine](/registry/packages/azure-native/api-docs/compute/virtualmachine/) inside a new [Azure Virtual Network](/registry/packages/azure-native/api-docs/network/virtualnetwork/). The instance boots an HTTP server on port 80 from a small init script, so the project deploys end to end out of the box. Use it as a starting point for a web application, backend service, or database VM.
 
-![An architecture diagram of the Azure Virtual Machine template](./architecture.png)
+![An architecture diagram of the Azure Virtual Machine template](/templates/virtual-machine/azure/architecture.png)
 
 ## Using this template
 

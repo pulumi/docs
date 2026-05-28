@@ -22,7 +22,7 @@ cloud:
 
 The Google Cloud Virtual Machine template scaffolds a Pulumi project that provisions a [Compute Engine instance](/registry/packages/gcp/api-docs/compute/instance/) and the supporting [Compute Engine network](/registry/packages/gcp/api-docs/compute/network/). The instance boots an HTTP server on port 80 from a small init script, so the project deploys end to end out of the box. Use it as a starting point for a web application, backend service, or database VM.
 
-![An architecture diagram of the Google Cloud Virtual Machine template](./architecture.png)
+![An architecture diagram of the Google Cloud Virtual Machine template](/templates/virtual-machine/gcp/architecture.png)
 
 ## Using this template
 

@@ -38,7 +38,7 @@ Since the initial launch of 6.0 almost two years ago, we've shipped over 70 rele
 
 The Google Cloud provider now supports 250+ functions, 800+ resources, 10,000+ input properties. It continues to grow in coverage and features while staying up-to-date with the latest upstream changes. The chart below shows the growth of the provider in the last 2 years.
 
-![google-cloud-coverage](./google-cloud-coverage.png)
+![google-cloud-coverage](/blog/google-cloud-7-0/google-cloud-coverage.png)
 
 ### New Modules
 

@@ -22,7 +22,7 @@ These three case studies highlight a small sampling of the many types of compani
 <br>
 <br>
 
-![Atlassian](./atlassian-wordmark.png)
+![Atlassian](/blog/cloud-engineering-on-the-rise/atlassian-wordmark.png)
 
 <!-- ## Atlassian -->
 
@@ -46,7 +46,7 @@ Atlassian’s Bitbucket DevSpeed team is responsible for improving developer pro
 <br>
 <br>
 
-![SANS Institute](./sans-wordmark.png)
+![SANS Institute](/blog/cloud-engineering-on-the-rise/sans-wordmark.png)
 
 <!-- ## SANS Institute -->
 
@@ -70,7 +70,7 @@ SANS Institute is the global leader in cybersecurity training. Using Pulumi, the
 <br>
 <br>
 
-![Skai](./skai-logo.png)
+![Skai](/blog/cloud-engineering-on-the-rise/skai-logo.png)
 
 Skai is an independent, global marketing platform for strategy, measurement, and best-of-breed activation across all of the world’s most influential digital channels. Skai possesses a highly technical engineering organization with over 350 software engineers, data experts, and DevOps engineers.  Skai’s microservices run on AWS, but its core monolith service was hosted in a data center running private cloud infrastructure. Skai’s DevOps group needed to migrate the service to the cloud because demand increased. Skai’s DevOps team decided to transition from using its legacy infrastructure tool because its domain-specific language (DSL) wouldn’t be suited to the demands of the newly migrated modern cloud architectures. Instead, Skai sought a solution that enabled it to use familiar languages and software engineering best practices to manage its infrastructure. That’s why Skai chose the Pulumi Cloud Engineering Platform to build, deploy, and manage its infrastructure with Python.
 

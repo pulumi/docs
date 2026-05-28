@@ -147,7 +147,7 @@ const service = new awsx.ecs.FargateService("service", {
 
 So let's see what happens when we actually try to run this:
 
-![Pulumi update in progress](./pulumi-update.gif)
+![Pulumi update in progress](/blog/building-and-publishing-docker-images-to-a-private-amazon-ecr-repository/pulumi-update.gif)
 
 As you can see Pulumi is actually launching the real `docker` executable
 locally to use the `Dockerfile` to build the image. As `docker` runs,
@@ -163,7 +163,7 @@ services are spun up.
 TL;DR, just run `pulumi up`, and it takes care of all the heavy lifting.
 In the end we see:
 
-![summary results](./container-def.png)
+![summary results](/blog/building-and-publishing-docker-images-to-a-private-amazon-ecr-repository/container-def.png)
 
 In less than 30 seconds, Pulumi and Docker built the private image, made
 it available on ECR, and properly moved the Service over to using it.

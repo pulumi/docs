@@ -43,7 +43,7 @@ __Deployments and Delivery__:  Managing the delivery of cloud infrastructure cha
 
 Together with [Pulumi ESC](/blog/environments-secrets-configurations-management/) (Environments, Secrets and Configuration) which we announced yesterday, and the core Pulumi IaC infrastructure as code platform, these new features provide a rich collection of building blocks and out of the box experiences for empowering platform teams via Pulumi Cloud.  At every layer of the Platform Engineering stack, Pulumi and Pulumi Cloud offer key technologies to accelerate your Platform Engineering projects.
 
-![Platform Team Layer Cake](./platform-teams.png)
+![Platform Team Layer Cake](/blog/developer-portal-platform-teams/platform-teams.png)
 
 ### Organization Templates and New Project Wizard
 
@@ -53,11 +53,11 @@ The new project wizard allows anyone in your organization to pick a template the
 
 We’ve also added integration with the newly released [Pulumi ESC](/docs/pulumi-cloud/deployments/get-started/#environments) so that you can set up environments (and the configuration and credentials needed to deploy to them) that users within your organization can deploy into, determine who can use which environments using RBAC, and then allow those users to deploy templates directly into the environments they can access -- no need to copy secrets, credentials or configuration around!
 
-![New Project Wizard](./new-project-wizard.png)
+![New Project Wizard](/blog/developer-portal-platform-teams/new-project-wizard.png)
 
 We’ve also added the ability for organizations to provide their own custom set of Organization Templates --- templates specific to their organization, which can live in either public or private Git repositories.  The Organization Template Source provided will populate the templates that are displayed to members in the New Project wizard experience.
 
-![Organization Templates](./organization-templates.png)
+![Organization Templates](/blog/developer-portal-platform-teams/organization-templates.png)
 
 Together, Organization Templates and the new New Project Wizard offer a foundational developer portal experience directly within the Pulumi Cloud console.  Users can come to Pulumi Cloud, select one of the pre-defined templates set up by their Platform Team, and then in a few clicks have it deployed into a predefined cloud environment.
 
@@ -69,7 +69,7 @@ We’ve seen many developer portal technologies rapidly growing in popularity ov
 
 The new Pulumi tab gives you direct access to all Pulumi stack activity associated with your backstage projects that include Pulumi stacks.
 
-![Pulumi Backstage Plugin](./backstage-plugin.png)
+![Pulumi Backstage Plugin](/blog/developer-portal-platform-teams/backstage-plugin.png)
 
 The Pulumi Backstage Plugin also supports two new scaffolding actions, `pulumi:new` and `pulumi:up`, which can be used to template out new Pulumi projects and to trigger updates to Pulumi stacks, fully integrated into the Backstage scaffolding system.
 
@@ -130,7 +130,7 @@ new PolicyPack("aws-iso27001-compliance-ready-policies-typescript", {
 
 The new Policy Pack wizard also makes it easier than ever to create a new policy pack from the compliance-ready policies, and enable it within your organization.
 
-![Compliance Ready Policies in New Policy Project Wizard](./compliance-ready-policies.png)
+![Compliance Ready Policies in New Policy Project Wizard](/blog/developer-portal-platform-teams/compliance-ready-policies.png)
 
 Check out the [documentation](/docs/using-pulumi/crossguard/compliance-ready-policies) and [open source repository](https://github.com/pulumi/compliance-policies/) to get started with Compliance-Ready Policies today.
 
@@ -197,7 +197,7 @@ In addition to pricing, we’re making available several new features in the Dep
 
 The new Deployments pane in the Pulumi Cloud console provides a unified view across all deployments in your organization.  This includes in progress and queued deployments so that you can easily access any currently in flight deployments, as well as a full history of all deployments performed across all stacks you have access to within your organization.
 
-![Deployments Page in Pulumi Cloud Console](./deployments-page.png)
+![Deployments Page in Pulumi Cloud Console](/blog/developer-portal-platform-teams/deployments-page.png)
 
 And finally, we’re extending Pulumi Deployments to support additional key enterprise needs.  We recently added support for connecting Pulumi Deployments to GitHub Enterprise, and we will be delivering support for self-hosted Pulumi Deployments agents which can be run within your own infrastructure later this month.  You can [fill out this form](https://share.hsforms.com/1GEUed27WQquRcQxY-dKOlw2mxud) to register for the private preview of self-hosted agents today.
 

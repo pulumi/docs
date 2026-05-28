@@ -30,7 +30,7 @@ best practices by default, and easier to evolve your AWS infrastructure
 as your application needs mature.
 <!--more-->
 
-![Pulumi Crosswalk for AWS](./crosswalk-for-aws.png)
+![Pulumi Crosswalk for AWS](/blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws/crosswalk-for-aws.png)
 
 Crosswalk for AWS offers higher-level components for a wide range of the
 AWS platform - from serverless (Lambda, API Gateway and more) to

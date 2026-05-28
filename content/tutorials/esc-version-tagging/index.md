@@ -62,7 +62,7 @@ Environment created: tutorials/messages/dev
 
 Once it's created, you'll be able to see the new project in Pulumi Cloud as well by navigating to Pulumi ESC &gt; Environments:
 
-![A screenshot showing a newly created ESC environment](./new-env.png)
+![A screenshot showing a newly created ESC environment](/tutorials/esc-version-tagging/new-env.png)
 
 ## Create a new configuration setting
 
@@ -86,7 +86,7 @@ Every change to a configuration value in an ESC environment produces a new, immu
 
 As of now, your `dev` environment has two versions:  version `1`, the empty starting point, and version `2`, which contains a single setting (for `motd`). You can see this in the Pulumi Cloud console by clicking into the `dev` environment and navigating to the Versions tab:
 
-![A screenshot showing two revisions of the MOTD setting](./two-revisions.png)
+![A screenshot showing two revisions of the MOTD setting](/tutorials/esc-version-tagging/two-revisions.png)
 
 Now let's produce a third version by setting the value of `motd` again:
 
@@ -150,7 +150,7 @@ $ esc env get tutorials/messages/dev@active motd --value json
 
 The Versions tab should also reflect this:
 
-![A screenshot showing the active tag pointing to revision 3](./active.png)
+![A screenshot showing the active tag pointing to revision 3](/tutorials/esc-version-tagging/active.png)
 
 Now try setting a new `motd` value, and notice that while the `latest` tag immediately reflects the new value, the `active` tag's value remains unchanged at version `3`:
 

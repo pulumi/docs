@@ -35,7 +35,7 @@ CrossGuard is open source and the functionality is behind [the new `pulumi polic
 
 If you choose to use CrossGuard with the Enterprise Edition of Pulumi, however, you'll get some added functionality. This includes server-side enforcement of policies and organizational policies, including "policy groups" which let you group and apply many policies together to your stacks, such as applying different policies to production than development environments.
 
-![Policy Enforcement in the Console](./PolicyEnforcement.png)
+![Policy Enforcement in the Console](/blog/pulumi-2020-update/PolicyEnforcement.png)
 
 We recently added the ability to tag policy packs with a semantic version so that you can easily manage and apply packs using user-friendly versions instead of auto-generated numbers.
 

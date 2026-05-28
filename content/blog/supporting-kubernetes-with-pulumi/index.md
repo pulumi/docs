@@ -33,15 +33,15 @@ All the TypeScript code is parameterized, so all you have to do is change the st
 
 It then spins up a VPC with both private and public subnets, attaches an internet gateway, creates security groups for various hosts, and creates one instance for an SSH bastion host that only allows SSH traffic into the cluster. This bastion host serves as the gateway by which you reach everything else inside the VPC.
 
-![VPCs](./scott_lowe_1.png)
+![VPCs](/blog/supporting-kubernetes-with-pulumi/scott_lowe_1.png)
 
 Maps provide different configuration values for each region, such as different IP address values per region and different "friendly names" for each region.
 
-![Configuration Values](./scott_lowe_2.png)
+![Configuration Values](/blog/supporting-kubernetes-with-pulumi/scott_lowe_2.png)
 
 A second Pulumi project, again with four stacks, is used to spin up AWS EC2 instances, which are used as Cluster API management clusters. This second project creates instances inside the infrastructure that was spun up by the first project. A stack reference is used to refer to a stack in the first project; this connection is what enables the second project to place its resources inside the infrastructure created by the first project.
 
-![Cluster API](./scott_lowe_3.png)
+![Cluster API](/blog/supporting-kubernetes-with-pulumi/scott_lowe_3.png)
 
 Once there are a couple of instances running in the region, native Kubernetes tools bootstrap the initial Kubernetes cluster for that region. This first Kubernetes cluster becomes the management cluster, and from there, it's possible to create additional Kubernetes clusters as needed using Cluster API.
 

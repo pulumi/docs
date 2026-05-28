@@ -21,7 +21,7 @@ sign-up for an account on Pulumi. Just fill out
 the [signup](https://app.pulumi.com/signup/email) form, and you are
 ready to go.
 
-![Email Signup](./email-signup.png)
+![Email Signup](/blog/announcing-support-for-email-based-identities/email-signup.png)
 
 ## Quickstart
 

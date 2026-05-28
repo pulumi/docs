@@ -47,7 +47,7 @@ The final solution consists of several Azure services:
 
 The diagram below outlines the interaction of these components:
 
-![Static website running on Azure and defined in Pulumi](./pulumi-static-website.png)
+![Static website running on Azure and defined in Pulumi](/blog/hosting-a-static-website-on-azure-with-pulumi/pulumi-static-website.png)
 
 Let's break down how to configure each component using Pulumi.
 

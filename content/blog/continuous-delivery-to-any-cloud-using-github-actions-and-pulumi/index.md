@@ -106,7 +106,7 @@ Actions will fire and run Pulumi tasks appropriately; you'll know it's
 working if you see Pulumi actions show up alongside your PRs and
 commits:
 
-![gh-actions-prs](./gh-actions-prs.png)
+![gh-actions-prs](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/gh-actions-prs.png)
 
 Two sorts of actions, defined the examples referenced above, are
 
@@ -119,7 +119,7 @@ If either of these fail, you'll see the standard GitHub Checks red "x",
 whereas success will give a green "checkmark"; click on either to get
 the full Pulumi log output:
 
-![gh-actions-logs](./gh-actions-logs.png)
+![gh-actions-logs](/blog/continuous-delivery-to-any-cloud-using-github-actions-and-pulumi/gh-actions-logs.png)
 
 GitHub Actions' Logs page, plus Pulumi's Console, together give you
 total insight into a deployment's status, including the Docker build

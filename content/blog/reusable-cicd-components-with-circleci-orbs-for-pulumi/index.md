@@ -54,7 +54,7 @@ CircleCI orbs can be parameterized, so you can set the version of the
 Pulumi client to download, whether the update should skip its preview,
 and so on. ([Full orb reference](https://github.com/pulumi/circleci#orb-reference))
 
-![circleci ui](./circleci-ui.png)
+![circleci ui](/blog/reusable-cicd-components-with-circleci-orbs-for-pulumi/circleci-ui.png)
 
 With other CI/CD systems, you'd typically need to write one-off Bash
 scripts to download the client from <https://get.pulumi.com>, add it to

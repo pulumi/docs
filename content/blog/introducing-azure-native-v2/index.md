@@ -39,7 +39,7 @@ We've listened to your feedback and have made significant optimizations to the A
 
 So, how did we accomplish this? For starters, we've removed all deprecated Azure API modules up to the 2.0 release date. The bigger impact was made by identifying and removing all forward-compatible module versions. That is to say we've excluded any redundant versions and kept only the versions that introduce breaking changes. Where these versions are not the current latest and new default, they remain available as explicit versions.
 
-![sdk-size-version-diagram](./azurev2-diagrams.png)
+![sdk-size-version-diagram](/blog/introducing-azure-native-v2/azurev2-diagrams.png)
 
 You may be wondering about the significance between explicit and default versions. Well, when Azure releases new features they often create a new version of a service API. These versions are named using dates such as "2021-01-02" or "2022-05-08-preview". There's many versions of each module in the SDK, so we pick a version of each module for the top-level default. To learn more about module versions, visit the [Azure Native Version Guide](https://www.pulumi.com/registry/packages/azure-native/version-guide/).
 
@@ -97,7 +97,7 @@ If you would like to upgrade to 2.x, but continue using the same Azure API versi
 
 We're excited to expand our top-level default version coverage by 226 resources, 274 functions, and 5526 input properties in this release, bringing the total to 1,637, 2,015, and 30,652 respectively. With this extensive collection of modules at your disposal, you can easily provision and manage the full range of Azure services using Pulumi. Whether you're working with virtual machines, databases, networking, or any other Azure service, the Azure Native Provider has you covered.
 
-![provider-coverage-by-version](./azurev2-provider-coverage.png)
+![provider-coverage-by-version](/blog/introducing-azure-native-v2/azurev2-provider-coverage.png)
 
 ## Resolved Title Case Inconsistency
 

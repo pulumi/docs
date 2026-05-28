@@ -22,7 +22,7 @@ cloud:
 
 The AWS Kubernetes Cluster template scaffolds a Pulumi project that provisions a managed [Amazon EKS cluster](/registry/packages/eks/api-docs/cluster/) inside a new VPC with public and private subnets. Worker nodes run in the private subnets for improved security; load balancers created by cluster workloads are automatically placed in the public subnets.
 
-![An architecture diagram of the AWS Kubernetes Cluster template](./architecture.png)
+![An architecture diagram of the AWS Kubernetes Cluster template](/templates/kubernetes/aws/architecture.png)
 
 ## Using this template
 

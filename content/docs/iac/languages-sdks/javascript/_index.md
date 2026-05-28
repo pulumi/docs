@@ -357,7 +357,7 @@ The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) co
 
 For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
 
-When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
+When building component packages, see [Provider package version management](/docs/iac/languages-sdks/javascript/provider-package-versions/) for guidance on handling provider package versions across component boundaries.
 
 ### Policy SDK
 

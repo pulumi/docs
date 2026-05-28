@@ -32,7 +32,7 @@ To get started using your Atlassian identity, you can navigate to
 If you are already logged-in to Pulumi, you should first logout and then
 head back to the Pulumi Service.
 
-![atlassian-1](./atlassian-1.png)
+![atlassian-1](/blog/pulumi-now-supports-atlassian-identity/atlassian-1.png)
 
 ## Connecting an existing Pulumi account to your Atlassian identity
 
@@ -41,7 +41,7 @@ account, then navigate to [app.pulumi.com](https://app.pulumi.com/signin) and on
 head to Account Settings to choose the option to connect your Atlassian
 identity.
 
-![atlassian-2](./atlassian-2.png)
+![atlassian-2](/blog/pulumi-now-supports-atlassian-identity/atlassian-2.png)
 
 ## Bitbucket Team-backed Organizations
 

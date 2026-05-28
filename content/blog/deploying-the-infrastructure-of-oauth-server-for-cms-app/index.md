@@ -294,7 +294,7 @@ const aRecord = createAliasRecord(cmsStackConfig.targetDomain, alb);
 
 We can automate our build with GitHub Workflow. The `build-and-deploy.yml` file in  `cms-oauth/.github/workflows/` is used by GitHub Actions to build our application. Note that the workflow uses the repository secret set in GitHub.
 
-![GitHub Secret](./github_secret.jpg)
+![GitHub Secret](/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app/github_secret.jpg)
 
 ## Finishing Up
 
@@ -316,11 +316,11 @@ The site_domain is the CMS URL, and the base_url is the OAuth Server URL. They a
 
 Congratulations on building and deploying both CMS web application and the OAuth client-server! If everything works perfectly, you should see the Login with GitHub button and click it to redirect to the GitHub login page.
 
-![OAuth Client Server](./oauth-client-server.jpg)
+![OAuth Client Server](/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app/oauth-client-server.jpg)
 
 People with access can now use the CMS.
 
-![CMS](./cms.jpg)
+![CMS](/blog/deploying-the-infrastructure-of-oauth-server-for-cms-app/cms.jpg)
 
 You can find the project code for the CMS and the OAuth Client Server on [GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth/).
 

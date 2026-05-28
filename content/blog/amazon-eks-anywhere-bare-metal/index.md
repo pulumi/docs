@@ -85,7 +85,7 @@ To use the component, take the following steps:
 
 Your output should look similar to the example below:
 
-![Screenshot of Pulumi update output showing the cluster and other resources being created](./pulumi-up-output.png)
+![Screenshot of Pulumi update output showing the cluster and other resources being created](/blog/amazon-eks-anywhere-bare-metal/pulumi-up-output.png)
 
 ## Give it a try!
 

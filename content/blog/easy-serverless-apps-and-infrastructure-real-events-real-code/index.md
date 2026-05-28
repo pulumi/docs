@@ -32,7 +32,7 @@ archive it.
 
 Simple enough. This can be visualized as follows:
 
-![Serverless app architecture](./architecture.png)
+![Serverless app architecture](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/architecture.png)
 
 All source code for this example is
 [available on GitHub](https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip).
@@ -82,7 +82,7 @@ The bucket objects have many properties, including obvious ones like the
 ARN, domain name, CORS rules, and so on. But if we look closely, we'll
 see there are some `onX` methods. These register event handlers:
 
-![Intellisense](./intellisense.png)
+![Intellisense](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/intellisense.png)
 
 Let's use `onObjectCreated` to create a Lambda that will zip up any new
 reports:
@@ -122,12 +122,12 @@ we call these *magic* functions.
 
 Now, let's deploy the resources to AWS:
 
-![UP UP AND AWAY!](./up.png)
+![UP UP AND AWAY!](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/up.png)
 
 After confirming, `yes`, everything is up and running after just a few
 seconds:
 
-![done](./done.png)
+![done](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/done.png)
 
 Note the resource graph. Pulumi uses familiar languages, which allows
 encapsulation and hiding of unnecessary complexity. So underneath that
@@ -312,12 +312,12 @@ s3.putObject(
 
 And run `pulumi up` -- it will show us what changed:
 
-![`pulumi up`](./update.png)
+![`pulumi up`](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/update.png)
 
 We can view the full diff, by choosing `details`, including a Git-like
 diff of the code changes themselves!
 
-![Diffs](./diffs.png)
+![Diffs](/blog/easy-serverless-apps-and-infrastructure-real-events-real-code/diffs.png)
 
 After selecting `yes`, the function is updated in just a couple of
 seconds. Similarly, we can update any of the resource definitions, and

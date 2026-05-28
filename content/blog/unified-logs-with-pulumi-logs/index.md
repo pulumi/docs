@@ -95,13 +95,13 @@ One great example of this is the [video thumbnailer](https://github.com/pulumi/e
 example which implements this simple architecture involving two buckets,
 a lambda event, and a long-running Fargate container task.
 
-![unnamed](./unnamed.png)
+![unnamed](/blog/unified-logs-with-pulumi-logs/unnamed.png)
 
 The Pulumi program deploys several components, using different types of
 cloud resources. But using `Pulumi logs` we can see all logs in a
 single, unified view.
 
-![terminal-logs](./terminal-logs.png)
+![terminal-logs](/blog/unified-logs-with-pulumi-logs/terminal-logs.png)
 
 From the image above, you can see the `onNewVideo` Lambda function, then
 triggering the `ffmpegThumbTask` Fargate container, and then copying a

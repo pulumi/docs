@@ -298,7 +298,7 @@ AWS Fargate technology is essentially "serverless compute for containers." Inste
 
 Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori) explained at re:Invent, Fargate can react very quickly to load changes. Amazon has put a ton of great effort into projects like [AWS Nitro](https://aws.amazon.com/ec2/nitro/) and [Firecracker](https://firecracker-microvm.github.io/), ultimately leading to lightning fast startup times and impressive auto-scaling capabilities. Fargate for EKS taps into all of this goodness:
 
-![EC2 vs Fargate EKS Scaling](./clare-fargate.jpeg)
+![EC2 vs Fargate EKS Scaling](/blog/aws-eks-managed-nodes-fargate/clare-fargate.jpeg)
 
 Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile](/registry/packages/aws/api-docs/eks/fargateprofile/). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
 

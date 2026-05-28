@@ -20,7 +20,7 @@ This blog post takes a deeper dive into mock-based unit testing of Pulumi progra
 
 Let's start with a picture showing how Pulumi components interact during a typical deployment process.
 
-![Pulumi Components Interaction](./engine.png)
+![Pulumi Components Interaction](/blog/unit-testing-cloud-deployments-with-dotnet/engine.png)
 
 Whenever a new resource is instantiated in code, the program makes a remote call to the engine. The engine receives the resource's input values, validates them, and translates the request to an invocation of a cloud API. The API returns some data, which are translated to resource outputs and sent back to the program.
 
@@ -30,7 +30,7 @@ Our [testing guide](/docs/iac/concepts/testing/) outlines several testing method
 
 The Pulumi SDK provides a hook to replace all the remote calls with mocks. Mocks run in the same process and can respond immediately with hard-coded or calculated on-the-fly data.
 
-![Pulumi with Mocks](./mocks.png)
+![Pulumi with Mocks](/blog/unit-testing-cloud-deployments-with-dotnet/mocks.png)
 
 We can write fully deterministic and blazingly fast automated tests as all remote calls and uncertainty are eliminated. There is no cloud to respond to resource creation, so it's a developer's responsibility to mimic the cloud behavior with mocks adequately.
 

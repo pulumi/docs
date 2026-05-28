@@ -61,7 +61,7 @@ We're excited to introduce Google Cloud support to [Insights Account Discovery](
 
 <!--more-->
 
-![Provider Selection](./provider-selection.png)
+![Provider Selection](/blog/google-cloud-resource-discovery/provider-selection.png)
 
 ## Scan an Entire Google Cloud Project in Minutes
 

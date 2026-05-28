@@ -58,7 +58,7 @@ The clock is also ticking on the compliance side. The [EU AI Act's high-risk obl
 
 There are roughly three paths from here.
 
-![Three platform responses to agent sprawl: do nothing leads to unmanaged sprawl, mandating centralization creates developer friction, and making the platform the obvious path produces voluntary adoption](./three-responses.png)
+![Three platform responses to agent sprawl: do nothing leads to unmanaged sprawl, mandating centralization creates developer friction, and making the platform the obvious path produces voluntary adoption](/blog/agent-sprawl-iac-platform-is-the-answer/three-responses.png)
 
 **Do nothing.** Accept the sprawl and hope nothing catches fire. This is the default, and it's also how you end up explaining to an auditor why some finance agent moved data between three systems last Thursday and nobody remembers which prompt triggered it.
 
@@ -72,7 +72,7 @@ Option three is the only one that scales. It's also the one where most platform 
 
 An agent needs seven concrete things from the platform it runs on. Each one maps to a Pulumi primitive you already own.
 
-![Seven things an AI agent needs from your platform mapped to their Pulumi primitives: context to state graph and Neo, integrations to providers and ESC, actions to Deployments and Automation API, policy to CrossGuard, audit to Pulumi Cloud activity log, review to pulumi preview and review stacks, approval to Deployments approvals and Neo](./seven-pillars.png)
+![Seven things an AI agent needs from your platform mapped to their Pulumi primitives: context to state graph and Neo, integrations to providers and ESC, actions to Deployments and Automation API, policy to CrossGuard, audit to Pulumi Cloud activity log, review to pulumi preview and review stacks, approval to Deployments approvals and Neo](/blog/agent-sprawl-iac-platform-is-the-answer/seven-pillars.png)
 
 ### 1. A trustworthy context lake
 

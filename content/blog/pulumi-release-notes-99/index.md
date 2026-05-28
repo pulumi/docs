@@ -87,13 +87,13 @@ We now support [multi-factor authentication](/blog/multi-factor-auth-mfa-in-pulu
 
 [Pulumi cost calculator](/pricing/#calculator) for Team Edition enables you to quickly estimate the cost of using Pulumi Cloud. Simply input the number of resources in all your cloud accounts and the percentage of time they will be running to quickly get the total cost per month with a break down of estimated credits, free credits and cost per credit. You can also use the calculator to estimate the cost of using Pulumi Deployments.
 
-![Screenshot of the pricing calculator](../pricing-calculator-blog/pricing_calc.png)
+![Screenshot of the pricing calculator](/blog/pricing-calculator-blog/pricing_calc.png)
 
 ### Historical Views
 
 The Pulumi Cloud stack update page now contains the historical resources in the stack and the historical stack outputs. Simply click on details on each Pulumi update to see the resource state and stack output at the time of the update. This history extends all the way back to the first update of the stack. See the [historical views blog post](/blog/update-page-improvements/) for more details.
 
-![Historical views](../update-page-improvements/update-page.png)
+![Historical views](/blog/update-page-improvements/update-page.png)
 
 ## Core
 

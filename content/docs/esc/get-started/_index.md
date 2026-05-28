@@ -78,7 +78,7 @@ You'll be prompted to log in via your browser or with an access token. Follow th
     1. For **Environment name**, enter: `dev`
     1. Select **Create Environment**
 
-    ![Create Environment dialog in Pulumi Cloud showing fields for project name (my-project) and environment name (dev)](./images/esc-create-environment.png)
+    ![Create Environment dialog in Pulumi Cloud showing fields for project name (my-project) and environment name (dev)](/docs/esc/get-started/images/esc-create-environment.png)
 
     Your environment is now created and ready to store configuration and secrets.
 
@@ -97,13 +97,13 @@ Add both plaintext configuration and encrypted secrets to your environment:
 
     This defines two values: `region` (a plaintext value) and `apiKey` (a secret value, denoted with `fn::secret`).
 
-    ![ESC environment editor showing YAML definition with region and apiKey values before saving](./images/esc-env-edit-pre-save.png)
+    ![ESC environment editor showing YAML definition with region and apiKey values before saving](/docs/esc/get-started/images/esc-env-edit-pre-save.png)
 
 1. Select **Save**
 
     Watch what happens: ESC automatically encrypts the secret value. The plaintext `demo-secret-123` is replaced with an encrypted value.
 
-    ![ESC environment editor showing encrypted secret value and preview displayed as [secret] after saving](./images/esc-env-edit-post-save.png)
+    ![ESC environment editor showing encrypted secret value and preview displayed as [secret] after saving](/docs/esc/get-started/images/esc-env-edit-post-save.png)
 
 ## Retrieve your configuration and secrets
 

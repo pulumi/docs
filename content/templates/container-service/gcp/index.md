@@ -21,7 +21,7 @@ cloud:
 
 The Google Cloud Container Service template scaffolds a Pulumi project that deploys a containerized service to [Google Cloud Run](/registry/packages/gcp/api-docs/cloudrun) for serverless container execution, with the container image stored in Artifact Registry. The template ships with placeholder app content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Google Cloud Container Service template](./architecture.png)
+![An architecture diagram of the Google Cloud Container Service template](/templates/container-service/gcp/architecture.png)
 
 ## Using this template
 

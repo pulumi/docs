@@ -244,7 +244,7 @@ On top of all of that, because this is just code itself, and because
 these are normal APIs, other tooling (like your editor) knows exactly
 what is going on and can guide you through this. For example:
 
-![closure](./closure.png)
+![closure](/blog/lambdas-as-lambdas-the-magic-of-simple-serverless-functions/closure.png)
 
 While there's a lot of really cool tech going on under the covers here,
 we really hope that this ends up just feeling super-awesome to use for

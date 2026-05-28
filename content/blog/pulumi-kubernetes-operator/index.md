@@ -571,7 +571,7 @@ This starts with an initial version of the app, and then deploys an updated vers
 alongside the initial version. Once ready, traffic is switched over from the
 initial version to the new version with no downtime.
 
-![Blue Green Kubernetes Deployment](./blue-green.png)
+![Blue Green Kubernetes Deployment](/blog/pulumi-kubernetes-operator/blue-green.png)
 
 In Kubernetes, Blue/Green is modeled by using a [Service][k8s-service]
 that load balances and selects a set of Deployment pods labeled "blue," and then switching to a

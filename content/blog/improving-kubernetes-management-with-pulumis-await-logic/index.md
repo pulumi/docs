@@ -92,7 +92,7 @@ resource's metadata: `pulumi.com/skipAwait: "true"`.
 
 Here's a TypeScript example that demonstrates both annotations:
 
-![TypeScript annotations](./typescript-annotations.png)
+![TypeScript annotations](/blog/improving-kubernetes-management-with-pulumis-await-logic/typescript-annotations.png)
 
 If you do encounter an edge case and have to use this feature to work
 around it, it may be an oversight in the Pulumi Kubernetes provider - we

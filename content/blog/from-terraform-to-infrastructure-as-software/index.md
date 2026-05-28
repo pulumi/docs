@@ -285,12 +285,12 @@ the `us-west-2a`, `us-west-2b`, and `us-west-2c` availability zones in
 AWS's `us-west-2` region. `pulumi up` will then show you a plan and then
 let you confirm it to deploy your resources:
 
-![tf-pulumi-preview](./tf-pulumi-preview.png)
+![tf-pulumi-preview](/blog/from-terraform-to-infrastructure-as-software/tf-pulumi-preview.png)
 
 After selecting "yes", the update will proceed with interactive status
 updates:
 
-![tf-pulumi-update](./tf-pulumi-update.png)
+![tf-pulumi-update](/blog/from-terraform-to-infrastructure-as-software/tf-pulumi-update.png)
 
 ## Leveraging Programming Languages
 

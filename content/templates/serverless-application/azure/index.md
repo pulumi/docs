@@ -22,7 +22,7 @@ cloud:
 
 The Azure Serverless Application template scaffolds a Pulumi project that deploys an [Azure Blob Storage account](/registry/packages/azure-native/api-docs/storage/storageaccount/) configured for [static website hosting](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) and an [Azure Function](/registry/packages/azure-native/api-docs/web/webappfunction/) for the application backend. The template ships with placeholder web and function content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Azure Serverless Application template](./architecture.png)
+![An architecture diagram of the Azure Serverless Application template](/templates/serverless-application/azure/architecture.png)
 
 ## Using this template
 

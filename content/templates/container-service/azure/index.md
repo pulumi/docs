@@ -21,7 +21,7 @@ cloud:
 
 The Azure Container Service template scaffolds a Pulumi project that deploys a containerized service to Azure. The architecture includes an [Azure Container Registry](/registry/packages/azure-native/api-docs/containerregistry) for the container image and [Azure Container Instances (ACI)](/registry/packages/azure-native/api-docs/containerinstance) for serverless container execution. The template ships with placeholder app content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Azure Container Service template](./architecture.png)
+![An architecture diagram of the Azure Container Service template](/templates/container-service/azure/architecture.png)
 
 ## Using this template
 

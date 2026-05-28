@@ -68,7 +68,7 @@ We'll use the Azure Portal to illustrate the steps to configure and deploy an AK
 - Select **Containers > Kubernetes Service**.
 - Select **Create**.
 
-![Create Kubernetes service](./kubernetes_service.png)
+![Create Kubernetes service](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/kubernetes_service.png)
 
 **Step 2**: Create an AKS cluster.
 
@@ -81,7 +81,7 @@ For this example, we will configure several options in the **Basic** window but 
 
 Use the default values for **Primary node pool**, and select **Next: node pools**.
 
-![Create AKS Cluster](./create_aks_cluster.png)
+![Create AKS Cluster](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/create_aks_cluster.png)
 
 **Step 3**: Configure node pools.
 
@@ -89,7 +89,7 @@ A node pool is a logical grouping of nodes. Nodes in a pool can have different v
 
 For this example, use the default values for node pools.
 
-![Node pools](./node_pools.png)
+![Node pools](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/node_pools.png)
 
 **Step 4**: Configure authentication.
 
@@ -100,7 +100,7 @@ You can authenticate, authorize, secure, and control access to Kubernetes cluste
 
 To configure **Authentication** for this example, set the **Authentication method** to **System-assigned managed identity**. You can set **Role-based access control (RBAC)** to enabled, but it's unnecessary for the example. Use the default value for the **Node pool OS disk encryption** type.
 
-![Authentication](./authentication.png)
+![Authentication](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/authentication.png)
 
 **Step 5**: Configure networking
 
@@ -112,7 +112,7 @@ With `kubenet`, Azure creates and configures the virtual network. However, only 
 
 For this example, we'll use `kubenet` for it's simplicity, but in production `Azure CNI` maybe the better choice for applications.
 
-![Networking](./networking.png)
+![Networking](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/networking.png)
 
 **Step 6**: Complete the deployment
 
@@ -126,7 +126,7 @@ You can manage your cluster with [`kubectl`](https://kubernetes.io/docs/tasks/to
 
 Copy and paste the commands to connect and authenticate to your cluster using the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
-![Connect](./connect.png)
+![Connect](/blog/top-5-things-for-azure-devs-kubernetes-infrastructure/connect.png)
 
 After connecting and authenticating to your cluster, you can use `kubectl` to query your cluster.
 

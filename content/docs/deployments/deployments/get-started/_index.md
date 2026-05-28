@@ -15,7 +15,7 @@ aliases:
 
 The following guides show you how to set up Deployments for a new Pulumi IaC project:
 
-- [Use Pulumi Deployments with the New Project Wizard](./deployments-using-new-project-wizard)
-- [Use Pulumi Deployments with the Pulumi and GitHub CLIs](./deployments-using-cli)
+- [Use Pulumi Deployments with the New Project Wizard](/docs/deployments/deployments/get-started/deployments-using-new-project-wizard)
+- [Use Pulumi Deployments with the Pulumi and GitHub CLIs](/docs/deployments/deployments/get-started/deployments-using-cli)
 
 In each guide, you'll learn how to create a new project, configure Pulumi Deployments, and connect it to a GitHub repository.

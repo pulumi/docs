@@ -28,7 +28,7 @@ Today, we’re excited to introduce [__Pulumi Copilot__](/product/copilot/), a h
 
 Through Pulumi Copilot, you can explore your cloud infrastructure and gain insights across an incredible breadth of use cases, including:
 
-![List of Pulumi Copilot Use Cases](./use-cases.png)
+![List of Pulumi Copilot Use Cases](/blog/pulumi-copilot/use-cases.png)
 
 ## Pulumi Copilot Key Features
 
@@ -69,7 +69,7 @@ Perhaps we need to gain access to additional infrastructure within Pulumi Cloud 
 
 We get a hyperlink at the end, enabling us to jump directly to the members page, where we can see all of the details about the members and admins of the organization.  Pulumi Copilot helps to not just get information, but then navigate within the Pulumi Cloud console to continue to explore.
 
-![Pulumi Cloud screenshot with copilot window open. The dashboard depicts the Admins in the Console](./admins-console.png)
+![Pulumi Cloud screenshot with copilot window open. The dashboard depicts the Admins in the Console](/blog/pulumi-copilot/admins-console.png)
 
 Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
 
@@ -77,7 +77,7 @@ Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pu
 
 If we do a Pulumi update, and it fails, we often get a complex error message, caused by some combination of a coding problem or a cloud provider configuration problem or a transient failure in cloud providers backing service.  We can use Pulumi Copilot to ask why an update failed, and get a plain language explanation, leveraging the AI’s existing knowledge of programming languages and cloud providers, combined with access to all of the update logs from within Pulumi Cloud. Notably, we can ask why “this” update failed, taking advantage of the context of the page we are on within Pulumi Cloud to understand which update we are referring to.
 
-![Why did this fail? question posed in Pulumi Copilot](./cloud-update-why-fail.png)
+![Why did this fail? question posed in Pulumi Copilot](/blog/pulumi-copilot/cloud-update-why-fail.png)
 
 Perhaps we received an email from our compliance team telling us there was an issue with the VPC with id `vpc-04a116f7075fb7ca5`, but we have no idea where that is. Given we have hundreds of AWS accounts and dozens of regions in each of these accounts, finding this resource isn’t simple. We can just ask Pulumi Copilot, and it immediately tells us what AWS account it is in. We can follow this up with a question about which Pulumi project and stack is managing it, and get a link to go directly to the stack to learn more about how it is configured.
 
@@ -89,7 +89,7 @@ All of the capabilities of Pulumi AI for writing Pulumi IaC code are also availa
 
 If we are thinking about removing some infrastructure we may want to know what other infrastructure potentially depends on it.  We can get a list of stacks which depend on our stack, with hyperlinks directly to those stacks so we can explore their dependencies and take action to update them.
 
-![Stack references check in Pulumi Copilot window](./stack-references.png)
+![Stack references check in Pulumi Copilot window](/blog/pulumi-copilot/stack-references.png)
 
 If we’re getting started on compliance with a new compliance framework, we can get guidance on areas to focus on for compliance review, ahead of applying more formal compliance tools like [Pulumi Crossguard Compliance Ready Policies](/docs/using-pulumi/crossguard/compliance-ready-policies/).
 
@@ -129,7 +129,7 @@ Pulumi Copilot is initially offered as part of Pulumi Cloud.  But we are working
 
 Check out [pulumi/cloud-requests#417](https://github.com/pulumi/pulumi-cloud-requests/issues/417) for more details.
 
-![Pulumi Copilot integrated with Pulumi Docs website](./docs.png)
+![Pulumi Copilot integrated with Pulumi Docs website](/blog/pulumi-copilot/docs.png)
 
 ### Cloud CLI Skills
 

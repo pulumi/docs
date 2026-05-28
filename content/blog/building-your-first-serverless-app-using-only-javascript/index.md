@@ -64,13 +64,13 @@ choose to go ahead with the full deployment. Pulumi figures out all of
 the cloud resources needed to run the code above and prepares that for
 deployment.
 
-![results](./image.png)
+![results](/blog/building-your-first-serverless-app-using-only-javascript/image.png)
 
 Once deployed, your application will run in the cloud. Use
 `pulumi stack output url` to get the URL where your app is running, and
 open it up in your browser:
 
-![stack output](./stack-output.png)
+![stack output](/blog/building-your-first-serverless-app-using-only-javascript/stack-output.png)
 
 With Pulumi, we've built a serverless JavaScript app in just a few lines of code.
 This approach avoided significant amounts of configuration (YAML, or

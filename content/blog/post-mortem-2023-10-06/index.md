@@ -52,7 +52,7 @@ During the review process, we had categorized the migration as low risk, as the 
 
 Within three minutes of the change hitting production, our alarms alerted us to our service degradation and within five minutes, multiple team members were huddled together on an incident call. Our responders parallelized in gaining access to our production database and working to terminate the offending blocked writes that were starving other API workloads. Others assessed impact and worked on customer comms. Unfortunately, high database load also affected the responsiveness of our operational tooling. While we were preparing to execute mitigation actions, the migration completed successfully and both the database and API availability immediately and fully recovered.
 
-![Active Database Sessions Graph](./active-sessions-graph.png)
+![Active Database Sessions Graph](/blog/post-mortem-2023-10-06/active-sessions-graph.png)
 
 But failing three quarters of our traffic for a twenty minute outage is unacceptable. A migration that caused this level of locking should not have been allowed to run. Following an internal team postmortem, we have identified improvements we will be applying to our Software Development Lifecycle to automatically and accurately assess the impact of proposed migrations, as well as to block dangerous migrations from running in production. These include:
 

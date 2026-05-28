@@ -16,7 +16,7 @@ Fortunately, Pulumi has one of the smoothest and most powerful import processes 
 
 <!--more-->
 
-In a previous post titled [Automating Pulumi Import with Manually Created Resources](../automating-pulumi-import-to-bring-manually-created-resources-into-iac), we covered the details of how `pulumi import` works and demonstrated a workflow of bulk importing resources from AWS. We won't repeat the details of how `pulumi import` works here, so please refer to "Automating Pulumi Import with Manually Created Resources" for those details.
+In a previous post titled [Automating Pulumi Import with Manually Created Resources](/blog/automating-pulumi-import-to-bring-manually-created-resources-into-iac), we covered the details of how `pulumi import` works and demonstrated a workflow of bulk importing resources from AWS. We won't repeat the details of how `pulumi import` works here, so please refer to "Automating Pulumi Import with Manually Created Resources" for those details.
 
 ## Writing an account scraper
 

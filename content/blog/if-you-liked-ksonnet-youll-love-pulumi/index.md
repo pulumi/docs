@@ -26,7 +26,7 @@ ksonnet, we're confident that you'll love Pulumi. In this post, we'll
 tell you why.
 <!--more-->
 
-![Kubernetes + Pulumi](./hero.png)
+![Kubernetes + Pulumi](/blog/if-you-liked-ksonnet-youll-love-pulumi/hero.png)
 
 ## Recap of ksonnet's Approach
 
@@ -101,7 +101,7 @@ checking, inline documentation, and basic features like variables and
 control flow.  Here's an example of part of a
 [direct port of the Guestbook example to Pulumi](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/simple):
 
-![Raw access to Kubernetes API](./raw-access.png)
+![Raw access to Kubernetes API](/blog/if-you-liked-ksonnet-youll-love-pulumi/raw-access.png)
 
 Also like in ksonnet, in Pulumi we can introduce additional features
 like modules/imports, components, functions, and more to structure our
@@ -112,7 +112,7 @@ and you can see similar approaches to those used in the
 [similar example with ksonnet](https://github.com/ksonnet/ksonnet/blob/master/examples/guestbook.jsonnet)...
 and just using TypeScript instead of bespoke DSL:
 
-![Simple Guestbook with Abstractions](./guestbook-with-abstractions.png)
+![Simple Guestbook with Abstractions](/blog/if-you-liked-ksonnet-youll-love-pulumi/guestbook-with-abstractions.png)
 
 Unlike with ksonnet though, Pulumi programs are deployed using the
 `pulumi` CLI, which provides rich feedback on the progress a deployment
@@ -128,7 +128,7 @@ AWS/Azure/GCP resources using a single deployment workflow. For example,
 you can
 [stand up a managed Kubernetes cluster and deploying a Helm chart to it](https://github.com/pulumi/examples/blob/master/classic-azure-ts-aks-mean/index.ts).
 
-[![Managed Kubernetes Cluster plus Helm Chart deployment](./kubernetes-plus-helm-chart.png)
+[![Managed Kubernetes Cluster plus Helm Chart deployment](/blog/if-you-liked-ksonnet-youll-love-pulumi/kubernetes-plus-helm-chart.png)
 
 Another fun example is
 [provisioning and consuming an Azure CosmosDB from within your Kubernetes app](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean).

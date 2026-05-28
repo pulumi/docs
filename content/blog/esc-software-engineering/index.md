@@ -40,7 +40,7 @@ Pulumi ESC is a new category of configuration-as-code product, motivated by our 
 
 Pulumi ESC enables teams to aggregate secrets and configuration from many sources, manage hierarchical collections of configuration and secrets ("environments"), and consume those configuration and secrets from a variety of different application and infrastructure services. Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, but also works independently from Pulumi IaC, as a solution for managing environments, secrets and configuration for _any_ application or infrastructure project.
 
-![ESC Overview](./esc-overview.png)
+![ESC Overview](/blog/esc-software-engineering/esc-overview.png)
 
 ## ESC Versioning
 
@@ -55,15 +55,15 @@ These offer the same sort of rich versioning typically seen in other software en
 
 You can see the history of changes to an environment:
 
-![Environment Revisions in Pulumi Console](./revisions.png)
+![Environment Revisions in Pulumi Console](/blog/esc-software-engineering/revisions.png)
 
 And then see the diff between any two versions of an environment:
 
-![Environment Revision Diff in Pulumi Console](./diff2.png)
+![Environment Revision Diff in Pulumi Console](/blog/esc-software-engineering/diff2.png)
 
 Revisions can also be tagged to provide semantically meaningful names to specific revisions.  These tags can be moved later on to point to new versions when you are ready to roll them out to consumers.  The latest tag automatically always points to the latest revision.
 
-![Environment Tags in Pulumi Console](./tags.png)
+![Environment Tags in Pulumi Console](/blog/esc-software-engineering/tags.png)
 
 Most importantly though, you can also then refer to a specific version of an environment anywhere you reference one.
 

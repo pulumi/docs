@@ -37,7 +37,7 @@ webhooks will send notifications whenever changes to a stack are made
 to an organization will be sent the events for every stack within the
 organization.
 
-![Pulumi webhooks](./pulumi-webhooks.png)
+![Pulumi webhooks](/blog/getting-to-chatops-with-pulumi-webhooks/pulumi-webhooks.png)
 
 When events occur, we'll send a HTTP `POST` request to any registered
 listeners. Webhooks can then be used to send notifications to Slack or
@@ -47,7 +47,7 @@ We've been using Pulumi webhooks internally for raising awareness when
 our test and production environments get updated. A common sight after
 submitting some code is:
 
-![webhooks2](./pulumi-webhooks-2.png)
+![webhooks2](/blog/getting-to-chatops-with-pulumi-webhooks/pulumi-webhooks-2.png)
 
 ## Building a Pulumi Webhook handler using... Pulumi!
 
@@ -136,7 +136,7 @@ With the infrastructure in-place, we just need to register the webhook
 in the Pulumi Service. Organization administrators can do so under
 the organization's **SETTINGS** tab.
 
-![webhooks3](./pulumi-webhooks-3.png)
+![webhooks3](/blog/getting-to-chatops-with-pulumi-webhooks/pulumi-webhooks-3.png)
 
 That's it! As stacks are created, updated, and so on, the webhook
 handler will be notified and you can start building any custom actions

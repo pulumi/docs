@@ -19,7 +19,7 @@ We are excited to announce the support for authoring [Azure Deployment Environme
 
 Azure Deployment Environments is a service that enables developers to quickly spin up app infrastructure with project-based templates, all while maintaining centralized management and governance. Azure Deployment Environments also provides developers with an intuitive self-service portal where they can choose a curated, project-specific template to deploy new environments with just a few clicks. Thanks to the [ADE extensibility model](https://learn.microsoft.com/en-us/azure/deployment-environments/how-to-configure-extensibility-generic-container-image), you can now turn any Pulumi program into an environment definition and use it directly to securely provision application infrastructure in Azure. This post will guide you through creating ADE templates and deploying resources from the Microsoft developer portal.
 
-![Developer Portal](./devportal.png)
+![Developer Portal](/blog/azure-deployment-environments/devportal.png)
 
 ## How It Works
 

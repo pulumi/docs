@@ -58,7 +58,7 @@ Over the last year, we have added support for several new modules. Among these a
 
 The below chart shows the growth of this provider by resource, function, and supporting types since Version 7.
 
-![google-cloud-coverage](./gcp-api-coverage.png)
+![google-cloud-coverage](/blog/gcp-v8-release/gcp-api-coverage.png)
 
 ## What’s New in 8.0
 

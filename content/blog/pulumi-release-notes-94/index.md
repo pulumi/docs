@@ -235,11 +235,11 @@ The [Azure Native](/registry/packages/azure-native/) and [Azure Classic](/regist
 
 In addition to releasing major versions of 3 of our most popular providers, we're always keeping our providers up-to-date to bring you the latest functionality in your Pulumi programs. We've added 793 resources and 762 functions across our most popular providers, along with many more throughout our ecosystem.
 
-![resource_additions](./resource_additions.png)
+![resource_additions](/blog/pulumi-release-notes-94/resource_additions.png)
 
 ### New Community Providers
 
-![new_community_providers](./new_community_providers.png)
+![new_community_providers](/blog/pulumi-release-notes-94/new_community_providers.png)
 
 Welcome to the 17 new community providers in the registry!
 

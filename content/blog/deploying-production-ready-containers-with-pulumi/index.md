@@ -107,7 +107,7 @@ Add the following as `index.html`:
 
 You should have the following directory structure:
 
-![file layout](./file-layout.png)
+![file layout](/blog/deploying-production-ready-containers-with-pulumi/file-layout.png)
 
 1. Install the `@pulumi/cloud-aws` NPM package:
 
@@ -126,7 +126,7 @@ To deploy both the infrastructure and app code, we'll run
 that will be created and prompts for confirmation. During the preview
 phase, Pulumi invokes `docker build`.
 
-![Pulumi preview](./pulumi-update-preview.png)
+![Pulumi preview](/blog/deploying-production-ready-containers-with-pulumi/pulumi-update-preview.png)
 
 Choose the `yes` option to deploy to AWS. This will take about 5
 minutes. Pulumi automatically builds and provisions an AWS container
@@ -137,7 +137,7 @@ manual configuration on your part.
 At the end of the update, you'll see a link to the Pulumi Service that
 shows the details of the deployment.
 
-![update complete](./update-complete.png)
+![update complete](/blog/deploying-production-ready-containers-with-pulumi/update-complete.png)
 
 Go to this link and click the **Resources** tab. You'll see all the
 resources you've created. Notice that Pulumi has created an ECR
@@ -152,7 +152,7 @@ creates the stack output `url`:
 
 If you navigate to the link for `url` you'll see the following page:
 
-!["Hello, World!"](./hello-world-page.png)
+!["Hello, World!"](/blog/deploying-production-ready-containers-with-pulumi/hello-world-page.png)
 
 ## View logs
 

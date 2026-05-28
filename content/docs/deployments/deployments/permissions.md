@@ -15,7 +15,7 @@ menu:
 This page explains how permissions work in Pulumi Deployments and how to configure them for your deployment needs.
 
 {{% notes type="info" %}}
-This page contains information on the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](../cloud-credentials/)
+This page contains information on the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/)
 {{% /notes %}}
 
 ## Default Deployment Permissions
@@ -35,7 +35,7 @@ The permission model has the following practical implications:
 
 ## Granting Additional Permissions
 
-The recommended approach for granting additional permissions to deployments is through role assignment. To assign a role to a deployment, navigate to your stack's deployment settings in the Pulumi Console under `Settings > Deploy`. In the Role assignment section, use the dropdown menu to select from the available organization roles. Once a role is assigned, the deployment's stack token will inherit the permissions associated with that role, enabling access to stack references, environments, and organization resources as needed. Organization roles are managed through the [Roles section](../../access-management/rbac/roles/).
+The recommended approach for granting additional permissions to deployments is through role assignment. To assign a role to a deployment, navigate to your stack's deployment settings in the Pulumi Console under `Settings > Deploy`. In the Role assignment section, use the dropdown menu to select from the available organization roles. Once a role is assigned, the deployment's stack token will inherit the permissions associated with that role, enabling access to stack references, environments, and organization resources as needed. Organization roles are managed through the [Roles section](/docs/administration/access-identity/rbac/roles/).
 
 Alternatively, you can set the `PULUMI_ACCESS_TOKEN` environment variable to a token with the desired permissions in the stack's deployment settings.
 

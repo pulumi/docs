@@ -41,19 +41,19 @@ Tomas built an application that provides a “walled garden” of self-service i
 
 Here is an example that shows how a developer can create a repository simply by selecting a few parameters from a drop-down list.
 
-![Creating a new repository](./create-repo.png)
+![Creating a new repository](/blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/create-repo.png)
 
 Tomas determined that the best way to implement self-service infrastructure was with Pulumi and its [Automation API](/automation/). By using Pulumi, he could use standard programming languages to define infrastructure while using familiar software tools like IDEs and test frameworks. Pulumi also natively supports Azure and Kubernetes with 100% coverage of each provider’s APIs and same-day access to new features and updates. Finally, the Pulumi Automation API would enable him to program infrastructure automation directly into his application.
 
 The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Automation API encapsulates the functionality of the CLI (`pulumi up`, `pulumi preview`, `pulumi destroy`, `pulumi stack init`, etc.) but with more flexibility since infrastructure operations can be controlled programmatically.
 
-![Deploying with the Pulumi CLI and Automation API](./automation-api-diagram.png)
+![Deploying with the Pulumi CLI and Automation API](/blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/automation-api-diagram.png)
 
 ## How the self-service infrastructure platform was built
 
 Here is the workflow for the Elkjøp self-service infrastructure platform.
 
-![The Elkjøp self-service infrastructure platform](./elkjop-platform-diagram.png)
+![The Elkjøp self-service infrastructure platform](/blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure/elkjop-platform-diagram.png)
 
 The self-service platform is a web application that runs the Pulumi Automation API on the server side. The application uses Pulumi to provision and configure every environment resource such as Azure resource groups, Kubernetes namespaces, service principals, and Kubernetes service accounts. Each environment comes with a Git repository that's used by developers to manage their deployments. The Git repositories are the locus of each environment because they store everything needed to deploy changes such as infrastructure code and environment credentials.
 

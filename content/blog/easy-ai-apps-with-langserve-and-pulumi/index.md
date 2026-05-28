@@ -53,7 +53,7 @@ repository.
 
 The AWS architecture you will get out of the box will look like this:
 
-![Flowchart depicting LangServe AWS Architecture interactions among user's AWS account, ECR, LangServe Container, Fargate, ALB, Secrets Manager, Internet gateway, and internet](./architecture.png)
+![Flowchart depicting LangServe AWS Architecture interactions among user's AWS account, ECR, LangServe Container, Fargate, ALB, Secrets Manager, Internet gateway, and internet](/blog/easy-ai-apps-with-langserve-and-pulumi/architecture.png)
 
 The Pulumi LangServe AWS architecture consists of the following components:
 
@@ -130,7 +130,7 @@ langchain serve
 You can either use the `playground` or `curl` to test the chain. The `playground` is a web interface where you can test
 the chain. You can access it by opening your browser and navigating to `http://localhost:8000/openai/playground`.
 
-![LangServe Playground with outputted result from an inputted prompt](./playground.png)
+![LangServe Playground with outputted result from an inputted prompt](/blog/easy-ai-apps-with-langserve-and-pulumi/playground.png)
 
 Or you can use `curl` to test the chain:
 
@@ -171,7 +171,7 @@ app either with the `playground` or `curl`. Same as you did locally. The URL wil
 https://<your-alb-dns-name>/openai/playground
 ```
 
-![Gandalf AWS app in a web browser depicting LangServe Playground with outputted result from an inputted prompt](./gandalf-aws.png)
+![Gandalf AWS app in a web browser depicting LangServe Playground with outputted result from an inputted prompt](/blog/easy-ai-apps-with-langserve-and-pulumi/gandalf-aws.png)
 
 If you want to destroy the stack, you can use the following command:
 
@@ -403,12 +403,12 @@ have been ingested from Wikipedia about Gandalf the Grey.
 
 Here a screenshot of the Pinecone console:
 
-![Screenshot of Pinecone Console](./pinecone-console.png)
+![Screenshot of Pinecone Console](/blog/easy-ai-apps-with-langserve-and-pulumi/pinecone-console.png)
 
 And if you want to test the LangServe app, you can use the playground UI, where you should be able to ask questions
 about Gandalf the Grey and get answers based on the documents ingested into the Pinecone index.
 
-![LangServe Playground with outputted result from an inputted prompt "Who is Gandalf and what is so special about him?" including intermediate steps](./langserve-pinecone.png)
+![LangServe Playground with outputted result from an inputted prompt "Who is Gandalf and what is so special about him?" including intermediate steps](/blog/easy-ai-apps-with-langserve-and-pulumi/langserve-pinecone.png)
 
 When you're ready to destroy the stack, you can use the following command:
 

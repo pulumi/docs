@@ -69,12 +69,12 @@ and uses that information to enhance your experience on
 Here's an example of a project hosted on
 [gitlab.com](https://gitlab.com).
 
-![gl-3](./gl-3.png)
+![gl-3](/blog/welcoming-gitlab-users-to-pulumi/gl-3.png)
 
 Here's the same project with some activity having links to the
 commit-hash, and the branch in which this stack was updated.
 
-![gl-4](./gl-4.png)
+![gl-4](/blog/welcoming-gitlab-users-to-pulumi/gl-4.png)
 
 ## FAQ
 

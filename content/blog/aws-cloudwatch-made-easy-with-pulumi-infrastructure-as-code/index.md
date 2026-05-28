@@ -33,7 +33,7 @@ to to look at, to find messages I knew had come in, but maybe I wanted
 to take a second glance at. The bot just sends me messages in a private
 channel we share like so:
 
-![Mention Bot 9000](./mention-bot.png)
+![Mention Bot 9000](/blog/aws-cloudwatch-made-easy-with-pulumi-infrastructure-as-code/mention-bot.png)
 
 I intend to add more functionality to this bot over time to help me out.
 If you'd like to create something similar, the code and instructions are
@@ -144,7 +144,7 @@ of Cloudwatch's dashboards to your app in a simple to use manner.
 
 With the above Dashboard code we get this useful chart:
 
-![CloudWatch Dashboard using Pulumi](./dashboard.png)
+![CloudWatch Dashboard using Pulumi](/blog/aws-cloudwatch-made-easy-with-pulumi-infrastructure-as-code/dashboard.png)
 
 We can see that things look healthy, and the chart shows us both the
 information about our p99 latencies, as well as the threshold point that

@@ -22,7 +22,7 @@ cloud:
 
 The AWS Container Service template scaffolds a Pulumi project that deploys a containerized service to AWS. The architecture includes an [Amazon ECS cluster](/registry/packages/aws/api-docs/ecs/cluster) for orchestration, [AWS Fargate](/registry/packages/awsx/api-docs/ecs/fargateservice/) for serverless compute, an [Application Load Balancer](/registry/packages/awsx/api-docs/lb/) for internet ingress, and an [Amazon Elastic Container Registry (ECR)](/registry/packages/awsx/api-docs/ecr/repository) repository for the container image. The template ships with an Nginx Dockerfile so the project deploys end to end out of the box.
 
-![An architecture diagram of the AWS Container Service template](./architecture.png)
+![An architecture diagram of the AWS Container Service template](/templates/container-service/aws/architecture.png)
 
 ## Using this template
 

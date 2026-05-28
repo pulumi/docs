@@ -22,7 +22,7 @@ cloud:
 
 The Google Cloud Serverless Application template scaffolds a Pulumi project that deploys a [Google Cloud Storage bucket](/registry/packages/gcp/api-docs/storage/bucket/) configured for static website hosting and a [Cloud Functions Gen 2 function](/registry/packages/gcp/api-docs/cloudfunctionsv2/function/) for the application backend. The template ships with placeholder web and function content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Google Cloud Serverless Application template](./architecture.png)
+![An architecture diagram of the Google Cloud Serverless Application template](/templates/serverless-application/gcp/architecture.png)
 
 ## Before you deploy
 

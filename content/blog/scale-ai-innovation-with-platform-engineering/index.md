@@ -72,7 +72,7 @@ To make this process even more efficient, a new AI-driven conversational chat in
 
 Whether it’s cloud settings, API keys, database credentials or VM passwords, AI environments hold a wide variety of secrets, increasing risk, outages, errors and operational friction. Now you can centralize and secure your secrets management using platform engineering best practices within Pulumi. Easily access, share, and manage environments, secrets, and configurations securely on any cloud using your favorite programming languages. Pull and sync with any secrets store, and consume in any application, tool, or CI/CD platform.
 
-![A diagram showing third-party integrations with Pulumi ESC](./diagram.png)
+![A diagram showing third-party integrations with Pulumi ESC](/blog/scale-ai-innovation-with-platform-engineering/diagram.png)
 
 Many industry-leading AI technology providers such as Snowflake have already based some of  their competitive differentiation on Pulumi’s unique value. More waves of large organizations are following this example as they navigate their journeys to AI time to market and return on investment.
 

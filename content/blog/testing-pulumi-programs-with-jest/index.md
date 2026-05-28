@@ -35,7 +35,7 @@ A [Lambda Function URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls
 
 For an app like this one, a Function URL is a good fit, as it's simple, quick to deploy (and update), and it gives us all the control we need to get the job done. Architecturally, then, our little app will look something like this:
 
-![Diagram showing a Node.js Lambda function proxied by a Lambda Function URL](./architecture.svg)
+![Diagram showing a Node.js Lambda function proxied by a Lambda Function URL](/blog/testing-pulumi-programs-with-jest/architecture.svg)
 
 That about covers the infrastructure --- but what about the sound?
 

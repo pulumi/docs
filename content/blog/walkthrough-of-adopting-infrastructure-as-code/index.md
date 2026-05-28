@@ -214,7 +214,7 @@ export const url = pulumi.interpolate`http://${loadbalancer.loadBalancer.dnsName
 
 If we deploy this, we will see the full resource graph and the load-balanced service at the end:
 
-![Pulumi Resource Graph](./pulumiup-base.jpg)
+![Pulumi Resource Graph](/blog/walkthrough-of-adopting-infrastructure-as-code/pulumiup-base.jpg)
 
 That’s what the initial deployment looks like. Now let’s create a database for our application. We’ll first add these code changes:
 
@@ -261,7 +261,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("ddb-table", {
 
 And then run `pulumi up` again. Notice that it shows us the diffs this time, down to individual properties that have changed in addition to what is new:
 
-![Pulumi Diff](./pulumiup-ddb.jpg)
+![Pulumi Diff](/blog/walkthrough-of-adopting-infrastructure-as-code/pulumiup-ddb.jpg)
 
 Note that, thanks to understanding of dependencies between resources, Infrastructure as Code tools will run many operations in parallel. You’ll see that timings are displayed as things are updated. Provisioning cloud infrastructure can be a slow process, but because of parallelism, Pulumi not only knows in what order to run various operations, it can do so as fast as possible.
 

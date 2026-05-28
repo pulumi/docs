@@ -40,7 +40,7 @@ When looking for a solution, we were looking for a service that would mark the f
 
 Let's take a look at how we set up the migration. We decided to migrate the data using a dual-write method, writing new data to both our on-prem Cassandra cluster and Keyspaces. Any historical data needed could be fetched from Snowflake, our data lake solution, using our Apache Spark pipeline.
 
-![Skai data-migration diagram](./skai-migration-diagram.png)
+![Skai data-migration diagram](/blog/how-skai-migrated-to-aws-keyspaces-with-pulumi/skai-migration-diagram.png)
 
 Finally, to make sure that the data is valid and we have no data discrepancies on the Keyspaces side, we added a Lambda function to periodically sample the data and compare it to the data in our on-prem cluster.
 

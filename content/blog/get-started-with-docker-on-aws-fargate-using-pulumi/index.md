@@ -204,7 +204,7 @@ code above, we can simply run `pulumi up`; this command will show us a
 preview of the changes it will make and then, once confirmed, deploy
 everything to our AWS account, and hand back our service's hostname:
 
-![DockerFargateCLI](./docker-fargate-cli.png)
+![DockerFargateCLI](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/docker-fargate-cli.png)
 
 After deploying everything, you've got a fully functioning application.
 To give it a try, let's grab the URL exported by our program from the
@@ -219,14 +219,14 @@ Or open it in our web browser:
 
     $ open http://$(pulumi stack output url)
 
-![DockerFargateBrowser](./docker-fargate-browser.png)
+![DockerFargateBrowser](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/docker-fargate-browser.png)
 
 As an added bonus, the entire time we are doing these deployments, the
 Pulumi Service is keeping track of deployment state, to ensure
 everything works reliably and in a team setting, similar to how Git
 works with GitHub. For example, I can see a history of my deployments:
 
-![DockerFargateHistory](./docker-fargate-history.png)
+![DockerFargateHistory](/blog/get-started-with-docker-on-aws-fargate-using-pulumi/docker-fargate-history.png)
 
 ## Congratulations!
 

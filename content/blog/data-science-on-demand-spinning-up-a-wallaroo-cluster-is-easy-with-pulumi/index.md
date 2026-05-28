@@ -239,7 +239,7 @@ worker connects to the initializer's internal IP and control port.
 This is what ends up running on the servers when we launch our Ansible
 playbooks:
 
-![wallaroo](./wallaroo.png)
+![wallaroo](/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/wallaroo.png)
 
 Once the cluster is up and running, and the initializer node's
 [tcp source](https://github.com/WallarooLabs/wallaroo_blog_examples/blob/master/provisioned-classifier/classifier/classifier.py#L17)
@@ -256,7 +256,7 @@ printed out on the screen to find out how the work is being distributed.
 > To see the cluster's real-time metrics, please visit
 > `http://ec2-54-200-198-6.us-west-2.compute.amazonaws.com:4000`
 
-![wallaroo-2](./wallaroo-2.png)
+![wallaroo-2](/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/wallaroo-2.png)
 
 In the screenshot above, you can see that
 the `Initializer` and `B03a909b23`nodes are processing about 4k messages
@@ -278,14 +278,14 @@ more than one row at a time. Worker `B03a909b23` just happens to be the
 worker where our state named "CSV rows + global header state" lives.
 Let's take a look at its metrics:
 
-![wallaroo3](./wallaroo-3.png)
+![wallaroo3](/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/wallaroo-3.png)
 
 Indeed, we can see that this worker is processing about 4k/sec messages
 in the "Batch Rows Of Csv, Emit Dataframes" step. Every other worker is
 busy classifying! Let's see the breakdown for a different, random
 worker:
 
-![wallaroo-4](./wallaroo-4.png)
+![wallaroo-4](/blog/data-science-on-demand-spinning-up-a-wallaroo-cluster-is-easy-with-pulumi/wallaroo-4.png)
 
 Looking good. All that's left for us to do is wait until the job
 completes and we receive our zipped data onto our disk.

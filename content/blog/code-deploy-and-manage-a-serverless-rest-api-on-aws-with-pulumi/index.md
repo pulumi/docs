@@ -37,7 +37,7 @@ of times a route has been hit. For example:
 
 We'll implement this using API Gateway, Lambda, and Dynamo DB:
 
-![counter-arch](./counter-arch.png)
+![counter-arch](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/counter-arch.png)
 
 ## Setup
 
@@ -127,18 +127,18 @@ To deploy both the infrastructure and app code, we'll run
 `pulumi update`. This command first shows a preview of all the resources
 that will be created and prompts for confirmation.
 
-![pulumi-update-preview](./pulumi-update-preview.png)
+![pulumi-update-preview](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/pulumi-update-preview.png)
 
 Choose the "yes" option to deploy to AWS. At the end of the update,
 you'll see a link to the Pulumi Service that shows the details of the
 deployment.
 
-![pulumi-update-complete](./pulumi-update-complete.png)
+![pulumi-update-complete](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/pulumi-update-complete.png)
 
 Go to this link and click the **Resources** tab. You'll see all the
 resources you've created, including links to the AWS Console.
 
-![console-resources-tab](./console-resources-tab.png)
+![console-resources-tab](/blog/code-deploy-and-manage-a-serverless-rest-api-on-aws-with-pulumi/console-resources-tab.png)
 
 ## Test the App
 

@@ -210,9 +210,9 @@ resources:
 
 The process for calculating what changes a provider needs to make to achieve the desired state is called “diffing”. This is a complex process that accounts for the current and previous state of the Pulumi program (the “inputs”), the stack’s state/checkpoint, and the actual current state of any resources managed by the provider. A major challenge of this process is detecting “drift”, where resources have been changed by something other than the Pulumi stack so that these changes are not reflected in Pulumi’s view of the world. The Server-side Apply (SSA) support available in v3.x versions does detect resource drift, but the implementation was slow for larger stacks. The v4 provider now detects resource drift in both Client-side Apply and Server-side Apply by running a refresh operation. This brings the behavior in line with other providers, and offers consistent performance that scales well to larger stacks.
 
-![ssa-conflict](./ssa_conflict.png)
+![ssa-conflict](/blog/kubernetes-4-0-even-more-kubernetes-native/ssa_conflict.png)
 
-![drift-detection](./drift_detection.png)
+![drift-detection](/blog/kubernetes-4-0-even-more-kubernetes-native/drift_detection.png)
 
 As part of this work, we removed the use of the `kubectl.kubernetes.io/last-applied-configuration` annotation, which was previously used by the provider to track input values for Kubernetes resources. This change addresses [many longstanding issues](https://github.com/pulumi/pulumi-kubernetes/issues?q=is%3Aissue+label%3Alast-applied-configuration+) caused by the use of this annotation, including challenges working with resources that were modified by tools other than `kubectl`.
 

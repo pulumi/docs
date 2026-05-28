@@ -10,7 +10,7 @@ tags:
 ---
 
 {{% notes type="warning" %}}
-This blog post contains outdated information. For the latest features, updates, and examples, see our latest release: [AWS CDK on Pulumi 1.0](../aws-cdk-on-pulumi-1.0).
+This blog post contains outdated information. For the latest features, updates, and examples, see our latest release: [AWS CDK on Pulumi 1.0](/blog/aws-cdk-on-pulumi-1.0).
 {{% /notes %}}
 
 One of our key goals with Pulumi’s Universal Infrastructure as Code platform is to offer access to the widest range of cloud infrastructure building blocks for use within your cloud engineering projects. Over the years, that has led us to support interoperating seamlessly with a variety of alternative infrastructure definition formats, like Helm, CloudFormation, Azure Resource Manager and Kubernetes YAML. Today we’re really excited to add support for AWS CDK constructs to the list!

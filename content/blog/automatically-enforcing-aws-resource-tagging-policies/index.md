@@ -195,7 +195,7 @@ var bucket = new Bucket("my-bucket");
 
 By applying the policy defined below, deployments that are missing the required tags will fail:
 
-![Tag Policy Failed](./tag-policy-failed.png)
+![Tag Policy Failed](/blog/automatically-enforcing-aws-resource-tagging-policies/tag-policy-failed.png)
 
 This approach not only ensures we don't forget, but if you're an infrastructure or security engineer, you can now apply this across your team to make sure your team doesn't forget either.
 
@@ -341,21 +341,21 @@ Permalink: https://app.pulumi.com/acmepolicy/policypacks/aws-tags-policies/0.0.1
 
 This stores the policy pack in the Pulumi SaaS:
 
-![Policy Pack Page](./pac-pack.png)
+![Policy Pack Page](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-pack.png)
 
 From there, we can enable it in the UI. First, we go to our organization's "POLICIES" tab:
 
-![Organization Policies Page](./pac-policies.png)
+![Organization Policies Page](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-policies.png)
 
 Every organization gets a default policy group, and that's what we'll use here. However, for sophisticated scenarios, you may want multiple policy groups (for instance, to enforce different tags for your production environments than your development ones).
 
 Let's "ADD" the new pack. This pops a dialog we can use to select the pack, its version, and our desired Enforcement Level (we'll pick "mandatory"):
 
-![Enable Policy Pack](./pac-enable-pack.png)
+![Enable Policy Pack](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-enable-pack.png)
 
 Finally, further down in the dialog, we can enter the tags we'd like to enforce:
 
-![Configure Policy Pack](./pac-configure-pack.png)
+![Configure Policy Pack](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-configure-pack.png)
 
 Now that it is configured, all subsequent updates across the organization will run policy checks.
 
@@ -363,7 +363,7 @@ Now that it is configured, all subsequent updates across the organization will r
 
 In all cases, after manually fixing our bucket, and adding the correct tags, the policy will pass:
 
-![Tag Policy Succeeded](./tag-policy-succeed.png)
+![Tag Policy Succeeded](/blog/automatically-enforcing-aws-resource-tagging-policies/tag-policy-succeed.png)
 
 This is great &mdash; we can now rest assured that all taggable AWS resources will be tagged before we provision them. But it sure is tedious to add these tags to every resource and then get policy violations errors anytime we forget. One of the advantages of using Infrastructure as Code is that we can automate the injection of these tags.
 
@@ -725,11 +725,11 @@ class MyStack : Stack {
 
 Notice that we didn't specify any tags by hand for the resource definitions and yet if we run a `pulumi preview --diff`, we see that the correct tags are applied automatically, thanks to the global stack transformation:
 
-![Policy Pack Page](./pac-autotag.png)
+![Policy Pack Page](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-autotag.png)
 
 And running an ordinary update now passes:
 
-![Tag Policy Succeeded (Many Resources)](./tag-policy-succeed-many.png)
+![Tag Policy Succeeded (Many Resources)](/blog/automatically-enforcing-aws-resource-tagging-policies/tag-policy-succeed-many.png)
 
 Try adding some resources of your own &mdash; VPCs, EC2 instances, security groups, EKS clusters, anything &mdash; and it will automatically get tagged with these same cost center tags.
 

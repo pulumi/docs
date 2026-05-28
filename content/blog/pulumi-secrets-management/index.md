@@ -42,7 +42,7 @@ Pulumi.Log.Info($"mySecretKey: {config.RequireSecret("mySecretKey")}");
 ```
 
 see the value is masked
-![Pulumi Config Get Secret](./images/pulumi-config-get-secret.jpg)
+![Pulumi Config Get Secret](/blog/pulumi-secrets-management/images/pulumi-config-get-secret.jpg)
 
 If we look at the `Pulumi.dev.yaml` file in VSCode, this is what we see:
 
@@ -92,10 +92,10 @@ $ pulumi new azure-csharp --secrets-provider passphrase
 ```
 
 It'll ask for the passphrase. This is the passphrase that Pulumi is going to use to encrypt the configuration system.
-![Initialize the stack](./images/pulumi-stack-init-passphrase-1.jpg)
+![Initialize the stack](/blog/pulumi-secrets-management/images/pulumi-stack-init-passphrase-1.jpg)
 
 Looking at the project in VSCode, we can see a new file has been created.
-![Create new file](./images/pulumi-stack-init-passphrase-2.jpg)
+![Create new file](/blog/pulumi-secrets-management/images/pulumi-stack-init-passphrase-2.jpg)
 
 Let's add two keys (one normal and one secret):
 
@@ -103,10 +103,10 @@ Let's add two keys (one normal and one secret):
 $ pulumi config set normalKey normalValue` `pulumi config set --secret secretKey secretValue
 ```
 
-![Add two keys](./images/pulumi-stack-init-passphrase-3.jpg)
+![Add two keys](/blog/pulumi-secrets-management/images/pulumi-stack-init-passphrase-3.jpg)
 
 This is how our stack file looks like:
-![Stack output](./images/pulumi-stack-init-passphrase-4.jpg)
+![Stack output](/blog/pulumi-secrets-management/images/pulumi-stack-init-passphrase-4.jpg)
 
 If you pay attention, the secure value in `Pulumi.passphrasestack.yaml` is different to what we had in `Pulumi.dev.yaml`
 
@@ -159,7 +159,7 @@ $ az keyvault set-policy --name pulumiazvault --object-id <Object Id from above>
 _I prefer using Azure AD Application instead of any individual user account for such scenarios. In that case you will need the ObjectId of the application instead._
 
 Now we have the key vault with a key that we will use for encryption along with the right access policy set.
-![Screenshot of the azure keyvault](./images/az-keyvault-with-key.jpg)
+![Screenshot of the azure keyvault](/blog/pulumi-secrets-management/images/az-keyvault-with-key.jpg)
 
 ### Set Environment Variables
 

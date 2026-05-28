@@ -44,21 +44,21 @@ job is called **"Agent job 1"**. The agent pool you choose does not
 matter. The Pulumi task can run on both Linux as well as Windows
 images.
 
-![classic editor console](./classic-editor-console.png)
+![classic editor console](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/classic-editor-console.png)
 
 Search for the **Pulumi** task by typing in the filter input on the right. Click the **Add** button.
 
-![add Pulumi](./add-pulumi.png)
+![add Pulumi](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/add-pulumi.png)
 
 Fill in the required information. You can learn about creating service connections for Azure
 [here](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops).
 
-![configuration](./configuration.png)
+![configuration](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/configuration.png)
 
 If you want to understand all the commands available with the Pulumi CLI, click on the information icon (**i**)
 next to **Pulumi Command**, and click on the help link to go to our quick reference page.
 
-![output](./output.png)
+![output](/blog/cd-made-easy-with-pulumi-and-azure-pipelines/output.png)
 
 ## Option 2: Using a YAML File
 

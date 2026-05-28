@@ -54,6 +54,9 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
   - `[Link text](https://example.com)`
 - Link text must be descriptive. Avoid vague text like _here_ or _click here_.
 - When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
+- **Always use root-relative paths** (beginning with `/`) for all internal links and image references — never page-relative paths like `./image.png`, `../other-page`, or bare relative paths like `some-page`. Page-relative paths are ambiguous because Hugo content files are sometimes named `.md` files rather than `_index.md` files in a folder, making the meaning of `./` differ between the file's location on disk and the URL the page is served from. Root-relative paths are unambiguous, portable, and don't silently break when files move.
+  - Correct: `[stacks](/docs/iac/concepts/stacks/)`, `![diagram](/blog/my-post/diagram.png)`
+  - Incorrect: `[stacks](./stacks/)`, `![diagram](./diagram.png)`, `[stacks](../stacks/)`
 
 ### External Link Indicator
 
@@ -106,7 +109,7 @@ If the page also links to related child pages, use standard markdown (lists, tab
 
 ## Images and Media
 
-- Use relative paths for images stored in the same directory or a subdirectory.  
+- Use root-relative paths for all image references (see [Links](#links) above).
 - Provide descriptive alt text for all images.
 - For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
 

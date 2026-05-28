@@ -22,7 +22,7 @@ cloud:
 
 The AWS Serverless Application template scaffolds a Pulumi project that deploys a serverless web application to AWS. It provisions an [Amazon S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) for static website hosting, an [AWS Lambda function](/registry/packages/aws/api-docs/lambda/function/) for the application backend, and an [Amazon API Gateway REST API](/registry/packages/aws/api-docs/apigateway/restapi/) that routes requests to the static content and the Lambda function. The template ships with a placeholder web page that displays the current time so the project deploys end to end out of the box.
 
-![An architecture diagram of the AWS Serverless Application template](./architecture.png)
+![An architecture diagram of the AWS Serverless Application template](/templates/serverless-application/aws/architecture.png)
 
 ## Using this template
 

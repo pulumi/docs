@@ -135,7 +135,7 @@ This will show us the entire resource graph so that we can see what it's
 creating internally and once it's done the resulting domain name will be
 printed out:
 
-![pulumi cli output](./pulumi-cli-output.png)
+![pulumi cli output](/blog/creating-and-reusing-cloud-components-using-package-managers/pulumi-cli-output.png)
 
 Let's then curl it to see whether it worked:
 
@@ -207,7 +207,7 @@ first class resources out of smaller ones. There are other benefits,
 including seeing resource attribution in the CLI tree view, and the
 richer visualization in the [Pulumi Service](https://app.pulumi.com/signin):
 
-![pulumi app graph](./pulumi-resource-visualization.png)
+![pulumi app graph](/blog/creating-and-reusing-cloud-components-using-package-managers/pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
 [documentation](/docs/reference/pkg/nodejs/pulumi/pulumi/).

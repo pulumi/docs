@@ -27,7 +27,7 @@ ACME wants to track the performance of its ads, understand how its customers are
 
 A familiar SQL interface and the ease of loading data through built-in features like [S3 COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) have made Redshift the goto choice for bootstrapping an analytics stack on new projects. It’s low friction to get from zero to something, and Redshift scales to petabytes.
 
-![Traditional Analytics Stack](./TraditionalAnalytics.png)
+![Traditional Analytics Stack](/blog/aws-serverless-analytics/TraditionalAnalytics.png)
 
 Like all tools, Redshift has targeted use cases that it excels at. Broadly speaking, it’s niche is heavy BI and analytics workloads, reading more than you write. Redshift can serve millisecond-level queries on massive datasets through a horizontally scalable, distributed processing architecture. At the core of this is a reliance on sorting and data distribution mechanisms. Schemas are configured by administrators to distribute the data across the cluster in a variety of methods that optimize for different use cases, such as highly denormalized tables, or tables making heavy use of joins. Distributed data is stored in a specified sort order on disk, allowing the query planner to make optimizations.
 
@@ -37,7 +37,7 @@ New data is sorted locally when a COPY command is run, but this doesn’t mean t
 
 The team defines its initial product. They’ll begin with testing ads in the search results of ACME’s North American website. When customers search for “Soap”, advertisers can bid to have their product show up first. They’ve picked a cost per click (CPC) billing model, where advertisers pay a small sum whenever a user clicks on their ad. To support this, they’ve designed an initial architecture:
 
-![MVP Ads Architecture](./AdsArchitecture.png)
+![MVP Ads Architecture](/blog/aws-serverless-analytics/AdsArchitecture.png)
 
 They’ve defined the following key events to track:
 
@@ -67,7 +67,7 @@ The team understands how to keep the analytics stack limping along at this point
 2. Scale the analytics stack to 1B events per day and beyond as the program grows in terms of advertisers, and geography.
 3. Enable workload isolation between production services and ad-hoc business intelligence users.
 
-![Serverless Data Warehouse](./ServerlessArchitecture.png)
+![Serverless Data Warehouse](/blog/aws-serverless-analytics/ServerlessArchitecture.png)
 
 JSON events are queued in [Kinesis](https://aws.amazon.com/kinesis/data-streams/), consumed by a [Firehose](https://aws.amazon.com/kinesis/data-firehose/) that validates their schema against the definition in [Glue](https://aws.amazon.com/glue/), then converted into [parquet](https://parquet.apache.org/), and finally stored in S3 in hourly folders based on arrival time. Structured data in S3 and a Glue metastore are flexible primitives that end-users and production systems can build on. Both production systems and ad-hoc users can bring their own compute or take advantage of serverless solutions like Athena (the AWS serverless version of [Presto](https://prestodb.io/)) to query over the data with isolation. The operator overhead is low because it relies almost entirely on serverless offerings. This architecture brings some additional benefits:
 
@@ -130,11 +130,11 @@ In a dozen lines of code, we’ve provisioned two of our desired tables, “clic
 
 While on the surface this Pulumi component is described imperatively, it produces a declarative output in the form of a [state file](/docs/iac/concepts/state-and-backends/) that can be managed locally, in an object store like S3, or by the Pulumi Service backend. Running a ‘pulumi up’ shows that we’ve created 45 AWS resources, and lists our stack outputs to the console.
 
-![Pulumi Up Result](./PulumiUpOutput.png)
+![Pulumi Up Result](/blog/aws-serverless-analytics/PulumiUpOutput.png)
 
 After putting some sample events into Kinesis, we can use Athena to query our impressions table:
 
-![Athena Impressions Query Results](./ImpressionsExample.png)
+![Athena Impressions Query Results](/blog/aws-serverless-analytics/ImpressionsExample.png)
 
 What does ServerlessDataWarehouse look like under the hood? Just like any other typescript class:
 
@@ -323,7 +323,7 @@ const factJSON = new aws.s3.BucketObject("factsFile", {
 });
 ```
 
-![Athena Fact Table Query Results](./FactsExample.png)
+![Athena Fact Table Query Results](/blog/aws-serverless-analytics/FactsExample.png)
 
 Here we create a static fact table that never changes. While this population mechanism is simple, you could imagine something much more sophisticated, like a sequence of EMR jobs instead.
 
@@ -448,7 +448,7 @@ const aggregateTableArgs: BatchInputTableArgs = {
 dataWarehouse.withBatchInputTable(aggregateTableName, aggregateTableArgs);
 ```
 
-![Athena Aggregate Table Query Results](./AggregatesExample.png)
+![Athena Aggregate Table Query Results](/blog/aws-serverless-analytics/AggregatesExample.png)
 
 While Lambda’s limits restrict the utility of this method, the concept is powerful. Pulumi gives you the building blocks to define your abstractions. Instead of Lambda, the execution plane could be ECS, Kubernetes, or EMR.
 
@@ -580,7 +580,7 @@ test("WithStreamingInput integrtion test", async () => {
 });
 ```
 
-![Integration Test Output](./IntegrationTest.png)
+![Integration Test Output](/blog/aws-serverless-analytics/IntegrationTest.png)
 
 This test gives us a great deal of confidence that our changes are valid. While it certainly does a lot, it's a little slow. We can run this suite with `npm run test:int & tput bel` to notify us upon completion while we work in the background, but four minutes might not meet the latency bar for core inner dev loop.
 
