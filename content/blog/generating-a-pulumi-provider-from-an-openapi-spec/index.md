@@ -20,9 +20,9 @@ social:
     bluesky:
 ---
 
-The Pulumi Service Provider's new `pulumiservice:api/*` resource surface is generated directly from Pulumi Cloud's OpenAPI spec at runtime.
+Today, we are announcing v1.0 of the Pulumi Service Provider: a major milestone in managing Pulumi Cloud with Pulumi itself. The provider is now generated directly from the Pulumi Cloud OpenAPI specification, unlocking a dramatically expanded pulumiservice:api/* resource surface and enabling Pulumi Cloud capabilities to become available in the provider faster than ever before.
 
-This is the v1.0 release of the Pulumi Service Provider, and several new Pulumi Cloud capabilities land in the provider at the same time: fine-grained RBAC as code, Pulumi IDP as code, and audit-log export as IaC. The `api` namespace is in preview, and the existing `pulumiservice:index:*` resources continue to be the production-supported path.
+This release also brings several major new capabilities to infrastructure as code, including fine-grained RBAC as code, Pulumi IDP as code, and audit log export as IaC. Together, these changes make the Pulumi Service Provider the most powerful and extensible way yet to manage and automate your Pulumi Cloud infrastructure.
 
 <!--more-->
 
