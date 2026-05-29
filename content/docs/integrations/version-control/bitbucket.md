@@ -134,10 +134,6 @@ If comments aren't appearing on your pull requests, verify that:
 1. The webhook exists on the Bitbucket repository. In Bitbucket, open the repository and navigate to **Repository settings** > **Workflow** > **Webhooks** (under the repository, not the workspace). Look for an entry titled **Pulumi Deployments** in the **Repository hooks** section.
 1. The stack is associated with the correct Bitbucket repository and branch.
 
-{{% notes type="info" %}}
-Bitbucket Cloud's UI does not surface workspace-level webhook management — workspace hooks appear in a read-only section on the same page. Pulumi only uses repository-level webhooks, which appear under **Repository hooks** and are user-manageable.
-{{% /notes %}}
-
 ### Integration shows as disconnected
 
 If the integration card shows an invalid or disconnected status, [delete the integration](#integration-settings) and re-create it by following the [installation steps](#installation-and-configuration).
