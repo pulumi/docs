@@ -9,6 +9,11 @@ on:
     types: [completed]
     branches: [master]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run — scan + show what would post, no posting / no state write"
+        type: boolean
+        default: false
 
 permissions:
   id-token: write
@@ -95,6 +100,7 @@ jobs:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: uv run scripts/social/schedule-posts.py
 
       - name: Capture failure summary
