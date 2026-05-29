@@ -41,7 +41,7 @@ location: San Francisco, CA
 
 # Description of the event.
 description: |
-    Join Pulumi for an evening fireside chat with Jay Smith discussing the intersection of Infrastructure as Code and the emerging world of AI agents. Perfect for platform engineers and SREs looking to understand how these technologies intersect. Enjoy refreshments and network with fellow attendees at The Gambit in San Francisco.
+    Join Pulumi for a fireside chat with Jay Smith from Google on how AI agents are changing infrastructure-as-code practices. Explore what happens when agents are the ones writing, reviewing, and shipping infrastructure. This casual gathering for platform engineers, SREs, and infrastructure builders features candid discussion, industry war stories, refreshments, and networking at The Gambit.
 
 # The event presenters
 presenters:

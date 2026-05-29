@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: "AICamp New York"
-meta_desc: Hands-on workshop for deploying multi-agent systems using Amazon Bedrock AgentCore with infrastructure defined as code.
+title: "Deploying AI Agents with Pulumi and AWS (NY)"
+meta_desc: Hands-on workshop on deploying AI agents using Pulumi infrastructure tools and AWS services.
 
 # A featured event will display first in the list.
 featured: false
@@ -31,20 +31,24 @@ event_type: workshop
 youtube_url:
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
-sortable_date: 2026-06-17T09:00:00-04:00
+sortable_date: 2026-06-17T17:30:00-04:00
 
 # Duration of the event.
-duration: Full day
+duration: Evening workshop
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: New York, NY
 
 # Description of the event.
 description: |
-    Learn how to deploy multi-agent systems using Amazon Bedrock AgentCore with all infrastructure defined as code. This hands-on workshop covers practical techniques for building and deploying AI agents at scale.
+    This workshop teaches developers how to deploy agentic AI systems by combining Pulumi's infrastructure capabilities with AWS cloud services. Learn practical techniques for building and deploying AI agents at scale in a hands-on setting.
 
 # The event presenters
 presenters:
+    - name: Engin Diri
+      role: Speaker
+    - name: Adam Gordon Bell
+      role: Speaker
 
 # case-sensitive
 tags:
