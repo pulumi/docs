@@ -41,7 +41,7 @@ location: Sunnyvale, CA
 
 # Description of the event.
 description: |
-    A hands-on workshop focused on deploying AI agents using Pulumi infrastructure tools alongside AWS services. Learn practical techniques for combining Pulumi's infrastructure capabilities with AWS cloud services to build and deploy agentic AI systems.
+    Learn how to deploy agentic AI systems by combining Pulumi's infrastructure capabilities with AWS cloud services. This hands-on workshop covers practical techniques for building and deploying AI agents at scale using Pulumi and AWS.
 
 # The event presenters
 presenters:

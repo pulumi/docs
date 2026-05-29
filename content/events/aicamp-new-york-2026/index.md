@@ -41,7 +41,7 @@ location: New York, NY
 
 # Description of the event.
 description: |
-    This workshop teaches developers how to deploy agentic AI systems by combining Pulumi's infrastructure capabilities with AWS cloud services. Learn practical techniques for building and deploying AI agents at scale in a hands-on setting.
+    Learn how to deploy agentic AI systems by combining Pulumi's infrastructure capabilities with AWS cloud services. This hands-on workshop covers practical techniques for building and deploying AI agents at scale using Pulumi and AWS.
 
 # The event presenters
 presenters:
