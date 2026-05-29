@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+    {{ partial "head.html" . }}
+    <body
+        class="p-5 md:p-10 font-mono bg-service-black text-violet-400 min-h-screen flex flex-col overflow-x-hidden"
+    >
+        <style>
+            /* Hero is 34px shorter than the 1513:1094 source so the foreground's
+               bottom stays off-screen even as parallax translates it. */
+            #cjs26-hero {
+                aspect-ratio: 1513 / 1060;
+                width: min(100%, calc(92vh * 1513 / 1060));
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cjs26-fill   { inset: 0; width: 100%; height: 100%; }
+            /* Bigger than the laptop's screen cut-out (33.66% / 21.02% / 37.04%
+               / 20.11%) so the dark background fully covers it. */
+            .cjs26-screen { left: 32.6%; top: 19.5%; width: 39.1%; height: 23.0%; }
+            .cjs26-ufo-bounds {
+                left: 41.31%;
+                top: 0;
+                width: 42.76%;
+                height: 22.12%;
+                overflow: hidden;
+                pointer-events: none;
+            }
+
+            #cjs26-terminal {
+                background: #0a0810;
+                container-type: inline-size;
+            }
+            #cjs26-terminal-out {
+                font-family: "Monaspace Neon Var", ui-monospace, monospace;
+                font-size: clamp(4px, 2.6cqi, 18px);
+                line-height: 1.15;
+                white-space: pre;
+                color: var(--color-violet-400);
+                text-shadow: 0 0 6px rgba(166, 151, 252, 0.7);
+                padding: 0.7em 1em;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                /* Perspective warp from skew.svg, mapping source rect (0,0)-(W,H)
+                   to TL (W*0.03466, 0), TR (W*0.98094, H*0.03084),
+                   BR (W, H), BL (0, H*0.97357). --cjs26-w / --cjs26-h are set
+                   from JS on load + resize. */
+                transform-origin: 0 0;
+                transform: matrix3d(
+                    0.95050,
+                    calc(0.03097 * var(--cjs26-h, 1) / var(--cjs26-w, 1)),
+                    0,
+                    calc(0.00430 / var(--cjs26-w, 1)),
+
+                    calc(-0.03466 * var(--cjs26-w, 1) / var(--cjs26-h, 1)),
+                    0.92117,
+                    0,
+                    calc(-0.05380 / var(--cjs26-h, 1)),
+
+                    0, 0, 1, 0,
+
+                    calc(0.03466 * var(--cjs26-w, 1)),
+                    0,
+                    0,
+                    1
+                );
+            }
+
+            .cjs26-caret { animation: cjs26-blink 1s steps(2, end) infinite; }
+            @keyframes cjs26-blink {
+                0%, 50%  { opacity: 1; }
+                50.01%, 100% { opacity: 0; }
+            }
+
+            [data-cjs26-parallax] {
+                will-change: transform;
+                transition: transform 120ms ease-out;
+            }
+            @media (prefers-reduced-motion: reduce) {
+                [data-cjs26-parallax] { transition: none; transform: none !important; }
+                #cjs26-ufo { display: none; }
+            }
+        </style>
+
+        {{ $bg  := (resources.Get "cjs26/background.png").Process     "webp q92" }}
+        {{ $fg  := (resources.Get "cjs26/foreground.png").Process     "webp q95" }}
+        {{ $ov  := (resources.Get "cjs26/screen-overlay.png").Process "webp q90" }}
+        {{ $ufo := (resources.Get "cjs26/ufo.png").Process            "webp q95" }}
+
+        <section
+            id="cjs26-hero"
+            class="relative w-full overflow-hidden bg-service-black rounded-xl"
+        >
+            <img
+                src="{{ $bg.RelPermalink }}"
+                alt=""
+                aria-hidden="true"
+                width="{{ $bg.Width }}"
+                height="{{ $bg.Height }}"
+                loading="eager"
+                decoding="async"
+                data-cjs26-parallax="bg"
+                class="cjs26-fill absolute object-cover pointer-events-none select-none"
+            />
+
+            <div
+                id="cjs26-terminal"
+                data-cjs26-parallax="fg"
+                class="cjs26-screen absolute overflow-hidden"
+            >
+                <div id="cjs26-terminal-out" aria-live="polite"></div>
+            </div>
+
+            <!-- UFO drawn BEFORE the foreground so the laptop occludes it. -->
+            <div id="cjs26-ufo-bounds" class="cjs26-ufo-bounds absolute">
+                <img
+                    id="cjs26-ufo"
+                    src="{{ $ufo.RelPermalink }}"
+                    alt=""
+                    aria-hidden="true"
+                    width="{{ $ufo.Width }}"
+                    height="{{ $ufo.Height }}"
+                    decoding="async"
+                    class="absolute top-0 left-0 pointer-events-none select-none"
+                    style="opacity: 0; transform: scale(0); width: clamp(28px, 4.5vw, 80px); height: auto;"
+                />
+            </div>
+
+            <img
+                src="{{ $fg.RelPermalink }}"
+                alt=""
+                aria-hidden="true"
+                width="{{ $fg.Width }}"
+                height="{{ $fg.Height }}"
+                loading="eager"
+                decoding="async"
+                data-cjs26-parallax="fg"
+                class="cjs26-fill absolute object-cover pointer-events-none select-none"
+            />
+
+            <img
+                src="{{ $ov.RelPermalink }}"
+                alt=""
+                aria-hidden="true"
+                width="{{ $ov.Width }}"
+                height="{{ $ov.Height }}"
+                decoding="async"
+                data-cjs26-parallax="fg"
+                class="cjs26-fill absolute object-contain pointer-events-none select-none mix-blend-hard-light opacity-50"
+            />
+
+            <!-- Invisible input that summons mobile soft-keyboards on tap. -->
+            <input
+                id="cjs26-keys"
+                type="text"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                aria-label="Enter passcode"
+                class="cjs26-screen absolute opacity-0 pointer-events-auto"
+            />
+        </section>
+
+        <main class="mx-auto px-5 py-20 w-full font-mono text-base md:text-lg leading-[1.25] text-violet-400" style="max-width: 729px;">
+            *-----------------------------------------------------*
+            <span class="my-[1em] block uppercase">
+                How to Join the Pulumi Cloud Watchers Club
+            </span>
+            <pre class="text-violet-400">brew install pulumi/tap/pulumi
+# or:  curl -fsSL https://get.pulumi.com | sh
+mkdir cjs26 && cd cjs26
+pulumi new https://github.com/pulumi/cjs26
+npm install && npm run build
+pulumi config set --secret cloudflare:apiToken &lt;your-token&gt;
+pulumi up
+
+pulumi stack output url
+pulumi stack output passkey --show-secrets</pre>
+<a href="https://github.com/pulumi/cjs26" class="hover:underline" target="_blank">README ></a>
+        </main>
+
+        <div class="flex justify-center px-6 pb-24">
+            <img
+                src="/images/cjs26/logo.svg"
+                alt="CascadiaJS 2026"
+                class="w-full max-w-[268px] h-auto select-none"
+            />
+        </div>
+
+        <footer
+            class="border-t-[2px] border-violet-400 mx-5 py-5 mt-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-mono text-[10px] md:text-xs uppercase text-violet-400"
+        >
+            <div class="flex items-center gap-4 shrink-0">
+                <a href="/" aria-label="Pulumi home" class="block w-10 h-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-full h-full">
+                        <path fill="var(--color-violet-400)" d="M4.75,20.1c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M22.37,18.31c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M10.62,23.5c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M16.5,21.7c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M12,3.96c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M4.75,13.32c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M6.13,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M22.36,11.53c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M17.87,7.34c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M10.62,16.71c.86-.5.86-2.11,0-3.6-.86-1.49-2.25-2.29-3.12-1.8-.86.5-.86,2.11,0,3.6.86,1.49,2.25,2.29,3.12,1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M16.5,14.92c.86-1.49.86-3.1,0-3.6-.86-.5-2.26.31-3.12,1.8-.86,1.49-.86,3.1,0,3.6.86.5,2.26-.31,3.12-1.8Z" />
+                        <path fill="var(--color-violet-400)" d="M12,10.73c1.72,0,3.11-.81,3.11-1.8s-1.39-1.8-3.11-1.8-3.11.81-3.11,1.8,1.39,1.8,3.11,1.8Z" />
+                    </svg>
+                </a>
+                <a href="https://www.pulumi.com" class="hover:underline">pulumi.com</a>
+            </div>
+            <ul class="md:ml-auto md:text-right flex flex-wrap gap-x-3 gap-y-1 list-none m-0 p-0">
+                <li><a class="hover:underline cursor-pointer" data-track="footer-legal-privacy-preferences" onclick="window.consentManager.openConsentManager()">Your Privacy Preferences</a></li>
+                <li><a class="hover:underline" data-track="footer-legal-trademark-usage" href="/trademark/">Trademark Usage</a></li>
+                <li><a class="hover:underline" data-track="footer-legal-acceptable-use-policy" href="/acceptable-use/">Acceptable Use Policy</a></li>
+                <li><a class="hover:underline" data-track="footer-legal-terms-conditions" href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                <li><a class="hover:underline" data-track="footer-legal-privacy-policy" href="/privacy/">Privacy Policy</a></li>
+                <li><a class="hover:underline" data-track="footer-legal-professional-services-agreement" href="/professional-services-agreement/">Professional Services Agreement</a></li>
+                <li>© {{ now.Format "2006" }} Pulumi Corp.</li>
+            </ul>
+        </footer>
+
+        <script defer src="/js/cjs26.js"></script>
+    </body>
+</html>
