@@ -70,11 +70,12 @@
         var endX   = leftToRight ?  w   : -ufoW;
         var startY = h * rand(0.15, 0.7);
         var endY   = h * rand(0.15, 0.7);
-        var midX   = (startX + endX) / 2;
-        var midY   = (startY + endY) / 2 - h * rand(0, 0.15);
+        var hoverX = (startX + endX) / 2 + (leftToRight ? -1 : 1) * w * rand(0, 0.1);
+        var hoverY = h * rand(0.25, 0.6);
         var peak   = rand(0.55, 1.1);
         var baseRot = (leftToRight ? 1 : -1) * rand(2, 6);
         var wobble  = rand(18, 28);
+        var bob     = h * 0.025;
 
         function kf(x, y, scale, rot, blur, opacity, offset) {
             return {
@@ -85,20 +86,29 @@
             };
         }
 
-        var dur = rand(5500, 8500);
+        // Three phases: enter → hover (with subtle bob) → exit.
+        var enterDur = rand(1800, 2600);
+        var hoverDur = rand(2000, 3000);
+        var exitDur  = rand(1600, 2400);
+        var dur = enterDur + hoverDur + exitDur;
+        var enterEnd = enterDur / dur;
+        var hoverEnd = (enterDur + hoverDur) / dur;
+        var hoverMid = (enterEnd + hoverEnd) / 2;
+
         // fill:forwards keeps the final keyframe (scale 0, opacity 0) until
         // the next flight replaces it.
         ufo.animate([
-            kf(startX,             startY,             0,           baseRot - wobble,       6, 0,   0),
-            kf((startX + midX) / 2, (startY + midY) / 2, peak * 0.45, baseRot + wobble * 0.5, 4, 0.6, 0.25),
-            kf(midX,               midY,               peak,        baseRot - wobble * 0.3, 1, 1,   0.5),
-            kf((midX + endX) / 2,   (midY + endY) / 2,   peak * 0.45, baseRot + wobble * 0.3, 4, 0.5, 0.75),
-            kf(endX,               endY,               0,           baseRot - wobble,       6, 0,   1),
+            kf(startX, startY,       0,    baseRot - wobble, 6, 0, 0),
+            kf(hoverX, hoverY,       peak, baseRot,          1, 1, enterEnd),
+            kf(hoverX, hoverY - bob, peak, baseRot + 1.5,    1, 1, hoverMid),
+            kf(hoverX, hoverY,       peak, baseRot,          1, 1, hoverEnd),
+            kf(endX,   endY,         0,    baseRot + wobble, 6, 0, 1),
         ], { duration: dur, easing: "ease-in-out", fill: "forwards" }).onfinish = scheduleUfo;
 
-        // Once the user is logged in, every flyby pings the log at the peak.
+        // Once the user is logged in, every flyby pings the log when the UFO
+        // settles into its hover.
         if (state === "app") {
-            setTimeout(function () { pushLog(pickRandom(UFO_LOGS)); }, dur * 0.45);
+            setTimeout(function () { pushLog(pickRandom(UFO_LOGS)); }, enterDur);
         }
     }
 
@@ -129,7 +139,7 @@
     }
 
     var PASSWORD = "W4TCHTHECL0UDS";
-    var FIELD_WIDTH = 36; // chars between "ENTER PASSCODE:  " and the trailing "  ║"
+    var FIELD_WIDTH = 36; // chars between "ENTER PASSWORD:  " and the trailing "  ║"
 
     var state = "booting"; // booting | ready | granted | denied
     var typed = "";
@@ -161,11 +171,11 @@
         return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
-    function passcodeLineHTML() {
+    function passwordLineHTML() {
         if (state === "granted") return escapeHTML(centerInField("✧ ACCESS GRANTED — WELCOME WATCHER ✧"));
         if (state === "denied")  return escapeHTML(centerInField("!! ACCESS DENIED !!"));
         var remaining = "▓".repeat(Math.max(0, FIELD_WIDTH - typed.length));
-        return escapeHTML("║ ENTER PASSCODE:  " + typed) +
+        return escapeHTML("║ ENTER PASSWORD:  " + typed) +
                '<span class="cjs26-caret">_</span>' +
                escapeHTML(remaining + "  ║");
     }
@@ -181,12 +191,12 @@
             "║ [STATUS]  ◉ ONLINE   ◉ ENCRYPTED   ◌ STANDBY            ║",
             "║                                                         ║",
             "║                                                         ║",
-            null, // passcode line — rendered via passcodeLineHTML below.
+            null, // password line — rendered via passwordLineHTML below.
             "║                                                         ║",
             "╚═════════════════════════════════════════════════════════╝",
         ];
         var html = lines.map(function (l) {
-            return l === null ? passcodeLineHTML() : escapeHTML(l);
+            return l === null ? passwordLineHTML() : escapeHTML(l);
         }).join("\n");
         termOut.innerHTML = html;
     }
