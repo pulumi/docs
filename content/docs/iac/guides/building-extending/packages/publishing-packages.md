@@ -93,6 +93,10 @@ Specifically, you should author a few pages:
 We recommend keeping the contents of `README.md` and `_index.md` similar or the same, save for the YAML metadata/front-matter that's in `_index.md`.
 {{% /notes %}}
 
+For reference, the [ImprovMX](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/) community provider is a well-authored example: see its [`_index.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/_index.md) and [`installation-configuration.md`](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/improvmx/installation-configuration.md). The [Logfire provider](https://github.com/pulumi/registry/blob/master/themes/default/content/registry/packages/logfire/) is another recent example.
+
+Although you author these files in your package repository's `docs/` folder, they are published through the [`pulumi/registry` GitHub repository](https://github.com/pulumi/registry), under `themes/default/content/registry/packages/<your-package>/`. The [Publish the documentation](#publish-the-documentation) section below explains how to submit them.
+
 ### Package metadata
 
 Metadata for your package is generated from the [`schema.json`](/docs/iac/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
@@ -135,7 +139,8 @@ All package documentation in the Pulumi Registry is published via the [`pulumi/r
 1. Add your package to [the community package list](https://github.com/pulumi/registry/blob/master/community-packages/package-list.json)
     1. Add your package's GitHub repo slug, e.g. `"checkly/pulumi-checkly"`
     1. Add the path to your package's `schema.json` file from the root of your provider repository, e.g. `"provider/cmd/pulumi-resource-checkly/schema.json"`
-1. Open a pull request with the above changes and await review from a Pulumi team member.
+1. Add your documentation files to `themes/default/content/registry/packages/<your-package>/`, including the `_index.md` and `installation-configuration.md` files you authored in your provider repository's `docs/` folder.
+1. Open a pull request with the above changes and await review from a Pulumi team member. For a complete example of a community package submission, see [pulumi/registry#10358](https://github.com/pulumi/registry/pull/10358).
 
 {{% notes %}}
 API docs for your package will be automatically generated at the time of building the registry site. You do not need to take any action to generate API docs other than making sure your package repository has the right `schema.json` (or `.yaml`).
