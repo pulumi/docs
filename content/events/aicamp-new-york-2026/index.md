@@ -41,7 +41,7 @@ location: New York, NY
 
 # Description of the event.
 description: |
-    Learn how to deploy agentic AI systems by combining Pulumi's infrastructure capabilities with AWS cloud services. This hands-on workshop covers practical techniques for building and deploying AI agents at scale using Pulumi and AWS.
+    This hands-on workshop bridges the gap between AI agent prototypes and production deployments. Build a multi-tool, multi-agent system running on Amazon Bedrock AgentCore, with all infrastructure defined as code using Pulumi. Attendees will gain a functioning multi-agent system, reusable infrastructure-as-code templates, and practical experience with Amazon Bedrock AgentCore and Pulumi.
 
 # The event presenters
 presenters:
