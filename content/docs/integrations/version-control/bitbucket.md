@@ -14,7 +14,7 @@ aliases:
 - /docs/integrations/bitbucket/
 ---
 
-Pulumi Cloud integrates with Bitbucket Cloud to post pull request previews, deploy infrastructure on push, create ephemeral review stacks, and report commit statuses — the same capabilities available with [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/). Once configured, the integration automatically registers webhooks on your Bitbucket workspace and manages authentication for you.
+Pulumi Cloud integrates with Bitbucket Cloud to post pull request previews, deploy infrastructure on push, create ephemeral review stacks, and report commit statuses — the same capabilities available with [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/). Once configured, Pulumi automatically registers a webhook on each Bitbucket repository you wire up for deployments and manages authentication for you.
 
 ## Installation and configuration
 
@@ -27,7 +27,7 @@ To set up the Bitbucket integration, you must be an org admin in Pulumi Cloud an
 1. Select **Add account** and choose **Bitbucket**, then follow the prompts to authorize with Bitbucket.
 1. Select the Bitbucket workspace you want to integrate with and configure your [integration settings](#integration-settings).
 
-Pulumi automatically registers webhooks on your Bitbucket workspace. No manual webhook configuration is required.
+Pulumi automatically registers a webhook on each Bitbucket repository the first time you save deployment settings on a stack that targets that repository. No manual webhook configuration is required.
 
 ### Authentication methods
 
@@ -63,7 +63,7 @@ After creating an integration, you can configure pull request behavior. Toggle t
 | Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in pull request comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
-To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your Bitbucket workspace and disconnects all stacks using that integration.
+To delete an integration, select **Delete Integration** on the integration card. This removes the webhooks Pulumi created on your Bitbucket repositories and disconnects all stacks using that integration.
 
 ## Capabilities
 
@@ -130,7 +130,8 @@ Use Bitbucket Pipelines' built-in OIDC tokens to authenticate with Pulumi Cloud 
 If comments aren't appearing on your pull requests, verify that:
 
 1. The Bitbucket integration is connected and shows a valid status under **Management** > **Version control**.
-1. The webhook exists on your Bitbucket workspace. Navigate to your workspace's **Settings** > **Webhooks** and look for the Pulumi webhook endpoint.
+1. A stack targeting the repository has had its deployment settings saved at least once. Pulumi registers the per-repository webhook the first time deployment settings are saved with that repository configured, not at integration install time.
+1. The webhook exists on the Bitbucket repository. In Bitbucket, open the repository and navigate to **Repository settings** > **Workflow** > **Webhooks** (under the repository, not the workspace). Look for an entry titled **Pulumi Deployments** in the **Repository hooks** section.
 1. The stack is associated with the correct Bitbucket repository and branch.
 
 ### Integration shows as disconnected
