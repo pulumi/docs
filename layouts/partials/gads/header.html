@@ -13,11 +13,7 @@
                 
                 <!-- Keep only Sign Up CTA -->
                 <div class="cta-container">
-                    {{ if in .RelPermalink "/gads/neo" }}
-                    <a data-track="header-signup" href="https://app.pulumi.com/pulumi/neo?prefer_signup=true" class="btn btn-primary btn-xl">Try Neo for FREE</a>
-                    {{ else }}
                     {{ partial "cta-get-started" (dict) }}
-                    {{ end }}
                 </div>
             </div>
         </header>

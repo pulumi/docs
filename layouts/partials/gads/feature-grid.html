@@ -1,0 +1,27 @@
+{{/*
+    GADS Feature Grid Partial
+
+    3-col grid of icon + title + description items. Used as the row of
+    sub-features under each feature section.
+
+    Params:
+    - items: Array of {icon, title, description}
+*/}}
+
+{{ with .items }}
+<div class="container mx-auto mt-12 md:mt-12 lg:mt-20">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-36">
+        {{ range $item := . }}
+            <div class="text-left flex flex-col justify-start">
+                {{ with $item.icon }}
+                <div class="mb-3">
+                    {{ partial "color-icon.html" (dict "icon" .) }}
+                </div>
+                {{ end }}
+                <h4 class="text-black font-semibold mt-0 mb-3">{{ $item.title }}</h4>
+                <p class="body-base mt-0">{{ $item.description | markdownify }}</p>
+            </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
