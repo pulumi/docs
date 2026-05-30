@@ -17,12 +17,12 @@ gated: false
 # landing/registration page. If the event is external you will need
 # set the 'block_external_search_index' flag to true so Google does not index
 # the event page created.
-external: false
-block_external_search_index: false
+external: true
+block_external_search_index: true
 
 # The url slug for the event landing page. If this is an external
 # event, use the external URL as the value here.
-url_slug: aicamp-silicon-valley-2026
+url_slug: https://www.aicamp.ai/event/eventdetails/W2026060917
 
 # The event type (workshop, webinar, talk).
 event_type: workshop
