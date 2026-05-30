@@ -174,7 +174,7 @@ brew install pulumi/tap/pulumi
 
 # Create your ID card and deploy it to Cloudflare
 mkdir cjs26 && cd cjs26
-pulumi new https://github.com/pulumi/cjs26 --dir cjs26
+pulumi new https://github.com/pulumi/cjs26
 pulumi config set cloudflare:apiToken &lt;your-token&gt; --secret
 pulumi up
 
