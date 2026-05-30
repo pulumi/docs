@@ -164,22 +164,29 @@
         </section>
 
         <main class="mx-auto px-5 py-20 w-full font-mono text-base md:text-lg leading-[1.25] text-violet-400" style="max-width: 729px;">
-            *-----------------------------------------------------*
+            *---------------------------------------------------------*
             <span class="my-[1em] block uppercase">
-                How to Join the Pulumi Cloud Watchers Club
+                How to Join the Pulumi Cloud Watching Club @ CASCADIAJS '26
             </span>
-            <pre class="text-violet-400">brew install pulumi/tap/pulumi
-# or:  curl -fsSL https://get.pulumi.com | sh
+            <pre class="text-violet-400"># Install Pulumi
+brew install pulumi/tap/pulumi
+# or: curl -fsSL https://get.pulumi.com | sh
+
+# Create your badge and deploy it to Cloudflare
 mkdir cjs26 && cd cjs26
-pulumi new https://github.com/pulumi/cjs26
-npm install && npm run build
-pulumi config set --secret cloudflare:apiToken &lt;your-token&gt;
+pulumi new https://github.com/pulumi/cjs26 --dir cjs26
+pulumi config set cloudflare:apiToken &lt;your-token&gt; --secret
 pulumi up
 
-pulumi stack output url
-pulumi stack output passkey --show-secrets</pre>
-<a href="https://github.com/pulumi/cjs26" class="hover:underline" target="_blank">README ></a>
-        </main>
+# Log in add a photo to your badge
+open $(pulumi stack output url)
+
+# Return here, enter the laptop password ^^
+# Get your membership sticker at the Pulumi booth
+</pre>
+
+<a href="https://github.com/pulumi/cjs26" class="hover:underline block" target="_blank">README ></a>
+</main>
 
         <div class="flex justify-center px-6 pb-24">
             <img

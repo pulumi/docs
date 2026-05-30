@@ -185,7 +185,7 @@
             "╔═════════════════════════════════════════════════════════╗",
             "║ CLOUD WATCHER 3000                                v6.26 ║",
             "║                                                         ║",
-            "║ PULUMI CLOUD WATCHERS CLUB   *OFFICIAL MEMBER USE ONLY* ║",
+            "║ PULUMI CLOUD WATCHING CLUB   *OFFICIAL MEMBER USE ONLY* ║",
             "╠═════════════════════════════════════════════════════════╣",
             "║                                                         ║",
             "║ [STATUS]  ◉ ONLINE   ◉ ENCRYPTED   ◌ STANDBY            ║",
