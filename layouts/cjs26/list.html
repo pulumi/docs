@@ -172,17 +172,17 @@
 brew install pulumi/tap/pulumi
 # or: curl -fsSL https://get.pulumi.com | sh
 
-# Create your badge and deploy it to Cloudflare
+# Create your ID card and deploy it to Cloudflare
 mkdir cjs26 && cd cjs26
 pulumi new https://github.com/pulumi/cjs26 --dir cjs26
 pulumi config set cloudflare:apiToken &lt;your-token&gt; --secret
 pulumi up
 
-# Log in add a photo to your badge
+# Log in, add a photo to your card
 open $(pulumi stack output url)
 
 # Return here, enter the laptop password ^^
-# Get your membership sticker at the Pulumi booth
+# Visit the Pulumi booth for your membership sticker
 </pre>
 
 <a href="https://github.com/pulumi/cjs26" class="hover:underline block" target="_blank">README ></a>
