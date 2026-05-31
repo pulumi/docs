@@ -1,82 +1,55 @@
 ---
 title: Run 'aws cloudwatch get-metric-data' w/ Dynamic Credentials
-meta_desc: |
-     Learn how to use dynamic credentials in Pulumi ESC for executing commands like 'aws cloudwatch get-metric-data' more securely and efficiently.
-
+meta_desc: "Run 'aws cloudwatch get-metric-data' with short-lived, OIDC-scoped AWS credentials brokered by Pulumi ESC. No static keys, fully auditable."
 meta_image: /images/what-is/run-aws-cloudwatch-get-metric-data-with-dynamic-credentials-meta.png
 type: what-is
 page_title: Run 'aws cloudwatch get-metric-data' with Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws cloudwatch get-metric-data`](https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/get-metric-data.html) command is part of the AWS Command Line Interface (CLI). It retrieves metric data from Amazon CloudWatch, a monitoring service provided by AWS. This command allows you to query and retrieve time-series data for a specified metric or set of metrics.
+**This guide shows you how to run `aws cloudwatch get-metric-data` with dynamic, short-lived AWS credentials brokered by [Pulumi ESC](/product/esc/) over OIDC, instead of long-lived `aws_access_key_id` / `aws_secret_access_key` pairs on disk.** Dynamic credentials are issued by AWS STS at the moment the command runs, scoped to a single IAM role, time-bound to the role's session duration, and visible end-to-end in CloudTrail. You'll need the Pulumi CLI, the [`esc` CLI](/docs/install/esc/), a Pulumi Cloud account, and an AWS IAM role configured to trust Pulumi as an OIDC provider.
 
-The `aws cloudwatch get-metric-data` command is vital in supporting a variety of use cases related to monitoring, troubleshooting, and automation in AWS environments. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials. Typically, two kinds of credentials are used: temporary credentials, which offer heightened security but require manual updates, and long-term credentials, which are more convenient but pose more significant security risks.
+In this article, we'll cover:
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes more straightforward and secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws cloudwatch get-metric-data`, execute successfully. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+- Why dynamic credentials beat static AWS keys for CloudWatch calls
+- Prerequisites for the `esc run` workflow
+- How to create an ESC environment with the `aws-login` provider
+- The `aws cloudwatch get-metric-data` invocation, explained flag-by-flag
+- How to verify the call ran with assumed-role credentials
+- Common errors and how to fix them
+- FAQs about using dynamic credentials in CI, multi-account, and IAM-tight setups
 
-## Using Pulumi ESC for dynamic credentials with AWS
+## Why dynamic credentials beat static AWS keys
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service, in particular, helps to resolve concerns around how to:
+- **No `aws_access_key_id` on disk.** Nothing to leak from `~/.aws/credentials`, a developer laptop, a CI runner cache, or a screenshot in Slack.
+- **Scoped to one IAM role.** The role's policy is the upper bound for what the session can do. Pair `cloudwatch:GetMetricData` with a tight resource scope and the blast radius is the read of one metric namespace.
+- **Time-bound by STS.** Sessions expire on the `duration` you configure (default 1 hour). An exfiltrated session token is useless within the hour.
+- **Auditable in CloudTrail.** Every API call carries the assumed-role principal and a session name you control, so `pulumi-environments-session` is searchable across accounts.
+- **One source of truth.** The ESC environment defines the role and trust policy once; every teammate, CI job, and script gets the same credentials, never their own copy.
 
-- Share credentials with teammates consistently and securely.
-- Minimize the risks associated with locally configured, long-lived, and highly privileged credentials.
-- Ensure teams can quickly and safely run commands like `aws cloudwatch get-metric-data` without requiring deep security expertise.
+## Prerequisites
 
-## What is the esc run command?
+- A [Pulumi Cloud](https://app.pulumi.com/signin) account and an organization you can create environments in.
+- The Pulumi CLI and the [ESC CLI](/docs/install/esc/) installed and authenticated (`esc login`).
+- An AWS account with permission to create and update IAM roles.
+- An IAM role with `cloudwatch:GetMetricData` (the minimum for read), and a trust policy that allows Pulumi's OIDC issuer to assume it. Use the [Pulumi + AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) to set it up.
+- The AWS CLI v2 installed.
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+## Step-by-step: set up dynamic credentials for CloudWatch
 
-> This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
+### 1. Configure the OIDC trust between Pulumi and AWS
 
-But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws cloudwatch get-metric-data` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
+Follow the [configuring OIDC between Pulumi and AWS guide](/docs/esc/guides/configuring-oidc/aws/) to create an IAM role whose trust policy accepts Pulumi's OIDC issuer. Note the role's ARN.
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
-
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. Removing the local storage of credentials reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
-
-- **Streamlined Collaboration** - Because credentials are centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to leverage. Everyone can access the same secure environment, reducing the complexities of coordinating credentials and configurations across teams.
-
-## Getting started with esc run
-
-### Step 1: Install and log in to Pulumi ESC
-
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
+### 2. Create a Pulumi ESC environment
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
-Enter your access token from https://app.pulumi.com/account/tokens
-    or hit <ENTER> to log in using your browser                   :
-Logged in to pulumi.com as …
+$ esc env init <your-pulumi-org>/<your-project>/aws-cloudwatch-read
 ```
 
-### Step 2: Create the OIDC configuration
+### 3. Add the `aws-login` provider to the environment
 
-Pulumi ESC allows you to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
-
-This service can dynamically generate credentials on your behalf whenever you interact with your AWS environments. To do so, follow the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Ensure the IAM role you create has sufficient permissions to perform the AWS CloudWatch actions.
-
-### Step 3: Create a new Pulumi ESC environment
-
-Once you have OIDC configured between Pulumi and AWS, the next step is to create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin).
-
-- Navigate to your [Pulumi Cloud](https://app.pulumi.com/signin) home page.
-- Select the correct organization in the left-hand navigation menu.
-- Click the **Environments** link.
-- Click the **Create environment** button.
-- In the pop-up window, provide a name for your environment. e.g., `aws-prod-env`
-- Click the **Create environment** button.
-
-{{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
-
-### Step 4: Add the AWS provider integration
-
-Once you’ve created your new environment, you will be presented with a split-pane document view.
-
-- Clear out the default placeholder content in the editor on the left-hand side.
-- Replace it with the following code, making sure to replace `<your-oidc-iam-role-arn>` with the value of your IAM role ARN from the configure OIDC step:
+Open the environment in `esc env edit` (or in the Pulumi Cloud console) and paste the following, replacing `<your-oidc-iam-role-arn>` with the ARN from step 1:
 
 ```yaml
 values:
@@ -93,11 +66,9 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-### Step 5: Create sample metric data
+The `fn::open::aws-login` provider performs the `AssumeRoleWithWebIdentity` call against AWS STS at runtime. The `environmentVariables` block exposes the resulting short-lived credentials to any process `esc run` invokes.
 
-You can skip this step if you already have metric data in your AWS account. Otherwise, you will need to add metric data to validate your configuration.
-
-- Check your local environment does not have any AWS credentials configured by running the `aws configure list` command as shown below:
+### 4. Confirm no static credentials are leaking in
 
 ```bash
 $ aws configure list
@@ -109,106 +80,145 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To add the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+If `access_key` shows a value, unset `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_PROFILE`, or use a fresh shell. The point is to prove the next call cannot fall back to a long-lived key.
+
+### 5. (Optional) Seed sample metric data
+
+Skip this if you already have data in CloudWatch. Otherwise, publish a few points with `put-metric-data`:
 
 ```bash
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:00:10Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:03:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 9 --unit Count --timestamp 2023-12-12T04:02:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 1 --unit Count --timestamp 2023-12-12T04:20:00Z --region <aws-region>
+$ esc run <your-pulumi-org>/<your-project>/aws-cloudwatch-read -- \
+    aws cloudwatch put-metric-data \
+      --namespace pulumiDemo \
+      --metric-name Invocations \
+      --dimensions FunctionName=helloWorld \
+      --value 10 --unit Count \
+      --timestamp 2026-01-15T04:00:10Z \
+      --region <aws-region>
 ```
 
-### Step 6: Create a sample metric data query file
+### 6. Create a metric data query file
 
-Create a file named `sampleQuery.json` to contain three sample queries (you may need to adjust the queries below if you skipped the previous step).
-
-```bash
-$ cat <<EOF> sampleQuery.json
+```json
 [
-    {
-        "Id": "e1",
-        "Expression": "m1 / m2",
-        "Label": "ErrorRate"
+  {
+    "Id": "m1",
+    "MetricStat": {
+      "Metric": {
+        "Namespace": "pulumiDemo",
+        "MetricName": "Invocations",
+        "Dimensions": [
+          { "Name": "FunctionName", "Value": "helloWorld" }
+        ]
+      },
+      "Period": 300,
+      "Stat": "Sum",
+      "Unit": "Count"
     },
-    {
-        "Id": "m1",
-        "MetricStat": {
-            "Metric": {
-                "Namespace": "pulumiDemo",
-                "MetricName": "Errors",
-                "Dimensions": [
-                    {
-                        "Name": "FunctionName",
-                        "Value": "helloWorld"
-                    }
-                ]
-            },
-            "Period": 300,
-            "Stat": "Sum",
-            "Unit": "Count"
-        },
-        "ReturnData": false
-    },
-    {
-        "Id": "m2",
-        "MetricStat": {
-            "Metric": {
-                "Namespace": "pulumiDemo",
-                "MetricName": "Invocations",
-                "Dimensions": [
-                    {
-                        "Name": "FunctionName",
-                        "Value": "helloWorld"
-                    }
-                ]
-            },
-            "Period": 300,
-            "Stat": "Sum",
-            "Unit": "Count"
-        },
-        "ReturnData": false
-    }
+    "ReturnData": true
+  }
 ]
-EOF
 ```
 
-### Step 7: Run aws cloudwatch get-metric-data
+Save it as `sampleQuery.json`.
 
-At this point, you have validated your environment, added sample data, and added queries.
-
-To get the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+## Run `aws cloudwatch get-metric-data` with dynamic credentials
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch get-metric-data --metric-data-queries file://./sampleQuery.json --start-time 2023-12-12T04:00:00Z --end-time 2023-12-12T04:30:00Z  --region <aws-region>
+$ esc run <your-pulumi-org>/<your-project>/aws-cloudwatch-read -- \
+    aws cloudwatch get-metric-data \
+      --metric-data-queries file://./sampleQuery.json \
+      --start-time 2026-01-15T04:00:00Z \
+      --end-time 2026-01-15T04:30:00Z \
+      --region <aws-region>
 ```
 
-Then validate that your output is similar to the following:
+What each flag does:
 
-```bash
+- `esc run <env> --` opens the named ESC environment, assumes the IAM role, and injects the short-lived credentials as environment variables for the command that follows.
+- `--metric-data-queries file://./sampleQuery.json` is the structured query payload defining which metrics and statistics to fetch.
+- `--start-time` / `--end-time` bound the query window (ISO 8601).
+- `--region` picks the AWS region — CloudWatch is region-scoped.
+
+A successful response looks like:
+
+```json
 {
-    "MetricDataResults": [
-        {
-            "Id": "e1",
-            "Label": "ErrorRate",
-            "Timestamps": [
-                "2023-12-12T04:00:00+00:00"
-            ],
-            "Values": [
-                0.5
-            ],
-            "StatusCode": "Complete"
-        }
-    ],
-    "Messages": []
+  "MetricDataResults": [
+    {
+      "Id": "m1",
+      "Label": "Invocations",
+      "Timestamps": ["2026-01-15T04:00:00+00:00"],
+      "Values": [10.0],
+      "StatusCode": "Complete"
+    }
+  ],
+  "Messages": []
 }
 ```
 
-## Conclusion
+## Verify you used dynamic credentials
 
-Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws cloudwatch get-metric-data`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
+Run a `sts get-caller-identity` through the same environment and inspect the principal:
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
-- Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
+```bash
+$ esc run <your-pulumi-org>/<your-project>/aws-cloudwatch-read -- aws sts get-caller-identity
+{
+  "UserId": "AROAEXAMPLE:pulumi-environments-session",
+  "Account": "123456789012",
+  "Arn": "arn:aws:sts::123456789012:assumed-role/pulumi-esc-oidc/pulumi-environments-session"
+}
+```
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+The `assumed-role` ARN and the `pulumi-environments-session` suffix confirm you're using a role session, not an IAM user. The matching CloudTrail event will show `userIdentity.type = AssumedRole` and the same session name.
+
+## Common errors
+
+| Error | Likely cause | Fix |
+|---|---|---|
+| `AccessDenied: not authorized to perform: sts:AssumeRoleWithWebIdentity` | IAM role trust policy does not allow Pulumi's OIDC issuer or your org's audience | Re-check the trust policy against the [Pulumi + AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) |
+| `AccessDenied: ... cloudwatch:GetMetricData` | Role's identity policy lacks the action | Add `cloudwatch:GetMetricData` to the role |
+| `InvalidClientTokenId` | The ESC env didn't inject credentials; you're hitting AWS with stale or empty keys | Confirm the `environmentVariables` block in the env and that you invoked via `esc run --` ([more](/what-is/resolve-list-buckets-invalid-client-token-id/)) |
+| `ExpiredToken` | Session lived past the configured `duration` | Re-run the command; `esc run` mints a fresh session each invocation ([more](/what-is/resolve-list-buckets-expired-token/)) |
+| `Unable to locate credentials` | `esc run` was not used and no other AWS credential source is configured | Wrap the command in `esc run <env> --` ([more](/what-is/resolve-unable-to-locate-credentials/)) |
+
+## Frequently asked questions
+
+### Can I use `esc run` in CI?
+
+Yes. Set `PULUMI_ACCESS_TOKEN` on the runner and invoke `esc run <env> -- aws cloudwatch get-metric-data ...`. The runner needs no long-lived AWS credentials. Pulumi's GitHub Actions, GitLab CI, and CircleCI integrations all support this pattern.
+
+### What is the minimum IAM permission the role needs?
+
+For read-only metric retrieval, `cloudwatch:GetMetricData`. For the optional `put-metric-data` seeding step, add `cloudwatch:PutMetricData`. Scope `Resource: "*"` is required for `GetMetricData`, but you can constrain by `aws:RequestedRegion` and namespace via condition keys.
+
+### Does this work with multiple AWS accounts?
+
+Yes. Create one ESC environment per account or use [environment imports](/docs/esc/environments/imports/) to compose a base environment with account-specific overrides. Each environment maps to one `roleArn`, so the credentials are always scoped to one account.
+
+### Do I still need static AWS keys for anything?
+
+For local dev, CI, and one-off CLI work against AWS, no. Static keys are only needed by legacy tooling that can't be wrapped in `esc run` or that doesn't accept environment-variable credentials. Even there, prefer rotating `aws-vault` or `aws sso login` as a stepping stone, then move the rest to ESC.
+
+### How is this different from `aws-vault`?
+
+`aws-vault` stores long-lived keys in your OS keychain and brokers temporary sessions locally. Pulumi ESC removes the long-lived key entirely: the trust is OIDC-based and lives in IAM, so no key is ever issued to a developer or runner. ESC also gives you centralized environments, secret aggregation from other providers, and audit logs across the team.
+
+### How long can a session last?
+
+Up to the role's `MaxSessionDuration` (default 1 hour, configurable up to 12 hours for non-chained roles). The `duration` field in the `aws-login` block requests the value; AWS enforces the cap.
+
+### Can I scope the role to a specific metric namespace?
+
+`cloudwatch:GetMetricData` doesn't support resource-level scoping, but you can use the `cloudwatch:namespace` condition key on `GetMetricStatistics` and other CloudWatch actions. Combine with `aws:RequestedRegion` to constrain by region.
+
+## Learn more
+
+- [Pulumi ESC product page](/product/esc/)
+- [Configuring OIDC between Pulumi and AWS](/docs/esc/guides/configuring-oidc/aws/)
+- [`esc run` command reference](/docs/esc/cli/commands/esc_run/)
+- Related dynamic-credentials guides:
+  - [Run `aws sts get-caller-identity` with dynamic credentials](/what-is/run-aws-sts-get-caller-identity-with-dynamic-credentials/)
+  - [Run `aws ec2 describe-instances` with dynamic credentials](/what-is/run-aws-ec2-describe-instances-with-dynamic-credentials/)
+  - [Run `aws s3 ls` with dynamic credentials](/what-is/run-aws-s3-ls-with-dynamic-credentials/)
+- Related error resolution: [`InvalidClientTokenId`](/what-is/resolve-list-buckets-invalid-client-token-id/), [`ExpiredToken`](/what-is/resolve-list-buckets-expired-token/), [`Unable to locate credentials`](/what-is/resolve-unable-to-locate-credentials/)
