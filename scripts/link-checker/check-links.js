@@ -430,6 +430,11 @@ function getDefaultExcludedKeywords() {
         "https://www.zdnet.com/",                                                   // aggressive bot protection
         "https://gist.github.com/pulumipus/56d1ee83f295971e2a26a8091880c482",        // deleted gist in blog/automation-api-as-platform
         "https://gist.github.com/pulumipus/61edcdd8ab3f50a42b4bd34a7e1f789b",        // deleted gist in blog/automation-api-workflow
+        // Dead/transient third-party links in historical blog posts (#docs-ops 2026-06-01)
+        "https://github.com/aws/aws-lambda-runtime-interface-clients",              // blog/aws-lambda-container-support
+        "https://docs.docker.com/docker-for-mac/kubernetes/",                       // blog/how-to-deploy-jenkins-to-kubernetes-with-pulumi
+        "https://editor.swagger.io",                                                // blog/next-level-iac-pulumi-automation-api (transient 504)
+        "https://github.com/ollama/ollama/blob/main/docs/openai.md",                // blog/run-deepseek-on-aws-ec2-using-pulumi
     ];
 }
 

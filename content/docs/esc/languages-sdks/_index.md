@@ -11,6 +11,7 @@ menu:
 aliases:
   - /docs/esc/development/
   - /docs/esc/development/languages-sdks/
+  - /docs/esc/sdk/
 ---
 
 The Pulumi ESC SDKs let you create, update, retrieve, and delete environments — and read their evaluated values — from your own code. Use them when you need programmatic access to ESC outside of the `esc` CLI or a Pulumi program.

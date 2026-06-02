@@ -25,7 +25,6 @@ docs/reference/cloud-rest-api/cloud-rest-api/index.html|/docs/reference/cloud-re
 docs/using-pulumi/index.html|/docs/iac/guides/
 topics/containers/index.html|/docs/iac/clouds/kubernetes/
 docs/concepts/options/hidediffs/index.html|/docs/iac/concepts/resources/options/hidediffs/
-docs/iac/guides/building-extending/providers/debugging-providers/index.html|/docs/support/debugging/debugging-providers/
 docs/iac/using-pulumi/pulumi-packages/terraform-provider/index.html|/docs/iac/get-started/terraform/terraform-providers/
 docs/concepts/stacks/index.html|/docs/iac/concepts/stacks/
 docs/insights/policy/metadata/index.html|/docs/insights/policy/policy-packs/metadata/
