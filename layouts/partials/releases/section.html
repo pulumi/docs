@@ -22,13 +22,13 @@
     {{ if or $heading $description (ne $number nil) }}
     <div class="md:text-center max-w-3xl mx-auto">
         {{ if ne $number nil }}
-        <p class="font-mono text-sm tracking-wider uppercase text-violet-primary m-0 mb-4">.{{ printf "%02d" (add $number 1) }}</p>
+        <p class="font-overline text-violet-primary m-0 mb-4">.{{ printf "%02d" (add $number 1) }}</p>
         {{ end }}
         {{ with $heading }}
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold tracking-tighter text-service-black m-0 mb-4 leading-[1.1]">{{ . }}</h2>
+        <h2 class="heading-1 font-display font-semibold tracking-tighter text-service-black m-0 mb-4 leading-[1.1]">{{ . }}</h2>
         {{ end }}
         {{ with $description }}
-        <p class="md:text-lg text-gray-900 m-0 leading-relaxed">{{ . | markdownify }}</p>
+        <p class="body-lg text-gray-900 m-0 leading-relaxed">{{ . | markdownify }}</p>
         {{ end }}
     </div>
     {{ end }}
