@@ -512,12 +512,13 @@ Skills are structured knowledge packages that follow the open [Agent Skills](htt
 For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
-claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration     # Install migration skills
-claude plugin install pulumi-authoring     # Install authoring skills
+/plugin marketplace add pulumi/agent-skills
+/plugin install pulumi-migration      # Install migration skills
+/plugin install pulumi                # Install Pulumi skills (overview + specialized)
+/plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
 ```
 
-You can install both plugin groups or choose only the ones you need.
+You can install all plugin groups or choose only the ones you need.
 
 ### Universal installation
 
