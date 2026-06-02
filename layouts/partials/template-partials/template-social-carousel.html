@@ -46,7 +46,7 @@
                         <div class="social-carousel-card">
                             <p>{{ $tweet.text }}</p>
                             <div class="social-carousel-card-author">
-                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                {{ partial "fingerprinted-img.html" (dict "src" $tweet.avatar "alt" $tweet.username "width" 32 "height" 32 "maxWidth" 64) }}
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="social-carousel-card">
                             <p>{{ $tweet.text }}</p>
                             <div class="social-carousel-card-author">
-                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                {{ partial "fingerprinted-img.html" (dict "src" $tweet.avatar "alt" $tweet.username "width" 32 "height" 32 "maxWidth" 64) }}
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                         <div class="social-carousel-card">
                             <p>{{ $tweet.text }}</p>
                             <div class="social-carousel-card-author">
-                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                {{ partial "fingerprinted-img.html" (dict "src" $tweet.avatar "alt" $tweet.username "width" 32 "height" 32 "maxWidth" 64) }}
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                         <div class="social-carousel-card">
                             <p>{{ $tweet.text }}</p>
                             <div class="social-carousel-card-author">
-                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                {{ partial "fingerprinted-img.html" (dict "src" $tweet.avatar "alt" $tweet.username "width" 32 "height" 32 "maxWidth" 64) }}
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                         <div class="social-carousel-card">
                             <p>{{ $tweet.text }}</p>
                             <div class="social-carousel-card-author">
-                                <img src="{{ $tweet.avatar }}" alt="{{ $tweet.username }}" onerror="this.style.display='none';" />
+                                {{ partial "fingerprinted-img.html" (dict "src" $tweet.avatar "alt" $tweet.username "width" 32 "height" 32 "maxWidth" 64) }}
                                 <a href="{{ $tweet.link }}" target="_blank" rel="noopener noreferrer">{{ $tweet.username }}</a>
                             </div>
                         </div>

@@ -148,7 +148,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
 }
 
 .header-container {
-    @apply z-40 bg-white py-0 sticky;
+    @apply z-40 py-0 sticky;
     top: -1px;
 
     @include screen-lg {
@@ -156,7 +156,7 @@ pulumi-user-toggle:not(.hydrated) [slot="signed-in"] {
     }
 
     &.is-pinned {
-        box-shadow: 0 1px 12px 0 rgba(0,0,0,.06),0 1px 4px 0 rgba(0,0,0,.04);
+        @apply bg-white border-b border-gray-200;
     }
 
     .logo-container {

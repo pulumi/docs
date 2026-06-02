@@ -1,0 +1,16 @@
+{{/*
+    GADS Section Header Partial
+
+    Title (h2) and optional description above a section body.
+
+    Params:
+    - title:       Section title
+    - description: Optional markdown description
+*/}}
+
+{{ with .title }}
+<h2 class="md:text-center mb-8">{{ . }}</h2>
+{{ end }}
+{{ with .description }}
+<p class="body-lg max-w-3xl md:mx-auto md:text-center">{{ . | markdownify }}</p>
+{{ end }}

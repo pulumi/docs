@@ -4,6 +4,7 @@ meta_desc: "Modern infrastructure as code in Python, TypeScript, Go, or C#. 170+
 layout: gads-template
 block_external_search_index: true
 
+overline: "Pulumi IaC"
 heading: "Infrastructure as Code"
 subheading: |
     Define, deploy, and manage cloud infrastructure using programming languages you already know.
@@ -14,7 +15,9 @@ hide_platform_details: true
 
 customer_quote:
     text: "Pulumi supercharged our infrastructure team by helping us create reusable building blocks that developers can leverage to provision new resources and enforce organizational policies for logging, permissions, resource tagging, and security."
-    author: "Igor Shapiro, Principal Engineer, Lemonade"
+    author: "Igor Shapiro"
+    title: "Principal Engineer"
+    company: "Lemonade"
     logo: lemonade
     link: /case-studies/lemonade
 
@@ -29,7 +32,6 @@ key_features_above:
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
             Stop learning DSLs. Author infrastructure as code using programming languages you already know — Python, TypeScript, Go, C#, Java, and YAML. Get auto-completion, type checking, and refactoring from your IDE. Deploy to 170+ providers.
-          image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Code faster with real languages
                 description: |
@@ -179,12 +181,15 @@ key_features:
                   url: ${my-site.websiteEndpoint}
           features:
               - title: 170+ cloud providers
+                icon: cloud
                 description: |
                     Full API coverage for AWS, Azure, Google Cloud, Kubernetes, and 170+ more providers. Same-day updates when new services launch.
               - title: Reusable components
+                icon: abstract-shapes
                 description: |
                     Build higher-level abstractions and share them as packages through npm, PyPI, NuGet, or Go modules. Real versioning, real dependency management.
               - title: AI-powered infrastructure
+                icon: lightning
                 description: |
                     Generate Pulumi programs from natural language, or convert existing Terraform and CloudFormation with built-in migration tools.
 
@@ -195,12 +200,15 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           features:
               - title: Version and review
+                icon: git-merged
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
+                icon: eye
                 description: |
                     Get rapid feedback on your code with fast unit tests, and run integration tests against ephemeral infrastructure.
               - title: Continuous delivery
+                icon: cycle
                 description: |
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
@@ -227,30 +235,39 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           features:
               - title: Pulumi IaC
+                icon: code
                 description: |
                     Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
+                icon: lock
                 description: |
                     Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
               - title: Automate deployment workflows
+                icon: cycle
                 description: |
                     Orchestrate secure deployment workflows through GitHub or an API.
               - title: Search and analytics
+                icon: eye
                 description: |
                     View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
               - title: Pulumi Automation API
+                icon: gear
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
               - title: Developer portals
+                icon: buildings
                 description: |
                     Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
               - title: Identity and access control
+                icon: security
                 description: |
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
               - title: Policy enforcement
+                icon: gavel
                 description: |
                     Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
+                icon: clipboard
                 description: |
                     Track and store user actions and change history with option to export logs.
 
@@ -259,7 +276,7 @@ case_studies:
     items:
         - name: Atlassian
           link: /case-studies/atlassian/
-          logo: atlassian
+          logo: atlassian-wordmark
           description: |
             Developers reduced their time spent on maintenance by 50%.
 

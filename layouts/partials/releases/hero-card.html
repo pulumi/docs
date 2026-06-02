@@ -40,7 +40,7 @@
 <div class="bg-violet-950 text-white rounded-lg overflow-hidden">
     <div class="flex flex-col items-center text-center gap-12 px-8 pt-16 md:px-12 md:pt-20 lg:px-16 lg:pt-24">
         <div class="flex flex-col items-center gap-6 max-w-3xl">
-            <p class="font-mono text-sm tracking-wider uppercase m-0 flex items-center gap-2">
+            <p class="font-overline m-0 flex items-center gap-2">
                 <a href="/releases/" class="text-violet-500 hover:text-white no-underline hover:no-underline">Releases</a>
                 {{ if $breadcrumbLabel }}
                 <span class="text-violet-500" aria-hidden="true">/</span>
@@ -48,10 +48,10 @@
                 {{ end }}
             </p>
             {{ with $heading }}
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold tracking-tighter text-white m-0 leading-[1.1]">{{ . }}</h1>
+            <h1 class="heading-xl font-display font-semibold tracking-tighter text-white m-0 leading-[1.1]">{{ . }}</h1>
             {{ end }}
             {{ with $description }}
-            <div class="text-lg text-gray-300 max-w-2xl leading-relaxed">{{ . | markdownify }}</div>
+            <div class="body-lg text-gray-300 max-w-2xl leading-relaxed">{{ . | markdownify }}</div>
             {{ end }}
         </div>
     </div>

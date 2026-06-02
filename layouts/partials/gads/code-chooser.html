@@ -1,0 +1,23 @@
+{{/*
+    GADS Code Chooser Partial
+
+    Renders the language-dropdown code chooser. Falls back to the homepage
+    hero's `code_snippets` so gads pages without their own snippets inherit
+    the live homepage code automatically.
+
+    Params:
+    - code_snippets: Array of {language, label, title, code}
+    - code_title:    Fallback titlebar text
+*/}}
+
+{{ $heroDefaults := dict }}
+{{ with (where site.Home.Params.sections "type" "hero" | first 1) }}
+    {{ $heroDefaults = index . 0 }}
+{{ end }}
+
+{{ $snippets := .code_snippets | default (index $heroDefaults "code_snippets") }}
+{{ $codeTitle := .code_title | default (index $heroDefaults "code_title") }}
+
+{{ with $snippets }}
+    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" . "title" $codeTitle) }}
+{{ end }}

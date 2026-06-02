@@ -1,0 +1,47 @@
+{{/*
+    GADS Case Studies Section Partial
+
+    Bordered section with title + grid of case-study cards. Card markup
+    mirrors the live /case-studies list page (.template-card with logo,
+    name, description, and "Read the story" link).
+
+    Params:
+    - title: Section title
+    - items: Array of {name, link, logo, description}
+*/}}
+
+<div class="border-t p-8 md:p-16 lg:p-32 relative">
+    <div class="container mx-auto">
+        {{ partial "gads/section-header.html" (dict "title" .title) }}
+    </div>
+
+    <div class="container mx-auto mt-12 md:mt-12 lg:mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ range .items }}
+            <div class="template-card">
+                <div class="flex flex-col h-full w-full">
+                    <div class="flex flex-col gap-4 mb-8">
+                        {{ with .logo }}
+                        <div class="h-10 flex items-center [&_img]:h-8 [&_img]:w-auto [&_img]:!m-0 [&>span]:justify-start [&>span]:m-0">
+                            {{ partial "customer-logo.html" (dict "logo" .) }}
+                        </div>
+                        {{ end }}
+                        <h3 class="card-title m-0">
+                            <a href="{{ .link }}" class="text-black hover:text-black no-underline">{{ .name }}</a>
+                        </h3>
+                    </div>
+                    <div class="card-description mb-6">
+                        {{ .description | markdownify }}
+                    </div>
+                    <div class="mt-auto">
+                        <a href="{{ .link }}" class="btn btn-link btn-xl">
+                            Read the story
+                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

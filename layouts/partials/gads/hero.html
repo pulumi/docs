@@ -1,0 +1,31 @@
+{{/*
+    GADS Hero Partial
+
+    Hero section for pages using the `gads-template` layout.
+    Reads from page-level Params so the partial can be invoked with `.`.
+
+    Params:
+    - heading:    Hero title (required)
+    - subheading: Hero subtitle / description text
+    - overline:   Optional uppercase mono-style text above the heading
+*/}}
+
+{{ $heading := .Params.heading }}
+{{ $subheading := .Params.subheading }}
+{{ $overline := .Params.overline }}
+
+<header class="relative w-full pt-32 -mt-18 pb-16 mb-10 border-b border-gray-200 overflow-hidden bg-lines-top-right bg-no-repeat bg-right-top bg-[length:340px_auto] md:bg-[length:420px_auto] lg:bg-[length:600px_auto] ">
+    <div class="container mx-auto px-4 flex flex-col items-center text-center">
+        {{ if $overline }}
+        <p class="font-overline text-gray-primary mb-4">{{ $overline }}</p>
+        {{ end }}
+        {{ if $heading }}
+        <h1 class="heading-xl mt-0 max-w-4xl">
+            <span id="dki-heading"><span data-text="{{ $heading }}">{{ $heading }}</span></span>
+        </h1>
+        {{ end }}
+        {{ if $subheading }}
+        <p class="body-xl text-gray-700 max-w-3xl mt-4">{{ $subheading | markdownify }}</p>
+        {{ end }}
+    </div>
+</header>

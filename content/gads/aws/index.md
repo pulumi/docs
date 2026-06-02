@@ -14,7 +14,9 @@ hide_platform_details: true
 
 customer_quote:
     text: "What used to take a week and a half now, with Pulumi, took under a day."
-    author: "Raman Hariharan, Director of Cloud Platform Engineering, Snowflake"
+    author: "Raman Hariharan"
+    title: "Director of Cloud Platform Engineering"
+    company: "Snowflake"
     logo: snowflake
     link: /case-studies/snowflake
 
@@ -29,7 +31,6 @@ key_features_above:
           sub_title: "Pulumi AWS Provider"
           description:
             Manage any AWS resource using programming languages you already know. Pulumi's AWS provider covers every service and updates the same day AWS releases new features. Use Crosswalk for AWS to adopt well-architected best practices instantly.
-          image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Every AWS service, day one
                 description: |
@@ -175,12 +176,15 @@ key_features:
                   vpcId: ${my-vpc.vpcId}
           features:
               - title: Native AWS provider
+                icon: cloud
                 description: |
                     Full API coverage for every AWS service with same-day updates when new features launch. No waiting for third-party support.
               - title: Crosswalk for AWS
+                icon: abstract-shapes
                 description: |
                     Adopt well-architected best practices for VPC, ECS, EKS, API Gateway, and more with pre-built high-level components.
               - title: Migrate from CloudFormation
+                icon: exchange
                 description: |
                     Use cf2pulumi to convert existing CloudFormation templates to Pulumi in your language of choice. Import existing stacks with zero downtime.
 
@@ -191,12 +195,15 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           features:
               - title: Version and review
+                icon: git-merged
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
+                icon: eye
                 description: |
                     Get rapid feedback on your code with fast unit tests, and run integration tests against ephemeral infrastructure.
               - title: Continuous delivery
+                icon: cycle
                 description: |
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
@@ -223,30 +230,39 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           features:
               - title: Pulumi IaC
+                icon: code
                 description: |
                     Utilize open-source IaC in TypeScript, Python, Go, C#, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
+                icon: lock
                 description: |
                     Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
               - title: Automate deployment workflows
+                icon: cycle
                 description: |
                     Orchestrate secure deployment workflows through GitHub or an API.
               - title: Search and analytics
+                icon: eye
                 description: |
                     View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
               - title: Pulumi Automation API
+                icon: gear
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
               - title: Developer portals
+                icon: buildings
                 description: |
                     Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
               - title: Identity and access control
+                icon: security
                 description: |
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
               - title: Policy enforcement
+                icon: gavel
                 description: |
                     Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
+                icon: clipboard
                 description: |
                     Track and store user actions and change history with option to export logs.
 
@@ -261,7 +277,7 @@ case_studies:
 
         - name: Atlassian
           link: /case-studies/atlassian/
-          logo: atlassian
+          logo: atlassian-wordmark
           description: |
             Developers reduced their time spent on maintenance by 50%.
 

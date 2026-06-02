@@ -4,6 +4,7 @@ layout: product-page
 type: page
 aliases:
   - /neo
+  - /gads/neo
   - /copilot
   - /product/copilot
   - /product/pulumi-copilot

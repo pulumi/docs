@@ -16,7 +16,9 @@ overview:
 
 customer_quote:
     text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day."
-    author: "Matt Stephenson, Senior Principal Software Engineer, Starburst"
+    author: "Matt Stephenson"
+    title: "Senior Principal Software Engineer"
+    company: "Starburst"
     logo: starburst
     link: /case-studies/starburst
 
@@ -26,7 +28,6 @@ key_features_above:
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Built-in support for stacks, configuration, and environments eliminates the need for wrapper tools.
-          image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Native stack management
                 description: |
@@ -304,12 +305,15 @@ key_features:
                   instanceId: ${webInstance.id}
           features:
               - title: Native multi-environment support
+                icon: cycle
                 description: |
                     Manage dev, staging, and production with built-in stack support, no wrapper tools needed.
               - title: Configuration management
+                icon: gear
                 description: |
                     Built-in configuration system with secrets encryption, environment variables, and stack-specific settings.
               - title: Remote backend locking
+                icon: lock
                 description: |
                     Automatic state locking prevents concurrent modifications without additional tooling.
 
@@ -320,12 +324,15 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           features:
               - title: True code reusability
+                icon: abstract-shapes
                 description: |
                     Use functions, classes, and modules to create truly reusable infrastructure components.
               - title: Package management
+                icon: abstract-shapes
                 description: |
                     Distribute infrastructure components through npm, PyPI, NuGet, Maven, or Go modules.
               - title: Type safety
+                icon: security
                 description: |
                     Catch configuration errors at compile time with strongly-typed infrastructure code.
 
@@ -352,30 +359,39 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           features:
               - title: Pulumi IaC
+                icon: code
                 description: |
                     Open-source IaC with native support for multiple environments, DRY principles, and remote state management.
               - title: Pulumi ESC
+                icon: lock
                 description: |
                     Centralized secrets and configuration management across all environments and stacks.
               - title: Stack dependencies
+                icon: abstract-shapes
                 description: |
                     Reference outputs from one stack in another, enabling modular infrastructure architectures.
               - title: Drift detection
+                icon: eye
                 description: |
                     Automatically detect when infrastructure has drifted from desired state.
               - title: Pulumi Automation API
+                icon: gear
                 description: |
                     Build custom infrastructure automation workflows programmatically.
               - title: Stack policies
+                icon: gavel
                 description: |
                     Enforce governance and compliance policies across all stacks and environments.
               - title: Team collaboration
+                icon: buildings
                 description: |
                     Built-in RBAC, stack permissions, and collaborative features for teams.
               - title: Deployment orchestration
+                icon: cycle
                 description: |
                     Coordinate deployments across multiple stacks with deployment workflows.
               - title: Audit logs
+                icon: clipboard
                 description: |
                     Complete audit trail of all infrastructure changes across all environments.
 
@@ -384,7 +400,7 @@ case_studies:
     items:
         - name: Atlassian
           link: /case-studies/atlassian/
-          logo: atlassian
+          logo: atlassian-wordmark
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
