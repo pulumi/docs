@@ -1,52 +1,41 @@
 {{ define "hero" }}
-    <header class="header-hero-home mb-8 relative px-4 pb-56 lg:pb-10">
-        <div class="container mx-auto px-4">
-            <h1>{{ .Params.hero.title }}</h1>
-            <div class="my-4 mb-16 text-2xl">
+    <section class="relative overflow-hidden">
+        <div class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16 text-center">
+            <h1 class="heading-xl tracking-tight">{{ .Params.hero.title }}</h1>
+            <div class="max-w-2xl mx-auto mt-5 body-xl [&>p]:m-0">
                 {{ .Params.hero.description | markdownify }}
             </div>
-            <div class="flex flex-col lg:flex-row mt-4">
-                <a
-                    class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4"
-                    href="/contact/"
-                    >{{ .Params.hero.cta_text }}</a
-                >
-            </div>
-        </div>
-    </header>
-{{ end }}
-
-{{ define "main" }}
-    <section id="feature" class="mb-4 pt-8">
-        <div class="container mx-auto flex flex-col lg:flex-row">
-            <div class="w-full lg:w-3/4 px-8">
-                <h2>{{ .Params.features.title }}</h2>
-                <p>{{ .Params.features.description | markdownify }}</p>
-
-                <h2>{{ .Params.requirements.title }}</h2>
-                <p>{{ .Params.requirements.description | markdownify }}</p>
+            <div class="mt-8 flex justify-center">
+                <a class="btn btn-primary btn-xl" href="/contact/">{{ .Params.hero.cta_text }}</a>
             </div>
         </div>
     </section>
-    <section id="contact" class="container mx-auto w-full relative overflow-visible py-10 px-4">
-        <div class="flex justify-center mt-8">
-            <div class="card w-full rounded-xl p-0.5 bg-violet-primary">
-                <div class="flex justify-center rounded-xl bg-violet-100">
-                    <div class="p-8 md:p-16 lg:pt-8 lg:pb-8 inline-flex flex-col items-center">
-                        <h2 class="mb-4 text-center">How to Apply</h2>
-                        <p class="container mx-auto max-w-3xl text-lg text-center my-4">
-                            {{ .Params.contact.description | markdownify }}
-                        </p>
-                        <div class="flex flex-col self-stretch items-center lg:justify-between">
-                            <div class="flex flex-col justify-center align-center text-center w-full md:w-2/4 lg:ml-14 lg:mr-14 mb-4 lg:mb-0 z-0">
-                                <a
-                                    href="/contact/"
-                                    class="btn btn-primary btn-xl py-3"
-                                    >Apply</a
-                                >
-                            </div>
-                        </div>
-                    </div>
+{{ end }}
+
+{{ define "main" }}
+    <section id="feature" class="container mx-auto px-6 pb-12 md:pb-16">
+        <div class="mx-auto max-w-3xl">
+            <h2 class="text-2xl font-semibold tracking-tight m-0">{{ .Params.features.title }}</h2>
+            <div class="mt-3 prose max-w-none text-gray-700">
+                {{ .Params.features.description | markdownify }}
+            </div>
+
+            <h2 class="mt-12 text-2xl font-semibold tracking-tight m-0">{{ .Params.requirements.title }}</h2>
+            <div class="mt-3 prose max-w-none text-gray-700">
+                {{ .Params.requirements.description | markdownify }}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-6 pb-16 md:pb-24">
+        <div class="mx-auto max-w-3xl card rounded-xl p-0.5 bg-violet-primary">
+            <div class="rounded-xl bg-violet-100 px-6 py-10 md:px-16 md:py-12 text-center">
+                <h2 class="text-2xl font-semibold tracking-tight m-0">How to Apply</h2>
+                <div class="mt-4 prose max-w-none mx-auto text-gray-700 [&_p]:text-center [&_p:last-child]:mb-0">
+                    {{ .Params.contact.description | markdownify }}
+                </div>
+                <div class="mt-8 flex justify-center">
+                    <a href="/contact/" class="btn btn-primary btn-xl">Apply</a>
                 </div>
             </div>
         </div>
