@@ -117,7 +117,7 @@ npx skills add pulumi/agent-skills --skill '*' --agent junie
 Ask your AI assistant:
 
 ```text
-Use pulumi do to create an S3 bucket and a Cloudflare DNS record
+Create an S3 bucket and a Cloudflare DNS record
 ```
 
 The assistant will use the `pulumi-overview` skill and route to specialized skills when deeper expertise is needed.
