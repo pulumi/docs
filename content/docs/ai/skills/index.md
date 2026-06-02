@@ -72,10 +72,10 @@ Hand off in-progress work from coding agents to Pulumi Neo:
 For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
-/plugin marketplace add pulumi/agent-skills
-/plugin install pulumi-migration      # Install migration skills
-/plugin install pulumi                # Install Pulumi skills (overview + specialized)
-/plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
+claude plugin marketplace add pulumi/agent-skills
+claude plugin install pulumi-migration      # Install migration skills
+claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
+claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
 ```
 
 ### OpenAI Codex
