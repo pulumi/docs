@@ -1,0 +1,162 @@
+name: Weekly review digest
+
+# Replaces the recurring docs review meeting with two Slack messages to
+# #docs-ops every Monday: one for the PR review queue, one for the issue
+# backlog. A single deterministic collection pass (digest.py) feeds one
+# Claude synthesis call, whose two outputs post as two separate messages.
+on:
+  schedule:
+    # Mondays 14:00 UTC.
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run — collect + synthesize, print both bodies to the log, no Slack posts"
+        type: boolean
+        default: false
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: read
+  issues: read
+
+concurrency:
+  group: weekly-digest
+  cancel-in-progress: false
+
+jobs:
+  weekly-digest:
+    if: github.repository == 'pulumi/docs'
+    name: Weekly review digest
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - uses: astral-sh/setup-uv@v7
+
+      # 1. COLLECT — deterministic, no model. Dumps the full digest JSON;
+      # under dry_run it also echoes the raw JSON so queries are inspectable
+      # before any model or Slack step runs.
+      - name: Collect digest data
+        id: collect
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          uv run scripts/weekly-digest/digest.py > /tmp/digest.json
+          echo "Collected $(jq '.prs | length' /tmp/digest.json) open PRs and $(jq '.issues.all_open_count' /tmp/digest.json) open issues."
+          if [[ "${{ inputs.dry_run }}" == "true" ]]; then
+            echo "----- raw digest JSON -----"
+            cat /tmp/digest.json
+          fi
+
+      # 2. SYNTHESIZE — one raw curl to the Anthropic API (cloned from
+      # claude-triage.yml). Pure JSON-in / prose-out; no agency, so no Claude
+      # Code action. Returns {"pr_digest":...,"backlog_digest":...}; we strip
+      # any ```json fences defensively before parsing.
+      - name: Synthesize digests
+        id: synth
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -euo pipefail
+          PROMPT=$(cat scripts/weekly-digest/synthesis-prompt.md)
+          DIGEST=$(cat /tmp/digest.json)
+          REQUEST=$(jq -n \
+            --arg prompt "$PROMPT" \
+            --arg digest "$DIGEST" \
+            '{
+              model: "claude-sonnet-4-6",
+              max_tokens: 2000,
+              messages: [{
+                role: "user",
+                content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
+              }]
+            }')
+          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d "$REQUEST" || echo '{"error":"curl_failed"}')
+          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          if [[ -z "$TEXT" ]]; then
+            echo "::error::Anthropic API returned no text"
+            echo "$RESPONSE" | head -c 2000 >&2
+            exit 1
+          fi
+          CLEAN=$(echo "$TEXT" \
+            | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+            | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+            | tr -d '\r')
+          if ! echo "$CLEAN" | jq -e . >/dev/null 2>&1; then
+            echo "::error::Synthesis output was not valid JSON"
+            echo "$CLEAN" | head -c 2000 >&2
+            exit 1
+          fi
+          PR_DIGEST=$(echo "$CLEAN" | jq -r '.pr_digest // empty')
+          BACKLOG_DIGEST=$(echo "$CLEAN" | jq -r '.backlog_digest // empty')
+          if [[ -z "$PR_DIGEST" || -z "$BACKLOG_DIGEST" ]]; then
+            echo "::error::Synthesis JSON missing pr_digest or backlog_digest"
+            exit 1
+          fi
+          {
+            echo "pr_digest<<DIGEST_EOF"
+            echo "$PR_DIGEST"
+            echo "DIGEST_EOF"
+            echo "backlog_digest<<DIGEST_EOF"
+            echo "$BACKLOG_DIGEST"
+            echo "DIGEST_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      # 3a. DRY RUN — print both bodies, skip posting.
+      - name: Print digests (dry run)
+        if: ${{ inputs.dry_run }}
+        env:
+          PR_DIGEST: ${{ steps.synth.outputs.pr_digest }}
+          BACKLOG_DIGEST: ${{ steps.synth.outputs.backlog_digest }}
+        run: |
+          echo "===== PR DIGEST ====="
+          printf '%s\n\n' "$PR_DIGEST"
+          echo "===== BACKLOG DIGEST ====="
+          printf '%s\n' "$BACKLOG_DIGEST"
+
+      # 3b. POST — two separate messages so each threads independently in
+      # #docs-ops. Webhook + channel come from ESC; posts as docsbot.
+      - name: Post PR digest to Slack
+        if: ${{ !inputs.dry_run }}
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_USERNAME: docsbot
+          SLACK_TITLE: "Weekly PR review queue"
+          SLACK_MESSAGE: ${{ steps.synth.outputs.pr_digest }}
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+          MSG_MINIMAL: "true"
+
+      - name: Post backlog digest to Slack
+        if: ${{ !inputs.dry_run }}
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_USERNAME: docsbot
+          SLACK_TITLE: "Weekly issue backlog"
+          SLACK_MESSAGE: ${{ steps.synth.outputs.backlog_digest }}
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
+          MSG_MINIMAL: "true"
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
