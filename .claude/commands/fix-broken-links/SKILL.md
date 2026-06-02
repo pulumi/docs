@@ -6,14 +6,7 @@ user-invocable: false
 
 # Fix Broken Links
 
-You are fixing the broken links found by the daily link checker
-(`scripts/link-checker/check-links.js`, run against `https://www.pulumi.com`).
-Work through every reported link, pick the right strategy for each, open one
-auditable PR, and file issues for anything that can't be fixed in this repo.
-
-This skill is the **single source of truth** for how broken links get fixed
-here. The strategies below are codified from how broken links have actually been
-resolved in this repo (PRs #19469, #17418, #19123, #19327, #19053).
+You are fixing the broken links found by the daily link checker (`scripts/link-checker/check-links.js`, run against `https://www.pulumi.com`). Work through every reported link, pick the right strategy for each, open one auditable PR, and file issues for anything that can't be fixed in this repo.
 
 ## Input
 
@@ -32,23 +25,16 @@ Read `.broken-links.json` from the repo root. Shape:
 - `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …).
 - `internal` — `destination` is on `pulumi.com`; `external` — third-party.
 
-If both lists are empty, do nothing (the workflow won't invoke you in that case,
-but be defensive).
+If both lists are empty, do nothing (the workflow won't invoke you in that case, but be defensive).
 
 ## Mapping a live URL back to its source file
 
-`source` and `destination` are live `https://www.pulumi.com/...` URLs. To edit
-or redirect them you must find the file that produces them:
+`source` and `destination` are live `https://www.pulumi.com/...` URLs. To edit or redirect them you must find the file that produces them:
 
 1. Strip the origin to get the path, e.g. `/docs/iac/concepts/stacks/`.
-2. Hugo content lives under `content/`. A path like `/docs/iac/concepts/stacks/`
-   is produced by `content/docs/iac/concepts/stacks/_index.md` or
-   `.../stacks.md`. Use **Glob**/**Grep** under `content/` to locate it.
-3. To find *which* file emits a broken **destination** link, Grep for the link
-   text under `content/`, `data/`, `layouts/`, and `static/` — it may come from
-   a data file, a shortcode, or a template, not prose.
-4. Registry, API-docs, and other generated paths have **no** source file in this
-   repo (see "Out of scope" below).
+2. Hugo content lives under `content/`. A path like `/docs/iac/concepts/stacks/` is produced by `content/docs/iac/concepts/stacks/_index.md` or `.../stacks.md`. Use **Glob**/**Grep** under `content/` to locate it.
+3. To find *which* file emits a broken **destination** link, Grep for the link text under `content/`, `data/`, `layouts/`, and `static/` — it may come from a data file, a shortcode, or a template, not prose.
+4. Registry, API-docs, and other generated paths have **no** source file in this repo (see "Out of scope" below).
 
 ## Per-link triage
 
@@ -67,8 +53,7 @@ Apply the first row that matches.
 
 ### Mechanics
 
-**Hugo alias.** Add the old path under `aliases:` in the destination page's
-frontmatter (root-relative, trailing slash):
+**Hugo alias.** Add the old path under `aliases:` in the destination page's frontmatter (root-relative, trailing slash):
 
 ```yaml
 aliases:
@@ -77,30 +62,17 @@ aliases:
 
 Full mechanics and edge cases: `move-doc:references:alias-injection`.
 
-**S3 redirect.** Append one line to the topic-appropriate file in
-`scripts/redirects/` (e.g. `cicd-redirects.txt`, `iac-cli-redirects.txt`,
-`general-broken-links-redirects.txt` when nothing more specific fits). Format is
-`source-path|destination-url`, one per line. The source is the path **without**
-a leading slash and usually ends in `/index.html`; the destination is
-root-relative (`/docs/.../`) or a full URL for off-site targets:
+**S3 redirect.** Append one line to the topic-appropriate file in `scripts/redirects/` (e.g. `cicd-redirects.txt`, `iac-cli-redirects.txt`, `general-broken-links-redirects.txt` when nothing more specific fits). Format is `source-path|destination-url`, one per line. The source is the path **without** a leading slash and usually ends in `/index.html`; the destination is root-relative (`/docs/.../`) or a full URL for off-site targets:
 
 ```
 docs/old/path/index.html|/docs/iac/new/path/
 ```
 
-**Edit at source.** Replace the broken link with the correct one. Internal docs
-links use the full canonical root-relative path (`/docs/iac/concepts/stacks/`);
-never `../`. This is the only strategy that touches prose, and for blog posts
-it's limited to equivalent-content link swaps.
+**Edit at source.** Replace the broken link with the correct one. Internal docs links use the full canonical root-relative path (`/docs/iac/concepts/stacks/`); never `../`. This is the only strategy that touches prose, and for blog posts it's limited to equivalent-content link swaps.
 
-**Blog `lastmod`.** Any blog edit must add or update `lastmod:` (ISO date,
-today) in that post's frontmatter so the change is reflected, while the original
-`date:`/publish date stays put so post ordering doesn't shift.
+**Blog `lastmod`.** Any blog edit must add or update `lastmod:` (ISO date, today) in that post's frontmatter so the change is reflected, while the original `date:`/publish date stays put so post ordering doesn't shift.
 
-**Exclusion list.** Add the URL to the array returned by
-`getDefaultExcludedKeywords()` in `scripts/link-checker/check-links.js`, grouped
-with similar entries, with an inline comment naming the reason and the
-post/issue, matching the existing style:
+**Exclusion list.** Add the URL to the array returned by `getDefaultExcludedKeywords()` in `scripts/link-checker/check-links.js`, grouped with similar entries, with an inline comment naming the reason and the post/issue, matching the existing style:
 
 ```js
 "https://example.com/gone",  // blog/<post>: 404, no replacement (#<issue>)
@@ -109,33 +81,24 @@ post/issue, matching the existing style:
 ## Editing guardrails
 
 - **Tutorials are editable** like docs — fix their links at the source.
-- **Blog prose is editable only** to substitute a broken link for an
-  equivalent-content replacement, and every such edit stamps `lastmod`. Blog
-  links with no equivalent replacement are routed around with an
-  alias/redirect/exclusion, never reworded.
+- **Blog prose is editable only** to substitute a broken link for an equivalent-content replacement, and every such edit stamps `lastmod`. Blog links with no equivalent replacement are routed around with an alias/redirect/exclusion, never reworded.
 - Internal links use full root-relative paths, never `../`.
 - `make lint` and `make build` must both pass before you open the PR.
 
 ## Output
 
-1. Create a branch `fix/broken-links-<date>` (date from the workflow, e.g.
-   `fix/broken-links-2026-06-02`).
+1. Create a branch `fix/broken-links-<date>` (date from the workflow, e.g. `fix/broken-links-2026-06-02`).
 2. Make the fixes, grouping related changes into clear commits.
 3. File a GitHub issue (`gh issue create`) for every out-of-scope item.
 4. Run `make lint` and `make build`; fix anything they surface.
 5. Open a **ready** (non-draft) PR to `master`.
-6. Write the final PR URL plus a one-line summary to `.broken-links-pr.txt` for
-   the workflow's Slack step, e.g.:
+6. Write the final PR URL plus a one-line summary to `.broken-links-pr.txt` for the workflow's Slack step, e.g.:
    `:link: Fixed 7 broken links — <PR URL> (2 aliases, 1 redirect, 3 source edits, 1 issue filed)`
 
 ## PR description contract (auditability)
 
-The reviewer must be able to audit every decision without re-deriving it. Model
-the description on PR #19469. Include:
+The reviewer must be able to audit every decision without re-deriving it. Model the description on PR #19469. Include:
 
-- **A table or list of every broken link** → the strategy applied → one line of
-  non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
-- A **Verification** section: confirm `make lint` and `make build` passed, and
-  note any spot-checks.
-- An **Out of scope / filed issues** section linking every issue you created for
-  breakage owned by other repos or otherwise unfixable here.
+- **A table or list of every broken link** → the strategy applied → one line of non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
+- A **Verification** section: confirm `make lint` and `make build` passed, and note any spot-checks.
+- An **Out of scope / filed issues** section linking every issue you created for breakage owned by other repos or otherwise unfixable here.
