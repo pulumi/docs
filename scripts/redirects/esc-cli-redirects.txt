@@ -13,7 +13,8 @@ docs/esc-cli/commands/esc_env_get/index.html|/docs/esc/cli/commands/esc_env_get/
 docs/esc-cli/commands/esc_env_init/index.html|/docs/esc/cli/commands/esc_env_init/
 docs/esc-cli/commands/esc_env_ls/index.html|/docs/esc/cli/commands/esc_env_ls/
 docs/esc-cli/commands/esc_env_open/index.html|/docs/esc/cli/commands/esc_env_open/
-docs/esc-cli/commands/esc_env_rollback/index.html|/docs/esc/cli/commands/esc_env_rollback/
+docs/esc-cli/commands/esc_env_rollback/index.html|/docs/esc/cli/commands/esc_env_version_rollback/
+docs/esc/cli/commands/esc_env_rollback/index.html|/docs/esc/cli/commands/esc_env_version_rollback/
 docs/esc-cli/commands/esc_env_rm/index.html|/docs/esc/cli/commands/esc_env_rm/
 docs/esc-cli/commands/esc_env_run/index.html|/docs/esc/cli/commands/esc_env_run/
 docs/esc-cli/commands/esc_env_set/index.html|/docs/esc/cli/commands/esc_env_set/

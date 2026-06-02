@@ -10,7 +10,7 @@ menu:
     parent: iac-operations-cicd
     weight: 30
 aliases:
-- /docs/iac/guides/continuous-delivery/azure-devops/
+    - /docs/iac/guides/continuous-delivery/azure-devops/
     - /docs/integrations/azure-devops/
     - /docs/iac/integrations/azure-devops/
     - /docs/iac/using-pulumi/continuous-delivery/azure-devops/
