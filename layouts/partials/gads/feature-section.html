@@ -1,0 +1,47 @@
+{{/*
+    GADS Feature Section Partial
+
+    Renders the repeated "feature section" layout used by key_features_above,
+    key_features, and key_features_below: bordered wrapper, H2 title,
+    2-col text + code chooser, 3-col sub-feature grid, primary CTA.
+
+    Iterates `items` so each item becomes its own bordered block.
+
+    Params:
+    - items: Array of items. Each item has:
+        - title:       Section title (h2)
+        - sub_title:   Sub-heading (h3) above the description
+        - description: Markdown description
+        - ide:         Optional code_snippets array for the chooser
+        - features:    Array of {icon, title, description}
+*/}}
+
+{{ $ctaLink := site.Params.cta.primary.href }}
+{{ $ctaLabel := site.Params.cta.primary.label }}
+
+{{ range $item := .items }}
+<div class="border-t p-8 md:p-16 lg:p-32 relative">
+    <div class="container mx-auto">
+        {{ partial "gads/section-header.html" (dict "title" $item.title) }}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            <div class="w-full my-auto text-left">
+                <h3>{{ $item.sub_title }}</h3>
+                <p class="body-lg">{{ $item.description | markdownify }}</p>
+            </div>
+            <div class="w-full">
+                {{ if $item.image }}
+                    <img src="{{ $item.image }}" alt="{{ $item.sub_title | default $item.title }}" />
+                {{ else }}
+                    {{ partial "gads/code-chooser.html" (dict "code_snippets" $item.ide) }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    {{ partial "gads/feature-grid.html" (dict "items" $item.features) }}
+
+    <div class="pt-8 text-center">
+        <a href="{{ $ctaLink }}" class="btn btn-primary btn-lg" data-role="cta-get-started">{{ $ctaLabel }}</a>
+    </div>
+</div>
+{{ end }}

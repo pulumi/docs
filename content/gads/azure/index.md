@@ -151,12 +151,15 @@ key_features:
                     ))
           features:
               - title: 100% API Coverage
+                icon: cloud
                 description: |
                     Full API coverage for Azure with same-day updates. Every property of each resource is always represented in the SDKs.
               - title: Policy as Code for Azure
+                icon: gavel
                 description: |
                     Set guardrails for resources to ensure best practices and security compliance are consistently followed, using [Pulumi Policies](/docs/insights/policy/).
               - title: Everything In One Place
+                icon: abstract-shapes
                 description: |
                     Full coverage for Azure services, including Azure Static Web Apps, Azure Logic Apps, Azure DevOps, Azure Blockchain Service, Azure API Management and more.
 
@@ -167,12 +170,15 @@ key_features:
           image: "/images/product/pulumi-cicd.png"
           features:
               - title: Version and review
+                icon: git-merged
                 description: |
                     Manage infrastructure code in Git and approve changes through pull requests.
               - title: Shift left
+                icon: eye
                 description: |
                     Get rapid feedback on your code with fast [unit tests](/docs/iac/concepts/testing/unit/), and run [integration tests](/docs/iac/concepts/testing/integration/) against ephemeral infrastructure.
               - title: Continuous delivery
+                icon: cycle
                 description: |
                     [Integrate your CI/CD provider](/docs/iac/packages-and-automation/continuous-delivery/) with Pulumi or use GitOps to [manage Kubernetes clusters](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/).
 
@@ -199,30 +205,39 @@ key_features_below:
           image: "/images/product/pulumi-cloud-iac-stylized-01.png"
           features:
               - title: Pulumi IaC
+                icon: code
                 description: |
                     Utilize open-source IaC in C#, TypeScript, Python, Go, Java and YAML. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
+                icon: lock
                 description: |
                     Centralized secrets management & orchestration. Tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
               - title: Automate deployment workflows
+                icon: cycle
                 description: |
                     Orchestrate secure deployment workflows through GitHub or an API.
               - title: Search and analytics
+                icon: eye
                 description: |
                     View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
               - title: Pulumi Automation API
+                icon: gear
                 description: |
                     Build custom deployment and CI/CD workflows that integrate with Pulumi Developer Portal, custom portals, or CLIs.
               - title: Developer portals
+                icon: buildings
                 description: |
                     Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
               - title: Identity and access control
+                icon: security
                 description: |
                     Manage teams with SCIM, SAML SSO, GitHub, GitLab, or Atlassian. Set permissions and access tokens.
               - title: Policy enforcement
+                icon: gavel
                 description: |
                     Build policy packs from 150 policies or write your own. Leverage compliance-ready policies for any cloud to increase compliance posture and remediation policies to correct violations.
               - title: Audit logs
+                icon: clipboard
                 description: |
                     Track and store user actions and change history with the option to export logs.
 
@@ -231,7 +246,7 @@ case_studies:
     items:
         - name: Atlassian
           link: /case-studies/atlassian/
-          logo: atlassian
+          logo: atlassian-wordmark
           description: |
             Developers reduced their time spent on maintenance by 50%.
 
