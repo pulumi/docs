@@ -27,6 +27,18 @@ Read `.broken-links.json` from the repo root. Shape:
 
 If both lists are empty, do nothing (the workflow won't invoke you in that case, but be defensive).
 
+## Verify each link before fixing it
+
+**The checker produces false positives — never fix a link without confirming it's actually broken.** The crawler hits live URLs with a bot user agent, so it routinely mis-flags links that are fine in a browser: bot-protected sites, transient `5xx`/timeouts, rate-limiting, auth walls, and pages that block automated clients. `excludeAcceptable()` already filters the common transient reasons, but plenty slip through — especially in the `external` list.
+
+For **every** reported link, confirm it's genuinely broken before touching anything:
+
+1. **Re-check the destination** — `WebFetch` (or `curl -sIL`) the URL. If it resolves, it's a false positive.
+2. **Weigh the reason code.** Internal `HTTP_404`/`HTTP_410` on a `pulumi.com` path is almost always real. External failures, and codes like `HTTP_403`, `HTTP_401`, `HTTP_429`, `HTTP_503`, or connection/timeout errors, are frequently bot protection or transient — treat as suspect until confirmed.
+3. **If it's a false positive, do not edit, redirect, or exclude it.** Leave the link as-is and record it in the PR audit trail under a **False positives / not actioned** section, with the URL, the reason code, and one line on why it's fine (e.g. "resolves in browser; 403 is Cloudflare bot protection"). Optionally suggest it as a future exclusion-list candidate, but don't add it unless it's a recurring offender.
+
+Only links you've confirmed broken proceed to triage below.
+
 ## Mapping a live URL back to its source file
 
 `source` and `destination` are live `https://www.pulumi.com/...` URLs. To edit or redirect them you must find the file that produces them:
@@ -100,5 +112,6 @@ docs/old/path/index.html|/docs/iac/new/path/
 The reviewer must be able to audit every decision without re-deriving it. Model the description on PR #19469. Include:
 
 - **A table or list of every broken link** → the strategy applied → one line of non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
-- A **Verification** section: confirm `make lint` and `make build` passed, and note any spot-checks.
+- A **Verification** section: confirm `make lint` and `make build` passed, and note that each link was re-checked before fixing.
+- A **False positives / not actioned** section listing every reported link you confirmed was actually fine, with its reason code and why (so the reviewer knows it was checked, not missed).
 - An **Out of scope / filed issues** section linking every issue you created for breakage owned by other repos or otherwise unfixable here.
