@@ -1,6 +1,7 @@
 ---
 title: "Neo, Now in the Terminal"
 date: 2026-05-20
+lastmod: 2026-06-03
 meta_desc: "Pulumi Neo is now available on the command line. Chat with Neo or run headlessly with the combined context of Pulumi Cloud and your local environment."
 authors:
     - neo-team
@@ -53,4 +54,4 @@ Integrations carry over too. The [integration catalog](/blog/neo-integration-cat
 1. Authenticate to Pulumi Cloud with `pulumi login`.
 1. Run `pulumi neo`, or pass an initial prompt: `pulumi neo "what's in this stack?"`.
 
-`pulumi neo` is part of a [broader launch](/releases/agentic-infrastructure-era/) on [agentic infrastructure](/blog/the-agentic-infrastructure-era/). See the [`pulumi neo` command reference](/docs/iac/cli/commands/pulumi_neo/) and the [Pulumi Neo docs](/docs/ai/) for details. [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) is a good starting point for tasks to try. The [Pulumi Community Slack](https://pulumi.com/slack/) is the place for questions and feedback.
+`pulumi neo` is part of a [broader launch](/releases/agentic-infrastructure-era/) on [agentic infrastructure](/blog/the-agentic-infrastructure-era/). See the [`pulumi neo` command reference](/docs/iac/cli/commands/pulumi_neo/) and the [Pulumi Neo docs](/docs/ai/) for details. [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) is a good starting point for tasks to try. The [Pulumi Community Slack](https://slack.pulumi.com/) is the place for questions and feedback.
