@@ -51,16 +51,6 @@ On this machine, `llama.cpp` reported about **20 output tokens per second** for 
 
 You'll need `brew`, `docker`, `pulumi`, and `tailscale` installed. We'll also install `k3d` during the process.
 
-## Create a disposable validation folder
-
-Before we start, create a clean workspace to avoid cluttering your system.
-
-```bash
-scratch="$(mktemp -d "${TMPDIR:-/tmp}/pulumi-gemma4-blog-qa.XXXXXX")"
-mkdir -p "$scratch"/{home,cache,logs,models,repo,stacks,evidence}
-cd "$scratch"
-```
-
 ## Run Gemma 4 with host-native llama.cpp
 
 We use `llama.cpp` directly on macOS to leverage Apple Metal acceleration. Running the LLM on the host is more efficient than trying to pass GPU access into a local Kubernetes VM.
