@@ -38,12 +38,12 @@ Open-weight models now run well on consumer hardware. Once the model is on your 
 
 [Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12&nbsp;B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12&nbsp;B model fits comfortably on a modern Mac while leaving enough headroom for a local server and chat UI.
 
-We'll use `llama.cpp` for host-native inference, `k3d` for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.
+We'll use `llama.cpp` for host-native inference, [k3d](https://k3d.io/) for a local Kubernetes cluster, Pulumi for infrastructure as code, and [Tailscale](https://tailscale.com/) for secure access.
 
 ## Prerequisites
 
 This setup was validated on the following hardware:
-- macOS 26.5
+- macOS 26 Tahoe, version 26.5
 - MacBook Pro with Apple M3 Max
 - 36 GB RAM
 
@@ -105,7 +105,7 @@ The model file is about 12.65 GB, and the projector is about 116 MB. Gemma 4 12&
 
 With `--mmproj`, `/v1/models` advertised `capabilities: ["completion","multimodal"]`. In local validation, Open WebUI accepted an uploaded Pulumi logo image and Gemma 4 described it correctly. A small WAV file also worked through the OpenAI-compatible `input_audio` request shape, though `llama.cpp` logs still mark audio input as experimental.
 
-![Open WebUI using local Gemma 4 12 B to describe an uploaded Pulumi logo](describe_image.png)
+{{< figure src="describe_image.png" alt="Open WebUI using local Gemma 4 12 B to describe an uploaded Pulumi logo" width=100% >}}
 
 ### Verify the LLM API
 
@@ -203,7 +203,7 @@ launchctl bootout gui/$(id -u)/com.pulumi.gemma4.llama-server
 
 ## Deploy Open WebUI with Pulumi and k3d
 
-Now we'll deploy Open WebUI into a local Kubernetes cluster. This provides a polished chat interface that connects to our host-native LLM.
+Now we'll deploy [Open WebUI](https://github.com/open-webui/open-webui) into a local Kubernetes cluster. This provides a polished chat interface that connects to our host-native LLM.
 
 First, install `k3d` if you haven't already:
 
@@ -217,7 +217,7 @@ Create a new cluster for this project:
 k3d cluster create pulumi-gemma4-blog-qa
 ```
 
-We'll use the Pulumi program in [`pulumi/examples`](https://github.com/pulumi/examples/tree/master/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
+We'll use the Pulumi program being added to [`pulumi/examples`](https://github.com/pulumi/examples/pull/2835). Until that PR merges, use the PR branch at [`pablo/self-host-gemma4-llm`](https://github.com/pulumi/examples/tree/pablo/self-host-gemma4-llm/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
 
 Why not run the LLM inside Kubernetes on this Mac? Pulumi can do that, and the example supports it with `runtimeMode=cluster`, but that path is meant for Linux hosts with NVIDIA or AMD GPU device plugins.
 
@@ -226,7 +226,7 @@ On macOS, [`llama.cpp` enables Metal by default](https://github.com/ggml-org/lla
 Clone the examples repo, navigate to the program directory, and initialize a new stack:
 
 ```bash
-git clone https://github.com/pulumi/examples.git
+git clone --branch pablo/self-host-gemma4-llm --single-branch https://github.com/pulumi/examples.git
 cd examples/kubernetes-py-self-host-gemma4-llm
 pulumi stack init gemma4-local
 ```
@@ -267,7 +267,7 @@ Once configured, Pulumi will create a Tailscale device or proxy that routes traf
 
 ## Use the model with Pi
 
-Open WebUI gives you a browser-based chat interface, but local models are also useful from coding agents. Pi can point at the same OpenAI-compatible `llama.cpp` endpoint and use the model running on your Mac.
+Open WebUI gives you a browser-based chat interface, but local models are also useful from coding agents. Pi is the local coding agent used for this validation; if you do not use Pi, treat this section as an example of how any OpenAI-compatible client can point at the same local endpoint. Pi can point at the same OpenAI-compatible `llama.cpp` endpoint and use the model running on your Mac.
 
 For a fresh Pi config, create `~/.pi/agent/models.json` with a local provider that points at the `llama.cpp` server:
 
@@ -316,7 +316,7 @@ Then set Pi to use that provider and model by default in `~/.pi/agent/settings.j
 
 If you already have Pi configuration files, merge the `local-llama` provider and defaults into your existing JSON instead of replacing the files.
 
-![Pi connected to local Gemma 4 through llama.cpp](pi.png)
+{{< figure src="pi.png" alt="Pi connected to local Gemma 4 through llama.cpp" width=100% >}}
 
 ## Advanced: Linux GPU in-cluster serving
 
