@@ -20,6 +20,8 @@ The `aws-login` provider enables you to log in to your AWS account using OpenID 
 
 ## Example
 
+The `aws-login` provider's outputs can be consumed by the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/), the `aws` CLI, and the AWS SDKs. Because all three read the same standard AWS environment variables, a single `environmentVariables` block covers all of them:
+
 ```yaml
 values:
   aws:
@@ -30,9 +32,12 @@ values:
           roleArn: arn:aws:iam::012345678912:role/role-abcd123
           sessionName: pulumi-esc
   environmentVariables:
+    # Credentials consumed by the aws CLI, the AWS SDKs, and the Pulumi AWS provider
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
+    # Sets the region for the aws CLI, the AWS SDKs, and the Pulumi AWS provider
+    AWS_REGION: us-west-2
 ```
 
 ## Configuring OIDC
