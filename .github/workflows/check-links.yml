@@ -89,17 +89,26 @@ jobs:
             Follow `.claude/commands/fix-broken-links/SKILL.md` exactly. In short:
 
             1. Read `.broken-links.json`.
-            2. Create a branch `fix/broken-links-${{ steps.detect.outputs.date }}`.
-            3. Triage and fix every broken link using the strategies in the skill
+            2. Verify each link is genuinely broken (the checker has false
+               positives), then skip any already covered by an open PR or
+               existing issue (deduplication — see the skill).
+            3. If every confirmed-broken link is a duplicate, open no PR: just
+               write the "all already tracked" Slack summary to
+               `.broken-links-pr.txt` and stop. Otherwise, for the actionable
+               (non-duplicate) links:
+            4. Create a branch `fix/broken-links-${{ steps.detect.outputs.date }}`.
+            5. Triage and fix each broken link using the strategies in the skill
                (alias, S3 redirect, source edit, exclusion, or out-of-scope issue).
-            4. File a GitHub issue for anything that can't be fixed in this repo.
-            5. Run `make lint` and `make build`; resolve anything they surface.
-            6. Open a **ready** (non-draft) PR to `master` with the auditable
+            6. File a GitHub issue for new out-of-scope items (reuse the existing
+               issue for duplicates).
+            7. Run `make lint` and `make build`; resolve anything they surface.
+            8. Open a **ready** (non-draft) PR to `master` with the auditable
                description the skill describes (every link → strategy → reasoning,
-               a Verification section, and an Out-of-scope/filed-issues section).
-            7. Write the final PR URL and a one-line summary to
+               plus Verification, False-positives, Already-tracked, and
+               Out-of-scope/filed-issues sections).
+            9. Write the final PR URL and a one-line summary to
                `.broken-links-pr.txt` for the Slack notification.
-          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(gh api:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(curl:*)"'
+          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue create:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(curl:*)"'
       # Post the PR link to #docs-ops. Gated on the results file the Claude step
       # writes, so a run where Claude couldn't open a PR stays silent rather than
       # posting an empty message.

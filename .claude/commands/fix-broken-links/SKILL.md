@@ -39,6 +39,38 @@ For **every** reported link, confirm it's genuinely broken before touching anyth
 
 Only links you've confirmed broken proceed to triage below.
 
+## Skip links already being handled (deduplication)
+
+Broken links persist for days, so the same ones surface in consecutive runs while
+a fix is already in flight. **Before actioning a confirmed-broken link, check
+whether it's already covered** — never open a second PR for a fix that's pending,
+or file a duplicate issue.
+
+For each confirmed-broken link, search for prior work:
+
+1. **Open PRs in `pulumi/docs`.** List candidates with
+   `gh pr list --state open --search "broken link" --json number,title,url,headRefName`
+   (prior runs use the `fix/broken-links-*` branch pattern). For a likely match,
+   confirm with `gh pr view <n>` / `gh pr diff <n>` that it actually covers this
+   link (same destination URL, source file, redirect, or exclusion entry).
+2. **Existing issues, before filing a new one.** For an out-of-scope item that
+   would become an issue in another repo, search that repo first —
+   `gh issue list --repo pulumi/<repo> --state open --search "<url-or-path>"`
+   (or `gh search issues`). If an open issue already tracks it, treat it as a
+   duplicate and reuse that issue's link; do **not** file another.
+
+Classify each confirmed-broken link as **actionable** (no existing PR/issue
+covers it) or **duplicate** (one does — capture the PR/issue URL). Then:
+
+- **All duplicates** (every confirmed-broken link is already covered): do **not**
+  create a branch, PR, or any issue. Write a Slack summary to
+  `.broken-links-pr.txt` saying so and listing each link with its existing
+  PR/issue link, e.g. `:link: 5 broken links — all already tracked (no new PR): <url> → #19470, …`. Stop here.
+- **Some actionable, some duplicates:** action only the non-duplicates (open the
+  PR, file new issues). **Omit duplicates from the fixes**, but list them in a
+  short **Already tracked** section in the PR description (one line each, linking
+  the existing PR/issue). Don't re-file or re-fix them.
+
 ## Mapping a live URL back to its source file
 
 `source` and `destination` are live `https://www.pulumi.com/...` URLs. To edit or redirect them you must find the file that produces them:
@@ -99,9 +131,14 @@ docs/old/path/index.html|/docs/iac/new/path/
 
 ## Output
 
+If **every** confirmed-broken link is a duplicate (see deduplication above), skip
+all of the below: open no branch, PR, or issue, write the "all already tracked"
+Slack summary to `.broken-links-pr.txt`, and stop. Otherwise, for the actionable
+(non-duplicate) links:
+
 1. Create a branch `fix/broken-links-<date>` (date from the workflow, e.g. `fix/broken-links-2026-06-02`).
 2. Make the fixes, grouping related changes into clear commits.
-3. File a GitHub issue (`gh issue create`) for every out-of-scope item.
+3. File a GitHub issue (`gh issue create`) for every **new** out-of-scope item (reuse the existing issue for duplicates).
 4. Run `make lint` and `make build`; fix anything they surface.
 5. Open a **ready** (non-draft) PR to `master`.
 6. Write the final PR URL plus a one-line summary to `.broken-links-pr.txt` for the workflow's Slack step, e.g.:
@@ -114,4 +151,5 @@ The reviewer must be able to audit every decision without re-deriving it. Model 
 - **A table or list of every broken link** → the strategy applied → one line of non-obvious reasoning (why a redirect vs. an alias, why excluded, etc.).
 - A **Verification** section: confirm `make lint` and `make build` passed, and note that each link was re-checked before fixing.
 - A **False positives / not actioned** section listing every reported link you confirmed was actually fine, with its reason code and why (so the reviewer knows it was checked, not missed).
+- An **Already tracked** section, when any link was skipped as a duplicate: one succinct line per link linking the existing PR or issue that covers it.
 - An **Out of scope / filed issues** section linking every issue you created for breakage owned by other repos or otherwise unfixable here.
