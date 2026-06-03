@@ -127,6 +127,10 @@ k3d cluster create pulumi-gemma4-blog-qa
 
 We'll use the Pulumi program in [`pulumi/examples`](https://github.com/pulumi/examples/tree/master/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
 
+Why not run the LLM inside Kubernetes on this Mac? Pulumi can do that, and the example supports it with `runtimeMode=cluster`, but that path is meant for Linux hosts with NVIDIA or AMD GPU device plugins.
+
+On macOS, [`llama.cpp` enables Metal by default](https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md#metal-build), and Metal acceleration is available to native macOS processes. k3d runs Linux containers through Docker Desktop, so those pods do not get direct access to the Mac's Metal device. Docker's own [vLLM Metal announcement](https://www.docker.com/blog/docker-model-runner-vllm-metal-macos/) calls out the same boundary: Metal-backed inference runs natively on the host because there is no Metal GPU passthrough for containers. That is why this setup keeps inference host-native and lets Pulumi manage the Kubernetes UI, service wiring, and optional Tailscale access around it.
+
 Clone the examples repo, navigate to the program directory, and initialize a new stack:
 
 ```bash
@@ -173,16 +177,54 @@ Once configured, Pulumi will create a Tailscale device or proxy that routes traf
 
 Open WebUI gives you a browser-based chat interface, but local models are also useful from coding agents. Pi can point at the same OpenAI-compatible `llama.cpp` endpoint and use the model running on your Mac.
 
+For a fresh Pi config, create `~/.pi/agent/models.json` with a local provider that points at the `llama.cpp` server:
+
+```json
+{
+  "providers": {
+    "local-llama": {
+      "baseUrl": "http://127.0.0.1:18080/v1",
+      "api": "openai-completions",
+      "apiKey": "local",
+      "compat": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false
+      },
+      "models": [
+        {
+          "id": "unsloth/gemma-4-26B-A4B-it-GGUF",
+          "name": "Gemma 4 26B A4B MXFP4 (local llama.cpp)",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 8192,
+          "maxTokens": 1024,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+Then set Pi to use that provider and model by default in `~/.pi/agent/settings.json`:
+
+```json
+{
+  "defaultProvider": "local-llama",
+  "defaultModel": "unsloth/gemma-4-26B-A4B-it-GGUF",
+  "defaultThinkingLevel": "off",
+  "hideThinkingBlock": true
+}
+```
+
+If you already have Pi configuration files, merge the `local-llama` provider and defaults into your existing JSON instead of replacing the files.
+
 ![Pi connected to local Gemma 4 through llama.cpp](pi.png)
-
-## MLX benchmark on Apple Silicon
-
-We also tested [MLX](https://github.com/ml-explore/mlx), Apple's dedicated machine learning framework. Using `mlx-community/gemma-4-31b-4bit`, we observed useful performance:
-
-- **Generation speed**: 14.955 tokens/sec
-- **Peak memory**: 17.538 GB
-
-However, we found that the MLX server warned it wasn't production-ready and lacked some security features. The model also struggled with following short prompts during our tests. For these reasons, we recommend `llama.cpp` with the Unsloth Gemma 4 26 B A4B MXFP4 GGUF as the default for now.
 
 ## Advanced: Linux GPU in-cluster serving
 
