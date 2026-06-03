@@ -65,7 +65,13 @@ cd "$scratch"
 
 We use `llama.cpp` directly on macOS to leverage Apple Metal acceleration. Running the LLM on the host is more efficient than trying to pass GPU access into a local Kubernetes VM.
 
-Download and run the model with this command:
+Install `llama.cpp` with Homebrew:
+
+```bash
+brew install llama.cpp
+```
+
+Then download and run the model with this command:
 
 ```bash
 llama-server \
@@ -76,7 +82,7 @@ llama-server \
   --ctx-size 8192
 ```
 
-We used port `18080` because the default `8080` was occupied by an existing SSH tunnel. If your port `8080` is free, you can use it and adjust the Pulumi config later.
+We use port `18080` because `8080` is commonly used and is likely to conflict with another service you may already have running locally. If your port `8080` is free, you can use it and adjust the Pulumi config later.
 
 The model file is about 16.55 GB. With an 8,192-token context, it leaves more headroom than the dense 31 B Q4 model while still providing a strong local Gemma 4 experience.
 
