@@ -3,7 +3,7 @@ title: "Use Your Mac for AI Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-06-03
 meta_desc: |
-    Self-host Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12&nbsp;B Q8 GGUF with a 128K context window.
+    Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12&nbsp;B Q8 GGUF with a 128K context window.
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -65,18 +65,42 @@ cd "$scratch"
 
 We use `llama.cpp` directly on macOS to leverage Apple Metal acceleration. Running the LLM on the host is more efficient than trying to pass GPU access into a local Kubernetes VM.
 
-Install `llama.cpp` with Homebrew:
+Install the build tools:
 
 ```bash
-brew install llama.cpp
+brew install cmake git
+```
+
+Then build `llama.cpp` from source and download the multimodal projector. In validation, Homebrew `llama.cpp` 9430 could run text inference, but it could not load the new Gemma 4 12&nbsp;B projector and failed with `unknown projector type: gemma4uv`. Building current `llama.cpp` from source fixed that.
+
+```bash
+llm_home="$HOME/pulumi-gemma4-llm"
+mkdir -p "$llm_home/models" "$llm_home/logs"
+
+if [ ! -d "$llm_home/llama.cpp/.git" ]; then
+  git clone --depth 1 https://github.com/ggml-org/llama.cpp.git "$llm_home/llama.cpp"
+fi
+
+cmake -S "$llm_home/llama.cpp" \
+  -B "$llm_home/llama.cpp/build" \
+  -DGGML_METAL=ON \
+  -DGGML_BLAS=ON \
+  -DCMAKE_BUILD_TYPE=Release
+
+cmake --build "$llm_home/llama.cpp/build" --target llama-server -j 10
+
+curl -L --fail \
+  --output "$llm_home/models/mmproj-F16.gguf" \
+  https://huggingface.co/unsloth/gemma-4-12b-it-GGUF/resolve/main/mmproj-F16.gguf
 ```
 
 Then download and run the model with this command:
 
 ```bash
-llama-server \
+"$HOME/pulumi-gemma4-llm/llama.cpp/build/bin/llama-server" \
   --hf-repo unsloth/gemma-4-12b-it-GGUF \
   --hf-file gemma-4-12b-it-Q8_0.gguf \
+  --mmproj "$HOME/pulumi-gemma4-llm/models/mmproj-F16.gguf" \
   --host 127.0.0.1 \
   --port 18080 \
   --ctx-size 131072 \
@@ -87,9 +111,9 @@ llama-server \
 
 We use port `18080` because `8080` is commonly used and is likely to conflict with another service you may already have running locally. If your port `8080` is free, you can use it and adjust the Pulumi config later.
 
-The model file is about 12.65 GB. Gemma 4 12&nbsp;B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for this run, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
+The model file is about 12.65 GB, and the projector is about 116 MB. Gemma 4 12&nbsp;B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for the text model and about 258 MiB worst-case memory for the projector, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
 
-Gemma 4 12&nbsp;B is a multimodal model, but this walkthrough serves the Unsloth GGUF through `llama.cpp` as a text endpoint. In our local validation, `/v1/models` advertised `capabilities: ["completion"]`. Open WebUI may gray out image, audio, or video upload options in this setup because image input needs a matching `--mmproj` file, and Gemma 4 audio input is not yet supported by `llama.cpp`. The text chat, text file, and PDF workflows still use the same local model endpoint.
+With `--mmproj`, `/v1/models` advertised `capabilities: ["completion","multimodal"]`. In local validation, Open WebUI accepted an uploaded Pulumi logo image and Gemma 4 described it correctly. A small WAV file also worked through the OpenAI-compatible `input_audio` request shape, though `llama.cpp` logs still mark audio input as experimental.
 
 ### Verify the LLM API
 
@@ -128,9 +152,10 @@ set -euo pipefail
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-exec llama-server \
+exec "$HOME/pulumi-gemma4-llm/llama.cpp/build/bin/llama-server" \
   --hf-repo unsloth/gemma-4-12b-it-GGUF \
   --hf-file gemma-4-12b-it-Q8_0.gguf \
+  --mmproj "$HOME/pulumi-gemma4-llm/models/mmproj-F16.gguf" \
   --host 127.0.0.1 \
   --port 18080 \
   --ctx-size 131072 \
