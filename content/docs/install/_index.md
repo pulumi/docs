@@ -513,11 +513,12 @@ For Claude Code users, the plugin system provides the simplest installation expe
 
 ```bash
 claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration     # Install migration skills
-claude plugin install pulumi-authoring     # Install authoring skills
+claude plugin install pulumi-migration      # Install migration skills
+claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
+claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
 ```
 
-You can install both plugin groups or choose only the ones you need.
+You can install all plugin groups or choose only the ones you need.
 
 ### Universal installation
 
