@@ -49,6 +49,10 @@ typedoc.json
 # Ignore the files we generate during the build and deployment process.
 origin-bucket-metadata.json
 
+# Daily link-checker workflow artifacts (gitignored, not checked in).
+.broken-links.json
+.broken-links-pr.txt
+
 # Ignore js scripts added to the static folder
 static/js
 

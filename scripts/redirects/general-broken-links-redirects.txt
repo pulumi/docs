@@ -81,3 +81,4 @@ jobs/index.html|/careers/
 company/jobs/index.html|/careers/
 careers/jobs/index.html|/careers/
 company/pulumi/jobs/index.html|/careers/
+registry/packages/kubernetes/how-to-guides/v4-migration/index.html|/registry/packages/kubernetes/how-to-guides/
