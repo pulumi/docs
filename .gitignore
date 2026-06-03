@@ -100,6 +100,10 @@ _vendor/
 # Ignore log files.
 /scripts/link-checker/pages-with-broken-links.txt
 
+# Link-checker outputs consumed by the check-links workflow (generated at runtime).
+/.broken-links.json
+/.broken-links-pr.txt
+
 .doctrees/
 .buildinfo
 

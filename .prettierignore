@@ -55,4 +55,5 @@ static/js
 # Conductor workspace state
 .context
 
+**/.claude/settings.json
 **/.claude/settings.local.json

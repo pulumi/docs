@@ -77,8 +77,8 @@ Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias 
 
 When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
-- **DO update** links in `/content/docs/` and `/content/product/`.
-- **DO NOT update** links in `/content/blog/` or `/content/tutorials/` — they're historical.
+- **DO update** links in `/content/docs/`, `/content/product/`, and `/content/tutorials/`.
+- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement (stamp `lastmod`); otherwise route around it with an alias/redirect.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
 For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.

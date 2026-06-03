@@ -1,5 +1,4 @@
 const { HtmlUrlChecker } = require("broken-link-checker");
-const { WebClient, LogLevel } = require('@slack/web-api');
 const httpServer = require("http-server");
 const Sitemapper = require("sitemapper").default;
 const sitemap = new Sitemapper();
@@ -22,6 +21,10 @@ function isInternalLink(url) {
         return false;
     }
 }
+
+// Path of the file the checker writes its final results to. Downstream tooling
+// (the link-fix workflow) reads this and hands it to the Claude Code action.
+const RESULTS_FILE = ".broken-links.json";
 
 // Additional routes to check that are not included in the sitemap.
 const additionalRoutes = [
@@ -188,42 +191,35 @@ async function onComplete(brokenLinks) {
 
     const totalFiltered = filteredInternal.length + filteredExternal.length;
 
-    if (totalFiltered > 0) {
-
-        // If we failed and a retry count was provided, retry. Note that retry count !==
-        // run count, so a retry count of 1 means run once, then retry once, which means a
-        // total run count of two.
-        if (maxRetries > 0 && retryCount < maxRetries) {
-            retryCount += 1;
-            console.log(`Retrying (${retryCount} of ${maxRetries})...`);
-            checkLinks();
-            return;
-        }
-
-        // Post internal broken links first (if any)
-        if (filteredInternal.length > 0) {
-            const internalList = filteredInternal
-                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
-                .join("\n");
-
-            const internalMessage = `:pulumipus-jedi: *Internal Broken Links (${filteredInternal.length} found)*\nThese are links within pulumi.com that need attention:\n\n${internalList}`;
-
-            console.warn("Posting internal broken links to Slack: " + internalList);
-            await postToSlack("docs-ops", internalMessage);
-        }
-
-        // Post external broken links second (if any)
-        if (filteredExternal.length > 0) {
-            const externalList = filteredExternal
-                .map(link => `:link: <${link.source}|${new URL(link.source).pathname}> → ${link.destination} (${link.reason})`)
-                .join("\n");
-
-            const externalMessage = `:pulumipus-sith: *External Broken Links (${filteredExternal.length} found)*\nThese are links to third-party sites (may be false positives due to bot protection):\n\n${externalList}`;
-
-            console.warn("Posting external broken links to Slack: " + externalList);
-            await postToSlack("docs-ops", externalMessage);
-        }
+    // If we failed and a retry count was provided, retry. Note that retry count !==
+    // run count, so a retry count of 1 means run once, then retry once, which means a
+    // total run count of two.
+    if (totalFiltered > 0 && maxRetries > 0 && retryCount < maxRetries) {
+        retryCount += 1;
+        console.log(`Retrying (${retryCount} of ${maxRetries})...`);
+        checkLinks();
+        return;
     }
+
+    // Write the final results to disk for downstream tooling. We write on every
+    // final pass — including clean runs, which produce empty lists — so the
+    // workflow can branch on the contents and stay silent when nothing is
+    // broken. Slack posting now happens at the workflow level (the link-fix PR
+    // link), not here. Broken links are already logged to the console as they're
+    // found, in onLink.
+    writeResults(filteredInternal, filteredExternal);
+}
+
+// Writes the final broken-link results to RESULTS_FILE in the shape downstream
+// tooling expects: a generation timestamp plus separate internal/external lists.
+function writeResults(internal, external) {
+    const results = {
+        generated: new Date().toISOString(),
+        internal,
+        external,
+    };
+    fs.writeFileSync(RESULTS_FILE, JSON.stringify(results, null, 2) + "\n");
+    console.log(`Wrote ${internal.length + external.length} broken link(s) to ${RESULTS_FILE}.`);
 }
 
 /**
@@ -482,25 +478,6 @@ function excludeAcceptable(links) {
         // https://github.com/stevenvachon/broken-link-checker/blob/43770535ad7b84cadec9dc54c5140694389e33dc/lib/internal/streamHTML.js#L36-L39
         .filter(b => !b.reason.startsWith(`Expected type "text/html"`))
     );
-}
-
-// Posts a message to the designated Slack channel.
-async function postToSlack(channel, text) {
-    const token = process.env.SLACK_ACCESS_TOKEN;
-
-    if (!token) {
-        console.warn("No SLACK_ACCESS_TOKEN on the environment. Skipping.");
-        return;
-    }
-
-    const client = new WebClient(token, { logLevel: LogLevel.ERROR });
-    return await client.chat.postMessage({
-        text,
-        channel: `#${channel}`,
-        as_user: true,
-        mrkdwn: true,
-        unfurl_links: false,
-    });
 }
 
 // Adds a broken link to the running list.
