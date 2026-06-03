@@ -116,6 +116,7 @@ title: "Title in Title Case"
 # If user selected "I don't know yet": Add TODO comment above date
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
+draft: false
 meta_desc: "The one-sentence summary provided by user"
 meta_image: meta.png
 feature_image: feature.png
