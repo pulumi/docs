@@ -119,6 +119,8 @@ def shape_issues(raw):
                 "title": issue["title"],
                 "author": login,
                 "age_days": days_since(issue.get("createdAt")),
+                "needs_triage": "needs-triage"
+                in [lbl["name"] for lbl in issue.get("labels", [])],
             }
         )
     aged = [i for i in enriched if i["age_days"] is not None]
@@ -130,7 +132,7 @@ def shape_issues(raw):
     return {
         "all_open_count": len(enriched),
         "new_this_week": [
-            {k: i[k] for k in ("number", "title", "author", "age_days")}
+            {k: i[k] for k in ("number", "title", "author", "age_days", "needs_triage")}
             for i in new_this_week
         ],
         "oldest_open": [

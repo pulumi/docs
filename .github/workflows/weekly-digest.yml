@@ -136,6 +136,7 @@ jobs:
       # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no unfurl.
       - name: Post digest to Slack
         if: ${{ !inputs.dry_run }}
+        timeout-minutes: 3
         env:
           SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           SLACK_CHANNEL: docs-ops
