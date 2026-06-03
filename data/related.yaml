@@ -1265,7 +1265,7 @@ fargate-vs-ec2:
   - easy-ai-apps-with-langserve-and-pulumi
   - advanced-aws-networking-part-2
 
-self-host-qwen-llama-cpp-k8s-tailscale-pulumi:
+self-host-gemma4-llama-cpp-k8s-tailscale-pulumi:
   - deploy-openclaw-aws-hetzner
   - low-code-llm-apps-with-local-ai-flowise-and-pulumi
   - mlops-huggingface-llm-aws-sagemaker-python
