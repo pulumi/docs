@@ -1,8 +1,8 @@
 ---
-title_tag: TypeScript/JavaScript SDK | Pulumi ESC
-title: TypeScript (Node.js)
-h1: "Pulumi ESC: TypeScript/JavaScript SDK"
-meta_desc: This page provides an overview on how to use Pulumi ESC TypeScript/JavaScript SDK.
+title_tag: TypeScript | Pulumi ESC SDK
+title: TypeScript
+h1: "Pulumi ESC: TypeScript SDK"
+meta_desc: This page provides an overview on how to use the Pulumi ESC TypeScript SDK.
 menu:
   esc:
     parent: esc-languages-sdks
@@ -13,7 +13,9 @@ aliases:
   - /docs/esc/development/languages-sdks/javascript/
 ---
 
-The [JavaScript/TypeScript SDK](https://www.npmjs.com/package/@pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
+Pulumi ESC provides a TypeScript SDK for managing environments and reading their configuration and secrets from your own code. The SDK is written for TypeScript and can also be used from JavaScript on Node.js.
+
+{{< esc-sdk-config-note >}}
 
 Here are some of the scenarios the SDK can automate:
 
@@ -24,6 +26,21 @@ Here are some of the scenarios the SDK can automate:
 * List environment revisions and create new revision tags
 * Check environment definitions for errors
 
+## Runtime support
+
+The SDK runs on Node.js 18 and later.
+
+## Languages
+
+Pulumi ESC fully supports both TypeScript and JavaScript. You can use either language to work with the SDK:
+
+* **TypeScript**: Get additional type safety and IDE support with TypeScript (recommended)
+* **JavaScript**: Write programs using standard JavaScript syntax
+
+{{< notes type="info" >}}
+The examples on this page are shown in both TypeScript and JavaScript. The SDK also works with any other language that compiles to JavaScript and runs on Node.js. For the most consistent experience, we recommend using TypeScript.
+{{< /notes >}}
+
 ## Install the SDK package
 
 Run `npm install @pulumi/esc-sdk` or `yarn add @pulumi/esc-sdk` to install the SDK package.
@@ -32,15 +49,36 @@ Run `npm install @pulumi/esc-sdk` or `yarn add @pulumi/esc-sdk` to install the S
 
 The easiest way to initialize an ESC SDK client is to run:
 
+{{< chooser language "typescript,javascript" >}}
+
+{{% choosable language "typescript" %}}
+
 ```typescript
 import * as esc from "@pulumi/esc-sdk";
 
 const client = esc.DefaultClient();
 ```
 
+{{% /choosable %}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+const esc = require("@pulumi/esc-sdk");
+
+const client = esc.DefaultClient();
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
 This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
 
 If the default behavior does not work for you, you can always manually initialize the client configuration and pass it into the client constructor:
+
+{{< chooser language "typescript,javascript" >}}
+
+{{% choosable language "typescript" %}}
 
 ```typescript
 import * as esc from "@pulumi/esc-sdk";
@@ -51,15 +89,31 @@ const configuration = new esc.Configuration({
 const client = new esc.EscApi(configuration);
 ```
 
+{{% /choosable %}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+const esc = require("@pulumi/esc-sdk");
+
+const configuration = new esc.Configuration({
+    accessToken: myAccessToken
+})
+const client = new esc.EscApi(configuration);
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+
 ## Examples
 
 All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environment variable to be set.
 
 ### Manage environment example
 
-This example creates a new environment, opens that environment to access a secret, and the list the environments.
+This example creates a new environment, opens that environment to access a secret, and then lists the environments.
 
-{{< chooser language "typescript" >}}
+{{< chooser language "typescript,javascript" >}}
 
 {{% choosable language "typescript" %}}
 
@@ -117,18 +171,74 @@ async function main() {
 ```
 
 {{% /choosable %}}
+
+{{% choosable language "javascript" %}}
+
+```javascript
+const esc = require("@pulumi/esc-sdk");
+
+async function main() {
+    const orgName = process.env.PULUMI_ORG;
+    const client = esc.DefaultClient();
+
+    const projName = "examples";
+    const envName = "sdk-javascript-example";
+
+    // Create a new environment
+    await client.createEnvironment(orgName, projName, envName);
+
+    const envDef = {
+        values: {
+            my_secret: {
+                "fn::secret": "shh! don't tell anyone",
+            },
+        },
+    };
+
+    // Update the environment with the new definition
+    await client.updateEnvironment(orgName, projName, envName, envDef);
+
+    // Open and read the environment
+    const openEnv = await client.openAndReadEnvironment(orgName, projName, envName);
+
+    if (!openEnv) {
+        console.error("Failed to open and read the environment");
+        return;
+    }
+
+    // Access the value of the secret
+    const secretValue = openEnv.values?.my_secret;
+    console.log(`Secret value: ${secretValue}\n`);
+
+    // List all the environments in the organization
+    const orgEnvs = await client.listEnvironments(orgName);
+    if (!orgEnvs || !orgEnvs.environments) {
+        console.log("No environments found");
+        return;
+    }
+
+    for (const env of orgEnvs.environments) {
+        console.log(`Environment: ${env.project}/${env.name}`);
+    }
+}
+
+(async () => {
+    await main();
+})();
+```
+
+{{% /choosable %}}
 {{< /chooser >}}
 
 ### Tag revision example
 
 This example lists revisions for an environment, tags a revision, and lists revision tags.
 
-{{< chooser language "typescript" >}}
+{{< chooser language "typescript,javascript" >}}
 
 {{% choosable language "typescript" %}}
 
 ```typescript
-
 import * as esc from "@pulumi/esc-sdk";
 
 async function main() {
@@ -165,8 +275,49 @@ async function main() {
 (async ()=>{
     await main();
 })();
+```
 
+{{% /choosable %}}
 
+{{% choosable language "javascript" %}}
+
+```javascript
+const esc = require("@pulumi/esc-sdk");
+
+async function main() {
+    const orgName = process.env.PULUMI_ORG;
+    const client = esc.DefaultClient();
+
+    const projName = "examples";
+    const envName = "sdk-javascript-example";
+
+    // List environment revisions
+    const revisions = await client.listEnvironmentRevisions(orgName, projName, envName);
+
+    if (!revisions || revisions.length < 2) {
+        throw new Error(`Expected at least 2 revisions for environment ${projName}/${envName}`);
+    }
+
+    // Get the second latest revision
+    const revision = revisions[1];
+    await client.createEnvironmentRevisionTag(orgName, projName, envName, "stable", revision.number);
+
+    console.log(`Tagged revision ${revision.number} as 'stable'`);
+
+    // List tags
+    const tags = await client.listEnvironmentRevisionTags(orgName, projName, envName);
+    if (!tags || !tags.tags) {
+        throw new Error(`Expected tags for environment ${projName}/${envName}`);
+    }
+
+    for (const tag of tags.tags) {
+        console.log(`Tag ${tag.name} at revision ${tag.revision}`);
+    }
+}
+
+(async () => {
+    await main();
+})();
 ```
 
 {{% /choosable %}}
@@ -175,3 +326,4 @@ async function main() {
 ## Documentation
 
 * [API Reference Documentation](/docs/reference/pkg/nodejs/pulumi/esc-sdk/)
+* [npm package](https://www.npmjs.com/package/@pulumi/esc-sdk)

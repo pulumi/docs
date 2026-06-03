@@ -13,7 +13,9 @@ aliases:
   - /docs/esc/development/languages-sdks/dotnet/
 ---
 
-The [.NET SDK](https://www.nuget.org/packages/Pulumi.Esc.Sdk/) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
+Pulumi ESC provides a .NET SDK for managing environments and reading their configuration and secrets from your own code. It supports C#, F#, and Visual Basic.
+
+{{< esc-sdk-config-note >}}
 
 Here are some of the scenarios the SDK can automate:
 
@@ -23,6 +25,10 @@ Here are some of the scenarios the SDK can automate:
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
 * Check environment definitions for errors
+
+## Runtime support
+
+The SDK runs on .NET 6 and later, and supports C#, F#, and Visual Basic.
 
 ## Install the SDK package
 
@@ -55,10 +61,6 @@ All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environmen
 ### Manage environment example
 
 This example creates a new environment, opens that environment to access a secret, and then lists the environments.
-
-{{< chooser language "csharp" >}}
-
-{{% choosable language "csharp" %}}
 
 ```csharp
 using Pulumi.Esc.Sdk;
@@ -96,16 +98,9 @@ foreach (var env in orgEnvs.Environments ?? [])
 }
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ### Tag revision example
 
 This example lists revisions for an environment, tags a revision, and lists revision tags.
-
-{{< chooser language "csharp" >}}
-
-{{% choosable language "csharp" %}}
 
 ```csharp
 using Pulumi.Esc.Sdk;
@@ -139,9 +134,7 @@ foreach (var tag in tags.Tags ?? [])
 }
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ## Documentation
 
 * [API Reference Documentation](/docs/reference/pkg/dotnet/esc-sdk/)
+* [NuGet package](https://www.nuget.org/packages/Pulumi.Esc.Sdk/)
