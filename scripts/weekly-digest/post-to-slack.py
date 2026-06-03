@@ -22,15 +22,36 @@ Env: SLACK_ACCESS_TOKEN (required unless --dry-run), SLACK_CHANNEL (default
 
 import json
 import os
+import socket
 import sys
 import time
-import urllib.error
 import urllib.request
 
 # Conservative ceiling. Slack's hard limit is ~40k chars, but long messages
 # render unreliably; keeping chunks well under ~4k is the safe, readable choice.
 MAX_CHARS = 3500
 POST_URL = "https://slack.com/api/chat.postMessage"
+# Per-request socket timeout. Python connects to addresses sequentially with no
+# Happy Eyeballs, so this is also the per-address budget -- keep it short.
+REQUEST_TIMEOUT = 10
+
+
+def _force_ipv4():
+    """Make getaddrinfo return only IPv4 records.
+
+    slack.com resolves to both IPv4 and IPv6 addresses. On runners without IPv6
+    egress, Python's sequential socket.create_connection burns the full socket
+    timeout on each unreachable IPv6 address before falling through, stacking up
+    to multi-minute "timeouts" on a 10s budget (this hung a real run for ~7.5min
+    per attempt). @slack/web-api dodges it via Happy Eyeballs; we don't, so we
+    drop AF_INET6 from resolution entirely -- this process only talks to Slack.
+    """
+    real_getaddrinfo = socket.getaddrinfo
+
+    def ipv4_only(host, port, family=0, type=0, proto=0, flags=0):
+        return real_getaddrinfo(host, port, socket.AF_INET, type, proto, flags)
+
+    socket.getaddrinfo = ipv4_only
 
 
 def _split_long_line(line, max_chars):
@@ -63,7 +84,7 @@ def chunk_text(text, max_chars=MAX_CHARS):
     return [c for c in chunks if c.strip()]
 
 
-def post_chunk(token, channel, text, retries=4):
+def post_chunk(token, channel, text, retries=3):
     body = json.dumps(
         {"channel": channel, "text": text, "mrkdwn": True, "unfurl_links": False, "as_user": True}
     ).encode("utf-8")
@@ -78,13 +99,15 @@ def post_chunk(token, channel, text, retries=4):
     delay = 2
     for attempt in range(1, retries + 1):
         try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as resp:
                 data = json.loads(resp.read())
             if data.get("ok"):
                 return data
             # ok:false is a hard error (bad token, channel, etc.) -- don't retry.
             raise RuntimeError(f"Slack API error: {data.get('error')}")
-        except urllib.error.URLError as exc:
+        # OSError covers URLError, socket timeouts, and connection resets; a
+        # RuntimeError (ok:false) is not caught and fails fast.
+        except OSError as exc:
             if attempt == retries:
                 raise
             sys.stderr.write(f"post attempt {attempt} failed ({exc}); retrying in {delay}s\n")
@@ -113,6 +136,7 @@ def main():
     token = os.environ.get("SLACK_ACCESS_TOKEN")
     if not token:
         sys.exit("SLACK_ACCESS_TOKEN is not set")
+    _force_ipv4()
     channel = os.environ.get("SLACK_CHANNEL", "#docs-ops")
     if not channel.startswith(("#", "C", "G")):
         channel = f"#{channel}"
