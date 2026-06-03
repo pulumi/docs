@@ -16,9 +16,19 @@ tags:
 - python
 social:
   twitter: |
-    Self-host Gemma 4 on your Mac with Pulumi, llama.cpp, and Tailscale. This setup uses Gemma 4 26 B A4B MXFP4 and reached about 50 output tokens per second in a short validation run on an M3 Max MacBook Pro. No cloud costs, no data leaving your network.
+    Local AI agents usually mean tradeoffs: cloud bills, data leaving your machine, or awkward offline workflows.
+
+    Pablo Seibelt rebuilt the setup around Gemma 4, llama.cpp, k3d, Pulumi, and Tailscale. Here's where the pieces fit.
   linkedin: |
-    Self-host Gemma 4 on your Mac with Pulumi, llama.cpp, and Tailscale. This setup uses Gemma 4 26 B A4B MXFP4 and reached about 50 output tokens per second in a short validation run on an M3 Max MacBook Pro. The post walks through the full stack: llama.cpp for inference, Open WebUI for a chat interface, and Tailscale for secure access from anywhere.
+    Local AI agents come with awkward tradeoffs: data leaves your network, offline work gets harder, and usage-based billing follows every token.
+
+    Pablo Seibelt tested a different shape on a Mac: host-native inference, Kubernetes for the UI layer, and Tailscale for private access.
+
+    The post walks through why the model runs outside the cluster, what Pulumi manages, and where the setup still needs credentials to finish the route.
+  bluesky: |
+    Local AI agents usually mean cloud bills, data leaving your machine, or awkward offline workflows.
+
+    Pablo Seibelt rebuilt the setup around Gemma 4, llama.cpp, k3d, Pulumi, and Tailscale.
 ---
 
 If you run AI tools and agents, you've probably accepted three tradeoffs: your data leaves your network, you can't work offline, and your bill scales with usage.
