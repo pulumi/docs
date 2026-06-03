@@ -548,17 +548,77 @@ A source-based plugin package can be published to the [IDP Private Registry](/do
 
 ### Pre-publishing language SDKs
 
-By default, each consumer generates the SDK locally at `pulumi package add` time. You can instead pre-publish SDKs to language registries (npm, PyPI, Maven, NuGet, Go module proxies) so consumers install them like any other dependency. A typical CI/CD pipeline for one language looks like:
+By default, each consumer generates the SDK locally at `pulumi package add` time. You can instead pre-publish SDKs to language registries (npm, PyPI, Maven, NuGet, Go module proxies) so consumers install them like any other dependency.
+
+A typical CI/CD pipeline for TypeScript looks like:
 
 ```bash
 git tag v1.0.0
 git push origin v1.0.0
-pulumi package publish github.com/myorg/my-component@1.0.0
-pulumi package gen-sdk . --language nodejs --out sdk/nodejs
-npm publish
+
+# Publish to Pulumi IDP Private Registry (optional)
+pulumi package publish github.com/myorg/my-component@v1.0.0
+
+# Generate the SDK
+pulumi package gen-sdk . --language nodejs --out sdk
+
+# Build and publish the SDK
+cd sdk/nodejs
+npm install
+npm run build
+cp package.json bin/
+npm publish bin/
 ```
 
+The `gen-sdk` command outputs TypeScript source files that must be compiled before publishing. The `npm run build` step runs `tsc` to compile the SDK into the `bin/` directory. Since the `bin/` directory does not include a `package.json` by default, you must copy it in before running `npm publish`.
+
+{{< notes type="tip" >}}
+Use `npm pack --dry-run` in the `bin/` directory to inspect what will be published before running `npm publish`. For private registries (such as AWS CodeArtifact, GitHub Packages, or a private npm registry), configure your `.npmrc` with the appropriate registry URL and authentication before publishing.
+{{< /notes >}}
+
 Repeat the `pulumi package gen-sdk` and publish steps for each language you want to support. Consumers then install the SDK directly via their package manager (e.g., `npm install my-component`) without generating it themselves.
+
+## Troubleshooting
+
+### npm scope mismatch when switching between Git and local paths {#npm-scope-mismatch}
+
+When you add a package from a Git URL, the generated SDK uses the repository owner as the npm scope. When you later switch to a local path for development, the SDK is regenerated with a different scope. For example:
+
+```bash
+# Initially added from GitHub — SDK goes to sdks/myorg-my-components
+pulumi package add github.com/myorg/my-components@v1.0.0
+# package.json: "@myorg/my-components": "file:sdks/myorg-my-components"
+# Code uses: import { Foo } from "@myorg/my-components";
+
+# Later switched to local path for development — SDK goes to sdks/my-components
+pulumi package add ./path/to/my-components
+# package.json adds: "@pulumi/my-components": "file:sdks/my-components"
+```
+
+After switching, there are now **two SDKs** in `sdks/`: the old one from GitHub and the new one from the local path. The `@myorg/my-components` entry in `package.json` still points at the old GitHub SDK, so your existing `import` statements won't pick up local changes.
+
+**Fix:** Update the `@myorg/my-components` entry in `package.json` to point at the locally generated SDK:
+
+```json
+{
+  "dependencies": {
+    "@pulumi/my-components": "file:sdks/my-components",
+    "@myorg/my-components": "file:sdks/my-components"
+  }
+}
+```
+
+Now both entries resolve to the same local SDK, and your existing imports work without changes. Run `npm install` after editing `package.json`.
+
+### Consider single-language components during early development {#single-language-components}
+
+If the plugin packaging model is adding friction during early development — for example, dealing with SDK regeneration or scope mismatches — and your consuming project is written in the **same language** as your component, you can skip it entirely. Use the component as a [native language package](/docs/iac/guides/building-extending/components/packaging-components/#native-language-packages) instead. For TypeScript, this means importing the component directly via a `file:` or path dependency in `package.json` — no `PulumiPlugin.yaml`, no SDK generation, and no `pulumi package add`.
+
+This approach is useful during early development or migration work where rapid iteration matters more than multi-language support. You can always convert to a source-based plugin package later when you need cross-language consumption or want to publish to the [IDP Private Registry](/docs/idp/concepts/private-registry/).
+
+{{< notes type="info" >}}
+Component argument types in native language packages can use any type your language supports (including union types), since they don't need to be serializable to a Pulumi schema. When you convert to a plugin package later, you may need to adjust argument types to use only [schema-compatible types](/docs/iac/guides/building-extending/packages/schema/).
+{{< /notes >}}
 
 ## Next steps
 
