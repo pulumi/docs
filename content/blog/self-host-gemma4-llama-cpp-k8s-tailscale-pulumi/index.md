@@ -3,7 +3,7 @@ title: "Use Your Mac for AI Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-06-03
 meta_desc: |
-    Self-host Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using a 26 B A4B MXFP4 GGUF at about 50 output tokens per second.
+    Self-host Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12&nbsp;B Q8 GGUF with a 128K context window.
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -36,7 +36,7 @@ Open-weight models now run well on consumer hardware. Once the model is on your 
 
 <!--more-->
 
-[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on the 26 B A4B mixture-of-experts variant quantized as `MXFP4_MOE` by Unsloth. Thanks to the [GGUF](https://huggingface.co/docs/hub/en/gguf) format, this model fits on a modern Mac while leaving enough headroom for a local server and chat UI.
+[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12&nbsp;B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12&nbsp;B model fits comfortably on a modern Mac while leaving enough headroom for a local server and chat UI.
 
 We'll use `llama.cpp` for host-native inference, `k3d` for a local Kubernetes cluster, Pulumi for infrastructure as code, and Tailscale for secure access.
 
@@ -47,7 +47,7 @@ This setup was validated on the following hardware:
 - MacBook Pro with Apple M3 Max
 - 36 GB RAM
 
-On this machine, `llama.cpp` reported about **53 output tokens per second** for a short validation response with `unsloth/gemma-4-26B-A4B-it-GGUF`, `gemma-4-26B-A4B-it-MXFP4_MOE.gguf`, and an 8,192-token context. In round numbers, this GGUF reached about **50 output tokens per second** on this class of Mac. Sustained throughput varies by prompt length, thermal state, and how much of the response is reasoning content.
+On this machine, `llama.cpp` reported about **19 output tokens per second** for a 160-token validation response with `unsloth/gemma-4-12b-it-GGUF`, `gemma-4-12b-it-Q8_0.gguf`, and a 131,072-token context. A short `OK` response reported about 32 output tokens per second, but the longer response is the better planning number. Sustained throughput varies by prompt length, thermal state, and server settings.
 
 You'll need `brew`, `docker`, `pulumi`, and `tailscale` installed. We'll also install `k3d` during the process.
 
@@ -75,16 +75,19 @@ Then download and run the model with this command:
 
 ```bash
 llama-server \
-  --hf-repo unsloth/gemma-4-26B-A4B-it-GGUF \
-  --hf-file gemma-4-26B-A4B-it-MXFP4_MOE.gguf \
+  --hf-repo unsloth/gemma-4-12b-it-GGUF \
+  --hf-file gemma-4-12b-it-Q8_0.gguf \
   --host 127.0.0.1 \
   --port 18080 \
-  --ctx-size 8192
+  --ctx-size 131072 \
+  --parallel 1 \
+  --jinja \
+  --reasoning off
 ```
 
 We use port `18080` because `8080` is commonly used and is likely to conflict with another service you may already have running locally. If your port `8080` is free, you can use it and adjust the Pulumi config later.
 
-The model file is about 16.55 GB. With an 8,192-token context, it leaves more headroom than the dense 31 B Q4 model while still providing a strong local Gemma 4 experience.
+The model file is about 12.65 GB. Gemma 4 12&nbsp;B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for this run, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
 
 ### Verify the LLM API
 
@@ -94,20 +97,20 @@ Open a new terminal and check if the server is responding:
 curl http://127.0.0.1:18080/v1/models
 ```
 
-The `/v1/models` endpoint should return the model ID `unsloth/gemma-4-26B-A4B-it-GGUF`. Now try a chat completion:
+The `/v1/models` endpoint should return the model ID `unsloth/gemma-4-12b-it-GGUF`. Now try a chat completion:
 
 ```bash
 curl http://127.0.0.1:18080/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "unsloth/gemma-4-26B-A4B-it-GGUF",
+    "model": "unsloth/gemma-4-12b-it-GGUF",
     "messages": [{"role": "user", "content": "Reply with exactly: OK"}],
     "temperature": 0,
-    "max_tokens": 256
+    "max_tokens": 32
   }'
 ```
 
-The chat prompt `Reply with exactly: OK` should return content `OK` with `max_tokens=256`. In validation, `llama.cpp` reported an output token velocity of about 53 tokens per second for this response.
+The chat prompt `Reply with exactly: OK` should return content `OK`. In validation, `llama.cpp` reported an output token velocity of about 32 tokens per second for this two-token response and about 19 tokens per second for a longer 160-token response.
 
 ## Deploy Open WebUI with Pulumi and k3d
 
@@ -192,11 +195,11 @@ For a fresh Pi config, create `~/.pi/agent/models.json` with a local provider th
       },
       "models": [
         {
-          "id": "unsloth/gemma-4-26B-A4B-it-GGUF",
-          "name": "Gemma 4 26B A4B MXFP4 (local llama.cpp)",
-          "reasoning": true,
+          "id": "unsloth/gemma-4-12b-it-GGUF",
+          "name": "Gemma 4 12B Q8 (local llama.cpp)",
+          "reasoning": false,
           "input": ["text"],
-          "contextWindow": 8192,
+          "contextWindow": 131072,
           "maxTokens": 1024,
           "cost": {
             "input": 0,
@@ -216,7 +219,7 @@ Then set Pi to use that provider and model by default in `~/.pi/agent/settings.j
 ```json
 {
   "defaultProvider": "local-llama",
-  "defaultModel": "unsloth/gemma-4-26B-A4B-it-GGUF",
+  "defaultModel": "unsloth/gemma-4-12b-it-GGUF",
   "defaultThinkingLevel": "off",
   "hideThinkingBlock": true
 }
