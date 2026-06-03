@@ -1,7 +1,7 @@
 ---
-title: "Use Your Mac for AI Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
+title: "Use Your Mac for AI Agents: Self-Host Gemma 4 12&nbsp;B with Pulumi and Tailscale"
 allow_long_title: true
-date: 2026-06-03
+date: 2026-06-04
 meta_desc: |
     Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12&nbsp;B Q8 GGUF with a 128K context window.
 meta_image: meta.png
