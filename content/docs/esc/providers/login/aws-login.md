@@ -20,7 +20,7 @@ The `aws-login` provider enables you to log in to your AWS account using OpenID 
 
 ## Example
 
-The `aws-login` provider's outputs can be consumed by the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/), the `aws` CLI, and the AWS SDKs. Because all three read the same standard AWS environment variables, a single `environmentVariables` block covers all of them:
+The `aws-login` provider's outputs can be consumed by the [Pulumi AWS provider](https://www.pulumi.com/registry/packages/aws/), the `aws` CLI, and the AWS SDKs. Because all three read the same standard AWS environment variables, a single `environmentVariables` block covers all three:
 
 ```yaml
 values:

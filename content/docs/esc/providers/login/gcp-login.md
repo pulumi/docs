@@ -42,7 +42,7 @@ values:
 
 ### Using outputs with the gcloud CLI
 
-The `gcloud` CLI reads the project by name and the access token from its own `CLOUDSDK_*` environment variables, which differ from the ones the Pulumi provider uses:
+The `gcloud` CLI reads the project ID (a string identifier, not the numeric project number used by the Pulumi provider) and the access token from its own `CLOUDSDK_*` environment variables, which differ from the ones the Pulumi provider uses:
 
 ```yaml
 values:
@@ -55,9 +55,9 @@ values:
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
   environmentVariables:
-    # The gcloud CLI requires the project by name (not the numeric ID)
+    # CLOUDSDK_CORE_PROJECT takes the project ID string (e.g. "my-project-12345"), not the numeric project number used by GOOGLE_CLOUD_PROJECT above
     # See: https://cloud.google.com/sdk/docs/properties#setting_properties_using_environment_variables
-    CLOUDSDK_CORE_PROJECT: my-project-name
+    CLOUDSDK_CORE_PROJECT: my-project-12345
     CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
