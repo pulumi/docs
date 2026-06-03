@@ -105,6 +105,8 @@ The model file is about 12.65 GB, and the projector is about 116 MB. Gemma 4 12&
 
 With `--mmproj`, `/v1/models` advertised `capabilities: ["completion","multimodal"]`. In local validation, Open WebUI accepted an uploaded Pulumi logo image and Gemma 4 described it correctly. A small WAV file also worked through the OpenAI-compatible `input_audio` request shape, though `llama.cpp` logs still mark audio input as experimental.
 
+![Open WebUI using local Gemma 4 12 B to describe an uploaded Pulumi logo](describe_image.png)
+
 ### Verify the LLM API
 
 Open a new terminal and check if the server is responding:
