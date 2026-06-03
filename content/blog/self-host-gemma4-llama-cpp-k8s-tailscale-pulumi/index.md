@@ -1,5 +1,5 @@
 ---
-title: "Use Your GPU for Your Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
+title: "Use Your Mac for AI Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-06-03
 meta_desc: |
