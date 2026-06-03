@@ -1,8 +1,7 @@
 ---
 title: "Use Your GPU for Your Agents: Self-Host Gemma 4 with Pulumi and Tailscale"
 allow_long_title: true
-date: 2026-06-02
-draft: false
+date: 2026-06-03
 meta_desc: |
     Self-host Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using a 26 B A4B MXFP4 GGUF at about 50 output tokens per second.
 meta_image: meta.png
@@ -143,23 +142,22 @@ The `llm-server` service in Kubernetes maps to `host.k3d.internal`. In our valid
 kubectl rollout restart deployment coredns -n kube-system
 ```
 
-Finally, run `pulumi up` to deploy the stack:
+Run `pulumi up` to deploy Open WebUI and connect it to your host-native LLM server:
 
 ```bash
 pulumi up
 ```
 
-In our validation environment, this command successfully reached the resource synthesis phase but stopped at the Tailscale provider step because we hadn't configured the required credentials.
+In our validation environment, this command successfully reached the resource synthesis phase without requiring Tailscale credentials because Tailscale exposure is opt-in.
 
 ## Access Open WebUI through Tailscale
 
 Tailscale allows you to access your private Open WebUI instance from any device on your tailnet. Note that we only expose the web interface, not the raw LLM API, to keep the system secure.
 
-As mentioned, our validation was blocked by missing Pulumi Tailscale provider credentials. It requires an explicit `api_key` or an OAuth/identity token.
-
-To finish the setup, you'll need to provide these credentials to Pulumi:
+The base Open WebUI deployment works without Tailscale credentials. To expose the web UI on your tailnet, enable Tailscale resources and provide an explicit `api_key` or OAuth/identity token:
 
 ```bash
+pulumi config set enableTailscale true
 pulumi config set tailscale:apiKey YOUR_API_KEY --secret
 ```
 
