@@ -1,0 +1,162 @@
+name: Auto-label new issues
+
+# Replaces add-triage-label.yml. When an issue is opened or reopened, one
+# cheap Haiku call reads the issue title/body plus the repo's real label menu
+# and suggests labels. Shell enforces the result deterministically: confident
+# suggestions are applied (and needs-triage removed); otherwise needs-triage
+# stays as the human-safety net. One model call per issue, event-driven, so the
+# backlog is never re-scanned. Pattern cloned from claude-triage.yml (single
+# raw curl to the Anthropic API, jq parsing, defensive fence-stripping,
+# compute-a-delta-then-one-gh-edit).
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  classify:
+    # Only run in the canonical repo (not forks), and skip bot-authored issues
+    # — they don't need LLM triage. (add-triage-label.yml had no guards; the
+    # repository guard and bot skip are the additions.)
+    if: >-
+      github.repository == 'pulumi/docs'
+      && github.event.issue.user.login != 'pulumi-bot'
+      && github.event.issue.user.login != 'dependabot[bot]'
+
+    concurrency:
+      group: auto-label-issue-${{ github.event.issue.number }}
+      cancel-in-progress: true
+
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+
+    steps:
+      # continue-on-error keeps the workflow green on transient API or gh
+      # failures: a missed classification leaves the issue with needs-triage
+      # (applied by the issue template on creation), so a human still catches
+      # it — the issue is never left unlabeled.
+      - name: Classify and label
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          # 1. Gather issue state. Body truncated to a 5KB byte cap to bound tokens.
+          ISSUE_DATA=$(gh issue view "$ISSUE" --repo "$REPO" --json title,body,labels)
+          TITLE=$(echo "$ISSUE_DATA" | jq -r '.title // ""')
+          BODY=$(echo "$ISSUE_DATA" | jq -r '.body // ""' | head -c 5000)
+          # Current labels, one per line, for the idempotent delta below.
+          CURRENT_LABELS=$(echo "$ISSUE_DATA" | jq -r '.labels[].name')
+
+          # 2. Build the allowed-label menu, live. Drop labels the model
+          #    shouldn't pick on an issue:
+          #      - PR-pipeline-only review:* / domain:* prefixes (set by
+          #        claude-triage on PRs; see .github/labels-pr-review.md),
+          #      - priority labels (p0, p1, …) — prioritization is a human call,
+          #        not something the model is suited to, and
+          #      - needs-triage itself (it's the fallback, not a content label).
+          #    The surviving set is the allowed set: the model only sees these,
+          #    and the apply-set is intersected against them.
+          LABELS_JSON=$(gh label list --repo "$REPO" --limit 200 --json name,description \
+            | jq -c '[.[] | select(.name | (startswith("review:") or startswith("domain:") or test("^p[0-9]+$") or . == "needs-triage") | not)]')
+          # Compact "- name: description" menu for the prompt.
+          MENU=$(echo "$LABELS_JSON" | jq -r '.[] | "- \(.name): \(.description // "")"')
+          # Allowed-set names, one per line, for the intersection.
+          ALLOWED=$(echo "$LABELS_JSON" | jq -r '.[].name')
+
+          # 3. One Anthropic call (smallest capable model; small max_tokens).
+          #    The request is built entirely with jq -n so the menu, title, and
+          #    body are JSON-escaped safely (same pattern as claude-triage.yml).
+          #    The model only suggests; it picks from the menu and returns
+          #    strict JSON.
+          INSTRUCTIONS='You are triaging a new GitHub issue for the pulumi/docs repository. Choose the labels that best apply, picking ONLY from the allowed label menu below. If you cannot confidently determine any labels, return an empty list with "confident": false. Return ONLY a JSON object, no prose and no markdown fences, in exactly this shape: {"labels": ["area/foo", "kind/bar"], "confident": true}'
+          REQUEST=$(jq -n \
+            --arg instructions "$INSTRUCTIONS" \
+            --arg menu "$MENU" \
+            --arg title "$TITLE" \
+            --arg body "$BODY" \
+            '{
+              model: "claude-haiku-4-5-20251001",
+              max_tokens: 128,
+              messages: [{
+                role: "user",
+                content: ($instructions
+                  + "\n\n=== ALLOWED LABELS ===\n" + $menu
+                  + "\n\n=== ISSUE TITLE ===\n" + $title
+                  + "\n\n=== ISSUE BODY (truncated to 5000 bytes) ===\n" + $body)
+              }]
+            }')
+          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d "$REQUEST" || echo '{"error":"curl_failed"}')
+
+          # 4. Parse defensively. Strip markdown fences, validate JSON. On any
+          #    failure, SUGGESTED stays empty and CONFIDENT stays false → fallback.
+          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          SUGGESTED=""
+          CONFIDENT="false"
+          if [[ -n "$TEXT" ]]; then
+            PARSED=$(echo "$TEXT" \
+              | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+              | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+              | tr -d '\r')
+            if echo "$PARSED" | jq -e . >/dev/null 2>&1; then
+              SUGGESTED=$(echo "$PARSED" | jq -r '.labels[]?')
+              CONFIDENT=$(echo "$PARSED" | jq -r '.confident // false')
+            fi
+          fi
+
+          # 5. Enforce in shell. Intersect suggestions with the allowed set —
+          #    discards hallucinated and off-scope (review:/domain:/priority)
+          #    labels. VALID is everything the model picked that survives the
+          #    intersection; ADD_LIST is the subset not already on the issue
+          #    (so re-runs don't thrash).
+          VALID=()
+          ADD_LIST=()
+          if [[ -n "$SUGGESTED" ]]; then
+            while IFS= read -r s; do
+              [[ -z "$s" ]] && continue
+              if grep -qxF "$s" <<< "$ALLOWED"; then
+                VALID+=("$s")
+                grep -qxF "$s" <<< "$CURRENT_LABELS" || ADD_LIST+=("$s")
+              fi
+            done <<< "$SUGGESTED"
+          fi
+
+          # Helper: is needs-triage currently on the issue?
+          HAS_TRIAGE=false
+          grep -qxF "needs-triage" <<< "$CURRENT_LABELS" && HAS_TRIAGE=true
+
+          # Decision keys on whether the model confidently produced any valid
+          # on-menu label — NOT on ADD_LIST. An already-correctly-labeled issue
+          # has an empty ADD_LIST but must NOT regress to the needs-triage
+          # fallback.
+          ARGS=()
+          FALLBACK=no
+          if [[ "$CONFIDENT" == "true" && ${#VALID[@]} -gt 0 ]]; then
+            # Confident with real labels: add any not already present, and drop
+            # needs-triage. (Both may be empty → no-op, which is correct.)
+            (( ${#ADD_LIST[@]} > 0 )) && ARGS+=(--add-label "$(IFS=,; echo "${ADD_LIST[*]}")")
+            [[ "$HAS_TRIAGE" == "true" ]] && ARGS+=(--remove-label "needs-triage")
+          else
+            # Fallback: ensure needs-triage is present, add nothing else.
+            FALLBACK=yes
+            [[ "$HAS_TRIAGE" == "false" ]] && ARGS+=(--add-label "needs-triage")
+          fi
+
+          # Single gh issue edit when the delta is non-empty (idempotent: no
+          # call when there's nothing to change).
+          if (( ${#ARGS[@]} > 0 )); then
+            gh issue edit "$ISSUE" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+
+          # 6. Summary line for the Actions log.
+          ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
+          echo "auto-label: issue=$ISSUE confident=$CONFIDENT added=${ADDED_CSV:-none} fallback=$FALLBACK"
