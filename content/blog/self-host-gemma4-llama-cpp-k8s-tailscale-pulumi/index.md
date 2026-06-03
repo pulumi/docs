@@ -217,7 +217,7 @@ Create a new cluster for this project:
 k3d cluster create pulumi-gemma4-blog-qa
 ```
 
-We'll use the Pulumi program being added to [`pulumi/examples`](https://github.com/pulumi/examples/pull/2835). Until that PR merges, use the PR branch at [`pablo/self-host-gemma4-llm`](https://github.com/pulumi/examples/tree/pablo/self-host-gemma4-llm/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
+We'll use the Pulumi program in [`pulumi/examples`](https://github.com/pulumi/examples/tree/master/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
 
 Why not run the LLM inside Kubernetes on this Mac? Pulumi can do that, and the example supports it with `runtimeMode=cluster`, but that path is meant for Linux hosts with NVIDIA or AMD GPU device plugins.
 
@@ -226,7 +226,7 @@ On macOS, [`llama.cpp` enables Metal by default](https://github.com/ggml-org/lla
 Clone the examples repo, navigate to the program directory, and initialize a new stack:
 
 ```bash
-git clone --branch pablo/self-host-gemma4-llm --single-branch https://github.com/pulumi/examples.git
+git clone https://github.com/pulumi/examples.git
 cd examples/kubernetes-py-self-host-gemma4-llm
 pulumi stack init gemma4-local
 ```
