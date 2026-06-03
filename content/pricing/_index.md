@@ -35,7 +35,7 @@ tiers:
               subtitle: Everything you need to get started.
               price: Starts at $40
               price_label: /mo
-              unit: "**40 credits included**"
+              unit: "**40 Credits included**"
               note: Up to 500 resources, additional usage billed on demand
               cta:
                   label: Start a free trial
@@ -55,7 +55,7 @@ tiers:
               badge: Popular
               price: $400
               price_label: /mo
-              unit: "**400 credits included**"
+              unit: "**400 Credits included**"
               note: Up to 2,000 resources, additional usage billed on demand
               cta:
                   label: Start a free trial
@@ -648,12 +648,12 @@ faq:
       items:
         - question: Do I pay as I go, or prepaid up-front?
           answer: |
-            If you self-serve by entering a credit card, you will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi credits. If your usage exceeds your Pulumi credit pool, you will be billed in arrears for your usage at the end of the monthly term.
+            If you self-serve by entering a credit card, you will be charged an up-front fee at the beginning of each monthly term. The up-front fee will create a pool of Pulumi Credits. If your usage exceeds your Pulumi Credit pool, you will be billed in arrears for your usage at the end of the monthly term.
 
             If you prefer to pay annually, you can [contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
-        - question: What are Pulumi credits?
+        - question: What are Pulumi Credits?
           answer: |
-            Pulumi credits are the single currency for Pulumi Cloud. One Pulumi credit costs $1 USD, and you can pre-purchase Pulumi credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi credits at the rates above or as listed on your order form. Once the pool of Pulumi credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
+            Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
             IaC resources are billed hourly at the rate of $0.00025 for Team ($0.1825 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
