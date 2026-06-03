@@ -47,7 +47,7 @@ This setup was validated on the following hardware:
 - MacBook Pro with Apple M3 Max
 - 36 GB RAM
 
-On this machine, `llama.cpp` reported about **19 output tokens per second** for a 160-token validation response with `unsloth/gemma-4-12b-it-GGUF`, `gemma-4-12b-it-Q8_0.gguf`, and a 131,072-token context. A short `OK` response reported about 32 output tokens per second, but the longer response is the better planning number. Sustained throughput varies by prompt length, thermal state, and server settings.
+On this machine, `llama.cpp` reported about **20 output tokens per second** for a 160-token validation response with `unsloth/gemma-4-12b-it-GGUF`, `gemma-4-12b-it-Q8_0.gguf`, and a 131,072-token context. Sustained throughput varies by prompt length, thermal state, and server settings.
 
 You'll need `brew`, `docker`, `pulumi`, and `tailscale` installed. We'll also install `k3d` during the process.
 
@@ -89,6 +89,8 @@ We use port `18080` because `8080` is commonly used and is likely to conflict wi
 
 The model file is about 12.65 GB. Gemma 4 12&nbsp;B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for this run, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
 
+Gemma 4 12&nbsp;B is a multimodal model, but this walkthrough serves the Unsloth GGUF through `llama.cpp` as a text endpoint. In our local validation, `/v1/models` advertised `capabilities: ["completion"]`. Open WebUI may gray out image, audio, or video upload options in this setup because image input needs a matching `--mmproj` file, and Gemma 4 audio input is not yet supported by `llama.cpp`. The text chat, text file, and PDF workflows still use the same local model endpoint.
+
 ### Verify the LLM API
 
 Open a new terminal and check if the server is responding:
@@ -110,7 +112,77 @@ curl http://127.0.0.1:18080/v1/chat/completions \
   }'
 ```
 
-The chat prompt `Reply with exactly: OK` should return content `OK`. In validation, `llama.cpp` reported an output token velocity of about 32 tokens per second for this two-token response and about 19 tokens per second for a longer 160-token response.
+The chat prompt `Reply with exactly: OK` should return content `OK`. In validation, `llama.cpp` reported an output token velocity of about 20 tokens per second for a longer 160-token response.
+
+### Keep llama.cpp running after reboot
+
+For a permanent setup, put the server script and logs under a folder in your home directory and let `launchd` restart it when you sign in:
+
+```bash
+llm_home="$HOME/pulumi-gemma4-llm"
+mkdir -p "$llm_home/logs" "$HOME/Library/LaunchAgents"
+
+cat > "$llm_home/start-llama-server.sh" <<'EOF'
+#!/bin/zsh
+set -euo pipefail
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+exec llama-server \
+  --hf-repo unsloth/gemma-4-12b-it-GGUF \
+  --hf-file gemma-4-12b-it-Q8_0.gguf \
+  --host 127.0.0.1 \
+  --port 18080 \
+  --ctx-size 131072 \
+  --parallel 1 \
+  --jinja \
+  --reasoning off
+EOF
+
+chmod +x "$llm_home/start-llama-server.sh"
+
+cat > "$HOME/Library/LaunchAgents/com.pulumi.gemma4.llama-server.plist" <<EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.pulumi.gemma4.llama-server</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>$llm_home/start-llama-server.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>$llm_home</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>$llm_home/logs/llama-server.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>$llm_home/logs/llama-server.err.log</string>
+</dict>
+</plist>
+EOF
+
+launchctl bootout gui/$(id -u)/com.pulumi.gemma4.llama-server 2>/dev/null || true
+launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.pulumi.gemma4.llama-server.plist"
+launchctl kickstart -k gui/$(id -u)/com.pulumi.gemma4.llama-server
+```
+
+Check the service and logs:
+
+```bash
+launchctl print gui/$(id -u)/com.pulumi.gemma4.llama-server
+tail -f "$HOME/pulumi-gemma4-llm/logs/llama-server.err.log"
+```
+
+If you want to stop the background service later, unload it:
+
+```bash
+launchctl bootout gui/$(id -u)/com.pulumi.gemma4.llama-server
+```
 
 ## Deploy Open WebUI with Pulumi and k3d
 
