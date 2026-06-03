@@ -116,43 +116,30 @@ jobs:
             echo "DIGEST_EOF"
           } >> "$GITHUB_OUTPUT"
 
-      # 3a. DRY RUN — print both bodies, skip posting.
-      - name: Print digests (dry run)
-        if: ${{ inputs.dry_run }}
+      # 3. ASSEMBLE — one combined digest (PR queue + backlog, each with its
+      # own heading). Slack truncates long messages, so post-to-slack.py splits
+      # this on line boundaries and posts it as as many sequential messages as
+      # needed -- it reads as one continuous run in the channel.
+      - name: Assemble combined digest
         env:
           PR_DIGEST: ${{ steps.synth.outputs.pr_digest }}
           BACKLOG_DIGEST: ${{ steps.synth.outputs.backlog_digest }}
-        run: |
-          echo "===== PR DIGEST ====="
-          printf '%s\n\n' "$PR_DIGEST"
-          echo "===== BACKLOG DIGEST ====="
-          printf '%s\n' "$BACKLOG_DIGEST"
+        run: printf '%s\n\n%s\n' "$PR_DIGEST" "$BACKLOG_DIGEST" > /tmp/digest-combined.txt
 
-      # 3b. POST — two separate messages so each threads independently in
-      # #docs-ops. Webhook + channel come from ESC; posts as docsbot.
-      - name: Post PR digest to Slack
-        if: ${{ !inputs.dry_run }}
-        uses: docker://sholung/action-slack-notify:v2.3.0
-        env:
-          SLACK_CHANNEL: docs-ops
-          SLACK_USERNAME: docsbot
-          SLACK_TITLE: "Weekly PR review queue"
-          SLACK_MESSAGE: ${{ steps.synth.outputs.pr_digest }}
-          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
-          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
-          MSG_MINIMAL: "true"
+      # 3a. DRY RUN — print the combined digest and the chunk boundaries it
+      # would post as, skip posting (no token needed).
+      - name: Preview digest (dry run)
+        if: ${{ inputs.dry_run }}
+        run: uv run scripts/weekly-digest/post-to-slack.py /tmp/digest-combined.txt --dry-run
 
-      - name: Post backlog digest to Slack
+      # 3b. POST — chunked via the Slack API (chat.postMessage), cloning the link
+      # checker's posting path: SLACK_ACCESS_TOKEN from ESC, mrkdwn on, no unfurl.
+      - name: Post digest to Slack
         if: ${{ !inputs.dry_run }}
-        uses: docker://sholung/action-slack-notify:v2.3.0
         env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           SLACK_CHANNEL: docs-ops
-          SLACK_USERNAME: docsbot
-          SLACK_TITLE: "Weekly issue backlog"
-          SLACK_MESSAGE: ${{ steps.synth.outputs.backlog_digest }}
-          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
-          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
-          MSG_MINIMAL: "true"
+        run: uv run scripts/weekly-digest/post-to-slack.py /tmp/digest-combined.txt
 
 env:
   ESC_ACTION_OIDC_AUTH: true
