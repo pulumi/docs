@@ -1,4 +1,4 @@
-name: self-host-qwen-llm-python
+name: self-host-gemma4-llm-python
 description: Self-hosted llama-server (llama.cpp) with Open WebUI and Tailscale
 runtime:
   name: python
@@ -10,12 +10,16 @@ config:
       pulumi:template: python
   model:
     type: string
-    default: unsloth/Qwen3.5-35B-A3B-GGUF
-    description: HuggingFace model repository
+    default: unsloth/gemma-4-26B-A4B-it-GGUF
+    description: Hugging Face model repository for cluster-mode downloads
   modelFile:
     type: string
-    default: Qwen3.5-35B-A3B-Q4_K_M.gguf
-    description: GGUF filename to download from the model repo
+    default: gemma-4-26B-A4B-it-MXFP4_MOE.gguf
+    description: GGUF filename to download from the model repo in cluster mode
+  runtimeMode:
+    type: string
+    default: host
+    description: Runtime mode for inference ("host" or "cluster")
   gpuVendor:
     type: string
     default: nvidia
@@ -26,7 +30,7 @@ config:
     description: Number of GPUs to allocate
   contextSize:
     type: integer
-    default: 65536
+    default: 8192
     description: Context window size in tokens
   fitTarget:
     type: integer
@@ -47,11 +51,23 @@ config:
   llmPort:
     type: integer
     default: 8080
-    description: LLM service port
+    description: LLM service port in cluster mode
   llmNodePort:
     type: integer
     default: 30080
     description: NodePort for external LLM access
+  hostLlmHostname:
+    type: string
+    default: host.k3d.internal
+    description: Hostname Kubernetes pods use to reach the host-native LLM server
+  hostLlmPort:
+    type: integer
+    default: 8080
+    description: Host-native LLM server port
+  llmBaseUrl:
+    type: string
+    default: http://llm-server:8080/v1
+    description: OpenAI-compatible LLM base URL for Open WebUI
   webuiPort:
     type: integer
     default: 30000

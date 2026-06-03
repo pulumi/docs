@@ -36,7 +36,7 @@ kubernetes-csi-driver-typescript
 
 # Requires a local GPU node, model download, and Tailscale credentials that CI
 # does not provide.
-self-host-qwen-llm-python
+self-host-gemma4-llm-python
 
 # Azure YAML import test: the engine requires import to be a literal
 # string, but the YAML program needs interpolation for the resource ID.

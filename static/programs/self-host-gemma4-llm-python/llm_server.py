@@ -103,8 +103,7 @@ class LlmServer(pulumi.ComponentResource):
                 replicas=1,
                 progress_deadline_seconds=1800,
                 selector=k8s.meta.v1.LabelSelectorArgs(match_labels=labels),
-                # Recreate strategy: only one pod can hold the GPU at a time
-                strategy=k8s.apps.v1.DeploymentStrategyArgs(type="Recreate"),
+                 strategy=k8s.apps.v1.DeploymentStrategyArgs(type="Recreate"),
                 template=k8s.core.v1.PodTemplateSpecArgs(
                     metadata=k8s.meta.v1.ObjectMetaArgs(labels=labels),
                     spec=k8s.core.v1.PodSpecArgs(
@@ -138,18 +137,26 @@ class LlmServer(pulumi.ComponentResource):
             ),
         )
 
-        service_spec_args = dict(
-            selector=labels,
-            ports=[
-                k8s.core.v1.ServicePortArgs(
-                    port=port,
-                    target_port=_INTERNAL_PORT,
-                    **({"node_port": node_port} if node_port else {}),
-                ),
-            ],
-        )
         if node_port:
-            service_spec_args["type"] = "NodePort"
+            service_port = k8s.core.v1.ServicePortArgs(
+                port=port,
+                target_port=_INTERNAL_PORT,
+                node_port=node_port,
+            )
+            service_spec = k8s.core.v1.ServiceSpecArgs(
+                selector=labels,
+                type="NodePort",
+                ports=[service_port],
+            )
+        else:
+            service_port = k8s.core.v1.ServicePortArgs(
+                port=port,
+                target_port=_INTERNAL_PORT,
+            )
+            service_spec = k8s.core.v1.ServiceSpecArgs(
+                selector=labels,
+                ports=[service_port],
+            )
 
         self.service = k8s.core.v1.Service(
             name,
@@ -157,7 +164,7 @@ class LlmServer(pulumi.ComponentResource):
                 name=name,
                 namespace=namespace,
             ),
-            spec=k8s.core.v1.ServiceSpecArgs(**service_spec_args),
+            spec=service_spec,
             opts=pulumi.ResourceOptions(parent=self),
         )
 

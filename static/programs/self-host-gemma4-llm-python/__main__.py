@@ -5,20 +5,27 @@ import pulumi_tailscale as tailscale
 from llm_server import LlmServer
 
 config = pulumi.Config()
+runtime_mode = config.get("runtimeMode") or "host"
 gpu_vendor = config.get("gpuVendor") or "nvidia"
 webui_port = config.get_int("webuiPort") or 30000
 llm_port = config.get_int("llmPort") or 8080
 llm_node_port = config.get_int("llmNodePort") or 30080
 hostname = config.get("hostname") or "llm-server"
-model = config.get("model") or "unsloth/Qwen3.5-35B-A3B-GGUF"
-model_file = config.get("modelFile") or "Qwen3.5-35B-A3B-Q4_K_M.gguf"
-context_size = config.get_int("contextSize") or 65536
+model = config.get("model") or "unsloth/gemma-4-26B-A4B-it-GGUF"
+model_file = config.get("modelFile") or "gemma-4-26B-A4B-it-MXFP4_MOE.gguf"
+context_size = config.get_int("contextSize") or 8192
 fit_target = config.get_int("fitTarget") or 2048
 parallel = config.get_int("parallel") or 1
 threads = config.get_int("threads") or 5
+host_llm_hostname = config.get("hostLlmHostname") or "host.k3d.internal"
+host_llm_port = config.get_int("hostLlmPort") or 8080
+llm_base_url = config.get("llmBaseUrl") or "http://llm-server:8080/v1"
 jinja = config.get_bool("jinja")
 if jinja is None:
     jinja = True
+
+if runtime_mode not in ["host", "cluster"]:
+    raise ValueError("runtimeMode must be 'host' or 'cluster'")
 
 NAMESPACE = "llm"
 
@@ -28,23 +35,40 @@ ns = k8s.core.v1.Namespace(
 )
 ns_opts = pulumi.ResourceOptions(depends_on=[ns])
 
-llm = LlmServer(
-    "llm",
-    model=model,
-    model_file=model_file,
-    port=llm_port,
-    gpu_vendor=gpu_vendor,
-    gpu_count=config.get_int("gpuCount") or 1,
-    node_port=llm_node_port,
-    namespace=NAMESPACE,
-    context_size=context_size,
-    fit_target=fit_target,
-    parallel=parallel,
-    threads=threads,
-    jinja=jinja,
-    mmproj=config.get("mmproj"),
-    opts=ns_opts,
-)
+if runtime_mode == "host":
+    llm_service = k8s.core.v1.Service(
+        "llm-server",
+        metadata=k8s.meta.v1.ObjectMetaArgs(name="llm-server", namespace=NAMESPACE),
+        spec=k8s.core.v1.ServiceSpecArgs(
+            type="ExternalName",
+            external_name=host_llm_hostname,
+            ports=[
+                k8s.core.v1.ServicePortArgs(
+                    port=host_llm_port,
+                    target_port=host_llm_port,
+                ),
+            ],
+        ),
+        opts=ns_opts,
+    )
+else:
+    llm_service = LlmServer(
+        "llm-server",
+        model=model,
+        model_file=model_file,
+        port=llm_port,
+        gpu_vendor=gpu_vendor,
+        gpu_count=config.get_int("gpuCount") or 1,
+        node_port=llm_node_port,
+        namespace=NAMESPACE,
+        context_size=context_size,
+        fit_target=fit_target,
+        parallel=parallel,
+        threads=threads,
+        jinja=jinja,
+        mmproj=config.get("mmproj"),
+        opts=ns_opts,
+    )
 
 # --- Tailscale RBAC (must be created before the Tailscale deployment that
 #     references service_account_name="tailscale") ---
@@ -119,7 +143,7 @@ webui_deployment = k8s.apps.v1.Deployment(
                         env=[
                             k8s.core.v1.EnvVarArgs(
                                 name="OPENAI_API_BASE_URLS",
-                                value=llm.url,
+                                value=llm_base_url,
                             ),
                             k8s.core.v1.EnvVarArgs(name="OPENAI_API_KEYS", value="not-needed"),
                             k8s.core.v1.EnvVarArgs(name="WEBUI_AUTH", value="false"),
@@ -293,6 +317,11 @@ ts_deployment = k8s.apps.v1.Deployment(
 # --- Outputs ---
 
 pulumi.export("local_webui_url", f"http://localhost:{webui_port}")
-pulumi.export("local_api_url", f"http://localhost:{llm_node_port}/v1")
 pulumi.export("tailscale_webui_url", f"http://{hostname}:{webui_port}")
+pulumi.export("runtime_mode", runtime_mode)
+pulumi.export("llm_base_url", llm_base_url)
 pulumi.export("model", model)
+if runtime_mode == "host":
+    pulumi.export("host_llm_url", f"http://{host_llm_hostname}:{host_llm_port}/v1")
+else:
+    pulumi.export("cluster_api_url", f"http://localhost:{llm_node_port}/v1")
