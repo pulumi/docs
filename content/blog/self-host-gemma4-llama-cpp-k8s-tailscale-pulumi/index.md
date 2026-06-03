@@ -120,12 +120,13 @@ Create a new cluster for this project:
 k3d cluster create pulumi-gemma4-blog-qa
 ```
 
-We'll use a Pulumi program located at `static/programs/self-host-gemma4-llm-python/`. This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
+We'll use the Pulumi program in [`pulumi/examples`](https://github.com/pulumi/examples/tree/master/kubernetes-py-self-host-gemma4-llm). This program defaults to `runtimeMode=host`, which creates a Kubernetes `ExternalName` service pointing to your host machine.
 
-Navigate to the program directory and initialize a new stack:
+Clone the examples repo, navigate to the program directory, and initialize a new stack:
 
 ```bash
-cd static/programs/self-host-gemma4-llm-python
+git clone https://github.com/pulumi/examples.git
+cd examples/kubernetes-py-self-host-gemma4-llm
 pulumi stack init gemma4-local
 ```
 
