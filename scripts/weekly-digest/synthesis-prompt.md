@@ -31,6 +31,6 @@ Then:
 
 A scan of the open-issue backlog, not a recital. Do not list the whole backlog.
 
-- New this week -- the issues in `issues.new_this_week` (opened in the trailing `window_days` days). One line each.
+- New this week -- the issues in `issues.new_this_week` (opened in the trailing `window_days` days). One line each. Mark any issue with `needs_triage == true` as still needing triage (for example a trailing `needs-triage` tag on its line), and lead the bucket with a count of how many of the new issues are untriaged so the team can see the triage load at a glance.
 - Oldest open -- the issues in `issues.oldest_open` (the 2-3 staleest). One line each, framed to force a keep-or-kill call.
 - Net delta -- one line comparing `issues.opened_last_7d` against `issues.closed_last_7d` (for example "12 opened vs 19 closed -- backlog shrank by 7"). Mention `issues.all_open_count` as the running total.
