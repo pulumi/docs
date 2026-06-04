@@ -1,0 +1,1 @@
+> **Note:** Use the ESC SDK to retrieve environment values from your application workloads at runtime and to manage environments programmatically. If you want to consume an environment from within a Pulumi IaC program, use [config](/docs/esc/guides/integrate-with-pulumi-iac/) instead of the SDK.

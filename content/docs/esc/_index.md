@@ -39,8 +39,8 @@ sections:
     icon: vault-40
     link: /docs/esc/providers/secrets/vault-secrets/
 - type: cards-logo-label-link
-  heading: Languages
-  description: Manage configuration and secrets intuitively on any cloud using familiar languages.
+  heading: Languages & SDKs
+  description: <p>Use the ESC SDKs to retrieve environment values from your application workloads at runtime and to manage environments programmatically. To consume an environment from a Pulumi IaC program, use <a href="/docs/esc/guides/integrate-with-pulumi-iac/">config</a> instead.</p>
   cards:
   - label: Node.js
     icon: icon-32-32 node-color-32-32
@@ -51,9 +51,9 @@ sections:
   - label: Go
     icon: icon-32-32 go-color-32-32
     link: /docs/esc/languages-sdks/go/
-  - label: YAML
-    icon: icon-32-32 yaml-color-32-32
-    link: /docs/esc/environments/syntax/
+  - label: .NET
+    icon: icon-32-32 dotnet-color-32-32
+    link: /docs/esc/languages-sdks/dotnet/
 - type: button-cards
   heading: Operations
   description: Day-to-day workflows for running Pulumi ESC.

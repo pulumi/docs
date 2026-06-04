@@ -13,7 +13,9 @@ aliases:
   - /docs/esc/development/languages-sdks/python/
 ---
 
-The [Python SDK](https://pypi.org/project/pulumi-esc-sdk/) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
+Pulumi ESC provides a Python SDK for managing environments and reading their configuration and secrets from your own code.
+
+{{< esc-sdk-config-note >}}
 
 Here are some of the scenarios the SDK can automate:
 
@@ -23,6 +25,10 @@ Here are some of the scenarios the SDK can automate:
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
 * Check environment definitions for errors
+
+## Runtime support
+
+The SDK supports any [currently supported version](https://devguide.python.org/versions/#versions) of Python. We recommend using a recent release for the best experience.
 
 ## Install the SDK package
 
@@ -57,11 +63,7 @@ All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environmen
 
 ### Manage environment example
 
-This example creates a new environment, opens that environment to access a secret, and the list the environments.
-
-{{< chooser language "python" >}}
-
-{{% choosable language "python" %}}
+This example creates a new environment, opens that environment to access a secret, and then lists the environments.
 
 ```python
 import pulumi_esc_sdk as esc
@@ -108,16 +110,9 @@ for env in environments.environments:
 
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ### Tag revision example
 
 This example lists revisions for an environment, tags a revision, and lists revision tags.
-
-{{< chooser language "python" >}}
-
-{{% choosable language "python" %}}
 
 ```python
 import pulumi_esc_sdk as esc
@@ -150,9 +145,7 @@ for tag in tags.tags:
 
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ## Documentation
 
 * [API Reference Documentation](/docs/reference/pkg/python/pulumi_esc_sdk/)
+* [PyPI package](https://pypi.org/project/pulumi-esc-sdk/)

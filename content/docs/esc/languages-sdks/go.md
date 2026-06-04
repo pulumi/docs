@@ -13,7 +13,9 @@ aliases:
   - /docs/esc/development/languages-sdks/go/
 ---
 
-The [Go SDK](https://github.com/pulumi/esc-sdk) for [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/) allows you to automate Pulumi ESC.
+Pulumi ESC provides a Go SDK for managing environments and reading their configuration and secrets from your own code.
+
+{{< esc-sdk-config-note >}}
 
 Here are some of the scenarios the SDK can automate:
 
@@ -23,6 +25,10 @@ Here are some of the scenarios the SDK can automate:
     * Supports both structured types and yaml text
 * List environment revisions and create new revision tags
 * Check environment definitions for errors
+
+## Runtime support
+
+The SDK supports any [supported version](https://go.dev/doc/devel/release#policy) of Go. We recommend using a recent release for the best experience.
 
 ## Install the SDK package
 
@@ -60,11 +66,7 @@ All of these examples expect a `PULUMI_ACCESS_TOKEN` and `PULUMI_ORG` environmen
 
 ### Manage environment example
 
-This example creates a new environment, opens that environment to access a secret, and the list the environments.
-
-{{< chooser language "go" >}}
-
-{{% choosable language "go" %}}
+This example creates a new environment, opens that environment to access a secret, and then lists the environments.
 
 ```go
 package main
@@ -130,16 +132,9 @@ func main() {
 
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ### Tag revision example
 
 This example lists revisions for an environment, tags a revision, and lists revision tags.
-
-{{< chooser language "go" >}}
-
-{{% choosable language "go" %}}
 
 ```go
 package main
@@ -187,9 +182,7 @@ func main() {
 
 ```
 
-{{% /choosable %}}
-{{< /chooser >}}
-
 ## Documentation
 
 * [API Reference Documentation](https://pkg.go.dev/github.com/pulumi/esc-sdk/sdk/go)
+* [Source repository](https://github.com/pulumi/esc-sdk)
