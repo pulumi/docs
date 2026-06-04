@@ -61,7 +61,7 @@ After creating an integration, you can configure merge request behavior. Toggle 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
-| Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in merge request comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in merge request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your GitLab group and disconnects all stacks using that integration.

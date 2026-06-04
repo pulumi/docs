@@ -72,8 +72,8 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 | Setting | Default | Description |
 |---|---|---|
 | PR Comments | Enabled | Post deployment status and resource changes as comments on ADO pull requests |
-| Neo Summaries | Enabled | Include AI-generated summaries of infrastructure changes in PR comments |
-| Detailed Diff | Disabled | Show property-level before/after diffs for changed resources in PR comments |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Detailed Diff | Enabled | Show property-level before/after diffs for changed resources in PR comments |
 
 To update, toggle the setting directly. Changes save automatically.
 
@@ -115,7 +115,7 @@ Neo, Pulumi's AI assistant, works with Azure DevOps pull requests. When enabled 
 
 These appear as comments on your ADO pull requests alongside standard deployment status updates.
 
-To disable Neo summaries, toggle **Neo Summaries** off in your [integration settings](#integration-settings).
+To disable these, toggle **Neo Code Reviews** off in your [integration settings](#integration-settings).
 
 ## Troubleshooting
 
