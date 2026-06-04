@@ -51,7 +51,8 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Imports and migration | Import blocks, generated config, and state operations | [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
 | Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/) make multi-region and multi-account wiring visible in code review | Provider versions and bugs can still affect deployments |
 | Testing | Validation, plan review, and external test harnesses | Pulumi programs can use normal [unit and integration test frameworks](https://www.pulumi.com/docs/iac/concepts/testing/) | Tests complement previews, they do not replace them |
-| Caveats | Declarative planning still has unknowns and drift | Pulumi improves the workflow around many pain points | It does not eliminate [drift](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/), provider bugs, or eventual consistency |
+| Drift detection | Refresh and refresh-only plans, plus external scheduling | [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) on a configurable cadence | Detection still depends on provider behavior and a healthy state backend |
+| Caveats | Declarative planning still has unknowns and drift | Pulumi improves the workflow around many pain points | It does not eliminate provider bugs or eventual consistency |
 
 ## Use programming languages and familiar tools
 
@@ -205,6 +206,14 @@ const replica = new aws.sqs.Queue("replica-jobs", {}, {
 
 The provider object does not remove provider versioning or schema-change risk, but it makes provider wiring visible in the same language and review flow as the rest of the program.
 
+## Detect and reconcile drift
+
+Infrastructure drifts when something changes outside your IaC tool: a hotfix in the console, another controller, or a manual break-glass change. Pulumi gives you first-class tools to find and fix it instead of leaving it to chance. [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles your state with what is actually running in the cloud, and `pulumi preview --diff` shows what the next update would change.
+
+For teams that want this continuously, Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) that runs on a configurable cadence and can automatically remediate drift when it is detected. That turns finding and correcting out-of-band changes into a managed workflow rather than something a person has to remember to check.
+
+Drift detection still depends on accurate provider behavior and a healthy state backend, so it complements review and operational discipline rather than replacing them.
+
 ## Import and migrate incrementally
 
 Teams rarely get to rebuild infrastructure from scratch. Pulumi supports incremental adoption with [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/), generated code, and Terraform interoperability paths. That makes it possible to start with one resource, one component, or one stack instead of forcing a big-bang migration.
@@ -227,7 +236,7 @@ You also don't have to do it alone. Pulumi provides [self-serve conversion tools
 
 Pulumi does not eliminate cloud API eventual consistency. A deployment can finish successfully while downstream reads, controllers, or other operators still see stale state for a short window. That is a property of the cloud control plane, not of the IaC tool.
 
-Pulumi also does not eliminate provider bugs or drift. If a provider has a schema issue, a bad default, or a flaky update path, Pulumi still has to ride that provider behavior. Drift is real too, but you don't have to manage it by hand: [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state with what is actually running, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) that runs on a configurable cadence and can auto-remediate. That turns detecting and correcting out-of-band changes into a managed workflow rather than something you have to remember to check.
+Pulumi also does not eliminate provider bugs. If a provider has a schema issue, a bad default, or a flaky update path, Pulumi still has to ride that provider behavior. Drift will still happen when infrastructure changes outside Pulumi, too. The difference is that Pulumi gives you first-class tooling to detect and reconcile it, as covered in [Detect and reconcile drift](#detect-and-reconcile-drift) above — but the drift itself, and the discipline to act on it, do not disappear.
 
 Pulumi does not eliminate preview-time unknowns either. Some values are not known until deployment, so the plan can still contain uncertainty. Bad project decomposition and side-effect-heavy deployment code remain risks too, which is why [testing](https://www.pulumi.com/docs/iac/concepts/testing/), clear stack boundaries, and disciplined component design still matter.
 
