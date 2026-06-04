@@ -1,9 +1,9 @@
 ---
-title: "Use Your Mac for AI Agents: Self-Host Gemma 4 12&nbsp;B with Pulumi and Tailscale"
+title: "Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-06-04
 meta_desc: |
-    Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12&nbsp;B Q8 GGUF with a 128K context window.
+    Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12 B Q8 GGUF with a 128K context window.
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -36,7 +36,7 @@ Open-weight models now run well on consumer hardware. Once the model is on your 
 
 <!--more-->
 
-[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12&nbsp;B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12&nbsp;B model fits comfortably on a modern Mac while leaving enough headroom for a local server and chat UI.
+[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12 B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12 B model fits comfortably on a modern Mac while leaving enough headroom for a local server and chat UI.
 
 We'll use `llama.cpp` for host-native inference, [k3d](https://k3d.io/) for a local Kubernetes cluster, Pulumi for infrastructure as code, and [Tailscale](https://tailscale.com/) for secure access.
 
@@ -61,7 +61,7 @@ Install the build tools:
 brew install cmake git
 ```
 
-Then build `llama.cpp` from source and download the multimodal projector. In validation, Homebrew `llama.cpp` 9430 could run text inference, but it could not load the new Gemma 4 12&nbsp;B projector and failed with `unknown projector type: gemma4uv`. Building current `llama.cpp` from source fixed that.
+Then build `llama.cpp` from source and download the multimodal projector. In validation, Homebrew `llama.cpp` 9430 could run text inference, but it could not load the new Gemma 4 12 B projector and failed with `unknown projector type: gemma4uv`. Building current `llama.cpp` from source fixed that.
 
 ```bash
 llm_home="$HOME/pulumi-gemma4-llm"
@@ -101,7 +101,7 @@ Then download and run the model with this command:
 
 We use port `18080` because `8080` is commonly used and is likely to conflict with another service you may already have running locally. If your port `8080` is free, you can use it and adjust the Pulumi config later.
 
-The model file is about 12.65 GB, and the projector is about 116 MB. Gemma 4 12&nbsp;B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for the text model and about 258 MiB worst-case memory for the projector, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
+The model file is about 12.65 GB, and the projector is about 116 MB. Gemma 4 12 B advertises a 131,072-token context, and this Mac loaded that full context with `--parallel 1`. `llama.cpp` projected about 15.1 GiB of Apple Metal device memory for the text model and about 258 MiB worst-case memory for the projector, leaving enough headroom for Open WebUI and the rest of the local stack. The `--reasoning off` flag keeps OpenAI-compatible chat responses visible in clients that do not read separate reasoning fields.
 
 With `--mmproj`, `/v1/models` advertised `capabilities: ["completion","multimodal"]`. In local validation, Open WebUI accepted an uploaded Pulumi logo image and Gemma 4 described it correctly. A small WAV file also worked through the OpenAI-compatible `input_audio` request shape, though `llama.cpp` logs still mark audio input as experimental.
 
