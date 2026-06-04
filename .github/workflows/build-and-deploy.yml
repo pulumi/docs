@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - uses: actions/checkout@v6
         with:
@@ -90,7 +90,7 @@ jobs:
           rm /tmp/vale.tar.gz
 
       - name: Install Pulumi CLI
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
 
       - name: Build and deploy
         run: make ci_push
@@ -124,7 +124,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

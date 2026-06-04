@@ -149,7 +149,7 @@ jobs:
       # step below has the pinned vale binary on PATH. Cache speeds up
       # subsequent runs.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
 
@@ -975,7 +975,7 @@ jobs:
       # operator-side ad-hoc tool sidesteps that working-tree dependency.
       - name: Upload Claude execution log
         if: always() && steps.claude-review.outcome == 'success'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
           path: /home/runner/work/_temp/claude-execution-output.json
@@ -988,7 +988,7 @@ jobs:
       # reproducing the run.
       - name: Upload post-edit chain debug artifacts
         if: always() && steps.claude-review.outcome == 'success'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: post-edit-debug-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
           path: |

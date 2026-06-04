@@ -24,7 +24,7 @@ jobs:
       # downstream workflows (build-and-deploy, docs review, etc.) fire on it.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
