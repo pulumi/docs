@@ -79,7 +79,7 @@ Python is one of the primary languages for IaC tools that support real programmi
 
 * **Generated, typed SDKs.** Pulumi's Python providers ship type hints for every cloud resource (AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Datadog, Snowflake, and more). IDEs like PyCharm and VS Code surface the available properties as you type.
 * **Real abstractions.** A reusable VPC pattern becomes a Python class (`MyVpc(...)`), not a folder of templates. Components can ship as PyPI packages.
-* **Standard testing tools.** `pytest`, `unittest`, mocks via `unittest.mock`, and Pulumi's own [Python mocks](/docs/iac/using-pulumi/testing/unit/) for cloud responses. IaC tests run alongside application tests in the same CI job.
+* **Standard testing tools.** `pytest`, `unittest`, mocks via `unittest.mock`, and Pulumi's own [Python mocks](/docs/iac/guides/testing/unit/) for cloud responses. IaC tests run alongside application tests in the same CI job.
 * **Standard packaging.** `pip`, `poetry`, `uv`, or Pipenv manage dependencies. Lock files (`requirements.txt`, `poetry.lock`, `uv.lock`) make deploys reproducible.
 
 Compared to writing infrastructure in HCL or YAML, Python gives you loops, conditionals, classes, type hints, and the ability to share modules through PyPI. Compared to writing infrastructure in TypeScript, the team trades off some compile-time type rigor for the language they're already using. Both options are first-class in Pulumi; the right one depends on what your team writes most of its other code in.
@@ -140,7 +140,7 @@ Python is a first-class language for Pulumi, supported on par with TypeScript, G
 * **`pulumi new python`.** Creates a project with a `Pulumi.yaml`, a virtualenv setup, and a starter program in seconds. See the [Python language guide](/docs/languages-sdks/python/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) can be distributed as PyPI packages with full type hints, among other formats.
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
-* **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
+* **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
 * **Pulumi policies in Python.** Write [policy as code](/docs/insights/policy/) in the same language as your infrastructure.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Python programs, CI jobs, and applications.
@@ -167,7 +167,7 @@ Pick the language your team writes most of its other code in. Both are first-cla
 
 ### How do you test Python IaC?
 
-Use pytest and Pulumi's [Python test mocks](/docs/iac/using-pulumi/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/packages-and-automation/automation-api/) to spin up ephemeral stacks for integration tests.
+Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/packages-and-automation/automation-api/) to spin up ephemeral stacks for integration tests.
 
 ### What's MLOps and how does it relate to DevOps?
 

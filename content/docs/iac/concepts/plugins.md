@@ -89,8 +89,8 @@ Plugins are stored in different locations depending on their type:
 
 You can manage your local plugin cache using the following CLI commands:
 
-- [`pulumi plugin ls`](/docs/iac/cli/commands/pulumi_plugin_ls/) - List installed plugins
-- [`pulumi plugin rm`](/docs/iac/cli/commands/pulumi_plugin_rm/) - Remove cached plugins
+- [`pulumi plugin ls`](/docs/iac/cli/commands/pulumi_plugin_list/) - List installed plugins
+- [`pulumi plugin rm`](/docs/iac/cli/commands/pulumi_plugin_remove/) - Remove cached plugins
 - [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install/) - Manually install a plugin
 
 ## Plugin implementation details

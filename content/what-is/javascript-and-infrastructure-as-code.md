@@ -136,7 +136,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 * **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
 * **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
-* **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/using-pulumi/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
+* **Unit testing with mocks.** Pulumi's [TypeScript test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses, so Jest tests run in milliseconds.
 * **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you run Pulumi programs from inside another Node.js application. Build CLIs, self-service portals, or CI jobs that drive `pulumi up` and `pulumi destroy` from typed JS.
 * **Policy as code in TypeScript.** [Pulumi policies](/docs/insights/policy/) can be written in the same language as the IaC, with the same typing over the resource model.
 * **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Node.js programs, CI jobs, and applications, with audit trails.
@@ -163,7 +163,7 @@ No. Pulumi supports Python, Go, .NET (C#, F#, VB), Java, and YAML alongside Node
 
 ### Can I write Pulumi infrastructure tests with Jest?
 
-Yes. Jest is the most common choice for unit testing Pulumi TypeScript programs. Pulumi provides mocks that replace cloud calls so the tests run entirely in memory. See the [unit testing guide](/docs/iac/using-pulumi/testing/unit/).
+Yes. Jest is the most common choice for unit testing Pulumi TypeScript programs. Pulumi provides mocks that replace cloud calls so the tests run entirely in memory. See the [unit testing guide](/docs/iac/guides/testing/unit/).
 
 ### Can I publish a Pulumi component to npm?
 

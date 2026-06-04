@@ -18,9 +18,11 @@ aliases:
 
 The `gcp-login` provider enables you to log in to Google Cloud using OpenID Connect or by providing static credentials. The provider will return a set of credentials that can be used to access Google Cloud resources or fetch secrets using the `gcp-secrets` provider.
 
-## Example
+## Examples
 
-### Basic configuration
+### Using outputs with Pulumi IaC
+
+The [Pulumi Google Cloud provider](https://www.pulumi.com/registry/packages/gcp/) reads the project and OAuth access token from the environment:
 
 ```yaml
 values:
@@ -32,11 +34,15 @@ values:
           workloadPoolId: pulumi-esc
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
+  environmentVariables:
+    # The Pulumi Google Cloud provider reads the project (as a numeric ID) and the access token
+    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
+    GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
-### Using outputs with Pulumi IaC and gcloud CLI
+### Using outputs with the gcloud CLI
 
-The `gcp-login` provider outputs credentials for use with both Pulumi's Google Cloud provider and the `gcloud` CLI. This example shows how to configure both:
+The `gcloud` CLI reads the project ID (a string identifier, not the numeric project number used by the Pulumi provider) and the access token from its own `CLOUDSDK_*` environment variables, which differ from the ones the Pulumi provider uses:
 
 ```yaml
 values:
@@ -48,24 +54,12 @@ values:
           workloadPoolId: pulumi-esc
           providerId: pulumi-esc
           serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com
-  pulumiConfig:
-    gcp:project: ${gcp.login.project}
   environmentVariables:
-    # The Google Cloud SDK (used by Pulumi's GCP provider) requires the project to be set by number
-    GOOGLE_CLOUD_PROJECT: ${gcp.login.project}
-    # The gcloud CLI requires the project to be set by name, and via a different env var
+    # CLOUDSDK_CORE_PROJECT takes the project ID string (e.g. "my-project-12345"), not the numeric project number used by GOOGLE_CLOUD_PROJECT above
     # See: https://cloud.google.com/sdk/docs/properties#setting_properties_using_environment_variables
-    CLOUDSDK_CORE_PROJECT: my-project-name
-    # Provide OAuth access tokens to both the Google Cloud SDK and gcloud CLI
-    GOOGLE_OAUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
+    CLOUDSDK_CORE_PROJECT: my-project-12345
     CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
-
-Note that both `GOOGLE_CLOUD_PROJECT` (numeric project ID) and `CLOUDSDK_CORE_PROJECT` (project name) are set because the Google Cloud SDK and gcloud CLI have different requirements for project identification.
-
-This configuration enables:
-- **Pulumi IaC**: The `pulumiConfig` section sets the GCP project for Pulumi's Google Cloud provider.
-- **gcloud CLI**: The `environmentVariables` section configures authentication for the `gcloud` command-line tool.
 
 ## Configuring OIDC
 

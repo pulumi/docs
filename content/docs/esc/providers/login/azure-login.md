@@ -20,6 +20,8 @@ The `azure-login` provider enables you to log in to Azure using OpenID Connect o
 
 ## Example
 
+The `azure-login` provider's outputs can be consumed by the Pulumi Azure providers ([azure-native](https://www.pulumi.com/registry/packages/azure-native/), [azure](https://www.pulumi.com/registry/packages/azure/), and [azuread](https://www.pulumi.com/registry/packages/azuread/)) and the Azure SDKs through the standard `ARM_*` environment variables:
+
 ```yaml
 values:
   azure:
@@ -29,7 +31,16 @@ values:
         tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
         subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000
         oidc: true
+  environmentVariables:
+    # Consumed by the Pulumi Azure providers (azure-native, azure, azuread) and the Azure SDKs
+    ARM_USE_OIDC: "true"
+    ARM_CLIENT_ID: ${azure.login.clientId}
+    ARM_TENANT_ID: ${azure.login.tenantId}
+    ARM_SUBSCRIPTION_ID: ${azure.login.subscriptionId}
+    ARM_OIDC_TOKEN: ${azure.login.oidc.token}
 ```
+
+The [azuredevops](https://www.pulumi.com/registry/packages/azuredevops/) provider accepts the same `ARM_CLIENT_ID`, `ARM_TENANT_ID`, `ARM_OIDC_TOKEN`, and `ARM_USE_OIDC` credentials. It does not use `ARM_SUBSCRIPTION_ID`; instead, set your organization URL with the `AZDO_ORG_SERVICE_URL` environment variable.
 
 ## Configuring OIDC
 

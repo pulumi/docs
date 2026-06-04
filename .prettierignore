@@ -57,3 +57,7 @@ static/js
 
 **/.claude/settings.json
 **/.claude/settings.local.json
+
+# Link-checker workflow artifacts (gitignored, generated at runtime)
+/.broken-links.json
+/.broken-links-pr.txt

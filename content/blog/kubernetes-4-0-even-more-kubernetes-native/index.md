@@ -2,6 +2,7 @@
 title: "Pulumi Kubernetes 4.0: Even More Kubernetes-Native"
 
 date: 2023-07-19T16:00:00-04:00
+lastmod: 2026-06-03
 
 meta_desc: The Pulumi Kubernetes Provider 4.0; Shared Resource Management with Server-Side Apply
 
@@ -220,7 +221,7 @@ As part of this work, we removed the use of the `kubectl.kubernetes.io/last-appl
 
 You can migrate your existing Pulumi Kubernetes projects to 4.0 today, or start a new project targeting 4.0 with any of the Pulumi templates.
 
-For users migrating to 4.0, check out the [v4 Provider Migration Guide](https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/v4-migration/) with full details of the additional changes in this release.
+For users migrating to 4.0, check out the [v4 Provider Migration Guide](https://web.archive.org/web/20250123192709/https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/v4-migration/) with full details of the additional changes in this release.
 
 ## Getting Started
 
