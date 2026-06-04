@@ -557,7 +557,7 @@ git tag v1.0.0
 git push origin v1.0.0
 
 # Publish to Pulumi IDP Private Registry (optional)
-pulumi package publish github.com/myorg/my-component@v1.0.0
+pulumi package publish github.com/myorg/my-component@1.0.0
 
 # Generate the SDK
 pulumi package gen-sdk . --language nodejs --out sdk
