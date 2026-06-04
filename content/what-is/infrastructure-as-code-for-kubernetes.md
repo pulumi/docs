@@ -136,7 +136,7 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
 * **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
 
-[Get started with Pulumi Kubernetes](/docs/iac/clouds/kubernetes/get-started/) to manage a cluster and its workloads in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi Kubernetes](/docs/iac/get-started/kubernetes/) to manage a cluster and its workloads in TypeScript, Python, Go, C#, Java, or YAML.
 
 ## Frequently asked questions about IaC for Kubernetes
 
@@ -182,7 +182,7 @@ Start with the simplest thing that gives you a baseline: a Pulumi program that i
 
 ## Learn more
 
-Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/esc/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/clouds/kubernetes/get-started/).
+Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/esc/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/get-started/kubernetes/).
 
 Related reading:
 
