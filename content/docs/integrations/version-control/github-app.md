@@ -52,6 +52,16 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
+### Individual user setup
+
+Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. This option is not available for GitHub Enterprise Server.
+
+{{% notes type="info" %}}
+To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
+{{% /notes %}}
+
 ## Capabilities
 
 ### Pull request comments
