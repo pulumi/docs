@@ -16,9 +16,9 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter: "Pulumi Deployments can now trigger on git tag pushes. Push a version tag like v1.2.0 and Pulumi runs pulumi up automatically — across GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS. Filter with glob patterns to deploy only the releases you care about."
-    linkedin: "Many teams treat a git tag as the signal that a release is ready to ship. Pulumi Deployments now lets you act on that signal directly: configure tag-based triggers, push a version tag like v1.2.0, and Pulumi runs pulumi up automatically.\n\nTag triggers work across all five version control integrations — GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS — and use the same glob-based filtering model as path filters, so you can deploy on every v* release while excluding pre-releases like v1.2.0-rc1.\n\nRead the announcement for how to set it up."
-    bluesky: "Pulumi Deployments can now trigger on git tag pushes. Push a version tag like v1.2.0 and Pulumi runs pulumi up automatically — with glob-based tag filters so you only deploy the releases you choose."
+    twitter: "Pulumi Deployments can now trigger on git tag pushes.\n\nPush a version tag like v1.2.0 and Pulumi runs pulumi up automatically — across GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS. Filter with glob patterns to deploy only the tags you want."
+    linkedin: "Many teams treat a git tag as the signal that a release is ready to ship. Pulumi Deployments now lets you act on that signal directly: configure tag-based triggers, push a version tag like v1.2.0, and Pulumi runs pulumi up automatically.\n\nTag triggers work across all five version control integrations — GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS — and use the same glob-based filtering model as path filters, so you can deploy on every v* release while excluding pre-releases like v1.2.0-rc1.\n\nThe post also covers the PULUMI_CI_TAG_NAME variable for stamping the release version onto your resources, plus a setup note for existing GitLab integrations."
+    bluesky: "Pulumi Deployments can now trigger on git tag pushes.\n\nPush a version tag like v1.2.0 and Pulumi runs pulumi up automatically — with glob-based tag filters so you only deploy the releases you choose."
 ---
 
 A git tag is how many teams mark a release as ready. Pulumi Deployments can now act on that signal directly: configure a tag-based trigger, push a version tag like `v1.2.0`, and Pulumi automatically runs `pulumi up` for your stack. No extra pipeline glue, no manual click — your release tag *is* the deployment.
@@ -52,9 +52,7 @@ When a tag push kicks off a deployment, Pulumi sets the `PULUMI_CI_TAG_NAME` env
 
 ## Works across every VCS integration
 
-Tag triggers are available across all five version control integrations: [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/). For Custom VCS, send a webhook with the event type `tag_push` and a `tag` field, and the same filtering logic applies.
-
-One note for existing GitLab users: GitLab integrations created before this feature did not subscribe to GitLab's tag push webhook events. To use tag triggers on a pre-existing GitLab integration, enable **Tag push events** on the existing group webhook in GitLab — there's no need to re-create the integration. New integrations subscribe automatically.
+Tag triggers are available across all five version control integrations: [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/).
 
 ## Get started
 
