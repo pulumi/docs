@@ -28,7 +28,7 @@ Here are some of the scenarios the SDK can automate:
 
 ## Runtime support
 
-The SDK runs on Python 3.9 and later.
+The SDK supports any [currently supported version](https://devguide.python.org/versions/#versions) of Python. We recommend using a recent release for the best experience.
 
 ## Install the SDK package
 

@@ -28,7 +28,7 @@ Here are some of the scenarios the SDK can automate:
 
 ## Runtime support
 
-The SDK runs on .NET 6 and later, and supports C#, F#, and Visual Basic.
+The SDK supports any [supported version](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle) of .NET. We recommend using a recent release for the best experience. The SDK supports C#, F#, and Visual Basic.
 
 ## Install the SDK package
 

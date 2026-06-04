@@ -28,7 +28,7 @@ Here are some of the scenarios the SDK can automate:
 
 ## Runtime support
 
-The SDK runs on Go 1.20 and later.
+The SDK supports any [supported version](https://go.dev/doc/devel/release#policy) of Go. We recommend using a recent release for the best experience.
 
 ## Install the SDK package
 

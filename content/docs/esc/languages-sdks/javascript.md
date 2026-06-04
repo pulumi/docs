@@ -28,7 +28,7 @@ Here are some of the scenarios the SDK can automate:
 
 ## Runtime support
 
-The SDK runs on Node.js 18 and later.
+The SDK supports Node.js [Current, Active, and Maintenance LTS versions](https://nodejs.org/en/about/previous-releases). We recommend using the latest LTS version for the best experience.
 
 ## Languages
 
