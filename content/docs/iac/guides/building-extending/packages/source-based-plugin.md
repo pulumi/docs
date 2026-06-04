@@ -612,7 +612,7 @@ Now both entries resolve to the same local SDK, and your existing imports work w
 
 ### Consider single-language components during early development {#single-language-components}
 
-If the plugin packaging model is adding friction during early development — for example, dealing with SDK regeneration or scope mismatches — and your consuming project is written in the **same language** as your component, you can skip it entirely. Use the component as a [native language package](/docs/iac/guides/building-extending/components/packaging-components/#native-language-packages) instead. For TypeScript, this means importing the component directly via a `file:` or path dependency in `package.json` — no `PulumiPlugin.yaml`, no SDK generation, and no `pulumi package add`.
+If the plugin packaging model is adding friction during early development (for example, dealing with SDK regeneration or scope mismatches) and your consuming project is written in the **same language** as your component, you can skip it entirely. Use the component as a [native language package](/docs/iac/guides/building-extending/components/packaging-components/#native-language-packages) instead. For TypeScript, this means importing the component directly via a `file:` or path dependency in `package.json`, with no `PulumiPlugin.yaml`, no SDK generation, and no `pulumi package add`.
 
 This approach is useful during early development or migration work where rapid iteration matters more than multi-language support. You can always convert to a source-based plugin package later when you need cross-language consumption or want to publish to the [IDP Private Registry](/docs/idp/concepts/private-registry/).
 
