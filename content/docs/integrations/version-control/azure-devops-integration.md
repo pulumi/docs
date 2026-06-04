@@ -85,6 +85,7 @@ ADO-backed stacks support the same deployment settings as GitHub. Configure thes
 | Preview Pull Requests | Run `pulumi preview` on pull request creation/update and post results as a PR comment |
 | PR Templates | Create a PR with the preview results when running a preview |
 | Path Filters | Only trigger deployments when files matching specified glob patterns change (e.g., `infra/**`) |
+| Tag Triggers | Deploy when a git tag matching the configured [tag filters](/docs/deployments/deployments/using/settings/#tag-filtering) is pushed (e.g., `v*`) |
 
 ### Selecting a repository and branch
 

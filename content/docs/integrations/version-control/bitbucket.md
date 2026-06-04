@@ -85,6 +85,8 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+
 ### Review stacks
 
 [Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments stands up a stack with your changes and posts a pull request comment with the outputs. Merge or close the pull request, and Pulumi Deployments destroys the stack and frees the associated resources.

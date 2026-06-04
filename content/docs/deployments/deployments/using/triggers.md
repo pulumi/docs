@@ -15,7 +15,7 @@ menu:
 A deployment trigger is a method of initializing a deployment. Deployments may be triggered in the following ways:
 
 - **[Click to Deploy](#click-to-deploy):** Run any Deployments operation on demand by clicking a button in the Pulumi Cloud console UI
-- **[Push to Deploy](#push-to-deploy):** Automatically run a `pulumi preview` when a Pull Request is created and/or run `pulumi up` when a Pull Request is merged
+- **[Push to Deploy](#push-to-deploy):** Automatically run a `pulumi preview` when a Pull Request is created, run `pulumi up` when a Pull Request is merged, and/or run `pulumi up` when a matching git tag is pushed
 - **[Review Stacks](#review-stacks):** Create and deploy an ephemeral stack on the current branch whenever a new Pull Request is created, and tear it down automatically once the Pull Request is merged
 - **[Scheduled Deployments](#scheduled-deployments):** Run any Deployments operation on a recurring basis
 - **[TTL Stacks](#ttl-stacks):** Run `pulumi destroy` on a stack (and optionally delete the stack entirely) after a specific amount of time has passed
@@ -52,6 +52,18 @@ Push to Deploy requires a [version control integration](/docs/integrations/versi
 Pulumi Deployments can run a `pulumi preview` for a stack (e.g., `dev`) when a Pull Request is opened against a particular git branch (e.g., a proposed change to the `main` branch). This will give the reviewer the full context necessary to understand the impact of the changes in your Pull Request: both the code changes _and the changes to your resources_ (i.e., the `pulumi preview` output). Your VCS integration will create or update a comment on your Pull Request with the results of `pulumi preview`.
 
 Push to Deploy can also be configured to run a `pulumi update` for a stack when changes are merged to a particular git branch. This feature is useful to enable continuous delivery, for example to a shared development or QA environment.
+
+### Deploying on git tags
+
+Beyond branch pushes, Push to Deploy can run a `pulumi update` when a git tag is pushed. This is well suited to release-based workflows: rather than deploying on every commit to a branch, you deploy only when you cut a release by pushing a version tag such as `v1.2.0`.
+
+Enable tag triggers and control which tags qualify with [tag filters](/docs/deployments/deployments/using/settings/#tag-filtering). For example, you can deploy on every `v*` tag while excluding pre-releases like `v1.2.0-rc1`. Tag triggers are supported across all version control integrations (GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS); deleting a tag never triggers a deployment.
+
+When a tag push triggers a deployment, Pulumi sets the `PULUMI_CI_TAG_NAME` environment variable to the tag name (for example, `v1.2.0`), which your pre-run commands or Pulumi program can read — for instance, to stamp the release version onto your resources.
+
+{{% notes type="info" %}}
+GitLab integrations created before this feature did not subscribe to tag push events. To use tag triggers with one, enable **Tag push events** on the existing GitLab group webhook (no need to re-create the integration). See the [GitLab integration docs](/docs/integrations/version-control/gitlab/#push-to-deploy) for details.
+{{% /notes %}}
 
 ## Scheduled Deployments
 
