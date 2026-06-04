@@ -47,7 +47,9 @@ If your workspace does not support workspace access tokens, Pulumi Cloud prompts
 
 ### Individual user setup
 
-Separately from the org-level integration, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their Bitbucket account. This is used for features like Neo Agent repository creation on the user's behalf and does not create webhooks.
+Separately from the org-level integration, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their Bitbucket account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level integration continues to handle pull request comments and deployments regardless of whether you grant individual access.
 
 {{% notes type="info" %}}
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
