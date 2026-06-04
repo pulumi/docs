@@ -20,31 +20,34 @@
   "inLanguage" "en-US"
 }}
 
-{{/* Add dates with proper fallback handling */}}
-{{ $publishDate := .PublishDate }}
-{{ $modifiedDate := .Lastmod }}
-
-{{/* Fix invalid dates */}}
-{{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
-  {{ if and .GitInfo .GitInfo.AuthorDate }}
-    {{ $publishDate = .GitInfo.AuthorDate }}
-  {{ else }}
-    {{ $publishDate = now }}
-  {{ end }}
+{{/*
+  Add dates, but only from a real source of truth — front-matter dates or git
+  commit info. Never fall back to `now`: an absent git history (e.g. a shallow
+  CI checkout) would otherwise stamp every page as modified today, which is both
+  wrong and harmful for SEO/AEO. When no real date exists, omit the fields.
+*/}}
+{{ $publishDate := "" }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+  {{ $publishDate = .PublishDate }}
+{{ else if and .GitInfo .GitInfo.AuthorDate }}
+  {{ $publishDate = .GitInfo.AuthorDate }}
 {{ end }}
 
-{{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
-  {{ if and .GitInfo .GitInfo.AuthorDate }}
-    {{ $modifiedDate = .GitInfo.AuthorDate }}
-  {{ else }}
-    {{ $modifiedDate = $publishDate }}
-  {{ end }}
+{{ $modifiedDate := "" }}
+{{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+  {{ $modifiedDate = .Lastmod }}
+{{ else if and .GitInfo .GitInfo.AuthorDate }}
+  {{ $modifiedDate = .GitInfo.AuthorDate }}
+{{ else }}
+  {{ $modifiedDate = $publishDate }}
 {{ end }}
 
-{{ $schema = merge $schema (dict
-  "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
-  "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
-) }}
+{{ with $publishDate }}
+  {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05Z07:00")) }}
+{{ end }}
+{{ with $modifiedDate }}
+  {{ $schema = merge $schema (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) }}
+{{ end }}
 
 {{/* Add description */}}
 {{ with (or .Params.meta_desc .Summary) }}

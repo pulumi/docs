@@ -33,6 +33,16 @@ jobs:
         uses: pulumi/esc-action@v1
 
       - uses: actions/checkout@v6
+        with:
+          # Full history (not the default shallow fetch-depth: 1) so Hugo's
+          # enableGitInfo can read each file's last commit date. Without this,
+          # .Lastmod falls back to build time and every page (and sitemap entry)
+          # reports "Updated <today>".
+          fetch-depth: 0
+          # Blobless clone: fetch the full commit graph and trees enableGitInfo
+          # needs, but skip downloading historical file blobs (the asset-heavy
+          # history of a docs repo). Current-tree blobs are fetched on demand.
+          filter: blob:none
 
       - uses: actions/setup-node@v6
         with:
