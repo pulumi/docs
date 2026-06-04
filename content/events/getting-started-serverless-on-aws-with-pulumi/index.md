@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Getting Started Severless On AWS with Pulumi
+title: Getting Started Serverless On AWS with Pulumi
 meta_desc: Learn how  Pulumi's IaC platform can help remove the complexity and enable beginners to quickly get up to speed with serverless architectures.
 meta_image:
 

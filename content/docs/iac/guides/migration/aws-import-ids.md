@@ -21,7 +21,7 @@ The [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command allows you 
 
 ## Finding resource ids
 
-Whether you are running `pulumi import` for a single resource or using a bulk `import.json` file (for example, generated with `pulumi preview --import-file import.json`), you need to supply an ID that uniquely identifies the existing AWS resource. Sometimes this ID is a single value like a resource `ARN`, but other times it is a composite value made up of a combination of property values. For example, to import a [Lambda Permission](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/permission/) resource you need both the `functionName` and the Permission `id` and the id suppled to `pulumi import` must be in the format `functionName|id`.
+Whether you are running `pulumi import` for a single resource or using a bulk `import.json` file (for example, generated with `pulumi preview --import-file import.json`), you need to supply an ID that uniquely identifies the existing AWS resource. Sometimes this ID is a single value like a resource `ARN`, but other times it is a composite value made up of a combination of property values. For example, to import a [Lambda Permission](https://www.pulumi.com/registry/packages/aws/api-docs/lambda/permission/) resource you need both the `functionName` and the Permission `id` and the id supplied to `pulumi import` must be in the format `functionName|id`.
 
 The first place you should look for resource ids for Pulumi import is by querying the CloudFormation stack. Import ids for most Pulumi resource types can be extracted from the `PhysicalResourceId` property in CloudFormation:
 

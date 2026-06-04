@@ -161,7 +161,7 @@ To see drift detection in action, you will now manually introduce drift by makin
 
 ### Add a tag to the EC2 instance using the AWS CLI
 
-To add a tag via the AWS CLI, you'll first need to retrieve the EC2 instance ID. Use the the following command:
+To add a tag via the AWS CLI, you'll first need to retrieve the EC2 instance ID. Use the following command:
 
 ```bash
 aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" --query "Reservations[*].Instances[*].InstanceId" --output text

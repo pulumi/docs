@@ -281,7 +281,7 @@ In this section, you will use Pulumi documentation to configure the firewall on 
 - Configure the firewall to allow traffic on port 80
 - Preview and deploy your updated project code
 
-Once you have completed these steps, navigate to your instance IP address again. You should now be greeted with a "Hello world!" home page message that indicates your web server is running and publically accessible.
+Once you have completed these steps, navigate to your instance IP address again. You should now be greeted with a "Hello world!" home page message that indicates your web server is running and publicly accessible.
 
 ### View complete solution
 
