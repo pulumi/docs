@@ -230,7 +230,7 @@ const importedRepository = new aws.ecr.Repository("app", {
 
 The CLI flow can also generate declarations with `pulumi import`. Generated code is a starting point, not a finished architecture. Review names, options, providers, secrets, and component boundaries before treating imported resources as production-ready Pulumi code.
 
-You also don't have to do it alone. Pulumi provides [self-serve conversion tools, hands-on expert migration services](https://www.pulumi.com/migrate/), and credits that can help cover your existing IaC costs during the transition, so budget and timing don't have to block getting started.
+You also don't have to do it alone. Pulumi provides [self-serve conversion tools and expert migration services](https://www.pulumi.com/migrate/), and for teams leaving HashiCorp, [credits you can apply toward Pulumi to avoid paying for two tools at once](https://www.pulumi.com/blog/all-iac-including-terraform-and-hcl/), so budget and timing don't have to block getting started.
 
 ## What Pulumi does not magically fix
 
