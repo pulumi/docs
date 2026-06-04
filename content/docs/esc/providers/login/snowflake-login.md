@@ -59,7 +59,7 @@ Replace `<role>` with the role that has the necessary permissions for your use c
 
 ## Using with Pulumi ESC
 
-Once you've configured OIDC in Snowflake, you can use the `snowflake-login` provider in your Pulumi ESC environment:
+Once you've configured OIDC in Snowflake, you can use the `snowflake-login` provider in your Pulumi ESC environment. The outputs are consumed by the [Pulumi Snowflake provider](https://www.pulumi.com/registry/packages/snowflake/), the Snowflake SDKs, and the `snowsql` CLI:
 
 ```yaml
 values:
@@ -70,6 +70,12 @@ values:
           account: myorganization-account
           user: ESC_LOGIN_USER
           role: ESC_ROLE  # Optional
+  environmentVariables:
+    # Consumed by the Pulumi Snowflake provider, the Snowflake SDKs, and the snowsql CLI
+    SNOWFLAKE_ACCOUNT: ${snowflake.login.account}
+    SNOWFLAKE_USER: ${snowflake.login.user}
+    SNOWFLAKE_AUTHENTICATOR: OAUTH
+    SNOWFLAKE_TOKEN: ${snowflake.login.token}
 ```
 
 ### Validation
