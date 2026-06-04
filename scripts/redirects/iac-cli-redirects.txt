@@ -83,7 +83,8 @@ docs/cli/commands/pulumi_stack_export/index.html|/docs/iac/cli/commands/pulumi_s
 docs/cli/commands/pulumi_stack_graph/index.html|/docs/iac/cli/commands/pulumi_stack_graph/
 docs/cli/commands/pulumi_stack_history/index.html|/docs/iac/cli/commands/pulumi_stack_history/
 docs/cli/commands/pulumi_stack_import/index.html|/docs/iac/cli/commands/pulumi_stack_import/
-docs/cli/commands/pulumi_stack_init/index.html|/docs/iac/cli/commands/pulumi_stack_init/
+docs/cli/commands/pulumi_stack_init/index.html|/docs/iac/cli/commands/pulumi_stack_new/
+docs/iac/cli/commands/pulumi_stack_init/index.html|/docs/iac/cli/commands/pulumi_stack_new/
 docs/cli/commands/pulumi_stack_ls/index.html|/docs/iac/cli/commands/pulumi_stack_ls/
 docs/cli/commands/pulumi_stack_output/index.html|/docs/iac/cli/commands/pulumi_stack_output/
 docs/cli/commands/pulumi_stack_rename/index.html|/docs/iac/cli/commands/pulumi_stack_rename/

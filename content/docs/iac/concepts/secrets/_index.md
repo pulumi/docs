@@ -564,7 +564,7 @@ $ pulumi stack change-secrets-provider "<secrets-provider>"
 ```
 
 This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
-The [supported secrets providers](/docs/iac/cli/commands/pulumi_stack_init/) are:
+The [supported secrets providers](/docs/iac/cli/commands/pulumi_stack_new/) are:
 
 - `default`
 - `passphrase`
