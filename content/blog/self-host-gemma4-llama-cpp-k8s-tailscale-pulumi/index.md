@@ -15,19 +15,19 @@ tags:
 - python
 social:
   twitter: |
-    Local AI agents usually mean tradeoffs: cloud bills, data leaving your machine, or awkward offline workflows.
+    Cloud AI APIs keep agents easy until tradeoffs show up: data leaves your network, offline work breaks, and every token has a meter.
 
-    Pablo Seibelt rebuilt the setup around Gemma 4, llama.cpp, k3d, Pulumi, and Tailscale. Here's where the pieces fit.
+    Pablo Seibelt rebuilt the stack locally, including why Gemma 4 stays outside Kubernetes and what Tailscale unlocks.
   linkedin: |
-    Local AI agents come with awkward tradeoffs: data leaves your network, offline work gets harder, and usage-based billing follows every token.
+    Cloud APIs make AI agents easy to start. Then the tradeoffs surface: data leaves your network, offline work breaks, and every token is metered.
 
-    Pablo Seibelt tested a different shape on a Mac: host-native inference, Kubernetes for the UI layer, and Tailscale for private access.
+    Pablo Seibelt tested a different shape on a Mac: Gemma 4 through llama.cpp, Kubernetes for Open WebUI, and Tailscale for private access.
 
-    The post walks through why the model runs outside the cluster, what Pulumi manages, and where the setup still needs credentials to finish the route.
+    The tricky part is not the model download. It is deciding which pieces belong on the host, which belong in the cluster, and how to keep the result reachable without turning it into another public endpoint.
   bluesky: |
-    Local AI agents usually mean cloud bills, data leaving your machine, or awkward offline workflows.
+    Cloud AI APIs keep agents easy until tradeoffs show up: data leaves your network, offline work breaks, and every token has a meter.
 
-    Pablo Seibelt rebuilt the setup around Gemma 4, llama.cpp, k3d, Pulumi, and Tailscale.
+    Pablo Seibelt rebuilt the stack locally with Gemma 4, llama.cpp, k3d, Pulumi, and Tailscale. The interesting part is what runs where, and why.
 ---
 
 If you run AI tools and agents, you've probably accepted three tradeoffs: your data leaves your network, you can't work offline, and your bill scales with usage.
@@ -36,7 +36,7 @@ Open-weight models now run well on consumer hardware. Once the model is on your 
 
 <!--more-->
 
-[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12 B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12 B model fits comfortably on a modern Mac while leaving enough headroom for a local server and chat UI.
+[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12 B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12 B model fits comfortably on a modern Mac while leaving enough headroom for local `llama.cpp` and a chat UI.
 
 We'll use `llama.cpp` for host-native inference, [k3d](https://k3d.io/) for a local Kubernetes cluster, Pulumi for infrastructure as code, and [Tailscale](https://tailscale.com/) for secure access.
 
@@ -47,7 +47,7 @@ This setup was validated on the following hardware:
 - MacBook Pro with Apple M3 Max
 - 36 GB RAM
 
-On this machine, `llama.cpp` reported about **20 output tokens per second** for a 160-token validation response with `unsloth/gemma-4-12b-it-GGUF`, `gemma-4-12b-it-Q8_0.gguf`, and a 131,072-token context. Sustained throughput varies by prompt length, thermal state, and server settings.
+On this machine, `llama.cpp` reported about **20 output tokens per second** for a 160-token validation response with `unsloth/gemma-4-12b-it-GGUF`, `gemma-4-12b-it-Q8_0.gguf`, and a 131,072-token context. Sustained throughput varies by prompt length, thermal state, and `llama.cpp` settings.
 
 You'll need `brew`, `docker`, `pulumi`, and `tailscale` installed. We'll also install `k3d` during the process.
 
@@ -109,7 +109,7 @@ With `--mmproj`, `/v1/models` advertised `capabilities: ["completion","multimoda
 
 ### Verify the LLM API
 
-Open a new terminal and check if the server is responding:
+Open a new terminal and check if `llama.cpp` is responding:
 
 ```bash
 curl http://127.0.0.1:18080/v1/models
@@ -132,7 +132,7 @@ The chat prompt `Reply with exactly: OK` should return content `OK`. In validati
 
 ### Keep llama.cpp running after reboot
 
-For a permanent setup, put the server script and logs under a folder in your home directory and let `launchd` restart it when you sign in:
+For a permanent setup, put the `llama.cpp` startup script and logs under a folder in your home directory and let `launchd` restart it when you sign in:
 
 ```bash
 llm_home="$HOME/pulumi-gemma4-llm"
@@ -188,14 +188,14 @@ launchctl bootstrap gui/$(id -u) "$HOME/Library/LaunchAgents/com.pulumi.gemma4.l
 launchctl kickstart -k gui/$(id -u)/com.pulumi.gemma4.llama-server
 ```
 
-Check the service and logs:
+Check the `launchd` service and `llama.cpp` logs:
 
 ```bash
 launchctl print gui/$(id -u)/com.pulumi.gemma4.llama-server
 tail -f "$HOME/pulumi-gemma4-llm/logs/llama-server.err.log"
 ```
 
-If you want to stop the background service later, unload it:
+If you want to stop `llama.cpp` later, unload the `launchd` service:
 
 ```bash
 launchctl bootout gui/$(id -u)/com.pulumi.gemma4.llama-server
@@ -238,13 +238,13 @@ pulumi config set hostLlmPort 18080
 pulumi config set llmBaseUrl http://llm-server:18080/v1
 ```
 
-The `llm-server` service in Kubernetes maps to `host.k3d.internal`. In our validation, we confirmed that a disposable k3d pod could reach the host LLM at `http://llm-server:18080/v1/models` after a CoreDNS restart.
+The Kubernetes service named `llm-server` maps to `host.k3d.internal`. In our validation, we confirmed that a disposable k3d pod could reach the Mac's `llama.cpp` API at `http://llm-server:18080/v1/models` after a CoreDNS restart.
 
 ```bash
 kubectl rollout restart deployment coredns -n kube-system
 ```
 
-Run `pulumi up` to deploy Open WebUI and connect it to your host-native LLM server:
+Run `pulumi up` to deploy Open WebUI and connect it to host-native `llama.cpp`:
 
 ```bash
 pulumi up
@@ -269,7 +269,7 @@ Once configured, Pulumi will create a Tailscale device or proxy that routes traf
 
 Open WebUI gives you a browser-based chat interface, but local models are also useful from coding agents. Pi is the local coding agent used for this validation; if you do not use Pi, treat this section as an example of how any OpenAI-compatible client can point at the same local endpoint. Pi can point at the same OpenAI-compatible `llama.cpp` endpoint and use the model running on your Mac.
 
-For a fresh Pi config, create `~/.pi/agent/models.json` with a local provider that points at the `llama.cpp` server:
+For a fresh Pi config, create `~/.pi/agent/models.json` with a local provider that points at the `llama.cpp` API:
 
 ```json
 {
@@ -320,7 +320,7 @@ If you already have Pi configuration files, merge the `local-llama` provider and
 
 ## Advanced: Linux GPU in-cluster serving
 
-If you're running on a Linux server with an NVIDIA or AMD GPU, you can run the LLM directly inside the Kubernetes cluster. This requires the NVIDIA or ROCm device plugins.
+If you're running on a Linux host with an NVIDIA or AMD GPU, you can run the LLM directly inside the Kubernetes cluster. This requires the NVIDIA or ROCm device plugins.
 
 The Pulumi program supports this through `runtimeMode=cluster`. In this mode, it deploys a `LlmServer` pod that manages the `llama.cpp` process within the cluster, using GPU resource requests to ensure hardware acceleration.
 
@@ -331,6 +331,6 @@ When you're done, you can tear down the resources:
 ```bash
 pulumi destroy
 k3d cluster delete pulumi-gemma4-blog-qa
-# Stop the llama-server process using the PID from your terminal
+# Stop llama.cpp using the PID from your terminal
 kill <PID>
 ```
