@@ -1,6 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
+lastmod: 2026-06-03
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 meta_image: meta.png
 feature_image: feature.png
@@ -41,7 +42,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 
 | Need | Terraform pattern | Pulumi advantage | What still needs care |
 | --- | --- | --- | --- |
-| Languages and tooling | HCL plus Terraform-specific functions and expressions | Pulumi supports general-purpose languages and normal IDE, test, and package workflows | Teams still need code review and shared conventions |
+| Languages and tooling | HCL plus Terraform-specific functions and expressions | Pulumi supports general-purpose languages, YAML, and now [HCL](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) natively, with the normal IDE, test, and package workflows for each | Teams still need code review and shared conventions |
 | Refactoring | Moved blocks or state commands for resource identity changes | [Pulumi aliases](https://www.pulumi.com/docs/iac/concepts/options/aliases/) can map old resource identities to new ones during refactors | Aliases must model the old identity correctly |
 | Secrets | Sensitive values can still require careful state and plan handling | Pulumi tracks [secrets](https://www.pulumi.com/docs/iac/concepts/secrets/) and encrypts secret values in state | Secrets are still available to code at runtime |
 | Lifecycle safety | Lifecycle meta-arguments and plan review | Pulumi resource options such as [protect](https://www.pulumi.com/docs/iac/concepts/options/protect/), [retainOnDelete](https://www.pulumi.com/docs/iac/concepts/resources/options/retainondelete/), [deleteBeforeReplace](https://www.pulumi.com/docs/iac/concepts/options/deletebeforereplace/), and [replaceOnChanges](https://www.pulumi.com/docs/iac/concepts/options/replaceonchanges/) make intent explicit | Provider behavior and replacement semantics still matter |
@@ -55,6 +56,8 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 ## Use programming languages and familiar tools
 
 Terraform modules are powerful, but larger HCL codebases can require teams to maintain separate conventions for composition, validation, and reuse. Pulumi lets infrastructure teams use the features of whichever [supported programming language](https://www.pulumi.com/docs/iac/languages-sdks/) they choose, such as classes, functions, types, loops, package managers, linters, and test frameworks.
+
+Teams with HCL muscle memory are not left out, either. Pulumi now [supports HCL natively](https://www.pulumi.com/docs/iac/languages-sdks/hcl/) as one of its languages, alongside Python, TypeScript, Go, C#, Java, and YAML. Part of a team can keep authoring in HCL while the project still benefits from Pulumi components, testing, and the same engine and package workflows as every other language.
 
 For example, a platform team can wrap a standard storage pattern in a `ComponentResource` and share it like any other TypeScript abstraction:
 
@@ -218,11 +221,13 @@ const importedRepository = new aws.ecr.Repository("app", {
 
 The CLI flow can also generate declarations with `pulumi import`. Generated code is a starting point, not a finished architecture. Review names, options, providers, secrets, and component boundaries before treating imported resources as production-ready Pulumi code.
 
+You also don't have to do it alone. Pulumi's [Migration Hub](https://www.pulumi.com/migrate/) provides self-serve conversion tools, hands-on expert migration services, and flexible financing that can help cover your existing IaC costs during the transition, so budget and timing don't have to block getting started.
+
 ## What Pulumi does not magically fix
 
 Pulumi does not eliminate cloud API eventual consistency. A deployment can finish successfully while downstream reads, controllers, or other operators still see stale state for a short window. That is a property of the cloud control plane, not of the IaC tool.
 
-Pulumi also does not eliminate provider bugs or drift. If a provider has a schema issue, a bad default, or a flaky update path, Pulumi still has to ride that provider behavior. Likewise, if something changes outside Pulumi, you still need to detect it and reconcile it with refresh or another drift-management process.
+Pulumi also does not eliminate provider bugs or drift. If a provider has a schema issue, a bad default, or a flaky update path, Pulumi still has to ride that provider behavior. Drift is real too, but you don't have to manage it by hand: [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state with what is actually running, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) that runs on a configurable cadence and can auto-remediate. That turns detecting and correcting out-of-band changes into a managed workflow rather than something you have to remember to check.
 
 Pulumi does not eliminate preview-time unknowns either. Some values are not known until deployment, so the plan can still contain uncertainty. Bad project decomposition and side-effect-heavy deployment code remain risks too, which is why [testing](https://www.pulumi.com/docs/iac/concepts/testing/), clear stack boundaries, and disciplined component design still matter.
 
