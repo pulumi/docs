@@ -45,7 +45,7 @@
 
 announcements:
   - id: blog-agentic-infrastructure-era-2026-05-Kp4nQ2
-    active: true
+    active: false
     display: both
     icon: sparkle
     text: "**It's launch week!** The agentic infrastructure era is here, and we've got some new things to share."
