@@ -273,7 +273,7 @@ Fewer NAT gateways can be requested (e.g., to save on costs) using the `natGatew
 {{< example-program path="awsx-vpc-nat-gateways" >}}
 
 In the case where there is one NAT gateway per availability zone, then routing is very simple. Each private subnet
-will have have connections routed through gateway in that availability zone.
+will have connections routed through gateway in that availability zone.
 
 In the case where there are fewer NAT gateways than availability zones, however, routing works differently. If there
 are _N_ NAT gateways requested, then the first _N_ availability zones will get a NAT gateway. Routing to private subnets
