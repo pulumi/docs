@@ -330,7 +330,7 @@ For example, you would normally write something like `.tags.stack:production` to
 
 > .tags:
 
-If we want to refine this to resources with _some_ tags but no `"stack"` tag specifically, we can can write a query like so:
+If we want to refine this to resources with _some_ tags but no `"stack"` tag specifically, we can write a query like so:
 
 > .tags: -.tags.stack:
 

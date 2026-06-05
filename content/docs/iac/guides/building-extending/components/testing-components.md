@@ -109,7 +109,7 @@ policy.resourceOfType("aws:ec2/instance:Instance", (args, reportViolation) => {
 });
 ```
 
-Use policies to enforce security, cost, or compliance constraints that complement component-level modeling. Suppose a component author had changed the input enum accidentally. This policy would catch that at runtime, preventing the costly cloud resources from being created and alerting the end user to the issue. Policies can function as always-on unit tests in that way. Read more about about this in ["Property Testing"](/docs/iac/guides/testing/property-testing/).
+Use policies to enforce security, cost, or compliance constraints that complement component-level modeling. Suppose a component author had changed the input enum accidentally. This policy would catch that at runtime, preventing the costly cloud resources from being created and alerting the end user to the issue. Policies can function as always-on unit tests in that way. Read more about this in ["Property Testing"](/docs/iac/guides/testing/property-testing/).
 
 ## Debugging Strategies
 

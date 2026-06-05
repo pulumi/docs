@@ -73,7 +73,7 @@ This will initialize your project, creating the necessary files for Pulumi to us
 
 Policies are written in Python or TypeScript. Like Pulumi Programs, you can use the full power of your preferred language, including standard features like leveraging third-party modules, using conditional logic and control flow, and can be validated with unit testing frameworks.
 
-By default the template sets up an example *resource policy* that prevents S3 buckets from being publically readable:
+By default the template sets up an example *resource policy* that prevents S3 buckets from being publicly readable:
 
 {{< chooser language "typescript,python" />}}
 
