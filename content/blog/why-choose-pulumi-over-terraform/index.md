@@ -1,7 +1,7 @@
 ---
 title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
-lastmod: 2026-06-03
+lastmod: 2026-06-05
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
 meta_image: meta.png
 feature_image: feature.png
@@ -49,6 +49,7 @@ The tradeoff is important: Pulumi is still an infrastructure as code engine. Pro
 | Environments | Workspaces or separate configurations | [Pulumi stacks](https://www.pulumi.com/docs/concepts/stacks/) model environments with per-stack config, secrets, history, and outputs | Stack boundaries still need thoughtful design |
 | Code reuse | Modules and HCL composition patterns | Pulumi components and packages use normal language abstractions | Over-abstracted components can become hard to use |
 | Imports and migration | Import blocks, generated config, and state operations | [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) and migration tooling support gradual adoption | Imported code still needs review and cleanup |
+| Existing Terraform state | Remote state data sources and shared state files | The [`@pulumi/terraform`](https://www.pulumi.com/registry/packages/terraform/) provider reads outputs from existing Terraform state, so a Pulumi stack can consume Terraform-managed values during migration | Cross-tool state reads are still dependencies to unwind over time |
 | Provider wiring | Provider inheritance and aliases inside modules | Explicit [provider resources](https://www.pulumi.com/docs/iac/concepts/resources/providers/) make multi-region and multi-account wiring visible in code review | Provider versions and bugs can still affect deployments |
 | Testing | Validation, plan review, and external test harnesses | Pulumi programs can use normal [unit and integration test frameworks](https://www.pulumi.com/docs/iac/concepts/testing/) | Tests complement previews, they do not replace them |
 | Drift detection | Refresh and refresh-only plans, plus external scheduling | [`pulumi refresh`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/) reconciles state, and Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) on a configurable cadence | Detection still depends on provider behavior and a healthy state backend |
@@ -231,6 +232,31 @@ const importedRepository = new aws.ecr.Repository("app", {
 The CLI flow can also generate declarations with `pulumi import`. Generated code is a starting point, not a finished architecture. Review names, options, providers, secrets, and component boundaries before treating imported resources as production-ready Pulumi code.
 
 You also don't have to do it alone. Pulumi provides [self-serve conversion tools and expert migration services](https://www.pulumi.com/migrate/), and for teams leaving HashiCorp, [credits you can apply toward Pulumi to avoid paying for two tools at once](https://www.pulumi.com/blog/all-iac-including-terraform-and-hcl/), so budget and timing don't have to block getting started.
+
+## Work with your existing Terraform state
+
+Incremental migration only works if Pulumi can talk to the Terraform you already have. It can: the [`@pulumi/terraform`](https://www.pulumi.com/registry/packages/terraform/) provider reads outputs directly from existing Terraform state, so a new Pulumi stack can consume values such as VPC IDs, subnet IDs, and ARNs that are still managed by Terraform. The two tools coexist while you migrate one piece at a time, instead of forcing a cutover before anything new can ship.
+
+Use [`terraform.state.getLocalReference`](https://www.pulumi.com/registry/packages/terraform/api-docs/state/getlocalreference/) for a local `terraform.tfstate` file, or [`terraform.state.getRemoteReference`](https://www.pulumi.com/registry/packages/terraform/api-docs/state/getremotereference/) for a Terraform Cloud or Enterprise workspace:
+
+```typescript
+import * as terraform from "@pulumi/terraform";
+
+const networking = await terraform.state.getLocalReference({
+    path: "../networking/terraform.tfstate",
+});
+
+const vpcId = networking.outputs["vpc_id"];
+
+const appSubnet = new aws.ec2.Subnet("app-subnet", {
+    vpcId: vpcId,
+    cidrBlock: "10.0.1.0/24",
+});
+```
+
+When you're ready to bring those resources fully into Pulumi, [`pulumi import --from terraform`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/) reads a `.tfstate` file and generates matching resource declarations, and `pulumi convert --from terraform` translates the surrounding HCL into your chosen language.
+
+Reading state across tools is still a dependency, much like a cross-stack reference. Keep the boundary intentional and migrate the shared resources before that coupling becomes load-bearing.
 
 ## What Pulumi does not magically fix
 
