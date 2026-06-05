@@ -20,7 +20,7 @@ You can create and manage deployment settings in several ways:
 
 ### From the Pulumi Cloud UI
 
-From the Pulumi Console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/integrations/version-control/) configured), click-to-deploy and the REST API.
+From the Pulumi Cloud console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/integrations/version-control/) configured), click-to-deploy and the REST API.
 
 ![Pulumi UI - Deployment Settings](/docs/deployments/deployments/ui-settings.png)
 
@@ -82,7 +82,7 @@ a change to `foo/bar/main.ts` does **not** trigger a deployment — it matches t
 
 ### Setting path filters
 
-As with any other deployment setting, path filters may be set via the Pulumi Console, using the REST API, or defined in code using the Pulumi Cloud provider.
+As with any other deployment setting, path filters may be set via the Pulumi Cloud console, using the REST API, or defined in code using the Pulumi Cloud provider.
 
 ## Tag Filtering
 
@@ -122,7 +122,7 @@ Deleting a tag never triggers a deployment.
 
 ### Setting tag filters
 
-As with any other deployment setting, `deployTags` and `tagFilters` may be set via the Pulumi Console, using the REST API, or defined in code using the Pulumi Cloud provider.
+As with any other deployment setting, `deployTags` and `tagFilters` may be set via the Pulumi Cloud console, using the REST API, or defined in code using the Pulumi Cloud provider. In the console, enable the **Run updates for pushed tags** toggle and enter your patterns in the **Tag filters** field as a comma-separated list. The REST API and the Pulumi Cloud provider take `tagFilters` as an array of patterns.
 
 {{% notes type="info" %}}
 GitLab integrations created before this feature did not subscribe to tag push events. To use tag triggers with one, enable **Tag push events** on the existing GitLab group webhook — there's no need to re-create the integration. See the [GitLab integration docs](/docs/integrations/version-control/gitlab/#push-to-deploy) for details. This caveat applies only to GitLab; other providers require no action.

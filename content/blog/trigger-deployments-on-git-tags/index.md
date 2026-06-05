@@ -1,6 +1,6 @@
 ---
 title: "Trigger Deployments on Git Tags"
-date: 2026-06-04
+date: 2026-06-05
 draft: false
 meta_desc: "Tie infrastructure deployments to your release tags. Push a version tag like v1.2.0 and let Pulumi Deployments run pulumi up automatically."
 meta_image: meta.png
@@ -37,7 +37,7 @@ Tag-based triggers connect that ritual to your infrastructure. Instead of wiring
 
 Tag triggers are controlled by two settings on your stack's [deployment configuration](/docs/deployments/deployments/using/settings/):
 
-- **Deploy on tag** — a toggle that enables running `pulumi up` when a matching tag is pushed.
+- **Run updates for pushed tags** — a toggle that enables running `pulumi up` when a matching tag is pushed.
 - **Tag filters** — a list of glob patterns that decide which tag names qualify.
 
 Tag filters use the same model as the [path filters](/docs/deployments/deployments/using/settings/#path-filtering) you may already know, except the patterns match against the tag name rather than changed file paths. A few examples:
@@ -61,7 +61,7 @@ You can configure tag triggers wherever you manage deployment settings today —
 To try it out:
 
 1. Open a stack's **Settings > Deploy** tab in the Pulumi Cloud console.
-1. Enable **Deploy on tag** and add a tag filter such as `v*`.
+1. Enable **Run updates for pushed tags** and add a tag filter such as `v*`.
 1. Push a tag — `git tag v1.0.0 && git push origin v1.0.0` — and watch the deployment run.
 
 For the full details, see the [deployment triggers](/docs/deployments/deployments/using/triggers/#deploying-on-git-tags) and [tag filtering](/docs/deployments/deployments/using/settings/#tag-filtering) documentation. We'd love to hear how you put tag-based deployments to work.
