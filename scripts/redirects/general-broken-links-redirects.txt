@@ -81,3 +81,4 @@ jobs/index.html|/careers/
 company/jobs/index.html|/careers/
 careers/jobs/index.html|/careers/
 company/pulumi/jobs/index.html|/careers/
+blog/relaunching-pulumis-public-roadmap/index.html|/blog/
