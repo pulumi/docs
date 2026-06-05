@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Dispatch Pulumi CLI docs workflow
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Dispatch Pulumi SDK TypeScript docs workflow
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Dispatch Pulumi SDK Python docs workflow
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}

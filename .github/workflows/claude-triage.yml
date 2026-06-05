@@ -46,7 +46,7 @@ jobs:
       # STATE_LABELS list mirrors the script's; extend both if the set
       # ever grows.
       - name: Set review:triaging label
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         continue-on-error: true
         with:
           script: |
@@ -87,7 +87,7 @@ jobs:
       # Install mise-managed tools (Vale, etc.) so the prose-check pass
       # below can run vale alongside the Haiku spelling/grammar call.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
 

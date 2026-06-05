@@ -78,7 +78,7 @@ jobs:
       # review, etc.) fire on those commits.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -90,7 +90,7 @@ jobs:
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
 

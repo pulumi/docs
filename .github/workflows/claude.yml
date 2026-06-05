@@ -49,7 +49,7 @@ jobs:
       # review, etc.) fire on those commits.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - name: Checkout repository
         uses: actions/checkout@v6
