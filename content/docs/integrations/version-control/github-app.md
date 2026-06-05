@@ -62,6 +62,21 @@ Individual access lets Pulumi create repositories on your behalf — for example
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
 {{% /notes %}}
 
+## Integration settings
+
+After installing the app, you can configure pull request behavior. Toggle these settings per integration under **Management** > **Version control**:
+
+| Setting | Default | Description |
+|---|---|---|
+| Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
+| Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
+
+Changes save automatically. Neo Code Reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo Code Reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+
+To remove an integration, see [Uninstallation](#uninstallation).
+
 ## Capabilities
 
 ### Pull request comments
@@ -71,7 +86,7 @@ The Pulumi GitHub app automatically adds comments to pull requests with the resu
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
 {{% notes type="info" %}}
-When pull request comments are disabled in your Pulumi Cloud organization settings, the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
+When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
 {{% /notes %}}
 
 ### Checks

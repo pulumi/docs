@@ -62,7 +62,7 @@ After creating an integration, you can configure pull request behavior. Toggle t
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on Bitbucket pull requests |
-| Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in pull request comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhooks Pulumi created on your Bitbucket repositories and disconnects all stacks using that integration.
