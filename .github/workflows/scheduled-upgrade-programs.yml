@@ -44,7 +44,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - name: Check out the code
         uses: actions/checkout@v6
@@ -90,7 +90,7 @@ jobs:
           extended: true
 
       - name: Install Pulumi
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v6

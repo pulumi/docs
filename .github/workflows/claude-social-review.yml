@@ -194,7 +194,7 @@ jobs:
       - name: Fetch secrets from ESC
         if: steps.gate.outputs.should_skip != 'true'
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - name: Configure AWS Credentials
         if: steps.gate.outputs.should_skip != 'true'
@@ -207,7 +207,7 @@ jobs:
           aws-region: us-west-2
 
       - if: steps.gate.outputs.should_skip != 'true'
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v7
 
       - name: Get social state bucket name
         if: steps.gate.outputs.should_skip != 'true'
@@ -280,7 +280,7 @@ jobs:
       - name: Find existing social review comment
         if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
         id: find-social-comment
-        uses: peter-evans/find-comment@v3
+        uses: peter-evans/find-comment@v4
         with:
           issue-number: ${{ steps.pr-info.outputs.number }}
           body-includes: '<!-- social-review -->'
@@ -288,7 +288,7 @@ jobs:
 
       - name: Post or update social review comment
         if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ steps.pr-info.outputs.number }}
           comment-id: ${{ steps.find-social-comment.outputs.comment-id }}
