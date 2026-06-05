@@ -60,7 +60,7 @@ Organization tokens grant access on behalf of the entire Pulumi organization. Th
 ### GitHub Actions step
 
 ```yaml
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -86,7 +86,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:organization
@@ -118,7 +118,7 @@ Team tokens are scoped to a specific team within your Pulumi organization. They 
 ### GitHub Actions step
 
 ```yaml
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:team
@@ -145,7 +145,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:team
@@ -159,7 +159,7 @@ jobs:
 
 ## Personal tokens
 
-Personal tokens are issued on behalf of a specific Pulumi user. They carry that user's permissions and are appropriate when auditability at the individual user level is required, or when a workflow should be constrained to exactly one user's access. Personal tokens are available on all Pulumi editions.
+Personal tokens are issued on behalf of a specific Pulumi user and carry that user's permissions. For most automated workflows, organization or team tokens are preferred because they run with organizational identity and do not depend on an individual account. Personal tokens are available on all Pulumi editions and are appropriate when you want a workflow to operate with exactly the access that a particular user has been granted.
 
 ### Authorization policy
 
@@ -178,7 +178,7 @@ Personal tokens are issued on behalf of a specific Pulumi user. They carry that 
 ### GitHub Actions step
 
 ```yaml
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:personal
@@ -205,7 +205,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pulumi/auth-actions@v1
+      - uses: pulumi/auth-actions@v2
         with:
           organization: org-name
           requested-token-type: urn:pulumi:token-type:access_token:personal
