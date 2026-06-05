@@ -2,6 +2,7 @@
 title: "Use Your Mac for AI Agents: Self-Host Gemma 4 12 B with Pulumi and Tailscale"
 allow_long_title: true
 date: 2026-06-04
+lastmod: 2026-06-04
 meta_desc: |
     Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12 B Q8 GGUF with a 128K context window.
 meta_image: meta.png
@@ -36,7 +37,7 @@ Open-weight models now run well on consumer hardware. Once the model is on your 
 
 <!--more-->
 
-[Gemma 4](https://blog.google/technology/ai/google-gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12 B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12 B model fits comfortably on a modern Mac while leaving enough headroom for local `llama.cpp` and a chat UI.
+[Gemma 4](https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/) is an open-weights model family from Google. This post focuses on [Gemma 4 12 B](https://developers.googleblog.com/gemma-4-12b-the-developer-guide/), released in June 2026, using Unsloth's `Q8_0` [GGUF](https://huggingface.co/docs/hub/en/gguf). The 12 B model fits comfortably on a modern Mac while leaving enough headroom for local `llama.cpp` and a chat UI.
 
 We'll use `llama.cpp` for host-native inference, [k3d](https://k3d.io/) for a local Kubernetes cluster, Pulumi for infrastructure as code, and [Tailscale](https://tailscale.com/) for secure access.
 
