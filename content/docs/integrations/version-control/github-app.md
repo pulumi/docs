@@ -99,6 +99,8 @@ All Pulumi stack updates are reported to the GitHub Checks API. You can see the 
 
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
 
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+
 ### Review stacks
 
 [Review stacks](/docs/deployments/deployments/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
