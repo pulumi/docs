@@ -431,7 +431,8 @@ function getDefaultExcludedKeywords() {
         "https://docs.docker.com/docker-for-mac/kubernetes/",                       // blog/how-to-deploy-jenkins-to-kubernetes-with-pulumi
         "https://editor.swagger.io",                                                // blog/next-level-iac-pulumi-automation-api (transient 504)
         "https://github.com/ollama/ollama/blob/main/docs/openai.md",                // blog/run-deepseek-on-aws-ec2-using-pulumi
-        "https://greenparksports.com/",                                             // blog/organizational-patterns-infra-repo: company site 404, no Wayback snapshot
+        "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe-2026/",   // blog/kubecon-eu-2026-recap: post-event page returns 504 consistently, no replacement
+        "https://greenparksports.com/",                                             // blog/organizational-patterns-infra-repo: company site 404, no replacement
         // Pulumi/GitHub status pages — AWS WAF (CloudFront) returns 405 with x-amzn-waf-action: captcha to all automated clients. Live in browsers. (2026-06-05 run flagged 1190+ from the footer badge)
         "https://pulumi.statuspage.io/",                                            // global footer badge (layouts/partials/footer/statuspage-badge.html)
         "https://status.pulumi.com",                                                // docs/iac/operations/troubleshooting/server-errors

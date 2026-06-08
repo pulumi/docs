@@ -15383,6 +15383,19 @@ references:
   commentId: T:Pulumi.ResourceHookOptions
   fullName: Pulumi.ResourceHookOptions
   nameWithType: ResourceHookOptions
+- uid: Pulumi.ResourceHookOptions.IgnoreErrors
+  name: IgnoreErrors
+  href: pulumi/pulumi.resourcehookoptions.html#Pulumi_ResourceHookOptions_IgnoreErrors
+  commentId: P:Pulumi.ResourceHookOptions.IgnoreErrors
+  fullName: Pulumi.ResourceHookOptions.IgnoreErrors
+  nameWithType: ResourceHookOptions.IgnoreErrors
+- uid: Pulumi.ResourceHookOptions.IgnoreErrors*
+  name: IgnoreErrors
+  href: pulumi/pulumi.resourcehookoptions.html#Pulumi_ResourceHookOptions_IgnoreErrors_
+  commentId: Overload:Pulumi.ResourceHookOptions.IgnoreErrors
+  isSpec: "True"
+  fullName: Pulumi.ResourceHookOptions.IgnoreErrors
+  nameWithType: ResourceHookOptions.IgnoreErrors
 - uid: Pulumi.ResourceHookOptions.OnDryRun
   name: OnDryRun
   href: pulumi/pulumi.resourcehookoptions.html#Pulumi_ResourceHookOptions_OnDryRun
