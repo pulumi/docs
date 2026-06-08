@@ -49,6 +49,12 @@ module:
 outputFormats:
   rss:
     baseName: rss
+  rssupcoming:
+    mediaType: application/rss+xml
+    baseName: rss-upcoming
+  rssondemand:
+    mediaType: application/rss+xml
+    baseName: rss-ondemand
   llms:
     mediaType: "text/plain"
     baseName: "llms"

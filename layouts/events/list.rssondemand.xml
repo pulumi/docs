@@ -1,0 +1,7 @@
+{{- $feeds := partial "events/feed-events.html" . -}}
+{{- partial "events/rss-channel.html" (dict
+    "ctx" .
+    "events" $feeds.ondemand
+    "title" "Pulumi Events – On-demand"
+    "description" "On-demand Pulumi event and workshop recordings.")
+-}}
