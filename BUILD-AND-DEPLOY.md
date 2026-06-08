@@ -3439,7 +3439,7 @@ This section provides comprehensive guidance for triaging and managing Dependabo
 
 **Security Updates:** Arrive immediately regardless of schedule (Dependabot auto-override)
 
-### Automated risk labeling
+### Automated labeling
 
 All Dependabot PRs automatically receive:
 
@@ -3449,160 +3449,30 @@ All Dependabot PRs automatically receive:
 
 **Auto-applied labels (via label-dependabot.yml workflow):**
 
-**Risk Tier Labels:**
-
-- `deps-risk-high` - Runtime/browser/parser dependencies
-- `deps-risk-medium` - Build tools/infrastructure dependencies
-- `deps-risk-low` - Dev tools only
-
-**Action Labels:**
-
-- `deps-merge-after-test` - Test locally, then merge (HIGH risk or security patches)
-- `deps-security-patch` - Security update, merge immediately after testing
-- `deps-quarterly-review` - Close for batch review in quarterly cycle (MEDIUM/LOW risk)
-
-**Special Flags:**
-
+- `deps-security-patch` - Security update; evaluate and merge promptly
 - `deps-lambda-edge-risk` - Webpack/bundler/AWS SDK updates (see Infrastructure Change Review)
 - `deps-bulk-update` - 10+ dependencies in single PR
 
-### Dependency risk tiers
-
-#### HIGH RISK - Runtime/browser/parser dependencies
-
-**Characteristics:**
-
-- Execute in browser or server runtime
-- Parse user content or external data
-- Directly affect site functionality and user experience
-
-**Packages:**
-
-- **Search:** `@algolia/*`, `algoliasearch`, `search-insights`
-- **Content Parsing:** `marked`, `markdown-it`, `js-yaml`, `cheerio`, `gray-matter`
-- **Browser APIs:** `clipboard-polyfill`
-- **Web Components:** `@stencil/*`, `swiper`
-- **Utilities:** `uuid`
-
-**Triage Action:** `deps-merge-after-test`
-
-**Testing Checklist:**
-
-1. Run `make serve-all` and verify site loads
-1. Test search functionality (Algolia integration)
-1. Check browser console for errors
-1. Verify markdown rendering on multiple pages
-1. Test interactive components (code copy, tabs, etc.)
-
-#### MEDIUM RISK - Build tools/infrastructure dependencies
-
-**Characteristics:**
-
-- Affect build process and bundling
-- Infrastructure as code dependencies
-- Lambda@Edge function dependencies (special attention required)
-
-**Packages:**
-
-- **Webpack Ecosystem:** `webpack*`, `*-loader`, `*-webpack-plugin*`
-- **CSS Processing:** `postcss*`, `sass*`, `cssnano`, `autoprefixer`, `tailwindcss`
-- **TypeScript:** `typescript`
-- **Pulumi:** `@pulumi/*`
-- **AWS SDK:** `@aws-sdk/*` (Lambda@Edge risk)
-
-**Triage Action:** `deps-quarterly-review` (unless security patch)
-
-**Special Considerations:**
-
-- **Lambda@Edge Risk:** Webpack, bundlers, and AWS SDK updates affect Lambda@Edge function size. See [Infrastructure Change Review](#infrastructure-change-review) section for deployment risks and 1MB compressed size limit.
-- **Build Performance:** CSS/PostCSS updates can affect build times
-- **TypeScript:** Breaking changes may require code updates
-
-**Quarterly Review Process:**
-
-1. Batch all MEDIUM-risk PRs from the quarter
-1. Test webpack/bundler updates first (Lambda@Edge size check)
-1. Test CSS processing updates second (build time check)
-1. Test TypeScript updates last (compilation check)
-1. Merge in order of successful testing
-
-#### LOW RISK - Dev tools only
-
-**Characteristics:**
-
-- Testing and development tools
-- Code quality and formatting tools
-- Documentation generation tools
-- Local development servers
-
-**Packages:**
-
-- **Testing:** `cypress`, `jest*`, `puppeteer`
-- **Build Optimization:** `workbox-build`
-- **Code Quality:** `prettier`, `eslint*`, `markdownlint`, `husky`, `lint-staged`
-- **Dev Servers:** `http-server`, `concurrently`
-- **Documentation:** `typedoc`
-
-**Triage Action:** `deps-quarterly-review`
-
-**Quarterly Review Process:**
-
-1. Batch all LOW-risk PRs from the quarter
-1. Quick smoke test: `make test && make lint`
-1. Merge all if tests pass
-1. If failures, debug individually
+The workflow does not classify PRs into risk tiers. Dependency updates are
+grouped per ecosystem and arrive at a low, predictable volume, so the policy is
+simply to evaluate each PR and merge it once CI is green (see below). The two
+flags above surface the only signals that change handling: security patches get
+priority, and `deps-lambda-edge-risk` PRs need the bundle-size check.
 
 ### Monthly triage workflow
 
-On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (one per ecosystem). Follow this workflow:
+On the first Monday of each month, Dependabot generates roughly 5 grouped PRs (one per ecosystem), plus security patches as they arise. The policy is to **evaluate each PR and merge it as it comes in** — there is no risk tiering and no quarterly deferral. Grouping already keeps volume low, so batching buys nothing.
 
-**Step 1: Check Labels (30 seconds per PR)**
+For each PR:
 
-- Look at auto-applied risk tier and action labels
-- No need to read PR bodies initially—labels tell you everything
+1. **Build and spot-check.** Run `make build` (or `make serve-all` when the PR touches browser-facing packages such as search, markdown rendering, or web components) and confirm the site builds and loads. Spot-check search, console errors, and markdown rendering.
+1. **Let CI gate it.** The PR's build/lint/Cypress checks (`pull-request.yml`) are the merge gate. Merge once they're green.
+1. **Prioritize security patches.** PRs labeled `deps-security-patch` arrive off-schedule — evaluate and merge them promptly rather than waiting for the monthly batch.
+1. **Give Lambda@Edge updates the bundle check.** For PRs labeled `deps-lambda-edge-risk` (webpack/bundler/AWS SDK), cross-reference the [Infrastructure Change Review](#infrastructure-change-review) section, check the Lambda@Edge function size against the 1MB compressed limit, and verify the CloudFront deployment succeeds in the testing environment before merging.
 
-**Step 2: Security Patches (Immediate)**
+Automated Claude review does not run on Dependabot PRs (the review pipeline is built for prose, not dependency bumps). To get a Claude pass on a specific PR, run `/pr-review <number>`.
 
-- PRs with `deps-security-patch` label: Test and merge immediately
-- Run testing checklist for applicable risk tier
-- Merge within 24 hours
-
-**Step 3: HIGH Risk Runtime Dependencies (Same Day)**
-
-- PRs with `deps-risk-high` + `deps-merge-after-test` labels
-- Run HIGH risk testing checklist (see above)
-- Merge if tests pass, or debug and fix issues
-
-**Step 4: MEDIUM/LOW Risk Dependencies (Defer)**
-
-- PRs with `deps-quarterly-review` label
-- Close with comment: "Deferring to quarterly review cycle. Will batch with other MEDIUM/LOW-risk updates."
-- Do not merge monthly—wait for quarterly batch
-
-**Step 5: Lambda@Edge Risk Flag (Extra Attention)**
-
-- PRs with `deps-lambda-edge-risk` label
-- Cross-reference [Infrastructure Change Review](#infrastructure-change-review) section
-- Check Lambda@Edge function size after webpack/bundler updates
-- Verify CloudFront deployment succeeds in testing environment
-
-**Expected Monthly Time:** 5-10 minutes for triage + 20-30 minutes for HIGH-risk testing
-
-### Quarterly review cycle
-
-**Schedule:** January, April, July, October (first week)
-
-**Process:**
-
-1. Review all closed PRs from past 3 months with `deps-quarterly-review` label
-1. Check if newer versions are available (Dependabot may have newer PRs open)
-1. Create consolidated testing branch with all MEDIUM/LOW updates
-1. Run full test suite: `make test && make lint && make build`
-1. Test Lambda@Edge function size for webpack/bundler updates
-1. Merge if all tests pass
-1. If failures, debug individually and merge successful updates only
-
-**Expected Quarterly Time:** 1-2 hours for batch testing and merging
+**Expected Monthly Time:** 5-10 minutes for triage + extra time only for Lambda@Edge or bulk PRs that warrant deeper testing.
 
 ### Security patch handling
 
@@ -3610,21 +3480,21 @@ On the first Monday of each month, Dependabot generates exactly 5 grouped PRs (o
 
 **Arrival:** Immediately when vulnerability discovered (ignores monthly schedule)
 
-**Labels:** Auto-labeled with `deps-security-patch` + applicable risk tier
+**Labels:** Auto-labeled with `deps-security-patch`
 
 **Workflow:**
 
 1. Dependabot opens PR immediately (any time of month)
-1. Auto-labeling workflow adds `deps-security-patch` + risk tier
-1. Test using checklist for applicable risk tier
-1. Merge within 24 hours regardless of risk tier
+1. Auto-labeling workflow adds `deps-security-patch`
+1. Build and spot-check (`make build`, or `make serve-all` for browser-facing packages)
+1. Merge within 24 hours once CI is green
 1. Deploy to production immediately
 
-**Example:** CVE in `marked` (HIGH risk parser)
+**Example:** CVE in `marked`
 
 - PR arrives immediately
-- Labels: `deps-security-patch`, `deps-risk-high`, `deps-merge-after-test`
-- Run HIGH risk testing checklist
+- Labels: `deps-security-patch` (and `deps-lambda-edge-risk` if a bundler/AWS SDK update)
+- Build and spot-check search/markdown rendering
 - Merge and deploy within 24 hours
 
 ### Bulk updates (10+ dependencies)

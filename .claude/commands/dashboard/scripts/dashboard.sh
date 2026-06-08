@@ -98,8 +98,8 @@ calculate_priority() {
     priority=$((priority + 70))
   fi
 
-  # High-risk Dependabot
-  if echo "$labels" | grep -q "deps-risk-high"; then
+  # Lambda@Edge-risk Dependabot (needs bundle-size/deployment check)
+  if echo "$labels" | grep -q "deps-lambda-edge-risk"; then
     priority=$((priority + 60))
   fi
 
@@ -124,11 +124,6 @@ calculate_priority() {
     elif [ $age_days -gt 7 ]; then
       priority=$((priority + 25))
     fi
-  fi
-
-  # Medium-risk Dependabot
-  if echo "$labels" | grep -q "deps-risk-medium"; then
-    priority=$((priority + 20))
   fi
 
   # Draft penalty
@@ -164,10 +159,8 @@ if [ -f "$TMPDIR/prs_all.json" ]; then
     type="normal"
     if echo "$labels" | grep -q "deps-security-patch"; then
       type="security"
-    elif echo "$labels" | grep -q "deps-risk-high"; then
-      type="high-risk"
-    elif echo "$labels" | grep -q "deps-risk-medium"; then
-      type="medium-risk"
+    elif echo "$labels" | grep -q "deps-lambda-edge-risk"; then
+      type="lambda-edge"
     fi
 
     # Check if assigned or mentions me

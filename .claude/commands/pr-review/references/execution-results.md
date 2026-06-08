@@ -12,7 +12,7 @@ Report results to user after executing confirmed action.
 | Action | Result Message | Additional Info |
 |--------|---------------|-----------------|
 | **Approve** | ✅ PR #{{arg}} approved successfully!<br><br>Approval comment posted. | PR URL |
-| **Approve and merge** | ✅ PR #{{arg}} approved with auto-merge enabled!<br><br>PR will merge using squash when checks pass. Verify with: `gh pr view {{arg}} --json state,mergedAt,autoMergeRequest` | PR URL<br>Bot context (if bot): @username, Risk tier, Labels<br>If Dependabot HIGH/MEDIUM: "⚠️ Next merge to master triggers pulumi-test.io deployment" |
+| **Approve and merge** | ✅ PR #{{arg}} approved with auto-merge enabled!<br><br>PR will merge using squash when checks pass. Verify with: `gh pr view {{arg}} --json state,mergedAt,autoMergeRequest` | PR URL<br>Bot context (if bot): @username, Labels<br>If Dependabot dependency PR: "⚠️ Next merge to master triggers pulumi-test.io deployment" |
 | **Make changes and approve** | ✅ Changes applied and PR #{{arg}} approved!<br><br>Changes committed: [SHA]<br>Files: [list] | PR URL/commits |
 | **Request changes** | ✅ Changes requested on PR #{{arg}}<br><br>Review posted with request-changes flag. | PR URL |
 | **Close PR** | ✅ PR #{{arg}} closed<br><br>Closing comment posted. | PR URL |
@@ -20,7 +20,7 @@ Report results to user after executing confirmed action.
 
 **Examples** to model:
 
-- *Dependabot HIGH with merge*: `✅ PR #1234 approved with auto-merge enabled! PR will merge using squash when checks pass. Verify with: gh pr view 1234 --json state,mergedAt,autoMergeRequest | Bot: @dependabot[bot] | Risk: HIGH | Labels: deps-security-patch | ⚠️ Next merge to master triggers pulumi-test.io deployment`
+- *Dependabot with merge*: `✅ PR #1234 approved with auto-merge enabled! PR will merge using squash when checks pass. Verify with: gh pr view 1234 --json state,mergedAt,autoMergeRequest | Bot: @dependabot[bot] | Labels: deps-security-patch | ⚠️ Next merge to master triggers pulumi-test.io deployment`
 - *Make changes and approve*: `✅ Changes applied and PR #1234 approved! Changes committed: a1b2c3d | Files: content/docs/intro/index.md (typo fixes), content/docs/install/index.md (formatting) | View: [URL]`
 
 ## GitHub CLI Field Reference
