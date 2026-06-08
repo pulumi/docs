@@ -57,7 +57,7 @@ Parse the JSON output and present it according to the mode requested. The JSON s
       "labels": [{"name": "string"}],
       "priority": number,        // Calculated priority score
       "age_days": number,        // Days since creation
-      "type": "security|high-risk|medium-risk|normal",
+      "type": "security|lambda-edge|normal",
       "is_assigned": boolean,    // Assigned to current user
       "is_mentioned": boolean    // User mentioned in PR
     }
@@ -121,7 +121,7 @@ If `rate_remaining` < 50, show warning: `⚠️  GitHub API rate limit low ({cou
 - Sort by `priority` (descending), then by `age_days` (descending)
 - Show emojis based on type:
   - 🔒 = `type: "security"`
-  - ⚠️  = `type: "high-risk"`
+  - ⚠️  = `type: "lambda-edge"`
   - 📝 = normal (or draft if `isDraft: true`)
   - 🤖 = bot author (contains `[bot]` in username)
 - Format: `{emoji} #{number}  {title} ({type if special}, {age}d)`
@@ -153,8 +153,8 @@ Generate actionable tasks based on data. Priority order:
    - `🔍 Review assigned PR #{number}: {short_title} → /pr-review {number}`
    - Limit to top 3 by priority
 
-4. **High-risk PRs** (`type: "high-risk"`):
-   - `⚠️  Review high-risk dependency PR #{number} → /pr-review {number}`
+4. **Lambda@Edge-risk PRs** (`type: "lambda-edge"`):
+   - `⚠️  Review Lambda@Edge dependency PR #{number} (bundle-size check) → /pr-review {number}`
    - Limit to top 2
 
 5. **Assigned issues**:
@@ -221,12 +221,11 @@ PRs are scored with these weights (already calculated in JSON):
 - **+100**: Assigned to me
 - **+80**: Mentions me
 - **+70**: Security patch (`deps-security-patch` label)
-- **+60**: High-risk (`deps-risk-high` label)
+- **+60**: Lambda@Edge risk (`deps-lambda-edge-risk` label)
 - **+40**: Ready for review (not draft)
 - **+30**: Team member (internal users only)
 - **+50**: Age > 14 days
 - **+25**: Age > 7 days
-- **+20**: Medium-risk (`deps-risk-medium` label)
 - **-20**: Draft
 
 ---
