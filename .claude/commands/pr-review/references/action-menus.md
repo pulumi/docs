@@ -9,49 +9,34 @@ Select the appropriate section based on contributor type and review findings. Au
 
 ## Dependabot PRs
 
-Parse Dependabot risk and special-handling labels per `pr-review:references:dependabot-labels`.
+Parse Dependabot special-handling labels per `pr-review:references:dependabot-labels`. There is no risk tier — evaluate and merge.
 
 ### Display Header
 
 Use AskUserQuestion with header:
 
 ```text
-🤖 Dependabot PR | Risk: [HIGH/MEDIUM/LOW/UNKNOWN]
+🤖 Dependabot PR
 [If security] 🔒 Security Update
 [If lambda-edge] 🚨 Lambda@Edge Risk - Review deployment
 [If bulk] 📦 Bulk Update (10+ deps)
 ```
 
-### Options (Max 4 - Adjust Based on Risk Tier)
+### Options (Max 4)
 
-#### For HIGH Risk or Security Patches
-
-1. **Approve** (Recommended after testing)
+1. **Approve** (Recommended after evaluating)
 2. **Request changes** - Technical feedback needed
 3. **Close PR** - Reject the dep update
 4. **Do nothing yet** - Need to test/investigate
 
-#### For LOW/MEDIUM Risk with quarterly-review Label
+### Testing Checklist
 
-1. **Approve** (Recommended)
-2. **Close with quarterly note** - Defer to next quarterly batch
-3. **Request changes** - Technical feedback needed
-4. **Do nothing yet** - Need to test/investigate
+Default evaluate-and-merge pass:
 
-#### For Other Dependabot PRs (No Clear Risk Label)
+- Run `make build` (or `make serve-all` for browser-facing packages), then spot-check search, console errors, and markdown rendering
+- Merge once CI is green
 
-1. **Approve** (Recommended)
-2. **Request changes** - Technical feedback needed
-3. **Close PR** - Reject
-4. **Do nothing yet** - Need investigation
-
-### Testing Checklist (Show by Risk)
-
-Display appropriate checklist based on risk tier:
-
-- **HIGH**: `make serve-all`, search, console errors, markdown, PR deployment (URL loads, Lambda@Edge errors via F12, search, navigation)
-- **MEDIUM**: `make build`, warnings, [if build tools] PR deployment URL loads
-- **LOW**: `make lint`
+When `deps-lambda-edge-risk` is present, add: check the Lambda@Edge bundle size against the 1 MB limit and confirm the PR deployment URL loads (Lambda@Edge errors via F12, search, navigation) before merging.
 
 ## Other Bot PRs
 
