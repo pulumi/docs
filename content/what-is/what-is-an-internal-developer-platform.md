@@ -71,7 +71,7 @@ Organizations that successfully implement IDPs realize several significant benef
 
 While closely related, Platform Engineering and Internal Developer Platforms are not the same:
 
-* **Platform Engineering** is the discipline and practice of designing, building, and maintaining developer platforms. It involves the people, processes, and cultural aspects of creating developer-centric infrastructure solutions.
+* **[Platform Engineering](/what-is/what-is-platform-engineering/)** is the discipline and practice of designing, building, and maintaining developer platforms. It involves the people, processes, and cultural aspects of creating developer-centric infrastructure solutions.
 * **Internal Developer Platforms** are the actual products that platform engineering teams build - the technical implementation that developers interact with daily.
 
 Think of Platform Engineering as the discipline, and the IDP as the product of that discipline.
