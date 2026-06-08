@@ -17,6 +17,7 @@ The idea is to treat infrastructure the way software engineers already treat app
 In this article, we'll cover the key questions about infrastructure as code:
 
 * Why is infrastructure as code important?
+* How does infrastructure as code work?
 * How did infrastructure as code evolve?
 * What is the difference between declarative and imperative IaC?
 * What are the key elements of infrastructure as code?
@@ -55,6 +56,60 @@ The second trend is cloud modernization. At first glance this may seem redundant
 Finally, the rate of change for a company's infrastructure is increasing. Part of this increase in the rate of change is due to cloud adoption and cloud modernization. There is a third reason, though: organizations are finding that they can move faster if they take advantage of the fundamental elasticity of the cloud.
 
 For teams managing tens or hundreds of cloud resources that change once every few months, managing infrastructure using scripts or via interactive means (such as using a UI or a CLI) might still be possible. More commonly, teams are finding themselves managing thousands or tens of thousands of resources that change daily or even hourly. Embracing automation via infrastructure as code is the only way to take control of that kind of complexity.
+
+## How does infrastructure as code work?
+
+At its core, infrastructure as code follows a simple loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there---you declare the end state, and the tool figures out the rest.
+
+A typical workflow looks like this:
+
+1. **Write the desired state as code.** Describe the resources you want---a network, a Kubernetes cluster, a database, an IAM policy---in a configuration file or program.
+1. **Build a plan.** The IaC tool reads your code and constructs a model of the desired state.
+1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a *state file* that tracks the resources it manages.
+1. **Preview the changes.** Before anything happens, you get a diff showing exactly what will be created, updated, replaced, or deleted.
+1. **Reconcile.** Once approved, the engine calls the cloud provider APIs to make the real infrastructure match your code, handling ordering and dependencies along the way.
+
+```mermaid
+flowchart LR
+    A[Write desired<br/>state as code] --> B[Build a plan]
+    B --> C{Compare desired<br/>vs. current state}
+    C --> D[Preview the diff]
+    D --> E[Reconcile: create,<br/>update, or delete]
+    E --> F[Real infrastructure<br/>matches your code]
+```
+
+For example, here's all it takes to declare an AWS S3 bucket. You state that the bucket should exist; the engine decides whether to create it, leave it alone, or update it to match:
+
+{{< chooser language "typescript,python" / >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+// Declare a bucket. Pulumi creates, updates, or replaces it to match.
+const bucket = new aws.s3.BucketV2("my-bucket");
+
+export const bucketName = bucket.bucket;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+import pulumi_aws as aws
+
+# Declare a bucket. Pulumi creates, updates, or replaces it to match.
+bucket = aws.s3.BucketV2("my-bucket")
+
+pulumi.export("bucket_name", bucket.bucket)
+```
+
+{{% /choosable %}}
+
+Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift*---changes someone made out of band, such as editing a setting directly in the cloud console---and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
 
 ## How did infrastructure as code evolve?
 
