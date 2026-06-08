@@ -107,7 +107,7 @@ sections:
     highlight_first_card: true
     columns:
       - title: Experience Neo today
-        description: Neo is available in preview for all Pulumi users. Experience the future of platform engineering automation.
+        description: Neo is generally available to all Pulumi users. Experience the future of platform engineering automation.
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
