@@ -22,7 +22,7 @@ Secrets are often the gateway to accessing sensitive systems and data. With robu
 
 ### Maintaining Compliance with Security Regulations
 
-Many industries are governed by strict regulations that require the protection of sensitive data. Effective secrets management helps organizations comply with these regulations, such as GDPR, HIPAA, or PCI DSS, by ensuring that access to sensitive data is tightly controlled and monitored. Compliance not only avoids legal penalties but also builds trust with customers and partners.
+Many industries are governed by strict regulations that require the protection of sensitive data. Effective secrets management helps organizations comply with frameworks and regulations such as [SOC 2](/what-is/what-is-soc-2/), GDPR, HIPAA, or PCI DSS, by ensuring that access to sensitive data is tightly controlled and monitored. Compliance not only avoids legal penalties but also builds trust with customers and partners.
 
 ### Simplifying the Process of Rotating and Updating Secrets
 
