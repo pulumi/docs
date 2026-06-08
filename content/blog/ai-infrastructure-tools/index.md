@@ -59,7 +59,7 @@ The term covers two distinct categories that share almost no vendors.
 
 **Infrastructure for AI** is the compute, storage, and orchestration that AI workloads run on. Training a large model is not a normal cloud workload: it wants thousands of GPUs talking to each other over fat, low-latency networks for weeks at a time. Inference is different again: lower latency, smarter batching, different hardware. General-purpose cloud was not designed for either case, which is why specialized GPU clouds and MLOps platforms exist.
 
-**AI-powered infrastructure management** is the inverse: AI tools that manage cloud infrastructure. They generate IaC, run deployments, detect drift, and remediate policy violations. The pitch is that modern infrastructure (multi-cloud, containers, microservices, regulated workloads) has gotten too complex for humans to manage by hand and too varied for scripted automation to keep up with.
+**AI-powered infrastructure management** is the inverse: AI tools that manage cloud infrastructure. They generate [infrastructure as code](/what-is/what-is-infrastructure-as-code/), run deployments, detect drift, and remediate policy violations. The pitch is that modern infrastructure (multi-cloud, containers, microservices, regulated workloads) has gotten too complex for humans to manage by hand and too varied for scripted automation to keep up with.
 
 Most organizations end up needing both: somewhere to run their ML workloads, and something to keep the rest of the cloud sane.
 
@@ -124,7 +124,7 @@ The shared tradeoff: hyperscaler GPU compute typically runs 2–3x the per-hour 
 
 ## Part 2: AI-powered infrastructure management tools
 
-This is where the more interesting product shift is happening. Instead of running AI on infrastructure, these tools point AI at your infrastructure and let it do work.
+This is where the more interesting product shift is happening. Instead of running AI on infrastructure, these tools point AI at your infrastructure and let it do work. They're a newer, AI-native layer on top of the broader [infrastructure as code tooling landscape](/what-is/top-iac-tools/).
 
 ### From code generation to agentic execution
 
