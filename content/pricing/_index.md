@@ -564,10 +564,11 @@ comparison_table:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
                 items:
-                  - content: _blank
-                  - content: _check
-                  - content: _check
-                  - content: _check
+                  - content: 15m tokens/mo
+                    subtext: free
+                  - content: $3/1m tokens
+                  - content: $3/1m tokens
+                  - content: $3/1m tokens
           ## Pulumi Workflow table
           - header: Internal Developer Platform
             icon: custom/pulumi-idp
