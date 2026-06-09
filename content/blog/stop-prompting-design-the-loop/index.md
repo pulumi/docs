@@ -74,7 +74,7 @@ Then the sixth thing: memory. A markdown file, a Linear board, a state file, any
 
 A loop running unattended is also a loop making mistakes unattended. The one thing that keeps it honest is verification, and verification needs an oracle, something outside the model that returns a hard yes or no. Passing tests, a clean build, a green pipeline, a real production signal. Without an oracle, the loop compounds confidently wrong work, faster than you can read it.
 
-The cleanest version of this already ships in the tools. Claude Code's `/goal` keeps working across turns until a condition you actually wrote holds, something like "every test in `auth/` passes and lint is clean," and after every turn a separate, faster model reads the transcript and decides whether you are there yet. The agent that wrote the code is not the one that grades it. That is the maker-and-checker split applied to the stop condition itself, and Codex ships the same primitive.
+The cleanest version of this already ships in the tools. Claude Code's `/goal` keeps working across turns until a condition you actually wrote holds, something like "every test in `auth/` passes and lint is clean," and after every turn a separate, faster model reads the transcript and decides whether you are there yet. The agent that wrote the code is not the one that grades it. That is the maker-and-checker split applied to the stop condition itself. Codex's `/goal` reaches the same finish line a different way: the agent audits its own work against the evidence before it can call the goal done.
 
 ## What the loop still won't do for you
 
