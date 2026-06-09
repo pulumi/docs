@@ -35,7 +35,11 @@ az sentinel onboarding-state create -g <resource-group> -w <workspace-name> -n d
 
 ## Setup option 1: Pulumi Cloud console (recommended)
 
-1. Open the [New Project Wizard with the template pre-selected](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-sentinel-audit-logs).
+1. In the Pulumi Cloud console, navigate to **Audit Logs** and click the gear icon. Select **Configure export to Microsoft Sentinel**.
+
+   ![Audit Logs settings dropdown showing the Configure export to Microsoft Sentinel option](audit-log-sentinel-dropdown.png)
+
+1. Click **Deploy with Pulumi**. This opens the New Project Wizard with the template pre-selected.
 
 1. Fill in the config values:
    - **orgName**: Your Pulumi Cloud organization name
