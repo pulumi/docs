@@ -223,11 +223,12 @@ Caches are shared on the project level, so all stacks within a project can share
 Dependency caching is supported for the following runtimes:
 
 - `.NET` - no special configuration required
-- `Python` - ensure that you have `requirements.txt` in the root of your source code.
+- `Python` - ensure that you have either `requirements.txt` (pip) or `uv.lock` (uv) in the root of your source code. If both files are present, caching is skipped. Note: Poetry is not supported — if you use Poetry, you can export a `requirements.txt` with `poetry export -f requirements.txt --output requirements.txt` to enable caching.
 - `Go` - ensure that you have `go.mod` and `go.sum` in the root of your source code.
-- `NodeJS` - only `npm` and `yarn` are currently supported.
+- `NodeJS` - `npm`, `yarn`, and `pnpm` are supported.
   - For `npm`, ensure that you have `package-lock.json` in the root of your source code.
   - For `yarn`, ensure that you have `yarn.lock` in the root of your source code.
+  - For `pnpm`, ensure that you have `pnpm-lock.yaml` in the root of your source code.
 
 To confirm dependency caching is working and/or to troubleshoot, check out logs of your deployments, specifically the `Restore Cache` and `Save Cache` steps.
 
