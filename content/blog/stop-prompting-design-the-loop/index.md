@@ -22,15 +22,15 @@ social:
     linkedin: |
         For about two years, the way you got something out of a coding agent was simple: write a good prompt, read what came back, write the next one. You held the tool the entire time.
 
-        That is ending. Addy Osmani calls what replaces it loop engineering: you stop being the person who prompts the agent and start designing the loop that prompts it for you. Boris Cherny, who heads Claude Code, puts it bluntly: "My job is to write loops."
+        That part is ending. Peter Steinberger says you shouldn't be prompting coding agents anymore. Boris Cherny, who heads Claude Code, says the same about his own job: "My job is to write loops."
 
-        The pieces already ship in Claude Code and Codex. The part that does not ship is judgment. Verification is still on you, slop still compounds, and two engineers can build the same loop and get opposite results.
+        So you stop prompting the agent and start designing the loop that prompts it. The pieces already ship in Claude Code and Codex. The catch is the part that doesn't, and it's the reason two engineers can build the exact same loop and get opposite results.
 
-        An honest field guide: the five building blocks, the memory that makes a loop compound, and what it still won't do for you.
+        Engin Diri walks through what a loop is actually made of, and the part of it that no tool will ever do for you.
     bluesky: |
         The unit of work moved from the prompt to the loop. You stop prompting the agent and start designing the thing that prompts it.
 
-        Five pieces, one memory file, and the part nobody automates: verification.
+        The pieces already ship in your tools. The part that makes a loop worth running doesn't.
 ---
 
 For about two years, the unit of work with a coding agent was the prompt. You wrote a good one, you gave it enough context, you read what came back, and you wrote the next one. The agent was a tool, and you were holding it the entire time, one turn after another.
