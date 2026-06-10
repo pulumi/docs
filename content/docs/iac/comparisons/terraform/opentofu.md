@@ -56,7 +56,7 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Embed within Application Code](#embedding) | No | No |
 | [Third-party CI/CD Tools Support](#cicd) | No | Yes |
 | [Policy as Code](#policy) | No | Yes |
-| [Secrets Management](#secrets) | No. Secrets can be stored in a 3rd party product. There is no way to encrypt them in the state file. | No. Secrets are stored in a  separate product (Vault). There is no way to encrypt them in the state file. |
+| [Secrets Management](#secrets) | No. Secrets can be stored in a 3rd party product. There is no way to encrypt them in the state file. | No. Secrets are stored in a separate product (Vault). There is no way to encrypt them in the state file. |
 | [Audit Capabilities](#auditing) | No | Limited |
 | [Adopt Existing Resources](#adopting) | Yes. No code generation capabilities. | Yes. No code generation capabilities. |
 | [Aliases](#aliases) | Limited | Limited |

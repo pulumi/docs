@@ -40,7 +40,7 @@ Each stack typically corresponds to a distinct _environment_ for that service, s
 testing and development instances. There might even be multiple environments within each of these dimensions, such as
 a production environment in each of the US east coast, west coast, Europe, and Asia.
 
-Most users will start a monolithic structure, for a few good reasons:
+Most users will start with a monolithic structure, for a few good reasons:
 
 * **Simplicity.** Having a single project and collection of stacks is the easiest thing you could
   possibly do. Pulumi diffs edits to your application and infrastructure code, and so this approach leaves the

@@ -1084,7 +1084,7 @@ $ go test
 
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
-Run the following command to execute your Python tests:
+Run the following command to execute your C# tests:
 
 ```bash
 $ dotnet test

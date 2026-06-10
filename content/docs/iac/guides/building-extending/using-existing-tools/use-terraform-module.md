@@ -941,4 +941,4 @@ Current limitations include:
 
 ## Conclusion
 
-Using Terraform modules directly in Pulumi allows you to leverage the vast ecosystem of Terraform modules and your existing investments into custom modules, while maintaining all the benefits of Pulumi's rich programming model. This approach enables the two products to coexist, allowing teams continue to collaborate while using the best tools for their specific needs, and enables a gradual migration path from Terraform to Pulumi.
+Using Terraform modules directly in Pulumi allows you to leverage the vast ecosystem of Terraform modules and your existing investments into custom modules, while maintaining all the benefits of Pulumi's rich programming model. This approach enables the two products to coexist, allowing teams to continue to collaborate while using the best tools for their specific needs, and enables a gradual migration path from Terraform to Pulumi.
