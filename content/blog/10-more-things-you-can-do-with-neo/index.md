@@ -229,7 +229,7 @@ The same task can catch container base images with critical CVEs and bump them t
 
 ## 10. Fix AWS CIS Benchmark failures with daily PRs
 
-*Run the benchmark on a schedule. Wake up to PRs that fix what failed.*
+*Run the AWS CIS Benchmark on a schedule. Wake up to PRs that fix every failure.*
 
 The [CIS AWS Foundations Benchmark](https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html), available through AWS Security Hub, is something every team should be keeping an eye on. The benchmark finds issues like S3 buckets that allow public read access (`S3.1`), root user access keys that shouldn't exist (`IAM.4`), or CloudTrail not being enabled (`CloudTrail.1`). Scanning for these issues is a solved problem, but closing and addressing them is not. They pile up between audits because each one is a code change in a different stack, and nobody owns the cross-stack cleanup.[^10-original]
 
@@ -244,7 +244,7 @@ The runbook is where your security team writes down what each control means for 
 {{< video title="Scrolling through Neo's morning CIS Benchmark PR" src="neo-cis-pr.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}A PR raised by Neo to fix a CIS Benchmark failure, with the failing rule, the resource, and the runbook decision laid out in the body.{{< /figcaption >}}
 
-{{< neo-card title="Schedule a daily compliance scan" prompt="Every morning, verify all resources meet our compliance policies and create PRs to fix violations." >}}
+{{< neo-card title="Schedule daily AWS CIS Benchmark scans" prompt="Every morning, verify all resources meet our compliance policies and create PRs to fix violations." >}}
 
 ## Neo: your newest platform engineer
 
