@@ -72,7 +72,7 @@ Neo pulls the metric history, matches the Datadog tag `db.cluster=checkout-rds` 
 {{< video title="Enabling the Honeycomb integration in Neo" src="honey-comb.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Toggle on the Honeycomb integration so Neo can read traces and metrics alongside your Pulumi stacks.{{< /figcaption >}}
 
-## 3. Triage a PagerDuty alert from Slack
+## 3. Automate PagerDuty incident response from Slack
 
 *A page comes in. You paste it into your on-call channel and tag Neo, and Neo replies with the cross-system view you'd otherwise spend the first 20 minutes assembling.*
 
@@ -91,7 +91,7 @@ You ask a couple of clarifying questions in-thread, then ask Neo to open a rollb
 ![Neo Settings → Integrations page: six integrations available with Authorize buttons for Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase](neo-integration-catalog.png)
 {{< figcaption >}}Authorize PagerDuty and Datadog in Neo's settings. Neo can then read alerts in your on-call Slack channel, find the change that correlates, and open a PR when you ask.{{< /figcaption >}}
 
-## 4. Implement a Linear ticket end-to-end
+## 4. Implement a Jira or Linear ticket end-to-end
 
 *Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, plans against your stack, and opens a PR.*
 
@@ -185,7 +185,7 @@ You're still the one reviewing the PRs and deciding what the cutover looks like 
 
 Once you've delegated something a few times, the next move is to automate it. The remaining three tasks are the kind Neo doesn't need to be asked for. Drift, deps, compliance: they're the operations you put on a schedule via [Neo Automations](/blog/neo-automations/).
 
-## 8. Schedule daily configuration drift checks across your cloud infrastructure
+## 8. Schedule daily configuration drift detection across your cloud infrastructure
 
 *Schedule a daily drift check across your cloud. Wake up to PRs that fix what changed overnight.*
 
@@ -229,7 +229,7 @@ The same task can catch container base images with critical CVEs and bump them t
 
 ## 10. Fix AWS CIS Benchmark failures with daily PRs
 
-*Run the benchmark on a schedule. Wake up to PRs that fix what failed.*
+*Run the AWS CIS Benchmark on a schedule. Wake up to PRs that fix every failure.*
 
 The [CIS AWS Foundations Benchmark](https://docs.aws.amazon.com/securityhub/latest/userguide/cis-aws-foundations-benchmark.html), available through AWS Security Hub, is something every team should be keeping an eye on. The benchmark finds issues like S3 buckets that allow public read access (`S3.1`), root user access keys that shouldn't exist (`IAM.4`), or CloudTrail not being enabled (`CloudTrail.1`). Scanning for these issues is a solved problem, but closing and addressing them is not. They pile up between audits because each one is a code change in a different stack, and nobody owns the cross-stack cleanup.[^10-original]
 
@@ -244,7 +244,7 @@ The runbook is where your security team writes down what each control means for 
 {{< video title="Scrolling through Neo's morning CIS Benchmark PR" src="neo-cis-pr.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}A PR raised by Neo to fix a CIS Benchmark failure, with the failing rule, the resource, and the runbook decision laid out in the body.{{< /figcaption >}}
 
-{{< neo-card title="Schedule a daily compliance scan" prompt="Every morning, verify all resources meet our compliance policies and create PRs to fix violations." >}}
+{{< neo-card title="Schedule daily AWS CIS Benchmark scans" prompt="Every morning, verify all resources meet our compliance policies and create PRs to fix violations." >}}
 
 ## Neo: your newest platform engineer
 
