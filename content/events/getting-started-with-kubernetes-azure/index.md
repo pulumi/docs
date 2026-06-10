@@ -48,7 +48,7 @@ description: |
 learn:
     - Create an Azure Kubernetes Service (AKS) cluster using Pulumi
     - How Pulumi manages Azure and Kubernetes resources together
-    - Deploy and update containerized application to AKS using safe, repeatable workflows
+    - Deploy and update containerized applications to AKS using safe, repeatable workflows
     - How to preview, update, and tear down Kubernetes infrastructure safely
 
 # The event presenters

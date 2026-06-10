@@ -35,7 +35,7 @@ sortable_date: 2021-10-20T10:20:00-07:00
 duration: "15 minutes"
 # Description of the event.
 description: |
-    In auto racing, the maximum amount of directional force available to a tire is visualized as a traction circle. When force is applied to a tire that is in excess of the size of the traction circle, you lose traction, and the vehicle will skid and, usually, crash. Similarly, there is a maximum amount of stress and pressure available to individuals with an org and within an org itself. When that stress and pressure is exceeded, the individuals and orgs can start to spiral and crash. In this talk, we will discuss the concepts of business pressures on organizations and individuals, the effects on those individuals and organizations, what "crashing" looks like, and some ways to manage the forces to get the best performance our of people and organizations without pushing them over their limits.
+    In auto racing, the maximum amount of directional force available to a tire is visualized as a traction circle. When force is applied to a tire that is in excess of the size of the traction circle, you lose traction, and the vehicle will skid and, usually, crash. Similarly, there is a maximum amount of stress and pressure available to individuals with an org and within an org itself. When that stress and pressure is exceeded, the individuals and orgs can start to spiral and crash. In this talk, we will discuss the concepts of business pressures on organizations and individuals, the effects on those individuals and organizations, what "crashing" looks like, and some ways to manage the forces to get the best performance out of people and organizations without pushing them over their limits.
 
 # The event presenters
 presenters:

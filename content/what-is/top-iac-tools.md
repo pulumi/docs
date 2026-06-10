@@ -34,7 +34,7 @@ Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the H
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs). Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
@@ -62,7 +62,7 @@ OpenTofu is a recent fork of Terraform 1.6.x. It shares many core functionalitie
 
 While OpenTofu aims to maintain compatibility with Terraform, it's expected to develop its own unique features and community-driven improvements over time. The primary difference currently lies in the licensing model, with OpenTofu using the Mozilla Public License 2.0.
 
-For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs.OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
+For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs. OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
 
 - **Flexibility**: Utilizes HCL, offering similar capabilities to Terraform in terms of infrastructure definition.
 - **Multi-cloud**: Supports multiple cloud providers, mirroring Terraform's broad compatibility.
@@ -91,12 +91,12 @@ CloudFormation can be used to create and manage Amazon EKS (Elastic Kubernetes S
 Managing complex templates can be challenging, and template size limitations and cryptic error messages are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited. Despite its limitations, AWS CloudFormation is favored by those deeply invested in the AWS ecosystem who want a platform native tool.  
 
 - **Flexibility**: Some support for abstraction and modularity through nested stacks and reusable templates.
-- **Integration**:  Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.
+- **Integration**: Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.
 - **Ecosystem**: Supported by extensive documentation, providing resources for learning and troubleshooting.
 
 ### [Azure Resource Manager](https://azure.microsoft.com/fr-fr/get-started/azure-portal/resource-manager)
 
-Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - a ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
+Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - an ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
 
 - **Flexibility**: Uses JSON-based templates or Bicep - a DSL. Lacks some of the abstraction and modularity of other tools.
 - **Integration**: Offers deep integration with Azure services, including Azure DevOps and Azure Kubernetes Service. Broader integration to non-Azure CI/CD is possible, while native Kubernetes cluster support is not.

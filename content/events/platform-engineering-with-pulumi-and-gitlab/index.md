@@ -42,12 +42,12 @@ location: virtual
 
 # Description of the event.
 description: |
-    During this workshop, you will discover how to use Pulumi's integration with GitLab to create and manage CI/CD pipelines for your cloud infrastructure. You will learn to use Pulumi's declarative infrastructure as code that enable both application and infrastructure teams to deliver secure, high-quality software more efficiently and reproducibly, while also minimizing risk and complexity. Join us to improve your platform team's ability to efficiently and flexibly manage cloud resources.
+    During this workshop, you will discover how to use Pulumi's integration with GitLab to create and manage CI/CD pipelines for your cloud infrastructure. You will learn to use Pulumi's declarative infrastructure as code that enables both application and infrastructure teams to deliver secure, high-quality software more efficiently and reproducibly, while also minimizing risk and complexity. Join us to improve your platform team's ability to efficiently and flexibly manage cloud resources.
 
 learn:
     - How to create GitLab pipelines for your infrastructure as code.
     - How to use the GitLab Pulumi provider to manage your GitLab resources.
-    - How to to use Pulumi's Policy as Code and ESC (Environments, Secrets, and Config) to improve your organization's security posture.
+    - How to use Pulumi's Policy as Code and ESC (Environments, Secrets, and Config) to improve your organization's security posture.
 
 # The event presenters
 presenters:

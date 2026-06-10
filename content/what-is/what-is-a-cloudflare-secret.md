@@ -129,16 +129,16 @@ Secret: dragons and unicorns are real
 
 Using Cloudflare secrets comes with particular challenges and considerations:
 
-- **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
+- **Management of secrets overhead:** As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) and [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/).
+- **Integration with external secret management systems:** Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) and [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/).
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
 /what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to facilitate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
 
 ## Conclusion  
 
-Following security best practices for Cloudflare secrets are crucial in managing sensitive information in your solutions, applications, and cloud environments.
+Following security best practices for Cloudflare secrets is crucial in managing sensitive information in your solutions, applications, and cloud environments.
 
 Now that you know Cloudflare secrets, take your cloud infrastructure management to the next level with [Pulumi](https://www.pulumi.com/):
 

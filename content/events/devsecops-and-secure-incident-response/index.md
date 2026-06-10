@@ -1,7 +1,7 @@
 ---
 # Name of the event.
 title: "DevSecOps and Secure Incident Response"
-meta_desc: This talk will reviewing the 14 Step Secure Incident Response process, including the what and why of each step.
+meta_desc: This talk will review the 14 Step Secure Incident Response process, including the what and why of each step.
 
 # A featured event will display first in the list.
 featured: false

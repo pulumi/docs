@@ -44,7 +44,7 @@ Built through strategic acquisitions, Modivcare consolidated multiple healthcare
 
 By 2023, Modivcare's acquisition strategy had created a perfect storm of infrastructure complexity. Each acquired company arrived with different AWS approaches: mature Terraform and Terragrunt setups, AWS CDK or CloudFormation implementations, or no infrastructure automation at all—just manually provisioned resources and PowerShell scripts.
 
-"We had an organization, we had a top-down design, but when there was an acquisition, if they were in AWS, that account got added to the organization after the fact," explained Zachary Cook, Senior Manager, DevOps at ModivCare.
+"We had an organization, we had a top-down design, but when there was an acquisition, if they were in AWS, that account got added to the organization after the fact," explained Zachary Cook, Senior Manager, DevOps at Modivcare.
 
 The newly formed platform engineering team had to onboard legacy AWS accounts, invisible resources, and teams with vastly different cloud maturity levels. Traditional consolidation would require disruptive migrations that could impact healthcare services—unacceptable for a company serving vulnerable populations.
 

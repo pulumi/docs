@@ -52,7 +52,7 @@ description: |
 
 learn:
     - How to use the Pulumi Kubernetes provider and the Pulumi Docker provider to build and run containerized workloads all with a single tool.
-    - How the Pulumi Kubernetes provider can integrate seamlessly with your existing Kubernetes resources, whether plan YAML manifests or Helm charts.
+    - How the Pulumi Kubernetes provider can integrate seamlessly with your existing Kubernetes resources, whether plain YAML manifests or Helm charts.
     - How to use the Pulumi Kubernetes Operator to enable Pulumi IaC programs to run in a GitOps fashion.
 # The event presenters
 presenters:

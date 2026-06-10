@@ -35,7 +35,7 @@ sortable_date: 2021-10-20T11:40:00-07:00
 duration: "52 minutes"
 # Description of the event.
 description: |
-    Listen as Joe Duffy leads a talk about Cloud Engineering with special guests Ken Exner and Luke Hoban. Joe discusses how he thinks of the cloud as the a giant super-computer and dives into each component of the cloud operating system. Then Luke will talk about how Pulumi makes authoring cloud components easy and gives a few examples of Pulumi's Multi-Language components. Finally, Joe and Ken discuss how customers are currently using the cloud and how they both envision the future.
+    Listen as Joe Duffy leads a talk about Cloud Engineering with special guests Ken Exner and Luke Hoban. Joe discusses how he thinks of the cloud as a giant super-computer and dives into each component of the cloud operating system. Then Luke will talk about how Pulumi makes authoring cloud components easy and gives a few examples of Pulumi's Multi-Language components. Finally, Joe and Ken discuss how customers are currently using the cloud and how they both envision the future.
 
 # The event presenters
 presenters:

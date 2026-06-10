@@ -79,7 +79,7 @@ Platform teams solve these challenges:
 
 Platform engineering can increase development velocity, improve security, increase infrastructure's adherence to best practices, and reduce operational costs through automation. It helps organizations increase the ROI on cloud investments and improves the software delivery lifecycle so that developers can ship new features faster.
 
-Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of large software engineering organizations would establish platform teams as internal providers of reusable services, components, and tools for application delivery (up from 45% in 2022) — a shift that is now well underway across the industry, from financial services to consumer retail (see the [case studies](#case-studies).
+Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of large software engineering organizations would establish platform teams as internal providers of reusable services, components, and tools for application delivery (up from 45% in 2022) — a shift that is now well underway across the industry, from financial services to consumer retail (see the [case studies](#case-studies)).
 
 ## How is AI changing platform engineering?
 
