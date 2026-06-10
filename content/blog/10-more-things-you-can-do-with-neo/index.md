@@ -185,7 +185,7 @@ You're still the one reviewing the PRs and deciding what the cutover looks like 
 
 Once you've delegated something a few times, the next move is to automate it. The remaining three tasks are the kind Neo doesn't need to be asked for. Drift, deps, compliance: they're the operations you put on a schedule via [Neo Automations](/blog/neo-automations/).
 
-## 8. Schedule daily configuration drift checks across your cloud infrastructure
+## 8. Schedule daily configuration drift detection across your cloud infrastructure
 
 *Schedule a daily drift check across your cloud. Wake up to PRs that fix what changed overnight.*
 
