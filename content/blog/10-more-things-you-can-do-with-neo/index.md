@@ -72,7 +72,7 @@ Neo pulls the metric history, matches the Datadog tag `db.cluster=checkout-rds` 
 {{< video title="Enabling the Honeycomb integration in Neo" src="honey-comb.mp4" autoplay="true" loop="true" controls="false" >}}
 {{< figcaption >}}Toggle on the Honeycomb integration so Neo can read traces and metrics alongside your Pulumi stacks.{{< /figcaption >}}
 
-## 3. Triage a PagerDuty alert from Slack
+## 3. Automate PagerDuty incident response from Slack
 
 *A page comes in. You paste it into your on-call channel and tag Neo, and Neo replies with the cross-system view you'd otherwise spend the first 20 minutes assembling.*
 
