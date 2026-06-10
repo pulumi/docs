@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "CascadiaJS 2026"
+  title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
+  url: "https://cascadiajs.com/2026/talks/deploying-ai-agents-on-aws-with-pulumi-and-amazon-bedrock-agentcore"
+  date: 2026-06-02T13:40:00.000-07:00
 - event: "PlatforMa 2026"
   title: "Stop Building Portals, Start Building Conversations"
   url: "https://www.platfor-ma.com/agenda2026"
