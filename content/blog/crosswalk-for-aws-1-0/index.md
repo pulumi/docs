@@ -687,7 +687,7 @@ AWS Lambda and the serverless architectures it enables provide native support fo
 
 Pulumi's built in support for AWS Lambda functions and the new `aws-apigateway` 1.0 package make it simple to compose these services to build serverless applications and services on AWS in just a few lines of code.
 
-Our recently released [AWS Serverles Application](https://www.pulumi.com/templates/serverless-application/aws/) template provides a great starting point for leveraging the `aws-apigateway` 1.0 support for creating a complete API Gateway-based serverless application, serving both static content from Amazon S3 as well as dynamic backend logic from AWS Lambda.
+Our recently released [AWS Serverless Application](https://www.pulumi.com/templates/serverless-application/aws/) template provides a great starting point for leveraging the `aws-apigateway` 1.0 support for creating a complete API Gateway-based serverless application, serving both static content from Amazon S3 as well as dynamic backend logic from AWS Lambda.
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 

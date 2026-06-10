@@ -127,7 +127,7 @@ One alternative is to set the environment variables on your local machine and pa
 
 Another alternative is to use a devcontainer.env file, which contains your credentials.
 
-1. Create a file with your crendentials.
+1. Create a file with your credentials.
 
     ```
     AWS_ACCESS_KEY_ID=AKIAI44QH8DHBEXAMPLE
