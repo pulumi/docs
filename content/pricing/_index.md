@@ -33,9 +33,9 @@ tiers:
                   - Neo, our infrastructure agent
             - title: Team
               subtitle: Everything you need to get started.
-              price: Starts at $40
-              price_label: /mo
-              unit: "**40 Credits included**"
+              price: $40
+              price_label: /mo base
+              unit: "**Includes 40 Credits**"
               note: Up to 500 resources, additional usage billed on demand
               cta:
                   label: Start a free trial
@@ -54,8 +54,8 @@ tiers:
               subtitle: Security and collaboration for large teams.
               badge: Popular
               price: $400
-              price_label: /mo
-              unit: "**400 Credits included**"
+              price_label: /mo base
+              unit: "**Includes 400 Credits**"
               note: Up to 2,000 resources, additional usage billed on demand
               cta:
                   label: Start a free trial
