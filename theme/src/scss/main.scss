@@ -17,19 +17,7 @@
 $sitenav-height: 90px;
 $sitenav-offset: calc($sitenav-height + 16px);
 
-// Typography token utilities (font sizes from design system).
-@utility text-heading-2xl { font-size: 80px; }
-@utility text-heading-xl { font-size: 72px; }
-@utility text-heading-l { font-size: 64px; }
-@utility text-heading-m { font-size: 48px; }
-@utility text-heading-s { font-size: 40px; }
-@utility text-heading-xs { font-size: 28px; }
-@utility text-heading-2xs { font-size: 24px; }
-@utility text-heading-2xsSmall { font-size: 20px; }
-@utility text-body-xl { font-size: 24px; }
-@utility text-body-l { font-size: 20px; }
-@utility text-body-m { font-size: 18px; }
-@utility text-body-s { font-size: 16px; }
+@import "utilities-shared";
 
 // v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
 // Component styles go in @layer components for the same reason.
@@ -38,86 +26,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // but loses to unlayered CSS. So we must layer our custom styles.
 
 @layer base {
-    // Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
-    // currentColor, which makes `.border` dividers render too dark. Restore the old default.
-    *,
-    ::before,
-    ::after {
-        border-color: var(--color-gray-200);
-    }
-
-    // Custom elements default to display: inline in browsers. Tailwind v4 preflight
-    // does not reset them to block, so we do it here for all Pulumi web components.
-    pulumi-chooser,
-    pulumi-choosable,
-    pulumi-tabs,
-    pulumi-tab-panel,
-    pulumi-install,
-    pulumi-banner,
-    pulumi-examples,
-    pulumi-convert,
-    pulumi-tooltip,
-    pulumi-audio,
-    pulumi-slot-machine,
-    pulumi-tertiary-nav,
-    pulumi-greenhouse-jobs-list,
-    pulumi-resource-links,
-    pulumi-filter-select,
-    pulumi-user-toggle,
-    pulumi-hubspot-form {
-        display: block;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        @apply font-display text-service-black mb-2;
-        font-weight: 600;
-        letter-spacing: -0.05em;
-        line-height: 1.1em;
-
-        &:not(:first-child) {
-            // Don't apply top margin when one's being specified.
-            &:not([class*="mt-"]):not([class*="m-"]) {
-                @apply mt-8;
-            }
-        }
-
-        code {
-            letter-spacing: normal;
-        }
-    }
-
-    h1 {
-        @apply text-4xl;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    h3 {
-        @apply text-2xl;
-    }
-
-    h4 {
-        @apply text-xl;
-    }
-
-    h5 {
-        @apply text-lg;
-    }
-
-    h6 {
-        @apply text-sm;
-    }
-
-    p {
-        @apply leading-normal my-4;
-    }
+    @import "base-shared";
 
     body {
         @apply font-body text-service-black;
@@ -155,9 +64,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
                 }
             }
 
-            strong {
-                @apply font-semibold;
-            }
+        }
+
+        strong {
+            @apply font-semibold;
         }
 
         ul,
@@ -269,7 +179,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "tiles";
     @import "toggle";
     @import "tooltip";
-    @import "404";
 
     @import "components/banner";
     @import "components/chooser";

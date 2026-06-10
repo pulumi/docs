@@ -22,7 +22,7 @@ cloud:
 
 The Azure Static Website template scaffolds a Pulumi project that stores site files in an [Azure Blob Storage account](/registry/packages/azure-native/api-docs/storage/storageaccount/) configured for static website hosting and serves them through an [Azure CDN Endpoint](/registry/packages/azure-native/api-docs/cdn/endpoint/) for low-latency delivery, caching, and HTTPS. The template ships with placeholder web content so the project deploys end to end out of the box.
 
-![An architecture diagram of the Azure Static Website template](./architecture.png)
+![An architecture diagram of the Azure Static Website template](/templates/static-website/azure/architecture.png)
 
 ## Using this template
 

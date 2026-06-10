@@ -23,7 +23,7 @@ In the introductory blog post, we learned to [Create an AI Slack Bot to Chat wit
 
 For reference, here's what our architecture looked like at the end of the second blog post.
 
-![arti-architecture.png](./arti-architecture-blog-2.png)
+![arti-architecture.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-architecture-blog-2.png)
 
 To follow along, clone the project, `git clone https://github.com/catmeme/arti.git` or view it on [GitHub](https://github.com/catmeme/arti).
 
@@ -80,7 +80,7 @@ We also have a scheduled event that we set up for ingestion in the last post, wh
 
 That's pretty much it on the infrastructure side, here's the updated diagram.
 
-![arti-architecture-blog-3.png](./arti-architecture-blog-3.png)
+![arti-architecture-blog-3.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-architecture-blog-3.png)
 
 ## Slack to S3 file upload bridge
 
@@ -130,7 +130,7 @@ Keep in mind, we're not doing any validation here yet. We're blindly copying fil
 
 Here's what it looks like when we drag/drop a file into Slack now.  On the right, a file was shared with the bot in private message.  The bot acknowledged this upload with the checkmark reaction, the job is placed on the queue.  Shortly after, on the left, the SQS Lambda handler has finished processing the uploaded file.  We're now able to use the bot to talk about the uploaded files.
 
-![realtime-slack-s3.png](./realtime-slack-s3.png)
+![realtime-slack-s3.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/realtime-slack-s3.png)
 
 ## Slack interactivity
 
@@ -185,11 +185,11 @@ def handle_smarti_submission(client, logger, body, view):
     ...
 ```
 
-![smarti-modal.png](./smarti-modal.png)
+![smarti-modal.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/smarti-modal.png)
 
 Submitting that form results in a response such as below.  The bot honored our prompts, talking like Shakespeare, a thread is created, and citations were noted, showing where the data was retrieved from.
 
-![arti-citations.png](./arti-citations.png)
+![arti-citations.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-citations.png)
 
 Lastly, if we want interact with the bot more publicly, then we can use the `app_mention` event.
 
@@ -226,11 +226,11 @@ def handle_app_mention(event, say, client):
 
 Resulting in an interaction such as
 
-![arti-commands.png](./arti-commands.png)
+![arti-commands.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-commands.png)
 
 Of course, this same methodology can be used on any of the events exposed by Slack.
 
-![arti-react.png](./arti-react.png)
+![arti-react.png](/blog/ai-slackbot-in-real-time-using-s3-sqs-and-pulumi-on-aws-uploading-documents/arti-react.png)
 
 To learn more about extending this bot, see [Slack Bolt's documentation](https://docs.slack.dev/tools/bolt-python/concepts/).
 

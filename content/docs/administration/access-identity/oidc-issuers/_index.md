@@ -18,6 +18,8 @@ aliases:
 - /docs/administration/access-identity/oidc/
 - /docs/pulumi-cloud/access-management/oidc-client/
 - /docs/pulumi-cloud/access-management/oidc/
+- /docs/esc/administration/oidc-authentication/
+- /docs/esc/access-management/oidc-authentication/
 ---
 
 **OIDC Issuers let outside services securely obtain Pulumi Cloud access tokens via OIDC.** Instead of provisioning a long-lived Pulumi access token and storing it as a secret in your CI system, build runner, or Kubernetes cluster, you register that external service as a trusted OIDC Issuer in Pulumi Cloud. Workloads on the service then present their own short-lived OIDC id_tokens and receive short-lived Pulumi access tokens in exchange — no hardcoded credentials.
@@ -131,6 +133,14 @@ pulumi login --oidc-token <token> --oidc-org <org-name>
 ```
 
 The `--oidc-token` flag accepts either a raw token string or a file path prefixed with `file://`. You can also pass `--oidc-team`, `--oidc-user`, or `--oidc-expiration`. For more details, see the [`pulumi login` documentation](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange).
+
+{{% notes type="warning" %}}
+If you see an error like:
+
+`OIDC token exchange failed: Post "/api/oauth/token": unsupported protocol scheme ""`
+
+Include the backend URL explicitly: `pulumi login https://api.pulumi.com --oidc-token <token> --oidc-org <org-name>` (or the equivalent URL for a self-hosted backend).
+{{% /notes %}}
 
 ### Using the REST API directly
 

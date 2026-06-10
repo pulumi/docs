@@ -18,10 +18,6 @@ menu:
 
 Neo can run [preview](/docs/iac/cli/commands/pulumi_preview/) directly from Pulumi Cloud to validate proposed infrastructure changes before creating pull requests. This capability provides confidence that suggested modifications do not result in unexpected resource changes and comply with [policies](/docs/insights/policy/).
 
-## Public Preview Access
-
-Neo is in public preview and currently free to use. Users will receive ample warning before any pricing changes go into effect. Using Neo to optionally run `pulumi preview` consumes workflow minutes. Lean more about workflow minutes on our [pricing page](https://www.pulumi.com/pricing/#faq-pricing).
-
 ## Prerequisites
 
 ### Configuration and Credentials
@@ -41,7 +37,7 @@ To execute a `pulumi preview`, Neo needs the necessary configuration and credent
 
 Using [ESC](https://www.pulumi.com/docs/esc/) is the recommended approach for defining stack configuration and secrets. It is the most flexible and scalable option, and has native OIDC integration with all of the major cloud providers.
 
-Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/integrations/infrastructure/pulumi-iac/) environment with a stack.
+Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/guides/integrate-with-pulumi-iac/) environment with a stack.
 
 ## Using previews
 

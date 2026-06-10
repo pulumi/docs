@@ -151,7 +151,7 @@ Click **Save deployment configuration**.
 
 Once you have configured Pulumi Deployments, open the Actions menu and choose `Detect Drift`, then click `Deploy` to validate your stack, program and deployments are all running before you introduce drift.
 
-![Screenshot of the Pulumi Cloud console to run a drift detection](./pulumi-detect-drift-action.png)
+![Screenshot of the Pulumi Cloud console to run a drift detection](/tutorials/drift-detection-and-remediation/pulumi-detect-drift-action.png)
 
 After the drift detection is complete, you will see a new drift run on the **Drift** tab timeline. Since this is the initial check and no deviations have been introduced, you will not receive any notifications indicating that drift has been detected, nor will you see any resources with changes.
 
@@ -161,7 +161,7 @@ To see drift detection in action, you will now manually introduce drift by makin
 
 ### Add a tag to the EC2 instance using the AWS CLI
 
-To add a tag via the AWS CLI, you'll first need to retrieve the EC2 instance ID. Use the the following command:
+To add a tag via the AWS CLI, you'll first need to retrieve the EC2 instance ID. Use the following command:
 
 ```bash
 aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" --query "Reservations[*].Instances[*].InstanceId" --output text

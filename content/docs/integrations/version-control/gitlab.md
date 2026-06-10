@@ -46,7 +46,9 @@ If the selected group does not support Group Access Tokens, Pulumi Cloud prompts
 
 ### Individual user setup
 
-Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. This is used for features like Neo Agent repository creation on the user's behalf and does not create webhooks.
+Separately from the org-level integration, individual users can complete a 3-step OAuth flow under **Management** > **Version control** to grant Pulumi access to their GitLab account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level integration continues to handle merge request comments and deployments regardless of whether you grant individual access.
 
 {{% notes type="info" %}}
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
@@ -59,7 +61,7 @@ After creating an integration, you can configure merge request behavior. Toggle 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
-| Neo summaries for pull request comments | Enabled | Include AI-generated summaries of infrastructure changes in merge request comments (requires [AI Agents](/docs/ai/) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in merge request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your GitLab group and disconnects all stacks using that integration.
@@ -83,6 +85,12 @@ Pulumi posts commit status checks to GitLab on every deployment, for both push a
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
+
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+
+{{% notes type="warning" %}}
+GitLab integrations created before tag triggers were introduced did not subscribe to GitLab's **Tag push events** webhook, so they will not receive tag pushes until that event is enabled. You don't need to re-create the integration — instead, edit the existing group webhook in GitLab under **Settings** > **Webhooks**, open the Pulumi webhook (the `https://api.pulumi.com/workflow/gitlab` endpoint), and enable **Tag push events**. Re-creating the integration also works, since new integrations subscribe to tag push events automatically.
+{{% /notes %}}
 
 ### Review stacks
 
@@ -116,7 +124,7 @@ Organizations can register GitLab repositories as template sources. Pulumi scans
 
 ## CI integration
 
-The Pulumi GitLab integration posts results back to GitLab regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in GitLab CI/CD pipelines. See the [GitLab CI guide](/docs/iac/guides/continuous-delivery/gitlab-ci/) for setup instructions and example pipeline configurations.
+The Pulumi GitLab integration posts results back to GitLab regardless of which CI/CD system triggers the run. You can also run Pulumi commands directly in GitLab CI/CD pipelines. See the [GitLab CI guide](/docs/iac/operations/continuous-delivery/gitlab-ci/) for setup instructions and example pipeline configurations.
 
 ## OIDC authentication
 

@@ -1,0 +1,1 @@
+> **Note:** Pulumi publishes [official container images](/docs/iac/operations/docker-images/) with the CLI and language runtimes preinstalled, on a weekly release cadence matching the Pulumi CLI. The examples on this page use those images directly; you can also derive your own image from them to add tools like `helm` or `kubectl`.

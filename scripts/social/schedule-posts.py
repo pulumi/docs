@@ -16,10 +16,11 @@ Thin wrapper over pulumi-social-core. This module owns docs-specific config
 and Hugo blog-post parsing; everything else (state, API calls, PR comments,
 char-limit checks, retries) lives in social_core.
 
-Runs via schedule-social.yml after successful builds. Detects new or updated
-blog posts by diffing from the last-processed commit SHA (stored in S3 state),
-extracts social copy from frontmatter, and schedules posts to X, LinkedIn,
-and Bluesky.
+Runs via schedule-social.yml after successful builds. social_core selects
+posts whose frontmatter date is due (today, within max_age_days) and not yet
+posted (per S3 state), extracts social copy from frontmatter, and posts to X,
+LinkedIn, and Bluesky on the day — the blog is already live because this runs
+after Build and deploy, so the URL liveness check passes.
 
 See the upstream social_core module for scheduling, idempotency, and error
 handling details: https://github.com/pulumi/social

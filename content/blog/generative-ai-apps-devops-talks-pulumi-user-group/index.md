@@ -131,7 +131,7 @@ DevSecOps can foster collaboration between developers, security, and operations 
 
 ### Leveraging Machine Learning in DevOps
 
-![MLOps (Machine Learning Operations) meets DevOps Infinity Loop as part of the software development lifecycle](./ml-dev-ops-cycle.png "MLOps (Machine Learning Operations) meets DevOps Infinity Loop")
+![MLOps (Machine Learning Operations) meets DevOps Infinity Loop as part of the software development lifecycle](/blog/generative-ai-apps-devops-talks-pulumi-user-group/ml-dev-ops-cycle.png "MLOps (Machine Learning Operations) meets DevOps Infinity Loop")
 
 Applying Machine Learning in DevOps is a game-changer. Not only does it automate and enhance various processes but also brings an intelligent, predictive, and adaptive dimension to development workflows. By embracing these technologies, development teams can achieve higher efficiency, improve code quality, optimize performance, and seamlessly integrate with artificial intelligence, thereby shaping the future of software engineering.
 

@@ -31,15 +31,15 @@ Let's get started using the Azure Portal.
 
 In the Azure Portal, navigate to **Storage accounts**, and follow the defaults.
 
-![Storage accounts](./image5.png)
+![Storage accounts](/blog/top-5-things-for-azure-devs-static-websites/image5.png)
 
 **Step 2**: In the **Storage account** page, select **Data management > Static website**
 
-![Static website](./image2.png)
+![Static website](/blog/top-5-things-for-azure-devs-static-websites/image2.png)
 
 Select **enabled** for the **Static website**, and enter values for the **Index document** and **Error document** fields. Save the changes.
 
-![Enable static website](./image4.png)
+![Enable static website](/blog/top-5-things-for-azure-devs-static-websites/image4.png)
 
 **Step 3**: Upload files
 
@@ -67,13 +67,13 @@ index.html
 
 We'll use **Storage Explorer (preview)**, and select **BLOB CONTAINERS > $web**. In the **Upload blob** pane, add the `index.html` and `404.html` files, and select **Upload**.
 
-![Storage explorer](./image1.png)
+![Storage explorer](/blog/top-5-things-for-azure-devs-static-websites/image1.png)
 
 **Step 4**: Get the URL
 
 Select **Static website** in the overview pane, and the URL is the **Primary endpoint**.
 
-![Endpoint](./image3.png)
+![Endpoint](/blog/top-5-things-for-azure-devs-static-websites/image3.png)
 
 ### Build and deploy a static website with code
 
@@ -394,7 +394,7 @@ Follow the instructions to authorize Visual Studio Code to access your GitHub ac
 
 For convenience, we can use the Azure template for generating web applications. [Open this link](https://github.com/staticwebdev/vanilla-basic) and click the **Use this template** button to generate a basic React application.
 
-![Generate app from template](./react-basic.png)
+![Generate app from template](/blog/top-5-things-for-azure-devs-static-websites/react-basic.png)
 
 Clone the repository to your computer.
 
@@ -406,29 +406,29 @@ $ git clone https://github.com/spara/bookish-doodle.git
 
 Open your repository with Visual Studio Code and activate the [Azure extension](https://code.visualstudio.com/docs/azure/extensions). On the **APP SERVICE** item, select the **+** to create a web app.
 
-![Create web app](./static_web_app_vscode.png)
+![Create web app](/blog/top-5-things-for-azure-devs-static-websites/static_web_app_vscode.png)
 
 Follow the prompts:
 
 - Create a unique name.
 
-![Enter a name](./name.png)
+![Enter a name](/blog/top-5-things-for-azure-devs-static-websites/name.png)
 
 - Select a project structure.
 
-![Select project structure](./react.png)
+![Select project structure](/blog/top-5-things-for-azure-devs-static-websites/react.png)
 
 - Select an application directory.
 
-![Select project directory](./project_location.png)
+![Select project directory](/blog/top-5-things-for-azure-devs-static-websites/project_location.png)
 
 - Select a build directory.
 
-![Select build directory](./build_directory.png)
+![Select build directory](/blog/top-5-things-for-azure-devs-static-websites/build_directory.png)
 
 When VS Code completes configuring your application, you will be prompted to deploy.
 
-![Deploy](./deploy_swa.png)
+![Deploy](/blog/top-5-things-for-azure-devs-static-websites/deploy_swa.png)
 
 You can view the application in the browser.
 
@@ -453,13 +453,13 @@ $ git push
 
 Select the **Actions** tab of your repository to see the workflows. Select the **changed message**, and then select **Build and Deploy Job**.
 
-![Commit](./changed_message.png)
+![Commit](/blog/top-5-things-for-azure-devs-static-websites/changed_message.png)
 
-![Build and Deploy Job](./build_and_deploy_job.png)
+![Build and Deploy Job](/blog/top-5-things-for-azure-devs-static-websites/build_and_deploy_job.png)
 
 To see the details of the deployment, select **Build and Deploy**.
 
-![Results](./results.png)
+![Results](/blog/top-5-things-for-azure-devs-static-websites/results.png)
 
 So what happened here? First, we used the Azure Static Web Apps for Visual Studio Code to authorize access to GitHub. Next, we created a deployment using the extension, created a GitHub Actions workflow, and deployed the application. We edited the code and pushed it to the repository. The push triggered the GitHub Action, rebuilt, and deployed the application.
 

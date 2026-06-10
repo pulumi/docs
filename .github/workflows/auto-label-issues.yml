@@ -1,0 +1,201 @@
+name: Auto-label new issues
+
+# Replaces add-triage-label.yml. When an issue is opened or reopened, one
+# cheap Haiku call reads the issue title/body plus the repo's real area/* label
+# menu and the org's issue-type menu, and classifies the issue. Shell enforces
+# the result deterministically: a confident classification sets the issue Type
+# and any area/* labels (and removes needs-triage); otherwise needs-triage stays
+# as the human-safety net. One model call per issue, event-driven, so the
+# backlog is never re-scanned. Pattern cloned from claude-triage.yml (single
+# raw curl to the Anthropic API, jq parsing, defensive fence-stripping,
+# compute-a-delta-then-one-edit).
+#
+# Scope (per the docs team): triage sets the native GitHub issue Type
+# (Bug/Enhancement/Task/… — the replacement for the retired kind/* labels) and
+# area/* labels only. It deliberately does NOT touch priority (p*), impact/*,
+# resolution/*, or the PR-pipeline review:/domain:* labels — those are human
+# judgment calls. Label descriptions are the model's guide for picking an area.
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  classify:
+    # Only run in the canonical repo (not forks), and skip bot-authored issues
+    # — they don't need LLM triage. (add-triage-label.yml had no guards; the
+    # repository guard and bot skip are the additions.)
+    if: >-
+      github.repository == 'pulumi/docs'
+      && github.event.issue.user.login != 'pulumi-bot'
+      && github.event.issue.user.login != 'dependabot[bot]'
+
+    concurrency:
+      group: auto-label-issue-${{ github.event.issue.number }}
+      cancel-in-progress: true
+
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+
+    steps:
+      # continue-on-error keeps the workflow green on transient API or gh
+      # failures: a missed classification leaves the issue with needs-triage
+      # (applied by the issue template on creation), so a human still catches
+      # it — the issue is never left unclassified.
+      - name: Classify and label
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          ORG="${REPO%%/*}"
+
+          # 1. Gather issue state via the REST API (gh issue view's --json does
+          #    not expose the native issue type; the raw issue object does, as
+          #    .type.name). Body truncated to a 5KB byte cap to bound tokens.
+          ISSUE_JSON=$(gh api "repos/$REPO/issues/$ISSUE")
+          TITLE=$(echo "$ISSUE_JSON" | jq -r '.title // ""')
+          BODY=$(echo "$ISSUE_JSON" | jq -r '.body // ""' | head -c 5000)
+          # Current labels and type, for the idempotent deltas below.
+          CURRENT_LABELS=$(echo "$ISSUE_JSON" | jq -r '.labels[].name')
+          CURRENT_TYPE=$(echo "$ISSUE_JSON" | jq -r '.type.name // ""')
+
+          # 2a. Build the allowed-label menu, live — area/* labels only. Label
+          #     descriptions are the model's guide for which area applies.
+          LABELS_JSON=$(gh label list --repo "$REPO" --limit 200 --json name,description \
+            | jq -c '[.[] | select(.name | startswith("area/"))]')
+          LABEL_MENU=$(echo "$LABELS_JSON" | jq -r '.[] | "- \(.name): \(.description // "")"')
+          ALLOWED_LABELS=$(echo "$LABELS_JSON" | jq -r '.[].name')
+
+          # 2b. Build the issue-type menu. Prefer the org's live issue types
+          #     (so names/descriptions stay current); the GET /orgs/{org}/
+          #     issue-types endpoint is org-scoped, so if the repo-scoped
+          #     GITHUB_TOKEN can't read it, fall back to the known set. Keep the
+          #     fallback in sync if the org's issue types change.
+          TYPES_JSON=$(gh api "orgs/$ORG/issue-types" 2>/dev/null \
+            | jq -c 'if type=="array" then . else (.issue_types // []) end | [.[] | {name, description}]' 2>/dev/null || echo "")
+          if [[ -z "$TYPES_JSON" || "$TYPES_JSON" == "[]" || "$TYPES_JSON" == "null" ]]; then
+            TYPES_JSON='[
+              {"name":"Bug","description":"Something is incorrect, broken, or not working in the docs or on the site."},
+              {"name":"Enhancement","description":"An improvement or addition to existing documentation, content, or the site."},
+              {"name":"Task","description":"A discrete unit of work, request, or chore that is not a bug or a feature."},
+              {"name":"Epic","description":"A large effort that tracks or groups several related issues."},
+              {"name":"Internal","description":"Internal engineering, tooling, CI, or maintenance work not tied to user-facing docs."}
+            ]'
+          fi
+          TYPE_MENU=$(echo "$TYPES_JSON" | jq -r '.[] | "- \(.name): \(.description // "")"')
+          ALLOWED_TYPES=$(echo "$TYPES_JSON" | jq -r '.[].name')
+
+          # 3. One Anthropic call (smallest capable model; small max_tokens).
+          #    The request is built entirely with jq -n so the menus, title, and
+          #    body are JSON-escaped safely (same pattern as claude-triage.yml).
+          #    The model only suggests; it picks from the menus and returns
+          #    strict JSON.
+          INSTRUCTIONS='You are triaging a new GitHub issue for the pulumi/docs repository. Classify it by choosing (1) the single best issue TYPE from the type menu and (2) zero or more area labels from the label menu. Pick ONLY from the menus below; use the descriptions as your guide. If you cannot confidently classify the issue, return "confident": false. Return ONLY a JSON object, no prose and no markdown fences, in exactly this shape: {"type": "Bug", "labels": ["area/docs-content"], "confident": true}. Use null for "type" if no type clearly applies.'
+          REQUEST=$(jq -n \
+            --arg instructions "$INSTRUCTIONS" \
+            --arg types "$TYPE_MENU" \
+            --arg labels "$LABEL_MENU" \
+            --arg title "$TITLE" \
+            --arg body "$BODY" \
+            '{
+              model: "claude-haiku-4-5-20251001",
+              max_tokens: 200,
+              messages: [{
+                role: "user",
+                content: ($instructions
+                  + "\n\n=== ISSUE TYPES ===\n" + $types
+                  + "\n\n=== AREA LABELS ===\n" + $labels
+                  + "\n\n=== ISSUE TITLE ===\n" + $title
+                  + "\n\n=== ISSUE BODY (truncated to 5000 bytes) ===\n" + $body)
+              }]
+            }')
+          RESPONSE=$(curl -sS https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d "$REQUEST" || echo '{"error":"curl_failed"}')
+
+          # 4. Parse defensively. Strip markdown fences, validate JSON. On any
+          #    failure, the suggestions stay empty and CONFIDENT stays false →
+          #    fallback.
+          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          SUGGESTED_LABELS=""
+          SUGGESTED_TYPE=""
+          CONFIDENT="false"
+          if [[ -n "$TEXT" ]]; then
+            PARSED=$(echo "$TEXT" \
+              | sed -E 's/^[[:space:]]*```(json)?[[:space:]]*//' \
+              | sed -E 's/[[:space:]]*```[[:space:]]*$//' \
+              | tr -d '\r')
+            if echo "$PARSED" | jq -e . >/dev/null 2>&1; then
+              SUGGESTED_LABELS=$(echo "$PARSED" | jq -r '.labels[]?')
+              SUGGESTED_TYPE=$(echo "$PARSED" | jq -r '.type // empty')
+              CONFIDENT=$(echo "$PARSED" | jq -r '.confident // false')
+            fi
+          fi
+
+          # 5. Enforce in shell. Intersect suggestions with the allowed sets —
+          #    discards hallucinated and off-scope values. VALID_LABELS is
+          #    everything the model picked that survives the intersection;
+          #    ADD_LIST is the subset not already on the issue (so re-runs don't
+          #    thrash). VALID_TYPE is the model's type only if it's a real type.
+          VALID_LABELS=()
+          ADD_LIST=()
+          if [[ -n "$SUGGESTED_LABELS" ]]; then
+            while IFS= read -r s; do
+              [[ -z "$s" ]] && continue
+              if grep -qxF "$s" <<< "$ALLOWED_LABELS"; then
+                VALID_LABELS+=("$s")
+                grep -qxF "$s" <<< "$CURRENT_LABELS" || ADD_LIST+=("$s")
+              fi
+            done <<< "$SUGGESTED_LABELS"
+          fi
+          VALID_TYPE=""
+          if [[ -n "$SUGGESTED_TYPE" ]] && grep -qxF "$SUGGESTED_TYPE" <<< "$ALLOWED_TYPES"; then
+            VALID_TYPE="$SUGGESTED_TYPE"
+          fi
+
+          # Is needs-triage currently on the issue?
+          HAS_TRIAGE=false
+          grep -qxF "needs-triage" <<< "$CURRENT_LABELS" && HAS_TRIAGE=true
+
+          # A classification "succeeded" when the model is confident AND produced
+          # at least one valid label or a valid type. Keying on validity (not on
+          # the deltas) means an already-classified issue is a no-op rather than
+          # regressing to the needs-triage fallback.
+          CLASSIFIED=false
+          if [[ ${#VALID_LABELS[@]} -gt 0 || -n "$VALID_TYPE" ]]; then CLASSIFIED=true; fi
+
+          ARGS=()
+          FALLBACK=no
+          SET_TYPE=""
+          if [[ "$CONFIDENT" == "true" && "$CLASSIFIED" == "true" ]]; then
+            # Add any new area labels and drop needs-triage.
+            (( ${#ADD_LIST[@]} > 0 )) && ARGS+=(--add-label "$(IFS=,; echo "${ADD_LIST[*]}")")
+            [[ "$HAS_TRIAGE" == "true" ]] && ARGS+=(--remove-label "needs-triage")
+            # Set the type only when it differs from the current one.
+            [[ -n "$VALID_TYPE" && "$VALID_TYPE" != "$CURRENT_TYPE" ]] && SET_TYPE="$VALID_TYPE"
+          else
+            # Fallback: ensure needs-triage is present, change nothing else.
+            FALLBACK=yes
+            [[ "$HAS_TRIAGE" == "false" ]] && ARGS+=(--add-label "needs-triage")
+          fi
+
+          # 6. Apply the deltas. Each call only fires when there's a change
+          #    (idempotent). Labels via one gh issue edit; type via the REST API
+          #    (gh issue edit has no type flag).
+          if (( ${#ARGS[@]} > 0 )); then
+            gh issue edit "$ISSUE" --repo "$REPO" "${ARGS[@]}" || true
+          fi
+          if [[ -n "$SET_TYPE" ]]; then
+            gh api --method PATCH "repos/$REPO/issues/$ISSUE" -f "type=$SET_TYPE" >/dev/null || true
+          fi
+
+          # 7. Summary line for the Actions log.
+          ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
+          echo "auto-label: issue=$ISSUE confident=$CONFIDENT type=${SET_TYPE:-${CURRENT_TYPE:-none}} added=${ADDED_CSV:-none} fallback=$FALLBACK"

@@ -1,7 +1,7 @@
 ---
 title: Amazon DynamoDB vs Google Cloud Bigtable
 meta_desc: |
-     Compare Bigtable vs DynamoDB to learn the many similarities and differences between these two noSQL databases. Learn which is best with Pulumi.
+     Compare Amazon DynamoDB vs Google Cloud Bigtable, plus other DynamoDB alternatives like Cassandra, MongoDB, and Cosmos DB, to pick the right NoSQL database.
 
 meta_image: /images/what-is/amazon-dynamodb-vs-google-cloud-bigtable-meta.png
 type: what-is
@@ -66,6 +66,18 @@ DynamoDB offers two different pricing models: on-demand capacity mode, and provi
 Google Cloud Bigtable and AWS DynamoDB both have strengths and weaknesses that will benefit some teams but hinder others. If your infrastructure is already on AWS, DynamoDB is the stronger offering.
 
 If you have truly large amounts of data that you will require very fast access to, are most comfortable with something that looks like SQL, or the rest of your infrastructure is hosted on Google Cloud, you want Bigtable.
+
+## Other NoSQL Alternatives to DynamoDB
+
+Bigtable is one of several alternatives to DynamoDB. If you're evaluating options beyond AWS, the main NoSQL databases worth considering are:
+
+- **Google Cloud Bigtable**: the wide-column store on Google Cloud covered in detail above — the closest GCP equivalent to DynamoDB for large-scale, low-latency workloads.
+- **Apache Cassandra and ScyllaDB**: open-source wide-column databases you can self-host or run as a managed service (DataStax Astra, ScyllaDB Cloud). A good fit when you want to avoid cloud lock-in.
+- **MongoDB and Amazon DocumentDB**: document databases for flexible, JSON-like data models. MongoDB Atlas runs on any cloud; DocumentDB is AWS's MongoDB-compatible managed option.
+- **Azure Cosmos DB**: a multi-model, globally distributed managed database, and the natural choice on Microsoft Azure.
+- **Redis**: an in-memory key-value store for caching and low-latency lookups, often used alongside DynamoDB rather than as a full replacement.
+
+Whichever you choose, Pulumi can provision and manage it as [infrastructure as code](/what-is/what-is-infrastructure-as-code/) in the language you already use.
 
 ## Conclusion
 

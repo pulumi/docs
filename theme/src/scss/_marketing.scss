@@ -10,81 +10,16 @@
 
 @import "mixins";
 
+@import "utilities-shared";
+
 @layer base {
-    // Restore global heading defaults after Tailwind preflight resets font-size/weight to inherit.
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-        letter-spacing: -0.05em;
-        line-height: 1.1em;
-    }
-
-    // Tailwind v2 preflight set default border-color to gray-200. v4 defaults to
-    // currentColor, which makes `.border` dividers render too dark. Restore the old default.
-    *,
-    ::before,
-    ::after {
-        border-color: var(--color-gray-200);
-    }
-
-    // Custom elements default to display: inline in browsers. Tailwind v4 preflight
-    // does not reset them to block, so we do it here for all Pulumi web components.
-    pulumi-chooser,
-    pulumi-choosable,
-    pulumi-tabs,
-    pulumi-tab-panel,
-    pulumi-install,
-    pulumi-banner,
-    pulumi-examples,
-    pulumi-convert,
-    pulumi-tooltip,
-    pulumi-audio,
-    pulumi-slot-machine,
-    pulumi-tertiary-nav,
-    pulumi-greenhouse-jobs-list,
-    pulumi-resource-links,
-    pulumi-filter-select,
-    pulumi-user-toggle,
-    pulumi-hubspot-form {
-        display: block;
-    }
+    @import "base-shared";
 }
 
 // v4 layer placement: custom styles must be in @layer so Tailwind utilities can override them.
 @layer components {
     body {
         @apply overflow-x-hidden;
-
-        h1 {
-            @apply text-5xl;
-        }
-        h2 {
-            @apply text-4xl;
-        }
-        h3 {
-            @apply text-3xl;
-        }
-        h4 {
-            @apply text-2xl;
-        }
-        h5 {
-            @apply text-xl;
-        }
-        h6 {
-            @apply text-base;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            line-height: 1.1em !important;
-        }
-
-        p {
-            @apply text-service-black;
-        }
 
         .large-container {
             width: 100%;
@@ -116,31 +51,6 @@
 
             &:focus {
                 @apply bg-violet-400;
-            }
-        }
-
-        @include screen-md {
-            h1 {
-                @apply text-7xl;
-
-                &.small-title {
-                    @apply text-5xl;
-                }
-            }
-            h2 {
-                @apply text-5xl;
-            }
-            h3 {
-                @apply text-4xl;
-            }
-            h4 {
-                @apply text-3xl;
-            }
-            h5 {
-                @apply text-2xl;
-            }
-            h6 {
-                @apply text-lg;
             }
         }
     }

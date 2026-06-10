@@ -1164,7 +1164,7 @@ $ pulumi stack import --file stack.json
 Before deleting a stack, if the stack still has resources associated with it, they must first be deleted via `pulumi destroy`. This command uses the latest configuration values, rather than the ones that were last used when the program was deployed.
 
 {{% notes type="info" %}}
-There are scenarios when `pulumi destroy` may fail to delete resources as expected due to dependencies, permissions, or the resources being in a locked or protected state. For detailed steps on how to troubleshoot and resolve these issues, refer to our [troubleshooting guide](/docs/support/troubleshooting/).
+There are scenarios when `pulumi destroy` may fail to delete resources as expected due to dependencies, permissions, or the resources being in a locked or protected state. For detailed steps on how to troubleshoot and resolve these issues, refer to our [troubleshooting guide](/docs/iac/operations/troubleshooting/).
 {{% /notes %}}
 
 ## Delete a stack
@@ -1172,3 +1172,7 @@ There are scenarios when `pulumi destroy` may fail to delete resources as expect
 To delete a stack with no resources, run `pulumi stack rm`. Removing the stack will remove all stack history from pulumi.com and will delete the stack configuration file `Pulumi.<stack-name>.yaml`.
 
 To force the deletion of a stack that still contains resources---potentially orphaning them---use `pulumi stack rm --force`.
+
+{{% notes type="info" %}}
+If a stack is deleted by mistake, organization administrators can restore it from the Pulumi Cloud console for a limited time. See [Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/).
+{{% /notes %}}

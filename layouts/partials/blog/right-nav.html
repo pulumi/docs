@@ -2,10 +2,10 @@
     <p class="text-gray-500 text-xs">Share this post</p>
     <ul class="p-0 list-none">
         <li>
-            <a data-track="share-x" class="mr-2" href="https://x.com/intent/post?text=={{ $.Page.Title }}&tw_p=tweetbutton&url={{ $.Page.Permalink }}" target="_blank">
+            <a data-track="share-x" class="mr-2" href="https://x.com/intent/post?text={{ $.Page.Title }}&tw_p=tweetbutton&url={{ $.Page.Permalink }}" target="_blank">
                 {{ partial "icon.html" (dict "name" "brand/x" "class" "text-xl") }}
             </a>
-            <a data-track="share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $.Page.Permalink }}" target="_blank">
+            <a data-track="share-linkedin" href="https://www.linkedin.com/feed/?shareActive=true&text={{ (printf "%s %s" $.Page.Title $.Page.Permalink) | urlquery }}" target="_blank">
                 {{ partial "icon.html" (dict "name" "brand/linkedin" "class" "text-xl") }}
             </a>
         </li>

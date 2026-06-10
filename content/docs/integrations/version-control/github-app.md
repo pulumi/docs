@@ -52,6 +52,31 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
+### Individual user setup
+
+Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. This option is not available for GitHub Enterprise Server.
+
+{{% notes type="info" %}}
+To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
+{{% /notes %}}
+
+## Integration settings
+
+After installing the app, you can configure pull request behavior. Toggle these settings per integration under **Management** > **Version control**:
+
+| Setting | Default | Description |
+|---|---|---|
+| Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
+| Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
+
+Changes save automatically. Neo Code Reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo Code Reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+
+To remove an integration, see [Uninstallation](#uninstallation).
+
 ## Capabilities
 
 ### Pull request comments
@@ -61,7 +86,7 @@ The Pulumi GitHub app automatically adds comments to pull requests with the resu
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
 {{% notes type="info" %}}
-When pull request comments are disabled in your Pulumi Cloud organization settings, the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
+When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
 {{% /notes %}}
 
 ### Checks
@@ -74,6 +99,8 @@ All Pulumi stack updates are reported to the GitHub Checks API. You can see the 
 
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
 
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+
 ### Review stacks
 
 [Review stacks](/docs/deployments/deployments/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
@@ -82,7 +109,7 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 The GitHub app only requires that your code is hosted on GitHub and that you use pull requests to manage changes. It does not require GitHub Actions — any CI/CD system works, including GitHub Actions, CircleCI, Jenkins, Pulumi Deployments, or any other system.
 
-Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub. See [Continuous delivery](/docs/iac/guides/continuous-delivery/) for integration instructions, or the [GitHub Actions guide](/docs/iac/guides/continuous-delivery/github-actions/) if you run Pulumi in GitHub Actions.
+Once installed in your organization, any `pulumi preview` or `pulumi up` run in CI will have its results reported back to GitHub. See [Continuous delivery](/docs/iac/operations/continuous-delivery/) for integration instructions, or the [GitHub Actions guide](/docs/iac/operations/continuous-delivery/github-actions/) if you run Pulumi in GitHub Actions.
 
 ## Uninstallation
 

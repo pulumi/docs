@@ -721,15 +721,15 @@ Grab a coffee, take a walk, watch an episode of your favorite sitcom, whatever y
 
 Soon enough, you should be able to verify, by navigating to Crawlers in the AWS Glue console, that the crawler indeed ran, creating a new table in the Glue catalog database:
 
-![Screenshot of the AWS Glue console showing the crawler's successful run](./aws-console-glue-crawlers.png)
+![Screenshot of the AWS Glue console showing the crawler's successful run](/blog/redshift-etl-with-pulumi-and-aws-glue/aws-console-glue-crawlers.png)
 
 As well, you should see (at AWS Glue Studio &gt; Jobs) that the job ran successfully as well:
 
-![Screenshot of the AWS Glue Studio showing the results of the job run](./aws-console-glue-job.png)
+![Screenshot of the AWS Glue Studio showing the results of the job run](/blog/redshift-etl-with-pulumi-and-aws-glue/aws-console-glue-job.png)
 
 A successful job run, of course, means that our data must've made it into Redshift, too --- and you can verify by running a query that in the Redshift query editor:
 
-![Screenshot of the Redshift query editor showing the new data](./aws-console-redshift-query.png)
+![Screenshot of the Redshift query editor showing the new data](/blog/redshift-etl-with-pulumi-and-aws-glue/aws-console-redshift-query.png)
 
 And with that, your work is done. You're now running a fully-automated, Pulumi-managed ETL pipeline with Amazon Redshift and AWS Glue.
 
@@ -748,7 +748,7 @@ $ aws s3 cp events-2.txt s3://$(pulumi stack output dataBucketName)
 
 and sit back while the pipeline ingests this new data, blissfully ignoring the file that's already been processed (thanks to the Glue job bookmark) and dropping the new records right into Redshift as you'd expect:
 
-![Screenshot of the Redshift query editor showing the new records](./aws-console-redshift-query-2.png)
+![Screenshot of the Redshift query editor showing the new records](/blog/redshift-etl-with-pulumi-and-aws-glue/aws-console-redshift-query-2.png)
 
 ## Clean Up AWS Resources with Pulumi
 

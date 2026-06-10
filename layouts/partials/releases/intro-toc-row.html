@@ -15,17 +15,19 @@
     {{/* Intro / quote card */}}
     {{ with $intro }}
         {{ $hasLink := .link }}
+        {{ $hasLinkLabel := .link_label }}
         {{ $introClasses := "card bg-white p-8 lg:p-10 flex flex-col gap-6 no-underline hover:no-underline h-full" }}
         {{ if $hasLink }}{{ $introClasses = printf "%s transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary group" $introClasses }}{{ end }}
         {{ if $hasLink }}<a href="{{ .link }}" class="{{ $introClasses }}">{{ else }}<div class="{{ $introClasses }}">{{ end }}
             {{ with .quote }}
-            <div class="text-2xl md:text-3xl font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ . | markdownify }}</div>
+            <div class="heading-2 m-0! font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ . | markdownify }}</div>
             {{ end }}
             {{ with .attribution }}
-            <div class="text-base text-gray-900 flex items-end justify-between gap-4 mt-auto leading-6">
+            <div class="body-base text-gray-900 flex flex-col md:flex-row md:items-end justify-between gap-4 mt-auto leading-6">
                 <div class="flex-1">{{ . | markdownify }}</div>
                 {{ if $hasLink }}
-                <span class="inline-flex items-center text-violet-primary shrink-0">
+                <span class="inline-flex gap-1 items-center text-violet-primary shrink-0 font-semibold">
+                    {{ if $hasLinkLabel }}{{ $hasLinkLabel }}{{ end }}
                     {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-5") }}
                 </span>
                 {{ end }}
@@ -37,12 +39,12 @@
     {{/* TOC card */}}
     {{ with $sections }}
     <aside class="card bg-white p-8 lg:p-10 self-start h-full">
-        <p class="font-mono text-xs md:text-sm tracking-wider uppercase text-service-black m-0 mb-6">{{ $tocHeading }}</p>
+        <p class="font-overline text-service-black m-0 mb-6">{{ $tocHeading }}</p>
         <ul class="list-none p-0 m-0 flex flex-col gap-4">
             {{ range $i, $section := . }}
             <li class="m-0 flex items-baseline gap-4">
                 <span class="font-mono text-sm tracking-wider text-violet-primary shrink-0">.{{ printf "%02d" (add $i 1) }}</span>
-                <a href="#{{ $section.anchor }}" class="text-service-black hover:text-violet-primary no-underline hover:no-underline text-xl md:text-2xl font-display font-semibold tracking-tighter leading-[1.1]">{{ $section.label | default $section.heading }}</a>
+                <a href="#{{ $section.anchor }}" class="text-service-black hover:text-violet-primary no-underline hover:no-underline heading-3 m-0! font-display font-semibold tracking-tighter leading-[1.1]">{{ $section.label | default $section.heading }}</a>
             </li>
             {{ end }}
         </ul>

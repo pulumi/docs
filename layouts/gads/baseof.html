@@ -16,7 +16,7 @@
                 });
             });
         </script>
-        {{ partial "gads-header.html" . }}
+        {{ partial "gads/header.html" . }}
         {{ block "hero" . }}
         {{ end }}
         <main>
@@ -26,7 +26,7 @@
         </main>
 
         {{ block "footer" . }}
-            {{ partial "gads-footer.html" . }}
+            {{ partial "gads/footer.html" . }}
         {{ end }}
 
         <div id="segment-consent-manager"></div>

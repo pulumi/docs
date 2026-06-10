@@ -22,6 +22,8 @@ The `parent` resource option specifies a parent for a resource, which has the fo
 
 By default, resources are parented to the implicitly created `pulumi:pulumi:Stack` resource which is at the root of all Pulumi stacks. The most common use of explicitly setting the `parent` property is when authoring a [Component Resource](/docs/iac/concepts/components/). Resources that are part of a component should be explicitly parented to the component itself. This ensures that all resources within a component share desirable lifecycle behavior. You can also create multiple levels of nesting within a component to improve the visual display in the CLI.
 
+{{< resource-option-scope "parent" >}}
+
 ## Setting a resource's parent
 
 The following example shows a simple parent/child relationship between two resources:

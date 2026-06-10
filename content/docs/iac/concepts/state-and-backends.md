@@ -44,7 +44,7 @@ Pulumi supports two classes of state backend:
 - **Pulumi Cloud**: a managed backend using the online or self-hosted Pulumi Cloud application. It is the default backend and requires no additional configuration after [installing the CLI](/docs/install/).
 - **DIY backend**: a "Do It Yourself" backend that stores state in an object store you manage—AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server such as Minio or Ceph, a PostgreSQL database, or your local filesystem.
 
-Pulumi's SDK works with all backends, although some details differ between them. For a full comparison of the two options—including the operational concerns each one entails—see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/). For DIY backend setup instructions, see [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
+Pulumi's SDK works with all backends, although some details differ between them. For a full comparison of the two options—including the operational concerns each one entails—see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/). For DIY backend setup instructions, see [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
 ## Logging into and out of State Backends
 
@@ -82,7 +82,7 @@ backend:
 ....
 ```
 
-For details on the various backend URL formats and options, see the Pulumi Cloud backend section below and [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
+For details on the various backend URL formats and options, see the Pulumi Cloud backend section below and [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
 If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
 
@@ -129,7 +129,7 @@ To learn how the Pulumi Cloud backend is designed—including why it never needs
 
 ## Using a DIY backend
 
-You can manage state yourself with a DIY backend that stores state in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. For setup instructions and per-backend configuration details, see [Using a DIY backend](/docs/iac/guides/basics/using-a-diy-backend/).
+You can manage state yourself with a DIY backend that stores state in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. For setup instructions and per-backend configuration details, see [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
 ## Migrating Between State Backends
 
@@ -214,7 +214,7 @@ $ pulumi preview --refresh
 
 For teams that want to detect and remediate out-of-band changes on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/deployments/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
 
-To learn more, see [Drift detection](/docs/deployments/deployments/drift/).
+To learn more, see [Drift detection](/docs/deployments/deployments/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
 
 ## Advanced State
 

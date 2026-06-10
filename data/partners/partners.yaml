@@ -72,7 +72,7 @@
 
 - name: Snowflake
   link: https://www.snowflake.com/
-  logo: /logos/pkg/snowflake.svg
+  logo: /logos/tech/snowflake.svg
 
 - name: Snyk
   link: https://partners.snyk.io/English/solutions/solution/2908/pulumi

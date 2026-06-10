@@ -32,7 +32,7 @@ Kubernetes resources in real-time.
 Using `kubespy trace`, for example, we can observe at a high level what
 happens when `Deployment` rolls out a new version of an application:
 
-![trace-deployment-rollout](./deployment-rollout.gif)
+![trace-deployment-rollout](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/deployment-rollout.gif)
 
 But this post also comes with a twist, because in addition to being
 complex, `Deployment` is also the most *dynamic* resource in Kubernetes
@@ -81,7 +81,7 @@ from `Deployment`'s status that the application is on **revision 2**,
 which means the application has been deployed twice --- one initial
 deployment, and one update.
 
-![1-deployment-found](./deployment-found.gif)
+![1-deployment-found](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/deployment-found.gif)
 
 **Second: the user submits a change to the `Deployment`, which triggers
 a rollout.** The `Deployment` creates a new revision, **revision 3.** It
@@ -99,7 +99,7 @@ marked available, the `Deployment` controller begins killing off
 replicas from **revision 2.** Eventually it succeeds and the rollout is
 complete.
 
-![3-rollout-succeeds](./3-rollout-succeeds.gif)
+![3-rollout-succeeds](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/3-rollout-succeeds.gif)
 
 ## What happens if we kill a Pod?
 
@@ -107,7 +107,7 @@ Now that we understand the semantics of `Deployment`'s rollout, we can
 see what happens when we use `kubectl delete pod <name>` on one of the
 `Pod`s that is controlled by our `Deployment`.
 
-![pod-killed](./pod-killed.gif)
+![pod-killed](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/pod-killed.gif)
 
 As expected, we can see that the `ReplicaSet` controller notices the
 `Pod` goes missing and spins up a new one. Note that it does *not*
@@ -122,7 +122,7 @@ has been marked available.
 Try using `kubectl edit` to delete the labels on one of your `Pods`.
 `kubespy trace` will show you something the following:
 
-![pod-relabeled](./pod-relabeled.gif)
+![pod-relabeled](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective/pod-relabeled.gif)
 
 Unlike the "killing a `Pod`" example above, the old `Pod` seems to
 *disappear*, replaced by a new `Pod` that, when booted up, causes the

@@ -55,6 +55,16 @@ Select **Save**. Pulumi registers service hooks in your ADO project for `git.pus
 To disconnect, remove all ADO integrations first, then select **Disconnect** from the identity dropdown.
 {{% /notes %}}
 
+### Individual user setup
+
+Separately from the org-level integration, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their Azure DevOps account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
+
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create service hooks. The org-level integration continues to handle pull request comments and deployments regardless of whether you grant individual access.
+
+{{% notes type="info" %}}
+To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
+{{% /notes %}}
+
 ## Integration settings
 
 After creating an integration, you can configure PR behavior. Toggle these settings per integration:
@@ -62,8 +72,8 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 | Setting | Default | Description |
 |---|---|---|
 | PR Comments | Enabled | Post deployment status and resource changes as comments on ADO pull requests |
-| Neo Summaries | Enabled | Include AI-generated summaries of infrastructure changes in PR comments |
-| Detailed Diff | Disabled | Show property-level before/after diffs for changed resources in PR comments |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Detailed Diff | Enabled | Show property-level before/after diffs for changed resources in PR comments |
 
 To update, toggle the setting directly. Changes save automatically.
 
@@ -85,6 +95,7 @@ ADO-backed stacks support the same deployment settings as GitHub. Configure thes
 | Preview Pull Requests | Run `pulumi preview` on pull request creation/update and post results as a PR comment |
 | PR Templates | Create a PR with the preview results when running a preview |
 | Path Filters | Only trigger deployments when files matching specified glob patterns change (e.g., `infra/**`) |
+| Tag Triggers | Deploy when a git tag matching the configured [tag filters](/docs/deployments/deployments/using/settings/#tag-filtering) is pushed (e.g., `v*`) |
 
 ### Selecting a repository and branch
 
@@ -105,7 +116,7 @@ Neo, Pulumi's AI assistant, works with Azure DevOps pull requests. When enabled 
 
 These appear as comments on your ADO pull requests alongside standard deployment status updates.
 
-To disable Neo summaries, toggle **Neo Summaries** off in your [integration settings](#integration-settings).
+To disable these, toggle **Neo Code Reviews** off in your [integration settings](#integration-settings).
 
 ## Troubleshooting
 

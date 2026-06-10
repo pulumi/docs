@@ -26,11 +26,11 @@ These rules apply even on PRs that triggered heightened scrutiny or AI-suspect. 
 
 | Action | External | Internal | Bot |
 |--------|----------|----------|-----|
-| **Approve** | `Thanks! LGTM. 🎉` (+ one welcome sentence only if it's a first-time contributor) | `LGTM.` (+ at most one sentence if there's a genuine concern or non-obvious suggestion) | **Dependabot**: `Security patch approved.` (security) / `High-risk update reviewed.` (high) / `Approved for quarterly batch.` (med/low)<br>**Other**: `Approved.` |
+| **Approve** | `Thanks! LGTM. 🎉` (+ one welcome sentence only if it's a first-time contributor) | `LGTM.` (+ at most one sentence if there's a genuine concern or non-obvious suggestion) | **Dependabot**: `Security patch approved.` (security) / `Approved.` (otherwise)<br>**Other**: `Approved.` |
 | **Approve and merge** | Same as Approve. Do not add "Auto-merge enabled." | Same as Approve. Do not add "Auto-merge enabled." | **Dependabot**: same as Approve. Do not add merge narration.<br>**Other**: `Approved.` |
 | **Make changes and approve** | `Applied minor style fixes. Thanks! 🙏` | `Applied style fixes. LGTM.` | N/A (excluded for bots) |
 | **Request changes** | Brief thanks, then line-anchored issues with suggestion blocks, then `Mention @claude if you need help.` | Line-anchored issues with suggestion blocks. No filler. | Technical issue description, line numbers, what needs changing. No suggestion blocks. Close with: `This automated PR may need closing and regeneration after fixing source configuration.` |
-| **Close PR** | `Thanks for contributing!` then one-sentence reason, then (if applicable) one-sentence alternative. | One-sentence reason. | **Dependabot quarterly**: `Closing to batch with other quarterly updates. See [Dependency Management](https://github.com/pulumi/docs/blob/master/BUILD-AND-DEPLOY.md#dependency-management).`<br>**Dependabot other / other bots**: `Closing. [one-sentence technical reason]` |
+| **Close PR** | `Thanks for contributing!` then one-sentence reason, then (if applicable) one-sentence alternative. | One-sentence reason. | **Dependabot / other bots**: `Closing. [one-sentence technical reason]` |
 
 ## Good and bad examples
 

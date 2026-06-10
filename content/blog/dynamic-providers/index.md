@@ -23,7 +23,7 @@ A resource provider is made up of two different pieces:
 
 1. An SDK which provides bindings for each type of resource the provider can manage.
 
-![How Pulumi works](./engine-block-diagram.png)
+![How Pulumi works](/blog/dynamic-providers/engine-block-diagram.png)
 
 A resource provider is an extension of the API exposed by the respective cloud providers. As such, it can be the limiting factor. Thankfully, there is a solution to this. Since the Pulumi engine works with life-cycle callbacks handing control to the provider at appropriate times, it is easy to write a provider that implements custom logic in those callbacks.
 

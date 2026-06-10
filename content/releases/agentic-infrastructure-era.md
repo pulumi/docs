@@ -26,6 +26,7 @@ intro:
   attribution: |
     — Joe Duffy, co-founder and CEO, on the increasing pace at which teams are adopting AI-driven infrastructure
   link: /blog/the-agentic-infrastructure-era/
+  link_label: Read the blog post
 
 toc_heading: What's New in This Release
 
@@ -43,6 +44,7 @@ sections:
         description: |
           A new Node.js package enables `npx pulumi <anything>`-style commands so that agents can discover
           and run Pulumi commands more easily.
+        link: https://www.npmjs.com/package/pulumi
 
       - variant: image-top
         image: /images/releases/may-2026/release-pulumi-do.svg
@@ -52,6 +54,7 @@ sections:
         description: |
           The new `pulumi do` command enables direct operations like create, read, update, delete, and list
           across all Pulumi-supported clouds and services.
+        link: /blog/pulumi-do-direct-resource-operations/
 
       - variant: text
         icon: user-circle-plus
@@ -59,6 +62,7 @@ sections:
         description: |
           Ephemeral Pulumi Cloud accounts allow agents like Claude Code and Codex to spin up Pulumi-managed
           infrastructure without requiring a human in the loop.
+        link: /docs/administration/organizations-teams/agent-accounts/
 
       - variant: image-left
         image: /images/releases/may-2026/release-cloud-cli.svg
@@ -178,6 +182,7 @@ sections:
           infrastructure tasks — like the infrastructure equivalent of SWE-bench.
 
 blog_section:
+  anchor: from-the-blog
   title: From the blog
   posts:
     - /blog/the-agentic-infrastructure-era
@@ -187,4 +192,5 @@ blog_section:
     - /blog/neo-integrations
     - /blog/neo-github-slack
     - /blog/neo-automations
+    - /blog/pulumi-do-direct-resource-operations
 ---

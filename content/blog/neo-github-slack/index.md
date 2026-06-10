@@ -73,6 +73,6 @@ Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC perm
 
 Both integrations are available now for Neo-enabled organizations. The [GitHub integration docs](/docs/ai/integrations/github/) and [Slack integration docs](/docs/ai/integrations/slack/) cover the one-time setup. From there, every engineer with a linked Pulumi Cloud identity can mention Neo from the threads they already work in.
 
-Today's launch is part of a bigger story. Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP servers and cloud CLIs that ship with this release.
+Today's launch is part of a [bigger story](/releases/agentic-infrastructure-era/). Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP servers and cloud CLIs that ship with this release.
 
 As always, we'd love to hear what you think — and if you have any suggestions for places we should put Neo next, file an issue in [pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues/new/choose).

@@ -36,4 +36,4 @@ We can't wait to hear what you think. [Get Started with Pulumi](/start), [join o
 
 From the entire Pulumi team, thank you!
 
-![Pulumi Team](../series-c/pulumi-team.png)
+![Pulumi Team](/blog/series-c/pulumi-team.png)

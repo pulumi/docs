@@ -115,15 +115,15 @@ With Pulumi, you can use native testing frameworks to automate infrastructure te
 
 ### Modes of Execution {#modes}
 
-Pulumi supports command execution through the CLI and offers two APIs for running Pulumi commands. The first is the Automation API, which lets you provision, update, and destroy infrastructure directly from your application code—enabling advanced orchestration workflows and dynamic infrastructure management. The second is the REST API, which provides access to state information, history, and stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/using-pulumi/automation-api/) and [REST API](/docs/pulumi-cloud/cloud-rest-api/).
+Pulumi supports command execution through the CLI and offers two APIs for running Pulumi commands. The first is the Automation API, which lets you provision, update, and destroy infrastructure directly from your application code—enabling advanced orchestration workflows and dynamic infrastructure management. The second is the REST API, which provides access to state information, history, and stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/iac/concepts/automation-api/) and [REST API](/docs/pulumi-cloud/cloud-rest-api/).
 
 ### Embed within Application Code {#embedding}
 
-Pulumi allows you to embed Pulumi programs directly within your application code using the Automation API—a programmatic interface for running Pulumi programs without relying on the CLI. The Automation API offers a strongly typed and safe approach for using Pulumi in embedded scenarios, such as web servers, without invoking the CLI. It enables you to build custom experiences on top of Pulumi that fit your specific use case, domain, and team needs. To learn more, see [Automation API](/docs/using-pulumi/automation-api/).
+Pulumi allows you to embed Pulumi programs directly within your application code using the Automation API—a programmatic interface for running Pulumi programs without relying on the CLI. The Automation API offers a strongly typed and safe approach for using Pulumi in embedded scenarios, such as web servers, without invoking the CLI. It enables you to build custom experiences on top of Pulumi that fit your specific use case, domain, and team needs. To learn more, see [Automation API](/docs/iac/concepts/automation-api/).
 
 ### Third-Party CI/CD Tools Support {#cicd}
 
-Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, Spinnaker, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
+Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
 
 ### Policy as Code {#policy}
 

@@ -7,6 +7,10 @@ date: "2018-07-05"
 meta_image: "code-completion.png"
 ---
 
+{{% notes type="warning" %}}
+This post is outdated. The `hello-aws-javascript` template and `@pulumi/cloud-aws` package used in this post are no longer maintained. We recommend using TypeScript for new Pulumi projects. See the [Get Started guide](/docs/get-started/) to build your first serverless app with TypeScript.
+{{% /notes %}}
+
 In this tutorial, we'll use Pulumi to build a
 complete serverless application using only JavaScript. When we say 'using
 only JavaScript', we're not kidding:
@@ -27,14 +31,8 @@ need for building cloud applications. Better than that, you can even
 
 ## Our first serverless app in 5 lines of JavaScript
 
-After [installing the Pulumi CLI](/docs/install/), just run
-the following to create your new serverless JavaScript app:
-
-    mkdir firstapp && cd firstapp
-    pulumi new hello-aws-javascript
-
-This template creates a small `index.js` file (the main Pulumi code)
-that is a simple but complete serverless application:
+After [installing the Pulumi CLI](/docs/install/), a small `index.js` file (the main Pulumi code)
+represents a simple but complete serverless application:
 
 ```javascript
 // Add the required package
@@ -66,13 +64,13 @@ choose to go ahead with the full deployment. Pulumi figures out all of
 the cloud resources needed to run the code above and prepares that for
 deployment.
 
-![results](./image.png)
+![results](/blog/building-your-first-serverless-app-using-only-javascript/image.png)
 
 Once deployed, your application will run in the cloud. Use
 `pulumi stack output url` to get the URL where your app is running, and
 open it up in your browser:
 
-![stack output](./stack-output.png)
+![stack output](/blog/building-your-first-serverless-app-using-only-javascript/stack-output.png)
 
 With Pulumi, we've built a serverless JavaScript app in just a few lines of code.
 This approach avoided significant amounts of configuration (YAML, or

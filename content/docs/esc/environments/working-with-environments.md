@@ -453,7 +453,7 @@ For additional options and details, see `esc run --help`.
 Pulumi ESC lets you define common configuration values once as reusable environments and then import them into other environments to avoid duplication, delegate ownership, and share settings (including secrets) across applications.
 
 {{% notes type="info" %}}
-For a detailed description on how to work with imports, please refer to [Importing other Environments](../imports) documentation page.
+For a detailed description on how to work with imports, please refer to [Importing other Environments](/docs/esc/environments/imports) documentation page.
 {{% /notes %}}
 
 In the following example, two environments, `aws/dev` and `stripe/dev`, are used to compose a third environment, `myapp/dev`:
@@ -601,7 +601,7 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 ### With Automation API
 
-You can use ESC with [Automation API](/docs/using-pulumi/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python]/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
+You can use ESC with [Automation API](/docs/iac/concepts/automation-api/) in [Node](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python]/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). The following methods are supported today:
 
 * `addEnvironments(...)`: Append environments to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
 * `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
@@ -642,7 +642,7 @@ $ esc env version tag myorg/myproject/test@prod @3
 
 You can also manage tags in the Pulumi Cloud Console by selecting the environment's `Versions` tab and then selecting the `Actions` menu for the given version of the environment you want to tag:
 
-![envtagui.png](../envtagui.png)
+![envtagui.png](/docs/esc/environments/envtagui.png)
 
 ### Using Tagged Versions
 

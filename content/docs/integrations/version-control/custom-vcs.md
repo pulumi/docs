@@ -15,7 +15,7 @@ aliases:
 
 Custom VCS integrations let you connect any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/deployments/), including self-hosted and third-party servers. You configure webhooks on your VCS server to notify Pulumi Cloud when commits are pushed, and Pulumi automatically triggers deployments for matching stacks.
 
-Unlike the first-party [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/) integrations, Custom VCS uses [ESC environments](/docs/esc/) for credential management and requires manual webhook configuration. It supports push-to-deploy but does not support pull request comments, commit status checks, or review stacks.
+Unlike the first-party [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/) integrations, Custom VCS uses [ESC environments](/docs/esc/) for credential management and requires manual webhook configuration. It supports push-to-deploy but does not support pull request comments, commit status checks, or review stacks.
 
 [Neo](/docs/ai/), Pulumi's AI assistant, can clone and push to Git and Mercurial repositories registered with a Custom VCS integration using the credentials from the integration's ESC environment. Neo cannot open pull requests or create new repositories on Custom VCS servers at this time. Those operations require VCS-specific APIs only available through native integrations.
 
@@ -136,12 +136,25 @@ The request body must be a JSON object with the following fields:
 
 | Field | Type | Required | Description |
 |---|---|---|---|
-| `event` | string | Yes | Event type. Only `push` events trigger deployments. |
+| `event` | string | Yes | Event type. Use `push` for a branch push or `tag_push` for a tag push. Other values are ignored. |
 | `commit` | string | Yes | Full commit SHA (Git) or changeset ID (Mercurial) |
-| `branch` | string | Yes | Branch name that was pushed to |
+| `branch` | string | For `push` | Branch name that was pushed to. Required for `push` events. |
+| `tag` | string | For `tag_push` | Tag name that was pushed (e.g., `v1.2.0`). Required for `tag_push` events. Enables [tag filtering](#deployment-settings). |
 | `repoUrl` | string | Yes | Full repository URL (must match a configured repository) |
 | `sender` | string | No | Identifier for the user who pushed |
-| `changedFiles` | string[] | No | File paths changed in this push. Enables [path filtering](#deployment-settings). If omitted, path filters are skipped and all pushes trigger deployments. |
+| `changedFiles` | string[] | No | File paths changed in this push. Enables [path filtering](#deployment-settings). If omitted, path filters are skipped and all pushes trigger deployments. Applies to `push` events only. |
+
+To trigger a deployment on a tag push, send `event: "tag_push"` with the `tag` field set instead of `branch`:
+
+```json
+{
+  "event": "tag_push",
+  "commit": "abc123def456789...",
+  "tag": "v1.2.0",
+  "repoUrl": "https://git.example.com/myorg/infra-prod",
+  "sender": "deploy-bot"
+}
+```
 
 ### HMAC signing
 
@@ -165,6 +178,7 @@ Configure deployment behavior for Custom VCS-backed stacks under **Stack** > **S
 |---|---|
 | Push to deploy | Automatically deploy when commits are pushed to the configured branch |
 | Path filters | Only trigger deployments when changed files match specified glob patterns (e.g., `infrastructure/**`). Requires the webhook payload to include the `changedFiles` field. |
+| Tag triggers | Deploy when a tag matching the configured [tag filters](/docs/deployments/deployments/using/settings/#tag-filtering) is pushed (e.g., `v*`). Requires the webhook to send a `tag_push` event with the `tag` field. |
 
 ### Selecting a repository and branch
 
@@ -190,6 +204,7 @@ Custom VCS provides webhook-driven push-to-deploy but does not include the deepe
 | Auto-discover repos | Yes | No (manual) |
 | Branch listing | Yes | No (manual entry) |
 | Path filtering | Yes | Yes (requires `changedFiles` in webhook) |
+| Tag triggers | Yes | Yes (requires `tag_push` event in webhook) |
 | Credential management | OAuth/app tokens | ESC environment |
 | Mercurial support | No | Yes |
 | Neo clone/push to repos | Yes | Yes (Git and Mercurial) |
@@ -205,3 +220,4 @@ Custom VCS provides webhook-driven push-to-deploy but does not include the deepe
 | Clone fails with authentication error | Verify credentials in your ESC environment. Check that the configuring user still has access to the ESC environment. |
 | Integration shows broken credentials | The ESC environment may have been deleted or the configuring user may have lost access. Update the ESC environment reference or have an admin reconfigure the integration. |
 | Path filters not working | Path filtering requires the `changedFiles` field in your webhook payload. If omitted, all pushes trigger deployments regardless of path filter settings. |
+| Tag pushes not triggering | Confirm the webhook sends `event` set to `tag_push` with the `tag` field populated, that tag triggers are enabled for the stack, and that the tag matches your configured tag filters. |

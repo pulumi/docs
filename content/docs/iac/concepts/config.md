@@ -101,7 +101,7 @@ $ pulumi new aws-typescript --config="aws:region=us-west-2"
 Configuration values can be retrieved for a given stack using either {{< pulumi-config-get >}} or {{< pulumi-config-require >}}. Using {{< pulumi-config-get >}} will return {{< language-null >}} if the configuration value was not provided, and {{< pulumi-config-require >}} will raise an exception with a helpful error message to prevent the deployment from continuing until the variable has been set using the CLI.
 
 {{% notes type="info" %}}
-Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
+Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/concepts/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
 {{% /notes %}}
 
 For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/concepts/secrets/) for more on managing secret values).
@@ -782,7 +782,7 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 
 Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
 
-Once you have an [environment](/docs/esc/concepts/) set up and you are [projecting pulumi configuration](/docs/esc/environments/working-with-environments/#projecting-pulumi-config), you can [import that environment](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) (or multiple environments) into your Pulumi stack.
+Once you have an [environment](/docs/esc/concepts/) set up and you are [projecting pulumi configuration](/docs/esc/environments/working-with-environments/#projecting-pulumi-config), you can [import that environment](/docs/esc/providers/secrets/pulumi-stacks/) (or multiple environments) into your Pulumi stack.
 
 ```yaml
 # import the test environment and all of its configuration

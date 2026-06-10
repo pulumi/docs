@@ -1,65 +1,34 @@
 ---
 user-invocable: false
-description: Dependabot label taxonomy and risk classification
+description: Dependabot label taxonomy and handling
 ---
 
 # Dependabot Labels
 
 ## Label Taxonomy
 
-Parse these labels from PR data to determine risk level and handling approach:
+The `label-dependabot.yml` workflow applies these labels. There is no risk-tier
+classification — dependency updates are grouped per ecosystem and arrive at low
+volume, so the policy is to evaluate each PR and merge it once CI is green. The
+labels below flag the only two cases that change handling.
 
-### Risk Classification Labels
+- `dependencies` - Standard label (applied by Dependabot itself)
+- `deps-security-patch` - Security vulnerability fix; prioritize
+- `deps-lambda-edge-risk` - Affects Lambda@Edge bundling/runtime (webpack/bundler/AWS SDK; ESM/CommonJS and 1 MB bundle-size concerns)
+- `deps-bulk-update` - 10+ dependencies in a single PR
 
-- `deps-risk-high` - High risk dependencies (runtime, bundling, core functionality)
-- `deps-risk-medium` - Medium risk dependencies (build tools, dev dependencies with production impact)
-- `deps-risk-low` - Low risk dependencies (dev-only tools, testing frameworks)
-- `deps-risk-unknown` - Risk not yet classified
+## Handling
 
-### Special Handling Labels
+Default path for every Dependabot PR:
 
-- `deps-security-patch` - Security vulnerability fix (always HIGH priority)
-- `deps-lambda-edge-risk` - Affects Lambda@Edge bundling/runtime (ESM/CommonJS issues, webpack changes)
-- `deps-bulk-update` - 10+ dependencies in single PR
-- `deps-merge-after-test` - Requires testing before merge
-- `deps-quarterly-review` - Part of quarterly batch update cycle
+1. **Evaluate** - build and spot-check (the testing checklist lives in `pr-review:references:action-menus`).
+2. **Approve + merge** once CI is green.
 
-## Risk Classification Logic
+Two flags adjust this:
 
-Determine risk tier from labels:
+- `deps-security-patch` - prioritize over the regular cadence; evaluate and merge promptly.
+- `deps-lambda-edge-risk` - before merging, verify the Lambda@Edge function size against the 1 MB compressed limit and confirm the CloudFront deployment succeeds in the testing environment. See the Infrastructure Change Review section of `BUILD-AND-DEPLOY.md`.
 
-1. **HIGH Risk**:
-   - Has `deps-security-patch` label, OR
-   - Has `deps-lambda-edge-risk` label, OR
-   - Has `deps-risk-high` label
-
-2. **MEDIUM Risk**:
-   - Has `deps-risk-medium` label
-
-3. **LOW Risk**:
-   - Has `deps-risk-low` label
-
-4. **UNKNOWN Risk**:
-   - No risk label present, OR
-   - Has `deps-risk-unknown` label
-
-Testing checklists by risk tier live in `pr-review:references:action-menus`.
-
-## Quarterly Review Workflow
-
-For PRs with `deps-quarterly-review` label, accumulate LOW/MEDIUM risk updates and merge quarterly.
-
-Handling options:
-
-1. **Approve for batch** - Add to quarterly batch (recommended)
-2. **Merge now** - Urgent update needed before quarterly cycle
-3. **Close with quarterly note** - Defer to next quarterly batch (duplicate or superseded)
-4. **Investigate** - Need risk assessment before deciding
-
-### Close Message for Quarterly Batching
-
-When closing to batch with other quarterly updates:
-
-```text
-Closing to batch with other quarterly dependency updates. We'll merge accumulated quarterly updates together after comprehensive testing. This reduces testing overhead while keeping dependencies current.
-```
+`deps-bulk-update` is informational: a 10+ dependency PR warrants a more careful
+build/test pass and a check for hidden major versions, but is handled the same
+way otherwise.

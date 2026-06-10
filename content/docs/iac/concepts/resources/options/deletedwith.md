@@ -17,6 +17,8 @@ aliases:
 
 The `deletedWith` resource option allows you to skip resource deletion if another resource is being deleted as well.
 
+{{< resource-option-scope "deletedWith" >}}
+
 Pulumi will normally call the provider's delete action for every resource during a delete operation. Sometimes, this is redundant if another resource is also deleted, such as a parent container resource, and can cause your delete or destroy operations to take longer than needed.
 
 For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitly.
@@ -103,3 +105,5 @@ resources:
 ## Inheritance from parent
 
 `deletedWith` is inherited from a resource's [`parent`](/docs/iac/concepts/options/parent). Setting `deletedWith` on a parent causes every descendant in the resource tree to skip its provider delete as well, which makes it the idiomatic way to apply `deletedWith` for [component resources](/docs/iac/concepts/components/).
+
+Because the Pulumi engine never invokes Delete on a component itself, setting `deletedWith` on a component has no direct effect on the component. Its effect comes entirely from propagating the value to each of the component's child custom resources, which then skip their own deletes.

@@ -26,7 +26,7 @@ With the new `pulumi org search` command, you can search across all of the infra
 pulumi org search -q "type:aws:kinesis/stream:Stream modified:>=09/01/2023" --org my-org
 ```
 
-![org search](./orgsearch.png)
+![org search](/blog/pulumi-insights-ai-cli/orgsearch.png)
 
 If you don't know the exact search syntax for what you want to ask, you can use AI Assist, which was [recently opened up](/blog/ai-assist-improvements/) to all Pulumi organizations.  Just use `pulumi org search ai` instead!
 
@@ -36,7 +36,7 @@ pulumi org search ai -q "all Kinesis streams modified since September 1st 2023" 
 
 Notice that AI Assist comes up with the same query and runs it to get the same results we saw above.
 
-![org search ai](./orgsearchai.png)
+![org search ai](/blog/pulumi-insights-ai-cli/orgsearchai.png)
 
 These queries can also include complex logic which relies on looking at properties of resources, such as their tags.  For example:
 
@@ -46,13 +46,13 @@ pulumi org search ai -q "All untagged lambda functions with memory > 2 GB" --org
 
 AI Assist determines it should run the query `type:"aws:lambda:Function" .memorySize:>2048 -.tags:` and shows the results of that query:
 
-![org search ai](./orgsearchaiproperties.png)
+![org search ai](/blog/pulumi-insights-ai-cli/orgsearchaiproperties.png)
 
 The combination of rich query syntax, AI Assist and property search makes it easy and exciting to interactively find the information you are looking for about resources in your stack.
 
 And of course, you can jump straight into the console to drill down even further into your data.
 
-![org search ai](./consolesearch.png)
+![org search ai](/blog/pulumi-insights-ai-cli/consolesearch.png)
 
 ## Pulumi AI in the CLI
 

@@ -76,13 +76,13 @@ You can find the [migration guide on the Pulumi registry.](https://www.pulumi.co
 You can use our new automation agent, [Neo](https://www.pulumi.com/docs/pulumi-cloud/neo/), to help you with your provider upgrade.
 In the Pulumi service, ask Neo to help you with your upgrade by providing the migration guide:
 
-![migration-prompt.png](./migration-prompt.png)
+![migration-prompt.png](/blog/gcp-v9-release/migration-prompt.png)
 
 Neo will look at the provided migration guide and your stack, and determine a plan of action.
 Here, Neo has discovered there were some breaking changes, needing updates to your program.
 
-![neo-plan.png](./neo-plan.png)
+![neo-plan.png](/blog/gcp-v9-release/neo-plan.png)
 
 And finally, Neo can open a pull request with the proposed changes to your code.
 
-![code-suggestion.png](./code-suggestion.png)
+![code-suggestion.png](/blog/gcp-v9-release/code-suggestion.png)

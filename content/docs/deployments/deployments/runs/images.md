@@ -25,7 +25,7 @@ By default, every deployment runs in [`pulumi/pulumi`](https://hub.docker.com/r/
 
 For most projects this is the right choice. The image is updated with every Pulumi CLI release, security-patched on a regular cadence, and pre-cached on Pulumi-hosted workflow runners, so deployments start quickly without paying a registry pull.
 
-The image is published in [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers). That repository also publishes smaller variants you can use as a base for a custom image. See [Choosing a base image](#choosing-a-base-image) below.
+The image is published in [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers). That repository also publishes smaller variants you can use as a base for a custom image. See [Choosing a base image](#choosing-a-base-image) below. For the full image catalog — variants, release cadence, and language-version pinning — see [Pulumi Docker images](/docs/iac/operations/docker-images/).
 
 ## When to customize
 
@@ -132,4 +132,5 @@ If your image lives in a private registry, you must supply static username and p
 - [Deployment settings](/docs/deployments/deployments/using/settings/): UI walkthrough for configuring the executor image on a stack
 - [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/): full control over the runner host, registry pulls, network access, and lifecycle
 - [Pre-run commands](/docs/deployments/deployments/using/settings/#pre-run-commands): where pre-run installs run
+- [Pulumi Docker images](/docs/iac/operations/docker-images/): the full catalog of official images, variants, and release cadence
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

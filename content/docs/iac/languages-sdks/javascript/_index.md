@@ -1,12 +1,12 @@
 ---
-title_tag: "TypeScript and Node.js | Languages & SDKs"
+title_tag: "TypeScript | Languages & SDKs"
 meta_desc: Learn to use Node.js languages like JavaScript and TypeScript with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
-title: TypeScript (Node.js)
-h1: Pulumi & TypeScript (Node.js)
+title: TypeScript
+h1: Pulumi & TypeScript
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
-        name: TypeScript (Node.js)
+        name: TypeScript
         parent: iac-languages
         weight: 1
         identifier: iac-languages-javascript
@@ -22,8 +22,6 @@ aliases:
     - /typescript/
     - /docs/languages-sdks/javascript/
 ---
-
-<img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
 Pulumi supports writing your infrastructure as code using TypeScript and JavaScript on the Node.js or Bun runtimes. Using a general-purpose language for infrastructure as code provides several key advantages:
 
@@ -197,7 +195,7 @@ The Pulumi SDK provides constructs for working with key Pulumi concepts. For mor
 
 Pulumi programs are most commonly executed using the Pulumi CLI commands such as `pulumi up`, `pulumi preview`, and `pulumi destroy`. The CLI handles authentication, state management, and orchestrating resource operations.
 
-Alternatively, you can use the [Automation API](/docs/using-pulumi/automation-api/) to programmatically control the Pulumi engine from within your Node.js code. The Automation API allows you to:
+Alternatively, you can use the [Automation API](/docs/iac/concepts/automation-api/) to programmatically control the Pulumi engine from within your Node.js code. The Automation API allows you to:
 
 - Embed Pulumi operations in regular Node.js applications
 - Build custom deployment tools and workflows
@@ -357,7 +355,7 @@ The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) co
 
 For managing resources in a Pulumi program, you can find the relevant SDK reference documentation for each provider in [the Pulumi Registry](/registry/).
 
-When building component packages, see [Provider package version management](./provider-package-versions/) for guidance on handling provider package versions across component boundaries.
+When building component packages, see [Provider package version management](/docs/iac/languages-sdks/javascript/provider-package-versions/) for guidance on handling provider package versions across component boundaries.
 
 ### Policy SDK
 
@@ -377,7 +375,7 @@ For provider packages, use the same `dev` tag:
 npm add @pulumi/aws@dev
 ```
 
-For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/support/troubleshooting/using-dev-builds/).
+For more information on when and how to use dev builds, see [Using dev builds for unreleased fixes](/docs/iac/operations/debugging/using-dev-builds/).
 
 ### Testing
 

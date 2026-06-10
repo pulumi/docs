@@ -118,7 +118,7 @@ Duration: 8s
 
 Have a look into your Pinecone console, and you should see the newly created serverless index there, ready to use.
 
-![Pinecone Console](./console.png)
+![Pinecone Console](/blog/pinecone-serverless/console.png)
 
 ### Deleting a Pinecone Index
 

@@ -10,7 +10,7 @@ menu:
         weight: 10
 ---
 
-A [Pulumi provider](/docs/iac/concepts/providers/) is a type of [Pulumi package](/docs/iac/concepts/packages/) that allows the Pulumi engine to manage [resources](/docs/iac/concepts/resources/) — typically scoped to a given cloud platform, SaaS product, or other API.
+A [Pulumi provider](/docs/iac/concepts/providers/) is a [Pulumi package](/docs/iac/concepts/packages/) that lets the Pulumi engine manage [resources](/docs/iac/concepts/resources/) — typically scoped to a given cloud platform, SaaS product, or other API.
 
 {{% notes type="info" %}}
 The guides in this section are for authors building a provider. For the consumer-side view of what providers are and how programs use them, see [Providers](/docs/iac/concepts/providers/) in the concepts documentation.
@@ -27,9 +27,9 @@ A provider package is made up of a schema plus the code that implements it. In p
 Providers do not typically contain [components](/docs/iac/concepts/resources/components/); components typically live in a separate package (and may incorporate resources managed by several different providers). There is no technical limitation on shipping components in a provider.
 {{% /notes %}}
 
-In addition, a provider may be **bridged** from an upstream Terraform or OpenTofu provider, which lets Pulumi reuse the upstream provider's schema and CRUD code rather than reimplementing them. When a provider is not bridged, the schema and CRUD implementations can be generated from an API specification — for some or all resources — or written by hand.
+A provider may also be **bridged** from an upstream Terraform or OpenTofu provider, which lets Pulumi reuse the upstream provider's schema and CRUD code rather than reimplementing them. When a provider is not bridged, the schema and CRUD implementations can be generated from an API specification — for some or all resources — or written by hand.
 
-Providers are usually distributed as an executable plugin with pre-generated SDKs for each Pulumi-supported language. This is convention, not a technical requirement: source-based plugins are also supported (in Go). Providers intended for public consumption can be published in the [Pulumi Registry](/registry/).
+By convention, providers are distributed as an executable plugin with pre-generated SDKs for each Pulumi-supported language. This is not a technical requirement: source-based plugins are also supported (in Go). Providers intended for public consumption can be published in the [Pulumi Registry](/registry/).
 
 ## When to build a provider
 
@@ -37,7 +37,7 @@ Providers require a deeper level of Pulumi expertise and maintenance overhead co
 
 - **Is there already a Pulumi provider?** Search the [Pulumi Registry](/registry/). If a well-maintained provider exists, use it.
 - **Is there a well-maintained Terraform or OpenTofu provider?** If so, reach for [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/), which lets a Pulumi program consume any provider from the OpenTofu registry without writing a Pulumi provider at all.
-- **Do you actually need a provider?** If your goal is to group resources into a reusable abstraction, a [component](/docs/iac/guides/building-extending/components/build-a-component/) is usually the right answer. For one-off programmatic resources, a [dynamic provider](/docs/iac/concepts/providers/dynamic-providers/) may be simpler than a full provider package.
+- **Do you actually need a provider?** If your goal is to group resources into a reusable abstraction, a [component](/docs/iac/guides/building-extending/components/build-a-component/) is usually the right answer. For one-off programmatic resources, a [dynamic provider](/docs/iac/guides/building-extending/providers/dynamic-providers/) may be simpler than a full provider package.
 
 Build a standalone provider when none of the above apply.
 
@@ -46,7 +46,7 @@ Build a standalone provider when none of the above apply.
 Two high-level factors shape how you'll build the provider:
 
 - **Writing in Go?** Use the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) (`pulumi-go-provider`). It infers your schema from Go structs and tags, supplies default implementations for most provider protocol methods, and generates SDKs for every Pulumi-supported language. Go providers also compile to a standalone binary with no runtime dependencies for your users.
-- **Writing in another language?** You'll need to implement the provider protocol directly and hand-maintain the schema JSON, which is substantially more work. See [Direct Provider Implementation](/docs/iac/guides/building-extending/providers/implementers/) for Python and TypeScript guides.
+- **Writing in another language?** You'll need to implement the provider protocol directly and hand-maintain the schema JSON, which is more work. See [Direct Provider Implementation](/docs/iac/guides/building-extending/providers/implementers/) for Python and TypeScript guides.
 
 For guidance on choosing between the available options, see [Provider Architecture](/docs/iac/guides/building-extending/providers/provider-architecture/).
 
@@ -54,5 +54,7 @@ For guidance on choosing between the available options, see [Provider Architectu
 
 - [Provider Architecture](/docs/iac/guides/building-extending/providers/provider-architecture/) — the three-layer model of the provider stack and how to choose your layer.
 - [Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/) — step-by-step guide to using the Pulumi Go Provider SDK.
+- [Author a Dynamic Provider](/docs/iac/guides/building-extending/providers/dynamic-providers/) — implementing a lightweight provider inline in a TypeScript or Python program.
 - [Provider Configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) — declaring configuration keys, secrets, and environment variable defaults in your provider schema.
 - [Direct Provider Implementation](/docs/iac/guides/building-extending/providers/implementers/) — implementing providers in Python or TypeScript against the gRPC protocol directly.
+- [Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/) — attaching a debugger to a provider locally and debugging bridged providers and tfgen.

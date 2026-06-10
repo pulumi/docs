@@ -2,78 +2,60 @@
 // Styles for reusable template partials (template-hero, template-logo-banner, etc.)
 
 @mixin page-header {
-    @apply font-semibold text-black font-body text-heading-m;
-    line-height: 1.375;
-    letter-spacing: -2px;
+    @apply text-black heading-1;
 }
 
 @mixin section-header {
-    @apply font-semibold text-black font-body text-heading-s;
-    line-height: 55px;
-    letter-spacing: -2px;
+    @apply heading-1;
     strong {
-        @apply text-violet-primary font-semibold;
+        @apply text-violet-primary;
     }
 }
 
-@mixin section-header-small {
-    @apply font-semibold text-black font-body text-heading-s;
-    line-height: 55px;
-    letter-spacing: -2px;
-}
-
-@mixin section-header-extra-small {
-    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xs;
-}
-
-@mixin section-header-extra-extra-small {
-    @apply font-semibold leading-extra-tight text-black font-body text-heading-2xsSmall;
-}
 
 @mixin product-hero-heading {
-    @apply text-black text-center not-italic font-semibold text-heading-l;
-    font-family: Inter, sans-serif;
-    letter-spacing: -3.2px;
-    line-height: 1.1 !important;
+    @apply text-black text-center not-italic heading-xl mb-4;
 }
 
 @mixin section-description {
-    @apply font-normal leading-normal font-body text-body-l;
-    color: #2f3032;
+    @apply font-normal leading-normal body-xl mt-0;
 }
 
 @mixin section-subheader-bold {
-    @apply font-semibold leading-normal text-black font-body text-body-xl;
+    @apply font-semibold leading-normal text-black body-2xl;
 }
 
 @mixin section-hint {
-    @apply font-semibold leading-normal font-body text-body-l;
-    color: #1e1e1e;
+    @apply font-semibold leading-normal body-xl;
 }
 
 @mixin section-hint-accent {
-    font-family: "Monaspace Neon Var", monospace;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    color: #404041;
+    @apply font-overline text-gray-primary;
 }
 
-@mixin section-hint-small {
-    @include section-hint-accent();
+@mixin edge-fade {
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(to right, white, transparent);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(to left, white, transparent);
+    }
 }
 
-@mixin section-body-medium {
-    @apply font-normal leading-normal font-body text-body-m;
-    color: #2f3032;
-}
-
-@mixin section-body-small {
-    @apply font-normal leading-normal font-body text-body-s;
-    color: #2f3032;
-}
 
 // Offset anchored sections within event pages to account for the fixed nav.
 .event-page-content section[id] {
@@ -90,8 +72,7 @@
     }
 
     .hero-event-details {
-        @apply flex flex-wrap items-center font-semibold leading-normal font-body text-body-m;
-        color: #5b5b5b;
+        @apply flex flex-wrap items-center font-semibold leading-normal body-lg text-gray-primary;
     }
 
     .hero-date-and-location {
@@ -114,7 +95,6 @@
 
     .title {
         @include page-header();
-        line-height: 110% !important;
     }
 
     .description {
@@ -124,34 +104,50 @@
     // Centered variant for non-event, non-product pages (e.g. whitepapers)
     &--centered {
         .title {
-            @include page-header();
-            @apply text-center text-heading-s leading-tight tracking-tight;
-
-            @include screen-sm {
-                @apply text-heading-m;
-            }
-            @include screen-md {
-                @apply text-heading-l;
-            }
+            @apply text-black heading-xl text-center leading-tight tracking-tight;
         }
 
         .description {
             @include section-description();
-            @apply text-body-xl;
+            @apply text-center;
         }
+    }
+
+    // Product page widgets
+    .product-hero-heading {
+        @include product-hero-heading();
+    }
+
+    .product-hero-title-primary {
+        @apply block text-violet-primary;
+    }
+
+    .product-hero-title-secondary {
+        @apply block text-black;
+    }
+
+    .product-hero-title {
+        @include product-hero-heading();
+    }
+
+    .product-hero-description {
+        @include section-description();
+        @apply max-w-xl;
+    }
+
+    .product-hero-visual {
+        @apply w-full;
     }
 }
 
 .template-logo-banner {
     .logo-banner-text {
-        @include section-hint-small();
+        @include section-hint-accent();
     }
 
     .logo-container {
         img {
-            height: 54px;
-            max-height: 54px;
-            @apply w-auto;
+            @apply w-auto h-[54px] max-h-[54px];
         }
     }
 
@@ -165,16 +161,10 @@
         }
 
         .logo-container {
-            width: 150px;
-            height: 150px;
-            border: 1px solid var(--color-violet-300);
-            border-radius: 10px;
+            @apply w-[150px] h-[150px] border border-violet-300 rounded-[10px];
 
             img {
-                height: auto;
-                max-height: 107px;
-                max-width: 130px;
-                @apply w-auto;
+                @apply w-auto h-auto max-h-[107px] max-w-[130px];
             }
         }
     }
@@ -194,7 +184,7 @@
     }
 
     .feature-title {
-        @include section-header-extra-extra-small();
+        @apply heading-4;
         @apply flex flex-row items-center;
 
         i {
@@ -203,7 +193,7 @@
     }
 
     .feature-description {
-        @include section-body-medium();
+        @apply body-lg;
     }
 
     .features-content {
@@ -232,27 +222,27 @@
     }
 
     .card-title {
-        @include section-header-extra-small();
+        @apply heading-3;
     }
 
     .card-subheader {
-        @include section-header-extra-extra-small();
-        color: #5b5b5b;
+        @apply heading-4;
+        @apply text-gray-primary;
     }
 
     .card-description {
-        @include section-body-medium();
+        @apply body-lg;
     }
 }
 
 .template-promo-banner {
     .promo-banner-title {
-        @include section-header-extra-small();
+        @apply heading-3;
         @apply text-white;
     }
 
     .promo-banner-description {
-        @include section-body-medium();
+        @apply body-lg;
         @apply text-white;
     }
 
@@ -272,10 +262,7 @@
     }
 
     .three-column-item-title {
-        font-family: Inter, sans-serif;
-        letter-spacing: -1.4px;
-        line-height: 38.5px;
-        @apply text-black font-semibold text-heading-xs;
+        @apply text-black font-semibold heading-3;
 
         i {
             @apply flex-shrink-0;
@@ -287,13 +274,13 @@
     }
 
     .three-column-item-description {
-        @include section-body-small();
+        @apply body-base mt-0;
     }
 }
 
 // Shared feature card (icon above title + description) — used by template-feature-split and template-three-column (icon_layout: above)
 .template-feature-card-icon {
-    @apply text-violet-primary mb-3 text-body-xl;
+    @apply text-violet-primary mb-3 body-2xl;
 
     svg {
         width:32px;
@@ -303,17 +290,14 @@
 }
 
 .template-feature-card-title {
-    @apply font-body text-black font-semibold mt-0! mb-3 text-heading-xs;
-    line-height: 38.5px;
-    letter-spacing: -1.4px;
+    @apply text-black font-semibold mt-0! mb-3 heading-3;
 }
 
 .template-feature-card-description {
-    @include section-body-small();
+    @apply body-base;
 
     ul {
-        @apply list-disc pl-5 mt-2;
-        color: var(--color-gray-700);
+        @apply list-disc pl-5 mt-2 text-gray-700;
 
         li {
             @apply mb-1;
@@ -322,10 +306,7 @@
 }
 
 .template-testimonial {
-    @apply font-body bg-violet-50;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @apply font-body bg-violet-50 bg-cover bg-center bg-no-repeat;
 
     &.template-testimonial-bg-1 {
         background-image: url('/images/template-testimonial-bg-1.svg');
@@ -336,17 +317,12 @@
     }
 
     .template-testimonial-logo img {
-        height: 48px;
-        width: auto;
-        @apply grayscale brightness-0;
+        @apply grayscale brightness-0 h-12 w-auto;
     }
 }
 
 .template-feature-callout {
-    @apply font-body bg-violet-50;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @apply font-body bg-violet-50 bg-cover bg-center bg-no-repeat;
 
     &.template-feature-callout-bg-1 {
         background-image: url('/images/template-testimonial-bg-1.svg');
@@ -357,13 +333,7 @@
     }
 
     .feature-callout-tag-line {
-        font-family: "Monaspace Neon Var", monospace;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5;
-        letter-spacing: 0.7px;
-        text-transform: uppercase;
-        color: #404041;
+        @include section-hint-accent();
     }
 
     .feature-callout-title {
@@ -377,7 +347,6 @@
 
     .feature-callout-description {
         @include section-description();
-        @apply text-body-s text-black;
 
         a {
             @apply text-inherit no-underline;
@@ -396,16 +365,15 @@
 
     .location-details {
         @include section-subheader-bold();
-        color: #404041;
+        @apply text-gray-800;
     }
 
     .location-description {
-        @include section-body-medium();
-        color: #757576;
+        @apply body-lg text-gray-primary;
     }
 
     iframe {
-        border-radius: 1rem;
+        @apply rounded-2xl;
     }
 }
 
@@ -437,7 +405,7 @@
 // Shared content styles for sidebar-nav pages (whitepapers, case studies, etc.)
 .template-sidebar-content {
     h2 {
-        @apply font-body font-semibold text-heading-xs leading-extra-tight scroll-mt-22;
+        @apply font-semibold heading-2 leading-extra-tight scroll-mt-22;
 
         @include screen-lg {
             @apply scroll-mt-28;
@@ -445,7 +413,7 @@
     }
 
     h3 {
-        @apply font-body font-semibold text-heading-2xs leading-tight scroll-mt-22;
+        @apply font-semibold heading-3 leading-tight scroll-mt-22;
 
         @include screen-lg {
             @apply scroll-mt-28;
@@ -453,7 +421,7 @@
     }
 
     h4, h5, h6 {
-        @apply font-body font-semibold text-body-xl leading-tight scroll-mt-22;
+        @apply font-semibold body-2xl leading-tight scroll-mt-22;
 
         @include screen-lg {
             @apply scroll-mt-28;
@@ -484,7 +452,7 @@
     }
 
     .case-study-hero-stat {
-        @apply font-body font-bold text-black mb-2 text-heading-xs leading-relaxed;
+        @apply font-bold text-black heading-3 leading-relaxed;
     }
 
     .case-study-hero-headline {
@@ -511,65 +479,14 @@
 }
 
 
-// Product page widgets
-.template-hero {
-    .product-hero-heading {
-        @include product-hero-heading();
-        @apply text-heading-s;
-        @include screen-sm {
-            @apply text-heading-m;
-        }
-        @include screen-md {
-            @apply text-heading-l;
-        }
-    }
-
-    .product-hero-title-primary {
-        @apply block;
-        color: var(--color-violet-primary);
-    }
-
-    .product-hero-title-secondary {
-        @apply block text-black;
-    }
-
-    .product-hero-title {
-        @include product-hero-heading();
-        @apply text-heading-s;
-        @include screen-sm {
-            @apply text-heading-m;
-        }
-        @include screen-md {
-            @apply text-heading-l;
-        }
-    }
-
-    .product-hero-description {
-        @include section-description();
-        @apply text-body-xl;
-    }
-
-    .product-hero-visual {
-        @apply w-full;
-
-    }
-}
-
 .template-section-header {
 
     .section-header-image-above-img {
-        @apply w-auto h-auto;
-        max-width: 350px;
+        @apply w-auto h-auto max-w-[350px];
     }
 
     .section-header-tag-line {
-        font-family: "Monaspace Neon Var", monospace;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 1.5;
-        letter-spacing: 0.7px;
-        text-transform: uppercase;
-        color: #404041;
+        @include section-hint-accent();
         @apply text-center;
     }
 
@@ -583,7 +500,7 @@
 
     .section-header-description {
         @include section-description();
-        @apply text-body-s max-w-xl mx-auto;
+        @apply max-w-xl mx-auto;
 
         a {
             @apply text-inherit no-underline;
@@ -625,7 +542,7 @@
     }
 
     .section-header-split-tag {
-        @include section-hint-small();
+        @include section-hint-accent();
         @apply m-0;
     }
 
@@ -635,9 +552,7 @@
     }
 
     .section-header-split-description {
-        color: #2f3032;
-        font-family: Inter, sans-serif;
-        @apply text-left font-body text-body-s font-normal leading-normal;
+        @include section-description();
 
         p {
             @apply m-0;
@@ -649,35 +564,33 @@
     }
 
     pulumi-chooser > ul li.active {
+        @apply border-violet-primary;
         border-image-source: none;
-        border-color: var(--color-violet-primary);
     }
 
 }
 
 .template-section-header-with-image {
     .section-header-split-content {
-        flex: 1 1 0%;
+        @apply flex-1;
     }
-
 }
 
 .template-counter-cards {
     .counter-card-number {
         @include page-header();
-        @apply mb-2 font-semibold;
-        color: #1b1b1b;
+        @apply text-black;
     }
 
     .counter-card-label {
-        @include section-body-medium();
+        @apply body-lg;
         @apply m-0;
     }
 }
 
 .template-icon-grid {
     .icon-grid-tag-line {
-        @include section-hint-small();
+        @include section-hint-accent();
         @apply m-0;
     }
 
@@ -687,7 +600,7 @@
 
     .icon-grid-title {
         @include section-header();
-        margin: 0 !important;
+        @apply m-0!;
     }
 
     .icon-grid-description {
@@ -698,9 +611,7 @@
 // Event list and card styles
 .template-event-list {
     .event-list-month-header {
-        @include section-header-extra-small();
-        @apply m-0;
-        color: #404041;
+        @apply heading-3 m-0 text-gray-800;
     }
 
     .event-card-grid {
@@ -709,12 +620,10 @@
 }
 
 .template-event-card {
-    border: 0.5px solid #CECECE;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    @apply border border-gray-300 transition;
 
     &:hover {
-        border-color: #999;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        @apply border-gray-accent;
     }
 
     a {
@@ -722,152 +631,112 @@
     }
 
     .event-card-type {
-        @apply font-semibold font-body text-body-s uppercase;
-        color: var(--color-violet-primary);
+        @apply font-semibold font-body uppercase text-violet-primary text-[0.7rem];
         letter-spacing: 0.5px;
-        font-size: 0.7rem;
     }
 
     .event-card-location {
-        @apply font-body text-body-s;
-        color: #757576;
-        font-size: 0.8rem;
+        @apply font-body text-gray-primary text-[0.8rem];
     }
 
     .event-card-title {
-        @include section-header-extra-extra-small();
-        @apply m-0 leading-snug;
-        transition: color 0.15s ease;
+        @apply heading-4 m-0 leading-snug transition-colors;
     }
 
     &:hover .event-card-title {
-        color: var(--color-violet-primary);
+        @apply text-violet-primary;
     }
 
     .event-card-date {
-        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0;
-        width: 56px;
-        height: 56px;
-        border: 0.5px solid #CECECE;
+        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0 w-14 h-14 border border-gray-300;
     }
 
     .event-card-date-day {
-        @apply text-center font-semibold text-gray-900 font-body;
-        font-size: 1.25rem;
-        line-height: 1.4;
+        @apply text-center font-semibold text-gray-900 font-body text-xl;
     }
 
     .event-card-date-month {
-        @apply text-center font-body font-semibold;
-        font-size: 0.65rem;
-        letter-spacing: 0.5px;
-        color: #757576;
+        @apply text-center font-body font-semibold text-gray-primary text-[0.65rem];
     }
 
     .event-card-description {
-        @include section-body-medium();
-        @apply m-0 text-body-s line-clamp-3;
+        @apply m-0 body-base line-clamp-3;
     }
 
     .event-card-tag {
-        @apply inline-block font-body text-gray-700 rounded-md;
-        font-size: 0.7rem;
-        padding: 2px 8px;
-        background-color: #FAF9FD;
-        border: 0.5px solid #D7CDEA;
+        @apply inline-block font-body text-gray-700 rounded-md text-[0.7rem] py-0.5 px-2 bg-violet-50 border border-violet-200;
     }
 
     .event-card-cta {
-        @apply font-semibold font-body whitespace-nowrap flex-shrink-0;
-        color: var(--color-violet-primary);
-        font-size: 0.875rem;
+        @apply font-semibold font-body whitespace-nowrap flex-shrink-0 text-violet-primary text-sm;
 
         i {
-            transition: transform 0.15s ease;
+            @apply transition-transform;
         }
     }
 
     &:hover .event-card-cta i {
-        transform: translateX(3px);
+        @apply translate-x-[3px];
     }
 }
 
 // Single event page styles
 .event-breadcrumb {
-    @apply font-body;
-    font-size: 0.85rem;
+    @apply font-overline;
 
     a {
-        @apply font-semibold no-underline;
-        color: var(--color-violet-primary);
+        @apply no-underline text-violet-primary;
     }
 
     .event-breadcrumb-separator {
-        @apply mx-2;
-        color: var(--color-gray-400);
-    }
-
-    .event-breadcrumb-current {
-        color: var(--color-gray-600);
+        @apply mx-2 text-gray-400;
     }
 }
 
 .template-event-single-header {
     .event-single-title {
         @include page-header();
-        @apply m-0 mb-2;
+        @apply mb-4;
     }
 
     .event-single-type {
-        @apply font-semibold font-body uppercase;
-        color: var(--color-violet-primary);
-        font-size: 0.8rem;
-        letter-spacing: 0.5px;
+        @apply font-overline text-violet-primary;
     }
 
     .event-single-date-separator {
-        color: #CECECE;
+        @apply text-gray-300;
     }
 
     .event-single-date {
-        @apply font-body;
-        color: #757576;
-        font-size: 0.8rem;
+        @apply font-overline text-gray-primary;
     }
 }
 
 .template-timing-info {
     .timing-info-item {
-        @apply rounded-lg p-4;
-        border: 0.5px solid #CECECE;
+        @apply rounded-lg p-4 border border-gray-300;
     }
 
     .timing-info-label {
-        @apply font-body font-semibold text-body-s pb-2 mb-2 border-b uppercase tracking-wide;
-        color: #757576;
-        border-color: #E8E8E8;
-        font-size: 0.75rem;
+        @apply font-overline-sm pb-2 mb-2 border-b text-gray-primary border-gray-200;
     }
 
     .timing-info-value {
-        @apply font-body font-semibold text-body-s text-gray-900;
+        @apply font-semibold body-base text-gray-primary;
     }
 }
 
 .event-summary-cloud-notice {
-    @apply font-body text-body-s rounded-xl p-4 mb-6 text-gray-700;
-    background-color: var(--color-violet-50);
-    border: 0.5px solid var(--color-violet-primary);
+    @apply body-base rounded-xl p-4 mb-6 text-gray-700 bg-violet-50 border border-violet-primary;
 
     a {
-        color: var(--color-violet-primary);
-        @apply font-semibold;
+        @apply font-semibold text-violet-primary;
     }
 }
 
 .template-event-summary {
     .event-summary-description {
-        @include section-body-small();
+        @apply body-base;
 
         p:first-child {
             @apply mt-0;
@@ -881,69 +750,63 @@
 
 .event-summary-learn {
     .event-summary-learn-title {
-        @apply font-body font-semibold text-body-m text-gray-900 mb-4;
+        @apply font-semibold body-lg mb-4;
     }
 
     .event-summary-learn-list {
         @apply list-none p-0 m-0 flex flex-col gap-3;
 
         li {
-            @apply flex items-start font-body text-body-s m-0;
-            color: #5b5b5b;
+            @apply flex items-start body-base m-0;
 
-            i {
-                color: var(--color-violet-primary);
-                @apply mt-0.5 flex-shrink-0;
+            svg {
+                @apply mt-0.5 flex-shrink-0 text-violet-primary;
             }
         }
     }
 }
 
 .event-single-registration {
-    border: 0.5px solid #CECECE;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    @apply border border-gray-300;
 
     .event-single-registration-title {
-        @include section-header-extra-small();
-        @apply mb-4;
+        @apply heading-3 mb-4;
     }
 }
 
 .template-event-speakers {
-    @apply bg-white;
-    border: 0.5px solid #CECECE;
+    @apply bg-white border border-gray-300;
 
     .event-speakers-label {
-        @apply font-body font-semibold text-body-m text-gray-900;
+        @apply font-semibold body-lg text-gray-primary;
     }
 
     .event-speaker-photo {
-        @apply rounded-full object-cover;
-        width: 48px;
-        height: 48px;
+        @apply rounded-full object-cover w-12 h-12;
     }
 
     .event-speaker-name {
-        @apply font-body font-semibold text-body-s text-gray-900;
+        @apply font-semibold body-base text-gray-primary;
     }
 
     .event-speaker-role {
-        @apply font-body font-normal text-body-s;
-        color: #757576;
+        @apply font-normal body-base text-gray-primary;
     }
 }
 
 .template-feature-split {
     .product-two-column-heading {
-        @include section-header();
+        @apply heading-1;
+        strong {
+            @apply text-violet-primary;
+        }
     }
 
     .product-two-column-description {
         @include section-description();
-        @apply text-body-xl;
 
         p:first-of-type {
-            @apply text-black font-semibold mt-0;
+            @apply font-semibold mt-0;
         }
 
         p+p {
@@ -960,27 +823,7 @@
 .template-social-carousel {
     .template-social-carousel-rows {
         @apply overflow-hidden pb-8 relative;
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        &::before {
-            left: 0;
-            background: linear-gradient(to right, white, transparent);
-        }
-
-        &::after {
-            right: 0;
-            background: linear-gradient(to left, white, transparent);
-        }
+        @include edge-fade;
     }
 
     .template-social-carousel-header {
@@ -997,12 +840,10 @@
 
     .social-carousel-card {
         @extend .card;
-        @apply p-4 md:p-8 flex flex-col gap-4;
-        min-height: 320px;
-        width: 100%;
+        @apply p-4 md:p-8 flex flex-col gap-4 w-full min-h-[320px];
 
         p {
-            @apply text-gray-900 text-left leading-relaxed m-0 line-clamp-5;
+            @apply text-gray-primary text-left leading-relaxed m-0 line-clamp-5;
         }
 
         .social-carousel-card-author {
@@ -1027,39 +868,17 @@
 
     .case-study-cards-description {
         @include section-description();
-        @apply text-body-xl;
 
         p { @apply mt-0; }
     }
 
     .case-study-swiper-wrapper {
         @apply relative;
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        &::before {
-            left: 0;
-            background: linear-gradient(to right, white, transparent);
-        }
-
-        &::after {
-            right: 0;
-            background: linear-gradient(to left, white, transparent);
-        }
+        @include edge-fade;
     }
 
     pulumi-swiper .swiper-slide {
-        @apply items-stretch;
-        height: 50vh;
+        @apply items-stretch h-[50vh];
     }
 
     .case-study-card {
@@ -1072,8 +891,7 @@
         }
 
         &--full {
-            @apply p-8 justify-between;
-            min-height: 50vh;
+            @apply p-8 justify-between min-h-[50vh];
         }
     }
 }

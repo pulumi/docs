@@ -9,6 +9,11 @@ on:
     types: [completed]
     branches: [master]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run — scan + show what would post, no posting / no state write"
+        type: boolean
+        default: false
 
 permissions:
   id-token: write
@@ -34,7 +39,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
 
       - uses: actions/checkout@v6
         with:
@@ -50,7 +55,7 @@ jobs:
           role-session-name: social-scheduling
           aws-region: us-west-2
 
-      - uses: pulumi/actions@v6
+      - uses: pulumi/actions@v7
 
       - name: Get social state bucket name
         id: bucket
@@ -95,6 +100,7 @@ jobs:
           UPLOAD_POST_API_KEY: ${{ steps.esc-secrets.outputs.UPLOAD_POST_API_KEY }}
           SOCIAL_STATE_BUCKET: ${{ steps.bucket.outputs.name }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: uv run scripts/social/schedule-posts.py
 
       - name: Capture failure summary
@@ -122,7 +128,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v2
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

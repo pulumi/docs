@@ -12,9 +12,7 @@ menu:
     identifier: administration-security-compliance-self-hosted-operations-networking
 ---
 
-{{% notes type="info" %}}
-Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, sign up for the [30-day trial](/product/self-hosted#self-hosted-trial) or [contact us](/contact/).
-{{% /notes %}}
+{{< self-hosting-trial-note />}}
 
 This page covers network architecture, multi-AZ deployment, auto-scaling, load balancing, and DNS configuration for production self-hosted deployments.
 

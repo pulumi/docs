@@ -29,13 +29,13 @@
     </div>
     {{ end }}
     {{ with $title }}
-    <h3 class="text-xl md:text-2xl lg:text-3xl font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h3>
+    <h3 class="heading-2 font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h3>
     {{ end }}
     {{ with $description }}
-    <div class="text-base text-service-black leading-6">
+    <div class="body-base text-service-black leading-6">
         {{ . | markdownify }}
         {{ if $isLinked }}
-        <span class="inline-flex items-center text-violet-primary ml-1 align-middle">
+        <span class="inline-flex items-center text-violet-primary ml-1 align-middle -mt-1">
             {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
         </span>
         {{ end }}

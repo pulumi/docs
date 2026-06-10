@@ -25,7 +25,7 @@ The new provider exposes Docker's next-gen [buildx] interface, so now even your 
 
 * __Multi-platform image support__: Build images that run seamlessly across different hardware architectures.
 * __Advanced caching mechanisms__: Speed up builds and reduce resource consumption by utilizing cache backends like S3, GitHub Actions, local disk, and more.
-* __Support for build secrets__: Unlike building images with the `docker` CLI, which requires juggling environment variables or files on disk, Pulumi's first-class support for secrets means you can now safely and efficiently incorporate sensitive information into your builds. With Pulumi ESC ([Environments, Secrets, and Configuration](../environments-secrets-configurations-management)), it's easy to share build secrets with other developers and teams.
+* __Support for build secrets__: Unlike building images with the `docker` CLI, which requires juggling environment variables or files on disk, Pulumi's first-class support for secrets means you can now safely and efficiently incorporate sensitive information into your builds. With Pulumi ESC ([Environments, Secrets, and Configuration](/blog/environments-secrets-configurations-management)), it's easy to share build secrets with other developers and teams.
 * __Support for multiple export types__: Export your images to registries, disk, or blob storage to increase the power and flexibility of your workflows.
 * __Support for Docker Build Cloud__: Use [Docker Build Cloud](https://www.docker.com/products/build-cloud/) to offload your builds and caches to the cloud, enhancing productivity and performance.
 
@@ -33,7 +33,7 @@ The new provider exposes Docker's next-gen [buildx] interface, so now even your 
 
 ## A brief history
 
-Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably [introducing version 4.0](../build-images-50x-faster-docker-v4) last year and additional improvements like `build-on-preview` behavior.
+Pulumi first introduced the [Docker provider] in 2018, and it has been widely adopted since. Over the years, Pulumi has invested in the Docker provider, notably [introducing version 4.0](/blog/build-images-50x-faster-docker-v4) last year and additional improvements like `build-on-preview` behavior.
 
 At the same time, the Docker build ecosystem has seen tremendous advancements in how images can be built and distributed. These changes were initially experimental, but they became official when BuildKit graduated to become the
 default builder in Docker version 23.

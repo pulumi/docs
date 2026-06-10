@@ -4,7 +4,7 @@
 {{ end }}
 <section class="bg-violet-background text-gray-950"{{ with $cta.anchor }} id="{{ . }}"{{ end }}>
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-5 md:gap-12 px-4 py-7 text-center md:text-left">
-        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">{{ $cta.heading }}</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-0">{{ $cta.heading }}</h2>
         <div class="flex gap-2.5 items-center shrink-0">
             {{ range $cta.buttons }}
                 {{ $class := "btn btn-primary btn-xl" }}

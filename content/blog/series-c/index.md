@@ -16,7 +16,7 @@ Today we announced a $41M Series C fundraise from Madrona Ventures, NEA, Tola Ca
 
 Over 2,000 customers have chosen Pulumi Cloud for their infrastructure as code needs. Many more companies build on our open source, including over half of the Fortune 50. And we estimate that our community recently surpassed 150,000 happy and productive end users.
 
-![Pulumi Powers AI and Platform Teams](./pulumi-powers-customers.png)
+![Pulumi Powers AI and Platform Teams](/blog/series-c/pulumi-powers-customers.png)
 
 This year we made the top 5% of the [Inc. 5000](https://www.inc.com/inc5000) Fastest Growing Companies in America and were listed in [Redpoint’s InfraRed 100](https://www.redpoint.com/infrared/100/), to highlight transformative cloud infrastructure companies. This momentum will continue to propel us even further on our growth trajectory.
 
@@ -30,7 +30,7 @@ Our thesis was that we went through a one way door with cloud software. We have 
 
 By applying the industry’s best languages to the infrastructure as code space, we gave the cloud a programmable surface area. We can now treat cloud building blocks as programmable objects and build bigger things out of smaller things. The cloud is the new operating system and this foundational technology lays the groundwork for us to realize our long-term vision.
 
-![Pulumi Infrastructure as Code](./pulumi-iac.png)
+![Pulumi Infrastructure as Code](/blog/series-c/pulumi-iac.png)
 
 Fast forward 7 years, and Pulumi is the fastest growing infrastructure as code product and has inspired others, fundamentally reshaping the landscape. Our end users and customers tell us all the time they feel not just 10% more productive, but 10x more productive, thanks to rich, expressive languages, great tools and editors, sharing and reuse, and because infrastructure as code in any language also means infrastructure as code for anybody in the whole team.
 
@@ -52,7 +52,7 @@ Last year, we then began branching out into entirely new product lines:
 
 Pulumi is gradually shifting from a single infrastructure as code product to a complete enterprise platform. As we build out the platform, we do so in a highly integrated way. Pulumi Cloud pulls it all together with a unified data model, REST API, identity model, and AI model. These are not a loosely related assortment of technologies – they are deeply integrated, and can increasingly be adopted independently, but are better together even more than the sum of the parts.
 
-![Pulumi Platform](./pulumi-platform.png)
+![Pulumi Platform](/blog/series-c/pulumi-platform.png)
 
 ## What’s next for Pulumi
 
@@ -80,4 +80,4 @@ To our end users, we would not be here if it weren’t for you. Whether you are 
 
 From the entire Pulumi team, thank you!
 
-![Pulumi Team](./pulumi-team.png)
+![Pulumi Team](/blog/series-c/pulumi-team.png)

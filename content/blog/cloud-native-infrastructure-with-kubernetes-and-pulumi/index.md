@@ -85,7 +85,7 @@ This command works the first time -- when all resources will be created
 -- in addition to all subsequent updates. Each update will show a full
 diff of what has changed before you deploy anything:
 
-![Pulumi diffing resources](./diff.gif)
+![Pulumi diffing resources](/blog/cloud-native-infrastructure-with-kubernetes-and-pulumi/diff.gif)
 
 Because Pulumi also supports resources for all clouds -- including AWS,
 Azure, Google Cloud, OpenStack, and VMWare vSphere -- you can mix and

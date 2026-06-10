@@ -19,7 +19,7 @@ This walk-through shows you how to create a new project using `pulumi new`, uplo
 
 ### Prerequisites
 
-Before you start, configure a [version control integration](/docs/integrations/version-control/) for your Pulumi organization. Deployments works with [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). This walkthrough uses GitHub and the `gh` CLI, but equivalent workflows are available for Azure DevOps and GitLab.
+Before you start, configure a [version control integration](/docs/integrations/version-control/) for your Pulumi organization. Deployments works with any of Pulumi's version control integrations. This walkthrough uses GitHub and the `gh` CLI, but the same workflow applies to any supported provider.
 
 You will need the following tools to complete this tutorial:
 
@@ -136,11 +136,11 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
 
 * Click on `Settings` and then `Deploy` on the left.
 
-![Navigation to settings](../../ui-deployment-settings-nav.gif)
+![Navigation to settings](/docs/deployments/deployments/ui-deployment-settings-nav.gif)
 
 * You should see settings like this:
 
-![Deployment Settings](../../ui-settings.png)
+![Deployment Settings](/docs/deployments/deployments/ui-settings.png)
 
 * Fill out the `Source control settings`
 
@@ -149,7 +149,7 @@ Alternatively, you can navigate to `https://app.pulumi.com`, select `Stacks` in 
   * Select the `main` branch
   * Leave the `Pulumi.yaml folder` blank, we put our project in the root folder.
 
-![Github Repo](../../ui-github-repo.gif)
+![Github Repo](/docs/deployments/deployments/ui-github-repo.gif)
 
 * Now configure settings specific to your Deployment, such as:
   * [OIDC Connect](/docs/pulumi-cloud/oidc/)
@@ -159,4 +159,4 @@ See [Pulumi Deployment Settings](/docs/deployments/deployments/using/settings) f
 
 Finally, click the `Save deployment configuration` button to save our settings, and click the "Deploy" button in the top right to trigger a deployment.
 
-![Deploy Button](../../ui-deploy-button.gif)
+![Deploy Button](/docs/deployments/deployments/ui-deploy-button.gif)

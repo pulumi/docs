@@ -17,12 +17,10 @@ aliases:
 
 The `ignoreChanges` resource option specifies a list of properties that Pulumi will ignore when it updates existing resources. Pulumi ignores a property by using the old value from the state instead of the value provided by the Pulumi program when determining whether an update or replace is needed. Ignored properties will still be used from the program when there is no previous value in the state (most commonly when creating the resource).
 
+{{< resource-option-scope "ignoreChanges" >}}
+
 {{% notes type="info" %}}
 The `ignoreChanges` option only applies to resource inputs, not outputs.
-{{% /notes %}}
-
-{{% notes type="warning" %}}
-The `ignoreChanges` resource option does not automatically apply to inputs to component resources.  If `ignoreChanges` is passed to a component resource, it is up to that component's implementation to decide what if anything it will do.
 {{% /notes %}}
 
 In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs. See [property paths](/docs/reference/property-paths/) for examples of legal paths that can be passed to specify nested properties of objects and arrays.
@@ -41,7 +39,7 @@ After the resource is created, Pulumi relies on the last recorded state for ever
 1. Uses the serialized value from the stack state for any later previews or updates.
 1. Does not automatically read the live value for the property unless you run a refresh.
 
-Because Pulumi reuses the value stored in the state, an external system can safely update the live resource as long as you synchronize the stack before the next update. Run `pulumi refresh` (or `pulumi up --refresh`) to pull the latest provider values into the state. Skipping the refresh step leaves stale values in the state, and Pulumi will continue to send those stale values to the provider during subsequent updates, which can overwrite the drift you meant to preserve.
+Because Pulumi reuses the value stored in the state, an external system can safely update the live resource as long as you synchronize the stack before the next update. Run `pulumi refresh` (or `pulumi up --refresh`) to pull the latest provider values into the state. Skipping the refresh step leaves stale values in the state, and Pulumi will continue to send those stale values to the provider during subsequent updates, which can overwrite the drift you meant to preserve. For the full workflow around detecting and reconciling drift, see [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/).
 
 {{% notes type="warning" %}}
 When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` has been set, Pulumi keeps using the previous state value when it performs an update. This can lead to unintentional changes if the cloud state has been changed (either through intentional external management, or unintentional drift). Providers that require full object replacements—such as AWS load balancer listeners where the entire target group array is sent on every update—will receive the potentially stale values from the state and may reset the live configuration.

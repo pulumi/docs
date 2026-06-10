@@ -4,6 +4,7 @@ layout: product-page
 type: page
 aliases:
   - /neo
+  - /gads/neo
   - /copilot
   - /product/copilot
   - /product/pulumi-copilot
@@ -18,7 +19,9 @@ meta_image: /images/product/neo/neo-meta.png
 
 sections:
   - type: hero
-    title: "Meet Neo, your new AI infrastructure agent."
+    title_primary: "AI infrastructure agent."
+    title_secondary: "Meet Neo, your new"
+    title_reversed: true
     description: Neo provisions, governs, and optimizes your cloud infrastructure — with enterprise controls built in.
     image: /images/product/neo/neo-hero.svg
     image_alt: Neo AI infrastructure agent diagram showing Kubernetes cluster upgrade automation
@@ -104,7 +107,7 @@ sections:
     highlight_first_card: true
     columns:
       - title: Experience Neo today
-        description: Neo is available in preview for all Pulumi users. Experience the future of platform engineering automation.
+        description: Neo is generally available to all Pulumi users. Experience the future of platform engineering automation.
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo

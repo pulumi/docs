@@ -1,6 +1,6 @@
 ---
 title: "Better CLI Interactions for Agents and Humans"
-date: 2026-05-19T01:00:00-07:00
+date: 2026-05-19T04:00:00-07:00
 draft: false
 meta_desc: "A quick look at the new features and ergonomics in the Pulumi CLI that make it better for for humans and AI agents alike."
 meta_image: meta.png
@@ -245,9 +245,9 @@ When we launched [Pulumi Neo](/neo/) last year, the only way to use it was in th
 
 Now you do. Running `pulumi neo` with or without a prompt launches a Pulumi Cloud-connected session that gives Neo access to your local environment just like any other coding agent. Use it on its own to scaffold a new project, understand an existing codebase, or debug a failing deployment — or pull it into an active session with the coding agent you're already using. Either way, it stays in the shell you're already working in.
 
-We'll cover Neo in the CLI in more detail later this week. In the meantime, here's a peek:
+We'll cover Neo in the CLI in more detail [later this week](/blog/pulumi-neo-cli/). In the meantime, here's a peek:
 
-![Running Neo in the Pulumi CLI](./neo-cli.png)
+![Running Neo in the Pulumi CLI](/blog/better-cli-interactions-for-agents-and-humans/neo-cli.png)
 
 ## Smaller changes that add up
 
@@ -295,6 +295,6 @@ More on how it works, and what you can do with it, in the days ahead.
 
 ## Try it yourself
 
-A lot of what makes a developer tool worth using is in the details, and most of what's in this release is exactly that, across the whole CLI, with humans and agents in mind.
+A lot of what makes a developer tool worth using is in the details, and most of what's in [this release](/releases/agentic-infrastructure-era/) is exactly that, across the whole CLI, with humans and agents in mind.
 
 We'd love for you to [grab the latest release](/docs/get-started/download-install/) and give it a try. Tell us what's now easy, what's still hard, and what to fix next on [GitHub](https://github.com/pulumi/pulumi/issues) or in the [community Slack](https://slack.pulumi.com/). The fastest way the CLI gets better is feedback from the humans and agents who live in it.

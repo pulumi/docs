@@ -446,11 +446,11 @@ know that we now have an issue that we need to go track down.
 
 We can very clearly see such failures in the Pulumi Service:
 
-![Failed Deployment](./failed-deployment.png)
+![Failed Deployment](/blog/unit-testing-infrastructure-in-nodejs-and-mocha/failed-deployment.png)
 
 And if we select it, we'll see the complete Mocha test output:
 
-![Failed Deployment Details](./failed-deployment-details.png)
+![Failed Deployment Details](/blog/unit-testing-infrastructure-in-nodejs-and-mocha/failed-deployment-details.png)
 
 We could even [use webhooks](/docs/pulumi-cloud/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in

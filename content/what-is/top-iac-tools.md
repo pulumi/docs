@@ -1,14 +1,14 @@
 ---
 title: Top Infrastructure as Code Tools
 meta_desc: |
-     Explore top Infrastructure as Code (IaC) tools for cloud resource management. Find the best fit for your DevOps needs.
+     Compare the top infrastructure as code (IaC) tools — Pulumi, Terraform, OpenTofu, CloudFormation, and more — on multi-cloud support, state, and ecosystem.
 meta_image: /images/what-is/top-iac-tools-meta.png
 type: what-is
 page_title: "Top Infrastructure as Code Tools"
 authors: ["adam-gordon-bell"]
 ---
 
-Infrastructure as Code tools (IaC tools) let you automate the setup of your cloud resources. Instead of manually configuring resources in your cloud web console, you can write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.
+[Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) tools (IaC tools) let you automate the setup of your cloud resources. Instead of manually configuring resources in your cloud web console, you can write a script that specifies what you need, and the cloud provider sets it up for you. It's a great way to make infrastructure setup consistent and repeatable.
 
 But which tool should you choose? We all have our favorites (and biases 😉), but let's take a look at a combination of modern multi-cloud tools, vendor and cloud-specific solutions, and some lesser-known options to give you the lay of the land.
 
@@ -135,3 +135,10 @@ Each tool offers unique strengths and potential trade-offs:
 We've shown you the options – now let us make our case for Pulumi. Pulumi's use of general-purpose programming languages for infrastructure definition provides familiar syntax, powerful abstractions, and seamless integration with existing development workflows. Its multi-cloud support allows you to manage resources across AWS, Azure, Google Cloud, and many other providers using a single tool and consistent approach. Sure, the community is a little smaller than Terraform's, but the combination of language flexibility and multi-cloud capability offers a uniquely powerful and adaptable IaC solution. It's something you need to experience. Don't take our word for it – [try it yourself](https://www.pulumi.com/product/infrastructure-as-code/).
 
 But regardless of the tool you choose, the benefits of embracing Infrastructure as Code are clear. IaC brings consistency to deployments, enables version control for infrastructure, increases automation, and improves scalability. If you're new to IaC, the most important step is to start now. If you're already using it, focus on refining your approach. IaC continues to deliver value as your needs evolve.
+
+## Learn more
+
+- [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code)
+- [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
+- [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
+- [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing)

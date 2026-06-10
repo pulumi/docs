@@ -1,0 +1,25 @@
+{{- /*
+  Builds the Markdown body for the resource-option classification callout.
+  Expects a dict: { "name": <camelCase option name>, "data": <entry from
+  data/resource_options.yaml> }. Returns a Markdown string.
+*/ -}}
+{{- $name := .name -}}
+{{- $data := .data -}}
+{{- $applies := $data.applies_to -}}
+{{- $typed := $data.typed_on -}}
+{{- $text := "" -}}
+{{- if eq $applies "both" -}}
+  {{- $text = printf "**Applies to custom and component resources.** The `%s` resource option applies to both [custom resources](/docs/iac/concepts/resources/) and [component resources](/docs/iac/concepts/components/). It is defined on the base resource-options type in every Pulumi SDK." $name -}}
+{{- else if eq $applies "component" -}}
+  {{- $text = printf "**Applies to component resources only.** The `%s` resource option applies only to [component resources](/docs/iac/concepts/components/). In the TypeScript, C#, and Java SDKs it is defined on `ComponentResourceOptions`, so passing it to a custom resource is a compile-time error. The Python and Go SDKs expose a single resource-options type, so the option is accepted at compile time and silently ignored at runtime if the resource doesn't support it." $name -}}
+{{- else if eq $applies "provider" -}}
+  {{- $text = printf "**Applies to provider resources only.** The `%s` resource option affects only explicitly configured [provider resources](/docs/iac/concepts/providers/). It has no effect on ordinary custom resources or on component resources." $name -}}
+{{- else if eq $typed "custom-options" -}}
+  {{- $text = printf "**Applies to custom resources only.** The `%s` resource option applies only to custom resources. In the TypeScript, C#, and Java SDKs it is defined on `CustomResourceOptions`, so passing it to a [component resource](/docs/iac/concepts/components/) is a compile-time error. The Python and Go SDKs expose a single resource-options type, so the option is accepted at compile time and has no direct effect when applied to a component resource." $name -}}
+{{- else -}}
+  {{- $text = printf "**Applies to custom resources only.** The `%s` resource option has no direct effect on [component resources](/docs/iac/concepts/components/). It is defined on the base resource-options type in every Pulumi SDK, so no SDK rejects it at compile time — passing it to a component resource has no direct effect at runtime." $name -}}
+{{- end -}}
+{{- with $data.note -}}
+  {{- $text = printf "%s %s" $text (. | chomp) -}}
+{{- end -}}
+{{- $text -}}

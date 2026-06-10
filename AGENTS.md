@@ -77,8 +77,8 @@ Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias 
 
 When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
-- **DO update** links in `/content/docs/` and `/content/product/`.
-- **DO NOT update** links in `/content/blog/` or `/content/tutorials/` — they're historical.
+- **DO update** links in `/content/docs/`, `/content/product/`, and `/content/tutorials/`.
+- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement (stamp `lastmod`); otherwise route around it with an alias/redirect.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
 For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
@@ -88,6 +88,12 @@ For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
 ## Navigation and llms.txt
 
 The left nav is data-driven from `data/docs_menu_sections.yml`, which is consumed by `layouts/partials/docs/menu.html` (the rendered nav), `layouts/index.llms.txt` (the curated `/llms.txt` index), and `layouts/partials/llm-sitemap-walk.json` (the `/docs/llm-sitemap.json` machine-readable sitemap). When you add, remove, or reorder top-level nav sections, all three flow through automatically. Per-section descriptions in `/llms.txt` come from each landing page's `meta_desc` front-matter — edit the page if you need to change how it reads in the index.
+
+---
+
+## Resource options
+
+The reference pages under `content/docs/iac/concepts/resources/options/` show a classification callout (custom resource / component resource / both, plus per-SDK enforcement) rendered by the `resource-option-scope` shortcode. The classification data — and the summary table on that section's `_index.md` — is generated from `data/resource_options.yaml`, which is the single source of truth. **When you add a new resource option, you must add an entry to `data/resource_options.yaml` and place the `{{< resource-option-scope "<name>" >}}` shortcode on the new page.** That file's header comment is the authoritative step-by-step checklist; the build fails if a page references an option missing from the data file.
 
 ---
 

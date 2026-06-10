@@ -35,7 +35,7 @@ When you search for resources in Pulumi Cloud, our system now automatically iden
 
 Resources with multiple sources are marked with a distinctive <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: middle;"> icon in search results. This visual indicator lets you immediately identify which resources have rich, multi-source information available.
 
-![Unified Resource search](./unified-resource-search.png)
+![Unified Resource search](/blog/unified-resources-release/unified-resource-search.png)
 
 The consolidation happens automatically. Your existing workflows continue unchanged, but now with cleaner, more actionable results.
 
@@ -43,7 +43,7 @@ The consolidation happens automatically. Your existing workflows continue unchan
 
 The centerpiece of this release is the completely redesigned resource details page. Previously, clicking on a resource from different sources led to separate, disconnected views. Now, every resource has a single, unified details page that brings together all available information.
 
-![Unified resource details page overview](./unified-resource-details.png)
+![Unified resource details page overview](/blog/unified-resources-release/unified-resource-details.png)
 
 ### Complete Source Visibility
 
@@ -61,7 +61,7 @@ Compare resource properties across all sources to:
 * View complete metadata from both IaC and cloud discovery
 * Track property changes over time
 
-![Unified Resource properties](./unified-resource-properties.png)
+![Unified Resource properties](/blog/unified-resources-release/unified-resource-properties.png)
 
 ## Key Benefits for Your Team
 

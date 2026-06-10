@@ -52,7 +52,7 @@ Hands-on Infrastructure as Code guides for building on Azure with Pulumi.
 
 - [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/) — compare Azure Native and Azure Classic.
 - [Convert ARM templates to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/) — migrate existing ARM templates.
-- [Azure DevOps CI/CD](/docs/iac/guides/continuous-delivery/azure-devops/) — drive Pulumi stack updates from Azure DevOps pipelines.
+- [Azure DevOps CI/CD](/docs/iac/operations/continuous-delivery/azure-devops/) — drive Pulumi stack updates from Azure DevOps pipelines.
 
 ## Secrets & configuration (ESC)
 
@@ -60,9 +60,9 @@ Hands-on Infrastructure as Code guides for building on Azure with Pulumi.
 
 ESC integrates directly with Azure for short-lived credentials and secret retrieval:
 
-- [Azure OIDC login](/docs/esc/integrations/dynamic-login-credentials/azure-login/) — generate short-lived Azure credentials for Pulumi programs and workflows.
-- [Azure Key Vault](/docs/esc/integrations/dynamic-secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
-- [Azure application secret rotation](/docs/esc/integrations/rotated-secrets/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
+- [Azure OIDC login](/docs/esc/providers/login/azure-login/) — generate short-lived Azure credentials for Pulumi programs and workflows.
+- [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/) — pull secrets from Key Vault into ESC environments.
+- [Azure application secret rotation](/docs/esc/providers/rotators/azure-app-secret/) — rotate Azure AD application secrets on a schedule.
 
 ## Insights
 

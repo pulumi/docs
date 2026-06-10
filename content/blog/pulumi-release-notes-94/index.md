@@ -2,6 +2,7 @@
 title: "Pulumi Release Notes: AI in the CLI, Go generics, AWS 6.0, Review Stacks and so much more!"
 allow_long_title: true
 date: 2023-09-29T09:00:00-04:00
+lastmod: 2026-06-03
 draft: false
 meta_desc: The latest Pulumi updates include AI in the CLI, Go generics, AWS 6.0, Review Stacks and so much more!
 meta_image: meta.png
@@ -225,7 +226,7 @@ The [Pulumi Azure Native provider](/registry/packages/azure-native/) 2.0 has bee
 
 ### Kubernetes 4.0
 
-[Pulumi Kubernetes 4.0](/registry/packages/kubernetes/) brings new enhancements in managing Kubernetes resources. It embraces Kubernetes Server-Side Apply as the default mode, enabling features like upserting and Patch resources. Improved diffs remove the dependence on kubectl annotations, and provide simpler access to outputs in the Python, Go and Java SDKs, supporting any self-hosted or managed Kubernetes cluster with version 1.13 or newer. You can migrate existing projects or start new ones with Kubernetes 4.0 for superior Kubernetes resource management. Find more information in the [blog post](/blog/kubernetes-4-0-even-more-kubernetes-native/) and [migration guide](/registry/packages/kubernetes/how-to-guides/v4-migration/).
+[Pulumi Kubernetes 4.0](/registry/packages/kubernetes/) brings new enhancements in managing Kubernetes resources. It embraces Kubernetes Server-Side Apply as the default mode, enabling features like upserting and Patch resources. Improved diffs remove the dependence on kubectl annotations, and provide simpler access to outputs in the Python, Go and Java SDKs, supporting any self-hosted or managed Kubernetes cluster with version 1.13 or newer. You can migrate existing projects or start new ones with Kubernetes 4.0 for superior Kubernetes resource management. Find more information in the [blog post](/blog/kubernetes-4-0-even-more-kubernetes-native/) and [migration guide](https://web.archive.org/web/20250123192709/https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/v4-migration/).
 
 ### OIDC Support for Azure
 
@@ -235,11 +236,11 @@ The [Azure Native](/registry/packages/azure-native/) and [Azure Classic](/regist
 
 In addition to releasing major versions of 3 of our most popular providers, we're always keeping our providers up-to-date to bring you the latest functionality in your Pulumi programs. We've added 793 resources and 762 functions across our most popular providers, along with many more throughout our ecosystem.
 
-![resource_additions](./resource_additions.png)
+![resource_additions](/blog/pulumi-release-notes-94/resource_additions.png)
 
 ### New Community Providers
 
-![new_community_providers](./new_community_providers.png)
+![new_community_providers](/blog/pulumi-release-notes-94/new_community_providers.png)
 
 Welcome to the 17 new community providers in the registry!
 

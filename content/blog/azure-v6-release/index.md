@@ -60,7 +60,7 @@ Over the last two years, we have added support for several new modules. Among th
 
 The below chart shows the growth of this provider by resource, function, and supporting types since Version 5.
 
-![azure-coverage](./azure-coverage.png)
+![azure-coverage](/blog/azure-v6-release/azure-coverage.png)
 
 ## Upgrading
 

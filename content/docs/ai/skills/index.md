@@ -28,7 +28,7 @@ Agent Skills are reusable knowledge packages that teach AI coding assistants dom
 
 ## Available Skills
 
-Skills are organized into two plugin groups: Migration and Authoring.
+Skills are organized into three plugin groups: Migration, Pulumi, and Delegation.
 
 ### Migration Plugin
 
@@ -37,22 +37,33 @@ Convert and import infrastructure from other tools to Pulumi:
 | Skill | Description |
 |-------|-------------|
 | pulumi-terraform-to-pulumi | Migrate Terraform projects to Pulumi |
+| pulumi-cdk-to-pulumi | Migrate AWS CDK applications to Pulumi |
 | cloudformation-to-pulumi | Migrate AWS CloudFormation stacks/templates to Pulumi |
-| pulumi-cdk-to-pulumi | Convert AWS CDK applications to Pulumi |
-| pulumi-arm-to-pulumi | Convert Azure ARM templates and Bicep to Pulumi |
+| pulumi-arm-to-pulumi | Migrate Azure ARM templates and Bicep to Pulumi |
 
-### Authoring Plugin
+### Pulumi Plugin
 
-Write quality Pulumi programs, components, automation, and secrets management:
+Entry-point and specialized skills for writing and operating Pulumi infrastructure:
 
 | Skill | Description |
 |-------|-------------|
+| pulumi-overview | Entry-point across `pulumi do`, IaC projects, and Pulumi Cloud; routes to specialized skills |
 | pulumi-best-practices | Best practices for writing reliable Pulumi programs |
 | pulumi-component | Guide for authoring ComponentResource classes |
 | pulumi-automation-api | Best practices for using Pulumi Automation API |
 | pulumi-esc | Guidance for working with Pulumi ESC (Environments, Secrets, and Configuration) |
+| package-usage | Audit which stacks across an organization use a package and at what versions |
+| provider-upgrade | Safely upgrade a Pulumi provider and reconcile the resulting diff |
 | pulumi-upgrade-provider | Automate Pulumi provider repo upgrades with the `upgrade-provider` tool |
 | upstream-patches | Manage upstream Terraform patch stacks in provider repos |
+
+### Delegation Plugin
+
+Hand off in-progress work from coding agents to Pulumi Neo:
+
+| Skill | Description |
+|-------|-------------|
+| pulumi-neo-handoff | Transfer the current work to a Pulumi Neo task with goal, repository pointers, and a compacted conversation summary |
 
 ## Installation
 
@@ -62,9 +73,20 @@ For Claude Code users, the plugin system provides the simplest installation expe
 
 ```bash
 claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration     # Install migration skills
-claude plugin install pulumi-authoring     # Install authoring skills
+claude plugin install pulumi-migration      # Install migration skills
+claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
+claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
 ```
+
+### OpenAI Codex
+
+Register the marketplace, then install plugins from the Codex TUI:
+
+```bash
+codex plugin marketplace add pulumi/agent-skills
+```
+
+Once the marketplace is registered, run `codex`, open the plugin marketplace, and pick `pulumi-migration`, `pulumi`, or `pulumi-delegation`.
 
 ### Universal Installation
 
@@ -77,8 +99,9 @@ npx skills add pulumi/agent-skills --skill '*'
 Or install individual plugin groups:
 
 ```bash
-npx skills add pulumi/agent-skills/migration --skill '*'     # 4 migration skills
-npx skills add pulumi/agent-skills/authoring --skill '*'     # 6 authoring skills
+npx skills add pulumi/agent-skills/migration --skill '*'      # 4 migration skills
+npx skills add pulumi/agent-skills/pulumi --skill '*'         # 9 pulumi skills (overview + specialized)
+npx skills add pulumi/agent-skills/delegation --skill '*'     # 1 delegation skill
 ```
 
 This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools. To install for a specific agent, use the `--agent` flag:
@@ -88,6 +111,16 @@ npx skills add pulumi/agent-skills --skill '*' --agent junie
 ```
 
 ## Usage Examples
+
+### General Pulumi Infrastructure
+
+Ask your AI assistant:
+
+```text
+Create an S3 bucket and a Cloudflare DNS record
+```
+
+The assistant will use the `pulumi-overview` skill and route to specialized skills when deeper expertise is needed.
 
 ### Terraform to Pulumi Migration
 
@@ -126,6 +159,26 @@ Help me create a reusable Pulumi component for a web service
 ```
 
 The assistant will use the `pulumi-component` skill to guide you through component authoring best practices.
+
+### Upgrading Providers
+
+Ask your AI assistant:
+
+```text
+Help me upgrade the Pulumi AWS provider safely without changing real infrastructure
+```
+
+The assistant will use the `provider-upgrade` skill to guide you through a low-risk upgrade workflow.
+
+### Handing Off Work to Pulumi Neo
+
+Ask your AI assistant:
+
+```text
+Hand this off to Neo to apply the staging migration in production
+```
+
+The assistant will use the `pulumi-neo-handoff` skill to package the goal, repository state, and conversation summary into a new Pulumi Neo task and return a task URL.
 
 ## Contributing
 

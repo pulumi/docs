@@ -135,6 +135,10 @@ section.docs-content div.note {
     :last-child {
         padding-bottom: 0;
     }
+
+    div.content p {
+        font-size: inherit; // 14px normally, 17px for .note-large; overrides the 16px docs-content p rule
+    }
 }
 
 blockquote.pullquote {

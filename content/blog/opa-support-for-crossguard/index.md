@@ -156,7 +156,7 @@ Permalink: https://app.pulumi.com/lukehoban/policypacks/kubernetes/2
 
 You can now navigate into the Pulumi Service and configure the new policy to be part of the "default" policy pack (or create a new one), and applied to all stacks in your Organization (or select specify stacks to enforce the policy on).
 
-![Policy Configuration](./console-default-policy.png)
+![Policy Configuration](/blog/opa-support-for-crossguard/console-default-policy.png)
 
 We can now run our deployment without the `--policy-pack` argument and our policy will still be enforced on this deployment (and any others done by any other users in our organization)!
 
@@ -192,7 +192,7 @@ Permalink: https://app.pulumi.com/lukehoban/simple-kubernetes/dev2/updates/1
 
 We can now navigate to the URL for our update and see that the policy was enforced. Note the badge showing that this deployment was protected by policy enforcement and the list of policy violations.
 
-![Policy Enforcement](./console-policy-enforcement.png)
+![Policy Enforcement](/blog/opa-support-for-crossguard/console-policy-enforcement.png)
 
 ## Using OPA Rego with Pulumi
 
@@ -218,7 +218,7 @@ deny[msg] {
 
 With support in Visual Studio Code, authoring both your infrastructure and policy in a rich IDE using Pulumi is also possible.
 
-![VSCode for OPA and Pulumi](./vscode-rego.png)
+![VSCode for OPA and Pulumi](/blog/opa-support-for-crossguard/vscode-rego.png)
 
 ## Conclusion
 

@@ -59,7 +59,7 @@ Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
 - [Amazon ECR](/docs/iac/guides/clouds/aws/ecr/) — build and publish images to Elastic Container Registry.
 - [Elastic Load Balancing](/docs/iac/guides/clouds/aws/elb/) — configure application and network load balancers.
 - [AWS API Gateway](/docs/iac/guides/clouds/aws/api-gateway/) — configure HTTP and REST APIs on API Gateway.
-- [AWS CodePipeline & CodeDeploy](/docs/iac/guides/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
+- [AWS CodePipeline & CodeDeploy](/docs/iac/operations/continuous-delivery/aws-code-services/) — drive Pulumi stack updates from AWS developer tools.
 
 ## Secrets & configuration (ESC)
 
@@ -67,11 +67,11 @@ Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
 
 ESC integrates directly with AWS for short-lived credentials and secret retrieval:
 
-- [AWS OIDC login](/docs/esc/integrations/dynamic-login-credentials/aws-login/) — generate short-lived AWS credentials for Pulumi programs and workflows.
-- [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/) — pull secrets from Secrets Manager into ESC environments.
-- [AWS Systems Manager Parameter Store](/docs/esc/integrations/dynamic-secrets/aws-parameter-store/) — pull configuration and secrets from Parameter Store into ESC environments.
-- [AWS IAM credential rotation](/docs/esc/integrations/rotated-secrets/aws-iam/) — rotate IAM access keys on a schedule.
-- [AWS Lambda rotator](/docs/esc/environments/rotation/aws-lambda/) — rotate arbitrary secrets via an AWS Lambda function.
+- [AWS OIDC login](/docs/esc/providers/login/aws-login/) — generate short-lived AWS credentials for Pulumi programs and workflows.
+- [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/) — pull secrets from Secrets Manager into ESC environments.
+- [AWS Systems Manager Parameter Store](/docs/esc/providers/secrets/aws-parameter-store/) — pull configuration and secrets from Parameter Store into ESC environments.
+- [AWS IAM credential rotation](/docs/esc/providers/rotators/aws-iam/) — rotate IAM access keys on a schedule.
+- [AWS Lambda rotator](/docs/esc/operations/rotation/aws-lambda/) — rotate arbitrary secrets via an AWS Lambda function.
 
 ## Insights
 
