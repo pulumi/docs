@@ -564,7 +564,7 @@ comparison_table:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
                 items:
-                  - content: 15M tokens/mo
+                  - content: 5M tokens/mo
                     subtext: free
                   - content: $3/M tokens
                   - content: $3/M tokens
