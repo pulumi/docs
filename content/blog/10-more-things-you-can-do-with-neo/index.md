@@ -91,7 +91,7 @@ You ask a couple of clarifying questions in-thread, then ask Neo to open a rollb
 ![Neo Settings → Integrations page: six integrations available with Authorize buttons for Atlassian, Datadog, Honeycomb, Linear, PagerDuty, and Supabase](neo-integration-catalog.png)
 {{< figcaption >}}Authorize PagerDuty and Datadog in Neo's settings. Neo can then read alerts in your on-call Slack channel, find the change that correlates, and open a PR when you ask.{{< /figcaption >}}
 
-## 4. Implement a Linear ticket end-to-end
+## 4. Implement a Jira or Linear ticket end-to-end
 
 *Hand Neo a ticket number from Linear, Jira, or GitHub Issues. Neo reads the description and acceptance criteria, plans against your stack, and opens a PR.*
 
