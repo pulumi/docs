@@ -129,7 +129,7 @@ Additionally, they had to carefully consider how to handle the various edge case
 
 As they worked through the transition to Pulumi, they realized the significant benefits that Pulumi offered to both the SST team as the framework developers and the users.
 
-![A quote from the Founding Engineer at SST: "With Pulumi, the deployment process feels like a natural extensino of writing code - it's intuitive and powerful and capable of advanced things that traditional IaC tools can't handle."](sst-with-pulumi-infrastructure-as-code-deployments.png)
+![A quote from the Founding Engineer at SST: "With Pulumi, the deployment process feels like a natural extension of writing code - it's intuitive and powerful and capable of advanced things that traditional IaC tools can't handle."](sst-with-pulumi-infrastructure-as-code-deployments.png)
 
 ### Improved Visibility and Debugging
 

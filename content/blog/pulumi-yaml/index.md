@@ -1,7 +1,7 @@
 ---
 title: "Pulumi YAML: A Simple Declarative Interface for Pulumi"
 date: 2022-05-04T06:58:00-07:00
-meta_desc: "Introducing Pulumi YAML, a simple decalrative interface to the Pulumi Platform, designed for smaller scale cloud infrastructure use cases."
+meta_desc: "Introducing Pulumi YAML, a simple declarative interface to the Pulumi Platform, designed for smaller scale cloud infrastructure use cases."
 meta_image: pulumi-yaml.png
 authors:
     - luke-hoban

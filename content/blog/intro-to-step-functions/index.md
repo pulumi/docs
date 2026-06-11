@@ -97,11 +97,11 @@ aws stepfunctions start-execution --state-machine-arn $(pulumi stack output stat
 
 Then check the AWS console to see if the lambda was executed.
 
-![AWS Severless Console Step Functions screenshot](sf-console-1.png)
+![AWS Serverless Console Step Functions screenshot](sf-console-1.png)
 
 Clicking on the `Name` displays the step details, which include the input and out, i.e., ‘Hello world!’
 
-![AWS Severless Console with 1 step function visual workflow](sf-console-2.png)
+![AWS Serverless Console with 1 step function visual workflow](sf-console-2.png)
 
 The AWS console provides a graph of your workflow and the details of each step. Clicking on `Output` shows “Hello world” meaning that the call to the lambda function was successful.
 

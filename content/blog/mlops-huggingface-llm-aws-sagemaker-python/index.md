@@ -59,7 +59,7 @@ In this short tutorial we will deploy a publicly available [Meta AI LlaMa 2] bas
 
 ## Pulumi makes AI/ML Easy?
 
-We will use the `sagemaker-aws-python` [Pulumi Template] to bootstrap our Python SageMaker IaC. Templates allow you to quickly bootstrap new Pulumi projects from a working scaffold which you can then customize further to your needs. Out of the box, this template provisions Amazon [IAM Roles] to assign SageMaker privileges, [CloudWatch alarms] to alert incase of latency or error spikes for the endpoint, and of course a [Meta AI LlaMa 2] based LLM ([NousResearch/Llama-2-7b-chat-hf]) hosted on [Hugging Face].
+We will use the `sagemaker-aws-python` [Pulumi Template] to bootstrap our Python SageMaker IaC. Templates allow you to quickly bootstrap new Pulumi projects from a working scaffold which you can then customize further to your needs. Out of the box, this template provisions Amazon [IAM Roles] to assign SageMaker privileges, [CloudWatch alarms] to alert in case of latency or error spikes for the endpoint, and of course a [Meta AI LlaMa 2] based LLM ([NousResearch/Llama-2-7b-chat-hf]) hosted on [Hugging Face].
 
 ## Requirements
 

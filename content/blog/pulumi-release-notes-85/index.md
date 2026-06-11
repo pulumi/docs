@@ -123,7 +123,7 @@ If your package binary is hosted on GitLab, you can now set its `pluginDownloadU
 
 ### Use access tokens to authenticate to Google Cloud backend
 
-When storing the state files in Google Cloud backend, you can now authenticate to the Google Cloud Storage using Google access tokens. If the environment variable `GOOGLE_OAUTH_ACCESS_TOKEN` is set during a `pulumi login gs://...`, Pulumi will utilize the provided token to login to the bucket, assuming this has not been pre-empted by another authentication type.
+When storing the state files in Google Cloud backend, you can now authenticate to the Google Cloud Storage using Google access tokens. If the environment variable `GOOGLE_OAUTH_ACCESS_TOKEN` is set during a `pulumi login gs://...`, Pulumi will utilize the provided token to login to the bucket, assuming this has not been preempted by another authentication type.
 
 👉  Learn more in the [Pulumi login to support google oauth access tokens for GCS buckets pull request](https://github.com/pulumi/pulumi/pull/12102).
 
@@ -163,7 +163,7 @@ policy = iam.Policy(
     }))
 ```
 
-👉  Learn more in the [Output methods issue](https://github.com/pulumi/pulumi/issues/11939) that also tracks a number of futher additions to the toolset of helper methods.
+👉  Learn more in the [Output methods issue](https://github.com/pulumi/pulumi/issues/11939) that also tracks a number of further additions to the toolset of helper methods.
 
 ### Retrieve stack reference outputs as plain values
 

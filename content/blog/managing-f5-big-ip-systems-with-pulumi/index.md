@@ -9,7 +9,7 @@ tags: ["features", "cloud-native"]
 The [Pulumi](/) ecosystem is continuously growing
 and today we're excited to announce the F5 BIG-IP provider for Pulumi.
 
-F5's [BIG-IP Local Traffic Managment (LTM) services](https://www.f5.com/products/big-ip-services/local-traffic-manager)
+F5's [BIG-IP Local Traffic Management (LTM) services](https://www.f5.com/products/big-ip-services/local-traffic-manager)
 provides advanced traffic management, acceleration, security, and
 analytics features to your applications. With the addition of our F5
 BIG-IP Pulumi provider we are bringing *Cloud Native Infrastructure as

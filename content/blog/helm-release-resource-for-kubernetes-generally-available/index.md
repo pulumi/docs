@@ -400,7 +400,7 @@ Thanks to our community of early adopters, we received excellent feedback on the
 * Honor namespace specification for all resources installed by Helm Release [[#1747](https://github.com/pulumi/pulumi-kubernetes/pull/1747)]
 * Make `values` optional [[#1761]](https://github.com/pulumi/pulumi-kubernetes/pull/1761)
 * Make `RepositoryOpts` optional [[#1806]](https://github.com/pulumi/pulumi-kubernetes/pull/1806)
-* Suppport local charts [[#1809]](https://github.com/pulumi/pulumi-kubernetes/pull/1809)
+* Support local charts [[#1809]](https://github.com/pulumi/pulumi-kubernetes/pull/1809)
 * Add import support [[#1818]](https://github.com/pulumi/pulumi-kubernetes/pull/1818)
 * Support loading values from yaml files [[#1828]](https://github.com/pulumi/pulumi-kubernetes/pull/1828)
 

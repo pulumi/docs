@@ -18,7 +18,7 @@ At Pulumi, we take compatibility seriously, and are conscious of the impact that
 
 In order to ensure that Pulumi AWS users are not adversely impacted by this breaking change, we have extended the Pulumi AWS provider to offer both the old implementation and the new implementation of the S3 Bucket resource. This means that all existing usages of S3 Bucket will continue to work as normal. We also now offer the ability to create a v2 variants of the S3 Bucket supported in the new upstream AWS provider.
 
-Let's consider an existing implemention of an S3 Bucket that is used to create a static website:
+Let's consider an existing implementation of an S3 Bucket that is used to create a static website:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
@@ -110,7 +110,7 @@ part of the bucket out to be it's own resource. *We have ensured that this will 
 
 The Pulumi AWS Provider, has introduced a new resource, `aws.s3.BucketV2` that users can use to create new variants of
 how an S3 bucket resource would look. To create a static website using `BucketV2`, we can see that the code gets more
-targetted toward the resource that we are writing:
+targeted toward the resource that we are writing:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
