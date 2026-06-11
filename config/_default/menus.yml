@@ -353,18 +353,22 @@ reference:
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-hitrust
     weight: 3
+  - name: ISO/IEC 27001
+    parent: reference-pre-built-policy-packs
+    identifier: reference-pre-built-policy-packs-iso-27001
+    weight: 4
   - name: NIST
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-nist
-    weight: 4
+    weight: 5
   - name: PCI DSS
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-pci-dss
-    weight: 5
+    weight: 6
   - name: Pulumi Best Practices
     parent: reference-pre-built-policy-packs
     identifier: reference-pre-built-policy-packs-pulumi-best-practices
-    weight: 6
+    weight: 7
 
 # -------------------------------------
 # Insights Policy Menu Section Headers
