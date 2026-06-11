@@ -262,7 +262,7 @@ esc env set my-org/my-project/prod apiKey new-secret-value --secret
 
 ESC versions every change, so you can audit the history or roll back if needed.
 
-**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can [automatically rotate credentials on a schedule](/docs/esc/environments/rotation/) using `fn::rotate`. If the rotation target lives in a private network, a [rotation connector](/docs/esc/operations/rotation/) runs the rotation on Pulumi Cloud's behalf. This is the recommended approach for production secrets, as it eliminates manual steps and reduces exposure windows.
+**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can [automatically rotate credentials on a schedule](/docs/esc/environments/rotation/) using `fn::rotate`. If the rotation target lives in a private network, a [rotation connector](/docs/esc/operations/rotation/) runs the rotation on Pulumi Cloud's behalf. This is the recommended approach over manual updates, as it eliminates manual steps and reduces exposure windows.
 
 ### Control access with RBAC
 
