@@ -2,8 +2,8 @@
 title: "Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More"
 allow_long_title: true
 h1: "Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More"
-date: 2026-06-11T12:00:00Z
-draft: true
+date: 2026-06-15T12:00:00Z
+draft: false
 meta_desc: "Deploy an AKS cluster with Pulumi C#. Six Kubernetes recommendations from a live workshop, including the Docker Hub rate limit that hit mid-demo."
 meta_image: meta.png
 authors:
@@ -13,8 +13,18 @@ tags:
     - azure
     - .net
 social:
-    twitter: ""
-    linkedin: ""
+    twitter: |
+        Have you ever been rate limited by Docker Hub? Haven't we all. It happened to Adam Gordon Bell mid-demo at his live AKS workshop. Here's how that ended, and the six Kubernetes recommendations that came out of the session.
+    linkedin: |
+        Have you ever been rate limited by Docker Hub? Haven't we all.
+
+        It happened to Adam Gordon Bell mid-demo. The plan for his live AKS workshop was to build a Kubernetes cluster, a private container registry, and a random-cat web app from scratch in C#, then split the infrastructure from the workload into separate stacks.
+
+        Two things went wrong live that weren't in the plan. Azure refused to provision the cluster in the first region. Then Docker Hub rate-limited his image pull halfway through the demo.
+
+        Neither killed the session. The improvised fixes made for a better workshop than the original script.
+
+        Here are his six recommendations for running Kubernetes on Azure, including what he'd have done differently from the start.
 ---
 
 *On June 10th, Engin and I ran a live workshop building an AKS cluster, an Azure Container Registry, and a random-cat web app from scratch in C#. This is the writeup, including the parts we didn't get to live.*
@@ -27,7 +37,7 @@ Live demos keep you honest. On June 10th my AKS workshop went a little sideways.
 
 ## 1. Pick the language your team already uses
 
-I opened the session by asking the room what language they prefer to work in, with one caveat from me: "Hopefully, it's not PowerShell because this is not in PowerShell." We got some C# answers and zero requests for PowerShell, which works out, because the whole workshop is in C#.
+I opened the session by asking the room what language they prefer to work in, with one caveat from me: "Hopefully, it's not PowerShell because this is not in PowerShell." We got some C# answers and zero requests for PowerShell, which works out, because the whole workshop is in ~~PowerShell~~ C#.
 
 I chose C# because, first, I genuinely love the language. I spent the early part of my career as a C# developer, and on Azure it just makes sense. Second, an Azure workshop tends to draw a big turnout of C# devs, and if they aren't C# devs themselves, they often work somewhere the backend team uses C#. Pulumi lets you bring that language to your infrastructure rather than learn a new DSL.
 
@@ -68,7 +78,7 @@ NetworkProfile = new ACI.ContainerServiceNetworkProfileArgs
 },
 ```
 
-This buys you eBPF networking instead of kube-proxy and iptables, with `NetworkPolicy` enforced in the kernel instead of userspace. You also get Hubble flow visibility built in, the same technology as GKE's Dataplane V2. As I said live, "this is very easy to set up on Azure. You just network data plane, set it to Cilium. Network policy, set it to Cilium."
+This buys you eBPF networking instead of kube-proxy and iptables. [eBPF](https://ebpf.io/what-is-ebpf/) lets you run sandboxed programs inside the Linux kernel itself, so packet handling and `NetworkPolicy` enforcement happen down in the kernel instead of up in userspace. You also get Hubble flow visibility built in, the same technology as GKE's Dataplane V2. As I said live, "this is very easy to set up on Azure. You just network data plane, set it to Cilium. Network policy, set it to Cilium."
 
 Self-hosted, Cilium is `helm install cilium` with a dozen flags and a lifecycle you own forever. On AKS, it's these five lines and Azure runs it. On a getting-started cluster, I'll take the managed version every time. Owning that lifecycle yourself buys you nothing here.
 
@@ -94,9 +104,11 @@ The rate limit wasn't even the first failure of the hour. That honor went to Azu
 
 We switched the region to East US, and the cluster came up. That is the kind of diagnosis a stack-aware assistant is good at, reading the actual provisioning error instead of leaving me to guess.
 
-Then the image step hit. The workshop's original flow pulled the cat app image into ACR with `az acr import --source docker.io/agbell/my-random-cat`. That import pulls from Docker Hub anonymously, and at a busy workshop everyone's traffic leaves through one shared IP. Docker Hub's rate limiter saw a pile of anonymous pulls from a single address and flagged me at the worst possible moment: "I just got flagged by Docker Hub. That is awesome. That will be a challenge for this demo."
+Then the image step hit. The workshop's original flow pulled the cat app image into ACR with `az acr import --source docker.io/agbell/my-random-cat`, and Docker Hub rate-limited me, even though I was the only person in the room running the code. So how do you blow through an anonymous pull limit all by yourself? The trick is that `az acr import` runs server-side. Azure does the pull from Docker Hub, not my laptop, and it goes out over an egress IP shared by who-knows-how-many other Azure tenants. Docker Hub counts anonymous pulls per IP address, so all of that shared traffic lands in one bucket. It flagged me at the worst possible moment: "I just got flagged by Docker Hub. That is awesome. That will be a challenge for this demo."
 
-Live, I asked Neo to route around it: "we're using Neo. And Neo is going to switch us out to a nice Hello World project." Neo could see the whole stack, down to the failing image reference, and it swapped the workload over to a standard hello-world image hosted on Azure, so the deploy no longer depended on Docker Hub. A few minutes later: "we should have a Hello World container running here. It's way less fun than my image... just a bunch of random cats. But here we can see that this is working." I won't oversell it. The recovery was messy, the cat was gone, and we didn't get through every planned stage. But the cluster was up with a workload deployed, and the session kept moving.
+Nothing focuses a workshop like watching your own demo get rate-limited in front of a live audience.
+
+Live, I asked Neo to route around it: "we're using Neo. And Neo is going to switch us out to a nice Hello World project." Neo could see the whole stack, down to the failing image reference, and it swapped the workload over to a standard hello-world image hosted on Azure, so the deploy no longer depended on Docker Hub. A few minutes later: "we should have a Hello World container running here. It's way less fun than my image... just a bunch of random cats. But here we can see that this is working." I won't oversell it. The cat was gone, and we didn't get through every planned stage. But the cluster was up with a workload deployed, and the session kept moving.
 
 That's the case for a stack-aware assistant over a chatbot. A general chatbot can tell you that Docker Hub has rate limits and that you should host images closer to home. Neo was working with the actual program state, so the workaround it proposed was already wired to my resources. Engin put it this way: "for me, Pulumi Neo, the subcommand is the new Pulumi app." When something breaks mid-demo, the tool that can read your stack is the one that helps.
 
@@ -106,7 +118,7 @@ The long-term fix was switching to `az acr build`, building the image in ACR fro
 az acr build --registry <your-acr> --image my-random-cat:latest app
 ```
 
-No local Docker. Only the base image (`python:3.9-slim`) gets fetched, and ACR's build infrastructure does that fetching once, instead of a workshop full of people all pulling at the same time.
+No local Docker, and the app image never touches Docker Hub. The only Docker Hub dependency left is the base image (`python:3.9-slim`), pulled server-side by ACR's build instead of by an import you re-run every time.
 
 Full code: [`02-app/Program.cs`](https://github.com/pulumi/workshops/blob/main/az-getting-started-aks/02-app/Program.cs)
 
@@ -122,7 +134,7 @@ A general chatbot knows Docker Hub has rate limits. Neo could see the deployment
 
 One attendee, Martin, had been using Terraform for eight-plus years. His question, put directly: "I'm using TF for eight plus years. Why should I consider Pulumi? Where is the strength?... It seems unnecessary to TF for me. At least from what I'm seeing now."
 
-Fair question, and the honest answer isn't "rip out Terraform." You don't have to abandon your modules. Pulumi has first-class Terraform module support, so you can reference existing modules from a Pulumi program. Python ML teams can import infrastructure modules, and platform teams can wrap them in typed abstractions. The portfolio doesn't change. The programs that use it just get more capable.
+Fair question, and the honest answer is you don't have to abandon your modules. Pulumi has [first-class Terraform module support](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), so you can reference existing modules from a Pulumi program. Python ML teams can import infrastructure modules, and platform teams can wrap them in typed abstractions. The portfolio doesn't change. The programs that use it just get more capable.
 
 The sharper reason is about edges. HCL and Bicep are purpose-built DSLs, and when you hit what they can't express, there's no escape hatch inside the language. With a general-purpose language you can always drop to the SDK or shell out. The edges still exist. They're just further out, and that's the whole difference once a project gets past the basics.
 
@@ -142,7 +154,7 @@ Once we had the cluster up and the app running, the single program had grown: cl
 >
 > **Adam:** "Yes, I totally agree with you, Engin. We should split these out into two separate stacks."
 
-So that's what we did. The infrastructure stack exports the kubeconfig and registry URL. The workload stack references those outputs via `StackReference`. The slow-moving infra and the fast-moving app become independent deployment units. The infra team and the app team can ship on their own cadences, without fighting over one file.
+So that's what we did. The infrastructure stack exports the kubeconfig and registry URL. The workload stack references those outputs via [`StackReference`](/docs/iac/concepts/stacks/#stackreferences). The slow-moving infra and the fast-moving app become independent deployment units. The infra team and the app team can ship on their own cadences, without fighting over one file.
 
 ```csharp
 // workload/Program.cs — pulls cluster outputs, never touches cluster resources
@@ -151,11 +163,11 @@ var kubeconfig = clusterStack.GetOutput("kubeconfig");
 var acrLoginServer = clusterStack.GetOutput("acrLoginServer");
 ```
 
-The genuinely tricky part is one we didn't cover live, which is how you split a running workload without taking down the running services. The real answer is migrating the stack state, moving resources between stacks instead of destroying and recreating them. As I noted in the session: "now we are just removing the service from our project. If this was actual production stuff, I don't think I'd be just shutting down the service... You can actually just make changes to the state rather than tearing them down."
+The tricky part is one we didn't cover live, which is how you split a running workload without taking down the running services. The real answer is migrating the stack state, moving resources between stacks instead of destroying and recreating them. As I noted in the session: "now we are just removing the service from our project. If this was actual production stuff, I don't think I'd be just shutting down the service... You can actually just make changes to the state rather than tearing them down."
 
 For the workshop, a simpler move kept the Kubernetes cluster up and the demo moving: keep the project name. Pulumi identifies stacks as `org/project/stack`, so if you move the cluster code into `aks-cluster/` while keeping the project name `kube-kitties`, Pulumi still sees `org/kube-kitties/dev`. Same stack, nothing recreated. Rename the project and you get a second cluster.
 
-In stage four of the demo, I showed how to extend this pattern to work with existing YAML manifests: `ConfigGroup` drives raw Kubernetes YAML through the Pulumi provider, giving you previews and dependency ordering without rewriting files. One transformation swaps the Docker Hub image reference for the ACR copy, so manifests stay portable and pods pull from your private registry.
+In stage four of the demo, I showed how to extend this pattern to work with existing YAML manifests: [`ConfigGroup`](/registry/packages/kubernetes/api-docs/yaml/configgroup/) drives raw Kubernetes YAML through the Pulumi provider, giving you previews and dependency ordering without rewriting files. One transformation swaps the Docker Hub image reference for the ACR copy, so manifests stay portable and pods pull from your private registry.
 
 Code: [`03-split/`](https://github.com/pulumi/workshops/tree/main/az-getting-started-aks/03-split) and [`04-split-yaml/`](https://github.com/pulumi/workshops/tree/main/az-getting-started-aks/04-split-yaml)
 
@@ -171,7 +183,7 @@ Pulumi identifies stacks as `org/project/stack`. Same project name means the sam
 
 ## 6. GitOps is the way
 
-The final stage of the workshop is left as homework, and it's a great one to pick up. GitOps is the standard way to run Kubernetes at this point. My position from the call: "I think I'm on team GitOps."
+The final stage of the workshop is left as homework, and it's a great one to pick up. GitOps is the standard way to run Kubernetes at this point, the One True Way™ depending on who you ask. My position from the call: "I think I'm on team GitOps."
 
 The take-home is the [`05-gitops`](https://github.com/pulumi/workshops/tree/main/az-getting-started-aks/05-gitops) folder. We didn't demo it live, but the code is real and verified: Pulumi stands up the cluster, installs Argo CD, and registers the cat as an Argo `Application`. From there, changes are `git push`.
 
@@ -196,11 +208,13 @@ pulumi up
 curl http://$(pulumi stack output catServiceIp)/
 ```
 
-Expect 5 to 8 minutes waiting on cluster create. That's not your connection, that's just AKS. And since each folder is a complete, runnable checkpoint with its own stack, run `pulumi destroy` before moving to the next stage, or you'll have several clusters billing at once.
+Expect 5 to 8 minutes waiting on cluster create. That's just how long AKS takes. And since each folder is a complete, runnable checkpoint with its own stack, run `pulumi destroy` before moving to the next stage, or you'll have several clusters billing at once.
 
 You'll need an Azure subscription, the Pulumi CLI, and the .NET SDK. Basic Kubernetes familiarity helps. For more on the building blocks, see the [Azure Native provider](https://www.pulumi.com/registry/packages/azure-native/) and the [Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/) in the Pulumi Registry.
 
 The full workshop code lives at [github.com/pulumi/workshops](https://github.com/pulumi/workshops) under `az-getting-started-aks`. Check out our upcoming sessions on the [workshop page](https://www.pulumi.com/events/), or subscribe to the newsletter to hear what's coming up.
+
+If there's a seventh recommendation hiding in here, it's the one I learned the hard way: never pull from Docker Hub live again. I'll be keeping my images on a paid cloud registry from now on.
 
 Engin and I will be doing more of these, and we'd love to see you at the next one.
 
