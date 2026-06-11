@@ -25,6 +25,8 @@ social:
         Neither killed the session. The improvised fixes made for a better workshop than the original script.
 
         Here are his six recommendations for running Kubernetes on Azure, including what he'd have done differently from the start.
+    bluesky: |
+        Have you ever been rate limited by Docker Hub? Haven't we all. It happened to Adam Gordon Bell mid-demo at a live AKS workshop. Azure had refused the first region before that. Here are the six Kubernetes recommendations that came out of what happened next.
 ---
 
 *On June 10th, Engin and I ran a live workshop building an AKS cluster, an Azure Container Registry, and a random-cat web app from scratch in C#. This is the writeup, including the parts we didn't get to live.*
