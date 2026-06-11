@@ -136,64 +136,7 @@ esc env get <org>/<project>/<env-name> apiKey
 
 ### Via Pulumi IaC or language SDKs
 
-You can also consume ESC secrets programmatically — either through Pulumi IaC stacks that import the environment, or directly using the ESC SDK.
-
-**In a Pulumi IaC stack** — import the environment in `Pulumi.<stack>.yaml` and reference secrets as stack config:
-
-```yaml
-environment:
-  - my-project/dev
-```
-
-Values nested under a `pulumiConfig` block in your environment become available to your program via `pulumi.Config` (see [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)):
-
-```typescript
-const config = new pulumi.Config();
-const apiKey = config.requireSecret("apiKey");
-```
-
-**Using the ESC SDK** — read secrets directly from application code:
-
-{{< chooser language "typescript,python,go" >}}
-{{% choosable language typescript %}}
-
-```typescript
-import * as esc from "@pulumi/esc-sdk";
-
-const configuration = new esc.Configuration({ accessToken: myAccessToken });
-const client = new esc.EscApi(configuration);
-const env = await client.openAndReadEnvironment("my-org", "my-project", "dev");
-const apiKey = env?.values?.apiKey;
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-import pulumi_esc_sdk as esc
-
-client = esc.esc_client.default_client()
-env, values, yaml = client.open_and_read_environment("my-org", "my-project", "dev")
-api_key = values["apiKey"]
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-client := esc.NewClient(esc.NewConfiguration())
-authCtx := esc.NewAuthContext(os.Getenv("PULUMI_ACCESS_TOKEN"))
-_, values, err := client.OpenAndReadEnvironment(authCtx, "my-org", "my-project", "dev")
-if err != nil {
-	log.Fatal(err)
-}
-apiKey := values["apiKey"]
-```
-
-{{% /choosable %}}
-{{< /chooser >}}
-
-See the [ESC SDK docs](/docs/esc/concepts/sdks/) for authentication setup and full API reference.
+You can also consume ESC secrets programmatically — either through [Pulumi IaC stacks that import the environment](/docs/esc/guides/integrate-with-pulumi-iac/), or directly using the [ESC SDK](/docs/esc/concepts/sdks/).
 
 ## Organizing secrets
 
