@@ -1,0 +1,40 @@
+{{/*
+    Events RSS Channel Partial
+
+    Renders a complete RSS 2.0 document for a set of events. Shared by the
+    combined and per-section events feeds.
+
+    Expected context (dict):
+        ctx         - the events list Page (for site params and the feed link)
+        events      - a slice of event Pages to render as items
+        title       - the channel <title>
+        description - the channel <description>
+*/ -}}
+{{- $ctx := .ctx -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+<rss version="2.0">
+    <channel>
+        <title>{{ .title }}</title>
+        <link>{{ $ctx.Site.Params.canonicalURL }}{{ $ctx.RelPermalink }}</link>
+        <description>{{ .description }}</description>
+        <language>{{ $ctx.Site.LanguageCode }}</language>
+        <pubDate>{{ now | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{ range .events }}
+            <item>
+                {{ $eventLink := printf "%s%s" $ctx.Site.Params.canonicalURL .RelPermalink }}
+                <!--
+                    When the event is external, the `url_slug` property is set to the external link
+                    in the event template.
+                -->
+                {{ if .Params.external }}
+                    {{ $eventLink = .Params.url_slug }}
+                {{ end }}
+                <guid>{{ $eventLink }}</guid>
+                <title>{{ .Params.title }}</title>
+                <description>{{ .Params.meta_desc }}</description>
+                <pubDate>{{ (.Params.sortable_date | time.AsTime).Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+                <link>{{ $eventLink }}</link>
+            </item>
+        {{ end }}
+    </channel>
+</rss>
