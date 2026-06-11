@@ -136,16 +136,16 @@ esc env get <org>/<project>/<env-name> apiKey
 
 ### Via Pulumi IaC or language SDKs
 
-The most common way to consume ESC secrets in practice is programmatically — either through Pulumi IaC stacks that import the environment, or directly using the ESC SDK.
+You can also consume ESC secrets programmatically — either through Pulumi IaC stacks that import the environment, or directly using the ESC SDK.
 
 **In a Pulumi IaC stack** — import the environment in `Pulumi.<stack>.yaml` and reference secrets as stack config:
 
 ```yaml
 environment:
-  - my-org/my-project/dev
+  - my-project/dev
 ```
 
-Secrets become available to your program via `pulumi.Config`:
+Values nested under a `pulumiConfig` block in your environment become available to your program via `pulumi.Config` (see [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)):
 
 ```typescript
 const config = new pulumi.Config();
@@ -156,29 +156,40 @@ const apiKey = config.requireSecret("apiKey");
 
 {{< chooser language "typescript,python,go" >}}
 {{% choosable language typescript %}}
+
 ```typescript
 import * as esc from "@pulumi/esc-sdk";
 
-const client = new esc.EscApi();
+const configuration = new esc.Configuration({ accessToken: myAccessToken });
+const client = new esc.EscApi(configuration);
 const env = await client.openAndReadEnvironment("my-org", "my-project", "dev");
-const apiKey = env.values?.apiKey;
+const apiKey = env?.values?.apiKey;
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
+
 ```python
 import pulumi_esc_sdk as esc
 
-client = esc.EscApi()
-_, values, _ = client.open_and_read_environment("my-org", "my-project", "dev")
-api_key = values.get("apiKey")
+client = esc.esc_client.default_client()
+env, values, yaml = client.open_and_read_environment("my-org", "my-project", "dev")
+api_key = values["apiKey"]
 ```
+
 {{% /choosable %}}
 {{% choosable language go %}}
+
 ```go
-client := esc.NewEscClient(esc.NewConfiguration())
-_, values, _, err := client.EscAPI.OpenAndReadEnvironment(ctx, "my-org", "my-project", "dev")
+client := esc.NewClient(esc.NewConfiguration())
+authCtx := esc.NewAuthContext(os.Getenv("PULUMI_ACCESS_TOKEN"))
+_, values, err := client.OpenAndReadEnvironment(authCtx, "my-org", "my-project", "dev")
+if err != nil {
+	log.Fatal(err)
+}
 apiKey := values["apiKey"]
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 
@@ -251,7 +262,7 @@ esc env set my-org/my-project/prod apiKey new-secret-value --secret
 
 ESC versions every change, so you can audit the history or roll back if needed.
 
-**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can automatically rotate credentials on a schedule using `fn::rotate` and a [rotation connector](/docs/esc/operations/rotation/). This is the recommended approach for production secrets, as it eliminates manual steps and reduces exposure windows.
+**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can [automatically rotate credentials on a schedule](/docs/esc/environments/rotation/) using `fn::rotate`. If the rotation target lives in a private network, a [rotation connector](/docs/esc/operations/rotation/) runs the rotation on Pulumi Cloud's behalf. This is the recommended approach for production secrets, as it eliminates manual steps and reduces exposure windows.
 
 ### Control access with RBAC
 
