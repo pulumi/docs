@@ -50,7 +50,7 @@ $ esc env ls --organization myorg
 myorg/myproject/test
 ```
 
-You can filter this list to a particular project by passing it's name:
+You can filter this list to a particular project by passing its name:
 
 ```bash
 $ esc env ls -p myproject
@@ -481,7 +481,7 @@ values:
       fn::secret: sk_XemWAl12i4x3hZhp4vBKDEXAMPLE
 ```
 
-The application-specific `myapp/dev` environment then `imports` these two environments and use their settings to compose new values:
+The application-specific `myapp/dev` environment then `imports` these two environments and uses their settings to compose new values:
 
 ```yaml
 # myorg/myapp/dev
@@ -634,7 +634,7 @@ $ esc env diff myorg/myproject/test@3 myorg/myproject/test@2
 
 ### Tagging Versions
 
-You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we are assign `prod` tag to revision 3 of environment `test`.
+You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we assign `prod` tag to revision 3 of environment `test`.
 
 ```bash
 $ esc env version tag myorg/myproject/test@prod @3
@@ -745,15 +745,15 @@ To unset a value inherited from another environment, overwrite it with `null`.
 ## Setting up access to environments
 
 {{% notes "info" %}}
-Access controls and Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.To learn more about editions visit the [pricing page](/pricing/).
+Access controls and Teams are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition. To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
 ### Organization-wide permissions
 
-Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. By default, the environment permissions for the organization is set to `write`. There are four options:
+Go to the `Access Management` page under Settings to set Organization-wide environment permissions. Members of the organization will receive these permissions. By default, the environment permissions for the organization are set to `write`. There are four options:
 
 * `none`: Members have access to none of the environments
-* `read`: Members can view only plaintext key values (i.e., the definition of the environment). They won’t be able to see the secret values in plaintext, run any provider configurations to retrieve credentials or run any functions. They cannot perform any Pulumi IaC operations such as `refresh`, `up`, `destroy` on stacks that imports the environment
+* `read`: Members can view only plaintext key values (i.e., the definition of the environment). They won’t be able to see the secret values in plaintext, run any provider configurations to retrieve credentials or run any functions. They cannot perform any Pulumi IaC operations such as `refresh`, `up`, `destroy` on stacks that import the environment
 * `open`: Members with ‘open’ permissions can decrypt secrets and see them in plaintext. Additionally, they can get dynamic credentials using provider configurations and evaluate functions defined in the environment. They can perform any Pulumi IaC operation on stacks that import an environment as long as they have ‘write’ access to the stack and ‘open’ access to the environment
 * `write`: Members will have permissions to `open` and `update` any environment
 
@@ -805,7 +805,7 @@ Cloning an environment takes various options that allow for configuring what is 
 | Preserve History          | Preserve all prior versions of the environment up until the cloned version |
 | Preserve Environment Tags | Preserve all environment tags on the source environment                    |
 | Preserve Revision Tags    | Preserve all revision tags on the versions being cloned                    |
-| Preserve Team Access      | Preserve any team access that he source environment had                    |
+| Preserve Team Access      | Preserve any team access that the source environment had                    |
 
 An example clone command might look like:
 

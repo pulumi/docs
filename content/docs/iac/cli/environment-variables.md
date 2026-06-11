@@ -21,7 +21,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Specifies the selected pulumi stack, overriding the stack selected with <a href="/docs/iac/cli/commands/pulumi_stack_select/"><code class="text-xs">pulumi stack select STACK</code></a>
+            Specifies the selected pulumi stack, overriding the stack selected with <a href="/docs/iac/cli/commands/pulumi_stack_select/"><code class="text-xs">pulumi stack select STACK</code></a>.
             The priority is as follows:
             <ol>
                 <li>The <code class="text-xs">--stack</code> command line flag</li>
@@ -342,7 +342,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Use legacy refresh diff behaviour, in which only output changes are
+            Use legacy refresh diff behavior, in which only output changes are
             reported and changes against the desired state are not calculated.
         </p>
         <pre><code class="text-xs">PULUMI_ENABLE_LEGACY_REFRESH_DIFF=true</code></pre>
