@@ -188,7 +188,7 @@ Ensure that the application pods using workload identity include the label `azur
 
 {{% /notes %}}
 
-### Walkthough
+### Walkthrough
 
 Let's use [Pulumi Kubernetes Operator (PKO)][pko1] to demonstrate a use case where you'd run Pulumi deployment operations in a pod
 and could benefit from workload identity.

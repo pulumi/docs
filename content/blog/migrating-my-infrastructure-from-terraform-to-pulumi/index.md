@@ -34,7 +34,7 @@ Could I have used something else, like [AWS CDK](https://aws.amazon.com/cdk/)? 
 
 Personally I struggle a bit with CDK being mostly Amazon-centric. I sometimes use my IaC to configure things outside of AWS as well. The other issue for me is that CDK by default uses AWS CloudFormation to provision resources. I've been bitten a few times by CF. Some times it's been because of buggy behavior, e.g. a stack that refused to terminate. Other times it's been the fact that CF often lags behind in capabilities, so it's common to have to wait a few months for a new feature to be usable through CF.
 
-Sure, I could use [CDK for Terraform](https://www.hashicorp.com/blog/cdk-for-terraform-enabling-python-and-typescript-support) to have CDK genererate Terraform HCL for me. However, now we're quickly getting away from the simple system I wanted in the first place.
+Sure, I could use [CDK for Terraform](https://www.hashicorp.com/blog/cdk-for-terraform-enabling-python-and-typescript-support) to have CDK generate Terraform HCL for me. However, now we're quickly getting away from the simple system I wanted in the first place.
 
 Apologies to those of you who are screaming *"FFS - CDK is the best thing ever!"* at your monitors right now. You might be 100% right! From what I've seen CDK seems pretty awesome for the most part. I didn't end up with Pulumi because CDK seemed bad. I ended up with Pulumi because it seemed like a slightly better fit for my needs :).
 

@@ -180,7 +180,7 @@ app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
     }""")
 ```
 
-The last thing we need to do for our infrastructure before we can start deploying to it is create a repository on [Amazon ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) where our Docker image will live, then attach an application lifecycle policy to that repository. This makes sure that we expire and remove any untagged images in the repository, keeping things from geting clogged up.
+The last thing we need to do for our infrastructure before we can start deploying to it is create a repository on [Amazon ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) where our Docker image will live, then attach an application lifecycle policy to that repository. This makes sure that we expire and remove any untagged images in the repository, keeping things from getting clogged up.
 
 ## Deploying a Dockerized Flask Application to ECS
 

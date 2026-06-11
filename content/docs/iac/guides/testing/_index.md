@@ -51,7 +51,7 @@ Because cloud resources are not created, you can't write a test that would evalu
 
 ## Property Testing
 
-Property tests are based on [Policy as Code](/docs/insights/policy/), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, Pulumi Policies enables another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
+Property tests are based on [Policy as Code](/docs/insights/policy/), Pulumi's offering to set guardrails and enforce compliance for cloud resources. In addition to authoring company-wide policies, Pulumi Policies enable another type of infrastructure testing. Each policy becomes a property, an invariant, that a test evaluates and asserts.
 
 Property tests run inside the Pulumi CLI before and after infrastructure provisioning. In contrast to "black-box" integration testing, policy rules have access to all input and output values of all cloud resources in the stack. As opposed to unit testing, property tests can evaluate real values returned from the cloud provider instead of the mocked ones.
 
@@ -61,11 +61,11 @@ Property tests can run against any cloud environment: it can be a persistent "ac
 
 ## Integration Testing
 
-Integration testing takes a different approach of unit tests: the tests deploy cloud resources and validate their actual **behavior**.
+Integration testing takes a different approach from unit tests: the tests deploy cloud resources and validate their actual **behavior**.
 
 An integration test invokes the Pulumi command-line interface (CLI) to deploy infrastructure to an [ephemeral environment](https://about.gitlab.com/blog/2020/01/27/kubecon-na-2019-are-you-about-to-break-prod/). When the resources are deployed, the test retrieves endpoints of the infrastructure from the stack outputs: usually, a URL or a public IP address. The test verifies that the infrastructure behaves as expected; for example, it expects a valid HTML document from a health-check endpoint or runs a suite of application-level tests against the public API. When the tests finish, the infrastructure is destroyed.
 
-The great advantage of integration tests is the ability to test the actual cloud infrastructure and its real properties. However, compared to unit tests, integrations tests take more time to execute.
+The great advantage of integration tests is the ability to test the actual cloud infrastructure and its real properties. However, compared to unit tests, integration tests take more time to execute.
 
 Depending on the type of resources and frequency of testing, even short-lived ephemeral environments may incur notable charges from the cloud provider. Be sure to plan accordingly and measure frequently.
 

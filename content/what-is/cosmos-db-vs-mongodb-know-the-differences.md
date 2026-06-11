@@ -38,7 +38,7 @@ Both Cosmos DB and MongoDB are [NoSQL](/tutorials/glossary/nosql/), or non-relat
 
 ### Benefits and Downfalls of Cosmos DB
 
-Cosmos DB offers a high degree of flexibility, thanks to its variety of available data models and the ability to use SQL-like queries in addition to Gremlin, Azure Tables, and MongoDB APIs when interacting with your data. While MongoDB functions only as a document database, Cosmos DB can function as document, key-value, wide column, and graph-based database. Its five consistency models (eventually consistent, consistent prefix, session, bounded staleness, and strong consistency) allow you to fine-tune your latency, and it scales quite well. It is priced according to storage and throughput.
+Cosmos DB offers a high degree of flexibility, thanks to its variety of available data models and the ability to use SQL-like queries in addition to Gremlin, Azure Tables, and MongoDB APIs when interacting with your data. While MongoDB functions only as a document database, Cosmos DB can function as a document, key-value, wide column, and graph-based database. Its five consistency models (eventually consistent, consistent prefix, session, bounded staleness, and strong consistency) allow you to fine-tune your latency, and it scales quite well. It is priced according to storage and throughput.
 
 However, this flexibility can make Cosmos DB somewhat more difficult to use at first. Understanding the various data models available to you and the intended use case of each one is key to ensuring that you are getting the most optimum performance for the price, according to your application's specific needs. It is also only available on Microsoft Azure.
 

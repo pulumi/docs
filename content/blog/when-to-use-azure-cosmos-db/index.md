@@ -34,7 +34,7 @@ But let's start at the beginning.
 
 ## What is Cosmos DB? Features & Architecture Explained
 
-[Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db) is Microsoft high availability distributed database. First released as DocumentDB in 2014 and rebranded to Cosmos DB in 2017, its used interally at MS for Bing and Office 365 and available on Azure in all regions.
+[Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db) is Microsoft high availability distributed database. First released as DocumentDB in 2014 and rebranded to Cosmos DB in 2017, its used internally at MS for Bing and Office 365 and available on Azure in all regions.
 
 ## Types Of Databases
 
@@ -123,7 +123,7 @@ If your use case aligns well with relational databases, consider using PostgreSQ
 Cosmos DB is best for other use cases, so on we go to 'NoSQL' document databases.
 
 {{% notes type="info" %}}
-Azure offers various services under the "Cosmos DB" brand like Azure Cosmos DB for PostgreSQL, Azure Cosmos DB for MongoDB (VCore), and a managed instance for Cassandra.  These are *not* based on the core Cosmos DB engine, they are not an API into Cosmos, they are a whole diffent things - hosted instances of specific database types.
+Azure offers various services under the "Cosmos DB" brand like Azure Cosmos DB for PostgreSQL, Azure Cosmos DB for MongoDB (VCore), and a managed instance for Cassandra.  These are *not* based on the core Cosmos DB engine, they are not an API into Cosmos, they are a whole different things - hosted instances of specific database types.
 {{% /notes %}}
 
 ## Cosmos DB Vs MongoDB

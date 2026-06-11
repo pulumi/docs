@@ -640,7 +640,7 @@ outputs:
 
 ## Project Level Configuration
 
-There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hieararchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
+There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hierarchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
 
 ### Setting Project Level Configuration
 

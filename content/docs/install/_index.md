@@ -316,7 +316,7 @@ You can install Pulumi using elevated permissions through the [Chocolatey packag
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
 </div>
 
-This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi your path.
+This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi to your path.
 
 Subsequent updates can be installed in the usual way:
 
@@ -634,7 +634,7 @@ Please see https://github.com/pulumi/pulumi-benchmarking where we have a benchma
 The results from this benchmark were 10% CPU utilization on a Apple M1 Pro for the apply and 20% CPU utilization for the destroy.
 The memory usage for both was 1.5GB.
 
-So the following recommendations were made to add some headroom for the typical pulumi actions, espciailly for larger projects.
+So the following recommendations were made to add some headroom for the typical pulumi actions, especially for larger projects.
 -->
 
 The following are general recommendations for minimum system requirements when using Pulumi. Actual performance may vary based on the SDK runtime, providers used, operating system and the size and complexity of your infrastructure deployments. However, the following requirements should be considered a minimum to account for typical usage.

@@ -359,7 +359,7 @@ $ cd use-file-provider
 $ pulumi new yaml
 ```
 
-This will initiatize a minimal YAML program. Let's modify the default YAML file:
+This will initialize a minimal YAML program. Let's modify the default YAML file:
 
 ***Example:** The `Pulumi.yaml` file*
 
@@ -519,7 +519,7 @@ Here's where the business logic of the resource operations happens. In this exam
 
 The `Create` operation handles the logic of determining if the resource exists or not, and if not, it creates it using the provided argument context. In many providers this is where you would interact with external cloud APIs, databases, and other systems. In this example, we're going to interact with our local filesystem using calls to Go's `os` library.
 
-First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which is will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exit early with an error. This will let Pulumi know that the create operation failed, and it will be propagated up to the end user via the console/log output.
+First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exit early with an error. This will let Pulumi know that the create operation failed, and it will be propagated up to the end user via the console/log output.
 
 To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.DryRun` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state and just return early.
 
@@ -567,7 +567,7 @@ func (File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp
 
 The `Delete` operation removes a resource safely. This operation follows a similar pattern to `Create`, but instead of a `CreateRequest`/`CreateResponse` we have `DeleteRequest`/`DeleteResponse`.
 
-One new concept inroduced in this example function is the use of the Pulumi logger. Calling `p.GetLogger(ctx)` gets you a logger with a familiar interface. This is how you might pass informational messages and warnings to the user without throwing an error.
+One new concept introduced in this example function is the use of the Pulumi logger. Calling `p.GetLogger(ctx)` gets you a logger with a familiar interface. This is how you might pass informational messages and warnings to the user without throwing an error.
 
 ```go
 func (File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
@@ -600,7 +600,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode of not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {

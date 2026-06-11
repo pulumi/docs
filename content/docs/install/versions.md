@@ -1,6 +1,6 @@
 ---
 title: Pulumi CLI versions
-meta_desc: This page provides an list of available versions of the Pulumi CLI.
+meta_desc: This page provides a list of available versions of the Pulumi CLI.
 menu:
   iac:
     name: Available versions

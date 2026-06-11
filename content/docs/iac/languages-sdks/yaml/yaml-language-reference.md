@@ -29,7 +29,7 @@ Pulumi supports programs written in YAML or JSON.  In both cases, the programs (
 | `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
 | `pulumi` | map[string]Expression | No | No | Configuration of the Pulumi CLI |
 
-In many locations within this schema, values may be expressions which computed a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
+In many locations within this schema, values may be expressions which compute a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
 * If an object is provided as a value, and has a key that has the prefix `fn::`, the object is treated as an expression, and the expression will be resolved to a new value that will be used in place of the object.
 * Any string value is interpreted as an interpolation, with `${...}` being replaced by evaluating the expression in the `...`.
@@ -109,7 +109,7 @@ Config values are set using `pulumi config set` for scalar types, `pulumi config
 
 ### Resources
 
-The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values which are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
+The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
 
 | Property  |  Type | Required | Expressions | Description |
 |- | - | - | - | - |
@@ -216,7 +216,7 @@ resources:
       version: 5.1.0
 ```
 
-The provider instance can than be used as described in section [Resource Options](#resource-options) by setting the `provider` option:
+The provider instance can then be used as described in section [Resource Options](#resource-options) by setting the `provider` option:
 
 ```yaml
 resources:
@@ -505,7 +505,7 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | `parent` | Expression | Parent specifies a parent for the resource |
 | `provider` | Expression | Provider specifies an explicitly configured provider, instead of using the default global provider |
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
-| `pluginDownloadURL` | string | Version specifies a URL that should be used when to download the provider plugin |
+| `pluginDownloadURL` | string | Version specifies a URL that should be used to download the provider plugin |
 
 ##### `fn::join`
 
@@ -554,7 +554,7 @@ The expression `${policyVersion}` will have the value `v1.1`.
 
 ##### `fn::*Asset` and `fn::*Archive`
 
-[Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes all take a single string value.
+[Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
 
 | Built-In | Argument Type | Description |
 | - | - | - |

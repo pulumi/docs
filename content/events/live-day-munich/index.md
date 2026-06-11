@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: "Live Day Munich"
-meta_desc: Join us for lessons learned and best practices from BMW and SEITENBAU GmbHon Platform Engineering, DevOps, and more, plus networking with speakers and peers.
+meta_desc: Join us for lessons learned and best practices from BMW and SEITENBAU GmbH on Platform Engineering, DevOps, and more, plus networking with speakers and peers.
 meta_image:
 
 # A featured event will display first in the list.

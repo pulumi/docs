@@ -77,7 +77,7 @@ diagrams:
         - title: 4. Incorporate software development best practices
           image: /images/solutions/git-ops/git-ops-diagram-four.svg
           content: |
-            Legacy IaC tools can run in CI/CD, however with Pulumi, you can incorporate in all the best practice software development practices such as testing. You can design what you want to test in terms of quality issues, deployment issues, and/or code quality checks.
+            Legacy IaC tools can run in CI/CD, however with Pulumi, you can incorporate all the best practice software development practices such as testing. You can design what you want to test in terms of quality issues, deployment issues, and/or code quality checks.
 
         - title: 5. Define higher-level workflows
           image: /images/solutions/git-ops/git-ops-diagram-five.svg

@@ -86,7 +86,7 @@ NGINX is able to successfully migrate across node groups because it is
 configured with HA settings, [spread-type scheduling predicates][tutorial-ha-refs],
 and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle].
 
-![Migrate Ngnix 4xlarge](migrate-nginx-4xlarge.png)
+![Migrate Nginx 4xlarge](migrate-nginx-4xlarge.png)
 
 ### Step 3: Decommission the `2xlarge` node group.
 

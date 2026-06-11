@@ -141,7 +141,7 @@ The following table summarizes the differences between default and explicit prov
 | Best fit for          | Simpler use cases, where only a single provider is needed per cloud                                                                                         | Greater control, often required for deploying into multiple environments for the same cloud in the same Pulumi program (e.g. two or more AWS regions) |
 
 {{% notes type="info" %}}
-The choice (or necessity) to use explicit providers is on a per-cloud basis. For example, you may have a program that deploys primary and disaster recovery resources in the public cloud, which might require explicit providers, but the program also creates DNS entries in with your DNS vendor, which can use the default provider since there's only a single resource to update for DNS.
+The choice (or necessity) to use explicit providers is on a per-cloud basis. For example, you may have a program that deploys primary and disaster recovery resources in the public cloud, which might require explicit providers, but the program also creates DNS entries with your DNS vendor, which can use the default provider since there's only a single resource to update for DNS.
 {{% /notes %}}
 
 ### Default provider configuration

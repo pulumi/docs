@@ -1,5 +1,5 @@
 ---
-title: What is Hashicorp Vault?
+title: What is HashiCorp Vault?
 meta_desc: |
      HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
 
@@ -24,7 +24,7 @@ In this article, we'll cover the key features of [HashiCorp Vault](https://www.h
 - **Identity and access management**: Vault supports various authentication methods (like tokens, username/password, cloud IAM, etc.) and uses policies to control what secrets an authenticated user or application can access.
 - **Audit log**: Vault maintains detailed logs of all accesses and changes, which is crucial for security audits and compliance.
 
-### Creating secrets in Hashicorp Vault
+### Creating secrets in HashiCorp Vault
 
 HashiCorp Vault configurations can be managed via the Vault CLI. Before you begin configuring Vault, ensure that you have [Vault installed](https://www.vaultproject.io/downloads). After installation, initialize and start the Vault server.
 
@@ -79,7 +79,7 @@ HashiCorp Vault is a tool that can be integrated into various cloud architecture
 
 Vault's role in each of these architectures is to provide the foundation of secure storage, strict access control, and auditing for secrets and sensitive data. When combined with Pulumi ESC, the capabilities extend even further, ensuring strong security and efficient management across your entire cloud infrastructure and target execution environments.
 
-[Pulumi ESC](/docs/pulumi-cloud/esc/) used in combination with Hashicorp Vault enables teams to aggregate secrets and configuration from many sources, manage hierarchical collections of configuration and secrets (“environments”), and consume those configuration and secrets from a variety of different infrastructure and application services. Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, but also works independently from Pulumi IaC, as a solution for managing environments, secrets and configuration for any application or infrastructure project. Get started by using ESC's [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) provider to dynamically import secrets from HashiCorp Vault into your environment.
+[Pulumi ESC](/docs/pulumi-cloud/esc/) used in combination with HashiCorp Vault enables teams to aggregate secrets and configuration from many sources, manage hierarchical collections of configuration and secrets (“environments”), and consume those configuration and secrets from a variety of different infrastructure and application services. Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, but also works independently from Pulumi IaC, as a solution for managing environments, secrets and configuration for any application or infrastructure project. Get started by using ESC's [vault-secrets](/docs/pulumi-cloud/esc/providers/vault-secrets/) provider to dynamically import secrets from HashiCorp Vault into your environment.
 
 - **Advanced configuration management**: Discover how to efficiently manage configuration data in your cloud applications. Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
 

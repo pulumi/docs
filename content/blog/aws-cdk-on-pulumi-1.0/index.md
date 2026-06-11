@@ -113,7 +113,7 @@ Read the docs at https://docs.aws.amazon.com/apprunner
 
 Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management.
 
-For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route traffic to it with a record in an exisiting CloudFlare DNS zone.
+For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route traffic to it with a record in an existing CloudFlare DNS zone.
 
 ```typescript
 import * as path from 'path';

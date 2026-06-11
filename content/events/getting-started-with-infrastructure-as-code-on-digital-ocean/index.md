@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.ects.
+    In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.
 
 learn:
     - How to use Pulumi to provision cloud resources

@@ -112,7 +112,7 @@ kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute
 
 Now that you have created a service with a config, you can access the value of this config from within the container.
 
-First, login to the container using the `docker exec` command:
+First, log in to the container using the `docker exec` command:
 
 ```bash
 docker exec -it <container_id> /bin/bash

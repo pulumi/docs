@@ -231,7 +231,7 @@ Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array`
 
 {{% choosable language typescript %}}
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.ts` the Component implementation*
 
@@ -241,7 +241,7 @@ Now we can implement the component itself. Components should inherit from `pulum
 
 {{% choosable language python %}}
 
-Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `static_page.py` the Component implementation*
 
@@ -260,7 +260,7 @@ Now we can implement the component itself. Component structs should include `pul
 
 {{% choosable language csharp %}}
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.cs` the Component implementation*
 
@@ -270,7 +270,7 @@ Now we can implement the component itself. Components should inherit from `Pulum
 
 {{% choosable language java %}}
 
-Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process a calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
+Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
 ***Example:** `StaticPage.java` the Component implementation*
 

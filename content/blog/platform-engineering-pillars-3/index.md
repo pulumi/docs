@@ -218,7 +218,7 @@ The next key decision is how developers will actually *use* this platform.  The 
 
 In this approach, platform teams build reusable infrastructure modules while developers consume them directly through code. Developers use familiar IaC tools like Pulumi CLI to instantiate these modules, with changes flowing through version control like any other code.
 
-The key strength is transparency and familiarity. Developers maintain visibility and ownership of their intent-based defintions. This code-centric workflow integrates naturally with existing development practices.
+The key strength is transparency and familiarity. Developers maintain visibility and ownership of their intent-based definitions. This code-centric workflow integrates naturally with existing development practices.
 
 However, this flexibility creates governance challenges and requires either strong trust or approval processes that might reintroduce bottlenecks. The approach also assumes developers have some IaC knowledge, making it best suited for organizations with mature DevOps practices and experienced teams.
 

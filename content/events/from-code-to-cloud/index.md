@@ -37,7 +37,7 @@ duration: "21 minutes"
 description: |
     As the need for well-designed cloud infrastructure increases, front end developers and early career developers may be feeling the pressure to learn CloudOps and DevOps practices. Commonly, software developers are on time crunch and don't always have extra time to study more.
 
-    The good news is if you may already have the necessary skills!
+    The good news is you may already have the necessary skills!
 
     In this workshop, I'll discuss how I leveraged GitHub to make my code CloudOps ready without learning new tools or collecting new certifications.
 

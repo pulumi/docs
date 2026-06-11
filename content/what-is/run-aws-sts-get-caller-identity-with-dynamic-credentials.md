@@ -9,7 +9,7 @@ page_title: Run 'aws sts get-caller-identity' using Dynamic Credentials
 authors: ["diana-esteves"]
 ---
 
-The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Security Token Service (STS)  enables users to request temporary, limited-privilege credentials for AWS interactions.
+The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/sts/get-caller-identity.html) is part of the AWS Command Line Interface (CLI) and is utilized for retrieving the details about the IAM user or role whose credentials are used to call operations in AWS. Amazon Security Token Service (STS) enables users to request temporary, limited-privilege credentials for AWS interactions.
 
 Using the `aws sts get-caller-identity` command is key in managing access to AWS, providing an easy way to view the details of the entity that was used to make a specific call to AWS. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
 
@@ -41,7 +41,7 @@ But what does this actually mean? If we use AWS as an example, it means that we 
 
 ### Step 1: Install and login to Pulumi ESC
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
 
 ```bash
 $ esc login

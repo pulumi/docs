@@ -79,4 +79,4 @@ One of the more important recommendations for this pattern is to avoid trying to
 
 This is a pattern that works well at a larger organization, where it would be beyond the scope of a single group to be able to wrap their understanding around hundreds of services. However, it is a pattern that can be applied to smaller organizations as well!
 
-Watch for the next post in this series, where we will dig into some other patterns! Or revist the first post, [Organizational Patterns - A Single Infra Repo](https://www.pulumi.com/blog/organizational-patterns-infra-repo/).
+Watch for the next post in this series, where we will dig into some other patterns! Or revisit the first post, [Organizational Patterns - A Single Infra Repo](https://www.pulumi.com/blog/organizational-patterns-infra-repo/).

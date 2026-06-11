@@ -46,7 +46,7 @@ description: |
 
 learn:
     - How to create and configure a Docker Build Cloud (DBC) builder
-    - How to create a Pulumi program in Typescript to define IaC
+    - How to create a Pulumi program in TypeScript to define IaC
     - How to build NGINX Dockerfile in Pulumi and DBC
 
 # The event presenters

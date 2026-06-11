@@ -121,7 +121,7 @@ If the resource provisioning is not taking place in the language host, where is 
 
 ### The Declarative Part: The CLI and Engine
 
-In the previous step, you found out that the language host sends requests to the engine to fullfil your to-be infrastructure.
+In the previous step, you found out that the language host sends requests to the engine to fulfill your to-be infrastructure.
 
 It is now that the Pulumi deployment engine gets to work. The engine combines the intended model of the infrastructure received from the language host, the current state recorded in the state backend, and the actual resource state to compute which actions need to be executed to bring the actual state in line with the intended model.
 

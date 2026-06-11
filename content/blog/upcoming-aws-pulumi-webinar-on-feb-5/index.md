@@ -37,7 +37,7 @@ of JavaScript, improving time to ship code, time to provision and
 onboard new customers, and unify their Development and DevOps teams and
 techniques.
 
-![code comparision](/blog/upcoming-aws-pulumi-webinar-on-feb-5/code-comparison.png)
+![code comparison](/blog/upcoming-aws-pulumi-webinar-on-feb-5/code-comparison.png)
 
 [Download the case study](/blog/upcoming-aws-pulumi-webinar-on-feb-5/AWS-Pulumi-CaseStudy.pdf)
 

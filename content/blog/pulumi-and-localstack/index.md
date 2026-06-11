@@ -26,7 +26,7 @@ I first encountered [Pulumi](https://www.pulumi.com/) a few years ago when I was
 
 Recently, I decided to bootstrap a simple application using a serverless approach, making it a good opportunity to try Pulumi again. I still wanted to use good engineering practices and be able to run the application locally. As I was the (OG) SaaS architect of Atlassian and am an AWS user, [LocalStack](https://github.com/localstack/localstack#overview) was a natural choice.
 
-Pulumi has come a long way since I first saw it. I am super happy with it so far and I'm using it for real infrastructure work at the startups I'm working with. It seems the software engineers have less cognitive load using a more familar language to express infrastructure definitions. It is worth noting that Pulumi uses Terraform in various ways under the covers and I'm still a big fan of Terraform and Hashicorp in general.
+Pulumi has come a long way since I first saw it. I am super happy with it so far and I'm using it for real infrastructure work at the startups I'm working with. It seems the software engineers have less cognitive load using a more familiar language to express infrastructure definitions. It is worth noting that Pulumi uses Terraform in various ways under the covers and I'm still a big fan of Terraform and Hashicorp in general.
 
 ## The Application and its Infrastructure
 
@@ -38,7 +38,7 @@ There's lots more to the application, but the extract in the following sample is
 
 ## The Sample
 
-Unlike every sample or blog I found for either Pulumi or LocalStack, I wanted to organize the code properly. Inevitably, most samples did nothing other than return a simple string as a repsonse (a distributed "hello world"). Otherwise, everything I found was one big file with no cohesion and no separation of concerns. Even worse, the samples mix the IaC "deploy/provision-time" code with the application "runtime" code in the same file. Exactly zero had any tests, let alone ones that were written to specify the expected behaviour.
+Unlike every sample or blog I found for either Pulumi or LocalStack, I wanted to organize the code properly. Inevitably, most samples did nothing other than return a simple string as a response (a distributed "hello world"). Otherwise, everything I found was one big file with no cohesion and no separation of concerns. Even worse, the samples mix the IaC "deploy/provision-time" code with the application "runtime" code in the same file. Exactly zero had any tests, let alone ones that were written to specify the expected behaviour.
 
 I've divided this article into various sections depending on what you're wanting to focus on.
 

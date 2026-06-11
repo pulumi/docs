@@ -35,7 +35,7 @@ sortable_date: 2021-10-20T13:10:00-07:00
 duration: "22 minutes"
 # Description of the event.
 description: |
-    Arm architectures are increasingly popular and are becoming widely adopted by teams and organizations. As this adoption grows, developers and organizations must ensure their software and services are capable to support Arm architecture which begins by ensuring their CI/CD tooling and workload are Arm capable. In this presentation, attendees will learn how to ensure their CI/CD pipelines and workloads are Arm compatible and capable of providing Arm support in their products.
+    Arm architectures are increasingly popular and are becoming widely adopted by teams and organizations. As this adoption grows, developers and organizations must ensure their software and services are capable of supporting Arm architecture which begins by ensuring their CI/CD tooling and workload are Arm capable. In this presentation, attendees will learn how to ensure their CI/CD pipelines and workloads are Arm compatible and capable of providing Arm support in their products.
 
 # The event presenters
 presenters:

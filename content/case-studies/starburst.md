@@ -1,6 +1,6 @@
 ---
 title_tag: Starburst | Case Studies
-title: "Starburst:  112x Deployment Acceleration"
+title: "Starburst: 112x Deployment Acceleration"
 description: |
     Starburst transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi, resulting in a 112x faster deployment time and significant cost savings.
 meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
@@ -78,7 +78,7 @@ Starburst also found Pulumi AI to be a game-changer in terms of productivity. Th
 
 With Pulumi Cloud's drift detection feature, Starburst could proactively identify and address manual changes to their infrastructure, preventing potential issues and ensuring consistent deployments. For example, someone on-call might make a manual change which could break the next release. With drift detection, an alert will happen, allowing the drift to be remediated without breaking future releases.
 
-Starburst also plans to use Pulumi ESC (Environments, Secrets, and Configuration).  Previously, each developer environment required manual configuration and copying of keys from AWS Key Management Service (KMS), which was a slow and potentially insecure process. With ESC, each developer environment can securely pull credentials and configurations from a centralized location, significantly improving security and efficiency. ESC also enables dynamic credential management, further enhancing security by eliminating the need to share static credentials across environments.
+Starburst also plans to use Pulumi ESC (Environments, Secrets, and Configuration). Previously, each developer environment required manual configuration and copying of keys from AWS Key Management Service (KMS), which was a slow and potentially insecure process. With ESC, each developer environment can securely pull credentials and configurations from a centralized location, significantly improving security and efficiency. ESC also enables dynamic credential management, further enhancing security by eliminating the need to share static credentials across environments.
 
 ### Cost Savings
 

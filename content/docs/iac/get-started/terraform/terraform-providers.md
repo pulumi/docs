@@ -35,7 +35,7 @@ This command automatically:
 
 ## Example: Random Pet Names
 
-Let's see how this works first-hand, using the `random` Terraform provider. We'll import the Terraform provider then use it to put a load balander in a random availability zone.
+Let's see how this works first-hand, using the `random` Terraform provider. We'll import the Terraform provider then use it to put a load balancer in a random availability zone.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

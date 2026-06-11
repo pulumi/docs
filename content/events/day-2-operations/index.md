@@ -59,7 +59,7 @@ presenters:
 # case-sensitive
 tags:
     level: Intermediate # Beginner, Intermediate, Advanced
-    topics:  ["Platfotm Engineering", "Monitoring", "Drift Detection"]
+    topics:  ["Platform Engineering", "Monitoring", "Drift Detection"]
     languages: ["TypeScript"]
     clouds: ["AWS"]
 

@@ -39,7 +39,7 @@ benefits:
           icon: security
           icon_color: violet
           description: |
-            Pulumi provides first class support for secrets so you can confidently store values that contain sensitive data, such as database passwords or service tokens. Pulumi automatically tracks your secrets across your program’s execution and ensure that secret values are encrypted in the state file and never exposed as plain text.
+            Pulumi provides first class support for secrets so you can confidently store values that contain sensitive data, such as database passwords or service tokens. Pulumi automatically tracks your secrets across your program’s execution and ensures that secret values are encrypted in the state file and never exposed as plain text.
 
         - title: Empower developers
           icon: gear
@@ -64,7 +64,7 @@ diagrams:
         - title: 2. Identify which stacks need to be modernized
           image: /images/solutions/terraform/terraform-diagram-two.svg
           content: |
-            Identify all the stack that you want modernized. There are two strategies to this:  you can either pick the highest value stacks or the lowest risk stack to move and focus on first. The former allows you to get the greatest business benefit while the latter allows you to incrementally build up to the critical pieces.
+            Identify all the stacks that you want modernized. There are two strategies to this:  you can either pick the highest value stacks or the lowest risk stack to move and focus on first. The former allows you to get the greatest business benefit while the latter allows you to incrementally build up to the critical pieces.
 
         - title: 3. Convert Terraform templates to Pulumi programs
           image: /images/solutions/terraform/terraform-diagram-three.svg

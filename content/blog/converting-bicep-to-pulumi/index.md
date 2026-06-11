@@ -302,7 +302,7 @@ Those who are familiar with the Bicep CLI, know that it has a built-in _decompil
 
 From all of this, I created another converter `pulumi-converter-arm` that works exactly like the Bicep converter but takes ARM templates as input. Head over to the [repository](https://github.com/Zaid-Ajaj/pulumi-converter-arm) to learn more about how to install it and how to use it.
 
-Depending on how well this ARM converter does its job, we might consider deprecating [arm2pulumi](https://www.pulumi.com/arm2pulumi/) in favor of it. However, we first need to test it against more templates and iron out the rough edges. It would be the ideal situation because there are virtually zero maintenance costs, any improvements to the Bicep converter would automatically get picked up here. Als,o improvements to the decompiler from the [Azure.Bicep.Core](https://www.nuget.org/packages/Azure.Bicep.Core) nuget package would benefit the converter as well.
+Depending on how well this ARM converter does its job, we might consider deprecating [arm2pulumi](https://www.pulumi.com/arm2pulumi/) in favor of it. However, we first need to test it against more templates and iron out the rough edges. It would be the ideal situation because there are virtually zero maintenance costs, any improvements to the Bicep converter would automatically get picked up here. Also, improvements to the decompiler from the [Azure.Bicep.Core](https://www.nuget.org/packages/Azure.Bicep.Core) nuget package would benefit the converter as well.
 
 ## Building your own Pulumi language converter
 

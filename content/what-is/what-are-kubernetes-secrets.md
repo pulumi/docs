@@ -18,7 +18,7 @@ Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configurati
 
 ## Why use Kubernetes Secrets?
 
-Manual secrets management is prone to introducing errors and poses high-lift operational challenges. At the same time,  the absence of a dedicated secret management solution means carrying a higher risk of accidental data leaks or unauthorized access to private information. One should never use ConfigMaps to hold secrets. Kubernetes Secrets come into play by providing an integrated mechanism for the secure storage and distribution of sensitive data to pods.
+Manual secrets management is prone to introducing errors and poses high-lift operational challenges. At the same time, the absence of a dedicated secret management solution means carrying a higher risk of accidental data leaks or unauthorized access to private information. One should never use ConfigMaps to hold secrets. Kubernetes Secrets come into play by providing an integrated mechanism for the secure storage and distribution of sensitive data to pods.
 
 Kubernetes Secrets are fundamental to the cloud-native stack. It provides a secure and standardized means to manage sensitive information like credentials, tokens, or API keys within our cloud apps so these don't have to be passed around in plain text.
 

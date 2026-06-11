@@ -540,7 +540,7 @@ Check out the full `halloumi` source in [TypeScript](https://github.com/pulumi/h
 
 Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself, including `Apply` callbacks.
 
-![Debuggin demo](https://www.pulumi.com/uploads/content/blog/automation-api/debugging.gif)
+![Debugging demo](https://www.pulumi.com/uploads/content/blog/automation-api/debugging.gif)
 
 ## Supercharged Ops Tooling
 

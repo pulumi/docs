@@ -140,5 +140,3 @@ For more information on when and how to use dev builds, see [Using dev builds fo
 
 - [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
 - [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
-</content>
-</invoke>

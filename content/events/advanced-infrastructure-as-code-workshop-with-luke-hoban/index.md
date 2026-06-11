@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters.  [Get started](https://pulumi.com/start)
+    In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters. [Get started](https://pulumi.com/start)
 
 learn:
     - The basics of infrastructure as code and the Pulumi programming model

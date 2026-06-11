@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety a AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
+    Developers, DevOps, and Platform Engineering teams are increasingly charged with helping their organizations to deliver product innovation using AI capabilities. For the past 18 months, Pulumi has built and shipped a variety of AI-powered capabilities for customers using Pulumi Cloud to manage underlying AI infrastructure.
 
     In this session, you'll hear from Pulumi Engineering Manager, Aaron Friel about the lessons learned building applications with Large Language Models at Pulumi.
 
