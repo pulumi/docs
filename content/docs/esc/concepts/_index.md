@@ -85,6 +85,6 @@ Because dynamic values are resolved at open time, the temporary AWS credentials 
 - [Environments](/docs/esc/environments/) — define, compose, version, and consume environments.
 - [Providers and rotators](/docs/esc/concepts/providers/) — the plugins that produce and rotate values.
 - [SDKs](/docs/esc/concepts/sdks/) — work with environments from your own code.
-- [Integrations](/docs/esc/integrations/) — the full catalog of tools ESC connects to.
+- [Integrations](/docs/esc/integrations/) — tools with a dedicated ESC integration component.
 - [Access control](/docs/esc/administration/access-control/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/administration/customer-managed-keys/) — administer and secure your environments.
 - [ESC CLI](/docs/esc/cli/) — the command-line reference.
