@@ -41,7 +41,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#., Java, or Yaml. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
+    Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code (IaC) programs in the language of your choice, such as TypeScript, Python, Go, C#, Java, or YAML. Pulumi AI will create all the necessary parts, from the instance itself to the security groups that will allow access. 
     
     🤖 [Try Pulumi Neo now](https://www.pulumi.com/product/neo/) and see the magic unfold!
     

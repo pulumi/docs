@@ -41,9 +41,9 @@ Although the specific implementation details vary from tool to tool---some of th
 
 Configuration management offers a number of tangible benefits:
 
-* **Consistency**: By defining the desired state and then _identifying_ and _remediating_ the specific settings that do not align with the desired state, configuration management helps bring greater consistency to systems. For example, configuration management helps ensure that the same version of a particular software package is installed across a specific subset of operating systems instances, or that all operating systems instances are patched with a particular security update.
+* **Consistency**: By defining the desired state and then _identifying_ and _remediating_ the specific settings that do not align with the desired state, configuration management helps bring greater consistency to systems. For example, configuration management helps ensure that the same version of a particular software package is installed across a specific subset of operating system instances, or that all operating system instances are patched with a particular security update.
 * **Reliability**: Inconsistency is the bane of reliability. _Snowflake servers_ that have manual tweaks, incorrect hotfixes, or missing software updates make it harder to fix issues. Automation helps reduce inconsistency by eliminating human error and variance in manually-configured systems.
-* **Scalability:** Defined configurations that can be deployed via configuration management tool make it possible to scale systems faster, easier, and more reliably.
+* **Scalability:** Defined configurations that can be deployed via a configuration management tool make it possible to scale systems faster, easier, and more reliably.
 * **Accountability**: Similar to infrastructure as code, configuration management enables the desired state to be checked into version control. Changes to the desired state can be tracked, providing accountability and visibility.
 
 ## What are some practical use cases for configuration management?

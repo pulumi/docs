@@ -58,7 +58,7 @@ presenters:
       role: Sr. Partner Solutions Architect, AWS
       photo: /images/team/marina-novikova.jpg
     - name: Bryce Lampe
-      role: Software Engineer, Pulumim
+      role: Software Engineer, Pulumi
       photo: /images/team/bryce-lampe.jpg
 
 # case-sensitive

@@ -19,7 +19,7 @@ The error message "Unable to locate credentials" typically occurs in AWS (Amazon
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
-- Ensure teams can easily and safely run commands like  without requiring deep security expertise.
+- Ensure teams can easily and safely run commands like without requiring deep security expertise.
 
 ## What is the esc run command?
 

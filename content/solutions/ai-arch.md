@@ -8,7 +8,7 @@ overview:
     title: Pinecone + AWS Reference Architecture
     image: /images/solutions/ai-arch/pinecone-refarch-logo.png
     description: |
-        This reference architecture demonstrates microservices scaling, data processing pipelines, infrastructure segmentation through networking and security groups, and UI and database synchronizations. It serves as a reference point for you take an idea in a notebook to an application handling real-world traffic. The reference architecture is built with the best practices for how to use AWS and Pinecone. It is designed for production, and it is easily modifiable to fit most use cases.
+        This reference architecture demonstrates microservices scaling, data processing pipelines, infrastructure segmentation through networking and security groups, and UI and database synchronizations. It serves as a reference point for you to take an idea in a notebook to an application handling real-world traffic. The reference architecture is built with the best practices for how to use AWS and Pinecone. It is designed for production, and it is easily modifiable to fit most use cases.
 
 diagrams:
     title: Architecture Details

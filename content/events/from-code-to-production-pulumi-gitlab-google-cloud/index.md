@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this workshop, explore how Pulumi’s integration with GitLab empowers teams to create robust CI/CD pipelines for managing cloud infrastructure on Google Cloud. You’ll learn to leverage Pulumi’s declarative Infrastructure as Code (IaC) for provisioning and scaling resources, along with GitLab's DevSecOps platform..
+    In this workshop, explore how Pulumi’s integration with GitLab empowers teams to create robust CI/CD pipelines for managing cloud infrastructure on Google Cloud. You’ll learn to leverage Pulumi’s declarative Infrastructure as Code (IaC) for provisioning and scaling resources, along with GitLab's DevSecOps platform.
     
     The session will dive into GitLab’s enterprise collaboration and CI/CD pipelines, including automated security checks for infrastructure. Attendees will gain hands-on experience with secrets management and automated deployments, using ESC secrets for enhanced security. By the end, you’ll be equipped to streamline infrastructure and application delivery across teams, reducing complexity and risk while maximizing flexibility and control.
 

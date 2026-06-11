@@ -40,7 +40,7 @@ duration: 1 hour
 location: virtual
 
 # Description of the event.
-description: When developers build Generative AI Apps or Agentic Apps on Google Cloud, they need a reliable experience. As a platform engineers, you must ensure that you provide the right resources with the right guardrails and also unblock developers from having to handle the underlying infrastructure. We will show you how you can leverage Pulumi and Cloud Run to build a platform where agentic workloads can be reliably deployed.
+description: When developers build Generative AI Apps or Agentic Apps on Google Cloud, they need a reliable experience. As a platform engineer, you must ensure that you provide the right resources with the right guardrails and also unblock developers from having to handle the underlying infrastructure. We will show you how you can leverage Pulumi and Cloud Run to build a platform where agentic workloads can be reliably deployed.
 
 # The event presenters
 presenters:

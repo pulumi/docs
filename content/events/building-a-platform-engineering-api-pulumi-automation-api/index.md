@@ -47,7 +47,7 @@ description: |
 learn:
     - The fundamentals of Pulumi's Automation API and its benefits for infrastructure management.
     - How to set up and configure your environment for using Pulumi's Automation API.
-    - Practical example in Typescript of building and deploying infrastructure using the Automation API.
+    - Practical example in TypeScript of building and deploying infrastructure using the Automation API.
 
 # The event presenters
 presenters:

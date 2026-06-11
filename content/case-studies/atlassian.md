@@ -98,7 +98,7 @@ Again, part of the problem rested with the old tool, whose DSL was unfamiliar to
 
 To make things simple and turnkey for developers, the DevSpeed team built a self-service dashboard that created and configured new Bitbucket instances. Developers enter a few pieces of information, such as what they want to call the instance, what region to use, and an SSH key. Then, a CI/CD pipeline using Bitbucket Pipelines and Bamboo calls Pulumi to deploy a complete developer environment.
 
-Once the instance is ready, the developer simply SSH’s into it, and the instance it will look exactly like Bitbucket. The developer can make the changes they want and then create a pull request to merge their work into a main branch. The developer can also share the URL of the instance with teammates so that they can see the changes when they review the code.
+Once the instance is ready, the developer simply SSH’s into it, and the instance will look exactly like Bitbucket. The developer can make the changes they want and then create a pull request to merge their work into a main branch. The developer can also share the URL of the instance with teammates so that they can see the changes when they review the code.
 
 Below is a diagram showing how a Bitbucket cloud instance is architected:
 
