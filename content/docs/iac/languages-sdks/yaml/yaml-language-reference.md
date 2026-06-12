@@ -398,11 +398,11 @@ The last two lines are equivalent as if the variable were substituted for its va
             targetPort: 8000
 ```
 
-### Built-in functions
+## Built-in functions
 
 In any expression location, an object containing a single key beginning with `fn::` calls a built-in function.
 
-#### `fn::toBase64`
+### `fn::toBase64`
 
 Converts a UTF-8 string into a Base64 encoded string using the [standard encoding](https://pkg.go.dev/encoding/base64#pkg-variables).
 
@@ -414,7 +414,7 @@ variables:
 
 The expression `${greeting}` will return `SGVsbG8sIHdvcmxkIQ==`
 
-#### `fn::fromBase64`
+### `fn::fromBase64`
 
 Converts a Base64 encoded string into a UTF-8 string. **This will fail if the result is not a valid UTF-8 string**
 
@@ -426,7 +426,7 @@ variables:
 
 The expression `${greeting}` will return `Hello, World!`
 
-#### `fn::toJSON`
+### `fn::toJSON`
 
 Converts a value into its JSON representation.
 
@@ -440,7 +440,7 @@ variables:
 
 The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 123 }`.
 
-#### `fn::invoke`
+### `fn::invoke`
 
 Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/blob/master/FUNCTION_LIST.md) package that includes math functions such as `sum` and `abs`, logic functions such as `anytrue`, and string functions such as `split`.
 
@@ -509,7 +509,7 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
 | `pluginDownloadURL` | string | Version specifies a URL that should be used to download the provider plugin |
 
-#### `fn::join`
+### `fn::join`
 
 Joins strings together separated by a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item a list of expressions to concatenate.
 
@@ -524,7 +524,7 @@ variables:
 
 The expression `${banana}` will have the value `"BaNaNa"`.
 
-#### `fn::split`
+### `fn::split`
 
 Splits a string on a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item the string to split.
 
@@ -538,7 +538,7 @@ variables:
 
 The expression `${fruits}` will be a list containing the values `["apple", "orange", "banana"]`.
 
-#### `fn::select`
+### `fn::select`
 
 Selects one of several options given an index. Arguments are passed as a list, with the first item being the index, 0-based, and the second item a list of expressions to select from.
 
@@ -554,7 +554,7 @@ variables:
 
 The expression `${policyVersion}` will have the value `v1.1`.
 
-#### `fn::*Asset` and `fn::*Archive`
+### `fn::*Asset` and `fn::*Archive`
 
 [Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
 
@@ -588,7 +588,7 @@ variables:
         fn::fileArchive: ./folder
 ```
 
-#### `fn::secret`
+### `fn::secret`
 
 Constructs a [Secret](/docs/concepts/secrets/) from an existing value.
 
@@ -600,7 +600,7 @@ variables:
         function: my:pkg:GetSecretValue
 ```
 
-#### `fn::readFile`
+### `fn::readFile`
 
 Reads a file from disk and returns the contents as a string, must be utf-8. This function has
 special rules for its behavior.
@@ -631,11 +631,11 @@ forbidden to prevent path traversals.
 * `fn::readFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
    that escapes the project
 
-### Built-in variables
+## Built-in variables
 
 Built-in variables accessible within any Pulumi YAML program.
 
-#### `pulumi`
+### `pulumi`
 
 The built-in `pulumi` variable contains three properties, which can be useful for retrieving information
 about your current workspace.
