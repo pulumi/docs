@@ -739,7 +739,10 @@ if (config.guidesStack) {
         {
             ...baseCacheBehavior,
             targetOriginId: guidesCDN,
-            pathPattern: "/guides/*",
+            // "/guides*" (no slash) matches /guides, /guides.md, and
+            // /guides/... so the bare path reaches the guides origin and gets
+            // the native trailing-slash redirect, matching registry's behavior.
+            pathPattern: "/guides*",
             cachePolicyId: thirtyMinuteCachePolicy.id,
             originRequestPolicyId: allViewerExceptHostHeaderId,
         },
