@@ -31,7 +31,7 @@ The permission model has the following practical implications:
 
 - If your organization has default stack permissions set to `NONE`, then any deployment created by a `git push` or a pull request will not be able to access any [Stack References](https://www.pulumi.com/docs/concepts/stack/#stackreferences), and will fail if it tries to do so.
 
-- If your organization has default environment permissions set to `NONE`, then any deployment created by a `git push` or a pull request will not be able to access any [ESC Environments](https://www.pulumi.com/docs/esc/environments/) that are listed in the stack's configuration file.
+- If your organization has default environment permissions set to `NONE`, then any deployment created by a `git push` or a pull request will not be able to access any [ESC Environments](https://www.pulumi.com/docs/esc/concepts/environments/) that are listed in the stack's configuration file.
 
 ## Granting Additional Permissions
 

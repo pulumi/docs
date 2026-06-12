@@ -12,12 +12,12 @@ menu:
 
 Operational guides for running Pulumi ESC day-to-day: managing secrets in existing environments, rotating credentials, deploying rotation connectors into private networks, and injecting environment values into commands and CI pipelines.
 
-If you are looking for *what* ESC is rather than *how to run it*, start with [Concepts](/docs/esc/concepts/). For reference on the YAML syntax that defines an environment, see [Environments](/docs/esc/environments/).
+If you are looking for *what* ESC is rather than *how to run it*, start with [Concepts](/docs/esc/concepts/). For reference on the YAML syntax that defines an environment, see [Environments](/docs/esc/concepts/environments/).
 
 ## Working with environments
 
 - [Manage secrets](/docs/esc/operations/managing-secrets/) — add, read, and organize secrets inside an environment.
-- [Approvals](/docs/esc/operations/approvals/) — require explicit review and sign-off before applying changes to environments.
+- [Approvals](/docs/esc/concepts/approvals/) — require explicit review and sign-off before applying changes to environments.
 
 ## Rotation
 

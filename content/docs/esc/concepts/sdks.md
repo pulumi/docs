@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-concepts
     identifier: esc-concepts-sdks
-    weight: 6
+    weight: 13
 ---
 
 The Pulumi ESC SDKs are language libraries that let you work with [environments](/docs/esc/concepts/) from your own code. They provide a programmatic interface to create, read, update, and delete environment definitions, and to open environments so you can read their evaluated configuration and resolved secrets.
