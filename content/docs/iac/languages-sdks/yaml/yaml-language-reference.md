@@ -38,7 +38,7 @@ In many locations within this schema, values may be expressions which compute a 
 
 The supported expression forms for each of these is detailed below.
 
-### Config
+## Config
 
 {{% notes %}}
 Pulumi YAML programs declare config using the same project-level `config` schema documented in the [Pulumi project file reference](/docs/iac/concepts/projects/project-file/#config-options). The schema is shown again here for convenience, alongside YAML-flavored examples.
@@ -109,7 +109,7 @@ outputs:
 
 Config values are set using `pulumi config set` for scalar types, `pulumi config set --path` for nested object properties, and `pulumi config set --secret` for secrets. They are referenced in your program using `${configKey}` interpolation expressions, with dot notation (`${configKey.property}`) for accessing properties within object-typed values.
 
-### Resources
+## Resources
 
 The value of `resources` is an object whose keys are logical resource names by which the resource will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents a resource which will be managed by the Pulumi program.
 
@@ -118,10 +118,10 @@ The value of `resources` is an object whose keys are logical resource names by w
 | `type` | string | Yes | No | Type is the Pulumi type token for this resource. |
 | `defaultProvider` | bool | No | No | DefaultProvider specifies if a provider should be used for resources without an explicit one set. Set only on provider resources. |
 | `properties` | `map[string]Expression` | No | Yes | Properties contains the primary resource-specific keys and values to initialize the resource state. |
-| `options` | [Resource Options](#resource-options) | No | No | Options contains all resource options supported by Pulumi. |
+| `options` | [Resource options](#resource-options) | No | No | Options contains all resource options supported by Pulumi. |
 | `get` | [Resource Getter](#resource-getter) | No | Yes | A getter function for the resource. Supplying `get` is mutually exclusive to `properties`. |
 
-#### Resource Options
+### Resource options
 
 The value of the `options` property of a Resource is an object whose keys are [resource option names](/docs/concepts/options/) and whose values are elements of the schema below. No resource options are required.
 
@@ -155,7 +155,7 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 | `replaceOnChanges` | string[] | ReplaceOnChanges specifies if changes to certain properties on a resource should force replacement instead of an in-place update. |
 | `retainOnDelete` | bool | RetainOnDelete causes a resource to be preserved in the cloud even when it is deleted from the Pulumi state. |
 
-#### Resource Getter
+### Resource getter
 
 Supplying a `get` key turns the resource declaration into a [Getter Function](/docs/concepts/resources/get/).
 
@@ -164,7 +164,7 @@ Supplying a `get` key turns the resource declaration into a [Getter Function](/d
 | `id` | string | Yes | The ID of the resource to import |
 | `state` | map[string]Expression | No | Known properties (input & output) of the resource. This assists the provider in figuring out the correct resource. |
 
-#### Custom Timeout
+### Custom timeout
 
 The optional `customTimeouts` property of a resource is an object of the following schema:
 
@@ -174,7 +174,7 @@ The optional `customTimeouts` property of a resource is an object of the followi
 | `delete` | string | No | No | Delete is the custom timeout for delete operations. |
 | `update` | string | No | No | Update is the custom timeout for update operations. |
 
-### Providers and provider versions
+## Providers and provider versions
 
 There are at least two reasons to explicitly define providers in YAML, or explicitly set their versions while creating resources.
 
@@ -183,7 +183,7 @@ There are at least two reasons to explicitly define providers in YAML, or explic
 
 If a specific provider version is necessary, we prefer the approaches in the order described here.
 
-#### Default provider
+### Default provider
 
 Declaring a default provider simplifies configuring a provider version across all resources for that provider.
 
@@ -206,7 +206,7 @@ In this example the `my-bucket` resource, and any other AWS resources, uses the 
 
 Only one provider of a given `type` can be declared as the default provider.
 
-#### Explicit provider
+### Explicit provider
 
 To declare an explicit provider instance for specific resources, declare a provider resource in the [`resources`](#resources) section. For the `type` property, prefix the name of the provider with `pulumi:providers`.
 
@@ -218,7 +218,7 @@ resources:
       version: 5.1.0
 ```
 
-The provider instance can then be used as described in section [Resource Options](#resource-options) by setting the `provider` option:
+The provider instance can then be used as described in section [Resource options](#resource-options) by setting the `provider` option:
 
 ```yaml
 resources:
@@ -236,9 +236,9 @@ resources:
 
 Explicit providers take precedence over default providers.
 
-#### Resource version
+### Resource version
 
-To declare a resource with a specific provider version use the `version` option as described in [Resource Options](#resource-options):
+To declare a resource with a specific provider version use the `version` option as described in [Resource options](#resource-options):
 
 ```yaml
 resources:
@@ -250,7 +250,7 @@ resources:
       version: 5.6.0
 ```
 
-#### Third party providers
+### Third-party providers
 
 Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package).
 
@@ -270,7 +270,7 @@ resources:
     type: aws:s3:Bucket
 ```
 
-### Outputs and Stack References
+## Outputs and stack references
 
 The value of [`outputs`](https://www.pulumi.com/docs/concepts/stack/#outputs) is an object whose keys are the logical names of the outputs that are available from outside the Pulumi stack (via [`pulumi stack output`](https://www.pulumi.com/docs/iac/cli/commands/pulumi_stack_output/)), and whose values are potentially computed expressions that resolve to the values of the desired outputs.
 
@@ -294,7 +294,7 @@ outputs:
 
 The above output will have the value of the `outputName` output from the stack `org/project/stack`.
 
-### Pulumi CLI Configuration
+## Pulumi CLI configuration
 
 The `pulumi` section configures the Pulumi CLI. The `requiredVersion` option specifies the version range of the Pulumi CLI that this project requires. The format follows the syntax of [semantic version ranges](https://pkg.go.dev/github.com/blang/semver#ParseRange). This option is useful when your program requires a newer feature and you want to ensure the program won't be run with a CLI that is too old.
 
@@ -305,7 +305,7 @@ pulumi:
 
 The above configuration will ensure that the Pulumi CLI version is at least 3.0.0 but not 3.1.2. If run with a version that is not within this range, the program will exit with an error.
 
-### Expressions
+## Expressions
 
 Expressions can be used in several contexts:
 
@@ -318,7 +318,7 @@ Generally speaking, most values permit an expression and exceptions will be docu
 
 In these contexts, any JSON/YAML value may be provided.  If that value is a string, it is interpolated.  If that value is an object, and the object has a key with a prefix of `fn::`, it is evaluated as an expression.
 
-#### Interpolation
+### Interpolation
 
 In expression locations, strings are evaluated as interpolations and any nested `${...}` expressions within the string value are replaced by the value of the expression `...`.  The syntax of expressions within interpolations permits [property access](#property-access) only.
 
@@ -333,7 +333,7 @@ A string like `Hello, ${foo}` will convert the expression `foo` to a string.
 
 If a string contains only an `${...}` expression, it's considered a [substitution](#substitution).
 
-#### Property Access
+### Property access
 
 Within an expression denoted by `${...}` property access is permitted according to the forms below. Config, variables, and resource keys all exist in a single namespace, and in the examples, `root` or equivalent must be the name of one of these items, and it must be valid to access the `foo` property of that item if it's a map or object, or if it's an array, the index must be valid.
 
@@ -359,7 +359,7 @@ We have not discussed types until now, but implicitly every expression has a typ
 * arrays have non-negative integer indices and expression values
 * property access on a Resource retrieves outputs
 
-#### Substitution
+### Substitution
 
 Expressions denoted by `${...}` are only converted to strings when interpolated into a string with surrounding text. If a resource property takes a list or a map for example, that can be provided by a variable whose value can be substituted in. In the example below, the `httpPort` variable is used to reduce repetition in the two Kubernetes Service resources.
 
@@ -398,11 +398,11 @@ The last two lines are equivalent as if the variable were substituted for its va
             targetPort: 8000
 ```
 
-#### Built-in Functions
+## Built-in functions
 
 In any expression location, an object containing a single key beginning with `fn::` calls a built-in function.
 
-##### `fn::toBase64`
+### `fn::toBase64`
 
 Converts a UTF-8 string into a Base64 encoded string using the [standard encoding](https://pkg.go.dev/encoding/base64#pkg-variables).
 
@@ -414,7 +414,7 @@ variables:
 
 The expression `${greeting}` will return `SGVsbG8sIHdvcmxkIQ==`
 
-##### `fn::fromBase64`
+### `fn::fromBase64`
 
 Converts a Base64 encoded string into a UTF-8 string. **This will fail if the result is not a valid UTF-8 string**
 
@@ -426,7 +426,7 @@ variables:
 
 The expression `${greeting}` will return `Hello, World!`
 
-##### `fn::toJSON`
+### `fn::toJSON`
 
 Converts a value into its JSON representation.
 
@@ -440,7 +440,7 @@ variables:
 
 The expression `${item}` will return a JSON value `{ "key1": "value1", "key2": 123 }`.
 
-##### `fn::invoke`
+### `fn::invoke`
 
 Calls a function from a package and returns either the whole object or a single field if given the `return` property. This can be any of the functions in the [registry providers](https://www.pulumi.com/registry/) as well as functions found in the [pulumi-std](https://github.com/pulumi/pulumi-std/blob/master/FUNCTION_LIST.md) package that includes math functions such as `sum` and `abs`, logic functions such as `anytrue`, and string functions such as `split`.
 
@@ -450,7 +450,7 @@ The schema is:
 | - | - | - | - | - |
 | `function` | string | Yes | No | Name of a function to call. |
 | `arguments` | map[string]Expression | Yes | Yes | Arguments to pass to the expression, each key is a named argument. |
-| `options` | [Invoke Options](#invoke-options) | No | No | Options for the provider calling the function. |
+| `options` | [Invoke options](#invoke-options) | No | No | Options for the provider calling the function. |
 | `return` | string | No | No | Return the value of the field with this name. |
 
 Example calling the [getAmi](https://www.pulumi.com/registry/packages/aws/api-docs/ec2/getami/) function in the AWS provider package:
@@ -490,7 +490,7 @@ variables:
 
 The expression `${modifiedWeight}` will return `145` in this case.
 
-#### Invoke Options
+#### Invoke options
 
 The value of the `options` property of an fn::invoke is an object with the following properties.
 
@@ -509,7 +509,7 @@ The  `parent` and `provider` values permit expressions which must use interpolat
 | `version` | string | Version specifies a provider plugin version that should be used when operating on a resource |
 | `pluginDownloadURL` | string | Version specifies a URL that should be used to download the provider plugin |
 
-##### `fn::join`
+### `fn::join`
 
 Joins strings together separated by a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item a list of expressions to concatenate.
 
@@ -524,7 +524,7 @@ variables:
 
 The expression `${banana}` will have the value `"BaNaNa"`.
 
-##### `fn::split`
+### `fn::split`
 
 Splits a string on a delimiter. Arguments are passed as a list, with the first item being the delimiter, and the second item the string to split.
 
@@ -538,7 +538,7 @@ variables:
 
 The expression `${fruits}` will be a list containing the values `["apple", "orange", "banana"]`.
 
-##### `fn::select`
+### `fn::select`
 
 Selects one of several options given an index. Arguments are passed as a list, with the first item being the index, 0-based, and the second item a list of expressions to select from.
 
@@ -554,7 +554,7 @@ variables:
 
 The expression `${policyVersion}` will have the value `v1.1`.
 
-##### `fn::*Asset` and `fn::*Archive`
+### `fn::*Asset` and `fn::*Archive`
 
 [Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
 
@@ -588,7 +588,7 @@ variables:
         fn::fileArchive: ./folder
 ```
 
-##### `fn::secret`
+### `fn::secret`
 
 Constructs a [Secret](/docs/concepts/secrets/) from an existing value.
 
@@ -600,7 +600,7 @@ variables:
         function: my:pkg:GetSecretValue
 ```
 
-##### `fn::readFile`
+### `fn::readFile`
 
 Reads a file from disk and returns the contents as a string, must be utf-8. This function has
 special rules for its behavior.
@@ -631,11 +631,11 @@ forbidden to prevent path traversals.
 * `fn::readFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
    that escapes the project
 
-#### Built-in variables
+## Built-in variables
 
 Built-in variables accessible within any Pulumi YAML program.
 
-##### `pulumi`
+### `pulumi`
 
 The built-in `pulumi` variable contains three properties, which can be useful for retrieving information
 about your current workspace.
