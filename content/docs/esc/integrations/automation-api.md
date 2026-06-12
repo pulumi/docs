@@ -17,7 +17,7 @@ Pulumi Automation API includes methods for interacting with Pulumi ESC Environme
 
 Automation API methods for ESC include:
 
-- `addEnvironments(...)`: Add environments in order to your Pulumi stacks' [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+- `addEnvironments(...)`: Add environments in order to your Pulumi stacks' [import](/docs/esc/concepts/environments/#using-environments-with-pulumi-iac) list.
 - `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 - `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 

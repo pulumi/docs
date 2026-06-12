@@ -177,6 +177,13 @@ packages:
       - 3.7.1
 ```
 
+When adding a [source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/) from a local path, the entry records the path directly:
+
+```yaml
+packages:
+  my-components: ./path/to/my-components
+```
+
 You should commit `Pulumi.yaml` to source control so that your teammates can reproduce the same environment. When a collaborator clones your repository, they run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all packages defined in `Pulumi.yaml`, including generating any local SDKs.
 
 ### Upgrading a local package

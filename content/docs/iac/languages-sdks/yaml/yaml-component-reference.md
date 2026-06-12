@@ -6,10 +6,12 @@ h1: Pulumi YAML Component reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: yaml-component-reference
         name: Component Reference
         parent: iac-languages-yaml
         weight: 1
     languages:
+        identifier: yaml-component-reference
         parent: yaml-language
         weight: 1
 aliases:
