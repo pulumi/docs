@@ -29,16 +29,18 @@ aliases:
 
 The current stable version of Pulumi is **{{< latest-version >}}**.
 
+<div class="table-wrapper">
 <table>
     <thead>
         <tr>
             <th scope="col" width="20%">Version</th>
             <th scope="col" width="20%">Date</th>
             <th scope="col" colspan="3" width="40%">Downloads</th>
-            <th scope="col" width="20%">---</th>
+            <th scope="col" width="20%">Checksums</th>
         </tr>
     </thead>
     <tbody>
         {{< changelog-table-body >}}
     </tbody>
 </table>
+</div>

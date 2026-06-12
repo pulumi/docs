@@ -18,17 +18,6 @@ aliases:
     - /docs/iac/concepts/vs/terraform/opentofu/
 ---
 
-<style>
-    main table {
-        font-size: 0.94em;
-    }
-
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
-
 OpenTofu and Terraform are both infrastructure as code technologies that have similarities but fundamental differences. They both provide infrastructure as code software for cloud service management with a consistent CLI workflow. They allow you to write, plan, and apply changes to deliver infrastructure as code. In this comprehensive guide, we'll explore their key differences and similarities to help you choose the right infrastructure as code platform to meet your needs.
 
 ## OpenTofu vs. Terraform: Similarities {#similarities}
