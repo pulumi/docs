@@ -51,7 +51,7 @@ Instead of providing the PAT as an environment variable, risking losing or leaki
 
 ## Create a new ESC environment
 
-ESC [_Environments_](/docs/esc/environments/working-with-environments/) are a great way to store configuration settings and secrets. Environments can be created in the Pulumi Cloud console or with the CLI.
+ESC [_Environments_](/docs/esc/concepts/environments/) are a great way to store configuration settings and secrets. Environments can be created in the Pulumi Cloud console or with the CLI.
 
 To get started, navigate to the Environments page using Pulumi Cloud console's navigation bar on the left. Then click `Create Environment` button, fill in `creds` for project name and `psp` for environment name and click `Create`. You will now see a blank new environment with some default commented-out explanations.
 
@@ -127,4 +127,4 @@ You are now all set! Run `pulumi up`, and your Pulumi program will create a new 
 
 ### Wrapping up
 
-You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complex environments, using [Environment imports](https://www.pulumi.com/docs/esc/environments/imports/). Using what you know now, you can easily create other Environments under the `creds` project to store credentials for other providers. For example, `creds/aws` or `creds/azure`!
+You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complex environments, using [Environment imports](https://www.pulumi.com/docs/esc/concepts/imports/). Using what you know now, you can easily create other Environments under the `creds` project to store credentials for other providers. For example, `creds/aws` or `creds/azure`!
