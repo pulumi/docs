@@ -6,10 +6,12 @@ h1: Pulumi HCL reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: hcl-language-reference
         name: Reference
         parent: iac-languages-hcl
         weight: 1
     languages:
+        identifier: hcl-language-reference
         parent: hcl-language
         weight: 1
 aliases:
