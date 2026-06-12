@@ -1,7 +1,7 @@
 ---
-title: Introduction
-title_tag: Pulumi ESC Introduction
-h1: Introduction
+title: Concepts
+title_tag: Pulumi ESC Concepts
+h1: Concepts
 meta_desc: Pulumi ESC is a centralized secrets and configuration management service. Learn its core concepts and how it works when you open an environment.
 menu:
   esc:
