@@ -7,11 +7,13 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Component Reference
+        identifier: yaml-component-reference
         parent: iac-languages-yaml
-        weight: 1
+        weight: 2
     languages:
+        identifier: yaml-component-reference
         parent: yaml-language
-        weight: 1
+        weight: 2
 aliases:
 ---
 
