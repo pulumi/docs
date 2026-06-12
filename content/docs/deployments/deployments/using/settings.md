@@ -202,9 +202,7 @@ For guidance on choosing between a pre-run install hook and a custom image, buil
 
 Pulumi Deployments supports OIDC for authenticating with cloud providers. This enables your deployments to access your cloud resources without storing static credentials in Pulumi Cloud.
 
-{{% notes type="info" %}}
-There are multiple approaches for supplying cloud credentials to Pulumi Deployments. For guidance on choosing between Deployments OIDC and Pulumi ESC, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/).
-{{% /notes %}}
+{{< esc-recommendation >}}
 
 For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/deployments/deployments/oidc/).
 
