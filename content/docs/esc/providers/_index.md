@@ -1,8 +1,8 @@
 ---
 title: Providers
-title_tag: Pulumi ESC providers and rotators reference
+title_tag: Pulumi ESC providers reference
 h1: Providers
-meta_desc: Reference catalog of Pulumi ESC login providers, secrets and configuration providers, and rotators.
+meta_desc: Reference catalog of Pulumi ESC login providers and secrets and configuration providers.
 menu:
   esc:
     identifier: esc-providers
@@ -12,7 +12,7 @@ aliases:
   - /docs/pulumi-cloud/esc/providers/
 ---
 
-Reference catalog of every first-party plugin shipped with Pulumi ESC. For an introduction to the plugin model — how providers and rotators differ, when each runs, and how they fit into the evaluation flow — see [Providers and rotators](/docs/esc/concepts/providers/).
+Reference catalog of the login and secrets/configuration provider plugins shipped with Pulumi ESC. All providers are invoked through `fn::open::<name>`. For an introduction to how providers work — when they run and how they fit into the evaluation flow — see [Providers](/docs/esc/concepts/providers/).
 
 ## Login providers
 
@@ -31,7 +31,7 @@ Issue short-lived credentials for downstream services. Prefer OpenID Connect ove
 
 ## Secrets and configuration providers
 
-Dynamically import values from an external system of record into your environment. Invoked through `fn::open::<name>`.
+Dynamically import values from an external system of record into your environment.
 
 | Provider | Description |
 |---|---|
@@ -46,18 +46,3 @@ Dynamically import values from an external system of record into your environmen
 | [pulumi-stacks](/docs/esc/providers/secrets/pulumi-stacks/) | Import outputs from a Pulumi stack (includes Terraform state stored in Pulumi Cloud). |
 | [terraform-state](/docs/esc/providers/secrets/terraform-state/) | Import outputs from a Terraform state file in S3 or Terraform Cloud. |
 | [external](/docs/esc/providers/secrets/external/) | Import secrets from a custom service adapter. |
-
-## Rotators
-
-Replace a stored credential with a freshly issued one, manually or on a schedule. Invoked through `fn::rotate::<name>`. Some rotators need a [rotation connector](/docs/esc/operations/rotation/) to reach targets in private networks.
-
-| Rotator | Required connector | Description |
-|---|---|---|
-| [aws-iam](/docs/esc/providers/rotators/aws-iam/) | None | Rotate access credentials for an AWS IAM user. |
-| [azure-app-secret](/docs/esc/providers/rotators/azure-app-secret/) | None | Rotate client secrets for an Azure app registration. |
-| [mysql](/docs/esc/providers/rotators/mysql/) | `aws-lambda` (private networks only) | Rotate user credentials for a MySQL database. |
-| [password](/docs/esc/providers/rotators/password/) | None | Rotate any user-defined key using password generation rules. |
-| [passphrase](/docs/esc/providers/rotators/passphrase/) | None | Rotate any user-defined key using memorable passphrase generation rules. |
-| [postgres](/docs/esc/providers/rotators/postgres/) | `aws-lambda` (private networks only) | Rotate user credentials for a PostgreSQL database. |
-| [snowflake-user](/docs/esc/providers/rotators/snowflake-user/) | None | Rotate RSA keypairs for a Snowflake user. |
-| [external](/docs/esc/providers/rotators/external/) | None | Rotate credentials using a custom service adapter. |

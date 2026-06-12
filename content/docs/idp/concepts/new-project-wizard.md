@@ -32,7 +32,7 @@ Within the New Project Wizard, you can configure:
 - **Project configuration**: When creating a new project, set the project name, description, and other metadata
 - **Destination repository**: Select an existing repository or create a new one on [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), or [GitLab](/docs/integrations/version-control/gitlab/)
 - **Stack configuration values**:
-  - Import [ESC environments](/docs/esc/environments/) to provide configuration and secrets
+  - Import [ESC environments](/docs/esc/concepts/environments/) to provide configuration and secrets
   - Set individual configuration values using a form-based interface (see note below)
 - **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/deployments/) for the new stack, including [drift detection and remediation](/docs/deployments/deployments/drift/)
 - **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/concepts/services/)

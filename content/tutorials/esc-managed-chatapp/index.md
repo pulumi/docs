@@ -323,7 +323,7 @@ You can see that `api_key` is a secret and so it won't show us the value. In the
 
 The next step is to get these ESC environment values accessible to our app. For this we're going to extract these configuration values and project them as two environment variables named `MODEL` and `API_KEY`.
 
-To do this, we will [edit the YAML definition](/docs/esc/environments/working-with-environments/#editing-environments)] of our ESC environment. The `esc env edit` subcommand will load the YAML into your default text editor. Editing and saving the file will update it in Pulumi ESC's backend storage.
+To do this, we will [edit the YAML definition](/docs/esc/concepts/environments/#managing-environments) of our ESC environment. The `esc env edit` subcommand will load the YAML into your default text editor. Editing and saving the file will update it in Pulumi ESC's backend storage.
 
 {{% notes type="info" %}}
 **YAML Schema:** A full description of what Pulumi ESC YAML supports is available in the [ESC YAML Syntax Reference](/docs/esc/reference/).
@@ -419,7 +419,7 @@ values:
 ---
 ```
 
-Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_environment`, with the organization and environment pulled from the [ESC execution context](/docs/esc/environments/working-with-environments/#pulumi-contextual-information) directly. These are projected into the `ESC_ORG`, `ESC_PROJECT`, and `ESC_ENVIRONMENT` environment variables respectively.
+Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_environment`, with the organization and environment pulled from the [ESC execution context](/docs/esc/concepts/interpolations-and-references/#context) directly. These are projected into the `ESC_ORG`, `ESC_PROJECT`, and `ESC_ENVIRONMENT` environment variables respectively.
 
 {{% notes type="warning" %}}
 **Project Naming:** The project name is not able to be derived from context, so we have to use a static value here. If your project name is something other than `default`, make sure to set this value to the name of your project.

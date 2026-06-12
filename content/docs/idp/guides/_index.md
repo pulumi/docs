@@ -27,5 +27,5 @@ The [best practices section](/docs/idp/guides/best-practices/) introduces the Fo
 - [Pulumi IDP Concepts](/docs/idp/concepts/)
 - [Private Registry](/docs/idp/concepts/private-registry/)
 - [Components](/docs/iac/concepts/components/)
-- [Environments](/docs/esc/environments/)
+- [Environments](/docs/esc/concepts/environments/)
 - [Policies](/docs/insights/policy/)

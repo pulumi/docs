@@ -27,7 +27,7 @@ To execute a `pulumi preview`, Neo needs the necessary configuration and credent
 - Applicable cloud provider credentials, such as [AWS](https://www.pulumi.com/registry/packages/aws/installation-configuration/#set-credentials-as-environment-variables), [Azure](https://www.pulumi.com/registry/packages/azure-native/installation-configuration/#set-configuration-using-environment-variables), or [GCP](https://www.pulumi.com/registry/packages/gcp/installation-configuration/#authenticate-using-a-service-account.)
 - Any additional configuration required by your Pulumi programs
 
- The configuration and credentials can be supplied via [stack config](/docs/iac/concepts/config/) or an [ESC environment](/docs/esc/environments/).
+ The configuration and credentials can be supplied via [stack config](/docs/iac/concepts/config/) or an [ESC environment](/docs/esc/concepts/environments/).
 
 ### Stack Config
 

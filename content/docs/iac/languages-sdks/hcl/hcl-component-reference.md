@@ -6,10 +6,12 @@ h1: Pulumi HCL component reference
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: hcl-component-reference
         name: Component Reference
         parent: iac-languages-hcl
         weight: 2
     languages:
+        identifier: hcl-component-reference
         parent: hcl-language
         weight: 2
 ---

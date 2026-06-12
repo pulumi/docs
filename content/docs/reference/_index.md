@@ -108,7 +108,7 @@ sections:
   - icon: gear
     heading: ESC Environment Syntax
     description: Reference for ESC environment definitions, interpolations, functions, and providers.
-    link: /docs/esc/environments/syntax/
+    link: /docs/esc/concepts/environments/
 
   - icon: link
     heading: Property Paths

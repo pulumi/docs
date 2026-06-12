@@ -12,7 +12,7 @@ aliases:
   - /docs/esc/development/psp/
 ---
 
-Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach. This means you can define [environments](/docs/esc/environments/), add [version tags](/docs/esc/environments/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
+Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach. This means you can define [environments](/docs/esc/concepts/environments/), add [version tags](/docs/esc/concepts/versioning/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
 
 Here's a list of ESC resources available through Pulumi Service Provider:
 

@@ -12,7 +12,7 @@ menu:
     weight: 50
 ---
 
-Pulumi Services are logical groupings of Pulumi entities such as [stacks](/docs/iac/concepts/stacks/) and [ESC environments](/docs/esc/environments/). They enable users to model infrastructure in Pulumi in a way that is familiar to them.
+Pulumi Services are logical groupings of Pulumi entities such as [stacks](/docs/iac/concepts/stacks/) and [ESC environments](/docs/esc/concepts/environments/). They enable users to model infrastructure in Pulumi in a way that is familiar to them.
 
 ## Creating a service
 

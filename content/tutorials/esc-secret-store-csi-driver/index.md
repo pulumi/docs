@@ -475,5 +475,5 @@ As we continue to improve the Pulumi ESC provider, we would love to hear your fe
 To dive deeper into using Pulumi ESC for advanced scenarios, check out the following resources:
 
 - **Pulumi ESC and External Secrets Operator**: Learn how to use the External Secrets Operator to manage secrets in Pulumi ESC and synchronize them with your Kubernetes cluster. Check out the [Pulumi ESC and External Secrets Operator tutorial](/tutorials/esc-external-secret-operator/).
-- **Environment Composition**: Learn more about how to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
+- **Environment Composition**: Learn more about how to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/concepts/imports/).
 - **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).

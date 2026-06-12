@@ -133,7 +133,7 @@ Now that you've created your first environment, explore these essential guides:
 - **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your infrastructure code to centralize secrets across all stacks
 - **[Managing secrets](/docs/esc/operations/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
 - **[Running commands with esc run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
-- **[Importing environments](/docs/esc/environments/importing-environments/)** - Compose environments to share configuration across teams and projects
+- **[Importing environments](/docs/esc/concepts/imports/)** - Compose environments to share configuration across teams and projects
 - **[Dynamic login credentials](/docs/esc/providers/login/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
 
 New to Pulumi IaC? Start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.

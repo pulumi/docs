@@ -65,7 +65,7 @@ environment:
   - my-project/dev@3
 ```
 
-This prevents unexpected changes when someone updates the source environment. Learn more in [Environment versioning](/docs/esc/environments/versioning/).
+This prevents unexpected changes when someone updates the source environment. Learn more in [Environment versioning](/docs/esc/concepts/versioning/).
 {{< /notes >}}
 
 ### Step 2: Define configuration in your ESC environment
@@ -165,7 +165,7 @@ values:
     myApp:replicas: 3              # override for production
 ```
 
-Learn more in [Importing environments](/docs/esc/environments/importing-environments/).
+Learn more in [Importing environments](/docs/esc/concepts/imports/).
 
 ## Convert existing stack config to an ESC environment
 
@@ -193,4 +193,4 @@ You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [P
 
 - [Dynamic login credentials](/docs/esc/providers/login/) - Generate dynamic cloud credentials with OIDC
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull from AWS, Azure, GCP secret stores
-- [Importing environments](/docs/esc/environments/importing-environments/) - Compose configuration hierarchies
+- [Importing environments](/docs/esc/concepts/imports/) - Compose configuration hierarchies
