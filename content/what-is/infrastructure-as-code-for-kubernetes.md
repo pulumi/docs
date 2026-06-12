@@ -73,7 +73,7 @@ The most common Kubernetes resources that end up in IaC programs:
 
 * **Cluster shape.** Cluster spec, version, region, node groups, addons.
 * **Networking.** VPC and subnets, security groups, CNI configuration, NetworkPolicies, Ingress, Service mesh resources (Istio, Linkerd).
-* **Identity and access.** IAM roles for the cluster and workloads (IRSA on EKS, Workload Identity on GKE, Azure AD on AKS), Kubernetes RBAC (ClusterRoles, RoleBindings).
+* **Identity and access.** IAM roles for the cluster and workloads (IRSA on EKS, Workload Identity on GKE, Microsoft Entra Workload ID on AKS), Kubernetes RBAC (ClusterRoles, RoleBindings).
 * **Workloads.** Deployments, StatefulSets, DaemonSets, Jobs, CronJobs.
 * **Configuration.** ConfigMaps and Secrets (with the actual secret values pulled from a vault like [Pulumi ESC](/product/esc/), not stored in code).
 * **Service exposure.** Services, Ingress, Gateway API resources.
@@ -167,10 +167,10 @@ Most teams use a combination: a general IaC tool for the cloud-and-cluster layer
 
 Misconfiguration, not exotic exploits, drives most Kubernetes security incidents — and misconfiguration is exactly what IaC makes checkable before it reaches a cluster. The controls stack up in layers:
 
-* **Scan before merge.** Static scanners (Trivy, Checkov, kube-bench against rendered manifests) run on every commit and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits.
+* **Scan before merge.** Static scanners (Trivy, Checkov) run against rendered manifests on every commit and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
 * **Enforce policy in two places.** In CI, [policy as code](/docs/insights/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
 * **Keep secret material out of code and Git.** The IaC program defines *which* secrets a workload references; the values live in [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager and are pulled at deploy time.
-* **Use per-workload cloud identity.** IRSA on EKS, Workload Identity on GKE, and Azure AD workload identity on AKS replace long-lived static credentials with scoped, rotatable, auditable identities, all declared in the same IaC program as the workloads that use them.
+* **Use per-workload cloud identity.** IRSA on EKS, Workload Identity on GKE, and Microsoft Entra Workload ID on AKS replace long-lived static credentials with scoped, rotatable, auditable identities, all declared in the same IaC program as the workloads that use them.
 * **Declare RBAC as code.** ClusterRoles and RoleBindings written in IaC get the same least-privilege review as IAM policies. Hand-granted `cluster-admin` stops being invisible.
 * **Watch for drift.** Out-of-band `kubectl` edits and console changes surface as diffs against the declared state, so a quietly weakened NetworkPolicy or a manually widened RBAC grant gets noticed instead of persisting.
 
@@ -182,7 +182,7 @@ A few patterns that hold up across providers and team sizes:
 
 * **Keep clusters in version control.** Cluster spec, addons, node groups, RBAC: everything in code, even (especially) for managed clusters. Reproducing a cluster from scratch should be a CI job, not a wiki page.
 * **Avoid naked pods.** A bare `Pod` isn't rescheduled when the node fails. Use Deployments, StatefulSets, or DaemonSets so the workload survives. Enforce this with a policy in CI.
-* **Use IRSA / Workload Identity / Azure AD.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
+* **Use IRSA / Workload Identity / Entra Workload ID.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
 * **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time — either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
 * **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
