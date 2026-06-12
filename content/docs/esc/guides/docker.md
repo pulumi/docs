@@ -21,7 +21,7 @@ Pulumi ESC integrates with [Docker](https://www.docker.com/) to help developers 
 
 To complete the steps in this tutorial, you will need to install the following prerequisites:
 
-- the [Pulumi ESC CLI](/docs/esc-cli/)
+- the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/)
 - the [Docker CLI](https://www.docker.com/)
 
 ## Manage environment variables for Docker containers
@@ -42,7 +42,7 @@ values:
 You can [set environment variables for a Docker container](https://docs.docker.com/reference/cli/docker/container/run/#env) as part of a `docker run` command:
 
 ```bash
-$ esc run <your-project-name>/<your-environment-name> -- docker run --rm -t -e ESC_ORG -e ESC_HELLO_USER alpine env
+$ pulumi esc run <your-project-name>/<your-environment-name> -- docker run --rm -t -e ESC_ORG -e ESC_HELLO_USER alpine env
 ```
 
 This command opens the environment you just created, sets the specified environment variables, and then uses those environment variables in the context of the `docker run`. In this case, the command
@@ -77,7 +77,7 @@ values:
 If you open this environment in a terminal, you will see something like this:
 
 ```bash
-$ esc open pulumi/examples/docker-env-test --format shell
+$ pulumi esc open pulumi/examples/docker-env-test --format shell
 
 export ESC_HELLO_USER="Hello, example-user!"
 export ESC_ORG="You are in the example organization!"
@@ -96,7 +96,7 @@ ESC_HELLO_USER=Hello, example-user!
 Now you can reference this env-file to set environment variables dynamically in a `docker run` command:
 
 ```bash
-$ esc run -i <your-project-name>/<your-environment-name> -- sh -c 'docker run --rm -t --env-file=$DOCKER_ENVFILE alpine env'
+$ pulumi esc run -i <your-project-name>/<your-environment-name> -- sh -c 'docker run --rm -t --env-file=$DOCKER_ENVFILE alpine env'
 ```
 
 This command opens the environment you just created and references the path of the temporary env-file to set environment variables in the context of the `docker run`. In this case, the command
@@ -132,7 +132,7 @@ values:
 Now, you can [log into a Docker registry](https://docs.docker.com/reference/cli/docker/login/) without needing to manage the credentials directly in your shell:
 
 ```bash
-$ esc run <your-project-name>/<your-environment-name> -- sh -c 'echo ${docker.password} | docker login --username ${docker.username} --password-stdin ${docker.registry}'
+$ pulumi esc run <your-project-name>/<your-environment-name> -- sh -c 'echo ${docker.password} | docker login --username ${docker.username} --password-stdin ${docker.registry}'
 
 Login Succeeded
 ```

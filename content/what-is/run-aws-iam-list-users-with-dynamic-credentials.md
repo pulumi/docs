@@ -17,36 +17,36 @@ With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service in particular helps to resolve concerns around how to:
+[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi esc run` command of this service in particular helps to resolve concerns around how to:
 
 - Securely share credentials with teammates in a consistent way.
 - Minimize the risks associated with locally configured, long-lived and highly privileged credentials.
 - Ensure teams can easily and safely run commands like aws iam list-users without requiring deep security expertise.
 
-## What is the esc run command?
+## What is the pulumi esc run command?
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+The [Pulumi documentation for the `pulumi esc run` command](/docs/iac/cli/commands/pulumi_env_run/) states the following:
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
 But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws iam list-users` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+- **Seamless Command Execution** - The `pulumi esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+- **Enhanced Security** - One of the standout features of `pulumi esc run` is its commitment to security. By removing the local storage of credentials, it drastically reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
 
-- **Streamlined Collaboration** - Because credentials will be centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
+- **Streamlined Collaboration** - Because credentials will be centralized, `pulumi esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to run commands with. Everyone can access the same secure environment which reduces the complexities of coordinating credentials and configurations across teams.
 
-## Getting started with esc run
+## Getting started with pulumi esc run
 
 ### Step 1: Install and login to Pulumi ESC
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to login to the CLI.
+To begin, you’ll need to install the [Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to login to the CLI.
 
 ```bash
-$ esc login
+$ pulumi login
 Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
+Run `pulumi esc --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …
@@ -97,10 +97,10 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To list all IAM users, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
+To list all IAM users, run the command using `pulumi esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, and `<your-environment-name>` with the names of your own Pulumi organization and environment respectively:
 
 ```bash
-esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws iam list-users
+pulumi esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws iam list-users
 ```
 
 ## Conclusion

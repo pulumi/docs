@@ -21,14 +21,14 @@ Pulumi ESC (Environments, Secrets, and Configuration) is a centralized secrets a
 ## Prerequisites
 
 1. **Create a Pulumi account** at [app.pulumi.com](https://app.pulumi.com/signup)
-1. **Install the ESC CLI**
+1. **Install the Pulumi CLI**
 
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os macos %}}
 
 ```bash
-brew update && brew install pulumi/tap/esc
+brew install pulumi/tap/pulumi
 ```
 
 {{% /choosable %}}
@@ -36,7 +36,7 @@ brew update && brew install pulumi/tap/esc
 {{% choosable os linux %}}
 
 ```bash
-curl -fsSL https://get.pulumi.com/esc/install.sh | sh
+curl -fsSL https://get.pulumi.com/ | sh
 ```
 
 {{% /choosable %}}
@@ -47,7 +47,7 @@ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 <div class="w-full">
 <h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Windows binary download</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
 </p>
 </div>
 </div>
@@ -56,14 +56,14 @@ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 
 {{% /chooser %}}
 
-See the [ESC installation docs](/docs/install/esc/) for more options.
+See the [Pulumi installation docs](/docs/iac/download-install/) for more options.
 
 ## Create your first environment
 
-1. **Log in** to the ESC CLI:
+1. **Log in** to Pulumi Cloud:
 
 ```bash
-esc login
+pulumi login
 ```
 
 You'll be prompted to log in via your browser or with an access token. Follow the instructions to authenticate.
@@ -110,7 +110,7 @@ Add both plaintext configuration and encrypted secrets to your environment:
 Open your environment to retrieve all values, including decrypted secrets:
 
 ```bash
-esc env open my-project/dev
+pulumi esc open my-project/dev
 ```
 
 You should see output like:
@@ -132,7 +132,7 @@ Now that you've created your first environment, explore these essential guides:
 
 - **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your infrastructure code to centralize secrets across all stacks
 - **[Managing secrets](/docs/esc/operations/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
-- **[Running commands with esc run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
+- **[Running commands with pulumi esc run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
 - **[Importing environments](/docs/esc/environments/importing-environments/)** - Compose environments to share configuration across teams and projects
 - **[Dynamic login credentials](/docs/esc/providers/login/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
 

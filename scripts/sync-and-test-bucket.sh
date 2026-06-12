@@ -78,8 +78,6 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/latest-dev-version" "${destination_bucket_uri}/latest-dev-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
-aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-version" \
-    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/customer-managed-workflow-agent/latest-version" "${destination_bucket_uri}/customer-managed-workflow-agent/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 

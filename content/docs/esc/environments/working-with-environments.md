@@ -20,40 +20,40 @@ aliases:
 ---
 
 {{% notes type="info" %}}
-The examples below use the new `esc` CLI, but all `esc` subcommands are available on the `pulumi` CLI as well. The `pulumi` CLI also provides fully integrated support for configuring Pulumi stacks with Pulumi ESC. See [Using with Pulumi IaC](#using-environments-with-pulumi-iac) below for details.
+The examples below use the `pulumi esc` commands of the [Pulumi CLI](/docs/iac/download-install/). The `pulumi` CLI also provides fully integrated support for configuring Pulumi stacks with Pulumi ESC. See [Using with Pulumi IaC](#using-environments-with-pulumi-iac) below for details.
 {{% /notes %}}
 
 ## Creating a new environment
 
-To create a new, empty environment, use `esc env init [<org-name>/]<project-name>/<environment-name>`, where `<org-name>` is optional and defaults to your Pulumi Cloud username.
+To create a new, empty environment, use `pulumi esc init [<org-name>/]<project-name>/<environment-name>`, where `<org-name>` is optional and defaults to your Pulumi Cloud username.
 
 Environment names must be unique within a project and may only contain alphanumeric characters, hyphens, underscores, and periods.
 
 ```bash
-$ esc env init myorg/myproject/test
+$ pulumi esc init myorg/myproject/test
 Environment created.
 ```
 
 ## Listing environments
 
-To list the environments you have access to, use `esc env ls`:
+To list the environments you have access to, use `pulumi esc ls`:
 
 ```bash
-$ esc env ls
+$ pulumi esc ls
 myorg/myproject/test
 ```
 
 You can filter this list to a particular organization by passing its name:
 
 ```bash
-$ esc env ls --organization myorg
+$ pulumi esc ls --organization myorg
 myorg/myproject/test
 ```
 
 You can filter this list to a particular project by passing its name:
 
 ```bash
-$ esc env ls -p myproject
+$ pulumi esc ls -p myproject
 myorg/myproject/test
 ```
 
@@ -61,18 +61,18 @@ myorg/myproject/test
 
 ### Setting a value
 
-To set a new value or update an existing value, use `esc env set <key> <value>`:
+To set a new value or update an existing value, use `pulumi esc set <key> <value>`:
 
 ```bash
-$ esc env set myorg/myproject/test foo bar
+$ pulumi esc set myorg/myproject/test foo bar
 ```
 
 ### Getting a value
 
-To retrieve a single value and its definition, use `esc env get <project-name>/<environment-name> <key>`:
+To retrieve a single value and its definition, use `pulumi esc get <project-name>/<environment-name> <key>`:
 
 ```bash
-$ esc env get myorg/myproject/test foo
+$ pulumi esc get myorg/myproject/test foo
 
    Value
 
@@ -92,18 +92,18 @@ $ esc env get myorg/myproject/test foo
 
 **Why is the value shown as `[unknown]`?**
 
-The command `esc env get` returns statically defined plain-text values and definitions. It does **not** return secrets defined in the environment nor resolves values from specified provider configuration, therefore, attempting to `get` a secret results in an `[unknown]` output.
+The command `pulumi esc get` returns statically defined plain-text values and definitions. It does **not** return secrets defined in the environment nor resolves values from specified provider configuration, therefore, attempting to `get` a secret results in an `[unknown]` output.
 
-Use [`esc env open`](#opening-an-environment) to access secrets; this opens the environment and resolves dynamically retrieved values or secrets.
+Use [`pulumi esc open`](#opening-an-environment) to access secrets; this opens the environment and resolves dynamically retrieved values or secrets.
 
 {{% /notes %}}
 
 ### Getting all values
 
-To retrieve all values in an environment, run `esc env get <project-name>/<environment-name>`:
+To retrieve all values in an environment, run `pulumi esc get <project-name>/<environment-name>`:
 
 ```bash
-$ esc env get myorg/myproject/test
+$ pulumi esc get myorg/myproject/test
 
    Value
 
@@ -120,12 +120,12 @@ $ esc env get myorg/myproject/test
 You can also get values in other formats, such as `json`, `dotenv`, or `shell`:
 
 ```bash
-$ esc env get myorg/myproject/test --value json
+$ pulumi esc get myorg/myproject/test --value json
 {
   "foo": "bar"
 }
 
-$ esc env get myorg/myproject/test foo --value json
+$ pulumi esc get myorg/myproject/test foo --value json
 "bar"
 ```
 
@@ -133,13 +133,13 @@ Note that the `dotenv` and `shell` options return values only when an environmen
 
 ### Structured configuration
 
-Structured data like maps and arrays can also be set with `esc env set <project-name>/<environment-name> <key> <value>` using object-property (`.`) or array (`[]`) syntax:
+Structured data like maps and arrays can also be set with `pulumi esc set <project-name>/<environment-name> <key> <value>` using object-property (`.`) or array (`[]`) syntax:
 
 ```bash
-$ esc env set myorg/myproject/test 'data.active' true
-$ esc env set myorg/myproject/test 'data.nums[0]' 1
-$ esc env set myorg/myproject/test 'data.nums[1]' 2
-$ esc env get myorg/myproject/test
+$ pulumi esc set myorg/myproject/test 'data.active' true
+$ pulumi esc set myorg/myproject/test 'data.nums[0]' 1
+$ pulumi esc set myorg/myproject/test 'data.nums[1]' 2
+$ pulumi esc get myorg/myproject/test
 
   Value
 
@@ -170,7 +170,7 @@ Boolean and numeric values are implicitly converted and persisted in their respe
 You can also fetch individual values at any level in the hierarchy. For example, to fetch the second item from the nested array in the example above:
 
 ```bash
-$ esc env get myorg/myproject/test 'data.nums[1]'
+$ pulumi esc get myorg/myproject/test 'data.nums[1]'
 
    Value
 
@@ -191,10 +191,10 @@ $ esc env get myorg/myproject/test 'data.nums[1]'
 Values don't have to be static. You can also use string interpolation to transform values or compose new values from other values. For example:
 
 ```bash
-$ esc env set myorg/myproject/test salutation Hello
-$ esc env set myorg/myproject/test name World
-$ esc env set myorg/myproject/test greeting '${salutation}, ${name}'
-$ esc env get myorg/myproject/test greeting
+$ pulumi esc set myorg/myproject/test salutation Hello
+$ pulumi esc set myorg/myproject/test name World
+$ pulumi esc set myorg/myproject/test greeting '${salutation}, ${name}'
+$ pulumi esc get myorg/myproject/test greeting
 
    Value
 
@@ -230,15 +230,15 @@ It can be accessed through the `context` attribute with the following options:
 
 Environments may be edited in a number of ways.
 
-### With the Pulumi ESC CLI
+### With the Pulumi CLI
 
-To edit an environment using your shell's default text editor (as defined by the `$EDITOR` environment variable), use `esc env edit <project-name>/<environment-name>`:
+To edit an environment using your shell's default text editor (as defined by the `$EDITOR` environment variable), use `pulumi esc edit <project-name>/<environment-name>`:
 
 ```bash
-$ esc env edit myorg/myproject/test
+$ pulumi esc edit myorg/myproject/test
 ```
 
-When `$EDITOR` is unset, `esc` uses `vi` as a fallback:
+When `$EDITOR` is unset, `pulumi esc` uses `vi` as a fallback:
 
 ```
 values:
@@ -279,10 +279,10 @@ values:
 You can also specify the editor you want to use by passing its name with the `--editor` flag:
 
 ```bash
-$ esc env edit --editor="code" myorg/myproject/test
+$ pulumi esc edit --editor="code" myorg/myproject/test
 ```
 
-Doing so overrides any value set in `$EDITOR`. See `esc env edit --help` for more options.
+Doing so overrides any value set in `$EDITOR`. See `pulumi esc edit --help` for more options.
 
 ### In the Pulumi Cloud console
 
@@ -324,12 +324,12 @@ values:
 
 ## Opening an environment {#opening-an-environment}
 
-As mentioned, `esc env get` doesn't resolve dynamic or secret values --- for example, those managed with third-party services like AWS Secrets Manager. Instead, to gain access to these values, you must _open_ the environment.
+As mentioned, `pulumi esc get` doesn't resolve dynamic or secret values --- for example, those managed with third-party services like AWS Secrets Manager. Instead, to gain access to these values, you must _open_ the environment.
 
-To do so, use `esc env open <project-name>/<environment-name>`:
+To do so, use `pulumi esc open <project-name>/<environment-name>`:
 
 ```bash
-$ esc env open myorg/myproject/test
+$ pulumi esc open myorg/myproject/test
 {
   "data": {
     "active": true,
@@ -359,16 +359,16 @@ $ esc env open myorg/myproject/test
 You can also use `open` to resolve the value of an individual key:
 
 ```bash
-$ esc env open myorg/myproject/test 'data.active'
+$ pulumi esc open myorg/myproject/test 'data.active'
 true
 
-$ esc env open myorg/myproject/test 'data.nums'
+$ pulumi esc open myorg/myproject/test 'data.nums'
 [
   1,
   2
 ]
 
-$ esc env open myorg/myproject/test 'aws.secrets.app-secret' | jq -r 'fromjson | . .secretName'
+$ pulumi esc open myorg/myproject/test 'aws.secrets.app-secret' | jq -r 'fromjson | . .secretName'
 secretValue
 ```
 
@@ -402,16 +402,16 @@ values:
     MY_ENV_VAR: "true"
 ```
 
-To render these `environmentVariables` for use in the shell, use `esc env open`, passing either `--format shell` or `--format dotenv`:
+To render these `environmentVariables` for use in the shell, use `pulumi esc open`, passing either `--format shell` or `--format dotenv`:
 
 ```bash
-$ esc env open myorg/myproject/test --format shell
+$ pulumi esc open myorg/myproject/test --format shell
 export AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
 export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE"
 export AWS_SESSION_TOKEN="eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOEXAMPLE"
 export MY_ENV_VAR="true"
 
-$ esc env open myorg/myproject/test --format dotenv
+$ pulumi esc open myorg/myproject/test --format dotenv
 AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
 AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLE"
 AWS_SESSION_TOKEN="eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOEXAMPLE"
@@ -421,7 +421,7 @@ MY_ENV_VAR="true"
 Export them into the current shell using `eval` or similar:
 
 ```yaml
-$ eval $(esc env open myorg/myproject/test --format shell)
+$ eval $(pulumi esc open myorg/myproject/test --format shell)
 $ echo $MY_ENV_VAR
 true
 ```
@@ -430,23 +430,23 @@ true
 
 You can also run CLI commands directly, using environment variables obtained with Pulumi ESC --- without having to export those variables into the shell first.
 
-To do this, use `esc run <project-name>/<environment-name> <command>`:
+To do this, use `pulumi esc run <project-name>/<environment-name> <command>`:
 
 ```bash
-$ esc run myorg/myproject/test aws s3 ls
+$ pulumi esc run myorg/myproject/test aws s3 ls
 2023-10-10 16:09:19 my-s3-bucket
 ```
 
 If you need to pass one or more flags to the command, prefix the command with `--`:
 
 ```bash
-$ esc run myorg/myproject/test -- aws s3 ls s3://my-s3-bucket --recursive --summarize
+$ pulumi esc run myorg/myproject/test -- aws s3 ls s3://my-s3-bucket --recursive --summarize
 ...
 Total Objects: 5087
    Total Size: 2419123156
 ```
 
-For additional options and details, see `esc run --help`.
+For additional options and details, see `pulumi esc run --help`.
 
 ## Importing other environments
 
@@ -500,19 +500,19 @@ values:
     GREETING: ${greeting}
 ```
 
-Finally, `esc run` renders `myapp/dev`'s environment variables for use on the command line:
+Finally, `pulumi esc run` renders `myapp/dev`'s environment variables for use on the command line:
 
 ```bash
-$ esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
 Hello from the dev environment!
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
 https://api.stripe.com
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
 [secret]
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
 [secret]
 
 $ echo "'$GREETING'"
@@ -609,10 +609,10 @@ You can use ESC with [Automation API](/docs/iac/concepts/automation-api/) in [No
 
 ## Versioning Environments
 
-Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console.
+Every time you make changes and save an environment, a new, immutable **revision** is created. You can see the history of revisions using `pulumi esc version history` or in the Pulumi Cloud Console.
 
 ```bash
-$ esc env version history myorg/myproject/test
+$ pulumi esc version history myorg/myproject/test
 revision 3 (tag: latest)
 Author: <Name> <User-ID>
 Date: 2024-04-18 12:42:18.02 -0700 PDT
@@ -621,10 +621,10 @@ revision 2
 ...
 ```
 
-Compare revisions using `esc env diff`.
+Compare revisions using `pulumi esc diff`.
 
 ```bash
-$ esc env diff myorg/myproject/test@3 myorg/myproject/test@2
+$ pulumi esc diff myorg/myproject/test@3 myorg/myproject/test@2
  Value
 
     --- myorg/myproject/test@3
@@ -634,10 +634,10 @@ $ esc env diff myorg/myproject/test@3 myorg/myproject/test@2
 
 ### Tagging Versions
 
-You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision. In the following example we assign `prod` tag to revision 3 of environment `test`.
+You can tag your revisions with meaningful names like `prod`, `stable`, `v1.1.2`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `pulumi esc version tag` to tag a revision. In the following example we assign `prod` tag to revision 3 of environment `test`.
 
 ```bash
-$ esc env version tag myorg/myproject/test@prod @3
+$ pulumi esc version tag myorg/myproject/test@prod @3
 ```
 
 You can also manage tags in the Pulumi Cloud Console by selecting the environment's `Versions` tab and then selecting the `Actions` menu for the given version of the environment you want to tag:
@@ -649,7 +649,7 @@ You can also manage tags in the Pulumi Cloud Console by selecting the environmen
 Once you tag a revision, you can use the tag to [open](/docs/esc/environments/#opening-an-environment) a specific environment version.
 
 ```bash
-$ esc open myorg/myproject/test@prod
+$ pulumi esc open myorg/myproject/test@prod
 ```
 
 You can specify the tagged version when importing the environment. This helps you ensure that you are importing a stable environment version that is not affected by changes.
@@ -665,7 +665,7 @@ environment:
   - myproject/test@prod
 ```
 
-You can find more commands and options in the [ESC CLI documentation](/docs/esc-cli/).
+You can find more commands and options in the [Pulumi CLI documentation](/docs/iac/cli/commands/pulumi_env/).
 
 ## Precedence rules
 
@@ -703,13 +703,13 @@ values:
 Notice how the value of `foo` is overwritten with each successive environment:
 
 ```bash
-$ esc env open project/environment-a foo
+$ pulumi esc open project/environment-a foo
 "bar"
 
-$ esc env open project/environment-b foo
+$ pulumi esc open project/environment-b foo
 "baz"
 
-$ esc env open project/environment-c foo
+$ pulumi esc open project/environment-c foo
 "qux"
 
 $ pulumi preview
@@ -731,7 +731,7 @@ values:
 ```
 
 ```bash
-$ esc env open project/environment-c foo
+$ pulumi esc open project/environment-c foo
 "bar"
 
 $ pulumi preview
@@ -768,10 +768,10 @@ You can grant environment-wise permissions to members of a Team. There are four 
 
 ## Deleting an environment
 
-To remove an environment, use `esc env rm [<org-name>/]<project-name>/<environment-name>`:
+To remove an environment, use `pulumi esc rm [<org-name>/]<project-name>/<environment-name>`:
 
 ```bash
-$ esc env rm myorg/myproject/test
+$ pulumi esc rm myorg/myproject/test
 This will permanently remove the "myorg/myproject/test" environment!
 Please confirm that this is what you'd like to do by typing `myorg/myproject/test`: myorg/myproject/test
 Environment "myorg/myproject/test" has been removed!
@@ -810,7 +810,7 @@ Cloning an environment takes various options that allow for configuring what is 
 An example clone command might look like:
 
 ```bash
-$ esc env clone default/dev my-app/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
+$ pulumi esc clone default/dev my-app/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
 ```
 
 ## Tagging Environments
@@ -818,7 +818,7 @@ $ esc env clone default/dev my-app/dev --preserve-history --preserve-env-tags --
 Environments support the ability to add contextual information about them via Environment Tags. Tags are a collection of both user-defined and auto-generated key/value pairs that can be used to group and search for environments.
 
 ```bash
-$ esc env tag myorg/myproject/test region us-east-1
+$ pulumi esc tag myorg/myproject/test region us-east-1
 Name: region
 Value: us-east-1
 Last updated at 2024-09-11 01:45:10.738 -0700 PDT by Derek <dschaller>

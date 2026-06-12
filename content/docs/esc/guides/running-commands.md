@@ -1,8 +1,8 @@
 ---
 title_tag: Running Commands with ESC
-title: Running Commands with esc run
-h1: Running Commands with esc run
-meta_desc: Learn how to use esc run to inject secrets and configuration from Pulumi ESC into any command or script.
+title: Running Commands with pulumi esc run
+h1: Running Commands with pulumi esc run
+meta_desc: Learn how to use pulumi esc run to inject secrets and configuration from Pulumi ESC into any command or script.
 menu:
   esc:
     parent: esc-guides
@@ -13,20 +13,20 @@ aliases:
   - /docs/esc/operations/running-commands/
 ---
 
-This guide shows you how to use `esc run` to inject secrets and configuration from ESC environments into any command or script as environment variables.
+This guide shows you how to use `pulumi esc run` to inject secrets and configuration from ESC environments into any command or script as environment variables.
 
 ## Prerequisites
 
-- [ESC CLI](/docs/install/esc/) installed
+- [Pulumi CLI](/docs/iac/download-install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
 - An ESC environment with values (see [Managing secrets](/docs/esc/operations/managing-secrets/))
 
 ## Basic usage
 
-The `esc run` command opens an ESC environment, exports values as environment variables, and runs a command with those variables:
+The `pulumi esc run` command opens an ESC environment, exports values as environment variables, and runs a command with those variables:
 
 ```bash
-esc run <org>/<project>/<env-name> -- <command>
+pulumi esc run <org>/<project>/<env-name> -- <command>
 ```
 
 For example, if your environment contains:
@@ -42,7 +42,7 @@ values:
 Run a script with these variables:
 
 ```bash
-esc run my-org/my-project/dev -- node app.js
+pulumi esc run my-org/my-project/dev -- node app.js
 ```
 
 The `app.js` script will have access to `DATABASE_URL` and `API_KEY` as environment variables.
@@ -93,15 +93,15 @@ values:
 Run AWS CLI commands:
 
 ```bash
-esc run my-org/my-project/aws-prod -- aws s3 ls
-esc run my-org/my-project/aws-prod -- aws ec2 describe-instances
+pulumi esc run my-org/my-project/aws-prod -- aws s3 ls
+pulumi esc run my-org/my-project/aws-prod -- aws ec2 describe-instances
 ```
 
 The same pattern works for other cloud CLIs:
 
 ```bash
-esc run my-org/my-project/azure-prod -- az vm list
-esc run my-org/my-project/gcp-prod -- gcloud compute instances list
+pulumi esc run my-org/my-project/azure-prod -- az vm list
+pulumi esc run my-org/my-project/gcp-prod -- gcloud compute instances list
 ```
 
 ### Running tests with secrets
@@ -121,9 +121,9 @@ values:
 Run tests:
 
 ```bash
-esc run my-org/my-project/test -- npm test
-esc run my-org/my-project/test -- pytest
-esc run my-org/my-project/test -- go test ./...
+pulumi esc run my-org/my-project/test -- npm test
+pulumi esc run my-org/my-project/test -- pytest
+pulumi esc run my-org/my-project/test -- go test ./...
 ```
 
 ### Running deployment scripts
@@ -144,7 +144,7 @@ values:
 Run deployment:
 
 ```bash
-esc run my-org/my-project/prod -- ./deploy.sh
+pulumi esc run my-org/my-project/prod -- ./deploy.sh
 ```
 
 ### Running interactive shells
@@ -152,13 +152,13 @@ esc run my-org/my-project/prod -- ./deploy.sh
 Start a shell session with environment variables loaded:
 
 ```bash
-esc run my-org/my-project/dev -- bash
+pulumi esc run my-org/my-project/dev -- bash
 ```
 
 All environment variables from the ESC environment are available in the shell. This is useful for:
 
 - Debugging issues locally with production-like configuration
-- Running multiple commands without repeating `esc run`
+- Running multiple commands without repeating `pulumi esc run`
 - Interactive exploration of cloud resources
 
 Exit the shell to clear the environment variables.
@@ -170,13 +170,13 @@ Exit the shell to clear the environment variables.
 Run containers with secrets:
 
 ```bash
-esc run my-org/my-project/dev -- docker run --env DATABASE_URL myapp
+pulumi esc run my-org/my-project/dev -- docker run --env DATABASE_URL myapp
 ```
 
 Or use with Docker Compose:
 
 ```bash
-esc run my-org/my-project/dev -- docker-compose up
+pulumi esc run my-org/my-project/dev -- docker-compose up
 ```
 
 ### Make
@@ -184,7 +184,7 @@ esc run my-org/my-project/dev -- docker-compose up
 Run Makefile targets with secrets:
 
 ```bash
-esc run my-org/my-project/dev -- make deploy
+pulumi esc run my-org/my-project/dev -- make deploy
 ```
 
 ### CI/CD
@@ -193,18 +193,18 @@ Use in CI/CD pipelines to inject secrets without storing them in CI configuratio
 
 ```bash
 # GitHub Actions
-- run: esc run my-org/my-project/prod -- ./deploy.sh
+- run: pulumi esc run my-org/my-project/prod -- ./deploy.sh
 
 # GitLab CI
 script:
-  - esc run my-org/my-project/prod -- ./deploy.sh
+  - pulumi esc run my-org/my-project/prod -- ./deploy.sh
 ```
 
 ## Security considerations
 
 ### Secrets are revealed during execution
 
-When you run `esc run`, secrets are revealed and passed as environment variables to the command. The command and any child processes can access these secrets.
+When you run `pulumi esc run`, secrets are revealed and passed as environment variables to the command. The command and any child processes can access these secrets.
 
 ### Secrets are temporary
 
@@ -225,4 +225,4 @@ Configure RBAC to control who can run commands with production secrets.
 - [Managing secrets](/docs/esc/operations/managing-secrets/) - Store and organize secrets
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use ESC in infrastructure code
 - [Dynamic login credentials](/docs/esc/providers/login/) - Generate dynamic cloud credentials with OIDC
-- [CLI reference](/docs/esc/cli/commands/esc_run/) - Complete `esc run` documentation
+- [CLI reference](/docs/iac/cli/commands/pulumi_env_run/) - Complete `pulumi esc run` documentation
