@@ -112,14 +112,18 @@ imports:
 
 ### Import options
 
-It is sometimes desirable to control the behavior of an import. This can be done using import options:
+To control the behavior of an import, specify an object with options instead of a plain string:
 
 ```yaml
 imports:
   - auth-core: { merge: false } # Import "default/auth-core", but don't add it to the merge stack
 ```
 
-There is currently a single option, `merge`, which controls whether or not an imported environment is added to the merge stack. Unmerged imports are still available via the [`imports` built-in property](/docs/esc/concepts/interpolations-and-references/#imports).
+#### Available options
+
+| Option  | Type    | Default | Description |
+|---------|---------|---------|-------------|
+| `merge` | boolean | `true`  | Whether to add the imported environment to the merge stack. When `false`, the environment is evaluated but its values are not automatically merged into the current environment. Unmerged imports are still accessible via the [`imports` built-in property](/docs/esc/concepts/interpolations-and-references/#imports). |
 
 ## Implicit imports
 
