@@ -83,6 +83,26 @@ values:
       ciphertext: ZXNjeAA...
 ```
 
+### Multi-line secrets
+
+For multi-line values such as private keys, TLS certificates, or SSH keys, use a YAML block scalar with `fn::secret`:
+
+```yaml
+values:
+  tlsCert:
+    fn::secret: |
+      -----BEGIN CERTIFICATE-----
+      MIIDXTCCAkWgAwIBAgIJAMqBbsYRO...
+      -----END CERTIFICATE-----
+  privateKey:
+    fn::secret: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEowIBAAKCAQEA0Z3VS5JJcds3...
+      -----END RSA PRIVATE KEY-----
+```
+
+The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `esc env set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
+
 ## Retrieving secrets
 
 ### Via the CLI
@@ -113,6 +133,10 @@ esc env get <org>/<project>/<env-name> apiKey
 1. Select your environment in Pulumi Cloud
 1. Select **Open** to evaluate the environment
 1. Toggle **Show secrets** to reveal encrypted values
+
+### Via Pulumi IaC or language SDKs
+
+You can also consume ESC secrets programmatically — either through [Pulumi IaC stacks that import the environment](/docs/esc/guides/integrate-with-pulumi-iac/), or directly using the [ESC SDK](/docs/esc/concepts/sdks/).
 
 ## Organizing secrets
 
@@ -171,13 +195,17 @@ These can be plain text:
 
 ### Rotate secrets regularly
 
-Update secrets by setting new values:
+ESC supports two approaches to secret rotation:
+
+**Manual update** — Replace a secret value by setting a new one:
 
 ```bash
 esc env set my-org/my-project/prod apiKey new-secret-value --secret
 ```
 
-ESC versions every change, allowing you to roll back if needed.
+ESC versions every change, so you can audit the history or roll back if needed.
+
+**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can [automatically rotate credentials on a schedule](/docs/esc/environments/rotation/) using `fn::rotate`. If the rotation target lives in a private network, a [rotation connector](/docs/esc/operations/rotation/) runs the rotation on Pulumi Cloud's behalf. This is the recommended approach over manual updates, as it eliminates manual steps and reduces exposure windows.
 
 ### Control access with RBAC
 
@@ -192,4 +220,4 @@ Use [Role-Based Access Control](/docs/esc/administration/access-control/) to lim
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull secrets from AWS, Azure, GCP secret stores
 - [Running commands with esc run](/docs/esc/guides/running-commands/) - Inject secrets into any command
-- [Access control reference](/docs/esc/environments/access-control/) - Complete RBAC documentation
+- [Access control reference](/docs/esc/administration/access-control/) - Complete RBAC documentation
