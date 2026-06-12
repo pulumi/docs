@@ -13,14 +13,14 @@ menu:
 
 Each time a change is made to an environment, a new immutable revision is created. You can manage and track changes to your secrets and configuration over time with a clear history you can audit, compare, and roll back.  You can assign tags to revisions, such as `production`, `v1.2.1`, or `stable`, to help organize and identify them.
 
-When [importing an environment](/docs/esc/environments/imports/), you can choose to pin it to a specific version using a tag or revision number. This prevents automatic updates from the source environment, making it easier to test and roll out changes gradually. You can also specify which version to use when running commands with `esc run`, allowing you to target different environments for different tasks.
+When [importing an environment](/docs/esc/environments/imports/), you can choose to pin it to a specific version using a tag or revision number. This prevents automatic updates from the source environment, making it easier to test and roll out changes gradually. You can also specify which version to use when running commands with `pulumi esc run`, allowing you to target different environments for different tasks.
 
 ## View and compare version history
 
-You can see the history of revisions using `esc env version history` or in the Pulumi Cloud Console.
+You can see the history of revisions using `pulumi esc version history` or in the Pulumi Cloud Console.
 
 ```bash
-$ esc env version history myorg/test
+$ pulumi esc version history myorg/test
 revision 3 (tag: latest)
 Author: <Name> <User-ID>
 Date: 2024-04-18 12:42:18.02 -0700 PDT
@@ -29,10 +29,10 @@ revision 2
 ...
 ```
 
-Compare revisions using `esc env diff`.
+Compare revisions using `pulumi esc diff`.
 
 ```bash
-$ esc env diff myorg/test@3 myorg/test@2
+$ pulumi esc diff myorg/test@3 myorg/test@2
  Value
 
     --- myorg/test@3
@@ -42,12 +42,12 @@ $ esc env diff myorg/test@3 myorg/test@2
 
 ## Tagging versions
 
-You can tag your revisions with meaningful names like `prod`, or `stable`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `esc env version tag` to tag a revision.
+You can tag your revisions with meaningful names like `prod`, or `stable`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `pulumi esc version tag` to tag a revision.
 
 To tag revision 3 of the `test` environment as `prod` for example, you can use the following command:
 
 ```bash
-$ esc env version tag myorg/test@prod @3
+$ pulumi esc version tag myorg/test@prod @3
 ```
 
 ### Using tagged versions
@@ -55,7 +55,7 @@ $ esc env version tag myorg/test@prod @3
 Once you tag a revision, you can use the tag to [open](/docs/esc/environments/working-with-environments/#opening-an-environment) a specific environment version.
 
 ```bash
-$ esc open myorg/test@prod
+$ pulumi esc open myorg/test@prod
 ```
 
 You can also pin to a tagged version when importing an environment. This ensures you are using a known, fixed version that is not affected by subsequent changes to the source environment.

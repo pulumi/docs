@@ -13,7 +13,7 @@ menu:
     weight: 2
 ---
 
-The `files` reserved property contains values that should be written to temporary files. For example, [`esc run`](/docs/esc/cli/commands/esc_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
+The `files` reserved property contains values that should be written to temporary files. For example, [`pulumi esc run`](/docs/iac/cli/commands/pulumi_env_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
 
 ## Properties
 
@@ -42,10 +42,10 @@ values:
 }
 ```
 
-### Using `esc run`
+### Using `pulumi esc run`
 
 ```console
-$ esc run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
+$ pulumi esc run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
 /tmp/tmp.iBApHfcsJ1
 Hello, user!
 ```

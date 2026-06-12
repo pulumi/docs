@@ -73,7 +73,7 @@ This prevents unexpected changes when someone updates the source environment. Le
 ESC environments are YAML documents that you can edit using the CLI or Pulumi Cloud console. Use the CLI to edit your environment:
 
 ```bash
-esc env edit <your-proj>/<your-environment-name>
+pulumi esc edit <your-proj>/<your-environment-name>
 ```
 
 You can also edit environments in the [Pulumi Cloud console](https://app.pulumi.com/signin) if you prefer a visual editor.

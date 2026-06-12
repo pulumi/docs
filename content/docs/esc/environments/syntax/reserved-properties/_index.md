@@ -13,7 +13,7 @@ menu:
     weight: 7
 ---
 
-The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` CLI](/docs/install/)) conventially assign specific semantics to certain top-level properties of evaluated ESC environments (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/environments/syntax/top-level-keys/values)).
+The [`pulumi` CLI](/docs/iac/download-install/) and other ESC consumers conventionally assign specific semantics to certain top-level properties of evaluated ESC environments (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/environments/syntax/top-level-keys/values)).
 
 ## ESC
 

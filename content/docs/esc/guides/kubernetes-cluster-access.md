@@ -24,7 +24,7 @@ such as `kubectl` and `helm`, and with Pulumi programs that use the
 
 To complete the steps in this tutorial, you will need to install the following prerequisites:
 
-- the [Pulumi ESC CLI](/docs/esc-cli/)
+- the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/)
 - a Kubernetes cluster
 - [kubectl](https://kubernetes.io/releases/download/#kubectl)
 
@@ -55,7 +55,7 @@ values:
 The Kubernetes configuration is picked up automatically by the `kubectl` command:
 
 ```bash
-$ esc run <your-project-name>/<your-environment-name> -- kubectl get namespaces
+$ pulumi esc run <your-project-name>/<your-environment-name> -- kubectl get namespaces
 ```
 
 This command opens the environment you just created, renders the kubeconfig as a temporary file, sets

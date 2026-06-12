@@ -75,19 +75,19 @@ values:
     GREETING: ${greeting}
 ```
 
-Finally, `esc run` renders `myapp/dev`'s environment variables for use on the command line:
+Finally, `pulumi esc run` renders `myapp/dev`'s environment variables for use on the command line:
 
 ```bash
-$ esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
 Hello from the dev environment!
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
 https://api.stripe.com
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
 [secret]
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
+$ pulumi esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
 [secret]
 
 $ echo "'$GREETING'"

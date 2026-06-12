@@ -36,16 +36,16 @@ pulumi new kubernetes-typescript
 
 Follow the prompts, and use `esc-k8-tutorial` as the project name.
 
-## Install the Pulumi ESC CLI
+## Install the Pulumi CLI
 
-Now, you will install the Pulumi ESC CLI. Use an option below to install based on your operating system.
+Now, you will install the Pulumi CLI. Use an option below to install based on your operating system.
 
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os macos %}}
 
 ```bash
-$ brew update && brew install pulumi/tap/esc
+$ brew update && brew install pulumi/tap/pulumi
 ```
 
 {{% /choosable %}}
@@ -53,7 +53,7 @@ $ brew update && brew install pulumi/tap/esc
 {{% choosable os linux %}}
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
+$ curl -fsSL https://get.pulumi.com/ | sh
 ```
 
 {{% /choosable %}}
@@ -64,7 +64,7 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 <div class="w-full">
 <h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Windows Binary Download</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
 </p>
 </div>
 </div>
@@ -73,15 +73,15 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 
 {{% /chooser %}}
 
-For more installation options, visit the [ESC installation docs](/docs/esc/download-install/).
+For more installation options, visit the [Pulumi CLI installation docs](/docs/iac/download-install/).
 
 ## Create your first environment
 
-Next, use the Pulumi ESC CLI to [create the first environment](/docs/esc/environments/working-with-environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
+Next, use the Pulumi CLI to [create the first environment](/docs/esc/environments/working-with-environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
 
 ```bash
-esc env init esc-k8-tutorial/base
-esc env init esc-k8-tutorial/db
+pulumi esc init esc-k8-tutorial/base
+pulumi esc init esc-k8-tutorial/db
 ```
 
 These environments will handle Kubernetes cluster configuration and database specific secrets and configuration.

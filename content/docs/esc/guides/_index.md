@@ -24,7 +24,7 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 
 ## Development tools
 
-- [Run commands with esc run](/docs/esc/guides/running-commands/) — inject environment values into any command or script.
+- [Run commands with pulumi esc run](/docs/esc/guides/running-commands/) — inject environment values into any command or script.
 - [Docker](/docs/esc/guides/docker/) — load environment variables and secrets into Docker workflows.
 - [direnv](/docs/esc/guides/direnv/) — load ESC values automatically when you `cd` into a directory.
 
@@ -38,7 +38,7 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 
 ## Infrastructure tools
 
-- [Terraform](/docs/esc/guides/terraform/) — supply temporary credentials and input variables to the Terraform CLI via `esc run`.
+- [Terraform](/docs/esc/guides/terraform/) — supply temporary credentials and input variables to the Terraform CLI via `pulumi esc run`.
 
 ## Cloud platforms
 

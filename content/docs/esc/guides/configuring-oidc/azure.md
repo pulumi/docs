@@ -106,7 +106,7 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Consol
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi esc open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:

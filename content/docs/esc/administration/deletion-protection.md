@@ -20,24 +20,24 @@ Navigate to your environment's settings page and find the deletion protection ta
 
 When protection is enabled, the environment delete button is disabled and displays instructions for removing protection.
 
-### Using the ESC CLI
+### Using the Pulumi CLI
 
-Enable deletion protection using the `esc env settings set` command:
+Enable deletion protection using the `pulumi esc settings set` command:
 
 ```bash
-esc env settings set myorg/myproject/prod deletion-protected true
+pulumi esc settings set myorg/myproject/prod deletion-protected true
 ```
 
 View the current protection status:
 
 ```bash
-esc env settings get myorg/myproject/prod deletion-protected
+pulumi esc settings get myorg/myproject/prod deletion-protected
 ```
 
 View all environment settings:
 
 ```bash
-esc env settings get myorg/myproject/prod
+pulumi esc settings get myorg/myproject/prod
 ```
 
 ## Deleting protected environments
@@ -45,15 +45,15 @@ esc env settings get myorg/myproject/prod
 Attempting to delete a protected environment returns an error:
 
 ```bash
-$ esc env rm myorg/myproject/prod --yes
+$ pulumi esc rm myorg/myproject/prod --yes
 error: deletion protection is enabled for this environment
 ```
 
 To delete a protected environment, first disable protection:
 
 ```bash
-esc env settings set myorg/myproject/prod deletion-protected false
-esc env rm myorg/myproject/prod
+pulumi esc settings set myorg/myproject/prod deletion-protected false
+pulumi esc rm myorg/myproject/prod
 ```
 
 ## Visual indicators

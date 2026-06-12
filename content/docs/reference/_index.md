@@ -23,11 +23,6 @@ sections:
     description: Command reference for the Pulumi infrastructure as code CLI.
     link: /docs/iac/cli/
 
-  - icon: pulumi-secrets
-    heading: ESC CLI
-    description: Command reference for the Pulumi ESC secrets and configuration CLI.
-    link: /docs/esc/cli/
-
 - type: button-cards
   heading: Language SDKs
   cards:

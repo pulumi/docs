@@ -256,14 +256,14 @@ values:
   # ---------------------------------------------------------------------------------------
 
   # Configuration nested under the "environmentVariables" key is used to export environment
-  # variables when using `esc open --format=shell`, `esc run`, or `pulumi up/preview/refresh/destroy`
+  # variables when using `pulumi esc open --format=shell`, `pulumi esc run`, or `pulumi up/preview/refresh/destroy`
   environmentVariables:
     AWS_ACCESS_KEY_ID: ${aws.login.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.login.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 
   # Configuration nested under the 'files' key is used to export as files to the environment
-  # when using 'esc open --format=shell', 'esc run', or `pulumi up/preview/refresh/destroy`
+  # when using 'pulumi esc open --format=shell', 'pulumi esc run', or `pulumi up/preview/refresh/destroy`
   files:
     KUBECONFIG: ${kubeconfig}
 

@@ -28,7 +28,7 @@ values:
           roleArn: arn:aws:iam::123456789012:role/esc-oidc
 ```
 
-A **rotator** is invoked under `rotators:` using `fn::rotate::<name>`. Unlike a provider, a rotator is stateful: it stores the credentials it has issued in the environment definition and replaces them on demand (manually via `esc env rotate` or on a schedule). Consumers open the environment to read the current credentials; rotation only happens when explicitly triggered. Most rotators also use a login provider to authenticate the rotation call itself.
+A **rotator** is invoked under `rotators:` using `fn::rotate::<name>`. Unlike a provider, a rotator is stateful: it stores the credentials it has issued in the environment definition and replaces them on demand (manually via `pulumi esc rotate` or on a schedule). Consumers open the environment to read the current credentials; rotation only happens when explicitly triggered. Most rotators also use a login provider to authenticate the rotation call itself.
 
 ```yaml
 rotators:

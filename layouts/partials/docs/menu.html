@@ -58,8 +58,6 @@
     {{/* Auto-expand CLI command menus for pages defined only in menus.yml */}}
     {{ if hasPrefix $page.Path "/docs/iac/cli/commands/" }}
         {{ $expandedIDs = $expandedIDs | append "iac-cli" | append "iac-cli-commands" }}
-    {{ else if hasPrefix $page.Path "/docs/esc/cli/commands/" }}
-        {{ $expandedIDs = $expandedIDs | append "esc-cli-overview" | append "esc-cli-commands" }}
     {{ end }}
 
     <pulumi-docs-nav expanded-menu-ids="{{ delimit $expandedIDs "," }}">
