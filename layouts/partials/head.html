@@ -36,6 +36,27 @@
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
+    {{- /* Cross-document view transitions, docs section only. On same-origin
+           navigations, supporting browsers (Chrome 126+, Safari 18.2+) keep the
+           old page on screen until the new one is ready instead of flashing
+           white. Both the outgoing and incoming page must carry the rule, so
+           gating it here scopes transitions to docs <-> docs navigations.
+           Disabling the snapshot animations makes the swap instant (no
+           crossfade). This must be a page-gated inline style — the rule is a
+           document-level opt-in, so it can't live in the shared CSS bundle. */ -}}
+    {{ if eq .Section "docs" }}
+        <style>
+            @view-transition {
+                navigation: auto;
+            }
+
+            ::view-transition-old(root),
+            ::view-transition-new(root) {
+                animation: none;
+            }
+        </style>
+    {{ end }}
+
 
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
