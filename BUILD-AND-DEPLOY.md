@@ -3409,6 +3409,21 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 - uses: actions/setup-node@v6
 ```
 
+### Clearing Google's robots.txt cache
+
+Google's crawlers automatically pick up changes to `robots.txt` and update the cached version every 24 hours. If you need the cache cleared sooner (for example, after a significant crawling rule change), you can request an immediate refresh through Google Search Console.
+
+> **Note:** Access to the [Pulumi Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) property is required. If you don't have access, contact a member of the docs team who does.
+
+**Steps:**
+
+1. Open [Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) and select the **pulumi.com** property.
+1. In the left navigation, go to **Indexing** > **robots.txt**.
+1. In the robots.txt report, click **Request a recrawl**.
+1. Confirm the request. Google will refresh its cached copy within a few hours instead of waiting for the standard 24-hour cycle.
+
+For reference, see [Google's documentation on submitting an updated robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/submit-updated-robots-txt#refresh-googles-robots.txt-cache).
+
 ## Dependency management
 
 This section provides comprehensive guidance for triaging and managing Dependabot pull requests in this repository.
