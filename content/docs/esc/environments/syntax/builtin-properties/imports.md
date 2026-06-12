@@ -13,7 +13,7 @@ menu:
     weight: 3
 ---
 
-The `imports` built-in property provides access to imported environments. This allows the selective use of values from imported environments, including those that are imported without participating in the merge stack.
+The `imports` built-in property provides access to imported environments. This allows the selective use of values from imported environments, including those that are imported without participating in the merge stack (i.e. imported with [`merge: false`](/docs/esc/environments/syntax/top-level-keys/imports/#available-options)).
 
 ## Properties
 
@@ -22,6 +22,8 @@ The `imports` built-in property provides access to imported environments. This a
 | import   | any  | The imported environment to access
 
 ## Example
+
+In the following example, the `app/dev` environment is imported with `merge: false`, so its values are not merged into the current environment. Instead, they are accessed explicitly via the `imports` built-in:
 
 ```yaml
 imports:
