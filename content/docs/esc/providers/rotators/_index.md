@@ -7,14 +7,14 @@ menu:
   esc:
     name: Rotators
     identifier: esc-providers-rotators
-    parent: esc-providers
-    weight: 3
+    parent: esc-home
+    weight: 4
 aliases:
   - /docs/esc/integrations/rotated-secrets/
   - /docs/esc/concepts/providers/rotators/
 ---
 
-For how rotators fit alongside providers, see [Providers and rotators](/docs/esc/providers/). For deploying rotation connectors so a rotator can reach a target inside a private network, see [Rotation connectors](/docs/esc/operations/rotation/).
+Reference catalog of the credential rotators shipped with Pulumi ESC. For an introduction to how rotators work — the rotation lifecycle, scheduling, permissions, and best practices — see [Rotators](/docs/esc/concepts/rotators/). For deploying rotation connectors so a rotator can reach a target inside a private network, see [Rotation connectors](/docs/esc/operations/rotation/).
 
 | Rotator | Required connector | Description |
 |---|---|---|
