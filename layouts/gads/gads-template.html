@@ -14,8 +14,9 @@
                 {{ .Params.overview.description | markdownify }}
             </p>
         </div>
-        <div class="container mx-auto text-center pt-8 w-9/12">
+        <div class="container mx-auto pt-8 w-9/12 flex flex-col sm:flex-row items-center justify-center gap-4">
             {{ partial "cta-get-started" (dict) }}
+            {{ partial "gads/cta-contact.html" (dict) }}
         </div>
     </section>
 
@@ -63,6 +64,23 @@
 
     <section id="case-studies">
         {{ partial "gads/case-studies.html" .Params.case_studies }}
+    </section>
+
+    {{ $contact := .Params.contact_form | default dict }}
+    <section id="contact-form" class="py-16 px-4 mt-8 border-t border-gray-200 bg-gray-100">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2>{{ $contact.headline | default "Talk to a Pulumi expert" | markdownify }}</h2>
+            <p class="text-gray-700 max-w-xl mx-auto">
+                {{ $contact.description | default "Have questions about Pulumi, pricing, or migrating from another tool? Tell us about your use case and our team will get back to you within one business day." | markdownify }}
+            </p>
+        </div>
+        <div class="container mx-auto max-w-2xl mt-8">
+            <div class="card p-10 bg-white shadow-lg">
+                <div class="hs-form hs-form-fg-dark font-normal">
+                    <pulumi-hubspot-form form-id="{{ $contact.hubspot_form_id | default "8381e562-5fdf-4736-bb10-86096705e4ee" }}"></pulumi-hubspot-form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script>

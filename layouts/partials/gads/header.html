@@ -11,8 +11,9 @@
                     </a>
                 </div>
                 
-                <!-- Keep only Sign Up CTA -->
-                <div class="cta-container">
+                <!-- Sign Up CTA plus secondary contact CTA -->
+                <div class="cta-container flex items-center gap-2">
+                    {{ partial "gads/cta-contact.html" (dict "class" "btn btn-ghost") }}
                     {{ partial "cta-get-started" (dict) }}
                 </div>
             </div>
