@@ -1,10 +1,10 @@
 ---
-title: JavaScript and Infrastructure as Code
-meta_desc: "Define cloud infrastructure as code in JavaScript or TypeScript: real types, npm packages, IDE tooling, and Jest tests for VPCs and clusters."
+title: JavaScript and TypeScript Infrastructure as Code
+meta_desc: "Define cloud infrastructure as code in TypeScript or JavaScript: real types, npm packages, IDE tooling, and Jest tests for VPCs and clusters."
 
 meta_image: /images/what-is/javascript-and-infrastructure-as-code-meta.png
 type: what-is
-page_title: "JavaScript and Infrastructure as Code"
+page_title: "JavaScript and TypeScript Infrastructure as Code"
 
 customer_logos:
   title: Leading engineering organizations are building with Pulumi
@@ -39,6 +39,7 @@ In this article, we'll cover the key questions about JavaScript and infrastructu
 * Why use JavaScript or TypeScript for infrastructure as code?
 * Should I use JavaScript or TypeScript?
 * What does JS/TS offer that an IaC DSL doesn't?
+* What does TypeScript infrastructure as code look like?
 * How does writing IaC in JS/TS compare to HCL or YAML?
 * What ecosystem tools come with JavaScript IaC?
 * What patterns and pitfalls should I know about?
@@ -78,6 +79,52 @@ DSLs like HCL or CloudFormation YAML are deliberately limited: no functions, lim
 * **Sharing through npm.** Internal Pulumi packages live in a private npm registry next to your other internal libraries. Public packages live on npm.
 * **Real types over cloud APIs.** Every AWS, Azure, Google Cloud, and Kubernetes resource has a generated TypeScript type. The compiler knows what fields exist, which are required, and what types they take.
 * **Standard testing infrastructure.** Jest tests for IaC live next to Jest tests for the app, run in the same CI step, and use the same mocking patterns.
+
+## What does TypeScript infrastructure as code look like?
+
+A complete Pulumi program that creates a versioned, tagged S3 bucket:
+
+```typescript
+import * as aws from "@pulumi/aws";
+
+export const assets = new aws.s3.BucketV2("app-assets", {
+    tags: { team: "platform", env: "prod" },
+});
+
+new aws.s3.BucketVersioningV2("app-assets-versioning", {
+    bucket: assets.id,
+    versioningConfiguration: { status: "Enabled" },
+});
+
+export const bucketName = assets.bucket;
+```
+
+Every property is typed. Misspell `versioningConfiguration`, pass a number where a string belongs, or omit a required field, and the program fails at compile time with a precise error — not halfway through a deploy. The same compiler that protects the application protects the infrastructure.
+
+Because it's ordinary TypeScript, it's testable with the Jest setup the app already uses. Pulumi's mocks replace cloud calls so the test runs entirely in memory:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+pulumi.runtime.setMocks({
+    newResource: (args) => ({ id: `${args.name}-id`, state: args.inputs }),
+    call: (args) => args.inputs,
+});
+
+test("buckets are tagged with an owning team", async () => {
+    const { assets } = await import("./index");
+    const tags = await new Promise((resolve) => assets.tags.apply(resolve));
+    expect(tags).toMatchObject({ team: "platform" });
+});
+```
+
+Getting a project running is three commands:
+
+1. **Create a project.** `pulumi new aws-typescript` scaffolds `package.json`, `tsconfig.json`, and a starter program.
+1. **Preview the change.** `pulumi preview` compiles the program and shows the planned resources before anything is created.
+1. **Deploy.** `pulumi up` applies the plan and prints the stack outputs, like `bucketName` above.
+
+See the [unit testing guide](/docs/iac/guides/testing/unit/) for the full mock API and patterns for testing components.
 
 ## How does writing IaC in JS/TS compare to HCL or YAML?
 
@@ -132,7 +179,7 @@ The most common pitfall: writing IaC like a script. JS/TS lets you do that, but 
 
 Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java, and YAML.
 
-* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and 100+ other providers. Generated from each provider's API, so the types reflect the real cloud surface.
+* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and the rest of the [200+ providers in the Pulumi Registry](/registry/). Generated from each provider's API, so the types reflect the real cloud surface.
 * **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
 * **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
@@ -147,7 +194,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 
 ### Can I use Node.js to manage infrastructure on every cloud?
 
-Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
+Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 200+ providers in total, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
 
 ### Is TypeScript meaningfully better than JavaScript for IaC?
 
