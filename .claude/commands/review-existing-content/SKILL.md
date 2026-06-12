@@ -1,0 +1,240 @@
+---
+name: review-existing-content
+description: Review existing documentation pages selected by the daily content-review workflow. Runs the docs-review claim pipeline over whole files via synthetic diffs, applies high-confidence fixes only, and opens one auditable PR per article. Invoked by the review-existing-content workflow; not user-invocable.
+user-invocable: false
+---
+
+# Review Existing Content
+
+You are reviewing existing documentation pages — not a PR diff. The selection
+script has already chosen today's articles; your job is to run the docs-review
+machinery over each whole file, apply only the fixes you can defend with an
+authoritative source, and open one ready PR per article. Everything
+judgment-level goes in the PR description for a human, not in the diff.
+
+## Input
+
+Read `.content-review-queue.json` from the repo root (written by
+`scripts/content-review/select-articles.py`). Shape:
+
+```json
+{
+  "generated": "2026-06-12T14:00:00+00:00",
+  "count": 3,
+  "halted": null,
+  "traffic": { "available": true, "period": "2026-05", "pages_matched": 731 },
+  "articles": [
+    { "path": "content/docs/iac/concepts/stacks/_index.md",
+      "url": "/docs/iac/concepts/stacks/",
+      "slug": "docs-iac-concepts-stacks",
+      "lane": "priority",
+      "tier": 1,
+      "no_retire": true,
+      "monthly_visits": 12345,
+      "last_reviewed": null,
+      "score": 0.91 }
+  ]
+}
+```
+
+- `lane` — `priority` (scored pick), `stale` (longest-unreviewed reserve
+  slot), or `manual` (workflow_dispatch override).
+- `no_retire` — when true, retirement must never be proposed for this page.
+- If `articles` is empty or `halted` is set, do nothing (the workflow won't
+  invoke you in that case, but be defensive).
+
+Process articles **sequentially**, one at a time, completing each article's
+branch and PR before starting the next.
+
+## Per-article procedure
+
+### 1. Branch
+
+From up-to-date `master`, create `content-review/<slug>`. (For a retirement
+proposal — stale lane only, see below — use `content-review/retire-<slug>`
+instead.) If an open PR already exists for that branch name, skip the article
+entirely and note it in the results file: a previous run owns it.
+
+### 2. Pre-compute (deterministic floor)
+
+Generate a synthetic whole-file diff and run the docs-review pre-steps over
+it. Scripts live in `.claude/commands/docs-review/scripts/`; artifacts go in
+the repo root, exactly as the PR review workflow lays them out:
+
+```bash
+git diff --no-index /dev/null <path> > .synthetic.patch || true
+
+python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
+    --patch-file .synthetic.patch --out .fetched-urls.json
+python3 .claude/commands/docs-review/scripts/extract-claims.py \
+    --patch-file .synthetic.patch --out .candidate-claims-regex.json
+python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+    --patch-file .synthetic.patch --changed-files <path> \
+    --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json
+python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+    --patch-file .synthetic.patch --changed-files <path> \
+    --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json
+python3 .claude/commands/docs-review/scripts/merge-claims.py \
+    --regex .candidate-claims-regex.json \
+    --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+    --out .candidate-claims.json
+python3 .claude/commands/docs-review/scripts/verify-claims.py \
+    --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+    --out .verified-claims.json
+python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
+    --changed-files <path> --out .frontmatter-validation.json
+python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
+    --changed-files <path> --out .cross-sibling-discovery.json
+```
+
+Run Vale the way the review workflow does, in whole-file mode (no `--pr`):
+
+```bash
+vale --no-exit --output=JSON <path> > .vale-raw.json 2>/dev/null || echo '{}' > .vale-raw.json
+python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+    --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
+```
+
+If any pre-step fails, continue with the artifacts you
+have and say so in the PR description; never fabricate artifact contents.
+(Consult flag names with `--help` if a script rejects an invocation —
+do not guess alternate flags.)
+
+### 3. Triage and fix — HIGH-CONFIDENCE ONLY
+
+Read the artifacts and triage per
+`docs-review:references:pre-computation`'s contract (scripts find facts; you
+make editorial judgments). The bar for **applying** a fix is strict. Apply
+only:
+
+- **Contradicted claims with an unambiguous correction** — `.verified-claims.json`
+  verdict `contradicted` or `mismatch`, where the authoritative source states
+  the correct value outright (a version number, a price, a flag name). If the
+  correction requires interpretation, do not apply it.
+- **Dead or redirected internal links** — fix to the canonical full path
+  (`/docs/...`, never `../`).
+- **Frontmatter violations** from `.frontmatter-validation.json` (broken menu
+  parent, alias collision).
+- **Unambiguous Vale errors** — spelling, repo terminology (per
+  `docs-review:references:spelling-grammar`); not style suggestions.
+
+Everything else — `unverifiable` verdicts, low-confidence corrections,
+prose-quality findings, structural suggestions, anything you'd phrase with
+"consider" — goes in the PR description's **Findings not applied** section
+(one line of reasoning each), not in the diff. That list is the
+almost-made-the-cut record the human reviewer adjudicates.
+
+Editing guardrails:
+
+- Never rewrite prose beyond the specific correction.
+- Ordered lists keep their `1.` numbering; files end with a newline; H1 Title
+  Case, H2+ sentence case (see `STYLE-GUIDE.md` — but don't re-case headings
+  that aren't otherwise wrong).
+- Never edit anything under a tier-0 (generated) path — selection excludes
+  them, but be defensive.
+- Never add the `automation/merge` label to anything.
+
+### 4. Screenshot / UI pass
+
+Follow `references/screenshot-verification.md` for every image the article
+references. Verified-stale screenshots are **flagged in the PR description**
+(Screenshot check section), never regenerated or deleted by you.
+
+### 5. Ledger
+
+Write `scripts/content-review/ledger/<slug>.json` on the article's branch:
+
+```json
+{
+  "path": "content/docs/iac/concepts/stacks/_index.md",
+  "reviewed_at": "2026-06-12",
+  "pr": "<PR URL, filled after creation — push an amend/follow-up commit>",
+  "lane": "priority",
+  "clean": false,
+  "fixes": 4,
+  "skipped_findings": 2
+}
+```
+
+`fixes` = applied changes; `skipped_findings` = Findings-not-applied count.
+
+### 6. Validate
+
+`make lint` and `make build` must pass on the branch. Fix what they surface;
+if you cannot, drop the offending change rather than shipping a broken build.
+
+### 7. PR — one per article, ready (non-draft)
+
+Open a **ready** PR to `master`. The workflow dispatches the automated
+docs review over it afterward; humans merge. Description contract
+(auditability — model on fix-broken-links PRs):
+
+- **Why this page**: lane, tier, traffic figure + report period, last
+  reviewed (from the queue entry) — so the reviewer knows how it was chosen.
+- **Fixes applied**: table of claim/finding → authoritative source →
+  correction, one row per change.
+- **Findings not applied**: every skipped finding with one line of reasoning.
+  End the section with: "For the judgment-level items above, run
+  `/glow-up <path>`."
+- **Screenshot check**: per image — current / stale (what differs) /
+  unverifiable; note any aging reference screenshots (see
+  `references/screenshot-verification.md`).
+- **Verification**: confirm `make lint` + `make build` passed and which
+  pre-step artifacts informed the review (note any pre-step that failed).
+
+### Clean articles
+
+If triage produces **zero applicable fixes**, do not open a per-article PR.
+Collect the article's ledger entry (with `"clean": true, "fixes": 0`) onto a
+shared branch `content-review/ledger-<YYYY-MM-DD>` and open one ready PR for
+all of the day's clean articles at the end of the run. The workflow does not
+dispatch a review for the ledger-only PR.
+
+## Retirement proposals (stale lane only)
+
+For a `stale`-lane article with `"no_retire": false`, retirement is a valid
+outcome **instead of** a fix PR, under a strict evidence standard:
+
+- **Evidence required (two-sided):** the page appears in the traffic report
+  with near-zero views (absence from the report is NOT evidence — the page
+  may be new or alias-attributed), **and** GSC impressions/clicks are low
+  over its window when that data is present; **or** the page is demonstrably
+  redundant with a named page (cite `.cross-sibling-discovery.json`). Check
+  the page's age in git — never propose retiring a page younger than a year.
+- **Retire = redirect, never 404.** The PR must redirect the page to its
+  superseding target: add the page's URL to the target's `aliases:` (or an
+  S3 redirect under `scripts/redirects/` for non-Hugo paths), update inbound
+  internal links in `/docs/`, `/product/`, `/tutorials/`, and remove the
+  page + its menu entry. Follow `move-doc` reference mechanics.
+- **Branch** `content-review/retire-<slug>`; PR description leads with the
+  full evidence (traffic + GSC numbers and period, redundancy target,
+  inbound-link inventory).
+- When in doubt, don't propose retirement — review the page normally and
+  note the low-traffic observation under Findings not applied.
+
+## Output
+
+After all articles, write `.content-review-results.json` to the repo root
+for the workflow's review-dispatch and Slack steps:
+
+```json
+{
+  "prs": [
+    { "path": "content/docs/iac/concepts/stacks/_index.md",
+      "pr": "https://github.com/pulumi/docs/pull/19999",
+      "pr_number": 19999,
+      "head_sha": "abc1234",
+      "fixes": 4,
+      "retirement": false }
+  ],
+  "ledger_only_pr": "https://github.com/pulumi/docs/pull/20000 or null",
+  "clean": ["content/docs/esc/overview.md"],
+  "skipped": [],
+  "summary": ":mag: Reviewed 3 articles — 2 fix PRs, 1 clean (ledger PR)"
+}
+```
+
+`head_sha` is each PR branch's final commit SHA (`git rev-parse HEAD` after
+the last push) — the review dispatch needs it. `skipped` lists articles
+abandoned mid-run (existing PR, unfixable build break) with a reason string.
+The `summary` line is posted to Slack verbatim; keep it to one line.
