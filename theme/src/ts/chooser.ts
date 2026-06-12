@@ -7,6 +7,11 @@ function getElemClasses(e: Element) {
 function selectChoice(kind, choice, extra?) {
     document.cookie = "pulumi_" + kind + "=" + choice + "; max-age=31536000; path=/";
 
+    const analytics = (window as any).analytics;
+    if (analytics && analytics.track && typeof analytics.track === "function") {
+        analytics.track("docs-choice-selected", { kind: kind, choice: choice });
+    }
+
     var choiceTabs = 0;
     document.querySelectorAll<HTMLElement>("a." + kind + "-tab").forEach(e => {
         choiceTabs++;
