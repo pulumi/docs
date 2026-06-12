@@ -28,7 +28,7 @@
         <p class="body-xl text-gray-700 max-w-3xl mt-4">{{ $subheading | markdownify }}</p>
         {{ end }}
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            {{ partial "cta-get-started" (dict) }}
+            {{ partial "cta-get-started" (dict "label" "Try Pulumi") }}
             {{ partial "gads/cta-contact.html" (dict) }}
         </div>
     </div>

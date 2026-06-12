@@ -10,10 +10,10 @@
 
   Parameters:
     - class: CSS class for the button (default: "btn btn-outline btn-xl")
-    - label: Button label (default: "Talk to an expert")
+    - label: Button label (default: "Get a demo")
 */}}
 
 {{ $class := .class | default "btn btn-outline btn-xl" }}
-{{ $label := .label | default "Talk to an expert" }}
+{{ $label := .label | default "Get a demo" }}
 
 <a href="#contact-form" class="{{ $class }}" data-track="gads-cta-contact">{{ $label }}</a>
