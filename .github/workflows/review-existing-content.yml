@@ -151,14 +151,17 @@ jobs:
             3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
                goes in the PR description's "Findings not applied" section.
             4. Run the screenshot/UI verification pass (flag-only).
-            5. Write the article's ledger file under
-               `scripts/content-review/ledger/`.
-            6. Run `make lint` and `make build`; resolve anything they
+            5. Run `make lint` and `make build`; resolve anything they
                surface or drop the offending change.
-            7. Open a **ready** (non-draft) PR per article with the
+            6. Run the rendered content pass over the built page — both
+               the HTML view and the customer-facing markdown view
+               (`public/<url>/index.html` and `index.md`) — per the skill.
+            7. Write the article's ledger file under
+               `scripts/content-review/ledger/`.
+            8. Open a **ready** (non-draft) PR per article with the
                auditable description the skill describes. Clean articles
                share one ledger-only PR instead.
-            8. Write `.content-review-results.json` (the skill defines the
+            9. Write `.content-review-results.json` (the skill defines the
                shape) — the workflow's review-dispatch and Slack steps
                consume it.
           claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'

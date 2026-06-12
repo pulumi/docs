@@ -140,7 +140,51 @@ Follow `references/screenshot-verification.md` for every image the article
 references. Verified-stale screenshots are **flagged in the PR description**
 (Screenshot check section), never regenerated or deleted by you.
 
-### 5. Ledger
+### 5. Validate and render
+
+`make lint` and `make build` must pass on the branch. Fix what they surface;
+if you cannot, drop the offending change rather than shipping a broken
+build. The build also produces the rendered views the next step reads.
+
+### 6. Rendered content pass (the customer-facing views)
+
+Source review misses content the page assembles at render time — shared
+snippets from shortcodes, values from `data/` files, partial-driven
+sections. The customer sees the assembled page, so check both rendered
+views `make build` just produced:
+
+**HTML view** — `public/<url path>/index.html`:
+
+1. Extract the main content area's text (skip nav/footer/banner chrome).
+2. Compare against the source markdown's prose. Rendered text **absent from
+   the source** is shortcode/data-sourced content — extract checkable
+   claims from exactly that residue (it's small) and verify them through
+   the same lanes as step 3.
+3. Trace each residue finding to its origin: the shortcode call in the
+   page source → `layouts/shortcodes/<name>.html` / partials / `data/`
+   files. A fix at a shared source affects every page that includes it, so
+   shared-source corrections meeting the high-confidence bar may be
+   applied, and the PR description must flag them as multi-page
+   ("also rendered on N other pages" — grep for other callers).
+
+**Markdown view** — `public/<url path>/index.md` (the LLM/agent-facing
+render; docs pages cascade `outputs: [HTML, markdown]`, and shortcodes
+render through their `layouts/shortcodes/*.markdown.md` templates):
+
+1. Read it and check for leaked shortcode syntax — literal `{{<` / `>}}`
+   or `{{%` / `%}}` fragments in the output are the signature of a
+   shortcode missing its markdown template.
+2. Spot-check that content present in the HTML view isn't silently absent
+   here (same missing-template failure, quieter symptom).
+3. Fixes here are usually a new/corrected `*.markdown.md` shortcode
+   template — shared-source again, same multi-page flagging rule. When the
+   right rendering is debatable, it's a Findings-not-applied entry, not a
+   fix.
+
+If this pass applied any fix, re-run `make lint && make build` before
+opening the PR.
+
+### 7. Ledger
 
 Write `scripts/content-review/ledger/<slug>.json` on the article's branch:
 
@@ -158,12 +202,7 @@ Write `scripts/content-review/ledger/<slug>.json` on the article's branch:
 
 `fixes` = applied changes; `skipped_findings` = Findings-not-applied count.
 
-### 6. Validate
-
-`make lint` and `make build` must pass on the branch. Fix what they surface;
-if you cannot, drop the offending change rather than shipping a broken build.
-
-### 7. PR — one per article, ready (non-draft)
+### 8. PR — one per article, ready (non-draft)
 
 Open a **ready** PR to `master`. The workflow dispatches the automated
 docs review over it afterward; humans merge. Description contract
@@ -179,6 +218,10 @@ docs review over it afterward; humans merge. Description contract
 - **Screenshot check**: per image — current / stale (what differs) /
   unverifiable; note any aging reference screenshots (see
   `references/screenshot-verification.md`).
+- **Rendered content**: outcomes of the rendered pass — residue claims
+  checked in the HTML view, the markdown view's shortcode-template status,
+  and any shared-source (shortcode/partial/data) findings with their
+  page-reach ("also rendered on N other pages").
 - **Verification**: confirm `make lint` + `make build` passed and which
   pre-step artifacts informed the review (note any pre-step that failed).
 
