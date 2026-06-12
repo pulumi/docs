@@ -81,7 +81,7 @@
             {{- with index site.Menus $menuName }}
             <li class="expandable expanded{{ if eq $currentSection $menuName }} expanded{{ end }}" data-menu-id="{{ $menuName }}-top">
                 <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuName "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" $label) }}
+                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuName "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" $label "expandedIDs" $expandedIDs) }}
                 </ul>
             </li>
             {{- end }}
@@ -109,6 +109,47 @@
 
         </ul>
     </pulumi-docs-nav>
+
+    {{/* Scroll the active item into view. Runs inline — before first paint — so the
+         menu never visibly jumps. The expanded classes are rendered server-side above,
+         so the geometry is already final.
+
+         The menu's scroll position is carried across page loads via sessionStorage,
+         so navigating between pages whose nav items are already in view (e.g.,
+         siblings) doesn't move the nav at all. Only when the active item falls
+         outside the restored view is it scrolled (centered) into view. */}}
+    <script>
+        (function () {
+            var menu = document.currentScript.closest("nav").querySelector("pulumi-docs-nav");
+            var KEY = "docs-nav-scroll-position";
+
+            try {
+                var saved = sessionStorage.getItem(KEY);
+                if (saved !== null) {
+                    menu.scrollTop = parseInt(saved, 10) || 0;
+                }
+                window.addEventListener("pagehide", function () {
+                    sessionStorage.setItem(KEY, menu.scrollTop);
+                });
+            } catch (e) {
+                // Storage unavailable; fall through to centering below.
+            }
+
+            var active = menu.querySelector("a.active");
+            if (!active) {
+                return;
+            }
+            var menuRect = menu.getBoundingClientRect();
+            if (menuRect.height === 0) {
+                return;
+            }
+            var itemRect = active.getBoundingClientRect();
+            if (itemRect.top < menuRect.top || itemRect.bottom > menuRect.bottom) {
+                // Center the active item vertically within the menu.
+                menu.scrollTop += itemRect.top - menuRect.top - (menuRect.height - itemRect.height) / 2;
+            }
+        })();
+    </script>
 </nav>
 
 {{/*
@@ -153,6 +194,7 @@
     {{- $page := .page }}
     {{- $rootMenuID := .rootMenuID }}
     {{- $allMenuEntries := .allMenuEntries }}
+    {{- $expandedIDs := default slice .expandedIDs }}
 
     {{- range .menuEntries }}
         {{/* Skip Overview pages since we add them manually */}}
@@ -197,7 +239,11 @@
                 {{- $page.Scratch.Add "breadcrumbs" (dict "name" $currentMenuItem.Name "url" $currentMenuItem.URL) }}
             {{- end }}
 
-            <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable" {{ end }}
+            {{/* Render the expanded state server-side (ancestors of the current page, plus
+                 auto-expanded menu IDs) so the nav paints fully expanded — no flash of
+                 collapsed items while waiting for the pulumi-docs-nav component to load. */}}
+            {{- $isExpanded := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) (and .Identifier (in $expandedIDs .Identifier)) }}
+            <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable{{ if $isExpanded }} expanded{{ end }}" {{ end }}
                 {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
                 >
                 {{- if and .Children (ne .Identifier $rootMenuID) }}
@@ -247,7 +293,7 @@
                                 </li>
                             {{- end }}
                         {{- end }}
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "currentSection" $.currentSection "allMenuEntries" $allMenuEntries) }}
+                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "currentSection" $.currentSection "allMenuEntries" $allMenuEntries "expandedIDs" $expandedIDs) }}
                     </ul>
                 {{- end }}
             </li>
