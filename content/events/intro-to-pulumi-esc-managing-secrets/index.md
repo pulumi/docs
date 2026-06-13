@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: Best Practices for Managing Secrets with Pulumi ESC
+title: Best Practices for Managing Secrets - An Introduction to ESC
 
 meta_desc: Learn to tame secrets sprawl with Pulumi ESC — aggregate, manage, and securely access secrets and configuration from one place.
 meta_image: /events/intro-to-pulumi-esc-managing-secrets/managing-secrets-esc-elisabeth.png
