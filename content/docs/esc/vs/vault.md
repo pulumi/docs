@@ -13,17 +13,6 @@ menu:
 aliases:
 ---
 
-<style>
-    main table {
-        font-size: 0.94em;
-    }
-
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
-
 Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with HashiCorp Vault, and how ESC and Vault can be used together.
 
 ## What is HashiCorp Vault?
@@ -44,6 +33,7 @@ While there are differences and similarities between Pulumi ESC and Vault, they 
 
 Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
 
+<div class="table-wrapper">
 <table>
     <tr>
         <th>Feature</th>
@@ -171,5 +161,6 @@ Here is a summary of the key differences between Pulumi ESC and HashiCorp Vault:
         <td>Limited, configuring Vault as an OIDC provider is only available from the CLI</td>
     </tr>
 </table>
+</div>
 
 {{< get-started-esc >}}
