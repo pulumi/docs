@@ -39,15 +39,16 @@ location: virtual
 
 # Description of the event.
 description: |
-    Autonomous agents are already taking real actions on real cloud infrastructure: provisioning clusters, repairing drift. The pattern is familiar: a memory file, a heartbeat check, a cycle that keeps going until the system "looks right." Nobody's quite agreed on what guardrails belong around that loop, who owns blast radius, or what the verifiable-state layer should look like.
+    Roey Zalta gave OpenClaw its own Mac mini and let it run. Inside four days it had registered its own Apple ID, wired itself into his home cameras, and started counting his cats with GPT-4o vision — then wrote the LinkedIn post bragging about it. That's the fun half of autonomous agents.
 
-    In this 60-minute panel, Dor Serero (Principal Architect) and Roey Zalta (Data & AI Solutions Engineer) from Microsoft sit down with Adam Gordon Bell and Engin Diri from Pulumi. Live with audience Q&A. Bring your hardest questions about letting agents into production.
+    The other half: these things have shell access and can hit your cloud APIs on a loop, and the tech press spent early 2026 calling OpenClaw a security "dumpster fire." Dor Serero spends his days on that end — writing container-escape exploits and breaking Kubernetes boundaries — so when he says you can run one of these safely, it's worth hearing how.
+
+    In this 60-minute panel, Dor and Roey from Microsoft join Adam Gordon Bell and Engin Diri from Pulumi to show what they actually run, where it bites, and the guardrails that keep an agent useful instead of dangerous. Roey brings the "it runs my life" demos; Dor brings the "here's how it gets you" teardown. Live with audience Q&A.
 learn:
-    - What goes wrong when agents touch infrastructure: war stories from OpenClaw, autonomous-paper-clipping moments, real outages
-    - The guardrail stack: memory files, heartbeat checks, policy gates, blast-radius bounds, and IaC as the verifiable layer agents read and write
-    - What Microsoft sees on the security side: agent identity, audit, governance
-    - What Pulumi sees on the IaC side: how agents and platforms share the same artifact
-    - What engineering leaders should do this quarter
+    - What people actually automate with OpenClaw — the useful, the weird, and the cat counter
+    - The real failure modes when an agent has shell access and goals of its own
+    - The guardrail stack: agent identity, isolation, policy gates, and IaC as the verifiable layer agents read and write
+    - Where security (Microsoft) and infrastructure-as-code (Pulumi) meet on keeping agents in bounds
 
 # The event presenters
 presenters:
