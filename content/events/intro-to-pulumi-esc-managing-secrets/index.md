@@ -3,6 +3,7 @@
 title: Best Practices for Managing Secrets with Pulumi ESC
 
 meta_desc: Learn to tame secrets sprawl with Pulumi ESC — aggregate, manage, and securely access secrets and configuration from one place.
+meta_image: /events/intro-to-pulumi-esc-managing-secrets/managing-secrets-esc-elisabeth.png
 
 # A featured event will display first in the list.
 featured: false
@@ -39,13 +40,13 @@ location: virtual
 
 # Description of the event.
 description: |
-    Most teams end up with secrets scattered everywhere — environment variables, CI systems, cloud secret stores, `.env` files on someone's laptop. That sprawl is hard to audit, harder to rotate, and a security incident waiting to happen.
+    Most teams end up with secrets scattered everywhere: environment variables, CI systems, cloud secret stores, `.env` files on someone's laptop. That sprawl is hard to audit, harder to rotate, and a security incident waiting to happen.
 
-    This introductory session walks through Pulumi ESC (Environments, Secrets, and Configuration), a configuration-as-code product that lets you aggregate secrets and configuration from many sources, organize them into hierarchical environments, and consume them safely across your infrastructure, applications, and developer workflows. No prior ESC experience needed — we start from the basics and build up.
+    This introductory session is about Pulumi ESC (Environments, Secrets, and Configuration), a configuration-as-code product that pulls secrets and configuration from many sources into hierarchical environments, so you can consume them safely across your infrastructure and dev workflows. No prior ESC experience needed. We start from the basics and build up. Bring your questions, we'll leave plenty of time for live Q&A.
 learn:
     - What Pulumi ESC is, and how environments organize secrets and configuration
     - How to pull secrets from sources like AWS Secrets Manager, 1Password, and others into one consistent place
-    - How to consume those secrets safely at runtime — in your IaC, CI/CD, and local dev
+    - How to consume those secrets safely at runtime, in your IaC, CI/CD, and local dev
 
 # The event presenters
 presenters:

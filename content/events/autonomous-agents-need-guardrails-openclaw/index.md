@@ -2,6 +2,7 @@
 # Name of the event, <= 60 characters
 title: Autonomous Agents Need Guardrails with OpenClaw
 meta_desc: A live panel on the security and infrastructure guardrails autonomous agents need before they touch production cloud.
+meta_image: /events/autonomous-agents-need-guardrails-openclaw/openclaw-agents-guardrails.png
 
 # A featured event will display first in the list.
 featured: false
@@ -38,13 +39,15 @@ location: virtual
 
 # Description of the event.
 description: |
-    Autonomous agents are already taking real actions on real cloud infrastructure — provisioning clusters, applying configs, repairing drift. The pattern is familiar: a memory file, a heartbeat check, a loop that runs until the system "looks right." But nobody has agreed on what guardrails belong around that loop, who owns blast radius, or what the verifiable-state layer should look like — and that gap is where outages and security incidents live.
+    Autonomous agents are already taking real actions on real cloud infrastructure: provisioning clusters, repairing drift. The pattern is familiar: a memory file, a heartbeat check, a cycle that keeps going until the system "looks right." Nobody's quite agreed on what guardrails belong around that loop, who owns blast radius, or what the verifiable-state layer should look like.
 
-    In this 60-minute panel, Adam Gordon Bell (Pulumi) sits down with Dor Serero and Roey Zalta (Microsoft) to work through what breaks when agents touch production infrastructure and the security and infrastructure-as-code patterns that keep them productive instead of dangerous. Live with audience Q&A.
+    In this 60-minute panel, Dor Serero (Principal Architect) and Roey Zalta (Data & AI Solutions Engineer) from Microsoft sit down with Adam Gordon Bell and Engin Diri from Pulumi. Live with audience Q&A. Bring your hardest questions about letting agents into production.
 learn:
-    - How autonomous agents go wrong when they touch infrastructure — real failure modes and war stories from OpenClaw
-    - The guardrail stack — agent identity and policy gates, verifiable state, heartbeat and convergence checks, reversibility, and human-in-the-loop checkpoints
-    - How the security (Microsoft) and infrastructure-as-code (Pulumi) lenses combine when agents and platforms read and write the same verifiable artifact
+    - What goes wrong when agents touch infrastructure: war stories from OpenClaw, autonomous-paper-clipping moments, real outages
+    - The guardrail stack: memory files, heartbeat checks, policy gates, blast-radius bounds, and IaC as the verifiable layer agents read and write
+    - What Microsoft sees on the security side: agent identity, audit, governance
+    - What Pulumi sees on the IaC side: how agents and platforms share the same artifact
+    - What engineering leaders should do this quarter
 
 # The event presenters
 presenters:
