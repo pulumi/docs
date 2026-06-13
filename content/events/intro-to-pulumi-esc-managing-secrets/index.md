@@ -24,7 +24,7 @@ block_external_search_index: false
 url_slug: intro-to-pulumi-esc-managing-secrets
 
 # The event type (workshop, webinar, talk).
-event_type: webinar
+event_type: workshop
 
 # URL for embedding a URL for ungated events.
 youtube_url:
