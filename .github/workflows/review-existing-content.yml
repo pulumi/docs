@@ -1,0 +1,220 @@
+name: "Scheduled jobs: Review existing content"
+
+# Daily (workdays) automated review of EXISTING docs pages — the
+# counterpart to the PR-triggered docs review, for content that nobody is
+# currently editing. The selection script picks the day's articles
+# (strategic tier x traffic x review age, plus one reserved stale slot),
+# the review-existing-content skill reviews each via the docs-review claim
+# pipeline and opens one ready PR per article, and this workflow then
+# force-dispatches claude-code-review.yml over each PR (bot-authored PRs
+# are auto-skipped by that pipeline, so the review must be requested
+# explicitly). Humans merge; nothing here is auto-merged.
+#
+# The whole job is inert until the CONTENT_REVIEW_ENABLED repo variable is
+# 'true' — scheduled workflows only run from the default branch, so this
+# can merge ahead of being switched on. workflow_dispatch always runs
+# (that's the testing path; see the dry_run / count / paths inputs).
+
+on:
+  schedule:
+    # Weekdays at 2:00PM UTC (one hour before check-links, so the two
+    # bot-PR producers don't contend).
+    - cron: '0 14 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of articles to review'
+        required: false
+        default: '3'
+      dry_run:
+        description: 'Selection only — no Claude, no PRs, no spend'
+        type: boolean
+        required: false
+        default: false
+      paths:
+        description: 'Comma-separated content paths (bypasses scoring; for testing)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write # Required for ESC OIDC auth + AWS OIDC role
+  actions: write # Required to dispatch claude-code-review.yml over the PRs
+
+jobs:
+  review:
+    name: Review existing content
+    runs-on: ubuntu-latest
+    # Hard cost ceiling: selection + up to `count` article reviews fit well
+    # inside this; a hung run dies rather than burning API budget.
+    timeout-minutes: 60
+    if: vars.CONTENT_REVIEW_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
+    steps:
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — the PRs opened by claude-code-action later then go out
+      # as pulumi-bot rather than github-actions[bot].
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v1
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          # Selection reads git history (staleness ordering, recent-human-
+          # edit penalty), so a shallow clone won't do.
+          fetch-depth: 0
+      - name: Install Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+      # Vale (and other mise-pinned tools) for the skill's whole-file
+      # prose-lint pre-step.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v2
+        with:
+          cache: true
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      # The traffic snapshot is uploaded to S3 by the data team's Metabase
+      # export (pageviews per /docs/ path over the trailing months). Both
+      # steps degrade gracefully: no AWS role, no snapshot, or a stale file
+      # all leave selection running on tier + age alone.
+      - name: Configure AWS credentials
+        id: aws-creds
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: content-review
+          aws-region: us-west-2
+      - name: Fetch traffic snapshot from S3
+        if: vars.CONTENT_REVIEW_TRAFFIC_S3_URI != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp "${{ vars.CONTENT_REVIEW_TRAFFIC_S3_URI }}" .traffic-snapshot --quiet \
+            || echo "traffic snapshot unavailable; selection proceeds without it"
+
+      # Deterministic selection: the model never chooses what to review.
+      # Writes has_articles= / halted= / count= to $GITHUB_OUTPUT for the
+      # gates below.
+      - name: Select articles
+        id: select
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          ARGS=(--count "${{ github.event.inputs.count || '3' }}" --out .content-review-queue.json)
+          if [ -f .traffic-snapshot ]; then
+            ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          if [ -n "${{ github.event.inputs.paths }}" ]; then
+            ARGS+=(--paths "${{ github.event.inputs.paths }}")
+          fi
+          python3 scripts/content-review/select-articles.py "${ARGS[@]}"
+          echo "--- queue ---"
+          cat .content-review-queue.json
+
+      # On dry runs and quiet/halted days everything below is skipped, so
+      # those runs cost no API spend.
+      - name: Run Claude Code
+        if: steps.select.outputs.has_articles == 'true' && github.event.inputs.dry_run != 'true'
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bot token so the PRs/pushes trigger downstream workflows.
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          prompt: |
+            The daily existing-content review selected today's articles in
+            `.content-review-queue.json` at the repo root.
+
+            Follow `.claude/commands/review-existing-content/SKILL.md`
+            exactly. In short, for each article in the queue, sequentially:
+
+            1. Branch `content-review/<slug>` off master.
+            2. Run the docs-review pre-computation pipeline over the whole
+               file via a synthetic diff (the skill lists the exact
+               commands).
+            3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
+               goes in the PR description's "Findings not applied" section.
+            4. Run the screenshot/UI verification pass (flag-only).
+            5. Run `make lint` and `make build`; resolve anything they
+               surface or drop the offending change.
+            6. Run the rendered content pass over the built page — both
+               the HTML view and the customer-facing markdown view
+               (`public/<url>/index.html` and `index.md`) — per the skill.
+            7. Write the article's ledger file under
+               `scripts/content-review/ledger/`.
+            8. Open a **ready** (non-draft) PR per article with the
+               auditable description the skill describes. Clean articles
+               share one ledger-only PR instead.
+            9. Write `.content-review-results.json` (the skill defines the
+               shape) — the workflow's review-dispatch and Slack steps
+               consume it.
+          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
+
+      # Slop defense: bot-authored PRs are auto-skipped by the docs-review
+      # pipeline (claude-code-review.yml sets skip_reason=bot-author), so
+      # each content PR gets its review via explicit force dispatch — the
+      # same pattern claude-new.yml uses for #new-review. Deterministic
+      # post-step rather than a skill instruction so it can't be forgotten.
+      - name: Dispatch docs review over each PR
+        if: steps.select.outputs.has_articles == 'true' && hashFiles('.content-review-results.json') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          jq -c '.prs[]?' .content-review-results.json | while read -r pr; do
+            NUMBER=$(echo "$pr" | jq -r '.pr_number')
+            HEAD_SHA=$(echo "$pr" | jq -r '.head_sha')
+            echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
+            gh workflow run claude-code-review.yml \
+              --repo "${{ github.repository }}" \
+              -f pr_number="$NUMBER" \
+              -f head_sha="$HEAD_SHA" \
+              -f force=true \
+              || echo "::warning::review dispatch failed for PR #$NUMBER"
+          done
+
+      # Post the day's summary (PR links, clean pages, or the halted
+      # warning) to #docs-ops. Gated on the results file so a failed run
+      # stays silent rather than posting an empty message.
+      - name: Post summary to Slack
+        if: >-
+          github.event.inputs.dry_run != 'true' &&
+          (hashFiles('.content-review-results.json') != '' || steps.select.outputs.halted != '')
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+          HALTED: ${{ steps.select.outputs.halted }}
+        run: |
+          if [ -f .content-review-results.json ]; then
+            TEXT=$(jq -r '.summary' .content-review-results.json)
+            LINKS=$(jq -r '[.prs[]?.pr, (.ledger_only_pr // empty)] | join("\n")' .content-review-results.json)
+            [ -n "$LINKS" ] && TEXT="$TEXT"$'\n'"$LINKS"
+          else
+            TEXT=":warning: Existing-content review halted: ${HALTED} (no articles processed)"
+          fi
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
+              '{channel: $ch, text: $txt, unfurl_links: true}')"
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
