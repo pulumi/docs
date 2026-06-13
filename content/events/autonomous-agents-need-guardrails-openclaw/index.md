@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
-title: Autonomous Agents Need Guardrails with OpenClaw
-meta_desc: A live panel on the security and infrastructure guardrails autonomous agents need before they touch production cloud.
+title: "OpenClaw Needs Guardrails: Securing Agentic Infrastructure"
+meta_desc: A live panel on securing OpenClaw and autonomous agents before they touch production cloud — the guardrails, identity, and verifiable state they need.
 meta_image: /events/autonomous-agents-need-guardrails-openclaw/openclaw-agents-guardrails.png
 
 # A featured event will display first in the list.
