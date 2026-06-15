@@ -111,6 +111,18 @@ _vendor/
 /.content-review-results.json
 /.traffic-snapshot
 /.synthetic.patch
+# docs-review pre-computation artifacts the worker generates before the
+# review (claim extraction/verification, Vale, frontmatter, cross-sibling).
+/.fetched-urls.json
+/.candidate-claims.json
+/.candidate-claims-regex.json
+/.candidate-claims-llm-1.json
+/.candidate-claims-llm-2.json
+/.verified-claims.json
+/.vale-raw.json
+/.vale-findings.json
+/.frontmatter-validation.json
+/.cross-sibling-discovery.json
 
 .doctrees/
 .buildinfo

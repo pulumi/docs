@@ -150,30 +150,15 @@ jobs:
               || echo "::warning::worker dispatch failed for $P"
           done
 
-      # Post the dispatch summary (paths dispatched, or the halted warning) to
-      # #docs-ops. Each worker posts its own PR link when it finishes; this is
-      # the run-level "what got dispatched today" note. Gated on having
-      # articles or a halt so a quiet/failed run stays silent.
-      - name: Post summary to Slack
-        if: >-
-          github.event.inputs.dry_run != 'true' &&
-          (steps.select.outputs.has_articles == 'true' || steps.select.outputs.halted != '')
+      # Surface a halted selection (max_open_prs / gh_unavailable) in the run
+      # log — the select step already prints the queue JSON, this just makes the
+      # halt reason unmissable on a quiet run.
+      - name: Report halt
+        if: steps.select.outputs.halted != ''
         env:
-          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           HALTED: ${{ steps.select.outputs.halted }}
-          COUNT: ${{ steps.select.outputs.count }}
         run: |
-          if [ -n "$HALTED" ]; then
-            TEXT=":warning: Existing-content review halted: ${HALTED} (no articles dispatched)"
-          else
-            PATHS=$(jq -r '.articles[].path' .content-review-queue.json)
-            TEXT="Existing-content review dispatched ${COUNT} article review(s):"$'\n'"$PATHS"
-          fi
-          curl -s -X POST https://slack.com/api/chat.postMessage \
-            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
-            -H "Content-type: application/json; charset=utf-8" \
-            --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
-              '{channel: $ch, text: $txt, unfurl_links: true}')"
+          echo "::warning::Existing-content selection halted: ${HALTED} (no articles dispatched)"
 
 env:
   ESC_ACTION_OIDC_AUTH: true
