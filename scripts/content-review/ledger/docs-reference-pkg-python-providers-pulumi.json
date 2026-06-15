@@ -1,7 +1,7 @@
 {
   "path": "content/docs/reference/pkg/python/providers/pulumi/_index.md",
   "reviewed_at": "2026-06-15",
-  "pr": "",
+  "pr": "https://github.com/pulumi/docs/pull/19687",
   "lane": "stale",
   "clean": true,
   "fixes": 0,
