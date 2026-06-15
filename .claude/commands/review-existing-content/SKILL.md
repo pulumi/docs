@@ -264,7 +264,7 @@ outcome **instead of** a fix PR, under a strict evidence standard:
 ## Output
 
 After all articles, write `.content-review-results.json` to the repo root
-for the workflow's review-dispatch and Slack steps:
+for the workflow's review-dispatch step:
 
 ```json
 {
@@ -284,6 +284,7 @@ for the workflow's review-dispatch and Slack steps:
 ```
 
 `head_sha` is each PR branch's final commit SHA (`git rev-parse HEAD` after
-the last push) — the review dispatch needs it. `skipped` lists articles
-abandoned mid-run (existing PR, unfixable build break) with a reason string.
-The `summary` line is posted to Slack verbatim; keep it to one line.
+the last push) — the review dispatch (which reads `.prs[]`) needs it.
+`skipped` lists articles abandoned mid-run (existing PR, unfixable build
+break) with a reason string. The `summary` line is a one-line run note for
+the workflow log; keep it to one line.
