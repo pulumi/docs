@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: db-user-setup
     parent: esc-operations-rotation
-    weight: 1
+    weight: 3
 aliases:
   - /docs/esc/environments/rotation/db-user-setup/
 ---

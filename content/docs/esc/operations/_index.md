@@ -21,7 +21,7 @@ If you are looking for *what* ESC is rather than *how to run it*, start with [Co
 
 ## Rotation
 
-- [Rotation connectors](/docs/esc/operations/rotation/) — deploy connectors so rotators can reach databases and services in private networks.
+- [Rotating secrets](/docs/esc/operations/rotation/) — best practices for rotation, and deploying connectors so rotators can reach databases and services in private networks.
 
 ## CI/CD
 
