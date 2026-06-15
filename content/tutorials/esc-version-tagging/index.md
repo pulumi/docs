@@ -7,7 +7,7 @@ meta_desc: Use immutable versioning and dynamic tagging to configure multiple ap
 meta_image: meta.png
 weight: 999
 summary: |
-    [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you'll use ESC's [version tagging](/docs/esc/environments/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.
+    [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you'll use ESC's [version tagging](/docs/esc/concepts/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.
 youll_learn:
     - How to store and retrieve configuration values with Pulumi ESC
     - How to use environment versions to pin applications to specific config values
@@ -46,7 +46,7 @@ export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"
 
 ## Create a new ESC project and environment
 
-The application you're building is a Node.js web service designed to return a dynamically configurable [message of the day](https://en.wikipedia.org/wiki/Message_of_the_day) (MOTD). In ESC, configuration settings belong to collections called [_environments_](/docs/esc/environments/working-with-environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the Pulumi CLI.
+The application you're building is a Node.js web service designed to return a dynamically configurable [message of the day](https://en.wikipedia.org/wiki/Message_of_the_day) (MOTD). In ESC, configuration settings belong to collections called [_environments_](/docs/esc/concepts/environments/), and environments in turn belong to _projects_. Projects and environments may be created either with the Pulumi Cloud console or with the Pulumi CLI.
 
 To get started, use the Pulumi CLI to create a new project and environment in the organization of your choice. We'll use the `tutorials` organization in this tutorial as an example. Name the new project `messages` and the environment `dev`:
 
@@ -78,7 +78,7 @@ $ echo "$(pulumi esc get tutorials/messages/dev motd --value json)"
 
 ## Change the setting's value, produce a new version
 
-Every change to a configuration value in an ESC environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/environments/versioning/) and are indexed numerically.
+Every change to a configuration value in an ESC environment produces a new, immutable snapshot of the environment. These snapshots are called [_versions_](/docs/esc/concepts/versioning/) and are indexed numerically.
 
 As of now, your `dev` environment has two versions:  version `1`, the empty starting point, and version `2`, which contains a single setting (for `motd`). You can see this in the Pulumi Cloud console by clicking into the `dev` environment and navigating to the Versions tab:
 
@@ -114,7 +114,7 @@ Date:   2024-09-18 15:04:20.07 -0700 PDT
 
 ## Version tagging
 
-In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/environments/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
+In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/concepts/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
 
 ```bash
 $ pulumi esc get tutorials/messages/dev@latest motd --value json

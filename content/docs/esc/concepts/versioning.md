@@ -1,0 +1,91 @@
+---
+title: Versioning
+title_tag: Environment versioning | Pulumi ESC
+h1: Pulumi ESC environment versioning
+meta_desc: Pulumi ESC allows you to manage, track and audit changes to your secrets and configurations with versioning.
+
+menu:
+  esc:
+    identifier: esc-versioning
+    parent: esc-concepts
+    weight: 9
+aliases:
+- /docs/esc/environments/versioning/
+---
+
+Each time a change is made to an environment, a new immutable revision is created. You can manage and track changes to your secrets and configuration over time with a clear history you can audit, compare, and roll back.  You can assign tags to revisions, such as `production`, `v1.2.1`, or `stable`, to help organize and identify them.
+
+When [importing an environment](/docs/esc/concepts/imports/), you can choose to pin it to a specific version using a tag or revision number. This prevents automatic updates from the source environment, making it easier to test and roll out changes gradually. You can also specify which version to use when running commands with `pulumi esc run`, allowing you to target different environments for different tasks.
+
+## Referencing a specific version
+
+By default, an environment imported into a Pulumi IaC stack tracks the latest revision. To pin a stack to a specific, immutable version, append `@<revision>` to the environment name in your stack configuration file:
+
+```yaml
+# Pulumi.dev.yaml
+environment:
+  - myproject/test@4
+```
+
+This ensures the stack always resolves revision `4`, unaffected by later changes to the environment. For a more memorable reference, you can pin to a [tag](#tagging-versions) instead of a revision number.
+
+## Tagging versions
+
+You can tag your revisions with meaningful names like `prod`, or `stable`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `pulumi esc version tag` to tag a revision.
+
+To tag revision 3 of the `test` environment as `prod` for example, you can use the following command:
+
+```bash
+$ pulumi esc version tag myorg/test@prod @3
+```
+
+### Using tagged versions
+
+Once you tag a revision, you can use the tag to [open](/docs/esc/concepts/environments/#opening-an-environment) a specific environment version.
+
+```bash
+$ pulumi esc open myorg/test@prod
+```
+
+You can also pin to a tagged version when importing an environment. This ensures you are using a known, fixed version that is not affected by subsequent changes to the source environment.
+
+To pin an import in an ESC environment definition, append `@tag` to the environment name in the `imports` list:
+
+```yaml
+# myorg/myapp/dev
+imports:
+  - test@prod
+```
+
+To pin an environment used by a Pulumi IaC stack, append `@tag` to the environment name in your stack configuration file:
+
+```yaml
+# Pulumi.dev.yaml
+environment:
+  - test@prod
+```
+
+## View and compare version history
+
+You can see the history of revisions using `pulumi esc version history` or in the Pulumi Cloud Console.
+
+```bash
+$ pulumi esc version history myorg/test
+revision 3 (tag: latest)
+Author: <Name> <User-ID>
+Date: 2024-04-18 12:42:18.02 -0700 PDT
+
+revision 2
+...
+```
+
+Compare revisions using `pulumi esc diff`.
+
+```bash
+$ pulumi esc diff myorg/test@3 myorg/test@2
+ Value
+
+    --- myorg/test@3
+    +++ myorg/test@2
+...
+```

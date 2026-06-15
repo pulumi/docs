@@ -112,9 +112,13 @@ The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC 
 
 ## Providing credentials to workflow runners
 
+{{% notes type="info" %}}
+For most users, Pulumi recommends [Pulumi ESC](/docs/esc/) for supplying cloud credentials to Deployments. However, if your customer-managed agents can't reach Pulumi Cloud over the network to use ESC, [Pulumi Deployments OIDC](/docs/deployments/deployments/oidc/) is an appropriate solution. For a comparison, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/).
+{{% /notes %}}
+
 There are two methods to provide cloud provider credentials to the workflow runners:
 
-1. Use [OpenID Connect (OIDC) to generate credentials](/docs/pulumi-cloud/oidc)
+1. Use [OpenID Connect (OIDC) to generate credentials](/docs/deployments/deployments/oidc/)
 2. Directly provide credentials to workflow runners through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash

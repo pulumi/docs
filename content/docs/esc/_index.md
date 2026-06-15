@@ -73,7 +73,7 @@ sections:
   - icon: package
     heading: Compose environments
     description: Import environments to share configuration across teams.
-    link: /docs/esc/environments/importing-environments/
+    link: /docs/esc/concepts/imports/
 - type: button-cards
   heading: Capabilities
   cards:
@@ -92,7 +92,7 @@ sections:
   - icon: bell
     heading: Webhooks
     description: Automate processes with environment event webhooks.
-    link: /docs/esc/environments/webhooks/
+    link: /docs/esc/concepts/webhooks/
 - type: button-cards
   heading: Resources
   cards:
@@ -103,7 +103,7 @@ sections:
   - icon: folder
     heading: Environments
     description: Reference for the ESC YAML syntax, imports, versioning, and webhooks.
-    link: /docs/esc/environments/
+    link: /docs/esc/concepts/environments/
   - icon: link
     heading: Guides
     description: Use ESC with Docker, direnv, GitHub Actions, Kubernetes, Cloudflare, and Pulumi IaC.

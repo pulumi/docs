@@ -77,7 +77,7 @@ For more installation options, visit the [Pulumi CLI installation docs](/docs/ia
 
 ## Create your first environment
 
-Next, use the Pulumi CLI to [create the first environment](/docs/esc/environments/working-with-environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
+Next, use the Pulumi CLI to [create the first environment](/docs/esc/concepts/environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
 
 ```bash
 pulumi esc init esc-k8-tutorial/base
@@ -134,7 +134,7 @@ Your password is now stored securely in Pulumi Cloud as a secret.
 
 ## Composing and importing environments
 
-Pulumi ESC enables you to compose different environments for modularity and reusability via [importing](/docs/esc/environments/imports/). In this scenario, your `base` environment might define Kubernetes cluster details across multiple environments. For example in a real-world application, environments can be set by a central DevOps team to maintain constancy, security and cost-control.
+Pulumi ESC enables you to compose different environments for modularity and reusability via [importing](/docs/esc/concepts/imports/). In this scenario, your `base` environment might define Kubernetes cluster details across multiple environments. For example in a real-world application, environments can be set by a central DevOps team to maintain constancy, security and cost-control.
 
 To import settings from the `base` environment into the `app` environment select the `base` environment and using the **Document view**, remove the example environment definition and copy in the following:
 
@@ -281,6 +281,6 @@ In this tutorial, you secured Kubernetes application secrets using Pulumi Enviro
 
 To dive deeper into using Pulumi ESC for advanced scenarios, check out the following resources:
 
-- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
+- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/concepts/imports/).
 
 - **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).

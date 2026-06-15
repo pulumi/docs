@@ -12,7 +12,7 @@ aliases:
   - /docs/esc/environments/rotation/aws-lambda/
 ---
 
-The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/providers/rotators/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/environments/rotation#rotation-connectors) section for more info on why rotation connectors are needed in the first place.
+The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/providers/rotators/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/concepts/rotators#rotation-connectors) section for more info on why rotation connectors are needed in the first place.
 
 ## Prerequisites
 
@@ -37,10 +37,10 @@ The first one is the managing credentials environment, containing managing user 
 
 The second new environment contains the rotator itself, referencing the first environment for the sensitive values. Adjust the `rotateUsers` and `database` fields to your values. If you're using a non-default port, you might need to change the actual rotator name after `fn::rotate::` - `mysql` or `postgres`, as the template guesses the database type by its default port.
 
-That's all there is to it! You can now [import your rotator environment](https://www.pulumi.com/docs/esc/environments/imports/) into any other environment that needs database credentials to use right away.
+That's all there is to it! You can now [import your rotator environment](https://www.pulumi.com/docs/esc/concepts/imports/) into any other environment that needs database credentials to use right away.
 
 ## Rotate the environment
 
 Now that you have a rotator environment setup, you can start rotating the actual secrets. To test it, you can manually rotate the environment by clicking on the `Rotate secrets` button inside the three-dot menu in your rotator environment or by running `pulumi env rotate org/project/environment` with your rotator environment name. Assuming rotation is successful, you will see a new `current` set of credentials in the `state` object of the rotator that you can use. If the rotation is not successful, you can find out what the issue was by navigating to the `Secret Rotation` tab and checking the `Last secret rotations` section.
 
-On the same tab, you can also create [rotation schedules](https://www.pulumi.com/docs/esc/environments/rotation/#schedule) to automatically rotate the credentials after a period of time.
+On the same tab, you can also create [rotation schedules](https://www.pulumi.com/docs/esc/concepts/rotators/#schedule) to automatically rotate the credentials after a period of time.

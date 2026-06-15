@@ -16,18 +16,20 @@ menu:
 
 In order for a Pulumi IaC operation like `update` or `preview` work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. In order for Pulumi Deployments to access the necessary cloud credentials to run your Pulumi operation there are two common approaches you can take:
 
-1. **Use [Pulumi Deployments' OIDC integration](/docs/deployments/deployments/oidc/)** where possible (we support [AWS](/docs/deployments/deployments/oidc/aws/), [Azure](/docs/deployments/deployments/oidc/azure/), and [Google Cloud](/docs/deployments/deployments/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/deployments/deployments/reference/#deployment-settings).
-2. **Use [Pulumi ESC](/docs/esc/)** to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/guides/integrate-with-pulumi-iac/).
+1. **Use [Pulumi ESC](/docs/esc/)** (recommended) to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/guides/integrate-with-pulumi-iac/).
+2. **Use [Pulumi Deployments' OIDC integration](/docs/deployments/deployments/oidc/)** where possible (we support [AWS](/docs/deployments/deployments/oidc/aws/), [Azure](/docs/deployments/deployments/oidc/azure/), and [Google Cloud](/docs/deployments/deployments/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/deployments/deployments/reference/#deployment-settings).
+
+Pulumi recommends Pulumi ESC for most users. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) below for details.
 
 ## Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC
 
-Pulumi recommends using ESC Environments over Deployments OIDC for the following reasons:
+Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC with Deployments, which is why it remains a common default. It's still a good fit for some scenarios — for example, [customer-managed agents](/docs/deployments/deployments/runs/customer-managed-agents/) that can't reach Pulumi Cloud over the network to use ESC. For most users, though, Pulumi recommends using ESC Environments over Deployments OIDC for the following reasons:
 
 - Pulumi ESC Environments are more portable compared to Deployments OIDC: Ignoring any locally stored credentials, e.g., environment variables set in your command shell, you can have greater confidence that a Pulumi Deployments operation will succeed if it succeeds on your local machine.
 - Pulumi ESC Environments are more modular compared to Deployments OIDC: Deployments settings are applied on a per-stack basis, which means that the OIDC configuration must be repeated for every stack that is using Deployments OIDC. In comparison, Pulumi ESC Environments are centrally defined and may be imported into any number of Pulumi stacks.
 - Pulumi ESC has [more native integrations](/docs/esc/integrations/) with popular clouds for both [OIDC](/docs/esc/providers/login/) and [managed secrets services](/docs/esc/providers/secrets/), and other tools like [Kubernetes](/docs/esc/guides/kubernetes-cluster-access/), [Docker](/docs/esc/guides/docker/), etc.
-- Pulumi ESC Environments are composable: [Environments can import other Environments](/docs/esc/environments/imports/), which removes the need to repeat configuration information.
-- Pulumi ESC Environments support [versioning](/docs/esc/environments/versioning/), allowing you to roll out changes to an environment in a controlled fashion by pinning Environment imports to a specific version of an Environment.
+- Pulumi ESC Environments are composable: [Environments can import other Environments](/docs/esc/concepts/imports/), which removes the need to repeat configuration information.
+- Pulumi ESC Environments support [versioning](/docs/esc/concepts/versioning/), allowing you to roll out changes to an environment in a controlled fashion by pinning Environment imports to a specific version of an Environment.
 
 {{% notes type="info" %}}
 One important difference to be mindful of is that Pulumi Deployments OIDC applies to the entire Deployments process (including pre-run commands), whereas a Pulumi ESC environment only applies to the Pulumi IaC operation (e.g. `pulumi up`). However, there is a workaround for this limitation: Each pre-run command can be prefixed with the [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) command so that the pre-run command executes in the context of specified Pulumi ESC Environment.
