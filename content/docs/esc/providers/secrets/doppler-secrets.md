@@ -37,6 +37,9 @@ values:
             name: API_KEY
           app-secret:
             name: APP_SECRET
+  pulumiConfig:
+    apiKey: ${doppler.secrets.api-key}
+    appSecret: ${doppler.secrets.app-secret}
 ```
 
 ## Configuring OIDC

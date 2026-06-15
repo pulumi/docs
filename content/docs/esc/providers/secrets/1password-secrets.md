@@ -45,6 +45,9 @@ values:
             ref: "op://development/aws/Access Keys/access_key_id"
           gale_unique_id_example:
             ref: "op://prod/yj3jfj2vzsbiwqabprflnl27lm/password"
+  pulumiConfig:
+    email: ${1password.secrets.email_section_example}
+    stripeKey: ${1password.secrets.anna_sans_section_example}
 ```
 
 ## Inputs

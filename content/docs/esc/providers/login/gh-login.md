@@ -52,6 +52,8 @@ Private keys do not expire and need to be manually revoked. You must keep privat
 Store the private key as a secret by using the `fn::secret` function.
 See "[Managing Secrets](/docs/esc/operations/managing-secrets/#storing-secrets)".
 
+Because the PEM-formatted private key spans multiple lines, wrap it in a YAML block scalar (`|`) so the newlines are preserved. See "[Multi-line secrets](/docs/esc/operations/managing-secrets/#multi-line-secrets)".
+
 ```yaml
 appId: 123456
 privateKey:
