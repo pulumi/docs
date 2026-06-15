@@ -14,6 +14,8 @@ tags:
     - claude
     - mcp
     - rag
+categories:
+    - agentic-infrastructure
 social:
     twitter: |
         A year ago, building an AI agent meant picking a framework, defining tools, setting up RAG, and writing a pile of glue code.

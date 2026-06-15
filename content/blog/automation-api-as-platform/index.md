@@ -7,6 +7,8 @@ authors:
     - sophia-parafina
 tags:
     - automation-api
+categories:
+    - best-practices
 ---
 
 If you could create infrastructure without using a cloud provider's console, a CLI, or a templating engine, what would you build? Pulumi's Automation API lets you create declarative infrastructure defined by your best practices and expose it behind a REST, gRPC, or custom API.

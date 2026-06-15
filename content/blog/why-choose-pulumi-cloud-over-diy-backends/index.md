@@ -9,6 +9,8 @@ tags:
     - infrastructure-as-code
     - platform-engineering
     - pulumi-cloud
+categories:
+    - best-practices
 ---
 
 {{< notes type="info" >}}

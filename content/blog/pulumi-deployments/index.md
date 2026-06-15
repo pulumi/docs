@@ -6,9 +6,11 @@ meta_image: pulumi-deployments.png
 authors:
     - evan-boyle
 tags:
-    - pulumi deployments
-    - automation api
+    - pulumi-deployments
+    - automation-api
     - deployments
+categories:
+    - product-launches
 ---
 {{% notes type="warning" %}}
 Portions of this blog post are out of date. See the [drift detection](/blog/drift-detection/) and [time-to-live stacks](/blog/ttl/) blog posts for an updated overview and examples.

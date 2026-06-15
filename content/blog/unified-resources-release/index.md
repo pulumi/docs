@@ -11,6 +11,8 @@ tags:
     - resources
     - features
     - pulumi-cloud
+categories:
+    - product-launches
 ---
 
 We're excited to announce unified resources in Pulumi Cloud. This powerful new feature automatically consolidates resources from multiple sources into single, comprehensive views. When the same AWS S3 bucket, Azure VM, or Google Cloud database appears in both your IaC stacks and Pulumi Insights, you'll now see one unified entry instead of duplicates cluttering your search results.

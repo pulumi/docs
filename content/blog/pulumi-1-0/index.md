@@ -1,7 +1,8 @@
 ---
 title: "Pulumi 1.0"
 authors: ["joe-duffy"]
-tags: ["pulumi-news"]
+tags: [announcements]
+categories: [product-launches]
 meta_desc: "We are excited to announce Pulumi 1.0, a modern infrastructure as code platform that works for any cloud, AWS, Azure, GCP, or Kubernetes included."
 date: "2019-09-05"
 updated: "2025-04-16"

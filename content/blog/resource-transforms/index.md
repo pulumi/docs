@@ -9,6 +9,8 @@ authors:
     - justin-vanpatten
 tags:
     - features
+categories:
+    - product-launches
 ---
 
 Pulumi has supported a [Transformations](/docs/concepts/options/transformations) system for a number of years now. This has proved to be a powerful and flexible escape hatch for modifying resource properties and options across your entire program. For example, you could use Transformations to [automatically apply tags](/blog/automatically-enforcing-aws-resource-tagging-policies/#automatically-applying-tags) to all taggable resources in your program, including the children of component resources.

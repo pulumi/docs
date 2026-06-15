@@ -9,6 +9,8 @@ authors:
 tags:
     - continuous-delivery
     - aws-credentials-cicd
+categories:
+    - security-governance
 series: aws-credentials-cicd
 ---
 

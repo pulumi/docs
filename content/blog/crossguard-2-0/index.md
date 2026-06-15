@@ -6,7 +6,9 @@ meta_image: crossguard-mascot.png
 authors:
    - erin-krengel
 tags:
-   - "Policy as Code"
+   - policy-as-code
+categories:
+   - security-governance
 ---
 
 In a [previous blog post](/blog/announcing-crossguard-preview/), I introduced CrossGuard, Pulumi's Policy as Code solution. As part of our [2.0 release](/blog/pulumi-2-0/), CrossGuard is now generally available and has some awesome new features to improve the user experience around managing Policy Packs.

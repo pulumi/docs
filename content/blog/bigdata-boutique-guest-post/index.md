@@ -9,6 +9,8 @@ tags:
     - guest-post
     - testing
     - elasticsearch
+categories:
+    - community
 
 ---
 

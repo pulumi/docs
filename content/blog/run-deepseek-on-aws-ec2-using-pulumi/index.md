@@ -22,6 +22,9 @@ tags:
 - pulumi
 - aws
 - ec2
+categories:
+- agentic-infrastructure
+- tutorials
 
 social:
   twitter: |

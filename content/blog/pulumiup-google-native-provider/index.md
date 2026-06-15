@@ -7,6 +7,8 @@ authors:
     - alex-mullans
 tags:
     - native-providers
+categories:
+    - product-launches
 ---
 
 Today at [PulumiUP](/pulumi-up/), we announced the public preview of our Google Cloud Native provider. Google Cloud usage amongst Pulumi users has grown rapidly in the past year and Google Cloud has been adding [new features and updates almost every day](https://cloud.google.com/blog/products/gcp). The new native provider gives Pulumi users the best support possible for Google Cloud in Pulumi.

@@ -8,7 +8,9 @@ authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+categories:
+    - product-launches
 ---
 
 It's been an incredibly busy few weeks at Pulumi. We've met thousands of you at our second annual Cloud Engineering Summit, shipped major new releases like Pulumi Registry and Pulumi Kubernetes Operator 1.0 and continued to innovate on and improve the entire Pulumi Cloud Engineering Platform. Get caught up on Cloud Engineering Summit to learn what's coming in cloud engineering, or read on for this month's news.

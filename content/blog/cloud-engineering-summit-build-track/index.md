@@ -16,6 +16,8 @@ tags:
     - pulumi-events
     - cloud-engineering
     - infrastructure-as-code
+categories:
+    - community
 
 ---
 

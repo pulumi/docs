@@ -13,7 +13,7 @@ authors:
     - neo-team
 
 tags:
-    - neo
+    - pulumi-neo
     - aws
     - cdk
     - cloudformation
@@ -23,6 +23,8 @@ tags:
     - migration
     - ai
     - features
+categories:
+    - agentic-infrastructure
 
 schema_type: auto
 

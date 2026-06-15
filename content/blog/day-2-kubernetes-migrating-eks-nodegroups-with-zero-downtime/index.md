@@ -1,7 +1,8 @@
 ---
 title: "Migrate EKS Node Groups with Zero Downtime Using Pulumi"
 authors: ["mike-metral"]
-tags: ["Kubernetes", "eks"]
+tags: [kubernetes, eks]
+categories: [tutorials]
 meta_desc: "Learn how to migrate EKS node groups with zero downtime using Pulumi. Create, shift, and decommission worker nodes safely with code and kubectl."
 date: "2019-07-23"
 updated: 2025-03-26

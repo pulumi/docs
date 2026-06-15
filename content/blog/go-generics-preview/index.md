@@ -10,6 +10,8 @@ authors:
 tags:
     - go
     - aws
+categories:
+    - product-launches
 ---
 
 Pulumi loves Go, it's what powers Pulumi. We've kept a close eye on the design and development of support for generics in the Go programming language over the years, a feature that allows developers to write type-safe, concise, and reusable code. We've been exploring what it'd look like to improve Pulumi's Go SDKs with generics and recently published a public [RFC](https://github.com/pulumi/pulumi/discussions/13057) detailing our plans. We've been making progress on the implementation and are excited to announce preview support for Go generics in our core and AWS Go SDKs. If you're using Go with Pulumi, we'd love for you to give it a try and share your feedback!

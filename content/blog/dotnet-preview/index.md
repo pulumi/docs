@@ -8,7 +8,9 @@ meta_image: "meta.png"
 authors:
     - sophia-parafina
 tags:
-    - ".NET"
+    - dotnet
+categories:
+    - product-launches
 canonical_url: "https://www.pulumi.com/docs/iac/languages-sdks/dotnet/"
 ---
 

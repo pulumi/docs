@@ -7,6 +7,8 @@ authors:
     - praneet-loke
 tags:
     - features
+categories:
+    - tutorials
 ---
 
 Pulumi has many resource providers that allow you to interact with your favorite cloud or resource. There are times when a provider may not deliver on the specific task that you want to accomplish. Dynamic Providers can be a powerful tool to help accomplish your infrastructure tasks.

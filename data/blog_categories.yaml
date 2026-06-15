@@ -1,0 +1,98 @@
+# Blog post categories — the closed "what kind of post" taxonomy.
+#
+# This file is the single source of truth for the set of categories a blog post
+# may declare in its `categories:` front matter. It is consumed by:
+#   - scripts/lint/lint-markdown.js (checkBlogCategories): `make lint` fails any
+#     content/blog/*/index.md whose `categories:` is missing, empty, contains a
+#     value not listed here, or lists more than two values.
+#   - authoring guidance: archetypes/blog-post/index.md,
+#     .claude/commands/new-blog-post.md, and BLOGGING.md all point here.
+#
+# Categories are ONE of three orthogonal axes on a post:
+#   - categories  (THIS file)  — the *kind* of post. Closed, lint-enforced.
+#   - tags        (data/blog_tags.yaml) — topical subjects (AWS, Kubernetes,
+#     Python, …). Curated-but-open, not lint-enforced.
+#   - series      (data/blog_series.yml) — an ordered reading path across posts.
+#
+# -----------------------------------------------------------------------------
+# RULES
+# -----------------------------------------------------------------------------
+#   1. Every content/blog/*/index.md post must declare at least one category.
+#   2. Pick EXACTLY ONE in almost all cases. A second is allowed only when a
+#      post genuinely sits across two kinds (rare); never list more than two.
+#   3. The list is CLOSED. Do NOT invent categories or add ad-hoc values to a
+#      post. Topical buckets (clouds, languages, products) are TAGS, not
+#      categories — keep this axis tight.
+#   4. To propose a new category (or rename/retire one), edit THIS file in a PR
+#      and raise it in #blogs first. The id is the stable slug; changing it is a
+#      breaking change for every post that uses it.
+#
+# -----------------------------------------------------------------------------
+# FIELDS
+# -----------------------------------------------------------------------------
+#   id          Stable slug used in post front matter and by the linter.
+#   name        Human-readable display name.
+#   description What belongs here.
+#   use_when    One-line selection hint for authors/agents choosing a category.
+#
+categories:
+  - id: agentic-infrastructure
+    name: "Agentic Infrastructure"
+    description: >-
+      AI agents for infrastructure: Pulumi Neo and Copilot, AI + IaC workflows,
+      MLOps, and the broader agentic-infrastructure strategy.
+    use_when: >-
+      The post is primarily about AI agents, Neo/Copilot, or using AI to build
+      and operate infrastructure.
+
+  - id: product-launches
+    name: "Product & Launches"
+    description: >-
+      Product releases, new features, GA/preview announcements, release recaps,
+      and company news.
+    use_when: >-
+      The post announces or recaps something Pulumi shipped or is launching.
+
+  - id: engineering
+    name: "Engineering"
+    description: >-
+      How we built it: deep technical dives, performance work, architecture of
+      Pulumi itself, and behind-the-scenes engineering.
+    use_when: >-
+      The post explains how something works under the hood or how the Pulumi
+      team built or improved it.
+
+  - id: tutorials
+    name: "Tutorials"
+    description: >-
+      Step-by-step how-tos and getting-started guides that walk the reader
+      through accomplishing a specific task.
+    use_when: >-
+      The post is a hands-on, follow-along guide with concrete steps.
+
+  - id: best-practices
+    name: "Best Practices"
+    description: >-
+      Architecture, infrastructure-as-code, and platform-engineering patterns,
+      guidance, and opinionated recommendations.
+    use_when: >-
+      The post teaches patterns, principles, or recommendations rather than a
+      single step-by-step task.
+
+  - id: security-governance
+    name: "Security & Governance"
+    description: >-
+      Secrets and ESC, policy-as-code, compliance, IAM, and governance of cloud
+      infrastructure.
+    use_when: >-
+      The post is primarily about securing, governing, or enforcing policy on
+      infrastructure.
+
+  - id: community
+    name: "Customers & Community"
+    description: >-
+      Customer and case studies, guest posts, events, company culture, hiring,
+      interns, and year-in-review reflections.
+    use_when: >-
+      The post centers on customers, the community, events, or Pulumi culture
+      rather than a product or technical topic.

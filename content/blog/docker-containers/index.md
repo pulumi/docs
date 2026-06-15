@@ -9,6 +9,8 @@ authors:
   - julien-poissonnier
 tags:
     - docker
+categories:
+    - engineering
 ---
 
 The [Pulumi Docker Containers](https://github.com/pulumi/pulumi-docker-containers) provide a convenient way for running Pulumi in CI/CD pipelines, or for running Pulumi in environments where you don't want to install the Pulumi CLI directly. These images also power [Pulumi Deployments](/product/pulumi-deployments/). We provide several flavors of images, including the [pulumi/pulumi](https://hub.docker.com/r/pulumi/pulumi/tags) image that includes all supported language runtimes in a single image, as well as slim images for each language runtime, for example [pulumi/pulumi-python](https://hub.docker.com/r/pulumi/pulumi-python/tags) or [pulumi/pulumi-nodejs](https://hub.docker.com/r/pulumi/pulumi-nodejs/tags).

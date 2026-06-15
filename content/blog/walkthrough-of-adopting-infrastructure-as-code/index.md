@@ -10,6 +10,8 @@ authors:
 tags:
     - infrastructure-as-code
     - fundamentals
+categories:
+    - tutorials
 
 ---
 

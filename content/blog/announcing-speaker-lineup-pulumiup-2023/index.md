@@ -10,6 +10,8 @@ authors:
 tags:
     - announcements
     - pulumi-events
+categories:
+    - community
 ---
 
 [PulumiUP](https://www.pulumi.com/pulumi-up/) is our virtual user conference for the Pulumi community and anyone interested in Infrastructure as Code. Every year, we strive to build a program packed with technical talks, demos, and best practices with the goal of leaving you with new learnings and inspiration that will help you become a better cloud engineer. You'll hear from industry leaders and experts about IaC, software engineering, DevOps, Platform engineering, and AI.

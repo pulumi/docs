@@ -6,7 +6,9 @@ meta_image: pulumi.png
 authors:
     - george-huang
 tags:
-    - cloud engineering
+    - cloud-engineering
+categories:
+    - best-practices
 
 ---
 

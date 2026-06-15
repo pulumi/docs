@@ -5,7 +5,8 @@ date: "2019-10-17"
 meta_desc: "How to architect your AWS infrastructure to optimize team collaboration with Pulumi Stack References"
 meta_image: "application-architecture.png"
 authors: ["paul-stack"]
-tags: ["aws", "stack-reference"]
+tags: [aws, stack-references]
+categories: [best-practices]
 ---
 
 In this post, we will talk about the best way to architect your Pulumi applications. We are going to build out the following

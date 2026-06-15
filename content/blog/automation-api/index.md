@@ -6,7 +6,9 @@ meta_image: automation_api.png
 authors:
     - evan-boyle
 tags:
-    - automation api
+    - automation-api
+categories:
+    - product-launches
 canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/automation-api/"
 ---
 

@@ -6,6 +6,7 @@ meta_desc: In this article, we look at how the Pulumi Operator can help us adher
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["continuous-delivery", "gitops", "kubernetes"]
+categories: [best-practices]
 ---
 
 {{% notes type="info" %}}

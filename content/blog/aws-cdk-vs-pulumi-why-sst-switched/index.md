@@ -36,7 +36,9 @@ tags:
     - cloudformation
     - aws-cdk
     - case-studies
-    - developer-experience-devex
+    - developer-experience
+categories:
+    - community
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

@@ -13,6 +13,9 @@ tags:
     - security
     - rds
     - iam
+categories:
+    - security-governance
+    - tutorials
 schema_type: auto
 ---
 

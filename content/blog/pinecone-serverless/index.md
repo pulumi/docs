@@ -11,6 +11,8 @@ tags:
 - providers
 - serverless
 - ai
+categories:
+- product-launches
 ---
 
 ## Hello, Pulumi Pinecone Provider!  👋

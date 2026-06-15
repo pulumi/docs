@@ -16,6 +16,8 @@ tags:
 - secrets-management
 - secrets-sprawl
 - pulumi
+categories:
+- security-governance
 
 
 social:

@@ -6,6 +6,7 @@ meta_desc: "Find out how Wallaroo powered their cluster provisioning with Pulumi
 meta_image: "tty-fast.png"
 authors: ["marc-holmes", "simon-zelazny"]
 tags: ["guest-post", "data-science"]
+categories: [community]
 ---
 
 *This guest post is from Simon Zelazny of

@@ -2,7 +2,8 @@
 title: Using Helm and Pulumi to define cloud native infrastructure
 h1: "Using Helm and Pulumi to define cloud native infrastructure as code"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes","Azure"]
+tags: [kubernetes, azure]
+categories: [tutorials]
 date: "2018-10-31"
 meta_desc: "In this post, we run a Pulumi program that manages both Azure and Kubernetes resources and dependencies, and deploys a Node.js Helm chart."
 meta_image: "helm-pulumi-deploy.png"

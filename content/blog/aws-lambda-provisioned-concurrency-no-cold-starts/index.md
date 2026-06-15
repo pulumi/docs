@@ -5,7 +5,8 @@ updated: 2025-03-19
 meta_desc: "Learn how to configure AWS Lambda Provisioned Concurrency to minimize cold starts and improve performance with Pulumi."
 meta_image: variable.png
 authors: ["mikhail-shilkov"]
-tags: ["AWS", "Serverless"]
+tags: [aws, serverless]
+categories: [best-practices]
 ---
 
 AWS Lambda cold starts (the time it takes for AWS to assign a worker to a request) are a major frustration point of many serverless programmers. In this article, we will take a look at the problem of latency-critical serverless applications, and how [Provisioned Concurrency](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) impacts the status-quo.

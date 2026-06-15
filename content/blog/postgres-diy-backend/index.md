@@ -38,6 +38,8 @@ tags:
     - postgresql
     - state-management
     - community
+categories:
+    - community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

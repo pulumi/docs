@@ -13,6 +13,8 @@ tags:
     - claude-code
     - codex
     - ai-agents
+categories:
+    - agentic-infrastructure
 schema_type: auto
 
 social:

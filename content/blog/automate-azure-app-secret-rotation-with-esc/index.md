@@ -8,8 +8,10 @@ feature_image: feature.png
 authors:
     - sean-yeh
 tags:
-    - pulumi-esc
+    - esc
     - azure
+categories:
+    - security-governance
 schema_type: auto
 social:
     twitter: |

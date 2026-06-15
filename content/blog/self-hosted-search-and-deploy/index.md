@@ -9,6 +9,8 @@ authors:
     - meagan-cojocar
 tags:
     - releases
+categories:
+    - product-launches
 ---
 
 We are excited to introduce two powerful new features for our Self-Hosted Pulumi Cloud offering: Resource Search and Pulumi Deployments. These two additions are the most significant features added to Pulumi Cloud in the last year and we are thrilled to bring them to our self-hosted customers. Resource Search and Pulumi Deployments both improve the way you can manage and deploy your cloud infrastructure, providing greater visibility, control, and automation.

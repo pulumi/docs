@@ -14,6 +14,8 @@ tags:
     - typescript
     - ai
     - claude-code
+categories:
+    - agentic-infrastructure
 
 social:
     twitter: "I let Claude Code run unsupervised with Pulumi using the Ralph Wiggum technique. Came back to a complete serverless URL shortener SaaS on AWS. Here's what happened."

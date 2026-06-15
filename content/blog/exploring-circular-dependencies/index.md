@@ -11,6 +11,8 @@ authors:
 tags:
   - features
   - hackathon
+categories:
+  - engineering
 ---
 
 {{% notes type="info" %}}

@@ -34,6 +34,8 @@ authors:
 tags:
     - pulumi-cloud
     - features
+categories:
+    - product-launches
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,

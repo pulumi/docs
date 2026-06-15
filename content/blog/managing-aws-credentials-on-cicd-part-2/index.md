@@ -11,6 +11,8 @@ tags:
     - security
     - secrets
     - aws-credentials-cicd
+categories:
+    - security-governance
 series: aws-credentials-cicd
 ---
 

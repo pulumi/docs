@@ -10,6 +10,8 @@ authors:
 tags:
     - python
     - serverless
+categories:
+    - tutorials
 social:
     twitter: >
             🚀 Transform your low-traffic Flask APIs into cost-efficient serverless apps! Package your entire REST API as a container, deploy to AWS Lambda, and pay $0 when idle. Simple local development, standard Flask patterns, and automatic scaling - all with minimal serverless expertise needed. 

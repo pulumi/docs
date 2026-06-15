@@ -11,6 +11,8 @@ tags:
     - esc
     - policy-as-code
     - features
+categories:
+    - security-governance
 schema_type: auto
 
 social:

@@ -13,6 +13,8 @@ tags:
     - pulumi-cloud
     - releases
     - features
+categories:
+    - product-launches
 social:
     twitter: "Pulumi's GitLab integration just got a major upgrade! Enhanced merge request comments, first-class VCS support, and organizational templates make managing cloud infrastructure easier than ever."
     linkedin: "We're excited to announce significant improvements to Pulumi's GitLab integration. From enhanced merge request comments to organizational templates, these updates make managing cloud infrastructure with Pulumi and GitLab more seamless than ever before."

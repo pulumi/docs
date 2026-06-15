@@ -1,7 +1,8 @@
 ---
 title: "Running AWS IAM Access Analyzer at Deployment Time"
 authors: ["joe-duffy"]
-tags: ["AWS", "Security", "policy-as-code"]
+tags: [aws, security, policy-as-code]
+categories: [security-governance]
 meta_desc: "In this post, we will look at running AWS IAM Access Analyzer at deployment time."
 date: "2019-12-03"
 

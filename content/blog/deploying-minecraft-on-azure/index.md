@@ -6,8 +6,10 @@ meta_image: minecraft-pulumi.png
 authors:
     - sophia-parafina
 tags:
-    - Azure
+    - azure
     - virtual-machines
+categories:
+    - tutorials
 ---
 
 This article demonstrates how to deploy and provision a virtual machine in Azure using the Pulumi [Azure-Native provider](/blog/full-coverage-of-azure-resources-with-azure-native/). While there are numerous examples of using the Azure console, the Azure CLI, or ARM templates to deploy and provision virtual machines, we'll use Python to implement a repeatable deployment.

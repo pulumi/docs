@@ -5,7 +5,8 @@ meta_desc: Apply feature flagging to infrastructure with Pulumi. Control rollout
 meta_image: Feature_Flags.png
 authors: 
   - "elisabeth-lichtie"
-tags: ["launchdarkly", "feature flags", "esc", "aws"]
+tags: [launchdarkly, feature-flags, esc, aws]
+categories: [best-practices]
 schema_type: auto
 social:
     linkedin:

@@ -2,7 +2,8 @@
 title: "Building the Best Infrastructure as Code with $41M Series C Funding"
 allow_long_title: True
 authors: ["joe-duffy"]
-tags: ["pulumi-news"]
+tags: [announcements]
+categories: [product-launches]
 meta_desc: "Today we announced a $41M Series C to build the best infrastructure as code and tackle more of our customers' toughest cloud challenges."
 date: "2023-10-03"
 meta_image: "series-c.png"

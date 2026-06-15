@@ -13,6 +13,8 @@ tags:
 - lambda
 - iam
 - serverless
+categories:
+- security-governance
 ---
 
 Event-driven, serverless functions have become a defining feature of many modern cloud architectures. With recent

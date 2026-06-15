@@ -13,6 +13,8 @@ tags:
     - typescript
     - python
     - architecture
+categories:
+    - engineering
 ---
 
 Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibility and ease of use. This is due to its unique approach of using general purpose programming languages to describe system configuration. It accomplishes this through a small but brilliant implementation detail that bridges the worlds of declarative and standard programming using asynchronous semantics.

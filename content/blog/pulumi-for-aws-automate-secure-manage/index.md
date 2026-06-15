@@ -10,6 +10,8 @@ authors:
 tags:
   - aws
   - infrastructure-as-code
+categories:
+  - community
 ---
 
 {{< notes type="info" >}}

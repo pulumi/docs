@@ -33,6 +33,8 @@ authors:
 tags:
     - azure
     - security
+categories:
+    - security-governance
 
 ---
 

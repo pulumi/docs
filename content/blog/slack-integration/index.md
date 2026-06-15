@@ -11,6 +11,8 @@ authors:
 tags:
     - features
     - pulumi-cloud
+categories:
+    - product-launches
 ---
 
 Today, we are excited to introduce a set of improvements to [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks) designed to deliver your deployment notifications to where you already spend your time, enabling faster response times to critical issues. Getting your deployment notifications into Slack is now easier than ever on Pulumi Cloud with our new Slack integration. We are also announcing two new improvements to our webhooks feature: Pulumi Deployments events and fine-grained event filtering.

@@ -10,6 +10,8 @@ tags:
 - features
 - pulumi-deployments
 - caching
+categories:
+- product-launches
 ---
 
 We’re excited to announce dependency caching for [Pulumi Deployments](/docs/pulumi-cloud/deployments/)! This new feature is designed to significantly speed up deployment times by reducing dependency installation time by up to 80%, ensuring faster and more efficient workflows for every Pulumi user.

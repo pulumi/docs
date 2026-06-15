@@ -15,6 +15,9 @@ tags:
     - esc
     - secrets
     - platform-engineering
+categories:
+    - product-launches
+    - security-governance
 
 ---
 

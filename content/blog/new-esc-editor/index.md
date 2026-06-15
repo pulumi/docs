@@ -11,6 +11,9 @@ authors:
 tags:
     - esc
     - features
+categories:
+    - product-launches
+    - security-governance
 schema_type: auto
 social:
     twitter:

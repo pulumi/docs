@@ -14,6 +14,8 @@ tags:
 - kubernetes
 - tailscale
 - python
+categories:
+- agentic-infrastructure
 social:
   twitter: |
     Cloud AI APIs keep agents easy until tradeoffs show up: data leaves your network, offline work breaks, and every token has a meter.

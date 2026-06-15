@@ -8,6 +8,8 @@ authors:
     - marlowe-fenne
 tags:
     - platform-engineering
+categories:
+    - best-practices
 social:
     twitter:
     linkedin:

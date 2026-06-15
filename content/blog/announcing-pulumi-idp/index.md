@@ -9,11 +9,12 @@ authors:
     - idp-team
     
 tags:
-    - idp
-    - platform teams
-    - internal developer platform
+    - internal-developer-platform
+    - platform-teams
     - features
     - releases
+categories:
+    - product-launches
 
 social:
     twitter: "TODO"

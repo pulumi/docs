@@ -10,6 +10,8 @@ authors:
 tags:
     - community
     - migration
+categories:
+    - community
 ---
 
 Pulumi community member [Erik Näslund](https://blog.ekik.org/) shares his thoughts on how to migrate from Terraform to Pulumi. Read on to learn all the details of his experience!

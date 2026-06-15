@@ -9,6 +9,9 @@ authors:
     - robert-harris
 tags:
     - esc
+categories:
+    - product-launches
+    - security-governance
 ---
 
 Many teams live with the fear that a production environment **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.

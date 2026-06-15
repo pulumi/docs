@@ -10,6 +10,8 @@ tags:
     - databricks
     - data-engineering
     - infrastructure-as-code
+categories:
+    - tutorials
 social:
     twitter: |
         Databricks workspaces drift fast when clusters, jobs, and permissions are configured by hand.

@@ -39,7 +39,8 @@ tags:
     - llm
     - google-cloud
     - gke
-    - k8s
+categories:
+    - agentic-infrastructure
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

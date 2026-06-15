@@ -17,6 +17,9 @@ tags:
   - security
   - features
   - pulumi-cloud
+categories:
+  - product-launches
+  - security-governance
 ---
 
 Since the launch of [Pulumi IAM](/blog/pulumi-cloud-iam-launch/) with [custom roles](/docs/administration/access-identity/rbac/roles/) and scoped [access tokens](/docs/administration/access-identity/access-tokens/), organizations have been using fine-grained permissions to secure their automation and CI/CD pipelines. As teams scale to hundreds or thousands of stacks, environments, and accounts, the next challenge is applying those permissions efficiently.

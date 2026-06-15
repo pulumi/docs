@@ -8,8 +8,10 @@ authors:
     - sophia-parafina
 tags:
     - azure
-    - static websites
+    - static-websites
     - azure-top-5
+categories:
+    - tutorials
 series: azure-top-5
 ---
 

@@ -8,8 +8,10 @@ meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - pulumi-news
+    - announcements
     - april-fools
+categories:
+    - agentic-infrastructure
 ---
 
 {{< notes type="info" >}}

@@ -12,6 +12,8 @@ tags:
     - pulumi-neo
     - aws
     - neo-things
+categories:
+    - agentic-infrastructure
 
 social:
     twitter: "10 concrete workflows you can use Pulumi Neo, our new infrastructure agent, for: auto-fix AWS config violations, upgrade Lambda runtimes across accounts, generate infrastructure templates, respond to CVEs. Neo generates PRs, not production changes."

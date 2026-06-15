@@ -10,6 +10,8 @@ authors:
 tags:
     - aws
     - providers
+categories:
+    - product-launches
 
 ---
 

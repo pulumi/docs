@@ -7,10 +7,12 @@ meta_image: meta.png
 authors:
     - insights-team
 tags:
-    - iac
+    - infrastructure-as-code
     - import
     - insights
     - features
+categories:
+    - product-launches
 
 social:
     twitter:

@@ -11,6 +11,8 @@ tags:
     - serverless
     - lambda
     - efs
+categories:
+    - tutorials
 ---
 
 {{% notes type="warning" %}}

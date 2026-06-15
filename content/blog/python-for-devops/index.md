@@ -10,7 +10,9 @@ authors:
 tags:
     - python
     - devops
-    - iac
+    - infrastructure-as-code
+categories:
+    - best-practices
 social:
     twitter: >
         🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions, discover 15 essential tools including Django for custom dashboards, Airflow for workflow automation, and Pulumi for infrastructure as code. Transform your DevOps game with the perfect mix of rapid solutions and scalable architecture.

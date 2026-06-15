@@ -15,8 +15,9 @@ authors:
 tags:
 - kubernetes
 - best-practices
-- k8s
 - devops
+categories:
+- best-practices
 social:
   twitter: |
     Learn best practices for Kubernetes that I wish I had known earlier. Avoid common pitfalls and save time, money, and headaches.

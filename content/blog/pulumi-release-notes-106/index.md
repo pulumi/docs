@@ -10,6 +10,8 @@ authors:
 tags:
     - features
     - release-notes
+categories:
+    - product-launches
 ---
 
 {{< notes type="info" >}}

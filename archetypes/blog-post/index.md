@@ -35,7 +35,16 @@ authors:
     - joe-duffy
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
+# Tags are the topical axis (clouds, languages, products). Reuse an existing
+# tag from data/blog_tags.yaml and avoid near-duplicates.
 tags:
+    - change-me
+
+# Exactly one category is required (a second is allowed only in rare cross-kind
+# cases). Categories are the "kind of post" axis and are a CLOSED, lint-enforced
+# set: agentic-infrastructure, product-launches, engineering, tutorials,
+# best-practices, security-governance, community. See data/blog_categories.yaml.
+categories:
     - change-me
 
 # Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none

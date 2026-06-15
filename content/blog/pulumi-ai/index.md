@@ -10,6 +10,8 @@ tags:
     - features
     - ai
     - llm
+categories:
+    - agentic-infrastructure
 ---
 
 {{< notes type="info" >}}

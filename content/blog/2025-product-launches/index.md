@@ -11,6 +11,8 @@ tags:
     - features
     - product-launches
     - pulumi-cloud
+categories:
+    - product-launches
 ---
 
 The era of AI-accelerated development has arrived, creating both unprecedented opportunity and unprecedented challenge. Developers ship code faster than ever, but platform teams struggle to keep pace. The velocity gap threatens to become a bottleneck.

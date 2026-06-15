@@ -11,6 +11,8 @@ tags:
     - releases
     - secrets
     - performance
+categories:
+    - product-launches
 social:
     twitter: "Faster. IaC. Secrets.
     

@@ -11,6 +11,8 @@ authors:
 tags:
     - features
     - release-notes
+categories:
+    - product-launches
 ---
 
 We've had a busy last few months at Pulumi. From shipping a brand new product offering, Pulumi ESC, to adding several major features in Pulumi Cloud and updates to various Pulumi providers - there is lots to catch up on. In addition to reading these release notes, check out the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md) to stay up to date with CLI enhancements after each CLI release. For Pulumi Cloud updates, follow the [new features blogs](/blog/tag/features) to stay updated on the latest feature releases. Let's walk through the major updates across Pulumi from the last few months!

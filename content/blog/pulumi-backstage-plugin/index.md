@@ -11,6 +11,8 @@ tags:
 - backstage
 - developer-portals
 - features
+categories:
+- product-launches
 ---
 
 [Backstage](https://backstage.io/) is an open source framework for building developer portals, created at Spotify and donated to the CNCF. It allows engineers to create their own development portal internally. Backstage makes it easy for teams to create a unified portal for their infrastructure tooling, software templates, services, documentation and [plugins](https://backstage.spotify.com/plugins/) for external tools.

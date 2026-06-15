@@ -14,6 +14,8 @@ tags:
     - meltano
     - api
     - data
+categories:
+    - product-launches
 
 social:
   twitter: "Your Pulumi Data in your Warehouse: See how the tap-pulumi-cloud extractor helps you export your Pulumi data into your own Data Warehouse."

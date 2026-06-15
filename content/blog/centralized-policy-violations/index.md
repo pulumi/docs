@@ -10,6 +10,9 @@ authors:
 tags:
     - releases
     - policy
+categories:
+    - product-launches
+    - security-governance
 ---
 
 We’re excited to introduce a new centralized Policy Violations destination in Pulumi Cloud to simplify policy management and compliance. This powerful addition provides a comprehensive view of all policy violations across your organization, helping you maintain visibility and control over your infrastructure.

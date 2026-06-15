@@ -7,7 +7,9 @@ authors:
     - luke-hoban
 tags:
     - yaml
-    - pulumi-releases
+    - releases
+categories:
+    - product-launches
 ---
 
 {{% notes type="warning" %}}

@@ -6,6 +6,7 @@ meta_desc: "Implementing Netlify CMS without Netlify, deploying the Netlify CMS 
 meta_image: cms.png
 authors: ["zephyr-zhou"]
 tags: ["aws", "github-actions", "netlify", "s3", "cloudfront", "certificate-manager", "route53"]
+categories: [tutorials]
 ---
 
 [Netlify CMS](https://docs.netlify.com/) is an open-source content management system that provides UI for editing content and adopting Git workflow. Initially, we want to take advantage of it to increase efficiency to edit Pulumi's website. However, during development, we found few examples are deploying the CMS application on AWS instead of Netlify, its home platform. Therefore, in this blog post, we would like to share how to organize Netlify's file structure and use Pulumi to store the content on S3 buckets, connect to CloudFront, and configure certificate in Certificate Manager.

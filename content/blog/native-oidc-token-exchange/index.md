@@ -12,6 +12,8 @@ tags:
   - oidc
   - authentication
   - ci-cd
+categories:
+  - security-governance
 ---
 
 Managing credentials in CI/CD pipelines has always involved tradeoffs. Long-lived access tokens are convenient but

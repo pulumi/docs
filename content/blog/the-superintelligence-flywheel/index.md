@@ -8,8 +8,10 @@ authors:
     - joe-duffy
 tags:
     - superintelligence
-    - neo
-    - iac
+    - pulumi-neo
+    - infrastructure-as-code
+categories:
+    - agentic-infrastructure
 ---
 
 We've been in the infrastructure business for nearly a decade, and we've never been more excited about, or in awe of, the scale we are seeing as the industry pursues superintelligence. We are now hitting a tipping point that requires entirely different approaches to managing and scaling infrastructure in this new era.

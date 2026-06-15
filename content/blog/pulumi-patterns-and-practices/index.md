@@ -11,11 +11,13 @@ authors:
 tags:
     - platform-engineering
     - patterns-and-practices-platform
-    - developer-experience-devex
+    - developer-experience
     - devsecops
     - architecture
     - enterprise
     - devops
+categories:
+    - best-practices
 ---
 
 {{< notes type="info" >}}

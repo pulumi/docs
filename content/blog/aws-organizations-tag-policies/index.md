@@ -8,12 +8,14 @@ allow_long_title: true
 meta_image: "meta.png"
 tags:
   - aws
-  - pulumi-service
+  - pulumi-cloud
   - policy-as-code
   - crossguard
   - features
   - governance
   - compliance
+categories:
+  - security-governance
 ---
 
 Tags are the foundation of cloud governance, enabling cost allocation, ownership tracking, compliance reporting, and automation across your AWS infrastructure. Yet missing or inconsistent tags remain one of the most common governance challenges. Manual tag enforcement is error-prone, and discovering missing tags after deployment means your cost reports and compliance audits are already operating with incomplete data.

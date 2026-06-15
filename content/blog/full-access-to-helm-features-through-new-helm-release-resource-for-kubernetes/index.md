@@ -6,7 +6,8 @@ updated: 2025-03-26
 meta_desc: "Get native Helm 3 support in Pulumi with the new Helm Release resource. Use lifecycle hooks, subcharts, and manage releases directly from your IaC code."
 meta_image: "k8s-helm-release.png"
 authors: ["vivek-lakshmanan"]
-tags: ["Kubernetes", "helm"]
+tags: [kubernetes, helm]
+categories: [product-launches]
 ---
 
 Kubernetes has been a significant focus of Pulumi since its very beginnings. Pulumi added support for installing [Helm charts](https://helm.sh/) way back in 2018 and it has seen significant adoption by users since. However, Pulumi's current Chart integration lacks support for some increasingly common advanced features in Helm charts, e.g.:

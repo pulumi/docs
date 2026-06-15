@@ -9,6 +9,8 @@ authors:
 tags:
     - guest-post
     - auth0
+categories:
+    - community
 ---
 
 *Guest author Lead Devops Engineer Fernando Carletti, writes about using the Pulumi Auth0 provider to manage resources at Credijusto.*

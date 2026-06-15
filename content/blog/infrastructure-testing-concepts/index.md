@@ -6,9 +6,11 @@ meta_image: testing_concepts.png
 authors:
     - sophia-parafina
 tags:
-    - cloud engineering
-    - unit testing
-    - integration testing
+    - cloud-engineering
+    - unit-testing
+    - integration-testing
+categories:
+    - best-practices
 
 ---
 

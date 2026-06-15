@@ -10,6 +10,8 @@ authors:
 tags:
     - features
     - pulumi-cli
+categories:
+    - product-launches
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

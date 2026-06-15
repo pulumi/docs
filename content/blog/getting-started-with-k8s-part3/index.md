@@ -6,8 +6,10 @@ meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:
-    - Kubernetes
+    - kubernetes
     - kubernetes-getting-started
+categories:
+    - tutorials
 series: kubernetes-getting-started
 ---
 

@@ -13,6 +13,8 @@ tags:
     - cloudformation
     - terraform
     - hcl
+categories:
+    - best-practices
 ---
 
 Our users are always telling us (particularly the ones who come to Pulumi from other IaC tools) that being able to use general-purpose languages to manage their infrastructure was a game changer for them.

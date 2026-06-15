@@ -13,6 +13,8 @@ tags:
     - typescript
     - nodejs
     - ide
+categories:
+    - product-launches
 ---
 
 For many of us, life is suspended between presses of the [`F5`][f5-key] key. Our IDE is the only place where everything is organized and makes sense. And while we know that the likelihood of a code hole-in-one is very rare (that magical moment where you run your build and everything *just works* the first time), we always hope that *this* time, this will be the run where you see the output that lets you know you've gotten it right. And in between? Debugging.

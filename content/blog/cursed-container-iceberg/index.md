@@ -8,12 +8,12 @@ meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
-    - k8s, containers, cloud-native, docker
-    - k8s
     - kubernetes
     - containers
     - cloud-native
     - docker
+categories:
+    - best-practices
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 

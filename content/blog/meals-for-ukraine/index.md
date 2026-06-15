@@ -13,6 +13,8 @@ authors:
 tags:
     - community
     - pulumi-events
+categories:
+    - community
 ---
 Why not do good while learning about cloud native tech? [Buoyant](https://buoyant.io/), [Civo](https://www.civo.com/), [Cockroach Labs](https://www.cockroachlabs.com/), [Fairwinds](https://www.fairwinds.com/), [Pulumi](https://www.pulumi.com/), and [Jetstack](https://www.jetstack.io/) have teamed up to donate $2 for each virtual booth visitor to [World Central Kitchen](https://wck.org/) (WCK), a non-profit committed to providing meals in response to humanitarian crises.
 

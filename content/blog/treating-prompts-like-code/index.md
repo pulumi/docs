@@ -11,6 +11,8 @@ tags:
     - ai
     - automation
     - developer-experience
+categories:
+    - agentic-infrastructure
 schema_type: auto
 ---
 

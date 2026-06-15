@@ -8,6 +8,8 @@ authors:
 tags:
     - architecture-as-code
     - microservices
+categories:
+    - best-practices
 series: architecture-as-code
 ---
 

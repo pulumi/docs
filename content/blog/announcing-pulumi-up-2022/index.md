@@ -7,6 +7,8 @@ authors:
     - george-huang
 tags:
     - pulumi-events
+categories:
+    - community
 block_external_search_index: true
 redirect_to: /pulumi-up/
 ---

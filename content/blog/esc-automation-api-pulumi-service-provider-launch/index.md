@@ -11,8 +11,11 @@ authors:
 tags:
   - esc
   - secrets
-  - config management
+  - configuration-management
   - features
+categories:
+  - product-launches
+  - security-governance
 ---
 
 We're excited to announce two powerful new capabilities for [Pulumi Environments Secrets and Configurations](/product/esc) (ESC) that supercharge how you manage and control your infrastructure and application secrets and configurations:

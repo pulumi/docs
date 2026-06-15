@@ -14,6 +14,8 @@ tags:
     - claude
     - mcp
     - devops
+categories:
+    - agentic-infrastructure
 social:
     twitter: |
         Most teams' Claude Code results plateau in real codebases because the harness around the agent is empty, not because the model is weak.

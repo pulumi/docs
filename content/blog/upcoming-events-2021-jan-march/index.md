@@ -7,8 +7,10 @@ authors:
     - sophia-parafina
 tags:
     - pulumi-events
-    - Kubernetes
+    - kubernetes
     - serverless
+categories:
+    - community
 ---
 
 It's a new year and it's time to level up your cloud engineering skills. Pulumi is there to get you started on your cloud engineering journey with workshops and technical sessions.

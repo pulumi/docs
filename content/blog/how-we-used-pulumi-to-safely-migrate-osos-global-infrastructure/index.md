@@ -14,6 +14,9 @@ tags:
     - aws
     - refactoring
     - infrastructure-as-code
+categories:
+    - community
+    - best-practices
 
 social:
     twitter: |

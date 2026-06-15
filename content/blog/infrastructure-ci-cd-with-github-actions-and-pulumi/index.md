@@ -8,7 +8,9 @@ authors:
     - praneet-loke
     - isaac-harris
 tags:
-    - "github actions"
+    - github-actions
+categories:
+    - tutorials
 
 ---
 

@@ -8,9 +8,11 @@ authors:
     - sophia-parafina
 tags:
     - kubernetes
-    - Azure
+    - azure
     - helm
     - azure-top-5
+categories:
+    - tutorials
 series: azure-top-5
 ---
 

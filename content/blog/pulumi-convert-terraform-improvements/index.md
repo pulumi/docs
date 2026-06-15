@@ -10,6 +10,8 @@ authors:
 tags:
   - terraform
   - features
+categories:
+  - product-launches
 ---
 Big news for infrastructure teams looking to migrate – we've significantly improved Pulumi's Terraform conversion capabilities, making modernization smoother and reducing the amount of manual work usually required.
 

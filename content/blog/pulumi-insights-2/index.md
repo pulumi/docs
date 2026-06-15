@@ -9,6 +9,8 @@ authors:
     - craig-symonds
 tags:
     - insights
+categories:
+    - product-launches
 ---
 
 {{< notes type="info" >}}

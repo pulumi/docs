@@ -9,6 +9,8 @@ authors:
 tags:
   - esc
   - secrets
+categories:
+  - security-governance
 ---
 
 {{% notes "info" %}}

@@ -10,6 +10,8 @@ authors:
     - meagan-cojocar
 tags:
     - releases
+categories:
+    - product-launches
 ---
 
 We are excited to announce the availability of Kubernetes-native support for Pulumi Deployments Customer-Managed Agents, further enhancing the flexibility and control over your infrastructure deployments. This new feature allows you to self-host deployment agents within your Kubernetes environment, bringing the same power and flexibility of Pulumi-hosted deployments to isolated environments.

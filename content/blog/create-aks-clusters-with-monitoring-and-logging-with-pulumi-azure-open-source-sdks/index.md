@@ -5,7 +5,8 @@ date: "2019-05-08"
 meta_desc: "Use the Pulumi-Azure open source package to create Azure Kubernetes Service clusters with AD service principals."
 meta_image: "hero.png"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes","Azure"]
+tags: [kubernetes, azure]
+categories: [tutorials]
 ---
 
 Pulumi-Azure open source package can be used to create Azure Kubernetes

@@ -7,7 +7,9 @@ authors:
     - mikhail-shilkov
 tags:
     - testing
-    - .NET
+    - dotnet
+categories:
+    - tutorials
 ---
 
 Because Pulumi uses general-purpose programming languages to provision cloud resources, you can take advantage of native tools and perform automated tests of your infrastructure. The full power of each language is available, including access to libraries and frameworks for testing.

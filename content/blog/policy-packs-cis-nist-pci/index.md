@@ -8,13 +8,15 @@ meta_desc: "Pulumi pre-built policy packs for CIS v8.1, NIST 800-53 Rev. 5, and 
 allow_long_title: true
 meta_image: "meta.png"
 tags:
-  - pulumi-service
+  - pulumi-cloud
   - policy-as-code
   - crossguard
   - features
   - compliance
   - governance
   - security
+categories:
+  - security-governance
 ---
 
 Achieving compliance with industry standards such as **CIS, NIST**, or **PCI DSS** is a foundational step for every organization. Yet for many teams, it's often a manual, months-long process that involves interpreting controls, authoring custom policies, and validating configurations across multiple clouds. These challenges often slow progress toward a known and secure cloud state.

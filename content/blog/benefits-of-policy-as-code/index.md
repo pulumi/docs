@@ -7,6 +7,8 @@ authors:
     - sophia-parafina
 tags:
     - policy-as-code
+categories:
+    - security-governance
 ---
 
 Writing infrastructure policy in a high-level programming language helps automate and enforce best practices. When policies are written with code, you can apply software development practices such as testing, automated deployment, and version control. Cloud providers typically offer a GUI to create policies,  but creating policies is not easily repeatable, nor can you version policies. Moreover, policies must be tested against a live system, which means using an existing system or configuring and deploying an ephemeral version.

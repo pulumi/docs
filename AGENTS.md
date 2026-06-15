@@ -97,6 +97,17 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## Blog categories and tags
+
+Blog posts carry two taxonomy axes (plus optional `series`):
+
+- **`categories`** — the *kind* of post. This is a **closed, lint-enforced** set defined in `data/blog_categories.yaml` (the single source of truth read by `scripts/lint/lint-markdown.js`). Every `content/blog/*/index.md` must declare **exactly one** category (a second only in rare cross-kind cases); `make lint` fails on a missing, empty, invalid, or >2 value. **Do not invent categories** — pick an id from the data file. To add/rename one, edit `data/blog_categories.yaml` in a PR and raise it in #blogs.
+- **`tags`** — the *topical* axis (clouds, languages, products, scenarios). Curated-but-open, **not** build-enforced. Reuse a tag from the canonical vocabulary in `data/blog_tags.yaml` and **avoid near-duplicates** (`kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Tags are lowercase and hyphen-delimited.
+
+See `BLOGGING.md` for the author-facing version of these rules.
+
+---
+
 ## Workflow Skills
 
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review/SKILL.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.

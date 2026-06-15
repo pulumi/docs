@@ -8,6 +8,8 @@ authors:
    - mikhail-shilkov
 tags:
    - azure
+categories:
+   - tutorials
 
 ---
 

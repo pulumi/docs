@@ -13,6 +13,8 @@ authors:
 tags:
     - security
     - pulumi-enterprise
+categories:
+    - security-governance
 
 ---
 

@@ -9,6 +9,9 @@ tags:
   - secrets
   - github
   - features
+categories:
+  - product-launches
+  - security-governance
 ---
 
 We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action). This Action lets you inject secrets and configuration securely into your GitHub Actions workflows as they are needed, rather than storing them as static, long-lived secrets.

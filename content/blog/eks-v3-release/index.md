@@ -9,7 +9,9 @@ authors:
 tags:
     - aws
     - eks
-    - release
+    - releases
+categories:
+    - product-launches
 ---
 
 The latest major release of the Pulumi EKS Provider is available now!

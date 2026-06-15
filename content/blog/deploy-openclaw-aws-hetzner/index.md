@@ -16,11 +16,14 @@ tags:
     - ai
     - hetzner-cloud
     - openclaw
-    - pulumi-esc
+    - esc
     - typescript
     - tailscale
     - security
     - update
+categories:
+    - tutorials
+    - security-governance
 social:
     twitter: |
         Everyone's buying Mac Minis to run OpenClaw (formerly Moltbot/Clawdbot). You don't need one. A Hetzner VM costs $7/month. One `pulumi up` and you're done. Plus Tailscale so your AI assistant isn't hanging out on Shodan. Here's how:

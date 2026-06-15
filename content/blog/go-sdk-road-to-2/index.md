@@ -2,6 +2,7 @@
 title: "Modern Cloud Infrastructure in Go - The Road to 2.0"
 authors: ["evan-boyle"]
 tags: ["go", "aws", google-cloud, "azure"]
+categories: [product-launches]
 date: "2020-02-27"
 meta_desc: "Pulumi + Go is a powerful combo for your cloud-native infrastructure."
 meta_image: "pulumigo.png"

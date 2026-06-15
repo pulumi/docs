@@ -4,6 +4,8 @@ date: 2016-12-16T10:43:07Z
 draft: true
 tags:
     - architecture
+categories:
+    - best-practices
 authors:
     - simen-a-w-olsen
 

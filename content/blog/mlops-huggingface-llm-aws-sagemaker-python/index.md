@@ -9,7 +9,7 @@ authors:
 tags:
     - ai
     - ml
-    - iac
+    - infrastructure-as-code
     - aws
     - llm
     - vllm
@@ -19,9 +19,11 @@ tags:
     - llama2
     - devops
     - python
-    - SageMaker
+    - sagemaker
     - huggingface
     - platform-engineering
+categories:
+    - agentic-infrastructure
 ---
 
 [Pulumi CLI]:/docs/install/

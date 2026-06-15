@@ -35,6 +35,8 @@ tags:
     - development-environment
     - monorepo
     - nx
+categories:
+    - tutorials
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

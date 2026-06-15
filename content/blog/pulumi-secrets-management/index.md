@@ -8,6 +8,9 @@ authors:
 tags:
     - community
     - secrets
+categories:
+    - security-governance
+    - community
 
 canonical_url: https://www.sanjaybhagia.com/2021/01/26/pulumi-secrets-management
 ---

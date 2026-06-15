@@ -16,6 +16,8 @@ tags:
     - azure
     - github
     - gitlab
+categories:
+    - product-launches
 social:
     twitter:
     linkedin:

@@ -6,8 +6,10 @@ meta_image: meta.png
 authors:
     - sophia-parafina
 tags:
-    - Kubernetes
+    - kubernetes
     - pulumi-events
+categories:
+    - community
 ---
 
 ![Pulumi Booth KubeCon2019](booth.jpg)

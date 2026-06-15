@@ -12,6 +12,8 @@ tags:
   - features
   - migration
   - infrastructure-as-code
+categories:
+  - product-launches
 social:
   twitter: |
     Pulumi now supports executing Terraform modules directly! No more complex conversions for module-heavy projects. Migrate from Terraform to Pulumi with ease.

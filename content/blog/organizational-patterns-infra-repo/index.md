@@ -25,6 +25,8 @@ authors:
 tags:
     - development-environment
     - organizational-patterns
+categories:
+    - best-practices
 series: organizational-patterns
 ---
 

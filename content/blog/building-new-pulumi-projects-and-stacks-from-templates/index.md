@@ -5,6 +5,7 @@ meta_desc: "This blog shows how to build Pulumi projects and stacks from templat
 meta_image: "meta.png"
 authors: ["marc-holmes"]
 tags: ["features"]
+categories: [product-launches]
 canonical_url: "https://www.pulumi.com/docs/pulumi-cloud/developer-platforms/new-project-wizard/"
 ---
 

@@ -8,6 +8,8 @@ authors:
 tags:
     - kubernetes
     - embrace-kubernetes
+categories:
+    - best-practices
 series: embrace-kubernetes
 ---
 

@@ -13,6 +13,8 @@ tags:
 - policy-as-code
 - backstage
 - platform-engineering
+categories:
+- product-launches
 ---
 
 At Pulumi, we work with organizations that range from a few platform team members to entire departments for managing infrastructure. Many organizations, like [Mercedes-Benz](https://www.pulumi.com/case-studies/mercedes-benz/), have built internal developer platforms on top of Pulumi to enable developers to self-serve infrastructure templates, and partners like [AWS Proton](https://www.pulumi.com/blog/aws-proton-pulumi/) and [Port](https://www.getport.io/blog/using-pulumi-with-an-internal-developer-portal) have built integrations with Pulumi to enable self-service scenarios. We are thrilled to have [announced yesterday](/blog/developer-portal-platform-teams) the launch of our new suite of tools to build internal developer portals with Pulumi, a result of working directly with our customers to understand their problems and how Pulumi can solve it.

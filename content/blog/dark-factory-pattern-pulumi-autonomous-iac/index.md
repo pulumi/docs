@@ -15,6 +15,8 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
+categories:
+    - agentic-infrastructure
 social:
     twitter: |
         Stripe ships over a thousand AI-authored PRs a week. The pattern behind it has a name: the dark factory.

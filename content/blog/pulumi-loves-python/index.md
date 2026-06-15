@@ -8,6 +8,8 @@ authors:
     - julien-poissonnier
 tags:
     - python
+categories:
+    - product-launches
 social:
     twitter:
     linkedin:

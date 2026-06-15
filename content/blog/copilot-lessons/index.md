@@ -9,9 +9,12 @@ authors:
     - simon-howe
     - adam-gordon-bell
 tags:
-    - Copilot
+    - copilot
     - ai
-    - iac
+    - infrastructure-as-code
+categories:
+    - agentic-infrastructure
+series: pulumi-copilot
 social:
     twitter: >
         Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations reveal missing features, prompt engineering isn’t always the answer, and balancing LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/

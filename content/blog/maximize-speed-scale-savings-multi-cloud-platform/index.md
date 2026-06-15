@@ -10,6 +10,8 @@ authors:
 tags:
     - cloud-native
     - cloud-engineering
+categories:
+    - best-practices
 ---
 Overcoming the cost and complexity of multi-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
 

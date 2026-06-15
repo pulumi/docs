@@ -11,6 +11,8 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
+categories:
+    - agentic-infrastructure
 
 social:
     twitter: |

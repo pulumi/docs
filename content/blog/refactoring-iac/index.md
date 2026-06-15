@@ -7,7 +7,9 @@ authors:
     - sophia-parafina
 tags:
     - refactoring
-    - cloud engineering
+    - cloud-engineering
+categories:
+    - best-practices
 ---
 
 The central principle of cloud engineering is adopting software engineering practices. Refactoring is a technique for making changes to code that improve maintainability, enhance performance, scalability, and security without changing its external behavior. In devops, refactoring often occurs with modern applications; however, we can apply those same techniques to cloud infrastructure with [infrastructure as code](/what-is/what-is-infrastructure-as-code/).

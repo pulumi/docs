@@ -9,8 +9,10 @@ authors:
     - mikhail-shilkov
 tags:
     - azure
-    - announcement
+    - announcements
     - platform-engineering
+categories:
+    - product-launches
 ---
 
 We are excited to announce the support for authoring [Azure Deployment Environments (ADE)](https://learn.microsoft.com/en-us/azure/deployment-environments/) environment definitions in Pulumi Infrastructure as Code (IaC) empowering developers to self-serve app infrastructure required to deploy and test cloud-based applications. With Pulumi support, you can now manage your Azure resources in these environments using the same familiar programming model and the full power of our IaC platform.

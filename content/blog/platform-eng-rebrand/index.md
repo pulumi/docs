@@ -10,6 +10,8 @@ authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
+categories:
+    - best-practices
 social:
     twitter: >
         Is platform engineering just DevOps rebranded, or a genuine evolution? Exploring title drift, hype cycles, and why platform teams might actually represent progress in how we build and operate software.

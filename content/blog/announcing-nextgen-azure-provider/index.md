@@ -7,6 +7,8 @@ authors:
    - mikhail-shilkov
 tags:
    - azure
+categories:
+   - product-launches
 ---
 
 {{% notes type="info" %}}

@@ -32,11 +32,13 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - developer-experience-devex
+    - developer-experience
     - devops
     - platform-engineering
     - community
     - pulumi-events
+categories:
+    - community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

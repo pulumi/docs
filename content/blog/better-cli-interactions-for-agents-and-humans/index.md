@@ -13,6 +13,9 @@ tags:
     - pulumi-cli
     - ai-agents
     - product-launches
+categories:
+    - agentic-infrastructure
+    - product-launches
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

@@ -10,13 +10,14 @@ authors:
 - engin-diri
 
 tags:
-
 - next-level-iac
 - automation-api
 - api-economy
 - cloudformation
 - terraform
 - hcl
+categories:
+- best-practices
 
 ---
 

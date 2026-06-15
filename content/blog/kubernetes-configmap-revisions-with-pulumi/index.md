@@ -7,6 +7,7 @@ meta_desc: "Learn how to implement ConfigMap revisions in Kubernetes using Pulum
 meta_image: meta.png
 authors: ["matan-baruch"]
 tags: ["kubernetes", "pulumi", "configmap", "argo-rollouts", "canary-deployment"]
+categories: [tutorials, community]
 ---
 
 ConfigMaps in Kubernetes don't have built-in revision support, which can create challenges when deploying applications with canary strategies.

@@ -39,6 +39,8 @@ tags:
     - platform-engineering
     - devops
     - mlops
+categories:
+    - best-practices
 
 # Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
 # Leave as 'auto' (or omit) for intelligent detection based on content type.

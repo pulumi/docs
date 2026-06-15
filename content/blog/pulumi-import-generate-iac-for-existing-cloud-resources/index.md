@@ -5,6 +5,7 @@ meta_desc: "Introducing the new pulumi import command that will automatically sc
 meta_image: cloud_engineering.png
 authors: ["paul-stack"]
 tags: ["features", "migration", "import"]
+categories: [product-launches]
 ---
 
 Most infrastructure projects require working with existing cloud resources, either by building on top of existing resources

@@ -12,6 +12,8 @@ tags:
     - ai
     - infrastructure-as-code
     - llm
+categories:
+    - agentic-infrastructure
 social:
     twitter: "We benchmarked AI agents generating Terraform HCL and Pulumi TypeScript across two models. HCL uses fewer tokens per resource, but Opus + Pulumi had a 41% lower total pipeline cost because it deployed clean on the first pass with zero repairs. #InfrastructureAsCode #AI #Pulumi"
     linkedin: |

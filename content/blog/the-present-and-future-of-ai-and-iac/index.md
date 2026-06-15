@@ -9,6 +9,8 @@ tags:
     - ai
     - llm
     - infrastructure-as-code
+categories:
+    - agentic-infrastructure
 ---
 
 {{< notes type="info" >}}

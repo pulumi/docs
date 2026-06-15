@@ -6,9 +6,11 @@ meta_image: kenshoo.png
 authors:
     - danny-zalkind
 tags:
-    - AWS
+    - aws
     - guest-post
     - migration
+categories:
+    - community
 ---
 
 > Danny Zalkind is the DevOps group manager for Skai, an award-winning intelligent marketing platform. He brings his 15 years of experience of managing tech teams to his current role where he's dedicated to allow Skai R&D to efficiently produce and serve software. You can find him on [Linkedin](https://www.linkedin.com/in/danny-zalkind-01602b56/).

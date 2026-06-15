@@ -31,6 +31,8 @@ authors:
 tags:
     - development-environment
     - organizational-patterns
+categories:
+    - best-practices
 series: organizational-patterns
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.

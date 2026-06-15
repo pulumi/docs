@@ -12,6 +12,9 @@ authors:
 tags:
     - releases
     - features
+categories:
+    - agentic-infrastructure
+series: pulumi-copilot
 social:
     twitter: "Pulumi Copilot is now available across Pulumi Documentation and pulumi.com, and comes equipped with a powerful new Documentation Skill! Learn more by reading our blog:"
 ---

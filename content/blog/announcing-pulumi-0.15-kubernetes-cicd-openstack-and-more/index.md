@@ -5,6 +5,7 @@ updated: "2025-04-16"
 meta_desc: "Pulumi can now deploy and manage Kubernetes resources using the same familiar programming model supported for AWS, Azure, and Google Cloud Platform."
 authors: ["luke-hoban"]
 tags: ["features", "continuous-delivery"]
+categories: [product-launches]
 ---
 
 > [!INFO]

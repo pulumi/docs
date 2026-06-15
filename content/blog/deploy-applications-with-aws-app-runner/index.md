@@ -7,8 +7,10 @@ meta_image: aws-app-runner.png
 authors:
     - lee-zen
 tags:
-    - AWS
-    - App Runner
+    - aws
+    - app-runner
+categories:
+    - tutorials
 
 ---
 

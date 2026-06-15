@@ -9,6 +9,8 @@ authors:
     - levi-blackstone
 tags:
     - kubernetes
+categories:
+    - tutorials
 ---
 
 Kubernetes resources often have more than one controller making changes to them. These controllers can include `kubectl`, the Kubernetes control plane, custom operators, or infrastructure as code (IaC) tools like Pulumi.

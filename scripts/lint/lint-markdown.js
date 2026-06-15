@@ -8,6 +8,21 @@ const markdownIt = require("markdown-it");
 const USE_NEW_FRONTMATTER_VALIDATION = true;
 
 /**
+ * Allowed blog post category ids, loaded once from the single source of truth
+ * at data/blog_categories.yaml. See that file's header for the rules.
+ */
+const BLOG_CATEGORIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_categories.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.categories || []).map(c => c.id);
+    } catch (e) {
+        console.warn(`Warning: could not load blog categories: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
  *
  *     ---
@@ -83,6 +98,40 @@ function checkMetaImage(image) {
     const extension = regex.exec(image)[1];
     if (extension !== "png") {
         return `Meta image, '${image}', must be a png file.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkBlogCategories validates the `categories:` front matter on blog posts
+ * against the closed set in data/blog_categories.yaml. It applies ONLY to
+ * individual blog posts (content/blog/<slug>/index.md), not section pages
+ * (_index.md), tag pages, or non-blog content.
+ *
+ * Rules: at least one category, every value in the allowed set, at most two.
+ *
+ * @param {string|string[]} categories The `categories` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkBlogCategories(categories, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost) {
+        return null;
+    }
+
+    const list = Array.isArray(categories) ? categories : categories ? [categories] : [];
+
+    if (list.length === 0) {
+        return "Blog post is missing a 'categories' value. Add exactly one category from data/blog_categories.yaml.";
+    }
+    if (list.length > 2) {
+        return `Blog post lists ${list.length} categories; at most two are allowed (prefer one). See data/blog_categories.yaml.`;
+    }
+    const invalid = list.filter(c => !BLOG_CATEGORIES.includes(c));
+    if (invalid.length > 0) {
+        return `Invalid blog category value(s): ${invalid.map(c => `'${c}'`).join(", ")}. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
     }
 
     return null;
@@ -166,6 +215,7 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    blogCategories: checkBlogCategories(obj.categories, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -280,6 +330,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaImage,
+                });
+            }
+            if (frontMatterErrors.blogCategories) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.blogCategories,
                 });
             }
         }

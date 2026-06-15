@@ -7,6 +7,8 @@ authors:
     - justin-vanpatten
 tags:
     - migration
+categories:
+    - product-launches
 ---
 
 Over the last 2 years, we've seen an increasing trend of cloud development teams migrating to Pulumi from Terraform. These teams often have experience with and meaningful investment in Terraform, but have also typically run into limits of expressivity, productivity, scalability, or reliability with their existing tools. One of the first questions we hear when they decide to move to Pulumi is "how will I migrate my existing Terraform projects over?".

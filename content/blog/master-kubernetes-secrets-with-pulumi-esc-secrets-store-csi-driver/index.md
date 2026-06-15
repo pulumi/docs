@@ -13,6 +13,8 @@ tags:
 - secrets
 - csi
 - esc
+categories:
+- security-governance
 
 social:
   twitter: |

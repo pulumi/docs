@@ -6,8 +6,10 @@ meta_image: anti-patterns.png
 authors:
     - sophia-parafina
 tags:
-    - Development Environment
-    - Cloud Engineering
+    - development-environment
+    - cloud-engineering
+categories:
+    - tutorials
 ---
 
 Starting can be daunting. Before you take your first step, there's a lot to consider, but you can prepare your development environment ahead of time to make your first steps in cloud engineering smooth and productive.  In this article, we'll cover how to set up your development environment to work across cloud providers, multiple languages, and different operating systems.

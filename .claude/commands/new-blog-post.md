@@ -41,7 +41,19 @@ When this command is invoked, you should:
 - **Title**: The blog post title (will be Title Case in frontmatter). If the user doesn't have a title yet, ask for a working title or topic to generate a slug and suggested meta description/tags. Be clear that the user can update the title later before publishing.
 - **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
-- **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
+- **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Tags are the topical axis (clouds, languages, products, scenarios). **Reuse existing tags from `data/blog_tags.yaml`** and avoid minting near-duplicates (e.g. use `kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Common tags: features, releases, pulumi-cloud, aws, azure, kubernetes, ai, platform-engineering, security.
+- **Category**: Exactly one category is **required** (a second is allowed only in rare cross-kind cases). Categories are a CLOSED, lint-enforced set defined in `data/blog_categories.yaml`. Ask using AskUserQuestion, seeding the options from the allowed list with a smart default inferred from the title/tags:
+  - Question: "What kind of post is this?"
+  - Header: "Category"
+  - Options (label / description):
+    1. `agentic-infrastructure` / AI agents, Neo, Copilot, AI + IaC, MLOps
+    2. `product-launches` / Releases, new features, announcements, recaps
+    3. `engineering` / How we built it, deep dives, performance, internals
+    4. `tutorials` / Step-by-step how-tos and getting-started guides
+    5. `best-practices` / Architecture, IaC, and platform-engineering patterns
+    6. `security-governance` / Secrets/ESC, policy-as-code, compliance, IAM
+    7. `community` / Customers, case studies, guest posts, events, culture
+  - Do NOT invent categories or accept values outside this list.
 - **Date**: Publication date. Ask using AskUserQuestion with these options:
   - Question: "When should this blog post be published?"
   - Header: "Publish Date"
@@ -126,6 +138,10 @@ authors:
 tags:
     - tag1
     - tag2
+# Exactly one category from the closed set in data/blog_categories.yaml (a
+# second only in rare cross-kind cases). Enforced by `make lint`.
+categories:
+    - category-id
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
@@ -159,6 +175,7 @@ Before finishing:
 - Verify index.md has valid YAML frontmatter
 - Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
+- Verify `categories` is present, contains exactly one value (two only in rare cross-kind cases), and that every value is a valid id from `data/blog_categories.yaml` — `make lint` will fail otherwise
 - If information was auto-populated, remind user to double-check author profile accuracy
 
 ### 5. Provide Next Steps

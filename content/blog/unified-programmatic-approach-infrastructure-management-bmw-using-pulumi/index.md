@@ -37,10 +37,12 @@ tags:
     - cloud-management
     - infrastructure-lifecycle-management
     - platform-engineering
-    - developer-experience-devex
+    - developer-experience
     - ansible
     - containers
     - pulumi-deployments
+categories:
+    - community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

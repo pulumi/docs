@@ -7,6 +7,8 @@ authors:
   - mikhail-shilkov
 tags:
   - azure
+categories:
+  - product-launches
 ---
 
 Last September, we [announced the beta release of Pulumi Azure NextGen](/blog/announcing-nextgen-azure-provider/): a new Microsoft Azure provider for Pulumi that combines same-day access to the entire [Azure API surface](https://docs.microsoft.com/en-us/rest/api/azure/) with the excellent Pulumi experience you know and love, including version-less resources, auto-naming, and auto-location.

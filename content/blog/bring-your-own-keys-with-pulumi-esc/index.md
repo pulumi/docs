@@ -9,6 +9,7 @@ authors:
     - pablo-terradillos
     - boris-schlosser
 tags: ["esc", "aws", "features", "secrets"]
+categories: [security-governance]
 ---
 
 Today we’re excited to launch support for Customer-Managed Keys (CMKs) in Pulumi ESC. This feature gives your organization full control over how your secrets and state are encrypted — empowering you to meet the most demanding compliance requirements like HIPAA, GDPR, and FedRAMP, all while maintaining the ease-of-use that Pulumi is known for.

@@ -14,6 +14,8 @@ authors:
 
 tags:
     - releases
+categories:
+    - product-launches
 
 ---
 

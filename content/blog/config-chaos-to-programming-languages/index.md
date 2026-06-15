@@ -13,6 +13,8 @@ tags:
     - consulting
     - configuration-management
     - programming-languages
+categories:
+    - community
 social:
     twitter: |
         From configuration chaos to programming languages: Transform your infrastructure with the right change management approach. Learn the 10% rule, viral adoption, and why tools like @pulumiCorp beat YAML for complex systems.

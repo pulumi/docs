@@ -14,6 +14,8 @@ tags:
     - aws
     - eks
     - iac-best-practices
+categories:
+    - best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-code-organization-and-stacks/

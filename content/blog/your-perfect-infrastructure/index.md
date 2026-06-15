@@ -25,9 +25,11 @@ tags:
     - best-practices
     - cloud-engineering
     - cloud-deployment
-    - developer-experience-devex
+    - developer-experience
     - people-ops
     - application-scalability
+categories:
+    - best-practices
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

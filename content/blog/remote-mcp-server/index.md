@@ -7,8 +7,10 @@ meta_image: meta.png
 authors:
     - artur-laksberg
 tags:
-    - MCP
+    - mcp
     - ai
+categories:
+    - agentic-infrastructure
 
 ---
 

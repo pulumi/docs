@@ -36,6 +36,8 @@ tags:
     - oidc
     - openid-connect
     - features
+categories:
+    - security-governance
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.

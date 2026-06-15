@@ -11,6 +11,8 @@ tags:
     - automation-api
     - go
     - iac-best-practices
+categories:
+    - best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-using-automation-api/

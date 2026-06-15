@@ -4,7 +4,8 @@ date: "2018-10-10"
 meta_desc: "Infrastructure as code using familiar languages instead of YAML or DSLs. See how with Pulumi, serverless programming becomes simpler."
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
-tags: ["Serverless","TypeScript"]
+tags: [serverless, typescript]
+categories: [best-practices]
 ---
 
 Pulumi's approach to infrastructure as code uses familiar languages instead

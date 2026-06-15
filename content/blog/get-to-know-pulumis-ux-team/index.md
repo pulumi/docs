@@ -12,6 +12,8 @@ authors:
 
 tags:
     - pulumi-culture
+categories:
+    - community
 
 ---
 

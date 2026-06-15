@@ -14,6 +14,8 @@ tags:
     - azure
     - features
     - releases
+categories:
+    - product-launches
 
 social:
     twitter: "Announcing Azure Native V3: We've reduced SDK size by 75% while maintaining the expanded resource coverage of other IaC tools. The best solution for Azure infrastructure just got even better."

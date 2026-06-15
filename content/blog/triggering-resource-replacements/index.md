@@ -7,8 +7,10 @@ authors:
     - tom-harding
 tags:
     - features
-    - iac
+    - infrastructure-as-code
     - releases
+categories:
+    - product-launches
 social:
     twitter: "New in Pulumi IaC: Use the replacementTrigger resource option to control when your infrastructure resources are replaced."
     linkedin: "Pulumi introduces a powerful new feature for fine-grained control over infrastructure deployment: the replacementTrigger resource option. Now you can override the replacement mechanism in the Pulumi engine to enable finer control over features like key cycling and versioning."

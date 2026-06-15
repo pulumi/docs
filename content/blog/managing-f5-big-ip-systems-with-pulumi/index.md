@@ -4,6 +4,7 @@ date: "2019-02-07"
 meta_desc: "In this post, we look at what's possible the F5 BIG-IP provider for Pulumi, as well as the power and the flexibility that Pulumi brings."
 authors: ["cameron-stokes"]
 tags: ["features", "cloud-native"]
+categories: [product-launches]
 ---
 
 The [Pulumi](/) ecosystem is continuously growing

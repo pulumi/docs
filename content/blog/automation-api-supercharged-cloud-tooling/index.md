@@ -7,6 +7,8 @@ authors:
     - sophia-parafina
 tags:
     - automation-api
+categories:
+    - best-practices
 ---
 
 "Why use a programming language to build and maintain infrastructure?" is a question we hear frequently. There are apparent advantages such as using a mature and well-known language across a team, enabling cloud engineers to use software development best practices, and an ecosystem of tools for building robust systems.

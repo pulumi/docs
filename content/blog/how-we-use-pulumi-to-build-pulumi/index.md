@@ -4,7 +4,8 @@ date: "2018-06-26"
 meta_desc: "In this post, we discuss how we use Pulumi ourselves to build, deploy and manage the Pulumi platform."
 meta_image: "image-4.png"
 authors: ["luke-hoban"]
-tags: ["Serverless","AWS","containers"]
+tags: [serverless, aws, containers]
+categories: [engineering]
 ---
 
 

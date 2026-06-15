@@ -35,9 +35,11 @@ authors:
 tags:
     - devsecops
     - platform-engineering
-    - devex
+    - developer-experience
     - devops
     - security
+categories:
+    - security-governance
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

@@ -8,8 +8,10 @@ authors:
     - tom-harding
 tags:
     - features
-    - iac
+    - infrastructure-as-code
     - releases
+categories:
+    - product-launches
 social:
     twitter: "New in Pulumi IaC: the `onError` hook gives you full control over deployment failures"
     linkedin: "Pulumi introduces a new type of resource hook: the `onError` hook, letting you control the retry behavior of resources that fail to create."

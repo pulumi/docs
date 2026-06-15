@@ -8,6 +8,8 @@ authors:
 tags:
     - security
     - secrets
+categories:
+    - security-governance
 
 ---
 

@@ -24,6 +24,8 @@ tags:
 - infrastructure-as-code
 - cloud-management
 - hcl
+categories:
+- best-practices
 ---
 
 The Java Language Architect at Oracle, Brian Goetz, author of Java Concurrency in Practice, has commented how declarative

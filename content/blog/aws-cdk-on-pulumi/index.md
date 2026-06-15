@@ -7,6 +7,8 @@ authors:
     - luke-hoban
 tags:
     - aws-cdk
+categories:
+    - product-launches
 ---
 
 {{% notes type="warning" %}}

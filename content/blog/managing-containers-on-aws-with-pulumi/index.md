@@ -6,11 +6,13 @@ meta_image: meta.png
 authors:
     - sophia-parafina
 tags:
-    - AWS
+    - aws
     - containers
     - eks
     - ecs
     - lambda
+categories:
+    - tutorials
 ---
 
 {{% notes type="warning" %}}

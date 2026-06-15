@@ -10,6 +10,8 @@ tags:
     - packages
     - typescript
     - multi-cloud
+categories:
+    - best-practices
 ---
 
 In this article we'll show you how to use Pulumi Components and the Pulumi Automation API to make golden path

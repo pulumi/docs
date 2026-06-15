@@ -8,12 +8,14 @@ meta_desc: "Continuous policy evaluation for IaC stacks using their last success
 allow_long_title: true
 meta_image: "meta.png"
 tags:
-  - pulumi-service
+  - pulumi-cloud
   - policy-as-code
   - crossguard
   - audit-policies
   - compliance
   - governance
+categories:
+  - security-governance
 ---
 
 **Audit Policy Scans for Pulumi Stacks** is part of the next generation of Pulumi Policies. This capability uses policies to run compliance checks against the last successful deployment state of your stacks, providing continuous compliance monitoring without impacting your existing CI/CD workflows.

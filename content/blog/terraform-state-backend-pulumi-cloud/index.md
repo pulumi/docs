@@ -13,7 +13,9 @@ tags:
     - features
     - terraform
     - pulumi-cloud
-    - iac
+    - infrastructure-as-code
+categories:
+    - product-launches
 
 social:
     twitter: "Exciting launch: Pulumi Cloud can now serve as a Terraform state backend! Migrate your state in minutes — keep using the Terraform CLI while gaining encrypted state, RBAC, audit policies, and unified resource visibility across your entire infrastructure estate."

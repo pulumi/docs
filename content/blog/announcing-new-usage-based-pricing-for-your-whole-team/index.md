@@ -8,6 +8,8 @@ authors:
 tags:
    - features
    - ai
+categories:
+   - product-launches
 ---
 > [!INFO]
 > This post is out-of-date. For the latest pricing and editions, please visit the [Pulumi Pricing page](/pricing/).

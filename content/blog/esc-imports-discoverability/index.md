@@ -11,9 +11,12 @@ authors:
 tags:
   - esc
   - secrets
-  - config management
+  - configuration-management
   - features
   - releases
+categories:
+  - product-launches
+  - security-governance
 ---
 
 Managing secrets and configuration across multiple environments and stacks can easily become complex, leading to duplicated values, inconsistencies, and security risks. [Pulumi ESC](/product/esc) solves this with composable environments via [imports](/docs/esc/environments/imports/), allowing you to define configuration once and reuse it organization-wide.  Now, with the new capabilities to discover environment imports, you gain unprecedented visibility and control, simplifying the management of even the most complex infrastructure and applications.

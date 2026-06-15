@@ -14,6 +14,8 @@ tags:
     - pulumi-cloud
     - features
     - releases
+categories:
+    - product-launches
 social:
     twitter: |
         Now GA: Up to 20x Faster Pulumi Operations for Everyone

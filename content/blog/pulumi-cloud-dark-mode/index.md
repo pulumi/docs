@@ -15,8 +15,10 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-service
+    - pulumi-cloud
     - user-experience
+categories:
+    - product-launches
 
 ---
 [Pulumi Cloud](/product/pulumi-cloud/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.

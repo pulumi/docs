@@ -7,8 +7,10 @@ meta_image: meta.png
 authors:
     - thomas-gummerer
 tags:
-    - announcement
-    - CLI
+    - announcements
+    - cli
+categories:
+    - product-launches
 ---
 
 Today we're announcing the [`pulumi state move`](/docs/iac/cli/commands/pulumi_state_move/) command, which can be used to move resources that are managed by Pulumi between different stacks and/or projects. With the `pulumi state move` command, you can refactor your Pulumi Infrastructure as Code without any disruption to your deployed cloud infrastructure, enabling you to evolve and scale with confidence.

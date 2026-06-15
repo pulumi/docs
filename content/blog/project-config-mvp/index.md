@@ -9,7 +9,9 @@ authors:
     - zaid-ajaj
 tags:
     - features
-    - config
+    - configuration
+categories:
+    - product-launches
 ---
 
 > [!INFO]

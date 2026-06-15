@@ -5,7 +5,8 @@ date: "2019-05-06"
 meta_desc: "This post walks through the process of developing Pulumi programs to leverage Azure Platform services."
 meta_image: "app-insights.png"
 authors: ["mikhail-shilkov"]
-tags: ["Azure"]
+tags: [azure]
+categories: [tutorials]
 ---
 
 *Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a

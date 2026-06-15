@@ -11,6 +11,8 @@ tags:
     - pulumi-neo
     - ai
     - features
+categories:
+    - agentic-infrastructure
 schema_type: auto
 
 social:

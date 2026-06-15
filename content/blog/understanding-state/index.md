@@ -10,6 +10,8 @@ authors:
     - laura-santamaria
 tags:
     - state
+categories:
+    - best-practices
 ---
 
 Let's talk about state, shall we? State is the collective properties of the

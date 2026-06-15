@@ -16,6 +16,8 @@ tags:
     - snowflake
     - pulumi
     - releases
+categories:
+    - product-launches
 ---
 
 Snowflake support is here! Pulumi's new Snowflake Provider gives you the ability to easily set up cloud storage and manage your connections to Snowflake, right alongside the rest of your code.

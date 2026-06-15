@@ -4,7 +4,8 @@ date: "2019-06-12"
 meta_desc: "In this blog, we'll show snippets of the JavaScript code that embraces the power of Pulumi to program AWS service APIs to create the Mapbox solution."
 meta_image: "aws-architecture-iot.png"
 authors: ["chris-toomey"]
-tags: ["JavaScript","Serverless","AWS","guest-post"]
+tags: [javascript, serverless, aws, guest-post]
+categories: [community]
 ---
 
 ## **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**

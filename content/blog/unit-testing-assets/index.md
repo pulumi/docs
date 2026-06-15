@@ -7,7 +7,9 @@ meta_image: asset_testing.png
 authors:
     - lee-zen
 tags:
-    - Testing
+    - testing
+categories:
+    - tutorials
 ---
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.

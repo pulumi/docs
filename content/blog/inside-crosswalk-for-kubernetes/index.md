@@ -12,6 +12,8 @@ tags:
  - azure
  - aws
  - google-cloud
+categories:
+ - best-practices
 canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 

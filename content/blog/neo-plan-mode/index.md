@@ -8,9 +8,11 @@ feature_image: feature.png
 authors:
     - neo-team
 tags:
-    - neo
+    - pulumi-neo
     - ai
     - features
+categories:
+    - agentic-infrastructure
 schema_type: auto
 
 social:

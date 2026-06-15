@@ -7,6 +7,8 @@ authors:
     - lee-briggs
 tags:
     - community
+categories:
+    - community
 ---
 
 Creating a place for the Pulumi community to gather, ask questions, get help in real-time, and share successes has been an important part of the explosive growth we've seen in both users and customers. The Pulumi community slack has grown to over 7000 members and well over 200,000 messages.

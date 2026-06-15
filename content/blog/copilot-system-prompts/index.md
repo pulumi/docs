@@ -11,6 +11,9 @@ authors:
 tags:
     - features
     - releases
+categories:
+    - agentic-infrastructure
+series: pulumi-copilot
 ---
 
 {{< notes type="info" >}}

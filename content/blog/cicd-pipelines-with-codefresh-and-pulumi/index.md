@@ -9,7 +9,9 @@ authors:
 tags:
     - continuous-delivery
     - codefresh
-    - Kubernetes
+    - kubernetes
+categories:
+    - community
 
 ---
 

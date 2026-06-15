@@ -11,6 +11,8 @@ tags:
     - pulumi-cloud
     - features
     - api
+categories:
+    - product-launches
 social:
     twitter: |
         If you called a Pulumi Cloud REST API endpoint and got back a field the docs never mentioned, that was real drift. The reference was hand-maintained and the API kept moving.

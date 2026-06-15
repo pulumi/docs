@@ -12,6 +12,8 @@ tags:
 - puluminaries
 - community
 - program
+categories:
+- community
 
 social:
   twitter: |

@@ -3,6 +3,7 @@ title: "Pulumi Meetup: APIs, Custom Resources and GitHub Webhooks"
 h1: "Pulumi Meetup Recap: APIs, Custom Resources and GitHub Webhooks"
 authors: ["aydrian-howard"]
 tags: ["pulumi-events"]
+categories: [community]
 date: "2019-07-16"
 meta_desc: "Pulumi's July meetup featured talks about how programming languages help in building the best infrastructure code and a bot that enforced pull request policies."
 meta_image: "meta.png"

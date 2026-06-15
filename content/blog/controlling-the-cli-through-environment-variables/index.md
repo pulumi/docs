@@ -7,9 +7,11 @@ authors:
     - tom-harding
 tags:
     - features
-    - iac
-    - release
+    - infrastructure-as-code
+    - releases
     - cli
+categories:
+    - product-launches
 
 social:
     twitter: |

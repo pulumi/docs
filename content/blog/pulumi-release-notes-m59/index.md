@@ -8,7 +8,9 @@ authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+categories:
+    - product-launches
 ---
 
 Another great iteration has just wrapped up, so it's time for another edition of the Pulumi release notes! We've been busy smashing bugs across our products (over 100!), but we've also got several new updates across Pulumi providers, the CLI, and the Pulumi Service:

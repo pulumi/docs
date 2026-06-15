@@ -9,7 +9,7 @@ authors:
     - mitch-gerdisch
     - josh-kodroff
 tags:
-    - idp
+    - internal-developer-platform
     - drift-detection
     - day-2-operations
     - infrastructure-as-code
@@ -19,6 +19,8 @@ tags:
     - devops
     - remediation
     - idp-best-practices
+categories:
+    - best-practices
 
 social:
     twitter: |

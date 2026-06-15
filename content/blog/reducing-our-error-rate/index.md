@@ -7,6 +7,8 @@ authors:
     - evan-boyle
 tags:
     - cloud-engineering
+categories:
+    - engineering
 ---
 
 

@@ -8,6 +8,8 @@ tags:
     - features
     - ai
     - insights
+categories:
+    - agentic-infrastructure
 ---
 
 Earlier this year we introduced [Pulumi Insights](/blog/pulumi-insights/), a collection of features that bring intelligence to cloud infrastructure using Pulumi.  Two key components of that launch were [Pulumi AI](/blog/pulumi-ai/), a generative AI assistant purpose-built to create cloud infrastructure using natural language, and [Pulumi Resource Search](/blog/resource-search/), multi-cloud search and analytics across every cloud resource and environment in your organization.

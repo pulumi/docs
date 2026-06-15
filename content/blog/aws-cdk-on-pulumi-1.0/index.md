@@ -11,6 +11,8 @@ authors:
     - anton-tayanovskyy
 tags:
     - aws-cdk
+categories:
+    - product-launches
 ---
 
 At Pulumi, we're committed to delivering the widest range of cloud infrastructure building blocks for use in your cloud engineering projects.

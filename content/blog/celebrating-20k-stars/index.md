@@ -9,8 +9,10 @@ meta_image: meta.png
 authors:
     - aaron-kao
 tags:
-    - pulumi-news
-    - opensource
+    - announcements
+    - open-source
+categories:
+    - community
 ---
 
 Today, we're excited to announce that the [Pulumi open source project](https://github.com/pulumi/pulumi) has crossed the incredible milestone of 20,000 stars on GitHub. 🎉 This is a huge achievement, and it wouldn't have been possible without y'all - our incredible global community of developers.

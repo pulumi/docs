@@ -11,6 +11,8 @@ tags:
   - aws
   - kubernetes
   - eks
+categories:
+  - tutorials
 ---
 
 Provisioning, managing, and monitoring a Kubernetes cluster is

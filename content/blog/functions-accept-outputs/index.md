@@ -8,6 +8,8 @@ authors:
     - anton-tayanovskyy
 tags:
     - features
+categories:
+    - product-launches
 ---
 
 Pulumi 3.17.1 makes it easier to compose function calls and resources.

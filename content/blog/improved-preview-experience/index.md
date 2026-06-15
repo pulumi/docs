@@ -8,6 +8,8 @@ authors:
     - paul-stack
 tags:
     - features
+categories:
+    - product-launches
 ---
 
 Today we are announcing a minor but significant improvement to the Pulumi [preview](/docs/iac/cli/commands/pulumi_preview/)

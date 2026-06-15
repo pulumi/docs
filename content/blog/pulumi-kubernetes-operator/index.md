@@ -2,7 +2,8 @@
 date: "2020-08-12"
 title: "Introducing the Pulumi Kubernetes Operator"
 authors: ["mike-metral"]
-tags: ["Kubernetes", "Continuous-Delivery", "operators"]
+tags: [kubernetes, continuous-delivery, operators]
+categories: [product-launches]
 meta_desc: "Introducing the Pulumi Kubernetes Operator: Deploy infrastructure in Pulumi Stacks"
 meta_image: operator.png
 ---
