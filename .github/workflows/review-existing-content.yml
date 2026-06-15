@@ -1,25 +1,28 @@
-name: "Scheduled jobs: Review existing content"
+name: "Scheduled jobs: Review existing content (dispatcher)"
 
 # Daily (workdays) automated review of EXISTING docs pages — the
 # counterpart to the PR-triggered docs review, for content that nobody is
-# currently editing. The selection script picks the day's articles
-# (strategic tier x traffic x review age, plus one reserved stale slot),
-# the review-existing-content skill reviews each via the docs-review claim
-# pipeline and opens one ready PR per article, and this workflow then
-# force-dispatches claude-code-review.yml over each PR (bot-authored PRs
-# are auto-skipped by that pipeline, so the review must be requested
-# explicitly). Humans merge; nothing here is auto-merged.
+# currently editing. This workflow is the DISPATCHER: the selection script
+# picks the day's articles (strategic tier x traffic x review age, plus one
+# reserved stale slot), and this workflow then fans out one
+# content-review-article.yml run per selected article. Each of those worker
+# runs reviews exactly one article, opens one ready PR, and force-dispatches
+# claude-code-review.yml over it. Humans merge; nothing here is auto-merged.
 #
 # The whole job is inert until the CONTENT_REVIEW_ENABLED repo variable is
 # 'true' — scheduled workflows only run from the default branch, so this
 # can merge ahead of being switched on. workflow_dispatch always runs
 # (that's the testing path; see the dry_run / count / paths inputs).
+#
+# CRON IS DISABLED for now: the dispatcher is MANUAL-ONLY during rollout.
+# Re-enable the schedule below when the per-article worker has proven out.
 
 on:
-  schedule:
-    # Weekdays at 2:00PM UTC (one hour before check-links, so the two
-    # bot-PR producers don't contend).
-    - cron: '0 14 * * 1-5'
+  # Re-enable when ready (see note above):
+  # schedule:
+  #   # Weekdays at 2:00PM UTC (one hour before check-links, so the two
+  #   # bot-PR producers don't contend).
+  #   - cron: '0 14 * * 1-5'
   workflow_dispatch:
     inputs:
       count:
@@ -41,7 +44,7 @@ permissions:
   pull-requests: write
   issues: write
   id-token: write # Required for ESC OIDC auth + AWS OIDC role
-  actions: write # Required to dispatch claude-code-review.yml over the PRs
+  actions: write # Required to dispatch content-review-article.yml per article
 
 jobs:
   review:
@@ -127,84 +130,44 @@ jobs:
           echo "--- queue ---"
           cat .content-review-queue.json
 
-      # On dry runs and quiet/halted days everything below is skipped, so
-      # those runs cost no API spend.
-      - name: Run Claude Code
+      # Fan out one content-review-article.yml run per selected article. Each
+      # worker run reviews its single article, opens one ready PR, and
+      # force-dispatches the docs review over it. On dry runs and quiet/halted
+      # days this is skipped, so those runs cost no API spend.
+      - name: Dispatch per-article workers
         if: steps.select.outputs.has_articles == 'true' && github.event.inputs.dry_run != 'true'
-        id: claude
-        uses: anthropics/claude-code-action@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Bot token so the PRs/pushes trigger downstream workflows.
-          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          prompt: |
-            The daily existing-content review selected today's articles in
-            `.content-review-queue.json` at the repo root.
-
-            Follow `.claude/commands/review-existing-content/SKILL.md`
-            exactly. In short, for each article in the queue, sequentially:
-
-            1. Branch `content-review/<slug>` off master.
-            2. Run the docs-review pre-computation pipeline over the whole
-               file via a synthetic diff (the skill lists the exact
-               commands).
-            3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
-               goes in the PR description's "Findings not applied" section.
-            4. Run the screenshot/UI verification pass (flag-only).
-            5. Run `make lint` and `make build`; resolve anything they
-               surface or drop the offending change.
-            6. Run the rendered content pass over the built page — both
-               the HTML view and the customer-facing markdown view
-               (`public/<url>/index.html` and `index.md`) — per the skill.
-            7. Write the article's ledger file under
-               `scripts/content-review/ledger/`.
-            8. Open a **ready** (non-draft) PR per article with the
-               auditable description the skill describes. Clean articles
-               share one ledger-only PR instead.
-            9. Write `.content-review-results.json` (the skill defines the
-               shape) — the workflow's review-dispatch and Slack steps
-               consume it.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
-
-      # Slop defense: bot-authored PRs are auto-skipped by the docs-review
-      # pipeline (claude-code-review.yml sets skip_reason=bot-author), so
-      # each content PR gets its review via explicit force dispatch — the
-      # same pattern claude-new.yml uses for #new-review. Deterministic
-      # post-step rather than a skill instruction so it can't be forgotten.
-      - name: Dispatch docs review over each PR
-        if: steps.select.outputs.has_articles == 'true' && hashFiles('.content-review-results.json') != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq -c '.prs[]?' .content-review-results.json | while read -r pr; do
-            NUMBER=$(echo "$pr" | jq -r '.pr_number')
-            HEAD_SHA=$(echo "$pr" | jq -r '.head_sha')
-            echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
-            gh workflow run claude-code-review.yml \
+          jq -c '.articles[]' .content-review-queue.json | while read -r a; do
+            P=$(echo "$a" | jq -r '.path')
+            L=$(echo "$a" | jq -r '.lane')
+            echo "dispatching worker for $P (lane=$L)"
+            gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
-              -f pr_number="$NUMBER" \
-              -f head_sha="$HEAD_SHA" \
-              -f force=true \
-              || echo "::warning::review dispatch failed for PR #$NUMBER"
+              -f path="$P" \
+              -f lane="$L" \
+              || echo "::warning::worker dispatch failed for $P"
           done
 
-      # Post the day's summary (PR links, clean pages, or the halted
-      # warning) to #docs-ops. Gated on the results file so a failed run
-      # stays silent rather than posting an empty message.
+      # Post the dispatch summary (paths dispatched, or the halted warning) to
+      # #docs-ops. Each worker posts its own PR link when it finishes; this is
+      # the run-level "what got dispatched today" note. Gated on having
+      # articles or a halt so a quiet/failed run stays silent.
       - name: Post summary to Slack
         if: >-
           github.event.inputs.dry_run != 'true' &&
-          (hashFiles('.content-review-results.json') != '' || steps.select.outputs.halted != '')
+          (steps.select.outputs.has_articles == 'true' || steps.select.outputs.halted != '')
         env:
           SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
           HALTED: ${{ steps.select.outputs.halted }}
+          COUNT: ${{ steps.select.outputs.count }}
         run: |
-          if [ -f .content-review-results.json ]; then
-            TEXT=$(jq -r '.summary' .content-review-results.json)
-            LINKS=$(jq -r '[.prs[]?.pr, (.ledger_only_pr // empty)] | join("\n")' .content-review-results.json)
-            [ -n "$LINKS" ] && TEXT="$TEXT"$'\n'"$LINKS"
+          if [ -n "$HALTED" ]; then
+            TEXT=":warning: Existing-content review halted: ${HALTED} (no articles dispatched)"
           else
-            TEXT=":warning: Existing-content review halted: ${HALTED} (no articles processed)"
+            PATHS=$(jq -r '.articles[].path' .content-review-queue.json)
+            TEXT="Existing-content review dispatched ${COUNT} article review(s):"$'\n'"$PATHS"
           fi
           curl -s -X POST https://slack.com/api/chat.postMessage \
             -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \

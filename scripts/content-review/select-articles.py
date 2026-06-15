@@ -407,6 +407,7 @@ def main() -> int:
     p.add_argument("--ledger-dir", default=str(DEFAULT_LEDGER_DIR))
     p.add_argument("--repo-root", default=str(REPO_ROOT), help=argparse.SUPPRESS)
     p.add_argument("--paths", help="Comma-separated content paths; bypasses scoring (testing)")
+    p.add_argument("--lane", help="Override lane for --paths entries (default manual)")
     p.add_argument("--no-gh", action="store_true", help="Skip gh API calls (testing)")
     p.add_argument("--today", help="Override today's date YYYY-MM-DD (testing)")
     p.add_argument("--dry-run", action="store_true", help="Print queue, write nothing")
@@ -465,7 +466,10 @@ def main() -> int:
         }
 
     # --paths: explicit override, no scoring, no guardrails (testing path).
+    # The per-article worker passes --lane to carry the dispatcher's lane through
+    # (e.g. stale, so retirement stays in scope); without it entries are manual.
     if args.paths:
+        lane = args.lane or "manual"
         for raw in args.paths.split(","):
             path = raw.strip()
             if not path:
@@ -473,7 +477,7 @@ def main() -> int:
             if path not in known:
                 print(f"select-articles: --paths entry not found: {path}", file=sys.stderr)
                 return 1
-            queue["articles"].append(article(path, "manual", None))
+            queue["articles"].append(article(path, lane, None))
         return finish(queue, args)
 
     open_branches = open_review_branches(use_gh)

@@ -181,6 +181,11 @@ def main() -> int:
         check([a["path"] for a in q["articles"]] == ["content/docs/misc/two.md"], "explicit path honored")
         check(q["articles"][0]["lane"] == "manual", "manual lane tagged")
 
+        print("--lane overrides the lane for --paths entries")
+        q = run_select(repo, tiers, ledger, "--paths", "content/docs/misc/two.md", "--lane", "stale")
+        check([a["path"] for a in q["articles"]] == ["content/docs/misc/two.md"], "single explicit path")
+        check(q["articles"][0]["lane"] == "stale", "lane override honored")
+
         print("count=1 yields just the stale pick")
         q = run_select(repo, tiers, ledger, "--count", "1")
         check(len(q["articles"]) == 1 and q["articles"][0]["lane"] == "stale",
