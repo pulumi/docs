@@ -50,7 +50,7 @@ for instructions on how to generate a private key (in PEM format) and download t
 
 Private keys do not expire and need to be manually revoked. You must keep private keys for GitHub Apps secure.
 Store the private key as a secret by using the `fn::secret` function.
-See "[Managing Secrets](/docs/esc/operations/managing-secrets/#storing-secrets)".
+See "[`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets)".
 
 ```yaml
 appId: 123456

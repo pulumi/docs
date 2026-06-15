@@ -16,92 +16,24 @@ aliases:
 
 This guide shows you how to store and retrieve secrets in Pulumi ESC environments. Secrets are encrypted values that ESC stores securely and hides from view by default.
 
-## Prerequisites
-
-- [ESC CLI](/docs/install/esc/) installed
-- [Pulumi account](https://app.pulumi.com/signup) created
-- An ESC environment (create one with `esc env init <org>/<project>/<env-name>`)
+New to ESC? Start with [Get Started](/docs/esc/get-started/) for a five-minute walkthrough, then return here for the full secret-management workflow.
 
 ## Understanding ESC values
 
-ESC environments store configuration as key-value pairs in YAML format. All values are defined under a top-level `values` key:
+ESC environments store configuration as key-value pairs in YAML under a top-level `values` key. Any value wrapped in `fn::secret` is encrypted at rest and masked in output:
 
 ```yaml
 values:
-  apiEndpoint: https://api.example.com
-  region: us-west-2
+  region: us-west-2 # plaintext configuration
   apiKey:
-    fn::secret: my-secret-value
+    fn::secret: my-secret-value # encrypted secret
 ```
 
-Values can be:
-
-- **Plain text** - Regular configuration values (region, endpoint URLs)
-- **Secrets** - Encrypted values marked with `fn::secret`
-- **Structured data** - Objects and arrays
-- **Dynamic values** - Generated from providers (covered in other guides)
+For the full breakdown of static, secret, and dynamic value types, see [Environments](/docs/esc/concepts/environments/).
 
 ## Storing secrets
 
-### Via the CLI
-
-Add a secret to your environment using the `--secret` flag:
-
-```bash
-esc env set <org>/<project>/<env-name> apiKey my-secret-value --secret
-```
-
-For example:
-
-```bash
-esc env set my-org/my-project/dev apiKey demo-secret-123 --secret
-```
-
-This encrypts the value before storing it.
-
-### Via the Pulumi Cloud console
-
-1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
-1. Select **Environments** in the left navigation
-1. Select your environment
-1. In the editor, add your secret using the `fn::secret` function:
-
-```yaml
-values:
-  apiKey:
-    fn::secret: my-secret-value
-```
-
-1. Select **Save**
-
-The console will encrypt the secret and replace the plaintext value with a ciphertext reference:
-
-```yaml
-values:
-  apiKey:
-    fn::secret:
-      ciphertext: ZXNjeAA...
-```
-
-### Multi-line secrets
-
-For multi-line values such as private keys, TLS certificates, or SSH keys, use a YAML block scalar with `fn::secret`:
-
-```yaml
-values:
-  tlsCert:
-    fn::secret: |
-      -----BEGIN CERTIFICATE-----
-      MIIDXTCCAkWgAwIBAgIJAMqBbsYRO...
-      -----END CERTIFICATE-----
-  privateKey:
-    fn::secret: |
-      -----BEGIN RSA PRIVATE KEY-----
-      MIIEowIBAAKCAQEA0Z3VS5JJcds3...
-      -----END RSA PRIVATE KEY-----
-```
-
-The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `esc env set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
+To store a secret, add an [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/) value to your environment — using the CLI (`esc env set --secret`), the Pulumi Cloud console, or by editing the environment YAML directly. See [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets) for the full reference and examples, including multi-line secrets such as PEM-formatted keys and certificates.
 
 ## Retrieving secrets
 
@@ -175,37 +107,9 @@ Each environment can have different RBAC permissions, ensuring production secret
 
 ## Best practices
 
-### Use secrets for sensitive data
-
-Mark these values as secrets:
-
-- API keys and tokens
-- Database passwords
-- Private keys and certificates
-- OAuth client secrets
-
-### Use plain text for non-sensitive data
-
-These can be plain text:
-
-- Region names
-- Public endpoints
-- Feature flags
-- Port numbers
-
 ### Rotate secrets regularly
 
-ESC supports two approaches to secret rotation:
-
-**Manual update** — Replace a secret value by setting a new one:
-
-```bash
-esc env set my-org/my-project/prod apiKey new-secret-value --secret
-```
-
-ESC versions every change, so you can audit the history or roll back if needed.
-
-**Automated rotation** — For supported secret types (database passwords, AWS IAM keys, and others), ESC can [automatically rotate credentials on a schedule](/docs/esc/environments/rotation/) using `fn::rotate`. If the rotation target lives in a private network, a [rotation connector](/docs/esc/operations/rotation/) runs the rotation on Pulumi Cloud's behalf. This is the recommended approach over manual updates, as it eliminates manual steps and reduces exposure windows.
+You can replace a secret manually with `esc env set ... --secret` (ESC versions every change, so you can audit or roll back). For supported secret types, ESC can also [rotate credentials automatically on a schedule](/docs/esc/concepts/rotators/) — the recommended approach. See [Rotating secrets](/docs/esc/operations/rotation/) for operational guidance and [best practices](/docs/esc/operations/rotation/best-practices/).
 
 ### Control access with RBAC
 
