@@ -55,11 +55,17 @@ proposal — stale lane only, see below — use `content-review/retire-<slug>`
 instead.) If an open PR already exists for that branch name, skip the article
 entirely and note it in the results file: a previous run owns it.
 
-### 2. Pre-compute (deterministic floor)
+### 2. Pre-compute (deterministic floor) — the workflow runs this for you
 
-Generate a synthetic whole-file diff and run the docs-review pre-steps over
-it. Scripts live in `.claude/commands/docs-review/scripts/`; artifacts go in
-the repo root, exactly as the PR review workflow lays them out:
+The `content-review-article` workflow generates the synthetic whole-file diff
+and runs the docs-review pre-steps **before invoking you**, exactly as the PR
+review workflow does. The artifacts are already at the repo root when you
+start: `.fetched-urls.json`, `.candidate-claims.json`, `.verified-claims.json`,
+`.vale-findings.json`, `.frontmatter-validation.json`, and
+`.cross-sibling-discovery.json`. **Read them — do not regenerate them.**
+
+For reference (and for local runs outside CI), the exact pipeline the workflow
+executes — scripts live in `.claude/commands/docs-review/scripts/`:
 
 ```bash
 git diff --no-index /dev/null <path> > .synthetic.patch || true
@@ -95,9 +101,9 @@ python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
     --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
 ```
 
-If any pre-step fails, continue with the artifacts you
-have and say so in the PR description; never fabricate artifact contents.
-(Consult flag names with `--help` if a script rejects an invocation —
+If any artifact is missing or carries an `errors` field, continue with the
+artifacts you have and say so in the PR description; never fabricate artifact
+contents. (Consult flag names with `--help` if running a script by hand —
 do not guess alternate flags.)
 
 ### 3. Triage and fix — HIGH-CONFIDENCE ONLY
