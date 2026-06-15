@@ -1,0 +1,20 @@
+# Reference-image manifest. Consumed by review-existing-content's
+# screenshot-verification pass and useful to /glow-up's image analysis.
+#
+# `captured` is the date the reference reflects the live product/brand —
+# refresh it (and the PNG) whenever the UI or branding changes. Automated
+# reviews flag any reference older than 180 days in their PR descriptions
+# until someone refreshes it; `owner` is who they should ping.
+images:
+  - file: pulumi-cloud-console-current.png
+    area: console-overview
+    description: Pulumi Cloud Console — current overall UI, including the left navigation.
+    captured: 2026-05-29
+    source_url: https://app.pulumi.com
+    owner: docs-team
+  - file: pulumi-logo-current.png
+    area: branding
+    description: Current Pulumi logo and color scheme.
+    captured: 2026-05-29
+    source_url: https://www.pulumi.com/brand/
+    owner: docs-team
