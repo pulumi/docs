@@ -109,15 +109,11 @@
   <h3 id="methods">Methods
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L66">View Source</a>
+    <a href="https://github.com/pulumi/esc-sdk/blob/master/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L21">View Source</a>
   </span>
   <a id="Pulumi_Esc_Sdk_EscAuth_GetDefaultAccessToken_" data-uid="Pulumi.Esc.Sdk.EscAuth.GetDefaultAccessToken*"></a>
   <h4 id="Pulumi_Esc_Sdk_EscAuth_GetDefaultAccessToken" data-uid="Pulumi.Esc.Sdk.EscAuth.GetDefaultAccessToken">GetDefaultAccessToken()</h4>
-  <div class="markdown level1 summary"><p>Gets the default access token by checking (in order):</p>
-<ol>
-<li>PULUMI_ACCESS_TOKEN environment variable</li>
-<li>Currently logged-in account in Pulumi CLI or ESC CLI</li>
-</ol>
+  <div class="markdown level1 summary"><p>Gets the default access token from the PULUMI_ACCESS_TOKEN environment variable.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -157,15 +153,12 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L105">View Source</a>
+    <a href="https://github.com/pulumi/esc-sdk/blob/master/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L38">View Source</a>
   </span>
   <a id="Pulumi_Esc_Sdk_EscAuth_GetDefaultBackendUrl_" data-uid="Pulumi.Esc.Sdk.EscAuth.GetDefaultBackendUrl*"></a>
   <h4 id="Pulumi_Esc_Sdk_EscAuth_GetDefaultBackendUrl" data-uid="Pulumi.Esc.Sdk.EscAuth.GetDefaultBackendUrl">GetDefaultBackendUrl()</h4>
-  <div class="markdown level1 summary"><p>Gets the default backend URL by checking (in order):</p>
-<ol>
-<li>PULUMI_BACKEND_URL environment variable</li>
-<li>Currently logged-in account URL from Pulumi CLI or ESC CLI</li>
-</ol>
+  <div class="markdown level1 summary"><p>Gets the default backend URL from the PULUMI_BACKEND_URL environment variable,
+defaulting to <a href="https://api.pulumi.com">https://api.pulumi.com</a> when it is not set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -189,7 +182,7 @@
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L124">View Source</a>
+    <a href="https://github.com/pulumi/esc-sdk/blob/master/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L54">View Source</a>
   </span>
   <a id="Pulumi_Esc_Sdk_EscAuth_GetEscApiUrl_" data-uid="Pulumi.Esc.Sdk.EscAuth.GetEscApiUrl*"></a>
   <h4 id="Pulumi_Esc_Sdk_EscAuth_GetEscApiUrl_System_String_" data-uid="Pulumi.Esc.Sdk.EscAuth.GetEscApiUrl(System.String)">GetEscApiUrl(string)</h4>
@@ -239,11 +232,11 @@
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 0.13.1</p>
+    <p class="sdk-version">Version 0.14.0</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/esc-sdk/blob/jkodroff/fix-esc-sdk-dotnet/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L53" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/esc-sdk/blob/master/sdk/csharp/Pulumi.Esc.Sdk/EscAuth.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
