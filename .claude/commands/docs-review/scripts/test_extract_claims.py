@@ -168,6 +168,48 @@ def _claims_containing(doc: dict, *needles: str) -> list[dict]:
     return [c for c in doc["claims"] if all(n in c["text"] for n in needles)]
 
 
+def test_synthetic_whole_file_diff() -> None:
+    """`git diff --no-index /dev/null <file>` (whole-file review mode).
+
+    The review-existing-content workflow feeds entire files through the
+    claim pipeline as new-file diffs. The parser must accept the
+    `--- /dev/null` old side, and claim line anchors must equal real
+    1-based file line numbers.
+    """
+    doc = run_extract_fixture("synthetic-whole-file.diff")
+    check(doc["stats"]["files_scanned"] == 1, "synthetic: new-file diff is scanned")
+    by_line = {c["line_range"]: c["type"] for c in doc["claims"]}
+    check(by_line.get("L5") == "numerical", f"synthetic: $0.20 claim anchored at real file line L5 (got {by_line})")
+    check(by_line.get("L6") == "url", "synthetic: URL claim anchored at real file line L6")
+
+
+def test_extract_urls_patch_file_mode() -> None:
+    """extract-urls-and-fetch.py --patch-file reads a diff without `gh`.
+
+    Uses a URL-free patch so the test exercises the new input path without
+    any network fetches.
+    """
+    script = HERE / "extract-urls-and-fetch.py"
+    patch = (
+        "diff --git a/content/docs/x/plain.md b/content/docs/x/plain.md\n"
+        "new file mode 100644\n"
+        "index 0000000..1111111\n"
+        "--- /dev/null\n"
+        "+++ b/content/docs/x/plain.md\n"
+        "@@ -0,0 +1,2 @@\n"
+        "+---\n"
+        "+title: No links here\n"
+    )
+    with tempfile.TemporaryDirectory() as td:
+        pf = Path(td) / "p.patch"
+        pf.write_text(patch)
+        out = Path(td) / "urls.json"
+        r = subprocess.run([sys.executable, str(script), "--patch-file", str(pf), "--out", str(out)],
+                           capture_output=True, text=True)
+        check(r.returncode == 0, f"extract-urls --patch-file exits 0 (stderr: {r.stderr.strip()[:120]})")
+        check(out.is_file() and json.loads(out.read_text()) == [], "extract-urls --patch-file: empty list for URL-free diff")
+
+
 def test_fixture_pr18771_strongdm_mechanics() -> None:
     print("test_fixture_pr18771_strongdm_mechanics (attribution paragraph: number cluster + third-party attribution)")
     d = run_extract_fixture("pr18771-dark-factory.diff")
@@ -340,6 +382,8 @@ def main() -> int:
         test_synthetic_categories,
         test_code_context_suppresses_prose,
         test_skip_lines,
+        test_synthetic_whole_file_diff,
+        test_extract_urls_patch_file_mode,
         test_fixture_pr18771_strongdm_mechanics,
         test_fixture_pr18743_price_and_model,
         test_fixture_pr18541_gcp_version_pin,

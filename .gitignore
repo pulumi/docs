@@ -104,6 +104,14 @@ _vendor/
 /.broken-links.json
 /.broken-links-pr.txt
 
+# Existing-content review state files (generated at runtime by the
+# review-existing-content workflow; the committed ledger lives in
+# scripts/content-review/ledger/).
+/.content-review-queue.json
+/.content-review-results.json
+/.traffic-snapshot
+/.synthetic.patch
+
 .doctrees/
 .buildinfo
 

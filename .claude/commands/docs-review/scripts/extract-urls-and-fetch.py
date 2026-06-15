@@ -16,6 +16,7 @@ records exactly which URLs the workflow fetched.
 
 Usage:
     extract-urls-and-fetch.py --pr <PR_NUMBER> --out <out.json>
+    extract-urls-and-fetch.py --patch-file <diff> --out <out.json>
 
 Caps:
     - 30 URLs per review (FETCH_CAP)
@@ -256,19 +257,29 @@ def fetch_one(url: str) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pr", required=True, help="PR number")
+    src = parser.add_mutually_exclusive_group(required=True)
+    src.add_argument("--pr", help="PR number (for `gh pr diff`)")
+    src.add_argument("--patch-file", help="Read the unified diff from a file instead of `gh`")
     parser.add_argument("--out", dest="outfile", required=True)
     args = parser.parse_args()
 
     out_path = Path(args.outfile)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    try:
-        patch = fetch_pr_patch(args.pr)
-    except subprocess.SubprocessError as e:
-        print(f"extract-urls-and-fetch: gh pr diff failed: {e}", file=sys.stderr)
-        out_path.write_text("[]")
-        return 0
+    if args.patch_file:
+        try:
+            patch = Path(args.patch_file).read_text(errors="replace")
+        except OSError as e:
+            print(f"extract-urls-and-fetch: cannot read patch file: {e}", file=sys.stderr)
+            out_path.write_text("[]")
+            return 0
+    else:
+        try:
+            patch = fetch_pr_patch(args.pr)
+        except subprocess.SubprocessError as e:
+            print(f"extract-urls-and-fetch: gh pr diff failed: {e}", file=sys.stderr)
+            out_path.write_text("[]")
+            return 0
 
     lines = added_lines_in_content(patch)
     urls = extract_urls(lines)
