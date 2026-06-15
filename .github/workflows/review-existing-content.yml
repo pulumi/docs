@@ -164,7 +164,7 @@ jobs:
             9. Write `.content-review-results.json` (the skill defines the
                shape) — the workflow's review-dispatch and Slack steps
                consume it.
-          claude_args: '--model claude-opus-4-7 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
+          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
 
       # Slop defense: bot-authored PRs are auto-skipped by the docs-review
       # pipeline (claude-code-review.yml sets skip_reason=bot-author), so
