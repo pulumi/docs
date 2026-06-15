@@ -1,7 +1,7 @@
 {
   "path": "content/docs/iac/concepts/assets-archives.md",
   "reviewed_at": "2026-06-15",
-  "pr": "",
+  "pr": "https://github.com/pulumi/docs/pull/19689",
   "lane": "priority",
   "clean": false,
   "fixes": 2,
