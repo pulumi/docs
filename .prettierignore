@@ -61,3 +61,17 @@ static/js
 # Link-checker workflow artifacts (gitignored, generated at runtime)
 /.broken-links.json
 /.broken-links-pr.txt
+
+# Content-review workflow artifacts (gitignored, generated at runtime)
+/.content-review-queue.json
+/.content-review-results.json
+/.fetched-urls.json
+/.candidate-claims.json
+/.candidate-claims-regex.json
+/.candidate-claims-llm-1.json
+/.candidate-claims-llm-2.json
+/.verified-claims.json
+/.vale-raw.json
+/.vale-findings.json
+/.frontmatter-validation.json
+/.cross-sibling-discovery.json

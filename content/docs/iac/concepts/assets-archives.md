@@ -182,7 +182,7 @@ There are three types of `Archive` objects:
 
 - `FileArchive`: The contents of the archive are read from either a folder on disk or a file on disk in one of the supported formats: `.tar`, `.tgz`, `.tar.gz`, `.zip` or `.jar`.
 - `RemoteArchive`: The contents of the asset are read from an `http`, `https` or `file` URI, which must produce an archive of one of the same supported types as `FileArchive`.
-- `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#asset) or [`Archive`](#archive) objects, one file or folder respectively per entry in the map.
+- `AssetArchive`:  The contents of the archive are read from a map of either [`Asset`](#assets) or [`Archive`](#archives) objects, one file or folder respectively per entry in the map.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
