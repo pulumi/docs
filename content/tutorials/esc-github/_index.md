@@ -143,7 +143,7 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Install and inject AWS credentials
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: '<your-organization>/<your-esc-env>'
 

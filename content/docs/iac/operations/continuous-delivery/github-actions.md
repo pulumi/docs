@@ -95,7 +95,7 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
           organization: acme
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Load the ESC environment
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: acme/website/ci
       - run: npm install

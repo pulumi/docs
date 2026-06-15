@@ -86,7 +86,7 @@ jobs:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Install and inject ESC environment variables
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: 'tinyco/someProject/myEnv'
       - name: Verify environment variables were injected
@@ -122,7 +122,7 @@ jobs:
     name: Export GitHub secrets to ESC
     steps:
       - name: Install Pulumi CLI
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
       - name: Authenticate with Pulumi Cloud
         uses: pulumi/auth-actions@v1
         with:
