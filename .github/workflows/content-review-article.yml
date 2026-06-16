@@ -214,7 +214,10 @@ jobs:
             but SKIP step 2 (Pre-compute) — the workflow already did it. For the
             article in the queue:
 
-            1. Branch `content-review/<slug>` off master.
+            1. Branch off master with the EXACT name `content-review/<slug>`
+               (the queue entry's `slug`), or `content-review/retire-<slug>`
+               for a stale-lane retirement. The workflow derives the PR from
+               this branch name, so it must match exactly.
             2. (Done by the workflow — read the artifacts above. If one is
                missing or carries an `errors` field, note it in the PR
                description and continue with what you have.)
@@ -226,58 +229,96 @@ jobs:
             6. Run the rendered content pass over the built page — both
                the HTML view and the customer-facing markdown view
                (`public/<url>/index.html` and `index.md`) — per the skill.
-            7. If you applied any fix, open a **ready** (non-draft) PR with
-               the auditable description the skill describes. A clean article
-               (zero fixes) opens no PR.
-            8. Write the page's ledger record to `.content-review-ledger.json`
-               (the skill defines the shape) — the workflow uploads it to the
-               S3 ledger.
-            9. Write `.content-review-results.json` (the skill defines the
-               shape) — the review-dispatch step consumes it.
+            7. If you applied any fix, open a **ready** (non-draft) PR. Build
+               its body from
+               `.claude/commands/review-existing-content/references/pr-body-template.md`
+               (fill every section) and pass it with `gh pr create --body-file`.
+               A clean article (zero fixes) opens no PR.
+            8. Write `.content-review-verdict.json` at the repo root — your ONLY
+               structured output. Shape:
+               `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
+               for clean/skipped>", "fixes": <int>, "skipped_findings": <int>,
+               "retirement": <bool>}`. The workflow derives the PR facts and
+               records the S3 ledger from this; do NOT write a ledger or results
+               file yourself.
           claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
+
+      # Lint re-gate: don't trust the model's self-report that `make lint`
+      # passed on the branch. For a fix verdict, check out the pushed branch and
+      # re-run lint. On failure: flip the PR back to draft, comment the output,
+      # and skip the docs-review dispatch (the `lint_ok` output gates it). The
+      # ledger still records `reviewed` — the draft PR stays for a human. Build
+      # is left to the PR's normal CI.
+      - name: Re-lint the fix branch
+        id: lint
+        if: hashFiles('.content-review-verdict.json') != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          echo "ok=true" >> "$GITHUB_OUTPUT"
+          VERDICT=$(jq -r '.verdict // empty' .content-review-verdict.json)
+          [ "$VERDICT" = "fixed" ] || { echo "verdict=$VERDICT; no branch to re-lint"; exit 0; }
+          RETIRE=$(jq -r 'if .retirement then "retire-" else "" end' .content-review-verdict.json)
+          SLUG=$(jq -r '.articles[0].slug' .content-review-queue.json)
+          BRANCH="content-review/${RETIRE}${SLUG}"
+          git fetch origin "$BRANCH" || { echo "::warning::branch $BRANCH not found"; exit 0; }
+          git checkout "$BRANCH"
+          if make lint > .lint.log 2>&1; then
+            echo "lint passed on $BRANCH"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::make lint failed on $BRANCH; flipping PR to draft"
+            gh pr ready "$BRANCH" --undo || true
+            {
+              echo "Automated review note: \`make lint\` failed on this branch, so the PR was returned to draft and the docs review was not dispatched. Lint output:"
+              echo ""
+              echo '```'
+              tail -c 4000 .lint.log
+              echo '```'
+            } > .lint-comment.md
+            gh pr comment "$BRANCH" --body-file .lint-comment.md || true
+          fi
+          git checkout - || true
+
+      # Record the page's outcome to the S3 ledger as one object keyed by slug.
+      # Runs `if: always()` so a model that exits without output still lands an
+      # `incomplete` record (short cooldown, retried soon) rather than silently
+      # looping. record-review.py builds the canonical record, derives the PR
+      # facts from `gh`, stamps reviewed_at, uploads, and emits the dispatch
+      # signal. One article per run ⇒ one object, so writes never collide.
+      - name: Record review ledger
+        id: record
+        if: always() && steps.ledger-bucket.outputs.uri != ''
+        continue-on-error: true
+        env:
+          CONTENT_REVIEW_LEDGER_URI: ${{ steps.ledger-bucket.outputs.uri }}
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          python3 scripts/content-review/record-review.py \
+            --queue .content-review-queue.json \
+            --verdict .content-review-verdict.json
 
       # Slop defense: bot-authored PRs are auto-skipped by the docs-review
       # pipeline (claude-code-review.yml sets skip_reason=bot-author), so the
       # content PR gets its review via explicit force dispatch — the same
-      # pattern claude-new.yml uses for #new-review. One article ⇒ 0 or 1 PR;
-      # the loop handles both.
+      # pattern claude-new.yml uses for #new-review. Gated on a derived
+      # `reviewed` status AND a passing re-lint; PR number + head SHA come from
+      # the ledger record's gh-derived values, never the model's self-report.
       - name: Dispatch docs review over the PR
-        if: hashFiles('.content-review-results.json') != ''
+        if: steps.record.outputs.dispatch == 'true' && steps.lint.outputs.ok != 'false'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          jq -c '.prs[]?' .content-review-results.json | while read -r pr; do
-            NUMBER=$(echo "$pr" | jq -r '.pr_number')
-            HEAD_SHA=$(echo "$pr" | jq -r '.head_sha')
-            echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
-            gh workflow run claude-code-review.yml \
-              --repo "${{ github.repository }}" \
-              -f pr_number="$NUMBER" \
-              -f head_sha="$HEAD_SHA" \
-              -f force=true \
-              || echo "::warning::review dispatch failed for PR #$NUMBER"
-          done
-
-      # Persist the page's review record to the S3 ledger as one object keyed by
-      # slug — instead of committing it through a PR. The model wrote the record
-      # to `.content-review-ledger.json`; this step stamps an authoritative
-      # reviewed_at and uploads it. One article per run ⇒ one object, so writes
-      # never collide. Runs for both fix and clean pages, so a clean page goes
-      # into cooldown with no PR.
-      - name: Write review ledger to S3
-        if: steps.ledger-bucket.outputs.uri != '' && hashFiles('.content-review-ledger.json') != ''
-        continue-on-error: true
-        env:
-          LEDGER_URI: ${{ steps.ledger-bucket.outputs.uri }}
-        run: |
-          SLUG=$(jq -r '.slug // empty' .content-review-ledger.json)
-          if [ -z "$SLUG" ]; then
-            echo "::warning::ledger record missing slug; not written"
-            exit 0
-          fi
-          jq --arg d "$(date -u +%F)" '.reviewed_at = $d' .content-review-ledger.json \
-            | aws s3 cp - "${LEDGER_URI%/}/${SLUG}.json" \
-            || echo "::warning::ledger write failed for $SLUG"
+          NUMBER='${{ steps.record.outputs.pr_number }}'
+          HEAD_SHA='${{ steps.record.outputs.head_sha }}'
+          echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
+          gh workflow run claude-code-review.yml \
+            --repo "${{ github.repository }}" \
+            -f pr_number="$NUMBER" \
+            -f head_sha="$HEAD_SHA" \
+            -f force=true \
+            || echo "::warning::review dispatch failed for PR #$NUMBER"
 
 env:
   ESC_ACTION_OIDC_AUTH: true

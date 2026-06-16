@@ -77,6 +77,11 @@ BRANCH_PREFIX = "content-review/"
 MAX_OPEN_PRS = 9
 COOLDOWN_DAYS = 365
 CLOSED_PR_COOLDOWN_DAYS = 180
+# A review that ended without a real outcome (the worker exited before recording
+# a verdict, or claimed a fix with no PR) is recorded `status: "incomplete"`. It
+# should be retried soon — but not re-picked in the same dispatch batch — so it
+# gets a short cooldown instead of the full year.
+INCOMPLETE_COOLDOWN_DAYS = 3
 RECENT_EDIT_DAYS = 30
 RECENT_EDIT_PENALTY = 0.5
 
@@ -351,11 +356,17 @@ def score_page(
 
 def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
     entries = load_ledger(ledger_dir)
-    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0, "unknown": 0}
+    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0, "incomplete": 0, "unknown": 0}
     by_lane: dict[str, int] = {}
     for path, entry in sorted(entries.items()):
         by_lane[entry.get("lane", "priority")] = by_lane.get(entry.get("lane", "priority"), 0) + 1
-        if entry.get("clean"):
+        status = entry.get("status")
+        if status == "incomplete":
+            counts["incomplete"] += 1
+            continue
+        # `status == "clean"` is the canonical form; `clean: true` is the legacy
+        # pre-standardization field still present on older ledger objects.
+        if status == "clean" or entry.get("clean"):
             counts["clean"] += 1
             continue
         state = pr_state(entry.get("pr", ""), use_gh)
@@ -506,10 +517,13 @@ def main() -> int:
         if entry:
             reviewed = parse_day(entry.get("reviewed_at"))
             if reviewed:
-                cooldown = COOLDOWN_DAYS
-                state = pr_state(entry.get("pr", ""), use_gh) if entry.get("pr") else None
-                if state and state.get("state") == "CLOSED" and not state.get("mergedAt"):
-                    cooldown = CLOSED_PR_COOLDOWN_DAYS
+                if entry.get("status") == "incomplete":
+                    cooldown = INCOMPLETE_COOLDOWN_DAYS
+                else:
+                    cooldown = COOLDOWN_DAYS
+                    state = pr_state(entry.get("pr", ""), use_gh) if entry.get("pr") else None
+                    if state and state.get("state") == "CLOSED" and not state.get("mergedAt"):
+                        cooldown = CLOSED_PR_COOLDOWN_DAYS
                 if (today - reviewed).days < cooldown:
                     continue
         candidates.append(path)

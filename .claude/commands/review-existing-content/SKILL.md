@@ -50,10 +50,12 @@ branch and PR before starting the next.
 
 ### 1. Branch
 
-From up-to-date `master`, create `content-review/<slug>`. (For a retirement
-proposal — stale lane only, see below — use `content-review/retire-<slug>`
-instead.) If an open PR already exists for that branch name, skip the article
-entirely and note it in the results file: a previous run owns it.
+From up-to-date `master`, create the branch with the **exact** name
+`content-review/<slug>` (the queue entry's `slug`). For a retirement proposal —
+stale lane only, see below — use `content-review/retire-<slug>` instead. The
+workflow derives the PR from this branch name, so it must match exactly. If an
+open PR already exists for that branch name, skip the article entirely and set
+`"verdict": "skipped"` in the sentinel (step 8): a previous run owns it.
 
 ### 2. Pre-compute (deterministic floor) — the workflow runs this for you
 
@@ -192,9 +194,12 @@ opening the PR.
 
 ### 7. PR — only when you applied a fix, ready (non-draft)
 
-Open a **ready** PR to `master`. The workflow dispatches the automated
-docs review over it afterward; humans merge. Description contract
-(auditability — model on fix-broken-links PRs):
+Open a **ready** PR to `master`. Build the body from
+`references/pr-body-template.md` — fill **every** section — and create the PR
+with `gh pr create --body-file`. The workflow re-runs `make lint` on your branch
+(flipping the PR back to draft if it fails) and dispatches the automated docs
+review over it afterward; humans merge. The template's sections (each one is
+checked for):
 
 - **Why this page**: lane, tier, traffic figure + report period, last
   reviewed (from the queue entry) — so the reviewer knows how it was chosen.
@@ -213,32 +218,38 @@ docs review over it afterward; humans merge. Description contract
 - **Verification**: confirm `make lint` + `make build` passed and which
   pre-step artifacts informed the review (note any pre-step that failed).
 
-A clean article (zero applicable fixes) skips the PR — record it in the
-`clean` list of `.content-review-results.json` and write its ledger record
-(next step) with `"clean": true`.
+Do **not** record `pr_number` or `head_sha` yourself — the workflow derives
+them from the branch. A clean article (zero applicable fixes) skips the PR —
+set `"verdict": "clean"` in the sentinel (next step).
 
-### 8. Ledger
+### 8. Verdict sentinel — your only structured output
 
-Write the article's ledger record to `.content-review-ledger.json` at the
-repo root — one record per page. A workflow step stamps `reviewed_at` and
-uploads it to the S3 ledger as `<slug>.json`:
+Write `.content-review-verdict.json` at the repo root. This is the **only**
+file you produce for the workflow — do not write a ledger or a results file.
+The workflow derives the PR facts (existence, number, head SHA) from your
+branch, builds the canonical ledger record, and uploads it to S3 keyed by slug.
 
 ```json
 {
-  "path": "content/docs/iac/concepts/stacks/_index.md",
-  "slug": "docs-iac-concepts-stacks",
-  "pr": "https://github.com/pulumi/docs/pull/19999",
-  "lane": "priority",
-  "clean": false,
+  "verdict": "fixed",
+  "reason": "",
   "fixes": 4,
-  "skipped_findings": 2
+  "skipped_findings": 2,
+  "retirement": false
 }
 ```
 
-`slug` is the queue entry's `slug` (it becomes the S3 object key); `pr` is the
-PR you just opened, or `null` for a clean article; `fixes` = applied changes;
-`skipped_findings` = Findings-not-applied count. Omit `reviewed_at` — the
-workflow sets it.
+- `verdict`: `"fixed"` (you opened a PR), `"clean"` (zero applicable fixes, no
+  PR), or `"skipped"` (a previous run already owns this page's PR).
+- `reason`: one line — **required** for `clean` and `skipped`; omit/empty for
+  `fixed`.
+- `fixes`: applied changes; `skipped_findings`: Findings-not-applied count.
+- `retirement`: `true` only for a stale-lane retirement PR (branch
+  `content-review/retire-<slug>`).
+
+If you exit without writing this file, the workflow records the page as
+`incomplete` (a short cooldown, retried soon) — so always write it, even for a
+clean or skipped verdict.
 
 ## Retirement proposals (stale lane only)
 
@@ -264,28 +275,6 @@ outcome **instead of** a fix PR, under a strict evidence standard:
 
 ## Output
 
-After all articles, write `.content-review-results.json` to the repo root
-for the workflow's review-dispatch step:
-
-```json
-{
-  "prs": [
-    { "path": "content/docs/iac/concepts/stacks/_index.md",
-      "pr": "https://github.com/pulumi/docs/pull/19999",
-      "pr_number": 19999,
-      "head_sha": "abc1234",
-      "fixes": 4,
-      "retirement": false }
-  ],
-  "clean": ["content/docs/esc/overview.md"],
-  "skipped": [],
-  "summary": ":mag: Reviewed 3 articles — 2 fix PRs, 1 clean (ledger to S3)"
-}
-```
-
-`head_sha` is each PR branch's final commit SHA (`git rev-parse HEAD` after
-the last push) — the review dispatch (which reads `.prs[]`) needs it. The
-ledger is a separate per-page file (step 8), not part of this results file.
-`skipped` lists articles abandoned mid-run (existing PR, unfixable build
-break) with a reason string. The `summary` line is a one-line run note for
-the workflow log; keep it to one line.
+The verdict sentinel (step 8) is your only output. The workflow records the
+ledger and dispatches the docs review from it and from the branch — there is no
+results file to write.
