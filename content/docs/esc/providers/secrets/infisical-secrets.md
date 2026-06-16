@@ -39,6 +39,9 @@ values:
             projectId: xxxxxxx-bbbb-cccc-dddd-eeeeeeeeeeee
             environment: dev
             secretKey: app-secret
+  pulumiConfig:
+    apiKey: ${infisical.secrets.api-key}
+    appSecret: ${infisical.secrets.app-secret}
 ```
 
 ## Configuring OIDC

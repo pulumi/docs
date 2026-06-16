@@ -7,10 +7,12 @@ meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/pulumi-cloud/deployments/reference/
   - /docs/pulumi-cloud/deployments/using/post-automation/
+  - /docs/deployments/deployments/using/post-automation/
 menu:
   deployments:
-    parent: deployments-deployments-using
-    weight: 4
+    name: Post-Deployment Automation
+    parent: deployments-guides
+    weight: 50
 ---
 
 After a deployment completes successfully, you may want to trigger additional actions or deployments. Pulumi Deployments supports post-deployment automation through webhooks and the Auto Deploy package.

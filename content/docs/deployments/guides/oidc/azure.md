@@ -7,15 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Azure
-    parent: deployments-deployments-oidc
+    parent: deployments-guides-oidc
     weight: 2
-    identifier: deployments-deployments-oidc-azure
+    identifier: deployments-guides-oidc-azure
 aliases:
   - /docs/administration/access-identity/oidc/provider/azure/
   - /docs/guides/oidc/provider/azure
   - /docs/intro/deployments/oidc/provider/azure/
   - /docs/pulumi-cloud/access-management/oidc/provider/azure/
   - /docs/pulumi-cloud/deployments/oidc/azure/
+  - /docs/deployments/deployments/oidc/azure/
   - /docs/pulumi-cloud/deployments/oidc/provider/azure/
   - /docs/pulumi-cloud/oidc/azure/
   - /docs/pulumi-cloud/oidc/provider/azure/

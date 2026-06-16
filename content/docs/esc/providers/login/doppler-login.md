@@ -30,6 +30,9 @@ values:
       fn::open::doppler-login:
         oidc:
           identityId: 00000000-0000-0000-0000-000000000000
+  environmentVariables:
+    # Consumed by the Doppler CLI for authentication
+    DOPPLER_TOKEN: ${doppler.login.accessToken}
 ```
 
 ## Configuring OIDC

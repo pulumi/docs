@@ -44,6 +44,9 @@ values:
         environment: production
         secretType: api-keys
       secret: true  # Optional, defaults to true
+  pulumiConfig:
+    apiKey: ${customSecrets.response.apiKey}
+    apiSecret: ${customSecrets.response.apiSecret}
 ```
 
 ### Request Payload

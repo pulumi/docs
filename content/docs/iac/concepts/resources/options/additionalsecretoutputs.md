@@ -82,3 +82,7 @@ resources:
 {{< /chooser >}}
 
 Only top-level resource properties can be designated secret. If sensitive data is nested inside of a property, you must mark the entire top-level output property as secret.
+
+{{% notes "warning" %}}
+A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) (the `id` output property) cannot be included in `additionalSecretOutputs`. The `id` is a special property, not a regular output, so it is always stored in plain text in the state file. See [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret) for the implications and a workaround.
+{{% /notes %}}

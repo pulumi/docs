@@ -15,7 +15,7 @@ menu:
 This page explains how permissions work in Pulumi Deployments and how to configure them for your deployment needs.
 
 {{% notes type="info" %}}
-This page contains information on the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/)
+This page contains information on the actions your Deployment is allowed to perform _within Pulumi Cloud_, like opening an ESC environment. To enable your Deployment to manage resources in your cloud, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/)
 {{% /notes %}}
 
 ## Default Deployment Permissions

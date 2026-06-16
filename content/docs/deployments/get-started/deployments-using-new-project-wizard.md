@@ -4,11 +4,12 @@ title_tag: Use Pulumi Deployments with the New Project Wizard
 meta_desc: Learn how to use Pulumi Deployments with the New Project Wizard
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/get-started/deployments-using-new-project-wizard/
 - /docs/pulumi-cloud/deployments/get-started/deployments-using-new-project-wizard/
 menu:
   deployments:
     name: New Project Wizard
-    parent: deployments-deployments-get-started
+    parent: deployments-get-started
     weight: 1
     identifier: deployments-deployments-get-started-npw
 ---
@@ -25,6 +26,8 @@ It's possible to create a new Pulumi project, commit its code, and deploy it ent
 
 Navigate to the "New Project" tab.
 Select "Use a template" if you'd like to create a fully featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
+
+For this guide, select the `random-typescript` template. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/pulumi-cloud/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
 
 In order to use templates you will need to authorize Pulumi with your VCS provider so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
@@ -78,10 +81,32 @@ After you've configured your project settings, you will be able to configure the
 
 A full description of each setting is available in [Pulumi Deployment Settings](/docs/deployments/deployments/using/settings).
 
-After you've configured everything, you should see a new Deployment of your project.
+## Run your first deployment
+
+After you finish the wizard, Pulumi Cloud commits your new project to the repository and starts an initial deployment of your stack. Pulumi takes you to the stack's **Deployments** page, where you can watch the deployment run.
+
+Select the in-progress deployment to follow its logs in real time. The deployment runs a `pulumi up` on managed compute, so it provisions the real resources defined by your program.
+
+When the run finishes, its status changes to **Succeeded**. To confirm the operation completed:
+
+* On the **Deployments** page, the latest deployment shows a green **Succeeded** status.
+* On the stack's **Resources** page, you'll see the resources your program created.
+
+If a deployment fails, open it to read the logs, fix the underlying issue, and trigger a new deployment from the **Deploy** button.
 
 In summary, after going through this wizard you will have:
 
 * A new Pulumi project and stack, created from a project template or starter.
 * Code committed and pushed into a new or existing repository.
-* Pulumi Deployments configured on your new stack, and a preview Deployment in progress.
+* Pulumi Deployments configured on your new stack.
+* A successful deployment that provisioned your infrastructure.
+
+## Next steps
+
+Now that you have a stack deploying through Pulumi Deployments, here's where to go next:
+
+* **Authenticate to your cloud without static credentials.** Use [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials via [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/), then reference that environment from your stack so deployments authenticate to [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), or [GCP](/docs/esc/guides/configuring-oidc/gcp/) without long-lived secrets.
+* **Tune your deployment settings.** Review the full set of [deployment settings](/docs/deployments/deployments/using/settings/) — pre-run commands, environment variables, OIDC, and executor options.
+* **Preview changes on pull requests.** Enable [review stacks](/docs/deployments/deployments/review-stacks/) to spin up ephemeral infrastructure for each pull request.
+* **Detect and remediate drift.** Turn on [drift detection](/docs/deployments/deployments/drift/) to catch changes made outside of Pulumi.
+* **Run operations on a schedule.** Configure [scheduled deployments](/docs/deployments/deployments/schedules/) to run `pulumi up`, `preview`, or `refresh` automatically.

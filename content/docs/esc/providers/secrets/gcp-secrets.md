@@ -38,6 +38,9 @@ values:
             name: api-key
           app-secret:
             name: app-secret
+  pulumiConfig:
+    apiKey: ${gcp.secrets.api-key}
+    appSecret: ${gcp.secrets.app-secret}
 ```
 
 ## Configuring OIDC
@@ -51,20 +54,17 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 
 ```json
 {
-  "environmentVariables": {
-    "GOOGLE_PROJECT": 111111111111
-    "CLOUDSDK_AUTH_ACCESS_TOKEN": "ya29...."
-  },
   "gcp": {
     "login": {
       "accessToken": "ya29.....",
       "expiry": "2023-11-09T11:12:41Z",
-      "project": 111111111111,
+      "project": 123456789,
       "tokenType": "Bearer"
+    },
+    "secrets": {
+      "api-key": "my-api-key",
+      "app-secret": "my-app-secret"
     }
-  },
-  "pulumiConfig": {
-    "gcp:accessToken": "ya29...."
   }
 }
 ```
@@ -85,14 +85,14 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 | `tokenType`   | string | The type of the access token.                                                    |
 | `expiry`      | string | [Optional] - The access token's expiry time.                                     |
 
-#### GCPSecretsAccess
+### GCPSecretsAccess
 
 | Property       | Type   | Description                                       |
 |----------------|--------|---------------------------------------------------|
 | `name`         | string | The name of the secret to import.                 |
 | `version`      | string | [Optional] - The version of the secret to import. |
 
-### Outputs
+## Outputs
 
 | Property | Type   | Description                         |
 |----------|--------|-------------------------------------|

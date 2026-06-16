@@ -43,6 +43,9 @@ values:
             decrypt: true
           myList:
             name: /myNamespace/myList
+  pulumiConfig:
+    myKey: ${aws.params.myKey}
+    secureKey: ${aws.params.secureKey}
 ```
 
 ## Configuring OIDC

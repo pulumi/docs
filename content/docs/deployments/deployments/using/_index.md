@@ -34,7 +34,7 @@ Pulumi Deployments are configured on a per-stack basis. To use Deployments effec
    - [Drift detection](/docs/deployments/deployments/drift) to automatically detect when your infrastructure differs from its desired state
    - [Review stacks](/docs/deployments/deployments/review-stacks) for temporary environments on PRs
    - [TTL stacks](/docs/deployments/deployments/ttl) for ephemeral environments
-   - [Post-deployment automation](/docs/deployments/deployments/using/post-automation) to create webhooks to trigger additional actions, like updating additional stacks
+   - [Post-deployment automation](/docs/deployments/guides/post-automation/) to create webhooks to trigger additional actions, like updating additional stacks
    - [Webhooks](/docs/deployments/webhooks/#deployment-webhooks) for custom automation
 
 ## Automating at Scale
@@ -46,4 +46,4 @@ For teams managing many stacks or platforms serving multiple teams, you can auto
 
 ## Additional Resources
 
-- [Private Repositories and Packages](/docs/deployments/deployments/using/private-repositories): Configure access to private Git repositories and package feeds
+- [Private Sources](/docs/deployments/guides/private-sources/): Configure access to private Git repositories and package feeds

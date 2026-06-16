@@ -466,6 +466,10 @@ Unlike the logical name (which you choose) or the URN (which Pulumi derives), th
 
 Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `.apply()` when you need to transform the value in code.
 
+{{% notes type="info" %}}
+The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret).
+{{% /notes %}}
+
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}

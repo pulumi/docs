@@ -37,6 +37,9 @@ values:
             name: api-key
           app-secret:
             name: app-secret
+  pulumiConfig:
+    apiKey: ${azure.secrets.api-key}
+    appSecret: ${azure.secrets.app-secret}
 ```
 
 ## Configuring OIDC
@@ -98,7 +101,7 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 | `name`         | string | The name of the secret to import.                 |
 | `version`      | string | [Optional] - The version of the secret to import. |
 
-### Outputs
+## Outputs
 
 | Property | Type   | Description                         |
 |----------|--------|-------------------------------------|
