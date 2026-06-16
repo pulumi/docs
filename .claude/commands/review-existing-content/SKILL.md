@@ -190,32 +190,7 @@ render through their `layouts/shortcodes/*.markdown.md` templates):
 If this pass applied any fix, re-run `make lint && make build` before
 opening the PR.
 
-### 7. Ledger
-
-The ledger lives in **S3**, not the repo — do NOT write any file under
-`scripts/content-review/ledger/`, and do NOT add a ledger file to the PR.
-Instead, record this article's outcome in the `ledger[]` array of
-`.content-review-results.json` (see Output below); a deterministic workflow
-step stamps `reviewed_at` and writes the object to S3 after you finish. Each
-entry carries:
-
-```json
-{
-  "path": "content/docs/iac/concepts/stacks/_index.md",
-  "slug": "docs-iac-concepts-stacks",
-  "pr": "https://github.com/pulumi/docs/pull/19999 or null",
-  "lane": "priority",
-  "clean": false,
-  "fixes": 4,
-  "skipped_findings": 2
-}
-```
-
-`slug` is the queue entry's `slug` (the S3 object key); `pr` is null for a
-clean article; `fixes` = applied changes; `skipped_findings` =
-Findings-not-applied count. The workflow sets `reviewed_at`, so omit it.
-
-### 8. PR — one per article, ready (non-draft)
+### 7. PR — only when you applied a fix, ready (non-draft)
 
 Open a **ready** PR to `master`. The workflow dispatches the automated
 docs review over it afterward; humans merge. Description contract
@@ -238,14 +213,32 @@ docs review over it afterward; humans merge. Description contract
 - **Verification**: confirm `make lint` + `make build` passed and which
   pre-step artifacts informed the review (note any pre-step that failed).
 
-### Clean articles
+A clean article (zero applicable fixes) skips the PR — record it in the
+`clean` list of `.content-review-results.json` and write its ledger record
+(next step) with `"clean": true`.
 
-If triage produces **zero applicable fixes**, do not open a PR at all — no
-per-article PR and no ledger-only PR. Record the article in
-`.content-review-results.json`: add it to the `clean` list and add its
-`ledger[]` entry with `"clean": true, "fixes": 0, "pr": null`. The workflow
-writes that entry to the S3 ledger, so the page enters cooldown with no PR and
-no merge for anyone to approve.
+### 8. Ledger
+
+Write the article's ledger record to `.content-review-ledger.json` at the
+repo root — one record per page. A workflow step stamps `reviewed_at` and
+uploads it to the S3 ledger as `<slug>.json`:
+
+```json
+{
+  "path": "content/docs/iac/concepts/stacks/_index.md",
+  "slug": "docs-iac-concepts-stacks",
+  "pr": "https://github.com/pulumi/docs/pull/19999",
+  "lane": "priority",
+  "clean": false,
+  "fixes": 4,
+  "skipped_findings": 2
+}
+```
+
+`slug` is the queue entry's `slug` (it becomes the S3 object key); `pr` is the
+PR you just opened, or `null` for a clean article; `fixes` = applied changes;
+`skipped_findings` = Findings-not-applied count. Omit `reviewed_at` — the
+workflow sets it.
 
 ## Retirement proposals (stale lane only)
 
@@ -284,15 +277,6 @@ for the workflow's review-dispatch step:
       "fixes": 4,
       "retirement": false }
   ],
-  "ledger": [
-    { "path": "content/docs/iac/concepts/stacks/_index.md",
-      "slug": "docs-iac-concepts-stacks",
-      "pr": "https://github.com/pulumi/docs/pull/19999",
-      "lane": "priority",
-      "clean": false,
-      "fixes": 4,
-      "skipped_findings": 2 }
-  ],
   "clean": ["content/docs/esc/overview.md"],
   "skipped": [],
   "summary": ":mag: Reviewed 3 articles — 2 fix PRs, 1 clean (ledger to S3)"
@@ -300,9 +284,8 @@ for the workflow's review-dispatch step:
 ```
 
 `head_sha` is each PR branch's final commit SHA (`git rev-parse HEAD` after
-the last push) — the review dispatch (which reads `.prs[]`) needs it.
-`ledger[]` has one entry per reviewed article — fix **and** clean (see the
-Ledger step for the entry shape) — and the workflow writes each to S3.
+the last push) — the review dispatch (which reads `.prs[]`) needs it. The
+ledger is a separate per-page file (step 8), not part of this results file.
 `skipped` lists articles abandoned mid-run (existing PR, unfixable build
 break) with a reason string. The `summary` line is a one-line run note for
 the workflow log; keep it to one line.
