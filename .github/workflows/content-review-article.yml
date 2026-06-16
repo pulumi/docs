@@ -80,6 +80,19 @@ jobs:
       - name: Install Python deps
         run: python3 -m pip install --quiet pyyaml
 
+      # AWS creds so the ledger-write step at the end can push this article's
+      # review record to S3. Degrades gracefully (continue-on-error): if the
+      # role can't be assumed the review still runs, the ledger write is just
+      # skipped (the page reappears next cycle rather than going into cooldown).
+      - name: Configure AWS credentials
+        id: aws-creds
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: content-review-article
+          aws-region: us-west-2
+
       # Build a single-article queue for the dispatched path. --paths bypasses
       # scoring/guardrails; --lane carries the dispatcher's lane through so the
       # retirement path stays in scope only when lane=stale.
@@ -189,11 +202,12 @@ jobs:
             6. Run the rendered content pass over the built page — both
                the HTML view and the customer-facing markdown view
                (`public/<url>/index.html` and `index.md`) — per the skill.
-            7. Write the article's ledger file under
-               `scripts/content-review/ledger/`.
-            8. Open a **ready** (non-draft) PR with the auditable
-               description the skill describes. A clean article gets a
-               ledger-only PR instead.
+            7. If you applied any fix, open a **ready** (non-draft) PR with
+               the auditable description the skill describes. A clean article
+               (zero fixes) opens no PR.
+            8. Write the page's ledger record to `.content-review-ledger.json`
+               (the skill defines the shape) — the workflow uploads it to the
+               S3 ledger.
             9. Write `.content-review-results.json` (the skill defines the
                shape) — the review-dispatch step consumes it.
           claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
@@ -219,6 +233,27 @@ jobs:
               -f force=true \
               || echo "::warning::review dispatch failed for PR #$NUMBER"
           done
+
+      # Persist the page's review record to the S3 ledger as one object keyed by
+      # slug — instead of committing it through a PR. The model wrote the record
+      # to `.content-review-ledger.json`; this step stamps an authoritative
+      # reviewed_at and uploads it. One article per run ⇒ one object, so writes
+      # never collide. Runs for both fix and clean pages, so a clean page goes
+      # into cooldown with no PR.
+      - name: Write review ledger to S3
+        if: vars.CONTENT_REVIEW_LEDGER_S3_URI != '' && hashFiles('.content-review-ledger.json') != ''
+        continue-on-error: true
+        env:
+          LEDGER_URI: ${{ vars.CONTENT_REVIEW_LEDGER_S3_URI }}
+        run: |
+          SLUG=$(jq -r '.slug // empty' .content-review-ledger.json)
+          if [ -z "$SLUG" ]; then
+            echo "::warning::ledger record missing slug; not written"
+            exit 0
+          fi
+          jq --arg d "$(date -u +%F)" '.reviewed_at = $d' .content-review-ledger.json \
+            | aws s3 cp - "${LEDGER_URI%/}/${SLUG}.json" \
+            || echo "::warning::ledger write failed for $SLUG"
 
 env:
   ESC_ACTION_OIDC_AUTH: true

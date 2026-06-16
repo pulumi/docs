@@ -111,6 +111,19 @@ jobs:
           aws s3 cp "${{ vars.CONTENT_REVIEW_TRAFFIC_S3_URI }}" .traffic-snapshot --quiet \
             || echo "traffic snapshot unavailable; selection proceeds without it"
 
+      # The review ledger (one JSON object per page, key = slug) lives in S3, not
+      # the repo — so the daily bookkeeping never round-trips through a PR. Sync
+      # it down to a local cache that select-articles.py reads via --ledger-dir.
+      # Degrades gracefully like the traffic fetch: an empty/absent ledger just
+      # means selection falls back to tier + age with nothing in cooldown.
+      - name: Fetch review ledger from S3
+        if: vars.CONTENT_REVIEW_LEDGER_S3_URI != ''
+        continue-on-error: true
+        run: |
+          mkdir -p .ledger-cache
+          aws s3 sync "${{ vars.CONTENT_REVIEW_LEDGER_S3_URI }}" .ledger-cache/ --quiet \
+            || echo "review ledger unavailable; selection proceeds without cooldowns"
+
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= / count= to $GITHUB_OUTPUT for the
       # gates below.
@@ -120,6 +133,9 @@ jobs:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
           ARGS=(--count "${{ github.event.inputs.count || '3' }}" --out .content-review-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)
           fi
