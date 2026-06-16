@@ -1,16 +1,17 @@
 ---
-title: Images
-title_tag: Deployment images | Pulumi Deployments
+title: Custom Images
+title_tag: Custom deployment images | Pulumi Deployments
 meta_desc: Understand the container image that runs your Pulumi deployments, when to customize it, and how to add the tools your project needs.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
-    name: Images
-    parent: deployments-deployments-runs
-    weight: 10
-    identifier: deployments-deployments-runs-images
+    name: Custom Images
+    parent: deployments-guides
+    weight: 30
+    identifier: deployments-guides-custom-images
 aliases:
 - /docs/deployments/deployments/execution-environment/
+- /docs/deployments/deployments/runs/images/
 ---
 
 Pulumi Cloud runs your Pulumi program inside a container image called the *deployment executor image*. This page covers what is in that image and how to customize it.
@@ -125,12 +126,12 @@ To reduce cold-start time:
 
 #### Static credentials only
 
-If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/) run in your own infrastructure and can use whatever pull mechanism you configure.
+If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/deployments/runners/) run in your own infrastructure and can use whatever pull mechanism you configure.
 
 ## See also
 
 - [Deployment settings](/docs/deployments/deployments/using/settings/): UI walkthrough for configuring the executor image on a stack
-- [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/): full control over the runner host, registry pulls, network access, and lifecycle
+- [Customer-Managed Workflow Runners](/docs/deployments/deployments/runners/): full control over the runner host, registry pulls, network access, and lifecycle
 - [Pre-run commands](/docs/deployments/deployments/using/settings/#pre-run-commands): where pre-run installs run
 - [Pulumi Docker images](/docs/iac/operations/docker-images/): the full catalog of official images, variants, and release cadence
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

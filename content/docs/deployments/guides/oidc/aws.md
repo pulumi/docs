@@ -7,15 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: AWS
-    parent: deployments-deployments-oidc
+    parent: deployments-guides-oidc
     weight: 1
-    identifier: deployments-deployments-oidc-aws
+    identifier: deployments-guides-oidc-aws
 aliases:
   - /docs/administration/access-identity/oidc/provider/aws/
   - /docs/guides/oidc/provider/aws
   - /docs/intro/deployments/oidc/provider/aws/
   - /docs/pulumi-cloud/access-management/oidc/provider/aws/
   - /docs/pulumi-cloud/deployments/oidc/aws/
+  - /docs/deployments/deployments/oidc/aws/
   - /docs/pulumi-cloud/deployments/oidc/provider/aws/
   - /docs/pulumi-cloud/oidc/aws/
   - /docs/pulumi-cloud/oidc/provider/aws/
@@ -102,7 +103,7 @@ The following restricts to any stack within a specific project:
 }
 ```
 
-The subject claim also includes the stack name and operation, so you can restrict further. See the [full subject format and custom claims](/docs/deployments/deployments/oidc/#custom-claims) for details.
+The subject claim also includes the stack name and operation, so you can restrict further. See the [full subject format and custom claims](/docs/deployments/guides/oidc/#custom-claims) for details.
 
 ### Using infrastructure as code
 

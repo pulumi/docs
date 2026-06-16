@@ -25,7 +25,7 @@ See ["Bound Tokens"](https://cloud.google.com/blog/products/containers-kubernete
 This integration is most often used to authenticate workloads that run Pulumi operations from inside a GKE cluster, without storing long-lived Pulumi access tokens. Two common scenarios:
 
 - **[Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)** — Run Pulumi stacks as Kubernetes custom resources. The operator's workspace pods authenticate to Pulumi Cloud using the cluster's OIDC tokens instead of a static `PULUMI_ACCESS_TOKEN`.
-- **[Customer-managed deployment runners](/docs/deployments/deployments/runs/customer-managed-agents/)** — Run Pulumi Deployments inside your own GKE cluster. The workflow runner fetches a Pulumi Pool token dynamically using its OIDC identity.
+- **[Customer-managed deployment runners](/docs/deployments/deployments/runners/)** — Run Pulumi Deployments inside your own GKE cluster. The workflow runner fetches a Pulumi Pool token dynamically using its OIDC identity.
 
 {{< notes type="info" >}}
 This guide walks through the Pulumi Cloud UI. You can also configure OIDC Issuers via the [REST API](/docs/reference/cloud-rest-api/oidc-issuers/) or the [`OidcIssuer`](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/oidcissuer/) resource in the Pulumi Service provider.

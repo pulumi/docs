@@ -1,18 +1,41 @@
 ---
-title: Customer-managed workflow runners
-title_tag: Get started with customer-managed workflow runners
-meta_desc: Self-host workflow runners and get all the power and flexibility of Pulumi Deployments in your isolated environments.
+title: Runners
+title_tag: Deployment runners | Pulumi Deployments
+meta_desc: How Pulumi Cloud executes your deployments — Pulumi-hosted and customer-managed workflow runners, their hardware, and the full configuration reference.
+meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
-    name: Customer-managed workflow runners
-    parent: deployments-deployments-runs
-    weight: 20
-    identifier: deployments-deployments-runs-customer-managed-agents
-
+    name: Runners
+    parent: deployments-deployments
+    identifier: deployments-deployments-runners
+    weight: 40
 aliases:
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
 - /docs/deployments/deployments/customer-managed-agents/
+- /docs/deployments/deployments/runs/customer-managed-agents/
+- /docs/deployments/deployments/runs/
 ---
+
+Every Pulumi Deployment runs in a container image on a *workflow runner* — the compute that executes your Pulumi program. Two settings control how a run works:
+
+- The [image](/docs/deployments/guides/custom-images/): a Pulumi-managed Linux image by default, or a custom image when your project needs extra tools.
+- The runner: Pulumi-hosted by default, or [customer-managed](#customer-managed-workflow-runners) when you need to run on your own infrastructure.
+
+## Hardware and operating system
+
+When a deployment runs on a Pulumi-hosted workflow runner, it executes inside a Linux container with the following resources:
+
+| Resource | Allocation |
+|---|---|
+| vCPU | 2 |
+| Memory | 8 GB |
+| Disk | A 32 GB volume, with roughly half available for your program's working files after the executor image and dependency caches |
+
+With the default executor image, the container's operating system is Debian, regardless of the operating system of the host it runs on. If you supply a [custom executor image](/docs/deployments/guides/custom-images/), the operating system is whatever that image is built on. If a deployment depends on a specific OS, package manager, or system library, match it to the image you use.
+
+These specifications apply to Pulumi-hosted workflow runners. Customer-managed workflow runners run on infrastructure you provision, so their hardware and operating system are whatever you configure.
+
+## Customer-managed workflow runners
 
 Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/):
 
@@ -30,95 +53,17 @@ Customer-Managed Workflow Runners support all the [deployment triggers](/docs/de
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
 {{% /notes %}}
 
-## Using customer-managed workflow runners
-
-Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
-
-1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
-1. Create a new pool. Copy and save the token
-1. Install the workflow runners as per the instructions on the page
-1. Verify the workflow runner status by refreshing the page
-1. Configure the workflow runner pool for the workflows you want to run:
-   - **Deployments**: Go to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool dropdown
-   - **Insights discovery scans**: Go to **Management** > **Accounts** and select the pool for the account you want to scan
-   - **Policy evaluation**: Go to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
-1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
-1. Verify your setup:
-   - **Deployments**: Run a `pulumi refresh` through the **Actions** dropdown in your stack page
-   - **Insights discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
-   - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
-
-Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
-
-Workflow runners support multiple workflow types beyond deployments, including Pulumi Insights scans and policy evaluations. By default, all workflow types are enabled. You can restrict which workflow types a workflow runner handles using the `enabled_workflow_types` configuration option.
-
-### Scaling and concurrency
-
-Each workflow runner process runs **one deployment at a time**, plus optionally **one Insights scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Insights scans or policy evaluations.
-
-Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
-
-- **Insights scans and policy evaluations** are lease-based: if a runner crashes or loses connectivity mid-job, the lease eventually expires and another runner in the pool picks up the job.
-- **Deployments** are not redelivered. If a runner stops heartbeating for 10 minutes mid-deployment, the deployment is marked failed rather than handed to another runner.
-
-Per-organization concurrency limits are enforced server-side: even with many runners available, deployments for a given organization will not exceed that organization's configured concurrency limit. Increasing the number of runners beyond that limit lets the pool absorb bursts and serve other workflow types (Insights scans, policy evaluations) in parallel, but it does not raise the deployment cap for a single organization.
-
-Patterns for scaling:
-
-- **Long-running runners**: Run multiple instances (for example, replicas of a Kubernetes Deployment, or several systemd units across hosts). Each replica adds one deployment slot, plus an Insights/policy slot if those workflow types are enabled on the pool.
-- **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
-- **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
-
-{{% notes "info" %}}
-If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
-{{% /notes %}}
-
-### Setting an organization default pool
-
-You can designate one pool as the **organization default**. When a default pool is set, any deployment, Insights discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
-
-The resolution order for each workflow is:
-
-1. The pool configured on the stack, account, or policy group.
-1. The organization default pool (if set).
-1. The Pulumi Hosted Pool.
-
-To set a default:
-
-1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab.
-1. Open the row actions menu on the pool you want to designate and choose **Set as default**.
-
-The **Pulumi Hosted Pool** row at the top of the list represents the built-in Pulumi-managed pool. Selecting **Set as default** on that row clears any customer-managed default, restoring the built-in pool as the fallback. If a custom default pool is deleted, the organization automatically reverts to the Pulumi Hosted Pool.
-
-An explicit pool assigned to a stack, account, or policy group always takes precedence over the organization default.
-
-### Leveraging OpenID authentication
-
-It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the workflow runners. You must first register the OpenID provider as a trusted OIDC Issuer in your Pulumi account, as documented in the [OIDC Issuers documentation](/docs/administration/access-identity/oidc-issuers/).
-
-When running workflow runners on a Kubernetes cluster, see the cluster-specific guides:
-
-- [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/)
-- [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/)
-
-After registering the provider, the workflow runner requires this information:
-
-- `organization_name`: your Pulumi Organization name
-- `runner_pool_id`: the pool ID that the instance will connect to
-- `token_expiration` (optional): the lifetime of tokens requested by the workflow runner (Go duration syntax, e.g. `1h`)
-- `oidc_token_file`: the location of the file where the OIDC token will be recorded
-
-The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC token and exchange it automatically for a Pulumi token every time the Pulumi token expires.
+To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply credentials to runners and the full configuration reference.
 
 ## Providing credentials to workflow runners
 
 {{% notes type="info" %}}
-For most users, Pulumi recommends [Pulumi ESC](/docs/esc/) for supplying cloud credentials to Deployments. However, if your customer-managed agents can't reach Pulumi Cloud over the network to use ESC, [Pulumi Deployments OIDC](/docs/deployments/deployments/oidc/) is an appropriate solution. For a comparison, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/deployments/cloud-credentials/).
+For most users, Pulumi recommends [Pulumi ESC](/docs/esc/) for supplying cloud credentials to Deployments. However, if your customer-managed agents can't reach Pulumi Cloud over the network to use ESC, [Pulumi Deployments OIDC](/docs/deployments/guides/oidc/) is an appropriate solution. For a comparison, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/).
 {{% /notes %}}
 
-There are two methods to provide cloud provider credentials to the workflow runners:
+You can provide cloud provider credentials to the workflow runners in two ways:
 
-1. Use [OpenID Connect (OIDC) to generate credentials](/docs/deployments/deployments/oidc/)
+1. Use [OpenID Connect (OIDC) to generate credentials](/docs/deployments/guides/oidc/)
 2. Directly provide credentials to workflow runners through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash

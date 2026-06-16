@@ -7,15 +7,16 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Google Cloud
-    parent: deployments-deployments-oidc
+    parent: deployments-guides-oidc
     weight: 3
-    identifier: deployments-deployments-oidc-gcp
+    identifier: deployments-guides-oidc-gcp
 aliases:
   - /docs/administration/access-identity/oidc/provider/gcp/
   - /docs/guides/oidc/provider/gcp
   - /docs/intro/deployments/oidc/provider/gcp/
   - /docs/pulumi-cloud/access-management/oidc/provider/gcp/
   - /docs/pulumi-cloud/deployments/oidc/gcp/
+  - /docs/deployments/deployments/oidc/gcp/
   - /docs/pulumi-cloud/deployments/oidc/provider/gcp/
   - /docs/pulumi-cloud/oidc/gcp/
   - /docs/pulumi-cloud/oidc/provider/gcp/
