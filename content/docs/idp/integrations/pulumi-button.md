@@ -5,12 +5,13 @@ title: Deploy with Pulumi button
 h1: Deploy with Pulumi button
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
-  deployments:
+  idp:
     name: Deploy with Pulumi button
-    parent: deployments-home
-    weight: 40
-    identifier: deployments-pulumi-button
+    parent: idp-integrations
+    weight: 10
+    identifier: idp-integrations-pulumi-button
 aliases:
+- /docs/deployments/pulumi-button/
 - /docs/pulumi-cloud/pulumi-button/
 - /docs/reference/service/pulumi-button/
 - /docs/console/extensions/pulumi-button/
