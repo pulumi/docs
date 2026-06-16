@@ -198,6 +198,25 @@ def main() -> int:
         check(flags["content/docs/misc/protected/keep.md"] is True, "explicit no_retire")
         check(flags["content/docs/concepts/stacks.md"] is True, "tier 1 implies no_retire")
 
+        print("incomplete status: short cooldown, unlike a real review")
+        inc = tmp / "ledger_inc"
+        target = "content/docs/concepts/stacks.md"
+        # A real review 4 days ago is still inside the 365-day cooldown.
+        write_ledger(inc, target, "2026-06-08")
+        q = run_select(repo, tiers, inc, "--count", "5")
+        check(target not in [a["path"] for a in q["articles"]],
+              "real review 4d ago stays in the 365d cooldown")
+        # Same age, but an incomplete review only cools down for 3 days -> eligible.
+        write_ledger(inc, target, "2026-06-08", status="incomplete")
+        q = run_select(repo, tiers, inc, "--count", "5")
+        check(target in [a["path"] for a in q["articles"]],
+              "incomplete review past the 3d window is eligible again")
+        # An incomplete review 1 day ago is still inside the short window.
+        write_ledger(inc, target, "2026-06-11", status="incomplete")
+        q = run_select(repo, tiers, inc, "--count", "5")
+        check(target not in [a["path"] for a in q["articles"]],
+              "incomplete review 1d ago still cooling down")
+
         print("repo strategic-tiers.yaml parses and excludes generated trees")
         proc = subprocess.run(
             [sys.executable, str(SCRIPT), "--no-gh", "--today", "2026-06-12",
