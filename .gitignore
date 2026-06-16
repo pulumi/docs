@@ -105,10 +105,11 @@ _vendor/
 /.broken-links-pr.txt
 
 # Existing-content review state files (generated at runtime by the
-# review-existing-content workflow; the committed ledger lives in
-# scripts/content-review/ledger/).
+# review-existing-content workflow; the ledger lives in S3 — see
+# scripts/content-review/ledger/README.md — and is synced into .ledger-cache/).
 /.content-review-queue.json
 /.content-review-results.json
+/.ledger-cache/
 /.traffic-snapshot
 /.synthetic.patch
 # docs-review pre-computation artifacts the worker generates before the
