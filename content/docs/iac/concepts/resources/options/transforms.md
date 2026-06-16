@@ -133,7 +133,7 @@ pulumi.runtime.registerResourceTransform(args => {
         args.props["tags"] = Object.assign(args.props["tags"], autoTags);
         return { props: args.props, opts: args.opts };
     }
-};
+});
 ```
 
 {{% /choosable %}}

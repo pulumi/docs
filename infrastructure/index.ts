@@ -274,6 +274,26 @@ new aws.s3.BucketPublicAccessBlock("social-post-state-public-access-block", {
     restrictPublicBuckets: true,
 });
 
+// Bucket for the existing-content review ledger: one JSON object per reviewed
+// page (key = page slug) recording when it was last reviewed. The review
+// workflow reads it to enforce cooldowns and writes it after each run, so the
+// bookkeeping never has to round-trip through a PR. Versioned (audit trail)
+// and private, mirroring the social-post-state bucket above.
+const contentReviewLedgerBucket = new aws.s3.Bucket("content-review-ledger", {});
+
+new aws.s3.BucketVersioning("content-review-ledger-versioning", {
+    bucket: contentReviewLedgerBucket.id,
+    versioningConfiguration: { status: "Enabled" },
+});
+
+new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", {
+    bucket: contentReviewLedgerBucket.id,
+    blockPublicAcls: true,
+    blockPublicPolicy: true,
+    ignorePublicAcls: true,
+    restrictPublicBuckets: true,
+});
+
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
 });
@@ -1158,6 +1178,7 @@ async function createAliasRecord(
 
 export const uploadsBucketName = uploadsBucket.bucket;
 export const socialStateBucketName = socialStateBucket.bucket;
+export const contentReviewLedgerBucketName = contentReviewLedgerBucket.bucket;
 export const originBucketWebsiteDomain = originBucket.websiteDomain;
 export const originBucketWebsiteEndpoint = originBucket.websiteEndpoint;
 export const cloudFrontDomain = cdn.domainName;
