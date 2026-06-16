@@ -180,7 +180,7 @@ aws:region                    us-west-2
 greeting                      Hola
 ```
 
-For object values, the environment and stack configurations are deep-merged using [JSON merge patch](https://datatracker.ietf.org/doc/html/rfc7396) semantics: the two objects are combined key by key, and the stack's value wins for any key defined in both.
+For object values, the environment and stack configurations are deep-merged using [JSON merge patch](https://datatracker.ietf.org/doc/html/rfc7396) semantics: the two objects are combined key by key, and the stack's value wins for any key defined in both. This deep-merge behavior is specific to `pulumiConfig`. It differs from how an object value declared as a project-level default in `Pulumi.yaml` combines with a stack-level value in `Pulumi.<stack-name>.yaml`: there the stack value _replaces_ the project default outright rather than merging into it.
 
 {{< notes type="info" >}}
 This is the opposite of how [`environmentVariables`](#precedence) resolve against your local environment, where the value from the environment wins. The two rules are distinct.
