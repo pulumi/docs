@@ -41,4 +41,4 @@ Learn more about [no-code workflows](/docs/idp/concepts/no-code-stacks/) and [Pu
 
 ## Custom IDP
 
-Pulumi's flexible building blocks can support organizations with bespoke needs who need to build their own IDP. You can integrate Pulumi with your existing developer portal using [Organization Templates](/docs/idp/concepts/organization-templates/), the [Pulumi Backstage Plugin](/docs/idp/concepts/backstage-plugin/), or by [publishing from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
+Pulumi's flexible building blocks can support organizations with bespoke needs who need to build their own IDP. You can integrate Pulumi with your existing developer portal using [Organization Templates](/docs/idp/concepts/organization-templates/), the [Pulumi Backstage Plugin](/docs/idp/integrations/backstage-plugin/), or by [publishing from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).

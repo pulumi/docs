@@ -411,7 +411,13 @@ function getDefaultExcludedKeywords() {
         // Old internal URLs with working S3 redirects (issue #17449)
         "https://www.pulumi.com/docs/cli/commands/pulumi_plugin_install",
         "https://www.pulumi.com/docs/cli/commands/pulumi_schema_check",
-        "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies/",
+        "https://www.pulumi.com/docs/using-pulumi/crossguard/compliance-ready-policies",                  // S3-redirects to github.com/pulumi/compliance-policies; substring covers /, /index.html, and anchor variants
+        // Old internal URLs with working S3 redirects, flagged on the 2026-06-16 run
+        "https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/compliance-ready-policies",  // blog/deployment-guardrails-with-policy-as-code, blog/devsecops-strategy-...-tivity-health: S3 → github.com/pulumi/compliance-policies (cross-host redirect BLC mishandles)
+        "https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/awsguard",                   // blog/deployment-guardrails-with-policy-as-code: S3 → github.com/pulumi/pulumi-policy-aws
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/cluster-services/",                    // blog/getting-started-with-k8s-part6, blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
+        "https://www.pulumi.com/docs/iac/clouds/aws/guides/cloudwatch",                                  // blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws: S3 → /docs/iac/guides/clouds/aws/ (sub-page deleted; anchors no longer apply)
+        "https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/",                       // blog/unified-programmatic-approach-...-bmw, docs/reference/cloud-rest-api/organizations (from OpenAPI spec): S3 → /docs/administration/access-identity/oidc-issuers/
         // External links reported as broken in issue #17495
         "https://roadmap.sh/videos/scaling-the-unscalable",
         "https://redis.io/docs/ui/cli/",
