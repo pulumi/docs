@@ -2,16 +2,21 @@
 """Summarize permission-denied tool calls from a Claude Code execution log.
 
 TEMPORARY DIAGNOSTIC. The content-review worker runs the review model under a
-tight `--allowed-tools` allowlist, and runs show a high `permission_denials_count`
-(12-21 per run) with no record of *which* commands were rejected — the GitHub log
+tight `--allowed-tools` allowlist, and runs show a high permission-denial count
+(6-21 per run) with no record of *which* commands were rejected — the GitHub log
 streams only the init and result events. This reads the action's `execution_file`
-(the full stream-json transcript, which only exists on the runner) and prints the
-denied command strings so the allowlist can be sized from real data.
+(the full message array, which only exists on the runner) and prints the denied
+command strings so the allowlist can be sized from real data.
+
+The authoritative source is the SDK result message's `permission_denials` array
+(claude-code-action derives its `permission_denials_count` from exactly this:
+`resultMsg.permission_denials?.length`). Each entry carries the denied call's
+`tool_name` and `tool_input`, so we read it directly rather than scraping
+tool_result text.
 
 Safe for a public repo: it emits only the model's own *attempted* (and therefore
 un-executed) command strings — never tool results, which can carry command output
-or secrets. It cross-checks its tally against the result event's
-`permission_denials_count` and notes any mismatch so the parse can be trusted.
+or secrets.
 
 Usage: python3 summarize-denials.py <execution_file>
 """
@@ -24,22 +29,9 @@ import json
 import os
 import sys
 
-# Substrings that mark a tool-permission rejection in a tool_result. Kept broad
-# (matching is anchored on an `is_error` result) so a wording change upstream
-# doesn't silently drop denials.
-DENIAL_MARKERS = (
-    "haven't granted",
-    "hasn't been granted",
-    "requested permissions",
-    "permission to use",
-    "not allowed to use",
-    "permission denied",
-    "permission to run",
-)
 
-
-def load_events(path: str) -> list[dict]:
-    """Return the transcript events, tolerating a JSON array or JSONL."""
+def load_events(path: str) -> list:
+    """Return the message array, tolerating a JSON array, JSONL, or wrapper."""
     text = open(path, encoding="utf-8").read()
     try:
         data = json.loads(text)
@@ -52,30 +44,58 @@ def load_events(path: str) -> list[dict]:
     return []
 
 
-def content_blocks(event: dict) -> list:
-    """The content blocks of an event, whether nested under `message` or not."""
-    msg = event.get("message", event)
-    blocks = msg.get("content")
-    return blocks if isinstance(blocks, list) else []
+def find_denials(events: list) -> list:
+    """The permission_denials array, from the result message or anywhere it sits.
+
+    Primary: the `type == "result"` message's `permission_denials`. Fallback: a
+    recursive search, so a wrapper/shape change still surfaces the data.
+    """
+    for ev in events:
+        if isinstance(ev, dict) and ev.get("type") == "result":
+            pd = ev.get("permission_denials")
+            if isinstance(pd, list):
+                return pd
+
+    found: list = []
+
+    def walk(node):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k == "permission_denials" and isinstance(v, list):
+                    found.extend(v)
+                else:
+                    walk(v)
+        elif isinstance(node, list):
+            for item in node:
+                walk(item)
+
+    walk(events)
+    return found
 
 
-def block_text(content) -> str:
-    """Flatten a tool_result `content` (string or list of text blocks)."""
-    if isinstance(content, str):
-        return content
-    if isinstance(content, list):
-        return " ".join(
-            b.get("text", "") for b in content if isinstance(b, dict)
-        )
-    return ""
-
-
-def describe(tool_use: dict) -> str:
-    """A short label for a tool_use: the Bash command, else the tool name."""
-    name = tool_use.get("name", "?")
-    inp = tool_use.get("input") or {}
-    detail = inp.get("command") or inp.get("file_path") or inp.get("path")
+def describe(denial: dict) -> str:
+    """A short label for a denied call: tool name + the Bash command if present."""
+    name = denial.get("tool_name") or denial.get("name") or "?"
+    inp = denial.get("tool_input") or denial.get("input") or {}
+    if isinstance(inp, dict):
+        detail = inp.get("command") or inp.get("file_path") or inp.get("path")
+        if not detail and inp:
+            detail = json.dumps(inp, sort_keys=True)[:200]
+    else:
+        detail = str(inp)[:200]
     return f"{name}: {detail}" if detail else name
+
+
+def event_skeleton(events: list) -> str:
+    """A values-free shape summary, to refine the parser if denials don't surface."""
+    type_counts: collections.Counter[str] = collections.Counter()
+    keys: set[str] = set()
+    for ev in events:
+        if isinstance(ev, dict):
+            type_counts[str(ev.get("type", "<no type>"))] += 1
+            keys.update(ev.keys())
+    types = ", ".join(f"{t}×{n}" for t, n in type_counts.most_common())
+    return f"{len(events)} messages; types: {types or 'none'}; top-level keys: {sorted(keys)}"
 
 
 def main() -> int:
@@ -92,39 +112,20 @@ def main() -> int:
         print(f"summarize-denials: could not parse execution log ({e})")
         return 0
 
-    # Map each tool_use id to its label, then attribute denial results back to it.
-    labels: dict[str, str] = {}
-    reported_count = None
-    for ev in events:
-        for b in content_blocks(ev):
-            if b.get("type") == "tool_use":
-                labels[b.get("id")] = describe(b)
-        if ev.get("type") == "result":
-            reported_count = ev.get("permission_denials_count", reported_count)
+    denials = find_denials(events)
+    tally: collections.Counter[str] = collections.Counter()
+    for d in denials:
+        tally[describe(d) if isinstance(d, dict) else str(d)[:200]] += 1
 
-    denied: collections.Counter[str] = collections.Counter()
-    for ev in events:
-        for b in content_blocks(ev):
-            if b.get("type") != "tool_result" or not b.get("is_error"):
-                continue
-            text = block_text(b.get("content")).lower()
-            if any(m in text for m in DENIAL_MARKERS):
-                denied[labels.get(b.get("tool_use_id"), "<unknown tool>")] += 1
-
-    total = sum(denied.values())
-    lines = [f"## Tool permission denials ({total} matched)", ""]
-    if denied:
-        for label, n in denied.most_common():
+    lines = [f"## Tool permission denials ({len(denials)})", ""]
+    if tally:
+        for label, n in tally.most_common():
             lines.append(f"- ({n}×) `{label}`")
     else:
-        lines.append("_No denial markers found in the transcript._")
-    if reported_count is not None and reported_count != total:
-        lines += [
-            "",
-            f"> Note: result reports {reported_count} denials but {total} were "
-            "matched here — the denial wording may have changed; widen "
-            "`DENIAL_MARKERS`.",
-        ]
+        # No denials surfaced — could be a genuinely clean run, or a shape change.
+        # The skeleton (no values) lets us tell which without another blind guess.
+        lines.append("_No permission_denials found._")
+        lines += ["", f"<sub>shape: {event_skeleton(events)}</sub>"]
     report = "\n".join(lines)
     print(report)
 
