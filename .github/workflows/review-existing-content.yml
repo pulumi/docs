@@ -111,17 +111,39 @@ jobs:
           aws s3 cp "${{ vars.CONTENT_REVIEW_TRAFFIC_S3_URI }}" .traffic-snapshot --quiet \
             || echo "traffic snapshot unavailable; selection proceeds without it"
 
+      # The ledger bucket is a resource of our own Pulumi stack, so resolve its
+      # name from the stack output rather than a hand-maintained repo variable —
+      # the same pattern schedule-social.yml uses for socialStateBucketName. This
+      # can't drift if the (auto-named) bucket is ever replaced. Degrades
+      # gracefully: if the output isn't there, `uri` stays empty and the ledger
+      # fetch below is skipped, leaving selection on tier + age.
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+      - name: Resolve ledger bucket
+        id: ledger-bucket
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
+          else
+            echo "ledger bucket output unavailable; selection proceeds without cooldowns"
+          fi
+
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
       # it down to a local cache that select-articles.py reads via --ledger-dir.
       # Degrades gracefully like the traffic fetch: an empty/absent ledger just
       # means selection falls back to tier + age with nothing in cooldown.
       - name: Fetch review ledger from S3
-        if: vars.CONTENT_REVIEW_LEDGER_S3_URI != ''
+        if: steps.ledger-bucket.outputs.uri != ''
         continue-on-error: true
         run: |
           mkdir -p .ledger-cache
-          aws s3 sync "${{ vars.CONTENT_REVIEW_LEDGER_S3_URI }}" .ledger-cache/ --quiet \
+          aws s3 sync "${{ steps.ledger-bucket.outputs.uri }}" .ledger-cache/ --quiet \
             || echo "review ledger unavailable; selection proceeds without cooldowns"
 
       # Deterministic selection: the model never chooses what to review.
