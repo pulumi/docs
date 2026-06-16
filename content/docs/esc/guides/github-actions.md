@@ -17,7 +17,7 @@ aliases:
 
 The [Pulumi ESC GitHub Action](https://github.com/marketplace/actions/esc-action) allows you to run ESC commands in your GitHub Actions workflows or inject secrets and configuration into your GitHub Actions workflows.
 
-- Minimally, the GitHub action will download the Pulumi CLI, which provides the `pulumi esc` commands. If a `version` is specified, that version will be downloaded.
+- Minimally, the GitHub action will download the Pulumi CLI, which provides the `pulumi env` commands. If a `version` is specified, that version will be downloaded.
 - Optionally, if an `environment` is passed in as an input, the action will inject all environment variables (specifically the keys under `values.environmentVariables` and projected files under `values.files`) from the environment into the current action/workflow environment.
 - If specific keys are passed in using the `keys` input - only those keys will be injected into the GitHub Workflow.
 
@@ -130,8 +130,8 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Export secrets to ESC
         run: |
-          pulumi esc get $ESC_ENVIRONMENT || pulumi esc init $ESC_ENVIRONMENT
-          echo "$GITHUB_SECRETS" | python3 -c 'import sys, yaml, json; j=json.loads(sys.stdin.read()); print(yaml.safe_dump({"values": {"environmentVariables": {name: {"fn::secret": value} for (name, value) in j.items() if name != "github_token"}}}))' | pulumi esc edit $ESC_ENVIRONMENT -f -
+          pulumi env get $ESC_ENVIRONMENT || pulumi env init $ESC_ENVIRONMENT
+          echo "$GITHUB_SECRETS" | python3 -c 'import sys, yaml, json; j=json.loads(sys.stdin.read()); print(yaml.safe_dump({"values": {"environmentVariables": {name: {"fn::secret": value} for (name, value) in j.items() if name != "github_token"}}}))' | pulumi env edit $ESC_ENVIRONMENT -f -
         shell: bash
         env:
           ESC_ENVIRONMENT: myorg/myproject/myenvironment

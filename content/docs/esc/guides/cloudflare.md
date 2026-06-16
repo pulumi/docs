@@ -51,13 +51,13 @@ pulumi login # if needed
 
 ## create a new ESC Environment
 ESC_ENV=my-project/dev-environment
-pulumi esc init ${ESC_ENV}
+pulumi env init ${ESC_ENV}
 ```
 
 Edit the Environment in your terminal:
 
 ```bash
-pulumi esc edit ${ESC_ENV}
+pulumi env edit ${ESC_ENV}
 ```
 
 Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. Note: the API token is declared as a secret. Once the Environment is saved, Pulumi will encrypt its value and replace it with ciphertext.
@@ -72,7 +72,7 @@ values:
 
 Now that the Pulumi ESC Environment is created, it can be consumed in a variety of ways, such as running other shell commands without having to set the environment variables locally first.
 
-The `pulumi esc run` command opens the Environment you previously created, sets the specified environment variables into a temporary environment, and then uses those environment variables in the context of the `wrangler` commands.
+The `pulumi env run` command opens the Environment you previously created, sets the specified environment variables into a temporary environment, and then uses those environment variables in the context of the `wrangler` commands.
 
 ### 2. Use ESC with `wrangler whoami`
 
@@ -83,12 +83,12 @@ Log into your Cloudflare account without needing to manage the credentials direc
 npx wrangler logout
 
 # retrieve the esc environment and authenticate programmatically
-pulumi esc run ${ESC_ENV} npx wrangler whoami
+pulumi env run ${ESC_ENV} npx wrangler whoami
 ```
 
 Because we are running `wrangler` in non-interactive mode, it requires a Cloudflare API token and account ID for authentication. The `wrangler whoami` retrieves details about the provided credentials.
 
-For additional options and details, see `pulumi esc run --help`.
+For additional options and details, see `pulumi env run --help`.
 
 ### 3. Use ESC to create your `.dev.vars` file
 
@@ -98,13 +98,13 @@ Create a new ESC Environment:
 
 ```bash
 ESC_ENV=my-project/dev-vars-environment
-pulumi esc init ${ESC_ENV}
+pulumi env init ${ESC_ENV}
 ```
 
 Edit the environment in your terminal:
 
 ```bash
-pulumi esc edit ${ESC_ENV}
+pulumi env edit ${ESC_ENV}
 ```
 
 There are two options for managing the `.dev.vars` definition.
@@ -121,7 +121,7 @@ There are two options for managing the `.dev.vars` definition.
   Generate the `.dev.vars` file:
 
   ```bash
-  pulumi esc open ${ESC_ENV} --format dotenv > .dev.vars
+  pulumi env open ${ESC_ENV} --format dotenv > .dev.vars
   ```
 
 - Option 2: Use the `files` section to add a value. When the Environment is opened, the value is copied to a temporary file on your system, with the path set as an environment variable with the key name. Paste the contents below in the editor:
@@ -137,10 +137,10 @@ There are two options for managing the `.dev.vars` definition.
   Generate the `.dev.vars` file:
 
   ```bash
-  pulumi esc run -i ${ESC_ENV} -- sh -c 'cat $DEV_VARS > .dev.vars'
+  pulumi env run -i ${ESC_ENV} -- sh -c 'cat $DEV_VARS > .dev.vars'
   ```
 
-  For additional options and details, see `pulumi esc run --help`.
+  For additional options and details, see `pulumi env run --help`.
 
 ### 4. Use ESC with `wrangler secret put`
 
@@ -150,13 +150,13 @@ Add a new value to your `my-project/dev-environment` Environment:
 
 ```bash
 ESC_ENV=my-project/dev-environment
-pulumi esc set ${ESC_ENV} environmentVariables.TOP_SECRET "aliens are real" --secret
+pulumi env set ${ESC_ENV} environmentVariables.TOP_SECRET "aliens are real" --secret
 ```
 
 Share the secret with your Worker.
 
 ```bash
-pulumi esc run -i ${ESC_ENV} -- sh -c 'echo "$TOP_SECRET" | npx wrangler secret put TOP_SECRET'
+pulumi env run -i ${ESC_ENV} -- sh -c 'echo "$TOP_SECRET" | npx wrangler secret put TOP_SECRET'
 ```
 
 Consume the secret in your Worker script. Here's an example using TypeScript:
@@ -204,7 +204,7 @@ pulumi login # if needed
 
 ## create a new ESC Environment
 ESC_ENV=my-project/pulumi-environment
-pulumi esc init ${ESC_ENV}
+pulumi env init ${ESC_ENV}
 ```
 
 Paste the contents below in the editor and replace the `abc...` API token and Account ID value with yours. These values are to be consumed by a Pulumi program hence they are placed under the `pulumiConfig` section. See the [syntax reference](https://www.pulumi.com/docs/esc/concepts/environments/) for more options.

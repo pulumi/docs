@@ -362,7 +362,7 @@ values:
           service: my-api
 ```
 
-After running `pulumi esc rotate`, the environment will contain:
+After running `pulumi env rotate`, the environment will contain:
 
 ```yaml
 apiCredentials:

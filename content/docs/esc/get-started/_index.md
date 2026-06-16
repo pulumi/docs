@@ -110,7 +110,7 @@ Add both plaintext configuration and encrypted secrets to your environment:
 Open your environment to retrieve all values, including decrypted secrets:
 
 ```bash
-pulumi esc open my-project/dev
+pulumi env open my-project/dev
 ```
 
 You should see output like:
@@ -132,7 +132,7 @@ Now that you've created your first environment, explore these essential guides:
 
 - **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Use ESC environments in your infrastructure code to centralize secrets across all stacks
 - **[Managing secrets](/docs/esc/operations/managing-secrets/)** - Store, organize, and retrieve secrets using the CLI and console
-- **[Running commands with pulumi esc run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
+- **[Running commands with pulumi env run](/docs/esc/guides/running-commands/)** - Inject secrets into any command or script as environment variables
 - **[Importing environments](/docs/esc/concepts/imports/)** - Compose environments to share configuration across teams and projects
 - **[Dynamic login credentials](/docs/esc/providers/login/)** - Generate short-lived cloud credentials using OIDC with AWS, Azure, GCP, and more
 

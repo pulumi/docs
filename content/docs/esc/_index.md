@@ -63,7 +63,7 @@ sections:
     description: Store, retrieve, and organize secrets in ESC environments.
     link: /docs/esc/operations/managing-secrets/
   - icon: play
-    heading: Run commands with pulumi esc run
+    heading: Run commands with pulumi env run
     description: Inject environment values into any command or script.
     link: /docs/esc/guides/running-commands/
   - icon: pulumi-iac

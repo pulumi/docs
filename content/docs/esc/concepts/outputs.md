@@ -28,7 +28,7 @@ The [`pulumi` CLI](/docs/iac/download-install/) and other ESC consumers conventi
 
 ## environmentVariables
 
-The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`pulumi esc run`](/docs/iac/cli/commands/pulumi_env_run) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
+The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
 
 This property is also used by [Pulumi policy packs](/docs/insights/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, `environmentVariables` are injected into the policy runtime as environment variables.
 
@@ -56,16 +56,16 @@ values:
 }
 ```
 
-#### Using `pulumi esc run`
+#### Using `pulumi env run`
 
 ```console
-$ pulumi esc run default/greet -- sh -c '${GREETING}, ${USER}!'
+$ pulumi env run default/greet -- sh -c '${GREETING}, ${USER}!'
 Hello, user!
 ```
 
 ## files
 
-The `files` reserved property contains values that should be written to temporary files. For example, [`pulumi esc run`](/docs/iac/cli/commands/pulumi_env_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
+The `files` reserved property contains values that should be written to temporary files. For example, [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
 
 ### Properties
 
@@ -94,10 +94,10 @@ values:
 }
 ```
 
-#### Using `pulumi esc run`
+#### Using `pulumi env run`
 
 ```console
-$ pulumi esc run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
+$ pulumi env run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
 /tmp/tmp.iBApHfcsJ1
 Hello, user!
 ```

@@ -84,17 +84,17 @@ If a draft already exists, the editor opens in read-only mode with a banner indi
 
 #### From the CLI
 
-Use the `--draft` flag with [`pulumi esc set`](/docs/iac/cli/commands/pulumi_env_set/) or [`pulumi esc edit`](/docs/iac/cli/commands/pulumi_env_edit/) to create or update a draft:
+Use the `--draft` flag with [`pulumi env set`](/docs/iac/cli/commands/pulumi_env_set/) or [`pulumi env edit`](/docs/iac/cli/commands/pulumi_env_edit/) to create or update a draft:
 
 ```bash
 # Create a new draft
-pulumi esc set --draft my-org/my-project/prod-env FEATURE_X_ENABLED true
+pulumi env set --draft my-org/my-project/prod-env FEATURE_X_ENABLED true
 
 # Update an existing draft by ID
-pulumi esc set --draft=cr-123 my-org/my-project/prod-env FEATURE_X_ENABLED true
+pulumi env set --draft=cr-123 my-org/my-project/prod-env FEATURE_X_ENABLED true
 
 # Edit the full environment definition as a draft
-pulumi esc edit --draft my-org/my-project/prod-env
+pulumi env edit --draft my-org/my-project/prod-env
 ```
 
 ### Editing and reviewing drafts
@@ -149,10 +149,10 @@ The request will appear in the **Approvals** tab for designated reviewers.
 
 #### From the CLI
 
-Use the `pulumi esc open-request` command to create an access request:
+Use the `pulumi env open-request` command to create an access request:
 
 ```bash
-pulumi esc open-request my-org/my-project/prod-env \
+pulumi env open-request my-org/my-project/prod-env \
   --access-duration=2h \
   --grant-expiration=24h \
   --description="Investigating production issue #1234"
@@ -176,7 +176,7 @@ Open requests are listed in the **Approvals** tab in Pulumi Cloud. Select **Revi
 Once your open request is applied, you can open the environment normally:
 
 ```bash
-pulumi esc open my-org/my-project/prod-env
+pulumi env open my-org/my-project/prod-env
 ```
 
 The environment will open successfully as long as:

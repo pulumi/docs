@@ -80,8 +80,8 @@ For more installation options, visit the [Pulumi CLI installation docs](/docs/ia
 Next, use the Pulumi CLI to [create the first environment](/docs/esc/concepts/environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
 
 ```bash
-pulumi esc init esc-k8-tutorial/base
-pulumi esc init esc-k8-tutorial/db
+pulumi env init esc-k8-tutorial/base
+pulumi env init esc-k8-tutorial/db
 ```
 
 These environments will handle Kubernetes cluster configuration and database specific secrets and configuration.

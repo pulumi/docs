@@ -20,7 +20,7 @@ This guide shows you how to store and retrieve secrets in Pulumi ESC environment
 
 - [Pulumi CLI](/docs/iac/download-install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
-- An ESC environment (create one with `pulumi esc init <org>/<project>/<env-name>`)
+- An ESC environment (create one with `pulumi env init <org>/<project>/<env-name>`)
 
 ## Understanding ESC values
 
@@ -48,13 +48,13 @@ Values can be:
 Add a secret to your environment using the `--secret` flag:
 
 ```bash
-pulumi esc set <org>/<project>/<env-name> apiKey my-secret-value --secret
+pulumi env set <org>/<project>/<env-name> apiKey my-secret-value --secret
 ```
 
 For example:
 
 ```bash
-pulumi esc set my-org/my-project/dev apiKey demo-secret-123 --secret
+pulumi env set my-org/my-project/dev apiKey demo-secret-123 --secret
 ```
 
 This encrypts the value before storing it.
@@ -101,7 +101,7 @@ values:
       -----END RSA PRIVATE KEY-----
 ```
 
-The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `pulumi esc set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
+The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `pulumi env set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
 
 ## Retrieving secrets
 
@@ -110,7 +110,7 @@ The `|` character tells YAML to preserve newlines, which is required for PEM-for
 Open your environment to retrieve all values, including secrets:
 
 ```bash
-pulumi esc open <org>/<project>/<env-name>
+pulumi env open <org>/<project>/<env-name>
 ```
 
 This returns all values in JSON format with secrets revealed:
@@ -125,7 +125,7 @@ This returns all values in JSON format with secrets revealed:
 To retrieve a single value:
 
 ```bash
-pulumi esc get <org>/<project>/<env-name> apiKey
+pulumi env get <org>/<project>/<env-name> apiKey
 ```
 
 ### Via the Pulumi Cloud console
@@ -160,7 +160,7 @@ values:
 Access nested values with dot notation:
 
 ```bash
-pulumi esc get my-org/my-project/dev database.password
+pulumi env get my-org/my-project/dev database.password
 ```
 
 ### Multiple environments
@@ -200,7 +200,7 @@ ESC supports two approaches to secret rotation:
 **Manual update** — Replace a secret value by setting a new one:
 
 ```bash
-pulumi esc set my-org/my-project/prod apiKey new-secret-value --secret
+pulumi env set my-org/my-project/prod apiKey new-secret-value --secret
 ```
 
 ESC versions every change, so you can audit the history or roll back if needed.
@@ -219,5 +219,5 @@ Use [Role-Based Access Control](/docs/esc/administration/access-control/) to lim
 
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull secrets from AWS, Azure, GCP secret stores
-- [Running commands with pulumi esc run](/docs/esc/guides/running-commands/) - Inject secrets into any command
+- [Running commands with pulumi env run](/docs/esc/guides/running-commands/) - Inject secrets into any command
 - [Access control reference](/docs/esc/administration/access-control/) - Complete RBAC documentation

@@ -18,7 +18,7 @@ aliases:
 
 The `infisical-login` provider enables you to log in to Infisical using OpenID Connect or by providing static
 credentials. The provider will return a set of credentials that can be used to run Infisical CLI commands using
-the [pulumi esc run](/docs/iac/cli/commands/pulumi_env_run/) command and also pull in secrets from Infisical using the
+the [pulumi env run](/docs/iac/cli/commands/pulumi_env_run/) command and also pull in secrets from Infisical using the
 `infisical-secrets` provider.
 
 ## Example

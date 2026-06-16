@@ -162,7 +162,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Secure Environment Variables</td>
-        <td>Yes, the <code>pulumi esc run</code> CLI command can be used to specify which secrets are available as environment variables</td>
+        <td>Yes, the <code>pulumi env run</code> CLI command can be used to specify which secrets are available as environment variables</td>
         <td>No, all values are available as environment variables</td>
     </tr>
         <td>Plaintext Read Only Mode</td>

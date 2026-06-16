@@ -55,7 +55,7 @@ values:
 The Kubernetes configuration is picked up automatically by the `kubectl` command:
 
 ```bash
-$ pulumi esc run <your-project-name>/<your-environment-name> -- kubectl get namespaces
+$ pulumi env run <your-project-name>/<your-environment-name> -- kubectl get namespaces
 ```
 
 This command opens the environment you just created, renders the kubeconfig as a temporary file, sets

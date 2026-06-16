@@ -51,7 +51,7 @@ The application you're building is a Node.js web service designed to return a dy
 To get started, use the Pulumi CLI to create a new project and environment in the organization of your choice. We'll use the `tutorials` organization in this tutorial as an example. Name the new project `messages` and the environment `dev`:
 
 ```bash
-$ pulumi esc init tutorials/messages/dev
+$ pulumi env init tutorials/messages/dev
 
 Environment created: tutorials/messages/dev
 ```
@@ -62,16 +62,16 @@ Once it's created, you'll be able to see the new project in Pulumi Cloud as well
 
 ## Create a new configuration setting
 
-Use `pulumi esc set` to create a new setting for the message of the day and add it to the `dev` environment. Name the setting `motd`:
+Use `pulumi env set` to create a new setting for the message of the day and add it to the `dev` environment. Name the setting `motd`:
 
 ```bash
-$ pulumi esc set tutorials/messages/dev motd 'Hello, world!'
+$ pulumi env set tutorials/messages/dev motd 'Hello, world!'
 ```
 
-You're now able to use this setting in any way you like. Try using `pulumi esc get`, for example, in combination with `echo` to fetch the message and print it to the terminal:
+You're now able to use this setting in any way you like. Try using `pulumi env get`, for example, in combination with `echo` to fetch the message and print it to the terminal:
 
 ```bash
-$ echo "$(pulumi esc get tutorials/messages/dev motd --value json)"
+$ echo "$(pulumi env get tutorials/messages/dev motd --value json)"
 
 "Hello, world!"
 ```
@@ -87,17 +87,17 @@ As of now, your `dev` environment has two versions:  version `1`, the empty star
 Now let's produce a third version by setting the value of `motd` again:
 
 ```bash
-$ pulumi esc set tutorials/messages/dev motd 'Good day, world!'
+$ pulumi env set tutorials/messages/dev motd 'Good day, world!'
 
-$ echo "$(pulumi esc get tutorials/messages/dev motd --value json)"
+$ echo "$(pulumi env get tutorials/messages/dev motd --value json)"
 
 "Good day, world!"
 ```
 
-With `pulumi esc version history`, you can confirm that version `3` now exists:
+With `pulumi env version history`, you can confirm that version `3` now exists:
 
 ```bash
-$ pulumi esc version history tutorials/messages/dev
+$ pulumi env version history tutorials/messages/dev
 
 revision 3 (tag: latest)
 Author: Christian Nunciato <cnunciato>
@@ -117,7 +117,7 @@ Date:   2024-09-18 15:04:20.07 -0700 PDT
 In the output above, you may also have noticed that version `3` is now [_tagged_](https://www.pulumi.com/docs/esc/concepts/versioning/#tagging-versions) with a label of `latest`. Every environment has a built-in `latest` that always points to the most recent version of the environment. You can fetch an environment by tag by adding an `@` symbol with the tag name to the end of the environment name. For example, to pull the `latest` version explicitly:
 
 ```bash
-$ pulumi esc get tutorials/messages/dev@latest motd --value json
+$ pulumi env get tutorials/messages/dev@latest motd --value json
 
 "Good day, world!"
 ```
@@ -131,7 +131,7 @@ To demonstrate how version tagging works in practice, let's stand up a set of we
 First, create a new version tag called `active` and apply it to version `3` of the environment:
 
 ```bash
-$ pulumi esc version tag tutorials/messages/dev@active @3
+$ pulumi env version tag tutorials/messages/dev@active @3
 ```
 
 The `active` tag identifies the message that all applications should deliver.
@@ -139,7 +139,7 @@ The `active` tag identifies the message that all applications should deliver.
 Verify the currently tagged version with the CLI:
 
 ```bash
-$ pulumi esc get tutorials/messages/dev@active motd --value json
+$ pulumi env get tutorials/messages/dev@active motd --value json
 
 "Good day, world!"
 ```
@@ -151,12 +151,12 @@ The Versions tab should also reflect this:
 Now try setting a new `motd` value, and notice that while the `latest` tag immediately reflects the new value, the `active` tag's value remains unchanged at version `3`:
 
 ```bash
-$ pulumi esc set tutorials/messages/dev motd 'Lovely to see you, world!'
+$ pulumi env set tutorials/messages/dev motd 'Lovely to see you, world!'
 
-$ pulumi esc get tutorials/messages/dev@latest motd --value json
+$ pulumi env get tutorials/messages/dev@latest motd --value json
 "Lovely to see you, world!"
 
-$ pulumi esc get tutorials/messages/dev@active motd --value json
+$ pulumi env get tutorials/messages/dev@active motd --value json
 "Good day, world!"
 ```
 
@@ -227,7 +227,7 @@ Good day, world!
 Finally, update the `active` tag (either with the CLI as below or in the Pulumi Cloud console) to point to the latest version of the environment, then run the loop again to see that all applications have now been reconfigured:
 
 ```bash
-$ pulumi esc version tag tutorials/messages/dev@active @4
+$ pulumi env version tag tutorials/messages/dev@active @4
 
 $ for i in {0..4}; do curl "http://localhost:$((8080 + i))"; done
 

@@ -20,7 +20,7 @@ Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/pulum
 ## Key benefits
 
 - **Scales [Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/).** ESC eliminates duplicated secrets and configuration across stacks and makes secure cloud credentials available in every context—local development, CI/CD, and automation—so the same environment can back many stacks instead of each one carrying its own copy.
-- **Secure access from the command line.** [`pulumi esc run`](/docs/esc/guides/running-commands/) injects an environment's configuration and secrets into any command, giving developers and pipelines short-lived, scoped access without exporting long-lived credentials into their shells.
+- **Secure access from the command line.** [`pulumi env run`](/docs/esc/guides/running-commands/) injects an environment's configuration and secrets into any command, giving developers and pipelines short-lived, scoped access without exporting long-lived credentials into their shells.
 - **Reach third-party secrets without sharing access directly.** Rather than granting every user and pipeline direct access to systems like AWS Secrets Manager or HashiCorp Vault, you grant access to Pulumi Cloud, which reads those secrets on the client's behalf. [Pulumi Cloud RBAC](/docs/esc/administration/access-control/) then governs who can read each secret from one central place.
 
 ## Core concepts

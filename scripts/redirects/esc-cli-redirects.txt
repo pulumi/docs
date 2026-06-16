@@ -1,5 +1,5 @@
 # Redirects for the removed standalone ESC CLI docs (/docs/esc/cli/* and legacy /docs/esc-cli/*).
-# The standalone esc CLI is replaced by the integrated 'pulumi esc' command; these point at the Pulumi CLI command reference.
+# The standalone esc CLI is replaced by the integrated 'pulumi env' command; these point at the Pulumi CLI command reference.
 docs/esc/cli/index.html|/docs/iac/cli/commands/pulumi_env/
 docs/esc-cli/index.html|/docs/iac/cli/commands/pulumi_env/
 docs/esc/cli/commands/index.html|/docs/iac/cli/commands/pulumi_env/
