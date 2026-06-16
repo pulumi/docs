@@ -18,18 +18,6 @@ aliases:
 - /docs/iac/concepts/vs/terraform/terminology/
 ---
 
-<style>
-    main table {
-        font-size: 0.94em;
-        width: 100%;
-    }
-
-    main table th:first-child,
-    main table td:first-child {
-        width: 33%;
-    }
-</style>
-
 If you're already familiar with Terraform, learning Pulumi terminology and commands is simple. Many of the existing Terraform vocabulary and commands that you already know have direct equivalents in Pulumi. The table below lists common Terraform terms and CLI commands along with their Pulumi equivalents.
 
 ## Terminology

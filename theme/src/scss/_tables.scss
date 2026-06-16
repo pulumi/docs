@@ -1,5 +1,20 @@
+// Tier 1: every Markdown table is wrapped in .table-wrapper by the table
+// render hook (layouts/_default/_markup/render-table.html). The wrapper
+// scrolls horizontally so wide tables stay inside the docs grid instead
+// of spilling into adjacent columns.
+.table-wrapper {
+    @apply block w-full max-w-full overflow-x-auto mb-4;
+    -webkit-overflow-scrolling: touch;
+
+    table {
+        @apply mb-0;
+    }
+}
+
 table {
-    @apply border-separate rounded bg-gray-200;
+    // Gridlines are the gray-200 background showing through the cell gaps.
+    // border-spacing-px (1px) makes them 1px thick instead of the 2px default.
+    @apply border-separate border-spacing-px rounded bg-gray-200;
 
     th,
     td {
@@ -7,10 +22,71 @@ table {
     }
 
     th {
-        @apply text-left text-sm text-gray-600 font-normal bg-gray-100;
+        @apply text-left text-sm text-gray-700 font-semibold bg-gray-100;
     }
 
     td {
         @apply bg-white;
+    }
+}
+
+// Tier 2: on narrow viewports, tables that carry column headers (and
+// therefore data-label attributes) reflow into stacked cards — one card
+// per row, each cell shown as a "label: value" pair, EUI-style.
+// Below the `md` breakpoint (768px) used by _mixins.scss screen-md.
+@media (max-width: 767.98px) {
+    .table-wrapper.table-responsive {
+        @apply overflow-x-visible;
+
+        table {
+            @apply block w-full bg-transparent rounded-none;
+        }
+
+        thead {
+            @apply sr-only;
+        }
+
+        tbody {
+            @apply block;
+        }
+
+        tr {
+            @apply block w-full mb-4 rounded border border-gray-300 overflow-hidden bg-white;
+
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+
+        // Force full-width cells so any page-level column width (e.g. inline
+        // `width: 33.3%` styles on comparison pages) can't shrink the stacked
+        // cards. The class selectors here outrank element-level page rules.
+        th,
+        td {
+            @apply w-auto;
+        }
+
+        td {
+            @apply block text-left border-t border-gray-200;
+            // Break long, unbreakable tokens (e.g. inline <code>) instead of
+            // letting them overflow the card.
+            overflow-wrap: anywhere;
+
+            &:first-child {
+                @apply border-t-0;
+            }
+
+            // Stack the column header as a label above the value so wide
+            // content wraps naturally within the card.
+            &[data-label]::before {
+                content: attr(data-label);
+                @apply block mb-1 text-sm font-semibold text-gray-700;
+            }
+
+            // Empty headers (e.g. an icon-only column) get no label.
+            &[data-label=""]::before {
+                content: none;
+            }
+        }
     }
 }

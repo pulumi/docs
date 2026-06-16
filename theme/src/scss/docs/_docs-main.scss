@@ -90,12 +90,11 @@ body.section-registry {
             border: none;
             display: flex;
             flex-direction: column;
-            padding-bottom: 24px;
             flex-shrink: 0;
             margin: 0;
             width: 32px;
             flex-basis: 32px;
-            height: calc(100vh - 38px);
+            height: calc(100vh - 64px); // Fallback; JS tracks the header's visible height on scroll.
             position: sticky;
             left: 0;
             top: 0;
@@ -127,6 +126,7 @@ body.section-registry {
                 overflow-y: auto;
                 flex: 1;
                 min-height: 0;
+                padding-bottom: 24px; // Breathing room below the last item, inside the scroll area.
             }
 
             h2,
@@ -246,15 +246,10 @@ body.section-registry {
             .docs-main-nav-wrapper .docs-main-nav {
                 width: 240px;
                 flex-basis: 240px;
-                height: calc(100vh);
                 padding-left: 16px;
                 background-color: #fff;
                 box-shadow: 6px 0px 36px rgba(0, 0, 0, 0.08);
                 justify-content: space-between;
-
-                @media (min-width: 768) {
-                    height: calc(100vh - 38px);
-                }
             }
 
             nav.main-nav {

@@ -47,10 +47,18 @@ function setTableOfContentsVisibility() {
 
 function setMainNavHeight() {
     const docsMainNav = document.querySelector<HTMLElement>(".docs-main-nav");
-    const docsFooter = document.querySelector<HTMLElement>(".docs-footer");
-    if (docsMainNav && docsFooter) {
-        docsMainNav.style.height = (docsFooter.offsetHeight + window.innerHeight) + "px";
+    if (!docsMainNav) {
+        return;
     }
+
+    // Size the sticky sidebar to the viewport space below the site header.
+    // The header scrolls away on docs pages, so track its visible bottom edge:
+    // full header visible at the top of the page, full viewport once it has
+    // scrolled offscreen.
+    const header = document.querySelector<HTMLElement>("body > header");
+    const headerBottom = header ? Math.max(header.getBoundingClientRect().bottom, 0) : 0;
+    docsMainNav.style.top = headerBottom + "px";
+    docsMainNav.style.height = (window.innerHeight - headerBottom) + "px";
 }
 
 function handleResize() {
@@ -66,6 +74,7 @@ function onScroll() {
     requestAnimationFrame(() => {
         scrollRafPending = false;
         setDocsMainNavPosition();
+        setMainNavHeight();
     });
 }
 

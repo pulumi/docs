@@ -140,9 +140,9 @@ Use GitLab repositories as template sources for [Pulumi IDP](/docs/idp/concepts/
 
 If comments aren't appearing on your merge requests, verify that:
 
-1. The GitLab integration is connected and shows a valid status under **Management** > **Version control**.
-1. The webhook exists on your GitLab group. Navigate to your group's **Settings** > **Webhooks** and look for the `https://api.pulumi.com/workflow/gitlab` endpoint.
-1. The stack is associated with the correct GitLab repository and branch.
+1. In the [Pulumi Cloud console](https://app.pulumi.com), the GitLab integration is connected and shows a valid status under **Management** > **Version control**.
+1. In the GitLab console, the webhook exists on your GitLab group. Navigate to your group's **Settings** > **Webhooks** and look for the `https://api.pulumi.com/workflow/gitlab` endpoint.
+1. In the Pulumi Cloud console, the stack is associated with the correct GitLab repository and branch.
 
 ### Integration shows as disconnected
 

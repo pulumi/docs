@@ -6,6 +6,15 @@ block_external_search_index: true
 aliases:
     - /gads/gads-template
 
+# Optional: override the embedded contact form section (#contact-form) at the
+# bottom of the page. All values default to the ones shown below.
+# contact_form:
+#     headline: Talk to a Pulumi expert
+#     description: |
+#         Have questions about Pulumi, pricing, or migrating from another tool?
+#         Tell us about your use case and our team will get back to you within one business day.
+#     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
+
 heading: "Competitor Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to

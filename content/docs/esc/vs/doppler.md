@@ -13,17 +13,6 @@ menu:
 aliases:
 ---
 
-<style>
-    main table {
-        font-size: 0.94em;
-    }
-
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
-
 Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with Doppler.
 
 ## What is Doppler?
@@ -40,6 +29,7 @@ There are a couple of fundamental differences between Doppler and Pulumi ESC. Do
 
 Here's a detailed comparison of the two:
 
+<div class="table-wrapper">
 <table>
     <tr>
         <th>Feature</th>
@@ -170,5 +160,6 @@ Here's a detailed comparison of the two:
         <td>No</td>
     </tr>
 </table>
+</div>
 
 {{< get-started-esc >}}
