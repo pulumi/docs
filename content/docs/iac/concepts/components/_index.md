@@ -42,7 +42,7 @@ For example, the [AWSx](/registry/packages/awsx/) package contains many componen
 
 - `awsx.ec2.Vpc` — creates a complete VPC with subnets, route tables, and gateways preconfigured to AWS best practices.
 - `awsx.ecs.FargateService` — creates an ECS service with a load balancer and all required networking.
-- `awsx.ecr.Repository` — creates an ECR repository with image scanning and lifecycle policies.
+- `awsx.ecr.Repository` — creates an ECR repository with lifecycle policies.
 
 Your organization might publish a package that contains components like:
 
@@ -186,7 +186,7 @@ dotnet add package Pulumi.Awsx
 {{< /chooser >}}
 
 {{< notes type="info" >}}
-The [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) provides a browsable gallery of all packages in use across your Pulumi Cloud organization, including packages containing components.
+The [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) provides a browsable gallery of all packages available to your Pulumi Cloud organization, including packages containing components.
 {{< /notes >}}
 
 ## Example: consuming a component
