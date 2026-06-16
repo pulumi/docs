@@ -30,7 +30,7 @@ Before you begin, make sure you've [signed into Pulumi Cloud](https://app.pulumi
 ```bash
 $ pulumi login
 
-Manage your Pulumi ESC environments by logging in.
+Manage your Pulumi stacks by logging in.
 Run `pulumi login --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser

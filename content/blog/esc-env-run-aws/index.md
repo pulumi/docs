@@ -37,14 +37,14 @@ But what does this actually mean? Using AWS as an example, it means that we can 
 
 Now that we've covered the basics of what `pulumi env run` does, let's dive into how you can start using it! We'll walk you through everything you need to be able to run the `aws s3 ls` command without manually configuring local AWS credentials.
 
-### Step 1: Install and login to Pulumi ESC
+### Step 1: Install and log in to the Pulumi CLI
 
-To begin, you’ll need to [install the Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to login to the CLI.
+To begin, you’ll need to [install the Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
 
 ```
 $ pulumi login
-Manage your Pulumi ESC environments by logging in.
-Run `pulumi env --help` for alternative login options.
+Manage your Pulumi stacks by logging in.
+Run `pulumi login --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …

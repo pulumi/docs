@@ -46,7 +46,7 @@ Approvals can be later review and approved from the Approvals tab.
 
 ![Pending approvals page](/blog/esc-open-approvals/open-approvals-3.png)
 
-A request access can also be created from the CLI via the newly introdcued `env open-request` command.
+A request access can also be created from the CLI via the newly introduced `pulumi env open-request` command.
 
 ```bash
 $ pulumi env open-request org/project/env --access-duration=2h --grant-expiration=1h
