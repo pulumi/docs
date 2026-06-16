@@ -28,7 +28,7 @@ See our [pricing page](https://www.pulumi.com/pricing/) for details.
 
 Secrets include [static secrets](/docs/esc/operations/managing-secrets/), [dynamic login credentials](/docs/esc/providers/login/) and [dynamic secrets](/docs/esc/providers/secrets/).
 
-In other words, when using Pulumi ESC's document editor, each definition of `fn::secret` and `fn::open::*` (except with the [pulumi-stacks provider](/docs/esc/providers/secrets/pulumi-stacks/)) is counted as a secret.
+In other words, when using Pulumi ESC's document editor, each definition of `fn::secret` and `fn::open::*` (except with the [pulumi-stacks provider](/docs/esc/providers/iac/pulumi-stacks/)) is counted as a secret.
 
 Only the secrets from the latest environment revision are counted towards your bill.
 
