@@ -39,6 +39,9 @@ values:
             secretId: api-key
           app-secret:
             secretId: app-secret
+  pulumiConfig:
+    apiKey: ${aws.secrets.api-key}
+    appSecret: ${aws.secrets.app-secret}
 ```
 
 ## Example: Key/Value Pair Secrets
@@ -62,7 +65,7 @@ values:
             secretId: prod-db
     secrets-unpacked:
       db-creds:
-        fn::fromJSON: ${aws.secrets.my-secret}
+        fn::fromJSON: ${aws.secrets.db-creds}
   pulumiConfig:
     dbUserName: ${aws.secrets-unpacked.db-creds.userName}
     dbPassword: ${aws.secrets-unpacked.db-creds.password}

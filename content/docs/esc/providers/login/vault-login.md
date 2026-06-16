@@ -28,6 +28,10 @@ values:
         address: https://127.0.0.1:8200/
         jwt:
           role: example-role
+  environmentVariables:
+    # Consumed by the Vault CLI and the Pulumi Vault provider
+    VAULT_ADDR: ${vault.login.address}
+    VAULT_TOKEN: ${vault.login.token}
 ```
 
 ```yaml
@@ -42,6 +46,11 @@ values:
           token:
             fn::secret: redacted
           policies: [kv-read]
+  environmentVariables:
+    # Consumed by the Vault CLI and the Pulumi Vault provider
+    VAULT_ADDR: ${vault.login.address}
+    VAULT_TOKEN: ${vault.login.token}
+    VAULT_NAMESPACE: ${vault.login.namespace}
 ```
 
 ## Configuring OIDC

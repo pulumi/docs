@@ -30,6 +30,9 @@ values:
       fn::open::infisical-login:
         oidc:
           identityId: aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
+  environmentVariables:
+    # Consumed by the Infisical CLI for authentication
+    INFISICAL_TOKEN: ${infisical.login.accessToken}
 ```
 
 ## Configuring OIDC
