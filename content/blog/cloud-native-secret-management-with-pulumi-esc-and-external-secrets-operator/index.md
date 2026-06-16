@@ -25,7 +25,7 @@ Here is where [Pulumi ESC](/product/secrets-management/) and External Secrets Op
 
 Pulumi ESC is our new secrets management & orchestration service for environments, secrets, and configurations. It can be used as part of your Pulumi IaC (Infrastructure as Code) projects using `pulumiConfig` to expose the stored values to your Pulumi stacks.
 
-But it can also be used as a standalone service to manage secrets and configurations. Pulumi ESC provides support for applications through its dedicated SDKs built for different programming languages. It also provides a dedicated CLI, which can be used to manage secrets and configurations from the command line to provide a context for your CLI tools (e.g. `terraform`).
+But it can also be used as a standalone service to manage secrets and configurations. Pulumi ESC provides support for applications through its dedicated SDKs built for different programming languages. It can also be managed with the `pulumi env` commands in the Pulumi CLI, which can be used to manage secrets and configurations from the command line to provide a context for your CLI tools (e.g. `terraform`).
 
 For more information on Pulumi ESC, you can check out the official [documentation](/docs/esc/).
 
@@ -97,7 +97,7 @@ To follow along, you'll need the following prerequisites:
 
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed. You can also use the standalone [ESC CLI](/docs/esc/download-install/) to manage secrets and configurations.
+- [Pulumi CLI](/docs/iac/download-install/) installed. You can use the `pulumi env` commands to manage secrets and configurations.
 - `kubectl` [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 
 ### Step 1: Install ESO and Link to Pulumi ESC

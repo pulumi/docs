@@ -32,7 +32,7 @@ By packaging ESC functionality into a GitHub Action, we’re enabling teams to i
 
 At a high level, the Pulumi ESC GitHub Action can do three things:
 
-1. **Download the Pulumi ESC CLI** - By default, the action ensures the ESC CLI is installed in your GitHub Actions environment. If you provide a specific version, that version is installed.
+1. **Install the Pulumi CLI** - By default, the action ensures the Pulumi CLI is installed in your GitHub Actions environment. If you provide a specific version, that version is installed.
 2. **Inject all environment variables from an ESC environment** - If you specify an environment (for example, `tinyco/someProject/myEnv`), the action will inject all environment variables and projected files associated with that environment into the GitHub Actions context.
 3. **Inject specific environment variables from an ESC environment** - If you only need certain keys, you can specify them in the action’s inputs to pick and choose what gets injected, giving you fine-grained control.
 
@@ -60,7 +60,7 @@ jobs:
           organization: pulumi
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Install and inject ESC environment variables
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: 'tinyco/someProject/myEnv@stable'
       - name: Verify environment variables

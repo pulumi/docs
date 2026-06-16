@@ -37,7 +37,7 @@ This gives you a native, consistent workflow for gating configuration updates wi
 
 Teams can use Pulumi ESC Approvals to apply the same rigor of code review workflows to environment configurations and secrets management. Approvals help organizations enforce governance policies, meet compliance requirements, and reduce the risk of misconfigurations by requiring explicit review and sign‑off before applying changes. Each request creates a clear, auditable record of who approved what, when, and why, which is especially valuable for regulated industries or teams with strict change‑management processes.
 
-By introducing a controlled review process, Approvals let developers propose updates while ensuring only authorized reviewers can approve and apply them. This balances collaboration with security and accountability, and works seamlessly in both the Pulumi Cloud console and the ESC CLI.
+By introducing a controlled review process, Approvals let developers propose updates while ensuring only authorized reviewers can approve and apply them. This balances collaboration with security and accountability, and works seamlessly in both the Pulumi Cloud console and the Pulumi CLI.
 
 ## How It Works
 
@@ -56,10 +56,10 @@ Once a ruleset is enabled, any environment update must go through a **change req
 
 Changes pending approval are clearly visible to your team, and reviewers can inspect the diff, leave feedback, or revise the request before approving.
 
-Approvals are also fully supported in the [Pulumi ESC CLI](https://github.com/pulumi/esc), using the `--draft` flag:
+Approvals are also fully supported in the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), using the `--draft` flag:
 
 ```sh
-$ esc env set --draft org/project/env FEATURE_X_ENABLED true
+$ pulumi env set --draft org/project/env FEATURE_X_ENABLED true
 ```
 
 In addition to the CLI, Approvals can be used directly from the [ESC SDK](https://github.com/pulumi/esc-sdk)—making it easy to integrate change‑management workflows into your own applications or automation scripts.

@@ -89,8 +89,8 @@ Before we start, make sure you have the following prerequisites:
 - A [Pulumi Cloud](https://app.pulumi.com/signup) account. If you don't have one, you can create one for free.
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed. You can also use the
-  standalone [ESC CLI](/docs/esc/download-install/) to manage secrets and configurations.
+- [Pulumi CLI](/docs/iac/download-install/) installed. You can use the
+  `pulumi env` commands to manage secrets and configurations.
 - kubectl [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 
 ### Step 1: Deploy the Secrets Store CSI Driver and Pulumi ESC CSI Provider

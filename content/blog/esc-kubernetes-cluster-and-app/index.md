@@ -742,15 +742,14 @@ Duration: 13s
 Now that the application is deployed, let's take a look using `kubectl`:
 
 ```
-$ esc run eks-sandbox -- kubectl get deployments
+$ pulumi env run eks-sandbox -- kubectl get deployments
 
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE
 nginx   3/3     3            3           103s
 ```
 
 {{% notes type="info" %}}
-ESC environments can be used with the `pulumi` CLI using the [pulumi env](/docs/iac/cli/commands/pulumi_env/) command, or with
-the new standalone [esc CLI](/docs/esc-cli).
+ESC environments can be used with the `pulumi` CLI using the [pulumi env](/docs/iac/cli/commands/pulumi_env/) command.
 {{% /notes %}}
 
 ## Export Files

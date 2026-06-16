@@ -27,7 +27,7 @@ This release introduces two distinct dynamic providers for Infisical, each desig
 
 * **[`infisical-secrets`](/docs/esc/integrations/dynamic-secrets/infisical-secrets/) (Dynamic Secrets):** This provider dynamically fetches secrets stored *within* your Infisical projects and makes them available within the Pulumi ESC environment. **Use this provider when you need specific secrets *from* Infisical to configure your applications or infrastructure managed via ESC.** This centralizes secret consumption, allowing you to access Infisical secrets using the same consistent ESC patterns used for AWS, Azure, GCP, Vault, 1Password, and more.
 
-Pulumi ESC acts as a robust **secrets broker** provider consistent API interface for all your tools, applications and workflows. It securely handles *both* the generation of temporary authentication credentials (like with `infisical-login`) and the fetching of application secrets (like with `infisical-secrets`) from various providers such as Infisical, cloud platforms ([AWS](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [GCP](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)), and other secret managers ([Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)). Once centralized in ESC, these secrets and configurations are consistently available for you to consume via ESC's many developer friendly methods including the [ESC SDK](/docs/esc/development/languages-sdks/), [ESC CLI](/docs/esc/cli/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), or sync them to various platforms where they are needed such as [GitHub Secrets](https://github.com/pulumi/esc-examples/tree/main/sync/github-secrets), [AWS Secrets Manager](https://github.com/pulumi/esc-examples/tree/main/sync/aws-secrets-manager), and more!
+Pulumi ESC acts as a robust **secrets broker** provider consistent API interface for all your tools, applications and workflows. It securely handles *both* the generation of temporary authentication credentials (like with `infisical-login`) and the fetching of application secrets (like with `infisical-secrets`) from various providers such as Infisical, cloud platforms ([AWS](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [GCP](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)), and other secret managers ([Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)). Once centralized in ESC, these secrets and configurations are consistently available for you to consume via ESC's many developer friendly methods including the [ESC SDK](/docs/esc/development/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), or sync them to various platforms where they are needed such as [GitHub Secrets](https://github.com/pulumi/esc-examples/tree/main/sync/github-secrets), [AWS Secrets Manager](https://github.com/pulumi/esc-examples/tree/main/sync/aws-secrets-manager), and more!
 
 ## Getting Started: Using the Infisical Providers
 
@@ -57,11 +57,11 @@ Configure Infisical for OpenID Connect(OIDC) before you try out the providers. F
     ```
 
 1. Save the environment.
-1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/infisical-auth/oidc-login` in your CLI. The output will include the infisical.login.accessToken.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `pulumi env open pulumi-org/infisical-auth/oidc-login` in your CLI. The output will include the infisical.login.accessToken.
 1. Usage Example: Run Infisical CLI commands dynamically:
 
     ```bash
-    esc run pulumi-org/infisical-auth/oidc-login -- infisical secrets get API_KEY --projectId=<your-project-id>
+    pulumi env run pulumi-org/infisical-auth/oidc-login -- infisical secrets get API_KEY --projectId=<your-project-id>
     # The INFISICAL_TOKEN env var is automatically injected
     ```
 
@@ -105,11 +105,11 @@ Use this provider to pull secrets *from* Infisical *into* your ESC environment f
     ```
 
 1. Save the environment.
-1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `infisical.login`, the fetched secrets under `infisicalSecrets`, and the mapped `environmentVariables`.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `pulumi env open pulumi-org/my-app/dev` in your CLI. The output will show the imported `infisical.login`, the fetched secrets under `infisicalSecrets`, and the mapped `environmentVariables`.
 1. **Usage Example:** Run an application that needs these secrets:
 
     ```bash
-    esc run pulumi-org/my-app/dev -- node app.js
+    pulumi env run pulumi-org/my-app/dev -- node app.js
     # The API_KEY and APP_SECRET env vars are automatically injected
     ```
 

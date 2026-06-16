@@ -20,7 +20,7 @@ We're thrilled to unveil two new features that will empower you to organize your
 
 ## Overview of Pulumi ESC
 
-Pulumi ESC is a developer-first platform designed to simplify the management of secrets and configurations into collections called <i>[environments](/docs/esc/environments/)</i>. As a fully managed solution, it offers [dynamic cloud provider credential](/docs/esc/integrations/dynamic-login-credentials/) resolution, a rich set of [providers](/docs/esc/providers/) to retrieve secrets from external platforms, and the ability to use the secrets and configurations you have defined across any surface, including your applications and infrastructure via [Multi-language SDKs](/docs/esc/sdk/), [REST APIs](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/esc-cli/), [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/), and [Automation API](/blog/esc-automation-api-pulumi-service-provider-launch/#streamline-automated-workflows-with-automation-api-enhancements). Like all Pulumi functionality, Pulumi ESC focuses on enhancing both agility and security in modern cloud development.
+Pulumi ESC is a developer-first platform designed to simplify the management of secrets and configurations into collections called <i>[environments](/docs/esc/environments/)</i>. As a fully managed solution, it offers [dynamic cloud provider credential](/docs/esc/integrations/dynamic-login-credentials/) resolution, a rich set of [providers](/docs/esc/providers/) to retrieve secrets from external platforms, and the ability to use the secrets and configurations you have defined across any surface, including your applications and infrastructure via [Multi-language SDKs](/docs/esc/sdk/), [REST APIs](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/), [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/), and [Automation API](/blog/esc-automation-api-pulumi-service-provider-launch/#streamline-automated-workflows-with-automation-api-enhancements). Like all Pulumi functionality, Pulumi ESC focuses on enhancing both agility and security in modern cloud development.
 
 As developers have embraced Pulumi ESC to manage their collections of secrets and configurations across many teams and projects, the demand for more sophisticated organizational tools has increased. To address this growing need for more organized and efficient management of cloud environments, we are introducing Projects and Environment Tags in Pulumi ESC.
 
@@ -36,7 +36,7 @@ We have two additional features as part of this launch:
 - **Environment Clone**: Using the built-in cloning functionality, you can securely copy environments with sensitive information, preserving either the entire version history or just the latest environment state, depending on your needs.
 
 {{% notes "info" %}}
-To use Projects and Environment Tags, please update your [ESC CLI](/docs/esc-cli/) or [Pulumi CLI](/docs/cli/) and [SDK](/docs/esc/sdk/) to the latest.
+To use Projects and Environment Tags, please update your [Pulumi CLI](/docs/cli/) and [SDK](/docs/esc/sdk/) to the latest.
 {{% /notes %}}
 
 {{% notes "info" %}}
@@ -49,18 +49,18 @@ Starting <b>Apr 1, 2025</b>, users will not be able to edit their environments w
 Moving environments out of the `default` project is as easy as cloning the environment into a new project and updating any references to it. An example clone command that preserves all environment history, tags, and team access looks as follows
 
 ```bash
-  $ esc env clone default/dev your-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
+  $ pulumi env clone default/dev your-project/dev --preserve-history --preserve-env-tags --preserve-rev-tags --preserve-access
 ```
 
 {{% /notes %}}
 
-We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/esc-cli/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the ESC CLI to create and list environments within a project:
+We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the Pulumi CLI to create and list environments within a project:
 
  ```bash
-  $ esc env init cloud-pe/demo
+  $ pulumi env init cloud-pe/demo
   Environment created: dschaller/cloud-pe/demo
 
-  $ esc env ls -p cloud-pe
+  $ pulumi env ls -p cloud-pe
   cloud-pe/demo
   pulumi/cloud-pe/demo
  ```
@@ -78,15 +78,15 @@ Using Environment Tags, teams can now assign any number of custom tags to each e
 
 For example, suppose your organization has multiple environments across different geographic regions. You can use Environment Tags like 'region: us-east' or 'region: eu-central-1' to quickly filter environments by region. Similarly, for security audits, you might tag environments with ‘Compliance: SOC2’ or ‘Compliance: GDPR’ to easily find relevant environments and ensure they are compliant.
 
-You can use the Pulumi Web Console and the [CLI](/docs/esc-cli/) to create and manage Environment Tags. Here is an example of using the CLI to add and list Environment Tags.
+You can use the Pulumi Web Console and the [CLI](/docs/iac/cli/commands/pulumi_env/) to create and manage Environment Tags. Here is an example of using the CLI to add and list Environment Tags.
 
 ```bash
-$ esc env tag cloud-pe/demo region us-east-1
+$ pulumi env tag cloud-pe/demo region us-east-1
 Name: region
 Value: us-east-1
 Last updated at 2024-09-10 11:03:05.708 -0700 PDT by Derek <dschaller>
 
-$ esc env tag ls cloud-pe/demo
+$ pulumi env tag ls cloud-pe/demo
 Name: region
 Value: us-east-1
 Last updated at 2024-09-10 11:03:05.708 -0700 PDT by Derek <dschaller>

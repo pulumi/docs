@@ -26,7 +26,7 @@ Snowflake is the data cloud powerhouse for countless businesses, critical for ev
 
 <!--more-->
 
-Pulumi ESC allows you to securely manage and consume these Snowflake credentials in your applications, development workflows through [ESC SDK](/docs/esc/development/languages-sdks/), [CLI](/docs/esc/cli/), [Kubernetes integrations](/docs/esc/integrations/kubernetes/), and more!
+Pulumi ESC allows you to securely manage and consume these Snowflake credentials in your applications, development workflows through [ESC SDK](/docs/esc/development/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes integrations](/docs/esc/integrations/kubernetes/), and more!
 
 ## snowflake-login: Dynamic OIDC Authentication for Temporary Access
 

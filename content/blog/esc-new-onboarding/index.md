@@ -55,7 +55,7 @@ After we have finished setting up the trust relationship with AWS, we'll set up 
 Once setup is complete, your new environment is ready to issue short-lived credentials.
 
 ```bash
-esc run aws-login/tehsis-env -- aws s3 ls
+pulumi env run aws-login/tehsis-env -- aws s3 ls
 ```
 
 You can now access your cloud resources securely, without worrying about managing long-lived credentials.

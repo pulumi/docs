@@ -49,7 +49,7 @@ Approvals can be later review and approved from the Approvals tab.
 A request access can also be created from the CLI via the newly introdcued `env open-request` command.
 
 ```bash
-$ esc env open-request org/project/env --access-duration=2h --grant-expiration=1h
+$ pulumi env open-request org/project/env --access-duration=2h --grant-expiration=1h
 ```
 
 ## Closing notes

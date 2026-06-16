@@ -106,7 +106,7 @@ permissions:
 
 steps:
   - name: Fetch secrets from ESC
-    uses: pulumi/esc-action@v1
+    uses: pulumi/esc-action@v3
     with:
       environment: '<your-organization>/<your-esc-env>'
 ```

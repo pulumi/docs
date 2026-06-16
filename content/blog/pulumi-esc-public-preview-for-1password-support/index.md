@@ -78,7 +78,7 @@ values:
 
 {{< video title="Pulumi ESC 1Password Provider Demo" src="https://www.pulumi.com/uploads/esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
 
-`esc run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
+`pulumi env run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
 
 ## Unlocking New Possibilities
 

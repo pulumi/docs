@@ -68,7 +68,7 @@ You can run without debugging by selecting "Run Without Debugging" from the Run 
 
 ## Using Pulumi ESC
 
-Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store. The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `esc` CLI or [REST API](/docs/pulumi-cloud/reference/cloud-rest-api).
+Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store. The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `pulumi` CLI or [REST API](/docs/pulumi-cloud/reference/cloud-rest-api).
 
 For developers working with both their application infrastructure code as well as their Pulumi ESC environments, it is convenient to be able to edit ESC environments and the secrets they contain directly within the IDE without switching contexts.
 
