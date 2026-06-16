@@ -108,11 +108,14 @@ _vendor/
 # review-existing-content workflow; the ledger lives in S3, staged through
 # .content-review-ledger.json and synced down into .ledger-cache/).
 /.content-review-queue.json
-/.content-review-results.json
+/.content-review-verdict.json
 /.content-review-ledger.json
 /.ledger-cache/
 /.traffic-snapshot
 /.synthetic.patch
+# Lint re-gate scratch (worker re-lints the fix branch and captures output).
+/.lint.log
+/.lint-comment.md
 # docs-review pre-computation artifacts the worker generates before the
 # review (claim extraction/verification, Vale, frontmatter, cross-sibling).
 /.fetched-urls.json
