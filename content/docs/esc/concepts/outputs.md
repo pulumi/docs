@@ -63,6 +63,21 @@ $ esc run default/greet -- sh -c '${GREETING}, ${USER}!'
 Hello, user!
 ```
 
+### Precedence
+
+When an ESC consumer such as [`esc run`](/docs/esc/cli/commands/esc_run) runs a command, the values in `environmentVariables` are layered on top of the variables already present in your local (OS) environment. If a variable is defined in both places, **the value from the environment takes precedence** over the inherited local value.
+
+For example, the `default/greet` environment above sets `GREETING: Hello`. Even if `GREETING` is already set in your shell, the environment's value is used:
+
+```console
+$ GREETING=from-shell esc run default/greet -- printenv GREETING
+Hello
+```
+
+{{< notes type="info" >}}
+This is the opposite of how [`pulumiConfig`](#precedence-1) resolves against explicit stack configuration: there, the explicit stack value wins. Keep the two rules distinct.
+{{< /notes >}}
+
 ## files
 
 The `files` reserved property contains values that should be written to temporary files. For example, [`esc run`](/docs/esc/cli/commands/esc_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
@@ -142,6 +157,36 @@ KEY                           VALUE
 aws:region                    us-west-2
 greeting                      Hello
 ```
+
+### Precedence
+
+When a configuration key is defined both in an environment's `pulumiConfig` and explicitly in a stack's own configuration, **the explicit stack configuration value takes precedence**. Explicit stack configuration includes:
+
+- Values written directly to `Pulumi.<stack-name>.yaml` under the `config:` block.
+- Values set with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/), which writes to that same stack configuration file.
+
+For example, given the environment above (which sets `greeting: Hello`), if the stack also sets the key explicitly:
+
+```console
+$ pulumi config set greeting Hola
+```
+
+then the explicit value wins:
+
+```console
+$ pulumi config
+KEY                           VALUE
+aws:region                    us-west-2
+greeting                      Hola
+```
+
+For object values, the environment and stack configurations are deep-merged using [JSON merge patch](https://datatracker.ietf.org/doc/html/rfc7386) semantics: the two objects are combined key by key, and the stack's value wins for any key defined in both.
+
+{{< notes type="info" >}}
+This is the opposite of how [`environmentVariables`](#precedence) resolve against your local environment, where the value from the environment wins. The two rules are distinct.
+{{< /notes >}}
+
+This precedence is separate from the rule that applies _among_ multiple imported environments, where the last imported environment wins. See [Imports](/docs/esc/concepts/imports/) for details.
 
 ## policyConfig
 
