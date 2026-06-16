@@ -38,6 +38,17 @@
   {{ end }}
 {{ end }}
 
+{{/* What-is pages get Article as their main entity; if the page also has an FAQ
+     section, expose it as a FAQPage entity in the same graph under its own @id. */}}
+{{ $faqPage := dict }}
+{{ if and (eq .Type "what-is") .IsPage }}
+  {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
+  {{ if and $faqPage (ne $faqPage (dict)) }}
+    {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}
+    {{ $graph = $graph | append $faqPage }}
+  {{ end }}
+{{ end }}
+
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
 
