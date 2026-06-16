@@ -791,3 +791,5 @@ environment:
 config:
     # normal pulumi config
 ```
+
+When a key is set both by an imported environment and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.

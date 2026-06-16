@@ -93,6 +93,10 @@ values:
 
 Learn more in [Importing environments](/docs/esc/concepts/imports/).
 
+{{< notes type="info" >}}
+When a key is set both in an environment's `pulumiConfig` and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.
+{{< /notes >}}
+
 ## Convert existing stack config to an ESC environment
 
 To convert your existing stack config to a new ESC environment, use the Pulumi CLI:
