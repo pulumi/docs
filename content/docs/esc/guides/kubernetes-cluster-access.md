@@ -64,7 +64,7 @@ the `KUBECONFIG` environment variable to refer to the file, and then runs a `kub
 ### Use stack outputs to generate a kubeconfig file
 
 Instead of hardcoding a kubeconfig, you also have the option of using ESC providers to dynamically import
-cluster information from [stack outputs](/docs/iac/concepts/stacks/#outputs) of Pulumi IaC programs. The [`pulumi-stacks`](/docs/esc/providers/secrets/pulumi-stacks/) ESC provider allows you to read Pulumi IaC stack outputs (in this example, a kubeconfig for an EKS cluster) at runtime and map those values to environment variables, to temporary files, or directly to other Pulumi IaC programs as stack configuration values. Check out the [Getting Started](/docs/clouds/kubernetes/) guide if you need help setting up a Kubernetes cluster.
+cluster information from [stack outputs](/docs/iac/concepts/stacks/#outputs) of Pulumi IaC programs. The [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider allows you to read Pulumi IaC stack outputs (in this example, a kubeconfig for an EKS cluster) at runtime and map those values to environment variables, to temporary files, or directly to other Pulumi IaC programs as stack configuration values. Check out the [Getting Started](/docs/clouds/kubernetes/) guide if you need help setting up a Kubernetes cluster.
 
 The following environment defines a kubeconfig file based on a stack output:
 

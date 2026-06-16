@@ -113,7 +113,7 @@ You can manage a stack's imported environments with [Automation API](/docs/iac/c
 
 ## Accessing Pulumi stack outputs
 
-You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [Pulumi stacks](/docs/iac/concepts/stacks/) into an ESC environment with the [`pulumi-stacks` provider](/docs/esc/providers/secrets/pulumi-stacks/).
+You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [Pulumi stacks](/docs/iac/concepts/stacks/) into an ESC environment with the [`pulumi-stacks` provider](/docs/esc/providers/iac/pulumi-stacks/).
 
 ## Next steps
 
