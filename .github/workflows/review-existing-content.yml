@@ -50,6 +50,10 @@ jobs:
   review:
     name: Review existing content
     runs-on: ubuntu-latest
+    # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
+    # select the environment to resolve it — otherwise `Resolve ledger bucket`
+    # runs with --stack "" and the ledger fetch (cooldowns) is silently skipped.
+    environment: production
     # Hard cost ceiling: selection + up to `count` article reviews fit well
     # inside this; a hung run dies rather than burning API budget.
     timeout-minutes: 60
