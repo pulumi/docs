@@ -12,7 +12,7 @@ menu:
         identifier: iac-operations-docker-images
 ---
 
-Pulumi publishes and supports an official family of Docker images that bundle the [Pulumi CLI](/docs/iac/cli/) with one or more language runtimes. The images are scanned nightly for vulnerabilities and released on the same cadence as the Pulumi CLI, so a given tag matches a known Pulumi release. They are useful wherever you need a turnkey Pulumi environment — running Pulumi in CI/CD, in Kubernetes pods, as a [Pulumi Deployments custom executor](/docs/deployments/deployments/runs/images/), or as a base for derivative images that add tools the default images don't ship.
+Pulumi publishes and supports an official family of Docker images that bundle the [Pulumi CLI](/docs/iac/cli/) with one or more language runtimes. The images are scanned nightly for vulnerabilities and released on the same cadence as the Pulumi CLI, so a given tag matches a known Pulumi release. They are useful wherever you need a turnkey Pulumi environment — running Pulumi in CI/CD, in Kubernetes pods, as a [Pulumi Deployments custom executor](/docs/deployments/guides/custom-images/), or as a base for derivative images that add tools the default images don't ship.
 
 The image source lives at [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers) on GitHub.
 
@@ -107,7 +107,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 ```
 
-Build the image, push it to a registry your runner can reach, and reference it from your CI/CD job's container image setting or from your [Pulumi Deployments custom executor settings](/docs/deployments/deployments/runs/images/#custom-executor-image). Pin the `FROM` line to a specific Pulumi CLI tag rather than `latest` so that the image and your local CLI don't drift apart between rebuilds.
+Build the image, push it to a registry your runner can reach, and reference it from your CI/CD job's container image setting or from your [Pulumi Deployments custom executor settings](/docs/deployments/guides/custom-images/#custom-executor-image). Pin the `FROM` line to a specific Pulumi CLI tag rather than `latest` so that the image and your local CLI don't drift apart between rebuilds.
 
 This same pattern lets you bake provider plugins into the image with `pulumi plugin install`, eliminating the per-run plugin download in ephemeral runners. See the [plugins documentation](/docs/iac/concepts/plugins/) for details.
 
@@ -118,7 +118,7 @@ Images are scanned for vulnerabilities nightly. Pulumi remediates issues where i
 ## See also
 
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers) — image source and contribution guide.
-- [Pulumi Deployments executor images](/docs/deployments/deployments/runs/images/) — using and customizing the executor image for Pulumi Deployments.
+- [Pulumi Deployments executor images](/docs/deployments/guides/custom-images/) — using and customizing the executor image for Pulumi Deployments.
 - [Continuous Delivery](/docs/iac/operations/continuous-delivery/) — CI/CD guides for the systems where these images are commonly used.
 - [Docker provider](/registry/packages/docker/) — manage Docker resources (containers, networks, volumes) with Pulumi.
 - [Docker Build provider](/registry/packages/docker-build/) — build and push Docker images to any registry with Pulumi.

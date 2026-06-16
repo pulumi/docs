@@ -135,9 +135,9 @@ When using Pulumi Deployments, you have options for where your workflows run:
 - **Pulumi Hosted Pool**: Managed by Pulumi and available to all Pulumi Cloud customers
 - **Customer-Managed Workflow Runners**: Self-hosted runners that can access private networks and resources, supporting deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/)
 
-If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/deployments/runs/customer-managed-agents/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
+If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
 
-For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/deployments/runs/customer-managed-agents/).
+For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/deployments/runners/).
 
 ### Role assignment
 
@@ -196,7 +196,7 @@ By default, deployments run inside the [`pulumi/pulumi`](https://hub.docker.com/
 
 ![Pulumi UI - Custom Executor](/docs/deployments/deployments/ui-custom-executor.png)
 
-For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/deployments/runs/images/).
+For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/guides/custom-images/).
 
 ## Open ID Connect (OIDC)
 
@@ -204,14 +204,14 @@ Pulumi Deployments supports OIDC for authenticating with cloud providers. This e
 
 {{< esc-recommendation >}}
 
-For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/deployments/deployments/oidc/).
+For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/deployments/guides/oidc/).
 
 ## Dependency Caching
 
 When using Pulumi-managed agents, you can speed up deployments using dependency caching.
 
 {{% notes type="info" %}}
-If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/runs/customer-managed-agents/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
+If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/runners/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
 {{% /notes %}}
 
 The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to download those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.
