@@ -243,6 +243,21 @@ jobs:
                file yourself.
           claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
 
+      # TEMPORARY DIAGNOSTIC: runs show a high permission_denials_count (the model
+      # hitting the allowlist wall, often on compound commands like
+      # `make lint && make build`), but the GitHub log streams only the init and
+      # result events — not the rejected commands. Parse the full transcript
+      # (execution_file, which only exists on the runner) and print just the
+      # denied command strings to the step summary, so the allowlist can be sized
+      # from real data. Emits no tool *results* — safe for this public repo.
+      # Remove once the allowlist is tuned.
+      - name: Summarize tool denials
+        if: always() && steps.claude.outputs.execution_file != ''
+        continue-on-error: true
+        run: |
+          python3 scripts/content-review/summarize-denials.py \
+            "${{ steps.claude.outputs.execution_file }}"
+
       # Lint re-gate: don't trust the model's self-report that `make lint`
       # passed on the branch. For a fix verdict, check out the pushed branch and
       # re-run lint. On failure: flip the PR back to draft, comment the output,
