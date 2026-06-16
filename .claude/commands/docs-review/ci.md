@@ -97,6 +97,8 @@ Replace `0 of N siblings (fan-out runs in-review — replace this count)` with t
 
 <step number="4" name="Write Summary + Review-confidence table">
 Fill the `<TODO>` summary paragraph (what this PR is / what wrongness blocks a reader / what passes ran) and each confidence row's `<TODO: HIGH/MEDIUM/LOW>` + Notes. Add or remove rows per the references you actually applied; don't say HIGH unless the work finished.
+
+**If a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary**, the fact-check verifier was degraded for this run. Preserve the banner verbatim, keep the pre-filled `facts` row at `LOW` (do not upgrade it), and write the Summary in unconfirmed terms — do not present the trail's claims as verified. See `docs-review:references:output-format` §Summary preamble. (This is the usable-but-degraded `> [!WARNING]`, not the discard-the-draft `> [!CAUTION]` of the Fallback section below.)
 </step>
 
 <step number="5" name="Fill Review-history one-line summary">
