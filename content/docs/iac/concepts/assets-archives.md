@@ -302,7 +302,7 @@ fn = lambda_.Function("fn",
 
 ```go
 fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
-    Bucket:  role.ARN(),
+    Role:    role.ARN(),
     Runtime: "python3.7",
     Handler: "hello.handler",
     Code:    fileArchive,
