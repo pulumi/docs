@@ -45,8 +45,8 @@ To begin, you’ll need to install the [Pulumi CLI](/docs/iac/download-install/)
 
 ```bash
 $ pulumi login
-Manage your Pulumi ESC environments by logging in.
-Run `pulumi env --help` for alternative login options.
+Manage your Pulumi stacks by logging in.
+Run `pulumi login --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …
