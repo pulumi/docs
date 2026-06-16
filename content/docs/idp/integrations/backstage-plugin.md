@@ -6,10 +6,11 @@ meta_desc: Learn about the Pulumi Backstage plugin for integrating Pulumi with y
 menu:
   idp:
     name: Pulumi Backstage plugin
-    parent: idp-concepts
-    weight: 60
-    identifier: idp-concepts-backstage-plugin
+    parent: idp-integrations
+    weight: 20
+    identifier: idp-integrations-backstage-plugin
 aliases:
+- /docs/idp/concepts/backstage-plugin/
 - /docs/idp/developer-portals/backstage/
 - /docs/pulumi-cloud/developer-platforms/backstage/
 - /docs/pulumi-cloud/developer-portals/backstage/

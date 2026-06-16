@@ -32,10 +32,6 @@ sections:
     heading: Webhooks
     description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
     link: /docs/deployments/webhooks/
-  - icon: radio-button
-    heading: Deploy with Pulumi Button
-    description: Enable one-click infrastructure deployments from GitHub repositories, gists, or any web page using embeddable deployment buttons.
-    link: /docs/deployments/pulumi-button/
 
 - type: flat
   heading: Have questions?
