@@ -33,6 +33,17 @@ a silent-empty file or a file-presence heuristic) so Opus sees the failure and
 falls back to manual assembly per `ci.md` §Fallback, and emits a `::error::`
 annotation for the operator.
 
+Separately from that self-check `> [!CAUTION]` banner (which means "discard this
+draft, assemble manually"), the composer emits a distinct `> [!WARNING]`
+verifier-outage banner between the header and the Summary when it detects that
+the fact-check verifier was DOWN for this run (transport/API errors in
+`.verified-claims.json` — see the outage sentinels above). That banner means
+"this draft is usable, but fact-checking didn't actually run — findings are
+unverified"; it also pre-fills the `facts` confidence row to LOW so the posted
+review can't present unverified findings as `facts: HIGH`. The two banners are
+deliberately different alert levels so the model lane (and maintainers) don't
+conflate "discard" with "read carefully."
+
 Degrades gracefully: any uncaught exception → `safe_main()` writes a minimal
 valid fallback draft (the `> [!CAUTION]` banner shape) and returns 0; the
 workflow's `||` stub is reserved for can't-even-start failures and writes the
@@ -92,6 +103,25 @@ TEXT_TRUNC = 160
 EVIDENCE_TRUNC = 240
 
 GH_TIMEOUT = 30
+
+# Outage sentinels written by verify-claims.py when a per-claim verifier hit a
+# transport/API failure (HTTP 5xx, overloaded, network) rather than a genuine
+# unverifiable (paywall / dead link / turn-cap). The evidence marker is THE
+# signal — verify-claims.py writes it only in process_claim()'s except handler
+# (verify-claims.py:675); the error marker is its top-level errors[] companion
+# (verify-claims.py:669). The turn-cap message ("verification did not converge
+# within N turns") is an ORDINARY unverifiable and must NOT match — keep the
+# predicate keyed on these markers, never on the `unverifiable` verdict alone.
+_VERIFIER_OUTAGE_EVIDENCE_MARKER = "verify-claims.py errored on this claim:"
+_VERIFIER_OUTAGE_ERROR_MARKER = "verifier failed:"
+_VERIFIER_OUTAGE_TOKENS = (
+    "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 529",
+    "Internal server error", "api_error", "overloaded",
+    "RuntimeError: HTTP", "URLError", "TimeoutError",
+)
+# Evidence the candidate-claims floor carries when verify-claims didn't complete
+# at all (the `verdicts is None` degraded path below) — also an outage.
+_FLOOR_DEGRADED_EVIDENCE = "claim verification did not complete"
 
 FALLBACK_BANNER_DRAFT = """## Pre-merge Review — Last updated {ts}
 
@@ -424,11 +454,61 @@ def render_header(timestamp: str) -> str:
     return f"## Pre-merge Review — Last updated {timestamp}"
 
 
-def render_summary_block(confidence_dims: list[str]) -> str:
-    rows = "\n".join(
-        f"> | {d} | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |"
-        for d in confidence_dims
+def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
+    """Return (n_outage, n_total) over fact-check verdicts. A verdict is an
+    OUTAGE when its evidence carries the script-error marker (a transport/API
+    failure verify-claims.py caught), OR carries an outage token AND is
+    `unverifiable`, OR is the candidate-floor degraded placeholder. Ordinary
+    unverifiables (turn-cap, dead link, paywall) do NOT count — they don't
+    carry the markers. Call BEFORE appending Hugo/frontmatter synthetic
+    verdicts so preflight verdicts don't dilute the ratio."""
+    n_total = len(verdicts or [])
+    n_outage = 0
+    for v in verdicts or []:
+        ev = str(v.get("evidence") or "")
+        if _VERIFIER_OUTAGE_EVIDENCE_MARKER in ev or ev == _FLOOR_DEGRADED_EVIDENCE:
+            n_outage += 1
+        elif v.get("verdict") == "unverifiable" and any(tok in ev for tok in _VERIFIER_OUTAGE_TOKENS):
+            n_outage += 1
+    return n_outage, n_total
+
+
+def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
+    """A `> [!WARNING]` banner (distinct from the self-check `> [!CAUTION]`
+    discard banner) telling the reader fact-checking was degraded. Empty string
+    when no outage. Author-facing wording (no internal tooling names)."""
+    if n_outage <= 0:
+        return ""
+    retry = ("Once the service is back, mention `@claude #new-review` to "
+             "regenerate a complete review from scratch.")
+    if n_outage >= n_total:
+        return (
+            "> [!WARNING]\n"
+            "> **Automated fact-checking did not run for this review.** The "
+            f"verification service returned errors for all {n_total} extracted "
+            "claim(s), so every finding below is script-generated and unverified "
+            "— treat the 🔍 Verification trail and the Summary as **unconfirmed** "
+            "and fact-check the claims manually before relying on them. "
+            "(`facts` confidence is forced to LOW for this reason.) " + retry
+        )
+    return (
+        "> [!WARNING]\n"
+        "> **Automated fact-checking was incomplete for this review.** The "
+        f"verification service errored on {n_outage} of {n_total} claim(s); those "
+        "trail entries are unconfirmed — spot-check them manually. " + retry
     )
+
+
+def render_summary_block(confidence_dims: list[str], forced_levels: dict[str, tuple[str, str]] | None = None) -> str:
+    forced_levels = forced_levels or {}
+
+    def _row(d: str) -> str:
+        if d in forced_levels:
+            level, note = forced_levels[d]
+            return f"> | {d} | {level} | {note} |"
+        return f"> | {d} | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |"
+
+    rows = "\n".join(_row(d) for d in confidence_dims)
     return (
         "> [!TIP]\n"
         "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
@@ -1008,6 +1088,15 @@ def compose(args: argparse.Namespace) -> str:
         degraded_note = ("Claim verification reported errors — some verdicts may be incomplete; "
                          "spot-check the affected claims in-review.")
 
+    # Detect a fact-check verifier OUTAGE (transport/API errors) on the
+    # fact-check verdicts ONLY — measure before appending Hugo/frontmatter
+    # synthetics so preflight verdicts don't dilute the ratio. When detected,
+    # the composer emits a prominent `> [!WARNING]` banner and pre-fills the
+    # `facts` confidence row to LOW (so the posted review can't present
+    # unverified findings as `facts: HIGH`).
+    n_outage, n_outage_total = count_verifier_outages(verdicts)
+    outage_banner = render_verifier_outage_banner(n_outage, n_outage_total)
+
     # Append synthetic verdicts from the Hugo + frontmatter pre-steps so the
     # composer pre-stubs those findings into 🚨 Outstanding rather than
     # leaving them for Opus to discover and triage from `.hugo-build.json`
@@ -1037,10 +1126,17 @@ def compose(args: argparse.Namespace) -> str:
 
     trail_block, _n, _x, _y, _z = render_trail(verdicts, degraded_note)
 
-    sections: list[str] = [
-        render_header(timestamp),
-        "",
-        render_summary_block(confidence_dims),
+    # On a verifier outage, pre-fill the `facts` row to LOW deterministically so
+    # the posted review can't read `facts: HIGH` even if Opus doesn't cooperate.
+    forced_levels: dict[str, tuple[str, str]] = {}
+    if outage_banner:
+        forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
+
+    sections: list[str] = [render_header(timestamp), ""]
+    if outage_banner:
+        sections += [outage_banner, ""]
+    sections += [
+        render_summary_block(confidence_dims, forced_levels),
         "",
         render_investigation_log(
             cross_sibling=cross_sibling,

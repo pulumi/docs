@@ -99,9 +99,13 @@ In CI the workflow's `compose-review.py` pre-step assembles most of this body de
 
 If `.review-draft.md` is absent or starts with a `> [!CAUTION]` composer-failed banner, the reviewer assembles the review manually per `ci.md` §Fallback — the pre-composer procedure (read the artifacts directly, render this format). That's the safety net, not the normal path; everything in this file describes the *output*, which is identical whichever path produced it.
 
+**Do not confuse the `> [!CAUTION]` discard banner with the `> [!WARNING]` verifier-outage banner.** They are different alert levels with opposite meanings. `> [!CAUTION]` (at the very top, in place of the normal header) means "the composed draft is unusable — discard it and assemble manually." `> [!WARNING]` (between the header and the Summary, see §Summary preamble) means "this draft is usable, but automated fact-checking was degraded — preserve this banner verbatim and keep `facts` at LOW." A `> [!WARNING]` banner is **not** a signal to discard the draft.
+
 ### Summary preamble and review confidence
 
 The summary/confidence block sits under the timestamp and above the bucket count table on every review. Mandatory. Render Summary and Review confidence as separate blockquote paragraphs (blank `>` between them) so they don't run together.
+
+**Verifier-outage banner.** When the composer detects that automated fact-checking was degraded for this run (the verification service errored on one or more claims, e.g. an upstream outage), it inserts a `> [!WARNING]` banner *between the timestamp header and the Summary block* and pre-fills the `facts` confidence row to `LOW`. When this banner is present in `.review-draft.md`, **preserve it verbatim, keep the `facts` row at LOW, and do not soften the Summary into confident language** — the fact-check did not actually run, so the findings are unverified. Do not upgrade `facts` to MEDIUM/HIGH, and do not delete the banner. It is the reader's only loud signal that the trail entries are unconfirmed. (This is distinct from the `> [!CAUTION]` composer-failed banner, which means discard the draft — see the Composed-draft contract above.)
 
 **Summary paragraph.** One paragraph naming three things, in order: (1) what this PR is — content type, subject, and (for new pages) which existing pages it parallels; (2) what specific kind of wrongness would block a reader's success; (3) what investigative passes ran. Scale to the change: one sentence is fine for a two-line edit. Don't pad.
 
@@ -110,7 +114,7 @@ The summary/confidence block sits under the timestamp and above the bucket count
 Dimensions:
 
 - **mechanics** — links resolve, frontmatter valid, code parses, lint clean (always present).
-- **facts** — claim verification result (always present when fact-check ran; "n/a" for infra-only PRs).
+- **facts** — claim verification result (always present when fact-check ran; "n/a" for infra-only PRs). When the composer detected a verifier outage it pre-fills this row as `LOW — automated fact-checking errored — claims unverified`; leave it — do not upgrade.
 - **cross-sibling consistency** — sibling-guide compare for new pages in a templated section (SAML guides, SCIM guides, integration guides, language reference pages). Present whenever such a sibling set exists.
 - **editorial balance** — section depth, mention distribution, recommendation steering. Present for `content/blog/**` comparison/listicle/FAQ posts.
 - **code correctness** — present whenever a `static/programs/` change or non-trivial code block is in the diff.

@@ -666,6 +666,11 @@ def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
         rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run)
         return rec, None
     except Exception as e:  # noqa: BLE001
+        # NOTE: the "verifier failed:" prefix (err) and "verify-claims.py errored
+        # on this claim:" prefix (evidence, below) are load-bearing — compose-review.py
+        # keys on them to detect a verifier OUTAGE and emit the `> [!WARNING]`
+        # fact-check-degraded banner. Don't reword without updating the
+        # _VERIFIER_OUTAGE_* sentinels there.
         err = f"{claim.get('file', '?')}:{claim.get('line_range', '?')}: verifier failed: {type(e).__name__}: {e}"
         rec = {
             "claim_id": claim.get("__id", "?"), "file": claim.get("file", ""),
