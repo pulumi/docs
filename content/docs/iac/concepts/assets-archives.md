@@ -280,7 +280,7 @@ Any of these archives can be passed to a resource accepting an `Archive` as inpu
 ```typescript
 let fn = new aws.lambda.Function(`fn`, {
     role: role.arn,
-    runtime: "python3.7",
+    runtime: "python3.12",
     handler: "hello.handler",
     code: fileArchive,
 });
@@ -292,7 +292,7 @@ let fn = new aws.lambda.Function(`fn`, {
 ```python
 fn = lambda_.Function("fn",
     role=role.arn,
-    runtime="python3.7",
+    runtime="python3.12",
     handler="hello.handler",
     code=file_archive)
 ```
@@ -303,7 +303,7 @@ fn = lambda_.Function("fn",
 ```go
 fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
     Bucket:  role.ARN(),
-    Runtime: "python3.7",
+    Runtime: "python3.12",
     Handler: "hello.handler",
     Code:    fileArchive,
 })
@@ -316,7 +316,7 @@ fn, err := lambda.NewFunction(ctx, "fn", &lambda.FunctionArgs{
 var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
 {
     Role = role.arn,
-    Runtime = "python3.7",
+    Runtime = "python3.12",
     Handler = "hello.handler",
     Code = fileArchive,
 });
@@ -329,7 +329,7 @@ var fn = new Aws.Lambda.Function("fn", new Aws.Lambda.FunctionArgs
 var fn = new com.pulumi.aws.lambda.Function("fn",
     com.pulumi.aws.lambda.FunctionArgs.builder()
         .role(role.arn())
-        .runtime("python3.7")
+        .runtime("python3.12")
         .handler("hello.handler")
         .code(fileArchive)
         .build());
@@ -344,7 +344,7 @@ resources:
     type: aws:lambda:Function
     properties:
       role: ${role.arn}
-      runtime: python3.7
+      runtime: python3.12
       handler: hello.handler
       code: ${fileArchive}
 ```
