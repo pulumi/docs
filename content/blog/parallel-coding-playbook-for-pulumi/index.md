@@ -2,7 +2,7 @@
 title: "Five Stacks Before Lunch: The Parallel Coding Playbook for Pulumi"
 allow_long_title: true
 date: 2026-06-02
-lastmod: 2026-06-03
+lastmod: 2026-06-15
 draft: false
 meta_desc: "AI coding has two shapes: 2x is mostly prompting, 10x is mostly plumbing. The parallel coding playbook, translated to Pulumi."
 meta_image: meta.png
@@ -51,7 +51,7 @@ Concurrent isolation does the work. And isolation is mostly an infrastructure pr
 
 ## The five pillars
 
-![The five pillars of the parallel coding playbook mapped to their Pulumi primitives: issue is the spec to a component contract plus a CrossGuard policy excerpt, plan-build-validate to a markdown plan plus pulumi up --target plus pulumi preview, parallel worktrees to a per-worktree review stack with its own ESC environment, fresh-session review to a second agent reading the preview JSON cold, and self-healing layer to CrossGuard rules phrased as instructions](./pillars.png)
+![The five pillars of the parallel coding playbook mapped to their Pulumi primitives: issue is the spec to a component contract plus a Pulumi Policies excerpt, plan-build-validate to a markdown plan plus pulumi up --target plus pulumi preview, parallel worktrees to a per-worktree review stack with its own ESC environment, fresh-session review to a second agent reading the preview JSON cold, and self-healing layer to Pulumi Policies rules phrased as instructions](./pillars.png)
 
 The five pillars, in one sentence each.
 
@@ -67,15 +67,15 @@ The application-code version of this playbook leans on ports, node_modules, and 
 
 Walk the pillars again, this time with a Pulumi shop in mind.
 
-**Issue is the spec.** For application code, the spec describes behavior. For infrastructure, the spec is a [Pulumi component](/docs/iac/concepts/components/) contract plus a [CrossGuard](/docs/insights/policy/) policy excerpt. "The resulting bucket is private, lives in eu-west-1, has SSE-KMS, and is tagged `owner=team-x`." That sentence compiles to a typed component signature and three policy assertions. The agent does not get to interpret "looks right." The acceptance criteria are deterministic, which is the whole reason this works.
+**Issue is the spec.** For application code, the spec describes behavior. For infrastructure, the spec is a [Pulumi component](/docs/iac/concepts/components/) contract plus a [Pulumi Policies](/docs/insights/policy/) excerpt. "The resulting bucket is private, lives in eu-west-1, has SSE-KMS, and is tagged `owner=team-x`." That sentence compiles to a typed component signature and three policy assertions. The agent does not get to interpret "looks right." The acceptance criteria are deterministic, which is the whole reason this works.
 
-**Plan, build, validate.** Pulumi already ships the validate step. `pulumi preview` produces a deterministic, machine-readable diff a second reviewer can judge without the conversation that produced it. The plan is a markdown doc the agent writes before touching code. The build is `pulumi up --target` against a review stack scoped to the resources the issue covers. The validate step is the preview output plus the [CrossGuard](/docs/insights/policy/) verdict.
+**Plan, build, validate.** Pulumi already ships the validate step. `pulumi preview` produces a deterministic, machine-readable diff a second reviewer can judge without the conversation that produced it. The plan is a markdown doc the agent writes before touching code. The build is `pulumi up --target` against a review stack scoped to the resources the issue covers. The validate step is the preview output plus the [Pulumi Policies](/docs/insights/policy/) verdict.
 
 **Parallel worktrees.** Worktrees alone are not enough. Two worktrees pointing at the same Pulumi stack will fight over state on the first concurrent `up`. The unit of isolation for infrastructure is the [stack](/docs/iac/concepts/stacks/), not the worktree. Each worktree gets its own ephemeral [review stack](/docs/deployments/deployments/review-stacks/) and its own [ESC environment](/docs/esc/) for credentials. State branches with the work, credentials branch with the work, and the cloud account does not see five agents elbowing each other.
 
 **Fresh-session review.** The hardest part of the application-code version is keeping the reviewer cold. For infrastructure, the substrate hands you the cold context. The `pulumi preview` JSON has no memory of the prompt that produced it. A separate agent reading it has the same starting point a human reviewer has: a diff, a stack name, a policy report. [Pulumi Neo reasons over the state graph directly](/blog/grounded-ai-why-neo-knows-your-infrastructure/), so the reviewer grounds every claim in what the change actually does, not what the writer says it does. Reviewer quality still depends on how well your policies cover the stack, but the cold-context part comes built in.
 
-**Self-healing layer.** Most CrossGuard rule messages today read like assertions. "S3 bucket has no encryption." A self-healing layer needs them to read like instructions. "S3 bucket has no encryption. Set `serverSideEncryptionConfiguration` with SSE-KMS to fix." That single rewrite is the difference between an agent flailing and an agent fixing the violation on the first try. When the same rule keeps tripping, the fix is upstream of the next pull request: in the rules, in the skills, in the policy itself.
+**Self-healing layer.** Most Pulumi Policies rule messages today read like assertions. "S3 bucket has no encryption." A self-healing layer needs them to read like instructions. "S3 bucket has no encryption. Set `serverSideEncryptionConfiguration` with SSE-KMS to fix." That single rewrite is the difference between an agent flailing and an agent fixing the violation on the first try. When the same rule keeps tripping, the fix is upstream of the next pull request: in the rules, in the skills, in the policy itself.
 
 ## The five catches, infra edition
 
@@ -107,7 +107,7 @@ If three issues finish cleanly, you have the substrate. If they do not, the gap 
 
 ## Five stacks before lunch
 
-10x is five concurrent agents, working from five issues, against five stacks, behind five fresh-session reviews. The substrate is already there. Stacks isolate state. ESC isolates credentials. `pulumi preview` is the deterministic artifact a fresh reviewer can read cold. CrossGuard is the self-healing layer when you write the rule messages as instructions.
+10x is five concurrent agents, working from five issues, against five stacks, behind five fresh-session reviews. The substrate is already there. Stacks isolate state. ESC isolates credentials. `pulumi preview` is the deterministic artifact a fresh reviewer can read cold. Pulumi Policies is the self-healing layer when you write the rule messages as instructions.
 
 The remaining work is small and mostly wiring. Write the `AGENTS.md`. Cut the TTL. Pick three issues that touch unrelated resources. Read three PRs at lunch. Five stacks before the room empties out is a realistic Monday.
 
