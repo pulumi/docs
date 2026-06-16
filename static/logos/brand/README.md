@@ -28,4 +28,6 @@ source of truth — that's [brand.pulumi.com](https://brand.pulumi.com/).
   `scripts/redirects/`. Point image URLs at the closest surviving in-repo image
   (e.g. another file in this folder) — **not** at an HTML page like
   brand.pulumi.com, since a hotlinked `<img>` redirected to a web page just
-  renders broken. See `AGENTS.md` in this directory.
+  renders broken. Existing brand redirects live in
+  `scripts/redirects/brand-redirects.txt`; see the repo root `AGENTS.md` for the
+  redirect conventions.
