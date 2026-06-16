@@ -9,7 +9,6 @@ menu:
     parent: esc-concepts
     weight: 10
 aliases:
-- /docs/esc-cli/commands/
 - /docs/esc/webhooks/
 - /docs/esc/environments/webhooks/
 ---

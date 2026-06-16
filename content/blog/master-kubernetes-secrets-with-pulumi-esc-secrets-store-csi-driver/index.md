@@ -2,6 +2,7 @@
 title: "Master Kubernetes Secrets with Pulumi ESC + Secrets Store CSI Driver"
 allow_long_title: True
 date: 2024-12-18T09:58:01+01:00
+updated: 2026-06-16
 meta_image: meta.png
 meta_desc: "Learn how to manage Kubernetes secrets securely with Pulumi ESC and the Secrets Store CSI Driver."
 

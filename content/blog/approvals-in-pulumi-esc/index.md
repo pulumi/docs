@@ -1,6 +1,7 @@
 ---
 title: "Introducing Approvals in Pulumi ESC"
 date: 2025-08-04T09:00:00-03:00
+updated: 2026-06-16
 draft: false
 meta_desc: Approvals enables effective change management by bringing governance and oversight directly into their environment configuration workflows.
 meta_image: meta.png

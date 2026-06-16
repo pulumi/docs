@@ -1,6 +1,7 @@
 ---
 title: "Announcing the Pulumi ESC GitHub Action"
 date: "2025-03-05"
+updated: 2026-06-16
 meta_desc: "Securely inject secrets into GitHub Actions with Pulumi ESC. Automate secret rotation, environment variables, and CI/CD pipelines—no long-lived credentials."
 authors: 
   - "komal-ali"

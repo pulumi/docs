@@ -153,9 +153,8 @@ Use the `pulumi env open-request` command to create an access request:
 
 ```bash
 pulumi env open-request my-org/my-project/prod-env \
-  --access-duration=2h \
-  --grant-expiration=24h \
-  --description="Investigating production issue #1234"
+  --access-duration-seconds=2h \
+  --grant-expiration-seconds=24h
 ```
 
 ### Understanding duration and expiration

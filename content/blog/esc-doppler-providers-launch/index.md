@@ -1,6 +1,7 @@
 ---
 title: "Announcing Doppler Providers for Pulumi ESC: Dynamic Login and Dynamic Secrets"
 date: 2025-06-26
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Doppler providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
 meta_image: meta.png

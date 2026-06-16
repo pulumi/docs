@@ -1,6 +1,7 @@
 ---
 title: "Announcing Snowflake Dynamic and Rotated Credentials with Pulumi ESC"
 date: 2025-05-01
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Secure your Snowflake access with Pulumi ESC's new dynamic OIDC login for temporary credentials and automated RSA keypair rotation for user secrets."
 meta_image: meta.png

@@ -2,6 +2,7 @@
 title: "Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's Cloud-Native Secret Management"
 allow_long_title: true
 date: "2024-10-04"
+updated: 2026-06-16
 meta_desc: "Learn how to manage Kubernetes secrets with Pulumi ESC and External Secrets Operator"
 meta_image: meta.png
 authors:

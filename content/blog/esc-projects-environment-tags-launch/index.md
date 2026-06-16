@@ -2,6 +2,7 @@
 title: "Introducing Pulumi ESC Projects and Environment Tags"
 allow_long_title: true
 date: 2024-09-12T13:00:00-04:00
+updated: 2026-06-16
 draft: false
 meta_desc: "ESC Projects and Environment Tags allow you to organize your environments and collaborate effectively."
 meta_image: "meta.png"

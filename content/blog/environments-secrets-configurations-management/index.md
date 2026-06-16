@@ -2,7 +2,7 @@
 title: "Introducing Pulumi ESC: Easy and Secure Environments, Secrets and Configuration"
 allow_long_title: true
 date: 2023-10-10T04:00:00-07:00
-updated: 2025-03-20
+updated: 2026-06-16
 meta_desc: "Manage cloud secrets, configuration, and environments effortlessly with Pulumi ESC. Try the new CLI for secure, automated workflows."
 meta_image: meta.png
 authors:

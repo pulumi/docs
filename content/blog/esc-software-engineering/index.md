@@ -3,6 +3,7 @@ title: "Secrets and Configuration for Software Engineers: Pulumi ESC Versioning,
 allow_long_title: true
 
 date: 2024-06-05T04:00:00-07:00
+updated: 2026-06-16
 
 meta_desc: "Major new features for Pulumi ESC bring best-in-class software engineering capabilities to secrets and configuration management"
 

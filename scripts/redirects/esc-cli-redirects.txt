@@ -141,3 +141,9 @@ docs/esc-cli/commands/esc_run/index.html|/docs/iac/cli/commands/pulumi_env_run/
 docs/esc/cli/commands/esc_version/index.html|/docs/iac/cli/commands/pulumi_version/
 docs/esc-cli/commands/esc_version/index.html|/docs/iac/cli/commands/pulumi_version/
 docs/install/esc/index.html|/docs/iac/download-install/
+
+# Additional alias paths from the removed ESC CLI pages: the command-index,
+# install, and download-install aliases.
+docs/esc-cli/commands/index.html|/docs/iac/cli/commands/pulumi_env/
+docs/esc/install/index.html|/docs/iac/download-install/
+docs/esc/download-install/index.html|/docs/iac/download-install/

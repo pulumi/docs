@@ -2,6 +2,7 @@
 title: "Dynamic Credentials for Every AWS CLI Command: A Step-by-Step Guide to 'pulumi env run'"
 allow_long_title: true
 date: "2023-10-27"
+updated: 2026-06-16
 draft: false
 meta_desc: "Learn more about reducing the overhead of credentials management with the 'pulumi env run' command of Pulumi ESC."
 meta_image: "meta.png"
