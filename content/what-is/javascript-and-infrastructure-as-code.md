@@ -179,7 +179,7 @@ The most common pitfall: writing IaC like a script. JS/TS lets you do that, but 
 
 Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java, and YAML.
 
-* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and the rest of the [200+ providers in the Pulumi Registry](/registry/). Generated from each provider's API, so the types reflect the real cloud surface.
+* **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and the rest of the [180+ providers in the Pulumi Registry](/registry/). Generated from each provider's API, so the types reflect the real cloud surface.
 * **`pulumi new typescript`.** Creates a project with `tsconfig.json`, `package.json`, and a starter program in seconds. See the [JavaScript / TypeScript language guide](/docs/languages-sdks/javascript/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Write reusable [Pulumi components](/docs/iac/concepts/components/) as TypeScript classes. Publish them to npm (private or public) and depend on them across teams.
 * **Crosswalk for AWS.** The [`@pulumi/awsx`](https://github.com/pulumi/pulumi-awsx) package wraps common AWS patterns (VPCs, ECS services, ECR registries, load balancers) in higher-level TypeScript classes with sensible defaults.
@@ -194,7 +194,7 @@ Pulumi treats Node.js as a first-class runtime alongside Python, Go, .NET, Java,
 
 ### Can I use Node.js to manage infrastructure on every cloud?
 
-Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 200+ providers in total, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
+Yes. Pulumi's TypeScript SDK covers AWS, Azure, Google Cloud, Kubernetes, and 180+ providers in total, with a uniform programming model across them. The same Pulumi program can mix providers (an AWS VPC, a Cloudflare DNS record, a Datadog monitor) without leaving the language.
 
 ### Is TypeScript meaningfully better than JavaScript for IaC?
 

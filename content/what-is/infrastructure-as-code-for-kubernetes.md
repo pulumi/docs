@@ -148,7 +148,7 @@ The same program shape works for GKE and AKS; see [Get started with Pulumi Kuber
 
 ## What tools support IaC for Kubernetes?
 
-The Kubernetes IaC tooling landscape is wider than for any other cloud target because the community has produced both general IaC tools and Kubernetes-specific layers.
+The Kubernetes IaC tooling landscape is unusually wide because the community has produced both general IaC tools and Kubernetes-specific layers.
 
 | Category | Representative tools |
 |---|---|
