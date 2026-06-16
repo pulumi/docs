@@ -21,6 +21,7 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 ## Use ESC with Pulumi IaC
 
 - [Manage ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) — consume environments from a Pulumi program.
+- [Sync secrets to external platforms](/docs/esc/guides/sync-secrets-to-external-platforms/) — push ESC secrets and config to AWS Secrets Manager, Azure Key Vault, GitHub, Vault, and more.
 
 ## Development tools
 
