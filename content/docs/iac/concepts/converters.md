@@ -11,7 +11,7 @@ menu:
         weight: 150
 ---
 
-Converters are [plugins](/docs/iac/concepts/plugins/) that deterministically translate infrastructure as code written in other tools into Pulumi programs in any [supported Pulumi language](/docs/languages-sdks/).
+Converters are [plugins](/docs/iac/concepts/plugins/) that deterministically translate infrastructure as code written in other tools into Pulumi programs in any [supported Pulumi language](/docs/iac/languages-sdks/).
 
 {{% notes type="info" %}}
 For most conversions, using an LLM is the recommended first option. [Pulumi Neo](/docs/ai/), part of Pulumi Cloud, can convert your infrastructure code using AI. For Terraform specifically, Neo has a [specialized migration skill](/docs/ai/skills/).
