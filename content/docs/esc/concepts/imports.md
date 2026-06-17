@@ -79,19 +79,19 @@ values:
     GREETING: ${greeting}
 ```
 
-Finally, `esc run` renders `myapp/dev`'s environment variables for use on the command line:
+Finally, `pulumi env run` renders `myapp/dev`'s environment variables for use on the command line:
 
 ```bash
-$ esc run myorg/myapp/dev -- bash -c 'echo $GREETING'
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $GREETING'
 Hello from the myapp/dev environment!
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_URL'
 https://api.stripe.com
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $STRIPE_API_KEY'
 [secret]
 
-$ esc run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
+$ pulumi env run myorg/myapp/dev -- bash -c 'echo $AWS_SECRET_ACCESS_KEY'
 [secret]
 
 $ echo "'$GREETING'"
@@ -245,13 +245,13 @@ values:
 Notice how the value of `foo` is overwritten with each successive environment:
 
 ```bash
-$ esc env open project/environment-a foo
+$ pulumi env open project/environment-a foo
 "bar"
 
-$ esc env open project/environment-b foo
+$ pulumi env open project/environment-b foo
 "baz"
 
-$ esc env open project/environment-c foo
+$ pulumi env open project/environment-c foo
 "qux"
 ```
 
@@ -268,7 +268,7 @@ values:
 ```
 
 ```bash
-$ esc env open project/environment-c foo
+$ pulumi env open project/environment-c foo
 "bar"
 ```
 

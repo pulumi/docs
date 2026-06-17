@@ -40,7 +40,7 @@ Approvals are configured through rulesets, which define the policies and conditi
 
 Teams can use Pulumi ESC approvals to apply the same rigor of code review workflows to environment configurations and access management. Approvals help organizations enforce governance policies, meet compliance requirements, and reduce risk by requiring explicit review and sign-off. Each request creates a clear, auditable record of who approved what, when, and why, which is especially valuable for regulated industries or teams with strict change-management processes.
 
-By introducing a controlled review process, approvals let users submit requests while ensuring only authorized reviewers can approve and apply them. This balances collaboration with security and accountability, and works seamlessly in both the Pulumi Cloud console and the ESC CLI.
+By introducing a controlled review process, approvals let users submit requests while ensuring only authorized reviewers can approve and apply them. This balances collaboration with security and accountability, and works seamlessly in both the Pulumi Cloud console and the Pulumi CLI.
 
 ## How to Enable and Configure Approvals
 
@@ -84,17 +84,17 @@ If a draft already exists, the editor opens in read-only mode with a banner indi
 
 #### From the CLI
 
-Use the `--draft` flag with [`esc env set`](/docs/esc/cli/commands/esc_env_set/) or [`esc env edit`](/docs/esc/cli/commands/esc_env_edit/) to create or update a draft:
+Use the `--draft` flag with [`pulumi env set`](/docs/iac/cli/commands/pulumi_env_set/) or [`pulumi env edit`](/docs/iac/cli/commands/pulumi_env_edit/) to create or update a draft:
 
 ```bash
 # Create a new draft
-esc env set --draft my-org/my-project/prod-env FEATURE_X_ENABLED true
+pulumi env set --draft my-org/my-project/prod-env FEATURE_X_ENABLED true
 
 # Update an existing draft by ID
-esc env set --draft=cr-123 my-org/my-project/prod-env FEATURE_X_ENABLED true
+pulumi env set --draft=cr-123 my-org/my-project/prod-env FEATURE_X_ENABLED true
 
 # Edit the full environment definition as a draft
-esc env edit --draft my-org/my-project/prod-env
+pulumi env edit --draft my-org/my-project/prod-env
 ```
 
 ### Editing and reviewing drafts
@@ -149,13 +149,12 @@ The request will appear in the **Approvals** tab for designated reviewers.
 
 #### From the CLI
 
-Use the `esc env open-request` command to create an access request:
+Use the `pulumi env open-request` command to create an access request:
 
 ```bash
-esc env open-request my-org/my-project/prod-env \
-  --access-duration=2h \
-  --grant-expiration=24h \
-  --description="Investigating production issue #1234"
+pulumi env open-request my-org/my-project/prod-env \
+  --access-duration-seconds=2h \
+  --grant-expiration-seconds=24h
 ```
 
 ### Understanding duration and expiration
@@ -176,7 +175,7 @@ Open requests are listed in the **Approvals** tab in Pulumi Cloud. Select **Revi
 Once your open request is applied, you can open the environment normally:
 
 ```bash
-esc env open my-org/my-project/prod-env
+pulumi env open my-org/my-project/prod-env
 ```
 
 The environment will open successfully as long as:

@@ -1,6 +1,7 @@
 ---
 title: "Announcing AWS Systems Manager - Parameter Store Support for Pulumi ESC"
 date: 2024-12-16T12:00:00-06:00
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds integration support for AWS Parameter Store"
 meta_image: meta.png
@@ -81,10 +82,10 @@ values:
  ```
 
 * Open the environment to ensure we are able to successfully pull the credentials from AWS Parameter Store
-* Run `esc open <project/environment> --format shell` to view the exported environment variables from this ESC environment.
-* Use [ESC run](/docs/esc/cli/commands/esc_run/) to run any command with these environment variables. For example, we can now run `esc run <project/environment> -- <your command>`
+* Run `pulumi env open <project/environment> --format shell` to view the exported environment variables from this ESC environment.
+* Use [pulumi env run](/docs/iac/cli/commands/pulumi_env_run/) to run any command with these environment variables. For example, we can now run `pulumi env run <project/environment> -- <your command>`
 
-`esc run` passes the configuration stored under the `environmentVariables` section for use with the provided command, without ever storing them locally on your machine.
+`pulumi env run` passes the configuration stored under the `environmentVariables` section for use with the provided command, without ever storing them locally on your machine.
 
 ## Conclusion
 

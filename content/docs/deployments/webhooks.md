@@ -523,7 +523,7 @@ and
 The `pulumi stack webhook delivery` commands are experimental and available in recent
 releases of the Pulumi CLI. Listing recent deliveries is also available for organization
 webhooks (`pulumi org webhook delivery list`) and environment webhooks
-(`pulumi env webhook delivery list`, or `esc env webhook delivery list`), but
+(`pulumi env webhook delivery list`), but
 redelivery is currently a stack-only CLI affordance — redeliver organization and
 environment webhooks from the Pulumi Cloud UI.
 {{% /notes %}}

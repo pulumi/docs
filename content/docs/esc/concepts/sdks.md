@@ -19,7 +19,7 @@ The Pulumi ESC SDKs are language libraries that let you work with [environments]
 The SDK is designed for two primary use cases:
 
 - **Retrieving environment values from workloads at runtime.** An application or service opens an environment with the SDK and reads its resolved configuration and secrets while the workload runs. Because environments are evaluated when they are opened, dynamic values—such as short-lived cloud credentials—are generated fresh each time, rather than being baked into the workload.
-- **Managing environments programmatically.** Automation and tooling can use the SDK to create, update, tag, decrypt, and delete environment definitions, list environments and revisions, and check definitions for errors—the same operations you can perform with the `esc` CLI or the Pulumi Cloud console.
+- **Managing environments programmatically.** Automation and tooling can use the SDK to create, update, tag, decrypt, and delete environment definitions, list environments and revisions, and check definitions for errors—the same operations you can perform with the `pulumi env` commands or the Pulumi Cloud console.
 
 ## When not to use the SDK
 

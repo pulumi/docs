@@ -21,7 +21,7 @@ Pulumi ESC integrates with [Direnv](https://direnv.net) to help developers autom
 
 To complete the steps in this tutorial, you will need to install the following prerequisites:
 
-- the [Pulumi ESC CLI](/docs/esc-cli/)
+- the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/)
 - the [Direnv CLI](https://direnv.net) and shell integration
 
 ## Create an ESC environment with environment variables
@@ -58,7 +58,7 @@ Before each prompt, `direnv` checks for the existence of a `.envrc` file in the 
 To open an ESC environment and export its environment variables, create a `.envrc` file with the following contents:
 
 ```bash
-eval $(esc open <your-project-name>/<your-environment-name> --format shell)
+eval $(pulumi env open <your-project-name>/<your-environment-name> --format shell)
 ```
 
 Once you've created this file, `direnv` may warn you that it cannot load the `.direnv` file for security reasons:

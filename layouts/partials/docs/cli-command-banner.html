@@ -3,9 +3,6 @@
 {{- if eq .Params.cli_tool "pulumi" -}}
     {{- $version = readFile "/static/latest-version" -}}
     {{- $toolLabel = "Pulumi CLI" -}}
-{{- else if eq .Params.cli_tool "esc" -}}
-    {{- $version = readFile "/static/esc/latest-version" -}}
-    {{- $toolLabel = "Pulumi ESC CLI" -}}
 {{- end -}}
 {{- if $version -}}
 <p class="cli-command-version">

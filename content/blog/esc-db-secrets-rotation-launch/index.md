@@ -1,6 +1,7 @@
 ---
 title: "Introducing Automated Database Credential Rotation for PostgreSQL and MySQL in Pulumi ESC"
 date: 2025-04-30
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC now automates database credential rotation for PostgreSQL and MySQL, enhancing security and reducing operational burden."
 meta_image: meta.png
@@ -30,7 +31,7 @@ Relying on static database credentials introduces substantial risks, which autom
 * **Network Complexity & The DIY Burden:** Databases in private networks (like AWS VPCs) require secure access for rotation. We provide an open-source **Lambda connector** for AWS VPCs. While homegrown solutions can bridge the network gap, building and maintaining the *actual rotation logic* (state, error handling, two-secret strategy) is complex. Crucially, DIY approaches typically lack integrated revision history, centralized auditing, and unified management provided by platforms like Pulumi ESC, increasing operational overhead.
 * **Tooling, Ecosystem, and Cloud-Native Connectivity:** Despite cloud IAM authentication options, many standard tools (GUIs, BI, ETL), legacy apps, and even certain cloud-native configurations (multi-cloud, specific Kubernetes setups) still rely on username/password. Direct IAM integration isn't always feasible or practical, making automated rotation of traditional credentials essential for broad compatibility and security.
 
-Pulumi ESC addresses these challenges by automating the secrets rotation process, including connectivity options for databases in private AWS networks using our Lambda connector, and allows you to consume them in your applications through ESC's various developer-friendly methods including [ESC SDK](/docs/esc/development/languages-sdks/), [ESC CLI](/docs/esc/cli/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), etc.
+Pulumi ESC addresses these challenges by automating the secrets rotation process, including connectivity options for databases in private AWS networks using our Lambda connector, and allows you to consume them in your applications through ESC's various developer-friendly methods including [ESC SDK](/docs/esc/development/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), etc.
 
 ## Introducing ESC Rotated Secrets for Databases
 
@@ -167,7 +168,7 @@ The Pulumi template creates two ESC environments with most of the configuration 
 
 * **Test with Manual Rotation:**
     * Use the triple-dot menu -> "Rotate Secrets" in the Pulumi Cloud UI for the Rotator environment.
-    * Alternatively, use the ESC CLI: `esc env rotate <your-org>/<project-name>/Rotator>` (e.g., `esc env rotate myorg/postgresrotation/Rotator`). Remember to replace `<your-org>` and `<project-name>`.
+    * Alternatively, use the Pulumi CLI: `pulumi env rotate <your-org>/<project-name>/Rotator>` (e.g., `pulumi env rotate myorg/postgresrotation/Rotator`). Remember to replace `<your-org>` and `<project-name>`.
     * Perform a rotation. If you *didn't* provide the `state` block, this first rotation generates a new password for the user designated as `current` (e.g., `user1` associated with `username1`) and updates it in the database via the Lambda connector. The `dbRotator` value in ESC will now show this user/password under `current`, and the `state` block will be populated.
     * Perform a *second* rotation. Observe how the previous `current` user (`user1`/`username1`) and its password become the `previous` entry in the ESC value. The system now rotates the password for the *other* user (`user2`/`username2`), makes it the new `current`, and updates the database accordingly. Subsequent rotations cycle between `user1` and `user2`.
     * Check the Environment Revision History in the Pulumi Cloud console to track the changes to the `current` and `previous` state fields after each rotation.

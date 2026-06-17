@@ -1,6 +1,7 @@
 ---
 title: "Announcing 1Password Support for Pulumi ESC in Public Preview"
 date: 2024-03-27T12:00:00-06:00
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tools"
 meta_image: meta.png
@@ -78,7 +79,7 @@ values:
 
 {{< video title="Pulumi ESC 1Password Provider Demo" src="https://www.pulumi.com/uploads/esc-1password-provider-demo.mp4" controls="false" autoplay="true" loop="true" >}}
 
-`esc run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
+`pulumi env run` passes the configuration stored under the `environmentVariables` section into a temporary environment's env variables. The secure credentials are never stored locally on your machine.
 
 ## Unlocking New Possibilities
 

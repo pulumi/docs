@@ -33,7 +33,7 @@ For the full breakdown of static, secret, and dynamic value types, see [Environm
 
 ## Storing secrets
 
-To store a secret, add an [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/) value to your environment — using the CLI (`esc env set --secret`), the Pulumi Cloud console, or by editing the environment YAML directly. See [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets) for the full reference and examples, including multi-line secrets such as PEM-formatted keys and certificates.
+To store a secret, add an [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/) value to your environment — using the CLI (`pulumi env set --secret`), the Pulumi Cloud console, or by editing the environment YAML directly. See [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets) for the full reference and examples, including multi-line secrets such as PEM-formatted keys and certificates.
 
 ## Retrieving secrets
 
@@ -42,7 +42,7 @@ To store a secret, add an [`fn::secret`](/docs/esc/concepts/builtin-functions/fn
 Open your environment to retrieve all values, including secrets:
 
 ```bash
-esc env open <org>/<project>/<env-name>
+pulumi env open <org>/<project>/<env-name>
 ```
 
 This returns all values in JSON format with secrets revealed:
@@ -57,7 +57,7 @@ This returns all values in JSON format with secrets revealed:
 To retrieve a single value:
 
 ```bash
-esc env get <org>/<project>/<env-name> apiKey
+pulumi env get <org>/<project>/<env-name> apiKey
 ```
 
 ### Via the Pulumi Cloud console
@@ -92,7 +92,7 @@ values:
 Access nested values with dot notation:
 
 ```bash
-esc env get my-org/my-project/dev database.password
+pulumi env get my-org/my-project/dev database.password
 ```
 
 ### Multiple environments
@@ -109,7 +109,7 @@ Each environment can have different RBAC permissions, ensuring production secret
 
 ### Rotate secrets regularly
 
-You can replace a secret manually with `esc env set ... --secret` (ESC versions every change, so you can audit or roll back). For supported secret types, ESC can also [rotate credentials automatically on a schedule](/docs/esc/concepts/rotators/) — the recommended approach. See [Rotating secrets](/docs/esc/operations/rotation/) for operational guidance and [best practices](/docs/esc/operations/rotation/best-practices/).
+You can replace a secret manually with `pulumi env set ... --secret` (ESC versions every change, so you can audit or roll back). For supported secret types, ESC can also [rotate credentials automatically on a schedule](/docs/esc/concepts/rotators/) — the recommended approach. See [Rotating secrets](/docs/esc/operations/rotation/) for operational guidance and [best practices](/docs/esc/operations/rotation/best-practices/).
 
 ### Control access with RBAC
 
@@ -123,5 +123,5 @@ Use [Role-Based Access Control](/docs/esc/administration/access-control/) to lim
 
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull secrets from AWS, Azure, GCP secret stores
-- [Running commands with esc run](/docs/esc/guides/running-commands/) - Inject secrets into any command
+- [Running commands with pulumi env run](/docs/esc/guides/running-commands/) - Inject secrets into any command
 - [Access control reference](/docs/esc/administration/access-control/) - Complete RBAC documentation

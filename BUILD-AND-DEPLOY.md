@@ -991,18 +991,6 @@ pulumi-destroy.md
 
 Updated automatically via `pulumi-cli.yml` workflow when new CLI versions are released.
 
-#### ESC CLI - Command Reference
-
-**Command:** `esc gen-docs`
-
-Generates markdown documentation for ESC CLI commands.
-
-**Output:** `content/docs/esc-cli/commands/`
-
-**Automation:**
-
-Updated automatically via `esc-cli.yml` workflow when new ESC versions are released.
-
 ---
 
 ## GitHub Actions Workflows
@@ -1180,22 +1168,6 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
    - Slack alert on failure
 
 **Why It Matters:** Keeps CLI documentation synchronized with releases automatically.
-
-#### esc-cli.yml
-
-**Purpose:** Auto-generate ESC CLI documentation
-
-**Triggers:**
-
-- Repository dispatch from pulumi/esc repository
-- Triggered on ESC CLI release
-
-**Process:** Similar to pulumi-cli.yml but for ESC commands
-
-**Output:**
-
-- ESC CLI command documentation
-- Updated `static/esc/latest-version`
 
 #### customer-managed-deployment-agent-cli.yml
 
@@ -1495,7 +1467,7 @@ These workflows support repository maintenance, automation, and developer experi
 | pull-request | PRs to master | Testing | 10-15 min | PR validation & preview |
 | pr-closed | PR closed | Testing | <1 min | Cleanup preview resources |
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
-| esc-cli | Repository dispatch | N/A | 3-5 min | Auto-generate ESC docs |
+| esc-cli | Repository dispatch | N/A | <1 min | Update `static/esc/latest-version` pointer (read by pulumi/esc-action v1/v2) |
 | scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
 | scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
 | bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |

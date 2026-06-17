@@ -22,7 +22,7 @@ ESC rotated secrets use a two-secret strategy in which two secrets are active an
 
 ## How rotators work
 
-A rotator is invoked under `values:` using `fn::rotate::<name>`. Rotators are stateful: a rotator stores the credentials it has issued in the environment definition and replaces them on demand (manually via `esc env rotate` or on a schedule). Consumers open the environment to read the current credentials; rotation only happens when explicitly triggered. Rotators that act on an external service use a [login provider](/docs/esc/providers/login/) to authenticate the rotation call itself, with the most secure option being OpenID Connect (OIDC). See [OIDC setup](/docs/esc/guides/configuring-oidc/) for per-provider trust configuration.
+A rotator is invoked under `values:` using `fn::rotate::<name>`. Rotators are stateful: a rotator stores the credentials it has issued in the environment definition and replaces them on demand (manually via `pulumi env rotate` or on a schedule). Consumers open the environment to read the current credentials; rotation only happens when explicitly triggered. Rotators that act on an external service use a [login provider](/docs/esc/providers/login/) to authenticate the rotation call itself, with the most secure option being OpenID Connect (OIDC). See [OIDC setup](/docs/esc/guides/configuring-oidc/) for per-provider trust configuration.
 
 Some rotators require you to deploy a [rotation connector](/docs/esc/operations/rotation/) in order to rotate credentials inside private networks.
 
@@ -64,12 +64,12 @@ This import is only resolved at `rotate` time, meaning that the value is not ava
 
 ### Rotation
 
-Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `esc env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
+Once a rotation function is configured within the environment definition, you can manually rotate your secrets by running the `pulumi env rotate` command, or by clicking the `Rotate secrets` button in the Pulumi Cloud UI.
 
 #### Via the CLI
 
 ```bash
-esc env rotate rotators/pulumi-ci
+pulumi env rotate rotators/pulumi-ci
 Environment 'rotators/pulumi-ci' rotated.
 New revision '19' was created.
 ```

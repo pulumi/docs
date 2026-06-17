@@ -1,6 +1,7 @@
 ---
 title: "How We Eliminated Long-Lived CI Secrets Across 70+ Repos"
 date: "2026-03-31"
+updated: 2026-06-16
 meta_desc: "Learn how Pulumi eliminated static CI secrets across 70+ repos using Pulumi ESC and OIDC, reducing supply chain attack risk with short-lived credentials."
 meta_image: "meta.png"
 feature_image: "feature.png"
@@ -106,7 +107,7 @@ permissions:
 
 steps:
   - name: Fetch secrets from ESC
-    uses: pulumi/esc-action@v1
+    uses: pulumi/esc-action@v3
     with:
       environment: '<your-organization>/<your-esc-env>'
 ```
