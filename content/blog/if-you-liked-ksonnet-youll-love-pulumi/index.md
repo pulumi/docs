@@ -2,6 +2,7 @@
 title: "If you liked ksonnet, you'll love Pulumi!"
 date: "2019-02-13"
 updated: 2025-04-16
+lastmod: 2026-06-17
 meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more."
 meta_image: "kube-update.png"
 authors: ["mike-metral"]
@@ -30,7 +31,7 @@ tell you why.
 
 ## Recap of ksonnet's Approach
 
-In the [original ksonnet launch post](https://blog.heptio.com/ksonnet-intro-43f6183a97a6), Joe Beda
+In the [original ksonnet launch post](https://web.archive.org/web/20190603140906/https://blog.heptio.com/ksonnet-intro-43f6183a97a6), Joe Beda
 describes the "wall of YAML" that we face when creating and configuring
 Kubernetes systems. This intimidates new users, making for a steep
 learning curve, while also leading to thankless boilerplate and
