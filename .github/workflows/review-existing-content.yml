@@ -3,8 +3,9 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # Daily (workdays) automated review of EXISTING docs pages — the
 # counterpart to the PR-triggered docs review, for content that nobody is
 # currently editing. This workflow is the DISPATCHER: the selection script
-# picks the day's articles (strategic tier x traffic x review age, plus one
-# reserved stale slot), and this workflow then fans out one
+# picks the day's articles by weighted fair queuing — score = importance
+# (strategic tier x traffic) x staleness (days since the page's effective last
+# review) — and this workflow then fans out one
 # content-review-article.yml run per selected article. Each of those worker
 # runs reviews exactly one article, opens one ready PR, and force-dispatches
 # claude-code-review.yml over it. Humans merge; nothing here is auto-merged.
@@ -52,7 +53,7 @@ jobs:
     runs-on: ubuntu-latest
     # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
     # select the environment to resolve it — otherwise `Resolve ledger bucket`
-    # runs with --stack "" and the ledger fetch (cooldowns) is silently skipped.
+    # runs with --stack "" and the ledger fetch (review history) is silently skipped.
     environment: production
     # Hard cost ceiling: selection + up to `count` article reviews fit well
     # inside this; a hung run dies rather than burning API budget.
@@ -69,8 +70,8 @@ jobs:
         uses: actions/checkout@v6
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          # Selection reads git history (staleness ordering, recent-human-
-          # edit penalty), so a shallow clone won't do.
+          # Selection reads git history (staleness clock: creation date and
+          # newest non-bot edit per page), so a shallow clone won't do.
           fetch-depth: 0
       - name: Install Node
         uses: actions/setup-node@v6
@@ -134,21 +135,22 @@ jobs:
           if [ -n "$BUCKET" ]; then
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
           else
-            echo "ledger bucket output unavailable; selection proceeds without cooldowns"
+            echo "ledger bucket output unavailable; selection proceeds on git staleness alone"
           fi
 
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
       # it down to a local cache that select-articles.py reads via --ledger-dir.
       # Degrades gracefully like the traffic fetch: an empty/absent ledger just
-      # means selection falls back to tier + age with nothing in cooldown.
+      # means every page's staleness clock falls back to its git history
+      # (creation date / newest non-bot edit), with no prior reviews to apply.
       - name: Fetch review ledger from S3
         if: steps.ledger-bucket.outputs.uri != ''
         continue-on-error: true
         run: |
           mkdir -p .ledger-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.uri }}" .ledger-cache/ --quiet \
-            || echo "review ledger unavailable; selection proceeds without cooldowns"
+            || echo "review ledger unavailable; selection proceeds on git staleness alone"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= / count= to $GITHUB_OUTPUT for the
