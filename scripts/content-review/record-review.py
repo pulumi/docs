@@ -91,6 +91,9 @@ def load_queue_article(queue_path: Path) -> dict:
         "path": path,
         "slug": a.get("slug") or slugify(path),
         "lane": a.get("lane") or "priority",
+        # Prior incomplete-retry count, carried from the ledger by the selector.
+        # build_record increments it on another incomplete, resets it on success.
+        "attempts": int(a.get("attempts") or 0),
     }
 
 
@@ -175,7 +178,15 @@ def check_pr_body(body: str | None) -> list[str]:
 
 def build_record(article: dict, verdict: dict | None, pr: dict | None,
                  slug: str) -> dict:
-    """Build the canonical ledger record from the queue, verdict, and PR state."""
+    """Build the canonical ledger record from the queue, verdict, and PR state.
+
+    `attempts` accrues the consecutive `incomplete` retries: it starts from the
+    prior count the selector carried in (`article["attempts"]`), is incremented
+    by one on another incomplete outcome, and is reset to 0 the moment the page
+    reaches any completed status. The selector backs a page off once it hits
+    ATTEMPT_CAP, so this counter is the loop guard.
+    """
+    prior_attempts = int(article.get("attempts") or 0)
     rec = {
         "path": article["path"],
         "slug": slug,
@@ -188,6 +199,7 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "skipped_findings": 0,
         "retirement": bool(verdict.get("retirement")) if verdict else False,
         "note": None,
+        "attempts": prior_attempts + 1,
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
 
@@ -202,15 +214,18 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
     if v == "clean":
         rec["status"] = "clean"
         rec["note"] = verdict.get("reason")
+        rec["attempts"] = 0
     elif v == "skipped":
         rec["status"] = "skipped"
         rec["note"] = verdict.get("reason") or "skipped by reviewer"
+        rec["attempts"] = 0
     elif v == "fixed":
         if pr:
             rec["status"] = "reviewed"
             rec["pr"] = pr.get("url")
             rec["pr_number"] = int(pr.get("number") or 0)
             rec["head_sha"] = pr.get("headRefOid") or ""
+            rec["attempts"] = 0
         else:
             rec["status"] = "incomplete"
             rec["note"] = f"verdict 'fixed' but no PR on {branch_for(slug, rec['retirement'])}"
@@ -328,14 +343,22 @@ def self_test() -> int:
         rec = build_record(article, None, None, article["slug"])
         check("no-verdict -> incomplete", rec["status"] == "incomplete")
         check("incomplete has reviewed_at", bool(rec["reviewed_at"]))
+        check("incomplete bumps attempts from 0 -> 1", rec["attempts"] == 1)
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
-            "fixes", "skipped_findings", "retirement", "note", "reviewed_at"})
+            "fixes", "skipped_findings", "retirement", "note", "attempts",
+            "reviewed_at"})
 
-        # Clean verdict.
-        rec = build_record(article, {"verdict": "clean", "reason": "accurate"},
+        # Repeated incomplete accrues against the prior count the selector carried.
+        retried = {**article, "attempts": 2}
+        rec = build_record(retried, {"verdict": "fixed"}, None, article["slug"])
+        check("incomplete accrues prior attempts (2 -> 3)", rec["attempts"] == 3)
+
+        # Clean verdict resets the retry counter.
+        rec = build_record(retried, {"verdict": "clean", "reason": "accurate"},
                            None, article["slug"])
         check("clean verdict -> clean", rec["status"] == "clean" and rec["pr"] is None)
+        check("clean resets attempts to 0", rec["attempts"] == 0)
 
         # Fixed + PR -> reviewed with derived facts.
         pr = {"number": 19731, "state": "OPEN",
@@ -347,6 +370,7 @@ def self_test() -> int:
         check("derived pr_number", rec["pr_number"] == 19731)
         check("derived head_sha", rec["head_sha"].startswith("5344e12"))
         check("fixes carried", rec["fixes"] == 1)
+        check("reviewed resets attempts to 0", rec["attempts"] == 0)
 
         # Fixed + no PR -> incomplete.
         rec = build_record(article, {"verdict": "fixed"}, None, article["slug"])

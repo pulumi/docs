@@ -8,30 +8,35 @@ the day's review queue as JSON. The model never chooses what to review —
 this script does, so the selection is auditable and reproducible from its
 inputs.
 
-Selection algorithm (two lanes):
+Selection algorithm (weighted fair queuing by staleness):
 
 1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
    and `draft: true` pages.
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
-   inside the ledger cooldown (365 days after a review, or 3 days after an
-   `incomplete` review that recorded no real outcome).
+   whose `incomplete` review has already burned ATTEMPT_CAP retries (they
+   back off and are surfaced for a human instead of looping forever).
 3. Runaway guardrail: if >= MAX_OPEN_PRS open `content-review/*` PRs exist,
    emit an empty queue with `"halted": "max_open_prs"` so the workflow
    warns instead of piling on.
-4. Reserve ONE slot for the stale lane: the longest-unreviewed page —
-   never-reviewed pages first (oldest last-modified in git first), then
-   oldest `reviewed_at`. This guarantees the whole corpus is eventually
-   swept regardless of how the priority weights are tuned.
-5. Fill the remaining slots from the priority score:
+4. Score every remaining page and take the top `count`. No threshold, no
+   reserved lane — staleness self-corrects starvation (the longer a page
+   goes unreviewed the higher it climbs, so the whole corpus is swept):
 
-       score = 0.40*tier_w + 0.35*traffic_n + 0.25*age_n
+       score = importance * staleness
 
-   tier_w    = {1: 1.0, 2: 0.6, 3: 0.3}
-   traffic_n = log1p(visits) / log1p(max_visits); pages missing from the
-               report impute the median; if the traffic file is absent the
-               traffic term is dropped and the remaining weights renormalize
-   age_n     = min(days_since_review / 365, 1.0); never reviewed -> 1.0
-   penalty   = x0.5 when a non-bot commit touched the file < 30 days ago
+   importance = tier_w * (0.5 + 0.5*traffic_n)   with a traffic snapshot
+              = tier_w                            tier-only when absent
+   tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
+   traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
+                report impute the median
+   staleness  = (today - effective_last_review).days, floored at 0
+   effective_last_review = max(bot_reviewed_at, last_non-bot_commit_date)
+                where bot_reviewed_at counts only for a *completed* review
+                (an `incomplete` outcome never advances the clock, so the
+                page stays due). Never-bot-reviewed pages fall back to their
+                git creation date: a brand-new page sorts to the back, an
+                ancient never-reviewed page to the front. A human (non-bot)
+                edit fully resets the clock.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -75,19 +80,19 @@ CONTENT_DIR = "content/docs"
 
 BRANCH_PREFIX = "content-review/"
 MAX_OPEN_PRS = 9
-COOLDOWN_DAYS = 365
-# A review that ended without a real outcome (the worker exited before recording
-# a verdict, or claimed a fix with no PR) is recorded `status: "incomplete"`. It
-# should be retried soon — but not re-picked in the same dispatch batch — so it
-# gets a short cooldown instead of the full year.
-INCOMPLETE_COOLDOWN_DAYS = 3
-RECENT_EDIT_DAYS = 30
-RECENT_EDIT_PENALTY = 0.5
+# An `incomplete` review (worker exited before recording a verdict, or claimed
+# a fix with no PR) never advances the staleness clock, so the page stays due
+# and is retried next sweep. This caps the retries: once a page has burned
+# ATTEMPT_CAP incomplete runs it backs off (is excluded and surfaced) instead
+# of looping forever on whatever keeps breaking it.
+ATTEMPT_CAP = 3
 
-WEIGHT_TIER = 0.40
-WEIGHT_TRAFFIC = 0.35
-WEIGHT_AGE = 0.25
 TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
+
+# Statuses a ledger entry can carry (set by record-review.py). Any status other
+# than "incomplete" is a completed review whose date advances the clock; legacy
+# entries predating the field have no `status` and are treated as completed.
+INCOMPLETE_STATUS = "incomplete"
 
 BOT_AUTHORS = {"pulumi-bot", "dependabot[bot]", "github-actions[bot]"}
 
@@ -227,41 +232,39 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
 # ---- Git signals (single-pass, no per-file subprocess fan-out) ---------------
 
 
-def recent_human_edits(repo: Path, days: int = RECENT_EDIT_DAYS) -> set[str]:
-    """Files under content/docs touched by a non-bot author in the last N days."""
-    out = run_git(
-        repo,
-        ["log", f"--since={days} days ago", "--name-only", "--format=%x01%an", "--", CONTENT_DIR],
-    )
-    touched: set[str] = set()
+def git_history_signals(repo: Path) -> tuple[dict[str, int], dict[str, int]]:
+    """Per-path git timestamps for content/docs, from one history pass.
+
+    Walks history newest-first and returns two maps of unix commit times:
+
+      newest_non_bot : the most recent commit by a *non-bot* author that
+                       touched the path (a human edit — resets the staleness
+                       clock). Absent for pages only ever touched by bots.
+      created        : the oldest commit that touched the path (its creation),
+                       the fallback clock for never-bot-reviewed pages.
+    """
+    out = run_git(repo, ["log", "--name-only", "--format=%x01%ct%x01%an", "--", CONTENT_DIR])
+    newest_non_bot: dict[str, int] = {}
+    created: dict[str, int] = {}
+    current_ct = 0
     author_is_bot = True
     for line in out.splitlines():
         if line.startswith("\x01"):
-            author_is_bot = line[1:].strip() in BOT_AUTHORS
-        elif line.strip() and not author_is_bot:
-            touched.add(line.strip())
-    return touched
-
-
-def last_modified_times(repo: Path) -> dict[str, int]:
-    """{path: newest commit unix time} for content/docs, from one git pass.
-
-    Walks history newest-first; the first time a path appears is its last
-    modification. Used to order never-reviewed pages in the stale lane
-    (longest-untouched first).
-    """
-    out = run_git(repo, ["log", "--name-only", "--format=%x01%ct", "--", CONTENT_DIR])
-    times: dict[str, int] = {}
-    current = 0
-    for line in out.splitlines():
-        if line.startswith("\x01"):
+            # Header line is "\x01<commit-time>\x01<author-name>".
+            parts = line.split("\x01")
+            ct = parts[1] if len(parts) > 1 else ""
+            an = parts[2] if len(parts) > 2 else ""
             try:
-                current = int(line[1:].strip())
+                current_ct = int(ct.strip())
             except ValueError:
-                current = 0
-        elif line.strip() and line.strip() not in times:
-            times[line.strip()] = current
-    return times
+                current_ct = 0
+            author_is_bot = an.strip() in BOT_AUTHORS
+        elif line.strip():
+            path = line.strip()
+            created[path] = current_ct  # last write wins -> oldest commit
+            if not author_is_bot and path not in newest_non_bot:
+                newest_non_bot[path] = current_ct
+    return newest_non_bot, created
 
 
 def run_git(repo: Path, args: list[str]) -> str:
@@ -319,35 +322,64 @@ def parse_day(s: str | None) -> date | None:
             return None
 
 
+def _ts_to_day(ts: int | None) -> date | None:
+    if not ts:
+        return None
+    return datetime.fromtimestamp(ts, tz=timezone.utc).date()
+
+
+def effective_last_review(
+    path: str,
+    entry: dict | None,
+    newest_non_bot: dict[str, int],
+    created: dict[str, int],
+) -> date | None:
+    """The date the staleness clock is measured from.
+
+    max(completed bot review, newest human edit); an `incomplete` review does
+    not count, so the page stays due. Never-bot-reviewed pages fall back to the
+    git creation date. None only when the page has no git history at all.
+    """
+    cands: list[date] = []
+    if entry:
+        reviewed = parse_day(entry.get("reviewed_at"))
+        if reviewed and entry.get("status") != INCOMPLETE_STATUS:
+            cands.append(reviewed)
+    human = _ts_to_day(newest_non_bot.get(path))
+    if human:
+        cands.append(human)
+    if cands:
+        return max(cands)
+    return _ts_to_day(created.get(path))
+
+
+def importance(
+    tier: int,
+    visits: int | None,
+    max_visits: int,
+    median_visits: int,
+    have_traffic: bool,
+) -> float:
+    """Strategic weight, modulated by traffic when a snapshot is available."""
+    tier_w = TIER_WEIGHTS.get(tier, TIER_WEIGHTS[3])
+    if have_traffic and max_visits > 0:
+        v = visits if visits is not None else median_visits
+        traffic_n = math.log1p(v) / math.log1p(max_visits)
+        return tier_w * (0.5 + 0.5 * traffic_n)
+    return tier_w
+
+
 def score_page(
     tier: int,
     visits: int | None,
     max_visits: int,
     median_visits: int,
-    last_reviewed: date | None,
+    last_review: date | None,
     today: date,
-    recently_edited: bool,
     have_traffic: bool,
 ) -> float:
-    tier_w = TIER_WEIGHTS.get(tier, TIER_WEIGHTS[3])
-
-    if last_reviewed is None:
-        age_n = 1.0
-    else:
-        age_n = min((today - last_reviewed).days / 365.0, 1.0)
-
-    if have_traffic and max_visits > 0:
-        v = visits if visits is not None else median_visits
-        traffic_n = math.log1p(v) / math.log1p(max_visits)
-        score = WEIGHT_TIER * tier_w + WEIGHT_TRAFFIC * traffic_n + WEIGHT_AGE * age_n
-    else:
-        # No traffic data at all: drop the term, renormalize the rest.
-        rest = WEIGHT_TIER + WEIGHT_AGE
-        score = (WEIGHT_TIER / rest) * tier_w + (WEIGHT_AGE / rest) * age_n
-
-    if recently_edited:
-        score *= RECENT_EDIT_PENALTY
-    return round(score, 4)
+    staleness = max((today - last_review).days, 0) if last_review else 0
+    return round(importance(tier, visits, max_visits, median_visits, have_traffic) * staleness, 4)
 
 
 # ---- Subcommands ---------------------------------------------------------------
@@ -355,13 +387,16 @@ def score_page(
 
 def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
     entries = load_ledger(ledger_dir)
-    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0, "incomplete": 0, "unknown": 0}
+    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0,
+              "incomplete": 0, "capped": 0, "unknown": 0}
     by_lane: dict[str, int] = {}
     for path, entry in sorted(entries.items()):
         by_lane[entry.get("lane", "priority")] = by_lane.get(entry.get("lane", "priority"), 0) + 1
         status = entry.get("status")
-        if status == "incomplete":
+        if status == INCOMPLETE_STATUS:
             counts["incomplete"] += 1
+            if int(entry.get("attempts", 0)) >= ATTEMPT_CAP:
+                counts["capped"] += 1
             continue
         # `status == "clean"` is the canonical form; `clean: true` is the legacy
         # pre-standardization field still present on older ledger objects.
@@ -472,12 +507,13 @@ def main() -> int:
             "no_retire": no_retire,
             "monthly_visits": traffic.get(path),
             "last_reviewed": entry.get("reviewed_at"),
+            "attempts": int(entry.get("attempts", 0)),
             "score": score,
         }
 
     # --paths: explicit override, no scoring, no guardrails (testing path).
-    # The per-article worker passes --lane to carry the dispatcher's lane through
-    # (e.g. stale, so retirement stays in scope); without it entries are manual.
+    # The per-article worker passes --lane to carry the dispatcher's lane
+    # through; without it entries are manual.
     if args.paths:
         lane = args.lane or "manual"
         for raw in args.paths.split(","):
@@ -500,10 +536,10 @@ def main() -> int:
         return finish(queue, args)
     open_slugs = {b[len(BRANCH_PREFIX):].removeprefix("retire-") for b in open_branches}
 
-    recently_edited = recent_human_edits(repo)
-    modified_times = last_modified_times(repo)
+    newest_non_bot, created = git_history_signals(repo)
 
     candidates: list[str] = []
+    capped: list[str] = []
     for path in all_paths:
         tier, _ = tier_for(path, tier_rules)
         if tier == 0:
@@ -513,31 +549,19 @@ def main() -> int:
         if is_draft(repo / path):
             continue
         entry = ledger.get(path)
-        if entry:
-            reviewed = parse_day(entry.get("reviewed_at"))
-            if reviewed:
-                cooldown = (
-                    INCOMPLETE_COOLDOWN_DAYS
-                    if entry.get("status") == "incomplete"
-                    else COOLDOWN_DAYS
-                )
-                if (today - reviewed).days < cooldown:
-                    continue
+        if entry and entry.get("status") == INCOMPLETE_STATUS \
+                and int(entry.get("attempts", 0)) >= ATTEMPT_CAP:
+            capped.append(path)
+            continue
         candidates.append(path)
 
-    # Stale lane: one reserved slot for the longest-unreviewed page.
-    def stale_key(path: str):
-        entry = ledger.get(path)
-        reviewed = parse_day(entry.get("reviewed_at")) if entry else None
-        never = reviewed is None
-        return (
-            0 if never else 1,                                   # never-reviewed first
-            modified_times.get(path, 0) if never else 0,          # longest-untouched first
-            reviewed.toordinal() if reviewed else 0,              # then oldest review
-            path,
+    if capped:
+        print(
+            f"select-articles: {len(capped)} page(s) backed off at the "
+            f"{ATTEMPT_CAP}-attempt cap (need a human): " + ", ".join(sorted(capped)[:10])
+            + (" ..." if len(capped) > 10 else ""),
+            file=sys.stderr,
         )
-
-    stale_pick: str | None = min(candidates, key=stale_key) if candidates else None
 
     scored = sorted(
         (
@@ -547,23 +571,19 @@ def main() -> int:
                     traffic.get(path),
                     max_visits,
                     median_visits,
-                    parse_day(ledger.get(path, {}).get("reviewed_at")),
+                    effective_last_review(path, ledger.get(path), newest_non_bot, created),
                     today,
-                    path in recently_edited,
                     have_traffic,
                 ),
                 path,
             )
             for path in candidates
-            if path != stale_pick
         ),
         key=lambda t: (-t[0], t[1]),
     )
 
-    for score, path in scored[: max(args.count - (1 if stale_pick else 0), 0)]:
+    for score, path in scored[: max(args.count, 0)]:
         queue["articles"].append(article(path, "priority", score))
-    if stale_pick and args.count > 0:
-        queue["articles"].append(article(stale_pick, "stale", None))
 
     return finish(queue, args)
 

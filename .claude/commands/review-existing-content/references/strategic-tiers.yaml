@@ -13,11 +13,13 @@
 #                 0 = EXCLUDED: generated or upstream-synced content. The
 #                     review bot must never touch these — the generators own
 #                     them and will overwrite or fight any hand edit.
-#   no_retire — the retirement lane may never propose retiring a matching
-#               page. Tier 1 implies no_retire; set it explicitly on lower
-#               tiers that are SEO-critical or contractually required. Once
-#               GSC data is flowing, high-impression entries can be
-#               regenerated from thresholds; hand-curated entries stay.
+#   no_retire — hard veto: review must never propose retiring a matching page,
+#               regardless of evidence. This is the PRIMARY retirement
+#               guardrail (retirement is no longer gated to a lane). Tier 1
+#               implies no_retire; set it explicitly on lower tiers that are
+#               SEO-critical or contractually required. Once GSC data is
+#               flowing, high-impression entries can be regenerated from
+#               thresholds; hand-curated entries stay.
 #
 # Matching is LONGEST PREFIX WINS (so a deeper, more specific entry overrides
 # a broader one). Prefixes are repo paths, not URLs.
