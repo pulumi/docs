@@ -11,6 +11,7 @@
     <div class="relative shrink-0">
       <button type="button"
         data-logo-nav-trigger
+        data-logo-brand-menu
         data-track="header-pulumi-logo"
         aria-haspopup="menu"
         aria-expanded="false"
@@ -76,5 +77,7 @@
 
   </div>
 </header>
+
+{{ partial "header/logo-brand-menu.html" . }}
 
 <script src="/js/{{ index site.Data.js_manifest "header-nav" }}" defer></script>

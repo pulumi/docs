@@ -110,6 +110,9 @@ columns:
       - label: Security
         href: /security/
         track: footer-security
+      - label: Brand
+        href: https://brand.pulumi.com/
+        track: footer-brand
 
   - heading: Get help
     items:
