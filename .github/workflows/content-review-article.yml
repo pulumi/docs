@@ -241,7 +241,14 @@ jobs:
                "retirement": <bool>}`. The workflow derives the PR facts and
                records the S3 ledger from this; do NOT write a ledger or results
                file yourself.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(make build:*),Bash(make lint:*),Bash(make ensure:*),Bash(python3:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh pr diff:*),Bash(gh issue list:*),Bash(gh search:*),Bash(gh api:*),Bash(gh repo view:*),Bash(git:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(curl:*)"'
+          # Allow general Bash. The per-command allowlist rejected ~6-21 calls
+          # per run, and every observed rejection was a benign compound command
+          # (`for` loops, `cd x && …`, `a; b` chains) or an unlisted verb like
+          # `rm` — claude-code-action matches each call against a single prefix,
+          # so a chain can never match. This runs on an ephemeral runner; the
+          # residual risk is the scoped bot/AWS/Pulumi creds it holds vs.
+          # injected instructions in reviewed content, accepted for throughput.
+          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
       # TEMPORARY DIAGNOSTIC: runs show a high permission_denials_count (the model
       # hitting the allowlist wall, often on compound commands like
