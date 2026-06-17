@@ -13,8 +13,8 @@ Selection algorithm (two lanes):
 1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
    and `draft: true` pages.
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
-   inside the ledger cooldown (365 days after a review; 180 days after a
-   review whose PR was closed without merging).
+   inside the ledger cooldown (365 days after a review, or 3 days after an
+   `incomplete` review that recorded no real outcome).
 3. Runaway guardrail: if >= MAX_OPEN_PRS open `content-review/*` PRs exist,
    emit an empty queue with `"halted": "max_open_prs"` so the workflow
    warns instead of piling on.
@@ -76,7 +76,6 @@ CONTENT_DIR = "content/docs"
 BRANCH_PREFIX = "content-review/"
 MAX_OPEN_PRS = 9
 COOLDOWN_DAYS = 365
-CLOSED_PR_COOLDOWN_DAYS = 180
 # A review that ended without a real outcome (the worker exited before recording
 # a verdict, or claimed a fix with no PR) is recorded `status: "incomplete"`. It
 # should be retried soon — but not re-picked in the same dispatch batch — so it
@@ -517,13 +516,11 @@ def main() -> int:
         if entry:
             reviewed = parse_day(entry.get("reviewed_at"))
             if reviewed:
-                if entry.get("status") == "incomplete":
-                    cooldown = INCOMPLETE_COOLDOWN_DAYS
-                else:
-                    cooldown = COOLDOWN_DAYS
-                    state = pr_state(entry.get("pr", ""), use_gh) if entry.get("pr") else None
-                    if state and state.get("state") == "CLOSED" and not state.get("mergedAt"):
-                        cooldown = CLOSED_PR_COOLDOWN_DAYS
+                cooldown = (
+                    INCOMPLETE_COOLDOWN_DAYS
+                    if entry.get("status") == "incomplete"
+                    else COOLDOWN_DAYS
+                )
                 if (today - reviewed).days < cooldown:
                     continue
         candidates.append(path)
