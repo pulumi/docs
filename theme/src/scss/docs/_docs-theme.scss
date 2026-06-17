@@ -1,0 +1,845 @@
+// Docs dark mode — light-first semantic tokens, dark override, and the
+// sidebar theme toggle. Scoped entirely to `/docs` two ways: tokens are defined
+// on `body.section-docs`, and every dark rule is additionally gated on
+// `html[data-theme="dark"]` (written pre-paint only on docs pages by the inline
+// script in head.html). Nothing here can affect a non-docs page.
+//
+// This partial is imported UNLAYERED (outside @layer components) on purpose:
+// the docs header and buttons are styled with Tailwind utilities, which live in
+// @layer utilities and beat @layer components regardless of specificity. Only
+// unlayered rules reliably win, mirroring the existing auth-header swap rules.
+//
+// Token values come from the Pulumi brand design tokens (theme.light /
+// theme.dark). Raw `--color-*` scales never invert; only these semantic aliases
+// re-point per mode.
+
+// Light — the default baseline. These equal the colors the docs already render,
+// so light mode is unchanged.
+body.section-docs {
+    --docs-bg: var(--color-white);
+    --docs-bg-alt: var(--color-violet-50);
+    --docs-surface: var(--color-gray-100);
+    --docs-fg: var(--color-service-black);
+    --docs-fg-muted: var(--color-gray-700);
+    --docs-border: var(--color-gray-200);
+    --docs-link: var(--color-violet-primary);
+    --docs-card: var(--color-white);
+    --docs-card-border: var(--color-gray-200);
+    --docs-ring: var(--color-violet-700);
+
+    background-color: var(--docs-bg);
+    color: var(--docs-fg);
+}
+
+// Dark — override only. Re-points the semantic aliases to their dark steps.
+html[data-theme="dark"] body.section-docs {
+    --docs-bg: var(--color-service-black);
+    --docs-bg-alt: var(--color-violet-950);
+    --docs-surface: var(--color-gray-900);
+    --docs-fg: var(--color-white);
+    --docs-fg-muted: var(--color-gray-300);
+    --docs-border: #ffffff1a;
+    --docs-link: var(--color-violet-300);
+    --docs-card: var(--color-service-black);
+    --docs-card-border: #ffffff1a;
+    --docs-ring: var(--color-violet-300);
+
+    // Brand rule: the primary violet flips to lavender in dark mode everywhere
+    // EXCEPT solid buttons (those pin violet-700, re-pinned below). Remapping the
+    // semantic token here flips every `var(--color-violet-primary)` and every
+    // `text-violet-primary` / `bg-violet-primary` / `border-violet-primary`
+    // utility in docs at once — icons, links, accents, focus rings.
+    --color-violet-primary: var(--color-violet-300);
+}
+
+// ---------------------------------------------------------------------------
+// Dark chrome overrides (Phase 1). Most surfaces flip automatically because
+// their colors were migrated to `var(--docs-*, …)` in place. These extra rules
+// cover surfaces painted by Tailwind utilities / @apply (which can't be migrated
+// inline) and the few hues that need a distinct dark value rather than a swap.
+// ---------------------------------------------------------------------------
+html[data-theme="dark"] body.section-docs {
+    // Base content text (main carries `@apply text-service-black` from @layer base).
+    main {
+        color: var(--docs-fg);
+    }
+
+    // Content links: base color flips via --docs-link; give hover a lighter step.
+    section.docs-content {
+        p a:not(.btn):hover,
+        ul li a[href]:hover {
+            color: var(--color-violet-200);
+        }
+    }
+
+    // Left sidebar menu (the pulumi-docs-nav tree — see components/_docs-nav.scss,
+    // whose links use @apply text-gray-800 / text-violet-800 / bg-violet-200, etc.).
+    #docs-main-nav pulumi-docs-nav {
+        ul li a {
+            color: var(--docs-fg-muted);
+
+            &.active {
+                background-color: color-mix(in oklch, var(--color-violet-300) 18%, transparent);
+                color: var(--color-white);
+            }
+        }
+
+        ul li:not(.expandable) a:hover {
+            background-color: color-mix(in oklch, var(--color-violet-300) 12%, transparent);
+            color: var(--docs-fg);
+        }
+
+        ul li.expanded > a {
+            color: var(--color-violet-300);
+        }
+    }
+
+    // Theme-aware logos (the docs-top-nav header and docs-home cards emit both a
+    // .docs-logo-light and .docs-logo-dark image): show the dark-variant image,
+    // hide the light one. .docs-logo-dark is display:none by default (below), so
+    // light/non-docs pages are untouched.
+    .docs-logo-light {
+        display: none;
+    }
+
+    .docs-logo-dark {
+        display: inline-block;
+    }
+
+    // Top header (docs-top-nav.html) — utilities: bg-white, border-gray-200, text-gray-950.
+    header.docs-top-nav {
+        background-color: var(--docs-bg);
+        border-bottom-color: var(--docs-border);
+        color: var(--docs-fg);
+
+        .btn-ghost-nav {
+            color: var(--docs-fg);
+
+            &:hover {
+                background-color: var(--docs-surface);
+                color: var(--color-violet-300);
+            }
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--docs-fg);
+            border-color: var(--docs-border);
+
+            &:hover {
+                background-color: var(--docs-surface);
+                border-color: var(--docs-border);
+            }
+        }
+
+        [data-logo-nav-menu] {
+            background-color: var(--color-gray-950);
+            color: var(--docs-fg);
+            border-color: var(--docs-border);
+
+            a {
+                color: var(--docs-fg);
+
+                &:hover {
+                    background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
+                    color: var(--color-violet-200);
+                }
+            }
+        }
+    }
+
+    // Footer badge: the default logo (div.icon-pulumi-logo, _icons.scss) has a
+    // near-black disc that vanishes on the dark footer. Swap to a light disc.
+    footer.docs-footer div.icon-pulumi-logo {
+        background: url(/images/docs/footer/pulumi-light-logo.svg);
+    }
+}
+
+// ===========================================================================
+// Phase 2 — full docs dark coverage. Every rule below is a dark-only OVERRIDE
+// gated on `html[data-theme="dark"] body.section-docs`, so the light source in
+// _notes.scss, _tables.scss, _card.scss, _breadcrumb.scss, _docs-home.scss,
+// components/*, etc. is never touched and light mode is unchanged. Callout hues
+// keep their light identity in dark (info=violet, tip=green, warning=orange),
+// each mapped to the brand's 950 background / 300 accent steps.
+// ===========================================================================
+html[data-theme="dark"] body.section-docs {
+    // --- Notes / callouts ---------------------------------------------------
+    .note {
+        div.content {
+            color: var(--docs-fg);
+        }
+
+        &.note-info {
+            background: var(--color-violet-950);
+
+            a,
+            i,
+            svg.ph-icon {
+                color: var(--color-violet-300);
+            }
+
+            div.line {
+                background-color: var(--color-violet-300);
+            }
+
+            code {
+                background-color: color-mix(in oklch, var(--color-violet-300) 22%, transparent);
+            }
+        }
+
+        &.note-tip {
+            background: var(--color-green-950);
+
+            a,
+            i,
+            svg.ph-icon {
+                color: var(--color-green-300);
+            }
+
+            div.line {
+                background-color: var(--color-green-300);
+            }
+
+            code {
+                background-color: color-mix(in oklch, var(--color-green-300) 22%, transparent);
+            }
+        }
+
+        &.note-warning {
+            background: var(--color-orange-950);
+
+            a,
+            i,
+            svg.ph-icon {
+                color: var(--color-orange-300);
+            }
+
+            div.line {
+                background-color: var(--color-orange-300);
+            }
+
+            code {
+                background: color-mix(in oklch, var(--color-orange-300) 22%, transparent);
+            }
+        }
+    }
+
+    // --- Tables: service-black cells, gray header + gray-900 gridline seams ---
+    table {
+        background-color: var(--docs-surface);
+
+        th {
+            background-color: var(--docs-surface);
+            color: var(--docs-fg);
+        }
+
+        td {
+            background-color: var(--docs-bg);
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .table-wrapper.table-responsive {
+            tr {
+                border-color: var(--docs-border);
+                background-color: var(--docs-surface);
+            }
+
+            td {
+                border-top-color: var(--docs-border);
+
+                &[data-label]::before {
+                    color: var(--docs-fg-muted);
+                }
+            }
+        }
+    }
+
+    // --- Cards / tiles ------------------------------------------------------
+    .card,
+    .tile {
+        border-color: var(--docs-card-border);
+    }
+
+    .card-hover:hover,
+    .tile.card-hover:hover {
+        border-color: color-mix(in oklch, var(--color-violet-300) 30%, transparent);
+    }
+
+    // --- Prose blockquote + inline code ------------------------------------
+    main blockquote {
+        border-color: var(--docs-border);
+    }
+
+    // Inline <code> only (pre > code is the dark code block, left untouched).
+    :not(pre) > code {
+        background-color: color-mix(in oklch, var(--color-white) 10%, transparent);
+    }
+
+    // --- Breadcrumbs --------------------------------------------------------
+    ol.docs-breadcrumb li {
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+                text-decoration-color: var(--docs-border);
+            }
+        }
+
+        &:not(:last-child)::after {
+            color: var(--color-gray-500);
+        }
+    }
+
+    // --- Right-rail table of contents (shared selectors w/ registry; the
+    //     section-docs gate keeps registry light) -----------------------------
+    div.table-of-contents {
+        div.heading h2 {
+            color: var(--docs-fg-muted);
+        }
+
+        ul li a {
+            color: var(--docs-link);
+        }
+
+        ul li.active a::before {
+            background-color: var(--docs-link);
+        }
+
+        div.content {
+            border-bottom-color: var(--docs-border);
+        }
+    }
+
+    .docs-table-of-contents {
+        .content {
+            border-bottom-color: var(--docs-border);
+        }
+
+        .table-of-contents {
+            border-top-color: var(--docs-border);
+            border-bottom-color: var(--docs-border);
+        }
+    }
+
+    // --- Feedback widget + edit-page links ----------------------------------
+    #docsFeedbackContainer {
+        border-top-color: var(--docs-border);
+        color: var(--docs-fg-muted);
+
+        a:hover {
+            color: var(--docs-fg);
+        }
+
+        #feedbackLongForm {
+            color: var(--docs-fg-muted);
+
+            .popup-overlay > div {
+                background-color: var(--docs-card);
+            }
+
+            textarea,
+            input {
+                background-color: var(--docs-surface);
+                border-color: var(--docs-border);
+                color: var(--docs-fg);
+            }
+        }
+    }
+
+    .table-of-contents-feedback a {
+        color: var(--docs-fg-muted);
+
+        &:hover {
+            color: var(--docs-fg);
+        }
+    }
+
+    // --- Pagination ---------------------------------------------------------
+    .pagination {
+        border-color: var(--docs-border);
+
+        .page-item {
+            &:not(:first-of-type) {
+                border-left-color: var(--docs-border);
+            }
+
+            a:hover {
+                background-color: var(--docs-surface);
+            }
+
+            &.active {
+                background-color: color-mix(in oklch, var(--color-violet-300) 18%, transparent);
+            }
+        }
+    }
+
+    // --- Language chooser + tabs (active indicator uses the shared
+    //     gradient-border violet-primary, too dark for the dark surface) -------
+    pulumi-chooser > ul li {
+        border-color: var(--docs-border);
+
+        &:hover {
+            border-color: var(--color-gray-400);
+        }
+
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+            }
+        }
+
+        &.active {
+            border-bottom-color: var(--docs-link);
+
+            a {
+                color: var(--docs-fg);
+            }
+        }
+    }
+
+    pulumi-tabs::part(tab) {
+        border-bottom-color: var(--docs-border);
+    }
+
+    pulumi-tabs::part(active-tab) {
+        border-bottom-color: var(--docs-link);
+    }
+
+    // --- Badges (also render via chooser preview pills) ---------------------
+    // The chooser pill is a bare `li > span` that gets its skin from
+    // `@extend .badge-preview` (no literal class), so it needs naming here too.
+    .badge-preview,
+    pulumi-chooser > ul li > span {
+        background-color: var(--color-orange-950);
+        color: var(--color-orange-300);
+    }
+
+    .badge-required {
+        border-color: var(--color-red-800);
+        color: var(--color-red-300);
+    }
+
+    // --- Resource-links (right-rail, docs-only) -----------------------------
+    pulumi-resource-links {
+        .heading {
+            color: var(--docs-fg-muted);
+        }
+
+        .links {
+            color: var(--docs-link);
+
+            a:hover {
+                color: var(--color-violet-200);
+            }
+        }
+    }
+
+    // --- /docs/ landing page (docs-home) ------------------------------------
+    section.docs-home {
+        h2,
+        h3 {
+            color: var(--docs-fg);
+        }
+
+        div.blue-sparkle {
+            background: var(--color-blue-950);
+        }
+
+        a.full-width-card {
+            background: var(--docs-card);
+            border-color: var(--docs-card-border);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+
+            div.icon-heading {
+                border-bottom-color: var(--docs-card-border);
+            }
+
+            &:hover {
+                background: var(--docs-surface);
+                border-color: var(--docs-border);
+            }
+        }
+
+        div.cards-logo-label-link a {
+            border-color: var(--docs-card-border);
+
+            div.card-icon {
+                background: var(--color-gray-950);
+                border-bottom-color: var(--docs-card-border);
+            }
+
+            div.label {
+                background: var(--docs-card);
+                color: var(--docs-fg);
+            }
+
+            &:hover {
+                border-color: var(--docs-ring);
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Brand button pins + base text/border defaults. Per-utility color flips were
+// removed in favor of explicit `dark:` variants at the source (keeps each
+// utility class honest). What stays here is NOT utility hijacking: the brand
+// button pins (@apply-styled, no literal class), the base h1–h6/p text color
+// (set directly on the element in @layer base), the default border-color (the
+// preflight default for bare `border` utilities), and masked chrome icons.
+// ---------------------------------------------------------------------------
+html[data-theme="dark"] body.section-docs {
+    // Headings and paragraphs set `color: service-black` DIRECTLY on the element
+    // (_base-shared.scss, @layer base) — a direct declaration beats the color
+    // they'd inherit from `main`, so they must be flipped on the element itself.
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: var(--docs-fg);
+    }
+
+    // _base-shared.scss preflight sets the default border-color to gray-200 so
+    // bare `border` / `border-t` utilities render. Flip that default to the dark
+    // hairline; elements with an explicit (higher-specificity) border color keep
+    // it, and buttons keep their intentional transparent border (re-pinned below).
+    * {
+        border-color: var(--docs-border);
+    }
+
+    // Buttons use `border border-transparent` for layout; keep that (focus-visible
+    // still draws the ring). .btn-outline re-asserts its visible edge after this.
+    .btn {
+        border-color: transparent;
+    }
+
+    // Solid primary buttons keep brand violet-700 (the --color-violet-primary
+    // remap would otherwise turn their fill lavender).
+    .btn-primary {
+        background-color: var(--color-violet-700);
+    }
+
+    // Outline / secondary / ghost buttons appear in content too (banner secondary
+    // button, button-cards) and are @apply-styled (no literal classes), so they
+    // need explicit dark skins, not the utility flips below.
+    .btn-outline {
+        background-color: transparent;
+        color: var(--docs-fg);
+        border-color: var(--docs-border);
+
+        &:hover {
+            background-color: var(--docs-surface);
+            border-color: var(--docs-border);
+        }
+    }
+
+    .btn-secondary {
+        background-color: var(--docs-surface);
+        color: var(--docs-fg);
+    }
+
+    .btn-ghost {
+        color: var(--docs-fg);
+
+        &:hover {
+            background-color: var(--docs-surface);
+        }
+    }
+
+    // Code-block copy button stays primary violet-700 (the --color-violet-primary
+    // remap would otherwise turn it lavender).
+    .copy-button-container,
+    .copy-button-container:active,
+    .code-mode-dark .copy-button-container {
+        background: var(--color-violet-700);
+    }
+
+    // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake
+    // a fixed-color SVG behind a mask; drop the image and tint the mask so they
+    // follow the theme. Background-image icons (the colored category/cloud/logo
+    // marks in _icons.scss) are NOT tintable and remain per-asset follow-up work.
+    div.open-docs-main-nav,
+    div.close-docs-main-nav,
+    div.expand-more-18-18,
+    div.customize-expand-more-18-18,
+    div.customize-expand-less-18-18,
+    div.icon-on-this-page {
+        background: var(--docs-fg-muted);
+    }
+}
+
+// "Copy page" / LLM menu dropdown in the right-rail TOC (_llm-menu.scss — all
+// hardcoded light slate grays). Not a detached overlay, so plain section-docs scope.
+html[data-theme="dark"] body.section-docs {
+    // Trigger button (utilities: text-gray-600 hover:text-gray-700).
+    .llm-menu-trigger {
+        color: var(--docs-fg-muted);
+
+        &:hover {
+            color: var(--docs-fg);
+        }
+    }
+
+    .llm-menu-dropdown {
+        background: var(--color-gray-950);
+        border-color: var(--docs-border);
+
+        hr {
+            border-top-color: var(--docs-border);
+        }
+    }
+
+    .llm-menu-item:hover {
+        background-color: color-mix(in oklch, var(--color-white) 8%, transparent);
+    }
+
+    .llm-menu-icon {
+        color: var(--docs-fg-muted);
+    }
+
+    .llm-menu-title {
+        color: var(--docs-fg);
+    }
+
+    .llm-menu-subtitle,
+    .llm-menu-external {
+        color: var(--docs-fg-muted);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Provider / language logo swaps. The background-image icon marks in _icons.scss
+// bake fixed colors (dark/gray wordmarks, knockouts) that vanish on the dark
+// card well, so swap to dark-mode variants (recolored siblings; see the *-on-dark
+// SVGs). Background-image-only override keeps the size/position from _icons.scss.
+// Full-color marks (gcp icon, node/python/go/dotnet/java) read fine and are left.
+// ---------------------------------------------------------------------------
+html[data-theme="dark"] body.section-docs {
+    div.aws-40 {
+        background-image: url(/images/docs/icons/clouds/aws-40-on-dark.svg);
+    }
+
+    div.aws-35-35 {
+        background-image: url(/images/docs/icons/clouds/aws-35-35-on-dark.svg);
+    }
+
+    div.aws-18-18 {
+        background-image: url(/images/docs/icons/clouds/aws-18-18-on-dark.svg);
+    }
+
+    div.azure-40 {
+        background-image: url(/images/docs/icons/clouds/azure-40-on-dark.svg);
+    }
+
+    div.azure-52-16 {
+        background-image: url(/images/docs/icons/clouds/azure-52-16-on-dark.svg);
+    }
+
+    div.azure-78-24 {
+        background-image: url(/images/docs/icons/clouds/azure-78-24-on-dark.svg);
+    }
+
+    div.google-cloud-40 {
+        background-image: url(/images/docs/icons/clouds/google-cloud-40-on-dark.svg);
+    }
+
+    div.kubernetes-40 {
+        background-image: url(/images/docs/icons/clouds/kubernetes-40-on-dark.svg);
+    }
+
+    div.vault-40 {
+        background-image: url(/images/docs/icons/secrets-providers/vault-40-on-dark.svg);
+    }
+
+    div.onepassword-40 {
+        background-image: url(/images/docs/icons/secrets-providers/onepassword-40-on-dark.svg);
+    }
+
+    div.yaml-color-32-32 {
+        background-image: url(/images/docs/icons/languages/yaml-color-32-32-on-dark.svg);
+    }
+}
+
+// Activate the Algolia Autocomplete classic theme's built-in dark palette and
+// re-skin the parts we style by hand. The search modal is rendered at <body>
+// level (detached from the docs DOM), so these rules gate on body[data-theme]
+// rather than body.section-docs. docs-theme.ts sets data-theme on <body> only
+// in dark docs (it self-gates to section-docs), so this never reaches blog /
+// tutorials / marketing search.
+body[data-theme="dark"] {
+    // Drive the whole widget off our brand tokens rather than the classic
+    // theme's dark defaults (which leave the panel near-black-blue, the input
+    // almost pure black, and the accents off-brand). RGB triples so the theme's
+    // rgba(var(--aa-*), alpha) math keeps working.
+    --aa-background-color-rgb: 31, 27, 33; // service-black panel
+    --aa-background-color-alpha: 1;
+    --aa-input-background-color-rgb: 31, 27, 33; // service-black — matches the panel
+    --aa-input-background-color-alpha: 1;
+    --aa-text-color-rgb: 203, 202, 206; // gray-300 query/result text
+    --aa-text-color-alpha: 1;
+    --aa-muted-color-rgb: 153, 151, 160; // gray-500 placeholder / muted
+    --aa-muted-color-alpha: 1;
+    --aa-icon-color-rgb: 153, 151, 160; // gray search icon (matches light)
+    --aa-primary-color-rgb: 195, 189, 255; // violet-300 — on-brand focus ring in dark
+    --aa-selected-color-rgb: 195, 189, 255;
+    --aa-selected-color-alpha: 0.18;
+    --aa-panel-border-color-rgb: 255, 255, 255;
+    --aa-panel-border-color-alpha: 0.1;
+    --aa-input-border-color-rgb: 255, 255, 255;
+    --aa-input-border-color-alpha: 0.1;
+    --aa-overlay-color-rgb: 0, 0, 0;
+    --aa-overlay-color-alpha: 0.6;
+    --aa-scrollbar-track-background-color-rgb: 31, 27, 33;
+    --aa-scrollbar-thumb-background-color-rgb: 70, 67, 76;
+
+    .aa-SourceHeader {
+        background-color: var(--color-service-black);
+
+        ul {
+            border-bottom-color: #ffffff1a;
+
+            li {
+                color: var(--color-gray-300);
+
+                // Tab facet icons are dark monochrome SVGs — tint them light.
+                button img {
+                    filter: brightness(0) invert(1);
+                }
+
+                .count {
+                    background-color: color-mix(in oklch, var(--color-violet-300) 18%, transparent);
+                    color: var(--color-gray-300);
+                }
+
+                &.active,
+                &.active:hover:not(.disabled) {
+                    border-bottom-color: var(--color-violet-300);
+
+                    .label {
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .aa-Item {
+        background-color: var(--color-gray-950);
+
+        .result {
+            .ancestors {
+                color: var(--color-gray-300);
+            }
+
+            .item {
+                .title {
+                    color: var(--color-white);
+
+                    .label {
+                        color: var(--color-gray-300);
+                    }
+                }
+
+                .description {
+                    color: var(--color-gray-300);
+                }
+            }
+        }
+
+        // Matched terms: <mark> text defaults to black (invisible on the dark
+        // card). Make matches a bright on-brand lavender with a faint tint.
+        mark {
+            color: var(--color-violet-300);
+            background-color: color-mix(in oklch, var(--color-violet-300) 14%, transparent);
+            border-bottom-color: color-mix(in oklch, var(--color-violet-300) 60%, transparent);
+        }
+    }
+
+    // No-results view: the echoed query <mark> also defaults to black text.
+    .aa-SourceNoResults mark {
+        color: var(--color-white);
+    }
+
+    .aa-SourceFooter {
+        background-color: var(--color-service-black);
+        color: var(--color-gray-300);
+
+        > div {
+            border-top-color: #ffffff1a;
+        }
+    }
+
+    &.aa-Detached .aa-DetachedSearchButtonQuery {
+        color: var(--color-gray-300);
+    }
+}
+
+// Dark logo is hidden everywhere by default; the body-level reveal under
+// html[data-theme="dark"] body.section-docs shows it in dark docs.
+// Light/non-docs pages keep the original logo untouched.
+.docs-logo-dark {
+    display: none;
+}
+
+// ---------------------------------------------------------------------------
+// Sidebar theme toggle — pinned to the bottom of the docs nav. Three icon
+// buttons (sun / moon / monitor); the active one reflects data-theme-pref.
+// ---------------------------------------------------------------------------
+// Fallbacks on every property: docs/menu.html (which renders this toggle) is also
+// Hugo's _default/section.html fallback, so the markup can ride into a non-docs
+// synthesized list page where --docs-* is undefined. The render is gated to docs
+// in menu.html; these fallbacks keep it from looking broken if it ever leaks.
+.docs-theme-toggle {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 8px 16px;
+    border-top: 1px solid var(--docs-border, var(--color-gray-200));
+}
+
+.docs-theme-toggle__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    color: var(--docs-fg-muted, var(--color-gray-700));
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition:
+        color 0.15s ease,
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+
+    &:hover {
+        color: var(--docs-fg, var(--color-service-black));
+        background-color: var(--docs-surface, var(--color-gray-100));
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+// Active state. Driven by data-theme-pref so the highlight is correct pre-paint
+// (before the JS bundle loads); aria-pressed mirrors it once JS runs.
+html[data-theme-pref="light"] .docs-theme-toggle__btn[data-theme-set="light"],
+html[data-theme-pref="dark"] .docs-theme-toggle__btn[data-theme-set="dark"],
+html[data-theme-pref="system"] .docs-theme-toggle__btn[data-theme-set="system"],
+.docs-theme-toggle__btn[aria-pressed="true"] {
+    color: var(--docs-link, var(--color-violet-primary));
+    background-color: var(--docs-surface, var(--color-gray-100));
+    border-color: var(--docs-border, var(--color-gray-200));
+}

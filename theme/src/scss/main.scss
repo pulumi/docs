@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+// Drive the `dark:` variant off our docs theme attribute instead of the v4
+// default (prefers-color-scheme). This is the standard Tailwind v4 mechanism for
+// attribute/selector-based dark mode. Because the inline head script only writes
+// data-theme on docs pages, `dark:` utilities are automatically scoped to /docs
+// and track the three-state toggle (system resolves to dark there).
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 // Tell Tailwind v4 where to scan for utility class usage in templates.
 // Paths are relative to this file (theme/src/scss/).
 @source "../../../layouts/**/*.html";
@@ -371,6 +378,13 @@ $sitenav-offset: calc($sitenav-height + 16px);
 }
 
 @import "consent-banner";
+
+// Docs dark mode. Imported UNLAYERED (not inside @layer components) so its dark
+// overrides win against the Tailwind utilities used by the docs header/buttons —
+// utilities beat the components layer regardless of specificity. Everything in
+// the partial is scoped to body.section-docs + html[data-theme="dark"], so it
+// cannot affect any non-docs page.
+@import "docs/docs-theme";
 
 // Auth-aware header swap. The inline script in head.html adds .is-signed-in
 // to <html> when the auth cookie is present, before first paint. These rules

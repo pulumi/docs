@@ -45,8 +45,8 @@
             ></div>
         {{ else }}
             <!-- Visual placeholder styled like real search input -->
-            <div class="border border-gray-300 rounded bg-gray-50 px-3 py-2">
-                <div class="text-gray-500 text-sm">🔍 Search box location</div>
+            <div class="border border-gray-300 rounded bg-gray-50 dark:bg-gray-900 px-3 py-2">
+                <div class="text-gray-500 dark:text-gray-300 text-sm">🔍 Search box location</div>
                 <div class="text-xs text-gray-400 mt-1">Algolia search would render here in production</div>
             </div>
         {{ end }}
@@ -109,6 +109,14 @@
 
         </ul>
     </pulumi-docs-nav>
+
+    {{/* Color-theme toggle, pinned to the bottom of the sidebar nav (third flex
+         child after pulumi-docs-nav, which is flex:1 and scrolls). Gated to docs
+         so it never rides into the _default/section.html fallback that also pulls
+         this partial for non-docs synthesized list pages. */}}
+    {{ if eq $page.Section "docs" }}
+        {{ partial "docs/theme-toggle.html" . }}
+    {{ end }}
 
     {{/* Scroll the active item into view. Runs inline — before first paint — so the
          menu never visibly jumps. The expanded classes are rendered server-side above,

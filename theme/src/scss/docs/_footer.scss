@@ -20,8 +20,8 @@ footer.docs-footer {
         p.open-source {
             font-family: 'Inter';
             font-weight: 600;
-            font-size: 16px;       
-            color: #5f6065;
+            font-size: 16px;
+            color: var(--docs-fg-muted, #5f6065);
             margin-top: 0;
         }
 
@@ -29,7 +29,7 @@ footer.docs-footer {
             font-family: 'Inter';
             font-weight: 400;
             font-size: 14px;
-            color: #808080;
+            color: var(--docs-fg-muted, #808080);
         }
     }
 
@@ -44,8 +44,8 @@ footer.docs-footer {
             font-family: 'Inter';
             font-weight: 400;
             font-size: 14px;
-            color: #5f6065;
-            
+            color: var(--docs-fg-muted, #5f6065);
+
             &:hover {
                 text-decoration: underline;
                 text-underline-offset: 6px;
