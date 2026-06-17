@@ -78,6 +78,13 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/latest-dev-version" "${destination_bucket_uri}/latest-dev-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
+# Publishes static/esc/latest-version at https://www.pulumi.com/esc/latest-version.
+# Required: pulumi/esc-action v1 and v2 fetch this URL at runtime to resolve which ESC
+# version to install when a workflow doesn't pin a `version:` input. Removing it 404s
+# that URL and breaks those (unpinned) actions. Keep until v1/v2 are fully sunset.
+# (v3+ installs the Pulumi CLI and no longer reads this file.)
+aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-version" \
+    --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/customer-managed-workflow-agent/latest-version" "${destination_bucket_uri}/customer-managed-workflow-agent/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 

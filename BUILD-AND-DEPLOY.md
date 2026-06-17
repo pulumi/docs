@@ -1431,7 +1431,7 @@ The repository includes 10 additional utility workflows for automation and proje
 
 **Automation and Auto-merge:**
 
-- **Native auto-merge**: Bot PR workflows (`pulumi-cli.yml`, `pulumi-cli-dev-version.yml`, `customer-managed-workflow-agent-cli.yml`) enable GitHub's native auto-merge via `gh pr merge --auto --squash` after creating the PR. This replaces the former polling-based `automerge-workflow.yml`.
+- **Native auto-merge**: Bot PR workflows (`pulumi-cli.yml`, `pulumi-cli-dev-version.yml`, `esc-cli.yml`, `customer-managed-workflow-agent-cli.yml`) enable GitHub's native auto-merge via `gh pr merge --auto --squash` after creating the PR. This replaces the former polling-based `automerge-workflow.yml`.
 - **auto-approve-for-auto-merge.yml**: Auto-approve PRs that meet auto-merge criteria (trusted bots, dependency updates). Uses the `automation/merge` label to gate approval — note that this label now drives auto-*approval* only; auto-merge is handled natively by GitHub.
 
 **AI-Assisted Development:**
@@ -1467,6 +1467,7 @@ These workflows support repository maintenance, automation, and developer experi
 | pull-request | PRs to master | Testing | 10-15 min | PR validation & preview |
 | pr-closed | PR closed | Testing | <1 min | Cleanup preview resources |
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
+| esc-cli | Repository dispatch | N/A | <1 min | Update `static/esc/latest-version` pointer (read by pulumi/esc-action v1/v2) |
 | scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
 | scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
 | bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |
