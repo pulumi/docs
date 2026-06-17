@@ -16,11 +16,10 @@ export PULUMI_ACTION=${1}
 
 case ${PULUMI_ACTION} in
     preview)
-        # Run previews against the production stack. On PR workflows we provision the bucket in the testing account
-        # but infrastructure previews should always run against the production stack since that is the stack
-        # they will get deployed to when merged (not the www-testing stack).
-        pulumi -C infrastructure stack select pulumi/www-production
-        pulumi -C infrastructure preview
+        # Run previews against the production stack. On PR workflows we provision the bucket in the testing account,
+        # but infrastructure previews should always run against the production stack because that is where they are
+        # deployed when merged (not the www-testing stack).
+        pulumi -C infrastructure preview --stack pulumi/www-production
         ;;
     update)
         # Given how frequently we update the CloudFront distribution, and how easy it can
