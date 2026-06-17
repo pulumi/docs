@@ -16,16 +16,30 @@ Neo can be configured at the organization, repository, and user level. Organizat
 
 ## Neo access
 
-Neo is enabled by default. To control Neo access for your organization:
+Neo and all of its features are enabled by default. You can turn Neo off entirely, or keep it on while disabling individual features.
+
+### Enable Neo for organization
+
+The "Enable Neo for organization" toggle is the master switch. Turning it off disables Neo everywhere, including the Neo agent, natural-language resource search, AI explanations served to the Pulumi CLI, and Neo Code Reviews.
 
 1. Navigate to Neo Settings from the Pulumi left navigation
 1. Select the "General" tab
 1. Toggle "Enable Neo for organization" on or off
 
-![Toggle Neo access](toggle-neo-access.png)
+### Per-feature controls
+
+If you'd rather keep Neo on but disable specific capabilities, use the per-feature controls. Each one is enabled by default and can be turned off independently:
+
+- **Enable Neo agent**: The Neo agent that plans and executes infrastructure tasks
+- **Enable Neo CLI explanations**: AI explanations served to the Pulumi CLI
+- **Enable natural-language resource search**: Searching your resources with natural-language queries
+
+To disable [Neo Code Reviews](/docs/ai/code-reviews/), go to your [VCS integration settings](/docs/integrations/version-control/) under **Management** > **Version control**.
+
+![Neo access settings](toggle-neo-access.png)
 
 {{% notes type="info" %}}
-If Neo was previously disabled, it will need to be enabled as outlined below.
+If Neo was previously disabled, it will need to be enabled as outlined above.
 {{% /notes %}}
 
 ## Custom instructions
