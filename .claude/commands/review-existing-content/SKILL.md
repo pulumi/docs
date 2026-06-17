@@ -37,9 +37,9 @@ Read `.content-review-queue.json` from the repo root (written by
 }
 ```
 
-- `lane` — `priority` (scored pick), `stale` (longest-unreviewed reserve
-  slot), or `manual` (workflow_dispatch override).
+- `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
 - `no_retire` — when true, retirement must never be proposed for this page.
+  This is the **hard veto** on retirement — honor it regardless of evidence.
 - If `articles` is empty or `halted` is set, do nothing (the workflow won't
   invoke you in that case, but be defensive).
 
@@ -51,8 +51,8 @@ branch and PR before starting the next.
 ### 1. Branch
 
 From up-to-date `master`, create the branch with the **exact** name
-`content-review/<slug>` (the queue entry's `slug`). For a retirement proposal —
-stale lane only, see below — use `content-review/retire-<slug>` instead. The
+`content-review/<slug>` (the queue entry's `slug`). For a retirement proposal
+(see below) use `content-review/retire-<slug>` instead. The
 workflow derives the PR from this branch name, so it must match exactly. If an
 open PR already exists for that branch name, skip the article entirely and set
 `"verdict": "skipped"` in the sentinel (step 8): a previous run owns it.
@@ -244,17 +244,23 @@ branch, builds the canonical ledger record, and uploads it to S3 keyed by slug.
 - `reason`: one line — **required** for `clean` and `skipped`; omit/empty for
   `fixed`.
 - `fixes`: applied changes; `skipped_findings`: Findings-not-applied count.
-- `retirement`: `true` only for a stale-lane retirement PR (branch
+- `retirement`: `true` only for a retirement PR (branch
   `content-review/retire-<slug>`).
 
 If you exit without writing this file, the workflow records the page as
-`incomplete` (a short cooldown, retried soon) — so always write it, even for a
-clean or skipped verdict.
+`incomplete`. An incomplete outcome does **not** advance the staleness clock, so
+the page stays due and is retried on a later sweep — up to an attempt cap, after
+which it backs off for a human. Always write the sentinel, even for a clean or
+skipped verdict.
 
-## Retirement proposals (stale lane only)
+## Retirement proposals
 
-For a `stale`-lane article with `"no_retire": false`, retirement is a valid
-outcome **instead of** a fix PR, under a strict evidence standard:
+For any article with `"no_retire": false`, retirement is a valid outcome
+**instead of** a fix PR when the strict evidence standard below is met.
+`no_retire: true` is the primary guardrail and an absolute veto — never propose
+retiring such a page no matter how strong the evidence. Retirement is no longer
+restricted to a particular lane; it can be proposed on any review that clears
+the bar, with the full reasoning documented in the PR.
 
 - **Evidence required (two-sided):** the page appears in the traffic report
   with near-zero views (absence from the report is NOT evidence — the page

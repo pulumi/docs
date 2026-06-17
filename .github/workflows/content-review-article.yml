@@ -18,7 +18,7 @@ on:
         description: 'One content file under content/docs/'
         required: true
       lane:
-        description: 'Selection lane (priority/stale/manual); stale enables retirement'
+        description: 'Selection lane (priority/manual); informational — retirement is gated by the evidence bar + no_retire, not the lane'
         required: false
         default: 'priority'
 
@@ -118,8 +118,8 @@ jobs:
           fi
 
       # Build a single-article queue for the dispatched path. --paths bypasses
-      # scoring/guardrails; --lane carries the dispatcher's lane through so the
-      # retirement path stays in scope only when lane=stale.
+      # scoring/guardrails; --lane just tags the queue entry (informational —
+      # retirement is gated by the evidence bar + no_retire, not the lane).
       - name: Build single-article queue
         run: |
           python3 scripts/content-review/select-articles.py \
@@ -216,7 +216,7 @@ jobs:
 
             1. Branch off master with the EXACT name `content-review/<slug>`
                (the queue entry's `slug`), or `content-review/retire-<slug>`
-               for a stale-lane retirement. The workflow derives the PR from
+               for a retirement proposal. The workflow derives the PR from
                this branch name, so it must match exactly.
             2. (Done by the workflow — read the artifacts above. If one is
                missing or carries an `errors` field, note it in the PR
@@ -305,10 +305,12 @@ jobs:
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.
       # Runs `if: always()` so a model that exits without output still lands an
-      # `incomplete` record (short cooldown, retried soon) rather than silently
-      # looping. record-review.py builds the canonical record, derives the PR
-      # facts from `gh`, stamps reviewed_at, uploads, and emits the dispatch
-      # signal. One article per run ⇒ one object, so writes never collide.
+      # `incomplete` record. An incomplete outcome does not advance the
+      # staleness clock (the page stays due, retried next sweep up to the
+      # attempt cap) rather than silently looping. record-review.py builds the
+      # canonical record, derives the PR facts from `gh`, stamps reviewed_at,
+      # increments attempts, uploads, and emits the dispatch signal. One article
+      # per run ⇒ one object, so writes never collide.
       - name: Record review ledger
         id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
