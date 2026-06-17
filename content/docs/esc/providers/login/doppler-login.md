@@ -18,7 +18,7 @@ aliases:
 
 The `doppler-login` provider enables you to log in to Doppler using OpenID Connect.
 The provider will return a set of credentials that can be used to run Doppler CLI commands using
-the [esc run](/docs/esc/cli/commands/esc_run/) command and also pull in secrets from Doppler using the
+the [pulumi env run](/docs/iac/cli/commands/pulumi_env_run/) command and also pull in secrets from Doppler using the
 `doppler-secrets` provider.
 
 ## Example

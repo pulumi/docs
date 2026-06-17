@@ -27,7 +27,7 @@ To store a secret, add an `fn::secret` value to an environment. ESC encrypts it 
 Add a secret using the `--secret` flag:
 
 ```bash
-esc env set <org>/<project>/<env-name> apiKey my-secret-value --secret
+pulumi env set <org>/<project>/<env-name> apiKey my-secret-value --secret
 ```
 
 ### Via the Pulumi Cloud console
@@ -58,7 +58,7 @@ values:
       -----END RSA PRIVATE KEY-----
 ```
 
-The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `esc env set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
+The `|` character tells YAML to preserve newlines, which is required for PEM-formatted values. Using `pulumi env set` for multi-line secrets is not recommended — use the console editor or edit the environment YAML directly.
 
 ## Declaration
 

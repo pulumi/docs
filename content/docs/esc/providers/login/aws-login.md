@@ -48,7 +48,7 @@ values:
 
 The `static` input lets you supply existing AWS credentials — an IAM user's access key, or temporary credentials from another source — instead of having ESC generate them through OIDC. Whichever method you use, `aws-login` normalizes the result into one uniform set of outputs (`accessKeyId`, `secretAccessKey`, `sessionToken`). Everything downstream — `environmentVariables`, the `aws-secrets` provider, and the `aws-parameter-store` provider — consumes those outputs the same way regardless of how you logged in. That means you can use static credentials for local development and OIDC for production, or migrate from one to the other, without changing a single consumer.
 
-Store the credentials as encrypted ESC secrets rather than committing them in plaintext. You can encrypt a value in place with `esc env set --secret <org>/<project>/<environment> aws.creds.secretAccessKey <value>`, or wrap a literal with the `fn::secret` function as shown below:
+Store the credentials as encrypted ESC secrets rather than committing them in plaintext. You can encrypt a value in place with `pulumi env set --secret <org>/<project>/<environment> aws.creds.secretAccessKey <value>`, or wrap a literal with the `fn::secret` function as shown below:
 
 ```yaml
 values:
@@ -129,10 +129,7 @@ values:
 
 The same `login: ${aws.login}` pattern works for the [`aws-parameter-store`](/docs/esc/providers/aws-parameter-store/) provider. For the full set of options each provider accepts, see the [`aws-secrets`](/docs/esc/providers/aws-secrets/) and [`aws-parameter-store`](/docs/esc/providers/aws-parameter-store/) documentation.
 
-To validate your configuration, open the consuming environment with either of the following:
-
-- `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
-- `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
+To validate your configuration, open the consuming environment with the `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/):
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
 

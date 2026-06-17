@@ -63,7 +63,7 @@ sections:
     description: Store, retrieve, and organize secrets in ESC environments.
     link: /docs/esc/operations/managing-secrets/
   - icon: play
-    heading: Run commands with esc run
+    heading: Run commands with pulumi env run
     description: Inject environment values into any command or script.
     link: /docs/esc/guides/running-commands/
   - icon: pulumi-iac
@@ -78,8 +78,8 @@ sections:
   heading: Capabilities
   cards:
   - icon: desktop
-    heading: ESC CLI
-    link: /docs/esc/cli/
+    heading: Pulumi CLI
+    link: /docs/iac/cli/commands/pulumi_env/
     description: Command-line interface for managing environments, secrets, and configuration.
   - icon: key
     heading: Login providers

@@ -24,7 +24,7 @@ Pulumi ESC integrates with [Terraform](https://www.terraform.io) and [OpenTofu](
 
 To complete the steps in this tutorial, you will need to install the following prerequisites:
 
-- the [Pulumi ESC CLI](/docs/esc-cli/)
+- the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/)
 - the [Terraform CLI](https://developer.hashicorp.com/terraform/install)
 
 {{% notes type="info" %}}
@@ -115,13 +115,13 @@ values:
 
 ## Run Terraform
 
-Once you've created the example environment, you can now use the Terraform CLI with `esc run` to invoke Terraform with credentials and configuration:
+Once you've created the example environment, you can now use the Terraform CLI with `pulumi env run` to invoke Terraform with credentials and configuration:
 
 ```bash
-$ esc run <your-project-name>/<your-env-name> -i -- terraform apply
+$ pulumi env run <your-project-name>/<your-env-name> -i -- terraform apply
 ```
 
-This will open your ESC environment, export its environment variables, and then invoke `terraform apply` with those environment variables. The `-i` instructs `esc` to run in interactive mode, which is necessary for programs like the Terraform CLI that expect user input.
+This will open your ESC environment, export its environment variables, and then invoke `terraform apply` with those environment variables. The `-i` instructs `pulumi env` to run in interactive mode, which is necessary for programs like the Terraform CLI that expect user input.
 
 ## Run Terraform with `-var-file`
 
@@ -149,8 +149,8 @@ values:
     AWS_SESSION_TOKEN: ${aws.login.sessionToken}
 ```
 
-With this environment, the `esc` CLI will write the value of the `TFVARS` property to a temporary file, then export the path to that temporary file in the `TFVARS` environment variable. You can then pass the path to this file to the Terraform CLI. This is slightly more involved because the Terraform CLI requires that the contents of the vars file is either valid HCL or JSON, and JSON files must have a `.json` extension:
+With this environment, the Pulumi CLI will write the value of the `TFVARS` property to a temporary file, then export the path to that temporary file in the `TFVARS` environment variable. You can then pass the path to this file to the Terraform CLI. This is slightly more involved because the Terraform CLI requires that the contents of the vars file is either valid HCL or JSON, and JSON files must have a `.json` extension:
 
 ```bash
-$ esc run <your-project-name>/<your-env-name> -i -- sh -c 'mv $TFVARS $TFVARS.json && terraform apply -var-file=$TFVARS.json'
+$ pulumi env run <your-project-name>/<your-env-name> -i -- sh -c 'mv $TFVARS $TFVARS.json && terraform apply -var-file=$TFVARS.json'
 ```

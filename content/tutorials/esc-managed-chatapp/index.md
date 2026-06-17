@@ -4,10 +4,10 @@ title_tag: "ChatGPT clone with Pulumi ESC managed secrets"
 layout: single
 
 # A succinct description of the tutorial. It appears on the Tutorials home and collection pages.
-description: Use Pulumi ESC CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
+description: Use the Pulumi CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
 
 # A similar description used for search results and social-media previews.
-meta_desc: Use Pulumi ESC CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
+meta_desc: Use the Pulumi CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
 
 # An image for the tutorial. It appears on tutorial page and in social-media previews.
 meta_image: meta.png
@@ -24,13 +24,13 @@ weight: 999
 
 # A brief summary of the tutorial. It appears at the top of the tutorial page. Markdown is fine.
 summary: |
-    Let's make a ChatGPT clone, using Pulumi! This tutorial will walk you through creating a web app that interacts with the OpenAI API. You'll use the Pulumi ESC CLI to manage the configuration and secrets needed to access the OpenAI API. We'll also show how to use the ESC SDK to dynamically update your configuration and secrets.
+    Let's make a ChatGPT clone, using Pulumi! This tutorial will walk you through creating a web app that interacts with the OpenAI API. You'll use the Pulumi CLI to manage the configuration and secrets needed to access the OpenAI API. We'll also show how to use the ESC SDK to dynamically update your configuration and secrets.
 
 # A list of three to five things the reader will have learned by the end of the tutorial.
 youll_learn:
     - How to build an OpenAI-based ChatGPT clone
-    - How to create an environment with the ESC CLI
-    - How to manage configuration and secrets with the ESC CLI
+    - How to create an environment with the Pulumi CLI
+    - How to manage configuration and secrets with the Pulumi CLI
     - How to project your ESC configuration as environment variables
     - How to dynamically refresh configuration and secrets without restart
 
@@ -41,7 +41,7 @@ prereqs:
     - Python 3.7 or newer
     - A [Pulumi Cloud](https://app.pulumi.com/signup) account
     - An OpenAI account w/ some credits
-    - The [Pulumi ESC CLI](/docs/install/esc/)
+    - The [Pulumi CLI](/docs/iac/download-install/)
     - A Bash-like UNIX shell environment
 
 # The estimated time, in minutes, for new users to complete the topic.
@@ -250,27 +250,27 @@ What if we want to share the API key with others, or run this in some environmen
 Lets get these settings under management. Pulumi ESC to the rescue!
 
 {{% notes type="info" %}}
-**Before you start:** Make sure you have [Pulumi ESC CLI installed](/docs/install/esc/) and a [Pulumi Cloud account](https://app.pulumi.com/signup).
+**Before you start:** Make sure you have the [Pulumi CLI installed](/docs/iac/download-install/) and a [Pulumi Cloud account](https://app.pulumi.com/signup).
 {{% /notes %}}
 
 ### Step 1: Create an ESC environment for our app
 
-First, the `esc` CLI needs to be logged in to your Pulumi Cloud account.
+First, the `pulumi` CLI needs to be logged in to your Pulumi Cloud account.
 
 ```bash
-$ esc login
+$ pulumi login
 ```
 
 Next, lets create an ESC environment called `chatapp`:
 
 ```bash
-$ esc env init default/chatapp
+$ pulumi env init default/chatapp
 ```
 
 You can verify that the `chatapp` environment exists by listing your available environments:
 
 ```bash
-$ esc env ls
+$ pulumi env ls
 default/chatapp
 ```
 
@@ -281,19 +281,19 @@ default/chatapp
 Now let's create the configuration settings. First we'll create a configuration value called `model` which has the [ID of the model](https://platform.openai.com/docs/models) we want to use in the OpenAI API:
 
 ```bash
-$ esc env set default/chatapp model gpt-3.5-turbo
+$ pulumi env set default/chatapp model gpt-3.5-turbo
 ```
 
 Then we'll create a secret called `api_key` that holds the OpenAI API Key. Notice the `--secrets` flag which indicates that this is a secret that we want to be encrypted, both at rest, and in transit. We're sourcing the value for this from the existing `OPENAI_API_KEY` environment variable (to make sure we don't end up with a plain-text version of this in our shell's command history).
 
 ```bash
-$ esc env set default/chatapp api_key $OPENAI_API_KEY --secret
+$ pulumi env set default/chatapp api_key $OPENAI_API_KEY --secret
 ```
 
-Finally, let's verify the ESC environment we just created. We can view the environment using the `esc env get` subcommand.
+Finally, let's verify the ESC environment we just created. We can view the environment using the `pulumi env get` subcommand.
 
 ```bash
-$ esc env get default/chatapp
+$ pulumi env get default/chatapp
 ```
 
 You should see output that looks something like this:
@@ -323,14 +323,14 @@ You can see that `api_key` is a secret and so it won't show us the value. In the
 
 The next step is to get these ESC environment values accessible to our app. For this we're going to extract these configuration values and project them as two environment variables named `MODEL` and `API_KEY`.
 
-To do this, we will [edit the YAML definition](/docs/esc/concepts/environments/#managing-environments) of our ESC environment. The `esc env edit` subcommand will load the YAML into your default text editor. Editing and saving the file will update it in Pulumi ESC's backend storage.
+To do this, we will [edit the YAML definition](/docs/esc/concepts/environments/#managing-environments) of our ESC environment. The `pulumi env edit` subcommand will load the YAML into your default text editor. Editing and saving the file will update it in Pulumi ESC's backend storage.
 
 {{% notes type="info" %}}
 **YAML Schema:** A full description of what Pulumi ESC YAML supports is available in the [ESC YAML Syntax Reference](/docs/esc/reference/).
 {{% /notes %}}
 
 ```bash
-$ esc env edit default/chatapp
+$ pulumi env edit default/chatapp
 ```
 
 To this YAML file we'll add an `environmentVariables:` section, which defines the names of the environment variables we want to set in our program's shell environment, and which ESC configuration values those map to.
@@ -367,12 +367,12 @@ def chat():
 Now let's run the app, with ESC providing the variables, to make sure it works.
 
 ```bash
-$ esc env run default/chatapp -- python chatapp.py
+$ pulumi env run default/chatapp -- python chatapp.py
 ```
 
 As before, check that the app is running at [http://127.0.0.1:5000](http://127.0.0.1:5000) and able to get responses from the OpenAI API.
 
-This command `esc env run -- <command>` will launch the provided command in a subshell, which will have the environment variables that we defined in the `environmentVariables` section of our ESC environment's YAML. Note that we're no longer relying on the `OPENAI_API_KEY` variable for our secret, rather, we're pull that from the Pulumi ESC environment. Similarly, we can now change our model from the ESC environment `model` setting, which means we can easily update the configuration without having to modify the code.
+This command `pulumi env run -- <command>` will launch the provided command in a subshell, which will have the environment variables that we defined in the `environmentVariables` section of our ESC environment's YAML. Note that we're no longer relying on the `OPENAI_API_KEY` variable for our secret, rather, we're pull that from the Pulumi ESC environment. Similarly, we can now change our model from the ESC environment `model` setting, which means we can easily update the configuration without having to modify the code.
 
 ## Dynamically retrieving ESC configuration at runtime
 
@@ -396,7 +396,7 @@ In order to use the Pulumi ESC SDK from within our Python code, we will need to 
 First, edit your ESC environment to contain the following YAML code:
 
 ```bash
-$ esc env edit default/chatapp
+$ pulumi env edit default/chatapp
 ```
 
 **Code Listing:** YAML representation of `default/chatapp` environment
@@ -506,7 +506,7 @@ This will ensure that the app always gets the most recent values, without the ne
 With those changes in place, lets run the app and make sure it works:
 
 ```bash
-$ esc env run default/chatapp -- python chatapp.py
+$ pulumi env run default/chatapp -- python chatapp.py
 ```
 
 As before, check that the app is running at [http://127.0.0.1:5000](http://127.0.0.1:5000) and able to get responses from the OpenAI API.
@@ -518,7 +518,7 @@ Let's leave the chat app running and open up another shell window.
 In order to test the dynamic nature of the configuration we'll modify the ESC environment at runtime and look for the changes to appear in our running app. We'll change the `model` setting and use the more efficient and up-to-date model `gpt-4o-mini`.
 
 ```bash
-$ esc env set default/chatapp model gpt-4o-mini
+$ pulumi env set default/chatapp model gpt-4o-mini
 ```
 
 Try querying the chat app and you should see that the model has been updated. This time, no restart required!
