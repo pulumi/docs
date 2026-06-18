@@ -6,10 +6,10 @@
 // once Tailwind v4's theme() function supports extracting RGB channels.
 :root {
     --aa-base-unit: 14;
-    --aa-primary-color-rgb: 148,157,232; // blue-400 (#949de8)
+    --aa-primary-color-rgb: 90,48,197; // violet-700 (#5a30c5) — on-brand input focus ring
     --aa-font-family: theme(fontFamily.body);
     --aa-input-icon-size: 16px;
-    --aa-icon-color-rgb: 19,19,20; // gray-900 (#131314)
+    --aa-icon-color-rgb: 153,151,160; // gray-500 (#9997a0) — gray search icon in both modes
     --aa-input-border-color-rgb: 190,191,201; // gray-500 (#bebfc9)
     --aa-input-border-color-alpha: 1;
     --aa-selected-color-rgb: 237,239,251; // blue-100 (#edeffb)

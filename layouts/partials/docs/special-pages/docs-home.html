@@ -3,7 +3,7 @@
 
 
 <section class="content docs-home">
-    <div id="docs-home-banner" class="header bg-violet-50 bg-right">
+    <div id="docs-home-banner" class="header bg-violet-50 dark:bg-violet-950 bg-right">
         <h1><strong>{{ .Params.h1 }}</strong></h1>
         <div class="w-full md:w-2/3">
             {{ .Params.description | safeHTML }}
@@ -76,10 +76,18 @@
                                         <span class="flex items-center gap-2">
                                             {{ $fpSrc := strings.TrimPrefix "/" .image }}
                                             {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+                                            {{/* Dark-mode logo: same path with -on-dark before the extension, when that sibling exists. Toggled by the .docs-logo-light/.docs-logo-dark CSS in _docs-theme.scss. */}}
+                                            {{ $darkRel := replaceRE `\.svg$` "-on-dark.svg" .image }}
+                                            {{ $hasDark := and (ne $darkRel .image) (fileExists (printf "static%s" $darkRel)) }}
+                                            {{ $imgClass := "h-6 w-6 object-contain flex-shrink-0" }}
+                                            {{ $lightClass := cond $hasDark (printf "docs-logo-light %s" $imgClass) $imgClass }}
                                             {{ if $fpAsset }}
-                                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" "" "class" "h-6 w-6 object-contain flex-shrink-0") }}
+                                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" "" "class" $lightClass) }}
                                             {{ else }}
-                                                <img src="{{ .image }}" alt="" class="h-6 w-6 object-contain flex-shrink-0">
+                                                <img src="{{ .image }}" alt="" class="{{ $lightClass }}">
+                                            {{ end }}
+                                            {{ if $hasDark }}
+                                                <img src="{{ $darkRel }}" alt="" class="docs-logo-dark {{ $imgClass }}">
                                             {{ end }}
                                             <span>{{ .heading }}</span>
                                         </span>
