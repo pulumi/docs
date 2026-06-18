@@ -39,6 +39,8 @@ The latest version of Pulumi is **{{< latest-version >}}**. For previous version
 
 By default, the Pulumi CLI stores state in [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/), our free, hosted state-management backend. Pulumi Cloud is free for individuals and is the recommended backend when you're learning Pulumi — no credit card required. If you'd rather host state yourself (S3, Azure Blob, GCS, or local), see [self-managed state backends](/docs/iac/concepts/state-and-backends/).
 
+Organizations that need to keep everything in their own environment can run the full Pulumi Cloud platform self-hosted — the same managed experience as the SaaS, in your own cloud account or data center. See [self-hosted Pulumi Cloud](/product/self-hosted/) and the [self-hosting docs](/docs/administration/self-hosting/).
+
 {{% notes "info" %}}
 You don't need a Pulumi Cloud account to install the CLI. You'll be prompted to sign in (or to pick a self-managed backend) the first time you run `pulumi login`.
 {{% /notes %}}

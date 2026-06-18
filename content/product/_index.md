@@ -141,6 +141,15 @@ sections:
           Drift detection, dependency management, and enterprise RBAC give you visibility and control across the full infrastructure lifecycle.
     anchor: idp
 
+  - type: section_header
+    tag_line: Deployment options
+    title: Run Pulumi Cloud anywhere
+    description: |
+      Use Pulumi Cloud as a fully managed SaaS, or run the same platform yourself in your own cloud account or data center. Self-hosted Pulumi Cloud gives you complete control over data, identity, and network isolation, including air-gapped environments, with the same IaC, secrets, insights, and governance capabilities.
+    cta_text: Explore self-hosted Pulumi Cloud
+    cta_link: /product/self-hosted/
+    anchor: self-hosted
+
   - type: two_column
     anchor: get-started
     highlight_first_card: true
