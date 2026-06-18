@@ -552,6 +552,53 @@ jobs:
             || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
       # ---- end claim extraction --------------------------------------------
 
+      # ---- Readthrough coherence lane --------------------------------------
+      # A whole-page Sonnet pass asking "does this page cohere and serve the
+      # reader?" — anchored structural findings (prerequisite inversion, missing
+      # step, purpose mismatch, …) that the fact/code/style passes never surface.
+      # compose-review.py synthesizes one `🚩 flagged` detector verdict per
+      # finding; Opus triages into the normal buckets.
+      #
+      # Scope is PER PAGE, not per PR: the lane reads each page that is itself
+      # whole-page-authored — every NEW content page (the whole file is new) and
+      # every blog/case-study file (drafted whole-file). A small edit to an
+      # existing non-blog page is out of scope here (a 3-line fix to a 600-line
+      # reference shouldn't trigger a full re-read); those pages get a coherence
+      # pass on the existing-content sweep's cadence instead. The qualifying file
+      # list is passed to readthrough.py via --changed-files, so a PR with three
+      # new docs gets three independent end-to-end reads and nothing else.
+      # (A >70%-rewrite of an existing page is not yet detected here — deferred;
+      # the sweep covers it.) Per pre-step fallback discipline, failure surfaces
+      # INSIDE the artifact (errors: [...]); the `||` stub is for can't-even-start.
+      - name: Pre-compute readthrough scope
+        if: steps.pr-context.outputs.skip_reason == ''
+        id: readthrough-scope
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+        run: |
+          # Added content pages, plus any blog/case-study file (any status).
+          FILES=$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
+            --jq '.[] | select(.filename | test("^content/.*\\.md$")) | select(.status == "added" or (.filename | test("^content/(blog|case-studies)/"))) | .filename' \
+            | paste -sd, - || true)
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          if [ -n "$FILES" ]; then echo "readthrough scope: $FILES"; else echo "readthrough scope: none"; fi
+      - name: Readthrough coherence pass → .readthrough-findings.json
+        if: steps.pr-context.outputs.skip_reason == '' && steps.readthrough-scope.outputs.files != ''
+        id: readthrough
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          FILES: ${{ steps.readthrough-scope.outputs.files }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/readthrough.py \
+            --pr "$PR" --changed-files "$FILES" --out .readthrough-findings.json \
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+      # ---- end readthrough coherence lane ----------------------------------
+
       # ---- Claim verification ----------------------------------------------
       # verify-claims.py routes every entry in .candidate-claims.json to one of
       # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
@@ -739,6 +786,7 @@ jobs:
             --frontmatter .frontmatter-validation.json \
             --hugo-build .hugo-build.json \
             --fetched-urls .fetched-urls.json \
+            --readthrough .readthrough-findings.json \
           || printf '%s\n' \
             '## Pre-merge Review — Last updated ${{ steps.now.outputs.value }}' \
             '' \

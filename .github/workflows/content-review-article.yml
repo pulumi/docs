@@ -175,6 +175,14 @@ jobs:
           python3 $S/cross-sibling-discover.py \
             --changed-files "$ARTICLE_PATH" --out .cross-sibling-discovery.json \
             || echo '{"files": []}' > .cross-sibling-discovery.json
+          # Readthrough runs unconditionally here: the synthetic whole-file diff
+          # is always whole-page, so every swept article gets the coherence pass.
+          # The worker reads .readthrough-findings.json directly (this path has no
+          # compose-review) to apply local_repair fixes and flag reconceptions.
+          python3 $S/readthrough.py \
+            --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
+            --out .readthrough-findings.json \
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
           vale --no-exit --output=JSON "$ARTICLE_PATH" > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
@@ -185,7 +193,7 @@ jobs:
           echo "--- pre-compute artifacts ---"
           ls -1 .fetched-urls.json .candidate-claims.json .verified-claims.json \
             .vale-findings.json .frontmatter-validation.json \
-            .cross-sibling-discovery.json 2>/dev/null || true
+            .cross-sibling-discovery.json .readthrough-findings.json 2>/dev/null || true
 
       - name: Run Claude Code
         id: claude

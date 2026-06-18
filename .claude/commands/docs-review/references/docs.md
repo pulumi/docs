@@ -27,7 +27,7 @@ The priorities below are ordered for **output rendering** — fact-check finding
 
 ### Priority 1 — Fact-check first
 
-Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bump scrutiny to `heightened` when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed). In docs, pay particular attention to:
+Invoke `docs-review:references:fact-check` (`scrutiny=standard` by default). Bump scrutiny to `heightened` when the file is a new page (not previously in `content/`) or a whole-file rewrite (>70% of lines changed). On that same heightened/whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the page end to end and surfaces anchored structural defects — a term used before it's defined, a missing procedure step, a page trying to be two things. These arrive in your buckets as `🚩 flagged` findings; triage each with the standard two-question test (a reader-blocking gap can be 🚨). In docs, pay particular attention to:
 
 - **CLI flag existence.** `pulumi <subcommand> --<flag>` claims must match the current CLI source. Memorized flag lists are not authoritative.
 - **Resource API surface.** Resource property claims (e.g., `aws.s3.Bucket` accepts `versioning`) must match the provider's registry schema source (`gh api repos/pulumi/pulumi-<provider>/contents/...`).
