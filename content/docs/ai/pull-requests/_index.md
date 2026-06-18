@@ -23,7 +23,7 @@ Pull requests are the bridge between Neo's AI capabilities and your production i
 - Team collaboration and knowledge sharing
 - Audit trail and rollback capability
 
-Neo also analyzes pull requests that your team opens and leaves its feedback right in the PR. See [Code Reviews](/docs/ai/code-reviews/).
+Neo also analyzes pull requests that your team opens and leaves its feedback right in the PR. See [Neo code reviews](/docs/ai/code-reviews/).
 
 ## Prerequisites
 

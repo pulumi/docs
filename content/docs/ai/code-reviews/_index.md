@@ -1,8 +1,8 @@
 ---
-title: Code Reviews
-title_tag: Neo Code Reviews
-h1: Neo Code Reviews
-meta_desc: Neo Code Reviews analyzes pull requests against what Pulumi Cloud knows about your running infrastructure and leaves its feedback in the pull request.
+title: Code reviews
+title_tag: Neo code reviews
+h1: Neo code reviews
+meta_desc: Neo code reviews analyze pull requests against what Pulumi Cloud knows about your running infrastructure and leave feedback in the pull request.
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/code-reviews/
@@ -11,17 +11,17 @@ aliases:
 - /docs/ai/integrations/github/
 menu:
     ai:
-        name: Code Reviews
+        name: Code reviews
         parent: ai-home
         weight: 35
         identifier: ai-code-reviews
 ---
 
 {{% notes type="info" %}}
-Neo Code Reviews is in public preview and becomes generally available on July 1, 2026.
+Neo code reviews are currently in public preview and will be generally available on July 1, 2026.
 {{% /notes %}}
 
-Neo Code Reviews analyzes pull requests against what Pulumi Cloud knows about your running infrastructure and leaves its feedback in the pull request. It reads the `pulumi preview` output and comments inline on the specific lines that need attention. Neo does not block the merge.
+Neo code reviews analyze pull requests against what Pulumi Cloud knows about your running infrastructure and leave feedback in the pull request. They read the `pulumi preview` output and comment inline on the specific lines that need attention. Neo does not block the merge.
 
 ## Automated reviews
 
@@ -35,15 +35,15 @@ Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi
 
 ## Availability
 
-Neo Code Reviews runs on GitHub.com. GitHub Enterprise Server is not supported. It is enabled by default for organizations with [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) turned on. If Neo already posts preview summaries on your pull requests, Neo Code Reviews replaces them.
+Neo code reviews run on GitHub.com. GitHub Enterprise Server is not supported. Code reviews are enabled by default for organizations with [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) turned on. If Neo already posts preview summaries on your pull requests, Neo code reviews replace them.
 
 ## Setup
 
 1. Enable [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) for your organization.
 1. Install the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) on the repositories you want Neo to analyze.
-1. Confirm Neo Code Reviews is enabled in your [GitHub App integration settings](/docs/integrations/version-control/github-app/). It is on by default.
+1. Confirm Neo code reviews are enabled in your [GitHub App integration settings](/docs/integrations/version-control/github-app/). They're on by default.
 1. Grant Pulumi access to your GitHub account by completing the [individual OAuth flow](/docs/integrations/version-control/github-app/#individual-user-setup) under **Management** > **Version control**.
 
 ## Permissions
 
-Neo Code Reviews runs with the same governance as any other [Neo task](/docs/ai/tasks/): the [role-based access control](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has configured. To turn it off, disable Neo Code Reviews in your [GitHub App integration settings](/docs/integrations/version-control/github-app/).
+Neo code reviews run with the same governance as any other [Neo task](/docs/ai/tasks/), including the [role-based access control](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable Neo code reviews in your [GitHub App integration settings](/docs/integrations/version-control/github-app/).

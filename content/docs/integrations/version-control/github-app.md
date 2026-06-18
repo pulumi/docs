@@ -129,11 +129,11 @@ After installing the app, you can configure pull request behavior. Toggle these 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
-Changes save automatically. Neo Code Reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo Code Reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+Changes save automatically. Neo code reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo code reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 

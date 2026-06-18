@@ -45,7 +45,7 @@ tiers:
               features:
                   - Up to 10 users
                   - Secure collaboration and CI/CD
-                  - Neo Code Reviews and Slack integration
+                  - Neo code reviews and Slack integration
                   - Resource search
                   - OIDC and Org Access Tokens
                   - Webhooks
@@ -585,7 +585,7 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-              - title: Neo Code Reviews
+              - title: Neo code reviews
                 link: /docs/ai/pull-requests/
                 items:
                   - content: _blank
