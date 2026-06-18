@@ -5,26 +5,27 @@ title: "Review stacks"
 h1: "Review stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/review-stacks/
 - /docs/pulumi-cloud/deployments/review-stacks/
 - /docs/platform/deployments/review-stacks/
 menu:
   deployments:
-    name: Review stacks
-    parent: deployments-deployments
-    weight: 70
-    identifier: deployments-deployments-review-stacks
+    name: Review Stacks
+    parent: deployments-concepts
+    weight: 60
+    identifier: deployments-concepts-review-stacks
 ---
 
-Review stacks are dedicated cloud environments powered by Pulumi Deployments. They are created automatically when a pull request is opened, updated on each new commit, and destroyed when the pull request is merged or closed. They work with all of Pulumi's native version control integrations — [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). (Review stacks are not available with [Custom VCS](/docs/integrations/version-control/custom-vcs/) integrations, which support push-to-deploy only.) When a pull request is opened, Pulumi Deployments stands up a stack with your changes and adds a comment to the PR with the outputs from your deployment.
+Review stacks are ephemeral cloud environments powered by Pulumi Deployments. They are created automatically when a pull request is opened, updated on each new commit, and destroyed when the pull request is merged or closed. They work with all of Pulumi's native version control integrations — [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). (Review stacks are not available with [Custom VCS](/docs/integrations/version-control/custom-vcs/) integrations, which support push-to-deploy only.) When a pull request is opened, Pulumi Deployments stands up a stack with your changes and adds a comment to the PR with the outputs from your deployment.
 
 ## Configuring review stacks
 
-Review stacks require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings). They are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a review stack template for each one.
+Review stacks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/). They are configured at the branch level. If you utilize multiple branches for your development and release process, you will need to configure a review stack template for each one.
 
 Configuring review stacks is a three-step process:
 
 1. Create a new stack, by convention named `pr`, and corresponding `Pulumi.pr.yaml` configuration file - this config will be copied into every review stack that gets created, and can even be modified within a PR.
-2. Configure [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
+2. Configure [Deployment Settings](/docs/deployments/concepts/settings/) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
 3. Set the `pullRequestTemplate` Deployment Setting to true - this indicates that all pull requests against this stack’s branch should reference this stack as a review stack template.
 
 You can use an existing stack as a review stack template, as long as it has Deployment Settings configured. This will result in review stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via review stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc.).

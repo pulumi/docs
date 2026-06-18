@@ -143,7 +143,7 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 
 ### Can Pulumi detect drift like ARM?
 
-Pulumi has first-class drift detection: [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in Azure and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/). ARM Templates do not have a first-class drift detection feature.
+Pulumi has first-class drift detection: [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in Azure and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/). ARM Templates do not have a first-class drift detection feature.
 
 ## Next steps
 

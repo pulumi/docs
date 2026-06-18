@@ -150,7 +150,7 @@ git push origin release-2026-05-20
 
 Buildkite decides *when* to start a build — on pull requests, branch pushes, and tags — through your pipeline's [source control settings](https://buildkite.com/docs/pipelines/source-control), not the pipeline file. Enable pull request and tag builds there; the `if` expressions above then select which steps run for each build.
 
-For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
 {{% notes type="info" %}}
 The Pulumi CLI automatically detects when it runs inside Buildkite and records the build and commit metadata. Each update in Pulumi Cloud then links back to the build and pull request that triggered it — no extra configuration required.
@@ -170,4 +170,4 @@ You can also manage Buildkite itself — pipelines, teams, and agent tokens — 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.

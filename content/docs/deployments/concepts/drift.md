@@ -5,21 +5,22 @@ h1: "Drift detection and remediation"
 meta_desc: Detect and remediate infrastructure drift on a schedule with Pulumi Cloud — the Drift tab, auto-remediation, and webhook notifications.
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/drift/
 - /docs/pulumi-cloud/deployments/drift/
 - /docs/platform/deployments/drift/
 menu:
   deployments:
-    name: Drift detection and remediation
-    parent: deployments-deployments
-    weight: 50
-    identifier: deployments-deployments-drift
+    name: Drift Detection
+    parent: deployments-concepts
+    weight: 40
+    identifier: deployments-concepts-drift
 ---
 
 This page covers the drift detection and remediation capabilities that Pulumi Cloud manages for you: scheduled drift runs, the Drift tab, automatic remediation, and notifications. For the conceptual foundation — the difference between desired, current, and actual state, how to choose between remediation and adoption, and the underlying CLI workflow — see [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/).
 
 Drift is the gap between the actual state of your cloud resources and the state Pulumi has recorded for them. It most often comes from manual, out-of-band changes ("click-ops") or from changes a cloud resource makes over its own lifecycle. Pulumi Cloud detects drift by running a preview-only refresh against your stack, and it can remediate drift — re-applying your program so the cloud matches your desired state — automatically.
 
-To use drift detection and remediation with Pulumi Deployments, you must first configure the [deployment settings](/docs/deployments/deployments/reference) for your stack.
+To use drift detection and remediation with Pulumi Deployments, you must first configure the [deployment settings](/docs/deployments/concepts/settings/) for your stack.
 
 ## Running drift detection from the CLI
 
@@ -44,7 +45,7 @@ The Drift tab on the stack page is where every drift run surfaces, no matter how
 To set up drift detection and remediation in the Pulumi Cloud console, follow these steps:
 
 <!-- markdownlint-disable ol-prefix -->
-1. Ensure deployment settings are configured on the stack ([see the docs](/docs/deployments/deployments/reference)).
+1. Ensure deployment settings are configured on the stack ([see the docs](/docs/deployments/concepts/settings/)).
 2. Navigate to **Stack > Settings > Schedules**.
 3. Select **Drift**.
 4. (Optional) Turn on auto-remediation if applicable. With auto-remediation enabled, Pulumi Cloud runs `pulumi up --refresh` after a detection run finds drift, reconciling the cloud back to your program's desired state.
@@ -54,7 +55,7 @@ To set up drift detection and remediation in the Pulumi Cloud console, follow th
 
 ### Configuring notifications for drift detection
 
-You can route drift notifications to Slack, Microsoft Teams, and more using the Pulumi [Webhooks](/docs/deployments/webhooks/) integration.
+You can route drift notifications to Slack, Microsoft Teams, and more using the Pulumi [Webhooks](/docs/deployments/concepts/webhooks/) integration.
 
 1. Navigate to **Stack > Settings > Webhooks**.
 1. Select your desired webhook format.
@@ -269,5 +270,5 @@ See the [Pulumi Service Provider documentation](/registry/packages/pulumiservice
 ## See also
 
 * [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) - the conceptual foundation and the CLI workflow.
-* [Schedules](/docs/deployments/deployments/schedules/) - schedule any Pulumi operation, not just drift.
-* [Webhooks](/docs/deployments/webhooks/) - route drift events to Slack, Microsoft Teams, or any HTTP endpoint.
+* [Schedules](/docs/deployments/concepts/schedules/) - schedule any Pulumi operation, not just drift.
+* [Webhooks](/docs/deployments/concepts/webhooks/) - route drift events to Slack, Microsoft Teams, or any HTTP endpoint.

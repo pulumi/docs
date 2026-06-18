@@ -138,7 +138,7 @@ git push origin release-2026-05-20
 
 Travis decides *when* to start a build — on pull requests, branch pushes, and tags — primarily through your repository's Travis settings (for example, **Build pushed branches** and **Build pushed pull requests**). The `.travis.yml` file can further restrict which branches or tags trigger a build via the top-level `branches:` key, and the `if:` conditions above then select which job runs for each build.
 
-For an optional ephemeral environment on each pull request, pair the preview job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+For an optional ephemeral environment on each pull request, pair the preview job with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
 {{% notes type="info" %}}
 The Pulumi CLI automatically detects when it runs inside Travis CI and records the build and commit metadata. Each update in Pulumi Cloud then links back to the build and pull request that triggered it — no extra configuration required.
@@ -169,5 +169,5 @@ If commits merge to the main branch in quick succession, Travis can start overla
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
