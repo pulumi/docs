@@ -110,7 +110,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 16
+SCHEMA_VERSION = 17
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -1393,11 +1393,30 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
     # combined section text. The text-level fallback tolerates legacy bullet
     # formats and missing-prefix bullets — those are flagged separately above
     # so the model still gets a fix instruction.
-    promote_sections = ("🚨 Outstanding", "📋 Triaged verifier findings", "💡 Pre-existing")
-    promote_text = "\n".join(section_text(ctx.body, s) for s in promote_sections)
-    promote_bullets: list[str] = []
-    for s in promote_sections:
-        promote_bullets.extend(extract_bucket_bullets(ctx.body, s))
+    # `contradicted` / `mismatch` are hard fact outcomes that MUST land in 🚨
+    # Outstanding (or 📋 Triaged / 💡 Pre-existing when triaged as a verifier
+    # false-positive / pre-existing). `flagged` is a *detector* verdict whose
+    # severity the reviewer decides: a non-blocking coherence finding (e.g. a
+    # readthrough redundancy nit, or a reconception routed to a follow-up) lives
+    # in ⚠️ Low-confidence — so ⚠️ is an accepted destination for `flagged` only,
+    # per the per-verdict table in output-format.md. The requirement is the same
+    # in spirit either way: a promoting verdict must surface in *some* actionable
+    # bucket rather than vanish from the buckets. Match by either (a) bullet
+    # `[L...]` prefix in an eligible section, or (b) fuzzy mention of the anchor
+    # anywhere in those sections' combined text (tolerates legacy / missing-prefix
+    # bullets, which are flagged separately above).
+    strict_sections = ("🚨 Outstanding", "📋 Triaged verifier findings", "💡 Pre-existing")
+    flagged_sections = strict_sections + ("⚠️ Low-confidence",)
+
+    def _promote_corpus(sections: tuple[str, ...]) -> tuple[list[str], str]:
+        bullets: list[str] = []
+        for s in sections:
+            bullets.extend(extract_bucket_bullets(ctx.body, s))
+        return bullets, "\n".join(section_text(ctx.body, s) for s in sections)
+
+    strict_bullets, strict_text = _promote_corpus(strict_sections)
+    flagged_bullets, flagged_text = _promote_corpus(flagged_sections)
+
     seen_trail_refs = set()
     for r in trail_records:
         if not _trail_is_outstanding(r):
@@ -1406,11 +1425,21 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
         if ref in seen_trail_refs:
             continue  # duplicate trail records — flag once
         seen_trail_refs.add(ref)
-        # Match by prefix in 🚨, 📋, or 💡.
-        prefix_match = any(extract_bullet_prefix(b) == ref for b in promote_bullets)
+        is_flagged = r.get("verdict_word") == "flagged"
+        bullets, text = (flagged_bullets, flagged_text) if is_flagged else (strict_bullets, strict_text)
+        prefix_match = any(extract_bullet_prefix(b) == ref for b in bullets)
         # Fallback: anchor mentioned anywhere in those sections' text.
-        text_match = re.search(rf"\b{re.escape(ref)}\b", promote_text) is not None
+        text_match = re.search(rf"\b{re.escape(ref)}\b", text) is not None
         if prefix_match or text_match:
+            continue
+        if is_flagged:
+            violations.append(Violation(
+                rule_id="trail-verdict-bucket-promotion",
+                line_ref=ref,
+                expected=f"🚩 flagged detector finding at {ref} surfaces in 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged, or 💡 Pre-existing via a bucket bullet with `**[{ref}]**` prefix",
+                actual="not in any actionable bucket (🚨 / ⚠️ / 📋 / 💡)",
+                hint=f"Render a bullet starting with `**[{ref}]**` stating what's broken and the fix. Place it in 🚨 Outstanding if a reader can't reach the page's stated outcome without it, otherwise ⚠️ Low-confidence; use 📋 Triaged / 💡 Pre-existing if it's spurious / pre-existing.",
+            ))
             continue
         violations.append(Violation(
             rule_id="trail-verdict-bucket-promotion",

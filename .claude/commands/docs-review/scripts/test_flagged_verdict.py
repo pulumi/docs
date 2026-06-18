@@ -73,6 +73,11 @@ def main() -> int:
     # --- trail + stubs ---
     trail, *_ = cr.render_trail(sv, None)
     check("🚩 flagged" in trail, "trail renders '🚩 flagged'")
+    # Preflight detectors render a `detector: subtype` token, not an evidence pointer.
+    check("🚩 flagged (readthrough: prerequisite-inversion)" in trail,
+          "trail parenthetical is the detector:subtype token, not (evidence: …)")
+    check("evidence:" not in trail and "source:" not in trail,
+          "preflight trail line carries no fact-check evidence/source pointer")
     outstanding, _low = cr.build_stubs(sv)
     check(len(outstanding) == 2, "readthrough findings stub to 🚨 Outstanding")
     joined = "\n".join(str(o) for o in outstanding)
@@ -105,6 +110,33 @@ def main() -> int:
                      diff_text="", repo_root=Path("."), is_blog=False)
     viols = [f"{v.rule_id}@{v.line_ref}" for v in vp.check_trail_bucket_consistency(ctx)]
     check(not viols, f"validator accepts flagged trail+bucket (violations: {viols})")
+
+    # --- a NON-BLOCKING flagged finding may live in ⚠️ Low-confidence (schema 17).
+    # Opus triages a recommended/reconception readthrough finding down to ⚠️; the
+    # promotion rule must accept ⚠️ for `flagged` (but NOT for contradicted). ---
+    def _viols(trail_verdict_line: str, bucket: str) -> list[str]:
+        b = (
+            "### 🔍 Verification trail\n\n"
+            f"{trail_verdict_line}\n\n"
+            "### 🚨 Outstanding\n\n_No outstanding findings._\n\n"
+            f"### ⚠️ Low-confidence\n\n{bucket}\n"
+        )
+        c = vp.Context(body=b, body_lines=b.splitlines(), pr=None, repo=None,
+                       diff_files=["content/docs/x.md"], diff_files_added=set(),
+                       diff_text="", repo_root=Path("."), is_blog=False)
+        return [f"{v.rule_id}@{v.line_ref}" for v in vp.check_trail_bucket_consistency(c)]
+
+    flagged_low = _viols(
+        "- L10 \"theory before the task\" → 🚩 flagged (readthrough: purpose-mismatch)",
+        "- **[L10]** `content/docs/x.md` \"theory before the task\" — recommend splitting; routed to a follow-up.")
+    check("trail-verdict-bucket-promotion@L10" not in flagged_low,
+          f"flagged in ⚠️ Low-confidence is accepted (violations: {flagged_low})")
+
+    contra_low = _viols(
+        "- L10 \"costs $5\" → ❌ contradicted (source says $9)",
+        "- **[L10]** `content/docs/x.md` \"costs $5\" — source says $9.")
+    check("trail-verdict-bucket-promotion@L10" in contra_low,
+          f"contradicted in ⚠️ Low-confidence still violates (violations: {contra_low})")
 
     print(f"\n{len(_fails)} failure(s)")
     return 1 if _fails else 0
