@@ -10,7 +10,7 @@ menu:
     weight: 15
 ---
 
-Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library, the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs), or the [tfc-workflows-github](https://github.com/hashicorp/tfc-workflows-github) Action) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Consumers reference the modules from `.tf` files with `tofu init` or from Pulumi programs with `pulumi package add terraform-module`.
+Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Consumers reference the modules from `.tf` files with `tofu init` or from Pulumi programs with `pulumi package add terraform-module`.
 
 ## Before you begin
 
@@ -22,7 +22,7 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 Every surface authenticates with a [Pulumi access token](/docs/pulumi-cloud/access-management/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
-- Publishing: the go-tfe client, the tfe provider, and the GitHub Action take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
+- Publishing: the go-tfe client and the tfe provider take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
 - Consuming from a Pulumi program: run `pulumi login`. `pulumi package add terraform-module` passes the token through to the provider, so there is no separate registry login.
 - Consuming from plain OpenTofu or Terraform: set the host token. OpenTofu and Terraform derive the variable name from the host by replacing dots with underscores (and dashes with double underscores), so `tf.pulumi.com` becomes `TF_TOKEN_tf_pulumi_com`:
 
@@ -34,7 +34,7 @@ Every surface authenticates with a [Pulumi access token](/docs/pulumi-cloud/acce
 
 ## Publish a module
 
-Pulumi Cloud's publish API is wire-compatible with HCP Terraform's private registry. Existing HCP migration tooling works unmodified, just pointed at the new host. The three most common paths:
+Pulumi Cloud's publish API is wire-compatible with HCP Terraform's private registry. Existing HCP migration tooling works unmodified, just pointed at the new host. The two most common paths:
 
 ### go-tfe
 
@@ -61,23 +61,13 @@ resource "tfe_registry_module" "vpc" {
 }
 ```
 
-### tfc-workflows-github GitHub Action
-
-```yaml
-- uses: hashicorp/tfc-workflows-github/actions/create-run@v1
-  with:
-    hostname: tf.pulumi.com
-    token: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-```
-
 ### Module layout
 
-At publish time Pulumi Cloud extracts the following from the standard [Terraform module structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure):
+At publish time Pulumi Cloud reads the standard [Terraform module structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure):
 
-- Root `variables.tf`, `outputs.tf`, `versions.tf` for the module's inputs, outputs, and required providers.
-- `README.md` (optional) rendered on the module's detail page.
-- `modules/<name>/` subdirectories for each submodule, parsed the same way as the root.
-- `examples/<name>/` subdirectories for examples, captured as syntax-highlighted snippets.
+- Root `.tf` files (any filenames) define the module's inputs, outputs, and required providers.
+- `modules/<name>/` subdirectories are parsed the same way as the root and can be consumed as submodules.
+- `examples/<name>/` subdirectories and the `README.md` are captured at publish.
 
 ## Migrating from HCP Terraform
 
@@ -115,13 +105,15 @@ module "private_subnet" {
 pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
 ```
 
-The CLI injects a `TF_TOKEN_tf_pulumi_com` (or the equivalent host-derived token name for self-hosted installations) into the `pulumi-terraform-module` provider's environment, so `tofu init` resolves against Pulumi Cloud without further configuration. The persisted `Pulumi.yaml` entry uses the existing parameterized-provider shape; see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
+`terraform-module` is a parameterized provider. Its parameters are the module address (`tf.pulumi.com/<namespace>/<name>/<system>`), the module version, and the local package name you import in your program.
+
+After `pulumi login`, `pulumi package add terraform-module` resolves the module using your Pulumi credentials, so no manual token or registry login is needed. The persisted `Pulumi.yaml` entry uses the existing parameterized-provider shape; see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
 ## Delete a module or version
 
 Two paths, both supported:
 
 - From Pulumi Cloud's console, the module detail page exposes a per-version delete button.
-- Programmatically with go-tfe (`client.RegistryModules.DeleteVersion`, `Delete`) or the GitHub Action, against the HCP-compatible `/api/v2/.../registry-modules/...` surface.
+- Programmatically with go-tfe (`client.RegistryModules.DeleteVersion`, `Delete`), against the HCP-compatible `/api/v2/.../registry-modules/...` surface.
 
 Hard delete is permanent. Stacks that were already deployed using the module continue to work locally, but `pulumi up` or `tofu init` from a fresh checkout fails because the module can no longer be fetched.
