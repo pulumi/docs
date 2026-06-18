@@ -1008,6 +1008,12 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "or a PR-internal rename (an old alias for a file this PR is restructuring)? "
                         "Confirm the fix needed, or REMOVE the bullet if the collision is intentional and announced. "
                         "If pre-existing, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`.")
+            # Frame as a detector finding, not a fact-check claim — keeps Opus from
+            # re-applying `verdict: contradicted` / `framing: shifted` fact-check
+            # vocabulary to a `🚩 flagged` finding (the trail line is the verdict).
+            todo = ("this is a `🚩 flagged` detector finding (from a deterministic pre-step), NOT a fact-check "
+                    "claim — write the bullet as a plain statement of what's broken and the fix; do NOT attach "
+                    "fact-check verdict vocabulary (`verdict: contradicted`, `framing: shifted`, etc.). " + todo)
             outstanding.append(_stub_bullet(v, todo))
             continue
         if verdict in OUTSTANDING_VERDICTS:

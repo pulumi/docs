@@ -78,6 +78,8 @@ def main() -> int:
     joined = "\n".join(str(o) for o in outstanding)
     check("apply the structural fix" in joined and "reconception" in joined,
           "local_repair and reconception TODOs both present")
+    check("NOT a fact-check claim" in joined,
+          "stub TODO frames flagged as a detector finding (no fact-check verdict framing)")
 
     # --- detector findings excluded from the fact-check claim counts ---
     mixed = [{"verdict": "verified", "route": "pass1"},
