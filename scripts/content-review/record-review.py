@@ -20,7 +20,7 @@ Outcome derivation:
 
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, head_sha, fixes,
-    skipped_findings, retirement, note, reviewed_at }
+    skipped_findings, retirement, note, attempts, clarity_flag, reviewed_at }
 
 The record is written locally (audit artifact) and, when CONTENT_REVIEW_LEDGER_URI
 is set, uploaded to <uri>/<slug>.json with reviewed_at stamped to today (UTC).
@@ -200,6 +200,7 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "retirement": bool(verdict.get("retirement")) if verdict else False,
         "note": None,
         "attempts": prior_attempts + 1,
+        "clarity_flag": bool(verdict.get("clarity_flag")) if verdict else False,
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
 
@@ -347,7 +348,8 @@ def self_test() -> int:
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
-            "reviewed_at"})
+            "clarity_flag", "reviewed_at"})
+        check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
 
         # Repeated incomplete accrues against the prior count the selector carried.
         retried = {**article, "attempts": 2}
@@ -375,6 +377,15 @@ def self_test() -> int:
         # Fixed + no PR -> incomplete.
         rec = build_record(article, {"verdict": "fixed"}, None, article["slug"])
         check("fixed+no-PR -> incomplete", rec["status"] == "incomplete")
+
+        # clarity_flag carries from the verdict onto the ledger (durable even on
+        # an otherwise-clean page) and stays False when absent.
+        rec = build_record(article, {"verdict": "clean", "reason": "reads fine",
+                                     "clarity_flag": True}, None, article["slug"])
+        check("clarity_flag carried from verdict", rec["clarity_flag"] is True)
+        check("clarity_flag clean still clean", rec["status"] == "clean")
+        rec = build_record(article, {"verdict": "fixed", "fixes": 2}, pr, article["slug"])
+        check("clarity_flag absent -> False", rec["clarity_flag"] is False)
 
         # Section check.
         check("section check flags missing",

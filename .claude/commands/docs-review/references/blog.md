@@ -5,7 +5,7 @@ description: Review criteria for blog posts and customer stories. Fact-check-fir
 
 # Review — Blog
 
-Applied to blog posts (`content/blog/`) and customer stories (`content/case-studies/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope.
+Applied to blog posts (`content/blog/`) and customer stories (`content/case-studies/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope. On this whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the post end to end and surfaces anchored structural defects as `🚩 flagged` findings in your buckets — triage each with the standard two-question test.
 
 > **Fact-check-first treatment.** Fact-check is the headline finding bucket. Get it right before commenting on AI-writing patterns or structure.
 

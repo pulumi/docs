@@ -125,12 +125,25 @@ only:
   parent, alias collision).
 - **Unambiguous Vale errors** — spelling, repo terminology (per
   `docs-review:references:spelling-grammar`); not style suggestions.
+- **Readthrough `local_repair` findings** — `.readthrough-findings.json`
+  findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
+  Apply the finding's `proposed_fix` and nothing beyond it: reorder so a
+  prerequisite precedes its use, add a missing definition/step, split a
+  mixed-concept H2, delete a genuinely redundant passage, or surface a buried
+  outcome. The change stays inside the one page and preserves its purpose — that
+  bound is what makes it high-confidence. If applying it would mean touching
+  other files or reshaping the whole page, it isn't `local_repair`; treat it as
+  `reconception`.
 
 Everything else — `unverifiable` verdicts, low-confidence corrections,
-prose-quality findings, structural suggestions, anything you'd phrase with
+prose-quality findings, structural suggestions, **every readthrough finding with
+`fix_class: "reconception"`** (a whole-page rewrite, cross-file split/merge, or
+purpose change — flag, never auto-rewrite), anything you'd phrase with
 "consider" — goes in the PR description's **Findings not applied** section
 (one line of reasoning each), not in the diff. That list is the
-almost-made-the-cut record the human reviewer adjudicates.
+almost-made-the-cut record the human reviewer adjudicates. When you flag a
+`reconception`, set `clarity_flag: true` in the verdict sentinel (step 8) so the
+ledger carries the signal even on an otherwise-clean page.
 
 Editing guardrails:
 
@@ -235,7 +248,8 @@ branch, builds the canonical ledger record, and uploads it to S3 keyed by slug.
   "reason": "",
   "fixes": 4,
   "skipped_findings": 2,
-  "retirement": false
+  "retirement": false,
+  "clarity_flag": true
 }
 ```
 
@@ -246,6 +260,11 @@ branch, builds the canonical ledger record, and uploads it to S3 keyed by slug.
 - `fixes`: applied changes; `skipped_findings`: Findings-not-applied count.
 - `retirement`: `true` only for a retirement PR (branch
   `content-review/retire-<slug>`).
+- `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
+  for this page. Carries onto the ledger record so the page's structural
+  follow-up is durable even when the verdict is `clean` or `fixed` (the
+  reconception itself lives in the PR's Findings-not-applied section). Omit when
+  there's no reconception to flag.
 
 If you exit without writing this file, the workflow records the page as
 `incomplete`. An incomplete outcome does **not** advance the staleness clock, so
