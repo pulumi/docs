@@ -5,7 +5,7 @@
     "md" "hidden md:inline-flex"
     "lg" "hidden lg:inline-flex" -}}
 
-<header class="z-40 w-full border-b border-gray-200 bg-white">
+<header class="docs-top-nav z-40 w-full border-b border-gray-200 bg-white">
   <div class="flex h-16 items-center justify-between gap-2 px-4 md:px-6">
 
     <div class="relative shrink-0">
@@ -17,7 +17,8 @@
         aria-expanded="false"
         aria-controls="logo-nav-menu"
         class="group/logo flex gap-2 shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:ring-offset-4 focus-visible:outline-1 focus-visible:outline-transparent">
-        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "docs-logo-light h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+        {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi logo" "class" "docs-logo-dark h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
         {{ partial "icon.html" (dict "name" "caret-down" "weight" "bold" "class" "text-gray-500 group-hover/logo:text-violet-500 [[aria-expanded=true]_&]:text-violet-300 size-3 transition duration-300 [[aria-expanded=true]_&]:rotate-180") }}
       </button>
       <div id="logo-nav-menu"
