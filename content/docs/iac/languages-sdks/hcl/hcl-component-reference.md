@@ -18,7 +18,7 @@ menu:
 
 Pulumi HCL modules can be authored as reusable Pulumi components consumable from any Pulumi language (TypeScript, Python, Go, .NET, Java, YAML, or HCL). This is known as a multi-language component (MLC).
 
-An HCL module becomes an MLC when it has a `PulumiPlugin.yaml` containing `runtime: hcl` and declares a `component` block (and optionally a `package` block) inside the module's `pulumi` block. The rest of the module is an ordinary Pulumi HCL program — see the [Pulumi HCL reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/) for the full program model.
+An HCL module becomes an MLC when it has a `PulumiPlugin.yaml` containing `runtime: hcl` and declares a `component` block (and optionally a `package` block) inside the module's `terraform` block. The rest of the module is an ordinary Pulumi HCL program — see the [Pulumi HCL reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/) for the full program model.
 
 ## Example
 
@@ -28,10 +28,10 @@ An HCL module becomes an MLC when it has a `PulumiPlugin.yaml` containing `runti
 runtime: hcl
 ```
 
-`main.hcl`:
+`main.tf`:
 
 ```hcl
-pulumi {
+terraform {
   component {
     name = "VpcNetwork"
   }
@@ -83,7 +83,7 @@ Declares the package identity for the component.
 | `name`    | string | No       | Directory name of the module    | Package name. Must be a valid Pulumi name when specified. |
 | `version` | string | No       | `"0.0.0-dev"`                   | Package version. Must be a valid [semver](https://semver.org/) string when specified. |
 
-Only one `component` block and one `package` block are allowed per `pulumi` block. Using `component` or `package` in a regular Pulumi program (one invoked directly via `pulumi up`) produces an error.
+Only one `component` block and one `package` block are allowed per `terraform` block. Using `component` or `package` in a regular Pulumi program (one invoked directly via `pulumi up`) produces an error.
 
 ## Resource token
 
