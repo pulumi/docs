@@ -14,21 +14,21 @@ tags:
 
 social:
     twitter: |
-        A one-line edit to a database property. The diff says it's safe to approve.
+        A one-line IaC PR can look totally safe, but still take down production.
 
-        Run the preview and that line replaces your production database. Pulumi Neo code reviews read the preview and flag it on the PR. Now in public preview on GitHub.
+        That's because code review isn't just about the code, it's also about context: what's running, where the dependencies are, etc. We built Neo code reviews to bridge the gap.
     linkedin: |
-        A pull request changes one property on a production database. On GitHub the diff is a single edited line, and it looks safe to approve.
+        A one-line PR comes through that makes a minor modification to a database resource. The change seems simple enough, just one property, and the preview diff looks fine too, so you approve, merge, and deploy — and then a downstream service breaks.
 
-        Run the preview and the picture changes. That property can't be changed in place, so Pulumi will replace the database: destroy the running instance, create a new one with a new endpoint. The diff never showed it.
+        Unfortunately, it happens, because IaC code review isn't just about the code, it's also about the context: what's running, where the dependencies are, and more. When it comes to infrastructure code, the lines that change don't always tell you exactly what'll happen when those changes are applied to a running system.
 
-        With infrastructure, the lines that change rarely tell you what the change will actually do to the running system.
+        That's why we built Pulumi Neo code reviews. Currently in public preview, Neo code reviews evaluate changes not just in terms of the infra code alone, but also in the context of existing deployed infrastructure, leaving a review on the pull request just as a human teammate would.
 
-        Pulumi Neo code reviews read the preview output and leave feedback right on the pull request, down to the line. Now in public preview on GitHub.
+        Here's a look at how it works.
     bluesky: |
-        A one-line diff that quietly replaces your production database.
+        A one-line IaC PR can look totally safe, but still take down production.
 
-        The diff can't see it, but the preview can. Pulumi Neo code reviews read the preview and leave feedback right on the PR, down to the line. Public preview on GitHub now.
+        That's because code review isn't just about the code, it's also about context: what's running, where the dependencies are, etc. We built Neo code reviews to bridge the gap.
 ---
 
 Today we're introducing [Pulumi Neo code reviews](/docs/ai/code-reviews/), now in public preview. Neo code reviews analyze pull request changes in conjunction with what Pulumi Cloud knows about your running infrastructure, providing both high-level and code-level feedback.
