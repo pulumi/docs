@@ -87,10 +87,10 @@ Any directory containing `.tf` files and optionally `variables.tf` and `outputs.
 
 ### Using a Module from Pulumi Cloud
 
-If your organization publishes Terraform modules to the Pulumi Cloud registry, reference them with the `app.pulumi.com` host:
+If your organization publishes Terraform modules to the Pulumi Cloud registry, reference them with the `tf.pulumi.com` host:
 
 ```bash
-pulumi package add terraform-module app.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
+pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
 ```
 
 Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). The CLI authenticates against the configured Pulumi cloud URL automatically, so no extra `terraform login` step is needed when running through `pulumi package add`.
