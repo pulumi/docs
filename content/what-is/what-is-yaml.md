@@ -55,7 +55,8 @@ hobbies:
   - Reading
   - Coding
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
   typescript: Expert
   go: Expert
@@ -93,7 +94,8 @@ You can even nest these key-value pairs for more granular information:
 
 ```yaml
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
   typescript: Expert
   go: Expert
