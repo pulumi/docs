@@ -20,15 +20,17 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 ## Authenticate
 
-`terraform login tf.pulumi.com` produces the bearer token used by every HashiCorp-protocol service Pulumi Cloud exposes (state backend, module registry). The credential lands in `~/.terraform.d/credentials.tfrc.json`.
+Every surface authenticates with a [Pulumi access token](/docs/pulumi-cloud/access-management/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
-Run it once per workstation:
+- Publishing: the go-tfe client, the tfe provider, and the GitHub Action take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
+- Consuming from a Pulumi program: run `pulumi login`. `pulumi package add terraform-module` passes the token through to the provider, so there is no separate registry login.
+- Consuming from plain OpenTofu or Terraform: set the host token. OpenTofu and Terraform derive the variable name from the host by replacing dots with underscores (and dashes with double underscores), so `tf.pulumi.com` becomes `TF_TOKEN_tf_pulumi_com`:
 
-```bash
-terraform login tf.pulumi.com
-```
+  ```bash
+  export TF_TOKEN_tf_pulumi_com=$PULUMI_ACCESS_TOKEN
+  ```
 
-Self-hosted Pulumi Cloud installations follow the same flow against their own host (`terraform login <your-pulumi-host>`).
+  You can also store the token in the Terraform CLI credentials file (`~/.terraform.d/credentials.tfrc.json`). Self-hosted installations use the same scheme with their own host.
 
 ## Publish a module
 
@@ -96,7 +98,7 @@ module "vpc" {
 }
 ```
 
-`tofu init` discovers the `modules.v1` endpoint on Pulumi Cloud's `.well-known/terraform.json`, lists available versions, and downloads the tarball using the bearer token from `terraform login`.
+`tofu init` discovers the `modules.v1` endpoint on Pulumi Cloud's `.well-known/terraform.json`, lists available versions, and downloads the tarball using the token from `TF_TOKEN_tf_pulumi_com`.
 
 Submodules are referenced with the standard `//modules/<name>` source syntax:
 

@@ -93,7 +93,7 @@ If your organization publishes Terraform modules to the Pulumi Cloud registry, r
 pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
 ```
 
-Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). The CLI authenticates against the configured Pulumi cloud URL automatically, so no extra `terraform login` step is needed when running through `pulumi package add`.
+Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). The CLI passes your Pulumi access token through to the provider automatically, so you don't need to set a registry token by hand when running through `pulumi package add`.
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 

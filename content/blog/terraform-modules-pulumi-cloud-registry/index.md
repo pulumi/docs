@@ -34,13 +34,11 @@ If you already keep Terraform state in Pulumi Cloud, this puts your modules in t
 
 The registry is wire-compatible with HCP Terraform's private module registry. The publish and consume APIs accept the same requests, so the tooling you already use keeps working. The only change is the host: point your tools at `tf.pulumi.com` instead of `app.terraform.io`.
 
-Authentication uses one token for everything Pulumi Cloud exposes over the HashiCorp protocol, including the state backend and the module registry:
+Authentication uses a Pulumi access token. It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol, including the state backend and the module registry. When you publish, you hand it to go-tfe (or the tfe provider, or the GitHub Action) exactly where an HCP token goes today. When you consume from a Pulumi program, `pulumi login` is enough and the CLI passes it through. For plain OpenTofu or Terraform, set it as the host token:
 
 ```bash
-terraform login tf.pulumi.com
+export TF_TOKEN_tf_pulumi_com=$PULUMI_ACCESS_TOKEN
 ```
-
-This writes a bearer token to `~/.terraform.d/credentials.tfrc.json`. Self-hosted installations follow the same flow against their own host.
 
 ## Publishing a module
 
@@ -72,7 +70,7 @@ module "vpc" {
 }
 ```
 
-`tofu init` (or `terraform init`) resolves the module against Pulumi Cloud using the token from `terraform login`. Submodules use the usual `//modules/<name>` syntax.
+`tofu init` (or `terraform init`) resolves the module against Pulumi Cloud using the token from `TF_TOKEN_tf_pulumi_com`. Submodules use the usual `//modules/<name>` syntax.
 
 ## Consuming from a Pulumi program
 
