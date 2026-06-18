@@ -19,7 +19,14 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 15 (v14→v15 makes `verified-claims-trail-faithful` surgically
+Schema version: 16 (v15→v16 adds the `flagged` (🚩) detector verdict to
+  `TRAIL_VERDICT_WORDS` / `EXPECTED_TRAIL_EMOJI` / `OUTSTANDING_VERDICT_WORDS` /
+  `OUTSTANDING_TRAIL_EMOJIS` / the trail-line emoji alternation. `flagged` is
+  the honest verdict for `route: "preflight"` detector findings (Hugo build,
+  frontmatter collisions, readthrough coherence), which previously borrowed
+  `contradicted`/`mismatch`; the compose-review synthesizers now emit `flagged`,
+  and the fact-check claim metadata excludes `route: "preflight"` so detector
+  findings no longer inflate the "X of Y claims verified" counts. v14→v15 makes `verified-claims-trail-faithful` surgically
   fixable. The rule's violation strings already carry everything a splice
   needs (wrong verdict word, right verdict word, right per-verdict emoji,
   L-anchor); validator-fix.py adds a class-specific Haiku prompt that
@@ -103,7 +110,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 15
+SCHEMA_VERSION = 16
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -149,7 +156,12 @@ TEMPORAL_TRIGGERS = {
 # *word* is the source of truth (it drives bucket placement); the emoji is a
 # visual aid. EXPECTED_TRAIL_EMOJI maps each verdict word to the glyph the
 # render contract (`docs-review:references:output-format`) requires.
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch")
+# `flagged` (🚩) is the detector verdict — synthesized from deterministic
+# pre-flight checks (Hugo build, frontmatter collisions, readthrough coherence),
+# always paired with `route: "preflight"`. It is NOT a fact-check outcome; the
+# specific detector lives in the record's `type`/`source`. See compose-review.py
+# (same constant) — keep the two in sync.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -157,13 +169,14 @@ EXPECTED_TRAIL_EMOJI = {
     "unverifiable": "🤷",
     "contradicted": "❌",
     "mismatch": "⚔️",
+    "flagged": "🚩",
 }
 # Inverse map — derive the canonical verdict word from its per-verdict glyph.
 # Used by the `trail-canonical-verdict-word` rule (and validator-fix.py) to
 # repair a freelanced verdict token (`source-mismatch`, `author-authored`, …).
 CANONICAL_VERDICT_FOR_EMOJI = {v: k for k, v in EXPECTED_TRAIL_EMOJI.items()}
 # Verdict words that promote a finding to 🚨 Outstanding.
-OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch"}
+OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch", "flagged"}
 # Legacy/fallback emojis still accepted on trail lines for one transition; the
 # trail-bucket-consistency rule flags them with a "render the per-verdict emoji"
 # nudge. Note: ✅ is *also* the canonical `verified` emoji — it only counts as
@@ -172,7 +185,7 @@ LEGACY_TRAIL_EMOJIS = {"✅", "⚠️", "🚨"}
 # Emojis that, on a trail line, mark the line as 🚨-bucket regardless of the
 # verdict word (used as a fallback when the verdict word isn't one of the
 # canonical TRAIL_VERDICT_WORDS).
-OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️"}
+OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️", "🚩"}
 
 # Dispatch-metadata format on the External claim verification line
 # (output-format.md L122). Two segments are required, matched independently:
@@ -362,7 +375,7 @@ def extract_count_table_row(body: str) -> dict[str, int] | None:
     return None
 
 
-_TRAIL_EMOJI_ALT = r"✅|🤝|➖|🤷|❌|⚔️|⚠️|🚨"
+_TRAIL_EMOJI_ALT = r"✅|🤝|➖|🤷|❌|⚔️|🚩|⚠️|🚨"
 _TRAIL_LINE_RE = re.compile(rf"L(\d+(?:-\d+)?)\b.*?→\s*({_TRAIL_EMOJI_ALT})\s+(\S[^\n]*)")
 
 
