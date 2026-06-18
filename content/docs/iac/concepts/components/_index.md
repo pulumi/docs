@@ -186,7 +186,7 @@ dotnet add package Pulumi.Awsx
 {{< /chooser >}}
 
 {{< notes type="info" >}}
-The [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) provides a browsable gallery of all packages in use across your Pulumi Cloud organization, including packages containing components.
+The [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) provides a browsable gallery of all packages available to your Pulumi Cloud organization, including packages containing components.
 {{< /notes >}}
 
 ## Example: consuming a component
