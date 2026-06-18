@@ -79,7 +79,13 @@ from pathlib import Path
 # value keeps the draft structurally valid.)
 PROMOTE_UNVERIFIABLE_TO = "warning"
 
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch")
+# `flagged` is the detector verdict: anything synthesized from a deterministic
+# pre-flight check (Hugo build, frontmatter collisions, readthrough coherence)
+# carries `verdict: "flagged"` + `route: "preflight"`. It is NOT a fact-check
+# outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
+# which a build error or a coherence gap is not. The specific detector lives in
+# the record's `type`/`source`, rendered in the trail-line parenthetical.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -87,8 +93,9 @@ EXPECTED_TRAIL_EMOJI = {
     "unverifiable": "🤷",
     "contradicted": "❌",
     "mismatch": "⚔️",
+    "flagged": "🚩",
 }
-OUTSTANDING_VERDICTS = {"contradicted", "mismatch"}
+OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -230,6 +237,11 @@ def load_hugo_build(path: str | None) -> dict | None:
     return data if isinstance(data, dict) else None
 
 
+def load_readthrough(path: str | None) -> dict | None:
+    data = _load_json(path)
+    return data if isinstance(data, dict) else None
+
+
 # ---- preflight synthetic verdicts (Hugo + frontmatter pre-stubs) -----------
 
 
@@ -266,10 +278,11 @@ _FM_SOURCE = "frontmatter-validate.py pre-step"
 def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
     """Synthesize verdict-shaped dicts from `.hugo-build.json` so the composer
     pre-stubs Hugo errors and link-integrity breakages into 🚨 Outstanding.
-    These flow through render_trail (as `❌ contradicted` lines) and
+    These flow through render_trail (as `🚩 flagged` detector lines) and
     build_stubs (as `**[L<n>]**` bullets) just like real fact-check verdicts.
     Routed as `preflight` so build_stubs writes a confirm-or-REMOVE TODO
-    rather than the fact-check fix-or-spurious-or-mis-sourced TODO.
+    rather than the fact-check fix-or-spurious-or-mis-sourced TODO, and so the
+    fact-check claim metadata excludes them.
     """
     if not isinstance(hugo_artifact, dict):
         return []
@@ -287,7 +300,7 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
             "text": entry.strip()[:TEXT_TRUNC],
             "type": "hugo-build-error",
             "route": "preflight",
-            "verdict": "contradicted",
+            "verdict": "flagged",
             "confidence": "high",
             "evidence": entry.strip(),
             "source": _HUGO_SOURCE,
@@ -303,7 +316,7 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
             "text": entry.strip()[:TEXT_TRUNC],
             "type": "hugo-link-integrity",
             "route": "preflight",
-            "verdict": "contradicted",
+            "verdict": "flagged",
             "confidence": "high",
             "evidence": entry.strip(),
             "source": _HUGO_SOURCE,
@@ -314,8 +327,8 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
 def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]:
     """Synthesize verdicts from `.frontmatter-validation.json`'s `files[]` array.
 
-    Three failure classes get pre-stubbed as `⚔️ mismatch` (so they surface
-    in 🚨 Outstanding via the mismatch promotion path):
+    Three failure classes get pre-stubbed as `🚩 flagged` (so they surface
+    in 🚨 Outstanding via the flagged detector-promotion path):
       - `menu_parents[].parent_exists_in_menu == false`  (broken nav parent)
       - `alias_collisions[]`                              (alias hits another file)
       - `url_collisions[]`                                (URL hits another file)
@@ -344,7 +357,7 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter `menu.{menu}.parent: {pid}` does not exist in the `{menu}` menu{also_note}"[:TEXT_TRUNC],
                 "type": "frontmatter-menu-parent",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"menu={menu} parent={pid} parent_exists_in_menu=false",
                 "source": _FM_SOURCE,
@@ -361,7 +374,7 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter alias `{alias}` collides with `{collides}`"[:TEXT_TRUNC],
                 "type": "frontmatter-alias-collision",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"alias={alias} collides_with={collides}",
                 "source": _FM_SOURCE,
@@ -378,11 +391,51 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter URL `{url}` collides with `{collides}`"[:TEXT_TRUNC],
                 "type": "frontmatter-url-collision",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"url={url} collides_with={collides}",
                 "source": _FM_SOURCE,
             })
+    return out
+
+
+_RT_SOURCE = "readthrough pre-step"
+
+
+def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[dict]:
+    """Synthesize `🚩 flagged` verdict-shaped dicts from `.readthrough-findings.json`.
+
+    The readthrough lane (`readthrough.py`, a Sonnet pre-step) emits whole-page
+    coherence/structure findings. Each becomes a `route: "preflight"` detector
+    verdict so it flows through render_trail + build_stubs exactly like the Hugo
+    and frontmatter pre-steps. `fix_class` (local_repair | reconception) rides on
+    the record so build_stubs can write the right TODO and the existing-content
+    worker can decide fix-vs-flag.
+    """
+    if not isinstance(readthrough_artifact, dict):
+        return []
+    out: list[dict] = []
+    for f in readthrough_artifact.get("findings", []) or []:
+        if not isinstance(f, dict):
+            continue
+        mode = (f.get("failure_mode") or "coherence").strip()
+        fix_class = (f.get("fix_class") or "reconception").strip()
+        anchor = (f.get("anchor_quote") or "").strip()
+        rationale = (f.get("rationale") or f.get("proposed_fix") or "").strip()
+        out.append({
+            "claim_id": f"readthrough-{len(out)}",
+            "file": f.get("file") or "",
+            "line_range": f.get("line_range") or "L1",
+            "text": (anchor or mode)[:TEXT_TRUNC],
+            "type": f"readthrough-{mode}",
+            "route": "preflight",
+            "verdict": "flagged",
+            "confidence": "high",
+            "evidence": rationale,
+            "source": _RT_SOURCE,
+            "fix_class": fix_class,
+            "proposed_fix": (f.get("proposed_fix") or "").strip(),
+        })
     return out
 
 
@@ -549,14 +602,18 @@ def render_investigation_log(
         y = len(templated[0].get("siblings_for_dispatch") or templated[0].get("directory_peers") or [])
         bullets.append(f"- **Cross-sibling reads:** 0 of {y} siblings")
 
-    # 2. External claim verification.
-    if not verdicts:
+    # 2. External claim verification. Detector findings (route: preflight —
+    # Hugo/frontmatter/readthrough) are NOT fact-check claims; exclude them so
+    # they don't inflate the "X of Y claims verified" counts (route_counts is
+    # filtered to match, so I+P+F+S still sums to Y).
+    fact_verdicts = [v for v in verdicts if v.get("route") != "preflight"]
+    if not fact_verdicts:
         bullets.append("- **External claim verification:** not run (no claims in this diff)")
     else:
-        y = len(verdicts)
-        x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
-        n_unver = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+        y = len(fact_verdicts)
+        x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
+        n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in ("contradicted", "mismatch"))
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -930,7 +987,18 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
         # not "triage against verifier source choices."
         if route == "preflight" and verdict in OUTSTANDING_VERDICTS:
             vtype = v.get("type") or ""
-            if vtype.startswith("hugo-"):
+            if vtype.startswith("readthrough-"):
+                if (v.get("fix_class") or "") == "local_repair":
+                    todo = ("apply the structural fix per the readthrough finding (quote-and-rewrite the anchored "
+                            "span / reorder / add the missing step). Bucket by reader impact: 🚨 if a reader cannot "
+                            "reach the page's stated outcome without it, otherwise move to ⚠️ Low-confidence. "
+                            "REMOVE only if you judge the page actually reads fine.")
+                else:
+                    todo = ("this is a `reconception` flag — a whole-page restructure the lane will NOT auto-rewrite. "
+                            "State the structural problem concretely (name the anchor); do NOT write an inline rewrite. "
+                            "Bucket by reader impact (🚨 if it blocks the reader, else ⚠️); route the fix to a follow-up "
+                            "issue. REMOVE if the page actually reads fine.")
+            elif vtype.startswith("hugo-"):
                 todo = ("confirm the fix needed (or REMOVE the bullet if this is a CI-environment near-miss — "
                         "e.g., a transient render-time warning that doesn't reproduce on a clean Hugo build). "
                         "If pre-existing on a line this PR didn't touch, replace the body with `**Pre-existing:** <reason>` "
@@ -990,7 +1058,10 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
     # `inline` = pass0 (deterministic, no model verifier dispatched); P/F/S come
     # from each verdict's recorded `route` (not meta.n_pass*, which is the
     # pre-reroute count — verify-claims.py re-routes pass2→pass3 when the URL
-    # isn't actually in .fetched-urls.json).
+    # isn't actually in .fetched-urls.json). Detector findings (route: preflight)
+    # are not fact-check claims and are excluded, so I+P+F+S equals the fact-check
+    # claim total Y in the investigation log.
+    verdicts = [v for v in verdicts if v.get("route") != "preflight"]
     by_route = {"pass0": 0, "pass1": 0, "pass2": 0, "pass3": 0}
     for v in verdicts:
         r = v.get("route") or "pass1"
@@ -1038,6 +1109,7 @@ def compose(args: argparse.Namespace) -> str:
     cross_sibling = load_cross_sibling(args.cross_sibling)
     frontmatter = load_frontmatter(args.frontmatter)
     hugo_build = load_hugo_build(args.hugo_build)
+    readthrough = load_readthrough(args.readthrough)
 
     head_sha = (args.head_sha or "").strip()
     head_sha_short = (args.head_sha_short or "").strip() or (head_sha[:8] if head_sha else "unknown")
@@ -1103,7 +1175,12 @@ def compose(args: argparse.Namespace) -> str:
     # / `.frontmatter-validation.json` artifacts. Routed as `preflight` —
     # build_stubs branches on the route to emit a confirm-or-REMOVE TODO
     # instead of the fact-check spurious-or-mis-sourced TODO.
-    verdicts = list(verdicts) + _hugo_synthetic_verdicts(hugo_build) + _frontmatter_synthetic_verdicts(frontmatter)
+    verdicts = (
+        list(verdicts)
+        + _hugo_synthetic_verdicts(hugo_build)
+        + _frontmatter_synthetic_verdicts(frontmatter)
+        + _readthrough_synthetic_verdicts(readthrough)
+    )
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
@@ -1115,6 +1192,8 @@ def compose(args: argparse.Namespace) -> str:
     d_resolved = 0
 
     confidence_dims = ["mechanics", "facts"]
+    if readthrough and (readthrough.get("findings") or readthrough.get("ran")):
+        confidence_dims.append("coherence")
     if any(f.get("in_templated_section") for f in cross_sibling):
         confidence_dims.append("cross-sibling consistency")
     if is_blog and editorial_balance and editorial_balance.get("trigger") is not None:
@@ -1279,6 +1358,7 @@ def main() -> int:
     p.add_argument("--cross-sibling", default=".cross-sibling-discovery.json")
     p.add_argument("--frontmatter", default=".frontmatter-validation.json")
     p.add_argument("--hugo-build", default=".hugo-build.json")
+    p.add_argument("--readthrough", default=".readthrough-findings.json")
     p.add_argument("--fetched-urls", default=".fetched-urls.json")
     p.add_argument("--diff-files", help="Comma-separated changed-file list (overrides `gh pr diff --name-only`; for testing).")
     p.add_argument("--no-validate", action="store_true", help="Skip the self-check (local debugging).")
