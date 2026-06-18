@@ -1,7 +1,7 @@
 ---
-title_tag: Terraform Modules in the Pulumi Cloud Registry | Pulumi IDP
-title: Terraform Modules
-h1: "Terraform Modules in the Pulumi Cloud Registry"
+title_tag: Terraform modules in the Pulumi Cloud registry | Pulumi IDP
+title: Terraform modules
+h1: "Terraform modules in the Pulumi Cloud registry"
 meta_desc: Publish and consume Terraform modules in Pulumi Cloud using the HCP-compatible registry surface.
 menu:
   idp:
@@ -34,7 +34,7 @@ Every surface authenticates with a [Pulumi access token](/docs/pulumi-cloud/acce
 
 ## Publish a module
 
-Pulumi Cloud's publish API is wire-compatible with HCP Terraform's private registry. Existing HCP migration tooling works unmodified, just pointed at the new host. The two most common paths:
+Pulumi Cloud's publish API is wire-compatible with HCP Terraform's private registry. Existing HCP migration tooling works unmodified, pointed at the new host. The two most common paths:
 
 ### go-tfe
 

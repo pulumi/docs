@@ -28,7 +28,7 @@ The Pulumi Cloud registry now hosts Terraform modules. You can publish your priv
 
 <!--more-->
 
-If you already keep Terraform state in Pulumi Cloud, this puts your modules in the same place, behind the same login.
+If you already [keep Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/), this puts your modules in the same place, behind the same login.
 
 ## A registry that speaks the HashiCorp protocol
 
