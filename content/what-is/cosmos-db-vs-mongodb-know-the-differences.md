@@ -50,10 +50,6 @@ Teams who are used to relational databases may find MongoDB difficult to get use
 
 ### Getting Started
 
-Cosmos DB and MongoDB both have strengths and weaknesses that will benefit some teams but hinder others. If your infrastructure is already on Azure, or you need the flexibility of a database that supports multiple data models, Cosmos DB is the stronger offering. If you require support for larger documents and either use another cloud provider or simply want to avoid vendor lock-in, MongoDB is the best choice.
+Neither database is the universally correct answer, and the comparison rarely turns on raw performance. The decision hinges on two constraints you can name up front: which cloud you're committed to, and how large your documents get. If you're on Azure and want a single engine that can speak document, key-value, wide-column, and graph models, Cosmos DB earns its added learning curve. If you need documents above 2MB, want portability across clouds, or simply want to avoid vendor lock-in, MongoDB is the cleaner fit. Decide those two constraints first, and the rest of the trade-offs fall into place.
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choice. Try deploying an [AKS (Azure Kubernetes Service) application with Cosmos DB](/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean) or get started with [MongoDB Atlas](/docs/get-started/)
-
-## Pulumi Corporation
-
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/)) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/)) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/registry/packages/mongodbatlas/)
+Whichever you pick, provisioning it shouldn't slow you down. Try deploying an [AKS application with Cosmos DB](/registry/packages/azure/how-to-guides/classic-azure-ts-aks-mean) or [get started with MongoDB Atlas](/docs/get-started/).

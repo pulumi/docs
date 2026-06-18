@@ -156,16 +156,6 @@ Washington Trust Bank modernized its software development and infrastructure pra
 
 ## Conclusion
 
-Given platform engineering's strong focus on infrastructure management, automation, and standardization, platform engineering teams need a solution that enables them to adhere to the principles of platform engineering while empowering their developers and development teams to leverage the cloud in a secure, scalable, reliable, and consistent way.
+The defining move in platform engineering is not building shared infrastructure, it's treating that infrastructure as a product with developers as its customers. A central team that owns shared tooling but skips the product mindset, the defined developer customer, and the commitment to maintained golden paths is just a renamed ops team, and it will hit the same bottlenecks. The discipline pays off when self-service is genuinely the lowest-friction path, so guardrails are something developers move through rather than wait on. Get that right and the platform becomes the route teams choose, not the one they route around.
 
-![Pulumi's solution for platform teams](/images/product/platform-teams-diagram.png)
-
-Pulumi's solution for platform teams encompasses all of the key requirements described earlier in this article:
-
-1. The _developer control plane_ enables the simple and powerful user experience, allowing platform teams to meet the varying needs of different developers and development teams. The core infrastructure as code tool supports the languages that teams are already familiar with (including TypeScript, Python, Go, C#, Java, and YAML), and leverages the powerful ecosystems surrounding these languages (IDE support, linters, and test frameworks, for example). There's also support for internal developer portals like [AWS Proton](https://aws.amazon.com/proton/) and [Backstage](https://backstage.io).
-2. _Integration and delivery_ is key to supporting automation as the default. This includes extensive integration with numerous CI/CD systems as well as Pulumi's own CI/CD offering, called [Pulumi Deployments](/product/pulumi-deployments/). The [Automation API](/automation/) makes it possible to embed IaC into application software, empowering teams to create reusable infrastructure workflows.
-3. _Monitoring and logging_ provides the "full visibility on everything" that is a requirement for platform engineering, through support for and integration with leading monitoring, logging, and metric solutions. [Pulumi Insights](/product/pulumi-insights/) provides advanced search (including natural language search), analytics, and artificial intelligence (AI) into [Pulumi](/product/) to provide actionable knowledge on cloud usage and cost optimizations.
-4. _Security and identity_ ensure security is a foundational element. [Pulumi Policies](/docs/insights/policy/) provides policy-based controls (including remediation of policy violations) using the same general purpose programming languages that our core IaC offering supports. [Pulumi ESC](/product/esc) enables centralized access to secrets and configuration information.
-5. Pulumi's robust provider ecosystem opens up access to a wide plethora of _resources_ to help ensure that all the necessary services, platforms, and offerings needed to build a well-architected design are available.
-
-Pulumi offers a modern and flexible approach to solving the needs of platform engineering teams. [Request a demo](/request-a-demo) of Pulumi, or [get started using Pulumi's tools](/docs/get-started) today.
+[Get started with Pulumi](/docs/get-started) to build the reusable components and policy as code your golden paths run on.

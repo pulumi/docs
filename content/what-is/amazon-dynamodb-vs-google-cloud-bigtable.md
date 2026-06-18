@@ -81,8 +81,6 @@ Whichever you choose, Pulumi can provision and manage it as [infrastructure as c
 
 ## Conclusion
 
-Regardless of which database suits your needs, standing them up shouldn't be a chore. With Pulumi, provisioning either one is a breeze in the programming language of your choice. Try deploying an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or get started with [Google Cloud](/docs/iac/get-started/gcp/)
+The decision between DynamoDB and Bigtable is rarely settled by a feature checklist, because the two are close enough on availability, scale, and latency that the deciding factor is usually where the rest of your infrastructure already lives. DynamoDB pulls in the AWS ecosystem (IAM, the broader service suite) while Bigtable assumes you're on Google Cloud and comfortable with a SQL-like query surface through BigQuery, so the cloud you've committed to tends to pick the database for you. Treat the gravity of your existing platform as the first input, then let the workload specifics (query patterns, predictability of cost) break any remaining tie.
 
-## Pulumi Corporation
-
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/)) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/)) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+You can provision either one as infrastructure as code with Pulumi: deploy an [AWS Data Service with DynamoDB](/docs/aws/dynamodb/) or [get started with Google Cloud](/docs/iac/get-started/gcp/).

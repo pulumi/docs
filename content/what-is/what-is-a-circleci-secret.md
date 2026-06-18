@@ -148,12 +148,8 @@ Addressing these challenges and considerations requires a thoughtful approach to
 
 ## Conclusion
 
-Securing secrets in CircleCI is crucial for reinforcing the security of your CI/CD pipelines without compromising efficiency. Properly managing sensitive data within these workflows is essential to maintain the confidentiality of critical information. CircleCI secrets streamline development processes, balancing security and operational agility.
+CircleCI secrets solve storage and access, but they leave you holding long-lived credentials that someone has to track, rotate, and audit as your contexts multiply. The more durable move is to remove the secret from the loop entirely: use OIDC so CircleCI exchanges a short-lived, job-scoped token at runtime instead of reading a stored key. Treat stored secrets as the exception you actively work to eliminate, not the default you accumulate.
 
-Now that you know about CircleCI secrets, take your cloud infrastructure management to the next level with Pulumi:
+To go further, learn how to [use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-connect-for-your-cloud-provider) to connect CircleCI to your cloud provider without storing long-lived secrets.
 
-- **Connect [Pulumi IaC to CircleCI](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
-- **Integrate Pulumi in your pipelines**: Review a comprehensive guide on how to [build cloud infrastructure from your CI pipeline with Pulumi](https://circleci.com/blog/reusable-ci-cd-components-with-circleci-orbs-and-pulumi/)
-- **Use Pulumi ESC**: Discover how to manage sensitive information in your cloud applications. Dive into Pulumi's [Secrets management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

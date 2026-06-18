@@ -178,13 +178,11 @@ The platform provides comprehensive documentation, tutorials, and learning resou
 
 ## Conclusion
 
-Pulumi represents a fundamental shift in how organizations approach cloud infrastructure management, moving beyond the limitations of domain-specific languages and templating systems to embrace the full power of modern software development practices. By treating infrastructure as software, Pulumi enables teams to leverage existing skills, tools, and workflows while providing the advanced capabilities required for modern cloud environments.
+The choice to use general-purpose programming languages is not a convenience feature; it is what lets the rest of software engineering follow infrastructure into the cloud. Once your infrastructure is real code, your tests, package managers, code review, and policy checks apply to it without translation, which is a capability that templating languages structurally cannot offer no matter how many functions they bolt on.
 
-The platform's combination of open source foundation, comprehensive registry ecosystem, and enterprise capabilities ensures that it can serve organizations of all sizes, from startups building their first cloud applications to large enterprises managing complex multi-cloud environments. The proven results achieved by customers demonstrate the real-world impact of adopting a software-centric approach to infrastructure management.
+That distinction matters most now, when AI can generate infrastructure faster than any team can manually review it. The bottleneck shifts from writing infrastructure to governing it, and the platforms that treat infrastructure as software already have the testing, policy, and state machinery to keep that speed from outrunning your controls. If you remember one thing from this article, it is that infrastructure as software is less about which language you type and more about which engineering disciplines you get to reuse.
 
-As cloud infrastructure continues to evolve in complexity and importance, particularly in an era where AI is accelerating code generation, Pulumi's approach to infrastructure as software positions it as a crucial tool for organizations seeking to maximize the value of their cloud investments while maintaining the agility and reliability required for modern business operations. The platform's emphasis on governance, security, and policy enforcement ensures that rapid development (whether human or AI-driven) doesn't compromise operational excellence.
-
-Whether you're a developer looking to apply your programming skills to infrastructure problems, an operations team seeking better collaboration with development teams, or an organization pursuing a comprehensive cloud engineering strategy in the AI era, Pulumi offers a path forward that embraces the best practices of modern software development while addressing the unique challenges of cloud infrastructure management at scale.
+[Get started with Pulumi](/docs/get-started/) to see this in your own stack.
 
 ## Learn more
 
