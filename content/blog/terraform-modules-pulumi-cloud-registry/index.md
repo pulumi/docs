@@ -34,7 +34,7 @@ If you already keep Terraform state in Pulumi Cloud, this puts your modules in t
 
 The registry is wire-compatible with HCP Terraform's private module registry. The publish and consume APIs accept the same requests, so the tooling you already use keeps working. The only change is the host: point your tools at `tf.pulumi.com` instead of `app.terraform.io`.
 
-Authentication uses a Pulumi access token. It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol, including the state backend and the module registry. When you publish, you hand it to go-tfe (or the tfe provider, or the GitHub Action) exactly where an HCP token goes today. When you consume from a Pulumi program, `pulumi login` is enough and the CLI passes it through. For plain OpenTofu or Terraform, set it as the host token:
+Authentication uses a Pulumi access token. It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol, including the state backend and the module registry. When you publish, you hand it to go-tfe (or the tfe provider) exactly where an HCP token goes today. When you consume from a Pulumi program, `pulumi login` is enough and the CLI passes it through. For plain OpenTofu or Terraform, set it as the host token:
 
 ```bash
 export TF_TOKEN_tf_pulumi_com=$PULUMI_ACCESS_TOKEN
@@ -46,7 +46,6 @@ Publishing is available on the Enterprise and Business Critical plans. The commo
 
 - The [go-tfe](https://github.com/hashicorp/go-tfe) library, by setting `Address` to `https://tf.pulumi.com`.
 - The [hashicorp/tfe](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs) Terraform provider, by setting `hostname = "tf.pulumi.com"`.
-- The [tfc-workflows-github](https://github.com/hashicorp/tfc-workflows-github) Action, by setting `hostname: tf.pulumi.com`.
 
 For example, with go-tfe:
 
@@ -80,7 +79,7 @@ You can also bring the module into a Pulumi program in any supported language:
 pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
 ```
 
-The CLI authenticates against your configured Pulumi Cloud URL, so there is no separate login step. From there the module behaves like any other Pulumi package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+`terraform-module` is a parameterized provider, and its parameters are the module address, the version, and a local name for the generated package. After `pulumi login` the CLI resolves the module with your Pulumi credentials, so there is no separate login step. From there the module behaves like any other Pulumi package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Get started
 
