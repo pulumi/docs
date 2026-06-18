@@ -729,6 +729,18 @@ def _clean_source(src: str) -> str:
 
 
 def _evidence_pointer(v: dict) -> str:
+    # Preflight detector verdicts (Hugo build, frontmatter collisions, readthrough
+    # coherence) render a `detector: subtype` token in the trail-line parenthetical
+    # — e.g. `readthrough: prerequisite-inversion`, `frontmatter: alias-collision` —
+    # not a fact-check `evidence:`/`source:` pointer. The detector is the verdict;
+    # the finding's evidence and fix live in its bucket bullet. Keeps the trail
+    # scannable by defect type (output-format.md §per-verdict table).
+    if v.get("route") == "preflight":
+        vtype = (v.get("type") or "").strip()
+        if "-" in vtype:
+            detector, _, sub = vtype.partition("-")
+            return f"{detector}: {sub}"
+        return vtype or _clean_source(str(v.get("source") or "")) or "detector finding"
     ev = redact(trunc(v.get("evidence") or "", EVIDENCE_TRUNC))
     src = _clean_source(str(v.get("source") or ""))
     parts = []

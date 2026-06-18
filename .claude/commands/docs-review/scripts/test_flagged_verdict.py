@@ -73,6 +73,11 @@ def main() -> int:
     # --- trail + stubs ---
     trail, *_ = cr.render_trail(sv, None)
     check("🚩 flagged" in trail, "trail renders '🚩 flagged'")
+    # Preflight detectors render a `detector: subtype` token, not an evidence pointer.
+    check("🚩 flagged (readthrough: prerequisite-inversion)" in trail,
+          "trail parenthetical is the detector:subtype token, not (evidence: …)")
+    check("evidence:" not in trail and "source:" not in trail,
+          "preflight trail line carries no fact-check evidence/source pointer")
     outstanding, _low = cr.build_stubs(sv)
     check(len(outstanding) == 2, "readthrough findings stub to 🚨 Outstanding")
     joined = "\n".join(str(o) for o in outstanding)
