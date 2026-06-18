@@ -87,7 +87,7 @@ SOC 2+ reduces audit fatigue: one engagement, one evidence collection, one set o
 
 ## What does the SOC 2 audit process involve?
 
-A typical first SOC 2 Type II runs 6–12 months from kickoff to issued report — usually 3–6 months of readiness and remediation, followed by the observation period and audit fieldwork.
+A typical first SOC 2 Type II runs 6–12 months from kickoff to issued report: usually 3–6 months of readiness and remediation, followed by the observation period and audit fieldwork.
 
 1. **Scope the assessment.** Decide which Trust Services Criteria are in scope, which products and environments are covered, and which entity is the reporting organization.
 1. **Readiness assessment.** A gap analysis (often done by the future auditor in a separate engagement, or by a compliance-automation vendor) that identifies missing or weak controls before the formal audit.

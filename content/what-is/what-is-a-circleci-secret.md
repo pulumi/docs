@@ -20,7 +20,7 @@ CircleCI secrets are sensitive information that must be protected to guarantee t
 - **Pipeline integration:** CircleCI secrets integrate into workflows, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials throughout the build, test, and deployment phases.
 - **Environment variable flexibility:** CircleCI secrets can be easily referenced as environment variables across workflows. This flexibility allows a single codebase to cater to various development environments, including Dev, QA, pre-prod, etc.
 - **Centralized version control:** CircleCI centralizes configuration files with secret references in the `.circleci` home directory. This approach removes the necessity of embedding sensitive data directly into your application.
-- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports—all without the hassle of installing additional complex systems.
+- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports, all without the hassle of installing additional complex systems.
 
 ## Getting started with CircleCI secrets
 

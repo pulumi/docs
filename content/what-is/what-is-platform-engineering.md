@@ -16,7 +16,7 @@ Platform engineering is a set of modern engineering practices that take a holist
 
 ## What is platform engineering?
 
-In a platform engineering approach, one or more teams---often referred to as the platform engineering team or the platform team---build a comprehensive set of shared tools and services (aka "the platform") to help development teams develop, deploy, and operate cloud infrastructure on a self-service basis. This includes cloud infrastructure, container orchestration platforms, databases, networking, monitoring, code repositories, and deployment pipelines.
+In a platform engineering approach, one or more teams (often referred to as the platform engineering team or the platform team) build a comprehensive set of shared tools and services (aka "the platform") to help development teams develop, deploy, and operate cloud infrastructure on a self-service basis. This includes cloud infrastructure, container orchestration platforms, databases, networking, monitoring, code repositories, and deployment pipelines.
 
 Platform teams use a customer-driven mindset where they treat the application developers that they serve as customers that must be understood and won over through products that solve their problems. The products these teams offer are infrastructure tools and building blocks that development teams use to provision and manage standardized infrastructure for their applications and services. Typically, these tools have built-in guardrails that enforce best practices and security standards without impeding developers' agility and workflow. This is all done in service of increasing the speed of delivery for the company's products.
 
@@ -26,7 +26,7 @@ Two ideas anchor most platform engineering practice: the *internal developer pla
 
 An **internal developer platform (IDP)** is the product that a platform team ships to its developers. It is the unified surface through which developers self-serve everything they need to build, run, and operate their services. An IDP typically combines a developer portal, [infrastructure as code](/what-is/what-is-infrastructure-as-code/) templates, [CI/CD](/what-is/what-is-ci-cd/) pipelines, secrets and policy management, and observability tooling. An IDP is not a single product you buy; it is a curated composition of tools and shared services that reflects your organization's stack, security model, and developer workflows.
 
-A **golden path** (sometimes called a *paved road*) is an opinionated, well-supported route through the platform for a common task — for example, "deploy a stateless TypeScript service to production." Golden paths are designed to be the fastest, lowest-friction, and most secure option for the most common case. Developers can still go off-road for unusual needs, but the platform team commits to maintaining, supporting, and improving the golden paths as a product. The combination of an IDP and well-defined golden paths is what makes self-service possible without sacrificing security, compliance, or operational consistency.
+A **golden path** (sometimes called a *paved road*) is an opinionated, well-supported route through the platform for a common task, for example, "deploy a stateless TypeScript service to production." Golden paths are designed to be the fastest, lowest-friction, and most secure option for the most common case. Developers can still go off-road for unusual needs, but the platform team commits to maintaining, supporting, and improving the golden paths as a product. The combination of an IDP and well-defined golden paths is what makes self-service possible without sacrificing security, compliance, or operational consistency.
 
 ## What are some of the requirements for platform engineering?
 
@@ -46,7 +46,7 @@ Platform engineers typically take on a mix of responsibilities that span product
 
 * **Discovering developer needs**: Running interviews and surveys with internal customers, tracking feedback, and prioritizing the platform roadmap like a product manager would.
 * **Building shared infrastructure components**: Authoring reusable infrastructure as code modules, secure-by-default templates, and service blueprints that developers can compose.
-* **Operating the platform itself**: Treating the IDP as production software — running it on SLOs, owning its on-call rotation, and managing its own CI/CD.
+* **Operating the platform itself**: Treating the IDP as production software: running it on SLOs, owning its on-call rotation, and managing its own CI/CD.
 * **Embedding guardrails**: Codifying security, compliance, and cost policies so they are enforced automatically rather than reviewed manually.
 * **Enabling adoption**: Producing documentation, examples, office hours, and migration tooling so development teams can self-serve onto the platform.
 
@@ -79,7 +79,7 @@ Platform teams solve these challenges:
 
 Platform engineering can increase development velocity, improve security, increase infrastructure's adherence to best practices, and reduce operational costs through automation. It helps organizations increase the ROI on cloud investments and improves the software delivery lifecycle so that developers can ship new features faster.
 
-Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of large software engineering organizations would establish platform teams as internal providers of reusable services, components, and tools for application delivery (up from 45% in 2022) — a shift that is now well underway across the industry, from financial services to consumer retail (see the [case studies](#case-studies)).
+Many companies have already created dedicated teams for platform engineering. In its 2022 Hype Cycle for Software Engineering, Gartner predicted that by 2026, 80% of large software engineering organizations would establish platform teams as internal providers of reusable services, components, and tools for application delivery (up from 45% in 2022), a shift that is now well underway across the industry, from financial services to consumer retail (see the [case studies](#case-studies)).
 
 ## How is AI changing platform engineering?
 
@@ -134,7 +134,7 @@ There is no universal answer, but platform teams often start small (a handful of
 
 ### Does platform engineering replace SRE?
 
-No — the two are complementary. SRE focuses on the reliability of production services through SLOs, error budgets, and incident response. Platform engineering focuses on developer experience and self-service infrastructure. Most companies that adopt platform engineering keep SRE in place; the platform team often surfaces SRE-defined guardrails through the internal platform itself.
+No. The two are complementary. SRE focuses on the reliability of production services through SLOs, error budgets, and incident response. Platform engineering focuses on developer experience and self-service infrastructure. Most companies that adopt platform engineering keep SRE in place; the platform team often surfaces SRE-defined guardrails through the internal platform itself.
 
 ### What tools do platform engineering teams use?
 
@@ -165,7 +165,7 @@ Pulumi's solution for platform teams encompasses all of the key requirements des
 1. The _developer control plane_ enables the simple and powerful user experience, allowing platform teams to meet the varying needs of different developers and development teams. The core infrastructure as code tool supports the languages that teams are already familiar with (including TypeScript, Python, Go, C#, Java, and YAML), and leverages the powerful ecosystems surrounding these languages (IDE support, linters, and test frameworks, for example). There's also support for internal developer portals like [AWS Proton](https://aws.amazon.com/proton/) and [Backstage](https://backstage.io).
 2. _Integration and delivery_ is key to supporting automation as the default. This includes extensive integration with numerous CI/CD systems as well as Pulumi's own CI/CD offering, called [Pulumi Deployments](/product/pulumi-deployments/). The [Automation API](/automation/) makes it possible to embed IaC into application software, empowering teams to create reusable infrastructure workflows.
 3. _Monitoring and logging_ provides the "full visibility on everything" that is a requirement for platform engineering, through support for and integration with leading monitoring, logging, and metric solutions. [Pulumi Insights](/product/pulumi-insights/) provides advanced search (including natural language search), analytics, and artificial intelligence (AI) into [Pulumi](/product/) to provide actionable knowledge on cloud usage and cost optimizations.
-4. _Security and identity_ ensure security is a foundational element. [Pulumi Policies](/docs/insights/policy/) provides policy-based controls---including remediation of policy violations---using the same general purpose programming languages that our core IaC offering supports. [Pulumi ESC](/product/esc) enables centralized access to secrets and configuration information.
+4. _Security and identity_ ensure security is a foundational element. [Pulumi Policies](/docs/insights/policy/) provides policy-based controls (including remediation of policy violations) using the same general purpose programming languages that our core IaC offering supports. [Pulumi ESC](/product/esc) enables centralized access to secrets and configuration information.
 5. Pulumi's robust provider ecosystem opens up access to a wide plethora of _resources_ to help ensure that all the necessary services, platforms, and offerings needed to build a well-architected design are available.
 
 Pulumi offers a modern and flexible approach to solving the needs of platform engineering teams. [Request a demo](/request-a-demo) of Pulumi, or [get started using Pulumi's tools](/docs/get-started) today.

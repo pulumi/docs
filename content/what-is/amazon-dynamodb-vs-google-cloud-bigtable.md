@@ -71,7 +71,7 @@ If you have truly large amounts of data that you will require very fast access t
 
 Bigtable is one of several alternatives to DynamoDB. If you're evaluating options beyond AWS, the main NoSQL databases worth considering are:
 
-- **Google Cloud Bigtable**: the wide-column store on Google Cloud covered in detail above — the closest GCP equivalent to DynamoDB for large-scale, low-latency workloads.
+- **Google Cloud Bigtable**: the wide-column store on Google Cloud covered in detail above, the closest GCP equivalent to DynamoDB for large-scale, low-latency workloads.
 - **Apache Cassandra and ScyllaDB**: open-source wide-column databases you can self-host or run as a managed service (DataStax Astra, ScyllaDB Cloud). A good fit when you want to avoid cloud lock-in.
 - **MongoDB and Amazon DocumentDB**: document databases for flexible, JSON-like data models. MongoDB Atlas runs on any cloud; DocumentDB is AWS's MongoDB-compatible managed option.
 - **Azure Cosmos DB**: a multi-model, globally distributed managed database, and the natural choice on Microsoft Azure.

@@ -99,7 +99,7 @@ new aws.s3.BucketVersioningV2("app-assets-versioning", {
 export const bucketName = assets.bucket;
 ```
 
-Every property is typed. Misspell `versioningConfiguration`, pass a number where a string belongs, or omit a required field, and the program fails at compile time with a precise error — not halfway through a deploy. The same compiler that protects the application protects the infrastructure.
+Every property is typed. Misspell `versioningConfiguration`, pass a number where a string belongs, or omit a required field, and the program fails at compile time with a precise error, not halfway through a deploy. The same compiler that protects the application protects the infrastructure.
 
 Because it's ordinary TypeScript, it's testable with the Jest setup the app already uses. Pulumi's mocks replace cloud calls so the test runs entirely in memory:
 
@@ -230,7 +230,7 @@ Yes. Pulumi can import existing cloud resources with `pulumi import` and can int
 
 ### Does Pulumi's TypeScript SDK update when the cloud provider's API changes?
 
-Yes. Pulumi regenerates the provider SDKs from each provider's source schema — either the upstream cloud API for native providers, or the Terraform provider schema for bridged providers — so new resource types and properties appear in the npm packages shortly after the provider ships them. Provider versions are pinned in `package.json` so you control when to adopt new releases.
+Yes. Pulumi regenerates the provider SDKs from each provider's source schema (either the upstream cloud API for native providers, or the Terraform provider schema for bridged providers) so new resource types and properties appear in the npm packages shortly after the provider ships them. Provider versions are pinned in `package.json` so you control when to adopt new releases.
 
 ## Learn more
 

@@ -84,7 +84,7 @@ Pulumi's Kubernetes provider supports every resource type Kubernetes itself supp
 
 ## How does IaC relate to containers and container orchestration?
 
-Containers and IaC split the work at the image boundary. The container image carries the application and its runtime dependencies; everything about *running* that image — which orchestrator, how many replicas, what network and storage it gets, what secrets it can read — is infrastructure, and that's the part IaC describes. For a containerized stack, the pieces line up like this:
+Containers and IaC split the work at the image boundary. The container image carries the application and its runtime dependencies; everything about *running* that image (which orchestrator, how many replicas, what network and storage it gets, what secrets it can read) is infrastructure, and that's the part IaC describes. For a containerized stack, the pieces line up like this:
 
 1. **The image build.** CI builds the container image and pushes it to a registry (ECR, GCR, ACR, Docker Hub). The registry itself, its access policies, and its lifecycle rules are cloud resources provisioned by IaC.
 1. **The orchestrator.** Kubernetes is the dominant container orchestration layer, and the cluster's whole lifecycle (control plane, node groups, networking, addons) lives in IaC.
@@ -141,7 +141,7 @@ export const kubeconfig = cluster.kubeconfig;
 Every field in that program is typed: misspell `replicas` or pass a string where a number belongs and the program fails at compile time, not at `kubectl apply` time. Getting from zero to a running cluster is three commands:
 
 1. **Create a project.** `pulumi new aws-typescript` scaffolds the program, then `npm install @pulumi/eks @pulumi/kubernetes` adds the cluster and Kubernetes SDKs.
-1. **Preview the change.** `pulumi preview` shows the full plan — cluster, node group, IAM, Deployment — before anything is created.
+1. **Preview the change.** `pulumi preview` shows the full plan (cluster, node group, IAM, Deployment) before anything is created.
 1. **Deploy.** `pulumi up` provisions the cluster, waits for it to become ready, and applies the workload in dependency order.
 
 The same program shape works for GKE and AKS; see [Get started with Pulumi Kubernetes](/docs/iac/get-started/kubernetes/) for each provider's flow.
@@ -165,7 +165,7 @@ Most teams use a combination: a general IaC tool for the cloud-and-cluster layer
 
 ## How do you secure Kubernetes infrastructure as code?
 
-Misconfiguration, not exotic exploits, drives most Kubernetes security incidents — and misconfiguration is exactly what IaC makes checkable before it reaches a cluster. The controls stack up in layers:
+Misconfiguration, not exotic exploits, drives most Kubernetes security incidents, and misconfiguration is exactly what IaC makes checkable before it reaches a cluster. The controls stack up in layers:
 
 * **Scan before merge.** Static scanners (Trivy, Checkov) run against rendered manifests on every commit and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
 * **Enforce policy in two places.** In CI, [policy as code](/docs/insights/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
@@ -184,7 +184,7 @@ A few patterns that hold up across providers and team sizes:
 * **Avoid naked pods.** A bare `Pod` isn't rescheduled when the node fails. Use Deployments, StatefulSets, or DaemonSets so the workload survives. Enforce this with a policy in CI.
 * **Use IRSA / Workload Identity / Entra Workload ID.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
-* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time — either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
+* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time, either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
 * **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
 * **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
 * **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
@@ -194,7 +194,7 @@ A few patterns that hold up across providers and team sizes:
 Pulumi treats Kubernetes the same way it treats every other cloud target: as resources in a real programming language, with dependencies, types, and tests. Common patterns:
 
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
-* **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format — `ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles — so adoption can be incremental without re-authoring the source artifacts.
+* **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format (`ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles) so adoption can be incremental without re-authoring the source artifacts.
 * **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
 * **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
 * **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
