@@ -97,6 +97,20 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## Dark mode (/docs)
+
+The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.
+
+**You must test both modes whenever you add or restyle a visible element on a docs page** — new partials, shortcodes, cards, callouts, buttons, icons, or any markup that introduces its own colors, backgrounds, borders, or images. Toggle dark mode (theme switcher at the bottom of the docs sidebar) and confirm the element is legible and on-brand in both. Pure content changes (prose, code samples, frontmatter, links) are safe and don't need a dark-mode pass.
+
+When something needs dark-mode work, prefer the existing levers over hand-written one-off colors:
+
+- **Use the semantic tokens.** Paint with `var(--docs-fg)`, `--docs-fg-muted`, `--docs-bg`, `--docs-bg-alt`, `--docs-surface`, `--docs-border`, `--docs-card`, `--docs-link`, `--docs-ring` rather than raw `--color-*` scales — they flip automatically. For selectors shared with non-docs pages, use the `var(--docs-TOKEN, ORIGINAL)` fallback form so light source files stay untouched.
+- **Lean on the automatic flips.** Brand violet (`--color-violet-primary` / `text-violet-primary`) and the literal Tailwind gray/white/violet utility classes (`text-gray-950`, `bg-white`, `border-gray-200`, `bg-gray-50`, etc.) are already remapped in the dark block, so markup authored with those gets dark mode for free. Surfaces styled via Tailwind `@apply` (e.g. content `.btn-*` variants) don't inherit a literal class and need their own dark override in `_docs-theme.scss`.
+- **Theme-aware images:** use the `layouts/partials/docs-logo.html` partial (light asset + optional `-on-dark.svg`), not a bare `<img>`, for any logo/mark whose colors don't read on a dark background. Masked icons in `_icons.scss` tint automatically; `background:url()` colored marks do not.
+
+---
+
 ## Workflow Skills
 
 Before starting any documentation task, check `.claude/commands/` for a relevant skill — there are well-structured skills covering common tasks like creating docs, reviewing PRs (see `.claude/commands/docs-review/SKILL.md`), moving files, and more. To see a full inventory, run `.claude/commands/docs-tools/scripts/scrape-metadata.py`.
