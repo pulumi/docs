@@ -820,18 +820,10 @@ jobs:
           # own access checks, so opening this door doesn't widen the
           # trust surface.
           allowed_bots: 'github-actions[bot]'
-          # Public Pulumi brand MCP server — source of truth for voice and
-          # writing-style guidance. The docs-review skills consult it instead
-          # of carrying their own copies of those rules. No auth: public.
-          mcp_config: |
-            {
-              "mcpServers": {
-                "pulumi-brand": {
-                  "type": "http",
-                  "url": "https://brand.pulumi.com/mcp"
-                }
-              }
-            }
+          # The public Pulumi brand MCP server (voice/writing-style source of
+          # truth) is wired below via `claude_args --mcp-config` — v1 has no
+          # `mcp_config` input. Its tools are added to --allowed-tools. The
+          # config merges with the action's built-in GitHub MCP server. No auth.
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
@@ -892,7 +884,10 @@ jobs:
             When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
 
             Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
+          claude_args: |
+            --model claude-opus-4-8
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
       # The editorial pass step (above) exits after editing .review-draft.md.
