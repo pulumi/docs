@@ -1,114 +1,88 @@
 # Pulumi Documentation Style Guide
 
-This guide defines Pulumi-specific style rules for our documentation.  
-It's the repo-specific layer. For brand-level conventions, defer to the [Pulumi brand guidelines](https://brand.pulumi.com/) (see [Brand guidelines](#brand-guidelines) below); for anything neither covers, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+Pulumi's **voice, tone, prose, product naming, grammar, and punctuation** guidance lives in the **Pulumi brand guide** at [brand.pulumi.com](https://brand.pulumi.com/), and is consumable programmatically through the **brand MCP server**. That guide is the single source of truth for how Pulumi content reads. Do not restate or fork those rules here.
+
+**Precedence:** wherever the brand guide overlaps with anything in this repo — these mechanics, the skills under `.claude/commands/`, or any social, SEO, or AEO guidance that still lives here — **the brand guide wins.** Some specialized guidance (e.g. social copy, SEO/AEO) currently lives only in this repo's skills; if and when the brand guide grows its own version, the brand guide's version takes priority.
+
+This file covers only the **Hugo- and repo-specific mechanics** that the brand guide doesn't — how content is structured, linked, and rendered in *this* site.
+
+For anything not covered in either place, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+
+---
+
+## Where the style rules live
+
+Pulumi's voice and writing rules live in the brand guide, published at [brand.pulumi.com](https://brand.pulumi.com/) and exposed to agents through the public **brand MCP server** (see [brand.pulumi.com/mcp-server](https://brand.pulumi.com/mcp-server/)). Consult the relevant section before writing or reviewing:
+
+| For… | See |
+| ---- | --- |
+| Voice and tone | [Voice & tone](https://brand.pulumi.com/voice/voice-and-tone/) |
+| Grammar, punctuation, product names, headings, links, lists, code-sample style | [Writing style](https://brand.pulumi.com/voice/writing-style/) |
+
+An agent with the brand MCP server configured can pull any of these on its own — the server's instructions route it to the right section.
+
+Key rules the brand guide owns (so you know what *not* to look for here): inclusive language; the Oxford comma; sentence case for headings; Pulumi product-name capitalization; "public preview" over "public beta"; punctuation outside quotation marks; descriptive link text and alt text; and the prose patterns to avoid. The offline [Vale](https://vale.sh) rules in `styles/Pulumi/` mirror the mechanically enforceable subset of these (see [Automated checks](#automated-checks)).
 
 ---
 
 ## Scope
 
-This style guide applies to all Hugo content files in this repository.
+These mechanics apply to all Hugo content files in this repository.
 
-The following exceptions are specifically excluded from this style guide:
-
-- Non-content files (scripts, configuration, etc.) should follow general best practices for that file type.
-- Meta Markdown files (e.g., `README.md`, `AGENTS.md`) may use different conventions as appropriate.
-
----
-
-## Brand guidelines
-
-Brand-level conventions — voice and tone, writing style, typography, logo and visual usage, and color — live in the [Pulumi brand guidelines](https://brand.pulumi.com/). Precedence, highest first:
-
-1. **This style guide** — repo-specific conventions for this repository's Hugo content.
-1. **Pulumi brand guidelines** — brand-wide voice, writing style, and visual rules.
-1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither covers.
-
-When this guide and the brand guidelines diverge, this guide wins here — but flag the divergence rather than inventing a third convention.
-
-Approved logos and other brand assets come from the self-describing brand asset API (`https://brand.pulumi.com/api`) — no setup, just fetch the URL. Working in an interactive agent or editor? Installing the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) puts the full guidelines, logos, palette, and a contrast checker inline.
-
----
-
-## Inclusive Language
-
-Pulumi strives to use language that is clear, inclusive, and respectful.  
-
-- Avoid ableist terms.  
-  - Instead of _crazy_, use _wild_.  
-  - Instead of _dummy_, use _placeholder_.  
-- Avoid unnecessarily gendered language (e.g., use _folks_, _everyone_).  
-- Avoid violent or aggressive terms (e.g., avoid _kill_).  
-- Avoid pop-culture references that may not be globally understood.  
-- Instead of "click," use "select" (or "choose").  
-- Instead of "go to," use "navigate."  
-- Avoid directional terms (e.g., "see above"); link directly.  
-- Avoid words like "easy" or "simple." These judge difficulty and may alienate readers.
+- Non-content files (scripts, configuration, etc.) follow general best practices for their type.
+- Meta Markdown files (`README.md`, `AGENTS.md`, `BUILD-AND-DEPLOY.md`, skill files) are exempt from these formatting rules.
 
 ---
 
 ## Headings
 
+Heading **case is sentence case** for all levels — see the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/). The rest is Hugo mechanics:
+
 - Exactly one H1 (`#`) per page, set in front matter `title`.
-- H1: **Title Case**.
-- H2 and deeper: **Sentence case**.
 - Only increment one heading level at a time (no skipping levels).
-- Use capitalization only for proper nouns. For example, use "stack" not "Stack."
 - Do not end headings with punctuation, with one exception: headings in a "Frequently asked questions" section may end with `?` so the site's FAQPage JSON-LD auto-collector (`layouts/partials/schema/collectors/faq-entity.html`) detects them as questions.
-- Headings should be surrounded by blank lines.
+- Surround headings with blank lines.
 
-> **Title vs. headings.** The brand guide's sentence-case rule governs *headings*, and it treats the H1 as the page **title**, not a heading. Title Case for the H1 — rendered from front-matter `title`, consistent with the Title Case used for navigation menu items — is therefore in keeping with the [Pulumi brand writing-style guidelines](https://brand.pulumi.com/), not an exception to them. Sentence case applies to H2 and deeper. Don't "fix" existing H1s to sentence case.
-
-**Navigation menu items**: Use **Title Case** for frontmatter menu fields (`menu.name`, `menu.title`). Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
+**Navigation menu items** (`menu.name`, `menu.title`): sentence case, consistent with headings.
 
 ---
 
 ## Links
 
-- **Internal and external links**: use normal Markdown syntax.
-  - `[Link text](/path/to/file)`
-  - `[Link text](https://example.com)`
-- Link text must be descriptive. Avoid vague text like _here_ or _click here_.
-- When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
-- **Always use root-relative paths** (beginning with `/`) for all internal links and image references — never page-relative paths like `./image.png`, `../other-page`, or bare relative paths like `some-page`. Page-relative paths are ambiguous because Hugo content files are sometimes named `.md` files rather than `_index.md` files in a folder, making the meaning of `./` differ between the file's location on disk and the URL the page is served from. Root-relative paths are unambiguous, portable, and don't silently break when files move.
+The brand guide owns link *text* (descriptive, no "here"/"click here"). This site adds path mechanics:
+
+- **Always use root-relative paths** (beginning with `/`) for internal links and image references — never page-relative paths like `./image.png`, `../other-page`, or bare `some-page`. Hugo content is sometimes a `.md` file and sometimes an `_index.md` in a folder, so `./` is ambiguous; root-relative paths are unambiguous and don't break when files move.
   - Correct: `[stacks](/docs/iac/concepts/stacks/)`, `![diagram](/blog/my-post/diagram.png)`
   - Incorrect: `[stacks](./stacks/)`, `![diagram](./diagram.png)`, `[stacks](../stacks/)`
+- When changing the URL of an existing page, add a redirect with a [Hugo alias](https://gohugo.io/content-management/urls/#yaml-front-matter).
 
-### External Link Indicator
+### External link indicator
 
-Links that navigate users to a different UI/experience (different from the main docs site) should include the ↗ (U+2197 North East Arrow) symbol to indicate this transition when linking from navigation menus or landing page cards.
+Links that take users to a different UI/experience should include the ↗ (U+2197 North East Arrow) symbol when they appear in navigation menus or landing-page cards.
 
-**When to use ↗:**
-- Links to generated API documentation (`/docs/reference/pkg/*`)
-- Links to external sites (e.g., pkg.go.dev)
-- Links to Tutorials (different UI)
-- Any link that takes users away from the main docs experience
+**When to use ↗:** links to generated API docs (`/docs/reference/pkg/*`), external sites (e.g. pkg.go.dev), Tutorials (different UI), or anything that leaves the main docs experience.
 
 **Placement:**
-- In menu configurations (`config/_default/menus.yml`): append to the `name` field with a space
-  - Example: `name: SDK docs ↗`
-- In landing page cards: append to the `heading` field with a space
-  - Example: `heading: Python ↗`
+- In menu configs (`config/_default/menus.yml`): append to the `name` field with a space — `name: SDK docs ↗`
+- In landing-page cards: append to the `heading` field with a space — `heading: Python ↗`
 
-The symbol is not needed in regular in-text links within documentation pages.
-
-**Rationale:** The ↗ symbol is the web-standard indicator for external links and helps users understand they're navigating to a different UI, preventing surprise when the page appearance changes.
+Not needed for regular in-text links within documentation pages.
 
 ---
 
 ## Navigation patterns
 
-Every section has an `_index.md` that the sidebar automatically injects as the first item of the section's submenu. The label it receives — **"Overview"** or **"Introduction"** — depends on the page's role.
+Every section has an `_index.md` that the sidebar injects as the first item of the section's submenu. The label it receives — **"Overview"** or **"Introduction"** — depends on the page's role.
 
 ### Overview pages
 
-Use **"Overview"** for section indexes whose primary purpose is routing readers to child pages, with little or no prose of their own. Add `docs_home: true` to the frontmatter to mark the page as an overview and enable the section home template.
+Use **"Overview"** for section indexes whose primary purpose is routing readers to child pages, with little or no prose of their own. Add `docs_home: true` to enable the section home template.
 
 Required frontmatter:
 
 - `docs_home: true`
 - `notitle: true` — suppresses the duplicate H1 (the template renders it from `h1:`)
-- `norightnav: true` — hides the right-hand table of contents (unused on overview pages)
+- `norightnav: true` — hides the right-hand table of contents
 - `h1:` — displayed in the page banner
 - `description:` — short paragraph rendered in the banner (HTML string)
 - `sections:` — list of section blocks using `type: cards-logo-label-link`, `type: button-cards`, or `type: flat`
@@ -123,26 +97,26 @@ If the page also links to related child pages, use standard markdown (lists, tab
 
 ---
 
-## Images and Media
+## Images and media
 
-- Use root-relative paths for all image references (see [Links](#links) above).
-- Provide descriptive alt text for all images. Describe the image's content or function in a few words, and omit lead-ins like "image of" or "screenshot of" — screen readers already announce those.
+The brand guide owns **alt text** (its [writing style](https://brand.pulumi.com/voice/writing-style/) section). This site adds:
+
+- Use root-relative paths for all image references (see [Links](#links)).
 - Name image files descriptively (helps accessibility and SEO); avoid generic names like `screenshot-1.png`.
-- For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
+- For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border (the `/add-borders` skill does this).
+- Images on template-driven pages go under `assets/fingerprinted/` (see `AGENTS.md`).
 
 **Brand assets.** Use approved logos from the brand asset API (`https://brand.pulumi.com/api`); don't recolor, distort, or otherwise alter the logo, and never AI-generate Pulumi brand imagery or the Pulumipus mascot.
 
 ---
 
-## Notes / Callouts
+## Notes / callouts
 
 Use the `{{ notes }}` shortcode sparingly. Supported levels:
 
-- `info` — general information  
-- `tip` — helpful hints  
-- `warning` — important cautions  
-
-**Example:**
+- `info` — general information
+- `tip` — helpful hints
+- `warning` — important cautions
 
 ```go
 {{% notes type="tip" %}}
@@ -156,67 +130,26 @@ This is a useful suggestion.
 
 Hugo supports two shortcode notations:
 
-- **`{{% shortcode %}}`** (percent signs) - Use for shortcodes that process Markdown content. Hugo processes these before Markdown rendering
-  - Examples: `notes`, `choosable`, `details`
+- **`{{% shortcode %}}`** (percent signs) — for shortcodes that process Markdown content. Hugo processes these *before* Markdown rendering. Examples: `notes`, `choosable`, `details`.
+- **`{{< shortcode >}}`** (angle brackets) — for shortcodes that output pre-formatted content. Hugo processes these *after* Markdown rendering. Examples: `cleanup`, `example`.
 
-- **`{{< shortcode >}}`** (angle brackets) - Use for shortcodes that output pre-formatted content. Hugo processes these after Markdown rendering
-  - Examples: `cleanup`, `example`
-
-**Rule of thumb:** If the shortcode uses `markdownify` internally (check `layouts/shortcodes/`), use percent signs. Otherwise, use angle brackets.
-
-Both syntaxes work for plain text content, but use percent signs for shortcodes with nested Markdown like lists or headings.
+**Rule of thumb:** if the shortcode uses `markdownify` internally (check `layouts/shortcodes/`), use percent signs. Otherwise, use angle brackets. Use percent signs for shortcodes with nested Markdown like lists or headings.
 
 ---
 
-## Paragraphs and Line Breaks
+## Code blocks and console output
 
-- Separate paragraphs with a blank line.  
-- Do not use line breaks within paragraphs. Let text wrap naturally.  
-- Keep paragraphs short (ideally ≤3 sentences).
+The brand guide owns **code-sample style** — indentation, quoting, comments, line-splitting (its [writing style](https://brand.pulumi.com/voice/writing-style/) "Code samples" section). This site adds the Hugo rendering mechanics:
 
----
-
-## Grammar and punctuation
-
-- Use the Oxford (serial) comma: "build, deploy, and manage," not "build, deploy and manage."
-- Use present tense for how the product behaves: "Neo pauses when the limit is reached," not "Neo will pause." Reserve the future tense for events that genuinely happen later.
-- Contractions are fine — preferred, even — in docs. They read more naturally.
-- Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
-- Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
-
-For dates, times, numbers, and anything else this guide doesn't specify, defer to the brand [writing-style guide](https://brand.pulumi.com/voice/writing-style/). On **point of view** — the most-missed rule — it uses the second person (*you*), not the first-person plural (*we*): in docs, "we aren't doing anything — the reader is." Reserve *we* for blog and community content.
-
----
-
-## Lists
-
-- Use ordered lists for steps.
-- All items should begin with `1.` (Markdown will auto-number).
-
-Example:
-
-```markdown
-1. First step
-1. Second step
-1. Third step
-```
-
----
-
-## Code Blocks and Console Output
-
-### Code Fences
+### Code fences
 
 Use fenced code blocks (triple backticks) for all code and console output.
 
-**Supported languages for syntax highlighting:**
-- Language-specific: `typescript`, `python`, `go`, `java`, `csharp`, `yaml`, etc.
-- Shell commands: `bash`, `sh`
-- Console output: `output`
+**Supported languages for syntax highlighting:** language-specific (`typescript`, `python`, `go`, `java`, `csharp`, `yaml`, etc.), shell commands (`bash`, `sh`), and console output (`output`).
 
-### Console Output
+### Console output
 
-**Do not use indentation** (4 spaces) to denote console output. While technically valid Markdown, indented blocks are difficult for both humans and AI assistants to parse and maintain.
+**Do not use indentation** (4 spaces) to denote console output. While valid Markdown, indented blocks are hard for humans and AI assistants to parse and maintain.
 
 **Wrong:**
 
@@ -234,12 +167,10 @@ output line 2
 ```
 ````
 
-### Shell Commands vs Output
+### Shell commands vs. output
 
-- Use `bash` or `sh` for commands the user should type
-- Use `output` for the resulting console output
-
-**Example:**
+- Use `bash` or `sh` for commands the user should type.
+- Use `output` for the resulting console output.
 
 ```bash
 pulumi up
@@ -250,13 +181,9 @@ Updating (dev)
 ...
 ```
 
-**Rationale:** Fenced code blocks are explicit, easy to identify, and support syntax highlighting. Indented blocks can be confused with nested lists or quotes, especially when editing.
-
 ### Line highlighting
 
-Use the `hl_lines` parameter on fenced code blocks to highlight specific lines with a purple background. This draws attention to the most important lines in a code sample, such as newly added or changed lines.
-
-**Single lines and ranges:**
+Use the `hl_lines` parameter on fenced code blocks to highlight specific lines with a purple background — useful for newly added or changed lines.
 
 ````markdown
 ```typescript {hl_lines=[3]}
@@ -276,7 +203,7 @@ import pulumi_aws as aws
 ```
 ````
 
-**Combined with line numbers:**
+Combined with line numbers:
 
 ````markdown
 ```typescript {.line-numbers hl_lines=[5,"14-19"]}
@@ -284,81 +211,54 @@ import pulumi_aws as aws
 ```
 ````
 
-Use line highlighting when a code block is long but only a few lines are new or noteworthy. Do not highlight every line — if the entire block matters equally, no highlighting is needed.
-
----
-
-## Blockquotes
-
-- Use blockquotes only for direct quotations.
-
-Example:
-
-> This is something a person said.
+Highlight only the few lines that are new or noteworthy. If the entire block matters equally, no highlighting is needed.
 
 ---
 
 ## Diagrams
 
-We support two formats:
+Two formats are supported:
 
-- **GoAT (ASCII diagrams)** — good for simple flows.  
-- **Mermaid** — supports flowcharts, sequence diagrams, class diagrams, etc.  
+- **Mermaid** — flowcharts, sequence diagrams, class diagrams, etc. Rendered natively via the Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced blocks. Preferred.
+- **GoAT (ASCII diagrams)** — good for simple flows.
 
 See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Mermaid docs](https://mermaid.js.org/).
 
 ---
 
-## Product Names and Acronyms
+## Ordered lists
 
-- Always capitalize Pulumi product names correctly.  
-  - Pulumi IaC (Infrastructure as Code)  
-  - Pulumi ESC (Environments, Secrets, and Configuration)  
-  - Pulumi IDP (Internal Developer Platform)  
-  - Pulumi Insights  
-  - Pulumi Cloud (also Pulumi console / Pulumi Cloud console — but not "Pulumi UI")
-  - Pulumi Deployments
-  - Pulumi Neo
-  - Pulumi Policies  
-- Expand product acronyms at first mention. Use just the product name after.  
-- For non-Pulumi acronyms: spell out on first use, then use the acronym.  
-  - Example: Virtual Private Cloud (VPC), then VPC.  
-- Widely known acronyms (API, HTTP, REST) don’t need expansion.
-- *Pulumi Policies* is the product name, so it's a singular proper noun (like "United States" or "Brooks Brothers").
-  - Always refer to it in the singular form (e.g., "Pulumi Policies enforces compliance").
-  - Never refer to it in the plural (e.g., avoid "Pulumi Policies enforce compliance").
-- Use **"public preview"** for pre-GA features, not "public beta." This aligns with Pulumi's release terminology.
-- Don't overcapitalize generic concepts, even Pulumi-specific ones. Only proper nouns are capitalized: "stack" (not "Stack"), "environment" (not "Environment"), "token" (not "Token"), "infrastructure as code" (not "Infrastructure as Code") when used as a common noun mid-sentence. This mirrors the Headings rule above and applies to body prose too. It doesn't apply where the capitalized word is itself a proper noun in context — for example, the Pulumi Kubernetes Operator's `Stack` custom resource (a Kubernetes CRD Kind) or a `pulumicdk.Stack` class identifier.
+To minimize diff noise, every item in an ordered list begins with `1.` (Markdown auto-numbers):
+
+```markdown
+1. First step
+1. Second step
+1. Third step
+```
+
+(For list *grammar* — parallelism, when to use a list at all — see the brand guide.)
 
 ---
 
 ## Glossary
 
-The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms and concepts used throughout the documentation.
+The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms used throughout the documentation.
 
-- When introducing a new concept or Pulumi-specific term in documentation, consider adding it to the glossary.
-- The glossary helps users (both human and AI agents) quickly understand Pulumi terminology.
-- To add or update glossary terms, edit `data/glossary.toml`.
-- Link to specific glossary terms using anchor links: `/docs/iac/concepts/glossary/#term-name`
+- When introducing a new concept or Pulumi-specific term, consider adding it to the glossary.
+- The glossary helps both human and AI readers understand Pulumi terminology.
+- To add or update terms, edit `data/glossary.toml`.
+- Link to specific terms using anchor links: `/docs/iac/concepts/glossary/#term-name`.
 
 ### Preferred terminology
 
-The following terms have precise meanings in Pulumi documentation. Use them consistently and prefer them over informal or ambiguous alternatives:
+These terms have precise meanings in Pulumi documentation. Use them consistently:
 
 | Term | Definition |
 | ---- | ---------- |
 | **Native language package** | A component published to a language-specific registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. Consumable only in the language in which it was authored. |
 | **Pulumi package** | A component or provider packaged with a Pulumi plugin so Pulumi can generate SDKs for any supported language. Consumable in all Pulumi languages. |
 
-Use **"Pulumi package"** (not "cross-language package") when referring to components or providers distributed with a Pulumi plugin. Use **"native language package"** (not "single-language package" or "language-native package") when referring to components distributed as standard language packages without a Pulumi plugin.
-
----
-
-## References to Commands or UI
-
-- CLI commands: wrap in backticks (e.g., `pulumi up`).  
-- UI elements: use **bold** (e.g., “Go to the **Account** page”).  
-- Navigation: use arrows (e.g., **Settings** → **API Keys**).
+Use **"Pulumi package"** (not "cross-language package") for components or providers distributed with a Pulumi plugin. Use **"native language package"** (not "single-language package" or "language-native package") for components distributed as standard language packages without a Pulumi plugin.
 
 ---
 
@@ -400,12 +300,12 @@ Rules:
 
 ---
 
-## Blog Posts
+## Blog posts
 
-See [BLOGGING.md](BLOGGING.md) for guidance on writing Pulumi blog posts.
+See [BLOGGING.md](BLOGGING.md) for the repo mechanics of writing Pulumi blog posts. For blog voice, see the brand guide's voice and writing-style sections via the MCP server.
 
 ---
 
 ## Automated checks
 
-The rules in this guide are enforced — where mechanically possible — by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` and layer on top of the Google Developer Style Guide and write-good packages. Run locally with `make lint-prose`. Vale findings also surface in the pinned PR review in two tiers: a small set of near-zero-false-positive correctness rules (wrong or deprecated product names, banned terms, misspellings, grammatical agreement — the `blocker:` list in `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml`) renders under 🚨 Outstanding and must be resolved or refuted before merging; everything else renders under ⚠️ Low-confidence as advisory nags that never block.
+The rules in this guide — and the mechanically enforceable subset of the brand guide's — are enforced by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` (product-name casing, deprecated terms, inclusive language, substitutions, AI-drafting tells) and layer on top of the Google Developer Style Guide and write-good packages. **Vale runs offline in CI and can't call the MCP, so these rules are a local mirror of the brand guidance — keep them in sync with it, treating the brand guide as the source of truth.** Run locally with `make lint-prose`. Vale findings surface in the pinned PR review in two tiers: a small set of near-zero-false-positive correctness rules (wrong or deprecated product names, banned terms, misspellings, grammatical agreement — the `blocker:` list in `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml`) renders under 🚨 Outstanding and must be resolved or refuted before merging; everything else renders under ⚠️ Low-confidence as advisory nags that never block.

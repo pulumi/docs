@@ -504,6 +504,18 @@ jobs:
           # default. Same allowance claude-code-review.yml makes for its
           # bot-dispatched #new-review path.
           allowed_bots: 'github-actions[bot]'
+          # Public Pulumi brand MCP — source of truth for voice and
+          # writing-style. The review skills consult it instead of carrying
+          # their own copies. No auth: the server is public.
+          mcp_config: |
+            {
+              "mcpServers": {
+                "pulumi-brand": {
+                  "type": "http",
+                  "url": "https://brand.pulumi.com/mcp"
+                }
+              }
+            }
           prompt: |
             The existing-content review selected one article in
             `.content-review-queue.json` at the repo root, and the workflow has
@@ -659,7 +671,7 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
-          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash"'
 
       # Hand the model's work to the publish job as data. Stage everything
       # EXCEPT dot-paths — that excludes the runtime artifacts above AND
