@@ -38,7 +38,7 @@ When this command is invoked, you should:
 
 **Blog Post Details:**
 
-- **Title**: The blog post title (will be Title Case in frontmatter). If the user doesn't have a title yet, ask for a working title or topic to generate a slug and suggested meta description/tags. Be clear that the user can update the title later before publishing.
+- **Title**: The blog post title (sentence case in frontmatter — the brand standard). If the user doesn't have a title yet, ask for a working title or topic to generate a slug and suggested meta description/tags. Be clear that the user can update the title later before publishing.
 - **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
 - **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
@@ -112,7 +112,7 @@ Inform the user if author information was auto-populated and give them a chance 
 
 ```markdown
 ---
-title: "Title in Title Case"
+title: "Title in sentence case"
 # If user selected "I don't know yet": Add TODO comment above date
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
@@ -190,7 +190,7 @@ After creating the files, tell the user:
 - **Images**: All images go in the same directory as `index.md`
 - **Author array**: The `authors` field in frontmatter is an array. For multi-author posts, add additional author IDs to the array (e.g., `- jane-doe\n    - john-smith`)
 - **More marker**: The `<!--more-->` comment marks where the excerpt ends on listing pages
-- **Style guide**: Remind users to follow `STYLE-GUIDE.md` (Heading style: H1 = Title Case, H2+ = Sentence case)
+- **Style guide**: Remind users that voice and writing style live in the brand guide (brand.pulumi.com, also exposed through the brand MCP server) — headings are sentence case at every level — and that `STYLE-GUIDE.md` covers this site's Hugo mechanics
 
 ## Example Usage
 
