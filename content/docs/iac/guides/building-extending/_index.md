@@ -30,6 +30,12 @@ Build reusable infrastructure components to encapsulate and share infrastructure
 
 **[Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/)** - Choose the right packaging approach for your components: native language package, source-based plugin package, or executable-based plugin package.
 
+## Design Guidelines
+
+Design components other people are glad to use — prescriptive guidance on abstraction, naming, inputs and outputs, multi-language ergonomics, and evolution.
+
+**[Pulumi Design Guidelines](/docs/iac/guides/building-extending/design-guidelines/)** - Choose the right level of abstraction, name things well, design inputs and outputs that hold up across languages, and evolve components without breaking the programs that depend on them.
+
 ## Packages
 
 Package and distribute your components and providers for use across teams and projects.

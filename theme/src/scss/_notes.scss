@@ -125,6 +125,97 @@
         }
     }
 
+    // Design-guidelines callouts (the `guideline` shortcode). DO / CONSIDER /
+    // AVOID / DON'T reuse the .note container, varying only color, icon, and the
+    // colored lead word that the recommendation text starts with.
+    &.guideline-do {
+        background: var(--color-green-background);
+
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-green-primary);
+        }
+
+        div.line {
+            background-color: var(--color-green-muted);
+        }
+
+        code {
+            background-color: var(--color-green-muted);
+        }
+
+        div.content > p:first-child > strong:first-child {
+            color: var(--color-green-primary);
+        }
+    }
+
+    &.guideline-consider {
+        background: var(--color-violet-background);
+
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-violet-primary);
+        }
+
+        div.line {
+            background-color: var(--color-violet-muted);
+        }
+
+        code {
+            background-color: var(--color-violet-muted);
+        }
+
+        div.content > p:first-child > strong:first-child {
+            color: var(--color-violet-primary);
+        }
+    }
+
+    &.guideline-avoid {
+        background: var(--color-orange-background);
+
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-orange-primary);
+        }
+
+        div.line {
+            background-color: var(--color-orange-muted);
+        }
+
+        code {
+            background: var(--color-orange-muted);
+        }
+
+        div.content > p:first-child > strong:first-child {
+            color: var(--color-orange-primary);
+        }
+    }
+
+    &.guideline-dont {
+        background: var(--color-red-background);
+
+        a,
+        i,
+        svg.ph-icon {
+            color: var(--color-red-primary);
+        }
+
+        div.line {
+            background-color: var(--color-red-muted);
+        }
+
+        code {
+            background-color: var(--color-red-muted);
+        }
+
+        div.content > p:first-child > strong:first-child {
+            color: var(--color-red-primary);
+        }
+    }
+
     div.highlight div.copy-button-container button.copy-button i,
     div.highlight div.copy-button-container button.copy-button svg {
         color: #fff;
