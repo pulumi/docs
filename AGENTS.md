@@ -30,16 +30,16 @@ Do not substitute other tools or commands, or change `package.json` to use pnpm 
 
 ## Code & Content Rules
 
-For all content files, follow `STYLE-GUIDE.md`. If a rule is not covered there, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.
+For all content files, Pulumi's **voice, tone, prose, product naming, and grammar** are defined in the **Pulumi brand guide** ([brand.pulumi.com](https://brand.pulumi.com/)), which is also exposed to agents through the public **brand MCP server**. Consult the relevant section (voice or writing style) before writing or reviewing. `STYLE-GUIDE.md` covers only this site's Hugo/repo mechanics (shortcodes, links, navigation, code fences, etc.) and points to the brand guide for each topic it doesn't own. If a rule is in neither, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style). Do not invent new style conventions; ask for clarification if something is ambiguous.
+
+**Precedence:** wherever the brand guide overlaps with anything in this repo — these conventions, `STYLE-GUIDE.md`, or any skill (including the social, SEO, and AEO guidance that still lives in this repo), the brand guide takes priority. That specialized guidance stays in the repo for now; if the brand guide later grows its own, the brand guide's version wins.
 
 Meta files like this one, `BUILD-AND-DEPLOY.md`, and agent instruction/skill files (e.g., `.claude/commands/*.md`) are exempt from formatting rules (heading case, trailing newlines, etc.).
 
 For all content files (docs, blogs, tutorials, etc.):
 
 - **Markdown**: Must always end with a newline.
-- **Headings**:  
-  - H1 = Title Case  
-  - H2+ = Sentence case
+- **Headings**: Sentence case at every level (H1 included), and sentence case for nav menu labels. See the brand guide's [writing style](https://brand.pulumi.com/voice/writing-style/) section. Hugo heading mechanics (one H1, FAQ `?` exception) live in `STYLE-GUIDE.md`.
 - **TypeScript/JavaScript**: Must follow `tsconfig.json` settings. No comments unless explicitly requested.
 - **TypeScript program files** (`static/programs/`): Use hand-written constructor style — resource name and opening `{` on the same line, `}, {` inline when an opts argument follows:
   ```typescript
