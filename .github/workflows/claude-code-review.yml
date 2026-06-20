@@ -1033,13 +1033,13 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
-          # claude-code-action@v1 writes the stream-JSON log to a temp path it
-          # exposes via the `execution_file` output (the old hardcoded
-          # /home/runner/work/_temp/claude-execution-output.json no longer
-          # exists, so this silently uploaded nothing). The log's system/init
-          # message lists mcp_servers + their connection status, which is how
-          # we confirm the brand MCP connected.
-          path: ${{ steps.claude-review.outputs.execution_file }}
+          # NOTE: this hardcoded path is stale under claude-code-action@v1 (the
+          # action exposes the log via its `execution_file` output instead), so
+          # this currently uploads nothing — but that output rendered empty in
+          # testing, and an empty `path` makes upload-artifact fail. Restoring
+          # the original harmless no-op; wiring up real execution-log
+          # observability is a separate follow-up.
+          path: /home/runner/work/_temp/claude-execution-output.json
           retention-days: 90
           if-no-files-found: ignore
 
