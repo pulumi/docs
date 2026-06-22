@@ -97,10 +97,12 @@ jobs:
       - name: Install Python deps
         run: python3 -m pip install --quiet pyyaml
 
-      # The traffic snapshot is uploaded to S3 by the data team's Metabase
-      # export (pageviews per /docs/ path over the trailing months). Both
-      # steps degrade gracefully: no AWS role, no snapshot, or a stale file
-      # all leave selection running on tier + age alone.
+      # Traffic snapshot and review ledger both live in S3, and both resolve
+      # their locations from Pulumi stack outputs rather than hand-maintained
+      # repo variables (a hardcoded bucket name was the original drift bug).
+      # Every step here degrades gracefully: a missing AWS role, an unresolved
+      # stack output, or an absent object all leave selection running on
+      # strategic tier + review age alone.
       - name: Configure AWS credentials
         id: aws-creds
         continue-on-error: true
@@ -109,21 +111,12 @@ jobs:
           role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
           role-session-name: content-review
           aws-region: us-west-2
-      - name: Fetch traffic snapshot from S3
-        if: vars.CONTENT_REVIEW_TRAFFIC_S3_URI != ''
-        continue-on-error: true
-        run: |
-          aws s3 cp "${{ vars.CONTENT_REVIEW_TRAFFIC_S3_URI }}" .traffic-snapshot --quiet \
-            || echo "traffic snapshot unavailable; selection proceeds without it"
-
-      # The ledger bucket is a resource of our own Pulumi stack, so resolve its
-      # name from the stack output rather than a hand-maintained repo variable —
-      # the same pattern schedule-social.yml uses for socialStateBucketName. This
-      # can't drift if the (auto-named) bucket is ever replaced. Degrades
-      # gracefully: if the output isn't there, `uri` stays empty and the ledger
-      # fetch below is skipped, leaving selection on tier + age.
       - name: Install Pulumi CLI
         uses: pulumi/actions@v7
+
+      # The ledger bucket is a resource of OUR Pulumi stack, so resolve its name
+      # from the stack output — the same pattern schedule-social.yml uses for
+      # socialStateBucketName. Can't drift if the (auto-named) bucket is replaced.
       - name: Resolve ledger bucket
         id: ledger-bucket
         continue-on-error: true
@@ -137,6 +130,31 @@ jobs:
           else
             echo "ledger bucket output unavailable; selection proceeds on git staleness alone"
           fi
+
+      # The docs-traffic export (pageviews per /docs/ path over the trailing six
+      # months) is produced weekly by the data team; the latest-object S3 URI is
+      # published as an output on their Airflow stack, which we read by stack
+      # reference (pulumi/data#865). The stack is foreign, so no -C / local
+      # project — the fully-qualified --stack resolves it from the service.
+      - name: Resolve traffic snapshot URI
+        id: traffic-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsTrafficPageviewsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "docs-traffic export output unavailable; selection proceeds on tier + age alone"
+          fi
+      - name: Fetch traffic snapshot from S3
+        if: steps.traffic-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp "${{ steps.traffic-uri.outputs.uri }}" .traffic-snapshot --quiet \
+            || echo "traffic snapshot unavailable; selection proceeds without it"
 
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
