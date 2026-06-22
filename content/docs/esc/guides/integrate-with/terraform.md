@@ -7,9 +7,10 @@ menu:
   esc:
     name: Terraform
     identifier: esc-guides-terraform
-    parent: esc-guides
+    parent: esc-guides-integrate-with
     weight: 35
 aliases:
+  - /docs/esc/guides/terraform/
   - /docs/esc/other-integrations/terraform/
   - /docs/esc/integrations/infrastructure/terraform/
   - /docs/esc/integrations/terraform/

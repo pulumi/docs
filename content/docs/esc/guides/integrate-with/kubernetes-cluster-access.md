@@ -7,8 +7,9 @@ weight: 2
 menu:
   esc:
     identifier: esc-kubernetes
-    parent: esc-guides
+    parent: esc-guides-integrate-with
 aliases:
+    - /docs/esc/guides/kubernetes-cluster-access/
     - /docs/esc/other-integrations/kubernetes/
     - /docs/esc/integrations/kubernetes/kubernetes/
 ---
