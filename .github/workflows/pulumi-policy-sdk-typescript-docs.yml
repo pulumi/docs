@@ -178,6 +178,7 @@ jobs:
       - name: Publish versioned snapshot
         if: ${{ steps.vdocs.outputs.bucket != '' }}
         continue-on-error: true
+        working-directory: docs
         run: |
           ./scripts/versioned-docs/publish-version.sh --tool nodejs-policy \
             --version "v${{ env.POLICY_SDK_VERSION }}" \

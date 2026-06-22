@@ -179,6 +179,7 @@ jobs:
       - name: Publish versioned snapshot
         if: ${{ steps.vdocs.outputs.bucket != '' }}
         continue-on-error: true
+        working-directory: docs
         run: |
           ./scripts/versioned-docs/publish-version.sh --tool java \
             --version "v${{ env.JAVA_SDK_VERSION }}" \
