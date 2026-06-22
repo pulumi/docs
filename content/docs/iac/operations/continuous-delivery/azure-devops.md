@@ -120,7 +120,7 @@ git tag release-2026-05-20
 git push origin release-2026-05-20
 ```
 
-For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
 ## PR comments
 

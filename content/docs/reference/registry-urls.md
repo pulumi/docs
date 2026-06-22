@@ -42,7 +42,7 @@ registry://templates/pulumi/community/aws-static-website@1.0.0
 registry://templates/pulumi/official/kubernetes-cluster
 ```
 
-Templates are used in [deployment settings](/docs/deployments/deployments/using/settings/) to configure where Pulumi Deployments obtains source code. See [Organization templates](/docs/idp/concepts/organization-templates/) for more information on publishing and managing templates.
+Templates are used in [deployment settings](/docs/deployments/concepts/settings/) to configure where Pulumi Deployments obtains source code. See [Organization templates](/docs/idp/concepts/organization-templates/) for more information on publishing and managing templates.
 
 ## Versioning
 

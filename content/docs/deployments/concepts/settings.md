@@ -5,11 +5,14 @@ title: "Deployments Settings"
 h1: "Pulumi Deployment Settings"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/using/settings/
 - /docs/pulumi-cloud/deployments/using/settings/
 menu:
   deployments:
-    parent: deployments-deployments-using
-    weight: 1
+    name: Deployments Settings
+    parent: deployments-concepts
+    identifier: deployments-concepts-settings
+    weight: 20
 ---
 
 Deployment settings refer to the full set of configuration required to run a Pulumi Deployment, defined on a per-stack basis. These settings can be managed through the Pulumi Cloud UI, via the REST API, or defined as code with the Pulumi Cloud provider.
@@ -21,8 +24,6 @@ You can create and manage deployment settings in several ways:
 ### From the Pulumi Cloud UI
 
 From the Pulumi Cloud console, a stack's deployment settings can be accessed via the `Settings > Deploy` tab. Once the settings are defined via the UI, they apply to all Deployment triggers, including push-to-deploy (if you have a [VCS integration](/docs/integrations/version-control/) configured), click-to-deploy and the REST API.
-
-![Pulumi UI - Deployment Settings](/docs/deployments/deployments/ui-settings.png)
 
 ### From the API
 
@@ -36,11 +37,44 @@ Finally, a stack's deployment settings may be defined as a resource within the s
 Pulumi recommends against a stack defining its own Deployment Settings (that is, including a `pulumiService.DeploymentSettings` resource that defines settings for the current stack), as this would require two deployments for the settings changes to take effect. Instead, create a separate Pulumi program that defines Deployment Settings for multiple stacks that share similar configuration.
 {{% /notes %}}
 
+## Source settings
+
+The **Source** determines where a deployment gets the Pulumi program it runs. In the Pulumi Cloud console, open **Settings > Deploy** for the stack and choose a source. The dropdown lists the [version control integrations](/docs/integrations/version-control/) connected to your organization — for example **GitHub**, **GitLab**, **Bitbucket**, or **Azure DevOps** — along with **Git**, **No code**, and **None**. Only integrations that are installed appear, so the exact set of options depends on your organization.
+
+### Version control integrations
+
+Select a connected integration to deploy from a repository it manages. Every integration exposes the same source fields, though the repository identifier format varies by provider:
+
+- **Repository** (required): the repository to deploy from. The format depends on the provider — for example `owner/repo` for GitHub, `group/project` for GitLab, `workspace/repo` for Bitbucket, and `organization/project/repository` for Azure DevOps.
+- **Branch** (required): the branch to deploy.
+- **Pulumi.yaml folder**: the path, relative to the repository root, to the directory that contains your `Pulumi.yaml`. Leave it blank when the project lives at the repository root.
+
+A set of toggles controls which repository events trigger a deployment. (GitLab labels these in terms of "merge requests" where other providers say "pull requests"; the behavior is the same.)
+
+- **Run previews for pull requests**: run a `pulumi preview` when a pull request is opened against the configured branch, and post the result as a comment on the request.
+- **Run updates for pushed commits**: run a `pulumi up` when commits are pushed or merged to the configured branch.
+- **Run updates for pushed tags**: run a `pulumi up` when a matching git tag is pushed. See [Tag Filtering](#tag-filtering).
+- **Use this stack as a template for pull request stacks**: use this stack as the template for the [review stacks](/docs/deployments/concepts/review-stacks/) created on each pull request.
+
+These toggles depend on the version control integration, which also clones your repository and posts status comments. Custom VCS supports push-to-deploy only (no request previews or review stacks). In code, the toggles correspond to the provider object (`repository`, `deployCommits`, `previewPullRequests`, `pullRequestTemplate`) and `sourceContext.git` (`branch`, `repoDir`) on the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource. See [Review stacks](/docs/deployments/concepts/review-stacks/) for complete examples.
+
+### Git
+
+Use the Git source to deploy from any Git repository by URL — for example a self-managed Git server, or a provider you have not connected as an integration. Provide the repository URL, a branch, and an optional `Pulumi.yaml` folder, along with the credentials a private repository requires (typically an access token or SSH key managed with [Pulumi ESC](/docs/esc/)).
+
+The Git source only clones and deploys your program. To also get pull or merge request previews, push-to-deploy, and status comments, connect the matching [version control integration](/docs/integrations/version-control/) and select it as the source instead.
+
+### No code
+
+The **No code** source lets you base a stack's deployment on a [Pulumi template](/docs/idp/concepts/organization-templates/) instead of a connected repository — for example, when a stack is created from an organization template.
+
+### None
+
+Select **None** when the deployment has no source to fetch — typically because the Pulumi program is already present in a [custom executor image](#custom-executor-images).
+
 ## Path Filtering
 
 When using a [VCS integration](/docs/integrations/version-control/) and push-to-deploy, you may want a deployment to trigger only when a push changes files you care about. You can do this with path filters. This is especially useful for monorepos, where a single repository holds multiple Pulumi programs and you want each stack to deploy only when its own files change.
-
-![Pulumi UI - Path Filters](/docs/deployments/deployments/ui-path-filters.png)
 
 ### Writing filters
 
@@ -80,13 +114,9 @@ foo/bar/**
 a change to `foo/bar/main.ts` does **not** trigger a deployment — it matches the `!foo/**` exclude filter, and the `foo/bar/**` include filter cannot override that. To deploy on changes under `foo/bar/` while ignoring the rest of `foo/`, exclude only the specific subdirectories you want to skip (for example `!foo/baz/**`) rather than excluding all of `foo/`.
 {{% /notes %}}
 
-### Setting path filters
-
-As with any other deployment setting, path filters may be set via the Pulumi Cloud console, using the REST API, or defined in code using the Pulumi Cloud provider.
-
 ## Tag Filtering
 
-When using a [VCS integration](/docs/integrations/version-control/) and push-to-deploy, you can trigger a deployment when a git tag is pushed instead of (or in addition to) a branch push. This is useful for release-based workflows where you deploy only when you cut a release — for example, pushing a `v1.2.0` tag — rather than on every commit. See [Deploying on git tags](/docs/deployments/deployments/using/triggers/#deploying-on-git-tags) for an overview.
+When using a [VCS integration](/docs/integrations/version-control/) and push-to-deploy, you can trigger a deployment when a git tag is pushed instead of (or in addition to) a branch push. This is useful for release-based workflows where you deploy only when you cut a release — for example, pushing a `v1.2.0` tag — rather than on every commit. Tag triggers are supported across all version control integrations (GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS).
 
 Tag triggers are controlled by two deployment settings on your VCS configuration:
 
@@ -120,9 +150,7 @@ Like path filters, tag filters do **not** behave like a `.gitignore` file: once 
 
 Deleting a tag never triggers a deployment.
 
-### Setting tag filters
-
-As with any other deployment setting, `deployTags` and `tagFilters` may be set via the Pulumi Cloud console, using the REST API, or defined in code using the Pulumi Cloud provider. In the console, enable the **Run updates for pushed tags** toggle and enter your patterns in the **Tag filters** field as a comma-separated list. The REST API and the Pulumi Cloud provider take `tagFilters` as an array of patterns.
+When a tag push triggers a deployment, Pulumi sets the `PULUMI_CI_TAG_NAME` environment variable to the tag name (for example, `v1.2.0`), which your pre-run commands or Pulumi program can read — for instance, to stamp the release version onto your resources.
 
 {{% notes type="info" %}}
 GitLab integrations created before this feature did not subscribe to tag push events. To use tag triggers with one, enable **Tag push events** on the existing GitLab group webhook — there's no need to re-create the integration. See the [GitLab integration docs](/docs/integrations/version-control/gitlab/#push-to-deploy) for details. This caveat applies only to GitLab; other providers require no action.
@@ -137,7 +165,7 @@ When using Pulumi Deployments, you have options for where your workflows run:
 
 If a stack does not have a pool explicitly configured, the deployment uses the organization's [default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool) if one is set, and otherwise falls back to the Pulumi Hosted Pool.
 
-For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/deployments/runners/).
+For more information on customer-managed workflow runners, see the [Customer-Managed Workflow Runners documentation](/docs/deployments/concepts/customer-managed-runners/).
 
 ### Role assignment
 
@@ -153,6 +181,8 @@ By selecting an appropriate role, you provide the deployment with the necessary 
 
 Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/access-identity/rbac/roles/).
 
+For a full explanation of how a deployment's permissions are determined, the default permissions for each trigger, and how to grant additional access, see [Permissions](/docs/deployments/operations/permissions/).
+
 ## Pre-Run Commands
 
 Pre-run commands allow you to execute arbitrary shell commands before the deployment process starts. This is useful for environment setup, authentication with private package repositories, or other preparatory work. Note that each line of your pre-run command runs in a separate shell.
@@ -163,8 +193,6 @@ For example, you might use pre-run commands to:
 - Configure authentication for private repositories
 - Generate configuration files
 - Set up environment variables - see [PULUMI_ENV](#pulumi_env) if you need to persist these to your Pulumi program.
-
-Pre-run commands can be configured through the UI, REST API, or as code with the Pulumi Cloud provider.
 
 {{% notes type="info" %}}
 You can use Pulumi ESC with pre-run commands by prefixing each command with `pulumi env run`. For example:
@@ -182,19 +210,13 @@ By default, the deployment executor will attempt to install dependencies for you
 
 This is enabled by skipping the default dependency installation step (under Advanced Settings in the UI), and setting a few pre-run commands and environment variables.
 
-![Pulumi UI - Node Version](/docs/deployments/deployments/ui-node-version.png)
-
 ## Skipping Intermediate Deployments
 
 By default, when multiple deployments are pushed, they will be executed sequentially until the backlog is completed. In some cases, you may wish to only execute the most recent deployment since the changes are accumulative. By enabling the `Skip intermediate deployments` setting, Pulumi will skip all intermediary deployments of the same type and will execute only the latest.
 
-![Pulumi UI - Skip intermediate deployments](/docs/deployments/deployments/ui-skip-intermediate-deployments.png)
-
 ## Custom Executor Images
 
 By default, deployments run inside the [`pulumi/pulumi`](https://hub.docker.com/r/pulumi/pulumi) image, which includes the `pulumi` CLI and [LTS versions](https://github.com/pulumi/pulumi-docker-containers/blob/main/README.md#version-policy) of all supported language runtimes. You can override this from the **Custom Executor Image** field in your stack's deployment settings, either to pin a specific Pulumi CLI version or to use your own image with additional tools.
-
-![Pulumi UI - Custom Executor](/docs/deployments/deployments/ui-custom-executor.png)
 
 For guidance on choosing between a pre-run install hook and a custom image, building a custom image, supported base images, and the trade-offs to consider, see [Deployment execution environment](/docs/deployments/guides/custom-images/).
 
@@ -211,7 +233,7 @@ For details on supported clouds see [OIDC Setup for Pulumi Deployments](/docs/de
 When using Pulumi-managed agents, you can speed up deployments using dependency caching.
 
 {{% notes type="info" %}}
-If you have configured the stack to use a [Customer-managed agent](/docs/deployments/deployments/runners/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
+If you have configured the stack to use a [Customer-managed agent](/docs/deployments/concepts/customer-managed-runners/) runner pool this option is unavailable. Running a customer-managed agent pool gives you full control over the lifetime of the agent and its caching.
 {{% /notes %}}
 
 The caching method is simple: during the first deployment, the deployment agent will automatically detect downloaded dependencies using lock files, zip them up and store the archive in blob storage. During all subsequent deployments, agents will pull such an archive down and unpack it, saving time it would normally take to download those dependencies. When your dependencies change, deployment agents will automatically invalidate the old cache and create a new one.
@@ -246,9 +268,7 @@ By default, there are a set of environment variables set by the process automati
 - `PULUMI_CI_STACK`: Current stack name
 - `PULUMI_CI_OPERATION`: Current Pulumi operation (`update`, `preview`, `destroy`, `refresh`, `detect-drift`, or `remediate-drift`)
 
-These can be overridden or extended by configuring custom environment variables:
-
-![Pulumi UI - Environment Variables](/docs/deployments/deployments/ui-custom-env-variables.png)
+These can be overridden or extended by configuring custom environment variables.
 
 ### PULUMI_ENV
 

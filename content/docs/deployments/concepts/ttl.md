@@ -5,17 +5,22 @@ title: "Time-to-live stacks"
 h1: "Time-to-live stacks"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/ttl/
 - /docs/pulumi-cloud/deployments/ttl/
 - /docs/platform/deployments/ttl/
 menu:
   deployments:
-    name: Time-to-live stacks
-    parent: deployments-deployments
-    weight: 80
-    identifier: deployments-deployments-ttl
+    name: TTL Stacks
+    parent: deployments-concepts
+    weight: 50
+    identifier: deployments-concepts-ttl
 ---
 
-Time-to-live (TTL) Stacks in enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.
+Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.
+
+{{% notes type="info" %}}
+A stack's time to live is measured from the stack's **creation** date, not its most recent update. Updating a stack does not reset its TTL.
+{{% /notes %}}
 
 ## Setting a Time-to-Live on a Stack
 
@@ -23,7 +28,7 @@ Time-to-live (TTL) Stacks in enable the automated management of a stack's lifecy
 
 In order to set up Time-to-Live Stacks in the Pulumi Cloud console, follow these steps:
 
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
 2. Navigate to the Stack > Settings > Schedules
 3. Select "Time-to-Live"
 4. (Optional) Turn on "Delete After Destroy" if applicable

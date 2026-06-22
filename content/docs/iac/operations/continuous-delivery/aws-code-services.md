@@ -124,7 +124,7 @@ When a pull request is opened, run a dry run instead of a deployment. Trigger a 
       - pulumi preview
 ```
 
-`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 ### Deploy to staging on merge to the main branch
 
@@ -165,5 +165,5 @@ If you operate many pipelines that are similar or identical, package the pattern
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [AWS provider](/registry/packages/aws/) — manage AWS resources, including the pipeline itself, as code.
 - [Component resources](/docs/iac/concepts/components/) — package a reusable pipeline pattern as a single resource.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Vs. Traditional CI/CD
-    parent: deployments-deployments
-    weight: 110
-    identifier: deployments-deployments-versus
+    parent: deployments-home
+    weight: 40
+    identifier: deployments-versus
 aliases:
+- /docs/deployments/deployments/versus/
 - /docs/pulumi-cloud/deployments/versus/
 - /docs/intro/deployments/versus/
 ---

@@ -31,7 +31,7 @@ Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/)
 
 Depending on their use case and the available golden paths, developers may choose to scaffold several components in a Pulumi YAML program. Alternatively, they can point and click to deploy a no-code workload directly from the Pulumi console using the [New Project Wizard](/docs/idp/concepts/new-project-wizard/). Or, in custom use cases, they may write a Pulumi program in their preferred programming language. Regardless, thanks to the bottom-up approach of the Pulumi IDP, workloads are deployed via golden paths, leveraging artifacts that have been authored and approved by platform teams.
 
-Learn more about the [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [no-code workflows](/docs/idp/concepts/no-code-stacks/), and [Pulumi Deployments](/docs/deployments/deployments/).
+Learn more about the [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [no-code workflows](/docs/idp/concepts/no-code-stacks/), and [Pulumi Deployments](/docs/deployments/concepts/).
 
 ## Day 2 - Confidently maintain and extend infrastructure
 

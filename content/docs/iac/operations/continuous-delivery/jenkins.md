@@ -143,7 +143,7 @@ stage("Preview") {
 }
 ```
 
-`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, use a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 ### Deploy to staging on merge to the main branch
 
@@ -211,5 +211,5 @@ Because the plugins are present in the image, every build starts with a warm cac
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system for pull request reporting.

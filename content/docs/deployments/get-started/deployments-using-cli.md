@@ -78,9 +78,9 @@ Now that we have a GitHub repository, we can configure it to use Pulumi Deployme
 1. The `random-typescript` template needs no cloud credentials, so you can leave the remaining settings at their defaults. When you later deploy a project that provisions cloud resources, this is where you'd configure things like:
 
    * [OIDC Connect](/docs/pulumi-cloud/oidc/) for cloud authentication
-   * [Environment Variables](/docs/deployments/deployments/reference/#environment-variables)
+   * [Environment Variables](/docs/deployments/concepts/settings/#environment-variables)
 
-   See [Pulumi Deployment Settings](/docs/deployments/deployments/using/settings) for more information about the available settings.
+   See [Pulumi Deployment Settings](/docs/deployments/concepts/settings) for more information about the available settings.
 
 1. Select **Save deployment configuration** to save your settings.
 
@@ -111,7 +111,7 @@ In summary, after completing this walkthrough you will have:
 Now that you have a stack deploying through Pulumi Deployments, here's where to go next:
 
 * **Authenticate to your cloud without static credentials.** Use [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials via [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/), then reference that environment from your stack so deployments authenticate to [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), or [GCP](/docs/esc/guides/configuring-oidc/gcp/) without long-lived secrets.
-* **Tune your deployment settings.** Review the full set of [deployment settings](/docs/deployments/deployments/using/settings/) — pre-run commands, environment variables, OIDC, and executor options.
-* **Preview changes on pull requests.** Enable [review stacks](/docs/deployments/deployments/review-stacks/) to spin up ephemeral infrastructure for each pull request.
-* **Detect and remediate drift.** Turn on [drift detection](/docs/deployments/deployments/drift/) to catch changes made outside of Pulumi.
-* **Run operations on a schedule.** Configure [scheduled deployments](/docs/deployments/deployments/schedules/) to run `pulumi up`, `preview`, or `refresh` automatically.
+* **Tune your deployment settings.** Review the full set of [deployment settings](/docs/deployments/concepts/settings/) — pre-run commands, environment variables, OIDC, and executor options.
+* **Preview changes on pull requests.** Enable [review stacks](/docs/deployments/concepts/review-stacks/) to spin up ephemeral infrastructure for each pull request.
+* **Detect and remediate drift.** Turn on [drift detection](/docs/deployments/concepts/drift/) to catch changes made outside of Pulumi.
+* **Run operations on a schedule.** Configure [scheduled deployments](/docs/deployments/concepts/schedules/) to run `pulumi up`, `preview`, or `refresh` automatically.

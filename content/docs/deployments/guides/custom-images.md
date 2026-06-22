@@ -48,7 +48,7 @@ There are two ways to handle this. Pick based on how often you need the tool and
 
 ## Pre-run commands
 
-If you need a tool occasionally, or you are still prototyping, install it from a [pre-run command](/docs/deployments/deployments/using/settings/#pre-run-commands) in your deployment settings:
+If you need a tool occasionally, or you are still prototyping, install it from a [pre-run command](/docs/deployments/concepts/settings/#pre-run-commands) in your deployment settings:
 
 ```bash
 apt-get update && apt-get install -y my-tool
@@ -98,7 +98,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 ```
 
-Build, push to a registry your deployment runner can reach, then point your stack at it from the [Custom Executor Image setting](/docs/deployments/deployments/using/settings/#custom-executor-images) or the `executorContext.executorImage` field of the [REST API](/docs/reference/cloud-rest-api/deployments/).
+Build, push to a registry your deployment runner can reach, then point your stack at it from the [Custom Executor Image setting](/docs/deployments/concepts/settings/#custom-executor-images) or the `executorContext.executorImage` field of the [REST API](/docs/reference/cloud-rest-api/deployments/).
 
 ### Image requirements
 
@@ -126,12 +126,12 @@ To reduce cold-start time:
 
 #### Static credentials only
 
-If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/deployments/runners/) run in your own infrastructure and can use whatever pull mechanism you configure.
+If your image lives in a private registry, you must supply static username and password credentials in the deployment settings. OIDC and IAM-role-based pulls are not supported for custom executor images. If your security model requires short-lived registry credentials, [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) run in your own infrastructure and can use whatever pull mechanism you configure.
 
 ## See also
 
-- [Deployment settings](/docs/deployments/deployments/using/settings/): UI walkthrough for configuring the executor image on a stack
-- [Customer-Managed Workflow Runners](/docs/deployments/deployments/runners/): full control over the runner host, registry pulls, network access, and lifecycle
-- [Pre-run commands](/docs/deployments/deployments/using/settings/#pre-run-commands): where pre-run installs run
+- [Deployment settings](/docs/deployments/concepts/settings/): UI walkthrough for configuring the executor image on a stack
+- [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/): full control over the runner host, registry pulls, network access, and lifecycle
+- [Pre-run commands](/docs/deployments/concepts/settings/#pre-run-commands): where pre-run installs run
 - [Pulumi Docker images](/docs/iac/operations/docker-images/): the full catalog of official images, variants, and release cadence
 - [`pulumi/pulumi-docker-containers`](https://github.com/pulumi/pulumi-docker-containers): image source, variants, and contribution guide

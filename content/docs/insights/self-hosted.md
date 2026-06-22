@@ -10,7 +10,7 @@ menu:
     weight: 50
 ---
 
-Pulumi Insights supports self-hosted operation for Business Critical customers through [customer-managed workflow runners](/docs/deployments/deployments/runners/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
+Pulumi Insights supports self-hosted operation for Business Critical customers through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
 
 {{% notes "info" %}}
 Self-hosted Insights is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested in enabling this feature.
@@ -29,7 +29,7 @@ Running Insights in your own environment with customer-managed workflow runners 
 
 Customer-managed workflow runners support multiple workflow types beyond deployments, including Insights discovery scans and policy evaluations. Workflow runners poll Pulumi Cloud for pending workflows and execute them in your self-hosted environment.
 
-For full setup and configuration details, see the [customer-managed workflow runners](/docs/deployments/deployments/runners/) documentation.
+For full setup and configuration details, see the [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) documentation.
 
 ### Setting up Insights scans
 
@@ -59,4 +59,4 @@ enabled_workflow_types:
     - policy_evaluation
 ```
 
-For the full list of configuration options, see the [configuration reference](/docs/deployments/deployments/runners/#configuration-reference).
+For the full list of configuration options, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).

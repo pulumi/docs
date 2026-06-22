@@ -166,7 +166,7 @@ git tag release-2026-05-20
 git push origin release-2026-05-20
 ```
 
-For an optional ephemeral environment on each pull request, pair the `preview` job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+For an optional ephemeral environment on each pull request, pair the `preview` job with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
 ## Orb command reference
 
@@ -204,5 +204,5 @@ pulumi package add terraform-provider mrolla/circleci
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral per-pull-request environments.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

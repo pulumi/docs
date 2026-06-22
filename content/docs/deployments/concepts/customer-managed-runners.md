@@ -1,39 +1,24 @@
 ---
-title: Runners
-title_tag: Deployment runners | Pulumi Deployments
-meta_desc: How Pulumi Cloud executes your deployments — Pulumi-hosted and customer-managed workflow runners, their hardware, and the full configuration reference.
+title: Customer-managed runners
+title_tag: Customer-managed runners | Pulumi Deployments
+meta_desc: Self-host Pulumi workflow runners on your own infrastructure — supplying credentials and the full configuration reference for customer-managed runner pools.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
-    name: Runners
-    parent: deployments-deployments
-    identifier: deployments-deployments-runners
-    weight: 40
+    name: Customer-managed runners
+    parent: deployments-concepts
+    identifier: deployments-concepts-customer-managed-runners
+    weight: 90
 aliases:
+- /docs/deployments/concepts/runners/
+- /docs/deployments/deployments/runners/
 - /docs/pulumi-cloud/deployments/customer-managed-agents/
 - /docs/deployments/deployments/customer-managed-agents/
 - /docs/deployments/deployments/runs/customer-managed-agents/
 - /docs/deployments/deployments/runs/
 ---
 
-Every Pulumi Deployment runs in a container image on a *workflow runner* — the compute that executes your Pulumi program. Two settings control how a run works:
-
-- The [image](/docs/deployments/guides/custom-images/): a Pulumi-managed Linux image by default, or a custom image when your project needs extra tools.
-- The runner: Pulumi-hosted by default, or [customer-managed](#customer-managed-workflow-runners) when you need to run on your own infrastructure.
-
-## Hardware and operating system
-
-When a deployment runs on a Pulumi-hosted workflow runner, it executes inside a Linux container with the following resources:
-
-| Resource | Allocation |
-|---|---|
-| vCPU | 2 |
-| Memory | 8 GB |
-| Disk | A 32 GB volume, with roughly half available for your program's working files after the executor image and dependency caches |
-
-With the default executor image, the container's operating system is Debian, regardless of the operating system of the host it runs on. If you supply a [custom executor image](/docs/deployments/guides/custom-images/), the operating system is whatever that image is built on. If a deployment depends on a specific OS, package manager, or system library, match it to the image you use.
-
-These specifications apply to Pulumi-hosted workflow runners. Customer-managed workflow runners run on infrastructure you provision, so their hardware and operating system are whatever you configure.
+By default, deployments run on [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/). Customer-managed workflow runners let you self-host that compute on your own infrastructure instead — for example, to run within a private network — while supporting the same deployment triggers and workflow types.
 
 ## Customer-managed workflow runners
 
@@ -47,7 +32,7 @@ Customer-Managed Workflow Runners allow you to self-host workflow runners, bring
 
 <sup>1</sup> *Currently Linux and macOS are supported*
 
-Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/deployments/#deployment-triggers) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
+Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/concepts/triggers/) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
 
 {{% notes "info" %}}
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.

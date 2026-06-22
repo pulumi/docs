@@ -15,7 +15,7 @@ aliases:
 - /docs/pulumi-cloud/developer-portals/new-project-wizard/
 ---
 
-The New Project Wizard (NPW) is an interactive interface in the Pulumi Cloud console that streamlines creating new [projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/). The wizard consolidates multiple setup tasks into a single workflow, allowing you to configure project settings, repository details, stack [configuration](/docs/iac/concepts/config/), [deployment settings](/docs/deployments/deployments/), and service assignments all in one place.
+The New Project Wizard (NPW) is an interactive interface in the Pulumi Cloud console that streamlines creating new [projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/). The wizard consolidates multiple setup tasks into a single workflow, allowing you to configure project settings, repository details, stack [configuration](/docs/iac/concepts/config/), [deployment settings](/docs/deployments/concepts/), and service assignments all in one place.
 
 ## What the New Project Wizard does
 
@@ -34,7 +34,7 @@ Within the New Project Wizard, you can configure:
 - **Stack configuration values**:
   - Import [ESC environments](/docs/esc/concepts/environments/) to provide configuration and secrets
   - Set individual configuration values using a form-based interface (see note below)
-- **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/deployments/) for the new stack, including [drift detection and remediation](/docs/deployments/deployments/drift/)
+- **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/concepts/) for the new stack, including [drift detection and remediation](/docs/deployments/concepts/drift/)
 - **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/concepts/services/)
 
 {{% notes "info" %}}
@@ -66,10 +66,10 @@ To add a stack to an existing project:
 
 ## VCS authorization
 
-To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/deployments/), users must authorize their VCS provider. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/).
+To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/concepts/), users must authorize their VCS provider. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/).
 
 For GitHub, the authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
 
 {{% notes "info" %}}
-Make sure you configure a [version control integration](/docs/integrations/version-control/) to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/deployments/).
+Make sure you configure a [version control integration](/docs/integrations/version-control/) to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/concepts/).
 {{% /notes %}}

@@ -76,7 +76,7 @@ Choose one of these secure deployment approaches in your sensitive environments:
 
 ### Option A: Pulumi Deployments (with GitHub and other integrations)
 
-[Pulumi Deployments](/docs/deployments/deployments/) provides automated, managed, and secure infrastructure deployments:
+[Pulumi Deployments](/docs/deployments/concepts/) provides automated, managed, and secure infrastructure deployments:
 
 - **Automated GitHub integration:**  
   Automatically run `pulumi preview` on PRs and `pulumi up` upon PR merge.

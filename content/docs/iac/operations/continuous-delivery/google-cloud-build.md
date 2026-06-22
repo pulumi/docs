@@ -329,7 +329,7 @@ git push origin release-2026-05-21
 
 Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
 
-To let reviewers exercise a change in a live environment, pair the preview build with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+To let reviewers exercise a change in a live environment, pair the preview build with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 {{% notes type="info" %}}
 The Pulumi CLI doesn't automatically detect Cloud Build as a CI/CD system, so updates won't link back to the triggering build or commit on their own. To record that metadata in Pulumi Cloud, set the `PULUMI_CI_SYSTEM` environment variable, along with the `PULUMI_CI_*` fallback variables, in your build steps. See [adding support for CI/CD systems](/docs/iac/operations/continuous-delivery/#adding-support-for-cicd-systems).
@@ -415,5 +415,5 @@ The `availableSecrets` and `options` blocks are unchanged from the build configu
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Version control integrations](/docs/integrations/version-control/) — pull request comments, status checks, and commit linking from Pulumi Cloud.
 - [Google Cloud provider](/registry/packages/gcp/) — manage Cloud Build triggers, repository connections, and the rest of Google Cloud as code.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

@@ -84,7 +84,7 @@
             background-color: var(--color-violet-muted);
         }
 
-        code {
+        :not(pre) > code {
             background-color: var(--color-violet-muted);
         }
     }
@@ -102,7 +102,7 @@
             background-color: var(--color-green-muted);
         }
 
-        code {
+        :not(pre) > code {
             background-color: var(--color-green-muted);
         }
     }
@@ -120,7 +120,7 @@
             background-color: var(--color-orange-muted);
         }
 
-        code {
+        :not(pre) > code {
             background: var(--color-orange-muted);
         }
     }

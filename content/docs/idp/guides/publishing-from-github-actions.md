@@ -421,7 +421,7 @@ jobs:
 
 Once your automated publishing workflow is established, consider these enhancements:
 
-- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/deployments/deployments/using/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
+- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/deployments/concepts/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
 - **Version Compatibility Testing**: Test new versions against existing consumer programs
 - **Progressive Rollouts**: Implement canary releases and blue/green deployments for high-impact components
 - **Integration with Policies**: Create [Pulumi Policies](/docs/insights/policy/) policies that ensure only *approved* component versions are deployed

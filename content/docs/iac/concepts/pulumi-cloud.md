@@ -21,8 +21,8 @@ On top of state, Pulumi Cloud adds:
 - **Reusable configuration and secrets** via [Pulumi ESC](/docs/esc/), so environments can be defined once and consumed across stacks.
 - **[Policy as code](/docs/insights/policy/)** enforcement applied centrally to every update, with pre-built policy packs for common security, compliance, and cost rules.
 - **[Cloud resource inventory](/docs/insights/)** that discovers resources across your cloud accounts, including resources not managed by Pulumi.
-- **Scheduled [drift detection](/docs/deployments/deployments/drift/)** that alerts you or remediates automatically when deployed infrastructure diverges from its declared state.
-- **Managed [deployments](/docs/deployments/deployments/)** that run Pulumi operations remotely, for example in response to Git pushes, and emit [webhooks](/docs/deployments/webhooks/) for event-driven workflows.
+- **Scheduled [drift detection](/docs/deployments/concepts/drift/)** that alerts you or remediates automatically when deployed infrastructure diverges from its declared state.
+- **Managed [deployments](/docs/deployments/concepts/)** that run Pulumi operations remotely, for example in response to Git pushes, and emit [webhooks](/docs/deployments/concepts/webhooks/) for event-driven workflows.
 - **[Pulumi Neo](/docs/ai/)**, an AI agent that helps debug deployments, write infrastructure as code, and answer questions about your environment.
 - **Ephemeral environments** such as Review Stacks and TTL Stacks.
 

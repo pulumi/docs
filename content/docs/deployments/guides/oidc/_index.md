@@ -30,7 +30,7 @@ Pulumi Deployments can act as an OIDC provider, issuing signed, short-lived toke
 
 Every time a deployment runs, Pulumi Cloud issues a new OIDC token specific to that run. The OIDC token is a short-lived, signed [JSON Web Token](https://jwt.io) that contains information about the deployment, and that can be exchanged for credentials from a cloud provider. For AWS, Azure, and Google Cloud, this credential exchange can be done automatically as part of the deployment setup.
 
-If you're looking for information about the permissions a deployment has within Pulumi Cloud itself (rather than cloud provider permissions), see the [Deployment Permissions documentation](/docs/deployments/deployments/reference/#deployment-permissions).
+If you're looking for information about the permissions a deployment has within Pulumi Cloud itself (rather than cloud provider permissions), see the [Deployment Permissions documentation](/docs/deployments/operations/permissions/).
 
 {{% notes type="info" %}}
 Pulumi Cloud can also accept OIDC tokens from trusted third-party identity providers and exchange them for short-lived Pulumi access tokens. This is a separate feature from the Deployments OIDC integration and is documented in the [OIDC Issuers documentation](/docs/administration/access-identity/oidc-issuers/).

@@ -82,11 +82,11 @@ Pulumi posts commit status checks to GitLab on every deployment, for both push a
 
 ### Push-to-deploy
 
-Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
+Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/concepts/triggers/#push-to-deploy) for setup instructions.
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
 
 {{% notes type="warning" %}}
 GitLab integrations created before tag triggers were introduced did not subscribe to GitLab's **Tag push events** webhook, so they will not receive tag pushes until that event is enabled. You don't need to re-create the integration — instead, edit the existing group webhook in GitLab under **Settings** > **Webhooks**, open the Pulumi webhook (the `https://api.pulumi.com/workflow/gitlab` endpoint), and enable **Tag push events**. Re-creating the integration also works, since new integrations subscribe to tag push events automatically.
@@ -94,7 +94,7 @@ GitLab integrations created before tag triggers were introduced did not subscrib
 
 ### Review stacks
 
-[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts a merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
+[Review stacks](/docs/deployments/concepts/review-stacks/) are ephemeral cloud environments created automatically every time a merge request is opened, powered by Pulumi Deployments. Open a merge request, and Pulumi Deployments stands up a stack with your changes and posts a merge request comment with the outputs. Merge or close the merge request, and Pulumi Deployments destroys the stack and frees the associated resources.
 
 Review stacks follow the naming convention `pr-{group}-{project}-{mr-iid}` (for example, group `acme/infra` with merge request #42 produces stack `pr-acme-infra-42`). Configuration is copied from the template stack via `pulumi config cp`, and stacks are automatically deleted after the destroy completes.
 

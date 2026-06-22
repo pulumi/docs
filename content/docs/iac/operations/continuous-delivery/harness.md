@@ -171,7 +171,7 @@ git push origin release-2026-05-20
 
 Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit. To require human sign-off before a production deployment, add a [`HarnessApproval` step](https://developer.harness.io/docs/platform/approvals/adding-harness-approval-stages/) ahead of the `pulumi up` step in the `Deploy production` stage.
 
-For an optional ephemeral environment on each pull request, pair the `preview` stage with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-pull-request environment automatically.
+For an optional ephemeral environment on each pull request, pair the `preview` stage with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-pull-request environment automatically.
 
 {{% notes type="info" %}}
 If you already maintain Pulumi workflows for GitHub Actions, Harness CI can run them directly: its [GitHub Action step](https://developer.harness.io/docs/continuous-integration/use-ci/use-drone-plugins/ci-github-action-step/) executes a published action such as [`pulumi/actions`](https://github.com/pulumi/actions) as a pipeline step.
@@ -212,5 +212,5 @@ You can manage Harness itself — projects, environments, services, connectors, 
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Version Control](/docs/integrations/version-control/) — post infrastructure-change summaries on pull requests.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral per-pull-request environments.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral per-pull-request environments.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

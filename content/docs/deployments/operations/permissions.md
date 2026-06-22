@@ -5,11 +5,14 @@ title: "Deployment Permissions"
 h1: "Deployment Permissions"
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/permissions/
 - /docs/pulumi-cloud/deployments/permissions/
 menu:
   deployments:
-    parent: deployments-deployments
-    weight: 35
+    name: Permissions
+    parent: deployments-operations
+    identifier: deployments-operations-permissions
+    weight: 10
 ---
 
 This page explains how permissions work in Pulumi Deployments and how to configure them for your deployment needs.

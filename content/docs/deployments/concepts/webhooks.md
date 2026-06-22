@@ -7,10 +7,11 @@ meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Webhooks
-    parent: deployments-home
-    weight: 30
-    identifier: deployments-webhooks
+    parent: deployments-concepts
+    weight: 100
+    identifier: deployments-concepts-webhooks
 aliases:
+- /docs/deployments/webhooks/
 - /docs/pulumi-cloud/webhooks/
 - /docs/platform/webhooks/
 - /docs/reference/service/webhooks/
@@ -155,8 +156,6 @@ class PulumiServiceWebhook: Stack
    4. For Deployment webhooks, provide the stack to deploy in the format `project/stack`.
 5. Choose which events you would like to receive using groups and filters menu.
 
-![Stack webhooks form](/docs/deployments/ui-webhooks.png)
-
 ## Event Filtering
 
 Event filtering allows you to choose which events should be delivered to each webhook. You may choose to receive
@@ -217,9 +216,9 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/deployments/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
 
-Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings).
+Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/).
 
 ### Generic JSON Webhooks
 

@@ -43,7 +43,7 @@ To synchronize Pulumi's recorded state with the actual state of your cloud resou
 $ pulumi refresh
 ```
 
-You can also refresh and apply your desired state in a single step using `pulumi up --refresh`. For automated drift detection and remediation on a schedule, Pulumi Cloud provides built-in [drift detection](/docs/deployments/deployments/drift/).
+You can also refresh and apply your desired state in a single step using `pulumi up --refresh`. For automated drift detection and remediation on a schedule, Pulumi Cloud provides built-in [drift detection](/docs/deployments/concepts/drift/).
 
 For a detailed explanation of refresh behavior, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
 

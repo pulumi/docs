@@ -5,14 +5,15 @@ h1: "Schedules"
 meta_desc: Schedule any Pulumi operation to occur at any time.
 meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
+- /docs/deployments/deployments/schedules/
 - /docs/pulumi-cloud/deployments/schedules/
 - /docs/platform/deployments/schedules/
 menu:
   deployments:
-    name: Schedules
-    parent: deployments-deployments
-    weight: 90
-    identifier: deployments-deployments-schedules
+    name: Scheduled operations
+    parent: deployments-concepts
+    weight: 70
+    identifier: deployments-concepts-schedules
 ---
 
 Scheduled Deployments in Pulumi Cloud introduce a robust capability to automate cloud operations, enabling more control over when and how infrastructure updates are applied. This feature is ideal for teams looking to enhance operational efficiency by automating routine tasks and ensuring that changes are made during optimal times, such as off-peak hours or predetermined maintenance windows.
@@ -24,17 +25,13 @@ Users can easily define schedules for any stack with Pulumi Deployments configur
 In order to set up a deployment schedule in the Pulumi Cloud console, follow these steps:
 
 <!-- markdownlint-disable ol-prefix -->
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
 2. Navigate to the Stack > Settings > Schedules
-
-![Schedule](/docs/deployments/deployments/schedule.png)
-
 3. Select "Raw operation"
 4. Select from the drop-down the type of operation you would like to schedule
 5. Set the schedule using a cron expression
 6. Save the Schedule
 <!-- markdownlint-enable ol-prefix -->
-![Populated Schedule in the UI](/docs/deployments/deployments/raw-schedule.png)
 
 ### Setting it up in the API
 
