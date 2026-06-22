@@ -30,6 +30,7 @@ tiers:
                   - Unlimited projects, stacks, and environments
                   - Unlimited updates and history
                   - 500 free deployment minutes
+                  - Pulumi Neo with 5M free tokens/mo
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
@@ -44,7 +45,7 @@ tiers:
               features:
                   - Up to 10 users
                   - Secure collaboration and CI/CD
-                  - AI assistance with Pulumi Neo
+                  - Neo code reviews and Slack integration
                   - Resource search
                   - OIDC and Org Access Tokens
                   - Webhooks
@@ -68,6 +69,7 @@ tiers:
               features:
                   - Unlimited users
                   - SAML/SSO and RBAC
+                  - Neo scheduled tasks
                   - Internal developer platform (IDP)
                   - Audit logs
                   - Drift detection and remediation
@@ -569,6 +571,41 @@ comparison_table:
                   - content: $3/M tokens
                   - content: $3/M tokens
                   - content: $3/M tokens
+              - title: Neo in the CLI
+                link: /docs/ai/pulumi-cli/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: MCP & CLI Integrations
+                link: /docs/ai/integrations/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Neo code reviews
+                link: /docs/ai/pull-requests/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Slack integration
+                link: /docs/ai/integrations/slack/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Scheduled tasks
+                link: /docs/ai/automations/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
           ## Pulumi Workflow table
           - header: Internal Developer Platform
             icon: custom/pulumi-idp
