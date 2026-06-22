@@ -64,6 +64,12 @@ You can also use an arbitrary directory like `~/.zsh/completion/` and then add i
 fpath=(~/.zsh/completion $fpath)
 ```
 
+Then save the completion script to a file in that directory:
+
+```shell
+pulumi gen-completion zsh > ~/.zsh/completion/_pulumi
+```
+
 Make sure `compinit` is loaded or do it by adding in `~/.zshrc`:
 
 ```shell
