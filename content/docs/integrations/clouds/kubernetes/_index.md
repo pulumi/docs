@@ -62,7 +62,7 @@ Start new Kubernetes projects from a pre-built template:
 
 [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) is a centralized service for managing secrets, configuration, and short-lived credentials. It integrates with Kubernetes to deliver ESC-managed values into cluster workloads.
 
-- [Kubernetes cluster access](/docs/esc/guides/kubernetes-cluster-access/) — centrally manage kubeconfig files and cluster credentials for `kubectl`, `helm`, and Pulumi programs.
+- [Kubernetes cluster access](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) — centrally manage kubeconfig files and cluster credentials for `kubectl`, `helm`, and Pulumi programs.
 - [Kubernetes External Secrets Operator integration](/docs/esc/integrations/kubernetes/external-secrets-operator/) — sync Pulumi ESC values into Kubernetes secrets via External Secrets Operator.
 - [Kubernetes Secret Store CSI driver integration](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) — mount ESC values into pods via the Secret Store CSI driver.
 

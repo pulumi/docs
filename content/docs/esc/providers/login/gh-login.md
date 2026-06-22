@@ -21,7 +21,7 @@ installation access token that can be used to access the GitHub API and reposito
 
 The provider works as a GitHub App to produce an installation access token for the specified GitHub account, as described
 in "[Authenticating as a GitHub App installation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation)".
-Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/github-actions/),
+Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/integrate-with/github-actions/),
 the [GitHub CLI](https://cli.github.com/), etc. The token will expire after 1 hour.
 
 ## App Registration
