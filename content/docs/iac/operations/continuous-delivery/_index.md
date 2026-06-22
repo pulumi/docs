@@ -38,7 +38,7 @@ Running into failures with Pulumi in CI/CD? See the [CI/CD troubleshooting guide
 
 The most common way to run Pulumi in CI/CD follows a trunk-based development model, where work merges into a single main branch and deployments flow outward from there:
 
-1. **Open a pull request.** The pipeline runs [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and posts the summary of proposed changes for review. Optionally, a [Review Stack](/docs/deployments/deployments/review-stacks/) provisions an ephemeral environment for the pull request so reviewers can exercise the change before it merges.
+1. **Open a pull request.** The pipeline runs [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and posts the summary of proposed changes for review. Optionally, a [Review Stack](/docs/deployments/concepts/review-stacks/) provisions an ephemeral environment for the pull request so reviewers can exercise the change before it merges.
 1. **Merge to the main branch.** The pipeline runs [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) to deploy the change to an environment that receives continuous delivery, such as a shared development or staging environment.
 1. **Promote to production.** Pushing a git tag — or otherwise marking a release — triggers a deployment to production, keeping production updates deliberate and traceable.
 
@@ -63,7 +63,7 @@ You can remove even that static secret with [OpenID Connect (OIDC)](/docs/admini
 Pulumi also provides its own continuous delivery mechanisms:
 
 - [Pulumi Deployments](/docs/deployments/) — runs Pulumi operations on Pulumi-hosted infrastructure, triggered by git pushes, the CLI, or the API.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request and destroyed when it closes.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request and destroyed when it closes.
 - [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) — manages Pulumi stacks from within a Kubernetes cluster using a custom resource.
 
 ## Third-party CI/CD systems

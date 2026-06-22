@@ -142,7 +142,7 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 ### How does Pulumi handle drift detection?
 
-[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/) that runs on a configurable cadence and can auto-remediate.
+[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/) that runs on a configurable cadence and can auto-remediate.
 
 ## Next steps
 

@@ -79,7 +79,7 @@ The repository owner is not configurable, as that must match the VCS integration
 
 After you've configured your project settings, you will be able to configure the behavior of Deployments, including when to trigger new Deployments and environment variables to include with your updates.
 
-A full description of each setting is available in [Pulumi Deployment Settings](/docs/deployments/deployments/using/settings).
+A full description of each setting is available in [Pulumi Deployment Settings](/docs/deployments/concepts/settings).
 
 ## Run your first deployment
 
@@ -106,7 +106,7 @@ In summary, after going through this wizard you will have:
 Now that you have a stack deploying through Pulumi Deployments, here's where to go next:
 
 * **Authenticate to your cloud without static credentials.** Use [Pulumi ESC](/docs/esc/) to broker short-lived cloud credentials via [OpenID Connect (OIDC)](/docs/esc/guides/configuring-oidc/), then reference that environment from your stack so deployments authenticate to [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), or [GCP](/docs/esc/guides/configuring-oidc/gcp/) without long-lived secrets.
-* **Tune your deployment settings.** Review the full set of [deployment settings](/docs/deployments/deployments/using/settings/) — pre-run commands, environment variables, OIDC, and executor options.
-* **Preview changes on pull requests.** Enable [review stacks](/docs/deployments/deployments/review-stacks/) to spin up ephemeral infrastructure for each pull request.
-* **Detect and remediate drift.** Turn on [drift detection](/docs/deployments/deployments/drift/) to catch changes made outside of Pulumi.
-* **Run operations on a schedule.** Configure [scheduled deployments](/docs/deployments/deployments/schedules/) to run `pulumi up`, `preview`, or `refresh` automatically.
+* **Tune your deployment settings.** Review the full set of [deployment settings](/docs/deployments/concepts/settings/) — pre-run commands, environment variables, OIDC, and executor options.
+* **Preview changes on pull requests.** Enable [review stacks](/docs/deployments/concepts/review-stacks/) to spin up ephemeral infrastructure for each pull request.
+* **Detect and remediate drift.** Turn on [drift detection](/docs/deployments/concepts/drift/) to catch changes made outside of Pulumi.
+* **Run operations on a schedule.** Configure [scheduled deployments](/docs/deployments/concepts/schedules/) to run `pulumi up`, `preview`, or `refresh` automatically.

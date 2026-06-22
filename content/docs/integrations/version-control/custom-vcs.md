@@ -13,7 +13,7 @@ aliases:
 - /docs/version-control/custom-vcs/
 ---
 
-Custom VCS integrations let you connect any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/deployments/), including self-hosted and third-party servers. You configure webhooks on your VCS server to notify Pulumi Cloud when commits are pushed, and Pulumi automatically triggers deployments for matching stacks.
+Custom VCS integrations let you connect any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/concepts/), including self-hosted and third-party servers. You configure webhooks on your VCS server to notify Pulumi Cloud when commits are pushed, and Pulumi automatically triggers deployments for matching stacks.
 
 Unlike the first-party [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [Bitbucket](/docs/integrations/version-control/bitbucket/) integrations, Custom VCS uses [ESC environments](/docs/esc/) for credential management and requires manual webhook configuration. It supports push-to-deploy but does not support pull request comments, commit status checks, or review stacks.
 
@@ -178,7 +178,7 @@ Configure deployment behavior for Custom VCS-backed stacks under **Stack** > **S
 |---|---|
 | Push to deploy | Automatically deploy when commits are pushed to the configured branch |
 | Path filters | Only trigger deployments when changed files match specified glob patterns (e.g., `infrastructure/**`). Requires the webhook payload to include the `changedFiles` field. |
-| Tag triggers | Deploy when a tag matching the configured [tag filters](/docs/deployments/deployments/using/settings/#tag-filtering) is pushed (e.g., `v*`). Requires the webhook to send a `tag_push` event with the `tag` field. |
+| Tag triggers | Deploy when a tag matching the configured [tag filters](/docs/deployments/concepts/settings/#tag-filtering) is pushed (e.g., `v*`). Requires the webhook to send a `tag_push` event with the `tag` field. |
 
 ### Selecting a repository and branch
 

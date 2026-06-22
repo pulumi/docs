@@ -27,11 +27,11 @@ sections:
   - icon: rocket-launch
     heading: Deployments
     description: Managed CI/CD platform with git integration, automated drift detection and remediation, ephemeral review stacks for pull requests, scheduled operations, and TTL-based cleanup for temporary infrastructure.
-    link: /docs/deployments/deployments/
+    link: /docs/deployments/concepts/
   - icon: bell
     heading: Webhooks
     description: Trigger external systems and workflows in response to stack updates, deployments, drift detection, and policy violations. Integrates with Slack, Microsoft Teams, or custom webhooks.
-    link: /docs/deployments/webhooks/
+    link: /docs/deployments/concepts/webhooks/
 
 - type: flat
   heading: Have questions?

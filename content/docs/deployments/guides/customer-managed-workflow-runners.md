@@ -11,7 +11,7 @@ menu:
     identifier: deployments-guides-customer-managed-runners
 ---
 
-Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/deployments/runners/).
+Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
 
 {{% notes "info" %}}
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
@@ -99,4 +99,4 @@ The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC 
 
 ## Providing credentials and configuring runners
 
-For the credentials your runners need to manage infrastructure, see [Runners](/docs/deployments/deployments/runners/#providing-credentials-to-workflow-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/deployments/deployments/runners/#configuration-reference).
+For the credentials your runners need to manage infrastructure, see [Runners](/docs/deployments/concepts/customer-managed-runners/#providing-credentials-to-workflow-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).
