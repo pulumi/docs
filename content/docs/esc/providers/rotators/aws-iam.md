@@ -64,6 +64,24 @@ values:
             fn::secret: <secret key>
 ```
 
+### Alternative: static credentials
+
+Instead of an OIDC login, you can supply static AWS credentials directly to the rotator's `login`. The managing credentials must have permission to rotate the target user's access keys:
+
+```yaml
+# my-org/rotators/key-rotator
+values:
+  iam:
+    fn::rotate::aws-iam:
+      inputs:
+        region: us-west-2
+        login:
+          accessKeyId: <access key>
+          secretAccessKey:
+            fn::secret: <secret key>
+        userArn: arn:aws:iam::<account id>:user/<username>
+```
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
@@ -157,3 +175,20 @@ The minimum permissions required for the rotation role are:
 | `accessKeyId`     | string | The AWS access key ID                          |
 | `secretAccessKey` | string | The AWS secret access key, stored as a secret. |
 | `createdAt`       | string | Creation timestamp (in RFC3339 format)         |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails with an access-denied error | The login identity lacks the IAM permissions required to manage the user's access keys. | Grant the rotation role the [minimum permissions](#permissions) for the target `userArn`, then rotate again. |
+| Rotation fails with a limit error when creating an access key | The IAM user already has the maximum of two access keys, none managed by ESC. | Delete an unused access key on the IAM user so the rotator can create a new one, or seed the existing keys via the `state` input. |
+| OIDC login fails when opening the environment | The trust policy or audience on the rotation role is misconfigured. | Verify the OIDC trust relationship per [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/). |
+
+<!-- TODO(SME): verify exact IAM error strings (e.g. LimitExceeded, AccessDenied) for the aws-iam rotator. -->
+
+## Related
+
+* [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+* [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS via OIDC or static credentials
+* [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/) - Set up OIDC between Pulumi Cloud and AWS
+* [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators

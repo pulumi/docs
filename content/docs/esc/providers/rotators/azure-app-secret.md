@@ -57,6 +57,26 @@ values:
             fn::secret: <secret-value>
 ```
 
+### Alternative: static credentials
+
+Instead of an OIDC login, you can authenticate with a client secret by supplying `clientSecret` to the rotator's `login`:
+
+```yaml
+# my-org/rotators/secret-rotator
+values:
+  appSecret:
+    fn::rotate::azure-app-secret:
+      inputs:
+        login:
+          clientId: <your-client-id>
+          tenantId: <your-tenant-id>
+          subscriptionId: <your-subscription-id>
+          clientSecret:
+            fn::secret: <your-client-secret>
+        clientId: <target-app-client-id>
+        lifetimeInDays: 180
+```
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/azure/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
@@ -145,3 +165,20 @@ Owner access alone suffices only for **delegated** logins (a user identity). An 
 | `secretValue` | string | The client secret value, stored as a secret.                   |
 | `createdAt`   | string | [Optional] - The creation timestamp of the secret (RFC3339).   |
 | `expiresAt`   | string | [Optional] - The expiration timestamp of the secret (RFC3339). |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails with an authorization or insufficient-privileges error | The login identity lacks `Application.ReadWrite.All` (or `Application.ReadWrite.OwnedBy`) or is not an Owner of the target app registration. | Grant the required [Microsoft Graph permissions](#permissions) with admin consent, or add the identity as an Owner of the target app. |
+| Rotation fails for an application-only (OIDC) login that owns the app | Owner access alone is insufficient for application-only tokens. | Also grant `Application.ReadWrite.OwnedBy` with admin consent, as described in the [permissions](#permissions) note. |
+| New secrets expire sooner than expected | `lifetimeInDays` is unset or shorter than intended. | Set `lifetimeInDays` to the desired validity (default 180, maximum 730). |
+
+<!-- TODO(SME): verify exact Microsoft Graph error strings for the azure-app-secret rotator. -->
+
+## Related
+
+* [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+* [azure-login](/docs/esc/providers/login/azure-login/) - Authenticate with Azure via OIDC or a client secret
+* [Configuring OIDC for Azure](/docs/esc/guides/configuring-oidc/azure/) - Set up OIDC between Pulumi Cloud and Azure
+* [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators

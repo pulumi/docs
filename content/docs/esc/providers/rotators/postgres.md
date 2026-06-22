@@ -65,7 +65,7 @@ values:
               login: ${environments.rotatorExample.managingCredentials.awsLogin} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
               lambdaArn: arn:aws:lambda:aws-region:111111111111:function:PulumiEscSecretRotatorLambda-Function-xxxxxxx
           database: rotator_example_db
-          host: rotator-example-mysql.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com
+          host: rotator-example-postgres.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com
           port: 5432
           managingUser: ${environments.rotatorExample.managingCredentials.managingUser} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
         rotateUsers:
@@ -93,7 +93,22 @@ state:
     username: user2
 ```
 
-## Setup
+When you open the environment after a rotation, you should see output similar to the following:
+
+```json
+{
+  "dbRotator": {
+    "current": {
+      "username": "user1",
+      "password": "[secret]"
+    },
+    "previous": {
+      "username": "user2",
+      "password": "[secret]"
+    }
+  }
+}
+```
 
 ## Inputs
 
@@ -152,3 +167,21 @@ state:
 |------------|--------|-----------------------------------|
 | `username` | string | Username of user in the database. |
 | `password` | string | Password of user in the database. |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda) and set `database.connector`. |
+| Rotation fails with a permission or authentication error | The `managingUser` lacks privileges to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
+| Applications fail to authenticate after a rotation | Apps are reading the `previous` credentials, or rotation runs more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
+
+<!-- TODO(SME): verify exact error strings and the minimum PostgreSQL privileges required for the managing user. -->
+
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [Rotation connectors](/docs/esc/operations/rotation/) - Reach databases in a private network
+- [Database user setup](/docs/esc/operations/rotation/db-user-setup) - Prepare database users for rotation
+- [mysql rotator](/docs/esc/providers/rotators/mysql/) - Rotate credentials for a MySQL database
+- [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS for connector-based rotation
