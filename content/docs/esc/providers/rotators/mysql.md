@@ -173,10 +173,8 @@ When you open the environment after a rotation, you should see output similar to
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
 | Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda) and set `database.connector`. |
-| Rotation fails with a permission or authentication error | The `managingUser` lacks privileges to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
-| Applications fail to authenticate after a rotation | Apps are reading the `previous` credentials, or rotation runs more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
-
-<!-- TODO(SME): verify exact error strings and the minimum MySQL privileges required for the managing user. -->
+| Rotation fails with a permissions or authentication error | The `managingUser` may lack the privileges needed to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
+| Applications fail to authenticate after a rotation | Apps may be reading the `previous` credentials, or rotation may run more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
 
 ## Related
 

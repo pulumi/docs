@@ -212,11 +212,9 @@ And exactly one of:
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails to authenticate to Snowflake | The OIDC security integration is misconfigured, or the rotation service user lacks access. | Verify the `EXTERNAL_OAUTH` security integration values (issuer, JWKS URL, audience, allowed roles) and confirm the service user maps to the expected `login_name`. See [snowflake-login](/docs/esc/providers/login/snowflake-login/). |
-| Rotation fails with an insufficient-privileges error | The rotator role does not own or cannot alter the target user. | Grant the rotator role ownership of the target user (`GRANT OWNERSHIP ON USER ... TO ROLE ESC_ROTATOR`) and grant the role to the rotation service user. |
-| Applications fail to authenticate after a rotation | Applications are still using the rotated-out public key (`RSA_PUBLIC_KEY_2`). | Update applications to the `current` private key; the previous key remains valid as `RSA_PUBLIC_KEY_2` until the next rotation. |
-
-<!-- TODO(SME): verify exact Snowflake error strings and the minimum grants required for the rotator role. -->
+| Rotation fails to authenticate to Snowflake | The OIDC security integration may be misconfigured, or the rotation service user may lack access. | Verify the `EXTERNAL_OAUTH` security integration values (issuer, JWKS URL, audience, allowed roles) and confirm the service user maps to the expected `login_name`. See [snowflake-login](/docs/esc/providers/login/snowflake-login/). |
+| Rotation fails with a permissions error | The rotator role may not be able to alter the target user. | Confirm the rotator role can alter the target user, following the grants in [Configuring Snowflake for Key Rotation](#configuring-snowflake-for-key-rotation). |
+| Applications fail to authenticate after a rotation | Applications may still be using the rotated-out public key (`RSA_PUBLIC_KEY_2`). | Update applications to the `current` private key; the previous key remains valid as `RSA_PUBLIC_KEY_2` until the next rotation. |
 
 ## Related
 

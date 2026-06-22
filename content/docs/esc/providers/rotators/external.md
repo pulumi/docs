@@ -411,11 +411,9 @@ If no state is provided, the rotator passes `"state": null` on the first rotatio
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails with a 401 from your adapter | The JWT token failed verification, or your adapter rejected the `Authorization` header. | Verify your adapter fetches keys from `https://api.pulumi.com/oidc/.well-known/jwks` and validates the `audience` against your adapter's URL. See [JWT Authentication](/docs/esc/providers/secrets/external/#jwt-authentication). |
-| Rotation fails with a body-hash mismatch | Your adapter modified or re-encoded the request body before hashing it. | Compute the SHA-256 hash over the raw request bytes and compare against the `body_hash` claim without altering the body. |
-| Applications fail after a rotation | The adapter rotated the in-use credential instead of an inactive one. | Implement the [dual-secret strategy](#recommended-dual-secret-strategy) so applications always read `current` while the inactive credential is rotated. |
-
-<!-- TODO(SME): verify exact JWT/body-hash error responses surfaced by the external rotator. -->
+| Your adapter rejects the request as unauthorized | The JWT token may have failed verification, or your adapter may have rejected the `Authorization` header. | Verify your adapter fetches keys from `https://api.pulumi.com/oidc/.well-known/jwks` and validates the `audience` against your adapter's URL. See [JWT Authentication](/docs/esc/providers/secrets/external/#jwt-authentication). |
+| Your adapter reports a body-hash mismatch | Your adapter may have modified or re-encoded the request body before hashing it. | Compute the SHA-256 hash over the raw request bytes and compare against the `body_hash` claim without altering the body. |
+| Applications fail after a rotation | The adapter may have rotated the in-use credential instead of an inactive one. | Implement the [dual-secret strategy](#recommended-dual-secret-strategy) so applications always read `current` while the inactive credential is rotated. |
 
 ## Related
 

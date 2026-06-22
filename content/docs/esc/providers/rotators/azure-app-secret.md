@@ -170,11 +170,9 @@ Owner access alone suffices only for **delegated** logins (a user identity). An 
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails with an authorization or insufficient-privileges error | The login identity lacks `Application.ReadWrite.All` (or `Application.ReadWrite.OwnedBy`) or is not an Owner of the target app registration. | Grant the required [Microsoft Graph permissions](#permissions) with admin consent, or add the identity as an Owner of the target app. |
-| Rotation fails for an application-only (OIDC) login that owns the app | Owner access alone is insufficient for application-only tokens. | Also grant `Application.ReadWrite.OwnedBy` with admin consent, as described in the [permissions](#permissions) note. |
+| Rotation fails with a permissions error | The login identity may lack `Application.ReadWrite.All` (or `Application.ReadWrite.OwnedBy`), or may not be an Owner of the target app registration. | Grant the required [Microsoft Graph permissions](#permissions) with admin consent, or add the identity as an Owner of the target app. |
+| Rotation fails for an application-only (OIDC) login that owns the app | For application-only tokens, Owner access alone may not be sufficient. | Also grant `Application.ReadWrite.OwnedBy` with admin consent, as described in the [permissions](#permissions) note. |
 | New secrets expire sooner than expected | `lifetimeInDays` is unset or shorter than intended. | Set `lifetimeInDays` to the desired validity (default 180, maximum 730). |
-
-<!-- TODO(SME): verify exact Microsoft Graph error strings for the azure-app-secret rotator. -->
 
 ## Related
 

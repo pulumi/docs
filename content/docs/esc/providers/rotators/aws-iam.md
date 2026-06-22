@@ -180,11 +180,9 @@ The minimum permissions required for the rotation role are:
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails with an access-denied error | The login identity lacks the IAM permissions required to manage the user's access keys. | Grant the rotation role the [minimum permissions](#permissions) for the target `userArn`, then rotate again. |
-| Rotation fails with a limit error when creating an access key | The IAM user already has the maximum of two access keys, none managed by ESC. | Delete an unused access key on the IAM user so the rotator can create a new one, or seed the existing keys via the `state` input. |
-| OIDC login fails when opening the environment | The trust policy or audience on the rotation role is misconfigured. | Verify the OIDC trust relationship per [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/). |
-
-<!-- TODO(SME): verify exact IAM error strings (e.g. LimitExceeded, AccessDenied) for the aws-iam rotator. -->
+| Rotation fails with a permissions error | The login identity may lack the IAM permissions required to manage the user's access keys. | Grant the rotation role the [minimum permissions](#permissions) for the target `userArn`, then rotate again. |
+| Rotation fails when creating a new access key | The IAM user may already have the maximum number of access keys AWS allows, none managed by ESC. | Delete an unused access key on the IAM user so the rotator can create a new one, or seed the existing keys via the `state` input. |
+| OIDC login fails when opening the environment | The trust policy or audience on the rotation role may be misconfigured. | Verify the OIDC trust relationship per [Configuring OIDC for AWS](/docs/esc/guides/configuring-oidc/aws/). |
 
 ## Related
 
