@@ -82,6 +82,53 @@ fi
 WORKDIR="$(mktemp -d)"
 trap 'rm -rf "$WORKDIR"' EXIT
 cp -a "$SRC/." "$WORKDIR/"
+
+# 2a. DocFX/Javadoc SDKs (.NET, Java) ship NO root index.html — their landing page is
+# Hugo-generated and absent from the prebuilt output, so the bare version root would 404,
+# breaking both the entry URL and the version-selector's root fallback. Synthesize a small
+# landing that links each top-level namespace entry. Run BEFORE injection so the landing
+# also gets the loader/noindex/canonical. SDKs that already ship a root index.html (TypeDoc,
+# Sphinx) skip this block untouched.
+if [[ ! -f "$WORKDIR/index.html" ]]; then
+  links=""
+  for d in "$WORKDIR"/*/; do
+    [[ -d "$d" ]] || continue
+    name="$(basename "$d")"
+    case "$name" in _vassets|fonts|styles|_static|css|js|images|search) continue;; esac
+    if [[ -f "${d}index.html" ]]; then target="${name}/"
+    elif [[ -f "${d}${name}.html" ]]; then target="${name}/${name}.html"
+    else continue
+    fi
+    links+="    <li><a href=\"${target}\">${name}</a></li>"$'\n'
+  done
+  if [[ -n "$links" ]]; then
+    echo "publish-version: synthesizing root landing (prebuilt has no index.html)"
+    cat > "$WORKDIR/index.html" <<HTML
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${LABEL} ${VERSION} — API Reference</title>
+<style>
+  body { font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 48rem; margin: 3rem auto; padding: 0 1.25rem; color: #2b2235; }
+  h1 { font-size: 1.5rem; margin-bottom: .25rem; } h1 small { color: #6b6477; font-weight: 400; }
+  ul { padding-left: 1.2rem; } li { margin: .35rem 0; } a { color: #8b5cf6; }
+</style>
+</head>
+<body>
+<h1>${LABEL} <small>${VERSION}</small></h1>
+<p>Archived API reference. Select a namespace:</p>
+<ul>
+${links}</ul>
+</body>
+</html>
+HTML
+  else
+    echo "publish-version: WARNING — no root index.html and no namespace entries found; bare version root will 404" >&2
+  fi
+fi
+
 "$SCRIPT_DIR/inject-version-switcher.sh" --mode archive --tool "$TOOL" --version "$VERSION" \
   --live-root "$LIVE_ROOT" --src "$WORKDIR" --site "$SITE"
 
