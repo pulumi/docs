@@ -50,7 +50,7 @@ The Agile Manifesto in 2001 reorganized how teams built software: short iteratio
 
 ### The birth of DevOps (2007–2009)
 
-In 2007, Belgian engineer Patrick Debois grew frustrated with the gulf between developers and sysadmins on a government project and started organizing what would become DevOpsDays — the first event was held in Ghent in 2009. The same year, John Allspaw and Paul Hammond gave their famous "10+ Deploys Per Day: Dev and Ops Cooperation at Flickr" talk at Velocity, showing that high deploy frequency and stability could co-exist if Dev and Ops actually worked together.
+In 2007, Belgian engineer Patrick Debois grew frustrated with the gulf between developers and sysadmins on a government project and started organizing what would become DevOpsDays; the first event was held in Ghent in 2009. The same year, John Allspaw and Paul Hammond gave their famous "10+ Deploys Per Day: Dev and Ops Cooperation at Flickr" talk at Velocity, showing that high deploy frequency and stability could co-exist if Dev and Ops actually worked together.
 
 ### Cloud, containers, and CI/CD (2010s)
 

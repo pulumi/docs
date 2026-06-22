@@ -164,7 +164,7 @@ Both the cloud provider and the customer. The provider secures the physical infr
 
 ### What are the most common causes of cloud breaches?
 
-Misconfigurations. Public storage, IAM roles with overly broad permissions, open security groups, and leaked long-lived credentials account for the majority of incidents — far more than vulnerabilities in the cloud platforms themselves.
+Misconfigurations. Public storage, IAM roles with overly broad permissions, open security groups, and leaked long-lived credentials account for the majority of incidents, far more than vulnerabilities in the cloud platforms themselves.
 
 ### What is the shared responsibility model?
 
@@ -172,7 +172,7 @@ A formal split of security duties between the cloud provider and the customer. T
 
 ### What is the difference between cloud security and cybersecurity?
 
-Cybersecurity is the broader discipline of protecting any digital system. Cloud security is the specialization that focuses on workloads and data hosted in cloud environments, with extra emphasis on identity, API surfaces, and configuration — the areas where cloud differs most from on-premises.
+Cybersecurity is the broader discipline of protecting any digital system. Cloud security is the specialization that focuses on workloads and data hosted in cloud environments, with extra emphasis on identity, API surfaces, and configuration, the areas where cloud differs most from on-premises.
 
 ### Is the cloud more secure than on-premises infrastructure?
 
