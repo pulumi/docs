@@ -1,0 +1,70 @@
+{{/*
+    SOAI hero.
+
+    Dark rounded card. The headline and the circuit-line overlay share one
+    fixed-aspect "canvas" (mapped 1:1 to the Figma 1472x778 frame) so the lines
+    line up with the text precisely at every width; the circuit overlays the
+    text with mix-blend-mode:difference. Below, a split bracket card holds the
+    survey intro and the 5-item table of contents.
+
+    Params (.):
+    - eyebrow:  Top headline line (e.g. "State of").
+    - title:    Main headline (e.g. "Agentic Infrastructure"); split into word spans.
+    - year:     Bottom headline line (e.g. "2026").
+    - intro:    Intro paragraph (markdown).
+    - toc:      Slice of { num, label, anchor }.
+*/}}
+{{ $eyebrow := .eyebrow }}
+{{ $title := .title }}
+{{ $year := .year }}
+{{ $intro := .intro }}
+{{ $toc := .toc }}
+
+<section class="soai-hero relative isolate overflow-hidden rounded-lg bg-violet-950">
+
+    {{/* Headline + circuit overlay, locked to the same coordinate space. */}}
+    <div class="soai-hero__stage">
+        <div class="soai-hero__canvas">
+
+            <h1 class="soai-hero__headline">
+                {{ with $eyebrow }}<span class="soai-hero__eyebrow">{{ . }}</span>{{ end }}
+                {{ with $title }}
+                <span class="soai-hero__title">
+                    {{ range split . " " }}<span class="soai-hero__word">{{ . }}</span>{{ end }}
+                </span>
+                {{ end }}
+                {{ with $year }}<span class="soai-hero__year">{{ . }}</span>{{ end }}
+            </h1>
+
+            {{ partial "soai/rounded-plus.html" . }}
+
+            {{/* Overlay last so it paints on top of the headline (difference blend). */}}
+            {{ partial "soai/circuit-lines.html" . }}
+
+        </div>
+    </div>
+
+    {{/* Split bracket card: intro + table of contents. */}}
+    <div class="soai-hero__foot px-4 pb-10 sm:px-8 sm:pb-12 lg:px-16 lg:pb-16">
+        <div class="bracket-card bracket-card--dark">
+            <div class="bracket-card__inner grid grid-cols-1 gap-8 p-7 sm:p-10 md:grid-cols-2 md:gap-0 lg:p-12">
+                {{ with $intro }}
+                <div class="heading-2 m-0! font-display font-semibold leading-[1.1] tracking-tighter text-white md:pr-10 lg:pr-14">
+                    {{ . | markdownify }}
+                </div>
+                {{ end }}
+                {{ with $toc }}
+                <ol class="m-0 flex list-none flex-col gap-[22px] p-0 md:border-l md:border-violet-800 md:pl-10 lg:pl-14">
+                    {{ range . }}
+                    <li class="m-0 flex items-baseline gap-6">
+                        <span class="shrink-0 font-mono text-sm tracking-wider text-violet-500">{{ .num }}</span>
+                        <a href="#{{ .anchor }}" class="font-mono text-sm uppercase tracking-wider text-white no-underline hover:text-violet-500 hover:no-underline">{{ .label }}</a>
+                    </li>
+                    {{ end }}
+                </ol>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+</section>

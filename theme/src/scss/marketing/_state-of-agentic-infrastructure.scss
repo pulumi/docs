@@ -1,0 +1,391 @@
+// State of Agentic Infrastructure — survey results landing page.
+//
+// Util-resistant pieces only. Everything that Tailwind utilities can express
+// lives in the partials (layouts/partials/soai/*.html); this file holds the
+// reusable bracket card (4 rounded corner brackets), the rounded-plus 2x2
+// overview grid, the precisely-aligned hero, and the two server-rendered chart
+// primitives (horizontal bar and vertical column). Imported into main.scss
+// inside @layer components.
+//
+// Animation readiness: chart geometry is carried in the `--val` custom property
+// (width/height read from it) so a future scroll-reveal can animate 0 -> var(--val)
+// by toggling one class, with no markup change. Bracket arm length / inset are
+// likewise variables. The server-rendered output is the final resting state.
+
+// ---------------------------------------------------------------------------
+// Bracket card: bordered, rounded card with a small rounded bracket accent at
+// each of the 4 corners. The brackets share the card's border color (violet-500).
+// CSS pseudo-elements only give us 2 per element, so the card supplies the top
+// two (::before / ::after) and an inner wrapper supplies the bottom two. The
+// card must NOT be overflow-hidden or the brackets clip.
+// ---------------------------------------------------------------------------
+.bracket-card {
+    --bc-accent: var(--color-violet-500); // border + bracket stroke (shared)
+    --bc-bg: var(--color-violet-50);
+    --bc-bracket: 1.75rem; // bracket arm length
+    --bc-inset: -0.5rem;   // how far the bracket sits outside the corner
+    --bc-radius: 0.625rem; // bracket corner radius
+    --bc-stroke: 1px;
+
+    position: relative;
+    background: var(--bc-bg);
+    border: 1px solid var(--bc-accent);
+    border-radius: var(--radius-lg, 0.5rem);
+
+    // Top-left and top-right brackets.
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: var(--bc-inset);
+        width: var(--bc-bracket);
+        height: var(--bc-bracket);
+        border: var(--bc-stroke) solid var(--bc-accent);
+        pointer-events: none;
+    }
+
+    &::before {
+        left: var(--bc-inset);
+        border-right: 0;
+        border-bottom: 0;
+        border-top-left-radius: var(--bc-radius);
+    }
+
+    &::after {
+        right: var(--bc-inset);
+        border-left: 0;
+        border-bottom: 0;
+        border-top-right-radius: var(--bc-radius);
+    }
+
+    // Dark modifier (hero split card).
+    &--dark {
+        --bc-bg: var(--color-violet-950);
+    }
+}
+
+// Inner wrapper carries the page padding (so it spans the card edge-to-edge)
+// and supplies the bottom-left / bottom-right brackets.
+.bracket-card__inner {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: var(--bc-inset);
+        width: var(--bc-bracket);
+        height: var(--bc-bracket);
+        border: var(--bc-stroke) solid var(--bc-accent);
+        pointer-events: none;
+    }
+
+    &::before {
+        left: var(--bc-inset);
+        border-right: 0;
+        border-top: 0;
+        border-bottom-left-radius: var(--bc-radius);
+    }
+
+    &::after {
+        right: var(--bc-inset);
+        border-left: 0;
+        border-top: 0;
+        border-bottom-right-radius: var(--bc-radius);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Hero
+//
+// The headline and the circuit-line overlay must line up PRECISELY at every
+// width, so both live inside a single fixed-aspect "canvas" that maps 1:1 onto
+// the Figma 1472x778 frame. The canvas is a size container, so the headline is
+// positioned in % of the frame and sized in cqw (1cqw = 1% of canvas width) —
+// it scales in lockstep with the SVG (preserveAspectRatio=none fills the same
+// box). The stage crops the canvas to the headline band; the split card follows.
+// ---------------------------------------------------------------------------
+.soai-hero {
+    &__stage {
+        position: relative;
+        overflow: hidden;
+        // Crop the 1472x778 canvas to where the Figma split card begins (y=631).
+        aspect-ratio: 1472 / 631;
+    }
+
+    &__canvas {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1472 / 778;
+        container-type: size;
+        background: var(--color-violet-950);
+    }
+
+    // Circuit overlay — sits ON TOP of the headline and blends with difference
+    // (violet over dark bg, dark over the violet title). Fills the canvas 1:1.
+    &__circuit {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        mix-blend-mode: difference;
+
+        path {
+            fill: none;
+            stroke: var(--color-violet-500);
+            stroke-width: 1;
+        }
+    }
+
+    // Rounded-plus "star" accent, top-left (Figma 65,85 / 96sq in the frame).
+    &__star {
+        position: absolute;
+        left: 4.416%; // 65/1472
+        top: 10.925%; // 85/778
+        width: 6.522%; // 96/1472
+        z-index: 1;
+
+        path {
+            fill: none;
+            stroke: var(--color-violet-500);
+            stroke-width: 1;
+        }
+    }
+
+    // Headline: one real <h1>, positioned + sized to the Figma frame so the
+    // circuit lines weave through it precisely.
+    &__headline {
+        position: absolute;
+        left: 9.239%; // 136/1472
+        top: 20.051%; // 156/778
+        width: 75.408%; // 1110/1472
+        z-index: 1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.019cqw; // 15/1472
+        font-family: var(--font-mono);
+        text-transform: uppercase;
+    }
+
+    &__eyebrow,
+    &__year {
+        color: var(--color-white);
+        font-weight: 400;
+        font-size: 2.446cqw; // 36/1472
+        letter-spacing: 0.122cqw; // 1.8/1472
+        line-height: 1.1;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column; // forces "Agentic" / "Infrastructure" onto two lines
+        color: var(--color-violet-500);
+        font-weight: 200; // Monaspace Neon ExtraLight
+        font-size: 8.696cqw; // 128/1472
+        letter-spacing: -0.435cqw; // -6.4/1472
+        line-height: 1.1;
+    }
+
+    &__word {
+        display: block;
+    }
+
+    &__foot {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Overview: 2x2 grid whose divider reproduces the "star accent" — two opposite
+// rounded brackets (Figma: cell 1 = border-r + border-b + rounded inner corner;
+// cell 4 = border-t + border-l + rounded inner corner). Cells 2 and 3 carry no
+// border, so the two brackets meet at an OPEN center, exactly like the hero star.
+// ---------------------------------------------------------------------------
+.soai-overview {
+    --soai-plus-radius: 0.625rem; // 10px, matches the Figma borders arc
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
+
+    @include screen-md {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    &__cell {
+        padding: 0 0.25rem;
+
+        @include screen-md {
+            padding: 2.25rem 2.5rem;
+        }
+    }
+
+    @include screen-md {
+        &__cell--tl {
+            border-right: 1px solid var(--color-violet-500);
+            border-bottom: 1px solid var(--color-violet-500);
+            border-bottom-right-radius: var(--soai-plus-radius);
+        }
+        &__cell--br {
+            border-top: 1px solid var(--color-violet-500);
+            border-left: 1px solid var(--color-violet-500);
+            border-top-left-radius: var(--soai-plus-radius);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Horizontal bar chart (Q1, Q3 — later Q4,Q5,Q7,Q8,Q11,Q12,Q17).
+// Geometry is scaled so the longest bar fills ~90% of the track (the rest
+// leaves room for the trailing % label) and is carried in `--val`.
+// ---------------------------------------------------------------------------
+.soai-hbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 0.25rem 1.5rem;
+
+        @include screen-md {
+            grid-template-columns: 9rem 1fr;
+        }
+
+        @include screen-lg {
+            grid-template-columns: 13rem 1fr;
+        }
+    }
+
+    &__label {
+        @apply font-mono uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        color: var(--color-service-black);
+        text-align: left;
+
+        @include screen-md {
+            font-size: 0.875rem;
+            text-align: right;
+        }
+    }
+
+    &__meter {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        min-width: 0;
+    }
+
+    &__fill {
+        flex: 0 0 var(--val);
+        height: 2.5rem;
+        background: var(--color-violet-200);
+
+        @include screen-md {
+            height: 3.25rem;
+        }
+    }
+
+    &__pct {
+        @apply font-mono;
+        flex: 0 0 auto;
+        font-size: 0.875rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--color-service-black);
+
+        @include screen-md {
+            font-size: 1rem;
+        }
+    }
+
+    &__row--highlight {
+        .soai-hbar__fill {
+            background: var(--color-violet-primary);
+        }
+        .soai-hbar__pct {
+            color: var(--color-violet-primary);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Vertical column chart (Q2 — later Q6,Q13,Q14,Q18).
+// Heights are scaled so the tallest column reaches ~85% of the plot (leaving
+// headroom for the % label above each bar) and are carried in `--val`.
+// ---------------------------------------------------------------------------
+.soai-col {
+    &__plot {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        height: clamp(15rem, 34vw, 20rem);
+        border-bottom: 1px solid var(--color-gray-400);
+
+        @include screen-md {
+            gap: 1.5rem;
+        }
+    }
+
+    &__col {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    &__bar {
+        flex: 0 0 auto; // hold the explicit % height; don't let flex shrink it
+        width: 100%;
+        max-width: 6.5rem;
+        height: var(--val);
+        background: var(--color-violet-200);
+    }
+
+    &__pct {
+        @apply font-mono;
+        font-size: 0.875rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--color-service-black);
+    }
+
+    &__cats {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+
+        @include screen-md {
+            gap: 1.5rem;
+        }
+    }
+
+    &__cat {
+        @apply font-mono uppercase;
+        flex: 1;
+        text-align: center;
+        font-size: 0.625rem;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+        color: var(--color-service-black);
+
+        @include screen-md {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__col--highlight .soai-col__bar {
+        background: var(--color-violet-primary);
+    }
+    &__col--highlight .soai-col__pct {
+        color: var(--color-violet-primary);
+    }
+}

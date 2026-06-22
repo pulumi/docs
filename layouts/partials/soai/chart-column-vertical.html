@@ -1,0 +1,33 @@
+{{/*
+    SOAI vertical column chart (Q2 — later Q6,Q13,Q14,Q18).
+
+    Columns render in the authored (scale) order — never sorted. Heights are
+    scaled so the tallest column reaches ~85% of the plot (leaving headroom for
+    the % label floating above each bar) and are carried in the `--val` custom
+    property for animation readiness. `percent` is the authoritative geometry
+    input — never derived from counts.
+
+    Params (.): question dict with .options = [{ label, percent, highlight? }].
+*/}}
+{{ $opts := .options }}
+
+{{ $max := 0.0 }}
+{{ range $opts }}{{ if gt (float .percent) $max }}{{ $max = float .percent }}{{ end }}{{ end }}
+{{ if eq $max 0.0 }}{{ $max = 1.0 }}{{ end }}
+
+<div class="soai-col">
+    <div class="soai-col__plot">
+        {{ range $opts }}
+        {{ $val := mul (div (float .percent) $max) 85.0 }}
+        <div class="soai-col__col{{ if .highlight }} soai-col__col--highlight{{ end }}">
+            <span class="soai-col__pct">{{ .percent }}%</span>
+            <span class="soai-col__bar" style="--val: {{ printf "%.1f" $val }}%"></span>
+        </div>
+        {{ end }}
+    </div>
+    <div class="soai-col__cats">
+        {{ range $opts }}
+        <span class="soai-col__cat">{{ .label }}</span>
+        {{ end }}
+    </div>
+</div>
