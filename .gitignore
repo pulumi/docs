@@ -128,6 +128,7 @@ _vendor/
 /.vale-findings.json
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
+/.readthrough-findings.json
 
 .doctrees/
 .buildinfo
