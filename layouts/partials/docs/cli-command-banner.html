@@ -1,11 +1,23 @@
 {{- $version := "" -}}
 {{- $toolLabel := "" -}}
+{{- $vdocsTool := "" -}}
+{{- $vdocsLiveRoot := "" -}}
 {{- if eq .Params.cli_tool "pulumi" -}}
     {{- $version = readFile "/static/latest-version" -}}
     {{- $toolLabel = "Pulumi CLI" -}}
+    {{- $vdocsTool = "pulumi-cli" -}}
+    {{- $vdocsLiveRoot = "/docs/iac/cli/commands/" -}}
 {{- end -}}
 {{- if $version -}}
 <p class="cli-command-version">
     Generated for {{ $toolLabel }} <code>v{{ $version }}</code>.
 </p>
+{{- /* Emit the evergreen version selector on the live (latest) CLI page. The loader
+       fails silent when no versions.json is published (e.g. PR previews), so this is
+       always safe to render. */ -}}
+{{- if $vdocsTool -}}
+{{- $rel := strings.TrimPrefix $vdocsLiveRoot .RelPermalink -}}
+<span data-vdocs-mount></span>
+<script async src="/js/versioned-docs.js" data-vdocs-tool="{{ $vdocsTool }}" data-vdocs-mode="latest" data-vdocs-version="v{{ $version }}" data-vdocs-live-root="{{ $vdocsLiveRoot }}" data-vdocs-rel="{{ $rel }}"></script>
+{{- end -}}
 {{- end -}}

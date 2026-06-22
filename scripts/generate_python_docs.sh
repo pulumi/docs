@@ -10,6 +10,12 @@
 #
 # Required env:
 #   PACKAGE  one of: pulumi, pulumi_policy, pulumi_esc_sdk
+#
+# Optional env:
+#   VERSION  pin the primary package ($PACKAGE) to this exact version instead of
+#            installing the latest. Used by versioned-docs backfill to rebuild docs at
+#            a historical release. Dependencies (e.g. pulumi for pulumi_policy) still
+#            install latest. Unset = current behavior (install latest of everything).
 
 set -o errexit -o pipefail
 set -x
@@ -37,7 +43,12 @@ pipenv run pip install sphinx-rtd-theme
 
 echo "Installing packages for ${PACKAGE} docs build: ${INSTALL[*]}"
 for p in "${INSTALL[@]}" ; do
-    pipenv run pip install --upgrade "${p}"
+    if [ -n "${VERSION:-}" ] && [ "${p}" = "${PACKAGE}" ]; then
+        echo "Pinning primary package ${p}==${VERSION}"
+        pipenv run pip install "${p}==${VERSION}"
+    else
+        pipenv run pip install --upgrade "${p}"
+    fi
 done
 
 mkdir -p "$(dirname "$OUTDIR")"

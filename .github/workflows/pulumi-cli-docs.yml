@@ -17,6 +17,17 @@ on:
         description: "Skip enabling auto-merge on the generated PR (for testing)"
         type: boolean
         default: false
+      publish_versioned:
+        description: "Also publish an immutable versioned snapshot to the archive bucket"
+        type: boolean
+        default: false
+      target_env:
+        description: "Versioned-docs publish target (when publishing)"
+        type: choice
+        options:
+          - production
+          - testing
+        default: production
 
 jobs:
   pull-request:
@@ -127,6 +138,50 @@ jobs:
             git push origin pulumi-cli-docs/${{ github.run_id }}-${{ github.run_number }}
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
+      # --- Versioned docs: archive this CLI release as an immutable snapshot. ---------
+      # Gated: runs only on an explicit dispatch (publish_versioned=true) or when the repo
+      # variable VERSIONED_DOCS_ENABLED == "true". Until that variable is set, real
+      # releases are completely unaffected. Runs AFTER the commit/push and is
+      # continue-on-error, so a publish hiccup never blocks the normal docs PR.
+      - name: Resolve versioned-docs publish target
+        id: vdocs
+        if: ${{ github.event.inputs.publish_versioned == 'true' || vars.VERSIONED_DOCS_ENABLED == 'true' }}
+        run: |
+          TARGET="${{ github.event.inputs.target_env || 'production' }}"
+          if [ "$TARGET" = "testing" ]; then
+            {
+              echo "role_arn=arn:aws:iam::571684982431:role/versioned-docs-publisher-testing"
+              echo "bucket=pulumi-docs-versioned-testing"
+              echo "distribution_id=E6LY02AG7JXEZ"
+              echo "site=https://www.pulumi-test.io"
+            } >> "$GITHUB_OUTPUT"
+          else
+            {
+              echo "role_arn=arn:aws:iam::388588623842:role/versioned-docs-publisher-production"
+              echo "bucket=pulumi-docs-versioned-production"
+              echo "distribution_id=${{ vars.VERSIONED_DOCS_PROD_DISTRIBUTION_ID }}"
+              echo "site=https://www.pulumi.com"
+            } >> "$GITHUB_OUTPUT"
+          fi
+      - name: Configure AWS credentials (versioned-docs publisher)
+        if: ${{ steps.vdocs.outputs.bucket != '' }}
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ steps.vdocs.outputs.role_arn }}
+          role-session-name: versioned-docs-cli-publish
+          aws-region: us-west-2
+      - name: Build site and publish versioned CLI snapshot
+        if: ${{ steps.vdocs.outputs.bucket != '' }}
+        continue-on-error: true
+        run: |
+          make build
+          ./scripts/versioned-docs/snapshot-cli-docs.sh \
+            --version "v${{ env.PULUMI_VERSION }}" \
+            --public ./public \
+            --bucket "${{ steps.vdocs.outputs.bucket }}" \
+            --distribution-id "${{ steps.vdocs.outputs.distribution_id }}" \
+            --site "${{ steps.vdocs.outputs.site }}"
   notify:
     if: failure()
     name: Send slack notification

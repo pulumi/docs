@@ -1,0 +1,130 @@
+#!/usr/bin/env bash
+#
+# publish-version.sh — publish one immutable docset snapshot to the permanent archive
+# bucket and update the per-tool manifest.
+#
+# Steps:
+#   1. Refuse if docs/versioned/{tool}/{version}/ already has objects (unless --force).
+#   2. Inject archive tags (noindex + canonical + loader) onto a COPY of --src.
+#   3. Sync the copy to the bucket with immutable Cache-Control (1 year).
+#   4. Read-modify-write versions.json (insert/dedupe the entry, set `latest`,
+#      sort newest-first), upload it with Cache-Control max-age=300.
+#   5. Invalidate the manifest (and, with --force, the version prefix) in CloudFront.
+#
+# Requires AWS credentials with write access to the bucket (the versioned-docs-publisher
+# role in CI, or a local admin profile) plus jq and the AWS CLI.
+#
+# Usage:
+#   publish-version.sh --tool python --version v3.150.0 --src ./out \
+#       --live-root /docs/reference/pkg/python/pulumi/ \
+#       --bucket pulumi-docs-versioned-testing \
+#       [--label "Python SDK"] [--distribution-id E123ABC] \
+#       [--site https://www.pulumi.com] [--date 2026-06-10T00:00:00Z] \
+#       [--no-mark-latest] [--force]
+#
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+TOOL=""; VERSION=""; SRC=""; LIVE_ROOT=""; BUCKET=""; LABEL=""
+DISTRIBUTION_ID=""; SITE="https://www.pulumi.com"; DATE=""
+MARK_LATEST="true"; FORCE="false"
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --tool)            TOOL="$2"; shift 2;;
+    --version)         VERSION="$2"; shift 2;;
+    --src)             SRC="$2"; shift 2;;
+    --live-root)       LIVE_ROOT="$2"; shift 2;;
+    --bucket)          BUCKET="$2"; shift 2;;
+    --label)           LABEL="$2"; shift 2;;
+    --distribution-id) DISTRIBUTION_ID="$2"; shift 2;;
+    --site)            SITE="$2"; shift 2;;
+    --date)            DATE="$2"; shift 2;;
+    --no-mark-latest)  MARK_LATEST="false"; shift;;
+    --force)           FORCE="true"; shift;;
+    *) echo "publish-version: unknown arg: $1" >&2; exit 2;;
+  esac
+done
+
+[[ -n "$TOOL" && -n "$VERSION" && -n "$SRC" && -n "$LIVE_ROOT" && -n "$BUCKET" ]] \
+  || { echo "publish-version: --tool, --version, --src, --live-root, --bucket are required" >&2; exit 2; }
+[[ -d "$SRC" ]] || { echo "publish-version: src dir not found: $SRC" >&2; exit 2; }
+
+# Normalize: version carries a leading "v"; live root has leading + trailing slash.
+[[ "$VERSION" == v* ]] || VERSION="v$VERSION"
+[[ "$LIVE_ROOT" == /* ]] || LIVE_ROOT="/$LIVE_ROOT"
+[[ "$LIVE_ROOT" == */ ]] || LIVE_ROOT="$LIVE_ROOT/"
+[[ -n "$LABEL" ]] || LABEL="$TOOL"
+[[ -n "$DATE" ]] || DATE="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+VERSIONED_ROOT="/docs/versioned/${TOOL}/"
+PREFIX="docs/versioned/${TOOL}/${VERSION}/"          # S3 key prefix (mirrors the URL, no leading slash)
+VERSION_PATH="/docs/versioned/${TOOL}/${VERSION}/"   # URL path
+MANIFEST_KEY="docs/versioned/${TOOL}/versions.json"
+IMMUTABLE_CC="public, max-age=31536000, immutable"
+MANIFEST_CC="public, max-age=300"
+
+echo "publish-version: tool=$TOOL version=$VERSION bucket=$BUCKET prefix=$PREFIX mark_latest=$MARK_LATEST force=$FORCE"
+
+# 1. Refuse to overwrite an existing immutable snapshot unless --force.
+existing_count="$(aws s3api list-objects-v2 --bucket "$BUCKET" --prefix "$PREFIX" --max-items 1 \
+  --query 'length(Contents || `[]`)' --output text 2>/dev/null || echo 0)"
+if [[ "$existing_count" != "0" && "$existing_count" != "None" ]]; then
+  if [[ "$FORCE" != "true" ]]; then
+    echo "publish-version: REFUSING — objects already exist under $PREFIX (pass --force to overwrite)" >&2
+    exit 1
+  fi
+  echo "publish-version: --force set; overwriting existing $PREFIX"
+fi
+
+# 2. Inject archive tags onto a copy (never mutate the caller's --src).
+WORKDIR="$(mktemp -d)"
+trap 'rm -rf "$WORKDIR"' EXIT
+cp -a "$SRC/." "$WORKDIR/"
+"$SCRIPT_DIR/inject-version-switcher.sh" --mode archive --tool "$TOOL" --version "$VERSION" \
+  --live-root "$LIVE_ROOT" --src "$WORKDIR" --site "$SITE"
+
+# 3. Sync to the bucket with immutable Cache-Control. aws s3 sync infers Content-Type
+#    from file extensions and is available everywhere (CI + local), so we use it rather
+#    than depending on s5cmd being installed in the doc-gen workflows.
+sync_args=(--no-progress --cache-control "$IMMUTABLE_CC")
+[[ "$FORCE" == "true" ]] && sync_args+=(--delete)
+aws s3 sync "$WORKDIR/" "s3://${BUCKET}/${PREFIX}" "${sync_args[@]}"
+
+# 4. Manifest read-modify-write.
+existing_manifest="$(aws s3 cp "s3://${BUCKET}/${MANIFEST_KEY}" - 2>/dev/null || true)"
+[[ -n "$existing_manifest" ]] || existing_manifest='{}'
+
+updated_manifest="$(printf '%s' "$existing_manifest" | jq \
+  --arg tool "$TOOL" --arg label "$LABEL" --arg liveRoot "$LIVE_ROOT" \
+  --arg versionedRoot "$VERSIONED_ROOT" --arg version "$VERSION" \
+  --arg date "$DATE" --arg path "$VERSION_PATH" --arg markLatest "$MARK_LATEST" '
+  ( . // {} ) as $m
+  | {
+      tool: $tool, label: $label, liveRoot: $liveRoot, versionedRoot: $versionedRoot,
+      versions: (
+        ( [ { version: $version, date: $date, path: $path, latest: ($markLatest == "true") } ]
+          + ( ($m.versions // []) | map(select(.version != $version)) ) )
+        | ( if $markLatest == "true" then map(.latest = (.version == $version)) else . end )
+        | sort_by(.date) | reverse
+      )
+    }
+')"
+
+printf '%s' "$updated_manifest" | jq -e . >/dev/null  # validate JSON before upload
+printf '%s' "$updated_manifest" | aws s3 cp - "s3://${BUCKET}/${MANIFEST_KEY}" \
+  --content-type "application/json" --cache-control "$MANIFEST_CC"
+
+# 5. CloudFront invalidation (belt-and-braces; the 300s manifest TTL already bounds staleness).
+if [[ -n "$DISTRIBUTION_ID" ]]; then
+  paths=("/${MANIFEST_KEY}")
+  [[ "$FORCE" == "true" ]] && paths+=("${VERSION_PATH}*")
+  aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" \
+    --paths "${paths[@]}" --query 'Invalidation.Id' --output text \
+    | sed 's/^/publish-version: invalidation /'
+else
+  echo "publish-version: no --distribution-id; skipping invalidation (manifest TTL is 300s)"
+fi
+
+echo "publish-version: DONE — $VERSION available at https://www.pulumi.com${VERSION_PATH}"
