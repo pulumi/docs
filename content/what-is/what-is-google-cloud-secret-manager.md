@@ -104,7 +104,7 @@ Understanding and addressing these challenges and considerations is key to effec
 
 ## Conclusion
 
-Secret Manager solves storage and access control, but it deliberately leaves the operational hard parts to you: it does not rotate secrets on its own, and it does not log secret access until you turn that logging on and pay for it. The security of your setup therefore lives less in the service itself than in the rotation policies, IAM scoping, and audit configuration you build around it. Treat Secret Manager as the secure vault, and treat those surrounding practices as the part you actually own.
+Secret Manager solves storage and access control, but it deliberately leaves the operational hard parts to you: it does not rotate secrets on its own, and it does not log secret access until you turn that logging on and pay for it. The security of your setup lives less in the service itself than in the rotation policies, IAM scoping, and audit configuration you build around it. Treat Secret Manager as the secure vault, and treat those surrounding practices as the part you actually own.
 
 To manage Secret Manager secrets as code alongside the rest of your Google Cloud infrastructure, see [deploying and managing Google Secret Manager secrets](/registry/packages/gcp/api-docs/secretmanager/secret/) with Pulumi.
 

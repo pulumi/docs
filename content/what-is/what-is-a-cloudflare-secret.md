@@ -138,9 +138,9 @@ Addressing these challenges and considerations requires a thoughtful approach to
 
 ## Conclusion  
 
-The thing to notice about Cloudflare secrets is that their convenience is also their boundary: they are encrypted environment variables scoped to a Worker, which makes them simple to use but ties each secret to a single execution context. The hard part of secrets management isn't storing one value safely, it's governing many of them across Workers, teams, and other clouds without losing track of who can read what. If you're integrating Cloudflare into a larger estate, treat the Worker secret as one storage backend among several and decide early how rotation, access control, and external secret stores fit together, rather than retrofitting that structure once the number of secrets has already grown.
+The thing to notice about Cloudflare secrets is that their convenience is also their boundary: they are encrypted environment variables scoped to a Worker, which makes them convenient but ties each secret to a single execution context. The hard part of secrets management isn't storing one value safely, it's governing many of them across Workers, teams, and other clouds without losing track of who can read what. If you're integrating Cloudflare into a larger estate, treat the Worker secret as one storage backend among others and decide early how rotation, access control, and external secret stores fit together, rather than retrofitting that structure once the number of secrets has already grown.
 
-To manage Cloudflare secrets alongside the rest of your infrastructure as code, see the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are some examples of how to create a Cloudflare secret in several supported programming languages:
+To manage Cloudflare secrets alongside the rest of your infrastructure as code, see the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are examples of how to create a Cloudflare secret in the supported programming languages:
 
 ```bash
 $ pulumi config set secrets-demo --secret
@@ -247,6 +247,6 @@ func main() {
 {{% /choosable %}}
 
 - **Get started tutorial**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
-- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

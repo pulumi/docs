@@ -95,7 +95,7 @@ After deployment, you can verify the lifecycle configuration in the AWS Manageme
 
 ## Wrapping up
 
-The point of defining lifecycle rules in Pulumi rather than clicking through the console is that expiration becomes a property of your infrastructure, not a one-time chore someone has to remember. The rule lives in version control alongside the bucket it governs, so every environment gets the same retention behavior, and a drifted or deleted policy shows up in your next preview instead of as a surprise bill months later. Storage cleanup stops being an operational task you schedule and becomes a guarantee the code enforces.
+The point of defining lifecycle rules in Pulumi rather than clicking through the console is that expiration becomes a property of your infrastructure, not a one-time chore someone has to remember. The rule lives in version control alongside the bucket it governs, so every environment gets the same retention behavior, and a drifted or deleted policy surfaces the next time you run `pulumi refresh` and preview instead of as a surprise bill months later. Storage cleanup stops being an operational task you schedule and becomes a guarantee the code enforces.
 
 ## Additional use cases for S3 automation with Pulumi
 

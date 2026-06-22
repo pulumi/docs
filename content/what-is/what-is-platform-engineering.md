@@ -156,6 +156,6 @@ Washington Trust Bank modernized its software development and infrastructure pra
 
 ## Conclusion
 
-The defining move in platform engineering is not building shared infrastructure, it's treating that infrastructure as a product with developers as its customers. A central team that owns shared tooling but skips the product mindset, the defined developer customer, and the commitment to maintained golden paths is just a renamed ops team, and it will hit the same bottlenecks. The discipline pays off when self-service is genuinely the lowest-friction path, so guardrails are something developers move through rather than wait on. Get that right and the platform becomes the route teams choose, not the one they route around.
+The defining move in platform engineering is not building shared infrastructure, it's treating that infrastructure as a product with developers as its customers. A central team that owns shared tooling but skips the product mindset, the defined developer customer, and the commitment to maintained golden paths is no more than a renamed ops team, and it will hit the same bottlenecks. The discipline pays off when self-service is genuinely the lowest-friction path, so guardrails are something developers move through rather than wait on. Get that right and the platform becomes the route teams choose, not the one they route around.
 
 [Get started with Pulumi](/docs/get-started) to build the reusable components and policy as code your golden paths run on.

@@ -13,7 +13,7 @@ authors: ["scott-lowe"]
 
 Configuration management is a systems engineering process for handling changes to a system's functionality, performance, and attributes in a way that preserves the system's integrity. Put more simply, it's the process of maintaining and controlling the desired state of a system to make sure it is configured and operating the way you expect it to be.
 
-Although configuration management originated outside the technology space, the term is now frequently used to refer to the process of managing and maintaining the desired state of various IT elements, such as networks, servers, operating systems, clusters of servers, or pieces of software. As such, it's not uncommon to see the usage of terms like _network configuration management_, _software configuration management_, or _server configuration management_ to qualify the scope of a configuration management tool or project. Other common terms used include _server orchestration_ and _IT automation_.
+Although configuration management originated outside the technology space, the term is now frequently used to refer to the process of managing and maintaining the desired state of IT elements, such as networks, servers, operating systems, clusters of servers, or pieces of software. As such, it's not uncommon to see the usage of terms like _network configuration management_, _software configuration management_, or _server configuration management_ to qualify the scope of a configuration management tool or project. Other common terms used include _server orchestration_ and _IT automation_.
 
 Configuration management encompasses three broad aspects of managing and maintaining the desired state of the systems:
 

@@ -59,7 +59,7 @@ For teams managing tens or hundreds of cloud resources that change once every fe
 
 ## How does infrastructure as code work?
 
-At its core, infrastructure as code follows a simple loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there. You declare the end state, and the tool figures out the rest.
+At its core, infrastructure as code follows a single loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there. You declare the end state, and the tool figures out the rest.
 
 A typical workflow looks like this:
 

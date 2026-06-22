@@ -138,7 +138,7 @@ const nginx = new k8s.apps.v1.Deployment("nginx", {
 export const kubeconfig = cluster.kubeconfig;
 ```
 
-Every field in that program is typed: misspell `replicas` or pass a string where a number belongs and the program fails at compile time, not at `kubectl apply` time. Getting from zero to a running cluster is three commands:
+Every field in that TypeScript program is typed: misspell `replicas` or pass a string where a number belongs and the program fails at compile time, not at `kubectl apply` time. (Python and YAML programs are typed too, but field-name checking happens at runtime rather than compile time.) Getting from zero to a running cluster is three commands:
 
 1. **Create a project.** `pulumi new aws-typescript` scaffolds the program, then `npm install @pulumi/eks @pulumi/kubernetes` adds the cluster and Kubernetes SDKs.
 1. **Preview the change.** `pulumi preview` shows the full plan (cluster, node group, IAM, Deployment) before anything is created.
@@ -167,7 +167,7 @@ Most teams use a combination: a general IaC tool for the cloud-and-cluster layer
 
 Misconfiguration, not exotic exploits, drives most Kubernetes security incidents, and misconfiguration is exactly what IaC makes checkable before it reaches a cluster. The controls stack up in layers:
 
-* **Scan before merge.** Static scanners (Trivy, Checkov) run against rendered manifests on every commit and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
+* **Scan before merge.** Static scanners like Trivy and Checkov run against rendered manifests in CI and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
 * **Enforce policy in two places.** In CI, [policy as code](/docs/insights/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
 * **Keep secret material out of code and Git.** The IaC program defines *which* secrets a workload references; the values live in [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager and are pulled at deploy time.
 * **Use per-workload cloud identity.** IRSA on EKS, Workload Identity on GKE, and Microsoft Entra Workload ID on AKS replace long-lived static credentials with scoped, rotatable, auditable identities, all declared in the same IaC program as the workloads that use them.
@@ -195,7 +195,7 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
 * **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format (`ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles) so adoption can be incremental without re-authoring the source artifacts.
-* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) include reference programs covering Workload Identity, managed addons, and other cluster patterns.
+* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) cover each provider along with Helm and Kustomize support, architecture templates, and ESC integration.
 * **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
 * **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.

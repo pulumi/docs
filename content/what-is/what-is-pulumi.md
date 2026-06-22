@@ -178,9 +178,9 @@ The platform provides comprehensive documentation, tutorials, and learning resou
 
 ## Conclusion
 
-The choice to use general-purpose programming languages is not a convenience feature; it is what lets the rest of software engineering follow infrastructure into the cloud. Once your infrastructure is real code, your tests, package managers, code review, and policy checks apply to it without translation, which is a capability that templating languages structurally cannot offer no matter how many functions they bolt on.
+The choice to use general-purpose programming languages is not a convenience feature; it's what lets the rest of software engineering follow infrastructure into the cloud. Once your infrastructure is real code, your tests, package managers, code review, and policy checks apply to it without translation, which is a capability that templating languages structurally cannot offer no matter how many functions they bolt on.
 
-That distinction matters most now, when AI can generate infrastructure faster than any team can manually review it. The bottleneck shifts from writing infrastructure to governing it, and the platforms that treat infrastructure as software already have the testing, policy, and state machinery to keep that speed from outrunning your controls. If you remember one thing from this article, it is that infrastructure as software is less about which language you type and more about which engineering disciplines you get to reuse.
+That distinction matters most now, when AI can generate infrastructure faster than any team can manually review it. The bottleneck shifts from writing infrastructure to governing it, and the platforms that treat infrastructure as software already have the testing, policy, and state machinery to keep that speed from outrunning your controls. If you remember one thing from this article, it's that infrastructure as software is less about which language you type and more about which engineering disciplines you get to reuse.
 
 [Get started with Pulumi](/docs/get-started/) to see this in your own stack.
 

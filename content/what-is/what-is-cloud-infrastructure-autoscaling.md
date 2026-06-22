@@ -159,7 +159,7 @@ A model that forecasts future load using historical data and scales out in advan
 
 ### Can I autoscale stateful workloads?
 
-Read replicas and stateless components of stateful systems can autoscale. Primary database instances usually cannot, because adding or removing a primary requires explicit failover logic. The newer serverless database tier (Aurora Serverless v2, DynamoDB on-demand, Azure SQL serverless, Spanner autoscaler) provides autoscaled state by handling the underlying scaling operations (failover, resharding, or compute resizing depending on the service) inside the managed service.
+Read replicas and stateless components of stateful systems can autoscale. Primary database instances generally cannot, because adding or removing a primary requires explicit failover logic. The newer serverless database tier (Aurora Serverless v2, DynamoDB on-demand, Azure SQL serverless, Spanner autoscaler) provides autoscaled state by handling the underlying scaling operations (failover, resharding, or compute resizing depending on the service) inside the managed service.
 
 ### What's the relationship between HPA, VPA, and Cluster Autoscaler?
 

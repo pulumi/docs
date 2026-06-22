@@ -265,6 +265,6 @@ To address these challenges, you may consider using external secret management t
 
 ### Conclusion
 
-The thing to internalize is that a Kubernetes Secret is a storage and distribution primitive, not an encryption boundary. Base64 is encoding, namespace-scoped RBAC is the only built-in access control, and there is no versioning, rotation, or audit trail in the box. Treating the native Secret as "secure by default" is where most real exposures start. So the practical decision is not whether to use Kubernetes Secrets, but what you layer on top: encryption at rest in etcd, tight RBAC, and an external system when you need rotation, cross-namespace sharing, or an audit history.
+The thing to internalize is that a Kubernetes Secret is a storage and distribution primitive, not an encryption boundary. Base64 is encoding, namespace-scoped RBAC is the only built-in access control, and there is no versioning, rotation, or audit trail in the box. Treating the native Secret as "secure by default" is where most real exposures start. The practical decision is not whether to use Kubernetes Secrets, but what you layer on top: encryption at rest in etcd, tight RBAC, and an external system when you need rotation, cross-namespace sharing, or an audit history.
 
 For encrypting values so they never appear in plain text in your state file, see Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/). The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

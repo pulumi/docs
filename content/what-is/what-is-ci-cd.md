@@ -70,7 +70,7 @@ To build an effective CI/CD pipeline, platform and development teams must adopt 
 * **Deploy stable environments** - Automate setting up and deploying to different environments such as development, QA, pre-production, and production.
 * **Perform routine deployments** - Deployments ought to be familiar enough for the team to execute them confidently at any time. Opting for frequent deployments with minimal changes reduces risks and allows straightforward rollback procedures when needed.
 * **Provide team-wide visibility** - Integrate monitoring tools to receive real-time application performance feedback, helping you promptly identify and resolve issues.
-The point of CI/CD isn't speed for its own sake. It's that small, frequently integrated changes are cheaper to test, easier to reason about, and safer to roll back than large infrequent ones. Each practice in this list works because it shrinks the gap between writing code and learning whether it works in production, which is where the cost of a mistake compounds. Treat your pipeline as the place that enforces that discipline, not just as automation that ships faster.
+The point of CI/CD isn't speed for its own sake. It's that small, frequently integrated changes are cheaper to test, easier to reason about, and safer to roll back than large infrequent ones. Each practice in this list works because it shrinks the gap between writing code and learning whether it works in production, which is where the cost of a mistake compounds. Treat your pipeline as the place that enforces that discipline, not merely as automation that ships faster.
 
 For a detailed exploration and steps to implement CI/CD and DevOps practices, refer to the following Pulumi tools and resources:
 
