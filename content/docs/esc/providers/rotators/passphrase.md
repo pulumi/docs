@@ -23,9 +23,9 @@ If you want to generate _random passwords_ use the [password rotator](/docs/esc/
 
 | Property     | Type    | Description                                                                |
 |--------------|---------|---------------------------------------------------------------------------|
-| `separator`  | string  | A single character used as the word separator. (default: `-`)             |
-| `capitalize` | boolean | If `true`, each generated word is capitalized. (default: `false`)         |
-| `length`     | int     | The number of words the generated passphrase will contain. (default: `5`) |
+| `separator`  | string  | A single character used as the word separator. (default: `-`)                  |
+| `capitalize` | boolean | Whether to capitalize each generated word. (default: `false`)                  |
+| `length`     | int     | The number of words in the generated passphrase (3–15). (default: `5`)         |
 
 ## Example
 
@@ -54,30 +54,26 @@ When you open the environment, you should see output similar to the following:
 }
 ```
 
-<!-- TODO(SME): verify the passphrase rotator output schema — confirm the current/previous shape and whether the generated value is nested under a property. -->
-
 ## State (Optional)
 
-| Property   | Type   | Description                                                                                    |
-|------------|--------|------------------------------------------------------------------------------------------------|
-| `current`  | string | Current generated passphrase. This is the newest and recommended value.                        |
-| `previous` | string | Previous generated passphrase. This value is still valid, but will be phased out next rotation. |
+| Property   | Type   | Description                              |
+|------------|--------|------------------------------------------|
+| `current`  | string | The most recently generated passphrase.  |
+| `previous` | string | The prior generated passphrase.          |
 
 ## Outputs
 
-| Property   | Type   | Description                                                                                    |
-|------------|--------|------------------------------------------------------------------------------------------------|
-| `current`  | string | Current generated passphrase, stored as a secret.                                              |
-| `previous` | string | Previous generated passphrase, stored as a secret.                                             |
+| Property   | Type   | Description                                              |
+|------------|--------|----------------------------------------------------------|
+| `current`  | string | The most recently generated passphrase, stored as a secret. |
+| `previous` | string | The prior generated passphrase, stored as a secret.      |
 
 ## Troubleshooting
 
 | Symptom | Likely cause | Resolution |
 |---------|--------------|------------|
-| Rotation fails with an invalid input error | `length` is set below the minimum or `separator` is more than a single character. | Set `length` to a positive integer and `separator` to a single character, then rotate again. |
+| Rotation fails with an invalid input error | `length` is outside 3–15, or `separator` is not a single character. | Set `length` within range and `separator` to a single character, then rotate again. |
 | The generated passphrase is shorter or longer than expected | `length` counts words, not characters. | Adjust `length` to the desired number of words; the character count varies with the words chosen. |
-
-<!-- TODO(SME): verify exact validation error strings and input bounds for the passphrase rotator. -->
 
 ## Related
 
