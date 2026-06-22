@@ -72,6 +72,7 @@ static/js
 /.verified-claims.json
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
+/.readthrough-findings.json
 /.vale-raw.json
 /.vale-findings.json
 /.content-review-*.json
