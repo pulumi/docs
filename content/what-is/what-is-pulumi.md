@@ -18,7 +18,7 @@ To understand Pulumi's significance, it's helpful to consider how infrastructure
 
 The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. However, these tools introduced their own challenges through domain-specific languages that required additional learning curves and offered limited expressiveness compared to general-purpose programming languages.
 
-Pulumi represents the next evolution in this space by embracing what the company calls "infrastructure as software." This approach enables teams to leverage the full software engineering ecosystem—including testing frameworks, package managers, IDEs, and development workflows—when managing their cloud infrastructure.
+Pulumi represents the next evolution in this space by embracing what the company calls "infrastructure as software." This approach enables teams to leverage the full software engineering ecosystem (including testing frameworks, package managers, IDEs, and development workflows) when managing their cloud infrastructure.
 
 ## Pulumi in the AI coding era
 
@@ -26,9 +26,9 @@ The emergence of AI-powered code generation tools is fundamentally transforming 
 
 While AI can accelerate code creation, it doesn't eliminate the need for governance, security, and operational best practices. In fact, as teams generate more code with potentially less deep understanding of every component, the importance of having robust infrastructure management practices becomes even more critical. Code still needs to run securely, cost-effectively, and in compliance with organizational policies regardless of how it was created.
 
-Pulumi serves as the essential building block for this AI-driven future—functioning as "Git for your cloud infrastructure." Just as version control systems became indispensable as software development scaled, infrastructure as code platforms have become crucial as AI accelerates both application and infrastructure development. The platform provides the governance layer that ensures AI-generated infrastructure follows organizational standards, security requirements, and cost controls.
+Pulumi serves as the essential building block for this AI-driven future, functioning as "Git for your cloud infrastructure." Just as version control systems became indispensable as software development scaled, infrastructure as code platforms have become crucial as AI accelerates both application and infrastructure development. The platform provides the governance layer that ensures AI-generated infrastructure follows organizational standards, security requirements, and cost controls.
 
-The combination of AI coding tools with Pulumi's platform capabilities, particularly through Internal Developer Platforms (IDPs), enables organizations to marry the speed and creativity of AI-assisted development with the reliability and governance required for production cloud environments. This approach prevents AI from becoming the new "ClickOps"—where rapid changes bypass proper controls and oversight.
+The combination of AI coding tools with Pulumi's platform capabilities, particularly through Internal Developer Platforms (IDPs), enables organizations to marry the speed and creativity of AI-assisted development with the reliability and governance required for production cloud environments. This approach prevents AI from becoming the new "ClickOps," where rapid changes bypass proper controls and oversight.
 
 ## How Pulumi works
 
@@ -92,7 +92,7 @@ The Automation API enables teams to embed infrastructure management directly int
 
 ### Policy as Code with Pulumi Policies
 
-Pulumi Policies provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments—whether created by humans or AI—meet organizational standards.
+Pulumi Policies provides policy as code capabilities that are both open source and free, unlike competitive offerings. Teams can write policies in Python, JavaScript, or Open Policy Agent (OPA) Rego to enforce security, compliance, and cost controls across their entire infrastructure. These policies run server-side and can provide automated remediation, ensuring that all infrastructure deployments (whether created by humans or AI) meet organizational standards.
 
 ### Pulumi ESC for secrets and configuration
 
@@ -178,13 +178,11 @@ The platform provides comprehensive documentation, tutorials, and learning resou
 
 ## Conclusion
 
-Pulumi represents a fundamental shift in how organizations approach cloud infrastructure management, moving beyond the limitations of domain-specific languages and templating systems to embrace the full power of modern software development practices. By treating infrastructure as software, Pulumi enables teams to leverage existing skills, tools, and workflows while providing the advanced capabilities required for modern cloud environments.
+The choice to use general-purpose programming languages is not a convenience feature; it's what lets the rest of software engineering follow infrastructure into the cloud. Once your infrastructure is real code, your tests, package managers, code review, and policy checks apply to it without translation, which is a capability that templating languages structurally cannot offer no matter how many functions they bolt on.
 
-The platform's combination of open source foundation, comprehensive registry ecosystem, and enterprise capabilities ensures that it can serve organizations of all sizes, from startups building their first cloud applications to large enterprises managing complex multi-cloud environments. The proven results achieved by customers demonstrate the real-world impact of adopting a software-centric approach to infrastructure management.
+That distinction matters most now, when AI can generate infrastructure faster than any team can manually review it. The bottleneck shifts from writing infrastructure to governing it, and the platforms that treat infrastructure as software already have the testing, policy, and state machinery to keep that speed from outrunning your controls. If you remember one thing from this article, it's that infrastructure as software is less about which language you type and more about which engineering disciplines you get to reuse.
 
-As cloud infrastructure continues to evolve in complexity and importance, particularly in an era where AI is accelerating code generation, Pulumi's approach to infrastructure as software positions it as a crucial tool for organizations seeking to maximize the value of their cloud investments while maintaining the agility and reliability required for modern business operations. The platform's emphasis on governance, security, and policy enforcement ensures that rapid development—whether human or AI-driven—doesn't compromise operational excellence.
-
-Whether you're a developer looking to apply your programming skills to infrastructure problems, an operations team seeking better collaboration with development teams, or an organization pursuing a comprehensive cloud engineering strategy in the AI era, Pulumi offers a path forward that embraces the best practices of modern software development while addressing the unique challenges of cloud infrastructure management at scale.
+[Get started with Pulumi](/docs/get-started/) to see this in your own stack.
 
 ## Learn more
 

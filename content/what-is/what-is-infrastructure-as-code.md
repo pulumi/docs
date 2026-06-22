@@ -59,11 +59,11 @@ For teams managing tens or hundreds of cloud resources that change once every fe
 
 ## How does infrastructure as code work?
 
-At its core, infrastructure as code follows a simple loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there---you declare the end state, and the tool figures out the rest.
+At its core, infrastructure as code follows a single loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there. You declare the end state, and the tool figures out the rest.
 
 A typical workflow looks like this:
 
-1. **Write the desired state as code.** Describe the resources you want---a network, a Kubernetes cluster, a database, an IAM policy---in a configuration file or program.
+1. **Write the desired state as code.** Describe the resources you want (a network, a Kubernetes cluster, a database, an IAM policy) in a configuration file or program.
 1. **Build a plan.** The IaC tool reads your code and constructs a model of the desired state.
 1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a *state file* that tracks the resources it manages.
 1. **Preview the changes.** Before anything happens, you get a diff showing exactly what will be created, updated, replaced, or deleted.
@@ -109,7 +109,7 @@ pulumi.export("bucket_name", bucket.bucket)
 
 {{% /choosable %}}
 
-Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift*---changes someone made out of band, such as editing a setting directly in the cloud console---and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
+Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift* (changes someone made out of band, such as editing a setting directly in the cloud console) and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
 
 ## How did infrastructure as code evolve?
 
@@ -164,7 +164,7 @@ The key elements of infrastructure as code are the same key elements you'd find 
 1. **An infrastructure as code mechanism:** For all practical purposes, in order to do infrastructure as code you need a tool or engine that is responsible for translating the IaC instructions into something the cloud provider APIs understand and can use. Infrastructure as code tools may be provided by and limited to a single cloud provider (AWS CloudFormation is one example), or may support multiple cloud providers. Tools may be limited to supporting YAML or JSON; may require the use of a specialized and proprietary domain-specific language (DSL); or may support the use of general purpose programming languages such as TypeScript/JavaScript, C#, Go, Python, and Java.
 1. **Version control:** When infrastructure is described as code, it can be checked into source control, versioned and code-reviewed using existing software engineering practices. Version control systems, like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/), enable you to see _what_ changes were made, _when_ the changes were made, and _who_ made the changes.
 1. **Tests:** As any critical system grows in complexity, people can start to feel nervous about making changes. With infrastructure as code, teams can write tests for their infrastructure to ensure its correctness. They can encode policies so that all provisioned infrastructure and its configurations [are compliant](/docs/iac/guides/testing/property-testing/). Once they're tested, infrastructure components can be reusable pieces of code that capture best practices and that can be shared across teams. No more reinventing the wheel.
-1. **CI/CD pipelines:** Assuming the infrastructure as code tool supports the functionality (most do), changes to infrastructure---found in changes to the code that defines the infrastructure---can be deployed using existing CI/CD tools, much in the same way CI/CD pipelines automatically build and deploy other forms of software.
+1. **CI/CD pipelines:** Assuming the infrastructure as code tool supports the functionality (most do), changes to infrastructure (found in changes to the code that defines the infrastructure) can be deployed using existing CI/CD tools, much in the same way CI/CD pipelines automatically build and deploy other forms of software.
 
 ## What benefits does infrastructure as code provide?
 
@@ -240,6 +240,8 @@ It's important to plan policies and security because one of the goals of infrast
 
 Any time you make a significant change in technology, you want to do it incrementally. You might start with a new service so you don't disrupt existing ones. Once you've figured out what successful patterns look like, go back and figure out how to transform some existing infrastructure. Pick a project where you'll start seeing value early and then iterate.
 
+The throughline is consistent across all of these steps: once your infrastructure changes faster than people can safely manage by hand, declaring it as code and letting an engine reconcile it stops being optional. Doing that in a language and workflow your team already knows is what keeps the practice working as your footprint grows.
+
 ## Frequently asked questions about infrastructure as code
 
 ### What is infrastructure as code in simple terms?
@@ -278,7 +280,7 @@ Pulumi's YouTube series, A Quick Bite of Cloud Engineering, tackled the topic of
 
 ## Learn more
 
-Pulumi offers a truly modern approach to infrastructure as code. With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know. [Get started today](/docs/get-started/).
+With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know, with a declarative engine, unit testing, and policy as code built in. [Get started today](/docs/get-started/).
 
 There are many other practices related to infrastructure as code, read more:
 

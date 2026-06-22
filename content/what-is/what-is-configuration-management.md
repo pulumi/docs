@@ -13,7 +13,7 @@ authors: ["scott-lowe"]
 
 Configuration management is a systems engineering process for handling changes to a system's functionality, performance, and attributes in a way that preserves the system's integrity. Put more simply, it's the process of maintaining and controlling the desired state of a system to make sure it is configured and operating the way you expect it to be.
 
-Although configuration management originated outside the technology space, the term is now frequently used to refer to the process of managing and maintaining the desired state of various IT elements---such as networks, servers, operating systems, clusters of servers, or pieces of software. As such, it's not uncommon to see the usage of terms like _network configuration management_, _software configuration management_, or _server configuration management_ to qualify the scope of a configuration management tool or project. Other common terms used include _server orchestration_ and _IT automation_.
+Although configuration management originated outside the technology space, the term is now frequently used to refer to the process of managing and maintaining the desired state of IT elements, such as networks, servers, operating systems, clusters of servers, or pieces of software. As such, it's not uncommon to see the usage of terms like _network configuration management_, _software configuration management_, or _server configuration management_ to qualify the scope of a configuration management tool or project. Other common terms used include _server orchestration_ and _IT automation_.
 
 Configuration management encompasses three broad aspects of managing and maintaining the desired state of the systems:
 
@@ -30,7 +30,7 @@ There are a number of configuration management tools on the market, but here are
 * [Puppet](https://www.puppet.com/)
 * [Salt](https://saltproject.io/)
 
-Although the specific implementation details vary from tool to tool---some of these tools use YAML while others use a domain-specific language (DSL)---there are a few common attributes that most configuration management tools share:
+Although the specific implementation details vary from tool to tool (some use YAML while others use a domain-specific language, or DSL), there are a few common attributes that most configuration management tools share:
 
 * **Declarative configuration**: Most configuration management tools follow a declarative approach where the user specifies the desired state, and the tool takes care of reaching that state.
 * **Idempotence**: Configuration management tools ensure idempotence, meaning that applying the same configuration multiple times yields the same result, promoting reliability.
@@ -72,6 +72,6 @@ Although configuration management (as a process) can apply to managing cloud inf
 
 ## Conclusion
 
-In the realm of technology, the effective management of software systems is crucial for stability and reliability. Configuration management plays a pivotal role in systematically handling changes, ensuring the integrity and functionality of a system. Utilizing tools like Ansible, Chef, or Puppet, organizations can streamline operations, enhance collaboration, and navigate the ever-evolving landscape of technology. These tools integrate well with dedicated infrastructure as code tools like Pulumi, allowing organizations to reap the benefits of automation through both infrastructure as code and configuration management. The combination of infrastructure as code and configuration management helps foster a robust and reliable digital infrastructure.
+The key distinction to carry away is what configuration management actually governs: the ongoing, in-place state of systems that already exist. That focus is why it sits beside infrastructure as code rather than in competition with it. IaC decides what gets provisioned, and configuration management keeps the running result aligned with the state you defined. It also explains why immutable infrastructure and containers quietly absorb some of these use cases, because rebuilding a system from scratch sidesteps the drift that configuration management was created to correct. Choosing between these approaches is less about which tool is better and more about whether you are managing systems in place or replacing them wholesale.
 
-Pulumi is open-source infrastructure as code in any programming language including TypeScript, Python, Go, C#, Java, and YAML. It supports all major clouds and over 120+ cloud and SaaS providers. [Try it out for free](/docs/get-started/).
+If you want to see the two work together, [deploy WordPress on AWS with Pulumi and Ansible](/blog/deploy-wordpress-aws-pulumi-ansible/).

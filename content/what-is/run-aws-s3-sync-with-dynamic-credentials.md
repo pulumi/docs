@@ -136,4 +136,4 @@ Pulumi ESC makes it easier than ever to tame infrastructure complexity, especial
 - Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
 - Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+[Join the Pulumi community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.

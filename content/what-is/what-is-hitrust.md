@@ -148,7 +148,7 @@ HITRUST originally stood for "Health Information Trust Alliance." The organizati
 
 ### Is HITRUST only for healthcare?
 
-No. HITRUST originated in healthcare and is still most common there, but the CSF is used well beyond it — financial services, public sector, and SaaS in particular. The harmonized control set works for any organization that has to satisfy multiple compliance regimes at once.
+No. HITRUST originated in healthcare and is still most common there, but the CSF is used well beyond it: financial services, public sector, and SaaS in particular. The harmonized control set works for any organization that has to meet multiple compliance regimes at once.
 
 ### Is HITRUST certification required for HIPAA compliance?
 

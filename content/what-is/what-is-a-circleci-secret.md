@@ -20,17 +20,22 @@ CircleCI secrets are sensitive information that must be protected to guarantee t
 - **Pipeline integration:** CircleCI secrets integrate into workflows, eliminating the need for complex setup. This built-in solution ensures automatic retrieval and management of credentials throughout the build, test, and deployment phases.
 - **Environment variable flexibility:** CircleCI secrets can be easily referenced as environment variables across workflows. This flexibility allows a single codebase to cater to various development environments, including Dev, QA, pre-prod, etc.
 - **Centralized version control:** CircleCI centralizes configuration files with secret references in the `.circleci` home directory. This approach removes the necessity of embedding sensitive data directly into your application.
-- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports—all without the hassle of installing additional complex systems.
+- **Native CircleCI tools for secrets management:** The [CircleCI CLI](https://github.com/CircleCI-Public/circleci-cli) and [CircleCI-Env-Inspector](https://github.com/CircleCI-Public/CircleCI-Env-Inspector) provide support for secrets management. The Inspector tool includes the ability to effortlessly create, rotate, audit, and generate reports, all without the hassle of installing additional complex systems.
 
 ## Getting started with CircleCI secrets
 
-### Define a CircleCI secret via the CLI
+### Define a CircleCI secret
 
-To complete the CLI Installation, visit the [official installation page](https://circleci.com/docs/local-cli/). Then, define a secret via the CLI as follows:
+CircleCI stores secrets as project environment variables or in [contexts](https://circleci.com/docs/contexts/). You add them in the CircleCI web app under Project Settings > Environment Variables, or programmatically through the [API v2](https://circleci.com/docs/api/v2/). For example, to add a project environment variable with the API:
 
 ```bash
-$ circleci api create-secret MY_PROJECT_NAME MY_ENV_VAR_NAME
+curl -X POST "https://circleci.com/api/v2/project/{project-slug}/envvar" \
+  -H "Circle-Token: $CIRCLECI_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"name": "API_KEY", "value": "your-secret-value"}'
 ```
+
+Once set, the variable is available to your jobs as `$API_KEY`.
 
 ### Reference secrets in CircleCI jobs
 
@@ -66,15 +71,17 @@ jobs:
             ./deploy_script.sh $API_KEY
 
 workflows:
-  version: 2
   build_and_deploy:
     jobs:
       - build
       - test
       - deploy:
-          # Specify the API_KEY secret for the deploy job
-          secrets:
-            - API_KEY
+          # Pass the context that holds API_KEY to the deploy job
+          context:
+            - production-secrets
+          requires:
+            - build
+            - test
 ```
 
 In this example:
@@ -82,7 +89,7 @@ In this example:
 1. Three jobs are defined: `build`, `test`, and `deploy`.
 2. The `deploy` job includes a deploy step that uses the `$API_KEY` secret. The secret is accessed securely without exposing its actual value in the configuration file.
 3. The `build_and_deploy` workflow is defined to execute the `build`, `test`, and `deploy` jobs in sequence.
-4. The `deploy` job is specified to use the `API_KEY` secret, ensuring that the secret is available for this specific job in the workflow.
+4. The `deploy` job is given the `production-secrets` context, which makes `API_KEY` available as an environment variable for that specific job in the workflow.
 
 This example illustrates how CircleCI secrets can be leveraged within jobs to securely access confidential data during different stages of your CI/CD pipeline. The secret is referenced in the job configuration without exposing its value in the code, enhancing security and maintaining best practices for handling sensitive information.
 
@@ -100,27 +107,36 @@ jobs:
     steps:
       - checkout
       # Your build steps here...
-
-workflows:
-  version: 2
-  build_and_deploy:
-    jobs:
-      - build
-      # Deploy step that uses the secret
-      - deploy:
+  deploy:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
           name: Deploy to Production
           command: |
             echo "Deploying to production..."
             # Use the API_KEY secret in your deployment script or command
             ./deploy_script.sh $API_KEY
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          # The context exposes API_KEY to the deploy job
+          context:
+            - production-secrets
+          requires:
+            - build
 ```
 
 In this example:
 
-- The `build` job is defined with its necessary steps.
-- The `build_and_deploy` workflow is defined, including the `build` job.
-- A subsequent job, named `deploy`, is included in the workflow. This job may represent the deployment step of your CI/CD process.
-- In the `deploy` job, you can reference the `API_KEY` secret using the `$API_KEY` syntax. The reference lets you securely pass the secret value to your deployment script or command.
+- The `build` and `deploy` jobs are each defined with their necessary steps.
+- The `build_and_deploy` workflow runs `build`, then runs `deploy` once `build` succeeds.
+- The `deploy` job is given the `production-secrets` context, which exposes the secrets in that context as environment variables.
+- Inside the `deploy` job, you reference the `API_KEY` secret using the `$API_KEY` syntax, which securely passes the value to your deployment script or command.
 
 Adjust the job names, workflow structure, and secret references according to your project requirements. This example demonstrates the basic concept of integrating a CircleCI secret into your workflow by referencing it in the configuration file.
 
@@ -131,7 +147,7 @@ Here are five best practices for managing CircleCI secrets:
 - **Adopt context-based management:** Organize your secrets using [contexts](https://circleci.com/docs/contexts/) in CircleCI. Group related secrets together in a context, making managing access controls and permissions easier. Contexts ensure that only authorized personnel can access specific secrets based on their roles or responsibilities.
 - **Use fine-grained access controls:** Set up fine-grained access controls and permissions for each context to restrict who can manage and utilize the secrets within that context. By carefully assigning permissions, you reduce the risk of unauthorized access to sensitive information, enhancing the overall security of your CI/CD process.
 - **Avoid hardcoding secrets in configuration files:** Refrain from hardcoding secret values directly in your configuration files. Instead, reference secrets using the `$SECRET_NAME` syntax. This approach keeps sensitive information separate from the codebase, minimizing the risk of accidental exposure and making it easier to update or rotate secrets without modifying the code.
-- **Rotate secrets:** Implement a regular rotation schedule for your secrets, especially for long-lived API keys or credentials. CircleCI provides an easy way to update secrets without modifying the configuration files. Note that OIDC can eliminate the need to store long-lived secrets in CircleCI. Learn [how to use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-connect-for-your-cloud-provider) to connect to AWS, GCP, ECR, and more.
+- **Rotate secrets:** Implement a regular rotation schedule for your secrets, especially for long-lived API keys or credentials. CircleCI provides an easy way to update secrets without modifying the configuration files. Note that OIDC can eliminate the need to store long-lived secrets in CircleCI. Learn [how to use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect to AWS, GCP, ECR, and more.
 - **Perform auditing and monitoring:** Implement auditing and monitoring mechanisms to track changes and usage of secrets within your CI/CD pipeline. CircleCI provides tools and logs that enable you to monitor when and how secrets are accessed.
 
 Check out [more security recommendations](https://circleci.com/docs/security-recommendations/) provided by CircleCI.
@@ -148,12 +164,8 @@ Addressing these challenges and considerations requires a thoughtful approach to
 
 ## Conclusion
 
-Securing secrets in CircleCI is crucial for reinforcing the security of your CI/CD pipelines without compromising efficiency. Properly managing sensitive data within these workflows is essential to maintain the confidentiality of critical information. CircleCI secrets streamline development processes, balancing security and operational agility.
+CircleCI secrets solve storage and access, but they leave you holding long-lived credentials that someone has to track, rotate, and audit as your contexts multiply. The more durable move is to remove the secret from the loop entirely: use OIDC so CircleCI exchanges a short-lived, job-scoped token at runtime instead of reading a stored key. Treat stored secrets as the exception you actively work to eliminate, not the default you accumulate.
 
-Now that you know about CircleCI secrets, take your cloud infrastructure management to the next level with Pulumi:
+To go further, learn how to [use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect CircleCI to your cloud provider without storing long-lived secrets.
 
-- **Connect [Pulumi IaC to CircleCI](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/circleci/)**. Use Pulumi Orbs to create, deploy, and manage cloud-native applications and infrastructure in your favorite language.
-- **Integrate Pulumi in your pipelines**: Review a comprehensive guide on how to [build cloud infrastructure from your CI pipeline with Pulumi](https://circleci.com/blog/reusable-ci-cd-components-with-circleci-orbs-and-pulumi/)
-- **Use Pulumi ESC**: Discover how to manage sensitive information in your cloud applications. Dive into Pulumi's [Secrets management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.
