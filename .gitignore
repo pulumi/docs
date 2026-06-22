@@ -117,7 +117,8 @@ _vendor/
 /.lint.log
 /.lint-comment.md
 # docs-review pre-computation artifacts the worker generates before the
-# review (claim extraction/verification, Vale, frontmatter, cross-sibling).
+# review (claim extraction/verification, Vale, frontmatter, cross-sibling,
+# readthrough).
 /.fetched-urls.json
 /.candidate-claims.json
 /.candidate-claims-regex.json
@@ -128,6 +129,7 @@ _vendor/
 /.vale-findings.json
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
+/.readthrough-findings.json
 
 .doctrees/
 .buildinfo
