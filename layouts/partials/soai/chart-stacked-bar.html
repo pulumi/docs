@@ -1,0 +1,40 @@
+{{/*
+    SOAI 100% stacked bar — part-to-whole for single-select questions
+    (Q9, Q10, Q15, Q16). One full-width bar split into segments, with a legend
+    below. The highlighted option takes violet-primary; the rest step down a
+    violet/gray ramp in order. Segment geometry is carried in `--val`.
+
+    Params (.): question dict with .options = [{ label, percent, highlight? }].
+*/}}
+{{ $opts := .options }}
+{{ $ramp := slice "var(--color-violet-400)" "var(--color-violet-300)" "var(--color-violet-200)" "var(--color-gray-300)" "var(--color-gray-200)" }}
+
+{{/* Total drives the normalization so segments fill the bar even if percents round to 99/101. */}}
+{{ $total := 0.0 }}
+{{ range $opts }}{{ $total = add $total (float .percent) }}{{ end }}
+{{ if eq $total 0.0 }}{{ $total = 1.0 }}{{ end }}
+
+{{/* Resolve a color per segment (highlight -> primary; others walk the ramp). */}}
+{{ $segs := slice }}
+{{ $ri := 0 }}
+{{ range $opts }}
+    {{ $color := "var(--color-violet-primary)" }}
+    {{ if not .highlight }}
+        {{ $color = index $ramp (mod $ri (len $ramp)) }}
+        {{ $ri = add $ri 1 }}
+    {{ end }}
+    {{ $segs = $segs | append (dict "label" .label "percent" .percent "color" $color) }}
+{{ end }}
+
+{{ $legendItems := slice }}
+{{ range $segs }}{{ $legendItems = $legendItems | append (dict "label" .label "color" .color "value" (printf "%d%%" .percent)) }}{{ end }}
+
+<div class="soai-stack">
+    <div class="soai-stack__bar" role="img" aria-label="{{ .heading }}">
+        {{ range $segs }}
+        {{ $w := mul (div (float .percent) $total) 100.0 }}
+        <span class="soai-stack__seg" style="{{ printf "--val:%.3f%%;background:%s;" $w .color | safeCSS }}" title="{{ .label }} {{ .percent }}%"></span>
+        {{ end }}
+    </div>
+    {{ partial "soai/legend.html" (dict "items" $legendItems) }}
+</div>

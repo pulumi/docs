@@ -108,7 +108,6 @@
 .soai-hero {
     &__stage {
         position: relative;
-        overflow: hidden;
         // Crop the 1472x778 canvas to where the Figma split card begins (y=631).
         aspect-ratio: 1472 / 631;
     }
@@ -386,6 +385,225 @@
         background: var(--color-violet-primary);
     }
     &__col--highlight .soai-col__pct {
+        color: var(--color-violet-primary);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Shared chart legend (stacked / grouped / diverging).
+// ---------------------------------------------------------------------------
+.soai-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__swatch {
+        flex: 0 0 auto;
+        width: 0.875rem;
+        height: 0.875rem;
+        border-radius: 3px;
+    }
+
+    &__label {
+        @apply font-mono uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.03em;
+        color: var(--color-service-black);
+    }
+
+    &__value {
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 100% stacked bar — part-to-whole (Q9, Q10, Q15, Q16). Legend below.
+// ---------------------------------------------------------------------------
+.soai-stack {
+    &__bar {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__seg {
+        flex: 0 0 var(--val);
+        height: 100%;
+        box-sizing: border-box;
+        border-right: 2px solid var(--color-violet-50);
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    .soai-legend {
+        margin-bottom: 0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Grouped column — two series, shared axis (Q13 -> Q14 hero chart).
+// ---------------------------------------------------------------------------
+.soai-grouped {
+    &__plot {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        height: clamp(15rem, 32vw, 20rem);
+        border-bottom: 1px solid var(--color-gray-400);
+
+        @include screen-md {
+            gap: 1.25rem;
+        }
+    }
+
+    &__group {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 0.25rem;
+
+        @include screen-md {
+            gap: 0.5rem;
+        }
+    }
+
+    &__col {
+        flex: 1;
+        max-width: 2.75rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__bar {
+        flex: 0 0 auto;
+        width: 100%;
+        height: var(--val);
+    }
+
+    &__pct {
+        @apply font-mono;
+        font-size: 0.6875rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--color-service-black);
+    }
+
+    &__cats {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+
+        @include screen-md {
+            gap: 1.25rem;
+        }
+    }
+
+    &__cat {
+        @apply font-mono uppercase;
+        flex: 1;
+        text-align: center;
+        font-size: 0.625rem;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+        color: var(--color-service-black);
+
+        @include screen-md {
+            font-size: 0.6875rem;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Diverging stacked bar — Likert agreement centered on neutral (Q19).
+// Each side is 50% of the track; segments pack toward the center line.
+// ---------------------------------------------------------------------------
+.soai-diverge {
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        padding: 0.875rem 0;
+
+        & + & {
+            border-top: 1px solid var(--color-violet-200);
+        }
+    }
+
+    &__label {
+        @apply font-display;
+        margin: 0;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.3;
+        color: var(--color-service-black);
+    }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__bars {
+        position: relative;
+        flex: 1;
+        display: flex;
+        height: 1.5rem;
+
+        // Center line (neutral midpoint).
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -0.25rem;
+            bottom: -0.25rem;
+            width: 1px;
+            background: var(--color-gray-400);
+        }
+    }
+
+    &__side {
+        flex: 0 0 50%;
+        min-width: 0;
+        display: flex;
+        height: 100%;
+
+        &--left {
+            justify-content: flex-end;
+        }
+        &--right {
+            justify-content: flex-start;
+        }
+    }
+
+    &__seg {
+        flex: 0 0 auto;
+        height: 100%;
+    }
+
+    &__agree {
+        @apply font-mono;
+        flex: 0 0 2.75rem;
+        text-align: right;
+        font-size: 0.875rem;
+        font-variant-numeric: tabular-nums;
         color: var(--color-violet-primary);
     }
 }

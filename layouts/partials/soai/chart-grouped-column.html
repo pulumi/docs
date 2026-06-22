@@ -1,0 +1,39 @@
+{{/*
+    SOAI grouped column — two series across the same categories (Q13 -> Q14:
+    share of infra code AI-generated, today vs. in six months). Heights scale to
+    the global max so both series share one 0->max axis; geometry in `--val`.
+
+    Params (.):
+    - series:     [name1, name2] (first = context/violet-200, second = highlight/violet-primary).
+    - categories: [{ label, values: [v1, v2] }].
+*/}}
+{{ $series := .series }}
+{{ $cats := .categories }}
+{{ $colors := slice "var(--color-violet-200)" "var(--color-violet-primary)" }}
+
+{{ $max := 0.0 }}
+{{ range $cats }}{{ range .values }}{{ if gt (float .) $max }}{{ $max = float . }}{{ end }}{{ end }}{{ end }}
+{{ if eq $max 0.0 }}{{ $max = 1.0 }}{{ end }}
+
+{{ $legendItems := slice }}
+{{ range $i, $name := $series }}{{ $legendItems = $legendItems | append (dict "label" $name "color" (index $colors (mod $i (len $colors)))) }}{{ end }}
+
+<div class="soai-grouped">
+    {{ partial "soai/legend.html" (dict "items" $legendItems) }}
+    <div class="soai-grouped__plot">
+        {{ range $cats }}
+        <div class="soai-grouped__group">
+            {{ range $i, $v := .values }}
+            {{ $h := mul (div (float $v) $max) 85.0 }}
+            <div class="soai-grouped__col">
+                <span class="soai-grouped__pct">{{ $v }}%</span>
+                <span class="soai-grouped__bar" style="{{ printf "--val:%.1f%%;background:%s;" $h (index $colors (mod $i (len $colors))) | safeCSS }}"></span>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="soai-grouped__cats">
+        {{ range $cats }}<span class="soai-grouped__cat">{{ .label }}</span>{{ end }}
+    </div>
+</div>

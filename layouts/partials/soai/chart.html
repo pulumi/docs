@@ -12,6 +12,12 @@
     {{ partial "soai/chart-bar-horizontal.html" . }}
 {{ else if eq $kind "column-vertical" }}
     {{ partial "soai/chart-column-vertical.html" . }}
+{{ else if eq $kind "stacked-bar" }}
+    {{ partial "soai/chart-stacked-bar.html" . }}
+{{ else if eq $kind "grouped-column" }}
+    {{ partial "soai/chart-grouped-column.html" . }}
+{{ else if eq $kind "diverging" }}
+    {{ partial "soai/chart-diverging.html" . }}
 {{ else }}
     {{ warnf "soai/chart.html: unknown chart kind %q (question %s)" $kind .id }}
 {{ end }}

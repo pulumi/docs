@@ -1,0 +1,63 @@
+{{/*
+    SOAI diverging stacked bar — Likert agreement (Q19). Each statement is a
+    5-point row (strongly disagree .. strongly agree) centered on the neutral
+    midpoint so the disagree side reads left and the agree side reads right.
+    Statements are authored in net-agreement order. The trailing label shows
+    total agreement (agree + strongly agree), the quotable figure.
+
+    Centering math: each half of the track represents `maxExt` points, where
+    maxExt is the largest of (SD + D + N/2) or (A + SA + N/2) across statements.
+    Disagree segments + half the neutral pack to the center from the left; the
+    other half of neutral + agree segments pack from the center to the right.
+
+    Params (.):
+    - scale:      5 labels [strongly disagree, disagree, neutral, agree, strongly agree].
+    - statements: [{ label, values: [SD, D, N, A, SA] }] (percentages).
+*/}}
+{{ $scale := .scale }}
+{{ $stmts := .statements }}
+{{ $colors := slice "var(--color-gray-500)" "var(--color-gray-300)" "var(--color-gray-200)" "var(--color-violet-400)" "var(--color-violet-primary)" }}
+
+{{/* Largest half-extent sets the scale so the widest row just fills its half. */}}
+{{ $maxExt := 0.0 }}
+{{ range $stmts }}
+    {{ $v := .values }}
+    {{ $n := float (index $v 2) }}
+    {{ $left := add (add (float (index $v 0)) (float (index $v 1))) (div $n 2.0) }}
+    {{ $right := add (add (float (index $v 3)) (float (index $v 4))) (div $n 2.0) }}
+    {{ if gt $left $maxExt }}{{ $maxExt = $left }}{{ end }}
+    {{ if gt $right $maxExt }}{{ $maxExt = $right }}{{ end }}
+{{ end }}
+{{ if eq $maxExt 0.0 }}{{ $maxExt = 1.0 }}{{ end }}
+
+{{ $legendItems := slice }}
+{{ range $i, $name := $scale }}{{ $legendItems = $legendItems | append (dict "label" $name "color" (index $colors (mod $i (len $colors)))) }}{{ end }}
+
+<div class="soai-diverge">
+    {{ partial "soai/legend.html" (dict "items" $legendItems) }}
+
+    {{ range $stmts }}
+    {{ $v := .values }}
+    {{ $sd := float (index $v 0) }}{{ $d := float (index $v 1) }}{{ $n := float (index $v 2) }}{{ $a := float (index $v 3) }}{{ $sa := float (index $v 4) }}
+    {{ $half := div $n 2.0 }}
+    {{ $agree := math.Round (add $a $sa) }}
+    <div class="soai-diverge__row">
+        <p class="soai-diverge__label">{{ .label }}</p>
+        <div class="soai-diverge__track">
+            <div class="soai-diverge__bars">
+                <div class="soai-diverge__side soai-diverge__side--left">
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $sd $maxExt) 100.0) (index $colors 0) | safeCSS }}"></span>
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $d $maxExt) 100.0) (index $colors 1) | safeCSS }}"></span>
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $half $maxExt) 100.0) (index $colors 2) | safeCSS }}"></span>
+                </div>
+                <div class="soai-diverge__side soai-diverge__side--right">
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $half $maxExt) 100.0) (index $colors 2) | safeCSS }}"></span>
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $a $maxExt) 100.0) (index $colors 3) | safeCSS }}"></span>
+                    <span class="soai-diverge__seg" style="{{ printf "width:%.3f%%;background:%s;" (mul (div $sa $maxExt) 100.0) (index $colors 4) | safeCSS }}"></span>
+                </div>
+            </div>
+            <span class="soai-diverge__agree">{{ $agree }}%</span>
+        </div>
+    </div>
+    {{ end }}
+</div>

@@ -45,7 +45,7 @@
     </div>
 
     {{/* Split bracket card: intro + table of contents. */}}
-    <div class="soai-hero__foot px-4 pb-10 sm:px-8 sm:pb-12 lg:px-16 lg:pb-16">
+    <div class="soai-hero__foot px-4 pb-10 sm:px-8 sm:pb-12 lg:px-16 lg:pb-16 lg:-mt-24">
         <div class="bracket-card bracket-card--dark">
             <div class="bracket-card__inner grid grid-cols-1 gap-8 p-7 sm:p-10 md:grid-cols-2 md:gap-0 lg:p-12">
                 {{ with $intro }}
@@ -54,7 +54,7 @@
                 </div>
                 {{ end }}
                 {{ with $toc }}
-                <ol class="m-0 flex list-none flex-col gap-[22px] p-0 md:border-l md:border-violet-800 md:pl-10 lg:pl-14">
+                <ol class="m-0 flex list-none flex-col gap-[22px] p-0 md:border-l md:border-violet-500 md:pl-10 lg:pl-14">
                     {{ range . }}
                     <li class="m-0 flex items-baseline gap-6">
                         <span class="shrink-0 font-mono text-sm tracking-wider text-violet-500">{{ .num }}</span>

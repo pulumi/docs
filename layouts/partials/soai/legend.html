@@ -1,0 +1,18 @@
+{{/*
+    SOAI chart legend — swatch + label (+ optional value) per series/segment.
+    Used by the stacked, grouped, and diverging charts.
+
+    Params (.):
+    - items: slice of { label, color, value? }. color is any CSS color value.
+*/}}
+{{ $items := .items }}
+{{ with $items }}
+<ul class="soai-legend">
+    {{ range . }}
+    <li class="soai-legend__item">
+        <span class="soai-legend__swatch" style="{{ printf "background:%s;" .color | safeCSS }}"></span>
+        <span class="soai-legend__label">{{ .label }}{{ with .value }} <span class="soai-legend__value">{{ . }}</span>{{ end }}</span>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
