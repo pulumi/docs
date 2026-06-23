@@ -1,7 +1,7 @@
 ---
 title: State of Agentic Infrastructure 2026
 meta_desc: How 510 platform, DevOps, and product engineers use AI agents in infrastructure today, and where they expect things to go over the next six months.
-# meta_image TBD — falls back to /logos/brand/og-default.png until a bespoke card exists.
+meta_image: /images/state-of-agentic-infrastructure/meta.png
 
 hero:
   eyebrow: State of
