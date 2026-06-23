@@ -81,6 +81,7 @@ module.exports = function (env, argv = {}) {
                                     outputStyle: "compressed",
                                     quietDeps: true,
                                     silenceDeprecations: ["import", "global-builtin"],
+                                    loadPaths: [path.join(__dirname, "node_modules")],
                                 },
                             },
                         },
