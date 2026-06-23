@@ -20,7 +20,7 @@
 {{ $intro := .intro }}
 {{ $toc := .toc }}
 
-<section class="soai-hero relative isolate overflow-hidden rounded-lg bg-violet-950">
+<section class="soai-hero relative isolate overflow-hidden rounded-lg bg-violet-950" data-soai-reveal>
 
     {{/* Headline + circuit overlay, locked to the same coordinate space. */}}
     <div class="soai-hero__stage">
@@ -30,7 +30,8 @@
                 {{ with $eyebrow }}<span class="soai-hero__eyebrow">{{ . }}</span>{{ end }}
                 {{ with $title }}
                 <span class="soai-hero__title">
-                    {{ range split . " " }}<span class="soai-hero__word">{{ . }}</span>{{ end }}
+                    {{ $ci := 0 }}
+                    {{ range split . " " }}<span class="soai-hero__word">{{ range split . "" }}<span class="soai-hero__char" style="--ci: {{ $ci }}">{{ . }}</span>{{ $ci = add $ci 1 }}{{ end }}</span>{{ end }}
                 </span>
                 {{ end }}
                 {{ with $year }}<span class="soai-hero__year">{{ . }}</span>{{ end }}

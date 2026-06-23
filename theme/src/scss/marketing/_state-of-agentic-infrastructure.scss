@@ -718,13 +718,13 @@
     &:hover,
     &:focus-within {
         .soai-sectionnav__title {
-            max-width: 16rem;
+            max-width: 18rem;
             opacity: 1;
         }
-
-      
-
-
+        .soai-sectionnav__num,
+        .soai-sectionnav__link {
+            background: white;
+        }
     }
 }
 
@@ -734,5 +734,134 @@
     .soai-sectionnav__title,
     .soai-sectionnav__num {
         transition: none;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Intro / reveal animations (progressive enhancement).
+//
+// JS adds `.soai-anim` to <html> only when IntersectionObserver is available
+// and the user hasn't asked for reduced motion, then adds `.is-inview` to each
+// [data-soai-reveal] element as it enters the viewport. Everything here is gated
+// on both, and the `.is-inview` state restores the natural resting style — so
+// without JS, or under reduced motion, the server-rendered page is untouched
+// and there is no layout shift.
+// ---------------------------------------------------------------------------
+@media (prefers-reduced-motion: no-preference) {
+    // -- Hero circuit lines: draw on from the left, staggered.
+    .soai-anim .soai-hero__circuit .soai-circuit-line {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 2s ease;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__circuit .soai-circuit-line {
+        stroke-dashoffset: 0;
+    }
+    @for $i from 1 through 8 {
+        .soai-anim .soai-hero__circuit .soai-circuit-line:nth-child(#{$i}) {
+            transition-delay: #{($i - 1) * 0.12}s;
+        }
+    }
+
+    // -- Hero star: spin in + draw the two arms.
+    .soai-anim .soai-hero__star {
+        opacity: 0;
+        transform: rotate(-150deg) scale(0.4);
+        transform-origin: center;
+        transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-hero__star .soai-star-arm {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 0.9s ease 0.15s;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__star {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__star .soai-star-arm {
+        stroke-dashoffset: 0;
+    }
+
+    // -- Hero eyebrow + year: clip-wipe in from the left.
+    .soai-anim .soai-hero__eyebrow,
+    .soai-anim .soai-hero__year {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transition: opacity 0.5s ease, clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__eyebrow,
+    .soai-anim .soai-hero.is-inview .soai-hero__year {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__eyebrow {
+        transition-delay: 0.2s;
+    }
+    // Year lands after the title finishes typing.
+    .soai-anim .soai-hero.is-inview .soai-hero__year {
+        transition-delay: 2s;
+    }
+
+    // -- Hero title: typed character by character (continuous index --ci).
+    .soai-anim .soai-hero__char {
+        opacity: 0;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__char {
+        opacity: 1;
+        transition: opacity 0.06s linear;
+        transition-delay: calc(0.5s + var(--ci) * 0.07s);
+    }
+
+    // -- Bracket cards: content + border stay visible; only the corner accents
+    // pop in from their corners as the card reveals.
+    .soai-anim .bracket-card::before,
+    .soai-anim .bracket-card::after,
+    .soai-anim .bracket-card__inner::before,
+    .soai-anim .bracket-card__inner::after {
+        transform: scale(0);
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+    }
+    .soai-anim .bracket-card::before {
+        transform-origin: top left;
+    }
+    .soai-anim .bracket-card::after {
+        transform-origin: top right;
+    }
+    .soai-anim .bracket-card__inner::before {
+        transform-origin: bottom left;
+    }
+    .soai-anim .bracket-card__inner::after {
+        transform-origin: bottom right;
+    }
+
+    // Chart cards: accents pop as they scroll into view (their own .is-inview).
+    .soai-anim .bracket-card.is-inview::before,
+    .soai-anim .bracket-card.is-inview::after,
+    .soai-anim .bracket-card.is-inview .bracket-card__inner::before,
+    .soai-anim .bracket-card.is-inview .bracket-card__inner::after {
+        transform: scale(1);
+    }
+
+    // Hero card: driven by the hero reveal, not its own scroll-in. It fades in
+    // as the title finishes typing, then the accents pop.
+    .soai-anim .bracket-card--dark {
+        opacity: 0;
+        transition: opacity 0.6s ease 1.5s;
+    }
+    .soai-anim .bracket-card--dark::before,
+    .soai-anim .bracket-card--dark::after,
+    .soai-anim .bracket-card--dark .bracket-card__inner::before,
+    .soai-anim .bracket-card--dark .bracket-card__inner::after {
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.9s;
+    }
+    .soai-anim .soai-hero.is-inview .bracket-card--dark {
+        opacity: 1;
+    }
+    .soai-anim .soai-hero.is-inview .bracket-card--dark::before,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark::after,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::before,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::after {
+        transform: scale(1);
     }
 }

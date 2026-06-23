@@ -2,6 +2,16 @@
 {{ end }}
 
 {{ define "main" }}
+{{/* Enable intro/reveal animations before the content paints (avoids a flash),
+     only when motion is welcome and IntersectionObserver is available. */}}
+<script>
+try {
+    if ('IntersectionObserver' in window &&
+        !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+        document.documentElement.classList.add('soai-anim');
+    }
+} catch (e) {}
+</script>
 <style>html { scroll-behavior: smooth; }</style>
 <div class="soai font-body">
 
@@ -34,6 +44,22 @@
 
 <script>
 (function () {
+    // Reveal-on-scroll intro animations. Adds `.is-inview` to each
+    // [data-soai-reveal] element as it enters view; the CSS is gated on
+    // `.soai-anim` so this is a no-op without motion/JS.
+    if (document.documentElement.classList.contains('soai-anim') && 'IntersectionObserver' in window) {
+        var revealEls = Array.prototype.slice.call(document.querySelectorAll('[data-soai-reveal]'));
+        if (revealEls.length) {
+            var reveal = function (el) { el.classList.add('is-inview'); };
+            var ro = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { reveal(e.target); ro.unobserve(e.target); }
+                });
+            }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
+            revealEls.forEach(function (el) { ro.observe(el); });
+        }
+    }
+
     var nav = document.querySelector('[data-soai-sectionnav]');
     if (!nav || !('IntersectionObserver' in window)) return;
     var track = nav.closest('.soai-sectionnav-track');
