@@ -14,6 +14,10 @@ How-to guides for consuming Pulumi ESC from the tools you already use. Each page
 
 For first-party ESC integrations (the Pulumi Service Provider, Automation API, the VS Code extension, the External Secrets Operator, and the Secrets Store CSI Driver), see [Integrations](/docs/esc/integrations/).
 
+## Adoption
+
+- [Migrating to OIDC](/docs/esc/guides/migrating-to-oidc/) — a solution architecture for delivering short-lived, OIDC-based cloud credentials to CI/CD, local development, and Pulumi Deployments from a single ESC environment.
+
 ## Authentication
 
 - [Configuring OIDC](/docs/esc/guides/configuring-oidc/) — set up OpenID Connect trust between ESC and AWS, Azure, GCP, Doppler, Infisical, or Vault.
