@@ -10,34 +10,12 @@
  * legible on archived SDK pages (native skins, where the fallbacks apply).
  */
 
-.vdocs-banner {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  padding: 0.5rem 0.9rem;
-  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: var(--docs-bg-alt, #f4f1fe);
-  color: var(--docs-fg, #2b2235);
-  border-bottom: 1px solid var(--docs-border, #e3ddf7);
-}
-
-.vdocs-banner-text {
-  font-weight: 500;
-}
-
-.vdocs-banner-link {
-  color: var(--docs-link, #8b5cf6);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.vdocs-banner-control,
+/* Shared control: the "Version" label + dropdown, identical in every context. */
+.vdocs-control,
 .vdocs-inline {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-left: auto;
 }
 
 .vdocs-inline-label {
@@ -55,6 +33,64 @@
   background: var(--docs-surface, #ffffff);
   color: var(--docs-fg, #2b2235);
   cursor: pointer;
+}
+
+/*
+ * Fixed top bar — used on archives and live SDK pages (their own generator themes, no
+ * site chrome). position:fixed + max z-index means it is never clipped by a theme's own
+ * fixed sidebar/header; versioned-docs.js measures the rendered height into --vdocs-bar-h
+ * and we reserve exactly that much space (so a wrapped two-line bar still fits).
+ */
+.vdocs-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483000;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.45rem 0.9rem;
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--docs-bg-alt, #f4f1fe);
+  color: var(--docs-fg, #2b2235);
+  border-bottom: 1px solid var(--docs-border, #e3ddf7);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.vdocs-bar-text {
+  font-weight: 500;
+}
+
+.vdocs-bar--latest .vdocs-bar-text {
+  font-weight: 600;
+}
+
+.vdocs-bar-link {
+  color: var(--docs-link, #8b5cf6);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.vdocs-bar .vdocs-control {
+  margin-left: auto;
+}
+
+/*
+ * Reserve room for the fixed bar and push the known generator themes' own fixed chrome
+ * below it. We pad <html> (not <body>) so themes that already pad <body> for their own
+ * fixed header keep that padding; fixed elements get an explicit offset since padding
+ * doesn't move them.
+ */
+html.vdocs-has-bar {
+  padding-top: var(--vdocs-bar-h, 44px);
+}
+html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar */
+html.vdocs-has-bar .navbar.fixed-top,   /* DocFX */
+html.vdocs-has-bar .tsd-page-toolbar {  /* TypeDoc */
+  top: var(--vdocs-bar-h, 44px);
 }
 
 /* Trimmed CLI-archive left-nav (built by trim-cli-nav.py). */
@@ -87,18 +123,4 @@
 }
 .vdocs-cli-nav a:hover {
   color: var(--docs-link, #8b5cf6);
-}
-
-.vdocs-floating {
-  position: fixed;
-  top: 0.6rem;
-  right: 0.6rem;
-  z-index: 2147483000;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.35rem 0.6rem;
-  background: var(--docs-surface, #ffffff);
-  border: 1px solid var(--docs-border, #cfc7ea);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }

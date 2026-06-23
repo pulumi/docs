@@ -23,8 +23,11 @@ HREF_RE = re.compile(r'href="(' + re.escape(VR) + r'[^"#?]*)"')
 
 def label(href):
     seg = href[len(VR):].rstrip('/').split('/')[-1]
-    seg = re.sub(r'^pulumi[_-]?', '', seg)
-    return seg.replace('_', ' ') or 'pulumi'
+    # The bare version-root self-link is the commands index, not a command — without
+    # this it would render as a second "pulumi" entry alongside the `pulumi` root command.
+    if seg == '':
+        return 'Overview'
+    return re.sub(r'^pulumi[_-]?', '', seg).replace('_', ' ') or 'pulumi'
 
 def build(items):
     out = ['<nav class="text-sm mt-5 mr-2 vdocs-cli-nav-wrap">',

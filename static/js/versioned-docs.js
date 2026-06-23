@@ -6,16 +6,26 @@
 // banner styling lives in the sibling /js/versioned-docs.css, so the chrome can be
 // restyled at any time without republishing a single archive.
 //
-// The script tag (injected by scripts/versioned-docs/inject-version-switcher.sh, or
-// emitted by layouts/partials/docs/cli-command-banner.html on live pages) carries:
+// The script tag (injected by scripts/versioned-docs/inject-version-switcher.sh, emitted
+// by layouts/partials/docs/cli-command-banner.html on live CLI pages, or added to live SDK
+// pages at build time by scripts/versioned-docs/inject-live-sdk-selectors.sh) carries:
 //   data-vdocs-tool       tool id, e.g. "pulumi-cli" or "python"
 //   data-vdocs-mode       "archive" (a frozen snapshot) | "latest" (the live page)
 //   data-vdocs-version    this page's version (archive mode)
 //   data-vdocs-live-root  canonical live root, e.g. "/docs/iac/cli/commands/"
 //   data-vdocs-rel        this page's path within its version root, e.g. "up/"
 //
-// Hard rule: fail SILENT. PR previews and any environment without published archives
-// have no versions.json; on any error we render nothing and the page is unaffected.
+// Presentation (one control, context-appropriate framing):
+//   * A page with an explicit [data-vdocs-mount] (live CLI command pages) gets a quiet
+//     INLINE dropdown at the mount, sitting inside the site chrome.
+//   * Any other page (archives + live SDK pages in their own generator themes) gets a
+//     robust fixed TOP BAR — archive framing adds the "viewing old docs / view latest"
+//     notice; latest framing is just the quiet dropdown. The bar measures its own height
+//     and offsets known theme fixed-elements (Sphinx RTD sidebar, DocFX navbar, TypeDoc
+//     toolbar) so it never clips them.
+//
+// Hard rule: fail SILENT. PR previews and any environment without published archives have
+// no versions.json; on any error we render nothing and the page is unaffected.
 (function () {
   "use strict";
   try {
@@ -86,25 +96,44 @@
     return lab;
   }
 
+  function controlEl(cfg, manifest, label) {
+    var ctrl = document.createElement("span");
+    ctrl.className = "vdocs-control";
+    ctrl.appendChild(labelEl());
+    ctrl.appendChild(buildSelect(cfg, manifest, label));
+    return ctrl;
+  }
+
   function render(cfg, manifest) {
     ensureCss();
     var label = manifest.label || cfg.tool;
-    var select = buildSelect(cfg, manifest, label);
     var mount = document.querySelector("[data-vdocs-mount]");
 
-    if (cfg.mode === "archive") {
-      var bar = document.createElement("div");
-      bar.className = "vdocs-banner";
+    if (mount) {
+      // Live page with an explicit mount (CLI command pages): quiet inline control.
+      var wrap = document.createElement("span");
+      wrap.className = "vdocs-inline";
+      wrap.appendChild(controlEl(cfg, manifest, label));
+      mount.appendChild(wrap);
+      return;
+    }
+    // No mount — archives and live SDK pages in their own generator themes: top bar.
+    renderTopBar(cfg, manifest, label);
+  }
 
-      var msg = document.createElement("span");
-      msg.className = "vdocs-banner-text";
+  function renderTopBar(cfg, manifest, label) {
+    var bar = document.createElement("div");
+    bar.className = "vdocs-bar vdocs-bar--" + (cfg.mode === "archive" ? "archive" : "latest");
+
+    var msg = document.createElement("span");
+    msg.className = "vdocs-bar-text";
+    if (cfg.mode === "archive") {
       msg.textContent = "You are viewing docs for " + label + " " + cfg.version + ".";
       bar.appendChild(msg);
-
       var latest = manifest.versions.find(function (e) { return e.latest; });
       if (latest) {
         var a = document.createElement("a");
-        a.className = "vdocs-banner-link";
+        a.className = "vdocs-bar-link";
         a.href = cfg.liveRoot + cfg.rel;
         a.textContent = "View latest";
         a.addEventListener("click", function (ev) {
@@ -113,34 +142,23 @@
         });
         bar.appendChild(a);
       }
-
-      var ctrl = document.createElement("span");
-      ctrl.className = "vdocs-banner-control";
-      ctrl.appendChild(labelEl());
-      ctrl.appendChild(select);
-      bar.appendChild(ctrl);
-
-      if (mount) {
-        mount.appendChild(bar);
-      } else {
-        document.body.insertBefore(bar, document.body.firstChild);
-        document.body.classList.add("vdocs-has-banner");
-      }
     } else {
-      // Latest page: dropdown only.
-      var wrap = document.createElement("span");
-      wrap.className = "vdocs-inline";
-      wrap.appendChild(labelEl());
-      wrap.appendChild(select);
-      (mount || floatingMount()).appendChild(wrap);
+      msg.textContent = label + " — latest version";
+      bar.appendChild(msg);
     }
-  }
 
-  function floatingMount() {
-    var m = document.createElement("div");
-    m.className = "vdocs-floating";
-    document.body.appendChild(m);
-    return m;
+    bar.appendChild(controlEl(cfg, manifest, label));
+    document.body.insertBefore(bar, document.body.firstChild);
+
+    // Reserve space so the fixed bar never overlaps content or a theme's fixed chrome.
+    // Measured (not hard-coded) so a wrapped two-line bar on narrow viewports still fits.
+    var root = document.documentElement;
+    root.classList.add("vdocs-has-bar");
+    var applyHeight = function () {
+      root.style.setProperty("--vdocs-bar-h", bar.offsetHeight + "px");
+    };
+    applyHeight();
+    if (window.addEventListener) window.addEventListener("resize", applyHeight);
   }
 
   // target = base + rel. Pages don't always exist across versions, so HEAD-probe and

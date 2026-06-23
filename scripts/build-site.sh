@@ -37,6 +37,10 @@ else
     fi
 fi
 
+# Add the version selector to the live SDK reference pages (build-time, no commit churn).
+printf "Injecting live SDK version selectors...\n\n"
+./scripts/versioned-docs/inject-live-sdk-selectors.sh public || true
+
 # Generate docs JSON.
 node scripts/content/generate-docs-content.js
 
