@@ -38,4 +38,24 @@ inject dotnet-esc-sdk   dotnet/esc-sdk          /docs/reference/pkg/dotnet/esc-s
 inject dotnet           dotnet                  /docs/reference/pkg/dotnet/
 inject java             java                    /docs/reference/pkg/java/
 
+# Some docset liveRoots are bare DocFX/TypeDoc container dirs with no index.html (the site
+# links to a deeper entry, so the bare path 404s — and so does the version selector's "View
+# latest"). Drop a small redirect landing at those roots, pointing at the real entry, when
+# one isn't already present.
+redirect_landing() { # dir-under-REF  relative-target
+  local dir="$REF/$1" target="$2"
+  [[ -d "$dir" ]] || return 0
+  [[ -f "$dir/index.html" ]] && return 0
+  cat > "$dir/index.html" <<HTML
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=$target">
+<title>Redirecting…</title></head>
+<body>Redirecting to <a href="$target">the API reference</a>.</body></html>
+HTML
+  echo "inject-live-sdk: redirect landing -> $1"
+}
+redirect_landing nodejs/pulumi  pulumi/
+redirect_landing dotnet/esc-sdk pulumi.esc.sdk/pulumi.esc.sdk.html
+
 echo "inject-live-sdk: done"
