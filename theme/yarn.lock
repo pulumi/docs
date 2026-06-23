@@ -365,9 +365,9 @@
     "@parcel/watcher-win32-ia32" "2.5.4"
     "@parcel/watcher-win32-x64" "2.5.4"
 
-"@pulumi/design-tokens@github:pulumi/pulumi-design-system#v0.2.1":
-  version "0.2.1"
-  resolved "https://codeload.github.com/pulumi/pulumi-design-system/tar.gz/fc0d37d6fb0374e347e6902c59bfac5c1c27e4fc"
+"@pulumi/design-tokens@github:pulumi/pulumi-design-system#v0.3.1":
+  version "0.3.1"
+  resolved "https://codeload.github.com/pulumi/pulumi-design-system/tar.gz/abf6ec84df5d806b4adc3486ed937ec5748121cb"
 
 "@tailwindcss/node@4.3.0":
   version "4.3.0"

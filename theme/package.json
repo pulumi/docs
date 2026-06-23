@@ -5,7 +5,7 @@
     "private": true,
     "license": "Apache-2.0",
     "dependencies": {
-        "@pulumi/design-tokens": "github:pulumi/pulumi-design-system#v0.2.1",
+        "@pulumi/design-tokens": "github:pulumi/pulumi-design-system#v0.3.1",
         "@algolia/autocomplete-js": "^1.19.8",
         "@algolia/autocomplete-plugin-tags": "^1.19.8",
         "@algolia/autocomplete-theme-classic": "^1.19.8",
