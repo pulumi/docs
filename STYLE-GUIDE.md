@@ -1,7 +1,7 @@
 # Pulumi Documentation Style Guide
 
 This guide defines Pulumi-specific style rules for our documentation.  
-For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+It's the repo-specific layer. For brand-level voice, writing style, and visual conventions, the [Pulumi brand guidelines](https://brand.pulumi.com/) are authoritative — query them directly through the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (see [Brand guidelines and the Brand MCP server](#brand-guidelines-and-the-brand-mcp-server) below). For anything none of these covers, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
 ---
 
@@ -16,6 +16,22 @@ The following exceptions are specifically excluded from this style guide:
 
 ---
 
+## Brand guidelines and the Brand MCP server
+
+Pulumi's brand-level conventions — voice and tone, writing style (grammar, punctuation, product names), typography, logo and visual usage, and color — live in the [Pulumi brand guidelines](https://brand.pulumi.com/), served programmatically by the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp). That server is the source of truth for brand questions this guide doesn't answer.
+
+Precedence, highest first:
+
+1. **This style guide** — repo-specific conventions for the Hugo content in this repository.
+1. **Pulumi brand guidelines (Brand MCP server)** — brand-wide voice, writing style, and visual rules.
+1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither of the above covers.
+
+Where this guide and the brand guidelines diverge, this guide wins for this repository — but the divergence should be deliberate and documented here (see [Headings](#headings) for the one current example). Don't invent a third convention; reconcile with the brand guidelines or note the exception.
+
+Agents with the Brand MCP server configured can pull the full text of any section on demand (for example, `get_guidelines({ section: "writing-style" })`) and should prefer it to guessing. The same server provides approved logo assets (`get_logo`), the brand color palette and semantic tokens, and an APCA contrast checker. Use those when **creating** brand assets — blog meta images, diagrams, slide decks — not for second-guessing the colors in a product screenshot.
+
+---
+
 ## Inclusive Language
 
 Pulumi strives to use language that is clear, inclusive, and respectful.  
@@ -26,7 +42,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Avoid unnecessarily gendered language (e.g., use _folks_, _everyone_).  
 - Avoid violent or aggressive terms (e.g., avoid _kill_).  
 - Avoid pop-culture references that may not be globally understood.  
-- Instead of "click," use "select."  
+- Instead of "click," use "select" (or "choose").  
 - Instead of "go to," use "navigate."  
 - Avoid directional terms (e.g., "see above"); link directly.  
 - Avoid words like "easy" or "simple." These judge difficulty and may alienate readers.
@@ -42,6 +58,8 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Use capitalization only for proper nouns. For example, use "stack" not "Stack."
 - Do not end headings with punctuation, with one exception: headings in a "Frequently asked questions" section may end with `?` so the site's FAQPage JSON-LD auto-collector (`layouts/partials/schema/collectors/faq-entity.html`) detects them as questions.
 - Headings should be surrounded by blank lines.
+
+> **Brand divergence (intentional).** The [Pulumi brand writing-style guidelines](https://brand.pulumi.com/) call for sentence case on *all* headings. This repository keeps **Title Case for the page title (H1) only** — it's rendered from front-matter `title` and styled Title Case site-wide, consistent with the Title Case used for navigation menu items. H2 and deeper follow the brand's sentence-case rule. Don't "fix" existing H1s to sentence case.
 
 **Navigation menu items**: Use **Title Case** for frontmatter menu fields (`menu.name`, `menu.title`). Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
 
@@ -110,8 +128,11 @@ If the page also links to related child pages, use standard markdown (lists, tab
 ## Images and Media
 
 - Use root-relative paths for all image references (see [Links](#links) above).
-- Provide descriptive alt text for all images.
+- Provide descriptive alt text for all images. Describe the image's content or function in a few words, and omit lead-ins like "image of" or "screenshot of" — screen readers already announce those.
+- Name image files descriptively (helps accessibility and SEO); avoid generic names like `screenshot-1.png`.
 - For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
+
+**Brand assets.** For logos, illustrations, and other brand imagery, use the approved assets from the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (`get_logo`, or the canonical URLs under `https://brand.pulumi.com/media/...`). Don't recolor, distort, add effects to, or otherwise alter the logo, and never use generative AI to create Pulumi brand imagery or the Pulumipus mascot. See the brand `logo`, `visuals`, and `guidelines` sections for the full rules.
 
 ---
 
@@ -154,6 +175,17 @@ Both syntaxes work for plain text content, but use percent signs for shortcodes 
 - Separate paragraphs with a blank line.  
 - Do not use line breaks within paragraphs. Let text wrap naturally.  
 - Keep paragraphs short (ideally ≤3 sentences).
+
+---
+
+## Grammar and punctuation
+
+- Use the Oxford (serial) comma: "build, deploy, and manage," not "build, deploy and manage."
+- Contractions are fine — preferred, even — in docs. They read more naturally.
+- Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
+- Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
+
+For dates, times, numbers, point of view (*you* vs. *we*), and other mechanics this guide doesn't specify, defer to the brand `writing-style` guidance via the [Brand MCP server](https://brand.pulumi.com/mcp).
 
 ---
 
@@ -285,7 +317,9 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
   - Pulumi ESC (Environments, Secrets, and Configuration)  
   - Pulumi IDP (Internal Developer Platform)  
   - Pulumi Insights  
-  - Pulumi Cloud
+  - Pulumi Cloud (also Pulumi console / Pulumi Cloud console — but not "Pulumi UI")
+  - Pulumi Deployments
+  - Pulumi Neo
   - Pulumi Policies  
 - Expand product acronyms at first mention. Use just the product name after.  
 - For non-Pulumi acronyms: spell out on first use, then use the acronym.  

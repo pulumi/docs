@@ -37,6 +37,14 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 - **Comparison screenshots use side-by-side images of the same view.** Before/after pairs must show the same UI region, not different parts of the screen. If a "before" shows the dashboard and "after" shows a settings page, that's not a comparison — flag.
 - **Current product UI.** Screenshots of stale product UI (old logos, old console layouts) hurt the post's credibility. Flag screenshots that visibly use deprecated UI elements.
 
+## Brand assets
+
+These are brand-*compliance* checks (is the asset a correct, approved Pulumi asset?), distinct from the aesthetic critique excluded below.
+
+- **Logo integrity.** The Pulumi logo must be an approved, unaltered version. Flag a recolored, stretched, rotated, cropped, or effect-laden (drop shadow, gradient, glow, outline) logo, a logo boxed in a non-approved container, or a logo on a busy or low-contrast background. The canonical logo and the full rules come from the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (`get_logo`, or canonical URLs under `https://brand.pulumi.com/media/...`); the brand `logo` section is authoritative.
+- **No AI-generated brand imagery.** Pulumi's visual language doesn't reproduce cleanly under image models and reads off-brand. Flag illustrations or photos that appear AI-generated as Pulumi brand imagery.
+- **No Pulumipus in new materials.** As of 2026-03-23 the mascot is being reworked; existing Pulumipus assets must not be used in new content, and the mascot must never be AI-generated or altered. Flag any Pulumipus usage in added images.
+
 ## Diagrams
 
 - **Mermaid preferred over ASCII art.** Hugo renders Mermaid natively. Flag ASCII diagrams in `<pre>` blocks as "consider Mermaid" findings.
@@ -44,6 +52,6 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 
 ## Do not flag
 
-- **Image composition or visual design.** Colors, layout, typography, and aesthetic critique are out of scope. Flag *technical* issues (missing alt, wrong format, oversized file), not editorial design preferences.
+- **Image composition or visual design.** Colors, layout, typography, and aesthetic critique are out of scope. Flag *technical* issues (missing alt, wrong format, oversized file) and brand-*compliance* issues (see [Brand assets](#brand-assets) — logo misuse, AI-generated brand imagery, deprecated mascot), not editorial design preferences.
 - **Stock photography choice.** If the post uses a hero image, "you should use a different photo" is editorial. Flag a placeholder image that wasn't replaced; don't critique a real image.
 - **Image redundancy.** "This screenshot doesn't add much" is editorial. Flag broken or stale screenshots, not whether the post needs them.
