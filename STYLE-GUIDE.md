@@ -26,7 +26,7 @@ Precedence, highest first:
 1. **Pulumi brand guidelines (Brand MCP server)** — brand-wide voice, writing style, and visual rules.
 1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither of the above covers.
 
-Where this guide and the brand guidelines diverge, this guide wins for this repository — but the divergence should be deliberate and documented here (see [Headings](#headings) for the one current example). Don't invent a third convention; reconcile with the brand guidelines or note the exception.
+Where this guide and the brand guidelines diverge, this guide wins for this repository — but any divergence should be deliberate and documented here. Don't invent a third convention; reconcile with the brand guidelines or note the exception.
 
 Agents with the Brand MCP server configured can pull the full text of any section on demand (for example, `get_guidelines({ section: "writing-style" })`) and should prefer it to guessing. The same server provides approved logo assets (`get_logo`), the brand color palette and semantic tokens, and an APCA contrast checker. Use those when **creating** brand assets — blog meta images, diagrams, slide decks — not for second-guessing the colors in a product screenshot.
 
@@ -59,7 +59,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Do not end headings with punctuation, with one exception: headings in a "Frequently asked questions" section may end with `?` so the site's FAQPage JSON-LD auto-collector (`layouts/partials/schema/collectors/faq-entity.html`) detects them as questions.
 - Headings should be surrounded by blank lines.
 
-> **Brand divergence (intentional).** The [Pulumi brand writing-style guidelines](https://brand.pulumi.com/) call for sentence case on *all* headings. This repository keeps **Title Case for the page title (H1) only** — it's rendered from front-matter `title` and styled Title Case site-wide, consistent with the Title Case used for navigation menu items. H2 and deeper follow the brand's sentence-case rule. Don't "fix" existing H1s to sentence case.
+> **Title vs. headings.** The brand guide's sentence-case rule governs *headings*, and it treats the H1 as the page **title**, not a heading. Title Case for the H1 — rendered from front-matter `title`, consistent with the Title Case used for navigation menu items — is therefore in keeping with the [Pulumi brand writing-style guidelines](https://brand.pulumi.com/), not an exception to them. Sentence case applies to H2 and deeper. Don't "fix" existing H1s to sentence case.
 
 **Navigation menu items**: Use **Title Case** for frontmatter menu fields (`menu.name`, `menu.title`). Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
 
