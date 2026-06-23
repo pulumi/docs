@@ -7,8 +7,9 @@ weight: 2
 menu:
   esc:
     identifier: esc-kubernetes
-    parent: esc-guides
+    parent: esc-guides-integrate-with
 aliases:
+    - /docs/esc/guides/kubernetes-cluster-access/
     - /docs/esc/other-integrations/kubernetes/
     - /docs/esc/integrations/kubernetes/kubernetes/
 ---
@@ -22,13 +23,13 @@ such as `kubectl` and `helm`, and with Pulumi programs that use the
 
 ## Prerequisites
 
-To complete the steps in this tutorial, you will need to install the following prerequisites:
+To complete the steps in this guide, you will need to install the following prerequisites:
 
 - the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/)
 - a Kubernetes cluster
 - [kubectl](https://kubernetes.io/releases/download/#kubectl)
 
-## Access Kubernetes Clusters from Command Line Tools
+## Access Kubernetes clusters from command line tools
 
 ESC integrates with Kubernetes client tools by setting the `KUBECONFIG` environment variable to point to a
 generated [Kubernetes configuration file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
@@ -113,7 +114,7 @@ environment:
   - <your-project-name>/<your-environment-name>
 ```
 
-## Authenticate to a Kubernetes Cluster
+## Authenticate to a Kubernetes cluster
 
 ESC enables you to connect to your Kubernetes cluster using credentials obtained from an ESC provider. For example,
 to connect to an AWS EKS cluster using AWS OIDC credentials returned by the [aws-login](/docs/esc/providers/login/aws-login/) provider.
@@ -137,7 +138,7 @@ values:
           roleArn: arn:aws:iam::0123456789:role/cluster-admin
           sessionName: <your-project-name>/<your-environment-name>
   environmentVariables:
-    AWS_ACCESS_KEY_ID: ${aws.creds.keyId}
+    AWS_ACCESS_KEY_ID: ${aws.creds.accessKeyId}
     AWS_SECRET_ACCESS_KEY: ${aws.creds.secretAccessKey}
     AWS_SESSION_TOKEN: ${aws.creds.sessionToken}
 ```

@@ -25,4 +25,4 @@ If you are looking for *what* ESC is rather than *how to run it*, start with [Co
 
 ## CI/CD
 
-For continuous integration, the [GitHub Actions integration](/docs/esc/guides/github-actions/) wires ESC short-lived credentials into your workflows. See also the [`gh-login` provider](/docs/esc/providers/login/gh-login/) for ESC-issued GitHub App credentials.
+For continuous integration, the [GitHub Actions integration](/docs/esc/guides/integrate-with/github-actions/) wires ESC short-lived credentials into your workflows. See also the [`gh-login` provider](/docs/esc/providers/login/gh-login/) for ESC-issued GitHub App credentials.

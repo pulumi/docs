@@ -5,9 +5,10 @@ h1: "Pulumi ESC: Integrate with Docker"
 meta_desc: This page provides an overview on how to use Pulumi ESC with Docker.
 menu:
   esc:
-    parent: esc-guides
+    parent: esc-guides-integrate-with
     weight: 20
 aliases:
+    - /docs/esc/guides/docker/
     - /docs/esc/other-integrations/docker/
     - /docs/esc/integrations/dev-tools/docker/
     - /docs/esc/integrations/docker/

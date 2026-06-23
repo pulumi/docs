@@ -107,7 +107,7 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
           work-dir: infra
 ```
 
-For more detail, see the [Pulumi ESC GitHub Action documentation](/docs/esc/guides/github-actions/).
+For more detail, see the [Pulumi ESC GitHub Action documentation](/docs/esc/guides/integrate-with/github-actions/).
 
 To configure OIDC directly between GitHub Actions and a cloud provider without ESC — for example, with `aws-actions/configure-aws-credentials` and a `role-to-assume` input — follow that provider's GitHub Actions OIDC guide. This approach is provider-specific: each cloud requires its own trust relationship, whereas ESC configures that trust once and reuses it everywhere.
 

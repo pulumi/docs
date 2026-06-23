@@ -6,9 +6,10 @@ meta_desc: This page provides an overview of how to use Pulumi ESC with GitHub A
 menu:
   esc:
     identifier: esc-integrations-github-actions
-    parent: esc-guides
+    parent: esc-guides-integrate-with
     weight: 30
 aliases:
+  - /docs/esc/guides/github-actions/
   - /docs/esc/integrations/dev-tools/github/
   - /docs/esc/integrations/github-actions/
 ---
