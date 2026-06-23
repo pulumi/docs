@@ -219,5 +219,5 @@ And exactly one of:
 ## Related
 
 - [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
-- [snowflake-login](/docs/esc/providers/login/snowflake-login/) - Authenticate with Snowflake via OIDC or a key-pair
+- [snowflake-login](/docs/esc/providers/login/snowflake-login/) - Authenticate with Snowflake via OIDC
 - [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators
