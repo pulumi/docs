@@ -714,17 +714,6 @@
         opacity: 1;
     }
 
-    // Closing CTA card: fades + rises on its own scroll-in; its corner accents
-    // pop via the shared .bracket-card.is-inview rule above.
-    .soai-anim .soai-cta .bracket-card--dark {
-        opacity: 0;
-        transform: translateY(1.5rem);
-        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .soai-anim .soai-cta .bracket-card--dark.is-inview {
-        opacity: 1;
-        transform: translateY(0);
-    }
     .soai-anim .soai-hero.is-inview .bracket-card--dark::before,
     .soai-anim .soai-hero.is-inview .bracket-card--dark::after,
     .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::before,
