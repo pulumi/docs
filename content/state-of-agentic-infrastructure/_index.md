@@ -1,6 +1,6 @@
 ---
 title: State of Agentic Infrastructure 2026
-meta_desc: How 510 platform, DevOps, and product engineers use AI agents in infrastructure today — and where they expect things to go over the next six months.
+meta_desc: How 510 platform, DevOps, and product engineers use AI agents in infrastructure today, and where they expect things to go over the next six months.
 # meta_image TBD — falls back to /logos/brand/og-default.png until a bespoke card exists.
 
 hero:
@@ -21,10 +21,10 @@ hero:
       label: Agents in the workflow today
       anchor: agents-in-the-workflow-today
     - num: "04"
-      label: AI in monitoring & operations
+      label: AI in monitoring and operations
       anchor: ai-in-monitoring-and-operations
     - num: "05"
-      label: The six-month outlook & sentiment
+      label: The six-month outlook and sentiment
       anchor: the-six-month-outlook-and-sentiment
 
 sections:
@@ -39,7 +39,7 @@ sections:
         - 510 platform, DevOps, and product engineers
         - Product and app developers are the largest group (35%), ahead of DevOps (23%) and platform engineering (17%)
         - 65% work at companies of 201–5,000 people, and 65% are in Software / SaaS
-      takeaway: This is how fast-moving software teams — product engineers included — are putting agents to work.
+      takeaway: Infrastructure work no longer belongs to the infrastructure team alone. Product and app developers are now the largest group doing it.
     questions:
       - id: Q1
         kind: bar-horizontal
@@ -103,7 +103,7 @@ sections:
     overview:
       key_insights:
         - "These teams are mature and ship fast: quick deploy cadence and self-service platforms are already standard."
-        - Governance stays manual, though. Manual review gates (61%) still outweigh policy-as-code in CI (54%).
+        - "But governance stays manual: review gates (61%) still outweigh policy-as-code in CI (54%)."
       by_the_numbers:
         - 82% deploy to production weekly or more often
         - "Multi-cloud is the norm: AWS 64%, Google Cloud 55%, Azure 45%"
@@ -244,10 +244,10 @@ sections:
         - Monitoring is one of the most widely adopted places for AI, led by anomaly detection.
         - "Autonomy stays gated even here: \"suggests fixes\" (37%) and \"remediates with approval\" (31%) are the common modes."
       by_the_numbers:
-        - 64% use AI for infrastructure monitoring, and only 6% don't
+        - 64% already use AI for infrastructure monitoring; just 6% have ruled it out
         - Top uses are anomaly detection (57%), auto-remediation (45%), and predictive scaling (44%)
         - Just 12% run fully autonomous monitoring
-      takeaway: "The strongest use case still follows the same pattern: suggest and approve, not act."
+      takeaway: "Even the most-adopted use case keeps a human in the loop: agents suggest, people approve."
     questions:
       - id: Q16
         kind: stacked-bar
@@ -287,7 +287,7 @@ sections:
         - Teams expecting agents to generate 50% or more of their infra code rise from 45% today to 52% in six months
         - The "under 25%" group shrinks from 23% to 15%
         - 82% agree AI will meaningfully change how they write infrastructure within 12 months
-        - 72% say proactive AI monitoring has already reduced their incident volume
+        - 72% say proactive AI monitoring has reduced their incident volume
       takeaway: "Trust is running ahead of governance. The next six months are about closing the gap."
     questions:
       - id: Q14
