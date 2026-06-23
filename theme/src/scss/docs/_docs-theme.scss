@@ -239,6 +239,30 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // --- Definition-list "table" (dl.tabular) — e.g. the CLI environment-
+    // variables page. Same flip as the <table> above: the dl + dt carry the
+    // gray surface, dd is the white value cell. <p> inside dd is already
+    // force-flipped to --docs-fg by the base rule, so without the dd background
+    // flip the description text renders white-on-white.
+    dl.tabular {
+        background-color: var(--docs-surface);
+        border-color: var(--docs-border);
+        color: var(--docs-fg);
+
+        dt {
+            color: var(--docs-fg);
+        }
+
+        dd {
+            background-color: var(--docs-bg);
+        }
+
+        dt,
+        dd {
+            border-color: var(--docs-border);
+        }
+    }
+
     @media (max-width: 767.98px) {
         .table-wrapper.table-responsive {
             tr {
