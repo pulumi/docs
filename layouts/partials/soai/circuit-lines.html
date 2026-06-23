@@ -1,17 +1,8 @@
 {{/*
-    SOAI hero circuit-line overlay (decorative).
-
-    Exported from Figma (node 378:3615). Each line is its own <path> with a
-    stable class so a future draw-on animation (stroke-dasharray /
-    stroke-dashoffset) can target them individually. aria-hidden — purely
-    decorative.
-
-    - preserveAspectRatio="none" maps the 1472x778 viewBox 1:1 onto the hero
-      canvas (same aspect), so the lines line up exactly with the headline.
-    - vector-effect="non-scaling-stroke" keeps the stroke at 1px at any scale.
-    - The element is blended with mix-blend-mode:difference in SCSS
-      (.soai-hero__circuit) so the lines read over both the dark bg and the
-      violet title.
+    SOAI hero circuit-line overlay (decorative, aria-hidden). Each line is its
+    own <path> with a stable class for the draw-on animation. It fills the hero
+    canvas 1:1 so the lines align with the headline; stroke and blend come from
+    .soai-hero__circuit in SCSS.
 */}}
 <svg class="soai-hero__circuit" viewBox="0 0 1472 778" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <g class="soai-circuit-group">

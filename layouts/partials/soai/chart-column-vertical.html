@@ -1,11 +1,7 @@
 {{/*
-    SOAI vertical column chart (Q2 — later Q6,Q13,Q14,Q18).
-
-    Columns render in the authored (scale) order — never sorted. Heights are
-    scaled so the tallest column reaches ~85% of the plot (leaving headroom for
-    the % label floating above each bar) and are carried in the `--val` custom
-    property for animation readiness. `percent` is the authoritative geometry
-    input — never derived from counts.
+    SOAI vertical column chart. Columns render in the authored (scale) order —
+    never sorted. The tallest column reaches ~85% of the plot (leaving headroom
+    for the % label above each bar); the height is carried in `--val`.
 
     Params (.): question dict with .options = [{ label, percent, highlight? }].
 */}}

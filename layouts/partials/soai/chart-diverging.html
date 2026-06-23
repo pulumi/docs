@@ -1,14 +1,8 @@
 {{/*
-    SOAI diverging stacked bar — Likert agreement (Q19). Each statement is a
-    5-point row (strongly disagree .. strongly agree) centered on the neutral
-    midpoint so the disagree side reads left and the agree side reads right.
-    Statements are authored in net-agreement order. The trailing label shows
-    total agreement (agree + strongly agree), the quotable figure.
-
-    Centering math: each half of the track represents `maxExt` points, where
-    maxExt is the largest of (SD + D + N/2) or (A + SA + N/2) across statements.
-    Disagree segments + half the neutral pack to the center from the left; the
-    other half of neutral + agree segments pack from the center to the right.
+    SOAI diverging stacked bar — Likert agreement. Each statement is a 5-point
+    row centered on the neutral midpoint (disagree left, agree right), authored
+    in net-agreement order; the trailing label shows total agreement. Each half
+    of the track is scaled to the widest row's half-extent.
 
     Params (.):
     - scale:      5 labels [strongly disagree, disagree, neutral, agree, strongly agree].

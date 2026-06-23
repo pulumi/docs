@@ -241,7 +241,7 @@ sections:
     title: AI in monitoring and operations
     overview:
       key_insights:
-        - Monitoring is the most widely adopted place for AI, led by anomaly detection.
+        - Monitoring is one of the most widely adopted places for AI, led by anomaly detection.
         - "Autonomy stays gated even here: \"suggests fixes\" (37%) and \"remediates with approval\" (31%) are the common modes."
       by_the_numbers:
         - 64% use AI for infrastructure monitoring, and only 6% don't

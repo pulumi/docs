@@ -1,23 +1,14 @@
 // State of Agentic Infrastructure — survey results landing page.
 //
-// Util-resistant pieces only. Everything that Tailwind utilities can express
-// lives in the partials (layouts/partials/soai/*.html); this file holds the
-// reusable bracket card (4 rounded corner brackets), the rounded-plus 2x2
-// overview grid, the precisely-aligned hero, and the two server-rendered chart
-// primitives (horizontal bar and vertical column). Imported into main.scss
-// inside @layer components.
-//
-// Animation readiness: chart geometry is carried in the `--val` custom property
-// (width/height read from it) so a future scroll-reveal can animate 0 -> var(--val)
-// by toggling one class, with no markup change. Bracket arm length / inset are
-// likewise variables. The server-rendered output is the final resting state.
+// Custom (non-utility) styles: the bracket card, the rounded-plus overview grid,
+// the hero, the chart primitives, and the reveal animations. Imported into
+// main.scss inside @layer components. Chart geometry rides the `--val` custom
+// property so bars can animate 0 -> var(--val) by toggling a class.
 
 // ---------------------------------------------------------------------------
-// Bracket card: bordered, rounded card with a small rounded bracket accent at
-// each of the 4 corners. The brackets share the card's border color (violet-500).
-// CSS pseudo-elements only give us 2 per element, so the card supplies the top
-// two (::before / ::after) and an inner wrapper supplies the bottom two. The
-// card must NOT be overflow-hidden or the brackets clip.
+// Bracket card: bordered, rounded card with a rounded bracket accent at each of
+// the 4 corners (top two on the card, bottom two on the inner wrapper, since CSS
+// gives only two pseudo-elements per element). Must not be overflow-hidden.
 // ---------------------------------------------------------------------------
 .bracket-card {
     --bc-accent: var(--color-violet-500); // border + bracket stroke (shared)
@@ -98,18 +89,16 @@
 // ---------------------------------------------------------------------------
 // Hero
 //
-// The headline and the circuit-line overlay must line up PRECISELY at every
-// width, so both live inside a single fixed-aspect "canvas" that maps 1:1 onto
-// the Figma 1472x778 frame. The canvas is a size container, so the headline is
-// positioned in % of the frame and sized in cqw (1cqw = 1% of canvas width) —
-// it scales in lockstep with the SVG (preserveAspectRatio=none fills the same
-// box). The stage crops the canvas to the headline band; the split card follows.
+// The headline and the circuit-line overlay share one fixed-aspect "canvas" so
+// they line up at every width. The canvas is a size container; the headline is
+// positioned in % and sized in cqw — proportions of the design frame (1472x778)
+// — so it scales in lockstep with the overlay. The stage crops the canvas to
+// the headline band; the split card follows.
 // ---------------------------------------------------------------------------
 .soai-hero {
     &__stage {
         position: relative;
-        // Crop the 1472x778 canvas to where the Figma split card begins (y=631).
-        aspect-ratio: 1472 / 631;
+        aspect-ratio: 1472 / 631; // crop to where the split card begins
     }
 
     &__canvas {
@@ -120,8 +109,7 @@
         background: var(--color-violet-950);
     }
 
-    // Circuit overlay — sits ON TOP of the headline and blends with difference
-    // (violet over dark bg, dark over the violet title). Fills the canvas 1:1.
+    // Circuit overlay — sits on top of the headline and blends with difference.
     &__circuit {
         position: absolute;
         inset: 0;
@@ -137,7 +125,7 @@
         }
     }
 
-    // Rounded-plus "star" accent, top-left (Figma 65,85 / 96sq in the frame).
+    // Rounded-plus "star" accent, top-left.
     &__star {
         position: absolute;
         left: 4.416%; // 65/1472
@@ -152,8 +140,8 @@
         }
     }
 
-    // Headline: one real <h1>, positioned + sized to the Figma frame so the
-    // circuit lines weave through it precisely.
+    // Headline: one real <h1>, positioned/sized as canvas proportions so the
+    // circuit lines weave through it.
     &__headline {
         position: absolute;
         left: 9.239%; // 136/1472
@@ -198,49 +186,35 @@
 }
 
 // ---------------------------------------------------------------------------
-// Overview: 2x2 grid whose divider reproduces the "star accent" — two opposite
-// rounded brackets (Figma: cell 1 = border-r + border-b + rounded inner corner;
-// cell 4 = border-t + border-l + rounded inner corner). Cells 2 and 3 carry no
-// border, so the two brackets meet at an OPEN center, exactly like the hero star.
+// Overview: 2x2 grid whose divider reproduces the "star accent" — cell 1 draws
+// its right+bottom borders and cell 4 its top+left, each with a rounded inner
+// corner; cells 2 and 3 have no border, so the two brackets meet at an open
+// center.
 // ---------------------------------------------------------------------------
 .soai-overview {
-    --soai-plus-radius: 0.625rem; // 10px, matches the Figma borders arc
+    --soai-plus-radius: 0.625rem; // 10px
 
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem 0;
-
-    @include screen-md {
-        grid-template-columns: 1fr 1fr;
-        gap: 0;
-    }
+    @apply grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2 md:gap-y-0;
 
     &__cell {
-        padding: 0 0.25rem;
-
-        @include screen-md {
-            padding: 2.25rem 2.5rem;
-        }
+        @apply px-1 py-0 md:px-10 md:py-9;
     }
 
     @include screen-md {
         &__cell--tl {
-            border-right: 1px solid var(--color-violet-500);
-            border-bottom: 1px solid var(--color-violet-500);
+            @apply border-r border-b border-violet-500;
             border-bottom-right-radius: var(--soai-plus-radius);
         }
         &__cell--br {
-            border-top: 1px solid var(--color-violet-500);
-            border-left: 1px solid var(--color-violet-500);
+            @apply border-t border-l border-violet-500;
             border-top-left-radius: var(--soai-plus-radius);
         }
     }
 }
 
 // ---------------------------------------------------------------------------
-// Horizontal bar chart (Q1, Q3 — later Q4,Q5,Q7,Q8,Q11,Q12,Q17).
-// Geometry is scaled so the longest bar fills ~90% of the track (the rest
-// leaves room for the trailing % label) and is carried in `--val`.
+// Horizontal bar chart. The longest bar fills ~90% of the track (leaving room
+// for the trailing % label); the width is carried in `--val`.
 // ---------------------------------------------------------------------------
 .soai-hbar {
     display: flex;
@@ -263,118 +237,68 @@
     }
 
     &__label {
-        @apply font-mono uppercase;
-        font-size: 0.75rem;
+        @apply font-mono text-xs uppercase text-service-black text-left md:text-sm md:text-right;
         letter-spacing: 0.04em;
-        color: var(--color-service-black);
-        text-align: left;
-
-        @include screen-md {
-            font-size: 0.875rem;
-            text-align: right;
-        }
     }
 
     &__meter {
-        display: flex;
-        align-items: center;
-        gap: 0.625rem;
-        min-width: 0;
+        @apply flex items-center gap-2.5 min-w-0;
     }
 
     &__fill {
+        @apply h-10 bg-violet-200 md:h-13;
         flex: 0 0 var(--val);
-        height: 2.5rem;
-        background: var(--color-violet-200);
-
-        @include screen-md {
-            height: 3.25rem;
-        }
     }
 
     &__pct {
-        @apply font-mono;
+        @apply font-mono text-sm tabular-nums text-service-black md:text-base;
         flex: 0 0 auto;
-        font-size: 0.875rem;
-        font-variant-numeric: tabular-nums;
-        color: var(--color-service-black);
-
-        @include screen-md {
-            font-size: 1rem;
-        }
     }
 
     &__row--highlight {
         .soai-hbar__fill {
-            background: var(--color-violet-primary);
+            @apply bg-violet-primary;
         }
         .soai-hbar__pct {
-            color: var(--color-violet-primary);
+            @apply text-violet-primary;
         }
     }
 }
 
 // ---------------------------------------------------------------------------
-// Vertical column chart (Q2 — later Q6,Q13,Q14,Q18).
-// Heights are scaled so the tallest column reaches ~85% of the plot (leaving
-// headroom for the % label above each bar) and are carried in `--val`.
+// Vertical column chart. The tallest column reaches ~85% of the plot (leaving
+// headroom for the % label above each bar); the height is carried in `--val`.
 // ---------------------------------------------------------------------------
 .soai-col {
     &__plot {
-        display: flex;
-        align-items: flex-end;
-        gap: 0.5rem;
+        @apply flex items-end gap-2 border-b border-gray-400 md:gap-6;
         height: clamp(15rem, 34vw, 20rem);
-        border-bottom: 1px solid var(--color-gray-400);
-
-        @include screen-md {
-            gap: 1.5rem;
-        }
     }
 
     &__col {
-        flex: 1;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.625rem;
+        @apply flex flex-1 h-full flex-col justify-end items-center gap-2.5;
     }
 
     &__bar {
+        @apply w-full bg-violet-200;
         flex: 0 0 auto; // hold the explicit % height; don't let flex shrink it
-        width: 100%;
         max-width: 6.5rem;
         height: var(--val);
-        background: var(--color-violet-200);
     }
 
     &__pct {
-        @apply font-mono;
-        font-size: 0.875rem;
-        font-variant-numeric: tabular-nums;
-        color: var(--color-service-black);
+        @apply font-mono text-sm tabular-nums text-service-black;
     }
 
     &__cats {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0.75rem;
-
-        @include screen-md {
-            gap: 1.5rem;
-        }
+        @apply flex gap-2 mt-3 md:gap-6;
     }
 
     &__cat {
-        @apply font-mono uppercase;
-        flex: 1;
-        text-align: center;
+        @apply flex-1 font-mono text-center uppercase text-service-black;
         font-size: 0.625rem;
         letter-spacing: 0.03em;
         line-height: 1.2;
-        color: var(--color-service-black);
 
         @include screen-md {
             font-size: 0.75rem;
@@ -382,10 +306,10 @@
     }
 
     &__col--highlight .soai-col__bar {
-        background: var(--color-violet-primary);
+        @apply bg-violet-primary;
     }
     &__col--highlight .soai-col__pct {
-        color: var(--color-violet-primary);
+        @apply text-violet-primary;
     }
 }
 
@@ -393,136 +317,86 @@
 // Shared chart legend (stacked / grouped / diverging).
 // ---------------------------------------------------------------------------
 .soai-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.5rem;
-    margin: 0 0 1.5rem;
-    padding: 0;
-    list-style: none;
+    @apply flex flex-wrap gap-x-6 gap-y-2 m-0 mb-6 p-0 list-none;
 
     &__item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+        @apply flex items-center gap-2;
     }
 
     &__swatch {
-        flex: 0 0 auto;
-        width: 0.875rem;
-        height: 0.875rem;
+        @apply shrink-0 w-3.5 h-3.5;
         border-radius: 3px;
     }
 
     &__label {
-        @apply font-mono uppercase;
-        font-size: 0.75rem;
+        @apply font-mono text-xs uppercase text-service-black;
         letter-spacing: 0.03em;
-        color: var(--color-service-black);
     }
 
     &__value {
-        font-variant-numeric: tabular-nums;
+        @apply tabular-nums;
     }
 }
 
 // ---------------------------------------------------------------------------
-// 100% stacked bar — part-to-whole (Q9, Q10, Q15, Q16). Legend below.
+// 100% stacked bar — part-to-whole, with a legend below.
 // ---------------------------------------------------------------------------
 .soai-stack {
     &__bar {
-        display: flex;
-        width: 100%;
-        height: 3rem;
-        margin-bottom: 1.5rem;
+        @apply flex w-full h-12 mb-6;
     }
 
     &__seg {
+        @apply h-full box-border border-r-2 border-violet-50;
         flex: 0 0 var(--val);
-        height: 100%;
-        box-sizing: border-box;
-        border-right: 2px solid var(--color-violet-50);
 
         &:last-child {
-            border-right: 0;
+            @apply border-r-0;
         }
     }
 
     .soai-legend {
-        margin-bottom: 0;
+        @apply mb-0;
     }
 }
 
 // ---------------------------------------------------------------------------
-// Grouped column — two series, shared axis (Q13 -> Q14 hero chart).
+// Grouped column — two series on a shared axis.
 // ---------------------------------------------------------------------------
 .soai-grouped {
     &__plot {
-        display: flex;
-        align-items: flex-end;
-        gap: 0.5rem;
+        @apply flex items-end gap-2 border-b border-gray-400 md:gap-5;
         height: clamp(15rem, 32vw, 20rem);
-        border-bottom: 1px solid var(--color-gray-400);
-
-        @include screen-md {
-            gap: 1.25rem;
-        }
     }
 
     &__group {
-        flex: 1;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 0.25rem;
-
-        @include screen-md {
-            gap: 0.5rem;
-        }
+        @apply flex flex-1 h-full justify-center items-end gap-1 md:gap-2;
     }
 
     &__col {
-        flex: 1;
-        max-width: 2.75rem;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 0.5rem;
+        @apply flex flex-1 h-full max-w-11 flex-col justify-end items-center gap-2;
     }
 
     &__bar {
+        @apply w-full;
         flex: 0 0 auto;
-        width: 100%;
         height: var(--val);
     }
 
     &__pct {
-        @apply font-mono;
+        @apply font-mono tabular-nums text-service-black;
         font-size: 0.6875rem;
-        font-variant-numeric: tabular-nums;
-        color: var(--color-service-black);
     }
 
     &__cats {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 0.75rem;
-
-        @include screen-md {
-            gap: 1.25rem;
-        }
+        @apply flex gap-2 mt-3 md:gap-5;
     }
 
     &__cat {
-        @apply font-mono uppercase;
-        flex: 1;
-        text-align: center;
+        @apply flex-1 font-mono text-center uppercase text-service-black;
         font-size: 0.625rem;
         letter-spacing: 0.03em;
         line-height: 1.2;
-        color: var(--color-service-black);
 
         @include screen-md {
             font-size: 0.6875rem;
@@ -531,41 +405,30 @@
 }
 
 // ---------------------------------------------------------------------------
-// Diverging stacked bar — Likert agreement centered on neutral (Q19).
-// Each side is 50% of the track; segments pack toward the center line.
+// Diverging stacked bar — Likert agreement centered on neutral. Each side is
+// 50% of the track; segments pack toward the center line.
 // ---------------------------------------------------------------------------
 .soai-diverge {
     &__row {
-        display: flex;
-        flex-direction: column;
-        gap: 0.625rem;
-        padding: 0.875rem 0;
+        @apply flex flex-col gap-2.5 py-3.5;
 
         & + & {
-            border-top: 1px solid var(--color-violet-200);
+            @apply border-t border-violet-200;
         }
     }
 
     &__label {
-        @apply font-display;
-        margin: 0;
+        @apply font-display m-0 font-medium text-service-black;
         font-size: 0.9375rem;
-        font-weight: 500;
         line-height: 1.3;
-        color: var(--color-service-black);
     }
 
     &__track {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        @apply flex items-center gap-4;
     }
 
     &__bars {
-        position: relative;
-        flex: 1;
-        display: flex;
-        height: 1.5rem;
+        @apply relative flex flex-1 h-6;
 
         // Center line (neutral midpoint).
         &::before {
@@ -580,42 +443,34 @@
     }
 
     &__side {
+        @apply flex min-w-0 h-full;
         flex: 0 0 50%;
-        min-width: 0;
-        display: flex;
-        height: 100%;
 
         &--left {
-            justify-content: flex-end;
+            @apply justify-end;
         }
         &--right {
-            justify-content: flex-start;
+            @apply justify-start;
         }
     }
 
     &__seg {
+        @apply h-full;
         flex: 0 0 auto;
-        height: 100%;
     }
 
     &__agree {
-        @apply font-mono;
+        @apply font-mono text-sm text-right tabular-nums text-violet-primary;
         flex: 0 0 2.75rem;
-        text-align: right;
-        font-size: 0.875rem;
-        font-variant-numeric: tabular-nums;
-        color: var(--color-violet-primary);
     }
 }
 
 // ---------------------------------------------------------------------------
-// Right-edge section nav. A full-height absolute track (spanning the sections
-// region only) holds a sticky, viewport-centered rail. As the region's bottom
-// approaches, the sticky rail rides up off the footer — so footer avoidance is
-// pure layout, no JS. The track is hidden by default and faded in by JS once
-// the hero is scrolled past (so the rail doesn't peek below a short hero on
-// tall screens). Numbers by default with an active state; on hover/focus the
-// rail slides out to reveal each title. Desktop only.
+// Right-edge section nav. A full-height absolute track holds a sticky, centered
+// rail that rides up off the footer (pure layout). The track is hidden by
+// default and faded in by JS once the hero is scrolled past. Numbers by default
+// with an active state; on hover/focus the rail slides out to reveal each title.
+// Desktop only.
 // ---------------------------------------------------------------------------
 .soai-sectionnav-track {
     display: none;
@@ -638,92 +493,66 @@
 }
 
 .soai-sectionnav {
-    position: sticky;
-    top: 50%;
-    width: max-content;
-    margin-left: auto; // right-align the rail at the track's (viewport) right edge
-    transform: translateY(-50%);
-    pointer-events: auto;
+    @apply sticky top-1/2 w-max ml-auto pointer-events-auto;
+    transform: translateY(-50%); // right-align + vertically center the sticky rail
 
     &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.25rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
+        @apply flex flex-col items-end gap-1 m-0 p-0 list-none;
     }
 
     &__item {
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
+        @apply flex justify-end w-full;
     }
 
     &__link {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 0.625rem;
+        @apply flex items-center justify-end gap-2.5 bg-transparent no-underline;
         padding: 0.4rem 1.1rem;
         border-radius: var(--radius-sm, 0.25rem) 0 0 var(--radius-sm, 0.25rem);
-        background: transparent;
-        text-decoration: none;
         transition: background 0.25s ease;
-        border:2px solid transparent;
+        border: 2px solid transparent;
         border-width: 0 2px 0 0;
 
         &:hover,
         &:focus-visible {
-            text-decoration: none;
+            @apply no-underline;
         }
 
         &:hover .soai-sectionnav__num,
         &:hover .soai-sectionnav__title,
         &:focus-visible .soai-sectionnav__num,
         &:focus-visible .soai-sectionnav__title {
-            color: var(--color-violet-primary);
+            @apply text-violet-primary;
         }
     }
 
     &__num {
-        @apply font-mono;
+        @apply font-mono tabular-nums text-gray-400;
         font-size: 0.8125rem;
-        font-variant-numeric: tabular-nums;
-        color: var(--color-gray-400);
         transition: color 0.2s ease;
     }
 
     &__title {
-        @apply font-mono uppercase;
-        max-width: 0;
-        overflow: hidden;
-        opacity: 0;
-        font-size: 0.75rem;
+        @apply font-mono text-xs uppercase max-w-0 overflow-hidden opacity-0 whitespace-nowrap text-service-black;
         letter-spacing: 0.04em;
-        white-space: nowrap;
-        color: var(--color-service-black);
         transition: max-width 0.35s ease, opacity 0.25s ease;
     }
 
     // Active number (collapsed default state).
     &__item.is-active &__num,
     &__item.is-active &__link {
-        color: var(--color-violet-primary);
-        border-color: var(--color-violet-primary);
+        @apply text-violet-primary border-violet-primary;
     }
 
     // Hover / focus: slide titles out and give links a readable pill.
     &:hover,
     &:focus-within {
         .soai-sectionnav__title {
+            @apply opacity-100;
             max-width: 18rem;
-            opacity: 1;
         }
         .soai-sectionnav__num,
         .soai-sectionnav__link {
-            background: white;
+            @apply bg-white;
         }
     }
 }
@@ -738,14 +567,11 @@
 }
 
 // ---------------------------------------------------------------------------
-// Intro / reveal animations (progressive enhancement).
-//
-// JS adds `.soai-anim` to <html> only when IntersectionObserver is available
-// and the user hasn't asked for reduced motion, then adds `.is-inview` to each
-// [data-soai-reveal] element as it enters the viewport. Everything here is gated
-// on both, and the `.is-inview` state restores the natural resting style — so
-// without JS, or under reduced motion, the server-rendered page is untouched
-// and there is no layout shift.
+// Intro / reveal animations (progressive enhancement). JS adds `.soai-anim` to
+// <html> (only when IntersectionObserver is available and motion is welcome),
+// then `.is-inview` to each [data-soai-reveal] element as it enters view. The
+// `.is-inview` state is the natural resting style, so without JS / under reduced
+// motion the page is untouched, with no layout shift.
 // ---------------------------------------------------------------------------
 @media (prefers-reduced-motion: no-preference) {
     // -- Hero circuit lines: draw on from the left, staggered.

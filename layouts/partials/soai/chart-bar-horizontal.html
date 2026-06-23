@@ -1,11 +1,7 @@
 {{/*
-    SOAI horizontal bar chart (Q1, Q3 — later Q4,Q5,Q7,Q8,Q11,Q12,Q17).
-
-    Rows are sorted by percent descending, with any option flagged `other: true`
-    pinned last. Bar geometry is scaled so the longest bar fills ~90% of the
-    track (the rest leaves room for the trailing % label) and is carried in the
-    `--val` custom property for animation readiness. `percent` is the authoritative
-    geometry input — never derived from counts.
+    SOAI horizontal bar chart. Rows are sorted by percent descending, with any
+    option flagged `other: true` pinned last. The longest bar fills ~90% of the
+    track; the width is carried in `--val`.
 
     Params (.): question dict with .options = [{ label, percent, highlight?, other? }].
 */}}
