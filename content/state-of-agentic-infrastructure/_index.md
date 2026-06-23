@@ -110,21 +110,6 @@ sections:
         - 63% already run an internal developer platform or golden paths in production
       takeaway: The bottleneck is the human approval step, not the tooling.
     questions:
-      - id: Q4
-        kind: bar-horizontal
-        heading: Which infrastructure-as-code tools do you currently use?
-        options:
-          - { label: "Terraform", percent: 35, highlight: true }
-          - { label: "OpenTofu", percent: 22, highlight: true }
-          - { label: "Pulumi", percent: 10, highlight: true }
-          - { label: "AWS CloudFormation/CDK", percent: 70, highlight: true }
-          - { label: "Kubernetes manifests/Helm", percent: 26, highlight: true }
-          - { label: "Chef", percent: 13, highlight: true }
-          - { label: "Puppet", percent: 14, highlight: true }
-          - { label: "Ansible", percent: 18, highlight: true }
-          - { label: "ARM", percent: 31, highlight: true }
-          - { label: "Bicep", percent: 11, highlight: true }
-          - { label: "None", percent: 7, highlight: true }
       - id: Q5
         kind: bar-horizontal
         heading: Which cloud providers does your infrastructure run on today?
@@ -134,7 +119,6 @@ sections:
           - { label: "Google Cloud", percent: 55, highlight: true }
           - { label: "Cloudflare", percent: 28 }
           - { label: "On-prem/bare metal", percent: 9 }
-          - { label: "Oracle", percent: 36 }
       - id: Q6
         kind: column-vertical
         heading: How often do you deploy infrastructure changes to production?
@@ -321,4 +305,31 @@ sections:
           - { label: "Proactive AI monitoring has reduced our incident volume", values: [3.14, 6.08, 19.22, 48.24, 23.33] }
           - { label: "I trust AI agents to make production infrastructure changes", values: [4.71, 10.39, 22.16, 40.39, 22.35] }
           - { label: "We spend too much time on undifferentiated infrastructure toil", values: [6.08, 19.22, 27.65, 33.14, 13.92] }
+
+cta:
+  heading: Put agents to work on your infrastructure
+  intro: |
+    Pulumi gives engineers and agents one platform to build, deploy, and manage cloud
+    infrastructure — with the guardrails to let agents ship safely.
+  items:
+    - title: Pulumi Neo
+      icon: pulumi-neo
+      desc: An AI agent that plans and executes infrastructure changes, and waits for your approval before touching production.
+      href: /product/neo/
+      cta: Explore Neo
+    - title: Pulumi IaC
+      icon: pulumi-iac
+      desc: Define infrastructure in TypeScript, Python, Go, and more — the real languages agents already know how to write.
+      href: /product/infrastructure-as-code/
+      cta: Explore IaC
+    - title: Pulumi MCP server
+      icon: plugs-connected
+      desc: Connect Claude Code, Copilot, and your own agents to your infrastructure through the Model Context Protocol.
+      href: /docs/ai/integrations/mcp/
+      cta: Read the docs
+    - title: Pulumi Agent Skills
+      icon: head-circuit
+      desc: Knowledge packages that teach Claude Code, Cursor, and other agents to build and manage infrastructure.
+      href: /docs/ai/skills/
+      cta: Explore skills
 ---

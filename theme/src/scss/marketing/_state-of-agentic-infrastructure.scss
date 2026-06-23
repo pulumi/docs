@@ -168,7 +168,7 @@
     &__title {
         display: flex;
         flex-direction: column; // forces "Agentic" / "Infrastructure" onto two lines
-        color: var(--color-violet-500);
+        color: var(--color-violet-400);
         font-weight: 200; // Monaspace Neon ExtraLight
         font-size: 8.696cqw; // 128/1472
         letter-spacing: -0.435cqw; // -6.4/1472
@@ -198,6 +198,34 @@
 
     &__cell {
         @apply px-1 py-0 md:px-10 md:py-9;
+    }
+
+    @include screen-md {
+        &__cell--tl {
+            @apply border-r border-b border-violet-500;
+            border-bottom-right-radius: var(--soai-plus-radius);
+        }
+        &__cell--br {
+            @apply border-t border-l border-violet-500;
+            border-top-left-radius: var(--soai-plus-radius);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Closing CTA — a dark card framing a bracket card (like a section framing its
+// question cards). Inside, a 2x2 grid reuses the overview's "star accent"
+// divider: the first cell is the heading + intro; the other three pair a product
+// icon with a title, description, and a button.
+// ---------------------------------------------------------------------------
+.soai-cta {
+    --soai-plus-radius: 0.625rem; // 10px
+
+    // Shared base for all four grid cells; the --tl/--br modifiers add the
+    // "star accent" divider. Everything else (grid, intro, icon, title) is
+    // plain token utilities and lives inline in the markup.
+    &__cell {
+        @apply flex flex-col gap-4 px-1 py-6 md:px-8 md:py-8;
     }
 
     @include screen-md {
@@ -670,19 +698,32 @@
     }
 
     // Hero card: driven by the hero reveal, not its own scroll-in. It fades in
-    // as the title finishes typing, then the accents pop.
-    .soai-anim .bracket-card--dark {
+    // as the title finishes typing, then the accents pop. Scoped to the hero so
+    // the (also-dark) closing CTA card isn't held invisible by these rules.
+    .soai-anim .soai-hero .bracket-card--dark {
         opacity: 0;
         transition: opacity 0.6s ease 1.5s;
     }
-    .soai-anim .bracket-card--dark::before,
-    .soai-anim .bracket-card--dark::after,
-    .soai-anim .bracket-card--dark .bracket-card__inner::before,
-    .soai-anim .bracket-card--dark .bracket-card__inner::after {
+    .soai-anim .soai-hero .bracket-card--dark::before,
+    .soai-anim .soai-hero .bracket-card--dark::after,
+    .soai-anim .soai-hero .bracket-card--dark .bracket-card__inner::before,
+    .soai-anim .soai-hero .bracket-card--dark .bracket-card__inner::after {
         transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.9s;
     }
     .soai-anim .soai-hero.is-inview .bracket-card--dark {
         opacity: 1;
+    }
+
+    // Closing CTA card: fades + rises on its own scroll-in; its corner accents
+    // pop via the shared .bracket-card.is-inview rule above.
+    .soai-anim .soai-cta .bracket-card--dark {
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-cta .bracket-card--dark.is-inview {
+        opacity: 1;
+        transform: translateY(0);
     }
     .soai-anim .soai-hero.is-inview .bracket-card--dark::before,
     .soai-anim .soai-hero.is-inview .bracket-card--dark::after,
