@@ -55,7 +55,7 @@ try {
                 entries.forEach(function (e) {
                     if (e.isIntersecting) { reveal(e.target); ro.unobserve(e.target); }
                 });
-            }, { rootMargin: '0px 0px -5% 0px', threshold: 0 });
+            }, { rootMargin: '0px 0px -30% 0px', threshold: 0 });
             revealEls.forEach(function (el) { ro.observe(el); });
         }
     }

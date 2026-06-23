@@ -864,4 +864,67 @@
     .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::after {
         transform: scale(1);
     }
+
+    // -- Charts: bars grow from zero when their card scrolls into view. Only the
+    // bars animate — labels, axes and legends stay visible the whole time.
+
+    // Horizontal bars: grow width (flex-basis) from 0, staggered top to bottom.
+    .soai-anim .soai-hbar__fill {
+        flex-basis: 0;
+        transition: flex-basis 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-hbar__fill {
+        flex-basis: var(--val);
+    }
+    @for $i from 1 through 12 {
+        .soai-anim .soai-hbar__row:nth-child(#{$i}) .soai-hbar__fill {
+            transition-delay: #{($i - 1) * 0.06}s;
+        }
+    }
+
+    // Vertical + grouped columns: grow height from the baseline.
+    .soai-anim .soai-col__bar,
+    .soai-anim .soai-grouped__bar {
+        height: 0;
+        transition: height 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-col__bar,
+    .soai-anim .bracket-card.is-inview .soai-grouped__bar {
+        height: var(--val);
+    }
+    @for $i from 1 through 8 {
+        .soai-anim .soai-col__col:nth-child(#{$i}) .soai-col__bar {
+            transition-delay: #{($i - 1) * 0.07}s;
+        }
+    }
+    @for $i from 1 through 7 {
+        .soai-anim .soai-grouped__group:nth-child(#{$i}) .soai-grouped__bar {
+            transition-delay: #{($i - 1) * 0.07}s;
+        }
+    }
+
+    // 100% stacked bar: wipe in from the left.
+    .soai-anim .soai-stack__bar {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-stack__bar {
+        transform: scaleX(1);
+    }
+
+    // Diverging Likert: each side grows outward from the neutral center line.
+    .soai-anim .soai-diverge__side {
+        transform: scaleX(0);
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-diverge__side--left {
+        transform-origin: right;
+    }
+    .soai-anim .soai-diverge__side--right {
+        transform-origin: left;
+    }
+    .soai-anim .bracket-card.is-inview .soai-diverge__side {
+        transform: scaleX(1);
+    }
 }
