@@ -75,7 +75,7 @@ Next, select the **trust relationships** tab, which is where the trust policy of
 }
 ```
 
-This definition allows any Pulumi ESC environment in your organization to assume this role. The `sub` condition uses a wildcard to permit any environment within your org. You can make the policy more granular by restricting access to a specific environment. For more detailed configuration, see the [customizing claims documentation](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims).
+This definition allows any Pulumi ESC environment in your organization to assume this role. The `sub` condition uses a wildcard to permit any environment within your org. You can make the policy more granular by restricting access to a specific environment. For more detailed configuration, see [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim).
 
 Before you log out of the AWS console, make sure to make a note of your role’s ARN value as you will need it in the next step.
 
@@ -133,21 +133,7 @@ Make sure to replace `<your-org>`, `<your-project>`, and `<your-environment>` wi
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
-
-By default, the subject claim has the following format:
-
-`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
-
-To customize the subject, use the `subjectAttributes` property in your environment configuration. This produces a subject with the prefix:
-
-`pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`
-
-{{< notes type="warning" >}}
-
-For environments within the legacy `default` project, the project will **not** be present in the subject to preserve backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is `pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom subject attribute it will resolve to only the environment name (e.g. `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`). Due to this it is recommended to move your environments out of the `default` project for best security practices.
-
-{{< /notes >}}
+You can customize the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions. Use the `subjectAttributes` property in your login configuration; see [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim) for the full list of available attributes and how the subject is composed.
 
 ## Subject claim example
 
@@ -175,15 +161,6 @@ The OIDC subject claim for this environment would be `pulumi:environments:pulumi
   }
 }
 ```
-
-The subject always contains the prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended to this prefix. The list of all possible options for `subjectAttributes` are:
-
-* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
-* `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and `subjectAttributes` are defined
-* `pulumi.user.login`: the login identifier of the user opening the environment
-* `pulumi.organization.login`: the login identifier of the organization
-
-When importing multiple environments into Pulumi IaC Stack Config, each environment is resolved separately. For example, if you import multiple environments into your Pulumi Stack with `rootEnvironment.name` attribute defined in all of them, then each `rootEnvironment.name` will resolve to the environment name where it is defined.
 
 {{< notes type="info" >}}
 
