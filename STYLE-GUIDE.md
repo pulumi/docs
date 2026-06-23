@@ -1,7 +1,7 @@
 # Pulumi Documentation Style Guide
 
 This guide defines Pulumi-specific style rules for our documentation.  
-It's the repo-specific layer. For brand-level voice, writing style, and visual conventions, the [Pulumi brand guidelines](https://brand.pulumi.com/) are authoritative — query them directly through the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (see [Brand guidelines and the Brand MCP server](#brand-guidelines-and-the-brand-mcp-server) below). For anything none of these covers, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+It's the repo-specific layer. For brand-level conventions, defer to the [Pulumi brand guidelines](https://brand.pulumi.com/) (see [Brand guidelines](#brand-guidelines) below); for anything neither covers, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
 ---
 
@@ -16,19 +16,17 @@ The following exceptions are specifically excluded from this style guide:
 
 ---
 
-## Brand guidelines and the Brand MCP server
+## Brand guidelines
 
-Pulumi's brand-level conventions — voice and tone, writing style (grammar, punctuation, product names), typography, logo and visual usage, and color — live in the [Pulumi brand guidelines](https://brand.pulumi.com/), served programmatically by the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp). That server is the source of truth for brand questions this guide doesn't answer.
+Brand-level conventions — voice and tone, writing style, typography, logo and visual usage, and color — live in the [Pulumi brand guidelines](https://brand.pulumi.com/). Precedence, highest first:
 
-Precedence, highest first:
+1. **This style guide** — repo-specific conventions for this repository's Hugo content.
+1. **Pulumi brand guidelines** — brand-wide voice, writing style, and visual rules.
+1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither covers.
 
-1. **This style guide** — repo-specific conventions for the Hugo content in this repository.
-1. **Pulumi brand guidelines (Brand MCP server)** — brand-wide voice, writing style, and visual rules.
-1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither of the above covers.
+When this guide and the brand guidelines diverge, this guide wins here — but flag the divergence rather than inventing a third convention.
 
-Where this guide and the brand guidelines diverge, this guide wins for this repository — but any divergence should be deliberate and documented here. Don't invent a third convention; reconcile with the brand guidelines or note the exception.
-
-Agents with the Brand MCP server configured can pull the full text of any section on demand (for example, `get_guidelines({ section: "writing-style" })`) and should prefer it to guessing. The same server provides approved logo assets (`get_logo`), the brand color palette and semantic tokens, and an APCA contrast checker. Use those when **creating** brand assets — blog meta images, diagrams, slide decks — not for second-guessing the colors in a product screenshot.
+Approved logos and other brand assets come from the self-describing brand asset API (`https://brand.pulumi.com/api`) — no setup, just fetch the URL. Working in an interactive agent or editor? Installing the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) puts the full guidelines, logos, palette, and a contrast checker inline.
 
 ---
 
@@ -132,7 +130,7 @@ If the page also links to related child pages, use standard markdown (lists, tab
 - Name image files descriptively (helps accessibility and SEO); avoid generic names like `screenshot-1.png`.
 - For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
 
-**Brand assets.** For logos, illustrations, and other brand imagery, use the approved assets from the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (`get_logo`, or the canonical URLs under `https://brand.pulumi.com/media/...`). Don't recolor, distort, add effects to, or otherwise alter the logo, and never use generative AI to create Pulumi brand imagery or the Pulumipus mascot. See the brand `logo`, `visuals`, and `guidelines` sections for the full rules.
+**Brand assets.** Use approved logos from the brand asset API (`https://brand.pulumi.com/api`); don't recolor, distort, or otherwise alter the logo, and never AI-generate Pulumi brand imagery or the Pulumipus mascot.
 
 ---
 
@@ -185,7 +183,7 @@ Both syntaxes work for plain text content, but use percent signs for shortcodes 
 - Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
 - Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
 
-For dates, times, numbers, point of view (*you* vs. *we*), and other mechanics this guide doesn't specify, defer to the brand `writing-style` guidance via the [Brand MCP server](https://brand.pulumi.com/mcp).
+For dates, times, numbers, point of view (*you* vs. *we*), and anything else this guide doesn't specify, defer to the brand `writing-style` guidelines.
 
 ---
 

@@ -41,7 +41,7 @@ Applied to images and diagrams in user-facing content (docs, blogs, customer sto
 
 These are brand-*compliance* checks (is the asset a correct, approved Pulumi asset?), distinct from the aesthetic critique excluded below.
 
-- **Logo integrity.** The Pulumi logo must be an approved, unaltered version. Flag a recolored, stretched, rotated, cropped, or effect-laden (drop shadow, gradient, glow, outline) logo, a logo boxed in a non-approved container, or a logo on a busy or low-contrast background. The canonical logo and the full rules come from the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) (`get_logo`, or canonical URLs under `https://brand.pulumi.com/media/...`); the brand `logo` section is authoritative.
+- **Logo integrity.** The Pulumi logo must be an approved, unaltered version. Flag a recolored, stretched, rotated, cropped, or effect-laden (drop shadow, gradient, glow, outline) logo, a logo boxed in a non-approved container, or a logo on a busy or low-contrast background. The canonical logo comes from the self-describing brand asset API (`https://brand.pulumi.com/api`); the brand `logo` guidelines are authoritative.
 - **No AI-generated brand imagery.** Pulumi's visual language doesn't reproduce cleanly under image models and reads off-brand. Flag illustrations or photos that appear AI-generated as Pulumi brand imagery.
 - **No Pulumipus in new materials.** As of 2026-03-23 the mascot is being reworked; existing Pulumipus assets must not be used in new content, and the mascot must never be AI-generated or altered. Flag any Pulumipus usage in added images.
 

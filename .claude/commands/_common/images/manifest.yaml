@@ -14,11 +14,11 @@ images:
     owner: docs-team
   - file: pulumi-logo-current.png
     area: branding
-    # Cached convenience copy. The canonical, always-current logo is served by
-    # the Pulumi Brand service — prefer a live fetch (get_logo via the Brand MCP
-    # server, or https://brand.pulumi.com/media/...) for the branding-currency
-    # check so it never rides on a stale PNG. See screenshot-verification.md.
-    description: Current Pulumi logo and color scheme (cached; canonical source is the Pulumi Brand service).
+    # Cached convenience copy. The canonical, always-current logo is the brand
+    # asset API (https://brand.pulumi.com/api) — prefer a live fetch for the
+    # branding-currency check so it never rides on a stale PNG. See
+    # screenshot-verification.md.
+    description: Current Pulumi logo and color scheme (cached; canonical source is the brand asset API).
     captured: 2026-05-29
-    source_url: https://brand.pulumi.com/
+    source_url: https://brand.pulumi.com/api
     owner: docs-team
