@@ -3,17 +3,67 @@
 
 {{ define "main" }}
 <style>html { scroll-behavior: smooth; }</style>
-<div class="soai font-body container mx-auto mb-16 mt-8 flex flex-col gap-6 px-4 md:gap-8 md:px-8">
+<div class="soai font-body">
 
     {{/* Dark hero card */}}
     {{ with .Params.hero }}
-    {{ partial "soai/hero.html" . }}
+    <div class="container mx-auto mt-8 px-4 md:px-8">
+        {{ partial "soai/hero.html" . }}
+    </div>
     {{ end }}
 
-    {{/* Section cards (violet-50). Only Section 1 ships now; more drop in via frontmatter. */}}
-    {{ range .Params.sections }}
-    {{ partial "soai/section.html" . }}
+    {{/*
+        Sections region. Full-width and position:relative so the section-nav's
+        absolute track spans exactly the sections (appearing after the hero) and
+        ends before the footer (so the sticky rail rides up off it).
+    */}}
+    {{ with .Params.sections }}
+    <div class="soai-sections relative">
+        <div class="container mx-auto mb-16 flex flex-col gap-6 px-4 pt-6 md:gap-8 md:px-8 md:pt-8">
+            {{ range . }}
+            {{ partial "soai/section.html" . }}
+            {{ end }}
+        </div>
+
+        {{/* Sticky right-edge section nav (lives in the region's track) */}}
+        {{ partial "soai/section-nav.html" . }}
+    </div>
     {{ end }}
 
 </div>
+
+<script>
+(function () {
+    var nav = document.querySelector('[data-soai-sectionnav]');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    var track = nav.closest('.soai-sectionnav-track');
+    var hero = document.querySelector('.soai-hero');
+    var sections = Array.prototype.slice.call(document.querySelectorAll('.soai-section'));
+    var items = Array.prototype.slice.call(nav.querySelectorAll('.soai-sectionnav__item'));
+    if (!sections.length || !items.length) return;
+
+    // Fade the rail in once the hero is essentially scrolled past, so it doesn't
+    // peek below a short hero on tall screens. The -160px top margin also keeps
+    // it shown when an anchor (e.g. "01") lands on the first section (hero bottom
+    // ~80px down). Footer avoidance is handled by the sticky layout, not JS.
+    if (track && hero) {
+        new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) { track.classList.toggle('is-visible', !e.isIntersecting); });
+        }, { rootMargin: '-160px 0px 0px 0px', threshold: 0 }).observe(hero);
+    }
+
+    // Scroll-spy: mark the section passing through the upper-middle band active.
+    var setActive = function (id) {
+        items.forEach(function (li) {
+            li.classList.toggle('is-active', li.getAttribute('data-target') === id);
+        });
+    };
+    var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { setActive(e.target.id); }
+        });
+    }, { rootMargin: '-30% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+}());
+</script>
 {{ end }}

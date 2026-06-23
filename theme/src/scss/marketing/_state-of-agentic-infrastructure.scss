@@ -607,3 +607,132 @@
         color: var(--color-violet-primary);
     }
 }
+
+// ---------------------------------------------------------------------------
+// Right-edge section nav. A full-height absolute track (spanning the sections
+// region only) holds a sticky, viewport-centered rail. As the region's bottom
+// approaches, the sticky rail rides up off the footer — so footer avoidance is
+// pure layout, no JS. The track is hidden by default and faded in by JS once
+// the hero is scrolled past (so the rail doesn't peek below a short hero on
+// tall screens). Numbers by default with an active state; on hover/focus the
+// rail slides out to reveal each title. Desktop only.
+// ---------------------------------------------------------------------------
+.soai-sectionnav-track {
+    display: none;
+    position: absolute;
+    inset: 0; // spans the sections region; sticky rail lives inside it
+    z-index: 40;
+    pointer-events: none; // the full-height track must not block clicks over content
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    @include screen-lg {
+        display: block;
+    }
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.soai-sectionnav {
+    position: sticky;
+    top: 50%;
+    width: max-content;
+    margin-left: auto; // right-align the rail at the track's (viewport) right edge
+    transform: translateY(-50%);
+    pointer-events: auto;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.625rem;
+        padding: 0.4rem 1.1rem;
+        border-radius: var(--radius-sm, 0.25rem) 0 0 var(--radius-sm, 0.25rem);
+        background: transparent;
+        text-decoration: none;
+        transition: background 0.25s ease;
+        border:2px solid transparent;
+        border-width: 0 2px 0 0;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: none;
+        }
+
+        &:hover .soai-sectionnav__num,
+        &:hover .soai-sectionnav__title,
+        &:focus-visible .soai-sectionnav__num,
+        &:focus-visible .soai-sectionnav__title {
+            color: var(--color-violet-primary);
+        }
+    }
+
+    &__num {
+        @apply font-mono;
+        font-size: 0.8125rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--color-gray-400);
+        transition: color 0.2s ease;
+    }
+
+    &__title {
+        @apply font-mono uppercase;
+        max-width: 0;
+        overflow: hidden;
+        opacity: 0;
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        color: var(--color-service-black);
+        transition: max-width 0.35s ease, opacity 0.25s ease;
+    }
+
+    // Active number (collapsed default state).
+    &__item.is-active &__num,
+    &__item.is-active &__link {
+        color: var(--color-violet-primary);
+        border-color: var(--color-violet-primary);
+    }
+
+    // Hover / focus: slide titles out and give links a readable pill.
+    &:hover,
+    &:focus-within {
+        .soai-sectionnav__title {
+            max-width: 16rem;
+            opacity: 1;
+        }
+
+      
+
+
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .soai-sectionnav,
+    .soai-sectionnav__link,
+    .soai-sectionnav__title,
+    .soai-sectionnav__num {
+        transition: none;
+    }
+}

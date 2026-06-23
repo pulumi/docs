@@ -12,7 +12,7 @@
 {{ $anchor := .anchor }}
 {{ $number := .number }}
 
-<section{{ with $anchor }} id="{{ . }}"{{ end }} class="soai-section flex scroll-mt-28 flex-col gap-10 rounded-lg bg-violet-50 px-4 py-10 sm:px-8 sm:py-12 lg:gap-14 lg:px-16 lg:py-16 xl:px-24">
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="soai-section flex scroll-mt-22 flex-col gap-10 rounded-lg bg-violet-50 px-4 py-10 sm:px-8 sm:py-12 lg:gap-14 lg:px-16 lg:py-16 xl:px-24">
 
     {{ partial "soai/overview-grid.html" (dict
         "number" $number
