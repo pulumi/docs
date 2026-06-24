@@ -144,7 +144,9 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Regenerating Pulumi SDK Java docs for pulumi-java@${{ env.JAVA_SDK_VERSION }}"
-            git push origin pulumi-sdk-java-docs/${{ github.run_id }}-${{ github.run_number }}
+            if [ "${{ github.event.inputs.publish_only }}" != "true" ]; then
+              git push origin pulumi-sdk-java-docs/${{ github.run_id }}-${{ github.run_number }}
+            fi
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
         working-directory: docs

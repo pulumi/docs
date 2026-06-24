@@ -126,7 +126,9 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Regenerating Pulumi ESC SDK Python docs for pulumi_esc_sdk@${{ env.ESC_SDK_VERSION }}"
-            git push origin pulumi-esc-sdk-python-docs/${{ github.run_id }}-${{ github.run_number }}
+            if [ "${{ github.event.inputs.publish_only }}" != "true" ]; then
+              git push origin pulumi-esc-sdk-python-docs/${{ github.run_id }}-${{ github.run_number }}
+            fi
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
       # --- Versioned docs: archive this SDK release as an immutable snapshot. ---------

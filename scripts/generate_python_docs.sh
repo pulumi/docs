@@ -53,6 +53,11 @@ done
 
 mkdir -p "$(dirname "$OUTDIR")"
 rm -rf "${OUTDIR}"
-pipenv run sphinx-build -j auto -b dirhtml "$SOURCE_DIR" "$OUTDIR"
+# Keep Sphinx's doctree pickle cache OUT of OUTDIR (it defaults to OUTDIR/.doctrees).
+# Those files are never served and would otherwise bloat the committed prebuilt and the
+# immutable versioned-docs snapshot.
+DOCTREES="$(mktemp -d)"
+pipenv run sphinx-build -j auto -b dirhtml -d "$DOCTREES" "$SOURCE_DIR" "$OUTDIR"
+rm -rf "$DOCTREES"
 
 popd

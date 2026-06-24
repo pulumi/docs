@@ -136,6 +136,9 @@ fi
 #    from file extensions and is available everywhere (CI + local), so we use it rather
 #    than depending on s5cmd being installed in the doc-gen workflows.
 sync_args=(--no-progress --cache-control "$IMMUTABLE_CC")
+# Never upload generator build cruft to an immutable snapshot: Sphinx doctree pickles
+# (.doctrees/*.doctree, .buildinfo) are build state, not served pages.
+sync_args+=(--exclude '*.doctree' --exclude '*/.doctrees/*' --exclude '.doctrees/*' --exclude '.buildinfo')
 [[ "$FORCE" == "true" ]] && sync_args+=(--delete)
 aws s3 sync "$WORKDIR/" "s3://${BUCKET}/${PREFIX}" "${sync_args[@]}"
 
