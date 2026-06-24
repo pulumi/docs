@@ -3,7 +3,7 @@ title_tag: Deploy a Managed Kubernetes Cluster to AWS
 title: Kubernetes Cluster on AWS
 layout: template
 schema_type: howto
-meta_desc: Deploy a managed Kubernetes cluster on AWS with Pulumi and Amazon EKS in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a managed Kubernetes cluster on AWS with Pulumi and Amazon EKS in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on AWS with Pulumi and Amazon EKS.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -42,17 +43,36 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 kubeconfig
 : The cluster's kubeconfig file, which you can use with `kubectl` to access and communicate with your cluster.
 
 vpcId
 : The ID of the VPC that your cluster is running in.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+cluster_name
+: The name of the EKS cluster.
+
+vpc_id
+: The ID of the VPC that your cluster is running in.
+
+kubeconfig
+: The cluster's kubeconfig file, which you can use with `kubectl` to access and communicate with your cluster.
+
+{{% /choosable %}}
+
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources.
 
 ## Customizing the project
 
 Projects created with the Kubernetes template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 minClusterSize
 : The minimum number of nodes to allow in the cluster. Defaults to `3`.
@@ -64,10 +84,31 @@ desiredClusterSize
 : The desired number of nodes in the cluster. Defaults to `3`.
 
 eksNodeInstanceType
-: The EC2 instance type to use for the nodes. Defaults to `t2.medium`.
+: The EC2 instance type to use for the nodes. Defaults to `t3.medium`.
 
 vpcNetworkCidr
 : The network CIDR to use for the VPC. Defaults to `10.0.0.0/16`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+min_cluster_size
+: The minimum number of nodes to allow in the cluster. Defaults to `3`.
+
+max_cluster_size
+: The maximum number of nodes to allow in the cluster. Defaults to `6`.
+
+desired_cluster_size
+: The desired number of nodes in the cluster. Defaults to `3`.
+
+node_instance_type
+: The EC2 instance type to use for the nodes. Defaults to `t3.medium`.
+
+vpc_network_cidr
+: The network CIDR to use for the VPC. Defaults to `10.0.0.0/16`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set).
 

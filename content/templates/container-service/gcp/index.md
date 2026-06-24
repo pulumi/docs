@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to Google Cloud
 title: Container Service on Google Cloud
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on Google Cloud with Pulumi, Cloud Run, and Artifact Registry in TypeScript, Python, Go, or C#.
+meta_desc: Deploy a container service on Google Cloud with Pulumi, Cloud Run, and Artifact Registry in TypeScript, Python, Go, C#, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on Google Cloud with Pulumi and Google Cloud Run.
 template:
@@ -14,6 +14,7 @@ template:
     - python
     - go
     - csharp
+    - hcl
 cloud:
   name: Google Cloud
   slug: gcp
@@ -33,7 +34,17 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
+{{% choosable language "typescript,python,go,csharp" %}}
+
 You must supply an existing Google Cloud project ID and choose a region before deploying the container service. You can input both through the new-project wizard. Once the project is created, you can deploy it with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+The template deploys into your active Google Cloud project (read from your gcloud credentials) and defaults to the `us-central1` region, which you can change with the `region` setting. Once the new project is created, you can deploy it with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
+
+{{% /choosable %}}
 
 ```bash
 $ pulumi up
@@ -54,6 +65,8 @@ $ open $(pulumi stack output url)
 
 Projects created with the Container Service template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp" %}}
+
 containerPort
 : The port mapping for the container service. Defaults to port `8080`.
 
@@ -72,12 +85,52 @@ imageName
 appPath
 : The location of the Dockerfile used to build the container image. Defaults to the `app` folder, which contains a "Hello World" example app.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+region
+: The Google Cloud region to deploy into. Defaults to `us-central1`.
+
+app_path
+: The location of the Dockerfile used to build the container image. Defaults to the `app` folder, which contains a "Hello World" example app.
+
+image_name
+: The name of the container image deployed to your Cloud Run service. Defaults to `my-app`.
+
+container_port
+: The port mapping for the container service. Defaults to port `8080`.
+
+cpu
+: The amount of CPU to allocate to each container instance. Defaults to `1` CPU.
+
+memory
+: The amount of memory to allocate to each container instance. Defaults to `1Gi`.
+
+concurrency
+: The maximum number of concurrent requests per container instance. Defaults to `80`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp" %}}
 
 ```bash
 $ pulumi config set containerPort 3000
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set container_port 3000
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 

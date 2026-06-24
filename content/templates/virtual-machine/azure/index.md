@@ -3,7 +3,7 @@ title_tag: Deploy a Virtual Machine to Azure
 title: Virtual Machine on Azure
 layout: template
 schema_type: howto
-meta_desc: Deploy an Azure virtual machine with Pulumi and Azure Virtual Machines in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy an Azure virtual machine with Pulumi and Azure Virtual Machines in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Azure with Pulumi and Azure Virtual Machines.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Microsoft Azure
   slug: azure
@@ -42,6 +43,8 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 ip
 : The IP address of the virtual machine.
 
@@ -50,6 +53,24 @@ hostname
 
 url
 : The fully-qualified HTTP URL of the HTTP server running on the virtual machine.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+ip
+: The IP address of the virtual machine.
+
+hostname
+: The provider-assigned hostname of the virtual machine.
+
+url
+: The fully-qualified HTTP URL of the HTTP server running on the virtual machine.
+
+private_key
+: The PEM-encoded private key for SSH access to the VM. This value is a secret.
+
+{{% /choosable %}}
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `url`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
 
@@ -60,6 +81,8 @@ $ open $(pulumi stack output url)
 ## Customizing the project
 
 Projects created with the Virtual Machine template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 adminUsername
 : The user account to create on the VM. Defaults to `pulumiuser`.
@@ -78,6 +101,30 @@ servicePort
 
 sshPublicKey
 : The public key data to use for SSH authentication.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+location
+: The Azure location to deploy into. Defaults to `WestUS2`.
+
+admin_username
+: The user account to create on the VM. Defaults to `pulumiuser`.
+
+vm_name
+: The DNS hostname prefix to use for the VM. Defaults to `my-server`.
+
+vm_size
+: The machine size to use for the VM. Defaults to `Standard_A1_v2`.
+
+os_image
+: The Azure image reference (publisher:offer:sku:version) to use for the VM. Defaults to `Debian:debian-11:11:latest`.
+
+service_port
+: The HTTP service port to expose on the VM. Defaults to `80`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 

@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to AWS
 title: Container Service on AWS
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on AWS with Pulumi, Amazon ECS on Fargate, and Amazon ECR in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a container service on AWS with Pulumi, Amazon ECS on Fargate, and Amazon ECR in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on AWS with Pulumi and Amazon ECS.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -55,6 +56,8 @@ $ open $(pulumi stack output url)
 
 Projects created with the Container Service template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 container_port
 : Specifies the port mapping for the container. Defaults to port 80.
 
@@ -67,9 +70,32 @@ memory
 image
 : Specifies the location of the Dockerfile used to build the container image that is run. Defaults to the Dockerfile in the `app` folder.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+app_path
+: Specifies the path to the container application to deploy, used as the build context for the Dockerfile. Defaults to `./app`.
+
+image_name
+: Specifies the name to give the container image that is built. Defaults to `my-app`.
+
+container_port
+: Specifies the port mapping for the container. Defaults to `80`.
+
+cpu
+: Specifies the amount of CPU to use with each task or each container within a task. Defaults to `256`.
+
+memory
+: Specifies the amount of memory to use with each task or each container within a task. Defaults to `512`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
 ### Using your own container image
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 If you already have a container image you'd like to build your container service with, you can do so either by replacing the Dockerfile in the `app` folder or by configuring the stack to point to another folder on your computer with the `image` setting:
 
@@ -77,6 +103,19 @@ If you already have a container image you'd like to build your container service
 $ pulumi config set image ../my-existing-image
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+If you already have a container image you'd like to build your container service with, you can do so either by replacing the Dockerfile in the `app` folder or by configuring the stack to point to another folder on your computer (one containing a Dockerfile) with the `app_path` setting:
+
+```bash
+$ pulumi config set app_path ../my-existing-image
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 

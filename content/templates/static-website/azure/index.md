@@ -3,7 +3,7 @@ title_tag: Deploy a Static Website to Azure
 title: Azure Static Website
 layout: template
 schema_type: howto
-meta_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a static website on Azure with Pulumi, Azure Blob Storage, and Azure CDN.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
     name: Microsoft Azure
     slug: azure
@@ -42,6 +43,8 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 originHostname
 : The provider-assigned hostname of the Azure Blob Storage container.
 
@@ -54,15 +57,47 @@ cdnHostname
 cdnURL
 : The fully-qualified HTTPS URL of the Azure CDN.
 
-Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `cdnURL`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+origin_url
+: The fully-qualified HTTP URL of the storage container endpoint.
+
+origin_hostname
+: The provider-assigned hostname of the Azure Blob Storage container.
+
+cdn_url
+: The fully-qualified HTTPS URL of the Azure CDN.
+
+cdn_hostname
+: The provider-assigned hostname of the Azure CDN. Useful for creating `CNAME` records to associate custom domains.
+
+{{% /choosable %}}
+
+Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed CDN URL, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ open $(pulumi stack output cdnURL)
 ```
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ open $(pulumi stack output cdn_url)
+```
+
+{{% /choosable %}}
+
 ## Customizing the project
 
 Projects created with the Static Website template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -72,6 +107,24 @@ indexDocument
 
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+location
+: The Azure region to deploy into. Defaults to `WestUS`.
+
+path
+: The path to the folder containing the files of the website. Defaults to `./www`, which is the name (and relative path) of the folder included with the template.
+
+index_document
+: The file to use for top-level pages. Defaults to `index.html`.
+
+error_document
+: The file to use for error pages. Defaults to `error.html`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
