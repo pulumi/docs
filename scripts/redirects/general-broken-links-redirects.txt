@@ -67,14 +67,14 @@ solutions/shared-services-platforms/index.html|/product/internal-developer-platf
 images/logo/avatar-on-black.svg|/logos/brand/avatar-on-black.svg
 images/logo/avatar-on-white.svg|/logos/brand/avatar-on-white.svg
 images/logo/logo-black-normal.svg|/logos/brand/logo-black-normal.svg
-images/logo/logo-inv.svg|/logos/brand/logo-inv.svg
+images/logo/logo-inv.svg|/logos/brand/logo-on-black.svg
 images/logo/logo-on-black.svg|/logos/brand/logo-on-black.svg
 images/logo/logo-on-white-box.svg|/logos/brand/logo-on-white-box.svg
 images/logo/logo-on-white.svg|/logos/brand/logo-on-white.svg
-images/logo/logo-symbol-inv.svg|/logos/brand/logo-symbol-inv.svg
-images/logo/logo-symbol.svg|/logos/brand/logo-symbol.svg
-images/logo/logo-white-white.svg|/logos/brand/logo-white-white.svg
-images/logo/logo-white.svg|/logos/brand/logo-white.svg
+images/logo/logo-symbol-inv.svg|/logos/brand/pulumi_mark_on_light.svg
+images/logo/logo-symbol.svg|/logos/brand/pulumi_mark_on_light.svg
+images/logo/logo-white-white.svg|/logos/brand/logo-on-black.svg
+images/logo/logo-white.svg|/logos/brand/logo-on-black.svg
 images/logo/logo.svg|/logos/brand/logo.svg
 images/logo/pulumi_mark_on_light.svg|/logos/brand/pulumi_mark_on_light.svg
 jobs/index.html|/careers/
@@ -82,3 +82,4 @@ company/jobs/index.html|/careers/
 careers/jobs/index.html|/careers/
 company/pulumi/jobs/index.html|/careers/
 blog/relaunching-pulumis-public-roadmap/index.html|/blog/
+brand/virtual-backgrounds/index.html|https://brand.pulumi.com/

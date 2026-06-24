@@ -2,6 +2,7 @@
 title: "Announcing the General Availability of Pulumi ESC - Welcome to a New Era of Secrets Management"
 allow_long_title: true
 date: 2024-09-18T8:59:00-00:00
+updated: 2026-06-16
 draft: false
 meta_desc: "Pulumi ESC GA: Centralized secrets management service that tames secrets sprawl and configuration complexity across cloud infrastructure and applications."
 meta_image: "meta.png"
@@ -37,7 +38,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 ### Centralize and Simplify Secrets Management:
 
 - **Unify Your Secrets**: Say goodbye to secrets scattered across systems. Pulumi ESC lets you pull and synchronize secrets from any source—[HashiCorp Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure Key Vault](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), and more—and consume them securely from anywhere.
-- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/esc/cli/), [API](/docs/pulumi-cloud/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/esc/environments/access-control/) ensures the right people have the right access at all times.
+- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/iac/cli/commands/pulumi_env/), [API](/docs/pulumi-cloud/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/esc/environments/access-control/) ensures the right people have the right access at all times.
 - **Eliminate .env File Risks**: Stop sharing secrets through insecure channels. Pulumi ESC provides a secure and centralized way to manage and access secrets, eliminating the need for risky .env files.
 
 ![Pulumi ESC Integrations](esc-integrations.png)

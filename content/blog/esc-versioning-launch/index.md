@@ -2,6 +2,7 @@
 title: "Unveiling Pulumi ESC Versioning: Manage Secrets and Deployments with Confidence"
 allow_long_title: true
 date: 2024-06-05T00:00:00-03:00
+updated: 2026-06-16
 draft: false
 meta_desc: "The new ESC Versioning features allows you bring agile practices to your secrets and configuration management, and streamline deployments"
 meta_image: "meta.png"
@@ -47,22 +48,22 @@ Ready to start using versioning in Pulumi ESC? Here's how you can get started us
 
 ### Using the CLI
 
-Make sure you have the latest [ESC CLI](/docs/install/esc/) installed before you perform these steps. In your terminal,
+Make sure you have the latest [Pulumi CLI](/docs/iac/download-install/) installed before you perform these steps. In your terminal,
 
-1. Run `esc env edit <environment-name>` to edit an environment
-1. Run `esc env version history <environment-name>` to view all revision history
-1. Run `esc env diff <environment-name>[@<version>] [[<environment-name>]@<version>]` to compare changes between versions
-1. Run `esc env version tag <environment-name>@<tag>` to assign a tag to the latest revision
-1. Create a new environment using `esc env init <new-environment-name>` and import the previously edited environment using this syntax:
+1. Run `pulumi env edit <environment-name>` to edit an environment
+1. Run `pulumi env version history <environment-name>` to view all revision history
+1. Run `pulumi env diff <environment-name>[@<version>] [[<environment-name>]@<version>]` to compare changes between versions
+1. Run `pulumi env version tag <environment-name>@<tag>` to assign a tag to the latest revision
+1. Create a new environment using `pulumi env init <new-environment-name>` and import the previously edited environment using this syntax:
 
     ```yaml
     imports:
     - <environment-name>@<tag>
     ```
 
-1. Run `esc open <new-environment-name>` to open and confirm that you have imported the right environment version
+1. Run `pulumi env open <new-environment-name>` to open and confirm that you have imported the right environment version
 
-Check out the [ESC CLI documentation](/docs/esc-cli/) for more details on available options and commands.
+Check out the [Pulumi CLI documentation](/docs/iac/cli/commands/pulumi_env/) for more details on available options and commands.
 
 ### Using the Console
 
@@ -83,7 +84,7 @@ Here are a few examples of how you might use these features:
 
 - **Global Infrastructure Update**: You need to deploy a new configuration to a global service spanning multiple regions. Tag the updated configuration as `next` and deploy it to one region for testing. After verifying stability, you can confidently roll it out to other regions. If issues arise, quickly revert to the previous `stable` version, ensuring resilient and minimally disruptive deployments.
 - **Platform Team Releases**: If you're a Platform team responsible for generating configurations, by tagging releases with labels like `v1.0-stable` and `v1.2-development`, you can clearly communicate which configurations are production-ready, keeping other teams informed about the ongoing development, and fostering seamless collaboration.
-- **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature or `esc env diff`, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
+- **Code Review and Debugging**: You're working in a development environment where the latest revision includes multiple recent changes, and you notice that the application is experiencing performance issues. By using the Compare Revisions Side-by-Side feature or `pulumi env diff`, you can quickly identify the specific changes that might be causing the problem, enabling faster troubleshooting and resolution.
 
 These examples are just a glimpse of how Pulumi ESC’s versioning capabilities can streamline your development and deployment process. The possibilities are vast, and you can tailor your tagging strategy to fit your specific needs and operational workflows.
 
@@ -93,4 +94,4 @@ The versioning capabilities in Pulumi ESC mark a significant step towards a more
 
 We're excited to see how you leverage these powerful capabilities. Your feedback is crucial in helping us shape the product to better serve your needs. We encourage you to open new issues on our [GitHub repository](https://github.com/pulumi/esc/issues/new/choose), upvote existing [ones](https://github.com/pulumi/esc/issues), or join the conversation on our [community Slack](https://slack.pulumi.com/) channel.
 
-Check out the [ESC CLI](/docs/esc-cli/) and [Versioning](/docs/esc/environments/#versioning-environments) docs.
+Check out the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/) and [Versioning](/docs/esc/environments/#versioning-environments) docs.

@@ -131,6 +131,8 @@ Pulumi was built around the IaS model from day one.
 * **Automation API.** Embed `pulumi up`, `pulumi preview`, and `pulumi destroy` inside any program that needs to provision infrastructure programmatically.
 * **CI/CD-native.** Pulumi runs in every major CI/CD system. The [continuous delivery guide](/docs/iac/guides/continuous-delivery/) covers the common patterns.
 
+The dividing line between IaC and IaS isn't syntax preference, it's whether your infrastructure can be called by other code. Once a cloud resource is an ordinary software object, the IaC engine becomes a library, and provisioning stops being a separate operational silo and becomes something you can compose into platforms, products, and pipelines the same way you compose any other function. That reach, not the cleaner loops or the better autocomplete, is what DSL-based IaC can't follow you into.
+
 [Get started with Pulumi](/docs/get-started/) to provision and manage cloud infrastructure in the language your team already uses.
 
 ## Frequently asked questions about infrastructure as software

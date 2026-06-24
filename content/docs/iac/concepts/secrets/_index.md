@@ -194,6 +194,23 @@ Be careful that you do not pass this plain-text value to code that might expose 
 
 It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/concepts/resources#additionalsecretoutputs) option.
 
+### The resource ID cannot be made secret
+
+A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) — the `id` output property assigned by the provider — is always stored in plain text in the state file and cannot be encrypted. Adding `id` to [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) has no effect, because `id` is a special property rather than a regular output.
+
+{{% notes "warning" %}}
+This matters when a resource places a sensitive, generated value in its ID. For example, the `result` of `random.RandomString` is also exposed as the resource's `id`, so the generated string ends up unencrypted in state even if you mark `result` as secret.
+
+To keep a generated secret out of plain-text state, use a resource that exposes the sensitive value only as a normal output. For instance, `random.RandomPassword` returns the generated value in its `result` output (its `id` is not the secret), so marking `result` secret encrypts it everywhere it is stored:
+
+```typescript
+const password = new random.RandomPassword("password", {
+    length: 16,
+}, { additionalSecretOutputs: ["result"] });
+```
+
+{{% /notes %}}
+
 ## Encrypted secrets in configuration data {#secrets}
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plain text.

@@ -113,7 +113,7 @@ pipelines:
 
 The `pulumi/pulumi` Docker image includes the Pulumi CLI and every language runtime, so the same pipeline works regardless of the language your program is written in. [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) installs the program's language dependencies and required plugins.
 
-`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+`pulumi preview` reports the proposed changes without modifying any resources, giving reviewers a summary of what the merge would do. To let reviewers exercise the change in a live environment, pair the preview step with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 To promote a release, push a tag that matches the `release-*` pattern:
 
@@ -132,7 +132,7 @@ Your Pulumi program needs credentials for whichever cloud it manages. Supply the
 
 The Pulumi Cloud [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/) posts pull request comments and commit status checks for every deployment, regardless of which CI/CD system triggers the run. Connecting it gives reviewers a summary of resource changes directly on the pull request.
 
-The integration can also replace a hand-written pipeline entirely: with [push-to-deploy](/docs/deployments/deployments/using/triggers/#push-to-deploy) and [review stacks](/docs/deployments/deployments/review-stacks/), Pulumi Cloud runs your updates on Pulumi-hosted infrastructure in response to Bitbucket events, with no `bitbucket-pipelines.yml` to maintain.
+The integration can also replace a hand-written pipeline entirely: with [push-to-deploy](/docs/deployments/concepts/triggers/#push-to-deploy) and [review stacks](/docs/deployments/concepts/review-stacks/), Pulumi Cloud runs your updates on Pulumi-hosted infrastructure in response to Bitbucket events, with no `bitbucket-pipelines.yml` to maintain.
 
 ## Additional resources
 
@@ -140,5 +140,5 @@ The integration can also replace a hand-written pipeline entirely: with [push-to
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Bitbucket version control integration](/docs/integrations/version-control/bitbucket/) — pull request comments and commit statuses from Pulumi Cloud.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

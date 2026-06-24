@@ -1,0 +1,40 @@
+{{- /*
+  Table render hook: wraps every Markdown table in a horizontally
+  scrollable container (.table-wrapper) so wide tables scroll within
+  their own box instead of overflowing the docs grid. When the table
+  has a header row, each <td> also gets a data-label attribute (the
+  matching column header) so the table can reflow into stacked
+  "label: value" cards on narrow viewports. See theme/src/scss/_tables.scss.
+*/ -}}
+{{- $hasHead := gt (len .THead) 0 -}}
+{{- $headRow := slice -}}
+{{- if $hasHead -}}{{- $headRow = index .THead 0 -}}{{- end -}}
+<div class="table-wrapper{{ if $hasHead }} table-responsive{{ end }}">
+  <table
+    {{- range $k, $v := .Attributes }}
+      {{- if $v }}{{ printf " %s=%q" $k $v | safeHTMLAttr }}{{ end }}
+    {{- end }}>
+    {{- with .THead }}
+    <thead>
+      {{- range . }}
+      <tr>
+        {{- range . }}
+        <th{{ with .Alignment }} style="text-align: {{ . }};"{{ end }}>{{ .Text }}</th>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </thead>
+    {{- end }}
+    {{- with .TBody }}
+    <tbody>
+      {{- range . }}
+      <tr>
+        {{- range $i, $cell := . }}
+        <td{{ with $cell.Alignment }} style="text-align: {{ . }};"{{ end }}{{ if and $hasHead (lt $i (len $headRow)) }} data-label="{{ (index $headRow $i).Text | plainify }}"{{ end }}>{{ $cell.Text }}</td>
+        {{- end }}
+      </tr>
+      {{- end }}
+    </tbody>
+    {{- end }}
+  </table>
+</div>

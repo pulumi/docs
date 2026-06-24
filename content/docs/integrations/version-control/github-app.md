@@ -23,7 +23,7 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/github-app/
 ---
 
-Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/deployments/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
+Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
 The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/concepts/state/#using-a-diy-backend).
@@ -52,11 +52,71 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
+### Individual user authentication for GitHub Enterprise Server
+
+By default, Pulumi performs all GitHub Enterprise Server operations as the shared GitHub app installation. When individual user authentication is enabled, operations that a user initiates run against GitHub Enterprise as that user's own connected account instead. Pull requests, commits, and comments are attributed to the user, operations are limited to the repositories that user can access, and deployments triggered by pushes and pull requests are attributed to the user who triggered them.
+
+This setting applies only to self-hosted GitHub Enterprise Server integrations. GitHub.com integrations always use the shared app installation and ignore the setting. The setting is per integration, so if your organization connects more than one GitHub Enterprise Server, enable it on each integration separately.
+
+#### Enable individual user authentication
+
+Only organization admins can change this setting. You can enable it in either of two places:
+
+- **On an existing integration**: navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and turn on **Individual user authentication** in the **Security** section.
+- **During setup**: the GitHub Enterprise install wizard shows the same **Individual user authentication** toggle while you connect the server.
+
+Once the setting is enabled, a **Your GitHub Enterprise account** section appears on the integration page so members can connect their accounts. Organization admins can see who has connected an account in the organization's member list, which shows a **GitHub Enterprise** column while any integration has the setting enabled.
+
+#### Connect your GitHub Enterprise account
+
+Any organization member can connect their own account; admin permissions are not required. Navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account** in the **Your GitHub Enterprise account** section. After you authorize Pulumi on your GitHub Enterprise server, the card shows the connected account and connection date. To remove the link, select **Disconnect account**.
+
+Your account is linked per GitHub Enterprise host, not per Pulumi organization. Connecting or disconnecting it also applies to any other Pulumi organization that uses the same GitHub Enterprise server. Connecting again replaces the previously linked identity. Tokens refresh automatically; if your authorization expires or is revoked, operations prompt you to reconnect.
+
+#### How operations authenticate
+
+When individual user authentication is enabled, operations authenticate as follows:
+
+| Operation | Authenticates as |
+|---|---|
+| Deployments and clones you start from the Pulumi Cloud console | Your GitHub Enterprise account. If you haven't connected one, the operation fails with a prompt to connect. |
+| Deployments triggered by pushes and pull requests | The GitHub Enterprise user who triggered the event, when that user has connected an account and is a member of the Pulumi organization. Otherwise, the deployment runs as the shared app installation. |
+| [Neo](/docs/ai/) writes to GitHub, such as opening pull requests, pushing commits, commenting, and creating repositories | Your GitHub Enterprise account. Neo prompts you to connect if you haven't. |
+| Scheduled deployments, scheduled Neo tasks, and operations created through the API | The shared app installation. These have no live user session, so they never prompt to connect. |
+
+#### Register the OAuth callback URL for an existing app
+
+GitHub Enterprise integrations created through the install wizard automatically register the OAuth callback URL that individual user authentication requires. If your Pulumi GitHub App was created before this feature was available, the callback URL is not registered, and members who try to connect their account will see an error on your GitHub Enterprise server indicating the redirect URI is not associated with the application.
+
+To fix this, add the callback URL to the Pulumi GitHub App on your GitHub Enterprise server. You must be an owner of the account (user or organization) that owns the app.
+
+1. Determine your callback URL:
+
+       https://api.pulumi.com/workflow/github-enterprise/<ghe-hostname>/callback
+
+   Replace `<ghe-hostname>` with the hostname of your GitHub Enterprise server, with no scheme, port, or trailing slash. Use the same hostname you entered when creating the integration. For example, for `https://ghe.example.com`:
+
+       https://api.pulumi.com/workflow/github-enterprise/ghe.example.com/callback
+
+1. On your GitHub Enterprise server, open the Pulumi GitHub App's settings:
+   - If the app is owned by an organization: **Organization settings** > **Developer settings** > **GitHub Apps**, then select the app.
+   - If the app is owned by a user account: **Settings** > **Developer settings** > **GitHub Apps**, then select the app.
+
+1. In the **Identifying and authorizing users** section, add the callback URL from step 1. If the app already has callback URLs, add it alongside them rather than replacing them. You do not need to change the **Expire user authorization tokens** setting. Pulumi handles both expiring and non-expiring tokens.
+
+1. Save your changes.
+
+1. Verify the setup: in the Pulumi Cloud console, navigate to **Management** > **Version control**, select your GitHub Enterprise integration, and select **Connect your GitHub Enterprise account**. After authorizing on your GitHub Enterprise server, you should be redirected back to Pulumi and see your GitHub Enterprise username listed as connected.
+
+{{% notes type="info" %}}
+If authorization fails with an error mentioning the redirect URI, the callback URL doesn't match: check the hostname for typos, and confirm it contains no scheme, port, or trailing slash.
+{{% /notes %}}
+
 ### Individual user setup
 
 Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
 
-Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. This option is not available for GitHub Enterprise Server.
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
 
 {{% notes type="info" %}}
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
@@ -69,11 +129,11 @@ After installing the app, you can configure pull request behavior. Toggle these 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
-Changes save automatically. Neo Code Reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo Code Reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+Changes save automatically. Neo code reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo code reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 
@@ -97,13 +157,13 @@ All Pulumi stack updates are reported to the GitHub Checks API. You can see the 
 
 ### Push-to-deploy
 
-Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
+Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/concepts/triggers/#push-to-deploy) for setup instructions.
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
 
 ### Review stacks
 
-[Review stacks](/docs/deployments/deployments/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+[Review stacks](/docs/deployments/concepts/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
 
 ## CI integration
 

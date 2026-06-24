@@ -28,7 +28,7 @@ collections:
 - kubernetes
 collections_weight: 2
 prereqs:
-- "The [Pulumi ESC CLI](/docs/esc-cli/)"
+- "The [Pulumi CLI](/docs/iac/download-install/)"
 - "A Kubernetes cluster (for example, [kind](https://kind.sigs.k8s.io/))"
 - "[kubectl](https://kubernetes.io/releases/download/#kubectl)"
 - "[helm](https://helm.sh/docs/intro/install/)"

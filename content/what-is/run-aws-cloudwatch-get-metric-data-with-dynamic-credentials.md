@@ -17,36 +17,36 @@ With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
-[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `esc run` command of this service, in particular, helps to resolve concerns around how to:
+[Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command of this service, in particular, helps to resolve concerns around how to:
 
 - Share credentials with teammates consistently and securely.
 - Minimize the risks associated with locally configured, long-lived, and highly privileged credentials.
 - Ensure teams can quickly and safely run commands like `aws cloudwatch get-metric-data` without requiring deep security expertise.
 
-## What is the esc run command?
+## What is the pulumi env run command?
 
-The [Pulumi documentation for the `esc run` command](/docs/esc/cli/commands/esc_run/) states the following:
+The [Pulumi documentation for the `pulumi env run` command](/docs/iac/cli/commands/pulumi_env_run/) states the following:
 
 > This command opens the environment with the given name and runs the given command. If the opened environment contains a top-level ’environmentVariables’ object, each key-value pair in the object is made available to the command as an environment variable.
 
 But what does this actually mean? If we use AWS as an example, it means that we can run commands like `aws cloudwatch get-metric-data` without the need to configure AWS credentials locally each time. It’s a significant stride towards making your cloud interactions more efficient and less error-prone, and here’s a deeper dive into why:
 
-- **Seamless Command Execution** - The `esc run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
+- **Seamless Command Execution** - The `pulumi env run` command lets you execute AWS commands effortlessly, freeing you from the intricacies of managing AWS credentials on your local machine. Simply put, it significantly reduces the overhead of credential setup and maintenance.
 
-- **Enhanced Security** - One of the standout features of `esc run` is its commitment to security. Removing the local storage of credentials reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
+- **Enhanced Security** - One of the standout features of `pulumi env run` is its commitment to security. Removing the local storage of credentials reduces the risk of accidental exposure. Your credentials and secrets are securely managed within the Pulumi environment.
 
-- **Streamlined Collaboration** - Because credentials are centralized, `esc run` facilitates smoother team collaboration by providing a consistent environment for all team members to leverage. Everyone can access the same secure environment, reducing the complexities of coordinating credentials and configurations across teams.
+- **Streamlined Collaboration** - Because credentials are centralized, `pulumi env run` facilitates smoother team collaboration by providing a consistent environment for all team members to leverage. Everyone can access the same secure environment, reducing the complexities of coordinating credentials and configurations across teams.
 
-## Getting started with esc run
+## Getting started with pulumi env run
 
 ### Step 1: Install and log in to Pulumi ESC
 
-To begin, you’ll need to [install Pulumi ESC](/docs/install/esc/). Once the installation is complete, run the `esc login` command and follow the steps to log in to the CLI.
+To begin, you’ll need to install the [Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
 
 ```bash
-$ esc login
-Manage your Pulumi ESC environments by logging in.
-Run `esc --help` for alternative login options.
+$ pulumi login
+Manage your Pulumi stacks by logging in.
+Run `pulumi login --help` for alternative login options.
 Enter your access token from https://app.pulumi.com/account/tokens
     or hit <ENTER> to log in using your browser                   :
 Logged in to pulumi.com as …
@@ -109,13 +109,13 @@ secret_key                <not set>             None    None
     region                <not set>             None    None
 ```
 
-To add the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To add the metrics, run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:00:10Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:03:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 9 --unit Count --timestamp 2023-12-12T04:02:00Z --region <aws-region>
-$  esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 1 --unit Count --timestamp 2023-12-12T04:20:00Z --region <aws-region>
+$  pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:00:10Z --region <aws-region>
+$  pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Invocations --dimensions FunctionName=helloWorld --value 10 --unit Count --timestamp 2023-12-12T04:03:00Z --region <aws-region>
+$  pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 9 --unit Count --timestamp 2023-12-12T04:02:00Z --region <aws-region>
+$  pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch put-metric-data --namespace pulumiDemo --metric-name Errors --dimensions FunctionName=helloWorld --value 1 --unit Count --timestamp 2023-12-12T04:20:00Z --region <aws-region>
 ```
 
 ### Step 6: Create a sample metric data query file
@@ -176,10 +176,10 @@ EOF
 
 At this point, you have validated your environment, added sample data, and added queries.
 
-To get the metrics, run the command using `esc run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
+To get the metrics, run the command using `pulumi env run` as shown below, making sure to replace `<your-pulumi-org-name>`, `<your-project-name>`, `<your-environment-name>`, and `<aws-region>` with the names of your own Pulumi organization, ESC environment, and AWS Region, respectively.
 
 ```bash
-$ esc run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch get-metric-data --metric-data-queries file://./sampleQuery.json --start-time 2023-12-12T04:00:00Z --end-time 2023-12-12T04:30:00Z  --region <aws-region>
+$ pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name> -- aws cloudwatch get-metric-data --metric-data-queries file://./sampleQuery.json --start-time 2023-12-12T04:00:00Z --end-time 2023-12-12T04:30:00Z  --region <aws-region>
 ```
 
 Then validate that your output is similar to the following:
@@ -211,4 +211,4 @@ Pulumi ESC makes it easier than ever to tame infrastructure complexity, especial
 - Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
 - Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
 
-[Join our community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.
+[Join the Pulumi community on Slack](https://slack.pulumi.com/) to discuss this topic further, and let us know what you think.

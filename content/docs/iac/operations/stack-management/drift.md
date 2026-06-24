@@ -128,7 +128,7 @@ Manual `pulumi refresh --preview-only` works for small teams but doesn't scale. 
 
     Run it as often as the SLA on drift remediation requires. Hourly for production, daily for staging is a common starting point.
 
-- **Pulumi Deployments.** [Deployments](/docs/deployments/deployments/) runs scheduled drift jobs against your stacks and can either stop at detection (a preview-only refresh that surfaces the diff in the [Drift tab](/docs/deployments/deployments/drift/)) or remediate automatically by running `pulumi up --refresh` after the detection run. [Webhooks](/docs/deployments/webhooks/) fire on every drift event (`drift_detected`, `drift_detection_succeeded`, `drift_detection_failed`, `drift_remediation_succeeded`, `drift_remediation_failed`), so you can route notifications to Slack, Microsoft Teams, PagerDuty, or any HTTP endpoint without writing a custom polling loop. This is the lowest-friction option if you're already on Pulumi Cloud.
+- **Pulumi Deployments.** [Deployments](/docs/deployments/concepts/) runs scheduled drift jobs against your stacks and can either stop at detection (a preview-only refresh that surfaces the diff in the [Drift tab](/docs/deployments/concepts/drift/)) or remediate automatically by running `pulumi up --refresh` after the detection run. [Webhooks](/docs/deployments/concepts/webhooks/) fire on every drift event (`drift_detected`, `drift_detection_succeeded`, `drift_detection_failed`, `drift_remediation_succeeded`, `drift_remediation_failed`), so you can route notifications to Slack, Microsoft Teams, PagerDuty, or any HTTP endpoint without writing a custom polling loop. This is the lowest-friction option if you're already on Pulumi Cloud.
 
 ## Resource options for safer drift handling
 
@@ -170,7 +170,7 @@ For most teams, scheduled detection plus human-driven remediation is the safer d
 ## See also
 
 - [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) and [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) CLI references.
-- [Pulumi Cloud drift detection](/docs/deployments/deployments/drift/) — managed scheduling, the Drift tab, and auto-remediation.
+- [Pulumi Cloud drift detection](/docs/deployments/concepts/drift/) — managed scheduling, the Drift tab, and auto-remediation.
 - [Pulumi Neo tasks](/docs/ai/tasks/) — let Neo handle the code-edit step of adoption.
 - [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) — continuous reconciliation for Kubernetes-hosted stacks.
 - [Targeted updates](/docs/iac/operations/stack-management/targeted-updates/) — partial updates are a common source of drift between code and infrastructure.

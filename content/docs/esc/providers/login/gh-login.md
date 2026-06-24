@@ -21,7 +21,7 @@ installation access token that can be used to access the GitHub API and reposito
 
 The provider works as a GitHub App to produce an installation access token for the specified GitHub account, as described
 in "[Authenticating as a GitHub App installation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation)".
-Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/github-actions/),
+Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/integrate-with/github-actions/),
 the [GitHub CLI](https://cli.github.com/), etc. The token will expire after 1 hour.
 
 ## App Registration
@@ -50,7 +50,9 @@ for instructions on how to generate a private key (in PEM format) and download t
 
 Private keys do not expire and need to be manually revoked. You must keep private keys for GitHub Apps secure.
 Store the private key as a secret by using the `fn::secret` function.
-See "[Managing Secrets](/docs/esc/operations/managing-secrets/#storing-secrets)".
+See "[`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets)".
+
+Because the PEM-formatted private key spans multiple lines, wrap it in a YAML block scalar (`|`) so the newlines are preserved. See "[Multi-line secrets](/docs/esc/operations/managing-secrets/#multi-line-secrets)".
 
 ```yaml
 appId: 123456

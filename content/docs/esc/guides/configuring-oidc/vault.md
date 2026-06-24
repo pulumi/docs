@@ -172,14 +172,14 @@ If you configured the Vault JWT auth method to use a different [mount path](http
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace the values of `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```shell
 # example output
-$ esc open <my-org>/<my-project>/<my-environment>
+$ pulumi env open <my-org>/<my-project>/<my-environment>
 {
   "vault": {
     "login": {
@@ -209,16 +209,9 @@ To learn more about how to set up and use the various providers in Pulumi ESC, p
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given IAM role. This allows for more granular access control than the default organization-level permissions.
+You can customize the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given role. This allows for more granular access control than the default organization-level permissions. Use the `subjectAttributes` property in your login configuration; see [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim) for the full list of available attributes and how the subject is composed.
 
-You do so by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
-
-* `rootEnvironment.name`: the name of the root environment being evaluated
-* `currentEnvironment.name`: the name of the current environment being evaluated
-* `pulumi.user.login`: the login identifier of the user opening the environment
-* `pulumi.organization.login`: the login identifier of the organization
-
-The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and every key configured will be appended to this prefix. For example, consider the following environment:
+For example, consider the following environment:
 
 ```yaml
 values:

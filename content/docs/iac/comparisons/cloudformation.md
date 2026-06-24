@@ -139,7 +139,7 @@ On a failed update, Pulumi leaves the stack in a partially-updated state and rep
 
 ### Can Pulumi detect drift like CloudFormation?
 
-Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/).
+Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/).
 
 ### Can I use Pulumi for non-AWS resources alongside CloudFormation for AWS?
 

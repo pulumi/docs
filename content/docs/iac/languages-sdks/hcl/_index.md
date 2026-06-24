@@ -28,7 +28,7 @@ All you need to use Pulumi HCL is the [Pulumi CLI](/docs/install/), version 3.23
 
 ## Example
 
-A Pulumi HCL project consists of a `Pulumi.yaml` with `runtime: hcl` and one or more `.hcl` files in the project directory.
+Pulumi HCL is a superset of Terraform HCL: the `.tf` files are the same code you would write for Terraform or OpenTofu. A project consists of a `Pulumi.yaml` with `runtime: hcl` and one or more `.tf` files in the project directory.
 
 `Pulumi.yaml`:
 
@@ -38,14 +38,14 @@ runtime: hcl
 description: A simple Pulumi HCL project
 ```
 
-`main.hcl`:
+`main.tf`:
 
 ```hcl
-pulumi {
+terraform {
   required_providers {
     random = {
-      source  = "pulumi/random"
-      version = ">= 4.0.0"
+      source  = "hashicorp/random"
+      version = ">= 3.0.0"
     }
   }
 }
@@ -66,7 +66,7 @@ output "pet_name" {
 ```
 
 {{% notes "info" %}}
-Provider sources must use the `pulumi/` namespace (for example, `pulumi/aws`), not `hashicorp/`.
+Providers resolve the same way as OpenTofu: an unqualified source such as `random` (or a fully-qualified `hashicorp/random`) is looked up in the [OpenTofu registry](https://opentofu.org/registry/) and bridged into Pulumi automatically — no `required_providers` entry is required. Prefix a source with `pulumi/` (for example, `pulumi/aws`) to consume a native Pulumi provider instead.
 {{% /notes %}}
 
 Further examples are available in the [Pulumi HCL GitHub repository](https://github.com/pulumi-labs/pulumi-hcl/tree/master/examples). The specification for Pulumi HCL programs is in the [Pulumi HCL reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/).
@@ -79,15 +79,16 @@ To learn how the Pulumi programming model is implemented for Pulumi HCL, refer t
 
 ## Terraform compatibility
 
-Pulumi HCL is broadly compatible with Terraform-like HCL syntax. Resources, data sources, variables, locals, outputs, modules, expressions, and most built-in functions work as documented by HashiCorp, with two notable behavioral differences:
+Pulumi HCL aims to run valid Terraform configurations without changes. Resources, data sources, variables, locals, outputs, modules, expressions, and most built-in functions work as documented by HashiCorp. A small number of behaviors differ:
 
-- Provider sources must use the `pulumi/` namespace, not `hashicorp/`.
 - Resource replacement creates the new resource before deleting the old one (the opposite of Terraform). Set `create_before_destroy = false` in a `lifecycle` block to opt into delete-first behavior.
+- `backend`, `cloud`, and `required_version` in the `terraform` block are accepted but ignored with a warning — Pulumi manages state independently.
+- State files are not interchangeable. Import existing resources with `pulumi import` rather than reusing a Terraform state file.
 
 For the full list of differences and unsupported features, see the [Terraform compatibility section](/docs/iac/languages-sdks/hcl/hcl-language-reference/#terraform-compatibility) of the reference.
 
 ## HCL packages
 
-The [Pulumi Registry](/registry/) houses 100+ packages that can be consumed from Pulumi HCL programs by declaring them in a `pulumi` `required_providers` block.
+By default, providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged into Pulumi automatically, just as they are in OpenTofu — so a Terraform codebase that depends on community or internal providers works without changes. Pin a source and version with a `terraform` `required_providers` block when you need to.
 
-For Terraform or OpenTofu providers that aren't published in the Pulumi Registry, use [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) to generate a local package on the fly. This is especially relevant for Pulumi HCL users who are bringing existing programs from a Terraform codebase that depends on community or internal providers without bridged Pulumi equivalents.
+The [Pulumi Registry](/registry/) also houses 100+ native Pulumi packages. Consume one instead of the bridged Terraform provider by declaring its source with the `pulumi/` namespace (for example, `pulumi/kubernetes`) in a `required_providers` block.

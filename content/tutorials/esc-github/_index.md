@@ -14,7 +14,7 @@ youll_learn:
     - How to Deploy infrastructure on AWS using Pulumi in GitHub Actions
 prereqs:
     - A [Pulumi Cloud](https://app.pulumi.com/signup) account
-    - The [Pulumi ESC CLI](/docs/install/esc/)
+    - The [Pulumi CLI](/docs/iac/download-install/)
     - Complete the [configure OIDC guide](/docs/pulumi-cloud/access-management/oidc/provider/aws/)
     - A GitHub repository
 estimated_time: 15
@@ -143,7 +143,7 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Install and inject AWS credentials
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: '<your-organization>/<your-esc-env>'
 

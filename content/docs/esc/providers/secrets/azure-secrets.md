@@ -37,13 +37,16 @@ values:
             name: api-key
           app-secret:
             name: app-secret
+  pulumiConfig:
+    apiKey: ${azure.secrets.api-key}
+    appSecret: ${azure.secrets.app-secret}
 ```
 
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/azure/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
@@ -98,7 +101,7 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 | `name`         | string | The name of the secret to import.                 |
 | `version`      | string | [Optional] - The version of the secret to import. |
 
-### Outputs
+## Outputs
 
 | Property | Type   | Description                         |
 |----------|--------|-------------------------------------|

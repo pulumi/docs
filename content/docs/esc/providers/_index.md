@@ -43,6 +43,13 @@ Dynamically import values from an external system of record into your environmen
 | [gcp-secrets](/docs/esc/providers/secrets/gcp-secrets/) | Import secrets from Google Cloud Secret Manager. |
 | [infisical-secrets](/docs/esc/providers/secrets/infisical-secrets/) | Import secrets from Infisical. |
 | [vault-secrets](/docs/esc/providers/secrets/vault-secrets/) | Import secrets from HashiCorp Vault. |
-| [pulumi-stacks](/docs/esc/providers/secrets/pulumi-stacks/) | Import outputs from a Pulumi stack (includes Terraform state stored in Pulumi Cloud). |
-| [terraform-state](/docs/esc/providers/secrets/terraform-state/) | Import outputs from a Terraform state file in S3 or Terraform Cloud. |
 | [external](/docs/esc/providers/secrets/external/) | Import secrets from a custom service adapter. |
+
+## Infrastructure as code providers
+
+Import the outputs of an existing Pulumi stack or Terraform state file into your environment.
+
+| Provider | Description |
+|---|---|
+| [pulumi-stacks](/docs/esc/providers/iac/pulumi-stacks/) | Import outputs from a Pulumi stack (includes Terraform state stored in Pulumi Cloud). |
+| [terraform-state](/docs/esc/providers/iac/terraform-state/) | Import outputs from a Terraform state file in S3 or Terraform Cloud. |

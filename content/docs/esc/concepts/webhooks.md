@@ -9,7 +9,6 @@ menu:
     parent: esc-concepts
     weight: 10
 aliases:
-- /docs/esc-cli/commands/
 - /docs/esc/webhooks/
 - /docs/esc/environments/webhooks/
 ---
@@ -29,7 +28,7 @@ ESC Webhooks can be attached to either an environment or a Pulumi Cloud organiza
 - **Organization webhooks** can be configured to trigger in response to events you specify for _all_ environments in your Pulumi Cloud organization, in addition to other organization-wide events.
 
 {{% notes "info" %}}
-Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/webhooks).
+Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks).
 {{% /notes %}}
 
 {{% notes "info" %}}
@@ -205,9 +204,9 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on your stacks via [Pulumi Deployments](/docs/deployments/deployments/), usually in response to `environment_revision_created` or `imported_environment_changed` events. This enables you to keep dependent stacks up to date with your environment changes automatically.
+The Deployment webhook destination lets you trigger updates on your stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `environment_revision_created` or `imported_environment_changed` events. This enables you to keep dependent stacks up to date with your environment changes automatically.
 
-Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/deployments/reference/#deployment-settings).
+Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/).
 
 ### Generic JSON Webhooks
 
@@ -417,7 +416,7 @@ func computeSignature(payload []byte, secret string) string {
 Pulumi Cloud records the recent deliveries for each webhook so you can confirm that events
 were received and troubleshoot any that failed. Environment and organization webhook
 deliveries can be viewed and redelivered from the webhook's page in the Pulumi Cloud UI.
-For step-by-step instructions, see [Webhook deliveries](/docs/deployments/webhooks/#webhook-deliveries)
+For step-by-step instructions, see [Webhook deliveries](/docs/deployments/concepts/webhooks/#webhook-deliveries)
 on the Pulumi Cloud Webhooks page.
 
 The experimental `pulumi stack webhook delivery` CLI commands apply to stack webhooks

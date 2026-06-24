@@ -83,15 +83,15 @@ Pulumi posts commit status checks to Bitbucket on every deployment, for both pus
 
 ### Push-to-deploy
 
-Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/deployments/using/triggers/#push-to-deploy) for setup instructions.
+Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the default branch. Enable this under **Stack** > **Settings** > **Deploy** by toggling **Deploy on push**. See the [push-to-deploy documentation](/docs/deployments/concepts/triggers/#push-to-deploy) for setup instructions.
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/deployments/using/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
 
 ### Review stacks
 
-[Review stacks](/docs/deployments/deployments/review-stacks/) are ephemeral cloud environments created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments stands up a stack with your changes and posts a pull request comment with the outputs. Merge or close the pull request, and Pulumi Deployments destroys the stack and frees the associated resources.
+[Review stacks](/docs/deployments/concepts/review-stacks/) are ephemeral cloud environments created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments stands up a stack with your changes and posts a pull request comment with the outputs. Merge or close the pull request, and Pulumi Deployments destroys the stack and frees the associated resources.
 
 To enable review stacks, toggle **Pull request template** under **Stack** > **Settings** > **Deploy** on the stack you want to use as a template.
 
