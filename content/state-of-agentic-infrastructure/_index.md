@@ -30,7 +30,7 @@ hero:
 findings:
   overline: What we found
   points:
-    - Infrastructure work has outgrown the infrastructure team—product and app developers are now the single largest group doing it.
+    - The people we surveyed don't sit where you'd expect—a third do infrastructure work from product and app teams, not a dedicated infra group.
     - Speed is no longer the problem. Teams ship fast; what they lack is control over consistency, cost, and security.
     - Agents are already everywhere in the workflow—only 4% use none—but a human still signs off before production.
     - "Confidence is outrunning controls: trust in agents is climbing faster than the governance around it, and teams expect even more agent-generated infrastructure within six months."
@@ -47,7 +47,7 @@ sections:
         - 510 platform, DevOps, and product engineers
         - Product and app developers are the largest group (35%), ahead of DevOps (23%) and platform engineering (17%)
         - 65% work at companies of 201–5,000 people, and 65% are in Software / SaaS
-      takeaway: Infrastructure work no longer belongs to the infrastructure team alone. Product and app developers are now the largest group doing it.
+      takeaway: Among the people we surveyed, infrastructure work reaches well beyond the infra team—a third sit on product or app development teams.
     questions:
       - id: Q1
         kind: bar-horizontal
