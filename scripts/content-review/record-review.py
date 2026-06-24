@@ -181,6 +181,18 @@ def check_pr_body(body: str | None) -> list[str]:
     return [s for s in REQUIRED_PR_SECTIONS if s.lower() not in text]
 
 
+def unresolved_draft_markers(body: str | None) -> int:
+    """Count composer scaffolding the model should have resolved before publish.
+
+    The composer seeds the draft with `<TODO>` markers and `<!-- LINT-RESULT -->`
+    (the latter stamped by the re-lint gate, which runs before this). Either left
+    in a published body means the model shipped the scaffold — worth a
+    non-blocking nudge, mirroring the pre-merge `no-todo-tokens` guard.
+    """
+    text = body or ""
+    return text.count("<TODO") + text.count("<!-- LINT-RESULT -->")
+
+
 def canonical_branch_pushed(slug: str) -> bool:
     """True if either canonical review branch was pushed to origin.
 
@@ -355,6 +367,10 @@ def run(args) -> int:
                      f"following required sections: {', '.join(missing)}."],
                     check=False,
                 )
+        leftover = unresolved_draft_markers(pr.get("body"))
+        if leftover:
+            warn(f"PR #{record['pr_number']} body still has {leftover} unresolved "
+                 "draft marker(s) (<TODO> / unstamped lint placeholder)")
 
     out_path = Path(args.out)
     out_path.write_text(json.dumps(record, indent=2) + "\n")
@@ -466,6 +482,12 @@ def self_test() -> int:
                "Rendered content"})
         check("section check passes complete body",
               check_pr_body("\n".join(f"## {s}" for s in REQUIRED_PR_SECTIONS)) == [])
+
+        # Unresolved-draft-marker guard (non-blocking parity with no-todo-tokens).
+        check("counts leftover TODO + lint placeholder",
+              unresolved_draft_markers("a <TODO: fix> b <!-- LINT-RESULT --> c") == 2)
+        check("clean published body has zero markers",
+              unresolved_draft_markers("## Why this page\nall resolved") == 0)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
