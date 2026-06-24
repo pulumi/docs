@@ -27,6 +27,14 @@ hero:
       label: The six-month outlook and sentiment
       anchor: the-six-month-outlook-and-sentiment
 
+findings:
+  overline: What we found
+  points:
+    - Infrastructure work has outgrown the infrastructure team—product and app developers are now the single largest group doing it.
+    - Speed is no longer the problem. Teams ship fast; what they lack is control over consistency, cost, and security.
+    - Agents are already everywhere in the workflow—only 4% use none—but a human still signs off before production.
+    - "Confidence is outrunning controls: trust in agents is climbing faster than the governance around it, and teams expect even more agent-generated infrastructure within six months."
+
 sections:
   - anchor: who-we-surveyed
     number: "01"
