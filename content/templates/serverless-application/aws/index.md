@@ -3,7 +3,7 @@ title_tag: Deploy a Serverless Application to AWS
 title: AWS Serverless Application
 layout: template
 schema_type: howto
-meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -42,8 +43,22 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 url
 : The HTTP URL for the application.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+site_url
+: The HTTP URL for the website.
+
+api_url
+: The HTTP URL for the API endpoint.
+
+{{% /choosable %}}
 
 Stack outputs are useful in a number of ways, most commonly as inputs to other stacks or cloud resources.
 
@@ -51,11 +66,25 @@ Stack outputs are useful in a number of ways, most commonly as inputs to other s
 
 Projects created with the AWS Serverless template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the folder included with the template. The `/date` path is a GET endpoint that retrieves the current time from the Lambda function.
 
 code
 : The path to the folder containing the Lambda function code. Defaults to the `function` folder included with the template.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+site_path
+: The path to the folder containing the files of the website. Defaults to `./www`, which is the folder included with the template. The `/date` path is a GET endpoint that retrieves the current time from the Lambda function.
+
+app_path
+: The path to the folder containing the Lambda function code. Defaults to the `./function` folder included with the template.
+
+{{% /choosable %}}
 
 None of these settings is required; by default, the template deploys the website and function using the files in the `www` and `function` folders bundled with the template.
 
@@ -63,12 +92,25 @@ None of these settings is required; by default, the template deploys the website
 
 If you already have a website you'd like to deploy, you can do so by replacing the contents of the `www` folder and redeploying with `pulumi up`.
 
-Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the `path` setting:
+Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the website path setting:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ pulumi config set path ../my-website/dist
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set site_path ../my-website/dist
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ### Customizing the application's functionality
 

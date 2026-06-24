@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -42,21 +43,49 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 cdnHostname
 : The provider-assigned hostname of the CloudFront CDN. Useful for creating `CNAME` records to associate custom domains.
 
 cdnURL
 : The fully-qualified HTTPS URL of the CloudFront CDN.
 
-Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `cdnURL`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+cdn_url
+: The fully-qualified HTTPS URL of the CloudFront CDN.
+
+cdn_hostname
+: The provider-assigned hostname of the CloudFront CDN. Useful for creating `CNAME` records to associate custom domains.
+
+{{% /choosable %}}
+
+Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed CDN URL, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ open $(pulumi stack output cdnURL)
 ```
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ open $(pulumi stack output cdn_url)
+```
+
+{{% /choosable %}}
+
 ## Customizing the project
 
 Projects created with the Static Website template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the name (and relative path) of the folder included with the template.
@@ -66,6 +95,21 @@ indexDocument
 
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+path
+: The path to the folder containing the files of the website. Defaults to `./www`, which is the name (and relative path) of the folder included with the template.
+
+index_document
+: The file to use for top-level pages. Defaults to `index.html`.
+
+error_document
+: The file to use for error pages. Defaults to `error.html`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
@@ -82,7 +126,7 @@ $ pulumi up
 
 By default, the generated program configures the CloudFront CDN to cache files for 600 seconds (10 minutes), which may or may not be the best fit for your project or stack. You can adjust these settings by changing the code in {{< langfile >}}:
 
-{{% chooser language "typescript,python,go,csharp,yaml" / %}}
+{{% chooser language "typescript,python,go,csharp,yaml,hcl" / %}}
 
 {{% choosable language typescript %}}
 
@@ -163,6 +207,21 @@ cdn:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```diff
+resource "aws_cloudfront_distribution" "cdn" {
+  default_cache_behavior {
+-   default_ttl = 600
+-   max_ttl     = 600
+-   min_ttl     = 600
++   default_ttl = 3600
++   max_ttl     = 3600
++   min_ttl     = 3600
+```
+
+{{% /choosable %}}
+
 Alternatively, and perhaps better, you could make these settings configurable as well, which would allow them to vary between other stacks in your project.
 
 ## Next steps
@@ -184,9 +243,19 @@ $ pulumi config set domain example.com
 $ pulumi config set subdomain www
 ```
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 Then, in your editor of choice, open {{< langfile >}} and add the following lines to the configuration section at the top of the program to import the new settings and capture the domain as a reusable value:
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Then, in your editor of choice, open {{< langfile >}} and add the following lines to the top of the program to declare the new variables and capture the domain as a reusable value:
+
+{{% /choosable %}}
+
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -244,9 +313,37 @@ variables:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+variable "domain" {
+  type = string
+}
+
+variable "subdomain" {
+  type = string
+}
+
+locals {
+  domain_name = "${var.subdomain}.${var.domain}"
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 Next, just above the `aws.cloudfront.Distribution` declaration, add these lines to provision and validate a new SSL/TLS certificate with [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) (ACM):
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, just above the `aws_cloudfront_distribution` resource, add these lines to provision and validate a new SSL/TLS certificate with [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) (ACM):
+
+{{% /choosable %}}
+
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -449,9 +546,60 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Look up your existing Route 53 hosted zone.
+data "aws_route53_zone" "zone" {
+  name = var.domain
+}
+
+# ACM certificates for CloudFront must be created in the us-east-1 region.
+provider "aws" {
+  alias  = "us_east_1"
+  region = "us-east-1"
+}
+
+# Provision a new ACM certificate.
+resource "aws_acm_certificate" "certificate" {
+  provider          = aws.us_east_1
+  domain_name       = local.domain_name
+  validation_method = "DNS"
+}
+
+# Validate the ACM certificate with DNS.
+resource "aws_route53_record" "certificate_validation" {
+  for_each = {
+    for option in aws_acm_certificate.certificate.domain_validation_options : option.domain_name => {
+      name   = option.resource_record_name
+      type   = option.resource_record_type
+      record = option.resource_record_value
+    }
+  }
+
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = each.value.name
+  type    = each.value.type
+  records = [each.value.record]
+  ttl     = 60
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 Extend the CloudFront configuration to handle requests for the new domain by adding an `aliases` argument to the CDN configuration and adjusting  `viewerCertificate` to use the newly provisioned ACM certificate:
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Extend the CloudFront configuration to handle requests for the new domain by adding an `aliases` argument to the CDN configuration and adjusting the `viewer_certificate` block to use the newly provisioned ACM certificate:
+
+{{% /choosable %}}
+
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -546,9 +694,26 @@ cdn:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_cloudfront_distribution" "cdn" {
+  # ...
+  aliases = [local.domain_name]
+
+  viewer_certificate {
+    cloudfront_default_certificate = false
+    acm_certificate_arn            = aws_acm_certificate.certificate.arn
+    ssl_support_method             = "sni-only"
+  }
+}
+```
+
+{{% /choosable %}}
+
 Below that, add a Route 53 `A` record to create a DNS record pointing to the CloudFront CDN:
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -666,9 +831,30 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Create a DNS A record to point to the CDN.
+resource "aws_route53_record" "domain" {
+  zone_id = data.aws_route53_zone.zone.zone_id
+  name    = var.subdomain
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.cdn.domain_name
+    zone_id                = aws_cloudfront_distribution.cdn.hosted_zone_id
+    evaluate_target_health = true
+  }
+
+  depends_on = [aws_acm_certificate.certificate]
+}
+```
+
+{{% /choosable %}}
+
 And finally, complete the program by exporting the new URL as a Pulumi stack output:
 
-{{< chooser language "typescript,python,go,csharp,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -712,6 +898,16 @@ outputs:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+output "domain_url" {
+  value = "https://${local.domain_name}"
+}
+```
+
+{{% /choosable %}}
+
 Save your changes, then preview and deploy with another `pulumi up`:
 
 ```bash
@@ -720,17 +916,43 @@ $ pulumi up
 
 In a few moments, you should be able to browse to your website using the custom domain:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 ```bash
 $ open $(pulumi stack output domainURL)
 ```
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ open $(pulumi stack output domain_url)
+```
+
+{{% /choosable %}}
+
 #### Using a third-party DNS service
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 If the domain you'd like to use is being managed by a third-party DNS service, you can generally use the exported `cdnHostname` to create a `CNAME` record with your DNS provider. You can obtain this value with `pulumi stack output`:
 
 ```bash
 $ pulumi stack output cdnHostname
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+If the domain you'd like to use is being managed by a third-party DNS service, you can generally use the exported `cdn_hostname` to create a `CNAME` record with your DNS provider. You can obtain this value with `pulumi stack output`:
+
+```bash
+$ pulumi stack output cdn_hostname
+```
+
+{{% /choosable %}}
 
 Pulumi supports many third-party DNS providers, all of which are available in the [Pulumi Registry](/registry/) and accompanied by examples, including:
 
