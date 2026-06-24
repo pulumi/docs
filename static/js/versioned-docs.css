@@ -87,9 +87,11 @@
 html.vdocs-has-bar {
   padding-top: var(--vdocs-bar-h, 44px);
 }
-html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar */
-html.vdocs-has-bar .navbar.fixed-top,   /* DocFX */
-html.vdocs-has-bar .tsd-page-toolbar {  /* TypeDoc */
+html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar (fixed) */
+html.vdocs-has-bar .navbar.fixed-top,   /* DocFX on Bootstrap 4 */
+html.vdocs-has-bar .navbar-fixed-top,   /* DocFX on Bootstrap 3 (.NET, ESC .NET) */
+html.vdocs-has-bar .tsd-page-toolbar,   /* TypeDoc (nodejs + policy/ESC) — sticky top:0 */
+html.vdocs-has-bar .fixedNav {          /* Javadoc (java) — fixed top:0 */
   top: var(--vdocs-bar-h, 44px);
 }
 

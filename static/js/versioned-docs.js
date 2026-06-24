@@ -158,6 +158,21 @@
       root.style.setProperty("--vdocs-bar-h", bar.offsetHeight + "px");
     };
     applyHeight();
+    // The stylesheet that gives the bar its real height (/js/versioned-docs.css) is
+    // injected asynchronously, so the first measurement runs against an unstyled bar and
+    // reserves too little space. Re-measure whenever the bar's box actually changes — when
+    // the CSS applies, web fonts load, the bar wraps, or the viewport resizes — so the gap
+    // always matches what's painted. ResizeObserver fires on the initial observe too.
+    if (window.ResizeObserver) {
+      new ResizeObserver(applyHeight).observe(bar);
+    } else {
+      if (window.addEventListener) {
+        window.addEventListener("load", applyHeight);
+        var css = document.querySelector("link[data-vdocs-css]");
+        if (css) css.addEventListener("load", applyHeight);
+      }
+      if (window.requestAnimationFrame) window.requestAnimationFrame(applyHeight);
+    }
     if (window.addEventListener) window.addEventListener("resize", applyHeight);
   }
 
