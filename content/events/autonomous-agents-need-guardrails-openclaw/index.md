@@ -47,10 +47,9 @@ description: |
 
   Bring your questions and ideas, and come learn how to securely run a Personal AI agent.
 learn:
-    - What people actually automate with OpenClaw,  — the useful, the weird, and the cat counter
-    - The real failure modes when an agent has shell access and goals of its own
-    - The guardrail stack: agent identity, isolation, policy gates, and IaC as the verifiable layer agents read and write
-    - Where security (Microsoft) and infrastructure-as-code (Pulumi) meet on keeping agents in bounds
+  - What people actually automate with OpenClaw, Hermes, and related persona agents  ( the useful, the weird, and the cat counter )
+  - The real failure modes you should worry about ( Shell access, goal divergence, and more) 
+  - Where security and infrastructure meet to securely host personal agents.
 
 # The event presenters
 presenters:
