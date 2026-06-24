@@ -168,6 +168,7 @@ sections:
     title: Agents in the workflow today
     overview:
       key_insights:
+        - The headline tools split by size—Claude Code is the favorite at companies under ~200, while Copilot's lead grows with headcount, reaching 70%+ in orgs of 1,000 or more.
         - Adoption clusters in assistive work. Authoring infrastructure code trails every other use at 29%, so agents review and advise far more than they write.
         - "81% let agents change production, but almost all of that is gated: \"with approval\" (62%) far outweighs \"autonomously\" (19%)."
       by_the_numbers:
