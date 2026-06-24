@@ -1,0 +1,196 @@
+extends: capitalization
+message: "Heading '%s' should use sentence case (capitalize only the first word and proper nouns)."
+link: STYLE-GUIDE.md
+level: warning
+# H2+ only. Pulumi convention is Title Case for the H1/page title and sentence
+# case for every subheading; Vale's per-level heading scopes let us enforce the
+# latter without touching H1. (Google.Headings is disabled in .vale.ini because
+# it has no level scope and would false-flag every Title-Case H1.)
+scope:
+  - heading.h2
+  - heading.h3
+  - heading.h4
+  - heading.h5
+  - heading.h6
+match: $sentence
+# Words allowed to stay capitalized mid-heading: proper nouns, products, clouds,
+# services, languages, and acronyms. Curated from a scan of all H2+ headings in
+# content/docs (the high-frequency capitalized mid-heading tokens) plus the
+# Pulumi product/term vocabulary. Deliberately EXCLUDES lowercase-by-convention
+# Pulumi concepts (stack, project, resource, provider, output, secret, config)
+# so the rule still flags those — see data/STYLE-GUIDE Nomenclature.
+exceptions:
+  # Pulumi products & terms
+  - Pulumi
+  - ESC
+  - Neo
+  - CrossGuard
+  - Deployments
+  - Insights
+  - Copilot
+  - IDP
+  # IaC ecosystem
+  - Terraform
+  - OpenTofu
+  - Crossplane
+  - CloudFormation
+  - CDK
+  - CDKTF
+  - Helm
+  - Kustomize
+  - Ansible
+  - Chef
+  - Puppet
+  - IaC
+  # Clouds & vendors
+  - AWS
+  - Azure
+  - GCP
+  - Google
+  - Microsoft
+  - Oracle
+  - DigitalOcean
+  - Cloudflare
+  - Cloud
+  - Alibaba
+  - Linode
+  - Vercel
+  - Netlify
+  - Heroku
+  # Cloud services / resources
+  - EKS
+  - ECS
+  - ECR
+  - EC2
+  - S3
+  - VPC
+  - IAM
+  - KMS
+  - RDS
+  - Lambda
+  - DynamoDB
+  - GKE
+  - AKS
+  - ACI
+  - ARM
+  - Fargate
+  - CloudWatch
+  - Route53
+  - GuardDuty
+  # Kubernetes & containers
+  - Kubernetes
+  - Docker
+  - Containerd
+  - Istio
+  - Knative
+  # Identity / auth
+  - OIDC
+  - OAuth
+  - SAML
+  - SCIM
+  - SSO
+  - RBAC
+  - MFA
+  - JWT
+  - Okta
+  - OneLogin
+  - JumpCloud
+  - Entra
+  - Auth0
+  - LDAP
+  - Active
+  - Directory
+  # Source control & CI/CD
+  - GitHub
+  - GitLab
+  - Git
+  - Bitbucket
+  - Jenkins
+  - Actions
+  - VCS
+  - CI/CD
+  - CD
+  # Data stores & SaaS
+  - Snowflake
+  - MongoDB
+  - MySQL
+  - PostgreSQL
+  - Postgres
+  - Redis
+  - Kafka
+  - Datadog
+  - PagerDuty
+  - Slack
+  - Teams
+  - Jira
+  - ServiceNow
+  - Twilio
+  - Stripe
+  - Vault
+  - Consul
+  # Languages, formats, runtimes
+  - Python
+  - TypeScript
+  - JavaScript
+  - Node.js
+  - Go
+  - Golang
+  - Java
+  - .NET
+  - C#
+  - F#
+  - YAML
+  - JSON
+  - TOML
+  - HCL
+  - SQL
+  - GraphQL
+  - Markdown
+  # Protocols & generic acronyms
+  - API
+  - APIs
+  - CLI
+  - SDK
+  - SDKs
+  - REST
+  - gRPC
+  - HTTP
+  - HTTPS
+  - URL
+  - URLs
+  - URI
+  - ID
+  - IDs
+  - UI
+  - CLI
+  - MCP
+  - DNS
+  - TLS
+  - SSL
+  - SSH
+  - SFTP
+  - CIDR
+  - ARN
+  - ARNs
+  - SQS
+  - SNS
+  - VM
+  - VMs
+  - OS
+  - CDN
+  - FAQ
+  - FAQs
+  # OSes & tooling
+  - Linux
+  - macOS
+  - Windows
+  - VS
+  - Visual
+  - Studio
+  - Cosmos
+  - Marketplace
+  - MongoDB
+  - REPL
+  - Emmet
+  - gRPC
+  - I
