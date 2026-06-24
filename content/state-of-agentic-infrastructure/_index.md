@@ -33,7 +33,7 @@ sections:
     title: Who we surveyed
     overview:
       key_insights:
-        - More than a third of the people doing infrastructure work don't sit on an infrastructure team.
+        - Infrastructure is no longer just the infrastructure team's job—over a third of the people we surveyed who do it sit on other teams.
         - The center of gravity is mid-sized software companies; most respondents land in the 201–5,000 band rather than startups or large enterprises.
       by_the_numbers:
         - 510 platform, DevOps, and product engineers
