@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "OpenClaw Needs Guardrails: Securing Agentic Infrastructure"
+title: "Securing Personal AI Agents: Guardrails and Infrastructure for OpenClaw"
 meta_desc: A live panel on securing OpenClaw and autonomous agents before they touch production cloud — the guardrails, identity, and verifiable state they need.
 meta_image: /events/autonomous-agents-need-guardrails-openclaw/openclaw-agents-guardrails.png
 
@@ -61,8 +61,10 @@ presenters:
       photo: /images/team/engin-diri.jpg
     - name: Dor Serero
       role: Principal Architect, Microsoft
+      photo: /events/autonomous-agents-need-guardrails-openclaw/dor-serero.png
     - name: Roey Zalta
       role: Data & AI Solutions Engineer, Microsoft
+      photo: /events/autonomous-agents-need-guardrails-openclaw/roey-zalta.png
 
 # case-sensitive
 tags:
