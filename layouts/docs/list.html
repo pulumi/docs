@@ -27,6 +27,10 @@
                     {{ end }}
                 </div>
 
+                {{ if .Params.cli_command_page }}
+                    {{ partial "docs/cli-command-banner.html" . }}
+                {{ end }}
+
                 <div class="docs-table-of-contents docs-toc-mobile">
                     {{ partial "docs/table-of-contents.html" . }}
                 </div>
