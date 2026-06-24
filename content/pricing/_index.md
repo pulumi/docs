@@ -805,8 +805,6 @@ faq:
           answer: You can keep track of current usage and upcoming charges by navigating to Settings and then Billing & Usage in the Pulumi Cloud.
         - question: When will I be billed for using Team or Enterprise Edition?
           answer: You will be billed for the previous month’s usage on the first day of each month.
-        - question: How can groups not seeking a profit use Pulumi for free?
-          answer: The [Open-Source Free Edition](/pricing/open-source-free-tier/) allows organizations not seeking a profit with projects under an open-source license to use Pulumi for free.
         - question: What payment options do you accept?
           answer: For the Pulumi Team Edition, you can pay with a credit card (we use Stripe for processing). Pulumi Enterprise Edition offers additional payment options. Please [contact us](/contact/?form=sales) for those options.
         - question: What if I have billing or account issues?
