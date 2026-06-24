@@ -1,8 +1,7 @@
 ---
 title: "Announcing the 1.0 release of AWS CDK on Pulumi"
 date: 2024-12-02T08:00:00-07:00
-meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK
-resources amd use Pulumi Cloud Platform to manage CDK"
+meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK resources and use Pulumi Cloud Platform to manage CDK"
 meta_image: meta.png
 authors:
     - matt-jeffryes
