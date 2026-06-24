@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "OpenClaw Needs Guardrails: Securing Agentic Infrastructure"
+title: "Securing Personal AI Agents: Guardrails and Infrastructure for OpenClaw"
 meta_desc: A live panel on securing OpenClaw and autonomous agents before they touch production cloud — the guardrails, identity, and verifiable state they need.
 meta_image: /events/autonomous-agents-need-guardrails-openclaw/openclaw-agents-guardrails.png
 
@@ -18,6 +18,7 @@ gated: true
 # landing/registration page.
 external: false
 block_external_search_index: false
+allow_long_title: true
 
 # The url slug for the event landing page.
 url_slug: autonomous-agents-need-guardrails-openclaw
@@ -39,16 +40,17 @@ location: virtual
 
 # Description of the event.
 description: |
-    Roey Zalta gave OpenClaw its own Mac mini and let it run. Inside four days it had registered its own Apple ID, wired itself into his home cameras, and started counting his cats with GPT-4o vision — then wrote the LinkedIn post bragging about it. That's the fun half of autonomous agents.
+  Roey Zalta gave OpenClaw its own Mac mini and let it run. Within the week, it was watching his home cameras and tracking his cats with a vision model. Then it wrote the LinkedIn post bragging about its work. That's the fun half of autonomous agents.
 
-    The other half: these things have shell access and can hit your cloud APIs on a loop, and the tech press spent early 2026 calling OpenClaw a security "dumpster fire." Dor Serero spends his days on that end — writing container-escape exploits and breaking Kubernetes boundaries — so when he says you can run one of these safely, it's worth hearing how.
+  The other half, the less fun half, is securing these agents. The tech press spent a lot of time calling OpenClaw and related agents a "security dumpster fire." But Dor Serero spends his days thinking about cloud-native security and thinks you can run a personal agent securely.
 
-    In this 60-minute panel, Dor and Roey from Microsoft join Adam Gordon Bell and Engin Diri from Pulumi to show what they actually run, where it bites, and the guardrails that keep an agent useful instead of dangerous. Roey brings the "it runs my life" demos; Dor brings the "here's how it gets you" teardown. Live with audience Q&A.
+  In this 60-minute panel, Dor and Roey from Microsoft join Adam Gordon Bell and Engin Diri from Pulumi to show what they actually run, where it bites, and the guardrails that keep an agent useful instead of dangerous. Roey will show how agents help run his life. Dor will show how to use them securely.
+
+  Bring your questions and ideas, and come learn how to securely run a Personal AI agent.
 learn:
-    - What people actually automate with OpenClaw — the useful, the weird, and the cat counter
-    - The real failure modes when an agent has shell access and goals of its own
-    - The guardrail stack: agent identity, isolation, policy gates, and IaC as the verifiable layer agents read and write
-    - Where security (Microsoft) and infrastructure-as-code (Pulumi) meet on keeping agents in bounds
+  - What people actually automate with OpenClaw, Hermes, and related persona agents  ( the useful, the weird, and the cat counter )
+  - The real failure modes you should worry about ( Shell access, goal divergence, and more)
+  - Where security and infrastructure meet to securely host personal agents.
 
 # The event presenters
 presenters:
@@ -60,8 +62,10 @@ presenters:
       photo: /images/team/engin-diri.jpg
     - name: Dor Serero
       role: Principal Architect, Microsoft
+      photo: /events/autonomous-agents-need-guardrails-openclaw/dor-serero.png
     - name: Roey Zalta
       role: Data & AI Solutions Engineer, Microsoft
+      photo: /events/autonomous-agents-need-guardrails-openclaw/roey-zalta.png
 
 # case-sensitive
 tags:
