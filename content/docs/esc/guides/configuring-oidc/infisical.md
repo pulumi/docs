@@ -112,21 +112,9 @@ the [relevant Pulumi documentation](/docs/esc/integrations/)
 
 ## Subject claim customization
 
-You can [customize](/docs/esc/environments/configuring-oidc/#customizing-oidc-claims) the subject claim in the OIDC token to control
-which Pulumi environments or users are allowed to assume a given identity. This allows for more granular access control
-than the default organization-level permissions.
+You can customize the subject claim in the OIDC token to control which Pulumi environments or users are allowed to assume a given identity. This allows for more granular access control than the default organization-level permissions. Use the `subjectAttributes` property in your login configuration; see [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim) for the full list of available attributes and how the subject is composed.
 
-This is done by configuring the `subjectAttributes` setting. It expects an array of keys to include in it:
-
-* `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other
-  imported environments
-* `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and
-  `subjectAttributes` are defined
-* `pulumi.user.login`: the login identifier of the user opening the environment
-* `pulumi.organization.login`: the login identifier of the organization
-
-The subject always contains the following prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}` and
-every key configured will be appended to this prefix. For example, consider the following environment:
+For example, consider the following environment:
 
 ```yaml
 values:
@@ -144,31 +132,7 @@ The subject will be
 `pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:project/development:pulumi.user.login:userLogin`.
 Note how the keys and values are appended along with the prefix.
 
-{{< notes type="warning" >}}
-
-If not customized, the subject claim has the following format by default:
-
-`pulumi:environments:org:<organization name>:env:<project name>/<environment name>`
-
-{{< /notes >}}
-
-{{< notes type="warning" >}}
-
-For environments within the legacy `default` project, the project will **not** be present in the subject to preserve
-backwards compatibility. The format of the subject claim when `subjectAttributes` are not set is
-`pulumi:environments:org:<organization name>:env:<environment name>`. If `currentEnvironment.name` is used as a custom
-subject attribute it will resolve to only the environment name (e.g.
-`pulumi:environments:pulumi.organization.login:contoso:currentEnvironment.name:development:pulumi.user.login:personA`).
-Due to this it is recommended to move your environments out of the `default` project for best security practices.
-
-{{< /notes >}}
-
 ## Subject claim example
-
-Here is an example of a valid, not customized subject claim for the `project/development` environment of the `contoso`
-organization:
-
-* `pulumi:environments:org:contoso:env:project/development`
 
 {{< notes type="warning" >}}
 
