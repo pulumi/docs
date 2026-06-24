@@ -145,6 +145,10 @@ jobs:
           URI=$(pulumi stack output docsTrafficPageviewsLatestS3Uri \
             --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
           if [ -n "$URI" ]; then
+            # The URI is an s3:// path, not a secret — log it so a glance at the
+            # run confirms the cross-stack read resolved (silent success would be
+            # indistinguishable from a skip).
+            echo "resolved docs-traffic export URI: $URI"
             echo "uri=$URI" >> "$GITHUB_OUTPUT"
           else
             echo "docs-traffic export output unavailable; selection proceeds on tier + age alone"
@@ -153,8 +157,11 @@ jobs:
         if: steps.traffic-uri.outputs.uri != ''
         continue-on-error: true
         run: |
-          aws s3 cp "${{ steps.traffic-uri.outputs.uri }}" .traffic-snapshot --quiet \
-            || echo "traffic snapshot unavailable; selection proceeds without it"
+          if aws s3 cp "${{ steps.traffic-uri.outputs.uri }}" .traffic-snapshot --quiet; then
+            echo "fetched traffic snapshot: $(wc -c < .traffic-snapshot) bytes"
+          else
+            echo "traffic snapshot unavailable; selection proceeds without it"
+          fi
 
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
