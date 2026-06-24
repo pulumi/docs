@@ -41,8 +41,8 @@ sections:
     title: Who we surveyed
     overview:
       key_insights:
-        - Infrastructure is no longer just the infrastructure team's job—over a third of the people we surveyed who do it sit on other teams.
-        - The center of gravity is mid-sized software companies; most respondents land in the 201–5,000 band rather than startups or large enterprises.
+        - Our respondents are hands-on practitioners—engineers spread across product, DevOps, platform, and ops teams rather than a single infrastructure group.
+        - The sample centers on mid-sized software companies, not startups or large enterprises—teams with real scale but still moving fast.
       by_the_numbers:
         - 510 platform, DevOps, and product engineers
         - Product and app developers are the largest group (35%), ahead of DevOps (23%) and platform engineering (17%)
@@ -177,7 +177,7 @@ sections:
     overview:
       key_insights:
         - The headline tools split by size—Claude Code is the favorite at companies under ~200, while Copilot's lead grows with headcount, reaching 70%+ in orgs of 1,000 or more.
-        - Adoption clusters in assistive work. Authoring infrastructure code trails every other use at 29%, so agents review and advise far more than they write.
+        - Today's agents mostly review and advise rather than write—authoring infrastructure code trails every other use at 29%.
         - "81% let agents change production, but almost all of that is gated: \"with approval\" (62%) far outweighs \"autonomously\" (19%)."
       by_the_numbers:
         - Only 4% use no AI in their infrastructure workflow
@@ -274,14 +274,14 @@ sections:
     title: The six-month outlook and sentiment
     overview:
       key_insights:
-        - "The direction is up: expectations shift toward more agent-generated infrastructure across the board."
+        - Teams expect to hand agents more work—across the board, the share of infrastructure they expect agents to generate rises over the next six months.
         - 63% say they trust agents to make production changes, which runs ahead of the manual-approval reality from the earlier sections.
       by_the_numbers:
         - Teams expecting agents to generate 50% or more of their infra code rise from 45% today to 52% in six months
         - The "under 25%" group shrinks from 23% to 15%
         - 82% agree AI will meaningfully change how they write infrastructure within 12 months
         - 72% say proactive AI monitoring has reduced their incident volume
-      takeaway: "Trust is running ahead of governance. The next six months are about closing the gap."
+      takeaway: "Stated trust is outrunning real guardrails: 63% say they trust agents in production, yet almost every change still needs manual approval. The next six months are about closing that gap."
     questions:
       - id: Q14
         overline: "05.Q13 → Q14"
