@@ -166,7 +166,7 @@ public class App {
             // Reference local Terraform state
             var tfState = StateFunctions.getLocalReference(
                 GetLocalReferenceArgs.builder()
-                .path("../infrstructure/terraform.tfstate")
+                .path("../infrastructure/terraform.tfstate")
                 .build()
             );
 
@@ -305,7 +305,7 @@ return await Deployment.RunAsync(() =>
     var tfState = GetRemoteReference.Invoke(new GetRemoteReferenceInvokeArgs
     {
         Organization = "my-org",
-	    Token = "<secret-token>>",
+	    Token = "<secret-token>",
 	    Workspaces = new Pulumi.Terraform.State.Inputs.WorkspacesArgs{
 		    Prefix="dev"
 	    }
@@ -494,6 +494,12 @@ const service = new awsx.ecs.FargateService("service", {
 export const frontendURL = pulumi.interpolate `http://${loadbalancer.loadBalancer.dnsName}`;
 ```
 
+With the program in place, deploy it with `pulumi up`:
+
+```bash
+pulumi up
+```
+
 Our Pulumi program references a local Terraform state file to get the important details (the ECS ARN, the ECR URL), packages up the application into a Docker image, pushes that image to the ECR repo, creates a load balancer, and then defines a Fargate service that uses all of the above to run the containerized app. Finally, we see the deployed URL as a Pulumi output, and can immediately see that the app is running and serving up the HTML file.
 
 This example demonstrates how Pulumi can seamlessly consume Terraform outputs to deploy applications on existing shared infrastructure.
@@ -502,7 +508,7 @@ This example demonstrates how Pulumi can seamlessly consume Terraform outputs to
 
 1. **Use consistent naming**: Ensure Terraform output names are descriptive and stable
 2. **Secure state access**: Use Terraform Cloud to control access to state files
-3. **Document dependencies**: Clearly document which Pulumi stacks depend on which Terraform states
+3. **Document dependencies**: Document which Pulumi stacks depend on which Terraform states
 4. **Monitor state changes**: Be aware that changes to Terraform outputs will affect dependent Pulumi stacks
 
 {{< get-started-stepper >}}
