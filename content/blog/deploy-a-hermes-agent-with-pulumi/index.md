@@ -43,7 +43,7 @@ Personal AI agents had their breakout this year. [OpenClaw](/blog/deploy-opencla
 
 The one people are switching to now is [Hermes](https://hermes-agent.nousresearch.com/), the open-source runtime from [Nous Research](https://nousresearch.com/), and it has been climbing the star charts even faster. The reason shows up in every "I ditched OpenClaw for Hermes" thread: it actually learns, building up memory and writing its own skills as it goes instead of running off a static, human-written list.
 
-Here is the part the launch videos skip. Hermes writes and runs its own code, with no human approving the commands. A model that can write code will eventually write a bad one, and the only thing between that command and your credentials is the sandbox it runs in. That is the box you do not want on the public internet. In early 2026 researchers found [175,000 self-hosted AI servers](https://thehackernews.com/2026/01/researchers-find-175000-publicly.html) sitting open online, nearly half of them able to run code, and the exposed ones are already being hijacked for their compute. The fix is not a better lock on the front door. It is to have no front door at all.
+Here is the part the launch videos skip. Hermes writes and runs its own code, with no human approving the commands. A model that can write code will eventually write a bad one, and the only thing between that command and your credentials is the sandbox it runs in. That is the box you do not want on the public internet. Researchers found [175,000 exposed Ollama servers](https://thehackernews.com/2026/01/researchers-find-175000-publicly.html) sitting open in early 2026, and attackers hijack the ones they find for compute. The fix is not a better lock on the front door. It is to have no front door at all.
 
 <!--more-->
 
@@ -820,7 +820,7 @@ Neither box is published to the internet. The same code, plus the Dockerfiles an
 
 ## Cost
 
-Two details shape the bill. The host starts on Render's free [Hobby workspace](https://render.com/pricing), but that tier ends the moment you add a disk and a private service, at which point Render treats the workspace as paid and requires a card on file. There is no free-tier version of this architecture. Both services also need the 2 GB Standard plan, since the gateway and Open WebUI each OOM on the 512 MB Starter.
+Two details shape the bill. The host starts on Render's free [Hobby workspace](https://render.com/pricing), but a private service with a persistent disk runs on paid compute, so you need a card on file the moment you add them. There is no free-tier version of this architecture. Both services also need the 2 GB Standard plan, since the gateway and Open WebUI each OOM on the 512 MB Starter.
 
 | | Hermes gateway | Open WebUI |
 |---|---|---|
@@ -880,9 +880,9 @@ If the chat UI does not load, give the services a few minutes to finish their fi
 
 ## Security considerations
 
-Self-hosted AI servers get found fast: scanners like [Shodan](https://www.shodan.io/) and [Censys](https://censys.io/) enumerate a freshly exposed one within hours, and the code-capable ones are already under [active attack](https://www.pillar.security/blog/operation-bizarre-bazaar-first-attributed-llmjacking-campaign-with-commercial-marketplace-monetization). Running an always-on agent on a machine you also use for everything else invites prompt injection on top of that. The answer here is to keep the agent unroutable from the internet and to isolate the code it runs. That defeats the scanner: nobody finds an open port to attack. It does less against the agent being turned against you from the inside, which is the harder problem.
+Self-hosted AI servers get found fast: scanners like [Shodan](https://www.shodan.io/) and [Censys](https://censys.io/) enumerate a freshly exposed one within hours to days, and the code-capable ones are already under [active attack](https://www.pillar.security/blog/operation-bizarre-bazaar-first-attributed-llmjacking-campaign-with-commercial-marketplace-monetization). Running an always-on agent on a machine you also use for everything else invites prompt injection on top of that. The answer here is to keep the agent unroutable from the internet and to isolate the code it runs. That defeats the scanner: nobody finds an open port to attack. It does less against the agent being turned against you from the inside, which is the harder problem.
 
-One detail makes that isolation load-bearing. Out of the box, Hermes asks you to approve a shell command the first time it sees it, through its [hooks](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks) approval system. A headless deployment has no TTY to approve at, and the same is true of its cron and CI runs, so it runs with `HERMES_ACCEPT_HOOKS=1` to accept those commands without the prompt. That removes the human-in-the-loop gate by necessity, which is exactly why the Modal sandbox has to carry the weight: when the model writes a bad command, the throwaway container it runs in is what stands between that command and the gateway's credentials, not a confirmation prompt.
+One detail makes that isolation load-bearing. In a headless container there is no one at the terminal to approve anything, and the same is true of its cron and CI runs, so the deployment runs Hermes with `HERMES_ACCEPT_HOOKS=1` to [auto-accept the shell hooks](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks) it would otherwise pause on. The practical result is that the agent's code runs with no human in the loop, which is exactly why the Modal sandbox has to carry the weight: when the model writes a bad command, the throwaway container it runs in is what stands between that command and the gateway's credentials, not a confirmation prompt.
 
 | Concern | Typical self-host | This deployment |
 |---------|-------------------|-----------------|
@@ -946,7 +946,7 @@ With those two pieces, a few things are genuinely doable today:
 1. **A daily briefing** that ranks and dedups your feeds and delivers the top items each morning, the documented [daily-briefing bot](https://hermes-agent.nousresearch.com/docs/guides/daily-briefing-bot). If you want it to adapt to your taste over time, that is the optional [Honcho](https://hermes-agent.nousresearch.com/docs/user-guide/features/honcho) memory provider's job; it reads your preferences out of the conversation itself. The built-in file memory has no version of that.
 1. **A PR-review teammate** that reviews open pull requests against your repo's `AGENTS.md` conventions and saves recurring patterns as a skill, so the fifth review needs less hand-holding than the first.
 
-A few limits are worth stating plainly, since demos tend to overstate the capabilities. Hermes does not ship Gmail, Calendar, or market integrations out of the box; those are wired up as [MCP servers](https://modelcontextprotocol.io/) or skills, which is more work than a launch video implies. It curates its own memory and writes its own skills, but it does not autonomously improve a strategy or a model, so "self-learning" here means whatever gets written into memory each run.
+A few limits are worth stating plainly, since demos tend to overstate the capabilities. Hermes does not ship Gmail, Calendar, or market integrations out of the box; those are wired up as [MCP servers](https://modelcontextprotocol.io/) or skills, which is more work than a launch video implies. It curates its own memory and improves its own skills, but it does not retrain the underlying model or autonomously change its high-level strategy, so "self-learning" here means whatever it writes into memory and skills each run.
 
 ## Conclusion
 
