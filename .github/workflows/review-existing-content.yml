@@ -208,14 +208,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Hand each worker its OWN single-article queue, carrying the
+          # selection facts this dispatcher computed (traffic, score, tier,
+          # last-reviewed). The worker renders the PR's "Why this page" block
+          # from these deterministically rather than re-deriving a traffic-blind
+          # queue and narrating it — facts composed by code, the same split the
+          # pre-merge review uses. `path`/`lane` are still passed for the
+          # concurrency group and the --paths fallback.
+          TRAFFIC=$(jq -c '.traffic' .content-review-queue.json)
+          GEN=$(jq -r '.generated' .content-review-queue.json)
           jq -c '.articles[]' .content-review-queue.json | while read -r a; do
             P=$(echo "$a" | jq -r '.path')
             L=$(echo "$a" | jq -r '.lane')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" --arg gen "$GEN" \
+              '{generated: $gen, count: 1, traffic: $traffic, articles: [$art]}')
             echo "dispatching worker for $P (lane=$L)"
             gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
               -f path="$P" \
               -f lane="$L" \
+              -f queue_json="$Q" \
               || echo "::warning::worker dispatch failed for $P"
           done
 
