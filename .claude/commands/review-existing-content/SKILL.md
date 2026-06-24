@@ -207,20 +207,23 @@ opening the PR.
 
 ### 7. PR — only when you applied a fix, ready (non-draft)
 
-Open a **ready** PR to `master`. Build the body from
-`references/pr-body-template.md` — fill **every** section — and create the PR
-with `gh pr create --body-file`. The workflow re-runs `make lint` on your branch
-(flipping the PR back to draft if it fails) and dispatches the automated docs
-review over it afterward; humans merge. The template's sections (each one is
-checked for):
+Open a **ready** PR to `master`. You do **not** write the body from scratch: the
+workflow composed `.pr-body-draft.md` (via `compose-pr-body.py`, the
+assemble-then-judge model — the composer ASSEMBLES facts, you JUDGE) with every
+section present and each pre-found finding pre-bucketed under a `<TODO>`. **Edit
+that draft**, resolve every `<TODO>`, strip the HTML-comment hints, and create
+the PR with `gh pr create --body-file .pr-body-draft.md`. The workflow re-runs
+`make lint` on your branch (flipping the PR back to draft if it fails) and
+dispatches the automated docs review afterward; humans merge. The sections (each
+is checked for):
 
-- **Why this page**: lane, tier, traffic figure + report period, last
-  reviewed (from the queue entry) — so the reviewer knows how it was chosen.
-- **Fixes applied**: table of claim/finding → authoritative source →
-  correction, one row per change.
-- **Findings not applied**: every skipped finding with one line of reasoning.
-  End the section with: "For the judgment-level items above, run
-  `/glow-up <path>`."
+- **Why this page**: composed from the selection queue (lane, tier, traffic
+  figure + period, last reviewed). **Leave verbatim** — do not re-narrate it.
+- **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
+  only for a fix you actually applied (fill its Correction); move the rest down.
+- **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
+  any row you moved down. One line of reasoning each. End the section with: "For
+  the judgment-level items above, run `/glow-up <path>`."
 - **Screenshot check**: per image — current / stale (what differs) /
   unverifiable; note any aging reference screenshots (see
   `references/screenshot-verification.md`).
@@ -228,8 +231,9 @@ checked for):
   checked in the HTML view, the markdown view's shortcode-template status,
   and any shared-source (shortcode/partial/data) findings with their
   page-reach ("also rendered on N other pages").
-- **Verification**: confirm `make lint` + `make build` passed and which
-  pre-step artifacts informed the review (note any pre-step that failed).
+- **Verification**: the composer renders the pre-step artifact inventory; the
+  `make lint` result is stamped by the re-lint gate — leave the
+  `<!-- LINT-RESULT -->` line untouched. Note any pre-step that failed.
 
 Do **not** record `pr_number` or `head_sha` yourself — the workflow derives
 them from the branch. A clean article (zero applicable fixes) skips the PR —

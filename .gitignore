@@ -130,6 +130,7 @@ _vendor/
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
 /.readthrough-findings.json
+/.pr-body-draft.md
 
 .doctrees/
 .buildinfo
