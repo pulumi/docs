@@ -55,6 +55,7 @@ const keyManager = new KeyManagerResource("key-manager", {}, {
 
 ```py
 ...
+from datetime import datetime
 
 today = datetime.now()
 trigger = f"{today.month}-{today.year}"

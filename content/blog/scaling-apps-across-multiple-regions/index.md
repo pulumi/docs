@@ -1,6 +1,7 @@
 ---
 title: "Scaling Applications Across Multiple Regions"
 date: 2023-12-06T20:24:40Z
+updated: 2026-06-16
 draft: false
 meta_desc: Learn about deploying applications to multiple regions globally. Uncover strategies for achieving high availability in a distributed environment.
 meta_image: meta.png
@@ -109,18 +110,18 @@ For configuration values that are shared across stacks, Pulumi ESC allows you to
 To leverage Pulumi ESC, you first need to initialize a new environment like this:
 
 ```bash
-esc env init shared-multi-region
+pulumi env init shared-multi-region
 ```
 
-{{% notes type="info" %}} You can use the `esc` CLI, as shown, or you can use the `pulumi env` command. {{% /notes %}}
+{{% notes type="info" %}} You can use the `pulumi env` command, as shown. {{% /notes %}}
 
 After which, you can set all the value for the configurations you need. Remember to add it as part of the `pulumiConfig` object, so that your Pulumi stack understands and can pick it up.
 
 ```bash
-esc env set shared-multi-region pulumiConfig.resourceNamePrefix mrapp
-esc env set shared-multi-region pulumiConfig.storageKind "Standard_LRS"
-esc env set shared-multi-region pulumiConfig.storageSkuName "Standard_LRS"
-esc env set shared-multi-region pulumiConfig.tenantId "00000000-0000-0000-0000-000000000000" # Your tenantId
+pulumi env set shared-multi-region pulumiConfig.resourceNamePrefix mrapp
+pulumi env set shared-multi-region pulumiConfig.storageKind "Standard_LRS"
+pulumi env set shared-multi-region pulumiConfig.storageSkuName "Standard_LRS"
+pulumi env set shared-multi-region pulumiConfig.tenantId "00000000-0000-0000-0000-000000000000" # Your tenantId
 ```
 
 After successfully adding your config values to your new environment, you can reference it across all your stacks like this:

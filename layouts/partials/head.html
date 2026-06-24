@@ -36,6 +36,54 @@
     <!-- Our CSS and JS bundles. -->
     {{ partial "assets" . }}
 
+    {{- /* Cross-document view transitions, docs section only. On same-origin
+           navigations, supporting browsers (Chrome 126+, Safari 18.2+) keep the
+           old page on screen until the new one is ready instead of flashing
+           white. Both the outgoing and incoming page must carry the rule, so
+           gating it here scopes transitions to docs <-> docs navigations.
+           Disabling the snapshot animations makes the swap instant (no
+           crossfade). This must be a page-gated inline style — the rule is a
+           document-level opt-in, so it can't live in the shared CSS bundle. */ -}}
+    {{ if eq .Section "docs" }}
+        <style>
+            @view-transition {
+                navigation: auto;
+            }
+
+            ::view-transition-old(root),
+            ::view-transition-new(root) {
+                animation: none;
+            }
+        </style>
+    {{ end }}
+
+    {{- /* Docs dark mode: apply the saved (or system) theme before first paint
+           so there's no flash. Gating on the docs section means data-theme is
+           never written on any other page, which is what scopes dark mode to
+           /docs. Paired with theme/src/scss/docs/_docs-theme.scss (CSS, also
+           scoped to body.section-docs) and theme/src/ts/docs-theme.ts (toggle
+           behavior). data-theme = effective light|dark; data-theme-pref = the
+           raw choice so the toggle can show the active state. */ -}}
+    {{ if eq .Section "docs" }}
+        <script>
+            (function () {
+                try {
+                    var pref = localStorage.getItem("pulumi-docs-theme") || "system";
+                    var el = document.documentElement;
+                    el.dataset.themePref = pref;
+                    var dark =
+                        pref === "dark" ||
+                        (pref === "system" &&
+                            window.matchMedia &&
+                            window.matchMedia("(prefers-color-scheme: dark)").matches);
+                    if (dark) {
+                        el.dataset.theme = "dark";
+                    }
+                } catch (e) {}
+            })();
+        </script>
+    {{ end }}
+
 
     <!-- Google Site Verification for Google Webmaster tools and YouTube. -->
     <meta name="google-site-verification" content="N-ezSTIu4P3bSc4TqidV4wWCkMzFiMN269ZgDYArGkk" />
@@ -371,16 +419,27 @@
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
 
-        // Initialize mermaid with manual control to preserve source before rendering
-        mermaid.initialize({ startOnLoad: false });
+        // Drive Mermaid's theme off the docs color theme (data-theme on <html>,
+        // set pre-paint on docs pages). On non-docs pages data-theme is absent, so
+        // this resolves to the light 'default' theme.
+        const mermaidTheme = () =>
+            document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default';
+
+        // Initialize with manual control so we can preserve source before render.
+        const configure = () => mermaid.initialize({ startOnLoad: false, theme: mermaidTheme() });
+        configure();
 
         document.addEventListener('DOMContentLoaded', () => {
-            const diagrams = document.querySelectorAll('pre.mermaid');
+            const diagrams = [...document.querySelectorAll('pre.mermaid')];
 
             // Preserve original mermaid source before rendering replaces it.
             diagrams.forEach(pre => {
-                pre.setAttribute('data-mermaid-source', pre.textContent.trim());
+                if (!pre.dataset.mermaidSource) {
+                    pre.setAttribute('data-mermaid-source', pre.textContent.trim());
+                }
             });
+
+            const isHidden = el => el.offsetParent === null;
 
             // Render a single diagram, skipping ones already rendered. Diagrams
             // inside a chooser start hidden (display:none) and cannot be measured,
@@ -392,26 +451,43 @@
                 });
             };
 
-            const isHidden = el => el.offsetParent === null;
-
-            // Render everything that is visible now.
-            diagrams.forEach(pre => {
-                if (!isHidden(pre)) render(pre);
-            });
-
-            // Render hidden diagrams when a chooser reveals them.
-            const hidden = [...diagrams].filter(isHidden);
-            if (hidden.length) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            render(entry.target);
-                            observer.unobserve(entry.target);
-                        }
+            // Render everything visible now; lazily render hidden diagrams when a
+            // chooser reveals them. Re-runnable (used again on theme toggle).
+            let observer = null;
+            const renderDiagrams = () => {
+                diagrams.forEach(pre => { if (!isHidden(pre)) render(pre); });
+                if (observer) observer.disconnect();
+                const hidden = diagrams.filter(isHidden);
+                if (hidden.length) {
+                    observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                render(entry.target);
+                                observer.unobserve(entry.target);
+                            }
+                        });
                     });
+                    hidden.forEach(pre => observer.observe(pre));
+                }
+            };
+
+            renderDiagrams();
+
+            // Re-theme and re-render when the docs theme toggles. Restore each
+            // diagram's source (which removes the rendered SVG) and re-run.
+            let current = mermaidTheme();
+            new MutationObserver(() => {
+                if (mermaidTheme() === current) return;
+                current = mermaidTheme();
+                configure();
+                diagrams.forEach(pre => {
+                    const src = pre.getAttribute('data-mermaid-source');
+                    if (src === null) return;
+                    pre.textContent = src;
+                    pre.removeAttribute('data-processed');
                 });
-                hidden.forEach(pre => observer.observe(pre));
-            }
+                renderDiagrams();
+            }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
         });
     </script>
     {{ end }}

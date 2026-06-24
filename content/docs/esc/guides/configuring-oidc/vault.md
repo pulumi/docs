@@ -172,14 +172,14 @@ If you configured the Vault JWT auth method to use a different [mount path](http
 
 You can validate that your configuration is working by running either of the following:
 
-* `esc open <your-org>/<your-project>/<your-environment>` command of the [ESC CLI](/docs/esc-cli/)
+* `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <your-org>/<your-project>/<your-environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace the values of `<your-org>`, `<your-project>`, and `<your-environment>` with the values of your Pulumi organization, project, and environment file respectively. You should see output similar to the following:
 
 ```shell
 # example output
-$ esc open <my-org>/<my-project>/<my-environment>
+$ pulumi env open <my-org>/<my-project>/<my-environment>
 {
   "vault": {
     "login": {

@@ -61,7 +61,7 @@ values:
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/azure/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
@@ -100,6 +100,10 @@ The Azure identity used for rotation must have the following Microsoft Graph API
 * `Application.ReadWrite.All` - to read applications and manage their client secrets
 
 Alternatively, the identity can be added as an **Owner** of the specific app registration whose secrets will be rotated.
+
+{{% notes type="info" %}}
+Owner access alone suffices only for **delegated** logins (a user identity). An **application-only** token must *also* be granted the `Application.ReadWrite.OwnedBy` Microsoft Graph permission with **admin consent**, on top of being an Owner of the target app. This is the common case when an app rotates its *own* secret via [Azure OIDC login](/docs/esc/providers/login/azure-login/), where the `login` identity and the rotated `clientId` are the same app. Scoped to owned apps only, `Application.ReadWrite.OwnedBy` is the least-privilege option for self-rotation. For background, see Microsoft's [app-only access overview](https://learn.microsoft.com/en-us/entra/identity-platform/app-only-access-primer) and [adding an owner to an application](https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/users-groups-entra-apis/add-owner-for-application-microsoft-graph).
+{{% /notes %}}
 
 ## Inputs
 

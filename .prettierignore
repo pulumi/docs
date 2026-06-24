@@ -61,3 +61,20 @@ static/js
 # Link-checker workflow artifacts (gitignored, generated at runtime)
 /.broken-links.json
 /.broken-links-pr.txt
+
+# Content-review / docs-review pre-compute artifacts (gitignored, generated at
+# runtime). The content-review worker re-runs `make lint` on the fix branch in a
+# workspace that still holds these scratch files; without this, `prettier
+# --check .` flags them and the re-gate false-fails.
+/.synthetic.patch
+/.fetched-urls.json
+/.candidate-claims*.json
+/.verified-claims.json
+/.frontmatter-validation.json
+/.cross-sibling-discovery.json
+/.readthrough-findings.json
+/.vale-raw.json
+/.vale-findings.json
+/.content-review-*.json
+/.lint.log
+/.lint-comment.md

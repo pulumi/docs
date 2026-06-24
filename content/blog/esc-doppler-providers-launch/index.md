@@ -1,6 +1,7 @@
 ---
 title: "Announcing Doppler Providers for Pulumi ESC: Dynamic Login and Dynamic Secrets"
 date: 2025-06-26
+updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Doppler providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
 meta_image: meta.png
@@ -29,7 +30,7 @@ This release introduces two distinct dynamic providers for Doppler, each designe
 
 * **[`doppler-secrets`](/docs/esc/integrations/dynamic-secrets/doppler-secrets/) (Dynamic Secrets):** This provider dynamically fetches secrets stored *within* your Doppler configs and makes them available within the Pulumi ESC environment. **Use this provider when you need specific secrets *from* Doppler to configure your applications or infrastructure managed via ESC.** This centralizes secret consumption, allowing you to access Doppler secrets using the same consistent ESC patterns used for AWS, Azure, GCP, Infisical, Vault, 1Password, and more.
 
-Pulumi ESC acts as a robust **secrets broker** provider consistent API interface for all your tools, applications and workflows. It securely handles *both* the generation of temporary authentication credentials (like with `doppler-login`) and the fetching of application secrets (like with `doppler-secrets`) from various providers such as Doppler, cloud platforms ([AWS](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [GCP](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)), and other secret managers ([Infisical](/docs/esc/integrations/dynamic-secrets/infisical-secrets/), [Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)). Once centralized in ESC, these secrets and configurations are consistently available for you to consume via ESC's many developer friendly methods including the [ESC SDK](/docs/esc/development/languages-sdks/), [ESC CLI](/docs/esc/cli/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), or sync them to various platforms where they are needed such as [GitHub Secrets](https://github.com/pulumi/esc-examples/tree/main/sync/github-secrets), [AWS Secrets Manager](https://github.com/pulumi/esc-examples/tree/main/sync/aws-secrets-manager), and more!
+Pulumi ESC acts as a robust **secrets broker** provider consistent API interface for all your tools, applications and workflows. It securely handles *both* the generation of temporary authentication credentials (like with `doppler-login`) and the fetching of application secrets (like with `doppler-secrets`) from various providers such as Doppler, cloud platforms ([AWS](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [GCP](/docs/esc/integrations/dynamic-secrets/gcp-secrets/)), and other secret managers ([Infisical](/docs/esc/integrations/dynamic-secrets/infisical-secrets/), [Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/)). Once centralized in ESC, these secrets and configurations are consistently available for you to consume via ESC's many developer friendly methods including the [ESC SDK](/docs/esc/development/languages-sdks/), [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/), [Kubernetes External Secrets Operator](/docs/esc/integrations/kubernetes/external-secrets-operator/), [CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/), or sync them to various platforms where they are needed such as [GitHub Secrets](https://github.com/pulumi/esc-examples/tree/main/sync/github-secrets), [AWS Secrets Manager](https://github.com/pulumi/esc-examples/tree/main/sync/aws-secrets-manager), and more!
 
 ## Getting Started: Using the Doppler Providers
 
@@ -61,11 +62,11 @@ Configure Doppler for OpenID Connect(OIDC) before you try out the providers. Fol
     ```
 
 1. Save the environment.
-1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/doppler-auth/oidc-login` in your CLI. The output will include the `doppler.login.accessToken`.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `pulumi env open pulumi-org/doppler-auth/oidc-login` in your CLI. The output will include the `doppler.login.accessToken`.
 1. Usage Example: Run Doppler CLI commands dynamically:
 
     ```bash
-    esc run pulumi-org/doppler-auth/oidc-login -- doppler secrets download --no-file --format=json --project=<your-project-id> --config=<your-config-id>
+    pulumi env run pulumi-org/doppler-auth/oidc-login -- doppler secrets download --no-file --format=json --project=<your-project-id> --config=<your-config-id>
     # The DOPPLER_TOKEN env var is automatically injected
     ```
 
@@ -108,11 +109,11 @@ Use this provider to pull secrets *from* Doppler *into* your ESC environment for
     ```
 
 1. Save the environment.
-1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `esc open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
+1. Validate the environment by clicking on Open in the Pulumi Cloud console, or running `pulumi env open pulumi-org/my-app/dev` in your CLI. The output will show the imported `doppler.login`, the fetched secrets under `dopplerSecrets`, and the mapped `environmentVariables`.
 1. **Usage Example:** Run an application that needs these secrets:
 
     ```bash
-    esc run pulumi-org/my-app/dev -- node app.js
+    pulumi env run pulumi-org/my-app/dev -- node app.js
     # The API_KEY and APP_SECRET env vars are automatically injected
     ```
 

@@ -66,6 +66,11 @@ sections:
     link: /docs/idp/guides/
     description: Learn best practices, the Four Factors framework, and how to automate component publishing.
 
+  - icon: link
+    heading: Integrations
+    link: /docs/idp/integrations/
+    description: Surface self-service workflows in the tools your developers already use, like the Deploy with Pulumi button and the Backstage plugin.
+
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>

@@ -33,15 +33,21 @@ values:
         read:
           api-key:
             path: api-key
+            # Read a single field so the output is a scalar value
+            field: value
           app-secret:
             path: app-secret
+            field: value
+  pulumiConfig:
+    apiKey: ${vault.secrets.api-key}
+    appSecret: ${vault.secrets.app-secret}
 ```
 
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/vault/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
@@ -87,7 +93,7 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 | `namespace` | string | [Optional] The namespace to use for the session.                              |
 | `token`     | string | The token to use for authentication.                                          |
 
-#### VaultSecretsRead
+### VaultSecretsRead
 
 | Property | Type   | Description                                  |
 |----------|--------|----------------------------------------------|

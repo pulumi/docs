@@ -3,6 +3,7 @@ title: "Secrets and Configuration for Software Engineers: Pulumi ESC Versioning,
 allow_long_title: true
 
 date: 2024-06-05T04:00:00-07:00
+updated: 2026-06-16
 
 meta_desc: "Major new features for Pulumi ESC bring best-in-class software engineering capabilities to secrets and configuration management"
 
@@ -70,10 +71,10 @@ Revisions can also be tagged to provide semantically meaningful names to specifi
 
 Most importantly though, you can also then refer to a specific version of an environment anywhere you reference one.
 
-When you run a command with `esc run` you can specify `providers@v2` to pick the `v2` tag instead of the default `latest`:
+When you run a command with `pulumi env run` you can specify `providers@v2` to pick the `v2` tag instead of the default `latest`:
 
 ```bash
-$ esc run acmecorp/providers@v2 -- aws sts get-caller-identity
+$ pulumi env run acmecorp/providers@v2 -- aws sts get-caller-identity
 {
     "UserId": "AROAY65FYVYP33NYY5FOU:environments-session",
     "Account": "358361613858",

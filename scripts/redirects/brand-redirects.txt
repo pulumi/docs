@@ -1,0 +1,12 @@
+logos/brand/logo-inv.svg|/logos/brand/logo-on-black.svg
+logos/brand/logo-white.svg|/logos/brand/logo-on-black.svg
+logos/brand/logo-white-white.svg|/logos/brand/logo-on-black.svg
+logos/brand/logo-symbol.svg|/logos/brand/pulumi_mark_on_light.svg
+logos/brand/logo-symbol-inv.svg|/logos/brand/pulumi_mark_on_light.svg
+logos/brand/pulumi-mark-circle-purple.svg|/logos/brand/avatar-on-white.svg
+logos/brand/pulumi-mark-purple.svg|/logos/brand/pulumi_mark_on_light.svg
+logos/brand/pulumi-mark-white.svg|/logos/brand/pulumi_mark_on_light.svg
+logos/brand/pulumi-wordmark-all-white.svg|/logos/brand/logo-on-black.svg
+logos/brand/pulumi-wordmark-white.svg|/logos/brand/logo-on-black.svg
+logos/brand/pulumi-wordmark-purple.svg|/logos/brand/logo.svg
+logos/brand/pulumi-wordmark-grayscale.svg|/logos/brand/logo-black-normal.svg

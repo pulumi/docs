@@ -10,7 +10,7 @@ menu:
     weight: 50
 ---
 
-Pulumi Insights supports self-hosted operation for Business Critical customers through [customer-managed workflow runners](/docs/deployments/deployments/runs/customer-managed-agents/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
+Pulumi Insights supports self-hosted operation for Business Critical customers through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
 
 {{% notes "info" %}}
 Self-hosted Insights is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested in enabling this feature.
@@ -29,25 +29,25 @@ Running Insights in your own environment with customer-managed workflow runners 
 
 Customer-managed workflow runners support multiple workflow types beyond deployments, including Insights discovery scans and policy evaluations. Workflow runners poll Pulumi Cloud for pending workflows and execute them in your self-hosted environment.
 
-For full setup and configuration details, see the [customer-managed workflow runners](/docs/deployments/deployments/runs/customer-managed-agents/) documentation.
+For full setup and configuration details, see the [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) documentation.
 
 ### Setting up Insights scans
 
-1. [Set up a customer-managed workflow runner pool](/docs/deployments/deployments/runs/customer-managed-agents/#using-customer-managed-workflow-runners)
+1. [Set up a customer-managed workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#using-customer-managed-workflow-runners)
 1. Navigate to **Management** > **Accounts** in Pulumi Cloud
 1. Select the workflow runner pool for the account you want to scan
 1. Trigger a scan and confirm it completes successfully
 
 ### Setting up policy evaluations
 
-1. [Set up a customer-managed workflow runner pool](/docs/deployments/deployments/runs/customer-managed-agents/#using-customer-managed-workflow-runners)
+1. [Set up a customer-managed workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#using-customer-managed-workflow-runners)
 1. Navigate to **Management** > **Policies** > **Policy Groups** in Pulumi Cloud
 1. Select the workflow runner pool for an audit policy group
 1. Run a policy evaluation against a stack and confirm the results appear as expected
 
 ### Using an organization default pool
 
-If you want every account scan and policy evaluation to use a customer-managed pool by default, you can set an [organization default workflow runner pool](/docs/deployments/deployments/runs/customer-managed-agents/#setting-an-organization-default-pool). When set, scans and policy groups without an explicit pool use the organization default instead of the Pulumi Hosted Pool.
+If you want every account scan and policy evaluation to use a customer-managed pool by default, you can set an [organization default workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#setting-an-organization-default-pool). When set, scans and policy groups without an explicit pool use the organization default instead of the Pulumi Hosted Pool.
 
 ### Restricting workflow types
 
@@ -59,4 +59,4 @@ enabled_workflow_types:
     - policy_evaluation
 ```
 
-For the full list of configuration options, see the [configuration reference](/docs/deployments/deployments/runs/customer-managed-agents/#configuration-reference).
+For the full list of configuration options, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).

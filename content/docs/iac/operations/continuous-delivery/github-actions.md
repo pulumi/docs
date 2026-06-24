@@ -95,7 +95,7 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
           organization: acme
           requested-token-type: urn:pulumi:token-type:access_token:organization
       - name: Load the ESC environment
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: acme/website/ci
       - run: npm install
@@ -107,7 +107,7 @@ The job below authenticates with `pulumi/auth-actions`, loads an ESC environment
           work-dir: infra
 ```
 
-For more detail, see the [Pulumi ESC GitHub Action documentation](/docs/esc/guides/github-actions/).
+For more detail, see the [Pulumi ESC GitHub Action documentation](/docs/esc/guides/integrate-with/github-actions/).
 
 To configure OIDC directly between GitHub Actions and a cloud provider without ESC — for example, with `aws-actions/configure-aws-credentials` and a `role-to-assume` input — follow that provider's GitHub Actions OIDC guide. This approach is provider-specific: each cloud requires its own trust relationship, whereas ESC configures that trust once and reuses it everywhere.
 
@@ -480,7 +480,7 @@ git push origin release-2026-05-20
 
 Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
 
-To let reviewers exercise a change in a live environment, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+To let reviewers exercise a change in a live environment, pair the preview step with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 {{% notes type="info" %}}
 The Pulumi CLI automatically detects when it runs inside GitHub Actions and records the build and commit metadata. Each update in Pulumi Cloud then links back to the workflow run and pull request that triggered it — no extra configuration required.
@@ -616,5 +616,5 @@ You can manage GitHub itself — repositories, teams, branch protection rules, a
 - [Pulumi GitHub App](/docs/integrations/version-control/github-app/) — rich pull request comments and commit checks from Pulumi Cloud.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to workflows and developers consistently.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each pull request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

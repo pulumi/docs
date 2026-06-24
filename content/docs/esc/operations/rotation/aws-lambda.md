@@ -7,7 +7,7 @@ menu:
   esc:
     identifier: aws-lambda
     parent: esc-operations-rotation
-    weight: 1
+    weight: 2
 aliases:
   - /docs/esc/environments/rotation/aws-lambda/
 ---

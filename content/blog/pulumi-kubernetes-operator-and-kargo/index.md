@@ -63,9 +63,9 @@ To demonstrate how these tools work together, let's look at an example setup tha
 
 This architecture includes six main components working together:
 
-1. **[Security Scanner repository](https://github.com/lichtie/security-scanner)**: Contains your Pulumi infrastructure code. Kargo watches this repository for new commits or releases.
+1. **[Security Scanner repository](https://github.com/pulumi-csa/security-scanner)**: Contains your Pulumi infrastructure code. Kargo watches this repository for new commits or releases.
 1. **Kargo**: Controls the release pipeline. When it detects new code in the security scanner repository, it triggers an update to promote that code to the next stage.
-1. **[Kargo manifests repository](https://github.com/lichtie/kargo-manifests)**: Stores the Kubernetes manifests that define PKO Stack resources. Kargo updates this repository with the new Git references when promoting freight.
+1. **[Kargo manifests repository](https://github.com/pulumi-csa/kargo-manifests)**: Stores the Kubernetes manifests that define PKO Stack resources. Kargo updates this repository with the new Git references when promoting freight.
 1. **Argo CD**: Watches the Kargo manifests repository and creates or updates Stack objects in Kubernetes when it detects changes.
 1. **Pulumi Kubernetes Operator**: Watches Stack objects and deploys them to Pulumi, triggering stack updates or previews.
 1. **Pulumi**: Performs the actual infrastructure deployments and previews based on PKO's instructions.
@@ -83,7 +83,7 @@ The flow diagram above maps out your complete promotion path with color-coded st
 Status indicators on each stage show real-time health information, eliminating the need to manually check multiple systems or run status commands. This single-pane view reduces context switching, speeds up troubleshooting when issues arise, and gives an understanding of exactly what infrastructure is deployed where.
 
 {{% notes type="info" %}}
-You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/lichtie/pulumi-operator-with-kargo-change-management) repository.
+You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/pulumi-csa/pulumi-operator-with-kargo-change-management) repository.
 {{% /notes %}}
 
 ## Setting up the environment

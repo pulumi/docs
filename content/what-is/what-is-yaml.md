@@ -55,7 +55,8 @@ hobbies:
   - Reading
   - Coding
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
   typescript: Expert
   go: Expert
@@ -93,7 +94,8 @@ You can even nest these key-value pairs for more granular information:
 
 ```yaml
 languages:
-  python: Expert
+  python:
+    level: Expert
     version: 3.7
   typescript: Expert
   go: Expert
@@ -211,8 +213,8 @@ outputs:
 
 Finally, we have an output. This is a value handed to you by Pulumi, after the completion of any work required on behalf of relevant resources. If you're familiar with Javascript, you can think of it sort of like a promise. In this case, we're asking for the URL our document will be visible at.
 
-Defining infrastructure doesn't get much simpler than that! [Try it yourself](/docs/languages-sdks/yaml/) and get started with any major cloud provider in a snap.
+## Conclusion
 
-## Pulumi Corporation
+The reason to reach for YAML isn't that it's simpler than a programming language. It's that infrastructure work often doesn't need a programming language at all. When your stack is little more than a declared set of resources and their relationships, the loops, conditionals, and abstractions of Python or TypeScript are overhead you pay for capability you aren't using. YAML strips that back to the part that actually describes your infrastructure, and because Pulumi treats `runtime: yaml` as a first-class option, choosing it costs you nothing on the platform side: the same engine, state, and providers back your program whether it's written in YAML or code. Start in YAML, and you can move to a richer language later if your needs outgrow it.
 
-Pulumi lets infrastructure, developer, and security teams deliver [infrastructure as code](/what-is/what-is-infrastructure-as-code/) faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/)) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/)) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+[Try it yourself](/docs/languages-sdks/yaml/) and get started with any major cloud provider.

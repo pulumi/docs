@@ -14,11 +14,12 @@
   Parameters:
     - class: CSS class for the button (default: "btn btn-primary btn-xl")
     - style: Optional inline style
+    - label: Optional label override (default: site-wide CTA label)
 */}}
 
 {{ $class := .class | default "btn btn-primary btn-xl" }}
 {{ $style := .style | default "" }}
-{{ $label := site.Params.cta.primary.label | default "Get Started" }}
+{{ $label := .label | default (site.Params.cta.primary.label | default "Get Started") }}
 {{ $href := site.Params.cta.primary.href | default "/docs/get-started/" }}
 
 <a href="{{ $href }}" class="{{ $class }}" data-role="cta-get-started"{{ with $style }} style="{{ . }}"{{ end }}>{{ $label }}</a>

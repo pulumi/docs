@@ -104,11 +104,8 @@ Understanding and addressing these challenges and considerations is key to effec
 
 ## Conclusion
 
-Google Cloud Secret Manager is a crucial component for securely handling secrets in Google Cloud environments. Effectively using Google Cloud Secret Manager can significantly improve the security and management of sensitive information in the cloud.
+Secret Manager solves storage and access control, but it deliberately leaves the operational hard parts to you: it does not rotate secrets on its own, and it does not log secret access until you turn that logging on and pay for it. The security of your setup lives less in the service itself than in the rotation policies, IAM scoping, and audit configuration you build around it. Treat Secret Manager as the secure vault, and treat those surrounding practices as the part you actually own.
 
-Now that you’re equipped with the knowledge of Google Cloud Secret Manager, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
+To manage Secret Manager secrets as code alongside the rest of your Google Cloud infrastructure, see [deploying and managing Google Secret Manager secrets](/registry/packages/gcp/api-docs/secretmanager/secret/) with Pulumi.
 
-- **Streamlined infrastructure management with IaC**: Learn about [deploying and managing Google Secrets Manager secrets](/registry/packages/gcp/api-docs/secretmanager/secret/) as well as other Google Cloud resources using Pulumi's Infrastructure as Code capabilities. Pulumi enables you to define and provision your cloud infrastructure using familiar programming languages, integrating the management of secrets directly into your IaC workflows. Discover how to integrate Google Secrets Manager into your broader cloud infrastructure with Pulumi by exploring [Pulumi's Google Cloud Provider documentation](/registry/packages/gcp/).
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [GCP Secrets provider](/docs/pulumi-cloud/esc/providers/gcp-secrets/).
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

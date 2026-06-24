@@ -1,6 +1,7 @@
 ---
 title: "Pulumi ESC: Open Approvals"
 date: 2025-10-13T16:00:00-03:00
+updated: 2026-06-16
 meta_desc: Open Approvals enable strict, auditable approval workflows for environment activation, ensuring governance and safer infrastructure operations.
 meta_image: meta.png
 authors:
@@ -49,10 +50,10 @@ Approvals can be later review and approved from the Approvals tab.
 
 ![Pending approvals page](/blog/esc-open-approvals/open-approvals-3.png)
 
-A request access can also be created from the CLI via the newly introdcued `env open-request` command.
+A request access can also be created from the CLI via the newly introduced `pulumi env open-request` command.
 
 ```bash
-$ esc env open-request org/project/env --access-duration=2h --grant-expiration=1h
+$ pulumi env open-request org/project/env --access-duration-seconds=2h --grant-expiration-seconds=1h
 ```
 
 ## Closing notes

@@ -2,7 +2,7 @@
 title: "Introducing Pulumi ESC: Easy and Secure Environments, Secrets and Configuration"
 allow_long_title: true
 date: 2023-10-10T04:00:00-07:00
-updated: 2025-03-20
+updated: 2026-06-16
 meta_desc: "Manage cloud secrets, configuration, and environments effortlessly with Pulumi ESC. Try the new CLI for secure, automated workflows."
 meta_image: meta.png
 authors:
@@ -24,7 +24,7 @@ Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new produ
 
 Pulumi ESC enables teams to aggregate secrets and configuration from many sources, manage hierarchical collections of configuration and secrets ("environments"), and consume those configuration and secrets from a variety of different infrastructure and application services.  Pulumi ESC works hand-in-hand with Pulumi IaC to simplify configuration management, but also works independently from Pulumi IaC, as a solution for managing environments, secrets and configuration for any application or infrastructure project.
 
-For example, the Pulumi ESC CLI (`esc`) makes it possible to give your developers immediate, just-in-time authenticated and short-lived access to cloud credentials across any cloud provider with just a single command: `esc run aws-staging -- aws s3 ls`.
+For example, the Pulumi CLI makes it possible to give your developers immediate, just-in-time authenticated and short-lived access to cloud credentials across any cloud provider with just a single command: `pulumi env run aws-staging -- aws s3 ls`.
 
 ![Pulumi ESC Overview in the Command Line Interface](esc.gif)
 
@@ -32,11 +32,11 @@ Here are just a few of the exciting use cases we've seen for Pulumi ESC:
 
 * Do you have configuration for dozens of environments that is copy/pasted around and prone to drift?  Pulumi ESC lets you manage this as code using a simple set of environments that naturally and flexibly compose to derive all of your different configurations.
 
-* Is it hard for developers in your organization to get access to short-lived credentials to work in the environments they need to develop and deploy into?  Pulumi ESC lets you configure OIDC to pull short-lived credentials and other secrets dynamically from all of your cloud and secrets providers and present them in a logical way to other tools with a single command like `esc run aws-staging -- aws s3 ls`.
+* Is it hard for developers in your organization to get access to short-lived credentials to work in the environments they need to develop and deploy into?  Pulumi ESC lets you configure OIDC to pull short-lived credentials and other secrets dynamically from all of your cloud and secrets providers and present them in a logical way to other tools with a single command like `pulumi env run aws-staging -- aws s3 ls`.
 
 * Have your Pulumi IaC configuration files grown to hundreds of lines of configuration spread across many different stack files?  Pulumi ESC introduces a simple way to consume Pulumi IaC configuration directly from Pulumi ESC environments, enabling a much richer secrets and configuration management for Pulumi IaC.
 
-Pulumi ESC is available today in preview via the new `esc` CLI, as part of Pulumi Cloud, via the Pulumi Cloud REST API, and has direct integration with Pulumi IaC stack configuration and new `pulumi env` commands.  It also supports dynamically pulling secrets and configuration from other sources of truth, including AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure KeyVault, Google Cloud OIDC, Google Secrets Manager, HashiCorp Vault, and Pulumi IaC Stack References - with many more sources like 1Password coming soon.
+Pulumi ESC is available today in preview via the Pulumi CLI's `pulumi env` commands, as part of Pulumi Cloud, via the Pulumi Cloud REST API, and has direct integration with Pulumi IaC stack configuration.  It also supports dynamically pulling secrets and configuration from other sources of truth, including AWS OIDC, AWS Secrets Manager, Azure OIDC, Azure KeyVault, Google Cloud OIDC, Google Secrets Manager, HashiCorp Vault, and Pulumi IaC Stack References - with many more sources like 1Password coming soon.
 
 ![Diagram of Pulumi ESC architecture, showing how configuration and secrets from multiple sources (AWS, Azure, Google Cloud, Vault, 1Password) are managed within Pulumi ESC environments and securely delivered to execution environments like Pulumi CLI, GitHub Actions, AWS, Kubernetes, and Cloudflare Workers.](esc-overview.png)
 
@@ -78,17 +78,17 @@ Pulumi ESC was born to address these problems and needs head on.  It does so thr
 
 * __Hierarchical and Composable__: Environments contain collections of secrets and configuration, but can also import one or more other environments.  Values can be overridden, interpolated from other values, and arbitrarily nested.  This allows for flexible composition and reuse, and avoids copy paste.
 * __Any Secrets Provider__:  Support for dynamic configuration providers allow Pulumi ESC to integrate with secrets stored in any other provider.  Organizations often use AWS Secrets Manager, Vault, Azure OIDC and/or 1Password plus many more sources of truth for their secrets and configuration.  Pulumi ESC supports them all, providing a single interface to your configuration and secrets, no matter where their source of truth is.  Pulumi ESC works with these tools to provide improved management of secrets and configuration.
-* __Consume from Anywhere__: The `esc` CLI and the Pulumi ESC Rest API enables environments to be accessed from any application, infrastructure provider, or automation system.  At launch, first-class integrations are available with Pulumi IaC, local environment and .env files, GitHub Actions, and more.
+* __Consume from Anywhere__: The `pulumi` CLI and the Pulumi ESC Rest API enables environments to be accessed from any application, infrastructure provider, or automation system.  At launch, first-class integrations are available with Pulumi IaC, local environment and .env files, GitHub Actions, and more.
 * __Auditable__: Environments must be "opened" to compute and see the set of value they provide, and this action is recorded in audit logs, including a full record of how each value was sourced from within the hierarchy of environments that contributed to it.
 * __Authentication and RBAC__:  Pulumi ESC brokers access to secrets and configuration that live in other systems, and so authentication and granular RBAC are critical to ensure robust access controls across your organization.  Pulumi ESC leverages the same Pulumi Cloud identity, RBAC, Teams, SAML/SCIM and scoped access tokens that are used for Pulumi IaC today, extending these all to managing access to Environments as well as Stacks.
 * __Configuration as Code__:  Environments are defined as YAML documents which can describe how to project and compose secrets and configuration, integrate dynamic configuration providers, and compute new configuration from other values (construing a URL from a DNS name, or concatenating multiple configuration values into a derived value).  The incredible flexibility of a code-based approach over traditional point-and-click interfaces allows Pulumi ESC to offer rich expressiveness for managing complex configuration.
-* __Fully Managed__: Pulumi ESC is offered both as a fully managed and a self-hosted service in Pulumi Cloud. The pulumi/esc project is [open source](https://github.com/pulumi/esc/), and contains the evaluation engine for environments, the esc CLI, and in the future, the extensible plugins for source and target integrations.
+* __Fully Managed__: Pulumi ESC is offered both as a fully managed and a self-hosted service in Pulumi Cloud.
 
 Pulumi ESC enables a new kind of solution for configuration management of modern cloud infrastructure.
 
 ## Pulumi ESC Overview
 
-We can start by creating a few simple environments using Pulumi ESC.  This can be done in the Pulumi Cloud console, using the new `esc` CLI, or using the new `pulumi env` sub-commands in the Pulumi CLI. Let’s take a look at these in action.
+We can start by creating a few simple environments using Pulumi ESC.  This can be done in the Pulumi Cloud console or using the `pulumi env` sub-commands in the Pulumi CLI. Let’s take a look at these in action.
 
 {{< related-posts >}}
 
@@ -134,13 +134,13 @@ values:
 
 This indicates that we want to pull a set of AWS credentials from the aws-login dynamic provider, which expects a few inputs - including a `roleArn` we would like to assume and a `duration` for the short lived AWS credentials that will be returned.  If we have [configured OIDC in AWS](/docs/pulumi-cloud/esc/providers/aws-login) to allow this Pulumi Cloud organization and environment to request short-lived credentials, then this will allow our environment to dynamically pull in those credentials for an authenticated user, and present back a config object that includes them.
 
-To see the values computed by an environment, we need to "open" it.  That can be done via the CLI, the REST API or the integrations into other systems (like Pulumi IaC).  Let’s open it with the `esc` CLI first.  [Download the `esc` CLI](/docs/install/esc/), and then run the following commands:
+To see the values computed by an environment, we need to "open" it.  That can be done via the CLI, the REST API or the integrations into other systems (like Pulumi IaC).  Let’s open it with the `pulumi` CLI first.  [Install the Pulumi CLI](/docs/iac/download-install/), and then run the following commands:
 
 ```shell
-$ esc env ls
+$ pulumi env ls
 demo/aws-staging
 
-$ esc open demo/aws-staging
+$ pulumi env open demo/aws-staging
 {
   "aws": {
     "creds": {
@@ -178,10 +178,10 @@ values:
 
 The top-level `environmentVariables` key is used by convention to project out a set of environment variables for this environment.  The top level `pulumiConfig` key is used by convention to project out a set of Pulumi IaC configuration for this environment.  Note that they can pull their values from other configuration in this environment (or, as we’ll see soon, any environment they import).  That includes using the values from dynamic providers like `aws-login`.
 
-Now that we’ve got a complete environment configured for setting up access to our AWS account, we can use this with esc run to run a command (`aws s3 ls`) using the environment variables:
+Now that we’ve got a complete environment configured for setting up access to our AWS account, we can use this with pulumi env run to run a command (`aws s3 ls`) using the environment variables:
 
 ```shell
-$ esc run demo/aws-staging -- aws s3 ls
+$ pulumi env run demo/aws-staging -- aws s3 ls
 2023-09-07 16:35:11 accesslogs-1284c27
 2023-04-13 15:04:41 accesslogs-6652a3d
 2023-01-20 16:52:04 accesslogs-7ea7130
@@ -189,7 +189,7 @@ $ esc run demo/aws-staging -- aws s3 ls
 ...
 ```
 
-Note that when we run this command, `esc run` uses our local authentication credentials (including RBAC permissions) for Pulumi ESC to authenticate our access to this environment, and then uses the environment’s identity to get a short-lived AWS credential via AWS OIDC.  It then brings back this unique credential just for the lifetime of the `aws s3 ls` subcommand.  This provides very granular authentication and auditability of the operations run, while also not requiring the user to have a long lived AWS credential on their machine to run operational commands against the account.
+Note that when we run this command, `pulumi env run` uses our local authentication credentials (including RBAC permissions) for Pulumi ESC to authenticate our access to this environment, and then uses the environment’s identity to get a short-lived AWS credential via AWS OIDC.  It then brings back this unique credential just for the lifetime of the `aws s3 ls` subcommand.  This provides very granular authentication and auditability of the operations run, while also not requiring the user to have a long lived AWS credential on their machine to run operational commands against the account.
 
 ![A Pulumi ESC Environment in the Pulumi Console](/blog/environments-secrets-configurations-management/console-env.png)
 
@@ -197,7 +197,7 @@ Note that when we run this command, `esc run` uses our local authentication cred
 
 Next, we can define a second environment for our shopping-service application.  This will be deployed with Pulumi IaC, so we’ll provide some default configuration for this service in the `pulumiConfig` section.
 
-We run `esc env init shopping-service` to create our new environment. And then `esc env edit shopping-service` to open an editor to populate our new environment.  We can then add the following to our environment, where it will be encrypted and stored for us.
+We run `pulumi env init shopping-service` to create our new environment. And then `pulumi env edit shopping-service` to open an editor to populate our new environment.  We can then add the following to our environment, where it will be encrypted and stored for us.
 
 ```yaml
 # shopping-service
@@ -267,7 +267,7 @@ Pulumi ESC can already be accessed from application code via the REST API, but w
 
 ### Syncing Configuration to External Systems
 
-While the `esc` CLI and REST APIs can be used today to pull configuration down into many existing places where environments will be consumed, there are also many systems that store their configuration in more "walled gardens" which would need to be pushed into for optimal usability.  For example, pushing configuration values into a CI/CD system’s configuration system to avoid needing to copy/paste configuration and secrets manually into their UI.  We are working on additional integrations for Pulumi ESC that can "push"/"sync" configuration into systems directly, so that you can still benefit from the usability of their native configuration systems, without having to take on the problems of configuration sprawl, long-lived static secrets and duplication and copy/paste of secrets.  See [pulumi/esc#58](https://github.com/pulumi/esc/issues/58).
+While the `pulumi` CLI and REST APIs can be used today to pull configuration down into many existing places where environments will be consumed, there are also many systems that store their configuration in more "walled gardens" which would need to be pushed into for optimal usability.  For example, pushing configuration values into a CI/CD system’s configuration system to avoid needing to copy/paste configuration and secrets manually into their UI.  We are working on additional integrations for Pulumi ESC that can "push"/"sync" configuration into systems directly, so that you can still benefit from the usability of their native configuration systems, without having to take on the problems of configuration sprawl, long-lived static secrets and duplication and copy/paste of secrets.  See [pulumi/esc#58](https://github.com/pulumi/esc/issues/58).
 
 ### Dynamic Configuration Provider Ecosystem
 

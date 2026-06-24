@@ -50,7 +50,7 @@ You are free to use your favorite frameworks and libraries for writing unit test
 
 {{% choosable language "typescript" %}}
 
-This guide uses Mocha as the testing framework. [Install Mocha](https://mochajs.org/#installation) to your development environment.
+This guide uses Mocha as the testing framework. [Install Mocha](https://legacy.mochajs.org/#installation) to your development environment.
 
 ```bash
 npm install --global mocha

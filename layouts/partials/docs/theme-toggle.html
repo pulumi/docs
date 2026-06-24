@@ -1,0 +1,16 @@
+{{- /* Three-state docs color-theme toggle (light / dark / system). Pinned to the
+       bottom of the docs sidebar nav. The active button reflects
+       data-theme-pref on <html>; behavior is wired in theme/src/ts/docs-theme.ts.
+       The inline head script applies the theme pre-paint, so the highlight is
+       correct before this bundle loads. */ -}}
+<div class="docs-theme-toggle" role="group" aria-label="Color theme">
+    <button type="button" class="docs-theme-toggle__btn" data-theme-set="light" aria-pressed="false" aria-label="Light theme" title="Light theme">
+        {{ partial "icon.html" (dict "name" "sun" "weight" "bold") }}
+    </button>
+    <button type="button" class="docs-theme-toggle__btn" data-theme-set="dark" aria-pressed="false" aria-label="Dark theme" title="Dark theme">
+        {{ partial "icon.html" (dict "name" "moon" "weight" "bold") }}
+    </button>
+    <button type="button" class="docs-theme-toggle__btn" data-theme-set="system" aria-pressed="false" aria-label="Match system theme" title="Match system theme">
+        {{ partial "icon.html" (dict "name" "monitor" "weight" "bold") }}
+    </button>
+</div>

@@ -19,4 +19,4 @@ Two operators consume ESC values inside a Kubernetes cluster. Pick based on whet
 | [External Secrets Operator (ESO)](/docs/esc/integrations/kubernetes/external-secrets-operator/) | Sync ESC values into Kubernetes `Secret` objects via ESO. |
 | [Secrets Store CSI Driver](/docs/esc/integrations/kubernetes/secret-store-csi-driver/) | Mount ESC values directly into pods as files via the upstream CSI driver. |
 
-For using ESC to store and serve `kubeconfig` files for `kubectl`, `helm`, or the Pulumi Kubernetes provider, see the [Kubernetes cluster access](/docs/esc/guides/kubernetes-cluster-access/) guide.
+For using ESC to store and serve `kubeconfig` files for `kubectl`, `helm`, or the Pulumi Kubernetes provider, see the [Kubernetes cluster access](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) guide.

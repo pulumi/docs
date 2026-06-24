@@ -15,92 +15,18 @@ aliases:
   - /docs/esc/integrations/infrastructure/pulumi-iac/
 ---
 
-This guide shows you how to integrate Pulumi ESC with your Pulumi IaC projects to centralize configuration and secrets across all your stacks.
+This guide covers advanced patterns for integrating Pulumi ESC with your Pulumi IaC projects to centralize configuration and secrets across all your stacks.
 
 {{< notes type="info" >}}
-**This guide is for existing Pulumi IaC users.** If you're new to Pulumi IaC, start with the [Pulumi IaC Get Started guide](/docs/get-started/) first.
+**This guide is for existing Pulumi IaC users.** If you're new to Pulumi IaC, start with the [Pulumi IaC Get Started guide](/docs/get-started/) first. If you haven't connected an ESC environment to a stack yet, start with the [ESC Get Started guide](/docs/esc/get-started/), which walks you through referencing an environment and exposing values through `pulumiConfig`.
 {{< /notes >}}
-
-If you completed the [ESC Get Started guide](/docs/esc/get-started/), you already have an environment with values like `region` and `apiKey`. This guide shows you how to reference that same environment from your Pulumi stack configuration.
 
 ## Prerequisites
 
 - [Pulumi CLI](/docs/install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
 - An existing Pulumi project (or create one with `pulumi new`)
-- An ESC environment with configuration values (see [Get Started](/docs/esc/get-started/) to create one)
-
-## Add ESC to your Pulumi stack
-
-### Step 1: Reference your ESC environment
-
-In your stack configuration file (`Pulumi.<stack-name>.yaml`), add an `environment` block that references your ESC environment:
-
-```yaml
-environment:
-  - <your-org>/<your-environment-name>
-```
-
-For example, if your ESC environment is `my-project/dev`:
-
-```yaml
-environment:
-  - my-project/dev
-```
-
-You can also reference multiple environments, which will be merged in order (later values override earlier ones):
-
-```yaml
-environment:
-  - my-project/common
-  - my-project/dev
-```
-
-{{< notes type="info" >}}
-**Pin imports to a specific version.** By default, Pulumi uses the `@latest` tag of each environment (always the most recent revision). To ensure your stack uses a known, fixed version, append a version tag or revision number with `@`:
-
-```yaml
-environment:
-  - my-project/common@production
-  - my-project/dev@3
-```
-
-This prevents unexpected changes when someone updates the source environment. Learn more in [Environment versioning](/docs/esc/concepts/versioning/).
-{{< /notes >}}
-
-### Step 2: Define configuration in your ESC environment
-
-ESC environments are YAML documents that you can edit using the CLI or Pulumi Cloud console. Use the CLI to edit your environment:
-
-```bash
-esc env edit <your-proj>/<your-environment-name>
-```
-
-You can also edit environments in the [Pulumi Cloud console](https://app.pulumi.com/signin) if you prefer a visual editor.
-
-In your ESC environment, use the `pulumiConfig` block to expose values to Pulumi IaC. If you're using the environment from the Get Started guide, wrap your existing values in a `pulumiConfig` block:
-
-```yaml
-values:
-  pulumiConfig:
-    region: us-west-2
-    apiKey:
-      fn::secret: demo-secret-123
-```
-
-Values in `pulumiConfig` can be strings, numbers, booleans, or secrets (using `fn::secret`).
-
-The `pulumiConfig` block is the bridge between ESC and Pulumi IaC. Any values you define under `pulumiConfig` become available in your Pulumi program through the standard Configuration API.
-
-This allows you to centralize all your configuration and secrets in ESC while accessing them through familiar Pulumi config patterns like `config.get()` or `config.require()`.
-
-### Step 3: Access configuration in your code
-
-Use Pulumi's standard Configuration API to access these values in your infrastructure code:
-
-{{< example-program path="aws-import-export-pulumi-config" >}}
-
-Your Pulumi program now retrieves configuration and secrets from ESC. Run `pulumi preview` or `pulumi up` to see it in action.
+- An ESC environment referenced from your stack (see [Get Started](/docs/esc/get-started/#add-esc-to-your-pulumi-stack))
 
 ## Common patterns
 
@@ -167,6 +93,10 @@ values:
 
 Learn more in [Importing environments](/docs/esc/concepts/imports/).
 
+{{< notes type="info" >}}
+When a key is set both in an environment's `pulumiConfig` and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.
+{{< /notes >}}
+
 ## Convert existing stack config to an ESC environment
 
 To convert your existing stack config to a new ESC environment, use the Pulumi CLI:
@@ -187,7 +117,7 @@ You can manage a stack's imported environments with [Automation API](/docs/iac/c
 
 ## Accessing Pulumi stack outputs
 
-You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [Pulumi stacks](/docs/iac/concepts/stacks/) into an ESC environment with the [`pulumi-stacks` provider](/docs/esc/providers/secrets/pulumi-stacks/).
+You can read [outputs](/docs/iac/concepts/inputs-outputs/#outputs) from other [Pulumi stacks](/docs/iac/concepts/stacks/) into an ESC environment with the [`pulumi-stacks` provider](/docs/esc/providers/iac/pulumi-stacks/).
 
 ## Next steps
 

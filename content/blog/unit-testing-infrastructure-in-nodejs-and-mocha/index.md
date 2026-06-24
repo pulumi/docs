@@ -4,6 +4,7 @@ authors: ["joe-duffy"]
 tags: [testing]
 categories: [tutorials]
 date: "2019-07-13"
+lastmod: "2026-06-18"
 meta_desc: "This post shows how to use Node.js, the Mocha test framework, and the Chai assertion library to embed tests alongside your infrastructure-as-code definitions."
 meta_image: "meta.png"
 ---
@@ -38,7 +39,7 @@ Our example will be testing two things about an Amazon EKS cluster; that it is
 In true test-driven development (TDD) form, let's start with the tests themselves. If
 you're familiar with Mocha and Chai, this should look like ordinary testing to you.
 If you're not familiar with them, don't worry -- they are quite easy to read and learn:
-[Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/).
+[Mocha](https://legacy.mochajs.org/) and [Chai](https://www.chaijs.com/).
 
 Here is the contents of our `tests/eks.spec.ts` test file:
 

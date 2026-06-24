@@ -24,11 +24,11 @@ menu:
     weight: 8
 ---
 
-The [`esc` CLI](/docs/install/esc/) and other ESC consumers (e.g. the [`pulumi` CLI](/docs/install/)) conventionally assign specific semantics to certain top-level properties of an evaluated ESC environment (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/concepts/environments/)). These _reserved properties_ shape the outputs an environment produces when it is opened: environment variables, temporary files, Pulumi IaC stack configuration, and Pulumi policy pack configuration.
+The [`pulumi` CLI](/docs/iac/download-install/) and other ESC consumers conventionally assign specific semantics to certain top-level properties of an evaluated ESC environment (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/concepts/environments/)). These _reserved properties_ shape the outputs an environment produces when it is opened: environment variables, temporary files, Pulumi IaC stack configuration, and Pulumi policy pack configuration.
 
 ## environmentVariables
 
-The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`esc run`](/docs/esc/cli/commands/esc_run) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
+The `environmentVariables` reserved property contains values that should be exported as environment variables. For example, [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run) exports each key-value pair in the `environmentVariables` property as an environment variable that is accessible to the command to run.
 
 This property is also used by [Pulumi policy packs](/docs/insights/policy/policy-packs/). When an ESC environment is attached to a policy pack in a policy group, `environmentVariables` are injected into the policy runtime as environment variables.
 
@@ -56,16 +56,31 @@ values:
 }
 ```
 
-#### Using `esc run`
+#### Using `pulumi env run`
 
 ```console
-$ esc run default/greet -- sh -c '${GREETING}, ${USER}!'
+$ pulumi env run default/greet -- sh -c '${GREETING}, ${USER}!'
 Hello, user!
 ```
 
+### Precedence
+
+When an ESC consumer such as [`esc run`](/docs/esc/cli/commands/esc_run) runs a command, the values in `environmentVariables` are layered on top of the variables already present in your local (OS) environment. If a variable is defined in both places, **the value from the environment takes precedence** over the inherited local value.
+
+For example, the `default/greet` environment above sets `GREETING: Hello`. Even if `GREETING` is already set in your shell, the environment's value is used:
+
+```console
+$ GREETING=from-shell esc run default/greet -- printenv GREETING
+Hello
+```
+
+{{< notes type="info" >}}
+This is the opposite of how [`pulumiConfig`](#precedence-1) resolves against explicit stack configuration: there, the explicit stack value wins. Keep the two rules distinct.
+{{< /notes >}}
+
 ## files
 
-The `files` reserved property contains values that should be written to temporary files. For example, [`esc run`](/docs/esc/cli/commands/esc_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
+The `files` reserved property contains values that should be written to temporary files. For example, [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run) writes the contents of each property in the `files` property to a temporary file and exports the file's path in the named environment variable that is accessible to the command to run.
 
 ### Properties
 
@@ -94,10 +109,10 @@ values:
 }
 ```
 
-#### Using `esc run`
+#### Using `pulumi env run`
 
 ```console
-$ esc run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
+$ pulumi env run default/greet -- sh -c 'echo ${GREETING} & cat ${GREETING}'
 /tmp/tmp.iBApHfcsJ1
 Hello, user!
 ```
@@ -142,6 +157,36 @@ KEY                           VALUE
 aws:region                    us-west-2
 greeting                      Hello
 ```
+
+### Precedence
+
+When a configuration key is defined both in an environment's `pulumiConfig` and explicitly in a stack's own configuration, **the explicit stack configuration value takes precedence**. Explicit stack configuration includes:
+
+- Values written directly to `Pulumi.<stack-name>.yaml` under the `config:` block.
+- Values set with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/), which writes to that same stack configuration file.
+
+For example, given the environment above (which sets `greeting: Hello`), if the stack also sets the key explicitly:
+
+```console
+$ pulumi config set greeting Hola
+```
+
+then the explicit value wins:
+
+```console
+$ pulumi config
+KEY                           VALUE
+aws:region                    us-west-2
+greeting                      Hola
+```
+
+For object values, the environment and stack configurations are deep-merged using [JSON merge patch](https://datatracker.ietf.org/doc/html/rfc7396) semantics: the two objects are combined key by key, and the stack's value wins for any key defined in both. This deep-merge behavior is specific to `pulumiConfig`. It differs from how an object value declared as a project-level default in `Pulumi.yaml` combines with a stack-level value in `Pulumi.<stack-name>.yaml`: there the stack value _replaces_ the project default outright rather than merging into it.
+
+{{< notes type="info" >}}
+This is the opposite of how [`environmentVariables`](#precedence) resolve against your local environment, where the value from the environment wins. The two rules are distinct.
+{{< /notes >}}
+
+This precedence is separate from the rule that applies _among_ multiple imported environments, where the last imported environment wins. See [Imports](/docs/esc/concepts/imports/) for details.
 
 ## policyConfig
 

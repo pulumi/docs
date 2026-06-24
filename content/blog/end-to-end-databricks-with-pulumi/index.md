@@ -1,6 +1,6 @@
 ---
 title: "Build a Governed Databricks Workspace with Pulumi"
-date: 2026-06-18
+date: 2026-06-25
 meta_desc: "Provision a governed Databricks workspace baseline with Pulumi, including cluster policies, notebooks, jobs, and promotion workflows."
 feature_image: feature.png
 meta_image: meta.png

@@ -2,6 +2,7 @@
 title: "Master Kubernetes Secrets with Pulumi ESC + Secrets Store CSI Driver"
 allow_long_title: True
 date: 2024-12-18T09:58:01+01:00
+updated: 2026-06-16
 meta_image: meta.png
 meta_desc: "Learn how to manage Kubernetes secrets securely with Pulumi ESC and the Secrets Store CSI Driver."
 
@@ -91,8 +92,8 @@ Before we start, make sure you have the following prerequisites:
 - A [Pulumi Cloud](https://app.pulumi.com/signup) account. If you don't have one, you can create one for free.
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed. You can also use the
-  standalone [ESC CLI](/docs/esc/download-install/) to manage secrets and configurations.
+- [Pulumi CLI](/docs/iac/download-install/) installed. You can use the
+  `pulumi env` commands to manage secrets and configurations.
 - kubectl [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 
 ### Step 1: Deploy the Secrets Store CSI Driver and Pulumi ESC CSI Provider

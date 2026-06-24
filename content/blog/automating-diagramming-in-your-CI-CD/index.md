@@ -325,7 +325,7 @@ Pulumi Neo streamlines enterprise diagramming through an intelligent, organizati
 1. **Automated pull request generation**: Neo analyzes your entire organization's infrastructure state, identifies changes, and automatically creates pull requests with updated diagrams for review and approval.
 
 {{% notes type="info" %}}
-**Complete example**: You can see my resulting architecture diagrams repository on [GitHub](https://github.com/Elisabeth-Team/Architecture-Diagrams).
+**Complete example**: You can see my resulting architecture diagrams repository on [GitHub](https://github.com/pulumi-csa/Architecture-Diagrams).
 {{% /notes %}}
 
 ### Key advantages and limitations
