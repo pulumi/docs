@@ -320,10 +320,9 @@ html[data-theme="dark"] body.section-docs {
     // --- Right-rail table of contents (shared selectors w/ registry; the
     //     section-docs gate keeps registry light) -----------------------------
     div.table-of-contents {
-        div.heading h2 {
-            color: var(--docs-fg-muted);
-        }
-
+        // Heading h2 and the :hover state now resolve their --docs-* tokens
+        // directly in the base rules (_docs-main.scss), so they flip here
+        // automatically — no override needed.
         ul li a {
             color: var(--docs-link);
         }
@@ -603,15 +602,9 @@ html[data-theme="dark"] body.section-docs {
 // "Copy page" / LLM menu dropdown in the right-rail TOC (_llm-menu.scss — all
 // hardcoded light slate grays). Not a detached overlay, so plain section-docs scope.
 html[data-theme="dark"] body.section-docs {
-    // Trigger button (utilities: text-gray-600 hover:text-gray-700).
-    .llm-menu-trigger {
-        color: var(--docs-fg-muted);
-
-        &:hover {
-            color: var(--docs-fg);
-        }
-    }
-
+    // The split "Copy page" button + "View as Markdown" button use .btn-outline,
+    // which already has a shared dark skin above (matching the header nav). Only
+    // the dropdown below needs its own overrides.
     .llm-menu-dropdown {
         background: var(--color-gray-950);
         border-color: var(--docs-border);

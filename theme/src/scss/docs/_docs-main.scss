@@ -318,6 +318,26 @@ body.section-registry {
             padding-bottom: 24px;
             min-height: 100vh;
 
+            // Scroll-to-top button: sticks 1rem above the viewport bottom and,
+            // because it lives at the end of (and is bounded by) this column,
+            // right-aligns to the content's right edge. JS toggles .visible /
+            // .hidden on the inner <a> to reveal it after scrolling.
+            > pulumi-top-button {
+                position: sticky;
+                bottom: 1rem;
+                z-index: 10;
+                display: block;
+                width: fit-content;
+                margin-left: auto;
+
+                // It floats over content, so keep an opaque surface (the dark
+                // outline variant is otherwise transparent and would let text
+                // bleed through).
+                .btn {
+                    background-color: var(--docs-bg, var(--color-white));
+                }
+            }
+
             @media (min-width: 1024px) {
                 max-width: 1200px;
                 flex-direction: column;
@@ -398,6 +418,10 @@ body.section-registry {
 
         .docs-toc-mobile {
             display: flex;
+            // Stack the markdown actions and the "On this page" accordion in their
+            // own full-width rows instead of cramming them side by side.
+            flex-direction: column;
+            align-items: stretch;
 
             div.table-of-contents {
                 display: flex;
@@ -410,6 +434,14 @@ body.section-registry {
         .docs-marketing-ad,
         .docs-toc-desktop {
             display: none;
+        }
+
+        // Markdown / LLM actions show at every breakpoint. Only the slot for the
+        // current width is visible (mobile slot < 1280px, desktop slot ≥ 1280px),
+        // so the widget never renders twice.
+        .docs-md-actions {
+            display: block;
+            margin-bottom: 16px;
         }
 
 
@@ -435,13 +467,18 @@ body.section-registry {
                 display: block;
             }
 
+            // Desktop right-rail spacing (visibility handled by the base rule).
+            .docs-md-actions {
+                margin-bottom:1.5rem;
+            }
+
             .docs-table-of-contents {
-                margin-top: 1rem;
+                margin-top: 2.5rem;
                 padding: 1rem 0;
                 overflow-y: auto;
-                height: 90vh;
+                height: 100vh;
                 position: sticky;
-                top: 3.5rem;
+                top: 0;
                 display: block;
                 margin-right: 10px;
 
@@ -636,7 +673,11 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 600;
                 font-size: 12px;
-                color: #8e8f97;
+                // Full-strength foreground token; flips automatically in docs
+                // dark mode (near-black in light, white in dark). Registry pages
+                // aren't body.section-docs (the token is undefined there), so the
+                // fallback keeps them at their original muted gray.
+                color: var(--docs-fg, #8e8f97);
                 margin: 0 !important;
             }
         }
@@ -702,13 +743,16 @@ body.section-registry {
         }
 
         .heading:hover {
+            // Resting heading is full-strength --docs-fg, so hover softens to the
+            // muted token (lighter in light mode, dimmer in dark) for feedback.
+            // Fallback keeps registry (non-docs) pages at their original hover.
             div.icon {
-                background-color: var(--color-gray-900);
+                background-color: var(--docs-fg-muted, var(--color-gray-900));
             }
 
             .icon-heading-wrapper {
                 h2 {
-                    color: var(--color-gray-900);
+                    color: var(--docs-fg-muted, var(--color-gray-900));
                 }
             }
         }
