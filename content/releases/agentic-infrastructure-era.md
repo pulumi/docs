@@ -100,6 +100,7 @@ sections:
           Now you can @-mention Neo in GitHub issues and pull requests, and in your team's Slack workspace, to
           kick off full-context infra tasks wherever you are.
         link: /blog/neo-github-slack/
+        tier: Team
 
       - variant: text
         icon: plugs
@@ -116,6 +117,7 @@ sections:
           Use Neo to automate recurring infrastructure tasks like keeping providers updated, identifying
           non-compliant resources, and summarizing infrastructure changes from week to week.
         link: /blog/neo-automations/
+        tier: Enterprise
 
   - anchor: ai-frontier
     label: Partnering with the frontier of AI infrastructure

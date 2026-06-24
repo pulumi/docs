@@ -1,0 +1,56 @@
+{{- /*
+    Releases JSON feed -> /releases/index.json
+
+    A single machine-readable document built from the `entries` manifest in
+    content/releases/_index.md, emitted newest-first by `date`. Each entry
+    carries a `type`:
+      - updates: items come from the manifest ({ title, description, url?, tier? }).
+      - release: a pointer; title/label and the item list are read from the
+                 detail page at `url` (one item per section card: title,
+                 description, url, tier).
+    Mirrors layouts/index.json and the dict/slice/append + jsonify style of
+    layouts/docs/list.llmsitemap.json. All relative URLs are absolutized with
+    absURL (which leaves already-absolute links like npm/GitHub URLs unchanged).
+*/ -}}
+{{- $entries := slice -}}
+{{- range sort .Params.entries "date" "desc" -}}
+    {{- if eq .type "updates" -}}
+        {{- $items := slice -}}
+        {{- range .items -}}
+            {{- $item := dict "title" .title "description" .description -}}
+            {{- with .url -}}{{- $item = merge $item (dict "url" (absURL .)) -}}{{- end -}}
+            {{- with .tier -}}{{- $item = merge $item (dict "tier" .) -}}{{- end -}}
+            {{- $items = $items | append $item -}}
+        {{- end -}}
+        {{- $entries = $entries | append (dict
+            "type" "updates"
+            "label" .label
+            "date" (time.Format "2006-01-02" .date)
+            "items" $items) -}}
+    {{- else if eq .type "release" -}}
+        {{- with site.GetPage (strings.TrimSuffix "/" .url) -}}
+            {{- $items := slice -}}
+            {{- range .Params.sections -}}
+                {{- range .cards -}}
+                    {{- $item := dict "title" .title "description" (.description | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " ") -}}
+                    {{- with .link -}}{{- $item = merge $item (dict "url" (absURL .)) -}}{{- end -}}
+                    {{- with .tier -}}{{- $item = merge $item (dict "tier" .) -}}{{- end -}}
+                    {{- $items = $items | append $item -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $entries = $entries | append (dict
+                "type" "release"
+                "title" .Title
+                "label" .Params.label
+                "date" (time.Format "2006-01-02" .Params.date)
+                "url" .Permalink
+                "items" $items) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- dict
+    "title" .Title
+    "url" (absURL .RelPermalink)
+    "entries" $entries
+    | jsonify (dict "indent" "  ") -}}

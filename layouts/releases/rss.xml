@@ -1,0 +1,45 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{- /*
+    Releases RSS feed -> /releases/rss.xml
+
+    Driven by the `entries` manifest in content/releases/_index.md, emitted
+    newest-first by date. A `release` entry emits one <item> linking to its
+    detail page (resolved at `url`). An `updates` entry emits one <item> for
+    each item that carries a url, using the item's own description. Modeled on
+    layouts/blog/rss.xml and layouts/events/rss.xml. URLs are absolutized with
+    absURL.
+*/ -}}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Releases</title>
+        <link>{{ .Permalink }}</link>
+        <description>A running log of major platform updates from the Pulumi team.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        {{ range sort .Params.entries "date" "desc" }}
+            {{ if eq .type "release" }}
+                {{ with site.GetPage (strings.TrimSuffix "/" .url) }}
+            <item>
+                <title>{{ .Title }}</title>
+                <link>{{ .Permalink }}</link>
+                <guid>{{ .Permalink }}</guid>
+                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" .Params.date | safeHTML }}</pubDate>
+                <description>{{ .Params.short_description | default .Params.label }}</description>
+            </item>
+                {{ end }}
+            {{ else if eq .type "updates" }}
+                {{ $date := .date }}
+                {{ range $item := .items }}
+                    {{ with $item.url }}
+            <item>
+                <title>{{ $item.title }}</title>
+                <link>{{ absURL . }}</link>
+                <guid isPermaLink="false">{{ $date | time.Format "2006-01-02" }}-{{ absURL . }}</guid>
+                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" $date | safeHTML }}</pubDate>
+                <description>{{ $item.description }}</description>
+            </item>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </channel>
+</rss>
