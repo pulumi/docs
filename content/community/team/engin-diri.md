@@ -2,13 +2,17 @@
 title: Engin Diri
 id: engin-diri
 first_name: Engin
-meta_desc: Engin Diri is a senior solutions architect on the community engineering team.
+meta_desc: Engin Diri is a principal solutions architect on the community engineering team.
 meta_image: community/team/engin-social-card.png
 layout: team/single
 aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "AICamp New York 2026"
+  title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
+  url: "https://www.aicamp.ai/event/eventdetails/W2026061714"
+  date: 2026-06-17T17:30:00.000-04:00
 - event: "CascadiaJS 2026"
   title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
   url: "https://cascadiajs.com/2026/talks/deploying-ai-agents-on-aws-with-pulumi-and-amazon-bedrock-agentcore"
@@ -311,7 +315,7 @@ giveaway:
     hubspot_form_id: def7a2d4-6f77-4027-8654-ce10958be85a
 ---
 
-As a Senior Solutions Architect at Pulumi with over 15 years of experience in the IT industry, including roles at the [Schwarz Group](https://schwarz-digits.de/) and [W&W Versicherungen](https://www.ww-ag.com/de/ww-informatik), I bring extensive expertise with an end-user and enterprise focus. Currently working for a startup while collaborating with enterprise clients has further enriched my experience!
+As a Principal Solutions Architect at Pulumi with over 15 years of experience in the IT industry, including roles at the [Schwarz Group](https://schwarz-digits.de/) and [W&W Versicherungen](https://www.ww-ag.com/de/ww-informatik), I bring extensive expertise with an end-user and enterprise focus. Currently working for a startup while collaborating with enterprise clients has further enriched my experience!
 
 I began my career as a Java backend developer, transitioned to frontend development, and ultimately specialized in CI/CD and DevOps. Working with ANT and Cruise Control to switch to [Jenkins](https://www.jenkins.io/) and [Microsoft Team Foundation Server](https://learn.microsoft.com/en-us/previous-versions/azure/devops/all/overview?view=tfs-2018) added some traumas on top! But as they say, what doesn't kill you makes you stronger.
 
