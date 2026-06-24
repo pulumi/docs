@@ -50,8 +50,9 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 | Modularity and reuse | [Component Resources](/docs/iac/concepts/components/) authored in any supported language; [Pulumi Packages](/docs/iac/concepts/packages/) let a component written in one language be consumed from any Pulumi language; language-native package managers (npm, PyPI, NuGet, Maven, Go modules); and the [Pulumi Registry](/registry/) for publicly available packages | [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) (HCL) and the [Terraform Registry](https://registry.terraform.io/) for public modules |
 | Import existing resources | [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/), both of which generate code in your language | [`terraform import`](https://developer.hashicorp.com/terraform/cli/commands/import) and [`import` blocks](https://developer.hashicorp.com/terraform/language/import); HCL must be hand-authored, though `terraform plan -generate-config-out` can emit a draft |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | [Sentinel](https://developer.hashicorp.com/sentinel) (proprietary, HCP Terraform / Enterprise only) and Open Policy Agent |
+| Self-hosting and on-prem | [Self-hosted Pulumi Cloud](/product/self-hosted/) runs the entire platform — state, secrets, RBAC, policy, and deployments — in your own cloud account or data center, including air-gapped environments, with the same capabilities as the SaaS | [Terraform Enterprise](https://developer.hashicorp.com/terraform/enterprise) is HashiCorp's self-managed offering; Sentinel policy, run tasks, and no-code provisioning are gated to HCP Terraform and Enterprise tiers |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | No — [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE) |
-| Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | HCP Terraform / Terraform Enterprise |
+| Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) — SaaS or [self-hosted](/product/self-hosted/) | HCP Terraform (SaaS) / Terraform Enterprise (self-managed) |
 
 ## Key differences
 
@@ -66,6 +67,10 @@ Both tools have large provider ecosystems. Pulumi can use any provider published
 ### Execution and orchestration
 
 Both tools provide a CLI and a managed remote-run service: Pulumi Cloud Deployments for Pulumi, and HCP Terraform for Terraform. Pulumi additionally exposes the [Automation API](/docs/iac/concepts/automation-api/), a programmatic SDK that lets you drive `up`, `preview`, and `destroy` from inside another program — for example, to ship a CLI that wraps Pulumi, build a self-service portal for application teams, or orchestrate many stacks dynamically from a higher-level service. Terraform does not have a programmatic equivalent.
+
+### Self-hosting and data control
+
+Both platforms offer a self-managed deployment for teams that can't use SaaS. Terraform Enterprise is HashiCorp's self-managed product. [Self-hosted Pulumi Cloud](/product/self-hosted/) runs the complete platform — state, secrets, RBAC, policy enforcement, and deployments — inside your own cloud account or data center, including fully air-gapped networks with no egress to the public internet. Data lives in a database and object store you control, and you integrate your own identity provider (GitHub Enterprise, GitLab, SAML SSO, and others). The self-hosted edition tracks the same capabilities as the SaaS, so teams evaluate features once and choose the deployment topology that fits their compliance posture. See the [self-hosting docs](/docs/administration/self-hosting/) for deployment options across AWS, Azure, Google Cloud, Kubernetes, and Docker.
 
 ### Secrets handling
 
@@ -144,9 +149,14 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/) that runs on a configurable cadence and can auto-remediate.
 
+### Can I run Pulumi on-prem like Terraform Enterprise?
+
+Yes. [Self-hosted Pulumi Cloud](/product/self-hosted/) runs the full platform in your own cloud account or data center, including air-gapped environments, with the same state, secrets, RBAC, policy, and deployment capabilities as the SaaS. It's available with the Business Critical edition; see the [self-hosting documentation](/docs/administration/self-hosting/) for deployment options and requirements.
+
 ## Next steps
 
 - [Get started with Pulumi](/docs/iac/get-started/)
+- [Migrating from Terraform Enterprise to self-hosted Pulumi Cloud](/docs/iac/comparisons/terraform/from-terraform-enterprise/)
 - [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
 - [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
 - [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)

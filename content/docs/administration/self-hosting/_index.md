@@ -13,7 +13,7 @@ menu:
   administration:
     name: Self-Hosting
     parent: administration-home
-    weight: 40
+    weight: 25
     identifier: administration-self-hosting
 aliases:
   - /docs/guides/self-hosted/
@@ -32,6 +32,14 @@ sections:
     The self-hosted version provides all the same capabilities as the SaaS offering at [app.pulumi.com](https://app.pulumi.com/signin). You manage data backups, keep the service running, and maintain updates, while gaining full control over the deployment environment.
 
     Pulumi can be deployed in any on-premise or cloud environment and integrated with your preferred identity provider: GitHub Enterprise, GitLab Enterprise, SAML SSO, or email/password authentication.
+
+- type: button-cards
+  heading: Get started
+  cards:
+  - icon: rocket-launch
+    heading: Install Self-Hosted Pulumi Cloud
+    link: /docs/administration/self-hosting/install/
+    description: Pick your platform and install. Evaluate with Docker Compose in minutes, or deploy to production on AWS, Azure, Google Cloud, or Kubernetes.
 
 - type: button-cards
   heading: Deployment options

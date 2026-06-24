@@ -2,21 +2,31 @@
 title: Self-Hosted Pulumi Cloud
 layout: self-hosted
 
-meta_desc: Learn how to operate Pulumi Cloud in your own cloud account or data center.
+meta_desc: Run Pulumi Cloud self-hosted in your own cloud or data center — the same IaC, secrets, and governance as the SaaS, with full control over your data and network.
+
+aliases:
+    - /self-hosted/
+    - /try-self-hosted/
 
 overview:
-    title: Try Self-Hosted Pulumi
+    title: Run Pulumi Cloud in your own environment
     descriptionTop: |
-        Maintain complete control over your hosting, network isolation, identity, and data ownership to satisfy compliance requirements.  [Request a Proof of Concept](#self-hosted-trial) to evaluate self-hosted Pulumi.
+        Run the complete Pulumi Cloud platform in your own cloud account or data center. You get the same IaC, secrets, insights, and governance capabilities as the SaaS, with full control over data, identity, network isolation, and air-gapped operation.
     descriptionBottom: |
-        Want Pulumi Cloud delivered as SaaS?  [Start Using Pulumi Cloud for free](https://app.pulumi.com/signin).
+        Deploy it yourself in about ten minutes with Docker Compose, then move to production on AWS, Azure, Google Cloud, or Kubernetes.
+    ctaPrimary:
+        label: Deploy it yourself
+        link: /docs/administration/self-hosting/install/
+    ctaSecondary:
+        label: Talk to us about a guided rollout
+        link: "#self-hosted-trial"
 trial:
-    title: Request a Proof of Concept
+    title: Want a guided rollout?
     description: |
-        Fill out the form to connect with a solutions architect and start your evaluation.
+        You can [deploy self-hosted Pulumi Cloud yourself](/docs/administration/self-hosting/install/) in minutes. If you'd prefer help planning a production deployment, connect with a solutions architect.
     hubspot_form_id: b6ff58c0-2b40-4202-9a7f-d6d8aca4414a
 capabilities:
-    title: Capabilities of Self-Hosted Pulumi
+    title: Capabilities of Self-Hosted Pulumi Cloud
     items:
         - title: Cloud Engineering Platform
           icon: rocketship
@@ -27,7 +37,7 @@ capabilities:
           icon: gear
           icon_color: violet
           description: |
-            All data in Self-Hosted Pulumi is stored in a MySQL database and an encrypted object store within your own network.
+            All data in Self-Hosted Pulumi Cloud is stored in a MySQL database and an encrypted object store within your own network.
         - title: Air-gapped Communications
           icon: abstract-shapes
           icon_color: blue
@@ -52,15 +62,15 @@ capabilities:
 deployment:
     title: Hosting Options
     descriptionTop: |
-        [Install Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
+        [Install Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/install/) in any on-premises or cloud provider environment or run in air-gapped environments, including those requiring FedRAMP.
     descriptionBottom: |
         [Talk to a Pulumi team member](/contact/) if you don't see your desired deployment option.
 pricing:
     title: Pricing
     description: |
-        Self-Hosted Pulumi is available as an additional license for the Business Critical Edition of Pulumi and provided as part of a guided Proof of Concept.
+        Self-Hosted Pulumi Cloud is available with the Business Critical edition. Evaluate it yourself with an evaluation license, then move to production with a Business Critical license.
 questions:
     title: Talk to a Human
     description: |
-        If you have any questions about Self-Hosted Pulumi, please contact us or visit the self-hosted docs.
+        If you have any questions about Self-Hosted Pulumi Cloud, please contact us or visit the self-hosted docs.
 ---

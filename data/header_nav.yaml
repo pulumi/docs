@@ -41,6 +41,11 @@ items:
             description: The fastest, most secure way to deliver cloud infrastructure
             icon: custom/pulumi-idp
             track: header-product-idp
+          - label: Self-hosted Pulumi Cloud
+            href: /product/self-hosted/
+            description: Run the full Pulumi Cloud platform in your own cloud account or data center
+            icon: buildings
+            track: header-product-self-hosted
 
   - label: For engineers
     wide: true
@@ -106,6 +111,11 @@ items:
             description: Security, compliance, and support for teams
             icon: buildings
             track: header-enterprise-solutions
+          - label: Self-hosted Pulumi Cloud
+            href: /product/self-hosted/
+            description: Full data control, air-gapped and on-prem deployment options
+            icon: shield-check
+            track: header-enterprise-self-hosted
           - label: Case studies
             href: /case-studies/
             description: How Snowflake, Mercedes-Benz, and others use Pulumi

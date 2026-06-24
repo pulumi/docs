@@ -72,6 +72,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 This llms.txt covers www.pulumi.com, which includes:
 
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
+- [Self-hosted Pulumi Cloud](https://www.pulumi.com/product/self-hosted/): Run the full Pulumi Cloud platform in your own cloud account or data center, including air-gapped environments
 - [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
 - [Pulumi Neo](https://www.pulumi.com/neo/): Pulumi's AI agent for building and managing cloud infrastructure

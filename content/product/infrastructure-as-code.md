@@ -143,7 +143,7 @@ sections:
     title: Open source core.
     title_line_2: Pulumi Cloud built-in.
     description: |
-      Get started with Pulumi Cloud for free, state management and secrets included. Our [open source engine](https://github.com/pulumi/pulumi) powers everything underneath. Scale to enterprise features when you need them, or self-host if required.
+      Get started with Pulumi Cloud for free, state management and secrets included. Our [open source engine](https://github.com/pulumi/pulumi) powers everything underneath. Scale to enterprise features when you need them, and run the same platform [fully self-hosted](/product/self-hosted/) in your own cloud or data center.
     image: /images/product/infrastructure-as-code/pulumi-concentric-circles.svg
     image_alt: Open source core and Pulumi Cloud
     image_above: true
@@ -399,4 +399,8 @@ sections:
         title: Complete audit trail
         description: |
           Every action logged. Who changed what, when, and why. Export to SIEM. Compliance reports at your fingertips.
+      - icon: buildings
+        title: Self-host the whole platform
+        description: |
+          Run all of Pulumi Cloud in your own cloud account or data center. Full control over data, identity, and network, including air-gapped deployments. [Learn about self-hosting](/product/self-hosted/).
 ---
