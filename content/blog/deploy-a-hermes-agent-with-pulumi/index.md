@@ -33,8 +33,6 @@ social:
         Self-hosted AI servers keep turning up on Shodan with no auth. The fix isn't a better lock on the front door. It's no front door at all.
 
         Engin Diri's new post deploys a private Hermes agent as one Pulumi program across Render, Modal, and Tailscale: the agent gateway and chat UI are Render private services with no public URL, Tailscale puts the UI on your tailnet, and Modal runs the agent's code in throwaway sandboxes. One pulumi up to stand it up, one pulumi destroy to tear it down.
-
-        The post is honest about where the program's reach stops too — Modal and Tailscale have no Pulumi provider, so they live as credentials rather than resources. Code in TypeScript, Python, and YAML. Around $50 a month.
     bluesky: |
         Hermes is a self-improving agent that writes and runs its own code — which is why you don't want it on the public internet.
 
