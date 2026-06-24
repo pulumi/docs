@@ -18,6 +18,7 @@ gated: true
 # landing/registration page.
 external: false
 block_external_search_index: false
+allow_long_title: true
 
 # The url slug for the event landing page.
 url_slug: autonomous-agents-need-guardrails-openclaw
