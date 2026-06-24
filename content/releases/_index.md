@@ -29,7 +29,6 @@ entries:
       - title: "Neo code reviews: AI code review built for infrastructure"
         description: "Neo reviews each pull request as an agent — reading the code, the preview plan, and the resulting infrastructure diff together — and posts inline findings on the affected lines."
         url: /blog/neo-code-reviews/
-        tier: Team
       - title: "Browse and publish private Terraform modules in the Pulumi Cloud registry"
         description: "Publish your existing Terraform and OpenTofu modules to the Pulumi Cloud private registry with the tooling you already use, and browse them in the console — a drop-in migration path from HCP Terraform."
         tier: Enterprise
@@ -37,7 +36,7 @@ entries:
         description: "😎 The Pulumi docs now offer a light, dark, and system theme toggle."
         url: /docs/
       - title: "Individual user authentication for GitHub Enterprise Server"
-        description: "Self-hosted GitHub Enterprise operations now run as the individual user who triggered them, so pull requests, commits, and Neo's writes are attributed to that person and respect their permissions."
+        description: "Self-hosted GitHub Enterprise operations now run as the individual user who triggered them, so pull requests, commits, and comments are attributed to that person and respect their permissions."
         url: /docs/integrations/version-control/github-app/#individual-user-authentication-for-github-enterprise-server
         tier: Business Critical
       - title: "One CLI for Pulumi ESC with pulumi env"
