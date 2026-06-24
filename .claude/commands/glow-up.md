@@ -12,6 +12,10 @@ Performs deep analysis and improvement of a single file, acting as a professiona
 
 The `file-path` argument is optional. If not provided, the command will attempt to infer the target file from context (e.g., a file currently open in the IDE).
 
+## Requires the `pulumi-brand` MCP server
+
+This skill delegates **all** voice, tone, prose, terminology, grammar, and naming judgment to the Pulumi brand guide served by the **`pulumi-brand` MCP server** (`https://brand.pulumi.com/mcp`). It deliberately keeps no local copy of those rules. Before analyzing anything, confirm the server is reachable and load its voice and writing-style guidance. **If you can't reach it, stop and tell the user the brand guide is unavailable — do not fall back to your own notions of Pulumi style.**
+
 ---
 
 ## Process
@@ -41,63 +45,34 @@ Read the entire target file and perform comprehensive analysis.
 
 #### Text analysis
 
-**Style violations:**
+Judge the prose against the **brand guide's voice and writing-style sections** (brand.pulumi.com, also exposed through the brand MCP server) — the source of truth for voice and tone, marketing language and superlatives, inclusive language, terminology and product naming, heading case, link text, lists, paragraph length, and grammar. Consult them and flag anything that violates them, quoting the offending line. Don't re-derive those rules here.
 
-- Marketing language, superlatives, and filler words ("easy", "simple", "just", "very", "really", "obviously")
-- Ableist or unnecessarily gendered language
-- Violent/aggressive terms (e.g., "kill")
-- Vague qualifiers that judge difficulty
-- Passive voice constructions
-- Overly complex or run-on sentences
-- Spelling and grammar errors
+Then flag the file-specific issues the brand guide doesn't own:
 
-**Structural issues:**
+**Code blocks** (Hugo rendering mechanics — see `STYLE-GUIDE.md`; the code-sample *style* itself lives in the brand writing-style section):
 
-- Incorrect heading capitalization (H1 should be Title Case, H2+ should be Sentence case)
-- Long paragraphs (more than 3 sentences)
-- Missing blank lines around headings
-- Skipped heading levels (e.g., H2 directly to H4)
+- Indented code blocks that should be fenced
+- Missing or wrong language identifiers (e.g., `bash` vs `output`)
+- Code examples that look like they may not run correctly
 
-**Code formatting:**
+**Links and structure:**
 
-- Indented code blocks (should use fenced blocks with language identifiers)
-- Missing language identifiers on fenced blocks
-- Wrong language identifiers (e.g., `bash` vs `output`)
-- Code examples that don't follow best practices or may not run correctly
+- Broken or unresolved links, or links pointing to the wrong target (404s, incorrect paths)
+- Skipped heading levels (e.g., H2 directly to H4) and missing blank lines around headings
 
-**Terminology:**
+**Content accuracy and completeness:**
 
-- Incorrect capitalization of Pulumi terms (e.g., "Stack" instead of "stack")
-- "Click" instead of "select"
-- "Go to" instead of "navigate"
-- Directional terms ("above", "below") instead of direct links
-
-**Links and references:**
-
-- Vague link text ("click here", "here", "this link")
-- Missing cross-references to related documentation
-- Broken or outdated links
-- Links that don't resolve or point to wrong targets (404s, incorrect paths)
-
-**Content quality:**
-
-- Unclear explanations
-- Missing context for users
+- Unclear explanations or missing context for the reader
 - Unsourced claims or statistics
 - Outdated information
-- Missing code examples where helpful
+- Missing code examples where they'd help
 
 **Front matter:**
 
 - Missing or incomplete required fields (title, description, etc.)
-- Meta descriptions that are inappropriate length or missing
-- SEO issues with page titles or descriptions
+- Meta description missing or of inappropriate length
 
-**Content type considerations:**
-
-- Consider whether the content is Documentation or Blog/Marketing material
-- Apply appropriate style guidelines based on content type (see `docs-review:references:docs` for technical docs, `docs-review:references:blog` for blog/marketing)
-- Documentation should be clear and objective; blogs can be more engaging
+**Content type:** route the file to the right base criteria — `docs-review:references:docs` for technical docs, `docs-review:references:blog` for blog/marketing.
 
 #### Image and diagram analysis
 
@@ -160,9 +135,10 @@ These references represent current branding standards. Use them to:
 
 Before proposing changes, verify understanding of:
 
-- `STYLE-GUIDE.md` — Pulumi-specific style rules (headings, links, code blocks, terminology)
+- The brand guide's voice and writing-style sections (brand.pulumi.com, also exposed through the brand MCP server) — voice, prose, terminology, grammar, and naming (the source of truth)
+- `STYLE-GUIDE.md` — this site's Hugo/repo mechanics (shortcodes, links, code fences, navigation)
 - `AGENTS.md` — Repository conventions and build workflow
-- Google Developer Documentation Style Guide — For topics not covered in STYLE-GUIDE.md
+- Google Developer Documentation Style Guide — for topics covered by none of the above
 
 ### 5. Create improvement plan
 
@@ -283,7 +259,7 @@ Report verification results to the user, including any flagged images that need 
 - Be thorough in identifying issues
 - Preserve technical accuracy
 - Maintain the author's intended meaning
-- Follow STYLE-GUIDE.md strictly
+- Follow the brand guide (via the MCP) for style, and STYLE-GUIDE.md for this site's mechanics
 - Make the documentation more accessible and clear
 - Add helpful cross-references to related docs
 - View all images referenced in the document
