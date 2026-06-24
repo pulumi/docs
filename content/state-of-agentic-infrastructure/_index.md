@@ -108,7 +108,7 @@ sections:
         - 82% deploy to production weekly or more often
         - "Multi-cloud is the norm: AWS 64%, Google Cloud 55%, Azure 45%"
         - 63% already run an internal developer platform or golden paths in production
-      takeaway: The bottleneck is the human approval step, not the tooling.
+      takeaway: "Speed is solved; control isn't. Only 7% cite slow provisioning. The real pain is consistency (28%), cost (24%), and security (20%)."
     questions:
       - id: Q5
         kind: bar-horizontal
