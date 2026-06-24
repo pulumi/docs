@@ -63,6 +63,7 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.LinkText": "vague link text",
     "Pulumi.EmptyAltText": "empty alt text",
     "Pulumi.CommandBackticks": "unbacked CLI command",
+    "Pulumi.HeadingSentenceCase": "heading capitalization",
     "Pulumi.Repetition": "repeated word",
     "Google.Acronyms": "acronym",
     "Google.Contractions": "contractions",
