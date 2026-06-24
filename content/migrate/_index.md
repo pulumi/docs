@@ -76,11 +76,5 @@ offers:
       link: /pulumi-for-startups
       description: |
         Early stage startups get $10K of Pulumi Enterprise for free.
-    - title: Open Source Offer
-      icon: puzzle
-      icon_color: violet
-      link: /pricing/open-source-free-tier
-      description: |
-        Open source projects and foundations get Pulumi for free.
 
 ---
