@@ -214,8 +214,9 @@ with `gh pr create --body-file`. The workflow re-runs `make lint` on your branch
 review over it afterward; humans merge. The template's sections (each one is
 checked for):
 
-- **Why this page**: lane, tier, traffic figure + report period, last
-  reviewed (from the queue entry) — so the reviewer knows how it was chosen.
+- **Why this page**: paste `.provenance.md` (composed for you at the repo root)
+  verbatim — lane, tier, traffic figure + report period, last reviewed,
+  rendered deterministically from the selection queue. Do not re-narrate it.
 - **Fixes applied**: table of claim/finding → authoritative source →
   correction, one row per change.
 - **Findings not applied**: every skipped finding with one line of reasoning.

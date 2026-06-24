@@ -76,5 +76,6 @@ static/js
 /.vale-raw.json
 /.vale-findings.json
 /.content-review-*.json
+/.provenance.md
 /.lint.log
 /.lint-comment.md

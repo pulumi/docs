@@ -21,6 +21,10 @@ on:
         description: 'Selection lane (priority/manual); informational — retirement is gated by the evidence bar + no_retire, not the lane'
         required: false
         default: 'priority'
+      queue_json:
+        description: 'Single-article queue JSON from the dispatcher (carries traffic/score/tier for deterministic provenance). Empty on manual dispatch — the worker falls back to rebuilding a traffic-blind queue from `path`.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -117,17 +121,42 @@ jobs:
             echo "ledger bucket output unavailable; ledger write will be skipped"
           fi
 
-      # Build a single-article queue for the dispatched path. --paths bypasses
-      # scoring/guardrails; --lane just tags the queue entry (informational —
-      # retirement is gated by the evidence bar + no_retire, not the lane).
+      # Establish the single-article queue. Preferred: use the queue the
+      # dispatcher handed us verbatim — it carries the selection facts (traffic,
+      # score, tier, last-reviewed) this page was actually chosen on. Fallback
+      # (manual dispatch with no queue_json): rebuild from --paths, which bypasses
+      # scoring/guardrails and is necessarily traffic-blind.
       - name: Build single-article queue
+        env:
+          QUEUE_JSON: ${{ github.event.inputs.queue_json }}
         run: |
-          python3 scripts/content-review/select-articles.py \
-            --paths "${{ github.event.inputs.path }}" \
-            --lane "${{ github.event.inputs.lane || 'priority' }}" \
-            --out .content-review-queue.json
+          if [ -n "$QUEUE_JSON" ]; then
+            printf '%s' "$QUEUE_JSON" > .content-review-queue.json
+            python3 -c "import json,sys; json.load(open('.content-review-queue.json'))" \
+              && echo "using dispatcher-provided queue" \
+              || { echo "::warning::queue_json was not valid JSON; rebuilding"; rm -f .content-review-queue.json; }
+          fi
+          if [ ! -f .content-review-queue.json ]; then
+            python3 scripts/content-review/select-articles.py \
+              --paths "${{ github.event.inputs.path }}" \
+              --lane "${{ github.event.inputs.lane || 'priority' }}" \
+              --out .content-review-queue.json
+          fi
           echo "--- queue ---"
           cat .content-review-queue.json
+
+      # Compose the PR body's "Why this page" provenance block deterministically
+      # from that queue (facts → code, judgment → model), so the review never
+      # narrates the selection facts from a partial view. The model pastes
+      # .provenance.md in verbatim. Degrades to an empty file so a render hiccup
+      # never blocks the run.
+      - name: Render provenance block
+        run: |
+          python3 scripts/content-review/render-provenance.py \
+            --queue .content-review-queue.json --out .provenance.md \
+            || printf '## Why this page\n\n_Provenance render failed; see the queue JSON in the run log._\n' > .provenance.md
+          echo "--- provenance ---"
+          cat .provenance.md
 
       # Run the docs-review deterministic pre-computation as a REAL workflow
       # step — not a model instruction. Build the synthetic whole-file diff and
@@ -241,7 +270,10 @@ jobs:
                its body from
                `.claude/commands/review-existing-content/references/pr-body-template.md`
                (fill every section) and pass it with `gh pr create --body-file`.
-               A clean article (zero fixes) opens no PR.
+               For the **"Why this page"** section, paste the contents of
+               `.provenance.md` (composed for you at the repo root) **verbatim** —
+               do NOT write or edit that section yourself; its facts are
+               authoritative. A clean article (zero fixes) opens no PR.
             8. Write `.content-review-verdict.json` at the repo root — your ONLY
                structured output. Shape:
                `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
@@ -312,13 +344,15 @@ jobs:
           git checkout - || true
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.
-      # Runs `if: always()` so a model that exits without output still lands an
-      # `incomplete` record. An incomplete outcome does not advance the
-      # staleness clock (the page stays due, retried next sweep up to the
-      # attempt cap) rather than silently looping. record-review.py builds the
-      # canonical record, derives the PR facts from `gh`, stamps reviewed_at,
-      # increments attempts, uploads, and emits the dispatch signal. One article
-      # per run ⇒ one object, so writes never collide.
+      # Runs `if: always()` so a model that exits without output still lands a
+      # record. With no sentinel the status is derived from observable state
+      # (`--claude-outcome` + whether a content-review/<slug> branch was pushed):
+      # a successful run that changed nothing is "clean" and advances the
+      # staleness clock; a failed run or a stranded branch is "incomplete" and
+      # stays due (retried next sweep up to the attempt cap). record-review.py
+      # builds the canonical record, derives the PR facts from `gh`, stamps
+      # reviewed_at, increments attempts, uploads, and emits the dispatch signal.
+      # One article per run ⇒ one object, so writes never collide.
       - name: Record review ledger
         id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
@@ -329,7 +363,8 @@ jobs:
         run: |
           python3 scripts/content-review/record-review.py \
             --queue .content-review-queue.json \
-            --verdict .content-review-verdict.json
+            --verdict .content-review-verdict.json \
+            --claude-outcome "${{ steps.claude.outcome }}"
 
       # Slop defense: bot-authored PRs are auto-skipped by the docs-review
       # pipeline (claude-code-review.yml sets skip_reason=bot-author), so the

@@ -12,8 +12,10 @@ The template starts after this line — copy from the first `##` heading down.
 
 ## Why this page
 
-Lane, strategic tier, traffic figure + report period, and last-reviewed date
-(from the queue entry) — so a reviewer can see how this page was selected.
+Paste the contents of `.provenance.md` here **verbatim**. The workflow composes
+that block deterministically from the selection queue (lane, strategic tier,
+traffic figure + report period, last-reviewed date) — do not rewrite or
+re-narrate it; its figures are authoritative.
 
 ## Fixes applied
 
