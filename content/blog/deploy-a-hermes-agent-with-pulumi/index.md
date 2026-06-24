@@ -1,7 +1,7 @@
 ---
 title: "Deploy a Private Hermes Agent on Render Securely with Pulumi, Modal, and Tailscale"
 allow_long_title: true
-date: 2026-06-23
+date: 2026-06-24
 draft: false
 meta_desc: "Deploy a self-hosted Hermes agent as one Pulumi program across Render, Modal, and Tailscale — a code-executing AI agent with nothing on the public internet."
 meta_image: meta.png
@@ -39,9 +39,9 @@ social:
         Here's how to deploy one as a single Pulumi program with no front door at all: Render, Modal, and Tailscale.
 ---
 
-Personal AI agents had their breakout this year. [OpenClaw](/blog/deploy-openclaw-aws-hetzner/) overtook React as the most-starred project on GitHub in about two months, and self-hosting your own assistant went from a hobbyist trick to something a lot of developers actually do. I wrote up how to deploy that lobster to AWS or Hetzner back when it was everywhere.
+Personal AI agents had their breakout this year. [OpenClaw](/blog/deploy-openclaw-aws-hetzner/) crossed 100,000 GitHub stars within months of launching, and self-hosting your own assistant went from a hobbyist trick to something a lot of developers actually do. I wrote up how to deploy that lobster to AWS or Hetzner back when it was everywhere.
 
-The one people are switching to now is [Hermes](https://hermes-agent.nousresearch.com/), the open-source runtime from [Nous Research](https://nousresearch.com/), and it has been climbing the star charts even faster. The reason shows up in every "I ditched OpenClaw for Hermes" thread: it actually learns, building up memory and writing its own skills as it goes instead of running off a static, human-written list.
+The one people are switching to now is [Hermes](https://hermes-agent.nousresearch.com/), the open-source runtime from [Nous Research](https://nousresearch.com/), and it caught on just as quickly. The reason shows up in every "I ditched OpenClaw for Hermes" thread: it actually learns, building up memory and writing its own skills as it goes instead of running off a static, human-written list.
 
 Here is the part the launch videos skip. Hermes writes and runs its own code, with no human approving the commands. A model that can write code will eventually write a bad one, and the only thing between that command and your credentials is the sandbox it runs in. That is the box you do not want on the public internet. Researchers found [175,000 exposed Ollama servers](https://thehackernews.com/2026/01/researchers-find-175000-publicly.html) sitting open in early 2026, and attackers hijack the ones they find for compute. The fix is not a better lock on the front door. It is to have no front door at all.
 
@@ -101,7 +101,7 @@ flowchart LR
 | Hermes gateway | 8642 | Holds secrets and memory, talks to the model, creates Modal sandboxes. The most dangerous box, so it has no public URL. |
 | [Open WebUI](https://github.com/open-webui/open-webui) | 8080 | The chat front end. Joins your tailnet and reaches Hermes over Render's private network. |
 | Modal sandbox | - | Isolated, ephemeral container for running the agent's code. |
-| Tailscale | - | Private [WireGuard](https://www.wireguard.com/) mesh that makes the UI reachable to your devices only. |
+| Tailscale | - | A private [WireGuard mesh](https://tailscale.com/blog/how-tailscale-works) that makes the UI reachable to your devices only. |
 
 The agent that can run code and read secrets is never routable from the internet, and neither is the UI in front of it. There is no inbound ingress on any box (the outbound calls to the model, to Modal, and to the image registry still cross the internet, as they have to). Expressing "which box can reach which" in code is what makes the boundary auditable: the rule lives in the program rather than in a dashboard.
 
@@ -114,7 +114,7 @@ The four pieces split cleanly in two: two you declare as resources, and two you 
 | Modal sandboxes | nothing | No Terraform provider exists. A runtime credential. |
 | Tailnet access (Tailscale) | nothing | No provider needed. A runtime credential, like Modal. |
 
-Two of these four layers are credentials, not resources. That distinction is easy to get wrong, and worth getting right: a provider can only manage what it can provision, and spinning up a Modal sandbox is a runtime act, not a provisioned resource. We come back to it at each layer.
+Two of these four layers are credentials, not resources. That distinction often gets missed, and it is worth getting right: a provider can only manage what it can provision, and spinning up a Modal sandbox is a runtime act, not a provisioned resource. We come back to it at each layer.
 
 ## Setting up ESC for secrets management
 
@@ -188,7 +188,7 @@ The usual way to make a self-hosted UI reachable is to give it a public hostname
 
 This is a stronger position than a public UI behind a login. Because there is no public URL, there is no login to harden and no certificate to renew, and Open WebUI answers only to your own devices.
 
-Tailscale lives in the Open WebUI image rather than the Pulumi program. The image adds Tailscale and an entrypoint that brings up `tailscaled` in [userspace mode](https://tailscale.com/kb/1112/userspace-networking) (a container has no `/dev/net/tun`), joins your tailnet, and runs [`tailscale serve`](https://tailscale.com/kb/1312/serve) to expose Open WebUI on it. `serve` publishes over HTTPS to authenticated members of your tailnet only, where its sibling `tailscale funnel` would put the same port on the public internet, the one thing this design avoids.
+Tailscale lives in the Open WebUI image rather than the Pulumi program. The image adds Tailscale and an entrypoint that brings up `tailscaled` in [userspace mode](https://tailscale.com/kb/1112/userspace-networking) (a container has no `/dev/net/tun`), joins your tailnet, and runs [`tailscale serve`](https://tailscale.com/kb/1312/serve) to expose Open WebUI on it. `serve` publishes over HTTPS to authenticated members of your tailnet only, where its sibling [`tailscale funnel`](https://tailscale.com/kb/1223/funnel) would put the same port on the public internet, the one thing this design avoids.
 
 ```dockerfile
 FROM ghcr.io/open-webui/open-webui:main-slim
@@ -882,7 +882,7 @@ If the chat UI does not load, give the services a few minutes to finish their fi
 
 Self-hosted AI servers get found fast: scanners like [Shodan](https://www.shodan.io/) and [Censys](https://censys.io/) enumerate a freshly exposed one within hours to days, and the code-capable ones are already under [active attack](https://www.pillar.security/blog/operation-bizarre-bazaar-first-attributed-llmjacking-campaign-with-commercial-marketplace-monetization). Running an always-on agent on a machine you also use for everything else invites prompt injection on top of that. The answer here is to keep the agent unroutable from the internet and to isolate the code it runs. That defeats the scanner: nobody finds an open port to attack. It does less against the agent being turned against you from the inside, which is the harder problem.
 
-One detail makes that isolation load-bearing. In a headless container there is no one at the terminal to approve anything, and the same is true of its cron and CI runs, so the deployment runs Hermes with `HERMES_ACCEPT_HOOKS=1` to [auto-accept the shell hooks](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks) it would otherwise pause on. The practical result is that the agent's code runs with no human in the loop, which is exactly why the Modal sandbox has to carry the weight: when the model writes a bad command, the throwaway container it runs in is what stands between that command and the gateway's credentials, not a confirmation prompt.
+One detail makes that isolation essential. In a headless container there is no one at the terminal to approve anything, and the same is true of its cron and CI runs, so the deployment runs Hermes with `HERMES_ACCEPT_HOOKS=1` to [auto-accept the shell hooks](https://hermes-agent.nousresearch.com/docs/user-guide/features/hooks) it would otherwise pause on. The practical result is that the agent's code runs with no human in the loop, which is exactly why the Modal sandbox has to carry the weight: when the model writes a bad command, the throwaway container it runs in is what stands between that command and the gateway's credentials, not a confirmation prompt.
 
 | Concern | Typical self-host | This deployment |
 |---------|-------------------|-----------------|
@@ -898,7 +898,7 @@ This is private, which is not the same as fully trusted. A few places the bounda
 - **The tailnet policy is click-ops.** The ACLs, the node's tags, and the one-time HTTPS toggle live in the Tailscale admin console, not in `pulumi up`, and the reusable key has no tag scoping its blast radius. The Tailscale provider can manage that policy declaratively if you want it in code.
 - **Signup defaults to admin.** Fine on a single-user tailnet, the first thing to lock down (`ENABLE_SIGNUP`, `DEFAULT_USER_ROLE`) once more than one person can reach the URL.
 - **Every messaging client is another entry point.** Each platform you wire up adds another way in, which is why the tailnet is the baseline for securing this, not the full extent of it.
-- **A compromised agent can still reach out.** The private core stops external discovery, but it does not contain the agent itself. The gateway holds the Modal and OpenRouter tokens as env vars and can call out freely, so a prompt-injected agent could read its own environment and send them somewhere; the Modal sandbox isolates the code the agent runs, not the credentials it holds. Cap and rotate the [OpenRouter key](https://openrouter.ai/docs/cookbook/administration/api-key-rotation), keep the Modal token off the gateway, and allowlist outbound traffic, which on Render means a forward-proxy sidecar (Render gives you dedicated outbound IPs and inbound rules, but no destination egress filter).
+- **A compromised agent can still reach out.** The private core stops external discovery, but it does not contain the agent itself. The gateway holds the Modal and OpenRouter tokens as env vars and can call out freely, so a prompt-injected agent could read its own environment and send them somewhere; the Modal sandbox isolates the code the agent runs, not the credentials it holds. Cap and rotate the [OpenRouter key](https://openrouter.ai/docs/cookbook/administration/api-key-rotation), keep the Modal token off the gateway, and allowlist outbound traffic, which on Render means a forward-proxy sidecar (Render gives you [dedicated outbound IPs](https://render.com/docs/outbound-ip-addresses) and inbound rules, but no destination egress filter).
 
 My recommendations:
 
