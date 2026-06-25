@@ -13,7 +13,7 @@ menu:
     parent: iac-home
   reference:
     name: Pulumi CLI
-    parent: reference-cli
+    parent: reference-home
     weight: 1
 aliases:
     - /docs/reference/commands/
