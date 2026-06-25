@@ -28,7 +28,8 @@ genuinely "incomplete" and stays due for retry.
 
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, head_sha, fixes,
-    skipped_findings, retirement, note, attempts, clarity_flag, reviewed_at }
+    skipped_findings, retirement, note, attempts, clarity_flag,
+    tier, score, monthly_visits, traffic_available, reviewed_at }
 
 The record is written locally (audit artifact) and, when CONTENT_REVIEW_LEDGER_URI
 is set, uploaded to <uri>/<slug>.json with reviewed_at stamped to today (UTC).
@@ -87,14 +88,30 @@ def warn(msg: str) -> None:
 # ---- inputs -----------------------------------------------------------------
 
 
+def _maybe_int(v):
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def load_queue_article(queue_path: Path) -> dict:
-    """Return the single article (path/slug/lane) from the worker queue."""
+    """Return the single article from the worker queue, with its selection signal.
+
+    Beyond the bookkeeping fields (path/slug/lane/attempts), this carries the
+    selection facts the dispatcher chose the page on — tier, score, monthly
+    visits, and whether the traffic snapshot was available that run. They're
+    persisted onto the ledger record so the versioned ledger is a complete,
+    self-contained metrics source (outcome AND why-it-was-picked), reconstructable
+    from S3 object versions without depending on the ~90-day run logs.
+    """
     data = json.loads(queue_path.read_text())
     articles = data.get("articles") or []
     if not articles:
         raise SystemExit(f"record-review: no articles in {queue_path}")
     a = articles[0]
     path = a["path"]
+    traffic = data.get("traffic") or {}
     return {
         "path": path,
         "slug": a.get("slug") or slugify(path),
@@ -102,6 +119,11 @@ def load_queue_article(queue_path: Path) -> dict:
         # Prior incomplete-retry count, carried from the ledger by the selector.
         # build_record increments it on another incomplete, resets it on success.
         "attempts": int(a.get("attempts") or 0),
+        # Selection signal (None when absent, e.g. a --paths manual dispatch).
+        "tier": _maybe_int(a.get("tier")),
+        "score": a.get("score"),
+        "monthly_visits": _maybe_int(a.get("monthly_visits")),
+        "traffic_available": bool(traffic.get("available")),
     }
 
 
@@ -247,6 +269,12 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "note": None,
         "attempts": prior_attempts + 1,
         "clarity_flag": bool(verdict.get("clarity_flag")) if verdict else False,
+        # Selection signal (carried from the queue) — persisted so the versioned
+        # ledger captures why the page was picked, not just the outcome.
+        "tier": article.get("tier"),
+        "score": article.get("score"),
+        "monthly_visits": article.get("monthly_visits"),
+        "traffic_available": bool(article.get("traffic_available")),
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
 
@@ -402,13 +430,20 @@ def self_test() -> int:
         d = Path(d)
         queue = d / "queue.json"
         queue.write_text(json.dumps({
+            "traffic": {"available": True},
             "articles": [{
                 "path": "content/docs/iac/concepts/converters.md",
                 "slug": "docs-iac-concepts-converters",
                 "lane": "priority",
+                "tier": 2,
+                "score": 137.5,
+                "monthly_visits": 842,
             }]
         }))
         article = load_queue_article(queue)
+        check("queue article carries the selection signal",
+              article["tier"] == 2 and article["score"] == 137.5
+              and article["monthly_visits"] == 842 and article["traffic_available"] is True)
 
         # No verdict, no signal -> incomplete (the conservative default).
         rec = build_record(article, None, None, article["slug"])
@@ -436,8 +471,12 @@ def self_test() -> int:
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
-            "clarity_flag", "reviewed_at"})
+            "clarity_flag", "tier", "score", "monthly_visits",
+            "traffic_available", "reviewed_at"})
         check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
+        check("selection signal persisted on the record",
+              rec["tier"] == 2 and rec["score"] == 137.5
+              and rec["monthly_visits"] == 842 and rec["traffic_available"] is True)
 
         # Repeated incomplete accrues against the prior count the selector carried.
         retried = {**article, "attempts": 2}
