@@ -40,6 +40,12 @@
     };
     if (!cfg.tool) return;
 
+    // On CLI archive pages the left nav is trimmed to a static command list; add a quiet
+    // client-side filter over it. Independent of the manifest, and injected by the loader
+    // (not baked into the snapshot) so it works on already-published archives and stays
+    // controllable from the main repo.
+    onReady(wireCliNavFilter);
+
     fetch("/docs/versioned/" + cfg.tool + "/versions.json", { credentials: "omit" })
       .then(function (r) {
         if (!r.ok) throw new Error("manifest " + r.status);
@@ -63,6 +69,33 @@
     l.href = "/js/versioned-docs.css";
     l.setAttribute("data-vdocs-css", "");
     document.head.appendChild(l);
+  }
+
+  function onReady(fn) {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+
+  // Inject a substring filter above the trimmed CLI-archive command list. No-op anywhere the
+  // list isn't present (so it's safe to call unconditionally), and idempotent.
+  function wireCliNavFilter() {
+    var ul = document.querySelector("ul.vdocs-cli-nav");
+    if (!ul || ul.parentNode.querySelector(".vdocs-cli-filter")) return;
+    ensureCss();
+    var input = document.createElement("input");
+    input.type = "search";
+    input.className = "vdocs-cli-filter";
+    input.placeholder = "Filter commands…";
+    input.setAttribute("aria-label", "Filter commands");
+    ul.parentNode.insertBefore(input, ul);
+    var items = [].slice.call(ul.getElementsByTagName("li"));
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase();
+      for (var i = 0; i < items.length; i++) {
+        var t = (items[i].textContent || "").toLowerCase();
+        items[i].style.display = !q || t.indexOf(q) !== -1 ? "" : "none";
+      }
+    });
   }
 
   // The latest entry links to the canonical live root, not its archived copy.

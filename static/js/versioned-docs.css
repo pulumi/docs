@@ -95,6 +95,29 @@ html.vdocs-has-bar .fixedNav {          /* Javadoc (java) — fixed top:0 */
 }
 
 /* Trimmed CLI-archive left-nav (built by trim-cli-nav.py). */
+/* Client-side command filter (injected by versioned-docs.js). */
+.vdocs-cli-filter {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 0.6rem;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 13px;
+  border: 1px solid var(--docs-border, #cfc7ea);
+  border-radius: 6px;
+  background: var(--docs-surface, #ffffff);
+  color: var(--docs-fg, #2b2235);
+}
+.vdocs-cli-filter::placeholder {
+  color: var(--docs-fg-muted, #8a8398);
+}
+.vdocs-cli-filter:focus {
+  outline: none;
+  border-color: var(--docs-link, #8b5cf6);
+  box-shadow: 0 0 0 2px var(--docs-ring, rgba(139, 92, 246, 0.25));
+}
+
 .vdocs-cli-nav-wrap .vdocs-nav-home,
 .vdocs-cli-nav-wrap .vdocs-nav-latest {
   display: block;
