@@ -88,8 +88,7 @@ html.vdocs-has-bar {
   padding-top: var(--vdocs-bar-h, 44px);
 }
 html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar (fixed) */
-html.vdocs-has-bar .navbar.fixed-top,   /* DocFX on Bootstrap 4 */
-html.vdocs-has-bar .navbar-fixed-top,   /* DocFX on Bootstrap 3 (.NET, ESC .NET) */
+html.vdocs-has-bar header,              /* DocFX (.NET / ESC .NET): the position:fixed <header> wrapping the navbar — this, NOT .navbar-fixed-top, is what DocFX fixes. Also matches TypeDoc's <header class="tsd-page-toolbar"> (same offset, harmless); Sphinx has no <header> and Javadoc's is static, so both are unaffected. */
 html.vdocs-has-bar .tsd-page-toolbar,   /* TypeDoc (nodejs + policy/ESC) — sticky top:0 */
 html.vdocs-has-bar .fixedNav {          /* Javadoc (java) — fixed top:0 */
   top: var(--vdocs-bar-h, 44px);
