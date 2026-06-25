@@ -16,7 +16,7 @@ aliases:
 
 ## Before you begin
 
-First, let's run through a few prerequisites and quick steps to ensure you ready to create your first Account Discovery scan.
+Before setting up your first Account Discovery scan, confirm the following prerequisites are in place.
 
 - Ensure you’re an admin of your Pulumi organization.
 - Verify you have permissions to create credentials in the provider account you want to scan.
@@ -32,9 +32,13 @@ Pulumi Insights Account Discovery requires read-only access to your cloud accoun
 Account Discovery leverages Pulumi ESC to securely manage the credentials required to discover and read infrastructure resources, aligning with enterprise best practices for managing application secrets.
 {{% /notes %}}
 
-To create an environment, [sign into the Pulumi cloud](https://app.pulumi.com/signin) console and navigate to **Pulumi ESC** and select **Environments** in the left-hand menu.
+To create an environment:
 
-Next, click **Create Environment** and enter a name for the project and environment, such as `insights-discovery-project` and `insights-environment` and then click **Create**.
+1. Open [Pulumi Cloud](https://app.pulumi.com/signin) and select **Environments** in the left navigation.
+1. Select **+ Create Environment**, then choose **New Environment**.
+1. For **Project name**, enter a name such as `insights-discovery`.
+1. For **Environment name**, enter a name such as `insights-env`.
+1. Select **Create Environment**.
 
 Leave the default environment definition for now, and you will return to finish configuring ESC after you create the required credentials.
 
