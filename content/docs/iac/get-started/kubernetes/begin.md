@@ -16,7 +16,6 @@ aliases:
     - /docs/quickstart/kubernetes/begin/
     - /docs/quickstart/kubernetes/install-pulumi/
     - /docs/quickstart/kubernetes/install-language-runtime/
-    - /docs/quickstart/kubernetes/configure/
     - /get-started/kubernetes/begin/
 ---
 
