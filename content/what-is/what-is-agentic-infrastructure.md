@@ -4,7 +4,7 @@ meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provis
 meta_image: /images/what-is/what-is-agentic-infrastructure-meta.png
 type: what-is
 page_title: "What Is Agentic Infrastructure?"
-authors: ["joe-duffy"]
+authors: ["cam-soper"]
 ---
 
 **Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate autonomously, writing code, running deployments, enforcing policy, and proposing changes through pull requests, with humans reviewing and approving rather than executing every step.**
@@ -16,7 +16,7 @@ This is one of the more significant shifts happening in how engineering teams wo
 
 The word "agentic" refers to an AI system that takes sequences of actions to reach a goal, observing state, making decisions, and executing steps, rather than generating a single-prompt response.
 
-Applied to infrastructure, it means an AI agent that can receive a goal in natural language, query your actual deployed state to understand the environment, write or modify infrastructure code to accomplish that goal, preview the impact against your cloud environment, validate the changes against your organization's policies, and open a pull request for human review with a summary of what will change and why. If CI/CD feedback comes back (a failed security scan, a policy violation), the agent reads it, pushes a fix, and iterates.
+Applied to infrastructure, it means an AI agent that can receive a goal in natural language, query your actual deployed state to understand the environment, write or modify infrastructure code, preview the impact against your cloud environment, validate the changes against your organization's policies, and open a pull request for human review with a summary of what will change and why. If CI/CD feedback comes back (a failed security scan, a policy violation), the agent reads it, pushes a fix, and iterates.
 
 The human role shifts. Instead of authoring every resource definition and running every deployment, engineers define the goals, review the proposals, and set the policies that constrain what agents can do. The agent handles the execution.
 
@@ -46,7 +46,7 @@ Three things follow from this:
 
 **Agents can use real software engineering primitives.** Loops, functions, classes, package imports, unit tests, type checking, IDE tooling: these apply to Pulumi programs the same way they apply to application code. An agent writing a Pulumi program can import a library, write a test, refactor a module, or inherit from a base class. It's not limited to what a configuration language can express.
 
-**Every change is verifiable.** `pulumi preview` maps code changes to a concrete, auditable list of resource operations (what will be created, updated, or deleted) before anything in the cloud changes. An agent can verify its own output. That feedback loop (write, preview, validate, adjust) is what makes autonomous infrastructure tractable at scale. As Duffy notes: "Just as we wouldn't vibe code without git showing us the source changes, we shouldn't vibe infrastructure without a tool that shows what it will do before it does it." It's essentially `git diff` for your cloud.
+**Every change is verifiable.** `pulumi preview` maps code changes to a concrete, auditable list of resource operations (what will be created, updated, or deleted) before anything in the cloud changes. An agent can verify its own output. That feedback loop (write, preview, validate, adjust) is what makes autonomous infrastructure tractable at scale. As Duffy notes: "Just as we wouldn't vibe code without git showing us the source changes, we shouldn't vibe infrastructure without a tool that shows what it will do before it does it, and what it has already done in the past." It's essentially `git diff` for your cloud.
 
 Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 models across a range of tasks and found that agents consistently perform better when they act by writing executable code rather than emitting JSON or config. Code gives agents a richer action space, tighter feedback loops, and a substrate they've been trained on at scale.
 
@@ -60,9 +60,9 @@ Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 
 
 1. **Investigate and plan.** In Plan Mode, Neo queries your actual Pulumi state graph. It identifies every Lambda function running Node 16, checks dependencies, and synthesizes a plan grounded in your real environment, not in hypothetical configurations. The plan is presented for human review before anything changes.
 
-1. **Execute with configured controls.** Depending on your task mode (Review for step-by-step human approval, Balanced for approval before `pulumi up`, or Auto for trusted, fully-automated workflows), Neo proceeds within the RBAC entitlements of the user who initiated the task. It cannot do anything the user themselves could not do.
+1. **Execute with configured controls.** Depending on your task mode (Review for step-by-step human approval, Balanced for approval before `pulumi up`, or Auto for trusted, fully automated workflows), Neo proceeds within the RBAC entitlements of the user who initiated the task. It cannot do anything the user themselves could not do.
 
-1. **Run `pulumi preview`.** Neo validates the generated code, shows exactly which resources will be created, updated, or deleted, and runs your CrossGuard policies. No resources change until this step completes cleanly.
+1. **Run `pulumi preview`.** Neo validates the generated code, shows exactly which resources will be created, updated, or deleted, and runs your Pulumi Policies. No resources change until this step completes cleanly.
 
 1. **Open a pull request.** Neo creates a PR with a problem description, a list of modified resources, and the preview summary. The PR flows through your existing GitHub, GitLab, or Bitbucket CI/CD pipeline.
 
@@ -96,7 +96,7 @@ Duffy frames it plainly:
 
 The layers Pulumi provides:
 
-**Policy as code.** [CrossGuard](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because policies run on the preview output, they apply whether a human or an agent proposed the change.
+**Policy as code.** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
 
 **RBAC and entitlements.** Neo operates within the Pulumi Cloud RBAC entitlements of the user who initiated the task. It cannot escalate privilege. If a developer cannot delete a production database, Neo cannot either, regardless of what the task requests.
 
@@ -132,7 +132,7 @@ The entry point is [Pulumi Neo](/product/neo/), which is built into Pulumi Cloud
 
 **Step 3: Start in Review mode.** Neo's default task mode requires human approval at every step. This is the right starting point: you learn how Neo reasons, build trust in its outputs, and establish your policy baseline before giving it more autonomy.
 
-**Step 4: Define your policies.** Encode your team's standards in [CrossGuard policies](/docs/iac/crossguard/) before expanding Neo's autonomy. Policies run on every preview and block non-compliant changes automatically.
+**Step 4: Define your policies.** Encode your team's standards in [Pulumi Policies](/docs/iac/crossguard/) before expanding Neo's autonomy. Policies run on every preview and block non-compliant changes automatically.
 
 **Step 5: Connect your CI/CD pipeline.** Neo opens pull requests that flow through your existing GitHub, GitLab, or Bitbucket workflows. No changes to your pipeline are required.
 
@@ -146,7 +146,7 @@ Agentic infrastructure is cloud infrastructure that AI agents provision, govern,
 
 ### How is agentic infrastructure different from DevOps automation?
 
-Traditional DevOps automation executes predefined procedures: scripts, pipelines, runbooks. Agentic infrastructure uses AI agents that can reason about novel situations, generate new code, interpret error messages, and propose fixes, without a human pre-writing each procedure. It is generative automation rather than scripted automation.
+Traditional DevOps automation executes predefined procedures: scripts, pipelines, runbooks. Agentic infrastructure uses AI agents that can reason about novel situations, generate new code, interpret error messages, and propose fixes, without a human pre-writing each procedure. Generative automation, not scripted automation.
 
 ### What programming languages do AI infrastructure agents use?
 
@@ -154,7 +154,7 @@ Traditional DevOps automation executes predefined procedures: scripts, pipelines
 
 ### Is agentic infrastructure safe for production environments?
 
-Yes, when the governance layer is in place first. Pulumi Neo runs `pulumi preview` before every deployment, enforces CrossGuard policies on every change, operates within the initiating user's RBAC entitlements, logs every action with full audit trails, and defaults to requiring human approval at each step. The governance controls become more valuable, not less, as agents take on more work.
+Yes, when the governance layer is in place first. Pulumi Neo runs `pulumi preview` before every deployment, enforces Pulumi Policies on every change, operates within the initiating user's RBAC entitlements, logs every action with full audit trails, and defaults to requiring human approval at each step. The governance controls become more valuable, not less, as agents take on more work.
 
 ### What is Pulumi Neo?
 
@@ -186,4 +186,4 @@ Joe Duffy's CascadiaJS 2026 keynote, "The Last Mile Is Code," covers the in-dist
 
 {{< youtube "SOMEfFNPsew?rel=0" >}}
 
-[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. For governance specifics, the [CrossGuard policy as code](/docs/iac/crossguard/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.
+[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. For governance specifics, the [Pulumi Policies](/docs/iac/crossguard/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.
