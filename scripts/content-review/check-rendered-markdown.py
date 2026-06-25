@@ -48,17 +48,20 @@ FENCE_RE = re.compile(r"^\s*(?:```|~~~)")
 # An inline code span: `…`. Stripped so documented syntax doesn't false-positive.
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
 
-# Targeted regression guard for the code-block mangling fixed in #19872. The
-# markdown pipeline (layouts/partials/docs/markdown-pipeline.md) used to run
-# prose-only regexes over fenced code, deleting `<artifactId>`-style tags and
-# collapsing `[ -f` to `[-f`. Each entry maps a built page (path under `public/`)
+# Targeted regression guard for the code-mangling fixed under #19872. The markdown
+# pipeline (layouts/partials/docs/markdown-pipeline.md) ran prose-targeting regexes
+# too greedily: they deleted `<artifactId>`-style tags inside fenced code and
+# `<project>`-style placeholders inside prose inline-code (any `<a…>`/`<p…>`/… token),
+# and collapsed `[ -f` to `[-f`. Each entry maps a built page (path under `public/`)
 # to substrings that MUST appear verbatim in its rendered `.md`. Checked by
-# `--assert-unmangled`, so the fix can't silently regress.
+# `--assert-unmangled`, so the fixes can't silently regress.
 KNOWN_UNMANGLED: dict[str, list[str]] = {
     "docs/iac/concepts/components/index.md": ["<artifactId>my-component</artifactId>"],
     "docs/iac/cli/command-line-completion/index.md": ["[ -f /etc/bash_completion ]"],
     "docs/iac/guides/testing/unit/index.md": ["</artifactId>"],
     "docs/iac/get-started/terraform/terraform-modules/index.md": ["</artifactId>"],
+    # Phase 2 follow-up: `<project>` (a `<p…>` token) was eaten from a prose inline-code span.
+    "docs/administration/access-identity/oidc-issuers/gitlab/index.md": ["<namespace>/<project>"],
 }
 
 
