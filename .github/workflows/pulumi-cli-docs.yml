@@ -182,12 +182,19 @@ jobs:
         continue-on-error: true
         run: |
           make build
+          # Backfill (publish_only) archives an OLD release, so it must NOT be marked "latest"
+          # — that flag belongs to the newest version. The manifest sorts by semver, so the
+          # publish date doesn't affect ordering. The normal release path leaves mark-latest at
+          # its default (true), correct for the version just shipped.
+          EXTRA=()
+          [ "${{ github.event.inputs.publish_only }}" = "true" ] && EXTRA+=(--no-mark-latest)
           ./scripts/versioned-docs/snapshot-cli-docs.sh \
             --version "v${{ env.PULUMI_VERSION }}" \
             --public ./public \
             --bucket "${{ steps.vdocs.outputs.bucket }}" \
             --distribution-id "${{ steps.vdocs.outputs.distribution_id }}" \
-            --site "${{ steps.vdocs.outputs.site }}"
+            --site "${{ steps.vdocs.outputs.site }}" \
+            "${EXTRA[@]}"
   notify:
     if: failure()
     name: Send slack notification

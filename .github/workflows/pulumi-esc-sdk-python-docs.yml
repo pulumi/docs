@@ -167,13 +167,17 @@ jobs:
         if: ${{ steps.vdocs.outputs.bucket != '' }}
         continue-on-error: true
         run: |
+          # Backfill (publish_only) archives an OLD release: do not mark it "latest".
+          EXTRA=()
+          [ "${{ github.event.inputs.publish_only }}" = "true" ] && EXTRA+=(--no-mark-latest)
           ./scripts/versioned-docs/publish-version.sh --tool python-esc-sdk \
             --version "v${{ env.ESC_SDK_VERSION }}" \
             --src static-prebuilt/docs/reference/pkg/python/pulumi_esc_sdk \
             --live-root /docs/reference/pkg/python/pulumi_esc_sdk/ \
             --bucket "${{ steps.vdocs.outputs.bucket }}" --label "ESC SDK (Python)" \
             --distribution-id "${{ steps.vdocs.outputs.distribution_id }}" \
-            --site "${{ steps.vdocs.outputs.site }}"
+            --site "${{ steps.vdocs.outputs.site }}" \
+            "${EXTRA[@]}"
   notify:
     if: failure()
     name: Send slack notification

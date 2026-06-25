@@ -157,7 +157,10 @@ updated_manifest="$(printf '%s' "$existing_manifest" | jq \
         ( [ { version: $version, date: $date, path: $path, latest: ($markLatest == "true") } ]
           + ( ($m.versions // []) | map(select(.version != $version)) ) )
         | ( if $markLatest == "true" then map(.latest = (.version == $version)) else . end )
-        | sort_by(.date) | reverse
+        # Order newest-first by SEMVER, not by date — a back-catalog version published today
+        # must still sort below newer versions released earlier. Numeric component compare so
+        # 3.10.0 > 3.9.0. Non-numeric/odd versions fall back to the raw string.
+        | sort_by(.version | ltrimstr("v") | (try (split(".") | map(tonumber)) catch [.]) ) | reverse
       )
     }
 ')"

@@ -187,13 +187,17 @@ jobs:
         continue-on-error: true
         working-directory: docs
         run: |
+          # Backfill (publish_only) archives an OLD release: do not mark it "latest".
+          EXTRA=()
+          [ "${{ github.event.inputs.publish_only }}" = "true" ] && EXTRA+=(--no-mark-latest)
           ./scripts/versioned-docs/publish-version.sh --tool java \
             --version "v${{ env.JAVA_SDK_VERSION }}" \
             --src static-prebuilt/docs/reference/pkg/java \
             --live-root /docs/reference/pkg/java/ \
             --bucket "${{ steps.vdocs.outputs.bucket }}" --label "Java SDK" \
             --distribution-id "${{ steps.vdocs.outputs.distribution_id }}" \
-            --site "${{ steps.vdocs.outputs.site }}"
+            --site "${{ steps.vdocs.outputs.site }}" \
+            "${EXTRA[@]}"
   notify:
     if: failure()
     name: Send slack notification

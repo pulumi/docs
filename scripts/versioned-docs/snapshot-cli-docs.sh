@@ -31,6 +31,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VERSION=""; BUCKET=""; PUBLIC="./public"; TOOL="pulumi-cli"
 COMMANDS_PATH="docs/iac/cli/commands"; LIVE_ROOT=""; LABEL="Pulumi CLI"
 DISTRIBUTION_ID=""; SITE="https://www.pulumi.com"; FORCE=""
+DATE=""; MARK_LATEST="true"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -43,6 +44,8 @@ while [[ $# -gt 0 ]]; do
     --label)           LABEL="$2"; shift 2;;
     --distribution-id) DISTRIBUTION_ID="$2"; shift 2;;
     --site)            SITE="$2"; shift 2;;
+    --date)            DATE="$2"; shift 2;;
+    --no-mark-latest)  MARK_LATEST="false"; shift;;
     --force)           FORCE="--force"; shift;;
     --out-dir)         OUT_DIR="$2"; shift 2;;
     *) echo "snapshot-cli-docs: unknown arg: $1" >&2; exit 2;;
@@ -124,6 +127,7 @@ if [[ -n "$OUT_DIR" ]]; then
 else
   "$SCRIPT_DIR/publish-version.sh" --tool "$TOOL" --version "$VERSION" --src "$SNAP" \
     --live-root "$LIVE_ROOT" --bucket "$BUCKET" --label "$LABEL" --site "$SITE" \
+    ${DATE:+--date "$DATE"} $([[ "$MARK_LATEST" == "false" ]] && echo --no-mark-latest) \
     ${DISTRIBUTION_ID:+--distribution-id "$DISTRIBUTION_ID"} ${FORCE:+$FORCE}
 fi
 
