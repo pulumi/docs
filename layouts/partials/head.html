@@ -130,9 +130,9 @@
 
     <!--
         Effective social card: a page-level meta_image (custom override) wins;
-        otherwise a committed, build-time generated card for the section, if one
-        exists. Resolved by partials/meta-image-url.html, which the schema
-        collectors share so OpenGraph and JSON-LD images stay in sync.
+        otherwise a build-time generated card for the section, if one exists.
+        Resolved by partials/meta-image-url.html, which the schema collectors
+        share so OpenGraph and JSON-LD images stay in sync.
     -->
     {{ $metaImage := partial "meta-image-url.html" . }}
     {{ with $metaImage }}

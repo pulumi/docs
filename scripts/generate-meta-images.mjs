@@ -44,11 +44,10 @@ const MANIFEST = join(OUT_ROOT, ".manifest.json")
 const CANVAS_W = 1200
 const CANVAS_H = 628
 
-// Bump when any template changes visually so committed cards regenerate.
+// Bump when any template changes visually so cached cards regenerate.
 // v3: added the og-info (4-field) template + multi-template/recursive support.
 const OG_TEMPLATE_VERSION = "3"
 
-const CHECK_MODE = process.argv.includes("--check")
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
 
@@ -113,7 +112,7 @@ function loadFonts() {
   return _fonts
 }
 
-// Inter Semibold parsed for title measurement (lazy: --check never renders).
+// Inter Semibold parsed for title measurement (lazy: parsed on first render).
 let _titleFont = null
 async function titleFont() {
   if (!_titleFont) {
@@ -286,25 +285,6 @@ function loadManifest() {
   try { return JSON.parse(readFileSync(MANIFEST, "utf-8")) } catch { return {} }
 }
 
-function runCheck(pages) {
-  const manifest = loadManifest()
-  const expected = new Set(pages.map((p) => p.id))
-  const problems = []
-  for (const p of pages) {
-    if (manifest[p.id] !== p.key) problems.push(`stale/missing manifest entry: ${p.id}`)
-    if (!existsSync(p.out)) problems.push(`missing committed card: ${p.id}.png`)
-  }
-  if (!ONLY.length && !SAMPLE) for (const id of Object.keys(manifest)) if (!expected.has(id)) problems.push(`orphaned manifest entry: ${id}`)
-  if (problems.length) {
-    console.error("Meta images are out of date:")
-    for (const p of problems.slice(0, 50)) console.error(`  - ${p}`)
-    if (problems.length > 50) console.error(`  ...and ${problems.length - 50} more`)
-    console.error("\nRun `make meta-images` and commit the result.")
-    process.exit(1)
-  }
-  console.log(`meta-images --check: ${pages.length} cards in sync.`)
-}
-
 async function runGenerate(pages) {
   const fonts = loadFonts()
   await titleFont()
@@ -342,5 +322,4 @@ async function runGenerate(pages) {
 }
 
 const pages = listPages()
-if (CHECK_MODE) runCheck(pages)
-else await runGenerate(pages)
+await runGenerate(pages)

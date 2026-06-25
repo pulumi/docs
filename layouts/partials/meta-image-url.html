@@ -6,16 +6,17 @@
 
     Precedence:
       1. A page-level `meta_image` (custom override — always wins).
-      2. A committed, build-time generated card at
+      2. A build-time generated card at
          assets/images/generated/<content-path>.png, if one exists. The path
          mirrors the page's content path (.md and trailing /_index stripped),
          matching scripts/generate-meta-images.mjs — so it works for flat
          sections (what-is) and nested ones (docs).
       3. "" (caller falls back to its own default).
 
-    Generated cards are produced by scripts/generate-meta-images.mjs. The lookup
-    is automatic: enabling a section is just a matter of generating + committing
-    its cards — no template change needed.
+    Generated cards are produced by scripts/generate-meta-images.mjs at build
+    time into a gitignored dir (not committed; cached in CI). The lookup is
+    automatic: enabling a section is just a matter of generating its cards — no
+    template change needed.
 */ -}}
 {{- $img := "" -}}
 {{- if .Params.meta_image -}}
