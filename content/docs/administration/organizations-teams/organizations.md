@@ -102,6 +102,19 @@ To update billing information:
 
 If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
 
+## Changing the company name on invoices
+
+The company name that appears on Pulumi invoices is sourced from your organization's display name. To change it, update the display name and the change will be reflected on your next invoice. Updates take effect within a short time after saving.
+
+To update your organization's display name:
+
+1. Navigate to **Settings** > **General**.
+1. Update the **Display Name** field and save your changes.
+
+Updating the display name requires the `organization:billing` permission, which is granted to organization admins and Billing Managers.
+
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/). Distinct legal billing names on invoices are a planned enhancement.
+
 ## Transferring stacks
 
 Stack admins can transfer individual stacks between personal accounts and organizations, or between organizations. Organization admins can transfer stacks in bulk.
