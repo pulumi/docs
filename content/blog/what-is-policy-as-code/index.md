@@ -13,23 +13,13 @@ tags:
     - governance
 ---
 
-**Policy as code is the practice of defining and enforcing security, compliance, cost, and operational governance rules as version-controlled, testable code, evaluated automatically in CI/CD pipelines and at deployment time, rather than through manual reviews, console clicks, or static documents.** The same engineering discipline that brought infrastructure under code-based control (version control, testing, peer review, automation) now applies to the rules that govern it.
-
-The practice treats compliance requirements the same way software teams already treat application code: write it, review it, test it, version it, and run it automatically so no step depends on someone remembering to do it.
+For most of the last decade, the rules that govern cloud infrastructure have lived somewhere other than the infrastructure itself: in a wiki page, a spreadsheet of controls, a reviewer's head, or a checklist someone is supposed to run before shipping. Infrastructure became code, but the guardrails around it stayed manual. That gap is exactly where misconfigurations slip through.
 
 <!--more-->
 
-In this article, we'll cover the key questions about policy as code:
+Policy as code closes it. **It's the practice of defining and enforcing security, compliance, cost, and operational governance rules as version-controlled, testable code, evaluated automatically in CI/CD pipelines and at deployment time, rather than through manual reviews, console clicks, or static documents.** The same engineering discipline that brought infrastructure under code-based control (version control, testing, peer review, automation) now applies to the rules that govern it.
 
-* What is policy as code?
-* Why does policy as code matter?
-* How does policy as code work?
-* What are the benefits of policy as code?
-* What policy as code tools are available?
-* How does Pulumi implement policy as code?
-* How do you get started with policy as code in Pulumi?
-* What does policy as code look like in production?
-* Frequently asked questions about policy as code
+In other words, it treats compliance requirements the same way software teams already treat application code: write it, review it, test it, version it, and run it automatically so no step depends on someone remembering to do it. Below, I'll walk through what that looks like in practice, why it matters more than ever as AI agents start writing infrastructure, the tools that implement it, and how to get your first policy running in a few minutes.
 
 ## What is policy as code?
 
@@ -121,10 +111,6 @@ Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platfo
 
 **Open source core.** The Pulumi Policies SDK is open source under Apache 2.0 at [github.com/pulumi/pulumi-policy](https://github.com/pulumi/pulumi-policy). Local enforcement via `--policy-pack` (including advisory, mandatory, and remediate modes) is free. Org-wide policy group management in Pulumi Cloud requires a paid plan.
 
-> "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less."
->
-> — Joe Duffy, Pulumi's CEO
-
 ## How do you get started with policy as code in Pulumi?
 
 Getting started with Pulumi Policies takes a few minutes if you already have Pulumi installed.
@@ -165,6 +151,14 @@ As Zachary Cook, Senior Manager of DevOps at Modivcare, put it:
 
 The combination of [policy as code enforcement](/docs/insights/policy/) with [Insights-based governance](/product/insights-governance/) let Modivcare start enforcing cost controls on resources they didn't even write with Pulumi, reducing infrastructure costs by up to 25%.
 
+## Why this matters more every day
+
+The case for policy as code used to rest on scale: too many teams, too many pull requests, too many ways for a single misconfigured bucket to reach production. That argument still holds. But the ground is shifting underneath it.
+
+As AI agents begin writing and modifying infrastructure, the volume and velocity of changes will outpace anything a human review process was designed to handle. The policies that govern those changes become the primary safety layer between automation and production, and a rule encoded as code, enforced on every deployment, doesn't care whether the change came from an engineer or an agent. As Pulumi CEO Joe Duffy puts it, "the smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less."
+
+That's the real promise here: policy as code is what lets you say yes to faster, more automated infrastructure without giving up control over what actually ends up running.
+
 ## Frequently asked questions about policy as code
 
 ### What is policy as code in simple terms?
@@ -197,7 +191,7 @@ Yes. Pulumi Policies integrates with Pulumi Insights to evaluate resources that 
 
 ### What is the difference between OPA, Sentinel, and Kyverno?
 
-OPA is a general-purpose policy engine that works across any system sending JSON, not just infrastructure. Sentinel is embedded in HashiCorp's commercial products and is not available as a standalone open-source tool. Kyverno is purpose-built for Kubernetes admission control, using YAML and CEL rather than a custom query language. All three have different strengths, scopes, and licensing models. The comparison table in this article covers these dimensions in detail.
+OPA is a general-purpose policy engine that works across any system sending JSON, not just infrastructure. Sentinel is embedded in HashiCorp's commercial products and is not available as a standalone open-source tool. Kyverno is purpose-built for Kubernetes admission control, using YAML and CEL rather than a custom query language. All three have different strengths, scopes, and licensing models. The comparison table earlier in this post covers these dimensions in detail.
 
 ### What are the best policy as code tools?
 
