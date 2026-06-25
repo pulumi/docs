@@ -37,7 +37,7 @@ To create an environment:
 1. Open [Pulumi Cloud](https://app.pulumi.com/signin) and select **Environments** in the left navigation.
 1. Select **+ Create Environment**, then choose **New Environment**.
 1. For **Project name**, enter a name such as `insights-discovery`.
-1. For **Environment name**, enter a name such as `insights-env`.
+1. For **Environment name**, enter a name such as `insights-discovery-env`.
 1. Select **Create Environment**.
 
 Leave the default environment definition for now, and you will return to finish configuring ESC after you create the required credentials.
