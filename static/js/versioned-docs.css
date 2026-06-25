@@ -118,6 +118,21 @@ html.vdocs-has-bar .fixedNav {          /* Javadoc (java) — fixed top:0 */
   box-shadow: 0 0 0 2px var(--docs-ring, rgba(139, 92, 246, 0.25));
 }
 
+/* Copy Page menu (injected by versioned-docs.js on CLI archives). The .llm-menu-* base styles
+ * ship in the shared archive theme bundle; these only restore the sizing the live component set
+ * via inline styles (trigger icon + chevron) and animate the chevron on open. */
+.vdocs-copy-menu .llm-menu-trigger > svg {
+  width: 14px;
+  height: 14px;
+}
+.vdocs-copy-menu .vdocs-copy-chevron {
+  margin-left: 0.25rem;
+  transition: transform 0.15s ease;
+}
+.vdocs-copy-menu .llm-menu-trigger.vdocs-copy-open .vdocs-copy-chevron {
+  transform: rotate(180deg);
+}
+
 .vdocs-cli-nav-wrap .vdocs-nav-home,
 .vdocs-cli-nav-wrap .vdocs-nav-latest {
   display: block;
