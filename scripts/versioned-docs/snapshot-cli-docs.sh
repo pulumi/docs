@@ -116,9 +116,12 @@ find "$SNAP" -type f -name '*.html' -exec sed -i -E \
 # self-references the versioned paths instead of pointing back at the live docs.
 replace_in_content "${LIVE_ROOT}" "${VERSION_ROOT}/"
 
-# 4b. CLI command pages borrow the entire site docs mega-menu as their left-nav. Trim it
-# to just this version's command list, with synthetic "Docs Home" + "Latest Version" items
-# on top (pointing live). This makes the CLI archive self-contained, like the SDK docs.
+# 4b. Strip the borrowed live-site chrome so the archive is a self-contained, JS-free page:
+# (1) replace the full-site docs mega-menu left-nav with this version's command list (synthetic
+# "Docs Home" + "Latest Version" on top, pointing live); (2) drop the right-rail Edit/Request/
+# feedback widgets + dead web components (meaningless on a frozen snapshot); (3) statically
+# rebuild the "On this page" ToC, which the site JS normally fills at runtime — see the script
+# header for the full rationale of each pass.
 python3 "$SCRIPT_DIR/trim-cli-nav.py" --src "$SNAP" \
   --version-root "${VERSION_ROOT}/" --live-root "${LIVE_ROOT}"
 
