@@ -66,17 +66,22 @@ SNAP="$(mktemp -d)"
 trap 'rm -rf "$SNAP"' EXIT
 cp -a "$SRC_DIR/." "$SNAP/"
 
-# 2. Strip markdown content-negotiation outputs (latest-only; avoids stale scraping).
-find "$SNAP" -type f -name '*.md' -delete
+# 2. KEEP the markdown content-negotiation outputs (*.md, one per command + the index) so the
+# archived version is consumable by LLMs/agents exactly like the live docs. Their frontmatter
+# `url:` and intra-doc links are rewritten to the versioned prefix in step 4.
 
-# Literal-string replacement across all snapshot HTML. Uses find+sed (no grep) so it's
-# robust to grep variants — notably ugrep, where -Z means fuzzy-match and --include is
-# read as a filename. sed_escape_lhs/rhs keep the needle/replacement literal.
+# Literal-string replacement across snapshot files. Uses find+sed (no grep) so it's robust to
+# grep variants — notably ugrep, where -Z means fuzzy-match and --include is read as a
+# filename. sed_escape_lhs/rhs keep the needle/replacement literal.
 sed_escape_lhs() { printf '%s' "$1" | sed 's/[][\\.*^$#]/\\&/g'; }
 sed_escape_rhs() { printf '%s' "$1" | sed 's/[\\&#]/\\&/g'; }
-replace_in_html() { # $1=needle $2=replacement
+replace_in_html() { # $1=needle $2=replacement — HTML only (css/js asset refs)
   local n r; n="$(sed_escape_lhs "$1")"; r="$(sed_escape_rhs "$2")"
   find "$SNAP" -type f -name '*.html' -exec sed -i "s#${n}#${r}#g" {} +
+}
+replace_in_content() { # $1=needle $2=replacement — HTML links AND the .md url:/cross-links
+  local n r; n="$(sed_escape_lhs "$1")"; r="$(sed_escape_rhs "$2")"
+  find "$SNAP" -type f \( -name '*.html' -o -name '*.md' \) -exec sed -i "s#${n}#${r}#g" {} +
 }
 
 # 3a. Theme: point the archive at the SHARED, stable archive theme bundle — a permanent
@@ -106,8 +111,10 @@ done
 find "$SNAP" -type f -name '*.html' -exec sed -i -E \
   's#<script[^>]*\ssrc="/js/[^"]+\.js"[^>]*>\s*</script>##g' {} +
 
-# 4. Rewrite intra-snapshot command links to the versioned prefix.
-replace_in_html "${LIVE_ROOT}" "${VERSION_ROOT}/"
+# 4. Rewrite intra-snapshot command links to the versioned prefix — in the HTML AND in the
+# kept .md files (their frontmatter `url:` and cross-command links), so the archived markdown
+# self-references the versioned paths instead of pointing back at the live docs.
+replace_in_content "${LIVE_ROOT}" "${VERSION_ROOT}/"
 
 # 4b. CLI command pages borrow the entire site docs mega-menu as their left-nav. Trim it
 # to just this version's command list, with synthetic "Docs Home" + "Latest Version" items
