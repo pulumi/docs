@@ -140,11 +140,17 @@ export function generateOnThisPage() {
 
         let tocRafPending = false;
         const setActiveItem = () => {
-            let active = null;
+            // Active = the last heading scrolled above a line 80px below the
+            // viewport top (just past the headings' 60px scroll-margin-top, so the
+            // heading you click registers instead of the next). Uses viewport-
+            // relative coords; offsetTop would be wrong here (positioned ancestor).
+            let active = headingItems[0];
             for (const heading of headingItems) {
-                if (!active && heading.element.offsetTop >= window.scrollY) {
+                if (heading.element.getBoundingClientRect().top <= 80) {
                     active = heading;
                 }
+            }
+            for (const heading of headingItems) {
                 heading.listItems.forEach(li => li.classList.toggle("active", heading === active));
             }
         };
