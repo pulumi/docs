@@ -1,0 +1,183 @@
+{{/*
+    Mermaid renderer + Pulumi-brand theme. Included from head.html only when the
+    page has a diagram (gated on `.Store.Get "hasMermaid"`), so the Mermaid CDN
+    module loads lazily — never on pages without diagrams.
+*/}}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+
+    // Shared themeCSS for both modes. The only per-mode difference is the page
+    // background, used for label/edge-label boxes and sequence numbers.
+    const themeCSS = ({ bkg }) => `
+        .node rect, .node polygon { rx: 6px; ry: 6px; }
+        .node rect, .node circle, .node polygon, .node path { stroke-width: 1.5px; }
+        .flowchart-link { stroke-width: 1.5px; }
+        .cluster rect { rx: 10px; ry: 10px; stroke-dasharray: 4 4; stroke-width: 1.5px; }
+        .cluster-label foreignObject { transform: translateY(0.2em); }
+        .cluster-label p { font-weight: 600;}
+        .edgeLabel p { background-color: transparent; }
+        .labelBkg { background-color: ${bkg}; }
+        .actor { stroke-width: 1.5px; }
+        text.sequenceNumber { fill: ${bkg}; }
+    `;
+
+    // Pulumi-brand theme (upstream `base` + themeVariables + themeCSS). All
+    // colors are brand tokens from theme/src/scss/_theme.scss.
+    const pulumiLight = {
+        theme: 'base',
+        flowchart: { padding: 14 },
+        themeVariables: {
+            fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            fontSize: '14px',
+            background: '#ffffff',          // white
+            primaryColor: '#f5f5ff',        // violet-50  (node/actor fill)
+            mainBkg: '#f5f5ff',             // violet-50  (flowchart node fill)
+            primaryBorderColor: '#9077f3',  // violet-500
+            nodeBorder: '#9077f3',          // violet-500 (flowchart node border)
+            primaryTextColor: '#1f1b21',    // service-black
+            lineColor: '#6a6675',           // gray-700
+            secondaryColor: '#ebebff',      // violet-100
+            tertiaryColor: '#f5f5ff',       // violet-50
+            titleColor: '#5a30c5',          // violet-700
+            edgeLabelBackground: '#ffffff', // white (page background)
+            clusterBkg: '#f5f5ff',          // violet-50
+            clusterBorder: '#c3bdff',       // violet-300
+            actorBkg: '#f5f5ff',            // violet-50
+            actorBorder: '#9077f3',         // violet-500
+            actorTextColor: '#1f1b21',      // service-black
+            actorLineColor: '#c3bdff',      // violet-300
+            signalColor: '#6a6675',         // gray-700
+            signalTextColor: '#1f1b21',     // service-black
+            labelBoxBkgColor: '#f5f5ff',    // violet-50
+            labelBoxBorderColor: '#c3bdff', // violet-300
+            labelTextColor: '#1f1b21',      // service-black
+            loopTextColor: '#5a30c5',       // violet-700
+            noteBkgColor: '#f5f5ff',        // violet-50
+            noteBorderColor: '#c3bdff',     // violet-300
+            noteTextColor: '#1f1b21',       // service-black
+            activationBkgColor: '#ebebff',  // violet-100
+            activationBorderColor: '#9077f3', // violet-500
+        },
+        themeCSS: themeCSS({ bkg: '#ffffff' }),
+    };
+    // Dark uses service-black for background/edge labels to match the docs dark
+    // page (--docs-bg: var(--color-service-black)).
+    const pulumiDark = {
+        theme: 'base',
+        flowchart: { padding: 14 },
+        themeVariables: {
+            darkMode: true,
+            fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+            fontSize: '14px',
+            background: '#1f1b21',          // service-black (docs dark page bg)
+            primaryColor: '#231f33',        // violet-950 (node/actor fill)
+            mainBkg: '#231f33',             // violet-950 (flowchart node fill)
+            primaryBorderColor: '#9077f3',  // violet-500
+            nodeBorder: '#9077f3',          // violet-500 (flowchart node border)
+            primaryTextColor: '#efeff0',    // gray-100
+            lineColor: '#9997a0',           // gray-500
+            secondaryColor: '#392960',      // violet-900
+            tertiaryColor: '#231f33',       // violet-950
+            titleColor: '#c3bdff',          // violet-300
+            edgeLabelBackground: '#1f1b21', // service-black (page background)
+            clusterBkg: '#231f33',          // violet-950
+            clusterBorder: '#492e8e',       // violet-800
+            actorBkg: '#231f33',            // violet-950
+            actorBorder: '#9077f3',         // violet-500
+            actorTextColor: '#efeff0',      // gray-100
+            actorLineColor: '#492e8e',      // violet-800
+            signalColor: '#9997a0',         // gray-500
+            signalTextColor: '#efeff0',     // gray-100
+            labelBoxBkgColor: '#231f33',    // violet-950
+            labelBoxBorderColor: '#492e8e', // violet-800
+            labelTextColor: '#efeff0',      // gray-100
+            loopTextColor: '#c3bdff',       // violet-300
+            noteBkgColor: '#231f33',        // violet-950
+            noteBorderColor: '#492e8e',     // violet-800
+            noteTextColor: '#efeff0',       // gray-100
+            activationBkgColor: '#392960',  // violet-900
+            activationBorderColor: '#9077f3', // violet-500
+        },
+        themeCSS: themeCSS({ bkg: '#1f1b21' }),
+    };
+
+    // Theme follows the docs color theme (data-theme on <html>). Non-docs pages
+    // have no data-theme, so this resolves to light.
+    const isDark = () => document.documentElement.dataset.theme === 'dark';
+    const configure = () =>
+        mermaid.initialize({ startOnLoad: false, ...(isDark() ? pulumiDark : pulumiLight) });
+    configure();
+
+    // Edge labels render in a root group, so one sitting over a cluster shows a
+    // page-colored background box. Give those the cluster's fill instead.
+    const matchClusterEdgeLabels = svg => {
+        const clusters = [...svg.querySelectorAll('.cluster rect')]
+            .map(r => ({ box: r.getBoundingClientRect(), fill: getComputedStyle(r).fill }));
+        if (!clusters.length) return;
+        svg.querySelectorAll('.edgeLabels .edgeLabel').forEach(label => {
+            const b = label.getBoundingClientRect();
+            const cx = b.x + b.width / 2, cy = b.y + b.height / 2;
+            const hit = clusters
+                .filter(c => cx >= c.box.x && cx <= c.box.right && cy >= c.box.y && cy <= c.box.bottom)
+                .sort((a, z) => a.box.width * a.box.height - z.box.width * z.box.height)[0];
+            if (hit) label.querySelectorAll('.labelBkg').forEach(el => { el.style.backgroundColor = hit.fill; });
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const diagrams = [...document.querySelectorAll('pre.mermaid')];
+
+        // Preserve original source before rendering replaces it.
+        diagrams.forEach(pre => {
+            if (!pre.dataset.mermaidSource) {
+                pre.setAttribute('data-mermaid-source', pre.textContent.trim());
+            }
+        });
+
+        const isHidden = el => el.offsetParent === null;
+
+        const render = pre => {
+            if (pre.dataset.processed === 'true') return;
+            mermaid.run({ nodes: [pre] })
+                .then(() => { try { matchClusterEdgeLabels(pre.querySelector('svg')); } catch (e) { /* best effort */ } })
+                .catch(err => console.error('Mermaid render error:', err));
+        };
+
+        // Render visible diagrams now; lazily render hidden (tabbed/chooser) ones
+        // once revealed — Mermaid can't measure display:none elements.
+        let observer = null;
+        const renderDiagrams = () => {
+            diagrams.forEach(pre => { if (!isHidden(pre)) render(pre); });
+            if (observer) observer.disconnect();
+            const hidden = diagrams.filter(isHidden);
+            if (hidden.length) {
+                observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            render(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                hidden.forEach(pre => observer.observe(pre));
+            }
+        };
+
+        renderDiagrams();
+
+        // Re-render on docs theme toggle: restore each diagram's source and re-run.
+        let current = isDark();
+        new MutationObserver(() => {
+            if (isDark() === current) return;
+            current = isDark();
+            configure();
+            diagrams.forEach(pre => {
+                const src = pre.getAttribute('data-mermaid-source');
+                if (src === null) return;
+                pre.textContent = src;
+                pre.removeAttribute('data-processed');
+            });
+            renderDiagrams();
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    });
+</script>

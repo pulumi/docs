@@ -68,6 +68,17 @@ pre.mermaid {
     @apply bg-transparent p-0;
     @apply text-gray-900;
     @apply flex justify-center items-center;
+
+    // Cancel global content `p` margin/padding/font-size bleeding into Mermaid
+    // labels (the docs `section.docs-content p` rule forces 16px). Inherit lets
+    // the label use Mermaid's own size. (Node padding is set via
+    // flowchart.padding; CSS padding here overflows.)
+    p {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
 }
 
 div.highlight.line-numbers {
