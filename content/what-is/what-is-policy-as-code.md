@@ -1,6 +1,6 @@
 ---
 title: What Is Policy as Code?
-meta_desc: "Policy as code applies software engineering practices to infrastructure governance. Learn what it is, how it works, the top tools, and how to enforce it with Pulumi."
+meta_desc: "Policy as code applies software engineering practices to infrastructure governance. Learn what it is, how it works, the top tools, and how to enforce it."
 meta_image: /images/what-is/what-is-policy-as-code-meta.png
 type: what-is
 page_title: "What Is Policy as Code?"
@@ -100,10 +100,10 @@ Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platfo
 
 **Enforcement levels.** Every policy operates at one of four enforcement levels:
 
-- **Advisory**: a warning is surfaced, but the deployment continues. Use this during rollout to measure the blast radius of a new rule before enforcing it.
-- **Mandatory**: a violation blocks the deployment. Use this for security-critical rules that cannot have exceptions.
-- **Remediate**: the violation is corrected automatically in the resource configuration before deployment proceeds.
-- **Disabled**: the policy is skipped entirely. Use this to temporarily exempt a rule without removing it from the pack.
+* **Advisory**: a warning is surfaced, but the deployment continues. Use this during rollout to measure the blast radius of a new rule before enforcing it.
+* **Mandatory**: a violation blocks the deployment. Use this for security-critical rules that cannot have exceptions.
+* **Remediate**: the violation is corrected automatically in the resource configuration before deployment proceeds.
+* **Disabled**: the policy is skipped entirely. Use this to temporarily exempt a rule without removing it from the pack.
 
 **Automatic remediation.** The `remediate` enforcement level uses a `remediateResource` function that Pulumi calls when a policy is violated. Instead of failing the deployment, Pulumi corrects the configuration in place (enabling encryption on a storage bucket that the developer left unencrypted, for example) and proceeds. This is particularly valuable for rules where the fix is deterministic and the goal is adoption rather than blockage.
 
