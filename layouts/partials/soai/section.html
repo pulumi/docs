@@ -1,0 +1,27 @@
+{{/*
+    SOAI section — a violet-50 rounded card holding the section overview grid
+    followed by one question card per chart.
+
+    Params (.):
+    - anchor:    Section id for TOC links.
+    - number:    Two-digit section number string (e.g. "01").
+    - title:     Section title.
+    - overview:  { key_insights, by_the_numbers, takeaway } (see overview-grid).
+    - questions: Slice of question dicts (see question-card / chart).
+*/}}
+{{ $anchor := .anchor }}
+{{ $number := .number }}
+
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="soai-section flex scroll-mt-22 flex-col gap-10 rounded-lg bg-violet-50 px-4 py-10 sm:px-8 sm:py-12 lg:gap-14 lg:px-16 lg:py-16 xl:px-24">
+
+    {{ partial "soai/overview-grid.html" (dict
+        "number" $number
+        "title" .title
+        "overview" .overview
+    ) }}
+
+    {{ range .questions }}
+    {{ partial "soai/question-card.html" (merge . (dict "section_number" $number)) }}
+    {{ end }}
+
+</section>

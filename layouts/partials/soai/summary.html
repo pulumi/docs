@@ -1,0 +1,24 @@
+{{/*
+    SOAI "What we found" lead-in — a violet-50 rounded card placed between the
+    hero and the numbered sections. Front-loads the punchiest cross-survey
+    findings as a hook; the sections below carry the detail.
+
+    Params (.):
+    - overline: Small label (e.g. "What we found").
+    - heading:  Optional heading.
+    - points:   Slice of strings (markdown), the headline findings.
+*/}}
+<section class="soai-summary flex flex-col gap-8 rounded-lg bg-violet-50 px-4 py-10 sm:px-8 sm:py-12 lg:gap-10 lg:px-16 lg:py-16 xl:px-24" data-soai-reveal>
+    {{ with .overline }}<p class="font-overline m-0 text-service-black">{{ . }}</p>{{ end }}
+    {{ with .heading }}<h2 class="m-0 font-mono text-3xl font-normal uppercase leading-tight tracking-tight text-service-black lg:text-4xl">{{ . }}</h2>{{ end }}
+    {{ with .points }}
+    <ul class="m-0 grid list-none grid-cols-1 gap-6 p-0 md:grid-cols-2 lg:gap-8">
+        {{ range $i, $p := . }}
+        <li class="m-0 flex gap-4">
+            <span class="shrink-0 font-mono text-sm leading-[1.6] text-violet-primary">{{ printf "%02d" (add $i 1) }}</span>
+            <p class="m-0 text-xl font-semibold leading-tight tracking-tight text-service-black lg:text-2xl">{{ $p | markdownify }}</p>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</section>
