@@ -211,6 +211,12 @@
              add "Blog" to the title so that the titles no longer clash. -->
         {{ if and (eq .Type "blog") .IsPage }}
             <title>{{ $title }} | Pulumi Blog</title>
+        {{ else if and (eq .Type "blog") .IsSection }}
+            {{ if gt $.Paginator.PageNumber 1 }}
+                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi</title>
+            {{ end }}
         {{ else if eq .Type "blog" }}
             {{ if gt $.Paginator.PageNumber 1 }}
                 <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi Blog</title>
