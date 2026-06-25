@@ -1,15 +1,23 @@
 ---
 title: What Is Policy as Code?
+date: 2026-06-25
+draft: false
 meta_desc: "Policy as code applies software engineering practices to infrastructure governance. Learn what it is, how it works, the top tools, and how to enforce it."
-meta_image: /images/what-is/what-is-policy-as-code-meta.png
-type: what-is
-page_title: "What Is Policy as Code?"
-authors: ["joe-duffy"]
+meta_image: meta.png
+feature_image: feature.png
+authors:
+    - alex-leventer
+tags:
+    - policy-as-code
+    - security
+    - governance
 ---
 
 **Policy as code is the practice of defining and enforcing security, compliance, cost, and operational governance rules as version-controlled, testable code, evaluated automatically in CI/CD pipelines and at deployment time, rather than through manual reviews, console clicks, or static documents.** The same engineering discipline that brought infrastructure under code-based control (version control, testing, peer review, automation) now applies to the rules that govern it.
 
 The practice treats compliance requirements the same way software teams already treat application code: write it, review it, test it, version it, and run it automatically so no step depends on someone remembering to do it.
+
+<!--more-->
 
 In this article, we'll cover the key questions about policy as code:
 
