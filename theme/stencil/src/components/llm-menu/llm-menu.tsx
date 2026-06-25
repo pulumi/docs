@@ -65,11 +65,6 @@ export class LlmMenu {
         }
     }
 
-    private viewMarkdown() {
-        window.open(this.getMarkdownUrl(), "_blank");
-        this.trackEvent("view-markdown");
-    }
-
     private showCopied(type: string) {
         this.copied = type;
         setTimeout(() => (this.copied = ""), 2000);
@@ -119,17 +114,6 @@ export class LlmMenu {
             </svg>
         );
 
-        const markdownIcon = (
-            <svg class="llm-menu-icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"
-                />
-                <path
-                    d="M9.146 8.146a.5.5 0 0 1 .708 0L11.5 9.793l1.646-1.647a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 0-.708zM11.5 5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 1 .5-.5zM3.56 11V5.01h1.44L6.5 7.98 8 5.01h1.44V11H8.2V6.57L6.5 9.56l-1.7-2.99V11H3.56z"
-                />
-            </svg>
-        );
-
         const chatGptLogo = (
             <svg class="llm-menu-icon" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -148,35 +132,40 @@ export class LlmMenu {
             </svg>
         );
 
+        const copyIcon = (
+            <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/>
+            </svg>
+        );
+
         return (
             <Host>
                 <div class="llm-menu-container">
-                    <button class="llm-menu-trigger text-gray-600 hover:text-gray-700 text-xs" onClick={() => (this.isOpen = !this.isOpen)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular mr-2" fill="currentColor" viewBox="0 0 256 256" style={{ width: "14px", height: "14px" }} aria-hidden="true" focusable="false">
-                            <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/>
-                        </svg>
-                        Copy Page
-                        {this.isOpen ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                                <path d="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z"/>
-                            </svg>
-                        ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                                <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/>
-                            </svg>
-                        )}
-                    </button>
+                    <div class="btn-split">
+                        <button class="btn btn-outline" onClick={() => this.copyPage()}>
+                            {copyIcon}
+                            {this.copied === "page" ? "Copied!" : "Copy page"}
+                        </button>
+                        <button class="btn btn-outline" aria-haspopup="menu" aria-expanded={this.isOpen ? "true" : "false"} aria-label="More copy options" onClick={() => (this.isOpen = !this.isOpen)}>
+                            {this.isOpen ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                    <path d="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z"/>
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--bold" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                                    <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"/>
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+
+                    <a class="btn btn-outline" href={this.getMarkdownUrl()} target="_blank" rel="noopener" onClick={() => this.trackEvent("view-markdown")}>
+                        View as Markdown
+                    </a>
 
                     {this.isOpen && (
                         <div class="llm-menu-dropdown">
                             <div>
-                                <button class="llm-menu-item" onClick={() => this.copyUrl()}>
-                                    {linkIcon}
-                                    <div class="llm-menu-text">
-                                        <div class="llm-menu-title">{this.copied === "url" ? "Copied!" : "Copy URL"}</div>
-                                        <div class="llm-menu-subtitle">Copy page link to share</div>
-                                    </div>
-                                </button>
                                 <button class="llm-menu-item" onClick={() => this.copyPage()}>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-icon" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
                                         <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/>
@@ -186,15 +175,12 @@ export class LlmMenu {
                                         <div class="llm-menu-subtitle">Copy page for LLMs</div>
                                     </div>
                                 </button>
-                                <button class="llm-menu-item" onClick={() => this.viewMarkdown()}>
-                                    {markdownIcon}
+                                <button class="llm-menu-item" onClick={() => this.copyUrl()}>
+                                    {linkIcon}
                                     <div class="llm-menu-text">
-                                        <div class="llm-menu-title">View as Markdown</div>
-                                        <div class="llm-menu-subtitle">Open Markdown in new tab</div>
+                                        <div class="llm-menu-title">{this.copied === "url" ? "Copied!" : "Copy URL"}</div>
+                                        <div class="llm-menu-subtitle">Copy page link to share</div>
                                     </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular llm-menu-external" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                                        <path d="M224,104a8,8,0,0,1-16,0V59.32l-66.33,66.34a8,8,0,0,1-11.32-11.32L196.68,48H152a8,8,0,0,1,0-16h64a8,8,0,0,1,8,8Zm-40,24a8,8,0,0,0-8,8v72H48V80h72a8,8,0,0,0,0-16H48A16,16,0,0,0,32,80V208a16,16,0,0,0,16,16H176a16,16,0,0,0,16-16V136A8,8,0,0,0,184,128Z"/>
-                                    </svg>
                                 </button>
                                 <hr />
                                 <button class="llm-menu-item" onClick={() => this.openInChatGPT()}>

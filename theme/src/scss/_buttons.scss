@@ -3,7 +3,6 @@
 //
 // Active consumers:
 //   .btn-download             - card-button-download.html, convert.tsx
-//   .btn-scroll-top           - top-button.tsx
 //   .card-cta-contained-btn   - card-button-download.html
 
 .btn-download {
@@ -22,14 +21,6 @@
 
 .btn-download:hover {
     color: var(--color-violet-800);
-}
-
-.btn-scroll-top {
-    @apply text-white text-center opacity-75 rounded-sm bg-gray-800 mt-2 w-4 h-4 inline-flex items-center justify-center;
-
-    svg {
-        @apply w-3 h-3;
-    }
 }
 
 .card .card-cta-contained-btn {
