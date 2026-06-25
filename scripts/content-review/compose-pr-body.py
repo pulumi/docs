@@ -25,8 +25,12 @@ What the composer renders (facts — never the model's to invent):
     the authoritative `make lint` result (so lint status is never self-reported).
 
 What stays the model's (left as `<TODO>`): which stub is a real fix, the
-correction prose, the one-line deferral reasons, and the screenshot / rendered
-observations.
+correction prose, and the one-line deferral reasons. The "Screenshot check" and
+"Rendered content" sections are filled deterministically (via render-gates) when
+the source provably has nothing to look at — no content images, and no
+content-bearing shortcode/partial/include — and otherwise left as a `<TODO>` for
+the model to run that pass. This is what lets the worker skip the screenshot
+pass and the `make build` + rendered pass on the pages that don't need them.
 
 Degrades gracefully: a missing or errored artifact renders its section in a
 degraded form with a note, never a crash. The draft always contains every
@@ -55,6 +59,12 @@ _spec = importlib.util.spec_from_file_location(
 )
 _rp = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_rp)
+
+# Reuse the render/screenshot gate logic (single source of truth for whether the
+# screenshot and rendered-content passes have anything to look at).
+_spec_g = importlib.util.spec_from_file_location("render_gates", HERE / "render-gates.py")
+_rg = importlib.util.module_from_spec(_spec_g)
+_spec_g.loader.exec_module(_rg)
 
 LINT_PLACEHOLDER = "<!-- LINT-RESULT -->"
 
@@ -219,6 +229,57 @@ def render_deferrals(findings: list[dict], path: str) -> str:
     return head + body + footer
 
 
+def render_screenshot(gates: dict | None) -> str:
+    """Pre-fill the section when the source has no content images; else a TODO.
+
+    Gates default-safe: a missing/None gate falls back to the model-run TODO.
+    """
+    head = "## Screenshot check\n\n"
+    if gates and not gates.get("has_images", True):
+        return head + (
+            "No images. The page source references no screenshots, diagrams, or other "
+            "content images (only the generic shared `meta_image` card, if any), so there "
+            "is nothing to verify. _(Determined from the source; the screenshot pass was "
+            "skipped.)_"
+        )
+    n = (gates or {}).get("image_count")
+    hint = f" {n} image reference(s) detected in source." if n else ""
+    return head + (
+        f"<TODO: per image — current / stale (what differs) / unverifiable; "
+        f'or "No images." if the page references none.{hint}>'
+    )
+
+
+def render_rendered_content(gates: dict | None) -> str:
+    """Pre-fill "Skipped" when the source has no content-bearing includes.
+
+    Plain prose, code tabs, callouts, and stepper chrome assemble no content the
+    source markdown doesn't already show, so there is no render-time residue to
+    check and no `make build` needed. A non-chrome shortcode (or a missing gate)
+    falls back to the model-run TODO.
+    """
+    head = "## Rendered content\n\n"
+    if gates and not gates.get("needs_render_pass", True):
+        sc = gates.get("shortcodes") or []
+        used = (
+            "only render-safe chrome (" + ", ".join(f"`{s}`" for s in sc) + ")"
+            if sc else "no shortcodes, partials, or includes"
+        )
+        return head + (
+            f"Skipped — the page source uses {used}, so the rendered HTML and markdown "
+            "carry no content beyond the source prose (nothing data-sourced or "
+            "partial-included to fact-check). No `make build` or rendered pass required. "
+            "_(Determined from the source.)_"
+        )
+    trig = ", ".join(f"`{s}`" for s in (gates or {}).get("nonchrome_shortcodes", [])[:8])
+    hint = f" Content-bearing shortcode(s) requiring the pass: {trig}." if trig else ""
+    return head + (
+        f"<TODO: run `make build`, then check the HTML view for render-time content "
+        f"(shortcode/partial/`data`-sourced) and verify any checkable claims in that residue, "
+        f"or confirm clean.{hint}>"
+    )
+
+
 def render_verification(artifacts: dict, errors: list[str]) -> str:
     lines = ["## Verification\n\n"]
     # The re-lint gate swaps LINT_PLACEHOLDER for the authoritative result. The
@@ -269,7 +330,7 @@ def artifact_inventory(verified, vale, readthrough, frontmatter) -> dict:
     return inv
 
 
-def compose(queue: dict, verified, vale, readthrough, frontmatter) -> str:
+def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -> str:
     path = ((queue.get("articles") or [{}])[0]).get("path", "")
     findings, errors = collect(verified, vale, readthrough, frontmatter)
     inv = artifact_inventory(verified, vale, readthrough, frontmatter)
@@ -281,11 +342,9 @@ def compose(queue: dict, verified, vale, readthrough, frontmatter) -> str:
         "",
         render_deferrals(findings, path).rstrip(),
         "",
-        "## Screenshot check\n\n<TODO: per image — current / stale (what differs) / unverifiable; "
-        "or \"No images.\" if the page references none.>",
+        render_screenshot(gates).rstrip(),
         "",
-        "## Rendered content\n\n<TODO: HTML view + customer-facing markdown view — note any leaked "
-        "shortcode syntax or shared-source residue, or confirm clean.>",
+        render_rendered_content(gates).rstrip(),
         "",
         render_verification(inv, errors).rstrip(),
         "",
@@ -305,12 +364,31 @@ def main() -> int:
 
     root = Path(args.repo_root)
     queue = json.loads(Path(args.queue).read_text())
+
+    # Compute the screenshot/rendered gates from the article source. Default-safe:
+    # an unreadable source leaves gates=None, and the renderers fall back to the
+    # model-run TODO (both passes run) rather than skipping anything.
+    gates = None
+    src = (queue.get("articles") or [{}])[0].get("path", "")
+    try:
+        if src and (root / src).is_file():
+            gates = _rg.analyze((root / src).read_text())
+            print(
+                f"compose-pr-body: gates — has_images={gates['has_images']}, "
+                f"needs_render_pass={gates['needs_render_pass']} "
+                f"(shortcodes: {', '.join(gates['shortcodes']) or 'none'})",
+                file=sys.stderr,
+            )
+    except OSError:
+        gates = None
+
     body = compose(
         queue,
         read_json(root / args.verified_claims),
         read_json(root / args.vale_findings),
         read_json(root / args.readthrough),
         read_json(root / args.frontmatter),
+        gates,
     )
     if args.out:
         Path(args.out).write_text(body)

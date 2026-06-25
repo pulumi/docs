@@ -261,12 +261,19 @@ jobs:
                description and continue with what you have.)
             3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
                goes in the PR description's "Findings not applied" section.
-            4. Run the screenshot/UI verification pass (flag-only).
-            5. Run `make lint` and `make build`; resolve anything they
-               surface or drop the offending change.
-            6. Run the rendered content pass over the built page — both
-               the HTML view and the customer-facing markdown view
-               (`public/<url>/index.html` and `index.md`) — per the skill.
+            4. The "Screenshot check" section of `.pr-body-draft.md` is
+               pre-filled when the page references no content images. Run the
+               screenshot/UI pass (flag-only) and fill the section ONLY if it
+               still contains a `<TODO>`; otherwise leave the composed text.
+            5. Run `make lint`; resolve anything it surfaces or drop the
+               offending change. Do NOT run `make build` here — build is left
+               to the PR's normal CI (step 6 runs it only when required).
+            6. The "Rendered content" section is pre-filled "Skipped" when the
+               page uses no content-bearing shortcode/partial/include. ONLY if
+               it still contains a `<TODO>`: run `make build`, then run the
+               rendered content pass over both the HTML and customer-facing
+               markdown views (`public/<url>/index.html` and `index.md`) per
+               the skill, and fill the section.
             7. If you applied any fix, open a **draft** PR whose body is
                `.pr-body-draft.md` (composed for you at the repo root — the
                assemble-then-judge model, like the pre-merge review). Open it as
