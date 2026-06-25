@@ -254,17 +254,22 @@ def main() -> int:
         check(all("attempts" in a for a in full["articles"]), "every queue entry carries attempts")
 
         print("repo strategic-tiers.yaml parses and excludes generated trees")
-        proc = subprocess.run(
-            [sys.executable, str(SCRIPT), "--no-gh", "--today", TODAY,
-             "--tiers", str(REPO_TIERS), "--ledger-dir", str(tmp / "empty"),
-             "--paths", "content/docs/iac/cli/commands/pulumi.md", "--dry-run"],
-            capture_output=True, text=True,
-        )
-        if proc.returncode == 0:
-            entry = json.loads(proc.stdout)["articles"][0]
-            check(entry["tier"] == 0, "real tiers file marks CLI commands tier 0")
-        else:
-            check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+        # CLI command reference and SDK API reference are both generated -> tier 0.
+        for gen_path, label in [
+            ("content/docs/iac/cli/commands/pulumi.md", "CLI commands"),
+            ("content/docs/reference/pkg/python/pulumi/_index.md", "SDK API reference"),
+        ]:
+            proc = subprocess.run(
+                [sys.executable, str(SCRIPT), "--no-gh", "--today", TODAY,
+                 "--tiers", str(REPO_TIERS), "--ledger-dir", str(tmp / "empty"),
+                 "--paths", gen_path, "--dry-run"],
+                capture_output=True, text=True,
+            )
+            if proc.returncode == 0:
+                entry = json.loads(proc.stdout)["articles"][0]
+                check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
+            else:
+                check("tiers" not in proc.stderr.lower(), "real tiers file parses")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
