@@ -118,6 +118,44 @@ check("degraded inventory marks missing", ".verified-claims.json`: missing" in b
 errd = c.compose(QUEUE, {"verdicts": [], "errors": ["verify-claims failed"]}, [], {"ran": False, "findings": []}, {})
 check("errored artifact surfaced", "Artifacts that failed" in errd and "verified-claims" in errd)
 
+
+# ---- gated screenshot / rendered sections -----------------------------------
+#
+# When the source provably has nothing to look at, the composer fills these
+# sections deterministically (no <TODO>) so the worker skips the pass + build.
+
+def _between(text: str, start: str, end: str) -> str:
+    return text.split(start, 1)[1].split(end, 1)[0]
+
+# Skip case: no images, only render-safe chrome.
+skip = c.compose(QUEUE, None, None, None, None,
+                 {"has_images": False, "needs_render_pass": False,
+                  "shortcodes": ["notes"], "nonchrome_shortcodes": [], "image_count": 0})
+shot_skip = _between(skip, "## Screenshot check", "## Rendered content")
+rend_skip = _between(skip, "## Rendered content", "## Verification")
+check("gated screenshot states No images", "No images." in shot_skip)
+check("gated screenshot carries no <TODO>", "<TODO" not in shot_skip)
+check("gated rendered states Skipped", "Skipped —" in rend_skip)
+check("gated rendered names the safe shortcode", "`notes`" in rend_skip)
+check("gated rendered carries no <TODO>", "<TODO" not in rend_skip)
+
+# Run case: an image and a content-bearing shortcode -> both passes still TODO.
+run = c.compose(QUEUE, None, None, None, None,
+                {"has_images": True, "needs_render_pass": True,
+                 "shortcodes": ["chooser", "langfile"], "nonchrome_shortcodes": ["langfile"],
+                 "image_count": 2})
+shot_run = _between(run, "## Screenshot check", "## Rendered content")
+rend_run = _between(run, "## Rendered content", "## Verification")
+check("ungated screenshot keeps <TODO>", "<TODO" in shot_run)
+check("ungated screenshot hints image count", "2 image reference(s)" in shot_run)
+check("ungated rendered keeps <TODO>", "<TODO" in rend_run)
+check("ungated rendered names the trigger shortcode", "`langfile`" in rend_run)
+
+# Default-safe: no gate info -> both passes run (TODO), nothing silently skipped.
+nogate = c.compose(QUEUE, None, None, None, None, None)
+check("no gate -> screenshot TODO", "<TODO" in _between(nogate, "## Screenshot check", "## Rendered content"))
+check("no gate -> rendered TODO", "<TODO" in _between(nogate, "## Rendered content", "## Verification"))
+
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
     sys.exit(1)

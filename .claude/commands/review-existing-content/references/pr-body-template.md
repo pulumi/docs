@@ -37,13 +37,19 @@ For the judgment-level items above, run `/glow-up <path>`.
 
 ## Screenshot check
 
-Per image: current / stale (what differs) / unverifiable. Note any aging
-reference screenshots (see `references/screenshot-verification.md`).
+Gated — the composer pre-fills "No images." when the source references no
+content images, and you leave it as-is. Only when this section carries a
+`<TODO>` (the page has images) do you run the pass and report per image:
+current / stale (what differs) / unverifiable, plus any aging reference
+screenshots (see `references/screenshot-verification.md`).
 
 ## Rendered content
 
-Outcomes of the rendered pass — residue claims checked in the HTML view, the
-markdown view's shortcode-template status, and any shared-source
+Gated — the composer pre-fills "Skipped" when the source uses no content-bearing
+shortcode/partial/include (it names the triggering shortcode when one is
+present). Only when this section carries a `<TODO>` do you run `make build` and
+the rendered pass, then report its outcomes — residue claims checked in the HTML
+view, the markdown view's shortcode-template status, and any shared-source
 (shortcode / partial / data) findings with their page-reach
 ("also rendered on N other pages").
 

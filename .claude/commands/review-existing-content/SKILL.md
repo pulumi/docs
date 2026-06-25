@@ -155,24 +155,34 @@ Editing guardrails:
   them, but be defensive.
 - Never add the `automation/merge` label to anything.
 
-### 4. Screenshot / UI pass
+### 4. Screenshot / UI pass (only when the page has images)
 
-Follow `references/screenshot-verification.md` for every image the article
-references. Verified-stale screenshots are **flagged in the PR description**
-(Screenshot check section), never regenerated or deleted by you.
+This pass is **gated**: the workflow pre-fills the PR's "Screenshot check"
+section with "No images." when the source references no content images (a
+deterministic source check — the shared `meta_image` card doesn't count). Run
+this pass only when that section still carries a `<TODO>`. When you do, follow
+`references/screenshot-verification.md` for every image the article references.
+Verified-stale screenshots are **flagged in the PR description** (Screenshot
+check section), never regenerated or deleted by you.
 
-### 5. Validate and render
+### 5. Validate
 
-`make lint` and `make build` must pass on the branch. Fix what they surface;
-if you cannot, drop the offending change rather than shipping a broken
-build. The build also produces the rendered views the next step reads.
+`make lint` must pass on the branch. Fix what it surfaces; if you cannot, drop
+the offending change rather than shipping a lint failure. **Do not run `make
+build` here** — the full build is left to the PR's normal CI, and step 6 runs it
+only on the pages that actually need the rendered pass.
 
-### 6. Rendered content pass (the customer-facing views)
+### 6. Rendered content pass (only when the page assembles render-time content)
 
 Source review misses content the page assembles at render time — shared
-snippets from shortcodes, values from `data/` files, partial-driven
-sections. The customer sees the assembled page, so check both rendered
-views `make build` just produced:
+snippets from shortcodes, values from `data/` files, partial-driven sections.
+But most docs pages assemble nothing the source doesn't already show (plain
+prose, code tabs, callouts, stepper chrome), so this pass is **gated** too: the
+workflow pre-fills the "Rendered content" section with "Skipped" when the source
+uses no content-bearing shortcode/partial/include, and leaves a `<TODO>` only
+when one is present (it names the triggering shortcode). Run this pass only when
+that `<TODO>` is there. When you do, first run `make build` (it produces the
+rendered views), then check both:
 
 **HTML view** — `public/<url path>/index.html`:
 
@@ -202,8 +212,8 @@ render through their `layouts/shortcodes/*.markdown.md` templates):
    right rendering is debatable, it's a Findings-not-applied entry, not a
    fix.
 
-If this pass applied any fix, re-run `make lint && make build` before
-opening the PR.
+If this pass applied any fix, re-run `make build` and then `make lint` (as
+separate commands) before opening the PR.
 
 ### 7. PR — only when you applied a fix, opened as a draft
 
