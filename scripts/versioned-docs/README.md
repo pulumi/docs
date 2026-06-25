@@ -23,6 +23,12 @@ per-deploy origin sync, so there is **no impact on site build/deploy time**.
   banner/dropdown on archived pages and (via `layouts/partials/docs/cli-command-banner.html`)
   on live CLI pages. All styling lives in those two files, so the chrome can be restyled
   **without republishing archives**. The loader fails silent when no manifest exists.
+- **CLI archive theme** — CLI snapshots are Hugo-rendered site pages, so they need the site
+  CSS. Rather than vendoring a frozen per-version copy, every CLI archive references one
+  shared, permanent contract URL `/css/versioned-docs-archive.css`, re-derived from the docs
+  CSS bundle on every site build (`scripts/build-site.sh`). Updating that one file re-themes
+  the **entire** CLI back-catalog at once. The heavy site JS is dropped from snapshots (the
+  nav is trimmed to a static list), so archives carry no fingerprinted `/js/` that would rot.
 
 ## Scripts
 
@@ -30,7 +36,7 @@ per-deploy origin sync, so there is **no impact on site build/deploy time**.
 |---|---|
 | `inject-version-switcher.sh` | Insert loader + (archive mode) noindex/canonical into generated HTML; strips any pre-existing canonical/robots. |
 | `publish-version.sh` | Refuse-overwrite, inject, sync immutable, manifest read-modify-write, invalidate. |
-| `snapshot-cli-docs.sh` | Turn a built `public/docs/iac/cli/commands/` into a self-contained snapshot (vendor fingerprinted css/js, rewrite intra-links) and publish. |
+| `snapshot-cli-docs.sh` | Turn a built `public/docs/iac/cli/commands/` into a snapshot (point css at the shared `/css/versioned-docs-archive.css` theme bundle, drop the site js, trim the nav, rewrite intra-links) and publish. `--out-dir DIR` writes the finished snapshot locally instead of publishing (dry run). |
 | `redact-version.sh` | Delete a version's objects (all S3 versions) + drop it from the manifest + invalidate. |
 | `assert-head-tag.sh` | CI guard: every generated page has a `</head>`/`</body>` injection point. |
 

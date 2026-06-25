@@ -44,11 +44,14 @@ while [[ $# -gt 0 ]]; do
     --distribution-id) DISTRIBUTION_ID="$2"; shift 2;;
     --site)            SITE="$2"; shift 2;;
     --force)           FORCE="--force"; shift;;
+    --out-dir)         OUT_DIR="$2"; shift 2;;
     *) echo "snapshot-cli-docs: unknown arg: $1" >&2; exit 2;;
   esac
 done
+OUT_DIR="${OUT_DIR:-}"
 
-[[ -n "$VERSION" && -n "$BUCKET" ]] || { echo "snapshot-cli-docs: --version and --bucket are required" >&2; exit 2; }
+[[ -n "$VERSION" ]] || { echo "snapshot-cli-docs: --version is required" >&2; exit 2; }
+[[ -n "$BUCKET" || -n "$OUT_DIR" ]] || { echo "snapshot-cli-docs: --bucket is required (or --out-dir for a local dry run)" >&2; exit 2; }
 [[ "$VERSION" == v* ]] || VERSION="v$VERSION"
 [[ -n "$LIVE_ROOT" ]] || LIVE_ROOT="/${COMMANDS_PATH}/"
 SRC_DIR="${PUBLIC%/}/${COMMANDS_PATH}"
@@ -73,25 +76,32 @@ replace_in_html() { # $1=needle $2=replacement
   find "$SNAP" -type f -name '*.html' -exec sed -i "s#${n}#${r}#g" {} +
 }
 
-# 3a. Vendor fingerprinted CSS/JS referenced from the HTML.
-mapfile -t ASSETS < <(find "$SNAP" -type f -name '*.html' -exec cat {} + \
-  | grep -oE '(href|src)="(/css/[^"]+\.css|/js/[^"]+\.js)"' \
-  | sed -E 's/.*"(\/[^"]+)".*/\1/' | sort -u)
-for a in "${ASSETS[@]}"; do
-  src="${PUBLIC%/}${a}"
-  if [[ -f "$src" ]]; then
-    dest="${SNAP}/_vassets${a}"
-    mkdir -p "$(dirname "$dest")"
-    cp "$src" "$dest"
-    replace_in_html "\"${a}\"" "\"${VERSION_ROOT}/_vassets${a}\""
-  else
-    echo "snapshot-cli-docs: WARNING asset not found, leaving reference live: $a" >&2
-  fi
+# 3a. Theme: point the archive at the SHARED, stable archive theme bundle — a permanent
+# contract URL (/css/versioned-docs-archive.css) served from the main site and refreshed on
+# every site build (see scripts/build-site.sh). The fingerprinted /css/bundle.<id>.css the
+# page was built with lives only in the current atomic origin and vanishes at the next
+# deploy, so it MUST be swapped — and by pointing every version at one shared bundle instead
+# of vendoring a frozen per-version copy, the entire CLI back-catalog re-themes at once when
+# the site does. The bundle's own url(/fonts/…) / url(/images/…) refs stay absolute and
+# resolve against the live site (those paths are stable across deploys).
+ARCHIVE_CSS="/css/versioned-docs-archive.css"
+mapfile -t CSS_REFS < <(find "$SNAP" -type f -name '*.html' -exec cat {} + \
+  | grep -oE 'href="/css/bundle\.[^"]+\.css"' | sed -E 's/.*"(\/[^"]+)".*/\1/' | sort -u)
+for a in "${CSS_REFS[@]}"; do
+  replace_in_html "\"${a}\"" "\"${ARCHIVE_CSS}\""
 done
 
-# Note: the vendored CSS keeps its url(/fonts/…) and url(/images/…) refs absolute on
-# purpose — those paths are stable across deploys, so they resolve against the live site
-# and we avoid re-copying identical font/icon sets into every version.
+# 3b. Drop the site JS <script src="/js/…"> bundles. CLI archives are static frozen pages:
+# the left nav is trimmed to a static version list (step 4b), so the dynamic nav/search the
+# site bundle drives is unnecessary — and that bundle lazy-loads fingerprinted /js/chunk-*.js
+# that the snapshot never vendors, so it would 404 once the main site rotates. Stripping ALL
+# /js/ src tags (not a fixed name list) keeps future-added bundles from sneaking back in. The
+# evergreen selector loader (/js/versioned-docs.js) is added LATER by publish-version.sh, so
+# it isn't present here to strip; external CDN scripts use absolute URLs and are left intact.
+# (A consent-manager script is injected by inline JS rather than a src tag; it simply no-ops
+# if its fingerprinted file 404s, so it's harmless to leave.)
+find "$SNAP" -type f -name '*.html' -exec sed -i -E \
+  's#<script[^>]*\ssrc="/js/[^"]+\.js"[^>]*>\s*</script>##g' {} +
 
 # 4. Rewrite intra-snapshot command links to the versioned prefix.
 replace_in_html "${LIVE_ROOT}" "${VERSION_ROOT}/"
@@ -102,9 +112,19 @@ replace_in_html "${LIVE_ROOT}" "${VERSION_ROOT}/"
 python3 "$SCRIPT_DIR/trim-cli-nav.py" --src "$SNAP" \
   --version-root "${VERSION_ROOT}/" --live-root "${LIVE_ROOT}"
 
-# 5. Publish (publish-version.sh injects selector/noindex/canonical + uploads + manifest).
-"$SCRIPT_DIR/publish-version.sh" --tool "$TOOL" --version "$VERSION" --src "$SNAP" \
-  --live-root "$LIVE_ROOT" --bucket "$BUCKET" --label "$LABEL" --site "$SITE" \
-  ${DISTRIBUTION_ID:+--distribution-id "$DISTRIBUTION_ID"} ${FORCE:+$FORCE}
+# 5. Either write the finished snapshot to a local dir for inspection (--out-dir dry run,
+# injecting the selector tags itself so the preview matches what gets published), or hand it
+# to publish-version.sh (selector/noindex/canonical inject + upload + manifest).
+if [[ -n "$OUT_DIR" ]]; then
+  "$SCRIPT_DIR/inject-version-switcher.sh" --mode archive --tool "$TOOL" --version "$VERSION" \
+    --live-root "$LIVE_ROOT" --src "$SNAP" --site "$SITE"
+  mkdir -p "$OUT_DIR"
+  cp -a "$SNAP/." "$OUT_DIR/"
+  echo "snapshot-cli-docs: DRY RUN — wrote snapshot to $OUT_DIR (no publish)"
+else
+  "$SCRIPT_DIR/publish-version.sh" --tool "$TOOL" --version "$VERSION" --src "$SNAP" \
+    --live-root "$LIVE_ROOT" --bucket "$BUCKET" --label "$LABEL" --site "$SITE" \
+    ${DISTRIBUTION_ID:+--distribution-id "$DISTRIBUTION_ID"} ${FORCE:+$FORCE}
+fi
 
 echo "snapshot-cli-docs: DONE — $TOOL $VERSION"
