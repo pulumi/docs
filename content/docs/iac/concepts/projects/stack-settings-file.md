@@ -64,7 +64,7 @@ The `config` section contains all configuration key-value pairs for the stack. C
 
 Configuration values can be:
 
-- **Plain text**: Simple string, number, or boolean values
+- **Plain text**: String, number, or boolean values
 - **Encrypted secrets**: Values that are encrypted using the stack's secrets provider (marked with `secure:` prefix in the YAML)
 - **Structured data**: Complex objects or arrays
 

@@ -31,7 +31,7 @@ getKubeconfig(args?: Cluster.GetKubeconfigArgs): Output<Cluster.GetKubeconfigRes
 <pulumi-choosable type="language" values="csharp">
 
 ```csharp
-public Output<string> GetKubeconfig(Cluster.GetKubeconfigArgs? args)
+public Output<string> GetKubeconfig(ClusterGetKubeconfigArgs? args = null)
 ```
 
 </pulumi-choosable>
