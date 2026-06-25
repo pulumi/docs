@@ -307,8 +307,6 @@ bucket_object = s3.BucketObject(
 
 {{% choosable language go %}}
 
-Create a new [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself:
-
 ```go
 // Other resources ...
 
@@ -327,8 +325,6 @@ if err != nil {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-
-Create a new [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) right after creating the bucket itself:
 
 ```csharp
 // Other resources ...
@@ -398,7 +394,7 @@ resources:
 
 This uploads the `index.html` file to your bucket using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
-The bucket object also declares that it [`dependsOn`](/docs/concepts/options/dependson/) the other resources. That is because
+The bucket object also declares that it [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) the other resources. That is because
 those other resources need to be created first so that AWS permits the object's `public-acl` grant. Pulumi usually tracks dependencies
 automatically but these ones are invisible to Pulumi because those specific resources cause side-effects within AWS.
 
