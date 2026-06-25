@@ -7,9 +7,9 @@ page_title: "What Is Policy as Code?"
 authors: ["joe-duffy"]
 ---
 
-**Policy as code is the practice of defining and enforcing security, compliance, cost, and operational governance rules as version-controlled, testable code — evaluated automatically in CI/CD pipelines and at deployment time — rather than through manual reviews, console clicks, or static documents.** The same engineering discipline that brought infrastructure under code-based control (version control, testing, peer review, automation) now applies to the rules that govern it.
+**Policy as code is the practice of defining and enforcing security, compliance, cost, and operational governance rules as version-controlled, testable code, evaluated automatically in CI/CD pipelines and at deployment time, rather than through manual reviews, console clicks, or static documents.** The same engineering discipline that brought infrastructure under code-based control (version control, testing, peer review, automation) now applies to the rules that govern it.
 
-If you have ever wished that your compliance policies could be reviewed in a pull request, tested in a pipeline, and enforced automatically before a developer ever touches the cloud console, that is precisely what policy as code delivers.
+The practice treats compliance requirements the same way software teams already treat application code: write it, review it, test it, version it, and run it automatically so no step depends on someone remembering to do it.
 
 In this article, we'll cover the key questions about policy as code:
 
@@ -25,17 +25,17 @@ In this article, we'll cover the key questions about policy as code:
 
 ## What is policy as code?
 
-Policy as code applies the same principles that infrastructure as code brought to cloud provisioning — version control, peer review, automated testing, and continuous enforcement — to the governance rules that control what infrastructure can be created and how it must be configured.
+Policy as code applies the same principles that infrastructure as code brought to cloud provisioning (version control, peer review, automated testing, and continuous enforcement) to the governance rules that control what infrastructure can be created and how it must be configured.
 
 Before policy as code, governance happened through spreadsheets of controls, manual reviewer checklists, or ad-hoc scripts that someone ran (or forgot to run) before a change reached production. As teams scaled, that model broke. A single misconfigured S3 bucket or open security group slips through, and the breach that follows can cost millions of dollars and months of recovery work.
 
-Policy as code emerged alongside [infrastructure as code](/what-is/what-is-infrastructure-as-code/) in the mid-2010s. HashiCorp introduced Sentinel in 2017 to enforce governance across Terraform and described the goal plainly: "an automated way to check in minutes or seconds if requirements are met," rather than waiting for the next audit cycle. The Cloud Native Computing Foundation (CNCF) donated Open Policy Agent (OPA) in 2018, giving the ecosystem an open-source reference implementation that could apply policies across any layer of the stack — Kubernetes admission, API gateways, CI/CD pipelines, and IaC deployments alike.
+Policy as code emerged alongside [infrastructure as code](/what-is/what-is-infrastructure-as-code/) in the mid-2010s. HashiCorp introduced Sentinel in 2017 to enforce governance across Terraform and described the goal plainly: "an automated way to check in minutes or seconds if requirements are met," rather than waiting for the next audit cycle. The Cloud Native Computing Foundation (CNCF) donated Open Policy Agent (OPA) in 2018, giving the ecosystem an open-source reference implementation that could apply policies across any layer of the stack: Kubernetes admission, API gateways, CI/CD pipelines, and IaC deployments alike.
 
 The core idea is simple: write a rule in code, commit it to a repository, run it automatically, and get a pass or fail result before anything reaches production. The rule travels with your codebase, improves through code review, and generates an audit trail that a compliance team can verify.
 
 ## Why does policy as code matter?
 
-Cloud misconfigurations are the leading cause of cloud security incidents. Gartner and the Cloud Security Alliance have found that [misconfigurations drive 80% of data security breaches](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), and that up to 99% of cloud failures trace back to human error. The average cost of a data breach has reached [$4.88 million globally and $10.22 million in the United States](https://www.ibm.com/reports/data-breach), according to IBM's 2024 Cost of a Data Breach report. Even as IaC adoption has grown — Datadog's State of DevSecOps 2024 found that 71% of AWS organizations use IaC — 38% of those organizations still used ClickOps in all accounts, including production, leaving a gap where misconfigurations can appear without any automated check.
+Cloud misconfigurations are the leading cause of cloud security incidents. Gartner and the Cloud Security Alliance have found that [misconfigurations drive 80% of data security breaches](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), and that up to 99% of cloud failures trace back to human error. The average cost of a data breach has reached [$4.88 million globally and $10.22 million in the United States](https://www.ibm.com/reports/data-breach), according to IBM's 2024 Cost of a Data Breach report. Even as IaC adoption has grown (Datadog's State of DevSecOps 2024 found that 71% of AWS organizations use IaC), 38% of those organizations still used ClickOps in all accounts, including production, leaving a gap where misconfigurations can appear without any automated check.
 
 Manual policy review doesn't scale. A security team reviewing hundreds of pull requests for infrastructure changes will miss things. More importantly, by the time a human reviewer catches a misconfigured resource, a developer has already created it, someone else has built on top of it, and the blast radius of changing it has grown. Policy as code shifts enforcement left, to the same moment the infrastructure code is being written and previewed, so violations are caught before they become deployed resources.
 
@@ -65,7 +65,7 @@ Policy as code provides five categories of benefits that address the practical p
 
 **Compliance and security.** Security policies prevent the most common misconfiguration patterns. No S3 bucket should have public access enabled. No database should be exposed to the open internet. No security group should allow ingress from 0.0.0.0/0. These rules are trivial to express in code and can be enforced on every deployment across every team, eliminating the class of incidents that results from one engineer who didn't know the rule.
 
-**Early validation.** Policy evaluation during `pulumi preview` means developers see violations the moment they write the code, not after the resource exists in production. The feedback loop is the same as a failed unit test — immediate, local, and easy to fix.
+**Early validation.** Policy evaluation during `pulumi preview` means developers see violations the moment they write the code, not after the resource exists in production. The feedback loop is the same as a failed unit test: immediate, local, and easy to fix.
 
 **Best practices as versioned, testable code.** Policy packs can be published, versioned, and shared across an organization like libraries. A central platform team maintains a canonical set of compliance rules; individual product teams consume them. Policies can have unit tests, just like application code, so regressions are caught before new rules are deployed.
 
@@ -88,13 +88,13 @@ Several mature tools now handle policy as code across different parts of the sta
 | Open Policy Agent (OPA) | Rego | General-purpose: Kubernetes, APIs, CI/CD, Terraform | Open source (Apache 2.0); CNCF graduated Feb 2021 | Created by Styra; donated to CNCF; community maintained |
 | HashiCorp Sentinel | Sentinel (proprietary DSL) | HashiCorp suite (HCP Terraform, HCP Vault Dedicated, HCP Consul, Nomad Enterprise) | Proprietary; requires paid HCP Terraform Standard+ | HashiCorp (now IBM) |
 | Kyverno | YAML + CEL | Kubernetes-native (validate, mutate, generate, cleanup) | Open source; CNCF graduated Mar 2026 | Created by Nirmata; donated to CNCF |
-| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud — 170+ providers — during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
+| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (170+ providers) during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
 
 ## How does Pulumi implement policy as code?
 
 Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platform](/docs/insights/policy/). It runs during every `pulumi preview` and `pulumi up`, evaluating resources against a set of policies before any change reaches the cloud.
 
-**Languages you already know.** Policies are written in TypeScript, JavaScript, Python, or Rego. There is no new language to learn. Engineers write policy functions the same way they write the infrastructure code itself — with real loops, conditionals, helper functions, unit tests, and package management.
+**Languages you already know.** Policies are written in TypeScript, JavaScript, Python, or Rego. There is no new language to learn. Engineers write policy functions the same way they write the infrastructure code itself, using the same loops, conditionals, helper functions, unit tests, and package management.
 
 **Policy hierarchy.** Pulumi Policies organizes governance through three levels. Individual policies express a single rule. Policy packs group related policies into a deployable unit (for example, a "CIS AWS Foundations" pack). Policy groups apply a pack at org-wide, project, or stack scope, making enforcement consistent without requiring every team to opt in.
 
@@ -105,13 +105,13 @@ Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platfo
 - **Remediate**: the violation is corrected automatically in the resource configuration before deployment proceeds.
 - **Disabled**: the policy is skipped entirely. Use this to temporarily exempt a rule without removing it from the pack.
 
-**Automatic remediation.** The `remediate` enforcement level uses a `remediateResource` function that Pulumi calls when a policy is violated. Instead of failing the deployment, Pulumi corrects the configuration in place — for example, enabling encryption on a storage bucket that the developer left unencrypted — and proceeds. This is particularly valuable for rules where the fix is deterministic and the goal is adoption rather than blockage.
+**Automatic remediation.** The `remediate` enforcement level uses a `remediateResource` function that Pulumi calls when a policy is violated. Instead of failing the deployment, Pulumi corrects the configuration in place (enabling encryption on a storage bucket that the developer left unencrypted, for example) and proceeds. This is particularly valuable for rules where the fix is deterministic and the goal is adoption rather than blockage.
 
-**Audit mode for existing resources.** Pulumi Policies integrates with Pulumi Insights to evaluate resources that are already running — including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
+**Audit mode for existing resources.** Pulumi Policies integrates with Pulumi Insights to evaluate resources that are already running, including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
 
 **Pre-built compliance packs.** Pulumi publishes pre-built policy packs for CIS 8.1 (covering AWS, Azure, and Google Cloud), CIS Kubernetes, HITRUST CSF 11.5, NIST SP 800-53 (AWS), PCI DSS v4.0.1 (AWS), and Pulumi Best Practices. These packs can be used as-is or extended with organization-specific rules.
 
-**Open source core.** The Pulumi Policies SDK is open source under Apache 2.0 at [github.com/pulumi/pulumi-policy](https://github.com/pulumi/pulumi-policy). Local enforcement via `--policy-pack` — including advisory, mandatory, and remediate modes — is free. Org-wide policy group management in Pulumi Cloud requires a paid plan.
+**Open source core.** The Pulumi Policies SDK is open source under Apache 2.0 at [github.com/pulumi/pulumi-policy](https://github.com/pulumi/pulumi-policy). Local enforcement via `--policy-pack` (including advisory, mandatory, and remediate modes) is free. Org-wide policy group management in Pulumi Cloud requires a paid plan.
 
 > "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less."
 >
@@ -129,7 +129,7 @@ Getting started with Pulumi Policies takes a few minutes if you already have Pul
 
 4. **Publish the policy pack.** When the pack is ready to share, run `pulumi policy publish` from within the policy pack directory. Pulumi infers the organization from your logged-in context and makes the pack available to your organization.
 
-5. **Enable org-wide enforcement.** Run `pulumi policy enable <your-org>/<pack-name> latest` to apply the pack across all stacks in your organization. Pulumi Cloud automatically downloads the pack for every deployment — no `--policy-pack` flag required on individual runs.
+5. **Enable org-wide enforcement.** Run `pulumi policy enable <your-org>/<pack-name> latest` to apply the pack across all stacks in your organization. Pulumi Cloud automatically downloads the pack for every deployment, with no `--policy-pack` flag required on individual runs.
 
 6. **Graduate to mandatory enforcement.** Start in `advisory` mode to understand the scope of violations, then promote critical rules to `mandatory` as teams address them. Use the `remediate` level for rules where automatic correction is appropriate.
 
@@ -139,7 +139,7 @@ The [Pulumi Policies documentation](/docs/insights/policy/) and [policy packs gu
 
 ### Spear AI: 18-month ATO reduced to 3 months
 
-Spear AI builds AI-powered software for the United States Navy and needs to operate in AWS commercial, AWS GovCloud, air-gapped environments, and naval edge deployments — each with strict security controls. Achieving Authorization to Operate (ATO) is a multi-year process of proving to military auditors that every resource meets the required security posture.
+Spear AI builds AI-powered software for the United States Navy and needs to operate in AWS commercial, AWS GovCloud, air-gapped environments, and naval edge deployments, each with strict security controls. Achieving Authorization to Operate (ATO) is a multi-year process of proving to military auditors that every resource meets the required security posture.
 
 Spear AI used Pulumi Policies to define their security controls as policy packs, then gave the auditors direct access to those packs. As Michael Hunter, co-founder and CEO of Spear AI, described it:
 
@@ -177,7 +177,7 @@ It depends on the tool. OPA uses Rego, a purpose-built query language. HashiCorp
 
 ### What is the difference between advisory and mandatory enforcement?
 
-Advisory enforcement surfaces a violation as a warning but allows the deployment to proceed. It is the appropriate mode when rolling out a new policy, because it shows which existing resources would be affected without breaking anyone's workflow. Mandatory enforcement blocks the deployment when a violation is detected. Security-critical rules — such as "no database may be publicly exposed" — belong in mandatory mode. Most teams start new policies in advisory mode and promote them to mandatory after confirming the blast radius.
+Advisory enforcement surfaces a violation as a warning but allows the deployment to proceed. It is the appropriate mode when rolling out a new policy, because it shows which existing resources would be affected without breaking anyone's workflow. Mandatory enforcement blocks the deployment when a violation is detected. Security-critical rules, such as "no database may be publicly exposed," belong in mandatory mode. Most teams start new policies in advisory mode and promote them to mandatory after confirming the blast radius.
 
 ### Can policy as code automatically fix violations?
 
@@ -185,7 +185,7 @@ Yes, some systems support automatic remediation. Pulumi Policies' `remediate` en
 
 ### Does policy as code work with Terraform or existing cloud resources?
 
-Yes. Pulumi Policies integrates with Pulumi Insights to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles — not just resources managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
+Yes. Pulumi Policies integrates with Pulumi Insights to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles, and not only those managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
 
 ### What is the difference between OPA, Sentinel, and Kyverno?
 
@@ -197,11 +197,11 @@ The right tool depends on your stack. For Kubernetes-focused teams that want to 
 
 ### Is Pulumi Policies free?
 
-Local enforcement via the `--policy-pack` flag — including advisory, mandatory, and remediate modes — is free with any Pulumi project. The Pulumi Policies SDK itself is open source under Apache 2.0. Org-wide policy group management in Pulumi Cloud, which automatically applies packs to all stacks across an organization, requires a paid plan. Pre-built compliance packs (CIS, NIST, PCI DSS, HITRUST) are included for organizations on qualifying plans.
+Local enforcement via the `--policy-pack` flag (including advisory, mandatory, and remediate modes) is free with any Pulumi project. The Pulumi Policies SDK itself is open source under Apache 2.0. Org-wide policy group management in Pulumi Cloud, which automatically applies packs to all stacks across an organization, requires a paid plan. Pre-built compliance packs (CIS, NIST, PCI DSS, HITRUST) are included for organizations on qualifying plans.
 
 ## Learn more
 
-Pulumi Policies enforces policy as code across any cloud — 170+ providers — using TypeScript, Python, or Rego, with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
+Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (170+ providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
 
 Related reading:
 
