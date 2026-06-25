@@ -1,57 +1,75 @@
 {{- $content := . -}}
-{{- /* Phase 1: Convert Chroma syntax-highlighted HTML to fenced code blocks */ -}}
+{{- /* Phase 1: Convert Chroma syntax-highlighted HTML to fenced code blocks.
+       MUST run globally and FIRST: it establishes the ``` fence structure that the
+       split below depends on. */ -}}
 {{- $content = replaceRE `<div[^>]*>\s*<pre[^>]*><code class="language-([^"]*)"[^>]*>` "```$1\n" $content -}}
 {{- $content = replaceRE `</code></pre>\s*</div>` "\n```\n\n" $content -}}
 {{- $content = replaceRE `<pre[^>]*><code>` "```\n" $content -}}
 {{- $content = replaceRE `</code></pre>` "\n```\n\n" $content -}}
-{{- /* Phase 1b: Strip script, style, and iframe elements (content and all) */ -}}
+{{- /* Phase 1b: Strip script, style, and iframe elements (content and all). Global and
+       before the split: their (?s).*? bodies could contain ```, so removing them first
+       keeps the fence count balanced. */ -}}
 {{- $content = replaceRE `(?s)<script[^>]*>.*?</script>` "" $content -}}
 {{- $content = replaceRE `(?s)<style[^>]*>.*?</style>` "" $content -}}
 {{- $content = replaceRE `<iframe[^>]*/?>` "" $content -}}
-{{- /* Phase 2: Strip all block-level and decorative tags in consolidated passes */ -}}
-{{- $content = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)[^>]*>` "" $content -}}
-{{- $content = replaceRE `(?:<i[^>]*></i>|<input[^>]*>)` "" $content -}}
-{{- $content = replaceRE `<!--\s*markdownlint[^>]*-->` "" $content -}}
-{{- /* Phase 3: Strip deep leading whitespace left by HTML tag removal, preserving
-       indentation inside fenced code blocks. Split on ``` boundaries: even-indexed
-       segments are prose (strip 4+ leading spaces), odd-indexed are code (keep). */ -}}
+{{- /* Phases 2-6 are PROSE-ONLY and must never touch fenced code (doing so stripped
+       <artifactId> tags and collapsed `[ -f` to `[-f`; see issue #19872). Split on ```
+       fence boundaries: even-indexed segments are prose, odd-indexed are code. Prose gets
+       the full transform set; code gets ONLY Chroma <span> stripping (the sole inline
+       cleanup legitimate inside a fence — entities are decoded globally in Phase 8). We
+       rejoin with the literal ``` we split on. This generalizes the fence-aware pattern
+       the old Phase 3 already used for whitespace. */ -}}
 {{- $segments := split $content "```" -}}
 {{- $cleaned := "" -}}
 {{- range $i, $seg := $segments -}}
   {{- if eq (mod $i 2) 0 -}}
-    {{- $cleaned = printf "%s%s" $cleaned (replaceRE `(?m)^[ \t]{4,}` "" $seg) -}}
+    {{- /* ---- PROSE branch ---- */ -}}
+    {{- /* Phase 2: Strip block-level and decorative tags in consolidated passes */ -}}
+    {{- $seg = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)[^>]*>` "" $seg -}}
+    {{- $seg = replaceRE `(?:<i[^>]*></i>|<input[^>]*>)` "" $seg -}}
+    {{- $seg = replaceRE `<!--\s*markdownlint[^>]*-->` "" $seg -}}
+    {{- /* Phase 3: Strip deep leading whitespace left by HTML tag removal. Prose only;
+           code indentation lives in the odd segments and is preserved. */ -}}
+    {{- $seg = replaceRE `(?m)^[ \t]{4,}` "" $seg -}}
+    {{- /* Phase 4: Normalize blank runs so inline conversions can match cleanly */ -}}
+    {{- $seg = replaceRE `\n{3,}` "\n\n" $seg -}}
+    {{- /* Phase 5: Convert inline HTML to markdown */ -}}
+    {{- $seg = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $seg -}}
+    {{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
+    {{- $seg = replaceRE `\[\s+` "[" $seg -}}
+    {{- $seg = replaceRE `\s+\]\(` "](" $seg -}}
+    {{- $seg = replaceRE `<code[^>]*>([^<]*)</code>` "`$1`" $seg -}}
+    {{- $seg = replaceRE `<strong>([^<]*)</strong>` "**$1**" $seg -}}
+    {{- $seg = replaceRE `<em>([^<]*)</em>` "*$1*" $seg -}}
+    {{- $seg = replaceRE `<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*/?>` "![$2]($1)" $seg -}}
+    {{- $seg = replaceRE `<img[^>]*alt="([^"]*)"[^>]*src="([^"]*)"[^>]*/?>` "![$1]($2)" $seg -}}
+    {{- $seg = replaceRE `<img[^>]*/?>` "" $seg -}}
+    {{- /* Phase 6: Convert heading tags to markdown headings */ -}}
+    {{- $seg = replaceRE `<h1[^>]*>([^<]*)</h1>` "\n# $1\n" $seg -}}
+    {{- $seg = replaceRE `<h2[^>]*>([^<]*)</h2>` "\n## $1\n" $seg -}}
+    {{- $seg = replaceRE `<h3[^>]*>([^<]*)</h3>` "\n### $1\n" $seg -}}
+    {{- $seg = replaceRE `<h4[^>]*>([^<]*)</h4>` "\n#### $1\n" $seg -}}
+    {{- $seg = replaceRE `<h5[^>]*>([^<]*)</h5>` "\n##### $1\n" $seg -}}
+    {{- $seg = replaceRE `<h6[^>]*>([^<]*)</h6>` "\n###### $1\n" $seg -}}
+    {{- /* Strip remaining anchor tags. Tightened from `</?a[^>]*>` so it matches ONLY real
+           anchors (<a>, <a …attrs>, </a>) and never <artifactId>-style tags. RE2 has no
+           lookahead, so require either `>` or whitespace immediately after the name `a`. */ -}}
+    {{- $seg = replaceRE `</?a(?:\s[^>]*)?>` "" $seg -}}
+    {{- /* Strip lone +/- lines left from accordion toggle spans */ -}}
+    {{- $seg = replaceRE `(?m)^[+\-]\n` "" $seg -}}
+    {{- /* Strip auto-generated cobra footer */ -}}
+    {{- $seg = replaceRE `(?m)^###### Auto generated by spf13/cobra.*$` "" $seg -}}
+    {{- $cleaned = printf "%s%s" $cleaned $seg -}}
   {{- else -}}
+    {{- /* ---- CODE branch ---- only legitimate in-fence cleanup is Chroma <span> stripping */ -}}
+    {{- $seg = replaceRE `</?span[^>]*>` "" $seg -}}
     {{- $cleaned = printf "%s```%s```" $cleaned $seg -}}
   {{- end -}}
 {{- end -}}
 {{- $content = $cleaned -}}
-{{- /* Phase 4: Normalize whitespace so inline conversions can match cleanly */ -}}
-{{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
-{{- /* Phase 5: Convert inline HTML to markdown */ -}}
-{{- $content = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $content -}}
-{{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
-{{- $content = replaceRE `\[\s+` "[" $content -}}
-{{- $content = replaceRE `\s+\]\(` "](" $content -}}
-{{- $content = replaceRE `<code[^>]*>([^<]*)</code>` "`$1`" $content -}}
-{{- $content = replaceRE `<strong>([^<]*)</strong>` "**$1**" $content -}}
-{{- $content = replaceRE `<em>([^<]*)</em>` "*$1*" $content -}}
-{{- $content = replaceRE `<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*/?>` "![$2]($1)" $content -}}
-{{- $content = replaceRE `<img[^>]*alt="([^"]*)"[^>]*src="([^"]*)"[^>]*/?>` "![$1]($2)" $content -}}
-{{- $content = replaceRE `<img[^>]*/?>` "" $content -}}
-{{- /* Phase 6: Convert heading tags to markdown headings */ -}}
-{{- $content = replaceRE `<h1[^>]*>([^<]*)</h1>` "\n# $1\n" $content -}}
-{{- $content = replaceRE `<h2[^>]*>([^<]*)</h2>` "\n## $1\n" $content -}}
-{{- $content = replaceRE `<h3[^>]*>([^<]*)</h3>` "\n### $1\n" $content -}}
-{{- $content = replaceRE `<h4[^>]*>([^<]*)</h4>` "\n#### $1\n" $content -}}
-{{- $content = replaceRE `<h5[^>]*>([^<]*)</h5>` "\n##### $1\n" $content -}}
-{{- $content = replaceRE `<h6[^>]*>([^<]*)</h6>` "\n###### $1\n" $content -}}
-{{- /* Strip any remaining HTML tags not yet handled */ -}}
-{{- $content = replaceRE `</?a[^>]*>` "" $content -}}
-{{- /* Strip lone +/- lines left from accordion toggle spans */ -}}
-{{- $content = replaceRE `(?m)^[+\-]\n` "" $content -}}
-{{- /* Strip auto-generated cobra footer */ -}}
-{{- $content = replaceRE `(?m)^###### Auto generated by spf13/cobra.*$` "" $content -}}
-{{- /* Phase 7: Group unwrapped choosable options into chooser blocks.
+{{- /* Phase 7: Group unwrapped choosable options into chooser blocks. Global and after the
+       rejoin: these <!-- … --> markers span fence boundaries and the (?s) patterns must see
+       the whole document. They operate only on comment markers, never on code text.
        Choosable shortcodes emit <!-- option-TYPE: label --> / <!-- /option-TYPE --> with the
        chooser type baked in. Choosables inside a chooser shortcode have their types stripped
        by the chooser template, so any typed option tags remaining here are standalone and
@@ -64,7 +82,8 @@
     {{- $content = replaceRE (printf `<!-- /option-%s -->` $type) "<!-- /option -->" $content -}}
   {{- end -}}
 {{- end -}}
-{{- /* Phase 8: Decode HTML entities and final cleanup */ -}}
+{{- /* Phase 8: Decode HTML entities and final cleanup. htmlUnescape stays global by design:
+       it decodes &lt;/&gt;/&amp; in BOTH prose and the (now span-free) code segments. */ -}}
 {{- $content = $content | htmlUnescape -}}
 {{- $content = replaceRE `\n{3,}` "\n\n" $content -}}
 {{- return $content -}}
