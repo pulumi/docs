@@ -76,8 +76,13 @@
   }
 
   function onReady(fn) {
+    // Always run on a later turn, never synchronously: this script loads `async`, so when the
+    // DOM is already parsed (common behind a CDN) a synchronous call would run the wire fns
+    // mid-IIFE — before the `var ICON`/helpers below are assigned — and any throw would be
+    // swallowed by the outer try, also aborting the manifest fetch. Deferring guarantees the
+    // whole IIFE body has executed and isolates wire-fn errors from the selector render.
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
+    else setTimeout(fn, 0);
   }
 
   // Inject a substring filter above the trimmed CLI-archive command list. No-op anywhere the
