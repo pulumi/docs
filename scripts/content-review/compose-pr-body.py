@@ -221,9 +221,12 @@ def render_deferrals(findings: list[dict], path: str) -> str:
 
 def render_verification(artifacts: dict, errors: list[str]) -> str:
     lines = ["## Verification\n\n"]
+    # The re-lint gate swaps LINT_PLACEHOLDER for the authoritative result. The
+    # "do not edit" hint rides in a trailing HTML comment so it guides the model
+    # but never renders in the published body; the label is `make lint` only —
+    # build isn't stamped here (it's left to the PR's normal CI).
     lines.append(
-        f"- `make lint` / `make build`: {LINT_PLACEHOLDER} "
-        "(stamped by the workflow re-lint gate — do not edit this line)\n"
+        f"- `make lint`: {LINT_PLACEHOLDER} <!-- stamped by the workflow re-lint gate; leave this line as-is -->\n"
     )
     lines.append("- Pre-step artifacts:\n")
     for name, summary in artifacts.items():

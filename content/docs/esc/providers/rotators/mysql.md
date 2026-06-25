@@ -93,7 +93,22 @@ state:
     username: user2
 ```
 
-## Setup
+When you open the environment after a rotation, you should see output similar to the following:
+
+```json
+{
+  "dbRotator": {
+    "current": {
+      "username": "user1",
+      "password": "[secret]"
+    },
+    "previous": {
+      "username": "user2",
+      "password": "[secret]"
+    }
+  }
+}
+```
 
 ## Inputs
 
@@ -152,3 +167,19 @@ state:
 |------------|--------|-----------------------------------|
 | `username` | string | Username of user in the database. |
 | `password` | string | Password of user in the database. |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda) and set `database.connector`. |
+| Rotation fails with a permissions or authentication error | The `managingUser` may lack the privileges needed to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
+| Applications fail to authenticate after a rotation | Apps may be reading the `previous` credentials, or rotation may run more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
+
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [Rotation connectors](/docs/esc/operations/rotation/) - Reach databases in a private network
+- [Database user setup](/docs/esc/operations/rotation/db-user-setup) - Prepare database users for rotation
+- [postgres rotator](/docs/esc/providers/rotators/postgres/) - Rotate credentials for a PostgreSQL database
+- [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS for connector-based rotation

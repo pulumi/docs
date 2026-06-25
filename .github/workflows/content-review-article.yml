@@ -267,9 +267,12 @@ jobs:
             6. Run the rendered content pass over the built page — both
                the HTML view and the customer-facing markdown view
                (`public/<url>/index.html` and `index.md`) — per the skill.
-            7. If you applied any fix, open a **ready** (non-draft) PR whose
-               body is `.pr-body-draft.md` (composed for you at the repo root —
-               the assemble-then-judge model, like the pre-merge review). Do NOT
+            7. If you applied any fix, open a **draft** PR whose body is
+               `.pr-body-draft.md` (composed for you at the repo root — the
+               assemble-then-judge model, like the pre-merge review). Open it as
+               a DRAFT (`gh pr create --draft`): the workflow re-lints your branch
+               and promotes the PR to ready only if lint passes — that ready
+               transition is what triggers triage and the docs review. Do NOT
                write the body from scratch. EDIT the draft:
                - "Why this page" is rendered from the selection queue — leave it
                  verbatim, its facts are authoritative.
@@ -282,8 +285,8 @@ jobs:
                  hints before opening the PR.
                - Leave the `<!-- LINT-RESULT -->` line in "Verification" exactly
                  as-is; the workflow stamps it with the authoritative result.
-               Then `gh pr create --body-file .pr-body-draft.md`. A clean article
-               (zero fixes) opens no PR.
+               Then `gh pr create --draft --body-file .pr-body-draft.md`. A clean
+               article (zero fixes) opens no PR.
             8. Write `.content-review-verdict.json` at the repo root — your ONLY
                structured output. Shape:
                `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
@@ -315,23 +318,23 @@ jobs:
           python3 scripts/content-review/summarize-denials.py \
             "${{ steps.claude.outputs.execution_file }}"
 
-      # Lint re-gate: don't trust the model's self-report that `make lint`
-      # passed on the branch. For a fix verdict, check out the pushed branch and
-      # re-run lint. The composer left a `<!-- LINT-RESULT -->` placeholder in the
-      # PR body's Verification section precisely so this gate — the authority on
-      # lint, not the model — stamps the real outcome there. On failure: flip the
-      # PR back to draft, comment the output, stamp a FAILED marker, and skip the
-      # docs-review dispatch (the `lint_ok` output gates it). The ledger still
-      # records `reviewed` — the draft PR stays for a human. Build is left to the
-      # PR's normal CI.
-      - name: Re-lint the fix branch
+      # Lint re-gate + ready promotion. The model opened the PR as a DRAFT and
+      # we don't trust its self-report that `make lint` passed: check out the
+      # pushed branch and re-run lint ourselves. On PASS, promote the PR to ready
+      # — that draft→ready transition is what fires triage and the docs review
+      # (content-review/* PRs flow through the normal triage → review chain; see
+      # claude-triage.yml / claude-code-review.yml). On FAIL, leave it draft (so
+      # triage never fires) and comment the output for a human. Either way, stamp
+      # the authoritative result into the PR body's `<!-- LINT-RESULT -->`
+      # placeholder — this gate is the authority on lint, not the model. The
+      # ledger still records `reviewed`. Build is left to the PR's normal CI.
+      - name: Re-lint and promote the fix branch
         id: lint
         if: hashFiles('.content-review-verdict.json') != ''
         continue-on-error: true
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
-          echo "ok=true" >> "$GITHUB_OUTPUT"
           VERDICT=$(jq -r '.verdict // empty' .content-review-verdict.json)
           [ "$VERDICT" = "fixed" ] || { echo "verdict=$VERDICT; no branch to re-lint"; exit 0; }
           RETIRE=$(jq -r 'if .retirement then "retire-" else "" end' .content-review-verdict.json)
@@ -347,15 +350,14 @@ jobs:
               --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" || true
           }
           if make lint > .lint.log 2>&1; then
-            echo "lint passed on $BRANCH"
+            echo "lint passed on $BRANCH; promoting draft → ready (fires triage → review)"
             stamp_body passed
+            gh pr ready "$BRANCH" || echo "::warning::could not promote $BRANCH to ready"
           else
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::make lint failed on $BRANCH; flipping PR to draft"
-            gh pr ready "$BRANCH" --undo || true
+            echo "::warning::make lint failed on $BRANCH; leaving PR as draft"
             stamp_body failed
             {
-              echo "Automated review note: \`make lint\` failed on this branch, so the PR was returned to draft and the docs review was not dispatched. Lint output:"
+              echo "Automated review note: \`make lint\` failed on this branch, so the PR was left as a draft and no review was triggered. Lint output:"
               echo ""
               echo '```'
               tail -c 4000 .lint.log
@@ -388,26 +390,12 @@ jobs:
             --verdict .content-review-verdict.json \
             --claude-outcome "${{ steps.claude.outcome }}"
 
-      # Slop defense: bot-authored PRs are auto-skipped by the docs-review
-      # pipeline (claude-code-review.yml sets skip_reason=bot-author), so the
-      # content PR gets its review via explicit force dispatch — the same
-      # pattern claude-new.yml uses for #new-review. Gated on a derived
-      # `reviewed` status AND a passing re-lint; PR number + head SHA come from
-      # the ledger record's gh-derived values, never the model's self-report.
-      - name: Dispatch docs review over the PR
-        if: steps.record.outputs.dispatch == 'true' && steps.lint.outputs.ok != 'false'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          NUMBER='${{ steps.record.outputs.pr_number }}'
-          HEAD_SHA='${{ steps.record.outputs.head_sha }}'
-          echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
-          gh workflow run claude-code-review.yml \
-            --repo "${{ github.repository }}" \
-            -f pr_number="$NUMBER" \
-            -f head_sha="$HEAD_SHA" \
-            -f force=true \
-            || echo "::warning::review dispatch failed for PR #$NUMBER"
+      # No explicit review dispatch: a content-review PR that passes re-lint is
+      # promoted draft → ready in the step above, and that transition drives the
+      # normal triage → docs-review chain (claude-triage.yml is opened to
+      # content-review/* bot PRs; claude-code-review.yml reviews them honoring the
+      # trivial / frontmatter-only short-circuits). Trivial fixes are skipped
+      # there instead of being force-reviewed.
 
 env:
   ESC_ACTION_OIDC_AUTH: true

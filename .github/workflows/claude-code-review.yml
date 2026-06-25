@@ -218,7 +218,15 @@ jobs:
               SKIP="trivial"
             elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
               SKIP="frontmatter-only"
-            elif [[ "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ]]; then
+            # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
+            # are first-class automated docs fixes we want reviewed. Those fall
+            # through to the already-reviewed guard below (so they still can't
+            # re-review loop) and otherwise get a normal review. Triage already
+            # ran on them and applied any trivial / frontmatter-only short-circuit
+            # above — the point of this change: a trivial content-review PR skips
+            # there instead of being force-reviewed.
+            elif [[ ( "$AUTHOR" == "pulumi-bot" || "$AUTHOR" == "dependabot[bot]" ) \
+                    && "$HEAD_BRANCH" != content-review/* ]]; then
               SKIP="bot-author"
             # Auto-fire path (workflow_run from triage) on a PR that the
             # review pipeline has already touched: don't burn API on a

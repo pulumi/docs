@@ -1,7 +1,7 @@
 ---
 title: external
 title_tag: external Pulumi ESC Rotator
-meta_desc: The `external` rotator enables you to rotate credentials using a custom adapter service. 
+meta_desc: The `external` rotator enables you to rotate credentials using a custom adapter service.
 h1: external
 menu:
   esc:
@@ -236,7 +236,7 @@ import jwt
 from jwt import PyJWKClient
 
 # Configuration
-JWKS_URL = "https://api.pulumi.com/.well-known/jwks.json"
+JWKS_URL = "https://api.pulumi.com/oidc/.well-known/jwks"
 ADAPTER_URL = "https://my-adapter.example.com/rotate-credentials"
 PORT = 8443
 
@@ -406,3 +406,17 @@ If no state is provided, the rotator passes `"state": null` on the first rotatio
 | Property  | Type   | Description                                           |
 |-----------|--------|-------------------------------------------------------|
 | `current` | object | The JSON response from your adapter, marked as secret |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Your adapter rejects the request as unauthorized | The JWT token may have failed verification, or your adapter may have rejected the `Authorization` header. | Verify your adapter fetches keys from `https://api.pulumi.com/oidc/.well-known/jwks` and validates the `audience` against your adapter's URL. See [JWT Authentication](/docs/esc/providers/secrets/external/#jwt-authentication). |
+| Your adapter reports a body-hash mismatch | Your adapter may have modified or re-encoded the request body before hashing it. | Compute the SHA-256 hash over the raw request bytes and compare against the `body_hash` claim without altering the body. |
+| Applications fail after a rotation | The adapter may have rotated the in-use credential instead of an inactive one. | Implement the [dual-secret strategy](#recommended-dual-secret-strategy) so applications always read `current` while the inactive credential is rotated. |
+
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [external secrets provider](/docs/esc/providers/secrets/external/) - Import secrets from a custom adapter service
+- [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators
