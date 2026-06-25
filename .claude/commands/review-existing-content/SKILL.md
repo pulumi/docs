@@ -205,17 +205,19 @@ render through their `layouts/shortcodes/*.markdown.md` templates):
 If this pass applied any fix, re-run `make lint && make build` before
 opening the PR.
 
-### 7. PR — only when you applied a fix, ready (non-draft)
+### 7. PR — only when you applied a fix, opened as a draft
 
-Open a **ready** PR to `master`. You do **not** write the body from scratch: the
+Open a **draft** PR to `master`. You do **not** write the body from scratch: the
 workflow composed `.pr-body-draft.md` (via `compose-pr-body.py`, the
 assemble-then-judge model — the composer ASSEMBLES facts, you JUDGE) with every
 section present and each pre-found finding pre-bucketed under a `<TODO>`. **Edit
 that draft**, resolve every `<TODO>`, strip the HTML-comment hints, and create
-the PR with `gh pr create --body-file .pr-body-draft.md`. The workflow re-runs
-`make lint` on your branch (flipping the PR back to draft if it fails) and
-dispatches the automated docs review afterward; humans merge. The sections (each
-is checked for):
+the PR with `gh pr create --draft --body-file .pr-body-draft.md`. The workflow
+then re-runs `make lint` on your branch and **promotes the PR to ready only if
+lint passes** — that ready transition is what triggers triage and the docs
+review (a clean lint means it flows through the normal pipeline; a trivial fix is
+short-circuited there). A lint failure leaves the PR a draft with a comment for a
+human; humans merge. The sections (each is checked for):
 
 - **Why this page**: composed from the selection queue (lane, tier, traffic
   figure + period, last reviewed). **Leave verbatim** — do not re-narrate it.

@@ -21,10 +21,17 @@ jobs:
     # their own labeling pipelines (label-dependabot.yml) and don't
     # carry secrets. `ready_for_review` always has `draft: false`, so
     # the draft guard is a no-op for that event.
+    #
+    # Exception: content-review/* PRs are bot-authored but are first-class
+    # automated docs fixes we DO want triaged and reviewed like any human PR
+    # (the worker opens them draft and promotes to ready on a clean re-lint, so
+    # triage fires on that ready transition). They flow through the normal
+    # triage → review chain instead of being force-dispatched.
     if: >-
       !github.event.pull_request.draft
-      && github.event.pull_request.user.login != 'pulumi-bot'
       && github.event.pull_request.user.login != 'dependabot[bot]'
+      && (github.event.pull_request.user.login != 'pulumi-bot'
+          || startsWith(github.event.pull_request.head.ref, 'content-review/'))
 
     concurrency:
       group: claude-triage-${{ github.event.pull_request.number }}
