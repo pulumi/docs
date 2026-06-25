@@ -96,6 +96,12 @@ check("fix rows carry <TODO>", "<TODO: correction" in out)
 check("deferrals carry <TODO>", "<TODO: why judgment-level>" in deferral_block)
 check("screenshot/rendered are <TODO>", out.count("<TODO") >= 4)
 check("lint result is a stamped placeholder", c.LINT_PLACEHOLDER in out)
+# The "do not edit" hint must live in an HTML comment, not leak to readers, and
+# the label is `make lint` only (build isn't stamped here).
+check("no reader-facing 'do not edit' instruction", "do not edit this line" not in out)
+lint_line = next(l for l in out.splitlines() if c.LINT_PLACEHOLDER in l)
+check("lint hint rides in an HTML comment", "<!--" in lint_line.split(c.LINT_PLACEHOLDER, 1)[1])
+check("lint label is make-lint-only (no make build)", "make build`:" not in lint_line)
 
 # Verification inventory is deterministic.
 check("inventory counts verdicts", "3 verdict(s); 1 contradicted/mismatch, 1 unverifiable" in out)
