@@ -318,7 +318,7 @@ const bucket = new gcp.storage.Bucket("my-bucket", {
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```typescript
 // Export the DNS name of the bucket
@@ -345,7 +345,7 @@ bucket = storage.Bucket(
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```python
 # Export the DNS name of the bucket
@@ -379,7 +379,7 @@ if err != nil {
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```go
 // Export the DNS name of the bucket
@@ -407,7 +407,7 @@ var bucket = new Bucket("my-bucket", new BucketArgs
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export to your return `Dictionary` as shown in this example:
+Now to export the website's public URL, add the `url` export to your return `Dictionary` as shown in this example:
 
 ```csharp
 return new Dictionary<string, object?>
@@ -433,7 +433,7 @@ var bucket = new Bucket("my-bucket", BucketArgs.builder()
 
 ### Export the website URL
 
-Now to export the website's public URL for easy access, add the `url` export as shown in this example:
+Now to export the website's public URL, add the `url` export as shown in this example:
 
 ```java
 // Export the DNS name of the bucket
