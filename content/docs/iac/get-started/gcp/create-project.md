@@ -383,7 +383,7 @@ outputs:
 
 {{% /choosable %}}
 
-This Pulumi program creates a new storage bucket resource and exports the DNS name of the bucket as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing their inputs and outputs. Exporting the bucket's ID makes it convenient to use afterwards.
+This Pulumi program creates a new storage bucket resource and exports the DNS name of the bucket as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects in our language of choice with [properties](/docs/iac/concepts/inputs-outputs) capturing their inputs and outputs. Exporting the bucket's DNS name makes it convenient to use afterwards.
 
 Next, you'll deploy your stack, which will provision your storage bucket.
 
