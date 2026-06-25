@@ -11,7 +11,6 @@ authors: ["alex-leventer"]
 
 This is one of the more significant shifts happening in how engineering teams work right now. The mental model most of us carry (an engineer at a terminal, running `pulumi up` or clicking through a cloud console) is giving way to something different: a goal stated in natural language, an agent that reasons over your actual infrastructure state, writes code, previews the impact, checks it against policy, and opens a PR for review.
 
-
 ## What does "agentic infrastructure" actually mean?
 
 The word "agentic" refers to an AI system that takes sequences of actions to reach a goal, observing state, making decisions, and executing steps, rather than generating a single-prompt response.
