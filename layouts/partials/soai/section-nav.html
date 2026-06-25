@@ -1,0 +1,31 @@
+{{/*
+    SOAI right-edge section nav.
+
+    Rendered inside a full-height absolute track that spans the sections region
+    (see list.html / SCSS). The rail itself is position:sticky and centered, and
+    rides up off the footer as the region ends (pure layout). JS fades it in once
+    the hero is scrolled past so it doesn't peek below a short hero on tall
+    screens, and sets the active state via a scroll-spy. On hover / focus the
+    rail slides out to reveal each section title beside its number.
+
+    The title span carries the accessible name; the number is decorative.
+
+    Params (.): sections slice (each with .number, .title, .anchor).
+*/}}
+{{ $sections := . }}
+{{ with $sections }}
+<div class="soai-sectionnav-track">
+    <nav class="soai-sectionnav" aria-label="Survey sections" data-soai-sectionnav>
+        <ul class="soai-sectionnav__list">
+            {{ range . }}
+            <li class="soai-sectionnav__item" data-target="{{ .anchor }}">
+                <a class="soai-sectionnav__link" href="#{{ .anchor }}">
+                    <span class="soai-sectionnav__title">{{ .title }}</span>
+                    <span class="soai-sectionnav__num" aria-hidden="true">{{ .number }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+</div>
+{{ end }}

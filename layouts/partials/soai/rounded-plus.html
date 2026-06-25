@@ -1,0 +1,9 @@
+{{/*
+    SOAI rounded-plus "star" accent (decorative, aria-hidden) — two rounded
+    brackets that read as a plus. Stroke comes from .soai-hero__star in SCSS.
+    Optional param: class — extra classes for the <svg> wrapper.
+*/}}
+<svg class="soai-hero__star{{ with .class }} {{ . }}{{ end }}" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <path class="soai-star-arm" pathLength="1" vector-effect="non-scaling-stroke" d="M0 48L38 48C43.5228 48 48 43.5228 48 38L48 0"/>
+    <path class="soai-star-arm" pathLength="1" vector-effect="non-scaling-stroke" d="M96 48H58C52.4772 48 48 52.4772 48 58V96"/>
+</svg>

@@ -1,0 +1,27 @@
+{{/*
+    SOAI question card — a light bracket card wrapping an overline (NN.Qn), the
+    question heading, and the dispatched chart.
+
+    Params (.): the normalized question dict —
+    - id:             Question id (e.g. "Q1").
+    - section_number: Two-digit section number (e.g. "01"), injected by section.html.
+    - overline:       Optional explicit overline; defaults to "NN.Qn".
+    - heading:        Question text.
+    - kind:           Chart kind (see chart.html).
+    - options:        Slice of { label, percent, highlight?, other? }.
+*/}}
+{{ $overline := .overline }}
+{{ if not $overline }}{{ $overline = printf "%s.%s" .section_number .id }}{{ end }}
+
+<div class="bracket-card" data-soai-reveal>
+    <div class="bracket-card__inner px-5 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-12">
+
+        <div class="mb-8 flex flex-col items-center gap-2 text-center lg:mb-12">
+            {{ with $overline }}<p class="font-overline m-0 text-violet-primary">{{ . }}</p>{{ end }}
+            {{ with .heading }}<h3 class="heading-2 m-0! font-display font-semibold tracking-tighter text-service-black">{{ . }}</h3>{{ end }}
+        </div>
+
+        {{ partial "soai/chart.html" . }}
+
+    </div>
+</div>
