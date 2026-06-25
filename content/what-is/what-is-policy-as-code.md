@@ -18,7 +18,7 @@ In this article, we'll cover the key questions about policy as code:
 * How does policy as code work?
 * What are the benefits of policy as code?
 * What policy as code tools are available?
-* How does Pulumi CrossGuard implement policy as code?
+* How does Pulumi implement policy as code?
 * How do you get started with policy as code in Pulumi?
 * What does policy as code look like in production?
 * Frequently asked questions about policy as code
@@ -81,24 +81,24 @@ Several mature tools now handle policy as code across different parts of the sta
 
 **Kyverno** is a Kubernetes-native policy engine that uses YAML and Common Expression Language (CEL) rather than a custom query language, which makes it approachable for teams already fluent in Kubernetes manifest syntax. Kyverno validates, mutates, and generates Kubernetes resources, and can also clean up resources on a schedule. It graduated from the CNCF in March 2026. Kyverno's scope is expanding beyond Kubernetes, but its primary strength remains admission control for Kubernetes clusters.
 
-**Pulumi CrossGuard** adds policy as code to the Pulumi [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. CrossGuard policies are written in TypeScript, JavaScript, Python, or Rego (via OPA integration), making them accessible to the same engineers who write the infrastructure code. Policies apply during `pulumi preview` and `pulumi up`, blocking violations before resources are created or modified. CrossGuard also powers audit-mode evaluation of resources discovered through Pulumi Insights, including infrastructure that was provisioned with Terraform, CloudFormation, or directly through cloud consoles.
+**Pulumi Policies** adds policy as code to the Pulumi [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform. Policies are written in TypeScript, JavaScript, Python, or Rego (via OPA integration), making them accessible to the same engineers who write the infrastructure code. Policies apply during `pulumi preview` and `pulumi up`, blocking violations before resources are created or modified. Pulumi Policies also powers audit-mode evaluation of resources discovered through Pulumi Insights, including infrastructure that was provisioned with Terraform, CloudFormation, or directly through cloud consoles.
 
 | Tool | Policy language | Primary scope | Open source / governance | Origin |
 |---|---|---|---|---|
 | Open Policy Agent (OPA) | Rego | General-purpose: Kubernetes, APIs, CI/CD, Terraform | Open source (Apache 2.0); CNCF graduated Feb 2021 | Created by Styra; donated to CNCF; community maintained |
 | HashiCorp Sentinel | Sentinel (proprietary DSL) | HashiCorp suite (HCP Terraform, HCP Vault Dedicated, HCP Consul, Nomad Enterprise) | Proprietary; requires paid HCP Terraform Standard+ | HashiCorp (now IBM) |
 | Kyverno | YAML + CEL | Kubernetes-native (validate, mutate, generate, cleanup) | Open source; CNCF graduated Mar 2026 | Created by Nirmata; donated to CNCF |
-| Pulumi CrossGuard | TypeScript, JavaScript, Python, or Rego | Any cloud — 170+ providers — during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
+| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud — 170+ providers — during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
 
-## How does Pulumi CrossGuard implement policy as code?
+## How does Pulumi implement policy as code?
 
-CrossGuard is Pulumi's policy as code engine, built into the [Pulumi platform](/docs/insights/policy/). It runs during every `pulumi preview` and `pulumi up`, evaluating resources against a set of policies before any change reaches the cloud.
+Pulumi Policies is Pulumi's policy as code engine, built into the [Pulumi platform](/docs/insights/policy/). It runs during every `pulumi preview` and `pulumi up`, evaluating resources against a set of policies before any change reaches the cloud.
 
-**Languages you already know.** CrossGuard policies are written in TypeScript, JavaScript, Python, or Rego. There is no new language to learn. Engineers write policy functions the same way they write the infrastructure code itself — with real loops, conditionals, helper functions, unit tests, and package management.
+**Languages you already know.** Policies are written in TypeScript, JavaScript, Python, or Rego. There is no new language to learn. Engineers write policy functions the same way they write the infrastructure code itself — with real loops, conditionals, helper functions, unit tests, and package management.
 
-**Policy hierarchy.** CrossGuard organizes governance through three levels. Individual policies express a single rule. Policy packs group related policies into a deployable unit (for example, a "CIS AWS Foundations" pack). Policy groups apply a pack at org-wide, project, or stack scope, making enforcement consistent without requiring every team to opt in.
+**Policy hierarchy.** Pulumi Policies organizes governance through three levels. Individual policies express a single rule. Policy packs group related policies into a deployable unit (for example, a "CIS AWS Foundations" pack). Policy groups apply a pack at org-wide, project, or stack scope, making enforcement consistent without requiring every team to opt in.
 
-**Enforcement levels.** Every policy in CrossGuard operates at one of four enforcement levels:
+**Enforcement levels.** Every policy operates at one of four enforcement levels:
 
 - **Advisory**: a warning is surfaced, but the deployment continues. Use this during rollout to measure the blast radius of a new rule before enforcing it.
 - **Mandatory**: a violation blocks the deployment. Use this for security-critical rules that cannot have exceptions.
@@ -107,11 +107,11 @@ CrossGuard is Pulumi's policy as code engine, built into the [Pulumi platform](/
 
 **Automatic remediation.** The `remediate` enforcement level uses a `remediateResource` function that Pulumi calls when a policy is violated. Instead of failing the deployment, Pulumi corrects the configuration in place — for example, enabling encryption on a storage bucket that the developer left unencrypted — and proceeds. This is particularly valuable for rules where the fix is deterministic and the goal is adoption rather than blockage.
 
-**Audit mode for existing resources.** CrossGuard integrates with Pulumi Insights to evaluate resources that are already running — including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
+**Audit mode for existing resources.** Pulumi Policies integrates with Pulumi Insights to evaluate resources that are already running — including those provisioned with Terraform, CloudFormation, or manually through cloud consoles. This means organizations can get compliance visibility over their entire cloud estate, not just the portion managed with Pulumi IaC.
 
 **Pre-built compliance packs.** Pulumi publishes pre-built policy packs for CIS 8.1 (covering AWS, Azure, and Google Cloud), CIS Kubernetes, HITRUST CSF 11.5, NIST SP 800-53 (AWS), PCI DSS v4.0.1 (AWS), and Pulumi Best Practices. These packs can be used as-is or extended with organization-specific rules.
 
-**Open source core.** The CrossGuard SDK is open source under Apache 2.0 at [github.com/pulumi/pulumi-policy](https://github.com/pulumi/pulumi-policy). Local enforcement via `--policy-pack` — including advisory, mandatory, and remediate modes — is free. Org-wide policy group management in Pulumi Cloud requires a paid plan.
+**Open source core.** The Pulumi Policies SDK is open source under Apache 2.0 at [github.com/pulumi/pulumi-policy](https://github.com/pulumi/pulumi-policy). Local enforcement via `--policy-pack` — including advisory, mandatory, and remediate modes — is free. Org-wide policy group management in Pulumi Cloud requires a paid plan.
 
 > "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less."
 >
@@ -119,13 +119,13 @@ CrossGuard is Pulumi's policy as code engine, built into the [Pulumi platform](/
 
 ## How do you get started with policy as code in Pulumi?
 
-Getting started with CrossGuard takes a few minutes if you already have Pulumi installed.
+Getting started with Pulumi Policies takes a few minutes if you already have Pulumi installed.
 
 1. **Create a new policy pack.** Run `pulumi policy new aws-typescript` to scaffold a TypeScript policy pack for AWS. Additional templates include `aws-python`, `aws-opa`, `azure-opa`, `gcp-opa`, and `kubernetes-opa`.
 
 2. **Write a rule.** Open `index.ts` (or the Python equivalent) and add a `validateResource` function with your policy logic. Assign the rule an `enforcementLevel` of `advisory` to start.
 
-3. **Test locally.** Run `pulumi preview --policy-pack .` from your Pulumi project directory. CrossGuard evaluates your policy against the preview plan and reports violations inline. No cloud resources are created during this step.
+3. **Test locally.** Run `pulumi preview --policy-pack .` from your Pulumi project directory. Pulumi Policies evaluates your policy against the preview plan and reports violations inline. No cloud resources are created during this step.
 
 4. **Publish the policy pack.** When the pack is ready to share, run `pulumi policy publish` from within the policy pack directory. Pulumi infers the organization from your logged-in context and makes the pack available to your organization.
 
@@ -133,7 +133,7 @@ Getting started with CrossGuard takes a few minutes if you already have Pulumi i
 
 6. **Graduate to mandatory enforcement.** Start in `advisory` mode to understand the scope of violations, then promote critical rules to `mandatory` as teams address them. Use the `remediate` level for rules where automatic correction is appropriate.
 
-The [CrossGuard policy documentation](/docs/insights/policy/) and [policy packs guide](/docs/insights/policy/policy-packs/) walk through the full lifecycle in detail.
+The [Pulumi Policies documentation](/docs/insights/policy/) and [policy packs guide](/docs/insights/policy/policy-packs/) walk through the full lifecycle in detail.
 
 ## What does policy as code look like in production?
 
@@ -141,7 +141,7 @@ The [CrossGuard policy documentation](/docs/insights/policy/) and [policy packs 
 
 Spear AI builds AI-powered software for the United States Navy and needs to operate in AWS commercial, AWS GovCloud, air-gapped environments, and naval edge deployments — each with strict security controls. Achieving Authorization to Operate (ATO) is a multi-year process of proving to military auditors that every resource meets the required security posture.
 
-Spear AI used Pulumi CrossGuard to define their security controls as policy packs, then gave the auditors direct access to those packs. As Michael Hunter, co-founder and CEO of Spear AI, described it:
+Spear AI used Pulumi Policies to define their security controls as policy packs, then gave the auditors direct access to those packs. As Michael Hunter, co-founder and CEO of Spear AI, described it:
 
 > "We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in a bunch of docs and diagrams. That process of manual review has gone away. We've gone down from a year and a half to expecting an ATO in three months."
 
@@ -149,7 +149,7 @@ The policy packs served simultaneously as the enforcement mechanism and the audi
 
 ### Modivcare: up to 25% infrastructure cost reduction and governance over legacy infrastructure
 
-Modivcare needed to bring governance to a mixed environment: some infrastructure managed by Pulumi IaC, some inherited from Terraform, some provisioned manually. CrossGuard in audit mode, combined with Pulumi Insights account scanning, gave them visibility across the entire estate.
+Modivcare needed to bring governance to a mixed environment: some infrastructure managed by Pulumi IaC, some inherited from Terraform, some provisioned manually. Pulumi Policies in audit mode, combined with Pulumi Insights account scanning, gave them visibility across the entire estate.
 
 As Zachary Cook, Senior Manager of DevOps at Modivcare, put it:
 
@@ -173,7 +173,7 @@ Policy as code addresses three core problems. First, it eliminates manual review
 
 ### What languages can you write policies in?
 
-It depends on the tool. OPA uses Rego, a purpose-built query language. HashiCorp Sentinel uses its own proprietary DSL. Kyverno uses YAML with CEL expressions. Pulumi CrossGuard supports TypeScript, JavaScript, Python, and Rego, allowing engineers to write policies in the same languages they use for their infrastructure code and application code.
+It depends on the tool. OPA uses Rego, a purpose-built query language. HashiCorp Sentinel uses its own proprietary DSL. Kyverno uses YAML with CEL expressions. Pulumi Policies supports TypeScript, JavaScript, Python, and Rego, allowing engineers to write policies in the same languages they use for their infrastructure code and application code.
 
 ### What is the difference between advisory and mandatory enforcement?
 
@@ -181,11 +181,11 @@ Advisory enforcement surfaces a violation as a warning but allows the deployment
 
 ### Can policy as code automatically fix violations?
 
-Yes, some systems support automatic remediation. Pulumi CrossGuard's `remediate` enforcement level calls a `remediateResource` function that corrects the configuration before deployment proceeds. For example, if a policy requires encryption on all storage buckets and a developer forgets to enable it, CrossGuard can enable it automatically rather than failing the deployment. Remediation is most appropriate for rules where the correct value is deterministic and the goal is adoption rather than blockage.
+Yes, some systems support automatic remediation. Pulumi Policies' `remediate` enforcement level calls a `remediateResource` function that corrects the configuration before deployment proceeds. For example, if a policy requires encryption on all storage buckets and a developer forgets to enable it, Pulumi Policies can enable it automatically rather than failing the deployment. Remediation is most appropriate for rules where the correct value is deterministic and the goal is adoption rather than blockage.
 
 ### Does policy as code work with Terraform or existing cloud resources?
 
-Yes. Pulumi CrossGuard integrates with Pulumi Insights to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles — not just resources managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
+Yes. Pulumi Policies integrates with Pulumi Insights to evaluate resources that were provisioned with Terraform, CloudFormation, or directly through cloud consoles — not just resources managed with Pulumi IaC. This audit mode gives organizations compliance visibility across their entire cloud estate. For native Terraform policies, OPA (with the `conftest` tool) and HashiCorp Sentinel can evaluate Terraform plan output.
 
 ### What is the difference between OPA, Sentinel, and Kyverno?
 
@@ -193,25 +193,24 @@ OPA is a general-purpose policy engine that works across any system sending JSON
 
 ### What are the best policy as code tools?
 
-The right tool depends on your stack. For Kubernetes-focused teams that want to avoid learning a new language, Kyverno is the most approachable. For teams building on the HashiCorp ecosystem and already paying for HCP Terraform, Sentinel integrates naturally. For multi-layer enforcement across Kubernetes, APIs, and CI/CD with a single policy language, OPA is the most flexible. For teams using Pulumi IaC who want policies in the same language as their infrastructure code, with support for automatic remediation and audit of discovered resources, CrossGuard is the natural choice.
+The right tool depends on your stack. For Kubernetes-focused teams that want to avoid learning a new language, Kyverno is the most approachable. For teams building on the HashiCorp ecosystem and already paying for HCP Terraform, Sentinel integrates naturally. For multi-layer enforcement across Kubernetes, APIs, and CI/CD with a single policy language, OPA is the most flexible. For teams using Pulumi IaC who want policies in the same language as their infrastructure code, with support for automatic remediation and audit of discovered resources, Pulumi Policies is the natural choice.
 
-### Is Pulumi CrossGuard free?
+### Is Pulumi Policies free?
 
-Local enforcement via the `--policy-pack` flag — including advisory, mandatory, and remediate modes — is free with any Pulumi project. The CrossGuard SDK itself is open source under Apache 2.0. Org-wide policy group management in Pulumi Cloud, which automatically applies packs to all stacks across an organization, requires a paid plan. Pre-built compliance packs (CIS, NIST, PCI DSS, HITRUST) are included for organizations on qualifying plans.
+Local enforcement via the `--policy-pack` flag — including advisory, mandatory, and remediate modes — is free with any Pulumi project. The Pulumi Policies SDK itself is open source under Apache 2.0. Org-wide policy group management in Pulumi Cloud, which automatically applies packs to all stacks across an organization, requires a paid plan. Pre-built compliance packs (CIS, NIST, PCI DSS, HITRUST) are included for organizations on qualifying plans.
 
 ## Learn more
 
-Pulumi CrossGuard enforces policy as code across any cloud — 170+ providers — using TypeScript, Python, or Rego, with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with CrossGuard](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
+Pulumi Policies enforces policy as code across any cloud — 170+ providers — using TypeScript, Python, or Rego, with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
 
 Related reading:
 
-* [Pulumi CrossGuard documentation](/docs/insights/policy/)
+* [Pulumi Policies documentation](/docs/insights/policy/)
 * [Policy packs guide](/docs/insights/policy/policy-packs/)
-* [CrossGuard product page](/product/crossguard/)
 * [Insights and governance](/product/insights-governance/)
 * [Benefits of policy as code](/blog/benefits-of-policy-as-code/)
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)
-* [OPA support for CrossGuard](/blog/opa-support-for-crossguard/)
+* [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is platform engineering?](/what-is/what-is-platform-engineering/)
