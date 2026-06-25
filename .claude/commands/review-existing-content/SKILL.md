@@ -198,19 +198,13 @@ rendered views), then check both:
    applied, and the PR description must flag them as multi-page
    ("also rendered on N other pages" — grep for other callers).
 
-**Markdown view** — `public/<url path>/index.md` (the LLM/agent-facing
-render; docs pages cascade `outputs: [HTML, markdown]`, and shortcodes
-render through their `layouts/shortcodes/*.markdown.md` templates):
-
-1. Read it and check for leaked shortcode syntax — literal `{{<` / `>}}`
-   or `{{%` / `%}}` fragments in the output are the signature of a
-   shortcode missing its markdown template.
-2. Spot-check that content present in the HTML view isn't silently absent
-   here (same missing-template failure, quieter symptom).
-3. Fixes here are usually a new/corrected `*.markdown.md` shortcode
-   template — shared-source again, same multi-page flagging rule. When the
-   right rendering is debatable, it's a Findings-not-applied entry, not a
-   fix.
+You do **not** check the markdown view (`index.md`) for leaked shortcode
+delimiters here. Whether a shortcode renders cleanly to markdown is a property of
+the shortcode, not the page, so it's covered once across the whole built corpus
+by `scripts/content-review/check-rendered-markdown.py` (run periodically / in CI),
+not re-paid per review. Content-*mangling* in the markdown output (a template
+that silently drops or rewrites content) is a rendering-pipeline bug for the
+templating owner, tracked separately — not something to fix in a content review.
 
 If this pass applied any fix, re-run `make build` and then `make lint` (as
 separate commands) before opening the PR.

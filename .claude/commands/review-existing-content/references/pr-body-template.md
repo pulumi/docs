@@ -49,9 +49,9 @@ Gated — the composer pre-fills "Skipped" when the source uses no content-beari
 shortcode/partial/include (it names the triggering shortcode when one is
 present). Only when this section carries a `<TODO>` do you run `make build` and
 the rendered pass, then report its outcomes — residue claims checked in the HTML
-view, the markdown view's shortcode-template status, and any shared-source
-(shortcode / partial / data) findings with their page-reach
-("also rendered on N other pages").
+view and any shared-source (shortcode / partial / data) findings with their
+page-reach ("also rendered on N other pages"). Leaked-delimiter checks on the
+markdown output are covered site-wide by `check-rendered-markdown.py`, not here.
 
 ## Verification
 

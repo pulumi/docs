@@ -274,8 +274,9 @@ def render_rendered_content(gates: dict | None) -> str:
     trig = ", ".join(f"`{s}`" for s in (gates or {}).get("nonchrome_shortcodes", [])[:8])
     hint = f" Content-bearing shortcode(s) requiring the pass: {trig}." if trig else ""
     return head + (
-        f"<TODO: run `make build`, then check the HTML view + customer-facing markdown view — "
-        f"note any leaked shortcode syntax or shared-source residue, or confirm clean.{hint}>"
+        f"<TODO: run `make build`, then check the HTML view for render-time content "
+        f"(shortcode/partial/`data`-sourced) and verify any checkable claims in that residue, "
+        f"or confirm clean.{hint}>"
     )
 
 
