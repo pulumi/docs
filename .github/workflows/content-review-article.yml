@@ -335,7 +335,9 @@ jobs:
       # the authoritative result into the PR body's `<!-- LINT-RESULT -->`
       # placeholder — this gate is the authority on lint, not the model. The
       # ledger still records `reviewed`. Build is left to the PR's normal CI.
-      - name: Re-lint and promote the fix branch
+      # On a ready PR we also arm GitHub auto-merge (squash); `master` requires
+      # 1 approval + the build check, so it merges only after a human approves.
+      - name: Re-lint, promote, and arm auto-merge
         id: lint
         if: hashFiles('.content-review-verdict.json') != ''
         continue-on-error: true
@@ -360,6 +362,14 @@ jobs:
             echo "lint passed on $BRANCH; promoting draft → ready (fires triage → review)"
             stamp_body passed
             gh pr ready "$BRANCH" || echo "::warning::could not promote $BRANCH to ready"
+            # Arm auto-merge (squash) on the now-ready PR. `master` requires 1
+            # approving review AND the "Install deps and build site" check, so
+            # this NEVER merges on its own — the PR merges only once a human
+            # approves and the build is green, which just removes the manual
+            # merge click after the review approves. No-op (warns) if auto-merge
+            # is unavailable or the PR already satisfies all conditions.
+            gh pr merge "$BRANCH" --auto --squash \
+              || echo "::warning::could not enable auto-merge on $BRANCH"
           else
             echo "::warning::make lint failed on $BRANCH; leaving PR as draft"
             stamp_body failed
