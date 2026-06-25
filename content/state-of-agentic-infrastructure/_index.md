@@ -27,27 +27,19 @@ hero:
       label: The six-month outlook and sentiment
       anchor: the-six-month-outlook-and-sentiment
 
-findings:
-  overline: What we found
-  points:
-    - The people we surveyed don't sit where you'd expect—a third do infrastructure work from product and app teams, not a dedicated infra group.
-    - Speed is no longer the problem. Teams ship fast; what they lack is control over consistency, cost, and security.
-    - Agents are already everywhere in the workflow—only 4% use none—but a human still signs off before production.
-    - "Confidence is outrunning controls: trust in agents is climbing faster than the governance around it, and teams expect even more agent-generated infrastructure within six months."
-
 sections:
   - anchor: who-we-surveyed
     number: "01"
     title: Who we surveyed
     overview:
       key_insights:
-        - Our respondents are hands-on practitioners—engineers spread across product, DevOps, platform, and ops teams rather than a single infrastructure group.
-        - The sample centers on mid-sized software companies, not startups or large enterprises—teams with real scale but still moving fast.
+        - "Our respondents are hands-on practitioners: engineers spread across product, DevOps, platform, and ops teams rather than a single infrastructure group."
+        - The sample centers on mid-sized software companies, not startups or large enterprises, but teams with real scale that are still moving fast.
       by_the_numbers:
         - 510 platform, DevOps, and product engineers
         - Product and app developers are the largest group (35%), ahead of DevOps (23%) and platform engineering (17%)
         - 65% work at companies of 201–5,000 people, and 65% are in Software / SaaS
-      takeaway: Among the people we surveyed, infrastructure work reaches well beyond the infra team—a third sit on product or app development teams.
+      takeaway: "Among the people we surveyed, infrastructure work reaches well beyond the infra team: a third sit on product or app development teams."
     questions:
       - id: Q1
         kind: bar-horizontal
@@ -176,8 +168,8 @@ sections:
     title: Agents in the workflow today
     overview:
       key_insights:
-        - The headline tools split by size—Claude Code is the favorite at companies under ~200, while Copilot's lead grows with headcount, reaching 70%+ in orgs of 1,000 or more.
-        - Today's agents mostly review and advise rather than write—authoring infrastructure code trails every other use at 29%.
+        - "The headline tools split by size: Claude Code is the favorite at companies under ~200, while Copilot's lead grows with headcount, reaching 70%+ in orgs of 1,000 or more."
+        - Today's agents mostly review and advise rather than write; authoring infrastructure code trails every other use at 29%.
         - "81% let agents change production, but almost all of that is gated: \"with approval\" (62%) far outweighs \"autonomously\" (19%)."
       by_the_numbers:
         - Only 4% use no AI in their infrastructure workflow
@@ -274,7 +266,7 @@ sections:
     title: The six-month outlook and sentiment
     overview:
       key_insights:
-        - Teams expect to hand agents more work—across the board, the share of infrastructure they expect agents to generate rises over the next six months.
+        - "Teams expect to hand agents more work: across the board, the share of infrastructure they expect agents to generate rises over the next six months."
         - 63% say they trust agents to make production changes, which runs ahead of the manual-approval reality from the earlier sections.
       by_the_numbers:
         - Teams expecting agents to generate 50% or more of their infra code rise from 45% today to 52% in six months
@@ -319,7 +311,7 @@ cta:
   heading: Put agents to work on your infrastructure
   intro: |
     Pulumi gives engineers and agents one platform to build, deploy, and manage cloud
-    infrastructure — with the guardrails to let agents ship safely.
+    infrastructure, with the guardrails to let agents ship safely.
   items:
     - title: Pulumi Neo
       icon: pulumi-neo
@@ -328,7 +320,7 @@ cta:
       cta: Explore Neo
     - title: Pulumi IaC
       icon: pulumi-iac
-      desc: Define infrastructure in TypeScript, Python, Go, and more — the real languages agents already know how to write.
+      desc: "Define infrastructure in TypeScript, Python, Go, and more: the real languages agents already know how to write."
       href: /product/infrastructure-as-code/
       cta: Explore IaC
     - title: Pulumi MCP server
