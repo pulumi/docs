@@ -4,7 +4,7 @@ meta_desc: "Agentic infrastructure is cloud infrastructure that AI agents provis
 meta_image: /images/what-is/what-is-agentic-infrastructure-meta.png
 type: what-is
 page_title: "What Is Agentic Infrastructure?"
-authors: ["cam-soper"]
+authors: ["alex-leventer"]
 ---
 
 **Agentic infrastructure is cloud infrastructure that AI agents provision, govern, and operate autonomously, writing code, running deployments, enforcing policy, and proposing changes through pull requests, with humans reviewing and approving rather than executing every step.**
