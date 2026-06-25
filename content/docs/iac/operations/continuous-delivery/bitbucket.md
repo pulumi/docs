@@ -3,7 +3,6 @@ title_tag: "Using Bitbucket Pipelines with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Bitbucket Pipelines, authenticate with Pulumi Cloud, and ship infrastructure changes through a trunk-based CI/CD workflow.
 title: Bitbucket Pipelines
 h1: Using Bitbucket Pipelines with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Bitbucket Pipelines

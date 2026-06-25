@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud vs. OSS | Pulumi Guides"
 meta_desc: Compare open source Pulumi with Pulumi Cloud across state backends, access management, secrets and configuration, policy enforcement, and workflows.
 title: Pulumi Cloud vs. OSS
 h1: Pulumi Cloud vs. Open Source Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Pulumi Cloud vs. OSS

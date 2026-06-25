@@ -3,7 +3,6 @@ title_tag: "Policy Metadata"
 meta_desc: Policies include metadata that describes their purpose, behavior, and how violations are handled within Pulumi.
 title: Policy Metadata
 h1: Policy Metadata
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: Policy Metadata

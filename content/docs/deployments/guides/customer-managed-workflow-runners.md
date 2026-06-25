@@ -2,7 +2,6 @@
 title: Customer-Managed Workflow Runners
 title_tag: Set up customer-managed workflow runners | Pulumi Deployments
 meta_desc: Set up, scale, and configure self-hosted workflow runner pools so Pulumi Deployments runs in your own environments.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Customer-Managed Workflow Runners

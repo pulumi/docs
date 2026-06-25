@@ -3,7 +3,6 @@ title_tag: "Pulumi Deployments vs Traditional CI/CD Systems"
 meta_desc: Learn how Pulumi Deployments differs from traditional CI/CD systems and why it's uniquely suited for infrastructure as code.
 title: "Vs. Traditional CI/CD"
 h1: "Pulumi Deployments vs. Traditional CI/CD"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Vs. Traditional CI/CD

@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud | Pulumi Concepts"
 meta_desc: Pulumi Cloud is Pulumi's default state backend and adds access control, secrets, policy enforcement, and drift detection for teams operating at scale.
 title: Pulumi Cloud
 h1: Pulumi Cloud
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Pulumi Cloud

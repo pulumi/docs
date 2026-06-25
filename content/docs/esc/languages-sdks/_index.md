@@ -3,7 +3,6 @@ title_tag: Pulumi ESC languages and SDKs
 meta_desc: Manage Pulumi ESC environments programmatically from .NET, Go, JavaScript, and Python.
 title: Languages & SDKs
 h1: Languages & SDKs
-meta_image: /images/docs/meta-images/docs-meta.png
 docs_home: true
 notitle: true
 norightnav: true

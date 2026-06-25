@@ -3,7 +3,6 @@ title_tag: "Targeted updates | Pulumi Guides"
 meta_desc: Learn how to use --target, --exclude, and --target-replace to limit which resources Pulumi operates on, and what trade-offs each approach involves.
 title: Targeted updates
 h1: Targeted updates
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Targeted updates

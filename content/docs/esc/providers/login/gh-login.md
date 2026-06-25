@@ -3,7 +3,6 @@ title_tag: gh-login Pulumi ESC Provider
 meta_desc: The gh-login Pulumi ESC Provider enables you to log in to GitHub using app credentials.
 title: gh-login
 h1: gh-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: gh-login

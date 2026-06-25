@@ -2,7 +2,6 @@
 title: What is Secrets Management?
 meta_desc: |
     Understand secrets management, the importance of secrets management, and how secrets management relates to infrastructure as code and configuration management
-meta_image: /images/what-is/what-is-secrets-management-meta.png
 type: what-is
 page_title: "What is Secrets Management?"
 authors: ["scott-lowe"]

@@ -3,7 +3,6 @@ title_tag: "Pulumi Integration Testing Framework"
 meta_desc: "Learn how to use Pulumi's Go-based integration testing framework to validate infrastructure deployments."
 title: Integration testing framework
 h1: Pulumi Integration Testing Framework
-meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
     iac:

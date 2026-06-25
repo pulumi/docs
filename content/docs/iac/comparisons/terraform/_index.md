@@ -3,7 +3,6 @@ title_tag: "Pulumi vs. Terraform"
 meta_desc: "Pulumi vs. Terraform: Pulumi uses general-purpose languages (Python, TypeScript, Go) across any cloud; Terraform uses HCL with HashiCorp's providers."
 title: Terraform
 h1: Pulumi vs. Terraform
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Terraform

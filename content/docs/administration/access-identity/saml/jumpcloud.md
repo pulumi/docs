@@ -2,7 +2,6 @@
 title_tag: Configuring JumpCloud | SAML SSO
 meta_desc: This page provides a walkthrough of the important aspects of configuring
   JumpCloud as a SAML SSO identity provider (IdP) for Pulumi Cloud.
-meta_image: /images/docs/meta-images/docs-meta.png
 title: JumpCloud
 h1: "SAML: Configuring JumpCloud"
 menu:

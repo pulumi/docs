@@ -3,7 +3,6 @@ title_tag: "hideDiffs | Resource Options"
 meta_desc: The hideDiffs resource option controls how property diffs are displayed in the CLI.
 title: "hideDiffs"
 h1: "Resource option: hideDiffs"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: hideDiffs

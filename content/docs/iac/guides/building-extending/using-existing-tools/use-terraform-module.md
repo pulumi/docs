@@ -3,7 +3,6 @@ title_tag: "Use a Terraform Module in Pulumi"
 meta_desc: "Learn how to use existing Terraform modules directly in your Pulumi programs."
 title: Use a Terraform Module in Pulumi
 h1: Use a Terraform Module in Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Use a Terraform Module

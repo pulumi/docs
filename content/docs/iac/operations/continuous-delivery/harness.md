@@ -3,7 +3,6 @@ title_tag: "Using Harness with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Harness CI with standard pipeline steps, authenticate with Pulumi Cloud, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Harness
 h1: Using Harness with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/iac/guides/continuous-delivery/harness/
 - /docs/iac/using-pulumi/continuous-delivery/harness/

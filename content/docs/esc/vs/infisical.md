@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC vs Infisical"
 meta_desc: Learn about the major differences between Pulumi ESC and Infisical.
 title: Pulumi ESC vs Infisical
 h1: Pulumi ESC vs Infisical
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         Name: Infisical

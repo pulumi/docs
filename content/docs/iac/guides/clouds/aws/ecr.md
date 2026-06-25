@@ -3,7 +3,6 @@ title_tag: "Using AWS Elastic Container Registry (ECR)"
 title: ECR
 h1: AWS Elastic Container Registry (ECR)
 meta_desc: The AWSx ECR components simplify provisioning ECR repositories, building and publishing container images, and managing image lifecycle policies.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

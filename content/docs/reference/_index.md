@@ -8,7 +8,6 @@ menu:
     identifier: reference-home
     weight: 1
 meta_desc: Complete reference documentation for Pulumi CLI, Cloud REST API, language SDKs, and configuration syntax.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Reference Documentation
 description: <p>Reference documentation for Pulumi command-line tools, REST APIs, language SDKs, and configuration syntax.</p>
 aliases:

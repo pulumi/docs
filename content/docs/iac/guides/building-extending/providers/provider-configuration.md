@@ -3,7 +3,6 @@ title_tag: "Provider Configuration"
 meta_desc: "Learn how to declare configuration keys for a Pulumi provider, including secrets and environment variable defaults."
 title: Provider Configuration
 h1: Provider Configuration
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Provider Configuration

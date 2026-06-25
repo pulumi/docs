@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC FAQs"
 meta_desc: Frequently asked questions about Pulumi ESC, pricing and self-hosting.
 title: Secrets & Configuration FAQ
 h1: Secrets & Configuration FAQ
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   support:
     parent: support-faq

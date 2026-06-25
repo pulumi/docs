@@ -3,7 +3,6 @@ title: What is Google Cloud Secret Manager?
 meta_desc: |
      Learn more about what Google Cloud Secret Manager is and how to use it.
 
-meta_image: /images/what-is/what-is-google-cloud-secret-manager-meta.png
 type: what-is
 page_title: "What is Google Cloud Secret Manager?"
 authors: ["torian-crane"]

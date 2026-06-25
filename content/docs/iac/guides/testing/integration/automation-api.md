@@ -3,7 +3,6 @@ title_tag: "Integration Testing with Automation API"
 meta_desc: "Learn how to use Pulumi's Automation API to write integration tests in your preferred programming language."
 title: Automation API testing
 h1: Integration Testing with Automation API
-meta_image: /images/docs/meta-images/docs-meta.png
 weight: 2
 menu:
     iac:

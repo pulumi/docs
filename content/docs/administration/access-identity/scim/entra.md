@@ -3,7 +3,6 @@ title_tag: Configuring Microsoft Entra ID | SCIM
 meta_desc: This page describes how to support SCIM 2.0 functionality between Pulumi and Entra ID.
 title: Microsoft Entra ID
 h1: "SCIM: Configuring Microsoft Entra ID"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Entra ID

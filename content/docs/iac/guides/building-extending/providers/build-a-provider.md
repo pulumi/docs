@@ -3,7 +3,6 @@ title_tag: "Build a Provider"
 meta_desc: "Learn the process for building a Pulumi Provider that can be packaged and published in the Pulumi Registry."
 title: Build a Provider
 h1: Build a Provider
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Provider

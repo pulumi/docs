@@ -3,7 +3,6 @@ title_tag: "Private Sources | Pulumi Deployments"
 meta_desc: Configure Pulumi Deployments to access private Git repositories and private package feeds during a deployment.
 title: "Private Sources"
 h1: "Private Sources"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/using/private-repositories/
 - /docs/deployments/deployments/using/private-repositories/

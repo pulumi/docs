@@ -9,7 +9,6 @@ keywords:
  - state backend
  - pulumi refresh
  - drift detection
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: State & backends

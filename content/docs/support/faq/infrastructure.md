@@ -3,7 +3,6 @@ title_tag: Pulumi IaC FAQ
 meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi IaC.
 title: Infrastructure FAQ
 h1: Infrastructure as Code FAQ
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
         parent: support-faq

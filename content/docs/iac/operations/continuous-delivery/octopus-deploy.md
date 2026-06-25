@@ -3,7 +3,6 @@ title_tag: "Using Octopus Deploy with Pulumi | CI/CD"
 meta_desc: Run Pulumi in an Octopus Deploy deployment process to deploy infrastructure changes and promote them to production through Octopus environments.
 title: Octopus Deploy
 h1: Using Octopus Deploy with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Octopus Deploy

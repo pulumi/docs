@@ -3,7 +3,6 @@ title_tag: "Review stacks"
 meta_desc: Pull request environments that deploy application and infrastructure code changes.
 title: "Review stacks"
 h1: "Review stacks"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/review-stacks/
 - /docs/pulumi-cloud/deployments/review-stacks/

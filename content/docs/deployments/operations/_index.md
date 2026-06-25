@@ -3,7 +3,6 @@ title_tag: "Pulumi Deployments: Operations"
 meta_desc: Operational details of Pulumi Deployments — the permissions a deployment runs with and how deployments are queued and executed.
 title: Operations
 h1: Pulumi Deployments Operations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Operations

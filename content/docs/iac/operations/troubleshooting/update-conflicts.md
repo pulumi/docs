@@ -3,7 +3,6 @@ title_tag: "Resolving Pulumi Update Conflicts"
 meta_desc: "Learn how to resolve 409 conflict errors when another update is currently in progress."
 title: Update conflicts
 h1: "409 conflict: Another update is currently in progress"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Update Conflicts

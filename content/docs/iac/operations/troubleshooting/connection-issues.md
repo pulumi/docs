@@ -3,7 +3,6 @@ title_tag: "Resolving Pulumi Cloud Connection Issues"
 meta_desc: "Learn how to resolve connection issues when using Pulumi Cloud, including network proxy problems."
 title: Connection issues
 h1: Connection issues
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/support/troubleshooting/common-issues/connection-issues/
   - /docs/iac/troubleshooting/common-issues/connection-issues/

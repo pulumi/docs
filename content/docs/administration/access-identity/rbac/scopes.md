@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Scopes"
 meta_desc: Learn about scopes in Pulumi Cloud and how they control access to resources
 title: "Scopes"
 h1: "Scopes"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     parent: administration-access-identity-rbac

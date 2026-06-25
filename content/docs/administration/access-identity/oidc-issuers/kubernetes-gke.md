@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Google Kubernetes Engine | OIDC
 meta_desc: This page describes how to configure Pulumi Cloud to accept Google Kubernetes Engine OIDC tokens.
 title: Google Kubernetes Engine
 h1: Configuring OpenID Connect for Google Kubernetes Engine
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Google GKE

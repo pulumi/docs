@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Elastic Kubernetes Service (EKS) | OIDC
 meta_desc: This page describes how to configure Pulumi Cloud to accept Elastic Kubernetes Service (EKS) OIDC tokens.
 title: Elastic Kubernetes Service (EKS) | OIDC
 h1: Configuring OpenID Connect for Elastic Kubernetes Service (EKS)
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: AWS EKS

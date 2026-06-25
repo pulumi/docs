@@ -3,7 +3,6 @@ title_tag: "Using Output Helpers | Inputs and Outputs"
 meta_desc: "Learn how to use Pulumi's built-in output helper functions for string interpolation and JSON serialization."
 title: Using Output Helpers
 h1: Using Output Helpers
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Helpers

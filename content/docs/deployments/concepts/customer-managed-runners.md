@@ -2,7 +2,6 @@
 title: Customer-managed runners
 title_tag: Customer-managed runners | Pulumi Deployments
 meta_desc: Self-host Pulumi workflow runners on your own infrastructure — supplying credentials and the full configuration reference for customer-managed runner pools.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Customer-managed runners

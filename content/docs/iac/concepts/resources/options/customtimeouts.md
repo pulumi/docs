@@ -3,7 +3,6 @@ title_tag: "customTimeouts | Resource Options"
 meta_desc: The customTimeouts resource option specifies the default retry/timeout behavior for resource provisioning.
 title: "customTimeouts"
 h1: "Resource option: customTimeouts"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: customTimeouts
