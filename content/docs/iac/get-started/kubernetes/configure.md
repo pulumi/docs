@@ -133,7 +133,7 @@ $ pulumi config set kubernetes:context my-cluster-context
 
 {{% notes type="info" %}}
 
-The `pulumi config set` command requires an initialized stack, which you'll create later in this guide. If you haven't created a Pulumi project and stack yet, run this command after you do.
+The `pulumi config set` command requires an existing stack, which you'll create later in this guide. If you haven't created a Pulumi project and stack yet, run this command after you do.
 
 {{% /notes %}}
 
