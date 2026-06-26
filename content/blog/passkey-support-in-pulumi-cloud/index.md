@@ -31,30 +31,30 @@ social:
         Passkey sign-in is now live in Pulumi Cloud for users who sign in with email and password. Phishing-resistant, synced across devices. Here's how to enroll.
 ---
 
-If you sign in to Pulumi Cloud with an email and password, you now have a faster, more secure option: passkeys. Click a button, approve with your secure store of choice, and you are signed in.
+If you sign in to Pulumi Cloud with an email and password, you now have a faster, more secure option: passkeys. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in. No password typed, no phishable secret exchanged.
 
-Passkeys have become increasingly popular for web authentication in the past several years, and are a more secure and often more user-friendly alternative to passwords. Depending on where your passkey is stored and how it is accessed on your device, passkeys can also function as 2FA-by-design and are more user-friendly than traditional TOTP sent to a phone or authenticator app.
-
-A passkey is a public-key credential stored on your device; your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the . When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key. The private key never leaves your device, and Pulumi Cloud never sees a secret it could leak in a breach. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
+A passkey is a public-key credential stored on your device: your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the authenticator. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key. The private key never leaves your device, and Pulumi Cloud never sees a secret it could leak in a breach. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
 
 <!--more-->
 
 ## Who this is for
 
-This release applies to users who sign in to Pulumi Cloud with an **email address and password**. If you sign in through an identity provider (IdP), such as GitHub OAuth, GitLab, Bitbucket, Google, or your organization's SAML SSO, your existing flow is unchanged. Many of these IdPs also support passkeys.
+This release applies to users who sign in to Pulumi Cloud with an **email address and password**. If you sign in through an identity provider (IdP), such as GitHub OAuth, GitLab, Bitbucket, Google, or your organization's SAML SSO, your existing flow is unchanged. Use the same provider you always have; your IdP remains the source of truth for those accounts.
 
 ## Why passkeys
 
-Passwords have always been the weakest link in account security. Since they are shared secrets, they are vulnerable to phishing attacks, and every place you type one is a place that can be impersonated or data store that can be leaked.
+Passwords have always been the weakest link in account security. Since they are shared secrets, they are vulnerable to phishing attacks, and every place you type one is a place that can be impersonated or a data store that can be leaked. Passkeys swap that out for a per-site key pair that lives on your device:
 
 - **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator. There is no equivalent of "tricking the user into typing their password into a clone."
 - **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on. Register once, sign in anywhere.
-- **Usability.** You don't need to type anything whatsoever to sign in. Pulumi Cloud doesn't need to know which user you are before you authenticate, since this metadata is embedded in the passkey. Just click "Sign in with a passkey" and your device offers the right credential, no email field required.
+- **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just click "Sign in with a passkey" and your device offers the right credential, no email field required.
+- **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and nothing for someone else's breach to expose.
 
 ## Setting up a passkey
+
 The next time you sign in with a password, you will be automatically prompted to ask if you'd like to configure a passkey.
 
-If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to to **Account Settings → Passkeys** under your user profile. Click **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
+If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to **Account Settings → Passkeys** under your user profile. Click **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
 
 ![Pulumi Cloud Account Settings page showing the Passkeys section, with a "Register a passkey" button and an enrolled passkey named "Pulumipus's iPhone".](./account-settings-passkeys.png)
 
