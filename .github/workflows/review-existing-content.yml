@@ -13,11 +13,14 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # check, so a human approval is still required to merge — auto-merge only
 # removes the manual merge click after approval.
 #
-# KILL SWITCH (default-on): the scheduled run fires unless the
-# CONTENT_REVIEW_ENABLED repo variable is set to the literal string 'false'.
-# Unset (the default) or any other value runs normally; set it to 'false' to
-# stop the cron instantly with no PR. The value is matched literally and
-# case-sensitively — 'False' / '0' / 'off' do NOT disable it; use 'false'.
+# SINGLE SWITCH (default-on) — the CONTENT_REVIEW_COUNT repo variable is both
+# the on/off and the cadence knob:
+#   unset -> on, 3 articles/run (the default)
+#   '0'   -> off: the whole job is skipped (no runner, no spend)
+#   'N'   -> on, N articles/run
+# Set it from Settings -> Variables to retune or pause with no PR. The job gate
+# below is a plain string compare against '0' (the hard off); the selector also
+# no-ops cleanly on any count<=0, so a stray '00'/'-1' still does no work.
 # workflow_dispatch always runs regardless (the testing path; see the
 # dry_run / count / paths inputs).
 
@@ -96,7 +99,7 @@ jobs:
     timeout-minutes: 60
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (vars.CONTENT_REVIEW_ENABLED != 'false' && needs.holiday-check.outputs.is_holiday != 'true')
+      (vars.CONTENT_REVIEW_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     steps:
       # ESC runs before checkout so the bot token can authenticate the
       # checkout — the PRs opened by claude-code-action later then go out
