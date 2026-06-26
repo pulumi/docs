@@ -223,6 +223,9 @@ review (a clean lint means it flows through the normal pipeline; a trivial fix i
 short-circuited there). A lint failure leaves the PR a draft with a comment for a
 human; humans merge. The sections (each is checked for):
 
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
+  GitHub auto-merge on the PR, so the body flags that approving merges it.
+  **Leave verbatim** — do not move, reword, or remove it.
 - **Why this page**: composed from the selection queue (lane, tier, traffic
   figure + period, last reviewed). **Leave verbatim** — do not re-narrate it.
 - **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
