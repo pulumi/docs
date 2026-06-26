@@ -113,7 +113,7 @@ To update your organization's display name:
 
 Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
-If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/). Distinct legal billing names on invoices are a planned enhancement.
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/).
 
 ## Transferring stacks
 
