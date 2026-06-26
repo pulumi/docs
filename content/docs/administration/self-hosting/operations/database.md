@@ -3,7 +3,6 @@ title_tag: "Database Best Practices | Self-Hosting Pulumi"
 meta_desc: Best practices for MySQL database configuration, high availability, sizing, and migrations for self-hosted Pulumi Cloud.
 title: Database
 h1: Database Best Practices
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Database

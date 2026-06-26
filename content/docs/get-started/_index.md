@@ -4,7 +4,6 @@ meta_desc: Step-by-step guides for creating, deploying, and managing infrastruct
 title: Get Started #Breadcrumb
 h1: Get Started with Pulumi # Page title
 no_on_this_page: true
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     get-started:
         name: Get Started

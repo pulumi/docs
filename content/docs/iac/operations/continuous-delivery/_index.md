@@ -3,7 +3,6 @@ title_tag: "Continuous Delivery for the Cloud"
 meta_desc: Pulumi models cloud infrastructure as source code, so infrastructure changes flow through the same CI/CD pipeline as your application code.
 title: Continuous Delivery
 h1: Pulumi and Continuous Delivery
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Continuous Delivery

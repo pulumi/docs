@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Create Accounts"
 meta_desc: Learn how to create and configure accounts in the Pulumi Cloud in this guide.
 title: Accounts
 h1: Pulumi Cloud accounts
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Accounts

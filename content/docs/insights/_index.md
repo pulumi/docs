@@ -9,7 +9,6 @@ menu:
     identifier: insights-home
     weight: 1
 meta_desc: Discover, secure, and govern cloud infrastructure with comprehensive visibility and policy enforcement across all your resources.
-meta_image: /images/docs/meta-images/insights-meta.png
 h1: Insights & Governance
 description: |
   Pulumi Insights & Governance provides comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.

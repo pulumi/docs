@@ -3,7 +3,6 @@ title_tag: "Using Dev Builds for Unreleased Fixes"
 meta_desc: "Learn how to install and use Pulumi dev builds to access bug fixes and features that have been merged but not yet released."
 title: Using Dev Builds for Unreleased Fixes
 h1: Using Dev Builds for Unreleased Fixes
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         parent: iac-operations-debugging

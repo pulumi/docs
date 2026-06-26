@@ -3,7 +3,6 @@ title_tag: Pulumi Deployments Cloud Credentials
 meta_desc: This page explains the options for supplying cloud credentials to a Pulumi Deployment
 title: Supplying Cloud Credentials to Pulumi Deployments
 h1: Supplying Cloud Credentials to Pulumi Deployments
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/deployments/cloud-credentials/
 - /docs/deployments/deployments/cloud-credentials/

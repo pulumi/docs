@@ -3,7 +3,6 @@ title_tag: "Using Codefresh with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Codefresh pipelines to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: Codefresh
 h1: Using Codefresh with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Codefresh

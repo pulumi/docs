@@ -3,7 +3,6 @@ title: Cosmos DB vs MongoDB, Know The Differences?
 meta_desc: |
      Compare Cosmos DB and MongoDB strengths and limitations to determine the best database option.
 
-meta_image: /images/what-is/cosmos-db-vs-mongodb-know-the-differences-meta.png
 type: what-is
 page_title: "Cosmos DB vs MongoDB, Know The Differences"
 

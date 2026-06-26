@@ -2,7 +2,6 @@
 title: Guides
 title_tag: Pulumi Deployments Guides
 meta_desc: Task-oriented guides for Pulumi Deployments — cloud credentials, custom images, customer-managed runners, private sources, OIDC, and post-deployment automation.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Guides

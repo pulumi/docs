@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Roles"
 meta_desc: Learn about roles in Pulumi Cloud and how they control access to resources
 title: "Roles"
 h1: "Roles"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Roles

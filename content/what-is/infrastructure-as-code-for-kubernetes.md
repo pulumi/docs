@@ -2,7 +2,6 @@
 title: "Kubernetes Infrastructure as Code: Tools and Best Practices"
 meta_desc: "Kubernetes infrastructure as code defines the cluster, its workloads, and the cloud resources around them in version-controlled code. Tools and best practices."
 
-meta_image: /images/what-is/infrastructure-as-code-for-kubernetes-meta.png
 type: what-is
 page_title: "Kubernetes Infrastructure as Code"
 

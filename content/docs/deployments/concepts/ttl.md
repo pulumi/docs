@@ -3,7 +3,6 @@ title_tag: "Time-to-live stacks"
 meta_desc: Set a time-to-live on a stack, automatically destroying it when the one time schedule is set for.
 title: "Time-to-live stacks"
 h1: "Time-to-live stacks"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/ttl/
 - /docs/pulumi-cloud/deployments/ttl/

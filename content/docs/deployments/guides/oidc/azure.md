@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Azure with Pulumi Deployments | OIDC
 meta_desc: This page describes how to configure OIDC token exchange in Azure for use with Pulumi Deployments
 title: Azure
 h1: Configuring OpenID Connect for Azure with Pulumi Deployments
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Azure

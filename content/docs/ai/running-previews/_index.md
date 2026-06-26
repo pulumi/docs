@@ -3,7 +3,6 @@ title: Previews
 title_tag: Running previews with Pulumi Neo
 h1: Running previews with Pulumi Neo
 meta_desc: Learn how Neo uses Pulumi preview to validate infrastructure changes before creating pull requests.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/running-previews/
 - /docs/iac/neo/running-previews/

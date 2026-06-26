@@ -3,7 +3,6 @@ title_tag: "Export Audit Logs to AWS S3"
 meta_desc: Learn how to configure automated export of Pulumi Cloud audit logs to an Amazon S3 bucket.
 title: "Export to AWS S3"
 h1: Export audit logs to AWS S3
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Export to AWS S3

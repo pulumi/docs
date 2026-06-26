@@ -3,7 +3,6 @@ title_tag: Property Paths
 meta_desc: Property Paths are used to refer to elements in a configuration object.
 title: Property Paths
 h1: Property Paths
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: Property Paths

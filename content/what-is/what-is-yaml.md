@@ -3,7 +3,6 @@ title: What is YAML?
 meta_desc: |
      YAML is a data serialization language that has steadily increased in popularity. Discover how to use YAML with Pulumi today.
 
-meta_image: /images/what-is/what-is-yaml-meta.png
 type: what-is
 page_title: "What is YAML?"
 

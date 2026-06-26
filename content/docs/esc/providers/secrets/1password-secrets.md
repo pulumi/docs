@@ -3,7 +3,6 @@ title: 1password-secrets
 title_tag: 1password-secrets Pulumi ESC Provider
 meta_desc: The `1password-secrets` provider enables you to dynamically import Secrets from 1Password into your Pulumi ESC environment.
 h1: 1password-secrets
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: 1password-secrets

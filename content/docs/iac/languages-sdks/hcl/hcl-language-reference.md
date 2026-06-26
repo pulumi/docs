@@ -3,7 +3,6 @@ title_tag: "Pulumi HCL Reference | Languages & SDKs"
 meta_desc: Specification for the Pulumi HCL format, blocks, expressions, and built-in functions.
 title: Reference
 h1: Pulumi HCL reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: hcl-language-reference

@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: RBAC Scopes - Stacks"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
 title: "RBAC Scopes"
 h1: "RBAC Scopes"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: "Stacks"

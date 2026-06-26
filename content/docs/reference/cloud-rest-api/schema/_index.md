@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud REST API: Schema"
 meta_desc: API documentation for Pulumi Cloud schema components.
 title: "Schema"
 h1: Schema
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: Schema

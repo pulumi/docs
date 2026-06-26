@@ -3,7 +3,6 @@ title_tag: "Using AWS API Gateway"
 title: API Gateway
 h1: Amazon API Gateway
 meta_desc: The AWS API Gateway component for Pulumi provides an easier way to create and manage API Gateway resources.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws
