@@ -16,23 +16,27 @@
     {{- $url = printf "%s?%s" $url (delimit $queryParts "&") }}
 {{- end }}
 
-{{/* Build the curl command line by line. */}}
+{{/* Read the request body example from the native OpenAPI 3 mediaType.example slot. */}}
+{{- $bodyData := "" }}
+{{- with .details.requestBody }}
+    {{- with index .content "application/json" }}
+        {{- if .example }}
+            {{- $bodyData = .example | jsonify (dict "indent" "  ") }}
+        {{- end }}
+    {{- end }}
+{{- end }}
+
 {{- $lines := slice "curl \\" }}
 {{- $lines = $lines | append "  -H \"Accept: application/vnd.pulumi+8\" \\" }}
-{{- $lines = $lines | append "  -H \"Content-Type: application/json\" \\" }}
+{{- if $bodyData }}
+    {{- $lines = $lines | append "  -H \"Content-Type: application/json\" \\" }}
+{{- end }}
 {{- $lines = $lines | append "  -H \"Authorization: token $PULUMI_ACCESS_TOKEN\" \\" }}
 {{- if ne $method "GET" }}
     {{- $lines = $lines | append (printf "  --request %s \\" $method) }}
 {{- end }}
-{{- with .details.requestBody }}
-    {{- $jsonContent := index .content "application/json" }}
-    {{- with $jsonContent }}
-        {{- $bodyData := "{}" }}
-        {{- if .example }}
-            {{- $bodyData = .example | jsonify }}
-        {{- end }}
-        {{- $lines = $lines | append (printf "  --data '%s' \\" $bodyData) }}
-    {{- end }}
+{{- if $bodyData }}
+    {{- $lines = $lines | append (printf "  --data '%s' \\" $bodyData) }}
 {{- end }}
 {{- $lines = $lines | append (printf "  %s" $url) }}
 <pre><code>{{ delimit $lines "\n" }}</code></pre>
