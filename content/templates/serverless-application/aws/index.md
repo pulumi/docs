@@ -43,30 +43,16 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
-{{% choosable language "typescript,python,go,csharp,yaml" %}}
-
 url
 : The HTTP URL for the application.
-
-{{% /choosable %}}
-
-{{% choosable language hcl %}}
-
-site_url
-: The HTTP URL for the website.
-
-api_url
-: The HTTP URL for the API endpoint.
-
-{{% /choosable %}}
 
 Stack outputs are useful in a number of ways, most commonly as inputs to other stacks or cloud resources.
 
 ## Customizing the project
 
-Projects created with the AWS Serverless template expose the following [configuration](/docs/iac/concepts/config/) settings:
-
 {{% choosable language "typescript,python,go,csharp,yaml" %}}
+
+Projects created with the AWS Serverless template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 path
 : The path to the folder containing the files of the website. Defaults to `www`, which is the folder included with the template. The `/date` path is a GET endpoint that retrieves the current time from the Lambda function.
@@ -74,39 +60,26 @@ path
 code
 : The path to the folder containing the Lambda function code. Defaults to the `function` folder included with the template.
 
+None of these settings is required; by default, the template deploys the website and function using the files in the `www` and `function` folders bundled with the template.
+
 {{% /choosable %}}
 
 {{% choosable language hcl %}}
 
-site_path
-: The path to the folder containing the files of the website. Defaults to `./www`, which is the folder included with the template. The `/date` path is a GET endpoint that retrieves the current time from the Lambda function.
-
-app_path
-: The path to the folder containing the Lambda function code. Defaults to the `./function` folder included with the template.
+The HCL version of this template exposes no [configuration](/docs/iac/concepts/config/) settings. It deploys the website and function using the files in the `www` and `function` folders bundled with the template.
 
 {{% /choosable %}}
-
-None of these settings is required; by default, the template deploys the website and function using the files in the `www` and `function` folders bundled with the template.
 
 ### Using your own web content
 
 If you already have a website you'd like to deploy, you can do so by replacing the contents of the `www` folder and redeploying with `pulumi up`.
 
-Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the website path setting:
-
 {{% choosable language "typescript,python,go,csharp,yaml" %}}
+
+Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the website path setting:
 
 ```bash
 $ pulumi config set path ../my-website/dist
-$ pulumi up
-```
-
-{{% /choosable %}}
-
-{{% choosable language hcl %}}
-
-```bash
-$ pulumi config set site_path ../my-website/dist
 $ pulumi up
 ```
 

@@ -92,11 +92,11 @@ appPath
 region
 : The Google Cloud region to deploy into. Defaults to `us-central1`.
 
-app_path
-: The location of the Dockerfile used to build the container image. Defaults to the `app` folder, which contains a "Hello World" example app.
-
 image_name
 : The name of the container image deployed to your Cloud Run service. Defaults to `my-app`.
+
+app_path
+: The location of the Dockerfile used to build the container image. Defaults to the `app` folder, which contains a "Hello World" example app.
 
 container_port
 : The port mapping for the container service. Defaults to port `8080`.

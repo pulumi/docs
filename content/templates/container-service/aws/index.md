@@ -74,20 +74,14 @@ image
 
 {{% choosable language hcl %}}
 
-app_path
-: Specifies the path to the container application to deploy, used as the build context for the Dockerfile. Defaults to `./app`.
-
-image_name
-: Specifies the name to give the container image that is built. Defaults to `my-app`.
-
 container_port
-: Specifies the port mapping for the container. Defaults to `80`.
+: Specifies the port mapping for the container. Defaults to port 80.
 
 cpu
-: Specifies the amount of CPU to use with each task or each container within a task. Defaults to `256`.
+: Specifies the amount of CPU to use with each task or each container within a task. Defaults to 512.
 
 memory
-: Specifies the amount of memory to use with each task or each container within a task. Defaults to `512`.
+: Specifies the amount of memory to use with each task or each container within a task. Defaults to 128.
 
 {{% /choosable %}}
 
@@ -108,12 +102,7 @@ $ pulumi up
 
 {{% choosable language hcl %}}
 
-If you already have a container image you'd like to build your container service with, you can do so either by replacing the Dockerfile in the `app` folder or by configuring the stack to point to another folder on your computer (one containing a Dockerfile) with the `app_path` setting:
-
-```bash
-$ pulumi config set app_path ../my-existing-image
-$ pulumi up
-```
+If you already have a container image you'd like to build your container service with, you can do so by replacing the Dockerfile and application code in the `app` folder, then redeploying with `pulumi up`.
 
 {{% /choosable %}}
 

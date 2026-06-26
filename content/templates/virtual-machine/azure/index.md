@@ -106,9 +106,6 @@ sshPublicKey
 
 {{% choosable language hcl %}}
 
-location
-: The Azure location to deploy into. Defaults to `WestUS2`.
-
 admin_username
 : The user account to create on the VM. Defaults to `pulumiuser`.
 

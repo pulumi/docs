@@ -67,15 +67,9 @@ origin_url
 origin_hostname
 : The provider-assigned hostname of the Azure Blob Storage container.
 
-cdn_url
-: The fully-qualified HTTPS URL of the Azure CDN.
-
-cdn_hostname
-: The provider-assigned hostname of the Azure CDN. Useful for creating `CNAME` records to associate custom domains.
-
 {{% /choosable %}}
 
-Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed CDN URL, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed URL of the deployed site, for example, can be used from the command line to open it in your favorite web browser:
 
 {{% choosable language "typescript,python,go,csharp,yaml" %}}
 
@@ -88,7 +82,7 @@ $ open $(pulumi stack output cdnURL)
 {{% choosable language hcl %}}
 
 ```bash
-$ open $(pulumi stack output cdn_url)
+$ open $(pulumi stack output origin_url)
 ```
 
 {{% /choosable %}}
@@ -111,9 +105,6 @@ errorDocument
 {{% /choosable %}}
 
 {{% choosable language hcl %}}
-
-location
-: The Azure region to deploy into. Defaults to `WestUS`.
 
 path
 : The path to the folder containing the files of the website. Defaults to `./www`, which is the name (and relative path) of the folder included with the template.
