@@ -4,7 +4,6 @@ meta_desc: Learn about Policy Findings in Pulumi Policies and how to manage comp
 title: Policy Findings
 h1: Policy Findings
 weight: 2
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Policy Findings

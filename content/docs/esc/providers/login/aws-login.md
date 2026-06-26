@@ -3,7 +3,6 @@ title_tag: aws-login Pulumi ESC Provider
 meta_desc: The aws-login Pulumi ESC Provider enables you to log in to AWS using OIDC or static credentials.
 title: aws-login
 h1: aws-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: aws-login

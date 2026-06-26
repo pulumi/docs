@@ -3,7 +3,6 @@ title: Concepts
 title_tag: "Pulumi Deployments"
 h1: "Pulumi Deployments"
 meta_desc: What Pulumi Deployments is, why it exists, and an overview of its core concepts.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     parent: deployments-home

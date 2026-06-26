@@ -3,7 +3,6 @@ title_tag: "Using AWS Identity & Access Management (IAM)"
 title: IAM
 h1: AWS Identity & Access Management (IAM)
 meta_desc: Pulumi makes it easy to create, update, and otherwise manage AWS users, groups, and roles securely.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

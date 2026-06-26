@@ -3,7 +3,6 @@ title_tag: "Functions"
 meta_desc: Learn about the three types of functions available in Pulumi programs - provider functions, get functions, and resource methods.
 title: Functions
 h1: Functions
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Functions

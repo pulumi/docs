@@ -3,7 +3,6 @@ title_tag: "Configuration | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages cloud application configuration settings.
 title: Configuration
 h1: Configuration
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Configuration

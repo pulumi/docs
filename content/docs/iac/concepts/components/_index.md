@@ -3,7 +3,6 @@ title_tag: "Component Resources"
 meta_desc: Learn what Pulumi component resources are, how to consume them, and how to author your own reusable infrastructure building blocks.
 title: Components
 h1: Component resources
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Components

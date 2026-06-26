@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC vs HashiCorp Vault"
 meta_desc: Learn about the major differences between Pulumi ESC and HashiCorp Vault.
 title: Pulumi ESC vs HashiCorp Vault
 h1: Pulumi ESC vs HashiCorp Vault
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         name: HashiCorp Vault

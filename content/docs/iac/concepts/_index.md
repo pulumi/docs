@@ -3,7 +3,6 @@ title_tag: What is Pulumi?
 meta_desc: Learn about what Pulumi is, how it works, and how its components work together to deliver a robust platform for creating and managing cloud infrastructure.
 title: Concepts
 h1: What is Pulumi?
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Concepts

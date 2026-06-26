@@ -3,7 +3,6 @@ title_tag: "providers | Resource Options"
 meta_desc: The providers resource option specifies a set of explicitly configured providers to be used for a resource and all of its children.
 title: "providers"
 h1: "Resource option: providers"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: providers

@@ -3,7 +3,6 @@ title_tag: "Author a Dynamic Provider"
 meta_desc: "Author a dynamic provider inside a Pulumi program: when to choose one, the resource provider interface, and complete TypeScript and Python examples."
 title: Author a Dynamic Provider
 h1: Author a Dynamic Provider
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Author a Dynamic Provider

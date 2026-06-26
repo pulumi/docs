@@ -3,7 +3,6 @@ title: MCP Integrations
 title_tag: Neo MCP Integrations
 h1: MCP Integrations
 meta_desc: Connect Neo to external services through Model Context Protocol servers, bringing issue tracker, observability, and runbook context into Neo tasks.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: MCP Integrations

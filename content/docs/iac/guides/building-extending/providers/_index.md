@@ -3,7 +3,6 @@ title_tag: "Providers | Guides"
 meta_desc: "Learn what a Pulumi provider is, when to build one, and what tools to use depending on your language and starting point."
 title: Introduction
 h1: Providers
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         parent: iac-guides-providers

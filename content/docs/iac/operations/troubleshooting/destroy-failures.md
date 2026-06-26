@@ -3,7 +3,6 @@ title_tag: "Resolving Pulumi Destroy Failures"
 meta_desc: "Learn how to handle scenarios when pulumi destroy fails to delete resources as expected."
 title: Destroy failures
 h1: Pulumi destroy fails
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Destroy Failures

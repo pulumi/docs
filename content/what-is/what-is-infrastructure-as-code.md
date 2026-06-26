@@ -2,7 +2,6 @@
 title: "What is Infrastructure as Code (IaC)?"
 meta_desc: |
     Infrastructure as code (IaC) provisions cloud infrastructure with code instead of consoles. Learn how IaC works, declarative vs. imperative, and top tools.
-meta_image: /images/what-is/what-is-infrastructure-as-code-meta.png
 type: what-is
 page_title: "What is Infrastructure as Code (IaC)?"
 aliases:

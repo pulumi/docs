@@ -3,7 +3,6 @@ title_tag: "Refactoring with aliases | Pulumi Operations"
 meta_desc: Rename, re-parent, change the type, or move resources across stacks without destroying and recreating them, using the Pulumi aliases resource option.
 title: Refactoring with aliases
 h1: Refactoring with aliases
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Refactoring with aliases

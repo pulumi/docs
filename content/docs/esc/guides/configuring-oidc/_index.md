@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect | Pulumi ESC
 meta_desc: This page describes how to configure OIDC token exchange with Pulumi ESC
 title: Configure OpenID Connect
 h1: Configuring OpenID Connect for Pulumi ESC
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Configuring OIDC

@@ -3,7 +3,6 @@ title_tag: "Generate typed CustomResources with crd2pulumi"
 meta_desc: crd2pulumi generates typed Pulumi SDK classes from Kubernetes CustomResourceDefinition (CRD) YAML schemas, enabling IDE autocompletion and type checking.
 title: crd2pulumi
 h1: crd2pulumi
-meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   integrations:
     name: crd2pulumi

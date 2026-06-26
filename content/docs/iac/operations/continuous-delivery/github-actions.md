@@ -3,7 +3,6 @@ title_tag: "Using GitHub Actions with Pulumi | CI/CD"
 meta_desc: Run Pulumi in GitHub Actions with the official Pulumi GitHub Action, and ship infrastructure through a trunk-based CI/CD workflow.
 title: GitHub Actions
 h1: Using GitHub Actions with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: GitHub Actions

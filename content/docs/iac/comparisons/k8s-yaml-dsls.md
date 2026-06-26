@@ -3,7 +3,6 @@ title_tag: "Pulumi vs. Kubernetes YAML Manifests"
 meta_desc: "How Pulumi compares to Kubernetes YAML Manifests: a multi-cloud IaC platform in general-purpose languages versus Kubernetes' native declarative config format."
 title: Kubernetes YAML Manifests
 h1: Pulumi vs. Kubernetes YAML Manifests
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Kubernetes YAML Manifests

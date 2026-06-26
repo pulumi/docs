@@ -3,7 +3,6 @@ title_tag: "Migrating from AWS CDK"
 meta_desc: Migrate your existing AWS CDK TypeScript application
 title: AWS CDK
 h1: "Migrating from AWS CDK to Pulumi"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWS CDK

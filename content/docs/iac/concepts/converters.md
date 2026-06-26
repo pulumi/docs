@@ -3,7 +3,6 @@ title_tag: Converters
 meta_desc: Learn about Pulumi converters, which translate IaC written in other tools into Pulumi programs in any supported language.
 title: Converters
 h1: Converters
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Converters

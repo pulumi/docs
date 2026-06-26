@@ -3,7 +3,6 @@ title_tag: "Compute Sizing | Self-Hosting Pulumi"
 meta_desc: Container resource allocation and minimum infrastructure requirements for self-hosted Pulumi Cloud across ECS, EKS, and BYO deployments.
 title: Compute Sizing
 h1: Compute Sizing
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Compute Sizing

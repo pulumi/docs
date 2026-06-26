@@ -9,7 +9,6 @@ menu:
     weight: 70
 aliases:
   - /docs/iac/cli/error-codes/
-meta_image: /images/docs/meta-images/docs-meta.png
 ---
 
 The Pulumi CLI returns numeric exit codes that indicate the result of a command. Scripts, CI/CD systems, and tools can use these codes to distinguish between different kinds of failures.

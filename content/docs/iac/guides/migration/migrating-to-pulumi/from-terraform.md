@@ -3,7 +3,6 @@ title_tag: "Migrating from Terraform"
 meta_desc: Migrate your existing Terraform HCL and/or coexist with existing workspaces.
 title: Terraform
 h1: Migrating from Terraform or CDKTF to Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Terraform

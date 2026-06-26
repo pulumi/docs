@@ -3,7 +3,6 @@ title_tag: "Using TeamCity with Pulumi | CI/CD"
 meta_desc: Run Pulumi in TeamCity build configurations to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: TeamCity
 h1: Using TeamCity with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: TeamCity

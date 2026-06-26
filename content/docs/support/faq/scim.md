@@ -3,7 +3,6 @@ title_tag: Frequently Asked Questions (FAQ) | SCIM
 meta_desc: This page describes how to resolve issues that may occur when configuring SCIM provisioning
 title: SCIM FAQ
 h1: SCIM FAQ
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   support:
     name: SCIM FAQ

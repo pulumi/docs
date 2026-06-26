@@ -3,7 +3,6 @@ title_tag: "Stash | Pulumi Concepts"
 meta_desc: The Stash resource allows you to save values to state for retrieval in later deployments. Learn more about the Pulumi Stash resource and how to use it.
 title: Stash
 h1: Stash
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stash

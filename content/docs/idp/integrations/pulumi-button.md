@@ -3,7 +3,6 @@ title_tag: "Deploy with Pulumi button"
 meta_desc: The "Deploy with Pulumi" button lets you easily create new Pulumi projects from the browser. Learn how to create this deployment button in this guide.
 title: Deploy with Pulumi button
 h1: Deploy with Pulumi button
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   idp:
     name: Deploy with Pulumi button

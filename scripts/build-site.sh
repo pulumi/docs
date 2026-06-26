@@ -24,6 +24,12 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
+# Generate OpenGraph meta images. Ephemeral: written into the gitignored
+# assets/images/generated/ (cached in CI via actions/cache), not committed.
+# Must run before Hugo so templates can resolve the cards.
+printf "Generating meta images...\n\n"
+node scripts/generate-meta-images.mjs
+
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"

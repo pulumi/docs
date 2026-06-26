@@ -9,7 +9,6 @@ menu:
     identifier: integrations-home
     weight: 1
 meta_desc: Integrations connect Pulumi with the clouds, version control systems, and tools you already use.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Integrations
 description: <p>Integrations connect Pulumi with the clouds, version control systems, and tools you already use.</p>
 

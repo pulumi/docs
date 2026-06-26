@@ -12,7 +12,6 @@ aliases:
   - /docs/pulumi-cloud/esc/
 
 meta_desc: Learn how to tame secrets sprawl and configuration complexity securely across all your cloud infrastructure and applications.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Secrets & Configuration
 description: <p>Pulumi ESC (Environments, Secrets, and Configuration) provides centralized secrets management and orchestration across all your infrastructure and applications.</p>
 

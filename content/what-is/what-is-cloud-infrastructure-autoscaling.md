@@ -2,7 +2,6 @@
 title: What Is Cloud Infrastructure Autoscaling?
 meta_desc: "Autoscaling adds and removes cloud capacity automatically. Learn horizontal vs vertical, reactive vs predictive, the major cloud services, and common pitfalls."
 
-meta_image: /images/what-is/what-is-cloud-infrastructure-autoscaling-meta.png
 type: what-is
 page_title: Autoscaling 101
 

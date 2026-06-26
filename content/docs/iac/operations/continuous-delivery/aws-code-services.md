@@ -3,7 +3,6 @@ title_tag: "Using AWS Code Services with Pulumi | CI/CD"
 meta_desc: Run Pulumi in AWS CodeBuild and CodePipeline to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: AWS Code Services
 h1: Using AWS Code Services with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWS Code Services

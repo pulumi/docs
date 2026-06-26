@@ -3,7 +3,6 @@ title: CI/CD Integration
 title_tag: "CI/CD Integration | Pulumi Policies"
 h1: Policy Enforcement in CI/CD
 meta_desc: Enforce Pulumi policies in CI/CD pipelines to automatically block non-compliant infrastructure changes before deployment.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: CI/CD Integration

@@ -3,7 +3,6 @@ title_tag: "Using Pulumi with AWS CDK"
 meta_desc: Use the Pulumi CDK adapter to run your existing AWS CDK applications with Pulumi.
 title: Using Pulumi with AWS CDK
 h1: "Using Pulumi with AWS CDK"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
     - /docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/using-pulumi-cdk/
 menu:

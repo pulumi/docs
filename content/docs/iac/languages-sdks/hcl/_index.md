@@ -3,7 +3,6 @@ title_tag: "HCL | Languages & SDKs"
 meta_desc: An overview of Pulumi HCL, a language plugin for writing infrastructure as code in Terraform-like HCL syntax on any cloud.
 title: HCL
 h1: Pulumi & HCL
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: HCL

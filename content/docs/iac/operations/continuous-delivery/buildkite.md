@@ -3,7 +3,6 @@ title_tag: "Using Buildkite with Pulumi | CI/CD"
 meta_desc: Run Pulumi in a Buildkite pipeline with the official Pulumi plugin, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Buildkite
 h1: Using Buildkite with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/iac/guides/continuous-delivery/buildkite/
 - /docs/iac/using-pulumi/continuous-delivery/buildkite/

@@ -3,7 +3,6 @@ title_tag: Stack Settings File Reference
 meta_desc: Documentation of the settings that are valid for Pulumi stack configuration files (Pulumi.<stack-name>.yaml).
 title: Stack settings file reference
 h1: Pulumi stack settings file reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stack settings file reference

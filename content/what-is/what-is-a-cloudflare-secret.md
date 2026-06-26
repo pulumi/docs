@@ -3,7 +3,6 @@ title: What is a Cloudflare Secret?
 meta_desc: |
     Learn more about Cloudflare secrets and how to use them.
 
-meta_image: /images/what-is/what-is-a-cloudflare-secret-meta.png
 type: what-is
 page_title: "What is a Cloudflare Secret?"
 authors: ["diana-esteves"]

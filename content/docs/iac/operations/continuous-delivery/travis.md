@@ -3,7 +3,6 @@ title_tag: "Using Travis CI with Pulumi | CI/CD"
 meta_desc: Run Pulumi in a Travis CI build to preview and deploy infrastructure through a trunk-based CI/CD workflow.
 title: Travis CI
 h1: Using Travis CI with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Travis CI

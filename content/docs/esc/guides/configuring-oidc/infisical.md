@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Infisical | Pulumi ESC
 meta_desc: This page describes how to configure OIDC token exchange in Infisical for use with Pulumi
 title: Infisical
 h1: Configuring OpenID Connect for Infisical
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Infisical

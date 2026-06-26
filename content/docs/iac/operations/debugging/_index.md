@@ -8,7 +8,6 @@ notitle: true
 norightnav: true
 h1: Debugging
 description: <p>Tools and techniques for diagnosing and fixing Pulumi programs.</p>
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Debugging

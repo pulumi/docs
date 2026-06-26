@@ -3,7 +3,6 @@ title_tag: "Upgrades | Self-Hosting Pulumi"
 meta_desc: Best practices for staged rollouts, layered updates, and version pinning for self-hosted Pulumi Cloud deployments.
 title: Upgrades
 h1: Upgrade Pipeline
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Upgrades

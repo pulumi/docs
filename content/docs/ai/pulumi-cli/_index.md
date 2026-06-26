@@ -3,7 +3,6 @@ title: Neo in the Pulumi CLI
 title_tag: Neo in the Pulumi CLI
 h1: Neo in the Pulumi CLI
 meta_desc: Run pulumi neo to start an interactive Neo session in your terminal with access to your local project, credentials, and stacks.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: Pulumi CLI

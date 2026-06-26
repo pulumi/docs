@@ -3,7 +3,6 @@ title_tag: "Basics | Pulumi Guides"
 meta_desc: Learn fundamental practices for organizing Pulumi projects, securing your infrastructure, and managing deployments.
 title: Basics
 h1: Basics
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Basics

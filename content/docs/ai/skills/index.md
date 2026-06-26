@@ -3,7 +3,6 @@ title: Agent Skills
 title_tag: Pulumi Agent Skills
 h1: Pulumi Agent Skills
 meta_desc: Learn how to use Pulumi Agent Skills to teach AI coding assistants like Claude Code, Cursor, GitHub Copilot, and JetBrains Junie how to work with Pulumi.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: Agent Skills

@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for GitHub | OIDC
 meta_desc: This page describes how to configure Pulumi Cloud to accept GitHub OIDC tokens for organization, team, and personal access.
 title: GitHub
 h1: Configuring OpenID Connect for GitHub
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: GitHub

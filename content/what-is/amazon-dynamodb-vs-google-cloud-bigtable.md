@@ -3,7 +3,6 @@ title: Amazon DynamoDB vs Google Cloud Bigtable
 meta_desc: |
      Compare Amazon DynamoDB vs Google Cloud Bigtable, plus other DynamoDB alternatives like Cassandra, MongoDB, and Cosmos DB, to pick the right NoSQL database.
 
-meta_image: /images/what-is/amazon-dynamodb-vs-google-cloud-bigtable-meta.png
 type: what-is
 page_title: "Amazon DynamoDB vs Google Cloud Bigtable"
 

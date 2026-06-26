@@ -3,7 +3,6 @@ title: Self-hosted Insights
 title_tag: Self-hosted Insights | Pulumi Insights
 h1: Self-hosted Insights
 meta_desc: Run Pulumi Insights discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home

@@ -3,7 +3,6 @@ title: Code reviews
 title_tag: Neo code reviews
 h1: Neo code reviews
 meta_desc: Neo code reviews analyze pull requests against what Pulumi Cloud knows about your running infrastructure and leave feedback in the pull request.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/code-reviews/
 - /docs/iac/neo/code-reviews/

@@ -3,7 +3,6 @@ title_tag: "Bitbucket Integration | Version Control"
 meta_desc: Connect Bitbucket Cloud workspaces to Pulumi Cloud for pull request previews, push-to-deploy, review stacks, commit statuses, and automated deployments.
 title: Bitbucket
 h1: Bitbucket
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     integrations:
         name: Bitbucket

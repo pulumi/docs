@@ -3,7 +3,6 @@ title_tag: "Building & Extending Pulumi | Guides"
 meta_desc: Learn how to build custom components, providers, and packages to extend Pulumi's capabilities.
 title: Building & Extending
 h1: Building & Extending Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Building & Extending

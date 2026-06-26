@@ -3,7 +3,6 @@ title_tag: OIDC Setup for Pulumi Deployments
 meta_desc: This page provides an overview of how to set up OIDC for Pulumi Deployments to obtain cloud provider credentials
 title: OIDC Setup
 h1: OIDC Setup for Pulumi Deployments
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: OIDC Setup

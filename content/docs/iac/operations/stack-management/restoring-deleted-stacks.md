@@ -3,7 +3,6 @@ title_tag: "Restoring deleted stacks | Pulumi Operations"
 meta_desc: Restore a deleted stack in Pulumi Cloud to recover its state file and history after an accidental removal with the Pulumi CLI.
 title: Restoring deleted stacks
 h1: Restoring deleted stacks
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Restoring deleted stacks

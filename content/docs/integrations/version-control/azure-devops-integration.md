@@ -3,7 +3,6 @@ title_tag: "Azure DevOps Integration | Version Control"
 meta_desc: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
 title: "Azure DevOps Integration"
 h1: "Azure DevOps Integration"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     integrations:
         name: Azure DevOps

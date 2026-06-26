@@ -3,7 +3,6 @@ title_tag: "Pulumi Kubernetes Operator | Integrations"
 meta_desc: Use the Pulumi Kubernetes Operator to manage Pulumi stacks from within Kubernetes, driven by commits in git, Kubernetes objects, or Flux sources.
 title: Pulumi Kubernetes Operator
 h1: Pulumi Kubernetes Operator
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     integrations:
         name: Pulumi Kubernetes Operator

@@ -3,7 +3,6 @@ title_tag: Configuring Auth0 | SAML SSO
 meta_desc: Configuring Auth0 as a SAML SSO identity provider (IDP).
 title: Auth0
 h1: "SAML: Configuring Auth0"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Auth0

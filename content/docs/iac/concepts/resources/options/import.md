@@ -3,7 +3,6 @@ title_tag: "import | Resource Options"
 meta_desc: The import resource option brings an existing cloud resource into Pulumi.
 title: "import"
 h1: "Resource option: import"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: resource-option-import

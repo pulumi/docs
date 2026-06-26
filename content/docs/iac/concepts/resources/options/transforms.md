@@ -3,7 +3,6 @@ title_tag: "transforms | Resource Options"
 meta_desc: The transforms resource option provides a list of transforms to apply to a resource and all of its children.
 title: "transforms"
 h1: "Resource option: transforms"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: transforms

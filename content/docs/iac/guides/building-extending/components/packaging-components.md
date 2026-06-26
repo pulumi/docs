@@ -3,7 +3,6 @@ title_tag: "Packaging Components"
 meta_desc: "Learn how to package and distribute Pulumi components via native language packages, source-based plugin packages, or executable-based plugin packages."
 title: Packaging Components
 h1: Packaging Components
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Packaging Components

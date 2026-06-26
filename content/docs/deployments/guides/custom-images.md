@@ -2,7 +2,6 @@
 title: Custom Images
 title_tag: Custom deployment images | Pulumi Deployments
 meta_desc: Understand the container image that runs your Pulumi deployments, when to customize it, and how to add the tools your project needs.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Custom Images

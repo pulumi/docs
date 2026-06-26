@@ -3,7 +3,6 @@ title_tag: "AWS KMS"
 meta_desc: "Learn how to configure AWS KMS for Pulumi Cloud Customer Managed Keys to enhance security and compliance."
 title: "AWS KMS"
 h1: "AWS KMS"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: "AWS KMS"

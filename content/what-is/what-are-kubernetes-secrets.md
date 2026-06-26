@@ -3,7 +3,6 @@ title: What are Kubernetes Secrets?
 meta_desc: |
      Learn about Kubernetes Secrets and how to manage sensitive information securely in your Kubernetes clusters.
 
-meta_image: /images/what-is/what-are-kubernetes-secrets-meta.png
 type: what-is
 page_title: "What are Kubernetes Secrets?"
 

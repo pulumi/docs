@@ -3,7 +3,6 @@ title_tag: "Using Argo CD with Pulumi | CI/CD"
 meta_desc: This page details how to use Argo CD with the Pulumi Kubernetes Operator to deploy infrastructure and applications through pull-based GitOps workflows.
 title: Argo CD
 h1: Using Argo CD with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Argo CD

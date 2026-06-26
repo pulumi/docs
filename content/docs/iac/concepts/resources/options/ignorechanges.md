@@ -3,7 +3,6 @@ title_tag: "ignoreChanges | Resource Options"
 meta_desc: The ignoreChanges resource option declares that changes to certain properties should be ignored during a diff.
 title: "ignoreChanges"
 h1: "Resource option: ignoreChanges"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: ignoreChanges

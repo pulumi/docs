@@ -3,7 +3,6 @@ title: Pre-Built Packs
 title_tag: "Pre-built policy packs"
 h1: Pre-Built Packs
 meta_desc: Use pre-built policy packs to apply industry-standard compliance and security controls to your cloud infrastructure as code.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: policy-packs

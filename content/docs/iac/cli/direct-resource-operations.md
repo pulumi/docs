@@ -3,7 +3,6 @@ title_tag: "Direct Resource Operations (pulumi do) | Pulumi CLI"
 meta_desc: "pulumi do provides direct cloud resource operations through the Pulumi CLI. Create, read, update, delete, and query resources without a project or program."
 title: Direct Resource Operations
 h1: Direct resource operations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Direct Resource Operations

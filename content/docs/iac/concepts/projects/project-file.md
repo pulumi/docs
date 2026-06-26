@@ -3,7 +3,6 @@ title_tag: Project File Reference
 meta_desc: Documentation of the settings that are valid for the Pulumi project file.
 title: Project file reference
 h1: Pulumi project file reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Project file reference

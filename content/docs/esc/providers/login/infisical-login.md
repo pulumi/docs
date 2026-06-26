@@ -3,7 +3,6 @@ title_tag: infisical-login Pulumi ESC Provider
 meta_desc: The infisical-login Pulumi ESC Provider enables you to log in to Infisical using OIDC or static credentials.
 title: infisical-login
 h1: infisical-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: infisical-login

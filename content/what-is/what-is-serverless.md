@@ -2,7 +2,6 @@
 title: "What is Serverless?"
 meta_desc: |
     Understand serverless architectures, along with some of the benefits of using serverless architectures for modern application development
-meta_image: /images/what-is/what-is-serverless-meta.png
 type: what-is
 page_title: "What is Serverless?"
 authors: ["scott-lowe"]

@@ -3,7 +3,6 @@ title: What are Docker Configs?
 meta_desc: |
      Learn more about what Docker Configs are and how to use them.
 
-meta_image: /images/what-is/what-are-docker-configs-meta.png
 type: what-is
 page_title: "What are Docker Configs?"
 authors: ["torian-crane"]

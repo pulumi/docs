@@ -3,7 +3,6 @@ title_tag: "Detecting and reconciling drift | Pulumi Operations"
 meta_desc: Detect when cloud resources diverge from your Pulumi program, then remediate (re-apply code) or adopt (accept reality into state and the program).
 title: Detecting and reconciling drift
 h1: Detecting and reconciling drift
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Drift detection

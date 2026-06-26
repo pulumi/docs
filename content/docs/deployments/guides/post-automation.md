@@ -3,7 +3,6 @@ title_tag: "Post-Deployment Automation | Pulumi Deployments"
 meta_desc: Learn how to configure post-deployment automation with Pulumi Deployments
 title: "Post-Deployment Automation"
 h1: "Post-Deployment Automation"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/pulumi-cloud/deployments/reference/
   - /docs/pulumi-cloud/deployments/using/post-automation/

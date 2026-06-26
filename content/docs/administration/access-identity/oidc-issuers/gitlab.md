@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for GitLab | OIDC
 meta_desc: This page describes how to configure Pulumi Cloud to accept GitLab OIDC tokens.
 title: GitLab
 h1: Configuring OpenID Connect for GitLab
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: GitLab

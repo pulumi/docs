@@ -3,7 +3,6 @@ title_tag: "Automation API"
 meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Learn its core concepts and terminology.
 title: Automation API
 h1: Automation API
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Automation API

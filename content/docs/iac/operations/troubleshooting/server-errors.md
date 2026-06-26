@@ -3,7 +3,6 @@ title_tag: "Resolving Pulumi Server Errors"
 meta_desc: "Learn how to handle 500 Internal server errors when using Pulumi Cloud."
 title: Server errors
 h1: 500 Internal server error
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Server Errors

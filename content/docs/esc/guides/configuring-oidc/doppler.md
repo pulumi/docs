@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Doppler | Pulumi ESC
 meta_desc: This page describes how to configure OIDC token exchange in Doppler for use with Pulumi
 title: Doppler
 h1: Configuring OpenID Connect for Doppler
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Doppler

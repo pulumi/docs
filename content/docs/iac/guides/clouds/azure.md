@@ -3,7 +3,6 @@ title_tag: "Choosing a Pulumi Azure Provider"
 title: Azure
 h1: Choosing a Pulumi Azure Provider
 meta_desc: Learn which Pulumi Azure provider to use for your project, including azure-native, azuread, azuredevops, and the community azapi package.
-meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds

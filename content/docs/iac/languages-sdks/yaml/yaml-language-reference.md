@@ -3,7 +3,6 @@ title_tag: "Pulumi YAML Reference | Languages & SDKs"
 meta_desc: Specification for the Pulumi YAML format and built-in functions
 title: Reference
 h1: Pulumi YAML reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: yaml-language-reference

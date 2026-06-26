@@ -3,7 +3,6 @@ title_tag: "Secrets Handling | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages sensitive configuration data using secrets.
 title: Secrets Handling
 h1: Secrets Handling
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Secrets Handling

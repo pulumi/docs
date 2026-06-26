@@ -3,7 +3,6 @@ title: "Schedules"
 title_tag: "Schedules"
 h1: "Schedules"
 meta_desc: Schedule any Pulumi operation to occur at any time.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/schedules/
 - /docs/pulumi-cloud/deployments/schedules/

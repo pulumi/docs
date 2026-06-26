@@ -3,7 +3,6 @@ title_tag: "Using Automation API"
 meta_desc: A step-by-step guide to provisioning infrastructure programmatically with the Pulumi Automation API by deploying an inline program.
 title: Automation API
 h1: Using Automation API
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: using-automation-api

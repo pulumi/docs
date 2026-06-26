@@ -3,7 +3,6 @@ title: What is an Internal Developer Platform (IDP)?
 allow_long_title: true
 meta_desc: |
     Understand what an Internal Developer Platform (IDP) is, its benefits, key components, and how it streamlines development workflows.
-meta_image: /images/what-is/what-is-an-internal-developer-platform-meta.png
 type: what-is
 page_title: What is an Internal Developer Platform (IDP)?
 authors: ["sarah-hughes"]

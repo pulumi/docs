@@ -3,7 +3,6 @@ title: Automations
 title_tag: Neo Automations
 h1: Automations
 meta_desc: Schedule Neo tasks to run on a recurring basis with auto-approval and read-only defaults; results delivered as pull requests for review.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: Automations

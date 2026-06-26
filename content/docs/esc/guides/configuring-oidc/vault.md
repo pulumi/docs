@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Vault | Pulumi ESC
 meta_desc: This page describes how to configure OIDC token exchange in Vault for use with Pulumi ESC
 title: Vault
 h1: Configuring OpenID Connect for Vault
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Vault

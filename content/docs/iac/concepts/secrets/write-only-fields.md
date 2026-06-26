@@ -3,7 +3,6 @@ title_tag: "Write-Only Fields | Pulumi Concepts"
 meta_desc: This page provides an overview of write-only fields in Pulumi secrets handling.
 title: Write-only Fields
 h1: Write-only Fields
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Write-Only Fields

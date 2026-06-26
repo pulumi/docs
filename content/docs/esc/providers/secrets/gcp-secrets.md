@@ -3,7 +3,6 @@ title: gcp-secrets
 title_tag: gcp-secrets Pulumi ESC provider
 meta_desc: The gcp-secrets Pulumi ESC provider enables you to dynamically import secrets from Google Cloud Secrets Manager into your environment.
 h1: gcp-secrets
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: gcp-secrets

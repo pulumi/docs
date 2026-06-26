@@ -3,7 +3,6 @@ title_tag: AKS-Hosted Install | Self-Hosting Pulumi
 meta_desc: Installer and installation instructions for deploying the self-hosted Pulumi Cloud in AKS.
 title: AKS
 h1: Pulumi Cloud self-hosted AKS install
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: AKS

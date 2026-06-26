@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC: Customer Managed Keys"
 meta_desc: Bring your own encryption keys to protect data within Pulumi Cloud for enhanced security and compliance.
 title: Customer Managed Keys
 h1: Customer Managed Keys
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-concepts

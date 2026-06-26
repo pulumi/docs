@@ -3,7 +3,6 @@ title_tag: "Pulumi MCP Server | AI-Assisted Infrastructure as Code"
 meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to integrate AI assistants like Cursor, Claude Code, and Windsurf with your Pulumi Cloud workflow."
 title: MCP server
 h1: Pulumi Model Context Protocol server
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: MCP server

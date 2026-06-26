@@ -3,7 +3,6 @@ title_tag: "Recovering from Interrupted Pulumi Updates"
 meta_desc: "Learn how to recover when the Pulumi CLI is interrupted during a deployment."
 title: Interrupted updates
 h1: Recovering from an interrupted update
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Interrupted Updates

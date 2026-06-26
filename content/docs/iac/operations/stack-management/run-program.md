@@ -3,7 +3,6 @@ title_tag: "Running your program on refresh and destroy | Pulumi Operations"
 meta_desc: Use --run-program to execute your Pulumi program before refresh or destroy. Required for dynamic credentials and useful for diff-clean provider upgrades.
 title: Running your program on refresh and destroy
 h1: Running your program on refresh and destroy
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Running your program on refresh and destroy

@@ -3,7 +3,6 @@ title: What is Platform Engineering?
 allow_long_title: true
 meta_desc: |
     Understand what platform engineering is, along with the main benefits and importance for modern application development.
-meta_image: /images/what-is/what-is-platform-engineering-meta.png
 type: what-is
 page_title: What is Platform Engineering?
 lastmod: 2026-05-11

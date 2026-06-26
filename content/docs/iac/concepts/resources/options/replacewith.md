@@ -3,7 +3,6 @@ title_tag: "replaceWith | Resource Options"
 meta_desc: The replaceWith resource option allows for explicit replace dependencies to be declared between resources.
 title: "replaceWith"
 h1: "Resource option: replaceWith"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: replaceWith

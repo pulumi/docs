@@ -54,13 +54,16 @@
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
-{{/* Add image. meta_image can be either site-absolute ("/images/...") or
-     page-relative ("meta.png", typical for blog post bundles). Resolve each
-     case from the right base — the previous code unconditionally prepended
-     the page permalink, which produced 404 URLs for site-absolute paths. */}}
+{{/* Add image. The effective meta image (custom meta_image, else a generated
+     card for the section) comes from the shared partial, keeping JSON-LD in
+     sync with the OpenGraph tags. It can be site-absolute ("/images/...") or
+     page-relative ("meta.png", typical for blog post bundles); resolve each
+     case from the right base — unconditionally prepending the page permalink
+     produced 404 URLs for site-absolute paths. */}}
 {{ $image := "" }}
-{{ if .Params.meta_image }}
-  {{ $imagePath := .Params.meta_image }}
+{{ $metaImage := partial "meta-image-url.html" . }}
+{{ if $metaImage }}
+  {{ $imagePath := $metaImage }}
   {{ if strings.HasPrefix $imagePath "/" }}
     {{ $image = printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) $imagePath }}
   {{ else }}

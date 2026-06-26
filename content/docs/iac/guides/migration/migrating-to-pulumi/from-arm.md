@@ -3,7 +3,6 @@ title_tag: "Migrating from Azure Resource Manager"
 meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in C#, Python, Go, or TypeScript.
 title: Azure Resource Manager
 h1: From Azure Resource Manager (ARM) to Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Azure Resource Manager

@@ -3,7 +3,6 @@ title: Data Export
 title_tag: Data Export | Pulumi Insights
 h1: Data Export
 meta_desc: Documentation and schema for the Pulumi Insights CSV Data Export feature.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: Data Export

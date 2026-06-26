@@ -10,7 +10,6 @@ menu:
     weight: 60
 aliases:
 - /docs/iac/cli/cloud-api/
-meta_image: /images/docs/meta-images/docs-meta.png
 ---
 
 The [`pulumi api`](/docs/iac/cli/commands/pulumi_api/) command lets you call any [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/) endpoint directly from the CLI. It runs non-interactively, is safe to script, and reuses the credentials you already use with `pulumi login`, so you don't need to manage a separate token to call the API.

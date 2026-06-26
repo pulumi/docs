@@ -3,7 +3,6 @@ title_tag: "Deployment Triggers | Pulumi Deployments"
 meta_desc: Learn how to configure and use Deployment Triggers for Pulumi Deployments
 title: "Deployment Triggers"
 h1: "Deployment Triggers"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/using/triggers/
 - /docs/pulumi-cloud/deployments/using/triggers/

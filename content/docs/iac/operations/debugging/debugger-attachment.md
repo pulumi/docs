@@ -3,7 +3,6 @@ title_tag: "Debugging Pulumi Programs"
 meta_desc: "Guide to attaching a debugger to Pulumi programs and stepping through the code."
 title: Attaching a debugger
 h1: Attaching a debugger to a Pulumi program
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Attaching a Debugger

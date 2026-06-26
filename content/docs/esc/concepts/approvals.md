@@ -4,7 +4,6 @@ meta_desc:  Require explicit review and sign-off before applying changes or open
 title: "Approvals"
 h1: Approvals in Pulumi ESC
 meta_title: Approvals in Pulumi ESC
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-concepts

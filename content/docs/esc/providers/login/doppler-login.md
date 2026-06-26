@@ -3,7 +3,6 @@ title_tag: doppler-login Pulumi ESC Provider
 meta_desc: The doppler-login Pulumi ESC Provider enables you to log in to Doppler using OIDC.
 title: doppler-login
 h1: doppler-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: doppler-login

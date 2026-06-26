@@ -3,7 +3,6 @@ title_tag: Configure OpenID Connect for Google Cloud | Pulumi ESC
 meta_desc: This page describes how to configure OIDC token exchange in Google Cloud for use with Pulumi ESC
 title: Google Cloud
 h1: Configuring OpenID Connect for Google Cloud
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     name: Google Cloud

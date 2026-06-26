@@ -3,7 +3,6 @@ title_tag: "Stack management | Pulumi Operations"
 meta_desc: Manage Pulumi stacks day-to-day with targeted updates, update plans, safe state file editing, and self-managed state backends.
 title: Stack management
 h1: Stack management
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stack Management

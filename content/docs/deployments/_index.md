@@ -9,7 +9,6 @@ menu:
     identifier: deployments-home
     weight: 1
 meta_desc: Cloud-hosted deployment automation, drift detection, and workflow management for infrastructure as code.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Deployments & Workflows
 description: <p>Operational tools for managing infrastructure projects, automating deployments, and integrating workflows.</p>
 aliases:

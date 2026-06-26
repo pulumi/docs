@@ -3,7 +3,6 @@ title_tag: "Resource Names and Identity"
 meta_desc: A resource in Pulumi has a logical name, physical name, physical ID, and URN. Learn about these four forms of resource identity and when to use each one.
 title: Names
 h1: Resource names and identity
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Names

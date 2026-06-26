@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Teams"
 meta_desc: Learn about teams in Pulumi Cloud and how they help manage access to resources
 title: "Teams"
 h1: "Teams"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Teams

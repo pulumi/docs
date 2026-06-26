@@ -3,7 +3,6 @@ title_tag: PulumiPlugin.yaml Reference
 meta_desc: Documentation of the settings that are valid for the PulumiPlugin.yaml plugin manifest used by source-based component packages.
 title: PulumiPlugin.yaml Reference
 h1: PulumiPlugin.yaml Reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: PulumiPlugin.yaml

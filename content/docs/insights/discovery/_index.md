@@ -3,7 +3,6 @@ title: Discovery
 title_tag: "Pulumi Insights Discovery Overview"
 meta_desc: Discover and manage all your cloud infrastructure with Pulumi Insights Discovery—scan accounts, explore resources, and gain complete visibility.
 h1: Discovery
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-home

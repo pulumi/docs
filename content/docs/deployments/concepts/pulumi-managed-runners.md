@@ -2,7 +2,6 @@
 title: Pulumi-managed runners
 title_tag: Pulumi-managed runners | Pulumi Deployments
 meta_desc: The Pulumi-hosted compute that runs your deployments by default — its hardware allocation, operating system, and how to customize the executor image.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Pulumi-managed runners

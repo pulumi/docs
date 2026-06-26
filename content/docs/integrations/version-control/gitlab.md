@@ -3,7 +3,6 @@ title_tag: "GitLab Integration | Version Control"
 meta_desc: Connect GitLab groups to Pulumi Cloud for merge request previews, push-to-deploy, review stacks, commit statuses, and automated deployments.
 title: GitLab
 h1: GitLab
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     integrations:
         name: GitLab

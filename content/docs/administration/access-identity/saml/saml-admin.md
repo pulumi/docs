@@ -3,7 +3,6 @@ title_tag: SAML Admin | SAML SSO
 meta_desc: Learn about the SAML admin role and how to configure it in Pulumi Cloud.
 title: SAML admin
 h1: SAML admin
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: SAML admin

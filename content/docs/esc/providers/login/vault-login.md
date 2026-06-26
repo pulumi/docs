@@ -3,7 +3,6 @@ title_tag: vault-login Pulumi ESC Provider
 meta_desc: The vault-login Pulumi ESC Provider enables you to log in to HashiCorp Vault using OpenID Connect or by providing static credentials.
 title: vault-login
 h1: vault-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: vault-login

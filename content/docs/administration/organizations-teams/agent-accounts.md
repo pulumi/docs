@@ -3,7 +3,6 @@ title_tag: "Agent Accounts | Pulumi Cloud"
 meta_desc: Agent accounts let AI agents provision ephemeral Pulumi Cloud accounts automatically so agents can use state and ESC without manual signup.
 title: Agent Accounts
 h1: Agent accounts
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     administration:
         name: Agent Accounts

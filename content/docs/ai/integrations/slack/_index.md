@@ -3,7 +3,6 @@ title: Slack
 title_tag: Neo Slack Integration
 h1: Slack Integration
 meta_desc: Mention @Neo in Slack channels to bring Neo into your team conversations.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: Slack

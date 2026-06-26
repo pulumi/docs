@@ -3,7 +3,6 @@ title_tag: "Testing Pulumi Components"
 meta_desc: "Learn strategies and tools for testing Pulumi Components during development and in CI/CD workflows."
 title: Testing Pulumi Components
 h1: Testing Pulumi Components
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Testing Components

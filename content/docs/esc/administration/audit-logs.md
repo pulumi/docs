@@ -3,7 +3,6 @@ title_tag: Audit Logs | Pulumi ESC
 meta_desc: Pulumi ESC audit logs allow you to account for user activity within your organization.
 title: Audit Logs
 h1: Pulumi ESC audit logs
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         name: Audit Logs

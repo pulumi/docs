@@ -3,7 +3,6 @@ title_tag: "Pulumi HCL Component Reference | Languages & SDKs"
 meta_desc: Specification for authoring Pulumi multi-language components in HCL.
 title: Component Reference
 h1: Pulumi HCL component reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: hcl-component-reference

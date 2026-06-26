@@ -3,7 +3,6 @@ title_tag: "Using Jenkins with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Jenkins pipelines to preview and deploy infrastructure changes through a trunk-based continuous delivery workflow.
 title: Jenkins
 h1: Using Jenkins with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Jenkins

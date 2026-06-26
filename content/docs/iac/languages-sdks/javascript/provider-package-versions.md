@@ -3,7 +3,6 @@ title_tag: "Provider package version management in components"
 meta_desc: Learn how to manage provider package versions when building Pulumi components in TypeScript and JavaScript.
 title: Provider package version management
 h1: Provider package version management in components
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         parent: iac-languages-javascript
