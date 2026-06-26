@@ -24,9 +24,12 @@
 {{- range $i, $seg := $segments -}}
   {{- if eq (mod $i 2) 0 -}}
     {{- /* ---- PROSE branch ---- */ -}}
-    {{- /* Phase 2: Strip block-level and decorative tags in consolidated passes */ -}}
-    {{- $seg = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)[^>]*>` "" $seg -}}
-    {{- $seg = replaceRE `(?:<i[^>]*></i>|<input[^>]*>)` "" $seg -}}
+    {{- /* Phase 2: Strip block-level and decorative tags. The `(?:\s[^>]*)?` (not a bare
+           `[^>]*`) requires the element name to be followed by `>` or whitespace, so real tags
+           strip but look-alike placeholders survive — e.g. `<project>` is not a `<p>` tag and
+           `<table-name>` is not a `<table>`. Mirrors the anchor-strip tightening in Phase 6. */ -}}
+    {{- $seg = replaceRE `</?(?:span|label|div|p|blockquote|ol|ul|li|pre|section|table|thead|tbody|tr|td|th|dl|dt|dd|details|summary)(?:\s[^>]*)?>` "" $seg -}}
+    {{- $seg = replaceRE `(?:<i(?:\s[^>]*)?></i>|<input(?:\s[^>]*)?>)` "" $seg -}}
     {{- $seg = replaceRE `<!--\s*markdownlint[^>]*-->` "" $seg -}}
     {{- /* Phase 3: Strip deep leading whitespace left by HTML tag removal. Prose only;
            code indentation lives in the odd segments and is preserved. */ -}}
