@@ -6,24 +6,26 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # picks the day's articles by weighted fair queuing — score = importance
 # (strategic tier x traffic) x staleness (days since the page's effective last
 # review) — and this workflow then fans out one
-# content-review-article.yml run per selected article. Each of those worker
-# runs reviews exactly one article, opens one ready PR, and force-dispatches
-# claude-code-review.yml over it. Humans merge; nothing here is auto-merged.
+# content-review-article.yml run per selected article. Each worker reviews
+# exactly one article and, if it finds a fix, opens a draft PR; the re-lint
+# gate promotes it to ready (firing the normal triage -> review chain) and
+# arms GitHub auto-merge. master requires an approving review + the build
+# check, so a human approval is still required to merge — auto-merge only
+# removes the manual merge click after approval.
 #
-# The whole job is inert until the CONTENT_REVIEW_ENABLED repo variable is
-# 'true' — scheduled workflows only run from the default branch, so this
-# can merge ahead of being switched on. workflow_dispatch always runs
-# (that's the testing path; see the dry_run / count / paths inputs).
-#
-# CRON IS DISABLED for now: the dispatcher is MANUAL-ONLY during rollout.
-# Re-enable the schedule below when the per-article worker has proven out.
+# KILL SWITCH (default-on): the scheduled run fires unless the
+# CONTENT_REVIEW_ENABLED repo variable is set to the literal string 'false'.
+# Unset (the default) or any other value runs normally; set it to 'false' to
+# stop the cron instantly with no PR. The value is matched literally and
+# case-sensitively — 'False' / '0' / 'off' do NOT disable it; use 'false'.
+# workflow_dispatch always runs regardless (the testing path; see the
+# dry_run / count / paths inputs).
 
 on:
-  # Re-enable when ready (see note above):
-  # schedule:
-  #   # Weekdays at 2:00PM UTC (one hour before check-links, so the two
-  #   # bot-PR producers don't contend).
-  #   - cron: '0 14 * * 1-5'
+  schedule:
+    # Weekdays at 2:00PM UTC (one hour before check-links, so the two
+    # bot-PR producers don't contend).
+    - cron: '0 14 * * 1-5'
   workflow_dispatch:
     inputs:
       count:
@@ -58,7 +60,7 @@ jobs:
     # Hard cost ceiling: selection + up to `count` article reviews fit well
     # inside this; a hung run dies rather than burning API budget.
     timeout-minutes: 60
-    if: vars.CONTENT_REVIEW_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
+    if: vars.CONTENT_REVIEW_ENABLED != 'false' || github.event_name == 'workflow_dispatch'
     steps:
       # ESC runs before checkout so the bot token can authenticate the
       # checkout — the PRs opened by claude-code-action later then go out
