@@ -242,6 +242,7 @@ function getDefaultExcludedKeywords() {
         "/docs/get-started/install/versions",
         "https://api.pulumi.com/",
         "https://github.com/pulls?",
+        "https://github.com/pulumi/pulumi/projects", // additionalRoutes crawls github.com/pulumi/pulumi; GitHub's own page links to its now-deprecated /projects tab (HTTP 400). Not in our content.
         "https://github.com/pulumi/docs/edit/master",
         "https://github.com/pulumi/docs/issues/new",
         "https://github.com/pulumi/registry/edit/master",

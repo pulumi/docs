@@ -6,24 +6,29 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # picks the day's articles by weighted fair queuing — score = importance
 # (strategic tier x traffic) x staleness (days since the page's effective last
 # review) — and this workflow then fans out one
-# content-review-article.yml run per selected article. Each of those worker
-# runs reviews exactly one article, opens one ready PR, and force-dispatches
-# claude-code-review.yml over it. Humans merge; nothing here is auto-merged.
+# content-review-article.yml run per selected article. Each worker reviews
+# exactly one article and, if it finds a fix, opens a draft PR; the re-lint
+# gate promotes it to ready (firing the normal triage -> review chain) and
+# arms GitHub auto-merge. master requires an approving review + the build
+# check, so a human approval is still required to merge — auto-merge only
+# removes the manual merge click after approval.
 #
-# The whole job is inert until the CONTENT_REVIEW_ENABLED repo variable is
-# 'true' — scheduled workflows only run from the default branch, so this
-# can merge ahead of being switched on. workflow_dispatch always runs
-# (that's the testing path; see the dry_run / count / paths inputs).
-#
-# CRON IS DISABLED for now: the dispatcher is MANUAL-ONLY during rollout.
-# Re-enable the schedule below when the per-article worker has proven out.
+# SINGLE SWITCH (default-on) — the CONTENT_REVIEW_COUNT repo variable is both
+# the on/off and the cadence knob:
+#   unset -> on, 3 articles/run (the default)
+#   '0'   -> off: the whole job is skipped (no runner, no spend)
+#   'N'   -> on, N articles/run
+# Set it from Settings -> Variables to retune or pause with no PR. The job gate
+# below is a plain string compare against '0' (the hard off); the selector also
+# no-ops cleanly on any count<=0, so a stray '00'/'-1' still does no work.
+# workflow_dispatch always runs regardless (the testing path; see the
+# dry_run / count / paths inputs).
 
 on:
-  # Re-enable when ready (see note above):
-  # schedule:
-  #   # Weekdays at 2:00PM UTC (one hour before check-links, so the two
-  #   # bot-PR producers don't contend).
-  #   - cron: '0 14 * * 1-5'
+  schedule:
+    # Weekdays at 2:00PM UTC (one hour before check-links, so the two
+    # bot-PR producers don't contend).
+    - cron: '0 14 * * 1-5'
   workflow_dispatch:
     inputs:
       count:
@@ -48,8 +53,42 @@ permissions:
   actions: write # Required to dispatch content-review-article.yml per article
 
 jobs:
+  # Optional: skip the scheduled run on company holidays. Reads a BambooHR
+  # "Company Holidays" ICS feed from the BAMBOOHR_HOLIDAY_ICS_URL repo VARIABLE
+  # (a per-user feed token, treated as a temporary convenience — not a permanent
+  # shared resource). FAILS OPEN at every step: variable unset, feed 404/fetch
+  # failure, or parse error all yield is_holiday=false, so the dispatcher runs —
+  # a missing or stale feed never silently halts the pipeline. The URL is never
+  # echoed, so the token stays out of the logs. (Manual workflow_dispatch ignores
+  # this; see the `review` gate.) Always runs so `review`'s `needs` is satisfiable.
+  holiday-check:
+    name: Company-holiday check
+    runs-on: ubuntu-latest
+    outputs:
+      is_holiday: ${{ steps.check.outputs.is_holiday }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        env:
+          ICS_URL: ${{ vars.BAMBOOHR_HOLIDAY_ICS_URL }}
+        run: |
+          if [ -z "$ICS_URL" ]; then
+            echo "BAMBOOHR_HOLIDAY_ICS_URL not set; not skipping for holidays"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if ! curl -fsSL --max-time 20 "$ICS_URL" -o holidays.ics; then
+            echo "::warning::holiday feed unavailable (404/fetch failure); failing open (dispatcher will run)"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if python3 scripts/content-review/is-holiday.py --ics holidays.ics --tz America/Chicago; then
+            echo "is_holiday=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+          fi
+
   review:
     name: Review existing content
+    needs: holiday-check
     runs-on: ubuntu-latest
     # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
     # select the environment to resolve it — otherwise `Resolve ledger bucket`
@@ -58,7 +97,9 @@ jobs:
     # Hard cost ceiling: selection + up to `count` article reviews fit well
     # inside this; a hung run dies rather than burning API budget.
     timeout-minutes: 60
-    if: vars.CONTENT_REVIEW_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (vars.CONTENT_REVIEW_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     steps:
       # ESC runs before checkout so the bot token can authenticate the
       # checkout — the PRs opened by claude-code-action later then go out
@@ -185,7 +226,9 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
-          ARGS=(--count "${{ github.event.inputs.count || '3' }}" --out .content-review-queue.json)
+          # Count precedence: a manual workflow_dispatch input wins; otherwise the
+          # scheduled run uses the CONTENT_REVIEW_COUNT repo variable; otherwise 3.
+          ARGS=(--count "${{ github.event.inputs.count || vars.CONTENT_REVIEW_COUNT || '3' }}" --out .content-review-queue.json)
           if [ -d .ledger-cache ]; then
             ARGS+=(--ledger-dir .ledger-cache)
           fi
