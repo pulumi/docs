@@ -42,18 +42,23 @@ inject java             java                    /docs/reference/pkg/java/
 # links to a deeper entry, so the bare path 404s — and so does the version selector's "View
 # latest"). Drop a small redirect landing at those roots, pointing at the real entry, when
 # one isn't already present.
-redirect_landing() { # dir-under-REF  relative-target
+redirect_landing() { # dir-under-REF  target-relative-to-that-dir
   local dir="$REF/$1" target="$2"
   [[ -d "$dir" ]] || return 0
   [[ -f "$dir/index.html" ]] && return 0
+  # Write an ABSOLUTE redirect URL (/docs/reference/pkg/<dir>/<target>). scripts/translate-
+  # redirects.js (run in CI's build) scans public/ for meta-refresh tags and rejects any URL
+  # that isn't site-absolute (/) or fully-qualified (http) — a relative "pulumi/" fails the
+  # build. Absolute also resolves identically no matter how the page is reached.
+  local url="/docs/reference/pkg/${1}/${target}"
   cat > "$dir/index.html" <<HTML
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=$target">
+<meta http-equiv="refresh" content="0; url=$url">
 <title>Redirecting…</title></head>
-<body>Redirecting to <a href="$target">the API reference</a>.</body></html>
+<body>Redirecting to <a href="$url">the API reference</a>.</body></html>
 HTML
-  echo "inject-live-sdk: redirect landing -> $1"
+  echo "inject-live-sdk: redirect landing -> $1 ($url)"
 }
 redirect_landing nodejs/pulumi  pulumi/
 redirect_landing dotnet/esc-sdk pulumi.esc.sdk/pulumi.esc.sdk.html
