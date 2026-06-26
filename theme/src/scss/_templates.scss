@@ -214,7 +214,7 @@
     @apply flex flex-1 items-start p-8;
 
     &.template-card--highlight {
-        @apply bg-violet-50;
+        @apply bg-violet-50 border-0;
     }
 
     .card-label {
