@@ -1,75 +1,95 @@
-{{ define "hero" }}
-    <header class="page-hero">
-        <div class="page-hero-title">
-            <h1 class="mb-0">Pulumi for Startups</h1>
-        </div>
-    </header>
-{{ end }}
-
 {{ define "main" }}
-    <h2 class="mt-8 text-center max-w-2xl mx-auto">Get up to <b>$10,000</b> in Pulumi credits and exclusive help for your projects</h2>
-
-    <section id="success-stories" class="text-center p-8">
-        <div class="card mx-auto w-full lg:w-2/3 p-8">
-            <h3 class="text-gray-700 text-2xl mb-4 font-semibold">Pulumi Startup Success Stories</h3>
-            <div class="flex lg:flex-row flex-wrap justify-center gap-8">
-                <a href="/case-studies/sourcegraph/"><img src="/logos/customers/sourcegraph-logo-cropped.svg" class="h-6 lg:h-8 my-2" alt="Sourcegraph" /></a>
-                <a href="/case-studies/panther-labs/"><img src="/logos/customers/panther-labs-wordmark.svg" class="h-6 lg:h-8 my-2" alt="Panther" /></a>
-                <img src="/logos/customers/cockroach-labs-logo.svg" class="h-6 lg:h-8 my-2" alt="CockroachDB" />
-                <a href="/case-studies/lemonade/"><img src="/logos/customers/lemonade-cropped.svg" class="h-6 lg:h-8 my-2" alt="Lemonade" /></a>
-            </div>
+    {{/* 1. Hero — full-bleed banner with centered copy below */}}
+    <section class="border-b border-gray-200">
+        <div class="overflow-hidden flex justify-center">
+            <img src="/images/pulumi-for-startups/hero.svg" alt="" aria-hidden="true" class="h-60 w-auto max-w-none lg:h-auto lg:w-full" />
+        </div>
+        <div class="container mx-auto px-6 md:px-8 pb-16 md:pb-20 text-center">
+            <p class="font-overline text-gray-primary mb-4">Pulumi for Startups</p>
+            <h1 class="heading-xl max-w-3xl mx-auto mb-8">Get up to $10,000 in Pulumi credits and exclusive help for your projects</h1>
+            <a href="#apply" class="btn btn-primary btn-xl">Apply to join</a>
         </div>
     </section>
 
-    <section id="details" class="container mx-auto py-8 justify-center flex flex-col lg:flex-row">
-        <div class="w-full lg:w-1/2 pr-8">
-            <h3 class="ml-8 mb-8">
-                Why Pulumi for Startups?
-            </h3>
-            <h4 class="flex items-center text-2xl ml-12 lg:ml-5 mt-2">
-                <span class="mr-7 w-10 h-10 text-center bg-violet-50 hidden shrink-0 lg:flex items-center justify-center rounded-full">1</span><span>Help your small, nimble team scale up infrastructure</span>
-            </h4>
-            <p class="text-gray-600 pl-12 lg:pl-20">
-                Pulumi for Startups is the easiest way for early-stage companies to build and deploy their cloud apps, using our Infrastructure as Code (IaC) platform. Your team
-                can manage and automate cloud infrastructure, using their favorite programming languages like JavaScript, TypeScript, Python, .NET, Java, and Go. Adopt the best of
-                the cloud without having to learn new DSL dialects and remove the need to dedicate entire teams to just manage and scale your infrastructure.
-            </p>
-            <h4 class="flex items-center text-2xl ml-12 lg:ml-5">
-                <span class="mr-7 w-10 h-10 text-center bg-violet-50 hidden shrink-0 lg:flex items-center justify-center rounded-full">2</span><span>Get up to $10,000 in Pulumi credits</span>
-            </h4>
-            <p class="text-gray-600 pl-12 lg:pl-20">
-                You'll get the best of Pulumi with up to $10,000 in free Pulumi Credits so your whole team can use Pulumi.
-            </p>
-            <h4 class="flex items-center text-2xl ml-12 lg:ml-5">
-                <span class="mr-7 w-10 h-10 text-center bg-violet-50 hidden shrink-0 lg:flex items-center justify-center rounded-full">3</span><span>Access to exclusive office hours and events</span>
-            </h4>
-            <p class="text-gray-600 pl-12 lg:pl-20">You will get access to exclusive office hours and workshops to help you ship your product quickly.</p>
-            <h3 class="ml-8 mb-8">
-                Who can join?
-            </h3>
-            <p class="text-gray-600 pl-12 lg:pl-20 mt-0">Pulumi for Startups is designed for pre-series A companies with less than $1M in annual revenue.</p>
-            <h3 class="ml-8 mb-8">
-              How long is the program?
-            </h3>
-            <p class="text-gray-600 pl-12 lg:pl-20 mt-0">Bill credits will be applied for up to 12 months</p>
-        </div>
-        <div class="w-full lg:w-1/2 pl-8">
-            <div class="card mt-10 md:mt-0 md:mx-8 p-6">
+    <div class="font-body container mx-auto mb-16 mt-12 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
+
+        {{/* 2. Intro + program benefits card */}}
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+            <div class="w-full flex flex-col justify-center max-w-prose">
+                <h2 class="heading-1 mt-0 mb-6">Help your small, nimble team scale up infrastructure</h2>
+                <p class="body-lg text-gray-700 m-0">
+                    Pulumi for Startups helps early-stage companies build and deploy their cloud apps on our infrastructure as code (IaC) platform. Your team can manage and automate cloud infrastructure in the languages you already use — JavaScript, TypeScript, Python, .NET, Java, and Go — so you can adopt the cloud without learning a new domain-specific language (DSL) or dedicating a whole team to managing and scaling your infrastructure.
+                </p>
+            </div>
+            <div>
+                <div class="bg-violet-50 rounded-lg p-8 md:p-14 h-full">
+                    <p class="font-overline text-gray-primary mb-8 mt-0">Program benefits</p>
+                    <ul class="flex flex-col gap-6 m-0 p-0 list-none">
+                        {{ range slice
+                            (dict "title" "Up to $10,000 in Pulumi credits" "desc" "Your whole team can build on Pulumi, with up to $10,000 in free credits.")
+                            (dict "title" "Exclusive office hours and events" "desc" "Office hours and workshops to help you ship your product quickly.")
+                            (dict "title" "12 months of runway" "desc" "Bill credits will be applied for up to 12 months.")
+                            (dict "title" "Built for your stage" "desc" "Designed for pre-Series A companies with less than $1 million in annual revenue.")
+                        }}
+                        <li class="flex items-start gap-4">
+                            <span class="shrink-0 text-violet-primary mt-1">
+                                {{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5") }}
+                            </span>
+                            <div>
+                                <p class="heading-4 m-0 mb-1">{{ .title }}</p>
+                                <p class="text-gray-700 m-0 max-w-md">{{ .desc }}</p>
+                            </div>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        {{/* 3. Capability grid */}}
+        {{ partial "template-partials/template-three-column.html" (dict
+            "icon_layout" "above"
+            "columns" (slice
+                (dict "icon" "code" "title" "Real programming languages" "description" "Use loops, conditionals, functions, and classes, catch errors at compile time, reuse code across projects, and refactor with confidence.")
+                (dict "icon" "shapes" "title" "Hundreds of providers" "description" "Full API coverage for all major clouds: AWS, Azure, Google Cloud, and Kubernetes — plus service providers like Cloudflare, Datadog, and GitHub.")
+                (dict "icon" "eye" "title" "Test before you ship" "description" "Write unit tests for your infra code, integration tests for pre-prod environments, smoke tests for releases — all with industry-standard tools.")
+                (dict "icon" "custom/pulumi-neo" "title" "Put agents to work" "description" "An AI agent purpose-built for infrastructure. Neo handles complex tasks, debugs deployments, and generates code for new and existing cloud resources.")
+                (dict "icon" "key" "title" "Eliminate secrets sprawl" "description" "Fetch secret values from any supported store with a single Pulumi Cloud access token. No more juggling multiple credentials manually.")
+                (dict "icon" "sliders" "title" "Self-service options" "description" "Code, low-code YAML, or no-code portals. Engineers can work the way they prefer with consistent governance.")
+            )
+        ) }}
+
+        {{/* 4. Startup success stories */}}
+        <section class="flex flex-col gap-6">
+            <p class="font-overline text-gray-primary text-center">Startup success stories</p>
+
+            {{ partial "template-partials/template-testimonial.html" (dict
+                "quote" "Pulumi supercharged our whole organization and empowered our developer teams to self-provision resources and ship new capabilities faster without having to wait for the infrastructure team to deploy new resources on their behalf."
+                "author" "Igor Shapiro"
+                "title" "Principal Engineer"
+                "company" "Lemonade"
+                "logo" "/logos/customers/lemonade.svg"
+            ) }}
+
+            {{ partial "template-partials/template-case-study-grid.html" (dict
+                "cards" (slice
+                    (dict "slug" "panther-labs" "title" "Panther Labs" "description" "With Pulumi, Panther Labs was able to provide innovative solutions to their customers quickly, which is a clear advantage for a startup." "cta_text" "Read the story")
+                    (dict "slug" "lemonade" "title" "Lemonade" "description" "Lemonade's Ops team supports a much larger group of developers by using Pulumi to standardize infrastructure components and enforce best practices." "cta_text" "Read the story")
+                    (dict "slug" "sourcegraph" "title" "Sourcegraph" "description" "Pulumi helps to supercharge Kubernetes deployments at Sourcegraph, ensuring their team has continuous access to the latest builds." "cta_text" "Read the story")
+                    (dict "slug" "aptos" "title" "Aptos Labs" "description" "Aptos Labs used Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control." "cta_text" "Read the story")
+                    (dict "slug" "compostable-ai" "title" "Compostable AI" "description" "Learn how this Edinburgh-based AI platform company deploys from contract to production in one day, with two backend engineers managing infrastructure for 19 clients using AI agents and Pulumi." "cta_text" "Read the story")
+                    (dict "slug" "spear-ai" "title" "Spear AI" "description" "Defense tech startup accelerates compliance timelines to bring capabilities to market up to 6x faster while enabling rapid deployment across air-gapped cloud and edge environments." "cta_text" "Read the story")
+                )
+            ) }}
+        </section>
+
+        {{/* 5. Apply */}}
+        <section id="apply" class="flex flex-col gap-6 items-center text-center">
+            <p class="font-overline text-gray-primary">Apply for the startup program</p>
+            <div class="card w-full max-w-2xl mx-auto p-6 md:p-8 text-left">
                 <pulumi-hubspot-form form-id="d6c3c14c-3b16-4d64-861a-b7af962f9337"></pulumi-hubspot-form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="lemonade-testimonial" class="container mx-auto px-4 my-16 flex justify-center text-center">
-        <div class="w-full lg:w-1/2">
-            <p>
-                <i
-                    >"Pulumi supercharged our whole organization and empowered our developer teams to self-provision resources and ship new capabilities faster without having to
-                    wait for the infrastructure team to deploy new resources on their behalf."</i
-                >
-            </p>
-            <p class="mb-0 font-semibold">- Igor Shapiro, Principal Engineer</p>
-            <span class="flex justify-center">{{ partial "customer-logos/lemonade" }}</span>
-        </div>
-    </section>
+    </div>
 {{ end }}
