@@ -281,6 +281,8 @@ jobs:
                and promotes the PR to ready only if lint passes — that ready
                transition is what triggers triage and the docs review. Do NOT
                write the body from scratch. EDIT the draft:
+               - The top `> [!IMPORTANT]` auto-merge notice is verbatim — leave
+                 it exactly as composed; do not move, reword, or remove it.
                - "Why this page" is rendered from the selection queue — leave it
                  verbatim, its facts are authoritative.
                - "Fixes applied" is pre-stubbed with one row per high-confidence
