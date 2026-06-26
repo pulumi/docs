@@ -67,15 +67,24 @@ pre {
 pre.mermaid {
     @apply bg-transparent p-0;
     @apply text-gray-900;
-    @apply flex justify-center items-center;
 
-    // Cancel global content `p` margin/padding/font-size bleeding into Mermaid
-    // labels (the docs `section.docs-content p` rule forces 16px). Inherit lets
-    // the label use Mermaid's own size. (Node padding is set via
-    // flowchart.padding; CSS padding here overflows.)
+    // Center diagrams without flex: a flex container breaks Mermaid's container
+    // width measurement (notably gantt, which then falls back to a tiny fixed
+    // width). A block parent + auto-margined SVG centers and measures correctly.
+    > svg {
+        display: block;
+        margin-inline: auto;
+    }
+
+    // Cancel global content `p` styling bleeding into Mermaid labels (base
+    // `p { color: service-black; my-4 }` and the docs `section.docs-content p`
+    // 16px). Inherit lets each label use Mermaid's own theme values — critical
+    // for color, or dark-mode node labels render dark-on-dark and vanish.
+    // (Node padding is set via flowchart.padding; CSS padding here overflows.)
     p {
         margin: 0 !important;
         padding: 0 !important;
+        color: inherit !important;
         font-size: inherit !important;
         line-height: inherit !important;
     }
