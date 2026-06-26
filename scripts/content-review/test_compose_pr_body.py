@@ -75,6 +75,11 @@ for sec in ["Why this page", "Fixes applied", "Findings not applied",
             "Screenshot check", "Rendered content", "Verification"]:
     check(f"section present: {sec}", f"## {sec}" in out)
 
+# Auto-merge notice is a prominent IMPORTANT alert at the very top.
+check("auto-merge notice present", "> [!IMPORTANT]" in out and "auto-merge" in out.lower())
+check("auto-merge notice is at the top", out.lstrip().startswith("> [!IMPORTANT]"))
+check("auto-merge notice warns approving merges", "approving this pr will merge it" in out.lower())
+
 # Provenance composed (real visits, not narrated).
 check("provenance shows real visits", "384 monthly visits" in out)
 

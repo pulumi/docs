@@ -14,6 +14,8 @@ fix rows it actually applied (filling the correction), moves the rest to
 
 What the composer renders (facts — never the model's to invent):
 
+  * A top `> [!IMPORTANT]` auto-merge notice — every fix PR is armed for
+    auto-merge by the re-lint gate, so the body flags that approving merges it.
   * "Why this page" — verbatim from the selection queue (via render-provenance).
   * "Fixes applied" / "Findings not applied" — one stub per pre-found finding
     from `.verified-claims.json` (contradicted/mismatch/unverifiable claims),
@@ -67,6 +69,18 @@ _rg = importlib.util.module_from_spec(_spec_g)
 _spec_g.loader.exec_module(_rg)
 
 LINT_PLACEHOLDER = "<!-- LINT-RESULT -->"
+
+# Rendered at the top of every fix PR so a reviewer can't miss that approving
+# the PR merges it. The re-lint gate arms GitHub auto-merge (squash) once the
+# PR is promoted to ready; `master` requires an approval + the build check, so
+# the PR merges the moment those are satisfied.
+AUTOMERGE_NOTICE = (
+    "> [!IMPORTANT]\n"
+    "> **This PR is set to auto-merge (squash).** Once it has an approving review "
+    "and the required build check passes, GitHub will merge it automatically — "
+    "**approving this PR will merge it.** To prevent that, disable auto-merge "
+    "(or convert the PR back to a draft) before approving."
+)
 
 # Vale categories whose fix has exactly one correct form and preserves meaning —
 # safe to pre-bucket as a fix candidate. Everything else (passive voice,
@@ -336,6 +350,8 @@ def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -
     inv = artifact_inventory(verified, vale, readthrough, frontmatter)
 
     return "\n".join([
+        AUTOMERGE_NOTICE,
+        "",
         _rp.render(queue).rstrip(),
         "",
         render_fixes(findings).rstrip(),
