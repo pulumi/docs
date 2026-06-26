@@ -72,6 +72,7 @@ between the API and the database. The API also supports [exporting OpenTelemetry
 | PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
 | PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
 | PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
+| PULUMI_TFE_DOMAIN        | (Optional) The domain for the TFE-compatible state backend API, e.g. `tfe.acmecorp.com`. When set, the service exposes a Terraform/OpenTofu-compatible state API on this domain at `/api/v2`. When unset, the TFE-compatible API is disabled. Requires a DNS record pointing this domain at the same load balancer as the API. |
 | PULUMI_ENGINE_EVENTS_SCHEMA_V2 | Set this environment variable to `true` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `false`, contact [Pulumi support](/support/) before setting it to `true`.** |
 | PULUMI_ENGINE_EVENTS_LEGACY_WRITE | Set this environment variable to `false` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `true` in your installation, contact [Pulumi support](/support/) before setting it to `false`.** |
 
