@@ -104,7 +104,7 @@ If you need to delegate billing-only access to a team member without granting fu
 
 ## Changing the company name on invoices
 
-The company name that appears on Pulumi invoices is sourced from your organization's display name. To change it, update the display name and the change will be reflected on your next invoice. Updates take effect within a short time after saving.
+The company name that appears on Pulumi invoices is sourced from your organization's display name. To change it, update the display name. The updated name will appear on your next invoice, and updates take effect shortly after saving.
 
 To update your organization's display name:
 
