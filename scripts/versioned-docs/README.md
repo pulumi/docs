@@ -44,10 +44,12 @@ per-deploy origin sync, so there is **no impact on site build/deploy time**.
 
 ### Enable auto-publish on releases
 Auto-publish is **off by default** — real release workflows are unaffected until you opt in.
-To turn it on (after the `production` stack is deployed):
-1. Set repo **variable** `VERSIONED_DOCS_ENABLED=true`.
-2. Set repo **variable** `VERSIONED_DOCS_PROD_DISTRIBUTION_ID` to the production CloudFront id.
-Every SDK/CLI release workflow then archives its version to production automatically.
+To turn it on (after the `production` stack is deployed), set the single repo **variable**
+`VERSIONED_DOCS_ENABLED=true`. Every SDK/CLI release workflow then archives its version to
+production automatically. The post-publish CloudFront distribution id is resolved at run time
+from the `www-production` stack output (`pulumi stack output cloudFrontDistributionId`), so
+there is no distribution id to set by hand; if it can't be read the publish still succeeds and
+just skips the invalidation (staleness bounded by the manifest's 300s TTL).
 
 ### Manually publish / test a single version
 Dispatch the relevant workflow with `publish_versioned=true` and `target_env=testing`
@@ -76,8 +78,10 @@ Edit `static/js/versioned-docs.js` / `.css` and redeploy the site. **Never move*
 2. Set `www.pulumi.com:versionedDocsStack: "pulumi/pulumi-docs-versioned/production"` in
    `infrastructure/Pulumi.www-production.yaml`, then `pulumi up` the `www-production` stack
    (adds the origin + behavior).
-3. Deploy the site so `/js/versioned-docs.js` is served in production.
-4. Set the `VERSIONED_DOCS_ENABLED` + `VERSIONED_DOCS_PROD_DISTRIBUTION_ID` repo variables.
+3. Deploy the site so `/js/versioned-docs.js` and `/css/versioned-docs-archive.css` are served
+   in production.
+4. Set the single repo variable `VERSIONED_DOCS_ENABLED=true`. (The CloudFront distribution id
+   is resolved from the `www-production` stack output at publish time — no id to set by hand.)
 
 ## Tool ids
 `pulumi-cli`, `nodejs`, `nodejs-policy`, `nodejs-esc-sdk`, `python`, `python-policy`,

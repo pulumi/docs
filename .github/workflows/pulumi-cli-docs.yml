@@ -152,23 +152,37 @@ jobs:
       - name: Resolve versioned-docs publish target
         id: vdocs
         if: ${{ github.event.inputs.publish_versioned == 'true' || vars.VERSIONED_DOCS_ENABLED == 'true' }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
         run: |
           TARGET="${{ github.event.inputs.target_env || 'production' }}"
           if [ "$TARGET" = "testing" ]; then
-            {
-              echo "role_arn=arn:aws:iam::571684982431:role/versioned-docs-publisher-testing"
-              echo "bucket=pulumi-docs-versioned-testing"
-              echo "distribution_id=E6LY02AG7JXEZ"
-              echo "site=https://www.pulumi-test.io"
-            } >> "$GITHUB_OUTPUT"
+            ROLE_ARN="arn:aws:iam::571684982431:role/versioned-docs-publisher-testing"
+            BUCKET="pulumi-docs-versioned-testing"
+            SITE="https://www.pulumi-test.io"
+            WWW_STACK="pulumi/www.pulumi.com/www-testing"
           else
-            {
-              echo "role_arn=arn:aws:iam::388588623842:role/versioned-docs-publisher-production"
-              echo "bucket=pulumi-docs-versioned-production"
-              echo "distribution_id=${{ vars.VERSIONED_DOCS_PROD_DISTRIBUTION_ID }}"
-              echo "site=https://www.pulumi.com"
-            } >> "$GITHUB_OUTPUT"
+            ROLE_ARN="arn:aws:iam::388588623842:role/versioned-docs-publisher-production"
+            BUCKET="pulumi-docs-versioned-production"
+            SITE="https://www.pulumi.com"
+            WWW_STACK="pulumi/www.pulumi.com/www-production"
           fi
+          # Resolve the CloudFront distribution id from the IaC stack output that OWNS it, never
+          # a hardcoded/assumed-static id (mirrors scripts/run-pulumi.sh and the registry repo's
+          # invalidate-docs-cdn.sh). If it can't be read - no token, stack unreadable, or the
+          # distribution was recreated - emit an empty id; publish-version.sh then skips the
+          # post-publish CloudFront invalidation, bounding staleness to the manifest's 300s TTL
+          # rather than failing the publish.
+          DIST_ID="$(pulumi stack output cloudFrontDistributionId --stack "$WWW_STACK" 2>/dev/null || true)"
+          if [ -z "$DIST_ID" ]; then
+            echo "::warning::versioned-docs: could not read cloudFrontDistributionId from $WWW_STACK; publishing without a CloudFront invalidation (staleness bounded by the 300s manifest TTL)."
+          fi
+          {
+            echo "role_arn=$ROLE_ARN"
+            echo "bucket=$BUCKET"
+            echo "distribution_id=$DIST_ID"
+            echo "site=$SITE"
+          } >> "$GITHUB_OUTPUT"
       - name: Configure AWS credentials (versioned-docs publisher)
         if: ${{ steps.vdocs.outputs.bucket != '' }}
         continue-on-error: true
