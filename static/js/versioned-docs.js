@@ -48,6 +48,7 @@
     onReady(function () {
       wireCliNavFilter();
       wireCliCopyMenu(cfg);
+      wireThemeToggle(cfg);
     });
 
     fetch("/docs/versioned/" + cfg.tool + "/versions.json", { credentials: "omit" })
@@ -198,6 +199,97 @@
     titleEl.textContent = "Copied!";
     setTimeout(function () { titleEl.textContent = label; }, 2000);
   }
+
+  // Re-create the docs light/dark/system theme toggle on CLI archive pages. The archive head
+  // keeps the inline pre-paint script that reads the shared "pulumi-docs-theme" localStorage key
+  // and sets data-theme/-pref on <html> (so the snapshot already renders in the user's chosen
+  // theme — and the archive theme bundle carries the dark overrides + the .docs-theme-toggle
+  // styles). What the snapshot loses is the control itself (it lives in the trimmed sidebar) and
+  // the JS that wires it (theme/src/ts/docs-theme.ts, in the stripped site bundle). We rebuild
+  // both here against the SAME key + attributes, so a preference set anywhere on the docs site —
+  // including here — is consistent and persists everywhere. CLI archives only (SDK generator
+  // themes have no docs dark mode); idempotent.
+  var THEME_KEY = "pulumi-docs-theme";
+  var DARK_MQ = "(prefers-color-scheme: dark)";
+
+  function readThemePref() {
+    try {
+      var s = localStorage.getItem(THEME_KEY);
+      if (s === "light" || s === "dark" || s === "system") return s;
+    } catch (e) {
+      /* storage blocked */
+    }
+    return "system";
+  }
+  function systemPrefersDark() {
+    return !!(window.matchMedia && window.matchMedia(DARK_MQ).matches);
+  }
+  function applyTheme(pref) {
+    var html = document.documentElement;
+    html.setAttribute("data-theme-pref", pref);
+    var dark = pref === "system" ? systemPrefersDark() : pref === "dark";
+    if (dark) {
+      html.setAttribute("data-theme", "dark");
+      document.body.setAttribute("data-theme", "dark");
+    } else {
+      html.removeAttribute("data-theme");
+      document.body.removeAttribute("data-theme");
+    }
+    var btns = document.querySelectorAll(".docs-theme-toggle [data-theme-set]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute("aria-pressed", String(btns[i].getAttribute("data-theme-set") === pref));
+    }
+  }
+
+  function wireThemeToggle(cfg) {
+    if (cfg.mode !== "archive") return;
+    var nav = document.querySelector(".vdocs-cli-nav-wrap");
+    if (!nav || !document.body.classList.contains("section-docs")) return;
+    if (document.querySelector(".docs-theme-toggle")) return;
+    ensureCss();
+    var group = el("div", "docs-theme-toggle");
+    group.setAttribute("role", "group");
+    group.setAttribute("aria-label", "Color theme");
+    [
+      ["light", "Light theme", THEME_ICON.sun()],
+      ["dark", "Dark theme", THEME_ICON.moon()],
+      ["system", "Match system theme", THEME_ICON.monitor()],
+    ].forEach(function (o) {
+      var b = el("button", "docs-theme-toggle__btn");
+      b.type = "button";
+      b.setAttribute("data-theme-set", o[0]);
+      b.setAttribute("aria-label", o[1]);
+      b.setAttribute("title", o[1]);
+      b.setAttribute("aria-pressed", "false");
+      b.innerHTML = o[2];
+      b.addEventListener("click", function () {
+        try {
+          localStorage.setItem(THEME_KEY, o[0]);
+        } catch (e) {
+          /* storage blocked */
+        }
+        applyTheme(o[0]);
+      });
+      group.appendChild(b);
+    });
+    nav.appendChild(group);
+    applyTheme(readThemePref()); // sync data-theme-pref + button highlight to the stored choice
+    if (window.matchMedia) {
+      var mq = window.matchMedia(DARK_MQ);
+      var onChange = function () {
+        if (readThemePref() === "system") applyTheme("system");
+      };
+      if (mq.addEventListener) mq.addEventListener("change", onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+  }
+
+  // Phosphor "sun"/"moon"/"monitor" (bold), matching the live docs theme-toggle icons.
+  var THEME_ICON = {
+    sun: function () { return svg("", "0 0 256 256", '<path d="M116,36V20a12,12,0,0,1,24,0V36a12,12,0,0,1-24,0Zm80,92a68,68,0,1,1-68-68A68.07,68.07,0,0,1,196,128Zm-24,0a44,44,0,1,0-44,44A44.05,44.05,0,0,0,172,128ZM51.51,68.49a12,12,0,1,0,17-17l-12-12a12,12,0,0,0-17,17Zm0,119-12,12a12,12,0,0,0,17,17l12-12a12,12,0,1,0-17-17ZM196,72a12,12,0,0,0,8.49-3.51l12-12a12,12,0,0,0-17-17l-12,12A12,12,0,0,0,196,72Zm8.49,115.51a12,12,0,0,0-17,17l12,12a12,12,0,0,0,17-17ZM48,128a12,12,0,0,0-12-12H20a12,12,0,0,0,0,24H36A12,12,0,0,0,48,128Zm80,80a12,12,0,0,0-12,12v16a12,12,0,0,0,24,0V220A12,12,0,0,0,128,208Zm108-92H220a12,12,0,0,0,0,24h16a12,12,0,0,0,0-24Z"/>'); },
+    moon: function () { return svg("", "0 0 256 256", '<path d="M236.37,139.4a12,12,0,0,0-12-3A84.07,84.07,0,0,1,119.6,31.59a12,12,0,0,0-15-15A108.86,108.86,0,0,0,49.69,55.07,108,108,0,0,0,136,228a107.09,107.09,0,0,0,64.93-21.69,108.86,108.86,0,0,0,38.44-54.94A12,12,0,0,0,236.37,139.4Zm-49.88,47.74A84,84,0,0,1,68.86,69.51,84.93,84.93,0,0,1,92.27,48.29Q92,52.13,92,56A108.12,108.12,0,0,0,200,164q3.87,0,7.71-.27A84.79,84.79,0,0,1,186.49,187.14Z"/>'); },
+    monitor: function () { return svg("", "0 0 256 256", '<path d="M208,36H48A28,28,0,0,0,20,64V176a28,28,0,0,0,28,28H208a28,28,0,0,0,28-28V64A28,28,0,0,0,208,36Zm4,140a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V64a4,4,0,0,1,4-4H208a4,4,0,0,1,4,4Zm-40,52a12,12,0,0,1-12,12H96a12,12,0,0,1,0-24h64A12,12,0,0,1,172,228Z"/>'); },
+  };
 
   // SVG icons lifted verbatim from the pulumi-llm-menu component so the menu reads identically.
   function svg(cls, vb, inner, fill) {
