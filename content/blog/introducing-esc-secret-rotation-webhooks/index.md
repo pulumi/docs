@@ -31,11 +31,15 @@ With [ESC webhooks](/docs/esc/concepts/webhooks/), you can react to rotations au
 
 ## How to configure
 
+### Pulumi Cloud Console
+
 Using the Pulumi Cloud Console, you can now configure webhooks for "Environment rotation succeeded" and "Environment rotation failed" in your ESC Environment's Settings page (under **Settings** -> **Notifications**).
 
 ![ESC webhook trigger settings with "Environment rotation succeeded" and "Environment rotation failed" selected](./rotation-webhook-triggers.png)
 
-You can also use the Pulumi Service Provider to configure webhooks. Here is an example in TypeScript:
+### Pulumi Service Provider
+
+You can use the Pulumi Service Provider in your Pulumi program to configure webhooks. Here is an example in TypeScript:
 
 ```typescript
 const environmentWebhook = new service.Webhook("env-webhook", {
@@ -47,6 +51,17 @@ const environmentWebhook = new service.Webhook("env-webhook", {
   payloadUrl: "https://example.com",
   filters: [WebhookFilters.EnvironmentRotationSucceeded, WebhookFilters.EnvironmentRotationFailed],
 })
+```
+
+### Pulumi CLI
+
+You can also use the Pulumi CLI to configure the webhook:
+
+```
+pulumi env webhook new my-org/project/env env-webhook \
+  --url https://example.com \
+  --event environment_rotation_succeeded \
+  --event environment_rotation_failed
 ```
 
 ## Get started
