@@ -85,14 +85,14 @@ imageTag
 
 {{% choosable language hcl %}}
 
-location
-: The Azure region to deploy into. Defaults to `WestUS`.
-
 app_path
 : The path to the folder containing the application and Dockerfile. Defaults to `./app`, which contains a "Hello world" example.
 
 image_name
 : The name of the container image to be published to Azure Container Registry. Defaults to `my-app`.
+
+image_tag
+: The tag applied to published container images. Defaults to `latest`.
 
 container_port
 : The port to expose on the container. Defaults to `80`.

@@ -55,7 +55,7 @@ apiURL
 
 {{% choosable language hcl %}}
 
-site_url
+origin_url
 : The HTTP URL of the static website.
 
 api_url
@@ -76,7 +76,7 @@ $ open $(pulumi stack output siteURL)
 {{% choosable language hcl %}}
 
 ```bash
-$ open $(pulumi stack output site_url)
+$ open $(pulumi stack output origin_url)
 ```
 
 {{% /choosable %}}
@@ -102,9 +102,6 @@ errorDocument
 {{% /choosable %}}
 
 {{% choosable language hcl %}}
-
-location
-: The Azure region to deploy into. Defaults to `WestUS`.
 
 site_path
 : The path to the folder containing the files of the website. Defaults to `./www`, which is the folder included with the template.

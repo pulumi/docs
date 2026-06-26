@@ -55,9 +55,6 @@ vpcId
 
 {{% choosable language hcl %}}
 
-cluster_name
-: The name of the EKS cluster.
-
 vpc_id
 : The ID of the VPC that your cluster is running in.
 

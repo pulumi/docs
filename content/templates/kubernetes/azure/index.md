@@ -111,9 +111,6 @@ nodeVmSize
 
 {{% choosable language hcl %}}
 
-location
-: The Azure region to deploy into. Defaults to `westus2`.
-
 node_count
 : The number of worker nodes in the cluster. Defaults to `3`.
 
