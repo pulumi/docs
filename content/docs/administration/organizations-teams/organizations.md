@@ -111,7 +111,7 @@ To update your organization's display name:
 1. Navigate to **Settings** > **General**.
 1. Update the **Display Name** field and save your changes.
 
-Updating the display name requires the `organization:billing` permission, which is granted to organization admins and Billing Managers.
+Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
 If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/). Distinct legal billing names on invoices are a planned enhancement.
 
