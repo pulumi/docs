@@ -55,6 +55,8 @@ YAML and [Kubernetes](https://kubernetes.io/) go together like peanut butter and
 It's often the first tool developers encounter when diving into Kubernetes, and for good reason - its human-readable format makes it the preferred choice in most tutorials, documentation, and even production deployments.
 <!--more-->
 
+{{% hcl-note %}}
+
 <div style="display: flex; align-items: center; justify-content: center; height: 600px;">
     <img src="yaml.png" alt="Description of image" style="width: 60%; height: 100%">
 </div>

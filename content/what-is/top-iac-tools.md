@@ -29,13 +29,13 @@ Multi-cloud solutions prevent vendor lock-in, maintain flexibility, and promote 
 
 ### [Terraform](https://www.terraform.io/)
 
-Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the HashiCorp Configuration Language (HCL). HCL is designed to be both human-readable and machine-friendly, striking a balance between simplicity and power. While it lacks some of the advanced programming constructs of general-purpose languages, HCL offers a declarative approach that many find intuitive for infrastructure definition. HCL lacks full programming constructs, which may necessitate workarounds for handling complex logic.
+Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the HashiCorp Configuration Language (HCL). HCL is designed to be both human-readable and machine-friendly, striking a balance between simplicity and power. It offers a declarative approach that many find intuitive for infrastructure definition, and its constrained model keeps definitions readable. Complex logic that needs loops or conditionals is typically handled through HCL's own meta-arguments or by composing modules.
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
 Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs). Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
 
-- **Flexibility**: Utilizes HCL. Lacks full programming constructs.
+- **Flexibility**: Uses HCL, a declarative configuration language purpose-built for infrastructure.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
 - **State**: Provides fine-grained control over state management, but requires manual configuration including remote backends and state locking, which can add complexity to collaboration.
 - **Integration**: Integrates well with existing development workflows and CI/CD pipelines. Provides a Kubernetes provider for basic cluster management.
@@ -97,7 +97,7 @@ Managing complex templates can be challenging, and template size limitations and
 
 Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - an ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
 
-- **Flexibility**: Uses JSON-based templates or Bicep - a DSL. Lacks some of the abstraction and modularity of other tools.
+- **Flexibility**: Uses JSON-based templates or Bicep, a DSL focused on Azure. Other tools offer more cross-cutting abstraction and modularity.
 - **Integration**: Offers deep integration with Azure services, including Azure DevOps and Azure Kubernetes Service. Broader integration to non-Azure CI/CD is possible, while native Kubernetes cluster support is not.
 - **Ecosystem**: Supported by documentation, tutorials and troubleshooting advice and by the greater Azure ecosystem.
 

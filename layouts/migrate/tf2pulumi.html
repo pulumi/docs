@@ -2,8 +2,7 @@
     {{ partial "hero" (dict "title" "Convert Your Terraform to Pulumi") }}
     <section class="mx-auto px-4 py-8 lg:p-16">
         <p class="text-center mt-4 mb-16 max-w-3xl text-xl text-gray-800 mx-auto">
-            If you already have some Terraform and want to see what it would look like in your favorite language, we've got you covered. This conversion tool will do the magic of
-            translating your HCL into modern code using Pulumi.
+            If you already have some Terraform and want to see what it would look like in your favorite language, we've got you covered. This conversion tool translates your HCL into Pulumi code in your favorite language.
         </p>
         <div class="container container-2xl mx-auto">
             {{ partial "convert" (dict "from" "tf" "examples" .Params.examples ) }}
@@ -28,7 +27,7 @@
                         <img class="inline-block w-24 mb-4" src="/icons/icon-why-dev-lang.svg" />
                         <h4 class="mt-2 text-3xl">Compare Pulumi to Terraform</h4>
                         <p class="text-gray-600 mb-8">
-                            Pulumi is a comprehensive infrastructure as code platform. Instead of using a proprietary DSLs, you can use the industry's best languages and tools.
+                            Pulumi is a comprehensive infrastructure as code platform. You can use general-purpose languages and tools, or HCL — whichever fits your workflow.
                         </p>
                         <a class="btn btn-primary btn-xl" href="{{ relref . "/docs/iac/comparisons/terraform/" }}"> Learn how they compare </a>
                     </div>

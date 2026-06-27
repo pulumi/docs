@@ -33,6 +33,8 @@ are bogged down by:
 - Rolling out updates across regions takes weeks
 - The combinations of modern cloud architectures seems infinite
 
+{{% hcl-note %}}
+
 You know there has to be a better way. A way to truly
 harness the power of the cloud and turn it into your competitive
 advantage.

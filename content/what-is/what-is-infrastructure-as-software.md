@@ -29,7 +29,7 @@ customer_logos:
 authors: ["cam-soper"]
 ---
 
-**Infrastructure as Software (IaS) is the practice of defining cloud infrastructure in general-purpose programming languages and applying the full toolchain of modern software engineering to it: real types, real abstractions, real tests, real package management, real APIs, and real CI/CD.** It's the natural next step after [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), which uses domain-specific languages (DSLs) or markup formats like HCL, JSON, and YAML, and which makes most of these engineering practices either awkward or unavailable.
+**Infrastructure as Software (IaS) is the practice of defining cloud infrastructure in general-purpose programming languages and applying the full toolchain of modern software engineering to it: real types, real abstractions, real tests, real package management, real APIs, and real CI/CD.** It's the natural next step after [infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/), which uses domain-specific languages (DSLs) or markup formats like HCL, JSON, and YAML. Those formats keep infrastructure declarative and approachable, and some software-engineering practices (rich abstraction, in-language testing, packaging) are harder to apply directly in them.
 
 The two terms overlap in intent. They both aim to replace manual cloud operations with reviewable, automated, reproducible code. They differ in *how much code engineering* you can do once your infrastructure is in code. IaS treats every cloud resource as a software object whose lifecycle can be programmed, abstracted, tested, packaged, and called from other programs. That last property is the one that opens up automation patterns DSL-based IaC can't reach: building self-service portals, embedding `pulumi up` inside a SaaS product, and using the same APIs internally that Pulumi itself uses.
 
@@ -48,7 +48,7 @@ In this article, we'll cover the key questions about infrastructure as software:
 
 DSL-based IaC was a big jump forward in the 2010s. It introduced versioning, code review, and reproducible environments to cloud operations. Three pressures since then have stretched its limits and motivated the move toward IaS:
 
-* **Sophisticated, multi-layer architectures.** A typical service today spans containers, Kubernetes, serverless functions, managed databases, message brokers, secrets, IAM, DNS, and CDN. Composing all of those in a DSL turns into thousands of lines of templates and external glue. A general-purpose language can express the same composition in dozens of lines of typed code.
+* **Sophisticated, multi-layer architectures.** A typical service today spans containers, Kubernetes, serverless functions, managed databases, message brokers, secrets, IAM, DNS, and CDN. Composing all of those in a DSL can grow into many lines of templates plus external glue, where a general-purpose language can factor the same composition into typed, reusable functions.
 * **Ephemeral and dynamic infrastructure.** Cloud resources change daily or hourly. Templating engines and string interpolation in YAML weren't designed for that pace; real loops, conditionals, and types are.
 * **Self-service platforms.** Platform engineering teams need to expose cloud capabilities to product teams through forms, APIs, and chat commands, not by handing them HCL files. Doing that on top of a DSL means writing a templating shim; doing it on top of a programming language means importing the IaC as a library.
 

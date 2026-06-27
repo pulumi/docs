@@ -35,6 +35,8 @@ social:
 
 <!--more-->
 
+{{% hcl-note %}}
+
 Live demos keep you honest. On June 10th my AKS workshop went a little sideways. Partway through, Docker Hub rate-limited my image pull and we had to adapt the content on the fly. The original plan was to stand up an AKS cluster with Cilium, an Azure Container Registry with the cluster's pull permission wired in code, and a random-cat web app, then split the infrastructure from the workload into separate Pulumi stacks. Live, we didn't make it through all of that, but we had some fun tangents and it turned out to be a great session. So here are my six recommendations for working with Kubernetes on Azure from this recent workshop.
 
 ## 1. Pick the language your team already uses

@@ -18,6 +18,8 @@ tags:
 
 Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech --- Python, Node.js, Ruby, Perl, and Go --- the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything you can imagine, but a great ecosystem will have already written it for you, and made it available in a convenient to install-and-use package.
 
+{{% hcl-note %}}
+
 ![Pulumi Language Ecosystem](pulumi-language-ecosystem.png)
 
 One of the amazing things about Pulumi is that it is built around general-purpose programming languages, and that means your Pulumi programs have access to the entire ecosystem of packages that come with each language. This is a stark difference between Pulumi and other infrastructure automation tools that use proprietary domain-specific languages with not much in the way of community around them. Some tools might allow you to write custom code, but they certainly don’t make it convenient, and still… you have to write it yourself, which just adds so much overhead to a project where your core concern isn’t writing that custom function, but rather shipping your own product on the infrastructure you are trying to automate.

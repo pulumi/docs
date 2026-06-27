@@ -23,7 +23,7 @@ aliases:
 
 As organizations scale their cloud infrastructure, they face a critical choice: continue managing infrastructure and applications as separate concerns with different tools and workflows, or unify them under a single, programmable approach. Traditional infrastructure-as-code tools require learning proprietary languages and often force teams to maintain parallel toolchains for application deployment and infrastructure provisioning.
 
-Platform engineering teams need solutions that can scale to thousands of resources across multiple environments while maintaining security, compliance, and developer productivity. They need the full power of real programming languages, not limited domain-specific languages. And they need infrastructure that integrates naturally with their existing CI/CD pipelines rather than requiring separate automation workflows.
+Platform engineering teams need solutions that can scale to thousands of resources across multiple environments while maintaining security, compliance, and developer productivity. They need the full power of general-purpose programming languages, with the libraries, tooling, and abstractions those languages provide. And they need infrastructure that integrates naturally with their existing CI/CD pipelines rather than requiring separate automation workflows.
 
 ## About CodeCraft
 

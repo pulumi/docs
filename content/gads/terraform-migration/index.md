@@ -26,7 +26,7 @@ overview:
 
 key_features_above:
     items:
-        - title: "Convert HCL to real code with tf2pulumi"
+        - title: "Convert HCL to Python, TypeScript, Go, or C# with tf2pulumi"
           sub_title: "Free Migration Tools"
           description:
             Use the free tf2pulumi converter to turn Terraform .tf files into Pulumi programs in Python, TypeScript, Go, or C#. No resource caps. No forced deadlines. Keep your current infrastructure running while you migrate.
@@ -108,7 +108,7 @@ key_features:
             Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with pulumi import. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
-              - title: Convert HCL to real code
+              - title: Convert HCL to a general-purpose language
                 icon: exchange
                 description: |
                     The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. [Try it at pulumi.com/migrate/tf2pulumi](/migrate/tf2pulumi/).

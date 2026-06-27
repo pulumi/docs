@@ -67,9 +67,9 @@ features:
 casestudy:
   title: Trusted for building AI products at massive scale
   supabase:
-    title: From Terraform's configuration language to 80K resources in real code
+    title: From Terraform HCL to 80,000 resources in Pulumi
     description: |
-      Supabase needed infrastructure that could scale without operational overhead. Terraform's HCL meant constant context switching between TypeScript (application services) and a proprietary configuration language (infrastructure).
+      Supabase needed infrastructure that could scale without operational overhead. With Terraform, the team context-switched between TypeScript for application services and HCL for infrastructure, and wanted one language across both.
 
       After migrating to Pulumi:
       - **Regional expansion**: 1 week to infrastructure readiness
@@ -100,7 +100,7 @@ enablement:
   body: | 
     Pulumi's code-native architecture creates a fundamental advantage: AI systems can read, write, and optimize infrastructure written in Python, TypeScript, or Go. The same languages used to train large language models.
 
-    This isn't AI translating natural language into proprietary configuration syntax. This is AI working directly with production infrastructure code.
+    Neo works directly with your production infrastructure code, in the same general-purpose languages your engineers already use.
   subheader: "Neo: AI-powered infrastructure operations, grounded in reality"
   subbody: | 
     Once you're managing infrastructure with Pulumi, Neo automates the operations that slow development cycles. Neo is grounded in Pulumi's 2+ petabyte corpus of real production infrastructure deployments. While generic AI tools can hallucinate plausible-sounding configurations, Neo draws on battle-tested patterns from billions of real cloud resources:
@@ -109,7 +109,7 @@ enablement:
     - **Drift remediation** detects and fixes configuration drift in GPU clusters based on how teams actually manage these resources at massive scale
     - **Multi-cloud migration** converts AWS SageMaker infrastructure to Azure ML or GCP Vertex AI using production-ready patterns
   closing: |
-    **The code-native advantage:** LLMs are trained on real code, not proprietary configuration languages. Pulumi IS code. This enables fundamentally deeper AI integration than tools that require translation layers.
+    **The code-native advantage:** LLMs are trained extensively on general-purpose languages like Python and TypeScript, so AI tools can read and write Pulumi programs directly, in the same languages your engineers use.
   cta: "Get started with Neo"
   link: /docs/pulumi-cloud/neo/get-started/
   image: /images/product/hcl-to-pulumi.png
@@ -120,19 +120,19 @@ capabilities:
     description: |
         Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. 
         
-        No proprietary configuration languages.
+        Author in Python, TypeScript, Go, or C#, with HCL available when you prefer it.
 
 building_blocks:
   title: "Why AI infrastructure requires dynamic orchestration"
   items:
-    - header: "Static configuration languages (Terraform HCL)"
+    - header: "Static configuration (Terraform HCL)"
       body:
         - Designed for long-lived resources that change infrequently
-        - Cannot dynamically rebalance GPU capacity as workloads shift
-        - Proprietary DSL requires learning syntax separate from application development
-        - "AI tools must translate natural language → DSL → infrastructure (abstraction overhead)"
-        - "Limited to configuration-specific operations; can't leverage full programming language ecosystems"
-        - Testing requires DSL-specific tools and frameworks
+        - Rebalancing GPU capacity as workloads shift means regenerating and reapplying configuration
+        - Uses a declarative syntax that's separate from application development
+        - AI tools translate intent into configuration syntax before it reaches your infrastructure
+        - Logic and reuse come from the tool's built-in functions and module system
+        - Testing uses the tool's own frameworks
     - header: Code-native infrastructure (Pulumi)
       subheader: "Ask questions about your infrastructure and get actionable answers:"
       body:
