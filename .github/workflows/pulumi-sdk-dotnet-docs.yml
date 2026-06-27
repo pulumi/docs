@@ -24,10 +24,6 @@ on:
         description: "Generate + publish the versioned snapshot only; skip the latest-docs PR (for backfill)"
         type: boolean
         default: false
-      publish_versioned:
-        description: "Also publish an immutable versioned snapshot to the archive bucket"
-        type: boolean
-        default: false
       target_env:
         description: "Versioned-docs publish target (when publishing)"
         type: choice
@@ -152,38 +148,40 @@ jobs:
           fi
         working-directory: docs
       # --- Versioned docs: archive this SDK release as an immutable snapshot. ---------
-      # Gated on publish_versioned (dispatch) or vars.VERSIONED_DOCS_ENABLED; real releases
-      # are unaffected until that variable is set. Runs after commit, continue-on-error, so
-      # a publish hiccup never blocks the docs PR.
+      # No enable flag: the publish turns itself on once the versioned-docs storage stack
+      # exists - the resolve step reads the bucket/role/distribution from stack outputs and
+      # every step below no-ops while they are absent. Runs after commit, continue-on-error,
+      # so a publish hiccup never blocks the docs PR.
       - name: Install Pulumi CLI (for the stack-output lookup below)
-        if: ${{ github.event.inputs.publish_versioned == 'true' || vars.VERSIONED_DOCS_ENABLED == 'true' }}
         uses: pulumi/action-install-pulumi-cli@v1.0.1
       - name: Resolve versioned-docs publish target
         id: vdocs
-        if: ${{ github.event.inputs.publish_versioned == 'true' || vars.VERSIONED_DOCS_ENABLED == 'true' }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
         run: |
           TARGET="${{ github.event.inputs.target_env || 'production' }}"
           if [ "$TARGET" = "testing" ]; then
-            ROLE_ARN="arn:aws:iam::571684982431:role/versioned-docs-publisher-testing"
-            BUCKET="pulumi-docs-versioned-testing"
-            SITE="https://www.pulumi-test.io"
+            STORAGE_STACK="pulumi/pulumi-docs-versioned/testing"
             WWW_STACK="pulumi/www.pulumi.com/www-testing"
+            SITE="https://www.pulumi-test.io"
           else
-            ROLE_ARN="arn:aws:iam::388588623842:role/versioned-docs-publisher-production"
-            BUCKET="pulumi-docs-versioned-production"
-            SITE="https://www.pulumi.com"
+            STORAGE_STACK="pulumi/pulumi-docs-versioned/production"
             WWW_STACK="pulumi/www.pulumi.com/www-production"
+            SITE="https://www.pulumi.com"
           fi
-          # Resolve the CloudFront distribution id from the IaC stack output that OWNS it, never
-          # a hardcoded/assumed-static id (mirrors scripts/run-pulumi.sh and the registry repo's
-          # invalidate-docs-cdn.sh). If it can't be read - no token, stack unreadable, or the
-          # distribution was recreated - emit an empty id; publish-version.sh then skips the
-          # post-publish CloudFront invalidation, bounding staleness to the manifest's 300s TTL
-          # rather than failing the publish.
+          # Resolve EVERYTHING from the IaC that owns it - no hardcoded names, no enable flag.
+          # The bucket + publisher role come from the versioned-docs storage stack; the
+          # CloudFront distribution (for the post-publish invalidation) from the www stack.
+          # An empty bucket means versioned docs are not stood up for this env yet: every step
+          # below is gated on bucket != '' and simply no-ops, so the feature turns itself on
+          # the moment the storage stack exists. Mirrors how scripts/run-pulumi.sh and the
+          # registry repo read these values from stack outputs instead of copying them.
+          BUCKET="$(pulumi stack output bucketNameOutput --stack "$STORAGE_STACK" 2>/dev/null || true)"
+          ROLE_ARN="$(pulumi stack output publisherRoleArn --stack "$STORAGE_STACK" 2>/dev/null || true)"
           DIST_ID="$(pulumi stack output cloudFrontDistributionId --stack "$WWW_STACK" 2>/dev/null || true)"
-          if [ -z "$DIST_ID" ]; then
+          if [ -z "$BUCKET" ]; then
+            echo "::notice::versioned-docs: storage stack $STORAGE_STACK has no bucket output - versioned docs are not stood up for '$TARGET'; skipping the archive publish."
+          elif [ -z "$DIST_ID" ]; then
             echo "::warning::versioned-docs: could not read cloudFrontDistributionId from $WWW_STACK; publishing without a CloudFront invalidation (staleness bounded by the 300s manifest TTL)."
           fi
           {
