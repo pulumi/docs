@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "ilionx DevDays 2026"
+  title: "Beyond pulumi up: A Tour of Pulumi Cloud and the Neo Agent"
+  url: "https://www.ilionxdevdays.com/"
+  date: 2026-06-26T15:20:00.000+02:00
 - event: "AICamp New York 2026"
   title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
   url: "https://www.aicamp.ai/event/eventdetails/W2026061714"
