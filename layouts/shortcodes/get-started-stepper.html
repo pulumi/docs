@@ -45,6 +45,6 @@
         {{ if isset $next.Params "stepper_link" }}
             {{ $linkTitle = $next.Params.stepper_link }}
         {{ end }}
-        <a data-track="next-step" class="btn" href="{{ $next.RelPermalink }}">{{ $linkTitle }} &rarr;</a>
+        <a data-track="next-step" class="btn btn-primary" href="{{ $next.RelPermalink }}">{{ $linkTitle }} &rarr;</a>
     {{ end }}
 </div>

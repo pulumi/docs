@@ -7,57 +7,16 @@ menu:
   administration:
     name: Permission sets
     parent: administration-access-identity-rbac
-    weight: 3
+    weight: 2
     identifier: pulumi-cloud-access-management-rbac-permission-sets
 aliases:
 - /docs/administration/access-identity/rbac/permissions/
 - /docs/pulumi-cloud/access-management/rbac/permissions/
 ---
 
-Permission sets in Pulumi Cloud are predefined bundles of [scopes](/docs/administration/access-identity/rbac/scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](/docs/administration/access-identity/rbac/permission-sets/#entities) (resource) or set of entities (resources).
+Permission sets in Pulumi Cloud are predefined bundles of [scopes](/docs/administration/access-identity/rbac/scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](/docs/administration/access-identity/rbac/entities) (resource) or set of entities (resources).
 
-## Entities
-
-An entity is a Pulumi object that can have permission sets granted on it.
-
-In Pulumi Cloud's authorization model, we use the term "entity" instead of "resource" to refer to such objects. This is because "resource" already has a specific meaning within Pulumi (referring to cloud infrastructure resources). We use the term "entity" to avoid confusion when discussing authorization.
-
-### Entity types
-
-An entity type is a category of resources that can be protected by the RBAC system. In Pulumi Cloud, entity types include stacks, environments, insights accounts, and organization settings. Each entity type has its own set of associated permission sets and can be managed independently through the RBAC system.
-
-When creating a permission set, it must be of a specific entity type, and only include scopes that are also of that entity type.
-
-There are four qualified entity types in Pulumi, these are:
-
-* **Stacks**: For all operations that affect stacks. Includes:
-  * Stack updates
-  * Stack configurations
-  * Deployment settings
-  * Stack tags and annotations
-  * Stack webhooks
-  * Stack schedules
-* **Environments**: For all operations that affect environments. Includes:
-  * Environment configurations
-  * Environment secrets
-  * Environment schedules
-  * Environment webhooks
-  * Environment versions
-* **Insights accounts**: For all operations that affect insights accounts. Includes:
-  * Insights accounts
-  * Policy evaluations
-  * Scan configurations
-  * Results and reports
-* **Organization settings**: For scopes and permission sets that operate at the org level, like billing settings or managing third-party integrations. Includes:
-  * Organization settings
-  * Member management
-  * Billing and usage
-  * Audit logs
-  * Integration configurations
-
-{{% notes "info" %}}
-**Organization settings permission sets vs. org-wide access toggles**: The Organization settings entity type covers RBAC scopes (e.g. `stack:create`, `team:create`) that you grant through a role. These are separate from the organization-wide access toggles at **Settings** > **Access Management** (e.g. "Members can create stacks"), which apply unconditionally to all members regardless of their role. See the [RBAC overview](/docs/administration/access-identity/rbac/#organization-wide-settings) for details.
-{{% /notes %}}
+Every permission set belongs to a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (stacks, environments, or insights accounts) and can only include scopes of that same type.
 
 ## Default permission sets
 
@@ -88,6 +47,16 @@ Pulumi Cloud provides several default permission sets that you can use to quickl
 | `Account Write` | Ability to modify insights accounts. | Account Read, + `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
 | `Account Admin` | Full control over insights accounts. | Account Write, + `insights_account:delete`, `insights_account_access:update` |
 
+### Organization settings permission sets
+
+These permission sets bundle organization-level (global) scopes. Rather than granting access to a specific [entity](/docs/administration/access-identity/rbac/entities), they set a role's [organization access level](/docs/administration/access-identity/rbac/entities#organization-level-access) — the permissions for org-wide operations such as billing, member management, and creating resources.
+
+| Permission set | Description | Included Scopes |
+|------------|-------------|----------------|
+| `Read Only` | View-only organization access: usage, members, stacks, environments, teams, and Insights accounts; read deployments, integrations, services, templates, and resources. No create, update, or delete. | `ai_conversations:read`, `deployments:read`, `deployments:read_usage`, `environment:list_deleted`, `environment_tags:list`, `policy_groups:read`, `policy_pack:read`, `policy_results:read`, `integrations:read`, `org_member:read`, `organization_annotations:read`, `organization:read_usage`, `project_annotations:read`, `resources:dashboard`, `resources:search`, `saml:read`, `tags:read`, `team:read`, `templates:read`, `services:read` |
+| `Standard` | Member-level organization access: everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings. (Creating stacks, teams, and Insights accounts is governed separately by the org-wide capability toggles, not this permission set.) | Read Only, + `ai_conversations:create`, `ai_conversations:update`, `environment:create`, `integrations:update`, `project_annotations:update`, `project:decrypt`, `project:encrypt`, `services:create`, `services:write`, `services:admin`, `insights_policy_evaluator:read`, `insights_policy_evaluator:delete`, `insights_policy_evaluator:ensure`, `insights_policy_evaluator:update`, `insights_policy_queue:read` |
+| `Organization Settings Billing` | Billing access. | `deployments:read_usage`, `org_member:read`, `organization:billing`, `organization:read_usage`, `resources:dashboard`, `saml:read`, `team:read` |
+
 ## Custom permission sets
 
 {{% notes "info" %}}
@@ -99,11 +68,11 @@ To learn more about editions visit the [pricing page](/pricing/).
 
 To create a custom permission set, you must be an organization admin.
 
-Visit **Settings** > **Access Management** and select the **Permission sets** tab.
+Visit **Settings** > **Access management** and select the **Permission sets** tab.
 
 ![View all organization permission sets](/docs/administration/access-identity/rbac/1-create-permission.png).
 
-To create a new permission set, click **Create custom permission set** within the associated entity group.
+To create a new permission set, select **Create custom permission set** within the associated entity group.
 
 You will need to provide a unique name for the permission set. Optionally, but recommended, you can provide a description to contextualize the permission set and its purpose.
 
@@ -113,7 +82,7 @@ You can then select the scopes you would like to bundle within this permission s
 
 ![Providing a name and description for the permission set](/docs/administration/access-identity/rbac/3-create-permission.png).
 
-Once you've selected the preferred scopes, click **Create permission set**. The panel will close and you should see your new permission set on the permission sets page.
+Once you've selected the preferred scopes, select **Create permission set**. The panel will close and you should see your new permission set on the permission sets page.
 
 ![Your new permission set is visible on the permission sets page](/docs/administration/access-identity/rbac/4-create-permission.png).
 
@@ -121,6 +90,7 @@ You can now assign this custom permission set to roles within your organization.
 
 ## Related resources
 
-* [Teams](/docs/administration/access-identity/rbac/teams)
-* [Roles](/docs/administration/access-identity/rbac/roles)
-* [Scopes](/docs/administration/access-identity/rbac/scopes)
+* [Scopes](/docs/administration/access-identity/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.
+* [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+* [Roles](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You assign a role to users, teams, and machine tokens.
+* [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.

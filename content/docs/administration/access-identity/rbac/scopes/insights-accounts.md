@@ -7,7 +7,7 @@ menu:
   administration:
     name: "Insights accounts"
     parent: administration-access-identity-rbac-scopes
-    weight: 4
+    weight: 3
     identifier: pulumi-cloud-access-management-rbac-scopes-insights-accounts
 aliases:
 - /docs/intro/pulumi-service/scopes/insights-accounts

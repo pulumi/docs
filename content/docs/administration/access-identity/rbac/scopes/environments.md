@@ -7,7 +7,7 @@ menu:
   administration:
     name: "Environments"
     parent: administration-access-identity-rbac-scopes
-    weight: 4
+    weight: 2
     identifier: pulumi-cloud-access-management-rbac-scopes-environments
 aliases:
 - /docs/intro/pulumi-service/scopes/environments

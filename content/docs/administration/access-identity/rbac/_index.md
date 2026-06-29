@@ -12,49 +12,53 @@ menu:
     identifier: administration-access-identity-rbac
 ---
 
-Role-Based Access Control (RBAC) in Pulumi Cloud provides a flexible and secure way to manage access to your organization's resources. This allows you to exercise fine-grained control over who can access what resources in your organization and what actions they can perform.
+Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens. [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings) establish the baseline permissions that every member receives by default.
 
-Leveraging Pulumi's RBAC features empower Enterprise organizations to follow best practices:
+This model lets you:
 
-- **Granular Access Control**: Define precise access levels for different resources.
-- **Simplified Management**: Easily manage access as they grow by building out reusable RBAC elements.
-- **Security**: Enforce least privilege access to resources.
-
-## Principals
-
-Roles can be assigned to three kinds of principals in Pulumi Cloud:
-
-- **Users**: Organization members can have a baseline organization role (Admin, Member, Billing Manager, or a custom role). When your organization has custom roles and "Assign custom roles to users" is enabled, admins can assign any custom role to individual members.
-- **Teams**: Teams can be assigned one or more roles. Members of a team receive the union of the team's roles and their own user role. Team role assignments are available when the organization has custom roles enabled.
-- **Organization access tokens**: Machine tokens can be assigned one role that defines the token's permissions across the organization.
+- Define precise access levels for each type of resource.
+- Reuse permission sets and roles instead of configuring access one resource at a time.
+- Set organization-wide defaults that every member inherits through the built-in Member role.
+- Enforce least-privilege access across the organization.
 
 ## Where roles apply
 
-- **User role**: Each member has a single baseline organization role (Admin, Member, Billing Manager, or a custom role). When "Assign custom roles to users" is enabled, admins can override this per user.
-- **Organization default role**: When your organization has custom roles, you can set a **default role for members**. That custom role becomes the baseline for members who have the Member organization role and have not been given an explicit custom role.
-- **Team roles**: Teams can have **role assignments** (one or more roles). Members of a team effectively get the union of those roles plus their own user role in the organization. See [Teams](/docs/administration/access-identity/rbac/teams#team-role-assignments) for details.
+Roles apply to these kinds of principals in Pulumi Cloud:
 
-## How permissions accumulate
+- **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
+- **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be assigned one or more roles. Members of a team receive the union of the team's roles and their own user role.
+- **[Team tokens](/docs/administration/access-identity/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly.
+- **[Organization access tokens](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
+
+## How permissions accumulate for users
 
 Access in Pulumi Cloud is built up progressively. A user's effective permissions are the union of every grant that applies to them — from the broadest organizational constraints down to the most resource-specific automatic grants.
 
-### Organization-wide settings {#organization-wide-settings}
+{{% notes "info" %}}
+All grants are strictly **additive**: no rule can revoke access that another rule provides.
+{{% /notes %}}
 
-The outermost layer is a set of **organization-wide access settings** at **Settings** > **Access Management**. These on/off toggles cover capabilities such as creating or deleting stacks, creating teams, and creating Insights accounts. When a setting is **enabled**, that capability is granted to all members unconditionally, regardless of their role. When a setting is **disabled**, only members whose role explicitly includes the corresponding RBAC scope retain the capability. These settings are distinct from RBAC scopes: RBAC scopes (e.g. `stack:create`, `team:create`) are granted per-role, while org-wide settings apply to everyone when enabled.
+For example, a member who belongs to two teams accumulates the permissions of their own user role plus every role assigned to each of those teams:
+
+```mermaid
+flowchart LR
+    UR["User role<br/>(e.g. Member)"] --> EFF["Effective permissions<br/>(union of all grants)"]
+    TA["Team A roles"] --> EFF
+    TB["Team B roles"] --> EFF
+    CG["Creator grants<br/>(Stack Admin on<br/>stacks they create)"] --> EFF
+```
+
+### User role
+
+Every member of a Pulumi organization has a user role — a built-in role (Admin, Member, or Billing Manager) or a custom role. New members will receive the specified default role for the organization.
 
 ### Team roles
 
-Members who belong to teams inherit all roles assigned to those teams, on top of their own individual role. Users in multiple teams accumulate permissions from all of them. Team roles can include tag-based (ABAC) rules that automatically apply a permission set to any resource whose tags match specified conditions, without requiring per-resource grants.
-
-### Organization role
-
-Every member has a baseline organization role (Admin, Member, Billing Manager, or a custom role). Members with the Member organization role who have not been assigned an explicit custom role inherit the organization's default custom role, if one has been configured.
+Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
 
 ### Creator grants
 
-Any user who creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships.
-
-All grants are strictly **additive**: no grant can reduce what another provides.
+Any user who creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. A stack's owner can be changed after creation from the stack's details page, under **Access** > **Settings** > **Change owner**.
 
 ## RBAC Constructs
 
@@ -62,11 +66,8 @@ Pulumi Cloud's RBAC system is built on these core concepts:
 
 - [**Scopes**](/docs/administration/access-identity/rbac/scopes): Granular access rights that define specific actions on resources
 - [**Permission sets**](/docs/administration/access-identity/rbac/permission-sets): Predefined bundles of scopes that are commonly used together
-- [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to resources and assigned to principals
+- [**Entities and organization-level access**](/docs/administration/access-identity/rbac/entities): The Pulumi Cloud objects that permission sets are granted on — stacks, environments, and insights accounts — plus the organization-level access that governs org-wide operations. (Pulumi uses "entity" rather than "resource" here to avoid confusion with cloud infrastructure resources.)
+- [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and assigned to principals. The access rules in a role that apply to entities may be applied to all entities of that type, explicitly selected entities, or they can be [tag-based (ABAC) rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules).
 - [**Teams**](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles
 
-Custom roles can also include **tag-based (ABAC) rules**: when resource tags match a rule's conditions, the role grants a chosen permission set on that resource. Details are in [Roles](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules).
-
-### Customization
-
-Enterprise organizations have access to manage and create their own teams. They also can manage and create their own custom permission sets and roles, on top of the defaults available to every organization in Pulumi.
+These constructs build on one another. Scopes are bundled into permission sets; a permission set applied to a set of entities forms an entity access rule; and a role combines one or more entity access rules with an organization access level. The completed role is then assigned to principals. See [Roles](/docs/administration/access-identity/rbac/roles) for a diagram of how a role is composed.

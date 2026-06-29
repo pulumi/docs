@@ -28,8 +28,8 @@
     {{ end }}
     {{ if ne $step $last }}
         {{ $next := index $pages (add $step 1) }}
-        <a data-track="next-step" class="btn w-full md:w-auto" href="{{ $next.RelPermalink }}"><span class="hidden md:inline">Next: </span>{{ $next.LinkTitle }} &rarr;</a>
+        <a data-track="next-step" class="btn btn-primary w-full md:w-auto" href="{{ $next.RelPermalink }}"><span class="hidden md:inline">Next: </span>{{ $next.LinkTitle }} &rarr;</a>
     {{ else }}
-        <a data-track="next-step" class="btn w-full md:w-auto" href="{{ .Page.Parent.RelPermalink }}"><span class="hidden md:inline">Back to </span>{{ .Page.Parent.Title }} &rarr;</a>
+        <a data-track="next-step" class="btn btn-primary w-full md:w-auto" href="{{ .Page.Parent.RelPermalink }}"><span class="hidden md:inline">Back to </span>{{ .Page.Parent.Title }} &rarr;</a>
     {{ end }}
 </div>
