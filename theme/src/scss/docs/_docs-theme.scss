@@ -434,10 +434,8 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // New language toolbar tabs: the unlayered `*` border reset below would otherwise
-    // paint their underlines with --docs-border (beating the layered component styles
-    // regardless of specificity). Re-assert here: inactive matches the toolbar surface,
-    // active is the violet link color.
+    // Language toolbar tabs: re-assert the underline colors (inactive = surface,
+    // active = link) so the unlayered `*` border reset below doesn't override them.
     .chooser-toolbar > ul li {
         border-bottom-color: var(--docs-surface);
 
@@ -614,9 +612,8 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // The copy button is a transparent ghost chip (see _copy-button.scss) that
-    // reads correctly on the dark violet-950 panel as-is, so dark mode needs no
-    // override — the docs-light variant lives in docs/_code-light.scss.
+    // The copy button is a transparent ghost chip (see _copy-button.scss); it reads
+    // fine on the dark panel as-is, so dark mode needs no override here.
 
     // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake
     // a fixed-color SVG behind a mask; drop the image and tint the mask so they

@@ -29,34 +29,10 @@ div.highlight {
             gap: 4px;
         }
 
-        // Use a slightly narrower tooltip for these, and place it to the LEFT of the
-        // button instead of the default above-centered: the button sits at the
-        // top-right of the code panel, where an upward tooltip would overflow above it.
+        // Narrower tooltip; left placement is set via position="left" in copybutton.ts.
         pulumi-tooltip {
             .tooltip-content {
                 @apply w-auto whitespace-nowrap;
-
-                top: 50%;
-                bottom: auto;
-                left: auto;
-                right: 100%;
-                margin: 0 8px 0 0;
-                transform: translateY(-50%);
-
-                // Caret on the right edge, pointing at the button.
-                &:after {
-                    @apply absolute m-0;
-                    top: 50%;
-                    left: auto;
-                    right: -3px;
-                    transform: translateY(-50%) rotate(45deg);
-                }
-            }
-
-            // The global active rule re-introduces `bottom: 100%`; cancel it so the
-            // tooltip stays to the left (not above) when shown.
-            .tooltip-target.active + .tooltip-content {
-                bottom: auto;
             }
         }
 
@@ -73,8 +49,7 @@ div.highlight {
 
     .copy-button {
         @include transition;
-        // One muted foreground for every context — reads on the dark (Min Dark)
-        // panel; the docs-light theme overrides it to a dark gray.
+        // Muted icon on the dark panel; the docs-light theme darkens it.
         color: var(--color-gray-400);
         font-size: 14px;
         font-family: 'Inter';

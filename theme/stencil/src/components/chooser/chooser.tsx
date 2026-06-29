@@ -22,10 +22,9 @@ export interface SupportedLanguage {
     name: string;
     extension: string;
     logo: string;
-    // Optional dark-mode logo variant. Set only for languages whose light logo
-    // doesn't read on a dark background (e.g. YAML's black wordmark). When
-    // present, the toolbar emits both images and the docs theme's
-    // .docs-logo-light/.docs-logo-dark CSS swaps them on dark docs pages.
+    // Optional dark-mode logo variant, for languages whose light logo doesn't read
+    // on a dark background (e.g. YAML's black wordmark). Swapped via the docs
+    // theme's .docs-logo-light/.docs-logo-dark CSS.
     logoOnDark?: string;
     preview: boolean;
 }
@@ -288,12 +287,9 @@ export class Chooser {
         );
     }
 
-    // The language logo in the toolbar. When the language ships a dark-mode
-    // variant, emit both images tagged with the docs theme's .docs-logo-light /
-    // .docs-logo-dark classes: the dark one is hidden everywhere by default and
-    // revealed only on dark-mode docs pages, so the right logo shows in every
-    // context (and non-docs pages keep the light one). Languages without a dark
-    // variant render a single full-color logo that reads on both backgrounds.
+    // The toolbar language logo. With a dark variant, emit both images tagged
+    // .docs-logo-light/.docs-logo-dark for the docs theme to swap (the dark one is
+    // hidden except on dark docs pages); otherwise a single logo.
     private renderToolbarLogo(lang: SupportedLanguage) {
         if (lang.logoOnDark) {
             return [
@@ -486,49 +482,49 @@ export class Chooser {
             key: "typescript",
             name: "TypeScript",
             extension: "ts",
-            logo: "/logos/tech/typescript.svg",
+            logo: "/images/docs/icons/languages/typescript-color-32-32.svg",
             preview: false,
         },
         {
             key: "javascript",
             name: "JavaScript",
             extension: "js",
-            logo: "/logos/tech/javascript.svg",
+            logo: "/images/docs/icons/languages/javascript-color-32-32.svg",
             preview: false,
         },
         {
             key: "python",
             name: "Python",
             extension: "py",
-            logo: "/logos/tech/python.svg",
+            logo: "/images/docs/icons/languages/python-color-32-32.svg",
             preview: false,
         },
         {
             key: "go",
             name: "Go",
             extension: "go",
-            logo: "/logos/tech/go.svg",
+            logo: "/images/docs/icons/languages/go-color-32-32.svg",
             preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
-            logo: "/logos/tech/csharp.svg",
+            logo: "/images/docs/icons/languages/csharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
-            logo: "/logos/tech/fsharp.svg",
+            logo: "/images/docs/icons/languages/fsharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
-            logo: "/logos/tech/visualbasic.svg",
+            logo: "/images/docs/icons/languages/visualbasic-color-32-32.svg",
             preview: false,
         },
         {
@@ -543,9 +539,8 @@ export class Chooser {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
-            // The matched light/dark pair already used elsewhere in docs (the
-            // div.yaml-color-32-32 icon); the -on-dark recolor keeps the black
-            // wordmark legible on dark backgrounds.
+            // Matched light/dark pair (the -on-dark recolor keeps the black wordmark
+            // legible on dark).
             logo: "/images/docs/icons/languages/yaml-color-32-32.svg",
             logoOnDark: "/images/docs/icons/languages/yaml-color-32-32-on-dark.svg",
             preview: false,
@@ -554,7 +549,7 @@ export class Chooser {
             key: "opa",
             name: "OPA",
             extension: "rego",
-            logo: "/logos/tech/logo-opa.png",
+            logo: "/images/docs/icons/languages/opa-color-32-32.png",
             preview: false,
         },
     ];

@@ -9,9 +9,8 @@ pulumi-chooser {
             @apply font-display text-xs p-0 m-0 border-b-2 transition text-center w-full;
             @include transition;
 
-            // Semantic --docs-* tokens (with literal fallbacks for non-docs pages)
-            // give dark mode for free; the legacy dark rule in _docs-theme.scss
-            // re-asserts the dark hover/active values.
+            // --docs-* tokens (with non-docs fallbacks); the legacy dark rule in
+            // _docs-theme.scss re-asserts the dark hover/active values.
             border-bottom-color: var(--docs-surface, theme("colors.gray.50"));
 
             &:hover {
@@ -61,28 +60,20 @@ pulumi-chooser {
         }
     }
 
-    // Language chooser: the whole thing (toolbar + slotted code/prose) is wrapped in a
-    // bordered card. A gray top toolbar carries the active language's colored logo + full
-    // name on the left and underline-style abbreviation tabs (TS, PY, GO, …) on the right.
-    // Scoped to non-headless language choosers; the headless/inline ones
-    // (option-style="none") keep no chrome at all. Semantic --docs-* tokens (with literal
-    // fallbacks) give dark mode for free on /docs and light defaults on marketing pages.
-    //
-    // Padding lives on the card so that ALL slotted content is inset uniformly —
-    // including loose prose, which Hugo emits as a bare text node that no element
-    // selector could target. The toolbar breaks out of that padding to stay flush at the
-    // top edge.
+    // Language chooser card: a bordered card wrapping a gray toolbar (active logo +
+    // name on the left, abbreviation tabs on the right) and the slotted code/prose.
+    // Skips headless choosers (option-style="none"). --docs-* tokens with literal
+    // fallbacks give dark mode on /docs and light defaults elsewhere. Padding lives
+    // on the card so all slotted content (including bare-text-node prose) is inset
+    // uniformly; the toolbar breaks out of it to stay flush at the top.
     &[type="language"]:not([option-style="none"]) {
         @apply block rounded-lg px-4 pb-4 mb-4 overflow-hidden;
 
         background: var(--docs-card, theme("colors.white"));
         border: 1px solid var(--docs-border, theme("colors.gray.200"));
 
-        // The toolbar gets its height from the label's vertical padding; the tabs stretch
-        // to fill it (items-stretch is the flex default) so each tab's bottom border sits
-        // flush with the bottom edge of the toolbar. Colors use the semantic --docs-*
-        // tokens so they flip in dark mode (the legacy dark rule in _docs-theme.scss only
-        // covers the old `pulumi-chooser > ul` tabs, not this toolbar).
+        // Height comes from the label's padding; the tabs stretch to fill it so each
+        // tab's bottom border sits flush with the toolbar's bottom edge.
         .chooser-toolbar {
             @apply -mx-4 mb-4 flex justify-between gap-2 px-4;
 
@@ -140,13 +131,9 @@ pulumi-chooser {
             }
         }
 
-        // Code units inside a choosable carry their spacing on the wrapper (not the inner
-        // pre, nor the example-program footer) and collapse it at the edges of the
-        // choosable's content so the card padding isn't doubled: only child → no margin,
-        // first → bottom only, last → top only, middle → both (the first/last resets on a
-        // symmetric margin cover all four). A .example-program (code + GitHub footer) is
-        // one such unit. The choosable component wraps slotted content in its own <div>
-        // (class "active" when selected), so the units live one level below the choosable.
+        // Code units (.highlight / .example-program) carry their spacing on the
+        // wrapper and collapse it at the choosable's edges so the card padding isn't
+        // doubled (first → bottom only, last → top only).
         pre {
             @apply mb-0;
         }
@@ -164,24 +151,21 @@ pulumi-chooser {
             }
         }
 
-        // A paragraph or list directly above already supplies a bottom margin, so drop the
-        // unit's top margin there to avoid a doubled gap.
+        // A paragraph/list above already supplies bottom margin; drop the unit's top
+        // margin to avoid a doubled gap.
         pulumi-choosable > div > :is(p, ul, ol) + .highlight,
         pulumi-choosable > div > :is(p, ul, ol) + .example-program {
             @apply mt-0;
         }
 
-        // The footer's own bottom margin would fight the unit margin above; drop it so the
-        // .example-program wrapper is the single source of the unit's trailing space.
+        // Drop the footer's bottom margin so the .example-program wrapper is the sole
+        // source of the unit's trailing space.
         pulumi-choosable .example-program-footer {
             @apply mb-0;
         }
 
-        // Example programs are self-contained code panels (code + GitHub footer): run
-        // them flush to the card edges rather than double-padding them. These choosers
-        // only ever contain .example-program blocks (never loose prose), so dropping the
-        // card padding is safe; overflow-hidden clips the panel's square corners back to
-        // the card radius and zeroing the trailing margin keeps it tight to the edge.
+        // Example-program-only choosers: run the panel flush to the card edges (drop
+        // card padding; overflow-hidden clips the square corners to the card radius).
         &:has(> .example-program) {
             @apply px-0 pb-0;
 
