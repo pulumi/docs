@@ -18,7 +18,7 @@ Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/do
 
 Neo has the same capabilities it does anywhere else: it can check stack state, investigate failures, walk through what a change will do, and carry out actions the team has agreed on. The difference is that the conversation happens in a Slack thread instead of the Pulumi Cloud console, which means the rest of the channel has visibility into what was asked and what Neo found.
 
-![Neo answering a question about a stack's resources in a Slack thread](neo-slack-conversation.png)
+<img src="neo-slack-conversation.png" alt="Neo answering a question about a stack's resources in a Slack thread" style="display: block; margin: 0 auto; width: 80%;">
 
 ## Setting up the integration
 
