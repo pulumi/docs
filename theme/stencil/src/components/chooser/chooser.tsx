@@ -22,6 +22,11 @@ export interface SupportedLanguage {
     name: string;
     extension: string;
     logo: string;
+    // Optional dark-mode logo variant. Set only for languages whose light logo
+    // doesn't read on a dark background (e.g. YAML's black wordmark). When
+    // present, the toolbar emits both images and the docs theme's
+    // .docs-logo-light/.docs-logo-dark CSS swaps them on dark docs pages.
+    logoOnDark?: string;
     preview: boolean;
 }
 
@@ -264,8 +269,9 @@ export class Chooser {
                 <Host selection={this.selection}>
                     <div class="chooser-toolbar">
                         <span class="chooser-toolbar-label">
-                            {selected ? <img class="chooser-toolbar-logo" src={selected.logo} alt="" aria-hidden="true" /> : ""}
+                            {selected ? this.renderToolbarLogo(selected) : ""}
                             {selected ? selected.name : ""}
+                            {selected && selected.preview ? <span class="badge badge-preview">Preview</span> : ""}
                         </span>
                         {list}
                     </div>
@@ -280,6 +286,22 @@ export class Chooser {
                 <slot></slot>
             </Host>
         );
+    }
+
+    // The language logo in the toolbar. When the language ships a dark-mode
+    // variant, emit both images tagged with the docs theme's .docs-logo-light /
+    // .docs-logo-dark classes: the dark one is hidden everywhere by default and
+    // revealed only on dark-mode docs pages, so the right logo shows in every
+    // context (and non-docs pages keep the light one). Languages without a dark
+    // variant render a single full-color logo that reads on both backgrounds.
+    private renderToolbarLogo(lang: SupportedLanguage) {
+        if (lang.logoOnDark) {
+            return [
+                <img class="chooser-toolbar-logo docs-logo-light" src={lang.logo} alt="" aria-hidden="true" />,
+                <img class="chooser-toolbar-logo docs-logo-dark" src={lang.logoOnDark} alt="" aria-hidden="true" />,
+            ];
+        }
+        return <img class="chooser-toolbar-logo" src={lang.logo} alt="" aria-hidden="true" />;
     }
 
     // The text shown on a chooser tab. For languages we use the uppercased file
@@ -513,14 +535,19 @@ export class Chooser {
             key: "java",
             name: "Java",
             extension: "java",
-            logo: "/logos/tech/java.svg",
+            // Mark-only Java cup (no "Java" wordmark), already used elsewhere in docs.
+            logo: "/images/docs/icons/languages/java-color-32-32.svg",
             preview: false,
         },
         {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
-            logo: "/logos/tech/yaml.svg",
+            // The matched light/dark pair already used elsewhere in docs (the
+            // div.yaml-color-32-32 icon); the -on-dark recolor keeps the black
+            // wordmark legible on dark backgrounds.
+            logo: "/images/docs/icons/languages/yaml-color-32-32.svg",
+            logoOnDark: "/images/docs/icons/languages/yaml-color-32-32-on-dark.svg",
             preview: false,
         },
         {

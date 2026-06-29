@@ -6,11 +6,16 @@ pulumi-chooser {
         list-style-type: none !important;
 
         li {
-            @apply font-display text-xs p-0 m-0 border-b-2 transition border-gray-300 text-center w-full;
+            @apply font-display text-xs p-0 m-0 border-b-2 transition text-center w-full;
             @include transition;
 
+            // Semantic --docs-* tokens (with literal fallbacks for non-docs pages)
+            // give dark mode for free; the legacy dark rule in _docs-theme.scss
+            // re-asserts the dark hover/active values.
+            border-bottom-color: var(--docs-surface, theme("colors.gray.50"));
+
             &:hover {
-                @apply border-gray-500;
+                border-bottom-color: var(--docs-border, theme("colors.gray.200"));
             }
 
             @include screen-md {
@@ -21,7 +26,7 @@ pulumi-chooser {
                 @include gradient-border;
 
                 a {
-                    @apply text-gray-800;
+                    color: var(--color-service-black);
                 }
             }
 

@@ -1,0 +1,184 @@
+// ===========================================================================
+// Min Light code theme — /docs light mode only
+// ---------------------------------------------------------------------------
+// The global code theme (theme/src/scss/_chroma.scss) is Min Dark on a Violet
+// 950 background, and stays the default everywhere. This file is its light-mode
+// counterpart: the Min Light theme (miguelsolorio/min-theme) on a Violet 50
+// (#f5f5ff) background, per the Pulumi brand "Code highlighting" guideline.
+//
+// It is the mirror of the dark block in _docs-theme.scss. Where that block is
+// gated on `html[data-theme="dark"] body.section-docs`, this one is gated on
+// `html:not([data-theme="dark"]) body.section-docs` — i.e. docs pages whose
+// effective theme is light (no data-theme attribute is written pre-paint unless
+// dark is effective). Combined with `body.section-docs` it cannot affect any
+// non-docs page, and in docs dark mode it yields to the Min Dark default.
+//
+// Imported UNLAYERED from main.scss (after docs-theme) so it beats the layered
+// _chroma.scss / _code.scss / _copy-button.scss component rules.
+//
+// One deviation from faithful Min Light: comments are bumped from the theme's
+// #c2c3c5 (APCA Lc 27 on violet-50 — unreadable) to #6e7781 (Lc 66). Everything
+// else is the canonical Min Light palette.
+// ===========================================================================
+html:not([data-theme="dark"]) body.section-docs {
+    // --- Surface + base text -----------------------------------------------
+    // _code.scss paints `pre` violet-950 with light (text-gray-400) text; flip
+    // both to the Min Light surface and foreground.
+    pre {
+        background: var(--color-violet-50);
+        color: #212121;
+    }
+
+    .chroma,
+    .bg {
+        background-color: var(--color-violet-50);
+        color: #212121;
+    }
+
+    .chroma {
+        .x { color: #212121; }
+        .err { color: #cd3131; }
+        .hl { background-color: var(--color-violet-100); }
+
+        // Keywords / storage
+        .k,
+        .kd,
+        .kn,
+        .kr,
+        .kt,
+        .nn,
+        .ow { color: #D32F2F; }
+
+        // Constants, numbers, builtins, variables (Min Light blue)
+        .kc,
+        .kp,
+        .m,
+        .mb,
+        .mf,
+        .mh,
+        .mi,
+        .il,
+        .mo,
+        .nb,
+        .bp,
+        .no,
+        .nl,
+        .nv,
+        .vc,
+        .vg,
+        .vi,
+        .vm { color: #1976D2; }
+
+        // Functions, types, classes, decorators, attributes (Min Light purple)
+        .n,
+        .na,
+        .nc,
+        .nd,
+        .ne,
+        .nf,
+        .fm,
+        .ni,
+        .nx { color: #6f42c1; }
+
+        // Properties + punctuation render as base text in Min Light
+        .py,
+        .p { color: #212121; }
+        .o { color: #24292e; }
+
+        // Strings
+        .l,
+        .ld,
+        .s,
+        .sa,
+        .sb,
+        .sc,
+        .dl,
+        .s2,
+        .se,
+        .sh,
+        .si,
+        .sx,
+        .sr,
+        .s1,
+        .ss { color: #2b5581; }
+
+        // Tags
+        .nt { color: #22863a; }
+
+        // Comments (bumped from #c2c3c5 for contrast — see header)
+        .c,
+        .ch,
+        .cm,
+        .c1,
+        .cs,
+        .cp,
+        .cpf { color: #6e7781; font-style: italic; }
+
+        // Docstrings track the comment color
+        .sd { color: #6e7781; font-style: italic; }
+
+        // Generic / diff
+        .gd { color: #b31d28; background-color: #ffeef0; }
+        .gi { color: #22863a; background-color: #e6ffed; }
+        .gh { color: #1976D2; font-weight: bold; }
+        .gu { color: #1976D2; }
+        .gp { color: #6e7781; font-weight: bold; }
+        .go { color: #6e7781; }
+        .gr,
+        .gt { color: #cd3131; }
+        .gs { font-weight: bold; color: #cd3131; }
+    }
+
+    // --- Copy button (docs-light variant of the consolidated style) ---------
+    .copy-button-container {
+        border-color: var(--color-gray-200);
+
+        &:hover {
+            background: var(--color-violet-100);
+        }
+    }
+
+    .copy-button {
+        color: var(--color-gray-700);
+
+        &:hover {
+            color: var(--color-gray-900);
+        }
+    }
+
+    // --- example-program footer (bottom lip of the code panel) --------------
+    .example-program .example-program-footer {
+        background: var(--color-violet-50);
+
+        a {
+            color: var(--color-gray-700);
+
+            &:hover {
+                color: var(--color-gray-900);
+            }
+        }
+    }
+
+    // --- code-tabbed (interactive multi-language demo) ----------------------
+    .code-tabbed {
+        .code-tabbed-tabs,
+        .code-tabbed-content,
+        .code-tabbed-status {
+            background: var(--color-violet-50);
+        }
+
+        .code-tabbed-tab {
+            .code-tabbed-tab-label {
+                color: var(--color-gray-600);
+            }
+
+            &:hover .code-tabbed-tab-label {
+                color: var(--color-gray-800);
+            }
+
+            &.active .code-tabbed-tab-label {
+                color: var(--color-gray-900);
+            }
+        }
+    }
+}

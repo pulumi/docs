@@ -387,6 +387,13 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // cannot affect any non-docs page.
 @import "docs/docs-theme";
 
+// Min Light code theme for /docs light mode. Imported UNLAYERED (like docs-theme
+// above) so it beats the layered _chroma.scss / _code.scss / _copy-button.scss
+// component rules. Scoped to `html:not([data-theme="dark"]) body.section-docs`,
+// so it only applies to docs pages in light mode and yields to the Min Dark
+// default everywhere else (and in docs dark mode).
+@import "docs/code-light";
+
 // Auth-aware header swap. The inline script in head.html adds .is-signed-in
 // to <html> when the auth cookie is present, before first paint. These rules
 // live unlayered so they win against the buttons' display utilities (which

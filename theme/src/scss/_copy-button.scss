@@ -13,29 +13,14 @@ div.highlight {
 
         flex-direction: row;
         width: fit-content;
-
-        // Match the code block's background with a subtle gray outline, so the button
-        // reads as part of the code panel rather than a filled violet button.
-        margin: 8px 7px 0 0;
-        background: var(--color-violet-950);
-        border: 1px solid var(--color-gray-700);
-
+        background: transparent;
         border-radius: 4px;
         position: absolute;
         top: 0;
         right: 0;
 
         &:hover {
-            background: var(--color-violet-900);
-        }
-
-        &:active {
-            background: var(--color-violet-950);
-        }
-
-
-        .code-mode-dark & {
-            background: var(--color-violet-950);
+            background: color-mix(in oklch, var(--color-white) 8%, transparent);
         }
 
         button.copy-button {
@@ -44,10 +29,34 @@ div.highlight {
             gap: 4px;
         }
 
-        // Use a slightly narrower tooltip for these.
+        // Use a slightly narrower tooltip for these, and place it to the LEFT of the
+        // button instead of the default above-centered: the button sits at the
+        // top-right of the code panel, where an upward tooltip would overflow above it.
         pulumi-tooltip {
             .tooltip-content {
                 @apply w-auto whitespace-nowrap;
+
+                top: 50%;
+                bottom: auto;
+                left: auto;
+                right: 100%;
+                margin: 0 8px 0 0;
+                transform: translateY(-50%);
+
+                // Caret on the right edge, pointing at the button.
+                &:after {
+                    @apply absolute m-0;
+                    top: 50%;
+                    left: auto;
+                    right: -3px;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+
+            // The global active rule re-introduces `bottom: 100%`; cancel it so the
+            // tooltip stays to the left (not above) when shown.
+            .tooltip-target.active + .tooltip-content {
+                bottom: auto;
             }
         }
 
@@ -64,17 +73,15 @@ div.highlight {
 
     .copy-button {
         @include transition;
-        color: #fff;
+        // One muted foreground for every context — reads on the dark (Min Dark)
+        // panel; the docs-light theme overrides it to a dark gray.
+        color: var(--color-gray-400);
         font-size: 14px;
         font-family: 'Inter';
         padding: 8px 8px 8px 10px;
 
-        .code-mode-dark & {
-            @apply text-gray-600;
-
-            &:hover {
-                @apply text-gray-500;
-            }
+        &:hover {
+            color: var(--color-gray-200);
         }
     }
 }

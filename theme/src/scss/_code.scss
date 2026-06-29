@@ -248,10 +248,38 @@ div.highlight.line-numbers {
             background: var(--color-violet-950);
 
             // Shrink the tooltip's positioning context to the icon so the tooltip
-            // (centered on its target) lines up over the GitHub icon rather than over
-            // the full-width footer.
+            // lines up with the GitHub icon rather than the full-width footer.
             pulumi-tooltip {
                 @apply inline-block;
+
+                // Place this tooltip to the LEFT of the icon instead of the default
+                // above-centered: the footer sits at the bottom-right of the code
+                // panel, where an upward tooltip would overflow the panel. Vertically
+                // center it on the icon, sit it just left of the icon (margin = gap),
+                // and point the caret right.
+                .tooltip-content {
+                    top: 50%;
+                    bottom: auto;
+                    left: auto;
+                    right: 100%;
+                    margin: 0 8px 0 0;
+                    transform: translateY(-50%);
+
+                    // Caret on the right edge, pointing at the icon.
+                    &:after {
+                        @apply absolute m-0;
+                        top: 50%;
+                        left: auto;
+                        right: -3px;
+                        transform: translateY(-50%) rotate(45deg);
+                    }
+                }
+
+                // The global active rule re-introduces `bottom: 100%`; cancel it so the
+                // tooltip stays to the left (not above) when shown.
+                .tooltip-target.active + .tooltip-content {
+                    bottom: auto;
+                }
             }
 
             // Shrink the GitHub icon a bit.
