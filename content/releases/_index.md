@@ -42,6 +42,9 @@ entries:
       - title: "One CLI for Pulumi ESC with pulumi env"
         description: "The standalone esc CLI is retiring in favor of pulumi env, so a single Pulumi CLI now manages your IaC, Deployments, and ESC environments."
         url: /docs/esc/
+      - title: "ESC secret rotation webhooks"
+        description: "Get notified the moment an ESC secret rotation succeeds or fails, so failures no longer go unnoticed and dependent services can refresh right away."
+        url: /blog/introducing-esc-secret-rotation-webhooks/
       - title: "Universal Search: a Cmd/Ctrl+K command palette for Pulumi Cloud"
         description: "A keyboard-first command palette (Cmd/Ctrl+K) jumps you to any stack, environment, resource, or member without leaving the page you're on."
       - title: "Trigger deployments from Git tags on any supported VCS"
