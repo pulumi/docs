@@ -2,7 +2,6 @@
 title: Deployment queue
 title_tag: "Deployment queue | Pulumi Deployments"
 meta_desc: How Pulumi Deployments queues and runs deployments — first-come, first-served ordering, concurrency limits, queue expiry, and pausing deployments.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   deployments:
     name: Deployment queue

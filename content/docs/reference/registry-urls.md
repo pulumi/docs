@@ -3,7 +3,6 @@ title_tag: Registry URL Reference
 meta_desc: Reference documentation for Pulumi Registry URLs used to reference templates and packages.
 title: Registry URL reference
 h1: Pulumi Registry URL reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: Registry URLs

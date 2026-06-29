@@ -2,7 +2,6 @@
 title: Use Pulumi Deployments with the New Project Wizard
 title_tag: Use Pulumi Deployments with the New Project Wizard
 meta_desc: Learn how to use Pulumi Deployments with the New Project Wizard
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/get-started/deployments-using-new-project-wizard/
 - /docs/pulumi-cloud/deployments/get-started/deployments-using-new-project-wizard/

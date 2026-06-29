@@ -8,7 +8,6 @@ notitle: true
 norightnav: true
 h1: Infrastructure AI
 description: <p>Pulumi Neo provides AI-powered infrastructure automation with natural language assistance for platform engineering tasks.</p>
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/
 - /docs/iac/neo/

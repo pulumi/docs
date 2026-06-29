@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Access Tokens"
 meta_desc: Learn about the various types of access tokens for the Pulumi Cloud.
 title: Access tokens
 h1: Pulumi Cloud access tokens
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Access tokens

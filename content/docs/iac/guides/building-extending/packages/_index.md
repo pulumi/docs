@@ -3,7 +3,6 @@ title_tag: "Pulumi Packages Guides"
 meta_desc: Pulumi packages let you author infrastructure abstractions and consume them in any Pulumi language via source-based or executable-based plugins.
 title: Pulumi Packages Guides
 h1: Pulumi Packages Guides
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     name: Packages

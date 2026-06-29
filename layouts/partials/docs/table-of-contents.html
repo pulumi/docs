@@ -1,3 +1,8 @@
+{{ if .File }}
+    <div class="docs-md-actions">
+        <pulumi-llm-menu page-url="{{ .Permalink }}" page-title="{{ .Title }}"></pulumi-llm-menu>
+    </div>
+{{ end }}
 {{ if not $.Page.Params.no_on_this_page }}
     <div class="table-of-contents">
         {{ if strings.Contains $.Page.Permalink "registry/packages" }}
@@ -51,32 +56,7 @@
     </div>
 {{ end }}
 <ul class="p-0 list-none table-of-contents-feedback">
-    <!-- Only show "Edit this Page" for pages that are not generated. -->
     {{ if .File }}
-        <li>
-            <pulumi-llm-menu
-                page-url="{{ .Permalink }}"
-                page-title="{{ .Title }}"
-            ></pulumi-llm-menu>
-        </li>
-        {{ $isCLICommand := hasPrefix .Path "docs/cli/commands" }}
-        {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
-        {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
-            {{ $repoURL := "https://github.com/pulumi/docs" }}
-            {{ if (hasPrefix .Path "registry/") }}
-                {{ $repoURL = "https://github.com/pulumi/registry" }}
-            {{ end }}
-            <li>
-                <a
-                    data-track="edit-page"
-                    class="text-gray-600 hover:text-gray-700 text-xs"
-                    href="{{ $repoURL }}/edit/{{ $.Site.Params.contentRepositoryBaseBranch }}/content/{{ .File.Path }}"
-                    target="_blank"
-                >
-                    {{ partial "icon.html" (dict "name" "pencil-simple" "class" "mr-2") }}Edit this Page
-                </a>
-            </li>
-        {{ end }}
         <li>
             <a
                 data-track="request-change"
@@ -89,4 +69,3 @@
         </li>
     {{ end }}
 </ul>
-<pulumi-top-button></pulumi-top-button>

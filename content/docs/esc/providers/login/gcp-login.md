@@ -3,7 +3,6 @@ title_tag: gcp-login Pulumi ESC Provider
 meta_desc: The gcp-login Pulumi ESC Provider enables you to log in to Google Cloud using OIDC or by providing static credentials.
 title: gcp-login
 h1: gcp-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: gcp-login

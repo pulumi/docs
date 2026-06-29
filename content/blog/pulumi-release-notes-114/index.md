@@ -12,13 +12,13 @@ social:
   twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - walk through the product release notes for a summary of what's been shipped this year"
   linkedin: "As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi:
 
-Key highlights include:
-• Visual Studio Code Extension
-• Pulumi ESC General Availability
-• Pulumi Insights 2.0 with Resource Explorer
-• Enhanced Kubernetes support with Auto Mode & Operator 2.0
+    Key highlights include:
+    • Visual Studio Code Extension
+    • Pulumi ESC General Availability
+    • Pulumi Insights 2.0 with Resource Explorer
+    • Enhanced Kubernetes support with Auto Mode & Operator 2.0
 
-Check out all the new features empowering teams to build better cloud infrastructure."
+    Check out all the new features empowering teams to build better cloud infrastructure."
 ---
 
 {{< notes type="info" >}}

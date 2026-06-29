@@ -3,7 +3,6 @@ title_tag: "replacementtrigger | Resource Options"
 meta_desc: The replacementTrigger resource option allows finer control over when resources are replaced.
 title: "replacementTrigger"
 h1: "Resource option: replacementTrigger"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: replacementTrigger

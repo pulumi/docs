@@ -3,7 +3,6 @@ title_tag: "Troubleshooting Pulumi in CI/CD"
 meta_desc: Diagnose and fix the most common failures encountered when running Pulumi in a CI/CD pipeline, organized by the step of a typical pipeline run.
 title: Troubleshooting
 h1: Troubleshooting Pulumi in CI/CD
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Troubleshooting

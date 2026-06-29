@@ -3,7 +3,6 @@ title_tag: "Pulumi Docker Images | IaC Operations"
 meta_desc: Pulumi's official Docker images bundle the CLI with language runtimes — for CI/CD, Kubernetes pods, Deployments, or as a base for custom images.
 title: Docker Images
 h1: Pulumi Docker Images
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Docker Images

@@ -92,6 +92,17 @@ jobs:
       - name: Install Pulumi CLI
         uses: pulumi/actions@v7
 
+      # Restore previously generated OpenGraph cards so the build-time generator
+      # only re-renders pages that changed (manifest content-hash skip). The
+      # cards are gitignored; this cache is their only persistence across runs.
+      - name: Cache generated meta images
+        uses: actions/cache@v4
+        with:
+          path: assets/images/generated
+          key: meta-images-${{ github.sha }}
+          restore-keys: |
+            meta-images-
+
       - name: Build and deploy
         run: make ci_push
         env:

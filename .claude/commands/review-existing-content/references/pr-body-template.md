@@ -1,24 +1,27 @@
 # Content-review PR body template
 
-Fill **every** section below and pass the result to `gh pr create --body-file`.
-The worker re-lints the branch and checks that each `##` heading here is present
-in the PR body; a missing section is flagged (non-blocking) on the PR. Keep the
-diff to high-confidence fixes — judgment-level items belong in *Findings not
-applied*, not in the diff.
+You do **not** author this body from scratch. The workflow composes
+`.pr-body-draft.md` (via `compose-pr-body.py`) — every section present, the
+facts rendered, each pre-found finding pre-bucketed with a `<TODO>`. **Edit that
+draft** and pass it to `gh pr create --body-file .pr-body-draft.md`. This file is
+the reference for what each section must contain; the re-lint gate checks that
+every `##` heading survives. Keep the diff to high-confidence fixes —
+judgment-level items belong in *Findings not applied*, not in the diff.
 
-The template starts after this line — copy from the first `##` heading down.
-
----
+The sections, and what's yours vs. the composer's:
 
 ## Why this page
 
-Lane, strategic tier, traffic figure + report period, and last-reviewed date
-(from the queue entry) — so a reviewer can see how this page was selected.
+Rendered by the composer from the selection queue (lane, strategic tier, traffic
+figure + report period, last-reviewed). **Leave verbatim** — its figures are
+authoritative; do not re-narrate it.
 
 ## Fixes applied
 
-One row per change. If zero fixes were applied this section is empty and no PR
-should exist.
+Pre-stubbed by the composer with one row per high-confidence finding. Keep a row
+ONLY for a fix you actually applied (fill its Correction); move the rest to
+*Findings not applied*. If zero fixes were applied this section is empty and no
+PR should exist.
 
 | Claim / finding | Authoritative source | Correction |
 | --- | --- | --- |
@@ -26,24 +29,33 @@ should exist.
 
 ## Findings not applied
 
-Every skipped finding with one line of reasoning (why it's judgment-level, not a
+Pre-stubbed with the lower-confidence findings; add any row you moved down from
+*Fixes applied*. One line of reasoning each (why it's judgment-level, not a
 high-confidence fix).
 
 For the judgment-level items above, run `/glow-up <path>`.
 
 ## Screenshot check
 
-Per image: current / stale (what differs) / unverifiable. Note any aging
-reference screenshots (see `references/screenshot-verification.md`).
+Gated — the composer pre-fills "No images." when the source references no
+content images, and you leave it as-is. Only when this section carries a
+`<TODO>` (the page has images) do you run the pass and report per image:
+current / stale (what differs) / unverifiable, plus any aging reference
+screenshots (see `references/screenshot-verification.md`).
 
 ## Rendered content
 
-Outcomes of the rendered pass — residue claims checked in the HTML view, the
-markdown view's shortcode-template status, and any shared-source
-(shortcode / partial / data) findings with their page-reach
-("also rendered on N other pages").
+Gated — the composer pre-fills "Skipped" when the source uses no content-bearing
+shortcode/partial/include (it names the triggering shortcode when one is
+present). Only when this section carries a `<TODO>` do you run `make build` and
+the rendered pass, then report its outcomes — residue claims checked in the HTML
+view and any shared-source (shortcode / partial / data) findings with their
+page-reach ("also rendered on N other pages"). Leaked-delimiter checks on the
+markdown output are covered site-wide by `check-rendered-markdown.py`, not here.
 
 ## Verification
 
-Confirm `make lint` + `make build` passed, and which pre-step artifacts informed
-the review (note any pre-step that failed or was missing).
+The composer renders the pre-step artifact inventory here. The `make lint`
+result is **not** yours to assert: leave the `<!-- LINT-RESULT -->` line
+untouched — the workflow's re-lint gate stamps it with the authoritative
+outcome. Note any pre-step that failed or was missing.

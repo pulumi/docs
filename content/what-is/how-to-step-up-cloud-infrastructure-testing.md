@@ -2,7 +2,6 @@
 title: How to Step Up Cloud Infrastructure Testing
 meta_desc: "Learn how to test cloud infrastructure as code: unit, property, integration, and security tests, where each fits in CI/CD, and the tools to use."
 
-meta_image: /images/what-is/how-to-step-up-cloud-infrastructure-testing-meta.png
 type: what-is
 page_title: "Stepping Up Your Infrastructure Testing: A Quick Introduction"
 

@@ -3,7 +3,6 @@ title_tag: "Resource Methods"
 meta_desc: Learn about resource methods - functions attached to resource types that return computed values from resources you are managing with Pulumi.
 title: Resource methods
 h1: Resource methods
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Resource methods
@@ -31,7 +30,7 @@ getKubeconfig(args?: Cluster.GetKubeconfigArgs): Output<Cluster.GetKubeconfigRes
 <pulumi-choosable type="language" values="csharp">
 
 ```csharp
-public Output<string> GetKubeconfig(Cluster.GetKubeconfigArgs? args)
+public Output<string> GetKubeconfig(ClusterGetKubeconfigArgs? args = null)
 ```
 
 </pulumi-choosable>

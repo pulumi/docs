@@ -4,7 +4,6 @@ meta_desc: Pulumi Policies is a product that provides gated deployments via Poli
            and security compliance when creating cloud resources.
 title: Get Started
 h1: Get Started with Pulumi Policies
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Get Started

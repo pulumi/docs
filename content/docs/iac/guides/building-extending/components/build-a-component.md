@@ -3,7 +3,6 @@ title_tag: "Build a Component"
 meta_desc: "Learn the process for building a custom Pulumi Component."
 title: Build a Component
 h1: Build a Component
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Component

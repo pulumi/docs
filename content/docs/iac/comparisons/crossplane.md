@@ -3,7 +3,6 @@ title_tag: "Pulumi vs. Crossplane"
 meta_desc: "Pulumi vs. Crossplane: Pulumi is a multi-language IaC platform; Crossplane is a Kubernetes-native control plane for managing cloud infrastructure."
 title: Crossplane
 h1: Pulumi vs. Crossplane
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Crossplane

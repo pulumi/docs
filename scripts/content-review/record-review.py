@@ -16,11 +16,20 @@ Outcome derivation:
   * verdict "clean"                                      -> status "clean"
   * verdict "skipped"                                    -> status "skipped"
   * verdict "fixed"  + no PR on the canonical branch     -> status "incomplete"
-  * sentinel absent / unparseable                        -> status "incomplete"
+  * sentinel absent, run succeeded, no branch pushed     -> status "clean"
+  * sentinel absent, run failed OR a branch exists       -> status "incomplete"
+
+The last two cases extend the file's "derive facts from observable state, not
+self-report" principle to the verdict itself: a model that completes its turn
+and pushes no `content-review/<slug>` branch reviewed the page and changed
+nothing — that is "clean", regardless of whether it remembered to write the
+sentinel. A branch with no PR (a half-applied fix) or a failed/timed-out run is
+genuinely "incomplete" and stays due for retry.
 
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, head_sha, fixes,
-    skipped_findings, retirement, note, attempts, clarity_flag, reviewed_at }
+    skipped_findings, retirement, note, attempts, clarity_flag,
+    tier, score, monthly_visits, traffic_available, reviewed_at }
 
 The record is written locally (audit artifact) and, when CONTENT_REVIEW_LEDGER_URI
 is set, uploaded to <uri>/<slug>.json with reviewed_at stamped to today (UTC).
@@ -79,14 +88,30 @@ def warn(msg: str) -> None:
 # ---- inputs -----------------------------------------------------------------
 
 
+def _maybe_int(v):
+    try:
+        return int(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def load_queue_article(queue_path: Path) -> dict:
-    """Return the single article (path/slug/lane) from the worker queue."""
+    """Return the single article from the worker queue, with its selection signal.
+
+    Beyond the bookkeeping fields (path/slug/lane/attempts), this carries the
+    selection facts the dispatcher chose the page on — tier, score, monthly
+    visits, and whether the traffic snapshot was available that run. They're
+    persisted onto the ledger record so the versioned ledger is a complete,
+    self-contained metrics source (outcome AND why-it-was-picked), reconstructable
+    from S3 object versions without depending on the ~90-day run logs.
+    """
     data = json.loads(queue_path.read_text())
     articles = data.get("articles") or []
     if not articles:
         raise SystemExit(f"record-review: no articles in {queue_path}")
     a = articles[0]
     path = a["path"]
+    traffic = data.get("traffic") or {}
     return {
         "path": path,
         "slug": a.get("slug") or slugify(path),
@@ -94,6 +119,11 @@ def load_queue_article(queue_path: Path) -> dict:
         # Prior incomplete-retry count, carried from the ledger by the selector.
         # build_record increments it on another incomplete, resets it on success.
         "attempts": int(a.get("attempts") or 0),
+        # Selection signal (None when absent, e.g. a --paths manual dispatch).
+        "tier": _maybe_int(a.get("tier")),
+        "score": a.get("score"),
+        "monthly_visits": _maybe_int(a.get("monthly_visits")),
+        "traffic_available": bool(traffic.get("available")),
     }
 
 
@@ -173,11 +203,43 @@ def check_pr_body(body: str | None) -> list[str]:
     return [s for s in REQUIRED_PR_SECTIONS if s.lower() not in text]
 
 
+def unresolved_draft_markers(body: str | None) -> int:
+    """Count composer scaffolding the model should have resolved before publish.
+
+    The composer seeds the draft with `<TODO>` markers and `<!-- LINT-RESULT -->`
+    (the latter stamped by the re-lint gate, which runs before this). Either left
+    in a published body means the model shipped the scaffold — worth a
+    non-blocking nudge, mirroring the pre-merge `no-todo-tokens` guard.
+    """
+    text = body or ""
+    return text.count("<TODO") + text.count("<!-- LINT-RESULT -->")
+
+
+def canonical_branch_pushed(slug: str) -> bool:
+    """True if either canonical review branch was pushed to origin.
+
+    Used only when the sentinel is absent, to tell a clean review (no branch)
+    from a half-applied fix (branch, no PR). Best-effort: a probe failure
+    returns False, biasing an unknowable case toward clean rather than a
+    perpetual incomplete retry.
+    """
+    refs = [f"refs/heads/{branch_for(slug, r)}" for r in (False, True)]
+    try:
+        out = subprocess.run(
+            ["git", "ls-remote", "--heads", "origin", *refs],
+            capture_output=True, text=True, check=False,
+        )
+    except FileNotFoundError:
+        return False
+    return out.returncode == 0 and bool(out.stdout.strip())
+
+
 # ---- derivation -------------------------------------------------------------
 
 
 def build_record(article: dict, verdict: dict | None, pr: dict | None,
-                 slug: str) -> dict:
+                 slug: str, claude_succeeded: bool = False,
+                 branch_exists: bool = False) -> dict:
     """Build the canonical ledger record from the queue, verdict, and PR state.
 
     `attempts` accrues the consecutive `incomplete` retries: it starts from the
@@ -185,6 +247,12 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
     by one on another incomplete outcome, and is reset to 0 the moment the page
     reaches any completed status. The selector backs a page off once it hits
     ATTEMPT_CAP, so this counter is the loop guard.
+
+    When the sentinel is absent the status is derived from observable state
+    rather than defaulted to incomplete: a run that succeeded and pushed no
+    canonical branch (`claude_succeeded and not branch_exists`) is recorded
+    "clean"; a failed run, or one that left a branch behind without a PR, is
+    "incomplete" and stays due.
     """
     prior_attempts = int(article.get("attempts") or 0)
     rec = {
@@ -201,11 +269,25 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "note": None,
         "attempts": prior_attempts + 1,
         "clarity_flag": bool(verdict.get("clarity_flag")) if verdict else False,
+        # Selection signal (carried from the queue) — persisted so the versioned
+        # ledger captures why the page was picked, not just the outcome.
+        "tier": article.get("tier"),
+        "score": article.get("score"),
+        "monthly_visits": article.get("monthly_visits"),
+        "traffic_available": bool(article.get("traffic_available")),
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
 
     if verdict is None:
-        rec["note"] = "worker produced no verdict"
+        if claude_succeeded and not branch_exists:
+            # Successful review that produced no branch == clean, even though the
+            # model skipped the sentinel. Advance the clock instead of looping.
+            rec["status"] = "clean"
+            rec["note"] = "no verdict sentinel; run succeeded with no changes (derived clean)"
+            rec["attempts"] = 0
+        else:
+            why = "run did not succeed" if not claude_succeeded else "a branch exists without a PR"
+            rec["note"] = f"worker produced no verdict ({why})"
         return rec
 
     rec["fixes"] = int(verdict.get("fixes") or 0)
@@ -287,7 +369,19 @@ def run(args) -> int:
     if want_pr and not pr and args.pr_json is None:
         scan_misnamed_sibling(slug)
 
-    record = build_record(article, verdict, pr, slug)
+    # Only needed when the sentinel is absent: distinguish a clean review (no
+    # branch) from a half-applied fix (branch, no PR). Skip the probe otherwise.
+    claude_succeeded = (args.claude_outcome or "").strip().lower() == "success"
+    branch_exists = False
+    if verdict is None:
+        branch_exists = (
+            args.branch_exists == "true" if args.branch_exists is not None
+            else canonical_branch_pushed(slug)
+        )
+
+    record = build_record(article, verdict, pr, slug,
+                          claude_succeeded=claude_succeeded,
+                          branch_exists=branch_exists)
 
     # PR-body section check (non-blocking) for fix PRs.
     if record["status"] == "reviewed" and pr is not None:
@@ -301,6 +395,10 @@ def run(args) -> int:
                      f"following required sections: {', '.join(missing)}."],
                     check=False,
                 )
+        leftover = unresolved_draft_markers(pr.get("body"))
+        if leftover:
+            warn(f"PR #{record['pr_number']} body still has {leftover} unresolved "
+                 "draft marker(s) (<TODO> / unstamped lint placeholder)")
 
     out_path = Path(args.out)
     out_path.write_text(json.dumps(record, indent=2) + "\n")
@@ -332,24 +430,53 @@ def self_test() -> int:
         d = Path(d)
         queue = d / "queue.json"
         queue.write_text(json.dumps({
+            "traffic": {"available": True},
             "articles": [{
                 "path": "content/docs/iac/concepts/converters.md",
                 "slug": "docs-iac-concepts-converters",
                 "lane": "priority",
+                "tier": 2,
+                "score": 137.5,
+                "monthly_visits": 842,
             }]
         }))
         article = load_queue_article(queue)
+        check("queue article carries the selection signal",
+              article["tier"] == 2 and article["score"] == 137.5
+              and article["monthly_visits"] == 842 and article["traffic_available"] is True)
 
-        # No verdict -> incomplete.
+        # No verdict, no signal -> incomplete (the conservative default).
         rec = build_record(article, None, None, article["slug"])
-        check("no-verdict -> incomplete", rec["status"] == "incomplete")
+        check("no-verdict (no signal) -> incomplete", rec["status"] == "incomplete")
         check("incomplete has reviewed_at", bool(rec["reviewed_at"]))
         check("incomplete bumps attempts from 0 -> 1", rec["attempts"] == 1)
+
+        # No verdict, but the run succeeded and pushed no branch -> derived clean.
+        rec = build_record(article, None, None, article["slug"],
+                           claude_succeeded=True, branch_exists=False)
+        check("no-verdict + success + no branch -> clean", rec["status"] == "clean")
+        check("derived-clean resets attempts to 0", rec["attempts"] == 0)
+        check("derived-clean notes the derivation",
+              "derived clean" in (rec["note"] or ""))
+
+        # No verdict + success but a branch was left behind -> incomplete (half fix).
+        rec = build_record(article, None, None, article["slug"],
+                           claude_succeeded=True, branch_exists=True)
+        check("no-verdict + success + branch -> incomplete", rec["status"] == "incomplete")
+
+        # No verdict + run failed -> incomplete even with no branch.
+        rec = build_record(article, None, None, article["slug"],
+                           claude_succeeded=False, branch_exists=False)
+        check("no-verdict + failed run -> incomplete", rec["status"] == "incomplete")
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
-            "clarity_flag", "reviewed_at"})
+            "clarity_flag", "tier", "score", "monthly_visits",
+            "traffic_available", "reviewed_at"})
         check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
+        check("selection signal persisted on the record",
+              rec["tier"] == 2 and rec["score"] == 137.5
+              and rec["monthly_visits"] == 842 and rec["traffic_available"] is True)
 
         # Repeated incomplete accrues against the prior count the selector carried.
         retried = {**article, "attempts": 2}
@@ -395,6 +522,12 @@ def self_test() -> int:
         check("section check passes complete body",
               check_pr_body("\n".join(f"## {s}" for s in REQUIRED_PR_SECTIONS)) == [])
 
+        # Unresolved-draft-marker guard (non-blocking parity with no-todo-tokens).
+        check("counts leftover TODO + lint placeholder",
+              unresolved_draft_markers("a <TODO: fix> b <!-- LINT-RESULT --> c") == 2)
+        check("clean published body has zero markers",
+              unresolved_draft_markers("## Why this page\nall resolved") == 0)
+
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
         return 1
@@ -407,6 +540,11 @@ def main() -> int:
     p.add_argument("--queue", help="single-article queue JSON (.content-review-queue.json)")
     p.add_argument("--verdict", help="model verdict sentinel (.content-review-verdict.json)")
     p.add_argument("--pr-json", help="inject gh PR JSON (file path or '-' for stdin); for tests")
+    p.add_argument("--claude-outcome",
+                   help="GitHub step outcome of the review run (success/failure/cancelled). "
+                        "With no sentinel, 'success' + no pushed branch => clean; anything else => incomplete.")
+    p.add_argument("--branch-exists", choices=["true", "false"],
+                   help="inject canonical-branch existence (tests); omit to probe origin via git ls-remote")
     p.add_argument("--out", default=".content-review-ledger.json",
                    help="local ledger artifact path")
     p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")

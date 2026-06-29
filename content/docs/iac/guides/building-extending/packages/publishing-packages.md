@@ -3,7 +3,6 @@ title_tag: "Publishing to the Pulumi Registry"
 meta_desc: "Learn how to publish a Pulumi package to the public Pulumi Registry so it's discoverable by the Pulumi community."
 title: Publishing to the Pulumi Registry
 h1: Publishing to the Pulumi Registry
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Publishing to the Pulumi Registry

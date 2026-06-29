@@ -3,7 +3,6 @@ title_tag: "Using a DIY Backend | Pulumi Operations"
 meta_desc: Configure a self-managed Pulumi state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
 title: Using a DIY Backend
 h1: Using a DIY Backend
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Using a DIY Backend

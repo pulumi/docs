@@ -3,7 +3,6 @@ title_tag: "deletedWith | Resource Options"
 meta_desc: The deletedWith resource option allows you to skip running resource deletion if another resource is being deleted as well.
 title: "deletedWith"
 h1: "Resource option: deletedWith"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: deletedWith

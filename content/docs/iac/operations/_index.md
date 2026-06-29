@@ -3,7 +3,6 @@ title_tag: "Operations | Pulumi IaC"
 meta_desc: Run Pulumi day-to-day — stack management, continuous delivery, troubleshooting, debugging, and least-privilege security for infrastructure after it's deployed.
 title: Operations
 h1: Operations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Operations

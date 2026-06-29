@@ -3,7 +3,6 @@ title: What is HashiCorp Vault?
 meta_desc: |
      HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
 
-meta_image: /images/what-is/what-is-hashicorp-vault-meta.png
 type: what-is
 page_title: "What is HashiCorp Vault?"
 authors: ["james-denyer"]

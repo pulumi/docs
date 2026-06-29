@@ -4,7 +4,7 @@ description: Screenshot and UI verification pass for the automated existing-cont
 
 # Screenshot Verification
 
-Base image criteria (alt text, borders, format, size) come from
+Base image criteria (alt text, borders, format, size, brand-asset compliance) come from
 `docs-review:references:image-review` — apply those first. This reference
 adds the **currency** checks: is the UI an article's screenshots show still
 the UI the product ships?
@@ -24,13 +24,21 @@ For each image the article references:
    product UI or branding (e.g. an architecture diagram, a terminal capture,
    a third-party console), record it as `n/a — not Pulumi UI` and move on.
 2. Read the matching reference image(s) from the manifest (`area:
-   console-overview` for Pulumi Cloud Console UI, `branding` for logos).
+   console-overview` for Pulumi Cloud Console UI, `branding` for logos). For
+   branding, the manifest PNG is a cached convenience; the canonical logo is
+   the brand asset API (see the Branding bullet).
 3. Compare deliberately, not impressionistically:
    - **Left navigation** — section names, order, presence/absence of
      products. This is the highest-signal staleness indicator.
    - **Terminology** — product names and labels visible in the UI vs. what
      the article's prose calls them.
-   - **Branding** — logo shape and colors against the branding reference.
+   - **Branding** — compare any Pulumi logo against the *canonical* mark, not
+     just the cached `branding` PNG (which can lag). Fetch the current logo and
+     Read it:
+     `curl -sL "https://brand.pulumi.com/api/logo?lockup=horizontal&background=white&format=png&width=1200" -o /tmp/pulumi-logo.png`.
+     Then apply the brand-asset compliance checks from
+     `docs-review:references:image-review` (logo misuse, AI-generated imagery,
+     deprecated Pulumipus).
    - **Structure** — header layout, major panels.
 4. Record a verdict per image: `current`, `stale` (name the specific
    differences — "left nav shows 'Pulumi Insights' where current UI has

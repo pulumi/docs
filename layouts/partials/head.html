@@ -128,16 +128,16 @@
     {{ $twitterImage := "/logos/brand/twitter-summary.png" }}
     {{ $twitterCardType := "summary" }}
 
-    {{ if .Params.meta_image }}
-        {{ if or (eq .Section "blog") (eq .Section "templates") }}
-            {{ $ogImage = (.Resources.GetMatch .Params.meta_image).RelPermalink }}
-        {{ else }}
-            {{ $ogImage = .Params.meta_image }}
-        {{ end }}
-
-
-        <!-- Only use large-image Twitter cards where we've set meta_images. -->
-        {{ $twitterImage = $ogImage }}
+    <!--
+        Effective social card: a page-level meta_image (custom override) wins;
+        otherwise a build-time generated card for the section, if one exists.
+        Resolved by partials/meta-image-url.html, which the schema collectors
+        share so OpenGraph and JSON-LD images stay in sync.
+    -->
+    {{ $metaImage := partial "meta-image-url.html" . }}
+    {{ with $metaImage }}
+        {{ $ogImage = . }}
+        {{ $twitterImage = . }}
         {{ $twitterCardType = "summary_large_image" }}
     {{ end }}
 
@@ -211,6 +211,12 @@
              add "Blog" to the title so that the titles no longer clash. -->
         {{ if and (eq .Type "blog") .IsPage }}
             <title>{{ $title }} | Pulumi Blog</title>
+        {{ else if and (eq .Type "blog") .IsSection }}
+            {{ if gt $.Paginator.PageNumber 1 }}
+                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi</title>
+            {{ end }}
         {{ else if eq .Type "blog" }}
             {{ if gt $.Paginator.PageNumber 1 }}
                 <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi Blog</title>
@@ -416,80 +422,7 @@
     {{ end }}
 
     {{ if .Store.Get "hasMermaid" }}
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-
-        // Drive Mermaid's theme off the docs color theme (data-theme on <html>,
-        // set pre-paint on docs pages). On non-docs pages data-theme is absent, so
-        // this resolves to the light 'default' theme.
-        const mermaidTheme = () =>
-            document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default';
-
-        // Initialize with manual control so we can preserve source before render.
-        const configure = () => mermaid.initialize({ startOnLoad: false, theme: mermaidTheme() });
-        configure();
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const diagrams = [...document.querySelectorAll('pre.mermaid')];
-
-            // Preserve original mermaid source before rendering replaces it.
-            diagrams.forEach(pre => {
-                if (!pre.dataset.mermaidSource) {
-                    pre.setAttribute('data-mermaid-source', pre.textContent.trim());
-                }
-            });
-
-            const isHidden = el => el.offsetParent === null;
-
-            // Render a single diagram, skipping ones already rendered. Diagrams
-            // inside a chooser start hidden (display:none) and cannot be measured,
-            // so they are rendered lazily once they become visible.
-            const render = pre => {
-                if (pre.dataset.processed === 'true') return;
-                mermaid.run({ nodes: [pre] }).catch(err => {
-                    console.error('Mermaid render error:', err);
-                });
-            };
-
-            // Render everything visible now; lazily render hidden diagrams when a
-            // chooser reveals them. Re-runnable (used again on theme toggle).
-            let observer = null;
-            const renderDiagrams = () => {
-                diagrams.forEach(pre => { if (!isHidden(pre)) render(pre); });
-                if (observer) observer.disconnect();
-                const hidden = diagrams.filter(isHidden);
-                if (hidden.length) {
-                    observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                render(entry.target);
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    });
-                    hidden.forEach(pre => observer.observe(pre));
-                }
-            };
-
-            renderDiagrams();
-
-            // Re-theme and re-render when the docs theme toggles. Restore each
-            // diagram's source (which removes the rendered SVG) and re-run.
-            let current = mermaidTheme();
-            new MutationObserver(() => {
-                if (mermaidTheme() === current) return;
-                current = mermaidTheme();
-                configure();
-                diagrams.forEach(pre => {
-                    const src = pre.getAttribute('data-mermaid-source');
-                    if (src === null) return;
-                    pre.textContent = src;
-                    pre.removeAttribute('data-processed');
-                });
-                renderDiagrams();
-            }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-        });
-    </script>
+        {{ partial "mermaid.html" . }}
     {{ end }}
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}

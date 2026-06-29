@@ -3,7 +3,6 @@ title_tag: "Resource Identity in Python | Languages & SDKs"
 meta_desc: How to work with resource identity in Python — logical names, physical IDs, URNs, and resource references — with common pitfalls and troubleshooting guidance.
 title: Resource identity
 h1: Resource identity in Python
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Resource identity
