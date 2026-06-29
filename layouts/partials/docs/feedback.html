@@ -1,45 +1,54 @@
-<div id="docsFeedbackContainer" class="hidden mt-4 border-t border-gray-200 text-xs text-gray-600">
+<div id="docsFeedbackContainer" class="hidden mt-4 border-t border-docs-border text-xs text-docs-fg-muted">
     <div id="feedbackButtons">
         <p class="my-4">Was this page helpful?</p>
         <div class="flex items-center">
-            <a id="docsFeedbackYes" data-track="feedback-yes" class="flex items-center cursor-pointer hover:text-gray-700">
+            <a id="docsFeedbackYes" data-track="feedback-yes" class="flex items-center cursor-pointer hover:text-docs-fg">
                 {{ partial "icon.html" (dict "name" "thumbs-up" "class" "mr-2") }}
                 <span> Yes </span>
             </a>
-            <a id="docsFeedbackNo" data-track="feedback-no" class="flex items-center cursor-pointer ml-4 hover:text-gray-700">
+            <a id="docsFeedbackNo" data-track="feedback-no" class="flex items-center cursor-pointer ml-4 hover:text-docs-fg">
                 {{ partial "icon.html" (dict "name" "thumbs-down" "class" "mr-2") }}
                 <span> No </span>
             </a>
         </div>
     </div>
-    <div id="feedbackThankYou" class="hidden">
-        {{ $problemTitle := printf "Issue with %s" .Permalink }}
-        {{ $improvementTitle := printf "Improvement for %s" .Permalink }}
-        <p>Thank you for your feedback!</p>
-        <p>If you have a question about how to use Pulumi, reach out in <a href="https://slack.pulumi.com/">Community Slack</a>.</p>
-        <p>
-            Open an issue on GitHub to
-            <a href="https://github.com/pulumi/docs/issues/new?title={{ $problemTitle }}">report a problem</a> or
-            <a href="https://github.com/pulumi/docs/issues/new?title={{ $improvementTitle }}">suggest an improvement</a>.
-        </p>
-    </div>
-    <div id="feedbackLongForm" class="hidden text-gray-700 text-sm">
+    <div id="feedbackLongForm" class="hidden text-docs-fg-muted text-sm">
         <div class="popup-overlay">
-            <div class="bg-white m-auto w-10/12 md:w-5/12 rounded overflow-hidden">
+            <div class="bg-docs-card m-auto w-10/12 md:w-5/12 rounded-lg overflow-hidden">
                 <div class="mx-5 pt-4 flex relative">
-                    <p class="inline-block m-0 text-3xl">Feedback</p>
+                    <h3 class="inline-block m-0">Feedback</h3>
                 </div>
-                <div class="p-5 pt-0">
+                <div id="feedbackForm" class="p-5 pt-0">
                     <p>Thank you for your feedback! If you would like to provide additional feedback, please let us know your thoughts below.</p>
-                    <textarea
-                        id="feedbackAdditionalComments"
-                        rows="5"
-                        class="mb-3 w-full p-2 bg-white rounded border border-gray-500 outline-none"
-                        placeholder="Additional Comments"
-                    ></textarea>
-                    <input id="feedbackEmail" type="email" class="block mb-4 w-full p-2 rounded border border-gray-500 outline-none" placeholder="Email (optional)" />
-                    <a id="docsSubmitFeedback" class="btn btn-primary md:w-1/4 mb-3 block md:inline-block">Submit</a>
-                    <a id="docsCloseFeedbackLongForm" class="cursor-pointer md:inline-block md:w-1/4 text-center block">Close</a>
+                    <div class="mb-3">
+                        <textarea
+                            id="feedbackAdditionalComments"
+                            rows="5"
+                            class="w-full p-2 rounded border border-docs-border outline-none focus:ring-violet-primary focus:ring-2"
+                            placeholder="Additional Comments"
+                            required
+                        ></textarea>
+                        <p id="feedbackCommentsError" class="hidden mt-1 text-red-primary">Please add a comment before submitting.</p>
+                    </div>
+                    <input id="feedbackEmail" type="email" class="block mb-4 w-full p-2 rounded border border-docs-border outline-none focus:ring-violet-primary focus:ring-2" placeholder="Email (optional)" />
+                    <div class="flex gap-2 justify-between">
+                        <a id="docsSubmitFeedback" class="btn btn-primary">Submit</a>
+                        <a id="docsCloseFeedbackLongForm" class="btn btn-secondary">Close</a>
+                    </div>
+                </div>
+                <div id="feedbackSuccess" class="hidden p-5 pt-0">
+                    {{ $problemTitle := printf "Issue with %s" .Permalink }}
+                    {{ $improvementTitle := printf "Improvement for %s" .Permalink }}
+                    <p>Thank you for your feedback!</p>
+                    <p>If you have a question about how to use Pulumi, reach out in <a class="text-docs-link underline" href="https://slack.pulumi.com/">Community Slack</a>.</p>
+                    <p>
+                        Open an issue on GitHub to
+                        <a class="text-docs-link underline" href="https://github.com/pulumi/docs/issues/new?title={{ $problemTitle }}">report a problem</a> or
+                        <a class="text-docs-link underline" href="https://github.com/pulumi/docs/issues/new?title={{ $improvementTitle }}">suggest an improvement</a>.
+                    </p>
+                    <div class="flex justify-end mt-4">
+                        <a id="docsDoneFeedback" class="btn btn-primary">Done</a>
+                    </div>
                 </div>
             </div>
         </div>
