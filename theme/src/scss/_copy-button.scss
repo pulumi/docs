@@ -13,8 +13,12 @@ div.highlight {
 
         flex-direction: row;
         width: fit-content;
+
+        // Match the code block's background with a subtle gray outline, so the button
+        // reads as part of the code panel rather than a filled violet button.
         margin: 8px 7px 0 0;
-        background: var(--color-violet-primary);
+        background: var(--color-violet-950);
+        border: 1px solid var(--color-gray-700);
 
         border-radius: 4px;
         position: absolute;
@@ -22,16 +26,16 @@ div.highlight {
         right: 0;
 
         &:hover {
-            background: var(--color-violet-800);
+            background: var(--color-violet-900);
         }
 
         &:active {
-            background: var(--color-violet-primary);
+            background: var(--color-violet-950);
         }
 
 
         .code-mode-dark & {
-            background: var(--color-violet-primary);
+            background: var(--color-violet-950);
         }
 
         button.copy-button {

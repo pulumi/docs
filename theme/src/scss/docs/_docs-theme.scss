@@ -174,8 +174,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-violet-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-violet-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-violet-300);
             }
 
@@ -192,8 +195,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-green-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-green-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-green-300);
             }
 
@@ -210,8 +216,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-orange-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-orange-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-orange-300);
             }
 
@@ -425,6 +434,34 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // New language toolbar tabs: the unlayered `*` border reset below would otherwise
+    // paint their underlines with --docs-border (beating the layered component styles
+    // regardless of specificity). Re-assert here: inactive matches the toolbar surface,
+    // active is the violet link color.
+    .chooser-toolbar > ul li {
+        border-bottom-color: var(--docs-surface);
+
+        &:hover {
+            border-bottom-color: var(--docs-border);
+        }
+
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+            }
+        }
+
+        &.active {
+            border-bottom-color: var(--docs-link);
+
+            a {
+                color: var(--docs-fg);
+            }
+        }
+    }
+
     pulumi-tabs::part(tab) {
         border-bottom-color: var(--docs-border);
     }
@@ -577,12 +614,13 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Code-block copy button stays primary violet-700 (the --color-violet-primary
-    // remap would otherwise turn it lavender).
+    // Code-block copy button matches the code block background (violet-950) with its
+    // outline, same as light mode. violet-950 is a fixed value, so unlike the old
+    // violet-primary fill it isn't affected by the lavender remap.
     .copy-button-container,
     .copy-button-container:active,
     .code-mode-dark .copy-button-container {
-        background: var(--color-violet-700);
+        background: var(--color-violet-950);
     }
 
     // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake

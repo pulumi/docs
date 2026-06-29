@@ -21,6 +21,7 @@ export interface SupportedLanguage {
     key: LanguageKey;
     name: string;
     extension: string;
+    logo: string;
     preview: boolean;
 }
 
@@ -242,23 +243,51 @@ export class Chooser {
     }
 
     render() {
+        // Render the current set of options, marking the selected one active. For
+        // language choosers the button text is the uppercased file extension (e.g. TS,
+        // PY); every other type keeps rendering the full name and PREVIEW badge as before.
+        const list = (
+            <ul>
+                {this.currentOptions.map(opt => (
+                    <li class={this.selection === opt.key ? "active" : ""}>
+                        <a onClick={event => this.makeChoice(event, this.type, opt)}>
+                            {this.optionLabel(opt)} {opt.preview ? <span>PREVIEW</span> : ""}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        );
+
+        if (this.type === "language") {
+            const selected = this.currentOptions.find(o => o.key === this.selection) as SupportedLanguage;
+            return (
+                <Host selection={this.selection}>
+                    <div class="chooser-toolbar">
+                        <span class="chooser-toolbar-label">
+                            {selected ? <img class="chooser-toolbar-logo" src={selected.logo} alt="" aria-hidden="true" /> : ""}
+                            {selected ? selected.name : ""}
+                        </span>
+                        {list}
+                    </div>
+                    <slot></slot>
+                </Host>
+            );
+        }
+
         return (
             <Host selection={this.selection}>
-                <ul>
-                    {
-                        // Render the current set of options, marking the selected one active.
-                        this.currentOptions.map(opt => (
-                            <li class={this.selection === opt.key ? "active" : ""}>
-                                <a onClick={event => this.makeChoice(event, this.type, opt)}>
-                                    {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
+                {list}
                 <slot></slot>
             </Host>
         );
+    }
+
+    // The text shown on a chooser tab. For languages we use the uppercased file
+    // extension (TS, PY, GO, …) so 7+ options fit on one row; everything else uses the
+    // full option name.
+    private optionLabel(opt: ChooserOption): string {
+        const ext = (opt as SupportedLanguage).extension;
+        return ext ? ext.toUpperCase() : opt.name;
     }
 
     // The choosable elements of this chooser, if any.
@@ -435,60 +464,70 @@ export class Chooser {
             key: "typescript",
             name: "TypeScript",
             extension: "ts",
+            logo: "/logos/tech/typescript.svg",
             preview: false,
         },
         {
             key: "javascript",
             name: "JavaScript",
             extension: "js",
+            logo: "/logos/tech/javascript.svg",
             preview: false,
         },
         {
             key: "python",
             name: "Python",
             extension: "py",
+            logo: "/logos/tech/python.svg",
             preview: false,
         },
         {
             key: "go",
             name: "Go",
             extension: "go",
+            logo: "/logos/tech/go.svg",
             preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
+            logo: "/logos/tech/csharp.svg",
             preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
+            logo: "/logos/tech/fsharp.svg",
             preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
+            logo: "/logos/tech/visualbasic.svg",
             preview: false,
         },
         {
             key: "java",
             name: "Java",
             extension: "java",
+            logo: "/logos/tech/java.svg",
             preview: false,
         },
         {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
+            logo: "/logos/tech/yaml.svg",
             preview: false,
         },
         {
             key: "opa",
             name: "OPA",
             extension: "rego",
+            logo: "/logos/tech/logo-opa.png",
             preview: false,
         },
     ];

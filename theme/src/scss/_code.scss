@@ -241,13 +241,29 @@ div.highlight.line-numbers {
         }
 
         .example-program-footer {
-            @apply block bg-blue-900 -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
+            @apply block -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
+
+            // Match the code block's background (always dark) so the footer reads as
+            // its bottom lip in both light and dark mode.
+            background: var(--color-violet-950);
+
+            // Shrink the tooltip's positioning context to the icon so the tooltip
+            // (centered on its target) lines up over the GitHub icon rather than over
+            // the full-width footer.
+            pulumi-tooltip {
+                @apply inline-block;
+            }
+
+            // Shrink the GitHub icon a bit.
+            .ph-icon {
+                @apply h-4 w-4;
+            }
 
             a {
-                @apply text-blue-300 ;
+                @apply text-gray-400;
 
                 &:hover {
-                    @apply text-blue-200;
+                    @apply text-gray-200;
                 }
             }
         }
