@@ -26,7 +26,7 @@ This model lets you:
 Roles apply to these kinds of principals in Pulumi Cloud:
 
 - **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
-- **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be assigned one or more roles. Members of a team receive the union of the team's roles and their own user role.
+- **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and Insights accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
 - **[Team tokens](/docs/administration/access-identity/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly.
 - **[Organization access tokens](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
@@ -38,13 +38,13 @@ Access in Pulumi Cloud is built up progressively. A user's effective permissions
 All grants are strictly **additive**: no rule can revoke access that another rule provides.
 {{% /notes %}}
 
-For example, a member who belongs to two teams accumulates the permissions of their own user role plus every role assigned to each of those teams:
+For example, a member who belongs to two teams accumulates the permissions of their own user role plus every role assigned to each of those teams, as well as any entity access those teams grant directly:
 
 ```mermaid
 flowchart LR
     UR["User role<br/>(e.g. Member)"] --> EFF["Effective permissions<br/>(union of all grants)"]
-    TA["Team A roles"] --> EFF
-    TB["Team B roles"] --> EFF
+    TA["Team A roles<br/>+ entity access"] --> EFF
+    TB["Team B roles<br/>+ entity access"] --> EFF
     CG["Creator grants<br/>(Stack Admin on<br/>stacks they create)"] --> EFF
 ```
 
@@ -52,9 +52,9 @@ flowchart LR
 
 Every member of a Pulumi organization has a user role — a built-in role (Admin, Member, or Billing Manager) or a custom role. New members will receive the specified default role for the organization.
 
-### Team roles
+### Team roles and entity access grants
 
-Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
+Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Teams can also be granted [entity access](/docs/administration/access-identity/rbac/teams#team-entity-access-grants) directly on specific stacks, environments, and Insights accounts, outside of any role; team members receive that access too. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
 
 ### Creator grants
 
