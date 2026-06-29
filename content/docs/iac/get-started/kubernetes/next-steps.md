@@ -18,7 +18,7 @@ aliases:
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
 
-## Video Tutorial
+## Video tutorial
 
 Take a deeper look at Pulumi with Kubernetes with this video tutorial.
 
@@ -32,7 +32,7 @@ With Pulumi ESC you can:
 
 - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started" label="Learn more about Pulumi ESC" ref="gs-k8-esc" >}}
 
@@ -44,7 +44,7 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## Launch a new project with a template
 
-Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/) to [serverless applications](/templates/serverless-application/), [virtual machines](/templates/virtual-machine/), [container services](/templates/container-service/), and [Kubernetes clusters](/templates/kubernetes/).
+Deploy the most common cloud architectures, from [static websites](/templates/static-website/) to [serverless applications](/templates/serverless-application/), [virtual machines](/templates/virtual-machine/), [container services](/templates/container-service/), and [Kubernetes clusters](/templates/kubernetes/).
 
 {{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-k8s-templates" >}}
 
@@ -54,7 +54,7 @@ Read more about Pulumi's architecture and foundational concepts in depth, includ
 
 {{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-k8s-docs" >}}
 
-## Blog Posts
+## Blog posts
 
 Read through the latest blog posts about using Pulumi with Kubernetes.
 
