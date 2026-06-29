@@ -16,6 +16,10 @@ An entity is a Pulumi object that can have [permission sets](/docs/administratio
 
 In Pulumi Cloud's authorization model, we use the term "entity" instead of "resource" to refer to such objects. This is because "resource" already has a specific meaning within Pulumi (referring to cloud infrastructure resources). We use the term "entity" to avoid confusion when discussing authorization.
 
+{{% notes "info" %}}
+Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+{{% /notes %}}
+
 ## Entity types
 
 An entity type is a category of objects that can be protected by the RBAC system. Each entity type has its own set of associated permission sets and is managed independently.

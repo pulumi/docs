@@ -17,6 +17,10 @@ aliases:
 
 This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific stacks or sets of stacks.
 
+{{% notes "info" %}}
+Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+{{% /notes %}}
+
 Note that creating, listing, or restoring stacks are organization-level operations, and these scopes can be found in the [organization settings scopes](/docs/administration/access-identity/rbac/scopes/org-settings).
 
 ## Stacks

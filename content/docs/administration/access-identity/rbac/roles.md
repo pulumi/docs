@@ -105,7 +105,7 @@ This group includes a single capability toggle:
 ## Custom roles
 
 {{% notes "info" %}}
-Custom roles are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition. To learn more about editions, visit the [pricing page](/pricing/).
+Custom roles are only available in the Pulumi Enterprise or Business Critical editions. Pulumi Enterprise allows up to 25 custom roles; Pulumi Business Critical allows unlimited custom roles. To learn more, see the [pricing page](/pricing/).
 
 The baseline permissions for members who have not been given an explicit custom role are configured in [Organization-wide role settings](#organization-wide-role-settings).
 {{% /notes %}}
