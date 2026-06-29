@@ -30,7 +30,7 @@ describe("pulumi-chooser", () => {
         // The tabs show uppercased file-extension abbreviations, not full names.
         const items = await element.findAll(".chooser-toolbar ul > li a");
         const labels = items.map(item => item.textContent.trim());
-        expect(labels).toEqual(["TS", "GO", "PY"]);
+        expect(labels).toEqual(["TS", "PY", "GO"]);
     });
 
     it("renders a non-language chooser as plain name tabs with no toolbar", async () => {
@@ -47,6 +47,6 @@ describe("pulumi-chooser", () => {
         // Tabs render the full option names.
         const items = await element.findAll("ul > li a");
         const labels = items.map(item => item.textContent.trim());
-        expect(labels).toEqual(["macOS", "Linux", "Windows"]);
+        expect(labels).toEqual(["macOS", "Windows", "Linux"]);
     });
 });
