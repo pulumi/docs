@@ -27,7 +27,7 @@ Roles apply to these kinds of principals in Pulumi Cloud:
 
 - **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
 - **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and Insights accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
-- **[Team tokens](/docs/administration/access-identity/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly.
+- **[Team tokens](/docs/administration/access-identity/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the organization's default Member permissions configured in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings).
 - **[Organization access tokens](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
 ## How permissions accumulate for users
