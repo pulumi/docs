@@ -9,6 +9,18 @@ aliases:
   - /adam
   - /community/community-engineering/adam-gordon-bell/
 talks:
+- event: "KCDC 2026"
+  title: "Demystifying the Magic: Let's Build an Infrastructure-as-Code Tool from Scratch"
+  url: "https://www.kcdc.info/"
+  date: 2026-09-10T09:00:00.000-05:00
+- event: "Pinecone Meetup NYC: Scaling AI Infrastructure"
+  title: "I Built an AI Running Coach (And Gave It Memory)"
+  url: "https://luma.com/pinecone-m9my"
+  date: 2026-06-18T17:00:00.000-04:00
+- event: "AICamp New York 2026"
+  title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
+  url: "https://www.aicamp.ai/event/eventdetails/W2026061714"
+  date: 2026-06-17T17:30:00.000-04:00
 - event: "MLCon San Diego 2026"
   title: "Building Action-Taking AI Agents: Reliability Lessons from Real Systems"
   url: "https://mlconference.ai/"
