@@ -2,6 +2,7 @@
 title: "Pulumi Recommended Patterns: The Basics"
 date: 2021-11-04T23:20:26Z
 updated: 2025-03-06
+lastmod: 2026-06-28
 draft: false
 meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code.
 meta_image: article-1-meta.png
@@ -61,7 +62,7 @@ And just as with the cloud vendors, you should definitely consider the do's, don
 * [TypeScript](https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html)
 * Python: [PEP 8](https://www.python.org/dev/peps/pep-0008/), [PEP 20](https://www.python.org/dev/peps/pep-0020/), and [an additional blog post](https://data-flair.training/blogs/python-best-practices/)
 * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-* Golang: [Golang docs](https://golangdocs.com/golang-best-practices) and [a talk](https://talks.golang.org/2013/bestpractices.slide#1)
+* Golang: [Effective Go](https://go.dev/doc/effective_go) and [a talk](https://talks.golang.org/2013/bestpractices.slide#1)
 
 ## Pulumi recommended patterns
 
