@@ -21,8 +21,8 @@ aliases:
 [**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
-You will now create your first component that packages up your Google Cloud Storage website so you can easily stamp out
-entire websites in just a few lines of code:
+You will now create your first component that packages up your Google Cloud Storage website so you can stamp out
+entire websites in a few lines of code:
 
 {{% choosable language typescript %}}
 
@@ -254,12 +254,12 @@ This defines a component but it doesn't do much yet.
 Next, make four changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
-2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
+2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
-to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
+to get a feel for things, or paste the contents of this into {{< compfile >}}:
 
 {{% choosable language typescript %}}
 
@@ -592,7 +592,7 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
-Ensure the file is empty and we will build it back up by simply importing and instantiating our new component.
+Delete the existing contents of {{< langfile >}} so the file is empty, and we will build it back up by importing and instantiating our new component.
 
 Add this to your now-empty {{< langfile >}}:
 
@@ -754,10 +754,10 @@ This preview shows you a few things. First, you'll see our `GcpStorageWebsite` c
 
 {{% notes type="info" %}}
 
-If you're wondering why Pulumi didn't simply update the resources in place, it's because certain changes -- like
+If you're wondering why Pulumi didn't update the resources in place, it's because certain changes -- like
 refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
-properties or moving resources between files are not disruptive like this. It such cases, you can assign
-[aliases](/docs/iac/concepts/options/aliases/) to prevent deletions from happening.
+properties or moving resources between files are not disruptive like this. In such cases, you can assign
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
 
 {{% /notes %}}
 
