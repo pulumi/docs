@@ -7,7 +7,7 @@ menu:
   administration:
     name: "Stacks"
     parent: administration-access-identity-rbac-scopes
-    weight: 4
+    weight: 1
     identifier: pulumi-cloud-access-management-rbac-scopes-stacks
 aliases:
 - /docs/intro/pulumi-service/scopes/stacks
