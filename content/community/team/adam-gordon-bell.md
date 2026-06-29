@@ -9,6 +9,10 @@ aliases:
   - /adam
   - /community/community-engineering/adam-gordon-bell/
 talks:
+- event: "DevOpsDays Rockies 2026"
+  title: "When AI Agents Touch Real Infrastructure: War Stories"
+  url: "https://talks.devopsdays.org/dodroxrox26/"
+  date: 2026-09-22T09:00:00.000-06:00
 - event: "KCDC 2026"
   title: "Demystifying the Magic: Let's Build an Infrastructure-as-Code Tool from Scratch"
   url: "https://www.kcdc.info/"
