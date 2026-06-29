@@ -47,3 +47,5 @@ Tasks started from Slack run with the [RBAC permissions](/docs/administration/ac
 
 - Starting a conversation with Neo in a direct message isn't supported.
 - One task per thread.
+
+<p style="font-size: 0.8rem; color: var(--docs-fg-muted); margin-top: 2rem;"><em>Neo is powered by AI, and AI-generated content can be inaccurate. Review Neo's responses and actions before relying on them.</em></p>
