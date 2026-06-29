@@ -7,7 +7,10 @@
 # (promoting the next-newest to `latest` if the redacted version was latest), and
 # invalidates the prefix + manifest in CloudFront.
 #
-# Requires AWS credentials with delete access to the bucket (the publisher role or admin).
+# Requires ADMIN AWS credentials (s3:DeleteObjectVersion + s3:ListBucketVersions on the bucket).
+# The CI publisher role deliberately does NOT have these — it can publish and invalidate, but
+# cannot permanently destroy archived object versions. Redaction is a rare, deliberate admin
+# operation, so immutable archives can't be wiped by an automated or compromised CI run.
 #
 # Usage:
 #   redact-version.sh --tool T --version vX.Y.Z --bucket B [--distribution-id D] [--yes]

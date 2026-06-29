@@ -144,14 +144,14 @@
         .catch(function () {});
     }));
     dropdown.appendChild(menuItem(ICON.markdown(), "View as Markdown", "Open Markdown in new tab", ICON.external(), function () {
-      window.open(md, "_blank");
+      window.open(md, "_blank", "noopener,noreferrer");
     }));
     dropdown.appendChild(document.createElement("hr"));
     dropdown.appendChild(menuItem(ICON.chatgpt(), "Open in ChatGPT", "Ask ChatGPT about this page", ICON.external(), function () {
-      window.open("https://chat.openai.com/?q=" + encodeURIComponent(prompt), "_blank");
+      window.open("https://chat.openai.com/?q=" + encodeURIComponent(prompt), "_blank", "noopener,noreferrer");
     }));
     dropdown.appendChild(menuItem(ICON.claude(), "Open in Claude", "Ask Claude about this page", ICON.external(), function () {
-      window.open("https://claude.ai/new?q=" + encodeURIComponent(prompt), "_blank");
+      window.open("https://claude.ai/new?q=" + encodeURIComponent(prompt), "_blank", "noopener,noreferrer");
     }));
 
     var open = false;

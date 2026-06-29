@@ -75,13 +75,17 @@ cp -a "$SRC_DIR/." "$SNAP/"
 # filename. sed_escape_lhs/rhs keep the needle/replacement literal.
 sed_escape_lhs() { printf '%s' "$1" | sed 's/[][\\.*^$#]/\\&/g'; }
 sed_escape_rhs() { printf '%s' "$1" | sed 's/[\\&#]/\\&/g'; }
+# Portable in-place sed: GNU sed takes `-i`; BSD/macOS sed needs `-i ''`. Detect once (only GNU
+# sed understands --version) and expand the array inside the find -exec, so the --out-dir local
+# dry run works on macOS as well as Linux/CI.
+if sed --version >/dev/null 2>&1; then SED_INPLACE=(sed -i); else SED_INPLACE=(sed -i ""); fi
 replace_in_html() { # $1=needle $2=replacement — HTML only (css/js asset refs)
   local n r; n="$(sed_escape_lhs "$1")"; r="$(sed_escape_rhs "$2")"
-  find "$SNAP" -type f -name '*.html' -exec sed -i "s#${n}#${r}#g" {} +
+  find "$SNAP" -type f -name '*.html' -exec "${SED_INPLACE[@]}" "s#${n}#${r}#g" {} +
 }
 replace_in_content() { # $1=needle $2=replacement — HTML links AND the .md url:/cross-links
   local n r; n="$(sed_escape_lhs "$1")"; r="$(sed_escape_rhs "$2")"
-  find "$SNAP" -type f \( -name '*.html' -o -name '*.md' \) -exec sed -i "s#${n}#${r}#g" {} +
+  find "$SNAP" -type f \( -name '*.html' -o -name '*.md' \) -exec "${SED_INPLACE[@]}" "s#${n}#${r}#g" {} +
 }
 
 # 3a. Theme: point the archive at the SHARED, stable archive theme bundle — a permanent
@@ -108,7 +112,7 @@ done
 # it isn't present here to strip; external CDN scripts use absolute URLs and are left intact.
 # (A consent-manager script is injected by inline JS rather than a src tag; it simply no-ops
 # if its fingerprinted file 404s, so it's harmless to leave.)
-find "$SNAP" -type f -name '*.html' -exec sed -i -E \
+find "$SNAP" -type f -name '*.html' -exec "${SED_INPLACE[@]}" -E \
   's#<script[^>]*\ssrc="/js/[^"]+\.js"[^>]*>\s*</script>##g' {} +
 
 # 4. Rewrite intra-snapshot command links to the versioned prefix — in the HTML AND in the
