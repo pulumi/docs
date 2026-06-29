@@ -6,7 +6,7 @@ h1: "Scopes"
 menu:
   administration:
     parent: administration-access-identity-rbac
-    weight: 4
+    weight: 1
     identifier: administration-access-identity-rbac-scopes
 aliases:
 - /docs/intro/pulumi-service/scopes/
@@ -16,10 +16,6 @@ aliases:
 
 Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permission sets](/docs/administration/access-identity/rbac/permission-sets), which are then bundled into [roles](/docs/administration/access-identity/rbac/roles) to create comprehensive access control configurations.
 
-## Scopes vs. organization-wide settings
-
-Scopes are distinct from the **organization-wide access settings** found at **Settings** > **Access Management** (e.g., "Members can create stacks," "Members can delete stacks," "Members can create teams"). Those are separate on/off toggles that are not part of the RBAC scope system. When an org-wide setting is enabled, that capability is granted to all members unconditionally regardless of their role. When it is disabled, only members whose role includes the corresponding scope retain the capability. See the [RBAC overview](/docs/administration/access-identity/rbac/#organization-wide-settings) for a full explanation of how these two systems interact.
-
 ## How Scopes Work
 
 Scopes follow a consistent naming pattern: `object:action`. For example:
@@ -28,7 +24,7 @@ Scopes follow a consistent naming pattern: `object:action`. For example:
 - `environment:write` - Allows modifying environment settings
 - `team:create` - Allows creating new teams
 
-Scopes are always associated with a specific [entity type](/docs/administration/access-identity/rbac/permission-sets#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permission sets that match that entity type. This ensures that permission sets remain logically grouped and can't mix actions across different types of resources.
+Scopes are always associated with a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permission sets that match that entity type. This ensures that permission sets remain logically grouped and can't mix actions across different types of resources.
 
 You can use scopes to build [custom permission sets](/docs/administration/access-identity/rbac/permission-sets#creating-custom-permission-sets), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission set might include scopes like:
 
@@ -54,8 +50,9 @@ You can view the list of available scopes, organized by entity type:
 - [Insights accounts](insights-accounts)
 - [Organization settings](org-settings)
 
-## Related Resources
+## Related resources
 
-- [Teams](/docs/administration/access-identity/rbac/teams)
-- [Roles](/docs/administration/access-identity/rbac/roles)
-- [Permission sets](/docs/administration/access-identity/rbac/permission-sets)
+- [Permission sets](/docs/administration/access-identity/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
+- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+- [Roles](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You assign a role to users, teams, and machine tokens.
+- [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.
