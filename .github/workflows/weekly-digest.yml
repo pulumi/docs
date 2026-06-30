@@ -75,8 +75,8 @@ jobs:
             --arg digest "$DIGEST" \
             '{
               model: "claude-sonnet-5",
-              max_tokens: 2600,
-              thinking: { type: "disabled" },
+              max_tokens: 16000,
+              thinking: { type: "adaptive" },
               messages: [{
                 role: "user",
                 content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
@@ -87,7 +87,9 @@ jobs:
             -H "anthropic-version: 2023-06-01" \
             -H "content-type: application/json" \
             -d "$REQUEST" || echo '{"error":"curl_failed"}')
-          TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text // empty')
+          # Sonnet 5 runs adaptive thinking, so a thinking block precedes the text
+          # block — select the text block(s) rather than content[0].
+          TEXT=$(echo "$RESPONSE" | jq -r '[.content[] | select(.type=="text") | .text] | join("")')
           if [[ -z "$TEXT" ]]; then
             echo "::error::Anthropic API returned no text"
             echo "$RESPONSE" | head -c 2000 >&2
