@@ -16,10 +16,6 @@ menu:
         identifier: ai-code-reviews
 ---
 
-{{% notes type="info" %}}
-Neo code reviews are currently in public preview and will be generally available on July 1, 2026.
-{{% /notes %}}
-
 Neo code reviews analyze pull requests against what Pulumi Cloud knows about your running infrastructure and leave feedback in the pull request. They read the `pulumi preview` output and, when the GitHub App's [Code access for AI reviews](/docs/integrations/version-control/github-app/#integration-settings) setting is on (the default), the pull request's code changes. Neo comments inline on the specific lines that need attention and does not block the merge.
 
 ## Configuring reviews
