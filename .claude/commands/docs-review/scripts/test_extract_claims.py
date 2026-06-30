@@ -264,7 +264,7 @@ def _llm_doc(pass_name: str, claims: list[dict], errors: list[str] | None = None
         c.setdefault("confidence", "medium")
         c.setdefault("found_by", [f"llm-{pass_name}"])
         out.append(c)
-    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-4-6",
+    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-5",
             "claims": out, "errors": errors or [],
             "meta": {"input_tokens": 10, "output_tokens": 5, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}
 
