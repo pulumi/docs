@@ -1,0 +1,3 @@
+docs/esc/administration/access-control/index.html|https://www.pulumi.com/docs/administration/access-identity/rbac/
+docs/esc/access-management/access-control/index.html|https://www.pulumi.com/docs/administration/access-identity/rbac/
+docs/esc/environments/access-control/index.html|https://www.pulumi.com/docs/administration/access-identity/rbac/
