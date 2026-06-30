@@ -1,6 +1,6 @@
 ---
 title: "Sign in to Pulumi Cloud with Passkeys"
-date: 2026-06-26
+date: 2026-07-02
 authors:
     - devon-grove
 meta_desc: "Pulumi Cloud now supports passkeys: a phishing-resistant alternative to typing your password, for users who sign in with email and password."
