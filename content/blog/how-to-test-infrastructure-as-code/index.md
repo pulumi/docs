@@ -85,7 +85,9 @@ Pulumi unit tests replace the communication channel between the Pulumi program a
 
 **The import-order rule:** You must set up mocks *before* importing your Pulumi program. If you import the program first, the Pulumi runtime initializes without mocks and will attempt real cloud calls.
 
-**Python (unittest)**
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language python %}}
 
 ```python
 # test_infra.py
@@ -134,7 +136,9 @@ if __name__ == "__main__":
 
 Run with: `python -m unittest discover -v`
 
-**TypeScript (Mocha + Chai)**
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 // infra.test.ts
@@ -188,9 +192,17 @@ describe("Infrastructure", function () {
 
 Run with: `mocha -r ts-node/register infra.test.ts`
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### The program under test
 
-Both examples above test this `infra.py` / `index.ts` program:
+Both examples above test this program:
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language python %}}
 
 ```python
 # infra.py
@@ -214,6 +226,36 @@ server = ec2.Instance("web-server",
 )
 ```
 
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
+
+```typescript
+// index.ts
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+export const group = new aws.ec2.SecurityGroup("web-secgrp", {
+    ingress: [{
+        protocol: "tcp",
+        fromPort: 80,
+        toPort: 80,
+        cidrBlocks: ["0.0.0.0/0"],
+    }],
+});
+
+export const server = new aws.ec2.Instance("web-server", {
+    instanceType: "t2.micro",
+    ami: "ami-0b0ea68c435eb488d",
+    vpcSecurityGroupIds: [group.id],
+    tags: { Name: "web-server", Environment: "dev" },
+});
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 > **Key detail:** State property keys in the mock's `new_resource`/`newResource` return value must be **camelCase** (`cidrBlocks`, not `cidr_blocks`), regardless of the language you're writing in. This is how Pulumi serializes properties internally.
 
 ## How do you run integration tests against real cloud resources?
@@ -224,7 +266,9 @@ Unit tests tell you whether your resource definitions are correct. Integration t
 
 The [Pulumi Automation API](/docs/iac/concepts/automation-api/) lets you drive `pulumi up`, `pulumi destroy`, and every other Pulumi CLI operation programmatically, from within a test. You define the stack inline (using a function that runs your Pulumi program) or point it at an existing project directory.
 
-**Python integration test (pytest)**
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language python %}}
 
 ```python
 # test_integration.py
@@ -281,7 +325,9 @@ def test_bucket_has_tags(deployed_stack):
 
 Run with: `pytest test_integration.py -v`
 
-**TypeScript integration test**
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 // integration.test.ts
@@ -333,6 +379,10 @@ describe("S3 Bucket Integration", function () {
 
 Run with: `mocha -r ts-node/register integration.test.ts`
 
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### Using the Go integration framework
 
 If you prefer Go-based integration tests, Pulumi ships a purpose-built Go test framework at `github.com/pulumi/pulumi/pkg/v3/testing/integration`. It handles the full `create → validate → destroy` lifecycle for any Pulumi program (written in any language), with an `ExtraRuntimeValidation` hook for assertions against deployed state.
@@ -359,7 +409,9 @@ Unit and integration tests validate what your infrastructure *does*. Policy as c
 
 Pulumi Policies use the same languages as your infrastructure code, so you write policies in Python or TypeScript without learning a DSL. A `mandatory` policy blocks a deployment entirely when violated; an `advisory` policy surfaces a warning but allows the deploy to proceed.
 
-**Python policy pack**
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language python %}}
 
 ```python
 # __main__.py in your policy pack directory
@@ -406,7 +458,9 @@ PolicyPack(
 )
 ```
 
-**TypeScript policy pack**
+{{% /choosable %}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 // index.ts in your policy pack directory
@@ -442,6 +496,10 @@ new PolicyPack("aws-security-baseline", {
     ],
 });
 ```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 **Running a policy pack**
 
