@@ -21,7 +21,7 @@ For built-in plugins that run *inside* an environment definition with `fn::open:
 
 ## Editor
 
-- [VS Code](/docs/esc/integrations/vs-code/) — browse and edit environments from inside the editor.
+- [VS Code](/docs/integrations/vs-code/) — browse and edit environments from inside the editor.
 
 ## Kubernetes
 
