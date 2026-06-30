@@ -27,6 +27,22 @@ body.section-docs {
     --docs-card-border: var(--color-gray-200);
     --docs-ring: var(--color-violet-700);
 
+    // Re-expose the semantic tokens under Tailwind's --color-* namespace so the
+    // generated utilities (bg-docs-bg, text-docs-fg, border-docs-border, …) resolve
+    // and flip with the theme. This MUST live here, not just in @theme: a --color-*
+    // alias declared only at :root substitutes --docs-* against the (undefined) root
+    // value and never flips. Declared on this element it substitutes the live --docs-*
+    // above — which the dark rule below re-points — so the utilities track both modes.
+    --color-docs-bg: var(--docs-bg);
+    --color-docs-bg-alt: var(--docs-bg-alt);
+    --color-docs-surface: var(--docs-surface);
+    --color-docs-fg: var(--docs-fg);
+    --color-docs-fg-muted: var(--docs-fg-muted);
+    --color-docs-border: var(--docs-border);
+    --color-docs-card: var(--docs-card);
+    --color-docs-card-border: var(--docs-card-border);
+    --color-docs-link: var(--docs-link);
+
     background-color: var(--docs-bg);
     color: var(--docs-fg);
 }
@@ -355,19 +371,41 @@ html[data-theme="dark"] body.section-docs {
         a:hover {
             color: var(--docs-fg);
         }
+    }
 
-        #feedbackLongForm {
-            color: var(--docs-fg-muted);
+    // The feedback dialog is reparented to <body> while open (so its fixed overlay
+    // escapes the sidebar), so it must be matched on its own — not nested under
+    // #docsFeedbackContainer, which it leaves once opened.
+    #feedbackLongForm {
+        color: var(--docs-fg-muted);
 
-            .popup-overlay > div {
-                background-color: var(--docs-card);
-            }
+        .popup-overlay > div {
+            background-color: var(--docs-card);
+        }
 
-            textarea,
-            input {
-                background-color: var(--docs-surface);
-                border-color: var(--docs-border);
-                color: var(--docs-fg);
+        textarea,
+        input {
+            background-color: var(--docs-surface);
+            border-color: var(--docs-border);
+            color: var(--docs-fg);
+        }
+
+        // The required-comment error state is red. Light mode gets this from the
+        // text-red-primary / border-red-primary / focus:ring-red-primary utilities, but
+        // here those lose to the unlayered `p { color }` and `* { border-color }` rules
+        // above, so the red has to be re-asserted at id specificity. Dark uses the
+        // lighter red-300 (#ff9fa4) so it stays legible on the dark card; red-700 reads
+        // as near-black. The ring is scoped to the error class so the default focus
+        // stays violet.
+        #feedbackCommentsError {
+            color: var(--color-red-300);
+        }
+
+        #feedbackAdditionalComments.border-red-primary {
+            border-color: var(--color-red-300);
+
+            &:focus {
+                --tw-ring-color: var(--color-red-300);
             }
         }
     }
