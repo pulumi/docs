@@ -13,17 +13,20 @@ tags:
 category: best-practices
 schema_type: faq
 social:
-    twitter: "Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests with mocked providers run in milliseconds. Integration tests validate real deployments.
+    twitter: |
+        Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests with mocked providers run in milliseconds. Integration tests validate real deployments.
 
-Here's how to do all three with Pulumi."
-    linkedin: "Most infrastructure engineers write and deploy IaC without any automated tests. That's a risk you don't have to take.
+        Here's how to do all three with Pulumi.
+    linkedin: |
+        Most infrastructure engineers write and deploy IaC without any automated tests. That's a risk you don't have to take.
 
-Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching.
+        Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching.
 
-This guide covers unit tests with mocked providers (milliseconds, no cloud credentials), integration tests using the Automation API (real cloud, ephemeral stacks), and policy as code that enforces guardrails on every deploy. Complete Python and TypeScript examples included."
-    bluesky: "Testing infrastructure as code with Pulumi: unit tests run in milliseconds with mocked providers, integration tests use the Automation API, and policy packs enforce guardrails automatically.
+        This guide covers unit tests with mocked providers (milliseconds, no cloud credentials), integration tests using the Automation API (real cloud, ephemeral stacks), and policy as code that enforces guardrails on every deploy. Complete Python and TypeScript examples included.
+    bluesky: |
+        Testing infrastructure as code with Pulumi: unit tests run in milliseconds with mocked providers, integration tests use the Automation API, and policy packs enforce guardrails automatically.
 
-Full guide with Python + TypeScript examples."
+        Full guide with Python + TypeScript examples.
 ---
 
 **IaC testing means validating your infrastructure code the same way you test application software—unit tests with mocked cloud providers that run in milliseconds, integration tests that deploy and inspect real resources, and policy checks that enforce compliance rules on every preview and deploy. Together, these layers catch misconfigurations before they reach production.**
