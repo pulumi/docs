@@ -76,7 +76,7 @@ See the [SecretProviderClass configuration](#secretproviderclass) table for addi
 
 ### `SecretProviderClass`
 
-The following table lists the configurable parameters on the Conjur Provider's
+The following table lists the configurable parameters on the Pulumi ESC Provider's
 `SecretProviderClass` instances.
 
 | Field                                 | Description                                                           | Example                                                              |
@@ -87,9 +87,11 @@ The following table lists the configurable parameters on the Conjur Provider's
 | `spec.parameters.environment`         | Pulumi environment name                                               | `my-env`                                                             |
 | `spec.parameters.authSecretName`      | Name of the Kubernetes secret containing the Pulumi access token      | `pulumi-esc-access-token`                                            |
 | `spec.parameters.authSecretNamespace` | Namespace of the Kubernetes secret containing the Pulumi access token | `default`                                                            |
-| `spec.parameters.secrets`             | List of secrets to retrieve from Pulumi ESC                           | `- secretPath: "/" fileName: "my-secret-file" secret: "root.nested"` |
+| `spec.parameters.secrets`             | List of secrets to retrieve from Pulumi ESC                           | `- secretPath: "/" fileName: "my-secret-file" secretKey: "root.nested"` |
 
 ### Examples
+
+The following are valid values for the `secretKey` field, expressed using Pulumi path syntax:
 
 - `root`
 - `root.nested`
