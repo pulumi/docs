@@ -32,7 +32,7 @@ To allow all organization members to create teams, enable the **Allow organizati
 
 To create a team:
 
-1. Navigate to **Settings** > **Teams**.
+1. Navigate to **Settings** > **Access management** and select the **Teams** tab.
 1. Select **Create team**.
 
 ## Team Access Types
@@ -42,7 +42,7 @@ team. By default, any new team members will be assigned the team member role.
 
 To change a team member's role:
 
-1. Navigate to **Settings** > **Teams** and then the specific team.
+1. Navigate to **Settings** > **Access management**, select the **Teams** tab, and then select the specific team.
 1. In the **Members** section use the action menu item at the end of the table row and select **Change role to**.
 
 ## Role assignments {#role-assignments}
@@ -54,8 +54,6 @@ When your organization has custom roles enabled, teams can be assigned **roles**
 - **Role-backed teams**: Create a team, assign it a custom role (e.g. with access only to certain stacks or [tag-based rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules)), then add members; those members gain the team's roles in addition to their own user role.
 
 To manage role assignments for a team, navigate to the team's **Access** tab. The **Role assignments** section lists the roles currently assigned to the team; use **Add role** to assign an additional role.
-
-![Team Access tab showing Entity Access and Role assignments sections](/docs/administration/access-identity/rbac/1-team-role-assignment.png).
 
 ## GitHub-based Teams
 
@@ -70,8 +68,6 @@ permissions and role assignments granted to team members is managed in the Pulum
 Team entity access grants allow team admins to manage their team's access to specific stacks, environments, and insights accounts directly, without requiring org-level role management permissions. This makes it possible for teams to self-manage their own entity access while keeping broader role administration centralized.
 
 Teams can be granted direct access to stacks, environments, and insights accounts. All team members receive access to those entities at the selected permission level.
-
-![Editing team stacks and permissions](/images/docs/reference/service/editing-stack-permissions.png)
 
 ### Managing environment access via the REST API
 

@@ -80,6 +80,43 @@ This backend also supports [alternative object storage servers with AWS S3 compa
 $ pulumi login 's3://<bucket-name>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true'
 ```
 
+### Required permissions
+
+The S3 backend reads and writes state, lock, history, and metadata objects under the bucket's `.pulumi` prefix. Across the full stack lifecycle—`pulumi new`/`pulumi stack init`, `pulumi preview`, `pulumi up`, `pulumi refresh`, `pulumi destroy`, and `pulumi stack rm`—it needs exactly four S3 actions, and no more:
+
+- `s3:ListBucket` to enumerate stacks and locks.
+- `s3:GetObject` to read `meta.yaml`, stack state, and lock files.
+- `s3:PutObject` to write stack state, history, and lock files.
+- `s3:DeleteObject` to release locks and remove stacks.
+
+Note that `s3:ListBucket` is a bucket-level action, so it must be granted on the bucket ARN (`arn:aws:s3:::<bucket-name>`), while the object-level actions are granted on the objects within it (`arn:aws:s3:::<bucket-name>/*`). The following least-privilege identity-based policy grants exactly what the backend requires:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PulumiStateBackendList",
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::<bucket-name>"
+        },
+        {
+            "Sid": "PulumiStateBackendObjects",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::<bucket-name>/*"
+        }
+    ]
+}
+```
+
+The same four actions can be expressed as a [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html) (add a `Principal` and use the bucket ARNs shown above) if you prefer to attach permissions to the bucket rather than to the calling identity. If you store multiple projects under a path prefix (for example, `s3://<bucket-name>/app/project1`), you can scope the object-level statement to that prefix—`arn:aws:s3:::<bucket-name>/app/project1/*`. S3-compatible servers such as Minio or Ceph require the equivalent read, write, list, and delete grants on the bucket.
+
 ## Azure Blob Storage
 
 To use the [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) backend, pass the `azblob://<container-path>` as your `<backend-url>`:
@@ -159,7 +196,7 @@ error: read ".pulumi\\meta.yaml": blob (key ".pulumi/meta.yaml") (code=Unknown):
 `meta.yaml` is the first file Pulumi reads from a DIY backend, so this error almost always means the CLI reached the storage provider but couldn't authenticate or wasn't configured correctly—not that the file itself is missing or corrupt. The error is surfaced directly from the cloud provider's SDK, which is why it can be hard to interpret. Common causes:
 
 - **Expired or invalid credentials.** Temporary credentials—such as those from AWS SSO, `aws sts assume-role`, or short-lived Azure service principal tokens—may have expired. Refresh your credentials and try the command again.
-- **Insufficient permissions.** The identity in use can authenticate but lacks read/write access to the bucket or container. Confirm it has the permissions required to read, write, and delete blobs. For Azure Blob Storage, this means the [Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) or an equivalent role.
+- **Insufficient permissions.** The identity in use can authenticate but lacks read/write access to the bucket or container. Confirm it has the permissions required to read, write, and delete blobs. For AWS S3, this means the four actions listed under [Required permissions](#required-permissions). For Azure Blob Storage, this means the [Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) or an equivalent role.
 - **Missing region configuration (AWS S3).** The AWS SDK can't determine which region the bucket is in. Specify the region in the backend URL—for example, `pulumi login 's3://<bucket-name>?region=us-east-1'`—or set the `AWS_REGION` environment variable before logging in.
 - **Missing authentication environment variables.** DIY backends authenticate using the cloud provider's own SDK. Verify that the variables that SDK expects are set—see the section for your backend ([AWS S3](#aws-s3), [Azure Blob Storage](#azure-blob-storage), or [Google Cloud Storage](#google-cloud-storage)) above for the specifics.
 

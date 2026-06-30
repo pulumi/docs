@@ -49,6 +49,14 @@ sections:
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
     link: /docs/integrations/version-control/azure-devops-integration/
 
+- type: button-cards
+  heading: Developer tools
+  cards:
+  - icon: code-window
+    heading: VS Code
+    description: Debug Pulumi programs, get Pulumi YAML language support, and manage ESC environments without leaving your editor.
+    link: /docs/integrations/vs-code/
+
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
