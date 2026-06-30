@@ -13,9 +13,17 @@ tags:
 category: best-practices
 schema_type: faq
 social:
-    twitter: "Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests with mocked providers run in milliseconds. Integration tests validate real deployments. Policy checks enforce guardrails automatically. Here's how to do all three with Pulumi."
-    linkedin: "Most infrastructure engineers write and deploy IaC without any automated tests. That's a risk you don't have to take. Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching. This guide covers unit tests with mocked providers (milliseconds, no cloud credentials), integration tests using the Automation API (real cloud, ephemeral stacks), and policy as code that enforces guardrails on every deploy. Complete Python and TypeScript examples included."
-    bluesky: "Testing infrastructure as code with Pulumi: unit tests run in milliseconds with mocked providers, integration tests use the Automation API, and policy packs enforce guardrails automatically. Full guide with Python + TypeScript examples."
+    twitter: "Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests with mocked providers run in milliseconds. Integration tests validate real deployments.
+
+Here's how to do all three with Pulumi."
+    linkedin: "Most infrastructure engineers write and deploy IaC without any automated tests. That's a risk you don't have to take.
+
+Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching.
+
+This guide covers unit tests with mocked providers (milliseconds, no cloud credentials), integration tests using the Automation API (real cloud, ephemeral stacks), and policy as code that enforces guardrails on every deploy. Complete Python and TypeScript examples included."
+    bluesky: "Testing infrastructure as code with Pulumi: unit tests run in milliseconds with mocked providers, integration tests use the Automation API, and policy packs enforce guardrails automatically.
+
+Full guide with Python + TypeScript examples."
 ---
 
 **IaC testing means validating your infrastructure code the same way you test application software—unit tests with mocked cloud providers that run in milliseconds, integration tests that deploy and inspect real resources, and policy checks that enforce compliance rules on every preview and deploy. Together, these layers catch misconfigurations before they reach production.**
@@ -218,6 +226,7 @@ The [Pulumi Automation API](/docs/iac/concepts/automation-api/) lets you drive `
 ```python
 # test_integration.py
 import pytest
+import pulumi
 import pulumi_aws as aws
 from pulumi import automation as auto
 
@@ -240,7 +249,7 @@ def deployed_stack():
     stack.set_config("aws:region", auto.ConfigValue(value="us-west-2"))
 
     # Install provider plugins
-    stack.workspace.install_plugin("aws", "v6.0.0")
+    stack.workspace.install_plugin("aws", "v7.34.0")
 
     # Deploy
     up_result = stack.up(on_output=print)
@@ -300,7 +309,7 @@ describe("S3 Bucket Integration", function () {
         });
 
         await stack.setConfig("aws:region", { value: "us-west-2" });
-        await stack.workspace.installPlugin("aws", "v6.0.0");
+        await stack.workspace.installPlugin("aws", "v7.34.0");
 
         const upResult = await stack.up({ onOutput: console.log });
         outputs = upResult.outputs;
@@ -446,9 +455,9 @@ pulumi up --policy-pack ./my-policies
 pulumi policy publish
 ```
 
-> **Joe Duffy, Pulumi CEO:** "The smartest agent in the world still needs guardrails—and guardrails only work if they're enforced automatically, not reviewed manually. Policy as code is how teams scale their standards without scaling their security team."
+> As Joe Duffy, Pulumi CEO, [puts it](https://www.pulumi.com/blog/the-agentic-infrastructure-era/): "The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale."
 
-Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/insights/policy/) so they run across every stack in your organization automatically.
+Policy checks complement unit tests: unit tests verify your intent ("I wrote tags into this resource"), while policies enforce your standards ("all resources must have these tags, regardless of what any one developer intended"). For complex compliance environments, [publish policies to Pulumi Cloud](/docs/insights/policy/) and assign them via policy groups to enforce them across the stacks or accounts you choose—including organization-wide.
 
 ## How is testing IaC in Pulumi different from Terraform?
 
@@ -460,12 +469,12 @@ The fundamental difference is **language cohesion**. With Pulumi, you write infr
 | **Unit tests with mocks** | Yes — `pulumi.runtime.set_mocks()`, no cloud credentials needed | No — always deploys real infrastructure | Limited — `mock_provider` (v1.7+) is HCL-declarative, no programmatic logic |
 | **Integration testing** | Automation API (any language) or Go framework | Full-featured but Go-only | Yes, via `command = apply` run blocks |
 | **Policy / guardrails** | Pulumi Policies: Python or TypeScript, runs at preview time | External tools (checkov, tfsec, OPA/Rego — separate toolchain) | Sentinel (enterprise) or external |
-| **Execution speed** | Unit: milliseconds; integration: depends on cloud | Always minutes (real deployments) | Plan-only: fast; apply: minutes |
+| **Execution speed** | Unit: milliseconds; integration: depends on cloud | Minutes (real deployments by default) | Plan-only: fast; apply: minutes |
 | **Learning curve** | Use existing language skills and test frameworks | Requires Go knowledge and understanding of `go test` | Low if you know HCL; limited expressiveness |
 
 Terratest is battle-tested and widely adopted, particularly for Terraform module testing. It offers deep integrations with AWS, GCP, Azure, and Kubernetes. Its limitation is inherent: it's always deploying real infrastructure, making it slow and costly to run for every commit.
 
-`terraform test` has improved significantly in Terraform 1.6 and 1.7. The `command = plan` mode avoids real deployments, and `mock_provider` enables basic unit-like testing. But expressiveness is bounded by HCL's intentional simplicity—no loops, no third-party assertion libraries, no dynamic logic.
+`terraform test` has improved significantly in Terraform 1.6 and 1.7. The `command = plan` mode avoids real deployments, and `mock_provider` enables basic unit-like testing. But expressiveness is bounded by HCL's declarative model—no general-purpose programming, no third-party assertion libraries, and a fixed set of `run`/`assert` test constructs.
 
 With Pulumi, there's no context switch. The same developer who writes the infrastructure writes the tests in the same language, using the same IDE, the same debugger, and the same CI pipeline. That cohesion is a productivity multiplier.
 
@@ -626,7 +635,7 @@ Policy as code is complementary to—but distinct from—testing. Tests validate
 
 ### How is Pulumi testing different from Terratest?
 
-Terratest always deploys real infrastructure—there is no mock layer. Every test run provisions actual cloud resources, incurring real cost and taking 5–30 minutes. Tests must be written in Go regardless of what language your infrastructure uses. Pulumi's unit testing framework runs in milliseconds with no cloud credentials, uses your existing language and test runner, and provides true mock isolation. For integration testing, Pulumi's Automation API offers a similar model to Terratest but in any language.
+Terratest typically deploys real infrastructure—it has no mock layer for cloud providers—so most test runs provision actual cloud resources, incurring real cost and taking 5–30 minutes. Tests must be written in Go regardless of what language your infrastructure uses. Pulumi's unit testing framework runs in milliseconds with no cloud credentials, uses your existing language and test runner, and provides true mock isolation. For integration testing, Pulumi's Automation API offers a similar model to Terratest but in any language.
 
 ### How do you tear down resources after integration tests?
 
@@ -644,6 +653,6 @@ When you're ready to go deeper:
 - **[Policy as code authoring](/docs/insights/policy/policy-packs/authoring/)** — writing and publishing Pulumi Policies
 - **[Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)** — a full comparison of the two platforms
 
-If you're migrating from Terraform, the [Pulumi conversion tool](/tf2pulumi/) translates your existing HCL to Python, TypeScript, or Go, including your test infrastructure. Your Terratest or `terraform test` suites can be ported to Pulumi's native test runner—using your existing language—as part of the migration.
+If you're migrating from Terraform, the [Pulumi conversion tool](/tf2pulumi/) translates your existing HCL to Python, TypeScript, Go, C#, and more, including your test infrastructure. Your Terratest or `terraform test` suites can be ported to Pulumi's native test runner—using your existing language—as part of the migration.
 
 **[Get started with Pulumi for free →](https://app.pulumi.com/signup)**
