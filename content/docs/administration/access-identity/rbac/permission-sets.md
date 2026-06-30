@@ -64,29 +64,19 @@ Custom permission sets are only available to organizations using Pulumi Enterpri
 To learn more about editions visit the [pricing page](/pricing/).
 {{% /notes %}}
 
-### Creating custom permission sets
-
 To create a custom permission set, you must be an organization admin.
 
-Visit **Settings** > **Access management** and select the **Permission sets** tab.
-
-![View all organization permission sets](/docs/administration/access-identity/rbac/1-create-permission.png).
-
-To create a new permission set, select **Create custom permission set** within the associated entity group.
-
-You will need to provide a unique name for the permission set. Optionally, but recommended, you can provide a description to contextualize the permission set and its purpose.
-
-![Create a permission set side panel](/docs/administration/access-identity/rbac/2-create-permission.png).
-
-You can then select the scopes you would like to bundle within this permission set.
-
-![Providing a name and description for the permission set](/docs/administration/access-identity/rbac/3-create-permission.png).
-
-Once you've selected the preferred scopes, select **Create permission set**. The panel will close and you should see your new permission set on the permission sets page.
-
-![Your new permission set is visible on the permission sets page](/docs/administration/access-identity/rbac/4-create-permission.png).
+1. Visit **Settings** > **Access management** and select the **Permission sets** tab.
+1. To create a new permission set, select **Create custom permission set** within the associated entity group.
+1. Provide a unique name for the permission set. Optionally, but recommended, provide a description to contextualize the permission set and its purpose.
+1. Select the scopes you would like to bundle within this permission set.
+1. Select **Create permission set**. The panel closes and your new permission set appears on the permission sets page.
 
 You can now assign this custom permission set to roles within your organization.
+
+{{% notes "info" %}}
+A custom permission set cannot be deleted while it is in use by one or more roles. Remove the permission set from those roles before deleting it.
+{{% /notes %}}
 
 ## Related resources
 
