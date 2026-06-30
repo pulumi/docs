@@ -9,8 +9,7 @@ authors:
 tags:
   - esc
   - secrets
-categories:
-  - security-governance
+category: best-practices
 ---
 
 {{% notes "info" %}}

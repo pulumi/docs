@@ -6,7 +6,7 @@ meta_desc: "Build a serverless application with both the data store and the HTTP
 meta_image: feature.png
 authors: ["mikhail-shilkov"]
 tags: [serverless, azure]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi is excellent at connecting multiple cloud components into a

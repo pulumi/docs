@@ -5,7 +5,7 @@ meta_desc: "Pulumi now supports Audit Logs. Learn how to audit your organization
 meta_image: "auditlogs.png"
 authors: ["sean-holung"]
 tags: ["features", "pulumi-enterprise", "audit-logs"]
-categories: [product-launches, security-governance]
+category: product
 ---
 
 We are excited to announce the release of Audit Logs on

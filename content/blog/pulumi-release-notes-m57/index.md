@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 We regularly ship updates across the Pulumi ecosystem, with a release of the Pulumi CLI every two weeks, frequent releases of our cloud providers in the [Registry](/registry/), and regular updates to the Pulumi Service. You can read about most of those changes in the `CHANGELOG.md` files in each open source repository. To highlight some of the most exciting releases—including, for the first time, updates to the Pulumi Service—we're trying something new: a regular release notes post for Pulumi release news, features, and updates. If you find it useful, or have ideas on how we could improve it, let us know [on Twitter](https://twitter.com/pulumicorp) or in the [Pulumi Community Slack](https://slack.pulumi.com)!

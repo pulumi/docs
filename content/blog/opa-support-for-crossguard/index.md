@@ -8,8 +8,7 @@ authors:
 tags:
     - policy-as-code
     - opa
-categories:
-    - security-governance
+category: product
 ---
 
 We're excited to announce the addition of Open Policy Agent (OPA) Rego language support to Pulumi's CrossGuard policy-as-code framework. This enables Pulumi CrossGuard policy to be authored in either JavaScript/TypeScript/Python or in the popular Rego language using OPA.

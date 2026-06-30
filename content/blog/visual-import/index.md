@@ -11,8 +11,7 @@ tags:
     - import
     - insights
     - features
-categories:
-    - product-launches
+category: product
 
 social:
     twitter:

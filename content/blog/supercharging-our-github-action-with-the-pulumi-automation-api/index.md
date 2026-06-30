@@ -6,8 +6,7 @@ authors:
 tags:
   - github-actions
   - automation-api
-categories:
-  - community
+category: engineering
 date: "2021-03-01"
 meta_image: "gha.png"
 meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action powered by the Pulumi Automation API"

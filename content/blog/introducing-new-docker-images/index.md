@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - docker
-categories:
-    - engineering
+category: product
 
 ---
 

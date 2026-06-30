@@ -16,8 +16,7 @@ tags:
     - pulumi-enterprise
     - cloud-engineering
     - github-actions
-categories:
-    - community
+category: customers
 
 ---
 

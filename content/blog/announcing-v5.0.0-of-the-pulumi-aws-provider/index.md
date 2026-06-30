@@ -7,8 +7,7 @@ authors:
 - paul-stack
 tags:
 - aws
-categories:
-- product-launches
+category: product
 ---
 
 We are excited to announce v5.0.0 of the Pulumi [AWS](https://www.pulumi.com/registry/packages/aws/) provider. The AWS provider is one of the most heavily used providers across the Pulumi ecosystem, and offers access to the full surface area of the upstream Terraform AWS Provider from within Pulumi projects in all supported Pulumi languages. The v5.0.0 release brings a substantial set of [fixes and improvements](https://github.com/hashicorp/terraform-provider-aws/blob/main/CHANGELOG.md#400-february-10-2022) to the provider, including a number of breaking

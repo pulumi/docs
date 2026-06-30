@@ -6,7 +6,7 @@ meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST AP
 meta_image: "counter-arch.png"
 authors: ["donna-malayeri"]
 tags: [javascript, serverless, aws]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi makes it easy to build serverless

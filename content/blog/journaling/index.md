@@ -17,8 +17,7 @@ tags:
     - performance
     - data-integrity
     - features
-categories:
-    - engineering
+category: engineering
 
 social:
     twitter: |

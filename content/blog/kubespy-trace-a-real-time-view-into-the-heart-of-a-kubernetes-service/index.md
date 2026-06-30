@@ -6,7 +6,7 @@ meta_desc: "This post is part 3 in a series on the Kubernetes API. We will take 
 meta_image: "trace-success-create-svc.png"
 authors: ["alex-clemmer"]
 tags: [kubernetes]
-categories: [engineering]
+category: engineering
 ---
 
 <p><!-- spacer --></p>

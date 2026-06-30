@@ -3,7 +3,7 @@ date: "2020-06-04"
 title: "What's new in Pulumi 2.0 for Kubernetes"
 authors: ["mike-metral"]
 tags: [kubernetes]
-categories: [product-launches]
+category: product
 meta_desc: "What's new in Pulumi 2.0 for Kubernetes covers the major highlights of features and improvement to Pulumi's Kubernetes support."
 meta_image: pulumi_k8s.png
 ---

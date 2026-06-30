@@ -8,8 +8,7 @@ authors:
 tags:
     - security
     - secrets
-categories:
-    - security-governance
+category: best-practices
 
 ---
 

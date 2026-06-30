@@ -13,8 +13,7 @@ tags:
     - testing
     - claude-code
     - serverless
-categories:
-    - agentic-infrastructure
+category: general
 social:
     twitter: "Ran the same 6 browser tests with Playwright MCP and Vercel's agent-browser. Result: 31K characters vs 5.5K. That's 5.7x more tests in the same context budget."
     linkedin: |

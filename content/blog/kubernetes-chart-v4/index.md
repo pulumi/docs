@@ -12,8 +12,7 @@ tags:
     - yaml
     - java
     - helm
-categories:
-    - product-launches
+category: product
 ---
 
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.

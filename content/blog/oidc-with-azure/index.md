@@ -33,8 +33,7 @@ authors:
 tags:
     - azure
     - security
-categories:
-    - security-governance
+category: product
 
 ---
 

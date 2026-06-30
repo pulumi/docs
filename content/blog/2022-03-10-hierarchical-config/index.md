@@ -7,7 +7,7 @@ meta_desc: In this article, Rawkode takes a look at how he'd manage project and 
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: [configuration]
-categories: [best-practices]
+category: best-practices
 ---
 
 > [!INFO]

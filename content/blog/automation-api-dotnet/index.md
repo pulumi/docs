@@ -10,8 +10,7 @@ tags:
 - automation-api
 - dotnet
 - guest-post
-categories:
-- product-launches
+category: product
 ---
 
 {{% notes type="info" %}}

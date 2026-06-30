@@ -13,8 +13,7 @@ tags:
     - features
     - pulumi-neo
     - pulumi-cli
-categories:
-    - agentic-infrastructure
+category: product
 
 social:
     twitter: |

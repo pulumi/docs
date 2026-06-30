@@ -12,8 +12,7 @@ tags:
     - kubernetes
     - azure
     - dotnet
-categories:
-    - tutorials
+category: tutorials
 social:
     twitter: |
         Have you ever been rate limited by Docker Hub? Haven't we all. It happened to Adam Gordon Bell mid-demo at his live AKS workshop. Here's how that ended, and the six Kubernetes recommendations that came out of the session.

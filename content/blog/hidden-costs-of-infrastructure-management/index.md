@@ -7,8 +7,7 @@ authors:
     - aaron-kao
 tags:
     - infrastructure-as-code
-categories:
-    - best-practices
+category: general
 ---
 
 {{< notes type="info" >}}

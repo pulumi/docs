@@ -46,8 +46,7 @@ tags:
     - devsecops
     - security
     - kubernetes
-categories:
-    - best-practices
+category: general
 
 ---
 

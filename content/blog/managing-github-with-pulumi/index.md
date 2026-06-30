@@ -5,7 +5,7 @@ meta_desc: In this article, Guinevere Saenger describes how Pulumi migrated mana
 meta_image: "use-case-stories.png"
 authors: ["guinevere-saenger"]
 tags: ["go", "migration", "packages", "github-actions", "people-ops", "ci-cd"]
-categories: [community]
+category: tutorials
 ---
 
 {{% notes type="info" %}}

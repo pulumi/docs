@@ -8,8 +8,7 @@ authors:
     - sashu-shankar
 tags:
     - kubernetes
-categories:
-    - product-launches
+category: product
 ---
 
 Kubernetes users often joke about being "YAML engineers," and the pile of YAML seems to get deeper every day. Today,

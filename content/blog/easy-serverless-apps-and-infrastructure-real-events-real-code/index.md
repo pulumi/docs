@@ -6,7 +6,7 @@ meta_desc: "Create a simple serverless app. With Pulumi, you can create, deploy,
 meta_image: "hero.png"
 authors: ["joe-duffy"]
 tags: [javascript, serverless, aws]
-categories: [tutorials]
+category: tutorials
 ---
 
 With Pulumi, you can create, deploy, and manage any cloud resource using

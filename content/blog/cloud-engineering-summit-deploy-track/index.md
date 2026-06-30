@@ -10,8 +10,7 @@ tags:
     - cloud-engineering
     - continuous-delivery
     - pulumi-events
-categories:
-    - community
+category: community
 ---
 
 Cloud Engineering Summit 2021 is almost here! We’ve got a great line up this year.

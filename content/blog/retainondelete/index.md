@@ -7,8 +7,7 @@ authors:
     - fraser-waters
 tags:
     - features
-categories:
-    - product-launches
+category: product
 
 ---
 

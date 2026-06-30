@@ -40,12 +40,14 @@ authors:
 tags:
     - change-me
 
-# Exactly one category is required (a second is allowed only in rare cross-kind
-# cases). Categories are the "kind of post" axis and are a CLOSED, lint-enforced
-# set: agentic-infrastructure, product-launches, engineering, tutorials,
-# best-practices, security-governance, community. See data/blog_categories.yaml.
-categories:
-    - change-me
+# Category is REQUIRED and SINGULAR — the "kind of post" axis, a CLOSED set.
+# Exactly one value (a scalar, not a list). Apply the single best-fitting kind
+# when the post clearly fits; use "general" (the default) for posts that don't
+# fit a specific kind (e.g. SEO comparisons, "what is X" explainers) and let
+# tags place them. Allowed: product, engineering, community, best-practices,
+# tutorials, customers, perspectives, company, general. See
+# data/blog_categories.yaml.
+category: general
 
 # Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
 # Leave as 'auto' (or omit) for intelligent detection based on content type.

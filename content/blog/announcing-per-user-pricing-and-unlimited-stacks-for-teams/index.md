@@ -6,8 +6,7 @@ meta_desc: "Today we are announcing Pulumi's new pricing tier, with three paid e
 authors: ["joe-duffy"]
 tags:
   - features
-categories:
-  - product-launches
+category: product
 ---
 
 {{% notes type="warning" %}}

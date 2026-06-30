@@ -8,7 +8,7 @@ meta_desc: >-
 meta_image: meta.png
 authors: [abhinav-gupta]
 tags: [features, stack-references]
-categories: [product-launches]
+category: product
 ---
 
 You can use the new `StackReference.getOutputDetails` method

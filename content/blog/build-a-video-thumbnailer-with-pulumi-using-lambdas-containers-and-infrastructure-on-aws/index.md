@@ -6,7 +6,7 @@ meta_desc: "Extracting a thumbnail from a video using a combination of Lambdas, 
 meta_image: "video-thumbnail-diagram.png"
 authors: ["donna-malayeri"]
 tags: [javascript, serverless, aws, containers]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi makes it easy to build cloud applications that use a combination

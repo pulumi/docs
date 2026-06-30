@@ -13,8 +13,7 @@ tags:
     - platform-engineering
     - devops
     - announcements
-categories:
-    - agentic-infrastructure
+category: general
 ---
 
 The phrase "AI infrastructure" now means two different things. One is the GPUs, schedulers, and MLOps platforms that exist to run AI workloads. The other is AI that runs infrastructure: agents and assistants that generate, deploy, and govern cloud resources on your behalf. They're different markets with different vendors, and most teams need to think about both.

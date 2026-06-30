@@ -18,8 +18,7 @@ tags:
     - self-service
     - guardrails
     - idp-best-practices
-categories:
-    - security-governance
+category: best-practices
 ---
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard) to create deployment guardrails that make self-service infrastructure both powerful and safe.

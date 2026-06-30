@@ -10,8 +10,7 @@ tags:
     - continuous-delivery
     - codefresh
     - kubernetes
-categories:
-    - community
+category: general
 
 ---
 

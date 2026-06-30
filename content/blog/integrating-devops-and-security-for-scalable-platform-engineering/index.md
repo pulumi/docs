@@ -38,8 +38,7 @@ tags:
     - developer-experience
     - devops
     - security
-categories:
-    - security-governance
+category: community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

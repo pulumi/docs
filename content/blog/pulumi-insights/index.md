@@ -12,9 +12,7 @@ tags:
     - ai
     - llm
     - data-and-analytics
-categories:
-    - product-launches
-    - agentic-infrastructure
+category: product
 ---
 
 {{< notes type="info" >}}

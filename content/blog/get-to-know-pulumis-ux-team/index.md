@@ -12,8 +12,7 @@ authors:
 
 tags:
     - pulumi-culture
-categories:
-    - community
+category: company
 
 ---
 

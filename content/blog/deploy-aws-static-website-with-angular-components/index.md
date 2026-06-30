@@ -12,8 +12,7 @@ tags:
     - components
     - static-websites
     - angular
-categories:
-    - tutorials
+category: tutorials
 ---
 
 In this blog post, we’re going to use some Angular framework components to assemble a static website and then use Pulumi and its AWS Static Website component to deploy it to AWS. The website is for a café called the Pulumi Café. It will contain two pages, one an About page and the other a Menu page, as well as some navigational pieces.

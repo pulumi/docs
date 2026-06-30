@@ -9,8 +9,7 @@ authors:
 tags:
     - testing
     - cloud-engineering
-categories:
-    - tutorials
+category: tutorials
 ---
 
 In the [Testing Practices for Cloud Engineering](/blog/infrastructure-testing-concepts/) article we discussed how to apply software testing methodologies to cloud engineering. We also examined testing regimes starting from the testing pyramid to the trophy and honeycomb models of testing better suited to distributed and cloud architectures. These testing regimes include three types of tests suited for cloud architectures:

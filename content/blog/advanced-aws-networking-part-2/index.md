@@ -38,8 +38,7 @@ tags:
     - hub-and-spoke
     - python
     - aws-networking-advanced
-categories:
-    - tutorials
+category: tutorials
 series: aws-networking-advanced
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.

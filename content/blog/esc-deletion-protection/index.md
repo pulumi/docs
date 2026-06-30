@@ -11,9 +11,7 @@ tags:
     - esc
     - features
     - secrets
-categories:
-    - product-launches
-    - security-governance
+category: product
 ---
 
 Pulumi ESC environments can now be protected from accidental deletion with a new deletion protection setting.

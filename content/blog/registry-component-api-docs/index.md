@@ -21,8 +21,7 @@ tags:
     - private-registry
     - infrastructure-components
     - platform-engineering
-categories:
-    - product-launches
+category: product
 
 social:
     twitter: |

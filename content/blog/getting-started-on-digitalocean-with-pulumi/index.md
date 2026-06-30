@@ -5,7 +5,7 @@ meta_desc: "Pulumi now supports managing DigitalOcean resources. See how to depl
 meta_image: feature.png
 authors: ["paul-stack"]
 tags: [digitalocean, typescript]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi recently added support for managing [DigitalOcean](https://www.digitalocean.com/) resources. This article will

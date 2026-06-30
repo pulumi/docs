@@ -4,7 +4,7 @@ updated: "2025-04-16"
 title: "Announcing Pulumi 2.0, Now with Superpowers"
 authors: ["joe-duffy"]
 tags: [announcements]
-categories: [product-launches]
+category: product
 meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
 meta_image: "pulumi-2-0.png"
 ---

@@ -4,7 +4,7 @@ h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"
 tags: [kargo, kubernetes, pko, change-management, gitops, argocd, verification]
-categories: [best-practices]
+category: best-practices
 meta_desc: "Use Kargo with the Pulumi Kubernetes Operator to control how infrastructure changes are promoted across environments."
 date: "2025-11-25"
 updated: 2026-02-03

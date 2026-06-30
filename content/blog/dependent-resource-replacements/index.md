@@ -9,8 +9,7 @@ tags:
     - features
     - infrastructure-as-code
     - releases
-categories:
-    - product-launches
+category: product
 
 social:
     twitter: "New in Pulumi IaC: Use the `replaceWith` resource option to declare custom resource dependencies and ensure coordinated replacements across your infrastructure."

@@ -2,7 +2,7 @@
 title: "Provisioning and Managing Cloud Infrastructure with Pulumi"
 authors: ["donna-malayeri"]
 tags: [javascript, aws]
-categories: [tutorials]
+category: tutorials
 date: "2018-07-20"
 meta_desc: "Use Pulumi AWS, Azure, and GCP libraries to provision and manage infrastructure. Configure alerting & monitoring directly in code using Pulumi."
 

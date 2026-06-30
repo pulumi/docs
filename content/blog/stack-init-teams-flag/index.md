@@ -11,8 +11,7 @@ tags:
     - "cli"
     - "stack-init"
     - "cli-flags"
-categories:
-    - product-launches
+category: product
 ---
 
 We've been hearing feedback from our customers that they need ways to manage permissions for their stacks at scale. Today we are announcing a `--teams` flag for [`pulumi stack init`](/docs/iac/cli/commands/pulumi_stack_init), which allows customers to assign Teams to stacks from the CLI. This flag offers a third programmatic method for assigning permissions, supplementing [Pulumi Service REST API](/docs/reference/service-rest-api) or the [Pulumi Service Provider](/registry/packages/pulumiservice). Developers can now initialize their stacks with the right permissions directly from the CLI.

@@ -19,8 +19,7 @@ tags:
     - devops
     - remediation
     - idp-best-practices
-categories:
-    - best-practices
+category: best-practices
 
 social:
     twitter: |

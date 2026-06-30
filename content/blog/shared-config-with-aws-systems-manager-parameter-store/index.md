@@ -10,8 +10,7 @@ tags:
     - aws-systems-manager
     - yaml
     - configuration
-categories:
-    - tutorials
+category: tutorials
 ---
 
 One thing I love about Pulumi is how easy it is to configure a stack. As a builder mainly of web applications, I'm always thinking about how I'll configure my apps from one environment to the next, and being able to use Pulumi's built-in support for [configuration](/docs/concepts/config/) and [secrets](/docs/concepts/secrets/) to manage the API keys and database credentials for my dev, staging, and production stacks individually is incredibly convenient.

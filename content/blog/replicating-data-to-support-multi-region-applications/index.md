@@ -13,8 +13,7 @@ tags:
     - distributed-systems
     - geographic-distribution
     - high-availability
-categories:
-    - best-practices
+category: best-practices
 
 ---
 

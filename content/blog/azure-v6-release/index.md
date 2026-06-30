@@ -9,8 +9,7 @@ authors:
 tags:
     - azure
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 The latest major release of the Azure Classic Pulumi Provider is available now!

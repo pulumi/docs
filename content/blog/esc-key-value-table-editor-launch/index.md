@@ -12,8 +12,7 @@ tags:
   - secrets
   - configuration-management
   - features
-categories:
-  - product-launches
+category: product
 ---
 
 

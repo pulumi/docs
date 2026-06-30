@@ -14,8 +14,7 @@ authors:
 tags:
     - providers
     - azure
-categories:
-    - product-launches
+category: product
 
 ---
 

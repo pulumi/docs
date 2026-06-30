@@ -9,8 +9,7 @@ authors:
 tags:
     - kubernetes
     - yaml
-categories:
-    - tutorials
+category: tutorials
 
 ---
 

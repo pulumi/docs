@@ -9,8 +9,7 @@ tags:
     - kubernetes
     - arch-templates
     - templates
-categories:
-    - tutorials
+category: tutorials
 ---
 
 When building with Kubernetes for the first time, we often need to stand up a lot of infrastructure just to get to the point of having a base to build an application. Let's explore how we can wire together two of our architecture templates to generate a base for a web application running on Kubernetes on Google Cloud with Python and Poetry.

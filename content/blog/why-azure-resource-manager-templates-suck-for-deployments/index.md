@@ -11,8 +11,7 @@ tags:
     - azure
     - arm-templates
     - azure-resource-manager
-categories:
-    - best-practices
+category: general
 ---
 
 [Azure Resource Manager (ARM)](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm/) templates are powerful, but painful. If you’ve ever tried to provision cloud infrastructure using ARM, you know the challenges:

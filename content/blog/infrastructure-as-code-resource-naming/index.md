@@ -9,8 +9,7 @@ authors:
     - eric-rudder
 tags:
     - features
-categories:
-    - product-launches
+category: best-practices
 ---
 
 {{% notes %}}

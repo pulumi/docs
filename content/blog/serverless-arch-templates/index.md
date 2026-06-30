@@ -9,8 +9,7 @@ tags:
     - templates
     - serverless
     - arch-templates
-categories:
-    - product-launches
+category: product
 ---
 
 Whether you're building a new application or moving an existing application over from another provider, the basic framework of your infrastructure probably isn't something you want to worry about if you don't have to. The cloud is complicated enough as it is. With Architecture Templates, Pulumi takes on some of the work involved in deploying your application to the cloud provider of your choice. Let's take a tour of the new Serverless Templates for AWS, GCP, and Azure!

@@ -12,8 +12,7 @@ authors:
 tags:
     - releases
     - features
-categories:
-    - product-launches
+category: product
 ---
 
 At the heart of Pulumi's approach to cloud infrastructure and secrets management is a belief in empowering engineers to use the best software engineering tools to manage complexity at scale and to be maximally productive building cloud infrastructure and applications for their businesses.  

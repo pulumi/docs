@@ -22,8 +22,7 @@ tags:
     - sagemaker
     - huggingface
     - platform-engineering
-categories:
-    - agentic-infrastructure
+category: tutorials
 ---
 
 [Pulumi CLI]:/docs/install/

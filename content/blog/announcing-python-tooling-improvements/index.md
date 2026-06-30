@@ -8,8 +8,7 @@ authors:
     - justin-vanpatten
 tags:
     - python
-categories:
-    - product-launches
+category: product
 ---
 
 Today we're excited to announce some fairly significant improvements to the experience of writing Pulumi programs in Python. We've added type annotations to APIs and now allow passing nested data as strongly typed classes instead of raw `dict`s. This provides a much better editing experience in IDEs, improved type checking, and overall consistency.

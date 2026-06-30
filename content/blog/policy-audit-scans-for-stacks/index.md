@@ -14,8 +14,7 @@ tags:
   - audit-policies
   - compliance
   - governance
-categories:
-  - security-governance
+category: product
 ---
 
 **Audit Policy Scans for Pulumi Stacks** is part of the next generation of Pulumi Policies. This capability uses policies to run compliance checks against the last successful deployment state of your stacks, providing continuous compliance monitoring without impacting your existing CI/CD workflows.

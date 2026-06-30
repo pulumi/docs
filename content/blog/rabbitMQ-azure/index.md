@@ -9,8 +9,7 @@ tags:
     - azure
     - dotnet
     - rabbitmq
-categories:
-    - tutorials
+category: tutorials
 
 ---
 

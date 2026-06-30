@@ -7,8 +7,7 @@ authors:
     - evan-boyle
 tags:
     - automation-api
-categories:
-    - product-launches
+category: product
 canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/automation-api/"
 ---
 

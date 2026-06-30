@@ -5,7 +5,7 @@ meta_desc: "Using Pulumi to build a custom Docker image, publish it to a AWS con
 meta_image: "docker-fargate-history.png"
 authors: ["joe-duffy"]
 tags: [javascript, aws, containers, typescript]
-categories: [tutorials]
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

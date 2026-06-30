@@ -5,7 +5,7 @@ meta_desc: "How to build & deploy Kubernetes applications using infrastructure a
 meta_image: "health-checks.png"
 authors: ["joe-duffy"]
 tags: [kubernetes]
-categories: [tutorials]
+category: tutorials
 ---
 
 In this post, we'll take a look at 11 "pearls" -- bite-sized code

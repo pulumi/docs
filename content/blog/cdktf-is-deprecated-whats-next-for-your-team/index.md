@@ -11,8 +11,7 @@ tags:
   - migration
   - terraform
   - cdktf
-categories:
-  - best-practices
+category: best-practices
 ---
 
 In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the [organization](https://github.com/cdktf) and [repository](https://github.com/hashicorp/terraform-cdk) have been archived, and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.

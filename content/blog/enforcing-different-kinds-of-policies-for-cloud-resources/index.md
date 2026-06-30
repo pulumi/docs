@@ -8,8 +8,7 @@ authors:
     - justin-vanpatten
 tags:
     - policy-as-code
-categories:
-    - security-governance
+category: best-practices
 canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/crossguard/"
 ---
 

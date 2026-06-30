@@ -3,7 +3,7 @@ date: "2024-10-18"
 title: "Pulumi Kubernetes Operator 2.0"
 authors: ["eron-wright"]
 tags: [kubernetes, continuous-delivery, operators]
-categories: [product-launches]
+category: product
 meta_desc: "Pulumi Kubernetes Operator 2.0: Horizontal Scaling, Multi-Tenancy"
 meta_image: operator.png
 ---

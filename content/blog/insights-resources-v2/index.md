@@ -10,8 +10,7 @@ authors:
 tags:
     - insights
     - resources
-categories:
-    - product-launches
+category: product
 ---
 
 Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering too [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!

@@ -13,9 +13,7 @@ tags:
   - secrets
   - 1password
   - features
-categories:
-  - security-governance
-  - product-launches
+category: product
 
 ---
 

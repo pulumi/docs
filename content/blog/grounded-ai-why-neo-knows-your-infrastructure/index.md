@@ -5,7 +5,7 @@ date: 2025-10-24
 draft: false
 meta_image: meta.png
 tags: ["ai", "devops", "pulumi-neo", "platform-engineering", "infrastructure-as-code", "context-lake"]
-categories: [agentic-infrastructure]
+category: product
 authors:
   - engin-diri
 ---

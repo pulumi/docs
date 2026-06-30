@@ -35,8 +35,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - features
-categories:
-    - product-launches
+category: product
 
 
 ---

@@ -14,9 +14,7 @@ tags:
    - devops
    - langchain
    - ml
-categories:
-   - community
-   - agentic-infrastructure
+category: community
 ---
 
 The emergence of DevOps revolutionized software development. Now, with AI powered tools like LangChain, these transformations are being accelerated. Unsurprisingly, our distinguished speaker at the launch of Pulumi's in-person AI Talks, Patrick Debois, who coined the term "DevOps," has recently tuned into LLM and GenAI Ops using the Langchain framework.

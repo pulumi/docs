@@ -14,8 +14,7 @@ tags:
     - features
     - engineering
     - insights
-categories:
-    - engineering
+category: engineering
 schema_type: auto
 
 ---

@@ -3,7 +3,7 @@ title: "Pulumi adoption made easy with the new Migration Hub"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: [open-source, migration, import]
-categories: [product-launches]
+category: product
 meta_desc: "Introducing the Pulumi Migration Hub, your one stop shopping for migrating to Pulumi. It's never been so easy to adopt Pulumi."
 date: "2023-08-22"
 meta_image: "migration_hub.png"

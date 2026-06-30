@@ -8,8 +8,7 @@ authors:
     - sophia-parafina
 tags:
     - announcements
-categories:
-    - product-launches
+category: product
 ---
 
 Earth is just the beginning. We are putting down the foundations of space so our children can build their future.  At Pulumi, we are committed to making life multi-planetary. We are excited to announce Pulumi Interstellar, a collection of resource providers that will help us reach the future of a space-faring and multi-planet species.

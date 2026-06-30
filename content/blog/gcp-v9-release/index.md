@@ -11,8 +11,7 @@ tags:
     - google-cloud
     - releases
     - features
-categories:
-    - product-launches
+category: product
 ---
 
 We're excited to announce the v9 release of the Pulumi Google Cloud Provider!

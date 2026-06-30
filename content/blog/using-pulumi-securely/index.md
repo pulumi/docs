@@ -13,8 +13,7 @@ authors:
 tags:
     - security
     - pulumi-enterprise
-categories:
-    - security-governance
+category: best-practices
 
 ---
 

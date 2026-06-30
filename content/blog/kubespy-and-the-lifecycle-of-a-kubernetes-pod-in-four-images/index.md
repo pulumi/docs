@@ -5,7 +5,7 @@ meta_desc: "This post is the first part in a series on the Kubernetes API and ex
 meta_image: "1-created.png"
 authors: ["alex-clemmer"]
 tags: [kubernetes]
-categories: [engineering]
+category: engineering
 ---
 
 <p><!-- spacer --></p>

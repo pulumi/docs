@@ -16,8 +16,7 @@ tags:
 - cloudformation
 - terraform
 - hcl
-categories:
-- best-practices
+category: tutorials
 
 ---
 

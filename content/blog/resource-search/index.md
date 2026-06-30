@@ -32,8 +32,7 @@ authors:
 # Lowercase, hyphen-delimited is recommended.
 tags:
     - features
-categories:
-    - product-launches
+category: product
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details,

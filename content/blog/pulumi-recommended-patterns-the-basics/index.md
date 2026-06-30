@@ -9,8 +9,7 @@ authors:
     - aurelien-requiem
 tags:
     - cloud-engineering
-categories:
-    - best-practices
+category: best-practices
 ---
 
 As a customer engineer, one of the most rewarding aspects of my work is to listen to customers and our diverse community to learn and share how they succeed in their day-to-day projects.

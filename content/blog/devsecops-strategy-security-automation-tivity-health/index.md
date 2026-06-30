@@ -40,9 +40,7 @@ tags:
     - platform-engineering
     - infrastructure-lifecycle-management
     - developer-experience
-categories:
-    - security-governance
-    - community
+category: customers
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

@@ -12,9 +12,7 @@ tags:
   - aws
   - secrets
   - credentials-management
-categories:
-  - tutorials
-  - security-governance
+category: tutorials
 ---
 
 In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `pulumi env run` functionality of Pulumi ESC will make that easier.

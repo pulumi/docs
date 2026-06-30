@@ -5,7 +5,7 @@ meta_desc: "Use infrastructure as code to deploy to multiple regions, accounts, 
 meta_image: deployinfra.png
 authors: ["joe-duffy"]
 tags: ["aws", "regions", "rds", "multi-cloud", "multi-region", "architecture"]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi makes it easy to flexibly deploy your cloud infrastructure using code. Usually deployments encompass a single slack and a single region in your cloud of choice. If you need to go multi-region, that usually means creating a stack per-region, which Pulumi's configuration system makes easy. A stack per region isn't required, though! Sometimes we want a single stack to span regions for performance, scalability, resilience, or just hard requirements. In these cases, Pulumi can seamlessly orchestrate deployments to, or even across, multiple regions,  accounts, or clusters. In this article, we'll see this in action by provisioning an AWS RDS primary database into one region and a read replica in an entirely different region -- all from a single Pulumi program, stack, and `pulumi up` incantation.

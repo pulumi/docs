@@ -2,7 +2,7 @@
 title: "Simple, Reproducible Kubernetes Deployments"
 authors: ["alex-clemmer"]
 tags: [kubernetes, typescript]
-categories: [tutorials]
+category: tutorials
 date: "2018-08-24"
 meta_desc: "Pulumi is an open-source infrastructure as code platform that lets you express Kubernetes programs in familiar programming languages, instead of YAML templates."
 meta_image: "diff.png"

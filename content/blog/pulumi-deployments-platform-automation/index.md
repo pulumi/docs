@@ -13,8 +13,7 @@ tags:
     - pulumi-deployments
     - automation-api
     - deployments
-categories:
-    - best-practices
+category: product
 ---
 
 Delivering software has been conventionally driven by CI/CD workflows. A single commit is merged into a codebase, and a small, and static set of workflow runs are triggered by the CI system to update the appropriate environments (Dev -> Staging -> Production). This may have been fine when the only product a company had to offer was a single stateless web service, but increasingly companies are called upon to deliver cloud infrastructure as a product.

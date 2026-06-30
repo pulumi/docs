@@ -5,7 +5,7 @@ meta_desc: "This blog covers creating a container registry instance in ECR, crea
 meta_image: "hello-world-page.png"
 authors: ["donna-malayeri"]
 tags: [javascript, aws, containers]
-categories: [tutorials]
+category: tutorials
 ---
 
 Containers are a great way to deploy applications to the cloud,

@@ -9,8 +9,7 @@ tags:
     - features
     - infrastructure-as-code
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 Managing large-scale infrastructure can be challenging, especially when you need to perform operations on specific subsets of your resources. Pulumi's stack operations like `pulumi up` and `pulumi destroy` are powerful for deploying and tearing down environments, but sometimes you need more fine-grained control over which resources are affected.

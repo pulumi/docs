@@ -9,8 +9,7 @@ authors:
 tags: 
   - pulumi
   - features
-categories:
-  - product-launches
+category: product
 ---
 
 If you’ve deployed resources to your favorite cloud provider, you have probably found yourself sitting in the console thinking: “I don’t know how long this is going to take.” Then you deploy the resource and think: “When did I even start this?” When using Pulumi, the CLI prints out how long the update took after it ran, but while you’re in the moment, it feels like ages.

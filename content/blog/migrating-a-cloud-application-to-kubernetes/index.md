@@ -5,7 +5,7 @@ meta_desc: Using Pulumi to integrate applications with Kubernetes for on-demand 
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
-categories: [tutorials]
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

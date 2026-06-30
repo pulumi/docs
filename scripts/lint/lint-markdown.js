@@ -104,34 +104,39 @@ function checkMetaImage(image) {
 }
 
 /**
- * checkBlogCategories validates the `categories:` front matter on blog posts
- * against the closed set in data/blog_categories.yaml. It applies ONLY to
- * individual blog posts (content/blog/<slug>/index.md), not section pages
- * (_index.md), tag pages, or non-blog content.
+ * checkBlogCategory validates the `category:` front matter on blog posts against
+ * the closed set in data/blog_categories.yaml. It applies ONLY to individual
+ * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
+ * pages, or non-blog content.
  *
- * Rules: at least one category, every value in the allowed set, at most two.
+ * Category is REQUIRED and SINGULAR: every post must declare exactly one
+ * `category:` scalar value from the allowed set. Use `general` (the default)
+ * for posts that don't clearly fit a specific kind. A list value, a missing
+ * value, or a value outside the set is an error. (The legacy plural `categories`
+ * field is no longer accepted.)
  *
- * @param {string|string[]} categories The `categories` front matter value.
+ * @param {string} category The `category` front matter value.
+ * @param {*} legacyCategories The legacy `categories` front matter value, if any.
  * @param {string} fullPath The absolute path of the file being linted.
  */
-function checkBlogCategories(categories, fullPath) {
+function checkBlogCategory(category, legacyCategories, fullPath) {
     const isBlogPost =
         fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
     if (!isBlogPost) {
         return null;
     }
 
-    const list = Array.isArray(categories) ? categories : categories ? [categories] : [];
-
-    if (list.length === 0) {
-        return "Blog post is missing a 'categories' value. Add exactly one category from data/blog_categories.yaml.";
+    if (typeof legacyCategories !== "undefined") {
+        return "Blog post uses the legacy 'categories' field. Use a singular 'category:' scalar instead (e.g. 'category: general'). See data/blog_categories.yaml.";
     }
-    if (list.length > 2) {
-        return `Blog post lists ${list.length} categories; at most two are allowed (prefer one). See data/blog_categories.yaml.`;
+    if (Array.isArray(category)) {
+        return "Blog post 'category' must be a single scalar value, not a list (e.g. 'category: general'). See data/blog_categories.yaml.";
     }
-    const invalid = list.filter(c => !BLOG_CATEGORIES.includes(c));
-    if (invalid.length > 0) {
-        return `Invalid blog category value(s): ${invalid.map(c => `'${c}'`).join(", ")}. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
+    if (!category) {
+        return "Blog post is missing a required 'category' value. Add exactly one category from data/blog_categories.yaml (use 'general' if it doesn't fit a specific kind).";
+    }
+    if (!BLOG_CATEGORIES.includes(category)) {
+        return `Invalid blog category value: '${category}'. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
     }
 
     return null;
@@ -215,7 +220,7 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
-                    blogCategories: checkBlogCategories(obj.categories, fullPath),
+                    blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -332,10 +337,10 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.metaImage,
                 });
             }
-            if (frontMatterErrors.blogCategories) {
+            if (frontMatterErrors.blogCategory) {
                 lintErrors.push({
                     lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.blogCategories,
+                    ruleDescription: frontMatterErrors.blogCategory,
                 });
             }
         }

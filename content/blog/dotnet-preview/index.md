@@ -9,8 +9,7 @@ authors:
     - sophia-parafina
 tags:
     - dotnet
-categories:
-    - product-launches
+category: tutorials
 canonical_url: "https://www.pulumi.com/docs/iac/languages-sdks/dotnet/"
 ---
 

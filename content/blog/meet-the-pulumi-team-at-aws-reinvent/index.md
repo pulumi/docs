@@ -4,7 +4,7 @@ date: "2018-11-15"
 meta_desc: "Catch up with Pulumi on serverless functions, containers, and Kubernetes at AWS re:invent."
 authors: ["marc-holmes"]
 tags: [announcements]
-categories: [community]
+category: community
 ---
 
 Heading to AWS re:Invent? Concerned about how you'll manage to get

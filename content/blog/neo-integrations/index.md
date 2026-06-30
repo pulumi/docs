@@ -12,8 +12,7 @@ tags:
     - features
     - pulumi-neo
     - esc
-categories:
-    - agentic-infrastructure
+category: product
 
 aliases:
     - /blog/neo-integration-catalog/

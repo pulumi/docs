@@ -12,8 +12,7 @@ tags:
     - containers
     - cloud-native
     - docker
-categories:
-    - best-practices
+category: perspectives
 social:
     twitter: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 
     linkedin: There are 105+ ways to run containers in production! From familiar cloud providers to quantum computers, smart toasters, and even phone farms. 

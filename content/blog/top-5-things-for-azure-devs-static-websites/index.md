@@ -10,8 +10,7 @@ tags:
     - azure
     - static-websites
     - azure-top-5
-categories:
-    - tutorials
+category: tutorials
 series: azure-top-5
 ---
 

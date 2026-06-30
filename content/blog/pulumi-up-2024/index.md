@@ -12,8 +12,7 @@ tags:
     - infrastructure-as-code
     - esc
     - insights
-categories:
-    - product-launches
+category: product
 ---
 
 {{< notes type="info" >}}

@@ -8,8 +8,7 @@ authors:
     - matt-stratton
 tags:
     - cloud-engineering
-categories:
-    - best-practices
+category: perspectives
 aliases:
     - /blog/wtf-is-cloud-engineering/
 ---

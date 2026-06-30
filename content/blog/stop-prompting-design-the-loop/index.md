@@ -14,8 +14,7 @@ tags:
     - claude
     - pulumi-neo
     - platform-engineering
-categories:
-    - agentic-infrastructure
+category: perspectives
 social:
     twitter: |
         For two years, the unit of work was the prompt. You typed, you read, you typed again.

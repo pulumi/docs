@@ -9,8 +9,7 @@ authors:
     - adam-gordon-bell
 tags:
     - azure
-categories:
-    - best-practices
+category: general
 social:
     twitter:
     linkedin:

@@ -14,8 +14,7 @@ tags:
     - aws
     - provider
     - cloudcontrol
-categories:
-    - product-launches
+category: product
 ---
 We're excited to announce the general availability of the new [AWS Cloud Control Provider] for Pulumi (previously "AWS Native"). AWS is one of the most-used cloud providers across the Pulumi ecosystem, and we are committed to providing the fastest possible access to new AWS capabilities to all Pulumi users. This provider delivers on that promise by providing native support for all resources in the AWS Cloud Control APIs. As part of this launch, we are also renaming the provider from “AWS Native” to "AWS Cloud Control Provider," based on customer feedback during the preview phase, to provide users with a broader range of advanced cloud management tools exposed by the AWS Cloud Control API. This provider includes the following features and benefits,
 

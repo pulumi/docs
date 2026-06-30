@@ -21,8 +21,7 @@ tags:
   - aws
   - features
   - releases
-categories:
-  - tutorials
+category: tutorials
 ---
 
 Since its introduction in 2014, the AWS Lambda service has steadily grown from ‘functions as a service’ to a powerful serverless platform that enables cloud engineers to run code without provisioning or managing underlying infrastructure.

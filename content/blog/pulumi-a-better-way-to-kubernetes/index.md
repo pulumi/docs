@@ -2,7 +2,7 @@
 title: "Pulumi: A Better Way to Kubernetes"
 authors: ["levi-blackstone"]
 tags: [kubernetes]
-categories: [tutorials]
+category: general
 date: "2019-05-21"
 meta_desc: "In this post, we will explore how Pulumi makes Kubernetes more accessible using familiar languages and your favorite tools."
 

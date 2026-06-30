@@ -8,8 +8,7 @@ authors:
 tags:
     - redis-cloud
     - aws
-categories:
-    - tutorials
+category: tutorials
 ---
 
 Redis Enterprise Cloud makes apps faster by providing an in-memory database that enables teams to create a real-time data platform. In this post, you'll learn how to enable connectivity between Redis Enterprise Cloud and your workloads using Pulumi and the Redis Cloud provider.

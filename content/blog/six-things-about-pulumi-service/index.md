@@ -19,8 +19,7 @@ tags:
     - infrastructure-as-code
     - pulumi-enterprise
     - continuous-delivery
-categories:
-    - product-launches
+category: product
 ---
 
 As a reader of this blog, you've probably heard of the [Pulumi Service](/product/pulumi-service/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of the Service's key features, like helping you organize your [projects and stacks](/docs/pulumi-cloud/projects-and-stacks/), collaborate with others with the help of [organizations](/docs/pulumi-cloud/admin/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/concepts/secrets/).

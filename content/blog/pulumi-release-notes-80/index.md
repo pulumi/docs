@@ -28,8 +28,7 @@ authors:
 tags:
    - features
    - releases
-categories:
-   - product-launches
+category: product
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.

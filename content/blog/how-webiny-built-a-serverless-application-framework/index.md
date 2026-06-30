@@ -10,8 +10,7 @@ tags:
     - open-source
     - serverless
     - frameworks
-categories:
-    - community
+category: customers
 ---
 
 Building an open-source framework for building serverless applications has many challenges, one of which is deploying cloud infrastructure resources. In this article, learn how Webiny uses Pulumi to enable its users to easily deploy and develop applications built on top of serverless cloud technologies.

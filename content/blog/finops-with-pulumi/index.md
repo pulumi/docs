@@ -31,8 +31,7 @@ tags:
     - policy-as-code
     - cloud-engineering
     - automation-api
-categories:
-    - best-practices
+category: best-practices
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.

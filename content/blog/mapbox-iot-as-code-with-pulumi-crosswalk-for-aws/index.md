@@ -5,7 +5,7 @@ meta_desc: "In this blog, we'll show snippets of the JavaScript code that embrac
 meta_image: "aws-architecture-iot.png"
 authors: ["chris-toomey"]
 tags: [javascript, serverless, aws, guest-post]
-categories: [community]
+category: customers
 ---
 
 ## **Guest Author: Chris Toomey, Solution Architect Lead @ Mapbox**

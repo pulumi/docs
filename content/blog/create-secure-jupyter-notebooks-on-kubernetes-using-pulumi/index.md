@@ -2,7 +2,7 @@
 title: "Create Secure Jupyter Notebooks on Kubernetes using Pulumi"
 authors: ["nishi-davidson"]
 tags: [kubernetes, google-cloud, gke, data-and-analytics, jupyter]
-categories: [tutorials]
+category: tutorials
 meta_desc: "In this blog, we'll walk through how to use Pulumi to create Jupyter Notebooks on Kubernetes. "
 date: "2019-05-30"
 

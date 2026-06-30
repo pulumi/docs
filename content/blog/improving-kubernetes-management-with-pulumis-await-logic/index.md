@@ -5,7 +5,7 @@ meta_desc: "In this post, we discuss await logic, which allows users to have bet
 meta_image: "status-rich.png"
 authors: ["levi-blackstone"]
 tags: [kubernetes]
-categories: [engineering]
+category: product
 ---
 
 Pulumi enables customers to create, deploy, and manage modern

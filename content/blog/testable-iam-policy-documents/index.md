@@ -8,8 +8,7 @@ authors:
 tags:
     - aws
     - iam
-categories:
-    - security-governance
+category: community
 ---
 
 I was relieved to find Pulumi. Finally, we have testable Infrastructure as Code. We can write fast unit tests that we can execute locally without needing the cloud. However, I was a bit disappointed. Pulumi does not have a full representation of IAM Policy documents. Fortunately, it was relatively easy to build a library that did this!

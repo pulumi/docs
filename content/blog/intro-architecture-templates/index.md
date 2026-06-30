@@ -9,8 +9,7 @@ authors:
 tags:
     - templates
     - architecture
-categories:
-    - product-launches
+category: product
 ---
 
 🚀 Deploying cloud infrastructure is hard. Getting the architecture right from the start can be time-consuming. What if you could skip the hassle and start with prebuilt, best-practice templates?

@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - cloud-engineering
-categories:
-    - product-launches
+category: product
 ---
 
 Pulumi offers the most complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform for building, deploying, and managing modern cloud infrastructure and applications. When you use Pulumi, a vast library of cloud resources—from compute, storage, and other cloud infrastructure to databases to identity providers to monitoring systems—is at your fingertips. As the Pulumi community has grown, we’ve [heard from many of you](https://github.com/pulumi/pulumi/issues/3297) that we needed a central hub where you could find all of those resources. We’ve also heard from Pulumi partners that they wanted a great place to showcase their integrations with Pulumi so that their customers can more easily learn how to use Pulumi to deploy and manage their products.

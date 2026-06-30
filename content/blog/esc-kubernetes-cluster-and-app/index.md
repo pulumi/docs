@@ -15,9 +15,7 @@ authors:
 tags:
     - esc
     - kubernetes
-categories:
-    - tutorials
-    - security-governance
+category: tutorials
 ---
 
 Keeping long-lived kubeconfig around on disk is insecure and error-prone. You need a secure workflow that removes tedium.

@@ -7,7 +7,7 @@ meta_image: meta.png
 feature_image: feature.png
 authors: ["claire-gaestel"]
 tags: ["esc", "terraform", "features"]
-categories: [product-launches, security-governance]
+category: product
 ---
 
 Many organizations have years of infrastructure built and managed with Terraform.

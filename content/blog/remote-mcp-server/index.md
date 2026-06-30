@@ -9,8 +9,7 @@ authors:
 tags:
     - mcp
     - ai
-categories:
-    - agentic-infrastructure
+category: product
 
 ---
 

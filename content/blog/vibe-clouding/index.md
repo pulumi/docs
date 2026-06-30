@@ -10,8 +10,7 @@ authors:
 tags:
     - announcements
     - april-fools
-categories:
-    - agentic-infrastructure
+category: product
 ---
 
 {{< notes type="info" >}}

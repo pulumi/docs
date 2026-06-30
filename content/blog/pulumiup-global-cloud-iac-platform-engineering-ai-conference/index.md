@@ -41,8 +41,7 @@ tags:
     - infrastructure-as-code
     - devsecops
     - community
-categories:
-    - community
+category: community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

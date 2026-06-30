@@ -11,8 +11,7 @@ authors:
 tags:
     - aws
     - devops
-categories:
-    - product-launches
+category: tutorials
 ---
 
 Self-service infrastructure is the holy grail of DevOps. When platform engineering teams can empower application teams to provision their own infrastructure without needing to understand the details of configuring networking, storage, and compute resources, IT organizations can drastically increase their ability to deliver on organizational goals.  The first step in this process is to codify infrastructure best practices using platforms like Pulumi and the next step is to make these best practices available in a workflow that fits into the application team’s software development tools and process.

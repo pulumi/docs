@@ -11,8 +11,7 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
-categories:
-    - agentic-infrastructure
+category: product
 social:
     twitter: |
         Recurring platform work slips. Provider versions fall behind, drift accumulates between checks, and the quarterly audit keeps getting pushed back.

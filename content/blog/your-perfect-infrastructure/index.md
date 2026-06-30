@@ -28,8 +28,7 @@ tags:
     - developer-experience
     - people-ops
     - application-scalability
-categories:
-    - best-practices
+category: perspectives
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

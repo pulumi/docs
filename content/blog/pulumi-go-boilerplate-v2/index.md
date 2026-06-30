@@ -7,8 +7,7 @@ authors:
 tags:
   - go
   - packages
-categories:
-  - product-launches
+category: product
 meta_desc: A major update to the Pulumi Provider Boilerplate simplifies the provider development process.
 meta_image: meta.png
 ---

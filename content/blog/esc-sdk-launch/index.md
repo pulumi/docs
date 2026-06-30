@@ -12,9 +12,7 @@ tags:
   - esc
   - secrets
   - features
-categories:
-  - product-launches
-  - security-governance
+category: product
 ---
 
 Managing secrets and application configurations effectively is crucial for building secure and maintainable software. However, developers often face challenges such as hardcoded credentials, configuration inconsistencies, and security risks. [Pulumi Environments Secrets and Configuration](/product/esc) (ESC) simplifies the management of sensitive data and configuration across your entire application lifecycle. Today, we're thrilled to introduce the official Pulumi ESC SDK in [TypeScript/JavaScript](/docs/esc/development/languages-sdks/javascript/), [Go](/docs/esc/development/languages-sdks/go/), and [Python](/docs/esc/development/languages-sdks/python/), making it even easier to integrate ESC directly into your applications.

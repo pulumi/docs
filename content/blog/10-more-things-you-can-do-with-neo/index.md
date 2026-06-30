@@ -13,8 +13,7 @@ tags:
     - pulumi-neo
     - aws
     - neo-things
-categories:
-    - agentic-infrastructure
+category: product
 social:
     twitter: |
         Last fall we wrote up 10 things you could do with Pulumi Neo. Since then platform teams have handed Neo real work: drift, dependency upgrades, on-call triage from Slack.

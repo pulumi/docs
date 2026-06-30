@@ -9,8 +9,7 @@ authors:
     - isaac-harris
 tags:
     - github-actions
-categories:
-    - tutorials
+category: product
 
 ---
 

@@ -5,7 +5,7 @@ meta_desc: "This blog shows how to get regular insights on the performance of yo
 meta_image: "dashboard.png"
 authors: ["cyrus-najmabadi"]
 tags: [aws, logging]
-categories: [tutorials]
+category: tutorials
 ---
 
 Pulumi Crosswalk for AWS modules can be used to get first class insights

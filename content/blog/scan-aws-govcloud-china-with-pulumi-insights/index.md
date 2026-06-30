@@ -12,8 +12,7 @@ tags:
     - aws
     - features
     - cloud-engineering
-categories:
-    - product-launches
+category: product
 social:
     twitter:
     linkedin:

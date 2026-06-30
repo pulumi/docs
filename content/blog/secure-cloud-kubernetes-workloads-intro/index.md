@@ -10,8 +10,7 @@ tags:
     - kubernetes
     - security
     - cloud-engineering
-categories:
-    - security-governance
+category: best-practices
 ---
 
 As you build your cloud-native Kubernetes applications, you might eventually find you need to access cloud resources that reside outside your Kubernetes cluster. Perhaps you need to store static files in an object store (Amazon S3, Google Cloud Storage, or Azure Blog Storage) or use a queuing system to pass messages to other services (Amazon SQS, Azure Service Bus, or Google Pub/Sub).

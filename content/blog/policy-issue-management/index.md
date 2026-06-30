@@ -15,8 +15,7 @@ tags:
   - governance
   - pulumi-neo
   - infosec
-categories:
-  - security-governance
+category: product
 ---
 
 For platform and security teams, enabling robust cloud scanning often creates a new problem: an unmanageable firehose of policy alerts. Identifying a violation is only the first step. Without a system to manage the lifecycle of these findings, teams are quickly overwhelmed, leading to prioritization paralysis and a perpetually growing backlog.

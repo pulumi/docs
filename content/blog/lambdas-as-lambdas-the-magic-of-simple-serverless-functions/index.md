@@ -5,7 +5,7 @@ meta_desc: "Infrastructure as code using familiar languages instead of YAML or D
 meta_image: "closure.png"
 authors: ["cyrus-najmabadi"]
 tags: [serverless, typescript]
-categories: [best-practices]
+category: engineering
 ---
 
 Pulumi's approach to infrastructure as code uses familiar languages instead

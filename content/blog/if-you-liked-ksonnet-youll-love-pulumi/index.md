@@ -7,7 +7,7 @@ meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes 
 meta_image: "kube-update.png"
 authors: ["mike-metral"]
 tags: [kubernetes, cloud-native]
-categories: [product-launches]
+category: general
 canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 

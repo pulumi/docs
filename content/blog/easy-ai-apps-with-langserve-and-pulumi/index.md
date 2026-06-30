@@ -11,8 +11,7 @@ tags:
 - ai
 - langserve
 - aws
-categories:
-- agentic-infrastructure
+category: tutorials
 ---
 
 We all know how easy it is to create, deploy, and manage any cloud infrastructure

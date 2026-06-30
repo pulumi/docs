@@ -16,8 +16,7 @@ tags:
     - user-experience
     - pulumi-neo
     - ai
-categories:
-    - security-governance
+category: product
 ---
 
 Pulumi’s Infrastructure as Code has included a powerful policy engine from day one. Over the past year, we’ve been enhancing it significantly to provide stronger governance for modern cloud platforms. Until now, these capabilities were limited to our Business Critical tier. Today, we’re excited to announce that [policy guardrails](/docs/insights/policy-as-code/) are now available to all Team and Enterprise customers. Alongside this, we’re launching a redesigned policy management experience and introducing out-of-the-box policy packs that make it easier than ever to secure, govern, and optimize your cloud environments—even when powered by AI agents like [Pulumi Neo](/blog/pulumi-neo/).

@@ -11,8 +11,7 @@ tags:
 - nodejs
 - publishing
 - providers
-categories:
-- engineering
+category: engineering
 
 meta_image: "meta.png"
 ---

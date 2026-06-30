@@ -2,7 +2,7 @@
 title: "Pulumi’s Coronavirus Plan"
 authors: ["joe-duffy"]
 tags: [announcements]
-categories: [community]
+category: company
 date: "2020-03-18"
 meta_desc: "Together, we’re facing an unprecedented situation with the COVID-19 pandemic. Learn about the steps we've taken."
 ---

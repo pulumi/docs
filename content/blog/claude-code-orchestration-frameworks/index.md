@@ -15,8 +15,7 @@ tags:
     - devops
     - cursor
     - ai-coding
-categories:
-    - agentic-infrastructure
+category: perspectives
 social:
     twitter: |
         We gave three AI coding frameworks the same Pulumi project. One produced a 41x speedup. One caught scope drift the others missed entirely. One we probably won't use again.

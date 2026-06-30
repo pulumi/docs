@@ -5,7 +5,7 @@ meta_desc: "TypeScript is great for cloud apps and infrastructure because of its
 meta_image: "completion-list.png"
 authors: ["cyrus-najmabadi"]
 tags: [typescript]
-categories: [engineering]
+category: engineering
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time

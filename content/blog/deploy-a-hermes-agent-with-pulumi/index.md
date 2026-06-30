@@ -18,9 +18,7 @@ tags:
     - modal
     - typescript
     - python
-categories:
-    - agentic-infrastructure
-    - tutorials
+category: tutorials
 schema_type: auto
 
 # Social media copy, auto-posted to X, LinkedIn, and Bluesky when merged to master.

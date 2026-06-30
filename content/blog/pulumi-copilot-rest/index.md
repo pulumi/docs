@@ -11,8 +11,7 @@ tags:
     - ai
     - llm
     - copilot
-categories:
-    - agentic-infrastructure
+category: product
 series: pulumi-copilot
 social:
     twitter: |

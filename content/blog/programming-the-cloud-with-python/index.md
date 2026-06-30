@@ -4,7 +4,7 @@ date: "2019-04-04"
 meta_desc: "See how to use Pulumi and Python to automate provisioning of cloud infrastructure and delivery of applications."
 authors: ["sean-gillespie"]
 tags: [serverless, aws, python]
-categories: [tutorials]
+category: tutorials
 meta_image: meta.png
 ---
 

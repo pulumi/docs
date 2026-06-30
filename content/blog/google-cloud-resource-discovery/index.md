@@ -35,8 +35,7 @@ tags:
     - insights
     - google-cloud
     - resources
-categories:
-    - product-launches
+category: product
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

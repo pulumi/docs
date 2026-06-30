@@ -17,8 +17,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - esc
-categories:
-    - agentic-infrastructure
+category: customers
 social:
     twitter: |
         Five engineers. Nineteen clients. Custom code shipped within a day of signing.

@@ -12,8 +12,7 @@ tags:
     - glue
     - etl
     - data-warehouse
-categories:
-    - tutorials
+category: tutorials
 ---
 
 In our last episode, [Deploying a Data Warehouse with Pulumi and Amazon Redshift](/blog/building-a-data-warehouse-on-aws-with-redshift-and-pulumi/), we covered using Pulumi to load unstructured data from Amazon S3 into an Amazon Redshift cluster. That went well, but you may recall that at the end of that post, we were left with a few unanswered questions:

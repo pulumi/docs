@@ -10,8 +10,7 @@ authors:
 tags:
     - esc
     - azure
-categories:
-    - security-governance
+category: product
 schema_type: auto
 social:
     twitter: |

@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 It's been a busy few weeks at Pulumi, including for some of our community contributors! Read on to see what's new.

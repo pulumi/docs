@@ -10,8 +10,7 @@ authors:
 tags:
     - features
     - configuration
-categories:
-    - product-launches
+category: product
 ---
 
 > [!INFO]

@@ -14,8 +14,7 @@ authors:
 tags:
     - features
     - pulumi-cloud
-categories:
-    - product-launches
+category: product
 ---
 
 A few months ago we launched [Organization Access Tokens](/blog/organization-access-tokens/) for the [Pulumi Service](/product/pulumi-service/) and saw overwhelmingly fast adoption from our customer base. Based on this customer demand, and existing customer feedback, we prioritized improvements in the scoping of access tokens. Today, we are launching Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a [Pulumi Team](/docs/pulumi-cloud/access-management/teams/). Pulumi Service customers on the Enterprise and Business Critical editions can use Pulumi Teams to set role-based access controls (RBAC) for stacks by enabling Organization administrators to assign a set of stack permissions to a group of users.

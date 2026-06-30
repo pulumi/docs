@@ -3,7 +3,7 @@ title: "10x Your Storage Performance with Amazon S3 Express One Zone and Pulumi"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: ["aws", "s3"]
-categories: [tutorials]
+category: tutorials
 meta_desc: "Amazon S3 Express One Zone is a new storage class with up to 10x better performance. See how to use it with infrastructure as code and Pulumi."
 date: "2023-12-04"
 updated: 2025-03-19

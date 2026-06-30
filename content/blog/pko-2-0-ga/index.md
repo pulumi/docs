@@ -13,8 +13,7 @@ tags:
   - operator
   - releases
   - features
-categories:
-  - product-launches
+category: product
 
 aliases:
   - /blog/pulumi-kubernetes-operator-2-0-ga/

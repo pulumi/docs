@@ -11,8 +11,7 @@ tags:
     - eks
     - ecs
     - lambda
-categories:
-    - tutorials
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

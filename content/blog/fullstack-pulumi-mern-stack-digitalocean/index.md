@@ -10,8 +10,7 @@ tags:
     - digitalocean
     - fullstack
     - typescript
-categories:
-    - tutorials
+category: tutorials
 ---
 
 As a developer, I get lots of ideas for web apps---little things, mostly: nifty ways to keep track of my kids' allowances, habit trackers, shopping lists. Most of them, however, never see the light of day, and not just because I'm lazy; I also tend to get hung up trying to decide what to use for the technology stack.

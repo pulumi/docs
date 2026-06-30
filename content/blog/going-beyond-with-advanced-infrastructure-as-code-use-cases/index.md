@@ -10,8 +10,7 @@ authors:
 tags:
     - infrastructure-as-code
     - fundamentals
-categories:
-    - best-practices
+category: best-practices
 
 ---
 

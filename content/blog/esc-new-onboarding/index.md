@@ -10,9 +10,7 @@ authors:
     - sean-yeh
 tags:
     - esc
-categories:
-    - product-launches
-    - security-governance
+category: product
 schema_type: auto
 ---
 

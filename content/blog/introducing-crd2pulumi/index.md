@@ -8,8 +8,7 @@ authors:
     - albert-zhong
 tags:
     - kubernetes
-categories:
-    - product-launches
+category: product
 ---
 
 [CustomResource]s in Kubernetes allow users to extend the API with their types. These types are defined using

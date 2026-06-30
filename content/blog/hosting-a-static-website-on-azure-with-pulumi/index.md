@@ -5,7 +5,7 @@ meta_desc: "Static websites are back in the mainstream these days. See how easy 
 meta_image: feature.png
 authors: ["mikhail-shilkov"]
 tags: [azure]
-categories: [tutorials]
+category: tutorials
 ---
 
 Static websites are back in the mainstream these days. Website

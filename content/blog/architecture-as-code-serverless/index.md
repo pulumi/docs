@@ -8,8 +8,7 @@ authors:
 tags:
     - serverless
     - architecture-as-code
-categories:
-    - best-practices
+category: best-practices
 series: architecture-as-code
 ---
 

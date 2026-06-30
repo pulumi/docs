@@ -9,8 +9,7 @@ authors:
 tags:
     - google-cloud
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 The latest major release of the Pulumi Google Cloud Provider is available now!

@@ -13,8 +13,7 @@ tags:
     - python
     - go
     - typescript
-categories:
-    - tutorials
+category: product
 ---
 
 {{% notes type="info" %}}

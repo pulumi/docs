@@ -10,8 +10,7 @@ tags:
     - serverless
     - architecture-as-code
     - microservices
-categories:
-    - best-practices
+category: best-practices
 series: architecture-as-code
 ---
 

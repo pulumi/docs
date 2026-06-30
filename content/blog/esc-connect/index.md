@@ -10,9 +10,7 @@ tags:
 - esc
 - secrets
 - features
-categories:
-- product-launches
-- security-governance
+category: product
 ---
 
 We're excited to announce ESC Connect — a new capability that lets you integrate any secret source with [Pulumi ESC](/product/esc/) by building simple HTTPS adapter services. If you've ever needed to pull secrets from a proprietary system, a legacy tool, or a third-party service that doesn't have native ESC support, you no longer have to wait for us to build a provider. You can build your own adapter in an afternoon and start using it immediately.

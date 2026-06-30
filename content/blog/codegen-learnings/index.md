@@ -12,8 +12,7 @@ tags:
     - copilot
     - ai
     - infrastructure-as-code
-categories:
-    - agentic-infrastructure
+category: engineering
 
 ---
 

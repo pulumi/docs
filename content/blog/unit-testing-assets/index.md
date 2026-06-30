@@ -8,8 +8,7 @@ authors:
     - lee-zen
 tags:
     - testing
-categories:
-    - tutorials
+category: tutorials
 ---
 
 When deploying infrastructure, we want to ensure that what we're deploying matches our expectations.

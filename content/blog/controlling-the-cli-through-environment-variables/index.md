@@ -10,8 +10,7 @@ tags:
     - infrastructure-as-code
     - releases
     - cli
-categories:
-    - product-launches
+category: product
 
 social:
     twitter: |

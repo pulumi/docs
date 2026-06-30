@@ -35,8 +35,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - kubernetes
-categories:
-    - product-launches
+category: product
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

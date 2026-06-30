@@ -6,7 +6,7 @@ meta_desc: "Learn how to deploy Kubernetes Ingress on AWS using the ALB Ingress 
 meta_image: "featured-img-albingresscontroller.png"
 authors: ["nishi-davidson"]
 tags: [kubernetes, eks]
-categories: [tutorials]
+category: tutorials
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

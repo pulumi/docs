@@ -8,8 +8,7 @@ authors:
 tags:
     - kubernetes
     - pulumi-events
-categories:
-    - community
+category: community
 ---
 
 ![Pulumi Booth KubeCon2019](booth.jpg)

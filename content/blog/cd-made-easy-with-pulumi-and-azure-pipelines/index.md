@@ -5,7 +5,7 @@ meta_desc: "Pulumi open-source task extensions for Azure Pipelines will manage t
 meta_image: "add-pulumi.png"
 authors: ["praneet-loke"]
 tags: [azure, continuous-delivery, features]
-categories: [product-launches]
+category: product
 ---
 
 Azure DevOps is very popular among teams that want a single place to

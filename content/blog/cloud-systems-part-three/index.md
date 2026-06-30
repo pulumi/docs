@@ -15,8 +15,7 @@ tags:
     - aws
     - tutorials
     - docker
-categories:
-    - tutorials
+category: tutorials
 series: cloud-systems
 ---
 

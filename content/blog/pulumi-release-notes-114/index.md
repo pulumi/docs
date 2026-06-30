@@ -8,8 +8,7 @@ authors:
   - meagan-cojocar
 tags:
   - releases
-categories:
-  - product-launches
+category: product
 social:
   twitter: "🚀 From IaC enhancements to expanded ESC capabilities, Pulumi Insights 2.0 and key AI innovations - walk through the product release notes for a summary of what's been shipped this year"
   linkedin: "As we wrap up 2024, let's look back at the significant features and improvements Pulumi has delivered- from Infrastructure as Code enhancements to expanded Pulumi ESC capabilities to the launch of Pulumi Insights 2.0 and key AI innovations, here's what's new in Pulumi:

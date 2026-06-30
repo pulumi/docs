@@ -67,21 +67,23 @@ linktitle: This is the link text
 ---
 ```
 
-**Categories**
+**Category**
 
-Every post must declare **exactly one** `categories` value (a second is allowed only in the rare case where a post genuinely spans two kinds). Categories are the *kind of post* axis — distinct from topical tags and from reading-path series — and they are a **closed, lint-enforced set**. `make lint` fails any blog post whose `categories` is missing, empty, lists more than two values, or contains a value outside the allowed set.
+Category is the *kind of post* axis — distinct from topical tags and from reading-path series — and it is a **closed set**. It is **required** and **singular**: every post declares exactly one `category:` scalar value (e.g. `category: product`), never a list. Apply the single best-fitting kind when the post clearly fits one of the specific kinds below; if it doesn't fit cleanly (for example, an SEO-oriented comparison like *Pulumi vs. Terraform* or a *What is X* explainer), use **`general`** — the default catch-all — and rely on its tags to place it in a subject area. If a post seems to span two kinds, pick the dominant one. `make lint` fails any blog post whose `category` is missing, is a list, or is a value outside the allowed set.
 
 The allowed categories are the single source of truth in [`data/blog_categories.yaml`](./data/blog_categories.yaml):
 
 | id | use when |
 |---|---|
-| `agentic-infrastructure` | AI agents, Neo, Copilot, AI + IaC, MLOps |
-| `product-launches` | Releases, new features, announcements, launch recaps |
+| `product` | Releases, new features, announcements, launch recaps, roadmaps |
 | `engineering` | How we built it, deep technical dives, performance, internals |
+| `community` | Events, meetups, webinars, hackathons, guest posts, open source, interns |
+| `best-practices` | Architecture, IaC, platform-engineering, and security/governance patterns and guidance |
 | `tutorials` | Step-by-step how-tos and getting-started guides |
-| `best-practices` | Architecture, IaC, and platform-engineering patterns and guidance |
-| `security-governance` | Secrets/ESC, policy-as-code, compliance, IAM |
-| `community` | Customers, case studies, guest posts, events, culture, year-in-review |
+| `customers` | Customer stories and case studies centered on a named customer |
+| `perspectives` | Thought leadership and opinion — an original argument in the author's voice |
+| `company` | Company news: funding, hiring, partnerships, brand, year-in-review |
+| `general` | **Default.** Catch-all for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, listicles) |
 
 Do **not** invent categories or add ad-hoc values to a post. To propose a new category (or rename/retire one), edit `data/blog_categories.yaml` in a PR and raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) first. Topical buckets (clouds, languages, products) are *tags*, not categories — keep this axis tight.
 

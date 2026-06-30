@@ -9,8 +9,7 @@ authors:
 tags:
     - aws
     - app-runner
-categories:
-    - tutorials
+category: tutorials
 
 ---
 

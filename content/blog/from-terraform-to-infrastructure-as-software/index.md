@@ -5,7 +5,7 @@ meta_desc: "Convert existing Terrraform configuration to Pulumi TypeScript to he
 meta_image: "tf-to-pulumi.png"
 authors: ["pat-gavlin"]
 tags: [javascript, typescript]
-categories: [best-practices]
+category: tutorials
 ---
 
 Here at Pulumi, we love programming the cloud using infrastructure as

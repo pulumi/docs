@@ -11,8 +11,7 @@ tags:
     - features
     - typescript
     - bun
-categories:
-    - product-launches
+category: product
 schema_type: auto
 
 # Optional: Social media promotional copy (for reference only, does not auto-post)

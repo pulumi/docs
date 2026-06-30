@@ -16,8 +16,7 @@ tags:
 - cloud-native
 - security
 - secrets-management
-categories:
-- security-governance
+category: tutorials
 ---
 
 Managing secrets in a cloud-native environment can be challenging, but it is crucial for ensuring the security and integrity of any application or infrastructure. We encounter a lot of different types of secrets, from API keys, database passwords, and certificates to tokens and passwords. These secrets need to be stored securely and accessed by different services in a secure way without exposing any sensitive information to unauthorized users.

@@ -13,8 +13,7 @@ tags:
     - devops
     - configuration-as-code
     - esc
-categories:
-    - security-governance
+category: general
 ---
 
 Every modern application depends on secrets to function: database passwords, API keys, certificates, and configuration values that enable secure communication between services. But here's the challenge: as your infrastructure grows, managing these secrets becomes exponentially more complex.

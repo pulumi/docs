@@ -12,8 +12,7 @@ authors:
 tags:
   - features
   - releases
-categories:
-  - product-launches
+category: product
 ---
 
 We're thrilled to unveil the redesigned [Pulumi Infrastructure as Code (IaC)](/product/infrastructure-as-code/) Stacks page within Pulumi Cloud console, addressing one of the [most upvoted](https://github.com/pulumi/pulumi-cloud-requests/issues/56) issues in our [Pulumi Cloud Requests repository](https://github.com/pulumi/pulumi-cloud-requests)! This revamped experience delivers a significant boost in performance and usability, empowering even the most complex organizations to manage their infrastructure with ease.

@@ -10,8 +10,7 @@ authors:
 tags:
     - features
     - infrastructure-lifecycle-management
-categories:
-    - product-launches
+category: product
 ---
 
 Today we announced a new wave of Infrastructure Lifecycle Management capabilities in Pulumi Cloud. These build upon and extend our rich Pulumi Deployments foundation for deployment orchestration and workflow. This is an exciting, customer-driven release, with new features that help with Day 2 operations and management.

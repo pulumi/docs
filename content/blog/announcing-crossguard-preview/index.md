@@ -6,7 +6,7 @@ meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution
 meta_image: crossguard.png
 authors: ["erin-krengel"]
 tags: [policy-as-code, features, announcements]
-categories: [product-launches, security-governance]
+category: product
 ---
 
 > [!INFO]

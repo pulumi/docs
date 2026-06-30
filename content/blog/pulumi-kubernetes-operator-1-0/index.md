@@ -3,7 +3,7 @@ date: "2021-10-12"
 title: "Pulumi Kubernetes Operator 1.0"
 authors: ["luke-hoban", "vivek-lakshmanan"]
 tags: [kubernetes, continuous-delivery, operators]
-categories: [product-launches]
+category: product
 meta_desc: "Pulumi Kubernetes Operator 1.0: GitOps, Automation API, State Backends, Safe Upgrades and Metrics"
 meta_image: operator.png
 ---

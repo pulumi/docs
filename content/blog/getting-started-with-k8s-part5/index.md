@@ -8,8 +8,7 @@ authors:
 tags:
     - kubernetes
     - kubernetes-getting-started
-categories:
-    - tutorials
+category: tutorials
 series: kubernetes-getting-started
 ---
 

@@ -5,7 +5,7 @@ meta_desc: "In this post, we discuss how we use Pulumi ourselves to build, deplo
 meta_image: "image-4.png"
 authors: ["luke-hoban"]
 tags: [serverless, aws, containers]
-categories: [engineering]
+category: engineering
 ---
 
 

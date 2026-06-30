@@ -2,7 +2,7 @@
 title: "Preview of .NET resource providers"
 authors: ["fraser-waters"]
 tags: [announcements, dotnet, packages, features, native-providers]
-categories: [product-launches]
+category: product
 meta_desc: "Today we are releasing preview support for writing Pulumi providers in any .NET language, including C#, F#, and VB.NET."
 date: "2023-01-18"
 

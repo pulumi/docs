@@ -8,8 +8,7 @@ authors:
 tags:
     - pulumi-enterprise
     - security
-categories:
-    - security-governance
+category: product
 aliases: [/blog/pulumiup-bring-your-whole-team-to-pulumi/]
 ---
 

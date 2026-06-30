@@ -8,8 +8,7 @@ authors:
 tags:
     - yaml
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 {{% notes type="warning" %}}

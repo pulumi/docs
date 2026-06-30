@@ -16,8 +16,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
-categories:
-    - agentic-infrastructure
+category: best-practices
 social:
     twitter: |
         2x is mostly prompting. 10x is mostly plumbing.

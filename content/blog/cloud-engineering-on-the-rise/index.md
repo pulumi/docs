@@ -7,8 +7,7 @@ authors:
     - george-huang
 tags:
     - cloud-engineering
-categories:
-    - best-practices
+category: customers
 
 ---
 

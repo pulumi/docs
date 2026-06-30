@@ -11,9 +11,7 @@ tags:
     - esc
     - secrets
     - platform-engineering
-categories:
-    - product-launches
-    - security-governance
+category: product
 ---
 
 Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.

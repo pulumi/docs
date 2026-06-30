@@ -6,7 +6,7 @@ meta_desc: "Learn how to configure AWS Lambda Provisioned Concurrency to minimiz
 meta_image: variable.png
 authors: ["mikhail-shilkov"]
 tags: [aws, serverless]
-categories: [best-practices]
+category: tutorials
 ---
 
 AWS Lambda cold starts (the time it takes for AWS to assign a worker to a request) are a major frustration point of many serverless programmers. In this article, we will take a look at the problem of latency-critical serverless applications, and how [Provisioned Concurrency](https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/) impacts the status-quo.

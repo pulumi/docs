@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - security
-categories:
-    - security-governance
+category: product
 ---
 
 Customers and users have asked for the ability

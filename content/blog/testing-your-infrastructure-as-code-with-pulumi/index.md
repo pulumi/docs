@@ -2,7 +2,7 @@
 title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
 tags: [javascript, typescript, continuous-delivery, python]
-categories: [tutorials]
+category: tutorials
 date: "2019-04-17"
 meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence."
 meta_image: "InfraTesting.png"

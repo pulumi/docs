@@ -11,9 +11,7 @@ authors:
 tags:
     - esc
     - features
-categories:
-    - product-launches
-    - security-governance
+category: product
 schema_type: auto
 ---
 

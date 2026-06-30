@@ -7,8 +7,7 @@ authors:
     - joe-duffy
 tags:
     - cloud-engineering
-categories:
-    - best-practices
+category: perspectives
 ---
 
 All software is cloud software. All modern applications interact with the cloud in some way, whether it's using cloud for storage, compute capabilities, or with rich cloud services for data, AI/ML, and so much more, to deliver amazing new experiences. As a result, all developers today are cloud developers, and infrastructure teams are key to enabling innovation across the entire organization. I had a great time telling this story at the [Cloud Engineering Summit](https://www.youtube.com/playlist?list=PLyy8Vx2ZoWlodkVaCTO3Y-3vya68J2c6y) today and wanted to take a moment to put pen to paper.

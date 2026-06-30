@@ -12,8 +12,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Connecting multiple identities to Pulumi"
 authors: ["praneet-loke"]
 tags: ["continuous-delivery"]
-categories: [product-launches]
+category: product
 meta_desc: "Pulumi now supports multiple identities for a single Pulumi account in the Pulumi Service."
 date: "2018-12-14"
 meta_image: "multi-id.png"

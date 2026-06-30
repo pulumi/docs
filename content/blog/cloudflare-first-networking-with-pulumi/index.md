@@ -10,8 +10,7 @@ tags:
     - cloudflare
     - networking
     - zero-trust
-categories:
-    - best-practices
+category: tutorials
 social:
     twitter: |
         Move Cloudflare edge config out of clickops.

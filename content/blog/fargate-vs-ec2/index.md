@@ -12,8 +12,7 @@ tags:
     - eks
     - ec2
     - kubernetes
-categories:
-    - best-practices
+category: perspectives
 social:
     twitter: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.
     linkedin: Discover the key differences between AWS EKS Fargate and EC2-backed clusters! Fargate offers easy scaling and resource isolation, while EC2 provides cost efficiency and faster pod startup. Learn how to choose the right approach for your Kubernetes workloads.

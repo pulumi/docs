@@ -6,7 +6,7 @@ meta_desc: "Learn how to secure AWS API Gateway endpoints using Lambda authorize
 meta_image: "lambda-authorizer.png"
 authors: ["erin-krengel"]
 tags: [serverless, aws, lambda, api-gateway]
-categories: [tutorials]
+category: tutorials
 ---
 
 Creating serverless applications just got even easier! You can now

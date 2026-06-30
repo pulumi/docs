@@ -8,8 +8,7 @@ authors:
 tags:
 - automation-api
 - python
-categories:
-- product-launches
+category: product
 ---
 
 General-purpose languages enable [Infrastructure as Software](/what-is/what-is-infrastructure-as-software/) -- bringing tested toolchains and best practices to building infrastructure, e.g., languages, IDEs, testing, debugging, componentization, packaging, and versioning. Available in public preview, Pulumi's Automation API is a robust programmatic layer on top of Pulumi's infrastructure engine. It exposes Pulumi programs and stacks as strongly-typed and composable building blocks. Automation API allows you to embed the Pulumi engine inside your software projects so you can build software automation around entire infrastructure provisioning processes that normally require humans to operate.

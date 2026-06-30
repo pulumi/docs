@@ -7,8 +7,7 @@ authors:
     - luke-hoban
 tags:
     - kubernetes
-categories:
-    - product-launches
+category: product
 ---
 
 Today, we’re excited to [announce](https://info.pulumi.com/press-release/kubernetes) several new open source projects that advance Pulumi’s Kubernetes support.  These projects and features have been developed while helping leading cloud native engineering teams like Snowflake, Lemonade, and Mercedes-Benz go into production with Kubernetes, and include new deployment automation options, improved ecosystem integrations, and tools to make it easier than ever to adopt Pulumi for new and existing projects.

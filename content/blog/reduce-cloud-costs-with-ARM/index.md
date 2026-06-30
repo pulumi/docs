@@ -9,8 +9,7 @@ tags:
     - aws
     - ec2
     - virtual-machines
-categories:
-    - best-practices
+category: tutorials
 ---
 
 Whether you're migrating to the cloud or have existing infrastructure, cloud spend can be a significant barrier to your success. Too small of a budget could prevent your organization from meeting your performance metrics. You can use different strategies to reduce cloud spend, such as using [Spot Instances](https://aws.amazon.com/ec2/spot/), which cost less than On-Demand Instances or scaling your infrastructure based on peak usage times.

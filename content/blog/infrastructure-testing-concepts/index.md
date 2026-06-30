@@ -9,8 +9,7 @@ tags:
     - cloud-engineering
     - unit-testing
     - integration-testing
-categories:
-    - best-practices
+category: best-practices
 
 ---
 

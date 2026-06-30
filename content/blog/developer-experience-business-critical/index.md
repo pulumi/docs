@@ -13,8 +13,7 @@ tags:
     - platform-engineering
     - developer-portals
     - software-development
-categories:
-    - best-practices
+category: general
 aliases:
     - /blog/software-developer-experience-devex-devx-devops-culture
 ---

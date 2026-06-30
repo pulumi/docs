@@ -5,7 +5,7 @@ meta_desc: "Pulumi now supports email-based identities, in addition to GitHub, A
 meta_image: "email-signup.png"
 authors: ["praneet-loke"]
 tags: [announcements, features]
-categories: [product-launches]
+category: product
 ---
 
 We have been hard at work the past few months providing our users with

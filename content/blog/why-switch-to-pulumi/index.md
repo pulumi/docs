@@ -9,8 +9,7 @@ tags:
     - infrastructure-as-code
     - platform-engineering
     - ai
-categories:
-    - best-practices
+category: general
 
 social:
     twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.

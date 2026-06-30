@@ -5,7 +5,7 @@ meta_desc: "Pulumi for Kubernetes lets you create, deploy, & manage Kubernetes a
 meta_image: "meta.png"
 authors: ["joe-duffy"]
 tags: [kubernetes]
-categories: [product-launches]
+category: product
 ---
 
 Kubernetes has quickly become the "gold standard" for running containers

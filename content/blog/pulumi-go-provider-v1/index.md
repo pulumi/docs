@@ -14,8 +14,7 @@ tags:
     - features
     - infrastructure-as-code
     - components
-categories:
-    - product-launches
+category: product
 social:
     twitter: "The Pulumi Go Provider SDK is now GA! Build custom infrastructure providers in hours, not weeks. Create reusable components that work across all Pulumi languages. Learn how to extend Pulumi to integrate with any service or API."
     linkedin: "We're excited to announce the Pulumi Go Provider SDK is now generally available! This powerful framework lets you build custom infrastructure providers in hours, not weeks, while creating reusable components that work across all Pulumi languages. Extend Pulumi to integrate with any service or API and unlock cross-team collaboration with standardized infrastructure patterns."

@@ -10,8 +10,7 @@ tags:
     - internal-developer-platform
     - features
     - platform-engineering
-categories:
-    - product-launches
+category: product
 ---
 
 Platform teams publishing components to the Pulumi Private Registry can now see exactly which stacks are using each component and at which version.

@@ -6,7 +6,7 @@ meta_desc: "In this blog, we take a closer look at what happens during a rollout
 meta_image: "deployment-rollout.png"
 authors: ["alex-clemmer"]
 tags: [kubernetes]
-categories: [engineering]
+category: best-practices
 ---
 
 *This post is part 3 in a series on the Kubernetes API. Earlier,

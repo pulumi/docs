@@ -14,8 +14,7 @@ tags:
     - docker
     - providers
     - features
-categories:
-    - best-practices
+category: best-practices
 ---
 
 **How do I speed up Docker image builds with Pulumi?** Use [BuildKit](https://docs.docker.com/build/buildkit/) (the default since Docker 23), enable a registry or layer cache so repeated builds reuse work, write a multi-stage Dockerfile so production images skip build-time dependencies, and reach for the dedicated [Docker Build provider](/registry/packages/docker-build/) when you need buildx features like multi-platform images, build secrets, or Docker Build Cloud. With these techniques together, repeat builds in a Pulumi program commonly drop from minutes to seconds.

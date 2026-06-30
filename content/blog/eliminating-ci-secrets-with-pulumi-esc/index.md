@@ -12,8 +12,7 @@ tags:
   - security
   - github-actions
   - continuous-delivery
-categories:
-  - security-governance
+category: engineering
 social:
   twitter: "We eliminated all long-lived CI secrets across 70+ repos using @PulumiCorp ESC and OIDC. Short-lived credentials mean a compromised GitHub Action gets nothing persistent. Here's how we did it:"
   linkedin: "Supply chain attacks on CI/CD pipelines are accelerating. At Pulumi, we eliminated all static GitHub Secrets across 70+ provider repositories by using Pulumi ESC for OIDC-based short-lived credentials. Now, if a compromised GitHub Action runs in our CI, there are no stored secrets to exfiltrate and no long-lived tokens to reuse. Here's how we built a zero-static-secrets CI architecture."

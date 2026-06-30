@@ -11,8 +11,7 @@ tags:
     - ai
     - automation
     - developer-experience
-categories:
-    - agentic-infrastructure
+category: best-practices
 schema_type: auto
 ---
 

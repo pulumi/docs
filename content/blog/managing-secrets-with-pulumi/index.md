@@ -5,7 +5,7 @@ updated: 2025-03-06
 meta_desc: "Learn how to securely manage secrets in Pulumi with automatic encryption and client-side control. Protect sensitive data in your infrastructure."
 authors: ["matt-ellis"]
 tags: [features, security]
-categories: [security-governance]
+category: tutorials
 ---
 
 {{% notes type="info" %}}

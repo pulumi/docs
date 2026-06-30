@@ -11,8 +11,7 @@ tags:
     - ai
     - copilot
     - insights
-categories:
-    - agentic-infrastructure
+category: product
 series: pulumi-copilot
 
 ---

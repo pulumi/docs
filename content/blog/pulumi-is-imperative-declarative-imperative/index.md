@@ -9,8 +9,7 @@ authors:
 tags:
     - cloud-engineering
     - infrastructure-as-code
-categories:
-    - best-practices
+category: perspectives
 ---
 
 On a regular basis, articles and tweets pass by discussing whether some specific tool is imperative or declarative.

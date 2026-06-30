@@ -10,8 +10,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.

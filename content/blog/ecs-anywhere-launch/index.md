@@ -11,8 +11,7 @@ tags:
     - aws
     - ecs
     - containers
-categories:
-    - tutorials
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

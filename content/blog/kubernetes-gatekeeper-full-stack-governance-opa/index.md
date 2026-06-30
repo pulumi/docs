@@ -14,8 +14,7 @@ tags:
     - opa
     - kubernetes
     - insights
-categories:
-    - security-governance
+category: product
 social:
     twitter: |
         OPA policy support for Pulumi is now stable! Reuse your existing Kubernetes Gatekeeper .rego files as Pulumi policies, and write Rego policies for any cloud resource Pulumi manages.

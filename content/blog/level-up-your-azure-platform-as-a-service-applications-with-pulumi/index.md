@@ -6,7 +6,7 @@ meta_desc: "This post walks through the process of developing Pulumi programs to
 meta_image: "app-insights.png"
 authors: ["mikhail-shilkov"]
 tags: [azure]
-categories: [tutorials]
+category: tutorials
 ---
 
 *Today's guest post is from [Mikhail Shilkov](https://mikhail.io/), a

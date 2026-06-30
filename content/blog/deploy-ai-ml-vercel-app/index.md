@@ -14,8 +14,7 @@ tags:
     - vercel
     - vuejs
     - chatbot
-categories:
-    - agentic-infrastructure
+category: tutorials
 
 ---
 

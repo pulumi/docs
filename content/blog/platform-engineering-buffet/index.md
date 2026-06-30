@@ -12,8 +12,7 @@ tags:
     - platform-engineering
     - kubernetes
     - infrastructure-as-code
-categories:
-    - community
+category: customers
 social:
     twitter: >
         Most platform engineering advice assumes you're building for one product. But what if you have 20+ independent projects with different tech stacks? SEITENBAU built an infrastructure "buffet" with Pulumi that lets teams pick what they need.

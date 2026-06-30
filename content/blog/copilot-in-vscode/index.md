@@ -35,8 +35,7 @@ authors:
 tags:
     - releases
     - features
-categories:
-    - agentic-infrastructure
+category: product
 series: pulumi-copilot
 
 # The social copy used to promote this post on Twitter and Linkedin. These

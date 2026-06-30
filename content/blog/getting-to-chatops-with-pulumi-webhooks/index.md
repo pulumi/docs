@@ -5,7 +5,7 @@ meta_desc: "Get started with Pulumi Webhooks to enable notifications of infrastr
 meta_image: "pulumi-webhooks.png"
 authors: ["chris-smith"]
 tags: ["continuous-delivery", "features"]
-categories: [product-launches]
+category: product
 ---
 
 Today we are delighted to announce the availability of Webhooks on

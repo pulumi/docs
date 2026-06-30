@@ -8,8 +8,7 @@ authors:
    - luke-hoban
 tags:
    - aws
-categories:
-   - product-launches
+category: product
 ---
 
 {{% notes type="info" %}}

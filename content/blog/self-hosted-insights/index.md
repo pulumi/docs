@@ -12,8 +12,7 @@ tags:
     - features
     - pulumi-cloud
     - policy-as-code
-categories:
-    - product-launches
+category: product
 ---
 
 [Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.

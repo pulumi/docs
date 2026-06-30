@@ -4,7 +4,7 @@ title_tag: "Pulumi Loves Open Source"
 allow_long_title: True
 authors: ["joe-duffy"]
 tags: [open-source, license, apache, bsl]
-categories: [community]
+category: community
 meta_desc: "Pulumi stands with the open source community and remains true open source"
 date: "2023-08-11"
 meta_image: "pulumi_hearts_opensource.png"

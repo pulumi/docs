@@ -6,7 +6,7 @@ meta_desc: "In our latest white paper, Delivering Cloud Native Infrastructure as
 meta_image: "graph.png"
 authors: ["marc-holmes"]
 tags: [announcements, cloud-native]
-categories: [best-practices]
+category: general
 ---
 
 **Enterprise software has undergone a slow shift from containerless

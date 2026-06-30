@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 canonical_url: "https://www.pulumi.com/docs/iac/concepts/resources/names/"
 social:
     twitter: |

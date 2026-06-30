@@ -9,8 +9,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 With the holiday season approaching, we've been focused on tidying up our products, delivering asks we've heard from you in GitHub and at conferences, and looking ahead to 2022! Read on to learn about what's new this release:

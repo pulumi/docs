@@ -11,8 +11,7 @@ tags:
     - azure
     - helm
     - azure-top-5
-categories:
-    - tutorials
+category: tutorials
 series: azure-top-5
 ---
 

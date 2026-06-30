@@ -7,8 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - policy-as-code
-categories:
-    - security-governance
+category: general
 ---
 
 Policies set the guardrails for your applications and infrastructure. They define many aspects of how your company manages its applications and infrastructure. Security, safe use of resources, and compliance with external standards are just a few examples of what a policy can define.

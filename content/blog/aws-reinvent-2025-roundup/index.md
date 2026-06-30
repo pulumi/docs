@@ -13,9 +13,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - reinvent
-categories:
-    - agentic-infrastructure
-    - community
+category: perspectives
 ---
 AWS re:Invent 2025 delivered a myriad of announcements across AI, silicon, and cloud infrastructure. AWS unveiled the expanded Nova model family, introduced Nova Forge for custom model training, launched Trainium3 UltraServers, and added major production features to AgentCore. It was a lot, and taken at face value, it looks like another scattershot year of big releases.
 

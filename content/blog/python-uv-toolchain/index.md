@@ -10,8 +10,7 @@ authors:
 tags:
     - python
     - infrastructure-as-code
-categories:
-    - product-launches
+category: product
 social:
     twitter: "Pulumi + uv: Announcing fast Python package management with uv, now fully integrated with Pulumi. See Adam and Julien discuss the new functionality in this video, or read our blog: www.pulumi.com//blog/python-uv-toolchain"
     linkedin: "We're thrilled to announce built-in support for uv in Pulumi! 

@@ -18,8 +18,7 @@ tags:
 - best-practices
 - argocd
 - devops
-categories:
-- best-practices
+category: best-practices
 
 social:
   twitter: |

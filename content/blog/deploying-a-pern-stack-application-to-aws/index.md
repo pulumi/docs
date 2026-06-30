@@ -5,7 +5,7 @@ meta_desc: Creating and quickly deploying a PERN stack application to the cloud 
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "docker"]
-categories: [tutorials]
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

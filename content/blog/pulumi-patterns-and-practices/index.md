@@ -16,8 +16,7 @@ tags:
     - architecture
     - enterprise
     - devops
-categories:
-    - best-practices
+category: best-practices
 ---
 
 {{< notes type="info" >}}

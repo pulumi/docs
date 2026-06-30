@@ -9,8 +9,7 @@ tags:
     - features
     - releases
     - infrastructure-as-code
-categories:
-    - product-launches
+category: product
 ---
 
 Pulumi enables teams to manage their infrastructure using the programming languages and tools they are already familiar with, supporting use cases such as complex authentication workflows, dynamically configured resources, and more.

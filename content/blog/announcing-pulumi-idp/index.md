@@ -13,8 +13,7 @@ tags:
     - platform-teams
     - features
     - releases
-categories:
-    - product-launches
+category: product
 
 social:
     twitter: "TODO"

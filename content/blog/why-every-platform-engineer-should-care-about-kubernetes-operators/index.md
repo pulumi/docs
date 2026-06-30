@@ -15,8 +15,7 @@ tags:
 - operators
 - devops
 - platform-engineering
-categories:
-- best-practices
+category: best-practices
 
 social:
   twitter: |

@@ -1,15 +1,16 @@
-# Blog post categories — the closed "what kind of post" taxonomy.
+# Blog post categories — the "what kind of post" taxonomy.
 #
 # This file is the single source of truth for the set of categories a blog post
-# may declare in its `categories:` front matter. It is consumed by:
-#   - scripts/lint/lint-markdown.js (checkBlogCategories): `make lint` fails any
-#     content/blog/*/index.md whose `categories:` is missing, empty, contains a
-#     value not listed here, or lists more than two values.
+# may declare in its `category:` front matter. It is consumed by:
+#   - scripts/lint/lint-markdown.js (checkBlogCategory): `make lint` fails any
+#     content/blog/*/index.md whose `category:` is missing, is a list, or is a
+#     value not listed here.
 #   - authoring guidance: archetypes/blog-post/index.md,
 #     .claude/commands/new-blog-post.md, and BLOGGING.md all point here.
 #
-# Categories are ONE of three orthogonal axes on a post:
-#   - categories  (THIS file)  — the *kind* of post. Closed, lint-enforced.
+# Category is ONE of three orthogonal axes on a post:
+#   - category    (THIS file)  — the *kind* of post. Closed, REQUIRED, and a
+#     SINGLE value (a scalar, not a list). Every post has exactly one.
 #   - tags        (data/blog_tags.yaml) — topical subjects (AWS, Kubernetes,
 #     Python, …). Curated-but-open, not lint-enforced.
 #   - series      (data/blog_series.yml) — an ordered reading path across posts.
@@ -17,9 +18,14 @@
 # -----------------------------------------------------------------------------
 # RULES
 # -----------------------------------------------------------------------------
-#   1. Every content/blog/*/index.md post must declare at least one category.
-#   2. Pick EXACTLY ONE in almost all cases. A second is allowed only when a
-#      post genuinely sits across two kinds (rare); never list more than two.
+#   1. Category is REQUIRED and SINGULAR: every post declares exactly one
+#      `category:` value (a YAML scalar, e.g. `category: product`). Never a list.
+#   2. `general` is the DEFAULT. Use it for posts that don't clearly fit one of
+#      the specific kinds below — for example SEO-oriented comparisons ("X vs Y"),
+#      "what is X" explainers, "top N tools" listicles, and marketing/solution
+#      pages. When in doubt, use `general`; don't force a weak fit into a
+#      specific kind. (The blog docs-review flags posts that landed in a specific
+#      kind but really belong in `general`.)
 #   3. The list is CLOSED. Do NOT invent categories or add ad-hoc values to a
 #      post. Topical buckets (clouds, languages, products) are TAGS, not
 #      categories — keep this axis tight.
@@ -34,24 +40,18 @@
 #   name        Human-readable display name.
 #   description What belongs here.
 #   use_when    One-line selection hint for authors/agents choosing a category.
+#   default     Present and true on exactly one category — the fallback kind.
 #
 categories:
-  - id: agentic-infrastructure
-    name: "Agentic Infrastructure"
+  - id: product
+    name: "Product"
     description: >-
-      AI agents for infrastructure: Pulumi Neo and Copilot, AI + IaC workflows,
-      MLOps, and the broader agentic-infrastructure strategy.
+      Product releases, new features, GA/preview announcements, launch recaps,
+      and roadmap posts — including Pulumi IaC, ESC, Insights, Neo, Copilot, and
+      the rest of the platform.
     use_when: >-
-      The post is primarily about AI agents, Neo/Copilot, or using AI to build
-      and operate infrastructure.
-
-  - id: product-launches
-    name: "Product & Launches"
-    description: >-
-      Product releases, new features, GA/preview announcements, release recaps,
-      and company news.
-    use_when: >-
-      The post announces or recaps something Pulumi shipped or is launching.
+      The post announces, recaps, or roadmaps something Pulumi shipped or is
+      launching.
 
   - id: engineering
     name: "Engineering"
@@ -62,6 +62,24 @@ categories:
       The post explains how something works under the hood or how the Pulumi
       team built or improved it.
 
+  - id: community
+    name: "Community"
+    description: >-
+      Events, meetups, webinars, hackathons, guest and community posts, open
+      source, interns, and Pulumi community culture.
+    use_when: >-
+      The post centers on the community, events, or open source rather than a
+      product, customer, or company milestone.
+
+  - id: best-practices
+    name: "Best Practices"
+    description: >-
+      Architecture, infrastructure-as-code, platform-engineering, and
+      security/governance patterns, guidance, and opinionated recommendations.
+    use_when: >-
+      The post teaches patterns, principles, or recommendations rather than a
+      single step-by-step task.
+
   - id: tutorials
     name: "Tutorials"
     description: >-
@@ -70,29 +88,43 @@ categories:
     use_when: >-
       The post is a hands-on, follow-along guide with concrete steps.
 
-  - id: best-practices
-    name: "Best Practices"
+  - id: customers
+    name: "Customers"
     description: >-
-      Architecture, infrastructure-as-code, and platform-engineering patterns,
-      guidance, and opinionated recommendations.
+      Customer stories, case studies, and posts centered on how a named
+      customer uses Pulumi and the outcomes they achieved.
     use_when: >-
-      The post teaches patterns, principles, or recommendations rather than a
-      single step-by-step task.
+      The post is built around a specific customer's experience or results.
 
-  - id: security-governance
-    name: "Security & Governance"
+  - id: perspectives
+    name: "Perspectives"
     description: >-
-      Secrets and ESC, policy-as-code, compliance, IAM, and governance of cloud
-      infrastructure.
+      Thought leadership and opinion: an author making an original argument or
+      analysis in their own voice — a clear point of view on cloud engineering,
+      IaC, AI, or platform trends. The "here's how I think about this" essays.
+      (Distinct from SEO/marketing explainers, which belong in general.)
     use_when: >-
-      The post is primarily about securing, governing, or enforcing policy on
-      infrastructure.
+      The post delivers a unique Pulumi insight, original argument, or point-of-view
+      analysis, rather than shipping, teaching, documenting, or ranking for a
+      search query.
 
-  - id: community
-    name: "Customers & Community"
+  - id: company
+    name: "Company"
     description: >-
-      Customer and case studies, guest posts, events, company culture, hiring,
-      interns, and year-in-review reflections.
+      Company news and milestones: funding, growth, hiring, partnerships,
+      acquisitions, brand, and year-in-review reflections.
     use_when: >-
-      The post centers on customers, the community, events, or Pulumi culture
-      rather than a product or technical topic.
+      The post is about Pulumi the company rather than its product, customers,
+      or community.
+
+  - id: general
+    name: "General"
+    default: true
+    description: >-
+      The default catch-all kind for posts that don't clearly fit one of the
+      specific categories above: SEO-oriented comparisons ("X vs Y"), "what is
+      X" explainers, "top N tools" listicles, trend roundups, and marketing or
+      solution pages. These lean on tags for topical placement.
+    use_when: >-
+      The post doesn't clearly fit a specific kind, or exists mainly to rank for
+      a search query or to sell. When in doubt, use general.

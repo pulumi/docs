@@ -12,8 +12,7 @@ tags:
     - performance
     - platform
     - engineering
-categories:
-    - engineering
+category: engineering
 ---
 
 This is the second post in a series about performance optimizations we've made

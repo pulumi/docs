@@ -12,8 +12,7 @@ tags:
     - platform-engineering
     - pulumi-community
     - enterprise
-categories:
-    - product-launches
+category: company
 ---
 We are excited to announce the launch of the [Pulumi Partner Program](https://www.pulumi.com/partners/), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi.
 

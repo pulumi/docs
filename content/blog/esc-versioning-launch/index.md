@@ -13,9 +13,7 @@ tags:
   - esc
   - secrets
   - features
-categories:
-  - product-launches
-  - security-governance
+category: product
 ---
 
 Since the launch of [Pulumi Environments, Secrets and Configuration](/product/esc) (ESC), our developer-first configuration and secrets management platform, we've seen exponential growth in usage. Customers have used it to simplify their secrets and configuration management by organizing them into composable collections called 'environments'. Today, we are thrilled to introduce a comprehensive suite of versioning features, giving you unprecedented control and confidence in managing your environments.

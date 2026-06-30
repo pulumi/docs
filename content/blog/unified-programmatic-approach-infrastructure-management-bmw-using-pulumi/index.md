@@ -41,8 +41,7 @@ tags:
     - ansible
     - containers
     - pulumi-deployments
-categories:
-    - community
+category: customers
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

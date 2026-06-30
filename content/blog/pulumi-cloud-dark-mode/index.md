@@ -17,8 +17,7 @@ authors:
 tags:
     - pulumi-cloud
     - user-experience
-categories:
-    - product-launches
+category: product
 
 ---
 [Pulumi Cloud](/product/pulumi-cloud/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.

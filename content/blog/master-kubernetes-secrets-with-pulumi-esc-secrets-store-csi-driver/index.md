@@ -14,8 +14,7 @@ tags:
 - secrets
 - csi
 - esc
-categories:
-- security-governance
+category: tutorials
 
 social:
   twitter: |

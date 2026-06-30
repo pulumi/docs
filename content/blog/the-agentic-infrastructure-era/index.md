@@ -12,8 +12,7 @@ tags:
     - ai
     - pulumi-neo
     - features
-categories:
-    - agentic-infrastructure
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

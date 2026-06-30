@@ -11,8 +11,7 @@ tags:
     - cloud-engineering
     - kubernetes
     - iac-best-practices
-categories:
-    - best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-using-stack-references/

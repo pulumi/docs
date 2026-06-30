@@ -5,7 +5,7 @@ meta_desc: "Pulumi Crosswalk for AWS is an open source library of infrastructure
 meta_image: "crosswalk-for-aws.png"
 authors: ["luke-hoban"]
 tags: [serverless, aws, containers, announcements, kubernetes, eks, lambda, api-gateway, docker]
-categories: [product-launches]
+category: product
 ---
 
 {{% notes type="warning" %}}

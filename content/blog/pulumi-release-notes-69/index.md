@@ -28,8 +28,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 The team has been busy releasing new features and improvements in the last 3 weeks. Read on to learn about what's new in this release!

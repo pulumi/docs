@@ -2,7 +2,7 @@
 title: "Pulumi Service Improvements, February 2020"
 authors: ["chris-smith"]
 tags: ["features"]
-categories: [product-launches]
+category: product
 date: "2020-03-02"
 meta_desc: "Recent improvements to the Pulumi Service: stack tags, audit logs, CI/CD integration, downloadable checkpoint files"
 meta_image: "pretty-print-multiline-json.png"

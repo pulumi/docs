@@ -13,8 +13,7 @@ tags:
     - features
     - platform-engineering
     - pulumi-cloud
-categories:
-    - product-launches
+category: product
 ---
 
 Platform teams need visibility into package adoption at scale. Responding to security advisories, planning deprecations, and tracking version sprawl all require knowing which stacks run which package versions across your organization.

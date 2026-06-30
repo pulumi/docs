@@ -11,8 +11,7 @@ authors:
 tags:
     - registry
     - features
-categories:
-    - product-launches
+category: product
 schema_type: auto
 ---
 

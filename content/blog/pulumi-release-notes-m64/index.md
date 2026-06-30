@@ -10,8 +10,7 @@ authors:
 tags:
     - features
     - releases
-categories:
-    - product-launches
+category: product
 ---
 
 It's been another exciting few weeks here at Pulumi! We've caught our breath from Cloud Engineering Summit (don't forget to check out the talks if you haven't yet!) and we're back to adding new value and highly-requested fixes across the Pulumi Cloud Engineering Platform. Read on to learn about new providers, new enhancements to the core Pulumi experience, and more!

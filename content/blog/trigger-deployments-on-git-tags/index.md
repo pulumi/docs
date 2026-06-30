@@ -11,8 +11,7 @@ tags:
     - features
     - pulumi-cloud
     - announcements
-categories:
-    - product-launches
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

@@ -9,8 +9,7 @@ tags:
     - aws
     - python
     - aiven
-categories:
-    - tutorials
+category: tutorials
 ---
 
 In this article, I’ll show how Pulumi can be used with Aiven’s services to create infrastructure that can be migrated from cloud to cloud with no downtime.
