@@ -18,6 +18,10 @@ Permission sets in Pulumi Cloud are predefined bundles of [scopes](/docs/adminis
 
 Every permission set belongs to a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (stacks, environments, or insights accounts) and can only include scopes of that same type.
 
+{{% notes "info" %}}
+Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+{{% /notes %}}
+
 ## Default permission sets
 
 Pulumi Cloud provides several default permission sets that you can use to quickly get started:
@@ -59,10 +63,7 @@ These permission sets bundle organization-level (global) scopes. Rather than gra
 
 ## Custom permission sets
 
-{{% notes "info" %}}
-Custom permission sets are only available to organizations using Pulumi Enterprise Edition and Pulumi Business Critical Edition.
-To learn more about editions visit the [pricing page](/pricing/).
-{{% /notes %}}
+### Creating custom permission sets
 
 To create a custom permission set, you must be an organization admin.
 
