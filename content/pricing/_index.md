@@ -29,7 +29,7 @@ tiers:
                   - IaC state management
                   - Unlimited projects, stacks, and environments
                   - Unlimited updates and history
-                  - 500 workflow minutes
+                  - Up to 500 workflow minutes
                   - Neo, our infrastructure agent
             - title: Team
               subtitle: Everything you need to get started.
@@ -472,8 +472,8 @@ comparison_table:
                   - content: Free
                   - content: $0.00025/hour
                     subtext: $0.185/month
-                  - content: Starting at $0.0005/hour
-                    subtext: $0.365/month
+                  - content: Starting at $0.00005/hour
+                    subtext: $0.0365/month
                   - content: Custom
               - title: Workflow cost per minute / included per month
                 link: /pricing#faq
