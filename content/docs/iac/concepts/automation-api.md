@@ -83,7 +83,9 @@ The program's lifecycle must be fully contained within the function, callback, o
 
 Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, C#, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
 
-|                                                        | Language                                                                | Status |
+Each language has its own Automation API reference documentation. Follow the link in the **API reference** column below to view the reference for your language.
+
+|                                                        | API reference                                                           | Status |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ------ |
 | <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
 | <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
