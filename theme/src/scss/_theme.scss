@@ -137,6 +137,21 @@
   --color-green-accent: #21c45d;
   --color-green-primary: #1c7d41;
 
+  /* Docs semantic tokens — registered here only so Tailwind v4 generates the
+     `*-docs-*` color utilities (e.g. bg-docs-bg, text-docs-fg, border-docs-border).
+     The light/dark values live on the --docs-* tokens in docs/_docs-theme.scss and
+     are re-declared on body.section-docs so these aliases flip per theme; the :root
+     values here are inert (only docs pages use these utilities). */
+  --color-docs-bg: var(--docs-bg);
+  --color-docs-bg-alt: var(--docs-bg-alt);
+  --color-docs-surface: var(--docs-surface);
+  --color-docs-fg: var(--docs-fg);
+  --color-docs-fg-muted: var(--docs-fg-muted);
+  --color-docs-border: var(--docs-border);
+  --color-docs-card: var(--docs-card);
+  --color-docs-card-border: var(--docs-card-border);
+  --color-docs-link: var(--docs-link);
+
   --font-display: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Monaspace Neon Var", ui-monospace, SFMono-Regular, monospace;
