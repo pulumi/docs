@@ -3,7 +3,7 @@
 
 Reads `.candidate-claims.json` (the claim *floor* from `merge-claims.py`) and
 `.fetched-urls.json`, routes each claim deterministically to one of three
-verification lanes, and fires one Sonnet 4.6 verifier per claim via a direct
+verification lanes, and fires one Sonnet 5 verifier per claim via a direct
 `/v1/messages` call with a forced `verify_claim` terminal tool. Pass 1 and
 Pass 3 verifiers run a small self-implemented agent loop: the model issues
 `gh_query` / `read_file` tool calls (executed locally) or uses Anthropic's
@@ -21,9 +21,11 @@ per-claim dispatch), gate it with the validator, leave only irreducible
 judgment (triage / bucket-promotion / framing / rendering) in the review.
 
 Why a direct API call (not `claude-code-action`): same reasons as
-`extract-claims-llm.py` — we need `temperature: 0`, a forced tool schema, and
-a small bounded loop, none of which `claude-code-action` exposes. Precedent:
-`extract-claims-llm.py` and `claude-triage.yml` already call `/v1/messages`.
+`extract-claims-llm.py` — we need a forced tool schema, an explicit
+`thinking: {type: "disabled"}` (Sonnet 5 defaults adaptive thinking on and
+rejects non-default sampling params), and a small bounded loop, none of which
+`claude-code-action` exposes. Precedent: `extract-claims-llm.py` and
+`claude-triage.yml` already call `/v1/messages`.
 
 Routing (first match wins):
   0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
@@ -54,7 +56,7 @@ Usage:
 Output schema:
     {
       "schema_version": 1,
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-5",
       "verdicts": [
         {"claim_id": "c1", "file": "content/blog/foo.md", "line_range": "L42",
          "text": "...", "type": "...",
@@ -105,7 +107,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 
@@ -696,7 +698,12 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         body = {
             "model": model,
             "max_tokens": MAX_TOKENS_VERIFY,
-            "temperature": 0,
+            # Sonnet 5 rejects non-default sampling params (temperature/top_p/
+            # top_k → 400) and defaults adaptive thinking ON when `thinking` is
+            # omitted. Disable thinking to preserve the prior behavior: it keeps
+            # the small per-turn token budget for the verdict/tool calls and
+            # avoids thinking interleaving with the forced pass-2 `verify_claim`.
+            "thinking": {"type": "disabled"},
             "system": system,
             "tools": tools,
             "tool_choice": tool_choice,

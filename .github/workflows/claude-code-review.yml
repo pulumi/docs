@@ -539,10 +539,10 @@ jobs:
           wait "$ATOMIC_PID";   ATOMIC_RC=$?
           wait "$HOLISTIC_PID"; HOLISTIC_RC=$?
           if [ "$ATOMIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-1.json ]; then
-            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           fi
           if [ "$HOLISTIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-2.json ]; then
-            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           fi
           exit 0
 
@@ -604,7 +604,7 @@ jobs:
         run: |
           python3 .claude/commands/docs-review/scripts/readthrough.py \
             --pr "$PR" --changed-files "$FILES" --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
       # ---- end readthrough coherence lane ----------------------------------
 
       # ---- Claim verification ----------------------------------------------
@@ -632,7 +632,7 @@ jobs:
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --pr "$PR" --repo "$GITHUB_REPOSITORY" \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
       # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
