@@ -9,8 +9,10 @@ description: Here is a brief description of what this module's all about.
 # A similar description used for search results and social-media previews.
 meta_desc: Here is a brief description of what this module's all about.
 
-# An image for the tutorial. It appears on the module index page and in social-media previews.
-meta_image: meta.png
+# An optional image for the module. When set, it appears on the module index page.
+# Leave it blank to skip the inline image; an on-brand social-media preview card is
+# generated automatically at build time.
+# meta_image: meta.png
 
 # The order in which the module appears in most lists. Order is ascending, so higher numbers
 # mean the module will appear further down the list. Positive integers only.
