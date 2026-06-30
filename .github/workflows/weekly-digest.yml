@@ -74,8 +74,9 @@ jobs:
             --arg prompt "$PROMPT" \
             --arg digest "$DIGEST" \
             '{
-              model: "claude-sonnet-4-6",
-              max_tokens: 2000,
+              model: "claude-sonnet-5",
+              max_tokens: 2600,
+              thinking: { type: "disabled" },
               messages: [{
                 role: "user",
                 content: ($prompt + "\n\n=== DATA (JSON) ===\n\n" + $digest)
