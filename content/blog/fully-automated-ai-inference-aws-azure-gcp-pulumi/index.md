@@ -1,7 +1,7 @@
 ---
 title: "Fully Automated AI Inference on AWS, Azure, and Google Cloud with Pulumi"
 allow_long_title: true
-date: 2026-06-29
+date: 2026-06-30
 draft: false
 meta_desc: "A zero-touch Ollama GPU inference server on AWS, Azure, or Google Cloud as one Pulumi program, with OIDC credentials from Pulumi ESC and no static keys."
 meta_image: meta.png
@@ -137,7 +137,7 @@ values:
 
 You only need the blocks for the clouds you actually deploy to. Opening this environment makes ESC perform a live OIDC login for each cloud listed, so trim it to the one you use, or keep all three if, like me, you bounce between them.
 
-Each cloud needs a one-time trust setup so this login is allowed at all: an [IAM OIDC identity provider and role on AWS](/docs/esc/providers/login/aws-login/), a [federated credential on an Azure app registration](/docs/esc/providers/login/azure-login/), and a [Workload Identity Pool on Google Cloud](/docs/esc/providers/login/gcp-login/). You do that once; after that, `pulumi-idp/auth` is the only thing any stack references for credentials.
+Each cloud needs a one-time trust setup so this login is allowed at all: an [IAM OIDC identity provider and role on AWS](/docs/esc/guides/configuring-oidc/aws/), a [federated credential on an Azure app registration](/docs/esc/guides/configuring-oidc/azure/), and a [Workload Identity Pool on Google Cloud](/docs/esc/guides/configuring-oidc/gcp/). You do that once; after that, `pulumi-idp/auth` is the only thing any stack references for credentials.
 
 A stack opts into it with one block in its stack config. The AWS stack's `Pulumi.aws.yaml`:
 
@@ -542,7 +542,7 @@ A few per-cloud details are worth calling out, since they are the places the "sa
 
 - **AWS** is the shortest program, because the GPU comes with the instance shape: a `g4dn.xlarge` *is* a T4 box, so there is no separate accelerator to attach. The one thing to do before you deploy is raise the **Running On-Demand G and VT instances** vCPU quota in your region; a fresh account starts at zero, and `pulumi up` fails with `VcpuLimitExceeded` until you do.
 - **Google Cloud** attaches the GPU explicitly with `guestAccelerators`, and that brings the rule that trips people up: a GPU instance cannot live-migrate, so `scheduling.onHostMaintenance` must be `"TERMINATE"` or the apply is rejected. The cloud-init also has to ride on the `user-data` metadata key, not `startup-script`, and the empty `accessConfigs: [{}]` is what hands the box a public IP. T4 quota is also zero on a new project.
-- **Azure** is the longest listing, because the network is à la carte: the resource group, virtual network, subnet, public IP, security group, and NIC are each their own resource before you reach the VM. One detail surprises people: a Linux VM requires an admin credential even when you never log in, so the program generates a throwaway password with `random.RandomPassword` rather than committing one. The `NC4as_T4_v3` is a compute GPU, so the standard server driver from the cloud-init is correct; the GRID driver is for the visualization NV-series, not this.
+- **Azure** is the longest listing, because the network is à la carte: the resource group, virtual network, subnet, public IP, security group, and NIC are each their own resource before you reach the VM. One detail surprises people: a Linux VM requires an admin credential even when you never log in, so the program generates a throwaway password with `random.RandomPassword` rather than committing one. The `NC4as_T4_v3` is a compute GPU, so the standard server (CUDA) driver from the cloud-init is the right choice here; the GRID driver is only needed for GPU-accelerated visualization workloads.
 
 The full programs, all three `Pulumi.<cloud>.yaml` files, and the shared `cloud-init.yaml` are in the companion repo:
 
@@ -558,7 +558,7 @@ pulumi new typescript
 npm install @pulumi/aws
 ```
 
-Drop the AWS listing into `index.ts`, put the shared `cloud-init.yaml` next to it, point the stack at the auth environment, and set your region:
+Drop the AWS listing into `index.ts`, copy the `cloud-init.yaml` shown earlier into the same directory (or grab it from the companion repo), point the stack at the auth environment, and set your region:
 
 ```bash
 pulumi stack init aws
