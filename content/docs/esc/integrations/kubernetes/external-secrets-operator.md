@@ -20,7 +20,7 @@ aliases:
 - External Secrets Operator supports multiple different sources, so you can use the same operator to manage secrets and configuration from different sources.
 - Take advantage of the advanced features of the secret provider, such as encryption of data at rest and scenarios like secret rotation.
 
-Since version `0.10.0` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
+Since version `0.9.13` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
 
 ## Authentication
 
@@ -121,7 +121,7 @@ spec:
 
 ## PushSecrets
 
-With the latest release of Pulumi ESC, secrets can be pushed to the Pulumi Service. This can be done by creating a [`PushSecrets`](https://external-secrets.io/latest/api/pushsecret/) object.
+Since version `0.10.0`, External Secrets Operator can also push secrets to a Pulumi ESC environment by creating a [`PushSecret`](https://external-secrets.io/latest/api/pushsecret/) object.
 
 Here is a basic example of how to define a `PushSecret` object:
 
@@ -145,7 +145,7 @@ spec:
         remoteKey: <PULUMI_PATH_SYNTAX>
 ```
 
-This will then push the secret to the Pulumi Service. If the secret already exists, it will be updated.
+This will then push the secret to the Pulumi ESC environment configured in the `SecretStore`. If the secret already exists, it will be updated.
 
 ## Limitations
 
