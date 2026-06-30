@@ -16,8 +16,10 @@ applies `local_repair` findings as fixes and flags `reconception` findings
 without rewriting them.
 
 Why a direct Anthropic API call (not `claude-code-action`): same rationale as
-`extract-claims-llm.py` — one model call, `temperature: 0`, a forced tool-use
-schema (`tool_choice`, `strict`). The system prompt is `references/readthrough.md`
+`extract-claims-llm.py` — one model call against a forced tool-use schema
+(`tool_choice`, `strict`) with `thinking: {type: "disabled"}` (Sonnet 5 defaults
+adaptive thinking on and rejects non-default sampling params, so we disable
+thinking and let the strict schema constrain the output). The system prompt is `references/readthrough.md`
 (the rubric: a closed list of anchored failure modes + the `fix_class` boundary),
 verbatim, so the stable prefix stays prompt-cacheable.
 
@@ -35,7 +37,7 @@ Output schema:
     {
       "schema_version": 1,
       "ran": true,                       # false only when the lane was skipped (no API key)
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-5",
       "findings": [
         {"file": "content/docs/x.md",
          "line_range": "L40-58",         # references the numbered file body we sent
@@ -73,7 +75,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 MAX_TOKENS = 8192
@@ -387,7 +389,11 @@ def call_anthropic(api_key: str, system_body: str, user_text: str, model: str) -
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        "temperature": 0,
+        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
+        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
+        # This is one forced-tool call, so disable thinking to preserve the
+        # prior no-thinking behavior; the strict schema does the constraining.
+        "thinking": {"type": "disabled"},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
         ],

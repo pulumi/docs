@@ -10,10 +10,15 @@ entry.
 Why a direct Anthropic API call (not `claude-code-action`):
   - extraction needs no agentic loop — it's "read input → produce structured
     output", one model call;
-  - a direct `/v1/messages` call gives us `temperature: 0` + a forced tool-use
-    JSON schema (`tool_choice: {type:"tool", name:"extract_claims"}`, `strict`),
-    neither of which `claude-code-action` exposes — and those are exactly the
-    "format consistency" levers this exercise is about;
+  - a direct `/v1/messages` call gives us a forced tool-use JSON schema
+    (`tool_choice: {type:"tool", name:"extract_claims"}`, `strict`) plus an
+    explicit `thinking: {type: "disabled"}`, neither of which
+    `claude-code-action` exposes — and those are exactly the "format
+    consistency" levers this exercise is about. (Sonnet 5 turns adaptive
+    thinking on by default when `thinking` is omitted, and rejects non-default
+    sampling params such as `temperature`; we disable thinking to keep
+    extraction one deterministic forced-tool call and let the strict schema do
+    the constraining.)
   - precedent: `claude-triage.yml` already calls `/v1/messages` via curl in
     this repo.
 
@@ -38,7 +43,7 @@ Output schema:
     {
       "schema_version": 1,
       "pass": "atomic" | "holistic",
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-5",
       "claims": [
         {"file": "content/blog/foo.md",
          "line_range": "L42",            # or "L42-47"; references the numbered file body we sent
@@ -77,7 +82,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 MAX_TOKENS = 8192
@@ -529,7 +534,12 @@ def call_anthropic(api_key: str, system_body: str, mode_header: str, user_text: 
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        "temperature": 0,
+        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
+        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
+        # Extraction is a single forced-tool call, so we disable thinking to
+        # preserve the prior no-thinking behavior; the strict schema does the
+        # format constraining that `temperature: 0` used to reinforce.
+        "thinking": {"type": "disabled"},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
             {"type": "text", "text": mode_header},

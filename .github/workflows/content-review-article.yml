@@ -171,11 +171,11 @@ jobs:
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           python3 $S/merge-claims.py \
             --regex .candidate-claims-regex.json \
             --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
@@ -184,7 +184,7 @@ jobs:
           python3 $S/verify-claims.py \
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
           python3 $S/frontmatter-validate.py \
             --changed-files "$ARTICLE_PATH" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
@@ -198,7 +198,7 @@ jobs:
           python3 $S/readthrough.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
           vale --no-exit --output=JSON "$ARTICLE_PATH" > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json

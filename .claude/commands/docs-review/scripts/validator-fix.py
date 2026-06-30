@@ -63,14 +63,16 @@ SURGICAL_CLASSES: set[str] = {
     "verified-claims-trail-faithful",
 }
 
-# Sonnet 4.6 for the splice model. Pre-v16 used Haiku 4.5 per call, which
+# Sonnet 5 for the splice model. Pre-v16 used Haiku 4.5 per call, which
 # handled single-violation splices fine but lacked the reasoning headroom
 # for batched multi-fix prompts — Haiku tracking 30+ independent edit
-# targets in one rewrite started dropping fixes. Sonnet costs ~4× per token
+# targets in one rewrite started dropping fixes. Sonnet costs ~3× per token
 # but the per-rule batching (see build_batched_prompt) collapses N sequential
-# calls into 1 call per rule_id, so the review-level cost lands ~$0.40 — a
-# 6.5× drop vs Haiku-sequential's ~$2.64, with lower fumble risk.
-SPLICE_MODEL = "claude-sonnet-4-6"
+# calls into 1 call per rule_id, keeping the review-level cost low with lower
+# fumble risk. (Sonnet 5 is near-Opus on this kind of structured editing; its
+# tokenizer runs ~30% heavier than Sonnet 4.6, which is why MAX_OUTPUT_TOKENS
+# below carries extra headroom for the verbatim full-body echo.)
+SPLICE_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 # 180s per call — Sonnet processes large prompts faster than Haiku but the
@@ -78,10 +80,13 @@ ANTHROPIC_VERSION = "2023-06-01"
 # for the larger model + network jitter.
 SPLICE_TIMEOUT_S = 180
 MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
-# Maximum response tokens from Haiku. The whole body is echoed back verbatim;
-# 16K covers a 60K-char review body with room for any minor expansion. Goes
-# in the messages.create `max_tokens` field.
-MAX_OUTPUT_TOKENS = 16000
+# Maximum response tokens. The whole review body is echoed back verbatim, so
+# this must exceed the body's token count or the splice truncates. A ~60K-char
+# body is ~12K output tokens on Sonnet 4.6; Sonnet 5's ~30%-heavier tokenizer
+# pushes the same body to ~15-16K, which left almost no headroom under the old
+# 16K cap — so the cap is now 24K (still a single non-streamed response well
+# under SPLICE_TIMEOUT_S). Goes in the messages.create `max_tokens` field.
+MAX_OUTPUT_TOKENS = 24000
 # Maximum number of surgical violations to fold into a single batched Haiku
 # call. Pre-v16 was N sequential calls (each one rewrites the whole ~50KB
 # body — ~12K output tokens × ~250 tok/s = ~50s/call); a hot review with 30
@@ -428,7 +433,7 @@ def build_batched_prompt(violations: list[dict], body: str) -> str:
 
 
 def dispatch_splice(prompt: str, api_key: str) -> str | None:
-    """Run one splice call (Sonnet 4.6) via the Anthropic Messages API.
+    """Run one splice call (Sonnet 5) via the Anthropic Messages API.
     Returns the edited body or None on error.
 
     Pre-v16 used the `claude` CLI as a subprocess, which silently failed in
@@ -438,7 +443,7 @@ def dispatch_splice(prompt: str, api_key: str) -> str | None:
     argument). Direct API calls surface errors as plain readable strings
     and use the same auth path verify-claims.py uses (proven to work in CI).
 
-    Splice model: Sonnet 4.6 (see SPLICE_MODEL note). Haiku 4.5 worked
+    Splice model: Sonnet 5 (see SPLICE_MODEL note). Haiku 4.5 worked
     fine on single-violation prompts but lost fixes when ~30 independent
     edits were batched into one call; Sonnet's reasoning headroom is
     worth the ~4× per-token cost when per-rule batching collapses the
@@ -447,6 +452,11 @@ def dispatch_splice(prompt: str, api_key: str) -> str | None:
     body = {
         "model": SPLICE_MODEL,
         "max_tokens": MAX_OUTPUT_TOKENS,
+        # Sonnet 5 defaults adaptive thinking ON when `thinking` is omitted.
+        # This call echoes the full review body verbatim and needs every output
+        # token for that body, so disable thinking (no sampling params are set
+        # here, so there's nothing else to strip for the model swap).
+        "thinking": {"type": "disabled"},
         "system": SYSTEM_PROMPT,
         "messages": [{"role": "user", "content": prompt}],
     }
