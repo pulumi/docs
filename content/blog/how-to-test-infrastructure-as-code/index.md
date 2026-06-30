@@ -7,7 +7,6 @@ meta_image: meta.png
 feature_image: feature.png
 authors:
     - joe-duffy
-    - luke-hoban
 tags:
     - infrastructure-as-code
     - testing
