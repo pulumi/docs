@@ -26,7 +26,7 @@ Deploy MySQL 8.0 on a managed service rather than self-managing:
 
 ## Required sql_mode settings
 
-Pulumi Cloud database migrations use `ALGORITHM=INPLACE`, which MySQL only permits when strict mode is active. The server's `sql_mode` must include `STRICT_TRANS_TABLES`. Without it, migrations fail with:
+Pulumi Cloud database migrations include a schema change that MySQL can only apply with `ALGORITHM=INPLACE` when strict mode is active. Without it, the in-place algorithm would have to silently convert NULL values — which it cannot do — so the migration fails. The server's `sql_mode` must include `STRICT_TRANS_TABLES`. Without it, migrations fail with:
 
 ```
 ALGORITHM=INPLACE is not supported. Reason: cannot silently convert NULL values, as required in this SQL_MODE. Try ALGORITHM=COPY.
