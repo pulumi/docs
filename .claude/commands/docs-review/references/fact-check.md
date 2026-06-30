@@ -359,6 +359,7 @@ If the inline check fails to resolve a claim that was classified `pulumi-interna
 | Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
 | Resource schema / API surface | `pulumi/pulumi-<provider>` |
 | New symbol (flag/command/API) the docs PR links an implementing PR for | The linked `pulumi/*` PR/commit — `gh pr diff <n> -R pulumi/<repo>` — authoritative for a feature not yet on `master` or in the published reference |
+| Pricing / edition / tier / limit / quota (e.g. "Enterprise allows up to 25 custom roles") | `content/pricing/_index.md` — a large (~40KB) feature×tier matrix. **Grep it for the feature name; don't trust a truncated head-read.** A value deep in the table reads as absent if you only read the file head (this is what produced the #19945 false "no 25 cap" negative). |
 | Shortcode | `layouts/shortcodes/<name>.html` |
 | Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
 | Frontmatter field semantics | An existing page in the same content tree that uses the field |

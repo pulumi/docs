@@ -202,11 +202,17 @@ GH_QUERY_TOOL = {
 
 READ_FILE_TOOL = {
     "name": "read_file",
-    "description": "Read a repo-relative file (must be under the repo root). Output is capped.",
+    "description": (f"Read a repo-relative file (must be under the repo root). A plain read is capped at "
+                   f"{READ_FILE_CAP} chars and a truncated read is marked as such — pass `pattern` to grep "
+                   "within a large structured file instead, or a value past the cap will read as absent."),
     "input_schema": {
         "type": "object",
         "additionalProperties": False,
-        "properties": {"path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"}},
+        "properties": {
+            "path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"},
+            "pattern": {"type": "string",
+                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like content/pricing/_index.md (a ~40KB feature x tier matrix)."},
+        },
         "required": ["path"],
     },
 }
@@ -242,7 +248,7 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 
 Cheapest first. Stop as soon as a source closes the claim.
 
-1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first.
+1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition / limit / quota** claim, the pricing matrix `content/pricing/_index.md` is canonical — but it's a large (~40KB) feature x tier table, so read it with a `pattern` (the feature name, e.g. "custom role") rather than the head, and never read a value as absent from a read marked `[TRUNCATED]`.
 2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL specifically lives under `pulumi-labs/pulumi-hcl`, and other in-progress providers / SDK experiments ship under `pulumi-labs/*` too; when a claim mentions Pulumi HCL by name (or references a `pulumi-labs/<repo>` package), query BOTH owners before considering escalation:
    - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
    - `gh search code --owner pulumi-labs "<term>"` — Pulumi HCL, in-progress providers, SDK experiments
@@ -498,7 +504,48 @@ def exec_read_file(inp: dict, repo_root: Path) -> str:
         text = p.read_text(encoding="utf-8", errors="replace")
     except OSError as e:
         return f"error: cannot read {path!r}: {e}"
-    return text[:READ_FILE_CAP] or "(empty file)"
+    if not text:
+        return "(empty file)"
+
+    # Grep-within-file: a fact past the head cap (e.g. a row deep in the ~40KB
+    # pricing matrix) reads as absent on a plain head-read. A `pattern` returns
+    # the matching lines with numbers + context regardless of where they sit, so
+    # a large structured file is actually searchable.
+    pattern = inp.get("pattern")
+    if isinstance(pattern, str) and pattern:
+        try:
+            rx = re.compile(pattern, re.IGNORECASE)
+        except re.error:
+            rx = re.compile(re.escape(pattern), re.IGNORECASE)
+        lines = text.splitlines()
+        hits = [i for i, ln in enumerate(lines) if rx.search(ln)]
+        if not hits:
+            return f"(no line in {path!r} matched /{pattern}/ — file has {len(lines)} lines, {len(text)} chars)"
+        # Generous context (8 lines each way): in a YAML matrix the per-tier value
+        # cells sit several lines below the feature `title:` they belong to, so a
+        # tight window would surface the feature name but not its value.
+        ctx = 8
+        out: list[str] = []
+        shown: set[int] = set()
+        for i in hits:
+            for j in range(max(0, i - ctx), min(len(lines), i + ctx + 1)):
+                if j not in shown:
+                    shown.add(j)
+                    out.append(f"{j + 1}: {lines[j]}")
+        body = "\n".join(out)
+        if len(body) > READ_FILE_CAP:
+            body = body[:READ_FILE_CAP] + f"\n... [more matches truncated; {len(hits)} lines matched /{pattern}/]"
+        return body
+
+    # No pattern: return the head, but make truncation VISIBLE so the model never
+    # treats a partial read as the whole file (the bug behind the #19945 false
+    # negative — a pricing row at byte 12k vanished under the 8k cap).
+    if len(text) > READ_FILE_CAP:
+        return (text[:READ_FILE_CAP]
+                + f"\n\n... [TRUNCATED: showed the first {READ_FILE_CAP} of {len(text)} chars. "
+                  "This is NOT the whole file — a value below this point reads as absent. "
+                  "Re-read with a `pattern` to grep the rest before concluding something isn't there.]")
+    return text
 
 
 # ---- Anthropic API ---------------------------------------------------------
