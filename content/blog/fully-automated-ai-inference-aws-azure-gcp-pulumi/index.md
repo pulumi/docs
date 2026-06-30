@@ -24,21 +24,21 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        A zero-touch GPU box that pulls a model and serves Ollama the moment `pulumi up` finishes. Same program on AWS, Azure, and Google Cloud.
+        A zero-touch GPU box that pulls a model and serves Ollama the moment pulumi up finishes. Same program on AWS, Azure, and Google Cloud.
 
-        No static keys, no shell-out wait loop. Engin Diri ports an Akamai Terraform how-to to Pulumi.
+        No static keys (OIDC from Pulumi ESC), no wait loops — just pulumi up and an endpoint. Engin Diri shows how.
     linkedin: |
-        Thorsten Hans wrote a great Akamai how-to: a Terraform project that stands up a GPU box, installs the drivers, runs Ollama, and pulls a model, all with zero manual steps. I wanted the same thing in Pulumi, across the three big clouds, with two things cleaned up.
+        Thorsten Hans wrote a great Akamai post on standing up a GPU box to run Ollama — zero manual steps after the deploy. Engin Diri ported the same idea to Pulumi, across AWS, Azure, and Google Cloud, with two upgrades.
 
-        The first is credentials. The Terraform version exports a static token into an env var. The Pulumi version imports one ESC environment that brokers an OIDC login into AWS, Azure, and Google Cloud, so there is no long-lived key anywhere.
+        Credentials: instead of a static token in an environment variable, Pulumi ESC brokers an OIDC login into all three clouds. No long-lived key anywhere in the stack.
 
-        The second is the readiness wait. Terraform reaches for a null_resource running a curl loop in local-exec. That is a runtime check wearing a resource costume, so the Pulumi version drops it: the program provisions the box and prints the endpoint, and you curl when you want.
+        Readiness: rather than a shell loop blocking the deploy, the program provisions the box and prints the endpoint. You curl when you want.
 
-        One program shape, three clouds, one `pulumi up` to stand it up and one `pulumi destroy` to take it down.
+        One program shape, three clouds, one pulumi up to stand it up and one pulumi destroy to take it down.
     bluesky: |
-        A GPU box that pulls a model and serves Ollama the second `pulumi up` finishes, same program on AWS, Azure, and Google Cloud.
+        A GPU box that pulls a model and serves Ollama the second pulumi up finishes, same program on AWS, Azure, and Google Cloud.
 
-        No static keys (OIDC from one ESC environment), no shell-out wait loop. Here is how it ports from an Akamai Terraform how-to.
+        No static keys (OIDC from one Pulumi ESC environment), no wait loops. Engin Diri shows how.
 ---
 
 Putting [Ollama](https://ollama.com/) on a cloud GPU is something I keep coming back to. A while ago I wrote up [running open-source LLMs on an AWS EC2 box with Ollama and Pulumi](/blog/run-deepseek-on-aws-ec2-using-pulumi/), and the shape never really changes: a GPU instance, a model server, and a firewall rule in front. Infrastructure as code earned its place by making that kind of setup predictable and repeatable, and AI infrastructure is no exception. A GPU box serving a model is still a VM, a disk, and a firewall rule, and it should be declared like one.
