@@ -10,6 +10,7 @@ authors:
     - claire-gaestel
 tags:
     - esc
+category: product
 ---
 
 Did you know that **80% of unplanned outages aren’t caused by hardware failures or cyberattacks, but by the very changes we make to improve our systems?**

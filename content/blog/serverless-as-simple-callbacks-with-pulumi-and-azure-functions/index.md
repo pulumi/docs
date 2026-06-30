@@ -2,7 +2,8 @@
 title: Serverless as Simple Callbacks with Azure Functions
 h1: "Serverless as Simple Callbacks with Pulumi and Azure Functions"
 authors: ["mikhail-shilkov"]
-tags: ["Serverless","Azure"]
+tags: [serverless, azure]
+category: tutorials
 date: "2019-05-07"
 meta_desc: "Pulumi's serverless programming model makes it easy to take a Node.js function and deploy it to Azure as an HTTP endpoint."
 

@@ -11,6 +11,7 @@ tags:
     - ai
     - packages
     - registry
+category: product
 ---
 
 [Pulumi AI](/ai) harnesses a form of generative AI, known as large language models, to help you discover, learn, and use new cloud infrastructure APIs with ease. Think of Pulumi AI as a sophisticated compass, guiding you through the ever-changing landscape of cloud infrastructure and pointing you in the direction of the most suitable solutions for your unique requirements.

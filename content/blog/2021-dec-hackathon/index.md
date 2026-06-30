@@ -9,6 +9,7 @@ authors:
 tags:
     - hackathon
     - pulumi-culture
+category: community
 ---
 
 Pulumi's [hackathon tradition](/blog/multi-lang-hackathon/) continued in the last weeks of 2021 with our 2021 December hackathon. For one solid week, we had teams from across the company focus on improvements across the Pulumi ecosystem, and we brought in people from outside the engineering org to get perspectives on different needs. While there were some projects that were focused on internal work, there were still quite a few open-source projects that we can talk about publicly. We'll get more details from some of those teams over a few more posts. In this post, however, we're going to explore a bit about how we worked.

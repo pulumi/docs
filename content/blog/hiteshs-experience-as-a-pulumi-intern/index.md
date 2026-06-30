@@ -7,6 +7,7 @@ authors:
     - hitesh-boinpally
 tags:
     - pulumi-interns
+category: community
 
 ---
 

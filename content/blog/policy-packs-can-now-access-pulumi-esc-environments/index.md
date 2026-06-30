@@ -11,6 +11,7 @@ tags:
     - esc
     - policy-as-code
     - features
+category: product
 schema_type: auto
 
 social:

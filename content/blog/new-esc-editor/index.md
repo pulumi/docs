@@ -11,6 +11,7 @@ authors:
 tags:
     - esc
     - features
+category: product
 schema_type: auto
 social:
     twitter:

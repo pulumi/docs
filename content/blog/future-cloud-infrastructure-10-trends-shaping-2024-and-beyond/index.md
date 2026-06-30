@@ -46,6 +46,7 @@ tags:
     - devsecops
     - security
     - kubernetes
+category: general
 
 ---
 

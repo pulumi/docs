@@ -7,8 +7,9 @@ meta_image: meta.png
 authors:
     - guinevere-saenger
 tags:
-    - gcp
-    - release
+    - google-cloud
+    - releases
+category: product
 ---
 
 The latest major release of the Pulumi Google Cloud Provider is available now!

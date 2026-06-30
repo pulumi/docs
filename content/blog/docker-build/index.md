@@ -13,6 +13,7 @@ tags:
     - buildx
     - buildkit
     - containers
+category: product
 ---
 
 Deploying and managing containerized workloads is one of Pulumi's fastest-growing areas. Standing up managed container services and Kubernetes clusters is a common area for automation, and many of our customers use Pulumi to automate building and publishing images to their registry of choice.

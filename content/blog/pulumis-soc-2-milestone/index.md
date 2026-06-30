@@ -8,6 +8,7 @@ authors:
    - eric-rudder
 tags:
    - pulumi-enterprise
+category: company
 ---
 
 ## Pulumi’s Commitment

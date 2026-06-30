@@ -13,6 +13,7 @@ tags:
     - platform-engineering
     - claude-code
     - ai-agents
+category: best-practices
 ---
 
 When Claude Code first released [skills](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/skills), I ignored them. They looked like fancy prompts, another feature to add to the pile of things I would get around to learning eventually. Then I watched a few engineers demonstrate what skills actually do, and something clicked. By default, language models do not write good code. They write plausible code based on what they have read. Plausible code turns into bugs, horrible UX, and infrastructure that breaks at 3am.

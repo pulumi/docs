@@ -9,6 +9,7 @@ authors:
 tags:
     - continuous-delivery
     - aws-credentials-cicd
+category: best-practices
 series: aws-credentials-cicd
 ---
 

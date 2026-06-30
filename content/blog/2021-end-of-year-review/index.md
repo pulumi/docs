@@ -7,7 +7,8 @@ meta_image: meta.png
 authors:
     - laura-santamaria
 tags:
-    - pulumi-news
+    - announcements
+category: company
 ---
 
 It’s the end of the 2021 calendar year here at Pulumi, and like everyone, we’re counting down until 2022 while looking back at our year. We’ve had a very exciting year! In case you missed anything from our past year, here’s a rundown of the top stories from Pulumi:

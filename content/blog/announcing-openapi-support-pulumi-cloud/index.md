@@ -14,6 +14,7 @@ tags:
   - features
   - pulumi-cloud
   - api
+category: product
 ---
 
 We're thrilled to announce that the Pulumi Cloud REST API is now described by an OpenAPI 3.0 specification, and we're just getting started.

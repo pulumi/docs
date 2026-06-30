@@ -14,6 +14,7 @@ tags:
     - aws
     - containers
     - serverless
+category: tutorials
 ---
 
 **TL;DR** &mdash; To run a container image in AWS Lambda, build an OCI image that implements the [Lambda Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html) (most teams start from an [AWS-provided base image](https://gallery.ecr.aws/lambda/)), push it to Amazon ECR, and create a Lambda function with `packageType: "Image"` pointing at the image URI. Lambda containers support images up to 10&nbsp;GB, up to 10&nbsp;GB of memory, up to 10&nbsp;GB of `/tmp` ephemeral storage, and a 15-minute execution ceiling. Pulumi automates the build, push, and function wiring in a single program. Pick Lambda containers when your workload is event-driven and bursty but your dependencies (binaries, ML models, system libraries) outgrow the 250&nbsp;MB ZIP limit; pick [AWS Fargate or ECS](/docs/iac/guides/clouds/aws/) when you need long-running tasks, persistent connections, or multi-container pods.

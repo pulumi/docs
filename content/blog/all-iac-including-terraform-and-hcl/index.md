@@ -7,10 +7,11 @@ meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - iac
+    - infrastructure-as-code
     - terraform
     - hcl
     - hashicorp
+category: product
 ---
 
 We work with thousands of customers who prefer Pulumi due to our modern approach to infrastructure that delivers faster time to market with built-in security and compliance. Yet we know many organizations have years of investments into tools like Terraform. At the same time, HashiCorp customers are increasingly telling us about their frustrations post-IBM acquisition: rate increases, loss of open source heritage, overnight rug-pull of CDKTF, … and the hits just keep on coming. Today, we’re excited to announce three new ways Pulumi is enabling customers of HashiCorp, an IBM Company, who want a better, open source friendly, modern solution for their IaC to choose Pulumi. First, Pulumi Cloud will support Terraform and OpenTofu, so you can continue using any Terraform or Pulumi CLI and language with the complete Pulumi Cloud product, including our infrastructure engineering AI agent, Neo. Second, Pulumi’s own open source IaC tool will support HCL natively as one of its many languages, alongside the industry’s best languages including Python, TypeScript, Go, C#, Java, and YAML. Pulumi is multi-language at its core and many organizations are diverse and polyglot—these new capabilities truly make Pulumi the most universal IaC platform with the broadest support. Third, we’re offering flexible financing to make it easy to depart HashiCorp for Pulumi.

@@ -9,6 +9,7 @@ tags:
     - aws
     - redshift
     - data-warehouse
+category: tutorials
 ---
 
 It's fun to think about how much data there is swirling around in the global datasphere these days. However you choose to measure it (and there are various ways), it's a quantity so massive --- [hundreds of zettabytes](https://en.wikipedia.org/wiki/Zettabyte_Era), by some estimates --- that it's kind of a hard thing to quite get your head around.

@@ -13,6 +13,7 @@ tags:
     - ai-agents
     - data-and-analytics
     - internal-tools
+category: engineering
 social:
     twitter: "How we built an AI-powered analytics assistant at Pulumi, and why the semantic layer matters more than the AI."
     linkedin: "How we built an AI-powered analytics assistant at Pulumi, and why the semantic layer matters more than the AI."

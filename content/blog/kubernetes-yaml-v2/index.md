@@ -12,6 +12,7 @@ tags:
     - kubernetes
     - yaml
     - java
+category: product
 ---
 
 The Pulumi Kubernetes provider makes it easy to deploy Kubernetes resources to your cluster, giving you options

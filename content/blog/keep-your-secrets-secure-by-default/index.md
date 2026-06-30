@@ -9,6 +9,7 @@ authors:
 tags:
     - security
     - secrets
+category: product
 ---
 
 An unauthorized user gaining access to your infrastructure can be catastrophic: data can be stolen or leaked, security holes can be exploited, and more. That risk makes it critical to keep the infrastructure secrets—the passwords, access tokens, keys, and so on—well-protected. This is particularly true in automated systems, like continuous integration and delivery and infrastructure-as-code systems.

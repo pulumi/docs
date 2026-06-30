@@ -13,6 +13,7 @@ tags:
     - aws
     - eks
     - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-developer-stacks-git-branches/

@@ -9,6 +9,7 @@ authors:
     - adam-gordon-bell
 tags:
     - azure
+category: general
 social:
     twitter:
     linkedin:

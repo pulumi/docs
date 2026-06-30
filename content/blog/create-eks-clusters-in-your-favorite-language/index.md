@@ -9,10 +9,11 @@ authors:
 tags:
     - aws
     - eks
-    - .net
+    - dotnet
     - python
     - go
     - typescript
+category: product
 ---
 
 {{% notes type="info" %}}

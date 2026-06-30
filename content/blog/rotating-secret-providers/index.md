@@ -8,7 +8,8 @@ authors:
 
 tags:
     - features
-    - Security
+    - security
+category: product
 ---
 
 Customers and users have asked for the ability

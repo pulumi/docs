@@ -10,6 +10,7 @@ tags:
     - aws
     - eks
     - kubernetes
+category: tutorials
 ---
 
 AWS recently announced [Amazon EKS Auto Mode](https://aws.amazon.com/eks/auto-mode/), a significant enhancement to Amazon EKS that streamlines cluster management by automating infrastructure decisions and operations. Today, we are excited to announce that Pulumi fully supports EKS Auto Mode across our AWS provider ecosystem, enabling you to leverage this powerful feature through infrastructure as code.

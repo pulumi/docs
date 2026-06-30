@@ -10,13 +10,13 @@ authors:
 - engin-diri
 
 tags:
-
 - next-level-iac
 - automation-api
 - api-economy
 - cloudformation
 - terraform
 - hcl
+category: tutorials
 
 ---
 

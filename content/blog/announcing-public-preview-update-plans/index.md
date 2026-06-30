@@ -8,6 +8,7 @@ authors:
     - fraser-waters
 tags:
     - features
+category: product
 canonical_url: "https://www.pulumi.com/docs/iac/concepts/update-plans/"
 ---
 

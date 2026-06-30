@@ -18,6 +18,7 @@ tags:
   - pulumi-cloud
   - access-tokens
   - self-hosted
+category: product
 ---
 
 We're excited to announce that **Pulumi Identity and Access Management (IAM)** is now available for self-hosted instances of Pulumi Cloud. This foundational security capability brings the same [enterprise-grade access management](/blog/pulumi-cloud-iam-launch/) we launched for Pulumi Cloud SaaS to organizations running Pulumi on their own infrastructure.

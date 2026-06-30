@@ -5,6 +5,7 @@ meta_desc: A tutorial on how to create a Python AWS application using Flask, Red
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "python", "containers", "docker", "ecs"]
+category: tutorials
 ---
 
 *Meet Vova Ivanov---one of the Pulumi summer interns. He'll be writing about his experiences learning Pulumi while modernizing a web app and its underlying infrastructure.*

@@ -9,9 +9,10 @@ authors:
     - mikhail-shilkov
 tags:
     - features
-    - iac
+    - infrastructure-as-code
     - ai
     - developer-experience
+category: tutorials
 social:
     twitter: "Streamline your Pulumi workflow! See how AI assistants + Pulumi's Model Context Protocol (MCP) integration accelerate IaC development by bringing resource discovery, code generation, and validation directly into your editor. #Pulumi #AI #IaC"
     linkedin: "Discover how integrating AI coding assistants (like Cursor, Copilot, etc.) with Pulumi's Model Context Protocol (MCP) server transforms Infrastructure as Code development. This post walks through a real-world example of provisioning an AKS cluster, showcasing reduced context switching, faster discovery, and tighter feedback loops—all within the editor. Boost your team's productivity and improve the developer experience with AI-assisted IaC."

@@ -12,6 +12,7 @@ authors:
 tags:
   - esc
   - secrets
+category: product
 ---
 
 At Pulumi, we've been at the forefront of revolutionizing infrastructure management and DevOps processes. We've built the industry's most comprehensive [secrets management solution for IaC](/docs/iac/concepts/secrets/), securing production cloud credentials and secrets for countless organizations. Now, we're taking that expertise and applying it to the broader challenges of managing secrets at scale with an open ecosystem approach.

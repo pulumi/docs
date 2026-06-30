@@ -8,9 +8,10 @@ authors:
     - anita-trimbur
     - sean-holung
 tags:
-    - pulumi-releases
+    - releases
     - features
     - ux
+category: product
 ---
 
 Engineers spend a lot of their valuable time searching documentation for answers. At Pulumi, we believe in exceptional documentation experiences that help people using Pulumi find what they need quickly and use it successfully. Today, we are announcing a set of improved Pulumi documentation experiences that collectively make it easier than ever to discover, learn and build cloud infrastructure with Pulumi.

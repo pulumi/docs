@@ -16,6 +16,7 @@ tags:
 - secrets-management
 - secrets-sprawl
 - pulumi
+category: general
 
 
 social:

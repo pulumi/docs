@@ -11,12 +11,13 @@ tags:
     - environments
     - secrets
     - configuration
-    - iac
+    - infrastructure-as-code
     - developer
     - workflow
     - devcontainer
     - github
     - codespaces
+category: tutorials
 ---
 
 As a skeptic of "quick starts" myself, I approach most marketing promises with a measure of cautious excitement. If the great and powerful algorithm, friends, or a peer brought your attention here, then I invite you to take this one seriously.

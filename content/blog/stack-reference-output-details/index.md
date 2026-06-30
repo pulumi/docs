@@ -7,7 +7,8 @@ meta_desc: >-
   without calling Output.apply.
 meta_image: meta.png
 authors: [abhinav-gupta]
-tags: [features, stack-reference]
+tags: [features, stack-references]
+category: product
 ---
 
 You can use the new `StackReference.getOutputDetails` method

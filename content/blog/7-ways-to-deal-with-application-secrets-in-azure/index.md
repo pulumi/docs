@@ -1,7 +1,8 @@
 ---
 title: "7 Ways to Deal with Application Secrets in Azure"
 authors: ["mikhail-shilkov"]
-tags: ["Azure", "Security"]
+tags: [azure, security]
+category: best-practices
 date: "2019-07-26"
 updated: 2025-03-10
 meta_desc: Learn secure ways to manage application secrets in Azure. From Key Vault to environment variables, discover best practices to safeguard sensitive data.

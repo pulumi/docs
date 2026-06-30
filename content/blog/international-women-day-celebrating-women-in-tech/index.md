@@ -9,6 +9,7 @@ authors:
 tags:
     - pulumi-culture
     - community
+category: community
 ---
 
 Today is International Women's Day, and this year the theme is #EmbraceEquity - which means creating an equitable environment. An equitable work environment means understanding that everyone, regardless of gender, religion, ethnicity, background, or resources, brings strength to the workforce and that opportunities should be given to them based on their individual needs.

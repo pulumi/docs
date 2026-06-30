@@ -11,6 +11,7 @@ tags:
     - kubecon
     - kubernetes
     - conferences
+category: product
 aliases:
     - /blog/kubecon-2024-launches
 ---

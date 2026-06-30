@@ -11,6 +11,7 @@ tags:
     - registry
     - providers
     - releases
+category: product
 social:
     twitter: "We've added 27 new providers to the Pulumi Registry including Temporal, Vantage, and Honeycomb. Explore our expanded ecosystem with enriched docs for a seamless developer experience."
     linkedin: |

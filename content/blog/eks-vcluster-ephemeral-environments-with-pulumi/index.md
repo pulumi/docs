@@ -10,6 +10,7 @@ tags:
     - aws
     - kubernetes
     - platform-engineering
+category: tutorials
 social:
     twitter: |
         Build an EKS environment factory with Pulumi and vCluster.

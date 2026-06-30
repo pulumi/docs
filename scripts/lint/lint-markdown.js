@@ -8,6 +8,21 @@ const markdownIt = require("markdown-it");
 const USE_NEW_FRONTMATTER_VALIDATION = true;
 
 /**
+ * Allowed blog post category ids, loaded once from the single source of truth
+ * at data/blog_categories.yaml. See that file's header for the rules.
+ */
+const BLOG_CATEGORIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_categories.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.categories || []).map(c => c.id);
+    } catch (e) {
+        console.warn(`Warning: could not load blog categories: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
  *
  *     ---
@@ -83,6 +98,45 @@ function checkMetaImage(image) {
     const extension = regex.exec(image)[1];
     if (extension !== "png") {
         return `Meta image, '${image}', must be a png file.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkBlogCategory validates the `category:` front matter on blog posts against
+ * the closed set in data/blog_categories.yaml. It applies ONLY to individual
+ * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
+ * pages, or non-blog content.
+ *
+ * Category is REQUIRED and SINGULAR: every post must declare exactly one
+ * `category:` scalar value from the allowed set. Use `general` (the default)
+ * for posts that don't clearly fit a specific kind. A list value, a missing
+ * value, or a value outside the set is an error. (The legacy plural `categories`
+ * field is no longer accepted.)
+ *
+ * @param {string} category The `category` front matter value.
+ * @param {*} legacyCategories The legacy `categories` front matter value, if any.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkBlogCategory(category, legacyCategories, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost) {
+        return null;
+    }
+
+    if (typeof legacyCategories !== "undefined") {
+        return "Blog post uses the legacy 'categories' field. Use a singular 'category:' scalar instead (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (Array.isArray(category)) {
+        return "Blog post 'category' must be a single scalar value, not a list (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (!category) {
+        return "Blog post is missing a required 'category' value. Add exactly one category from data/blog_categories.yaml (use 'general' if it doesn't fit a specific kind).";
+    }
+    if (!BLOG_CATEGORIES.includes(category)) {
+        return `Invalid blog category value: '${category}'. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
     }
 
     return null;
@@ -166,6 +220,7 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -280,6 +335,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaImage,
+                });
+            }
+            if (frontMatterErrors.blogCategory) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.blogCategory,
                 });
             }
         }

@@ -11,6 +11,7 @@ tags:
     - pulumi-neo
     - ai
     - features
+category: product
 schema_type: auto
 
 social:

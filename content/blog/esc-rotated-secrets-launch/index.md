@@ -12,6 +12,7 @@ tags:
   - esc
   - secrets
   - features
+category: product
 ---
 
 Managing secrets effectively is no longer a "nice-to-have"—it's a must-have for any organization building and scaling applications in the cloud. Static, long-lived credentials like database passwords, API keys, and IAM user credentials are a major security vulnerability. They're often overexposed, residing in source code, configuration files, or other easily accessible locations. Manual rotation processes are tedious, error-prone, and infrequent, leaving a wide window of opportunity for potential breaches. Today, we're thrilled to announce a powerful new capability in [Pulumi ESC](/product/secrets-management/) that directly addresses this challenge: Rotated Secrets.

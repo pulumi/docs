@@ -15,6 +15,7 @@ tags:
     - ml
     - community
     - platform-engineering
+category: community
 ---
 
 The integration of artificial intelligence (AI) with DevOps signals a new era in software development. DevOps possesses unique characteristics and needs that make it exceptionally compatible with AI augmentation. Given that code fundamentally relies on language, and large language models (LLMs) serve as the core of GPT functionality, these models are particularly well-suited for tasks such as code generation. This article unwraps the topics addressed during our “AI: Friends or Foe | AI Talks for DevOps” event in San Francisco.

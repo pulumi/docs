@@ -1,7 +1,8 @@
 ---
 title: "Enhanced static-code analysis for C# projects"
 authors: ["zaid-ajaj"]
-tags: ["csharp"]
+tags: [dotnet]
+category: product
 meta_desc: "Introducing a static-code analyzer for C# which provides instant feedback on common mistakes defining Pulumi resources"
 meta_image: enhanced-static-code-analysis.png
 date: "2022-07-15"

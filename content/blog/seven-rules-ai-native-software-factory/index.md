@@ -16,7 +16,8 @@ tags:
     - ai-agents
     - infrastructure-as-code
     - pulumi-neo
-    - pulumi-esc
+    - esc
+category: customers
 social:
     twitter: |
         Five engineers. Nineteen clients. Custom code shipped within a day of signing.

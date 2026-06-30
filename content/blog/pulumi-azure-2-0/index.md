@@ -6,7 +6,8 @@ meta_image: azure20.png
 authors:
     - mikhail-shilkov
 tags:
-    - Azure
+    - azure
+category: product
 ---
 
 {{% notes type="warning" %}}

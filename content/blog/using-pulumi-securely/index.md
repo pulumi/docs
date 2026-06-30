@@ -13,6 +13,7 @@ authors:
 tags:
     - security
     - pulumi-enterprise
+category: best-practices
 
 ---
 

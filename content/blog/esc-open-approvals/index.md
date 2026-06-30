@@ -10,6 +10,7 @@ authors:
     - robert-harris
 tags:
     - esc
+category: product
 ---
 
 Many teams live with the fear that a production environment **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.

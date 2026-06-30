@@ -6,7 +6,8 @@ lastmod: 2026-06-17
 meta_desc: "Like ksonnet, Pulumi provides complete access to the raw Kubernetes API, and supports additional features like modules/imports, components, functions, and more."
 meta_image: "kube-update.png"
 authors: ["mike-metral"]
-tags: ["Kubernetes", "cloud-native"]
+tags: [kubernetes, cloud-native]
+category: general
 canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 

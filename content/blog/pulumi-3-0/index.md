@@ -9,6 +9,7 @@ tags:
     - automation-api
     - native-providers
     - packages
+category: product
 ---
 
 Today we’re excited to announce the availability of Pulumi 3.0, the next major version of the Pulumi open source project, and the foundation for Pulumi’s [Cloud Engineering Platform](/cloud-engineering/).

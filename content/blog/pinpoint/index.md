@@ -8,7 +8,8 @@ authors:
     - michael-goode
 tags:
     - guest-post
-    - Kubernetes
+    - kubernetes
+category: customers
 ---
 
 *This guest blog was contributed by Andrew Kunzel and Michael Goode of [Pinpoint](https://www.pinpointhq.com/). Andrew is the Director of Backend Engineering, and Michael is a Platform Operations Engineer.*

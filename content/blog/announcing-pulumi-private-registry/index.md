@@ -10,12 +10,12 @@ authors:
     - idp-team
 
 tags:
-    - idp
-    - platform teams
-    - internal developer platform
-    - private registry
+    - internal-developer-platform
+    - platform-teams
+    - private-registry
     - features
     - releases
+category: product
 ---
 
 As part of the [Pulumi IDP](https://www.pulumi.com/product/internal-developer-platforms/) announcement at [PulumiUP](https://www.pulumi.com/pulumi-up/), we introduced the Pulumi Private Registry. For years, we’ve worked with organizations that have built their own internal developer platforms on top of Pulumi. During that time, we identified what we believe is the best method for creating flexible golden paths – a bottom-up approach that utilizes a central source of truth to drive golden paths. Thanks to Pulumi Private Registry, this approach has never been simpler.

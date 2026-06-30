@@ -9,6 +9,7 @@ authors:
 tags:
     - containers
     - aws
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

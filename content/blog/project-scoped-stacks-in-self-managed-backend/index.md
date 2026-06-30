@@ -9,7 +9,8 @@ authors:
     - abhinav-gupta
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.

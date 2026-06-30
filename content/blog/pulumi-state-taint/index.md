@@ -15,6 +15,7 @@ authors:
 tags:
     - pulumi-cli
     - releases
+category: product
 
 social:
     twitter: |

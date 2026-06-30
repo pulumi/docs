@@ -9,8 +9,9 @@ authors:
 tags:
     - azure
     - serverless
-    - cloud engineering
+    - cloud-engineering
     - azure-top-5
+category: tutorials
 series: azure-top-5
 ---
 

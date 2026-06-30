@@ -11,6 +11,7 @@ tags:
 - automation-api
 - observability
 - honeycomb
+category: community
 
 meta_image: "reaktor.png"
 ---

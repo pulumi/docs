@@ -10,6 +10,7 @@ tags:
     - configuration
     - components
     - static-websites
+category: tutorials
 ---
 
 Deploying a static website often involves provisioning a number of pieces of infrastructure and stitching those pieces together in a way to make the site accessible to your users. A static website typically consists of HTML, CSS, and JavaScript files along with any other static assets the site might need to render such as PNG and SVG files for example. These files are then uploaded to a storage bucket where they can be served from. This post will demonstrate how to easily deploy your static website to Azure and make it available for public access.

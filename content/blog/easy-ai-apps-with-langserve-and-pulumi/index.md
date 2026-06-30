@@ -11,6 +11,7 @@ tags:
 - ai
 - langserve
 - aws
+category: tutorials
 ---
 
 We all know how easy it is to create, deploy, and manage any cloud infrastructure

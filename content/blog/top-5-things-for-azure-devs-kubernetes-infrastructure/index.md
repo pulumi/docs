@@ -7,10 +7,11 @@ meta_image: azure-top-5.png
 authors:
     - sophia-parafina
 tags:
-    - Kubernetes
-    - AKS
-    - Azure
+    - kubernetes
+    - aks
+    - azure
     - azure-top-5
+category: tutorials
 series: azure-top-5
 ---
 

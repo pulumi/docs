@@ -4,7 +4,8 @@ date: "2019-06-27"
 meta_desc: "Static websites are back in the mainstream these days. See how easy it is to set up a static website on Azure with Pulumi."
 meta_image: feature.png
 authors: ["mikhail-shilkov"]
-tags: ["Azure"]
+tags: [azure]
+category: tutorials
 ---
 
 Static websites are back in the mainstream these days. Website

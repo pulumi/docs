@@ -15,6 +15,7 @@ tags:
   - configuration-management
   - dynamic-secrets
   - oidc
+category: product
 ---
 
 We are excited to announce support for [Doppler](https://doppler.com/) within [Pulumi ESC](/product/esc)! Pulumi ESC centralizes secrets and configuration management, providing a unified source of truth across your environments. With the addition of Doppler, a popular secrets management platform, ESC further extends its ecosystem, enabling seamless and secure access to secrets stored across diverse systems.

@@ -13,6 +13,7 @@ tags:
     - claude-code
     - codex
     - ai-agents
+category: product
 schema_type: auto
 
 social:

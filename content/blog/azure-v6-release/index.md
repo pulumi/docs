@@ -8,7 +8,8 @@ authors:
     - daniel-bradley
 tags:
     - azure
-    - release
+    - releases
+category: product
 ---
 
 The latest major release of the Azure Classic Pulumi Provider is available now!

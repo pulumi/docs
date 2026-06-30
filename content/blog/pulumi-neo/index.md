@@ -17,6 +17,7 @@ tags:
     - ai-agents
     - platform-engineering
     - pulumi-neo
+category: product
 
 ---
 

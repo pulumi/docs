@@ -11,6 +11,7 @@ tags:
     - pipelines
     - devops
     - azure-top-5
+category: tutorials
 series: azure-top-5
 ---
 

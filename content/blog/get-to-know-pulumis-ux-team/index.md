@@ -12,6 +12,7 @@ authors:
 
 tags:
     - pulumi-culture
+category: company
 
 ---
 

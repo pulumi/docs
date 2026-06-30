@@ -9,6 +9,7 @@ tags:
     - java
     - yaml
     - crosswalk
+category: product
 ---
 
 {{% notes type="warning" %}}

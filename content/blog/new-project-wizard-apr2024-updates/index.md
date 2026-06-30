@@ -12,6 +12,7 @@ tags:
     - new-project-wizard
     - developer-portals
     - platform-engineering
+category: product
 
 ---
 

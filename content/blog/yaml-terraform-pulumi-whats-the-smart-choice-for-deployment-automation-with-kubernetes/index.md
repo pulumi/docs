@@ -15,6 +15,7 @@ tags:
 - kubernetes
 - terraform
 - kubecon
+category: general
 
 social:
   twitter: |

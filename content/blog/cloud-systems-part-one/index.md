@@ -17,6 +17,7 @@ tags:
     - tutorials
     - cloud-engineering
     - cloud-systems
+category: tutorials
 series: cloud-systems
 ---
 

@@ -33,6 +33,7 @@ authors:
 tags:
     - azure
     - security
+category: product
 
 ---
 

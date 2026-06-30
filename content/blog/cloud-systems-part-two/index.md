@@ -16,6 +16,7 @@ tags:
     - cloud-systems
     - tutorials
     - docker
+category: tutorials
 series: cloud-systems
 ---
 

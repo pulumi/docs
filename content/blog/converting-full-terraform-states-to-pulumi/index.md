@@ -7,6 +7,7 @@ authors:
     - fraser-waters
 tags:
     - migration
+category: tutorials
 ---
 
 Building on our work of [converting Terraform projects](/blog/converting-full-terraform-programs-to-pulumi/), we now have support for adopting resources from Terraform state.

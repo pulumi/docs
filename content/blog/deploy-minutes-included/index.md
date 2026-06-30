@@ -10,6 +10,7 @@ authors:
 tags:
     - features
     - infrastructure-lifecycle-management
+category: product
 ---
 
 At Pulumi, we are committed to empowering developers and infrastructure teams with the tools they need to efficiently manage cloud resources at scale. As part of our ongoing efforts to enhance user experience and ease of use, we are excited to share some significant updates to Pulumi Deployments pricing, making it easier for _all_ customers to experiment with and adopt the easiest way to go from code to cloud.

@@ -12,6 +12,7 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
+category: product
 
 social:
     twitter: |

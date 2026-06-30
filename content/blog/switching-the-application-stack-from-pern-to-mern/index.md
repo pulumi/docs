@@ -5,6 +5,7 @@ meta_desc: Demonstrating the simplicity, modularity, and reusability of running 
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "kubernetes", "docker"]
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

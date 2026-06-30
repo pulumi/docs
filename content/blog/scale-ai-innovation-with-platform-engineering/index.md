@@ -10,6 +10,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - platform-engineering
+category: general
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

@@ -10,8 +10,9 @@ authors:
 tags:
     - announcements
     - ai
-    - neo
+    - pulumi-neo
     - features
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

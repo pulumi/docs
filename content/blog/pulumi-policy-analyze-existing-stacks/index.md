@@ -10,8 +10,9 @@ authors:
 tags:
     - policy-as-code
     - features
-    - iac
+    - infrastructure-as-code
     - ai
+category: product
 social:
     twitter: "New in Pulumi CLI: `pulumi policy analyze` runs policy packs against existing stack state, making policy testing faster for developers and automation workflows."
     bluesky: "New in Pulumi CLI: `pulumi policy analyze` runs policy packs against existing stack state, making policy testing faster for developers and automation workflows."

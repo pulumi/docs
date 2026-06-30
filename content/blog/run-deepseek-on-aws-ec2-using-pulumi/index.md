@@ -22,6 +22,7 @@ tags:
 - pulumi
 - aws
 - ec2
+category: tutorials
 
 social:
   twitter: |

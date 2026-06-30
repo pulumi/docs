@@ -8,7 +8,8 @@ authors:
     - praneet-loke
     - isaac-harris
 tags:
-    - "github actions"
+    - github-actions
+category: product
 
 ---
 

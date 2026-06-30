@@ -15,9 +15,10 @@ tags:
     - golden-paths
     - infrastructure-components
     - pulumi-templates
-    - developer-experience-devex
+    - developer-experience
     - reusable-infrastructure
     - idp-best-practices
+category: best-practices
 social:
     twitter: "Golden paths aren't just about standardization. They're about empowering developers with pre-architected, supported infrastructure patterns. Learn how to build reusable components and templates that transform your Internal Developer Platform. #platformengineering #goldenpaths #pulumi"
     linkedin: "The fragmentation in modern cloud ecosystems is real. Between AWS's 200+ services, Azure's growing catalog, and the explosion of DevOps tools, developers face decision fatigue at every turn. Our latest post in the IDP Best Practices series shows you how to solve this with golden paths: pre-architected infrastructure patterns that provide the happy path to production. Learn how to build reusable Pulumi components that work across languages, create templates that embody your best practices, and enable true self-service infrastructure without sacrificing governance or security. #platformengineering #goldenpaths #infrastructureascode #developerexperience"

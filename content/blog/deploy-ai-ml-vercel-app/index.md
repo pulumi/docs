@@ -10,10 +10,11 @@ authors:
 tags:
     - ai
     - ml
-    - iac
+    - infrastructure-as-code
     - vercel
     - vuejs
     - chatbot
+category: tutorials
 
 ---
 

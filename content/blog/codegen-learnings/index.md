@@ -9,9 +9,10 @@ authors:
     - artur-laksberg
     - simon-howe
 tags:
-    - Copilot
+    - copilot
     - ai
-    - iac
+    - infrastructure-as-code
+category: engineering
 
 ---
 

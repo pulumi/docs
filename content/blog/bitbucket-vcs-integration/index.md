@@ -11,6 +11,7 @@ tags:
     - bitbucket
     - features
     - pulumi-cloud
+category: product
 
 ---
 

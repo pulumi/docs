@@ -12,6 +12,7 @@ tags:
     - terraform
     - pulumi
     - platform-engineering
+category: general
 schema_type: auto
 social:
     twitter: |

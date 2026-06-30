@@ -9,6 +9,7 @@ authors:
     - eric-rudder
 tags:
     - features
+category: best-practices
 ---
 
 {{% notes %}}

@@ -8,8 +8,9 @@ meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - pulumi-news
+    - announcements
     - april-fools
+category: product
 ---
 
 {{< notes type="info" >}}

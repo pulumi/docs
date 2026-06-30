@@ -7,7 +7,8 @@ authors:
     - levi-blackstone
     - sashu-shankar
 tags:
-    - Kubernetes
+    - kubernetes
+category: product
 ---
 
 Kubernetes users often joke about being "YAML engineers," and the pile of YAML seems to get deeper every day. Today,

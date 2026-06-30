@@ -14,6 +14,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - pulumi-neo
+category: perspectives
 
 social:
     twitter: "AI Predictions for 2026: What DevOps Engineers Need to Know. From IDE evolution to agent orchestration, local AI breakthroughs to machine-to-machine payments. Here's how to prepare for the AI-driven future."

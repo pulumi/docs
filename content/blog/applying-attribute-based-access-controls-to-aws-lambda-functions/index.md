@@ -13,6 +13,7 @@ tags:
 - lambda
 - iam
 - serverless
+category: tutorials
 ---
 
 Event-driven, serverless functions have become a defining feature of many modern cloud architectures. With recent

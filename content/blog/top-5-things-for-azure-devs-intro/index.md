@@ -7,11 +7,12 @@ authors:
     - sophia-parafina
 tags:
     - azure
-    - virtual machines
+    - virtual-machines
     - serverless
-    - AKS
+    - aks
     - devops
     - azure-top-5
+category: general
 series: azure-top-5
 ---
 

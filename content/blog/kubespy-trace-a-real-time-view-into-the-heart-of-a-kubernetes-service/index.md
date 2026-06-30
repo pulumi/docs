@@ -5,7 +5,8 @@ date: "2018-09-26"
 meta_desc: "This post is part 3 in a series on the Kubernetes API. We will take a look at a diagnostic tool we've developed called Kubespy."
 meta_image: "trace-success-create-svc.png"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes"]
+tags: [kubernetes]
+category: engineering
 ---
 
 <p><!-- spacer --></p>

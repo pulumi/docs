@@ -14,6 +14,7 @@ tags:
     - ai
     - platform-engineering
     - cloud-native
+category: community
 social:
     twitter: "66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |
