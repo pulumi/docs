@@ -1,0 +1,47 @@
+{{/*
+    SOAI closing CTA — a dark rounded card (like a section) with a heading + intro
+    above a bracket card, mirroring how each section card holds its question cards.
+    The bracket card frames a 2x2 grid using the overview's "star accent" divider
+    (first cell right+bottom, last cell top+left, meeting at an open center). Each
+    cell pairs a product icon with a title, description, and a button.
+
+    Params (.): the cta dict —
+    - heading: Card headline.
+    - intro:   Intro paragraph (markdown).
+    - items:   Slice of { title, href, icon?, desc?, cta? }.
+*/}}
+{{ $heading := .heading }}
+{{ $intro := .intro }}
+{{ $items := .items }}
+{{ $corners := slice "tl" "tr" "bl" "br" }}
+
+<section class="soai-cta rounded-lg bg-violet-950 px-4 py-10 sm:px-8 sm:py-12 lg:px-16 lg:py-16 xl:px-24">
+
+    {{/* Heading + intro, above the bracket card */}}
+    <div class="mb-8 flex flex-col gap-4 lg:mb-12 items-center text-center">
+        {{ with $heading }}<h2 class="heading-1 m-0! text-white">{{ . }}</h2>{{ end }}
+        {{ with $intro }}<div class="m-0 max-w-3xl text-lg leading-snug text-white">{{ . | markdownify }}</div>{{ end }}
+    </div>
+
+    <div class="bracket-card bracket-card--dark" data-soai-reveal>
+        <div class="bracket-card__inner px-5 py-7 sm:px-7 sm:py-9 lg:px-10 lg:py-12">
+            <div class="grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2 md:gap-y-0">
+
+                {{ range $i, $item := $items }}
+                <div class="soai-cta__cell soai-cta__cell--{{ index $corners $i }}">
+                    {{ with $item.icon }}{{ partial "icon.html" (dict "name" . "weight" "duotone" "class" "text-violet-400 text-3xl") }}{{ end }}
+                    {{ with $item.title }}<span class="font-mono text-xl font-normal uppercase tracking-tight text-white">{{ . }}</span>{{ end }}
+                    {{ with $item.desc }}<p class="m-0 text-base leading-snug text-white">{{ . }}</p>{{ end }}
+                    {{ with $item.href }}
+                    <a href="{{ . }}" class="btn btn-primary mt-auto self-start">
+                        {{ $item.cta | default "Learn more" }}
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "regular" "class" "size-4") }}
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+
+            </div>
+        </div>
+    </div>
+</section>

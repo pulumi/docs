@@ -3,7 +3,6 @@ title_tag: "How to Debug a Pulumi Provider"
 meta_desc: "Learn the process for debugging Pulumi providers locally."
 title: Debugging Providers
 h1: Debugging Pulumi Providers
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Debugging Providers

@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC vs Doppler"
 meta_desc: Learn about the major differences between Pulumi ESC and Doppler.
 title: Pulumi ESC vs Doppler
 h1: Pulumi ESC vs Doppler
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         Name: Doppler

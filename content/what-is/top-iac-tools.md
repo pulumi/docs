@@ -2,7 +2,6 @@
 title: Top Infrastructure as Code Tools
 meta_desc: |
      Compare the top infrastructure as code (IaC) tools — Pulumi, Terraform, OpenTofu, CloudFormation, and more — on multi-cloud support, state, and ecosystem.
-meta_image: /images/what-is/top-iac-tools-meta.png
 type: what-is
 page_title: "Top Infrastructure as Code Tools"
 authors: ["adam-gordon-bell"]

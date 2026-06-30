@@ -2,7 +2,6 @@
 title: Use Pulumi Deployments with the Pulumi and GitHub CLIs
 title_tag: Use Pulumi Deployments with the Pulumi and GitHub CLIs
 meta_desc: Learn how to use Pulumi Deployments with the Pulumi and GitHub CLIs
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/get-started/deployments-using-cli/
 - /docs/pulumi-cloud/deployments/get-started/deployments-using-cli/

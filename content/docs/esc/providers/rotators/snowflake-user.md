@@ -81,7 +81,7 @@ CREATE SECURITY INTEGRATION pulumi_oidc
 
 Replace `<pulumi-org>` with your Pulumi organization name.
 
-## Step 5: Managing credentials
+### Step 5: Managing credentials
 
 Set up an environment with [Snowflake login credentials](/docs/esc/providers/login/snowflake-login/) for the rotation service user:
 
@@ -98,7 +98,7 @@ values:
           role: ESC_ROTATOR
 ```
 
-## Step 6: Rotated environment
+### Step 6: Rotated environment
 
 Then, create a separate environment for your rotated credentials:
 
@@ -130,6 +130,27 @@ values:
             MIIEvQIBADANBgkqhkiG9w0BAQE...
             -----END PRIVATE KEY-----
         createdAt: "2025-01-01T12:00:00Z"
+```
+
+### Alternative: authenticating with a private key
+
+Instead of an OIDC `token` from the [snowflake-login](/docs/esc/providers/login/snowflake-login/) provider, the `login` can authenticate directly with a key-pair by supplying a `privateKey`. Provide `account`, `user`, and exactly one of `privateKey` or `token`:
+
+```yaml
+# my-org/rotators/snowflake-keyrotator
+values:
+  user:
+    fn::rotate::snowflake-user:
+      inputs:
+        login:
+          account: myorganization-account
+          user: ESC_ROTATION_SERVICE_USER
+          privateKey:
+            fn::secret: |
+              -----BEGIN PRIVATE KEY-----
+              MIIEvQIBADANBgkqhkiG9w0BAQE...
+              -----END PRIVATE KEY-----
+        targetUser: ESC_ROTATION_DEMO_USER
 ```
 
 ## Validation
@@ -186,3 +207,17 @@ And exactly one of:
 | `user`      | string | The rotated user.                                                     |
 | `privateKey`| string | Private key in PEM format (stored as a secret).                       |
 | `rotatedAt` | string | When the keypair was generated, in RFC3339 format.                    |
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails to authenticate to Snowflake | The OIDC security integration may be misconfigured, or the rotation service user may lack access. | Verify the `EXTERNAL_OAUTH` security integration values (issuer, JWKS URL, audience, allowed roles) and confirm the service user maps to the expected `login_name`. See [snowflake-login](/docs/esc/providers/login/snowflake-login/). |
+| Rotation fails with a permissions error | The rotator role may not be able to alter the target user. | Confirm the rotator role can alter the target user, following the grants in [Configuring Snowflake for Key Rotation](#configuring-snowflake-for-key-rotation). |
+| Applications fail to authenticate after a rotation | Applications may still be using the rotated-out public key (`RSA_PUBLIC_KEY_2`). | Update applications to the `current` private key; the previous key remains valid as `RSA_PUBLIC_KEY_2` until the next rotation. |
+
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [snowflake-login](/docs/esc/providers/login/snowflake-login/) - Authenticate with Snowflake via OIDC
+- [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators

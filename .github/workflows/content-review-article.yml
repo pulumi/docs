@@ -21,6 +21,10 @@ on:
         description: 'Selection lane (priority/manual); informational — retirement is gated by the evidence bar + no_retire, not the lane'
         required: false
         default: 'priority'
+      queue_json:
+        description: 'Single-article queue JSON from the dispatcher (carries traffic/score/tier for deterministic provenance). Empty on manual dispatch — the worker falls back to rebuilding a traffic-blind queue from `path`.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -117,15 +121,27 @@ jobs:
             echo "ledger bucket output unavailable; ledger write will be skipped"
           fi
 
-      # Build a single-article queue for the dispatched path. --paths bypasses
-      # scoring/guardrails; --lane just tags the queue entry (informational —
-      # retirement is gated by the evidence bar + no_retire, not the lane).
+      # Establish the single-article queue. Preferred: use the queue the
+      # dispatcher handed us verbatim — it carries the selection facts (traffic,
+      # score, tier, last-reviewed) this page was actually chosen on. Fallback
+      # (manual dispatch with no queue_json): rebuild from --paths, which bypasses
+      # scoring/guardrails and is necessarily traffic-blind.
       - name: Build single-article queue
+        env:
+          QUEUE_JSON: ${{ github.event.inputs.queue_json }}
         run: |
-          python3 scripts/content-review/select-articles.py \
-            --paths "${{ github.event.inputs.path }}" \
-            --lane "${{ github.event.inputs.lane || 'priority' }}" \
-            --out .content-review-queue.json
+          if [ -n "$QUEUE_JSON" ]; then
+            printf '%s' "$QUEUE_JSON" > .content-review-queue.json
+            python3 -c "import json,sys; json.load(open('.content-review-queue.json'))" \
+              && echo "using dispatcher-provided queue" \
+              || { echo "::warning::queue_json was not valid JSON; rebuilding"; rm -f .content-review-queue.json; }
+          fi
+          if [ ! -f .content-review-queue.json ]; then
+            python3 scripts/content-review/select-articles.py \
+              --paths "${{ github.event.inputs.path }}" \
+              --lane "${{ github.event.inputs.lane || 'priority' }}" \
+              --out .content-review-queue.json
+          fi
           echo "--- queue ---"
           cat .content-review-queue.json
 
@@ -195,6 +211,20 @@ jobs:
             .vale-findings.json .frontmatter-validation.json \
             .cross-sibling-discovery.json .readthrough-findings.json 2>/dev/null || true
 
+      # Assemble the ~80%-done PR body from the queue + pre-step artifacts
+      # (facts → code, judgment → model), mirroring docs-review's compose-review.
+      # The model EDITS .pr-body-draft.md rather than authoring the body from a
+      # bare template: provenance and the finding inventory are rendered for it,
+      # each finding pre-bucketed into Fixes/Findings-not-applied with a <TODO>.
+      # Degrades to a minimal valid draft so a compose hiccup never blocks the run.
+      - name: Compose PR body draft
+        run: |
+          python3 scripts/content-review/compose-pr-body.py \
+            --queue .content-review-queue.json --out .pr-body-draft.md \
+            || printf '## Why this page\n\n_Draft composition failed; build the body from the template and the run log._\n\n## Fixes applied\n\n## Findings not applied\n\n## Screenshot check\n\n## Rendered content\n\n## Verification\n' > .pr-body-draft.md
+          echo "--- pr body draft ---"
+          cat .pr-body-draft.md
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
@@ -231,17 +261,41 @@ jobs:
                description and continue with what you have.)
             3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
                goes in the PR description's "Findings not applied" section.
-            4. Run the screenshot/UI verification pass (flag-only).
-            5. Run `make lint` and `make build`; resolve anything they
-               surface or drop the offending change.
-            6. Run the rendered content pass over the built page — both
-               the HTML view and the customer-facing markdown view
-               (`public/<url>/index.html` and `index.md`) — per the skill.
-            7. If you applied any fix, open a **ready** (non-draft) PR. Build
-               its body from
-               `.claude/commands/review-existing-content/references/pr-body-template.md`
-               (fill every section) and pass it with `gh pr create --body-file`.
-               A clean article (zero fixes) opens no PR.
+            4. The "Screenshot check" section of `.pr-body-draft.md` is
+               pre-filled when the page references no content images. Run the
+               screenshot/UI pass (flag-only) and fill the section ONLY if it
+               still contains a `<TODO>`; otherwise leave the composed text.
+            5. Run `make lint`; resolve anything it surfaces or drop the
+               offending change. Do NOT run `make build` here — build is left
+               to the PR's normal CI (step 6 runs it only when required).
+            6. The "Rendered content" section is pre-filled "Skipped" when the
+               page uses no content-bearing shortcode/partial/include. ONLY if
+               it still contains a `<TODO>`: run `make build`, then run the
+               rendered content pass over both the HTML and customer-facing
+               markdown views (`public/<url>/index.html` and `index.md`) per
+               the skill, and fill the section.
+            7. If you applied any fix, open a **draft** PR whose body is
+               `.pr-body-draft.md` (composed for you at the repo root — the
+               assemble-then-judge model, like the pre-merge review). Open it as
+               a DRAFT (`gh pr create --draft`): the workflow re-lints your branch
+               and promotes the PR to ready only if lint passes — that ready
+               transition is what triggers triage and the docs review. Do NOT
+               write the body from scratch. EDIT the draft:
+               - The top `> [!IMPORTANT]` auto-merge notice is verbatim — leave
+                 it exactly as composed; do not move, reword, or remove it.
+               - "Why this page" is rendered from the selection queue — leave it
+                 verbatim, its facts are authoritative.
+               - "Fixes applied" is pre-stubbed with one row per high-confidence
+                 finding. Keep a row ONLY for a fix you actually applied and fill
+                 its Correction; move every row you did not apply down to
+                 "Findings not applied" with a one-line reason.
+               - Fill each `<TODO>` (deferral reasons, the screenshot and rendered
+                 observations). Resolve every `<TODO>` and strip the HTML comment
+                 hints before opening the PR.
+               - Leave the `<!-- LINT-RESULT -->` line in "Verification" exactly
+                 as-is; the workflow stamps it with the authoritative result.
+               Then `gh pr create --draft --body-file .pr-body-draft.md`. A clean
+               article (zero fixes) opens no PR.
             8. Write `.content-review-verdict.json` at the repo root — your ONLY
                structured output. Shape:
                `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
@@ -273,20 +327,25 @@ jobs:
           python3 scripts/content-review/summarize-denials.py \
             "${{ steps.claude.outputs.execution_file }}"
 
-      # Lint re-gate: don't trust the model's self-report that `make lint`
-      # passed on the branch. For a fix verdict, check out the pushed branch and
-      # re-run lint. On failure: flip the PR back to draft, comment the output,
-      # and skip the docs-review dispatch (the `lint_ok` output gates it). The
-      # ledger still records `reviewed` — the draft PR stays for a human. Build
-      # is left to the PR's normal CI.
-      - name: Re-lint the fix branch
+      # Lint re-gate + ready promotion. The model opened the PR as a DRAFT and
+      # we don't trust its self-report that `make lint` passed: check out the
+      # pushed branch and re-run lint ourselves. On PASS, promote the PR to ready
+      # — that draft→ready transition is what fires triage and the docs review
+      # (content-review/* PRs flow through the normal triage → review chain; see
+      # claude-triage.yml / claude-code-review.yml). On FAIL, leave it draft (so
+      # triage never fires) and comment the output for a human. Either way, stamp
+      # the authoritative result into the PR body's `<!-- LINT-RESULT -->`
+      # placeholder — this gate is the authority on lint, not the model. The
+      # ledger still records `reviewed`. Build is left to the PR's normal CI.
+      # On a ready PR we also arm GitHub auto-merge (squash); `master` requires
+      # 1 approval + the build check, so it merges only after a human approves.
+      - name: Re-lint, promote, and arm auto-merge
         id: lint
         if: hashFiles('.content-review-verdict.json') != ''
         continue-on-error: true
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
-          echo "ok=true" >> "$GITHUB_OUTPUT"
           VERDICT=$(jq -r '.verdict // empty' .content-review-verdict.json)
           [ "$VERDICT" = "fixed" ] || { echo "verdict=$VERDICT; no branch to re-lint"; exit 0; }
           RETIRE=$(jq -r 'if .retirement then "retire-" else "" end' .content-review-verdict.json)
@@ -294,14 +353,30 @@ jobs:
           BRANCH="content-review/${RETIRE}${SLUG}"
           git fetch origin "$BRANCH" || { echo "::warning::branch $BRANCH not found"; exit 0; }
           git checkout "$BRANCH"
+          # Stamp the authoritative lint result into the PR body's Verification
+          # section, replacing the composer's placeholder (idempotent: only acts
+          # if the placeholder is still present, so a re-run can't double-stamp).
+          stamp_body() {
+            python3 scripts/content-review/stamp-lint-result.py \
+              --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" || true
+          }
           if make lint > .lint.log 2>&1; then
-            echo "lint passed on $BRANCH"
+            echo "lint passed on $BRANCH; promoting draft → ready (fires triage → review)"
+            stamp_body passed
+            gh pr ready "$BRANCH" || echo "::warning::could not promote $BRANCH to ready"
+            # Arm auto-merge (squash) on the now-ready PR. `master` requires 1
+            # approving review AND the "Install deps and build site" check, so
+            # this NEVER merges on its own — the PR merges only once a human
+            # approves and the build is green, which just removes the manual
+            # merge click after the review approves. No-op (warns) if auto-merge
+            # is unavailable or the PR already satisfies all conditions.
+            gh pr merge "$BRANCH" --auto --squash \
+              || echo "::warning::could not enable auto-merge on $BRANCH"
           else
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::make lint failed on $BRANCH; flipping PR to draft"
-            gh pr ready "$BRANCH" --undo || true
+            echo "::warning::make lint failed on $BRANCH; leaving PR as draft"
+            stamp_body failed
             {
-              echo "Automated review note: \`make lint\` failed on this branch, so the PR was returned to draft and the docs review was not dispatched. Lint output:"
+              echo "Automated review note: \`make lint\` failed on this branch, so the PR was left as a draft and no review was triggered. Lint output:"
               echo ""
               echo '```'
               tail -c 4000 .lint.log
@@ -312,13 +387,15 @@ jobs:
           git checkout - || true
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.
-      # Runs `if: always()` so a model that exits without output still lands an
-      # `incomplete` record. An incomplete outcome does not advance the
-      # staleness clock (the page stays due, retried next sweep up to the
-      # attempt cap) rather than silently looping. record-review.py builds the
-      # canonical record, derives the PR facts from `gh`, stamps reviewed_at,
-      # increments attempts, uploads, and emits the dispatch signal. One article
-      # per run ⇒ one object, so writes never collide.
+      # Runs `if: always()` so a model that exits without output still lands a
+      # record. With no sentinel the status is derived from observable state
+      # (`--claude-outcome` + whether a content-review/<slug> branch was pushed):
+      # a successful run that changed nothing is "clean" and advances the
+      # staleness clock; a failed run or a stranded branch is "incomplete" and
+      # stays due (retried next sweep up to the attempt cap). record-review.py
+      # builds the canonical record, derives the PR facts from `gh`, stamps
+      # reviewed_at, increments attempts, uploads, and emits the dispatch signal.
+      # One article per run ⇒ one object, so writes never collide.
       - name: Record review ledger
         id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
@@ -329,28 +406,15 @@ jobs:
         run: |
           python3 scripts/content-review/record-review.py \
             --queue .content-review-queue.json \
-            --verdict .content-review-verdict.json
+            --verdict .content-review-verdict.json \
+            --claude-outcome "${{ steps.claude.outcome }}"
 
-      # Slop defense: bot-authored PRs are auto-skipped by the docs-review
-      # pipeline (claude-code-review.yml sets skip_reason=bot-author), so the
-      # content PR gets its review via explicit force dispatch — the same
-      # pattern claude-new.yml uses for #new-review. Gated on a derived
-      # `reviewed` status AND a passing re-lint; PR number + head SHA come from
-      # the ledger record's gh-derived values, never the model's self-report.
-      - name: Dispatch docs review over the PR
-        if: steps.record.outputs.dispatch == 'true' && steps.lint.outputs.ok != 'false'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          NUMBER='${{ steps.record.outputs.pr_number }}'
-          HEAD_SHA='${{ steps.record.outputs.head_sha }}'
-          echo "dispatching review for PR #$NUMBER ($HEAD_SHA)"
-          gh workflow run claude-code-review.yml \
-            --repo "${{ github.repository }}" \
-            -f pr_number="$NUMBER" \
-            -f head_sha="$HEAD_SHA" \
-            -f force=true \
-            || echo "::warning::review dispatch failed for PR #$NUMBER"
+      # No explicit review dispatch: a content-review PR that passes re-lint is
+      # promoted draft → ready in the step above, and that transition drives the
+      # normal triage → docs-review chain (claude-triage.yml is opened to
+      # content-review/* bot PRs; claude-code-review.yml reviews them honoring the
+      # trivial / frontmatter-only short-circuits). Trivial fixes are skipped
+      # there instead of being force-reviewed.
 
 env:
   ESC_ACTION_OIDC_AUTH: true

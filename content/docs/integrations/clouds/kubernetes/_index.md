@@ -4,7 +4,6 @@ meta_desc: Kubernetes integration with Pulumi — providers, packages, the Pulum
 title: Kubernetes
 linktitle: Kubernetes
 h1: Kubernetes
-meta_image: /images/docs/meta-images/docs-clouds-kubernetes-meta-image.png
 menu:
   integrations:
     name: Kubernetes

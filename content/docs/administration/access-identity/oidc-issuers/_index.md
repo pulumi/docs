@@ -4,7 +4,6 @@ meta_desc: This page provides an overview of how to configure OIDC Issuers in Pu
            to establish trust relationships with third-party OIDC providers.
 title: OIDC Issuers
 h1: OIDC Issuers
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     parent: administration-access-identity

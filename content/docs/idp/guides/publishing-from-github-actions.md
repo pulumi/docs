@@ -3,7 +3,6 @@ title: Publishing Components from GitHub Actions
 title_tag: Publishing Pulumi Components from GitHub Actions to Private Registry
 h1: Publishing Components from GitHub Actions
 meta_desc: Learn how to set up automated publishing of Pulumi components from GitHub Actions to your Pulumi Cloud private registry.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/idp/concepts/publishing-from-github-actions/
   - /docs/idp/get-started/publishing-from-github-actions/

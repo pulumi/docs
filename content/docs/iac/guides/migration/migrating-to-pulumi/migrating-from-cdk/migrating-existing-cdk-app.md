@@ -3,7 +3,6 @@ title_tag: "Migrating existing AWS CDK applications to Pulumi"
 meta_desc: Migrate your existing AWS CDK applications to Pulumi, including converting code and importing existing resources.
 title: Migrating existing AWS CDK applications
 h1: "Migrating existing AWS CDK applications to Pulumi"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
     - /docs/iac/guides/migration/migrating-to-pulumi/migrating-from-cdk/migrating-existing-cdk-app/
 menu:

@@ -3,7 +3,6 @@ title: Clouds
 title_tag: "Cloud Guides | Pulumi IaC"
 meta_desc: Infrastructure as Code guides for AWS and Azure with Pulumi.
 h1: Cloud Guides
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Clouds

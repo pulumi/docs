@@ -3,7 +3,6 @@ title_tag: "Custom VCS Integration | Version Control"
 meta_desc: Connect any Git or Mercurial version control system to Pulumi Cloud for webhook-driven deployments using Custom VCS integrations.
 title: "Custom VCS"
 h1: "Custom VCS"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     integrations:
         name: Custom VCS

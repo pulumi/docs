@@ -47,6 +47,8 @@
                 {{ if .Params.openapi_schema }}
                     {{ partial "openapi/schema-component.html" . }}
                 {{ end }}
+
+                <pulumi-top-button></pulumi-top-button>
             </div>
             {{ if not .Params.norightnav }}
             <div class="docs-table-of-contents docs-toc-desktop">

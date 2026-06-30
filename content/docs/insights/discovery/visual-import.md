@@ -3,7 +3,6 @@ title_tag: "Visual Import"
 meta_desc: Use Pulumi Visual Import to convert discovered cloud resources into clean IaC code with a guided 5-step workflow—no manual setup required.
 title: Visual Import
 h1: Visual Import
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     parent: insights-discovery

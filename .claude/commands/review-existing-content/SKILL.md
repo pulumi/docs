@@ -155,24 +155,34 @@ Editing guardrails:
   them, but be defensive.
 - Never add the `automation/merge` label to anything.
 
-### 4. Screenshot / UI pass
+### 4. Screenshot / UI pass (only when the page has images)
 
-Follow `references/screenshot-verification.md` for every image the article
-references. Verified-stale screenshots are **flagged in the PR description**
-(Screenshot check section), never regenerated or deleted by you.
+This pass is **gated**: the workflow pre-fills the PR's "Screenshot check"
+section with "No images." when the source references no content images (a
+deterministic source check — the shared `meta_image` card doesn't count). Run
+this pass only when that section still carries a `<TODO>`. When you do, follow
+`references/screenshot-verification.md` for every image the article references.
+Verified-stale screenshots are **flagged in the PR description** (Screenshot
+check section), never regenerated or deleted by you.
 
-### 5. Validate and render
+### 5. Validate
 
-`make lint` and `make build` must pass on the branch. Fix what they surface;
-if you cannot, drop the offending change rather than shipping a broken
-build. The build also produces the rendered views the next step reads.
+`make lint` must pass on the branch. Fix what it surfaces; if you cannot, drop
+the offending change rather than shipping a lint failure. **Do not run `make
+build` here** — the full build is left to the PR's normal CI, and step 6 runs it
+only on the pages that actually need the rendered pass.
 
-### 6. Rendered content pass (the customer-facing views)
+### 6. Rendered content pass (only when the page assembles render-time content)
 
 Source review misses content the page assembles at render time — shared
-snippets from shortcodes, values from `data/` files, partial-driven
-sections. The customer sees the assembled page, so check both rendered
-views `make build` just produced:
+snippets from shortcodes, values from `data/` files, partial-driven sections.
+But most docs pages assemble nothing the source doesn't already show (plain
+prose, code tabs, callouts, stepper chrome), so this pass is **gated** too: the
+workflow pre-fills the "Rendered content" section with "Skipped" when the source
+uses no content-bearing shortcode/partial/include, and leaves a `<TODO>` only
+when one is present (it names the triggering shortcode). Run this pass only when
+that `<TODO>` is there. When you do, first run `make build` (it produces the
+rendered views), then check both:
 
 **HTML view** — `public/<url path>/index.html`:
 
@@ -188,39 +198,41 @@ views `make build` just produced:
    applied, and the PR description must flag them as multi-page
    ("also rendered on N other pages" — grep for other callers).
 
-**Markdown view** — `public/<url path>/index.md` (the LLM/agent-facing
-render; docs pages cascade `outputs: [HTML, markdown]`, and shortcodes
-render through their `layouts/shortcodes/*.markdown.md` templates):
+You do **not** check the markdown view (`index.md`) for leaked shortcode
+delimiters here. Whether a shortcode renders cleanly to markdown is a property of
+the shortcode, not the page, so it's covered once across the whole built corpus
+by `scripts/content-review/check-rendered-markdown.py` (run periodically / in CI),
+not re-paid per review. Content-*mangling* in the markdown output (a template
+that silently drops or rewrites content) is a rendering-pipeline bug for the
+templating owner, tracked separately — not something to fix in a content review.
 
-1. Read it and check for leaked shortcode syntax — literal `{{<` / `>}}`
-   or `{{%` / `%}}` fragments in the output are the signature of a
-   shortcode missing its markdown template.
-2. Spot-check that content present in the HTML view isn't silently absent
-   here (same missing-template failure, quieter symptom).
-3. Fixes here are usually a new/corrected `*.markdown.md` shortcode
-   template — shared-source again, same multi-page flagging rule. When the
-   right rendering is debatable, it's a Findings-not-applied entry, not a
-   fix.
+If this pass applied any fix, re-run `make build` and then `make lint` (as
+separate commands) before opening the PR.
 
-If this pass applied any fix, re-run `make lint && make build` before
-opening the PR.
+### 7. PR — only when you applied a fix, opened as a draft
 
-### 7. PR — only when you applied a fix, ready (non-draft)
+Open a **draft** PR to `master`. You do **not** write the body from scratch: the
+workflow composed `.pr-body-draft.md` (via `compose-pr-body.py`, the
+assemble-then-judge model — the composer ASSEMBLES facts, you JUDGE) with every
+section present and each pre-found finding pre-bucketed under a `<TODO>`. **Edit
+that draft**, resolve every `<TODO>`, strip the HTML-comment hints, and create
+the PR with `gh pr create --draft --body-file .pr-body-draft.md`. The workflow
+then re-runs `make lint` on your branch and **promotes the PR to ready only if
+lint passes** — that ready transition is what triggers triage and the docs
+review (a clean lint means it flows through the normal pipeline; a trivial fix is
+short-circuited there). A lint failure leaves the PR a draft with a comment for a
+human; humans merge. The sections (each is checked for):
 
-Open a **ready** PR to `master`. Build the body from
-`references/pr-body-template.md` — fill **every** section — and create the PR
-with `gh pr create --body-file`. The workflow re-runs `make lint` on your branch
-(flipping the PR back to draft if it fails) and dispatches the automated docs
-review over it afterward; humans merge. The template's sections (each one is
-checked for):
-
-- **Why this page**: lane, tier, traffic figure + report period, last
-  reviewed (from the queue entry) — so the reviewer knows how it was chosen.
-- **Fixes applied**: table of claim/finding → authoritative source →
-  correction, one row per change.
-- **Findings not applied**: every skipped finding with one line of reasoning.
-  End the section with: "For the judgment-level items above, run
-  `/glow-up <path>`."
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
+  GitHub auto-merge on the PR, so the body flags that approving merges it.
+  **Leave verbatim** — do not move, reword, or remove it.
+- **Why this page**: composed from the selection queue (lane, tier, traffic
+  figure + period, last reviewed). **Leave verbatim** — do not re-narrate it.
+- **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
+  only for a fix you actually applied (fill its Correction); move the rest down.
+- **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
+  any row you moved down. One line of reasoning each. End the section with: "For
+  the judgment-level items above, run `/glow-up <path>`."
 - **Screenshot check**: per image — current / stale (what differs) /
   unverifiable; note any aging reference screenshots (see
   `references/screenshot-verification.md`).
@@ -228,8 +240,9 @@ checked for):
   checked in the HTML view, the markdown view's shortcode-template status,
   and any shared-source (shortcode/partial/data) findings with their
   page-reach ("also rendered on N other pages").
-- **Verification**: confirm `make lint` + `make build` passed and which
-  pre-step artifacts informed the review (note any pre-step that failed).
+- **Verification**: the composer renders the pre-step artifact inventory; the
+  `make lint` result is stamped by the re-lint gate — leave the
+  `<!-- LINT-RESULT -->` line untouched. Note any pre-step that failed.
 
 Do **not** record `pr_number` or `head_sha` yourself — the workflow derives
 them from the branch. A clean article (zero applicable fixes) skips the PR —

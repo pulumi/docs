@@ -2,7 +2,6 @@
 title: Infrastructure as Code for DevOps
 meta_desc: "Infrastructure as code is what makes DevOps work past the app boundary: CI/CD, shift-left testing, policy as code, and AI agents for the platform itself."
 
-meta_image: /images/what-is/infrastructure-as-code-for-devops-meta.png
 type: what-is
 page_title: "Infrastructure as Code for DevOps"
 

@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: RBAC Scopes - Organization settings"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
 title: "RBAC Scopes: Organization Settings"
 h1: "RBAC Scopes: Organization Settings"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: "Organization settings"
@@ -16,7 +15,7 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
-This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/permission-sets#entity-types) and group.
+This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/entities#entity-types) and group.
 
 ## Agent Pools
 

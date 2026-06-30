@@ -3,7 +3,6 @@ title_tag: azure-login Pulumi ESC Provider
 meta_desc: The azure-login Pulumi ESC Provider enables you to log in to Azure using OIDC or static credentials.
 title: azure-login
 h1: azure-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: azure-login

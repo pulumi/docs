@@ -3,7 +3,6 @@ title_tag: "Pulumi Go Provider SDK"
 meta_desc: "Learn how to use the Pulumi Go Provider SDK to author Pulumi packages in Go."
 title: Pulumi Go Provider SDK
 h1: Pulumi Go Provider SDK
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Pulumi Go Provider SDK

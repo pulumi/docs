@@ -3,7 +3,6 @@ title: Integrations
 title_tag: Neo Integrations
 h1: Neo Integrations
 meta_desc: Neo integrations connect the agent to MCP context sources, cloud CLIs, GitHub, and Slack.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: Integrations

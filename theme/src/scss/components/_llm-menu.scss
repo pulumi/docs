@@ -1,22 +1,15 @@
 .llm-menu-container {
     position: relative;
-    display: block;
-}
-
-.llm-menu-trigger {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 
-    i:first-child {
-        width: 14px;
-        margin-right: 0.5rem;
+    // Hold a fixed width on the primary "Copy page" segment so the control
+    // doesn't shrink when its label swaps to the shorter "Copied!".
+    .btn-split > .btn:first-child {
+        min-width: 7.5rem;
+        justify-content: start;
     }
 }
 

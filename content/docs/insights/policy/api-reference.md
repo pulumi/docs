@@ -3,7 +3,6 @@ title: API & SDK Reference
 title_tag: "API & SDK Reference | Pulumi Policies"
 h1: Policy API & SDK Reference
 meta_desc: Reference documentation for the Pulumi Policy SDK (TypeScript, Python, OPA) and the Pulumi Cloud REST API for managing policy packs, groups, and results.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: API & SDK Reference

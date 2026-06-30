@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Access Tokens"
 meta_desc: Learn about the various types of access tokens for the Pulumi Cloud.
 title: Access tokens
 h1: Pulumi Cloud access tokens
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Access tokens
@@ -36,29 +35,9 @@ When using tokens, be mindful of the following security best practices:
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
 * Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
 
-## Access token permissions
-
-### Personal tokens
-
-Personal access tokens carry the same permissions as the user who created them. This includes all organization memberships, team memberships, and role assignments that apply to the user across every Pulumi Cloud organization they belong to.
-
-### Organization tokens
-
-Organization tokens act on behalf of the organization itself. Rather than mapping to a fixed set of capabilities, organization tokens derive their permissions from the [RBAC role](/docs/administration/access-identity/rbac/roles/) assigned to them at creation time. This means you can tailor the exact level of access an organization token has—from read-only access to a subset of stacks, to full administrative control—by assigning the appropriate role.
-
-Organization tokens that are assigned no explicit role receive the organization's [default member role](/docs/administration/access-identity/rbac/roles/). The token's access is automatically limited to the single organization it was created in, unlike a personal token which spans all of a user's organizations.
-
-### Team tokens
-
-Team tokens act on behalf of a specific team within the organization. A team token's effective permissions are determined by the [roles assigned to that team](/docs/administration/access-identity/rbac/teams/) at the time each request is evaluated. If a team's role assignments change, those changes are immediately reflected in what the team token can do.
-
-Team tokens are useful for CI/CD pipelines that should be scoped to only the resources a particular team manages, without requiring a personal token from any individual team member.
-
-For a detailed reference on how permissions are structured and evaluated, see [Role-Based Access Control (RBAC)](/docs/administration/access-identity/rbac/).
-
 ## Personal access tokens
 
-Personal access tokens have the same permissions as your Pulumi Cloud user. This includes your respective permissions for all Pulumi Cloud organizations in which your user is a member.
+Personal access tokens carry the same permissions as your Pulumi Cloud user. This includes all organization memberships, team memberships, and role assignments that apply to you across every Pulumi Cloud organization you belong to.
 
 ### Creating personal access tokens
 
@@ -142,7 +121,7 @@ Both token types continue to work. The admin/standard distinction maps directly 
 
 ## OIDC issued tokens
 
-OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token.
+OIDC-issued access tokens generated in CI/CD workflows (such as GitHub Actions) do not receive admin privileges by default. To perform operations that require elevated access—such as creating or deleting stacks—you must explicitly request the admin scope when exchanging the OIDC token. For how to register and configure an issuer for these tokens, see [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/).
 
 For example:
 

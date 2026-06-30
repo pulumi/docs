@@ -1,0 +1,23 @@
+{{/*
+    SOAI chart dispatcher.
+
+    Routes a normalized question dict to the right chart partial by `kind`.
+    Adding a chart type later (stacked, grouped, diverging, donut) is one branch
+    + one partial — the data shape and card wrapper stay the same.
+
+    Params (.): the question dict (needs .kind and .options).
+*/}}
+{{ $kind := .kind }}
+{{ if eq $kind "bar-horizontal" }}
+    {{ partial "soai/chart-bar-horizontal.html" . }}
+{{ else if eq $kind "column-vertical" }}
+    {{ partial "soai/chart-column-vertical.html" . }}
+{{ else if eq $kind "stacked-bar" }}
+    {{ partial "soai/chart-stacked-bar.html" . }}
+{{ else if eq $kind "grouped-column" }}
+    {{ partial "soai/chart-grouped-column.html" . }}
+{{ else if eq $kind "diverging" }}
+    {{ partial "soai/chart-diverging.html" . }}
+{{ else }}
+    {{ warnf "soai/chart.html: unknown chart kind %q (question %s)" $kind .id }}
+{{ end }}

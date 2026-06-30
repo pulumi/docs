@@ -3,12 +3,11 @@ title_tag: "Pulumi Cloud: RBAC Scopes - Environments"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
 title: "RBAC Scopes: Environments"
 h1: "RBAC Scopes: Environments"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: "Environments"
     parent: administration-access-identity-rbac-scopes
-    weight: 4
+    weight: 2
     identifier: pulumi-cloud-access-management-rbac-scopes-environments
 aliases:
 - /docs/intro/pulumi-service/scopes/environments

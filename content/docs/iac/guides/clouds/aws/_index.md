@@ -3,7 +3,6 @@ title_tag: "AWS Guides | Pulumi IaC"
 title: AWS
 h1: AWS Guides
 meta_desc: Guides for working with AWS services using Pulumi's AWS providers and component packages.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
     iac:
         name: AWS

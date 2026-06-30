@@ -3,7 +3,6 @@ title_tag: "Pulumi vs. OpenTofu"
 meta_desc: "Pulumi vs. OpenTofu: Pulumi is a multi-cloud IaC platform in general-purpose languages; OpenTofu is a Linux Foundation Terraform fork that uses HCL."
 title: OpenTofu
 h1: Pulumi vs. OpenTofu
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: OpenTofu

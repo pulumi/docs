@@ -3,7 +3,6 @@ title_tag: "Using GitLab CI/CD with Pulumi | CI/CD"
 meta_desc: Run Pulumi in GitLab CI/CD pipelines and ship infrastructure through a trunk-based workflow, with static-token or OIDC authentication.
 title: GitLab CI/CD
 h1: Using GitLab CI/CD with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: GitLab CI/CD

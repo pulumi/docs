@@ -3,7 +3,6 @@ title_tag: "Pulumi vs. Helm"
 meta_desc: "Pulumi vs. Helm: Pulumi is multi-cloud IaC in general-purpose languages; Helm is a Kubernetes-only package manager. Many teams use them together."
 title: Helm
 h1: Pulumi vs. Helm
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Helm

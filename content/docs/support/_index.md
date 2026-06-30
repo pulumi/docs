@@ -9,7 +9,6 @@ menu:
     identifier: support-home
     weight: 1
 meta_desc: Get help with Pulumi through FAQs, troubleshooting guides, community resources, and support options.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Support & Troubleshooting
 description: <p>Hitting an error or trying to diagnose a problem with a Pulumi program? Day-to-day troubleshooting, debugging, and logging guides live with the rest of the day-2 workflows under <a href="/docs/iac/operations/">IaC Operations</a>. This page covers FAQs, support channels, and how to file an issue.</p>
 aliases:

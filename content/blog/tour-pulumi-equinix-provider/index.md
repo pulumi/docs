@@ -1,6 +1,7 @@
 ---
 title: "A Tour of the Pulumi Equinix Provider"
 date: 2023-06-28
+lastmod: 2026-06-26
 meta_desc: Learn to use the capabilities of the Pulumi Equinix Provider, including how to deploy Kubernetes on Equinix Metal.
 meta_image: tour-equinix-provider.png
 authors:
@@ -150,7 +151,7 @@ deployment = k8s.apps.v1.Deployment(
 
 ## Adding storage
 
-Our cluster as configured will not be able to run stateful workloads due to the lack of a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) from which [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) can be provisioned. Popular storage options for bare-metal/edge Kubernetes clusters include [Portworx](https://www.purestorage.com/products/cloud-native-applications/portworx.html), [Longhorn](https://longhorn.io/), [Rook](https://rook.io/), or (for non-production scenarios as data loss is likely if a node goes down) [NFS](https://kubernetes.io/docs/concepts/storage/storage-classes/#nfs).
+Our cluster as configured will not be able to run stateful workloads due to the lack of a [StorageClass](https://kubernetes.io/docs/concepts/storage/storage-classes/) from which [PersistentVolumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) can be provisioned. Popular storage options for bare-metal/edge Kubernetes clusters include [Portworx](https://portworx.com/), [Longhorn](https://longhorn.io/), [Rook](https://rook.io/), or (for non-production scenarios as data loss is likely if a node goes down) [NFS](https://kubernetes.io/docs/concepts/storage/storage-classes/#nfs).
 
 ## Conclusion
 

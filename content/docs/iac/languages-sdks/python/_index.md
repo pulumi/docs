@@ -3,7 +3,6 @@ title_tag: "Python | Languages & SDKs"
 meta_desc: Learn to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Python
 h1: Pulumi & Python
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Python

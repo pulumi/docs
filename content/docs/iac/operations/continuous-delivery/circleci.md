@@ -3,7 +3,6 @@ title_tag: "Using CircleCI with Pulumi | CI/CD"
 meta_desc: Run Pulumi in CircleCI with the Pulumi Orbs, authenticate with Pulumi Cloud, and ship infrastructure through a trunk-based CI/CD workflow.
 title: CircleCI
 h1: Using CircleCI with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: CircleCI

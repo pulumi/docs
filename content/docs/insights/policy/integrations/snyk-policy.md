@@ -4,7 +4,6 @@ meta_desc: Snyk container scanning helps you ensure that your Docker images are 
 title: Snyk Container Scanning
 h1: Snyk Container Scanning
 weight: 4
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: Snyk Container Scanning

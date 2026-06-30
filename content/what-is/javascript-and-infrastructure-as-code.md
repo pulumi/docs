@@ -2,7 +2,6 @@
 title: JavaScript and TypeScript Infrastructure as Code
 meta_desc: "Define cloud infrastructure as code in TypeScript or JavaScript: real types, npm packages, IDE tooling, and Jest tests for VPCs and clusters."
 
-meta_image: /images/what-is/javascript-and-infrastructure-as-code-meta.png
 type: what-is
 page_title: "JavaScript and TypeScript Infrastructure as Code"
 

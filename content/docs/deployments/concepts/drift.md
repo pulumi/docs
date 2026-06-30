@@ -3,7 +3,6 @@ title: "Drift detection and remediation"
 title_tag: "Drift detection and remediation"
 h1: "Drift detection and remediation"
 meta_desc: Detect and remediate infrastructure drift on a schedule with Pulumi Cloud — the Drift tab, auto-remediation, and webhook notifications.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/deployments/deployments/drift/
 - /docs/pulumi-cloud/deployments/drift/

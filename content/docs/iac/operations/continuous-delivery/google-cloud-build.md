@@ -3,7 +3,6 @@ title_tag: "Using Google Cloud Build with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Google Cloud Build using the official Pulumi container images, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Google Cloud Build
 h1: Using Google Cloud Build with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Google Cloud Build

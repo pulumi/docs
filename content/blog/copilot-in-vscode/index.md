@@ -46,7 +46,7 @@ social:
     twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
     linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows.
 
-    Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
+        Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
 
 ---
 

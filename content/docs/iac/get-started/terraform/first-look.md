@@ -287,7 +287,7 @@ outputs:
 
 {{% /choosable %}}
 
-Run the test:
+From the `pulumi-terraform-test` directory you created above, run the test:
 
 ```bash
 $ pulumi up

@@ -3,7 +3,6 @@ title_tag: "Using Azure DevOps with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Azure Pipelines with the Pulumi Task Extension, authenticate with Pulumi Cloud, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Azure DevOps
 h1: Using Azure DevOps with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     name: Azure DevOps

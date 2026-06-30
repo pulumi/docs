@@ -3,12 +3,11 @@ title_tag: "Pulumi Cloud: RBAC Scopes - Insights accounts"
 meta_desc: Learn about the available RBAC scopes in Pulumi Cloud.
 title: "RBAC Scopes: Insights Accounts"
 h1: "RBAC Scopes: Insights Accounts"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: "Insights accounts"
     parent: administration-access-identity-rbac-scopes
-    weight: 4
+    weight: 3
     identifier: pulumi-cloud-access-management-rbac-scopes-insights-accounts
 aliases:
 - /docs/intro/pulumi-service/scopes/insights-accounts

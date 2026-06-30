@@ -9,7 +9,6 @@ menu:
         identifier: iac-home
         weight: 1
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Infrastructure as Code
 description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, and YAML.</p>
 link_buttons:

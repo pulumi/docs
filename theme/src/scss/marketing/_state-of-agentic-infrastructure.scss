@@ -1,0 +1,786 @@
+// State of Agentic Infrastructure — survey results landing page.
+//
+// Custom (non-utility) styles: the bracket card, the rounded-plus overview grid,
+// the hero, the chart primitives, and the reveal animations. Imported into
+// main.scss inside @layer components. Chart geometry rides the `--val` custom
+// property so bars can animate 0 -> var(--val) by toggling a class.
+
+// ---------------------------------------------------------------------------
+// Bracket card: bordered, rounded card with a rounded bracket accent at each of
+// the 4 corners (top two on the card, bottom two on the inner wrapper, since CSS
+// gives only two pseudo-elements per element). Must not be overflow-hidden.
+// ---------------------------------------------------------------------------
+.bracket-card {
+    --bc-accent: var(--color-violet-500); // border + bracket stroke (shared)
+    --bc-bg: var(--color-violet-50);
+    --bc-bracket: 1.75rem; // bracket arm length
+    --bc-inset: -0.5rem;   // how far the bracket sits outside the corner
+    --bc-radius: 0.625rem; // bracket corner radius
+    --bc-stroke: 1px;
+
+    position: relative;
+    background: var(--bc-bg);
+    border: 1px solid var(--bc-accent);
+    border-radius: var(--radius-lg, 0.5rem);
+
+    // Top-left and top-right brackets.
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: var(--bc-inset);
+        width: var(--bc-bracket);
+        height: var(--bc-bracket);
+        border: var(--bc-stroke) solid var(--bc-accent);
+        pointer-events: none;
+    }
+
+    &::before {
+        left: var(--bc-inset);
+        border-right: 0;
+        border-bottom: 0;
+        border-top-left-radius: var(--bc-radius);
+    }
+
+    &::after {
+        right: var(--bc-inset);
+        border-left: 0;
+        border-bottom: 0;
+        border-top-right-radius: var(--bc-radius);
+    }
+
+    // Dark modifier (hero split card).
+    &--dark {
+        --bc-bg: var(--color-violet-950);
+    }
+}
+
+// Inner wrapper carries the page padding (so it spans the card edge-to-edge)
+// and supplies the bottom-left / bottom-right brackets.
+.bracket-card__inner {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: var(--bc-inset);
+        width: var(--bc-bracket);
+        height: var(--bc-bracket);
+        border: var(--bc-stroke) solid var(--bc-accent);
+        pointer-events: none;
+    }
+
+    &::before {
+        left: var(--bc-inset);
+        border-right: 0;
+        border-top: 0;
+        border-bottom-left-radius: var(--bc-radius);
+    }
+
+    &::after {
+        right: var(--bc-inset);
+        border-left: 0;
+        border-top: 0;
+        border-bottom-right-radius: var(--bc-radius);
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Hero
+//
+// The headline and the circuit-line overlay share one fixed-aspect "canvas" so
+// they line up at every width. The canvas is a size container; the headline is
+// positioned in % and sized in cqw — proportions of the design frame (1472x778)
+// — so it scales in lockstep with the overlay. The stage crops the canvas to
+// the headline band; the split card follows.
+// ---------------------------------------------------------------------------
+.soai-hero {
+    &__stage {
+        position: relative;
+        aspect-ratio: 1472 / 631; // crop to where the split card begins
+    }
+
+    &__canvas {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1472 / 778;
+        container-type: size;
+        background: var(--color-violet-950);
+    }
+
+    // Circuit overlay — sits on top of the headline and blends with difference.
+    &__circuit {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        mix-blend-mode: difference;
+
+        path {
+            fill: none;
+            stroke: var(--color-violet-500);
+            stroke-width: 1;
+        }
+    }
+
+    // Rounded-plus "star" accent, top-left.
+    &__star {
+        position: absolute;
+        left: 4.416%; // 65/1472
+        top: 10.925%; // 85/778
+        width: 6.522%; // 96/1472
+        z-index: 1;
+
+        path {
+            fill: none;
+            stroke: var(--color-violet-500);
+            stroke-width: 1;
+        }
+    }
+
+    // Headline: one real <h1>, positioned/sized as canvas proportions so the
+    // circuit lines weave through it.
+    &__headline {
+        position: absolute;
+        left: 9.239%; // 136/1472
+        top: 20.051%; // 156/778
+        width: 75.408%; // 1110/1472
+        z-index: 1;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.019cqw; // 15/1472
+        font-family: var(--font-mono);
+        text-transform: uppercase;
+    }
+
+    &__eyebrow,
+    &__year {
+        color: var(--color-white);
+        font-weight: 400;
+        font-size: 2.446cqw; // 36/1472
+        letter-spacing: 0.122cqw; // 1.8/1472
+        line-height: 1.1;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column; // forces "Agentic" / "Infrastructure" onto two lines
+        color: var(--color-violet-400);
+        font-weight: 200; // Monaspace Neon ExtraLight
+        font-size: 8.696cqw; // 128/1472
+        letter-spacing: -0.435cqw; // -6.4/1472
+        line-height: 1.1;
+    }
+
+    &__word {
+        display: block;
+    }
+
+    &__foot {
+        position: relative;
+        z-index: 3;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Overview: 2x2 grid whose divider reproduces the "star accent" — cell 1 draws
+// its right+bottom borders and cell 4 its top+left, each with a rounded inner
+// corner; cells 2 and 3 have no border, so the two brackets meet at an open
+// center.
+// ---------------------------------------------------------------------------
+.soai-overview {
+    --soai-plus-radius: 0.625rem; // 10px
+
+    @apply grid grid-cols-1 gap-x-0 gap-y-10 md:grid-cols-2 md:gap-y-0;
+
+    &__cell {
+        @apply px-1 py-0 md:px-10 md:py-9;
+    }
+
+    @include screen-md {
+        &__cell--tl {
+            @apply border-r border-b border-violet-500;
+            border-bottom-right-radius: var(--soai-plus-radius);
+        }
+        &__cell--br {
+            @apply border-t border-l border-violet-500;
+            border-top-left-radius: var(--soai-plus-radius);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Closing CTA — a dark card framing a bracket card (like a section framing its
+// question cards). Inside, a 2x2 grid reuses the overview's "star accent"
+// divider: the first cell is the heading + intro; the other three pair a product
+// icon with a title, description, and a button.
+// ---------------------------------------------------------------------------
+.soai-cta {
+    --soai-plus-radius: 0.625rem; // 10px
+
+    // Shared base for all four grid cells; the --tl/--br modifiers add the
+    // "star accent" divider. Everything else (grid, intro, icon, title) is
+    // plain token utilities and lives inline in the markup.
+    &__cell {
+        @apply flex flex-col gap-4 px-1 py-6 md:px-8 md:py-8;
+    }
+
+    @include screen-md {
+        &__cell--tl {
+            @apply border-r border-b border-violet-500;
+            border-bottom-right-radius: var(--soai-plus-radius);
+        }
+        &__cell--br {
+            @apply border-t border-l border-violet-500;
+            border-top-left-radius: var(--soai-plus-radius);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Horizontal bar chart. The longest bar fills ~90% of the track (leaving room
+// for the trailing % label); the width is carried in `--val`.
+// ---------------------------------------------------------------------------
+.soai-hbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 0.25rem 1.5rem;
+
+        @include screen-md {
+            grid-template-columns: 9rem 1fr;
+        }
+
+        @include screen-lg {
+            grid-template-columns: 13rem 1fr;
+        }
+    }
+
+    &__label {
+        @apply font-mono text-xs uppercase text-service-black text-left md:text-sm md:text-right;
+        letter-spacing: 0.04em;
+    }
+
+    &__meter {
+        @apply flex items-center gap-2.5 min-w-0;
+    }
+
+    &__fill {
+        @apply h-10 bg-violet-200 md:h-13;
+        flex: 0 0 var(--val);
+    }
+
+    &__pct {
+        @apply font-mono text-sm tabular-nums text-service-black md:text-base;
+        flex: 0 0 auto;
+    }
+
+    &__row--highlight {
+        .soai-hbar__fill {
+            @apply bg-violet-primary;
+        }
+        .soai-hbar__pct {
+            @apply text-violet-primary;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Vertical column chart. The tallest column reaches ~85% of the plot (leaving
+// headroom for the % label above each bar); the height is carried in `--val`.
+// ---------------------------------------------------------------------------
+.soai-col {
+    &__plot {
+        @apply flex items-end gap-2 border-b border-gray-400 md:gap-6;
+        height: clamp(15rem, 34vw, 20rem);
+    }
+
+    &__col {
+        @apply flex flex-1 h-full flex-col justify-end items-center gap-2.5;
+    }
+
+    &__bar {
+        @apply w-full bg-violet-200;
+        flex: 0 0 auto; // hold the explicit % height; don't let flex shrink it
+        max-width: 6.5rem;
+        height: var(--val);
+    }
+
+    &__pct {
+        @apply font-mono text-sm tabular-nums text-service-black;
+    }
+
+    &__cats {
+        @apply flex gap-2 mt-3 md:gap-6;
+    }
+
+    &__cat {
+        @apply flex-1 font-mono text-center uppercase text-service-black;
+        font-size: 0.625rem;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+
+        @include screen-md {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__col--highlight .soai-col__bar {
+        @apply bg-violet-primary;
+    }
+    &__col--highlight .soai-col__pct {
+        @apply text-violet-primary;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Shared chart legend (stacked / grouped / diverging).
+// ---------------------------------------------------------------------------
+.soai-legend {
+    @apply flex flex-wrap gap-x-6 gap-y-2 m-0 mb-6 p-0 list-none;
+
+    &__item {
+        @apply flex items-center gap-2;
+    }
+
+    &__swatch {
+        @apply shrink-0 w-3.5 h-3.5;
+        border-radius: 3px;
+    }
+
+    &__label {
+        @apply font-mono text-xs uppercase text-service-black;
+        letter-spacing: 0.03em;
+    }
+
+    &__value {
+        @apply tabular-nums;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// 100% stacked bar — part-to-whole, with a legend below.
+// ---------------------------------------------------------------------------
+.soai-stack {
+    &__bar {
+        @apply flex w-full h-12 mb-6;
+    }
+
+    &__seg {
+        @apply h-full box-border border-r-2 border-violet-50;
+        flex: 0 0 var(--val);
+
+        &:last-child {
+            @apply border-r-0;
+        }
+    }
+
+    .soai-legend {
+        @apply mb-0;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Grouped column — two series on a shared axis.
+// ---------------------------------------------------------------------------
+.soai-grouped {
+    &__plot {
+        @apply flex items-end gap-2 border-b border-gray-400 md:gap-5;
+        height: clamp(15rem, 32vw, 20rem);
+    }
+
+    &__group {
+        @apply flex flex-1 h-full justify-center items-end gap-1 md:gap-2;
+    }
+
+    &__col {
+        @apply flex flex-1 h-full max-w-11 flex-col justify-end items-center gap-2;
+    }
+
+    &__bar {
+        @apply w-full;
+        flex: 0 0 auto;
+        height: var(--val);
+    }
+
+    &__pct {
+        @apply font-mono tabular-nums text-service-black;
+        font-size: 0.6875rem;
+    }
+
+    &__cats {
+        @apply flex gap-2 mt-3 md:gap-5;
+    }
+
+    &__cat {
+        @apply flex-1 font-mono text-center uppercase text-service-black;
+        font-size: 0.625rem;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+
+        @include screen-md {
+            font-size: 0.6875rem;
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Diverging stacked bar — Likert agreement centered on neutral. Each side is
+// 50% of the track; segments pack toward the center line.
+// ---------------------------------------------------------------------------
+.soai-diverge {
+    &__row {
+        @apply flex flex-col gap-2.5 py-3.5;
+
+        & + & {
+            @apply border-t border-violet-200;
+        }
+    }
+
+    &__label {
+        @apply font-display m-0 font-medium text-service-black;
+        font-size: 0.9375rem;
+        line-height: 1.3;
+    }
+
+    &__track {
+        @apply flex items-center gap-4;
+    }
+
+    &__bars {
+        @apply relative flex flex-1 h-6;
+
+        // Center line (neutral midpoint).
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -0.25rem;
+            bottom: -0.25rem;
+            width: 1px;
+            background: var(--color-gray-400);
+        }
+    }
+
+    &__side {
+        @apply flex min-w-0 h-full;
+        flex: 0 0 50%;
+
+        &--left {
+            @apply justify-end;
+        }
+        &--right {
+            @apply justify-start;
+        }
+    }
+
+    &__seg {
+        @apply h-full;
+        flex: 0 0 auto;
+    }
+
+    &__agree {
+        @apply font-mono text-sm text-right tabular-nums text-violet-primary;
+        flex: 0 0 2.75rem;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Right-edge section nav. A full-height absolute track holds a sticky, centered
+// rail that rides up off the footer (pure layout). The track is hidden by
+// default and faded in by JS once the hero is scrolled past. Numbers by default
+// with an active state; on hover/focus the rail slides out to reveal each title.
+// Desktop only.
+// ---------------------------------------------------------------------------
+.soai-sectionnav-track {
+    display: none;
+    position: absolute;
+    inset: 0; // spans the sections region; sticky rail lives inside it
+    z-index: 40;
+    pointer-events: none; // the full-height track must not block clicks over content
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    @include screen-lg {
+        display: block;
+    }
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.soai-sectionnav {
+    @apply sticky top-1/2 w-max ml-auto pointer-events-auto;
+    transform: translateY(-50%); // right-align + vertically center the sticky rail
+
+    &__list {
+        @apply flex flex-col items-end gap-1 m-0 p-0 list-none;
+    }
+
+    &__item {
+        @apply flex justify-end w-full;
+    }
+
+    &__link {
+        @apply flex items-center justify-end gap-2.5 bg-transparent no-underline;
+        padding: 0.4rem 1.1rem;
+        border-radius: var(--radius-sm, 0.25rem) 0 0 var(--radius-sm, 0.25rem);
+        transition: background 0.25s ease;
+        border: 2px solid transparent;
+        border-width: 0 2px 0 0;
+
+        &:hover,
+        &:focus-visible {
+            @apply no-underline;
+        }
+
+        &:hover .soai-sectionnav__num,
+        &:hover .soai-sectionnav__title,
+        &:focus-visible .soai-sectionnav__num,
+        &:focus-visible .soai-sectionnav__title {
+            @apply text-violet-primary;
+        }
+    }
+
+    &__num {
+        @apply font-mono tabular-nums text-gray-400;
+        font-size: 0.8125rem;
+        transition: color 0.2s ease;
+    }
+
+    &__title {
+        @apply font-mono text-xs uppercase max-w-0 overflow-hidden opacity-0 whitespace-nowrap text-service-black;
+        letter-spacing: 0.04em;
+        transition: max-width 0.35s ease, opacity 0.25s ease;
+    }
+
+    // Active number (collapsed default state).
+    &__item.is-active &__num,
+    &__item.is-active &__link {
+        @apply text-violet-primary border-violet-primary;
+    }
+
+    // Hover / focus: slide titles out and give links a readable pill.
+    &:hover,
+    &:focus-within {
+        .soai-sectionnav__title {
+            @apply opacity-100;
+            max-width: 18rem;
+        }
+        .soai-sectionnav__num,
+        .soai-sectionnav__link {
+            @apply bg-white;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .soai-sectionnav,
+    .soai-sectionnav__link,
+    .soai-sectionnav__title,
+    .soai-sectionnav__num {
+        transition: none;
+    }
+}
+
+// ---------------------------------------------------------------------------
+// Intro / reveal animations (progressive enhancement). JS adds `.soai-anim` to
+// <html> (only when IntersectionObserver is available and motion is welcome),
+// then `.is-inview` to each [data-soai-reveal] element as it enters view. The
+// `.is-inview` state is the natural resting style, so without JS / under reduced
+// motion the page is untouched, with no layout shift.
+// ---------------------------------------------------------------------------
+@media (prefers-reduced-motion: no-preference) {
+    // -- Hero circuit lines: draw on from the left, staggered.
+    .soai-anim .soai-hero__circuit .soai-circuit-line {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 2s ease;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__circuit .soai-circuit-line {
+        stroke-dashoffset: 0;
+    }
+    @for $i from 1 through 8 {
+        .soai-anim .soai-hero__circuit .soai-circuit-line:nth-child(#{$i}) {
+            transition-delay: #{($i - 1) * 0.12}s;
+        }
+    }
+
+    // -- Hero star: spin in + draw the two arms.
+    .soai-anim .soai-hero__star {
+        opacity: 0;
+        transform: rotate(-150deg) scale(0.4);
+        transform-origin: center;
+        transition: opacity 0.7s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-hero__star .soai-star-arm {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 0.9s ease 0.15s;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__star {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__star .soai-star-arm {
+        stroke-dashoffset: 0;
+    }
+
+    // -- Hero eyebrow + year: clip-wipe in from the left.
+    .soai-anim .soai-hero__eyebrow,
+    .soai-anim .soai-hero__year {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transition: opacity 0.5s ease, clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__eyebrow,
+    .soai-anim .soai-hero.is-inview .soai-hero__year {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__eyebrow {
+        transition-delay: 0.2s;
+    }
+    // Year lands after the title finishes typing.
+    .soai-anim .soai-hero.is-inview .soai-hero__year {
+        transition-delay: 2s;
+    }
+
+    // -- Hero title: typed character by character (continuous index --ci).
+    .soai-anim .soai-hero__char {
+        opacity: 0;
+    }
+    .soai-anim .soai-hero.is-inview .soai-hero__char {
+        opacity: 1;
+        transition: opacity 0.06s linear;
+        transition-delay: calc(0.5s + var(--ci) * 0.07s);
+    }
+
+    // -- Bracket cards: content + border stay visible; only the corner accents
+    // pop in from their corners as the card reveals.
+    .soai-anim .bracket-card::before,
+    .soai-anim .bracket-card::after,
+    .soai-anim .bracket-card__inner::before,
+    .soai-anim .bracket-card__inner::after {
+        transform: scale(0);
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+    }
+    .soai-anim .bracket-card::before {
+        transform-origin: top left;
+    }
+    .soai-anim .bracket-card::after {
+        transform-origin: top right;
+    }
+    .soai-anim .bracket-card__inner::before {
+        transform-origin: bottom left;
+    }
+    .soai-anim .bracket-card__inner::after {
+        transform-origin: bottom right;
+    }
+
+    // Chart cards: accents pop as they scroll into view (their own .is-inview).
+    .soai-anim .bracket-card.is-inview::before,
+    .soai-anim .bracket-card.is-inview::after,
+    .soai-anim .bracket-card.is-inview .bracket-card__inner::before,
+    .soai-anim .bracket-card.is-inview .bracket-card__inner::after {
+        transform: scale(1);
+    }
+
+    // Hero card: driven by the hero reveal, not its own scroll-in. It fades in
+    // as the title finishes typing, then the accents pop. Scoped to the hero so
+    // the (also-dark) closing CTA card isn't held invisible by these rules.
+    .soai-anim .soai-hero .bracket-card--dark {
+        opacity: 0;
+        transition: opacity 0.6s ease 1.5s;
+    }
+    .soai-anim .soai-hero .bracket-card--dark::before,
+    .soai-anim .soai-hero .bracket-card--dark::after,
+    .soai-anim .soai-hero .bracket-card--dark .bracket-card__inner::before,
+    .soai-anim .soai-hero .bracket-card--dark .bracket-card__inner::after {
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.9s;
+    }
+    .soai-anim .soai-hero.is-inview .bracket-card--dark {
+        opacity: 1;
+    }
+
+    .soai-anim .soai-hero.is-inview .bracket-card--dark::before,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark::after,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::before,
+    .soai-anim .soai-hero.is-inview .bracket-card--dark .bracket-card__inner::after {
+        transform: scale(1);
+    }
+
+    // -- Charts: bars grow from zero when their card scrolls into view. Only the
+    // bars animate — labels, axes and legends stay visible the whole time.
+
+    // Horizontal bars: grow width (flex-basis) from 0, staggered top to bottom.
+    .soai-anim .soai-hbar__fill {
+        flex-basis: 0;
+        transition: flex-basis 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-hbar__fill {
+        flex-basis: var(--val);
+    }
+    @for $i from 1 through 12 {
+        .soai-anim .soai-hbar__row:nth-child(#{$i}) .soai-hbar__fill {
+            transition-delay: #{($i - 1) * 0.06}s;
+        }
+    }
+
+    // Vertical + grouped columns: grow height from the baseline.
+    .soai-anim .soai-col__bar,
+    .soai-anim .soai-grouped__bar {
+        height: 0;
+        transition: height 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-col__bar,
+    .soai-anim .bracket-card.is-inview .soai-grouped__bar {
+        height: var(--val);
+    }
+    @for $i from 1 through 8 {
+        .soai-anim .soai-col__col:nth-child(#{$i}) .soai-col__bar {
+            transition-delay: #{($i - 1) * 0.07}s;
+        }
+    }
+    @for $i from 1 through 7 {
+        .soai-anim .soai-grouped__group:nth-child(#{$i}) .soai-grouped__bar {
+            transition-delay: #{($i - 1) * 0.07}s;
+        }
+    }
+
+    // 100% stacked bar: wipe in from the left.
+    .soai-anim .soai-stack__bar {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .bracket-card.is-inview .soai-stack__bar {
+        transform: scaleX(1);
+    }
+
+    // Diverging Likert: each side grows outward from the neutral center line.
+    .soai-anim .soai-diverge__side {
+        transform: scaleX(0);
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .soai-anim .soai-diverge__side--left {
+        transform-origin: right;
+    }
+    .soai-anim .soai-diverge__side--right {
+        transform-origin: left;
+    }
+    .soai-anim .bracket-card.is-inview .soai-diverge__side {
+        transform: scaleX(1);
+    }
+}

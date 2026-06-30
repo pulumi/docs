@@ -29,6 +29,19 @@
                             focus-visible:border-red-600/40 focus-visible:ring-red-600/20; }
 .btn-link          { @apply h-auto inline-block text-violet-primary font-semibold underline-offset-5 hover:underline decoration-violet-300 border-none min-h-0! p-0! [&_svg]:no-underline; }
 
+// Split button — joins a primary .btn and a caret-only .btn into one control
+// with a single seam between the segments. The -ml-px overlaps the borders into
+// one divider; relative + z-on-hover lifts the active segment so its full border
+// (including the seam edge) renders above its neighbor.
+.btn-split {
+    @apply inline-flex;
+
+    > .btn                                  { @apply relative; }
+    > .btn:hover, > .btn:focus-visible      { @apply z-10; }
+    > .btn:first-child                      { @apply rounded-r-none; }
+    > .btn:last-child                       { @apply rounded-l-none -ml-px px-2; }
+}
+
 // Sizes — override the base h-9 / px-2.5
 .btn-xs      { @apply h-6 py-0.75 px-2 text-xs gap-1; }
 .btn-sm      { @apply h-8 py-2 px-3 text-xs gap-1; }

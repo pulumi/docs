@@ -3,7 +3,6 @@ title_tag: "Convert Code to Pulumi"
 meta_desc: Pulumi convert allows you to convert ARM, CloudFormation, Kubernetes CustomResources, Kubernetes YAML, and Terraform to Pulumi.
 title: Convert code
 h1: Convert code to Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Conversion tools

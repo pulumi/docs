@@ -18,8 +18,8 @@ category: product
 social:
     twitter: "☕ The Pulumi Java SDK is now Generally Available! Manage your infrastructure using the composable, strongly typed programming language you already know and love - now including the powerful Pulumi Automation API!"
     linkedin: "Java, the world’s most trusted enterprise programming language, is now generally available in Pulumi. You can now leverage Java’s familiar, expressive, and safe syntax to manage your infrastructure in a composable and scalable way.
-    
-    Learn more about automating everything you run in the cloud with Java: [Link]"
+
+        Learn more about automating everything you run in the cloud with Java: [Link]"
 ---
 
 One of Pulumi's core Infrastructure as Code (IaC) features is the ability to [model infrastructure](https://www.pulumi.com/docs/iac/concepts/) using well-traveled, familiar general-purpose programming languages. Today, we're thrilled to announce that Java, one of the world's most popular programming languages, is now generally available in Pulumi. This release joins our existing first-class support for TypeScript, Python, Go, YAML, and C#, enabling Java developers to manage cloud infrastructure using the language they know and trust.
