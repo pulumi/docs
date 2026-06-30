@@ -9,9 +9,6 @@ description: Use the Pulumi CLI and ESC SDK to manage secrets for a basic OpenAI
 # A similar description used for search results and social-media previews.
 meta_desc: Use the Pulumi CLI and ESC SDK to manage secrets for a basic OpenAI-based ChatGPT clone.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: meta.png
-
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
 # video:

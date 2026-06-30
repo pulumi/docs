@@ -4,7 +4,6 @@ title: Abstraction and Encapsulation
 layout: module
 description: Explore abstraction and encapsulation with Pulumi and component resources.
 meta_desc: In this tutorial, we will explore using Pulumi to abstract and encapsulate your resource definitions as reusable models for others to use.
-meta_image: meta.png
 weight: 3
 summary: |
     In this tutorial, we will explore how you can use Pulumi as a tool to help you abstract and encapsulate your resource definitions as reusable models for others to use.

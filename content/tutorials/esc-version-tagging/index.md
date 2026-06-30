@@ -4,7 +4,6 @@ title_tag: Configure applications dynamically with ESC version tagging
 layout: single
 description: Use immutable versioning and dynamic tagging to configure multiple applications safely and easily with Pulumi ESC.
 meta_desc: Use immutable versioning and dynamic tagging to configure multiple applications safely and easily with Pulumi ESC.
-meta_image: meta.png
 weight: 999
 summary: |
     [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you'll use ESC's [version tagging](/docs/esc/concepts/versioning/) features to configure multiple running Node.js applications with a single shared configuration value referenced by tag name.

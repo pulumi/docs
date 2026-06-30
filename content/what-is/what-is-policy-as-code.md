@@ -1,7 +1,6 @@
 ---
 title: What Is Policy as Code?
 meta_desc: "Policy as code applies software engineering practices to infrastructure governance. Learn what it is, how it works, the top tools, and how to enforce it."
-meta_image: /images/what-is/what-is-policy-as-code-meta.png
 type: what-is
 page_title: "What Is Policy as Code?"
 authors: ["alex-leventer"]
