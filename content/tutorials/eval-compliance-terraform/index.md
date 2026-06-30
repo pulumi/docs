@@ -9,9 +9,6 @@ description: Learn how to use Pulumi Insights to evaluate compliance of resource
 # A similar description used for search results and social-media previews.
 meta_desc: Learn how to use Pulumi Insights to evaluate compliance of resources that are deployed with Terraform.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: meta.png
-
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
 # video:

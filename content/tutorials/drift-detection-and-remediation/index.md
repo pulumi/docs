@@ -5,7 +5,6 @@ layout: single
 description: |
    Learn to detect and remediate infrastructure drift with Pulumi Deployments.
 meta_desc: In this tutorial, learn to detect and remediate infrastructure drift in AWS using Pulumi Deployments and GitHub integration.
-meta_image: meta.png
 weight: 90
 summary: |
    In this tutorial, you will learn how to detect and remediate infrastructure drift in AWS using Pulumi Deployments. You'll create an EC2 instance, introduce drift by making manual changes via the AWS CLI or console, and then use Pulumi Deployments to detect and correct the drift.

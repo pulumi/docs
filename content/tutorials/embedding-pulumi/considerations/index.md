@@ -4,7 +4,6 @@ title: Understanding Logging and Error Handling
 layout: topic
 description: Explore why it's important to consider logging and error handling when using the Automation API.
 meta_desc: Learn why it is important to consider logging and error handling when using the Automation API in this tutorial.
-meta_image: meta.png
 weight: 3
 estimated_time: 10
 aliases:

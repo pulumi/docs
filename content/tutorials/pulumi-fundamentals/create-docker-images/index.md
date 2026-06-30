@@ -4,7 +4,6 @@ title: Creating Docker Images
 layout: topic
 description: Use Pulumi and the Docker provider to build Docker images locally.
 meta_desc: Learn how to use Pulumi and the Docker provider to create Docker images locally in this tutorial.
-meta_image: meta.png
 weight: 2
 estimated_time: 10
 aliases:

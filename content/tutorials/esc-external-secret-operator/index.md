@@ -7,7 +7,6 @@ description: |
   Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.
 meta_desc: Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.
 weight: 999
-meta_image: meta.png
 summary: |
   [External Secrets Operator](https://external-secrets.io/latest/) is a Kubernetes operator that integrates external secret management systems with Kubernetes. By using External Secrets Operator, you have several advantages over Kubernetes native secrets:
 

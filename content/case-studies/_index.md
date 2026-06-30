@@ -3,7 +3,6 @@ title: Case Studies
 description: See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
 meta_desc: |
     See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
-meta_image: "/images/case-studies/case-studies-logos.png"
 
 aliases:
     - /case-studies/lykke/

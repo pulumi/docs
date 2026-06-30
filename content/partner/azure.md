@@ -5,7 +5,6 @@ type: page
 url: /azure
 
 meta_desc: Use Pulumi to manage Azure infrastructure with code. Replace or extend Azure Resource Manager (ARM) templates using C#, Python, Go, or TypeScript.
-meta_image: /images/partners/azure-resources-to-iac-general-code.png
 schema:
   type: TechArticle
   headline: Infrastructure as Code for Azure with Pulumi

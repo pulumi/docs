@@ -4,7 +4,6 @@ title: Understanding Stacks
 layout: topic
 description: Learn a bit more about stacks as part of using Pulumi.
 meta_desc: Learn what a stack is, how stacks work within Pulumi, and how to create, list, and select stacks in this tutorial.
-meta_image: meta.png
 weight: 1
 estimated_time: 10
 aliases:

@@ -9,11 +9,16 @@
 // re-render. A page picks up its card automatically via
 // partials/meta-image-url.html; a page-level `meta_image` overrides it.
 //
-// Two templates:
-//   - "title" — centered title on the brand field (what-is). Ported from the
-//     og-generic Satori template in pulumi/marketing-web.
-//   - "info"  — 4-field card (section label, sub-section label, title,
-//     description) from the Figma "Social assets — banners" template (docs).
+// Templates (all from the Figma "Social assets — banners" file):
+//   - "title"      — centered title on the LIGHT brand field (what-is, migrate,
+//     partner, topics, and the case-studies index). Simple frame.
+//   - "info"       — 4-field DARK docs card (section badge, corner label, title,
+//     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
+//   - "tutorial"   — the docs card in LIGHT (palette INFO_LIGHT): "Tutorial" /
+//     "Glossary" badge, the parent collection's name in the corner for
+//     sub-pages, title + description.
+//   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
+//     right-aligned "CASE STUDY" badge and a large title (case-studies).
 //
 // Usage:
 //   node scripts/generate-meta-images.mjs            # render changed cards (the build step)
@@ -46,12 +51,21 @@ const CANVAS_H = 628
 
 // Bump when any template changes visually so cached cards regenerate.
 // v3: added the og-info (4-field) template + multi-template/recursive support.
-const OG_TEMPLATE_VERSION = "3"
+// v4: title flipped to LIGHT + optional label badge; added the case-study
+//     template (co-branded Pulumi + customer logo lockup). info (docs) unchanged.
+const OG_TEMPLATE_VERSION = "4"
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
 
+const clean = (v) => (v == null ? "" : v.toString().trim())
+// Drop a corner/sub label that just repeats the page's own title.
+const dropIfEchoesTitle = (sub, title) => (sub && sub.trim().toLowerCase() === title.trim().toLowerCase() ? "" : sub)
+// Lazy single-init memo. Caches the first result (a value or a promise) forever.
+const once = (fn) => { let v, done = false; return () => (done ? v : ((v = fn()), (done = true), v)) }
+
 // --- Brand colors (dark mode; inlined from the Pulumi brand palette) ---------
+// Used only by the "info" template (docs). The light templates use LIGHT below.
 const COLORS = {
   bg: "#231f33", // violet 50 (dark)
   fg: "#ffffff", // utility foreground
@@ -60,27 +74,101 @@ const COLORS = {
   divider: "#492e8e", // violet muted (dark)
 }
 
-// Docs nav-area labels, keyed by the top-level path segment under content/docs/.
-let _menuLabels = null
-function menuLabels() {
-  if (_menuLabels) return _menuLabels
-  const raw = yaml.load(readFileSync(join(REPO_ROOT, "data", "docs_menu_sections.yml"), "utf-8"))
-  _menuLabels = {}
-  for (const s of raw || []) if (s && s.menu) _menuLabels[s.menu] = s.label
-  return _menuLabels
+// --- Brand colors (light cards: "title" + "case-study"). Tokens from the Figma
+// "Social assets — banners" light frames (file LL0EBmlsbsDRXFQbWnM16n). --------
+const LIGHT = {
+  bg: "#f5f5ff", // violet background
+  fg: "#1f1b21", // utility foreground — title
+  muted: "#6a6675", // utility foreground muted — description / sub-label
+  badgeBg: "#5a30c5", // violet primary — badge fill
+  badgeFg: "#ffffff", // on-violet text
+  divider: "#dedbff", // violet muted — header divider
 }
+
+// Role-based palettes for the shared docs-style template (infoTree). INFO_DARK
+// reproduces the original docs card byte-for-byte; INFO_LIGHT is the tutorials
+// variant. logo is bundled in since the dark/light cards use different marks.
+const INFO_DARK = { bg: COLORS.bg, fg: COLORS.fg, badgeBg: COLORS.violet, badgeFg: COLORS.serviceBlack, desc: COLORS.violet, divider: COLORS.divider, subLabel: COLORS.fg, logo: null }
+const INFO_LIGHT = { bg: LIGHT.bg, fg: LIGHT.fg, badgeBg: LIGHT.badgeBg, badgeFg: LIGHT.badgeFg, desc: LIGHT.muted, divider: LIGHT.divider, subLabel: LIGHT.fg, logo: null }
+
+// Docs nav-area labels, keyed by the top-level path segment under content/docs/.
+const menuLabels = once(() => {
+  const raw = yaml.load(readFileSync(join(REPO_ROOT, "data", "docs_menu_sections.yml"), "utf-8"))
+  const out = {}
+  for (const s of raw || []) if (s && s.menu) out[s.menu] = s.label
+  return out
+})
+
+// Title of the tutorial collection a sub-page belongs to (e.g. for
+// "tutorials/pulumi-fundamentals/create-a-pulumi-project" → "Pulumi
+// Fundamentals", read from tutorials/pulumi-fundamentals/_index.md). Returns ""
+// for root/standalone tutorials (< 3 path segments), which get no corner label.
+const _collTitle = new Map()
+function collectionTitle(id) {
+  // Use the LOGICAL path: leaf bundles store a trailing "/index" in their id
+  // (tutorials/foo/index), which must not count as a sub-page level — otherwise
+  // a standalone tutorial reads its own index.md and labels itself.
+  const parts = id.replace(/\/index$/, "").split("/") // tutorials/<collection>/<sub...>
+  if (parts.length < 3) return ""
+  const key = `${parts[0]}/${parts[1]}`
+  if (_collTitle.has(key)) return _collTitle.get(key)
+  let title = ""
+  for (const f of ["_index.md", "index.md"]) {
+    const p = join(CONTENT_DIR, parts[0], parts[1], f)
+    if (existsSync(p)) { const d = matter(readFileSync(p, "utf-8")).data; title = clean(d.linktitle || d.title); break }
+  }
+  _collTitle.set(key, title)
+  return title
+}
+
+// Shared shape for the plain centered-title sections (what-is + the small
+// marketing sections). They differ only in name and recursion.
+const titleSection = (name, recursive) => ({
+  name,
+  template: "title",
+  recursive,
+  fields: (fm) => ({ title: clean(fm.title) }),
+  valid: (f) => !!f.title,
+})
 
 // --- Section configuration ---------------------------------------------------
 // id is the content-relative path with .md and trailing /_index stripped, e.g.
 // "what-is/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
+  titleSection("what-is", false),
   {
-    name: "what-is",
-    template: "title",
-    recursive: false,
-    fields: (fm) => ({ title: clean(fm.title) }),
+    name: "tutorials",
+    template: "tutorial", // light docs-style card
+    recursive: true,
+    sampleGroupBy: (id) => id.split("/")[1] || "(root)",
+    // Tutorial badge + the parent collection's name in the corner for sub-pages
+    // (root/standalone tutorials get no corner label). Glossary entries live
+    // under tutorials/ but are definitions, so they get a "Glossary" badge.
+    fields: (fm, id) => {
+      const glossary = /(^|\/)glossary(\/|$)/.test(id)
+      const title = clean(fm.title)
+      const sub = glossary ? "" : dropIfEchoesTitle(collectionTitle(id), title)
+      return { sectionLabel: glossary ? "Glossary" : "Tutorial", subSectionLabel: sub, title, description: clean(fm.meta_desc) }
+    },
     valid: (f) => !!f.title,
   },
+  {
+    name: "case-studies",
+    // Section index → plain "Case Studies" title card; individual studies → the
+    // co-branded case-study card.
+    template: (fm, id) => (id === "case-studies" ? "title" : "case-study"),
+    recursive: false,
+    fields: (fm, id) =>
+      id === "case-studies"
+        ? { title: clean(fm.title) || "Case Studies" }
+        : { title: clean(fm.title), companyLogo: customerLogo(fm.customer_logo) },
+    // Individual studies need a resolvable customer logo; the root title card doesn't.
+    valid: (f, t) => !!f.title && (t === "title" || !!f.companyLogo),
+  },
+  // Small marketing sections converted from off-brand meta images to light title cards.
+  titleSection("migrate", true),
+  titleSection("partner", true),
+  titleSection("topics", true),
   {
     name: "docs",
     template: "info",
@@ -88,17 +176,14 @@ const SECTIONS = [
     sampleGroupBy: (id) => id.split("/")[1] || "(root)", // nav area
     fields: (fm, id) => {
       const title = clean(fm.title)
-      let sub = menuLabels()[id.split("/")[1]] || ""
-      // Hide the sub-section label when it just repeats the title (top-level
-      // landing pages, where the nav-area label and the page title coincide).
-      if (sub && sub.trim().toLowerCase() === title.trim().toLowerCase()) sub = ""
+      // Hide the sub-section label on top-level landing pages, where the nav-area
+      // label and the page title coincide.
+      const sub = dropIfEchoesTitle(menuLabels()[id.split("/")[1]] || "", title)
       return { sectionLabel: "Docs", subSectionLabel: sub, title, description: clean(fm.meta_desc) }
     },
     valid: (f) => !!f.title,
   },
 ]
-
-const clean = (v) => (v == null ? "" : v.toString().trim())
 
 // --- Fonts: Satori needs TTF/OTF/WOFF (NOT woff2) ----------------------------
 const FONT_SPECS = [
@@ -106,27 +191,59 @@ const FONT_SPECS = [
   { name: "Inter", file: join(FONT_DIR, "inter-semibold.woff"), weight: 600, style: "normal" },
   { name: "Monaspace Neon", file: join(ASSET_DIR, "monaspace-neon-regular.ttf"), weight: 400, style: "normal" },
 ]
-let _fonts = null
-function loadFonts() {
-  if (!_fonts) _fonts = FONT_SPECS.map((s) => ({ name: s.name, data: readFileSync(s.file), weight: s.weight, style: s.style }))
-  return _fonts
-}
+const loadFonts = once(() => FONT_SPECS.map((s) => ({ name: s.name, data: readFileSync(s.file), weight: s.weight, style: s.style })))
 
 // Inter Semibold parsed for title measurement (lazy: parsed on first render).
-let _titleFont = null
-async function titleFont() {
-  if (!_titleFont) {
-    const { default: opentype } = await import("opentype.js")
-    const b = readFileSync(join(FONT_DIR, "inter-semibold.woff"))
-    _titleFont = opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength))
-  }
-  return _titleFont
-}
+// once() caches the in-flight promise so the font is parsed exactly once.
+const titleFont = once(async () => {
+  const { default: opentype } = await import("opentype.js")
+  const b = readFileSync(join(FONT_DIR, "inter-semibold.woff"))
+  return opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength))
+})
 
 const svgDataUri = (file) => `data:image/svg+xml;base64,${readFileSync(join(ASSET_DIR, file)).toString("base64")}`
 const ACCENTS = svgDataUri("og-bg.svg")
 const LINES_BOTTOM = svgDataUri("lines-bottom.svg")
-const LOGO = svgDataUri("pulumi-logo-horizontal-color-dark.svg")
+const LOGO = svgDataUri("pulumi-logo-horizontal-color-dark.svg") // light text → dark cards
+const LOGO_LIGHT = svgDataUri("pulumi-logo-horizontal-color-light.svg") // dark text → light cards
+INFO_DARK.logo = LOGO
+INFO_LIGHT.logo = LOGO_LIGHT
+
+// --- Customer logo (case-study co-brand) -------------------------------------
+// Resolve a frontmatter logo path ("/logos/customers/foo.svg") under static/ to
+// a data URI + display dims scaled into the header lockup. Returns null when the
+// asset is missing or an unsupported type, so the page is skipped (valid()).
+function intrinsicSize(buf, lower) {
+  if (lower.endsWith(".png")) {
+    // PNG IHDR: width/height are big-endian uint32 at byte offsets 16 and 20.
+    if (buf.length >= 24) return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) }
+  } else if (lower.endsWith(".svg")) {
+    const s = buf.toString("utf-8")
+    const vb = s.match(/viewBox\s*=\s*["']\s*[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)/i)
+    if (vb) return { w: parseFloat(vb[1]), h: parseFloat(vb[2]) }
+    const w = s.match(/\bwidth\s*=\s*["']([\d.]+)/i)
+    const hh = s.match(/\bheight\s*=\s*["']([\d.]+)/i)
+    if (w && hh) return { w: parseFloat(w[1]), h: parseFloat(hh[1]) }
+  }
+  return { w: 200, h: 60 } // fallback ratio
+}
+// Customer logos live under assets/fingerprinted/ (routed through Hugo's
+// fingerprinted-img partial on the case-study page); a few also sit in static/.
+const LOGO_ROOTS = [join(REPO_ROOT, "assets", "fingerprinted"), join(REPO_ROOT, "static")]
+function customerLogo(p, { maxH = 52, maxW = 260 } = {}) {
+  const rel = clean(p).replace(/^\//, "")
+  if (!rel) return null
+  const file = LOGO_ROOTS.map((r) => join(r, rel)).find((f) => existsSync(f))
+  if (!file) return null
+  const lower = rel.toLowerCase()
+  const mime = lower.endsWith(".svg") ? "image/svg+xml" : lower.endsWith(".png") ? "image/png" : null
+  if (!mime) return null
+  const buf = readFileSync(file)
+  const { w, h } = intrinsicSize(buf, lower)
+  let dw = (w / h) * maxH, dh = maxH
+  if (dw > maxW) { dw = maxW; dh = (h / w) * maxW }
+  return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(dw), h: Math.round(dh) }
+}
 
 // --- Shared text measurement (opentype) --------------------------------------
 function lineWidth(font, str, fontPx, lsEm = -0.05) {
@@ -145,16 +262,36 @@ function wrapLines(font, words, fontPx, maxW, lsEm) {
   if (cur) lines.push(cur)
   return lines
 }
-// Largest fontPx in [minFont,maxFont] whose wrapped title fits boxW within
-// maxLines. lineClamp is returned generous (maxLines) as a safety net.
-function fitTitle(font, title, { maxFont, minFont, boxW, maxLines, lsEm = -0.05 }) {
+// Largest fontPx in [minFont,maxFont] whose wrapped title fits boxW. The line
+// budget is either a fixed maxLines, or — when boxH is given — derived from the
+// available height at each font size (90% of the box, leaving a margin). The
+// returned lineClamp is a generous safety net (maxLines, or the full-height line
+// count at the chosen size).
+function fitTitle(font, title, { maxFont, minFont, boxW, maxLines, boxH, lsEm = -0.05 }) {
   const words = title.split(/\s+/).filter(Boolean)
+  const heightLines = (f, frac) => Math.max(1, Math.floor((boxH * frac) / (1.1 * f)))
   for (let f = maxFont; f >= minFont; f--) {
     const lines = wrapLines(font, words, f, boxW * 0.98, lsEm)
     const widest = Math.max(0, ...lines.map((l) => lineWidth(font, l, f, lsEm)))
-    if (widest <= boxW * 0.98 && lines.length <= maxLines) return { fontSize: f, lineClamp: maxLines }
+    const budget = boxH ? heightLines(f, 0.9) : maxLines
+    if (widest <= boxW * 0.98 && lines.length <= budget) {
+      return { fontSize: f, lineClamp: boxH ? heightLines(f, 1) : maxLines }
+    }
   }
-  return { fontSize: minFont, lineClamp: maxLines }
+  return { fontSize: minFont, lineClamp: boxH ? heightLines(minFont, 1) : maxLines }
+}
+// Hard-truncate text to maxLines at fontPx/maxW, appending an ellipsis. Satori's
+// -webkit-line-clamp doesn't reliably bound height inside a centered fixed box,
+// so we clamp the string itself as a guarantee against overflow.
+function clampText(font, text, fontPx, maxW, maxLines, lsEm = -0.05) {
+  const words = text.split(/\s+/).filter(Boolean)
+  const lines = wrapLines(font, words, fontPx, maxW, lsEm)
+  if (lines.length <= maxLines) return text
+  let last = lines[maxLines - 1]
+  while (last.includes(" ") && lineWidth(font, `${last}…`, fontPx, lsEm) > maxW) {
+    last = last.slice(0, last.lastIndexOf(" "))
+  }
+  return `${lines.slice(0, maxLines - 1).join(" ")} ${last}…`.trim()
 }
 
 // --- JSX-shaped tree helper (no React) ---------------------------------------
@@ -163,7 +300,19 @@ function h(type, props, ...children) {
   return { type, props: { ...(props ?? {}), children: flat.length === 0 ? undefined : flat.length === 1 ? flat[0] : flat } }
 }
 
-// --- Template: "title" (what-is) — centered title on the brand field ---------
+// Rounded "pill" badge with uppercase mono label (section badge / "Case Study").
+const badge = (text, bg, fg) =>
+  h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: bg, borderRadius: 9999, padding: "8px 18px" } },
+    h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 24, lineHeight: 1, letterSpacing: 1.2, textTransform: "uppercase", color: fg } }, text))
+
+// Shared style for a clamped, centered-weight card title.
+const titleTextStyle = (fontSize, lineClamp) => ({
+  display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: lineClamp,
+  overflow: "hidden", fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fontSize * 0.05,
+})
+
+// --- Template: "title" (what-is, migrate, partner, topics, case-studies index)
+// — centered title on the light brand field. ----------------------------------
 const T_PAD_X = 152
 const T_BOX_W = CANVAS_W - 2 * T_PAD_X
 const T_BOX_H = 363
@@ -171,50 +320,80 @@ async function titleTree(fields) {
   // Largest font (96..40) whose wrapped title fits 90% of the box height;
   // lineClamp uses the full-height line count as a safety net.
   const font = await titleFont()
-  const words = fields.title.split(/\s+/).filter(Boolean)
-  let chosen = { fontSize: 40, lineClamp: Math.max(1, Math.floor(T_BOX_H / (1.1 * 40))) }
-  for (let f = 96; f >= 40; f--) {
-    const lines = wrapLines(font, words, f, T_BOX_W * 0.98)
-    const widest = Math.max(0, ...lines.map((l) => lineWidth(font, l, f)))
-    const fitLines = Math.max(1, Math.floor((T_BOX_H * 0.9) / (1.1 * f)))
-    if (widest <= T_BOX_W * 0.98 && lines.length <= fitLines) { chosen = { fontSize: f, lineClamp: Math.max(1, Math.floor(T_BOX_H / (1.1 * f))) }; break }
-  }
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: COLORS.bg, fontFamily: "Inter" } },
+  const fit = fitTitle(font, fields.title, { maxFont: 96, minFont: 40, boxW: T_BOX_W, boxH: T_BOX_H })
+  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
     h("img", { src: ACCENTS, width: CANVAS_W, height: CANVAS_H, style: { position: "absolute", top: 0, left: 0, width: CANVAS_W, height: CANVAS_H } }),
     h("div", { style: { position: "absolute", top: 45, left: 0, width: CANVAS_W, display: "flex", justifyContent: "center" } },
-      h("img", { src: LOGO, height: 60, style: { height: 60 } })),
+      h("img", { src: LOGO_LIGHT, height: 60, style: { height: 60 } })),
     h("div", { style: { position: "absolute", top: 122, left: 0, width: CANVAS_W, height: T_BOX_H, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: `0 ${T_PAD_X}px` } },
-      h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: chosen.lineClamp, overflow: "hidden", textOverflow: "ellipsis", fontSize: chosen.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -chosen.fontSize * 0.05, color: COLORS.fg, textAlign: "center" } }, fields.title)))
+      h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), textOverflow: "ellipsis", color: LIGHT.fg, textAlign: "center" } }, fields.title)))
 }
 
-// --- Template: "info" (docs) — section label, sub-section, title, description -
+// --- Template: docs-style card — section-label badge, optional corner label,
+// title, description. Palette-driven: INFO_DARK = "info" (docs); INFO_LIGHT =
+// "tutorial" (tutorials). -----------------------------------------------------
 const I_LEFT = 30
 const I_W = 1140
 const I_HEADER_TOP = 25 // scooted up 20px from the Figma 45
 const I_HEADER_BOTTOM = I_HEADER_TOP + 60 + 24 + 1 // logo row + gap + divider
 const I_LINES_TOP = CANVAS_H - 159 // top of the bottom accent strip
-async function infoTree(fields) {
-  const { sectionLabel, subSectionLabel, title, description } = fields
+const SUB_LABEL_MAX = 30 // corner label char cap (mono); longer → ellipsis
+async function infoTree(fields, P) {
+  const { sectionLabel, title, description } = fields
+  const subSectionLabel = fields.subSectionLabel && fields.subSectionLabel.length > SUB_LABEL_MAX
+    ? `${fields.subSectionLabel.slice(0, SUB_LABEL_MAX - 1).trimEnd()}…`
+    : fields.subSectionLabel
+  const font = await titleFont()
   const maxLines = description ? 2 : 3
-  const fit = fitTitle(await titleFont(), title, { maxFont: 64, minFont: 40, boxW: I_W, maxLines })
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: COLORS.bg, fontFamily: "Inter" } },
+  const fit = fitTitle(font, title, { maxFont: 64, minFont: 40, boxW: I_W, maxLines })
+  const titleText = clampText(font, title, fit.fontSize, I_W * 0.98, fit.lineClamp)
+  const descText = description ? clampText(font, description, 32, 1088, 3, 0) : ""
+  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: P.bg, fontFamily: "Inter" } },
     h("img", { src: LINES_BOTTOM, width: CANVAS_W, height: 159, style: { position: "absolute", left: 0, top: I_LINES_TOP, width: CANVAS_W, height: 159 } }),
-    // Header (top): logo + section-label badge, sub-section label, divider.
+    // Header (top): logo + section-label badge, corner label, divider.
     h("div", { style: { position: "absolute", top: I_HEADER_TOP, left: I_LEFT, width: I_W, display: "flex", flexDirection: "column", gap: 24 } },
       h("div", { style: { display: "flex", width: I_W, alignItems: "center", justifyContent: "space-between" } },
         h("div", { style: { display: "flex", alignItems: "center", gap: 24 } },
-          h("img", { src: LOGO, width: 241, height: 60, style: { width: 241, height: 60 } }),
-          sectionLabel && h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: COLORS.violet, borderRadius: 9999, padding: "8px 18px" } },
-            h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 24, lineHeight: 1, letterSpacing: 1.2, textTransform: "uppercase", color: COLORS.serviceBlack } }, sectionLabel))),
-        subSectionLabel && h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 28, letterSpacing: 1.4, textTransform: "uppercase", color: COLORS.fg } }, subSectionLabel)),
-      h("div", { style: { width: I_W, height: 1, backgroundColor: COLORS.divider } })),
+          h("img", { src: P.logo, width: 241, height: 60, style: { width: 241, height: 60 } }),
+          sectionLabel ? badge(sectionLabel, P.badgeBg, P.badgeFg) : null),
+        subSectionLabel ? h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 28, letterSpacing: 1.4, textTransform: "uppercase", color: P.subLabel } }, subSectionLabel) : null),
+      h("div", { style: { width: I_W, height: 1, backgroundColor: P.divider } })),
     // Body: title + description, vertically centered between header and lines.
     h("div", { style: { position: "absolute", left: I_LEFT, top: I_HEADER_BOTTOM, width: I_W, height: I_LINES_TOP - I_HEADER_BOTTOM, display: "flex", flexDirection: "column", justifyContent: "center", gap: 16 } },
-      h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: fit.lineClamp, overflow: "hidden", fontSize: fit.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fit.fontSize * 0.05, color: COLORS.fg } }, title),
-      description && h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 3, overflow: "hidden", fontSize: 32, fontWeight: 400, lineHeight: 1.3, color: COLORS.violet, width: 1088 } }, description)))
+      h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), color: P.fg } }, titleText),
+      descText ? h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 3, overflow: "hidden", fontSize: 32, fontWeight: 400, lineHeight: 1.3, color: P.desc, width: 1088 } }, descText) : null))
 }
 
-const TEMPLATES = { title: titleTree, info: infoTree }
+// --- Template: "case-study" — co-branded header (Pulumi + customer logo on the
+// left, "CASE STUDY" badge right) on the light field, with a large title that
+// fills the area below the divider (no description). ---------------------------
+async function caseStudyTree(fields) {
+  const { title, companyLogo } = fields // companyLogo: { uri, w, h } | null
+  const font = await titleFont()
+  const fit = fitTitle(font, title, { maxFont: 92, minFont: 44, boxW: I_W, maxLines: 3 })
+  const titleText = clampText(font, title, fit.fontSize, I_W * 0.98, fit.lineClamp)
+  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
+    h("img", { src: LINES_BOTTOM, width: CANVAS_W, height: 159, style: { position: "absolute", left: 0, top: I_LINES_TOP, width: CANVAS_W, height: 159 } }),
+    // Header: Pulumi + "+" + customer logo (left), "CASE STUDY" badge (right).
+    h("div", { style: { position: "absolute", top: I_HEADER_TOP, left: I_LEFT, width: I_W, display: "flex", flexDirection: "column", gap: 24 } },
+      h("div", { style: { display: "flex", width: I_W, alignItems: "center", justifyContent: "space-between", height: 60 } },
+        h("div", { style: { display: "flex", alignItems: "center", gap: 24 } },
+          h("img", { src: LOGO_LIGHT, height: 52, style: { height: 52 } }),
+          companyLogo ? h("div", { style: { fontSize: 36, fontWeight: 400, lineHeight: 1, color: LIGHT.muted } }, "+") : null,
+          companyLogo ? h("img", { src: companyLogo.uri, width: companyLogo.w, height: companyLogo.h, style: { width: companyLogo.w, height: companyLogo.h } }) : null),
+        badge("Case Study", LIGHT.badgeBg, LIGHT.badgeFg)),
+      h("div", { style: { width: I_W, height: 1, backgroundColor: LIGHT.divider } })),
+    // Body: title only, vertically centered between header and bottom lines.
+    h("div", { style: { position: "absolute", left: I_LEFT, top: I_HEADER_BOTTOM, width: I_W, height: I_LINES_TOP - I_HEADER_BOTTOM, display: "flex", flexDirection: "column", justifyContent: "center" } },
+      h("div", { style: { display: "flex", fontSize: fit.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fit.fontSize * 0.05, color: LIGHT.fg } }, titleText)))
+}
+
+const TEMPLATES = {
+  title: titleTree,
+  info: (f) => infoTree(f, INFO_DARK),
+  tutorial: (f) => infoTree(f, INFO_LIGHT),
+  "case-study": caseStudyTree,
+}
 
 async function renderPng(page, fonts) {
   const tree = await TEMPLATES[page.template](page.fields)
@@ -254,9 +433,10 @@ function listPages() {
       // partials/meta-image-url.html), so its generated card would be unused.
       if (clean(fm.meta_image)) continue
       const id = pageId(file)
+      const template = typeof sec.template === "function" ? sec.template(fm, id) : sec.template
       const fields = sec.fields(fm, id)
-      if (!sec.valid(fields)) continue
-      secPages.push({ id, section: sec.name, template: sec.template, fields, out: join(OUT_ROOT, `${id}.png`) })
+      if (!sec.valid(fields, template)) continue
+      secPages.push({ id, section: sec.name, template, fields, out: join(OUT_ROOT, `${id}.png`) })
     }
     if (SAMPLE && sec.sampleGroupBy) {
       // One representative page per group. OG_SAMPLE_LEVEL=N picks a page N
@@ -310,7 +490,13 @@ async function runGenerate(pages) {
   // Prune only on full runs (not sample/only) to avoid deleting unrelated cards.
   if (!SAMPLE && !ONLY.length) {
     const keep = new Set(pages.map((p) => p.out))
-    const walkPng = (d) => { for (const n of existsSync(d) ? readdirSync(d) : []) { const f = join(d, n); statSync(f).isDirectory() ? walkPng(f) : (f.endsWith(".png") && !keep.has(f) && rmSync(f)) } }
+    const walkPng = (d) => {
+      for (const n of existsSync(d) ? readdirSync(d) : []) {
+        const f = join(d, n)
+        if (statSync(f).isDirectory()) walkPng(f)
+        else if (f.endsWith(".png") && !keep.has(f)) rmSync(f)
+      }
+    }
     walkPng(OUT_ROOT)
     for (const id of Object.keys(next)) if (!pages.find((p) => p.id === id)) delete next[id]
   }
@@ -318,6 +504,8 @@ async function runGenerate(pages) {
   writeFileSync(MANIFEST, JSON.stringify(next, Object.keys(next).sort(), 2) + "\n")
   const totalMs = Date.now() - t0
   console.log(`meta-images: ${rendered} rendered, ${skipped} cached, ${failures.length} failed | ${totalMs}ms total${rendered ? `, ${Math.round(renderMs / rendered)}ms avg` : ""}`)
+  // Fail the build only on a total wipeout (every page failed) — a one-off bad
+  // page shouldn't block a deploy; it just ships without its generated card.
   if (failures.length && failures.length === pages.length) process.exit(1)
 }
 

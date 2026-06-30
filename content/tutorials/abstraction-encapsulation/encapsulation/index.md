@@ -6,7 +6,6 @@ description: Explore encapsulation of cloud resources with Pulumi.
 meta_desc: Learn what encapsulation is in the context of infrastructure as code, why it is crucial for maintaining good IaC, and what encapsulation looks like in practice.
 weight: 2
 estimated_time: 10
-meta_image: meta.png
 aliases:
     - /learn/abstraction-encapsulation/encapsulation/
 ---

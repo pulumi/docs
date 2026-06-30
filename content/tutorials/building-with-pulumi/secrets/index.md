@@ -4,7 +4,6 @@ title: Working with Secrets
 layout: topic
 description: Explore how Pulumi handles secrets across all environments.
 meta_desc: Learn how secrets work within Pulumi and how to access secrets with this tutorial.
-meta_image: meta.png
 weight: 2
 estimated_time: 10
 aliases:

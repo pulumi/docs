@@ -5,7 +5,6 @@ layout: single
 description: |
     Create and deploy infrastructure in the browser with Pulumi Deployments and the New Project Wizard.
 meta_desc: In this step-by-step tutorial, learn how to create and manage cloud infrastructure using Pulumi Deployments, the New Project Wizard, and GitHub integration.
-meta_image: meta.png
 weight: 50
 summary: |
     In this tutorial, you'll learn how to create, deploy, and manage cloud infrastructure using Pulumi Deployments with click-to-deploy. You'll start by using the New Project Wizard to set up and launch infrastructure from your browser, selecting a template to get started quickly.
