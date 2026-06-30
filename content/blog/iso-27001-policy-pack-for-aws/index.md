@@ -22,9 +22,9 @@ social:
 
         We built a pack of 238 policies that does the interpretation for you.
     linkedin: |
-        ISO/IEC 27001 is the international benchmark for information security management, and one of the most common hard requirements in enterprise procurement and cross-border deals.
+        ISO/IEC 27001 is the international benchmark for information security management, and for many companies it's what stands between them and a customer or a market.
 
-        The problem has always been translation. The standard's controls are written in the language of governance and risk, not in the language of cloud resources. Every team has had to interpret each control and decide what it means for an S3 bucket, an RDS instance, a CloudTrail trail.
+        The problem has always been translation. The standard's controls are written in the language of governance and risk, not in the language of cloud resources. Every team has had to interpret each control and decide what it means for an S3 bucket, an RDS instance, a security group.
 
         We built a policy pack to remove that work.
 
@@ -47,7 +47,7 @@ Today we're shipping a pre-built ISO/IEC 27001:2022 policy pack for AWS, live no
 
 ## Why ISO 27001 matters
 
-ISO/IEC 27001 is the globally recognized standard for an information security management system (ISMS). Unlike a regional regulation, it's a worldwide benchmark, which is why it shows up so often as a hard requirement in enterprise procurement and cross-border deals. It's SOC 2-adjacent in spirit, since both attest that you manage security risk systematically, but ISO 27001 carries broader international recognition that buyers around the world already trust.
+For many companies, ISO 27001 is what stands between them and a customer or a market. The sooner you can reach a certifiable state and prove you stay there, the less compliance slows the business down. The pack collapses months of policy work into something you run continuously, so security keeps pace with growth instead of blocking it.
 
 ## How the pack maps to ISO 27001
 
@@ -68,7 +68,7 @@ Audit gets you clean. Preventative policies keep you clean.
 
 ISO 27001 joins a growing library of pre-built packs for AWS, each authored and maintained by Pulumi and kept current with its source standard:
 
-- **ISO/IEC 27001:2022** (new)
+- **ISO/IEC 27001:2022**
 - **CIS Controls v8.1**
 - **NIST SP 800-53 Rev. 5**
 - **PCI DSS v4.0**
