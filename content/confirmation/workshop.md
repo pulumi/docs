@@ -5,7 +5,7 @@ type: page
 layout: confirmation
 
 confirmation_heading: Thank you for signing up for a Pulumi workshop!
-confirmation_text: You'll receive a confirmation email shortly. While you're here, see how easy it is to <a class="text-violet-primary underline" href="https://www.pulumi.com/docs/get-started/">get started with Pulumi</a>.
+confirmation_text: You'll receive a confirmation email shortly. While you're here, see how easy it is to <a class="text-violet-primary underline" href="https://app.pulumi.com/signup">get started with Pulumi</a>.
 
 block_external_search_index: true
 ---
