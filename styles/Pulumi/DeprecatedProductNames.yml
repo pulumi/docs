@@ -1,0 +1,17 @@
+# Flags the deprecated "Pulumi Service" name (the pre-2022 name for Pulumi Cloud).
+#
+# This is an existence rule (flag-only), NOT a substitution: the correct current
+# name is context-dependent. "Pulumi Service" most often resolves to Pulumi
+# Cloud, but in many places it means a more specific product -- e.g. the External
+# Secrets Operator pushes secrets to a *Pulumi ESC environment*, and the "Pulumi
+# Service provider" is now the "Pulumi Cloud provider". An auto-replace would
+# mechanically pick the wrong one, so we surface it for a human to resolve.
+#
+# Matches "Pulumi Service" / "Pulumi service" / "pulumi service" (ignorecase) but
+# not the plural "Pulumi Services" (no word boundary before the trailing "s").
+extends: existence
+message: "'%s' is the former name of Pulumi Cloud. Use the specific current product for this context -- e.g. Pulumi Cloud, Pulumi ESC, or Pulumi Deployments (STYLE-GUIDE.md §Product Names)."
+level: warning
+ignorecase: true
+tokens:
+  - '\bPulumi Service\b'

@@ -27,7 +27,5 @@ swap:
   '\bPulumi Cli\b': Pulumi CLI
   '\bpulumi sdk\b': Pulumi SDK
   '\bPulumi Sdk\b': Pulumi SDK
-  '\bpulumi service\b': Pulumi Cloud
-  '\bPulumi service\b': Pulumi Cloud
   '\bPulumi Cloud Console\b': Pulumi Cloud console
   '\bPulumi Console\b': Pulumi Cloud console
