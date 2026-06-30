@@ -5,7 +5,6 @@ allow_long_title: true
 description: |
     Wiz uses Pulumi's Automation API to manage thousands of Kubernetes clusters across hundreds of data centers worldwide, handling hundreds of thousands of infrastructure updates daily while maintaining over a million cloud resources.
 meta_desc: See how Wiz uses Pulumi to operate thousands of Kubernetes clusters globally, processing hundreds of thousands of infrastructure updates daily.
-meta_image: "/images/case-studies/wiz.png"
 
 customer_name: Wiz
 customer_logo: /logos/customers/wiz.png

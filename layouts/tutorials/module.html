@@ -21,11 +21,6 @@
                 <div class="special-h1">
                     <h1>{{ .Title }}</h1>
                 </div>
-                {{ if .Params.meta_image }}
-                    <div>
-                        <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
-                    </div>
-                {{ end }}
                 <div class="my-4">
                     {{ .Summary }}
                 </div>

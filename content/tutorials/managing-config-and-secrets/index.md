@@ -9,9 +9,6 @@ description: Learn how to manage plain-text and encrypted configuration values i
 # A similar description used for search results and social-media previews.
 meta_desc: Learn how to manage plain-text and encrypted configuration values in Pulumi.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: config-secrets-meta.png
-
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
 weight: 999

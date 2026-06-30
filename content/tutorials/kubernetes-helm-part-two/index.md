@@ -6,7 +6,6 @@ layout: single
 description: |
   Learn how to use the `Chart` resource from the Pulumi Kubernetes provider to install Helm charts on Kubernetes.
 meta_desc: Using Pulumi to install Helm Charts on Kubernetes is a great way to manage to install third-party applications on your Kubernetes cluster.
-meta_image: meta.png
 weight: 999
 summary: |
   This is the second part of the tutorial on how to install Helm on Kubernetes using Pulumi.

@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Entities and organization level access"
 meta_desc: Learn about entities in Pulumi Cloud RBAC — the stacks, environments, and Insights accounts that permission sets are granted on — and organization-level access.
 title: "Entities and Organization Level Access"
 h1: "Entities and Organization Level Access"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Entities & Org Level

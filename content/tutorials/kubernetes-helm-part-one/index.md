@@ -6,7 +6,6 @@ layout: single
 description: |
   Learn how to use the `Release` resource from the Pulumi Kubernetes provider to install Helm charts on Kubernetes.
 meta_desc: Using Pulumi to install Helm Charts on Kubernetes is a great way to manage to install third-party applications on your Kubernetes cluster.
-meta_image: meta.png
 weight: 999
 summary: |
   If you worked with Pulumi and [Kubernetes](https://kubernetes.io/), you probably know that Pulumi has a [Kubernetes provider](/docs/iac/get-started/kubernetes/) that allows you to deploy Kubernetes resources.

@@ -4,7 +4,6 @@ title: Understanding Stack Outputs
 layout: topic
 description: Learn how to share values from a stack to other places.
 meta_desc: Learn what stack outputs are, how to retrieve stack outputs using the Pulumi CLI, and how to configure a stack in this tutorial.
-meta_image: meta.png
 weight: 2
 estimated_time: 10
 aliases:

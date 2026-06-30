@@ -4,7 +4,6 @@ title: Building a Component Resource
 layout: topic
 description: Try creating a component resource, or a logical grouping of code that Pulumi recognizes as a resource.
 meta_desc: Learn how to build a component resource, or a logical grouping of code that Pulumi recognizes as a resource, in this tutorial.
-meta_image: meta.png
 weight: 3
 estimated_time: 10
 aliases:

@@ -4,7 +4,6 @@ title: Pulumi Fundamentals
 layout: module
 description:  Learn how to use Pulumi to build, configure, and deploy a real-world application.
 meta_desc: Learn how to use Pulumi to build, configure, and deploy a real-life, modern application in this starter tutorial.
-meta_image: meta.png
 weight: 1
 summary: |
     In this tutorial, you’ll learn about cloud computing with Pulumi by building, configuring, and deploying a real-world, modern application with Docker. You’ll create a front-end interface, a back-end service, and a database to deploy a web application called the Pulumipus Boba Tea Shop. Along the way, you’ll learn more about how Pulumi works.
