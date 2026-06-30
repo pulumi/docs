@@ -9,9 +9,9 @@ description: Here is a brief description of this topic.
 # A similar description used for search results and social-media previews.
 meta_desc: Here is a brief description of this topic.
 
-# An optional image for this topic. When set, it appears at the top of the page.
-# Leave it blank to skip the inline image; an on-brand social-media preview card is
-# generated automatically at build time.
+# An on-brand social-media preview card is generated automatically at build time,
+# so leave this blank. Only set meta_image to override that card with a custom
+# social-media image (it is no longer shown inline on the page).
 # meta_image: meta.png
 
 # The order in which the topic appears in most lists. Order is ascending, so higher numbers

@@ -9,13 +9,13 @@ description: Here is a brief description of what this tutorial's all about.
 # A similar description used for search results and social-media previews.
 meta_desc: Here is a brief description of what this tutorial's all about.
 
-# An optional image for the tutorial. When set, it appears at the top of the page.
-# Leave it blank to skip the inline image; an on-brand social-media preview card is
-# generated automatically at build time.
+# An on-brand social-media preview card is generated automatically at build time,
+# so leave this blank. Only set meta_image to override that card with a custom
+# social-media image (it is no longer shown inline on the page).
 # meta_image: meta.png
 
-# An optional video for the tutorial. When present, it appears at the top of the page, replacing
-# the meta image. YouTube and HTML5 video sources are supported.
+# An optional video for the tutorial. When present, it appears at the top of the page.
+# YouTube and HTML5 video sources are supported.
 # video:
 #     url: /blog/drift-detection/drift.mp4
 #     youtube: Q8tw6YTD3ac
