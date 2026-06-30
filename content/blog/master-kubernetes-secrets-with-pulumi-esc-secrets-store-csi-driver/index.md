@@ -14,6 +14,7 @@ tags:
 - secrets
 - csi
 - esc
+category: tutorials
 
 social:
   twitter: |

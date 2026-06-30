@@ -10,6 +10,7 @@ authors:
 tags:
   - esc
   - secrets
+category: best-practices
 canonical_url: "https://www.pulumi.com/docs/esc/guides/sync-secrets-to-external-platforms/"
 ---
 

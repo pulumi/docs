@@ -10,6 +10,7 @@ authors:
 tags:
     - features
     - infrastructure-lifecycle-management
+category: product
 ---
 
 

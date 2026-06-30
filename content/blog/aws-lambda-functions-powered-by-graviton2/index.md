@@ -9,6 +9,7 @@ tags:
     - aws
     - lambda
     - arm64
+category: product
 
 ---
 

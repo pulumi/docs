@@ -6,6 +6,7 @@ meta_desc: Learn how to deploy a secure Django app to AWS using Pulumi and Docke
 meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "python", "containers", "docker", "mysql"]
+category: tutorials
 ---
 
 In this blog post, we will finish swapping out the frontend and backend of our [Python AWS application](/blog/creating-a-python-aws-application-using-flask-and-redis/). Although Flask and Redis are different from Django and MySQL in many ways, the underlying infrastructure behind their deployment is nonetheless very similar, and can be effortlessly updated as we transition from one to the other.

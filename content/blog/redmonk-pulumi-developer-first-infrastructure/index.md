@@ -12,6 +12,7 @@ tags:
     - developer-first-infrastructure
     - cloud-computing
     - infrastructure-as-code
+category: perspectives
 ---
 
 What do assembly languages and the cloud have in common? Are abstractions the future of cloud computing? What does "infrastructure" really mean? And why do these questions matter to the platform engineers, infrastructure engineers, and developers who are building modern cloud applications today?

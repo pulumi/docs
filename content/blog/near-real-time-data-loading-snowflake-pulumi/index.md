@@ -12,9 +12,10 @@ tags:
     - data-and-analytics
     - aws
     - python
-    - pulumi-esc
+    - esc
     - github
     - snowflake
+category: tutorials
 schema_type: auto
 social:
     twitter: "We load data into Snowflake in seconds with a single Pulumi ComponentResource. Direct Firehose to Snowflake streaming, no S3 intermediate. Here's how we built it."

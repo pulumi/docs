@@ -33,8 +33,9 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - insights
-    - google cloud
+    - google-cloud
     - resources
+category: product
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

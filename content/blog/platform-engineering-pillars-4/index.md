@@ -11,6 +11,7 @@ authors:
 tags:
     - platform-engineering
     - platform-engineering-pillars
+category: best-practices
 series: platform-engineering-pillars
 social:
     twitter: >

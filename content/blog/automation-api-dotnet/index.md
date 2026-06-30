@@ -7,9 +7,10 @@ authors:
 - joshua-studt
 - sophia-parafina
 tags:
-- Automation API
-- .NET
+- automation-api
+- dotnet
 - guest-post
+category: product
 ---
 
 {{% notes type="info" %}}

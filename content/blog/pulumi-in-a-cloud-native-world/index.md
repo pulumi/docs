@@ -15,10 +15,11 @@ tags:
 - kubernetes
 - external-secrets-operator
 - backstage
-- argo-cd
+- argocd
 - pulumi
 - kyverno
 - gitops
+category: best-practices
 
 social:
   twitter: "Pulumi in a Cloud Native World: See how Pulumi fits into the Cloud Native landscape and how several CNCF projects can be combined with Pulumi to create an internal developer platform. #GitOps #Kubernetes #ArgoCD #Pulumi #Backstage"

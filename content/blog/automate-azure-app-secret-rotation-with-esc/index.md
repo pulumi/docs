@@ -8,8 +8,9 @@ feature_image: feature.png
 authors:
     - sean-yeh
 tags:
-    - pulumi-esc
+    - esc
     - azure
+category: product
 schema_type: auto
 social:
     twitter: |

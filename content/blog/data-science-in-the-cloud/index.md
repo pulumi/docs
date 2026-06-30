@@ -11,6 +11,7 @@ tags:
     - python
     - jupyter
     - data-science
+category: tutorials
 ---
 
 Data science has advanced because tools like Jupyter Notebook hide complexity by running high level code for the specific problem they are trying to solve. Increasing the level of abstraction lets a data scientist be more productive by reducing the effort to try multiple approaches to near zero, which encourages experimentation and better results.

@@ -10,6 +10,7 @@ tags:
     - announcements
     - community
     - pulumi-events
+category: community
 ---
 
 We have a global community made up of people from many different countries, but we also have many local communities. We want to enable our users to meet, share knowledge and ideas, answer questions, and learn about Pulumi and best practices. For that reason, we created the [Pulumi User Groups, aka PUGs](https://www.meetup.com/pro/pugs) on Meetup.

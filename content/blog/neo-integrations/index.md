@@ -11,7 +11,8 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
-    - pulumi-esc
+    - esc
+category: product
 
 aliases:
     - /blog/neo-integration-catalog/

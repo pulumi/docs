@@ -9,6 +9,7 @@ authors:
 tags:
   - google-cloud
   - releases
+category: product
 
 ---
 

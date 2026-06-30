@@ -10,6 +10,7 @@ authors:
 tags:
     - aws
     - providers
+category: product
 
 ---
 

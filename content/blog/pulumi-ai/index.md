@@ -10,6 +10,7 @@ tags:
     - features
     - ai
     - llm
+category: product
 ---
 
 {{< notes type="info" >}}

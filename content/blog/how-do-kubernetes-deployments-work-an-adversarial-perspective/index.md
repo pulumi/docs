@@ -5,7 +5,8 @@ date: "2018-10-03"
 meta_desc: "In this blog, we take a closer look at what happens during a rollout, what happens if we kill a pod, and what happens if we add or remove labels from a pod."
 meta_image: "deployment-rollout.png"
 authors: ["alex-clemmer"]
-tags: ["Kubernetes"]
+tags: [kubernetes]
+category: best-practices
 ---
 
 *This post is part 3 in a series on the Kubernetes API. Earlier,

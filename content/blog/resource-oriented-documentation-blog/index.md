@@ -8,6 +8,7 @@ authors:
     - luke-hoban
 tags:
     - features
+category: product
 aliases:
     /blog/resource-oriented-documentation-blog/
 ---

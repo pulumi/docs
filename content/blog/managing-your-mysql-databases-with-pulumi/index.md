@@ -5,6 +5,7 @@ meta_desc: "In this post, we'll walk through a quick tutorial of how to use the 
 meta_image: "hero.png"
 authors: ["linio-engineering"]
 tags: ["guest-post", "mysql"]
+category: tutorials
 ---
 
 One of the most critical components of an application’s infrastructure is its

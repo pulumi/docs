@@ -13,6 +13,7 @@ tags:
     - features
     - pulumi-neo
     - pulumi-cli
+category: product
 
 social:
     twitter: |

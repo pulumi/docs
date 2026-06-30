@@ -8,6 +8,7 @@ authors:
 tags:
     - google-cloud
     - import
+category: tutorials
 ---
 
 Point and click in the console is great when you're first starting out learning a new cloud or managed service, but it quickly becomes a hindrance when cloud infrastructure is widely adopted by an organization. The point at which the term "widely adopted" becomes applicable to your situation differs, but at some point in their careers, many infrastructure and platform engineers are faced with situations where a large number of critical infrastructure resources were created through "click ops" with no ability to track changes, reproduce environments consistently, and so on. When this happens (and it will probably happen to many of you), it's time to import those resources into infrastructure as code.

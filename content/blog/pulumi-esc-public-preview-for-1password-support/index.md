@@ -13,6 +13,7 @@ tags:
   - secrets
   - 1password
   - features
+category: product
 
 ---
 

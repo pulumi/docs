@@ -1,7 +1,8 @@
 ---
 title: "Managing Kubernetes Infrastructure with .NET and Pulumi"
 authors: ["luke-hoban"]
-tags: [".NET","kubernetes"]
+tags: [dotnet, kubernetes]
+category: tutorials
 date: "2019-12-10"
 meta_desc: "Manage Kubernetes with .NET using the Pulumi.Kubernetes resource provider for Pulumi."
 meta_image: "k8s-dotnet.png"

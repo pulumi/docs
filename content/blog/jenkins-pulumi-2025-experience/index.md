@@ -37,6 +37,7 @@ tags:
     - ci-cd
     - devops
     - automation
+category: tutorials
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

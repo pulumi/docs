@@ -8,7 +8,8 @@ authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 Summer is quickly flying by, and we've been hard at work with more new features and updates across the Pulumi ecosystem!

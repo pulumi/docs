@@ -14,6 +14,7 @@ tags:
     - platform-engineering
     - devops
     - infrastructure-as-code
+category: perspectives
 social:
     twitter: |
         Somewhere in your company, a developer just wired an AI agent into production. The platform team doesn't know it exists.

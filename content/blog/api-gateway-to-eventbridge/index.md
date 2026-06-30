@@ -19,6 +19,7 @@ tags:
     - eventbridge
     - lambda
     - serverless
+category: tutorials
 ---
 
 If you're familiar with [Amazon API Gateway](https://aws.amazon.com/api-gateway/), you know it's all about making it easier to provision and manage a web API. Maybe you've used it, as I have, with [Crosswalk](/docs/iac/clouds/aws/guides/), our AWS extension library, to stand up a REST API and handle requests with AWS Lambda functions:

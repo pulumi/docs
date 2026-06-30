@@ -97,6 +97,17 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## Blog categories and tags
+
+Blog posts carry two taxonomy axes (plus optional `series`):
+
+- **`category`** — the *kind* of post. This is a **closed** set defined in `data/blog_categories.yaml` (the single source of truth read by `scripts/lint/lint-markdown.js`). Category is **required** and **singular**: every post declares exactly one `category:` scalar value. Use the best-fitting specific kind, or **`general`** (the default) for posts that don't fit cleanly (e.g. SEO comparisons or "what is X" explainers — those rely on tags instead). `make lint` fails on a missing value, a list value, or a value outside the set. **Do not invent categories** — pick an id from the data file. To add/rename one, edit `data/blog_categories.yaml` in a PR and raise it in #blogs. The blog docs-review additionally flags posts that landed in a specific kind but really belong in `general` (and vice versa).
+- **`tags`** — the *topical* axis (clouds, languages, products, scenarios). Curated-but-open, **not** build-enforced. Reuse a tag from the canonical vocabulary in `data/blog_tags.yaml` and **avoid near-duplicates** (`kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Tags are lowercase and hyphen-delimited.
+
+See `BLOGGING.md` for the author-facing version of these rules.
+
+---
+
 ## Dark mode (/docs)
 
 The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.

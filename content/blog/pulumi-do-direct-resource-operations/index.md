@@ -15,6 +15,7 @@ tags:
     - pulumi-cli
     - ai-agents
     - product-launches
+category: product
 schema_type: auto
 
 social:

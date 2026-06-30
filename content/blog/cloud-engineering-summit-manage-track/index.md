@@ -10,6 +10,7 @@ tags:
     - cloud-engineering
     - security
     - pulumi-events
+category: community
 ---
 
 The Cloud Engineering Summit 2021 is coming up fast, and the speakers are out! To get you ready to attend, let’s take a look at the sessions for the Manage track.

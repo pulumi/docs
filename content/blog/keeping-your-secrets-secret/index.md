@@ -8,6 +8,7 @@ authors:
 tags:
     - security
     - secrets
+category: best-practices
 
 ---
 

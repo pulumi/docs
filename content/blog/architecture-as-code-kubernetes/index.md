@@ -8,6 +8,7 @@ authors:
 tags:
     - kubernetes
     - architecture-as-code
+category: best-practices
 series: architecture-as-code
 ---
 

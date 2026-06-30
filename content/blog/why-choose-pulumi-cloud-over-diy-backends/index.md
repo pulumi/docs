@@ -9,6 +9,7 @@ tags:
     - infrastructure-as-code
     - platform-engineering
     - pulumi-cloud
+category: general
 ---
 
 {{< notes type="info" >}}

@@ -5,7 +5,8 @@ updated: 2025-03-24
 meta_desc: "Learn how to deploy Kubernetes Ingress on AWS using the ALB Ingress Controller and Pulumi. Step-by-step guide with EKS setup, Helm, and sample app."
 meta_image: "featured-img-albingresscontroller.png"
 authors: ["nishi-davidson"]
-tags: ["Kubernetes", "eks"]
+tags: [kubernetes, eks]
+category: tutorials
 ---
 
 [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)

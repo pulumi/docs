@@ -8,11 +8,12 @@ meta_image: developer-experience-devex-business-value-business-critical.png
 authors:
     - sara-huddleston
 tags:
-    - developer-experience-devex
+    - developer-experience
     - devops
     - platform-engineering
     - developer-portals
     - software-development
+category: general
 aliases:
     - /blog/software-developer-experience-devex-devx-devops-culture
 ---

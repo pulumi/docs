@@ -15,7 +15,8 @@ tags:
     - typescript
     - pulumi-enterprise
     - cloud-engineering
-    - GitHub-actions
+    - github-actions
+category: customers
 
 ---
 

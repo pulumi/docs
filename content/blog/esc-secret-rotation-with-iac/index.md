@@ -9,6 +9,7 @@ authors:
 tags:
   - esc
   - secrets
+category: best-practices
 ---
 
 {{% notes "info" %}}

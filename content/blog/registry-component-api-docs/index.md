@@ -17,10 +17,11 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - idp
+    - internal-developer-platform
     - private-registry
     - infrastructure-components
     - platform-engineering
+category: product
 
 social:
     twitter: |

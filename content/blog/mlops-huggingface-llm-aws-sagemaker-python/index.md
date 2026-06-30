@@ -9,7 +9,7 @@ authors:
 tags:
     - ai
     - ml
-    - iac
+    - infrastructure-as-code
     - aws
     - llm
     - vllm
@@ -19,9 +19,10 @@ tags:
     - llama2
     - devops
     - python
-    - SageMaker
+    - sagemaker
     - huggingface
     - platform-engineering
+category: tutorials
 ---
 
 [Pulumi CLI]:/docs/install/

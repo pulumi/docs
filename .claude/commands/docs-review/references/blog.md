@@ -75,6 +75,24 @@ When none fire, render the explicit-empty form per output-format.md (don't skip 
 
 Data renders regardless; only the threshold flags suppress.
 
+### Priority 2.6 — Category fit (agentic; advisory)
+
+Every blog post carries a required, singular `category` value — the *kind* of post, a closed set in `data/blog_categories.yaml` (the single source of truth for ids, names, and `use_when` hints). `lint-markdown.js` already enforces the **mechanical** rules (present; a single scalar, not a list; a valid id) and `make lint` fails on violations — **do not re-flag those here.** This lane owns the **semantic** check that a deterministic linter can't do: does the post's *content* actually match the kind it claims?
+
+`general` is the **default catch-all** — the correct home for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, "top N tools" listicles, trend roundups, marketing/solution pages). The job of this lane is to make sure a post landed in the right place relative to `general`.
+
+Read the post whole-file (already mandatory) and load the kind definitions + `use_when` hints from `data/blog_categories.yaml`. Then make these judgments, each surfacing as a `⚠️ Low-confidence` finding (never a publishing blocker — categorization is editorial and the author may have context you don't):
+
+1. **Over-promoted into a specific kind — should be `general`.** This is the priority case. A post categorized as a specific kind (`best-practices`, `product`, `tutorials`, …) that is really SEO/marketing content with no genuine substance of that kind: a comparison ("X vs Y") filed as `product`, a "top/best N tools" listicle or "what is / why choose / when to use" explainer filed as `best-practices`, a trend/prediction roundup filed as `perspectives`, a thin solution/funnel page filed as `product`. Quote the title + the deciding structural evidence (comparison framing, listicle headings, no runnable steps, no original thesis) and propose **`category: general`**.
+
+2. **Wrong specific kind.** The declared kind doesn't match the content, but another specific kind does: a step-by-step walkthrough filed `best-practices` (it's `tutorials`); a feature-launch announcement filed `tutorials` (it's `product`); a named-customer story filed `community` (it's `customers`); an internals deep-dive filed `best-practices` (it's `engineering`). Quote the evidence; propose the better id.
+
+3. **Under-categorized — `general` that clearly fits a specific kind.** A post left in `general` that plainly matches a specific kind (a real release announcement, a genuine hands-on tutorial, a named-customer story, an original-argument essay). Quote the evidence; propose the specific id.
+
+**The subtle boundary — `perspectives` vs `general`.** Both can look essay-like. `perspectives` is an author making an **original argument or analysis in their own voice** (a thesis, a point of view); `general` is for content that exists mainly to **rank for a search query or sell**. Use intent, not title shape: *The Past, Present, and Future of Cloud Engineering* (original argument → `perspectives`) vs *Why Choose Pulumi Over Terraform?* (search-funnel comparison → `general`).
+
+**Keep the bar high.** Flag only clear mismatches, not marginal judgment calls between two defensible kinds — this is a nag, and noise erodes it. When two kinds genuinely both fit, say which is dominant and stop; don't flag. One finding per post maximum (the category is a single field). Quote-and-rewrite mandate applies: name the current value, quote the deciding evidence, and propose the specific id (or `general`). The Priority 2.5 editorial-balance triggers (comparison / listicle / FAQ) are strong corroborating signals for case 1.
+
 ### Priority 3 — Code correctness
 
 Apply `docs-review:references:code-examples`.

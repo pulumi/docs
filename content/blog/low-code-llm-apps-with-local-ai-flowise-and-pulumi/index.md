@@ -16,6 +16,7 @@ tags:
 - eks
 - langchain
 - llamaindex
+category: tutorials
 ---
 
 Building low-code LLM applications just got easier! With [Flowise](https://flowiseai.com/), [LocalAI](https://localai.io/), and Pulumi, you can quickly create, deploy, and manage AI-powered workflows on AWS EKS—without writing complex code.

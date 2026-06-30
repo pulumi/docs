@@ -13,6 +13,7 @@ tags:
     - security
     - rds
     - iam
+category: tutorials
 schema_type: auto
 ---
 

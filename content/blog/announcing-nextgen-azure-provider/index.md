@@ -7,6 +7,7 @@ authors:
    - mikhail-shilkov
 tags:
    - azure
+category: product
 ---
 
 {{% notes type="info" %}}

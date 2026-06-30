@@ -11,6 +11,7 @@ authors:
 tags:
     - features
     - release-notes
+category: product
 ---
 
 {{< notes type="info" >}}

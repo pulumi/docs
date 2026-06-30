@@ -11,6 +11,7 @@ tags:
     - ai
     - automation
     - developer-experience
+category: best-practices
 schema_type: auto
 ---
 

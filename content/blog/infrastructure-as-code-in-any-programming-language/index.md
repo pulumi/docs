@@ -15,6 +15,7 @@ authors:
 tags:
     - infrastructure-as-code
     - fundamentals
+category: perspectives
 
 
 ---

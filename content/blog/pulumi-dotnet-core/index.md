@@ -1,7 +1,8 @@
 ---
 title: "Pulumi 💜 .NET Core"
 authors: ["joe-duffy"]
-tags: ["pulumi-news", ".NET"]
+tags: [announcements, dotnet]
+category: product
 meta_desc: "Today we are excited to announce preview support for writing Pulumi programs in any .NET Core language, including C#, F#, and VB.NET."
 date: "2019-11-11"
 

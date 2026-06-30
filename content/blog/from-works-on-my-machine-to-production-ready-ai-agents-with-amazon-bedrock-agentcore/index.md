@@ -12,6 +12,7 @@ tags:
   - bedrock-agentcore
   - pulumi
   - infrastructure-as-code
+category: tutorials
 allow_long_title: true
 ---
 

@@ -8,8 +8,8 @@ feature_image: feature.png
 authors:
     - luke-ward
 tags:
-    - pulumi-service
     - pulumi-cloud
+category: product
 schema_type: auto
 
 # Social media copy is auto-posted to X, LinkedIn, and Bluesky when merged to master.

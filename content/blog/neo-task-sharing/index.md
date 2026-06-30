@@ -7,9 +7,10 @@ meta_image: meta.png
 authors:
     - neo-team
 tags:
-    - neo
+    - pulumi-neo
     - ai
     - features
+category: product
 schema_type: auto
 
 # Optional: Social media promotional copy (for reference only, does not auto-post)

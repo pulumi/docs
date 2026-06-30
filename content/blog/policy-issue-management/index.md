@@ -8,13 +8,14 @@ meta_desc: "Pulumi’s Policy Findings hub helps teams move from alert fatigue t
 allow_long_title: true
 meta_image: "meta.png"
 tags:
-  - pulumi-service
+  - pulumi-cloud
   - policy-as-code
   - audit-policies
   - compliance
   - governance
   - pulumi-neo
   - infosec
+category: product
 ---
 
 For platform and security teams, enabling robust cloud scanning often creates a new problem: an unmanageable firehose of policy alerts. Identifying a violation is only the first step. Without a system to manage the lifecycle of these findings, teams are quickly overwhelmed, leading to prioritization paralysis and a perpetually growing backlog.

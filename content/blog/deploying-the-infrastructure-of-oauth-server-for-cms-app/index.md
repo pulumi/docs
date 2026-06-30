@@ -6,6 +6,7 @@ meta_desc: "Implementing and deploying an OAuth server for Netlify CMS on Fargat
 meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
 tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

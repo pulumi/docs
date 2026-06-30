@@ -7,11 +7,12 @@ authors:
     - evan-boyle
     - pat-gavlin
 tags:
-    - cloud engineering
-    - pulumi deployments
-    - automation api
+    - cloud-engineering
+    - pulumi-deployments
+    - automation-api
     - deployments
-    - review stacks
+    - review-stacks
+category: product
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

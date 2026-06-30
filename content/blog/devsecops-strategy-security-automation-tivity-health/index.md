@@ -34,12 +34,13 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - security
-    - devecops
+    - devsecops
     - devops
     - infrastructure-as-code
     - platform-engineering
     - infrastructure-lifecycle-management
-    - developer-experience-devex
+    - developer-experience
+category: customers
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These

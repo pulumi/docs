@@ -16,6 +16,7 @@ authors:
 tags:
     - kubernetes
     - providers
+category: product
 
 ---
 

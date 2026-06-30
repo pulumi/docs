@@ -32,6 +32,7 @@ tags:
     - hub-and-spoke
     - python
     - aws-networking-advanced
+category: tutorials
 series: aws-networking-advanced
 ---
 

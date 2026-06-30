@@ -16,6 +16,7 @@ tags:
     - esc
     - secrets
     - platform-engineering
+category: product
 
 ---
 

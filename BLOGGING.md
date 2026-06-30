@@ -67,15 +67,44 @@ linktitle: This is the link text
 ---
 ```
 
+**Category**
+
+Category is the *kind of post* axis — distinct from topical tags and from reading-path series — and it is a **closed set**. It is **required** and **singular**: every post declares exactly one `category:` scalar value (e.g. `category: product`), never a list. Apply the single best-fitting kind when the post clearly fits one of the specific kinds below; if it doesn't fit cleanly (for example, an SEO-oriented comparison like *Pulumi vs. Terraform* or a *What is X* explainer), use **`general`** — the default catch-all — and rely on its tags to place it in a subject area. If a post seems to span two kinds, pick the dominant one. `make lint` fails any blog post whose `category` is missing, is a list, or is a value outside the allowed set.
+
+The allowed categories are the single source of truth in [`data/blog_categories.yaml`](./data/blog_categories.yaml):
+
+| id | use when |
+|---|---|
+| `product` | Releases, new features, announcements, launch recaps, roadmaps |
+| `engineering` | How we built it, deep technical dives, performance, internals |
+| `community` | Events, meetups, webinars, hackathons, guest posts, open source, interns |
+| `best-practices` | Architecture, IaC, platform-engineering, and security/governance patterns and guidance |
+| `tutorials` | Step-by-step how-tos and getting-started guides |
+| `customers` | Customer stories and case studies centered on a named customer |
+| `perspectives` | Thought leadership and opinion — an original argument in the author's voice |
+| `company` | Company news: funding, hiring, partnerships, brand, year-in-review |
+| `general` | **Default.** Catch-all for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, listicles) |
+
+Do **not** invent categories or add ad-hoc values to a post. To propose a new category (or rename/retire one), edit `data/blog_categories.yaml` in a PR and raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) first. Topical buckets (clouds, languages, products) are *tags*, not categories — keep this axis tight.
+
 **Tags**
 
-Every tag added makes the overall tagging system harder to quickly grok and use. So, we strongly prefer using existing tags wherever possible. The tag system is as follows:
+Tags are the *topical* axis (subjects: clouds, languages, products, scenarios). Every tag added makes the overall tagging system harder to quickly grok, so we strongly prefer reusing an existing tag. The canonical, deduplicated vocabulary lives in [`data/blog_tags.yaml`](./data/blog_tags.yaml) — **pick a tag from there and avoid near-duplicates** (use `kubernetes`, not `k8s`; `infrastructure-as-code`, not `iac`; `pulumi-cloud`, not `pulumi-service`; `announcements`, not `pulumi-news`; `dotnet`, not `c#`/`.net`; `google-cloud`, not `gcp`). Tags are lowercase and hyphen-delimited. Unlike categories, the tag list is curated-but-open: only mint a new tag when nothing in the vocabulary fits, and only add a cloud-provider or feature tag if we expect multiple posts about it.
 
-- **Pulumi tags:** `pulumi-news` for company news (funding, certifications, etc.), `pulumi-events` for events we participate in or host, `pulumi-interns` for intern posts, `pulumi-enterprise` for enterprise-focused blog posts
-- **Cloud provider tags:** Only add a cloud provider tag if we expect to have multiple posts about the provider. Today, that means `aws`, `azure`, `google-cloud`, `digitalocean`
-- **Feature tags:** Only add a feature tag if we expect to have multiple posts about the feature. Today, that means `features` (for feature announcements), `aliases`, `continuous-delivery`, `logging`, `migration`, `native-providers`, `packages`, `policy-as-code`, `secrets`, `testing`.
-- **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
-- **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
+The vocabulary is grouped roughly as:
+
+- **Pulumi:** `pulumi-cloud`, `pulumi-enterprise`, `pulumi-neo`, `copilot`, `esc`, `insights`, `automation-api`, `crossguard`, `announcements` (company news), `pulumi-events`, `pulumi-interns`, `releases`, `features`
+- **Cloud providers** (multiple-posts rule): `aws`, `azure`, `google-cloud`, `digitalocean`
+- **Languages:** `typescript`, `javascript`, `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`
+- **AI:** `ai`, `ai-agents`, `llm`, `ml`, `mlops`, `claude`, `claude-code`, `mcp`
+- **Kubernetes & containers:** `kubernetes`, `containers`, `docker`, `helm`, `eks`, `aks`, `gke`, `gitops`
+- **Platform engineering:** `platform-engineering`, `internal-developer-platform`, `developer-portals`, `developer-experience`, `cloud-engineering`, `infrastructure-as-code`, `best-practices`
+- **Security & governance:** `security`, `secrets`, `policy-as-code`, `compliance`, `governance`, `iam`, `rbac`, `oidc`
+- **Scenarios:** `serverless`, `continuous-delivery`, `ci-cd`, `github-actions`, `devops`, `migration`, `testing`
+
+**Series**
+
+A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug`. To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set `series` on each member post. Series are optional — most posts don't belong to one.
 
 **Canonical link**
 

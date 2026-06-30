@@ -13,6 +13,7 @@ tags:
     - java
     - features
     - releases
+category: product
 
 social:
     twitter: "☕ The Pulumi Java SDK is now Generally Available! Manage your infrastructure using the composable, strongly typed programming language you already know and love - now including the powerful Pulumi Automation API!"

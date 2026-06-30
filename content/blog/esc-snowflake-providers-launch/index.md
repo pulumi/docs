@@ -18,6 +18,7 @@ tags:
 - oidc
 - security
 - configuration-management
+category: product
 ---
 
 Snowflake is the data cloud powerhouse for countless businesses, critical for everything from customer dashboards to billing pipelines. The stakes are immense: this data must be strictly secured and always available. But managing this with static credentials or manual key rotation creates persistent security vulnerabilities and introduces operational instability, risking disruptions during clumsy updates. [Pulumi ESC](/product/esc) eliminates this dilemma with two purpose-built Snowflake integrations:

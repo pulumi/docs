@@ -7,9 +7,10 @@ meta_image: meta.png
 authors:
     - idp-team
 tags:
-    - idp
+    - internal-developer-platform
     - features
     - platform-engineering
+category: product
 ---
 
 Platform teams publishing components to the Pulumi Private Registry can now see exactly which stacks are using each component and at which version.

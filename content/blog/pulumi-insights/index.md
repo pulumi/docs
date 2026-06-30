@@ -6,12 +6,13 @@ meta_desc: "Pulumi Insights provides AI-powered intelligence, search, and analyt
 date: "2023-04-13T06:00:00-08:00"
 meta_image: "insights.png"
 tags:
-    - pulumi-news
+    - announcements
     - features
-    - pulumi-releases
+    - releases
     - ai
     - llm
     - data-and-analytics
+category: product
 ---
 
 {{< notes type="info" >}}

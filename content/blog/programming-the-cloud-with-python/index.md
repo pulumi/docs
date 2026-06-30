@@ -3,7 +3,8 @@ title: "Programming the Cloud with Python"
 date: "2019-04-04"
 meta_desc: "See how to use Pulumi and Python to automate provisioning of cloud infrastructure and delivery of applications."
 authors: ["sean-gillespie"]
-tags: ["Serverless","AWS","Python"]
+tags: [serverless, aws, python]
+category: tutorials
 meta_image: meta.png
 ---
 

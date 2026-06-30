@@ -8,6 +8,7 @@ authors:
 tags:
     - architecture-as-code
     - virtual-machines
+category: best-practices
 series: architecture-as-code
 ---
 

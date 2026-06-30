@@ -35,6 +35,7 @@ tags:
     - typescript
     - package-manager
     - bun
+category: product
 
 ---
 

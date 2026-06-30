@@ -12,6 +12,7 @@ tags:
     - kgateway
     - ingress
     - networking
+category: tutorials
 schema_type: auto
 social:
     twitter:

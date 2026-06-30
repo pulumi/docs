@@ -14,7 +14,8 @@ authors:
 
 tags:
     - features
-    - pulumi-service
+    - pulumi-cloud
+category: product
 ---
 
 We are excited to announce that starting today Pulumi customers can create a Billing Manager role for their organization on the [Pulumi Service](https://app.pulumi.com/signin). We have heard from our customers that having a Billing Manager would solve internal process challenges and are aiming to solve these pain points with the new Billing Manager role.

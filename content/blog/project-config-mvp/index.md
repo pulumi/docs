@@ -9,7 +9,8 @@ authors:
     - zaid-ajaj
 tags:
     - features
-    - config
+    - configuration
+category: product
 ---
 
 > [!INFO]

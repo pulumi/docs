@@ -11,6 +11,7 @@ authors:
 tags:
     - pulumi-up
     - workshop
+category: community
 ---
 
 At Pulumi, we’re incredibly fortunate to have over 70 integration partners in our ecosystem – helping shared end-users to build, deploy and manage practically any cloud service they can imagine. Our most popular content often includes workshops that show end-users how to use these powerful integrations. This year for PulumiUP, we’re excited to announce that we’ve teamed up with a number of partners to deliver a workshop track that provides hands-on labs and demonstrations for a variety of platforms and scenarios.

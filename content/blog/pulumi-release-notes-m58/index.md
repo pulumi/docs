@@ -8,7 +8,8 @@ authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 In this update:

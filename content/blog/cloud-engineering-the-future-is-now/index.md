@@ -7,6 +7,7 @@ authors:
     - sophia-parafina
 tags:
     - cloud-engineering
+category: community
 ---
 
 Thank you for joining the PulumiUP event. We had a stellar set of speakers and panelists discussing the future of DevOps and how Cloud Engineering is providing the tools and processes that enable faster delivery, the right mix of architecture, and foster collaboration among teams in an organization. Here are some of the highlights and takeaways from our speakers.

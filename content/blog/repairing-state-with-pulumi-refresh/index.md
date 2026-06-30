@@ -12,6 +12,7 @@ authors:
 
 tags:
     - features
+category: tutorials
 ---
 
 Under the hood, Pulumi is a desired state engine. This means that you tell Pulumi what you want, Pulumi knows what already exists, and it makes targeted changes to match the state of the world with your desired state. This works great as long as Pulumi understands the state of the world, which it nearly always does. We will discuss how `pulumi refresh` can be used to bring Pulumi's state back inline with external state.

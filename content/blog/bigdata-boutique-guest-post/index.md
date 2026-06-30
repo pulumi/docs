@@ -9,6 +9,7 @@ tags:
     - guest-post
     - testing
     - elasticsearch
+category: customers
 
 ---
 

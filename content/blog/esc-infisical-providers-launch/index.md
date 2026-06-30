@@ -16,6 +16,7 @@ tags:
   - configuration-management
   - dynamic-secrets
   - oidc
+category: product
 ---
 
 We are thrilled to announce enhanced integration support for [Infisical](https://infisical.com/) within [Pulumi ESC](/product/esc)! Pulumi ESC centralizes secrets and configuration management, providing a unified source of truth across your environments. With the addition of Infisical, a popular open-source secrets management platform, ESC further extends its ecosystem, enabling seamless and secure access to secrets stored across diverse systems.

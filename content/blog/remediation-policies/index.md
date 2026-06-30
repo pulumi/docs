@@ -9,6 +9,7 @@ tags:
     - platform-engineering
     - policy-as-code
     - crossguard
+category: product
 
 ---
 

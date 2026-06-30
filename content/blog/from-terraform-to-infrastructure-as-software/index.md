@@ -4,7 +4,8 @@ date: "2018-11-02"
 meta_desc: "Convert existing Terrraform configuration to Pulumi TypeScript to help you create simpler, more flexible infrastructure as code, with less repetition."
 meta_image: "tf-to-pulumi.png"
 authors: ["pat-gavlin"]
-tags: ["JavaScript","TypeScript"]
+tags: [javascript, typescript]
+category: tutorials
 ---
 
 Here at Pulumi, we love programming the cloud using infrastructure as

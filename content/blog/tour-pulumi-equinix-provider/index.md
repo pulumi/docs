@@ -10,6 +10,7 @@ authors:
 tags:
     - equinix
     - kubernetes
+category: tutorials
 ---
 
 Equinix recently released their self-maintained, fully-supported Pulumi provider, available in the [Pulumi Registry](https://www.pulumi.com/registry/packages/equinix/). In this post, you'll get an overview of the Equinix resources the provider can manage and we'll show you how to deploy a Kubernetes cluster and associated workloads on Equinix Metal.

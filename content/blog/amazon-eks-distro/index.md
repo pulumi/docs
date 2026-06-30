@@ -11,6 +11,7 @@ tags:
     - kubernetes
     - aws
     - eks
+category: tutorials
 ---
 
 As Kubernetes grows in popularity, the number of options for Kubernetes users continues to increase. Providers of managed Kubernetes offerings will often learn lessons about operating large numbers of clusters at scale; it's increasingly common that they will contribute this knowledge back to the ecosystem, allowing those organizations who need more control and flexibility to reap the benefits.

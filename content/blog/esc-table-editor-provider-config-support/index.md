@@ -11,9 +11,10 @@ authors:
 tags:
   - esc
   - secrets
-  - config management
+  - configuration-management
   - features
   - releases
+category: product
 ---
 
 We are pleased to announce a major update to the [Pulumi ESC](/product/esc)’s Table Editor: full support for provider configurations is now live! When we [first introduced the ESC Table view](/blog/esc-key-value-table-editor-launch), our goal was to offer a user-friendly interface for managing complex configuration and secrets for your applications and infrastructure. This has empowered teams to focus on what they do best—building and deploying software.

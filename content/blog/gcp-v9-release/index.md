@@ -8,9 +8,10 @@ authors:
     - guinevere-saenger
     - zaid-ajaj
 tags:
-    - gcp
+    - google-cloud
     - releases
     - features
+category: product
 ---
 
 We're excited to announce the v9 release of the Pulumi Google Cloud Provider!

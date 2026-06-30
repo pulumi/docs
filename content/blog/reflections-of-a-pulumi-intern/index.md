@@ -4,6 +4,7 @@ meta_image: meta.png
 authors: ["albert-zhong"]
 meta_desc: "A reflection on my Pulumi intern experiences (summer 2020 edition)"
 tags: ["pulumi-interns"]
+category: community
 date: "2020-09-18"
 ---
 

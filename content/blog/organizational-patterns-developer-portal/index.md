@@ -15,6 +15,7 @@ tags:
     - development-environment
     - automation-api
     - organizational-patterns
+category: best-practices
 series: organizational-patterns
 ---
 

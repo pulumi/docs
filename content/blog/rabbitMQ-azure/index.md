@@ -6,9 +6,10 @@ meta_image: 1.png
 authors:
     - itay-podhajcer
 tags:
-    - Azure
-    - .NET
+    - azure
+    - dotnet
     - rabbitmq
+category: tutorials
 
 ---
 

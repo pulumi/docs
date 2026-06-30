@@ -7,7 +7,8 @@ authors:
     - luke-hoban
 tags:
     - yaml
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 Earlier this year we launched support for [Pulumi YAML](https://www.pulumi.com/blog/pulumi-yaml/) as a new supported language for Pulumi’s Universal Infrastructure as Code platform.  Pulumi YAML offers a simple declarative interface to the full breadth of the Pulumi platform, ideal for smaller scale use cases and composition of higher level component building blocks.  And with support for `pulumi convert`, Pulumi YAML programs can be converted into a program in any other Pulumi language, ensuring you can easily scale up if and when needed.

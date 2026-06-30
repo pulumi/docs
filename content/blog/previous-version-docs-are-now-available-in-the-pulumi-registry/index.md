@@ -11,6 +11,7 @@ authors:
 tags:
     - registry
     - features
+category: product
 schema_type: auto
 ---
 

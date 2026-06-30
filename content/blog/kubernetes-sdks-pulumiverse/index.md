@@ -6,6 +6,7 @@ meta_desc: In this article, we look at a new repository published on the Pulumiv
 meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["kubernetes"]
+category: product
 ---
 
 Pulumi provides an amazingly rich interface for developers and operators to define their Kubernetes workloads, providing typed access to recourses from the Kubernetes API and allowing our IDEs to provide code completion and refactoring opportunities through the native language plugins.

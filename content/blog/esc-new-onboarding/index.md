@@ -10,6 +10,7 @@ authors:
     - sean-yeh
 tags:
     - esc
+category: product
 schema_type: auto
 ---
 

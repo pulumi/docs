@@ -5,7 +5,8 @@ date: "2018-06-22"
 meta_desc: "In this post, we'll use Pulumi to create a simple serverless REST API using JavaScript to define both the infrastructure and application code."
 meta_image: "counter-arch.png"
 authors: ["donna-malayeri"]
-tags: ["JavaScript","Serverless","AWS"]
+tags: [javascript, serverless, aws]
+category: tutorials
 ---
 
 Pulumi makes it easy to build serverless

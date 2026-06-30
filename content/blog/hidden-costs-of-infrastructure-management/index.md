@@ -7,6 +7,7 @@ authors:
     - aaron-kao
 tags:
     - infrastructure-as-code
+category: general
 ---
 
 {{< notes type="info" >}}

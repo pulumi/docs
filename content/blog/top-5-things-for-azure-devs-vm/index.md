@@ -7,8 +7,9 @@ authors:
     - sophia-parafina
 tags:
     - azure
-    - virtual machines
+    - virtual-machines
     - azure-top-5
+category: tutorials
 series: azure-top-5
 ---
 

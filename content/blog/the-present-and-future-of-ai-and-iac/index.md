@@ -9,6 +9,7 @@ tags:
     - ai
     - llm
     - infrastructure-as-code
+category: perspectives
 ---
 
 {{< notes type="info" >}}

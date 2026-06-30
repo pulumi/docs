@@ -10,8 +10,9 @@ authors:
 tags:
   - esc
   - secrets
-  - config management
+  - configuration-management
   - features
+category: product
 ---
 
 

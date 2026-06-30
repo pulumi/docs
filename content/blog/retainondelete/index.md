@@ -7,6 +7,7 @@ authors:
     - fraser-waters
 tags:
     - features
+category: product
 
 ---
 

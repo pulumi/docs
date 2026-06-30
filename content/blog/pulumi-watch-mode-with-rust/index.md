@@ -12,6 +12,7 @@ tags:
     - features
     - watch
     - rust
+category: engineering
 ---
 
 Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/what-is/what-is-infrastructure-as-code/). The

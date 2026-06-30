@@ -8,10 +8,11 @@ meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - pulumi-news
-    - iac
+    - announcements
+    - infrastructure-as-code
     - esc
     - insights
+category: product
 ---
 
 {{< notes type="info" >}}

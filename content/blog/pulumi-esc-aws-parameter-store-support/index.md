@@ -13,6 +13,7 @@ tags:
   - secrets
   - aws
   - features
+category: product
 
 ---
 We are super excited to announce integration support for AWS Systems Manager - Parameter Store within Pulumi Environments, Secrets, and Configuration ([ESC](/product/esc)). Parameter Store is a popular managed service by AWS for storing and managing secrets and other configuration, and its integration with ESC has been highly requested among the community.
