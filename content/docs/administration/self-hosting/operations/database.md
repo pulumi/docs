@@ -24,6 +24,31 @@ Deploy MySQL 8.0 on a managed service rather than self-managing:
 - **GCP**: Cloud SQL for MySQL
 - **On-prem**: MySQL 8.0 with InnoDB, configured for replication
 
+## Required sql_mode settings
+
+Pulumi Cloud database migrations use `ALGORITHM=INPLACE`, which MySQL only permits when strict mode is active. The server's `sql_mode` must include `STRICT_TRANS_TABLES`. Without it, migrations fail with:
+
+```
+ALGORITHM=INPLACE is not supported. Reason: cannot silently convert NULL values, as required in this SQL_MODE. Try ALGORITHM=COPY.
+```
+
+Stock MySQL 8.0 enables `STRICT_TRANS_TABLES` by default, but some managed and custom configurations do not — notably Amazon Aurora MySQL 8.0. If you bring your own database or customize a parameter group, configure `sql_mode` for your platform:
+
+- **Amazon Aurora / RDS MySQL**: Set `sql_mode` (including `STRICT_TRANS_TABLES`) in the DB cluster parameter group (Aurora) or DB parameter group (RDS), then apply and reboot.
+- **Azure Database for MySQL Flexible Server**: Set the `sql_mode` server parameter to include `STRICT_TRANS_TABLES`.
+- **Google Cloud SQL for MySQL**: Add `sql_mode` as a database flag with a value that includes `STRICT_TRANS_TABLES`.
+- **Self-managed MySQL**: Set `sql-mode` in `my.cnf` (for example, `sql-mode = "STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION"`) and restart, or run `SET GLOBAL sql_mode = '...';` at runtime.
+
+{{% notes type="warning" %}}
+If `sql_mode` does not include `STRICT_TRANS_TABLES`, database migrations during installation and upgrades will fail. This is a common source of failures on Amazon Aurora MySQL 8.0, which does not enable strict mode by default.
+{{% /notes %}}
+
+Verify the current setting by running:
+
+```sql
+SHOW VARIABLES LIKE 'sql_mode';
+```
+
 ## High availability configuration
 
 ### Multi-AZ and read replicas
@@ -53,6 +78,8 @@ Pulumi Cloud runs database migrations as a separate task before deploying new ap
 - Run migrations before updating service containers.
 - The self-hosted installers handle this automatically via a dedicated migration task/job.
 - If running migrations manually, ensure they complete before restarting services.
+
+Migrations require strict mode. Confirm your database's `sql_mode` includes `STRICT_TRANS_TABLES` before upgrading — see [Required sql_mode settings](/docs/administration/self-hosting/operations/database/#required-sql_mode-settings).
 
 See [Upgrades](/docs/administration/self-hosting/operations/upgrades/) for the full update process.
 
