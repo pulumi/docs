@@ -128,11 +128,14 @@ After installing the app, you can configure pull request behavior. Toggle these 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
+| Draft pull request comments | Enabled | Post pull request comments while a pull request is still in draft. When disabled, the comment is held until the pull request is marked ready for review |
 | Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
-Changes save automatically. Neo code reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo code reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+Changes save automatically. Draft pull request comments, Neo code reviews, and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo code reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+
+Organizations with [Neo code reviews](/docs/ai/code-reviews/) enabled manage them from **Settings** > **Neo settings** > **Code reviews**, where you set review behavior per organization and per repository. The **Neo code reviews** toggle above does not appear for those organizations; the other settings, including **Pull request comments**, **Code access for AI reviews**, and **Detailed diff for pull request comments**, continue to apply.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 
