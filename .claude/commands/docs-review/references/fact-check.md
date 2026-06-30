@@ -346,6 +346,8 @@ Main agent walks §Verification source order steps 1-3 sequentially during the c
 
 **Don't iterate to find prior discussion.** Specifically: don't loop `gh api repos/pulumi/docs/issues` or `gh api repos/pulumi/docs/pulls` searching for prior PRs / issues / discussions about a topic. That's exploration, not verification — read the actual code path, release notes, or `pulumi/pulumi` source instead. One targeted `gh search code` or `gh api` call resolves the typical pulumi-internal claim; if that doesn't close it, the claim isn't pulumi-internal and belongs in another lane.
 
+**But DO follow an implementing PR the docs PR explicitly links.** The "don't trawl pulls" rule is about *blind* discovery; a change the docs PR body cites by number (`Documents pulumi/pulumi#NNNN`) is a canonical source, not exploration — read it with `gh pr diff NNNN -R pulumi/pulumi`. This is the common shape for docs that ship *alongside* a feature: the new flag/command/API isn't on `master` or in the published reference yet, so `gh search code` of the default branch comes up empty and a WebSearch of the docs site lags. A brand-new symbol confirmed only in a linked, not-yet-merged impl PR is **`verified`** (confidence `medium`, evidence "confirmed in linked impl PR #NNNN, not yet on default branch / released") — **not** 🤷 `unverifiable`. "Not in the published reference yet" is a docs lag, not a doubt, once you've read the implementing code. *(On the normal CI path `verify-claims.py` parses these refs from the PR body and threads them into the pass1/pass3 verifier prompt automatically — see its `fetch_impl_refs`; this rule is the in-review / fallback equivalent.)*
+
 If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
 
 **Canonical sources for pulumi-internal verification.** Read the canonical source first.
@@ -356,6 +358,7 @@ If the inline check fails to resolve a claim that was classified `pulumi-interna
 | Example-program | `static/programs/<name>-<lang>/` |
 | Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
 | Resource schema / API surface | `pulumi/pulumi-<provider>` |
+| New symbol (flag/command/API) the docs PR links an implementing PR for | The linked `pulumi/*` PR/commit — `gh pr diff <n> -R pulumi/<repo>` — authoritative for a feature not yet on `master` or in the published reference |
 | Shortcode | `layouts/shortcodes/<name>.html` |
 | Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
 | Frontmatter field semantics | An existing page in the same content tree that uses the field |
@@ -443,6 +446,10 @@ gh api "repos/pulumi/pulumi/commits?path=<file>&since=<date>"
 # Find prior decisions, "we decided not to ship this," or "this was renamed"
 gh issue list -R pulumi/<repo> --search "<term> in:title,body"
 gh pr list -R pulumi/<repo> --search "<term>"
+
+# Read an implementing PR the docs PR explicitly links — canonical for a symbol
+# not yet on master (e.g. docs PR body says "Documents pulumi/pulumi#23691")
+gh pr diff <n> -R pulumi/<repo>
 
 # Read provider schema generation source for resource property claims
 gh api repos/pulumi/pulumi-<provider>/contents/provider/cmd/...

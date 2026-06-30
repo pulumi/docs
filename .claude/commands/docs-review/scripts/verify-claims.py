@@ -144,6 +144,19 @@ PULUMI_INTERNAL_RES = [
 URL_IN_TEXT_RE = re.compile(r"https?://[\w\-._~:/?#\[\]@!$&'*+,;=%()]+")
 PULUMI_DOMAIN_RE = re.compile(r"https?://(?:[\w.-]*\.)?pulumi\.com\b|https?://github\.com/pulumi/", re.IGNORECASE)
 
+# Implementing-change references a docs PR cites in its body — the source of
+# truth for a feature that ships *alongside* its docs and so isn't yet on a
+# default branch or in the published reference. We thread these into the pass1 /
+# pass3 verifier prompt so a brand-new symbol can be confirmed against the PR
+# that implements it instead of dead-ending at `unverifiable`. Captures the two
+# explicit forms only (`pulumi/<repo>#<n>` and a github.com pull/commit URL);
+# a bare `#<n>` in a docs PR body usually points back into pulumi/docs, so it's
+# deliberately excluded to avoid routing the verifier at the wrong repo.
+IMPL_REF_RES = [
+    re.compile(r"\bpulumi/[\w.-]+#\d+"),
+    re.compile(r"\bgithub\.com/pulumi/[\w.-]+/(?:pull|commit)/[0-9a-f]+", re.IGNORECASE),
+]
+
 
 # ---- model-facing tool schemas ---------------------------------------------
 
@@ -236,7 +249,8 @@ Cheapest first. Stop as soon as a source closes the claim.
    - `gh api repos/pulumi/<repo>/contents/<path>` / `gh api repos/pulumi-labs/<repo>/contents/<path>` — read source to verify API surface (resource properties, CLI flags)
    - `gh release list -R pulumi/pulumi --limit 20` / `gh release view <tag> -R pulumi/pulumi` / `gh release list -R pulumi-labs/<repo>` — version-availability claims
    - `gh issue list -R pulumi/<repo> --search "<term>"` / `gh pr list -R pulumi/<repo> --search "<term>"` — prior decisions ("we decided not to ship this", "this was renamed")
-   `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for context discovery; read the actual code path. Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
+   - **Linked implementing change** — when the claim is about a NEW pulumi symbol (a flag, command, or API) you cannot find on the default branch, AND this PR cites an implementing change (a "This docs PR cites implementing change(s)" line in the user message, or a `pulumi/<repo>#<n>` / `github.com/pulumi/<repo>/(pull|commit)/...` reference), READ it before giving up: `gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`. Docs that ship alongside the feature are the normal case — the symbol lives in the linked PR, not yet on `master`.
+   `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for *blind* context discovery — but an implementing PR THIS docs PR explicitly cites is not discovery; read it. A brand-new symbol confirmed only in a linked, not-yet-merged implementing PR is `verified` at confidence `medium`, with `evidence` noting "confirmed in linked impl PR <ref>, not yet on default branch / released" — do NOT return `unverifiable` merely because the symbol isn't in the released CLI or the published docs reference yet. "Not in the published reference" is a docs lag, not a doubt, once you have read the implementing code. Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
 3. **Pre-fetched URL** (pass2 lane) — the cited URL's content (HTTP status + body) is in the user message. Do NOT try to fetch it again. Read the body, find the supporting passage, run the framing check. If the status is not 2xx (dead link / soft-404) → `contradicted` with `evidence: "cited URL returns HTTP <status>"` and `source: "<url>"`; do NOT return `unverifiable` for a dead Pass-2 URL — a broken citation is a contradiction the author must fix. If the body is 2xx but doesn't contain the supporting passage → `unverifiable` (note the page was fetched but didn't address the claim).
 4. **Web search** (pass3 lane) — use the `web_search` tool with a query derived from the claim, then read the results. For numerical claims (prices, rates, limits), cross-check the YEAR of any page you rely on — a stale cached price is a `contradicted` when the current figure differs. If no result addresses the claim, return `unverifiable` and set `source` to `WebSearch ran query "<your query>"; top results didn't address the claim`. Reserve `unverifiable` for genuinely unfetchable claims, not "I didn't try".
 
@@ -323,6 +337,35 @@ def find_fetched_url(claim: dict, fetched_by_url: dict[str, dict]) -> dict | Non
         if rec is not None:
             return rec
     return None
+
+
+def fetch_impl_refs(pr: str, repo: str) -> list[str]:
+    """Best-effort: parse implementing `pulumi/*` PR/commit refs out of the docs
+    PR's body+title, so the pass1/pass3 verifiers can confirm a brand-new symbol
+    against the change that ships it. Uses the already-passed `--pr`/`--repo`
+    (previously unused). Never raises — any failure yields `[]` and the verifier
+    simply falls back to its normal source order."""
+    if not pr or not repo:
+        return []
+    try:
+        proc = subprocess.run(
+            ["gh", "pr", "view", str(pr), "-R", repo, "--json", "body,title"],
+            capture_output=True, text=True, timeout=GH_TIMEOUT,
+        )
+        if proc.returncode != 0:
+            return []
+        data = json.loads(proc.stdout or "{}")
+    except (subprocess.TimeoutExpired, OSError, json.JSONDecodeError):
+        return []
+    blob = f"{data.get('title', '')}\n{data.get('body', '')}"
+    refs: list[str] = []
+    seen: set[str] = set()
+    for rx in IMPL_REF_RES:
+        for m in rx.findall(blob):
+            if m not in seen:
+                seen.add(m)
+                refs.append(m)
+    return refs[:5]
 
 
 # ---- pass 0: deterministic resolution (zero model calls) -------------------
@@ -505,7 +548,8 @@ def tools_for_route(route: str) -> list[dict]:
     return [VERIFY_CLAIM_TOOL]  # pass2
 
 
-def build_user_message(claim: dict, route: str, evidence_pack: dict | None) -> str:
+def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
+                       impl_refs: list[str] | None = None) -> str:
     lines = [
         "Verify this claim:",
         "",
@@ -518,6 +562,14 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None) -> s
         lines.append(f"- source_hint: {claim['source_hint']}")
     if claim.get("found_by"):
         lines.append(f"- found_by: {', '.join(str(x) for x in claim['found_by'])}")
+    if impl_refs and route in ("pass1", "pass3"):
+        lines += [
+            "",
+            "This docs PR cites implementing change(s) — read them to confirm a brand-new "
+            "symbol (flag/command/API) you can't find on the default branch, with "
+            "`gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`:",
+            *[f"- {r}" for r in impl_refs],
+        ]
     if route == "pass2" and evidence_pack:
         body = (evidence_pack.get("content_text") or "")[:PASS2_BODY_CAP] or "(empty body)"
         lines += [
@@ -571,7 +623,8 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
 
 
 def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | None,
-                 model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True) -> dict:
+                 model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True,
+                 impl_refs: list[str] | None = None) -> dict:
     """Run one claim through one lane (with at most one pass1→pass3 escalation hop)."""
     if dry_run:
         return {
@@ -588,7 +641,7 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
     ]
     tools = tools_for_route(route)
     tool_choice: dict = ({"type": "tool", "name": "verify_claim"} if route == "pass2" else {"type": "auto"})
-    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack)}]
+    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack, impl_refs)}]
     agg_usage = _zero_usage()
     max_turns = MAX_TURNS.get(route, 4)
 
@@ -614,7 +667,8 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
             rec = _finalize_verdict(claim, route, inp, agg_usage, turn)
             esc = inp.get("route_escalation")
             if esc == "pass3" and route == "pass1" and allow_escalate:
-                rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run, allow_escalate=False)
+                rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
+                                    allow_escalate=False, impl_refs=impl_refs)
                 for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
                     rec2["model_usage"][k] += rec["model_usage"][k]
                 rec2["model_usage"]["turns"] += rec["model_usage"]["turns"]
@@ -655,7 +709,8 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
 
 
 def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
-                  model: str, repo_root: Path, dry_run: bool) -> tuple[dict, str | None]:
+                  model: str, repo_root: Path, dry_run: bool,
+                  impl_refs: list[str] | None = None) -> tuple[dict, str | None]:
     route = claim.get("__route", "pass1")
     evidence_pack = None
     if route == "pass2":
@@ -663,7 +718,8 @@ def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
         if evidence_pack is None:
             route = "pass3"  # we routed to pass2 but the URL turned out not to be in the fetched set
     try:
-        rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run)
+        rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run,
+                           impl_refs=impl_refs)
         return rec, None
     except Exception as e:  # noqa: BLE001
         # NOTE: the "verifier failed:" prefix (err) and "verify-claims.py errored
@@ -716,8 +772,8 @@ def main() -> int:
     p.add_argument("--in", dest="in_path", required=True, help="Input `.candidate-claims.json` from merge-claims.py")
     p.add_argument("--fetched-urls", default=".fetched-urls.json", help="`.fetched-urls.json` from extract-urls-and-fetch.py")
     p.add_argument("--out", required=True, help="Output `.verified-claims.json` path")
-    p.add_argument("--pr", help="(unused; accepted for parity with sibling pre-steps)")
-    p.add_argument("--repo", help="(unused; accepted for parity with sibling pre-steps)")
+    p.add_argument("--pr", help="Docs PR number; used to parse implementing pulumi/* PR/commit refs from the PR body")
+    p.add_argument("--repo", help="Docs repo (owner/repo) for the --pr body lookup, e.g. pulumi/docs")
     p.add_argument("--repo-root", default=".", help="Repo root for read_file (default: cwd)")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--dry-run", action="store_true", help="Don't call the API; emit placeholder verdicts (testing)")
@@ -771,11 +827,20 @@ def main() -> int:
     for c in routed_claims:
         n_by_route[c["__route"]] = n_by_route.get(c["__route"], 0) + 1
 
+    # Parse implementing pulumi/* PR/commit refs from the docs PR body once, so a
+    # pass1/pass3 verifier can confirm a brand-new symbol against the change that
+    # ships it. Best-effort and only when a lane that can use it has work.
+    impl_refs: list[str] = []
+    if not args.dry_run and (n_by_route["pass1"] or n_by_route["pass3"]):
+        impl_refs = fetch_impl_refs(args.pr or "", args.repo or "")
+        if impl_refs:
+            print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
+
     verdicts: list[dict] = list(pass0_verdicts)
     errors: list[str] = []
     if routed_claims:
         with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(routed_claims))) as pool:
-            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run)
+            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run, impl_refs)
                     for c in routed_claims]
             for fut in futs:
                 rec, err = fut.result()
