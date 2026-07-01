@@ -56,9 +56,9 @@ jobs:
       # pulumi-bot rather than github-actions[bot].
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           # The skill reads git history (synthetic diffs, staleness), so a
@@ -82,7 +82,7 @@ jobs:
       # Vale (and other mise-pinned tools) for the skill's whole-file
       # prose-lint pre-step.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
       - name: Install Python deps

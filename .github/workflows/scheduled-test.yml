@@ -55,10 +55,10 @@ jobs:
 
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
 
       - name: Check out the code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Fetch master branch
         if: github.ref != 'refs/heads/master'
@@ -140,7 +140,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:
