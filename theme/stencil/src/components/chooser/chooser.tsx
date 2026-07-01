@@ -21,6 +21,11 @@ export interface SupportedLanguage {
     key: LanguageKey;
     name: string;
     extension: string;
+    logo: string;
+    // Optional dark-mode logo variant, for languages whose light logo doesn't read
+    // on a dark background (e.g. YAML's black wordmark). Swapped via the docs
+    // theme's .docs-logo-light/.docs-logo-dark CSS.
+    logoOnDark?: string;
     preview: boolean;
 }
 
@@ -242,23 +247,65 @@ export class Chooser {
     }
 
     render() {
+        // Render the current set of options, marking the selected one active. For
+        // language choosers the button text is the uppercased file extension (e.g. TS,
+        // PY); every other type keeps rendering the full name and PREVIEW badge as before.
+        const list = (
+            <ul>
+                {this.currentOptions.map(opt => (
+                    <li class={this.selection === opt.key ? "active" : ""}>
+                        <a onClick={event => this.makeChoice(event, this.type, opt)}>
+                            {this.optionLabel(opt)} {opt.preview ? <span>PREVIEW</span> : ""}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        );
+
+        if (this.type === "language") {
+            const selected = this.currentOptions.find(o => o.key === this.selection) as SupportedLanguage;
+            return (
+                <Host selection={this.selection}>
+                    <div class="chooser-toolbar">
+                        <span class="chooser-toolbar-label">
+                            {selected ? this.renderToolbarLogo(selected) : ""}
+                            {selected ? selected.name : ""}
+                            {selected && selected.preview ? <span class="badge badge-preview">Preview</span> : ""}
+                        </span>
+                        {list}
+                    </div>
+                    <slot></slot>
+                </Host>
+            );
+        }
+
         return (
             <Host selection={this.selection}>
-                <ul>
-                    {
-                        // Render the current set of options, marking the selected one active.
-                        this.currentOptions.map(opt => (
-                            <li class={this.selection === opt.key ? "active" : ""}>
-                                <a onClick={event => this.makeChoice(event, this.type, opt)}>
-                                    {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
+                {list}
                 <slot></slot>
             </Host>
         );
+    }
+
+    // The toolbar language logo. With a dark variant, emit both images tagged
+    // .docs-logo-light/.docs-logo-dark for the docs theme to swap (the dark one is
+    // hidden except on dark docs pages); otherwise a single logo.
+    private renderToolbarLogo(lang: SupportedLanguage) {
+        if (lang.logoOnDark) {
+            return [
+                <img class="chooser-toolbar-logo docs-logo-light" src={lang.logo} alt="" aria-hidden="true" />,
+                <img class="chooser-toolbar-logo docs-logo-dark" src={lang.logoOnDark} alt="" aria-hidden="true" />,
+            ];
+        }
+        return <img class="chooser-toolbar-logo" src={lang.logo} alt="" aria-hidden="true" />;
+    }
+
+    // The text shown on a chooser tab. For languages we use the uppercased file
+    // extension (TS, PY, GO, …) so 7+ options fit on one row; everything else uses the
+    // full option name.
+    private optionLabel(opt: ChooserOption): string {
+        const ext = (opt as SupportedLanguage).extension;
+        return ext ? ext.toUpperCase() : opt.name;
     }
 
     // The choosable elements of this chooser, if any.
@@ -435,60 +482,74 @@ export class Chooser {
             key: "typescript",
             name: "TypeScript",
             extension: "ts",
+            logo: "/images/docs/icons/languages/typescript-color-32-32.svg",
             preview: false,
         },
         {
             key: "javascript",
             name: "JavaScript",
             extension: "js",
+            logo: "/images/docs/icons/languages/javascript-color-32-32.svg",
             preview: false,
         },
         {
             key: "python",
             name: "Python",
             extension: "py",
+            logo: "/images/docs/icons/languages/python-color-32-32.svg",
             preview: false,
         },
         {
             key: "go",
             name: "Go",
             extension: "go",
+            logo: "/images/docs/icons/languages/go-color-32-32.svg",
             preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
+            logo: "/images/docs/icons/languages/csharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
+            logo: "/images/docs/icons/languages/fsharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
+            logo: "/images/docs/icons/languages/visualbasic-color-32-32.svg",
             preview: false,
         },
         {
             key: "java",
             name: "Java",
             extension: "java",
+            // Mark-only Java cup (no "Java" wordmark), already used elsewhere in docs.
+            logo: "/images/docs/icons/languages/java-color-32-32.svg",
             preview: false,
         },
         {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
+            // Matched light/dark pair (the -on-dark recolor keeps the black wordmark
+            // legible on dark).
+            logo: "/images/docs/icons/languages/yaml-color-32-32.svg",
+            logoOnDark: "/images/docs/icons/languages/yaml-color-32-32-on-dark.svg",
             preview: false,
         },
         {
             key: "opa",
             name: "OPA",
             extension: "rego",
+            logo: "/images/docs/icons/languages/opa-color-32-32.png",
             preview: false,
         },
     ];

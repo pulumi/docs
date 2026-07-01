@@ -190,8 +190,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-violet-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-violet-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-violet-300);
             }
 
@@ -208,8 +211,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-green-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-green-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-green-300);
             }
 
@@ -226,8 +232,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-orange-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-orange-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-orange-300);
             }
 
@@ -463,6 +472,32 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // Language toolbar tabs: re-assert the underline colors (inactive = surface,
+    // active = link) so the unlayered `*` border reset below doesn't override them.
+    .chooser-toolbar > ul li {
+        border-bottom-color: var(--docs-surface);
+
+        &:hover {
+            border-bottom-color: var(--docs-border);
+        }
+
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+            }
+        }
+
+        &.active {
+            border-bottom-color: var(--docs-link);
+
+            a {
+                color: var(--docs-fg);
+            }
+        }
+    }
+
     pulumi-tabs::part(tab) {
         border-bottom-color: var(--docs-border);
     }
@@ -668,13 +703,8 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Code-block copy button stays primary violet-700 (the --color-violet-primary
-    // remap would otherwise turn it lavender).
-    .copy-button-container,
-    .copy-button-container:active,
-    .code-mode-dark .copy-button-container {
-        background: var(--color-violet-700);
-    }
+    // The copy button is a transparent ghost chip (see _copy-button.scss); it reads
+    // fine on the dark panel as-is, so dark mode needs no override here.
 
     // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake
     // a fixed-color SVG behind a mask; drop the image and tint the mask so they

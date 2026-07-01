@@ -27,20 +27,19 @@
         }
     }
 
-    i,
-    svg.ph-icon {
-        font-size: 15px;
-        width: 20px;
-        height: 20px;
-        margin-top: 2px;
-        flex-shrink: 0;
-    }
-
     div.icon-and-line {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 4px;
+
+        svg.ph-icon, i {
+            font-size: 15px;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
     }
 
     div.line {
@@ -75,8 +74,11 @@
         background: var(--color-violet-background);
 
         a,
-        i,
-        svg.ph-icon {
+        i {
+            color: var(--color-violet-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
             color: var(--color-violet-primary);
         }
 
@@ -93,8 +95,11 @@
         background: var(--color-green-background);
 
         a,
-        i,
-        svg.ph-icon {
+        i {
+            color: var(--color-green-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
             color: var(--color-green-primary);
         }
 
@@ -111,8 +116,11 @@
         background: var(--color-orange-background);
 
         a,
-        i,
-        svg.ph-icon {
+        i {
+            color: var(--color-orange-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
             color: var(--color-orange-primary);
         }
 
@@ -125,14 +133,12 @@
         }
     }
 
-    div.highlight div.copy-button-container button.copy-button i,
-    div.highlight div.copy-button-container button.copy-button svg {
-        color: #fff;
-    }
 }
 
 section.docs-content div.note {
-    :last-child {
+    // Tighten the last content block (scoped to the content's direct children so it
+    // doesn't reach deeply-nested last children like the copy button).
+    div.content > :last-child {
         padding-bottom: 0;
     }
 

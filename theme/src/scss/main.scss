@@ -387,6 +387,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // cannot affect any non-docs page.
 @import "docs/docs-theme";
 
+// Min Light code theme for /docs light mode. Unlayered (like docs-theme above) so
+// it beats the layered component rules; scoped + documented in the partial.
+@import "docs/code-light";
+
 // Auth-aware header swap. The inline script in head.html adds .is-signed-in
 // to <html> when the auth cookie is present, before first paint. These rules
 // live unlayered so they win against the buttons' display utilities (which

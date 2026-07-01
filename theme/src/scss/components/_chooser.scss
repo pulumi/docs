@@ -6,11 +6,15 @@ pulumi-chooser {
         list-style-type: none !important;
 
         li {
-            @apply font-display text-xs p-0 m-0 border-b-2 transition border-gray-300 text-center w-full;
+            @apply font-display text-xs p-0 m-0 border-b-2 transition text-center w-full;
             @include transition;
 
+            // --docs-* tokens (with non-docs fallbacks); the legacy dark rule in
+            // _docs-theme.scss re-asserts the dark hover/active values.
+            border-bottom-color: var(--docs-surface, theme("colors.gray.50"));
+
             &:hover {
-                @apply border-gray-500;
+                border-bottom-color: var(--docs-border, theme("colors.gray.200"));
             }
 
             @include screen-md {
@@ -21,7 +25,7 @@ pulumi-chooser {
                 @include gradient-border;
 
                 a {
-                    @apply text-gray-800;
+                    color: var(--color-service-black);
                 }
             }
 
@@ -52,6 +56,130 @@ pulumi-chooser {
                 @apply ml-1;
                 @extend .badge;
                 @extend .badge-preview;
+            }
+        }
+    }
+
+    // Language chooser card: a bordered card wrapping a gray toolbar (active logo +
+    // name on the left, abbreviation tabs on the right) and the slotted code/prose.
+    // Skips headless choosers (option-style="none"). --docs-* tokens with literal
+    // fallbacks give dark mode on /docs and light defaults elsewhere. Padding lives
+    // on the card so all slotted content (including bare-text-node prose) is inset
+    // uniformly; the toolbar breaks out of it to stay flush at the top.
+    &[type="language"]:not([option-style="none"]) {
+        @apply block rounded-lg px-4 pb-4 mb-4 overflow-hidden;
+
+        background: var(--docs-card, theme("colors.white"));
+        border: 1px solid var(--docs-border, theme("colors.gray.200"));
+
+        // Height comes from the label's padding; the tabs stretch to fill it so each
+        // tab's bottom border sits flush with the toolbar's bottom edge.
+        .chooser-toolbar {
+            @apply -mx-4 mb-4 flex justify-between gap-2 px-4;
+
+            background: var(--docs-surface, theme("colors.gray.50"));
+
+            .chooser-toolbar-label {
+                @apply font-display text-sm font-medium flex items-center gap-2 py-2;
+
+                color: var(--docs-fg, theme("colors.gray.900"));
+            }
+
+            .chooser-toolbar-logo {
+                @apply h-5 w-5 flex-shrink-0 object-contain;
+            }
+
+            > ul {
+                @apply m-0 flex flex-wrap justify-end;
+
+                padding: 0 !important;
+                list-style-type: none !important;
+
+                li {
+                    @apply font-display text-xs flex p-0 m-0 border-b-2 border-transparent transition;
+                    @include transition;
+
+                    &:hover {
+                        border-bottom-color: var(--docs-border, theme("colors.gray.200"));
+                    }
+
+                    &.active {
+                        border-bottom-color: var(--docs-link, var(--color-violet-primary));
+
+                        a {
+                            color: var(--docs-fg, theme("colors.gray.900"));
+                        }
+                    }
+
+                    a {
+                        @apply flex items-center cursor-pointer py-2 px-3;
+
+                        color: var(--docs-fg-muted, theme("colors.gray.600"));
+
+                        &:hover {
+                            color: var(--docs-fg, theme("colors.gray.900"));
+                            text-decoration: none !important;
+                        }
+
+                        span {
+                            @apply ml-1;
+                            @extend .badge;
+                            @extend .badge-preview;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Code units (.highlight / .example-program) carry their spacing on the
+        // wrapper and collapse it at the choosable's edges so the card padding isn't
+        // doubled (first → bottom only, last → top only).
+        pre {
+            @apply mb-0;
+        }
+
+        pulumi-choosable > div > .highlight,
+        pulumi-choosable > div > .example-program {
+            @apply my-4;
+
+            &:first-child {
+                @apply mt-0;
+            }
+
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+
+        // A paragraph/list above already supplies bottom margin; drop the unit's top
+        // margin to avoid a doubled gap.
+        pulumi-choosable > div > :is(p, ul, ol) + .highlight,
+        pulumi-choosable > div > :is(p, ul, ol) + .example-program {
+            @apply mt-0;
+        }
+
+        // Drop the footer's bottom margin so the .example-program wrapper is the sole
+        // source of the unit's trailing space.
+        pulumi-choosable .example-program-footer {
+            @apply mb-0;
+        }
+
+        // Example-program-only choosers: run the panel flush to the card edges (drop
+        // card padding; overflow-hidden clips the square corners to the card radius).
+        &:has(> .example-program) {
+            @apply px-0 pb-0;
+
+            .chooser-toolbar {
+                @apply mx-0 mb-0;
+            }
+
+            > .example-program {
+                pre,
+                .code-max-h,
+                .highlight,
+                .example-program-footer {
+                    @apply mb-0 rounded-none;
+                }
             }
         }
     }
