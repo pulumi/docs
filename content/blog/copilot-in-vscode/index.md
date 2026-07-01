@@ -8,6 +8,7 @@ title: "Pulumi Copilot is Now Available in VS Code"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2025-02-03
+lastmod: 2026-06-30
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -35,6 +36,7 @@ authors:
 tags:
     - releases
     - features
+    - pulumi-copilot
 category: product
 series: pulumi-copilot
 
