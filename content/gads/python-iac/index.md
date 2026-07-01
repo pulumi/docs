@@ -20,7 +20,7 @@ customer_quote:
     link: /case-studies/supabase/
 
 overview:
-    title: Write Cloud Infrastructure in Python.<br/>Not YAML. Not HCL.
+    title: Write Cloud Infrastructure in Python.
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">infrastructure as code python</span>? Define AWS, Azure, GCP, and Kubernetes resources in Python with full IDE support, type checking, and testing. 170+ cloud providers. Free tier.
 

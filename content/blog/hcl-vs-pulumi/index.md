@@ -30,6 +30,8 @@ category: general
 The Java Language Architect at Oracle, Brian Goetz, author of Java Concurrency in Practice, has commented how declarative
 languages can be a double-edged sword:
 
+{{% hcl-note %}}
+
 ![brian-goetz-tweet](brian-goetz-tweet.png)
 
 HashiCorp’s infrastructure as code solution, Terraform, uses a domain-specific language (DSL) to declare cloud

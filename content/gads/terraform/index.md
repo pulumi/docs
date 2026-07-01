@@ -1,6 +1,6 @@
 ---
 title: "Terraform Alternative | Pulumi"
-meta_desc: "Use Python, TypeScript, Go, or C# instead of HCL. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
+meta_desc: "Use Python, TypeScript, Go, or C# — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
@@ -21,16 +21,16 @@ customer_quote:
     link: /case-studies/snowflake
 
 overview:
-    title: Real Languages. No Resource Caps.<br/>Migrate at Your Pace.
+    title: Your Choice of Language. No Resource Caps.<br/>Migrate at Your Pace.
     description: |
         Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free tf2pulumi migration tool included.
 
 key_features_above:
     items:
-        - title: "Switch from HCL to real languages"
+        - title: "Author infrastructure in the language you prefer"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Stop writing HCL. Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Use the free tf2pulumi converter to migrate your existing Terraform files. Deploy to 170+ providers.
+            Author infrastructure as code using programming languages you already know, including Python, TypeScript, Go, C#, Java, and YAML. Bring your existing Terraform along with the free tf2pulumi converter. Deploy to 170+ providers.
           features:
               - title: Code faster
                 description: |
@@ -58,7 +58,7 @@ key_features:
             Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with pulumi import. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
-              - title: Convert HCL to real code
+              - title: Convert HCL to a general-purpose language
                 icon: exchange
                 description: |
                     The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. Try it at [pulumi.com/tf2pulumi](/tf2pulumi/).

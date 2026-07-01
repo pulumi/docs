@@ -27,6 +27,8 @@ The infrastructure required to build superintelligence demands superintelligence
 
 <!--more-->
 
+{{% hcl-note %}}
+
 The systems being built today for superintelligence are already straining human platform teams to their limits and yet we're still only just getting started. To succeed, we will have no choice but to use AI itself to help us manage the infrastructure scaling ahead on the path to superintelligence.
 
 Superintelligence demands more infrastructure, which demands superintelligent approaches to managing and scaling that infrastructure, which leads to faster progress towards superintelligence.

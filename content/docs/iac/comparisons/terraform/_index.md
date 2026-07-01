@@ -38,7 +38,7 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 
 | Feature | Pulumi | Terraform |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, .NET, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | HashiCorp Configuration Language (HCL) — a configuration-focused DSL whose syntax for control flow and dynamic blocks grows harder to read as project complexity increases |
+| Language support | Python, TypeScript, JavaScript, Go, .NET, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | HashiCorp Configuration Language (HCL) — a configuration-focused DSL with its own syntax for control flow and dynamic blocks |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); schema-generated native providers include [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/); [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | HashiCorp- and community-maintained providers in the [Terraform Registry](https://registry.terraform.io/) |
 | Transpiled to another format? | No — programs run directly in their host language | No — HCL is interpreted directly by the Terraform CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Local files by default; remote backends include S3, Azure Blob Storage, Google Cloud Storage, Consul, and HCP Terraform's [managed state](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/state) |
@@ -56,7 +56,7 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 
 ### Language support and the authoring experience
 
-Terraform requires HCL, a domain-specific language designed for configuration. HCL fits compactly into small projects but lacks the abstractions of a general-purpose language: there are no classes, limited runtime logic, and reuse only through the module system. Pulumi programs are written in general-purpose languages, so authors get loops, conditionals, classes, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems. Pulumi also supports [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format.
+Terraform uses HCL, a domain-specific language designed for configuration. HCL is compact and configuration-focused, with reuse through its module system. General-purpose languages offer a different model, with classes, richer runtime logic, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems, so Pulumi lets you pick the approach that fits the project. Pulumi supports HCL natively as well, alongside [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format.
 
 ### Provider and cloud coverage
 

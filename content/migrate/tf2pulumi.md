@@ -1,5 +1,5 @@
 ---
-title: Convert Your Terraform to a Modern Language
+title: Convert Your Terraform to the Language of Your Choice
 url: /tf2pulumi
 layout: tf2pulumi
 linktitle: Terraform to Pulumi
@@ -9,7 +9,7 @@ menu:
     weight: 4
 aliases:
     - /migrate/tf2pulumi
-meta_desc: See what your Terraform HCL would look like in a modern language thanks to Pulumi.
+meta_desc: See what your Terraform HCL would look like in Python, TypeScript, Go, or C# with Pulumi.
 examples:
     - name: AWS EC2 Instance
       filename: main.tf

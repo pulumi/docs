@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python - eliminating the need to learn domain-specific languages while unlocking the full power of software engineering practices for infrastructure code.
+    This workshop offers a hands-on exploration of how modern infrastructure management can be streamlined using familiar programming languages. In this workshop, you'll discover how Pulumi empowers developers and operations teams to define cloud infrastructure using Python, so teams can apply familiar software engineering practices to infrastructure code without adopting a separate domain-specific language.
 
     Participants will experience firsthand how Pulumi's approach bridges the gap between application and infrastructure development, allowing teams to manage AWS resources with the same tools, practices, and languages they already use for application development. This workshop demonstrates how this unified approach not only accelerates productivity but enables organizations to build more reliable, scalable, and secure cloud architectures.
 
