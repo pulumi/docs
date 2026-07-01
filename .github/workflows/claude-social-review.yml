@@ -74,7 +74,7 @@ jobs:
           echo "base_ref=$BASE_REF" >> "$GITHUB_OUTPUT"
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ steps.pr-info.outputs.head_ref }}
           fetch-depth: 0
@@ -194,7 +194,7 @@ jobs:
       - name: Fetch secrets from ESC
         if: steps.gate.outputs.should_skip != 'true'
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
 
       - name: Configure AWS Credentials
         if: steps.gate.outputs.should_skip != 'true'
