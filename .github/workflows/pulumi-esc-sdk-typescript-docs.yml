@@ -17,12 +17,23 @@ on:
         description: "Skip enabling auto-merge on the generated PR (for testing)"
         type: boolean
         default: false
+      publish_only:
+        description: "Generate + publish the versioned snapshot only; skip the latest-docs PR (for backfill)"
+        type: boolean
+        default: false
+      target_env:
+        description: "Versioned-docs publish target (when publishing)"
+        type: choice
+        options:
+          - production
+          - testing
+        default: production
 
 jobs:
   pull-request:
     runs-on: ubuntu-latest
     needs: build-pulumi-esc-sdk-typescript-docs
-    if: needs.build-pulumi-esc-sdk-typescript-docs.outputs.has_changes == 'true'
+    if: needs.build-pulumi-esc-sdk-typescript-docs.outputs.has_changes == 'true' && github.event.inputs.publish_only != 'true'
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -133,9 +144,78 @@ jobs:
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Regenerating Pulumi ESC SDK TypeScript docs for esc-sdk@${{ env.ESC_SDK_VERSION }}"
-            git push origin pulumi-esc-sdk-typescript-docs/${{ github.run_id }}-${{ github.run_number }}
+            if [ "${{ github.event.inputs.publish_only }}" != "true" ]; then
+              git push origin pulumi-esc-sdk-typescript-docs/${{ github.run_id }}-${{ github.run_number }}
+            fi
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
+      # --- Versioned docs: archive this SDK release as an immutable snapshot. ---------
+      # No enable flag: the publish turns itself on once the versioned-docs storage stack
+      # exists - the resolve step reads the bucket/role/distribution from stack outputs and
+      # every step below no-ops while they are absent. Runs after commit, continue-on-error,
+      # so a publish hiccup never blocks the docs PR.
+      - name: Install Pulumi CLI (for the stack-output lookup below)
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - name: Resolve versioned-docs publish target
+        id: vdocs
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          TARGET="${{ github.event.inputs.target_env || 'production' }}"
+          if [ "$TARGET" = "testing" ]; then
+            STORAGE_STACK="pulumi/pulumi-docs-versioned/testing"
+            WWW_STACK="pulumi/www.pulumi.com/www-testing"
+            SITE="https://www.pulumi-test.io"
+          else
+            STORAGE_STACK="pulumi/pulumi-docs-versioned/production"
+            WWW_STACK="pulumi/www.pulumi.com/www-production"
+            SITE="https://www.pulumi.com"
+          fi
+          # Resolve EVERYTHING from the IaC that owns it - no hardcoded names, no enable flag.
+          # The bucket + publisher role come from the versioned-docs storage stack; the
+          # CloudFront distribution (for the post-publish invalidation) from the www stack.
+          # An empty bucket means versioned docs are not stood up for this env yet: every step
+          # below is gated on bucket != '' and simply no-ops, so the feature turns itself on
+          # the moment the storage stack exists. Mirrors how scripts/run-pulumi.sh and the
+          # registry repo read these values from stack outputs instead of copying them.
+          BUCKET="$(pulumi stack output bucketNameOutput --stack "$STORAGE_STACK" 2>/dev/null || true)"
+          ROLE_ARN="$(pulumi stack output publisherRoleArn --stack "$STORAGE_STACK" 2>/dev/null || true)"
+          DIST_ID="$(pulumi stack output cloudFrontDistributionId --stack "$WWW_STACK" 2>/dev/null || true)"
+          if [ -z "$BUCKET" ]; then
+            echo "::notice::versioned-docs: storage stack $STORAGE_STACK has no bucket output - versioned docs are not stood up for '$TARGET'; skipping the archive publish."
+          elif [ -z "$DIST_ID" ]; then
+            echo "::warning::versioned-docs: could not read cloudFrontDistributionId from $WWW_STACK; publishing without a CloudFront invalidation (staleness bounded by the 300s manifest TTL)."
+          fi
+          {
+            echo "role_arn=$ROLE_ARN"
+            echo "bucket=$BUCKET"
+            echo "distribution_id=$DIST_ID"
+            echo "site=$SITE"
+          } >> "$GITHUB_OUTPUT"
+      - name: Configure AWS credentials (versioned-docs publisher)
+        if: ${{ steps.vdocs.outputs.bucket != '' }}
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ steps.vdocs.outputs.role_arn }}
+          role-session-name: versioned-docs-sdk-publish
+          aws-region: us-west-2
+      - name: Publish versioned snapshot
+        if: ${{ steps.vdocs.outputs.bucket != '' }}
+        continue-on-error: true
+        working-directory: docs
+        run: |
+          # Backfill (publish_only) archives an OLD release: do not mark it "latest".
+          EXTRA=()
+          [ "${{ github.event.inputs.publish_only }}" = "true" ] && EXTRA+=(--no-mark-latest)
+          ./scripts/versioned-docs/publish-version.sh --tool nodejs-esc-sdk \
+            --version "v${{ env.ESC_SDK_VERSION }}" \
+            --src static-prebuilt/docs/reference/pkg/nodejs/pulumi/esc-sdk \
+            --live-root /docs/reference/pkg/nodejs/pulumi/esc-sdk/ \
+            --bucket "${{ steps.vdocs.outputs.bucket }}" --label "ESC SDK (Node.js)" \
+            --distribution-id "${{ steps.vdocs.outputs.distribution_id }}" \
+            --site "${{ steps.vdocs.outputs.site }}" \
+            "${EXTRA[@]}"
   notify:
     if: failure()
     name: Send slack notification

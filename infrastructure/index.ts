@@ -56,6 +56,10 @@ const config = {
 
     answersStack: stackConfig.get("answersStack"),
 
+    // the versioned-docs storage stack (infrastructure/versioned-docs). When set, the
+    // distribution gains a /docs/versioned/* behavior backed by the permanent archive
+    // bucket. Unset (e.g. dev stacks, PR previews) = no versioned origin/behavior added.
+    versionedDocsStack: stackConfig.get("versionedDocsStack"),
 
     // the marketing portal stack to reference to allow the marketing portal
     // to add items to the uploads bucket.
@@ -527,6 +531,7 @@ const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
+const oneDay = oneHour * 24;
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
@@ -571,6 +576,23 @@ const oneHourCacheKeyPolicy = cacheKeyPolicy("one-hour-cache", oneHour);
 const oneWeekCacheKeyPolicy = cacheKeyPolicy("one-week-cache", oneWeek);
 const oneYearCachePolicy = cacheKeyPolicy("one-year-cache", oneYear);
 const noCacheKeyPolicy = cacheKeyPolicy("no-cache", 0);
+
+// Versioned-docs archives carry their own origin Cache-Control (immutable 1y for
+// content, 5min for the manifest). Unlike the cacheKeyPolicy helper above — which
+// pins defaultTtl == maxTtl and therefore ignores origin Cache-Control — this policy
+// spans minTtl 0 / default 1 day / max 1 year so CloudFront HONORS each object's header.
+const versionedDocsCachePolicy = new aws.cloudfront.CachePolicy("versioned-docs-cache", {
+    minTtl: 0,
+    defaultTtl: oneDay,
+    maxTtl: oneYear,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        enableAcceptEncodingBrotli: true,
+        enableAcceptEncodingGzip: true,
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
 
 const baseSecurityHeadersConfig = {
     frameOptions: {
@@ -663,6 +685,14 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
             override: false,
         }],
     },
+});
+
+// Versioned-docs behavior uses security headers ONLY — deliberately NO Cache-Control
+// override. DefaultCachePolicy force-overrides Cache-Control to max-age=60, which would
+// make browsers re-fetch immutable archives every 60s. This pass-through policy lets
+// each archived object's own Cache-Control (immutable 1y / manifest 5min) reach the browser.
+const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
 });
 
 // baseCacheBehavior holds the fields shared by every behavior. TTLs and
@@ -769,6 +799,43 @@ if (config.guidesStack) {
     )
 }
 
+// Versioned SDK & CLI docs: a permanent archive bucket (its own stack) reached as an
+// S3 website endpoint, served under /docs/versioned/*. Additive and fully optional —
+// when versionedDocsStack is unset, nothing here runs and the distribution is unchanged.
+const versionedDocsOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const versionedDocsBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.versionedDocsStack) {
+    const versionedDocsStack = new pulumi.StackReference(config.versionedDocsStack);
+    const versionedDocsEndpoint = versionedDocsStack.getOutput("bucketWebsiteEndpoint");
+    const versionedDocsOriginId = "versioned-docs-origin";
+
+    versionedDocsOrigins.push({
+        originId: versionedDocsOriginId,
+        domainName: versionedDocsEndpoint,
+        customOriginConfig: {
+            // S3 website endpoints only speak HTTP (same as the main origin).
+            originProtocolPolicy: "http-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
+        },
+    });
+
+    versionedDocsBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: versionedDocsOriginId,
+        pathPattern: "/docs/versioned/*",
+        cachePolicyId: versionedDocsCachePolicy.id,
+        // Pass-through headers (no Cache-Control clobber); see policy comment above.
+        responseHeadersPolicyId: VersionedDocsResponseHeadersPolicy.id,
+        // Archives are self-contained immutable HTML: no edge redirects, no markdown
+        // negotiation, no dotnet-lowercase rewrite.
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -834,6 +901,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...registryOrigins,
         ...guidesOrigins,
         ...answersOrigins,
+        ...versionedDocsOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -849,6 +917,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,
+
+        // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and
+        // /docs/* so the more specific immutable-archive prefix matches first.
+        ...versionedDocsBehaviors,
 
         // Dotnet SDK docs: lowercase URIs so case-insensitive requests resolve.
         // Must come BEFORE /docs/* so the more specific pattern matches first.

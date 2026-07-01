@@ -203,10 +203,6 @@ iac:
 # Reference
 
 reference:
-  - name: CLI
-    parent: reference-home
-    identifier: reference-cli
-    weight: 1
   - name: SDKs
     parent: reference-home
     identifier: reference-sdks
