@@ -102,12 +102,12 @@ module "private_subnet" {
 ## Consume from a Pulumi program
 
 ```bash
-pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
+pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
 ```
 
-`terraform-module` is a parameterized provider. Its parameters are the module address (`tf.pulumi.com/<namespace>/<name>/<system>`), the module version, and the local package name you import in your program.
+`hcl` is a parameterized provider. The `module` keyword selects module mode, followed by the module address (`tf.pulumi.com/<namespace>/<name>/<system>`) and an optional version. Omit the version to resolve the latest published version; pass one to pin it. The generated package name is derived from the module name.
 
-After `pulumi login`, `pulumi package add terraform-module` resolves the module using your Pulumi credentials, so no manual token or registry login is needed. The persisted `Pulumi.yaml` entry uses the existing parameterized-provider shape; see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
+After `pulumi login`, `pulumi package add hcl` resolves the module using your Pulumi credentials, so no manual token or registry login is needed. The version you pass is persisted in `Pulumi.yaml`, so `pulumi install` regenerates the same pinned version; see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
 ## Delete a module or version
 
