@@ -1094,6 +1094,8 @@ $ pulumi destroy
 
 After converting existing infrastructure, verify that your Pulumi program produces identical results by importing the Terraform state and running a preview:
 
+The resource IDs below (`vpc-12345`, `subnet-67890`, `i-abcdef123`) are placeholders. Replace them with the actual IDs of your existing resources, which you can find in your Terraform state (for example, with `terraform state show <resource>`) or in your cloud provider's console. Run these commands from within your converted Pulumi project directory.
+
 ```bash
 # Import the existing Terraform state
 $ pulumi import aws:ec2/vpc:Vpc main vpc-12345
@@ -1153,7 +1155,7 @@ The MCP server provides additional capabilities beyond conversion, including:
 * Stack output retrieval
 * Resource querying and management
 
-### Alternative: Manual prompt usage
+### Alternative: manual prompt usage
 
 If you prefer not to use the MCP server, you can access the conversion prompt directly:
 
@@ -1182,7 +1184,7 @@ Any time you use an automated conversion tool, you will want to review and valid
 
 ## Best practices for conversion
 
-1. **Start small**: Convert simple configurations first to understand the process
+1. **Start small**: Convert smaller configurations first to understand the process
 2. **Verify outputs**: Ensure converted code produces identical infrastructure
 3. **Test thoroughly**: Write tests for critical infrastructure components
 4. **Preserve structure**: Keep similar resource organization when possible
