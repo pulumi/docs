@@ -203,6 +203,7 @@ package infra_test
 import (
 	"testing"
 
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/stretchr/testify/assert"
 )
@@ -246,6 +247,7 @@ Run with: `go test ./... -v`
 ```csharp
 // InfraTests.cs
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Testing;
@@ -294,59 +296,88 @@ Run with: `dotnet test`
 // InfraTest.java
 package myproject;
 
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.SecurityGroup;
 import com.pulumi.test.Mocks;
-import com.pulumi.test.MockResourceArgs;
-import com.pulumi.test.MockCallArgs;
-import com.pulumi.test.Testing;
+import com.pulumi.test.Mocks.CallArgs;
+import com.pulumi.test.Mocks.ResourceArgs;
+import com.pulumi.test.Mocks.ResourceResult;
+import com.pulumi.test.PulumiTest;
+import com.pulumi.test.TestOptions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import static org.junit.jupiter.api.Assertions.*;
 
 class InfraTest {
 
-    // Implement Mocks to intercept resource creation
-    static final Mocks mocks = new Mocks() {
+    // Implement Mocks to intercept resource creation. State keys must be camelCase.
+    static class MyMocks implements Mocks {
         @Override
-        public CompletableFuture<Map.Entry<String, Object>> newResourceAsync(MockResourceArgs args) {
-            // Return [id, state]. State keys must be camelCase.
-            return CompletableFuture.completedFuture(Map.entry(args.name() + "_id", args.inputs()));
+        public CompletableFuture<ResourceResult> newResourceAsync(ResourceArgs args) {
+            var state = new HashMap<>(args.inputs);
+            return CompletableFuture.completedFuture(
+                ResourceResult.of(Optional.of(args.name + "_id"), state));
         }
 
         @Override
-        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+        public CompletableFuture<Map<String, Object>> callAsync(CallArgs args) {
             return CompletableFuture.completedFuture(Map.of());
         }
-    };
+    }
 
-    @Test
-    void serverHasRequiredTags() throws Exception {
-        Testing.runAsync(() -> {
-            var stack = new Infra();
-            stack.server.tags().applyValue(tags -> {
-                assertNotNull(tags, "Tags must not be null");
-                assertTrue(tags.containsKey("Environment"), "Missing 'Environment' tag");
-                assertTrue(tags.containsKey("Name"), "Missing 'Name' tag");
-                return null;
-            });
-        }, mocks).get();
+    // PulumiTest.cleanup() must run after every test to reset the runtime state.
+    @AfterEach
+    void cleanup() {
+        PulumiTest.cleanup();
     }
 
     @Test
-    void noPublicSshExposed() throws Exception {
-        Testing.runAsync(() -> {
-            var stack = new Infra();
-            stack.group.ingress().applyValue(rules -> {
-                for (var rule : rules) {
-                    for (var cidr : rule.cidrBlocks()) {
-                        assertNotEquals("0.0.0.0/0", cidr,
-                            "Security group must not expose SSH to the internet");
-                    }
-                }
-                return null;
-            });
-        }, mocks).get();
+    void serverHasRequiredTags() {
+        var result = PulumiTest
+            .withMocks(new MyMocks())
+            .withOptions(TestOptions.builder()
+                .projectName("project").stackName("stack").preview(false)
+                .build())
+            .runTest(ctx -> new Infra());
+
+        var instance = result.resources().stream()
+            .filter(r -> r instanceof Instance)
+            .map(r -> (Instance) r)
+            .findFirst()
+            .orElseThrow(() -> new AssertionError("EC2 instance not found"));
+
+        var tags = PulumiTest.extractValue(instance.tags());
+        assertNotNull(tags, "Tags must not be null");
+        assertTrue(tags.containsKey("Environment"), "Missing 'Environment' tag");
+        assertTrue(tags.containsKey("Name"), "Missing 'Name' tag");
+    }
+
+    @Test
+    void noPublicSshExposed() {
+        var result = PulumiTest
+            .withMocks(new MyMocks())
+            .withOptions(TestOptions.builder()
+                .projectName("project").stackName("stack").preview(false)
+                .build())
+            .runTest(ctx -> new Infra());
+
+        var group = result.resources().stream()
+            .filter(r -> r instanceof SecurityGroup)
+            .map(r -> (SecurityGroup) r)
+            .findFirst()
+            .orElseThrow(() -> new AssertionError("Security group not found"));
+
+        var rules = PulumiTest.extractValue(group.ingress());
+        for (var rule : rules) {
+            for (var cidr : rule.cidrBlocks()) {
+                assertNotEquals("0.0.0.0/0", cidr,
+                    "Security group must not expose SSH to the internet");
+            }
+        }
     }
 }
 ```
@@ -684,11 +715,15 @@ Run with: `mocha -r ts-node/register integration.test.ts`
 package integration_test
 
 import (
+	"context"
 	"fmt"
+	"os"
 	"testing"
 
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v3/go/auto"
 	"github.com/pulumi/pulumi/sdk/v3/go/auto/optup"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -793,46 +828,47 @@ Run with: `dotnet test`
 // IntegrationTest.java
 package myproject;
 
-import com.pulumi.automation.*;
+import com.pulumi.Context;
+import com.pulumi.automation.LocalWorkspace;
+import com.pulumi.automation.UpOptions;
+import com.pulumi.automation.DestroyOptions;
+import com.pulumi.automation.ConfigValue;
+import com.pulumi.automation.WorkspaceStack;
 import org.junit.jupiter.api.*;
-import java.util.*;
+import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class IntegrationTest {
 
-    private LocalWorkspace workspace;
+    private static final String PROJECT_NAME = "bucket_test_project";
+    private static final String STACK_NAME = "integration-test";
+
     private WorkspaceStack stack;
-    private Map<String, OutputValue> outputs;
+    private Map<String, com.pulumi.automation.OutputValue> outputs;
 
     @BeforeAll
     void setUp() throws Exception {
-        var program = PulumiFn.create(() -> {
+        stack = LocalWorkspace.createOrSelectStack(PROJECT_NAME, STACK_NAME, (Context ctx) -> {
             var bucket = new com.pulumi.aws.s3.Bucket("test-bucket",
                 com.pulumi.aws.s3.BucketArgs.builder()
                     .tags(Map.of("Environment", "test", "ManagedBy", "pulumi"))
                     .build());
-            com.pulumi.Context.export("bucketName", bucket.id());
+            ctx.export("bucketName", bucket.id());
         });
 
-        var opts = LocalWorkspaceOptions.builder()
-            .program(program)
-            .build();
-
-        workspace = LocalWorkspace.create(opts);
-        stack = WorkspaceStack.createOrSelect("integration-test", "bucket-test", workspace);
-        stack.setConfig("aws:region", ConfigValue.of("us-west-2"));
         stack.workspace().installPlugin("aws", "v7.34.0");
+        stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
-        var upResult = stack.up(UpOptions.builder().onOutput(System.out::println).build());
+        var upResult = stack.up(UpOptions.builder().onStandardOutput(System.out::println).build());
         outputs = upResult.outputs();
     }
 
     @AfterAll
     void tearDown() throws Exception {
         if (stack != null) {
-            stack.destroy(DestroyOptions.builder().onOutput(System.out::println).build());
-            stack.workspace().removeStack("integration-test");
+            stack.destroy(DestroyOptions.builder().onStandardOutput(System.out::println).build());
+            stack.workspace().removeStack(STACK_NAME);
         }
     }
 
