@@ -89,8 +89,13 @@ jobs:
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
 
+      # Pinned to 3.248.0 to work around a bug in 3.249.0 that breaks the
+      # production deploy. Remove this pin (letting the action install the
+      # latest CLI, its default) once 3.250.0 is released.
       - name: Install Pulumi CLI
         uses: pulumi/actions@v7
+        with:
+          pulumi-version: 3.248.0
 
       # Restore previously generated OpenGraph cards so the build-time generator
       # only re-renders pages that changed (manifest content-hash skip). The
