@@ -85,7 +85,7 @@ Pulumi unit tests replace the communication channel between the Pulumi program a
 
 **The import-order rule:** You must set up mocks *before* importing your Pulumi program. If you import the program first, the Pulumi runtime initializes without mocks and will attempt real cloud calls.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
 {{% choosable language python %}}
 
@@ -194,13 +194,107 @@ Run with: `mocha -r ts-node/register infra.test.ts`
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+// infra_test.go
+package infra_test
+
+import (
+	"testing"
+
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/stretchr/testify/assert"
+)
+
+// MockResourceMonitor implements pulumi.ResourceMonitor for unit tests.
+func TestNoPublicSSH(t *testing.T) {
+	err := pulumi.RunErr(func(ctx *pulumi.Context) error {
+		infra, err := NewInfra(ctx)
+		assert.NoError(t, err)
+
+		infra.Group.Ingress.ApplyT(func(rules []ec2.SecurityGroupIngress) error {
+			for _, rule := range rules {
+				for _, cidr := range rule.CidrBlocks {
+					assert.NotEqual(t, "0.0.0.0/0", cidr,
+						"Security group must not expose port 22 to the internet")
+				}
+			}
+			return nil
+		})
+		return nil
+	}, pulumi.WithMocks("my-project", "test", mocks{}))
+	assert.NoError(t, err)
+}
+
+type mocks struct{}
+
+func (mocks) NewResource(args pulumi.MockResourceArgs) (string, map[string]interface{}, error) {
+	return args.Name + "_id", args.Inputs, nil
+}
+func (mocks) Call(args pulumi.MockCallArgs) (map[string]interface{}, error) {
+	return args.Args, nil
+}
+```
+
+Run with: `go test ./... -v`
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// InfraTests.cs
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
+using Pulumi.Testing;
+using Xunit;
+
+public class InfraTests
+{
+    [Fact]
+    public async Task NoPublicSSH()
+    {
+        var resources = await Testing.RunAsync<MyStack>();
+
+        var sg = resources.OfType<Pulumi.Aws.Ec2.SecurityGroup>().First();
+        var ingress = await sg.Ingress.GetValueAsync();
+
+        foreach (var rule in ingress)
+        {
+            foreach (var cidr in rule.CidrBlocks)
+            {
+                Assert.NotEqual("0.0.0.0/0", cidr);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task ServerHasRequiredTags()
+    {
+        var resources = await Testing.RunAsync<MyStack>();
+
+        var server = resources.OfType<Pulumi.Aws.Ec2.Instance>().First();
+        var tags = await server.Tags.GetValueAsync();
+
+        Assert.True(tags.ContainsKey("Environment"), "Missing 'Environment' tag");
+        Assert.True(tags.ContainsKey("Name"), "Missing 'Name' tag");
+    }
+}
+```
+
+Run with: `dotnet test`
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### The program under test
 
 Both examples above test this program:
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
 {{% choosable language python %}}
 
@@ -254,6 +348,97 @@ export const server = new aws.ec2.Instance("web-server", {
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+// main.go
+package infra_test
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+type Infra struct {
+	Group  *ec2.SecurityGroup
+	Server *ec2.Instance
+}
+
+func NewInfra(ctx *pulumi.Context) (*Infra, error) {
+	group, err := ec2.NewSecurityGroup(ctx, "web-secgrp", &ec2.SecurityGroupArgs{
+		Ingress: ec2.SecurityGroupIngressArray{
+			ec2.SecurityGroupIngressArgs{
+				Protocol:   pulumi.String("tcp"),
+				FromPort:   pulumi.Int(80),
+				ToPort:     pulumi.Int(80),
+				CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+			},
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+		InstanceType:        pulumi.String("t2.micro"),
+		Ami:                 pulumi.String("ami-0b0ea68c435eb488d"),
+		VpcSecurityGroupIds: pulumi.StringArray{group.ID()},
+		Tags: pulumi.StringMap{
+			"Name":        pulumi.String("web-server"),
+			"Environment": pulumi.String("dev"),
+		},
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	return &Infra{Group: group, Server: server}, nil
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// MyStack.cs
+using Pulumi;
+using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
+
+public class MyStack : Stack
+{
+    public MyStack()
+    {
+        var group = new SecurityGroup("web-secgrp", new SecurityGroupArgs
+        {
+            Ingress = new[]
+            {
+                new SecurityGroupIngressArgs
+                {
+                    Protocol = "tcp", FromPort = 80, ToPort = 80,
+                    CidrBlocks = new[] { "0.0.0.0/0" },
+                },
+            },
+        });
+
+        var server = new Instance("web-server", new InstanceArgs
+        {
+            InstanceType = "t2.micro",
+            Ami = "ami-0b0ea68c435eb488d",
+            VpcSecurityGroupIds = new[] { group.Id },
+            Tags = new InputMap<string>
+            {
+                { "Name", "web-server" },
+                { "Environment", "dev" },
+            },
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 > **Key detail:** State property keys in the mock's `new_resource`/`newResource` return value must be **camelCase** (`cidrBlocks`, not `cidr_blocks`), regardless of the language you're writing in. This is how Pulumi serializes properties internally.
@@ -266,7 +451,7 @@ Unit tests tell you whether your resource definitions are correct. Integration t
 
 The [Pulumi Automation API](/docs/iac/concepts/automation-api/) lets you drive `pulumi up`, `pulumi destroy`, and every other Pulumi CLI operation programmatically, from within a test. You define the stack inline (using a function that runs your Pulumi program) or point it at an existing project directory.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 
 {{% choosable language python %}}
 
@@ -381,6 +566,116 @@ Run with: `mocha -r ts-node/register integration.test.ts`
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```go
+// integration_test.go
+package integration_test
+
+import (
+	"fmt"
+	"testing"
+
+	"github.com/pulumi/pulumi/sdk/v3/go/auto"
+	"github.com/pulumi/pulumi/sdk/v3/go/auto/optup"
+	"github.com/stretchr/testify/assert"
+)
+
+func TestBucketIntegration(t *testing.T) {
+	ctx := context.Background()
+
+	stack, err := auto.NewStackInlineSource(ctx, "integration-test", "bucket-test",
+		func(ctx *pulumi.Context) error {
+			bucket, err := s3.NewBucket(ctx, "test-bucket", &s3.BucketArgs{
+				Tags: pulumi.StringMap{
+					"Environment": pulumi.String("test"),
+					"ManagedBy":   pulumi.String("pulumi"),
+				},
+			})
+			if err != nil {
+				return err
+			}
+			ctx.Export("bucketName", bucket.ID())
+			return nil
+		},
+	)
+	assert.NoError(t, err)
+
+	_ = stack.SetConfig(ctx, "aws:region", auto.ConfigValue{Value: "us-west-2"})
+	upResult, err := stack.Up(ctx, optup.ProgressStreams(os.Stdout))
+	assert.NoError(t, err)
+
+	t.Cleanup(func() {
+		_, _ = stack.Destroy(ctx)
+		_ = stack.Workspace().RemoveStack(ctx, "integration-test")
+	})
+
+	name := fmt.Sprintf("%v", upResult.Outputs["bucketName"].Value)
+	assert.Contains(t, name, "test-bucket")
+}
+```
+
+Run with: `go test ./... -v -timeout 10m`
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// IntegrationTests.cs
+using System;
+using System.Threading.Tasks;
+using Pulumi.Automation;
+using Xunit;
+
+public class IntegrationTests : IAsyncLifetime
+{
+    private WorkspaceStack _stack = null!;
+    private UpResult _upResult = null!;
+
+    public async Task InitializeAsync()
+    {
+        var program = PulumiFn.Create(() =>
+        {
+            var bucket = new Pulumi.Aws.S3.Bucket("test-bucket", new()
+            {
+                Tags = new() { ["Environment"] = "test", ["ManagedBy"] = "pulumi" },
+            });
+            return new System.Collections.Generic.Dictionary<string, object?>
+            {
+                ["bucketName"] = bucket.Id,
+            };
+        });
+
+        _stack = await LocalWorkspace.CreateOrSelectStackAsync(new InlineProgramArgs(
+            projectName: "bucket-test",
+            stackName: "integration-test",
+            program: program
+        ));
+
+        await _stack.SetConfigAsync("aws:region", new ConfigValue("us-west-2"));
+        _upResult = await _stack.UpAsync(new UpOptions { OnStandardOutput = Console.WriteLine });
+    }
+
+    public async Task DisposeAsync()
+    {
+        await _stack.DestroyAsync(new DestroyOptions { OnStandardOutput = Console.WriteLine });
+        await _stack.Workspace.RemoveStackAsync("integration-test");
+    }
+
+    [Fact]
+    public void BucketNameHasExpectedPrefix()
+    {
+        var name = _upResult.Outputs["bucketName"].Value.ToString();
+        Assert.StartsWith("test-bucket", name);
+    }
+}
+```
+
+Run with: `dotnet test`
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Using the Go integration framework
@@ -407,7 +702,7 @@ func TestS3Website(t *testing.T) {
 
 Unit and integration tests validate what your infrastructure *does*. Policy as code enforces what your infrastructure *must* conform to—security standards, tagging conventions, compliance requirements—and it runs automatically on every `pulumi preview` and `pulumi up`.
 
-Pulumi Policies use the same languages as your infrastructure code, so you write policies in Python or TypeScript without learning a DSL. A `mandatory` policy blocks a deployment entirely when violated; an `advisory` policy surfaces a warning but allows the deploy to proceed.
+Pulumi Policies are currently supported in Python and TypeScript. You write policies in the same language as the rest of your stack, without learning a DSL. A `mandatory` policy blocks a deployment entirely when violated; an `advisory` policy surfaces a warning but allows the deploy to proceed.
 
 {{< chooser language "typescript,python" >}}
 
