@@ -27,4 +27,7 @@
 <!-- option: yaml -->
 `Pulumi.yaml`
 <!-- /option -->
+<!-- option: hcl -->
+`main.tf`
+<!-- /option -->
 <!-- /chooser -->

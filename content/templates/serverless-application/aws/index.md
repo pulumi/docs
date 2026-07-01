@@ -3,7 +3,7 @@ title_tag: Deploy a Serverless Application to AWS
 title: AWS Serverless Application
 layout: template
 schema_type: howto
-meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a serverless application on AWS with Pulumi, AWS Lambda, and Amazon API Gateway.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -49,6 +50,8 @@ Stack outputs are useful in a number of ways, most commonly as inputs to other s
 
 ## Customizing the project
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 Projects created with the AWS Serverless template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
 path
@@ -59,16 +62,28 @@ code
 
 None of these settings is required; by default, the template deploys the website and function using the files in the `www` and `function` folders bundled with the template.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+The HCL version of this template exposes no [configuration](/docs/iac/concepts/config/) settings. It deploys the website and function using the files in the `www` and `function` folders bundled with the template.
+
+{{% /choosable %}}
+
 ### Using your own web content
 
 If you already have a website you'd like to deploy, you can do so by replacing the contents of the `www` folder and redeploying with `pulumi up`.
 
-Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the `path` setting:
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
+Alternatively, you can configure the stack to deploy from another folder on your machine by using [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set) to change the value of the website path setting:
 
 ```bash
 $ pulumi config set path ../my-website/dist
 $ pulumi up
 ```
+
+{{% /choosable %}}
 
 ### Customizing the application's functionality
 

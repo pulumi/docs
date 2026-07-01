@@ -3,7 +3,7 @@ title_tag: Deploy a Serverless Application to Azure
 title: Azure Serverless Application
 layout: template
 schema_type: howto
-meta_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a serverless application on Azure with Pulumi, Azure Functions, and Azure Blob Storage.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Microsoft Azure
   slug: azure
@@ -42,21 +43,49 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 siteURL
 : The HTTP URL of the static website.
 
 apiURL
 : The HTTP URL of the serverless function endpoint.
 
-Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `siteURL`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+origin_url
+: The HTTP URL of the static website.
+
+api_url
+: The HTTP URL of the serverless function endpoint.
+
+{{% /choosable %}}
+
+Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed website URL, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ open $(pulumi stack output siteURL)
 ```
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ open $(pulumi stack output origin_url)
+```
+
+{{% /choosable %}}
+
 ## Customizing the project
 
 Projects created with the Serverless Application template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 sitePath
 : The path to the folder containing the files of the website. Defaults to `www`, which is the folder included with the template.
@@ -70,12 +99,43 @@ indexDocument
 errorDocument
 : The file to use for error pages. Defaults to `error.html`.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+site_path
+: The path to the folder containing the files of the website. Defaults to `./www`, which is the folder included with the template.
+
+app_path
+: The path to the folder containing the serverless functions to be deployed. Defaults to `./app`, which is also included with the template.
+
+index_document
+: The file to use for top-level pages. Defaults to `index.html`.
+
+error_document
+: The file to use for error pages. Defaults to `error.html`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ pulumi config set sitePath ../my-existing-website/build
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set site_path ../my-existing-website/build
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 
