@@ -10,7 +10,7 @@ menu:
         weight: 15
 ---
 
-By default, `pulumi refresh` and `pulumi destroy` do not execute your program. They operate on stack configuration and the resources already recorded in state. The `--run-program` flag opts in to running your program first, so the operation sees whatever your program computes at runtime — provider credentials, dynamic resources, or updated provider inputs.
+By default, `pulumi refresh` and `pulumi destroy` do not execute your program. They operate on stack configuration and the resources already recorded in state. Because the program is not run, stack config is also not validated against the project's config schema. The `--run-program` flag opts in to running your program first, so the operation sees whatever your program computes at runtime — provider credentials, dynamic resources, or updated provider inputs.
 
 Reach for `--run-program` whenever the values that `refresh` or `destroy` depend on are produced by code rather than persisted in state. The two most common situations are dynamic credentials and provider upgrades.
 
@@ -38,6 +38,27 @@ pulumi up --refresh --run-program
 ```
 
 The [AWS provider 6.x → 7.x migration guide](https://www.pulumi.com/registry/packages/aws/how-to-guides/7-0-migration/) prescribes exactly this command for that reason. The same pattern applies to any provider upgrade where the schema changes — Azure, GCP, Kubernetes, or any other.
+
+## Config validation
+
+Stack config validation is tied to whether the program runs. By default when Pulumi runs your program, it validates the stack's config against the project's config schema — erroring on missing required keys and type-checking values. When the program is not run, no config validation takes place.
+
+This means:
+
+- `pulumi refresh` and `pulumi destroy` skip config validation by default, because they do not run the program. Project-level config defaults are still applied; only validation is skipped.
+- Passing `--run-program` to `refresh` or `destroy` runs the program and therefore re-enables config validation.
+- `pulumi up` and `pulumi preview` always run the program, so they validate config by default.
+
+To run the program but still skip config validation, use `--skip-config-validation`:
+
+```bash
+pulumi up --skip-config-validation
+pulumi preview --skip-config-validation
+pulumi refresh --run-program --skip-config-validation
+pulumi destroy --run-program --skip-config-validation
+```
+
+This can be useful for ephemeral or pull-request preview environments, where a stack's config may legitimately diverge from the project schema between branches and you want the operation to proceed regardless.
 
 ## Using the flag
 

@@ -547,6 +547,59 @@ html[data-theme="dark"] body.section-docs {
 }
 
 // ---------------------------------------------------------------------------
+// Cookie consent banner + preferences dialog. The banner (#segment-consent-
+// manager, injected into baseof.html) and the preferences dialog (appended to
+// <body>) are global components skinned with Tailwind @apply (bg-white,
+// text-gray-*), so their surfaces don't carry a literal utility class and never
+// flip. On a dark docs page the global `p { color: fg }` / `* { border-color }`
+// overrides below bleed in while the backgrounds stay white — light-on-light,
+// unreadable text. Give both dark surfaces here; the buttons already flip via
+// `@extend .btn-outline` / `.btn-primary` (skinned below), and the links via the
+// --color-violet-primary remap.
+html[data-theme="dark"] body.section-docs {
+    #segment-consent-manager {
+        background-color: var(--docs-card);
+        border-color: var(--docs-card-border);
+        color: var(--docs-fg);
+
+        div {
+            background-color: var(--docs-card);
+        }
+    }
+
+    .consent-dialog {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+    }
+
+    .consent-dialog-close {
+        color: var(--docs-fg-muted);
+
+        &:hover {
+            color: var(--docs-fg);
+        }
+    }
+
+    .consent-dialog-desc,
+    .consent-table-purpose,
+    .consent-table-tools,
+    .consent-table-na {
+        color: var(--docs-fg-muted);
+    }
+
+    .consent-dialog-table {
+        th {
+            color: var(--docs-fg-muted);
+            border-bottom-color: var(--docs-border);
+        }
+
+        td {
+            border-bottom-color: var(--docs-border);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
 // Brand button pins + base text/border defaults. Per-utility color flips were
 // removed in favor of explicit `dark:` variants at the source (keeps each
 // utility class honest). What stays here is NOT utility hijacking: the brand
