@@ -107,6 +107,7 @@ jobs:
       - name: Generate Pulumi Python SDK docs
         env:
           PACKAGE: pulumi
+          VERSION: ${{ env.PULUMI_VERSION }}
         run: ./scripts/generate_python_docs.sh
       - name: git status
         run: git status && git diff
@@ -194,7 +195,7 @@ jobs:
             --site "${{ steps.vdocs.outputs.site }}" \
             "${EXTRA[@]}"
   notify:
-    if: failure()
+    if: failure() && github.event.inputs.publish_only != 'true'
     name: Send slack notification
     runs-on: ubuntu-latest
     needs: [pull-request, build-pulumi-sdk-python-docs]
