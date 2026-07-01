@@ -195,7 +195,7 @@ jobs:
             --site "${{ steps.vdocs.outputs.site }}" \
             "${EXTRA[@]}"
   notify:
-    if: failure()
+    if: failure() && github.event.inputs.publish_only != 'true'
     name: Send slack notification
     runs-on: ubuntu-latest
     needs: [pull-request, build-pulumi-esc-sdk-python-docs]
