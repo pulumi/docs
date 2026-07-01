@@ -51,6 +51,7 @@ reads best.
 | microsoft | `microsoft.svg` | ✅ | squares + "Microsoft" (Wikimedia, transparent) |
 | google-cloud | `google-cloud.svg` | ✅ | hexagon + "Google Cloud" (Wikimedia, transparent) |
 | pinecone | `pinecone.png` | ✅ | mark + "Pinecone" (transparent RGBA) |
+| github-wordmark | `github-wordmark.svg` | ✅ | Invertocat + "GitHub" (Wikimedia `GitHub_logo_2013.svg`, transparent, aspect ~3.5:1) |
 | github | `github.svg` | ⚠️ | glyph only — swap for a wordmark when used |
 | gitlab | `gitlab.svg` | ⚠️ | glyph only |
 | aws | `aws.svg` | ⚠️ | glyph only |
