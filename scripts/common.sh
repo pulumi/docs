@@ -102,10 +102,15 @@ build_identifier() {
 # CreationDate, matching the prefix we use to name website buckets. Supports an optional
 # suffix to filter by (e.g., "pr" or "push").
 get_recent_buckets() {
+    # The starts_with() filter already scopes results to the per-deploy atomic origin
+    # buckets (www-{env}-pulumi-docs-origin-*), so the permanent versioned-docs archive
+    # bucket (pulumi-docs-versioned-{env}) can never appear here. The select(...) below
+    # is a belt-and-braces guard: it guarantees the permanent bucket is never returned
+    # for deletion even if the naming scheme ever changes. NEVER remove this.
     aws s3api list-buckets \
         --query "reverse(sort_by(Buckets,&CreationDate))[:100].{id:Name,date:CreationDate}|[?starts_with(id,'$(origin_bucket_prefix)-${1}')]" \
         --region "$(aws_region)" \
-        --output json | jq -r '.[].id'
+        --output json | jq -r '.[].id | select(test("pulumi-docs-versioned") | not)'
 }
 
 # Retry the given command some number of times, with a delay of some number of seconds between calls.
