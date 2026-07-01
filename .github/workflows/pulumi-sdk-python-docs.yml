@@ -107,6 +107,7 @@ jobs:
       - name: Generate Pulumi Python SDK docs
         env:
           PACKAGE: pulumi
+          VERSION: ${{ env.PULUMI_VERSION }}
         run: ./scripts/generate_python_docs.sh
       - name: git status
         run: git status && git diff

@@ -107,6 +107,7 @@ jobs:
       - name: Generate Pulumi Policy SDK Python docs
         env:
           PACKAGE: pulumi_policy
+          VERSION: ${{ env.POLICY_SDK_VERSION }}
         run: ./scripts/generate_python_docs.sh
       - name: git status
         run: git status && git diff

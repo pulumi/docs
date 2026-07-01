@@ -107,6 +107,7 @@ jobs:
       - name: Generate Pulumi ESC SDK Python docs
         env:
           PACKAGE: pulumi_esc_sdk
+          VERSION: ${{ env.ESC_SDK_VERSION }}
         run: ./scripts/generate_python_docs.sh
       - name: git status
         run: git status && git diff
