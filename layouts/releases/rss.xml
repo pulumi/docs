@@ -1,0 +1,52 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{- /*
+    Releases RSS feed -> /releases/rss.xml
+
+    Driven by the `entries` manifest in content/releases/_index.md, emitted
+    newest-first by date, and mirroring the JSON feed's items. An `updates`
+    entry emits one <item> per item that carries a url. A `release` entry emits
+    one <item> per linked section card on its detail page (resolved at `url`),
+    using the card's title, link, and description. Modeled on layouts/blog/rss.xml
+    and layouts/events/rss.xml. URLs are absolutized with absURL.
+*/ -}}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Releases</title>
+        <link>{{ .Permalink }}</link>
+        <description>A running log of major platform updates from the Pulumi team.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        {{ range sort .Params.entries "date" "desc" }}
+            {{ if eq .type "release" }}
+                {{ with site.GetPage (strings.TrimSuffix "/" .url) }}
+                    {{ $date := .Params.date }}
+                    {{ range .Params.sections }}
+                        {{ range $card := .cards }}
+                            {{ with $card.link }}
+            <item>
+                <title>{{ $card.title }}</title>
+                <link>{{ absURL . }}</link>
+                <guid isPermaLink="false">{{ $date | time.Format "2006-01-02" }}-{{ absURL . }}</guid>
+                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" $date | safeHTML }}</pubDate>
+                <description>{{ $card.description | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
+            </item>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ else if eq .type "updates" }}
+                {{ $date := .date }}
+                {{ range $item := .items }}
+                    {{ with $item.url }}
+            <item>
+                <title>{{ $item.title }}</title>
+                <link>{{ absURL . }}</link>
+                <guid isPermaLink="false">{{ $date | time.Format "2006-01-02" }}-{{ absURL . }}</guid>
+                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" $date | safeHTML }}</pubDate>
+                <description>{{ $item.description }}</description>
+            </item>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </channel>
+</rss>

@@ -9,16 +9,27 @@
     </header>
 
     <div class="flex flex-col gap-8">
-        {{ $items := where (where .Site.Pages "Type" "releases") "Kind" "eq" "page" }}
-        {{ range sort $items ".Params.date" "desc" }}
-        {{ partial "releases/release-item.html" (dict
-            "overline" .Params.label
-            "heading" .Params.title
-            "description" .Params.short_description
-            "feature_image" .Params.feature_image
-            "feature_image_alt" .Params.feature_image_alt
-            "link" .RelPermalink
-        ) }}
+        {{/* One newest-first list of updates + release entries (see _index.md). */}}
+        {{ range $idx, $entry := sort .Params.entries "date" "desc" }}
+            {{ if eq $entry.type "updates" }}
+                {{ partial "releases/updates.html" (dict
+                    "label" $entry.label
+                    "items" $entry.items
+                    "idx" $idx
+                ) }}
+            {{ else if eq $entry.type "release" }}
+                {{/* Card visuals come from the detail page at `url`. */}}
+                {{ with site.GetPage (strings.TrimSuffix "/" $entry.url) }}
+                {{ partial "releases/release-item.html" (dict
+                    "overline" .Params.label
+                    "heading" .Params.title
+                    "description" .Params.short_description
+                    "feature_image" .Params.feature_image
+                    "feature_image_alt" .Params.feature_image_alt
+                    "link" .RelPermalink
+                ) }}
+                {{ end }}
+            {{ end }}
         {{ end }}
     </div>
 
