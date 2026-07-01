@@ -214,5 +214,5 @@ sections:
     - label: On-demand
       anchor: on-demand
 
-outputs: ["html", "rss"]
+outputs: ["html", "rss", "rssupcoming", "rssondemand"]
 ---

@@ -1,0 +1,36 @@
+{{/*
+    Events Feed Source Partial
+
+    Computes the event slices used by the events RSS feeds, mirroring the
+    upcoming/on-demand logic in partials/events/list-section.html so the feeds
+    match exactly what the events page lists. Returns a dict with three slices:
+
+        all      - every listed event, newest first
+        upcoming - upcoming events, soonest first
+        ondemand - on-demand recordings, newest first
+
+    Listed = unlisted == false. An event is "upcoming" while its sortable_date
+    (plus a 24h grace window) is in the future; once past, it is "on-demand"
+    only if it has a youtube_url recording.
+*/}}
+
+{{ $nowUnix := now.UnixMilli }}
+{{ $upcoming := slice }}
+{{ $ondemand := slice }}
+
+{{ range (where site.Pages "Type" "events") }}
+    {{ if eq .Params.unlisted false }}
+        {{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+        {{ if lt $nowUnix $eventDateUnix }}
+            {{ $upcoming = $upcoming | append . }}
+        {{ else if .Params.youtube_url }}
+            {{ $ondemand = $ondemand | append . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $upcoming = sort $upcoming "Params.sortable_date" "asc" }}
+{{ $ondemand = sort $ondemand "Params.sortable_date" "desc" }}
+{{ $all := sort (append $upcoming $ondemand) "Params.sortable_date" "desc" }}
+
+{{ return (dict "all" $all "upcoming" $upcoming "ondemand" $ondemand) }}
