@@ -76,10 +76,10 @@ module "vpc" {
 You can also bring the module into a Pulumi program in any supported language:
 
 ```bash
-pulumi package add terraform-module tf.pulumi.com/<namespace>/<name>/<system> <version> <local-name>
+pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
 ```
 
-`terraform-module` is a parameterized provider, and its parameters are the module address, the version, and a local name for the generated package. After `pulumi login` the CLI resolves the module with your Pulumi credentials, so there is no separate login step. From there the module behaves like any other Pulumi package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+`hcl` is a parameterized provider: after the `module` keyword you pass the module address and an optional version (omit it for the latest published version). After `pulumi login` the CLI resolves the module with your Pulumi credentials, so there is no separate login step. From there the module behaves like any other Pulumi package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Get started
 
