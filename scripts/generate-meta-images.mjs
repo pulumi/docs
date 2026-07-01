@@ -26,22 +26,21 @@
 //   OG_ONLY=docs OG_SAMPLE=1 node scripts/...         # one card per nav group (preview)
 
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync, statSync } from "fs"
-import { resolve, dirname, join, relative } from "path"
-import { fileURLToPath } from "url"
+import { dirname, join, relative } from "path"
 import { createHash } from "crypto"
 import satori from "satori"
 import { Resvg } from "@resvg/resvg-js"
 import matter from "gray-matter"
 import { createRequire } from "module"
+import {
+  REPO_ROOT, clean, once, h, fitTitle, clampText, titleTextStyle,
+  badge, intrinsicSize, svgDataUri, loadFonts, titleFont,
+} from "./meta-images/lib.mjs"
+import { eventsTree, eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
-const REPO_ROOT = resolve(__dirname, "..")
-
-const ASSET_DIR = join(__dirname, "meta-images", "assets")
-const FONT_DIR = join(REPO_ROOT, "static", "fonts")
 const CONTENT_DIR = join(REPO_ROOT, "content")
 const OUT_ROOT = join(REPO_ROOT, "assets", "images", "generated")
 const MANIFEST = join(OUT_ROOT, ".manifest.json")
@@ -53,16 +52,18 @@ const CANVAS_H = 628
 // v3: added the og-info (4-field) template + multi-template/recursive support.
 // v4: title flipped to LIGHT + optional label badge; added the case-study
 //     template (co-branded Pulumi + customer logo lockup). info (docs) unchanged.
-const OG_TEMPLATE_VERSION = "4"
+// v5: extracted shared primitives to meta-images/lib.mjs (no visual change);
+//     added the per-size "events" template + multi-size variants. The cache key
+//     now folds in w/h, so this bump re-renders every section's cards once.
+// v6: events card polish — vertical speaker stack on landscape, adaptive sizing,
+//     no photo halo, 2-up gap (no overlap), role/company in the 1–2 person byline.
+const OG_TEMPLATE_VERSION = "6"
 
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
 
-const clean = (v) => (v == null ? "" : v.toString().trim())
 // Drop a corner/sub label that just repeats the page's own title.
 const dropIfEchoesTitle = (sub, title) => (sub && sub.trim().toLowerCase() === title.trim().toLowerCase() ? "" : sub)
-// Lazy single-init memo. Caches the first result (a value or a promise) forever.
-const once = (fn) => { let v, done = false; return () => (done ? v : ((v = fn()), (done = true), v)) }
 
 // --- Brand colors (dark mode; inlined from the Pulumi brand palette) ---------
 // Used only by the "info" template (docs). The light templates use LIGHT below.
@@ -183,25 +184,30 @@ const SECTIONS = [
     },
     valid: (f) => !!f.title,
   },
+  {
+    // Event / workshop cards (content/events/<slug>/index.md leaf bundles).
+    // Individual events → the events card in two sizes (landscape OG meta image
+    // + square second og:image). The /events/ index page → a plain title card,
+    // landscape only (same treatment as the case-studies index). The
+    // /event-meta-image skill produces enriched, committed overrides.
+    name: "events",
+    template: (fm, id) => (id === "events" ? "title" : "events"),
+    recursive: true,
+    // Only the events card is size-aware; the title card renders landscape only.
+    variantsFor: (template) =>
+      template === "events"
+        ? [{ suffix: "", w: 1200, h: 628 }, { suffix: ".square", w: 628, h: 628 }]
+        : [{ suffix: "", w: 1200, h: 628 }],
+    // OG_SAMPLE → one representative EVENT (both variants); exclude the index so
+    // the sample exercises the events renderer, not the index title card.
+    sampleGroupBy: (id) => (id === "events" ? null : "events"),
+    skip: (fm) => fm.external === true, // external events have no on-site page
+    fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
+    valid: (f) => !!f.title,
+  },
 ]
 
-// --- Fonts: Satori needs TTF/OTF/WOFF (NOT woff2) ----------------------------
-const FONT_SPECS = [
-  { name: "Inter", file: join(FONT_DIR, "inter-regular.woff"), weight: 400, style: "normal" },
-  { name: "Inter", file: join(FONT_DIR, "inter-semibold.woff"), weight: 600, style: "normal" },
-  { name: "Monaspace Neon", file: join(ASSET_DIR, "monaspace-neon-regular.ttf"), weight: 400, style: "normal" },
-]
-const loadFonts = once(() => FONT_SPECS.map((s) => ({ name: s.name, data: readFileSync(s.file), weight: s.weight, style: s.style })))
-
-// Inter Semibold parsed for title measurement (lazy: parsed on first render).
-// once() caches the in-flight promise so the font is parsed exactly once.
-const titleFont = once(async () => {
-  const { default: opentype } = await import("opentype.js")
-  const b = readFileSync(join(FONT_DIR, "inter-semibold.woff"))
-  return opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength))
-})
-
-const svgDataUri = (file) => `data:image/svg+xml;base64,${readFileSync(join(ASSET_DIR, file)).toString("base64")}`
+// --- Bundled SVG assets ------------------------------------------------------
 const ACCENTS = svgDataUri("og-bg.svg")
 const LINES_BOTTOM = svgDataUri("lines-bottom.svg")
 const LOGO = svgDataUri("pulumi-logo-horizontal-color-dark.svg") // light text → dark cards
@@ -213,20 +219,6 @@ INFO_LIGHT.logo = LOGO_LIGHT
 // Resolve a frontmatter logo path ("/logos/customers/foo.svg") under static/ to
 // a data URI + display dims scaled into the header lockup. Returns null when the
 // asset is missing or an unsupported type, so the page is skipped (valid()).
-function intrinsicSize(buf, lower) {
-  if (lower.endsWith(".png")) {
-    // PNG IHDR: width/height are big-endian uint32 at byte offsets 16 and 20.
-    if (buf.length >= 24) return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) }
-  } else if (lower.endsWith(".svg")) {
-    const s = buf.toString("utf-8")
-    const vb = s.match(/viewBox\s*=\s*["']\s*[-\d.]+\s+[-\d.]+\s+([\d.]+)\s+([\d.]+)/i)
-    if (vb) return { w: parseFloat(vb[1]), h: parseFloat(vb[2]) }
-    const w = s.match(/\bwidth\s*=\s*["']([\d.]+)/i)
-    const hh = s.match(/\bheight\s*=\s*["']([\d.]+)/i)
-    if (w && hh) return { w: parseFloat(w[1]), h: parseFloat(hh[1]) }
-  }
-  return { w: 200, h: 60 } // fallback ratio
-}
 // Customer logos live under assets/fingerprinted/ (routed through Hugo's
 // fingerprinted-img partial on the case-study page); a few also sit in static/.
 const LOGO_ROOTS = [join(REPO_ROOT, "assets", "fingerprinted"), join(REPO_ROOT, "static")]
@@ -244,72 +236,6 @@ function customerLogo(p, { maxH = 52, maxW = 260 } = {}) {
   if (dw > maxW) { dw = maxW; dh = (h / w) * maxW }
   return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(dw), h: Math.round(dh) }
 }
-
-// --- Shared text measurement (opentype) --------------------------------------
-function lineWidth(font, str, fontPx, lsEm = -0.05) {
-  return font.getAdvanceWidth(str, fontPx, { kerning: false }) + lsEm * fontPx * Math.max(0, str.length - 1)
-}
-function wrapLines(font, words, fontPx, maxW, lsEm) {
-  const lines = []
-  let cur = ""
-  for (const w of words) {
-    const t = cur ? `${cur} ${w}` : w
-    if (cur && lineWidth(font, t, fontPx, lsEm) > maxW) {
-      lines.push(cur)
-      cur = w
-    } else cur = t
-  }
-  if (cur) lines.push(cur)
-  return lines
-}
-// Largest fontPx in [minFont,maxFont] whose wrapped title fits boxW. The line
-// budget is either a fixed maxLines, or — when boxH is given — derived from the
-// available height at each font size (90% of the box, leaving a margin). The
-// returned lineClamp is a generous safety net (maxLines, or the full-height line
-// count at the chosen size).
-function fitTitle(font, title, { maxFont, minFont, boxW, maxLines, boxH, lsEm = -0.05 }) {
-  const words = title.split(/\s+/).filter(Boolean)
-  const heightLines = (f, frac) => Math.max(1, Math.floor((boxH * frac) / (1.1 * f)))
-  for (let f = maxFont; f >= minFont; f--) {
-    const lines = wrapLines(font, words, f, boxW * 0.98, lsEm)
-    const widest = Math.max(0, ...lines.map((l) => lineWidth(font, l, f, lsEm)))
-    const budget = boxH ? heightLines(f, 0.9) : maxLines
-    if (widest <= boxW * 0.98 && lines.length <= budget) {
-      return { fontSize: f, lineClamp: boxH ? heightLines(f, 1) : maxLines }
-    }
-  }
-  return { fontSize: minFont, lineClamp: boxH ? heightLines(minFont, 1) : maxLines }
-}
-// Hard-truncate text to maxLines at fontPx/maxW, appending an ellipsis. Satori's
-// -webkit-line-clamp doesn't reliably bound height inside a centered fixed box,
-// so we clamp the string itself as a guarantee against overflow.
-function clampText(font, text, fontPx, maxW, maxLines, lsEm = -0.05) {
-  const words = text.split(/\s+/).filter(Boolean)
-  const lines = wrapLines(font, words, fontPx, maxW, lsEm)
-  if (lines.length <= maxLines) return text
-  let last = lines[maxLines - 1]
-  while (last.includes(" ") && lineWidth(font, `${last}…`, fontPx, lsEm) > maxW) {
-    last = last.slice(0, last.lastIndexOf(" "))
-  }
-  return `${lines.slice(0, maxLines - 1).join(" ")} ${last}…`.trim()
-}
-
-// --- JSX-shaped tree helper (no React) ---------------------------------------
-function h(type, props, ...children) {
-  const flat = children.flat(Infinity).filter((c) => c !== null && c !== undefined && c !== false)
-  return { type, props: { ...(props ?? {}), children: flat.length === 0 ? undefined : flat.length === 1 ? flat[0] : flat } }
-}
-
-// Rounded "pill" badge with uppercase mono label (section badge / "Case Study").
-const badge = (text, bg, fg) =>
-  h("div", { style: { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: bg, borderRadius: 9999, padding: "8px 18px" } },
-    h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 24, lineHeight: 1, letterSpacing: 1.2, textTransform: "uppercase", color: fg } }, text))
-
-// Shared style for a clamped, centered-weight card title.
-const titleTextStyle = (fontSize, lineClamp) => ({
-  display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: lineClamp,
-  overflow: "hidden", fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fontSize * 0.05,
-})
 
 // --- Template: "title" (what-is, migrate, partner, topics, case-studies index)
 // — centered title on the light brand field. ----------------------------------
@@ -388,17 +314,22 @@ async function caseStudyTree(fields) {
       h("div", { style: { display: "flex", fontSize: fit.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fit.fontSize * 0.05, color: LIGHT.fg } }, titleText)))
 }
 
+// Every template takes (fields, { w, h }). The fixed-size light/dark cards
+// ignore the size arg (they hard-code CANVAS_W/H); only "events" honors it.
 const TEMPLATES = {
   title: titleTree,
   info: (f) => infoTree(f, INFO_DARK),
   tutorial: (f) => infoTree(f, INFO_LIGHT),
   "case-study": caseStudyTree,
+  events: eventsTree,
 }
 
 async function renderPng(page, fonts) {
-  const tree = await TEMPLATES[page.template](page.fields)
-  const svg = await satori(tree, { width: CANVAS_W, height: CANVAS_H, fonts })
-  return new Resvg(svg, { fitTo: { mode: "width", value: CANVAS_W } }).render().asPng()
+  const w = page.w || CANVAS_W
+  const hgt = page.h || CANVAS_H
+  const tree = await TEMPLATES[page.template](page.fields, { w, h: hgt })
+  const svg = await satori(tree, { width: w, height: hgt, fonts })
+  return new Resvg(svg, { fitTo: { mode: "width", value: w } }).render().asPng()
 }
 
 // --- Page discovery ----------------------------------------------------------
@@ -417,8 +348,10 @@ function pageId(file) {
   let rel = relative(CONTENT_DIR, file).replace(/\\/g, "/").replace(/\.md$/, "")
   return rel.replace(/\/_index$/, "")
 }
+// The manifest/cache key is per-OUTPUT (mid = id + variant suffix), and folds in
+// the rendered size so the two variants of one page never collide.
 function cacheKey(page) {
-  return createHash("sha1").update(JSON.stringify({ t: page.template, f: page.fields, v: OG_TEMPLATE_VERSION })).digest("hex")
+  return createHash("sha1").update(JSON.stringify({ t: page.template, f: page.fields, v: OG_TEMPLATE_VERSION, w: page.w, h: page.h })).digest("hex")
 }
 function listPages() {
   const pages = []
@@ -426,33 +359,45 @@ function listPages() {
     if (ONLY.length && !ONLY.includes(sec.name)) continue
     const dir = join(CONTENT_DIR, sec.name)
     if (!existsSync(dir)) continue
+    const defaultVariants = [{ suffix: "", w: CANVAS_W, h: CANVAS_H }]
     let secPages = []
     for (const file of walkMd(dir, sec.recursive)) {
       const fm = matter(readFileSync(file, "utf-8")).data
       // A page-level meta_image overrides the generated card (see
       // partials/meta-image-url.html), so its generated card would be unused.
       if (clean(fm.meta_image)) continue
+      if (sec.skip && sec.skip(fm)) continue
       const id = pageId(file)
       const template = typeof sec.template === "function" ? sec.template(fm, id) : sec.template
       const fields = sec.fields(fm, id)
       if (!sec.valid(fields, template)) continue
-      secPages.push({ id, section: sec.name, template, fields, out: join(OUT_ROOT, `${id}.png`) })
+      // A section can vary output sizes per page (sec.variantsFor) or for all
+      // pages (sec.variants); otherwise it renders the single landscape size.
+      const variants = sec.variantsFor ? sec.variantsFor(template) : sec.variants || defaultVariants
+      for (const v of variants) {
+        const mid = id + v.suffix // manifest / cache id, one per output file
+        secPages.push({ id, mid, section: sec.name, template, fields, w: v.w, h: v.h, out: join(OUT_ROOT, `${id}${v.suffix}.png`) })
+      }
     }
     if (SAMPLE && sec.sampleGroupBy) {
-      // One representative page per group. OG_SAMPLE_LEVEL=N picks a page N
-      // path levels below the group's shallowest (0 = landing, 1 = one down).
+      // One representative page per group (keeping all of its variants).
+      // OG_SAMPLE_LEVEL=N picks a page N path levels below the group's
+      // shallowest (0 = landing, 1 = one down).
       const level = parseInt(process.env.OG_SAMPLE_LEVEL || "0", 10)
       const groups = new Map()
       for (const p of secPages) {
         const g = sec.sampleGroupBy(p.id)
+        if (g == null) continue // excluded from sampling (e.g. a section index)
         if (!groups.has(g)) groups.set(g, [])
         groups.get(g).push(p)
       }
-      const depth = (p) => p.id.split("/").length
-      secPages = [...groups.values()].map((arr) => {
-        arr.sort((a, b) => depth(a) - depth(b) || a.id.localeCompare(b.id))
-        return arr.find((p) => depth(p) === depth(arr[0]) + level) || arr[0]
-      })
+      const depth = (id) => id.split("/").length
+      const chosen = new Set()
+      for (const arr of groups.values()) {
+        const ids = [...new Set(arr.map((p) => p.id))].sort((a, b) => depth(a) - depth(b) || a.localeCompare(b))
+        chosen.add(ids.find((id) => depth(id) === depth(ids[0]) + level) || ids[0])
+      }
+      secPages = secPages.filter((p) => chosen.has(p.id))
     }
     for (const p of secPages) p.key = cacheKey(p)
     pages.push(...secPages)
@@ -474,8 +419,8 @@ async function runGenerate(pages) {
   const failures = []
   const t0 = Date.now()
   for (const p of pages) {
-    next[p.id] = p.key
-    if (prev[p.id] === p.key && existsSync(p.out)) { skipped++; continue }
+    next[p.mid] = p.key
+    if (prev[p.mid] === p.key && existsSync(p.out)) { skipped++; continue }
     try {
       mkdirSync(dirname(p.out), { recursive: true })
       const t = Date.now()
@@ -483,8 +428,8 @@ async function runGenerate(pages) {
       renderMs += Date.now() - t
       rendered++
     } catch (err) {
-      failures.push(p.id)
-      console.error(`  FAILED ${p.id}: ${err?.message || err}`)
+      failures.push(p.mid)
+      console.error(`  FAILED ${p.mid}: ${err?.message || err}`)
     }
   }
   // Prune only on full runs (not sample/only) to avoid deleting unrelated cards.
@@ -498,7 +443,7 @@ async function runGenerate(pages) {
       }
     }
     walkPng(OUT_ROOT)
-    for (const id of Object.keys(next)) if (!pages.find((p) => p.id === id)) delete next[id]
+    for (const mid of Object.keys(next)) if (!pages.find((p) => p.mid === mid)) delete next[mid]
   }
   mkdirSync(OUT_ROOT, { recursive: true })
   writeFileSync(MANIFEST, JSON.stringify(next, Object.keys(next).sort(), 2) + "\n")
