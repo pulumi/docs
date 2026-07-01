@@ -40,9 +40,9 @@ Pinned to an older Pulumi CLI or SDK version and finding that the docs describe 
 
 ## How it works
 
-When you open the [CLI command reference](/docs/iac/cli/commands/), you'll see a version dropdown right next to the page title. The SDK API docs carry the same dropdown in the upper-right corner. Choose a release, and the page loads the documentation generated for that exact version.
+When you open the [CLI command reference](/docs/iac/cli/commands/), you'll see a version dropdown near the top of the page, below the title. The SDK API docs carry the same dropdown in the upper-right corner. Choose a release, and the page loads the documentation generated for that exact version.
 
-![Version selector next to the title on the Pulumi CLI command reference](cli-version-selector.png)
+![Version selector near the top of the Pulumi CLI command reference](cli-version-selector.png)
 
 ![Version selector in the upper-right corner of the Pulumi Node.js SDK API docs](sdk-version-selector.png)
 
@@ -54,7 +54,7 @@ History reaches back to around v3.150.0 (early 2025); older CLI releases already
 
 ## Get started
 
-Head to the [CLI command reference](/docs/iac/cli/commands/) or the [SDK API docs](/docs/reference/) and try the version dropdown. If your projects pin specific releases, the docs that match are now a click away.
+Head to the [CLI command reference](/docs/iac/cli/commands/) or the [SDK API docs](/docs/reference/) and try the version dropdown. If your projects pin specific releases, select your version and read the docs that match.
 
 Have feedback? Let us know in the [Pulumi Community Slack](https://slack.pulumi.com) or by opening an issue on [GitHub](https://github.com/pulumi/docs).
 
