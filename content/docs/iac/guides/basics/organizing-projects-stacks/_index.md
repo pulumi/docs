@@ -1,6 +1,6 @@
 ---
 title_tag: "Organizing Projects & Stacks"
-meta_desc: An overview of best practices when organizing and structuring cloud projects and stacks.
+meta_desc: How to structure Pulumi projects and stacks around the tradeoffs of blast radius, ownership, repository alignment, and maintenance overhead.
 title: Organizing projects
 h1: Organizing Pulumi projects & stacks
 menu:
@@ -19,408 +19,164 @@ aliases:
 - /docs/iac/packages-and-automation/organizing-projects-stacks/
 ---
 
-[Projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are intentionally flexible so that they can accommodate
-diverse needs across a spectrum of team, application, and infrastructure scenarios. This is very much like how Git
-repos work and, much like Git repos, there are varying approaches to organizing your code within them. That said,
-there are some clear best practices that, when followed, will ensure Pulumi works seamlessly for your situation. This
-guide describes some of the most common approaches and when to choose one over another.
+A [project](/docs/iac/concepts/projects/) is a collection of code, and a [stack](/docs/iac/concepts/stacks/) is a
+unit of deployment with its own configuration, secrets, [role-based access controls (RBAC)](/docs/administration/access-identity/), policies, and concurrent deployments. Pulumi deliberately leaves the
+relationship between the two flexible so that it can accommodate everything from a single developer's side project to
+a large organization with many teams.
 
-## Tradeoffs
+No single structure is correct for every team. The right choice depends on tradeoffs, so this guide describes those
+tradeoffs first, then walks through the common patterns — monolithic, layered, and micro-stacks — and when each one is
+the right fit.
 
-Everything described within this guide is on a spectrum of tradeoffs. Remember that each project is a collection of code,
-and that each stack is a unit of deployment. Each stack has its own separate configuration and secrets, role-based access controls (RBAC) and policies, and concurrent deployments.
+## Design tradeoffs
+
+Every decision about how to split (or not split) your infrastructure is a balance of four concerns:
+
+* **Blast radius.** A stack is the unit of deployment, so it is also the unit of failure. The larger a stack, the more
+  resources a single bad update can damage. Smaller stacks contain the impact of a mistake to a narrower slice of your
+  infrastructure.
+
+* **Ownership and permissions.** Stacks are the boundary at which you grant access. If your networking and your
+  application live in the same stack, anyone who can deploy the application can also change the network. Splitting along
+  team boundaries lets you use [stack permissions](/docs/administration/access-identity/rbac/permission-sets/) to give each team exactly the
+  access it needs and no more.
+
+* **Repository alignment.** Pulumi works naturally with GitOps-style continuous delivery, so most teams align their
+  project structure to their Git repositories. That boundary is also a governance boundary: the repository is where
+  pull-request review, `CODEOWNERS`, and branch protection decide who can propose and approve a change to a given piece
+  of infrastructure. Splitting infrastructure across repositories (or scoping it with `CODEOWNERS` paths within one)
+  lets those Git controls mirror your team ownership. Organizations that prefer monorepos tend toward fewer, larger
+  projects with `CODEOWNERS` drawing the ownership lines; organizations that prefer fine-grained repos tend toward more,
+  smaller projects, each with its own reviewers and merge rules.
+
+* **Maintenance overhead.** Larger stacks take longer to preview and deploy. A stack with thousands of resources can be
+  slow even when only a handful of resources actually changed, because the engine still has to refresh and diff
+  everything. Splitting reduces that wall-clock time, but each new stack adds its own coordination cost: more stack
+  references to wire up, more pipelines to maintain, and more places to look when something breaks.
+
+## The granularity spectrum
+
+Granularity is a spectrum, not a binary choice. The same workload can be deployed as one monolithic stack, as a small
+number of layered stacks, or as many micro-stacks — and the right point is wherever the four tradeoffs above balance out
+for your team. The three patterns this guide covers are points along that spectrum:
+
+* **Monolithic** — one project with everything together, deployed as one stack per environment. The simplest thing to
+  build and reason about; the whole service shares a single blast radius and permission boundary.
+* **Layered stacks** — the infrastructure split along its major layers (networking → clusters → workloads), each its own
+  project and stack, connected by stack references. The recommended default once a monolith starts to hurt.
+* **Micro-stacks** — one stack per service, at the far, fine-grained end. Maximum isolation and the most targeted
+  deploys, but the most coordination overhead; warranted only for genuinely independent services.
+
+Moving right along the spectrum trades simplicity for isolation:
+
+```mermaid
+---
+config:
+  themeVariables:
+    fontSize: 20px
+  flowchart:
+    padding: 20
+---
+flowchart LR
+    accTitle: The granularity spectrum
+    accDescr: A left-to-right spectrum running from monolithic — simpler, with a larger blast radius — through layered stacks to micro-stacks, which offer more isolation at the cost of more coordination.
+    simpler["simpler · fewer pipelines<br/>larger blast radius · slower deploys"]
+    mono["Monolithic"]
+    layered["Layered stacks"]
+    micro["Micro-stacks"]
+    isolated["more isolation · finer permissions<br/>smaller blast radius · more coordination"]
+    simpler --- mono --> layered --> micro --- isolated
+    classDef endpoint fill:none,stroke:none;
+    class simpler,isolated endpoint;
+```
 
 ## Monolithic
 
-It's very common to start with a _monolithic_ project/stack structure. In this model, a single project defines
-the infrastructure and application resources for an entire vertical service.
+Most teams start with a *monolithic* structure: a single project that defines all the infrastructure and application
+resources for an entire service, with one stack per environment.
 
-Each stack typically corresponds to a distinct _environment_ for that service, such as production, staging, and many
-testing and development instances. There might even be multiple environments within each of these dimensions, such as
-a production environment in each of the US east coast, west coast, Europe, and Asia.
-
-Most users will start with a monolithic structure, for a few good reasons:
-
-* **Simplicity.** Having a single project and collection of stacks is the easiest thing you could
-  possibly do. Pulumi diffs edits to your application and infrastructure code, and so this approach leaves the
-  hard work of doing incremental deployments and tracking dependencies to the Pulumi engine.
-
-* **Versioning.** By placing all code in one project, it's easier to share and version logic within your project.
-  Of course, Pulumi supports package managers, so sharing across projects is also possible, but it entails dealing
-  with packages which means introducing a loosely-coupled versioning boundary with distinct update cadences.
-
-* **Agility.** Simplicity and versioning means that using a monolithic approach will almost always lead to the best
-  productivity and therefore agility. For small projects or teams, this is usually the right place to start.
-
-Although a monolithic structure is where most users begin their Pulumi journey, we find that most will ultimately
-migrate to a finer grained decomposition of projects and stacks.
-
-## Micro-Stacks
-
-At the other end of the spectrum is a pattern we call _micro-stacks_. This is equivalent to microservices,
-only in project and stack form. In this model, a project is broken into separately managed smaller projects, often across
-different dimensions. This approach has several advantages:
-
-* **Independence.** Although Pulumi can diff changes and make only those updates mandated by a code edit,
-  certain projects sometimes deploy at radically different cadences and it makes sense to enforce this separation
-  in the project structure. For instance, a service that revs every day may not be appropriate to live in the same project as
-  critical infrastructure that changes infrequently and which demands intense scrutiny whenever it does.
-
-* **Security.** In large organizations, it's important to use RBAC to secure access to individual aspects
-  of your cloud infrastructure and applications. Perhaps you want to ensure your DevOps Architect is the only
-  person who can approve changes to fundamental networking and clustering infrastructure, for example.
-
-* **Complexity and Performance.** For many real-world services, there are a multitude of build artifacts. This
-  includes traditional software builds (in Java, .NET, C++, etc), Docker image builds, and serverless function
-  packaging. Putting all of these in one place may increase build times unless a hermetic build system with
-  excellent caching has been used (and, even then, caching across CI/CD machines can be difficult). Breaking apart
-  pieces that can be built independently can increase agility and improve performance, particularly when they
-  evolve at different rates and/or are managed by different teams.
-
-### Using Stack References with Micro-Stacks
-
-If using the micro-stacks approach you will need a way to share information between stacks. [Stack references](/docs/concepts/stack#stackreferences) are the Pulumi concept you will want to use. Stack references allow you to access the outputs of one stack from another stack. Inter-Stack Dependencies allow one stack to reference the outputs of another stack.
-
-To reference values from another stack, create an instance of the StackReference type using the fully qualified name of the stack as an input, and then read exported stack outputs by their name.
-
-## Moving from a Monolithic Project Structure to Micro-Stacks
-
-Here are a few (non-exhaustive) examples of how one might go about splitting up a monolithic project structure:
-
-* Each micro-service in your architecture might get its own project.
-
-* Application container images may be rebuilt and published independent of infrastructure projects.
-
-* Similarly, application concepts like containers and serverless functions may be deployed independently.
-
-* Core, low-level infrastructure -- like networks and cluster orchestrators -- may be independent from other
-  infrastructure and applications resources.
-
-* You may have one or more data tiers that are deployed and independently backed up.
-
-Even with this alternative breakdown, it's likely your stack structure will mirror a monolithic structure. For
-each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
-you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner with [stack references](/docs/concepts/stack#stackreferences).
-
-## Aligning to Git Repos
-
-Because Pulumi is a natural choice for enabling GitOps-style continuous deployment, many users opt to align their
-project structure to their Git repo structure. Organizations that prefer mono-repos often prefer monolithic
-project structures, and organizations that prefer fine-grained repos tend to prefer micro-project structures.
-
-This alignment is not a requirement, of course. We have many users who have chosen to have multiple projects in a
-single Git repo -- or the reverse, using Git submodules, they might deploy code from multiple Git repos in a single
-Pulumi project. However, most users find that a close alignment between Git repo structure and Pulumi project
-structure enables seamless continuous deployment. For a concrete walkthrough of the multi-repo approach using
-stack references, see [Multi-repo structure](#multi-repo-structure) in the Examples section below.
-
-In this model, there is a rough correspondence between a Git repo and a Pulumi project, and a Git branch and
-its associated Pulumi stack. Read more about
-[Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
-
-## Tagging Stacks
-
-Stacks have associated metadata in the form of name/value [stack tags](/docs/concepts/stack#stack-tags). You can assign custom tags to stacks when logged into the [Pulumi Cloud backend](/docs/concepts/state/) to enable grouping stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom `environment` tag to each stack, assigning a value of `production` to each production stack, `staging` to each staging stack, etc. Then in Pulumi Cloud, you'll be able to group stacks by `Tag: environment`.
-
-## Examples
-
-### Monorepo with base infrastructure project
-
-Let's build an example of an organizational setup that leverages several different approaches to provide the most functionality and flexibility possible.
-
-We start with a central base "infrastructure" project, which contains things that are common across multiple services (or perhaps even your entire organization!). This project can include resources like Azure Resource Groups or AWS VPCs.
-
-Within this project, we create stacks for each unique configuration (often times stacks are related to SDLC environments like dev, staging, and production). These stacks are often deployed independently of each other and are often deployed in different regions. To use a metaphor, our Pulumi program code defines the shape of a dial, and the configuration in the different stack configuration files (e.g., `Pulumi.dev.yaml`, `Pulumi.staging.yaml`, `Pulumi.prod.yaml`) defines an actual dial setting. These "dial settings" might include things like subscription IDs, regions, etc. that are specific to that environment.
-
-This project looks a bit like this:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```
-├─ infrastructure
-  ├── index.ts
-  ├── Pulumi.yaml
-  ├── Pulumi.dev.yaml
-  ├── Pulumi.staging.yaml
-  └── Pulumi.prod.yaml
+```mermaid
+flowchart TB
+    accTitle: Monolithic project structure
+    accDescr: A single Pulumi program is deployed as multiple stacks, one per environment, each with its own configuration file.
+    program["Pulumi program<br/>(networking + clusters + workloads)"]
+    subgraph stacks["Stacks — one per environment"]
+        dev["dev<br/>Pulumi.dev.yaml"]
+        staging["staging<br/>Pulumi.staging.yaml"]
+        prod["prod<br/>Pulumi.prod.yaml"]
+    end
+    program --> dev
+    program --> staging
+    program --> prod
 ```
 
-{{% /choosable %}}
+The program defines the *shape* of your infrastructure; each stack's configuration file (`Pulumi.dev.yaml`,
+`Pulumi.staging.yaml`, `Pulumi.prod.yaml`) supplies the per-environment values — regions, instance sizes, subscription
+IDs, and so on.
 
-{{% choosable language go %}}
+Most teams should start here, because against the four tradeoffs a monolith scores well on the ones that matter most
+early:
 
-```
-├─ infrastructure
-  ├── main.go
-  ├── Pulumi.yaml
-  ├── Pulumi.dev.yaml
-  ├── Pulumi.staging.yaml
-  └── Pulumi.prod.yaml
-```
+* **Simplicity.** One project and a handful of stacks is the least you can build. Pulumi diffs your code and handles
+  incremental deployments and dependency ordering for you.
 
-{{% /choosable %}}
+* **Versioning.** With all your code in one project, sharing and versioning logic is trivial — there is no
+  package-publishing or stack-reference boundary to cross.
 
-![A diagram showing how the different stacks in a project overlay with the program](img/infra-project.jpg)
+The monolith's weaknesses are the other two axes: its blast radius is the whole service, its permissions are
+all-or-nothing, and as it accumulates resources its deploys get slower. When those costs start to hurt, it is time to
+split.
 
-Now that we have our base infrastructure, we can create a separate Pulumi project per application or service for each one's deployment and configuration that will include all the resources that the service needs, which are not provided by the base infrastructure project.
+## Layered stacks
 
-These projects can be part of the [same monorepo as the infrastructure project](/blog/organizational-patterns-infra-repo/), or they can be separate repos, depending upon your organizational needs. One of the advantages to keeping the infrastructure project in a separate repo/project is that there is likely a limited number of users we want to be able to deploy these things; not every individual team needs to be able to do this. In this example, we will use a monorepo, however.
+For most teams that outgrow a monolith, the right next step is **layered stacks**: split the infrastructure along its
+major layers, each as its own project, connected by sharing outputs. The canonical decomposition is
+**networking → clusters → workloads**. Each layer is a project with its own per-environment stacks, and layers connect
+*within* an environment — the `clusters` stack for `staging` reads the `networking` stack for `staging`, `prod` reads
+`prod`, and so on:
 
-Our example service is made up of an API and a database (RDS, CosmosDB, etc.). Our Pulumi program for the project defines the resources for the API and the database, and it can also deploy the actual code, as well. When we add our example service, our monorepo starts to look like this:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```
-├── infrastructure
-│   ├── index.ts
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-├── myApp
-│   ├── index.ts
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-└── ...
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```
-├── infrastructure
-│   ├── main.go
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-├── myApp
-│   ├── main.go
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-└── ...
+```mermaid
+flowchart LR
+    accTitle: Layered stacks across environments
+    accDescr: Three projects — networking, clusters, and workloads — each deployed as a dev, staging, and prod stack. Within each environment the clusters stack reads the networking stack and the workloads stack reads the clusters stack, so dev reads dev, staging reads staging, and prod reads prod.
+    subgraph networking["networking project"]
+        net_dev["dev"]
+        net_staging["staging"]
+        net_prod["prod"]
+    end
+    subgraph clusters["clusters project"]
+        cl_dev["dev"]
+        cl_staging["staging"]
+        cl_prod["prod"]
+    end
+    subgraph workloads["workloads project"]
+        wl_dev["dev"]
+        wl_staging["staging"]
+        wl_prod["prod"]
+    end
+    net_dev --> cl_dev --> wl_dev
+    net_staging -->|"vpcId, subnetIds"| cl_staging -->|"kubeconfig"| wl_staging
+    net_prod --> cl_prod --> wl_prod
 ```
 
-{{% /choosable %}}
+This layering tends to fall out of the tradeoffs naturally:
 
-It's generally a good practice to keep our projects on the smaller side as this helps reduce the effect and impact of a deployment. If you have applications that require different rates of change, it may be useful to split them up into separate repos, aka micro-stacks.
+* **Blast radius.** A change to a workload can no longer take down the network it runs on.
+* **Ownership.** The layers often map to real ownership boundaries — a platform team owns networking and clusters, while
+  product teams own their workloads — so you can grant access per layer.
+* **Maintenance overhead.** Each layer deploys on its own cadence. Foundational networking rarely changes and demands
+  scrutiny when it does; workloads change daily. Keeping them separate means a routine workload deploy doesn't have to
+  refresh and diff the entire network.
 
-As we consider making our approach even more accessible and robust across teams, we bring in the idea of [Component Resources](/docs/concepts/resources/components/), which are a way to group affiliated resources together according the standard practices of the organization.
+The layers correspond to lifecycle and ownership, not to individual cloud services. Resist the urge to give every cloud
+primitive its own stack — that is the micro-stacks pattern below, and it is rarely warranted.
 
-Back to our example, our service needs a database and a subnet (or other networking). We can template these resources by creating a component resource, which abstracts these details away from the rest of the program. So now, any time someone needs to use Pulumi to add a standard application, they can call a resource called `Application` with its associated parameters (e.g., the container, parcel, folder). Behind the scenes, everything is being set up according to your organization's standards.
+### Sharing data with stack references
 
-![A diagram showing how the different stacks in a project overlay with the program](img/application-project.jpg)
+Layers connect through [stack references](/docs/iac/concepts/stacks/#stackreferences), which let one stack read the
+outputs another stack exported. The `clusters` program reads the network the `networking` program published:
 
-These component resources can be packaged up and stored alongside all of your other package management, so consumers in your organization can access them like any other library or package. If we want to add component resources to our monorepo example, it will look like this:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```
-├── infrastructure
-│   ├── index.ts
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   └── Pulumi.prod.yaml
-├── myApp
-│   ├── index.ts
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-├── pkg
-│   └──application
-│     └── app.ts
-└── ...
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```
-├── infrastructure
-│   ├── main.go
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   └── Pulumi.prod.yaml
-├── myApp
-│   ├── main.go
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-├── pkg
-│   └──application
-│     └── app.go
-└── ...
-```
-
-{{% /choosable %}}
-
-To be clear, each of the applications/services inside our monorepo (including the `infrastructure` project) are a separate Pulumi project, with their own stacks, and their own `Pulumi.yaml`. Given that each service is a separate Pulumi project, they can all use different programming languages. Let's take a look at how it might look if the `infrastructure` team prefers to write in Go, and the myApp team prefers TypeScript:
-
-```
-├── infrastructure
-│   ├── main.go
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   └── Pulumi.prod.yaml
-├── myApp
-│   ├── index.ts
-│   ├── package.json
-│   ├── Pulumi.yaml
-│   ├── Pulumi.dev.yaml
-│   ├── Pulumi.staging.yaml
-│   └── Pulumi.prod.yaml
-├── pkg
-│   └──application
-│     └── app.go
-└── .etc
-```
-
-### Multi-repo structure
-
-Not all teams work from a monorepo. Many organizations distribute infrastructure ownership across separate teams, each with their own Git repository and deployment lifecycle. A platform team might own shared networking and cluster infrastructure, while individual service teams own the resources specific to their applications. In this model, each team's code lives in its own repository, and Pulumi [stack references](/docs/concepts/stack#stackreferences) provide the mechanism for connecting them.
-
-A stack reference lets any Pulumi program read the outputs published by another stack, regardless of which repository that stack's code lives in. Pulumi Cloud stores stack outputs and makes them available to any authorized consumer by the stack's fully qualified name: `<organization>/<project>/<stack>`.
-
-Consider a platform team responsible for shared networking infrastructure -- VPCs, subnets, and security groups -- and a service team responsible for deploying an application on top of it. The platform team's repository might look like this:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```
-platform-infra/
-├── index.ts
-├── package.json
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.staging.yaml
-└── Pulumi.prod.yaml
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```
-platform-infra/
-├── main.go
-├── go.mod
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.staging.yaml
-└── Pulumi.prod.yaml
-```
-
-{{% /choosable %}}
-
-The platform team's program provisions the shared infrastructure and exports its key outputs so that downstream stacks can consume them:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const vpc = new aws.ec2.Vpc("main", { cidrBlock: "10.0.0.0/16" });
-
-const privateSubnet = new aws.ec2.Subnet("private", {
-    vpcId: vpc.id,
-    cidrBlock: "10.0.1.0/24",
-    availabilityZone: "us-west-2a",
-});
-
-export const vpcId = vpc.id;
-export const privateSubnetId = privateSubnet.id;
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```go
-package main
-
-import (
-    "github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        vpc, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
-            CidrBlock: pulumi.String("10.0.0.0/16"),
-        })
-        if err != nil {
-            return err
-        }
-        subnet, err := ec2.NewSubnet(ctx, "private", &ec2.SubnetArgs{
-            VpcId:            vpc.ID(),
-            CidrBlock:        pulumi.String("10.0.1.0/24"),
-            AvailabilityZone: pulumi.String("us-west-2a"),
-        })
-        if err != nil {
-            return err
-        }
-        ctx.Export("vpcId", vpc.ID())
-        ctx.Export("privateSubnetId", subnet.ID())
-        return nil
-    })
-}
-```
-
-{{% /choosable %}}
-
-The service team's repository has the same basic shape, but its program reads from the platform stack rather than recreating the shared infrastructure itself:
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-```
-my-service/
-├── index.ts
-├── package.json
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.staging.yaml
-└── Pulumi.prod.yaml
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-```
-my-service/
-├── main.go
-├── go.mod
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.staging.yaml
-└── Pulumi.prod.yaml
-```
-
-{{% /choosable %}}
-
-Inside the service program, a stack reference retrieves the outputs from the corresponding environment stack in the platform repository:
-
-{{< chooser language "typescript,go" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
 {{% choosable language typescript %}}
 
@@ -430,13 +186,32 @@ import * as pulumi from "@pulumi/pulumi";
 const config = new pulumi.Config();
 const org = config.require("org");
 
-// Resolves to e.g. "myorg/platform-infra/dev" when deploying the dev stack.
-const infra = new pulumi.StackReference(`${org}/platform-infra/${pulumi.getStack()}`);
+// Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+const networking = new pulumi.StackReference(`${org}/networking/${pulumi.getStack()}`);
 
-const vpcId = infra.getOutput("vpcId");
-const subnetId = infra.getOutput("privateSubnetId");
+const vpcId = networking.getOutput("vpcId");
+const privateSubnetIds = networking.getOutput("privateSubnetIds");
 
-// Deploy service resources into the shared VPC...
+// Create cluster resources in the shared network...
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+config = pulumi.Config()
+org = config.require("org")
+
+# Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+networking = pulumi.StackReference(f"{org}/networking/{pulumi.get_stack()}")
+
+vpc_id = networking.get_output("vpcId")
+private_subnet_ids = networking.get_output("privateSubnetIds")
+
+# Create cluster resources in the shared network...
 ```
 
 {{% /choosable %}}
@@ -458,19 +233,18 @@ func main() {
         cfg := config.New(ctx, "")
         org := cfg.Require("org")
 
-        // Resolves to e.g. "myorg/platform-infra/dev" when deploying the dev stack.
-        ref, err := pulumi.NewStackReference(ctx,
-            fmt.Sprintf("%s/platform-infra/%s", org, ctx.Stack()), nil)
+        // Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+        networking, err := pulumi.NewStackReference(ctx,
+            fmt.Sprintf("%s/networking/%s", org, ctx.Stack()), nil)
         if err != nil {
             return err
         }
 
-        vpcId := ref.GetOutput(pulumi.String("vpcId"))
-        subnetId := ref.GetOutput(pulumi.String("privateSubnetId"))
+        vpcId := networking.GetOutput(pulumi.String("vpcId"))
+        privateSubnetIds := networking.GetOutput(pulumi.String("privateSubnetIds"))
 
-        // Deploy service resources into the shared VPC...
-        _ = vpcId
-        _ = subnetId
+        // Create cluster resources in the shared network...
+        _, _ = vpcId, privateSubnetIds
         return nil
     })
 }
@@ -478,250 +252,666 @@ func main() {
 
 {{% /choosable %}}
 
-The stack name resolves dynamically: when you run `pulumi up` against the `dev` stack in `my-service`, Pulumi looks up the `dev` stack of `platform-infra` in the same organization. This symmetry makes it straightforward to promote changes consistently across environments.
+{{% choosable language csharp %}}
 
-A second variant of the multi-repo pattern arises when a platform team authors a reusable [component resource](/docs/iac/concepts/components/) and publishes it as a versioned package to a package registry such as npm, PyPI, or NuGet. Service teams then add it as a dependency in their `package.json` or `go.mod` and instantiate it like any other resource, without needing access to the component's source repository. This is the right approach when the component interface is stable and multiple independent teams need to use it. See [Building & Extending Pulumi](/docs/iac/guides/building-extending/) for guidance on authoring and distributing components.
+```csharp
+using Pulumi;
 
-There are several tradeoffs to weigh when adopting a multi-repo structure:
+return await Deployment.RunAsync(() =>
+{
+    var config = new Config();
+    var org = config.Require("org");
 
-* **Team ownership.** Each repository has its own access controls, CI/CD pipeline, and release process. The platform team can evolve shared infrastructure on its own schedule without modifying service team code.
-* **Security.** Pulumi Cloud's [stack permissions](/docs/pulumi-cloud/access-management/stack-permissions/) let you grant service teams read-only access to platform stack outputs without granting write access to the underlying infrastructure.
-* **Stack reference coupling.** Stack references resolve at deployment time, so they always return the current outputs of the referenced stack. If the platform team renames or removes an exported output, service stacks that depend on it will fail until updated. Treat exported output names as a stable interface and coordinate breaking changes carefully.
-* **Discoverability.** In a monorepo, all projects are visible at a glance. In a multi-repo setup, teams need to agree on and document naming conventions for organizations, projects, and stacks.
+    // Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+    var networking = new StackReference($"{org}/networking/{Deployment.Instance.StackName}");
 
-For most teams starting out, a monorepo requires less coordination. Multi-repo structures become the right choice when team boundaries, access control requirements, or independent deployment lifecycles justify the additional overhead.
+    var vpcId = networking.GetOutput("vpcId");
+    var privateSubnetIds = networking.GetOutput("privateSubnetIds");
 
-### Other examples
-
-See also the use of multiple projects and stacks in the [Kubernetes guides](/docs/clouds/kubernetes/guides/), which contains a reference architecture and collection of examples demonstrating best-practices for managing Kubernetes with a team.
-
-## Organizing your project code
-
-Within your Pulumi project, there are good practices to consider to help keep your code organized, maintainable, and understandable. While Pulumi doesn't enforce a specific project structure, following consistent patterns makes your infrastructure code easier to navigate, review, and maintain.
-
-### Common project structures
-
-Here are several approaches to organizing files within a Pulumi project, each with different tradeoffs:
-
-#### Flat structure (simple projects)
-
-For smaller projects with a handful of resources, a flat structure works well:
-
-```
-my-project/
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.prod.yaml
-├── index.ts          # Main entrypoint
-└── config.ts         # Config helpers and constants
+    // Create cluster resources in the shared network...
+});
 ```
 
-**When to use:** Small projects, prototypes, or single-purpose stacks with fewer than ~20 resources.
+{{% /choosable %}}
 
-#### Organized by resource layer
+{{% choosable language java %}}
 
-For most projects, keep the majority of your resources in your main entrypoint file (e.g., `index.ts`). Use separate files primarily for:
+```java
+import com.pulumi.Pulumi;
+import com.pulumi.resources.StackReference;
 
-* **Local component resources** - Reusable components you create within your project
-* **Shared libraries** - Helper functions and utilities
-* **Structured config classes** - Complex configuration structures
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var org = ctx.config().require("org");
 
-If your project grows large enough that splitting by infrastructure layer seems necessary, consider whether you should instead split into multiple Pulumi projects with [stack references](/docs/concepts/stack#stackreferences). This provides better separation of concerns, independent deployment cadences, and clearer ownership boundaries.
+            // Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+            var networking = new StackReference(
+                String.format("%s/networking/%s", org, ctx.stackName()));
 
-For projects where layer-based organization makes sense:
+            var vpcId = networking.getOutput("vpcId");
+            var privateSubnetIds = networking.getOutput("privateSubnetIds");
 
-```
-my-project/
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.prod.yaml
-├── index.ts              # Main entrypoint with most resources
-├── components.ts         # Local component resources
-└── config.ts             # Configuration helpers
-```
-
-**When to use:** Use this approach sparingly. If you have many resources that seem to require separate files (networking.ts, compute.ts, storage.ts, etc.), you likely need separate Pulumi projects instead.
-
-#### Organized by service/feature
-
-For projects that deploy multiple logical services:
-
-```
-my-project/
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.prod.yaml
-├── index.ts              # Main entrypoint - imports and composes all services
-├── shared/
-│   ├── networking.ts     # Shared VPC, DNS
-│   └── iam.ts            # Shared IAM resources
-├── api/
-│   ├── index.ts          # API Gateway, Lambda functions
-│   └── routes.ts         # Route definitions
-├── web/
-│   ├── index.ts          # CloudFront, S3 bucket
-│   └── cdn.ts            # CDN configuration
-└── data/
-    ├── index.ts          # Database resources
-    └── migrations.ts     # Migration helpers
+            // Create cluster resources in the shared network...
+        });
+    }
+}
 ```
 
-**When to use:** Applications with multiple distinct components that share some common infrastructure.
+{{% /choosable %}}
 
-### Pulumi-specific organization tips
+{{% choosable language yaml %}}
 
-#### Configuration helpers
+```yaml
+config:
+  org:
+    type: string
+resources:
+  # Resolves to e.g. "myorg/networking/prod" when deploying the prod stack.
+  networking:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: ${org}/networking/${pulumi.stack}
+variables:
+  vpcId: ${networking.outputs["vpcId"]}
+  privateSubnetIds: ${networking.outputs["privateSubnetIds"]}
 
-Consider creating a dedicated file for reading configuration. This is optional for simple projects where inline config in your main file works well, but becomes helpful as your project grows:
+# Create cluster resources in the shared network...
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The stack name resolves dynamically: deploying the `prod` stack of `clusters` reads the `prod` stack of `networking` in
+the same organization, which keeps changes consistent across environments. Treat exported output names as a stable
+interface — renaming or removing one breaks every stack that depends on it.
+
+### Sharing data with Pulumi ESC
+
+[Pulumi ESC](/docs/esc/) offers a more loosely coupled way to share data between stacks, and it is what we recommend over
+stack references for most layered setups. Instead of one stack reaching into another in code, you pull a producing
+stack's outputs into an [environment](/docs/esc/concepts/environments/) with the
+[`pulumi-stacks` provider](/docs/esc/providers/iac/pulumi-stacks/), map them to `pulumiConfig`, and let any number of
+consuming stacks read them as ordinary [configuration](/docs/iac/concepts/config/). The consumer never instantiates a
+`StackReference`: the values it needs arrive as config, so the dependency is expressed as data rather than wired
+into the program. That makes the coupling looser — the consumer depends on a handful of named config values, not on a
+specific stack's output API — and the same environment can also carry secrets and
+[dynamic cloud credentials](/docs/esc/providers/login/) alongside the shared outputs.
+
+{{< notes type="info" >}}
+Pulumi ESC is available only with [Pulumi Cloud](/docs/pulumi-cloud/) (including a self-hosted Pulumi Cloud). If you use
+a different [state backend](/docs/iac/concepts/state-and-backends/), share data with
+[stack references](#sharing-data-with-stack-references) instead.
+{{< /notes >}}
+
+Because an ESC environment reads a specific stack, you create one ESC environment per deployment environment. Here is the
+one for `prod`, reading the `networking` stack's `prod` outputs and exposing them as `pulumiConfig`:
+
+```yaml
+# ESC environment: networking-outputs-prod
+values:
+  stackRefs:
+    fn::open::pulumi-stacks:
+      stacks:
+        networking:
+          stack: networking/prod
+  pulumiConfig:
+    vpcId: ${stackRefs.networking.vpcId}
+    privateSubnetIds: ${stackRefs.networking.privateSubnetIds}
+```
+
+Your other environments each need their own ESC environment: a parallel `networking-outputs-staging` would read
+`networking/staging`, and likewise for `dev`. Import the matching environment from the corresponding `clusters` stack's
+configuration file:
+
+```yaml
+# Pulumi.prod.yaml
+environment:
+  - networking-outputs-prod
+```
+
+The outputs now arrive as plain configuration, which your program reads exactly like any other config value — no
+`StackReference` in sight:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
 
 ```typescript
-// config.ts
 import * as pulumi from "@pulumi/pulumi";
 
 const config = new pulumi.Config();
 
-export const environment = pulumi.getStack();
-export const region = config.require("region");
-export const instanceSize = config.get("instanceSize") || "t3.medium";
+// Supplied by the imported ESC environment — no StackReference needed.
+const vpcId = config.require("vpcId");
+const privateSubnetIds = config.requireObject<string[]>("privateSubnetIds");
+
+// Create cluster resources in the shared network...
 ```
 
-#### Application code alongside infrastructure
+{{% /choosable %}}
 
-If your Pulumi project contains application code (such as Lambda functions or Docker images), organize it into clearly labeled directories separate from your infrastructure code.
+{{% choosable language python %}}
 
-For serverless applications:
+```python
+import pulumi
 
-```
-my-project/
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.prod.yaml
-├── index.ts              # Infrastructure definitions (API Gateway, Lambda resources)
-├── app/                  # Application code
-│   └── lambda/           # Lambda function source
-│       └── handler.ts
-└── scripts/              # Build and deployment scripts
-    └── build.sh
-```
+config = pulumi.Config()
 
-For containerized applications:
+# Supplied by the imported ESC environment — no StackReference needed.
+vpc_id = config.require("vpcId")
+private_subnet_ids = config.require_object("privateSubnetIds")
 
-```
-my-project/
-├── Pulumi.yaml
-├── Pulumi.dev.yaml
-├── Pulumi.prod.yaml
-├── Makefile              # Orchestrates build and deployment
-├── app/                  # Application code
-│   ├── Dockerfile
-│   └── src/
-│       └── index.js
-└── infra/                # Pulumi infrastructure code
-    └── index.ts          # Container registry, ECS/K8s resources
-```
-
-### When to split into separate projects
-
-Consider moving code to a separate Pulumi project when you have:
-
-* **Different deployment cadences:** Database schemas change rarely while application code changes daily
-* **Different owners:** A platform team manages core infrastructure while app teams manage their services
-* **Different security requirements:** Sensitive resources (like KMS keys) need stricter access controls
-* **Performance:** Very large projects (hundreds of resources) may benefit from splitting to reduce deployment time
-
-Use [stack references](/docs/concepts/stack#stackreferences) to share outputs between projects.
-
-### Breaking out reusable code
-
-{{< chooser language "typescript,go" / >}}
-
-{{% choosable language typescript %}}
-
-Organize your code in a way that makes it easy to understand and maintain. One way to do this in TypeScript is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `index.ts`, but we use the `utils.ts` file for supporting functions.
-
-```typescript
-// index.ts
-import * as utils from "./utils";
-...
-const forwarderHandle = utils.forwardPrometheusService(p8sService, p8sDeployment, {
-    localPort,
-});
-```
-
-```typescript
-// utils.ts
-import * as k8s from "@pulumi/kubernetes";
-import * as pulumi from "@pulumi/pulumi";
-
-export function forwardPrometheusService(
-    service: pulumi.Input<k8s.core.v1.Service>,
-    deployment: pulumi.Input<k8s.extensions.v1beta1.Deployment>,
-    opts: PromPortForwardOpts,
-): pulumi.Output<() => void> {
-    if (pulumi.runtime.isDryRun()) {
-        return pulumi.output(() => undefined);
-    }
-
-    return pulumi.all([service, deployment]).apply(([s, d]) => pulumi.all([s.metadata, d.urn])).apply(([meta]) => {
-        return new Promise<() => void>((resolve, reject) => {
-            const forwarderHandle = spawn("kubectl", [
-                "port-forward",
-                `service/${meta.name}`,
-                `${opts.localPort}:${opts.targetPort || 80}`,
-            ]);
-
-            forwarderHandle.stdout.on("data", data => resolve(() => forwarderHandle.kill()));
-            forwarderHandle.stderr.on("data", data => reject());
-        });
-    });
-}
-
+# Create cluster resources in the shared network...
 ```
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-Organize your code in a way that makes it easy to understand and maintain. One way to do this in Go is to break out your code into separate files, and then import them into your main file. In this example, the entrypoint for our Pulumi program is `main.go`, but we use the `utils.go` file for supporting functions.
-
 ```go
-// main.go
 package main
+
 import (
-  "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
 func main() {
-  pulumi.Run(func(ctx *pulumi.Context) error {
-    _, err := forwardPrometheusService(ctx)
-      if err != nil {
-        return err
-      }
-  }
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        cfg := config.New(ctx, "")
+
+        // Supplied by the imported ESC environment — no StackReference needed.
+        vpcId := cfg.Require("vpcId")
+        var privateSubnetIds []string
+        cfg.RequireObject("privateSubnetIds", &privateSubnetIds)
+
+        // Create cluster resources in the shared network...
+        _, _ = vpcId, privateSubnetIds
+        return nil
+    })
 }
-```
-
-```go
-// utils.go
-package main
-import (
-  appsv1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1"
-  corev1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/core/v1"
-  metav1 "github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/meta/v1"
-  "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-  "github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-)
-
-func forwardPrometheusService(ctx *pulumi.Context)  {
-...
-
-  return nil
-}
-
 ```
 
 {{% /choosable %}}
 
-There are a couple of reasons that this pattern is helpful. One, in this particular case, is that the `forwardPrometheusService` function exists to forward the Prometheus service to localhost, so we can check it. If you are running in-cluster, we probably don't need it! So we could add a conditional to determine if we need to run that function - which makes our code a lot clearer.
+{{% choosable language csharp %}}
 
-Additionally, by breaking out the function, we can easily reuse it in other places in our code. For example, if we wanted to forward the Prometheus service to a different port, we could change the `localPort` parameter.
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+
+return await Deployment.RunAsync(() =>
+{
+    var config = new Config();
+
+    // Supplied by the imported ESC environment — no StackReference needed.
+    var vpcId = config.Require("vpcId");
+    var privateSubnetIds = config.RequireObject<List<string>>("privateSubnetIds");
+
+    // Create cluster resources in the shared network...
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+import com.pulumi.Pulumi;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var config = ctx.config();
+
+            // Supplied by the imported ESC environment — no StackReference needed.
+            var vpcId = config.require("vpcId");
+            var privateSubnetIds = config.requireObject("privateSubnetIds", String[].class);
+
+            // Create cluster resources in the shared network...
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+# The values below are supplied by the imported ESC environment as configuration.
+config:
+  vpcId:
+    type: string
+  privateSubnetIds:
+    type: array
+    items:
+      type: string
+
+# Create cluster resources in the shared network, referencing ${vpcId} and ${privateSubnetIds}...
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+See [Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) for the full workflow.
+
+### Going finer: micro-stacks
+
+At the far end of the spectrum is the *micro-stacks* pattern, where you go finer than layers and give each individual
+service its own stack. This is only worth the overhead when you genuinely have many independent services — for example,
+a fleet of serverless functions (AWS Lambda, Azure Functions) that ship on their own schedules.
+
+The **upside** is highly targeted deployments: shipping one service touches only that service's stack, so previews and
+updates are fast and the blast radius is small. The **downside** is maintenance overhead — every service adds another
+stack to configure, another set of stack references to wire up, and another pipeline to operate. For most teams that
+cost outweighs the benefit, so stop at layered stacks unless independent per-service lifecycles justify going further.
+
+## Stacks beyond environments
+
+`dev` / `staging` / `prod` is the most common way to slice a project into stacks, but it is not the only one. A stack is
+just an independently deployed, independently configured instance of the same program, so *any* dimension along which
+you need a separate copy of the same infrastructure — with its own configuration, secrets, and blast radius — can be a
+stack. The program stays identical; each stack's `Pulumi.<stack>.yaml` supplies the values that make it distinct.
+
+### Multi-tenancy: pooled vs. isolated tenants
+
+When you run software for multiple customers, the tenancy model shows up directly in your stack layout:
+
+* **Pooled (shared) tenancy.** A single `prod` stack serves every tenant, and application-level logic keeps tenants
+  apart. This is the cheapest to operate and the simplest to deploy, but every tenant shares one blast radius: a bad
+  update affects all of them at once.
+* **Isolated tenancy.** Each tenant gets its own stack of the same project — `tenant-acme`, `tenant-globex`, and so on.
+  Tenants are isolated in separate resources, can sit in different regions or on different tiers, and roll out
+  independently, at the cost of more stacks to operate and a fleet you deploy across rather than a single update.
+
+Isolation is expressed entirely through per-stack configuration:
+
+```yaml
+# Pulumi.tenant-acme.yaml
+config:
+  myapp:tenantId: acme
+  myapp:tier: enterprise
+  myapp:region: us-east-1
+```
+
+A tenant fleet is essentially the [micro-stacks](#going-finer-micro-stacks) tradeoff applied along the tenant axis, so
+the same guidance holds: reach for it when tenants genuinely need isolation, and lean on
+[Automation API](/docs/iac/concepts/automation-api/) to provision and update the fleet programmatically as tenants come
+and go.
+
+### Disaster recovery: primary and secondary stacks
+
+For disaster recovery you often want two long-lived copies of production rather than one. Running them as two stacks of
+the same project — say `prod-primary` and `prod-secondary` in different regions — keeps them defined by a single program
+while letting configuration capture how they differ.
+
+A [pilot-light](https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html)
+setup is a natural fit: the secondary stack provisions only the minimal always-on resources needed to keep data
+replicated and images warm, and scales up on failover. Those differences are just configuration:
+
+```yaml
+# Pulumi.prod-primary.yaml
+config:
+  myapp:region: us-east-1
+  myapp:replicas: "6"
+  myapp:standby: "false"
+```
+
+```yaml
+# Pulumi.prod-secondary.yaml
+config:
+  myapp:region: us-west-2
+  myapp:replicas: "1"     # pilot light: minimal warm capacity
+  myapp:standby: "true"
+```
+
+The program reads `standby` and `replicas` to decide how much to run; failover becomes a configuration change and an
+update to the secondary stack. These axes also compose — a SaaS provider running isolated tenants with DR might have
+`acme-primary` and `acme-secondary` per tenant — and stack references and [ESC](#sharing-data-with-pulumi-esc) work the
+same across all of them.
+
+## Aligning to Git repositories
+
+Because Pulumi enables GitOps-style continuous delivery, most teams align their project structure to their Git
+repositories. A repository does not have to map one-to-one to a Pulumi project, though: a monorepo can hold many
+projects side by side, and a single project can be spread across a repository however you like. A common convention is
+to map a repository (or a directory within a monorepo) to a project and a Git branch to a stack. Read more about
+[Continuous Delivery](/docs/iac/operations/continuous-delivery/).
+
+Whether your layers live in one repository or many is itself a tradeoff. A monorepo keeps everything visible and
+requires less cross-team coordination. A multi-repo setup gives each team its own access controls, CI/CD pipeline, and
+release cadence — at the cost of having to agree on naming conventions and discover what other teams have published.
+Sharing data works identically across both: a stack reference or ESC `pulumi-stacks` lookup resolves at deployment time
+by the referenced stack's fully qualified name, `<organization>/<project>/<stack>`, regardless of which repository its
+code lives in.
+
+A common multi-repo layout puts a platform team's shared infrastructure in one repo and a service team's resources in
+another:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── index.ts
+├── package.json
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── index.ts
+├── package.json
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── __main__.py
+├── requirements.txt
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── __main__.py
+├── requirements.txt
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── main.go
+├── go.mod
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── main.go
+├── go.mod
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── Program.cs
+├── platform-infra.csproj
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── Program.cs
+├── my-service.csproj
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── src/main/java/myorg/App.java
+├── pom.xml
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── src/main/java/myorg/App.java
+├── pom.xml
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```
+platform-infra/          # platform team: networking, clusters
+├── Pulumi.yaml          # program is defined inline
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+
+my-service/              # service team: one workload
+├── Pulumi.yaml          # program is defined inline
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+The service program reads the platform stack with a stack reference, exactly as shown in
+[Sharing data with stack references](#sharing-data-with-stack-references) above. When weighing a multi-repo structure,
+keep these tradeoffs in mind:
+
+* **Team ownership.** Each repository has its own access controls, pipeline, and release process, so the platform team
+  can evolve shared infrastructure without touching service code.
+* **Security.** [Stack permissions](/docs/administration/access-identity/rbac/permission-sets/) let you grant service teams read-only access
+  to platform stack outputs without write access to the underlying infrastructure.
+* **Stack reference coupling.** Stack references return the *current* outputs of the referenced stack, so a renamed or
+  removed output breaks dependents until they are updated. Coordinate breaking changes to exported outputs carefully.
+* **Discoverability.** In a monorepo every project is visible at a glance; in a multi-repo setup teams must agree on
+  and document naming conventions for organizations, projects, and stacks.
+
+{{< notes type="info" >}}
+**Components are mostly out of scope for this guide,** but they are worth knowing about here. When shared infrastructure
+spans multiple repositories, a platform team can package reusable logic as a [component](/docs/iac/concepts/components/)
+and distribute it as a versioned package — to a public registry such as npm or PyPI, or to the
+[Pulumi Registry](/docs/idp/concepts/private-registry/) for private distribution. Service teams add it as a dependency
+and instantiate it like any other resource, without access to its source. See
+[Building & extending Pulumi](/docs/iac/guides/building-extending/) for guidance on authoring and distributing
+components.
+{{< /notes >}}
+
+## Organizing code within a project
+
+Once you've decided how many projects you have, you still have to organize the code *inside* each one. The layout below
+is the monorepo approach — everything for a project lives together in one repository. Organize that code around **whole
+workloads or aspects of your infrastructure** — the same networking / clusters / workloads layers from above — rather
+than around individual cloud services. Files named for the *purpose* they serve stay meaningful as your infrastructure
+grows; files named for cloud primitives do not.
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+
+{{% choosable language typescript %}}
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts          # entrypoint: composes the layers
+├── networking.ts     # VPC, subnets, security groups
+├── clusters.ts       # Kubernetes / compute clusters
+└── workloads.ts      # application services
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── __main__.py       # entrypoint: composes the layers
+├── networking.py     # VPC, subnets, security groups
+├── clusters.py       # Kubernetes / compute clusters
+└── workloads.py      # application services
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── main.go           # entrypoint: composes the layers
+├── networking.go     # VPC, subnets, security groups
+├── clusters.go       # Kubernetes / compute clusters
+└── workloads.go      # application services
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```
+my-platform/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── Program.cs        # entrypoint: composes the layers
+├── Networking.cs     # VPC, subnets, security groups
+├── Clusters.cs       # Kubernetes / compute clusters
+└── Workloads.cs      # application services
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```
+my-platform/
+├── pom.xml
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+└── src/main/java/myorg/
+    ├── App.java          # entrypoint: composes the layers
+    ├── Networking.java   # VPC, subnets, security groups
+    ├── Clusters.java     # Kubernetes / compute clusters
+    └── Workloads.java    # application services
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+A Pulumi YAML program lives entirely in a single `Pulumi.yaml` file, so there is no file-level organization to apply.
+When a YAML project grows large enough that you wish you could split it, that is the signal to break it into separate
+[layered projects](#layered-stacks) instead.
+
+```
+my-platform/
+├── Pulumi.yaml       # the entire program, defined inline
+├── Pulumi.dev.yaml
+└── Pulumi.prod.yaml
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Keep the bulk of your resources in these layer files and the project's entrypoint. Reserve additional files for genuinely
+reusable building blocks — local [component resources](/docs/iac/concepts/components/) and shared helper functions — and
+package those up when other projects need them.
+
+### When to split into separate projects
+
+If a single file starts to feel like the wrong place for something, the answer is usually a separate project, not just a
+separate file. Split when one of the four tradeoffs pushes you to:
+
+* **Blast radius:** sensitive or foundational resources should fail independently of everything else.
+* **Ownership:** a platform team and an app team need different access to different resources.
+* **Repository alignment:** the code belongs to a different team's repository and release process.
+* **Maintenance overhead:** resources change at very different cadences, or the project has grown large enough that
+  deploys are slow.
+
+Share outputs between the projects you split out with [stack references](/docs/iac/concepts/stacks/#stackreferences)
+or, preferably, the [`pulumi-stacks` provider in ESC](#sharing-data-with-pulumi-esc).
+
+## Application code with or without infrastructure
+
+A recurring question is whether application code (Lambda handlers, container source, and the like) should live in the
+same project as the infrastructure that deploys it. The answer depends on your delivery model.
+
+**Self-service model.** When application teams write their own Pulumi code — often consuming standardized
+[components](/docs/iac/concepts/components/) from the [Pulumi Registry](/docs/idp/concepts/private-registry/) — it
+works well to keep app code and infrastructure together. The same team owns both, so a single repository with the
+application alongside its Pulumi program is the path of least friction:
+
+```
+my-service/
+├── Pulumi.yaml
+├── Pulumi.dev.yaml
+├── Pulumi.prod.yaml
+├── index.ts          # infrastructure: functions, queues, databases
+└── app/              # application source the program deploys
+    └── handler.ts
+```
+
+**Full internal developer platform (IDP) model.** When a platform team builds an IDP, the IDP typically *owns and
+generates* all the infrastructure code in a repository. Mingling hand-written application code into that same repo
+creates ownership conflicts — the IDP wants to manage the repo's contents, while app teams want to manage their own
+code. In this model, keep application code in its own repositories owned by the app teams, and let the IDP own the
+infrastructure code separately:
+
+```
+platform-idp/        # IDP owns and generates all IaC here
+service-a-app/       # app team owns only application code
+service-b-app/       # app team owns only application code
+```
+
+The deciding factor is ownership: keep app and infrastructure code together when one team owns both, and separate them
+when an IDP needs to own the infrastructure independently of the applications it serves.
+
+## Tagging stacks
+
+Stacks have associated metadata in the form of name/value [stack tags](/docs/iac/concepts/stacks/#stack-tags). You can
+assign custom tags to stacks when logged into the [Pulumi Cloud backend](/docs/iac/concepts/state-and-backends/) to
+enable grouping stacks in [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with
+separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment
+instead of by project. To do this, you could assign a custom `environment` tag to each stack — `production` to each
+production stack, `staging` to each staging stack, and so on. Then in Pulumi Cloud you can group stacks by
+`Tag: environment`.
+
+Tags aren't only for grouping. On the [Pulumi Enterprise or Business Critical editions](/pricing/), they also drive
+[tag-based (ABAC) rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules) in Pulumi Cloud RBAC, so
+you can grant permissions by tag — for example, giving a team access to every stack tagged `team: payments` — instead of
+enumerating each stack individually. As new stacks pick up the tag, they inherit the access automatically.
+
+## Conclusion
+
+There is no universally correct project and stack structure — only the one that best balances blast radius, ownership,
+repository alignment, and maintenance overhead for your team. Start monolithic: it is the simplest thing that works, and
+most of the spectrum's cost is coordination you don't yet need. Move to layered stacks when a growing blast radius,
+divergent ownership, or slow deploys begin to hurt, and connect the layers with Pulumi ESC or stack references. Reserve
+micro-stacks for the uncommon case of many genuinely independent services. Wherever you land, revisit the decision as
+your team and infrastructure grow — the right structure is the one that still fits.
