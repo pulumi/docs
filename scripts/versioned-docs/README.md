@@ -94,18 +94,30 @@ live page. Old toolchains that fail to build are skipped, not fixed (they just n
 Edit `static/js/versioned-docs.js` / `.css` and redeploy the site. **Never move** the
 `/js/versioned-docs.js` URL — archived pages reference it forever.
 
-## Production setup checklist (not yet done)
-1. `pulumi up` `infrastructure/versioned-docs/production` (creates the prod bucket + role). This
+## Production setup — DONE (2026-07-01)
+
+Rolled out to `www.pulumi.com` (CloudFront `E3PRSXO1BZJEEY`, bucket
+`pulumi-docs-versioned-production`). The steps below are kept as the record / re-run reference.
+
+1. ✅ `pulumi up` `infrastructure/versioned-docs/production` (creates the prod bucket + role). This
    is the switch: once its outputs exist, release workflows resolve them and start archiving —
    there is no separate enable flag.
-2. Set `www.pulumi.com:versionedDocsStack: "pulumi/pulumi-docs-versioned/production"` in
+2. ✅ Set `www.pulumi.com:versionedDocsStack: "pulumi/pulumi-docs-versioned/production"` in
    `infrastructure/Pulumi.www-production.yaml` (a StackReference to the stack from step 1, so it
    must come second), then let a normal site deploy's `pulumi up www-production` add the origin +
    `/docs/versioned/*` behavior and serve `/js/versioned-docs.js` + `/css/versioned-docs-archive.css`.
-3. Backfill the historical catalog (dispatch the workflows with `target_env=production`,
-   `publish_only=true`, staggered, then `rebuild-manifest.sh`).
-4. Verify: archives serve `max-age=31536000, immutable`, the manifest `max-age=300`, and the
-   existing `/docs/*` + dotnet routes still resolve.
+   (Pre-merge, `pulumi preview www-production` confirmed the change was additive: +1 origin, +1
+   behavior, +2 policies, in-place distribution update, no deletes.)
+3. ✅ Backfill the historical catalog via `backfill.sh` (see §Backfill). Final catalog: 10 tools,
+   ~430 versions. Floors: the pulumi/pulumi trio (pulumi-cli/nodejs/python) at `v3.150.0`; small
+   SDKs all-in (ancient pre-1.0 java/policy/esc + oldest dotnet fail-skip on toolchain age).
+4. ✅ Verified: archives serve `max-age=31536000, immutable`, the manifest `max-age=300`, existing
+   `/docs/*` + dotnet routes still resolve, and every archive is version-faithful (QA-swept).
+
+**Gotcha learned during rollout:** the three Python doc workflows must pass `VERSION` to
+`generate_python_docs.sh` (fixed in PR #20010) or a backfill documents the *latest* package for
+every historical version. The TypeScript/.NET/Java workflows are fine — they check out their
+source repo at the version tag.
 
 ## Tool ids
 `pulumi-cli`, `nodejs`, `nodejs-policy`, `nodejs-esc-sdk`, `python`, `python-policy`,
