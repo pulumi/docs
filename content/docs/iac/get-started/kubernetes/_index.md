@@ -34,48 +34,36 @@ You need access to a Kubernetes cluster (local or cloud-based) and kubectl insta
 
 {{% choosable language "typescript" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> and <a href="https://www.npmjs.com/package/npm" target="_blank">npm</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "python" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * <a href="https://www.python.org/downloads/" target="_blank">Python</a> and <a href="https://pip.pypa.io/en/stable/installation/" target="_blank">pip</a>, <a href="https://python-poetry.org/docs/" target="_blank">Poetry</a> or <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank">uv</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "go" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * <a href="https://go.dev/doc/install" target="_blank">Go</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "csharp" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * <a href="https://dotnet.microsoft.com/en-us/download/dotnet" target="_blank">.NET</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "java" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Java 11+</a> and <a href="https://maven.apache.org/install.html" target="_blank">Maven 3.6.1+</a> installed locally
 
 {{% /choosable %}}
 
 {{% choosable language "yaml" %}}
 
-* Access to a Kubernetes cluster (local or cloud-based)
-* kubectl installed and configured
 * A text editor
 
 {{% /choosable %}}
