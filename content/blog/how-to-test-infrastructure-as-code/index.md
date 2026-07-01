@@ -14,7 +14,7 @@ category: best-practices
 schema_type: faq
 social:
     twitter: |
-        Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests with mocked providers run in milliseconds. Integration tests validate real deployments.
+        Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests, integration tests, and a third layer most teams skip entirely.
 
         Here's how to do all three with Pulumi.
     linkedin: |
@@ -22,11 +22,11 @@ social:
 
         Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching.
 
-        This guide covers unit tests with mocked providers (milliseconds, no cloud credentials), integration tests using the Automation API (real cloud, ephemeral stacks), and policy as code that enforces guardrails on every deploy. Complete Python and TypeScript examples included.
+        This guide covers unit tests, integration tests, and policy as code, with complete Python and TypeScript examples showing how each one fits into your workflow.
     bluesky: |
-        Testing infrastructure as code with Pulumi: unit tests run in milliseconds with mocked providers, integration tests use the Automation API, and policy packs enforce guardrails automatically.
+        Testing infrastructure as code with Pulumi: three layers, one set of languages and tools you already know.
 
-        Full guide with Python + TypeScript examples.
+        See how each layer catches a different class of bug before it reaches production.
 ---
 
 IaC testing means validating your infrastructure code the same way you test application software—unit tests with mocked cloud providers that run in milliseconds, integration tests that deploy and inspect real resources, and policy checks that enforce compliance rules on every preview and deploy. Together, these layers catch misconfigurations before they reach production.
@@ -53,7 +53,7 @@ The case for testing application code is well-established. The case for testing 
 
 **Ship infrastructure at software speed.** Teams that test IaC ship changes faster, with less fear. The CI pipeline becomes a confidence engine rather than a deployment gate.
 
-The annual [DORA State of DevOps research](https://cloud.google.com/devops/state-of-devops) consistently finds that elite-performing engineering teams—those that deploy frequently and recover quickly from failures—share one defining characteristic: comprehensive automated testing across the stack. Infrastructure is no longer exempt from that standard.
+The annual [DORA State of DevOps research](https://cloud.google.com/devops/state-of-devops) is consistently associated with a pattern among elite-performing engineering teams—those that deploy frequently and recover quickly from failures: comprehensive automated testing across the stack. Infrastructure is no longer exempt from that standard.
 
 ## What types of IaC tests are there?
 
@@ -868,7 +868,7 @@ func TestS3Website(t *testing.T) {
 }
 ```
 
-> **Best practice:** Always destroy test stacks in a `finally` block or test teardown fixture. Leaked integration test stacks are one of the top causes of unexpected cloud spend.
+> **Best practice:** Always destroy test stacks in a `finally` block or test teardown fixture. Leaked integration test stacks are a common cause of unexpected cloud spend.
 
 ## How does policy as code complement IaC testing?
 
@@ -994,13 +994,13 @@ The fundamental difference is **language cohesion**. With Pulumi, you write infr
 | | Pulumi | Terratest | `terraform test` (≥ 1.6) |
 |-|--------|-----------|--------------------------|
 | **Language for tests** | Same language as infra (Python, TypeScript, Go, C#, Java); YAML programs tested via Automation API from any of those languages | Always Go (regardless of infra language) | HCL DSL (`.tftest.hcl`) |
-| **Unit tests with mocks** | Yes — `pulumi.runtime.set_mocks()`, no cloud credentials needed | No — always deploys real infrastructure | Limited — `mock_provider` (v1.7+) is HCL-declarative, no programmatic logic |
+| **Unit tests with mocks** | Yes — `pulumi.runtime.set_mocks()`, no cloud credentials needed | No — no mock layer for cloud providers | Limited — `mock_provider` (v1.7+) is HCL-declarative, no programmatic logic |
 | **Integration testing** | Automation API (any language) or Go framework | Full-featured but Go-only | Yes, via `command = apply` run blocks |
 | **Policy / guardrails** | Pulumi Policies: Python or TypeScript, runs at preview time | External tools (checkov, tfsec, OPA/Rego — separate toolchain) | Sentinel (enterprise) or external |
 | **Execution speed** | Unit: milliseconds; integration: depends on cloud | Minutes (real deployments by default) | Plan-only: fast; apply: minutes |
 | **Learning curve** | Use existing language skills and test frameworks | Requires Go knowledge and understanding of `go test` | Low if you know HCL; limited expressiveness |
 
-Terratest is battle-tested and widely adopted, particularly for Terraform module testing. It offers deep integrations with AWS, GCP, Azure, and Kubernetes. Its limitation is inherent: it's always deploying real infrastructure, making it slow and costly to run for every commit.
+Terratest is battle-tested and widely adopted, particularly for Terraform module testing. It offers deep integrations with AWS, GCP, Azure, and Kubernetes. Its limitation is that it has no mock layer for cloud providers, so most test suites deploy real infrastructure, which makes them slower and costlier to run on every commit.
 
 `terraform test` has improved significantly in Terraform 1.6 and 1.7. The `command = plan` mode avoids real deployments, and `mock_provider` enables basic unit-like testing. But expressiveness is bounded by HCL's declarative model—no general-purpose programming, no third-party assertion libraries, and a fixed set of `run`/`assert` test constructs.
 
