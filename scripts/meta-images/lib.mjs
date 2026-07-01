@@ -137,18 +137,28 @@ export const svgDataUri = (file) => `data:image/svg+xml;base64,${readFileSync(jo
 export function fileToImage(p, { roots = [], maxH = 52, maxW = 260, fit = true } = {}) {
   const raw = clean(p)
   if (!raw) return null
-  if (raw.startsWith("data:")) return { uri: raw, w: maxW, h: maxH, iw: maxW, ih: maxH }
-  const rel = raw.replace(/^\//, "")
-  const candidates = [raw, ...roots.map((r) => join(r, rel))]
-  const file = candidates.find((f) => f && existsSync(f) && statSync(f).isFile())
-  if (!file) return null
-  const buf = readFileSync(file)
-  // Trust the bytes, not the extension (repo has PNGs named *.jpg, etc.).
+  let buf
+  if (raw.startsWith("data:")) {
+    // Decode the payload so intrinsic sizing works the same as for a file
+    // (otherwise a data-URI logo would get a fabricated aspect from maxW/maxH).
+    const comma = raw.indexOf(",")
+    if (comma < 0) return null
+    const meta = raw.slice(5, comma) // e.g. "image/svg+xml;base64"
+    const payload = raw.slice(comma + 1)
+    buf = /;base64$/i.test(meta) ? Buffer.from(payload, "base64") : Buffer.from(decodeURIComponent(payload), "utf-8")
+  } else {
+    const rel = raw.replace(/^\//, "")
+    const candidates = [raw, ...roots.map((r) => join(r, rel))]
+    const file = candidates.find((f) => f && existsSync(f) && statSync(f).isFile())
+    if (!file) return null
+    buf = readFileSync(file)
+  }
+  // Trust the bytes, not the extension / declared mime (repo has PNGs named *.jpg, etc.).
   const type = sniffImageType(buf)
   const mime = type ? TYPE_MIME[type] : null
   if (!mime) return null
   const uri = `data:${mime};base64,${buf.toString("base64")}`
-  const { w, h: ih } = intrinsicSize(buf, file.toLowerCase())
+  const { w, h: ih } = intrinsicSize(buf)
   if (!fit) return { uri, w: maxW, h: maxH, iw: w, ih }
   let dw = (w / ih) * maxH, dh = maxH
   if (dw > maxW) { dw = maxW; dh = (ih / w) * maxW }

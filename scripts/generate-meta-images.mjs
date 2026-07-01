@@ -201,7 +201,10 @@ const SECTIONS = [
     // OG_SAMPLE → one representative EVENT (both variants); exclude the index so
     // the sample exercises the events renderer, not the index title card.
     sampleGroupBy: (id) => (id === "events" ? null : "events"),
-    skip: (fm) => fm.external === true, // external events have no on-site page
+    // External events do publish an on-site page, but it's never linked (the
+    // events list links straight to the external URL) and is meant to be
+    // noindexed — not worth a card; the default og image covers it.
+    skip: (fm) => fm.external === true,
     fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
     valid: (f) => !!f.title,
   },
