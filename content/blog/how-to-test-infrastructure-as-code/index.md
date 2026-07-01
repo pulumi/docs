@@ -2,7 +2,7 @@
 title: "How to Test Infrastructure as Code"
 date: 2026-06-30T14:00:00-07:00
 draft: false
-meta_desc: "Learn how to test infrastructure as code—unit tests with mocked providers, integration tests, and policy checks—with Pulumi examples in Python and TypeScript."
+meta_desc: "Learn how to test infrastructure as code—unit tests with mocked providers, integration tests, and policy checks—with Pulumi examples in Python, TypeScript, Go, C#, and Java."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -85,7 +85,7 @@ Pulumi unit tests replace the communication channel between the Pulumi program a
 
 **The import-order rule:** You must set up mocks *before* importing your Pulumi program. If you import the program first, the Pulumi runtime initializes without mocks and will attempt real cloud calls.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language python %}}
 
@@ -288,13 +288,80 @@ Run with: `dotnet test`
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+// InfraTest.java
+package myproject;
+
+import com.pulumi.test.Mocks;
+import com.pulumi.test.MockResourceArgs;
+import com.pulumi.test.MockCallArgs;
+import com.pulumi.test.Testing;
+import org.junit.jupiter.api.Test;
+import java.util.Map;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import static org.junit.jupiter.api.Assertions.*;
+
+class InfraTest {
+
+    // Implement Mocks to intercept resource creation
+    static final Mocks mocks = new Mocks() {
+        @Override
+        public CompletableFuture<Map.Entry<String, Object>> newResourceAsync(MockResourceArgs args) {
+            // Return [id, state]. State keys must be camelCase.
+            return CompletableFuture.completedFuture(Map.entry(args.name() + "_id", args.inputs()));
+        }
+
+        @Override
+        public CompletableFuture<Map<String, Object>> callAsync(MockCallArgs args) {
+            return CompletableFuture.completedFuture(Map.of());
+        }
+    };
+
+    @Test
+    void serverHasRequiredTags() throws Exception {
+        Testing.runAsync(() -> {
+            var stack = new Infra();
+            stack.server.tags().applyValue(tags -> {
+                assertNotNull(tags, "Tags must not be null");
+                assertTrue(tags.containsKey("Environment"), "Missing 'Environment' tag");
+                assertTrue(tags.containsKey("Name"), "Missing 'Name' tag");
+                return null;
+            });
+        }, mocks).get();
+    }
+
+    @Test
+    void noPublicSshExposed() throws Exception {
+        Testing.runAsync(() -> {
+            var stack = new Infra();
+            stack.group.ingress().applyValue(rules -> {
+                for (var rule : rules) {
+                    for (var cidr : rule.cidrBlocks()) {
+                        assertNotEquals("0.0.0.0/0", cidr,
+                            "Security group must not expose SSH to the internet");
+                    }
+                }
+                return null;
+            });
+        }, mocks).get();
+    }
+}
+```
+
+Run with: `mvn test` (JUnit 5)
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### The program under test
 
 Both examples above test this program:
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language python %}}
 
@@ -439,6 +506,50 @@ public class MyStack : Stack
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+// Infra.java
+package myproject;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ec2.SecurityGroup;
+import com.pulumi.aws.ec2.SecurityGroupArgs;
+import com.pulumi.aws.ec2.Instance;
+import com.pulumi.aws.ec2.InstanceArgs;
+import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
+import java.util.List;
+import java.util.Map;
+
+public class Infra {
+    public final SecurityGroup group;
+    public final Instance server;
+
+    public Infra() {
+        this.group = new SecurityGroup("web-secgrp",
+            SecurityGroupArgs.builder()
+                .ingress(SecurityGroupIngressArgs.builder()
+                    .protocol("tcp")
+                    .fromPort(80)
+                    .toPort(80)
+                    .cidrBlocks("0.0.0.0/0")
+                    .build())
+                .build());
+
+        this.server = new Instance("web-server",
+            InstanceArgs.builder()
+                .instanceType("t2.micro")
+                .ami("ami-0b0ea68c435eb488d")
+                .vpcSecurityGroupIds(group.id().applyValue(List::of))
+                .tags(Map.of("Name", "web-server", "Environment", "dev"))
+                .build());
+    }
+}
+```
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 > **Key detail:** State property keys in the mock's `new_resource`/`newResource` return value must be **camelCase** (`cidrBlocks`, not `cidr_blocks`), regardless of the language you're writing in. This is how Pulumi serializes properties internally.
@@ -451,7 +562,7 @@ Unit tests tell you whether your resource definitions are correct. Integration t
 
 The [Pulumi Automation API](/docs/iac/concepts/automation-api/) lets you drive `pulumi up`, `pulumi destroy`, and every other Pulumi CLI operation programmatically, from within a test. You define the stack inline (using a function that runs your Pulumi program) or point it at an existing project directory.
 
-{{< chooser language "typescript,python,go,csharp" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language python %}}
 
@@ -676,6 +787,67 @@ Run with: `dotnet test`
 
 {{% /choosable %}}
 
+{{% choosable language java %}}
+
+```java
+// IntegrationTest.java
+package myproject;
+
+import com.pulumi.automation.*;
+import org.junit.jupiter.api.*;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class IntegrationTest {
+
+    private LocalWorkspace workspace;
+    private WorkspaceStack stack;
+    private Map<String, OutputValue> outputs;
+
+    @BeforeAll
+    void setUp() throws Exception {
+        var program = PulumiFn.create(() -> {
+            var bucket = new com.pulumi.aws.s3.Bucket("test-bucket",
+                com.pulumi.aws.s3.BucketArgs.builder()
+                    .tags(Map.of("Environment", "test", "ManagedBy", "pulumi"))
+                    .build());
+            com.pulumi.Context.export("bucketName", bucket.id());
+        });
+
+        var opts = LocalWorkspaceOptions.builder()
+            .program(program)
+            .build();
+
+        workspace = LocalWorkspace.create(opts);
+        stack = WorkspaceStack.createOrSelect("integration-test", "bucket-test", workspace);
+        stack.setConfig("aws:region", ConfigValue.of("us-west-2"));
+        stack.workspace().installPlugin("aws", "v7.34.0");
+
+        var upResult = stack.up(UpOptions.builder().onOutput(System.out::println).build());
+        outputs = upResult.outputs();
+    }
+
+    @AfterAll
+    void tearDown() throws Exception {
+        if (stack != null) {
+            stack.destroy(DestroyOptions.builder().onOutput(System.out::println).build());
+            stack.workspace().removeStack("integration-test");
+        }
+    }
+
+    @Test
+    void bucketNameHasExpectedPrefix() {
+        var name = (String) outputs.get("bucketName").value();
+        assertTrue(name.startsWith("test-bucket"), "Unexpected bucket name: " + name);
+    }
+}
+```
+
+Run with: `mvn test`
+
+{{% /choosable %}}
+
 {{< /chooser >}}
 
 ### Using the Go integration framework
@@ -821,7 +993,7 @@ The fundamental difference is **language cohesion**. With Pulumi, you write infr
 
 | | Pulumi | Terratest | `terraform test` (≥ 1.6) |
 |-|--------|-----------|--------------------------|
-| **Language for tests** | Same language as infra (Python, TypeScript, Go, C#, Java) | Always Go (regardless of infra language) | HCL DSL (`.tftest.hcl`) |
+| **Language for tests** | Same language as infra (Python, TypeScript, Go, C#, Java); YAML programs tested via Automation API from any of those languages | Always Go (regardless of infra language) | HCL DSL (`.tftest.hcl`) |
 | **Unit tests with mocks** | Yes — `pulumi.runtime.set_mocks()`, no cloud credentials needed | No — always deploys real infrastructure | Limited — `mock_provider` (v1.7+) is HCL-declarative, no programmatic logic |
 | **Integration testing** | Automation API (any language) or Go framework | Full-featured but Go-only | Yes, via `command = apply` run blocks |
 | **Policy / guardrails** | Pulumi Policies: Python or TypeScript, runs at preview time | External tools (checkov, tfsec, OPA/Rego — separate toolchain) | Sentinel (enterprise) or external |
@@ -979,7 +1151,7 @@ Implement `pulumi.runtime.Mocks` (Python) or call `pulumi.runtime.setMocks()` (T
 
 ### What test frameworks work with Pulumi?
 
-Any language-native test framework works. For Python: **pytest** (recommended) or **unittest**. For TypeScript/JavaScript: **Mocha**, **Jest**, or **Vitest**. For Go: the standard `testing` package. For C#: **NUnit** or **xUnit**. For Java: **JUnit**. The `@pulumi/pulumi/automation` SDK and `pulumi.automation` module integrate naturally with all of them.
+Any language-native test framework works. For Python: **pytest** (recommended) or **unittest**. For TypeScript/JavaScript: **Mocha**, **Jest**, or **Vitest**. For Go: the standard `testing` package. For C#: **NUnit** or **xUnit**. For Java: **JUnit**. The `@pulumi/pulumi/automation` SDK and `pulumi.automation` module integrate naturally with all of them. YAML is Pulumi's declarative configuration language; because it has no control flow or executable statements, you cannot write test logic in YAML itself. YAML programs are tested by pointing the Automation API from Python, TypeScript, Go, C#, or Java at the project directory and asserting on the stack outputs.
 
 ### How do you test Pulumi in CI/CD?
 
