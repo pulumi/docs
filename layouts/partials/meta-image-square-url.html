@@ -1,0 +1,29 @@
+{{- /*
+    The optional SQUARE (1:1) social card for a page, as a site-relative URL, or
+    "" if none applies. Emitted by head.html as a second og:image (the landscape
+    meta-image-url.html stays the primary og:image + twitter:image). Mirrors
+    meta-image-url.html's precedence:
+
+      1. A page-level `meta_image_square` (custom override — always wins).
+      2. A build-time generated square card at
+         assets/images/generated/<content-path>.square.png, if one exists
+         (events only today). Suppressed when the page sets a custom
+         `meta_image`, since a custom landscape override has no matching square
+         and the generator skips such pages anyway.
+      3. "" (no second og:image is emitted).
+*/ -}}
+{{- $img := "" -}}
+{{- if .Params.meta_image_square -}}
+    {{- if or (eq .Section "blog") (eq .Section "templates") -}}
+        {{- with .Resources.GetMatch .Params.meta_image_square -}}{{- $img = .RelPermalink -}}{{- end -}}
+    {{- else -}}
+        {{- $img = .Params.meta_image_square -}}
+    {{- end -}}
+{{- else if not .Params.meta_image -}}
+    {{- with partial "meta-image-key.html" . -}}
+        {{- with resources.Get (printf "images/generated/%s.square.png" .) -}}
+            {{- $img = .RelPermalink -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return $img -}}
