@@ -29,7 +29,7 @@
 #   --tools "a b c"              subset of tool ids (default: all 10)
 #   --ref REF                    git ref to dispatch workflows from (default: current branch)
 #   --latest TOOL=vX.Y.Z         override the "latest" (live) version for a tool's manifest (repeatable)
-#   --stagger SECONDS            delay between dispatches (default 30)
+#   --stagger SECONDS            delay between dispatches (default 10)
 #   --wait-timeout SECONDS       max time to wait for archives to land (default 3600)
 #   --skip-existing / --no-skip-existing  skip versions already in the target bucket (default: skip)
 #   --dry-run                    print the plan; dispatch/reconcile nothing
@@ -72,7 +72,7 @@ declare -A REPO=(
 )
 
 ENV=""; SOURCE_BASE="https://www.pulumi-test.io"; TOOLS=""; REF=""
-STAGGER=30; WAIT_TIMEOUT=3600; SKIP_EXISTING=true
+STAGGER=10; WAIT_TIMEOUT=3600; SKIP_EXISTING=true
 VERSIONS_FROM="tags"; MIN_VERSION=""; MAX_MINORS=""
 DRY_RUN=false; DISPATCH=true; RECONCILE=true; YES=false
 declare -A LATEST_OVERRIDE=()
@@ -203,6 +203,7 @@ archive_exists() { aws s3api head-object --bucket "$BUCKET" --key "docs/versione
 # 4. Dispatch phase.
 declare -A EXPECT   # "tool/version" -> 1 for everything we expect to land
 if [[ "$DISPATCH" == "true" ]]; then
+  DISPATCH_START_ISO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"   # marks our runs for the drain-wait below
   log "Dispatching workflows (stagger ${STAGGER}s, skip-existing=$SKIP_EXISTING)…"
   for tool in $TOOLS; do
     for v in ${ARCHIVES[$tool]}; do
@@ -231,6 +232,29 @@ if [[ "$DISPATCH" == "true" ]]; then
     [[ "$missing" -eq 0 ]] && { log "  all ${#EXPECT[@]} archives present."; break; }
     [[ "$(date +%s)" -ge "$deadline" ]] && { warn "timeout with $missing not yet landed (may be build failures — skipped, not fixed):$miss_list"; break; }
     log "  $missing/${#EXPECT[@]} still pending; re-checking in 30s…"
+    sleep 30
+  done
+
+  # 5b. Wait for the dispatched workflow RUNS to reach a terminal state before reconciling.
+  # publish-version.sh writes versions.json as its LAST step, but the archive index.html polled
+  # above is synced BEFORE that write — so reconciling the moment archives appear can be clobbered
+  # by a trailing manifest write (observed once: the latest->liveRoot pointer got dropped). Waiting
+  # for the runs to finish makes rebuild-manifest the guaranteed last writer. No live-site impact:
+  # this only defers the single final manifest reconcile.
+  log "Waiting for dispatched workflow runs to finish before reconcile…"
+  declare -A WF_SEEN=(); for tool in $TOOLS; do WF_SEEN["${WORKFLOW[$tool]}"]=1; done
+  drain_deadline=$(( $(date +%s) + WAIT_TIMEOUT ))
+  while :; do
+    active=0
+    for wf in "${!WF_SEEN[@]}"; do
+      n=$(gh run list --workflow "$wf" --limit 300 --json status,createdAt \
+            --jq "[.[] | select(.createdAt >= \"$DISPATCH_START_ISO\" and .status != \"completed\")] | length" \
+            2>/dev/null || echo 0)
+      active=$((active + n))
+    done
+    [[ "$active" -eq 0 ]] && { log "  all dispatched runs terminal."; break; }
+    [[ "$(date +%s)" -ge "$drain_deadline" ]] && { warn "timeout with $active run(s) still active; reconciling anyway (re-run --reconcile-only once they finish if the manifest looks short)."; break; }
+    log "  $active dispatched run(s) still active; re-checking in 30s…"
     sleep 30
   done
 fi
