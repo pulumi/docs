@@ -68,10 +68,27 @@ AWS_PROFILE=<env> scripts/versioned-docs/redact-version.sh \
 ```
 
 ### Backfill historical major/minor versions
-Prereqs already in place: `update_repos.sh <repo> <tag>` honors a requested tag, and
-`generate_python_docs.sh` pins the primary package when `VERSION` is set. Loop the relevant
-workflow's `workflow_dispatch` over each qualifying tag (skip patches). Old toolchains that
-fail to build are skipped, not fixed.
+Use `backfill.sh` — it derives the whole spec (which versions, each tool's label + liveRoot +
+live "latest") from a source manifest (default: the testing site), dispatches each tool's
+workflow per historical version (`publish_only`), waits on the **bucket** (not `gh run`, whose
+status is unreliable), then reconciles each manifest once with `rebuild-manifest.sh` (race-proof)
+and verifies. Pin `AWS_PROFILE` to the target env's admin profile first.
+
+```
+# preview (reads + prints the plan, dispatches nothing):
+scripts/versioned-docs/backfill.sh --env production --dry-run
+# execute:
+scripts/versioned-docs/backfill.sh --env production --yes
+# resume just the manifest rebuild after dispatches already landed:
+scripts/versioned-docs/backfill.sh --env production --reconcile-only --yes
+```
+
+**Confirm `--latest` per tool.** The manifest's `latest→liveRoot` entry defaults to the source
+manifest's latest; if the target env's live docs are at a newer release, override it
+(`--latest pulumi-cli=v3.250.0 --latest nodejs=v3.250.0 …`) or the dropdown will mislabel the
+live page. Old toolchains that fail to build are skipped, not fixed (they just never land, and
+`rebuild-manifest` reflects only what actually published). Prereqs `update_repos.sh <repo> <tag>`
+(tag override) and `generate_python_docs.sh` (version pin) are already wired into the workflows.
 
 ### Restyle the selector / banner
 Edit `static/js/versioned-docs.js` / `.css` and redeploy the site. **Never move** the
