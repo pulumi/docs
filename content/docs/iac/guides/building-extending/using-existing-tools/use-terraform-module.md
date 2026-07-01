@@ -84,6 +84,18 @@ pulumi package add terraform-module ./path/to/module localmod
 
 Any directory containing `.tf` files and optionally `variables.tf` and `outputs.tf` is considered a valid module.
 
+### Using a Module from Pulumi Cloud
+
+If your organization publishes Terraform modules to the Pulumi Cloud registry, reference them with the `tf.pulumi.com` host:
+
+```bash
+pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
+```
+
+The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). The CLI passes your Pulumi access token through to the provider automatically, so you don't need to set a registry token by hand when running through `pulumi package add`.
+
+See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
+
 ## Example: Using the AWS RDS Module
 
 Here's an example of how to use the AWS RDS module to provision a MySQL database in your Pulumi program.
