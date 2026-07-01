@@ -5,6 +5,7 @@
     "private": true,
     "license": "Apache-2.0",
     "dependencies": {
+        "@pulumi/design-tokens": "github:pulumi/pulumi-design-system#29468f2",
         "@algolia/autocomplete-js": "^1.19.8",
         "@algolia/autocomplete-plugin-tags": "^1.19.8",
         "@algolia/autocomplete-theme-classic": "^1.19.8",
@@ -37,7 +38,8 @@
         "webpack-shell-plugin-next": "^2.3.3"
     },
     "scripts": {
-        "build": "yarn run webpack --mode production",
+        "build:color-theme": "node scripts/build-color-theme.mjs",
+        "build": "yarn build:color-theme && yarn run webpack --mode production",
         "start": "yarn run concurrently 'yarn --cwd stencil run start' 'yarn run webpack --watch' --raw --kill-others",
         "lint": "prettier --check .",
         "lint-fix": "prettier --write ."
