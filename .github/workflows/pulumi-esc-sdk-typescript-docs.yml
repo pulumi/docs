@@ -37,9 +37,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: set the esc sdk version
         env:
           RAW_VERSION: ${{ github.event.inputs.version || github.event.client_payload.ref }}
@@ -70,18 +70,18 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: set the esc sdk version
         env:
           RAW_VERSION: ${{ github.event.inputs.version || github.event.client_payload.ref }}
         run: |
           echo "ESC_SDK_VERSION=${RAW_VERSION#v}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           path: docs
       - name: checkout esc-sdk repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: pulumi/esc-sdk
           path: esc-sdk
@@ -224,7 +224,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

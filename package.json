@@ -16,30 +16,30 @@
     ]
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.1041.0",
+    "@aws-sdk/client-s3": "^3.1077.0",
     "@octokit/rest": "^21.1.1",
     "@resvg/resvg-js": "^2.6.2",
-    "algoliasearch": "^5.52.0",
-    "axios": "^1.16.0",
+    "algoliasearch": "^5.55.1",
+    "axios": "^1.18.1",
     "axios-retry": "^4.5.0",
     "broken-link-checker": "^0.7.8",
     "cheerio": "^1.2.0",
-    "concurrently": "^9.1.2",
-    "cssnano": "^7.1.8",
-    "cypress": "^15.14.2",
+    "concurrently": "^9.2.3",
+    "cssnano": "^7.1.9",
+    "cypress": "^15.18.0",
     "glob": "^10.4.5",
     "gray-matter": "^4.0.3",
     "http-server": "^14.1.1",
     "js-yaml": "^5.2.0",
     "jsdom": "^25.0.1",
     "markdown-it": "^14.2.0",
-    "markdownlint": "^0.40.0",
+    "markdownlint": "^0.41.0",
     "opentype.js": "^2.0.0",
     "parse-diff": "^0.12.0",
-    "postcss": "^8.5.13",
+    "postcss": "^8.5.16",
     "postcss-cli": "^11.0.0",
     "satori": "^0.26.0",
-    "sitemapper": "^4.1.5",
+    "sitemapper": "^4.1.6",
     "turndown": "^7.2.4",
     "typedoc": "^0.28.19",
     "typescript": "^5.7.2"
@@ -51,6 +51,6 @@
     "lighthouse": "^12.6.0",
     "lint-staged": "^16.4.0",
     "prettier": "^2.8.8",
-    "simple-icons": "^16.18.1"
+    "simple-icons": "^16.24.1"
   }
 }

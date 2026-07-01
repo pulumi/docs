@@ -140,7 +140,7 @@ jobs:
       # Without this, Vale below ran against base prose and produced
       # empty findings.
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
