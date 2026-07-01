@@ -15,23 +15,23 @@ category: product
 schema_type: auto
 social:
     twitter: |
-        Pinned to an older Pulumi CLI or SDK release and reading docs for a newer one? The CLI command reference and SDK API docs now have a version selector.
+        Pinned to an older Pulumi CLI or SDK release and reading docs that describe a newer one?
 
-        Pick your release from the dropdown and the docs match what you're running. Here's where to find it.
+        That mismatch just went away. No more cross-checking which docs match your release. Here's what changed.
     linkedin: |
-        Stuck on an older Pulumi CLI or SDK version and comparing your code against docs written for a newer release? That mismatch just got easy to avoid.
+        If you've ever pinned a Pulumi CLI or SDK to an older release, you know the small friction: the documentation on the site describes the latest version, not the one you're actually running.
 
-        The Pulumi CLI command reference and the SDK API docs now include a version selector. On the CLI reference it sits right next to the page title; on the SDK docs it's in the upper-right corner.
+        So you cross-reference against a changelog, guessing which flags and APIs still apply to the version in your project.
 
-        Pick the release you're running, and the page loads the documentation generated for that exact version. Older snapshots are preserved, so the docs for the version in your project are always a dropdown away.
+        We just removed that step for the CLI command reference and the SDK API docs, across Node.js, Python, .NET, and Java.
 
-        Node.js, Python, .NET, and Java are covered, alongside the CLI.
+        The fix itself is small, but it makes the reference trustworthy again for teams that don't upgrade on day one.
 
-        Here's how it works.
+        Here's what changed.
     bluesky: |
-        We've closed the gap between the Pulumi version you're running and the docs you're reading.
+        For a while, running an older Pulumi release meant the docs on the site described a newer one. We closed that gap.
 
-        The CLI command reference and SDK API docs now have a version selector — pick your release and the docs match. Here's where to find it.
+        You no longer have to guess which parts of the reference still apply to your version. Here's what we shipped.
 ---
 
 Pinned to an older Pulumi CLI or SDK version and finding that the docs describe a newer release? The [Pulumi CLI command reference](/docs/iac/cli/commands/) and the SDK API docs now include a version selector, so the documentation you're reading matches the version you're actually running.
