@@ -37,7 +37,7 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
     </iframe>
 </div>
 
-This guide will take you through the following steps to easily get started with Pulumi Insights Account Discovery and Resource Explorer:
+This guide will take you through the following steps to get started with Pulumi Insights Account Discovery and Resource Explorer:
 
 1. Setting up and configuring Pulumi to access your cloud accounts.
 2. Create a new Insights Account
