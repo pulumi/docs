@@ -109,7 +109,7 @@ jobs:
       - run: make ensure
         working-directory: docs
       - name: run yarn install in nodejs sdk
-        run: yarn install && yarn run tsc
+        run: npm ci && yarn run tsc
         working-directory: pulumi/sdk/nodejs
       - name: run typedoc
         run: PKGS=pulumi NOBUILD=true ./scripts/run_typedoc.sh
