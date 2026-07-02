@@ -21,8 +21,10 @@ meta_desc:
 
 # The feature_image is a high-resolution hero image (1884x1256) displayed at
 # the top of the blog post page. It also drives the on-brand social/OpenGraph
-# card, which is generated automatically at build time — no meta_image needed.
-# Generate the feature image with /blog-feature-image.
+# card, which is generated automatically at build time — don't add a meta_image
+# (custom overrides drift off-brand and are almost never needed). Generate the
+# feature image with /blog-feature-image, or label your PR with `needs-design`
+# to have a designer create a custom one.
 feature_image: feature.png
 
 # At least one author is required. The values in this list correspond with the

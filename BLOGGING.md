@@ -188,7 +188,7 @@ When you generate a new post, a placeholder `feature_image` is included:
 
 The `feature_image` is optional but strongly recommended; without one the build-time card falls back to a generic branded plate.
 
-To request a custom feature image from the design team, label your PR with `needs-design`. You can also use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
+If you'd like a custom-designed feature image, label your PR with `needs-design` and a designer will create one for your post. Alternatively, use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
 
 | Field           | Recommended Size | Aspect Ratio | Format | Background               |
 | --------------- | ---------------- | ------------ | ------ | ------------------------ |
@@ -196,7 +196,10 @@ To request a custom feature image from the design team, label your PR with `need
 
 Remember to replace the placeholder feature image (or remove the property and delete the placeholder file) before submitting your post.
 
-> **Archived images:** older posts that shipped an off-brand `meta_image` have had it renamed to `meta-legacy.png` and removed from front matter; it now appears in a collapsed "Archived feature image" panel at the bottom of the post. Set `meta_image` only to override the build-time card with a custom image.
+> [!NOTE]
+> **Don't set a custom `meta_image`.** You should almost never need one — the build-time card covers virtually every post and keeps social previews on-brand automatically, including when the brand evolves. A hand-made override is frozen in time: it drifts off-brand silently, which is exactly why hundreds of older posts needed cleanup. If you want a nicer card, invest in a better feature image (label your PR `needs-design` for a custom-designed one). If the generated card genuinely doesn't work for your post, raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) before committing an override.
+
+> **Archived images:** older posts that shipped an off-brand `meta_image` have had it renamed to `meta-legacy.png` and removed from front matter; it now appears in a collapsed "Archived feature image" panel at the bottom of the post.
 
 #### Video
 
