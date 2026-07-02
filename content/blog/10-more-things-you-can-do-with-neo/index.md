@@ -12,6 +12,7 @@ tags:
     - pulumi-neo
     - aws
     - neo-things
+series: neo-things
 category: product
 social:
     twitter: |
