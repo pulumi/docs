@@ -2,7 +2,13 @@
 // Values are sourced from the official Pulumi brand palette.
 //
 // NOTE: The legacy salmon, fuchsia, and purple color scales have been intentionally removed
-@theme {
+//
+// `static` (vs. plain `@theme`): emit every variable into the compiled bundle
+// even when no scanned utility class references it. Standalone stylesheets that
+// Tailwind never processes (e.g. assets/fingerprinted/css/openapi.css) consume
+// these tokens via var(--color-*); without `static`, Tailwind prunes unused
+// variables and those references silently resolve to nothing.
+@theme static {
   --color-white: #fff;
   --color-black: #000;
   --color-service-black: #1f1b21;
