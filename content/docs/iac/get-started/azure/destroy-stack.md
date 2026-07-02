@@ -17,7 +17,7 @@ aliases:
 
 ## Cleanup & destroy the stack
 
-Our final step is to clean up all of the resources we've provisioned. This is as simple as running `pulumi destroy`:
+Our final step is to clean up all of the resources we've provisioned. Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
 
 {{% choosable os "linux,macos" %}}
 
