@@ -109,9 +109,9 @@ sections:
     description: Attach a debugger, capture verbose logs, and trace performance.
     link: /docs/iac/operations/debugging/
   - icon: shield
-    heading: Least Privilege Security
-    description: Configure cloud credentials with minimum permissions.
-    link: /docs/iac/operations/iac-least-privileges/
+    heading: Least Privilege
+    description: Apply least-privilege security across IaC, ESC, and CI/CD.
+    link: /docs/administration/security-compliance/least-privilege/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
