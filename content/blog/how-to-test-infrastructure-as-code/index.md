@@ -12,21 +12,6 @@ tags:
     - testing
 category: best-practices
 schema_type: faq
-social:
-    twitter: |
-        Testing infrastructure as code is just like testing application code—once you know the patterns. Unit tests, integration tests, and a third layer most teams skip entirely.
-
-        Here's how to do all three with Pulumi.
-    linkedin: |
-        Most infrastructure engineers write and deploy IaC without any automated tests. That's a risk you don't have to take.
-
-        Pulumi lets you test infrastructure using the same languages, frameworks, and runners you already use for application code—with no context switching.
-
-        This guide covers unit tests, integration tests, and policy as code, with complete Python and TypeScript examples showing how each one fits into your workflow.
-    bluesky: |
-        Testing infrastructure as code with Pulumi: three layers, one set of languages and tools you already know.
-
-        See how each layer catches a different class of bug before it reaches production.
 ---
 
 IaC testing means validating your infrastructure code the same way you test application software—unit tests with mocked cloud providers that run in milliseconds, integration tests that deploy and inspect real resources, and policy checks that enforce compliance rules on every preview and deploy. Together, these layers catch misconfigurations before they reach production.
