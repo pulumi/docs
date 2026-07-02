@@ -140,8 +140,6 @@ jobs:
       # exists - the resolve step reads the bucket/role/distribution from stack outputs and
       # every step below no-ops while they are absent. Runs after commit, continue-on-error,
       # so a publish hiccup never blocks the docs PR.
-      - name: Install Pulumi CLI (for the stack-output lookup below)
-        uses: pulumi/action-install-pulumi-cli@v1.0.1
       - name: Resolve versioned-docs publish target
         id: vdocs
         env:
