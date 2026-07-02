@@ -250,6 +250,7 @@ Pulumi turns the cluster, the workloads on it, and the cloud resources around it
 
 Related reading:
 
+* [Is Kubernetes Infrastructure as Code?](/what-is/is-kubernetes-infrastructure-as-code/)
 * [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
