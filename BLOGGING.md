@@ -104,7 +104,7 @@ The vocabulary is grouped roughly as:
 
 **Series**
 
-A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug`. To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set `series` on each member post. Series are optional — most posts don't belong to one.
+A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug` **and** add that same slug to the post's `tags`. Both are required and must match: the `series` key drives the in-post "In This Series" sidebar (siblings are found via `.Params.series`), while the tag makes the post appear on the series landing page at `/blog/tag/<slug>/` (which is what `/blog/series/` links to). `make lint` fails if a post has one without the other. To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set both `series` and the tag on each member post. Series are optional — most posts don't belong to one.
 
 **Canonical link**
 
