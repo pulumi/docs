@@ -2,7 +2,7 @@
 title: Agent Skills
 title_tag: Pulumi Agent Skills
 h1: Pulumi Agent Skills
-meta_desc: Learn how to use Pulumi Agent Skills to teach AI coding assistants like Claude Code, Cursor, GitHub Copilot, and JetBrains Junie how to work with Pulumi.
+meta_desc: Learn how Pulumi Agent Skills teach AI coding assistants like Claude Code and Cursor to work with Pulumi, and how Pulumi Neo runs them built in.
 menu:
     ai:
         name: Agent Skills
@@ -18,12 +18,21 @@ Pulumi Agent Skills are knowledge packages that teach AI coding assistants domai
 
 Agent Skills are reusable knowledge packages that teach AI coding assistants domain-specific workflows. They follow the [agentskills.io](https://agentskills.io) open standard and work with:
 
+- [Pulumi Neo](/docs/ai/) (built in, no installation needed)
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 - [OpenAI Codex](https://openai.com/api/)
 - [Cursor](https://cursor.sh)
 - [GitHub Copilot](https://docs.github.com/en/copilot)
 - [Google Gemini](https://geminicli.com/)
 - [JetBrains Junie](https://www.jetbrains.com/junie/)
+
+## Agent Skills in Neo
+
+Neo is an Agent Skills client. It ships with the Pulumi Agent Skills catalog built in (the same skills published in [pulumi/agent-skills](https://github.com/pulumi/agent-skills)), plus a few Neo-specific skills for Pulumi Cloud workflows.
+
+Neo follows the [agentskills.io](https://agentskills.io) standard: it reads each skill's `SKILL.md` and shows the model a catalog of skill names and descriptions. When a skill matches the task, Neo loads its full instructions and bundled files. This happens automatically on every request, so you don't need to name a skill to use it, and skills stay loaded through long tasks.
+
+There is nothing to install or configure. The catalog updates with each Neo release. To add or improve a skill, contribute to the [agent-skills repository](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md); accepted skills work in Neo and in every other assistant that supports the standard.
 
 ## Available Skills
 
