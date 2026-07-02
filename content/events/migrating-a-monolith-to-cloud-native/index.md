@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Migrating a monolith to Cloud-Native"
 meta_desc: In this talk you will learn how to migrate a large monolith codebase to Cloud-Native and learn a few gotchas along the way.
+meta_image: /events/migrating-a-monolith-to-cloud-native/meta.png
+meta_image_square: /events/migrating-a-monolith-to-cloud-native/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

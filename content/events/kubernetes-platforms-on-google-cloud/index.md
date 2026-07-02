@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Advanced Kubernetes Platforms on Google Cloud with Pulumi
 meta_desc: In this workshop, we’ll explore how to deliver and scale a Kubernetes platform on Google Cloud.
-meta_image: /images/resources/advanced-kubernetes-on-google-cloud-engin.png
+meta_image: /events/kubernetes-platforms-on-google-cloud/meta.png
+meta_image_square: /events/kubernetes-platforms-on-google-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

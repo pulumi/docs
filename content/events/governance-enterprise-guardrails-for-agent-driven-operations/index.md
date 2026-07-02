@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Enterprise Guardrails for Agent-driven Operations"
 meta_desc: Learn how to balance team velocity with security and compliance by implementing governance frameworks for AI agents and policy as code.
-meta_image: /images/resources/Enterprise-guardrails.png
+meta_image: /events/governance-enterprise-guardrails-for-agent-driven-operations/meta.png
+meta_image_square: /events/governance-enterprise-guardrails-for-agent-driven-operations/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

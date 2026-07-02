@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Secrets Management on AWS
 meta_desc: Learn how to manage configuration and secrets across all of your AWS environments with Pulumi ESC and AWS Secrets Manager.
-meta_image: /images/resources/secrets_management_aws-josh-marina-powered.png
+meta_image: /events/getting-started-with-secrets-management-aws/meta.png
+meta_image_square: /events/getting-started-with-secrets-management-aws/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Infrastructure as Code - Can we do better?
 meta_desc: Watch industry leaders discuss the past, present, and future of Infrastructure as Code (IaC) and overall infrastructure technologies.
-meta_image:
+meta_image: /events/panel-infrastructure-as-code-can-we-do-better/meta.png
+meta_image_square: /events/panel-infrastructure-as-code-can-we-do-better/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

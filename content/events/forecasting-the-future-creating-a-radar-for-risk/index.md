@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Forecasting the Future: Creating a Radar for Risk"
 meta_desc: In this presentation, we'll talk about Risk Radar, Netflix's forum to collect and make sense of emergent sociotechnical risk both from experience and risk.
+meta_image: /events/forecasting-the-future-creating-a-radar-for-risk/meta.png
+meta_image_square: /events/forecasting-the-future-creating-a-radar-for-risk/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

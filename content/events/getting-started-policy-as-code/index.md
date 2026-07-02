@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Policy as Code on AWS
 meta_desc: In this session, we will show you how to enforce best practices by creating policies that scale from a single infrastructure stack to your entire organization
-meta_image:
+meta_image: /events/getting-started-policy-as-code/meta.png
+meta_image_square: /events/getting-started-policy-as-code/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

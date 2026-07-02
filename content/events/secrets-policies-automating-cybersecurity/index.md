@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Secrets and Policies - Automating Cybersecurity
 meta_desc: Discover how to balance security with agility, automate defenses, manage secrets & secure the software supply chain in today’s evolving cybersecurity landscape.
-meta_image:
+meta_image: /events/secrets-policies-automating-cybersecurity/meta.png
+meta_image_square: /events/secrets-policies-automating-cybersecurity/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

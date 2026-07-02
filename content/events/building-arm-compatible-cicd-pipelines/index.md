@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Building Arm Compatible CI/CD Pipelines"
 meta_desc: In this presentation, attendees will learn how to ensure their CI/CD pipelines are Arm compatible and capable of providing Arm support in their products.
+meta_image: /events/building-arm-compatible-cicd-pipelines/meta.png
+meta_image_square: /events/building-arm-compatible-cicd-pipelines/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
