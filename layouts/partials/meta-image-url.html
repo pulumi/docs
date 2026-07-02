@@ -26,9 +26,8 @@
         {{- $img = .Params.meta_image -}}
     {{- end -}}
 {{- else -}}
-    {{- with .File -}}
-        {{- $key := .Path | replaceRE "\\.md$" "" | replaceRE "/_index$" "" -}}
-        {{- with resources.Get (printf "images/generated/%s.png" $key) -}}
+    {{- with partial "meta-image-key.html" . -}}
+        {{- with resources.Get (printf "images/generated/%s.png" .) -}}
             {{- $img = .RelPermalink -}}
         {{- end -}}
     {{- end -}}
