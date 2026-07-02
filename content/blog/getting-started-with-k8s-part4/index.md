@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with Kubernetes: Stateful Applications"
+feature_image: feature.png
 date: 2020-07-21
 meta_desc: "How to deploy stateful applications in Kubernetes with Pulumi"
 authors:

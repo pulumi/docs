@@ -1,5 +1,6 @@
 ---
 title: "Pulumi Copilot is Now Available in VS Code"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and

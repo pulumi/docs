@@ -1,5 +1,6 @@
 ---
 title: "Announcing the Pulumi Copilot REST API Preview"
+feature_image: feature.png
 date: 2024-12-12T15:15:42-05:00
 lastmod: 2026-06-30
 draft: false

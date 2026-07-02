@@ -1,5 +1,6 @@
 ---
 title: "Provisioning: From Chaos to Control"
+feature_image: feature.png
 date: 2025-02-27
 draft: false
 meta_desc: Build a reliable infrastructure provisioning foundation with version control, automation, and golden-path templates for your internal developer platform.

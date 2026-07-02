@@ -1,5 +1,6 @@
 ---
 title: "Organizational Patterns: A Single Infra Repo"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,

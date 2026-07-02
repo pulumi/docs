@@ -1,5 +1,6 @@
 ---
 title: "Platform Pillars: Build Platforms, Not Infrastructure"
+feature_image: feature.png
 date: 2025-02-26
 draft: false
 meta_desc: Explore the essential pillars of Platform Engineering and learn how to transform infrastructure chaos into a streamlined development experience.

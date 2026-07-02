@@ -1,5 +1,6 @@
 ---
 title: "Introducing Pulumi Copilot: Intelligent Cloud Management"
+feature_image: feature.png
 allow_long_title: true
 date: 2024-06-12T04:00:00-07:00
 updated: 2025-03-12

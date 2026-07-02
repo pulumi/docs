@@ -1,5 +1,6 @@
 ---
 title: "Getting Started With Kubernetes: Clusters and Nodes"
+feature_image: feature.png
 date: 2020-06-23
 meta_desc: "Part 1 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
 authors:

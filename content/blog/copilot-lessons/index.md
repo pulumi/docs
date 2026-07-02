@@ -1,5 +1,6 @@
 ---
 title: "AI Engineering Lessons from Building Pulumi Copilot"
+feature_image: feature.png
 date: 2024-12-12T13:56:13-05:00
 lastmod: 2026-06-30
 draft: false

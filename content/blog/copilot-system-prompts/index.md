@@ -1,5 +1,6 @@
 ---
 title: "Enhancing Pulumi Copilot: Introducing System Prompts for Your Organization"
+feature_image: feature.png
 allow_long_title: true
 date: 2024-10-10T00:00:00-07:00
 lastmod: 2026-06-30

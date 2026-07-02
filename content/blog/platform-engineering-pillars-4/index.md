@@ -1,5 +1,6 @@
 ---
 title: "Improve Developer Experience: Increase Dev Productivity with Internal Developer Platforms"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-03-13
 updated: 2025-08-19
