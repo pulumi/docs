@@ -2,7 +2,7 @@
 title: Agent Skills
 title_tag: Pulumi Agent Skills
 h1: Pulumi Agent Skills
-meta_desc: Learn how Pulumi Agent Skills teach AI coding assistants like Claude Code and Cursor to work with Pulumi, and how Pulumi Neo runs them built in.
+meta_desc: Learn how Pulumi Agent Skills teach Claude Code, Cursor, GitHub Copilot, and JetBrains Junie to work with Pulumi. Neo ships with them built in.
 menu:
     ai:
         name: Agent Skills
@@ -28,9 +28,9 @@ Agent Skills are reusable knowledge packages that teach AI coding assistants dom
 
 ## Agent Skills in Neo
 
-Neo is an Agent Skills client. It ships with the Pulumi Agent Skills catalog built in (the same skills published in [pulumi/agent-skills](https://github.com/pulumi/agent-skills)), plus a few Neo-specific skills for Pulumi Cloud workflows.
+Neo is an Agent Skills client. It ships with the Pulumi Agent Skills catalog built in (the same skills published in [pulumi/agent-skills](https://github.com/pulumi/agent-skills)).
 
-Neo follows the [agentskills.io](https://agentskills.io) standard: it reads each skill's `SKILL.md` and shows the model a catalog of skill names and descriptions. When a skill matches the task, Neo loads its full instructions and bundled files. This happens automatically on every request, so you don't need to name a skill to use it, and skills stay loaded through long tasks.
+Neo follows the [agentskills.io](https://agentskills.io) standard: it discovers each skill's `SKILL.md` and loads relevant skills automatically when a task calls for them, so you never need to name a skill yourself.
 
 There is nothing to install or configure. The catalog updates with each Neo release. To add or improve a skill, contribute to the [agent-skills repository](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md); accepted skills work in Neo and in every other assistant that supports the standard.
 
