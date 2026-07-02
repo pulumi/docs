@@ -350,8 +350,8 @@ class InfraTest {
             .findFirst()
             .orElseThrow(() -> new AssertionError("EC2 instance not found"));
 
-        var tags = PulumiTest.extractValue(instance.tags());
-        assertNotNull(tags, "Tags must not be null");
+        var tags = PulumiTest.extractValue(instance.tags())
+            .orElseThrow(() -> new AssertionError("Tags must not be null"));
         assertTrue(tags.containsKey("Environment"), "Missing 'Environment' tag");
         assertTrue(tags.containsKey("Name"), "Missing 'Name' tag");
     }
