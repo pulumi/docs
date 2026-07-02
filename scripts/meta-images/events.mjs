@@ -115,17 +115,31 @@ function speakerCluster(speakers, S, s, dir = "row") {
 const landscapeShift = (n) => (n <= 3 ? 20 : n === 4 ? 40 : 65)
 
 // --- Logo lockup (Pulumi + optional company logos), scaled to logoH, joined by
-// a muted "+" the way the co-branded case-study card does. ---------------------
-function logosRow(logos, logoH, s) {
+// a muted "+" the way the co-branded case-study card does. If the row would
+// overrun the text column (several partners in a tight square/portrait stack),
+// the whole lockup shrinks uniformly to fit; rows that already fit render
+// exactly as before. ----------------------------------------------------------
+function logosRow(logos, logoH, s, maxW) {
   const valid = (logos || []).filter((lg) => lg && lg.uri && lg.iw > 0 && lg.ih > 0)
   if (!valid.length) return null
+  let gap = Math.round(20 * s)
+  if (maxW) {
+    const plusW = logoH * 0.62 * 0.65 // "+" advance estimate, with margin
+    const naturalW = valid.reduce((acc, lg) => acc + (lg.iw / lg.ih) * logoH, 0)
+      + (valid.length - 1) * (plusW + 2 * gap)
+    if (naturalW > maxW) {
+      const f = maxW / naturalW
+      logoH = Math.floor(logoH * f)
+      gap = Math.floor(gap * f)
+    }
+  }
   const children = []
   valid.forEach((lg, i) => {
     if (i) children.push(h("div", { style: { display: "flex", fontFamily: "Inter", fontSize: Math.round(logoH * 0.62), fontWeight: 400, lineHeight: 1, color: C.muted } }, "+"))
     const dw = Math.round((lg.iw / lg.ih) * logoH)
     children.push(h("img", { src: lg.uri, width: dw, height: logoH, style: { width: dw, height: logoH } }))
   })
-  return h("div", { style: { display: "flex", alignItems: "center", gap: Math.round(20 * s) } }, children)
+  return h("div", { style: { display: "flex", alignItems: "center", gap } }, children)
 }
 
 function buttonNode(text, spec) {
@@ -168,14 +182,14 @@ function mainColumn(fields, spec, font, textW, columnH) {
     ? h("div", { style: { fontFamily: "Inter", fontWeight: 400, fontSize: spec.additional.font, lineHeight: ADDITIONAL_LH, color: C.title, display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2, overflow: "hidden", width: "100%" } }, fields.additionalText)
     : null
   const dividerEl = h("div", { style: { width: "100%", height: spec.divider, backgroundColor: C.divider } })
-  const logosEl = logosRow(fields.logos, spec.logoH, spec.s)
+  const logosEl = logosRow(fields.logos, spec.logoH, spec.s, textW)
   const buttonEl = fields.showButton ? buttonNode(clean(fields.buttonText) || "Register", spec) : null
   return h("div", { style: { display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "center", gap: g, width: textW, height: columnH } }, overlineEl, textBlock, additionalEl, dividerEl, logosEl, buttonEl)
 }
 
 function bgNode(spec, w, height) {
   if (spec.bg === "landscape") return h("img", { src: LINES.landscape, width: 1200, height: 628, style: { position: "absolute", top: 0, left: 0, width: 1200, height: 628 } })
-  if (spec.bg === "square") return h("img", { src: LINES.square, width: w, height: w, style: { position: "absolute", top: 0, left: 0, width: w, height: w } })
+  if (spec.bg === "square") return h("img", { src: LINES.square, width: w, height: w, style: { position: "absolute", top: Math.round(80 * spec.s), left: 0, width: w, height: w } })
   return h("img", { src: LINES.portrait, width: 540, height: 512, style: { position: "absolute", top: 0, left: 0, width: 540, height: 512 } })
 }
 
@@ -218,7 +232,10 @@ export async function eventsTree(fields, { w, h: height }) {
 
   if (spec.family === "square") {
     const padTop = Math.round(20 * spec.s)
-    const bottomH = n ? rowH + padTop : 0
+    // With no speaker row, keep ~190px clear at the bottom of the card so the
+    // divider/logo lockup never overlaps the accent lines curving in from the
+    // bottom-right (spec.padding already provides part of the clearance).
+    const bottomH = n ? rowH + padTop : Math.round(190 * spec.s) - spec.padding
     const main = mainColumn(fields, spec, font, innerW, innerH - bottomH)
     const bottom = n
       ? h("div", { style: { display: "flex", alignItems: "center", width: innerW, height: bottomH, paddingTop: padTop, flexShrink: 0 } }, speakerCluster(speakers, sS, spec.s))

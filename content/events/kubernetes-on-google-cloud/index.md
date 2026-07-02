@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Google Cloud
 meta_desc: In this workshop, you will learn how to deploy a Kubernetes cluster on Google Cloud and run containerized applications on the cluster.
-meta_image: /images/resources/intro-k8s-google-cloud-jay.png
+meta_image: /events/kubernetes-on-google-cloud/meta.png
+meta_image_square: /events/kubernetes-on-google-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

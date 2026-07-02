@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Build a multi-service app with Azure Container Apps"
 meta_desc: Learn how to build and deploy a complete multi-service application to Azure Container Apps using Pulumi.
-meta_image:
+meta_image: /events/multi-service-application-with-azure-container-apps/meta.png
+meta_image_square: /events/multi-service-application-with-azure-container-apps/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

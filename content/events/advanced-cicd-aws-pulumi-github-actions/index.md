@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Advanced CI/CD for AWS using Pulumi and GitHub Actions
 meta_desc: Learn advanced topics that make up a robust infrastructure CI/CD pipeline through guided exercises.
-meta_image:
+meta_image: /events/advanced-cicd-aws-pulumi-github-actions/meta.png
+meta_image_square: /events/advanced-cicd-aws-pulumi-github-actions/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: PulumiUP 2025 Keynote - New Features & Demos
 meta_desc: Explore Pulumi’s Visual Import, Private Registry, and Pulumi IDP—powerful new features that simplify migration, reuse, and internal platform delivery.
-meta_image: /images/pulumiup/2025-keynote-meta.png
+meta_image: /events/pulumiup-2025-keynote/meta.png
+meta_image_square: /events/pulumiup-2025-keynote/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

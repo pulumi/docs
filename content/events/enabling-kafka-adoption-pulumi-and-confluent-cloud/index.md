@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Dutchie - Kafka Adoption with Pulumi and Confluent Cloud"
 meta_desc: Collin James, Software Architect at Dutchie, describes enabling Kafka adoption by creating Pulumi projects that manage resources on Confluent Cloud.
+meta_image: /events/enabling-kafka-adoption-pulumi-and-confluent-cloud/meta.png
+meta_image_square: /events/enabling-kafka-adoption-pulumi-and-confluent-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

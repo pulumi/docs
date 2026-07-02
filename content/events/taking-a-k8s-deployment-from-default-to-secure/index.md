@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Taking a K8s Deployment from Default to Secure"
 meta_desc: In this session we'll start with a default Nginx deployment and leverage Checkov's Kubernetes yaml scanning capability to go from default to secure.
+meta_image: /events/taking-a-k8s-deployment-from-default-to-secure/meta.png
+meta_image_square: /events/taking-a-k8s-deployment-from-default-to-secure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
