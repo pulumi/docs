@@ -2,7 +2,6 @@
 title: "Pulumi YAML General Availability"
 date: 2022-11-02T06:05:00-07:00
 meta_desc: "Pulumi YAML 1.0 with IDE integration, full convert support, simpler function syntax and Kubernetes Operator embedding"
-meta_image: yaml-ga.png
 authors:
     - luke-hoban
 tags:

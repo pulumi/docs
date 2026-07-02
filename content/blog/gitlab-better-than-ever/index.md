@@ -3,7 +3,6 @@ title: "Pulumi + Gitlab: Better Than Ever"
 date: 2025-03-14
 draft: false
 meta_desc: Pulumi's integration with GitLab has reached new heights with a suite of powerful enhancements designed to streamline your infrastructure as code workflows.
-meta_image: meta.png
 authors:
     - meagan-cojocar
     - derek-schaller

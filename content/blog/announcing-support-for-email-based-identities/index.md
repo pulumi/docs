@@ -2,7 +2,6 @@
 title: "Announcing Support for Email-based Identities"
 date: "2019-03-21"
 meta_desc: "Pulumi now supports email-based identities, in addition to GitHub, Atlassian, and GitLab."
-meta_image: "email-signup.png"
 authors: ["praneet-loke"]
 tags: [announcements, features]
 category: product

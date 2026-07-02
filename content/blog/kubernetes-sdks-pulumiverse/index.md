@@ -3,7 +3,6 @@ title: Kubernetes SDKs from the Pulumiverse
 date: 2021-12-29T13:32:16Z
 draft: false
 meta_desc: In this article, we look at a new repository published on the Pulumiverse that delivers rich Kubernetes SDKs for popular CRDs.
-meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["kubernetes"]
 category: product

@@ -2,7 +2,6 @@
 title: "How Webiny Built a Serverless Application Framework"
 date: 2021-06-03
 meta_desc: Learn how Webiny built an open-source framework for building serverless applications with Pulumi.
-meta_image: webiny.png
 authors:
     - adrian-smijulj
 

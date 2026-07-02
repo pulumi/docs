@@ -2,7 +2,6 @@
 title: "Hitesh's Intern Experience at Pulumi"
 date: 2021-06-11T09:53:45-07:00
 meta_desc: A reflection on Hitesh's experience as a Pulumi Intern, including what he worked on and learned.
-meta_image: pulumi_mascot_3.0.png
 authors:
     - hitesh-boinpally
 tags:

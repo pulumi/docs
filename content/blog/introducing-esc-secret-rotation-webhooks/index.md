@@ -3,7 +3,6 @@ title: "Introducing ESC Secret Rotation Webhooks"
 date: 2026-06-26
 draft: false
 meta_desc: "Pulumi ESC secret rotation webhooks notify your team the moment a rotation happens. Refresh dependent services immediately!"
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - sean-yeh

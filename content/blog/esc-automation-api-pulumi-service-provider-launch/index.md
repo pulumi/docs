@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-06-05T00:00:00-05:00
 draft: false
 meta_desc: "Supercharge how you manage your infrastructure and application secrets and configurations using the Pulumi Service Provider and Automation API."
-meta_image: "meta.png"
 authors:
   - arun-loganathan
   - iaroslav-titov

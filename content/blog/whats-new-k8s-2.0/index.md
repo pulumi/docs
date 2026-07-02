@@ -5,7 +5,7 @@ authors: ["mike-metral"]
 tags: [kubernetes]
 category: product
 meta_desc: "What's new in Pulumi 2.0 for Kubernetes covers the major highlights of features and improvement to Pulumi's Kubernetes support."
-meta_image: pulumi_k8s.png
+
 ---
 
 We recently announced the 2.0 release of Pulumi which includes parity for

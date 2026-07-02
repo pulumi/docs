@@ -6,7 +6,7 @@ tags: [announcements, kubernetes]
 category: product
 meta_desc: "Pulumi Crosswalk for Kubernetes, a collection of open source technologies to help developers and operators bring Kubernetes into their organizations."
 date: "2019-11-14"
-meta_image: "pulumi-crosswalk-k8s.png"
+
 ---
 
 Today we announced [Pulumi Crosswalk for Kubernetes](/crosswalk/kubernetes/), a collection of open source tools, libraries, and playbooks to help developers and operators work together to bring Kubernetes into their organizations. They capture the lessons we learned this past year working with organizations to go from zero to Kubernetes in production for their infrastructure and application workloads. By releasing these as open source, we hope to help everybody be more successful with their Kubernetes projects &mdash; as we have learned through experience, it isn't easy going!

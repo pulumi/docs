@@ -3,7 +3,6 @@ title: "Introducing Pulumi Architecture Templates"
 date: 2022-10-19T10:59:37-05:00
 updated: 2025-03-05
 meta_desc: "Accelerate cloud infrastructure deployments with Pulumi’s architecture templates. Get prebuilt, best-practice templates for AWS, GCP, Azure, and more."
-meta_image: meta.png
 authors:
     - laura-santamaria
 tags:

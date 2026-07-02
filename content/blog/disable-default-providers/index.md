@@ -4,7 +4,6 @@ date: 2022-04-01
 meta_desc: Introducing the new config parameter disable-default-providers.
 canonical_url: https://www.pulumi.com/docs/iac/concepts/resources/providers/
 authors: [ ian-wahbe ]
-meta_image: disable-default-providers.png
 tags: [ features ]
 category: product
 ---

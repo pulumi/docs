@@ -4,7 +4,6 @@ date: 2025-03-18
 draft: false
 allow_long_title: true
 meta_desc: "Pulumi adds new providers including Temporal, Vantage, and Honeycomb to the Registry with comprehensive docs for seamless developer experience."
-meta_image: meta.png
 authors:
     - meagan-cojocar
 tags:

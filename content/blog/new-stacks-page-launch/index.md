@@ -4,7 +4,6 @@ date: 2024-10-24T00:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: "The new Stacks page is optimized for performance and flexibility with rich grouping and sorting options."
-meta_image: "meta.png"
 authors:
 - german-lena
 - kimberley-mackenzie

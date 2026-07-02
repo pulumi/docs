@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-02-01T11:06:04-08:00
 draft: false
 meta_desc: The latest Pulumi updates include Pulumi ESC, Deployments GA, Pulumi AI Improvements, AWS S3 Express One Zone Support, and more
-meta_image: meta.png
 authors:
     - arun-loganathan
     - justin-vanpatten

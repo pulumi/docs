@@ -3,7 +3,6 @@ title: "Oct. 6 releases: AWS Native Provider, more refresh options"
 date: 2021-10-06T08:00:00-07:00
 draft: false
 meta_desc: "New AWS Native Provider built on the AWS Cloud Control API, support for the newest AWS and Azure features, and more control over when stacks are refreshed"
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

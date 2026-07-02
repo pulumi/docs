@@ -8,7 +8,6 @@ draft: false
 meta_desc: >-
     The 1.0 release of the Pulumi Command provider marks its general availability (GA) and expands support for copying assets to remote hosts.
 
-meta_image: meta.png
 
 authors:
     - thomas-kappler

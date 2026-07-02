@@ -8,7 +8,6 @@ category: tutorials
 meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."
 date: "2025-09-22"
 lastmod: "2026-06-03"
-meta_image: "Automatic_Diagramming.png"
 
 summary: |
     Architecture diagrams are tedious to create and become outdated the moment infrastructure changes. When you manage infrastructure with Pulumi's infrastructure as code, you can automatically generate accurate diagrams directly from your IaC definitions. With Pulumi's preview capabilities, you can anticipate changes before deployment. Learn how to integrate automated diagram generation into your CI/CD pipeline using AI, Pulumi's native diagramming tools, and GitHub actions.

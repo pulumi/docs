@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-06-30
 draft: false
 meta_desc: "A zero-touch Ollama GPU inference server on AWS, Azure, or Google Cloud as one Pulumi program, with OIDC credentials from Pulumi ESC and no static keys."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri

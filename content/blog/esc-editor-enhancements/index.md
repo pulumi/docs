@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-02-22T00:00:00-07:00
 draft: false
 meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
-meta_image: "meta.png"
 authors:
   - pat-gavlin
   - arun-loganathan

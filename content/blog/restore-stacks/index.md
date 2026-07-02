@@ -19,7 +19,6 @@ meta_desc: Pulumi Cloud launches new Restore Stacks feature for Enterprise and B
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
 # has been provided for you.
-meta_image: meta.png
 
 # Point search engines to the docs page as the authoritative source for this content.
 canonical_url: "https://www.pulumi.com/docs/iac/operations/stack-management/restoring-deleted-stacks/"

@@ -5,7 +5,6 @@ h1: "Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More"
 date: 2026-06-15T12:00:00Z
 draft: false
 meta_desc: "Deploy an AKS cluster with Pulumi C#. Six Kubernetes recommendations from a live workshop, including the Docker Hub rate limit that hit mid-demo."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
@@ -37,6 +36,8 @@ social:
 <!--more-->
 
 Live demos keep you honest. On June 10th my AKS workshop went a little sideways. Partway through, Docker Hub rate-limited my image pull and we had to adapt the content on the fly. The original plan was to stand up an AKS cluster with Cilium, an Azure Container Registry with the cluster's pull permission wired in code, and a random-cat web app, then split the infrastructure from the workload into separate Pulumi stacks. Live, we didn't make it through all of that, but we had some fun tangents and it turned out to be a great session. So here are my six recommendations for working with Kubernetes on Azure from this recent workshop.
+
+![Overview of what we're building: a developer using Pulumi IaC to provision an AKS cluster that pulls images from Azure Container Registry, exposed through an Azure load balancer](00-overview-what-were-building.png)
 
 ## 1. Pick the language your team already uses
 

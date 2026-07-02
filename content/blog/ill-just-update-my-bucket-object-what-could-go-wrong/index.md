@@ -16,7 +16,6 @@ meta_desc: The AWS Static Website Package makes it easy for you to update the co
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself

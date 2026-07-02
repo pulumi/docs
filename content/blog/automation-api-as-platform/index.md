@@ -2,7 +2,6 @@
 title: "Build Self-Service Cloud Infrastructure with Automation API "
 date: 2020-11-10
 meta_desc: "With Pulumi's Automation API, you can build a REST API for creating, reading, updating, and deleting (CRUD) cloud resources."
-meta_image: automation_api.png
 authors:
     - sophia-parafina
 tags:

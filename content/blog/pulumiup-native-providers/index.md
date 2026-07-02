@@ -2,7 +2,6 @@
 title: "Model and program the cloud with Pulumi native providers"
 date: 2021-04-20T00:00:05-07:00
 meta_desc: Native providers are your most complete and consistent interface for the modern cloud
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

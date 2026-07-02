@@ -2,7 +2,6 @@
 title: "Zephyr's Summer Intern Experience with Pulumi"
 date: "2020-09-18"
 meta_desc: "Zephyr's internship experience in Summer 2020, personal growth, skills learned and reflection"
-meta_image: zephyr-pulumi.png
 authors: ["zephyr-zhou"]
 tags: ["pulumi-interns"]
 category: community

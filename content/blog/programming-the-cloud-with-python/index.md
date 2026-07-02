@@ -5,7 +5,7 @@ meta_desc: "See how to use Pulumi and Python to automate provisioning of cloud i
 authors: ["sean-gillespie"]
 tags: [serverless, aws, python]
 category: tutorials
-meta_image: meta.png
+
 ---
 
 Across the industry, the popularity of Python is exploding. Amongst our

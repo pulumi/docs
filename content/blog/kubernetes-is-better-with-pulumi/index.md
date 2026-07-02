@@ -2,7 +2,6 @@
 title: "Winning with Pulumi Superpowers and Kubernetes"
 date: 2020-06-03
 meta_desc: "Ten reasons why you should deploy modern apps and Kubernetes with Pulumi"
-meta_image: dangerous-pulumi.png
 authors:
    - levi-blackstone
    - sophia-parafina

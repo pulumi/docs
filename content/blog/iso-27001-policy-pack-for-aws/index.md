@@ -4,7 +4,6 @@ date: 2026-06-30
 authors:
     - dan-biwer
 meta_desc: "Align your AWS infrastructure to ISO/IEC 27001:2022 with a pre-built Pulumi policy pack of 238 ready-to-run security policies."
-meta_image: meta.png
 feature_image: feature.png
 tags:
     - pulumi-cloud

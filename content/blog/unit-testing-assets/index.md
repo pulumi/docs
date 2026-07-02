@@ -3,7 +3,6 @@ title: "Unit Testing Assets"
 date: 2020-06-11
 draft: false
 meta_desc: "Learn how unit testing your infrastructure assets can help ensure correctness of your deployments."
-meta_image: asset_testing.png
 authors:
     - lee-zen
 tags:

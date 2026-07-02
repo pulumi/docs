@@ -2,7 +2,6 @@
 title: Deploying a Data Warehouse with Pulumi and Amazon Redshift
 date: 2022-11-29
 meta_desc: In this post, you'll use Pulumi to deploy an Amazon Redshift cluster into a VPC and learn how to load data into the cluster from Amazon S3.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

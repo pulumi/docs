@@ -3,7 +3,6 @@ title: "Fast Docker Image Builds with Pulumi"
 date: 2023-03-08T14:00:00-08:00
 updated: 2026-04-30
 meta_desc: Build Docker images faster with Pulumi using BuildKit, buildx, multi-stage Dockerfiles, registry caching, and the dedicated Docker Build provider.
-meta_image: meta.png
 authors:
     - monica-rodriguez
     - guinevere-saenger

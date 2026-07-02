@@ -5,7 +5,7 @@ tags: [kubernetes, typescript]
 category: tutorials
 date: "2018-08-24"
 meta_desc: "Pulumi is an open-source infrastructure as code platform that lets you express Kubernetes programs in familiar programming languages, instead of YAML templates."
-meta_image: "diff.png"
+
 ---
 
 Kubernetes is a powerful container orchestrator for cloud native

@@ -2,7 +2,6 @@
 title: "Announcing Pulumi Community Slack Archive"
 date: 2022-05-02T12:00:00-07:00
 meta_desc: Pulumi's community slack is now publicly archived at archive.pulumi.com
-meta_image: meta.png
 authors:
     - lee-briggs
 tags:

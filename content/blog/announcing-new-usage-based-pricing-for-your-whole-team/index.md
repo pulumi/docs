@@ -2,7 +2,6 @@
 title: "Announcing New Usage-Based Pricing For Your Whole Team"
 date: 2021-06-29
 meta_desc: "Discover Pulumi’s new usage-based pricing for teams and enterprises. Manage more resources, pay as you grow, and access advanced features with no user limits."
-meta_image: meta.png
 authors:
    - luke-hoban
 tags:

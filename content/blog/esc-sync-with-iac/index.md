@@ -4,7 +4,6 @@ date: 2024-09-17T00:00:00-03:00
 updated: 2026-06-16
 draft: false
 meta_desc: "Sync secrets and configuration values across external platforms using Pulumi ESC and Pulumi IaC."
-meta_image: "meta.png"
 authors:
   - komal-ali
 tags:

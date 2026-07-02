@@ -2,7 +2,6 @@
 title: "Announcing PulumiUP 2022: The Cloud Awakens on May 4th"
 date: 2022-03-31
 meta_desc: Attend PulumiUP 2022 with virtual workshops, sessions, and talks about cloud engineering, infrastructure as code, and modern cloud architectures!
-meta_image: meta.png
 authors:
     - george-huang
 tags:

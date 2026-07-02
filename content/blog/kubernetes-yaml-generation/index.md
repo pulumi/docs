@@ -3,7 +3,6 @@ title: "Generate Kubernetes YAML with Familiar Programming Languages"
 date: 2020-03-03
 draft: false
 meta_desc: Stop writing Kubernetes YAML by hand, and start using the power of familiar programming languages! Pulumi now supports rendering YAML for Kubernetes resources.
-meta_image: yamlRuler.png
 authors:
     - levi-blackstone
 tags:

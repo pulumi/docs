@@ -2,7 +2,6 @@
 title: "Policy as Code with Python"
 date: 2020-06-16
 meta_desc: "Policy as Code for Python available as GA in the 2.0 release."
-meta_image: python-pac.png
 authors:
     - sophia-parafina
 tags:

@@ -4,7 +4,6 @@ date: 2024-12-10T09:31:38+01:00
 allow_long_title: true
 draft: false
 meta_desc: "Highlighting how Kubernetes Operators empower platform engineers to automate and streamline application deployment, management, and scaling on Kubernetes."
-meta_image: meta.png
 
 authors:
 - engin-diri

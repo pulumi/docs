@@ -3,7 +3,6 @@ title: "Next-level IaC: How Pulumi Supports Your API Economy Strategy"
 allow_long_title: true
 date: 2024-05-15
 meta_desc: Learn how to use Pulumi Automation API to build your own Service API and expose it to your organization.
-meta_image: meta.png
 
 authors:
 

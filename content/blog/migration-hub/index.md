@@ -6,7 +6,7 @@ tags: [open-source, migration, import]
 category: product
 meta_desc: "Introducing the Pulumi Migration Hub, your one stop shopping for migrating to Pulumi. It's never been so easy to adopt Pulumi."
 date: "2023-08-22"
-meta_image: "migration_hub.png"
+
 ---
 
 Today we are launching Pulumi's new [Migration Hub](/migrate), a comprehensive guide to help you
