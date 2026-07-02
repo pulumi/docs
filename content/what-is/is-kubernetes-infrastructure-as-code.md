@@ -136,7 +136,7 @@ Pulumi doesn't replace the Helm ecosystem, it consumes it. [`helm.v4.Chart`](/do
 
 Both are legitimate answers to "is there IaC for Kubernetes," and the [comparison between Pulumi and Terraform](/docs/iac/comparisons/terraform/) is a fair one to make: both provision the cluster and can manage the workloads that run on it.
 
-The difference is in how you write and evolve that code. Pulumi programs are TypeScript, Python, Go, C#, or Java, so they get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform's HCL is a purpose-built configuration language without general-purpose loops, functions, or a native test framework, and its Kubernetes and Helm providers typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies.
+The difference is in how you write and evolve that code. Pulumi programs are TypeScript, Python, Go, C#, or Java, so they get IDE autocomplete, unit tests, and existing package managers for free, and one stack can describe the cluster and its workloads together. Terraform added a native `terraform test` framework in v1.6, but HCL is still a purpose-built configuration language rather than a general-purpose one, so it lacks general-purpose loops and functions, and its Kubernetes and Helm providers typically can't be configured until the cluster they target already exists, which is why many Terraform setups split cluster and workload management into two separate applies.
 
 ## Frequently asked questions about Kubernetes and infrastructure as code
 
