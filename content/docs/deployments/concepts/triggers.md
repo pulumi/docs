@@ -67,3 +67,5 @@ These triggers run operations on a time basis rather than in response to a sourc
 A [deployment webhook](/docs/deployments/concepts/webhooks/#deployment-webhooks) triggers a deployment on another stack in response to an event — for example, updating a dependent stack when an upstream stack (referenced via a [stack reference](/docs/iac/concepts/stacks/#stackreferences)) changes, or promoting a change from a lower environment to a higher one. A deployment webhook runs the target stack using that stack's existing [deployment settings](/docs/deployments/concepts/settings/); it cannot override them. To trigger a deployment with custom or one-off settings, use the [REST API](#rest-api) instead.
 
 The [Pulumi Auto Deploy package](/registry/packages/auto-deploy) (currently in Preview) lets you manage dependent stack updates declaratively.
+
+For a step-by-step walkthrough of cascading updates to downstream stacks — including how to avoid duplicate fires and re-trigger loops — see [Triggering dependent stack updates](/docs/deployments/guides/dependent-stack-updates/).
