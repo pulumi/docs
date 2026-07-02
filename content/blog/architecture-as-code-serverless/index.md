@@ -2,7 +2,6 @@
 title: "Architecture as Code: Serverless"
 date: 2020-04-28
 meta_desc: "Serverless can benefit from reusable resources created by infrastructure as code."
-meta_image: serverless.png
 authors:
     - sophia-parafina
 tags:

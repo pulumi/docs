@@ -2,7 +2,6 @@
 title: "Deploying a MySQL schema using Dynamic Providers"
 date: 2020-08-18
 meta_desc: Leveraging Pulumi Dynamic Providers to expand opportunities in cloud architecture design
-meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "python", "mysql"]
 category: tutorials

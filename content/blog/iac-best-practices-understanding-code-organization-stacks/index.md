@@ -3,7 +3,6 @@ title: "IaC Best Practices: Understanding Code Organization & Stacks"
 date: 2023-02-20
 updated: 2025-03-04
 meta_desc: Learn best practices for organizing Pulumi code and managing stacks. Discover how to structure projects for maintainability and scalability.
-meta_image: meta.png
 authors:
     - aaron-kao
     - christian-nunciato

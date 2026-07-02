@@ -3,7 +3,6 @@ title: "IaC Best Practices: Enabling Developer Stacks & Git Branches"
 date: 2023-03-10
 updated: 2025-03-04
 meta_desc: See how to enable team collaboration with Pulumi stacks and Git workflows. Learn best practices for managing feature branches and development environments.
-meta_image: meta.png
 authors:
     - christian-nunciato
     - scott-lowe

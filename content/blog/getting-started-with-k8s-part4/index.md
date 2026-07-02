@@ -2,7 +2,6 @@
 title: "Getting Started with Kubernetes: Stateful Applications"
 date: 2020-07-21
 meta_desc: "How to deploy stateful applications in Kubernetes with Pulumi"
-meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:

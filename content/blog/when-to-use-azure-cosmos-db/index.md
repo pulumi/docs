@@ -4,7 +4,6 @@ date: 2024-11-11T17:39:54-05:00
 updated: 2025-03-11
 draft: false
 meta_desc: Discover when to use Cosmos DB and how it compares with PostgreSQL, MongoDB, Cassandra, and DynamoDB. Learn about scalability, performance, cost & use cases.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

@@ -2,7 +2,6 @@
 title: Shared configuration stacks with AWS Systems Manager
 date: 2022-06-30
 meta_desc: Use Pulumi with AWS Systems Manager to build shared stacks that manage configuration across your organization.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

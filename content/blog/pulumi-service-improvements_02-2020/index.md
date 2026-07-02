@@ -5,7 +5,7 @@ tags: ["features"]
 category: product
 date: "2020-03-02"
 meta_desc: "Recent improvements to the Pulumi Service: stack tags, audit logs, CI/CD integration, downloadable checkpoint files"
-meta_image: "pretty-print-multiline-json.png"
+
 ---
 
 We've been hard at work making it easier to manage stacks, permissions, and organizations in the Pulumi Service. Adding

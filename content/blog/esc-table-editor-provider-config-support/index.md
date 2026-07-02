@@ -4,7 +4,6 @@ date: 2024-09-10T00:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: "The Table view introduces a new visual interface for managing provider configuration using Pulumi ESC."
-meta_image: "meta.png"
 authors:
 - kimberley-mackenzie
 - arun-loganathan

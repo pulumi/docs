@@ -6,7 +6,6 @@ updated: 2024-03-24
 draft: false
 meta_desc: >-
     Discover Pulumi’s AWS Cloud Control Provider—now GA with Day 1 AWS support, extended IaC capabilities, and seamless CloudFormation migration tools.
-meta_image: meta-aws.png
 authors:
     - tejitha-raju
     - matt-jeffryes

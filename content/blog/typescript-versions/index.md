@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: The latest version of Pulumi's Node.js SDK now lets you easily pick the version of TypeScript to use.
 
-meta_image: meta.png
 
 authors:
     - julien-poissonnier

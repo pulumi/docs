@@ -6,7 +6,6 @@ updated: 2026-06-16
 meta_desc: >-
   With Pulumi and ESC, we provide an automated workflow that generates a kubeconfig on the fly for every command using short term credentials issued via OIDC.
 
-meta_image: meta.png
 
 authors:
     - levi-blackstone

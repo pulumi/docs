@@ -4,7 +4,6 @@ authors: ["zaid-ajaj"]
 tags: [dotnet, fsharp, vb.net]
 category: product
 meta_desc: "Pulumi projects default to .NET 6 with simplified program structure and leaner generated C# code"
-meta_image: thumbnail.png
 date: "2022-07-22"
 updated: 2025-03-06
 ---

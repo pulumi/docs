@@ -2,7 +2,6 @@
 title: "Easier IaC adoption with improved `pulumi import` experience"
 date: 2022-03-15
 meta_desc: Recent improvements to `pulumi import` make it an even smoother way to import existing cloud infrastructure into Pulumi.
-meta_image: meta.png
 authors:
     - fraser-waters
     - david-flanagan

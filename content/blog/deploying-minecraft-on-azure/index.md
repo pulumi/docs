@@ -2,7 +2,6 @@
 title: "Deploying Minecraft on Azure"
 date: 2020-11-04
 meta_desc: "Deploy and provision a Minecraft server on Azure with the native Pulumi Azure provider."
-meta_image: minecraft-pulumi.png
 authors:
     - sophia-parafina
 tags:

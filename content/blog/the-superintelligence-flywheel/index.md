@@ -3,7 +3,6 @@ title: "The Superintelligence Flywheel: Infrastructure for the AI Era"
 date: 2025-12-11T00:00:00-00:00
 draft: false
 meta_desc: Discover why the rise of superintelligence requires intelligent, automated infrastructure and how Pulumi and Neo power the next generation of AI platforms.
-meta_image: meta.png
 authors:
     - joe-duffy
 tags:

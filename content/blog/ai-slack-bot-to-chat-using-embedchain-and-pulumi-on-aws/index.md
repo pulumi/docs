@@ -15,7 +15,7 @@ series: ai-slack-bot
 meta_desc: "Learn how to build an AI-powered Slack bot with Embedchain & Pulumi on AWS."
 date: 2024-03-18T17:21:02+01:00
 updated: 2025-03-20
-meta_image: meta.png
+
 ---
 
 The integration of artificial intelligence (AI) to improve user experiences is gaining popularity in today's world. One fascinating application of AI is the creation of chatbots, which can engage users in conversation and provide helpful information or services.

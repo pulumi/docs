@@ -3,7 +3,6 @@ title: "Secure AWS Lambda with IAM ABAC Policies"
 date: 2022-07-19
 updated: 2025-03-26
 meta_desc: "Learn how to implement Attribute-Based Access Control (ABAC) for AWS Lambda using Pulumi. Secure deployments with IAM role tags and policy conditions."
-meta_image: meta.png
 authors:
 - paul-stack
 - lee-briggs

@@ -3,7 +3,6 @@ title: "Introducing Webhooks for Pulumi ESC"
 date: 2024-09-13T00:00:00-03:00
 draft: false
 meta_desc: "Pulumi ESC Webhooks enable you to automate workflows, trigger actions, and streamline the management of your infrastructure and applications"
-meta_image: "meta.png"
 authors:
   - iaroslav-titov
   - arun-loganathan

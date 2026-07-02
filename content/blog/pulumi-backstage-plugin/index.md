@@ -4,7 +4,6 @@ date: 2023-10-06T15:00:48-04:00
 updated: 2025-03-26
 draft: false
 meta_desc: "Integrate Pulumi into Backstage to manage infrastructure-as-code, automate scaffolding, and enable self-service cloud provisioning via developer portals."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:

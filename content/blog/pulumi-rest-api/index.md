@@ -2,7 +2,6 @@
 title: "Announcing the Pulumi REST API"
 date: 2021-09-20
 meta_desc: "The Pulumi REST API lets you manage projects, stacks, cloud resources, policies, and more, all with a simple, programmatic web interface."
-meta_image: rest-api.png
 authors:
     - joe-duffy
 tags:

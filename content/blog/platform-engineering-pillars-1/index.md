@@ -3,7 +3,6 @@ title: "Platform Pillars: Build Platforms, Not Infrastructure"
 date: 2025-02-26
 draft: false
 meta_desc: Explore the essential pillars of Platform Engineering and learn how to transform infrastructure chaos into a streamlined development experience.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

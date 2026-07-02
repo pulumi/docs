@@ -2,7 +2,6 @@
 title: "Orchestrating Cloud Workflows with Automation API"
 date: 2020-11-19
 meta_desc: "Using Automation API to provision infrastructure and applications with only code."
-meta_image: automation_api.png
 authors:
     - sophia-parafina
 tags:

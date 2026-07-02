@@ -4,7 +4,6 @@ date: 2022-01-20T08:36:11-06:00
 draft: false
 canonical_url: https://dev.to/fllstck/observable-infrastructure-as-code-52ha
 meta_desc: A review of using Honeycomb to add observability to your Pulumi projects
-meta_image: meta.png
 authors:
     - kay-ploesser
 tags:

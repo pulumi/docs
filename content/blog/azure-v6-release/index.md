@@ -3,7 +3,6 @@ title: "Pulumi Azure Classic Provider Version 6.0.0"
 date: 2024-09-27T12:04:00
 draft: false
 meta_desc: "Release of the next version of the Azure Classic Pulumi Provider"
-meta_image: meta.png
 authors:
     - daniel-bradley
 tags:

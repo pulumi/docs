@@ -6,7 +6,6 @@ draft: false
 allow_long_title: true
 
 meta_desc: Pulumi Components enable you to create, share, and consume reusable infrastructure building blocks across your organization and the broader community.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
     - meagan-cojocar

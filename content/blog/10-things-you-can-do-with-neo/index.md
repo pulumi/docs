@@ -3,7 +3,6 @@ title: "10 Things You Can Do With Our Infrastructure Agent, Neo"
 date: 2025-10-06
 draft: false
 meta_desc: "Discover 10 concrete ways Pulumi Neo helps automate infrastructure tasks while keeping humans in control."
-meta_image: meta.png
 authors:
     - meagan-cojocar
 tags:

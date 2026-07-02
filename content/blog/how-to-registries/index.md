@@ -2,7 +2,6 @@
 title: "How to Build a Container Registry"
 date: 2021-02-16
 meta_desc: "How to build a registry and push Docker images with code."
-meta_image: registry.png
 authors:
     - sophia-parafina
 tags:

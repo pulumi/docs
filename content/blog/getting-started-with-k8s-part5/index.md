@@ -2,7 +2,6 @@
 title: "Getting Started With Kubernetes: Networking"
 date: 2020-07-30
 meta_desc: "A review of networking inside and outside of Kubernetes"
-meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:

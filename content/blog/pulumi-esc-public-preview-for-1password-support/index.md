@@ -4,7 +4,6 @@ date: 2024-03-27T12:00:00-06:00
 updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds integration support for 1Password (public preview) to empower developers to work more efficiently and securely using their preferred tools"
-meta_image: meta.png
 authors:
   - tejitha-raju
   - diana-esteves

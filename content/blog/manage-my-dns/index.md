@@ -4,7 +4,6 @@ date: 2022-03-29T10:00:00Z
 updated: 2025-03-05
 draft: false
 meta_desc: In this article, Rawkode shows how he uses Pulumi to manage the DNS records for his many domains.
-meta_image: meta.png
 authors: ["david-flanagan"]
 tags: [domains, dns]
 category: tutorials

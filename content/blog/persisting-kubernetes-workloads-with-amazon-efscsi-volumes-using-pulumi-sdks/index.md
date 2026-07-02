@@ -6,7 +6,7 @@ authors: ["nishi-davidson"]
 tags: [aws, kubernetes, eks]
 category: tutorials
 meta_desc: "In this blog, we will show how to use AWS EFS CSI storage components with Kubernetes workloads running on Amazon EKS worker nodes (EKS, AWS, and AWSX)."
-meta_image: "featured-img-efs-csi-driver.png"
+
 ---
 
 {{% notes type="warning" %}}

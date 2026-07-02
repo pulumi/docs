@@ -3,7 +3,6 @@ title: "Introducing KubeCrash: Cloud Native Crash Courses"
 date: 2022-04-08
 draft: false
 meta_desc: Explore cloud native tech via the KubeCrash courses and content
-meta_image: meta.png
 authors:
     - kat-cosgrove
 tags:

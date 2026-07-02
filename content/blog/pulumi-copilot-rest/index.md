@@ -4,7 +4,6 @@ date: 2024-12-12T15:15:42-05:00
 lastmod: 2026-06-30
 draft: false
 meta_desc: Explore Pulumi Copilot's new REST API preview for IaC.
-meta_image: meta.png
 authors:
     - artur-laksberg
 tags:

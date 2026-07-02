@@ -5,7 +5,6 @@ date: 2025-08-20T10:00:00+02:00
 draft: false
 series: idp-best-practices
 meta_desc: Build reusable infrastructure using components and templates to create golden paths that enable scalable, self-service internal developer platforms.
-meta_image: meta.png
 authors:
     - engin-diri
     - robert-smith

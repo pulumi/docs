@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-06-23
 draft: false
 meta_desc: "Pulumi can now execute Terraform modules directly, making migration from Terraform to Pulumi simpler than ever for complex infrastructure projects."
-meta_image: "meta.png"
 authors:
   - anton-tayanovskyy
 tags:

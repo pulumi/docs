@@ -3,7 +3,6 @@ title: "Deploying an OAuth Server for Netlify's CMS"
 date: "2020-09-09"
 draft: false
 meta_desc: "Implementing and deploying an OAuth server for Netlify CMS on Fargate."
-meta_image: cms-oauth.png
 authors: ["zephyr-zhou"]
 tags: ["aws","github-actions", "netlify", "oauth", "ecs", "fargate"]
 category: tutorials

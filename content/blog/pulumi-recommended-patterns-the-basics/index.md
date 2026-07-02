@@ -5,7 +5,6 @@ updated: 2025-03-06
 lastmod: 2026-06-28
 draft: false
 meta_desc: Learn and apply Pulumi recommended patterns to improve your infrastructure and easily scale your deployments using modern infrastructure as code.
-meta_image: article-1-meta.png
 authors:
     - aurelien-requiem
 tags:

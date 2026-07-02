@@ -4,7 +4,6 @@ date: 2024-12-13T00:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: "The new Pulumi ESC Environment imports discoverability features empower you to manage and update your secrets and configuration with confidence."
-meta_image: "meta.png"
 authors:
 - sean-yeh
 - arun-loganathan

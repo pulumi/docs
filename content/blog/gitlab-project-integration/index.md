@@ -5,7 +5,7 @@ tags: ["continuous-delivery", "gitlab"]
 category: product
 date: "2020-08-26"
 meta_desc: "We are excited to announce the launch of first-class support for integrating GitLab Merge Requests with Pulumi."
-meta_image: pulumi_gitlab.png
+
 ---
 
 We are excited to announce the launch of native support for integrating GitLab Merge Requests with Pulumi.

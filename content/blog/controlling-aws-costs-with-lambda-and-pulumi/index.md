@@ -5,7 +5,7 @@ authors: ["paul-stack"]
 tags: ["aws", "serverless", "lambda"]
 category: tutorials
 meta_desc: "Learn how to use Pulumi and AWS Lambda to create and deploy an application that can control cloud costs."
-meta_image: "cost.png"
+
 ---
 
 Due to the nature of the product we build, the Pulumi team needs to have access to several cloud providers to

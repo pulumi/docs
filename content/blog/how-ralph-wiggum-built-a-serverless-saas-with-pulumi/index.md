@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-14
 draft: false
 meta_desc: "See how an AI agent using the Ralph Wiggum loop built a full AWS serverless SaaS with Pulumi—unsupervised. Frontend, backend, tests, and CloudFront included."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:

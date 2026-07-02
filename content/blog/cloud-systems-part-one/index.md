@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: In this series, learn modern cloud engineering practices and tooling, starting with using Pulumi to deploy a static site to AWS S3!
 
-meta_image: meta.png
 
 authors:
     - kat-cosgrove

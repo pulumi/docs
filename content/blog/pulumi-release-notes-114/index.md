@@ -3,7 +3,6 @@ title: "The Past 6 Months of Pulumi Releases"
 date: 2024-12-24
 draft: false
 meta_desc: Explore Pulumi's major releases from July to December 2024, featuring Infrastructure as Code improvements, ESC enhancements, and AI innovations.
-meta_image: meta.png
 authors:
   - meagan-cojocar
 tags:

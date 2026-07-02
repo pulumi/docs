@@ -2,7 +2,6 @@
 title: "New in Pulumi IaC: `replacementTrigger` Resource Option"
 date: 2026-01-22
 meta_desc: "You can now use the `replacementTrigger` resource option to control when resources are recreated"
-meta_image: meta.png
 authors:
     - tom-harding
 tags:

@@ -6,7 +6,7 @@ category: tutorials
 meta_desc: "In this blog, we'll walk through how to use Pulumi to create Jupyter Notebooks on Kubernetes. "
 date: "2019-05-30"
 
-meta_image: "post-image-jupyter.png"
+
 ---
 
 In this post, we will work through an example that shows how to use Pulumi to create Jupyter

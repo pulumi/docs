@@ -2,7 +2,6 @@
 title: "Architecture as Code: Kubernetes"
 date: 2020-05-12
 meta_desc: "Using infrastructure as code to deploy Kubernetes to support hard multi-tenancy"
-meta_image: kubernetes.png
 authors:
     - sophia-parafina
 tags:

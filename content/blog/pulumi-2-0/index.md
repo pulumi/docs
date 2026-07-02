@@ -6,7 +6,7 @@ authors: ["joe-duffy"]
 tags: [announcements]
 category: product
 meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
-meta_image: "pulumi-2-0.png"
+
 ---
 
 > [!INFO]

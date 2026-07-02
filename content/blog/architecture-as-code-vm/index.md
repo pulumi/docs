@@ -2,7 +2,6 @@
 title: "Architecture as Code: Virtual Machines"
 date: 2020-03-31
 meta_desc: "Provisioning virtual machines and redeploying applications on existing instances using Pulumi"
-meta_image: vm.png
 authors:
     - sophia-parafina
 tags:

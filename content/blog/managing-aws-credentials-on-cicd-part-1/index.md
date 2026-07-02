@@ -2,7 +2,6 @@
 title: "Managing AWS Credentials on CI/CD: Part 1"
 date: 2020-03-12
 meta_desc: "Best practices for managing AWS credentials on CI/CD: Part 1 in series"
-meta_image: meta.png
 authors:
     - chris-smith
     - sophia-parafina

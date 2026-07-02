@@ -3,7 +3,6 @@ title: "Credijusto Manages Authentication with Auth0 and Pulumi"
 date: 2020-09-22
 draft: false
 meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
-meta_image: credijusto.png
 authors:
     - fernando-carletti
 tags:

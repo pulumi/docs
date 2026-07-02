@@ -2,7 +2,6 @@
 title: "Build a Pulumi VS Code Devcontainer Environment"
 date: 2020-07-14
 meta_desc: "Build a VS Code devcontainer for Pulumi infrastructure as code projects."
-meta_image: devcontainer.png
 authors:
     - sophia-parafina
 tags:

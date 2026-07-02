@@ -2,7 +2,6 @@
 title: "Read Every Single Error"
 date: 2023-03-21
 meta_desc: How one process helped us decrease our error rate 17x in one year.
-meta_image: meta.png
 authors:
     - evan-boyle
 tags:

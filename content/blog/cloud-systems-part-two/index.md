@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: In this series, learn modern cloud engineering practices and tooling, continuing with expanding our personal website and containerizing it!
 
-meta_image: meta.png
 
 authors:
     - kat-cosgrove

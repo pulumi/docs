@@ -2,7 +2,6 @@
 title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
 date: 2021-01-19
 meta_desc: "Build Kubernetes applications and provision infrastructure with Pulumi and Codefresh's CI/CD pipelines"
-meta_image: codefresh.png
 authors:
     - sophia-parafina
     - kostis-kapelonis

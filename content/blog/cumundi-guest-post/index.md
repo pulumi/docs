@@ -2,7 +2,6 @@
 title: "Refactoring Pulumi Code with `aliases`"
 date: 2020-03-26
 meta_desc: "Cumundi uses Pulumi to build infrastructure components for their customers"
-meta_image: cumundi-pulumi.png
 authors:
     - ringo-de-smet
 tags:

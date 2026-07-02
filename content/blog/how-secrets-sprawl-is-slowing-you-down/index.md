@@ -6,7 +6,6 @@ draft: false
 
 meta_desc: "Secrets sprawl slows teams and limits scaling. Learn how to overcome secrets sprawl challenges and regain productivity in development and operations."
 
-meta_image: meta.png
 
 authors:
 - engin-diri

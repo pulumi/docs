@@ -3,7 +3,6 @@ title: "Self-Service Infrastructure: From Tickets to Tools"
 date: 2025-03-06
 draft: false
 meta_desc: Unlock developer productivity with self-service infrastructure through modular abstraction and intent-based specifications for your internal developer platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

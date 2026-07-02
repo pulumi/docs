@@ -4,7 +4,6 @@ h1: "How To Build Globally Distributed Applications with Azure Cosmos DB and Pul
 authors: ["mikhail-shilkov"]
 tags: [azure]
 category: best-practices
-meta_image: "meta.png"
 meta_desc: "A reusable component to build highly-available, low-latency applications on Azure"
 date: "2019-09-24"
 ---

@@ -3,7 +3,6 @@ title: "Bring Your Own Keys With Pulumi ESC"
 date: 2025-06-18T13:25:26-03:00
 draft: false
 meta_desc: "You can Bring Your Own Keys (BYOK) to encrypt secrets on Pulumi ESC."
-meta_image: meta.png
 canonical_url: "https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys/"
 authors:
     - pablo-terradillos

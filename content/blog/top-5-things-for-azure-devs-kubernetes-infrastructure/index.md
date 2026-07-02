@@ -3,7 +3,6 @@ title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Infrastructure
 date: 2021-08-12
 allow_long_title: True
 meta_desc: "Configuring Azure Kubernetes Service (AKS) through the Azure Portal and Infrastructure as Code."
-meta_image: azure-top-5.png
 authors:
     - sophia-parafina
 tags:

@@ -3,7 +3,6 @@ title: "Governance as an Enabler: Scaling Safely and Confidently"
 date: 2025-06-17
 draft: false
 meta_desc: Transform governance from manual bureaucracy into an automated enabler by embedding policy-as-code, RBAC, and automated controls directly into your platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

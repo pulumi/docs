@@ -6,7 +6,6 @@ lastmod: 2026-06-30
 allow_long_title: true
 draft: false
 meta_desc: Pulumi Copilot integrates with Pulumi Documentation, offering a conversational interface to make learning cloud infrastructure easier and more intuitive.
-meta_image: meta.png
 authors:
     - meagan-cojocar
     - artur-laksberg

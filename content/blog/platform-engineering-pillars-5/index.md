@@ -3,7 +3,6 @@ title: "Security as an Enabler: Building Trust into Your Platform"
 date: 2025-04-11
 draft: false
 meta_desc: Learn how security can enable innovation by embedding guardrails directly into your platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
