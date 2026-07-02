@@ -3,7 +3,6 @@ title: "Automate Azure App Secret Rotation with ESC"
 date: 2026-04-06
 draft: false
 meta_desc: "Learn how to automate Azure app secret rotation using Pulumi ESC to keep your credentials secure and up to date."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - sean-yeh

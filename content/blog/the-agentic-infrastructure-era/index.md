@@ -3,7 +3,6 @@ title: "The Agentic Infrastructure Era"
 date: 2026-05-19T03:00:00-07:00
 draft: false
 meta_desc: "Why infrastructure as code is the natural substrate for AI agents, and what we're shipping today to make agentic infrastructure even better."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - joe-duffy
