@@ -52,7 +52,7 @@ const LEFT = 90 // left margin (matches the retired composite)
 const TOP_PAD = 64 // top padding (mirrors the left margin)
 const LOGO_MARGIN = 40 // wordmark distance from the bottom edge
 const LOGO_TOP = CANVAS_H - LOGO_H - LOGO_MARGIN // 544
-const TITLE_BOX_W = 700
+const TITLE_BOX_W = 640 // narrower than the feature bleed so wide titles clear the artwork
 const TITLE_BOX_H = 380
 
 // fields: { title, featurePath? }  (featurePath is content-relative, e.g.
