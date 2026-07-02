@@ -6,7 +6,7 @@ meta_desc: "Learn how to test infrastructure as code with Pulumi—unit tests, i
 meta_image: meta.png
 feature_image: feature.png
 authors:
-    - joe-duffy
+    - alex-leventer
 tags:
     - infrastructure-as-code
     - testing
