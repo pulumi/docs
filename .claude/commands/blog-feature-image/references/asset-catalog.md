@@ -1,13 +1,12 @@
 # Asset Catalog Reference
 
-All assets live in `.claude/commands/blog-meta-image/assets/`. Paths in the feature JSON config are relative to the `--assets-dir` directory. The `feature_image` path in the meta JSON config must be an absolute path.
+All assets live in `.claude/commands/blog-feature-image/assets/`. Paths in the feature JSON config are relative to the `--assets-dir` directory.
+
+The 1200×628 OpenGraph/social card is **not** built here — it is generated on-brand at build time from the post title + the feature image (`scripts/meta-images/blog.mjs`).
 
 ## Templates
 
-Located in `templates/`. Two sets of PNGs:
-
-- **Feature templates** — 1884×1256px. Used as the blog post's visual feature image. Static variants are used as-is; logo variants get SVG logos composited onto circular placeholders.
-- **Meta template** — 1200×628px (`meta.png`). Used as the OpenGraph image. The chosen feature image is scaled and composited offset-right behind the title text.
+Located in `templates/`. Feature templates are 1884×1256px PNGs used as the blog post's visual feature image. Static variants are used as-is; logo variants get SVG logos composited onto circular placeholders.
 
 ### Feature Templates (1884×1256)
 
@@ -21,15 +20,6 @@ Located in `templates/`. Two sets of PNGs:
 | feature-logo-1.png | Single large circular logo placeholder |
 | feature-logo-2.png | Two circular logo placeholders |
 | feature-logo-3.png | Three circular logo placeholders |
-
-### Meta Assets (1200×628)
-
-The meta image is built from scratch (solid `#231F33` background) rather than from a template PNG. Two overlay assets are composited on top of the feature image:
-
-| Filename | Type | Description |
-|----------|------|-------------|
-| meta-overlay.png | overlay | Full-bleed gradient/vignette composited over the feature image |
-| meta-logo.png | logo | Pulumi wordmark (175×44), placed bottom-left at x=90, 40px from bottom |
 
 ### Logo Placeholder Positions (feature logo templates)
 
@@ -77,18 +67,6 @@ Located in `logos/`. SVG product/technology logos placed on top of white placeho
 | typescript.svg | TypeScript | typescript, javascript, language |
 | vercel.svg | Vercel | vercel, hosting, frontend |
 
-## Text Defaults
-
-From `catalog.yaml` (applied to the meta image only):
-
-- **Font**: inter-semibold.woff (static semibold, always white #FFFFFF)
-- **Letter-spacing**: -0.05em (tighter tracking)
-- **Line-height**: 110% of font size
-- **X position**: 90px from left edge (aligned with Pulumi logo)
-- **Y position**: 80px from top edge (top-anchored, flows downward)
-- **Max width**: 700px (text area on left half)
-- **Font size**: variable (60-104px depending on title length)
-
 ## Feature Template Selection Guide
 
 | Topic / Signal | Recommended Feature Template |
@@ -102,8 +80,6 @@ From `catalog.yaml` (applied to the meta image only):
 
 ## Composition Rules
 
-1. **Text is always white** — all templates have dark-enough backgrounds for white text readability
-2. **Text stays on the left** — max_width of 700px prevents text from overlapping the right-side imagery/logos
-3. **Logos go on white placeholders** — the compose script centers logos within the measured placeholder bounds
-4. **1-3 logos max** — template determines slot count; select the template matching logo count
-5. **Font size scales with title length** — shorter titles get larger fonts for visual impact
+1. **Logos go on the circular placeholders** — the compose script centers each logo within the measured placeholder bounds
+2. **1-3 logos max** — the template determines the slot count; select the template matching the logo count
+3. **Tint** — logos are tinted into Pulumi's lavender accent by default (`overlay` mode); use `color` mode to preserve internal contrast

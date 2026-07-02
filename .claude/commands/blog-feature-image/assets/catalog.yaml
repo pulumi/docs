@@ -1,24 +1,13 @@
-# Meta Image Asset Catalog
+# Blog Feature Image Asset Catalog
 # Feature image render target: 1884x1256
-# Meta image render target:    1200x628
+#
+# The 1200x628 OpenGraph/social card is no longer composited here — it is
+# generated on-brand at build time from the post title + the feature image
+# (scripts/meta-images/blog.mjs via scripts/generate-meta-images.mjs).
 
 feature_canvas:
   width: 1884
   height: 1256
-
-meta_canvas:
-  width: 1200
-  height: 628
-
-text:
-  font: inter-semibold.woff
-  font_weight: 600
-  color: "#FFFFFF"
-  letter_spacing_em: -0.05
-  line_height_pct: 110
-  x: 90
-  y: 80
-  max_width: 700
 
 templates:
   # -- Feature templates (1884x1256, no text) --
@@ -71,11 +60,6 @@ templates:
       - { x: 747, y: 234, width: 390, height: 390 }
       - { x: 499, y: 630, width: 390, height: 390 }
       - { x: 993, y: 630, width: 390, height: 390 }
-
-  # -- Meta assets (1200x628) --
-  # meta.png is no longer used as a template; kept for reference only.
-  # meta-overlay.png: full-bleed gradient/vignette composited over the feature image
-  # meta-logo.png:    Pulumi wordmark (175x44) placed bottom-left above text baseline
 
 logos:
   - filename: 1password.svg

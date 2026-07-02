@@ -1,17 +1,19 @@
 ---
-name: blog-meta-image
-description: "Generate a feature image (1884x1256) and OpenGraph meta image (1200x628) for a blog post. Reads the blog post title, selects a feature template (neo, platform, rocket, shield, lightbulb, or logo variant), renders feature.png, then composites it with title text onto meta.png. Use when the user types /blog-meta-image or asks to create, generate, or regenerate a blog post's feature image, meta image, social card, or Open Graph image. Accepts optional arguments like feature template name or logo names."
+name: blog-feature-image
+description: "Generate the feature image (1884x1256) for a blog post — the in-body hero art. Reads the blog post, selects a feature template (neo, platform, rocket, shield, lightbulb, or a 1-3 logo variant), renders feature.png, and sets feature_image in frontmatter. The OpenGraph/social meta image is no longer produced here — it is generated on-brand at build time from the title + feature image (scripts/meta-images/blog.mjs). Use when the user types /blog-feature-image (formerly /blog-meta-image) or asks to create, generate, or regenerate a blog post's feature image, hero image, or social card. Accepts optional arguments like a feature template name or logo names."
 ---
 
-# `/blog-meta-image` — Generate Blog Feature & Meta Images
+# `/blog-feature-image` — Generate a Blog Feature Image
 
-You are generating two images for a Pulumi blog post: a **feature image** (1884×1256) and a **meta/OpenGraph image** (1200×628). Follow these steps precisely.
+> Formerly `/blog-meta-image`. This skill now produces **only** the feature image. The 1200×628 OpenGraph/social card is generated at build time by `scripts/meta-images/blog.mjs` (via `scripts/generate-meta-images.mjs`) from the post title and this feature image — do not composite or commit a `meta.png`.
 
-**Skill directory**: `.claude/commands/blog-meta-image/` — all paths below are relative to the project root unless noted.
+You are generating the **feature image** (1884×1256) for a Pulumi blog post — the hero art shown at the top of the post and in the blog listing. Follow these steps precisely.
+
+**Skill directory**: `.claude/commands/blog-feature-image/` — all paths below are relative to the project root unless noted.
 
 ## [Step 1/4] Find the Blog Post
 
-Locate the blog post that needs a meta image:
+Locate the blog post that needs a feature image:
 
 1. If `$ARGUMENTS` contains a file path, use that directly.
 2. Otherwise, run `git status` and `git diff --name-only` to find modified/untracked `content/blog/*/index.md` files.
@@ -23,29 +25,22 @@ Read the full blog post file (frontmatter + body).
 ## [Step 2/4] Parse Blog Content & User Requests
 
 ### From the blog post, extract:
-- **Title**: the `title:` field from YAML frontmatter — this becomes the text on the image
+- **Title**: the `title:` field from YAML frontmatter (used to choose an on-theme template)
 - **Tags**: the `tags:` array from frontmatter
 - **Topics**: scan the body for key signals — cloud providers (AWS, Azure, GCP), languages (Go, Python, TypeScript), technologies (Kubernetes, Terraform, Docker), features (ESC, secrets, OIDC, policy), concepts (AI, ML, platform engineering, IDP)
 
 ### From `$ARGUMENTS`, parse user preferences:
 - **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "lightbulb") or logo names like "aws kubernetes"
-- **Title override**: if the user explicitly provides different text in quotes, use that instead of the blog title
 
-### Fast-path: existing feature image with no frontmatter declaration
+### Fast-path: existing feature image
 
-Check whether `feature.png` exists in the blog post's directory **and** the frontmatter does **not** already have a `feature_image:` field set (i.e., it is absent or still the placeholder `feature.png` value but the file is a real rendered image, not the placeholder).
+If a real `feature.png` already exists in the blog post's directory (not a placeholder), skip all interactive questions — just make sure `feature_image: feature.png` is set in frontmatter (Step 4) and report.
 
-If a real `feature.png` is present and `feature_image` is not yet committed in frontmatter:
-- **Skip all interactive questions entirely**
-- Use the existing `feature.png` as the feature image source for the meta render
-- Jump directly to the meta render portion of Step 3 (build meta config, render `meta.png`)
-- Still update frontmatter with both `feature_image: feature.png` and `meta_image: meta.png` in Step 4
-
-If `$ARGUMENTS` fully specifies the feature template (e.g., `/blog-meta-image rocket`), skip the interactive question and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
+If `$ARGUMENTS` fully specifies the feature template (e.g., `/blog-feature-image rocket`), skip the interactive question and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
 
 ## [Step 3/4] Select Feature Template & Render
 
-Read the asset catalog reference at `.claude/commands/blog-meta-image/references/asset-catalog.md` for the full template list and logo inventory.
+Read the asset catalog reference at `.claude/commands/blog-feature-image/references/asset-catalog.md` for the full template list and logo inventory.
 
 ### Interactive Selection
 
@@ -67,13 +62,13 @@ options:
 
 If **I have a custom image** is selected:
 1. First, check whether `feature.png` already exists in the blog post's directory.
-   - If it does, use that file as the custom image without asking — skip straight to the meta render step.
+   - If it does, use that file without asking — skip straight to Step 4.
    - If it does not exist, ask the user for the file path.
-2. If a path was provided (i.e., the file is not already `feature.png` in the blog directory), copy it into the blog post directory and rename it to `feature.png`:
+2. If a path was provided, copy it into the blog post directory and rename it to `feature.png`:
    ```bash
    cp "<provided-path>" "<blog-dir>/feature.png"
    ```
-3. Use `<blog-dir>/feature.png` as the `feature_image` in the meta config, then skip straight to the meta render step.
+3. Skip straight to Step 4.
 
 ---
 
@@ -141,7 +136,7 @@ Set `logo_tint_mode` in the feature config to `"overlay"` or `"color"` according
 1. Try [simple-icons](https://github.com/simple-icons/simple-icons/tree/develop/icons) first — clean vector SVGs for 3000+ brands. Download from `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/{slug}.svg` and add a `fill` attribute with the brand color to `<path>` elements.
 2. Otherwise use `WebSearch` to find the official SVG (`"<technology> logo SVG site:github.com"`)
 3. Use `WebFetch` to download the SVG content
-4. Save it to `.claude/commands/blog-meta-image/assets/logos/<name>.svg`
+4. Save it to `.claude/commands/blog-feature-image/assets/logos/<name>.svg`
 
 ---
 
@@ -159,11 +154,11 @@ Set `logo_tint_mode` in the feature config to `"overlay"` or `"color"` according
 | 3 logos | `templates/feature-logo-3.png` |
 | Custom | _(provided path, skip feature render)_ |
 
-### Build Composition Configs
+### Build Composition Config
 
-Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta.png` (1200×628).
+Build **one** JSON config for `feature.png` (1884×1256).
 
-**Feature config** — for static templates (no text, no logos):
+**Feature config** — for static templates (no logos):
 
 ```json
 {
@@ -172,7 +167,7 @@ Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta
 }
 ```
 
-**Feature config** — for logo variants (logos composited onto circular placeholders, no text):
+**Feature config** — for logo variants (logos composited onto circular placeholders):
 
 ```json
 {
@@ -185,28 +180,7 @@ Build **two** JSON configs: one for `feature.png` (1884×1256) and one for `meta
 }
 ```
 
-**Meta config** — no template; starts from a `#231F33` background, composites the feature image offset to the right, applies the overlay and logo, then draws the title text:
-
-```json
-{
-  "background_color": "#231F33",
-  "feature_image": "<absolute-path-to-blog-dir>/feature.png",
-  "overlay": "templates/meta-overlay.png",
-  "logo": "templates/meta-logo.png",
-  "text": {
-    "content": "Blog Post Title Here",
-    "font_size": 88
-  }
-}
-```
-
-**Font size guidelines:**
-- Short titles (1-3 words): `font_size: 96`
-- Medium titles (4-8 words): `font_size: 84`
-- Long titles (9+ words): `font_size: 72`
-- Very long titles (15+ words): `font_size: 60`
-
-**Important**: In the feature config, all paths are relative to `--assets-dir`. In the meta config, `feature_image` must be an **absolute path** to the rendered (or custom) feature image.
+**Important**: All paths in the config are relative to `--assets-dir`.
 
 ### Environment Setup (first time only)
 
@@ -224,46 +198,33 @@ No `uv sync` is needed — the script has inline PEP 723 metadata declaring its 
 
 ### Rendering
 
-Generate **two images** by running the composition script twice.
-
-**Step A — Feature image (1884×1256):** Skip if the user provided a custom image.
+Render the feature image. Skip if the user provided a custom image.
 
 1. Determine the blog post directory (e.g., `content/blog/my-post/`) and use its name as `<slug>`
 2. Write the feature JSON config to `/tmp/feature-<slug>.json`
 3. Run:
    ```bash
-   uv run .claude/commands/blog-meta-image/scripts/compose_meta_image.py \
+   uv run .claude/commands/blog-feature-image/scripts/compose_meta_image.py \
      --config /tmp/feature-<slug>.json \
-     --assets-dir .claude/commands/blog-meta-image/assets \
+     --assets-dir .claude/commands/blog-feature-image/assets \
      --output <blog-dir>/feature.png
-   ```
-
-**Step B — Meta image (1200×628):**
-
-1. Write the meta JSON config to `/tmp/meta-<slug>.json`
-   - Set `feature_image` to the **absolute path** of the feature image (either just rendered or the custom path provided by the user)
-2. Run:
-   ```bash
-   uv run .claude/commands/blog-meta-image/scripts/compose_meta_image.py \
-     --config /tmp/meta-<slug>.json \
-     --assets-dir .claude/commands/blog-meta-image/assets \
-     --output <blog-dir>/meta.png
    ```
 
 ## [Step 4/4] Confirm & Update Frontmatter
 
-1. Verify both PNGs were created successfully at their expected paths
-2. Update the blog post's frontmatter — add or update both image fields:
+1. Verify `feature.png` was created at its expected path
+2. Update the blog post's frontmatter — add or update the feature image field only:
    ```yaml
-   meta_image: meta.png
    feature_image: feature.png
    ```
+   Do **not** add a `meta_image` field — the social/OpenGraph card is generated at build time from the title + this feature image.
 3. Report to the user:
    - Which blog post was used
    - What feature template was selected and why
    - What logos were placed (if any)
-   - Where `feature.png` and `meta.png` were saved
-   - Remind them to preview both images to make sure they look good
+   - Where `feature.png` was saved
+   - That the OpenGraph social card is generated at build time (preview it with `make meta-images` then check `assets/images/generated/blog/<slug>/index.png`)
+   - Remind them to preview `feature.png` to make sure it looks good
 
 ## Error Handling
 
