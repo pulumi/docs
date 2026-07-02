@@ -9,10 +9,15 @@
 # by semver (not date), no per-version release-date lookup is needed.
 #
 # It lists every docs/versioned/<tool>/v*/ archive prefix and writes a semver-sorted manifest.
-# The live "latest" version (--latest-version) is emitted as a single entry pointing at the
-# liveRoot with latest:true (and excluded from the archive list if it was also archived).
-# Existing per-version dates are preserved when present; otherwise left empty (unused — the
-# UI sorts and labels by version, not date).
+# EVERY version — including the live "latest" (--latest-version) — is emitted pointing at its
+# own immutable /vX/ archive path; the entry matching --latest-version just carries latest:true.
+# The loader (versioned-docs.js baseFor) routes the latest entry to the liveRoot for freshness
+# and every other entry to its archive path, so a version keeps a real archive to fall back to
+# the moment it stops being latest (otherwise the demoted entry would alias the now-newer live
+# docs — the dropdown-serves-wrong-version bug). If the latest version has no archive in the
+# bucket yet, it is still emitted as a liveRoot/latest:true fallback so the selector never loses
+# its live option. Existing per-version dates are preserved when present; otherwise left empty
+# (unused — the UI sorts and labels by version, not date).
 #
 # Usage:
 #   rebuild-manifest.sh --tool pulumi-cli --bucket pulumi-docs-versioned-testing \
@@ -61,9 +66,9 @@ versions_json="$(printf '%s\n' "${ARCHIVES[@]}" | jq -R 'select(length>0)' | jq 
   --arg latest "$LATEST_VERSION" --arg liveRoot "$LIVE_ROOT" --arg vroot "$VERSIONED_ROOT" \
   --argjson existing "$existing" '
   ( ($existing.versions // []) | map({ (.version): (.date // "") }) | add // {} ) as $dates
-  | ( map(select(. != $latest))
-      | map({ version: ., date: ($dates[.] // ""), path: ($vroot + . + "/"), latest: false }) )
-    + [ { version: $latest, date: ($dates[$latest] // ""), path: $liveRoot, latest: true } ]
+  | ( map({ version: ., date: ($dates[.] // ""), path: ($vroot + . + "/"), latest: (. == $latest) }) ) as $entries
+  | ( if ($entries | any(.version == $latest)) then $entries
+      else $entries + [ { version: $latest, date: ($dates[$latest] // ""), path: $liveRoot, latest: true } ] end )
   | sort_by(.version | ltrimstr("v") | (try (split(".") | map(tonumber)) catch [.])) | reverse
 ')"
 
