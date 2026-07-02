@@ -37,7 +37,36 @@ Customer-Managed Workflow Runners support all the [deployment triggers](/docs/de
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
 {{% /notes %}}
 
-To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply credentials to runners and the full configuration reference.
+To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how the two deploy targets execute jobs, how to supply credentials to runners, and the full configuration reference.
+
+## How Docker and Kubernetes deploy targets execute jobs
+
+The `deploy_target` setting controls how a workflow runner turns a claimed job into a running process, and the choice has real consequences for isolation, operational overhead, and how the runner fits into infrastructure you already operate.
+
+### Docker deploy target
+
+With `deploy_target: docker`, the workflow runner is a long-running process — typically installed on a virtual machine or bare-metal host — that talks to a Docker daemon over the local Docker socket. When the runner claims a job, it launches a dedicated runner container from the `workflow-runner-embeddable` image to execute that job's Pulumi program, then removes the container once the job finishes.
+
+Because the runner needs to create and manage containers, it needs a Docker daemon to talk to. Installing the runner directly on a host that already runs Docker is the straightforward path: the runner uses that host's daemon directly, and no additional privileges are required beyond Docker access itself. If you instead run the workflow runner process inside its own container — for example, as part of a container orchestrator other than Kubernetes — that container needs a way to create sibling containers on the host. The common patterns are mounting the host's Docker socket into the runner's container (docker-outside-of-docker) or giving the runner container its own nested Docker daemon (Docker-in-Docker, or DinD). Both require the runner's container to run with elevated privileges relative to a typical application container, which is a meaningful part of the security posture you're taking on when self-hosting on Docker outside of Kubernetes.
+
+### Kubernetes deploy target
+
+With `deploy_target: kubernetes`, the workflow runner runs as a Kubernetes Deployment in your cluster, using the in-cluster Kubernetes API rather than a Docker socket. When the runner claims a job, it creates a Pod — scoped to run that single job's Pulumi program — through the Kubernetes API, and the cluster garbage-collects the Pod once the job completes.
+
+This model doesn't require Docker-in-Docker or privileged containers: the runner needs only the RBAC permissions to create and watch Pods in its namespace, which is the same permission model any Kubernetes controller uses. It also composes naturally with the `single_run: true` and Job/CronJob patterns described in [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency), since Kubernetes is already designed to schedule one-shot workloads and clean up after them.
+
+### Choosing between the two
+
+Both deploy targets enforce the same 1:1 relationship between a running runner process and the job it's currently executing — a runner claims one job, runs it to completion (or failure), and only then becomes available to claim another. That relationship, and how it affects concurrency, is covered in [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency). Where the two deploy targets differ is in how much isolation you get by default and how much operational machinery you need to run them:
+
+| | Docker | Kubernetes |
+|---|---|---|
+| Isolation model | Runner containers share the host's Docker daemon; running the runner itself in a container typically requires a mounted Docker socket or DinD | Pods are created and cleaned up through the Kubernetes API; no Docker socket or privileged containers needed |
+| Privileged access | Required if the runner process itself runs in a container | Not required; standard Pod-creation RBAC only |
+| Best fit | Hosts or VMs where you don't already operate Kubernetes | Environments where you already run Kubernetes and want workflows to use existing cluster capacity, autoscaling, and RBAC |
+| Ephemeral (one-shot) runners | Achievable with `single_run: true` plus your own process supervisor | Achievable with `single_run: true` plus a native Kubernetes `Job` or `CronJob` |
+
+If you're already running Kubernetes, the Kubernetes deploy target is usually the better default: it avoids the privileged-access trade-offs of Docker-in-Docker and lets you reuse your cluster's existing scheduling, autoscaling, and RBAC rather than layering new host-level infrastructure on top. Reserve the Docker deploy target for hosts where a Kubernetes cluster isn't the reality you're deploying into.
 
 ## Providing credentials to workflow runners
 
