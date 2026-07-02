@@ -269,7 +269,7 @@ To confirm dependency caching is working and/or to troubleshoot, check out logs 
 
 By default, there are a set of environment variables set by the process automatically:
 
-- `GITHUB_TOKEN`: Personal Access Token configured when the source is GitHub (unless there is a token configured by the custom environment variables)
+- `GITHUB_TOKEN`: A GitHub access token, set automatically when the deployment's source is a GitHub repository. When the source is connected through the [Pulumi GitHub App](/docs/integrations/version-control/github-app/#github-token-in-deployments), this is a short-lived app installation token scoped to your whole GitHub App installation, not just the source repository; when you configure the source with your own personal access token, that token is used instead. Not set if you provide your own `GITHUB_TOKEN` through custom environment variables. See [GitHub token in deployments](/docs/integrations/version-control/github-app/#github-token-in-deployments) for scope and security details.
 - `PULUMI_ACCESS_TOKEN`: A temporary token with read-write access only to the stack being deployed.
 - `PULUMI_DEPLOY_OIDC_CONFIG`: OIDC configuration provided for the cloud integrations
 - `PULUMI_CI_SYSTEM`: "Pulumi Deployments"
