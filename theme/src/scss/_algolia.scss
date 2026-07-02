@@ -159,9 +159,11 @@
                 @apply text-xs text-gray-800 leading-relaxed;
             }
 
-            // The blog post publish date.
+            // The blog post publish date. It sits just under the title (which supplies the small
+            // gap above), with a larger gap below so it reads as part of the title, not the summary.
             .date {
-                @apply text-xs text-gray-600 mt-1;
+                @apply text-gray-600 -mt-2 mb-3;
+                font-size: 0.6875rem; // 11px — a touch smaller than the description
             }
         }
     }

@@ -243,12 +243,12 @@ function initAutocomplete(el: HTMLElement) {
                                             ${ labelForTag(item.section) }
                                         </span>
                                     </div>
-                                    <div class="description">
-                                        ${ item.description !== "" && components.Highlight({ hit: item, attribute: "description" }) }
-                                    </div>
                                     ${ item.date
                                         ? html`<div class="date">${ item.date }</div>`
                                         : "" }
+                                    <div class="description">
+                                        ${ item.description !== "" && components.Highlight({ hit: item, attribute: "description" }) }
+                                    </div>
                                 </div>
                             </a>
                         </div>
