@@ -57,7 +57,7 @@ This model doesn't require Docker-in-Docker or privileged containers: the runner
 
 ### Choosing between the two
 
-Both deploy targets enforce the same 1:1 relationship between a running runner process and the job it's currently executing — a runner claims one job, runs it to completion (or failure), and only then becomes available to claim another. That relationship, and how it affects concurrency, is covered in [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency). Where the two deploy targets differ is in how much isolation you get by default and how much operational machinery you need to run them:
+Both deploy targets share the same concurrency model: a runner process runs one deployment at a time — optionally alongside a single Insights scan or policy evaluation — and only claims its next deployment once the current one finishes (or fails). How that affects capacity planning is covered in [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency). Where the two deploy targets differ is in how much isolation you get by default and how much operational machinery you need to run them:
 
 | | Docker | Kubernetes |
 |---|---|---|
@@ -66,7 +66,7 @@ Both deploy targets enforce the same 1:1 relationship between a running runner p
 | Best fit | Hosts or VMs where you don't already operate Kubernetes | Environments where you already run Kubernetes and want workflows to use existing cluster capacity, autoscaling, and RBAC |
 | Ephemeral (one-shot) runners | Achievable with `single_run: true` plus your own process supervisor | Achievable with `single_run: true` plus a native Kubernetes `Job` or `CronJob` |
 
-If you're already running Kubernetes, the Kubernetes deploy target is usually the better default: it avoids the privileged-access trade-offs of Docker-in-Docker and lets you reuse your cluster's existing scheduling, autoscaling, and RBAC rather than layering new host-level infrastructure on top. Reserve the Docker deploy target for hosts where a Kubernetes cluster isn't the reality you're deploying into.
+If you're already running Kubernetes, the Kubernetes deploy target is the better default: it avoids the privileged-access trade-offs of Docker-in-Docker and lets you reuse your cluster's existing scheduling, autoscaling, and RBAC rather than layering new host-level infrastructure on top. Reserve the Docker deploy target for hosts where a Kubernetes cluster isn't the reality you're deploying into.
 
 ## Providing credentials to workflow runners
 
