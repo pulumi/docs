@@ -26,13 +26,13 @@ Agent Skills are reusable knowledge packages that teach AI coding assistants dom
 - [Google Gemini](https://geminicli.com/)
 - [JetBrains Junie](https://www.jetbrains.com/junie/)
 
-## Agent Skills in Neo
+## How Neo uses Agent Skills
 
 Neo is an Agent Skills client. It ships with the Pulumi Agent Skills catalog built in (the same skills published in [pulumi/agent-skills](https://github.com/pulumi/agent-skills)).
 
 Neo follows the [agentskills.io](https://agentskills.io) standard: it discovers each skill's `SKILL.md` and loads relevant skills automatically when a task calls for them, so you never need to name a skill yourself.
 
-There is nothing to install or configure. The catalog updates with each Neo release. To add or improve a skill, contribute to the [agent-skills repository](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md); accepted skills work in Neo and in every other assistant that supports the standard.
+You don't need to install or configure anything. The catalog updates with each Neo release. To add or improve a skill, contribute to the [agent-skills repository](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md); accepted skills work in Neo and in every other assistant that supports the standard.
 
 ## Available Skills
 
