@@ -49,7 +49,9 @@ const genericImage = once(() =>
   fileToImage(join(ASSET_DIR, "blog-generic.png"), { fit: false }))
 
 const LEFT = 90 // left margin (matches the retired composite)
-const TITLE_TOP = 64
+const TOP_PAD = 64 // top padding (mirrors the left margin)
+const LOGO_MARGIN = 40 // wordmark distance from the bottom edge
+const LOGO_TOP = CANVAS_H - LOGO_H - LOGO_MARGIN // 544
 const TITLE_BOX_W = 700
 const TITLE_BOX_H = 380
 
@@ -79,10 +81,11 @@ export async function blogTree(fields) {
     img ? h("img", { src: img.uri, width: dispW, height: CANVAS_H, style: { position: "absolute", top: 0, left, width: dispW, height: CANVAS_H } }) : null,
     // Gradient scrim.
     h("div", { style: { position: "absolute", top: 0, left: 0, width: CANVAS_W, height: CANVAS_H, display: "flex", backgroundImage: SCRIM } }),
-    // Left column: "Blog" badge + fitted title.
-    h("div", { style: { position: "absolute", top: TITLE_TOP, left: LEFT, width: TITLE_BOX_W, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 24 } },
+    // Left column: "Blog" badge + fitted title, vertically centered as a group
+    // in the band between the top padding and the Pulumi wordmark below.
+    h("div", { style: { position: "absolute", top: TOP_PAD, left: LEFT, width: TITLE_BOX_W, height: LOGO_TOP - TOP_PAD, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "flex-start", gap: 24 } },
       badge("Blog", C.badgeBg, C.badgeFg),
       h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), color: C.title, width: TITLE_BOX_W } }, titleStr)),
     // Pulumi wordmark, bottom-left.
-    h("img", { src: LOGO, width: LOGO_W, height: LOGO_H, style: { position: "absolute", top: CANVAS_H - LOGO_H - 40, left: LEFT, width: LOGO_W, height: LOGO_H } }))
+    h("img", { src: LOGO, width: LOGO_W, height: LOGO_H, style: { position: "absolute", top: LOGO_TOP, left: LEFT, width: LOGO_W, height: LOGO_H } }))
 }
