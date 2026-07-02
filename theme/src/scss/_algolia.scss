@@ -158,6 +158,11 @@
             .description {
                 @apply text-xs text-gray-800 leading-relaxed;
             }
+
+            // The blog post publish date.
+            .date {
+                @apply text-xs text-gray-600 mt-1;
+            }
         }
     }
 
