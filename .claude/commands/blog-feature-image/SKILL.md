@@ -196,6 +196,13 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 No `uv sync` is needed — the script has inline PEP 723 metadata declaring its own dependencies (`cairosvg`, `pillow`, `pyyaml`), so `uv run` handles installation automatically.
 
+`cairosvg` rasterizes the logo SVGs and needs the **native `libcairo`** library (a system package, not a pip dep). The script auto-locates Homebrew's copy on macOS, so a plain `uv run` normally just works. If you still see `no library called "cairo" was found`, install it:
+
+```bash
+brew install cairo        # macOS
+# apt-get install libcairo2 # Debian/Ubuntu
+```
+
 ### Rendering
 
 Render the feature image. Skip if the user provided a custom image.

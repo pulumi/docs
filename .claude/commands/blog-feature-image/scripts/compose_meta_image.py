@@ -24,6 +24,49 @@ import subprocess
 from io import BytesIO
 from pathlib import Path
 
+
+def _ensure_cairo():
+    """Make the native libcairo discoverable before importing cairosvg.
+
+    cairosvg (via cairocffi) dlopen()s the system libcairo *by leaf name*, which
+    Homebrew installs outside the default dylib search path on macOS — so a bare
+    `uv run` fails with a cryptic 'no library called "cairo" was found'. dyld
+    only reads DYLD_FALLBACK_LIBRARY_PATH at process launch, so if cairo isn't
+    already discoverable we set that var to the Homebrew lib dir and re-exec once
+    (guarded against a loop). Callers no longer need to set it themselves.
+    """
+    import ctypes.util
+    import glob
+    import os
+    import sys
+
+    if ctypes.util.find_library("cairo") or os.environ.get("_CAIRO_REEXEC"):
+        return
+    if sys.platform != "darwin":
+        return  # Linux/Windows rely on the normal loader search paths
+
+    libdirs = []
+    for pat in (
+        "/opt/homebrew/lib/libcairo.2.dylib",
+        "/usr/local/lib/libcairo.2.dylib",
+        "/opt/homebrew/Cellar/cairo/*/lib/libcairo.2.dylib",
+        "/usr/local/Cellar/cairo/*/lib/libcairo.2.dylib",
+    ):
+        for f in glob.glob(pat):
+            libdirs.append(os.path.dirname(f))
+    if not libdirs:
+        return  # nothing to add; let the import fail with its own message
+
+    existing = os.environ.get("DYLD_FALLBACK_LIBRARY_PATH", "")
+    os.environ["DYLD_FALLBACK_LIBRARY_PATH"] = os.pathsep.join(
+        dict.fromkeys([*libdirs, *(p for p in existing.split(os.pathsep) if p)])
+    )
+    os.environ["_CAIRO_REEXEC"] = "1"
+    os.execv(sys.executable, [sys.executable, *sys.argv])
+
+
+_ensure_cairo()
+
 import cairosvg
 import numpy as np
 import yaml
