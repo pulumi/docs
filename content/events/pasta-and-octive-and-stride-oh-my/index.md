@@ -2,6 +2,8 @@
 # Name of the event.
 title: "PASTA and OCTIVE and STRIDE, Oh My!"
 meta_desc: Learn how the Threat Modeling Manifesto serves as a guide to define or tailor a methodology that fits enhances software development rather than holding it up.
+meta_image: /events/pasta-and-octive-and-stride-oh-my/meta.png
+meta_image_square: /events/pasta-and-octive-and-stride-oh-my/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Software Engineering in Infrastructure Engineering"
 meta_desc: In this talk, you will go through how to use the software engineering process to solve this infrastructure engineering problem.
+meta_image: /events/software-engineering-in-infrastructure-engineering/meta.png
+meta_image_square: /events/software-engineering-in-infrastructure-engineering/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

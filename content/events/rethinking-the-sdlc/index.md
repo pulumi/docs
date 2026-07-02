@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Rethinking the SDLC"
 meta_desc: "This talk introduces this new model and discusses the need for how we talk about software to match the experience of development."
+meta_image: /events/rethinking-the-sdlc/meta.png
+meta_image_square: /events/rethinking-the-sdlc/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

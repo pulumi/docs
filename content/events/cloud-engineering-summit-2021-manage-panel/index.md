@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Manage Panel Discussion"
 meta_desc: Join Ell Marquez, Niall Murphy, Jeff Smith, and Sasha Rosenbaum as they discuss topics related to Cloud Engineering.
+meta_image: /events/cloud-engineering-summit-2021-manage-panel/meta.png
+meta_image_square: /events/cloud-engineering-summit-2021-manage-panel/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

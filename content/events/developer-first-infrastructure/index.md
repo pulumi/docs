@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Developer-First Infrastructure"
 meta_desc: Listen in as Joe Duffy leads a talk about Cloud Engineering with special guests Ken Exner and Luke Hoban.
+meta_image: /events/developer-first-infrastructure/meta.png
+meta_image_square: /events/developer-first-infrastructure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

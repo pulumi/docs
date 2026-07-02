@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Build Panel Discussion"
 meta_desc: Join Wesley Faulkner, Ellen Körbes, Rizel Scarlett, and Paul Czarkowski as they discuss a variety of topics related to Cloud Engineering.
+meta_image: /events/cloud-engineering-summit-2021-build-panel/meta.png
+meta_image_square: /events/cloud-engineering-summit-2021-build-panel/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

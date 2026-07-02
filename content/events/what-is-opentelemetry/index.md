@@ -2,6 +2,8 @@
 # Name of the event.
 title: "What is OpenTelemetry?"
 meta_desc: In this session you will learn how OpenTelemetry helps you understand your distributed system and the performance of individual services within it.
+meta_image: /events/what-is-opentelemetry/meta.png
+meta_image_square: /events/what-is-opentelemetry/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

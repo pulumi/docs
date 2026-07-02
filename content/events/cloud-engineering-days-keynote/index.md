@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Keynote with Pulumi Founder/CEO and CTO"
 meta_desc: Joe Duffy and Luke Hoban kick off Cloud Engineering Days with exciting new Pulumi announcements.
+meta_image: /events/cloud-engineering-days-keynote/meta.png
+meta_image_square: /events/cloud-engineering-days-keynote/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

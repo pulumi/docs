@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Get Started with Infrastructure as Code on Azure with Java
 meta_desc: Learn the basics of Azure and Pulumi with a hands-on lab that will take you from deploying a simple static website to deploying a Spring Boot application.
-meta_image: /images/get-started-azure-with-java.png
+meta_image: /events/getting-started-infrascructure-as-code-azure-java/meta.png
+meta_image_square: /events/getting-started-infrascructure-as-code-azure-java/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

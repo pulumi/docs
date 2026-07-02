@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Advanced Infrastructure as Code - Workshop with Luke Hoban
 meta_desc: In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing
-meta_image:
+meta_image: /events/advanced-infrastructure-as-code-workshop-with-luke-hoban/meta.png
+meta_image_square: /events/advanced-infrastructure-as-code-workshop-with-luke-hoban/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

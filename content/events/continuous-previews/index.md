@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Continuous Previews"
 meta_desc: Attendees will leave this session ready to take control of their development process in ways they may not have known were possible.
+meta_image: /events/continuous-previews/meta.png
+meta_image_square: /events/continuous-previews/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

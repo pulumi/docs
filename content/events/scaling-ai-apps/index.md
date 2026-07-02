@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Scaling AI Apps
 meta_desc: How do you build and scale the infrastructure and service architectures for AI apps?
-meta_image: /images/resources/scaling-ai-apps.png
+meta_image: /events/scaling-ai-apps/meta.png
+meta_image_square: /events/scaling-ai-apps/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

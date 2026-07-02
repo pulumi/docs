@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Platform Engineering: Zero to Scale"
 meta_desc: Watch the webinar with a 7-step guide to plan, implement, and support your organization's adoption of platform engineering best practices.
-meta_image:
+meta_image: /events/platform-engineering-from-setup-to-scale/meta.png
+meta_image_square: /events/platform-engineering-from-setup-to-scale/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

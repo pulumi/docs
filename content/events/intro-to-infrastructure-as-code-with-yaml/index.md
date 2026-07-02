@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Intro to Infrastructure as Code with YAML
 meta_desc: Learn the fundamentals of Infrastructure as Code (IaC) with Pulumi, using Docker, and YAML. Build and deploy a full stack app. Source code available.
-meta_image:
+meta_image: /events/intro-to-infrastructure-as-code-with-yaml/meta.png
+meta_image_square: /events/intro-to-infrastructure-as-code-with-yaml/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

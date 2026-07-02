@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Cloud Automation: AWS and Pulumi’s Path to Intelligent Ops"
 meta_desc: Join Pulumi and AWS for a discussion on how next-generation AI capabilities are transforming infrastructure operations.
-meta_image: /events/cloud-automation-intelligent-ops/aws-webinar-big-aligned.png
+meta_image: /events/cloud-automation-intelligent-ops/meta.png
+meta_image_square: /events/cloud-automation-intelligent-ops/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

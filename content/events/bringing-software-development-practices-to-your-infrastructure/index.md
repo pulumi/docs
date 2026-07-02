@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Bringing software development practices to infrastructure"
 meta_desc: Learn how to use practices from software development like test driven development and CI/CD to manage complexity at each stage of cloud development.
+meta_image: /events/bringing-software-development-practices-to-your-infrastructure/meta.png
+meta_image_square: /events/bringing-software-development-practices-to-your-infrastructure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

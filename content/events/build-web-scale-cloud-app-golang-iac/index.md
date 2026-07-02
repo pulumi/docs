@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Building Web-Scale Cloud Applications with Go and IaC
 meta_desc: Learn to use Go and Pulumi in building robust, web-scale cloud applications.
-meta_image: /images/resources/web-scale-cloud-app-golang-iac_engin.png
+meta_image: /events/build-web-scale-cloud-app-golang-iac/meta.png
+meta_image_square: /events/build-web-scale-cloud-app-golang-iac/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

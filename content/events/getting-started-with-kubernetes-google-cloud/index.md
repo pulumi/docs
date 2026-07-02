@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Google Cloud
 meta_desc: Learn how Kubernetes runs on Google Cloud using GKE. Create clusters, deploy applications, and manage Kubernetes infrastructure with Pulumi.
-meta_image: /events/getting-started-with-kubernetes-google-cloud/intro-google-cloud-gke-engin.png
+meta_image: /events/getting-started-with-kubernetes-google-cloud/meta.png
+meta_image_square: /events/getting-started-with-kubernetes-google-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Deploying LLMs on GKE with NVIDIA GPUs & Google Cloud
 meta_desc: Deploy a Mixtral 8x7B LLM on GKE with NVIDIA GPUs using Pulumi and Python. Learn to build scalable, GPU-enabled AI workloads on Google Cloud.
-meta_image: /events/deploying-llms-gke-pulumi/llms-google-cloud-nvidia-kubernetes.png
+meta_image: /events/deploying-llms-gke-pulumi/meta.png
+meta_image_square: /events/deploying-llms-gke-pulumi/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

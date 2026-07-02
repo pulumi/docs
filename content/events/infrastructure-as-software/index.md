@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Infrastructure as Software"
 meta_desc: Let's put the Dev back in DevOps and talk about why Turing complete config management is an antipattern.
+meta_image: /events/infrastructure-as-software/meta.png
+meta_image_square: /events/infrastructure-as-software/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

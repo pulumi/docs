@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Self-Service & AI Agents for Developer Productivity"
 meta_desc:  Learn how to build self-service developer platforms using Pulumi's AI agent, templates, and automation for Kubernetes and DigitalOcean deployments.
-meta_image:
+meta_image: /events/self-service-enabling-developer-productivity/meta.png
+meta_image_square: /events/self-service-enabling-developer-productivity/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

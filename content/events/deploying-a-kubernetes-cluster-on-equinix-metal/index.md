@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Deploying a Kubernetes Cluster on Equinix Metal
 meta_desc: In this code-centric session, you will learn how to manage Equinix Metal resources using Pulumi and the new Equinix Pulumi provider.
-meta_image: /images/resources/kubernetes-cluster-equinix-metal-oscar.png
+meta_image: /events/deploying-a-kubernetes-cluster-on-equinix-metal/meta.png
+meta_image_square: /events/deploying-a-kubernetes-cluster-on-equinix-metal/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,6 +2,8 @@
 # Name of the event.
 title: "The Future Should Be Uneven"
 meta_desc: Let's talk about how we can provide more power to users to customize, configure, streamline, and understand what they are getting from us.
+meta_image: /events/the-future-should-be-uneven/meta.png
+meta_image_square: /events/the-future-should-be-uneven/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

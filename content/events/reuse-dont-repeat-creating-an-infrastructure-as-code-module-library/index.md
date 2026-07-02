@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Reuse Don't Repeat, Creating an IaC Library"
 meta_desc: In this session you'll gain an understanding on the benefits of creating reusable modules, what sort of modules you can create, how to go about creating them.
+meta_image: /events/reuse-dont-repeat-creating-an-infrastructure-as-code-module-library/meta.png
+meta_image_square: /events/reuse-dont-repeat-creating-an-infrastructure-as-code-module-library/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

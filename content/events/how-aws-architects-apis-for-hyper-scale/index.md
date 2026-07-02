@@ -2,6 +2,8 @@
 # Name of the event.
 title: "How AWS architects APIs for hyper scale"
 meta_desc: In this session, we will introduce how we took Cloud Control API from concept to launch and the culture and technical changes instituted internally.
+meta_image: /events/how-aws-architects-apis-for-hyper-scale/meta.png
+meta_image_square: /events/how-aws-architects-apis-for-hyper-scale/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

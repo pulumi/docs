@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Getting Started with Infrastructure Agents"
 meta_desc: Learn to add intelligent automation to infrastructure workflows with proper controls and human oversight.
-meta_image: /images/resources/get-started-ai-agent.png
+meta_image: /events/getting-started-with-infrastructure-agents/meta.png
+meta_image_square: /events/getting-started-with-infrastructure-agents/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

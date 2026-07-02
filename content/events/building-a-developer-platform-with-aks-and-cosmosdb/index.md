@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Building a Developer Platform with AKS and Cosmos DB
 meta_desc: Set up a platform that includes Azure Kubernetes Service (AKS) with storage by Azure Cosmos DB with API support for MongoDB – using Python and Pulumi.
-meta_image: 
+meta_image: /events/building-a-developer-platform-with-aks-and-cosmosdb/meta.png
+meta_image_square: /events/building-a-developer-platform-with-aks-and-cosmosdb/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

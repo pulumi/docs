@@ -61,6 +61,33 @@ reads best.
 | docker | `docker.svg` | ⚠️ | glyph only |
 | datadog | `datadog.svg` | ⚠️ | glyph only |
 | databricks | `databricks.svg` | ⚠️ | glyph only |
+| apple | `apple.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| bridgecrew | `bridgecrew.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| centro | `centro.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| circleci | `circleci.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| clear | `clear.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| codefresh | `codefresh.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| digitalocean | `digitalocean.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| duckbill-group | `duckbill-group.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| equinix | `equinix.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| fauna | `fauna.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| github (wordmark PNG) | `github.png` | ✅ | Invertocat + "GitHub", transparent PNG; supersedes the `github.svg` glyph on event cards |
+| gremlin | `gremlin.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| ibm | `ibm.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| modivcare | `modivcare.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| netflix | `netflix.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| panther | `panther.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| red-hat | `red-hat.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| redis | `redis.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| sokkel | `sokkel.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| split | `split.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| system-initiative | `system-initiative.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| tilt | `tilt.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| tivity-health | `tivity-health.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| twilio | `twilio.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| whylabs | `whylabs.svg` | ✅ | used on committed event cards (2026-07 migration) |
+| winglang | `winglang.png` | ✅ | transparent PNG; used on committed event cards (2026-07 migration) |
+| wiz | `wiz.svg` | ✅ | used on committed event cards (2026-07 migration) |
 
 The ⚠️ glyph-only seeds are starting points — prefer fetching the wordmark
 version (per the two hard rules above) and updating the row when you do.

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Infrastructure as Code on Google Cloud
 meta_desc: Workshop on infrastructure as code for Google Cloud, showing how to define, deploy, and manage GCP resources using general-purpose programming languages.
-meta_image: /images/resources/getting-started-iac-google-josh-jay.png
+meta_image: /events/infrastructure-as-code-google-cloud/meta.png
+meta_image_square: /events/infrastructure-as-code-google-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

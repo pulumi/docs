@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Learn Azure Infrastructure with C#"
 meta_desc: Learn how to build and manage Azure infrastructure using C# and Pulumi. A better alternative to ARM templates with full .NET support.
-meta_image:
+meta_image: /events/intro-to-iac-azure/meta.png
+meta_image_square: /events/intro-to-iac-azure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

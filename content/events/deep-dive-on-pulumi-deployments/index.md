@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Deep Dive on Pulumi Deployments"
 meta_desc: Meagan Cojocar and Bryce Lampe introduce Pulumi Deployments and other features.
+meta_image: /events/deep-dive-on-pulumi-deployments/meta.png
+meta_image_square: /events/deep-dive-on-pulumi-deployments/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

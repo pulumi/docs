@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Building with Containers on Azure
 meta_desc: Explore more about building up a containerized microservices architecture on Azure using infrastructure as code and cloud engineering principles.
-meta_image:
+meta_image: /events/building-containers-azure/meta.png
+meta_image_square: /events/building-containers-azure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

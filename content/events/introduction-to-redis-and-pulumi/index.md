@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Introduction to Redis Cloud and Pulumi
 meta_desc: Join the Redis and Pulumi team to learn how to deploy Redis Cloud resources on any cloud using any programming language with Pulumi.
-meta_image: /images/resources/intro-redis-workshop.png
+meta_image: /events/introduction-to-redis-and-pulumi/meta.png
+meta_image_square: /events/introduction-to-redis-and-pulumi/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

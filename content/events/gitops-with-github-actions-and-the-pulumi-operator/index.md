@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: GitOps with GitHub Actions and the Pulumi Operator
 meta_desc: In this workshop you will learn how to implement powerful GitHub Action workflows using Pulumi and the Pulumi Kubernetes Operator.
-meta_image:
+meta_image: /events/gitops-with-github-actions-and-the-pulumi-operator/meta.png
+meta_image_square: /events/gitops-with-github-actions-and-the-pulumi-operator/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

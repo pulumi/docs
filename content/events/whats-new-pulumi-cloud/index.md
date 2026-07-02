@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: What's New in Pulumi
 meta_desc: Explore the latest features and updates in Pulumi, and learn how these enhancements can streamline your cloud infrastructure management.
-meta_image: /images/resources/whats-new-feb2024-video.png
+meta_image: /events/whats-new-pulumi-cloud/meta.png
+meta_image_square: /events/whats-new-pulumi-cloud/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: PulumiUP 2024 Keynote
 meta_desc: Watch PulumiUP 2024's keynote. Pulumi's co-founder and CEO shared insights into the company's current landscape and future direction
-meta_image:
+meta_image: /events/pulumiup-2024-keynote/meta.png
+meta_image_square: /events/pulumiup-2024-keynote/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

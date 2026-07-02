@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Introduction to AWS in TypeScript
 meta_desc: Join this workshop to learn how to set up a successful Infrastructure as Code in TypeScript to provision and manage AWS at scale, using Pulumi.
-meta_image: /images/resources/intro-aws-typescript-diana-marina.png
+meta_image: /events/intro-to-aws-typescript/meta.png
+meta_image_square: /events/intro-to-aws-typescript/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

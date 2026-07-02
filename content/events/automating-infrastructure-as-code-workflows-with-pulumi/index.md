@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Automating Infrastructure as Code Workflows
 meta_desc: Join Laura Santamaria in this workshop to explore how to use Pulumi's Automation API to work with Pulumi programmatically.
-meta_image:
+meta_image: /events/automating-infrastructure-as-code-workflows-with-pulumi/meta.png
+meta_image_square: /events/automating-infrastructure-as-code-workflows-with-pulumi/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

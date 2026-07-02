@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: From Infrastructure Engineering to Platform Engineering
 meta_desc: In this expert panel, learn how teams at CLEAR, Modivcare, and Sokkel built internal developer platforms and evolved from infrastructure to platform engineering
-meta_image: /images/pulumiup/2025-panel-meta.png
+meta_image: /events/from-infrastructure-engineering-to-platform-engineering/meta.png
+meta_image_square: /events/from-infrastructure-engineering-to-platform-engineering/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

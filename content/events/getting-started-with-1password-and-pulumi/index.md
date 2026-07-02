@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with 1Password and Pulumi
 meta_desc: Join us for a hands-on lab showing you how to integrate 1Password into your Pulumi workflow.
-meta_image: /images/resources/1password-pulumi-jilian.png
+meta_image: /events/getting-started-with-1password-and-pulumi/meta.png
+meta_image_square: /events/getting-started-with-1password-and-pulumi/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

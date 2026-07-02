@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: GitOps with Pulumi and Codefresh
 meta_desc: Learn how Pulumi’s infrastructure as code platform and Codefresh make it easy to manage infrastructure code as part of your continuous delivery process.
-meta_image:
+meta_image: /events/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/meta.png
+meta_image_square: /events/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

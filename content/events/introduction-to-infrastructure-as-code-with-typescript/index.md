@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Intro to Infrastructure as Code with TypeScript
 meta_desc: Learn the fundamentals of Infrastructure as Code (IaC) with Pulumi, using Docker, and TypeScript. Build and deploy a full stack app. Source code available.
-meta_image:
+meta_image: /events/introduction-to-infrastructure-as-code-with-typescript/meta.png
+meta_image_square: /events/introduction-to-infrastructure-as-code-with-typescript/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

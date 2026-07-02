@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Trailblazers: exploration, discovery, & navigating failure"
 meta_desc: In this session, you’ll see what we can learn from trailblazers and how adopting techniques for exploration can help us build more reliable systems.
+meta_image: /events/trailblazers-exploration-discovery-and-navigating-failure/meta.png
+meta_image_square: /events/trailblazers-exploration-discovery-and-navigating-failure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Infrastructure as Code on AWS
 meta_desc: This workshop is designed to help new users become familiar with the core concepts needed to effectively deploy resources on AWS using Pulumi.
-meta_image: /images/resources/getting-started-aws-kat.png
+meta_image: /events/getting-started-with-iac-pulumi-aws/meta.png
+meta_image_square: /events/getting-started-with-iac-pulumi-aws/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
