@@ -14,7 +14,7 @@ aliases:
   - /docs/insights/get-started/account-management/
 ---
 
-Now that you have created a new account you can click on the **Accounts** page to see a list of all your created accounts, the last update and number of resources discovered.
+Now that you have created a new account you can select the **Accounts** page to see a list of all your created accounts, the last update and number of resources discovered.
 
 ## View accounts
 
@@ -32,11 +32,11 @@ For a detailed explanation and more examples of how child accounts and hierarchi
 
 ## Manage accounts
 
-You can manage each by selecting your desired account, where you can see the provider summary, status and history of all scans.  This is where you can select the action to manually **Scan** or **Delete Account**.
+You can manage each by selecting your desired account, where you can see the provider summary, status and history of all scans. This is where you can select the action to manually **Scan** or **Delete Account**.
 
 Let's kick off the scan for the new account you created.
 
-After you select the `insights-aws-account` account, click on the **Actions** drop-down, choose the **Scan** action, and click the **Scan** button.
+After you select the `insights-aws-account` account, select the **Actions** drop-down, choose the **Scan** action, and select the **Scan** button.
 
 ## View account discovery progress
 
