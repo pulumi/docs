@@ -19,6 +19,9 @@
 //     sub-pages, title + description.
 //   - "case-study" — LIGHT co-branded card: Pulumi + customer logo lockup with a
 //     right-aligned "CASE STUDY" badge and a large title (case-studies).
+//   - "events"     — per-size event / workshop card (see meta-images/events.mjs).
+//   - "blog"       — DARK blog-post card: the post's feature image bled off the
+//     right, faded into the field, with a "Blog" badge + title (meta-images/blog.mjs).
 //
 // Usage:
 //   node scripts/generate-meta-images.mjs            # render changed cards (the build step)
@@ -37,6 +40,7 @@ import {
   badge, intrinsicSize, svgDataUri, loadFonts, titleFont,
 } from "./meta-images/lib.mjs"
 import { eventsTree, eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
+import { blogTree } from "./meta-images/blog.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
@@ -208,6 +212,37 @@ const SECTIONS = [
     fields: (fm, id) => (id === "events" ? { title: clean(fm.title) } : eventFieldsFromFrontmatter(fm, id)),
     valid: (f) => !!f.title,
   },
+  {
+    // Blog-post cards (content/blog/<slug>/index.md leaf bundles). Each post's
+    // feature_image is pinned to the right and faded into the dark field by the
+    // blog template; posts with none get a generic art plate. Non-post pages
+    // under blog/ (tag.md, series.md) get a generic card too; blog/_index.md
+    // keeps its committed meta_image and is skipped. A page-level meta_image
+    // (custom override) still wins globally, so migrated posts drop theirs.
+    name: "blog",
+    template: "blog",
+    recursive: true,
+    skip: (fm) => fm.draft === true,
+    // One representative card per kind (with vs without a feature image).
+    sampleGroupBy: (id, fields) => (fields.featurePath ? "feature" : "generic"),
+    // featureHash folds the image bytes into the cache key so the card
+    // regenerates when the feature image changes, while keeping the manifest
+    // small (the base64 only exists transiently at render time).
+    fields: (fm, id) => {
+      const title = clean(fm.title)
+      let featurePath = null, featureHash = ""
+      const fi = clean(fm.feature_image)
+      if (fi) {
+        const file = join(CONTENT_DIR, dirname(id), fi.replace(/^\.?\//, ""))
+        if (existsSync(file)) {
+          featurePath = relative(CONTENT_DIR, file).replace(/\\/g, "/")
+          featureHash = createHash("sha1").update(readFileSync(file)).digest("hex")
+        }
+      }
+      return { title, featurePath, featureHash }
+    },
+    valid: (f) => !!f.title,
+  },
 ]
 
 // --- Bundled SVG assets ------------------------------------------------------
@@ -325,6 +360,7 @@ const TEMPLATES = {
   tutorial: (f) => infoTree(f, INFO_LIGHT),
   "case-study": caseStudyTree,
   events: eventsTree,
+  blog: blogTree,
 }
 
 async function renderPng(page, fonts) {
@@ -389,7 +425,7 @@ function listPages() {
       const level = parseInt(process.env.OG_SAMPLE_LEVEL || "0", 10)
       const groups = new Map()
       for (const p of secPages) {
-        const g = sec.sampleGroupBy(p.id)
+        const g = sec.sampleGroupBy(p.id, p.fields)
         if (g == null) continue // excluded from sampling (e.g. a section index)
         if (!groups.has(g)) groups.set(g, [])
         groups.get(g).push(p)
