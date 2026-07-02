@@ -1,6 +1,6 @@
 ---
 title: "Is Kubernetes Infrastructure as Code?"
-meta_desc: "No, not on its own. Kubernetes manifests are declarative config; general-purpose IaC tools like Pulumi provision the cluster and manage workloads as code."
+meta_desc: "Partly. Kubernetes reconciles YAML the way IaC does, but that loop stops at the cluster boundary. Pulumi extends the same model to the infrastructure underneath."
 
 type: what-is
 page_title: "Is Kubernetes Infrastructure as Code?"
@@ -31,21 +31,23 @@ customer_logos:
       - mercedes-benz
 ---
 
-Kubernetes manifests are declarative configuration, not infrastructure as code on their own. Kubernetes reconciles the desired state you describe in YAML, but it doesn't provision the cluster, the cloud networking, or the IAM roles underneath it. True Kubernetes infrastructure as code uses a general-purpose tool like Pulumi or Terraform to provision the cluster and manage its workloads as reviewable, version-controlled code, in the same stack.
+Kubernetes genuinely behaves like infrastructure as code within its own domain: you declare desired state in YAML, and a control loop continuously reconciles the live cluster toward it, correcting drift without being told to. That's the same declarative, convergent model IaC is built on, and it's a big part of why Kubernetes is often held up as the reference implementation of the idea. Where it falls short of infrastructure as code in the fuller, cross-cloud sense is the boundary of what it reconciles: the cluster, its node groups, the VPC it runs in, and the IAM roles behind it all have to exist before Kubernetes's control loop has anything to converge. Extending that same declarative, code-reviewable model to the infrastructure underneath the cluster is what a general-purpose tool like Pulumi or Terraform adds.
 
 ## What is the relationship between Kubernetes and infrastructure as code
 
-Kubernetes and infrastructure as code operate at two different layers, and conflating them is where most of the confusion starts.
+Kubernetes and infrastructure as code share a common mechanism, declarative desired state reconciled by a control loop, but they apply it to different scopes, and the mismatch between those scopes is where most of the friction shows up in practice.
 
-The **configuration layer** is what Kubernetes itself understands: Deployments, Services, ConfigMaps, and other API objects that the cluster's control plane reconciles toward a desired state. The **infrastructure layer** is everything that has to exist before any of that reconciliation can happen: the cluster itself, its node groups, the VPC and subnets it runs in, and the IAM roles that let it talk to the rest of the cloud.
+The **configuration layer** is what Kubernetes itself understands: Deployments, Services, ConfigMaps, and other API objects that the cluster's control plane continuously reconciles toward a desired state, the same way `pulumi up` reconciles a Pulumi program's desired state against the cloud, just scoped to what the Kubernetes API can express. The **infrastructure layer** is everything that has to exist before any of that reconciliation can happen: the cluster itself, its node groups, the VPC and subnets it runs in, and the IAM roles that let it talk to the rest of the cloud. Kubernetes has no built-in way to describe or converge that layer; its reconciliation loop simply doesn't run against it.
 
-The sharpest way to tell the two apart is a single question: **does this tool provision the cluster, or does it assume the cluster already exists?** Kubernetes manifests, Helm charts, and Kustomize overlays all assume a running cluster and an API server to apply against. General-purpose IaC tools like Pulumi and Terraform provision the cluster in the first place, and can go on to manage everything running on it.
+That boundary is also where several practical impedance mismatches show up. Kubernetes has no `pulumi preview`-style plan step that shows what a change will do against live cloud state before it happens; `kubectl apply` reconciles immediately. It has no general-purpose language underneath it, so expressing "one of these per environment" means templating YAML with Helm or patching it with Kustomize rather than writing a loop. And its state is implicit and scattered across live object status in the API server, rather than a single explicit state file or backend a tool like Pulumi can diff, lock, and version end to end.
+
+A useful way to hold both truths at once: **within the Kubernetes API boundary, manifests genuinely are a form of infrastructure as code. Outside that boundary, at the cluster and cloud layer, they aren't, because Kubernetes was never designed to reconcile that layer.** General-purpose IaC tools like Pulumi and Terraform provision the cluster in the first place, and can go on to manage everything running on it, closing that gap rather than replacing what Kubernetes already does well.
 
 ## What's the difference between Kubernetes YAML and infrastructure as code
 
-A Kubernetes manifest is declarative configuration scoped entirely to the Kubernetes API. It has no way to describe the cloud resources the cluster itself depends on, which creates a chicken-and-egg problem: you can't apply a manifest to a cluster that the manifest was supposed to create. The [Kubernetes documentation on declarative configuration](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/) is explicit that `kubectl apply` merges intent against live [object state](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/) inside the cluster; it says nothing about how that cluster came to exist.
+A Kubernetes manifest is genuinely declarative and genuinely reconciled, which is exactly why it's easy to mistake it for the whole of infrastructure as code. What it lacks is everything a general-purpose IaC program adds around that reconciliation: a way to describe the cloud resources the cluster itself depends on (which creates a chicken-and-egg problem, since you can't apply a manifest to a cluster that the manifest was supposed to create), a preview step that shows a diff before anything changes, and general-purpose logic like loops, functions, and conditionals rather than templating YAML by hand. The [Kubernetes documentation on declarative configuration](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/) is explicit that `kubectl apply` merges intent against live [object state](https://kubernetes.io/docs/concepts/overview/working-with-objects/object-management/) inside the cluster; it says nothing about how that cluster came to exist, because that's outside the scope Kubernetes was built to reconcile.
 
-General-purpose infrastructure as code closes that gap. Because Pulumi programs are written in real languages (TypeScript, Python, Go, C#, Java), they get everything a manifest can't offer: `pulumi preview` shows a diff before anything changes, loops and functions express repeated patterns without copy-pasting YAML, and the same testing and packaging tools your application code already uses apply to your infrastructure code too.
+General-purpose infrastructure as code closes that gap rather than competing with what Kubernetes already does well. Because Pulumi programs are written in real languages (TypeScript, Python, Go, C#, Java), they extend the same declarative, convergent model past the Kubernetes API boundary: `pulumi preview` shows a diff before anything changes, loops and functions express repeated patterns without copy-pasting YAML, and the same testing and packaging tools your application code already uses apply to your infrastructure code too.
 
 ## Can you manage Kubernetes with Pulumi
 
@@ -140,7 +142,7 @@ The difference is in how you write and evolve that code. Pulumi programs are Typ
 
 ### Is a Kubernetes YAML manifest infrastructure as code?
 
-Not on its own. A manifest is declarative configuration scoped to objects the Kubernetes API already understands. It has no mechanism to provision the cluster it's applied to, run a plan before changing anything, or express logic like loops and conditionals. Pairing manifests with a general-purpose IaC tool that provisions the underlying cluster is what makes the full stack infrastructure as code.
+Within the Kubernetes API's own scope, yes: a manifest declares desired state and a control loop continuously reconciles the live cluster toward it, the same declarative, convergent model infrastructure as code is built on. It falls short of the fuller, cross-cloud sense of the term because that reconciliation never reaches the cluster, node groups, or cloud resources the manifest depends on, and it has no plan step or general-purpose logic like loops and conditionals. Pairing manifests with a general-purpose IaC tool that provisions the underlying cluster is what extends that same model across the whole stack.
 
 ### Is Helm infrastructure as code?
 
