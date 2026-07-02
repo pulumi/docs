@@ -1,5 +1,6 @@
 ---
 title: "Managing AWS Credentials on CI/CD: Part 1"
+feature_image: feature.png
 date: 2020-03-12
 meta_desc: "Best practices for managing AWS credentials on CI/CD: Part 1 in series"
 authors:

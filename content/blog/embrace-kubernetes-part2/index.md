@@ -1,5 +1,6 @@
 ---
 title: "It's Time to Embrace Kubernetes: Part 2"
+feature_image: feature.png
 date: 2020-12-11
 meta_desc: "How to evaluate your choices when choosing Kubernetes as your application platform."
 authors:

@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes Fundamentals: Part One"
+feature_image: feature.png
 date: 2021-07-23T12:54:53-05:00
 draft: false
 meta_desc: "In part 1 of this 2-part series, we'll define what Kubernetes is, the anatomy of a cluster, why you should care, and also how to start using Kubernetes."

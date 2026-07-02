@@ -1,5 +1,6 @@
 ---
 title: "How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure"
+feature_image: feature.png
 allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and

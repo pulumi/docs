@@ -1,5 +1,6 @@
 ---
 title: "Build an AI Slack Bot on AWS Using Embedchain & Pulumi"
+feature_image: feature.png
 authors:
 - tyler-mulligan
 tags:

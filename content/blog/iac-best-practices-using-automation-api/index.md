@@ -1,5 +1,6 @@
 ---
 title: "IaC Best Practices: Using Automation API"
+feature_image: feature.png
 date: 2023-07-26
 updated: 2025-03-04
 meta_desc: Review key learnings from the IaC best practices series. Recap insights on structuring Pulumi projects, security, automation, and scaling infrastructure.

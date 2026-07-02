@@ -1,5 +1,6 @@
 ---
 title: "IaC Best Practices: Summarizing Key Learnings"
+feature_image: feature.png
 date: 2024-04-08
 updated: 2025-03-04
 draft: false

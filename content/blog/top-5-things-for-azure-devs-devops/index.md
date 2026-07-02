@@ -1,5 +1,6 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: DevOps"
+feature_image: feature.png
 date: 2021-08-26
 allow_long_title: True
 meta_desc: "Learn how to implement DevOps with Azure Pipelines using Continuous Integration and Continuous Delivery to deploy applications efficiently."

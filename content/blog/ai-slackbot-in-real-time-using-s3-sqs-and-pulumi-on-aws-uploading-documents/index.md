@@ -1,5 +1,6 @@
 ---
 title: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"
+feature_image: feature.png
 allow_long_title: true
 authors:
 - tyler-mulligan

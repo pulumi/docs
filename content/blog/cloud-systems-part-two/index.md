@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Containerizing a Website"
+feature_image: feature.png
 
 date: 2021-12-27T12:26:10-08:00
 

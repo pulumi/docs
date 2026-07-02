@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Static Sites and AWS S3"
+feature_image: feature.png
 
 date: 2021-12-15
 

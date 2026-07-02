@@ -1,5 +1,6 @@
 ---
 title: "Adding data to Pinecone using S3, Embedchain and Pulumi on AWS for an AI Slack bot"
+feature_image: feature.png
 allow_long_title: true
 authors:
 - tyler-mulligan

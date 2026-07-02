@@ -1,5 +1,6 @@
 ---
 title: "How to Implement Robust Security Guardrails Using Policy as Code"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-09-30
 draft: false
