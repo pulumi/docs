@@ -32,7 +32,7 @@ the right fit.
 
 Every decision about how to split (or not split) your infrastructure is a balance of four concerns:
 
-* **Blast radius.** A stack is the unit of deployment, so it is also the unit of failure. The larger a stack, the more
+* **Blast radius.** A stack is the unit of deployment, so it's also the unit of failure. The larger a stack, the more
   resources a single bad update can damage. Smaller stacks contain the impact of a mistake to a narrower slice of your
   infrastructure.
 
@@ -124,7 +124,7 @@ early:
   package-publishing or stack-reference boundary to cross.
 
 The monolith's weaknesses are the other two axes: its blast radius is the whole service, its permissions are
-all-or-nothing, and as it accumulates resources its deploys get slower. When those costs start to hurt, it is time to
+all-or-nothing, and as it accumulates resources its deploys get slower. When those costs start to hurt, it's time to
 split.
 
 ## Layered stacks
@@ -169,7 +169,7 @@ This layering tends to fall out of the tradeoffs naturally:
   refresh and diff the entire network.
 
 The layers correspond to lifecycle and ownership, not to individual cloud services. Resist the urge to give every cloud
-primitive its own stack — that is the micro-stacks pattern below, and it is rarely warranted.
+primitive its own stack — that is the micro-stacks pattern below, and it's rarely warranted.
 
 ### Sharing data with stack references
 
@@ -329,7 +329,7 @@ interface — renaming or removing one breaks every stack that depends on it.
 
 ### Sharing data with Pulumi ESC
 
-[Pulumi ESC](/docs/esc/) offers a more loosely coupled way to share data between stacks, and it is what we recommend over
+[Pulumi ESC](/docs/esc/) offers a more loosely coupled way to share data between stacks, and it's what we recommend over
 stack references for most layered setups. Instead of one stack reaching into another in code, you pull a producing
 stack's outputs into an [environment](/docs/esc/concepts/environments/) with the
 [`pulumi-stacks` provider](/docs/esc/providers/iac/pulumi-stacks/), map them to `pulumiConfig`, and let any number of
@@ -512,7 +512,7 @@ cost outweighs the benefit, so stop at layered stacks unless independent per-ser
 
 ## Stacks beyond environments
 
-`dev` / `staging` / `prod` is the most common way to slice a project into stacks, but it is not the only one. A stack is
+`dev` / `staging` / `prod` is the most common way to slice a project into stacks, but it's not the only one. A stack is
 just an independently deployed, independently configured instance of the same program, so *any* dimension along which
 you need a separate copy of the same infrastructure — with its own configuration, secrets, and blast radius — can be a
 stack. The program stays identical; each stack's `Pulumi.<stack>.yaml` supplies the values that make it distinct.
@@ -910,7 +910,7 @@ enumerating each stack individually. As new stacks pick up the tag, they inherit
 ## Conclusion
 
 There is no universally correct project and stack structure — only the one that best balances blast radius, ownership,
-repository alignment, and maintenance overhead for your team. Start monolithic: it is the simplest thing that works, and
+repository alignment, and maintenance overhead for your team. Start monolithic: it's the simplest thing that works, and
 most of the spectrum's cost is coordination you don't yet need. Move to layered stacks when a growing blast radius,
 divergent ownership, or slow deploys begin to hurt, and connect the layers with Pulumi ESC or stack references. Reserve
 micro-stacks for the uncommon case of many genuinely independent services. Wherever you land, revisit the decision as
