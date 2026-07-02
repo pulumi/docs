@@ -5,7 +5,6 @@ date: 2024-11-11
 draft: false
 social_media: "Assembly instructions for building the Pulumi Patterns and Practices Platform (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
 meta_desc: "Assembly instructions for building the Pulumi Patterns and Practices Platform (P3) reference architecture of a Pulumi-based internal developer platform (IDP)."
-meta_image: meta.png
 authors:
     - troy-howard
 tags:

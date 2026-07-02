@@ -5,7 +5,6 @@ authors:
   - alejandro-cotroneo
 meta_desc: "Pulumi partners with AWS to bring AWS Organizations Tag Policies validation to infrastructure as code, enforcing mandatory tagging requirements."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
   - aws
   - pulumi-cloud

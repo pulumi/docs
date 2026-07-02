@@ -3,7 +3,6 @@ title: "Functions Now Accept Outputs"
 date: 2021-11-12T13:14:58-05:00
 draft: false
 meta_desc: With Pulumi 3.17.1 you can now call functions directly with resource outputs without an extra apply.
-meta_image: meta.png
 authors:
     - anton-tayanovskyy
 tags:

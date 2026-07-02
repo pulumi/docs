@@ -3,7 +3,6 @@ title: "Neo Plan Mode: Iterate Before You Execute"
 date: 2026-04-01
 draft: false
 meta_desc: "Neo's Plan Mode lets you collaborate on a detailed plan before execution begins, with thorough discovery, conversational refinement, and explicit approval."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - neo-team

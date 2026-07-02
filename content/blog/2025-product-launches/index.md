@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-12-22
 draft: false
 meta_desc: "Pulumi 2025 launches: Neo AI agent for platform engineers, next-gen policy management, IDP, ESC integrations, and IaC enhancements."
-meta_image: meta.png
 authors:
     - arun-loganathan
 tags:

@@ -2,7 +2,6 @@
 title: "The Past, Present, and Future of Cloud Engineering"
 date: 2020-10-08
 meta_desc: "Learn about the past, present, and future of Cloud Engineering, with the Cloud Engineering Summit keynote."
-meta_image: cloud_engineering.png
 authors:
     - joe-duffy
 tags:

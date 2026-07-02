@@ -1,6 +1,5 @@
 ---
 title: "Life of a Pulumi Intern"
-meta_image: meta.png
 authors: ["tasia-halim"]
 meta_desc: "Peek into the kind of things I've experienced and accomplished as Pulumi's first."
 tags: ["pulumi-interns"]

@@ -3,7 +3,6 @@ title: "The Beginner's Guide to AWS Serverless Step Functions"
 date: 2020-02-13
 updated: 2025-03-19
 meta_desc: "Learn how to build AWS Step Functions to automate workflows & connect AWS services. Follow this step-by-step guide to deploy serverless apps."
-meta_image: meta-step-function.png
 authors:
     - sophia-parafina
 tags:

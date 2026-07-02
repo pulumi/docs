@@ -3,7 +3,6 @@ title: "Using Go Generics with Pulumi"
 date: 2023-09-20
 draft: false
 meta_desc: "Try out a preview of using Go generics with Pulumi"
-meta_image: meta.png
 authors:
     - zaid-ajaj
     - justin-vanpatten

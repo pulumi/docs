@@ -7,7 +7,6 @@ updated: 2026-06-16
 
 meta_desc: "Major new features for Pulumi ESC bring best-in-class software engineering capabilities to secrets and configuration management"
 
-meta_image: meta.png
 
 authors:
     - luke-hoban

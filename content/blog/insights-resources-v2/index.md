@@ -4,7 +4,6 @@ date: 2024-10-02T14:35:35-07:00
 draft: false
 meta_desc: The updated Resources page provides a new user experience for creating custom views that help you gain an understanding and insights into your infrastructure.
 
-meta_image: meta.png
 authors:
     - craig-symonds
 tags:

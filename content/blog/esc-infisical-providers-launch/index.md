@@ -4,7 +4,6 @@ date: 2025-04-28
 updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Infisical providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
-meta_image: meta.png
 authors:
   - boris-schlosser
   - arun-loganathan

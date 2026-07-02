@@ -13,7 +13,7 @@ tags:
 - providers
 category: engineering
 
-meta_image: "meta.png"
+
 ---
 
 In Pulumi's engineering department, we often build and distribute tools as native binaries to avoid the need for additional dependencies on user machines. Most of these tools are written in Go, which has good support for building self-contained binaries that target modern operating systems.

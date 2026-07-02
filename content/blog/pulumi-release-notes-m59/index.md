@@ -3,7 +3,6 @@ title: "July 28 releases: K8s GitOps, autonaming in Google Native"
 date: 2021-07-28T08:00:00-07:00
 draft: false
 meta_desc: "Kubernetes is faster, K8s operator supports GitOps, new resources and functionality for Azure and Google Cloud, and easier getting started in the Pulumi Service"
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

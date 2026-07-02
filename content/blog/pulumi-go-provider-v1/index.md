@@ -5,7 +5,6 @@ draft: false
 allow_long_title: true
 
 meta_desc: "Pulumi Go Provider SDK is now GA! Build custom infrastructure providers in hours, not weeks. Create reusable components across all Pulumi languages."
-meta_image: meta.png
 authors:
     - eron-wright
 tags:

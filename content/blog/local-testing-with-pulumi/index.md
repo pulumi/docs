@@ -2,7 +2,6 @@
 title: "Local Testing With Pulumi"
 date: 2023-04-28
 meta_desc: Pulumi is great for provisioning cloud infrastructure, but it's also great for automating Docker for local testing of your application code.
-meta_image: meta.png
 authors:
     - aaron-kao
     - scott-lowe

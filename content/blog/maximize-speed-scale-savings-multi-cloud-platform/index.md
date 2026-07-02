@@ -3,7 +3,6 @@ title: "Maximize Business Outcomes In Your Multi-Cloud Environment"
 allow_long_title: True
 date: 2025-05-16
 meta_desc: Discover how Pulumi Cloud can accelerate speed, ensure security, scale operations, and save costs in your multi-cloud environment.
-meta_image: image.png
 authors:
     - marlowe-fenne
 

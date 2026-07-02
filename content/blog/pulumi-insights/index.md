@@ -4,7 +4,6 @@ allow_long_title: true
 authors: ["luke-hoban"]
 meta_desc: "Pulumi Insights provides AI-powered intelligence, search, and analytics for cloud infrastructure across any provider using generative AI and LLMs."
 date: "2023-04-13T06:00:00-08:00"
-meta_image: "insights.png"
 tags:
     - announcements
     - features

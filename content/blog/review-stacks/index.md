@@ -2,7 +2,6 @@
 title: "Review Stacks: Collaborate in the Cloud"
 date: 2023-06-14
 meta_desc: Review Stacks give you an automated cloud environment for every pull request so your team can ship faster, safer, and more collaboratively.
-meta_image: meta.png
 authors:
     - evan-boyle
     - pat-gavlin

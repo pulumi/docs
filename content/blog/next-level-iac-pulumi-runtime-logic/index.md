@@ -3,7 +3,6 @@ title: "Next-level IaC: Drop those wrapper scripts and let your language do that
 allow_long_title: true
 date: 2024-04-30
 meta_desc: Learn how to use your language of choice to do more than just declare cloud resources.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

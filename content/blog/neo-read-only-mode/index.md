@@ -3,7 +3,6 @@ title: "Introducing Read-Only Mode for Pulumi Neo"
 date: 2026-04-01
 draft: false
 meta_desc: "Run Neo with confidence using read-only mode. Preview changes and create PRs without unwanted modifications to your infrastructure."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - florian-stadler

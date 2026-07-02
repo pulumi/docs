@@ -3,7 +3,6 @@ title: "Securely access cloud resources in Kubernetes workloads"
 date: 2020-10-29
 draft: true
 meta_desc: An introduction for running accessing cloud resources securely for Kubernetes workloads.
-meta_image: meta.png
 authors:
     - lee-briggs
 tags:

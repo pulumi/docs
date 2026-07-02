@@ -3,7 +3,6 @@ title: "Most Effective Infrastructure as Code (IaC) Tools"
 date: 2025-06-26
 draft: false
 meta_desc: "Complete guide to the most effective IaC tools. Compare Pulumi, Terraform, OpenTofu, AWS CDK, and more to find the perfect solution."
-meta_image: meta.png
 authors:
     - asaf-ashirov
     - isaac-harris

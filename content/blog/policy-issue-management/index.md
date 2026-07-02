@@ -6,7 +6,6 @@ authors:
   - arun-loganathan
 meta_desc: "Pulumi’s Policy Findings hub helps teams move from alert fatigue to action with a collaborative workspace for triaging, managing, and fixing compliance issues."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
   - pulumi-cloud
   - policy-as-code

@@ -2,7 +2,6 @@
 title: "Pulumi Wins 2020 Gartner Cool Vendor Award"
 date: 2020-05-28
 meta_desc: "Gartner has selected Pulumi for the Cool Vendor Award for Agile and DevOps"
-meta_image: gartner.png
 authors:
     - sophia-parafina
 tags:

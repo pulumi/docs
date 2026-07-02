@@ -4,7 +4,6 @@ date: 2025-01-29T00:00:00
 updated: 2026-04-30
 draft: false
 meta_desc: How cheap can you host a Python API in 2026? Package Flask as a container, deploy to AWS Lambda with Pulumi, and pay ~$1.12/month worst-case ($0 when idle).
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

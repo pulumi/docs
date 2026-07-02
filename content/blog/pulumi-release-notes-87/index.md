@@ -3,7 +3,6 @@ title: "Pulumi Release Notes: Resource Search, Deployment Actions, Projects in S
 allow_long_title: true
 date: 2023-05-24
 meta_desc: The latest Pulumi updates include our providers updates, enhancements made in the CLI and any Pulumi Cloud features released in March and April 2023.
-meta_image: meta.png
 authors:
    - mikhail-shilkov
    - meagan-cojocar

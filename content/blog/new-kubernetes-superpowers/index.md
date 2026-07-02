@@ -2,7 +2,6 @@
 title: "Announcing New Pulumi Open Source Projects for Kubernetes"
 date: 2020-08-12
 meta_desc: "Announcing new features that advance Pulumi's Kubernetes support for deployment automation, cloud native ecosystem integration, and easy Pulumi adoption."
-meta_image: k8s-enhancements.png
 authors:
     - luke-hoban
 tags:

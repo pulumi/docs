@@ -3,7 +3,6 @@ title: "How to Test Infrastructure with Pulumi"
 date: 2021-07-23
 updated: 2025-03-24
 meta_desc: "Learn how to test infrastructure as code with Pulumi. This guide covers unit, property, and integration testing with mocks, Automation API, and real examples."
-meta_image: testing-in-practice.png
 authors:
     - sophia-parafina
 tags:

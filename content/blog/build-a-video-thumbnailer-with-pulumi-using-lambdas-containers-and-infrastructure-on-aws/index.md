@@ -3,7 +3,6 @@ title: Build a Video Thumbnailer on AWS
 h1: "Build a Video Thumbnailer with Pulumi using Lambdas, Containers, and Infrastructure on AWS"
 date: "2018-06-21"
 meta_desc: "Extracting a thumbnail from a video using a combination of Lambdas, containers, and connected data services and infrastructure."
-meta_image: "video-thumbnail-diagram.png"
 authors: ["donna-malayeri"]
 tags: [javascript, serverless, aws, containers]
 category: tutorials

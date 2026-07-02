@@ -3,7 +3,6 @@ title: "August 18 releases: EKS, Pulumi Component methods, dependsOn"
 date: 2021-08-18T08:00:00-07:00
 draft: false
 meta_desc: "`dependsOn` improvements in Pulumi Component Packages, EKS Package with more managed node group options, support for methods in Pulumi Component Packages"
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

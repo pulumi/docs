@@ -3,7 +3,6 @@ title: "2021 End of Year Review"
 date: 2021-12-31T10:26:47-06:00
 draft: false
 meta_desc: Review the biggest news and information from Pulumi for 2021.
-meta_image: meta.png
 authors:
     - laura-santamaria
 tags:

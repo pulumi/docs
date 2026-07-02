@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-08-22T01:41:10Z
 draft: false
 meta_desc: ARM slowing you down? Ditch the JSON pain and deploy Azure like a pro with Pulumi + C#. Faster, cleaner, and actually developer-friendly.
-meta_image: azure-resources-to-iac-general-code.png
 authors:
     - sara-huddleston
 tags:

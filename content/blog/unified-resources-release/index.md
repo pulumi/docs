@@ -2,7 +2,6 @@
 title: "Unified Resources in Pulumi Cloud"
 date: 2025-09-08T09:00:00-08:00
 draft: false
-meta_image: meta.png
 meta_desc: Pulumi Cloud consolidates resources from multiple sources into unified views, reducing duplicates and improving infrastructure visibility.
 authors:
     - insights-team

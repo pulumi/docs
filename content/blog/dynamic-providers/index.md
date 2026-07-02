@@ -2,7 +2,6 @@
 title: "Dynamic Providers"
 date: 2020-01-16
 meta_desc: "Pulumi Dynamic Providers manage resources that are not covered in pre-built providers"
-meta_image: meta.png
 authors:
     - praneet-loke
 tags:

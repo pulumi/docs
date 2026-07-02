@@ -5,7 +5,6 @@ meta_desc: |
     In this post, we'll highlight a number of the lesser-known features of the Pulumi Service that make it even easier to manage your infrastructure with Pulumi.
 summary: |
     As a reader of this blog, you've probably heard of the Pulumi Service, the default state-management backend of the Pulumi CLI, and if that's the case, there's a good chance you've also heard of many of its key features. But did you know we're adding new features to the Service all the time---some of which are incredibly easy to miss? In this post, we'll highlight a few of those lesser-known features that we think make it even easier to manage your infrastructure with Pulumi.
-meta_image: meta.png
 authors:
     - chris-smith
     - christian-nunciato

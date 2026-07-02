@@ -3,7 +3,6 @@ title: "Neo: Share Tasks for Collaborative AI Infrastructure Operations"
 date: 2026-02-04
 draft: false
 meta_desc: "Collaborate on infrastructure operations by sharing Neo tasks with teammates for review and assistance."
-meta_image: meta.png
 authors:
     - neo-team
 tags:

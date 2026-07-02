@@ -3,7 +3,6 @@ title: "Pulumi and RedMonk on developer-first infrastructure and why it matters"
 allow_long_title: true
 date: 2022-04-26
 meta_desc: Pulumi and RedMonk discuss developer-first infrastructure and how it empowers developers to build cloud applications through software engineering practices.
-meta_image: meta.png
 authors:
     - george-huang
 tags:

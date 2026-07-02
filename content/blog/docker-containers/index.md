@@ -4,7 +4,6 @@ date: 2024-09-27
 updated: 2026-02-23
 draft: false
 meta_desc: New versioned images for Pulumi Docker Containers and support for setting Node.js and Python versions in Pulumi Deployments.
-meta_image: meta.png
 authors:
   - julien-poissonnier
 tags:

@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: Neo gets smarter with Operating Modes for flexible control, full CLI access to Pulumi and cloud tools, and Claude Sonnet 4.5 for complex infrastructure tasks.
 
-meta_image: meta.png
 
 authors:
     - neo-team

@@ -4,7 +4,6 @@ date: 2025-11-03T14:00:00-07:00
 updated: 2026-06-16
 draft: false
 meta_desc: "Prevent accidental deletion of critical environments with the new deletion protection feature for Pulumi ESC."
-meta_image: deletion-protection.png
 authors:
     - fausto-nunez-alberro
 tags:

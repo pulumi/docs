@@ -4,7 +4,6 @@ date: 2024-11-18T08:42:34-05:00
 updated: 2025-03-26
 draft: false
 meta_desc: Explore the differences between AWS EKS Fargate and EC2-backed clusters for your Kubernetes EKS workloads.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

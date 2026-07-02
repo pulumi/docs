@@ -2,7 +2,6 @@
 title: "Serverless Arch Templates"
 date: 2022-11-07
 meta_desc: The cloud is complicated enough. With Architecture Templates, Pulumi takes on some of the work involved in deploying your application to the cloud.
-meta_image: meta.png
 authors:
     - kat-cosgrove
 tags:

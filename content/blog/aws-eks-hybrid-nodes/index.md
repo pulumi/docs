@@ -3,7 +3,6 @@ title: "Amazon EKS Hybrid Nodes: Bridging Cloud and On-Premises"
 date: 2024-12-01T15:06:25-05:00
 draft: false
 meta_desc: "Manage Amazon EKS Hybrid Nodes with Pulumi: Use AWS's control plane while running workloads on-premises or at the edge."
-meta_image: meta.png
 authors:
     - josh-kodroff
 tags:

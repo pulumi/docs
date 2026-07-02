@@ -4,7 +4,6 @@ date: 2025-02-10T16:15:00-08:00
 draft: false
 
 meta_desc: "The Pulumi Java SDK is now generally available. It enables organizations of all sizes to build infrastructure using a proven, safe, and familiar language."
-meta_image: meta.png
 
 authors:
     - mark-huber

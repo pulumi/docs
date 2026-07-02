@@ -3,7 +3,6 @@ title: "Deploy AWS Lambda with Elastic File System using Pulumi"
 date: 2020-06-16
 updated: 2025-03-24
 meta_desc: "Learn how to connect AWS Lambda to Amazon EFS using Pulumi. Build serverless apps with persistent storage. Includes Fargate integration and full examples."
-meta_image: aws-lambda-efs.png
 authors:
     - luke-hoban
 tags:

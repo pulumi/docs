@@ -2,7 +2,6 @@
 title: "Feature Flagging for Your Infrastructure"
 date: "2025-12-06"
 meta_desc: Apply feature flagging to infrastructure with Pulumi. Control rollouts, reduce deployment risk, and automate updates using ESC or LaunchDarkly.
-meta_image: Feature_Flags.png
 authors: 
   - "elisabeth-lichtie"
 tags: [launchdarkly, feature-flags, esc, aws]

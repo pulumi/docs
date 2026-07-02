@@ -4,7 +4,6 @@ date: 2025-04-08
 draft: false
 allow_long_title: true
 meta_desc: Learn how AI assistants like Cursor with Pulumi's MCP server accelerate IaC workflows and improve developer experience.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:

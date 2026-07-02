@@ -3,7 +3,6 @@ title: "Leveling up Pulumi AI with the Pulumi Registry"
 date: 2023-05-22
 meta_desc: >
     We've combined Pulumi AI with the knowledge of the Pulumi Registry. These improvements enable Pulumi AI to generate more accurate infrastructure.
-meta_image: meta.png
 authors:
     - aaron-friel
 tags:

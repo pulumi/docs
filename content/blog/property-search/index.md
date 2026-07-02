@@ -19,7 +19,6 @@ meta_desc: Pulumi Cloud launches Property Search, a feature on top of Resource S
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
 # has been provided for you.
-meta_image: meta.png
 
 # At least one author is required.
 # The values in this list correspond with the `id` properties

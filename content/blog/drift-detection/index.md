@@ -5,7 +5,6 @@ date: 2024-04-24T07:00:04-08:00
 updated: 2025-03-24
 draft: false
 meta_desc: Automatically detect and fix infrastructure drift with Pulumi’s new Drift Detection and Remediation—available for Pulumi Cloud Enterprise and Business users.
-meta_image: drift.png
 authors:
     - meagan-cojocar
     - komal-ali

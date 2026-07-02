@@ -1,8 +1,8 @@
 ---
 title: "Architecture as Code: Microservices"
+feature_image: feature.png
 date: 2020-04-07
 meta_desc: "Build microservices with reusable components created with common programming languages and Pulumi"
-meta_image: microservices.png
 authors:
     - sophia-parafina
 tags:

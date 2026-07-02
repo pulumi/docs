@@ -3,7 +3,6 @@ title: "EKS Blueprints for Pulumi"
 date: 2022-04-20T18:00:00Z
 draft: false
 meta_desc: "Announcing Amazon EKS Blueprints for Pulumi: patterns and best practices for Kubernetes deployments."
-meta_image: meta.png
 authors: ["isaac-harris", "david-flanagan"]
 tags: ["aws", "eks", "kubernetes"]
 category: product

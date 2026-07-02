@@ -2,7 +2,6 @@
 title: "Full Coverage of Azure Resources with Azure-Native"
 date: 2021-03-02
 meta_desc: "Pulumi’s Azure-Native provider is the most comprehensive IaC solution for Microsoft Azure"
-meta_image: azure-native.png
 authors:
   - mikhail-shilkov
 tags:

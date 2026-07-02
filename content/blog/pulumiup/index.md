@@ -2,7 +2,6 @@
 title: "PulumiUP: the Event for Cloud Engineers"
 date: 2021-04-14
 meta_desc: "PulumiUP is a two-hour keynote with cloud engineering industry leaders from Amazon Web Services, Snowflake, and Fenergo."
-meta_image: pulumiup.png
 authors:
     - wendy-smith
 tags:

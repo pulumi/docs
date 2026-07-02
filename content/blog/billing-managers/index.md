@@ -6,7 +6,6 @@ date: 2022-08-11T15:00:22-07:00
 
 meta_desc: Starting today all Pulumi Organizations can have a Billing Manager, a role designed for your finance function.
 
-meta_image: meta.png
 
 authors:
     - isabel-suchanek

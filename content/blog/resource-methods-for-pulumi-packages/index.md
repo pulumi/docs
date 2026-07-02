@@ -3,7 +3,6 @@ title: "Introducing Resource Methods for Pulumi Packages"
 date: 2021-10-11T08:00:00-07:00
 draft: false
 meta_desc: It's now possible to provide resource methods from Pulumi Packages
-meta_image: pulumi-mlc-packages.png
 authors:
     - justin-vanpatten
 tags:

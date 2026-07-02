@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-06-05T00:00:00-04:00
 draft: false
 meta_desc: "The new Pulumi ESC SDK allows developers to seamlessly integrate Pulumi ESC with their applications for secrets management"
-meta_image: "meta.png"
 authors:
   - arun-loganathan
   - cleve-littlefield

@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2022-11-16T08:36:28-08:00
 updated: 2025-03-26
 meta_desc: Learn how to build a self-service DevOps platform using AWS Proton, Pulumi, and CodeBuild. Create reusable IaC templates for fast, secure infra delivery.
-meta_image: meta.png
 authors:
     - isaac-harris
     - josh-kodroff

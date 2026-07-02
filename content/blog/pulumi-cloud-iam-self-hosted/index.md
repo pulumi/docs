@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-14T11:18:00Z
 draft: false
 meta_desc: "Pulumi IAM with Custom Roles and scoped Access Tokens is now available for self-hosted Pulumi Cloud instances."
-meta_image: meta.png
 authors:
   - davide-massarenti
   - devon-grove

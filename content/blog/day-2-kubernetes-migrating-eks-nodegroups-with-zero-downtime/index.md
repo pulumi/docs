@@ -7,7 +7,7 @@ meta_desc: "Learn how to migrate EKS node groups with zero downtime using Pulumi
 date: "2019-07-23"
 updated: 2025-03-26
 canonical_url: https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups/
-meta_image: "eks-migrate-nodegroups.png"
+
 ---
 
 Managed Kubernetes offerings greatly reduce the overhead required in

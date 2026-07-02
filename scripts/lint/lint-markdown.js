@@ -23,6 +23,22 @@ const BLOG_CATEGORIES = (function () {
 })();
 
 /**
+ * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
+ * enforce that every series member is wired up consistently (see
+ * checkSeriesConsistency).
+ */
+const BLOG_SERIES_SLUGS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_series.yml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return new Set((doc.series || []).map(s => s.slug).filter(Boolean));
+    } catch (e) {
+        console.warn(`Warning: could not load blog series: ${e.message}`);
+        return new Set();
+    }
+})();
+
+/**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
  *
  *     ---
@@ -143,6 +159,51 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
 }
 
 /**
+ * checkSeriesConsistency enforces that a blog post's series wiring is complete.
+ *
+ * A blog series is driven by TWO independent front-matter signals, and a member
+ * post needs BOTH kept in sync:
+ *   - a `series: <slug>` key  -> single.html renders the "In This Series"
+ *     sidebar, which finds siblings via `where .Params.series`.
+ *   - the same slug in `tags` -> the post appears on /blog/tag/<slug>/, the
+ *     series landing page linked from /blog/series/ and data/blog_series.yml.
+ * Having only one silently degrades: tag-only = no sidebar; key-only = missing
+ * from the listing. This check fails when they disagree, for any slug defined in
+ * data/blog_series.yml. Applies only to blog posts (content/blog/<slug>/index.md).
+ *
+ * @param {*} series The `series` front matter value.
+ * @param {*} tags The `tags` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkSeriesConsistency(series, tags, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost || BLOG_SERIES_SLUGS.size === 0) {
+        return null;
+    }
+
+    const tagList = Array.isArray(tags) ? tags : typeof tags === "string" ? [tags] : [];
+
+    if (Array.isArray(series)) {
+        return "Blog post 'series' must be a single scalar value (the series slug), not a list. See data/blog_series.yml.";
+    }
+
+    // series: key present -> the matching tag must be too.
+    if (series && BLOG_SERIES_SLUGS.has(series) && !tagList.includes(series)) {
+        return `Blog post has 'series: ${series}' but is not tagged '${series}'. A series member needs BOTH the series: key (for the in-post "In This Series" sidebar) and the matching tag (to appear on /blog/tag/${series}/, the series landing page). Add '${series}' to tags. See data/blog_series.yml.`;
+    }
+
+    // A tag naming a defined series -> the series: key must be present.
+    for (const t of tagList) {
+        if (BLOG_SERIES_SLUGS.has(t) && series !== t) {
+            return `Blog post is tagged '${t}' (a defined blog series) but is missing 'series: ${t}'. A series member needs BOTH the tag and the series: key (for the in-post "In This Series" sidebar). Add 'series: ${t}'. See data/blog_series.yml.`;
+        }
+    }
+
+    return null;
+}
+
+/**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
  *
@@ -221,6 +282,7 @@ function searchForMarkdown(paths) {
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
+                    seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -341,6 +403,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.blogCategory,
+                });
+            }
+            if (frontMatterErrors.seriesConsistency) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.seriesConsistency,
                 });
             }
         }

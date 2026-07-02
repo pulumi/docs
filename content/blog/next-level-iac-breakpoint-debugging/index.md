@@ -3,7 +3,6 @@ title: "Next-level IaC: Breakpoint Debugging for Pulumi Programs"
 date: 2024-05-31
 draft: false
 meta_desc: "Next-level IaC: Breakpoint Debugging for Pulumi Programs"
-meta_image: meta.png
 authors:
     - troy-howard
 tags:

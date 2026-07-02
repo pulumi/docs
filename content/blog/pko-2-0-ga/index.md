@@ -3,7 +3,6 @@ title: "Pulumi Kubernetes Operator 2.0 is Now Generally Available!"
 date: 2025-02-20
 draft: false
 meta_desc: "Today, we're announcing the GA of Pulumi Kubernetes Operator 2.0! Discover the new features and improvements that make managing Kubernetes easier than ever."
-meta_image: "meta.png"
 authors:
   - eron-wright
   - meagan-cojocar

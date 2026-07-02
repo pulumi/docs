@@ -7,7 +7,6 @@ authors:
     - alejandro-cotroneo
 meta_desc: "Announcing new UX for Pulumi Policy and new pre-built policy packs, providing essential guardrails for all cloud infrastructure automation"
 allow_long_title: true
-meta_image: "meta.png"
 tags:
     - pulumi-cloud
     - policy-as-code

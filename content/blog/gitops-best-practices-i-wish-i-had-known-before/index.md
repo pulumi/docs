@@ -6,7 +6,6 @@ draft: false
 meta_desc: |
   Essential GitOps best practices from production experience. Avoid common pitfalls, bridge IaC with GitOps, and streamline Kubernetes deployments.
 
-meta_image: meta.png
 feature_image: feature.png
 
 authors:

@@ -3,7 +3,6 @@ title: "Preview of the Deploy Track at Cloud Engineering Summit 2021"
 date: 2021-09-15T09:00:00-05:00
 draft: false
 meta_desc: "Explore the Deploy track of Cloud Engineering Summit 2021 with the track chair, Laura Santamaria."
-meta_image: meta.png
 authors:
     - laura-santamaria
 tags:

@@ -119,9 +119,9 @@ Inform the user if author information was auto-populated and give them a chance 
 
 1. **Generate slug**: Convert title to lowercase, replace spaces with hyphens, keep only alphanumeric characters and hyphens (remove all other special characters)
 2. **Create directory**: `content/blog/{slug}/`
-3. **Copy placeholder images**: Use Bash to copy both placeholders:
-   - `.claude/commands/_common/images/blog-post-meta-placeholder.png` → `content/blog/{slug}/meta.png`
+3. **Copy the placeholder feature image**: Use Bash to copy the placeholder:
    - `.claude/commands/_common/images/blog-post-feature-placeholder.png` → `content/blog/{slug}/feature.png`
+   (No `meta.png` — the social/OpenGraph card is generated on-brand at build time from the title + feature image.)
 4. **Create index.md** with this structure:
 
 ```markdown
@@ -132,7 +132,6 @@ title: "Title in Title Case"
 date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
 draft: false
 meta_desc: "The one-sentence summary provided by user"
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - author-id-1
@@ -173,7 +172,7 @@ Before finishing:
 - Verify all author files exist and are valid TOML
 - Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
 - Verify the blog post directory was created
-- Verify meta.png and feature.png were copied to the blog post directory
+- Verify feature.png was copied to the blog post directory
 - Verify index.md has valid YAML frontmatter
 - Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
@@ -192,7 +191,7 @@ After creating the files, tell the user:
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
-   - Replace the placeholder `meta.png` and `feature.png` with your own images. To request a custom feature image from the design team, label your PR with `needs-design`. You can also run `/blog-meta-image` to generate them automatically, or create them manually (feature image: 1884×1256px, meta image: 1200×628px).
+   - Replace the placeholder `feature.png` with your own hero image (1884×1256px). To request a custom feature image from the design team, label your PR with `needs-design`. You can also run `/blog-feature-image` to generate one automatically. The social/OpenGraph card is generated on-brand at build time from the title + feature image — no `meta.png` needed.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
@@ -226,7 +225,7 @@ Claude: I'll help you create a new blog post. Let me first check your git config
 [Suggests tags based on the post title by looking at similar blog posts]
 [Asks remaining questions via AskUserQuestion, pre-populating detected values]
 [Creates all needed author profiles, using auto-detected information where possible]
-[Creates blog post structure with files: content/blog/my-new-post/index.md and content/blog/my-new-post/meta.png]
+[Creates blog post structure with files: content/blog/my-new-post/index.md and content/blog/my-new-post/feature.png]
 [Includes all author IDs in the frontmatter authors array]
 [Provides next steps with summary of what was auto-populated]
 ```

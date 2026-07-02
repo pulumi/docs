@@ -7,7 +7,7 @@ tags: [open-source, license, apache, bsl]
 category: community
 meta_desc: "Pulumi stands with the open source community and remains true open source"
 date: "2023-08-11"
-meta_image: "pulumi_hearts_opensource.png"
+
 ---
 
 Pulumi stands with the open source community.

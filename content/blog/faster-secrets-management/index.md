@@ -3,7 +3,6 @@ title: "Faster Secrets in Pulumi IaC"
 date: 2025-03-13T01:00:00-07:00
 draft: false
 meta_desc: Pulumi IaC now processes stack secrets significantly faster improving deployment times without compromising security.
-meta_image: meta.png
 authors:
     - daniel-bradley
 tags:

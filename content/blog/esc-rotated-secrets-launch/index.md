@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-02-19T00:00:00-04:00
 draft: false
 meta_desc: "Pulumi ESC's Rotated Secrets automates credential rotation, enhancing security, reducing manual effort, and ensuring compliance for long-lived secrets"
-meta_image: "meta.png"
 authors:
   - claire-gaestel
   - arun-loganathan

@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-20
 draft: false
 meta_desc: "Vercel's agent-browser uses 82% less context than Playwright MCP. I tested both on the same six browser tests to see how they compare."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:

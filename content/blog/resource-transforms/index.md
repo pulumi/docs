@@ -3,7 +3,6 @@ title: "Introducing Resource Transforms: Enhancing Flexibility for Packaged Comp
 allow_long_title: true
 date: 2024-07-19
 meta_desc: Announcing a new Transform system with support for transforming child resources of packaged components.
-meta_image: meta.png
 authors:
     - fraser-waters
     - justin-vanpatten

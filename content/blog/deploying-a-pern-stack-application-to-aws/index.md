@@ -2,7 +2,6 @@
 title: "Deploying a PERN stack application to AWS"
 date: 2020-09-04
 meta_desc: Creating and quickly deploying a PERN stack application to the cloud Using Pulumi
-meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "typescript", "containers", "docker"]
 category: tutorials

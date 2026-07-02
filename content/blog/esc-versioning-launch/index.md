@@ -5,7 +5,6 @@ date: 2024-06-05T00:00:00-03:00
 updated: 2026-06-16
 draft: false
 meta_desc: "The new ESC Versioning features allows you bring agile practices to your secrets and configuration management, and streamline deployments"
-meta_image: "meta.png"
 authors:
   - arun-loganathan
   - pat-gavlin

@@ -5,7 +5,7 @@ authors: ["mike-metral"]
 tags: [kubernetes, continuous-delivery, operators]
 category: product
 meta_desc: "Introducing the Pulumi Kubernetes Operator: Deploy infrastructure in Pulumi Stacks"
-meta_image: operator.png
+
 ---
 {{% notes type="info" %}}
 Check out version 2.0 of the [Pulumi Kubernetes Operator](/blog/pulumi-kubernetes-operator-2-0/).

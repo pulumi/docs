@@ -3,7 +3,6 @@ title: "Introducing: Support For Using Any Terraform Provider with Pulumi"
 date: 2024-08-29T10:00:00-06:00
 allow_long_title: true
 meta_desc: "Pulumi now supports using any Terraform or OpenTofu provider with Pulumi, in just a few seconds"
-meta_image: meta.png # TODO
 authors:
   - luke-hoban
   - ian-wahbe

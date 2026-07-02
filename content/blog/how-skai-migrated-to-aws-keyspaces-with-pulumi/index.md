@@ -2,7 +2,6 @@
 title: How Skai Migrated to Amazon Keyspaces with Pulumi
 date: 2023-05-16
 meta_desc: "Learn how Skai used Pulumi to manage the migration of its its on-prem Cassandra cluster to Amazon Keyspaces."
-meta_image: meta.png
 authors:
     - danny-zalkind
 tags:

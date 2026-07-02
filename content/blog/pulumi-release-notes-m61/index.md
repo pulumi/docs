@@ -3,7 +3,6 @@ title: "Sep. 16 releases: Helm Release, pulumi about, easier invites"
 date: 2021-09-16T08:00:00-07:00
 draft: false
 meta_desc: "Full access to Helm features, new & updated commands in the Pulumi CLI, plugin installation options in .NET Automation API, and schema check for Pulumi Packages"
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

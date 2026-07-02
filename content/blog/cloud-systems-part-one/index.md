@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Static Sites and AWS S3"
+feature_image: feature.png
 
 date: 2021-12-15
 
@@ -7,7 +8,6 @@ draft: false
 
 meta_desc: In this series, learn modern cloud engineering practices and tooling, starting with using Pulumi to deploy a static site to AWS S3!
 
-meta_image: meta.png
 
 authors:
     - kat-cosgrove

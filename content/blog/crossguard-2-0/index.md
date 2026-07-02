@@ -2,7 +2,6 @@
 title: "New Policy as Code Capabilities with CrossGuard"
 date: 2020-05-05
 meta_desc: "New CrossGuard features part of Pulumi's 2.0 release"
-meta_image: crossguard-mascot.png
 authors:
    - erin-krengel
 tags:

@@ -3,7 +3,6 @@ title: "Pulumi Updates, Explained: AI-Powered Features in Pulumi CLI"
 date: 2025-05-22
 draft: false
 meta_desc: AI-powered CLI features simplify deployments by translating complex changes into clear explanations and providing actionable guidance for resolving errors.
-meta_image: meta.png
 authors:
     - artur-laksberg
     - mikhail-shilkov

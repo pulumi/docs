@@ -2,7 +2,6 @@
 title: "Deploy WordPress to AWS using Pulumi and Ansible"
 date: 2022-06-27T08:00:00-07:00
 meta_desc: "See Pulumi and Ansible in action together, combining provisioning- and configuration-based infrastructure as code to spin up WordPress in AWS."
-meta_image: pulumi-ansible.png
 authors: ["joe-duffy"]
 tags: ["aws", "ansible", "configuration", "wordpress"]
 category: tutorials

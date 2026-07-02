@@ -2,7 +2,6 @@
 title: "Scheduling Serverless"
 date: 2020-02-25
 meta_desc: "Automate maintenance tasks by writing and scheduling serverless functions"
-meta_image: meta.png
 authors:
     - cyrus-najmabadi
 tags:

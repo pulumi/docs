@@ -4,7 +4,6 @@ date: 2021-05-27
 updated: 2025-03-24
 draft: false
 meta_desc: Learn how to set up and deploy containers with ECS Anywhere using Pulumi. Run workloads on any infrastructure while managing everything through AWS ECS.
-meta_image: ecs_anywhere.png
 authors:
     - piers-karsenbarg
 tags:

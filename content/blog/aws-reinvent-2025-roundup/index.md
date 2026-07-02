@@ -5,7 +5,6 @@ date: 2025-12-10
 updated: 2026-01-27
 draft: false
 meta_desc: "At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "Organizational Patterns: A Single Infra Repo"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -16,7 +17,6 @@ meta_desc: In this first post of a series, we explore an important organizationa
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 
 authors:

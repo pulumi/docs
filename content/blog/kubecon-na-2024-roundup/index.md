@@ -4,7 +4,6 @@ allow_long_title: True
 date: 2024-11-12T8:00:00-00:00
 draft: false
 meta_desc: Inspired by KubeCon North America 2024, this post presents a collection of recent Kubernetes-focused updates to Pulumi software
-meta_image: meta.png
 authors:
     - gavin-johnson
 tags:

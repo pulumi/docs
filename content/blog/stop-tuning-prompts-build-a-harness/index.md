@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-26
 draft: false
 meta_desc: "In a large codebase, the model is the smaller variable. The harness around it does the work: CLAUDE.md, hooks, skills, LSP, MCP, subagents."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri

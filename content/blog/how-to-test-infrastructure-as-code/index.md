@@ -3,7 +3,6 @@ title: "How to Test Infrastructure as Code"
 date: 2026-06-30T14:00:00-07:00
 draft: false
 meta_desc: "Learn how to test infrastructure as code with Pulumi—unit tests, integration tests, and policy checks in Python, TypeScript, Go, C#, and Java."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - alex-leventer

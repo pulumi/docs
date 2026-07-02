@@ -3,7 +3,6 @@ title: "Pulumi Insights and AI in the Pulumi CLI"
 authors: ["luke-hoban", "kyle-pitzen"]
 meta_desc: "Pulumi Insights support for resource search and Pulumi AI is now available via the `pulumi` CLI"
 date: "2023-09-13T10:00:00-08:00"
-meta_image: "meta.png"
 tags:
     - features
     - ai

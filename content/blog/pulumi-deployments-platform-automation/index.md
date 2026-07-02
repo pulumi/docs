@@ -2,7 +2,6 @@
 title: "Pulumi Deployments: API-Driven Infrastructure at Scale"
 date: 2023-03-29
 meta_desc: Pulumi Deployments is a fully managed platform for shipping infrastructure at scale using APIs and programmatic building blocks.
-meta_image: meta.png
 authors:
     - evan-boyle
     - pat-gavlin

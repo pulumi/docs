@@ -3,7 +3,6 @@ title: "Deploying Netlify CMS on AWS with Pulumi"
 date: "2020-09-01"
 draft: false
 meta_desc: "Implementing Netlify CMS without Netlify, deploying the Netlify CMS on AWS."
-meta_image: cms.png
 authors: ["zephyr-zhou"]
 tags: ["aws", "github-actions", "netlify", "s3", "cloudfront", "certificate-manager", "route53"]
 category: tutorials

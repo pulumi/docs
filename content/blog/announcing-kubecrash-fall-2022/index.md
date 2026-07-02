@@ -5,7 +5,6 @@ date: 2022-09-23T10:19:23-05:00
 
 meta_desc: Arrive in style and up to date on the biggest trends for KubeCon + CloudNativeCon North America this October in Detroit, Michigan!
 
-meta_image: meta.png
 
 authors:
     - kat-cosgrove

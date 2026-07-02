@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-05-07
 draft: false
 meta_desc: "Introducing Pulumi Private Registry: The source of truth for secure and compliant golden path building blocks."
-meta_image: meta.png
 
 authors:
     - idp-team

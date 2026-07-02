@@ -4,7 +4,6 @@ canonical_url: https://thenewstack.io/a-walkthrough-of-adopting-infrastructure-a
 date: 2023-11-14T19:54:55Z
 draft: false
 meta_desc: A look at the basics of how to get going with Infrastructure as Code, and then a dive into some advanced use cases to show what you can do from there.
-meta_image: meta.png
 authors:
     - joe-duffy
 tags:

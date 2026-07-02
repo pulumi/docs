@@ -5,7 +5,7 @@ tags: [serverless]
 category: tutorials
 meta_desc: "This tutorial shows how to use Pulumi to build a complete serverless application using JavaScript. No YAML needed."
 date: "2018-07-05"
-meta_image: "code-completion.png"
+
 ---
 
 {{% notes type="warning" %}}

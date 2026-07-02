@@ -7,7 +7,6 @@ draft: false
 meta_desc: |
   Kubernetes best practices for 2026: resource limits, RBAC, NetworkPolicy, autoscaling, GitOps, policy-as-code, SBOM, and FinOps — with anti-patterns and fixes.
 
-meta_image: meta.png
 
 authors:
 - engin-diri

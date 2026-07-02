@@ -2,7 +2,6 @@
 title: "Announcing the Speaker Lineup for PulumiUP 2023"
 date: 2023-05-24
 meta_desc: Attend PulumiUP 2023's tech talks and hands-on demos about infrastructure as code, platform engineering, multi-cloud, AI, modern cloud architectures, and more!
-meta_image: meta.png
 authors:
     - george-huang
     - sara-huddleston

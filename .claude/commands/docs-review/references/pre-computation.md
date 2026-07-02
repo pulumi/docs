@@ -39,7 +39,7 @@ The originally-queued `docs-reference-graph` bundle is subsumed by the Hugo buil
 **Next candidates** (priority order, no committed timeline):
 
 1. `markdown-link-validate.py` — flags dangling plain markdown-style internal links (`[x](/docs/...)`) that Hugo silently accepts; closes the one residual gap the Hugo build pre-step's floor doesn't cover. (`verify-claims.py`'s pass-0 lane already does a narrow version of this for `static/programs/<dir>/` references — a dedicated link-validate step would generalize it.)
-1. `image-validate.py` — file size, format-vs-extension mismatch, 1px-gray-border check, placeholder `meta_image` SHA detection, generic alt-text strings.
+1. `image-validate.py` — file size, format-vs-extension mismatch, 1px-gray-border check, unmodified placeholder `feature_image` SHA detection (against `.claude/commands/_common/images/blog-post-feature-placeholder.png`), generic alt-text strings.
 1. Editorial-balance Tier 2 extension — compute entity-mention counts + recommendation-steering counts deterministically (the patterns are already enumerated as regex in the blog criteria).
 
 Each pre-step is independent. Each writes a self-contained artifact. The reviewer agent reads what's relevant to its current task.

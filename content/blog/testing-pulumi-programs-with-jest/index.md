@@ -3,7 +3,6 @@ title: Test-Driven Infrastructure Development with Pulumi and Jest
 date: 2022-06-13
 lastmod: 2026-06-18
 meta_desc: Add unit testing with Jest to your Pulumi toolbox to write better, safer infrastructure code.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

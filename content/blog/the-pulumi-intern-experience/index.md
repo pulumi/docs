@@ -2,7 +2,6 @@
 title: "The Pulumi Intern Experience"
 date: "2020-09-16"
 meta_desc: "A glimpse into my work and experiences at Pulumi as a summer intern"
-meta_image: intern.png
 authors: ["sashu-shankar"]
 tags: ["pulumi-interns"]
 category: community

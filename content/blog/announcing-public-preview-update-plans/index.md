@@ -3,7 +3,6 @@ title: "Announcing the Public Preview of Update Plans"
 date: 2022-02-09
 updated: 2025-04-16
 meta_desc: Update Plans enable you to see and confirm the updates that will be made to your infrastructure and then apply those updates at a later time.
-meta_image: update_plans_preview.png
 authors:
     - fraser-waters
 tags:

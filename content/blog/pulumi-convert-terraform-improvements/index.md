@@ -3,7 +3,6 @@ title: "Converting Terraform to Pulumi Just Got Easier"
 date: 2025-03-04
 updated: 2025-09-17
 meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
-meta_image: meta.png
 authors:
     - brandon-pollack
     - meagan-cojocar

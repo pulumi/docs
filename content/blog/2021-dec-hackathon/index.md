@@ -3,7 +3,6 @@ title: "2021 December Hackathon: Introduction"
 date: 2022-01-07T09:39:28-06:00
 draft: false
 meta_desc: Learn a bit about how Pulumi works as an engineering team in this introduction to our regular hackathon process.
-meta_image: meta.png
 authors:
     - laura-santamaria
 tags:

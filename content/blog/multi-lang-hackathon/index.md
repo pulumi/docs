@@ -2,7 +2,6 @@
 title: "Demos from the Multi-Language Component Hackathon"
 date: 2021-06-24
 meta_desc: "Pulumi successful multi-lang package hackathon showed how to build multi-lang components and yielded demos exploring new concepts and capabcilities"
-meta_image: hackathon.png
 authors:
     - lee-zen
 tags:

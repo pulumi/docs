@@ -5,7 +5,6 @@ date: 2025-05-05
 draft: false
 
 meta_desc: "Learn how Oso used Pulumi to safely migrate its global infrastructure, ensuring zero downtime and maximum leverage."
-meta_image: meta.png
 
 authors:
     - shaun-verch

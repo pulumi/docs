@@ -4,7 +4,6 @@ date: 2021-10-12T08:00:00-07:00
 updated: 2025-03-24
 draft: false
 meta_desc: "Compare Azure container services like ACI, AKS, and App Service. Learn the pros, cons, pricing, and use cases to pick the best option for your workload."
-meta_image: "azure-top-5.png"
 authors:
     - lee-briggs
 tags:

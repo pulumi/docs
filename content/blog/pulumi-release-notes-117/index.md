@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-04-25
 draft: false
 meta_desc: "Explore Pulumi's latest features including AI-assisted development with MCP Server, cross-language Components, ESC Rotated Secrets, and much more!"
-meta_image: meta.png
 authors:
     - arun-loganathan
     - meagan-cojocar

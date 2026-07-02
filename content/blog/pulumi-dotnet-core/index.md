@@ -6,7 +6,7 @@ category: product
 meta_desc: "Today we are excited to announce preview support for writing Pulumi programs in any .NET Core language, including C#, F#, and VB.NET."
 date: "2019-11-11"
 
-meta_image: "pulumi-dotnet.png"
+
 ---
 
 Today we are excited to announce the Preview of .NET Core support for all of your modern infrastructure as code needs. This means you can create, deploy, and manage your infrastructure, on any cloud, using your favorite .NET language, including C#, F#, and VB.NET.

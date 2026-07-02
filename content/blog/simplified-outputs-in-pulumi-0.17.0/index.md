@@ -6,7 +6,7 @@ category: product
 date: "2019-03-19"
 updated: "2025-04-16"
 meta_desc: "Based on feedback from cloud developers, Pulumi Outputs have been simplified for JavaScript and TypeScript simplifying the user experience."
-meta_image: "comp-list.png"
+
 ---
 
 > [!INFO]

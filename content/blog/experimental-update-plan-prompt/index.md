@@ -2,7 +2,6 @@
 title: New CLI prompt to use Update Plans
 date: 2022-11-23T06:00:00-07:00
 meta_desc: Pulumi up will now prompt for users to try using update plans.
-meta_image: meta.png
 authors:
     - fraser-waters
     - mikhail-shilkov

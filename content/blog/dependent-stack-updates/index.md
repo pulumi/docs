@@ -2,7 +2,6 @@
 title: "Dependent Stack Updates with Pulumi Deployments"
 date: 2023-06-20
 meta_desc: Automatically keep dependent stacks up to date with Deployment Webhook Destinations and the pulumi-auto-deploy package.
-meta_image: meta.png
 authors:
     - evan-boyle
     - komal-ali

@@ -2,7 +2,6 @@
 title: "Unit Testing Infrastructure"
 date: 2020-03-24
 meta_desc: "Unit testing for infrastructure is now available using Node.js, Python, .NET, and Go"
-meta_image: tdd.png
 authors:
     - sophia-parafina
 tags:

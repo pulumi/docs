@@ -143,13 +143,13 @@ Concrete rules from `seo-analyze:references:aeo-checklist` applied at review tim
 
 Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`.
 
-Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
+Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, and — only when a post sets a custom `meta_image` override — one that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing). Blog posts otherwise leave `meta_image` blank and get an on-brand card at build time from the title + `feature_image`, so an absent `meta_image` is correct, never a finding.
 
 ## Do not flag
 
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
 - **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy.
-- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo, placeholder, and animated-GIF cases.)
+- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for the custom-override retired-logo and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
 - **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
@@ -158,8 +158,7 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 
 Each item below renders as a single 🚨 Outstanding finding when violated. Quote-and-rewrite mandate: name the field or file, propose the specific fix.
 
-- **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement.
-- **`meta_image` is the unmodified `/new-blog-post` placeholder.** Compute SHA256 of the resolved meta_image file and compare against `.claude/commands/_common/images/blog-post-meta-placeholder.png`. Match → flag with a pointer to `/blog-meta-image` for regeneration. Skip on `draft: true` or archival posts (`date` in the past).
+- **A custom `meta_image` override uses retired Pulumi logos.** Only applies when a post sets its own `meta_image` — most posts leave it blank and get the on-brand build-time card, so there is nothing to inspect. When an override is present, inspect it (its filename / path or rendered image) for retired brand variants; quote the path and propose the current-brand replacement, or suggest dropping the override to fall back to the build-time card. (A renamed `meta-legacy.png` archive image is not a `meta_image` and is never flagged.)
 - **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
 - **`<!--more-->` break missing or buried.** The break must be present and land after the first 1–3 paragraphs, not buried mid-post. Without it, the entire post body renders on the blog index. Quote the surrounding paragraphs; propose the correct placement. Skip on `draft: true` or archival posts.
 - **`social:` block missing or empty.** Active blog posts (not draft, not archival) must have a `social:` frontmatter block with at least one of `twitter`, `linkedin`, or `bluesky` populated; without it the post won't be promoted. Flag the missing/empty block; do not draft the copy (marketing owns voice).

@@ -5,7 +5,6 @@ updated: 2025-03-10
 draft: false
 meta_desc: >-
     Speed up Docker builds with Pulumi’s new Build provider. Leverage BuildKit, buildx, and caching for faster, more efficient container workflows.
-meta_image: meta.png
 authors:
     - bryce-lampe
 tags:

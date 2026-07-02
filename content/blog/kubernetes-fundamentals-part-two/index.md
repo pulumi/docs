@@ -1,8 +1,8 @@
 ---
 title: "Kubernetes Fundamentals: Part Two"
+feature_image: feature.png
 date: 2021-09-02T12:54:53-05:00
 draft: false
-meta_image: k8s-fundamentals.png
 meta_desc: "In part 2 of this 2-part series, we'll learn about managed Kubernetes services, when to use them, and how to deploy one, starting with Google's K8s engine."
 authors:
     - kat-cosgrove

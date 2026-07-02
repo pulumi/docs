@@ -3,7 +3,6 @@ title: "Deploy MERN Stack on DigitalOcean with Pulumi [Guide]"
 date: 2022-03-11
 updated: 2025-03-24
 meta_desc: Learn how to deploy a MERN stack app using Pulumi and DigitalOcean App Platform. Follow this step-by-step guide to automate fullstack deployments with ease.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

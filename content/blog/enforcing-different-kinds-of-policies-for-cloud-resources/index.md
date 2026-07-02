@@ -3,7 +3,6 @@ title: "Enforcing Different Kinds of Policies for Cloud Resources"
 date: 2019-12-19
 updated: 2025-04-16
 meta_desc: "A look at the different types of policies that can be written for Pulumi CrossGuard."
-meta_image: crossguard.png
 authors:
     - justin-vanpatten
 tags:

@@ -2,7 +2,6 @@
 title: "Enhanced search & Navigation: The new Pulumi Docs experience"
 date: 2023-06-12
 meta_desc:  At Pulumi, we believe in exceptional documentation experiences that help people using Pulumi find what they need quickly and use it successfully.
-meta_image: meta.png
 authors:
     - susan-evans
     - anita-trimbur

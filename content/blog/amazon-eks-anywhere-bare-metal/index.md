@@ -2,7 +2,6 @@
 title: Deploying Amazon EKS Anywhere on Bare Metal
 date: 2022-07-01T13:03:41-07:00
 meta_desc: "Bring EKS to Your Datacenter with Amazon EKS Anywhere Bare Metal."
-meta_image: meta.png
 authors:
     - david-flanagan
 

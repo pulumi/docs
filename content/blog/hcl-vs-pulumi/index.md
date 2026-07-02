@@ -15,7 +15,6 @@ social:
       - Future-proof your infrastructure management
 
       Learn why many organizations are choosing Pulumi to modernize their cloud engineering practices.
-meta_image: meta.png
 authors:
 - engin-diri
 tags:

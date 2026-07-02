@@ -2,7 +2,6 @@
 title: "Google Cloud: Bulk Importing Resources into Pulumi"
 date: 2023-03-16
 meta_desc: "Learn how to bulk import your Google Cloud resources into Pulumi"
-meta_image: "meta.png"
 authors:
     - josh-kodroff
 tags:

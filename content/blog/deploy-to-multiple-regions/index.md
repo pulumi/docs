@@ -2,7 +2,6 @@
 title: "Deploy Infrastructure to Multiple Cloud Regions at Once"
 date: 2022-08-03T08:00:00-07:00
 meta_desc: "Use infrastructure as code to deploy to multiple regions, accounts, or clusters at the same time, using Pulumi explicit provider configuration."
-meta_image: deployinfra.png
 authors: ["joe-duffy"]
 tags: ["aws", "regions", "rds", "multi-cloud", "multi-region", "architecture"]
 category: tutorials

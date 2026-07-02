@@ -3,7 +3,6 @@ title: "Introducing Pulumi Registry: Deploy Cloud Infra Faster"
 date: 2021-10-18T00:00:00-07:00
 updated: 2025-03-06
 meta_desc: Pulumi Registry helps you discover, deploy, and manage cloud infrastructure faster. Browse 60+ providers & components, with full API docs & best practices.
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:

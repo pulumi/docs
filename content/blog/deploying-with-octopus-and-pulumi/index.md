@@ -3,7 +3,6 @@ title: "Continuous Delivery on Octopus Deploy using Pulumi"
 authors: ["sophia-parafina"]
 tags: ["continuous-delivery", "octopus"]
 category: tutorials
-meta_image: "octopus-pulumi.png"
 meta_desc: "Learn how to integrate Pulumi with Octopus Deploy for secure, scalable CI/CD pipelines. Package and deploy your infrastructure using modern DevOps tools."
 date: "2019-10-22"
 updated: 2025-03-24

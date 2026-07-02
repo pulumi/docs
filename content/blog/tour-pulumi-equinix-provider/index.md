@@ -3,7 +3,6 @@ title: "A Tour of the Pulumi Equinix Provider"
 date: 2023-06-28
 lastmod: 2026-06-26
 meta_desc: Learn to use the capabilities of the Pulumi Equinix Provider, including how to deploy Kubernetes on Equinix Metal.
-meta_image: tour-equinix-provider.png
 authors:
     - josh-kodroff
     - oscar-cobles

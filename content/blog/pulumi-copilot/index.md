@@ -1,11 +1,11 @@
 ---
 title: "Introducing Pulumi Copilot: Intelligent Cloud Management"
+feature_image: feature.png
 allow_long_title: true
 date: 2024-06-12T04:00:00-07:00
 updated: 2025-03-12
 lastmod: 2026-06-30
 meta_desc: "Introducing Pulumi Copilot—an AI-powered assistant for cloud infrastructure management in Pulumi Cloud. Automate, analyze, and deploy faster."
-meta_image: copilot.png
 authors:
     - luke-hoban
 tags:

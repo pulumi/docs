@@ -4,7 +4,6 @@ allow_long_title: True
 date: 2024-04-24T07:00:02-08:00
 draft: false
 meta_desc: Pulumi introduces Scheduled Deployments to enhance cloud management, allowing for automated operations based on customizable schedules.
-meta_image: scheduled-deployments.png
 authors:
     - meagan-cojocar
     - levi-blackstone

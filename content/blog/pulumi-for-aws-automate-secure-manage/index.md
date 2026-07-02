@@ -3,7 +3,6 @@ title: "Pulumi for AWS: Automate, Secure, and Manage Your Cloud"
 date: 2024-12-02T9:00:00-00:00
 draft: false
 meta_desc: "Pulumi automates AWS cloud infrastructure through code, tames secrets sprawl, and manages cloud assets and compliance."
-meta_image: "meta.png"
 authors:
   - aaron-kao
   - gavin-johnson

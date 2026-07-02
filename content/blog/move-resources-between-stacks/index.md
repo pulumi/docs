@@ -3,7 +3,6 @@ title: "Introducing `pulumi state move`: Move Resources Between Stacks or Projec
 allow_long_title: true
 date: 2024-07-25
 meta_desc: Introducing the new `pulumi state move` command that allows moving resources between stacks and projects
-meta_image: meta.png
 authors:
     - thomas-gummerer
 tags:

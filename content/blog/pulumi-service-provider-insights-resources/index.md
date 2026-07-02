@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-26T09:00:00-08:00
 draft: false
 meta_desc: Discover cloud resources and enforce governance policies with new Pulumi Service Provider resources for visibility and compliance as code.
-meta_image: meta.png
 authors:
     - insights-team
 tags:

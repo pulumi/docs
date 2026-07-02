@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-26
 updated: 2026-04-29
 meta_desc: "Deploy OpenClaw (formerly Moltbot/Clawdbot), an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
-meta_image: meta.png
 aliases:
     - /blog/deploy-clawdbot-aws-hetzner/
     - /blog/deploy-moltbot-aws-hetzner/

@@ -3,7 +3,6 @@ title: "Pulumi + Python: Bringing the Best of Modern Python to IaC"
 date: 2024-07-03T14:17:38+02:00
 draft: false
 meta_desc: A big step forward for Python + Pulumi, with new Pythonic input types, built in type checking and support for Poetry.
-meta_image: meta.png
 authors:
     - julien-poissonnier
 tags:

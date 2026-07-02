@@ -3,7 +3,6 @@ title: "Infrastructure as Code with Java and Pulumi"
 date: 2022-05-04T06:59:00-07:00
 draft: false
 meta_desc: Learn about Pulumi's support for Java and JVM languages, which enable you to use Infrastructure As Code on any Cloud with the JVM ecosystem.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:

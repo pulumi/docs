@@ -2,7 +2,6 @@
 title: "Welcoming Go to the Pulumi Family"
 date: 2020-05-19
 meta_desc: "Go is fully supported in Pulumi 2.0 for Infrastructure as Code."
-meta_image: superfriends.png
 authors:
     - evan-boyle
 tags:

@@ -4,7 +4,6 @@ title: "Manage Shared Kubernetes Resources Safely with Pulumi"
 date: 2022-07-27T00:00:00-00:00
 
 meta_desc: Manage shared Kubernetes resources safely with our new Server-Side Apply support
-meta_image: meta.png
 authors:
     - levi-blackstone
 tags:

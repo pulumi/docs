@@ -1,5 +1,6 @@
 ---
 title: "Organizational Patterns: An Automation Team"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -19,7 +20,6 @@ meta_desc: In this continuing series, we explore an organizational pattern of us
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself

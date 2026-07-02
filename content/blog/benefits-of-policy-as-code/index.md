@@ -2,7 +2,6 @@
 title: "Benefits of Policy as Code"
 date: 2020-05-27
 meta_desc: "An organization can benefit from Policy as Code through cost control, compliance, and best practices."
-meta_image: pac-benefits.png
 authors:
     - sophia-parafina
 tags:

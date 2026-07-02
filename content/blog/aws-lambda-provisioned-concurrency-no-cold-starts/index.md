@@ -3,7 +3,6 @@ title: "Provisioned Concurrency: Avoiding Cold Starts in AWS Lambda"
 date: 2019-12-19
 updated: 2025-03-19
 meta_desc: "Learn how to configure AWS Lambda Provisioned Concurrency to minimize cold starts and improve performance with Pulumi."
-meta_image: variable.png
 authors: ["mikhail-shilkov"]
 tags: [aws, serverless]
 category: tutorials

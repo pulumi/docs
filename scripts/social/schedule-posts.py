@@ -29,9 +29,12 @@ handling details: https://github.com/pulumi/social
 import argparse
 import os
 import sys
+import tempfile
+import time
 from pathlib import Path
 
 import frontmatter
+import requests
 
 from social_core import (
     PostEntry,
@@ -77,12 +80,39 @@ def _post_url_from_path(filepath: str) -> str:
 
 
 def _meta_image_path(filepath: str) -> str | None:
-    """Find the meta image sibling to a blog post. Returns path or None."""
-    blog_dir = Path(filepath).parent
-    for name in ["meta.png", "meta.jpg"]:
-        img = blog_dir / name
-        if img.exists():
-            return str(img)
+    """Local path to the post's titled build-time social card (its og:image).
+
+    We want LinkedIn to show the *titled* card (title + feature image, or a
+    generic branded plate) — the same image X/Bluesky get by unfurling the link
+    — rather than the untitled feature.png hero. social_core uploads LinkedIn
+    media as a multipart file, so this must be a real local file, not a URL.
+
+    The card is a gitignored build artifact absent from this job's checkout, but
+    it's live at deploy time (this runs after Build and deploy), so fetch it to a
+    temp file. It's keyed by the post's directory path (see
+    layouts/partials/meta-image-key.html), which is what _slug_from_path yields —
+    not the post's URL slug. Returns None if the card can't be fetched, in which
+    case LinkedIn falls back to unfurling the link, which still renders the same
+    titled card from og:image.
+    """
+    slug = _slug_from_path(filepath).strip("/")  # e.g. "blog/my-post"
+    url = f"{SITE_URL}/images/generated/{slug}/index.png"
+    # The card can briefly 404 while the deploy propagates to the CDN; retry a
+    # few times, mirroring social_core's link-liveness backoff.
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, timeout=10)
+            if resp.status_code == 200:
+                fd, tmp = tempfile.mkstemp(suffix=".png")
+                with os.fdopen(fd, "wb") as f:
+                    f.write(resp.content)
+                return tmp
+        except requests.RequestException:
+            pass
+        if attempt < 2:
+            time.sleep(5)
+    print(f"  Warning: social card not reachable ({url}); "
+          "LinkedIn will fall back to link unfurl")
     return None
 
 
@@ -94,8 +124,9 @@ def build_entries(changed: list[str]) -> list[PostEntry]:
     marker that the PR-review CI depends on. run_schedule silently skips
     entries with empty platforms.
 
-    Attaches the meta image as LinkedIn media; X/Bluesky stay text-only
-    (the platforms crawl the link_url for their own card rendering).
+    Attaches the titled build-time social card (fetched from the live site) as
+    LinkedIn media; X/Bluesky stay text-only (the platforms crawl the link_url
+    for their own card rendering, which resolves to the same card).
     """
     entries: list[PostEntry] = []
     for filepath in changed:

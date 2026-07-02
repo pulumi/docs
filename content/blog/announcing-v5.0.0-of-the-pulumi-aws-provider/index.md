@@ -2,7 +2,6 @@
 title: "Announcing v5.0.0 of the Pulumi AWS Provider"
 date: 2022-03-28
 meta_desc: "v5.0.0 of the Pulumi AWS Provider is now available"
-meta_image: meta.png
 authors:
 - paul-stack
 tags:

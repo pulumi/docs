@@ -3,7 +3,6 @@ title: "Using Go Generics with Pulumi"
 date: 2022-03-31T14:00:00Z
 draft: false
 meta_desc: In this article, @rawkode shows you how to take advantage of Go's latest feature, Generics, in your Pulumi programs
-meta_image: meta.png
 authors: ["david-flanagan"]
 tags: ["community"]
 category: tutorials

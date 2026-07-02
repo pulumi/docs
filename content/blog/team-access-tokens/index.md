@@ -5,7 +5,6 @@ date: 2022-08-16T14:00:00-07:00
 
 meta_desc: We are launching Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a Pulumi Team.
 
-meta_image: meta.png
 
 authors:
     - devon-grove

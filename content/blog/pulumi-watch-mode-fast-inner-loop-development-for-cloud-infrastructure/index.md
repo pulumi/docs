@@ -6,7 +6,7 @@ tags: ["serverless","kubernetes","logging","features"]
 category: product
 date: "2019-12-02"
 meta_desc: "Pulumi Watch provides a mode for developing cloud infrastructure that speeds up the rate of iteration and allows cloud developers to focus on their code."
-meta_image: "watch.png"
+
 ---
 
 A big part of our vision with Pulumi is to bring application developers and infrastructure teams closer together in the cloud.  That includes both providing infrastructure teams with better software engineering tools, as well as providing developers with easier access to cloud infrastructure.  We are often inspired by looking at great software engineering experiences in other development stacks and applying them to the cloud infrastructure space.  Whether it be general-purpose languages and rich IDEs, testing and package management, or components and rich APIs, at Pulumi, we’ve repeatedly applied successful development tools and practices to the challenges of building and scaling modern cloud infrastructure.
