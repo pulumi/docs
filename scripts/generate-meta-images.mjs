@@ -216,17 +216,16 @@ const SECTIONS = [
     // Blog-post cards (content/blog/<slug>/index.md leaf bundles). Each post's
     // feature_image is pinned to the right and faded into the dark field by the
     // blog template; posts with none get a generic art plate. Non-post pages
-    // under blog/ (tag.md, series.md) get a generic card too; the /blog/ index
-    // gets a plain "Blog" title card (same treatment as the case-studies and
-    // events indexes). A page-level meta_image (custom override) still wins
-    // globally, so migrated posts drop theirs.
+    // under blog/ (tag.md, series.md) get a generic card too; blog/_index.md
+    // keeps its committed, designer-made meta_image and is skipped. A
+    // page-level meta_image (custom override) still wins globally, so migrated
+    // posts drop theirs.
     name: "blog",
-    template: (fm, id) => (id === "blog" ? "title" : "blog"),
+    template: "blog",
     recursive: true,
     skip: (fm) => fm.draft === true,
-    // One representative POST card per kind (with vs without a feature image);
-    // exclude the index so the sample exercises the blog renderer.
-    sampleGroupBy: (id, fields) => (id === "blog" ? null : fields.featurePath ? "feature" : "generic"),
+    // One representative card per kind (with vs without a feature image).
+    sampleGroupBy: (id, fields) => (fields.featurePath ? "feature" : "generic"),
     // featureHash folds the image bytes into the cache key so the card
     // regenerates when the feature image changes, while keeping the manifest
     // small (the base64 only exists transiently at render time).
