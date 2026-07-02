@@ -77,9 +77,14 @@ def _post_url_from_path(filepath: str) -> str:
 
 
 def _meta_image_path(filepath: str) -> str | None:
-    """Find the meta image sibling to a blog post. Returns path or None."""
+    """Find the social-media image sibling to a blog post. Returns path or None.
+
+    Prefers the post's feature.png (the on-brand hero that also drives the
+    build-time social card); falls back to a legacy meta.png/meta.jpg for older
+    posts that never had a feature image.
+    """
     blog_dir = Path(filepath).parent
-    for name in ["meta.png", "meta.jpg"]:
+    for name in ["feature.png", "meta.png", "meta.jpg"]:
         img = blog_dir / name
         if img.exists():
             return str(img)

@@ -42,7 +42,7 @@ proceed to the next section.
    ---
    title: "My New Post"
    date: 2019-07-17T14:26:50-07:00
-   meta_image: meta.png
+   feature_image: feature.png
    authors:
        - joe-duffy
    tags:
@@ -182,23 +182,21 @@ To add images to the body of your post, first place them within the folder conta
 > [!IMPORTANT]
 > If you are adding _any_ logos to the images, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due to caching.
 
-When you generate a new post, placeholder images are included for two types of blog images:
+When you generate a new post, a placeholder `feature_image` is included:
 
-- **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page.
-- **`meta_image`** — An [OpenGraph](http://ogp.me/) image (1200×628) used in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page.
+- **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page. It also drives the post's **social/OpenGraph card** (the 1200×628 image used in Twitter cards, unfurled Slack links, etc. and on the blog home page), which is generated on-brand at **build time** from the post title + feature image. You no longer create or commit a separate `meta_image` — leave it blank.
 
-Both are optional but strongly recommended.
+The `feature_image` is optional but strongly recommended; without one the build-time card falls back to a generic branded plate.
 
-To request a custom feature image from the design team, label your PR with `needs-design`. You can then use the `/blog-meta-image` command in Claude Code to generate a meta image that matches the feature image.
-
-If you're in a hurry you can use the same Claude Code command to generate both images automatically from a curated set of branded templates.
+To request a custom feature image from the design team, label your PR with `needs-design`. You can also use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
 
 | Field           | Recommended Size | Aspect Ratio | Format | Background               |
 | --------------- | ---------------- | ------------ | ------ | ------------------------ |
 | `feature_image` | 1884×1256        | 3:2          | PNG    | Opaque (No Transparency) |
-| `meta_image`    | 1200×628         | ~1.91:1      | PNG    | Opaque (No Transparency) |
 
-Remember to replace both placeholder images (or remove the properties and delete the placeholder files) before submitting your post.
+Remember to replace the placeholder feature image (or remove the property and delete the placeholder file) before submitting your post.
+
+> **Archived images:** older posts that shipped an off-brand `meta_image` have had it renamed to `meta-legacy.png` and removed from front matter; it now appears in a collapsed "Archived feature image" panel at the bottom of the post. Set `meta_image` only to override the build-time card with a custom image.
 
 #### Video
 
@@ -253,7 +251,7 @@ Before submitting your post:
 1. **Review for quality**: Run `/docs-review` in Claude Code to check for style and content issues
 2. **Add borders to images**: If you have screenshots, run `/add-borders` to add 1px grey borders for better visual clarity
 3. **Preview locally**: Run `make serve` and check your post at <http://localhost:1313/blog/[your-slug>]
-4. **Replace the placeholder meta image**: Create a custom 1200×630 PNG for social media previews (see [meta image guidelines](#social-meta-images) above)
+4. **Replace the placeholder feature image**: Add a 1884×1256 hero image (or run `/blog-feature-image`); it also drives the build-time social card (see [feature image guidelines](#social-meta-and-feature-images) above)
 5. **Submit for review**: Create a Pull Request against the `master` branch
 6. **Publicize**: Before merge, reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) so Marketing can help broadcast your post
 
@@ -269,8 +267,8 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page
 - [ ] Run `/docs-review` to check for style and content issues
 - [ ] Run `/add-borders` if your post includes images
-- [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images
-- [ ] Check that your meta_image is using the current logos for Pulumi and others
+- [ ] Check that your feature_image appears properly on the blog home page and at the top of the post. Do not use animated GIFs
+- [ ] If your feature image includes logos, confirm they are the current Pulumi/partner logos (the build-time social card is generated from the feature image)
 - [ ] Preview locally with `make serve`. Check formatting, links, and images for appearance
 - [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR)
 - [ ] Reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) to make Marketing aware that your post is about to go live!
