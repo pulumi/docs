@@ -154,7 +154,7 @@ No. Kustomize overlays and patches existing Kubernetes YAML for different enviro
 
 ### Is `kubectl apply` infrastructure as code?
 
-`kubectl apply` is the mechanism Kubernetes uses to reconcile manifests against live cluster state, and it's version-controllable if the manifests behind it are stored in Git. But it operates only within the configuration layer: it can't create the cluster it's targeting, preview a plan before applying, or express repeated patterns as code the way a general-purpose IaC program can.
+`kubectl apply` is the mechanism Kubernetes uses to reconcile manifests against live cluster state, and it's version-controllable if the manifests behind it are stored in Git. But it operates only within the configuration layer: it can't create the cluster it's targeting, it has no plan step of its own (`kubectl diff` offers a separate, less integrated pre-apply diff), and it can't express repeated patterns as code the way a general-purpose IaC program can.
 
 ### Can Terraform manage Kubernetes?
 
