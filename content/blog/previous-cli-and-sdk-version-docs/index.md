@@ -1,9 +1,8 @@
 ---
-title: "New: Previous CLI and SDK Version Docs on pulumi.com"
+title: "New: Versioned CLI and SDK Docs"
 date: 2026-07-01
 draft: false
 meta_desc: "The Pulumi CLI command reference and SDK API docs now include a version selector, so you can browse the docs that match the release you're running."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - cam-soper
