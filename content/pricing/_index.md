@@ -471,7 +471,7 @@ comparison_table:
                 items:
                   - content: Free
                   - content: $0.000025/hour
-                    subtext: $0.185/month
+                    subtext: $0.0185/month
                   - content: Starting at $0.00005/hour
                     subtext: $0.0365/month
                   - content: Custom
