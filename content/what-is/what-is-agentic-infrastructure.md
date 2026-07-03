@@ -52,13 +52,13 @@ Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 
 
 Any capable coding agent. Because Pulumi expresses infrastructure in general-purpose languages, agents like Claude Code, OpenAI Codex, Cursor, and GitHub Copilot can write, preview, and deploy Pulumi programs the same way they work on application code. Pulumi is built to make the whole platform legible to whichever agent you already use, and there is a spectrum of ways to work:
 
-**Your coding agent and Pulumi IaC.** The agent edits Pulumi code, runs `pulumi preview` to check the plan against its intent, and deploys. The verification loop works out of the box, with no special integration. The [Pulumi CLI](/docs/iac/cli/) is designed for exactly this: agents can run any command via `npx pulumi` without installation, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), get [ephemeral accounts provisioned automatically](/docs/administration/organizations-teams/agent-accounts/), and parse structured `--json` output from every command.
+**Your coding agent and Pulumi IaC.** The agent edits Pulumi code, runs `pulumi preview` to check the plan against its intent, and deploys. The verification loop works out of the box, with no special integration. The [Pulumi CLI](/docs/iac/cli/) is designed for exactly this: agents can run any command via `npx pulumi` without installation, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), get [ephemeral accounts provisioned automatically](/docs/administration/organizations-teams/agent-accounts/), and parse structured `--json` output from the commands that emit it.
 
 **Your coding agent, equipped.** [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows (migrations, component authoring, secrets management), and the [Pulumi MCP server](/docs/ai/mcp-server/) gives them live access to your stacks, deployed resources, and the Pulumi Registry. Same agent, meaningfully better results.
 
 **Pulumi Neo.** [Neo](/product/neo/) is Pulumi's purpose-built infrastructure agent. It ships with the Agent Skills catalog built in, and adds grounding in your organization's actual infrastructure state, policy guardrails, configurable human-in-the-loop approvals, and scheduled autonomous work.
 
-The options compose. Many teams use Neo for scheduled, longer-horizon infrastructure work and their everyday coding agent for interactive development, and work can [hand off from one agent to Neo](/docs/ai/skills/) mid-session.
+The options compose. Teams often use Neo for scheduled, longer-horizon infrastructure work and their everyday coding agent for interactive development, and work can [hand off from one agent to Neo](/docs/ai/skills/) mid-session.
 
 ## What does an AI infrastructure agent actually do?
 
@@ -134,7 +134,7 @@ The pattern across these teams is consistent: engineering headcount has not shru
 
 ## How do you get started with agentic infrastructure?
 
-There are two entry points, and they compose: bring the coding agent you already use, or use [Pulumi Neo](/product/neo/), which is built into Pulumi Cloud.
+You have two entry points, and they compose: bring the coding agent you already use, or use [Pulumi Neo](/product/neo/), which is built into Pulumi Cloud.
 
 **Step 1: Start with Pulumi IaC.** Agents work with Pulumi programs. If your team is already using Pulumi, agents can start operating your existing stacks immediately. If you are migrating from another tool, Pulumi provides [conversion documentation](/docs/iac/comparisons/terraform/) for common starting points.
 
