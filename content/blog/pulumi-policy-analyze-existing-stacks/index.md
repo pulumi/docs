@@ -3,7 +3,6 @@ title: "Introducing the pulumi policy analyze Command for Existing Stacks"
 date: 2026-04-03
 draft: false
 meta_desc: "Use the new `pulumi policy analyze` command to run local policy packs against existing stack state, with workflows for developers and AI agents."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - fraser-waters

@@ -2,7 +2,6 @@
 title: "Manage Any Infrastructure with Policy as Code"
 date: 2020-02-18
 meta_desc: "Manage AWS, Azure, GCP, and Kubernetes with Policy as Code"
-meta_image: crossguard.png
 authors:
    - sophia-parafina
 tags:

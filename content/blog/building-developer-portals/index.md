@@ -4,7 +4,6 @@ date: 2023-10-12
 updated: 2025-03-26
 draft: false
 meta_desc: Empower platform teams with Pulumi’s internal developer portal tools—custom templates, Backstage integration, and point-and-click infrastructure setup.
-meta_image: meta.png
 authors:
     - meagan-cojocar
 tags:

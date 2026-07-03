@@ -6,7 +6,6 @@ date: 2023-10-11T04:00:00-07:00
 
 meta_desc: "Announcing new features in Pulumi Cloud to support platform teams across developer portals, policy and compliance, and deployments and delivery"
 
-meta_image: meta.png
 
 authors:
     - luke-hoban

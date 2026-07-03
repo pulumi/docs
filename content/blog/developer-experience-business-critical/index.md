@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-02-20T20:47:44Z
 updated: 2025-03-19
 meta_desc: Developer Experience (DevEx) is more than productivity—it drives business success. Learn how DevEx improves innovation, retention, and revenue.
-meta_image: developer-experience-devex-business-value-business-critical.png
 authors:
     - sara-huddleston
 tags:

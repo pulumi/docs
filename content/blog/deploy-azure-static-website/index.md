@@ -2,7 +2,6 @@
 title: Introducing the Azure Static Website Component
 date: 2022-10-11
 meta_desc: Learn how to quickly deploy your static site to Azure using the Azure Static Website Component
-meta_image: "meta_img.png"
 authors:
     - sean-holung
 tags:

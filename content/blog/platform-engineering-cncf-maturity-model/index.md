@@ -23,7 +23,6 @@ meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: platform-engineering-dominik-tech-talk-cncf.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for

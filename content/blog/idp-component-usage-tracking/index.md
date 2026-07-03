@@ -3,7 +3,6 @@ title: "Component Usage Tracking in Pulumi Private Registry"
 date: 2025-10-28
 draft: false
 meta_desc: "Track which stacks use components from your private registry to understand version sprawl, plan deprecations, and respond to security issues."
-meta_image: meta.png
 authors:
     - idp-team
 tags:

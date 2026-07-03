@@ -143,6 +143,23 @@
 
 
     <meta property="og:image" content="{{ $ogImage | absURL }}" />
+    {{- /*
+        Optional second og:image: a square (1:1) card for surfaces that prefer
+        it. Best-effort — most scrapers use the first og:image (the landscape
+        card above), which also stays the twitter:image. Resolved by
+        partials/meta-image-square-url.html (events auto-generate one; any page
+        can set meta_image_square).
+    */ -}}
+    {{ $squareImage := partial "meta-image-square-url.html" . }}
+    {{ with $squareImage }}
+        <meta property="og:image" content="{{ . | absURL }}" />
+        {{- /* Only the auto-generated card is known to be 628x628; a custom
+               meta_image_square override may be any size, so don't declare dims. */ -}}
+        {{ if not $.Params.meta_image_square }}
+            <meta property="og:image:width" content="628" />
+            <meta property="og:image:height" content="628" />
+        {{ end }}
+    {{ end }}
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="pulumi" />

@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-07-03T09:08:31-07:00
 draft: false
 meta_desc: Introducing Resource Search and Pulumi Deployments in Self-Hosted Pulumi Cloud for enhanced management and deployment of cloud infrastructure.
-meta_image: meta.png
 authors:
     - meagan-cojocar
 tags:

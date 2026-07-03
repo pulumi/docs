@@ -2,7 +2,6 @@
 title: "AWS Lambda Functions Powered by AWS Graviton2 Processors"
 date: 2021-09-29
 meta_desc: Deploy AWS Lambda Functions powered by AWS Graviton2 Processors
-meta_image: meta.png
 authors:
     - paul-stack
 tags:

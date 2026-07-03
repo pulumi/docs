@@ -19,13 +19,12 @@ draft: false
 # linter test. Max length is 160 characters.
 meta_desc:
 
-# The meta_image appears in social-media previews and on the blog home page. A
-# placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
-meta_image: meta.png
-
 # The feature_image is a high-resolution hero image (1884x1256) displayed at
-# the top of the blog post page. Generate both images with /blog-meta-image.
+# the top of the blog post page. It also drives the on-brand social/OpenGraph
+# card, which is generated automatically at build time — don't add a meta_image
+# (custom overrides drift off-brand and are almost never needed). Generate the
+# feature image with /blog-feature-image, or label your PR with `needs-design`
+# to have a designer create a custom one.
 feature_image: feature.png
 
 # At least one author is required. The values in this list correspond with the
@@ -97,7 +96,7 @@ let bucket = new aws.s3.Bucket("stuff");
 
 ## Images
 
-![Placeholder Image](meta.png)
+![Placeholder Image](feature.png)
 
 ## Videos
 

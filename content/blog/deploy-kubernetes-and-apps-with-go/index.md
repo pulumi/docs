@@ -2,7 +2,6 @@
 title: "Deploy Kubernetes and Applications with Go"
 date: 2020-04-14
 meta_desc: "Manage Kubernetes clusters and apps with Go using Pulumi's reusable components."
-meta_image: gopher.png
 authors:
     - levi-blackstone
 tags:

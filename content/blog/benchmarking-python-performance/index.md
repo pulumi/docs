@@ -2,7 +2,6 @@
 title: "Benchmarking Python Performance"
 date: 2023-09-28
 meta_desc: "Benchmarking and improving the performance of Pulumi Python programs."
-meta_image: meta.png
 
 authors:
     - justin-vanpatten

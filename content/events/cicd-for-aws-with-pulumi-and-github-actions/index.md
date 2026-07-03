@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Get started with CI/CD for AWS using Pulumi & GitHub Actions
 meta_desc: In this workshop, you will learn the fundamentals of an infrastructure CI/CD pipeline through guided exercises using Pulumi.
-meta_image: "/images/resources/cicd-aws-github-actions-diana.png"
+meta_image: /events/cicd-for-aws-with-pulumi-and-github-actions/meta.png
+meta_image_square: /events/cicd-for-aws-with-pulumi-and-github-actions/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -6,7 +6,6 @@ authors:
   - dan-biwer
 meta_desc: "Pulumi pre-built policy packs for CIS v8.1, NIST 800-53 Rev. 5, and PCI DSS v4.0 help teams achieve and maintain cloud compliance in minutes, not months."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
   - pulumi-cloud
   - policy-as-code

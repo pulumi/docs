@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: Pulumi operations get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
 
-meta_image: meta.png
 
 authors:
     - thomas-gummerer

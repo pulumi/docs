@@ -2,7 +2,6 @@
 title: How to Create and Share a Pulumi Template
 date: 2022-12-12
 meta_desc: Learn how to design and build Pulumi project templates and share them with others on GitHub.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

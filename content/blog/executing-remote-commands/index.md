@@ -4,7 +4,6 @@ date: 2022-02-03T22:10:00Z
 updated: 2025-03-05
 draft: false
 meta_desc: Deploy Kubernetes on DigitalOcean with Pulumi’s Command package. Run remote commands, fetch kubeconfig, and streamline Kubernetes automation effortlessly.
-meta_image: meta.png
 authors: ["david-flanagan"]
 tags:
   - kubernetes

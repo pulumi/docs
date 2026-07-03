@@ -6,7 +6,6 @@ tags: ["aws", "kubernetes", "eks"]
 category: best-practices
 meta_desc: "Pulumi supports simplify the scaling your Elastic Kubernetes Service (EKS) clusters with Managed Node Groups and Fargate."
 date: "2019-12-05"
-meta_image: "pulumi-eks-fargate.png"
 
 summary: |
     AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for

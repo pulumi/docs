@@ -5,7 +5,6 @@ date: 2024-06-07
 draft: false
 social_media: "Many tools describe themselves as \"Infrastructure as Code\".... but declarative config files aren't really code, and never will be. Pulumi bridges the worlds of declarative and standard programming using one simple trick; asynchronous value semantics."
 meta_desc: "Pulumi bridges the worlds of declarative and standard programming using asynchronous semantics."
-meta_image: meta.png
 authors:
     - troy-howard
 tags:

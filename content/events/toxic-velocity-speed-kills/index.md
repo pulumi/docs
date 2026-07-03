@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Toxic Velocity: Speed Kills"
 meta_desc: In this talk, we'll discuss the concepts of business pressures on organizations and individuals, the effects, and what "crashing" looks like.
+meta_image: /events/toxic-velocity-speed-kills/meta.png
+meta_image_square: /events/toxic-velocity-speed-kills/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

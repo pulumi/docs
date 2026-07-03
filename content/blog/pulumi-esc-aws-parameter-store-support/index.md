@@ -4,7 +4,6 @@ date: 2024-12-16T12:00:00-06:00
 updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds integration support for AWS Parameter Store"
-meta_image: meta.png
 authors:
   - sean-yeh
   - cleve-littlefield

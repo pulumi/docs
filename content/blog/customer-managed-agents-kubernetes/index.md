@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-08-14T08:08:31-07:00
 draft: false
 meta_desc: Introducing Kubernetes-native support for Customer Managed Agents in Pulumi Cloud for enhanced flexibility and control over your infrastructure deployments.
-meta_image: meta.png
 authors:
     - levi-blackstone
     - meagan-cojocar

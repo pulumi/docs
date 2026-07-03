@@ -6,7 +6,6 @@ authors:
   - arun-loganathan
 meta_desc: "Continuous policy evaluation for IaC stacks using their last successful deployment state, providing frictionless compliance checks and faster CI/CD workflows."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
   - pulumi-cloud
   - policy-as-code

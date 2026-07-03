@@ -2,6 +2,8 @@
 # Name of the event.
 title: "From Code to Cloud"
 meta_desc: In this workshop, you'll learn how to leverage GitHub to make code CloudOps ready without learning new tools or collecting new certifications.
+meta_image: /events/from-code-to-cloud/meta.png
+meta_image_square: /events/from-code-to-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

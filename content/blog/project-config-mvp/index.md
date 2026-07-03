@@ -3,7 +3,6 @@ title: "Simplify Configuration Management with Project-level Config"
 date: 2022-11-02T06:00:00-07:00
 updated: 2025-06-20
 meta_desc: Pulumi’s project-level config simplifies infrastructure setup, enabling seamless configuration across all stacks. Learn how to use it effectively.
-meta_image: meta.png
 authors:
     - fraser-waters
     - zaid-ajaj

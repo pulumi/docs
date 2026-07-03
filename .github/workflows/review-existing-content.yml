@@ -67,7 +67,7 @@ jobs:
     outputs:
       is_holiday: ${{ steps.check.outputs.is_holiday }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: check
         env:
           ICS_URL: ${{ vars.BAMBOOHR_HOLIDAY_ICS_URL }}
@@ -106,9 +106,9 @@ jobs:
       # as pulumi-bot rather than github-actions[bot].
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           # Selection reads git history (staleness clock: creation date and
@@ -132,7 +132,7 @@ jobs:
       # Vale (and other mise-pinned tools) for the skill's whole-file
       # prose-lint pre-step.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
       - name: Install Python deps

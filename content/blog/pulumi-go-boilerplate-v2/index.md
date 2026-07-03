@@ -9,7 +9,7 @@ tags:
   - packages
 category: product
 meta_desc: A major update to the Pulumi Provider Boilerplate simplifies the provider development process.
-meta_image: meta.png
+
 ---
 
 We are excited to announce that we've updated the Pulumi Provider Boilerplate to make custom provider implementation easier!

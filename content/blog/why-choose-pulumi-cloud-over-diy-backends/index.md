@@ -2,7 +2,6 @@
 title: "Why Choose Pulumi Cloud Over DIY Backends?"
 date: 2025-03-19T09:00:00-07:00
 meta_desc: "Discover why to use Pulumi Cloud versus DIY IaC backends. Save time, reduce costs, and ensure compliance."
-meta_image: meta.png
 authors:
     - aaron-kao
 tags:

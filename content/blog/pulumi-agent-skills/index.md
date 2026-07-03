@@ -3,7 +3,6 @@ title: "Pulumi Agent Skills: Best practices and more for AI coding assistants"
 date: 2026-01-29
 draft: false
 meta_desc: "Introducing packaged Pulumi expertise that works across Claude Code, Cursor, GitHub Copilot, and other AI coding assistants."
-meta_image: meta.png
 authors:
     - neo-team
 tags:

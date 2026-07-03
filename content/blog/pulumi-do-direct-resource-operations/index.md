@@ -3,7 +3,6 @@ title: "Introducing pulumi do: Direct Resource Operations for Any Cloud"
 date: 2026-05-22
 draft: false
 meta_desc: "The new pulumi do command lets you create, read, update, and delete any cloud resource across the full Pulumi ecosystem with a single, agent-friendly API."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - fraser-waters

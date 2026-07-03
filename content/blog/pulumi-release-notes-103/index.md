@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-04-15T11:06:04-08:00
 draft: false
 meta_desc: The latest Pulumi updates include a new Pulumi ESC Key Value Table Editor, 1Password ESC Provider, Pulumi CLI & SDK Dev Releases, and more!
-meta_image: meta.png
 authors:
     - arun-loganathan
 tags:

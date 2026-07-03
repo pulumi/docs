@@ -5,7 +5,6 @@ date: 2022-09-01T10:19:47+02:00
 
 meta_desc: A walkthrough of how Pulumi's state can diverge from provider reality, and how `pulumi refresh` can correct Pulumi's state.
 
-meta_image: meta.png
 
 authors:
     - ian-wahbe

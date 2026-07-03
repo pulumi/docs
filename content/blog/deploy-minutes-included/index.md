@@ -4,7 +4,6 @@ allow_long_title: True
 date: 2024-04-24T07:00:01-08:00
 draft: false
 meta_desc: Pulumi enhances its Deployments feature to offer free minutes, making it easier for customers to test and adopt cloud infrastructure management solutions.
-meta_image: deployments-free-tier.png
 authors:
     - meagan-cojocar
 tags:

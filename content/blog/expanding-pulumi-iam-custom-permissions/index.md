@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-03-19T10:30:00-07:00
 draft: false
 meta_desc: "Pulumi IAM introduces tag-based access control and role assignments for teams and users, enabling least-privilege access management at scale."
-meta_image: meta.png
 feature_image: feature.png
 authors:
   - devon-grove

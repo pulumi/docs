@@ -108,7 +108,7 @@ Present educational suggestions the writer can consider. Focus on why each sugge
 Additional considerations for blog content:
 - **Recency signal**: Year in title or prominent placement
 - **Author credibility**: Author has bio with relevant expertise
-- **Social meta**: og:image, og:description present and not placeholders (verify `meta.png` is a real image)
+- **Social meta**: og:description present and not a placeholder. The og:image is generated on-brand at build time from the title + `feature_image` — verify `feature.png` is a real image, not the unmodified placeholder
 - **Call to action**: Clear next step for readers
 
 ### Documentation

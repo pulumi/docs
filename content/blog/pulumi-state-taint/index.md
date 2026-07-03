@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: "Pulumi CLI v3.192.0 introduces state taint and untaint commands for precise control over resource replacements without code changes."
 
-meta_image: meta.png
 
 authors:
     - meagan-cojocar

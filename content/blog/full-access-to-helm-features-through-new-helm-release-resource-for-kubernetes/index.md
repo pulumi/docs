@@ -4,7 +4,6 @@ h1: "Full Access to Helm Features with new Helm Release Resource for Kubernetes"
 date: "2021-09-14"
 updated: 2025-03-26
 meta_desc: "Get native Helm 3 support in Pulumi with the new Helm Release resource. Use lifecycle hooks, subcharts, and manage releases directly from your IaC code."
-meta_image: "k8s-helm-release.png"
 authors: ["vivek-lakshmanan"]
 tags: [kubernetes, helm]
 category: product

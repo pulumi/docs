@@ -4,7 +4,6 @@ h1: "Deploy a Function App with KEDA (Kubernetes-based Event-Driven Autoscaling)
 authors: ["mikhail-shilkov"]
 tags: [azure, kubernetes, serverless]
 category: tutorials
-meta_image: "meta.png"
 meta_desc: "Hosting Azure Functions in Kubernetes with KEDA: How It Works and the Simplest Way to Get Started"
 date: "2019-10-10"
 ---

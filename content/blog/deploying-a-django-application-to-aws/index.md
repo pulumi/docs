@@ -3,7 +3,6 @@ title: "How to Deploy a Django Application to AWS"
 date: 2020-08-28
 updated: 2025-03-21
 meta_desc: Learn how to deploy a secure Django app to AWS using Pulumi and Docker. This tutorial covers MySQL setup, Fargate deployment, and secret management.
-meta_image: meta.png
 authors: ["vova-ivanov"]
 tags: ["aws", "python", "containers", "docker", "mysql"]
 category: tutorials

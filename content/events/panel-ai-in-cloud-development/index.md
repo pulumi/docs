@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: AI in Cloud Development
 meta_desc: Explore how AI is shaping cloud development, from coding to infrastructure and observability, with expert insights on current successes and future possibilities
-meta_image:
+meta_image: /events/panel-ai-in-cloud-development/meta.png
+meta_image_square: /events/panel-ai-in-cloud-development/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

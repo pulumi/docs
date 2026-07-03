@@ -4,7 +4,6 @@ date: 2022-01-10T11:10:06-06:00
 draft: false
 canonical_url: https://delitescere.medium.com/pulumi-and-localstack-beyond-the-basics-d993f3b94d17
 meta_desc: A review of using Pulumi to spin up a LocalStack environment using good engineering practices.
-meta_image: meta.png
 authors:
     - josh-graham
 

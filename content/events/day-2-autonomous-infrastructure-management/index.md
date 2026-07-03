@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Day-2 Autonomous Infrastructure Management"
 meta_desc: Learn how to simplify and automate maintenance of growing infrastructure inventory with monitoring, remediation, and optimization workflows.
-meta_image:
+meta_image: /events/day-2-autonomous-infrastructure-management/meta.png
+meta_image_square: /events/day-2-autonomous-infrastructure-management/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

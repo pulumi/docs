@@ -2,7 +2,6 @@
 title: "Testing Practices for Cloud Engineering"
 date: 2021-06-22
 meta_desc: "Cloud engineering applies software engineering testing to ensure reliability, secure, and quality infrastructure."
-meta_image: testing_concepts.png
 authors:
     - sophia-parafina
 tags:

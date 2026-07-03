@@ -4,7 +4,6 @@ updated: 2025-10-10
 date: 2024-09-03T09:00:00-07:00
 draft: false
 meta_desc: We have released a tap-pulumi-cloud connector to be able to export Pulumi Cloud data into your own Data Warehouse.
-meta_image: meta.png
 authors:
     - pablo-seibelt
     - lucas-crespo

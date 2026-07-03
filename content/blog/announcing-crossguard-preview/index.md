@@ -3,7 +3,6 @@ title: "Announcing CrossGuard Preview"
 date: 2019-12-02
 updated: "2025-04-16"
 meta_desc: "Today we are announcing Pulumi CrossGuard, a Policy as Code solution that enforces custom infrastructure policies, is available for all users to preview."
-meta_image: crossguard.png
 authors: ["erin-krengel"]
 tags: [policy-as-code, features, announcements]
 category: product

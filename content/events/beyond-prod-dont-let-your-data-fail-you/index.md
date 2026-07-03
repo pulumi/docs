@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Beyond Prod: Don't Let Your Data Fail You"
 meta_desc: This talk will deep-dive into how whylogs fits into the infrastructure as a whole and how it can enable end-to-end observability for your data stack.
+meta_image: /events/beyond-prod-dont-let-your-data-fail-you/meta.png
+meta_image_square: /events/beyond-prod-dont-let-your-data-fail-you/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

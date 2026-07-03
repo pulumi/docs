@@ -1,8 +1,8 @@
 ---
 title: "Day 2 Operations: Drift Detection and Remediation"
+feature_image: feature.png
 allow_long_title: true
 meta_desc: "Implement automated drift detection for your IDP using Pulumi. Maintain infrastructure integrity with scheduled checks and real-time alerts."
-meta_image: meta.png
 date: 2025-10-24
 series: idp-best-practices
 authors:

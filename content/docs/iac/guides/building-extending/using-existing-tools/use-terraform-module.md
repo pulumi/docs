@@ -71,7 +71,7 @@ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
 
 {{% notes type="tip" %}}
-See [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) for details on generating and using SDKs from local or parameterized providers.
+See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for details on generating and using SDKs from local or parameterized providers.
 {{% /notes %}}
 
 ### Using a Local Terraform Module

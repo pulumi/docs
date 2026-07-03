@@ -2,7 +2,6 @@
 title: "Achieving Amazing Performance in the Pulumi CLI"
 date: 2023-01-26
 meta_desc: "Introducing the Amazing Performance initiative, and an overview of performance tooling we've developed for Pulumi."
-meta_image: meta.png
 
 authors:
     - robbie-mckinstry

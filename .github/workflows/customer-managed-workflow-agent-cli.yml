@@ -28,9 +28,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: set the customer-managed-workflow-agent version
         run: |
           echo "CMWA_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
@@ -56,12 +56,12 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: set the customer-managed-workflow-agent version
         run: |
           echo "CMWA_VERSION=${{ github.event.inputs.version || github.event.client_payload.ref }}" >> $GITHUB_ENV
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           path: docs
       - name: Update latest version
@@ -101,7 +101,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Azure IaC and Pulumi Deployments
 meta_desc: Explore the new Azure Native v2 provider and learn how Pulumi Deployments make it easier to validate both infrastructure and app code before release.
-meta_image: /images/resources/azure-deployments2.png
+meta_image: /events/azure-github-workshop/meta.png
+meta_image_square: /events/azure-github-workshop/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

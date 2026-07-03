@@ -1,0 +1,13 @@
+{{- /*
+    The content-path key for a page's build-time generated card: the page's
+    File.Path with the .md extension and a trailing /_index stripped. Mirrors the
+    id that scripts/generate-meta-images.mjs writes under
+    assets/images/generated/<key>.png (and <key>.square.png). Returns "" for
+    pages with no backing file. Shared by meta-image-url.html and
+    meta-image-square-url.html so the landscape and square lookups stay in sync.
+*/ -}}
+{{- $key := "" -}}
+{{- with .File -}}
+    {{- $key = .Path | replaceRE "\\.md$" "" | replaceRE "/_index$" "" -}}
+{{- end -}}
+{{- return $key -}}

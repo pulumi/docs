@@ -61,9 +61,25 @@ If your Terraform state is currently stored in S3, Azure Blob Storage, GCS, a lo
 
 Before making any changes, create a backup of your current state file:
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform state pull > terraform_state_backup.tfstate
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state pull > terraform_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### 2. Update your backend configuration
 
@@ -94,33 +110,81 @@ Replace the placeholders:
 If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `api.pulumi.com` with your instance's API URL in:
 
 - The backend configuration above
-- The `terraform login` command (e.g., `terraform login your-pulumi-host.example.com`)
+- The `terraform login` or `tofu login` command (e.g., `terraform login your-pulumi-host.example.com`)
 - The `TF_TOKEN_*` variable name (e.g., `TF_TOKEN_your_pulumi_host_example_com`)
 {{% /notes %}}
 
 ### 3. Authenticate with Pulumi Cloud
 
-Run the standard Terraform login command — it opens a browser to generate a token and stores it in `~/.terraform.d/credentials.tfrc.json` for future runs:
+Run the login command — it opens a browser to generate a token and stores it in `~/.terraform.d/credentials.tfrc.json` for future runs:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```bash
 terraform login api.pulumi.com
 ```
 
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu login api.pulumi.com
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 For non-interactive environments like CI/CD, set the `TF_TOKEN_api_pulumi_com` environment variable instead. See [Update CI/CD pipelines](#update-cicd-pipelines) below.
 
 ### 4. Run the migration
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```bash
 terraform init -migrate-state
 ```
 
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init -migrate-state
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 Terraform detects the backend change and prompts you to confirm the migration. Type `yes` to proceed.
 
 ### 5. Verify the migration
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform plan
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 You should see **No changes**. This confirms that the state was migrated correctly and matches your infrastructure.
 
@@ -136,15 +200,47 @@ HCP Terraform does not support automatic state migration using `terraform init -
 
 Make sure your local Terraform version matches the version configured in your HCP workspace, then pull the state:
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform state pull > hcp_state_backup.tfstate
 ```
 
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state pull > hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 Verify the backup contains your resources:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```bash
 terraform state list -state=hcp_state_backup.tfstate
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state list -state=hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ### 2. Remove the HCP Terraform configuration
 
@@ -166,7 +262,7 @@ terraform {
 }
 ```
 
-Clear the local Terraform cache:
+Clear the local cache:
 
 ```bash
 rm -rf .terraform
@@ -178,23 +274,71 @@ Add the remote backend block as described in the [standard migration section abo
 
 ### 4. Initialize the new backend
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform init
 ```
 
-Since this is a fresh backend with no existing state, Terraform initializes without prompting for migration.
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+Since this is a fresh backend with no existing state, the CLI initializes without prompting for migration.
 
 ### 5. Push the state
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```bash
 terraform state push hcp_state_backup.tfstate
 ```
 
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state push hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 If you encounter lineage or serial number errors, you can force the push:
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```bash
 terraform state push -force hcp_state_backup.tfstate
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu state push -force hcp_state_backup.tfstate
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 {{% notes "warning" %}}
 Only use `-force` if you are certain the state file is correct and no concurrent operations are running.
@@ -202,9 +346,25 @@ Only use `-force` if you are certain the state file is correct and no concurrent
 
 ### 6. Verify the migration
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform plan
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 You should see **No changes**.
 
@@ -213,6 +373,10 @@ You should see **No changes**.
 After migrating, update your CI/CD pipelines to authenticate with Pulumi Cloud instead of your previous backend.
 
 ### GitHub Actions example
+
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
 
 ```yaml
 env:
@@ -225,6 +389,26 @@ steps:
   - name: Terraform Plan
     run: terraform plan
 ```
+
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```yaml
+env:
+  TF_TOKEN_api_pulumi_com: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+
+steps:
+  - name: OpenTofu Init
+    run: tofu init
+
+  - name: OpenTofu Plan
+    run: tofu plan
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Post-migration: using Pulumi Cloud
 
@@ -289,13 +473,29 @@ Each Terraform resource stored in Pulumi Cloud counts as a resource under manage
 
 If you see this error after modifying the backend, re-initialize with:
 
+{{< chooser tf-tool "terraform,opentofu" >}}
+
+{{% choosable tf-tool terraform %}}
+
 ```bash
 terraform init -reconfigure
 ```
 
+{{% /choosable %}}
+
+{{% choosable tf-tool opentofu %}}
+
+```bash
+tofu init -reconfigure
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ### "State serial is less than current" error
 
-The state in Pulumi Cloud has a higher serial number than your local copy. Either pull the current state and merge manually, or use `terraform state push -force` if you are certain your local state is correct.
+The state in Pulumi Cloud has a higher serial number than your local copy. Either pull the current state and merge manually, or use `terraform state push -force` (or `tofu state push -force` for OpenTofu) if you are certain your local state is correct.
 
 ### "Failed to get existing workspaces" error
 
@@ -305,8 +505,8 @@ Verify your Pulumi access token is correct:
 pulumi whoami
 ```
 
-Make sure you have authenticated with `terraform login api.pulumi.com` (or set `TF_TOKEN_api_pulumi_com`) and that the token has permissions for the target organization.
+Make sure you have authenticated with `terraform login api.pulumi.com` or `tofu login api.pulumi.com` (or set `TF_TOKEN_api_pulumi_com`) and that the token has permissions for the target organization.
 
 ### "Migrating state from HCP Terraform to another backend is not yet implemented" error
 
-This is expected when migrating from HCP Terraform. Follow the [HCP Terraform migration steps](#migrate-from-hcp-terraform-terraform-cloud) instead of using `terraform init -migrate-state`.
+This is expected when migrating from HCP Terraform. Follow the [HCP Terraform migration steps](#migrate-from-hcp-terraform-terraform-cloud) instead of using `terraform init -migrate-state` (or `tofu init -migrate-state` for OpenTofu).

@@ -2,7 +2,6 @@
 title: "Deploy a Serverless RabbitMQ Cluster on Azure with .NET"
 date: 2020-07-16
 meta_desc: "Deploying a Geo-Redundant Serverless RabbitMQ Cluster on Azure Using Pulumi for .NET"
-meta_image: 1.png
 authors:
     - itay-podhajcer
 tags:

@@ -10,7 +10,6 @@ summary: |
     Lambdas? In this post, you'll learn how to use Pulumi to connect API Gateway with EventBridge,
     Amazon's serverless event bus, to build loosely coupled, scalable and maintainable
     apps and systems.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:

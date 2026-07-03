@@ -7,7 +7,6 @@ title: "Teaming up to help deliver more meals to Ukraine"
 # of this value to schedule posts for publishing later.
 date: 2022-05-16T09:00:54+02:00
 meta_desc: Buoyant, Civo, Cockroach Labs, Fairwinds, Pulumi, & Jetstack team up to donate to World Central Kitchen to provide meals in response to humanitarian crises.
-meta_image: kubecon-ukraine.png
 authors:
     - wendy-smith
 tags:

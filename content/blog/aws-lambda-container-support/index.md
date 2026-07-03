@@ -7,7 +7,6 @@ changelog:
     - 2025-03-11: Refreshed AWS guides links and modernized example references.
 draft: false
 meta_desc: Deploy AWS Lambda functions as container images with Pulumi. Compares Lambda ZIP, containers, Fargate, and ECS with 2026 limits, pricing, and runnable code.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:

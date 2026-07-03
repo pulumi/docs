@@ -288,7 +288,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   - Missing internal link target (per `docs-review:references:docs`).
   - Missing aliases on a moved file (per `docs-review:references:shared-criteria`).
   - Workflow-breaking instruction — reader cannot complete the documented task as written (cross-sibling-verified where applicable; see `docs-review:references:docs`).
-  - Blog publishing-blocker (retired-logo `meta_image`, placeholder `meta_image`, `meta_image` format violation, missing/buried `<!--more-->`, missing/empty `social:` block, missing author avatar) — per `docs-review:references:blog` §Publishing blockers.
+  - Blog publishing-blocker (retired-logo custom `meta_image` override, `meta_image` format violation, missing/buried `<!--more-->`, missing/empty `social:` block, missing author avatar) — per `docs-review:references:blog` §Publishing blockers.
   - Secrets, credentials, or tokens in the diff (per `docs-review:references:infra` §Secret handling).
   - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
   - Legal semantic change on `/legal/` content (per `docs-review:references:website`).

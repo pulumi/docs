@@ -1,8 +1,8 @@
 ---
 title: "Getting Started With Kubernetes: Application Basics"
+feature_image: feature.png
 date: 2020-06-30
 meta_desc: "Part 2 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
-meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:

@@ -3,7 +3,6 @@ title: "LangChain for DevOps: Learn LLM & GenAI for Dev, Sec & Ops"
 date: 2023-10-26
 updated: 2025-03-24
 meta_desc: "Explore how to use LangChain with LLMs and GenAI in DevSecOps. Learn real-world examples, security strategies, and tools for developers, ops, and infosec."
-meta_image: langchain-ai-gen-ai-workshop-llm-devops.png
 authors:
     - sara-huddleston
     - kat-morgan

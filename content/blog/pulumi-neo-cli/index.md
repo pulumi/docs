@@ -5,7 +5,6 @@ lastmod: 2026-06-03
 meta_desc: "Pulumi Neo is now available on the command line. Chat with Neo or run headlessly with the combined context of Pulumi Cloud and your local environment."
 authors:
     - neo-team
-meta_image: meta.png
 feature_image: feature.png
 tags:
     - ai

@@ -64,6 +64,6 @@ See [Authoring an Executable Plugin Package](/docs/iac/guides/building-extending
 - [Publishing a Package to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/) — publish to the public Pulumi Registry.
 - [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/) — publish to the Pulumi IDP Private Registry.
 - [Repository Strategy for Pulumi Packages](/docs/iac/guides/building-extending/packages/repository-strategy/) — group components and providers across repositories and versions; applies to both source-based and executable-based packages.
-- [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) — consume a package from a local path for iteration and monorepos.
+- [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) — consume a package from a local path for iteration and monorepos.
 - [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) — build components, custom resources, and functions in Go.
 - [Schema Reference](/docs/iac/guides/building-extending/packages/schema/) — Pulumi package schema for providers.

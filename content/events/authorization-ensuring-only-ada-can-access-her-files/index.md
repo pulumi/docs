@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Authorization: Ensuring Only Ada Can Access Her Files"
 meta_desc: In this talk, you will get a high level overview of the authorization landscape and learn how Split approached these unique challenges.
+meta_image: /events/authorization-ensuring-only-ada-can-access-her-files/meta.png
+meta_image_square: /events/authorization-ensuring-only-ada-can-access-her-files/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

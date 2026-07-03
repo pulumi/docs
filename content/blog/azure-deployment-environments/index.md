@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-05-21
 draft: false
 meta_desc: Author Azure Deployment Environments definitions with Pulumi using your favorite programming language.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:

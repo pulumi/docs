@@ -4,7 +4,6 @@ date: 2023-11-13T22:05:34Z
 updated: 2025-03-10
 draft: false
 meta_desc: Explore how AI is transforming DevOps. Learn about AI-driven automation, monitoring, security, and how DevOps teams can leverage AI for efficiency & innovation.
-meta_image: ai-in-devops-meta-image.png
 authors:
     - sara-huddleston
     - scott-lowe

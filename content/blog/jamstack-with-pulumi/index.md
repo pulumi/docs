@@ -2,7 +2,6 @@
 title: "Building Jamstack Infrastructure With Pulumi"
 date: 2020-06-09
 meta_desc: "Build infrastructure for deploying a jamstack website with Pulumi."
-meta_image: jamstack.png
 authors:
     - sophia-parafina
 tags:

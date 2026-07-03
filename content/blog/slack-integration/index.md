@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2023-05-30
 meta_desc: Pulumi Cloud now has an easy to set up Slack integration, Pulumi Deployments notifications and event filtering.
 
-meta_image: meta.png
 authors:
     - meagan-cojocar
     - komal-ali

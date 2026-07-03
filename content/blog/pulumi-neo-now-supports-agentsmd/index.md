@@ -3,7 +3,6 @@ title: "Pulumi Neo Now Supports AGENTS.md"
 date: 2026-02-06
 draft: false
 meta_desc: "Neo now reads AGENTS.md files to follow your project conventions automatically, using the same format as Cursor, GitHub Copilot, and other AI coding tools."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - neo-team

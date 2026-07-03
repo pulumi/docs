@@ -2,7 +2,6 @@
 title: "Automate Your Infrastructure with Automation API and Python"
 date: 2021-02-09
 meta_desc: "Combine the power of Automation API with the flexibility of Python"
-meta_image: automation_api.png
 authors:
 - sophia-parafina
 tags:
