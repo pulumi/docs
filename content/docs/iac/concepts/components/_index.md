@@ -120,7 +120,7 @@ pulumi package add github.com/my-org/my-component@v1.0.0
 
 This pattern is common for components your organization publishes for internal consumption via a Git repository or the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/). It is also how components from a [source-based plugin package](#authoring-components) are consumed across languages — the SDK is generated in your program's language regardless of the language the component was authored in.
 
-Under the hood, Pulumi fetches the package source (e.g. from GitHub), generates a [local package](/docs/iac/guides/building-extending/packages/local-packages/) SDK from the component's schema, and makes the generated SDK available for import in your program.
+Under the hood, Pulumi fetches the package source (e.g. from GitHub), generates a [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) from the component's schema, and makes the generated SDK available for import in your program.
 
 {{< notes type="info" >}}
 **Runtime requirements:** because Pulumi generates the SDK from a live plugin, the plugin must be executable on your machine. The requirements are the same as for any Pulumi program written in the plugin's authoring language — see the [language SDK docs](/docs/iac/languages-sdks/) for the toolchain each language expects.

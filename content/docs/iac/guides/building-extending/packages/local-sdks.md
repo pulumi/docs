@@ -1,6 +1,6 @@
 ---
-title: Local Packages
-meta_desc: This page provides an overview of working with locally generated Pulumi packages.
+title: Local SDKs
+meta_desc: This page provides an overview of working with locally generated Pulumi SDKs.
 menu:
   iac:
     parent: iac-guides-packages
@@ -8,24 +8,29 @@ menu:
 aliases:
   - /docs/using-pulumi/pulumi-packages/local-packages/
   - /docs/iac/build-with-pulumi/local-packages/
+  - /docs/iac/guides/building-extending/packages/local-packages/
 ---
 
-Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once and made available to users in all Pulumi languages. While many packages are published to the [Pulumi Registry](/registry/), there are cases where you might need to work with locally generated packages that haven't been published.
+Pulumi Packages are the core technology that enables cloud infrastructure resource provisioning to be defined once and made available to users in all Pulumi languages. While many packages are published to the [Pulumi Registry](/registry/), there are cases where you might need to work with locally generated SDKs for packages that haven't been published.
 
-## Understanding local packages
+## Understanding local SDKs
 
-Local packages are Pulumi packages with SDKs generated on your computer, instead of being checked into a provider repository and published to the Pulumi Registry. Given a [package schema](/docs/iac/using-pulumi/pulumi-packages/schema/) `pulumi` can generate your package SDK for you. These packages are frequently part of the Pulumi experience in several contexts:
+A local SDK is a Pulumi package SDK generated on your own computer, in the language of your program, instead of being checked into a provider repository and published to the Pulumi Registry. The package's source or executable is often downloaded from a remote source (for example, a registry or a Git repository), but the SDK itself is generated locally. Given a [package schema](/docs/iac/using-pulumi/pulumi-packages/schema/) `pulumi` can generate your package SDK for you. Local SDKs are frequently part of the Pulumi experience in several contexts:
 
 - When using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/).
 - When working with components as packages.
 - During package development and testing.
 - For private or organization-specific resources.
 
-Local packages allow you to generate SDKs in any Pulumi language for resources or components before they're published.
+Local SDKs allow you to generate SDKs in any Pulumi language for resources or components before they're published.
 
-## Adding local packages with `pulumi package add`
+{{% notes type="info" %}}
+Generating an SDK locally is not the only option. You can also **pre-publish** SDKs to your language's package registry ahead of time, which avoids the local generation step for consumers. See [Publishing Packages](/docs/iac/build-with-pulumi/publishing-packages/) for a comparison of the trade-offs, and [Authoring a component for distribution](/docs/iac/concepts/packages/#authoring-a-component-for-distribution) for guidance on which to choose.
+{{% /notes %}}
 
-The preferred way to add a local package is with the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which:
+## Adding a local SDK with `pulumi package add`
+
+The preferred way to add a local SDK is with the [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) command, which:
 
 1. Locally generates an SDK in your currently selected Pulumi language.
 1. Adds the package to your project configuration file (Pulumi.yaml).
@@ -73,7 +78,7 @@ Refer to the [Any Terraform Provider documentation](/docs/iac/using-pulumi/pulum
 
 ## Using generated SDKs
 
-After adding a local package, reference it in your project:
+After adding a local SDK, reference it in your project:
 
 {{< chooser language "typescript,python,go,csharp,yaml" >}}
 {{% choosable language typescript %}}
@@ -159,11 +164,11 @@ When working with locally generated SDKs, you need to decide whether to commit t
 - Pros: Ensures consistent builds and eliminates the need for regeneration.
 - Cons: Increases repository size and can lead to noisy PRs, possible merge conflicts.
 
-## Updating local packages
+## Updating local SDKs
 
-As underlying providers evolve with new features or bug fixes, you'll need to update your local packages to take advantage of these improvements.
+As underlying providers evolve with new features or bug fixes, you'll need to update your local SDKs to take advantage of these improvements.
 
-### How local package versions are tracked
+### How local SDK versions are tracked
 
 When you run `pulumi package add`, the command registers the package and its version in your project's `Pulumi.yaml` file. For example, after adding a Terraform provider:
 
@@ -186,9 +191,9 @@ packages:
 
 You should commit `Pulumi.yaml` to source control so that your teammates can reproduce the same environment. When a collaborator clones your repository, they run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all packages defined in `Pulumi.yaml`, including generating any local SDKs.
 
-### Upgrading a local package
+### Upgrading a local SDK
 
-To upgrade a local package, re-run the `pulumi package add` command with the updated source or version:
+To upgrade a local SDK, re-run the `pulumi package add` command with the updated source or version:
 
 ```bash
 # Upgrade a Terraform provider to a new version
@@ -206,15 +211,15 @@ This will:
 1. Regenerate the SDK with the latest schema.
 1. Update the package entry in your `Pulumi.yaml` file.
 
-After regenerating the SDK, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including the updated local package. Update your imports and code as needed if there are breaking changes.
+After regenerating the SDK, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including the updated local SDK. Update your imports and code as needed if there are breaking changes.
 
 ### Checking your current version
 
-To see which version of a local package your project is using, inspect the `packages` section of your `Pulumi.yaml` file. You can also run [`pulumi package info <package-name>`](/docs/iac/cli/commands/pulumi_package_info/) to view details about an installed package.
+To see which version of a local SDK your project is using, inspect the `packages` section of your `Pulumi.yaml` file. You can also run [`pulumi package info <package-name>`](/docs/iac/cli/commands/pulumi_package_info/) to view details about an installed package.
 
 ### Team workflow
 
-A typical workflow for teams using local packages:
+A typical workflow for teams using local SDKs:
 
 1. A developer upgrades a package by running `pulumi package add` with the new version.
 1. The developer commits the updated `Pulumi.yaml` to source control. (If the team has chosen to [check in the generated SDK](#option-2-check-in-the-generated-sdk), the updated SDK should also be committed.)
@@ -241,7 +246,7 @@ A typical workflow for teams using local packages:
 
 ## Managing breaking changes
 
-When working with local packages, it's important to understand how breaking changes are handled:
+When working with local SDKs, it's important to understand how breaking changes are handled:
 
 - For standard providers (like `azure-native`), the provider version is recorded in your `Pulumi.yaml` file automatically.
 - When using `terraform-provider` specifically, you're working with two different components:
@@ -256,12 +261,12 @@ When working with local packages, it's important to understand how breaking chan
 
   This pins the Terraform provider version, protecting you from unexpected breaking changes when the underlying provider is updated.
 
-## Using components with local packages {#components-with-local-packages}
+## Using components with local SDKs {#components-with-local-packages}
 
-When creating a component that contains a local package, you must ensure the generated SDK is available to consumers of your component. This applies when your component uses:
+When creating a component that contains a local SDK, you must ensure the generated SDK is available to consumers of your component. This applies when your component uses:
 
 - Any Terraform provider via [`terraform-provider`](/registry/packages/terraform-provider/)
-- Another component that itself contains a local package
+- Another component that itself contains a local SDK
 - Any other Pulumi plugin that generates code in the `sdk` folder
 
 ### Requirements
@@ -272,7 +277,7 @@ When creating a component that contains a local package, you must ensure the gen
 
 ### Why this is necessary
 
-When someone consumes your component, they need access to all the SDKs your component depends on. For published packages from the Pulumi Registry, these dependencies are automatically resolved. However, for local packages generated within your component, the generated SDK code must be available in your repository so that consumers can use it.
+When someone consumes your component, they need access to all the SDKs your component depends on. For published packages from the Pulumi Registry, these dependencies are automatically resolved. However, for local SDKs generated within your component, the generated SDK code must be available in your repository so that consumers can use it.
 
 ### Example workflow
 
@@ -287,9 +292,9 @@ git commit -m "Add generated SDK for terraform-provider random"
 
 Consumers of your component will then be able to use it without needing to regenerate the SDK themselves.
 
-## Using local packages with Automation API
+## Using local SDKs with Automation API
 
-For documentation on how to use local packages with Pulumi's [Automation API](/docs/iac/concepts/automation-api/) see [Using local packages with Automation API](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api).
+For documentation on how to use local SDKs with Pulumi's [Automation API](/docs/iac/concepts/automation-api/) see [Using local SDKs with Automation API](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api).
 
 ## See also
 

@@ -55,7 +55,7 @@ A common usage pattern is for a platform team to author components in a general-
 
 ### Distribution and consumption
 
-Because the package is distributed as source, you don't have to publish anything to use it — consumers run [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) against a Git URL and revision (or a local path for monorepos and local testing), and Pulumi generates the appropriate language SDK as a [local package](/docs/iac/guides/building-extending/packages/local-packages/).
+Because the package is distributed as source, you don't have to publish anything to use it — consumers run [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) against a Git URL and revision (or a local path for monorepos and local testing), and Pulumi generates the appropriate language SDK as a [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/).
 
 Source-based plugin packages also support [pre-published SDKs](/docs/iac/guides/building-extending/packages/source-based-plugin/#pre-publishing-language-sdks): authors can generate and publish per-language SDKs to native package registries (npm, PyPI, etc.) as part of CI/CD, letting consumers install via their language's package manager without regenerating the SDK. This is uncommon in practice — for internal packages it typically requires maintaining a **private package feed for every consumer language** (private npm registry, private PyPI index, etc.), which is a large amount of infrastructure to stand up just to avoid local SDK generation. Most teams stick with on-the-fly generation via `pulumi package add`.
 

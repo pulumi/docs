@@ -61,7 +61,7 @@ Click the link for the boilerplate repository template that you want to use, the
 - Bridge an existing Terraform Provider to use with Pulumi: [`pulumi/pulumi-tf-provider-boilerplate`](https://github.com/pulumi/pulumi-tf-provider-boilerplate)
 
 {{% notes type="info" %}}
-If you need access to a Terraform provider, but don't need the full customization of a published provider, the ["Any Terraform Provider" Pulumi Provider](/registry/packages/terraform-provider) can provide instant access via locally generating SDKs.
+Just want to use an existing Terraform provider, not author and maintain a full package? See [Alternative: use an existing Terraform provider](#alternative-use-an-existing-terraform-provider) below.
 {{% /notes %}}
 
 ### Name your provider and repository
@@ -72,6 +72,16 @@ Your repository name should start with `pulumi-` followed by the name of your pr
 
 - If you're bridging a Terraform provider, re-use the Terraform provider's name - replacing `terraform-provider-` with `pulumi-` e.g. use `pulumi-auth0` for bridging `terraform-provider-auth0`.
 - If you're building a component on top of an existing provider, consider using the provider name followed by the component name. For example, if building an API Gateway component using the AWS provider, name your project `pulumi-aws-apigateway`.
+
+### Alternative: use an existing Terraform provider
+
+If you don't need the full customization of a published package — you just want to make an existing Terraform provider usable from Pulumi — you don't have to author or maintain a package at all. With the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature, you run `pulumi package add terraform-provider <author>/<name>` and Pulumi generates a fully-typed local SDK from the provider's schema on the fly.
+
+Popular Terraform providers also surface in the public Pulumi Registry as **dynamically-bridged** listings (for example, [Honeycomb](/registry/packages/honeycombio/) and [Supabase](/registry/packages/supabase/)); consumers still generate the SDK locally with `pulumi package add`. The rest of this guide covers authoring and publishing a full package; if the Any Terraform Provider path fits your needs, follow that guide instead.
+
+{{% notes type="info" %}}
+Registry listings for dynamically-bridged Terraform providers are generated automatically and don't include a logo by default. To have a logo added to your provider's Registry page, reach out to [Pulumi support](https://support.pulumi.com/) with a link to a web-accessible SVG (wordmarks preferred, with all surrounding whitespace removed).
+{{% /notes %}}
 
 ## Author your resources or components
 
@@ -122,9 +132,19 @@ You can also create how-to guides for your packages by contributing them to the 
 
 Once you've authored and tested your package locally, you can publish it to make it available to the Pulumi community. You must publish several artifacts:
 
-- The npm, NuGet, Java, and Python SDK packages to the [npm Registry](https://npmjs.com), the [NuGet Gallery](https://nuget.org), [Maven Central](https://central.sonatype.com) and the [Python Package Index](https://pypi.org).
-  - If your package is hosted on GitHub, you may choose to use our [custom Action for publishing Pulumi packages](https://github.com/pulumi/pulumi-package-publisher).
-- The Go module to your Git repository, by adding a tag.
+- **A per-language SDK for every language you want consumers to use.** Pulumi generates SDKs from your `schema.json` with [`pulumi package gen-sdk`](/docs/iac/cli/commands/pulumi_package_gen-sdk/), then you publish each one to its language's package registry:
+
+  | Language | Published to |
+  |----------|--------------|
+  | TypeScript/JavaScript | [npm Registry](https://npmjs.com) |
+  | Python | [Python Package Index (PyPI)](https://pypi.org) |
+  | .NET (C#/F#/VB) | [NuGet Gallery](https://nuget.org) |
+  | Java | [Maven Central](https://central.sonatype.com) |
+  | Go | your Git repository, by pushing a module tag (no external registry) |
+
+  Publish an SDK for **all** of these languages so your package is usable by the whole Pulumi community; a complete Registry listing expects each of them. Publish a subset only if you intentionally support fewer languages. Pulumi YAML is the exception — YAML programs reference the package directly through its schema and need no per-language SDK.
+
+  If your package is hosted on GitHub, the [`pulumi/pulumi-package-publisher`](https://github.com/pulumi/pulumi-package-publisher) GitHub Action publishes the npm, PyPI, NuGet, and Maven Central SDKs in a single step (select languages with its `sdk:` input); you push the Go module tag separately. See the [Publishing SDKs](/docs/iac/guides/building-extending/packages/executable-plugin/#publishing-sdks) section of the executable-plugin guide for the full workflow.
 - The plugin binary to a host of your choice (GitHub Releases, GitLab Releases, or a custom HTTP endpoint).
 - The [package documentation](#publish-the-documentation) — overview, installation & configuration, API docs, and how-to guides to [Pulumi Registry](/registry/).
 

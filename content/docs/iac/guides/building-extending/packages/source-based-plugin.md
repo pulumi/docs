@@ -623,7 +623,7 @@ Component argument types in native language packages can use any type your langu
 ## Next steps
 
 - [PulumiPlugin.yaml reference](/docs/reference/pulumiplugin-yaml/) — full field reference for the plugin manifest.
-- [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) — develop and iterate on a package before publishing.
+- [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) — develop and iterate on a package before publishing.
 - [Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/) — distribute your package via Git, the IDP Private Registry, or language-specific registries.
 - [Package Schema](/docs/iac/guides/building-extending/packages/schema/) — the schema format that drives SDK generation.
 - [Components](/docs/iac/concepts/components/) — how consumers pull your package into their programs.
