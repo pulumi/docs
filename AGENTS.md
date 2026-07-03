@@ -92,6 +92,16 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
+## AI and agent positioning
+
+Pulumi supports the full spectrum of AI agents, and content must never present Neo as the only way to use AI with Pulumi or frame Neo as an either-or choice against other coding agents.
+
+- **Docs** (`content/docs/`, `content/what-is/`, `content/tutorials/`): community-centric and balanced. Third-party coding agents (Claude Code, Codex, Cursor, GitHub Copilot, etc.) working with Pulumi — through IaC, [Agent Skills](/docs/ai/skills/), and the [Pulumi MCP server](/docs/ai/mcp-server/) — are first-class. Neo is Pulumi's purpose-built infrastructure agent: the deepest integration and the fastest path to a great infrastructure agent out of the box, but one option on a spectrum, and most teams benefit from using both.
+- **Product/marketing pages** (`content/product/`, homepage): may lead with Neo and sell it hard, but should still acknowledge that Pulumi's code-first approach works with the agent a reader already uses. Avoid copy that disparages other agents (e.g. "unlike generic AI tools").
+- **When listing agent options** (e.g. in migration guides), follow the pattern in `content/docs/iac/guides/migration/migrating-to-pulumi/from-terraform.md`: list Neo alongside Claude Code, Cursor, and Codex as equally legitimate choices, with at most a light note on Neo's built-in advantage.
+
+---
+
 ## Resource options
 
 The reference pages under `content/docs/iac/concepts/resources/options/` show a classification callout (custom resource / component resource / both, plus per-SDK enforcement) rendered by the `resource-option-scope` shortcode. The classification data — and the summary table on that section's `_index.md` — is generated from `data/resource_options.yaml`, which is the single source of truth. **When you add a new resource option, you must add an entry to `data/resource_options.yaml` and place the `{{< resource-option-scope "<name>" >}}` shortcode on the new page.** That file's header comment is the authoritative step-by-step checklist; the build fails if a page references an option missing from the data file.
