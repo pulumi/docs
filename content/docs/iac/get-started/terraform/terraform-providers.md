@@ -56,7 +56,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -114,7 +114,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -169,7 +169,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -239,7 +239,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -309,7 +309,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -378,7 +378,7 @@ $ pulumi package add terraform-provider hashicorp/random
 
 This command generates a local SDK for the Terraform provider in your project. The generated SDK can be imported and used just like any other Pulumi package.
 
-The local package will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
+The local SDK will be available under the same import path that the published version would use (e.g., `@pulumi/random` for TypeScript or `pulumi_random` for Python). When you run `pulumi install` or your language's package manager, the locally generated SDK will be installed and available for use.
 
 {{% notes type="info" %}}
 If a package with the same name exists in the Pulumi Registry (like `@pulumi/random`), the locally generated version will take precedence in your project. This allows you to use Terraform providers that may have newer versions or custom modifications compared to the published Pulumi providers.
@@ -453,6 +453,6 @@ output "availability_zones" {
 1. **Use native providers when available**: Prefer native Pulumi providers over Terraform providers for better performance and type safety
 2. **Document provider usage**: Document which Terraform providers your team uses and why
 3. **Monitor provider updates**: Keep track of provider updates and breaking changes
-4. **Use `pulumi install` for setup**: When cloning a project that uses Terraform providers, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including local packages defined in `Pulumi.yaml`
+4. **Use `pulumi install` for setup**: When cloning a project that uses Terraform providers, run [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to install all dependencies, including local SDKs defined in `Pulumi.yaml`
 
 {{< get-started-stepper >}}
