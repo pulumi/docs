@@ -72,6 +72,8 @@ This approach offers several advantages:
 
 For more information on setting up ESC environments, see the [ESC documentation](/docs/esc/).
 
+Deployments has no native approval gate, but to require reviewer sign-off before a deployment runs you can work around this by adding an ESC Open approval ruleset to the environment that supplies its credentials. See [Requiring Approval Before a Deployment Runs](/docs/deployments/guides/gated-deployments/).
+
 You can use ESC with pre-run commands in Deployments by prefixing each command with `pulumi env run`. For example:
 
 ```bash

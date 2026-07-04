@@ -115,6 +115,10 @@ If the ruleset requires re-approval when changes are modified, any edits to an a
 
 Open approvals extend Pulumi ESC's approval system to control when environments can be opened (activated). While update approvals govern configuration changes, open approvals enable just-in-time (JIT) access patterns by requiring review and sign-off before users can access an environment's secrets and credentials. Open approvals are useful when you want to grant temporary, auditable access to sensitive environments.
 
+{{% notes type="info" %}}
+Because a Pulumi Deployment opens an ESC environment to obtain its cloud credentials, an Open approval ruleset on that environment gates the deployment: it can't run until a reviewer approves access. Deployments has no native approval gate, so this is a supported workaround. See [Requiring Approval Before a Deployment Runs](/docs/deployments/guides/gated-deployments/) for a step-by-step walkthrough.
+{{% /notes %}}
+
 ### How open approvals work
 
 Open approvals add an additional gate on top of standard permission checks. Users must have `open` permission on an environment and an active access grant to open it.

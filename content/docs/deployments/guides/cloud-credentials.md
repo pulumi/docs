@@ -53,3 +53,5 @@ After an OIDC Identity Provider has been configured:
 
 - If you are using Pulumi ESC, ensure that your Pulumi Deployments token has permissions to open any imported Pulumi ESC Environments. For more information, see [Deployment Permissions](/docs/deployments/operations/permissions/)
 - If you are using Pulumi Deployments OIDC, set up your [Deployment Settings](/docs/deployments/concepts/settings/) for your stack to use your OIDC configuration.
+
+Deployments has no native approval gate, but if you want to require reviewer sign-off before a deployment runs, you can work around this by gating the ESC environment that supplies its credentials. See [Requiring Approval Before a Deployment Runs](/docs/deployments/guides/gated-deployments/).

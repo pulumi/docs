@@ -39,6 +39,10 @@ When your program depends on code in another private Git repository — for exam
 
 Because the `insteadOf` rule applies to all of GitHub, a single key with access to every required repository covers multiple private dependencies at once — there is no per-repository configuration to repeat.
 
+{{% notes type="info" %}}
+If the private dependency lives in a repository that your [Pulumi GitHub App](/docs/integrations/version-control/github-app/#github-token-in-deployments) installation can already reach, you may not need an SSH key at all. Deployments from a GitHub-App-connected source automatically receive a `GITHUB_TOKEN` that can clone those repositories; configure Git to authenticate over HTTPS with it instead — for example, `git config --global url."https://x-access-token:${GITHUB_TOKEN}@github.com/".insteadOf "https://github.com/"` in your pre-run commands. Use the SSH-key approach above when the dependency is on another host or in a repository outside the app's access.
+{{% /notes %}}
+
 ## Private package feeds
 
 If your dependencies come from a private package registry rather than a Git repository, authenticate to that registry instead of configuring SSH. Provide the registry token as a secret environment variable, then write the appropriate per-language configuration in the **Pre-run commands**:
