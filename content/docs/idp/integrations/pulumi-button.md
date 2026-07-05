@@ -26,6 +26,14 @@ For example, select the `Deploy` button to configure and create a new empty Java
 
 [![Deploy](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
 
+Rather than right-clicking the button to recover its image URL, copy the Markdown snippet below and drop it straight into a README, gist, or blog post:
+
+```markdown
+[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/templates/javascript)
+```
+
+Swap the `template` query parameter for the URL of your own project template to point the button at your repository instead. See [Creating a Pulumi Button](#creating-a-pulumi-button) below for the full Markdown and HTML forms, plus the complete set of button image variants.
+
 To create a _Deploy with Pulumi_ button:
 
  1. Include optional template metadata in your `Pulumi.yaml`.
@@ -66,16 +74,18 @@ After you've verified your project template works as expected, you can add a but
 Here's an example in Markdown:
 
 ```markdown
-[![Deploy](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
+[![Deploy](https://www.pulumi.com/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder)
 ```
 
 Or, the equivalent HTML:
 
 ```html
 <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/aws-js-s3-folder">
-  <img src="/images/deploy-with-pulumi/dark.svg" alt="Deploy">
+  <img src="https://www.pulumi.com/images/deploy-with-pulumi/dark.svg" alt="Deploy">
 </a>
 ```
+
+Use the fully qualified image URL, as shown above, rather than a relative path — a relative path only resolves on pulumi.com and renders as a broken image once the snippet is pasted into a README hosted elsewhere.
 
 ### Button Image
 
