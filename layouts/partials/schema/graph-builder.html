@@ -39,9 +39,18 @@
 {{ end }}
 
 {{/* What-is pages get Article as their main entity; if the page also has an FAQ
-     section, expose it as a FAQPage entity in the same graph under its own @id. */}}
+     section, expose it as a FAQPage entity in the same graph under its own @id.
+     Blog posts opt in explicitly via `faq_schema: true` in frontmatter: unlike
+     what-is pages (curated, definitional, low false-positive risk), 168+
+     existing blog posts contain narrative headings that happen to end in "?"
+     without being a real Q&A section, so gating blog FAQ schema on type alone
+     would generate inaccurate structured data across the archive. The opt-in
+     flag keeps this a reusable template mechanism (not a per-page hack) while
+     avoiding that regression; add `faq_schema: true` to any blog post's
+     frontmatter once it has a genuine FAQ section (## or ### headings ending
+     in "?") to pick up FAQPage schema automatically. */}}
 {{ $faqPage := dict }}
-{{ if and (eq .Type "what-is") .IsPage }}
+{{ if or (and (eq .Type "what-is") .IsPage) (and (eq .Type "blog") .IsPage .Params.faq_schema) }}
   {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
   {{ if and $faqPage (ne $faqPage (dict)) }}
     {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}
