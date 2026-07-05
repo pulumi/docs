@@ -85,7 +85,7 @@ Or, the equivalent HTML:
 </a>
 ```
 
-Use the fully qualified image URL, as shown above, rather than a relative path — a relative path only resolves on pulumi.com and renders as a broken image once the snippet is pasted into a README hosted elsewhere.
+Use the fully qualified image URL rather than a relative path — a relative path only resolves on pulumi.com and renders as a broken image once the snippet is pasted into a README hosted elsewhere.
 
 ### Button Image
 
