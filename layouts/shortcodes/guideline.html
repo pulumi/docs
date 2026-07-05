@@ -1,0 +1,29 @@
+{{- /*
+guideline.html — DO / CONSIDER / AVOID / DON'T recommendation callout, in the
+style of the .NET Framework Design Guidelines. Reuses the .note container for
+layout and adds a color-coded variant and a per-type icon. The recommendation
+text itself leads with the bold DO/CONSIDER/AVOID/DON'T word.
+
+Usage (percent form, so inner content is markdownified):
+    {{% guideline type="do" %}}**DO** ...{{% /guideline %}}
+    type = do | consider | avoid | dont
+*/ -}}
+{{- $type := default "do" (.Get "type") -}}
+{{- $icon := "check-circle" -}}
+{{- if eq $type "consider" -}}
+    {{- $icon = "lightbulb" -}}
+{{- else if eq $type "avoid" -}}
+    {{- $icon = "warning" -}}
+{{- else if eq $type "dont" -}}
+    {{- $icon = "prohibit" -}}
+{{- end -}}
+
+<div class="note guideline guideline-{{ $type }}">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" $icon "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{- .Inner | markdownify -}}
+    </div>
+</div>

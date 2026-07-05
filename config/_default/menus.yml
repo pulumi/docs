@@ -17,11 +17,11 @@ iac:
   - name: Providers
     parent: iac-guides-building-extending
     identifier: iac-guides-providers
-    weight: 3
+    weight: 4
   - name: Using Existing Tools
     parent: iac-guides-building-extending
     identifier: iac-guides-using-existing-tools
-    weight: 4
+    weight: 5
   - name: Migrating from...
     parent: iac-guides-migration
     identifier: iac-guides-migration-from

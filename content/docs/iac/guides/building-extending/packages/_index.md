@@ -8,7 +8,7 @@ menu:
     name: Packages
     identifier: iac-guides-packages
     parent: iac-guides-building-extending
-    weight: 2
+    weight: 3
 ---
 
 A [Pulumi package](/docs/iac/concepts/packages/) bundles components or a provider with a plugin so Pulumi can generate an SDK for any supported language. Package authors choose between two distribution models — source-based and executable-based — which differ in consumer runtime requirements, registry support, and publishing overhead.
