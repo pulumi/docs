@@ -38,10 +38,17 @@
   {{ end }}
 {{ end }}
 
-{{/* What-is pages get Article as their main entity; if the page also has an FAQ
-     section, expose it as a FAQPage entity in the same graph under its own @id. */}}
+{{/* What-is and docs pages get Article/TechArticle as their main entity; if the page
+     also has a "Frequently asked questions"-style Q&A section, expose it as a
+     FAQPage entity in the same graph under its own @id. Pages that are themselves
+     the dedicated FAQ page (title/URL contains "faq") are excluded here because
+     main-entity.html already returns FAQPage as their *main* entity, so adding it
+     again here would duplicate it in the @graph. faq-entity.html safely returns an
+     empty dict when no question-shaped headers are found, so this is a no-op for
+     the many docs pages that have no FAQ section. */}}
 {{ $faqPage := dict }}
-{{ if and (eq .Type "what-is") .IsPage }}
+{{ $isDedicatedFaqPage := or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
+{{ if and .IsPage (or (eq .Type "what-is") (eq .Type "docs")) (not $isDedicatedFaqPage) }}
   {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
   {{ if and $faqPage (ne $faqPage (dict)) }}
     {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}
