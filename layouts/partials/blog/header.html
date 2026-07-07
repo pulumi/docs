@@ -15,7 +15,12 @@
 {{- $ctx := .context | default . -}}
 {{- $heading := true }}{{- if isset . "heading" }}{{ $heading = .heading }}{{ end -}}
 <div class="blog-header border-b border-gray-200">
-    <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-6 lg:py-8">
+    {{- /* lg:min-h-26 pins the header to one height across pages: with a
+        description the row's tallest content is the h-10 divider (40px + 2rem
+        padding each side = 6.5rem); without one it's the h-9 controls, so the
+        floor keeps pages that lack a description from rendering 4px shorter.
+        min-h (not h) so the row can still grow if it ever wraps. */ -}}
+    <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-6 lg:min-h-26 lg:py-8">
         <div class="flex min-w-0 items-center gap-3 lg:gap-4">
             {{ if $heading }}
             <h1 class="heading-2 m-0! shrink-0">
