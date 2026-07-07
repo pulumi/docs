@@ -40,9 +40,33 @@
                 <pulumi-hubspot-form form-id="027b4c6d-9b73-4ad8-b149-3c8b07fff608" class="newsletter newsletter-inline newsletter-header newsletter-btn-outline"></pulumi-hubspot-form>
             </div>
             {{ partial "blog/search.html" $ctx }}
-            <a href="/blog/rss.xml" aria-label="Pulumi Blog RSS feed" data-track="blog-rss" class="btn btn-icon btn-ghost shrink-0">
+            {{- /* RSS: a plain link to the main feed, except on a term page
+                (category / tag / author / series) where it becomes a dropdown
+                offering the main feed and that term's own feed. */ -}}
+            {{- $mainFeed := "/blog/rss.xml" -}}
+            {{- $termFeed := "" -}}
+            {{- if eq $ctx.Kind "term" }}{{ with $ctx.OutputFormats.Get "rss" }}{{ $termFeed = .RelPermalink }}{{ end }}{{ end -}}
+            {{ if and $termFeed (ne $termFeed $mainFeed) }}
+                {{- /* Kind label for the term feed: Category / Author / Tag, or
+                    Series when the tag slug is a series. */ -}}
+                {{- $sing := $ctx.Data.Singular -}}
+                {{- $termKind := "Tag" -}}
+                {{- if eq $sing "category" }}{{ $termKind = "Category" }}{{ else if eq $sing "author" }}{{ $termKind = "Author" }}{{ else if eq $sing "collection" }}{{ $termKind = "Collection" }}{{ end -}}
+                {{- if eq $sing "tag" }}{{ range site.Data.blog_series.series }}{{ if eq .slug $ctx.Data.Term }}{{ $termKind = "Series" }}{{ end }}{{ end }}{{ end -}}
+            <details data-dropdown class="relative shrink-0">
+                <summary class="btn btn-icon btn-ghost cursor-pointer list-none [&::-webkit-details-marker]:hidden" aria-label="Pulumi Blog RSS feeds" aria-haspopup="menu">
+                    {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
+                </summary>
+                <div class="absolute right-0 z-30 mt-2 w-56 rounded-lg border border-gray-200 bg-white p-1 shadow-lg" role="menu">
+                    <a href="{{ $mainFeed }}" target="_blank" rel="noopener" data-track="blog-rss-all" class="block rounded px-3 py-2 body-sm text-service-black transition-colors hover:bg-gray-100" role="menuitem">All posts</a>
+                    <a href="{{ $termFeed }}" target="_blank" rel="noopener" data-track="blog-rss-term" class="block rounded px-3 py-2 body-sm text-service-black transition-colors hover:bg-gray-100" role="menuitem">{{ $termKind }}: {{ partial "blog/term-name.html" $ctx }}</a>
+                </div>
+            </details>
+            {{ else }}
+            <a href="{{ $mainFeed }}" target="_blank" rel="noopener" aria-label="Pulumi Blog RSS feed" data-track="blog-rss" class="btn btn-icon btn-ghost shrink-0">
                 {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
             </a>
+            {{ end }}
         </div>
     </div>
 </div>

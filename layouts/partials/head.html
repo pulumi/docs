@@ -302,8 +302,14 @@
     {{ end }}
 
 
-    <!-- RSS link for the blog. -->
+    <!-- RSS: the main blog feed everywhere, plus this page's own feed (a blog
+         category/tag/author/series term, or the events feed) for autodiscovery. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
+    {{ with .OutputFormats.Get "rss" }}
+        {{ if ne .RelPermalink "/blog/rss.xml" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ if eq $.Kind "term" }}Pulumi Blog: {{ partial "blog/term-name.html" $ }}{{ else }}{{ $.Title }}{{ end }}" />
+        {{ end }}
+    {{ end }}
 
 
     <script>

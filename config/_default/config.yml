@@ -91,9 +91,12 @@ outputs:
   # Taxonomy term pages also emit a "rows" fragment (layouts/_default/term.rows.html).
   # Only the blog category filter consumes it; for non-blog terms the fragment is
   # empty (the template filters to the blog section).
+  # RSS gives every blog term page (category / tag / author / series) its own feed
+  # at <term-url>rss.xml, rendered by layouts/_default/term.rss.xml.
   term:
     - HTML
     - rows
+    - RSS
 
 taxonomies:
   tag: tags
