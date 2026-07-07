@@ -2,7 +2,6 @@
 title: "Pulumi - Automate, Secure, and Manage Everything You Run in the Cloud"
 allow_long_title: True
 date: 2024-09-18T9:00:00-00:00
-lastmod: 2026-07-07
 draft: false
 meta_desc: "PulumiUP 2024 unveils Pulumi's new vision: ESC GA, Insights 2.0, and a comprehensive platform to automate, secure, and manage cloud infrastructure."
 authors:
@@ -41,7 +40,7 @@ Now let’s dive into the three products and what we announced at PulumiUP:
 
 ## Pulumi IaC - Infrastructure as Code in Any Programming Language
 
-[Pulumi IaC](/product/infrastructure-as-code) is our flagship open source technology, and it powers virtually everything we do, even the new products. We have seen accelerated adoption of Pulumi IaC. We’ve had over 100M downloads, are about to crack 21K GitHub stars ([give us a star](https://github.com/pulumi/pulumi) and bump us over!), and have seen 167% the contributions of Terraform this past month and 300% of OpenTofu. Not only is Pulumi the most powerful IaC technology, it is becoming more popular and vibrant too.
+[Pulumi IaC](/product/infrastructure-as-code) is our flagship open source technology, and it powers virtually everything we do, even the new products. We have seen accelerated adoption of Pulumi IaC. We’ve had over 100M downloads, are about to crack 21K GitHub stars ([give us a star](https://github.com/pulumi/pulumi/stargazers) and bump us over!), and have seen 167% the contributions of Terraform this past month and 300% of OpenTofu. Not only is Pulumi the most powerful IaC technology, it is becoming more popular and vibrant too.
 
 We are always improving Pulumi IaC and today is no different. We launched a number of new and exciting IaC features. That includes using any Terraform provider, beyond the nearly 200 providers that Pulumi already supports. We also shipped a new [Pulumi VS Code Extension](/blog/pulumi-vscode-extension/) that enables rich debugging and easier editing of your IaC programs. Pulumi Copilot can now diagnose and fix your IaC errors. And finally, we’ve improved our [Kubernetes support](/registry/packages/kubernetes/) with powerful controls over await logic for more robust cloud native deployments. And we're not slowing down anytime soon.
 
