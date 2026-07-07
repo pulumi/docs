@@ -123,8 +123,13 @@ only:
   (`/docs/...`, never `../`).
 - **Frontmatter violations** from `.frontmatter-validation.json` (broken menu
   parent, alias collision).
-- **Unambiguous Vale errors** — spelling, repo terminology (per
-  `docs-review:references:spelling-grammar`); not style suggestions.
+- **Auto-fixable Vale findings** — any finding in `.vale-findings.json` stamped
+  `auto_fixable: true`. These come from the deterministic-fix allowlist in
+  `.claude/commands/docs-review/scripts/vale-autofix-rules.yaml` (fixed
+  substitutions, canonical spelling, and the closed-set cross-reference heading
+  rename). Apply the exact replacement named in the finding's `message`; always
+  apply these. Vale findings *without* the flag are style/judgment nags — leave
+  them for the human (see `docs-review:references:spelling-grammar`).
 - **Readthrough `local_repair` findings** — `.readthrough-findings.json`
   findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
   Apply the finding's `proposed_fix` and nothing beyond it: reorder so a

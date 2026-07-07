@@ -1,0 +1,32 @@
+# Vale rules whose fix is a deterministic, judgment-free 1:1 rewrite.
+#
+# vale-findings-filter.py reads this file and stamps every emitted finding with
+# `auto_fixable: true|false`. The flag is a property of the *rule* (its fix is
+# mechanical), not an instruction to any particular consumer:
+#
+#   - review-existing-content (the automated content-review workflow) is the
+#     ONLY consumer that acts on it -- it always applies findings stamped
+#     auto_fixable, and triages the rest. See that skill's SKILL.md, step 3.
+#   - docs-review (interactive + pinned PR review) stays advisory / flag-only.
+#     The stamp is ignored there; it never auto-writes.
+#
+# A rule belongs here only if its correction requires no editorial choice:
+# a fixed substitution, canonical spelling, or a closed-set heading rename.
+# Anything context-dependent (which product name? rewrite or link?) is
+# deliberately excluded and stays a human/model judgment -- see notes below.
+auto_fixable:
+  - Pulumi.Substitutions        # Fixed swaps: click->select, public beta->public preview, ...
+  - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
+  - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
+  - Google.Spelling             # Unambiguous misspellings; formalizes the spelling auto-fix the skill already did.
+
+# Deliberately NOT auto-fixable (kept flag-only) and why:
+#   Pulumi.DeprecatedProductNames - "Pulumi Service" -> Cloud/ESC/Deployments is context-dependent.
+#   Pulumi.BannedWords            - replacement needs judgment (whitelist->allowlist is safe; master/guys are not mechanical).
+#   Pulumi.Difficulty             - "easily"/"simply" needs a rewrite, not a swap.
+#   Pulumi.DirectionalReferences  - "see above" needs a real link/anchor, not a swap.
+#   Pulumi.HeadingSentenceCase    - auto-lowercasing risks mangling proper nouns outside the exceptions list.
+#   Pulumi.CommandBackticks       - false-positive-prone (phrase may already sit in a heading, link, or code).
+#   Pulumi.PoliciesSingular       - needs verb conjugation (are->is), not a fixed swap.
+#   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /
+#   Pulumi.EmDashDensity / Pulumi.Repetition - AI-prose heuristics; inherently judgment/rewrite.

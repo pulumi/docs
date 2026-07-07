@@ -1,0 +1,50 @@
+# Normalizes the heading on an end-of-page cross-reference block to one of the
+# two sanctioned names, chosen by intent (STYLE-GUIDE.md §Cross-reference
+# sections): "Next steps" (sequential / forward navigation) and "Learn more"
+# (lateral / related reference). The corpus had fragmented into ~10 spellings
+# (See also, Related, Related resources/topics/..., Additional resources,
+# Further reading, What's next, plus title-case variants); this collapses them.
+#
+# Substitution (not existence) so the fix is deterministic 1:1 and can be
+# auto-applied -- see .claude/commands/docs-review/scripts/vale-autofix-rules.yaml.
+# Scoped to headings so body prose ("see the section below", "related work")
+# is never touched. Each pattern is anchored (^...$) to the full heading text,
+# so only a heading that *is* one of these phrases matches -- a content heading
+# like "Related AWS services" is left alone. The canonical "Next steps" /
+# "Learn more" are deliberately absent from the map, so correct headings don't
+# self-match into no-op findings.
+#
+# Intentionally NOT normalized: "Related patterns" (a consistent domain heading
+# across content/docs/idp/guides/best-practices/patterns/) and bare "Resources"
+# (has legitimate mid-page API-reference uses).
+extends: substitution
+message: "Use '%s' instead of '%s' for a cross-reference heading (STYLE-GUIDE.md §Cross-reference sections)."
+link: STYLE-GUIDE.md
+level: warning
+ignorecase: false
+nonword: false
+scope:
+  - heading.h2
+  - heading.h3
+  - heading.h4
+  - heading.h5
+  - heading.h6
+action:
+  name: replace
+swap:
+  "^Next Steps$": Next steps
+  "^[Ww]hat['’]s [Nn]ext$": Next steps
+  "^Learn More$": Learn more
+  "^[Ss]ee [Aa]lso$": Learn more
+  "^[Aa]dditional [Rr]esources$": Learn more
+  "^[Ff]urther [Rr]eading$": Learn more
+  "^[Mm]ore [Ii]nformation$": Learn more
+  "^[Rr]elated$": Learn more
+  "^[Rr]elated [Rr]esources$": Learn more
+  "^[Rr]elated [Tt]opics$": Learn more
+  "^[Rr]elated [Cc]ontent$": Learn more
+  "^[Rr]elated [Pp]ages$": Learn more
+  "^[Rr]elated [Dd]ocs$": Learn more
+  "^[Rr]elated [Ll]inks$": Learn more
+  "^[Rr]elated [Dd]ocumentation$": Learn more
+  "^[Rr]elated [Rr]eading$": Learn more

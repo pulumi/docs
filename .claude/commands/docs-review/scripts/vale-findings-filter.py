@@ -20,7 +20,8 @@ Output schema (flat list, sorted by file then line):
     [
       {"file": "content/docs/foo.md", "line": 42,
        "rule": "Pulumi.Substitutions", "category": "substitution",
-       "severity": "error", "message": "Use 'select' instead of 'click' ..."},
+       "severity": "error", "message": "Use 'select' instead of 'click' ...",
+       "auto_fixable": true},
       ...
     ]
 
@@ -28,6 +29,10 @@ Output schema (flat list, sorted by file then line):
 review, TRIAGE_PROSE comment) render `category` instead — keeps the linter
 implementation out of user-facing prose. `category` is derived from
 `RULE_CATEGORIES`; unmapped rules fall back to "style".
+
+`auto_fixable` marks findings whose fix is deterministic (allowlisted in
+vale-autofix-rules.yaml). The review-existing-content workflow always applies
+those; docs-review ignores the flag and stays advisory.
 
 Empty input or empty intersection produces an empty list (`[]`), never errors.
 The script does not call any APIs except `gh pr diff` to fetch the patch.
@@ -37,6 +42,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -44,6 +50,41 @@ from collections import defaultdict
 
 PER_FILE_CAP = 10
 TOTAL_CAP = 50
+
+# Rules whose fix is deterministic (a fixed swap, canonical spelling, or a
+# closed-set heading rename). Sourced from vale-autofix-rules.yaml next to this
+# script; each emitted finding is stamped `auto_fixable`. Only the
+# review-existing-content workflow acts on the stamp (it always applies those
+# fixes); docs-review ignores it and stays flag-only. See that YAML's header.
+AUTOFIX_RULES_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "vale-autofix-rules.yaml"
+)
+
+
+def load_autofix_rules() -> frozenset[str]:
+    """Load the auto-fixable rule allowlist.
+
+    Degrades gracefully to an empty set if PyYAML or the file is unavailable
+    (e.g. an interactive run without PyYAML) -- the only effect is that every
+    finding is stamped auto_fixable: false. That's safe: the sole consumer of
+    the stamp (the content-review workflow) installs PyYAML before this runs.
+    """
+    try:
+        import yaml  # noqa: PLC0415 -- optional; absence must not break the filter.
+
+        with open(AUTOFIX_RULES_FILE) as f:
+            data = yaml.safe_load(f) or {}
+        return frozenset(data.get("auto_fixable", []) or [])
+    except Exception as exc:  # noqa: BLE001 -- best-effort; never fail the run.
+        print(
+            f"vale-findings-filter: auto-fix allowlist unavailable ({exc}); "
+            "stamping all findings auto_fixable: false",
+            file=sys.stderr,
+        )
+        return frozenset()
+
+
+AUTOFIX_RULES = load_autofix_rules()
 
 # Maps Vale rule names to tool-agnostic categories rendered in PR-facing
 # copy. The single source of truth — both CI (--pr) and interactive (no --pr)
@@ -174,6 +215,7 @@ def flatten_vale(raw: dict, allowed_lines: dict[str, set[int]] | None) -> list[d
                     "category": category_for(rule),
                     "severity": alert.get("Severity", ""),
                     "message": alert.get("Message", ""),
+                    "auto_fixable": rule in AUTOFIX_RULES,
                 }
             )
     return out
