@@ -20,7 +20,8 @@ Output schema (flat list, sorted by file then line):
     [
       {"file": "content/docs/foo.md", "line": 42,
        "rule": "Pulumi.Substitutions", "category": "substitution",
-       "severity": "error", "message": "Use 'select' instead of 'click' ..."},
+       "severity": "error", "message": "Use 'select' instead of 'click' ...",
+       "deterministic_fix": true},
       ...
     ]
 
@@ -28,6 +29,11 @@ Output schema (flat list, sorted by file then line):
 review, TRIAGE_PROSE comment) render `category` instead — keeps the linter
 implementation out of user-facing prose. `category` is derived from
 `RULE_CATEGORIES`; unmapped rules fall back to "style".
+
+`deterministic_fix` marks findings whose fix is a single mechanical replacement
+(allowlisted in vale-deterministic-fixes.yaml). The review-existing-content
+workflow applies those only after confirming the swap preserves meaning in
+context; docs-review ignores the flag and stays advisory.
 
 Empty input or empty intersection produces an empty list (`[]`), never errors.
 The script does not call any APIs except `gh pr diff` to fetch the patch.
@@ -37,6 +43,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -44,6 +51,43 @@ from collections import defaultdict
 
 PER_FILE_CAP = 10
 TOTAL_CAP = 50
+
+# Rules whose fix is a single mechanical replacement (a fixed swap, canonical
+# spelling, or a closed-set heading rename). Sourced from
+# vale-deterministic-fixes.yaml next to this script; each emitted finding is
+# stamped `deterministic_fix`. The stamp means "Vale knows the exact replacement"
+# -- NOT "apply it unconditionally." Only the review-existing-content workflow
+# acts on it, and only after judging the swap preserves meaning in context;
+# docs-review ignores it and stays flag-only. See that YAML's header.
+DETERMINISTIC_FIX_RULES_FILE = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "vale-deterministic-fixes.yaml"
+)
+
+
+def load_deterministic_fix_rules() -> frozenset[str]:
+    """Load the deterministic-fix rule allowlist.
+
+    Degrades gracefully to an empty set if PyYAML or the file is unavailable
+    (e.g. an interactive run without PyYAML) -- the only effect is that every
+    finding is stamped deterministic_fix: false. That's safe: the sole consumer
+    of the stamp (the content-review workflow) installs PyYAML before this runs.
+    """
+    try:
+        import yaml  # noqa: PLC0415 -- optional; absence must not break the filter.
+
+        with open(DETERMINISTIC_FIX_RULES_FILE) as f:
+            data = yaml.safe_load(f) or {}
+        return frozenset(data.get("deterministic_fix", []) or [])
+    except Exception as exc:  # noqa: BLE001 -- best-effort; never fail the run.
+        print(
+            f"vale-findings-filter: deterministic-fix allowlist unavailable ({exc}); "
+            "stamping all findings deterministic_fix: false",
+            file=sys.stderr,
+        )
+        return frozenset()
+
+
+DETERMINISTIC_FIX_RULES = load_deterministic_fix_rules()
 
 # Maps Vale rule names to tool-agnostic categories rendered in PR-facing
 # copy. The single source of truth — both CI (--pr) and interactive (no --pr)
@@ -174,6 +218,7 @@ def flatten_vale(raw: dict, allowed_lines: dict[str, set[int]] | None) -> list[d
                     "category": category_for(rule),
                     "severity": alert.get("Severity", ""),
                     "message": alert.get("Message", ""),
+                    "deterministic_fix": rule in DETERMINISTIC_FIX_RULES,
                 }
             )
     return out

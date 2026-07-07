@@ -448,6 +448,7 @@ function getDefaultExcludedKeywords() {
         "https://pulumi.statuspage.io/",                                            // global footer badge (layouts/partials/footer/statuspage-badge.html)
         "https://status.pulumi.com",                                                // docs/iac/operations/troubleshooting/server-errors
         "https://www.githubstatus.com/",                                            // referenced from github.com/pulumi/pulumi crawl; bot-protected
+        "https://github.com/pulumi/pulumi/stargazers",                              // blog/pulumi-up-2024: GitHub 404s the anonymous /stargazers view for every repo; valid in a browser
     ];
 }
 

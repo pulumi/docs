@@ -261,6 +261,11 @@ jobs:
                description and continue with what you have.)
             3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
                goes in the PR description's "Findings not applied" section.
+               For `.vale-findings.json` entries stamped `deterministic_fix:
+               true`, apply Vale's exact replacement ONLY after confirming it
+               preserves meaning in context — skip and flag ones that would
+               change meaning (see SKILL.md step 3). Other Vale findings are
+               nags, not fixes.
             4. The "Screenshot check" section of `.pr-body-draft.md` is
                pre-filled when the page references no content images. Run the
                screenshot/UI pass (flag-only) and fill the section ONLY if it

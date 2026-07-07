@@ -123,8 +123,22 @@ only:
   (`/docs/...`, never `../`).
 - **Frontmatter violations** from `.frontmatter-validation.json` (broken menu
   parent, alias collision).
-- **Unambiguous Vale errors** — spelling, repo terminology (per
-  `docs-review:references:spelling-grammar`); not style suggestions.
+- **Deterministic-fix Vale findings** — findings in `.vale-findings.json` stamped
+  `deterministic_fix: true`. The stamp (from the allowlist in
+  `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml` — fixed
+  substitutions, canonical spelling, the closed-set cross-reference heading
+  rename) means Vale already knows the exact replacement, so you don't have to
+  author one. It does **not** mean apply blindly. For each, apply the
+  replacement named in the finding's `message` **only after confirming it
+  preserves meaning in this context** — read the surrounding sentence/section.
+  Skip and record under "Findings not applied" (with the reason) when the swap
+  would change meaning, e.g. `click`→`select` inside "click event", a product
+  rename inside a historical quote, or a `See also`/`Related` block whose links
+  are actually sequential (that wants **Next steps**, not the rule's default
+  **Learn more** — apply the correct heading or flag it, don't mislabel intent).
+  This is verify-a-proposed-fix, not compose-a-fix; it is still a judgment.
+  Vale findings *without* the flag are style/judgment nags — leave them for the
+  human (see `docs-review:references:spelling-grammar`).
 - **Readthrough `local_repair` findings** — `.readthrough-findings.json`
   findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
   Apply the finding's `proposed_fix` and nothing beyond it: reorder so a

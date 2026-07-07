@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. Chef, Puppet, Ansible, and Salt"
+authors: ["joe-duffy"]
 meta_desc: Learn about the major differences between Pulumi and configuration management tools like Chef, Puppet, Ansible, Salt, and more.
 title: Chef & Puppet
 h1: Chef, Puppet, Ansible, & Salt vs Pulumi
