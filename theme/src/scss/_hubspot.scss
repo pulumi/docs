@@ -53,7 +53,9 @@
             }
         }
 
-        input:not([type="submit"]),
+        // Text-like inputs only: checkboxes/radios (consent fields, .hs-form-radio)
+        // must keep their natural height.
+        input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
         select {
             @apply h-10;
         }
@@ -219,7 +221,7 @@
         }
     }
 
-    input:not([type="submit"]),
+    input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
     select {
         @apply h-10;
     }
