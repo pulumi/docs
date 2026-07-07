@@ -15,9 +15,15 @@
 {{- $ctx := .context | default . -}}
 {{- $heading := true }}{{- if isset . "heading" }}{{ $heading = .heading }}{{ end -}}
 <div class="blog-header border-b border-gray-200">
-    {{- /* lg:min-h-26 keeps the header height constant whether or not a term
-        description (with its taller h-10 divider) is present. */ -}}
-    <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-6 lg:min-h-26 lg:py-8">
+    {{- /* Constant header height at lg+. Two things vary with a term description:
+        (1) flex-wrap would break the controls onto a second row on the items'
+        natural widths, and (2) the h-10 divider / line-clamped description are
+        taller than the bare "Blog" heading. lg:flex-nowrap + a shrinkable
+        (min-w-0, line-clamped) description fixes (1); a FIXED lg:h-26 (not
+        min-h) fixes (2) — the row is pinned to one height and items-center
+        vertically centers whatever it contains, so the header never shifts by a
+        few pixels between the description and no-description states. */ -}}
+    <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-6 lg:h-26 lg:flex-nowrap lg:py-0">
         <div class="flex min-w-0 items-center gap-3 lg:gap-4">
             {{ if $heading }}
             <h1 class="heading-2 m-0! shrink-0">
@@ -32,10 +38,10 @@
             {{ end }}
             {{- with $description }}
                 <span class="hidden h-10 w-px shrink-0 bg-gray-200 lg:block" aria-hidden="true"></span>
-                <p class="m-0! body-sm hidden max-w-md text-service-black line-clamp-2 lg:block">{{ . }}</p>
+                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black line-clamp-2 lg:block">{{ . }}</p>
             {{- end }}
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex shrink-0 items-center gap-4">
             {{- /* Compact newsletter subscribe (reuses the footer's HubSpot form),
                 left of search; hidden where the header gets crowded. */ -}}
             <div class="hidden items-center xl:flex">
