@@ -5,8 +5,12 @@
 # (See also, Related, Related resources/topics/..., Additional resources,
 # Further reading, What's next, plus title-case variants); this collapses them.
 #
-# Substitution (not existence) so the fix is deterministic 1:1 and can be
-# auto-applied -- see .claude/commands/docs-review/scripts/vale-autofix-rules.yaml.
+# Substitution (not existence) so Vale proposes the exact replacement, letting
+# the content-review reviewer verify rather than author the fix -- see
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml (the
+# reviewer still confirms the rename matches the section's intent before
+# applying: a lateral synonym maps to "Learn more", but a sequential section
+# wants "Next steps").
 # Scoped to headings so body prose ("see the section below", "related work")
 # is never touched. Each pattern is anchored (^...$) to the full heading text,
 # so only a heading that *is* one of these phrases matches -- a content heading
