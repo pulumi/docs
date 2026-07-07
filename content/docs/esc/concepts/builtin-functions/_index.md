@@ -32,4 +32,5 @@ All function invocations take the form of an object with a single key that names
 - [`fn::toBase64`](/docs/esc/concepts/builtin-functions/fn-to-base64/)
 - [`fn::toJSON`](/docs/esc/concepts/builtin-functions/fn-to-json/)
 - [`fn::toString`](/docs/esc/concepts/builtin-functions/fn-to-string/)
+- [`fn::toYAML`](/docs/esc/concepts/builtin-functions/fn-to-yaml/)
 - [`fn::validate`](/docs/esc/concepts/builtin-functions/fn-validate/)
