@@ -21,11 +21,11 @@ This pattern involves creating Pulumi components that internally use other compo
 - **Integrated architectures**: When you need to combine multiple types of infrastructure
 - **Shared components**: When you have components that need to be used both internally by higher-level components and directly by end users
 - **Reusable patterns**: When you have common architectural patterns across applications
-- **Progressive complexity**: When you want to build from simple to complex components
+- **Progressive complexity**: When you want to build from basic to complex components
 
 ## When NOT to use this pattern
 
-- **Simple use cases**: When a single component would suffice
+- **Basic use cases**: When a single component would suffice
 - **Over-abstraction**: When the complexity doesn't align with your organization's developer experience or policy needs
 
 ## How to use this pattern
@@ -136,6 +136,6 @@ const myApp = new WebApplication("my-web-app", {
 
 ## Related patterns
 
-- [IDP Pattern: Container-based apps, centrally managed container infra](/docs/idp/guides/best-practices/patterns/container-based-apps-centrally-managed-infra) - Example of component composition
+- [IDP Pattern: Multiple workloads on shared infrastructure](/docs/idp/guides/best-practices/patterns/multiple-workloads-shared-infrastructure) - Example of component composition
 - [IDP Pattern: Validating Component Inputs using Policy functions](/docs/idp/guides/best-practices/patterns/validating-component-inputs-using-policy-functions) - For validating composed components
 - [IDP Pattern: Security Updates using Components](/docs/idp/guides/best-practices/patterns/security-updates-using-components) - For updating component hierarchies

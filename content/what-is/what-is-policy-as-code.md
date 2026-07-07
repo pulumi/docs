@@ -38,7 +38,7 @@ Cloud misconfigurations are the leading cause of cloud security incidents. Gartn
 
 Manual policy review doesn't scale. A security team reviewing hundreds of pull requests for infrastructure changes will miss things. More importantly, by the time a human reviewer catches a misconfigured resource, a developer has already created it, someone else has built on top of it, and the blast radius of changing it has grown. Policy as code shifts enforcement left, to the same moment the infrastructure code is being written and previewed, so violations are caught before they become deployed resources.
 
-The stakes are only growing. As AI agents increasingly write and modify infrastructure, the policies that govern those modifications become the primary safety layer between automation and production.
+The stakes are only growing. As [AI agents increasingly write and modify infrastructure](/what-is/what-is-agentic-infrastructure/), the policies that govern those modifications become the primary safety layer between automation and production.
 
 ## How does policy as code work?
 
@@ -66,7 +66,7 @@ Policy as code provides five categories of benefits that address the practical p
 
 **Early validation.** Policy evaluation during `pulumi preview` means developers see violations the moment they write the code, not after the resource exists in production. The feedback loop is the same as a failed unit test: immediate, local, and easy to fix.
 
-**Best practices as versioned, testable code.** Policy packs can be published, versioned, and shared across an organization like libraries. A central platform team maintains a canonical set of compliance rules; individual product teams consume them. Policies can have unit tests, just like application code, so regressions are caught before new rules are deployed.
+**Best practices as versioned, testable code.** Policy packs can be published, versioned, and shared across an organization like libraries. A central platform team maintains a canonical set of compliance rules; individual product teams consume them. Policies can have [unit tests](/blog/how-to-test-infrastructure-as-code/), just like application code, so regressions are caught before new rules are deployed.
 
 **Consistency at scale.** Without automated enforcement, governance quality varies by team. Some teams are thorough; others are fast and skip steps. Policy as code makes the rule the same for every team, every deployment, automatically. It also integrates with cloud-native controls like AWS IAM Access Analyzer and AWS Organizations tag policies, complementing rather than replacing the native governance primitives each cloud provides.
 
@@ -212,6 +212,7 @@ Related reading:
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is infrastructure drift?](/what-is/what-is-infrastructure-drift/)
+* [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is platform engineering?](/what-is/what-is-platform-engineering/)
 * [What is DevOps?](/what-is/what-is-devops/)

@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi Compared to Alternatives"
+authors: ["joe-duffy"]
 meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions that may share overlapping capabilities.
 title: Comparisons
 h1: Compare Pulumi to other solutions
