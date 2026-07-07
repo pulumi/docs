@@ -333,10 +333,26 @@ function renderPool(jobs, concurrency) {
   return new Promise((resolve) => {
     const results = []
     let next = 0
+    let done = false
     if (!jobs.length) return resolve(results)
-    const settle = (res) => { results.push(res); if (results.length === jobs.length) { for (const w of live) w.terminate(); resolve(results) } }
     const live = new Set()
     const inFlight = new Map() // worker -> job
+    const settle = (res) => {
+      results.push(res)
+      if (results.length === jobs.length) { done = true; for (const w of live) w.terminate(); resolve(results) }
+    }
+    // Fail a dead worker's in-flight job (if any) and, once every worker is gone,
+    // drain the rest of the queue so the pool can never hang. Idempotent per
+    // worker via the `live` guard: a worker emits `error` then `exit`, so the
+    // second event is a no-op. Skipped entirely once the pool has resolved (the
+    // terminate() above makes every live worker emit a non-zero `exit`).
+    const failWorker = (w, reason) => {
+      if (done || !live.has(w)) return
+      const job = inFlight.get(w)
+      live.delete(w); inFlight.delete(w)
+      if (job) settle({ mid: job.mid, ok: false, err: reason })
+      if (!done && !live.size) while (next < jobs.length) settle({ mid: jobs[next++].mid, ok: false, err: "render worker pool exhausted" })
+    }
     const pump = (w) => {
       if (next >= jobs.length) { inFlight.delete(w); return } // no work left; idle until the pool resolves
       const job = jobs[next++]
@@ -347,18 +363,16 @@ function renderPool(jobs, concurrency) {
       const w = new Worker(WORKER_URL)
       live.add(w)
       w.on("message", (msg) => {
-        if (msg.type !== "result") return
+        if (done || msg.type !== "result") return
         inFlight.delete(w)
         settle(msg)
         if (results.length < jobs.length) pump(w)
       })
-      w.on("error", (err) => {
-        const job = inFlight.get(w)
-        live.delete(w); inFlight.delete(w)
-        if (job) settle({ mid: job.mid, ok: false, err: err?.message || String(err) })
-        // Everyone died before draining the queue: fail the rest so we don't hang.
-        if (!live.size) while (next < jobs.length) settle({ mid: jobs[next++].mid, ok: false, err: "render worker pool exhausted" })
-      })
+      w.on("error", (err) => failWorker(w, err?.message || String(err)))
+      // A worker that dies without an `error` (non-zero `exit` — e.g. OOM or a
+      // native resvg crash) would otherwise leave its in-flight job dangling and
+      // hang the pool; catch it here.
+      w.on("exit", (code) => { if (code !== 0) failWorker(w, `render worker exited unexpectedly (code ${code})`) })
       pump(w)
     }
   })
@@ -421,9 +435,12 @@ async function runGenerate(pages) {
   writeFileSync(MANIFEST, JSON.stringify(next, Object.keys(next).sort(), 2) + "\n")
   const totalMs = Date.now() - t0
   console.log(`meta-images: ${rendered} rendered, ${skipped} cached, ${failures.length} failed | ${totalMs}ms total${rendered ? `, ${Math.round(renderMs / rendered)}ms avg` : ""}`)
-  // Fail the build only on a total wipeout (every page failed) — a one-off bad
-  // page shouldn't block a deploy; it just ships without its generated card.
-  if (failures.length && failures.length === pages.length) process.exit(1)
+  // Fail the build only on a total wipeout (every attempted render failed) — a
+  // one-off bad page shouldn't block a deploy; it just ships without its
+  // generated card. Guard on todo (what we tried this run), not pages: an
+  // incremental run leaves most pages cached, so a systemic render failure would
+  // never reach pages.length and would ship green with missing cards.
+  if (failures.length && failures.length === todo.length) process.exit(1)
 }
 
 const pages = listPages()
