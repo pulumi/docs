@@ -62,6 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let intersecting = false;
     let pumping = false;
 
+    // Bumped every time the filter rewrites the list. Fetches capture the value
+    // before awaiting and bail if it moved — otherwise a page load still in
+    // flight when a pill is clicked would append its (unfiltered) rows below
+    // the filtered list, and of two rapid pill clicks the SLOWER response would
+    // win the content while the faster click owns the active pill.
+    let generation = 0;
+
     // Keep the address bar in sync with the page currently at the top of the
     // viewport (replaceState, so Back doesn't step through every loaded page).
     const markerObserver = new IntersectionObserver(
@@ -87,21 +94,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         busy = true;
+        const gen = generation;
         try {
             if (mode === "reveal") {
                 buffer.splice(0, REVEAL_STEP).forEach(row => {
                     row.style.display = "";
                 });
             } else if (nextUrl) {
-                const res = await fetch(nextUrl);
+                const url = nextUrl;
+                const res = await fetch(url);
                 if (!res.ok) {
                     throw new Error(`HTTP ${res.status}`);
                 }
-                const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+                const text = await res.text();
+                if (gen !== generation) {
+                    return;
+                }
+                const doc = new DOMParser().parseFromString(text, "text/html");
 
                 // Boundary marker for URL sync.
                 const marker = document.createElement("div");
-                marker.dataset.pageUrl = nextUrl;
+                marker.dataset.pageUrl = url;
                 marker.style.height = "0";
                 marker.setAttribute("aria-hidden", "true");
                 list.appendChild(marker);
@@ -114,7 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 nextUrl = pag ? pag.getAttribute("data-next-url") : null;
             }
         } catch {
-            // On any fetch error, restore the numbered pager and stop.
+            // On any fetch error, restore the numbered pager and stop — unless
+            // the filter already superseded this request.
+            if (gen !== generation) {
+                return;
+            }
             if (paginator) {
                 paginator.style.display = "";
             }
@@ -226,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function applyCategory(cat: string, push: boolean): Promise<void> {
+        const gen = ++generation;
         setActive(cat);
 
         if (!cat) {
@@ -246,7 +264,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!res.ok) {
                 throw new Error(`HTTP ${res.status}`);
             }
-            const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+            const text = await res.text();
+            if (gen !== generation) {
+                return;
+            }
+            const doc = new DOMParser().parseFromString(text, "text/html");
             list.innerHTML = "";
             doc.querySelectorAll<HTMLElement>("[data-post-row]").forEach(row => {
                 list.appendChild(document.importNode(row, true));
@@ -264,8 +286,11 @@ document.addEventListener("DOMContentLoaded", () => {
             syncTitle(cat);
             rearmSentinel();
         } catch {
-            // Fall back to a full navigation to the real category page.
-            location.href = categoryUrl(cat);
+            // Fall back to a full navigation to the real category page — unless
+            // a newer click already superseded this request.
+            if (gen === generation) {
+                location.href = categoryUrl(cat);
+            }
         }
     }
 
