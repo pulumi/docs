@@ -33,7 +33,7 @@ The case for testing application code is well-established. The case for testing 
 
 **Refactor safely.** Well-tested infrastructure code can be restructured, modularized, and upgraded without fear. When all your properties, tags, and security rules are asserted in tests, you know immediately if a refactor breaks a constraint.
 
-**Enforce security and compliance automatically.** Policy as code lets you encode your organization's security rules as executable tests. Mandatory policies block non-compliant deployments entirely; advisory policies surface warnings for human review. These rules run on every `pulumi preview` and `pulumi up`—not just at audit time.
+**Enforce security and compliance automatically.** [Policy as code](/what-is/what-is-policy-as-code/) lets you encode your organization's security rules as executable tests. Mandatory policies block non-compliant deployments entirely; advisory policies surface warnings for human review. These rules run on every `pulumi preview` and `pulumi up`—not just at audit time.
 
 **Ship infrastructure at software speed.** Teams that test IaC ship changes faster, with less fear. The CI pipeline becomes a confidence engine rather than a deployment gate.
 
@@ -1151,7 +1151,7 @@ jobs:
 
 ### What is infrastructure as code testing?
 
-Infrastructure as code testing is the practice of writing automated checks that validate your IaC programs before they deploy to production. Just like application testing, it includes unit tests (fast, no cloud credentials, mock the provider), integration tests (real cloud deployments in ephemeral environments), and policy checks (rules that enforce compliance standards on every preview and deploy).
+[Infrastructure as code](/what-is/what-is-infrastructure-as-code/) testing is the practice of writing automated checks that validate your IaC programs before they deploy to production. Just like application testing, it includes unit tests (fast, no cloud credentials, mock the provider), integration tests (real cloud deployments in ephemeral environments), and policy checks (rules that enforce compliance standards on every preview and deploy).
 
 ### Can you unit test IaC without deploying to the cloud?
 
