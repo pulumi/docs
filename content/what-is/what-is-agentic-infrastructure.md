@@ -66,7 +66,7 @@ Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 
 
 1. **Handle CI/CD feedback.** If a pipeline check fails (a security scan, a policy violation, a test), Neo reads the output, pushes a corrective fix to the same PR, and iterates.
 
-1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects infrastructure drift or produces changes, so environments stay current without manual polling.
+1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects [infrastructure drift](/what-is/what-is-infrastructure-drift/) or produces changes, so environments stay current without manual polling.
 
 What makes this different from a generic coding assistant is that Neo is [grounded AI](/blog/grounded-ai-why-neo-knows-your-infrastructure/): it reasons over your actual state graph and deployment history rather than generating code from internet patterns. See the [Neo documentation](/docs/ai/) for a full reference.
 

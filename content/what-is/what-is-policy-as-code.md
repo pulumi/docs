@@ -211,6 +211,7 @@ Related reading:
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
+* [What is infrastructure drift?](/what-is/what-is-infrastructure-drift/)
 * [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is platform engineering?](/what-is/what-is-platform-engineering/)
