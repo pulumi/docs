@@ -47,13 +47,11 @@ When you open the [CLI command reference](/docs/iac/cli/commands/), you'll see a
 
 ## What's available
 
-Alongside the latest release, we keep immutable snapshots of previous versions. The CLI command reference and the Node.js, Python, .NET, and Java SDK API docs are all covered, so the matching docs are always a dropdown away.
-
-History reaches back to around v3.150.0 (early 2025); older CLI releases already prompt you to upgrade, so that makes a sensible floor. The Go SDK is versioned on [pkg.go.dev](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3), so its documentation lives there rather than on the docs site.
+Alongside the latest release, we keep immutable snapshots of previous versions going back to v3.150.0 (early 2025). The CLI command reference and the Node.js, Python, .NET, and Java SDK API docs are all covered, so the docs you need are only a dropdown away. (The Go SDK is versioned on [pkg.go.dev](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3), so its documentation lives there rather than in the Pulumi docs.)
 
 ## Get started
 
-Head to the [CLI command reference](/docs/iac/cli/commands/) or the [SDK API docs](/docs/reference/) and try the version dropdown. If your projects pin specific releases, select your version and read the docs that match.
+Head to the [CLI command reference](/docs/iac/cli/commands/) or the [SDK API docs](/docs/reference/) and try the version dropdown. Selections are sticky, so when you navigate into a version, you'll be able to click around within that same version without having to choose it again.
 
 Have feedback? Let us know in the [Pulumi Community Slack](https://slack.pulumi.com) or by opening an issue on [GitHub](https://github.com/pulumi/docs).
 
