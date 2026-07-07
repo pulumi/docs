@@ -109,10 +109,17 @@ taxonomies:
   category: category
 
 permalinks:
-  authors: /blog/author/:slug/
-  tags: /blog/tag/:slug/
-  collections: /tutorials/:slug/
-  category: /blog/category/:slug/
+  term:
+    authors: /blog/author/:slug/
+    tags: /blog/tag/:slug/
+    collections: /tutorials/:slug/
+    category: /blog/category/:slug/
+  # The category taxonomy LIST page (the directory of categories rendered by
+  # layouts/taxonomy/category.terms.html). Without this it would sit at Hugo's
+  # default /category/, leaving /blog/category/ a 404 even though every term
+  # page lives beneath it.
+  taxonomy:
+    category: /blog/category/
 
 # Built-in Related Content, used by layouts/partials/blog/related-posts.html to
 # top up a post's related list. Tags dominate; category and recency break ties.

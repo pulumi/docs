@@ -217,11 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function categoryFromLocation(): string {
         const m = location.pathname.match(/^\/blog\/category\/([^/]+)\/$/);
-        if (m) {
-            return m[1];
-        }
-        // Legacy deep-link form.
-        return new URLSearchParams(location.search).get("category") || "";
+        return m ? m[1] : "";
     }
 
     function syncTitle(cat: string) {
@@ -283,18 +279,22 @@ document.addEventListener("DOMContentLoaded", () => {
             applyCategory(pill.dataset.category || "", true);
         });
 
-        // Restore a legacy ?category=<id> deep link on load, normalizing the
-        // address bar to the canonical term-page URL.
-        const initial = new URLSearchParams(location.search).get("category");
-        if (initial) {
-            history.replaceState(null, "", categoryUrl(initial));
-            applyCategory(initial, false);
-        }
-
         // Re-sync the filter on back/forward within the homepage's history
-        // entries (path or legacy query form).
+        // entries.
         window.addEventListener("popstate", () => {
             applyCategory(categoryFromLocation(), false);
+        });
+    } else {
+        // No filter bar: a server-rendered term page, /blog/ page 2+, etc. If
+        // the homepage filter pushed history entries and the user then reloaded
+        // (landing on this real term page), Back/Forward walks those entries as
+        // same-document traversals — the URL changes but this document has no
+        // filter to re-render. Turn any path-changing traversal into a real
+        // navigation. (Hash-only traversals keep the pathname and are ignored.)
+        window.addEventListener("popstate", () => {
+            if (location.pathname !== basePath) {
+                location.reload();
+            }
         });
     }
 });
