@@ -13,13 +13,14 @@ tags:
     - devops
     - announcements
 category: general
+faq_schema: true
 ---
 
-The phrase "AI infrastructure" now means two different things. One is the GPUs, schedulers, and MLOps platforms that exist to run AI workloads. The other is AI that runs infrastructure: agents and assistants that generate, deploy, and govern cloud resources on your behalf. They're different markets with different vendors, and most teams need to think about both.
+"AI infrastructure tools" covers two distinct markets: infrastructure *for* AI (GPU clouds like CoreWeave, MLOps platforms like Weights & Biases) and AI *for* infrastructure (agentic platforms like Pulumi Neo that generate, deploy, and govern cloud resources for you). Most teams need tools from both categories, and picking the wrong one wastes budget and adoption goodwill.
 
 <!--more-->
 
-The pressure to think about both is real. [McKinsey research](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) puts the productivity lift from generative AI in software development at 20–45%, which is great for application teams and a problem for platform teams trying to keep up with the resulting feature flow. Infrastructure investment is climbing on both fronts: more spend on the compute that trains and serves models, more spend on AI tools that manage everything else.
+The pressure to get this right is real. [McKinsey research](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier) puts the productivity lift from generative AI in software development at 20–45%, which is great for application teams and a problem for platform teams trying to keep up with the resulting feature flow. Infrastructure investment is climbing on both fronts: more spend on the compute that trains and serves models, more spend on AI tools that manage everything else.
 
 This guide covers both categories: the compute and MLOps stack in Part 1, and AI-powered infrastructure management in Part 2, where the more interesting product shift is happening.
 
