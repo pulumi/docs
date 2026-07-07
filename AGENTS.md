@@ -113,6 +113,24 @@ See `BLOGGING.md` for the author-facing version of these rules.
 
 The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.
 
+### Design tokens (colors)
+
+Brand color hex values come from [`@pulumi/design-tokens`](https://github.com/pulumi/pulumi-design-system) (`tokens/core/primitives.json`, `palette-semantics.json`). The Hugo theme translates JSON to Tailwind v4 CSS variables — do not edit generated files by hand.
+
+| File | Role |
+|------|------|
+| `theme/scripts/build-color-theme.mjs` | Reads design-tokens JSON, writes `theme/src/generated/tailwind-v4/_theme.scss` |
+| `theme/src/scss/_theme.scss` | Imports generated palette + docs-specific tokens (breakpoints, `docs-*` colors) |
+| `theme/src/scss/docs/_docs-theme.scss` | Docs light/dark semantic overrides (`--docs-bg`, `--docs-fg`, etc.) |
+
+**Regenerate after bumping `@pulumi/design-tokens`:**
+
+```bash
+cd theme && yarn install && yarn build:color-theme
+```
+
+Typography in the generated theme block is local for now — not yet sourced from design-tokens JSON. See the design-system repo `AGENTS.md` for the full token index.
+
 **You must test both modes whenever you add or restyle a visible element on a docs page** — new partials, shortcodes, cards, callouts, buttons, icons, or any markup that introduces its own colors, backgrounds, borders, or images. Toggle dark mode (theme switcher at the bottom of the docs sidebar) and confirm the element is legible and on-brand in both. Pure content changes (prose, code samples, frontmatter, links) are safe and don't need a dark-mode pass.
 
 When something needs dark-mode work, prefer the existing levers over hand-written one-off colors:
