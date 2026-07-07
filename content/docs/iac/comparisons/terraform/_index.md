@@ -153,7 +153,7 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
-- [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
-- [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-- [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)
+* [Get started with Pulumi](/docs/iac/get-started/)
+* [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
+* [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
+* [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)
