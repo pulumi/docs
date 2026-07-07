@@ -98,6 +98,18 @@ outputs:
     - rows
     - RSS
 
+# Collection terms (/tutorials/<slug>/) are the one non-blog taxonomy: no blog
+# post carries `collections`, so the term outputs above would give every
+# tutorials collection an empty "Pulumi Blog: <Term>" RSS feed (which head.html
+# would then advertise for autodiscovery) plus an unused rows fragment. Scope
+# them back to HTML only.
+cascade:
+  - _target:
+      kind: term
+      path: /collections/**
+    outputs:
+      - HTML
+
 taxonomies:
   tag: tags
   author: authors
