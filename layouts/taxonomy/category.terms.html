@@ -1,0 +1,20 @@
+{{ define "main" }}
+    {{- /* The category taxonomy list page Hugo auto-emits at /category/. Renders
+        a directory of the blog categories (name + reader-facing description from
+        data/blog_categories.yaml, linked to each term page), mirroring how
+        /blog/tags/ lists tags. Kept noindexed and out of the sitemap
+        (partials/taxonomy-indexable.html) — the term pages are the landing
+        pages; this is a courtesy index for stray visitors. */ -}}
+    {{ partial "blog/header.html" (dict "title" "Categories" "context" .) }}
+
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {{ range site.Data.blog_categories.categories }}
+                <article class="group relative flex flex-col items-start gap-2">
+                    <h2 class="heading-4 m-0!"><a href="/blog/category/{{ .id }}/" data-track="blog-category-{{ .id }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ .name }}</a></h2>
+                    {{- with .description }}<p class="m-0! body-sm text-service-black line-clamp-3">{{ . }}</p>{{ end -}}
+                </article>
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

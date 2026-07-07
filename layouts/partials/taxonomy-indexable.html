@@ -1,0 +1,37 @@
+{{- /*
+    Single source of truth for which taxonomy pages search engines may index.
+    Returns true/false; consumed by partials/head.html (noindex meta) and
+    _default/sitemap.xml so the two never drift.
+
+    Taxonomy pages were blanket-noindexed in pulumi-hugo#2138 (Oct 2022) because
+    topical tag terms (/blog/tag/kubernetes/ etc.) cannibalized core product and
+    docs pages for the same keywords. That reasoning is preserved here — plain
+    tag and author terms stay noindexed — with carve-outs for curated landing
+    pages whose titles don't compete with core pages:
+
+      - tutorial collections (/tutorials/*)          — since pulumi/docs#18483
+      - blog category TERM pages (/blog/category/*)  — curated kinds with
+        hand-written descriptions
+      - blog series pages (tag terms whose slug is in data/blog_series.yml) —
+        curated multi-part landing pages with unique, blog-only titles
+
+    Only TERM pages (kind "term") get the category/series carve-outs; the bare
+    taxonomy list pages Hugo also emits (/category/, /tags/, /authors/) stay
+    noindexed and out of the sitemap. Non-taxonomy pages return true (no opinion).
+*/ -}}
+{{- $indexable := true -}}
+{{- if .Data.Singular -}}
+    {{- $indexable = false -}}
+    {{- if eq .Data.Singular "collection" -}}
+        {{- $indexable = true -}}
+    {{- else if eq .Kind "term" -}}
+        {{- if eq .Data.Singular "category" -}}
+            {{- $indexable = true -}}
+        {{- else if eq .Data.Singular "tag" -}}
+            {{- range site.Data.blog_series.series -}}
+                {{- if eq .slug $.Data.Term }}{{ $indexable = true }}{{ end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return $indexable -}}

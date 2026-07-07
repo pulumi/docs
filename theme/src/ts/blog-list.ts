@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Keep the address bar in sync with the page currently at the top of the
     // viewport (replaceState, so Back doesn't step through every loaded page).
     const markerObserver = new IntersectionObserver(
-        (entries) => {
+        entries => {
             for (const e of entries) {
                 if (e.isIntersecting) {
                     const url = (e.target as HTMLElement).dataset.pageUrl;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         busy = true;
         try {
             if (mode === "reveal") {
-                buffer.splice(0, REVEAL_STEP).forEach((row) => {
+                buffer.splice(0, REVEAL_STEP).forEach(row => {
                     row.style.display = "";
                 });
             } else if (nextUrl) {
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 list.appendChild(marker);
                 markerObserver.observe(marker);
 
-                doc.querySelectorAll("[data-post-list] [data-post-row]").forEach((row) => {
+                doc.querySelectorAll("[data-post-list] [data-post-row]").forEach(row => {
                     list.appendChild(document.importNode(row, true));
                 });
                 const pag = doc.querySelector("[data-paginator]");
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const io = new IntersectionObserver(
-        (entries) => {
+        entries => {
             intersecting = entries[0].isIntersecting;
             if (intersecting) {
                 pump();
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!filterBar) {
             return;
         }
-        filterBar.querySelectorAll<HTMLElement>("[data-category]").forEach((pill) => {
+        filterBar.querySelectorAll<HTMLElement>("[data-category]").forEach(pill => {
             const on = (pill.dataset.category || "") === cat;
             pill.classList.toggle("is-active", on);
             if (on) {
@@ -204,6 +204,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Filtering rewrites the address bar to the REAL category term page URL
+    // (/blog/category/<id>/), not a ?category= query on /blog/ — shared and
+    // bookmarked links then point at the canonical, indexed page, so its search
+    // equity isn't diluted onto /blog/. A reload or no-JS visit lands on the
+    // server-rendered term page.
+    const originalTitle = document.title;
+
+    function categoryUrl(cat: string): string {
+        return cat ? `/blog/category/${cat}/` : basePath;
+    }
+
+    function categoryFromLocation(): string {
+        const m = location.pathname.match(/^\/blog\/category\/([^/]+)\/$/);
+        if (m) {
+            return m[1];
+        }
+        // Legacy deep-link form.
+        return new URLSearchParams(location.search).get("category") || "";
+    }
+
+    function syncTitle(cat: string) {
+        const pill = filterBar && cat ? filterBar.querySelector<HTMLElement>(`a[data-category="${cat}"]`) : null;
+        document.title = pill ? `${pill.textContent!.trim()} | Pulumi Blog` : originalTitle;
+    }
+
     async function applyCategory(cat: string, push: boolean): Promise<void> {
         setActive(cat);
 
@@ -215,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (push) {
                 history.pushState(null, "", basePath);
             }
+            syncTitle("");
             rearmSentinel();
             return;
         }
@@ -226,28 +252,29 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             const doc = new DOMParser().parseFromString(await res.text(), "text/html");
             list.innerHTML = "";
-            doc.querySelectorAll<HTMLElement>("[data-post-row]").forEach((row) => {
+            doc.querySelectorAll<HTMLElement>("[data-post-row]").forEach(row => {
                 list.appendChild(document.importNode(row, true));
             });
             const rows = Array.from(list.querySelectorAll<HTMLElement>("[data-post-row]"));
             buffer = rows.slice(REVEAL_STEP);
-            buffer.forEach((row) => {
+            buffer.forEach(row => {
                 row.style.display = "none";
             });
             mode = "reveal";
             nextUrl = null;
             if (push) {
-                history.pushState(null, "", `?category=${cat}`);
+                history.pushState(null, "", categoryUrl(cat));
             }
+            syncTitle(cat);
             rearmSentinel();
         } catch {
             // Fall back to a full navigation to the real category page.
-            location.href = `/blog/category/${cat}/`;
+            location.href = categoryUrl(cat);
         }
     }
 
     if (filterBar) {
-        filterBar.addEventListener("click", (e) => {
+        filterBar.addEventListener("click", e => {
             const pill = (e.target as HTMLElement).closest<HTMLElement>("[data-category]");
             if (!pill) {
                 return;
@@ -256,16 +283,18 @@ document.addEventListener("DOMContentLoaded", () => {
             applyCategory(pill.dataset.category || "", true);
         });
 
-        // Restore a ?category=<id> deep link on load.
+        // Restore a legacy ?category=<id> deep link on load, normalizing the
+        // address bar to the canonical term-page URL.
         const initial = new URLSearchParams(location.search).get("category");
         if (initial) {
+            history.replaceState(null, "", categoryUrl(initial));
             applyCategory(initial, false);
         }
 
-        // Re-sync the filter on back/forward within the homepage.
+        // Re-sync the filter on back/forward within the homepage's history
+        // entries (path or legacy query form).
         window.addEventListener("popstate", () => {
-            const cat = new URLSearchParams(location.search).get("category") || "";
-            applyCategory(cat, false);
+            applyCategory(categoryFromLocation(), false);
         });
     }
 });
