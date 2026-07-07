@@ -46,11 +46,16 @@
         input,
         textarea,
         select {
-            @apply border border-gray-300 rounded p-2 bg-white;
+            @apply border border-gray-300 rounded-lg p-2 bg-white;
 
             &:focus {
                 @apply outline-none ring ring-violet-primary;
             }
+        }
+
+        input:not([type="submit"]),
+        select {
+            @apply h-10;
         }
 
     }
@@ -212,6 +217,11 @@
         &:focus {
             @apply outline-none ring ring-violet-primary;
         }
+    }
+
+    input:not([type="submit"]),
+    select {
+        @apply h-10;
     }
 
 }

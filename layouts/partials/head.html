@@ -109,10 +109,11 @@
         We use taxonomy pages for tags and authors for our blog posts. These
         pages end up cannibalising other pages on our site that rank for key terms.
         To avoid this, we add the `noindex` tag to tell search engines not index taxonomy pages.
-        Tutorial collection pages (/tutorials/*) are excluded as they serve as
-        valuable landing pages.
+        Tutorial collection pages (/tutorials/*) and blog category pages
+        (/blog/category/*) are excluded as they serve as valuable, curated
+        landing pages (and are included in the sitemap).
     -->
-    {{ if and .Data.Singular (ne .Data.Singular "collection") }}
+    {{ if and .Data.Singular (ne .Data.Singular "collection") (ne .Data.Singular "category") }}
         <meta name="robots" content="noindex" />
     {{ end }}
 
@@ -210,6 +211,25 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, and series-as-tag) have no
+            .Summary; source their description from the data files so they don't
+            fall through to an empty meta description. */}}
+        {{ $desc := "" }}
+        {{ if eq .Data.Singular "category" }}
+            {{ range site.Data.blog_categories.categories }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
+        {{ else if eq .Data.Singular "tag" }}
+            {{ with site.Data.blog_series }}{{ range .series }}
+                {{ if eq .slug $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}{{ end }}
+            {{ if not $desc }}{{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}{{ end }}
+        {{ end }}
+        {{ with $desc | chomp }}
+            <meta name="description" content="{{ . }}" />
+            <meta property="og:description" content="{{ . }}" />
+        {{ end }}
     {{ else if .Summary }}
         <meta name="description" content="{{ .Summary }}" />
         <meta property="og:description" content="{{ .Summary }}" />
@@ -219,24 +239,37 @@
         <title>{{ .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
+        {{/* Author term pages: use the real display name from team data (falling
+             back to the humanized term) instead of the raw hyphenated slug. */}}
+        {{ if and (eq .Kind "term") (eq .Data.Singular "author") }}
+            {{ $title = .Data.Term | humanize }}
+            {{ with index site.Data.team.team .Data.Term }}{{ $title = .name }}{{ end }}
+        {{ end }}
         {{ if .Params.title_tag }}
             {{ $title = .Params.title_tag }}
         {{ end }}
 
 
+        {{- /* Blog section title page number. Seed the paginator with the shared
+             feed here (head renders before list.html), never the default
+             `.Paginator` — see partials/blog/feed.html for why. */ -}}
+        {{ $pageNum := 1 }}
+        {{ if and (eq .Type "blog") .IsSection }}
+            {{ $pageNum = ($.Paginate (partialCached "blog/feed.html" . "blog-home").feed).PageNumber }}
+        {{ end }}
         <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
              add "Blog" to the title so that the titles no longer clash. -->
         {{ if and (eq .Type "blog") .IsPage }}
             <title>{{ $title }} | Pulumi Blog</title>
         {{ else if and (eq .Type "blog") .IsSection }}
-            {{ if gt $.Paginator.PageNumber 1 }}
-                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi</title>
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi</title>
             {{ else }}
                 <title>{{ $title }} | Pulumi</title>
             {{ end }}
         {{ else if eq .Type "blog" }}
-            {{ if gt $.Paginator.PageNumber 1 }}
-                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi Blog</title>
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi Blog</title>
             {{ else }}
                 <title>{{ $title }} | Pulumi Blog</title>
             {{ end }}
@@ -416,7 +449,13 @@
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
             window.addEventListener("load", function (event) {
                 if (anchors) {
+                    {{ if in (slice "blog" "authors" "tags") .Section }}
+                    // Blog: only anchor headings inside the post body, not card
+                    // titles / the blog header (listing pages have no .blog-post-content).
+                    anchors.add(".blog-post-content :is(h1, h2, h3, h4, h5, h6):not(.no-anchor)");
+                    {{ else }}
                     anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+                    {{ end }}
                 }
             });
         </script>

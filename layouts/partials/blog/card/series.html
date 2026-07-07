@@ -1,0 +1,33 @@
+{{- /*
+    Series card: dark image top, an "N PART SERIES" mono badge fanned over a
+    stack of decorative pills (the stacked-pages motif), title (h4), and a
+    clamped description. Links to the series page (kept at its /blog/tag/ URL).
+
+    Params:
+      series (required) an entry from data/blog_series.yml (slug/title/description/meta_image)
+      count  (required) number of published posts in the series
+*/ -}}
+{{- $s := .series -}}
+{{- $count := .count -}}
+<article class="group relative flex flex-col gap-4">
+    <div class="flex aspect-[9/4] w-full items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+        {{- /* Resolve the referenced post's bundle image so it gets webp + srcset +
+            a content-hashed (fingerprinted) URL, served from that post's bundle.
+            `fit` preserves the full art (no crop); h-full/w-auto fills the banner
+            height and centers, so the wide card shows violet space at the sides. */ -}}
+        {{- $res := "" -}}
+        {{- with $s.meta_image }}{{ with site.GetPage (path.Dir .) }}{{ $res = .Resources.GetMatch (path.Base $s.meta_image) }}{{ end }}{{ end -}}
+        {{- if $res -}}
+            {{- $x1 := $res.Process "fit 720x480 webp q90" -}}
+            {{- $x2 := $res.Process "fit 1440x960 webp q88" -}}
+            <img class="h-full w-auto max-w-none" src="{{ $x1.RelPermalink }}" srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x" width="{{ $x1.Width }}" height="{{ $x1.Height }}" alt="{{ $s.title }}" loading="lazy" decoding="async" />
+        {{- else -}}
+            {{- with $s.meta_image -}}<img class="h-full w-auto max-w-none" src="{{ . }}" alt="{{ $s.title }}" loading="lazy" decoding="async" />{{- end -}}
+        {{- end -}}
+    </div>
+    <div class="flex flex-col gap-2">
+        {{ partial "blog/series-fan.html" (dict "count" $count) }}
+        <h4 class="m-0!"><a href="/blog/tag/{{ $s.slug }}/" data-track="blog-series-{{ $s.slug }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $s.title }}</a></h4>
+        {{- with $s.description }}<p class="m-0! body-sm text-service-black line-clamp-3">{{ . }}</p>{{ end -}}
+    </div>
+</article>

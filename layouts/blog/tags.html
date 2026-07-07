@@ -1,27 +1,13 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 py-8">
-        <div class="lg:flex">
-            <div class="lg:w-3/12 pr-8">
-                {{ partial "blog/sidebar.html" . }}
-            </div>
+    {{ partial "blog/header.html" (dict "title" "Tags" "context" .) }}
 
-            <div class="lg:w-7/12">
-                <header>
-                    <h1 class="no-anchor">{{ .Title }}</h1>
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        {{ with .Content }}<div class="blog-post-content mb-8 max-w-3xl">{{ . }}</div>{{ end }}
 
-                    {{ .Content }}
-
-
-                    <ul class="tags list-none p-0 my-8 inline-flex flex-wrap text-xs">
-                        {{ range $tag, $content := .Site.Taxonomies.tags }}
-                            <li>
-                                <a class="tag tag-blog text-xs m-1" href="{{ .Page.RelPermalink }}">{{ $tag }}</a>
-                            </li>
-                        {{ end }}
-                    </ul>
-                </header>
-            </div>
-            <div class="lg:w-2/12 pl-8"></div>
-        </div>
+        <ul class="m-0 flex list-none flex-wrap gap-2 p-0">
+            {{ range $tag, $content := .Site.Taxonomies.tags }}
+                <li class="m-0">{{ partial "blog/badge.html" (dict "text" $tag "variant" "secondary" "href" $content.Page.RelPermalink "track" (printf "blog-tag-%s" ($tag | urlize))) }}</li>
+            {{ end }}
+        </ul>
     </div>
 {{ end }}

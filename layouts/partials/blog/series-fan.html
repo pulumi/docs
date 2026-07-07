@@ -1,0 +1,13 @@
+{{- /*
+    "N PART SERIES" fanned label: a front badge with (count − 1) decorative pages
+    stacked behind it, each peeking ~8px to the right — the stacked-pages motif.
+    The repeat count matches the number of parts. z-index is set inline because
+    Tailwind can't compile a dynamic z-[…] class, so the front badge stays on top.
+
+    Params: count (required) number of published parts.
+*/ -}}
+{{- $count := .count -}}
+<div class="relative isolate flex items-center">
+    <span class="relative inline-flex h-7 items-center whitespace-nowrap rounded-lg border border-gray-200 bg-white px-2 font-overline-sm text-service-black" style="z-index: {{ add $count 1 }}">{{ $count }} part series</span>
+    {{- if gt $count 1 }}{{ range $i := (seq (sub $count 1)) }}<span aria-hidden="true" class="relative -ml-[56px] h-7 w-16 shrink-0 rounded-lg border border-gray-200 bg-white" style="z-index: {{ sub $count $i }}"></span>{{ end }}{{ end -}}
+</div>

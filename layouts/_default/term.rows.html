@@ -1,0 +1,10 @@
+{{- /*
+    Bare list-rows fragment for a taxonomy term — no page chrome. Fetched by the
+    homepage category filter (theme/src/ts/blog-list.ts) and swapped into the feed
+    container. Rendered for the `rows` output format (config.yml). Only blog posts
+    are emitted, so non-blog terms (authors, collections) produce an empty file.
+    Not in the sitemap. Order matches the term listing (newest-first).
+*/ -}}
+{{- range (where .Data.Pages "Section" "blog").ByDate.Reverse -}}
+{{ partial "blog/card/list-row.html" (dict "page" .) }}
+{{- end -}}

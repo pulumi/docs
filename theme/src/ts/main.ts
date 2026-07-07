@@ -11,6 +11,7 @@ import "./noselect";
 import "./tracking";
 import "./docs-feedback";
 import "./event-filtering";
+import "./blog-list";
 import "./copybutton";
 import "./code-tabbed";
 import "./code-snippets-dropdown";

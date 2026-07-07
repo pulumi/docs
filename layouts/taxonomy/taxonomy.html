@@ -1,40 +1,14 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 py-8">
-        <div class="lg:flex">
-            <div class="lg:w-3/12 pr-8">
-                {{ partial "blog/sidebar.html" . }}
-            </div>
+    {{- /* Generic fallback taxonomy term template. Every blog taxonomy (tag,
+        author, category) has its own template, so this is rarely hit; it renders
+        the shared blog header + list rows for any other term. */ -}}
+    {{ partial "blog/header.html" (dict "title" (printf "%s: %s" (.Data.Singular | title) (.Data.Term | humanize)) "context" .) }}
 
-            <div class="lg:w-7/12">
-                {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
-
-                <header>
-                    <h1 class="no-anchor">
-                        {{ .Data.Singular | title }}:
-                        <span class="text-violet-primary">
-                            {{ .Data.Term }}
-                        </span>
-                    </h1>
-                </header>
-
-                {{ range $paginator.Pages }}
-                    <article class="my-8 pb-8 border-b border-gray-200">
-                        <h2><a data-track="{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                        <div class="flex items-center">
-                            <time class="text-sm text-gray-700">
-                                {{ .Date.Format "Monday, Jan 2, 2006" }}
-                            </time>
-                        </div>
-                        <section>
-                            {{ .Summary }}
-                        </section>
-                    </article>
-                {{ end }}
-
-                {{ partial "blog/paginator.html" . }}
-            </div>
-
-            <div class="lg:w-2/12 pl-8"></div>
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        {{ $paginator := .Paginate .Data.Pages.ByDate.Reverse }}
+        <div data-post-list class="flex flex-col">
+            {{ range $paginator.Pages }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
         </div>
+        {{ partial "blog/paginator.html" . }}
     </div>
 {{ end }}

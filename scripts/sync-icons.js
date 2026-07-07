@@ -37,6 +37,9 @@ const BRAND_ICONS = [
     { name: 'slack',    simpleIconsSlug: null,        svglogosUrl: 'https://cdn.svglogos.dev/logos/slack-icon.svg' },
     { name: 'linkedin', simpleIconsSlug: null,        svglogosUrl: 'https://cdn.svglogos.dev/logos/linkedin-icon.svg' },
     { name: 'bluesky',  simpleIconsSlug: 'bluesky',  svglogosUrl: null },
+    { name: 'reddit',   simpleIconsSlug: 'reddit',   svglogosUrl: null },
+    // Hacker News shares Y Combinator's mark (simple-icons has no `hackernews`).
+    { name: 'hackernews', simpleIconsSlug: 'ycombinator', svglogosUrl: null },
 ];
 
 // ─── Utilities ───────────────────────────────────────────────────────────────

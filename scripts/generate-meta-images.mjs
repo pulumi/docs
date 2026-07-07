@@ -41,6 +41,7 @@ import {
 } from "./meta-images/lib.mjs"
 import { eventsTree, eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
 import { blogTree } from "./meta-images/blog.mjs"
+import { termPages } from "./meta-images/terms.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
@@ -441,6 +442,16 @@ function listPages() {
     }
     for (const p of secPages) p.key = cacheKey(p)
     pages.push(...secPages)
+  }
+  // Virtual "terms" section: blog category/tag term pages have no backing file,
+  // so their page objects come from termPages() rather than a content walk. They
+  // flow through the same mid/out/key/prune machinery as file-backed pages.
+  if (!ONLY.length || ONLY.includes("terms")) {
+    for (const t of termPages()) {
+      const page = { id: t.id, mid: t.id, section: "terms", template: t.template, fields: t.fields, w: t.w, h: t.h, out: join(OUT_ROOT, `${t.id}.png`) }
+      page.key = cacheKey(page)
+      pages.push(page)
+    }
   }
   return pages
 }

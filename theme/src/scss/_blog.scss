@@ -1,0 +1,96 @@
+// Pulumi blog — listing & card styles.
+//
+// The blog is light-theme only (docs dark mode is scoped to body.section-docs),
+// so no dark-mode pass is needed here. Prefer inline Tailwind utilities in the
+// templates; this file holds only what utilities can't express DRY-ly.
+
+.blog-header {
+    // Algolia's autocomplete (theme/src/ts/algolia/autocomplete.ts) upgrades the
+    // #search div into a detached *button*. Restyle that button to read like the
+    // mockup's rounded search input. Do NOT change detachedMediaQuery — /docs
+    // shares the same autocomplete code.
+    .aa-DetachedSearchButton {
+        @apply h-9 w-48 max-w-full justify-start gap-2 rounded-lg border border-gray-200
+               bg-white px-3 text-sm font-normal text-gray-500 shadow-none transition-colors;
+
+        &:hover,
+        &:focus-visible {
+            @apply border-gray-400;
+        }
+    }
+
+    .aa-DetachedSearchButtonIcon {
+        @apply w-4 justify-start pr-0 text-gray-500;
+    }
+
+    .aa-DetachedSearchButtonPlaceholder {
+        @apply text-sm text-gray-500;
+    }
+}
+
+// Active state for the homepage category filter pill (default "All", moved by
+// blog-list.ts). Styled to match the mockup's selected pill.
+[data-blog-filter] .is-active {
+    @apply border-gray-500 bg-gray-100;
+}
+
+// Offset anchor / TOC jumps so the target heading clears the sticky site nav
+// instead of hiding under it.
+.blog-post-content :is(h1, h2, h3, h4, h5, h6) {
+    scroll-margin-top: 6rem;
+}
+
+// Bottom-of-post newsletter (in a violet-50 card). Tidies the injected HubSpot
+// inputs — the base .newsletter styles live in _hubspot.scss; this refines the
+// blog variant. HubSpot injects the form at runtime, so `.hs-form.newsletter-blog`
+// is the class the component passes through as the form's cssClass.
+.hs-form.newsletter-blog {
+    @apply justify-center;
+
+    input:not(.hs-button) {
+        // Match the adjacent submit (.btn-lg): h-10 + rounded-lg. Overrides the
+        // base .newsletter py-3, which otherwise renders the input a touch tall.
+        @apply h-10 rounded-lg py-0 border-gray-300 bg-white text-service-black;
+
+        &:focus {
+            @apply border-violet-primary outline-none ring-2 ring-violet-primary/30;
+        }
+    }
+}
+
+// Compact newsletter in the blog header (left of search). The input + button are
+// joined into one control: the button overlaps the input by 1px (-ml-px) so
+// their two borders collapse into a single hairline instead of a double line;
+// the input rounds only its left corners and the button only its right. A
+// focused input lifts above the seam (z-10). Validation errors are taken out of
+// flow (absolute) so they never shift the header height.
+.blog-header .hs-form.newsletter-header {
+    @apply relative;
+
+    input:not(.hs-button) {
+        @apply relative h-9 w-44 rounded-l-lg rounded-r-none! border-gray-300 bg-white py-1.75 text-sm text-service-black;
+
+        &:focus {
+            @apply z-10 border-violet-primary outline-none ring-2 ring-violet-primary/30;
+        }
+    }
+
+    input.hs-button {
+        @apply -ml-px! h-9 max-w-none! shrink-0 whitespace-nowrap rounded-l-none! px-4 py-1.75 text-sm;
+    }
+
+    .hs-error-msgs {
+        @apply absolute left-0 top-full mt-1 max-w-full truncate;
+    }
+}
+
+// Outline-button option for HubSpot newsletter forms. The `!` beats the
+// .btn-primary the button @extends in _hubspot.scss (which imports after this).
+.hs-form.newsletter-btn-outline input.hs-button {
+    @apply border! border-gray-300! bg-white! text-gray-950!;
+
+    &:hover {
+        @apply border-gray-500! bg-gray-100!;
+    }
+}
+
