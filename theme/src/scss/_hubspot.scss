@@ -177,6 +177,25 @@
     }
 }
 
+// adjusting the recaptcha position for the event registration form
+.event-single-registration .hs-form {
+    position: relative;
+    padding-bottom: 3.5rem;
+
+    .hs-recaptcha {
+        @apply m-0;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.grecaptcha-badge {
+    transform: scale(0.6);
+    transform-origin: bottom right;
+}
+
 .waitlist-form {
     .hs-field-desc {
         @apply opacity-75 text-xs font-normal my-1;
