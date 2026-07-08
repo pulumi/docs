@@ -3,7 +3,7 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
 
-export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "opa";
+export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "hcl" | "opa";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
@@ -249,13 +249,14 @@ export class Chooser {
     render() {
         // Render the current set of options, marking the selected one active. For
         // language choosers the button text is the uppercased file extension (e.g. TS,
-        // PY); every other type keeps rendering the full name and PREVIEW badge as before.
+        // PY) and the PREVIEW badge lives on the toolbar label, not the tab; every other
+        // type keeps rendering the full name and the tab PREVIEW badge.
         const list = (
             <ul>
                 {this.currentOptions.map(opt => (
                     <li class={this.selection === opt.key ? "active" : ""}>
                         <a onClick={event => this.makeChoice(event, this.type, opt)}>
-                            {this.optionLabel(opt)} {opt.preview ? <span>PREVIEW</span> : ""}
+                            {this.optionLabel(opt)} {opt.preview && this.type !== "language" ? <span>PREVIEW</span> : ""}
                         </a>
                     </li>
                 ))}
@@ -544,6 +545,13 @@ export class Chooser {
             logo: "/images/docs/icons/languages/yaml-color-32-32.svg",
             logoOnDark: "/images/docs/icons/languages/yaml-color-32-32-on-dark.svg",
             preview: false,
+        },
+        {
+            key: "hcl",
+            name: "HCL",
+            extension: "hcl",
+            logo: "/images/docs/icons/languages/hcl-color-32-32.svg",
+            preview: true,
         },
         {
             key: "opa",
