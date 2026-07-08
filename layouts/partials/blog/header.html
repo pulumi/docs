@@ -21,10 +21,11 @@
     {{- /* Single row that never wraps: the right-hand controls stay fixed
         (shrink-0) and the left-hand text absorbs any overflow. Within the
         heading, "Blog" and the "/" separator stay put while the crumb term
-        truncates; the term description truncates too. A FIXED lg:h-26 (not
-        min-h) pins the row to one height so items-center vertically centers
-        whatever it contains and the header never shifts by a few pixels
-        between the description and no-description states. */ -}}
+        truncates; the term description wraps to at most two lines (line-clamp-2)
+        so it fits within the row without spilling past the bottom border. A
+        FIXED lg:h-26 (not min-h) pins the row to one height so items-center
+        vertically centers whatever it contains and the header never shifts by a
+        few pixels between the description and no-description states. */ -}}
     <div class="container mx-auto flex flex-nowrap items-center justify-between gap-4 px-4 py-6 lg:h-26 lg:py-0">
         <div class="flex min-w-0 items-center gap-3 lg:gap-4">
             {{ if $heading }}
@@ -40,7 +41,7 @@
             {{ end }}
             {{- with $description }}
                 <span class="hidden h-10 w-px shrink-0 bg-gray-200 lg:block" aria-hidden="true"></span>
-                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black truncate lg:block">{{ . }}</p>
+                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black line-clamp-2 lg:block">{{ . }}</p>
             {{- end }}
         </div>
         <div class="flex shrink-0 items-center">
