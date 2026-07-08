@@ -10,7 +10,8 @@
 # ///
 """Compose a blog feature image from a pre-designed PNG template.
 
-Pipeline: Load template PNG -> Place logos on circular placeholders -> Save.
+Pipeline: Load template PNG -> Place logos (or a phosphor icon) on the
+template's placeholders -> Save.
 
 The OpenGraph/social meta card is no longer composited here — it is generated
 on-brand at build time from the post title + this feature image
@@ -226,6 +227,7 @@ def place_logos(
     assets_dir: Path,
     logo_tint: str | None = None,
     logo_tint_mode: str = "overlay",
+    padding: int | None = None,
 ) -> Image.Image:
     """Place logo SVGs centered on placeholder regions, with optional color tint."""
     img = canvas.copy()
@@ -238,12 +240,15 @@ def place_logos(
         ph_x, ph_y = ph["x"], ph["y"]
         ph_w, ph_h = ph["width"], ph["height"]
 
-        # Scale padding to placeholder size (larger placeholders have bigger rounded corners)
-        padding = max(20, min(ph_w, ph_h) // 6)
+        if padding is None:
+            # Scale padding to placeholder size (larger placeholders have bigger rounded corners)
+            pad = max(20, min(ph_w, ph_h) // 6)
+        else:
+            pad = padding
 
         # Rasterize logo SVG to fit within placeholder (with padding)
-        target_w = ph_w - 2 * padding
-        target_h = ph_h - 2 * padding
+        target_w = ph_w - 2 * pad
+        target_h = ph_h - 2 * pad
         svg_path = str((assets_dir / logo_path).resolve())
         logo_img = svg_to_png(svg_path, target_w, target_h)
 
@@ -269,17 +274,31 @@ def compose(config: dict, output_path: str, assets_dir: Path) -> str:
     canvas = Image.open(str(template_path)).convert("RGBA")
     canvas_w, canvas_h = canvas.size
 
-    # 2. Place logos on circular placeholders (logo variants)
+    # 2. Place logos or a phosphor icon on the template's placeholders
     logos = config.get("logos", [])
-    if logos:
+    icon = config.get("icon")
+    if logos and icon:
+        raise ValueError(
+            "Config sets both 'logos' and 'icon' — a template centerpiece is one or the other")
+    if logos or icon:
         template_filename = Path(config["template"]).name
         template_entry = find_template(catalog, template_filename)
         if template_entry and "placeholders" in template_entry:
-            canvas = place_logos(
-                canvas, logos, template_entry["placeholders"], assets_dir,
-                logo_tint=config.get("logo_tint", "#C3BDFF"),
-                logo_tint_mode=config.get("logo_tint_mode", "overlay"),
-            )
+            if icon:
+                # Solid phosphor icon, flat-tinted violet-primary (dark), rendered
+                # at ~85% of the clear space (340px placeholder -> 290px icon).
+                canvas = place_logos(
+                    canvas, [icon], template_entry["placeholders"], assets_dir,
+                    logo_tint=config.get("icon_tint", "#C3BDFF"),
+                    logo_tint_mode="overlay",
+                    padding=25,
+                )
+            else:
+                canvas = place_logos(
+                    canvas, logos, template_entry["placeholders"], assets_dir,
+                    logo_tint=config.get("logo_tint", "#C3BDFF"),
+                    logo_tint_mode=config.get("logo_tint_mode", "overlay"),
+                )
 
     # 3. Save as PNG
     output = Path(output_path)

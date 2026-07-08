@@ -1,6 +1,6 @@
 ---
 name: blog-feature-image
-description: "Generate the feature image (1884x1256) for a blog post — the in-body hero art. Reads the blog post, selects a feature template (neo, platform, rocket, shield, lightbulb, or a 1-3 logo variant), renders feature.png, and sets feature_image in frontmatter. The OpenGraph/social meta image is no longer produced here — it is generated on-brand at build time from the title + feature image (scripts/meta-images/blog.mjs). Use when the user types /blog-feature-image (formerly /blog-meta-image) or asks to create, generate, or regenerate a blog post's feature image, hero image, or social card. Accepts optional arguments like a feature template name or logo names."
+description: "Generate the feature image (1884x1256) for a blog post — the in-body hero art. Reads the blog post, selects a feature template (neo, platform, rocket, shield, lightbulb, a 1-3 logo variant, or a shape template — circle, square, diamond, hexagon, lock, shield, speech-bubble, sync-diamond — with a centered solid phosphor icon or single small logo), renders feature.png, and sets feature_image in frontmatter. The OpenGraph/social meta image is no longer produced here — it is generated on-brand at build time from the title + feature image (scripts/meta-images/blog.mjs). Use when the user types /blog-feature-image (formerly /blog-meta-image) or asks to create, generate, or regenerate a blog post's feature image, hero image, or social card. Accepts optional arguments like a feature template name, logo names, or a phosphor icon name."
 ---
 
 # `/blog-feature-image` — Generate a Blog Feature Image
@@ -30,7 +30,8 @@ Read the full blog post file (frontmatter + body).
 - **Topics**: scan the body for key signals — cloud providers (AWS, Azure, GCP), languages (Go, Python, TypeScript), technologies (Kubernetes, Terraform, Docker), features (ESC, secrets, OIDC, policy), concepts (AI, ML, platform engineering, IDP)
 
 ### From `$ARGUMENTS`, parse user preferences:
-- **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "lightbulb") or logo names like "aws kubernetes"
+- **Feature template**: name of a feature template (e.g., "neo", "platform", "rocket", "shield", "lightbulb"), a shape template (e.g., "shape-lock", "shape-circle"), or logo names like "aws kubernetes"
+- **Phosphor icon**: an icon name for a shape template's centerpiece (e.g., "shape-sync-diamond git-branch")
 
 ### Fast-path: existing feature image
 
@@ -90,9 +91,64 @@ options:
     description: "Tutorials, how-tos, best practices, and guest posts"
   - label: "Logo variant (1-3 logos)"
     description: "Cloud provider or technology-specific content — places provider/tech logos in circular placeholders"
+  - label: "Shape + icon or single logo"
+    description: "Outline shape (circle, square, diamond, hexagon, lock, shield, speech bubble, sync diamond) with a centered solid phosphor icon or a single small logo"
 ```
 
-If **Logo variant** is selected, ask which logos (Question 3):
+If **Shape + icon or single logo** is selected, go to Question 2a. If **Logo variant** is selected, ask which logos (Question 3):
+
+---
+
+### Question 2a: Which shape?
+
+_Only ask if the shape family was chosen. Recommend a shape based on the post's topic._
+
+```
+header: "Shape Template"
+question: "Which shape template?"
+options:
+  - label: "Lock"
+    description: "Security, secrets, encryption, access control"
+  - label: "Shield"
+    description: "Security posture, compliance, policy, protection"
+  - label: "Speech bubble"
+    description: "Community, Q&A, announcements, AI chat and agents"
+  - label: "Sync diamond"
+    description: "CI/CD, automation, deployments, drift detection"
+  - label: "Hexagon"
+    description: "Kubernetes-adjacent, modules, packages, components"
+  - label: "Circle / Square / Diamond"
+    description: "General-purpose abstract — pick by icon silhouette fit"
+```
+
+(Present at most 4 options per `AskUserQuestion` call — lead with the topical best fits for this post; the free-form "Other" covers the rest.)
+
+### Question 2b: Icon or logo in the center?
+
+```
+header: "Shape Centerpiece"
+question: "What goes in the center of the shape?"
+options:
+  - label: "Phosphor icon (recommended)"
+    description: "A solid (fill-weight) Phosphor icon, tinted violet (#C3BDFF)"
+  - label: "Single logo"
+    description: "One product/technology logo, rendered small"
+```
+
+If **Phosphor icon**: suggest 3–4 topical icon names from [Phosphor Icons](https://phosphoricons.com) based on the post content (e.g. `rocket-launch`, `shield-check`, `database`, `git-branch`, `robot`, `stack`), then fetch per the icon-lookup rule below. Pick an icon whose silhouette complements the shape (e.g. a wide icon fights the tall lock).
+
+If **Single logo**: continue with Question 3 (exactly 1 logo) and Question 4 as usual — the monochrome-preferred overlay rule applies unchanged.
+
+---
+
+**Icon lookup (phosphor)**: Check `assets/icons/<name>-fill.svg` first. If missing, download the **fill** weight from phosphor-icons/core and cache it in the skill assets (commit it — the cache grows like the logo library):
+
+```bash
+curl -fsSL "https://raw.githubusercontent.com/phosphor-icons/core/main/assets/fill/<name>-fill.svg" \
+  -o .claude/commands/blog-feature-image/assets/icons/<name>-fill.svg
+```
+
+On a 404, the slug is wrong — search phosphoricons.com for the correct kebab-case name and retry. Always use the fill weight (solid), never regular/bold/duotone.
 
 ---
 
@@ -158,6 +214,14 @@ Set `logo_tint_mode` in the feature config to `"overlay"` or `"color"` according
 | 1 logo | `templates/feature-logo-1.png` |
 | 2 logos | `templates/feature-logo-2.png` |
 | 3 logos | `templates/feature-logo-3.png` |
+| Shape: circle | `templates/feature-shape-circle.png` |
+| Shape: square | `templates/feature-shape-square.png` |
+| Shape: diamond | `templates/feature-shape-diamond.png` |
+| Shape: hexagon | `templates/feature-shape-hexagon.png` |
+| Shape: lock | `templates/feature-shape-lock.png` |
+| Shape: shield | `templates/feature-shape-shield.png` |
+| Shape: speech bubble | `templates/feature-shape-speech-bubble.png` |
+| Shape: sync diamond | `templates/feature-shape-sync-diamond.png` |
 | Custom | _(provided path, skip feature render)_ |
 
 ### Build Composition Config
@@ -185,6 +249,27 @@ Build **one** JSON config for `feature.png` (1884×1256).
   "logo_tint_mode": "overlay"
 }
 ```
+
+**Feature config** — for a shape template with a phosphor icon centerpiece (icon is always flat-tinted `#C3BDFF`, rendered at ~85% of the clear space):
+
+```json
+{
+  "template": "templates/feature-shape-lock.png",
+  "icon": "icons/shield-check-fill.svg"
+}
+```
+
+**Feature config** — for a shape template with a single small logo (same logo rules as the logo variants, including the monochrome-preferred overlay rule):
+
+```json
+{
+  "template": "templates/feature-shape-circle.png",
+  "logos": ["logos/aws.svg"],
+  "logo_tint_mode": "overlay"
+}
+```
+
+`icon` and `logos` are mutually exclusive — set one or the other.
 
 **Important**: All paths in the config are relative to `--assets-dir`.
 
