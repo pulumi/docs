@@ -5,7 +5,7 @@ h1: Neo in the Pulumi CLI
 meta_desc: Run pulumi neo to start an interactive Neo session in your terminal with access to your local project, credentials, and stacks.
 menu:
     ai:
-        name: Pulumi CLI
+        name: Neo in the CLI
         identifier: ai-pulumi-cli
         parent: ai-home
         weight: 15
