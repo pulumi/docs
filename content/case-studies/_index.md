@@ -1,9 +1,9 @@
 ---
-include_floqer: true
 title: Case Studies
 description: See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
 meta_desc: |
     See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
+include_floqer: true
 
 aliases:
     - /case-studies/lykke/

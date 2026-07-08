@@ -1,7 +1,7 @@
 ---
-include_floqer: true
 title: "Centralized Configuration & Secrets Management – Pulumi ESC"
 meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any vault, eliminate secrets sprawl, secure every environment.
+include_floqer: true
 meta_image: /images/product/secrets-management/esc-meta.png
 type: page
 layout: product-page

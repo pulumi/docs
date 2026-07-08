@@ -1,8 +1,8 @@
 ---
-include_floqer: true
 title_tag: "OpenTofu vs. Terraform"
 authors: ["joe-duffy"]
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
+include_floqer: true
 title: OpenTofu vs. Terraform
 h1: OpenTofu vs. Terraform
 menu:
