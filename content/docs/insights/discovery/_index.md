@@ -75,6 +75,7 @@ Resource search is available to all organization members, but users can only see
 ## Next steps
 
 - [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
+- [Connect cloud accounts in bulk](/docs/insights/discovery/connect-cloud-accounts/)
 - [Create and manage accounts](/docs/insights/discovery/accounts/)
 - [Learn Resource Search syntax](/docs/insights/discovery/search/)
 - [Import resources into Pulumi IaC](/docs/insights/discovery/visual-import/)
