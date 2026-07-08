@@ -45,7 +45,7 @@ But two years into the agentic AI revolution, I realised software is going to lo
 I joined Compostable AI soon after it was founded 2.5 years ago, and I built the engineering org AI-native from day one. The technology has come a long way since then, and so has my understanding of what AI-native actually means. Here are seven rules I keep coming back to.
 
 {{< notes type="info" size="large" >}}
-**An AI-native software factory** is a software operation where autonomous agents write, review, and ship most of the code, while the engineering team's job shifts to defining the work, talking to customers, and deciding what gets built — rather than writing it by hand. The rules below are how we keep that factory producing reliably.
+**An AI-native software factory** — also called an AI software factory — is a software operation where autonomous agents write, review, and ship most of the code, while the engineering team's job shifts to defining the work, talking to customers, and deciding what gets built — rather than writing it by hand. The rules below are how we keep that factory producing reliably.
 {{< /notes >}}
 
 ## 1. Transform, don't enhance
@@ -179,7 +179,7 @@ A factory scattered across laptops can't be improved as a system. Cloud keeps it
 
 ## How to build an AI-native software factory
 
-Put together, the seven rules are a practical path to building an AI-native software factory: transform the workflow rather than bolt AI onto it, remove problems instead of engineering around them, pick tools your agents can drive, split work across specialized agents, measure human hours per unit of value, design for convergence over one-shot correctness, and run the factory in the cloud so it operates 24/7. None of it is a template — it's the practice of applying each rule where the new economics actually change what's hard.
+There's no single blueprint for how to build a software factory, but these seven rules are a practical path — the software factory model we run at Compostable AI. As a concrete software factory example, that means: transform the workflow rather than bolt AI onto it, remove problems instead of engineering around them, pick tools your agents can drive, split work across specialized agents, measure human hours per unit of value, design for convergence over one-shot correctness, and run the factory in the cloud so it operates 24/7. None of it is a template — it's the practice of applying each rule where the new economics actually change what's hard.
 
 ## Closing thought
 
