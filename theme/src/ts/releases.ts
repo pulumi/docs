@@ -16,11 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButton = modal.querySelector<HTMLButtonElement>("[data-changelog-modal-close]");
     if (!panel || !content || !closeButton) return;
 
-    // Re-parent the modal to <body> so the background-inert focus trap below
-    // (which inerts every other direct child of <body>, matching the mobile
-    // nav sheet in header-nav.ts) doesn't inert the modal's own ancestors.
-    document.body.appendChild(modal);
-
     const cache = new Map<string, Element>();
     let isOpen = false;
     let lastTrigger: HTMLElement | null = null;
@@ -30,12 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return el.id === "segment-consent-manager" || el.classList.contains("consent-dialog-overlay");
     }
 
+    // Focus trap matching the mobile nav sheet in header-nav.ts, generalized
+    // to a nested modal: walk from the modal up to <body>, inerting the
+    // siblings at each level so Tab can't escape the dialog. The modal must
+    // stay inside <main> — content styles like `main p a` are scoped to it,
+    // so re-parenting the modal to <body> would unstyle the injected article.
     function setBackgroundInert(on: boolean): void {
         if (on) {
-            bgInerted = Array.from(document.body.children).filter(
-                el => el !== modal && !isInertBypass(el) && !el.hasAttribute("inert"),
-            );
-            bgInerted.forEach(el => el.setAttribute("inert", ""));
+            let node: Element = modal;
+            while (node.parentElement) {
+                for (const sibling of Array.from(node.parentElement.children)) {
+                    if (sibling !== node && !isInertBypass(sibling) && !sibling.hasAttribute("inert")) {
+                        sibling.setAttribute("inert", "");
+                        bgInerted.push(sibling);
+                    }
+                }
+                node = node.parentElement;
+                if (node === document.body) break;
+            }
         } else {
             bgInerted.forEach(el => el.removeAttribute("inert"));
             bgInerted = [];
