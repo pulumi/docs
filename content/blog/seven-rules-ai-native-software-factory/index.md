@@ -45,7 +45,7 @@ But two years into the agentic AI revolution, I realised software is going to lo
 I joined Compostable AI soon after it was founded 2.5 years ago, and I built the engineering org AI-native from day one. The technology has come a long way since then, and so has my understanding of what AI-native actually means. Here are seven rules I keep coming back to.
 
 {{< notes type="info" size="large" >}}
-**An AI-native software factory** — also called an AI software factory — is a software operation where autonomous agents write, review, and ship most of the code, while the engineering team's job shifts to defining the work, talking to customers, and deciding what gets built — rather than writing it by hand. The rules below are how we keep that factory producing reliably.
+**An AI software factory** — also called an AI-native software factory — is a software operation where autonomous agents write, review, and ship most of the code, while the engineering team's job shifts to defining the work, talking to customers, and deciding what gets built — rather than writing it by hand. The rules below are how we keep that factory producing reliably.
 {{< /notes >}}
 
 ## 1. Transform, don't enhance
@@ -191,6 +191,10 @@ If you're where I was two years ago: don't ask how AI fits into what you already
 
 {{< details "What is a software factory?" >}}
 A software factory is a software operation run as a repeatable industrial process rather than a craft: work moves down an automated line instead of every feature being hand-built. In an AI-native software factory, autonomous agents write, review, and ship most of the code, while engineers define the work, talk to customers, and decide what gets built. The team handles what the agents can't; the factory keeps producing whether the engineers are at their desks or not.
+{{< /details >}}
+
+{{< details "What is an AI software factory?" >}}
+An AI software factory (or AI-native software factory) is a software factory where AI agents do most of the building. Instead of enhancing a traditional workflow with AI tools, the whole delivery line is redesigned around what agents can do: agents write, review, and check the code through an automated loop, and engineers focus on defining the work and deciding what to build. At Compostable AI, five engineers run one across nineteen clients.
 {{< /details >}}
 
 {{< details "How is a software factory different from traditional software development?" >}}
