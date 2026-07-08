@@ -7,7 +7,7 @@
 {{- $page := .page -}}
 {{- $excerpt := $page.Params.meta_desc -}}
 {{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 160 }}{{ end -}}
-<article class="group relative flex h-full flex-col gap-4">
+<article data-post-card class="group relative flex h-full flex-col gap-4">
     {{ if partial "blog/has-feature-image.html" $page }}
     <div class="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-violet-950">
         {{ partial "blog/feature-image.html" (dict "page" $page "w" 640 "h" 427 "mode" "fit" "class" "h-full w-auto max-w-none" "sizes" "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw") }}

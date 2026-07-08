@@ -6,6 +6,8 @@
 // DOM contract (rendered by the Hugo templates):
 //   [data-post-list]           the container holding the list rows
 //   [data-post-row]            one post row (also present in the rows fragment)
+//   [data-post-grid]           (term pages) the medium-card grid above the list
+//   [data-post-card]           one grid card
 //   [data-paginator]           the numbered pager; data-next-url = next page URL
 //   [data-blog-filter]         the homepage filter bar
 //   [data-blog-filter] a[data-category]  a filter pill ("" = All), .is-active
@@ -120,6 +122,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 list.appendChild(marker);
                 markerObserver.observe(marker);
 
+                // A term page's grid run can span pager pages: fetched grid
+                // cards continue the existing [data-post-grid] (the split point
+                // is global, so a page with grid cards always follows one that
+                // already rendered the grid container).
+                const grid = document.querySelector<HTMLElement>("[data-post-grid]");
+                if (grid) {
+                    doc.querySelectorAll("[data-post-grid] [data-post-card]").forEach(card => {
+                        grid.appendChild(document.importNode(card, true));
+                    });
+                }
                 doc.querySelectorAll("[data-post-list] [data-post-row]").forEach(row => {
                     list.appendChild(document.importNode(row, true));
                 });
