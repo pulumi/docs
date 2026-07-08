@@ -118,6 +118,10 @@ The number of selected logos (1, 2, or 3) determines which template to use (`fea
 
 _Only ask if logos were selected in Question 3._
 
+**Recommend `Overlay` almost every time.** It's the default and the right choice for the vast majority of posts — it keeps the logos on-brand in Pulumi's lavender and reads cleanest against the template background. This is *especially* true when a monochrome variant of the logo is available (see the mandatory-monochrome rule below), since a clean single-color cutout tints perfectly.
+
+`Color` is a **backup for when overlay doesn't work** — not a stylistic preference. Reach for it only when a flat lavender tint destroys the logo's legibility: specifically when the logo is a **solid filled shape with no internal cutouts**, so overlay collapses it into a featureless lavender blob and the recognizable shape is lost. In that case `Color` preserves the internal brightness contrast that keeps the mark readable. When the logo has cutouts/negative space that survive a flat tint (most icons and monochrome variants do), stay on `Overlay`. When in doubt, render `Overlay` first and only switch to `Color` if the shape is genuinely unreadable.
+
 ```
 header: "Logo Tint Style"
 question: "How should the tint color be applied to the logos?"
@@ -125,14 +129,16 @@ options:
   - label: "Overlay (default)"
     description: "Replace all logo colors with a flat tint — best for single-color cutout logos."
   - label: "Color"
-    description: "Attempts to recolor the logo in light-purple while preserving internal brightness contrast."
+    description: "Backup for when overlay flattens a solid, cutout-less logo into an unreadable blob — recolors in light-purple while preserving internal brightness contrast to keep the shape legible."
 ```
 
 Set `logo_tint_mode` in the feature config to `"overlay"` or `"color"` accordingly. Default is `"overlay"`.
 
+**⚠️ Overlay tint MUST use the monochrome variant when one exists.** For `overlay` mode, always prefer a `<name>-monochrome.svg` over the plain `<name>.svg` — check `assets/logos/` for a monochrome-suffixed version of each selected logo and use it if present (e.g. `kubernetes-monochrome.svg`, not `kubernetes.svg`). The flat tint reads cleanest off a clean single-color cutout; multicolor source SVGs can produce muddy or uneven fills. Only fall back to the plain SVG when no monochrome variant exists. (For `color` mode, use the plain full-color SVG.)
+
 ---
 
-**Logo lookup**: Check `assets/logos/` first. If tint style is `Overlay` and there is a version of the logo suffixed with `monochrome`, use that. If a needed logo isn't found locally:
+**Logo lookup**: Check `assets/logos/` first. If tint style is `Overlay` and there is a version of the logo suffixed with `monochrome`, use that (see the overlay rule above — monochrome is mandatory when available). If a needed logo isn't found locally:
 1. Try [simple-icons](https://github.com/simple-icons/simple-icons/tree/develop/icons) first — clean vector SVGs for 3000+ brands. Download from `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/{slug}.svg` and add a `fill` attribute with the brand color to `<path>` elements.
 2. Otherwise use `WebSearch` to find the official SVG (`"<technology> logo SVG site:github.com"`)
 3. Use `WebFetch` to download the SVG content
