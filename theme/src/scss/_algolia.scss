@@ -158,6 +158,11 @@
             .description {
                 @apply text-xs text-gray-800 leading-relaxed;
             }
+
+            .date {
+                @apply text-gray-600 -mt-1 mb-3;
+                font-size: 0.6875rem;
+            }
         }
     }
 

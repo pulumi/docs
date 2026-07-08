@@ -7,6 +7,10 @@
     {{- end -}}
 
     {{- if ne $page.File nil -}}
+        {{- $date := "" -}}
+        {{- if and (eq $page.Section "blog") (not $page.Date.IsZero) -}}
+            {{- $date = $page.Date.Format "Jan 2, 2006" -}}
+        {{- end -}}
         {{-
             $index = $index | append (
                 dict
@@ -16,6 +20,7 @@
                     "href" $page.RelPermalink
                     "params" $page.Params
                     "kind" $page.Kind
+                    "date" $date
                     "ancestors" (after 1 $ancestors)
             )
         -}}

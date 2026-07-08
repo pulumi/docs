@@ -9,6 +9,7 @@ interface SearchResultHit {
     ancestors?: string[];
     h1?: string;
     title: string;
+    date?: string;
 }
 
 // CSS selector of the element to convert into an autocomplete control.
@@ -242,6 +243,9 @@ function initAutocomplete(el: HTMLElement) {
                                             ${ labelForTag(item.section) }
                                         </span>
                                     </div>
+                                    ${ item.date
+                                        ? html`<div class="date">${ item.date }</div>`
+                                        : "" }
                                     <div class="description">
                                         ${ item.description !== "" && components.Highlight({ hit: item, attribute: "description" }) }
                                     </div>
