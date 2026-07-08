@@ -1028,6 +1028,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         {
             ...baseCacheBehavior,
+            pathPattern: "/js/header-nav.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
             pathPattern: "/js/algolia.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
