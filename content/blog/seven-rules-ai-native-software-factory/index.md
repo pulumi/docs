@@ -169,7 +169,7 @@ Even a converged factory has to live somewhere. Try running a fully automated fa
 
 Cloud also kills configuration drift across a dozen developer machines. The same prompts run against different model versions, and env vars sit half-set on half the laptops. The thing you're trying to optimize lives in different states across the team. Cloud isn't just where the factory runs; it's the only place a team can iterate on it together. Keep everything in one place — AWS, Pulumi Cloud, GitHub. The specific stack matters less than the principle of one place.
 
-And the part that matters most: the factory keeps running, testing, and deploying long after we've closed our laptops and gone to sleep.
+And the part that matters most: the factory keeps running, testing, and deploying long after we've closed our laptops and gone to sleep — the [dark factory](/blog/dark-factory-pattern-pulumi-autonomous-iac/) pattern, where the line keeps producing with the lights off.
 
 {{< notes type="tip" size="large" >}}
 **Build the factory somewhere you can work on it — not just somewhere it can run.**
@@ -211,4 +211,4 @@ Tools your agents can actually drive — anything with a robust API and a clean 
 
 ---
 
-*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*
+*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Read the [Compostable AI case study](/case-studies/compostable-ai/), and learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*
