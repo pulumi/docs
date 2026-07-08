@@ -5,12 +5,15 @@
 
     Params:
       title       breadcrumb tail shown after "Blog /" (e.g. "Product", "Series")
+      url         optional href for the crumb — the listing's base (page 1) URL,
+                  so paginated pages get a way back to the top of the term
       description  optional lead text shown after a divider (lg+ only)
       context     the page (passed to the search partial); defaults to the current context
       heading     render the "Blog" text as the page <h1> (default true). The post
                   page passes false — there the post title is the h1.
 */ -}}
 {{- $crumb := .title -}}
+{{- $crumbUrl := .url -}}
 {{- $description := .description -}}
 {{- $ctx := .context | default . -}}
 {{- $heading := true }}{{- if isset . "heading" }}{{ $heading = .heading }}{{ end -}}
@@ -27,12 +30,12 @@
             {{ if $heading }}
             <h1 class="heading-2 m-0! flex min-w-0 items-center gap-2">
                 <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
-                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span><span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end -}}
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span>{{ if $crumbUrl }}<a href="{{ $crumbUrl }}" data-track="blog-crumb" class="min-w-0 truncate text-service-black transition-colors hover:text-violet-primary">{{ . }}</a>{{ else }}<span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end }}{{ end -}}
             </h1>
             {{ else }}
             <div class="heading-2 m-0! flex min-w-0 items-center gap-2">
                 <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
-                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span><span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end -}}
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span>{{ if $crumbUrl }}<a href="{{ $crumbUrl }}" data-track="blog-crumb" class="min-w-0 truncate text-service-black transition-colors hover:text-violet-primary">{{ . }}</a>{{ else }}<span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end }}{{ end -}}
             </div>
             {{ end }}
             {{- with $description }}

@@ -12,7 +12,7 @@
 {{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
 {{- $count := len $parts -}}
 
-{{ partial "blog/header.html" (dict "title" "Series" "context" $page "heading" false) }}
+{{ partial "blog/header.html" (dict "title" "Series" "url" $page.RelPermalink "context" $page "heading" false) }}
 
 <div class="container mx-auto px-4 py-8 lg:py-12">
     <div class="mb-10 flex flex-col gap-4">
