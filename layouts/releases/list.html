@@ -9,29 +9,36 @@
     </header>
 
     <div class="flex flex-col gap-8">
-        {{/* One newest-first list of updates + release entries (see _index.md). */}}
-        {{ range $idx, $entry := sort .Params.entries "date" "desc" }}
-            {{ if eq $entry.type "updates" }}
-                {{ partial "releases/updates.html" (dict
-                    "label" $entry.label
-                    "items" $entry.items
-                    "idx" $idx
-                ) }}
-            {{ else if eq $entry.type "release" }}
-                {{/* Card visuals come from the detail page at `url`. */}}
-                {{ with site.GetPage (strings.TrimSuffix "/" $entry.url) }}
-                {{ partial "releases/release-item.html" (dict
-                    "overline" .Params.label
-                    "heading" .Params.title
-                    "description" .Params.short_description
-                    "feature_image" .Params.feature_image
-                    "feature_image_alt" .Params.feature_image_alt
-                    "link" .RelPermalink
-                ) }}
-                {{ end }}
+        {{/* Newest-first month groups of auto-discovered pages (see _index.md):
+             full releases render as large cards, changelog items as linked rows
+             that open in a modal (theme/src/ts/releases.ts). */}}
+        {{ range .RegularPagesRecursive.GroupByDate "January 2006" }}
+        <section class="flex flex-col gap-6">
+            <h2 class="font-mono text-xs tracking-wider uppercase text-service-black font-normal w-full max-w-6xl mx-auto px-8 m-0 -mb-2">{{ .Key }}</h2>
+
+            {{ range where .Pages "Type" "releases" }}
+            {{ partial "releases/release-item.html" (dict
+                "overline" .Params.label
+                "heading" .Title
+                "description" .Params.short_description
+                "feature_image" .Params.feature_image
+                "feature_image_alt" .Params.feature_image_alt
+                "link" .RelPermalink
+            ) }}
             {{ end }}
+
+            {{ with where .Pages "Type" "changelog" }}
+            <ul class="list-none p-0 m-0 flex flex-col w-full max-w-6xl mx-auto px-8">
+                {{ range . }}
+                {{ partial "releases/changelog-item.html" (dict "page" .) }}
+                {{ end }}
+            </ul>
+            {{ end }}
+        </section>
         {{ end }}
     </div>
 
 </div>
+
+{{ partial "releases/changelog-modal.html" . }}
 {{ end }}

@@ -2,12 +2,12 @@
 {{- /*
     Releases RSS feed -> /releases/rss.xml
 
-    Driven by the `entries` manifest in content/releases/_index.md, emitted
-    newest-first by date, and mirroring the JSON feed's items. An `updates`
-    entry emits one <item> per item that carries a url. A `release` entry emits
-    one <item> per linked section card on its detail page (resolved at `url`),
-    using the card's title, link, and description. Modeled on layouts/blog/rss.xml
-    and layouts/events/rss.xml. URLs are absolutized with absURL.
+    Driven by this section's pages (.RegularPagesRecursive — see
+    content/releases/_index.md), emitted newest-first by date and mirroring
+    the JSON feed: one <item> per release page and per changelog item, linking
+    to the page's own URL. Descriptions come from short_description (releases)
+    or meta_desc (changelog items). Modeled on layouts/blog/rss.xml and
+    layouts/events/rss.xml.
 */ -}}
 <rss version="2.0">
     <channel>
@@ -15,38 +15,16 @@
         <link>{{ .Permalink }}</link>
         <description>A running log of major platform updates from the Pulumi team.</description>
         <language>{{ .Site.LanguageCode }}</language>
-        {{ range sort .Params.entries "date" "desc" }}
-            {{ if eq .type "release" }}
-                {{ with site.GetPage (strings.TrimSuffix "/" .url) }}
-                    {{ $date := .Params.date }}
-                    {{ range .Params.sections }}
-                        {{ range $card := .cards }}
-                            {{ with $card.link }}
+        {{ range .RegularPagesRecursive.ByDate.Reverse }}
             <item>
-                <title>{{ $card.title }}</title>
-                <link>{{ absURL . }}</link>
-                <guid isPermaLink="false">{{ $date | time.Format "2006-01-02" }}-{{ absURL . }}</guid>
-                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" $date | safeHTML }}</pubDate>
-                <description>{{ $card.description | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
-            </item>
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
+                <title>{{ .Title }}</title>
+                <link>{{ .Permalink }}</link>
+                <guid>{{ .Permalink }}</guid>
+                <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+                {{ with or .Params.short_description .Params.meta_desc }}
+                <description>{{ . | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
                 {{ end }}
-            {{ else if eq .type "updates" }}
-                {{ $date := .date }}
-                {{ range $item := .items }}
-                    {{ with $item.url }}
-            <item>
-                <title>{{ $item.title }}</title>
-                <link>{{ absURL . }}</link>
-                <guid isPermaLink="false">{{ $date | time.Format "2006-01-02" }}-{{ absURL . }}</guid>
-                <pubDate>{{ time.Format "Mon, 02 Jan 2006 15:04:05 -0700" $date | safeHTML }}</pubDate>
-                <description>{{ $item.description }}</description>
             </item>
-                    {{ end }}
-                {{ end }}
-            {{ end }}
         {{ end }}
     </channel>
 </rss>
