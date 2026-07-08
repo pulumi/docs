@@ -43,6 +43,10 @@ export class Swiper {
 
     private wrapper: HTMLElement;
     private container: HTMLElement;
+    // Container width is measured once (and on resize) rather than read from
+    // offsetWidth at each use — interleaving those reads with the slide-width
+    // writes below forces synchronous layout on every call.
+    private containerWidth = 0;
     private currentIndex = 0;
     private slideCount = 0;
     private cloneCount = 0;
@@ -62,6 +66,7 @@ export class Swiper {
 
         if (this.slideCount === 0) return;
 
+        this.measureContainer();
         this.applySlideWidths();
 
         if (this.loop && this.slideCount > this.slides) {
@@ -86,6 +91,7 @@ export class Swiper {
         this.container.addEventListener("pointerdown", this.onPointerDown);
 
         this.resizeObserver = new ResizeObserver(() => {
+            this.measureContainer();
             this.applySlideWidths();
             this.isTransitioning = false;
             this.jumpTo(this.currentIndex);
@@ -112,10 +118,13 @@ export class Swiper {
         document.removeEventListener("pointerup", this.onPointerUp);
     }
 
+    private measureContainer() {
+        this.containerWidth = this.container.offsetWidth;
+    }
+
     private applySlideWidths() {
         const allSlides = Array.from(this.wrapper.querySelectorAll(":scope > .swiper-slide")) as HTMLElement[];
-        const containerWidth = this.container.offsetWidth;
-        const slideWidth = (containerWidth - this.spaceBetween * (this.slides - 1)) / this.slides;
+        const slideWidth = (this.containerWidth - this.spaceBetween * (this.slides - 1)) / this.slides;
         for (const slide of allSlides) {
             slide.style.width = `${slideWidth}px`;
             slide.style.marginRight = `${this.spaceBetween}px`;
@@ -123,16 +132,14 @@ export class Swiper {
     }
 
     private getStep(): number {
-        const containerWidth = this.container.offsetWidth;
-        return (containerWidth - this.spaceBetween * (this.slides - 1)) / this.slides + this.spaceBetween;
+        return (this.containerWidth - this.spaceBetween * (this.slides - 1)) / this.slides + this.spaceBetween;
     }
 
     private translateForIndex(index: number): number {
         const step = this.getStep();
         let tx = -(index + this.cloneCount) * step;
         if (this.centeredSlides && this.slides > 1) {
-            const containerWidth = this.container.offsetWidth;
-            tx += (containerWidth - (step - this.spaceBetween)) / 2;
+            tx += (this.containerWidth - (step - this.spaceBetween)) / 2;
         }
         return tx;
     }
@@ -226,12 +233,11 @@ export class Swiper {
         const step = this.getStep();
         const totalSlides = this.slideCount + 2 * this.cloneCount;
         const totalWidth = totalSlides * step - this.spaceBetween;
-        const containerWidth = this.container.offsetWidth;
         const offset = this.centeredSlides && this.slides > 1
-            ? (containerWidth - (step - this.spaceBetween)) / 2
+            ? (this.containerWidth - (step - this.spaceBetween)) / 2
             : 0;
         const maxTx = offset;
-        const minTx = Math.min(offset, containerWidth - totalWidth + offset);
+        const minTx = Math.min(offset, this.containerWidth - totalWidth + offset);
         return Math.max(minTx, Math.min(maxTx, tx));
     }
 
