@@ -1,6 +1,13 @@
 {{ define "main" }}
     {{ partial "blog/header.html" (dict "context" . "heading" false) }}
 
+    {{- /* Reading progress bar, pinned just under the sticky site nav (h-16).
+        blog-post.ts drives the scaleX from scroll position over the post body.
+        The initial state is an inline transform, NOT the scale-x-0 utility —
+        Tailwind v4 scale-* sets the separate `scale` property, which would
+        multiply against (and zero out) the JS-driven transform. */ -}}
+    <div data-post-progress aria-hidden="true" style="transform: scaleX(0)" class="fixed inset-x-0 top-16 z-30 h-[3px] origin-left bg-violet-primary"></div>
+
     <div class="mx-auto max-w-[1220px] px-4 py-8 lg:py-10">
         {{- /* Hero: category / title / date / authors on the left, feature image
             on the right. On mobile the image stacks first. Posts with no feature
@@ -17,6 +24,7 @@
                 <div class="body-sm flex flex-wrap items-center gap-1.5">
                     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
                     {{ with .Params.updated }}{{ $u := time . }}<span aria-hidden="true">•</span><span>Updated {{ $u.Format "Jan 2, 2006" }}</span>{{ end }}
+                    <span aria-hidden="true">•</span><span class="whitespace-nowrap">{{ .ReadingTime }} min read</span>
                 </div>
                 {{ partial "blog/post-authors.html" (dict "page" .) }}
             </div>
@@ -36,7 +44,10 @@
             <div class="min-w-0 lg:flex-1">
                 {{- /* Mobile-only collapsible TOC above the content; the sidebar
                     version is hidden below md. */ -}}
-                <div class="mb-8 md:hidden">{{ partial "blog/toc.html" (dict "page" . "collapsible" true) }}</div>
+                {{- /* empty:hidden — the TOC partial renders nothing for posts
+                    with 2 or fewer h2s; collapse the wrappers (and the sidebar
+                    flex gap slot) with it. */ -}}
+                <div class="mb-8 empty:hidden md:hidden">{{ partial "blog/toc.html" (dict "page" . "collapsible" true) }}</div>
                 <section class="blog-post-content max-w-3xl">
                     {{ .Content }}
                 </section>
@@ -67,6 +78,8 @@
                     </details>
                 {{ end }}
 
+                {{ partial "blog/prev-next.html" . }}
+
                 <section class="newsletter-input mt-12">
                     <div class="rounded-lg bg-violet-50 px-6 py-8 text-center">
                         <h4 class="mb-4">Subscribe to the Pulumi Monthly Newsletter</h4>
@@ -80,8 +93,9 @@
             <aside class="mt-10 lg:mt-0 lg:w-[19rem] lg:shrink-0">
                 <div class="flex flex-col gap-8 lg:sticky lg:top-24">
                     {{ if .Params.series }}{{ partial "blog/series-sidebar.html" . }}{{ end }}
-                    <div class="hidden md:block">{{ partial "blog/toc.html" (dict "page" .) }}</div>
+                    <div class="hidden md:block md:empty:hidden">{{ partial "blog/toc.html" (dict "page" .) }}</div>
                     {{ partial "blog/share.html" . }}
+                    {{ partial "blog/sidebar-cta.html" . }}
                 </div>
             </aside>
         </div>

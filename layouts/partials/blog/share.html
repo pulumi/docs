@@ -1,8 +1,7 @@
 {{- /*
-    "Share" icon row for the post-page sidebar: LinkedIn, Reddit, X, Hacker News.
-    LinkedIn/X come from the icon sprite; Reddit and Hacker News aren't in the
-    sprite, so their logos are inlined. Call with the post page context. Only
-    renders for pages backed by a file.
+    "Share" icon row for the post-page sidebar: copy link (handled by
+    blog-post.ts), then LinkedIn, Reddit, X, Hacker News. Call with the post
+    page context. Only renders for pages backed by a file.
 */ -}}
 {{- with .File -}}
 {{- $title := $.Title -}}
@@ -13,6 +12,12 @@
 <div>
     <p class="font-overline-sm mb-4 text-service-black">Share</p>
     <ul class="m-0 flex list-none items-center gap-3 p-0">
+        <li class="m-0">
+            <button type="button" data-copy-link data-url="{{ $url }}" aria-label="Copy link" data-track="blog-share-copy-link" class="block cursor-pointer text-gray-500 transition-colors hover:text-violet-primary">
+                <span data-copy-link-idle>{{ partial "icon.html" (dict "name" "link" "class" "text-lg") }}</span>
+                <span data-copy-link-done hidden class="text-green-500">{{ partial "icon.html" (dict "name" "check" "class" "text-lg") }}</span>
+            </button>
+        </li>
         <li class="m-0">
             <a href="https://www.linkedin.com/feed/?shareActive=true&text={{ $tu }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" data-track="blog-share-linkedin" class="text-gray-500 transition-colors hover:text-violet-primary">
                 {{ partial "icon.html" (dict "name" "brand/linkedin" "class" "text-lg") }}

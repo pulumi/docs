@@ -1,6 +1,7 @@
 {{- /*
     "In this post" table of contents — h2 headings only, from .Fragments.Headings.
-    Nothing renders for posts with no h2s.
+    Nothing renders for posts with 2 or fewer h2s — a TOC that short isn't worth
+    the space it takes.
 
     Params:
       page        (required) the post page
@@ -17,7 +18,7 @@
         {{- range .Headings }}{{ if eq .Level 2 }}{{ $h2s = $h2s | append . }}{{ end }}{{ end -}}
     {{- end -}}
 {{- end -}}
-{{- with $h2s -}}
+{{- if gt (len $h2s) 2 -}}{{- with $h2s -}}
     {{- if $collapsible -}}
         <details class="group border-b py-3 -mt-8">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-4 marker:hidden [&::-webkit-details-marker]:hidden">
@@ -31,7 +32,7 @@
             </ul>
         </details>
     {{- else -}}
-        <nav aria-label="Table of contents">
+        <nav data-blog-toc aria-label="Table of contents">
             <p class="font-overline-sm mb-4 text-service-black">In this post</p>
             <ul class="m-0 flex list-none flex-col gap-2 p-0">
                 {{ range . }}
@@ -40,4 +41,4 @@
             </ul>
         </nav>
     {{- end -}}
-{{- end -}}
+{{- end -}}{{- end -}}

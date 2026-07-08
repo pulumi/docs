@@ -30,6 +30,7 @@ const PHOSPHOR_WEIGHTS = ['regular', 'bold', 'fill', 'duotone'];
  * svglogosUrl     — svglogos.dev URL used when simpleIconsSlug is null or not found
  */
 const BRAND_ICONS = [
+    { name: 'pulumi',   simpleIconsSlug: 'pulumi',   svglogosUrl: null },
     { name: 'github',   simpleIconsSlug: 'github',   svglogosUrl: null },
     { name: 'youtube',  simpleIconsSlug: 'youtube',  svglogosUrl: null },
     { name: 'x',        simpleIconsSlug: 'x',        svglogosUrl: null },

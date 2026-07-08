@@ -47,6 +47,14 @@
     scroll-margin-top: 6rem;
 }
 
+// Scrollspy state on the post sidebar TOC — blog-post.ts moves .is-active to
+// the link whose section is currently in view. The `!` is required: this file
+// compiles into @layer components, and the link's own text-service-black lives
+// in the later utilities layer, which wins regardless of specificity.
+[data-blog-toc] a.is-active {
+    @apply text-violet-primary!;
+}
+
 // Bottom-of-post newsletter (in a violet-50 card). Tidies the injected HubSpot
 // inputs — the base .newsletter styles live in _hubspot.scss; this refines the
 // blog variant. HubSpot injects the form at runtime, so `.hs-form.newsletter-blog`

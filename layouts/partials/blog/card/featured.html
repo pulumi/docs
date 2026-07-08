@@ -20,6 +20,6 @@
         {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "dark" true "link" false) }}
         <h2 class="m-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-featured-{{ $page.Title | urlize }}" class="text-white transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-200">{{ $page.Title }}</a></h2>
         {{- with $excerpt }}<p class="m-0! body-lg text-white/90 line-clamp-3">{{ . }}</p>{{ end -}}
-        {{ partial "blog/post-meta.html" (dict "page" $page "dark" true) }}
+        {{ partial "blog/post-meta.html" (dict "page" $page "dark" true "readingTime" true) }}
     </div>
 </article>

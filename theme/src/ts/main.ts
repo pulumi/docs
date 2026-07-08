@@ -12,6 +12,7 @@ import "./tracking";
 import "./docs-feedback";
 import "./event-filtering";
 import "./blog-list";
+import "./blog-post";
 import "./details-dropdown";
 import "./copybutton";
 import "./code-tabbed";
