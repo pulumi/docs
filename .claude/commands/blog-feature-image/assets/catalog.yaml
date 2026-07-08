@@ -36,6 +36,72 @@ templates:
     type: static
     description: "Tutorials, how-tos, best practices, and guest posts (tags: aws, kubernetes, infrastructure-as-code, serverless, best-practices, continuous-delivery, containers, guest-post)"
 
+  # -- Feature shape variants (1884x1256, outline shape with a 340x340 center
+  #    clear space; dual-use: 1 phosphor icon OR 1 small logo composited) --
+  - filename: feature-shape-circle.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "General-purpose abstract — focus, wholeness; pick by icon silhouette fit"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-square.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "General-purpose abstract — building blocks, components; pick by icon silhouette fit"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-diamond.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "General-purpose abstract — decisions, data flow, networking; pick by icon silhouette fit"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-hexagon.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "Kubernetes-adjacent topics, modules, packages, components (tags: kubernetes, containers)"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-lock.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "Security, secrets, encryption, access control (tags: security, secrets, esc)"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-shield.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "Security posture, compliance, policy, protection (tags: security, policy-as-code, compliance) — shape counterpart to the static feature-shield.png; prefer this variant when a topical icon or logo adds specificity"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-speech-bubble.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "Community, Q&A, announcements-as-conversation, AI chat and agents (tags: community, ai)"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
+  - filename: feature-shape-sync-diamond.png
+    mode: feature
+    type: shape
+    logo_slots: 1
+    description: "CI/CD, automation, deployments, drift detection, sync (tags: continuous-delivery, deployments, automation)"
+    placeholders:
+      - { x: 772, y: 458, width: 340, height: 340 }
+
   # -- Feature logo variants (1884x1256, logos composited onto circles) --
   - filename: feature-logo-1.png
     mode: feature

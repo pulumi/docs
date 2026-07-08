@@ -1,84 +1,105 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 py-8">
-        <div class="xxl:flex">
-            <div class="flex flex-col lg:flex-row xxl:w-9/12">
-                <div class="lg:w-1/4 xxl:w-4/12 pr-8">
-                    {{ if .Params.series }}
-                        {{ partial "blog/series-sidebar.html" . }}
-                    {{ else }}
-                        {{ partial "blog/sidebar.html" . }}
-                    {{ end }}
+    {{ partial "blog/header.html" (dict "context" . "heading" false) }}
+
+    {{- /* Reading progress bar, pinned just under the sticky site nav (h-16).
+        blog-post.ts drives the scaleX from scroll position over the post body.
+        The initial state is an inline transform, NOT the scale-x-0 utility —
+        Tailwind v4 scale-* sets the separate `scale` property, which would
+        multiply against (and zero out) the JS-driven transform. */ -}}
+    <div data-post-progress aria-hidden="true" style="transform: scaleX(0)" class="fixed inset-x-0 top-16 z-30 h-[3px] origin-left bg-violet-primary"></div>
+
+    <div class="mx-auto max-w-[1220px] px-4 py-8 lg:py-10">
+        {{- /* Hero: category / title / date / authors on the left, feature image
+            on the right. On mobile the image stacks first. Posts with no feature
+            image drop the image column and let the title/meta span full width. */ -}}
+        {{ $hasImage := partial "blog/has-feature-image.html" . }}
+        <header class="grid grid-cols-1 items-center gap-8 {{ if $hasImage }}lg:grid-cols-2{{ end }}">
+            <div class="order-2 flex flex-col items-start gap-5 lg:order-1">
+                {{ if .Params.series }}{{ partial "blog/series-badge.html" . }}{{ else }}{{ with .Params.category }}{{ partial "blog/category-badge.html" (dict "category" .) }}{{ end }}{{ end }}
+                {{ if and (.Params.h1) (not .Params.notitle) }}
+                    <h1 class="heading-xl m-0!">{{ .Params.h1 }}</h1>
+                {{ else if and (ne .Title "") (not .Params.notitle) }}
+                    <h1 class="heading-xl m-0!">{{ .Title }}</h1>
+                {{ end }}
+                <div class="body-sm flex flex-wrap items-center gap-1.5">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                    {{ with .Params.updated }}{{ $u := time . }}<span aria-hidden="true" class="text-gray-500">•</span><span>Updated {{ $u.Format "Jan 2, 2006" }}</span>{{ end }}
+                    <span aria-hidden="true" class="text-gray-500">•</span><span class="whitespace-nowrap">{{ .ReadingTime }} min read</span>
                 </div>
-
-                <div class="lg:w-3/4 xxl:w-9/12">
-                    <article class="mb-8 pb-8 border-b border-gray-200">
-                        {{ partial "blog/full-poster.html" . }}
-
-                        {{ if and (.Params.h1) (not .Params.notitle) }}
-                            <h1 class="no-anchor">{{ .Params.h1 }}</h1>
-                        {{ else if and (ne .Title "") (not .Params.notitle) }}
-                            <h1 class="no-anchor">{{ .Title }}</h1>
-                        {{ end }}
-
-                        <div class="flex flex-wrap items-center my-4 text-sm text-gray-700">
-                            <span>
-                                {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors) }}
-                            </span>
-                        </div>
-
-                        <div class="text-sm text-gray-700 mb-4">
-                            <span>Posted on <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan" }} {{ humanize (int (.Date.Format "2")) }}, {{ .Date.Format "2006" }}</time>{{ if .Params.updated }}{{ $updated := time .Params.updated }} · Updated on <time datetime="{{ $updated.Format "2006-01-02" }}">{{ $updated.Format "Jan" }} {{ humanize (int ($updated.Format "2")) }}, {{ $updated.Format "2006" }}</time>{{ end }}</span>
-                        </div>
-
-                        <section>
-                            {{ .Content }}
-                        </section>
-
-                        <div>
-                            {{ if and .Params.tags (not .Params.simple_layout) }}
-                                <ul class="tags m-0 mt-8 p-0 text-sm">
-                                    {{ range $tag := .Params.tags }}
-                                        <li class="mt-0 inline-flex">
-                                            <a class="tag tag-blog" href="/blog/tag/{{ $tag | urlize }}/">
-                                                {{ $tag | urlize }}
-                                            </a>
-                                        </li>
-                                    {{ end }}
-                                </ul>
-                            {{ end }}
-                        </div>
-
-                        {{ with .Resources.GetMatch "meta-legacy.*" }}
-                            <details class="mt-8 text-sm text-gray-600">
-                                <summary class="cursor-pointer">Archived feature image</summary>
-                                <img class="mt-4 rounded-lg border border-gray-200" src="{{ .RelPermalink }}"
-                                     width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async"
-                                     alt="Original feature image for this post" />
-                            </details>
-                        {{ end }}
-
-                        <section class="py-8 newsletter-input">
-                            <div class="container mx-auto">
-                                <div class="text-center">
-                                    <h4 class="">Subscribe to the Pulumi Monthly Newsletter</h4>
-                                    <div class="inline-block">
-                                        <pulumi-hubspot-form form-id="6d45d68a-4244-4f23-bbec-941f8ccb2b44" class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </article>
+                {{ partial "blog/post-authors.html" (dict "page" .) }}
+            </div>
+            {{ if $hasImage }}
+            <div class="order-1 lg:order-2">
+                <div class="flex aspect-[3/2] w-full items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+                    {{ partial "blog/feature-image.html" (dict "page" . "w" 600 "h" 400 "mode" "fit" "class" "h-full w-auto max-w-none" "widths" (slice 600 900 1200 1600) "sizes" "(min-width: 1024px) 588px, calc(100vw - 2rem)" "eager" true) }}
                 </div>
             </div>
+            {{ end }}
+        </header>
 
-            <div class="xxl:w-3/12 lg:pl-8">
-                <div class="sticky-sidebar">
-                    {{ partial "blog/right-nav.html" . }}
-                    {{ if not .Params.simple_layout }}
-                        {{ partial "docs/right-nav-ad.html" }}
-                    {{ end }}
-                </div>
+        <hr class="my-8 border-gray-200 lg:my-10" />
+
+        {{- /* Body: content column + sticky TOC / share sidebar. */ -}}
+        <div class="lg:flex lg:gap-12">
+            <div class="min-w-0 lg:flex-1">
+                {{- /* Mobile-only collapsible TOC above the content; the sidebar
+                    version is hidden below md. */ -}}
+                {{- /* empty:hidden — the TOC partial renders nothing for posts
+                    with 2 or fewer h2s; collapse the wrappers (and the sidebar
+                    flex gap slot) with it. */ -}}
+                <div class="mb-8 empty:hidden md:hidden">{{ partial "blog/toc.html" (dict "page" . "collapsible" true) }}</div>
+                <section class="blog-post-content max-w-3xl">
+                    {{ .Content }}
+                </section>
+
+                {{ partial "blog/post-resources.html" . }}
+
+                {{ if and .Params.tags (not .Params.simple_layout) }}
+                    <div class="mt-8 flex flex-wrap items-center gap-2 border-t border-gray-200 pt-8">
+                        <span class="body-sm font-semibold text-service-black">Tagged as:</span>
+                        {{ range $tag := .Params.tags }}
+                            {{ partial "blog/badge.html" (dict "text" ($tag | urlize) "variant" "secondary" "href" (printf "/blog/tag/%s/" ($tag | urlize)) "track" (printf "blog-tag-%s" ($tag | urlize))) }}
+                        {{ end }}
+                    </div>
+                {{ end }}
+
+                {{ with .Resources.GetMatch "meta-legacy.*" }}
+                    {{ $x1 := .Process "fit 960x960 webp q90" }}
+                    {{ $x2 := .Process "fit 1920x1920 webp q88" }}
+                    <details class="group mt-8 border-t border-gray-200 pt-8">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold marker:hidden [&::-webkit-details-marker]:hidden hover:text-service-black">
+                            <span>Archived feature image</span>
+                            {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 transition-transform group-open:rotate-180") }}
+                        </summary>
+                        <img class="mt-4 rounded-lg border border-gray-200" src="{{ $x1.RelPermalink }}"
+                             srcset="{{ $x1.RelPermalink }} 1x, {{ $x2.RelPermalink }} 2x"
+                             width="{{ $x1.Width }}" height="{{ $x1.Height }}" loading="lazy" decoding="async"
+                             alt="Original feature image for this post" />
+                    </details>
+                {{ end }}
+
+                {{ partial "blog/prev-next.html" . }}
+
+                <section class="newsletter-input mt-12">
+                    <div class="rounded-lg bg-violet-50 px-6 py-8 text-center">
+                        <h4 class="mb-4">Subscribe to the Pulumi Monthly Newsletter</h4>
+                        <div class="inline-block">
+                            <pulumi-hubspot-form form-id="6d45d68a-4244-4f23-bbec-941f8ccb2b44" class="newsletter newsletter-blog"></pulumi-hubspot-form>
+                        </div>
+                    </div>
+                </section>
             </div>
+
+            <aside class="mt-10 lg:mt-0 lg:w-[19rem] lg:shrink-0">
+                <div class="flex flex-col gap-8 lg:sticky lg:top-24">
+                    {{ if .Params.series }}{{ partial "blog/series-sidebar.html" . }}{{ end }}
+                    <div class="hidden md:block md:empty:hidden">{{ partial "blog/toc.html" (dict "page" .) }}</div>
+                    {{ partial "blog/share.html" . }}
+                    {{ partial "blog/sidebar-cta.html" . }}
+                </div>
+            </aside>
         </div>
     </div>
+
+    {{ partial "blog/related-posts.html" . }}
 {{ end }}

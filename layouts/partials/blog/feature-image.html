@@ -1,0 +1,62 @@
+{{- /*
+    Central feature-image atom for blog cards and heroes.
+
+    Resolves a post's page-bundle `feature_image` (via Resources.GetMatch) and
+    processes it to webp (Hugo content-hashes the output, so it's fingerprinted
+    and stays colocated with the post's bundle). Posts with no `feature_image`
+    render nothing — callers must handle the empty case (collapse the image slot
+    / go full-width). Most pre-redesign posts have no feature image.
+
+    Params:
+      page   (required) the post page
+      w, h   (required) target/base pixel dimensions; also set the aspect ratio
+      mode   "fill" (exact WxH crop; art fades to violet-950 at the edges) or
+             "fit" (preserve aspect within WxH — pair with object-contain to
+             contain the image). Default "fill".
+      widths optional slice of pixel widths → emits a responsive width-descriptor
+             srcset at the w/h aspect (use with a real `sizes`). When omitted, a
+             1x/2x descriptor srcset is used (fine for fixed-size thumbnails).
+      class  extra classes on the <img> (e.g. "object-cover size-full")
+      sizes  the `sizes` attribute (default "<w>px")
+      eager  true → loading=eager + fetchpriority=high (above-the-fold heroes)
+*/ -}}
+{{- $page := .page -}}
+{{- $w := .w -}}
+{{- $h := .h -}}
+{{- $mode := .mode | default "fill" -}}
+{{- $widths := .widths -}}
+{{- $class := .class -}}
+{{- $sizes := .sizes | default (printf "%dpx" $w) -}}
+{{- $eager := .eager -}}
+{{- $img := "" -}}
+{{- with $page.Params.feature_image -}}
+    {{- $img = $page.Resources.GetMatch . -}}
+{{- end -}}
+{{- /* q90: these feature plates have smooth violet gradients that block/checker
+    at lower webp quality; 90 clears that without ballooning file size. */ -}}
+{{- with $img -}}
+    {{- $base := .Process (printf "%s %dx%d webp q90" $mode $w $h) -}}
+    {{- $srcset := "" -}}
+    {{- if $widths -}}
+        {{- $parts := slice -}}
+        {{- range $widths -}}
+            {{- $hh := int (div (mul . $h) $w) -}}
+            {{- $v := $img.Process (printf "%s %dx%d webp q90" $mode . $hh) -}}
+            {{- $parts = $parts | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+        {{- end -}}
+        {{- $srcset = delimit $parts ", " -}}
+    {{- else -}}
+        {{- $x2 := .Process (printf "%s %dx%d webp q88" $mode (mul $w 2) (mul $h 2)) -}}
+        {{- $srcset = printf "%s 1x, %s 2x" $base.RelPermalink $x2.RelPermalink -}}
+    {{- end -}}
+    <img
+        class="{{ $class }}"
+        src="{{ $base.RelPermalink }}"
+        srcset="{{ $srcset }}"
+        sizes="{{ $sizes }}"
+        width="{{ $base.Width }}" height="{{ $base.Height }}"
+        alt="{{ $page.Title }}"
+        loading="{{ cond $eager "eager" "lazy" }}"
+        decoding="async"
+        {{- if $eager }} fetchpriority="high"{{ end }} />
+{{- end -}}

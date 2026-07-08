@@ -1,10 +1,9 @@
 {{/*
     Releases Blog List
 
-    A bordered .card containing an overline and a simple list of blog
-    posts. Each row: post title on the left, author avatar(s) and post
-    date on the right, separated by a bottom border (no border on the
-    last row). The entire row is the link.
+    A bordered .card with an overline and a list of blog posts, rendered with the
+    shared blog list-row component (title left; category badge + author avatars +
+    date right).
 
     Parameters:
     - anchor:   Optional section ID for TOC link targets.
@@ -18,33 +17,12 @@
 {{ $posts := .posts }}
 
 <section{{ with $anchor }} id="{{ . }}"{{ end }} class="card bg-white p-8 md:p-10 scroll-mt-28">
-    <p class="font-mono text-xs md:text-sm tracking-wider uppercase text-service-black m-0 mb-6">{{ $title }}</p>
-    <ul class="list-none p-0 m-0 flex flex-col">
+    <p class="font-overline m-0 mb-6 text-service-black">{{ $title }}</p>
+    <div class="flex flex-col">
         {{ range $posts }}
-            {{ $post := site.GetPage . }}
-            {{ if $post }}
-            <li class="m-0 border-b border-gray-200 last:border-b-0">
-                <a class="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-2 md:gap-6 min-h-[50px] py-4 no-underline hover:no-underline text-service-black hover:text-violet-primary transition-colors"
-                   href="{{ $post.RelPermalink }}">
-                    <span class="text-2xl font-display font-semibold tracking-tighter leading-[1.1]">{{ $post.Title }}</span>
-                    <span class="flex items-center md:justify-end gap-5 shrink-0">
-                        {{ with $post.Params.authors }}
-                        <span class="flex items-center">
-                            {{ range $i, $authorId := . }}
-                                {{ $authorData := index site.Data.team.team $authorId }}
-                                {{ if $authorData }}
-                                <img src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" class="size-9 rounded-full object-cover ring-2 shrink-0 ring-white {{ if gt $i 0 }}-ml-3{{ end }}" loading="lazy" decoding="async" />
-                                {{ end }}
-                            {{ end }}
-                        </span>
-                        {{ end }}
-                        {{ with $post.Date }}
-                        <time datetime="{{ .Format "2006-01-02" }}" class="font-mono text-xs uppercase tracking-wider whitespace-nowrap">{{ .Format "Jan 02, 2006" }}</time>
-                        {{ end }}
-                    </span>
-                </a>
-            </li>
+            {{ with site.GetPage . }}
+                {{ partial "blog/card/list-row.html" (dict "page" .) }}
             {{ end }}
         {{ end }}
-    </ul>
+    </div>
 </section>

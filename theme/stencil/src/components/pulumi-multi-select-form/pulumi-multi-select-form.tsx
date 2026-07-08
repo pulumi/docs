@@ -123,7 +123,7 @@ export class PulumiMultiSelectForm {
                     </span>
                 )}
                 {this.selectedItem.cta ? (
-                    <div class="mt-8"><a class="btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
+                    <div class="mt-8"><a class="btn btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
                     <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
                 )}

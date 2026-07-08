@@ -1,0 +1,24 @@
+{{- /*
+    The "author(s) • date" byline used on cards. Avatars + name/count, a muted
+    bullet, then the post date.
+
+    Params:
+      page        (required) the post page
+      dark        true → white text on a violet-950 surface
+      readingTime true → append a "N min read" segment (skipped on the tighter
+                  card variants, e.g. small)
+*/ -}}
+{{- $page := .page -}}
+{{- $dark := .dark -}}
+{{- $fg := cond $dark "text-white" "text-service-black" -}}
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 body-sm">
+    {{- with $page.Params.authors -}}
+        {{ partial "blog/avatars.html" (dict "authors" . "dark" $dark) }}
+        <span class="text-gray-500" aria-hidden="true">•</span>
+    {{- end -}}
+    <time class="{{ $fg }} whitespace-nowrap" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+    {{- if .readingTime -}}
+        <span class="text-gray-500" aria-hidden="true">•</span>
+        <span class="{{ $fg }} whitespace-nowrap">{{ $page.ReadingTime }} min read</span>
+    {{- end -}}
+</div>

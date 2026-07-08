@@ -64,6 +64,15 @@ outputFormats:
     baseName: "llm-sitemap"
     isPlainText: true
     notAlternative: true
+  # Bare list-rows HTML fragment for a taxonomy term, fetched by the homepage
+  # category filter (theme/src/ts/blog-list.ts). Rendered by
+  # layouts/_default/term.rows.html at /blog/category/<id>/rows.html. Not an
+  # alternate representation, so it stays out of <head> alternates and sitemap.
+  rows:
+    mediaType: "text/html"
+    baseName: "rows"
+    isHTML: true
+    notAlternative: true
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -79,16 +88,64 @@ outputs:
     - HTML
   page:
     - HTML
+  # Taxonomy term pages also emit a "rows" fragment (layouts/_default/term.rows.html).
+  # Only the blog category filter consumes it; for non-blog terms the fragment is
+  # empty (the template filters to the blog section).
+  # RSS gives every blog term page (category / tag / author / series) its own feed
+  # at <term-url>rss.xml, rendered by layouts/_default/term.rss.xml.
+  term:
+    - HTML
+    - rows
+    - RSS
+
+# Collection terms (/tutorials/<slug>/) are the one non-blog taxonomy: no blog
+# post carries `collections`, so the term outputs above would give every
+# tutorials collection an empty "Pulumi Blog: <Term>" RSS feed (which head.html
+# would then advertise for autodiscovery) plus an unused rows fragment. Scope
+# them back to HTML only.
+cascade:
+  - _target:
+      kind: term
+      path: /collections/**
+    outputs:
+      - HTML
 
 taxonomies:
   tag: tags
   author: authors
   collection: collections
+  # Plural is intentionally "category" (not "categories") so Hugo reads the
+  # existing scalar `category:` front matter on blog posts. Hugo casts the
+  # scalar value to a one-term list. See layouts/taxonomy/category.html and
+  # data/blog_categories.yaml (single source of truth for term titles/desc).
+  category: category
 
 permalinks:
-  authors: /blog/author/:slug/
-  tags: /blog/tag/:slug/
-  collections: /tutorials/:slug/
+  term:
+    authors: /blog/author/:slug/
+    tags: /blog/tag/:slug/
+    collections: /tutorials/:slug/
+    category: /blog/category/:slug/
+  # The category taxonomy LIST page (the directory of categories rendered by
+  # layouts/taxonomy/category.terms.html). Without this it would sit at Hugo's
+  # default /category/, leaving /blog/category/ a 404 even though every term
+  # page lives beneath it.
+  taxonomy:
+    category: /blog/category/
+
+# Built-in Related Content, used by layouts/partials/blog/related-posts.html to
+# top up a post's related list. Tags dominate; category and recency break ties.
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: category
+      weight: 40
+    - name: date
+      weight: 10
 
 markup:
   goldmark:

@@ -1,0 +1,38 @@
+{{- /*
+    Term-page body (category / tag): the leading run of posts that have a
+    feature image renders as a 3-col grid of medium cards; from the FIRST
+    image-less post onward posts render as list rows. The split point is
+    computed over the FULL term collection and offset into this page's slice,
+    so a grid run longer than one pager page continues on page 2+ instead of
+    collapsing to rows at the page boundary. Order is never changed — the
+    incoming newest-first sequence is preserved exactly. The infinite-scroll JS
+    appends fetched grid cards into [data-post-grid] and list rows into
+    [data-post-list].
+
+    Params:
+      paginator (required) a Hugo paginator.
+      pages     (required) the full, ordered page collection behind the paginator.
+*/ -}}
+{{- $paginator := .paginator -}}
+{{- $pages := $paginator.Pages -}}
+{{- $all := .pages -}}
+{{- $globalSplit := len $all -}}
+{{- $found := false -}}
+{{- range $i, $p := $all -}}
+    {{- if and (not $found) (not $p.Params.feature_image) -}}
+        {{- $globalSplit = $i -}}{{- $found = true -}}
+    {{- end -}}
+{{- end -}}
+{{- $splitIdx := sub $globalSplit (mul (sub $paginator.PageNumber 1) $paginator.PagerSize) -}}
+{{- if lt $splitIdx 0 }}{{ $splitIdx = 0 }}{{ end -}}
+{{- if gt $splitIdx (len $pages) }}{{ $splitIdx = len $pages }}{{ end -}}
+{{- $gridPages := first $splitIdx $pages -}}
+{{- $listPages := after $splitIdx $pages -}}
+{{- with $gridPages }}
+<div data-post-grid class="mb-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+    {{ range . }}{{ partial "blog/card/medium.html" (dict "page" .) }}{{ end }}
+</div>
+{{- end }}
+<div data-post-list class="flex flex-col">
+    {{ range $listPages }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
+</div>

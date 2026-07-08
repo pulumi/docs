@@ -1,0 +1,35 @@
+{{- /*
+    Author avatar(s) with optional name/count label. Multiple authors overlap
+    into a stack (-ml-3, ring). Team lookup mirrors blog/authors.html. Rendered
+    non-interactive (no links) so it can live inside a card's stretched link.
+
+    Params:
+      authors (required) list of team member ids
+      dark    true → ring matches violet-950 surface, label text white
+      label   false → avatars only, no name/count (default true)
+*/ -}}
+{{- $authors := .authors -}}
+{{- $dark := .dark -}}
+{{- $showLabel := true }}{{- if isset . "label" }}{{ $showLabel = .label }}{{ end -}}
+{{- $ring := cond $dark "ring-violet-950" "ring-gray-100" -}}
+{{- $fg := cond $dark "text-white" "text-service-black" -}}
+{{- with $authors -}}
+<span class="flex items-center gap-2">
+    <span class="flex items-center shrink-0">
+        {{- range $i, $id := . -}}
+            {{- with index site.Data.team.team $id -}}
+            <img src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" title="{{ .name }}"
+                class="size-8 rounded-full object-cover bg-violet-200 ring-1 {{ $ring }} shrink-0 {{ if gt $i 0 }}-ml-3{{ end }}"
+                loading="lazy" decoding="async" />
+            {{- end -}}
+        {{- end -}}
+    </span>
+    {{- if $showLabel -}}
+        {{- if eq (len .) 1 -}}
+            {{- with index site.Data.team.team (index . 0) }}<span class="body-sm {{ $fg }} whitespace-nowrap">{{ .name }}</span>{{ end -}}
+        {{- else -}}
+            <span class="body-sm {{ $fg }} whitespace-nowrap">{{ len . }} authors</span>
+        {{- end -}}
+    {{- end -}}
+</span>
+{{- end -}}

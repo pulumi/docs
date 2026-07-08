@@ -107,6 +107,8 @@ Blog posts carry two taxonomy axes (plus optional `series`):
 
 See `BLOGGING.md` for the author-facing version of these rules.
 
+Per-post optional front matter beyond the taxonomy axes — `resource_links` (icon links at the foot of the post), `related_posts` (pinned related slugs), `author_roles`, and `updated` — is documented in `BLOGGING.md`. The blog homepage is curated separately in `data/blog_home.yaml` (`featured` = the four hero/featured slots; `featured_series` = the "Popular series" strip); that file's header comment is the authoritative reference.
+
 ---
 
 ## Dark mode (/docs)

@@ -1,0 +1,26 @@
+{{- /*
+    Post-page byline: each author as an avatar + name chip (wrapping), linked to
+    their team/author page. Optional per-author role labels via `author_roles`
+    front matter (mirrors blog/authors.html). Call with dict "page".
+*/ -}}
+{{- $page := .page -}}
+{{- $roles := $page.Params.author_roles -}}
+{{- with $page.Params.authors }}
+<div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+    {{- range $id := . -}}
+        {{- $data := index site.Data.team.team $id -}}
+        {{- with $data -}}
+            {{- $link := $page.Site.GetPage (printf "/authors/%s" ($id | urlize)) -}}
+            {{- with $page.Site.GetPage (printf "/community/team/%s" $id) }}{{ $link = . }}{{ end -}}
+            {{- $role := "" -}}{{- with $roles }}{{ with index . $id }}{{ $role = . }}{{ end }}{{ end -}}
+            <span class="flex items-center gap-2">
+                {{- with $role }}<span class="body-sm italic text-gray-500">{{ . }}</span>{{ end }}
+                <a href="{{ with $link }}{{ .RelPermalink }}{{ else }}/blog/author/{{ $id | urlize }}/{{ end }}" data-track="blog-author-{{ .id }}" class="flex items-center gap-2">
+                    <img src="/images/team/{{ .id }}.jpg" alt="{{ .name }}" class="size-8 rounded-full bg-violet-200 object-cover border border-gray-100" loading="lazy" decoding="async" />
+                    <span class="body-sm text-service-black transition-colors hover:text-violet-primary">{{ .name }}</span>
+                </a>
+            </span>
+        {{- end -}}
+    {{- end -}}
+</div>
+{{- end }}

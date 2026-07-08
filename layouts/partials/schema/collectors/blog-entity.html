@@ -11,6 +11,16 @@
 {{ $readTime := div $wordCount 200 }}
 {{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
 
+{{/* articleSection from the post's category (display name from
+     data/blog_categories.yaml); posts without one fall back to "Blog". */}}
+{{ $section := "Blog" }}
+{{ with .Params.category }}
+  {{ $catId := . }}
+  {{ range site.Data.blog_categories.categories }}
+    {{ if eq .id $catId }}{{ $section = .name }}{{ end }}
+  {{ end }}
+{{ end }}
+
 {{/* Build BlogPosting entity */}}
 {{ $schema := dict
   "@type" "BlogPosting"
@@ -20,7 +30,7 @@
   "wordCount" $wordCount
   "timeRequired" (printf "PT%dM" $readTime)
   "inLanguage" "en-US"
-  "articleSection" "Engineering Blog"
+  "articleSection" $section
   "isPartOf" (dict "@id" "https://www.pulumi.com/#website")
 }}
 

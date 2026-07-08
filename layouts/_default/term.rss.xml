@@ -1,0 +1,21 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{- /*
+    Per-term blog RSS feed (category / tag / author / series). Enabled by the
+    `RSS` term output format in config.yml; one feed per term at <term-url>rss.xml.
+    Items are the term's blog posts, newest 50, sharing the main feed's item
+    markup (partials/blog/rss-item.html).
+*/ -}}
+{{- $name := partial "blog/term-name.html" . -}}
+{{- $posts := where .Pages "Section" "blog" -}}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Blog: {{ $name }}</title>
+        <link>{{ with .OutputFormats.Get "html" }}{{ $.Site.Params.canonicalURL }}{{ .RelPermalink }}{{ end }}</link>
+        <description>Pulumi blog posts: {{ $name }}.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        {{ with .Date }}<pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>{{ end }}
+        {{ range first 50 $posts.ByDate.Reverse }}
+            {{ partial "blog/rss-item.html" . }}
+        {{ end }}
+    </channel>
+</rss>

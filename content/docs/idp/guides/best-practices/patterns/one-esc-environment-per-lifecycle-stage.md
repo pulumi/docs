@@ -79,7 +79,18 @@ values:
     apiKey: "prod-api-key"
 ```
 
-Your Pulumi program can compose with shared base configuration:
+Define a shared base environment with the configuration common to every stage:
+
+```yaml
+# environments/base-config.yaml
+values:
+  app:
+    name: "web-app"
+    database:
+      port: 5432
+```
+
+Your Pulumi program can then compose this shared base with a stage-specific environment:
 
 ```yaml
 # pulumi.yaml for production deployment

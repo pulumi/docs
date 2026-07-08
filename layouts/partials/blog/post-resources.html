@@ -1,0 +1,22 @@
+{{- /*
+    Structured resource links at the bottom of the post content. Reads the post's
+    `resource_links:` front matter (list of {type, url, text?}); the type maps to
+    an icon + default label via data/blog_link_types.yaml. Call with the post page
+    context.
+*/ -}}
+{{- with .Params.resource_links }}
+<div class="mt-10 flex flex-col gap-3">
+    {{- range . }}
+        {{- $meta := index site.Data.blog_link_types.types .type -}}
+        {{- $label := .text -}}
+        {{- $icon := "" -}}
+        {{- with $meta }}{{ $icon = .icon }}{{ if not $label }}{{ $label = .label }}{{ end }}{{ end -}}
+        {{- if not $label }}{{ $label = .url }}{{ end -}}
+        {{- $external := strings.HasPrefix .url "http" -}}
+        <a href="{{ .url }}" data-track="blog-resource-{{ .type }}" class="flex items-center gap-3 body-base font-medium text-violet-primary hover:underline transition-colors hover:text-violet-primary"{{ if $external }} target="_blank" rel="noopener"{{ end }}>
+            {{- with $icon }}{{ partial "icon.html" (dict "name" . "class" "size-6 text-violet-primary shrink-0") }}{{ end }}
+            <span>{{ $label }}</span>
+        </a>
+    {{- end }}
+</div>
+{{- end }}

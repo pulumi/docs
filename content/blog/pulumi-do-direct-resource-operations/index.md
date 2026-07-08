@@ -17,6 +17,14 @@ tags:
 category: product
 schema_type: auto
 
+resource_links:
+    - type: documentation
+      url: /docs/iac/cli/direct-resource-operations/
+    - type: feature-request
+      url: https://github.com/pulumi/pulumi/issues/new
+    - type: slack
+      url: https://slack.pulumi.com/
+
 social:
     twitter:
     linkedin:
@@ -245,7 +253,3 @@ This path works because `pulumi do` uses the same providers, resource types, and
 `pulumi do` ships as a research preview in [Pulumi CLI v3.242.0](https://github.com/pulumi/pulumi/releases/tag/v3.242.0) and later. Install or update the CLI, install a provider plugin, and start running commands. The [documentation](/docs/iac/cli/direct-resource-operations/) has the full reference.
 
 We can't wait to hear your feedback. [Give it a try today](/docs/install/), tell us what works (and what doesn't), and help shape the CLI that agents and humans both reach for first.
-
-- [Documentation](/docs/iac/cli/direct-resource-operations/)
-- [File a feature request](https://github.com/pulumi/pulumi/issues/new)
-- [Pulumi Community Slack](https://slack.pulumi.com/) for discussion

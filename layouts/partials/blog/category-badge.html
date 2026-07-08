@@ -1,0 +1,23 @@
+{{- /*
+    Category pill (outline variant) linking to the category term page. Display
+    name comes from data/blog_categories.yaml.
+
+    Params:
+      category (required) category id (blog post `category:` scalar)
+      dark     true → violet-950-surface variant
+      link     false → non-interactive (default true)
+*/ -}}
+{{- $id := .category -}}
+{{- $dark := .dark -}}
+{{- $link := true }}{{- if isset . "link" }}{{ $link = .link }}{{ end -}}
+{{- $name := $id | humanize -}}
+{{- range site.Data.blog_categories.categories -}}
+    {{- if eq .id $id }}{{ $name = .name }}{{ end -}}
+{{- end -}}
+{{- if $id -}}
+    {{- partial "blog/badge.html" (dict
+        "text" $name
+        "variant" (cond $dark "dark" "outline")
+        "href" (cond $link (printf "/blog/category/%s/" $id) "")
+        "track" (printf "blog-category-%s" $id)) -}}
+{{- end -}}
