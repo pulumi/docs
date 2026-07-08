@@ -23,8 +23,8 @@
                 {{ end }}
                 <div class="body-sm flex flex-wrap items-center gap-1.5">
                     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                    {{ with .Params.updated }}{{ $u := time . }}<span aria-hidden="true">•</span><span>Updated {{ $u.Format "Jan 2, 2006" }}</span>{{ end }}
-                    <span aria-hidden="true">•</span><span class="whitespace-nowrap">{{ .ReadingTime }} min read</span>
+                    {{ with .Params.updated }}{{ $u := time . }}<span aria-hidden="true" class="text-gray-500">•</span><span>Updated {{ $u.Format "Jan 2, 2006" }}</span>{{ end }}
+                    <span aria-hidden="true" class="text-gray-500">•</span><span class="whitespace-nowrap">{{ .ReadingTime }} min read</span>
                 </div>
                 {{ partial "blog/post-authors.html" (dict "page" .) }}
             </div>
