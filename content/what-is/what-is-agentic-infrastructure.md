@@ -42,7 +42,7 @@ Three things follow from this:
 
 **Agents get richer training signal.** Public Python and TypeScript include genuinely production-scale open source: real patterns at large scale, not tutorial snippets. A model that has learned from millions of Python programs brings that experience to bear when writing infrastructure code in Python. Infrastructure DSL corpora are much thinner, and skew toward documentation examples rather than production usage.
 
-**Agents can use real software engineering primitives.** Loops, functions, classes, package imports, unit tests, type checking, IDE tooling: these apply to Pulumi programs the same way they apply to application code. An agent writing a Pulumi program can import a library, write a test, refactor a module, or inherit from a base class. It's not limited to what a configuration language can express.
+**Agents can use real software engineering primitives.** Loops, functions, classes, package imports, [unit tests](/blog/how-to-test-infrastructure-as-code/), type checking, IDE tooling: these apply to Pulumi programs the same way they apply to application code. An agent writing a Pulumi program can import a library, write a test, refactor a module, or inherit from a base class. It's not limited to what a configuration language can express.
 
 **Every change is verifiable.** `pulumi preview` maps code changes to a concrete, auditable list of resource operations (what will be created, updated, or deleted) before anything in the cloud changes. An agent can verify its own output. That feedback loop (write, preview, validate, adjust) is what makes autonomous infrastructure tractable at scale. As Duffy notes: "Just as we wouldn't vibe code without git showing us the source changes, we shouldn't vibe infrastructure without a tool that shows what it will do before it does it, and what it has already done in the past." It's essentially `git diff` for your cloud.
 
@@ -66,7 +66,7 @@ Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 
 
 1. **Handle CI/CD feedback.** If a pipeline check fails (a security scan, a policy violation, a test), Neo reads the output, pushes a corrective fix to the same PR, and iterates.
 
-1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects infrastructure drift or produces changes, so environments stay current without manual polling.
+1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects [infrastructure drift](/what-is/what-is-infrastructure-drift/) or produces changes, so environments stay current without manual polling.
 
 What makes this different from a generic coding assistant is that Neo is [grounded AI](/blog/grounded-ai-why-neo-knows-your-infrastructure/): it reasons over your actual state graph and deployment history rather than generating code from internet patterns. See the [Neo documentation](/docs/ai/) for a full reference.
 
@@ -94,7 +94,7 @@ Duffy frames it plainly:
 
 The layers Pulumi provides:
 
-**Policy as code.** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
+**[Policy as code](/what-is/what-is-policy-as-code/).** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
 
 **RBAC and entitlements.** Neo operates within the Pulumi Cloud RBAC entitlements of the user who initiated the task. It cannot escalate privilege. If a developer cannot delete a production database, Neo cannot either, regardless of what the task requests.
 
