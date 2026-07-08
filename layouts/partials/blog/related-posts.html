@@ -1,7 +1,7 @@
 {{- /*
     Auto related posts, full-width list rows at the bottom of the post page. A
     post's `related_posts:` front matter (list of slugs) fills first, then Hugo's
-    built-in Related Content (see `related` in config.yml) tops up to 4. Call with
+    built-in Related Content (see `related` in config.yml) tops up to 6. Call with
     the post page context.
 */ -}}
 {{- $page := . -}}
@@ -9,9 +9,9 @@
 {{- range $page.Params.related_posts -}}
     {{- with site.GetPage (printf "/blog/%s" .) }}{{ $related = $related | append . }}{{ end -}}
 {{- end -}}
-{{- if lt (len $related) 4 -}}
+{{- if lt (len $related) 6 -}}
     {{- range (first 12 (site.RegularPages.Related $page)) -}}
-        {{- if and (lt (len $related) 4) (ne . $page) (not (in $related .)) (eq .Section "blog") (not .Params.layout) -}}
+        {{- if and (lt (len $related) 6) (ne . $page) (not (in $related .)) (eq .Section "blog") (not .Params.layout) -}}
             {{- $related = $related | append . -}}
         {{- end -}}
     {{- end -}}

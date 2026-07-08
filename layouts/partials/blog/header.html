@@ -15,36 +15,35 @@
 {{- $ctx := .context | default . -}}
 {{- $heading := true }}{{- if isset . "heading" }}{{ $heading = .heading }}{{ end -}}
 <div class="blog-header border-b border-gray-200">
-    {{- /* Constant header height at lg+. Two things vary with a term description:
-        (1) flex-wrap would break the controls onto a second row on the items'
-        natural widths, and (2) the h-10 divider / line-clamped description are
-        taller than the bare "Blog" heading. lg:flex-nowrap + a shrinkable
-        (min-w-0, line-clamped) description fixes (1); a FIXED lg:h-26 (not
-        min-h) fixes (2) — the row is pinned to one height and items-center
-        vertically centers whatever it contains, so the header never shifts by a
-        few pixels between the description and no-description states. */ -}}
-    <div class="container mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-6 lg:h-26 lg:flex-nowrap lg:py-0">
+    {{- /* Single row that never wraps: the right-hand controls stay fixed
+        (shrink-0) and the left-hand text absorbs any overflow. Within the
+        heading, "Blog" and the "/" separator stay put while the crumb term
+        truncates; the term description truncates too. A FIXED lg:h-26 (not
+        min-h) pins the row to one height so items-center vertically centers
+        whatever it contains and the header never shifts by a few pixels
+        between the description and no-description states. */ -}}
+    <div class="container mx-auto flex flex-nowrap items-center justify-between gap-4 px-4 py-6 lg:h-26 lg:py-0">
         <div class="flex min-w-0 items-center gap-3 lg:gap-4">
             {{ if $heading }}
-            <h1 class="heading-2 m-0! shrink-0">
-                <a href="/blog/" class="text-service-black transition-colors hover:text-violet-primary">Blog</a>
-                {{- with $crumb }} <span class="text-gray-400" aria-hidden="true">/</span> <span class="text-service-black">{{ . }}</span>{{ end -}}
+            <h1 class="heading-2 m-0! flex min-w-0 items-center gap-2">
+                <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span><span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end -}}
             </h1>
             {{ else }}
-            <div class="heading-2 m-0! shrink-0">
-                <a href="/blog/" class="text-service-black transition-colors hover:text-violet-primary">Blog</a>
-                {{- with $crumb }} <span class="text-gray-400" aria-hidden="true">/</span> <span class="text-service-black">{{ . }}</span>{{ end -}}
+            <div class="heading-2 m-0! flex min-w-0 items-center gap-2">
+                <a href="/blog/" class="shrink-0 text-service-black transition-colors hover:text-violet-primary">Blog</a>
+                {{- with $crumb }}<span class="shrink-0 text-gray-400" aria-hidden="true">/</span><span class="min-w-0 truncate text-service-black">{{ . }}</span>{{ end -}}
             </div>
             {{ end }}
             {{- with $description }}
                 <span class="hidden h-10 w-px shrink-0 bg-gray-200 lg:block" aria-hidden="true"></span>
-                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black line-clamp-2 lg:block">{{ . }}</p>
+                <p class="m-0! body-sm hidden min-w-0 max-w-md text-service-black truncate lg:block">{{ . }}</p>
             {{- end }}
         </div>
-        <div class="flex shrink-0 items-center gap-4">
+        <div class="flex shrink-0 items-center">
             {{- /* Compact newsletter subscribe (reuses the footer's HubSpot form),
                 left of search; hidden where the header gets crowded. */ -}}
-            <div class="hidden items-center xl:flex">
+            <div class="hidden items-center xl:flex mr-4">
                 <pulumi-hubspot-form form-id="027b4c6d-9b73-4ad8-b149-3c8b07fff608" class="newsletter newsletter-inline newsletter-header newsletter-btn-outline"></pulumi-hubspot-form>
             </div>
             {{ partial "blog/search.html" $ctx }}

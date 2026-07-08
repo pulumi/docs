@@ -56,7 +56,7 @@
                     {{ $x1 := .Process "fit 960x960 webp q90" }}
                     {{ $x2 := .Process "fit 1920x1920 webp q88" }}
                     <details class="group mt-8 border-t border-gray-200 pt-8">
-                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm text-gray-500 marker:hidden [&::-webkit-details-marker]:hidden hover:text-service-black">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold marker:hidden [&::-webkit-details-marker]:hidden hover:text-service-black">
                             <span>Archived feature image</span>
                             {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 transition-transform group-open:rotate-180") }}
                         </summary>

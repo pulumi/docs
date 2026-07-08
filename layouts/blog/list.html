@@ -17,11 +17,11 @@
                 <div class="mb-8">{{ partial "blog/card/featured.html" (dict "page" .) }}</div>
             {{ end }}
             {{ with after 1 $featured }}
-                <div class="mb-10 grid grid-cols-1 gap-x-8 gap-y-6 border-b border-gray-200 pb-10 xl:grid-cols-3">
+                <div class="mb-10 grid grid-cols-1 gap-x-8 lg:gap-x-16 gap-y-6 border-b border-gray-200 pb-10 xl:grid-cols-3">
                     {{ range . }}{{ partial "blog/card/small.html" (dict "page" .) }}{{ end }}
                 </div>
             {{ end }}
-            <div class="mb-6 overflow-x-auto">
+            <div class="mb-6">
                 {{ partial "blog/filter-bar.html" . }}
             </div>
         {{ end }}

@@ -5,9 +5,9 @@
     Params: page (required) the post page.
 */ -}}
 {{- $page := .page -}}
-<article class="group relative flex items-center gap-6">
+<article class="group relative flex sm:items-center gap-6">
     {{ if partial "blog/has-feature-image.html" $page }}
-    <div class="flex size-[140px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+    <div class="flex size-[80px] sm:size-[140px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
         {{ partial "blog/feature-image.html" (dict "page" $page "w" 240 "h" 160 "mode" "fit" "class" "h-full w-auto max-w-none") }}
     </div>
     {{ end }}

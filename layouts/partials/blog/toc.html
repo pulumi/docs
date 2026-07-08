@@ -24,9 +24,9 @@
                 <span class="font-overline-sm text-service-black">In this post</span>
                 {{ partial "icon.html" (dict "name" "caret-down" "class" "size-4 shrink-0 text-gray-500 transition-transform group-open:rotate-180") }}
             </summary>
-            <ul class="m-0 mt-4 flex list-none flex-col gap-2 p-0">
+            <ul class="m-0 mt-4 flex list-none flex-col gap-3 p-0">
                 {{ range . }}
-                <li class="m-0 leading-snug"><a href="#{{ .ID }}" data-track="blog-toc" class="body-sm block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .Title | plainify }}</a></li>
+                <li class="m-0 leading-snug"><a href="#{{ .ID }}" data-track="blog-toc" class="block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .Title | plainify }}</a></li>
                 {{ end }}
             </ul>
         </details>

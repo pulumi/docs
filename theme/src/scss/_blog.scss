@@ -6,25 +6,32 @@
 
 .blog-header {
     // Algolia's autocomplete (theme/src/ts/algolia/autocomplete.ts) upgrades the
-    // #search div into a detached *button*. Restyle that button to read like the
-    // mockup's rounded search input. Do NOT change detachedMediaQuery — /docs
-    // shares the same autocomplete code.
+    // #search div into a detached *button*. Style it as a plain ghost icon
+    // button, identical to the adjacent RSS button (.btn-icon.btn-ghost — a
+    // size-9 square, rounded-lg, text-gray-950/hover:bg-gray-100, size-6 icon).
+    // Do NOT change detachedMediaQuery — /docs shares the same autocomplete code.
     .aa-DetachedSearchButton {
-        @apply h-9 w-48 max-w-full justify-start gap-2 rounded-lg border border-gray-200
-               bg-white px-3 text-sm font-normal text-gray-500 shadow-none transition-colors;
+        @extend .btn, .btn-icon, .btn-ghost;
+        // gap-0 (the `!` beats .btn's inherited gap-1, which imports after this
+        // file): the button also holds a zero-width `.aa-DetachedSearchButtonQuery`
+        // flex item, and gap-1 between it and the icon nudges the icon off-center.
+        @apply gap-0! shadow-none;
 
-        &:hover,
-        &:focus-visible {
-            @apply border-gray-400;
+        // Icon: size-5 to visually match the RSS button. The `!` beats .btn's default
+        // `[&_svg]:size-4` — the Algolia svg carries no explicit size class, and
+        // _button.scss imports after this file, so it wins the specificity tie.
+        .aa-DetachedSearchButtonIcon {
+            @apply w-6 justify-center pr-0 text-current;
+
+            svg {
+                @apply size-5!;
+            }
         }
-    }
 
-    .aa-DetachedSearchButtonIcon {
-        @apply w-4 justify-start pr-0 text-gray-500;
-    }
-
-    .aa-DetachedSearchButtonPlaceholder {
-        @apply text-sm text-gray-500;
+        // Placeholder text: hidden on the icon-only button.
+        .aa-DetachedSearchButtonPlaceholder {
+            @apply hidden;
+        }
     }
 }
 
@@ -80,7 +87,7 @@
     }
 
     .hs-error-msgs {
-        @apply absolute left-0 top-full mt-1 max-w-full truncate;
+        @apply absolute left-0 top-full -mt-1 max-w-full truncate;
     }
 }
 

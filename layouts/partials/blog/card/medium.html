@@ -14,7 +14,7 @@
     </div>
     {{ end }}
     <div class="flex flex-col items-start gap-2">
-        {{ partial "blog/category-badge.html" (dict "category" $page.Params.category) }}
+        {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
         <h3 class="m-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-medium-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
         {{- with $excerpt }}<p class="m-0! body-base text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
     </div>
