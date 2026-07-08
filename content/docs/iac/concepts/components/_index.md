@@ -361,6 +361,8 @@ This tree makes it clear that a single `awsx:ec2:Vpc` component encapsulates mul
 
 Resource options passed to a component resource do not always behave the same as they do for custom resources. For example, the `provider` option has no effect on a component—use `providers` instead to pass explicit provider configuration to a component's child resources. For a complete list of which options apply to component resources, see [Resource options and component resources](/docs/iac/concepts/resources/options/#resource-options-and-component-resources).
 
+If you have existing cloud infrastructure you'd like to bring under management as a component, see [program-first (bulk) import](/docs/iac/guides/migration/import/#approach-2-program-first-bulk-import), which generates an import file for a component and all of its child resources in one step.
+
 ## Authoring components
 
 You author a component by extending the `ComponentResource` class. The guides below walk through building, packaging, and testing components:

@@ -21,19 +21,15 @@ Most infrastructure as code projects require working with existing cloud resourc
 
 The first scenario is sometimes called _coexistence_, and you can learn more about it in [Migrating to Pulumi > Coexistence](/docs/iac/guides/migration/#coexistence). The second scenario is called _adoption_ or _import_, and you can learn more about it in the sections that follow.
 
-## Two ways to import a resource
+## Two recommended approaches to importing resources
 
-There are two ways to import an existing cloud resource into a Pulumi project:
+There are two recommended ways to bring an existing cloud resource under management by Pulumi:
 
-1. With the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) CLI command. This command imports the resource into the currently selected [stack](/docs/concepts/stack/) and generates code describing the resource's current configuration for you to add to your Pulumi program.
+1. **CLI-first import**, in which you run [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) against a specific cloud resource. Pulumi adds the resource to your stack's state and generates the code needed to manage it, which you then copy into your Pulumi program. This approach is best suited to importing a handful of resources at a time.
 
-1. In code, with the [`import` resource option](/docs/concepts/options/import/). This option is expressed as an additional property on a resource declaration that you write into your Pulumi program yourself.
+1. **Program-first import**, sometimes called _bulk import_, in which you write your Pulumi program first --- potentially using [components](/docs/iac/concepts/components/) to describe many resources at once --- and then run [`pulumi preview --import-file`](/docs/iac/cli/commands/pulumi_preview/) to generate an import file listing every resource the program would otherwise create. You fill in the cloud provider ID for each resource in that file, then run `pulumi import --file` to bring all of them under management in a single operation. This approach scales better when you're importing many resources, or resources that are already described by a program you've written.
 
-Both approaches allow you to adopt and begin managing existing cloud resources with Pulumi, but they work in slightly different ways, and are suited to slightly different use cases. The sections below explain both in more detail.
-
-{{% notes "info" %}}
-Pulumi Cloud also offers [Visual Import](/docs/insights/discovery/visual-import/), a guided, point-and-click workflow that discovers existing cloud resources and generates IaC code for them --- no CLI required. It's available to [Pulumi Insights](/docs/insights/) users on the Team, Enterprise, and Business Critical editions.
-{{% /notes %}}
+Both approaches rely on the same underlying mechanics, described in [How resource import works](#how-resource-import-works) below, and both result in resources that are fully managed by Pulumi going forward. A third, older mechanism --- the [`import` resource option](#the-import-resource-option) --- is still supported and explained later in this guide, but it has generally been superseded by the two approaches above.
 
 ## How resource import works
 
@@ -53,7 +49,7 @@ You'll find the type token and lookup property in the Import section of the reso
 Make sure the resource provider is configured in a way that allows it to locate the resource you want to import --- e.g., that the resource is in the same region as other resources in your stack --- or the import operation may fail.
 {{< /notes >}}
 
-## Importing resources with the CLI
+## Approach 1: CLI-first import
 
 The `pulumi import` command looks up the resource using the specified type token and resource identifier, adds the resource to the stack's current state, and emits the code required to manage the resource with Pulumi from that point forward. This option requires the least manual effort, so is generally recommended, and is best suited to projects consisting of only one stack.
 
@@ -65,7 +61,7 @@ $ pulumi import <type> <name> <id>
 
 * The first argument, `type`, is the Pulumi type token to use for the imported resource.
 
-    As mentioned in [Where to find the type token and lookup property](#how-import-works), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
+    As mentioned in [Where to find the type token and lookup property](#where-to-find), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
 
 * The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource's [logical name](/docs/iac/concepts/resources/names/#logicalname), so like all Pulumi resource names, it must be unique among resources of the same type within the containing program. (That is, a program can contain an S3 bucket and a VPC both named `foo`, but it cannot contain two S3 buckets named `foo`.)
 
@@ -161,9 +157,62 @@ The following short video illustrates the `pulumi import` process end to end:
 
 {{< youtube "6qHVbu8vb4w" >}}
 
-## Bulk Import Operations
+## Approach 2: Program-first (bulk) import
 
-If you need to import multiple resources, the CLI `import` command can be used with a JSON file that contains references to existing cloud resources. Using a JSON file with the `import` command can be helpful as part of scripting large bulk imports of cloud resources.
+If you're importing many resources at once, or resources that are already described by a Pulumi program --- for example, a set of [components](/docs/iac/concepts/components/) --- it's usually easier to let Pulumi generate the import file for you rather than writing it by hand. The workflow has four steps:
+
+1. Write the Pulumi program that describes the infrastructure you want to import, using resources or components as appropriate. Don't run `pulumi up` yet --- the resources described by the program already exist in your cloud account, so applying the program as written would try to create them again.
+1. Run `pulumi preview --import-file <path>` to generate an import file for every resource the program would otherwise create. The generated file already has each resource's name, [URN](/docs/iac/concepts/resources/names/#urns), and type filled in, with a blank `id` field for each one.
+1. Edit the generated file, filling in the `id` field for each resource with its identifier from the cloud provider.
+1. Run `pulumi import --file <path>` to import all of the resources into your stack's state in a single operation.
+
+### Example: Import a component with all resources
+
+In this example, the Pulumi program defines a VPC component from the AWS Crosswalk for Pulumi library. The component is imported into the program using the `pulumi import` command.
+
+The following code creates a new VPC using all default settings:
+
+{{< example-program path="awsx-vpc" >}}
+
+Here is how you can import your existing infrastructure to start managing it with Pulumi:
+
+1. `pulumi preview --import-file import.json` to generate a placeholder import file for every resource that would be created. The resulting `import.json` file will look like this:
+
+    ```json
+    {
+        "resources": [
+            {
+                "type": "awsx:ec2:Vpc",
+                "name": "vpc",
+                "component": true
+            },
+            {
+                "type": "aws:ec2/vpc:Vpc",
+                "name": "vpcVpc",
+                "id": "<PLACEHOLDER>",
+                "parent": "vpc",
+                "logicalName": "vpc"
+            },
+            //... more resources
+        ]
+    }
+    ```
+
+    Note that the component is defined as a separate resource, and all `parent` values are set according to the preview.
+
+2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
+
+3. Import all the resources in one operation with:
+
+    ```
+    pulumi import --file import.json
+    ```
+
+The same approach can be used to import any component resource and its sub-resources.
+
+### Authoring an import file by hand
+
+You can also author an import file by hand rather than generating one with `pulumi preview --import-file`. This is useful when scripting a bulk import from an inventory of existing resources --- for example, resource IDs pulled from a cloud provider's API --- rather than from a Pulumi program you've already written.
 
 ```json
 {
@@ -453,53 +502,9 @@ A `Resource` has the following schema:
 
 To make it easier to import resources into complex programs, you can run `pulumi preview --import-file <file>` to generate a placeholder import file for every resource that would be created. The generated file will contain all the names, URNs, and types already filled in, with blank `id` fields that need to be filled in.
 
-### Example: Import a component with all resources
+## The `import` resource option
 
-In this example, the Pulumi program defines a VPC component from the AWS Crosswalk for Pulumi library. The component is imported into the program using the `pulumi import` command.
-
-The following code creates a new VPC using all default settings:
-
-{{< example-program path="awsx-vpc" >}}
-
-Here is how you can import your existing infrastructure to start managing it with Pulumi:
-
-1. `pulumi preview --import-file import.json` to generate a placeholder import file for every resource that would be created. The resulting `import.json` file will look like this:
-
-    ```json
-    {
-        "resources": [
-            {
-                "type": "awsx:ec2:Vpc",
-                "name": "vpc",
-                "component": true
-            },
-            {
-                "type": "aws:ec2/vpc:Vpc",
-                "name": "vpcVpc",
-                "id": "<PLACEHOLDER>",
-                "parent": "vpc",
-                "logicalName": "vpc"
-            },
-            //... more resources
-        ]
-    }
-    ```
-
-    Note that the component is defined as a separate resource, and all `parent` values are set according to the preview.
-
-2. Edit the JSON file to replace all `<PLACEHOLDER>` values with existing resource IDs from your AWS account.
-
-3. Import all the resources in one operation with:
-
-    ```
-    pulumi import --file import.json
-    ```
-
-The same approach can be used to import any component resource and its sub-resources.
-
-## Importing resources in code
-
-Another way to import existing cloud resources into a Pulumi project is in code, using the [`import` resource option](/docs/concepts/options/import/). This approach involves writing the code to define the resource yourself, which may be preferable in scenarios that call for importing multiple resources of the same type across multiple stacks and/or deployment environments.
+Before `pulumi preview --import-file` existed, the [`import` resource option](/docs/concepts/options/import/) was the recommended way to import multiple resources across multiple stacks or deployment environments: you added the option to a resource declaration you'd already written, and Pulumi imported the resource on the next update. It's documented here for completeness and because existing programs still use it, but for new work prefer CLI-first import or program-first (bulk) import, described above.
 
 Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
 
