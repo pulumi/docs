@@ -1,4 +1,5 @@
 ---
+include_floqer: true
 title: Case Studies
 description: See how our customers are using Pulumi to solve complex, real-world infrastructure challenges at scale.
 meta_desc: |

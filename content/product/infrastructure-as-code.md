@@ -1,4 +1,5 @@
 ---
+include_floqer: true
 title: "Infrastructure as code in Any Language – Pulumi IaC"
 meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
 meta_image: /images/product/infrastructure-as-code/iac-meta.png

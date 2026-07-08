@@ -1,4 +1,5 @@
 ---
+include_floqer: true
 title: "Pulumi Neo - Your AI Infrastructure Agent"
 layout: product-page
 type: page
