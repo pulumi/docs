@@ -189,8 +189,8 @@ If you're where I was two years ago: don't ask how AI fits into what you already
 
 ## Frequently asked questions
 
-{{< details "What is an AI-native software factory?" >}}
-An AI-native software factory is a software operation where autonomous agents write, review, and ship most of the code, while engineers define the work, talk to customers, and decide what gets built. The team handles what the agents can't; the factory keeps producing whether the engineers are at their desks or not.
+{{< details "What is a software factory?" >}}
+A software factory is a software operation run as a repeatable industrial process rather than a craft: work moves down an automated line instead of every feature being hand-built. In an AI-native software factory, autonomous agents write, review, and ship most of the code, while engineers define the work, talk to customers, and decide what gets built. The team handles what the agents can't; the factory keeps producing whether the engineers are at their desks or not.
 {{< /details >}}
 
 {{< details "How is a software factory different from traditional software development?" >}}
