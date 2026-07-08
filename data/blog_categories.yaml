@@ -38,7 +38,11 @@
 # -----------------------------------------------------------------------------
 #   id          Stable slug used in post front matter and by the linter.
 #   name        Human-readable display name.
-#   description What belongs here.
+#   description Reader-facing blurb shown on the category page (the term-page
+#               header and its meta/og description). Write it for blog readers,
+#               not authors — no internal taxonomy language.
+#   scope       What belongs here — internal guidance for authors/agents
+#               choosing a category. Never displayed on the site.
 #   use_when    One-line selection hint for authors/agents choosing a category.
 #   default     Present and true on exactly one category — the fallback kind.
 #
@@ -46,6 +50,9 @@ categories:
   - id: product
     name: "Product"
     description: >-
+      What's shipping across the Pulumi platform: new features, releases, and
+      announcements.
+    scope: >-
       Product releases, new features, GA/preview announcements, launch recaps,
       and roadmap posts — including Pulumi IaC, ESC, Insights, Neo, Copilot, and
       the rest of the platform.
@@ -56,6 +63,9 @@ categories:
   - id: engineering
     name: "Engineering"
     description: >-
+      How we build Pulumi: deep technical dives into the engineering behind
+      the platform.
+    scope: >-
       How we built it: deep technical dives, performance work, architecture of
       Pulumi itself, and behind-the-scenes engineering.
     use_when: >-
@@ -65,6 +75,9 @@ categories:
   - id: community
     name: "Community"
     description: >-
+      Events, meetups, open source, and stories from the Pulumi community
+      around the world.
+    scope: >-
       Events, meetups, webinars, hackathons, guest and community posts, open
       source, interns, and Pulumi community culture.
     use_when: >-
@@ -74,6 +87,9 @@ categories:
   - id: best-practices
     name: "Best Practices"
     description: >-
+      Patterns and guidance for cloud architecture, infrastructure as code,
+      platform engineering, and security.
+    scope: >-
       Architecture, infrastructure-as-code, platform-engineering, and
       security/governance patterns, guidance, and opinionated recommendations.
     use_when: >-
@@ -83,6 +99,9 @@ categories:
   - id: tutorials
     name: "Tutorials"
     description: >-
+      Hands-on, step-by-step guides that walk you through building real
+      infrastructure with Pulumi.
+    scope: >-
       Step-by-step how-tos and getting-started guides that walk the reader
       through accomplishing a specific task.
     use_when: >-
@@ -91,6 +110,9 @@ categories:
   - id: customers
     name: "Customers"
     description: >-
+      Real stories from teams running Pulumi in production, and the results
+      they've achieved.
+    scope: >-
       Customer stories, case studies, and posts centered on how a named
       customer uses Pulumi and the outcomes they achieved.
     use_when: >-
@@ -99,6 +121,9 @@ categories:
   - id: perspectives
     name: "Perspectives"
     description: >-
+      Ideas and opinions on cloud engineering, infrastructure as code, AI, and
+      where the industry is headed.
+    scope: >-
       Thought leadership and opinion: an author making an original argument or
       analysis in their own voice — a clear point of view on cloud engineering,
       IaC, AI, or platform trends. The "here's how I think about this" essays.
@@ -111,6 +136,9 @@ categories:
   - id: company
     name: "Company"
     description: >-
+      News and milestones from Pulumi: funding, partnerships, and company
+      growth.
+    scope: >-
       Company news and milestones: funding, growth, hiring, partnerships,
       acquisitions, brand, and year-in-review reflections.
     use_when: >-
@@ -121,6 +149,8 @@ categories:
     name: "General"
     default: true
     description: >-
+      Explainers, comparisons, and guides on cloud infrastructure and DevOps.
+    scope: >-
       The default catch-all kind for posts that don't clearly fit one of the
       specific categories above: SEO-oriented comparisons ("X vs Y"), "what is
       X" explainers, "top N tools" listicles, trend roundups, and marketing or

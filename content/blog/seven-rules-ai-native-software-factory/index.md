@@ -4,7 +4,6 @@ date: 2026-05-21T06:00:00-07:00
 draft: false
 meta_desc: "Ewan Dawson, CTO of Compostable AI, on building a software factory where AI agents write the code. Seven rules learned across nineteen client deployments."
 feature_image: feature.png
-youtube_id: oHNdlWlsR-w
 authors:
     - ewan-dawson
     - adam-gordon-bell
@@ -37,6 +36,8 @@ social:
 *Ewan Dawson is CTO of [Compostable AI](https://compostable.ai/), where five engineers run an AI-native software factory: nineteen clients, custom AWS deployments, most of them shipped within a day of contract signing. This article is adapted from his recent Pulumi webinar, and covers rules in more depth than we had time for on stage.*
 
 <!--more-->
+
+{{< youtube "oHNdlWlsR-w?rel=0" >}}
 
 For the past twenty years, I've viewed software development as a craft. The best engineers drew on decades of experience to get every function right.
 

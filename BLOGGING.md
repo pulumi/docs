@@ -104,7 +104,7 @@ The vocabulary is grouped roughly as:
 
 **Series**
 
-A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug` **and** add that same slug to the post's `tags`. Both are required and must match: the `series` key drives the in-post "In This Series" sidebar (siblings are found via `.Params.series`), while the tag makes the post appear on the series landing page at `/blog/tag/<slug>/` (which is what `/blog/series/` links to). `make lint` fails if a post has one without the other. To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set both `series` and the tag on each member post. Series are optional — most posts don't belong to one.
+A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug` **and** add that same slug to the post's `tags`. Both are required and must match: the `series` key drives the in-post "In This Series" sidebar (siblings are found via `.Params.series`) and the `<Series Title>: Part N` badge shown on the post hero in place of the category badge, while the tag makes the post appear on the series landing page at `/blog/tag/<slug>/` (which is what `/blog/series/` links to). `make lint` fails if a post has one without the other. To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set both `series` and the tag on each member post. Series are optional — most posts don't belong to one.
 
 **Canonical link**
 
@@ -115,6 +115,48 @@ Additionally, if you're writing a blog post to announce a new product or feature
 **Schema type (structured data)**
 
 Blog posts automatically get BlogPosting schema for SEO. You can optionally override this with `schema_type` in frontmatter if needed (rare). See [SCHEMA.md](./SCHEMA.md) for details.
+
+**Resource links**
+
+To render a list of labeled, icon-accompanied links at the bottom of the post — docs, GitHub repo, feature request, community Slack, video, and so on — use the optional `resource_links` list. Each entry has a `type` (which maps to an icon and default label), a `url`, and an optional `text` to override the label:
+
+```yaml
+resource_links:
+    - type: documentation
+      url: /docs/iac/cli/
+    - type: github
+      url: https://github.com/pulumi/pulumi
+    - type: slack
+      url: https://slack.pulumi.com/
+    - type: feature-request
+      url: https://github.com/pulumi/pulumi/issues/new
+      text: "Request this feature"      # optional; overrides the default label
+```
+
+The available `type` values and their icons/default labels are the single source of truth in [`data/blog_link_types.yaml`](./data/blog_link_types.yaml) (currently `documentation`, `registry`, `feature-request`, `issue`, `slack`, `github`, `video`, `discussion`). External URLs open in a new tab; internal ones don't. To add a new link type, add an entry to that data file. Prefer this over hand-writing a bulleted list of links at the end of the post.
+
+**Updated date**
+
+Set `updated: YYYY-MM-DD` to show an "Updated \<date\>" line next to the publish date in the hero (it also stamps `article:modified_time` for SEO). Use it when you materially revise an older post — leave the original `date` unchanged.
+
+**Related posts**
+
+The bottom of every post shows up to four related posts, auto-selected by Hugo's Related Content. To pin specific posts first, set `related_posts` to a list of post slugs (the folder names under `content/blog/`); Hugo fills any remaining slots automatically:
+
+```yaml
+related_posts:
+    - my-earlier-post
+    - another-relevant-post
+```
+
+**Author roles**
+
+To label an author's role on the byline (for example, an interviewee credited "as told to"), set `author_roles` as a map of author id → label:
+
+```yaml
+author_roles:
+    adam-gordon-bell: "as told to"
+```
 
 ### Creating Author Profiles
 
@@ -186,7 +228,7 @@ When you generate a new post, a placeholder `feature_image` is included:
 
 - **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page. It also drives the post's **social/OpenGraph card** (the 1200×628 image used in Twitter cards, unfurled Slack links, etc. and on the blog home page), which is generated on-brand at **build time** from the post title + feature image. You no longer create or commit a separate `meta_image` — leave it blank.
 
-The `feature_image` is optional but strongly recommended; without one the build-time card falls back to a generic branded plate.
+The `feature_image` is optional but strongly recommended. Without one, the post-page hero and the listing cards show **no image** — the title and metadata simply span the full width (most pre-redesign posts are like this). Only the build-time social card falls back to a generic branded plate; the on-page layout no longer shows a placeholder.
 
 If you'd like a custom-designed feature image, label your PR with `needs-design` and a designer will create one for your post. Alternatively, use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
 

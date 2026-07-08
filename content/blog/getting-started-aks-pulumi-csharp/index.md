@@ -4,6 +4,7 @@ allow_long_title: true
 h1: "Six Live Kubernetes Recommendations: AKS, Cilium, Rate Limiting, and More"
 date: 2026-06-15T12:00:00Z
 draft: false
+feature_image: feature.png
 meta_desc: "Deploy an AKS cluster with Pulumi C#. Six Kubernetes recommendations from a live workshop, including the Docker Hub rate limit that hit mid-demo."
 authors:
     - adam-gordon-bell

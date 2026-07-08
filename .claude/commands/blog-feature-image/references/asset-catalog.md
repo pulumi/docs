@@ -20,6 +20,16 @@ Located in `templates/`. Feature templates are 1884×1256px PNGs used as the blo
 | feature-logo-1.png | Single large circular logo placeholder |
 | feature-logo-2.png | Two circular logo placeholders |
 | feature-logo-3.png | Three circular logo placeholders |
+| feature-shape-circle.png | Outline circle — general-purpose abstract (focus, wholeness) |
+| feature-shape-square.png | Outline square — general-purpose abstract (building blocks, components) |
+| feature-shape-diamond.png | Outline diamond — general-purpose abstract (decisions, data flow, networking) |
+| feature-shape-hexagon.png | Outline hexagon — Kubernetes-adjacent, modules, packages |
+| feature-shape-lock.png | Outline lock — security, secrets, encryption, access control |
+| feature-shape-shield.png | Outline shield — security posture, compliance, policy (shape counterpart to feature-shield.png) |
+| feature-shape-speech-bubble.png | Outline speech bubble — community, Q&A, announcements, AI chat/agents |
+| feature-shape-sync-diamond.png | Outline diamond with sync arrows — CI/CD, automation, deployments, drift |
+
+The eight `feature-shape-*` templates are dual-use: the center takes either a **solid phosphor icon** (fill weight, flat-tinted `#C3BDFF`) or a **single small logo**.
 
 ### Logo Placeholder Positions (feature logo templates)
 
@@ -36,6 +46,22 @@ These positions are stored in `catalog.yaml` and used by the compose script auto
 - Top: x=720, y=234, 390×390px (center 915,429)
 - Bottom-left: x=499, y=630, 390×390px (center 694,825)
 - Bottom-right: x=993, y=630, 390×390px (center 1188,825)
+
+**feature-shape-\*** (all eight, one shared centered placeholder):
+- Placeholder: x=772, y=458, 340×340px (center 942,628 — the shape's clear space)
+- A phosphor icon renders at 290px (25px padding); a logo renders ~228px (standard placeholder padding)
+
+## Icons
+
+Located in `icons/`. Solid **fill-weight** [Phosphor](https://phosphoricons.com) icons for the center of the `feature-shape-*` templates, always flat-tinted violet-primary dark (`#C3BDFF`) by the compose script.
+
+Fetched on demand and cached (committed) here, named `<slug>-fill.svg`:
+
+```
+https://raw.githubusercontent.com/phosphor-icons/core/main/assets/fill/<slug>-fill.svg
+```
+
+On a 404, search phosphoricons.com for the correct kebab-case slug. Never use the regular/bold/duotone weights.
 
 ## Logos
 
@@ -77,9 +103,16 @@ Located in `logos/`. SVG product/technology logos placed on top of white placeho
 | **Security, secrets, compliance, and policy** | shield |
 | **Tutorials, how-tos, best practices, and guest posts** | lightbulb |
 | **Cloud provider or technology-specific content** | logo variant with provider/tech logos |
+| **Security, secrets, encryption, access control** | shape: lock (icon or logo centerpiece) |
+| **Security posture, compliance, policy** | shape: shield |
+| **Community, Q&A, announcements, AI chat/agents** | shape: speech bubble |
+| **CI/CD, automation, deployments, drift** | shape: sync diamond |
+| **Kubernetes, modules, packages, components** | shape: hexagon |
+| **Topic with a strong phosphor-icon match but no single obvious logo** | shape: circle / square / diamond (pick by icon silhouette fit) |
 
 ## Composition Rules
 
 1. **Logos go on the circular placeholders** — the compose script centers each logo within the measured placeholder bounds
 2. **1-3 logos max** — the template determines the slot count; select the template matching the logo count
 3. **Tint** — logos are tinted into Pulumi's lavender accent by default (`overlay` mode); use `color` mode to preserve internal contrast
+4. **Shape templates take one centerpiece** — either `icon` (a phosphor fill SVG, always overlay-tinted `#C3BDFF`) or a single-entry `logos` list, never both

@@ -1,7 +1,5 @@
 ---
 title: "Pulumi Blog: All series"
 layout: series
-meta_desc: A list of all Pulumi blog series including a description of each.
+meta_desc: Browse every Pulumi blog series — multi-part guides on infrastructure as code, Kubernetes, platform engineering, and more.
 ---
-
-All [Pulumi blog](/blog/) series.

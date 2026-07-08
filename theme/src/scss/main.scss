@@ -121,6 +121,14 @@ $sitenav-offset: calc($sitenav-height + 16px);
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+
+    // Round all YouTube embeds. The `youtube` shortcode and youtube.html partial
+    // render a full-bleed iframe in a bare wrapper, so putting the radius on the
+    // iframe itself clips its corners regardless of the surrounding markup.
+    iframe[src*="youtube.com/embed"],
+    iframe[src*="youtube-nocookie.com/embed"] {
+        @apply rounded-lg;
+    }
 }
 
 @layer components {
@@ -135,6 +143,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "marketing/automation-api";
     @import "badges";
     @import "benefits";
+    @import "blog";
     @import "breadcrumb";
     @import "button";
     @import "buttons";
@@ -167,7 +176,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "github-card";
     @import "neo-card";
     @import "docs/packages";
-    @import "pagination";
     @import "marketing/product";
     @import "responsive-video";
     @import "marketing/pulumi-deployments";
@@ -356,12 +364,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    .blog-list-description {
-        // Make the min height of the section equal to the anchor-wrapped image
-        // and padding, so the border isn't misaligned on items with shorter descriptions.
-        min-height: 178px;
-    }
-
     pulumi-tree-item {
         &::part(expand-collapse-button) {
             @apply text-xs;
@@ -374,7 +376,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     }
 
     section.newsletter-input pulumi-hubspot-form input.hs-input {
-        @apply rounded;
+        @apply rounded-lg;
     }
 }
 

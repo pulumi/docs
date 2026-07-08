@@ -1,0 +1,28 @@
+{{- /*
+    Auto related posts, full-width list rows at the bottom of the post page. A
+    post's `related_posts:` front matter (list of slugs) fills first, then Hugo's
+    built-in Related Content (see `related` in config.yml) tops up to 6. Call with
+    the post page context.
+*/ -}}
+{{- $page := . -}}
+{{- $related := slice -}}
+{{- range $page.Params.related_posts -}}
+    {{- with site.GetPage (printf "/blog/%s" .) }}{{ $related = $related | append . }}{{ end -}}
+{{- end -}}
+{{- if lt (len $related) 6 -}}
+    {{- range (first 12 (site.RegularPages.Related $page)) -}}
+        {{- if and (lt (len $related) 6) (ne . $page) (not (in $related .)) (eq .Section "blog") (not .Params.layout) -}}
+            {{- $related = $related | append . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- with $related }}
+<section class="border-t border-gray-200">
+    <div class="mx-auto max-w-[1220px] px-4 py-10 lg:py-12">
+        <p class="font-overline m-0! mb-6 text-service-black">Related posts</p>
+        <div class="flex flex-col">
+            {{ range . }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
+        </div>
+    </div>
+</section>
+{{- end }}

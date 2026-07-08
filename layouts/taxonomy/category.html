@@ -1,0 +1,19 @@
+{{ define "main" }}
+    {{- /* Blog category term page. Title/description come from
+        data/blog_categories.yaml (single source of truth), keyed by .Data.Term. */ -}}
+    {{ $term := .Data.Term }}
+    {{ $name := $term | humanize }}
+    {{ $desc := "" }}
+    {{ range site.Data.blog_categories.categories }}
+        {{ if eq .id $term }}{{ $name = .name }}{{ $desc = .description }}{{ end }}
+    {{ end }}
+
+    {{ partial "blog/header.html" (dict "title" $name "url" .RelPermalink "description" $desc "context" .) }}
+
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        {{ $posts := (where .Data.Pages "Section" "blog").ByDate.Reverse }}
+        {{ $paginator := .Paginate $posts }}
+        {{ partial "blog/interleaved-list.html" (dict "paginator" $paginator "pages" $posts) }}
+        {{ partial "blog/paginator.html" . }}
+    </div>
+{{ end }}

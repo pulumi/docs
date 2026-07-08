@@ -81,7 +81,7 @@ Every blog post carries a required, singular `category` value — the *kind* of 
 
 `general` is the **default catch-all** — the correct home for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, "top N tools" listicles, trend roundups, marketing/solution pages). The job of this lane is to make sure a post landed in the right place relative to `general`.
 
-Read the post whole-file (already mandatory) and load the kind definitions + `use_when` hints from `data/blog_categories.yaml`. Then make these judgments, each surfacing as a `⚠️ Low-confidence` finding (never a publishing blocker — categorization is editorial and the author may have context you don't):
+Read the post whole-file (already mandatory) and load the kind definitions (the `scope` field — not the reader-facing `description`) + `use_when` hints from `data/blog_categories.yaml`. Then make these judgments, each surfacing as a `⚠️ Low-confidence` finding (never a publishing blocker — categorization is editorial and the author may have context you don't):
 
 1. **Over-promoted into a specific kind — should be `general`.** This is the priority case. A post categorized as a specific kind (`best-practices`, `product`, `tutorials`, …) that is really SEO/marketing content with no genuine substance of that kind: a comparison ("X vs Y") filed as `product`, a "top/best N tools" listicle or "what is / why choose / when to use" explainer filed as `best-practices`, a trend/prediction roundup filed as `perspectives`, a thin solution/funnel page filed as `product`. Quote the title + the deciding structural evidence (comparison framing, listicle headings, no runnable steps, no original thesis) and propose **`category: general`**.
 
