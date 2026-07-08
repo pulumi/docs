@@ -67,6 +67,8 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       curl https://www.pulumi.com/registry/packages/aws.md
       curl https://www.pulumi.com/registry.md
 
+- **Doing infrastructure work as an agent** — the Pulumi CLI is designed for agents: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/organizations-teams/agent-accounts/) on first use — no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/skills/) provide proven Pulumi workflows, and the [Pulumi MCP server](https://www.pulumi.com/docs/ai/mcp-server/) exposes stacks, resource search, and the Registry as MCP tools.
+
 ## Site overview
 
 This llms.txt covers www.pulumi.com, which includes:
@@ -74,7 +76,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
 - [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
-- [Pulumi Neo](https://www.pulumi.com/neo/): Pulumi's AI agent for building and managing cloud infrastructure
+- [Infrastructure AI](https://www.pulumi.com/docs/ai/): Using AI agents with Pulumi — bring your own agent via [Agent Skills](https://www.pulumi.com/docs/ai/skills/) and the [MCP server](https://www.pulumi.com/docs/ai/mcp-server/), or use [Pulumi Neo](https://www.pulumi.com/neo/), Pulumi's purpose-built infrastructure agent
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
 - [What is...](https://www.pulumi.com/what-is/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)

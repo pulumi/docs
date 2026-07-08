@@ -20,7 +20,7 @@ items:
       - heading: Key capabilities
         columns: 2
         items:
-          - label: Agentic infrastructure
+          - label: AI infrastructure agent
             href: /product/neo/
             description: Meet Neo, our AI-powered infrastructure engineering agent
             icon: custom/pulumi-neo

@@ -56,7 +56,7 @@ columns:
       - label: Insights & governance
         href: /product/insights-governance/
         track: footer-platform-insights
-      - label: Agentic infrastructure
+      - label: AI infrastructure agent
         href: /product/neo/
         track: footer-platform-neo
       - label: Internal developer platform

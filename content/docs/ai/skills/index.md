@@ -7,7 +7,7 @@ menu:
     ai:
         name: Agent Skills
         parent: ai-home
-        weight: 60
+        weight: 5
 aliases:
 - /docs/ai/agent-skills/
 ---
@@ -197,3 +197,9 @@ We welcome contributions to Pulumi Agent Skills. Visit the [agent-skills reposit
 - Report issues
 
 See the [CONTRIBUTING.md](https://github.com/pulumi/agent-skills/blob/main/CONTRIBUTING.md) file for guidelines.
+
+## See also
+
+- [Pulumi MCP server](/docs/ai/mcp-server/) - give your agent live access to your Pulumi Cloud resources and the Registry
+- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
+- [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/) - the broader picture of AI agents operating infrastructure

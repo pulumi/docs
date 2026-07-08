@@ -527,6 +527,8 @@ For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the 
 npx skills add pulumi/agent-skills --skill '*'
 ```
 
+You can also connect your assistant to the [Pulumi MCP server](/docs/ai/mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
+
 ## Installing betas and previous versions
 
 Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available versions](/docs/install/versions/) page.

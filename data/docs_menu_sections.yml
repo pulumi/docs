@@ -4,6 +4,8 @@
   label: Getting Started
 - menu: iac
   label: Infrastructure as Code
+- menu: ai
+  label: Infrastructure AI
 - menu: deployments
   label: Deployments & Workflows
 - menu: esc
@@ -12,8 +14,6 @@
   label: Insights & Governance
 - menu: idp
   label: Internal Developer Platform
-- menu: ai
-  label: Infrastructure AI
 - menu: administration
   label: Administration
 - menu: integrations

@@ -271,7 +271,7 @@ sections:
       - image: /images/home/ai-card-image.svg
         image_alt: AI for infrastructure illustration
         title: AI for infrastructure
-        description: Generate, debug, and refactor your infrastructure code with built-in best practices and full organizational context.
+        description: Bring your own coding agent — or use Pulumi Neo — to generate, debug, and refactor infrastructure code with built-in best practices and full organizational context.
     anchor: platform
 
   - type: testimonial
@@ -294,7 +294,7 @@ sections:
         cta_link: /product/infrastructure-as-code/
       - title: Meet Neo, your AI platform engineer
         description: |
-          The first AI agent built for infrastructure. Pulumi Neo understands your code and organizational context, respects your policies, and executes complex tasks end-to-end — with or without a human in the loop.
+          The first AI agent built for infrastructure. Pulumi Neo understands your code and organizational context, respects your policies, and executes complex tasks end-to-end — with or without a human in the loop. It works alongside the coding agents you already use.
         image: /images/home/neo-card-image.svg
         image_alt: Pulumi Neo AI platform engineer
         cta_text: Learn more about Neo

@@ -1,17 +1,20 @@
 ---
-title: MCP Integrations
-title_tag: Neo MCP Integrations
-h1: MCP Integrations
+title: External MCP Servers
+title_tag: Neo External MCP Server Integrations
+h1: External MCP Servers
 meta_desc: Connect Neo to external services through Model Context Protocol servers, bringing issue tracker, observability, and runbook context into Neo tasks.
 menu:
     ai:
-        name: MCP Integrations
+        name: External MCP servers
         parent: ai-integrations
         weight: 0
         identifier: ai-integrations-mcp
 ---
 
 MCP integrations connect Neo to external services that expose a [Model Context Protocol](https://modelcontextprotocol.io/) server. Once connected, Neo can use those services as tools during a [task](/docs/ai/tasks/), with credentials managed centrally in Pulumi Cloud.
+
+> [!INFO]
+> This page is about connecting Neo to other services' MCP servers. To connect your own AI agent (Claude Code, Cursor, and others) to Pulumi, see the [Pulumi MCP server](/docs/ai/mcp-server/).
 
 MCP integrations are configured at the organization level by an administrator. Once enabled, they are available to all Neo tasks in the organization.
 
