@@ -15,8 +15,8 @@ aliases:
 
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
-include_floqer: true
 meta_image: /images/product/neo/neo-meta.png
+include_floqer: true
 
 sections:
   - type: hero

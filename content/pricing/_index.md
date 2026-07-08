@@ -1,9 +1,9 @@
 ---
 title: Pricing
 meta_desc: Pulumi IaC and Pulumi ESC are available in various editions and are free to individuals
-include_floqer: true
 type: page
 layout: pricing
+include_floqer: true
 menu:
     header:
         weight: 2
