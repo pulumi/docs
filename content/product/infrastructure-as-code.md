@@ -4,6 +4,7 @@ meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, o
 meta_image: /images/product/infrastructure-as-code/iac-meta.png
 type: page
 layout: product-page
+include_floqer: true
 aliases:
   - /product/iac
   - /product/pulumi-iac

@@ -4,6 +4,7 @@ meta_desc: Build, deploy, and manage cloud infrastructure faster. Write code in 
 meta_image: /images/product/overview/overview-meta.png
 type: page
 layout: product-page
+include_floqer: true
 
 aliases:
   - /product/pulumi-cloud/
