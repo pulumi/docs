@@ -4,6 +4,7 @@ meta_desc: Centralize secrets and configurations with Pulumi ESC. Connect any va
 meta_image: /images/product/secrets-management/esc-meta.png
 type: page
 layout: product-page
+include_floqer: true
 aliases:
   - /esc
   - /product/esc
