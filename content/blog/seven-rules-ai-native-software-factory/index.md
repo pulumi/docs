@@ -179,7 +179,7 @@ A factory scattered across laptops can't be improved as a system. Cloud keeps it
 
 ## How to build an AI-native software factory
 
-There's no single blueprint for how to build a software factory, but these seven rules are a practical path — the software factory model we run at Compostable AI. As a concrete software factory example, that means: transform the workflow rather than bolt AI onto it, remove problems instead of engineering around them, pick tools your agents can drive, split work across specialized agents, measure human hours per unit of value, design for convergence over one-shot correctness, and run the factory in the cloud so it operates 24/7. None of it is a template — it's the practice of applying each rule where the new economics actually change what's hard.
+There's no single blueprint for how to build a software factory, but these seven rules are the software factory model we run at Compostable AI: transform the workflow rather than bolt AI onto it, remove problems instead of engineering around them, pick tools your agents can drive, split work across specialized agents, measure human hours per unit of value, design for convergence over one-shot correctness, and run the factory in the cloud so it operates 24/7.
 
 ## Closing thought
 
@@ -190,23 +190,23 @@ If you're where I was two years ago: don't ask how AI fits into what you already
 ## Frequently asked questions
 
 {{< details "What is a software factory?" >}}
-A software factory is a software operation run as a repeatable industrial process rather than a craft: work moves down an automated line instead of every feature being hand-built. In an AI-native software factory, autonomous agents write, review, and ship most of the code, while engineers define the work, talk to customers, and decide what gets built. The team handles what the agents can't; the factory keeps producing whether the engineers are at their desks or not.
+A software factory is a software operation run as a repeatable industrial process rather than a craft: work moves down an automated line instead of every feature being hand-built. In an AI-native software factory, autonomous agents write and ship most of the code, while engineers decide what gets built and talk to customers. The team handles what the agents can't. The factory keeps producing whether the engineers are at their desks or not.
 {{< /details >}}
 
 {{< details "What is an AI software factory?" >}}
-An AI software factory (or AI-native software factory) is a software factory where AI agents do most of the building. Instead of enhancing a traditional workflow with AI tools, the whole delivery line is redesigned around what agents can do: agents write, review, and check the code through an automated loop, and engineers focus on defining the work and deciding what to build. At Compostable AI, five engineers run one across nineteen clients.
+An AI software factory, or AI-native software factory, is a software factory where AI agents do most of the building. Instead of enhancing a traditional workflow with AI tools, the whole delivery line is redesigned around what agents can do: agents write and check the code through an automated loop, and engineers focus on defining the work and deciding what to build. At Compostable AI, five engineers run one across nineteen clients.
 {{< /details >}}
 
 {{< details "How is a software factory different from traditional software development?" >}}
-Traditional development treats code as a craft — each function written and reviewed by hand. A software factory treats software delivery as an industrial process: agents handle the writing and checking through an automated, converging loop, and the expensive human hours move to defining the work and deciding what to build. The goal is to minimize human hours per unit of value shipped.
+Traditional development treats code as a craft, each function written and reviewed by hand. A software factory treats software delivery as an industrial process: agents handle the writing and checking through an automated, converging loop, and the expensive human hours move to defining the work and deciding what to build. The goal is to minimize human hours per unit of value shipped.
 {{< /details >}}
 
 {{< details "How do you keep AI agents from breaking things across customers?" >}}
-Rather than build a shared multi-tenant sandbox, Compostable AI removes the problem: every client gets two dedicated AWS accounts — one for production and a "digital twin" staging account. Agents iterate on staging until the work checks out, and only then does it ship to production. Infrastructure-as-code tools like AWS Control Tower and Pulumi make running that account fleet tractable for a small team.
+Rather than build a shared multi-tenant sandbox, Compostable AI removes the problem: every client gets two dedicated AWS accounts, one for production and a "digital twin" staging account. Agents iterate on staging until the work checks out, and only then does it ship to production. Infrastructure-as-code tools like AWS Control Tower and Pulumi make running that account fleet tractable for a small team.
 {{< /details >}}
 
 {{< details "What tools does an AI-native software factory need?" >}}
-Tools your agents can actually drive — anything with a robust API and a clean CLI, rather than click-ops around a web UI. Compostable AI expresses infrastructure as type-safe TypeScript with [Pulumi](/), pairs it with [Pulumi Neo](/product/neo/) for domain-specific infrastructure skills, and uses [Pulumi ESC](/docs/pulumi-cloud/esc/) for configuration. If part of your stack still requires a human to click through a UI, your agents stop there.
+Tools your agents can actually drive, anything with a solid API and a clean CLI, rather than click-ops around a web UI. Compostable AI expresses infrastructure as type-safe TypeScript with [Pulumi](/), pairs it with [Pulumi Neo](/product/neo/) for domain-specific infrastructure skills, and uses [Pulumi ESC](/docs/pulumi-cloud/esc/) for configuration. If part of your stack still requires a human to click through a UI, your agents stop there.
 {{< /details >}}
 
 ---
