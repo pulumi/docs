@@ -31,16 +31,15 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync, statSync } from "fs"
 import { dirname, join, relative } from "path"
 import { createHash } from "crypto"
-import satori from "satori"
-import { Resvg } from "@resvg/resvg-js"
+import { Worker } from "worker_threads"
+import { cpus } from "os"
 import matter from "gray-matter"
 import { createRequire } from "module"
 import {
-  REPO_ROOT, clean, once, h, fitTitle, clampText, titleTextStyle,
-  badge, intrinsicSize, svgDataUri, loadFonts, titleFont,
+  REPO_ROOT, clean, once, intrinsicSize, loadFonts, titleFont,
 } from "./meta-images/lib.mjs"
-import { eventsTree, eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
-import { blogTree } from "./meta-images/blog.mjs"
+import { eventFieldsFromFrontmatter } from "./meta-images/events.mjs"
+import { renderPng, CANVAS_W, CANVAS_H } from "./meta-images/render.mjs"
 
 const require = createRequire(import.meta.url)
 const yaml = require("js-yaml")
@@ -48,9 +47,6 @@ const yaml = require("js-yaml")
 const CONTENT_DIR = join(REPO_ROOT, "content")
 const OUT_ROOT = join(REPO_ROOT, "assets", "images", "generated")
 const MANIFEST = join(OUT_ROOT, ".manifest.json")
-
-const CANVAS_W = 1200
-const CANVAS_H = 628
 
 // Bump when any template changes visually so cached cards regenerate.
 // v3: added the og-info (4-field) template + multi-template/recursive support.
@@ -68,33 +64,6 @@ const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(
 
 // Drop a corner/sub label that just repeats the page's own title.
 const dropIfEchoesTitle = (sub, title) => (sub && sub.trim().toLowerCase() === title.trim().toLowerCase() ? "" : sub)
-
-// --- Brand colors (dark mode; inlined from the Pulumi brand palette) ---------
-// Used only by the "info" template (docs). The light templates use LIGHT below.
-const COLORS = {
-  bg: "#231f33", // violet 50 (dark)
-  fg: "#ffffff", // utility foreground
-  violet: "#c3bdff", // violet 700 (dark) — badge bg, description, title accent
-  serviceBlack: "#1f1b21",
-  divider: "#492e8e", // violet muted (dark)
-}
-
-// --- Brand colors (light cards: "title" + "case-study"). Tokens from the Figma
-// "Social assets — banners" light frames (file LL0EBmlsbsDRXFQbWnM16n). --------
-const LIGHT = {
-  bg: "#f5f5ff", // violet background
-  fg: "#1f1b21", // utility foreground — title
-  muted: "#6a6675", // utility foreground muted — description / sub-label
-  badgeBg: "#5a30c5", // violet primary — badge fill
-  badgeFg: "#ffffff", // on-violet text
-  divider: "#dedbff", // violet muted — header divider
-}
-
-// Role-based palettes for the shared docs-style template (infoTree). INFO_DARK
-// reproduces the original docs card byte-for-byte; INFO_LIGHT is the tutorials
-// variant. logo is bundled in since the dark/light cards use different marks.
-const INFO_DARK = { bg: COLORS.bg, fg: COLORS.fg, badgeBg: COLORS.violet, badgeFg: COLORS.serviceBlack, desc: COLORS.violet, divider: COLORS.divider, subLabel: COLORS.fg, logo: null }
-const INFO_LIGHT = { bg: LIGHT.bg, fg: LIGHT.fg, badgeBg: LIGHT.badgeBg, badgeFg: LIGHT.badgeFg, desc: LIGHT.muted, divider: LIGHT.divider, subLabel: LIGHT.fg, logo: null }
 
 // Docs nav-area labels, keyed by the top-level path segment under content/docs/.
 const menuLabels = once(() => {
@@ -246,14 +215,6 @@ const SECTIONS = [
   },
 ]
 
-// --- Bundled SVG assets ------------------------------------------------------
-const ACCENTS = svgDataUri("og-bg.svg")
-const LINES_BOTTOM = svgDataUri("lines-bottom.svg")
-const LOGO = svgDataUri("pulumi-logo-horizontal-color-dark.svg") // light text → dark cards
-const LOGO_LIGHT = svgDataUri("pulumi-logo-horizontal-color-light.svg") // dark text → light cards
-INFO_DARK.logo = LOGO
-INFO_LIGHT.logo = LOGO_LIGHT
-
 // --- Customer logo (case-study co-brand) -------------------------------------
 // Resolve a frontmatter logo path ("/logos/customers/foo.svg") under static/ to
 // a data URI + display dims scaled into the header lockup. Returns null when the
@@ -274,102 +235,6 @@ function customerLogo(p, { maxH = 52, maxW = 260 } = {}) {
   let dw = (w / h) * maxH, dh = maxH
   if (dw > maxW) { dw = maxW; dh = (h / w) * maxW }
   return { uri: `data:${mime};base64,${buf.toString("base64")}`, w: Math.round(dw), h: Math.round(dh) }
-}
-
-// --- Template: "title" (what-is, migrate, partner, topics, case-studies index)
-// — centered title on the light brand field. ----------------------------------
-const T_PAD_X = 152
-const T_BOX_W = CANVAS_W - 2 * T_PAD_X
-const T_BOX_H = 363
-async function titleTree(fields) {
-  // Largest font (96..40) whose wrapped title fits 90% of the box height;
-  // lineClamp uses the full-height line count as a safety net.
-  const font = await titleFont()
-  const fit = fitTitle(font, fields.title, { maxFont: 96, minFont: 40, boxW: T_BOX_W, boxH: T_BOX_H })
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
-    h("img", { src: ACCENTS, width: CANVAS_W, height: CANVAS_H, style: { position: "absolute", top: 0, left: 0, width: CANVAS_W, height: CANVAS_H } }),
-    h("div", { style: { position: "absolute", top: 45, left: 0, width: CANVAS_W, display: "flex", justifyContent: "center" } },
-      h("img", { src: LOGO_LIGHT, height: 60, style: { height: 60 } })),
-    h("div", { style: { position: "absolute", top: 122, left: 0, width: CANVAS_W, height: T_BOX_H, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: `0 ${T_PAD_X}px` } },
-      h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), textOverflow: "ellipsis", color: LIGHT.fg, textAlign: "center" } }, fields.title)))
-}
-
-// --- Template: docs-style card — section-label badge, optional corner label,
-// title, description. Palette-driven: INFO_DARK = "info" (docs); INFO_LIGHT =
-// "tutorial" (tutorials). -----------------------------------------------------
-const I_LEFT = 30
-const I_W = 1140
-const I_HEADER_TOP = 25 // scooted up 20px from the Figma 45
-const I_HEADER_BOTTOM = I_HEADER_TOP + 60 + 24 + 1 // logo row + gap + divider
-const I_LINES_TOP = CANVAS_H - 159 // top of the bottom accent strip
-const SUB_LABEL_MAX = 30 // corner label char cap (mono); longer → ellipsis
-async function infoTree(fields, P) {
-  const { sectionLabel, title, description } = fields
-  const subSectionLabel = fields.subSectionLabel && fields.subSectionLabel.length > SUB_LABEL_MAX
-    ? `${fields.subSectionLabel.slice(0, SUB_LABEL_MAX - 1).trimEnd()}…`
-    : fields.subSectionLabel
-  const font = await titleFont()
-  const maxLines = description ? 2 : 3
-  const fit = fitTitle(font, title, { maxFont: 64, minFont: 40, boxW: I_W, maxLines })
-  const titleText = clampText(font, title, fit.fontSize, I_W * 0.98, fit.lineClamp)
-  const descText = description ? clampText(font, description, 32, 1088, 3, 0) : ""
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: P.bg, fontFamily: "Inter" } },
-    h("img", { src: LINES_BOTTOM, width: CANVAS_W, height: 159, style: { position: "absolute", left: 0, top: I_LINES_TOP, width: CANVAS_W, height: 159 } }),
-    // Header (top): logo + section-label badge, corner label, divider.
-    h("div", { style: { position: "absolute", top: I_HEADER_TOP, left: I_LEFT, width: I_W, display: "flex", flexDirection: "column", gap: 24 } },
-      h("div", { style: { display: "flex", width: I_W, alignItems: "center", justifyContent: "space-between" } },
-        h("div", { style: { display: "flex", alignItems: "center", gap: 24 } },
-          h("img", { src: P.logo, width: 241, height: 60, style: { width: 241, height: 60 } }),
-          sectionLabel ? badge(sectionLabel, P.badgeBg, P.badgeFg) : null),
-        subSectionLabel ? h("div", { style: { fontFamily: "Monaspace Neon", fontSize: 28, letterSpacing: 1.4, textTransform: "uppercase", color: P.subLabel } }, subSectionLabel) : null),
-      h("div", { style: { width: I_W, height: 1, backgroundColor: P.divider } })),
-    // Body: title + description, vertically centered between header and lines.
-    h("div", { style: { position: "absolute", left: I_LEFT, top: I_HEADER_BOTTOM, width: I_W, height: I_LINES_TOP - I_HEADER_BOTTOM, display: "flex", flexDirection: "column", justifyContent: "center", gap: 16 } },
-      h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), color: P.fg } }, titleText),
-      descText ? h("div", { style: { display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 3, overflow: "hidden", fontSize: 32, fontWeight: 400, lineHeight: 1.3, color: P.desc, width: 1088 } }, descText) : null))
-}
-
-// --- Template: "case-study" — co-branded header (Pulumi + customer logo on the
-// left, "CASE STUDY" badge right) on the light field, with a large title that
-// fills the area below the divider (no description). ---------------------------
-async function caseStudyTree(fields) {
-  const { title, companyLogo } = fields // companyLogo: { uri, w, h } | null
-  const font = await titleFont()
-  const fit = fitTitle(font, title, { maxFont: 92, minFont: 44, boxW: I_W, maxLines: 3 })
-  const titleText = clampText(font, title, fit.fontSize, I_W * 0.98, fit.lineClamp)
-  return h("div", { style: { width: CANVAS_W, height: CANVAS_H, position: "relative", display: "flex", backgroundColor: LIGHT.bg, fontFamily: "Inter" } },
-    h("img", { src: LINES_BOTTOM, width: CANVAS_W, height: 159, style: { position: "absolute", left: 0, top: I_LINES_TOP, width: CANVAS_W, height: 159 } }),
-    // Header: Pulumi + "+" + customer logo (left), "CASE STUDY" badge (right).
-    h("div", { style: { position: "absolute", top: I_HEADER_TOP, left: I_LEFT, width: I_W, display: "flex", flexDirection: "column", gap: 24 } },
-      h("div", { style: { display: "flex", width: I_W, alignItems: "center", justifyContent: "space-between", height: 60 } },
-        h("div", { style: { display: "flex", alignItems: "center", gap: 24 } },
-          h("img", { src: LOGO_LIGHT, height: 52, style: { height: 52 } }),
-          companyLogo ? h("div", { style: { fontSize: 36, fontWeight: 400, lineHeight: 1, color: LIGHT.muted } }, "+") : null,
-          companyLogo ? h("img", { src: companyLogo.uri, width: companyLogo.w, height: companyLogo.h, style: { width: companyLogo.w, height: companyLogo.h } }) : null),
-        badge("Case Study", LIGHT.badgeBg, LIGHT.badgeFg)),
-      h("div", { style: { width: I_W, height: 1, backgroundColor: LIGHT.divider } })),
-    // Body: title only, vertically centered between header and bottom lines.
-    h("div", { style: { position: "absolute", left: I_LEFT, top: I_HEADER_BOTTOM, width: I_W, height: I_LINES_TOP - I_HEADER_BOTTOM, display: "flex", flexDirection: "column", justifyContent: "center" } },
-      h("div", { style: { display: "flex", fontSize: fit.fontSize, fontWeight: 600, lineHeight: 1.1, letterSpacing: -fit.fontSize * 0.05, color: LIGHT.fg } }, titleText)))
-}
-
-// Every template takes (fields, { w, h }). The fixed-size light/dark cards
-// ignore the size arg (they hard-code CANVAS_W/H); only "events" honors it.
-const TEMPLATES = {
-  title: titleTree,
-  info: (f) => infoTree(f, INFO_DARK),
-  tutorial: (f) => infoTree(f, INFO_LIGHT),
-  "case-study": caseStudyTree,
-  events: eventsTree,
-  blog: blogTree,
-}
-
-async function renderPng(page, fonts) {
-  const w = page.w || CANVAS_W
-  const hgt = page.h || CANVAS_H
-  const tree = await TEMPLATES[page.template](page.fields, { w, h: hgt })
-  const svg = await satori(tree, { width: w, height: hgt, fonts })
-  return new Resvg(svg, { fitTo: { mode: "width", value: w } }).render().asPng()
 }
 
 // --- Page discovery ----------------------------------------------------------
@@ -450,28 +315,109 @@ function loadManifest() {
   try { return JSON.parse(readFileSync(MANIFEST, "utf-8")) } catch { return {} }
 }
 
+// Card rendering is pure and CPU-bound (Satori + resvg), so a cold run — every
+// card uncached, e.g. a fresh checkout or an OG_TEMPLATE_VERSION bump — fans out
+// across worker threads. Small batches (the common incremental edit) render
+// inline to skip the ~1s of worker startup. Override the worker count with
+// OG_WORKERS; force inline with OG_WORKERS=1.
+const WORKER_URL = new URL("./meta-images/render-worker.mjs", import.meta.url)
+const MAX_WORKERS = Math.max(1, parseInt(process.env.OG_WORKERS || "", 10) || cpus().length - 1)
+const PARALLEL_THRESHOLD = 8 // fewer cards than this → render inline
+
+// Each job is the serializable subset of a page the worker needs. The worker
+// renders + writes the PNG itself (avoids shipping buffers back) and posts a
+// {mid, ok, ms|err} result. Every job settles exactly once; a crashed worker
+// fails its in-flight job and, if all workers die, the queue's stragglers, so
+// the pool never hangs. Resolves to the array of result records.
+function renderPool(jobs, concurrency) {
+  return new Promise((resolve) => {
+    const results = []
+    let next = 0
+    let done = false
+    if (!jobs.length) return resolve(results)
+    const live = new Set()
+    const inFlight = new Map() // worker -> job
+    const settle = (res) => {
+      results.push(res)
+      if (results.length === jobs.length) { done = true; for (const w of live) w.terminate(); resolve(results) }
+    }
+    // Fail a dead worker's in-flight job (if any) and, once every worker is gone,
+    // drain the rest of the queue so the pool can never hang. Idempotent per
+    // worker via the `live` guard: a worker emits `error` then `exit`, so the
+    // second event is a no-op. Skipped entirely once the pool has resolved (the
+    // terminate() above makes every live worker emit a non-zero `exit`).
+    const failWorker = (w, reason) => {
+      if (done || !live.has(w)) return
+      const job = inFlight.get(w)
+      live.delete(w); inFlight.delete(w)
+      if (job) settle({ mid: job.mid, ok: false, err: reason })
+      if (!done && !live.size) while (next < jobs.length) settle({ mid: jobs[next++].mid, ok: false, err: "render worker pool exhausted" })
+    }
+    const pump = (w) => {
+      if (next >= jobs.length) { inFlight.delete(w); return } // no work left; idle until the pool resolves
+      const job = jobs[next++]
+      inFlight.set(w, job)
+      w.postMessage({ type: "job", job })
+    }
+    for (let i = 0; i < Math.min(concurrency, jobs.length); i++) {
+      const w = new Worker(WORKER_URL)
+      live.add(w)
+      w.on("message", (msg) => {
+        if (done || msg.type !== "result") return
+        inFlight.delete(w)
+        settle(msg)
+        if (results.length < jobs.length) pump(w)
+      })
+      w.on("error", (err) => failWorker(w, err?.message || String(err)))
+      // A worker that dies without an `error` (non-zero `exit` — e.g. OOM or a
+      // native resvg crash) would otherwise leave its in-flight job dangling and
+      // hang the pool; catch it here.
+      w.on("exit", (code) => { if (code !== 0) failWorker(w, `render worker exited unexpectedly (code ${code})`) })
+      pump(w)
+    }
+  })
+}
+
 async function runGenerate(pages) {
-  const fonts = loadFonts()
-  await titleFont()
   const prev = loadManifest()
   const next = { ...prev }
-  let rendered = 0, skipped = 0, renderMs = 0
-  const failures = []
-  const t0 = Date.now()
+  const todo = []
+  let skipped = 0
   for (const p of pages) {
     next[p.mid] = p.key
     if (prev[p.mid] === p.key && existsSync(p.out)) { skipped++; continue }
-    try {
-      mkdirSync(dirname(p.out), { recursive: true })
+    todo.push(p)
+  }
+
+  const t0 = Date.now()
+  let results
+  if (todo.length >= PARALLEL_THRESHOLD && MAX_WORKERS > 1) {
+    const workers = Math.min(MAX_WORKERS, todo.length)
+    console.log(`meta-images: rendering ${todo.length} cards across ${workers} worker${workers > 1 ? "s" : ""}…`)
+    const jobs = todo.map((p) => ({ mid: p.mid, out: p.out, template: p.template, fields: p.fields, w: p.w, h: p.h }))
+    results = await renderPool(jobs, workers)
+  } else {
+    // Small batch: render inline, skipping worker startup cost.
+    const fonts = loadFonts()
+    await titleFont()
+    results = []
+    for (const p of todo) {
       const t = Date.now()
-      writeFileSync(p.out, await renderPng(p, fonts))
-      renderMs += Date.now() - t
-      rendered++
-    } catch (err) {
-      failures.push(p.mid)
-      console.error(`  FAILED ${p.mid}: ${err?.message || err}`)
+      try {
+        mkdirSync(dirname(p.out), { recursive: true })
+        writeFileSync(p.out, await renderPng(p, fonts))
+        results.push({ mid: p.mid, ok: true, ms: Date.now() - t })
+      } catch (err) {
+        results.push({ mid: p.mid, ok: false, err: err?.message || String(err) })
+      }
     }
   }
+
+  const rendered = results.filter((r) => r.ok).length
+  const failures = results.filter((r) => !r.ok)
+  const renderMs = results.reduce((s, r) => s + (r.ms || 0), 0)
+  for (const f of failures) console.error(`  FAILED ${f.mid}: ${f.err}`)
+
   // Prune only on full runs (not sample/only) to avoid deleting unrelated cards.
   if (!SAMPLE && !ONLY.length) {
     const keep = new Set(pages.map((p) => p.out))
@@ -489,9 +435,12 @@ async function runGenerate(pages) {
   writeFileSync(MANIFEST, JSON.stringify(next, Object.keys(next).sort(), 2) + "\n")
   const totalMs = Date.now() - t0
   console.log(`meta-images: ${rendered} rendered, ${skipped} cached, ${failures.length} failed | ${totalMs}ms total${rendered ? `, ${Math.round(renderMs / rendered)}ms avg` : ""}`)
-  // Fail the build only on a total wipeout (every page failed) — a one-off bad
-  // page shouldn't block a deploy; it just ships without its generated card.
-  if (failures.length && failures.length === pages.length) process.exit(1)
+  // Fail the build only on a total wipeout (every attempted render failed) — a
+  // one-off bad page shouldn't block a deploy; it just ships without its
+  // generated card. Guard on todo (what we tried this run), not pages: an
+  // incremental run leaves most pages cached, so a systemic render failure would
+  // never reach pages.length and would ship green with missing cards.
+  if (failures.length && failures.length === todo.length) process.exit(1)
 }
 
 const pages = listPages()
