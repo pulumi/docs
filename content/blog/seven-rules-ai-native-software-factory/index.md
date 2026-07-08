@@ -45,7 +45,7 @@ But two years into the agentic AI revolution, I realised software is going to lo
 I joined Compostable AI soon after it was founded 2.5 years ago, and I built the engineering org AI-native from day one. The technology has come a long way since then, and so has my understanding of what AI-native actually means. Here are seven rules I keep coming back to.
 
 {{< notes type="info" size="large" >}}
-**An AI software factory**, also called an AI-native software factory, is a software operation where autonomous agents write and ship most of the code, while the engineering team's job shifts to deciding what gets built and talking to customers, not writing the code by hand. The rules below are how we keep it running.
+**An AI software factory**, also called an AI-native software factory, is a software operation where autonomous agents write and ship most of the code. The engineers stop writing it by hand and spend their time deciding what gets built and talking to customers. The rules below are how we keep it running.
 {{< /notes >}}
 
 ## 1. Transform, don't enhance
