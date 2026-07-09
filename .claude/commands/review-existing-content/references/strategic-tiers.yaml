@@ -20,6 +20,12 @@
 #               SEO-critical or contractually required. Once GSC data is
 #               flowing, high-impression entries can be regenerated from
 #               thresholds; hand-curated entries stay.
+#               The veto is CODE-ENFORCED: the per-article worker fails any
+#               content-review/retire-<slug> branch whose page matches a
+#               no_retire (or tier-1/tier-0) prefix, via
+#               scripts/content-review/check-retire-veto.py — the model's
+#               reading of the skill is the instruction, this file is the
+#               guarantee.
 #
 # Matching is LONGEST PREFIX WINS (so a deeper, more specific entry overrides
 # a broader one). Prefixes are repo paths, not URLs.

@@ -10,6 +10,8 @@ without producing any output.
 The model's only structured output is a tiny verdict sentinel
 (`.content-review-verdict.json`); everything authoritative about the PR
 (existence, number, head SHA) is derived here from `gh`, not self-reported.
+The sentinel may also carry an `applied` array (per-fix provenance, consumed
+by the workflow's verify-fix-scope.py gate); the ledger record ignores it.
 
 Outcome derivation:
   * verdict "fixed"  + PR on content-review/<slug>      -> status "reviewed"
