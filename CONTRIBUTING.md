@@ -52,6 +52,8 @@ Rare. Use when the pinned-review state is corrupted (the 1/M comment was manuall
 
 The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
 
+The pinned comment is also the pipeline's outcome ledger: after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
+
 ### Trivial and frontmatter-only short-circuits
 
 Two label-driven short-circuits skip the full Claude review (linters still run):

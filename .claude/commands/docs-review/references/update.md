@@ -107,6 +107,8 @@ The author or another reviewer pushed back on a previous finding *without* a fix
    - The Outstanding count does not change.
 4. **Do not** reword the same finding hoping it lands better. The original wording is in the comment; either change your mind or explain why you didn't.
 
+**The annotation shapes are machine-scraped.** `scrape-review-outcomes.py` derives the weekly outcome telemetry (fixed / conceded / disputed counts) from the exact `concede: <reason>` and `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` forms above — a freelanced variant ("author disputed this", "conceding the point") silently drops the finding out of those counts, and the validator's `outcome-annotation-shape` rule flags it.
+
 **Failure-mode examples:**
 
 > Author (write access) mentions Claude saying: "I built this — the project intentionally uses pattern X because of Y."
