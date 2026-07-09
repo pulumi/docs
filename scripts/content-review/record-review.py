@@ -33,9 +33,8 @@ Canonical record (every field always present):
 
 The record is written locally (audit artifact) and, when CONTENT_REVIEW_LEDGER_URI
 is set, uploaded to <uri>/<slug>.json with reviewed_at stamped to today (UTC).
-A `dispatch` / `pr_number` / `head_sha` signal is emitted to $GITHUB_OUTPUT for
-the workflow's review-dispatch step. Degrades gracefully: a missing bucket URI
-skips the upload (the page reappears next cycle) rather than failing the run.
+Degrades gracefully: a missing bucket URI skips the upload (the page reappears
+next cycle) rather than failing the run.
 
 Self-contained — run the smoke checks with `python3 record-review.py --self-test`.
 """
@@ -318,7 +317,7 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
     return rec
 
 
-# ---- outputs ----------------------------------------------------------------
+# ---- output -----------------------------------------------------------------
 
 
 def upload(record: dict, slug: str, uri: str) -> None:
@@ -335,23 +334,6 @@ def upload(record: dict, slug: str, uri: str) -> None:
         warn("aws CLI not available; ledger record not uploaded")
     except subprocess.CalledProcessError as e:
         warn(f"ledger upload failed for {slug} ({e})")
-
-
-def emit_outputs(record: dict) -> None:
-    """Write dispatch/pr_number/head_sha to $GITHUB_OUTPUT (or stdout)."""
-    dispatch = "true" if record["status"] == "reviewed" else "false"
-    lines = [
-        f"dispatch={dispatch}",
-        f"pr_number={record['pr_number']}",
-        f"head_sha={record['head_sha']}",
-        f"status={record['status']}",
-    ]
-    out_path = os.environ.get("GITHUB_OUTPUT")
-    if out_path:
-        with open(out_path, "a") as f:
-            f.write("\n".join(lines) + "\n")
-    for line in lines:
-        print(line)
 
 
 # ---- main -------------------------------------------------------------------
@@ -410,7 +392,6 @@ def run(args) -> int:
     else:
         warn("CONTENT_REVIEW_LEDGER_URI unset; ledger record written locally only")
 
-    emit_outputs(record)
     return 0
 
 

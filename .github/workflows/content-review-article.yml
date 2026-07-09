@@ -399,8 +399,8 @@ jobs:
       # staleness clock; a failed run or a stranded branch is "incomplete" and
       # stays due (retried next sweep up to the attempt cap). record-review.py
       # builds the canonical record, derives the PR facts from `gh`, stamps
-      # reviewed_at, increments attempts, uploads, and emits the dispatch signal.
-      # One article per run ⇒ one object, so writes never collide.
+      # reviewed_at, increments attempts, and uploads. One article per run ⇒
+      # one object, so writes never collide.
       - name: Record review ledger
         id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
