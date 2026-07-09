@@ -104,6 +104,8 @@ new PolicyPack("database-policies", {
 });
 ```
 
+In the Policy Pack, the callback adapts the RDS instance's resolved properties — and its `Environment` tag — into the `DatabaseValidationArgs` shape that `validateDatabaseInputs` expects. In the component, the same function runs against the constructor's own `args` (whose type mirrors that shape) directly. The two call sites feed differently-shaped inputs — realized resource properties versus typed constructor arguments — into one shared validation implementation.
+
 Use the same policy function in a component:
 
 ```typescript
