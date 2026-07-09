@@ -10,7 +10,7 @@ Open new PRs as **drafts** while you iterate. Automated review (style, accuracy,
 
 While you're iterating, consider running `/docs-review` locally — it runs the same style/accuracy pipeline as the automated bot, but stays in your conversation and never posts to GitHub. Catching findings here is cheaper than catching them after the pinned review fires.
 
-When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward mark the review **stale**. A small push that only touches the lines the review flagged refreshes the review automatically; anything larger won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
 
@@ -33,7 +33,7 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 
 ### After review — three paths to refresh
 
-A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
+A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `#update-review` path with no mention needed. Everything else stays stale until you refresh explicitly. Three ways:
 
 1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
     - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):

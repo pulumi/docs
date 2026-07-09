@@ -32,6 +32,10 @@ gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRe
 
 `last-reviewed-sha` reads the most recent SHA from the 📜 Review history section in the 1/M comment.
 
+### Automated invocation
+
+When `MENTION_AUTHOR` is `auto-refresh`, there is no human mention: the run was dispatched by the auto-refresh gate in claude-code-review.yml because a push touched only lines carried by 🚨 Outstanding findings (deterministically checked by `auto-refresh-gate.py`). Treat the run strictly as **Case 1 (fix-response)** scoped to the outstanding findings and the pushed lines: re-verify each outstanding finding against the new diff, move resolved ones to ✅ Resolved, and flag regressions the push introduced on those lines. Case 2 (dispute) never applies — there is no mention text to adjudicate — and do not re-extract claims or raise findings on content the push did not touch. `auto-refresh` is not a GitHub user; never render it as an `@`-mention.
+
 **Fallback rules when `last-reviewed-sha` is unusable:**
 
 - **Empty output** (history line missing, comment corrupted): fall back to a full `gh pr diff "$PR_NUMBER"` (no range). Treat the whole PR as new content; this is equivalent to starting over.
