@@ -137,7 +137,9 @@ The available `type` values and their icons/default labels are the single source
 
 **Updated date**
 
-Set `updated: YYYY-MM-DD` to show an "Updated \<date\>" line next to the publish date in the hero (it also stamps `article:modified_time` for SEO). Use it when you materially revise an older post — leave the original `date` unchanged.
+Set `updated: YYYY-MM-DD` to show an "Updated \<date\>" line next to the publish date in the hero. Use it when you materially revise an older post — leave the original `date` unchanged.
+
+Use `updated`, **not** `lastmod`, for this. `updated` is the reader-facing field this site renders; `lastmod` is a generic Hugo built-in that only feeds the sitemap and schema.org `dateModified`, which the site already derives automatically from the commit date (`enableGitInfo: true`). A hand-stamped `lastmod` is invisible to readers and redundant with git, so don't add one.
 
 **Related posts**
 

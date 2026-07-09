@@ -79,7 +79,7 @@ Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias 
 When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
 - **DO update** links in `/content/docs/`, `/content/product/`, and `/content/tutorials/`.
-- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement (stamp `lastmod`); otherwise route around it with an alias/redirect.
+- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement, and when the change is worth surfacing to readers stamp `updated: YYYY-MM-DD` (not `lastmod`); otherwise route around it with an alias/redirect. See "Dates: `updated` vs `lastmod`" below.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
 For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
@@ -119,6 +119,12 @@ Blog posts carry three taxonomy axes (`category` and `tags` are always present; 
 See `BLOGGING.md` for the author-facing version of these rules.
 
 Per-post optional front matter beyond the taxonomy axes — `resource_links` (icon links at the foot of the post), `related_posts` (pinned related slugs), `author_roles`, and `updated` — is documented in `BLOGGING.md`. The blog homepage is curated separately in `data/blog_home.yaml` (`featured` = the four hero/featured slots; `featured_series` = the "Popular series" strip); that file's header comment is the authoritative reference.
+
+### Dates: `updated` vs `lastmod`
+
+When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `lastmod`. This is the established convention (the vast majority of revised posts use it) and the one wired to the UI: `layouts/blog/single.html` renders `.Params.updated` as the visible "Updated \<date\>" line beside the publish date. Leave the original `date` unchanged; set `updated` to the revision date. It's the same field documented in `BLOGGING.md`.
+
+**Do not reach for `lastmod`.** It's a Hugo built-in that only feeds the sitemap and schema.org `dateModified`, and the site already sets `enableGitInfo: true` (`config/_default/config.yml`), so Hugo derives `.Lastmod` from the commit date automatically. A hand-stamped `lastmod` is therefore invisible to readers *and* redundant with git. It's easy to default to because `lastmod` is the generic Hugo idiom for "last changed" — but on this site the reader-facing, canonical field is `updated`.
 
 ---
 

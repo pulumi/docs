@@ -2,7 +2,7 @@
 title: "Security as an Enabler: Building Trust into Your Platform"
 feature_image: feature.png
 date: 2025-04-11
-lastmod: 2026-07-09
+updated: 2026-07-09
 draft: false
 meta_desc: Learn how security can enable innovation by embedding guardrails directly into your platform.
 authors:

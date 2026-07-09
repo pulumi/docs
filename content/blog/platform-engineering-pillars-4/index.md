@@ -3,8 +3,7 @@ title: "Improve Developer Experience: Increase Dev Productivity with Internal De
 feature_image: feature.png
 allow_long_title: true
 date: 2025-03-13
-lastmod: 2026-07-09
-updated: 2025-08-19
+updated: 2026-07-09
 draft: false
 meta_desc: Learn how to boost developer experience, productivity, and velocity with an internal developer platform using service catalogs, templates, and CI/CD.
 authors:
