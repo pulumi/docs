@@ -22,8 +22,19 @@ to match every event regardless.
 All-day events use `VALUE=DATE` with an EXCLUSIVE DTEND (the morning after), so a
 single-day holiday is DTSTART=D, DTEND=D+1, and the match is DTSTART <= day < DTEND.
 
+A second, independent mode exists for the dispatcher's degradation-health lane
+(§3.4 of the docs-review automation evaluation): `--feed-check` answers "is this
+feed plausibly a live holidays feed?" rather than "is today a holiday?". It exits
+0 iff at least one matching all-day event starts within a year of the target
+date. A feed that fetches fine but parses to nothing (rotated token serving an
+error page, repointed calendar) — or one frozen years ago — is indistinguishable
+from "no holiday today" by the exit-code contract above, so this mode is how the
+workflow tells a quietly-dead feed from a quiet day. The holiday-decision
+contract (exit 0 = holiday, errors fail open to exit 1) is unchanged.
+
 Usage:
     is-holiday.py --ics feed.ics [--tz America/Chicago] [--date 2026-07-03]
+    is-holiday.py --ics feed.ics --feed-check [--date 2026-07-03]
     is-holiday.py --self-test
 """
 
@@ -97,6 +108,27 @@ def holiday_on(text: str, day: date, category: str | None) -> dict | None:
     return None
 
 
+def feed_events_near(text: str, day: date, category: str | None,
+                     window_days: int = 366) -> int:
+    """Count matching all-day events whose DTSTART is within ±window_days of `day`.
+
+    The health probe behind --feed-check. A live company-holidays feed always
+    has an event within a year of any date; a garbage payload parses to zero
+    events, and a feed frozen years ago has none in the window. Both count as
+    a degraded feed even though the holiday decision above still fails open.
+    """
+    window = timedelta(days=window_days)
+    count = 0
+    for ev in parse_events(text):
+        if not ev["start"]:
+            continue
+        if category and category.lower() not in ev["categories"].lower():
+            continue
+        if abs(ev["start"] - day) <= window:
+            count += 1
+    return count
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--ics", help="path to the ICS feed file")
@@ -105,6 +137,9 @@ def main() -> int:
     ap.add_argument("--category", default="Company Holidays",
                     help="only match events whose CATEGORIES contains this (case-insensitive)")
     ap.add_argument("--any-category", action="store_true", help="match events of any category")
+    ap.add_argument("--feed-check", action="store_true",
+                    help="health mode: exit 0 iff the feed has a matching event within "
+                         "a year of the target date (detects empty/garbage/frozen feeds)")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
 
@@ -132,6 +167,12 @@ def main() -> int:
         return 1
 
     category = None if args.any_category else args.category
+
+    if args.feed_check:
+        n = feed_events_near(text, day, category)
+        print(f"is-holiday: feed check found {n} matching event(s) within a year of {day}")
+        return 0 if n > 0 else 1
+
     match = holiday_on(text, day, category)
     if match:
         print(f"is-holiday: {day} is a company holiday: {match['summary'] or '(unnamed)'}")
@@ -177,6 +218,26 @@ def self_test() -> int:
     check("missing DTEND -> next day excluded", holiday_on(ics, date(2026, 9, 8), cat) is None)
     check("folded SUMMARY is unfolded", (holiday_on(ics, date(2026, 9, 7), cat) or {}).get("summary") == "Company Holiday - Labor Day")
     check("matched holiday carries its summary", "Independence Day" in (holiday_on(ics, date(2026, 7, 3), cat) or {}).get("summary", ""))
+
+    # --feed-check health mode (feed_events_near).
+    pto_only = (
+        "BEGIN:VCALENDAR\r\n"
+        "BEGIN:VEVENT\r\nDTSTART;VALUE=DATE:20260626\r\nDTEND;VALUE=DATE:20260627\r\n"
+        "CATEGORIES:Time Off\r\nSUMMARY:Someone - Vacation\r\nEND:VEVENT\r\n"
+        "END:VCALENDAR\r\n"
+    )
+    check("feed-check: healthy feed has events near date",
+          feed_events_near(ics, date(2026, 7, 1), cat) > 0)
+    check("feed-check: garbage text parses to zero",
+          feed_events_near("<html>token expired</html>", date(2026, 7, 1), cat) == 0)
+    check("feed-check: PTO-only feed fails the category filter",
+          feed_events_near(pto_only, date(2026, 7, 1), cat) == 0)
+    check("feed-check: frozen feed (all events > a year away) counts zero",
+          feed_events_near(ics, date(2030, 7, 1), cat) == 0)
+    check("feed-check: window boundary inclusive at exactly 366 days",
+          feed_events_near(pto_only, date(2026, 6, 26) + timedelta(days=366), None) > 0)
+    check("feed-check: just past the window excluded",
+          feed_events_near(pto_only, date(2026, 6, 26) + timedelta(days=367), None) == 0)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

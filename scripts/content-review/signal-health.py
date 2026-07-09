@@ -1,0 +1,455 @@
+#!/usr/bin/env python3
+"""Track and alert on silent degradation of the content-review pipeline's inputs.
+
+Observability for §3.4 of the docs-review automation evaluation (pulumi/docs
+issue #20078): three inputs to the review-existing-content dispatcher degrade
+gracefully — and, before this script, silently:
+
+  traffic         a missing docs-traffic snapshot flattens article selection to
+                  tier-only scoring, quietly erasing intra-tier prioritization
+  console-access  the per-article worker's screenshot lane 2 verifies UI strings
+                  against the private pulumi/console repo; without token access
+                  every UI claim silently becomes "unverifiable"
+  holiday-feed    the BambooHR ICS holiday gate fails open by design, so a feed
+                  that has been 404ing (or serving garbage) for weeks is invisible
+
+Graceful degradation is the right behavior; this script adds the missing
+observability. The dispatcher runs it once per scheduled run with that run's
+observations; it persists per-signal state (one JSON object the workflow syncs
+to the ledger bucket under health/) and, once a signal has been continuously
+degraded for THRESHOLD_DAYS, writes a one-message alert file the workflow posts
+to #docs-ops — re-alerting every REALERT_DAYS, not every day.
+
+Division of labor, matching the rest of the content-review scripts: this script
+is a pure function of (state file, observations, --today) — stdlib-only, no
+AWS, no network. The workflow moves the bytes (S3 down/up, Slack post) and
+gates the side effects, so a workflow_dispatch test run computes and prints
+everything but persists and posts nothing.
+
+The health lane must never break the dispatcher: outside --self-test this
+script always exits 0, and every failure mode (missing state, corrupt state,
+missing queue file) degrades to "carry on with what we know". Because the lane
+depends on the same S3 access it (transitively) monitors, it also emits a
+GitHub `::warning::` for every currently-degraded signal on every run — the
+stateless fallback that still surfaces in the run summary when the day-counting
+state is unreachable. One accepted race, documented rather than engineered
+around: `last_alerted` is stamped in the same pass that writes the alert file,
+so a Slack post that fails after the state is persisted suppresses the re-alert
+for one REALERT_DAYS cycle; the per-run warnings cover the gap.
+
+Signal semantics:
+  * ok           -> stamp last_ok, clear degraded_since AND last_alerted (a new
+                    degradation episode alerts on its own clock)
+  * degraded     -> degraded_since = degraded_since or today
+  * unconfigured -> recorded for a human inspecting state.json, never alerted:
+                    an explicitly unset switch (e.g. BAMBOOHR_HOLIDAY_ICS_URL)
+                    is an off-state, not a failure — alarming on it trains
+                    people to ignore the alert
+  * no observation (flag omitted / queue file missing) -> the signal's prior
+                    entry is left untouched; absence of evidence is not
+                    degradation
+
+Usage:
+    signal-health.py --state .health-state.json \
+        [--queue .content-review-queue.json] \
+        [--console-status ok|degraded] \
+        [--holiday-status ok|empty|fetch_failed|unconfigured] \
+        --alert-out .health-alert.txt \
+        [--today YYYY-MM-DD] [--threshold-days N] [--realert-days N] \
+        [--run-url URL]
+    signal-health.py --self-test
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from datetime import date, datetime, timezone
+from pathlib import Path
+
+STATE_VERSION = 1
+
+# 7 calendar days ~= 5 scheduled (weekday) runs of continuous degradation
+# before the first Slack note; then a weekly nag while it persists. Dates, not
+# run counts, so weekends neither accrue extra urgency nor reset anything.
+THRESHOLD_DAYS = 7
+REALERT_DAYS = 7
+
+# One line per signal: what broke, for how long, the consequence, and where to
+# look — the consequence is the point (see the module docstring).
+CONSEQUENCES = {
+    "traffic": (
+        "traffic snapshot: unavailable for {days} day(s) — article selection is "
+        "running tier-only (no intra-tier traffic prioritization). Check the "
+        "docsTrafficPageviewsLatestS3Uri output on "
+        "pulumi/dwh-workflows-orchestrate-airflow/production and the S3 object "
+        "it points at."
+    ),
+    "console-access": (
+        "pulumi/console access: pulumi-bot has had no access for {days} day(s) — "
+        "screenshot lane 2 is marking every UI-string check \"unverifiable\". "
+        "Check the bot token's access to the pulumi/console repo."
+    ),
+    "holiday-feed": (
+        "holiday feed: degraded for {days} day(s) ({detail}) — the holiday gate "
+        "is running blind (fails open: reviews will run on company holidays). "
+        "Regenerate the BAMBOOHR_HOLIDAY_ICS_URL feed."
+    ),
+}
+
+
+def log(msg: str) -> None:
+    print(f"signal-health: {msg}", file=sys.stderr)
+
+
+def warn(msg: str) -> None:
+    # `::warning::` surfaces in the GitHub Actions run summary — the stateless
+    # fallback that works even when the S3 state is unreachable.
+    print(f"::warning::signal-health: {msg}", file=sys.stderr)
+
+
+def parse_day(s: str | None) -> date | None:
+    if not s:
+        return None
+    try:
+        return datetime.strptime(str(s), "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
+# ---- state ------------------------------------------------------------------
+
+
+def empty_signal() -> dict:
+    return {"status": None, "detail": "", "last_ok": None,
+            "degraded_since": None, "last_alerted": None}
+
+
+def load_state(state_path: Path) -> dict:
+    """Prior state, or a fresh bootstrap when missing/corrupt (never crash).
+
+    Unknown top-level keys and unknown signals are preserved verbatim so an
+    older script version never destroys a newer one's bookkeeping.
+    """
+    try:
+        data = json.loads(state_path.read_text())
+        if not isinstance(data, dict) or not isinstance(data.get("signals"), dict):
+            raise ValueError("unexpected shape")
+        return data
+    except (OSError, ValueError, json.JSONDecodeError) as e:
+        if state_path.is_file():
+            warn(f"health state unreadable ({e}); starting fresh")
+        else:
+            log("no prior health state; bootstrapping")
+        return {"version": STATE_VERSION, "signals": {}}
+
+
+# ---- observations -----------------------------------------------------------
+
+
+def observe_traffic(queue_path: Path | None) -> tuple[str, str] | None:
+    """(status, detail) from the selection queue's traffic block, or None.
+
+    select-articles.py writes the `traffic` block even on halted queues, so a
+    halted run still yields an observation. A missing/unreadable queue file is
+    NOT evidence of traffic degradation (the run may have died before
+    selection) — return None and leave the prior entry alone.
+    """
+    if queue_path is None or not queue_path.is_file():
+        return None
+    try:
+        traffic = json.loads(queue_path.read_text()).get("traffic") or {}
+    except (OSError, json.JSONDecodeError) as e:
+        log(f"queue unreadable ({e}); no traffic observation")
+        return None
+    if traffic.get("available"):
+        detail = f"period={traffic.get('period')} pages_matched={traffic.get('pages_matched')}"
+        return "ok", detail
+    return "degraded", "snapshot missing, empty, or matched zero pages"
+
+
+def observe_flag(value: str | None, mapping: dict[str, str]) -> tuple[str, str] | None:
+    """(status, detail) from a workflow-provided status flag, or None if omitted."""
+    v = (value or "").strip().lower()
+    if not v:
+        return None
+    status = mapping.get(v)
+    if status is None:
+        log(f"unrecognized status {v!r}; treating as degraded")
+        return "degraded", f"unrecognized status {v!r}"
+    return status, v
+
+
+# ---- transitions + alerting ---------------------------------------------------
+
+
+def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
+          threshold_days: int, realert_days: int, run_url: str | None,
+          ) -> tuple[dict, str | None]:
+    """Apply one run's observations; return (new state, alert text or None)."""
+    signals = state.setdefault("signals", {})
+    due: list[str] = []       # alert lines for newly-due signals
+    context: list[str] = []   # still-degraded-but-already-alerted, for the message
+
+    for name, (status, detail) in observations.items():
+        sig = signals.setdefault(name, empty_signal())
+        sig["status"] = status
+        sig["detail"] = detail
+        if status == "ok":
+            sig["last_ok"] = today.isoformat()
+            sig["degraded_since"] = None
+            sig["last_alerted"] = None
+        elif status == "degraded":
+            if not sig.get("degraded_since"):
+                sig["degraded_since"] = today.isoformat()
+        else:  # unconfigured
+            sig["degraded_since"] = None
+
+    # Alert pass covers every degraded signal in state, observed this run or
+    # not — a signal that stops being observed (e.g. selection died) keeps its
+    # standing degradation visible.
+    for name, sig in sorted(signals.items()):
+        if sig.get("status") != "degraded":
+            continue
+        since = parse_day(sig.get("degraded_since")) or today
+        days = (today - since).days
+        detail = sig.get("detail") or "no detail"
+        template = CONSEQUENCES.get(name, f"{name}: degraded for {{days}} day(s) ({{detail}})")
+        line = template.format(days=days, detail=detail)
+        warn(f"{name} degraded since {since.isoformat()} — {line}")
+        if days < threshold_days:
+            continue
+        alerted = parse_day(sig.get("last_alerted"))
+        if alerted is None or (today - alerted).days >= realert_days:
+            sig["last_alerted"] = today.isoformat()
+            due.append(line)
+        else:
+            context.append(line)
+
+    state["version"] = STATE_VERSION
+    state["updated"] = today.isoformat()
+
+    if not due:
+        return state, None
+    lines = due + context
+    text = (
+        f"Content-review health: {len(lines)} signal(s) degraded "
+        "(docs content-review automation)\n"
+        + "\n".join(f"• {line}" for line in lines)
+    )
+    if run_url:
+        text += f"\nRun: {run_url}"
+    return state, text
+
+
+# ---- main -------------------------------------------------------------------
+
+
+def run(args) -> int:
+    today = parse_day(args.today) or datetime.now(timezone.utc).date()
+    state_path = Path(args.state)
+    state = load_state(state_path)
+
+    observations: dict[str, tuple[str, str]] = {}
+    obs = observe_traffic(Path(args.queue) if args.queue else None)
+    if obs:
+        observations["traffic"] = obs
+    obs = observe_flag(args.console_status, {"ok": "ok", "degraded": "degraded"})
+    if obs:
+        observations["console-access"] = obs
+    obs = observe_flag(args.holiday_status, {
+        "ok": "ok", "empty": "degraded", "fetch_failed": "degraded",
+        "unconfigured": "unconfigured",
+    })
+    if obs:
+        observations["holiday-feed"] = obs
+
+    state, alert = apply(state, observations, today,
+                         args.threshold_days, args.realert_days, args.run_url)
+
+    state_path.write_text(json.dumps(state, indent=2) + "\n")
+    log(f"recorded {len(observations)} observation(s) -> {state_path}")
+
+    if alert:
+        Path(args.alert_out).write_text(alert + "\n")
+        log(f"alert due -> {args.alert_out}")
+
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    p.add_argument("--state", help="health state JSON (read+written in place)")
+    p.add_argument("--queue", help="selection queue JSON (source of the traffic signal)")
+    p.add_argument("--console-status", help="pulumi/console probe result: ok|degraded")
+    p.add_argument("--holiday-status",
+                   help="holiday feed status: ok|empty|fetch_failed|unconfigured")
+    p.add_argument("--alert-out", default=".health-alert.txt",
+                   help="alert message path; only written when an alert is due")
+    p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
+    p.add_argument("--threshold-days", type=int, default=THRESHOLD_DAYS)
+    p.add_argument("--realert-days", type=int, default=REALERT_DAYS)
+    p.add_argument("--run-url", help="workflow run URL appended to the alert")
+    p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")
+    return p
+
+
+def main() -> int:
+    p = build_parser()
+    args = p.parse_args()
+
+    if args.self_test:
+        return self_test()
+    if not args.state:
+        p.error("--state is required (or --self-test)")
+    try:
+        return run(args)
+    except Exception as e:  # noqa: BLE001 - the health lane never fails the dispatcher
+        warn(f"unexpected error ({e}); health pass skipped this run")
+        return 0
+
+
+# ---- self-test ----------------------------------------------------------------
+
+
+def self_test() -> int:
+    import tempfile
+
+    failures = []
+
+    def check(name, cond):
+        if not cond:
+            failures.append(name)
+            print(f"FAIL: {name}", file=sys.stderr)
+        else:
+            print(f"ok: {name}")
+
+    def run_once(d: Path, day: str, queue: dict | None = None, console: str | None = None,
+                 holiday: str | None = None) -> tuple[dict, str | None]:
+        """Drive run() through argparse the way the workflow would."""
+        state = d / "state.json"
+        alert = d / "alert.txt"
+        if alert.exists():
+            alert.unlink()
+        argv = ["--state", str(state), "--alert-out", str(alert), "--today", day]
+        if queue is not None:
+            qp = d / "queue.json"
+            qp.write_text(json.dumps(queue))
+            argv += ["--queue", str(qp)]
+        if console:
+            argv += ["--console-status", console]
+        if holiday:
+            argv += ["--holiday-status", holiday]
+        args = build_parser().parse_args(argv)
+        run(args)
+        text = alert.read_text() if alert.exists() else None
+        return json.loads(state.read_text()), text
+
+    q_ok = {"traffic": {"available": True, "period": "2026-06", "pages_matched": 731}}
+    q_bad = {"traffic": {"available": False, "pages_matched": 0}}
+    q_halted = {"halted": "max_open_prs", "traffic": {"available": False}, "articles": []}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+
+        # 1. Bootstrap: no state file, everything ok.
+        st, alert = run_once(d, "2026-07-01", queue=q_ok, console="ok", holiday="ok")
+        check("bootstrap: all three signals recorded",
+              set(st["signals"]) == {"traffic", "console-access", "holiday-feed"})
+        check("bootstrap: ok stamps last_ok",
+              st["signals"]["traffic"]["last_ok"] == "2026-07-01")
+        check("bootstrap: nothing degraded, no alert", alert is None)
+
+        # 2. ok -> degraded starts the clock; no alert before threshold.
+        st, alert = run_once(d, "2026-07-02", queue=q_bad, console="ok", holiday="ok")
+        check("degradation sets degraded_since",
+              st["signals"]["traffic"]["degraded_since"] == "2026-07-02")
+        check("no alert before threshold", alert is None)
+
+        # 3. Clock persists; alert fires exactly at THRESHOLD_DAYS.
+        st, alert = run_once(d, "2026-07-05", queue=q_bad, console="ok", holiday="ok")
+        check("degraded_since unchanged across runs",
+              st["signals"]["traffic"]["degraded_since"] == "2026-07-02")
+        check("still quiet at day 3", alert is None)
+        st, alert = run_once(d, "2026-07-09", queue=q_bad, console="ok", holiday="ok")
+        check("alert fires at day 7", alert is not None)
+        check("alert names the consequence", alert and "tier-only" in alert)
+        check("last_alerted stamped",
+              st["signals"]["traffic"]["last_alerted"] == "2026-07-09")
+
+        # 4. Re-alert suppressed inside REALERT_DAYS, fires after.
+        st, alert = run_once(d, "2026-07-10", queue=q_bad, console="ok", holiday="ok")
+        check("re-alert suppressed next day", alert is None)
+        st, alert = run_once(d, "2026-07-16", queue=q_bad, console="ok", holiday="ok")
+        check("re-alert fires after REALERT_DAYS", alert is not None)
+
+        # 5. Recovery clears both clocks; a fresh episode alerts on its own clock.
+        st, alert = run_once(d, "2026-07-17", queue=q_ok, console="ok", holiday="ok")
+        check("recovery clears degraded_since",
+              st["signals"]["traffic"]["degraded_since"] is None)
+        check("recovery clears last_alerted",
+              st["signals"]["traffic"]["last_alerted"] is None)
+        st, alert = run_once(d, "2026-07-18", queue=q_bad, console="ok", holiday="ok")
+        check("fresh episode restarts the clock",
+              st["signals"]["traffic"]["degraded_since"] == "2026-07-18")
+        check("fresh episode quiet before its own threshold", alert is None)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+
+        # 6. unconfigured holiday never alerts, even long after threshold.
+        run_once(d, "2026-01-01", queue=q_ok, console="ok", holiday="unconfigured")
+        st, alert = run_once(d, "2026-03-01", queue=q_ok, console="ok",
+                             holiday="unconfigured")
+        check("unconfigured recorded as its own status",
+              st["signals"]["holiday-feed"]["status"] == "unconfigured")
+        check("unconfigured never alerts", alert is None)
+
+        # 7. Missing queue -> traffic entry untouched (prior degraded preserved).
+        run_once(d, "2026-03-02", queue=q_bad, console="ok", holiday="ok")
+        st, alert = run_once(d, "2026-03-03", console="ok", holiday="ok")
+        check("missing queue leaves prior traffic state untouched",
+              st["signals"]["traffic"]["status"] == "degraded"
+              and st["signals"]["traffic"]["degraded_since"] == "2026-03-02")
+
+        # 8. Unobserved-but-degraded signals still alert once due.
+        st, alert = run_once(d, "2026-03-12", console="ok", holiday="ok")
+        check("unobserved degraded signal still alerts when due",
+              alert is not None and "tier-only" in alert)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+
+        # 9. Corrupt state bootstraps without crashing.
+        (d / "state.json").write_text("{not json")
+        st, alert = run_once(d, "2026-07-01", queue=q_ok, console="ok", holiday="ok")
+        check("corrupt state bootstraps cleanly",
+              st["signals"]["traffic"]["status"] == "ok")
+
+        # 10. Multiple due signals -> one combined message, one line each.
+        run_once(d, "2026-08-01", queue=q_bad, console="degraded", holiday="fetch_failed")
+        st, alert = run_once(d, "2026-08-10", queue=q_bad, console="degraded",
+                             holiday="fetch_failed")
+        check("multiple due signals -> one combined alert",
+              alert is not None and alert.count("•") == 3)
+        check("combined alert covers each consequence",
+              alert is not None and "tier-only" in alert
+              and "unverifiable" in alert and "fails open" in alert)
+        check("holiday detail names the failure mode",
+              alert is not None and "fetch_failed" in alert)
+
+        # 11. Halted queue still yields a traffic observation.
+        st, alert = run_once(d, "2026-08-11", queue=q_halted, console="ok", holiday="ok")
+        check("halted queue still observes traffic",
+              st["signals"]["traffic"]["status"] == "degraded")
+
+    if failures:
+        print(f"\n{len(failures)} failure(s)", file=sys.stderr)
+        return 1
+    print("\nall signal-health self-tests passed")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

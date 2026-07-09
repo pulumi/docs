@@ -42,6 +42,10 @@ Read `.content-review-queue.json` from the repo root (written by
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - If `articles` is empty or `halted` is set, do nothing (the workflow won't
   invoke you in that case, but be defensive).
+- `traffic.available: false` is not your problem to fix: the dispatcher's
+  degradation-health lane (`scripts/content-review/signal-health.py`) tracks
+  it — along with pulumi/console access and the holiday feed — and alerts
+  #docs-ops after a week of continuous degradation.
 
 Process articles **sequentially**, one at a time, completing each article's
 branch and PR before starting the next.
