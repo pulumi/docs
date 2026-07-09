@@ -46,7 +46,7 @@ Each provider offers a recommended browser-based sign-in that uses OIDC, plus al
 
 {{% choosable cloud aws %}}
 
-**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account you can access in your organization.
+**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account you can access in your organization. Authentication doesn't create anything in your accounts; the wizard creates the IAM role in each account later, after you select accounts and choose an access level.
 
 ![The authentication step for AWS showing the IAM Identity Center option selected with SSO start URL and region fields](/docs/insights/assets/connect-cloud-accounts-authentication.png)
 
@@ -79,11 +79,9 @@ Alternatively, you can connect using:
 
 {{% choosable cloud gcp %}}
 
-**Connect using Workload Identity Federation** is the recommended option. Pulumi federates directly with Google Cloud, so no service account keys are stored. When you continue, a Google consent page opens asking you to grant Pulumi:
+**Connect using Workload Identity Federation** is the recommended option. Pulumi federates directly with Google Cloud, so no service account keys are stored. When you continue, a Google consent page opens asking you to grant Pulumi OAuth scopes for read-only access to your cloud resources, IAM, and service management (`cloud-platform.read-only`, `iam`, and `service.management`). The wizard uses this access to discover your projects.
 
-- The **Viewer** role on the projects you select
-- The **Editor** role on projects you configure for read and write
-- The `resourcemanager.projects.list` permission, used to discover projects
+Consent doesn't grant any roles on your projects. The wizard grants the **Viewer** or **Editor** role in each project later, after you select projects and choose an access level.
 
 You can optionally enter your numeric **Organization ID** to restrict discovery to a single Google Cloud organization, including projects under its folders. Find it in the Google Cloud console under **IAM & Admin** > **Settings**; it is distinct from the project ID, project number, and location ID. Leave it blank to list every project you can access.
 
