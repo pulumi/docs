@@ -84,7 +84,7 @@ Pulumi fully supports both TypeScript and JavaScript. You can use either languag
 While Pulumi supports JavaScript and any other language that compiles to JavaScript and runs on Node.js, our documentation examples are maintained exclusively in TypeScript. For the most consistent experience and up-to-date examples, we recommend using TypeScript.
 {{< /notes >}}
 
-Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 onwards, including the latest TypeScript 6 releases.
+Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 up to and including the TypeScript 6 releases (for TypeScript 7, see [Using TypeScript 7](#using-typescript-7)).
 
 The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi).
 
@@ -215,7 +215,7 @@ For information on configuring TypeScript, see the [TypeScript documentation for
 
 Pulumi ships with a bundled version of TypeScript 3.8.3 for backwards compatibility. However, when Pulumi runs a TypeScript program, it will first attempt to load the compiler from the local `node_modules` directory, and then fall back to the bundled version. This means that if your `package.json` includes a TypeScript dependency (as Pulumi templates typically do), that version will be used instead.
 
-Pulumi supports all TypeScript versions from 3.8 onwards, including the latest TypeScript 6 releases.
+Pulumi's built-in TypeScript support works with all TypeScript versions from 3.8 up to and including the TypeScript 6 releases.
 
 ```json
 {
@@ -226,6 +226,44 @@ Pulumi supports all TypeScript versions from 3.8 onwards, including the latest T
         "typescript": "^5.4.2",
         ...
     }
+}
+```
+
+### Using TypeScript 7
+
+[TypeScript 7](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/) is a native port of the TypeScript compiler and does not expose the JavaScript compiler API that Pulumi's built-in TypeScript support uses to compile your program at runtime, so it cannot be used to run Pulumi programs. The TypeScript team expects TypeScript 7.1 to ship with a new API and recommends [running TypeScript 6.0 side-by-side with TypeScript 7.0](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0) until then, using the `@typescript/typescript6` backwards compatibility package. This setup works with Pulumi today: alias the compatibility package as `typescript` so that Pulumi's built-in TypeScript support keeps running your program with TypeScript 6, and use the TypeScript 7 compiler for type checking:
+
+```json
+{
+    "name": "my-project",
+    "main": "index.ts",
+    "scripts": {
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@types/node": "^24",
+        "@typescript/native": "npm:typescript@^7.0.2",
+        "typescript": "npm:@typescript/typescript6@^6.0.2"
+    },
+    "dependencies": {
+        "@pulumi/pulumi": "^3.113.0"
+    }
+}
+```
+
+Pulumi resolves `typescript` from `node_modules` as usual and finds the compatibility package, which provides the TypeScript 6 compiler API, so your program runs exactly as before. The compatibility package installs its executable as `tsc6` rather than `tsc`, so `tsc` unambiguously refers to TypeScript 7 and the `typecheck` script type checks your program with the new compiler.
+
+Both compilers read the same `tsconfig.json`, so it must only use options that both versions accept. TypeScript 7 removes some older compiler options, for example `moduleResolution: "node10"`; setting `module` and `moduleResolution` to `nodenext` works with both:
+
+```json
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "es2022",
+        "module": "nodenext",
+        "moduleResolution": "nodenext"
+    },
+    "files": ["index.ts"]
 }
 ```
 
