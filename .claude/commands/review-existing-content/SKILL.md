@@ -46,6 +46,10 @@ Read `.content-review-queue.json` from the repo root (written by
 ```
 
 - `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
+- `stale_claims` (when present) — count of this page's volatile claims the
+  nightly re-verification found contradicted (see §Claims index below). A
+  non-zero count is why the page jumped the queue: treat the ledger markers'
+  entity keys and evidence as priority findings to re-check first.
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - If `articles` is empty or `halted` is set, do nothing (the workflow won't
@@ -383,3 +387,27 @@ The verdict sentinel (step 8), your working-tree edits, and the edited PR body
 draft are your only outputs. The workflow publishes the branch, records the
 ledger, and drives the docs review from them — there is no results file to
 write.
+
+## Claims index and stale-claim boosts
+
+Alongside the ledger record, the workflow persists the page's
+`.verified-claims.json` to a **claims index** — one snapshot object per page
+at `claims/<slug>.json` in the ledger bucket, written by
+`scripts/content-review/record-claims.py`. Each kept claim carries the
+`entity_key` / `volatile` fields stamped by the docs-review pipeline
+(`entity_key.py`), so downstream consumers can join claims across pages by
+the entity they assert something about.
+
+The nightly `claims-reverify.yml` workflow re-checks volatile entities
+(version pins, prices, limits) straight from this index
+(`scripts/content-review/reverify-claims.py`). When an entity re-verifies
+contradicted, every page asserting it gets a `stale_claims` marker in its
+ledger entry, and `select-articles.py` boosts those pages to the front of the
+next sweep — that is how a page can arrive in your queue the day after a
+release changed a fact it states.
+
+None of this is yours to write: this worker's whole-page runs are the index's
+**only** writer, and the workflow runs `record-claims.py` itself after your
+review. The markers clear automatically when your review's ledger and claims
+rewrites land. Do not create, edit, or upload `claims/` objects or
+`stale_claims` fields.
