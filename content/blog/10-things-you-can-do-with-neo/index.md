@@ -11,7 +11,6 @@ tags:
     - platform-engineering
     - pulumi-neo
     - aws
-    - neo-things
 series: neo-things
 category: product
 

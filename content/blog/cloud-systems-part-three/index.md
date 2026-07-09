@@ -12,7 +12,6 @@ authors:
     - kat-cosgrove
 
 tags:
-    - cloud-systems
     - aws
     - tutorials
     - docker

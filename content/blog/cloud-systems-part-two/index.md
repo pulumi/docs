@@ -13,7 +13,6 @@ authors:
     - kat-cosgrove
 
 tags:
-    - cloud-systems
     - tutorials
     - docker
 category: tutorials

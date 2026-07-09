@@ -186,7 +186,7 @@ const SECTIONS = [
     // Blog-post cards (content/blog/<slug>/index.md leaf bundles). Each post's
     // feature_image is pinned to the right and faded into the dark field by the
     // blog template; posts with none get a generic art plate. Non-post pages
-    // under blog/ (tag.md, series.md) get a generic card too; blog/_index.md
+    // under blog/ (tag.md) get a generic card too; blog/_index.md
     // keeps its committed, designer-made meta_image and is skipped. A
     // page-level meta_image (custom override) still wins globally, so migrated
     // posts drop theirs.

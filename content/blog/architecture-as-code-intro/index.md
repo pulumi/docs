@@ -8,7 +8,6 @@ authors:
 tags:
     - kubernetes
     - serverless
-    - architecture-as-code
     - microservices
 category: best-practices
 series: architecture-as-code
