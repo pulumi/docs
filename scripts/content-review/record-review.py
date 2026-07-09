@@ -31,7 +31,8 @@ genuinely "incomplete" and stays due for retry.
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, head_sha, fixes,
     skipped_findings, retirement, note, attempts, clarity_flag,
-    tier, score, monthly_visits, traffic_available, reviewed_at }
+    tier, score, monthly_visits, traffic_available, signals,
+    signals_available, reviewed_at }
 
 The record is written locally (audit artifact) and, when CONTENT_REVIEW_LEDGER_URI
 is set, uploaded to <uri>/<slug>.json with reviewed_at stamped to today (UTC).
@@ -125,6 +126,10 @@ def load_queue_article(queue_path: Path) -> dict:
         "score": a.get("score"),
         "monthly_visits": _maybe_int(a.get("monthly_visits")),
         "traffic_available": bool(traffic.get("available")),
+        # Reader signals (GSC/feedback figures + multipliers + low_ctr_flag),
+        # verbatim from the queue entry; null on a signal-blind run.
+        "signals": a.get("signals"),
+        "signals_available": bool((data.get("reader_signals") or {}).get("available")),
     }
 
 
@@ -276,6 +281,8 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "score": article.get("score"),
         "monthly_visits": article.get("monthly_visits"),
         "traffic_available": bool(article.get("traffic_available")),
+        "signals": article.get("signals"),
+        "signals_available": bool(article.get("signals_available")),
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
 
@@ -412,8 +419,14 @@ def self_test() -> int:
     with tempfile.TemporaryDirectory() as d:
         d = Path(d)
         queue = d / "queue.json"
+        signals_block = {
+            "gsc": {"impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
+                    "multiplier": 1.1025, "low_ctr_flag": True},
+            "feedback": {"yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27},
+        }
         queue.write_text(json.dumps({
             "traffic": {"available": True},
+            "reader_signals": {"available": True},
             "articles": [{
                 "path": "content/docs/iac/concepts/converters.md",
                 "slug": "docs-iac-concepts-converters",
@@ -421,12 +434,31 @@ def self_test() -> int:
                 "tier": 2,
                 "score": 137.5,
                 "monthly_visits": 842,
+                "signals": signals_block,
             }]
         }))
         article = load_queue_article(queue)
         check("queue article carries the selection signal",
               article["tier"] == 2 and article["score"] == 137.5
               and article["monthly_visits"] == 842 and article["traffic_available"] is True)
+        check("queue article carries reader signals verbatim",
+              article["signals"] == signals_block and article["signals_available"] is True)
+
+        # A signal-blind queue (no reader_signals block, e.g. a --paths manual
+        # dispatch or a pre-export run) records null/false, never fabricates.
+        blind = d / "queue-blind.json"
+        blind.write_text(json.dumps({
+            "traffic": {"available": True},
+            "articles": [{"path": "content/docs/iac/concepts/converters.md",
+                          "slug": "docs-iac-concepts-converters"}]
+        }))
+        blind_article = load_queue_article(blind)
+        check("signal-blind queue -> signals null, signals_available False",
+              blind_article["signals"] is None
+              and blind_article["signals_available"] is False)
+        blind_rec = build_record(blind_article, None, None, blind_article["slug"])
+        check("signal-blind record persists null/false",
+              blind_rec["signals"] is None and blind_rec["signals_available"] is False)
 
         # No verdict, no signal -> incomplete (the conservative default).
         rec = build_record(article, None, None, article["slug"])
@@ -455,11 +487,13 @@ def self_test() -> int:
             "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
             "clarity_flag", "tier", "score", "monthly_visits",
-            "traffic_available", "reviewed_at"})
+            "traffic_available", "signals", "signals_available", "reviewed_at"})
         check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
         check("selection signal persisted on the record",
               rec["tier"] == 2 and rec["score"] == 137.5
               and rec["monthly_visits"] == 842 and rec["traffic_available"] is True)
+        check("reader signals persisted on the record verbatim",
+              rec["signals"] == signals_block and rec["signals_available"] is True)
 
         # Repeated incomplete accrues against the prior count the selector carried.
         retried = {**article, "attempts": 2}

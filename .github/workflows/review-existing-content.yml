@@ -6,7 +6,10 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # picks the day's articles by weighted fair queuing — score = importance
 # (strategic tier x traffic) x staleness (days since the page's effective last
 # review) — and this workflow then fans out one
-# content-review-article.yml run per selected article. Each worker reviews
+# content-review-article.yml run per selected article. The importance term is
+# strategic tier x traffic, nudged by bounded boost-only reader signals (Search
+# Console impressions/CTR, feedback-widget votes) when their export exists.
+# Each worker reviews
 # exactly one article and, if it finds a fix, opens a draft PR; the re-lint
 # gate promotes it to ready (firing the normal triage -> review chain) and
 # arms GitHub auto-merge. master requires an approving review + the build
@@ -248,6 +251,37 @@ jobs:
             echo "traffic snapshot unavailable; selection proceeds without it"
           fi
 
+      # The reader-signals export (Search Console impressions/CTR, docs
+      # feedback-widget vote counts, real-404 hits per URL) follows the exact
+      # same pattern as the traffic snapshot above: produced weekly by the data
+      # team, latest-object URI published on their Airflow stack. Until that
+      # export ships, this resolve logs the skip and selection scores exactly
+      # as before — the consumer side here is inert-but-ready by design
+      # (pulumi/docs#20078 item 4.5).
+      - name: Resolve reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "reader-signals export not yet published; selection proceeds without reader signals"
+          fi
+      - name: Fetch reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .reader-signals.json --quiet; then
+            echo "fetched reader-signals snapshot: $(wc -c < .reader-signals.json) bytes"
+          else
+            echo "reader-signals snapshot unavailable; selection proceeds without it"
+          fi
+
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
       # it down to a local cache that select-articles.py reads via --ledger-dir.
@@ -279,6 +313,9 @@ jobs:
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)
           fi
+          if [ -f .reader-signals.json ]; then
+            ARGS+=(--signals-file .reader-signals.json)
+          fi
           if [ -n "${{ github.event.inputs.paths }}" ]; then
             ARGS+=(--paths "${{ github.event.inputs.paths }}")
           fi
@@ -303,12 +340,14 @@ jobs:
           # pre-merge review uses. `path`/`lane` are still passed for the
           # concurrency group and the --paths fallback.
           TRAFFIC=$(jq -c '.traffic' .content-review-queue.json)
+          SIGNALS=$(jq -c '.reader_signals // null' .content-review-queue.json)
           GEN=$(jq -r '.generated' .content-review-queue.json)
           jq -c '.articles[]' .content-review-queue.json | while read -r a; do
             P=$(echo "$a" | jq -r '.path')
             L=$(echo "$a" | jq -r '.lane')
-            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" --arg gen "$GEN" \
-              '{generated: $gen, count: 1, traffic: $traffic, articles: [$art]}')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --argjson signals "$SIGNALS" --arg gen "$GEN" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals, articles: [$art]}')
             echo "dispatching worker for $P (lane=$L)"
             gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
