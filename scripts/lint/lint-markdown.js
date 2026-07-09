@@ -159,17 +159,19 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
 }
 
 /**
- * checkSeriesConsistency enforces that a blog post's series wiring is complete.
+ * checkSeriesConsistency enforces that a blog post's series wiring is correct.
  *
- * A blog series is driven by TWO independent front-matter signals, and a member
- * post needs BOTH kept in sync:
- *   - a `series: <slug>` key  -> single.html renders the "In This Series"
- *     sidebar, which finds siblings via `where .Params.series`.
- *   - the same slug in `tags` -> the post appears on /blog/tag/<slug>/, the
- *     series landing page linked from /blog/series/ and data/blog_series.yml.
- * Having only one silently degrades: tag-only = no sidebar; key-only = missing
- * from the listing. This check fails when they disagree, for any slug defined in
- * data/blog_series.yml. Applies only to blog posts (content/blog/<slug>/index.md).
+ * Series membership is driven solely by the `series: <slug>` key:
+ *   - single.html renders the "In This Series" sidebar, finding siblings via
+ *     `where .Params.series`.
+ *   - the dedicated `series` taxonomy generates the landing page at
+ *     /blog/series/<slug>/ (see layouts/taxonomy/series.html + config.yml).
+ * The slug must name a series defined in data/blog_series.yml (any value
+ * generates a public term page, so a typo would ship a junk URL) and must NOT
+ * also appear in `tags`: that was the old workaround for manufacturing a landing
+ * page under the `tags` taxonomy, and it now only produces a stray
+ * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * only to blog posts (content/blog/<slug>/index.md).
  *
  * @param {*} series The `series` front matter value.
  * @param {*} tags The `tags` front matter value.
@@ -188,15 +190,19 @@ function checkSeriesConsistency(series, tags, fullPath) {
         return "Blog post 'series' must be a single scalar value (the series slug), not a list. See data/blog_series.yml.";
     }
 
-    // series: key present -> the matching tag must be too.
-    if (series && BLOG_SERIES_SLUGS.has(series) && !tagList.includes(series)) {
-        return `Blog post has 'series: ${series}' but is not tagged '${series}'. A series member needs BOTH the series: key (for the in-post "In This Series" sidebar) and the matching tag (to appear on /blog/tag/${series}/, the series landing page). Add '${series}' to tags. See data/blog_series.yml.`;
+    // Every `series:` value mints a public, indexable /blog/series/<value>/ term
+    // page, so it must name a defined series — a typo would silently ship a bare
+    // fallback listing at a junk URL.
+    if (series && !BLOG_SERIES_SLUGS.has(series)) {
+        return `Blog post has 'series: ${series}', which is not a defined blog series. Every series value generates a public /blog/series/ page, so it must match a slug in data/blog_series.yml — fix the typo, or add the series to the data file.`;
     }
 
-    // A tag naming a defined series -> the series: key must be present.
+    // A defined series slug must not be used as a tag; the `series` taxonomy owns
+    // the landing page now, keyed off the `series:` front matter.
     for (const t of tagList) {
-        if (BLOG_SERIES_SLUGS.has(t) && series !== t) {
-            return `Blog post is tagged '${t}' (a defined blog series) but is missing 'series: ${t}'. A series member needs BOTH the tag and the series: key (for the in-post "In This Series" sidebar). Add 'series: ${t}'. See data/blog_series.yml.`;
+        if (BLOG_SERIES_SLUGS.has(t)) {
+            const addKey = series === t ? "" : ` and add 'series: ${t}'`;
+            return `Blog post is tagged '${t}', a defined blog series. Series now live in their own taxonomy at /blog/series/${t}/ (driven by the 'series:' key), so the slug must not be a tag. Remove '${t}' from tags${addKey}. See data/blog_series.yml.`;
         }
     }
 

@@ -6,16 +6,19 @@
     pages with no backing file. Shared by meta-image-url.html and
     meta-image-square-url.html so the landscape and square lookups stay in sync.
 
-    Blog taxonomy term pages (category/tag) have no backing file, so they key off
-    the term instead: category → "category/<term>", tag → "tags/<urlize term>".
-    These mirror the virtual pages in scripts/meta-images/terms.mjs (category ids
-    are already url-safe; tag slugs use urlize, matching that module's port).
+    Blog taxonomy term pages (category/tag/series) have no backing file, so they
+    key off the term instead: category → "category/<term>", tag →
+    "tags/<urlize term>", series → "series/<term>". These mirror the virtual
+    pages in scripts/meta-images/terms.mjs (category ids and series slugs are
+    already url-safe; tag slugs use urlize, matching that module's port).
 */ -}}
 {{- $key := "" -}}
-{{- if and (eq .Kind "term") (or (eq .Data.Singular "category") (eq .Data.Singular "tag")) -}}
+{{- if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) -}}
     {{- $slug := .Data.Term | urlize -}}
     {{- if eq .Data.Singular "category" -}}
         {{- $key = printf "category/%s" $slug -}}
+    {{- else if eq .Data.Singular "series" -}}
+        {{- $key = printf "series/%s" $slug -}}
     {{- else -}}
         {{- $key = printf "tags/%s" $slug -}}
     {{- end -}}

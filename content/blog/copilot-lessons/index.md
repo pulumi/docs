@@ -13,7 +13,6 @@ tags:
     - copilot
     - ai
     - infrastructure-as-code
-    - pulumi-copilot
 category: engineering
 series: pulumi-copilot
 social:

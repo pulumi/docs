@@ -1,23 +1,13 @@
 {{ define "main" }}
-    {{- /* Tag term page dispatcher. A tag whose slug matches a data/blog_series.yml
-        entry is a blog series and gets the dedicated series-page layout; every
-        other tag gets the standard tag listing. Series URLs stay at
-        /blog/tag/<slug>/ so no rank-bearing URL churns. */ -}}
+    {{- /* Tag term page. Blog series live in their own `series` taxonomy
+        (/blog/series/<slug>/, see layouts/taxonomy/series.html), so tags are
+        purely the topical axis here. */ -}}
     {{ $term := .Data.Term }}
-    {{ $series := false }}
-    {{ with site.Data.blog_series }}
-        {{ range .series }}{{ if eq .slug $term }}{{ $series = . }}{{ end }}{{ end }}
-    {{ end }}
-
-    {{ if $series }}
-        {{ partial "blog/series-page.html" (dict "series" $series "page" .) }}
-    {{ else }}
-        {{ partial "blog/header.html" (dict "title" (printf "Tag: %s" ($term | humanize | lower)) "url" .RelPermalink "context" .) }}
-        <div class="container mx-auto px-4 py-8 lg:py-12">
-            {{ $posts := (where .Data.Pages "Section" "blog").ByDate.Reverse }}
-            {{ $paginator := .Paginate $posts }}
-            {{ partial "blog/interleaved-list.html" (dict "paginator" $paginator "pages" $posts) }}
-            {{ partial "blog/paginator.html" . }}
-        </div>
-    {{ end }}
+    {{ partial "blog/header.html" (dict "title" (printf "Tag: %s" ($term | humanize | lower)) "url" .RelPermalink "context" .) }}
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        {{ $posts := (where .Data.Pages "Section" "blog").ByDate.Reverse }}
+        {{ $paginator := .Paginate $posts }}
+        {{ partial "blog/interleaved-list.html" (dict "paginator" $paginator "pages" $posts) }}
+        {{ partial "blog/paginator.html" . }}
+    </div>
 {{ end }}

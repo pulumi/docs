@@ -5,9 +5,8 @@
 
     - category → the name from data/blog_categories.yaml
     - author   → the person's name from data/team
-    - tag      → the series title from data/blog_series.yml if the slug is a
-                 series, else the humanized tag
-    - fallback → the humanized term
+    - series   → the series title from data/blog_series.yml
+    - fallback → the humanized term (tags)
 */ -}}
 {{- $term := .Data.Term -}}
 {{- $name := $term | humanize -}}
@@ -16,7 +15,7 @@
     {{- range site.Data.blog_categories.categories }}{{ if eq .id $term }}{{ $name = .name }}{{ end }}{{ end -}}
 {{- else if eq $sing "author" -}}
     {{- with index site.Data.team.team $term }}{{ $name = .name }}{{ end -}}
-{{- else if eq $sing "tag" -}}
+{{- else if eq $sing "series" -}}
     {{- range site.Data.blog_series.series }}{{ if eq .slug $term }}{{ $name = .title }}{{ end }}{{ end -}}
 {{- end -}}
 {{- return $name -}}

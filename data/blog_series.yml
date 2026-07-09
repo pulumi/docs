@@ -1,6 +1,10 @@
-# List of tags that represent blog series
-# These tags will be displayed on the /blog/series/ page
-# Ordered by most recent post date (newest first)
+# Blog series definitions — the single source of truth for series titles,
+# descriptions, and metadata. Each `slug` backs the `series` taxonomy: posts
+# opt in with a `series: <slug>` front-matter key, the term page renders at
+# /blog/series/<slug>/ (layouts/taxonomy/series.html), and all series are listed
+# at /blog/series/ (layouts/taxonomy/series.terms.html). A slug must NOT also be
+# used as a post tag; `make lint` enforces this.
+# Ordered by most recent post date (newest first).
 series:
   - slug: "neo-things"
     title: "Things You Can Do With Neo"

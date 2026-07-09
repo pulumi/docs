@@ -58,12 +58,11 @@
             {{- $termFeed := "" -}}
             {{- if eq $ctx.Kind "term" }}{{ with $ctx.OutputFormats.Get "rss" }}{{ $termFeed = .RelPermalink }}{{ end }}{{ end -}}
             {{ if and $termFeed (ne $termFeed $mainFeed) }}
-                {{- /* Kind label for the term feed: Category / Author / Tag, or
-                    Series when the tag slug is a series. */ -}}
+                {{- /* Kind label for the term feed: Category / Author / Series /
+                    Collection / Tag. */ -}}
                 {{- $sing := $ctx.Data.Singular -}}
                 {{- $termKind := "Tag" -}}
-                {{- if eq $sing "category" }}{{ $termKind = "Category" }}{{ else if eq $sing "author" }}{{ $termKind = "Author" }}{{ else if eq $sing "collection" }}{{ $termKind = "Collection" }}{{ end -}}
-                {{- if eq $sing "tag" }}{{ range site.Data.blog_series.series }}{{ if eq .slug $ctx.Data.Term }}{{ $termKind = "Series" }}{{ end }}{{ end }}{{ end -}}
+                {{- if eq $sing "category" }}{{ $termKind = "Category" }}{{ else if eq $sing "author" }}{{ $termKind = "Author" }}{{ else if eq $sing "collection" }}{{ $termKind = "Collection" }}{{ else if eq $sing "series" }}{{ $termKind = "Series" }}{{ end -}}
             <details data-dropdown class="relative shrink-0">
                 <summary class="btn btn-icon btn-ghost cursor-pointer list-none [&::-webkit-details-marker]:hidden" aria-label="Pulumi Blog RSS feeds" aria-haspopup="menu">
                     {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}

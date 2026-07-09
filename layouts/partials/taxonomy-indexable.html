@@ -12,26 +12,22 @@
       - tutorial collections (/tutorials/*)          — since pulumi/docs#18483
       - blog category TERM pages (/blog/category/*)  — curated kinds with
         hand-written descriptions
-      - blog series pages (tag terms whose slug is in data/blog_series.yml) —
-        curated multi-part landing pages with unique, blog-only titles
+      - blog series pages (/blog/series/ and /blog/series/*) — curated
+        multi-part landing pages with unique, blog-only titles. Both the
+        directory and each series term page are indexed (the directory was an
+        indexed content page before it became a taxonomy list page).
 
-    Only TERM pages (kind "term") get the category/series carve-outs; the bare
-    taxonomy list pages Hugo also emits (/category/, /tags/, /authors/) stay
-    noindexed and out of the sitemap. Non-taxonomy pages return true (no opinion).
+    The category carve-out is TERM-only; its bare list page (/category/) stays
+    noindexed, as do the /tags/ and /authors/ list pages and all tag/author term
+    pages. Non-taxonomy pages return true (no opinion).
 */ -}}
 {{- $indexable := true -}}
 {{- if .Data.Singular -}}
     {{- $indexable = false -}}
-    {{- if eq .Data.Singular "collection" -}}
+    {{- if or (eq .Data.Singular "collection") (eq .Data.Singular "series") -}}
         {{- $indexable = true -}}
-    {{- else if eq .Kind "term" -}}
-        {{- if eq .Data.Singular "category" -}}
-            {{- $indexable = true -}}
-        {{- else if eq .Data.Singular "tag" -}}
-            {{- range site.Data.blog_series.series -}}
-                {{- if eq .slug $.Data.Term }}{{ $indexable = true }}{{ end -}}
-            {{- end -}}
-        {{- end -}}
+    {{- else if and (eq .Kind "term") (eq .Data.Singular "category") -}}
+        {{- $indexable = true -}}
     {{- end -}}
 {{- end -}}
 {{- return $indexable -}}

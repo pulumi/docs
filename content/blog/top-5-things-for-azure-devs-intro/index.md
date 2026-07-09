@@ -11,7 +11,6 @@ tags:
     - serverless
     - aks
     - devops
-    - azure-top-5
 category: general
 series: azure-top-5
 ---

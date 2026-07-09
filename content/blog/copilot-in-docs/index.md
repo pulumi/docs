@@ -13,7 +13,6 @@ authors:
 tags:
     - releases
     - features
-    - pulumi-copilot
 category: product
 series: pulumi-copilot
 social:

@@ -119,6 +119,11 @@ taxonomies:
   # scalar value to a one-term list. See layouts/taxonomy/category.html and
   # data/blog_categories.yaml (single source of truth for term titles/desc).
   category: category
+  # Like category above, plural is "series" (not "serieses") so Hugo reads the
+  # existing scalar `series:` front matter and casts it to a one-term list. Term
+  # pages land at /blog/series/:slug/. See layouts/taxonomy/series.html and
+  # data/blog_series.yml (single source of truth for series titles/desc).
+  series: series
 
 permalinks:
   term:
@@ -126,12 +131,15 @@ permalinks:
     tags: /blog/tag/:slug/
     collections: /tutorials/:slug/
     category: /blog/category/:slug/
-  # The category taxonomy LIST page (the directory of categories rendered by
-  # layouts/taxonomy/category.terms.html). Without this it would sit at Hugo's
-  # default /category/, leaving /blog/category/ a 404 even though every term
-  # page lives beneath it.
+    series: /blog/series/:slug/
+  # The category/series taxonomy LIST pages (the directories rendered by
+  # layouts/taxonomy/category.terms.html and layouts/taxonomy/series.terms.html).
+  # Without these they would sit at Hugo's default /category/ and /series/,
+  # leaving /blog/category/ and /blog/series/ 404s even though every term page
+  # lives beneath them.
   taxonomy:
     category: /blog/category/
+    series: /blog/series/
 
 # Built-in Related Content, used by layouts/partials/blog/related-posts.html to
 # top up a post's related list. Tags dominate; category and recency break ties.

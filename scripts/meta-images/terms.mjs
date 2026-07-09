@@ -1,19 +1,23 @@
-// terms.mjs — virtual pages for the blog taxonomy TERM cards (category + tag).
+// terms.mjs — virtual pages for the blog taxonomy TERM cards (category + tag
+// + series).
 //
-// Category and tag term pages (/blog/category/<id>/, /blog/tag/<slug>/) have no
-// backing content file, so generate-meta-images.mjs can't discover them by
-// walking content/. This module enumerates them instead: one card per blog
-// category (data/blog_categories.yaml) and one per distinct tag used by any
-// content/blog/*/index.md. Each is rendered with the LIGHT docs-style card
-// ("tutorial" template) — a "Blog" badge, a "Category"/"Tag" corner label, and
-// the term name as the title — so terms reuse the same on-brand visual as the
-// rest of the site with no new template.
+// Category, tag, and series term pages (/blog/category/<id>/, /blog/tag/<slug>/,
+// /blog/series/<slug>/) have no backing content file, so
+// generate-meta-images.mjs can't discover them by walking content/. This module
+// enumerates them instead: one card per blog category
+// (data/blog_categories.yaml), one per distinct tag used by any
+// content/blog/*/index.md, and one per series (data/blog_series.yml). Each is
+// rendered with the DARK docs-style card ("info" template) — a "Blog" badge, a
+// "Category"/"Tag"/"Series" corner label, and the term name as the title — so
+// blog terms share the dark field of the blog-post cards (blog.mjs) with no new
+// template.
 //
 // The id is BOTH the output path (assets/images/generated/<id>.png) and the
 // runtime lookup key. partials/meta-image-key.html maps a term page to that key
 // with `urlize .Data.Term`, so the slug produced here MUST match Hugo's urlize:
 //   category/<id>   (category ids are already url-safe slugs)
 //   tags/<urlize(tag)>
+//   series/<slug>   (series slugs are already url-safe slugs)
 
 import { readFileSync, readdirSync, statSync, existsSync } from "fs"
 import { join } from "path"
@@ -73,17 +77,21 @@ const humanizeTag = (tag) =>
   clean(tag).split(/[-/]/).filter(Boolean).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ")
 
 // A term card page-object, matching the shape listPages() builds (the generator
-// fills in mid/out/key). The LIGHT "tutorial" card carries a "Blog" badge and a
-// "Category"/"Tag" corner label; no description → the title fills the body.
+// fills in mid/out/key). The DARK "info" card carries a "Blog" badge and a
+// "Category"/"Tag"/"Series" corner label; no description → the title fills the
+// body.
 const termPage = (id, corner, title) => ({
   id,
-  template: "tutorial",
+  template: "info",
   fields: { sectionLabel: "Blog", subSectionLabel: corner, title: clean(title), description: "" },
   w: CANVAS_W,
   h: CANVAS_H,
 })
 
-// The virtual term pages: one per blog category, one per distinct tag.
+// The virtual term pages: one per blog category, one per distinct tag, one per
+// blog series, plus one for the /blog/series/ directory itself (backed by
+// content/series/_index.md, which no content walk covers; meta-image-key.html
+// resolves that page to the key "series").
 export function termPages() {
   const pages = []
 
@@ -97,6 +105,14 @@ export function termPages() {
   for (const [slug, tag] of blogTags()) {
     pages.push(termPage(`tags/${slug}`, "Tag", humanizeTag(tag)))
   }
+
+  const seriesFile = join(REPO_ROOT, "data", "blog_series.yml")
+  const series = (yaml.load(readFileSync(seriesFile, "utf-8")) || {}).series || []
+  for (const s of series) {
+    if (!s || !s.slug) continue
+    pages.push(termPage(`series/${s.slug}`, "Series", s.title || humanizeTag(s.slug)))
+  }
+  pages.push(termPage("series", "", "All Series"))
 
   return pages
 }

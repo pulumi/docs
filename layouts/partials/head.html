@@ -210,20 +210,21 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
-    {{ else if and (eq .Kind "term") (in (slice "category" "tag") .Data.Singular) }}
-        {{/* Blog taxonomy term pages (category, tag, and series-as-tag) have no
-            .Summary; source their description from the data files so they don't
-            fall through to an empty meta description. */}}
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series) have no .Summary;
+            source their description from the data files so they don't fall
+            through to an empty meta description. */}}
         {{ $desc := "" }}
         {{ if eq .Data.Singular "category" }}
             {{ range site.Data.blog_categories.categories }}
                 {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
             {{ end }}
-        {{ else if eq .Data.Singular "tag" }}
+        {{ else if eq .Data.Singular "series" }}
             {{ with site.Data.blog_series }}{{ range .series }}
                 {{ if eq .slug $.Data.Term }}{{ $desc = .description }}{{ end }}
             {{ end }}{{ end }}
-            {{ if not $desc }}{{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}{{ end }}
+        {{ else if eq .Data.Singular "tag" }}
+            {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
         {{ end }}
         {{ with $desc | chomp }}
             <meta name="description" content="{{ . }}" />
@@ -245,15 +246,16 @@
              Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
         {{ $blogTerm := false }}
         {{ $seriesTerm := false }}
-        {{ if and (eq .Kind "term") (in (slice "category" "tag" "author") .Data.Singular) }}
+        {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
-            {{ if eq .Data.Singular "tag" }}
-                {{ range site.Data.blog_series.series }}{{ if eq .slug $.Data.Term }}{{ $seriesTerm = true }}{{ end }}{{ end }}
-            {{ end }}
+            {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
+        {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "series") }}
+            {{ $blogTerm = true }}
+            {{ $title = "All Series" }}
         {{ end }}
         {{ if .Params.title_tag }}
             {{ $title = .Params.title_tag }}

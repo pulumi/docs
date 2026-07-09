@@ -6,7 +6,6 @@ meta_desc: "Build microservices with reusable components created with common pro
 authors:
     - sophia-parafina
 tags:
-    - architecture-as-code
     - microservices
 category: best-practices
 series: architecture-as-code

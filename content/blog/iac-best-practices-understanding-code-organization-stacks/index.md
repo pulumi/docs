@@ -13,7 +13,6 @@ tags:
     - cloud-engineering
     - aws
     - eks
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

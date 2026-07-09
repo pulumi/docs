@@ -10,7 +10,6 @@ tags:
     - best-practices
     - cloud-engineering
     - kubernetes
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

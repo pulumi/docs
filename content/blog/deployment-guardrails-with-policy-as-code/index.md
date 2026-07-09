@@ -17,7 +17,6 @@ tags:
     - security
     - self-service
     - guardrails
-    - idp-best-practices
 category: best-practices
 ---
 

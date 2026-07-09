@@ -9,7 +9,6 @@ authors:
     - scott-lowe
 tags:
     - best-practices
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

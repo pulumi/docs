@@ -12,7 +12,6 @@ authors:
 tags:
     - features
     - releases
-    - pulumi-copilot
 category: product
 series: pulumi-copilot
 ---

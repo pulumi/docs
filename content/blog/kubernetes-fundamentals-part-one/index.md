@@ -8,7 +8,6 @@ authors:
     - kat-cosgrove
 tags:
     - kubernetes
-    - kubernetes-fundamentals
 category: tutorials
 series: kubernetes-fundamentals
 ---

@@ -1,0 +1,24 @@
+{{ define "main" }}
+    {{- /* Blog series term page (/blog/series/<slug>/). The series metadata
+        (title, description, part list) comes from data/blog_series.yml, keyed by
+        .Data.Term. Rendering is delegated to the shared blog/series-page.html
+        partial. A term whose slug has no entry in the data file falls back to a
+        plain post listing so the page is never blank. */ -}}
+    {{ $term := .Data.Term }}
+    {{ $series := false }}
+    {{ with site.Data.blog_series }}
+        {{ range .series }}{{ if eq .slug $term }}{{ $series = . }}{{ end }}{{ end }}
+    {{ end }}
+
+    {{ if $series }}
+        {{ partial "blog/series-page.html" (dict "series" $series "page" .) }}
+    {{ else }}
+        {{ partial "blog/header.html" (dict "title" (printf "Series: %s" ($term | humanize | lower)) "url" .RelPermalink "context" .) }}
+        <div class="container mx-auto px-4 py-8 lg:py-12">
+            {{ $posts := (where .Data.Pages "Section" "blog").ByDate.Reverse }}
+            {{ $paginator := .Paginate $posts }}
+            {{ partial "blog/interleaved-list.html" (dict "paginator" $paginator "pages" $posts) }}
+            {{ partial "blog/paginator.html" . }}
+        </div>
+    {{ end }}
+{{ end }}

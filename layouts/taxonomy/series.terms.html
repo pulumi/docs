@@ -1,4 +1,8 @@
 {{ define "main" }}
+    {{- /* The series taxonomy list page, placed at /blog/series/ by the
+        permalinks.taxonomy config. Renders a directory of the blog series
+        (title + description from data/blog_series.yml, linked to each term
+        page), mirroring layouts/taxonomy/category.terms.html. */ -}}
     {{ partial "blog/header.html" (dict "title" "Series" "url" .RelPermalink "context" .) }}
 
     <div class="container mx-auto px-4 py-8 lg:py-12">

@@ -6,7 +6,12 @@ const redirectsFile = process.argv[3] || "./public/redirects.txt";
 const region = process.argv[4] || "us-west-2"
 
 async function doRedirects(bucket, region) {
-    let redirects = fs.readFileSync(redirectsFile, "utf-8").trim().split("\n");
+    // Skip blank lines and # comments, which would otherwise be uploaded as
+    // S3 objects keyed by the comment text.
+    let redirects = fs.readFileSync(redirectsFile, "utf-8")
+        .split("\n")
+        .map(line => line.trim())
+        .filter(line => line && !line.startsWith("#"));
 
     // For docs pages that have the markdown output format enabled, also create
     // redirect entries for .md URLs so the CLI gets proper 301s instead of 404s.

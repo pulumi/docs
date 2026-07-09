@@ -13,7 +13,6 @@ tags:
 - sqs
 - s3
 - ai
-- ai-slack-bot
 category: tutorials
 series: ai-slack-bot
 meta_desc: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"

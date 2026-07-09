@@ -1,7 +1,7 @@
 {{- /*
     Series card: dark image top, an "N PART SERIES" mono badge fanned over a
     stack of decorative pills (the stacked-pages motif), title (h4), and a
-    clamped description. Links to the series page (kept at its /blog/tag/ URL).
+    clamped description. Links to the series page (/blog/series/<slug>/).
 
     Params:
       series (required) an entry from data/blog_series.yml (slug/title/description/meta_image)
@@ -27,7 +27,7 @@
     </div>
     <div class="flex flex-col gap-2">
         {{ partial "blog/series-fan.html" (dict "count" $count) }}
-        <h4 class="m-0!"><a href="/blog/tag/{{ $s.slug }}/" data-track="blog-series-{{ $s.slug }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $s.title }}</a></h4>
+        <h4 class="m-0!"><a href="/blog/series/{{ $s.slug }}/" data-track="blog-series-{{ $s.slug }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $s.title }}</a></h4>
         {{- with $s.description }}<p class="m-0! body-sm text-service-black line-clamp-3">{{ . }}</p>{{ end -}}
     </div>
 </article>

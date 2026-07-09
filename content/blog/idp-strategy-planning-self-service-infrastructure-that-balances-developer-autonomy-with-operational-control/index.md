@@ -43,7 +43,6 @@ tags:
     - governance
     - components
     - templates
-    - idp-best-practices
 category: best-practices
 
 # The social copy used to promote this post on Twitter and Linkedin. These

@@ -12,7 +12,6 @@ tags:
     - ai
     - llm
     - copilot
-    - pulumi-copilot
 category: product
 series: pulumi-copilot
 social:

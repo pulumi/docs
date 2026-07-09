@@ -17,7 +17,6 @@ tags:
     - pulumi-templates
     - developer-experience
     - reusable-infrastructure
-    - idp-best-practices
 category: best-practices
 social:
     twitter: "Golden paths aren't just about standardization. They're about empowering developers with pre-architected, supported infrastructure patterns. Learn how to build reusable components and templates that transform your Internal Developer Platform. #platformengineering #goldenpaths #pulumi"
