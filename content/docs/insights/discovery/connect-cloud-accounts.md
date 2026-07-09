@@ -10,13 +10,9 @@ menu:
     weight: 15
 ---
 
-The **Connect cloud accounts** wizard onboards many cloud accounts to Pulumi Insights at once. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a Pulumi ESC environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
+The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights at once. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a Pulumi ESC environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
 
 The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
-
-{{% notes type="info" %}}
-The Connect cloud accounts wizard is in public preview and is rolling out gradually. If you don't see it in your organization yet, use [manual account creation](/docs/insights/discovery/accounts/) in the meantime.
-{{% /notes %}}
 
 ## Prerequisites
 
@@ -34,7 +30,7 @@ You can open the wizard from two places in the Pulumi Cloud console:
 - Navigate to **Insights** > **Accounts** and select **Connect cloud accounts**.
 - On the home dashboard, select the **Connect cloud accounts** task on the **Get to know Pulumi** card.
 
-The wizard opens as a panel and walks you through five steps: **Cloud provider**, **Authentication**, **Accounts**, **Discovery**, and **Summary & next steps**.
+The wizard opens as a panel and walks you through the onboarding steps.
 
 ## Step 1: Choose a cloud provider
 
@@ -50,7 +46,7 @@ Each provider offers a recommended browser-based sign-in that uses OIDC, plus al
 
 {{% choosable cloud aws %}}
 
-**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account in your organization.
+**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account that your user can access from your organization.
 
 ![The authentication step for AWS showing the IAM Identity Center option selected with SSO start URL and region fields](/docs/insights/assets/connect-cloud-accounts-authentication.png)
 
@@ -67,7 +63,7 @@ Alternatively, you can connect using:
 **Connect using OpenID Connect (OIDC)** is the recommended option. Pulumi uses workload identity federation with Microsoft Entra ID, so no client secrets are stored. Provide your **Tenant ID (Directory ID)**, which you can find under **Microsoft Entra ID** > **Properties** in the Azure portal. When you continue, a Microsoft consent page opens asking you to grant Pulumi:
 
 - The **Reader** role on the subscriptions you select
-- The **Contributor** role on subscriptions you configure for full automation
+- The **Contributor** role on subscriptions you configure for full read and write
 - The `Directory.Read.All` permission, used to discover subscriptions
 
 After you grant consent, the wizard lists the subscriptions in your tenant.
@@ -85,7 +81,7 @@ Alternatively, you can connect using:
 **Connect using Workload Identity Federation** is the recommended option, so no service account keys are stored. When you continue, a Google consent page opens asking you to grant Pulumi:
 
 - The **Viewer** role on the projects you select
-- The **Editor** role on projects you configure for full automation
+- The **Editor** role on projects you configure for read and write
 - The `resourcemanager.projects.list` permission, used to discover projects
 
 You can optionally enter your numeric **Organization ID** to restrict discovery to a single Google Cloud organization, including projects under its folders. Find it in the Google Cloud console under **IAM & Admin** > **Settings**; it is distinct from the project ID, project number, and location ID. Leave it blank to list every project you can access.
@@ -170,7 +166,7 @@ All authentication uses OIDC and workload identity federation — Pulumi Cloud d
 
 ### Some accounts failed to connect
 
-When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again — accounts that connected successfully are recognized and skipped — or set up the remaining accounts manually by following [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
+When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Alternatively, set up the remaining accounts manually by following [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
 
 ### AWS IAM role creation is denied
 
