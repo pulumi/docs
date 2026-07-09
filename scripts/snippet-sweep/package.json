@@ -1,0 +1,8 @@
+{
+  "name": "snippet-sweep",
+  "private": true,
+  "description": "Deterministic snippet-parse sweep (see sweep.py); typescript is pinned to mirror the repo root",
+  "dependencies": {
+    "typescript": "^5.7.2"
+  }
+}

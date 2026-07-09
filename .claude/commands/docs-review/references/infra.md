@@ -78,6 +78,8 @@ If the PR changes any of the above without updating `BUILD-AND-DEPLOY.md` — or
 
 When the diff touches `scripts/`, `Makefile`, or build/serve config, grep `BUILD-AND-DEPLOY.md` for the affected script/flag/env-var names *even when the diff doesn't touch the doc*. That's where the contradiction case hides.
 
+The same rule covers the review automation's own meta-docs. When the diff touches the review pipeline — `.github/workflows/claude-*.yml`, `content-review-article.yml`, `review-existing-content.yml`, `check-links.yml`, or the review skills under `.claude/commands/` — grep `CONTRIBUTING.md` and `AGENTS.md` for claims about the changed surface (model pins, trigger events, labels, thresholds, hashtag commands) *even when the diff doesn't touch those docs*. A model bump or trigger change that leaves the contributor-facing description asserting the old behavior is the same contradiction case: 🚨 when a doc claim is concretely contradicted by the diff.
+
 For the canonical risk catalog, consult `BUILD-AND-DEPLOY.md` §Infrastructure Change Review; for the runtime/build/dev split, §Dependency risk tiers.
 
 ## Do not flag

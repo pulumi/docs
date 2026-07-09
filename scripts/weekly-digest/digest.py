@@ -17,11 +17,16 @@ import json
 import subprocess
 import sys
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
 REPO = "pulumi/docs"
 BOT_LOGINS = {"pulumi-bot", "dependabot[bot]"}
 WINDOW_DAYS = 7
 NOW = datetime.now(timezone.utc)
+OUTCOME_SCRAPER = (
+    Path(__file__).resolve().parents[2]
+    / ".claude/commands/docs-review/scripts/scrape-review-outcomes.py"
+)
 
 
 def run_gh(args):
@@ -181,6 +186,32 @@ def shape_ci_health(raw):
     }
 
 
+def collect_review_outcomes(since):
+    """Pre-merge review outcome telemetry for PRs closed in the window.
+
+    Delegates to scrape-review-outcomes.py (issue #20078 §3.2), which derives
+    per-finding outcomes from each closed PR's pinned review comments. Only
+    the window aggregate rides into the digest — per-PR finding lists stay in
+    the scraper. Degrades to {"available": False} on any failure so a scraper
+    or gh outage mutes this section without killing the digest; the aggregate
+    itself carries `prs_no_review_data` / `prs_parse_low` so partial
+    degradation is visible rather than silent.
+    """
+    try:
+        proc = subprocess.run(
+            [sys.executable, str(OUTCOME_SCRAPER), "--closed-since", since, "--repo", REPO],
+            capture_output=True, text=True, check=True,
+        )
+        aggregate = json.loads(proc.stdout).get("aggregate")
+    except (subprocess.CalledProcessError, FileNotFoundError, json.JSONDecodeError) as exc:
+        detail = getattr(exc, "stderr", "") or str(exc)
+        sys.stderr.write(f"warning: review-outcome scrape failed: {str(detail).strip()[:500]}\n")
+        return {"available": False}
+    if not isinstance(aggregate, dict):
+        return {"available": False}
+    return {"available": True, "since": since, **aggregate}
+
+
 def search_count(qualifier):
     """Exact issue count via the search API's total_count (REST, not GraphQL)."""
     out = run_gh(
@@ -232,11 +263,13 @@ def main():
             ]
         )
     )
+    review_outcomes = collect_review_outcomes(cutoff)
     digest = {
         "window_days": WINDOW_DAYS,
         "prs": prs,
         "issues": issues,
         "ci_health": ci_health,
+        "review_outcomes": review_outcomes,
     }
     json.dump(digest, sys.stdout, indent=2)
     sys.stdout.write("\n")

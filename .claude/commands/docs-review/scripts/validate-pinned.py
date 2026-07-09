@@ -19,7 +19,17 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 16 (v15→v16 adds the `flagged` (🚩) detector verdict to
+Schema version: 18 (v17→v18 adds the `outcome-annotation-shape` rule: the
+  re-entrant outcome annotations — `🛡️ **Disputed by <author> on YYYY-MM-DD,
+  model held.**` under a held finding and `concede: <reason>` on a ✅ Resolved
+  bullet — are now machine-scraped by scrape-review-outcomes.py for the
+  weekly outcome telemetry (issue #20078 §3.2), so a freelanced shape
+  ("author disputed this", "conceding the point") silently drops out of the
+  fixed/conceded/disputed counts. The rule fires only when a bucket paragraph
+  *looks* like it carries one of these annotations but doesn't parse; the
+  canonical regexes live here (DISPUTED_ANNOTATION_RE / CONCEDE_ANNOTATION_RE)
+  and the scraper imports them, so there is exactly one definition.
+  v15→v16 adds the `flagged` (🚩) detector verdict to
   `TRAIL_VERDICT_WORDS` / `EXPECTED_TRAIL_EMOJI` / `OUTSTANDING_VERDICT_WORDS` /
   `OUTSTANDING_TRAIL_EMOJIS` / the trail-line emoji alternation. `flagged` is
   the honest verdict for `route: "preflight"` detector findings (Hugo build,
@@ -110,7 +120,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 17
+SCHEMA_VERSION = 18
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -186,6 +196,21 @@ LEGACY_TRAIL_EMOJIS = {"✅", "⚠️", "🚨"}
 # verdict word (used as a fallback when the verdict word isn't one of the
 # canonical TRAIL_VERDICT_WORDS).
 OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️", "🚩"}
+
+# Schema v18: canonical shapes of the re-entrant outcome annotations
+# (`docs-review:references:update` Case 1/2). scrape-review-outcomes.py keys
+# the weekly fixed/conceded/disputed telemetry on these exact shapes and
+# imports these constants — change them only together with that scraper and
+# update.md. The *_HINT_RE forms are the loose triggers the
+# `outcome-annotation-shape` rule uses to spot a paragraph that is trying to
+# carry the annotation but won't parse.
+# Capture groups (author, date) are for the scraper; this rule only searches.
+DISPUTED_ANNOTATION_RE = re.compile(
+    r"🛡️\s*\*\*Disputed by @?(\S+) on (\d{4}-\d{2}-\d{2}), model held\.\*\*"
+)
+DISPUTED_HINT_RE = re.compile(r"🛡|Disputed by\b", re.IGNORECASE)
+CONCEDE_ANNOTATION_RE = re.compile(r"\bconcede[:d]", re.IGNORECASE)
+CONCEDE_HINT_RE = re.compile(r"\bconce(?:de|des|ded|ding|ssion)\b", re.IGNORECASE)
 
 # Dispatch-metadata format on the External claim verification line
 # (output-format.md L122). Two segments are required, matched independently:
@@ -2201,6 +2226,76 @@ def check_no_todo_tokens(ctx: Context) -> list[Violation]:
     return violations
 
 
+def _finding_paragraphs(ctx: Context, heading_substring: str) -> list[tuple[int, str]]:
+    """Group a bucket section into (start_line_1indexed, paragraph) pairs.
+
+    A paragraph starts at a column-0 `**`-prefixed line (the same shape
+    extract_bucket_bullets counts) and runs to the next one or the section
+    end, so annotation lines rendered under a finding (🛡️ Disputed, concede
+    reasons) stay attached to it.
+    """
+    span = find_section(ctx.body, heading_substring)
+    if span is None:
+        return []
+    start, end = span
+    finding_re = re.compile(r"^(?:- )?\*\*\S")
+    paragraphs: list[tuple[int, str]] = []
+    current_start = None
+    current: list[str] = []
+    for i in range(start + 1, end):
+        line = ctx.body_lines[i]
+        if finding_re.match(line):
+            if current:
+                paragraphs.append((current_start + 1, "\n".join(current)))
+            current_start = i
+            current = [line]
+        elif current:
+            current.append(line)
+    if current:
+        paragraphs.append((current_start + 1, "\n".join(current)))
+    return paragraphs
+
+
+def check_outcome_annotation_shapes(ctx: Context) -> list[Violation]:
+    """Schema v18: outcome annotations must render in their canonical shapes.
+
+    scrape-review-outcomes.py derives the weekly fixed/conceded/disputed
+    telemetry (issue #20078 §3.2) from the `🛡️ **Disputed by <author> on
+    YYYY-MM-DD, model held.**` line and the `concede: <reason>` annotation
+    that `docs-review:references:update` Cases 1/2 prescribe. A freelanced
+    shape ("author disputed this", "conceding the point") silently drops the
+    finding out of those counts. Fires only when a paragraph *looks* like it
+    carries the annotation (loose *_HINT_RE match) but the canonical regex
+    doesn't parse it — plain findings never trip it.
+    """
+    violations: list[Violation] = []
+    for heading in ("🚨 Outstanding", "⚠️ Low-confidence"):
+        for line_no, paragraph in _finding_paragraphs(ctx, heading):
+            if DISPUTED_HINT_RE.search(paragraph) and not DISPUTED_ANNOTATION_RE.search(paragraph):
+                violations.append(Violation(
+                    rule_id="outcome-annotation-shape",
+                    line_ref=f"<body line {line_no}>",
+                    expected="held-dispute annotation rendered as `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**`",
+                    actual=f"paragraph mentions a dispute but the canonical annotation doesn't parse: {paragraph.strip().splitlines()[0][:120]}",
+                    hint="Render the dispute annotation exactly as `docs-review:references:update` Case 2 "
+                         "prescribes — `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` on its own "
+                         "line directly under the finding text. The weekly outcome telemetry "
+                         "(scrape-review-outcomes.py) parses this exact shape.",
+                ))
+    for line_no, paragraph in _finding_paragraphs(ctx, "✅ Resolved"):
+        if CONCEDE_HINT_RE.search(paragraph) and not CONCEDE_ANNOTATION_RE.search(paragraph):
+            violations.append(Violation(
+                rule_id="outcome-annotation-shape",
+                line_ref=f"<body line {line_no}>",
+                expected="concession annotated as `concede: <reason>` on the ✅ Resolved bullet",
+                actual=f"bullet mentions a concession but carries no `concede:` annotation: {paragraph.strip().splitlines()[0][:120]}",
+                hint="Annotate conceded findings as `concede: <reason>` per `docs-review:references:update` "
+                     "Case 2 — the weekly outcome telemetry (scrape-review-outcomes.py) distinguishes "
+                     "fixed from conceded findings by this token.",
+            ))
+    return violations
+
+
 # ---- Rule registry ---------------------------------------------------------
 
 RULES = [
@@ -2359,6 +2454,12 @@ RULES = [
         "desc": "Schema v10: no `<TODO: …>` (or bare `<TODO>`) placeholder from compose-review.py's draft survives to the published body.",
         "hint": "Replace every `<TODO: …>` (summary paragraph, confidence levels, fix prose, cross-sibling count, review-history summary, Tier-2 editorial balance) with actual content. The composer's self-check passes `--skip-rule no-todo-tokens`; the publish path does not.",
         "check": check_no_todo_tokens,
+    },
+    {
+        "id": "outcome-annotation-shape",
+        "desc": "Schema v18: re-entrant outcome annotations render in their canonical, machine-scraped shapes — `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` under a held finding; `concede: <reason>` on a conceded ✅ Resolved bullet. Fires only when a paragraph looks like it carries the annotation but the canonical form doesn't parse.",
+        "hint": "Render dispute/concession annotations exactly per `docs-review:references:update` Case 2: `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` on its own line under the held finding, `concede: <reason>` on the conceded ✅ Resolved bullet. scrape-review-outcomes.py keys the weekly outcome telemetry on these shapes.",
+        "check": check_outcome_annotation_shapes,
     },
     {
         "id": "no-placeholder-empty-form",

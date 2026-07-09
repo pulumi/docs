@@ -116,6 +116,11 @@ _vendor/
 # Lint re-gate scratch (worker re-lints the fix branch and captures output).
 /.lint.log
 /.lint-comment.md
+# Review→publish handoff (the unprivileged review job exports the model's
+# working-tree changes; the publish job re-checks the applied paths).
+/.review-changes.patch
+/.review-changes.paths
+/.applied.paths
 # docs-review pre-computation artifacts the worker generates before the
 # review (claim extraction/verification, Vale, frontmatter, cross-sibling,
 # readthrough).

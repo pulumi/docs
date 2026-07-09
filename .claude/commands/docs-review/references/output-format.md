@@ -337,7 +337,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
     Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Render the breakdown even on single-finding files (the format is uniform across the review).
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
-- **✅ Resolved** lists findings from the previous review that no longer appear.
+- **✅ Resolved** lists findings from the previous review that no longer appear. Annotate conceded findings with `concede: <reason>` (per `docs-review:references:update` Case 2) — the outcome telemetry (`scrape-review-outcomes.py`) distinguishes fixed from conceded by that exact token, and the `outcome-annotation-shape` validator rule flags freelanced variants. The same applies to the held-dispute annotation `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` in 🚨/⚠️.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
 
 Per-finding rendering (suggestion blocks, quote-and-rewrite mandate, fix prose) is governed by `docs-review:references:shared-criteria`.

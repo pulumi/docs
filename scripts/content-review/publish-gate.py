@@ -1,0 +1,226 @@
+#!/usr/bin/env python3
+"""Deterministic publish gate for the content-review worker.
+
+The worker's model job runs unprivileged and hands its work to the publish
+job as data (a verdict sentinel plus a staged-changes patch). This script is
+the code-enforced boundary between that model output and anything
+credentialed: the publish job runs it before creating a branch, and again —
+with `--paths-from` — after `git apply`, so the scope check runs against the
+tree that actually ships rather than against patch text.
+
+Checks (all deterministic; the gate fails closed):
+
+- The queue parses and carries exactly one article with `path` and `slug`.
+- The verdict sentinel parses, uses the canonical verdict vocabulary, and is
+  consistent with the patch: `fixed` requires a non-empty patch, `clean` and
+  `skipped` require an empty (or absent) one.
+- `no_retire` backstop: a retirement verdict on a page the queue stamps
+  `no_retire: true` is a hard failure, regardless of what the model wrote in
+  the PR body. A queue entry missing the field counts as `no_retire: true`.
+- Diff scope (`--paths-from`, NUL-separated as produced by
+  `git diff --cached --name-only -z`): every changed path must fall inside
+  the allowed set for the review kind —
+    fix PR:        the queued article itself, plus the shared render-time
+                   sources the skill's rendered-content pass may correct
+                   (`layouts/shortcodes/`, `layouts/partials/`, `data/`);
+    retirement PR: `content/**` (the page, its inbound links, the redirect
+                   target's aliases), `scripts/redirects/**`, and the docs
+                   menu data file.
+
+Outputs (to $GITHUB_OUTPUT when set, always echoed):
+
+- `publish` — "true" only for a consistent `fixed` verdict; "false" for
+  clean/skipped/absent verdicts (exit 0 — nothing to publish is a normal
+  outcome, recorded by the ledger step).
+- `branch` — the canonical branch name, derived here from the queue slug and
+  the verdict's `retirement` flag so the model never chooses it.
+- `retirement` — "true"/"false".
+
+Exit codes: 0 = pass (publish may be true or false), 1 = violation.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
+
+BRANCH_PREFIX = "content-review/"
+VERDICTS = {"fixed", "clean", "skipped"}
+
+# Shared render-time sources the skill's rendered-content pass (SKILL.md
+# step 6) may correct on any fix PR, beyond the article itself.
+FIX_SHARED_PREFIXES = (
+    "layouts/shortcodes/",
+    "layouts/partials/",
+    "data/",
+)
+
+# A retirement PR (SKILL.md "Retirement proposals") removes the page, adds
+# the redirect (target-page aliases or an S3 redirect), updates inbound
+# links, and drops the menu entry.
+RETIRE_PREFIXES = (
+    "content/",
+    "scripts/redirects/",
+)
+RETIRE_FILES = ("data/docs_menu_sections.yml",)
+
+
+def fail(msg: str) -> None:
+    print(f"::error::publish-gate: {msg}")
+
+
+def emit(outputs: dict[str, str]) -> None:
+    lines = [f"{k}={v}" for k, v in outputs.items()]
+    out_path = os.environ.get("GITHUB_OUTPUT")
+    if out_path:
+        with open(out_path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    for line in lines:
+        print(line)
+
+
+def load_article(queue_path: Path) -> dict | None:
+    try:
+        queue = json.loads(queue_path.read_text(encoding="utf-8"))
+        articles = queue.get("articles") or []
+    except (OSError, json.JSONDecodeError, AttributeError) as e:
+        fail(f"queue {queue_path} is missing or unreadable ({e})")
+        return None
+    if len(articles) != 1:
+        fail(f"queue must carry exactly one article, found {len(articles)}")
+        return None
+    article = articles[0]
+    if not article.get("path") or not article.get("slug"):
+        fail("queue article is missing 'path' or 'slug'")
+        return None
+    return article
+
+
+def load_verdict(verdict_path: Path) -> tuple[dict | None, bool]:
+    """Return (verdict, ok). An absent sentinel is ok (nothing to publish);
+    an unreadable or malformed one is a violation."""
+    if not verdict_path.is_file():
+        return None, True
+    try:
+        verdict = json.loads(verdict_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as e:
+        fail(f"verdict {verdict_path} is unreadable ({e})")
+        return None, False
+    if not isinstance(verdict, dict):
+        fail("verdict sentinel is not a JSON object")
+        return None, False
+    v = verdict.get("verdict")
+    if v not in VERDICTS:
+        fail(f"unrecognized verdict {v!r} (expected one of {sorted(VERDICTS)})")
+        return None, False
+    for field in ("fixes", "skipped_findings"):
+        if not isinstance(verdict.get(field, 0), int):
+            fail(f"verdict field {field!r} is not an integer")
+            return None, False
+    if v in ("clean", "skipped") and not (verdict.get("reason") or "").strip():
+        # The skill requires a reason for these; nag, don't block.
+        print(f"::warning::publish-gate: verdict '{v}' carries no reason")
+    return verdict, True
+
+
+def patch_is_empty(patch_path: Path) -> bool:
+    try:
+        return patch_path.stat().st_size == 0
+    except OSError:
+        return True
+
+
+def read_paths(paths_file: Path) -> list[str] | None:
+    try:
+        raw = paths_file.read_bytes()
+    except OSError as e:
+        fail(f"paths file {paths_file} is unreadable ({e})")
+        return None
+    return [p.decode("utf-8") for p in raw.split(b"\0") if p]
+
+
+def check_scope(paths: list[str], article_path: str, retirement: bool) -> bool:
+    """True when every changed path is inside the allowed set."""
+    ok = True
+    for p in paths:
+        if p == article_path:
+            continue
+        if retirement:
+            allowed = p.startswith(RETIRE_PREFIXES) or p in RETIRE_FILES
+        else:
+            allowed = p.startswith(FIX_SHARED_PREFIXES)
+        if not allowed:
+            kind = "retirement" if retirement else "fix"
+            fail(f"changed path {p!r} is outside the {kind}-PR scope for {article_path!r}")
+            ok = False
+    return ok
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--queue", required=True, type=Path)
+    ap.add_argument("--verdict", required=True, type=Path)
+    ap.add_argument("--patch", required=True, type=Path)
+    ap.add_argument("--paths-from", type=Path, default=None,
+                    help="NUL-separated changed-path list (git diff --name-only -z); "
+                         "when given, also enforce the diff-scope rules")
+    args = ap.parse_args()
+
+    article = load_article(args.queue)
+    if article is None:
+        return 1
+
+    verdict, ok = load_verdict(args.verdict)
+    if not ok:
+        return 1
+
+    slug = article["slug"]
+    retirement = bool(verdict.get("retirement")) if verdict else False
+    branch = f"{BRANCH_PREFIX}{'retire-' if retirement else ''}{slug}"
+    empty = patch_is_empty(args.patch)
+
+    violations = 0
+    publish = False
+    if verdict is None:
+        print("publish-gate: no verdict sentinel; nothing to publish")
+    elif verdict["verdict"] == "fixed":
+        if empty:
+            fail("verdict is 'fixed' but the change patch is empty or absent")
+            violations += 1
+        else:
+            publish = True
+    else:  # clean / skipped
+        if not empty:
+            fail(f"verdict is '{verdict['verdict']}' but the change patch is non-empty")
+            violations += 1
+
+    if retirement:
+        # Fail closed: a queue entry that doesn't say no_retire: false is
+        # treated as protected.
+        if bool(article.get("no_retire", True)):
+            fail(f"retirement proposed for {article['path']!r}, which the queue "
+                 "stamps no_retire — this page must never be retired")
+            violations += 1
+
+    if args.paths_from is not None:
+        paths = read_paths(args.paths_from)
+        if paths is None:
+            violations += 1
+        elif not check_scope(paths, article["path"], retirement):
+            violations += 1
+
+    if violations:
+        return 1
+    emit({
+        "publish": "true" if publish else "false",
+        "branch": branch,
+        "retirement": "true" if retirement else "false",
+    })
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

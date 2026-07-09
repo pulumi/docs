@@ -25,6 +25,13 @@ HARD RULE FIRST: any draft PR (`isDraft == true`) goes straight to bucket 5 (In 
 Then:
 
 - Exclude bot PRs (`is_bot == true`, i.e. pulumi-bot / dependabot) from all of the narrative above. Mention them as a bare trailing count.
+- Review outcomes -- a short block (3-5 lines max) from `review_outcomes`, which aggregates what happened to pre-merge review findings on PRs closed in the window. Rules:
+  - If `review_outcomes.available == false`, emit exactly one line saying outcome telemetry was unavailable this week (this is a loud degradation signal, never omit it).
+  - Otherwise lead with the human-PR outcome counts from `review_outcomes.outcomes.human` in one line: fixed / conceded / ignored (sum `ignored_outstanding` + `ignored_low_confidence`) / unconfirmed-at-merge. Mention the bot split only if nonzero, as a bare trailing count.
+  - If `merged_with_outstanding` is non-empty, list each PR on its own line (number + one clause naming the finding) -- this is the highest-signal item in the block: someone merged over a merge-gate finding.
+  - If `disputes` is non-empty, one line per dispute: PR number, disputer, and whether the model held or conceded.
+  - If `prs_no_review_data` or `prs_parse_low` is high relative to `prs_scraped`, add one line noting the telemetry gap.
+  - On a quiet week (no scraped PRs), collapse the whole block to a single line ("No reviewed PRs closed this week") -- never drop the block entirely.
 - End with ONE line of CI health derived from `ci_health` (status plus success rate / failure count if useful). `ci_health` is computed over the last 24 hours, so describe the window that way -- do NOT call it "last N runs".
 
 ## Message 2 -- backlog_digest
