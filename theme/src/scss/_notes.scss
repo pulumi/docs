@@ -71,23 +71,23 @@
     }
 
     &.note-info {
-        background: var(--color-violet-background);
+        background: var(--color-blue-background);
 
         a,
         i {
-            color: var(--color-violet-primary);
+            color: var(--color-blue-primary);
         }
 
         div.icon-and-line svg.ph-icon {
-            color: var(--color-violet-primary);
+            color: var(--color-blue-primary);
         }
 
         div.line {
-            background-color: var(--color-violet-muted);
+            background-color: var(--color-blue-muted);
         }
 
         :not(pre) > code {
-            background-color: var(--color-violet-muted);
+            background-color: var(--color-blue-muted);
         }
     }
 

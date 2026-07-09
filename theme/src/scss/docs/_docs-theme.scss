@@ -176,7 +176,7 @@ html[data-theme="dark"] body.section-docs {
 // gated on `html[data-theme="dark"] body.section-docs`, so the light source in
 // _notes.scss, _tables.scss, _card.scss, _breadcrumb.scss, _docs-home.scss,
 // components/*, etc. is never touched and light mode is unchanged. Callout hues
-// keep their light identity in dark (info=violet, tip=green, warning=orange),
+// keep their light identity in dark (info=blue, tip=green, warning=orange),
 // each mapped to the brand's 950 background / 300 accent steps.
 // ===========================================================================
 html[data-theme="dark"] body.section-docs {
@@ -187,23 +187,23 @@ html[data-theme="dark"] body.section-docs {
         }
 
         &.note-info {
-            background: var(--color-violet-950);
+            background: var(--color-blue-950);
 
             a,
             i {
-                color: var(--color-violet-300);
+                color: var(--color-blue-300);
             }
 
             div.icon-and-line svg.ph-icon {
-                color: var(--color-violet-300);
+                color: var(--color-blue-300);
             }
 
             div.line {
-                background-color: var(--color-violet-300);
+                background-color: var(--color-blue-300);
             }
 
             code {
-                background-color: color-mix(in oklch, var(--color-violet-300) 22%, transparent);
+                background-color: color-mix(in oklch, var(--color-blue-300) 22%, transparent);
             }
         }
 
