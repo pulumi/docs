@@ -1,43 +1,41 @@
 pulumi-chooser {
+    // Standard (non-language) chooser: a gray strip of small tabs matching the
+    // language chooser's toolbar — surface background, rounded top, 1px bottom
+    // border that the active tab's underline sits on. --docs-* tokens (with
+    // non-docs fallbacks); the dark rule in _docs-theme.scss re-asserts the
+    // border colors the unlayered `*` border reset would otherwise override.
     > ul {
-        @apply m-0 mb-4 flex;
+        @apply m-0 mb-4 flex rounded-t-lg;
 
         padding: 0 !important;
         list-style-type: none !important;
 
-        li {
-            @apply font-display text-xs p-0 m-0 border-b-2 transition text-center w-full;
-            @include transition;
+        background: var(--docs-surface, theme("colors.gray.100"));
+        border-bottom: 1px solid var(--docs-border, theme("colors.gray.200"));
 
-            // --docs-* tokens (with non-docs fallbacks); the legacy dark rule in
-            // _docs-theme.scss re-asserts the dark hover/active values.
-            border-bottom-color: var(--docs-surface, theme("colors.gray.50"));
+        li {
+            @apply font-display text-xs p-0 m-0 border-b-2 border-transparent transition text-center w-full;
+            @include transition;
 
             &:hover {
                 border-bottom-color: var(--docs-border, theme("colors.gray.200"));
             }
 
-            @include screen-md {
-                @apply text-base;
-            }
-
             &.active {
-                @include gradient-border;
+                border-bottom-color: var(--docs-link, var(--color-violet-primary));
 
                 a {
-                    color: var(--color-service-black);
+                    color: var(--docs-fg, theme("colors.gray.900"));
                 }
             }
 
             a {
-                @apply block text-gray-700 cursor-pointer py-2 px-2;
+                @apply block cursor-pointer py-2 px-3;
+
+                color: var(--docs-fg-muted, theme("colors.gray.600"));
 
                 span {
                     @apply hidden;
-                }
-
-                @include screen-md {
-                    @apply pt-4 pb-3 px-6;
                 }
 
                 @include screen-xl {
@@ -47,8 +45,8 @@ pulumi-chooser {
                 }
 
                 &:hover {
-                    @apply text-gray-800;
-                    text-decoration: none !important; // I know. Don't judge me. I promise to come back to it.
+                    color: var(--docs-fg, theme("colors.gray.900"));
+                    text-decoration: none !important;
                 }
             }
 
@@ -77,12 +75,18 @@ pulumi-chooser {
         .chooser-toolbar {
             @apply -mx-4 mb-4 flex justify-between gap-2 px-4;
 
-            background: var(--docs-surface, theme("colors.gray.50"));
+            background: var(--docs-surface, theme("colors.gray.100"));
 
+            // On mobile the logo + name label is hidden and the tab row scrolls
+            // horizontally; from md up the label returns and the tabs right-align.
             .chooser-toolbar-label {
-                @apply font-display text-sm font-medium flex items-center gap-2 py-2;
+                @apply font-display text-sm font-medium hidden items-center gap-2 py-2;
 
                 color: var(--docs-fg, theme("colors.gray.900"));
+
+                @include screen-md {
+                    @apply flex;
+                }
             }
 
             .chooser-toolbar-logo {
@@ -90,13 +94,17 @@ pulumi-chooser {
             }
 
             > ul {
-                @apply m-0 flex flex-wrap justify-end;
+                @apply m-0 flex w-full flex-nowrap justify-start overflow-x-auto;
 
                 padding: 0 !important;
                 list-style-type: none !important;
 
+                @include screen-md {
+                    @apply w-auto flex-wrap justify-end overflow-x-visible;
+                }
+
                 li {
-                    @apply font-display text-xs flex p-0 m-0 border-b-2 border-transparent transition;
+                    @apply font-display text-xs flex flex-none p-0 m-0 border-b-2 border-transparent transition;
                     @include transition;
 
                     &:hover {
@@ -162,6 +170,46 @@ pulumi-chooser {
         // source of the unit's trailing space.
         pulumi-choosable .example-program-footer {
             @apply mb-0;
+        }
+
+        // Standalone choosers (self-closing shortcode form; the choosables are
+        // siblings on the page, not slotted children): there's no content to card,
+        // so drop the card chrome and render the toolbar as a flat control strip
+        // with a single bottom border, which the active tab's underline sits on.
+        &:not(:has(pulumi-choosable)) {
+            @apply pb-0 rounded-b-none;
+
+            background: transparent;
+            border: none;
+
+            .chooser-toolbar {
+                @apply  mb-0;
+
+                //background: transparent;
+                border-bottom: 1px solid var(--docs-border, theme("colors.gray.200"));
+            }
+        }
+
+        // Code-only choosers (every choosable holds exactly one code block and
+        // nothing else): run the code flush to the card edges, like example-program
+        // choosers. The pair of :has() conditions means "some choosable has a lone
+        // .highlight, and none has anything more". CSS can't see bare text nodes,
+        // so a choosable mixing loose text with a code block still counts as
+        // code-only — keep prose in real elements (<p>) inside choosables.
+        &:has(pulumi-choosable > div > .highlight:only-child):not(:has(pulumi-choosable > div > :not(.highlight:only-child))) {
+            @apply px-0 pb-0;
+
+            .chooser-toolbar {
+                @apply mx-0 mb-0;
+            }
+
+            pulumi-choosable > div > .highlight {
+                @apply rounded-none;
+
+                pre {
+                    @apply rounded-none mb-0;
+                }
+            }
         }
 
         // Example-program-only choosers: run the panel flush to the card edges (drop

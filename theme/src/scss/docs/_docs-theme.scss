@@ -408,13 +408,14 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // --- Language chooser + tabs (active indicator uses the shared
-    //     gradient-border violet-primary, too dark for the dark surface) -------
+    // --- Chooser tabs: re-assert the underline colors (inactive = transparent,
+    //     hover = border, active = link) so the unlayered `*` border reset below
+    //     doesn't override them. ---------------------------------------------
     pulumi-chooser > ul li {
-        border-color: var(--docs-border);
+        border-bottom-color: transparent;
 
         &:hover {
-            border-color: var(--color-gray-400);
+            border-bottom-color: var(--docs-border);
         }
 
         a {
@@ -434,10 +435,10 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Language toolbar tabs: re-assert the underline colors (inactive = surface,
+    // Language toolbar tabs: re-assert the underline colors (inactive = transparent,
     // active = link) so the unlayered `*` border reset below doesn't override them.
     .chooser-toolbar > ul li {
-        border-bottom-color: var(--docs-surface);
+        border-bottom-color: transparent;
 
         &:hover {
             border-bottom-color: var(--docs-border);

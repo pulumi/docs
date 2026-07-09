@@ -14,7 +14,7 @@ describe("pulumi-chooser", () => {
 
     it("renders a language chooser as a toolbar with a logo label and abbreviated tabs", async () => {
         const page = await newE2EPage();
-        await page.setContent(`<pulumi-chooser type="language" options="typescript,go,python"></pulumi-chooser>`);
+        await page.setContent(`<pulumi-chooser type="language" options="typescript,go,python,csharp"></pulumi-chooser>`);
 
         const element = await page.find("pulumi-chooser");
         expect(element).toHaveClass("hydrated");
@@ -27,10 +27,11 @@ describe("pulumi-chooser", () => {
         const logo = await element.find(".chooser-toolbar-logo");
         expect(logo).not.toBeNull();
 
-        // The tabs show uppercased file-extension abbreviations, not full names.
+        // The tabs show uppercased file-extension abbreviations (or the tabLabel
+        // override, e.g. C#), not full names.
         const items = await element.findAll(".chooser-toolbar ul > li a");
         const labels = items.map(item => item.textContent.trim());
-        expect(labels).toEqual(["TS", "PY", "GO"]);
+        expect(labels).toEqual(["TS", "PY", "GO", "C#"]);
     });
 
     it("renders a non-language chooser as plain name tabs with no toolbar", async () => {
