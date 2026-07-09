@@ -567,6 +567,9 @@ jobs:
             --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
           if [ -n "$BUCKET" ]; then
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
+            # The claims index shares the ledger bucket under its own prefix
+            # (one snapshot object per page; see record-claims.py).
+            echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
           else
             echo "ledger bucket output unavailable; ledger write will be skipped"
           fi
@@ -593,6 +596,30 @@ jobs:
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
             --claude-outcome "${{ needs.review.outputs.claude_outcome }}"
+
+      # Persist the page's verified claims to the claims index (same bucket,
+      # claims/ prefix) — the whole-page snapshot the nightly volatile
+      # re-verification (claims-reverify.yml) reads. This worker is the index's
+      # ONLY writer: its runs are whole-page, so overwriting <slug>.json is
+      # always correct; the pre-merge PR review is partial-page and must never
+      # write here. Inputs come from the pre-model guardrail snapshot (not the
+      # model-writable handoff artifact), so the index records exactly what
+      # the pre-steps verified. record-claims.py skips the upload when the
+      # verify pre-step degraded (empty verdicts + errors), preserving the
+      # previous snapshot.
+      - name: Record claims index
+        if: always() && steps.ledger-bucket.outputs.claims_uri != ''
+        continue-on-error: true
+        env:
+          CONTENT_REVIEW_CLAIMS_URI: ${{ steps.ledger-bucket.outputs.claims_uri }}
+        run: |
+          if [ ! -f .review-snapshot/.verified-claims.json ]; then
+            echo "no snapshotted verified-claims; skipping the claims index write"
+            exit 0
+          fi
+          python3 scripts/content-review/record-claims.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verified .review-snapshot/.verified-claims.json
 
       # No explicit review dispatch: a content-review PR that passes re-lint is
       # promoted draft → ready in the step above, and that transition drives the
