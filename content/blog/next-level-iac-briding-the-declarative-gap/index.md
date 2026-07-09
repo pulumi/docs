@@ -5,7 +5,6 @@ date: 2024-06-07
 draft: false
 social_media: "Many tools describe themselves as \"Infrastructure as Code\".... but declarative config files aren't really code, and never will be. Pulumi bridges the worlds of declarative and standard programming using one simple trick; asynchronous value semantics."
 meta_desc: "Pulumi bridges the worlds of declarative and standard programming using asynchronous semantics."
-meta_image: meta.png
 authors:
     - troy-howard
 tags:
@@ -13,6 +12,7 @@ tags:
     - typescript
     - python
     - architecture
+category: engineering
 ---
 
 Pulumi stands out in the world of infrastructure-as-code (IaC) for its flexibility and ease of use. This is due to its unique approach of using general purpose programming languages to describe system configuration. It accomplishes this through a small but brilliant implementation detail that bridges the worlds of declarative and standard programming using asynchronous semantics.

@@ -38,10 +38,26 @@
   {{ end }}
 {{ end }}
 
-{{/* What-is pages get Article as their main entity; if the page also has an FAQ
-     section, expose it as a FAQPage entity in the same graph under its own @id. */}}
+{{/* What-is and docs pages get Article/TechArticle as their main entity; if the page
+     also has a "Frequently asked questions"-style Q&A section, expose it as a
+     FAQPage entity in the same graph under its own @id. Pages that are themselves
+     the dedicated FAQ page (title/URL contains "faq") are excluded here because
+     main-entity.html already returns FAQPage as their *main* entity, so adding it
+     again here would duplicate it in the @graph. faq-entity.html safely returns an
+     empty dict when no question-shaped headers are found, so this is a no-op for
+     the many docs pages that have no FAQ section.
+     Blog posts opt in explicitly via `faq_schema: true` in frontmatter: unlike
+     what-is/docs pages (curated, definitional, low false-positive risk), 168+
+     existing blog posts contain narrative headings that happen to end in "?"
+     without being a real Q&A section, so gating blog FAQ schema on type alone
+     would generate inaccurate structured data across the archive. The opt-in
+     flag keeps this a reusable template mechanism (not a per-page hack) while
+     avoiding that regression; add `faq_schema: true` to any blog post's
+     frontmatter once it has a genuine FAQ section (## or ### headings ending
+     in "?") to pick up FAQPage schema automatically. */}}
 {{ $faqPage := dict }}
-{{ if and (eq .Type "what-is") .IsPage }}
+{{ $isDedicatedFaqPage := or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
+{{ if and .IsPage (not $isDedicatedFaqPage) (or (eq .Type "what-is") (eq .Type "docs") (and (eq .Type "blog") .Params.faq_schema)) }}
   {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
   {{ if and $faqPage (ne $faqPage (dict)) }}
     {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}

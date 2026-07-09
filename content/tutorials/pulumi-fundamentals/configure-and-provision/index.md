@@ -4,7 +4,6 @@ title: Configuring and Provisioning Containers
 layout: topic
 description: Configure and provision your first containers locally with Pulumi.
 meta_desc: Learn how to configure and provision your first containers locally with Pulumi in this tutorial.
-meta_image: meta.png
 weight: 3
 estimated_time: 10
 aliases:

@@ -5,11 +5,11 @@ authors: ["luke-hoban", "aaron-friel"]
 meta_desc: "Pulumi AI turns your ideas into cloud infrastructure in seconds. Learn how <pulumi new> and the [Deploy with Pulumi] button make cloud deployment effortless!"
 date: "2023-12-20T15:00:00-08:00"
 updated: 2025-03-07
-meta_image: "ai_new.png"
 tags:
     - features
     - ai
     - llm
+category: product
 ---
 
 {{< notes type="info" >}}

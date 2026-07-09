@@ -3,7 +3,6 @@ title: "Better CLI Interactions for Agents and Humans"
 date: 2026-05-19T04:00:00-07:00
 draft: false
 meta_desc: "A quick look at the new features and ergonomics in the Pulumi CLI that make it better for for humans and AI agents alike."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - michael-fallihee
@@ -13,6 +12,7 @@ tags:
     - pulumi-cli
     - ai-agents
     - product-launches
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

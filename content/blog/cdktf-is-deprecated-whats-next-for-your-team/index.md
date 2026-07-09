@@ -3,7 +3,6 @@ title: "CDKTF is deprecated: What's next for your team?"
 date: 2025-12-18T10:00:00-08:00
 draft: false
 meta_desc: "The deprecation of CDKTF has left many without a clear path forward. This post presents the alternatives and shows what it's like to move from CDKTF to Pulumi."
-meta_image: meta.png
 authors:
   - adam-gordon-bell
   - christian-nunciato
@@ -11,6 +10,7 @@ tags:
   - migration
   - terraform
   - cdktf
+category: best-practices
 ---
 
 In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the [organization](https://github.com/cdktf) and [repository](https://github.com/hashicorp/terraform-cdk) have been archived, and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.

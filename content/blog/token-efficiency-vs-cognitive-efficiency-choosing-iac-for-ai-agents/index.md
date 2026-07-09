@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-03-03
 draft: false
 meta_desc: "We benchmarked Terraform HCL and Pulumi TypeScript across two LLMs. HCL uses fewer tokens, but Pulumi's total pipeline cost is 41% lower."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -12,6 +11,7 @@ tags:
     - ai
     - infrastructure-as-code
     - llm
+category: perspectives
 social:
     twitter: "We benchmarked AI agents generating Terraform HCL and Pulumi TypeScript across two models. HCL uses fewer tokens per resource, but Opus + Pulumi had a 41% lower total pipeline cost because it deployed clean on the first pass with zero repairs. #InfrastructureAsCode #AI #Pulumi"
     linkedin: |

@@ -3,7 +3,6 @@ title: "Deploy LangServe Apps with Pulumi on AWS (RAG & Chatbot)"
 date: "2024-02-13T06:00:00-08:00"
 updated: 2025-03-24
 meta_desc: "Learn to deploy LangServe LLM apps on AWS using Pulumi. Includes real-world examples: a Gandalf chatbot and a Pinecone-powered RAG system with LangChain."
-meta_image: meta.png
 authors:
 - engin-diri
 
@@ -11,6 +10,7 @@ tags:
 - ai
 - langserve
 - aws
+category: tutorials
 ---
 
 We all know how easy it is to create, deploy, and manage any cloud infrastructure

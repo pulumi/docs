@@ -1,15 +1,15 @@
 ---
 title: "How to Implement Robust Security Guardrails Using Policy as Code"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-09-30
 draft: false
 meta_desc: "Implement deployment guardrails with Pulumi CrossGuard to create safe self-service infrastructure balancing developer autonomy and control."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 series: idp-best-practices
 tags:
-    - idp
+    - internal-developer-platform
     - platform-engineering
     - policy-as-code
     - crossguard
@@ -17,7 +17,7 @@ tags:
     - security
     - self-service
     - guardrails
-    - idp-best-practices
+category: best-practices
 ---
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard) to create deployment guardrails that make self-service infrastructure both powerful and safe.

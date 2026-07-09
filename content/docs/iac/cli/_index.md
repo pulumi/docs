@@ -12,7 +12,7 @@ menu:
     parent: iac-home
   reference:
     name: Pulumi CLI
-    parent: reference-cli
+    parent: reference-home
     weight: 1
 aliases:
     - /docs/reference/commands/
@@ -50,9 +50,8 @@ The most common commands in the CLI that you'll be using are as follows:
 
 ## Complete Reference
 
-Below is the complete documentation for all available commands:
-
-{{< pulumi-command >}}
+For the complete, versioned documentation of every Pulumi CLI command, see the
+[CLI command reference](/docs/iac/cli/commands/).
 
 ## Environment Variables
 

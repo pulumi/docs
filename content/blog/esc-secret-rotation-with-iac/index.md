@@ -3,12 +3,12 @@ title: "Secret Rotation with Pulumi ESC"
 date: 2024-12-10T15:43:02-08:00
 draft: false
 meta_desc: "Extending ESC to perform automated secret rotation."
-meta_image: meta.png
 authors:
     - claire-gaestel
 tags:
   - esc
   - secrets
+category: best-practices
 ---
 
 {{% notes "info" %}}

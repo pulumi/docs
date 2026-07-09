@@ -3,11 +3,11 @@ title: "Deploy Azure Container Apps with Docker and Pulumi"
 date: 2021-11-02T09:00:00-07:00
 updated: 2025-03-24
 meta_desc: "Learn how to deploy Docker containers to Azure Container Apps using Pulumi. A step-by-step guide for building scalable serverless apps in any language."
-meta_image: container-apps.png
 authors:
     - mikhail-shilkov
 tags:
     - azure
+category: tutorials
 ---
 
 Today, [Microsoft announced](https://aka.ms/containerapps/ignite-blog) a new general-purpose serverless container platform: [Azure Container Apps](https://aka.ms/containerapps/). Container Apps is a fully managed platform for microservice applications that runs on top of Kubernetes and open-source technologies like KEDA, Envoy, and Dapr.

@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with DevOps AI Skills
 meta_desc: Set up coding agents with the right hooks, LSP, and Pulumi skills so they produce clean Pulumi code.
-meta_image: /images/resources/getting-started-with-devops-ai-skills.png
+meta_image: /events/getting-started-with-devops-ai-skills/meta.png
+meta_image_square: /events/getting-started-with-devops-ai-skills/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -1,5 +1,6 @@
 ---
 title: "How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure"
+feature_image: feature.png
 allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -25,7 +26,6 @@ meta_desc: Learn how to design and implement an effective Internal Developer Pla
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -43,7 +43,7 @@ tags:
     - governance
     - components
     - templates
-    - idp-best-practices
+category: best-practices
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

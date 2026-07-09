@@ -5,7 +5,6 @@ date: 2026-06-04
 lastmod: 2026-06-04
 meta_desc: |
     Self-host multimodal Gemma 4 on a Mac with Pulumi, llama.cpp, and Tailscale, using Unsloth's Gemma 4 12 B Q8 GGUF with a 128K context window.
-meta_image: meta.png
 feature_image: feature.png
 authors:
 - pablo-seibelt
@@ -14,6 +13,7 @@ tags:
 - kubernetes
 - tailscale
 - python
+category: tutorials
 social:
   twitter: |
     Cloud AI APIs keep agents easy until tradeoffs show up: data leaves your network, offline work breaks, and every token has a meter.

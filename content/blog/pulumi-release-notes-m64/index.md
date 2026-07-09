@@ -4,12 +4,12 @@ date: 2021-11-17T08:00:00-07:00
 draft: false
 allow_long_title: true
 meta_desc: The latest Pulumi updates include a new provider for Elastic Cloud, easier ways to create more complex infrastructure, better support for organizations, & more
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 It's been another exciting few weeks here at Pulumi! We've caught our breath from Cloud Engineering Summit (don't forget to check out the talks if you haven't yet!) and we're back to adding new value and highly-requested fixes across the Pulumi Cloud Engineering Platform. Read on to learn about new providers, new enhancements to the core Pulumi experience, and more!

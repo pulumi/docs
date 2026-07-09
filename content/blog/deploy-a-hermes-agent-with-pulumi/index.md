@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-06-24
 draft: false
 meta_desc: "Deploy a self-hosted Hermes agent as one Pulumi program across Render, Modal, and Tailscale — a code-executing AI agent with nothing on the public internet."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -18,6 +17,7 @@ tags:
     - modal
     - typescript
     - python
+category: tutorials
 schema_type: auto
 
 # Social media copy, auto-posted to X, LinkedIn, and Bluesky when merged to master.

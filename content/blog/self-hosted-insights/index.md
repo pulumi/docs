@@ -3,7 +3,6 @@ title: "Run Pulumi Insights on Your Own Infrastructure"
 date: 2026-03-02T00:06:00-07:00
 draft: false
 meta_desc: "Run Pulumi Insights discovery scans and policy evaluations on your own infrastructure with customer-managed workflow runners."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - levi-blackstone
@@ -12,6 +11,7 @@ tags:
     - features
     - pulumi-cloud
     - policy-as-code
+category: product
 ---
 
 [Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.

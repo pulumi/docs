@@ -3,7 +3,6 @@ title: "Pulumi Updates, Explained: AI-Powered Features in Pulumi CLI"
 date: 2025-05-22
 draft: false
 meta_desc: AI-powered CLI features simplify deployments by translating complex changes into clear explanations and providing actionable guidance for resolving errors.
-meta_image: meta.png
 authors:
     - artur-laksberg
     - mikhail-shilkov
@@ -11,8 +10,9 @@ authors:
 tags:
     - copilot
     - ai
-    - iac
+    - infrastructure-as-code
     - cli
+category: product
 social:
     twitter: "🤖 Introducing AI-powered features in Pulumi CLI! Get plain-language explanations of infrastructure changes and actionable insights for error resolution. Try it today with --copilot flag! #Pulumi #AI #IaC"
     linkedin: "Excited to announce AI-powered features in the Pulumi CLI! ✨ Our new 'explain' feature translates complex infrastructure changes into clear, human-readable summaries, while our AI error analysis transforms cryptic cloud provider error messages into actionable guidance. Enable with --copilot flag and let us know what you think!"

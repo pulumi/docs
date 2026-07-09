@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-04-22
 draft: false
 meta_desc: "Developers are shipping AI agents to production. Your Pulumi platform already supplies the seven things those agents need to be governed."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - platform-engineering
     - devops
     - infrastructure-as-code
+category: perspectives
 social:
     twitter: |
         Somewhere in your company, a developer just wired an AI agent into production. The platform team doesn't know it exists.

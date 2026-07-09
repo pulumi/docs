@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-26
 updated: 2026-04-29
 meta_desc: "Deploy OpenClaw (formerly Moltbot/Clawdbot), an open-source AI assistant, to AWS and Hetzner using Pulumi with Tailscale for secure private access."
-meta_image: meta.png
 aliases:
     - /blog/deploy-clawdbot-aws-hetzner/
     - /blog/deploy-moltbot-aws-hetzner/
@@ -16,11 +15,12 @@ tags:
     - ai
     - hetzner-cloud
     - openclaw
-    - pulumi-esc
+    - esc
     - typescript
     - tailscale
     - security
     - update
+category: tutorials
 social:
     twitter: |
         Everyone's buying Mac Minis to run OpenClaw (formerly Moltbot/Clawdbot). You don't need one. A Hetzner VM costs $7/month. One `pulumi up` and you're done. Plus Tailscale so your AI assistant isn't hanging out on Shodan. Here's how:

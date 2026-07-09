@@ -1,0 +1,26 @@
+{{- /*
+  Floqer (RB2B) visitor identification — https://floqer.com
+  Consent-gated: loads only after the site's consent-managed Segment analytics is
+  ready (window.analytics.ready). The consent manager (theme/src/ts/consent-manager)
+  only initializes analytics once the visitor's Marketing & Analytics consent is
+  satisfied — EU visitors must opt in via the banner; non-EU load by default. This is
+  fail-closed: if consent-managed analytics never loads, Floqer never loads.
+  Scoped per page via the `include_floqer: true` front-matter flag (wired in head.html),
+  and production-only. Loads the exact Floqer contact-tracker tag unchanged.
+*/ -}}
+<script>
+    (function () {
+        function loadFloqer() {
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://workers.floqer.com/signals/contact-tracker?sid=2fcba3d4-92cc-4be2-b102-6e0cbce15b38&ref=" + encodeURIComponent(window.location.href);
+            var f = document.getElementsByTagName("script")[0];
+            f.parentNode.insertBefore(s, f);
+        }
+        if (window.analytics && typeof window.analytics.ready === "function") {
+            // ready() fires only after the consent-managed analytics loads.
+            window.analytics.ready(loadFloqer);
+        }
+    })();
+</script>

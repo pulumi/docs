@@ -3,13 +3,13 @@ title: "Introducing ESC Connect: Integrate Any Secret Source with Pulumi ESC"
 date: 2025-12-01
 allow_long_title: true
 meta_desc: "ESC Connect enables you to integrate any custom or proprietary secret source with Pulumi ESC through simple HTTPS adapters, without waiting for native support."
-meta_image: meta.png
 authors:
 - claire-gaestel
 tags:
 - esc
 - secrets
 - features
+category: product
 ---
 
 We're excited to announce ESC Connect — a new capability that lets you integrate any secret source with [Pulumi ESC](/product/esc/) by building simple HTTPS adapter services. If you've ever needed to pull secrets from a proprietary system, a legacy tool, or a third-party service that doesn't have native ESC support, you no longer have to wait for us to build a provider. You can build your own adapter in an afternoon and start using it immediately.

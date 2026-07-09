@@ -18,7 +18,7 @@ aliases:
 - /docs/languages-sdks/hcl/hcl-language-reference/
 ---
 
-Pulumi programs can be defined in many languages, and the Pulumi HCL dialect offers an additional language for authoring Pulumi programs using [Terraform](https://developer.hashicorp.com/terraform)-like HCL syntax.
+Pulumi programs can be defined in many languages, and the Pulumi HCL dialect offers an additional language for authoring Pulumi programs using [Terraform](https://developer.hashicorp.com/terraform)'s HCL syntax.
 
 A Pulumi HCL program consists of one or more `.tf` files in a directory whose `Pulumi.yaml` specifies `runtime: hcl`:
 
@@ -31,18 +31,18 @@ HCL files declare infrastructure using the top-level blocks listed below. The fu
 
 ### Top-level blocks
 
-| Block       | Purpose                                           |
-| - | - |
-| `variable`  | Declare input variables                           |
-| `resource`  | Manage cloud resources                            |
-| `data`      | Read external data via provider invocations       |
-| `provider`  | Configure provider instances                      |
-| `output`    | Export values from the stack                      |
-| `locals`    | Define reusable intermediate values               |
-| `module`    | Invoke local or remote modules as components      |
-| `call`      | Invoke methods on resources                       |
-| `moved`     | Rename resources without recreation               |
-| `import`    | Import existing cloud resources                   |
+| Block       | Purpose                                                             |
+|-------------|---------------------------------------------------------------------|
+| `variable`  | Declare input variables                                             |
+| `resource`  | Manage cloud resources                                              |
+| `data`      | Read external data via provider invocations                         |
+| `provider`  | Configure provider instances                                        |
+| `output`    | Export values from the stack                                        |
+| `locals`    | Define reusable intermediate values                                 |
+| `module`    | Invoke local or remote modules as components                        |
+| `call`      | Invoke methods on resources                                         |
+| `moved`     | Rename resources without recreation                                 |
+| `import`    | Import existing cloud resources                                     |
 | `terraform` | Required providers, version constraints, and component declarations |
 
 In many locations within these blocks, values are HCL expressions that reference variables, locals, resources, data sources, or modules. See [Expressions](#expressions) for the supported forms.
@@ -114,12 +114,12 @@ resource "aws_instance" "web" {
 
 #### Meta-arguments
 
-| Argument     | Type       | Description |
-| - | - | - |
-| `count`      | number     | Create multiple instances indexed by `count.index`. |
+| Argument     | Type       | Description                                             |
+|--------------|------------|---------------------------------------------------------|
+| `count`      | number     | Create multiple instances indexed by `count.index`.     |
 | `for_each`   | map or set | Create instances keyed by `each.key` with `each.value`. |
-| `depends_on` | list       | Explicit dependencies on other resources. |
-| `provider`   | reference  | Specific provider configuration to use. |
+| `depends_on` | list       | Explicit dependencies on other resources.               |
+| `provider`   | reference  | Specific provider configuration to use.                 |
 | `providers`  | list       | Explicit provider resources (component resources only). |
 
 #### Lifecycle block
@@ -138,7 +138,7 @@ resource "aws_instance" "web" {
 
 | Attribute               | Type | Description |
 | - | - | - |
-| `create_before_destroy` | bool | When `false`, deletes the old resource before creating the replacement (Pulumi creates first by default). |
+| `create_before_destroy` | bool | When `true`, creates the replacement before deleting the old resource. Defaults to delete-first, matching Terraform. Maps to Pulumi's `deleteBeforeReplace`. |
 | `prevent_destroy`       | bool | Protect the resource from accidental deletion. Maps to Pulumi's `protect` option. |
 | `ignore_changes`        | list | Property paths to exclude from diff detection. |
 
@@ -176,15 +176,15 @@ resource "aws_instance" "web" {
 }
 ```
 
-| Attribute | Type   | Description |
-| - | - | - |
+| Attribute | Type   | Description                    |
+|-----------|--------|--------------------------------|
 | `create`  | string | Timeout for create operations. |
 | `update`  | string | Timeout for update operations. |
 | `delete`  | string | Timeout for delete operations. |
 
 #### Provisioners
 
-Provisioners run commands during resource lifecycle events. They map to the [Pulumi Command provider](/registry/packages/command/).
+Provisioners run commands during resource lifecycle events.
 
 ```hcl
 resource "aws_instance" "web" {
@@ -216,13 +216,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-| Provisioner type | Pulumi equivalent             |
-| - | - |
-| `local-exec`     | `command:local:Command`       |
-| `remote-exec`    | `command:remote:Command`      |
-| `file`           | `command:remote:CopyToRemote` |
-
-Provisioner blocks accept `when` (`"create"` or `"destroy"`) and `on_failure` (`"continue"` or `"fail"`) attributes. The `self` reference inside a provisioner refers to the parent resource. `connection` blocks support SSH only; WinRM is not supported.
+Provisioner blocks accept `when` (`"create"` or `"destroy"`) and `on_failure` (`"continue"` or `"fail"`) attributes. The `self` reference inside a provisioner refers to the current resource. `connection` blocks support SSH only; WinRM is not supported.
 
 #### Referencing resources
 
@@ -338,7 +332,7 @@ Prefix a source with the `pulumi/` namespace (for example, `source = "pulumi/aws
 
 #### Provider configuration
 
-Configure providers with `provider` blocks, exactly as in Terraform or OpenTofu:
+Configure providers with `provider` blocks:
 
 ```hcl
 provider "aws" {
@@ -387,26 +381,9 @@ resource "aws_instance" "web" {
 }
 ```
 
-#### Provider resources
-
-Providers can also be declared as `resource` blocks for use with component resources:
-
-```hcl
-resource "pulumi_providers_aws" "explicit" {
-  region = "us-west-2"
-}
-
-resource "aws_instance" "web" {
-  providers = [pulumi_providers_aws.explicit]
-  # ...
-}
-```
-
-The `pulumi_providers_<name>` resource type creates an explicit provider instance. Pass it to component resources via the `providers` meta-argument.
-
 ### Outputs
 
-`output` blocks export values from the stack via [`pulumi stack output`](/docs/iac/cli/commands/pulumi_stack_output/).
+`output` blocks export values from the stack for access via [`pulumi stack output`](/docs/iac/cli/commands/pulumi_stack_output/).
 
 ```hcl
 output "instance_ip" {
@@ -491,8 +468,6 @@ output "vpc_id" {
 | Terraform Registry    | `terraform-aws-modules/vpc/aws` |
 | HTTP archive          | `https://example.com/module.zip` |
 
-Remote modules are cached in `~/.pulumi/modules/`.
-
 #### Module meta-arguments
 
 | Argument     | Type       | Description |
@@ -506,7 +481,7 @@ Remote modules are cached in `~/.pulumi/modules/`.
 
 ### Call blocks
 
-`call` blocks invoke methods on existing resources. This is a Pulumi-specific extension with no Terraform equivalent.
+`call` blocks invoke methods on existing resources. This is a Pulumi-specific extension to enable calling [resource methods](/docs/iac/concepts/functions/resource-methods/).
 
 ```hcl
 resource "aws_instance" "web" {
@@ -702,7 +677,6 @@ These Terraform functions have no equivalent in Pulumi HCL:
 
 | Function          | Reason |
 | - | - |
-| `templatestring`  | Inline template-string rendering is not supported. |
 | `plantimestamp`   | No Pulumi equivalent for plan-time timestamps. |
 | `ephemeralasnull` | Pulumi has no ephemeral value concept. |
 
@@ -763,11 +737,7 @@ Pulumi HCL aims to run valid Terraform configurations without changes — the sa
 
 #### Behavioral differences
 
-**Resource replacement order.** Pulumi creates the new resource before deleting the old one (the opposite of Terraform). Set `create_before_destroy = false` in the `lifecycle` block to opt into delete-first behavior.
-
 **Sensitive values.** Variables and outputs marked `sensitive = true` become [Pulumi secrets](/docs/iac/concepts/secrets/), encrypted at rest in state.
-
-**Property names.** HCL uses `snake_case`. The plugin automatically converts to Pulumi's `camelCase` for the engine. Map keys are not translated.
 
 #### Feature mappings
 
@@ -786,5 +756,4 @@ Pulumi HCL aims to run valid Terraform configurations without changes — the sa
 
 - **`backend`, `cloud`, and `required_version`** in the `terraform` block — accepted but ignored with a warning; Pulumi manages state and version constraints independently.
 - **WinRM connections** — `connection` blocks support `type = "ssh"` only.
-- **`List<Object>` empty vs null distinction** — HCL block syntax cannot distinguish an empty `List<Object>` from a null one, a known incompatibility with some Pulumi programs.
 - **`plantimestamp` and `ephemeralasnull`** — these Terraform functions have no Pulumi equivalent (see [Built-in functions](#functions-not-supported)).

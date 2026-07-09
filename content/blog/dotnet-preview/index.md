@@ -4,11 +4,11 @@ date: 2019-11-13T11:23:04-06:00
 updated: 2025-04-16
 draft: false
 meta_desc: "Pulumi launches supports .NET Core languages for Infrastructure as Code"
-meta_image: "meta.png"
 authors:
     - sophia-parafina
 tags:
-    - ".NET"
+    - dotnet
+category: tutorials
 canonical_url: "https://www.pulumi.com/docs/iac/languages-sdks/dotnet/"
 ---
 

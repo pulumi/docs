@@ -3,7 +3,6 @@ title: "How We Load Data into Snowflake in Seconds with Pulumi"
 date: 2026-02-23
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-seibelt
@@ -12,9 +11,10 @@ tags:
     - data-and-analytics
     - aws
     - python
-    - pulumi-esc
+    - esc
     - github
     - snowflake
+category: tutorials
 schema_type: auto
 social:
     twitter: "We load data into Snowflake in seconds with a single Pulumi ComponentResource. Direct Firehose to Snowflake streaming, no S3 intermediate. Here's how we built it."

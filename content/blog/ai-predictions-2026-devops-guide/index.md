@@ -1,7 +1,6 @@
 ---
 title: "AI Predictions for 2026: A DevOps Engineer's Guide"
 date: 2025-12-11
-meta_image: meta.png
 meta_desc: "AI predictions for 2026 and what they mean for DevOps engineers. From agent orchestration to local AI breakthroughs, here's how to prepare your infrastructure."
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - pulumi-neo
+category: perspectives
 
 social:
     twitter: "AI Predictions for 2026: What DevOps Engineers Need to Know. From IDE evolution to agent orchestration, local AI breakthroughs to machine-to-machine payments. Here's how to prepare for the AI-driven future."

@@ -5,11 +5,11 @@ updated: 2025-03-07
 draft: false
 meta_desc: |
     Understand state and state management in infrastructure. Learn how Pulumi tracks state, automates storage, and simplifies cloud infrastructure changes.
-meta_image: meta.png
 authors:
     - laura-santamaria
 tags:
     - state
+category: best-practices
 ---
 
 Let's talk about state, shall we? State is the collective properties of the

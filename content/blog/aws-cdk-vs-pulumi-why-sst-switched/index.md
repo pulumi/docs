@@ -23,7 +23,6 @@ meta_desc: Why did SST move from AWS CDK to Pulumi? Learn how this shift unlocks
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: "sst-with-pulumi-infrastructure-as-code-deployments.png"
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -36,7 +35,8 @@ tags:
     - cloudformation
     - aws-cdk
     - case-studies
-    - developer-experience-devex
+    - developer-experience
+category: customers
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

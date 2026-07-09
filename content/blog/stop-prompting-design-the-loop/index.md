@@ -3,7 +3,6 @@ title: "Stop Prompting. Design the Loop."
 date: 2026-06-09
 draft: false
 meta_desc: "The unit of work moved from the prompt to the loop. The five pieces of loop engineering, the memory that makes it compound, and what it won't do for you."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - claude
     - pulumi-neo
     - platform-engineering
+category: perspectives
 social:
     twitter: |
         For two years, the unit of work was the prompt. You typed, you read, you typed again.

@@ -29,10 +29,6 @@
                             {{ partial "youtube" (dict "id" .Params.video.youtube "title" (default .Title .Params.video.title)) }}
                         {{ end }}
                     </div>
-                {{ else if .Params.meta_image }}
-                    <div>
-                        <img class="shadow-sm border border-gray-300 rounded" src="./{{ .Params.meta_image }}">
-                    </div>
                 {{ end }}
                 <div class="my-4 summary">
                     {{ .Summary }}

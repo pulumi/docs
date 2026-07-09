@@ -4,6 +4,7 @@ meta_desc: Build, deploy, and manage cloud infrastructure faster. Write code in 
 meta_image: /images/product/overview/overview-meta.png
 type: page
 layout: product-page
+include_floqer: true
 
 aliases:
   - /product/pulumi-cloud/
@@ -49,7 +50,7 @@ sections:
     tag_line: Infrastructure AI
     title: Meet Neo, your AI platform engineer
     description: |
-      The industry's first AI agent purpose-built for infrastructure. Neo handles complex tasks, debugs deployments, and generates code for new and existing cloud resources.
+      Pulumi works with the coding agents your team already uses — Claude Code, Codex, Cursor, and more. Neo is the industry's first AI agent purpose-built for infrastructure: it handles complex tasks, debugs deployments, and generates code for new and existing cloud resources.
     cta_text: Meet Pulumi Neo
     cta_link: /product/neo/
     image: /images/product/overview/overview-neo.svg

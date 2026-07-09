@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-14
 draft: false
 meta_desc: "A year ago, building an AI agent meant frameworks, RAG, and glue code. The Claude Agent SDK, Codex SDK, and skills replaced most of that middle layer."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - claude
     - mcp
     - rag
+category: perspectives
 social:
     twitter: |
         A year ago, building an AI agent meant picking a framework, defining tools, setting up RAG, and writing a pile of glue code.

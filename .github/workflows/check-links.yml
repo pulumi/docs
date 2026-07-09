@@ -24,9 +24,9 @@ jobs:
       # downstream workflows (build-and-deploy, docs review, etc.) fire on it.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
       - name: Install Node
@@ -44,11 +44,63 @@ jobs:
         with:
           hugo-version: '0.157.0'
           extended: true
+      # The reader-signals export (see review-existing-content.yml) carries a
+      # `not_found` section: real 404 hits from server logs — URLs readers
+      # actually request that no crawl of our own pages can see (external
+      # referrers, bookmarks, stale search results). Resolve + fetch it the
+      # same way that workflow does, then merge it into .broken-links.json so
+      # the fix-broken-links triage works both lists at once, highest-traffic
+      # first. Every step degrades gracefully: until the export ships
+      # (pulumi/docs#20078 item 4.5), the merge is a logged no-op and this
+      # workflow behaves exactly as before.
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: check-links
+          aws-region: us-west-2
+      # continue-on-error like the rest of this block: the CLI exists here only
+      # for the optional enrichment, and a failed install must not take down
+      # the core daily link check.
+      - name: Install Pulumi CLI
+        continue-on-error: true
+        uses: pulumi/actions@v7
+      - name: Resolve reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "reader-signals export not yet published; link check proceeds without the real-404 signal"
+          fi
+      - name: Fetch reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .reader-signals.json --quiet; then
+            echo "fetched reader-signals snapshot: $(wc -c < .reader-signals.json) bytes"
+          else
+            echo "reader-signals snapshot unavailable; link check proceeds without it"
+          fi
       # No SLACK_ACCESS_TOKEN in env: the checker no longer posts to Slack. It
       # writes its results to .broken-links.json, and Slack posting (the PR
       # link) happens at the end of this workflow instead.
       - name: Run make check_links
         run: make check_links
+      # Deterministic enrichment (never model-run): annotate crawler entries
+      # with real reader 404 traffic and append high-hit server-log 404s the
+      # crawler can't see. Runs before the broken-count gate below, so a day
+      # with zero crawler breakage but real 404 traffic still triggers triage.
+      - name: Merge real-404 signal
+        continue-on-error: true
+        run: python3 scripts/link-checker/merge-404-signal.py
       # Branch the rest of the workflow on whether anything is actually broken.
       # On a clean run the Claude and Slack steps below are skipped entirely, so
       # quiet days cost no API spend and post nothing.

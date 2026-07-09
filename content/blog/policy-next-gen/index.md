@@ -7,7 +7,6 @@ authors:
 date: 2025-11-05T00:05:00
 meta_desc: "Launching the governance lifecycle: AI-powered remediation, pre-built compliance packs, continuous auditing, and a new Policy Findings hub."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
 - policy-as-code
 - features
@@ -16,6 +15,7 @@ tags:
 - pulumi-neo
 - ai
 - platform-engineering
+category: product
 ---
 
 The era of AI-accelerated development has created a paradox: the faster developers move, the bigger the governance challenge becomes. For years, security and platform teams have worked to "shift left," but the tools available have been incomplete. Most focus on detection, which is necessary but not sufficient. They identify thousands of policy violations across an organization's infrastructure but leave teams with an overwhelming backlog and no scalable way to remediate it. This creates a persistent gap between finding a problem and fixing it. The result is an impossible choice between development velocity and organizational control, forcing leadership to slow down innovation to manage risk.

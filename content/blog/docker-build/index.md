@@ -5,7 +5,6 @@ updated: 2025-03-10
 draft: false
 meta_desc: >-
     Speed up Docker builds with Pulumi’s new Build provider. Leverage BuildKit, buildx, and caching for faster, more efficient container workflows.
-meta_image: meta.png
 authors:
     - bryce-lampe
 tags:
@@ -13,6 +12,7 @@ tags:
     - buildx
     - buildkit
     - containers
+category: product
 ---
 
 Deploying and managing containerized workloads is one of Pulumi's fastest-growing areas. Standing up managed container services and Kubernetes clusters is a common area for automation, and many of our customers use Pulumi to automate building and publishing images to their registry of choice.

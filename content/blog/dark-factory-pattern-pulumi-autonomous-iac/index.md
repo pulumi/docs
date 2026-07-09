@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-05
 draft: false
 meta_desc: "What the dark factory pattern looks like when the factory floor is your Pulumi state graph, and where to start without burning down a prod account."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -15,6 +14,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
+category: best-practices
 social:
     twitter: |
         Stripe ships over a thousand AI-authored PRs a week. The pattern behind it has a name: the dark factory.

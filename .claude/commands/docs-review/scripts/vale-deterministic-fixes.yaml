@@ -1,0 +1,40 @@
+# Vale rules whose fix is a single, mechanical replacement -- Vale already knows
+# the exact text to swap in (a fixed substitution, a canonical spelling, or a
+# closed-set heading rename). vale-findings-filter.py reads this file and stamps
+# every emitted finding with `deterministic_fix: true|false`.
+#
+# IMPORTANT: `deterministic_fix` describes the *fix*, not a decision to apply it.
+# It means the reviewer does not have to *author* the correction -- not that the
+# correction is correct in this spot. The correction still has to be *judged*:
+#
+#   - review-existing-content (the automated content-review workflow) is the
+#     only consumer that acts on the stamp. It applies a deterministic_fix
+#     finding ONLY after confirming the swap preserves meaning in context
+#     (e.g. "click" inside "click event" stays; a "See also" block that is
+#     actually sequential becomes "Next steps", not "Learn more"). Swaps that
+#     would change meaning are skipped and flagged, never applied. See that
+#     skill's SKILL.md, step 3.
+#   - docs-review (interactive + pinned PR review) ignores the stamp entirely
+#     and stays advisory / flag-only.
+#
+# Without that judgment gate this would just be `vale | sed`. The gate is the
+# point. A rule earns a place here only if its fix is a fixed replacement the
+# reviewer can verify rather than compose; anything requiring an editorial
+# rewrite or a context-dependent choice is deliberately excluded (see below).
+deterministic_fix:
+  - Pulumi.Substitutions        # Fixed swaps: click->select, public beta->public preview, ...
+  - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
+  - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
+  - Google.Spelling             # Single suggested spelling for an unambiguous misspelling.
+
+# Deliberately NOT listed (no fixed replacement -> stays flag-only, the reviewer
+# must compose the fix) and why:
+#   Pulumi.DeprecatedProductNames - "Pulumi Service" -> Cloud/ESC/Deployments is context-dependent.
+#   Pulumi.BannedWords            - replacement needs judgment (whitelist->allowlist is safe; master/guys are not mechanical).
+#   Pulumi.Difficulty             - "easily"/"simply" needs a rewrite, not a swap.
+#   Pulumi.DirectionalReferences  - "see above" needs a real link/anchor, not a swap.
+#   Pulumi.HeadingSentenceCase    - auto-lowercasing risks mangling proper nouns outside the exceptions list.
+#   Pulumi.CommandBackticks       - false-positive-prone (phrase may already sit in a heading, link, or code).
+#   Pulumi.PoliciesSingular       - needs verb conjugation (are->is), not a fixed swap.
+#   Pulumi.HedgeThenPivot / SetPieceTransitions / ListicleH2Headings /
+#   Pulumi.EmDashDensity / Pulumi.Repetition - AI-prose heuristics; inherently judgment/rewrite.

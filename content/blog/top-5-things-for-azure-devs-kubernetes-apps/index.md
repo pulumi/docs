@@ -1,16 +1,16 @@
 ---
 title: "Top 5 Things an Azure Developer Needs to Know: Kubernetes Applications"
+feature_image: feature.png
 date: 2021-08-16
 allow_long_title: True
 meta_desc: "Deploying applications on Azure Kubernetes Service (AKS) with the Azure CLI and Infrastructure as Code."
-meta_image: azure-top-5.png
 authors:
     - sophia-parafina
 tags:
     - kubernetes
-    - Azure
+    - azure
     - helm
-    - azure-top-5
+category: tutorials
 series: azure-top-5
 ---
 

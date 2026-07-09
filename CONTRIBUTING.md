@@ -8,7 +8,9 @@ Open new PRs as **drafts** while you iterate. Automated review (style, accuracy,
 - Lets you push iteratively without spamming the PR with new comments each time.
 - Means the eventual review reflects your finished thinking, not a half-finished commit.
 
-When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
+While you're iterating, consider running `/docs-review` locally — it runs the same style/accuracy pipeline as the automated bot, but stays in your conversation and never posts to GitHub. Catching findings here is cheaper than catching them after the pinned review fires.
+
+When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward mark the review **stale**. A small push that only touches the lines the review flagged refreshes the review automatically; anything larger won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
 
@@ -21,7 +23,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 Transitioning to **Ready for review** triggers:
 
 1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
-1. The full Claude review (currently `claude-opus-4-7`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+1. The full Claude review (currently `claude-opus-4-8`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
 
 Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
 
@@ -31,10 +33,10 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 
 ### After review — three paths to refresh
 
-A pinned review goes **stale** when you push new commits after it ran. Stale reviews don't auto-rerun. Three ways to refresh:
+A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `#update-review` path with no mention needed. Everything else stays stale until you refresh explicitly. Three ways:
 
 1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
-    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-4-6`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
+    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
         - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
         - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
         - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
@@ -49,6 +51,8 @@ Rare. Use when the pinned-review state is corrupted (the 1/M comment was manuall
 ### Don't fight the pinned comment
 
 The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
+
+The pinned comment is also the pipeline's outcome ledger: after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
 
 ### Trivial and frontmatter-only short-circuits
 

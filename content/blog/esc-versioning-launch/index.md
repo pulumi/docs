@@ -5,7 +5,6 @@ date: 2024-06-05T00:00:00-03:00
 updated: 2026-06-16
 draft: false
 meta_desc: "The new ESC Versioning features allows you bring agile practices to your secrets and configuration management, and streamline deployments"
-meta_image: "meta.png"
 authors:
   - arun-loganathan
   - pat-gavlin
@@ -13,6 +12,7 @@ tags:
   - esc
   - secrets
   - features
+category: product
 ---
 
 Since the launch of [Pulumi Environments, Secrets and Configuration](/product/esc) (ESC), our developer-first configuration and secrets management platform, we've seen exponential growth in usage. Customers have used it to simplify their secrets and configuration management by organizing them into composable collections called 'environments'. Today, we are thrilled to introduce a comprehensive suite of versioning features, giving you unprecedented control and confidence in managing your environments.

@@ -15,7 +15,11 @@ aliases:
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
 ---
 
-This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/permission-sets#entity-types) and group.
+This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/entities#entity-types) and group.
+
+{{% notes "info" %}}
+Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+{{% /notes %}}
 
 ## Agent Pools
 

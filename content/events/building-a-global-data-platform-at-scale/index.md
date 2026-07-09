@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Fauna - Building a Global Data Platform at Scale"
 meta_desc: Dan Swartz, Altana's Principal Software Engineer, discusses how Pulumi's Automation API can be integrated into a self-service application.
+meta_image: /events/building-a-global-data-platform-at-scale/meta.png
+meta_image_square: /events/building-a-global-data-platform-at-scale/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

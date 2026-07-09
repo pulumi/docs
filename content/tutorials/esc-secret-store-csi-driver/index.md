@@ -7,7 +7,6 @@ description: |
     Learn how to integrate the Secret Store CSI Driver with Pulumi ESC to securely manage your secrets in Kubernetes.
 meta_desc: "Learn how to integrate the Secret Store CSI Driver with Pulumi ESC to securely manage your secrets in Kubernetes."
 weight: 999
-meta_image: meta.png
 summary: |
   ### Container Storage Interface (CSI)
 

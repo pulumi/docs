@@ -3,13 +3,13 @@ title: "Introducing envVarMappings for Provider Credentials"
 date: 2026-02-12
 draft: false
 meta_desc: "Use envVarMappings to run multiple providers with different credentials in the same Pulumi program, no more environment variable conflicts."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - guinevere-saenger
 tags:
     - features
     - packages
+category: product
 schema_type: auto
 
 # Optional: Social media promotional copy (for reference only, does not auto-post)

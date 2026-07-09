@@ -5,11 +5,11 @@ authors: ["luke-hoban"]
 meta_desc: "Discover Pulumi AI—your AI-powered assistant for building cloud infrastructure faster and smarter. Reduce complexity and deploy in minutes."
 date: "2023-04-27T10:00:00-08:00"
 updated: 2025-03-20
-meta_image: "meta.png"
 tags:
     - features
     - ai
     - llm
+category: product
 ---
 
 {{< notes type="info" >}}

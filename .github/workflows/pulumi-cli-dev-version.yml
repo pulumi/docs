@@ -29,9 +29,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: pull-request
         id: create-pr
         uses: repo-sync/pull-request@v2
@@ -54,9 +54,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: checkout docs repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Update latest version
         run: |
           echo -n "${{ github.event.inputs.dev_version || github.event.client_payload.dev_version }}" > ./static/latest-dev-version
@@ -85,7 +85,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

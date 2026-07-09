@@ -3,7 +3,6 @@ title: "Ten More Things You Can Do With Pulumi Neo"
 date: 2026-05-19T05:00:00-07:00
 draft: false
 meta_desc: "Ten more platform-engineering workflows you can hand to Pulumi Neo: deployments, tickets, incident triage, IAM, migration, and continuous ops."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - adam-gordon-bell
@@ -12,7 +11,8 @@ tags:
     - platform-engineering
     - pulumi-neo
     - aws
-    - neo-things
+series: neo-things
+category: product
 social:
     twitter: |
         Last fall we wrote up 10 things you could do with Pulumi Neo. Since then platform teams have handed Neo real work: drift, dependency upgrades, on-call triage from Slack.

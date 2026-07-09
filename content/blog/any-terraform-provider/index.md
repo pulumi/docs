@@ -3,7 +3,6 @@ title: "Introducing: Support For Using Any Terraform Provider with Pulumi"
 date: 2024-08-29T10:00:00-06:00
 allow_long_title: true
 meta_desc: "Pulumi now supports using any Terraform or OpenTofu provider with Pulumi, in just a few seconds"
-meta_image: meta.png # TODO
 authors:
   - luke-hoban
   - ian-wahbe
@@ -11,6 +10,7 @@ authors:
 tags:
   - terraform
   - features
+category: product
 
 social:
   twitter: "You can now use ANY Terraform Provider from Pulumi! The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!"

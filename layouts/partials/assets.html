@@ -7,7 +7,7 @@
 {{ $jsManifest := $.Site.Data.js_manifest }}
 <script src="/js/{{ index $jsManifest "bundle" }}" defer></script>
 
-{{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" }}
+{{ $searchSections := slice "docs" "registry" "blog" "tutorials" "learn" "tags" "authors" "category" }}
 {{ if in $searchSections .Section }}
     <script src="/js/{{ index $jsManifest "algolia" }}" defer></script>
 {{ end }}

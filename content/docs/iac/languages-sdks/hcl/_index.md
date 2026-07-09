@@ -17,7 +17,7 @@ aliases:
 - /docs/languages-sdks/hcl/
 ---
 
-Pulumi supports writing your infrastructure as code using Pulumi HCL, a language plugin that lets you author Pulumi programs in [Terraform](https://developer.hashicorp.com/terraform)-like HCL syntax. You get familiar HCL blocks, expressions, and built-in functions while using Pulumi's state management, secrets handling, and deployment engine.
+Pulumi supports writing your infrastructure as code using Pulumi HCL, a language plugin that lets you author Pulumi programs with [Terraform](https://developer.hashicorp.com/terraform)'s HCL syntax. You get familiar HCL blocks, expressions, and built-in functions while using Pulumi's state management, secrets handling, and deployment engine.
 
 Pulumi HCL is developed in the [pulumi-labs/pulumi-hcl](https://github.com/pulumi-labs/pulumi-hcl) repository.
 
@@ -80,14 +80,12 @@ To learn how the Pulumi programming model is implemented for Pulumi HCL, refer t
 
 Pulumi HCL aims to run valid Terraform configurations without changes. Resources, data sources, variables, locals, outputs, modules, expressions, and most built-in functions work as documented by HashiCorp. A small number of behaviors differ:
 
-- Resource replacement creates the new resource before deleting the old one (the opposite of Terraform). Set `create_before_destroy = false` in a `lifecycle` block to opt into delete-first behavior.
 - `backend`, `cloud`, and `required_version` in the `terraform` block are accepted but ignored with a warning — Pulumi manages state independently.
-- State files are not interchangeable. Import existing resources with `pulumi import` rather than reusing a Terraform state file.
 
 For the full list of differences and unsupported features, see the [Terraform compatibility section](/docs/iac/languages-sdks/hcl/hcl-language-reference/#terraform-compatibility) of the reference.
 
 ## HCL packages
 
-By default, providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged into Pulumi automatically, just as they are in OpenTofu — so a Terraform codebase that depends on community or internal providers works without changes. Pin a source and version with a `terraform` `required_providers` block when you need to.
+By default, providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged into Pulumi automatically, just as they are in OpenTofu. Pin a source and version with a `terraform` `required_providers` block when you need to.
 
 The [Pulumi Registry](/registry/) also houses 100+ native Pulumi packages. Consume one instead of the bridged Terraform provider by declaring its source with the `pulumi/` namespace (for example, `pulumi/kubernetes`) in a `required_providers` block.

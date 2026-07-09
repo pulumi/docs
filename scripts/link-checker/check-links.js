@@ -419,6 +419,10 @@ function getDefaultExcludedKeywords() {
         "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/cluster-services/",                    // blog/getting-started-with-k8s-part6, blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
         "https://www.pulumi.com/docs/iac/clouds/aws/guides/cloudwatch",                                  // blog/introducing-pulumi-crosswalk-for-aws-the-easiest-way-to-aws: S3 → /docs/iac/guides/clouds/aws/ (sub-page deleted; anchors no longer apply)
         "https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/",                       // blog/unified-programmatic-approach-...-bmw, docs/reference/cloud-rest-api/organizations (from OpenAPI spec): S3 → /docs/administration/access-identity/oidc-issuers/
+        // Old internal URLs with working S3 redirects, recurring false positives after PR #19980 (2026-06-30, 2026-07-02)
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/playbooks/",                          // blog/2019-year-at-a-glance, blog/aws-enterprise-container-management, blog/beyond-yaml-kubernetes-2026-automation-era: S3 → /docs/integrations/clouds/kubernetes/ (transient CloudFront cache misses re-flag it)
+        "https://www.pulumi.com/docs/using-pulumi/crossguard/awsguard/",                                // blog/2019-year-at-a-glance, blog/getting-started-with-pac, blog/pulumi-2020-update: S3 → github.com/pulumi/pulumi-policy-aws (cross-host redirect BLC mishandles)
+        "https://www.pulumi.com/blog/relaunching-pulumis-public-roadmap/",                              // blog/2021-end-of-year-review: S3 → /blog/ (post never migrated, redirect added in #19541)
         // External links reported as broken in issue #17495
         "https://roadmap.sh/videos/scaling-the-unscalable",
         "https://redis.io/docs/ui/cli/",
@@ -444,6 +448,7 @@ function getDefaultExcludedKeywords() {
         "https://pulumi.statuspage.io/",                                            // global footer badge (layouts/partials/footer/statuspage-badge.html)
         "https://status.pulumi.com",                                                // docs/iac/operations/troubleshooting/server-errors
         "https://www.githubstatus.com/",                                            // referenced from github.com/pulumi/pulumi crawl; bot-protected
+        "https://github.com/pulumi/pulumi/stargazers",                              // blog/pulumi-up-2024: GitHub 404s the anonymous /stargazers view for every repo; valid in a browser
     ];
 }
 

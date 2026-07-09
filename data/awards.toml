@@ -29,12 +29,6 @@ img = "/logos/press/awards/futuriom-50-2024.png"
 url = "https://www.futuriom.com/articles/news/the-2024-futuriom-50-is-here/2024/01"
 
 [[awards]]
-title = "Fastest-Growing Companies in America"
-featured = true
-img = "/logos/press/awards/inc-5000.png"
-url = "https://www.inc.com/inc5000/2023"
-
-[[awards]]
 title = "Redpoint InfraRed 100, 2023"
 featured = true
 img = "/logos/press/awards/infrared-100.png"

@@ -3,11 +3,11 @@ title: Accelerate Revenue Growth and Time to Market with Platform Engineering
 allow_long_title: true
 date: 2024-09-04
 meta_desc: When organizations build faster and more streamlined release cycles, they gain TTM advantage and a profound business edge over competitors.
-meta_image: meta.png
 authors:
     - marlowe-fenne
 tags:
     - platform-engineering
+category: general
 social:
     twitter:
     linkedin:

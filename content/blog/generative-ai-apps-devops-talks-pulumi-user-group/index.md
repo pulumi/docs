@@ -3,7 +3,6 @@ title: "LangChain for DevOps: Learn LLM & GenAI for Dev, Sec & Ops"
 date: 2023-10-26
 updated: 2025-03-24
 meta_desc: "Explore how to use LangChain with LLMs and GenAI in DevSecOps. Learn real-world examples, security strategies, and tools for developers, ops, and infosec."
-meta_image: langchain-ai-gen-ai-workshop-llm-devops.png
 authors:
     - sara-huddleston
     - kat-morgan
@@ -14,6 +13,7 @@ tags:
    - devops
    - langchain
    - ml
+category: community
 ---
 
 The emergence of DevOps revolutionized software development. Now, with AI powered tools like LangChain, these transformations are being accelerated. Unsurprisingly, our distinguished speaker at the launch of Pulumi's in-person AI Talks, Patrick Debois, who coined the term "DevOps," has recently tuned into LLM and GenAI Ops using the Langchain framework.

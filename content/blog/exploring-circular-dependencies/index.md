@@ -3,7 +3,6 @@ title: "Exploring how to solve circular dependencies"
 date: 2022-01-12
 draft: false
 meta_desc: Hack day project exploring approaches to solving circular resource dependencies.
-meta_image: meta.png
 authors:
   - daniel-bradley
   - fraser-waters
@@ -11,6 +10,7 @@ authors:
 tags:
   - features
   - hackathon
+category: engineering
 ---
 
 {{% notes type="info" %}}

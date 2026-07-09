@@ -12,7 +12,6 @@ date: 2022-04-06T13:00:03-07:00
 # previews. This field is required or the build will fail the linter test.
 meta_desc: Today, the AWS team announced HTTPS endpoint support for your Lambda functions. Learn how to deploy a Lambda URL with Pulumi!
 
-meta_image: aws_meta.png
 
 authors:
   - kat-cosgrove
@@ -20,7 +19,8 @@ authors:
 tags:
   - aws
   - features
-  - launches
+  - releases
+category: tutorials
 ---
 
 Since its introduction in 2014, the AWS Lambda service has steadily grown from ‘functions as a service’ to a powerful serverless platform that enables cloud engineers to run code without provisioning or managing underlying infrastructure.

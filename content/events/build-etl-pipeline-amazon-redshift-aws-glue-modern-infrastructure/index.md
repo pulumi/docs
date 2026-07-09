@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Build an ETL pipeline with Amazon Redshift and AWS Glue
 meta_desc: Learn how to combine AWS Glue and Amazon Redshift to build a fully-automated ETL pipeline with Pulumi. We'll use three components to complete our example.
-meta_image:
+meta_image: /events/build-etl-pipeline-amazon-redshift-aws-glue-modern-infrastructure/meta.png
+meta_image_square: /events/build-etl-pipeline-amazon-redshift-aws-glue-modern-infrastructure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

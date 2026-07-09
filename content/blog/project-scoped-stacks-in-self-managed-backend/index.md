@@ -3,13 +3,13 @@ title: "Aligning Projects between Service and DIY Backend"
 date: 2023-04-03
 updated: 2025-03-24
 meta_desc: Pulumi DIY backends now support project-scoped stacks—aligning with the Pulumi Service and enabling easier stack management across projects and environments.
-meta_image: meta.png
 authors:
     - justin-vanpatten
     - abhinav-gupta
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.

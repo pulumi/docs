@@ -2,13 +2,13 @@
 title: "Skai Migrates to AWS with Pulumi"
 date: 2021-05-04
 meta_desc: "Skai used Pulumi from their private cloud infrastructure to the AWS public cloud."
-meta_image: kenshoo.png
 authors:
     - danny-zalkind
 tags:
-    - AWS
+    - aws
     - guest-post
     - migration
+category: customers
 ---
 
 > Danny Zalkind is the DevOps group manager for Skai, an award-winning intelligent marketing platform. He brings his 15 years of experience of managing tech teams to his current role where he's dedicated to allow Skai R&D to efficiently produce and serve software. You can find him on [Linkedin](https://www.linkedin.com/in/danny-zalkind-01602b56/).

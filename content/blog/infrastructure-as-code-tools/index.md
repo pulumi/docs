@@ -3,7 +3,6 @@ title: "Most Effective Infrastructure as Code (IaC) Tools"
 date: 2025-06-26
 draft: false
 meta_desc: "Complete guide to the most effective IaC tools. Compare Pulumi, Terraform, OpenTofu, AWS CDK, and more to find the perfect solution."
-meta_image: meta.png
 authors:
     - asaf-ashirov
     - isaac-harris
@@ -12,9 +11,10 @@ tags:
     - terraform
     - aws
     - azure
-    - gcp
+    - google-cloud
     - kubernetes
     - devops
+category: general
 ---
 
 Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2025, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.

@@ -4,12 +4,12 @@ date: 2025-08-04T09:00:00-03:00
 updated: 2026-06-16
 draft: false
 meta_desc: Approvals enables effective change management by bringing governance and oversight directly into their environment configuration workflows.
-meta_image: meta.png
 authors:
     - pablo-terradillos
     - claire-gaestel
 tags:
     - esc
+category: product
 ---
 
 Did you know that **80% of unplanned outages aren’t caused by hardware failures or cyberattacks, but by the very changes we make to improve our systems?**

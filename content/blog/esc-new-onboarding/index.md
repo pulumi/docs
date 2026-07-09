@@ -4,12 +4,12 @@ date: 2025-10-17T16:00:00-03:00
 updated: 2026-06-16
 draft: false
 meta_desc: Explore Pulumi ESC’s new onboarding and simplified OIDC setup for AWS, Azure & GCP. Securely manage environments with ease.
-meta_image: meta.png
 authors:
     - pablo-terradillos
     - sean-yeh
 tags:
     - esc
+category: product
 schema_type: auto
 ---
 

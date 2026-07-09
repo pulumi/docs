@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-04-01T00:00:00-07:00
 draft: false
 meta_desc: "Recap of KubeCon EU 2026 in Amsterdam: AI in production on Kubernetes, agentic AI identity, inference routing, and platform engineering."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - ai
     - platform-engineering
     - cloud-native
+category: community
 social:
     twitter: "66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |

@@ -2,7 +2,6 @@
 title: "Build an EKS Environment Factory with Pulumi and vCluster"
 date: 2026-06-04
 meta_desc: "Build EKS-hosted vCluster test environments with Pulumi, EKS Auto Mode, Helm, RBAC, quotas, and safe cleanup workflows."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-seibelt
@@ -10,6 +9,7 @@ tags:
     - aws
     - kubernetes
     - platform-engineering
+category: tutorials
 social:
     twitter: |
         Build an EKS environment factory with Pulumi and vCluster.

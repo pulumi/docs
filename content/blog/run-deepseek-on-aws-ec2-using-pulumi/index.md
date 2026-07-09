@@ -6,7 +6,6 @@ draft: false
 meta_desc: |
     Self-host DeepSeek, Llama, Qwen, or Mistral on AWS EC2 with Ollama and Pulumi. Includes instance-type recommendations, cost math, and copy-paste IaC.
 
-meta_image: meta.png
 
 authors:
 - engin-diri
@@ -22,6 +21,7 @@ tags:
 - pulumi
 - aws
 - ec2
+category: tutorials
 
 social:
   twitter: |

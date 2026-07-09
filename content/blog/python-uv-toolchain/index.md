@@ -3,13 +3,13 @@ title: "Pulumi + uv: Fast Python Package and Project Management"
 date: 2024-11-27T12:43:45+01:00
 draft: false
 meta_desc: Learn how to use uv, an ultra-fast Python package manager, now fully integrated with Pulumi
-meta_image: meta.png
 authors:
     - adam-gordon-bell
     - julien-poissonnier
 tags:
     - python
     - infrastructure-as-code
+category: product
 social:
     twitter: "Pulumi + uv: Announcing fast Python package management with uv, now fully integrated with Pulumi. See Adam and Julien discuss the new functionality in this video, or read our blog: www.pulumi.com//blog/python-uv-toolchain"
     linkedin: "We're thrilled to announce built-in support for uv in Pulumi! 

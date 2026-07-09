@@ -5,7 +5,6 @@ date: 2024-09-12T13:00:00-04:00
 updated: 2026-06-16
 draft: false
 meta_desc: "ESC Projects and Environment Tags allow you to organize your environments and collaborate effectively."
-meta_image: "meta.png"
 authors:
   - derek-schaller
   - arun-loganathan
@@ -13,6 +12,7 @@ tags:
   - esc
   - secrets
   - features
+category: product
 ---
 
 We're thrilled to unveil two new features that will empower you to organize your collection of [Pulumi ESC](/docs/esc/) Environments: <b>Projects</b> and <b>Environment Tags</b>.  Projects offer a structured way to group related environments and Environment Tags allow you to add contextual information to each environment. Together, they offer a powerful way for you to manage, navigate, and collaborate on your secrets and configurations.

@@ -32,6 +32,10 @@ gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRe
 
 `last-reviewed-sha` reads the most recent SHA from the 📜 Review history section in the 1/M comment.
 
+### Automated invocation
+
+When `MENTION_AUTHOR` is `auto-refresh`, there is no human mention: the run was dispatched by the auto-refresh gate in claude-code-review.yml because a push touched only lines carried by 🚨 Outstanding findings (deterministically checked by `auto-refresh-gate.py`). Treat the run strictly as **Case 1 (fix-response)** scoped to the outstanding findings and the pushed lines: re-verify each outstanding finding against the new diff, move resolved ones to ✅ Resolved, and flag regressions the push introduced on those lines. Case 2 (dispute) never applies — there is no mention text to adjudicate — and do not re-extract claims or raise findings on content the push did not touch. `auto-refresh` is not a GitHub user; never render it as an `@`-mention.
+
 **Fallback rules when `last-reviewed-sha` is unusable:**
 
 - **Empty output** (history line missing, comment corrupted): fall back to a full `gh pr diff "$PR_NUMBER"` (no range). Treat the whole PR as new content; this is equivalent to starting over.
@@ -102,6 +106,8 @@ The author or another reviewer pushed back on a previous finding *without* a fix
    - Add a reply paragraph to 📜 Review history with the full evidence (file:line, command output, gh URL) explaining why the dispute didn't change the verdict. **You must cite contrary evidence to hold on a domain-knowledge dispute** — if the only basis for holding is your own reasoning vs. the author's assertion of authority, concede instead.
    - The Outstanding count does not change.
 4. **Do not** reword the same finding hoping it lands better. The original wording is in the comment; either change your mind or explain why you didn't.
+
+**The annotation shapes are machine-scraped.** `scrape-review-outcomes.py` derives the weekly outcome telemetry (fixed / conceded / disputed counts) from the exact `concede: <reason>` and `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` forms above — a freelanced variant ("author disputed this", "conceding the point") silently drops the finding out of those counts, and the validator's `outcome-annotation-shape` rule flags it.
 
 **Failure-mode examples:**
 

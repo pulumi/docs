@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-14
 draft: false
 meta_desc: "See how an AI agent using the Ralph Wiggum loop built a full AWS serverless SaaS with Pulumi—unsupervised. Frontend, backend, tests, and CloudFront included."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:
@@ -14,6 +13,7 @@ tags:
     - typescript
     - ai
     - claude-code
+category: tutorials
 
 social:
     twitter: "I let Claude Code run unsupervised with Pulumi using the Ralph Wiggum technique. Came back to a complete serverless URL shortener SaaS on AWS. Here's what happened."

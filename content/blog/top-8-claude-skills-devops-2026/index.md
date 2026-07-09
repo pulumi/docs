@@ -3,7 +3,6 @@ title: "The Claude Skills I Actually Use for DevOps"
 date: 2026-02-09
 draft: false
 meta_desc: "Skills teach AI agents how to work like experienced practitioners. In this post, we share several skills that can improve how you build cloud infrastructure."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -13,6 +12,7 @@ tags:
     - platform-engineering
     - claude-code
     - ai-agents
+category: best-practices
 ---
 
 When Claude Code first released [skills](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/skills), I ignored them. They looked like fancy prompts, another feature to add to the pile of things I would get around to learning eventually. Then I watched a few engineers demonstrate what skills actually do, and something clicked. By default, language models do not write good code. They write plausible code based on what they have read. Plausible code turns into bugs, horrible UX, and infrastructure that breaks at 3am.

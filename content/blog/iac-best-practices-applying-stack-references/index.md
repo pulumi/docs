@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Applying Stack References"
+feature_image: feature.png
 date: 2023-03-31
 updated: 2025-03-04
 meta_desc: Learn how to apply Pulumi stack references to share data across projects. Improve modularity and maintainability with best practices for stack dependencies.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - cloud-engineering
     - kubernetes
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-using-stack-references/

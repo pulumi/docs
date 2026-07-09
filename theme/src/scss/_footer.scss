@@ -22,7 +22,7 @@
     .hs-submit,
     .actions,
     .input {
-        @apply flex items-stretch;
+        @apply flex items-stretch shrink-0;
     }
 
     .hs-form-field {

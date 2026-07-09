@@ -2,13 +2,13 @@
 title: "New in Pulumi IaC: Support for skipping a resource"
 date: 2025-05-14
 meta_desc: "Pulumi now supports excluding specific resources from stack operations, giving you more control and efficiency in managing your infrastructure"
-meta_image: meta.png
 authors:
     - tom-harding
 tags:
     - features
-    - iac
+    - infrastructure-as-code
     - releases
+category: product
 ---
 
 Managing large-scale infrastructure can be challenging, especially when you need to perform operations on specific subsets of your resources. Pulumi's stack operations like `pulumi up` and `pulumi destroy` are powerful for deploying and tearing down environments, but sometimes you need more fine-grained control over which resources are affected.

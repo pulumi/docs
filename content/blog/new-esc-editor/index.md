@@ -3,7 +3,6 @@ title: "Introducing the new and improved ESC Editor"
 date: 2026-01-15T08:00:00-05:00
 draft: false
 meta_desc: We’re introducing the new and improved Pulumi ESC Editor in the Console, designed to make managing secrets and configuration easier, faster, and more intuitive.
-meta_image: meta.png
 authors:
     - sean-yeh
     - vic-fernandez
@@ -11,6 +10,7 @@ authors:
 tags:
     - esc
     - features
+category: product
 schema_type: auto
 social:
     twitter:

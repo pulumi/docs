@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "Cloud Native Summit Munich 2026"
+  title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
+  url: "https://www.cnsmunich.com/schedule/"
+  date: 2026-06-30T14:20:00.000+02:00
 - event: "ilionx DevDays 2026"
   title: "Beyond pulumi up: A Tour of Pulumi Cloud and the Neo Agent"
   url: "https://www.ilionxdevdays.com/"

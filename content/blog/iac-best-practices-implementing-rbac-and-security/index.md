@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Implementing RBAC and Security"
+feature_image: feature.png
 date: 2023-05-23
 updated: 2025-03-04
 meta_desc: Discover best practices for securing Pulumi stacks with role-based access control (RBAC). Learn how to manage permissions and enforce least privilege.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - rbac
     - security
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-rbac-and-security/

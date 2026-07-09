@@ -5,7 +5,6 @@ date: 2026-06-02
 lastmod: 2026-06-15
 draft: false
 meta_desc: "AI coding has two shapes: 2x is mostly prompting, 10x is mostly plumbing. The parallel coding playbook, translated to Pulumi."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -16,6 +15,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
+category: best-practices
 social:
     twitter: |
         2x is mostly prompting. 10x is mostly plumbing.

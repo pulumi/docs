@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-04-13
 draft: false
 meta_desc: "Three frameworks for AI coding agents compared: Superpowers enforces TDD, GSD prevents context rot, and GSTACK adds role-based governance."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -15,6 +14,7 @@ tags:
     - devops
     - cursor
     - ai-coding
+category: perspectives
 social:
     twitter: |
         We gave three AI coding frameworks the same Pulumi project. One produced a 41x speedup. One caught scope drift the others missed entirely. One we probably won't use again.

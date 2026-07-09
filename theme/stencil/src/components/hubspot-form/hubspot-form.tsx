@@ -7,6 +7,12 @@ interface UTMData {
     medium: string;
 }
 
+// Monotonic counter so multiple instances of the same HubSpot form on one page
+// (e.g. the blog header + the footer) each get a unique target-container id —
+// HubSpot's forms.create() targets a single element id, so duplicate ids would
+// leave the second form unrendered.
+let hubspotInstanceCount = 0;
+
 // The types of form events we expect to receive from HubSpot.
 // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
 type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormDefinitionFetchError";
@@ -62,7 +68,7 @@ export class HubspotForm {
             throw new Error("The required attribute `form-id` was not provided.");
         }
 
-        this.hubspotFormTargetId = `hubspotForm_${this.formId}`;
+        this.hubspotFormTargetId = `hubspotForm_${this.formId}_${hubspotInstanceCount++}`;
     }
 
     componentDidLoad() {
@@ -230,12 +236,15 @@ export class HubspotForm {
     }
 
     private renderIsLoadingForm() {
+        // Compact, height-constrained spinner (Phosphor circle-notch, rotated via
+        // Tailwind's animate-spin) so the loading state matches the rendered form
+        // height and doesn't shift layout.
         return (
-            <p>
-                <svg xmlns="http://www.w3.org/2000/svg" class="ph-icon ph-icon--regular animate-spin mr-2" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
-                    <path d="M136,32V64a8,8,0,0,1-16,0V32a8,8,0,0,1,16,0Zm88,88H192a8,8,0,0,0,0,16h32a8,8,0,0,0,0-16Zm-45.09,47.6a8,8,0,0,0-11.31,11.31l22.62,22.63a8,8,0,0,0,11.32-11.32ZM128,184a8,8,0,0,0-8,8v32a8,8,0,0,0,16,0V192A8,8,0,0,0,128,184ZM77.09,167.6,54.46,190.22a8,8,0,0,0,11.32,11.32L88.4,178.91A8,8,0,0,0,77.09,167.6ZM72,128a8,8,0,0,0-8-8H32a8,8,0,0,0,0,16H64A8,8,0,0,0,72,128ZM65.78,54.46A8,8,0,0,0,54.46,65.78L77.09,88.4A8,8,0,0,0,88.4,77.09Z"/>
+            <span class="inline-flex h-9 items-center justify-center text-gray-500" role="status" aria-label="Loading">
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 animate-spin" fill="currentColor" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,75.42,40,105.69,40,128a88,88,0,0,0,176,0c0-22.31-20.15-52.58-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z"/>
                 </svg>
-            </p>
+            </span>
         );
     }
 

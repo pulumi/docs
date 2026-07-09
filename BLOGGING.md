@@ -42,7 +42,7 @@ proceed to the next section.
    ---
    title: "My New Post"
    date: 2019-07-17T14:26:50-07:00
-   meta_image: meta.png
+   feature_image: feature.png
    authors:
        - joe-duffy
    tags:
@@ -67,15 +67,44 @@ linktitle: This is the link text
 ---
 ```
 
+**Category**
+
+Category is the *kind of post* axis — distinct from topical tags and from reading-path series — and it is a **closed set**. It is **required** and **singular**: every post declares exactly one `category:` scalar value (e.g. `category: product`), never a list. Apply the single best-fitting kind when the post clearly fits one of the specific kinds below; if it doesn't fit cleanly (for example, an SEO-oriented comparison like *Pulumi vs. Terraform* or a *What is X* explainer), use **`general`** — the default catch-all — and rely on its tags to place it in a subject area. If a post seems to span two kinds, pick the dominant one. `make lint` fails any blog post whose `category` is missing, is a list, or is a value outside the allowed set.
+
+The allowed categories are the single source of truth in [`data/blog_categories.yaml`](./data/blog_categories.yaml):
+
+| id | use when |
+|---|---|
+| `product` | Releases, new features, announcements, launch recaps, roadmaps |
+| `engineering` | How we built it, deep technical dives, performance, internals |
+| `community` | Events, meetups, webinars, hackathons, guest posts, open source, interns |
+| `best-practices` | Architecture, IaC, platform-engineering, and security/governance patterns and guidance |
+| `tutorials` | Step-by-step how-tos and getting-started guides |
+| `customers` | Customer stories and case studies centered on a named customer |
+| `perspectives` | Thought leadership and opinion — an original argument in the author's voice |
+| `company` | Company news: funding, hiring, partnerships, brand, year-in-review |
+| `general` | **Default.** Catch-all for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, listicles) |
+
+Do **not** invent categories or add ad-hoc values to a post. To propose a new category (or rename/retire one), edit `data/blog_categories.yaml` in a PR and raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) first. Topical buckets (clouds, languages, products) are *tags*, not categories — keep this axis tight.
+
 **Tags**
 
-Every tag added makes the overall tagging system harder to quickly grok and use. So, we strongly prefer using existing tags wherever possible. The tag system is as follows:
+Tags are the *topical* axis (subjects: clouds, languages, products, scenarios). Every tag added makes the overall tagging system harder to quickly grok, so we strongly prefer reusing an existing tag. The canonical, deduplicated vocabulary lives in [`data/blog_tags.yaml`](./data/blog_tags.yaml) — **pick a tag from there and avoid near-duplicates** (use `kubernetes`, not `k8s`; `infrastructure-as-code`, not `iac`; `pulumi-cloud`, not `pulumi-service`; `announcements`, not `pulumi-news`; `dotnet`, not `c#`/`.net`; `google-cloud`, not `gcp`). Tags are lowercase and hyphen-delimited. Unlike categories, the tag list is curated-but-open: only mint a new tag when nothing in the vocabulary fits, and only add a cloud-provider or feature tag if we expect multiple posts about it.
 
-- **Pulumi tags:** `pulumi-news` for company news (funding, certifications, etc.), `pulumi-events` for events we participate in or host, `pulumi-interns` for intern posts, `pulumi-enterprise` for enterprise-focused blog posts
-- **Cloud provider tags:** Only add a cloud provider tag if we expect to have multiple posts about the provider. Today, that means `aws`, `azure`, `google-cloud`, `digitalocean`
-- **Feature tags:** Only add a feature tag if we expect to have multiple posts about the feature. Today, that means `features` (for feature announcements), `aliases`, `continuous-delivery`, `logging`, `migration`, `native-providers`, `packages`, `policy-as-code`, `secrets`, `testing`.
-- **Technology/scenario tags:** Similar to feature tags, but focused on user scenarios. Today, that means `cloud-engineering`, `cloud-native`, `containers`, `data-and-analytics`, `development-environment`, `github-actions`, `kubernetes`, `serverless`.
-- **Language tags:** Any post that is language/ecosystem specific should have one or more of `.net`, `go`, `javascript`, `python`, `typescript`.
+The vocabulary is grouped roughly as:
+
+- **Pulumi:** `pulumi-cloud`, `pulumi-enterprise`, `pulumi-neo`, `copilot`, `esc`, `insights`, `automation-api`, `crossguard`, `announcements` (company news), `pulumi-events`, `pulumi-interns`, `releases`, `features`
+- **Cloud providers** (multiple-posts rule): `aws`, `azure`, `google-cloud`, `digitalocean`
+- **Languages:** `typescript`, `javascript`, `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`
+- **AI:** `ai`, `ai-agents`, `llm`, `ml`, `mlops`, `claude`, `claude-code`, `mcp`
+- **Kubernetes & containers:** `kubernetes`, `containers`, `docker`, `helm`, `eks`, `aks`, `gke`, `gitops`
+- **Platform engineering:** `platform-engineering`, `internal-developer-platform`, `developer-portals`, `developer-experience`, `cloud-engineering`, `infrastructure-as-code`, `best-practices`
+- **Security & governance:** `security`, `secrets`, `policy-as-code`, `compliance`, `governance`, `iam`, `rbac`, `oidc`
+- **Scenarios:** `serverless`, `continuous-delivery`, `ci-cd`, `github-actions`, `devops`, `migration`, `testing`
+
+**Series**
+
+A *series* is an ordered reading path across multiple posts (the third axis, alongside categories and tags). Series are defined in [`data/blog_series.yml`](./data/blog_series.yml) and surfaced at [`/blog/series/`](https://www.pulumi.com/blog/series/). To add a post to an existing series, set its `series` front-matter value to the series `slug` — that single key is all that's needed. It drives the in-post "In This Series" sidebar (siblings are found via `.Params.series`), the `<Series Title>: Part N` badge shown on the post hero in place of the category badge, and membership on the series landing page at `/blog/series/<slug>/` (the `series` taxonomy generates that page automatically; `/blog/series/` links to it). Do **not** also add the slug to `tags` — that was the old workaround for building the landing page under the tags taxonomy, and `make lint` now fails if a series slug appears as a tag (it also fails if a post's `series` value isn't defined in the data file). To create a new series, add an entry to `data/blog_series.yml` (with `slug`, `title`, `description`, and optionally `prefix`/`meta_image`) and set `series` on each member post. Series are optional — most posts don't belong to one.
 
 **Canonical link**
 
@@ -86,6 +115,50 @@ Additionally, if you're writing a blog post to announce a new product or feature
 **Schema type (structured data)**
 
 Blog posts automatically get BlogPosting schema for SEO. You can optionally override this with `schema_type` in frontmatter if needed (rare). See [SCHEMA.md](./SCHEMA.md) for details.
+
+**Resource links**
+
+To render a list of labeled, icon-accompanied links at the bottom of the post — docs, GitHub repo, feature request, community Slack, video, and so on — use the optional `resource_links` list. Each entry has a `type` (which maps to an icon and default label), a `url`, and an optional `text` to override the label:
+
+```yaml
+resource_links:
+    - type: documentation
+      url: /docs/iac/cli/
+    - type: github
+      url: https://github.com/pulumi/pulumi
+    - type: slack
+      url: https://slack.pulumi.com/
+    - type: feature-request
+      url: https://github.com/pulumi/pulumi/issues/new
+      text: "Request this feature"      # optional; overrides the default label
+```
+
+The available `type` values and their icons/default labels are the single source of truth in [`data/blog_link_types.yaml`](./data/blog_link_types.yaml) (currently `documentation`, `registry`, `feature-request`, `issue`, `slack`, `github`, `video`, `discussion`). External URLs open in a new tab; internal ones don't. To add a new link type, add an entry to that data file. Prefer this over hand-writing a bulleted list of links at the end of the post.
+
+**Updated date**
+
+Set `updated: YYYY-MM-DD` to show an "Updated \<date\>" line next to the publish date in the hero. Use it when you materially revise an older post — leave the original `date` unchanged.
+
+Use `updated`, **not** `lastmod`, for this. `updated` is the reader-facing field this site renders; `lastmod` is a generic Hugo built-in that only feeds the sitemap and schema.org `dateModified`, which the site already derives automatically from the commit date (`enableGitInfo: true`). A hand-stamped `lastmod` is invisible to readers and redundant with git, so don't add one.
+
+**Related posts**
+
+The bottom of every post shows up to four related posts, auto-selected by Hugo's Related Content. To pin specific posts first, set `related_posts` to a list of post slugs (the folder names under `content/blog/`); Hugo fills any remaining slots automatically:
+
+```yaml
+related_posts:
+    - my-earlier-post
+    - another-relevant-post
+```
+
+**Author roles**
+
+To label an author's role on the byline (for example, an interviewee credited "as told to"), set `author_roles` as a map of author id → label:
+
+```yaml
+author_roles:
+    adam-gordon-bell: "as told to"
+```
 
 ### Creating Author Profiles
 
@@ -153,23 +226,24 @@ To add images to the body of your post, first place them within the folder conta
 > [!IMPORTANT]
 > If you are adding _any_ logos to the images, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due to caching.
 
-When you generate a new post, placeholder images are included for two types of blog images:
+When you generate a new post, a placeholder `feature_image` is included:
 
-- **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page.
-- **`meta_image`** — An [OpenGraph](http://ogp.me/) image (1200×628) used in social previews (Twitter cards, unfurled Slack links, etc.) and on the Pulumi blog home page.
+- **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page. It also drives the post's **social/OpenGraph card** (the 1200×628 image used in Twitter cards, unfurled Slack links, etc. and on the blog home page), which is generated on-brand at **build time** from the post title + feature image. You no longer create or commit a separate `meta_image` — leave it blank.
 
-Both are optional but strongly recommended.
+The `feature_image` is optional but strongly recommended. Without one, the post-page hero and the listing cards show **no image** — the title and metadata simply span the full width (most pre-redesign posts are like this). Only the build-time social card falls back to a generic branded plate; the on-page layout no longer shows a placeholder.
 
-To request a custom feature image from the design team, label your PR with `needs-design`. You can then use the `/blog-meta-image` command in Claude Code to generate a meta image that matches the feature image.
-
-If you're in a hurry you can use the same Claude Code command to generate both images automatically from a curated set of branded templates.
+If you'd like a custom-designed feature image, label your PR with `needs-design` and a designer will create one for your post. Alternatively, use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
 
 | Field           | Recommended Size | Aspect Ratio | Format | Background               |
 | --------------- | ---------------- | ------------ | ------ | ------------------------ |
 | `feature_image` | 1884×1256        | 3:2          | PNG    | Opaque (No Transparency) |
-| `meta_image`    | 1200×628         | ~1.91:1      | PNG    | Opaque (No Transparency) |
 
-Remember to replace both placeholder images (or remove the properties and delete the placeholder files) before submitting your post.
+Remember to replace the placeholder feature image (or remove the property and delete the placeholder file) before submitting your post.
+
+> [!NOTE]
+> **Don't set a custom `meta_image`.** You should almost never need one — the build-time card covers virtually every post and keeps social previews on-brand automatically, including when the brand evolves. A hand-made override is frozen in time: it drifts off-brand silently, which is exactly why hundreds of older posts needed cleanup. If you want a nicer card, invest in a better feature image (label your PR `needs-design` for a custom-designed one). If the generated card genuinely doesn't work for your post, raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) before committing an override.
+
+> **Archived images:** older posts that shipped an off-brand `meta_image` have had it renamed to `meta-legacy.png` and removed from front matter; it now appears in a collapsed "Archived feature image" panel at the bottom of the post.
 
 #### Video
 
@@ -224,7 +298,7 @@ Before submitting your post:
 1. **Review for quality**: Run `/docs-review` in Claude Code to check for style and content issues
 2. **Add borders to images**: If you have screenshots, run `/add-borders` to add 1px grey borders for better visual clarity
 3. **Preview locally**: Run `make serve` and check your post at <http://localhost:1313/blog/[your-slug>]
-4. **Replace the placeholder meta image**: Create a custom 1200×630 PNG for social media previews (see [meta image guidelines](#social-meta-images) above)
+4. **Replace the placeholder feature image**: Add a 1884×1256 hero image (or run `/blog-feature-image`); it also drives the build-time social card (see [feature image guidelines](#social-meta-and-feature-images) above)
 5. **Submit for review**: Create a Pull Request against the `master` branch
 6. **Publicize**: Before merge, reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) so Marketing can help broadcast your post
 
@@ -240,8 +314,8 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page
 - [ ] Run `/docs-review` to check for style and content issues
 - [ ] Run `/add-borders` if your post includes images
-- [ ] Check that your meta_image appears properly on the blog home page. Do not use animated GIFs for preview images
-- [ ] Check that your meta_image is using the current logos for Pulumi and others
+- [ ] Check that your feature_image appears properly on the blog home page and at the top of the post. Do not use animated GIFs
+- [ ] If your feature image includes logos, confirm they are the current Pulumi/partner logos (the build-time social card is generated from the feature image)
 - [ ] Preview locally with `make serve`. Check formatting, links, and images for appearance
 - [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR)
 - [ ] Reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) to make Marketing aware that your post is about to go live!

@@ -113,7 +113,7 @@ You can replace a secret manually with `pulumi env set ... --secret` (ESC versio
 
 ### Control access with RBAC
 
-Use [Role-Based Access Control](/docs/esc/administration/access-control/) to limit who can read or write secrets:
+Use [Role-Based Access Control](/docs/administration/access-identity/rbac/scopes/environments/) to limit who can read or write secrets:
 
 - Grant teams read-only access to production secrets
 - Allow developers full access to development secrets
@@ -124,4 +124,4 @@ Use [Role-Based Access Control](/docs/esc/administration/access-control/) to lim
 - [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull secrets from AWS, Azure, GCP secret stores
 - [Running commands with pulumi env run](/docs/esc/guides/running-commands/) - Inject secrets into any command
-- [Access control reference](/docs/esc/administration/access-control/) - Complete RBAC documentation
+- [Access control reference](/docs/administration/access-identity/rbac/) - Complete RBAC documentation

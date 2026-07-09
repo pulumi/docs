@@ -3,11 +3,11 @@ title: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"
-tags: ["kargo", "kubernetes", "pko", "change management", "gitops", "argocd", "verification"]
+tags: [kargo, kubernetes, pko, change-management, gitops, argocd, verification]
+category: best-practices
 meta_desc: "Use Kargo with the Pulumi Kubernetes Operator to control how infrastructure changes are promoted across environments."
 date: "2025-11-25"
 updated: 2026-02-03
-meta_image: "kargo-change-mgmt.png"
 allow_long_title: true
 summary: |
     The Pulumi Kubernetes Operator (PKO) manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.

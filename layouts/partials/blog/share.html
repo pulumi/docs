@@ -1,0 +1,43 @@
+{{- /*
+    "Share" icon row for the post-page sidebar: copy link (handled by
+    blog-post.ts), then LinkedIn, Reddit, X, Hacker News. Call with the post
+    page context. Only renders for pages backed by a file.
+*/ -}}
+{{- with .File -}}
+{{- $title := $.Title -}}
+{{- $url := $.Permalink -}}
+{{- $t := $title | urlquery -}}
+{{- $u := $url | urlquery -}}
+{{- $tu := (printf "%s %s" $title $url) | urlquery -}}
+<div>
+    <p class="font-overline-sm mb-4 text-service-black">Share</p>
+    <ul class="m-0 flex list-none items-center gap-3 p-0">
+        <li class="m-0">
+            <button type="button" data-copy-link data-url="{{ $url }}" aria-label="Copy link" data-track="blog-share-copy-link" class="block cursor-pointer text-gray-500 transition-colors hover:text-violet-primary">
+                <span data-copy-link-idle>{{ partial "icon.html" (dict "name" "link" "class" "text-lg") }}</span>
+                <span data-copy-link-done hidden class="text-green-500">{{ partial "icon.html" (dict "name" "check" "class" "text-lg") }}</span>
+            </button>
+        </li>
+        <li class="m-0">
+            <a href="https://www.linkedin.com/feed/?shareActive=true&text={{ $tu }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" data-track="blog-share-linkedin" class="text-gray-500 transition-colors hover:text-violet-primary">
+                {{ partial "icon.html" (dict "name" "brand/linkedin" "class" "text-lg") }}
+            </a>
+        </li>
+        <li class="m-0">
+            <a href="https://www.reddit.com/submit?url={{ $u }}&title={{ $t }}" target="_blank" rel="noopener" aria-label="Share on Reddit" data-track="blog-share-reddit" class="text-gray-500 transition-colors hover:text-violet-primary">
+                {{ partial "icon.html" (dict "name" "brand/reddit" "class" "text-lg") }}
+            </a>
+        </li>
+        <li class="m-0">
+            <a href="https://x.com/intent/post?text={{ $t }}&url={{ $u }}" target="_blank" rel="noopener" aria-label="Share on X" data-track="blog-share-x" class="text-gray-500 transition-colors hover:text-violet-primary">
+                {{ partial "icon.html" (dict "name" "brand/x" "class" "text-base") }}
+            </a>
+        </li>
+        <li class="m-0">
+            <a href="https://news.ycombinator.com/submitlink?u={{ $u }}&t={{ $t }}" target="_blank" rel="noopener" aria-label="Share on Hacker News" data-track="blog-share-hackernews" class="text-gray-500 transition-colors hover:text-violet-primary">
+                {{ partial "icon.html" (dict "name" "brand/hackernews" "class" "text-lg") }}
+            </a>
+        </li>
+    </ul>
+</div>
+{{- end -}}

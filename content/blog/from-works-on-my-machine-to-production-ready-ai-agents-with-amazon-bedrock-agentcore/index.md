@@ -3,7 +3,6 @@ title: "From 'Works on My Machine' to Production-Ready: Building AI Agents with 
 date: 2025-12-15T00:00:00+02:00
 draft: false
 meta_desc: "Transform local AI agent prototypes into production-ready deployments using Amazon Bedrock AgentCore, Strands SDK, and Pulumi."
-meta_image: meta.png
 authors:
   - engin-diri
 tags:
@@ -12,6 +11,7 @@ tags:
   - bedrock-agentcore
   - pulumi
   - infrastructure-as-code
+category: tutorials
 allow_long_title: true
 ---
 

@@ -3,9 +3,7 @@ title: "Seven Rules for Building an AI-Native Software Factory"
 date: 2026-05-21T06:00:00-07:00
 draft: false
 meta_desc: "Ewan Dawson, CTO of Compostable AI, on building a software factory where AI agents write the code. Seven rules learned across nineteen client deployments."
-meta_image: meta.png
 feature_image: feature.png
-youtube_id: oHNdlWlsR-w
 authors:
     - ewan-dawson
     - adam-gordon-bell
@@ -16,7 +14,8 @@ tags:
     - ai-agents
     - infrastructure-as-code
     - pulumi-neo
-    - pulumi-esc
+    - esc
+category: customers
 social:
     twitter: |
         Five engineers. Nineteen clients. Custom code shipped within a day of signing.
@@ -38,11 +37,17 @@ social:
 
 <!--more-->
 
+{{< youtube "oHNdlWlsR-w?rel=0" >}}
+
 For the past twenty years, I've viewed software development as a craft. The best engineers drew on decades of experience to get every function right.
 
 But two years into the agentic AI revolution, I realised software is going to look more like a factory than a craft. The economics have changed. We can't treat code as bespoke anymore. To scale, we have to think industrial — use the tools to ship more value with fewer engineers.
 
 I joined Compostable AI soon after it was founded 2.5 years ago, and I built the engineering org AI-native from day one. The technology has come a long way since then, and so has my understanding of what AI-native actually means. Here are seven rules I keep coming back to.
+
+{{< notes type="info" size="large" >}}
+**An AI software factory** is a software operation where autonomous agents write and ship most of the code. The engineers stop writing it by hand and spend their time deciding what gets built and talking to customers. The rules below are our rules for building and running an AI-native software factory.
+{{< /notes >}}
 
 ## 1. Transform, don't enhance
 
@@ -165,7 +170,7 @@ Even a converged factory has to live somewhere. Try running a fully automated fa
 
 Cloud also kills configuration drift across a dozen developer machines. The same prompts run against different model versions, and env vars sit half-set on half the laptops. The thing you're trying to optimize lives in different states across the team. Cloud isn't just where the factory runs; it's the only place a team can iterate on it together. Keep everything in one place — AWS, Pulumi Cloud, GitHub. The specific stack matters less than the principle of one place.
 
-And the part that matters most: the factory keeps running, testing, and deploying long after we've closed our laptops and gone to sleep.
+And the part that matters most: the factory keeps running, testing, and deploying long after we've closed our laptops and gone to sleep — the [dark factory](/blog/dark-factory-pattern-pulumi-autonomous-iac/) pattern, where the line keeps producing with the lights off.
 
 {{< notes type="tip" size="large" >}}
 **Build the factory somewhere you can work on it — not just somewhere it can run.**
@@ -173,12 +178,33 @@ And the part that matters most: the factory keeps running, testing, and deployin
 A factory scattered across laptops can't be improved as a system. Cloud keeps it in one shape, 24/7, and lets the team iterate together.
 {{< /notes >}}
 
+## How to build an AI-native software factory
+
+There's no single blueprint for how to build a software factory, but these seven rules are the software factory model we run at Compostable AI: transform the workflow rather than bolt AI onto it, remove problems instead of engineering around them, pick tools your agents can drive, split work across specialized agents, measure human hours per unit of value, design for convergence over one-shot correctness, and run the factory in the cloud so it operates 24/7.
+
 ## Closing thought
 
 I've shipped more code in the last two years than I did in the fifteen before that. Most of it in languages I couldn't write by hand. And that's after a stretch in leadership where I wrote almost none.
 
 If you're where I was two years ago: don't ask how AI fits into what you already do. The factory is built one rule at a time, and it's not a template — it's the practice of finding where you're taking advantage of the new economics and where you're not, where your practices still need an update. The leverage is in finding these places and improving them.
 
+## Frequently asked questions
+
+{{< details "What is a software factory?" >}}
+A software factory runs software delivery as a repeatable industrial process instead of hand-crafting each feature, the way a physical factory turns out products on a line. The idea predates AI. An AI-native software factory is the version where agents do most of the building and the engineers steer.
+{{< /details >}}
+{{< details "How is a software factory different from traditional software development?" >}}
+Traditional development treats code as a craft, each function written and reviewed by hand. A software factory treats software delivery as an industrial process: agents handle the writing and checking through an automated, converging loop, and the expensive human hours move to defining the work and deciding what to build. The goal is to minimize human hours per unit of value shipped.
+{{< /details >}}
+
+{{< details "How do you keep AI agents from breaking things across customers?" >}}
+Rather than build a shared multi-tenant sandbox, Compostable AI removes the problem: every client gets two dedicated AWS accounts, one for production and a "digital twin" staging account. Agents iterate on staging until the work checks out, and only then does it ship to production. Infrastructure-as-code tools like AWS Control Tower and Pulumi make running that account fleet tractable for a small team.
+{{< /details >}}
+
+{{< details "What tools does an AI-native software factory need?" >}}
+Tools your agents can actually drive, anything with a solid API and a clean CLI, rather than click-ops around a web UI. Compostable AI expresses infrastructure as type-safe TypeScript with [Pulumi](/), pairs it with [Pulumi Neo](/product/neo/) for domain-specific infrastructure skills, and uses [Pulumi ESC](/docs/pulumi-cloud/esc/) for configuration. If part of your stack still requires a human to click through a UI, your agents stop there.
+{{< /details >}}
+
 ---
 
-*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*
+*Watch the [original Pulumi webinar](https://www.youtube.com/watch?v=oHNdlWlsR-w). Read the [Compostable AI case study](/case-studies/compostable-ai/), and learn more about [Compostable AI](https://compostable.ai/) and [Pulumi Neo](/product/neo/).*

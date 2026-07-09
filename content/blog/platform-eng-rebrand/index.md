@@ -5,11 +5,11 @@ draft: false
 simple_layout: true
 meta_desc: Is platform engineering a genuine evolution of DevOps or just a rebrand? We explore both perspectives on this industry trend.
 summary: Platform engineering has emerged as a hot area, but is it truly an evolutionary step toward a greater way of developing and operating software? Or is it merely a fad and a rebranding of existing ideas?
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
+category: perspectives
 social:
     twitter: >
         Is platform engineering just DevOps rebranded, or a genuine evolution? Exploring title drift, hype cycles, and why platform teams might actually represent progress in how we build and operate software.

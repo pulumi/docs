@@ -19,9 +19,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v6
         with:
@@ -71,7 +71,7 @@ jobs:
       # only re-renders pages that changed (manifest content-hash skip). The
       # cards are gitignored; this cache is their only persistence across runs.
       - name: Cache generated meta images
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: assets/images/generated
           key: meta-images-${{ github.sha }}
@@ -111,7 +111,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

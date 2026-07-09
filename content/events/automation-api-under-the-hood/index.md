@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Automation API Under the Hood"
 meta_desc: Evan Boyle and Casey Huang give you a guided tour of the Pulumi Automation API and Pulumi Deployments.
+meta_image: /events/automation-api-under-the-hood/meta.png
+meta_image_square: /events/automation-api-under-the-hood/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

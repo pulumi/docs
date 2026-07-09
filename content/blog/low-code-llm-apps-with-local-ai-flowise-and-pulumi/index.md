@@ -3,7 +3,6 @@ title: "Deploy Low-Code LLM Apps on AWS with Flowise and LocalAI"
 date: "2024-02-26T06:00:00-08:00"
 updated: 2025-03-12
 meta_desc: "Quickly build & deploy low-code LLM apps on AWS EKS using Flowise, LocalAI, and Pulumi. Follow this step-by-step guide & streamline your AI workflows."
-meta_image: meta.png
 authors:
 - engin-diri
 
@@ -16,6 +15,7 @@ tags:
 - eks
 - langchain
 - llamaindex
+category: tutorials
 ---
 
 Building low-code LLM applications just got easier! With [Flowise](https://flowiseai.com/), [LocalAI](https://localai.io/), and Pulumi, you can quickly create, deploy, and manage AI-powered workflows on AWS EKS—without writing complex code.
