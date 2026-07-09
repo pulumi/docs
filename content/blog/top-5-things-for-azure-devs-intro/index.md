@@ -12,7 +12,7 @@ tags:
     - aks
     - devops
     - azure-top-5
-category: general
+category: tutorials
 series: azure-top-5
 ---
 

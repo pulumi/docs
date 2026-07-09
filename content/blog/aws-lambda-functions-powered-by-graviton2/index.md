@@ -8,7 +8,7 @@ tags:
     - aws
     - lambda
     - arm64
-category: product
+category: tutorials
 
 ---
 
