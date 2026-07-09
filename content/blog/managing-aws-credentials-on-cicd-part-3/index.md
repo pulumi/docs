@@ -10,7 +10,6 @@ tags:
     - continuous-delivery
     - security
     - secrets
-    - aws-credentials-cicd
 category: best-practices
 series: aws-credentials-cicd
 ---

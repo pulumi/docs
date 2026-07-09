@@ -2,13 +2,13 @@
 title: "Security as an Enabler: Building Trust into Your Platform"
 feature_image: feature.png
 date: 2025-04-11
+updated: 2026-07-09
 draft: false
 meta_desc: Learn how security can enable innovation by embedding guardrails directly into your platform.
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
 category: best-practices
 series: platform-engineering-pillars
 social:
@@ -35,7 +35,7 @@ social:
 
       Ready to make security your competitive advantage? Learn how in our latest platform engineering pillar article!
 ---
-In previous articles, we looked at how [platform engineering](/blog/tag/platform-engineering-pillars/) fixes infrastructure chaos, enables self-service, and improves developer workflows. These pillars work together to boost both developer productivity and organizational speed.
+In previous articles, we looked at how [platform engineering](/blog/series/platform-engineering-pillars/) fixes infrastructure chaos, enables self-service, and improves developer workflows. These pillars work together to boost both developer productivity and organizational speed.
 
 But there's still one critical element that can make or break all this progress: security.
 

@@ -1,6 +1,6 @@
 {{- /*
     Series badge for the post hero — "<Series Title>: Part N" (outline pill)
-    linking to the series page (/blog/tag/<slug>/). Shown in place of the category
+    linking to the series page (/blog/series/<slug>/). Shown in place of the category
     badge on posts that belong to a series. Call with the post page context;
     renders nothing if the post isn't in a series or the slug isn't a known series.
 
@@ -19,7 +19,7 @@
             {{- partial "blog/badge.html" (dict
                 "text" (printf "%s: Part %d" .title $num)
                 "variant" "outline"
-                "href" (printf "/blog/tag/%s/" $slug)
+                "href" (printf "/blog/series/%s/" $slug)
                 "track" (printf "blog-series-%s" $slug)) -}}
         {{- end -}}
     {{- end -}}
