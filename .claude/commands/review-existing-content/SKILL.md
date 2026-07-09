@@ -171,6 +171,14 @@ almost-made-the-cut record the human reviewer adjudicates. When you flag a
 `reconception`, set `clarity_flag: true` in the verdict sentinel (step 8) so the
 ledger carries the signal even on an otherwise-clean page.
 
+Record every fix you apply as an entry in the verdict sentinel's `applied`
+array (step 8): its category, file, **pre-fix** line range, and a pointer to
+the artifact finding it implements. The publish job deterministically verifies
+that every hunk in your exported changes falls within the line range of a
+recorded finding (`scripts/content-review/verify-fix-scope.py`); an edit
+outside the recorded findings fails that gate and nothing is pushed — so if a
+change doesn't trace to a finding above, don't make it.
+
 Editing guardrails:
 
 - Never rewrite prose beyond the specific correction.
@@ -293,10 +301,16 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
 {
   "verdict": "fixed",
   "reason": "",
-  "fixes": 4,
+  "fixes": 2,
   "skipped_findings": 2,
   "retirement": false,
-  "clarity_flag": true
+  "clarity_flag": true,
+  "applied": [
+    { "category": "claim", "file": "content/docs/iac/concepts/stacks/_index.md",
+      "lines": [42, 43], "source": "verified-claims:c3" },
+    { "category": "link", "file": "content/docs/iac/concepts/stacks/_index.md",
+      "lines": [88, 88], "source": "dead link /docs/intro/concepts/state/" }
+  ]
 }
 ```
 
@@ -309,6 +323,15 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
 - `fixes`: applied changes; `skipped_findings`: Findings-not-applied count.
 - `retirement`: `true` only for a retirement PR (branch
   `content-review/retire-<slug>`).
+- `applied`: one entry per applied fix — `category` (one of `claim`, `link`,
+  `frontmatter`, `vale`, `readthrough`), `file`, `lines` (`[start, end]`,
+  inclusive, **pre-fix** line numbers — the file as it was on master, the same
+  numbering the pre-step artifacts use), and `source` (the artifact finding it
+  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`,
+  `readthrough:L40-58`, or the dead link's old path). `fixes` should equal
+  `len(applied)`. The workflow's scope gate cross-checks these against the
+  artifacts and the branch diff; for link fixes (which have no artifact) the
+  declared lines must actually carry the link in the pre-fix file.
 - `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
   for this page. Carries onto the ledger record so the page's structural
   follow-up is durable even when the verdict is `clean` or `fixed` (the
@@ -326,9 +349,13 @@ skipped verdict.
 For any article with `"no_retire": false`, retirement is a valid outcome
 **instead of** a fix PR when the strict evidence standard below is met.
 `no_retire: true` is the primary guardrail and an absolute veto — never propose
-retiring such a page no matter how strong the evidence. The publish gate also
-enforces the veto in code: a `retirement: true` verdict for a `no_retire` page
-fails the run before anything is pushed. Retirement is no longer
+retiring such a page no matter how strong the evidence. The veto is
+**code-enforced twice** in the publish job, before anything is pushed: the
+publish gate rejects a `retirement: true` verdict for a page the queue stamps
+`no_retire`, and `scripts/content-review/check-retire-veto.py` independently
+re-derives the veto from `strategic-tiers.yaml` and the trusted dispatch
+`path` input, so neither a model-edited queue nor a model-edited verdict can
+clear it. Retirement is no longer
 restricted to a particular lane; it can be proposed on any review that clears
 the bar, with the full reasoning documented in the PR.
 

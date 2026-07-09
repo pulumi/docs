@@ -247,6 +247,36 @@ jobs:
           echo "--- pr body draft ---"
           cat .pr-body-draft.md
 
+      # Snapshot the guardrail inputs BEFORE the model runs and upload them
+      # immediately as their own artifact. The publish job's guardrail gates
+      # judge the model's patch against these copies (plus the trusted
+      # workflow-dispatch `path` input), so a model that edits the queue or
+      # the findings artifacts in the workspace cannot widen its own
+      # allowance — the artifact is immutable once uploaded, and this upload
+      # happens before the model step. base-sha.txt is the master commit the
+      # pre-steps ran on — the old side for all patch diffs. (The dot-dir is
+      # excluded from the export step's staging, so it can never ride the
+      # patch.)
+      - name: Snapshot guardrail inputs
+        id: snapshot
+        run: |
+          SNAP=".review-snapshot"
+          mkdir -p "$SNAP"
+          for f in .content-review-queue.json .verified-claims.json \
+                   .vale-findings.json .readthrough-findings.json \
+                   .frontmatter-validation.json; do
+            [ -f "$f" ] && cp "$f" "$SNAP/" || echo "::warning::snapshot: $f missing"
+          done
+          git rev-parse HEAD > "$SNAP/base-sha.txt"
+      - name: Upload guardrail snapshot
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-snapshot
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+          path: .review-snapshot/
+
       - name: Run Claude Code
         id: claude
         if: steps.precheck.outputs.skip != 'true'
@@ -284,7 +314,9 @@ jobs:
             1. (Done by the workflow — the publish job derives the branch
                `content-review/<slug>` from the queue's `slug`, and a
                deterministic pre-check already confirmed no open PR owns this
-               page.)
+               page. Retirement is code-enforced there: a retirement verdict
+               for a page that is `no_retire` in strategic-tiers.yaml is
+               rejected regardless of evidence.)
             2. (Done by the workflow — read the artifacts above. If one is
                missing or carries an `errors` field, note it in the PR
                description and continue with what you have.)
@@ -334,9 +366,18 @@ jobs:
                structured output. Shape:
                `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
                for clean/skipped>", "fixes": <int>, "skipped_findings": <int>,
-               "retirement": <bool>}`. The workflow derives the PR facts and
-               records the S3 ledger from this; do NOT write a ledger or results
-               file yourself.
+               "retirement": <bool>, "applied": [<one entry per applied fix>]}`.
+               Each `applied` entry is `{"category":
+               "claim|link|frontmatter|vale|readthrough", "file": "<path>",
+               "lines": [<start>, <end>], "source": "<finding pointer>"}` with
+               `lines` the PRE-FIX line numbers (the file as it was on master —
+               the same numbering the artifacts use). The publish job
+               deterministically verifies every hunk in your exported changes
+               falls within a recorded finding's line range; an edit outside
+               the recorded findings fails the publish gate and nothing is
+               pushed. The workflow derives the PR facts and records the S3
+               ledger from this; do NOT write a ledger or results file
+               yourself.
           # Broad Bash is deliberate and is what the job's privilege profile
           # buys: this job holds no push token, no AWS creds, and no
           # production environment, so compound commands (`make ensure &&
@@ -359,6 +400,11 @@ jobs:
           git add -A -- ':!.*' ':!.*/**'
           git diff --cached --binary > .review-changes.patch
           git diff --cached --name-only -z > .review-changes.paths
+          # Zero-context twin of the patch for the publish job's fix-scope
+          # gate (verify-fix-scope.py judges hunk line ranges, so context
+          # lines must not widen them). Same staged tree, same step ⇒ always
+          # consistent with the patch that ships.
+          git diff --cached --unified=0 > .review-changes.u0.diff
           echo "--- changed paths ---"
           git diff --cached --name-only
       - name: Upload handoff artifact
@@ -377,6 +423,7 @@ jobs:
             .pr-body-draft.md
             .review-changes.patch
             .review-changes.paths
+            .review-changes.u0.diff
 
   publish:
     name: Validate and publish (deterministic, credentialed)
@@ -443,6 +490,60 @@ jobs:
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
             --patch .review-changes.patch
+
+      # Always downloaded (not just when publishing): the guardrail gates
+      # below need it for a publishable verdict, and later ledger-side steps
+      # may read the pre-model copies (e.g. the claims index records verified
+      # claims even for a clean page).
+      - name: Download guardrail snapshot
+        if: always()
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          name: review-snapshot
+          path: .review-snapshot
+
+      # Code-enforced guardrails (issue #20078 §3.1), layered on the publish
+      # gate above. Both used to be instruction-only, honored by the model
+      # reading the skill:
+      #   1. retire veto — a retirement verdict for a no_retire (or tier-1/
+      #      tier-0) page is rejected outright, judged from this clean
+      #      checkout's strategic-tiers.yaml + the trusted dispatch `path`
+      #      input. The publish gate's own no_retire backstop reads the
+      #      queue, which rides the model-writable handoff artifact — this
+      #      check closes that hole.
+      #   2. fix scope — every hunk in the patch must fall inside a recorded
+      #      finding's pre-fix line range (verify-fix-scope.py), judged
+      #      against the PRE-MODEL snapshot artifacts; an out-of-range edit
+      #      means the model strayed beyond the five high-confidence
+      #      categories.
+      # NO continue-on-error: a breach fails this step, the publish step
+      # below never runs (implicit success() condition) so nothing is ever
+      # pushed, and the ledger step still records the page incomplete
+      # (if: always()) so it is retried under the attempt cap.
+      - name: Enforce guardrail gates
+        id: gates
+        if: steps.gate.outputs.publish == 'true'
+        env:
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          BASE_SHA=$(cat .review-snapshot/base-sha.txt 2>/dev/null || true)
+          if [ -z "$BASE_SHA" ]; then
+            echo "::error::guardrail snapshot is missing or carries no base-sha; refusing to publish"
+            exit 1
+          fi
+          if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
+            python3 scripts/content-review/check-retire-veto.py \
+              --path "$ARTICLE_PATH" \
+              --tiers .claude/commands/review-existing-content/references/strategic-tiers.yaml \
+              || { echo "::error::retire veto: $ARTICLE_PATH is protected (no_retire); nothing will be pushed"; exit 1; }
+          else
+            python3 scripts/content-review/verify-fix-scope.py \
+              --diff-file .review-changes.u0.diff --base-sha "$BASE_SHA" \
+              --article "$ARTICLE_PATH" --verdict .content-review-verdict.json \
+              --artifacts-dir .review-snapshot --out .fix-scope-report.json \
+              || { echo "::error::fix-scope gate failed; report follows"; cat .fix-scope-report.json; exit 1; }
+          fi
 
       # Branch, push, and draft PR — the write half of what used to be the
       # model's SKILL.md steps 1 and 7. The branch name comes from the gate
