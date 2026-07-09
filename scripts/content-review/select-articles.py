@@ -24,11 +24,31 @@ Selection algorithm (weighted fair queuing by staleness):
 
        score = importance * staleness + stale_claim_boost
 
-   importance = tier_w * (0.5 + 0.5*traffic_n)   with a traffic snapshot
-              = tier_w                            tier-only when absent
+   importance = tier_w * (0.5 + 0.5*traffic_n) * gsc_m * feedback_m
+              = tier_w * gsc_m * feedback_m     tier-only when no traffic
    tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
    traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
                 report impute the median
+   gsc_m      = 1 + 0.25 * impressions_n * ctr_gap, in [1.0, 1.25]: the
+                Search Console "opportunity" boost — only pages searchers
+                see a lot (high impressions) but rarely click (CTR below
+                the corpus median) boost
+   feedback_m = 1 + 0.30 * neg_rate * min(1, votes/10), in [1.0, 1.30]:
+                the feedback-widget boost — "No, this page didn't help"
+                votes raise priority, damped below 10 total votes so a
+                couple of noisy votes can't max it out
+
+   The two reader-signal terms come from the optional reader-signals
+   export (--signals-file) and are boost-only with a floor of exactly
+   1.0: a page missing from the export (or under the noise thresholds,
+   or the export not existing at all) scores precisely what it would
+   have scored before these terms existed, and no page ever ranks lower
+   because of them. High CTR / positive feedback never suppress — a
+   well-titled page can still be factually stale, and that page is
+   exactly what the review is for. Unlike the traffic term (an always-on
+   scaler where absent pages impute the median so they aren't punished),
+   these are pure boosts, so neutral 1.0 — not the median — is the
+   no-penalty imputation.
    staleness  = (today - effective_last_review).days, floored at 0
    effective_last_review = max(bot_reviewed_at, last_non-bot_commit_date)
                 where bot_reviewed_at counts only for a *completed* review
@@ -48,8 +68,8 @@ Selection algorithm (weighted fair queuing by staleness):
 
 Usage:
     select-articles.py --count 3 --out .content-review-queue.json
-        [--traffic-file .traffic-snapshot] [--tiers <yaml>]
-        [--ledger-dir scripts/content-review/ledger]
+        [--traffic-file .traffic-snapshot] [--signals-file .reader-signals.json]
+        [--tiers <yaml>] [--ledger-dir scripts/content-review/ledger]
         [--paths content/docs/a.md,content/docs/b/_index.md]
         [--no-gh] [--today YYYY-MM-DD] [--dry-run]
     select-articles.py --stats   # ledger outcome report (merged/closed/open)
@@ -103,6 +123,21 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # the sweep is never fully starved. The marker vanishes when the page's next
 # review rewrites its ledger entry, so the boost self-clears.
 STALE_CLAIM_BOOST = 400.0
+
+# Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
+# module docstring); the caps keep the maximum combined boost (~1.63x) well
+# under the tier spread (3.3x), so signals reorder comparably stale same-tier
+# peers without overriding tiering or staleness.
+GSC_MIN_IMPRESSIONS = 200  # below this, CTR is noise -> neutral
+GSC_BOOST_MAX = 0.25  # gsc multiplier in [1.0, 1.25]
+FEEDBACK_MIN_TOTAL = 3  # fewer votes than this -> neutral
+FEEDBACK_SATURATION = 10  # votes at which neg_rate gets full weight
+FEEDBACK_BOOST_MAX = 0.30  # feedback multiplier in [1.0, 1.30]
+# The flag-only "title/meta_desc may under-sell this page in search" signal.
+# Deliberately stricter than the boost thresholds: the flag surfaces in the
+# review PR for a human, so it fires only on unambiguous cases.
+LOW_CTR_FLAG_MIN_IMPRESSIONS = 1000
+LOW_CTR_FLAG_RATIO = 0.5  # flag when ctr <= 0.5 * corpus median CTR
 
 # Statuses a ledger entry can carry (set by record-review.py). Any status other
 # than "incomplete" is a completed review whose date advances the clock; legacy
@@ -224,6 +259,107 @@ def load_traffic(traffic_file: Path | None, known_paths: set[str]) -> tuple[dict
 
     meta["pages_matched"] = len(pages)
     return pages, meta
+
+
+def load_reader_signals(
+    signals_file: Path | None, known_paths: set[str]
+) -> tuple[dict[str, dict], dict[str, dict], dict]:
+    """Parse the S3 reader-signals snapshot into per-content-path signal maps.
+
+    The snapshot is a single JSON object with independently optional sections
+    (see the data-export contract in the review-existing-content skill docs):
+
+        {"version": 1, "generated": ..., "signals": {
+            "gsc":      {"source", "period", "pages": {url: {impressions, clicks, position}}},
+            "feedback": {"source", "period", "pages": {url: {yes, no}}}}}
+
+    Returns (gsc, feedback, meta). A missing/unreadable/malformed file — or a
+    missing section — degrades that signal to unavailable, mirroring
+    load_traffic: selection then scores exactly as if the signal never existed.
+    """
+    meta = {
+        "gsc": {"available": False, "source": None, "period": None,
+                "pages_matched": 0, "median_ctr": None, "max_impressions": None},
+        "feedback": {"available": False, "source": None, "period": None,
+                     "pages_matched": 0},
+    }
+    gsc: dict[str, dict] = {}
+    feedback: dict[str, dict] = {}
+    if signals_file is None or not signals_file.is_file():
+        return gsc, feedback, meta
+    try:
+        data = json.loads(signals_file.read_text(errors="replace"))
+    except (OSError, json.JSONDecodeError):
+        return gsc, feedback, meta
+    if not isinstance(data, dict):
+        return gsc, feedback, meta
+    sections = data.get("signals")
+    if not isinstance(sections, dict):
+        return gsc, feedback, meta
+
+    def _int(v) -> int:
+        try:
+            return max(int(float(v)), 0)
+        except (TypeError, ValueError):
+            return 0
+
+    gsc_section = sections.get("gsc")
+    if isinstance(gsc_section, dict) and isinstance(gsc_section.get("pages"), dict):
+        for url_path, row in gsc_section["pages"].items():
+            if not isinstance(row, dict):
+                continue
+            cp = content_path_for_url(str(url_path), known_paths)
+            if not cp:
+                continue
+            impressions = _int(row.get("impressions"))
+            clicks = _int(row.get("clicks"))
+            entry = {
+                "impressions": impressions,
+                "clicks": clicks,
+                "ctr": round(clicks / impressions, 6) if impressions else 0.0,
+                "position": row.get("position"),
+            }
+            # A URL and its aliases may both appear; like the traffic snapshot,
+            # keep the row with the larger figure rather than double-counting.
+            prev = gsc.get(cp)
+            if prev is None or entry["impressions"] > prev["impressions"]:
+                gsc[cp] = entry
+        if gsc:
+            # Corpus stats over pages with meaningful volume only, so the
+            # long tail of near-zero-impression rows can't drag the median.
+            eligible = [e for e in gsc.values() if e["impressions"] >= GSC_MIN_IMPRESSIONS]
+            ctrs = sorted(e["ctr"] for e in eligible)
+            meta["gsc"] = {
+                "available": True,
+                "source": gsc_section.get("source"),
+                "period": gsc_section.get("period"),
+                "pages_matched": len(gsc),
+                "median_ctr": ctrs[len(ctrs) // 2] if ctrs else None,
+                "max_impressions": max((e["impressions"] for e in eligible), default=None),
+            }
+
+    fb_section = sections.get("feedback")
+    if isinstance(fb_section, dict) and isinstance(fb_section.get("pages"), dict):
+        for url_path, row in fb_section["pages"].items():
+            if not isinstance(row, dict):
+                continue
+            cp = content_path_for_url(str(url_path), known_paths)
+            if not cp:
+                continue
+            # Unlike pageviews, alias rows here are distinct vote events, not
+            # the same measurement counted twice — so aliases sum.
+            entry = feedback.setdefault(cp, {"yes": 0, "no": 0})
+            entry["yes"] += _int(row.get("yes"))
+            entry["no"] += _int(row.get("no"))
+        if feedback:
+            meta["feedback"] = {
+                "available": True,
+                "source": fb_section.get("source"),
+                "period": fb_section.get("period"),
+                "pages_matched": len(feedback),
+            }
+
+    return gsc, feedback, meta
 
 
 def load_ledger(ledger_dir: Path) -> dict[str, dict]:
@@ -368,20 +504,60 @@ def effective_last_review(
     return _ts_to_day(created.get(path))
 
 
+def gsc_multiplier(
+    entry: dict | None, max_impressions: int | None, median_ctr: float | None
+) -> tuple[float, float, bool]:
+    """(multiplier in [1, 1+GSC_BOOST_MAX], opportunity in [0, 1], low_ctr_flag).
+
+    Opportunity is impressions_n * ctr_gap: only the high-impressions AND
+    below-median-CTR quadrant boosts. Pages absent from the export or under
+    GSC_MIN_IMPRESSIONS are neutral (see the module docstring on imputation).
+    """
+    if (
+        not entry
+        or entry["impressions"] < GSC_MIN_IMPRESSIONS
+        or not max_impressions
+        or not median_ctr
+    ):
+        return 1.0, 0.0, False
+    impressions_n = math.log1p(entry["impressions"]) / math.log1p(max_impressions)
+    ctr_gap = min(max(median_ctr - entry["ctr"], 0.0) / median_ctr, 1.0)
+    opportunity = min(impressions_n * ctr_gap, 1.0)
+    flag = (
+        entry["impressions"] >= LOW_CTR_FLAG_MIN_IMPRESSIONS
+        and entry["ctr"] <= LOW_CTR_FLAG_RATIO * median_ctr
+    )
+    return 1.0 + GSC_BOOST_MAX * opportunity, round(opportunity, 4), flag
+
+
+def feedback_multiplier(entry: dict | None) -> tuple[float, float | None]:
+    """(multiplier in [1, 1+FEEDBACK_BOOST_MAX], neg_rate or None when too few votes)."""
+    if not entry:
+        return 1.0, None
+    total = entry["yes"] + entry["no"]
+    if total < FEEDBACK_MIN_TOTAL:
+        return 1.0, None
+    neg_rate = entry["no"] / total
+    weight = min(1.0, total / FEEDBACK_SATURATION)
+    return 1.0 + FEEDBACK_BOOST_MAX * neg_rate * weight, round(neg_rate, 4)
+
+
 def importance(
     tier: int,
     visits: int | None,
     max_visits: int,
     median_visits: int,
     have_traffic: bool,
+    gsc_m: float = 1.0,
+    feedback_m: float = 1.0,
 ) -> float:
     """Strategic weight, modulated by traffic when a snapshot is available."""
     tier_w = TIER_WEIGHTS.get(tier, TIER_WEIGHTS[3])
     if have_traffic and max_visits > 0:
         v = visits if visits is not None else median_visits
         traffic_n = math.log1p(v) / math.log1p(max_visits)
-        return tier_w * (0.5 + 0.5 * traffic_n)
-    return tier_w
+        return tier_w * (0.5 + 0.5 * traffic_n) * gsc_m * feedback_m
+    return tier_w * gsc_m * feedback_m
 
 
 def score_page(
@@ -393,10 +569,17 @@ def score_page(
     today: date,
     have_traffic: bool,
     stale_claims: bool = False,
+    gsc_m: float = 1.0,
+    feedback_m: float = 1.0,
 ) -> float:
     staleness = max((today - last_review).days, 0) if last_review else 0
     boost = STALE_CLAIM_BOOST if stale_claims else 0.0
-    return round(importance(tier, visits, max_visits, median_visits, have_traffic) * staleness + boost, 4)
+    return round(
+        importance(tier, visits, max_visits, median_visits, have_traffic, gsc_m, feedback_m)
+        * staleness
+        + boost,
+        4,
+    )
 
 
 # ---- Subcommands ---------------------------------------------------------------
@@ -465,6 +648,7 @@ def main() -> int:
     p.add_argument("--count", type=int, default=3)
     p.add_argument("--out", help="Queue JSON output path")
     p.add_argument("--traffic-file", help="S3-fetched traffic snapshot (CSV or JSON)")
+    p.add_argument("--signals-file", help="S3-fetched reader-signals snapshot (JSON)")
     p.add_argument("--tiers", default=str(DEFAULT_TIERS))
     p.add_argument("--ledger-dir", default=str(DEFAULT_LEDGER_DIR))
     p.add_argument("--repo-root", default=str(REPO_ROOT), help=argparse.SUPPRESS)
@@ -504,13 +688,46 @@ def main() -> int:
     max_visits = visits_known[-1] if visits_known else 0
     median_visits = visits_known[len(visits_known) // 2] if visits_known else 0
 
+    gsc, feedback, signals_meta = load_reader_signals(
+        Path(args.signals_file) if args.signals_file else None, known
+    )
+    signals_available = signals_meta["gsc"]["available"] or signals_meta["feedback"]["available"]
+
     queue: dict = {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "count": 0,
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
+        "reader_signals": {"available": signals_available, **signals_meta},
         "articles": [],
     }
+
+    def signal_terms(path: str) -> tuple[float, float, dict | None]:
+        """(gsc_m, feedback_m, per-article signals block) — one source for
+        both scoring and the queue entry, so they can't diverge."""
+        if not signals_available:
+            return 1.0, 1.0, None
+        gsc_entry = gsc.get(path)
+        fb_entry = feedback.get(path)
+        gsc_m, opportunity, low_ctr_flag = gsc_multiplier(
+            gsc_entry, signals_meta["gsc"]["max_impressions"], signals_meta["gsc"]["median_ctr"]
+        )
+        fb_m, neg_rate = feedback_multiplier(fb_entry)
+        return gsc_m, fb_m, {
+            "gsc": {
+                "impressions": gsc_entry["impressions"],
+                "ctr": gsc_entry["ctr"],
+                "opportunity": opportunity,
+                "multiplier": round(gsc_m, 4),
+                "low_ctr_flag": low_ctr_flag,
+            } if gsc_entry else None,
+            "feedback": {
+                "yes": fb_entry["yes"],
+                "no": fb_entry["no"],
+                "neg_rate": neg_rate,
+                "multiplier": round(fb_m, 4),
+            } if fb_entry else None,
+        }
 
     def article(path: str, lane: str, score: float | None) -> dict:
         tier, no_retire = tier_for(path, tier_rules)
@@ -523,6 +740,7 @@ def main() -> int:
             "tier": tier,
             "no_retire": no_retire,
             "monthly_visits": traffic.get(path),
+            "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
             "stale_claims": len(entry.get("stale_claims") or []),
@@ -581,23 +799,26 @@ def main() -> int:
             file=sys.stderr,
         )
 
+    def scored_entry(path: str) -> tuple[float, str]:
+        gsc_m, fb_m, _ = signal_terms(path)
+        return (
+            score_page(
+                tier_for(path, tier_rules)[0],
+                traffic.get(path),
+                max_visits,
+                median_visits,
+                effective_last_review(path, ledger.get(path), newest_non_bot, created),
+                today,
+                have_traffic,
+                stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
+                gsc_m=gsc_m,
+                feedback_m=fb_m,
+            ),
+            path,
+        )
+
     scored = sorted(
-        (
-            (
-                score_page(
-                    tier_for(path, tier_rules)[0],
-                    traffic.get(path),
-                    max_visits,
-                    median_visits,
-                    effective_last_review(path, ledger.get(path), newest_non_bot, created),
-                    today,
-                    have_traffic,
-                    stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
-                ),
-                path,
-            )
-            for path in candidates
-        ),
+        (scored_entry(path) for path in candidates),
         key=lambda t: (-t[0], t[1]),
     )
 

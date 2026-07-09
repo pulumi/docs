@@ -161,6 +161,49 @@ nogate = c.compose(QUEUE, None, None, None, None, None)
 check("no gate -> screenshot TODO", "<TODO" in _between(nogate, "## Screenshot check", "## Rendered content"))
 check("no gate -> rendered TODO", "<TODO" in _between(nogate, "## Rendered content", "## Verification"))
 
+
+# ---- flag-only low-CTR pathway ------------------------------------------------
+#
+# A low_ctr_flag on the queue entry pre-stubs exactly one "Search opportunity"
+# deferral (fix: False, reason pre-composed) — never a fix row.
+
+FLAGGED_QUEUE = {
+    "traffic": {"available": True, "period": "2026-06"},
+    "reader_signals": {
+        "available": True,
+        "gsc": {"available": True, "median_ctr": 0.031, "max_impressions": 88012},
+        "feedback": {"available": True},
+    },
+    "articles": [{
+        **QUEUE["articles"][0],
+        "signals": {
+            "gsc": {"impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
+                    "multiplier": 1.1025, "low_ctr_flag": True},
+            "feedback": {"yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27},
+        },
+    }],
+}
+flagged = c.compose(FLAGGED_QUEUE, None, None, None, None)
+flag_fixes = _between(flagged, "## Fixes applied", "## Findings not applied")
+flag_defer = _between(flagged, "## Findings not applied", "## Screenshot check")
+check("low-CTR flag -> exactly one Search opportunity deferral",
+      flag_defer.count("Search opportunity") == 1)
+check("low-CTR deferral never lands as a fix row", "Search opportunity" not in flag_fixes)
+check("low-CTR deferral carries the figures",
+      "15,234 impressions at 2.05% CTR vs. corpus median 3.10%" in flag_defer)
+check("low-CTR deferral reason pre-composed (no TODO)",
+      "flag-only by design" in flag_defer and "/seo-analyze" in flag_defer)
+check("provenance carries the Search line", "**Search:** 15,234 impressions" in flagged)
+
+# No flag (or no signals at all) -> no Search opportunity row anywhere.
+check("unflagged queue has no Search opportunity row", "Search opportunity" not in out)
+unflagged = c.compose({**FLAGGED_QUEUE, "articles": [{
+    **FLAGGED_QUEUE["articles"][0],
+    "signals": {"gsc": {"impressions": 15234, "ctr": 0.05, "opportunity": 0.0,
+                        "multiplier": 1.0, "low_ctr_flag": False}, "feedback": None},
+}]}, None, None, None, None)
+check("healthy-CTR queue has no Search opportunity row", "Search opportunity" not in unflagged)
+
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
     sys.exit(1)

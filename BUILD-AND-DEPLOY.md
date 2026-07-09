@@ -1296,6 +1296,9 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Run `make check_links`
 - Crawl production site (<www.pulumi.com>)
 - Check all links (internal and external)
+- Merge real-404 server-log hits from the reader-signals export into
+  `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; no-op
+  until the data-team export exists)
 - Report broken links
 
 **Output:** Slack notification with broken link report
@@ -2436,7 +2439,10 @@ ONLY_TEST="aws-s3-bucket-typescript" ./scripts/programs/test.sh
 make check_links
 ```
 
-**CI Execution:** Daily at 3 PM UTC via `check-links.yml`
+**CI Execution:** Daily at 3 PM UTC via `check-links.yml`. In CI the results
+are enriched with real-404 server-log hits from the reader-signals export
+(`scripts/link-checker/merge-404-signal.py`) before triage, so the highest
+reader-impact breakage is fixed first.
 
 **Output:** Report posted to Slack
 
