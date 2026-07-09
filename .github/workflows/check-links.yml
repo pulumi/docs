@@ -60,7 +60,11 @@ jobs:
           role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
           role-session-name: check-links
           aws-region: us-west-2
+      # continue-on-error like the rest of this block: the CLI exists here only
+      # for the optional enrichment, and a failed install must not take down
+      # the core daily link check.
       - name: Install Pulumi CLI
+        continue-on-error: true
         uses: pulumi/actions@v7
       - name: Resolve reader-signals URI
         id: signals-uri
