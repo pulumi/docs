@@ -10,7 +10,7 @@ menu:
     weight: 15
 ---
 
-The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights at once. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a Pulumi ESC environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
+The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
 
 The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
 
@@ -46,7 +46,7 @@ Each provider offers a recommended browser-based sign-in that uses OIDC, plus al
 
 {{% choosable cloud aws %}}
 
-**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account that your user can access from your organization.
+**Connect using IAM Identity Center (SSO)** is the recommended option. Provide your organization's **SSO start URL** (for example, `https://d-xxxxxxxxxx.awsapps.com/start`) and its **Region**. You can find both in the settings summary of your organization's IAM Identity Center instance. When you continue, AWS opens an authorization page in a new window; confirm that the verification code shown matches the one in the wizard, then approve the request. The wizard then lists every AWS account you can access in your organization.
 
 ![The authentication step for AWS showing the IAM Identity Center option selected with SSO start URL and region fields](/docs/insights/assets/connect-cloud-accounts-authentication.png)
 
@@ -63,7 +63,7 @@ Alternatively, you can connect using:
 **Connect using OpenID Connect (OIDC)** is the recommended option. Pulumi uses workload identity federation with Microsoft Entra ID, so no client secrets are stored. Provide your **Tenant ID (Directory ID)**, which you can find under **Microsoft Entra ID** > **Properties** in the Azure portal. When you continue, a Microsoft consent page opens asking you to grant Pulumi:
 
 - The **Reader** role on the subscriptions you select
-- The **Contributor** role on subscriptions you configure for full read and write
+- The **Contributor** role on subscriptions you configure for read and write
 - The `Directory.Read.All` permission, used to discover subscriptions
 
 After you grant consent, the wizard lists the subscriptions in your tenant.
@@ -78,7 +78,7 @@ Alternatively, you can connect using:
 
 {{% choosable cloud gcp %}}
 
-**Connect using Workload Identity Federation** is the recommended option, so no service account keys are stored. When you continue, a Google consent page opens asking you to grant Pulumi:
+**Connect using Workload Identity Federation** is the recommended option. Pulumi federates directly with Google Cloud, so no service account keys are stored. When you continue, a Google consent page opens asking you to grant Pulumi:
 
 - The **Viewer** role on the projects you select
 - The **Editor** role on projects you configure for read and write
@@ -148,7 +148,7 @@ If some accounts couldn't be connected, the summary lists each failed account wi
 
 ## What the wizard creates
 
-All authentication uses OIDC and workload identity federation — Pulumi Cloud does not store long-lived cloud secrets for the recommended flows. The wizard automates the same setup described in the manual OIDC guides for [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), and [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/).
+The recommended flows authenticate with OIDC and workload identity federation, so Pulumi Cloud does not store long-lived cloud secrets. The wizard automates the same setup described in the manual OIDC guides for [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), and [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/).
 
 ### In your cloud provider
 
@@ -158,7 +158,7 @@ All authentication uses OIDC and workload identity federation — Pulumi Cloud d
 
 ### In Pulumi Cloud
 
-- ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/{name}-{accountId}-env`. Azure gets one shared environment per tenant, named `discover/azure-{tenantId}-env`, which every subscription's Insights account references.
+- ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/<name>-<accountId>-env`. Azure gets one shared environment per tenant, named `discover/azure-<tenantId>-env`, which every subscription's Insights account references.
 - An Insights account for each selected cloud account, subscription, or project.
 - The scan schedule and, if enabled, the policy pack you chose.
 
