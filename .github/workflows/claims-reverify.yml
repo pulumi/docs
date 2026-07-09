@@ -1,0 +1,173 @@
+name: "Scheduled jobs: Re-verify volatile claims"
+
+# Nightly re-verification of VOLATILE claims (version pins, prices, limits)
+# straight from the S3 claims index that content-review-article.yml persists —
+# no page diff, no re-extraction, one cheap verifier call per entity
+# (pulumi/docs#20078 §4.1). Entities that re-verify contradicted get a
+# `stale_claims` marker written into their pages' ledger objects; the daily
+# content-review dispatcher's selector boosts marked pages to the front of
+# the queue, and the normal per-article worker fixes the page through the
+# existing PR machinery. This job never edits content and never opens PRs —
+# it only checks facts and marks pages as due.
+#
+# SINGLE SWITCH (default-on) — the CLAIMS_REVERIFY_COUNT repo variable is both
+# the on/off and the cadence knob (same pattern as CONTENT_REVIEW_COUNT):
+#   unset -> on, 25 entities/night (the default)
+#   '0'   -> off: the whole job is skipped (no runner, no spend)
+#   'N'   -> on, N entities/night
+# The sweep is a stateless day rotation over the volatile entity set, so all
+# of it is covered every ceil(N_entities/count) nights regardless of the knob.
+
+on:
+  schedule:
+    # Daily at 7:00AM UTC — hours before the 2:00PM content-review dispatcher,
+    # so tonight's stale markers are in the ledger before today's selection.
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of volatile entities to re-verify'
+        required: false
+        default: '25'
+      dry_run:
+        description: 'No API calls, no marker uploads — plumbing check only'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+  id-token: write # Required for ESC OIDC auth + AWS OIDC role
+
+jobs:
+  # Same fail-open holiday gate as review-existing-content.yml: variable
+  # unset, feed failure, or parse error all yield is_holiday=false.
+  holiday-check:
+    name: Company-holiday check
+    runs-on: ubuntu-latest
+    outputs:
+      is_holiday: ${{ steps.check.outputs.is_holiday }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: check
+        env:
+          ICS_URL: ${{ vars.BAMBOOHR_HOLIDAY_ICS_URL }}
+        run: |
+          if [ -z "$ICS_URL" ]; then
+            echo "BAMBOOHR_HOLIDAY_ICS_URL not set; not skipping for holidays"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if ! curl -fsSL --max-time 20 "$ICS_URL" -o holidays.ics; then
+            echo "::warning::holiday feed unavailable (404/fetch failure); failing open (re-verify will run)"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if python3 scripts/content-review/is-holiday.py --ics holidays.ics --tz America/Chicago; then
+            echo "is_holiday=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  reverify:
+    name: Re-verify volatile claims
+    needs: holiday-check
+    runs-on: ubuntu-latest
+    # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
+    # select the environment to resolve the ledger bucket from stack outputs.
+    environment: production
+    # Hard cost ceiling: N short verifier calls fit well inside this.
+    timeout-minutes: 30
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (vars.CLAIMS_REVERIFY_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      # Shallow checkout is fine: the verifier's read_file only needs the
+      # current tree, and this job reads no git history.
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Both S3 prefixes (claims index + review ledger) live in the ledger
+      # bucket, resolved from our Pulumi stack output — never a hand-maintained
+      # variable. Every S3 step degrades gracefully: with no bucket the script
+      # sees an empty claims dir and exits with an empty report.
+      - name: Configure AWS credentials
+        id: aws-creds
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: claims-reverify
+          aws-region: us-west-2
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+      - name: Resolve ledger bucket
+        id: ledger-bucket
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "ledger_uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
+            echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
+          else
+            echo "ledger bucket output unavailable; nothing to re-verify"
+          fi
+
+      - name: Fetch claims index and review ledger from S3
+        if: steps.ledger-bucket.outputs.claims_uri != ''
+        continue-on-error: true
+        run: |
+          mkdir -p .claims-cache .ledger-cache
+          aws s3 sync "${{ steps.ledger-bucket.outputs.claims_uri }}" .claims-cache/ --quiet \
+            || echo "claims index unavailable; nothing to re-verify"
+          aws s3 sync "${{ steps.ledger-bucket.outputs.ledger_uri }}" .ledger-cache/ --quiet \
+            || echo "review ledger unavailable; markers will create minimal entries"
+          echo "claims snapshots: $(ls .claims-cache | wc -l), ledger entries: $(ls .ledger-cache | wc -l)"
+
+      # One verifier call per entity, deduped across pages. Stale verdicts are
+      # written back to the ledger as stale_claims markers (uploaded object by
+      # object). GH_TOKEN feeds the verifier's gh_query lane.
+      - name: Re-verify volatile entities
+        id: reverify
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONTENT_REVIEW_LEDGER_URI: ${{ steps.ledger-bucket.outputs.ledger_uri }}
+        run: |
+          ARGS=(--claims-dir .claims-cache --ledger-dir .ledger-cache
+                --count "${{ github.event.inputs.count || vars.CLAIMS_REVERIFY_COUNT || '25' }}"
+                --out .claims-reverify-report.json)
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS+=(--dry-run)
+          fi
+          python3 scripts/content-review/reverify-claims.py "${ARGS[@]}"
+          echo "--- report ---"
+          cat .claims-reverify-report.json
+
+      # Counts only + a run link — the evidence lives in the report artifact
+      # and the ledger markers; the fix arrives as a normal content-review PR.
+      - name: Post stale summary to Slack
+        if: steps.reverify.outputs.has_stale == 'true'
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          TEXT=$(jq -r --arg run "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" '
+            "Nightly claims re-verify: \(.meta.n_stale) of \(.meta.n_checked) checked volatile entities are stale. " +
+            "Affected pages are boosted into the next content-review sweep. <\($run)|Run log>"
+          ' .claims-reverify-report.json)
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

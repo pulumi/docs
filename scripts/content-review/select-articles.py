@@ -22,7 +22,7 @@ Selection algorithm (weighted fair queuing by staleness):
    reserved lane — staleness self-corrects starvation (the longer a page
    goes unreviewed the higher it climbs, so the whole corpus is swept):
 
-       score = importance * staleness
+       score = importance * staleness + stale_claim_boost
 
    importance = tier_w * (0.5 + 0.5*traffic_n)   with a traffic snapshot
               = tier_w                            tier-only when absent
@@ -37,6 +37,12 @@ Selection algorithm (weighted fair queuing by staleness):
                 git creation date: a brand-new page sorts to the back, an
                 ancient never-reviewed page to the front. A human (non-bot)
                 edit fully resets the clock.
+
+   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry has a
+                non-empty `stale_claims` list (written by the nightly
+                reverify-claims.py when a volatile claim the page asserts
+                re-verified contradicted); 0 otherwise. Marked pages jump the
+                queue; the marker clears when the review rewrites the entry.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -88,6 +94,15 @@ MAX_OPEN_PRS = 9
 ATTEMPT_CAP = 3
 
 TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
+
+# Additive boost for a page whose ledger entry carries a non-empty
+# `stale_claims` marker (a volatile claim it asserts re-verified contradicted
+# — see reverify-claims.py). Sized to outrank a top-importance page that has
+# gone unreviewed for a year (1.0 * 365), so a known-stale fact beats any
+# ordinary staleness — while an ancient never-reviewed page can still win, so
+# the sweep is never fully starved. The marker vanishes when the page's next
+# review rewrites its ledger entry, so the boost self-clears.
+STALE_CLAIM_BOOST = 400.0
 
 # Statuses a ledger entry can carry (set by record-review.py). Any status other
 # than "incomplete" is a completed review whose date advances the clock; legacy
@@ -377,9 +392,11 @@ def score_page(
     last_review: date | None,
     today: date,
     have_traffic: bool,
+    stale_claims: bool = False,
 ) -> float:
     staleness = max((today - last_review).days, 0) if last_review else 0
-    return round(importance(tier, visits, max_visits, median_visits, have_traffic) * staleness, 4)
+    boost = STALE_CLAIM_BOOST if stale_claims else 0.0
+    return round(importance(tier, visits, max_visits, median_visits, have_traffic) * staleness + boost, 4)
 
 
 # ---- Subcommands ---------------------------------------------------------------
@@ -508,6 +525,7 @@ def main() -> int:
             "monthly_visits": traffic.get(path),
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
+            "stale_claims": len(entry.get("stale_claims") or []),
             "score": score,
         }
 
@@ -574,6 +592,7 @@ def main() -> int:
                     effective_last_review(path, ledger.get(path), newest_non_bot, created),
                     today,
                     have_traffic,
+                    stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
                 ),
                 path,
             )

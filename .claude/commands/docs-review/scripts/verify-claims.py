@@ -60,6 +60,8 @@ Output schema:
       "verdicts": [
         {"claim_id": "c1", "file": "content/blog/foo.md", "line_range": "L42",
          "text": "...", "type": "...",
+         "entity_key": "version/pulumi-gcp",   # carried from the claim when keyed (see entity_key.py)
+         "volatile": true,                     # carried alongside entity_key
          "route": "pass0" | "pass1" | "pass2" | "pass3",
          "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch",
          "confidence": "high" | "medium" | "low",
@@ -901,6 +903,18 @@ def main() -> int:
                 verdicts.append(rec)
                 if err:
                     errors.append(err)
+
+    # Carry each claim's entity keying (stamped by merge-claims.py) onto its
+    # verdict, so the persisted claims index (`record-claims.py`) reads
+    # `.verified-claims.json` alone. Verdict records are built in several
+    # paths (pass0 / model / dry-run / error), so stamp once here by claim_id
+    # instead of in each constructor.
+    by_id = {c.get("__id"): c for c in claims}
+    for v in verdicts:
+        c = by_id.get(v.get("claim_id"))
+        if c is not None and c.get("entity_key") is not None:
+            v["entity_key"] = c["entity_key"]
+            v["volatile"] = bool(c.get("volatile"))
 
     meta = dict(base_meta)
     meta["n_claims"] = len(claims)
