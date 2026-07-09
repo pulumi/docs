@@ -475,6 +475,10 @@ jobs:
             -m "Co-Authored-By: Claude <noreply@anthropic.com>"
           # A stale branch from an earlier incomplete run (no open PR — the
           # review job's pre-check guarantees that) is safe to overwrite.
+          # Fetch it first so --force-with-lease holds a fresh lease for the
+          # branch no matter which refs the checkout step happened to fetch;
+          # `|| true` covers the common case where the branch doesn't exist.
+          git fetch origin "$BRANCH" || true
           git push --force-with-lease -u origin "$BRANCH"
           gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
             --base master --head "$BRANCH"
