@@ -11,7 +11,7 @@ tags:
     - serverless
     - aks
     - devops
-category: general
+category: tutorials
 series: azure-top-5
 ---
 
