@@ -73,6 +73,7 @@ export class SecureDatabase extends ComponentResource {
 
       tags: {
         SecurityCompliant: "true",
+        ComponentName: "SecureDatabase",
         ComponentVersion: "1.2.3",
         LastSecurityUpdate: "2024-01-15",
       },

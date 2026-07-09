@@ -40,7 +40,7 @@ Organization creates policies for common security requirements:
 ```typescript
 // policies/security-policies.ts
 import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
-import { aws } from "@pulumi/aws";
+import * as aws from "@pulumi/aws";
 
 new PolicyPack("security-policies", {
   policies: [
