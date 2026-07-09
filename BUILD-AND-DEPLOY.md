@@ -1439,8 +1439,16 @@ The repository includes 10 additional utility workflows for automation and proje
 - **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
+- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page
 
 The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
+
+**Content-review worker privilege model (`content-review-article.yml`):** the per-article worker is split into two jobs with opposite privilege profiles, because the review model consumes artifacts derived from fetched external URLs (a prompt-injection surface):
+
+- The `review` job runs the model **unprivileged**: read-scoped default token, `persist-credentials: false` on checkout, no `environment: production`, no ESC or AWS credentials, and a preflight step that fails the job if credentials are detected in the model's environment. The model edits the working tree only and hands its changes to the next job as a patch in a run artifact.
+- The `publish` job is **deterministic only** (no model) and holds the production credentials (pulumi-bot token, AWS role for the S3 ledger). Before pushing anything it runs `scripts/content-review/publish-gate.py`, which enforces the verdict schema, the diff scope (a fix may touch only the reviewed article plus shared render-time sources; a retirement only `content/`, `scripts/redirects/`, and the docs menu data), and the `no_retire` veto from the selection queue. The branch name is derived from the queue slug, never chosen by the model.
+
+This mirrors the pre-merge review's posture (`claude-code-review.yml` runs its model with no push credentials); the accepted residual risk in the review job is the Anthropic API key the model inherently runs on.
 
 **Project Management:**
 
