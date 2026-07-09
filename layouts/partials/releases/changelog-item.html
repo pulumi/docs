@@ -18,6 +18,6 @@
     <a href="{{ $page.RelPermalink }}" data-changelog-link class="group/item flex items-center gap-2 py-4 no-underline hover:no-underline heading-4 mb-0 text-service-black hover:text-violet-primary transition-colors">
         <span>{{ $page.Title }}</span>
         {{ with $page.Params.tier }}<span class="inline-flex items-center align-middle ml-2 rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none">{{ . }}</span>{{ end }}
-        <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="ml-auto shrink-0 font-mono text-xs tracking-wider uppercase text-gray-500">{{ $page.Date.Format "Jan 2" }}</time>
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm ml-auto shrink-0 whitespace-nowrap text-gray-500">{{ $page.Date.Format "Jan 2" }}</time>
     </a>
 </li>
