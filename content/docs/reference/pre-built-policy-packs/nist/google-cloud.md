@@ -6,7 +6,7 @@ menu:
   reference:
     identifier: reference-pre-built-policy-packs-nist-google-cloud
     parent: reference-pre-built-policy-packs-nist
-    weight: 2
+    weight: 3
 ---
 
 This page lists all 140 policies in the **NIST SP 800-53** pack for **Google Cloud**.
