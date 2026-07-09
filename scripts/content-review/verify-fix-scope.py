@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
-"""Deterministic fix-scope gate for content-review draft→ready promotion.
+"""Deterministic fix-scope gate for publishing content-review fixes.
 
 The worker's "high-confidence fixes only" restriction (SKILL.md step 3: five
 enumerated categories, everything else flag-only) was honored purely by the
-review model until this gate existed — the only hard check before a draft PR
-was promoted to ready was `make lint`, which validates well-formedness, not
-restraint (issue #20078 §3.1). This script is the code-enforced backstop:
-every hunk on the pushed branch must fall within the line range of a finding
-recorded by the deterministic pre-steps. An out-of-range edit means the model
-strayed beyond the recorded findings; the workflow then leaves the PR in
-draft and comments for a human instead of promoting it.
+review model until this gate existed — the only hard check on the model's
+edits was `make lint`, which validates well-formedness, not restraint (issue
+#20078 §3.1). This script is the code-enforced backstop: every hunk in the
+review's exported patch must fall within the line range of a finding
+recorded by the deterministic pre-steps. An out-of-range edit means the
+model strayed beyond the recorded findings; the publish job then fails
+before anything is pushed, and the ledger records the page incomplete for a
+human to look at.
 
 The comparison is anchored on **pre-fix (old-side) line numbers**: the
 pre-steps ran on a synthetic `/dev/null → <article>` diff of the master
 checkout, so every artifact line reference indexes the file as it exists at
-the base SHA — exactly the old side of `git diff <base> <branch>`. Matching
-old-side ranges needs no drift adjustment as earlier hunks add or remove
-lines. Artifacts are read from the workflow's pre-model $RUNNER_TEMP
-snapshot, not the workspace, so the model cannot widen its own allowance.
+the base SHA — exactly the old side of the patch, which the workflow hands
+in as a zero-context (`--unified=0`) diff so context lines never widen a
+hunk's range. Matching old-side ranges needs no drift adjustment as earlier
+hunks add or remove lines. Artifacts are read from the `review-snapshot`
+run artifact — uploaded before the model step and immutable from then on —
+so the model cannot widen its own allowance by editing the workspace.
 
 Allowed ranges per category (the SKILL's five, same order):
 
@@ -49,16 +52,21 @@ reported (`invalid_applied`) and ignored for coverage. Only the `link`
 category, having no artifact, draws its allowance from `applied` — which is
 why its entries get the extra plausibility validation above.
 
-Skip rules (result "skipped", exit 0): a retirement branch (its diff
-legitimately deletes the page and touches siblings' aliases/menus/links — the
-retire veto in check-retire-veto.py is the guardrail for that shape), or an
-empty diff.
+Skip rules (result "skipped", exit 0): an empty diff, or — when a `--branch`
+with the `retire-` prefix is passed — a retirement branch (its diff
+legitimately deletes the page and touches siblings' aliases/menus/links; the
+retire veto in check-retire-veto.py is the guardrail for that shape). The
+workflow routes retirement verdicts to the veto instead of this gate, so it
+does not pass `--branch`; a retirement-shaped patch smuggled under a
+non-retirement verdict therefore hits this gate and fails wholesale.
 
 Usage:
-    verify-fix-scope.py --branch content-review/<slug> --base-sha <sha> \
+    # Workflow invocation (patch handed over from the review job):
+    verify-fix-scope.py --diff-file .review-changes.u0.diff --base-sha <sha> \
         --article content/docs/... --verdict .content-review-verdict.json \
-        --artifacts-dir <snapshot dir> [--out .fix-scope-report.json]
-    verify-fix-scope.py ... --diff-file <patch> --article-blob <file>   # tests
+        --artifacts-dir .review-snapshot [--out .fix-scope-report.json]
+    # Branch mode (no --diff-file): derives the diff itself; --branch required.
+    verify-fix-scope.py --branch content-review/<slug> --base-sha <sha> ...
     verify-fix-scope.py --self-test
 
 Writes a report JSON: {result, reason, checked_hunks, uncovered_hunks,
@@ -252,10 +260,18 @@ def build_allowed_ranges(article: str, artifacts_dir: Path, blob_text: str,
 
 
 def hunk_covered(hunk: dict, ranges: list[dict]) -> bool:
-    """True when the hunk's old-side range intersects an allowed range."""
+    """True when EVERY old-side line of the hunk lies in an allowed range.
+
+    Full coverage, not intersection: one oversized hunk (a whole-page rewrite
+    or deletion) that merely overlaps a single finding must not ride that
+    finding's allowance — each changed line has to be individually granted.
+    """
     if hunk["old_count"] > 0:
         lo, hi = hunk["old_start"], hunk["old_start"] + hunk["old_count"] - 1
-        return any(r["start"] <= hi and lo <= r["end"] for r in ranges)
+        return all(
+            any(r["start"] <= n <= r["end"] for r in ranges)
+            for n in range(lo, hi + 1)
+        )
     # Pure insertion after old line N: covered when a range touches either
     # side of the insertion point.
     n = hunk["old_start"]
@@ -354,6 +370,7 @@ def run(args) -> int:
         diff_text = Path(args.diff_file).read_text()
     else:
         diff_text = _git(["diff", "--unified=0", args.base_sha, f"origin/{args.branch}"])
+    branch = args.branch or ""
     if args.article_blob:
         blob_text = Path(args.article_blob).read_text()
     else:
@@ -371,7 +388,7 @@ def run(args) -> int:
             verdict = None  # applied[] just stays empty; artifacts still gate
 
     report = evaluate(diff_text, blob_text, verdict,
-                      Path(args.artifacts_dir), args.article, args.branch)
+                      Path(args.artifacts_dir), args.article, branch)
     Path(args.out).write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: report[k] for k in ("result", "reason", "checked_hunks")}))
     if report["invalid_applied"]:
@@ -470,6 +487,12 @@ def self_test() -> int:
         check("uncovered hunk is reported with its lines",
               r["uncovered_hunks"][0]["old_start"] == 50)
 
+        r = ev(_diff(["@@ -8,7 +8,2 @@"]
+                     + [f"-line {i}" for i in range(8, 15)]
+                     + ["+# Example", "+Pulumi supports version 3.147 of the CLI."]))
+        check("oversized hunk overlapping a finding still fails (full coverage)",
+              r["result"] == "fail")
+
         r = ev(_diff(["@@ -11,0 +12,1 @@",
                       "+Adjacent clarification within the claim's tolerance."]))
         check("insertion adjacent to a finding passes", r["result"] == "pass")
@@ -539,6 +562,18 @@ def self_test() -> int:
                branch="content-review/retire-x")
         check("retire branch skips", r["result"] == "skipped")
 
+        # Workflow mode: no branch is passed (retirement routes to the veto
+        # instead), so a retirement-shaped patch under a non-retirement
+        # verdict must FAIL here, not skip.
+        r = ev(_diff(["@@ -1,50 +0,0 @@"] + [f"-{l}" for l in BLOB.splitlines()]),
+               branch="")
+        check("branch-less retirement-shaped patch fails (no skip)",
+              r["result"] == "fail")
+        r = ev(_diff(["@@ -10,1 +10,1 @@",
+                      "-Pulumi supports version 3.100 of the CLI.",
+                      "+Pulumi supports version 3.147 of the CLI."]), branch="")
+        check("branch-less in-range fix still passes", r["result"] == "pass")
+
         (snap / ".verified-claims.json").write_text(json.dumps({
             "schema_version": 1, "verdicts": [],
             "errors": ["verify-claims.py failed to start"]}))
@@ -558,7 +593,10 @@ def self_test() -> int:
 def main() -> int:
     p = argparse.ArgumentParser(
         description="Code-enforced fix-scope gate for content-review promotion.")
-    p.add_argument("--branch", help="pushed review branch (content-review/<slug>)")
+    p.add_argument("--branch", default="",
+                   help="review branch (content-review/<slug>); required only "
+                        "without --diff-file (branch mode derives the diff from "
+                        "origin/<branch>), and enables the retire-branch skip")
     p.add_argument("--base-sha", help="master SHA the pre-steps ran on")
     p.add_argument("--article", help="article repo path (content/docs/...)")
     p.add_argument("--verdict", help="model verdict sentinel (.content-review-verdict.json)")
@@ -573,7 +611,9 @@ def main() -> int:
 
     if args.self_test:
         return self_test()
-    missing = [f for f in ("branch", "article", "artifacts_dir") if not getattr(args, f)]
+    missing = [f for f in ("article", "artifacts_dir") if not getattr(args, f)]
+    if not args.diff_file and not args.branch:
+        missing.append("branch (or --diff-file)")
     if not args.base_sha and not (args.diff_file and args.article_blob):
         missing.append("base_sha")
     if missing:

@@ -8,15 +8,19 @@ reading the skill — nothing programmatically blocked a
 `content-review/retire-<slug>` branch for a protected page (issue #20078
 §3.1). This script is the code-enforced backstop: given the article's repo
 path, it answers "may this page be retired?" from the tiers file alone. It
-never consults the queue or the verdict sentinel — both sit in the workspace
-during the model step and are therefore model-writable; the workflow passes
-the article path from the trusted `workflow_dispatch` input and a tiers copy
-snapshotted to $RUNNER_TEMP before the model ran.
+never consults the queue or the verdict sentinel — both pass through the
+model's hands and are therefore model-writable; the workflow passes the
+article path from the trusted `workflow_dispatch` input instead.
 
 Semantics match selection exactly (the logic is imported from
 `select-articles.py`, the single source of truth): longest prefix wins, and
 `no_retire = rule.no_retire or tier == 1`. Tier 0 (generated content) is also
 vetoed — the bot must never touch those trees, retirement included.
+
+The workflow runs this in the credentialed publish job, against that job's
+own clean checkout of strategic-tiers.yaml — the model's patch is not yet
+applied there (and the handoff export strips dot-paths, so a patch can never
+carry a tiers edit), which is what makes the tiers file trustworthy input.
 
 Usage:
     check-retire-veto.py --path content/docs/iac/concepts/state.md \
