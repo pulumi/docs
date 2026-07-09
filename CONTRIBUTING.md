@@ -8,6 +8,8 @@ Open new PRs as **drafts** while you iterate. Automated review (style, accuracy,
 - Lets you push iteratively without spamming the PR with new comments each time.
 - Means the eventual review reflects your finished thinking, not a half-finished commit.
 
+While you're iterating, consider running `/docs-review` locally — it runs the same style/accuracy pipeline as the automated bot, but stays in your conversation and never posts to GitHub. Catching findings here is cheaper than catching them after the pinned review fires.
+
 When you're ready, use the **Ready for review** button on the PR page. Triage runs again to refresh labels, then the full review fires once and pins its findings to a single comment at the top of the PR. New commits afterward will mark the review **stale** but won't auto-rerun — mention `@claude #update-review` in a comment to refresh, or transition through draft and back to ready.
 
 If your change is genuinely trivial (a typo, a one-line fix), opening directly as ready is fine — the pipeline will short-circuit on the `review:trivial` label.
