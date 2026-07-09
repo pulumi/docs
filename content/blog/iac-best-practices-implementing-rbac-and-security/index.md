@@ -10,7 +10,6 @@ tags:
     - best-practices
     - rbac
     - security
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

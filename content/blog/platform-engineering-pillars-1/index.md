@@ -2,13 +2,13 @@
 title: "Platform Pillars: Build Platforms, Not Infrastructure"
 feature_image: feature.png
 date: 2025-02-26
+lastmod: 2026-07-09
 draft: false
 meta_desc: Explore the essential pillars of Platform Engineering and learn how to transform infrastructure chaos into a streamlined development experience.
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
 category: best-practices
 series: platform-engineering-pillars
 social:
@@ -33,7 +33,7 @@ This is where [Platform Engineering](https://www.pulumi.com/what-is/what-is-plat
 
 Building a platform isn't about finding one perfect tool. It's about assembling the right pieces, or pillars. These pillars define what every successful internal developer platform needs.
 
-[This series](/blog/tag/platform-engineering-pillars/) explores these key pillars of Platform Engineering, offering a practical guide to building platforms that remove barriers to developer speed. Each pillar addresses a specific challenge organizations face when scaling developer productivity. The first challenge is overcoming infrastructure chaos.
+[This series](/blog/series/platform-engineering-pillars/) explores these key pillars of Platform Engineering, offering a practical guide to building platforms that remove barriers to developer speed. Each pillar addresses a specific challenge organizations face when scaling developer productivity. The first challenge is overcoming infrastructure chaos.
 
 <img align="right" style="margin: 15px;" width="300px" src="provisioning.png">
 

@@ -1,5 +1,6 @@
 {{- /*
-    Dedicated series page (rendered by the tag.html dispatcher for series slugs).
+    Dedicated series page (rendered by layouts/taxonomy/series.html for defined
+    series slugs).
     "N PART SERIES" fanned label → series title (h1) → description → the parts as
     a 3-col grid of part cards (oldest-first, published only) → a "More series"
     strip. No pagination.
@@ -12,7 +13,7 @@
 {{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
 {{- $count := len $parts -}}
 
-{{ partial "blog/header.html" (dict "title" "Series" "url" $page.RelPermalink "context" $page "heading" false) }}
+{{ partial "blog/header.html" (dict "title" "Series" "url" "/blog/series/" "context" $page "heading" false) }}
 
 <div class="container mx-auto px-4 py-8 lg:py-12">
     <div class="mb-10 flex flex-col gap-4">

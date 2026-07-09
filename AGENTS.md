@@ -110,10 +110,11 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ## Blog categories and tags
 
-Blog posts carry two taxonomy axes (plus optional `series`):
+Blog posts carry three taxonomy axes (`category` and `tags` are always present; `series` is optional):
 
 - **`category`** — the *kind* of post. This is a **closed** set defined in `data/blog_categories.yaml` (the single source of truth read by `scripts/lint/lint-markdown.js`). Category is **required** and **singular**: every post declares exactly one `category:` scalar value. Use the best-fitting specific kind, or **`general`** (the default) for posts that don't fit cleanly (e.g. SEO comparisons or "what is X" explainers — those rely on tags instead). `make lint` fails on a missing value, a list value, or a value outside the set. **Do not invent categories** — pick an id from the data file. To add/rename one, edit `data/blog_categories.yaml` in a PR and raise it in #blogs. The blog docs-review additionally flags posts that landed in a specific kind but really belong in `general` (and vice versa).
 - **`tags`** — the *topical* axis (clouds, languages, products, scenarios). Curated-but-open, **not** build-enforced. Reuse a tag from the canonical vocabulary in `data/blog_tags.yaml` and **avoid near-duplicates** (`kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Tags are lowercase and hyphen-delimited.
+- **`series`** — the optional *reading-path* axis. A post joins a series with a single `series: <slug>` scalar key, where the slug is defined in `data/blog_series.yml`. Series are their own taxonomy: term pages render at `/blog/series/<slug>/` and the directory at `/blog/series/`. Do **not** also add the slug to `tags` — `make lint` fails on a series slug used as a tag, and on a `series:` value that isn't defined in the data file.
 
 See `BLOGGING.md` for the author-facing version of these rules.
 

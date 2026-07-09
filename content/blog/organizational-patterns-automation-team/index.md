@@ -30,7 +30,6 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - development-environment
-    - organizational-patterns
 category: best-practices
 series: organizational-patterns
 

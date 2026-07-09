@@ -2,6 +2,7 @@
 title: "Observability as a Developer Superpower"
 feature_image: feature.png
 date: 2025-06-10
+lastmod: 2026-07-09
 draft: false
 summary: Engineering teams drown in observability tool sprawl, alert fatigue, and reactive debugging that turns 3AM incidents into hours-long fire drills. Learn how embedding observability into your platform with centralized service dashboards, actionable alerts, and built-in instrumentation transforms reactive firefighting into proactive innovation, enabling teams to resolve major incidents in minutes instead of hours.
 meta_desc: Transform observability into a developer superpower with unified visibility, AI-powered insights, and actionable alerts embedded in your platform.
@@ -9,7 +10,6 @@ authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
 category: best-practices
 series: platform-engineering-pillars
 social:
@@ -43,7 +43,7 @@ social:
 </span>
 </span>
 
-In previous articles in this series, we’ve shown how [platform engineering](/blog/tag/platform-engineering-pillars/) turns infrastructure chaos into consistency, gives teams self-service tools, smooths developer workflows, and bakes security into the platform. Each pillar builds on the last. Together, they create an internal developer platform that cuts friction and speeds innovation.
+In previous articles in this series, we’ve shown how [platform engineering](/blog/series/platform-engineering-pillars/) turns infrastructure chaos into consistency, gives teams self-service tools, smooths developer workflows, and bakes security into the platform. Each pillar builds on the last. Together, they create an internal developer platform that cuts friction and speeds innovation.
 
 Even so, teams still face a big challenge: seeing what’s really happening. Whether things go wrong or run smoothly, engineering teams need clear, actionable insights into their systems. Without observability, you end up guessing, reacting slowly, and hunting through scattered data.
 
