@@ -31,6 +31,12 @@ Read `.content-review-queue.json` from the repo root (written by
   "count": 3,
   "halted": null,
   "traffic": { "available": true, "period": "2026-05", "pages_matched": 731 },
+  "reader_signals": {
+    "available": true,
+    "gsc": { "available": true, "period": {"start": "2026-03-14", "end": "2026-06-11"},
+             "pages_matched": 612, "median_ctr": 0.031, "max_impressions": 88012 },
+    "feedback": { "available": true, "pages_matched": 214 }
+  },
   "articles": [
     { "path": "content/docs/iac/concepts/stacks/_index.md",
       "url": "/docs/iac/concepts/stacks/",
@@ -39,6 +45,11 @@ Read `.content-review-queue.json` from the repo root (written by
       "tier": 1,
       "no_retire": true,
       "monthly_visits": 12345,
+      "signals": {
+        "gsc": { "impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
+                 "multiplier": 1.1025, "low_ctr_flag": true },
+        "feedback": { "yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27 }
+      },
       "last_reviewed": null,
       "score": 0.91 }
   ]
@@ -52,6 +63,11 @@ Read `.content-review-queue.json` from the repo root (written by
   entity keys and evidence as priority findings to re-check first.
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
+- `reader_signals` / `signals` — Search Console and feedback-widget figures
+  from the optional reader-signals export; `null` when the export wasn't
+  available for the run (a signal-blind run says so, it never fabricates).
+  These fed the selection score and the composed "Why this page" block — they
+  are selection facts, not review instructions.
 - If `articles` is empty or `halted` is set, do nothing (the workflow won't
   invoke you in that case, but be defensive).
 - `traffic.available: false` is not your problem to fix: the dispatcher's
@@ -191,6 +207,12 @@ Editing guardrails:
   (`layouts/shortcodes/`, `layouts/partials/`, `data/`); a retirement may
   touch `content/`, `scripts/redirects/`, and `data/docs_menu_sections.yml`.
   Any other changed path makes the gate reject the whole review.
+- A `low_ctr_flag` on the queue entry's `signals.gsc` block is **FLAG-ONLY**:
+  never rewrite `title` or `meta_desc` in response to it. The composer has
+  already pre-stubbed a "Search opportunity" row under Findings not applied —
+  keep it (you may add one line of observation, e.g. what the title fails to
+  say); a human runs `/seo-analyze` on it. Meta rewrites are the canonical
+  slop risk this restriction exists for.
 - Ordered lists keep their `1.` numbering; files end with a newline; H1 Title
   Case, H2+ sentence case (see `STYLE-GUIDE.md` — but don't re-case headings
   that aren't otherwise wrong).
@@ -271,7 +293,9 @@ with a comment for a human; humans merge. The sections (each is checked for):
   GitHub auto-merge on the PR, so the body flags that approving merges it.
   **Leave verbatim** — do not move, reword, or remove it.
 - **Why this page**: composed from the selection queue (lane, tier, traffic
-  figure + period, last reviewed). **Leave verbatim** — do not re-narrate it.
+  figure + period, Search/Reader-feedback figures when the reader-signals
+  export was available, last reviewed). **Leave verbatim** — do not
+  re-narrate it.
 - **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
   only for a fix you actually applied (fill its Correction); move the rest down.
 - **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
@@ -366,7 +390,9 @@ the bar, with the full reasoning documented in the PR.
 - **Evidence required (two-sided):** the page appears in the traffic report
   with near-zero views (absence from the report is NOT evidence — the page
   may be new or alias-attributed), **and** GSC impressions/clicks are low
-  over its window when that data is present; **or** the page is demonstrably
+  over its window when that data is present — read them from the queue
+  entry's `signals.gsc` block (a `signals: null` run has no GSC evidence, so
+  this leg cannot be satisfied); **or** the page is demonstrably
   redundant with a named page (cite `.cross-sibling-discovery.json`). Check
   the page's age in git — never propose retiring a page younger than a year.
 - **Retire = redirect, never 404.** The PR must redirect the page to its

@@ -13,8 +13,9 @@ The sections, and what's yours vs. the composer's:
 ## Why this page
 
 Rendered by the composer from the selection queue (lane, strategic tier, traffic
-figure + report period, last-reviewed). **Leave verbatim** — its figures are
-authoritative; do not re-narrate it.
+figure + report period, last-reviewed; plus **Search** and **Reader feedback**
+lines when the reader-signals export was available for the run). **Leave
+verbatim** — its figures are authoritative; do not re-narrate it.
 
 ## Fixes applied
 
@@ -31,7 +32,9 @@ PR should exist.
 
 Pre-stubbed with the lower-confidence findings; add any row you moved down from
 *Fixes applied*. One line of reasoning each (why it's judgment-level, not a
-high-confidence fix).
+high-confidence fix). When selection flagged the page `low_ctr_flag`, the
+composer pre-stubs a flag-only **Search opportunity** row here with its reason
+already filled — keep it; never rewrite `title`/`meta_desc` in response.
 
 For the judgment-level items above, run `/glow-up <path>`.
 

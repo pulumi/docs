@@ -212,6 +212,86 @@ def main() -> int:
         qc = run_select(repo, tiers, empty, "--count", "20", "--traffic-file", str(csvf))
         check(qc["traffic"]["pages_matched"] == 1, "CSV snapshot parsed")
 
+        print("reader signals: exact degradation — no file, and all-neutral signals, score identically")
+        check(full["reader_signals"]["available"] is False, "no signals file -> unavailable")
+        check(all(a["signals"] is None for a in full["articles"]),
+              "no signals file -> per-article signals null")
+        neutral = tmp / "signals-neutral.json"
+        # Identical CTRs (gap 0 vs the median) and all-positive votes: every
+        # multiplier is exactly 1.0, so scores must equal the signal-blind run's.
+        neutral.write_text(json.dumps({"version": 1, "signals": {
+            "gsc": {"source": "gsc", "pages": {
+                "/docs/misc/one/": {"impressions": 5000, "clicks": 500},
+                "/docs/misc/two/": {"impressions": 5000, "clicks": 500}}},
+            "feedback": {"source": "segment", "pages": {
+                "/docs/misc/one/": {"yes": 10, "no": 0}}},
+        }}))
+        qn = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(neutral))
+        check(qn["reader_signals"]["available"] is True, "neutral signals file still marked available")
+        check(scores(qn) == s, "all-neutral signals -> scores byte-identical to the signal-blind run")
+
+        print("reader signals: GSC opportunity boost (high impressions AND low CTR only)")
+        gscf = tmp / "signals-gsc.json"
+        gscf.write_text(json.dumps({"version": 1, "signals": {"gsc": {
+            "source": "gsc", "period": {"start": "2026-03-14", "end": "2026-06-11"},
+            "pages": {
+                "/docs/misc/one/": {"impressions": 50000, "clicks": 250},
+                "/docs/misc/two/": {"impressions": 50000, "clicks": 5000},
+                "/docs/misc/protected/keep/": {"impressions": 100, "clicks": 1},
+            }}}}))
+        qg = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
+        sg = scores(qg)
+        arts = {a["path"]: a for a in qg["articles"]}
+        check(sg[ONE] > sg[TWO], "low-CTR page outranks its equally stale high-CTR sibling")
+        one_gsc = arts[ONE]["signals"]["gsc"]
+        check(1.0 < one_gsc["multiplier"] <= 1.25, f"gsc multiplier bounded (got {one_gsc['multiplier']})")
+        check(one_gsc["low_ctr_flag"] is True, "low-CTR flag set on the flagged page")
+        check(arts[TWO]["signals"]["gsc"]["multiplier"] == 1.0, "at/above-median CTR stays neutral")
+        check(arts[TWO]["signals"]["gsc"]["low_ctr_flag"] is False, "healthy CTR not flagged")
+        keep_gsc = arts[KEEP]["signals"]["gsc"]
+        check(keep_gsc["multiplier"] == 1.0 and keep_gsc["low_ctr_flag"] is False,
+              "under-threshold impressions stay neutral and unflagged")
+        check(sg[TWO] == s[TWO], "boost-only: unboosted pages score exactly as before")
+        check(qg["reader_signals"]["gsc"]["available"] is True, "gsc meta available")
+        check(qg["reader_signals"]["feedback"]["available"] is False,
+              "gsc-only file leaves feedback unavailable")
+        check(qg["reader_signals"]["gsc"]["pages_matched"] == 3, "gsc pages matched")
+        check(qg["reader_signals"]["gsc"]["median_ctr"] is not None, "corpus median recorded")
+
+        print("reader signals: feedback boost (negative votes, damped below saturation)")
+        fbf = tmp / "signals-fb.json"
+        fbf.write_text(json.dumps({"version": 1, "signals": {"feedback": {
+            "source": "segment", "pages": {
+                "/docs/misc/one/": {"yes": 1, "no": 9},
+                "/docs/misc/two/": {"yes": 9, "no": 1},
+                "/docs/misc/protected/keep/": {"yes": 1, "no": 1},
+            }}}}))
+        qf = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(fbf))
+        sf = scores(qf)
+        artsf = {a["path"]: a for a in qf["articles"]}
+        check(sf[ONE] > sf[TWO], "negatively-voted page outranks its positively-voted sibling")
+        one_fb = artsf[ONE]["signals"]["feedback"]
+        check(1.0 < one_fb["multiplier"] <= 1.30, f"feedback multiplier bounded (got {one_fb['multiplier']})")
+        check(one_fb["neg_rate"] == 0.9, "neg_rate recorded")
+        check(artsf[KEEP]["signals"]["feedback"]["multiplier"] == 1.0,
+              "below-minimum vote count stays neutral")
+
+        print("reader signals: malformed file degrades to exactly the signal-blind run")
+        garbage = tmp / "signals-garbage.json"
+        garbage.write_text("not json {{{")
+        qb = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(garbage))
+        check(qb["reader_signals"]["available"] is False, "garbage file -> unavailable")
+        check(scores(qb) == s, "garbage file -> scores identical to no file")
+
+        print("reader signals: determinism with signals present")
+        qg2 = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
+        check(scores(qg2) == sg, "signal-boosted selection is deterministic")
+
+        print("reader signals: --paths entries carry the signals block")
+        qp = run_select(repo, tiers, empty, "--paths", ONE, "--signals-file", str(gscf))
+        check(qp["articles"][0]["signals"]["gsc"]["low_ctr_flag"] is True,
+              "manual dispatch still carries the flag")
+
         print("incomplete review keeps a page due (its reviewed_at is ignored)")
         led_inc = tmp / "ledger-incomplete"
         write_ledger(led_inc, OVERVIEW, "2026-06-11", status="incomplete", attempts=1)

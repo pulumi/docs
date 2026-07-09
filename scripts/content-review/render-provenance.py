@@ -10,10 +10,10 @@ queue entry instead (the same split the pre-merge review uses via
 `compose-review.py`): code emits the facts, the model only writes judgment.
 
 Input is the single-article queue the dispatcher handed the worker
-(`.content-review-queue.json`): a `traffic` meta block plus one `articles[0]`
-entry carrying `monthly_visits`, `tier`, `no_retire`, `last_reviewed`,
-`attempts`, and `score`. Output is the exact `## Why this page` Markdown the
-worker pastes verbatim into the PR body.
+(`.content-review-queue.json`): `traffic` and `reader_signals` meta blocks plus
+one `articles[0]` entry carrying `monthly_visits`, `signals`, `tier`,
+`no_retire`, `last_reviewed`, `attempts`, and `score`. Output is the exact
+`## Why this page` Markdown the worker pastes verbatim into the PR body.
 
 Usage:
     render-provenance.py --queue .content-review-queue.json --out .provenance.md
@@ -44,6 +44,45 @@ def _period_str(traffic: dict) -> str | None:
             return f"{start} to {end}"
         return start or end
     return period or traffic.get("generated")
+
+
+def _signal_lines(queue: dict, a: dict) -> list[str]:
+    """Search + Reader-feedback lines, present only when the reader-signals
+    export was available for the run (absent export -> no lines, matching the
+    pre-signals PR body byte-for-byte)."""
+    meta = queue.get("reader_signals") or {}
+    if not meta.get("available"):
+        return []
+    signals = a.get("signals") or {}
+    lines = []
+
+    gsc_meta = meta.get("gsc") or {}
+    if gsc_meta.get("available"):
+        g = signals.get("gsc")
+        if g:
+            parts = [f"{_fmt_int(g['impressions'])} impressions", f"{g['ctr'] * 100:.2f}% CTR"]
+            median = gsc_meta.get("median_ctr")
+            if median:
+                parts.append(f"corpus median {median * 100:.2f}%")
+            period = _period_str(gsc_meta)
+            if period:
+                parts.append(f"period {period}")
+            flag_s = " — **low-CTR flag**" if g.get("low_ctr_flag") else ""
+            lines.append(f"- **Search:** {', '.join(parts)}{flag_s}")
+        else:
+            lines.append("- **Search:** no Search Console data for this page")
+
+    fb_meta = meta.get("feedback") or {}
+    if fb_meta.get("available"):
+        f = signals.get("feedback")
+        if f:
+            total = f["yes"] + f["no"]
+            neg = f" ({f['no'] / total:.0%} negative)" if total else ""
+            lines.append(f"- **Reader feedback:** {f['yes']} yes / {f['no']} no{neg}")
+        else:
+            lines.append("- **Reader feedback:** none recorded")
+
+    return lines
 
 
 def render(queue: dict) -> str:
@@ -94,12 +133,15 @@ def render(queue: dict) -> str:
 
     page_line = f"`{path}`" + (f" → [{url}]({url})" if url else "")
 
+    signal_lines = "".join(line + "\n" for line in _signal_lines(queue, a))
+
     return (
         "## Why this page\n\n"
         f"- **Page:** {page_line}\n"
         f"- **Lane:** {lane}\n"
         f"- **Strategic tier:** {tier_line}\n"
         f"- **Traffic:** {traffic_line}\n"
+        f"{signal_lines}"
         f"- **Last reviewed:** {reviewed_line}\n"
         f"- **Selection score:** {score_line}\n"
         "\n_This section is composed deterministically from the selection queue;"
