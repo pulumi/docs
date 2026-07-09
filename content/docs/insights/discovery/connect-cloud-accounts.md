@@ -60,11 +60,12 @@ Alternatively, you can connect using:
 
 {{% choosable cloud azure %}}
 
-**Connect using OpenID Connect (OIDC)** is the recommended option. Pulumi uses workload identity federation with Microsoft Entra ID, so no client secrets are stored. Provide your **Tenant ID (Directory ID)**, which you can find under **Microsoft Entra ID** > **Properties** in the Azure portal. When you continue, a Microsoft consent page opens asking you to grant Pulumi:
+**Connect using OpenID Connect (OIDC)** is the recommended option. Pulumi uses workload identity federation with Microsoft Entra ID, so no client secrets are stored. Provide your **Tenant ID (Directory ID)**, which you can find under **Microsoft Entra ID** > **Properties** in the Azure portal. When you continue, Microsoft consent pages open asking you to grant Pulumi:
 
-- The **Reader** role on the subscriptions you select
-- The **Contributor** role on subscriptions you configure for read and write
-- The `Directory.Read.All` permission, used to discover subscriptions
+- Microsoft Graph permissions to create and manage the app registration Pulumi uses (`Application.ReadWrite.All`, `ServicePrincipalEndpoint.ReadWrite.All`, and `User.Read`)
+- Access to Azure Resource Manager on your behalf, used to discover your subscriptions
+
+Consent doesn't grant any roles on your subscriptions. The wizard assigns the **Reader** or **Contributor** role on each subscription later, after you select subscriptions and choose an access level.
 
 After you grant consent, the wizard lists the subscriptions in your tenant.
 
