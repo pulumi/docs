@@ -70,6 +70,8 @@ they're used).
 
 ## Format
 
+{{< experimental-feature />}}
+
 The format of update plans is currently experimental and subject to change. The most up to date description of
 the format is the [code](https://github.com/pulumi/pulumi/blob/master/sdk/go/common/apitype/plan.go).
 
