@@ -8,6 +8,13 @@ env:
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
 
 name: Update latest-dev-version
+
+# Serialize runs: dev builds can dispatch minutes apart, and a queue of pending
+# runs collapses to the newest one, which carries the newest version anyway.
+concurrency:
+  group: pulumi-cli-dev-version
+  cancel-in-progress: false
+
 on:
   repository_dispatch:
     types:
@@ -57,6 +64,26 @@ jobs:
         uses: pulumi/esc-action@v3
       - name: checkout docs repo
         uses: actions/checkout@v7
+      # A still-open dev-version PR is superseded by this run's newer build. Left
+      # alone it goes permanently conflicted the moment this run's PR merges (both
+      # rewrite the same line of static/latest-dev-version), so close it up front.
+      # Best-effort: a failed close only leaves a conflicted PR for the next run
+      # to close; it must not block publishing the new version.
+      - name: Close superseded dev-version PRs
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          DEV_VERSION: ${{ github.event.inputs.dev_version || github.event.client_payload.dev_version }}
+        run: |
+          prs=$(gh pr list --repo "$GITHUB_REPOSITORY" \
+            --author pulumi-bot --label automation/pulumi-cli-docs --state open \
+            --json number,title \
+            --jq '.[] | select(.title | startswith("Regen dev version")) | .number') \
+            || { echo "::warning::Failed to list open dev-version PRs; skipping supersede step."; exit 0; }
+          for pr in $prs; do
+            gh pr close "$pr" --repo "$GITHUB_REPOSITORY" --delete-branch \
+              --comment "Superseded by dev build \`$DEV_VERSION\` ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID); closing so it can't go stale-conflicted." \
+              || echo "::warning::Failed to close superseded PR #$pr; the next dev-version run will retry."
+          done
       - name: Update latest version
         run: |
           echo -n "${{ github.event.inputs.dev_version || github.event.client_payload.dev_version }}" > ./static/latest-dev-version
