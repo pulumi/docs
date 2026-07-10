@@ -2,8 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with DevOps AI Skills
 meta_desc: Set up coding agents with the right hooks, LSP, and Pulumi skills so they produce clean Pulumi code.
-meta_image:
-meta_image_square:
+meta_image: /events/getting-started-with-devops-ai-skills-2/meta.png
+meta_image_square: /events/getting-started-with-devops-ai-skills-2/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -68,7 +68,7 @@ tags:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id:
-    salesforce_campaign_id:
+    hubspot_form_id: cbb0dbfe-c0b2-4dee-b5f4-6f4f0e670a8e
+    salesforce_campaign_id: 701PQ00000uM29RYAS
 
 ---
