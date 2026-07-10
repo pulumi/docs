@@ -47,7 +47,7 @@ Create custom providers to integrate new cloud platforms and services with Pulum
 
 **[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
 
-**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
+**[Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
 
 **[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
 

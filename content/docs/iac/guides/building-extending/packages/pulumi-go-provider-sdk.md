@@ -25,6 +25,14 @@ aliases:
 
 The library uses Go reflection to derive the package's [schema](/docs/iac/guides/building-extending/packages/schema/) from your Go types, so multi-language SDKs can be generated without hand-authoring a JSON schema. Pulumi uses pulumi-go-provider internally for several of its own packages, including [`pulumi-command`](/registry/packages/command/).
 
+Compared to implementing the provider gRPC interface directly, pulumi-go-provider offers:
+
+- **Minimal code**: you define resources, functions, and components as Go structs and methods, and the library handles the RPC plumbing and generates the schema for multi-language SDKs.
+- **A built-in testing framework**: the `integration` package exercises providers in-process, without the Pulumi engine.
+- **Middleware**: layers that handle token dispatch, schema generation, and cancellation propagation.
+
+For a complete step-by-step walkthrough that builds a provider from scratch, see [Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
+
 Useful links:
 
 - **Repository**: [pulumi/pulumi-go-provider](https://github.com/pulumi/pulumi-go-provider/) on GitHub
@@ -84,6 +92,8 @@ func (HelloWorld) Create(
 ```
 
 Sensible defaults are provided for any lifecycle method you don't implement. Because the example above doesn't implement `Diff` or `Update`, any input change replaces the resource. `Check` and `Read` confirm that inputs deserialize into `HelloWorldArgs`. `Delete` is a no-op.
+
+For a full walkthrough that implements every CRUD lifecycle method (`Create`, `Read`, `Update`, `Delete`, `Check`, and `Diff`), see [Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/).
 
 ## Functions
 
