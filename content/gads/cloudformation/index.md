@@ -1,6 +1,6 @@
 ---
 title: "CloudFormation Alternative | Pulumi"
-meta_desc: "Stop wrestling with CloudFormation JSON. Write AWS infrastructure in Python, TypeScript, Go, or C#. Free cf2pulumi converter. 170+ providers."
+meta_desc: "Stop wrestling with CloudFormation JSON. Write AWS infrastructure in Python, TypeScript, Go, or C#. Import your existing stacks. 170+ providers."
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
@@ -22,7 +22,7 @@ customer_quote:
 
 overview:
     title: "Real Languages for AWS.<br/>Not JSON Templates."
-    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a CloudFormation alternative</span>? Stop maintaining thousands of lines of JSON and YAML. Use Python, TypeScript, Go, or C# with full IDE support, real testing, and 170+ cloud providers. Free cf2pulumi converter to migrate your existing templates.'
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">a CloudFormation alternative</span>? Stop maintaining thousands of lines of JSON and YAML. Use Python, TypeScript, Go, or C# with full IDE support, real testing, and 170+ cloud providers. Import your existing stacks to migrate incrementally.'
 
 key_features_above:
     items:

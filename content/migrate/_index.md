@@ -35,7 +35,6 @@ migrations:
     - title: AWS CloudFormation
       image: /logos/tech/aws.svg
       selfServeUrl: /docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation
-      selfServeWebUrl: /migrate/cf2pulumi
       comparisonUrl: /docs/iac/comparisons/cloudformation/
     - title: Azure Resource Manager (ARM)
       image: /logos/tech/azure.svg

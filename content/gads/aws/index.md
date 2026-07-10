@@ -186,7 +186,7 @@ key_features:
               - title: Migrate from CloudFormation
                 icon: exchange
                 description: |
-                    Use cf2pulumi to convert existing CloudFormation templates to Pulumi in your language of choice. Import existing stacks with zero downtime.
+                    Import existing CloudFormation stacks into Pulumi in your language of choice with zero downtime.
 
         - title: "Deliver infrastructure through software delivery pipelines"
           sub_title: "CI/CD Integrations"
