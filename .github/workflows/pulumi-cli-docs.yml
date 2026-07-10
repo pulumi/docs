@@ -68,6 +68,31 @@ jobs:
         run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
         env:
           GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      # A still-open older CLI-docs PR is superseded by the PR this run just
+      # opened and would go permanently conflicted (both rewrite
+      # static/latest-version and data/versions.json) the moment the newer PR
+      # merges — so close it. Runs only after the successor PR exists, so a
+      # failed run never leaves us with no open CLI-docs PR. Best-effort: a
+      # failed list/close only leaves a conflicted PR for the next run to clean
+      # up. (publish_only backfills never reach this job, so they can't close a
+      # live PR.)
+      - name: Close superseded CLI-docs PRs
+        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          NEW_PR: ${{ steps.create-pr.outputs.pr_number }}
+        run: |
+          prs=$(gh pr list --repo "$GITHUB_REPOSITORY" \
+            --author pulumi-bot --label automation/pulumi-cli-docs --state open \
+            --json number,title \
+            --jq '.[] | select(.title | startswith("Generate Pulumi CLI docs")) | .number') \
+            || { echo "::warning::Failed to list open CLI-docs PRs; skipping supersede step."; exit 0; }
+          for pr in $prs; do
+            [ "$pr" = "$NEW_PR" ] && continue
+            gh pr close "$pr" --repo "$GITHUB_REPOSITORY" --delete-branch \
+              --comment "Superseded by the regen for \`v$PULUMI_VERSION\` (#$NEW_PR, $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID); closing so it can't go stale-conflicted." \
+              || echo "::warning::Failed to close superseded PR #$pr; the next CLI-docs run will retry."
+          done
   build-pulumi-cli-docs:
     runs-on: ubuntu-latest
     outputs:
@@ -83,27 +108,6 @@ jobs:
           version: ${{ env.PULUMI_VERSION }}
       - name: checkout docs repo
         uses: actions/checkout@v7
-      # A still-open CLI-docs PR is superseded by this run's newer release and
-      # would go permanently conflicted (both rewrite static/latest-version and
-      # data/versions.json) once this run's PR merges — close it up front.
-      # Best-effort: a failed close must not block regenerating the docs.
-      # Skipped for publish_only backfills, which open no PR and must not close
-      # a live one.
-      - name: Close superseded CLI-docs PRs
-        if: github.event.inputs.publish_only != 'true'
-        env:
-          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-        run: |
-          prs=$(gh pr list --repo "$GITHUB_REPOSITORY" \
-            --author pulumi-bot --label automation/pulumi-cli-docs --state open \
-            --json number,title \
-            --jq '.[] | select(.title | startswith("Generate Pulumi CLI docs")) | .number') \
-            || { echo "::warning::Failed to list open CLI-docs PRs; skipping supersede step."; exit 0; }
-          for pr in $prs; do
-            gh pr close "$pr" --repo "$GITHUB_REPOSITORY" --delete-branch \
-              --comment "Superseded by the regen for \`v$PULUMI_VERSION\` ($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID); closing so it can't go stale-conflicted." \
-              || echo "::warning::Failed to close superseded PR #$pr; the next CLI-docs run will retry."
-          done
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
