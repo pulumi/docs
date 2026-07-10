@@ -1,0 +1,74 @@
+{{/*
+  Renders one section (inputs | state | outputs) of an ESC provider or rotator
+  schema as a nested property list, from the committed data/esc_schemas.json
+  (the single source of truth, refreshed by scripts/fetch-esc-schemas.sh via the
+  esc-update-schemas GitHub workflow). Reuses the REST API schema styling
+  (assets/fingerprinted/css/openapi.css, .api-param* classes) for visual
+  consistency with /docs/reference/cloud-rest-api.
+
+  Params:
+    type    "provider" | "rotator"
+    name    schema name, e.g. "aws-iam" (keyed within its type)
+    section "inputs" | "state" | "outputs"
+
+  Author keeps the Markdown "## Inputs/State/Outputs" H2 (so it stays in the
+  page TOC); this shortcode renders only the section body.
+*/}}
+{{ $type := .Get "type" }}
+{{ $name := .Get "name" }}
+{{ $section := .Get "section" }}
+{{ $pos := .Position }}
+
+{{ $schemas := index site.Data.esc_schemas (printf "%ss" $type) }}
+{{ $schema := index ($schemas | default dict) $name }}
+
+{{ if not $schema }}
+  {{ warnf "esc-schema: no %s schema named %q in data/esc_schemas.json (%s)" $type $name $pos }}
+{{ else }}
+  {{/* Resolve the section sub-schema. Providers expose inputs/outputs directly;
+       rotators nest inputs and state under inputs.properties. */}}
+  {{ $sub := "" }}
+  {{ if eq $section "inputs" }}
+    {{ $sub = cond (eq $type "rotator") (index $schema.inputs.properties "inputs") $schema.inputs }}
+  {{ else if eq $section "state" }}
+    {{ if eq $type "rotator" }}{{ $sub = index $schema.inputs.properties "state" }}{{ end }}
+  {{ else if eq $section "outputs" }}
+    {{ $sub = $schema.outputs }}
+  {{ end }}
+
+  {{ if not $sub }}
+    {{ warnf "esc-schema: %s/%s has no %q section (%s)" $type $name $section $pos }}
+  {{ else }}
+    {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+    {{ with $sub.description }}<p>{{ . | markdownify }}</p>{{ end }}
+
+    {{ if $sub.properties }}
+      <ul class="api-params">
+        {{ partial "esc/property-rows.html" (dict
+          "properties" $sub.properties
+          "required" ($sub.required | default slice)
+        ) }}
+      </ul>
+    {{ else if isset $sub "additionalProperties" }}
+      {{/* Free-form or homogeneous map output (e.g. secrets providers). */}}
+      {{ $ap := $sub.additionalProperties }}
+      {{ if eq (printf "%T" $ap) "bool" }}
+        <p><strong>Type:</strong> <code>map[string]any</code></p>
+      {{ else if $ap.properties }}
+        <p><strong>Type:</strong> <code>map[string]{{ $ap.title | default "object" }}</code></p>
+        <ul class="api-params">
+          {{ partial "esc/property-rows.html" (dict
+            "properties" $ap.properties
+            "required" ($ap.required | default slice)
+          ) }}
+        </ul>
+      {{ else }}
+        <p><strong>Type:</strong> <code>map[string]{{ $ap.type | default "any" }}</code></p>
+      {{ end }}
+    {{ else if $sub.type }}
+      <p><strong>Type:</strong> <code>{{ $sub.type }}</code></p>
+    {{ end }}
+  {{ end }}
+{{ end }}
