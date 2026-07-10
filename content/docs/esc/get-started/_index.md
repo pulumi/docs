@@ -211,4 +211,4 @@ Now that you've created your first environment and connected it to a stack, here
 - **[Rotators](/docs/esc/providers/rotators/)** - Automatically rotate credentials like API keys and database passwords on a schedule or on demand
 - **[Integrations](/docs/esc/integrations/)** - Consume ESC environments from Kubernetes, the External Secrets Operator, the Secrets Store CSI Driver, and more
 - **[Configure OpenID Connect](/docs/esc/guides/configuring-oidc/)** - Set up OIDC trust so ESC can issue short-lived cloud credentials
-- **[Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/)** - Dynamic cloud credentials, external secret stores, and environment composition in your stacks
+- **[Integrate with Pulumi IaC](/docs/esc/guides/pulumi-iac/)** - Dynamic cloud credentials, external secret stores, and environment composition in your stacks
