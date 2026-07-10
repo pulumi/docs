@@ -19,18 +19,16 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your Terraform code and import existing resources with zero downtime
 * **State-first migration**: Use [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) to translate your Terraform state to Pulumi state, then use an LLM agent to convert your code.
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
-* **Import** existing resources into Pulumi [in the usual way](/docs/using-pulumi/adopting-pulumi/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
+* **Import** existing resources into Pulumi [in the usual way](/docs/iac/guides/migration/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
 * **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
-## Choosing a Terraform migration path
-
-### Pulumi Neo (Recommended)
+## Pulumi Neo (recommended)
 
 * **Automated conversion**: Neo converts your Terraform HCL and state to Pulumi automatically
 * **Safety verification**: Neo runs `pulumi preview` to prove no changes before you commit
 
-#### Quick start with Neo
+### Quick start with Neo
 
 1. **Prerequisites**:
    * Ensure you have access to your state file (`.tfstate`)
@@ -56,7 +54,7 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
 
 For a detailed technical walkthrough, see our [Neo migration blog post](/blog/neo-migration/).
 
-#### When to use manual migration instead
+### When to use manual migration instead
 
 While Neo handles most Terraform configurations automatically, you might need manual migration for:
 
@@ -67,18 +65,18 @@ If you want to fundamentally restructure your infrastructure, we recommend compl
 
 Continue reading below for manual migration approaches if Neo doesn't fit your specific needs.
 
-### Alternative migration paths
+## Alternative migration paths
 
 If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from Terraform at your own pace.
 
-## State-first migration with pulumi-terraform-migrate
+### State-first migration with pulumi-terraform-migrate
 
 The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) tool provides a state-first approach to migration by translating your Terraform state into Pulumi state. You then use an LLM agent to convert your Terraform code to Pulumi. This approach is useful when:
 
 * You don't have access to Neo
 * You want precise control over the state migration process
 
-### Migration workflow
+#### Migration workflow
 
 1. **Install the tool**:
 
@@ -153,7 +151,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    Once you are satisfied with the migration, run `pulumi up` to finalize the state translation. The migration tool produces an intermediate state file that requires one `pulumi up` run to complete.
 
-## Referencing Terraform State
+### Referencing Terraform state
 
 Pulumi allows you to reference output values from existing Terraform state files, enabling you to build new infrastructure that depends on resources provisioned with Terraform. This capability is particularly useful for:
 
@@ -171,7 +169,7 @@ The following code reads VPC and subnet IDs from a local `terraform.tfstate` fil
 
 {{< example-program path="tf-state-ref" >}}
 
-## Converting Terraform HCL to Pulumi
+### Converting Terraform HCL to Pulumi
 
 The Pulumi CLI can convert existing Terraform source code written in the HashiCorp Configuration Language (HCL) into Pulumi source code using the `pulumi convert` command.
 
@@ -183,7 +181,7 @@ cdktf synth --hcl
 
 This produces a single HCL file for each stack at `./cdktf.out/stacks/<stack-name>/cdk.tf`.
 
-### Using the Converter
+#### Using the converter
 
 To use the converter, first [install Pulumi](/docs/install/), then change to a folder containing the HCL source files you'd like to convert.  Next, run `pulumi convert --from terraform` from within that folder:
 
@@ -220,7 +218,7 @@ pulumi convert --from terraform --language csharp
 
 This will generate a Pulumi program that when run with `pulumi up` will deploy the infrastructure originally described by the Terraform project. Note that if your infrastructure references files or directories with paths relative to the location of the Terraform project, you will most likely need to update these paths such that they are relative to the generated {{< langfile >}} file.
 
-### Supported Terraform Features
+#### Supported Terraform features
 
 The following major features are supported:
 
@@ -237,7 +235,7 @@ In cases where the converter does not yet support a certain feature, the `pulumi
 
 If you notice a feature that's not yet implemented or you encounter a bug, please consider [filing an issue](https://github.com/pulumi/pulumi-converter-terraform).
 
-### Importing Resources
+#### Importing resources
 
 The `convert` command translates static HCL source code into Pulumi program code. Often, however, you'll also need to import existing resource state from your Terraform or CDKTF project in order to begin managing those resources with Pulumi.
 
@@ -251,14 +249,14 @@ Given a path to a valid `.tfstate` file and a target Pulumi stack, Pulumi will i
 
 To learn more about importing resources with Pulumi, see [Importing Resources](/docs/iac/guides/migration/import/).
 
-### Conversion Examples
+#### Conversion examples
 
 To help make migration from Terraform and CDKTF more approachable, we've prepared the following examples for reference:
 
 * [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/): A blog post that covers the process of converting a real-world Terraform codebase
 * [Migrating from CDKTF to Pulumi](https://github.com/pulumi/cdktf-to-pulumi-example): An end-to-end example that covers converting and importing a multi-stack CDKTF project
 
-## Using Terraform Modules Directly
+### Using Terraform modules directly
 
 Pulumi allows you to use existing Terraform modules directly in your Pulumi programs without converting or rewriting them. This feature is particularly useful for:
 
@@ -267,7 +265,7 @@ Pulumi allows you to use existing Terraform modules directly in your Pulumi prog
 * Gradual migration scenarios where some teams continue using Terraform while others adopt Pulumi
 * Maintaining consistency across infrastructure while transitioning between tools
 
-### Adding a Terraform Module to Your Pulumi Project
+#### Adding a Terraform module to your Pulumi project
 
 To use a Terraform module in Pulumi, you can add it to your project using the `pulumi package add` command:
 
