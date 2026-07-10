@@ -1,0 +1,13 @@
+{{- $text := "This is an **experimental feature**. Experimental features are opt-in (enabled with a flag, command, or environment variable), may change or be removed at any time, and are not necessarily supported. See [What does \"experimental\" mean?](/docs/support/faq/infrastructure/#what-does-experimental-mean) for details." -}}
+<div class="note note-warning">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" "warning" "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{ $text | markdownify }}
+        {{- with .Inner }}
+        {{ . | markdownify }}
+        {{- end }}
+    </div>
+</div>
